@@ -2,7 +2,7 @@
 
 _Claude API, MCP sunucusu, model geçişi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **9/9**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/10**
 
 ### claude-api  ·  anthropics/skills @ dbd4588  ·  puan 76 (B)
 
@@ -99,6 +99,17 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Teknoloji:** mcp, claude-code, json
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
 - **Geliştirici:** anthropics (kurum, resmî, ★152726, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** plugin-dev → tamamlayıcı · **Roller:** skill-gelistirici
+- **Durum:** tercih · **Örtüşme:** claude-plugin-mcp → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 46 KB (SKILL.md 12.2 KB, yük orta)
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir. Asıl yeri skill/plugin yazımı ile birlikte (plugin-dev ailesi).
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir.
+
+### academy-guide  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
+
+- **Ne yapar:** Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca güçlü eşleşme varsa uygun kurs/eğitim/kullanım örneği önerisi ekler. Katalog skill içine gömülü değil; güncel JSON katalog çalışma anında çekilir ve tazeliği kontrol edilir.
+- **Ne zaman:** Claude öğrenmeye yönelik destek/eğitim asistanları; ekibe Claude yaygınlaştırma soruları. · **Ne zaman değil:** Kod/proje agent'larında (iş ortasındaki kullanıcıya kurs önermek gürültü); web erişimi yoksa (katalog çekilemez, uydurma yasak). Skill yazımı ile ilgisi yok — kategorisi Claude ürün desteği.
+- **Teknoloji:** web-fetch
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** anthropics (kurum, resmî, ★182720, son güncelleme 2026-10-09, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 1
+- **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.

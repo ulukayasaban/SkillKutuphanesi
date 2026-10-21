@@ -19503,9 +19503,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir. Asıl yeri skill/plugin yazımı ile birlikte (plugin-dev ailesi).",
-      "ortusme_grubu": "plugin-dev",
-      "ortusme_rolu": "tamamlayıcı",
+      "kalite_notu": "Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir.",
+      "ortusme_grubu": "claude-plugin-mcp",
+      "ortusme_rolu": "birincil",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21"
     },
@@ -21094,7 +21094,7 @@
       "id": "academy-guide",
       "ad": "academy-guide",
       "durum": "tercih",
-      "kategori": "d-ai-otomasyon/04-skill-plugin-yazimi",
+      "kategori": "d-ai-otomasyon/01-claude-api-mcp",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/04-skill-plugin-yazimi/academy-guide",
       "varyantlar": {},
@@ -21147,7 +21147,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -21160,7 +21160,24 @@
           "bağlam yükü 10/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca güçlü eşleşme varsa uygun kurs/eğitim/kullanım örneği önerisi ekler. Katalog skill içine gömülü değil; güncel JSON katalog çalışma anında çekilir ve tazeliği kontrol edilir.",
+      "kullanim_alani": "Claude öğrenmeye yönelik destek/eğitim asistanları; ekibe Claude yaygınlaştırma soruları.",
+      "kullanma": "Kod/proje agent'larında (iş ortasındaki kullanıcıya kurs önermek gürültü); web erişimi yoksa (katalog çekilemez, uydurma yasak). Skill yazımı ile ilgisi yok — kategorisi Claude ürün desteği.",
+      "teknoloji": [
+        "web-fetch"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "agent-development",
@@ -21219,7 +21236,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -21232,7 +21249,27 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentileri için alt-agent (subagent) yazımı: Markdown + YAML frontmatter yapısı, name/description/model/color/tools alanları, <example> bloklarıyla tetikleme koşulları, sistem istemi tasarımı, AI destekli üretim ve doğrulama kuralları; doğrulama betiği ve örnekler içerir.",
+      "kullanim_alani": "Claude Code projesine/eklentisine özel alt-agent tanımı yazmak ya da mevcut agent'ın tetiklenmesini düzeltmek.",
+      "kullanma": "Codex'te frontmatter biçimi geçerli değil: Codex özel agent'ları `.codex/agents/<ad>.toml` dosyasında `name`, `description`, `developer_instructions` (ve isteğe bağlı skills.config) alanlarıyla tanımlanır — bu kütüphanenin skill-ekle.py'si rolleri zaten bu biçimde üretir. Skill'in sistem istemi tasarımı ve 'ne zaman tetiklenmeli' açıklaması yazım ilkeleri Codex'te de geçerli; color/model/tools alanlarını atla.",
+      "teknoloji": [
+        "claude-code",
+        "markdown",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi plugin-dev setinden; alan alan doğrulama kuralları ve örnekler net. Claude Code'a özel (Codex için yukarıdaki uyarlama).",
+      "ortusme_grubu": "claude-alt-agent-tanimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "command-development",
@@ -21295,7 +21332,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -21308,7 +21345,27 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code slash komutu yazımı: komut konumları (proje/kullanıcı/eklenti), YAML frontmatter (description, allowed-tools, model, argument-hint, disable-model-invocation), $ARGUMENTS ve konumsal argümanlar, @dosya başvuruları, satır içi bash çalıştırma, AskUserQuestion ile etkileşim ve organizasyon/namespacing.",
+      "kullanim_alani": "Ekipte tekrar eden istemleri Claude Code slash komutuna çevirmek.",
+      "kullanma": "Codex'te Claude slash komut biçimi yok: karşılığı `~/.codex/prompts/<ad>.md` özel istem dosyaları (`/prompts:<ad>` ile çağrılır; $ARGUMENTS/$1 yer tutucuları desteklenir) ya da doğrudan bir skill'dir. allowed-tools, model, satır içi `!bash` çalıştırma ve @dosya başvurusu Codex'te çalışmaz — bunları istemin içinde 'şu komutu çalıştır / şu dosyayı oku' talimatına çevir.",
+      "teknoloji": [
+        "claude-code",
+        "markdown",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi, çok sayıda örnek ve referans; SKILL.md 19 KB ve klasör 150 KB ile ağırca. Claude Code'a özel.",
+      "ortusme_grubu": "claude-slash-komut",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "hook-development",
@@ -21369,7 +21426,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -21382,7 +21439,29 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code hook'ları: prompt tabanlı (LLM kararlı) ve komut hook'ları, eklenti hooks.json ve settings biçimi, PreToolUse/PostToolUse/Stop/SubagentStop/SessionStart/SessionEnd/UserPromptSubmit/PreCompact/Notification olayları, çıktı biçimi, ${CLAUDE_PLUGIN_ROOT}; doğrulama/test betikleri ve örnek hook'lar içerir.",
+      "kullanim_alani": "Tehlikeli komutu engelleme, düzenleme sonrası otomatik format/test, oturum başında bağlam yükleme gibi olay tabanlı Claude Code otomasyonu.",
+      "kullanma": "Codex'te Claude Code hook olayları ve hooks.json biçimi birebir yok; Codex'in kendi onay/sandbox politikası (`approval_policy`, `sandbox_mode`) ve sürümüne göre sunduğu hook/notify ayarları `~/.codex/config.toml` içinde yapılır. Bu skilldeki betik mantığı Codex'te sandbox kuralı, AGENTS.md talimatı ya da git pre-commit hook'u olarak uygulanabilir; prompt tabanlı hook'ların karşılığı yoktur. Basit 'şunu görünce uyar' kuralları için writing-hookify-rules daha hızlı.",
+      "teknoloji": [
+        "claude-code",
+        "bash",
+        "json"
+      ],
+      "gerekli_paketler": [
+        "jq (betikler için)"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil, hook grubunda). Anthropic resmi; tüm olaylar, girdi/çıktı şemaları ve test betikleri tek yerde. hookify kuralına göre daha güçlü ama daha zahmetli.",
+      "ortusme_grubu": "claude-hook",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "plugin-settings",
@@ -21445,7 +21524,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -21458,7 +21537,27 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentilerinde kullanıcıya özel ayar ve durum saklama kalıbı: proje kökünde `.claude/<eklenti>.local.md` dosyası (YAML frontmatter + Markdown gövde); hook betiklerinden, komutlardan ve agent'lardan okuma, frontmatter ayrıştırma teknikleri ve geçici aktif hook, agent durum yönetimi gibi kalıplar.",
+      "kullanim_alani": "Proje başına açılıp kapatılabilen ya da yapılandırılabilen bir Claude Code eklentisi yazarken.",
+      "kullanma": "Codex'te `.claude/*.local.md` dosyalarını okuyan bir mekanizma yok; aynı kalıp Codex'te skill'in kendisinin okuyacağı bir proje dosyası (örn. `.agents/<ad>.local.md`) olarak elle uygulanabilir, hook entegrasyonu kısmı uygulanamaz.",
+      "teknoloji": [
+        "claude-code",
+        "yaml",
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Dar ama iyi örneklenmiş bir kalıp; plugin-structure ile birlikte kullanılır.",
+      "ortusme_grubu": "claude-plugin-yapisi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "plugin-structure",
@@ -21521,7 +21620,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -21534,7 +21633,26 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklenti mimarisi: dizin düzeni (.claude-plugin/plugin.json, commands, agents, skills, hooks, .mcp.json), manifest alanları ve bileşen yolu yapılandırması, otomatik keşif, ${CLAUDE_PLUGIN_ROOT} ile taşınabilir yollar ve dosya adlandırma kuralları.",
+      "kullanim_alani": "Yeni Claude Code eklentisi iskeleti kurmak, bileşenleri düzenlemek, marketplace'e hazırlamak.",
+      "kullanma": "Codex'te Claude Code eklenti biçimi (.claude-plugin/plugin.json, ${CLAUDE_PLUGIN_ROOT}) desteklenmez; bileşenler ayrı ayrı kurulur: skiller `.agents/skills/<ad>/SKILL.md`, agent'lar `.codex/agents/<ad>.toml`, MCP sunucuları `~/.codex/config.toml` [mcp_servers], özel istemler `~/.codex/prompts/`. Dizin düzeni ve adlandırma ilkeleri yine yol gösterir.",
+      "teknoloji": [
+        "claude-code",
+        "json"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil, eklenti grubunda). plugin-dev ailesinin giriş noktası; diğer plugin-dev skilleri (komut, agent, hook, ayar, MCP) bunu tamamlar.",
+      "ortusme_grubu": "claude-plugin-yapisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator",
@@ -21596,7 +21714,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -21609,7 +21727,29 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istemleriyle skill'li/skill'siz çalıştırma, değerlendirici/karşılaştırıcı/analizci agent'lar, eval görüntüleyici, benchmark ve varyans analizi, açıklama (tetikleme) optimizasyonu ve paketleme betikleri.",
+      "kullanim_alani": "Yeni skill yazmak ya da mevcut skill'i ölçülebilir biçimde iyileştirmek (tetikleme doğruluğu dahil).",
+      "kullanma": "Claude Code eklentisine özgü yerleşim için skill-development'ı da oku. Eval döngüsü `claude -p` ile alt süreç çalıştırır; Codex'te bu adımlar `codex exec` ile değiştirilmeli ya da test istemleri elle çalıştırılmalı — yazım rehberi ve betiklerin çoğu (quick_validate, package_skill) araçtan bağımsız çalışır.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3",
+        "claude CLI (eval döngüsü için)"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator@composiohq",
@@ -21671,7 +21811,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -21684,7 +21824,26 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "skill-creator'ın eski sürümü (ComposioHQ): skill anatomisi, aşamalı açılım ilkesi ve 6 adımlı süreç (örnekle anlama, içerik planlama, init_skill.py ile iskelet, düzenleme, package_skill.py ile paketleme, yineleme).",
+      "kullanim_alani": "Ölçüm/eval istemeden, basit iskelet + paketleme akışı yeterliyse.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/skill-creator güncel ve eval destekli.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Eski sürüm; freshtechbro kopyasıyla neredeyse aynı (yalnızca package_skill.py farkı).",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator@freshtechbro",
@@ -21746,7 +21905,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -21759,7 +21918,26 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "skill-creator'ın eski sürümünün freshtechbro/claudedesignskills kopyası: skill anatomisi, aşamalı açılım ve init/package betikli 6 adımlı süreç.",
+      "kullanim_alani": "Güncel sürüme erişilemiyorsa yedek.",
+      "kullanma": "Varsayılan olarak kullanma; composiohq kopyasıyla aynı içerik, anthropics/skill-creator güncel.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator@heyitsnoah",
@@ -21821,7 +21999,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 67,
         "not": "B",
@@ -21834,7 +22012,27 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark ve açıklama optimizasyonu dahil); NOTICE.md ile lisans notu eklenmiş.",
+      "kullanim_alani": "claudesidian kasası içinde skill geliştirirken (kasa bu kopyayı bekler).",
+      "kullanma": "Diğer projelerde; anthropics/skill-creator ile aynı içerik.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3",
+        "claude CLI (eval döngüsü için)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik resmi sürümle aynı; çift kurulum bağlamı boşa harcar.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-development",
@@ -21898,7 +22096,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -21911,7 +22109,24 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentileri için skill yazım rehberi: skill anatomisi, aşamalı açılım, örnekle anlama → içerik planlama → yapı oluşturma → SKILL.md düzenleme adımları; eklentideki skills/ dizinine yerleştirme, üçüncü şahıs açıklama ve tetikleme ifadeleri, doğrulama kontrol listesi.",
+      "kullanim_alani": "Bir Claude Code eklentisinin içine skill eklemek (plugin-dev akışı içinde).",
+      "kullanma": "Bağımsız skill yazımı ve ölçümü için skill-creator birincil. Codex'te: eklenti yerleşimi (plugins/<ad>/skills/) ve ${CLAUDE_PLUGIN_ROOT} geçerli değil — skill'i doğrudan `.agents/skills/<ad>/SKILL.md` olarak yaz; SKILL.md yazım ilkeleri (frontmatter name/description, aşamalı açılım) Codex'te de aynen geçerli.",
+      "teknoloji": [
+        "claude-code",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İçeriğin çoğu eski skill-creator metninden türetilmiş (22 KB); eklentiye özgü kısım ince. writing-skills ve skill-creator varken ek değeri düşük.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-share",
@@ -21970,7 +22185,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -21983,7 +22198,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Yeni skill iskeleti oluşturur, doğrular, zip paketler ve Rube (Composio) MCP üzerinden Slack kanalına paylaşır.",
+      "kullanim_alani": "Ekipte skill paylaşımını Slack bildirimiyle otomatikleştirmek (Composio Rube bağlıysa).",
+      "kullanma": "Rube/Composio bağlantısı yoksa; skill yazım kalitesi için skill-creator. Betik içermiyor — paketleme adımları agent'ın yorumuna kalıyor.",
+      "teknoloji": [
+        "mcp",
+        "slack",
+        "composio"
+      ],
+      "gerekli_paketler": [
+        "Rube MCP (Composio)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Asıl değer Slack paylaşımı; skill oluşturma kısmı skill-creator'ın zayıf özeti.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skillify",
@@ -22042,7 +22277,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -22055,12 +22290,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Tekrar eden çok adımlı iş akışlarını yeniden kullanılabilir SKILL.md'ye dönüştürür: kalıbı tanımla, şablondan SKILL.md üret, yerleştir, doğrula; adlandırma kuralları ve kalite kontrol listesi.",
+      "kullanim_alani": "'Bunu skill yap' dendiğinde ya da aynı iş 3+ kez tekrarlandığında hızlı skill çıkarımı.",
+      "kullanma": "Ölçülebilir, test edilmiş skill gerekiyorsa (skill-creator, writing-skills). Şablon when_to_use/allowed-tools/effort gibi ag-kit/Claude Code'a özgü alanlar üretir; Codex için yalnızca name + description bırak.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa ve pratik 'iş akışından skill' tarifi; doğrulama yüzeysel.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "template-skill",
       "ad": "template-skill",
-      "durum": "tercih",
+      "durum": "alternatif",
       "kategori": "d-ai-otomasyon/04-skill-plugin-yazimi",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/04-skill-plugin-yazimi/template-skill",
@@ -22112,7 +22363,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -22125,7 +22376,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Boş skill şablonu: yalnızca name/description yer tutucuları ve 'talimatları buraya yaz' satırı.",
+      "kullanim_alani": "Yok — yeni skill için skill-creator'ın init/şablonları daha iyi.",
+      "kullanma": "Hiçbir projeye kurma; içerik yok.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 1,
+      "kalite_notu": "Karar: SADECE ARŞİV. 140 baytlık boş şablon.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "durum_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "writing-hookify-rules",
@@ -22188,7 +22456,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -22201,7 +22469,29 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "hookify eklentisi için kural yazımı: `.claude/hookify.<kural>.local.md` dosyalarında YAML frontmatter (name, enabled, event: bash/file/stop/prompt/all, pattern, action: warn/block) ve Claude'a gösterilecek mesaj; çoklu koşul, olay türü rehberi, regex ipuçları ve tuzaklar.",
+      "kullanim_alani": "Kod yazmadan 'tehlikeli rm uyarısı', 'console.log engelle' gibi hızlı koruma kuralları eklemek (hookify kuruluysa).",
+      "kullanma": "hookify eklentisi kurulu değilse; karmaşık mantık gerekiyorsa hook-development. Codex'te hookify yok: aynı korumalar Codex'in sandbox/onay politikasıyla (`~/.codex/config.toml`), AGENTS.md'deki yasak komut listesiyle ya da git pre-commit hook'uyla sağlanır; kuralın regex'i ve mesajı bu araçlara aynen taşınabilir.",
+      "teknoloji": [
+        "claude-code",
+        "yaml",
+        "regex"
+      ],
+      "gerekli_paketler": [
+        "hookify Claude Code eklentisi"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif, hook grubunda). Anthropic resmi; kısa ve örnekli. hook-development'ın kod gerektirmeyen hafif alternatifi.",
+      "ortusme_grubu": "claude-hook",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "writing-skills",
@@ -22265,7 +22555,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "kardes_bagimliliklari": {
         "using-superpowers": {
           "id": "using-superpowers",
@@ -22284,7 +22574,28 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Skill yazımını süreç dokümantasyonuna uygulanmış TDD olarak ele alır: önce alt-agent'larla baskı senaryosu çalıştırıp skill'siz başarısızlığı gözle (RED), skill'i yaz (GREEN), açıkları kapat (REFACTOR). Skill türleri, yapı, keşfedilebilirlik (SDO), ikna ilkeleri ve Anthropic en iyi uygulamaları ekleri içerir.",
+      "kullanim_alani": "Agent davranışını değiştiren süreç/disiplin skillerini yazmak ve gerçekten işe yaradığını kanıtlamak.",
+      "kullanma": "Basit başvuru/format skilleri için ağır (skill-creator yeterli). superpowers:test-driven-development'ı ön koşul sayar. Codex'te: alt-agent baskı testleri ayrı `codex exec` oturumlarıyla yapılır; skill yolu `~/.agents/skills/` (skill bunu kendisi belirtir).",
+      "teknoloji": [
+        "markdown",
+        "graphviz"
+      ],
+      "gerekli_paketler": [
+        "graphviz (isteğe bağlı, render-graphs.js için node)"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Skill'in işe yaradığını test etme disiplini başka hiçbir sürümde yok; çok harness'li yol bilgisi var. 27 KB + ekler ağır. skill-creator birincil kalır (eval altyapısı ve daha geniş kapsam), bu onu tamamlar.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "21risk-automation",

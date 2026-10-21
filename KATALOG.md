@@ -31,10 +31,10 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
   - [03-yazi-iletisim-icerik](#03-yazi-iletisim-icerik) — 15 skill · Yazı, iletişim, pazarlama/içerik, kariyer
   - [04-not-alma-bilgi-yonetimi](#04-not-alma-bilgi-yonetimi) — 15 skill · Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni
 - **AI ve Otomasyon** (42)
-  - [01-claude-api-mcp](#01-claude-api-mcp) — 9 skill · Claude API, MCP sunucusu, model geçişi
+  - [01-claude-api-mcp](#01-claude-api-mcp) — 10 skill · Claude API, MCP sunucusu, model geçişi
   - [02-agent-orkestrasyon](#02-agent-orkestrasyon) — 14 skill · Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları
   - [03-web-arastirma-veri](#03-web-arastirma-veri) — 2 skill · Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma
-  - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 16 skill · Skill yazma, plugin/hook/komut geliştirme
+  - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 15 skill · Skill yazma, plugin/hook/komut geliştirme
 - **Video, Ses ve AI Medya Üretimi** (90)
   - [01-video-uretim-montaj](#01-video-uretim-montaj) — 46 skill · Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg
   - [02-ses-muzik-konusma](#02-ses-muzik-konusma) — 14 skill · Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi
@@ -426,7 +426,8 @@ _Claude API, MCP sunucusu, model geçişi_ · not: `notlar/d-ai-otomasyon/01-cla
 | `mcp-builder` | ⭐ birincil | Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya … | mcp, python, typescript | ✅ | 86 A | M 119KB | - | anthropics/skills |
 | `mcp-builder@composiohq` | alt alternatif | Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve … | mcp, python, typescript | ✅ | 86 A | M 144KB | - | ComposioHQ/awesome-claude-skills |
 | `mcp-builder@vudovn` | alt tamamlayıcı | MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/ç… | mcp, json-schema | ✅ | 87 A | M 10KB | - | vudovn/ag-kit |
-| `mcp-integration` | ⭐ tamamlayıcı | Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tip… | mcp, claude-code, json | 🔵 | 74 B | M 46KB | - | anthropics/claude-code |
+| `mcp-integration` | ⭐ birincil | Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tip… | mcp, claude-code, json | 🔵 | 74 B | M 46KB | - | anthropics/claude-code |
+| `academy-guide` | ⭐ birincil | Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca… | web-fetch | ✅ | 86 A | S 19KB | - | anthropics/skills |
 
 ### 02-agent-orkestrasyon
 
@@ -464,22 +465,21 @@ _Skill yazma, plugin/hook/komut geliştirme_ · not: `notlar/d-ai-otomasyon/04-s
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `academy-guide` | ⭐ | Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching cour… |  | ✅ | 86 A | S 19KB | - | anthropics/skills |
-| `agent-development` | ⭐ | This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use des… |  | 🔵 | 74 B | M 69KB | - | anthropics/claude-code |
-| `command-development` | ⭐ | This skill should be used when the user asks to "create a slash command", "add a command", "write a custom command", "define command argumen… | git, node, typescript | 🔵 | 74 B | M 150KB | - | anthropics/claude-code |
-| `hook-development` | ⭐ | This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement p… | react | 🔵 | 74 B | M 63KB | - | anthropics/claude-code |
-| `plugin-settings` | ⭐ | This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md f… | api-anahtari, git, typescript | 🔵 | 74 B | M 43KB | - | anthropics/claude-code |
-| `plugin-structure` | ⭐ | This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin comp… | api-anahtari, node, python | 🔵 | 74 B | M 73KB | - | anthropics/claude-code |
-| `skill-creator` | ⭐ | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, ed… | api-anahtari, html, node, python | ✅ | 83 A | L 220KB | - | anthropics/skills |
-| `skill-creator@composiohq` | alt | Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that exte… | api-anahtari, html, python, react | ✅ | 86 A | M 38KB | - | ComposioHQ/awesome-claude-skills |
-| `skill-creator@freshtechbro` | alt | Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that exte… | api-anahtari, html, python, react | ✅ | 68 B | M 41KB | - | freshtechbro/claudedesignskills |
-| `skill-creator@heyitsnoah` | alt | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, ed… | api-anahtari, html, node, python | ✅ | 67 B | L 221KB | - | heyitsnoah/claudesidian |
-| `skill-development` | ⭐ | This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description"… | api-anahtari, html, python, react | 🔵 | 74 B | M 34KB | - | anthropics/claude-code |
-| `skill-share` | ⭐ | A skill that creates new Claude skills and automatically shares them on Slack using Rube for seamless team collaboration and skill discovery… | python | ✅ | 88 A | S 3KB | - | ComposioHQ/awesome-claude-skills |
-| `skillify` | ⭐ | Auto-create new skills from repetitive workflows. When you notice yourself doing the same multi-step process repeatedly, extract it into a r… | tailwind | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `template-skill` | ⭐ | Replace with description of the skill and when Claude should use it. |  | ✅ | 88 A | S 0KB | - | ComposioHQ/awesome-claude-skills |
-| `writing-hookify-rules` | ⭐ | This skill should be used when the user asks to "create a hookify rule", "write a hook rule", "configure hookify", "add a hookify rule", or … | api-anahtari, python, typescript | 🔵 | 74 B | M 8KB | - | anthropics/claude-code |
-| `writing-skills` | ⭐ | Use when creating new skills, editing existing skills, or verifying skills work before deployment | api-anahtari, git, node, python, react | ✅ | 88 A | L 105KB | - | obra/superpowers |
+| `agent-development` | ⭐ birincil | Claude Code eklentileri için alt-agent (subagent) yazımı: Markdown + YAML frontmatter yapısı, name/description/model/color/tools alanları, <… | claude-code, markdown, yaml | 🔵 | 74 B | M 69KB | - | anthropics/claude-code |
+| `command-development` | ⭐ birincil | Claude Code slash komutu yazımı: komut konumları (proje/kullanıcı/eklenti), YAML frontmatter (description, allowed-tools, model, argument-hi… | claude-code, markdown, yaml | 🔵 | 74 B | M 150KB | - | anthropics/claude-code |
+| `hook-development` | ⭐ birincil | Claude Code hook'ları: prompt tabanlı (LLM kararlı) ve komut hook'ları, eklenti hooks.json ve settings biçimi, PreToolUse/PostToolUse/Stop/S… | claude-code, bash, json | 🔵 | 74 B | M 63KB | - | anthropics/claude-code |
+| `plugin-settings` | ⭐ tamamlayıcı | Claude Code eklentilerinde kullanıcıya özel ayar ve durum saklama kalıbı: proje kökünde `.claude/<eklenti>.local.md` dosyası (YAML frontmatt… | claude-code, yaml, bash | 🔵 | 74 B | M 43KB | - | anthropics/claude-code |
+| `plugin-structure` | ⭐ birincil | Claude Code eklenti mimarisi: dizin düzeni (.claude-plugin/plugin.json, commands, agents, skills, hooks, .mcp.json), manifest alanları ve bi… | claude-code, json | 🔵 | 74 B | M 73KB | - | anthropics/claude-code |
+| `skill-creator` | ⭐ birincil | Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istem… | python, markdown | ✅ | 83 A | L 220KB | - | anthropics/skills |
+| `skill-creator@composiohq` | alt alternatif | skill-creator'ın eski sürümü (ComposioHQ): skill anatomisi, aşamalı açılım ilkesi ve 6 adımlı süreç (örnekle anlama, içerik planlama, init_s… | python, markdown | ✅ | 86 A | M 38KB | - | ComposioHQ/awesome-claude-skills |
+| `skill-creator@freshtechbro` | alt alternatif | skill-creator'ın eski sürümünün freshtechbro/claudedesignskills kopyası: skill anatomisi, aşamalı açılım ve init/package betikli 6 adımlı sü… | python, markdown | ✅ | 68 B | M 41KB | - | freshtechbro/claudedesignskills |
+| `skill-creator@heyitsnoah` | alt alternatif | Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark v… | python, markdown | ✅ | 67 B | L 221KB | - | heyitsnoah/claudesidian |
+| `skill-development` | ⭐ alternatif | Claude Code eklentileri için skill yazım rehberi: skill anatomisi, aşamalı açılım, örnekle anlama → içerik planlama → yapı oluşturma → SKILL… | claude-code, markdown | 🔵 | 74 B | M 34KB | - | anthropics/claude-code |
+| `skill-share` | ⭐ alternatif | Yeni skill iskeleti oluşturur, doğrular, zip paketler ve Rube (Composio) MCP üzerinden Slack kanalına paylaşır. | mcp, slack, composio | ✅ | 88 A | S 3KB | - | ComposioHQ/awesome-claude-skills |
+| `skillify` | ⭐ alternatif | Tekrar eden çok adımlı iş akışlarını yeniden kullanılabilir SKILL.md'ye dönüştürür: kalıbı tanımla, şablondan SKILL.md üret, yerleştir, doğr… | markdown | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
+| `template-skill` | alt alternatif | Boş skill şablonu: yalnızca name/description yer tutucuları ve 'talimatları buraya yaz' satırı. | markdown | ✅ | 88 A | S 0KB | - | ComposioHQ/awesome-claude-skills |
+| `writing-hookify-rules` | ⭐ alternatif | hookify eklentisi için kural yazımı: `.claude/hookify.<kural>.local.md` dosyalarında YAML frontmatter (name, enabled, event: bash/file/stop/… | claude-code, yaml, regex | 🔵 | 74 B | M 8KB | - | anthropics/claude-code |
+| `writing-skills` | ⭐ tamamlayıcı | Skill yazımını süreç dokümantasyonuna uygulanmış TDD olarak ele alır: önce alt-agent'larla baskı senaryosu çalıştırıp skill'siz başarısızlığ… | markdown, graphviz | ✅ | 88 A | L 105KB | - | obra/superpowers |
 
 ## Video, Ses ve AI Medya Üretimi
 
