@@ -2,7 +2,18 @@
 
 _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/15**
+
+### threejs-world-generation  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
+
+- **Ne yapar:** OpenMontage'ın threejs_world aracı ve HyperFrames ile metinden/briften deterministik, düzenlenebilir 3D dünya üretimi: semantik bölgeler, prosedürel biyomlar, arazi, saçılım, işaret noktaları, kamera uçuşu ve teşhis kareleri; blockout ve production (lisanslı GLB kataloğu + Blender) kademeleri.
+- **Ne zaman:** OpenMontage video üretiminde gerçek 3D ortam/kamera uçuşu içeren sahne veya dünya filmi gerektiğinde. · **Ne zaman değil:** Web sitesi 3D'si (threejs-* skilleri); tek bir 3D nesne veya düz parallax sahne; OpenMontage kurulu değilse.
+- **Teknoloji:** three.js, hyperframes, openmontage, python, blender · **Paketler:** OpenMontage (~/.openmontage, venv python), Blender (production kademesi)
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Durum:** tercih · **Örtüşme:** 3d-dunya-uretimi → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Boyut:** 16 KB (SKILL.md 8.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, kategori düzeltildi (05-3d-webgl → g-video-ses-medya/04-motion-graphics-karakter). Web 3D'si değil, OpenMontage video boru hattının parçası (tools.graphics.threejs_world). Kalite kapıları ve açık/çıkarılmış kısıt ayrımı iyi.
 
 ### canvas-procedural-animation  ·  calesthio/OpenMontage @ c806645  ·  puan 79 (B)
 

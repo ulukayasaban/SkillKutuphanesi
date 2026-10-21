@@ -41,7 +41,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
 - **Ne yapar:** Locomotive Scroll ile smooth scroll, data-scroll öznitelikleriyle parallax ve görünürlük tespiti, ScrollTrigger entegrasyonu; yapılandırma ve entegrasyon yardımcı betikleri, Vite başlangıç projesi.
 - **Ne zaman:** Projede Locomotive Scroll v4 zaten kullanılıyorsa bakım için. · **Ne zaman değil:** Yeni projeler: Lenis (gsap-scrolltrigger ve scroll-craft içinde anlatılıyor) tercih edilmeli; Locomotive v5 Lenis tabanlı ve API'si farklı.
-- **Teknoloji:** locomotive-scroll 4, gsap · **Paketler:** locomotive-scroll@4
+- **Teknoloji:** locomotive-scroll 4, gsap 3.15 · **Paketler:** locomotive-scroll@4
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** scroll-deneyimi → alternatif

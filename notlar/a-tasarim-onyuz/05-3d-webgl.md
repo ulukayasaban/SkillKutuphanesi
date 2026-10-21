@@ -2,344 +2,367 @@
 
 _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/34**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **33/33**
 
 ### aframe-webxr  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 65 (B)
 
-- **Ne yapar:** Declarative web framework for building browser-based 3D, VR, and AR experiences using HTML and entity-component architecture. Use this skill when creating WebXR applications, VR experiences, AR experiences, 360-degree media viewers, or immersive web content with minimal JavaScript. Triggers on tasks involving A-Frame, WebXR, VR development, AR development, entity-component-system, declarative 3D, 
-- **Teknoloji:** canvas, gsap, html, node, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** A-Frame ile HTML tabanlı (entity-component) 3D, VR ve AR deneyimleri: sahne, bileşen yazımı, WebXR oturumları, kontrolcüler, 360° medya; başlangıç sahnesi ve sahne/bileşen üreteç betikleri.
+- **Ne zaman:** Tarayıcıda VR/AR (WebXR) deneyimi, 360° görüntüleyici, az JavaScript ile hızlı immersive prototip. · **Ne zaman değil:** Klasik web sitesindeki 3D hero/ürün sergisi (three.js/R3F daha uygun).
+- **Teknoloji:** aframe 1.7, webxr, three.js · **Paketler:** aframe
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** webxr → birincil
 - **Boyut:** 176 KB (SKILL.md 26.7 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. A-Frame 1.7.1 ile güncel sayılır; WebXR için kategoride tek skill. 176 KB, freshtechbro 2025-11'den beri güncellenmedi.
 
 ### babylonjs-engine  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 65 (B)
 
-- **Ne yapar:** Comprehensive skill for Babylon.js 3D web rendering engine. Use this skill when building real-time 3D experiences, browser-based games, interactive visualizations, or immersive web applications. Triggers on tasks involving Babylon.js, 3D scenes, WebGL/WebGPU rendering, entity-component systems, physics simulations, PBR materials, shadow mapping, or 3D model loading. Alternative to Three.js with bu
-- **Teknoloji:** canvas, gsap, node, r3f, react, three.js, typescript, webgl _(otomatik tespit)_
+- **Ne yapar:** Babylon.js 3D motoru: sahne, kamera, ışık, PBR materyal, Havok fizik, GUI, WebGPU motoru, model yükleme ve optimizasyon; Vite başlangıç projesi ve sahne/mesh üreteç betikleri.
+- **Ne zaman:** Fizik, GUI ve araç zinciri hazır gelen tam bir 3D motoru istenen oyun/simülasyon/konfigüratör projeleri. · **Ne zaman değil:** Pazarlama sitesindeki hafif 3D (three.js/R3F daha küçük ve yaygın).
+- **Teknoloji:** babylonjs 7, webgl2, webgpu, havok · **Paketler:** @babylonjs/core, @babylonjs/loaders, @babylonjs/havok
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** 3d-motoru → birincil
 - **Boyut:** 153 KB (SKILL.md 30.4 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (three.js yerine motor seçilirse birincil). Başlangıç projesi Babylon ^7.31; güncel ana sürüm 8.x, temel API'ler büyük ölçüde uyumlu. 153 KB.
 
 ### blender-web-pipeline  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
-- **Ne yapar:** Blender to web export workflows for 3D models and animations. Use this skill when exporting Blender models to glTF for web, optimizing 3D assets for Three.js or Babylon.js, batch processing models with Python scripts, automating Blender workflows, or creating web-ready 3D pipelines. Triggers on tasks involving Blender glTF export, bpy scripting, 3D asset optimization, model compression, texture ba
-- **Teknoloji:** node, python, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Blender'dan web'e 3D aktarım: glTF 2.0 dışa aktarma ayarları, bpy ile toplu dışa aktarma ve otomasyon, LOD üretimi, doku pişirme ve model optimizasyonu betikleri.
+- **Ne zaman:** Blender'da hazırlanan modelleri three.js/Babylon için otomatik ve tutarlı dışa aktarmak. · **Ne zaman değil:** Blender kurulu değilse; hazır GLB'yi sadece sıkıştırmak (threejs-asset-pipeline).
+- **Teknoloji:** blender 4, bpy, gltf 2.0, python · **Paketler:** Blender (bpy)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** 3d-varlik-hazirlama → tamamlayıcı
 - **Boyut:** 27 KB (SKILL.md 16.4 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (tamamlayıcı). Varlık hazırlamanın Blender tarafı; betikler Blender içinden (blender --background --python) çalışır.
 
 ### lightweight-3d-effects  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 66 (B)
 
-- **Ne yapar:** Lightweight 3D effects for decorative elements and micro-interactions using Zdog, Vanta.js, and Vanilla-Tilt.js. Use this skill when adding pseudo-3D illustrations, animated backgrounds, parallax tilt effects, decorative 3D elements, or subtle depth effects without heavy frameworks. Triggers on tasks involving Zdog pseudo-3D, Vanta.js backgrounds, Vanilla-Tilt parallax, card tilt effects, hero sec
-- **Teknoloji:** canvas, css, gsap, html, node, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Ağır çatı kullanmadan dekoratif 3D: Zdog ile sahte 3D illüstrasyon, Vanta.js animasyonlu arka planlar ve Vanilla-Tilt ile parallax eğim efekti; kurulum ve üreteç betikleri.
+- **Ne zaman:** Hero arka planı veya kart eğimi gibi küçük dekoratif derinlik efektleri. · **Ne zaman değil:** Gerçek 3D sahne; yeni projelerde Vanta (three r134'e sabit, bakımsız) yerine OGL veya küçük bir three.js shader arka planı tercih et.
+- **Teknoloji:** zdog, vanta, vanilla-tilt, three.js · **Paketler:** zdog, vanta, three@0.134, vanilla-tilt
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** hafif-3d-efekt → birincil
 - **Boyut:** 179 KB (SKILL.md 22.3 KB, yük orta) · **Kırık bağlantı:** 1
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF. Vanta ve Zdog yıllardır bakımsız; Vanta eski three r134 gerektiriyor. Kayıtta 1 kırık bağlantı ('illo').
 
 ### playcanvas-engine  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
-- **Ne yapar:** Lightweight WebGL/WebGPU game engine with entity-component architecture and visual editor integration. Use this skill when building browser-based games, interactive 3D applications, or performance-critical web experiences. Triggers on tasks involving PlayCanvas, entity-component systems, game engine development, WebGL games, 3D browser applications, editor-first workflows, or real-time 3D renderin
-- **Teknoloji:** canvas, html, node, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** PlayCanvas motoru: entity-component mimarisi, script'ler, editör iş akışı, fizik, girdi ve optimizasyon; başlangıç projesi ve bileşen/proje üreteç betikleri.
+- **Ne zaman:** PlayCanvas editörüyle çalışan ekipler veya tarayıcı oyunu. · **Ne zaman değil:** Genel web 3D'si (three.js/R3F); editör kullanılmayacaksa çoğu durumda Babylon/three.js daha yaygın.
+- **Teknoloji:** playcanvas 2, webgl2, webgpu · **Paketler:** playcanvas
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** 3d-motoru → alternatif
 - **Boyut:** 183 KB (SKILL.md 22.3 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ama genel; Babylon ile aynı ihtiyaç (tam motor) için alternatif. 183 KB.
 
 ### react-three-fiber  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
-- **Ne yapar:** Build declarative 3D scenes with React Three Fiber (R3F) - a React renderer for Three.js. Use when building interactive 3D experiences in React applications with component-based architecture, state management, and reusable abstractions. Ideal for product configurators, portfolios, games, data visualization, and immersive web experiences.
-- **Teknoloji:** canvas, gsap, html, motion, next.js, python, r3f, react, three.js, typescript, webgl _(otomatik tespit)_
+- **Ne yapar:** React Three Fiber ile bildirimsel 3D: Canvas, useFrame, useThree, drei yardımcıları, olaylar, Suspense ile yükleme, leva kontrolleri; Vite başlangıç projesi ve sahne/bileşen üreteci betikleri.
+- **Ne zaman:** R3F v8 / React 18 kullanan var olan projelerde. · **Ne zaman değil:** Yeni projeler: threejs-react-three-fiber (R3F v9, React 19) daha güncel.
+- **Teknoloji:** R3F v8, drei 9, three r172, react 18 · **Paketler:** three, @react-three/fiber, @react-three/drei, leva
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** react-three-fiber → alternatif
 - **Boyut:** 105 KB (SKILL.md 22.5 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kavramlar doğru ama başlangıç projesi R3F ^8.18 / drei ^9 / React 18 / three 0.172; R3F v9 React 19 gerektirir. freshtechbro 2025-11'den beri güncellenmedi.
 
 ### spline-interactive  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
-- **Ne yapar:** Browser-based 3D design tool with visual editor, animation, and web export. Use this skill when creating 3D scenes without code, designing interactive web experiences, prototyping 3D UI, exporting to React/web, or building designer-friendly 3D content. Triggers on tasks involving Spline, no-code 3D, visual 3D editor, 3D animation, state-based interactions, React Spline integration, or scene export
-- **Teknoloji:** canvas, gsap, motion, next.js, node, python, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Spline (tarayıcı tabanlı 3D tasarım aracı) sahnelerini web'e/React'e gömme: @splinetool/react-spline ve runtime, olaylar, nesneleri koddan kontrol etme, performans ve dışa aktarma seçenekleri.
+- **Ne zaman:** Tasarımcının Spline'da hazırladığı 3D sahne siteye konacaksa; kodsuz hızlı 3D prototip. · **Ne zaman değil:** Tam kontrol ve küçük paket gereken sahneler (Spline runtime ağır); Spline hesabı/sahnesi yoksa.
+- **Teknoloji:** spline, react · **Paketler:** @splinetool/react-spline, @splinetool/runtime
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** kodsuz-3d → birincil
 - **Boyut:** 54 KB (SKILL.md 19.1 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kodsuz 3D için kategoride tek skill; API'ler geçerli. freshtechbro 2025-11'den beri güncellenmedi.
 
 ### substance-3d-texturing  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
-- **Ne yapar:** Comprehensive skill for Adobe Substance 3D Painter texturing and material creation workflow. Use this skill when creating PBR materials, exporting textures for web/game engines, optimizing 3D assets for real-time rendering, or automating texture workflows. Triggers on tasks involving Substance 3D Painter, PBR texturing, material creation, texture export for Three.js, Babylon.js, Unity, Unreal, glT
-- **Teknoloji:** python, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Adobe Substance 3D Painter ile PBR doku iş akışı: kanal rehberi, web/mobil/three.js/Babylon için dışa aktarma şablonları, Painter Python API'siyle toplu dışa aktarma ve doku optimizasyon betikleri.
+- **Ne zaman:** Substance Painter kullanan ekiplerde PBR dokuları web'e uygun boyut ve formatta dışa aktarmak. · **Ne zaman değil:** Substance lisansı yoksa; prosedürel/three.js içi materyaller yeterliyse.
+- **Teknoloji:** substance-3d-painter, python, pbr · **Paketler:** Adobe Substance 3D Painter (ücretli), python3
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** 3d-varlik-hazirlama → tamamlayıcı
 - **Boyut:** 126 KB (SKILL.md 15.6 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (tamamlayıcı). Dar ama doğru kapsam; ücretli Adobe aracına bağımlı.
 
 ### threejs-animation  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 85 (A)
 
-- **Ne yapar:** Keyframe, skeletal and morph-target animation, procedural motion and clip blending, on WebGL or with WebGPU and TSL. Use when animating objects, playing glTF animations, posing bones, driving morph targets, or mixing and crossfading clips.
-- **Teknoloji:** canvas, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js animasyonu: AnimationMixer, keyframe izleri, iskelet animasyonu, morph target, animasyon karıştırma/geçiş ve prosedürel hareket.
+- **Ne zaman:** GLTF animasyonu oynatmak, karakter animasyonu blend'i, prosedürel nesne hareketi. · **Ne zaman değil:** DOM/scroll animasyonu (GSAP skilleri); kamera yolu scroll'a bağlanacaksa gsap-scrolltrigger ile birlikte kullan.
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-animation → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 21 KB (SKILL.md 20.9 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-animation@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js animation - keyframe animation, skeletal animation, morph targets, animation mixing. Use when animating objects, playing GLTF animations, creating procedural motion, or blending animations.
-- **Teknoloji:** three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-animation skillinin OpenMontage'daki eski sürümü: three.js animasyonu: AnimationMixer, keyframe izleri, iskelet animasyonu, morph target, animasyon karıştırma/geçiş ve prosedürel hareket. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-animation → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.
 
 ### threejs-asset-pipeline  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 85 (A)
 
-- **Ne yapar:** Shrinking glTF assets for three.js with gltf-transform: inspect, validate and optimize commands, Draco, meshopt and quantization, KTX2, WebP and AVIF textures, the loader setup each output needs, and gltfjsx for React. Use when compressing, optimizing or validating 3D models before loading them.
-- **Teknoloji:** canvas, node, r3f, react, three.js, typescript, webgl _(otomatik tespit)_
+- **Ne yapar:** glTF varlıklarını three.js için küçültme: gltf-transform inspect/validate/optimize, Draco, meshopt ve quantization, KTX2/WebP/AVIF dokular, her çıktının gerektirdiği yükleyici ayarı ve React için gltfjsx.
+- **Ne zaman:** 3D modeli siteye koymadan önce sıkıştırma, doğrulama ve yükleyici ayarı; büyük GLB'ler. · **Ne zaman değil:** Model üretimi/modelleme (blender-web-pipeline); prosedürel geometri.
+- **Teknoloji:** three r186, gltf-transform 4, ktx2, draco, meshopt, gltfjsx · **Paketler:** @gltf-transform/cli, three, gltfjsx (React)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** 3d-varlik-hazirlama → birincil · **Roller:** 3d-gelistirici
 - **Boyut:** 18 KB (SKILL.md 17.6 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). 3d-varlik-hazirlama grubunun birincili: komut düzeyinde somut, yükleyici eşlemesi doğru, güncel (r185/r186). Blender/Substance skilleri araç tarafı tamamlayıcısı.
 
 ### threejs-fundamentals  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 85 (A)
 
-- **Ne yapar:** Three.js scene setup: scenes and fog, cameras, the renderer and tone mapping, the animation loop, object hierarchies, transforms, core math and cleanup, on WebGL or with WebGPU and TSL. Use when creating a scene from scratch, configuring a camera or renderer, handling resize, or arranging objects.
-- **Teknoloji:** canvas, css, html, node, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js temeli: Scene/Camera/Renderer kurulumu, Object3D hiyerarşisi, koordinat sistemi, yeniden boyutlandırma, render döngüsü, renk yönetimi ve WebGPURenderer'a geçiş.
+- **Ne zaman:** Her vanilla Three.js projesinin başlangıcı; sahne kurulumu ve dönüşümler. · **Ne zaman değil:** React projesi (threejs-react-three-fiber).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-fundamentals → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 23 KB (SKILL.md 23.0 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-fundamentals@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems. Use when setting up 3D scenes, creating cameras, configuring renderers, managing object hierarchies, or working with transforms.
-- **Teknoloji:** canvas, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-fundamentals skillinin OpenMontage'daki eski sürümü: three.js temeli: Scene/Camera/Renderer kurulumu, Object3D hiyerarşisi, koordinat sistemi, yeniden boyutlandırma, render döngüsü, renk yönetimi ve WebGPURenderer'a geçiş. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-fundamentals → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir. r152 dönemine ait renk yönetimi notları içeriyor.
 
 ### threejs-geometry  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 82 (A)
 
-- **Ne yapar:** Creating and shaping three.js geometry: built-in shapes, 3D text, vertex buffers and attributes, merging, instancing, batching, point clouds and lines, on WebGL or with WebGPU and TSL. Use when building 3D shapes or text, custom vertex data, custom meshes, instanced meshes, or point clouds.
-- **Teknoloji:** canvas, css, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js geometri: hazır şekiller, BufferGeometry ile özel geometri, öznitelikler, InstancedMesh/BatchedMesh ile çoğaltma ve geometri birleştirme.
+- **Ne zaman:** Özel şekil, prosedürel mesh, binlerce kopya (instancing) gerektiğinde. · **Ne zaman değil:** Sadece hazır GLTF modeli gösterilecekse (threejs-loaders).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-geometry → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 25 KB (SKILL.md 24.8 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-geometry@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing. Use when creating 3D shapes, working with vertices, building custom meshes, or optimizing with instanced rendering.
-- **Teknoloji:** three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-geometry skillinin OpenMontage'daki eski sürümü: three.js geometri: hazır şekiller, BufferGeometry ile özel geometri, öznitelikler, InstancedMesh/BatchedMesh ile çoğaltma ve geometri birleştirme. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-geometry → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 13.5 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.
 
 ### threejs-interaction  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 85 (A)
 
-- **Ne yapar:** Picking with raycasting, camera controls, transform gizmos, drag, hover and box selection for three.js, identical under WebGL and WebGPU. Use when handling mouse, touch or keyboard input, detecting clicks on 3D objects, adding camera controls, or making scene objects interactive.
-- **Teknoloji:** canvas, css, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js etkileşimi: Raycaster ile seçim, fare/dokunma girdisi, OrbitControls ve diğer kontroller, sürükleme ve nesne seçimi.
+- **Ne zaman:** Tıklanabilir/üzerine gelinebilir 3D nesneler, kamera kontrolleri, ürün döndürme. · **Ne zaman değil:** R3F projeleri (pointer olayları threejs-react-three-fiber'da).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-interaction → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 22 KB (SKILL.md 21.8 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-interaction@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js interaction - raycasting, controls, mouse/touch input, object selection. Use when handling user input, implementing click detection, adding camera controls, or creating interactive 3D experiences.
-- **Teknoloji:** canvas, css, html, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-interaction skillinin OpenMontage'daki eski sürümü: three.js etkileşimi: Raycaster ile seçim, fare/dokunma girdisi, OrbitControls ve diğer kontroller, sürükleme ve nesne seçimi. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-interaction → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 16 KB (SKILL.md 15.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.
 
 ### threejs-lighting  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 85 (A)
 
-- **Ne yapar:** Light types and physical units, shadow maps, HDR environment lighting, light probes, and lighting performance, on WebGL or with WebGPU and TSL. Use when adding or tuning lights, fixing shadow acne, setting up image-based lighting, or dimming an environment map.
-- **Teknoloji:** canvas, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js ışıklandırma: ışık türleri, gölgeler ve gölge ayarı, HDR ortam ışığı (IBL), ışık performansı.
+- **Ne zaman:** Ürün sergisi ve sahne ışığı, gölge kalitesi, ortam haritası. · **Ne zaman değil:** Işıksız/unlit stilize sahneler.
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-lighting → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 23 KB (SKILL.md 22.9 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-lighting@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js lighting - light types, shadows, environment lighting. Use when adding lights, configuring shadows, setting up IBL, or optimizing lighting performance.
-- **Teknoloji:** three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-lighting skillinin OpenMontage'daki eski sürümü: three.js ışıklandırma: ışık türleri, gölgeler ve gölge ayarı, HDR ortam ışığı (IBL), ışık performansı. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-lighting → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.
 
 ### threejs-loaders  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 85 (A)
 
-- **Ne yapar:** Loading three.js assets: glTF with Draco, meshopt and KTX2 compression, other model formats, textures, HDR and EXR environments, progress, caching, cloning and disposal. Use when loading 3D models, textures or environment maps, or managing loading progress, on WebGL or with WebGPU and TSL.
-- **Teknoloji:** canvas, html, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js varlık yükleme: GLTFLoader (Draco/Meshopt/KTX2), doku/HDR yükleyiciler, LoadingManager ile ilerleme, async kalıplar ve önbellek.
+- **Ne zaman:** GLTF/GLB model, HDR ortam veya çok sayıda varlık yüklenecekse. · **Ne zaman değil:** Modellerin önceden optimize edilmesi (threejs-asset-pipeline).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-loaders → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 22 KB (SKILL.md 21.6 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-loaders@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js asset loading - GLTF, textures, images, models, async patterns. Use when loading 3D models, textures, HDR environments, or managing loading progress.
-- **Teknoloji:** node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-loaders skillinin OpenMontage'daki eski sürümü: three.js varlık yükleme: GLTFLoader (Draco/Meshopt/KTX2), doku/HDR yükleyiciler, LoadingManager ile ilerleme, async kalıplar ve önbellek. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-loaders → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir. CDN örneği three@0.160.
 
 ### threejs-materials  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 82 (A)
 
-- **Ne yapar:** Choosing and configuring three.js materials - unlit, diffuse, specular, PBR, toon, point and line materials - shared properties like blending and stencil, environment response, and the WebGPU node-material and TSL equivalents. Use when styling meshes or tuning material behavior.
-- **Teknoloji:** canvas, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js materyalleri: PBR (MeshStandard/MeshPhysical: transmission, clearcoat, iridescence), basit materyaller, ShaderMaterial, materyal ayarları ve performans.
+- **Ne zaman:** Ürün görselleştirme (cam, metal, kumaş), PBR ayarı, materyal seçimi. · **Ne zaman değil:** Tamamen özel shader efektleri (threejs-shaders).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-materials → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 26 KB (SKILL.md 26.1 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-materials@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js materials - PBR, basic, phong, shader materials, material properties. Use when styling meshes, working with textures, creating custom shaders, or optimizing material performance.
-- **Teknoloji:** three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-materials skillinin OpenMontage'daki eski sürümü: three.js materyalleri: PBR (MeshStandard/MeshPhysical: transmission, clearcoat, iridescence), basit materyaller, ShaderMaterial, materyal ayarları ve performans. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-materials → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 13 KB (SKILL.md 13.1 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.
 
 ### threejs-performance  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 82 (A)
 
-- **Ne yapar:** Measuring and optimizing three.js speed: render statistics, memory counters, fewer draw calls via merging, instancing, batching and LOD, fill rate, shadows, CPU work per frame, shader stalls and GPU compute for particles, WebGL or WebGPU with TSL. Use when a scene is slow, janks or exceeds memory.
-- **Teknoloji:** canvas, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js hız ölçümü ve optimizasyonu: renderer.info istatistikleri, bellek sayaçları, merge/instancing/BatchedMesh/LOD ile draw call azaltma, fill rate ve DPR, gölge maliyeti, kare başı CPU işi, shader derleme takılmaları, parçacıklar için GPU compute; WebGL ve WebGPU/TSL.
+- **Ne zaman:** Sahne yavaşsa, takılıyorsa, mobilde ısınıyorsa veya bellek büyüyorsa; yayından önce performans bütçesi kontrolü. · **Ne zaman değil:** Henüz çalışan bir sahne yoksa (önce fundamentals).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** threejs-performance → birincil · **Roller:** 3d-gelistirici
 - **Boyut:** 25 KB (SKILL.md 24.7 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Ölçmeden optimize etme yaklaşımı; r186 ve WebGPU'ya güncel. Kategoride tek performans skilli.
 
 ### threejs-postprocessing  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 82 (A)
 
-- **Ne yapar:** Three.js post-processing: composer pass chains, built-in renderer effects, and the WebGPU/TSL node pipeline — bloom, depth of field, ambient occlusion, custom screen effects. Use when adding visual effects, color grading, blur, glow, or screen-space shaders, on WebGL or with WebGPU and TSL.
-- **Teknoloji:** canvas, css, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js post-processing: EffectComposer, bloom, DOF, SMAA/FXAA, renk düzeltme, özel ekran shader'ları; WebGPU tarafında node tabanlı post-processing.
+- **Ne zaman:** Bloom, glow, alan derinliği, sinematik renk düzeltme gerektiğinde. · **Ne zaman değil:** Mobil ağırlıklı ve performans bütçesi dar sahneler (her pass maliyetli).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-postprocessing → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 26 KB (SKILL.md 26.5 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-postprocessing@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js post-processing - EffectComposer, bloom, DOF, screen effects. Use when adding visual effects, color grading, blur, glow, or creating custom screen-space shaders.
-- **Teknoloji:** node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-postprocessing skillinin OpenMontage'daki eski sürümü: three.js post-processing: EffectComposer, bloom, DOF, SMAA/FXAA, renk düzeltme, özel ekran shader'ları; WebGPU tarafında node tabanlı post-processing. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-postprocessing → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir. r150 dönemine ait örnekler içeriyor.
 
 ### threejs-react-three-fiber  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 82 (A)
 
-- **Ne yapar:** Building three.js scenes from React with React Three Fiber and drei: renderer setup, the scene graph as JSX, frame-loop, state and loading hooks, pointer events, and adaptive performance, on WebGL or with WebGPU and TSL. Use when writing React components that render three.js.
-- **Teknoloji:** canvas, html, node, r3f, react, three.js, typescript, webgl _(otomatik tespit)_
+- **Ne yapar:** React Three Fiber ve drei ile three.js sahnelerini React'ten kurma: Canvas ve renderer ayarı, JSX sahne ağacı, useFrame döngüsü, state/yükleme hook'ları, pointer olayları, uyarlanabilir performans; WebGL veya WebGPU/TSL.
+- **Ne zaman:** React/Next.js projesinde 3D sahne, ürün konfigüratörü, hero 3D'si. · **Ne zaman değil:** React kullanılmayan projeler (vanilla threejs-* skilleri).
+- **Teknoloji:** R3F v9, drei 10, three r186, react 19 · **Paketler:** three, @react-three/fiber, @react-three/drei
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** react-three-fiber → birincil · **Roller:** 3d-gelistirici
 - **Boyut:** 29 KB (SKILL.md 29.3 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). react-three-fiber grubunun birincili: R3F v9/React 19 ve WebGPU'ya güncel, 2026-10'da bakımı yapılmış. freshtechbro react-three-fiber R3F v8/React 18 dönemine ait.
 
 ### threejs-shaders  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 82 (A)
 
-- **Ne yapar:** Custom GLSL vertex and fragment shaders: uniforms, varyings, shader chunks, extending built-in materials, instanced attributes, plus the same effects as node materials with TSL on WebGPU. Use when writing a shader, a custom material or effect, moving vertices in a shader, or porting GLSL to TSL.
-- **Teknoloji:** canvas, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js shader'ları: GLSL ile ShaderMaterial/RawShaderMaterial, uniform'lar, vertex/fragment efektleri, onBeforeCompile ile hazır materyali genişletme ve TSL (node tabanlı shader).
+- **Ne zaman:** Özel görsel efekt, distortion, gradient/noise arka plan, materyal genişletme. · **Ne zaman değil:** Hazır PBR materyalleri yeterliyse (threejs-materials).
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-shaders → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 26 KB (SKILL.md 25.9 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-shaders@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects. Use when creating custom visual effects, modifying vertices, writing fragment shaders, or extending built-in materials.
-- **Teknoloji:** three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-shaders skillinin OpenMontage'daki eski sürümü: three.js shader'ları: GLSL ile ShaderMaterial/RawShaderMaterial, uniform'lar, vertex/fragment efektleri, onBeforeCompile ile hazır materyali genişletme ve TSL (node tabanlı shader). WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-shaders → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.
 
 ### threejs-textures  ·  CloudAI-X/threejs-skills @ 0e18186  ·  puan 85 (A)
 
-- **Ne yapar:** Three.js textures: image loading, color spaces, UV channels and transforms, texture types from canvas to HDR and KTX2, render targets, texture memory. Use when working with images on materials, UV coordinates, cubemaps, render targets or texture optimization; on WebGL or with WebGPU and TSL.
-- **Teknoloji:** canvas, html, node, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js dokuları: doku türleri, UV eşleme, renk uzayı, cubemap/HDR ortam haritası, video/canvas dokusu, KTX2 sıkıştırma ve doku ayarları.
+- **Ne zaman:** Doku/harita yükleme ve ayarlama, ortam haritaları, doku bellek optimizasyonu. · **Ne zaman değil:** Doku kullanmayan sahneler.
+- **Teknoloji:** three r186, webgl2, webgpu, tsl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** CloudAI-X (kisi, ★3668, son güncelleme 2026-10-19, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** threejs-textures → birincil · **Roller:** 3d-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 22 KB (SKILL.md 22.1 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). CloudAI-X sürümü three.js r186'ya göre yazılmış (WebGL + WebGPURenderer/TSL bölümleri), 2026-10'da güncellendi. Seçim gerekçesi: OpenMontage kopyasından daha yeni ve kapsamlı; MIT lisanslı (OpenMontage kopyası AGPL-3.0).
 
 ### threejs-textures@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization.
-- **Teknoloji:** canvas, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** threejs-textures skillinin OpenMontage'daki eski sürümü: three.js dokuları: doku türleri, UV eşleme, renk uzayı, cubemap/HDR ortam haritası, video/canvas dokusu, KTX2 sıkıştırma ve doku ayarları. WebGPU/TSL bölümleri yok.
+- **Ne zaman:** Yalnızca OpenMontage içinde kurulu kopyayla tutarlılık gerektiğinde (ör. HyperFrames üç boyutlu sahneleri). · **Ne zaman değil:** Normalde: CloudAI-X sürümü (aynı ad, tercih) r186'ya güncel.
+- **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** threejs-textures → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. OpenMontage kopyası CloudAI-X skillinin eski bir sürümü (aynı açıklama, farklı/eski içerik; WebGPU/TSL yok). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.
 
 ### threejs-webgl  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
-- **Ne yapar:** Comprehensive skill for Three.js 3D web development. Use this skill when building interactive 3D scenes, WebGL/WebGPU applications, product configurators, 3D visualizations, or immersive web experiences. Triggers on tasks involving Three.js, 3D rendering, scenes, cameras, meshes, materials, lights, animations, textures, or WebGL/WebGPU rendering.
-- **Teknoloji:** canvas, gsap, html, python, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js'e tek dosyalık genel bakış: sahne/kamera/renderer, geometri, materyal, ışık, doku, animasyon, OrbitControls, WebGPU kurulumu, GSAP entegrasyonu ve optimizasyon kontrol listesi; başlangıç sahnesi.
+- **Ne zaman:** Bağlam bütçesi dar ve tek skillde Three.js özeti istendiğinde. · **Ne zaman değil:** Ayrıntılı iş (konu bazlı threejs-* skilleri r186'ya güncel ve daha derin).
+- **Teknoloji:** three.js, webgl, webgpu, gsap 3.15 · **Paketler:** three
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** threejs-fundamentals → alternatif
 - **Boyut:** 62 KB (SKILL.md 15.4 KB, yük orta)
-- **İnceleme:** otomatik
-
-### threejs-world-generation  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
-
-- **Ne yapar:** Build deterministic, editable, free-viewpoint Three.js worlds from text or structured briefs. Use for cinematic 3D terrain, semantic regions, procedural biomes, explicit landmarks, environmental scattering, camera fly-throughs, world diagnostics, or requests for a real 3D environment rather than generated 2D footage. Integrates OpenMontage's threejs_world tool with HyperFrames; do not use for a si
-- **Teknoloji:** ffmpeg, python, three.js _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
-- **Boyut:** 16 KB (SKILL.md 8.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Genel ama yüzeysel; CloudAI-X konu skilleriyle örtüşüyor. threejs-fundamentals grubunda alternatif.
 
 ### web3d-integration-patterns  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
-- **Ne yapar:** Meta-skill for combining Three.js, GSAP ScrollTrigger, React Three Fiber, Motion, and React Spring for complex 3D web experiences. Use when building applications that integrate multiple 3D and animation libraries, requiring architecture patterns, state management, and performance optimization across the stack. Triggers on tasks involving library integration, multi-library architectures, scroll-dri
-- **Teknoloji:** canvas, gsap, html, motion, python, r3f, react, three.js, webgl _(otomatik tespit)_
+- **Ne yapar:** Three.js, GSAP ScrollTrigger, React Three Fiber, Motion ve React Spring'i birlikte kullanma mimarisi: scroll'a bağlı 3D kamera, drei ScrollControls, ortak durum (zustand), animasyon döngüsü senkronizasyonu ve performans kalıpları.
+- **Ne zaman:** Scroll hikâyesinde 3D sahne + DOM animasyonu birlikte kurulacaksa; kütüphaneler arası koordinasyon. · **Ne zaman değil:** Tek kütüphaneli basit sahneler; zustand örnekleri eski default import (import create from 'zustand') kullanıyor, v5'te { create }.
+- **Teknoloji:** three.js, R3F v8, gsap 3.15, motion v14, react-spring 10, zustand · **Paketler:** three, @react-three/fiber, @react-three/drei, gsap, zustand
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** 3d-scroll-entegrasyonu → birincil · **Roller:** 3d-gelistirici, scroll-deneyim
 - **Boyut:** 21 KB (SKILL.md 20.7 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kategoride bu entegrasyonu anlatan tek skill; kavramlar değerli ama bazı API'ler eski (zustand default export) ve R3F v8 dönemine ait.
