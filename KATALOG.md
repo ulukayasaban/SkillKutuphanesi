@@ -164,18 +164,18 @@ _Oyun geliştirme, PixiJS, 2D grafik_ · not: `notlar/a-tasarim-onyuz/06-oyun-2d
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `2d-games` | ⭐ | 2D game development principles. Sprites, tilemaps, physics, camera. |  | ✅ | 89 A | S 2KB | - | vudovn/ag-kit |
-| `3d-games` | ⭐ | 3D game development principles. Rendering, shaders, physics, cameras. | webgl | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `game-art` | ⭐ | Game art principles. Visual style selection, asset pipeline, animation workflow. |  | ✅ | 89 A | S 5KB | - | vudovn/ag-kit |
-| `game-audio` | ⭐ | Game audio principles. Sound design, music integration, adaptive audio systems. |  | ✅ | 89 A | S 5KB | - | vudovn/ag-kit |
-| `game-design` | ⭐ | Game design principles. GDD structure, balancing, player psychology, progression. |  | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `game-development` | ⭐ | Game development orchestrator. Routes to platform-specific skills based on project needs. | webgl | ✅ | 89 A | S 35KB | - | vudovn/ag-kit |
-| `mobile-games` | ⭐ | Mobile game development principles. Touch input, battery, performance, app stores. |  | ✅ | 89 A | S 2KB | - | vudovn/ag-kit |
-| `multiplayer` | ⭐ | Multiplayer game development principles. Architecture, networking, synchronization. |  | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `pc-games` | ⭐ | PC and console game development principles. Engine selection, platform features, optimization strategies. | webgl | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `pixijs-2d` | ⭐ | Fast, lightweight 2D rendering engine for creating interactive graphics, particle effects, and canvas-based applications using WebGL/WebGPU.… | canvas, gsap, r3f, react, three.js | ✅ | 68 B | M 253KB | - | freshtechbro/claudedesignskills |
-| `vr-ar` | ⭐ | VR/AR development principles. Comfort, interaction, performance requirements. |  | ✅ | 89 A | S 2KB | - | vudovn/ag-kit |
-| `web-games` | ⭐ | Web browser game development principles. Framework selection, WebGPU, optimization, PWA. | canvas, three.js, webgl | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
+| `2d-games` | ⭐ alternatif | 2D oyun ilkeleri: sprite atlas ve animasyon, tilemap katmanları, 2D fizik şekilleri, kamera tipleri ve ekran sarsıntısı, platformer (coyote … | 2d, sprite, tilemap | ✅ | 77 B | S 2KB | - | vudovn/ag-kit |
+| `3d-games` | ⭐ alternatif | 3D oyun ilkeleri: render hattı aşamaları, culling/LOD/batching, shader türleri ve ne zaman özel shader yazılır, 3D çarpışma şekilleri, kamer… | 3d, shader, lod | ✅ | 69 B | S 3KB | - | vudovn/ag-kit |
+| `game-art` | ⭐ alternatif | Oyun sanatı ilkeleri: sanat stili karar ağacı (pixel, vektör, el boyaması, PBR, low-poly, cel-shaded) ve karşılaştırma matrisi, 2D/3D varlık… | pixel-art, blender, aseprite | ✅ | 77 B | S 5KB | - | vudovn/ag-kit |
+| `game-audio` | ⭐ alternatif | Oyun sesi ilkeleri: ses kategorileri ve öncelik hiyerarşisi, SFX katmanlama, müzik durum sistemi ve geçiş teknikleri, uyarlanabilir (vertica… | web-audio, fmod, wwise | ✅ | 77 B | S 5KB | - | vudovn/ag-kit |
+| `game-design` | ⭐ alternatif | Oyun tasarımı ilkeleri: 30 saniyelik çekirdek döngü, GDD bölümleri, oyuncu motivasyon tipleri ve ödül takvimleri, zorluk dengeleme (flow), i… | gdd, game-design | ✅ | 77 B | S 3KB | - | vudovn/ag-kit |
+| `game-development` | ⭐ birincil | Oyun geliştirme orkestratörü: oyun döngüsü (sabit zaman adımı), desen seçim matrisi (state machine, pooling, ECS), girdi soyutlama, 60 FPS b… | game-design, unity, godot, unreal, phaser | ✅ | 77 B | S 35KB | - | vudovn/ag-kit |
+| `mobile-games` | ⭐ alternatif | Mobil oyun ilkeleri: dokunmatik girdi (44pt hedef), pil/ısıl yönetim, performans hedefleri, App Store / Google Play gereklilikleri ve para k… | ios, android, touch | ✅ | 77 B | S 2KB | - | vudovn/ag-kit |
+| `multiplayer` | ⭐ alternatif | Çok oyunculu ilkeleri: mimari seçimi (dedicated, P2P, host), durum/girdi senkronizasyonu, tahmin-enterpolasyon-uzlaştırma ve lag compensatio… | networking, websocket | ✅ | 77 B | S 3KB | - | vudovn/ag-kit |
+| `pc-games` | ⭐ alternatif | PC/konsol oyun ilkeleri: motor seçimi (Unity 6, Godot 4, Unreal 5) karar ağacı ve karşılaştırması, Steam özellikleri, konsol sertifikasyonu,… | unity, godot, unreal, steam | ✅ | 77 B | S 3KB | - | vudovn/ag-kit |
+| `pixijs-2d` | ⭐ birincil | PixiJS v8 ile 2D WebGL/WebGPU render rehberi: Application, sprite/texture, Graphics API, ParticleContainer ile on binlerce parçacık, filtrel… | pixi.js, webgl, webgpu, javascript | ✅ | 73 B | M 253KB | - | freshtechbro/claudedesignskills |
+| `vr-ar` | ⭐ alternatif | VR/AR ilkeleri: platformlar (Quest, PCVR, WebXR, ARKit/ARCore), hareket hastalığı önleme ve konfor ayarları, kare hızı hedefleri, kontrolcü/… | webxr, quest, arkit | ✅ | 69 B | S 2KB | - | vudovn/ag-kit |
+| `web-games` | ⭐ alternatif | Tarayıcı oyunu ilkeleri: çatı seçimi (Phaser, PixiJS, Three.js, Babylon.js), WebGPU benimseme durumu, tarayıcı kısıtları ve optimizasyon sır… | phaser, pixi.js, three.js, webgpu, pwa | ✅ | 77 B | S 3KB | - | vudovn/ag-kit |
 
 ### 07-gorsel-sanat-sunum
 

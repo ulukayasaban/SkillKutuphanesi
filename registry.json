@@ -8401,10 +8401,30 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "2D oyun ilkeleri: sprite atlas ve animasyon, tilemap katmanları, 2D fizik şekilleri, kamera tipleri ve ekran sarsıntısı, platformer (coyote time, jump buffer) ve top-down kalıpları.",
+      "kullanim_alani": "2D oyun mekaniği, sprite/tilemap ve kamera kararlarında hızlı hatırlatma.",
+      "kullanma": "Motorun gerçek API'si veya render kodu için değil; PixiJS için pixijs-2d.",
+      "teknoloji": [
+        "2d",
+        "sprite",
+        "tilemap"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. 2.1 KB'lık özlü kontrol listesi; faydalı ama sığ (tablolar, kod yok). Dikkat: SKILL.md `game-development/2d-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8412,7 +8432,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8473,10 +8494,31 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "3D oyun ilkeleri: render hattı aşamaları, culling/LOD/batching, shader türleri ve ne zaman özel shader yazılır, 3D çarpışma şekilleri, kamera tipleri, ışık türleri ve LOD stratejisi.",
+      "kullanim_alani": "3D oyun performans ve kamera kararlarında kısa hatırlatma.",
+      "kullanma": "Three.js/WebGL kodu için threejs-* skill'leri; derin render bilgisi için değil.",
+      "teknoloji": [
+        "3d",
+        "shader",
+        "lod"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun",
+        "3d-urun-sergisi"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF. En sığ olanlardan (2.5 KB): ders kitabı özeti, uygulanabilir yönerge yok; threejs-* skill'leri 3D tarafında çok daha somut. Dikkat: SKILL.md `game-development/3d-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8484,7 +8526,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8543,10 +8586,30 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Oyun sanatı ilkeleri: sanat stili karar ağacı (pixel, vektör, el boyaması, PBR, low-poly, cel-shaded) ve karşılaştırma matrisi, 2D/3D varlık hattı araç seçenekleri, renk kararları, 12 animasyon ilkesi, çözünürlük ve adlandırma/klasör düzeni.",
+      "kullanim_alani": "Oyunun görsel stilini seçerken ve varlık hattı/adlandırma standardı kurarken.",
+      "kullanma": "Gerçek sprite/model üretimi için değil (üretim yapmaz, karar çerçevesi verir).",
+      "teknoloji": [
+        "pixel-art",
+        "blender",
+        "aseprite"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Stil karar ağacı ve adlandırma düzeni gerçekten işe yarar (4.9 KB), ama sığ bir çerçeve. Dikkat: SKILL.md `game-development/game-art/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8554,7 +8617,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8613,10 +8677,30 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Oyun sesi ilkeleri: ses kategorileri ve öncelik hiyerarşisi, SFX katmanlama, müzik durum sistemi ve geçiş teknikleri, uyarlanabilir (vertical/horizontal) ses, 3D konumlandırma, platform formatları, mix seviyeleri ve ducking kuralları.",
+      "kullanim_alani": "Oyunda ses mimarisi ve mix dengesi kararlarında.",
+      "kullanma": "Ses üretmek için değil (elevenlabs/music skill'leri); motora özel ses API'si için değil.",
+      "teknoloji": [
+        "web-audio",
+        "fmod",
+        "wwise"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Mix seviyeleri ve ducking tabloları somut (5.2 KB); yine de ilke düzeyinde. Dikkat: SKILL.md `game-development/game-audio/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8624,7 +8708,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8683,10 +8768,29 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Oyun tasarımı ilkeleri: 30 saniyelik çekirdek döngü, GDD bölümleri, oyuncu motivasyon tipleri ve ödül takvimleri, zorluk dengeleme (flow), ilerleme türleri ve tempo.",
+      "kullanim_alani": "GDD yazarken ve çekirdek döngü/zorluk kararlarında.",
+      "kullanma": "Seviye tasarımı, hikâye veya ekonomi dengeleme derinliği için değil.",
+      "teknoloji": [
+        "gdd",
+        "game-design"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa (2.6 KB) ve sağlam temel, fakat tamamı genel geçer maddeler. Dikkat: SKILL.md `game-development/game-design/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8694,7 +8798,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8755,10 +8860,32 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Oyun geliştirme orkestratörü: oyun döngüsü (sabit zaman adımı), desen seçim matrisi (state machine, pooling, ECS), girdi soyutlama, 60 FPS bütçesi, AI ve çarpışma stratejisi gibi platformdan bağımsız ilkeleri verir ve platforma/boyuta göre 10 alt skill'e (web, mobil, PC, VR/AR, 2D, 3D, tasarım, multiplayer, sanat, ses) yönlendirir.",
+      "kullanim_alani": "Hangi motor/platformla olursa olsun oyun projesine başlarken ilke ve yönlendirme için; alt skill'lerin hepsi tek klasörde gelir.",
+      "kullanma": "Somut motor/API kodu aramak için değil (içerik ilke ve tablo düzeyinde). Sadece web 2D render kodu için pixijs-2d, 3D web için threejs-* skill'leri.",
+      "teknoloji": [
+        "game-design",
+        "unity",
+        "godot",
+        "unreal",
+        "phaser"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kütüphanedeki tek oyun giriş noktası; kısa (4.7 KB) ve alt skill'leri iç içe taşıyor (10 alt klasör, byte aynı). Dikkat: içerik genel ilke tablolarından ibaret, kod/motor özelliği yok; kalite orta. Yönlendirme `game-development/web-games` gibi iç içe yollara dayanır ve alt klasörler ayrı skill olarak otomatik keşfedilmez; ajan o dosyaları açıkça okumalı. Uygun rol yok (oyun rolü tanımlı değil), role eklenmedi.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8766,7 +8893,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8825,10 +8953,31 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Mobil oyun ilkeleri: dokunmatik girdi (44pt hedef), pil/ısıl yönetim, performans hedefleri, App Store / Google Play gereklilikleri ve para kazanma modelleri.",
+      "kullanim_alani": "iOS/Android oyun kısıtlarını ve mağaza gerekliliklerini hatırlamak için.",
+      "kullanma": "Motor veya SDK entegrasyonu için değil.",
+      "teknoloji": [
+        "ios",
+        "android",
+        "touch"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun",
+        "mobil-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa (2.2 KB) kontrol listesi; mağaza gereksinimleri tarih bağımlı ve hızla eskir. Dikkat: SKILL.md `game-development/mobile-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8836,7 +8985,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8895,10 +9045,29 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Çok oyunculu ilkeleri: mimari seçimi (dedicated, P2P, host), durum/girdi senkronizasyonu, tahmin-enterpolasyon-uzlaştırma ve lag compensation, bant genişliği azaltma, sunucu otoritesi ve hile önleme, eşleştirme.",
+      "kullanim_alani": "Ağ mimarisi ve senkronizasyon stratejisi kararlarında.",
+      "kullanma": "Belirli ağ kütüphanesi (Photon, Colyseus, Netcode) kullanımı için değil.",
+      "teknoloji": [
+        "networking",
+        "websocket"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. 'İstemciye güvenme' ilkesini ve teknik adları doğru sıralıyor (2.7 KB); uygulama ayrıntısı yok. Dikkat: SKILL.md `game-development/multiplayer/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8906,7 +9075,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8967,10 +9137,31 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "PC/konsol oyun ilkeleri: motor seçimi (Unity 6, Godot 4, Unreal 5) karar ağacı ve karşılaştırması, Steam özellikleri, konsol sertifikasyonu, kontrolcü girdi soyutlama, profilleme araçları ve motora özel ipuçları.",
+      "kullanim_alani": "PC/konsol için motor seçerken ve platform özelliklerini planlarken.",
+      "kullanma": "Web oyunları için web-games; motor içi kodlama için değil.",
+      "teknoloji": [
+        "unity",
+        "godot",
+        "unreal",
+        "steam"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Motor karşılaştırma tablosu işe yarar (2.9 KB) ancak lisans/ücret bilgisi tarih bağımlı ve eskimiş olabilir. Dikkat: SKILL.md `game-development/pc-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -8978,7 +9169,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -9044,9 +9236,33 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "PixiJS v8 ile 2D WebGL/WebGPU render rehberi: Application, sprite/texture, Graphics API, ParticleContainer ile on binlerce parçacık, filtreler ve özel shader filtreleri, sprite sheet animasyonu, metin ve performans kalıpları. Başlangıç şablonu, parçacık/sprite üretici betikler ve referans belgeleri içerir.",
+      "kullanim_alani": "Tarayıcıda 2D oyun, parçacık efekti, yoğun sprite sahnesi veya 3D sahne üstü HUD yapılırken.",
+      "kullanma": "3D için Three.js/R3F; basit UI animasyonu için GSAP/Motion; tam oyun motoru (fizik, sahne yönetimi) gerekiyorsa Phaser.",
+      "teknoloji": [
+        "pixi.js",
+        "webgl",
+        "webgpu",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "pixi.js"
+      ],
+      "proje_tipleri": [
+        "oyun",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kütüphanedeki tek somut 2D render rehberi; v8 API'si (async `app.init`, `Graphics.rect().fill()`, `Particle`) doğru ve kod örnekleri çalışır düzende. Dikkat: büyük (20.6 KB SKILL.md, 935 satır; klasör 280 KB). Şablon ve betikler PixiJS'i sürümsüz `https://pixijs.download/release/pixi.js` CDN adresinden yüklüyor (sürüm sabitlenmemiş). 'Related Skills' bölümü var olmayan adlara (threejs-webgl, motion-framer) başvuruyor. Son güncelleme 335 gün önce. Betikler yalnız stdlib python, HTML/JS şablonu üretir; kurulum/anahtar yok. Oyun rolü olmadığı için role eklenmedi.",
+      "ortusme_grubu": "pixijs-2d-render",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 73,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -9055,7 +9271,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -9114,10 +9331,30 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "VR/AR ilkeleri: platformlar (Quest, PCVR, WebXR, ARKit/ARCore), hareket hastalığı önleme ve konfor ayarları, kare hızı hedefleri, kontrolcü/el takibi etkileşimi, ölçek ve derinlik ipuçları.",
+      "kullanim_alani": "VR/AR projesinde konfor ve performans hedeflerini belirlerken.",
+      "kullanma": "WebXR kodu için aframe-webxr (05); cihaza özel SDK için değil.",
+      "teknoloji": [
+        "webxr",
+        "quest",
+        "arkit"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF. İlkeler doğru ama çok kısa (2.3 KB); cihaz metrikleri hızla eskir. Başlık 2D grafik kategorisine uymuyor (VR/AR 3D) ama oyun ailesi için kalabilir. Dikkat: SKILL.md `game-development/vr-ar/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -9125,7 +9362,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -9188,10 +9426,32 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Tarayıcı oyunu ilkeleri: çatı seçimi (Phaser, PixiJS, Three.js, Babylon.js), WebGPU benimseme durumu, tarayıcı kısıtları ve optimizasyon sırası, varlık sıkıştırma (KTX2, Draco, Opus), PWA ve Web Audio kuralları.",
+      "kullanim_alani": "Web tabanlı oyun için çatı ve varlık/performans stratejisi seçerken.",
+      "kullanma": "Kod örneği arıyorsan değil; PixiJS için pixijs-2d, 3D için threejs-*.",
+      "teknoloji": [
+        "phaser",
+        "pixi.js",
+        "three.js",
+        "webgpu",
+        "pwa"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Web oyunu için en uygulanabilir ilke seti (3.0 KB); tarayıcı destek yüzdeleri (~%73 WebGPU) tarih bağımlı. Dikkat: SKILL.md `game-development/web-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.",
+      "ortusme_grubu": "oyun-gelistirme-rehberi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -9199,7 +9459,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },

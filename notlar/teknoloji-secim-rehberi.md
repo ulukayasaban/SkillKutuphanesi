@@ -22,9 +22,9 @@
 
 `aframe-webxr`, `algorithmic-art`, `archify`, `banner-design`, `beautiful-mermaid`, `browser-testing-with-devtools`, `captions-overlay`, `changelog-video`, `claude-api`, `design`, `design-dna`, `design-taste-frontend`, `discernment-nudge`, `embedded-captions`, `faceless-explainer`, `frontend-design`, `general-video`, `geo-fundamentals`, `hyperframes`, `hyperframes-animation`, `hyperframes-audio`, `hyperframes-core`, `hyperframes-creative`, `hyperframes-registry`, `hyperframes-studio`, `impeccable`, `intelligent-routing`, `modern-web-design`, `motion-graphics`, `music-to-video`, `next-cache-components-adoption`, `obsidian-bases`, `obsidian-markdown`, `playwright-cli`, `playwright-component-testing`, `playwright-trace`, `pr-to-video`, `pragmatic-review`, `product-launch-video`, `remotion-to-hyperframes`, `scroll-craft`, `seam-craft`, `security-and-hardening`, `skill-creator`, `skill-development`, `slides`, `slideshow`, `source-driven-development`, `talking-head-recut`, `test-driven-development`, `theme-factory`, `ui-ux-pro-max`, `visual-style`, `web-design-guidelines`, `webapp-testing`, `website-to-video`, `xlsx`
 
-## react (53)
+## react (52)
 
-`animated-component-libraries`, `app-builder`, `artifacts-builder`, `brainstorming`, `browser-testing-with-devtools`, `code-simplification`, `context-engineering`, `d3-viz`, `developer-growth-analysis`, `framer-motion`, `frontend-architecture`, `frontend-ui-engineering`, `gsap-react`, `hook-development`, `i18n-localization`, `intelligent-routing`, `interview-me`, `modern-web-design`, `motion-framer`, `next-cache-components-adoption`, `next-dev-loop`, `nextjs-react-expert`, `nodejs-best-practices`, `parallel-agents`, `performance-optimization`, `pixijs-2d`, `plan-writing`, `playwright-component-testing`, `pptx`, `react-doctor`, `react-spring-physics`, `react-three-fiber`, `remotion`, `remotion-best-practices`, `remotion-to-hyperframes`, `rive-interactive`, `shipping-and-launch`, `skill-development`, `source-driven-development`, `spec-driven-development`, `spline-interactive`, `synthetic-screen-recording`, `tailored-resume-generator`, `tailwind-design-system`, `templates`, `test-driven-development`, `threejs-react-three-fiber`, `ui-styling`, `vercel-composition-patterns`, `vercel-react-best-practices`, `web-artifacts-builder`, `web-design-guidelines`, `writing-skills`
+`animated-component-libraries`, `app-builder`, `artifacts-builder`, `brainstorming`, `browser-testing-with-devtools`, `code-simplification`, `context-engineering`, `d3-viz`, `developer-growth-analysis`, `framer-motion`, `frontend-architecture`, `frontend-ui-engineering`, `gsap-react`, `hook-development`, `i18n-localization`, `intelligent-routing`, `interview-me`, `modern-web-design`, `motion-framer`, `next-cache-components-adoption`, `next-dev-loop`, `nextjs-react-expert`, `nodejs-best-practices`, `parallel-agents`, `performance-optimization`, `plan-writing`, `playwright-component-testing`, `pptx`, `react-doctor`, `react-spring-physics`, `react-three-fiber`, `remotion`, `remotion-best-practices`, `remotion-to-hyperframes`, `rive-interactive`, `shipping-and-launch`, `skill-development`, `source-driven-development`, `spec-driven-development`, `spline-interactive`, `synthetic-screen-recording`, `tailored-resume-generator`, `tailwind-design-system`, `templates`, `test-driven-development`, `threejs-react-three-fiber`, `ui-styling`, `vercel-composition-patterns`, `vercel-react-best-practices`, `web-artifacts-builder`, `web-design-guidelines`, `writing-skills`
 
 ## css (37)
 
@@ -34,17 +34,13 @@
 
 `batch-operations`, `changelog-generator`, `code-review-graph`, `code-simplification`, `command-development`, `constraint-driven-development`, `context-engineering`, `debugging-and-error-recovery`, `deployment-procedures`, `documentation-and-adrs`, `download-attachment`, `executing-plans`, `finishing-a-development-branch`, `git-workflow-and-versioning`, `git-worktrees`, `incremental-implementation`, `init-bootstrap`, `mcp-integration`, `memory-system`, `performance-optimization`, `plugin-settings`, `pragmatic-review`, `pull-request`, `release`, `requesting-code-review`, `security-and-hardening`, `shipping-and-launch`, `simplify-code`, `subagent-driven-development`, `systematic-debugging`, `upgrade`, `using-agent-skills`, `using-git-worktrees`, `using-superpowers`, `writing-plans`, `writing-skills`
 
-## gsap (34)
+## gsap (33)
 
-`barba-js`, `changelog-video`, `character-rigging`, `cut-the-curve`, `embedded-captions`, `faceless-explainer`, `general-video`, `gsap-core`, `gsap-frameworks`, `gsap-performance`, `gsap-plugins`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-utils`, `hyperframes`, `hyperframes-animation`, `hyperframes-core`, `hyperframes-keyframes`, `locomotive-scroll`, `modern-web-design`, `motion-doctrine`, `motion-graphics`, `music-to-video`, `oversized-cursor`, `pixijs-2d`, `pose-library-design`, `pr-to-video`, `product-launch-video`, `remotion-to-hyperframes`, `slideshow`, `svg-character-animation`, `talking-head-recut`, `web3d-integration-patterns`
+`barba-js`, `changelog-video`, `character-rigging`, `cut-the-curve`, `embedded-captions`, `faceless-explainer`, `general-video`, `gsap-core`, `gsap-frameworks`, `gsap-performance`, `gsap-plugins`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline`, `gsap-utils`, `hyperframes`, `hyperframes-animation`, `hyperframes-core`, `hyperframes-keyframes`, `locomotive-scroll`, `modern-web-design`, `motion-doctrine`, `motion-graphics`, `music-to-video`, `oversized-cursor`, `pose-library-design`, `pr-to-video`, `product-launch-video`, `remotion-to-hyperframes`, `slideshow`, `svg-character-animation`, `talking-head-recut`, `web3d-integration-patterns`
 
 ## hyperframes (30)
 
 `captions-overlay`, `changelog-video`, `cut-the-curve`, `embedded-captions`, `faceless-explainer`, `figma`, `general-video`, `hyperframes`, `hyperframes-animation`, `hyperframes-audio`, `hyperframes-cli`, `hyperframes-core`, `hyperframes-creative`, `hyperframes-keyframes`, `hyperframes-media`, `hyperframes-registry`, `hyperframes-studio`, `motion-doctrine`, `motion-graphics`, `music-to-video`, `oversized-cursor`, `pr-to-video`, `product-launch-video`, `remotion-to-hyperframes`, `seam-craft`, `slideshow`, `svg-character-animation`, `talking-head-recut`, `threejs-world-generation`, `website-to-video`
-
-## webgl (19)
-
-`3d-games`, `babylonjs-engine`, `design-dna`, `game-development`, `pc-games`, `pixijs-2d`, `playcanvas-engine`, `threejs-animation`, `threejs-fundamentals`, `threejs-geometry`, `threejs-interaction`, `threejs-lighting`, `threejs-materials`, `threejs-performance`, `threejs-postprocessing`, `threejs-shaders`, `threejs-textures`, `threejs-webgl`, `web-games`
 
 ## next.js (19)
 
@@ -57,6 +53,10 @@
 ## playwright (17)
 
 `character-animation-qa`, `ci-cd-and-automation`, `clean-code`, `intelligent-routing`, `next-cache-components-adoption`, `next-cache-components-optimizer`, `next-partial-prefetching-adoption`, `next-partial-prefetching-optimizer`, `nodejs-best-practices`, `playwright-cli`, `playwright-component-testing`, `playwright-recording`, `playwright-trace`, `product-launch-video`, `scroll-craft`, `test-driven-development`, `webapp-testing`
+
+## webgl (15)
+
+`babylonjs-engine`, `design-dna`, `pixijs-2d`, `playcanvas-engine`, `threejs-animation`, `threejs-fundamentals`, `threejs-geometry`, `threejs-interaction`, `threejs-lighting`, `threejs-materials`, `threejs-performance`, `threejs-postprocessing`, `threejs-shaders`, `threejs-textures`, `threejs-webgl`
 
 ## tailwind (14)
 
@@ -74,10 +74,6 @@
 
 `app-builder`, `browser-testing-with-devtools`, `code-review-graph`, `frontend-architecture`, `gsap-frameworks`, `intelligent-routing`, `playwright-component-testing`, `source-driven-development`, `templates`
 
-## canvas (9)
-
-`algorithmic-art`, `archify`, `canvas-design`, `canvas-procedural-animation`, `json-canvas`, `pdf`, `pixijs-2d`, `pptx`, `web-games`
-
 ## obsidian (8)
 
 `add-frontmatter`, `download-attachment`, `init-bootstrap`, `install-claudesidian-command`, `json-canvas`, `obsidian-bases`, `obsidian-markdown`, `upgrade`
@@ -86,29 +82,37 @@
 
 `character-rigging`, `pose-library-design`, `remotion`, `remotion-best-practices`, `remotion-to-hyperframes`, `svg-character-animation`, `synthetic-screen-recording`, `video-toolkit`
 
-## three.js (7)
+## canvas (7)
 
-`3d-asset-generation`, `claude-api`, `hyperframes-animation`, `hyperframes-keyframes`, `modern-web-design`, `pixijs-2d`, `web-games`
+`algorithmic-art`, `archify`, `canvas-design`, `canvas-procedural-animation`, `json-canvas`, `pdf`, `pptx`
 
 ## elevenlabs (7)
 
 `agents`, `elevenlabs`, `hyperframes-media`, `music`, `setup-api-key`, `sound-effects`, `speech-to-text`
 
+## three.js (6)
+
+`3d-asset-generation`, `claude-api`, `hyperframes-animation`, `hyperframes-keyframes`, `modern-web-design`, `web-games`
+
+## webgpu (6)
+
+`babylonjs-engine`, `pixijs-2d`, `playcanvas-engine`, `threejs-fundamentals`, `threejs-performance`, `web-games`
+
+## javascript (5)
+
+`algorithmic-art`, `canvas-procedural-animation`, `d3-viz`, `pixijs-2d`, `scroll-craft`
+
 ## rest-api (5)
 
 `avatar-video`, `create-video`, `faceswap`, `text-to-speech`, `video-translate`
 
-## javascript (4)
-
-`algorithmic-art`, `canvas-procedural-animation`, `d3-viz`, `scroll-craft`
-
-## webgpu (4)
-
-`babylonjs-engine`, `playcanvas-engine`, `threejs-fundamentals`, `threejs-performance`
-
 ## vite (4)
 
 `artifacts-builder`, `babylonjs-engine`, `react-three-fiber`, `web-artifacts-builder`
+
+## blender (4)
+
+`3d-asset-generation`, `blender-web-pipeline`, `game-art`, `threejs-world-generation`
 
 ## svg (4)
 
@@ -133,10 +137,6 @@
 ## framer-motion (3)
 
 `framer-motion`, `motion-framer`, `web3d-integration-patterns`
-
-## blender (3)
-
-`3d-asset-generation`, `blender-web-pipeline`, `threejs-world-generation`
 
 ## gltf (3)
 
@@ -178,6 +178,10 @@
 
 `react-spring-physics`, `web3d-integration-patterns`
 
+## webxr (2)
+
+`aframe-webxr`, `vr-ar`
+
 ## pbr (2)
 
 `substance-3d-texturing`, `threejs-materials`
@@ -193,6 +197,34 @@
 ## openmontage (2)
 
 `provider-model-refresh`, `threejs-world-generation`
+
+## web-audio (2)
+
+`game-audio`, `hyperframes-audio`
+
+## game-design (2)
+
+`game-design`, `game-development`
+
+## unity (2)
+
+`game-development`, `pc-games`
+
+## godot (2)
+
+`game-development`, `pc-games`
+
+## unreal (2)
+
+`game-development`, `pc-games`
+
+## phaser (2)
+
+`game-development`, `web-games`
+
+## pixi.js (2)
+
+`pixijs-2d`, `web-games`
 
 ## parcel (2)
 
@@ -326,10 +358,6 @@
 
 `aframe-webxr`
 
-## webxr (1)
-
-`aframe-webxr`
-
 ## babylonjs (1)
 
 `babylonjs-engine`
@@ -398,9 +426,85 @@
 
 `web3d-integration-patterns`
 
-## r3f (1)
+## 2d (1)
 
-`pixijs-2d`
+`2d-games`
+
+## sprite (1)
+
+`2d-games`
+
+## tilemap (1)
+
+`2d-games`
+
+## 3d (1)
+
+`3d-games`
+
+## shader (1)
+
+`3d-games`
+
+## lod (1)
+
+`3d-games`
+
+## pixel-art (1)
+
+`game-art`
+
+## aseprite (1)
+
+`game-art`
+
+## fmod (1)
+
+`game-audio`
+
+## wwise (1)
+
+`game-audio`
+
+## gdd (1)
+
+`game-design`
+
+## ios (1)
+
+`mobile-games`
+
+## android (1)
+
+`mobile-games`
+
+## touch (1)
+
+`mobile-games`
+
+## networking (1)
+
+`multiplayer`
+
+## websocket (1)
+
+`multiplayer`
+
+## steam (1)
+
+`pc-games`
+
+## quest (1)
+
+`vr-ar`
+
+## arkit (1)
+
+`vr-ar`
+
+## pwa (1)
+
+`web-games`
 
 ## p5.js (1)
 
@@ -441,10 +545,6 @@
 ## figma-api (1)
 
 `figma`
-
-## web-audio (1)
-
-`hyperframes-audio`
 
 ## aws-lambda (1)
 
