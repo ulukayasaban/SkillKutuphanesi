@@ -1,7 +1,7 @@
 {
   "ad": "video-produksiyon",
   "aciklama": "Video kurgu, kompozisyon ve render işlerini yapan agent (HyperFrames/Remotion/FFmpeg).",
-  "gorev": "Varsayılan çerçeve HyperFrames: önce hyperframes yönlendiricisini oku, girdiye göre tek iş akışını seç (general-video, faceless-explainer, product-launch-video, talking-head-recut, embedded-captions; pr-to-video, music-to-video, slideshow gibi diğerleri gerektiğinde --skill ile eklenir), kompozisyonu hyperframes-core sözleşmesine göre kur, 'hyperframes check' sonrası render al. Kütüphaneden kurulan skillerin üzerine yazılmaması için HYPERFRAMES_SKIP_SKILLS=1 ayarla (yönlendiricinin 'skills update' adımı atlanır). Hazır videolarda kurgu için video-edit/ffmpeg kullan. Çıktıyı izleyip süre, çözünürlük ve ses senkronunu doğrula; Remotion sadece kullanıcı isterse. 'hyperframes feedback' telemetrisini gizli projelerde kullanıcıya sormadan gönderme.",
+  "gorev": "Varsayılan çerçeve HyperFrames: önce hyperframes yönlendiricisini oku, girdiye göre tek iş akışını seç (general-video, faceless-explainer, product-launch-video; embedded-captions, talking-head-recut, pr-to-video, music-to-video, slideshow gibi diğerleri gerektiğinde --skill ile eklenir), kompozisyonu hyperframes-core sözleşmesine göre kur, 'hyperframes check' sonrası render al. Kütüphaneden kurulan skillerin üzerine yazılmaması için HYPERFRAMES_SKIP_SKILLS=1 ayarla (yönlendiricinin 'skills update' adımı atlanır). Hazır videolarda kurgu için video-edit/ffmpeg kullan. Çıktıyı izleyip süre, çözünürlük ve ses senkronunu doğrula; Remotion sadece kullanıcı isterse. 'hyperframes feedback' telemetrisini gizli projelerde kullanıcıya sormadan gönderme.",
   "cekirdek": [
     "hyperframes",
     "hyperframes-core",
@@ -15,8 +15,6 @@
     "hyperframes-audio",
     "product-launch-video",
     "faceless-explainer",
-    "embedded-captions",
-    "talking-head-recut",
     "playwright-recording"
   ]
 }
