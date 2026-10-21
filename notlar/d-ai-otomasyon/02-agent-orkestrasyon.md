@@ -44,7 +44,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** baglam-yonetimi → birincil · **Roller:** agent-orkestra, ai-entegrasyon · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** baglam-yonetimi → birincil · **Roller:** agent-orkestra · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 15 KB (SKILL.md 15.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil.
 

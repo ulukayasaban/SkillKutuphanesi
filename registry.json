@@ -15493,7 +15493,8 @@
       "ortusme_grubu": "diyagram-uretimi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21"
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok."
     },
     {
       "id": "beautiful-mermaid",
@@ -15781,8 +15782,7 @@
         "ai-uygulama"
       ],
       "roller": [
-        "dokuman-yazari",
-        "kod-inceleyici"
+        "dokuman-yazari"
       ],
       "zorluk": "kolay",
       "kalite": 5,
@@ -16063,9 +16063,7 @@
         "sosyal-medya-icerik",
         "marka-sunum"
       ],
-      "roller": [
-        "icerik-pazarlama"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 2,
       "kalite_notu": "Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.",
@@ -16437,9 +16435,7 @@
         "landing-page",
         "marka-sunum"
       ],
-      "roller": [
-        "icerik-pazarlama"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 2,
       "kalite_notu": "Karar: SADECE ARŞİV. İsim önerisi kısmı makul ama müsaitlik kontrolünün nasıl yapılacağı tanımsız; örnek çıktı uydurma 'available' işaretleri içeriyor.",
@@ -16902,9 +16898,7 @@
       ],
       "gerekli_paketler": [],
       "proje_tipleri": [],
-      "roller": [
-        "icerik-pazarlama"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 2,
       "kalite_notu": "Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.",
@@ -19873,8 +19867,7 @@
         "mevcut-kod-iyilestirme"
       ],
       "roller": [
-        "agent-orkestra",
-        "ai-entegrasyon"
+        "agent-orkestra"
       ],
       "zorluk": "kolay",
       "kalite": 5,
@@ -20881,8 +20874,8 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "arastirmaci",
-        "ai-entegrasyon"
+        "ai-entegrasyon",
+        "icerik-pazarlama"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -20983,7 +20976,7 @@
         "rapor-dokuman"
       ],
       "roller": [
-        "arastirmaci"
+        "icerik-pazarlama"
       ],
       "zorluk": "orta",
       "kalite": 4,

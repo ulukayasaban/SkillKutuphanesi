@@ -14,6 +14,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Durum:** tercih · **Örtüşme:** diyagram-uretimi → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 7616 KB (SKILL.md 18.4 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; MIT. Klasör çok büyük (7.6 MB) ve SKILL.md 18 KB; ama referanslar ihtiyaç anında okunuyor. Diyagram grubunda en kapsamlı ve doğrulanabilir seçenek.
+- **Not:** Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok.
 
 ### beautiful-mermaid  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
 
@@ -44,7 +45,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Teknoloji:** markdown, typescript
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → birincil · **Roller:** dokuman-yazari, kod-inceleyici · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → birincil · **Roller:** dokuman-yazari · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu.
 

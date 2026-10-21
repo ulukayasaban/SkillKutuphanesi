@@ -11,7 +11,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Teknoloji:** web-arama, tarayici-otomasyonu · **Paketler:** tarayıcı aracı (playwright/MCP)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → alternatif · **Roller:** icerik-pazarlama
+- **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → alternatif
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.
 
@@ -55,7 +55,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Teknoloji:** web-arama · **Paketler:** whois/DNS sorgu aracı (önerilir)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Roller:** icerik-pazarlama
+- **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İsim önerisi kısmı makul ama müsaitlik kontrolünün nasıl yapılacağı tanımsız; örnek çıktı uydurma 'available' işaretleri içeriyor.
 
@@ -110,7 +110,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Teknoloji:** web-arama
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → birincil · **Roller:** icerik-pazarlama
+- **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → birincil
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.
 
