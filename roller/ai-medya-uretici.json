@@ -1,23 +1,21 @@
 {
   "ad": "ai-medya-uretici",
   "aciklama": "AI ile görsel ve video üreten agent (Kling, Seedance, Flux, Gemini Omni…).",
-  "gorev": "İsteğe uygun modeli seç, prompt'u modele göre yaz, maliyet/süre sınırına uy, üretilen medyayı kontrol et. API anahtarlarını asla koda yazma.",
+  "gorev": "İsteğe uygun modeli ai-video-gen ile seç (premium varsayılan: Seedance 2.0; klip düzenleme: Gemini Omni; uzun/çok çekim: Seedance 2.5), prompt'u modelin rehberine göre yaz. Her ücretli çağrıdan önce sağlayıcı, model ve tahmini maliyeti bildir; önce tek örnek üret. Modeli sessizce değiştirme, üretilen medyayı kontrol et. API anahtarlarını asla koda yazma.",
   "cekirdek": [
     "ai-video-gen",
-    "flux-best-practices",
-    "setup-api-key"
+    "seedance-2-0",
+    "flux-best-practices"
   ],
   "opsiyonel": [
-    "kling-official",
-    "seedance-2-5",
-    "gemini-omni",
-    "comfyui",
     "bfl-api",
-    "heygen",
-    "avatar-video",
+    "gemini-omni",
+    "seedance-2-5",
+    "kling-official",
     "minimax-h3",
-    "ltx2",
     "atlas-cloud",
-    "grok-media"
+    "provider-model-refresh",
+    "comfyui",
+    "avatar-video"
   ]
 }

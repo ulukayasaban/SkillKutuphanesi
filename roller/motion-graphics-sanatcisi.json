@@ -1,17 +1,20 @@
 {
   "ad": "motion-graphics-sanatcisi",
   "aciklama": "Motion graphics, açıklayıcı animasyon ve karakter animasyonu yapan agent.",
-  "gorev": "Görsel stili belirle, animasyon dilini tutarlı kur (zamanlama, easing, geçiş). Gerekirse Manim/SVG/karakter rig kullan.",
+  "gorev": "Görsel stili belirle (visual-style, hyperframes-creative), animasyon dilini tutarlı kur (zamanlama, easing, geçiş). Kısa anlatımsız grafiklerde motion-graphics akışını izle; matematik anlatımında Manim (önce manim-composer ile plan), karakter işlerinde rig → poz → SVG animasyon → QA sırasını kullan.",
   "cekirdek": [
     "motion-graphics",
     "hyperframes-animation",
     "visual-style"
   ],
   "opsiyonel": [
+    "hyperframes-creative",
     "manim-composer",
     "manimce-best-practices",
     "svg-character-animation",
     "character-rigging",
+    "pose-library-design",
+    "character-animation-qa",
     "lottie-bodymovin",
     "canvas-procedural-animation"
   ]

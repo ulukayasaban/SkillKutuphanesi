@@ -2,134 +2,158 @@
 
 _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/13**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/14**
 
-### acestep  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
+### acestep  ·  calesthio/OpenMontage @ c806645  ·  puan 70 (B)
 
-- **Ne yapar:** AI music generation with ACE-Step 1.5 — background music, vocal tracks, covers, stem extraction for video production. Use when generating music, soundtracks, jingles, or working with audio stems. Triggers include background music, soundtrack, jingle, music generation, stem extraction, cover, style transfer, or musical composition tasks.
-- **Teknoloji:** api-anahtari, ffmpeg, python, remotion _(otomatik tespit)_
+- **Ne yapar:** ACE-Step 1.5 açık kaynak modeliyle RunPod üzerinde enstrümantal müzik, sözlü şarkı, cover/stil aktarımı ve stem ayırma yapar; sahne ön ayarları (corporate-bg, tension, cta) içerir.
+- **Ne zaman:** Açık kaynak/ucuz müzik üretimi veya stem ayırma gerektiğinde ve tools/music_gen.py bulunan toolkit kuruluysa. · **Ne zaman değil:** OpenMontage kurulumunda (tools/music_gen.py yok); hızlı sonuç için music veya lyria.
+- **Teknoloji:** python, runpod, ffmpeg · **Paketler:** RUNPOD_API_KEY, claude-code-video-toolkit
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** muzik-uretimi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 9 KB (SKILL.md 9.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu tools/music_gen.py OpenMontage c806645'te yok (claude-code-video-toolkit'ten taşınmış); --brand digital-samba gibi örnekler yabancı projeye ait.
 
-### agents  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
+### agents  ·  calesthio/OpenMontage @ c806645  ·  puan 86 (A)
 
-- **Ne yapar:** Build voice AI agents with ElevenLabs. Use when creating voice assistants, customer service bots, interactive voice characters, or any real-time voice conversation experience.
-- **Teknoloji:** api-anahtari, html, node, python, react, typescript _(otomatik tespit)_
+- **Ne yapar:** ElevenLabs Agents Platform ile gerçek zamanlı sesli yapay zekâ ajanı (asistan, müşteri hizmetleri botu, etkileşimli karakter) kurar; CLI, Python, JS ve web gömme örnekleri içerir.
+- **Ne zaman:** Uygulamaya konuşan, dinleyen sesli asistan veya telefon/web sesli bot eklenecekse. · **Ne zaman değil:** Tek seferlik seslendirme/medya üretimi (elevenlabs, text-to-speech).
+- **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js, @elevenlabs/cli
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** sesli-ajan → birincil · **Roller:** ai-entegrasyon · **Globalde:** claude:ayni
 - **Boyut:** 64 KB (SKILL.md 9.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmi ElevenLabs skill'i, güncel. Medya üretimi değil uygulama entegrasyonu; video rollerine eklenmedi.
 
-### azure-speech-to-text  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
+### azure-speech-to-text  ·  calesthio/OpenMontage @ c806645  ·  puan 87 (A)
 
-- **Ne yapar:** Transcribe audio to text using Azure AI Speech (Fast Transcription REST API). Use when converting audio/video to text, generating subtitles, or processing spoken content in OpenMontage. Optional cloud STT provider — preferred when AZURE_SPEECH_KEY is configured; the local faster-whisper `transcriber` is the default offline path.
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** Azure AI Speech Fast Transcription REST API ile ses/videoyu kelime zaman damgalı, konuşmacı ayrımlı yazıya döker; OpenMontage'da azure_stt aracı olarak transcriber şemasıyla birebir uyumludur.
+- **Ne zaman:** AZURE_SPEECH_KEY tanımlıysa ve bulutta hızlı transkript/altyazı gerekiyorsa. · **Ne zaman değil:** Azure hesabı yoksa (speech-to-text veya yerel whisper); OpenMontage dışında araç sarmalayıcısı yok.
+- **Teknoloji:** azure, python, api-anahtari · **Paketler:** AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** stt-transkripsiyon → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Düzgün belgelenmiş; OpenMontage registry'sine bağlı kod örnekleri.
 
-### azure-text-to-speech  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
+### azure-text-to-speech  ·  calesthio/OpenMontage @ c806645  ·  puan 87 (A)
 
-- **Ne yapar:** Generate neural narration audio using Azure AI Speech (REST text-to-speech). Use when synthesizing voiceovers or narration in OpenMontage. Optional cloud TTS provider — preferred when AZURE_SPEECH_KEY is configured; the local piper_tts remains the default offline path. Shares one Speech resource with azure_stt.
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** Azure nöral TTS ile SSML prozodi ve konuşma stili kontrollü çok dilli seslendirme üretir; OpenMontage'da azure_tts aracı olarak tts_selector üzerinden çalışır.
+- **Ne zaman:** AZURE_SPEECH_KEY tanımlıysa ve SSML ile ince ayarlı, uygun maliyetli anlatım gerekiyorsa (Türkçe nöral sesler dahil). · **Ne zaman değil:** Ses klonlama gerekiyorsa (elevenlabs); Azure hesabı yoksa.
+- **Teknoloji:** azure, python, ssml, api-anahtari · **Paketler:** AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Güvenilir kurumsal TTS; STT ile aynı kaynak.
 
-### dashscope  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
+### dashscope  ·  calesthio/OpenMontage @ c806645  ·  puan 79 (B)
 
-- **Ne yapar:** DashScope (Alibaba Cloud Bailian / 阿里云百炼) integration — image generation (qwen-image-2.0-pro), text-to-speech (qwen3-tts-flash), and ASR with word-level timestamps (qwen3-asr-flash-filetrans). Use when generating images via Qwen-Image, narrating via Qwen-TTS, or transcribing with word-level timestamps via Qwen-ASR.
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** Alibaba DashScope (Bailian) entegrasyonu: Qwen-Image ile görsel üretimi, Qwen-TTS ile seslendirme ve kelime zaman damgalı Qwen-ASR transkripsiyonu; yerel (OpenAI uyumlu olmayan) uç noktaları doğru kullanmayı anlatır.
+- **Ne zaman:** Çince içerik veya DASHSCOPE_API_KEY olan, Çin bölgesi modelleri tercih edilen projelerde. · **Ne zaman değil:** Türkçe/İngilizce odaklı genel işlerde (elevenlabs, flux); DashScope anahtarı yoksa.
+- **Teknoloji:** dashscope, python, api-anahtari · **Paketler:** DASHSCOPE_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci, ai-medya-uretici · **Globalde:** claude:ayni
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ve pratik; çoklu yetenek (görsel+TTS+ASR) olduğu için kategori sınırında. Çin pazarına odaklı.
 
-### doubao-tts  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
+### doubao-tts  ·  calesthio/OpenMontage @ c806645  ·  puan 79 (B)
 
-- **Ne yapar:** Generate Mandarin and multilingual narration with Volcengine Doubao Speech 2.0. Use when creating Chinese voiceovers, when the user prefers Doubao/Volcengine/火山引擎/豆包 TTS, or when narration needs character-level timestamp metadata for subtitles.
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** Volcengine Doubao Speech 2.0 ile Mandarin ve çok dilli seslendirme üretir; asenkron uç noktadan karakter düzeyinde zaman damgası alıp altyazı kurmayı ve önce kısa örnekle onay almayı öğretir.
+- **Ne zaman:** Çince seslendirme veya Doubao/Volcengine tercih edildiğinde. · **Ne zaman değil:** Türkçe/İngilizce anlatımda; Doubao anahtarı yoksa.
+- **Teknoloji:** volcengine, python, api-anahtari · **Paketler:** DOUBAO_SPEECH_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İş akışı (örnek → onay → tam üretim) örnek alınacak kadar iyi; kullanım alanı dar.
 
-### elevenlabs  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
+### elevenlabs  ·  calesthio/OpenMontage @ c806645  ·  puan 94 (A)
 
-- **Ne yapar:** Generate AI voiceovers, sound effects, and music using ElevenLabs APIs. Use when creating audio content for videos, podcasts, or games. Triggers include generating voiceovers, narration, dialogue, sound effects from descriptions, background music, soundtrack generation, voice cloning, or any audio synthesis task.
-- **Teknoloji:** api-anahtari, ffmpeg, python, react, remotion, typescript _(otomatik tespit)_
+- **Ne yapar:** ElevenLabs ile seslendirme, ses klonlama, ses efekti ve müzik üretimini tek skillde toplar; model seçimi, stile göre ses ayarları, duraklama/telaffuz kontrolü ve yinelemeli üretim akışını verir.
+- **Ne zaman:** Video seslendirmesi, anlatım veya ses klonlama gereken her işte varsayılan TTS olarak. · **Ne zaman değil:** Sadece müzik (music) veya sadece efekt (sound-effects) için ayrıntılı API gerekiyorsa; sesli ajan (agents).
+- **Teknoloji:** elevenlabs, python, ffmpeg, api-anahtari · **Paketler:** elevenlabs, ELEVENLABS_API_KEY
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:farkli
 - **Boyut:** 16 KB (SKILL.md 10.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Pratik üretim bilgisi (ayar tabloları, SSML sınırları, ellipsis uyarısı) çok değerli; Türkçe destekli multilingual_v2.
 
-### fish-audio-tts  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
+### fish-audio-tts  ·  calesthio/OpenMontage @ c806645  ·  puan 87 (A)
 
-- **Ne yapar:** Generate expressive, multilingual narration with fish.audio (S1 / S2-generation models) and reuse cloned voices via reference_id. Use when the user prefers fish.audio/Fish Audio TTS, wants a specific playground voice model, or needs high-emotion voice-clone narration.
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** fish.audio S1/S2 modelleriyle duygu etiketli ([laugh], [whispers]) çok dilli seslendirme ve reference_id ile klonlanmış sesleri yeniden kullanma; bayt bazlı fiyatlandırmayı açıklar.
+- **Ne zaman:** Yüksek duygu ifadeli anlatım veya fish.audio'da hazırlanmış klon ses gerektiğinde. · **Ne zaman değil:** Ücretsiz promosyon modeli (s2.1-pro-free) ile ticari/müşteri işi; fish.audio anahtarı yoksa.
+- **Teknoloji:** fish-audio, python, api-anahtari · **Paketler:** FISH_AUDIO_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Güncel ve dürüst (promosyon kısıtları açıkça yazılmış).
 
-### lyria  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
+### lyria  ·  calesthio/OpenMontage @ c806645  ·  puan 94 (A)
 
-- **Ne yapar:** Generate and validate music with Google Lyria 3 through the Gemini Interactions API. Use before calling OpenMontage `google_music`, designing Lyria 3 Clip or Pro prompts, using image-to-music or custom lyrics, choosing between Lyria 3 and Lyria RealTime, diagnosing Google music-generation failures, or preparing exact-duration music for a video.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
+- **Ne yapar:** Google Lyria 3 ile Gemini Interactions API üzerinden müzik üretir ve doğrular; Clip/Pro/RealTime model seçimi, yapılandırılmış prompt sözleşmesi, maliyet duyurusu ve videoya tam süreli master çıkarma adımlarını tanımlar.
+- **Ne zaman:** Google anahtarı varken altyapı müziği, döngü veya sözlü şarkı gerektiğinde; ucuz ve hızlı deneme için. · **Ne zaman değil:** ElevenLabs Music tercih edildiğinde; OpenMontage google_music adaptörü sadece Pro modelini destekliyor.
+- **Teknoloji:** google-gemini, api-anahtari · **Paketler:** GEMINI_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** muzik-uretimi → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 17 KB (SKILL.md 7.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Disiplinli iş akışı ve adaptör kısıtlarını açıkça söylüyor; kalite yüksek.
 
-### music  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
+### music  ·  calesthio/OpenMontage @ c806645  ·  puan 95 (A)
 
-- **Ne yapar:** Generate music using ElevenLabs Music API. Use when creating instrumental tracks, songs with lyrics, background music, jingles, or any AI-generated music composition. Supports prompt-based generation, composition plans for granular control, and detailed output with metadata.
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** ElevenLabs Music API ile metin isteminden enstrümantal parça, sözlü şarkı, jingle üretir; bölüm bazlı ince kontrol için kompozisyon planı oluşturup düzenlemeyi gösterir.
+- **Ne zaman:** Video için arka plan müziği, jingle veya şarkı üretilecekse. · **Ne zaman değil:** Hazır stok müzik yeterliyse (media-use); sanatçı/şarkı taklidi istenirse (API reddeder).
+- **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** muzik-uretimi → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 10 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi ElevenLabs skill'i; bağımsız SDK ile her yerde çalışır.
 
-### sound-effects  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
+### setup-api-key  ·  calesthio/OpenMontage @ c806645  ·  puan 79 (B)
 
-- **Ne yapar:** Generate sound effects from text descriptions using ElevenLabs. Use when creating sound effects, generating audio textures, producing ambient sounds, cinematic impacts, UI sounds, or any audio that isn't speech. Supports looping, duration control, and prompt influence tuning.
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** ElevenLabs API anahtarını kurar: önce mevcut ELEVENLABS_API_KEY'i bulup doğrular, yoksa kullanıcıyı adım adım anahtar oluşturmaya yönlendirir ve .env'e yazar.
+- **Ne zaman:** ElevenLabs skilleri anahtar eksikliğinden çalışmadığında veya anahtar değiştirilecekken. · **Ne zaman değil:** Diğer sağlayıcıların anahtarları (genel bir anahtar kurulum aracı değil); anahtar zaten tanımlıyken.
+- **Teknoloji:** elevenlabs, api-anahtari · **Paketler:** ELEVENLABS_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** api-anahtari-kurulumu → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Sadece ElevenLabs'a özel olduğu için 03'ten 02'ye taşındı. Anahtarı sohbete yapıştırtması güvenlik açısından dikkat ister.
+
+### sound-effects  ·  calesthio/OpenMontage @ c806645  ·  puan 95 (A)
+
+- **Ne yapar:** ElevenLabs ile metin tarifinden ses efekti, ambiyans, döngü ve UI sesi üretir; süre, prompt etkisi ve döngü parametrelerini açıklar.
+- **Ne zaman:** Video, oyun veya arayüz için özgün efekt/ambiyans gerektiğinde. · **Ne zaman değil:** Hazır efekt kütüphanesi yeterliyse (media-use, hyperframes-media); konuşma veya müzik için.
+- **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Durum:** tercih · **Örtüşme:** ses-efekti → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 5 KB (SKILL.md 3.9 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi, kısa ve eksiksiz.
 
-### speech-to-text  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
+### speech-to-text  ·  calesthio/OpenMontage @ c806645  ·  puan 94 (A)
 
-- **Ne yapar:** Transcribe audio to text using ElevenLabs Scribe v2. Use when converting audio/video to text, generating subtitles, transcribing meetings, or processing spoken content.
-- **Teknoloji:** api-anahtari, python, react, typescript _(otomatik tespit)_
+- **Ne yapar:** ElevenLabs Scribe v2 ile 90+ dilde kelime zaman damgalı, konuşmacı ayrımlı transkripsiyon yapar; anahtar terim ipucu, dil tespiti ve gerçek zamanlı model seçeneklerini gösterir.
+- **Ne zaman:** Altyazı, toplantı/röportaj dökümü veya kelime senkronlu altyazı gereken video işlerinde. · **Ne zaman değil:** Tamamen çevrimdışı çalışılacaksa (video-understand/whisper); Azure tercih edildiğinde.
+- **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** stt-transkripsiyon → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 40 KB (SKILL.md 7.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi skill, Türkçe dahil yüksek doğruluk.
 
-### text-to-speech  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
+### text-to-speech  ·  calesthio/OpenMontage @ c806645  ·  puan 86 (A)
 
-- **Ne yapar:** Generate speech audio from text using HeyGen's Starfish TTS model. Use when: (1) Generating standalone speech audio files from text, (2) Converting text to speech with voice selection, speed, and pitch control, (3) Creating audio for voiceovers, narration, or podcasts, (4) Working with HeyGen's /v1/audio endpoints, (5) Listing available TTS voices by language or gender.
-- **Teknoloji:** api-anahtari, python, typescript _(otomatik tespit)_
+- **Ne yapar:** HeyGen'in Starfish TTS modeliyle bağımsız ses dosyası üretir; ses listeleme, hız/perde kontrolü ve MCP araçlarını tercih etme kuralını içerir.
+- **Ne zaman:** Zaten HeyGen kullanılan projelerde, HeyGen avatarlarıyla tutarlı ses gerektiğinde. · **Ne zaman değil:** Genel seslendirme için (elevenlabs daha esnek); ses klonlama gerekiyorsa.
+- **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 10 KB (SKILL.md 9.5 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Adı genel olsa da HeyGen'e özel; önceki ses-tasarimci çekirdeğinden opsiyonele alındı.

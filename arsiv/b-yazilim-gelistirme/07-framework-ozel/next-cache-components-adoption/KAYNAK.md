@@ -4,7 +4,7 @@
 
 - **Kaynak repo:** https://github.com/vercel/next.js
 - **Repo içindeki yol:** `skills/next-cache-components-adoption`
-- **Commit:** `1984f672c01923e26a23ab24063d42a5263b1561`
+- **Commit:** `691ec2a1a21b9644a8cfd22452cec82d57c84d0d`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
 - **Değerlendirme:** 95/100 (A)

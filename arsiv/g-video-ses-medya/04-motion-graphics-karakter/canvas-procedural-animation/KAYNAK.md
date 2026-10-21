@@ -7,7 +7,7 @@
 - **Commit:** `c8066452325cb57c8fc1ba8c2a71b6e8842e6b65`
 - **Lisans:** AGPL-3.0
 - **Geliştirici:** calesthio (kisi)
-- **Değerlendirme:** 92/100 (A)
+- **Değerlendirme:** 79/100 (B)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
 - **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.

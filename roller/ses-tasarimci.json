@@ -1,19 +1,21 @@
 {
   "ad": "ses-tasarimci",
   "aciklama": "Seslendirme, müzik ve ses efekti üreten agent.",
-  "gorev": "Metni seslendir, müzik ve efektleri üret, ses seviyelerini dengele. Hangi sağlayıcının API anahtarı kurulu ise onu kullan.",
+  "gorev": "Metni seslendir (varsayılan ElevenLabs; Azure/fish.audio/HeyGen alternatif), müzik ve efektleri üret, transkript/altyazı çıkar, ses seviyelerini dengele. Uzun üretimden önce kısa örnekle onay al. Hangi sağlayıcının API anahtarı kurulu ise onu kullan; anahtar yoksa setup-api-key ile kur.",
   "cekirdek": [
-    "text-to-speech",
     "elevenlabs",
+    "speech-to-text",
     "music",
     "sound-effects"
   ],
   "opsiyonel": [
-    "speech-to-text",
-    "acestep",
+    "setup-api-key",
     "lyria",
-    "fish-audio-tts",
+    "text-to-speech",
     "azure-text-to-speech",
-    "doubao-tts"
+    "azure-speech-to-text",
+    "fish-audio-tts",
+    "doubao-tts",
+    "dashscope"
   ]
 }

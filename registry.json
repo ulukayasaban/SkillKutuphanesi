@@ -13619,7 +13619,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": "skills/next-bundle-optimizer",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T2",
       "gizli": false,
@@ -13692,7 +13692,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": "skills/next-cache-components-adoption",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T2",
       "gizli": false,
@@ -13769,7 +13769,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": "skills/next-cache-components-optimizer",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T2",
       "gizli": false,
@@ -13844,7 +13844,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": "skills/next-dev-loop",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T2",
       "gizli": false,
@@ -13918,7 +13918,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": "skills/next-partial-prefetching-adoption",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T2",
       "gizli": false,
@@ -13993,7 +13993,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": "skills/next-partial-prefetching-optimizer",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T2",
       "gizli": false,
@@ -80429,7 +80429,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/authoring-skills",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -80503,7 +80503,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/backport-pr",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -80942,7 +80942,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/create-pr",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -81015,7 +81015,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/dce-edge",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -81089,7 +81089,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/deploy-release-test",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -81164,7 +81164,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/docs-diagrams",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -81605,7 +81605,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/flags",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -81752,7 +81752,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/gate-tests",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -81827,7 +81827,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/gh-stack",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -81974,7 +81974,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/insight-error-page",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -82055,7 +82055,7 @@
       "varyantlar": {},
       "repo": "GoogleChrome/lighthouse",
       "kaynak_yol": ".agents/skills/lighthouse-verification",
-      "commit": "1c45a6fa5ab0a0bd5a832d2a3263df373f73a837",
+      "commit": "d94c35d9c772bb87b7a16ee978faeabda939fb1d",
       "lisans": "Apache-2.0",
       "tip": "T3",
       "gizli": true,
@@ -82125,7 +82125,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/next-rspack",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -82728,7 +82728,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/pr-status-triage",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -82802,7 +82802,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/react-sync",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -82875,7 +82875,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/react-vendoring",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -82950,7 +82950,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/router-act",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -83025,7 +83025,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/runtime-debug",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -83173,7 +83173,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/sandbox-bench",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -83322,7 +83322,7 @@
       "varyantlar": {},
       "repo": "GoogleChrome/lighthouse",
       "kaynak_yol": ".agents/skills/update-ard-port",
-      "commit": "1c45a6fa5ab0a0bd5a832d2a3263df373f73a837",
+      "commit": "d94c35d9c772bb87b7a16ee978faeabda939fb1d",
       "lisans": "Apache-2.0",
       "tip": "T3",
       "gizli": true,
@@ -83396,7 +83396,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/update-docs",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -83470,7 +83470,7 @@
       "varyantlar": {},
       "repo": "GoogleChrome/lighthouse",
       "kaynak_yol": ".agents/skills/update-trace-engine",
-      "commit": "1c45a6fa5ab0a0bd5a832d2a3263df373f73a837",
+      "commit": "d94c35d9c772bb87b7a16ee978faeabda939fb1d",
       "lisans": "Apache-2.0",
       "tip": "T3",
       "gizli": true,
@@ -83544,7 +83544,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/v8-jit",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -83690,7 +83690,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/write-api-reference",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -83764,7 +83764,7 @@
       "varyantlar": {},
       "repo": "vercel/next.js",
       "kaynak_yol": ".agents/skills/write-guide",
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "lisans": "MIT",
       "tip": "T3",
       "gizli": true,
@@ -83886,9 +83886,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HeyGen Video Agent ile tek bir metin isteminden komple video üretir; senaryo, avatar, görsel, seslendirme ve altyazıyı ajan kendisi seçer. Önce prompt-optimizer referansıyla sahne/zamanlama yapılandırılmış prompt yazılır, sonra iş gönderilip durum sorgulanır.",
+      "kullanim_alani": "Hızlı taslak, tanıtım veya açıklayıcı videoyu avatar/ses ayrıntısı belirtmeden tek adımda almak istendiğinde.",
+      "kullanma": "Tam metin, belirli avatar/ses veya sahne bazlı kontrol gerekiyorsa (avatar-video); kendi kompozisyonunu kurmak istiyorsan (hyperframes).",
+      "teknoloji": [
+        "heygen",
+        "api-anahtari",
+        "rest-api"
+      ],
+      "gerekli_paketler": [
+        "HEYGEN_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon",
+        "ai-medya-uretici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Odaklı ve güncel HeyGen resmi skill'i; MCP varsa onu tercih ediyor. Ücretli API, sonuç kontrolü sınırlı.",
+      "ortusme_grubu": "heygen-video",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -83897,7 +83924,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -83961,9 +83989,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "FFmpeg ile format dönüştürme, yeniden boyutlandırma, sıkıştırma, ses çıkarma, kırpma ve Remotion'a uygun varlık hazırlama tariflerini toplar. Bayrakların neden kullanıldığını da açıklar.",
+      "kullanim_alani": "Remotion/HyperFrames projesine girecek GIF, video ve ses dosyalarını hazırlarken ya da derin FFmpeg tarifi gerektiğinde.",
+      "kullanma": "Basit kırp/birleştir/boyutlandır işleri için video-edit daha kısa ve yeterli.",
+      "teknoloji": [
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kapsamlı ve doğru tarifler; Remotion odaklı örnekler ağırlıkta. video-edit ile birlikte kullanılır.",
+      "ortusme_grubu": "ffmpeg-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -83972,7 +84025,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84045,9 +84099,39 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HTML'den video render eden HyperFrames'in giriş ve yönlendirme skill'i: alt skillerin (core, animation, creative, media, cli, registry) haritasını ve 'video yap' isteğini doğru iş akışına yönlendiren tabloyu verir.",
+      "kullanim_alani": "Herhangi bir video/animasyon/motion graphic isteğinde ilk okunacak skill; HyperFrames ile video yazılacaksa.",
+      "kullanma": "Kullanıcı açıkça Remotion veya başka bir çerçeve istiyorsa; sadece hazır videoyu kesip biçen FFmpeg işlerinde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Ekosistemin yönlendiricisi, iyi yapılandırılmış. Dikkat: /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok (OpenMontage c806645'te bulunmuyor).",
+      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84056,7 +84140,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84131,9 +84216,41 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames için tüm animasyon bilgisi: atomik hareket kuralları, çok fazlı sahne şablonları (blueprint), sahne geçişleri ve GSAP, Lottie, Three.js, Anime.js, CSS, WAAPI, TypeGPU çalışma zamanı adaptörleri. Tek duraklatılmış, seek-güvenli zaman çizelgesi ilkesine dayanır.",
+      "kullanim_alani": "HyperFrames kompozisyonunda hareket, geçiş veya sahne koreografisi yazarken.",
+      "kullanma": "HyperFrames dışı web animasyonu (gsap-* veya framer-motion skilleri daha uygun); Remotion projeleri.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "html",
+        "css",
+        "lottie",
+        "three.js"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Çok zengin kural/blueprint kütüphanesi (2.5 MB); SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84142,7 +84259,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84214,9 +84332,40 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames CLI geliştirme döngüsü: init, add, lint, validate, inspect, preview, render, AWS Lambda render ve sorun giderme. Render öncesi lint/validate/inspect zorunluluğunu ve --json kullanımını tanımlar.",
+      "kullanim_alani": "HyperFrames projesi kurarken, doğrularken, önizlerken ve render alırken.",
+      "kullanma": "Kompozisyon HTML'inin içeriği/sözleşmesi için (hyperframes-core); HyperFrames kullanılmayan projelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "node",
+        "ffmpeg",
+        "docker",
+        "aws-lambda"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Pratik ve ajan dostu. Not: 'init' global skill setini otomatik güncelliyor; kütüphane kuralı gereği bu davranış izlenmeli.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84225,7 +84374,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84295,9 +84445,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames kompozisyon sözleşmesi: data-* zamanlama öznitelikleri, class=\"clip\", izler, alt kompozisyonlar, değişkenler, çerçevenin yönettiği medya oynatma ve deterministik render kuralları. Kompozisyon HTML'i yazmadan önce okunur.",
+      "kullanim_alani": "Renderlanabilir bir HyperFrames projesi kurarken veya mevcut kompozisyonu düzenlerken.",
+      "kullanma": "Sadece hareket tarifi arıyorsan (hyperframes-animation); HyperFrames dışı projelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Net teknik sözleşme ve referans dizini; diğer alt skillerin temeli.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84306,7 +84483,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84375,9 +84553,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames videoları için animasyon dışı yaratıcı yön: frame.md/design.md tasarım spesifikasyonu, palet, tipografi, anlatım, vuruş planı, sese duyarlı görseller ve marka kararları. 'Web sayfası gibi görünen' jenerik çıktıyı önleyen ev stili kurallarını içerir.",
+      "kullanim_alani": "Çok sahneli veya markalı bir HyperFrames videosunun görsel dilini ve ritmini planlarken.",
+      "kullanma": "Atomik hareket ve geçişler için (hyperframes-animation); tek satırlık düzenlemelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Çıktı kalitesini en çok etkileyen alt skill; house-style ve video-composition referansları güçlü.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84386,7 +84591,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84451,9 +84657,39 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Tek ses motoru (scripts/audio.mjs) ile HyperFrames için TTS (HeyGen/ElevenLabs/Kokoro), arka plan müziği, ses efekti, Whisper transkripsiyonu, arka plan silme ve altyazı/karaoke üretimi. HeyGen anahtarı yoksa yerel/ücretsiz yollara düşer.",
+      "kullanim_alani": "HyperFrames kompozisyonuna seslendirme, müzik, efekt veya kelime zamanlı altyazı eklerken.",
+      "kullanma": "HyperFrames dışı projelerde; belirli bir sağlayıcının ayrıntılı API'si gerekiyorsa (elevenlabs, lyria vb.).",
+      "teknoloji": [
+        "hyperframes",
+        "node",
+        "heygen",
+        "elevenlabs",
+        "whisper"
+      ],
+      "gerekli_paketler": [
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon",
+        "ses-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Sağlayıcı zinciri ve yedek yollar iyi tasarlanmış; varsayılanı HeyGen'e bağlı.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84462,7 +84698,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84530,9 +84767,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames kayıt defterindeki hazır blok ve bileşenleri 'hyperframes add' ile kurar ve ana kompozisyona bağlar; yeni blok/bileşen yazıp üst projeye katkı akışını da anlatır.",
+      "kullanim_alani": "Hazır grafik/efekt bloklarını (data-chart, grain-overlay…) kompozisyona eklerken.",
+      "kullanma": "Sıfırdan özel sahne yazarken; HyperFrames dışı projelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Dar ama net kapsam; registry ağ erişimi gerektirir.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84541,7 +84804,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84607,9 +84871,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "BGM, ses efekti, görsel ve ikon ihtiyacını tek 'resolve' komutuyla HeyGen kataloğunda arayıp indirir, yerelde dondurur ve manifest'e kaydeder; ajana sadece dosya yolunu döndürür.",
+      "kullanim_alani": "Kompozisyona hazır stok müzik, efekt, görsel veya ikon gerektiğinde, bağlamı arama gürültüsüyle doldurmadan.",
+      "kullanma": "Özgün üretim gerekiyorsa (music, sound-effects, flux); HeyGen anahtarı yoksa katalog araması sınırlı.",
+      "teknoloji": [
+        "node",
+        "heygen",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "HEYGEN_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Bağlam dostu tasarım (tek satır çıktı, önbellek). HeyGen kataloğuna bağımlı.",
+      "ortusme_grubu": "medya-varlik-temini",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84618,7 +84909,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84687,9 +84979,38 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Bir müzik parçasından vuruşa senkron HyperFrames videosu üretir: parçayı tek analizörle (beatgrid) çözümler, kareleri planlar, her kareyi ayrı alt ajana yaptırır ve render eder. Şarkı sözü videosu, slayt gösterisi veya kinetik tanıtım bu akıştan çıkar.",
+      "kullanim_alani": "Elinde müzik (veya sesinden yararlanılacak video) olan, ritme oturan klip/lyric video isteklerinde.",
+      "kullanma": "Anlatımlı veya web sitesinden üretilecek videolarda; müziği olmayan işlerde.",
+      "teknoloji": [
+        "hyperframes",
+        "python",
+        "html",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "python3",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "video-produksiyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kapılı (gate) iş akışı ve alt ajan dağıtımı olgun; çok ajanlı olduğu için maliyetli/uzun.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84698,7 +85019,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84766,9 +85088,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Playwright ile tarayıcı etkileşimlerini video olarak kaydeder; form doldurma, gezinti, yavaşlatma ve çözünürlük ayarlarıyla demo ve ürün turu görüntüsü üretir.",
+      "kullanim_alani": "Gerçek bir web uygulamasının demo/walkthrough görüntüsü video kompozisyonuna girecekse.",
+      "kullanma": "Terminal/CLI demosu (synthetic-screen-recording); masaüstü uygulama kaydı.",
+      "teknoloji": [
+        "playwright",
+        "typescript",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "playwright",
+        "@playwright/test"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Genel ve bağımsız çalışan tarifler; Remotion odaklı örnekler.",
+      "ortusme_grubu": "ekran-kaydi-demo",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84777,7 +85125,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84843,10 +85192,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "claude-code-video-toolkit'e özgü Remotion uzantıları: paylaşılan bileşenler (AnimatedBackground, SlideTransition…) ve özel geçişler (glitch, lightLeak, clockWipe). Temel Remotion bilgisi için 'remotion-official' skill'ine yönlendirir.",
+      "kullanim_alani": "Sadece o toolkit'in lib/components ve lib/transitions klasörleri bulunan bir projede.",
+      "kullanma": "Genel Remotion işleri (remotion-best-practices); OpenMontage kurulumunda lib/ klasörleri yok.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "@remotion/transitions"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Başvurduğu lib/components, lib/transitions ve remotion-official bu kurulumda/arşivde yok; tek başına çalışmaz.",
+      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 71,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -84854,7 +85226,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84925,9 +85298,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Remotion (React ile video) için resmi en iyi uygulamalar: animasyon, kompozisyon, ses, altyazı, FFmpeg, 3D, grafik, font ve Mediabunny ile medya ölçümü gibi konulara ayrılmış kural dosyaları.",
+      "kullanim_alani": "Remotion kodu yazılan veya düzenlenen her projede.",
+      "kullanma": "HyperFrames ile yazılan videolarda; Remotion'dan HyperFrames'e taşıma için remotion-to-hyperframes.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "@remotion/cli"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: ALTERNATİF. Remotion ekibinin resmi kural seti, kaliteli. Varsayılan çerçeve HyperFrames olduğu için alternatif; Remotion projelerinde birincil.",
+      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -84936,7 +85336,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85009,9 +85410,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Mevcut bir Remotion (React) kompozisyonunu HyperFrames HTML'ine taşır; eşlenebilen kalıpları çevirir, useState/useEffect gibi uyumsuz kalıpları işaretler ve SSIM eşikli test korpusuyla çeviriyi doğrular.",
+      "kullanim_alani": "Kullanıcı açıkça Remotion projesini HyperFrames'e taşımak istediğinde.",
+      "kullanma": "Yeni kompozisyon yazarken veya Remotion sadece referans olarak geçiyorsa; ters yönde dönüşüm.",
+      "teknoloji": [
+        "remotion",
+        "hyperframes",
+        "react",
+        "html",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "remotion"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Dar kapsamlı ama disiplinli (eval zorunlu). /general-video yönlendirmesi arşivde yok.",
+      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85020,7 +85448,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85090,10 +85519,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Terminal/CLI demosunu gerçek ekran kaydı yerine Remotion'daki TerminalScene bileşeniyle sentetik olarak üretir; komut ve çıktıyı karakter karakter, kareye kadar kontrollü yazar. Ne zaman sentetik, ne zaman canlı kayıt seçileceğini açıklar.",
+      "kullanim_alani": "Kurulum/CLI eğitimi gibi komut ve çıktısı önceden bilinen terminal demolarında.",
+      "kullanma": "Gerçek uygulama arayüzü veya tarayıcı akışı (playwright-recording); OpenMontage remotion-composer'ı yoksa.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Fikir iyi; ancak OpenMontage'ın remotion-composer/TerminalScene bileşenine bağımlı.",
+      "ortusme_grubu": "ekran-kaydi-demo",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 78,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -85101,7 +85555,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85166,9 +85621,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "yt-dlp ile YouTube ve 1000+ siteden video, sadece ses, altyazı ve metadata indirme komutlarını verir; kalite ön ayarları ve çıktı şablonlarını içerir. API anahtarı gerekmez.",
+      "kullanim_alani": "Referans/kaynak video, ses veya altyazı indirmek ya da metadata almak gerektiğinde.",
+      "kullanma": "YouTube'da arama/listeleme için; telif veya platform koşullarına aykırı kullanımda.",
+      "teknoloji": [
+        "yt-dlp",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "yt-dlp",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kısa, doğru, bağımsız. Telif sorumluluğu kullanıcıda.",
+      "ortusme_grubu": "video-indirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85177,7 +85657,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85240,9 +85721,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ffmpeg/ffprobe ile yerelde video kırpma, birleştirme, platforma göre boyutlandırma, hız değiştirme, ses çıkarma/değiştirme, sıkıştırma, format dönüştürme ve logo bindirme komutlarını verir.",
+      "kullanim_alani": "Hazır videolar üzerinde hızlı kurgu ve sosyal medya formatına uyarlama işlerinde.",
+      "kullanma": "Sahne kompozisyonu/animasyon gerekiyorsa (hyperframes); karmaşık filtre zincirleri için ffmpeg skill'i.",
+      "teknoloji": [
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Kısa, genel, platform ön ayarlı; bağımlılığı sadece ffmpeg.",
+      "ortusme_grubu": "ffmpeg-kurgu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85251,7 +85757,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85323,10 +85830,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "claude-code-video-toolkit ile metin brifinden açıklayıcı video üretir: Modal/RunPod bulut GPU'larında seslendirme, görsel, müzik, konuşan kafa üretimi ve Remotion render. Kurulum ve uç nokta yapılandırmasını adım adım anlatır.",
+      "kullanim_alani": "Toolkit ~/.openclaw/workspace/claude-code-video-toolkit yolunda kuruluysa ve bulut GPU kullanılacaksa.",
+      "kullanma": "OpenMontage veya HyperFrames ile çalışırken; toolkit kurulu değilse.",
+      "teknoloji": [
+        "remotion",
+        "python",
+        "node",
+        "modal",
+        "runpod"
+      ],
+      "gerekli_paketler": [
+        "claude-code-video-toolkit",
+        "modal",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Sabit ~/.openclaw yoluna ve ayrı toolkit kurulumuna bağımlı; bu ortamda yok. --break-system-packages önerisi riskli.",
+      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -85334,7 +85867,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85399,9 +85933,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HeyGen /v2/video_translate ile mevcut videoyu başka dillere çevirip dudak senkronlu dublaj yapar; sadece ses çevirisi, konuşmacı sayısı ve webhook seçenekleri vardır.",
+      "kullanim_alani": "Hazır bir videonun çok dilli (ör. Türkçe→İngilizce) dublajlı sürümleri gerektiğinde.",
+      "kullanma": "Sadece altyazı çevirisi yeterliyse; HeyGen anahtarı yoksa.",
+      "teknoloji": [
+        "heygen",
+        "api-anahtari",
+        "rest-api"
+      ],
+      "gerekli_paketler": [
+        "HEYGEN_API_KEY"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon",
+        "ai-medya-uretici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Odaklı resmi HeyGen skill'i; ücretli.",
+      "ortusme_grubu": "video-ceviri-dublaj",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85410,7 +85971,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85475,9 +86037,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ffmpeg ile sahne/anahtar kare çıkarıp Whisper ile sesi yerelde yazıya döken betik; videonun içeriğini JSON olarak özetler. API anahtarı gerekmez, tamamen çevrimdışı çalışır.",
+      "kullanim_alani": "Bir videoyu kurgulamadan önce ne içerdiğini anlamak, kareleri incelemek veya yerel transkript almak gerektiğinde.",
+      "kullanma": "Yüksek doğruluklu çok dilli transkript (speech-to-text) veya konuşmacı ayrımı gerekiyorsa.",
+      "teknoloji": [
+        "ffmpeg",
+        "python",
+        "whisper"
+      ],
+      "gerekli_paketler": [
+        "ffmpeg",
+        "openai-whisper"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Betiği skill klasöründe; yol skills/video-understand/... diye yazılmış, kurulumda skill yoluna göre çalıştırılmalı.",
+      "ortusme_grubu": "video-analiz",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85486,7 +86074,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85554,9 +86143,37 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Bir web sitesini headless Chrome ile yakalayıp marka varlıklarıyla HyperFrames videosuna (site turu, vitrin, sosyal klip) dönüştüren 7 adımlı, kapılı iş akışı. Varlık denetimi ve 'doğrulamadıklarım' açıklaması zorunludur.",
+      "kullanim_alani": "Portföy/blog/landing sayfasından tanıtım turu veya sosyal medya klibi üretilecekse.",
+      "kullanma": "Ürün lansman/promosyon videosu, konu anlatımı veya PR videosu (yönlendirdiği skiller arşivde yok).",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "node",
+        "chrome-headless"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik",
+        "landing-page"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kalite kapıları güçlü. /product-launch-video ve /faceless-explainer yönlendirmeleri arşivde yok.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85565,7 +86182,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85631,10 +86249,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ACE-Step 1.5 açık kaynak modeliyle RunPod üzerinde enstrümantal müzik, sözlü şarkı, cover/stil aktarımı ve stem ayırma yapar; sahne ön ayarları (corporate-bg, tension, cta) içerir.",
+      "kullanim_alani": "Açık kaynak/ucuz müzik üretimi veya stem ayırma gerektiğinde ve tools/music_gen.py bulunan toolkit kuruluysa.",
+      "kullanma": "OpenMontage kurulumunda (tools/music_gen.py yok); hızlı sonuç için music veya lyria.",
+      "teknoloji": [
+        "python",
+        "runpod",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "RUNPOD_API_KEY",
+        "claude-code-video-toolkit"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Başvurduğu tools/music_gen.py OpenMontage c806645'te yok (claude-code-video-toolkit'ten taşınmış); --brand digital-samba gibi örnekler yabancı projeye ait.",
+      "ortusme_grubu": "muzik-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -85642,7 +86284,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85710,9 +86353,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ElevenLabs Agents Platform ile gerçek zamanlı sesli yapay zekâ ajanı (asistan, müşteri hizmetleri botu, etkileşimli karakter) kurar; CLI, Python, JS ve web gömme örnekleri içerir.",
+      "kullanim_alani": "Uygulamaya konuşan, dinleyen sesli asistan veya telefon/web sesli bot eklenecekse.",
+      "kullanma": "Tek seferlik seslendirme/medya üretimi (elevenlabs, text-to-speech).",
+      "teknoloji": [
+        "elevenlabs",
+        "python",
+        "typescript",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "elevenlabs",
+        "@elevenlabs/elevenlabs-js",
+        "@elevenlabs/cli"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Resmi ElevenLabs skill'i, güncel. Medya üretimi değil uygulama entegrasyonu; video rollerine eklenmedi.",
+      "ortusme_grubu": "sesli-ajan",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85721,7 +86391,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85785,9 +86456,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Azure AI Speech Fast Transcription REST API ile ses/videoyu kelime zaman damgalı, konuşmacı ayrımlı yazıya döker; OpenMontage'da azure_stt aracı olarak transcriber şemasıyla birebir uyumludur.",
+      "kullanim_alani": "AZURE_SPEECH_KEY tanımlıysa ve bulutta hızlı transkript/altyazı gerekiyorsa.",
+      "kullanma": "Azure hesabı yoksa (speech-to-text veya yerel whisper); OpenMontage dışında araç sarmalayıcısı yok.",
+      "teknoloji": [
+        "azure",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "AZURE_SPEECH_KEY",
+        "AZURE_SPEECH_REGION",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Düzgün belgelenmiş; OpenMontage registry'sine bağlı kod örnekleri.",
+      "ortusme_grubu": "stt-transkripsiyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85796,7 +86494,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85860,9 +86559,38 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Azure nöral TTS ile SSML prozodi ve konuşma stili kontrollü çok dilli seslendirme üretir; OpenMontage'da azure_tts aracı olarak tts_selector üzerinden çalışır.",
+      "kullanim_alani": "AZURE_SPEECH_KEY tanımlıysa ve SSML ile ince ayarlı, uygun maliyetli anlatım gerekiyorsa (Türkçe nöral sesler dahil).",
+      "kullanma": "Ses klonlama gerekiyorsa (elevenlabs); Azure hesabı yoksa.",
+      "teknoloji": [
+        "azure",
+        "python",
+        "ssml",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "AZURE_SPEECH_KEY",
+        "AZURE_SPEECH_REGION",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "egitim-explainer",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Güvenilir kurumsal TTS; STT ile aynı kaynak.",
+      "ortusme_grubu": "tts-saglayici",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -85871,7 +86599,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85935,10 +86664,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Alibaba DashScope (Bailian) entegrasyonu: Qwen-Image ile görsel üretimi, Qwen-TTS ile seslendirme ve kelime zaman damgalı Qwen-ASR transkripsiyonu; yerel (OpenAI uyumlu olmayan) uç noktaları doğru kullanmayı anlatır.",
+      "kullanim_alani": "Çince içerik veya DASHSCOPE_API_KEY olan, Çin bölgesi modelleri tercih edilen projelerde.",
+      "kullanma": "Türkçe/İngilizce odaklı genel işlerde (elevenlabs, flux); DashScope anahtarı yoksa.",
+      "teknoloji": [
+        "dashscope",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "DASHSCOPE_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ses-tasarimci",
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Doğru ve pratik; çoklu yetenek (görsel+TTS+ASR) olduğu için kategori sınırında. Çin pazarına odaklı.",
+      "ortusme_grubu": "tts-saglayici",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -85946,7 +86701,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86010,10 +86766,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Volcengine Doubao Speech 2.0 ile Mandarin ve çok dilli seslendirme üretir; asenkron uç noktadan karakter düzeyinde zaman damgası alıp altyazı kurmayı ve önce kısa örnekle onay almayı öğretir.",
+      "kullanim_alani": "Çince seslendirme veya Doubao/Volcengine tercih edildiğinde.",
+      "kullanma": "Türkçe/İngilizce anlatımda; Doubao anahtarı yoksa.",
+      "teknoloji": [
+        "volcengine",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "DOUBAO_SPEECH_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İş akışı (örnek → onay → tam üretim) örnek alınacak kadar iyi; kullanım alanı dar.",
+      "ortusme_grubu": "tts-saglayici",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -86021,7 +86802,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86093,9 +86875,38 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ElevenLabs ile seslendirme, ses klonlama, ses efekti ve müzik üretimini tek skillde toplar; model seçimi, stile göre ses ayarları, duraklama/telaffuz kontrolü ve yinelemeli üretim akışını verir.",
+      "kullanim_alani": "Video seslendirmesi, anlatım veya ses klonlama gereken her işte varsayılan TTS olarak.",
+      "kullanma": "Sadece müzik (music) veya sadece efekt (sound-effects) için ayrıntılı API gerekiyorsa; sesli ajan (agents).",
+      "teknoloji": [
+        "elevenlabs",
+        "python",
+        "ffmpeg",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "elevenlabs",
+        "ELEVENLABS_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Pratik üretim bilgisi (ayar tabloları, SSML sınırları, ellipsis uyarısı) çok değerli; Türkçe destekli multilingual_v2.",
+      "ortusme_grubu": "tts-saglayici",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86104,7 +86915,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86168,9 +86980,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "fish.audio S1/S2 modelleriyle duygu etiketli ([laugh], [whispers]) çok dilli seslendirme ve reference_id ile klonlanmış sesleri yeniden kullanma; bayt bazlı fiyatlandırmayı açıklar.",
+      "kullanim_alani": "Yüksek duygu ifadeli anlatım veya fish.audio'da hazırlanmış klon ses gerektiğinde.",
+      "kullanma": "Ücretsiz promosyon modeli (s2.1-pro-free) ile ticari/müşteri işi; fish.audio anahtarı yoksa.",
+      "teknoloji": [
+        "fish-audio",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "FISH_AUDIO_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Güncel ve dürüst (promosyon kısıtları açıkça yazılmış).",
+      "ortusme_grubu": "tts-saglayici",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86179,7 +87017,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86242,9 +87081,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Google Lyria 3 ile Gemini Interactions API üzerinden müzik üretir ve doğrular; Clip/Pro/RealTime model seçimi, yapılandırılmış prompt sözleşmesi, maliyet duyurusu ve videoya tam süreli master çıkarma adımlarını tanımlar.",
+      "kullanim_alani": "Google anahtarı varken altyapı müziği, döngü veya sözlü şarkı gerektiğinde; ucuz ve hızlı deneme için.",
+      "kullanma": "ElevenLabs Music tercih edildiğinde; OpenMontage google_music adaptörü sadece Pro modelini destekliyor.",
+      "teknoloji": [
+        "google-gemini",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "GEMINI_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: ALTERNATİF. Disiplinli iş akışı ve adaptör kısıtlarını açıkça söylüyor; kalite yüksek.",
+      "ortusme_grubu": "muzik-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86253,7 +87118,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86317,9 +87183,37 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ElevenLabs Music API ile metin isteminden enstrümantal parça, sözlü şarkı, jingle üretir; bölüm bazlı ince kontrol için kompozisyon planı oluşturup düzenlemeyi gösterir.",
+      "kullanim_alani": "Video için arka plan müziği, jingle veya şarkı üretilecekse.",
+      "kullanma": "Hazır stok müzik yeterliyse (media-use); sanatçı/şarkı taklidi istenirse (API reddeder).",
+      "teknoloji": [
+        "elevenlabs",
+        "python",
+        "typescript",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "elevenlabs",
+        "@elevenlabs/elevenlabs-js"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Resmi ElevenLabs skill'i; bağımsız SDK ile her yerde çalışır.",
+      "ortusme_grubu": "muzik-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86328,7 +87222,107 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "setup-api-key",
+      "ad": "setup-api-key",
+      "durum": "tercih",
+      "kategori": "g-video-ses-medya/02-ses-muzik-konusma",
+      "alan": "g-video-ses-medya",
+      "yol": "arsiv/g-video-ses-medya/02-ses-muzik-konusma/setup-api-key",
+      "varyantlar": {},
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".claude/skills/setup-api-key",
+      "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
+      "lisans": "AGPL-3.0",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 1,
+      "atlanan_dosyalar": [],
+      "aciklama": "Guides users through setting up an ElevenLabs API key for ElevenLabs MCP tools. Use when the user needs to configure an ElevenLabs API key, when ElevenLabs tools fail due to missing API key, or when the user mentions needing access to ElevenLabs. First checks whether ELEVENLABS_API_KEY is already configured and valid, and only runs full setup when needed.",
+      "teknoloji_oto": [
+        "api-anahtari"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": ""
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 3,
+      "skill_md_kb": 2.8,
+      "klasor_adi": "setup-api-key",
+      "skill_md_hash": "c78d6810ec72fafc5545948a11455e00cf91f75b",
+      "ana_hash": "c418381722de56db0da3ac93a0ef8488b5f4276925fa79493756d51ae6276c82",
+      "varyant_hash": {},
+      "klasor_hash": "e2657d8a171385d601a4bb1f57add448f8fdf06f7cf464e53d15db35df9f196f",
+      "globalde": {
+        "claude": "ayni"
+      },
+      "gelistirici": {
+        "sahip": "calesthio",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/calesthio",
+        "resmi_kaynak": false,
+        "yildiz": 70531,
+        "fork": 9106,
+        "acik_issue": 411,
+        "son_guncelleme": "2026-10-16",
+        "olusturulma": "2026-03-29",
+        "lisans": "AGPL-3.0",
+        "arsivlenmis": false,
+        "aciklama": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "ana_sayfa": "https://www.openmontage.video/",
+        "katkici": 69
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "ElevenLabs API anahtarını kurar: önce mevcut ELEVENLABS_API_KEY'i bulup doğrular, yoksa kullanıcıyı adım adım anahtar oluşturmaya yönlendirir ve .env'e yazar.",
+      "kullanim_alani": "ElevenLabs skilleri anahtar eksikliğinden çalışmadığında veya anahtar değiştirilecekken.",
+      "kullanma": "Diğer sağlayıcıların anahtarları (genel bir anahtar kurulum aracı değil); anahtar zaten tanımlıyken.",
+      "teknoloji": [
+        "elevenlabs",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "ELEVENLABS_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Sadece ElevenLabs'a özel olduğu için 03'ten 02'ye taşındı. Anahtarı sohbete yapıştırtması güvenlik açısından dikkat ister.",
+      "ortusme_grubu": "api-anahtari-kurulumu",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 79,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (5 gün önce)",
+          "topluluk 19/20 (★70531)",
+          "lisans 15/15 (AGPL-3.0)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86392,9 +87386,37 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ElevenLabs ile metin tarifinden ses efekti, ambiyans, döngü ve UI sesi üretir; süre, prompt etkisi ve döngü parametrelerini açıklar.",
+      "kullanim_alani": "Video, oyun veya arayüz için özgün efekt/ambiyans gerektiğinde.",
+      "kullanma": "Hazır efekt kütüphanesi yeterliyse (media-use, hyperframes-media); konuşma veya müzik için.",
+      "teknoloji": [
+        "elevenlabs",
+        "python",
+        "typescript",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "elevenlabs",
+        "@elevenlabs/elevenlabs-js"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Resmi, kısa ve eksiksiz.",
+      "ortusme_grubu": "ses-efekti",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86403,7 +87425,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86469,9 +87492,37 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ElevenLabs Scribe v2 ile 90+ dilde kelime zaman damgalı, konuşmacı ayrımlı transkripsiyon yapar; anahtar terim ipucu, dil tespiti ve gerçek zamanlı model seçeneklerini gösterir.",
+      "kullanim_alani": "Altyazı, toplantı/röportaj dökümü veya kelime senkronlu altyazı gereken video işlerinde.",
+      "kullanma": "Tamamen çevrimdışı çalışılacaksa (video-understand/whisper); Azure tercih edildiğinde.",
+      "teknoloji": [
+        "elevenlabs",
+        "python",
+        "typescript",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "elevenlabs",
+        "@elevenlabs/elevenlabs-js"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Resmi skill, Türkçe dahil yüksek doğruluk.",
+      "ortusme_grubu": "stt-transkripsiyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86480,7 +87531,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86545,9 +87597,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HeyGen'in Starfish TTS modeliyle bağımsız ses dosyası üretir; ses listeleme, hız/perde kontrolü ve MCP araçlarını tercih etme kuralını içerir.",
+      "kullanim_alani": "Zaten HeyGen kullanılan projelerde, HeyGen avatarlarıyla tutarlı ses gerektiğinde.",
+      "kullanma": "Genel seslendirme için (elevenlabs daha esnek); ses klonlama gerekiyorsa.",
+      "teknoloji": [
+        "heygen",
+        "api-anahtari",
+        "rest-api"
+      ],
+      "gerekli_paketler": [
+        "HEYGEN_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Adı genel olsa da HeyGen'e özel; önceki ses-tasarimci çekirdeğinden opsiyonele alındı.",
+      "ortusme_grubu": "tts-saglayici",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86556,7 +87633,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86619,9 +87697,40 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "OpenMontage dünyaları için üretim kalitesinde 3D varlık üretir/yönlendirir: Atlas Tripo, fal Hunyuan 3D, SAM 3D ve CC0 kataloglar arasından role göre seçim, ücretli çağrı disiplini ve Blender'da zorunlu mesh kontrolü.",
+      "kullanim_alani": "Video/3D sahne için gerçek mesh (kahraman obje, sahne objeleri) gerektiğinde.",
+      "kullanma": "Tüm sahneyi tek mesh olarak üretmek; web 3D arayüzü (a-tasarim/05 skilleri).",
+      "teknoloji": [
+        "blender",
+        "three.js",
+        "atlas-cloud",
+        "fal-ai",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "ATLASCLOUD_API_KEY",
+        "FAL_KEY",
+        "blender",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "3d-urun-sergisi"
+      ],
+      "roller": [
+        "ai-medya-uretici",
+        "3d-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Maliyet ve kalite disiplini örnek düzeyde; OpenMontage araçlarına bağımlı.",
+      "ortusme_grubu": "3d-varlik-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86630,7 +87739,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86700,9 +87810,37 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Metinden ve görselden AI video üretimini fal.ai, HeyGen ve Gemini API ağ geçitleri üzerinden yönetir; Seedance 2.0'ı premium varsayılan sayar ve sağlayıcıyı video_selector ile seçmeyi şart koşar.",
+      "kullanim_alani": "AI video klibi üretilecek ve hangi model/ağ geçidinin kullanılacağına karar verilecekse; model seçiminin giriş noktası.",
+      "kullanma": "Belirli bir modelin ayrıntılı prompt rehberi gerektiğinde (seedance-2-0, gemini-omni, kling-official).",
+      "teknoloji": [
+        "fal-ai",
+        "heygen",
+        "google-gemini",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "FAL_KEY|HEYGEN_API_KEY|GEMINI_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. İyi yönlendirici; video_selector önerisi OpenMontage'a bağlı. Sıralama bilgileri tarihe duyarlı.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86711,7 +87849,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86775,9 +87914,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Atlas Cloud ağ geçidiyle tek anahtarla Seedance 2.5/2.0, Gemini Omni, MiniMax H3, Seedream 5, GPT Image 2, Nano Banana 2 görsel/video üretimi ve düzenlemesi; her ücretli çağrı öncesi katalog ve maliyet kontrolünü zorunlu tutar.",
+      "kullanim_alani": "Kullanıcı Atlas Cloud istediğinde veya tek ATLASCLOUD_API_KEY ile çok model ailesine erişilecekse.",
+      "kullanma": "Doğrudan sağlayıcı anahtarı varken (seedance, gemini-omni); Atlas hesabı yoksa.",
+      "teknoloji": [
+        "atlas-cloud",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "ATLASCLOUD_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Kesin rota/fiyat tabloları ve 'sessizce sınırlama' yasağı iyi.",
+      "ortusme_grubu": "medya-saglayici-yonlendirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86786,7 +87951,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86850,9 +88016,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HeyGen v2 API ile avatar, ses, metin, sahne ve arka plan üzerinde tam kontrollü avatar videosu üretir; çok sahneli, şeffaf WebM ve Remotion entegrasyonu dahil.",
+      "kullanim_alani": "Belirli avatar/sesle birebir metin okutulacak, sahne bazlı kontrol gerekecek veya toplu üretim yapılacaksa.",
+      "kullanma": "Tek istemden hızlı video (create-video); avatar gerekmiyorsa.",
+      "teknoloji": [
+        "heygen",
+        "api-anahtari",
+        "rest-api"
+      ],
+      "gerekli_paketler": [
+        "HEYGEN_API_KEY"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "urun-tanitim-videosu",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ai-medya-uretici",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Resmi ve iyi bölümlenmiş referanslar.",
+      "ortusme_grubu": "heygen-video",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86861,7 +88054,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86927,9 +88121,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Black Forest Labs FLUX API entegrasyon rehberi: uç noktalar, bölgesel sunucular, fiyatlar, asenkron sorgulama, hız sınırı, hata yönetimi ve webhook örnekleri (Python/TypeScript).",
+      "kullanim_alani": "FLUX'u bir uygulamaya veya üretim hattına API ile bağlarken.",
+      "kullanma": "Sadece iyi prompt yazmak gerekiyorsa (flux-best-practices).",
+      "teknoloji": [
+        "bfl-flux",
+        "python",
+        "typescript",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "BFL_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "ai-uygulama",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Resmi BFL skill'i; sonuç URL'lerinin 10 dk'da düştüğü gibi kritik uyarılar var.",
+      "ortusme_grubu": "ai-gorsel-uretimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -86938,7 +88159,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87001,9 +88223,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "OpenMontage'da ComfyUI iş akışlarıyla (comfyui_image/video/music) yerel üretim: sunucu sözleşmesi, API formatlı iş akışı, output_node seçimi, eksik model kurulumu, düşük VRAM seçenekleri ve ücretli Partner Node ayrımı.",
+      "kullanim_alani": "Yerel GPU'da açık ağırlıklı modellerle (Wan, LTXV, MiniMax H3 local) üretim yapılacak veya topluluk iş akışı içe alınacaksa.",
+      "kullanma": "GPU yoksa; barındırılan API yeterliyse.",
+      "teknoloji": [
+        "comfyui",
+        "python",
+        "gpu"
+      ],
+      "gerekli_paketler": [
+        "ComfyUI sunucusu",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. 'Partner Node yerel/ücretsiz değildir' gibi dürüst ayrımlar değerli; GPU/VRAM gerektirir.",
+      "ortusme_grubu": "yerel-uretim-comfyui",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87012,7 +88259,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87078,10 +88326,32 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HeyGen FaceswapNode iş akışıyla kaynak görseldeki yüzü hedef videoya aktarır; iş gönderme, durum sorgulama ve TypeScript/Python örnekleri içerir.",
+      "kullanim_alani": "Kişinin açık izniyle kişiselleştirilmiş video veya kendi yüzünü sahneye yerleştirme gerektiğinde.",
+      "kullanma": "Rızası olmayan kişilerle, yanıltıcı/deepfake amaçlı içerikte.",
+      "teknoloji": [
+        "heygen",
+        "api-anahtari",
+        "rest-api"
+      ],
+      "gerekli_paketler": [
+        "HEYGEN_API_KEY"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Teknik olarak düzgün; rıza ve kötüye kullanım riski nedeniyle rollere eklenmedi, açık istekle --skill ile kurulur.",
+      "ortusme_grubu": "yuz-degistirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -87089,7 +88359,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87150,9 +88421,32 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "BFL FLUX görsel modelleri için kapsamlı prompt rehberi: prompt yapısı, model seçimi (klein/pro/max/flex), T2I, I2I, JSON yapılandırılmış prompt, HEX renk, tipografi ve çoklu referans düzenleme kuralları.",
+      "kullanim_alani": "FLUX ile görsel üretirken veya düzenlerken prompt kalitesini artırmak için.",
+      "kullanma": "Başka görsel modellerinde (GPT Image, Seedream) — kurallar FLUX'a özgü; API kurulumu için bfl-api.",
+      "teknoloji": [
+        "bfl-flux"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik",
+        "marka-sunum",
+        "landing-page"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Resmi BFL rehberi, kural dosyalarına iyi bölünmüş.",
+      "ortusme_grubu": "ai-gorsel-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87161,7 +88455,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87225,9 +88520,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Google Gemini Omni Flash ile 3-10 sn 720p sesli video üretimi ve aynı klibi doğal dille durum korumalı (interaction_id) düzenleme; referans görsel etiketleri, zaman kodlu vuruşlar ve rota sınırlamaları.",
+      "kullanim_alani": "Üretilen bir klibi yeniden üretmeden adım adım düzeltmek veya mevcut videoyu düzenlemek gerektiğinde.",
+      "kullanma": "Tek seferlik sinematik kahraman klip (seedance-2-0), 10 sn'den uzun veya 720p üstü çıktı, İngilizce dışı anlatım.",
+      "teknoloji": [
+        "google-gemini",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "GEMINI_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: ALTERNATİF. Ne zaman seçilip seçilmeyeceği tablosu çok net; benzersiz düzenleme yeteneği.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87236,7 +88556,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87299,10 +88620,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "xAI Grok görsel ve video üretimi rehberi: kimlik doğrulama, uç noktalar, görsel düzenleme/birleştirme, referans görselli video, asenkron sorgulama, fiyatlar ve Grok'a özgü prompt önerileri.",
+      "kullanim_alani": "XAI_API_KEY ile kısa referans koşullu video veya çok kaynaklı görsel birleştirme gerektiğinde.",
+      "kullanma": "Uzun klip, deterministik seed veya yüksek çözünürlük gerektiğinde.",
+      "teknoloji": [
+        "xai-grok",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "XAI_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa ve doğru; derinliği diğer model rehberlerinden az.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -87310,7 +88655,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87374,10 +88720,29 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "[KULLANIMDAN KALKMIŞ] HeyGen Video Agent ve v2 avatar iş akışlarını birleştiren eski skill; yerini create-video ve avatar-video aldı, geriye uyumluluk için duruyor.",
+      "kullanim_alani": "Sadece eski bir projede 'heygen' adıyla başvuru varsa.",
+      "kullanma": "Yeni işlerde — create-video veya avatar-video kullan.",
+      "teknoloji": [
+        "heygen",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "HEYGEN_API_KEY"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Kaynak skill kendini deprecated ilan ediyor; ai-medya-uretici rolünden çıkarıldı.",
+      "ortusme_grubu": "heygen-video",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 71,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -87385,7 +88750,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87449,9 +88815,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kling resmi doğrudan API'si (KLING_API_KEY) için OpenMontage sağlayıcı kuralları: fal.ai Kling'den ayrımı, klasik/turbo görev protokolleri, Omni referans yapıları, TTS/avatar/lip-sync sınırları.",
+      "kullanim_alani": "Resmi Kling API'si ile video/görsel/avatar üretilecekse.",
+      "kullanma": "fal.ai üzerinden Kling (ai-video-gen); OpenMontage kullanılmıyorsa sağlayıcı sarmalayıcıları yok.",
+      "teknoloji": [
+        "kling",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "KLING_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Ayrıştırıcıların karıştırılmaması gibi titiz kurallar; ağırlıkla geliştirici/entegrasyon odaklı.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87460,7 +88852,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87527,10 +88920,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "LTX-2.3 22B modeliyle Modal (A100) üzerinde ~5 sn metinden/görselden video üretir; kare sayısı kuralı, çözünürlükler ve sinematik prompt rehberi içerir.",
+      "kullanim_alani": "Kendi Modal uç noktası kurulu, ucuz b-roll/arka plan klibi üretilecekse.",
+      "kullanma": "OpenMontage kurulumunda (tools/ltx2.py yok); uç nokta yoksa.",
+      "teknoloji": [
+        "ltx",
+        "modal",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "MODAL_LTX2_ENDPOINT_URL",
+        "claude-code-video-toolkit"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Başvurduğu tools/ltx2.py OpenMontage c806645'te yok (claude-code-video-toolkit'ten); prompt rehberi yine de faydalı. LTX-2.5 için provider-model-refresh'e bak.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 71,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -87538,7 +88954,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87601,9 +89018,34 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "MiniMax H3 (Hailuo 3.0) videosunu resmi API, fal.ai, Runway, ComfyUI Partner Node veya yerel açık ağırlıklarla üretir; rotalar arası model kimliği farklarını ve ilk/son kare, referans koşullu üretimi açıklar.",
+      "kullanim_alani": "4-15 sn 2K klip, ilk/son kare animasyonu veya ses/görsel referanslı video gerektiğinde.",
+      "kullanma": "Uzun tek üretim (seedance-2-5); bu sağlayıcılardan hiçbirine erişim yoksa.",
+      "teknoloji": [
+        "minimax",
+        "comfyui",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "MINIMAX_API_KEY|FAL_KEY|RUNWAY_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa ama net; 'yalnız açık ağırlık rotası yereldir' uyarısı doğru.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87612,7 +89054,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87671,9 +89114,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Eylül 2026 görsel, video, konuşma ve Avatar V adaptörleri (GPT Image 2.5, Gemini 3 Pro Image, Ideogram 4.5, Wan 3.0, LTX-2.5, Eleven v4, Lyria 3.5…) için kesin model/host sözleşmeleri; mevcut olmayan modelin sessizce değiştirilmemesini şart koşar.",
+      "kullanim_alani": "OpenMontage'ın yeni nesil adaptörleriyle belirli bir model/host zorunlu tutularak üretim yapılacaksa.",
+      "kullanma": "OpenMontage dışında; genel model seçimi için ai-video-gen.",
+      "teknoloji": [
+        "openmontage",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güncel model kataloğu ve katı yönlendirme kuralları; tamamen OpenMontage registry'sine bağlı.",
+      "ortusme_grubu": "medya-saglayici-yonlendirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87682,7 +89149,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87747,9 +89215,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ByteDance Seedance 2.0 için yetkili prompt ve parametre rehberi: tek geçişte senkron ses, tek üretimde çoklu çekim, yönetmen düzeyi kamera kontrolü, alıntılı diyalogdan dudak senkronu ve 12 varlıklı referans koşullama; ağ geçidi rotaları.",
+      "kullanim_alani": "Fragman, teaser, sinematik kahraman klip veya karakter tutarlılığı gereken premium AI video işlerinde.",
+      "kullanma": "Sıkı bütçe (fast varyantı veya LTX), 15 sn'den uzun tek üretim (seedance-2-5), klip düzenleme (gemini-omni).",
+      "teknoloji": [
+        "seedance",
+        "fal-ai",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "FAL_KEY|REPLICATE_API_TOKEN|HEYGEN_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. OpenMontage'ın premium varsayılan modeli; en ayrıntılı model rehberi. Elo/sıralama iddiaları tarihe duyarlı.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87758,7 +89253,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87822,9 +89318,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Seedance 2.5 ile 4-30 sn sinematik video: fal.ai, Volcengine Ark, Runway, ComfyUI rotaları; bölümlü prompt sözleşmesi, 'Hard cut' çoklu çekim, kesmeler arası adlı kilitler, karakter sayfası yöntemi ve yineleme disiplini.",
+      "kullanim_alani": "15 sn'den uzun tek üretim, büyük referans seti (30 görsel/10 video/10 ses) veya çekimler arası süreklilik gerektiğinde.",
+      "kullanma": "Kısa tek aksiyonlu sahnelerde (2.0 yeterli); 1080p gerekiyorsa (desteklenen rotalar 720p).",
+      "teknoloji": [
+        "seedance",
+        "fal-ai",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "FAL_KEY|RUNWAY_API_KEY",
+        "OpenMontage kurulumu"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: ALTERNATİF. Prompt sözleşmesi çok güçlü; uzun/çok çekimli işlerde 2.0 yerine seçilir.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -87833,81 +89355,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "setup-api-key",
-      "ad": "setup-api-key",
-      "durum": "tercih",
-      "kategori": "g-video-ses-medya/03-ai-gorsel-video-modelleri",
-      "alan": "g-video-ses-medya",
-      "yol": "arsiv/g-video-ses-medya/03-ai-gorsel-video-modelleri/setup-api-key",
-      "varyantlar": {},
-      "repo": "calesthio/OpenMontage",
-      "kaynak_yol": ".claude/skills/setup-api-key",
-      "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
-      "lisans": "AGPL-3.0",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 1,
-      "atlanan_dosyalar": [],
-      "aciklama": "Guides users through setting up an ElevenLabs API key for ElevenLabs MCP tools. Use when the user needs to configure an ElevenLabs API key, when ElevenLabs tools fail due to missing API key, or when the user mentions needing access to ElevenLabs. First checks whether ELEVENLABS_API_KEY is already configured and valid, and only runs full setup when needed.",
-      "teknoloji_oto": [
-        "api-anahtari"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": ""
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 3,
-      "skill_md_kb": 2.8,
-      "klasor_adi": "setup-api-key",
-      "skill_md_hash": "c78d6810ec72fafc5545948a11455e00cf91f75b",
-      "ana_hash": "c418381722de56db0da3ac93a0ef8488b5f4276925fa79493756d51ae6276c82",
-      "varyant_hash": {},
-      "klasor_hash": "e2657d8a171385d601a4bb1f57add448f8fdf06f7cf464e53d15db35df9f196f",
-      "globalde": {
-        "claude": "ayni"
-      },
-      "gelistirici": {
-        "sahip": "calesthio",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/calesthio",
-        "resmi_kaynak": false,
-        "yildiz": 70531,
-        "fork": 9106,
-        "acik_issue": 411,
-        "son_guncelleme": "2026-10-16",
-        "olusturulma": "2026-03-29",
-        "lisans": "AGPL-3.0",
-        "arsivlenmis": false,
-        "aciklama": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
-        "ana_sayfa": "https://www.openmontage.video/",
-        "katkici": 69
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 92,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (5 gün önce)",
-          "topluluk 19/20 (★70531)",
-          "lisans 15/15 (AGPL-3.0)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87970,10 +89419,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "p5.js/Canvas ile karakter destekleyici prosedürel hareket: parçacık, hava efekti, yaprak, squash/stretch ve basit yürüme döngüleri; zaman/kare tabanlı deterministik durum önerir.",
+      "kullanim_alani": "Karaktere eşlik eden çevre efektleri veya basit prosedürel gövdeler gerektiğinde.",
+      "kullanma": "Karmaşık yüz oyunculuğu (SVG rig daha uygun) veya kare-kesin final render.",
+      "teknoloji": [
+        "p5js",
+        "canvas",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "p5"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Çok kısa (ipucu düzeyi); kaynak bağlantıları doğru.",
+      "ortusme_grubu": "karakter-animasyonu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -87981,7 +89455,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88046,10 +89521,36 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Karakter animasyonunu sunmadan önce katmanlı kontrol: şema doğrulama, varlık kontrolü, Playwright ile tarayıcı önizleme ve ekran görüntüsü, kare örnekleme, ffprobe ile final MP4 kontrolü ve pass/revise/fail kararı.",
+      "kullanim_alani": "Karakter animasyonu önizlemesi veya finali teslim edilmeden önce.",
+      "kullanma": "Karakter içermeyen genel video kontrolü (hyperframes-cli inspect/validate).",
+      "teknoloji": [
+        "playwright",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "playwright",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "qa-erisilebilirlik"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa kontrol listesi; OpenMontage karakter hattının şema adlarına atıf yapıyor.",
+      "ortusme_grubu": "karakter-animasyonu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -88057,7 +89558,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88122,10 +89624,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Yerel 2D karakter animasyonu için veri güdümlü rig paketi: parçalar, pivotlar, katman sırası, kısıtlar ve görünümler; her karakteri jenerik çalışma zamanına veri paketi olarak tanımlar.",
+      "kullanim_alani": "SVG/2D karakter animasyonu için rig planı hazırlarken.",
+      "kullanma": "3D rig (Blender/Three.js); hazır Lottie animasyonu yeterliyse.",
+      "teknoloji": [
+        "svg",
+        "gsap",
+        "remotion"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ama doğru kalıplar; OpenMontage rig_plan artefaktına göre yazılmış.",
+      "ortusme_grubu": "karakter-animasyonu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -88133,7 +89658,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88194,9 +89720,30 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Belirsiz bir video fikrini 3Blue1Brown tarzında sahne sahne plana (scenes.md) dönüştürür: konuyu araştırır, hedef kitle/kapsam sorularını sorar, anlatı yayı, görsel öğeler, renk paleti ve uygulama sırasını yazar.",
+      "kullanim_alani": "Matematik/bilim açıklayıcı videosu planlanırken, Manim kodundan önce.",
+      "kullanma": "Kod yazımı (manimce/manimgl-best-practices); matematik dışı tanıtım videoları.",
+      "teknoloji": [
+        "manim"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "egitim-explainer"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. İyi planlama şablonu ve 3b1b ilkeleri; references/ dosyaları faydalı.",
+      "ortusme_grubu": "manim-animasyon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -88205,7 +89752,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88268,9 +89816,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Manim Community Edition için en iyi uygulamalar: sahne yapısı, mobject'ler, animasyonlar, LaTeX/MathTex, 3D sahneler, kamera, stil, CLI ve yapılandırma; çalışan örnekler ve şablonlar içerir.",
+      "kullanim_alani": "'from manim import *' kullanan matematik/bilim animasyonlarında.",
+      "kullanma": "ManimGL (manimlib) projelerinde; matematik dışı motion graphic işlerinde.",
+      "teknoloji": [
+        "manim",
+        "python",
+        "latex"
+      ],
+      "gerekli_paketler": [
+        "manim",
+        "latex",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Kapsamlı kural seti, test edilmiş örnekler; CE topluluk sürümü daha yaygın olduğu için birincil.",
+      "ortusme_grubu": "manim-animasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -88279,7 +89853,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88349,9 +89924,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ManimGL (Grant Sanderson'ın 3b1b sürümü) için en iyi uygulamalar: InteractiveScene, t2c ile Tex renklendirme, kamera çerçevesi, -se etkileşimli mod, checkpoint_paste ve 3D render.",
+      "kullanim_alani": "'from manimlib import *' kullanan veya etkileşimli geliştirme isteyen projelerde.",
+      "kullanma": "Manim Community Edition projelerinde (API'ler farklı).",
+      "teknoloji": [
+        "manim",
+        "python",
+        "opengl",
+        "latex"
+      ],
+      "gerekli_paketler": [
+        "manimgl",
+        "latex"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Kaliteli; kurulumu ve sürüm uyumu CE'ye göre zahmetli.",
+      "ortusme_grubu": "manim-animasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -88360,7 +89961,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88430,9 +90032,39 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Hareketin mesaj olduğu kısa (~10-30 sn), anlatımsız motion graphic üretimi: kinetik tipografi, sayı sayacı, grafik, logo sting, lower-third, sosyal overlay. Varlık-önce yaklaşımla plan→kaynak→tasarım→yapım→render→doğrulama aşamalarını alt ajanlarla yürütür.",
+      "kullanim_alani": "Kısa, tasarım odaklı, seslendirmesiz grafik/overlay (MP4 veya şeffaf) istendiğinde.",
+      "kullanma": "Uzun, çok sahneli veya anlatımlı videolarda (yönlendirdiği general-video vb. arşivde yok); mevcut görüntüye altyazı.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -88441,7 +90073,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88505,10 +90138,32 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Veri güdümlü 2D animasyon için yeniden kullanılabilir poz kütüphanesi, aksiyon döngüleri ve ifade durumları tasarlar; hazırlık→aksiyon→bekleme→oturma oyunculuk kalıbını önerir.",
+      "kullanim_alani": "Karakterin duygu ve aksiyonlarını tutarlı pozlarla anlatmak gerektiğinde.",
+      "kullanma": "Tek seferlik basit hareketler; rig henüz yoksa (önce character-rigging).",
+      "teknoloji": [
+        "gsap",
+        "remotion"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve doğru; tek başına derinliği sınırlı.",
+      "ortusme_grubu": "karakter-animasyonu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70531)",
@@ -88516,7 +90171,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88582,9 +90238,35 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "SVG parçalarından oluşan karakter rig'lerini GSAP, CSS dönüşümleri, Remotion kare kontrolü ve HyperFrames uyumlu önizlemeyle canlandırır; pivot, zaman çizelgesi ve kare örnekleme kurallarını verir.",
+      "kullanim_alani": "Açıklayıcı videoda konuşan/hareket eden 2D karakter gerektiğinde.",
+      "kullanma": "3D karakter; hazır Lottie dosyası oynatılacaksa (lottie-bodymovin).",
+      "teknoloji": [
+        "svg",
+        "gsap",
+        "remotion",
+        "hyperframes"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Remotion'da GSAP'ı kareye bağlama gibi kritik kuralları doğru veriyor.",
+      "ortusme_grubu": "karakter-animasyonu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -88593,7 +90275,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88656,9 +90339,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Taşınabilir görsel tasarım sistemi dosyası (visual-style.md) oluşturur, web sitesi/video/PDF'den çıkarır ve HeyGen, HTML slayt, Figma, paper.design'a uygular; hazır stil galerisi (Swiss, Saul Bass, Game Boy…) içerir.",
+      "kullanim_alani": "Video veya sunum serisinde tutarlı renk, tipografi, hareket ve ruh hali tanımlanacaksa.",
+      "kullanma": "Kod tabanlı web tasarım sistemi/token kurulumu (a-tasarim/02 skilleri daha uygun).",
+      "teknoloji": [
+        "markdown",
+        "html"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "marka-sunum",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Pratik mod tablosu ve galeri; a-tasarim/02 tasarım sistemi skilleriyle kısmen örtüşür.",
+      "ortusme_grubu": "gorsel-stil-sistemi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -88667,7 +90374,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     }
@@ -89250,7 +90958,7 @@
       }
     },
     "vercel/next.js": {
-      "commit": "1984f672c01923e26a23ab24063d42a5263b1561",
+      "commit": "691ec2a1a21b9644a8cfd22452cec82d57c84d0d",
       "skill_md": {
         ".agents/skills/authoring-skills/SKILL.md": "secildi",
         ".agents/skills/backport-pr/SKILL.md": "secildi",
@@ -90688,7 +92396,7 @@
       }
     },
     "GoogleChrome/lighthouse": {
-      "commit": "1c45a6fa5ab0a0bd5a832d2a3263df373f73a837",
+      "commit": "d94c35d9c772bb87b7a16ee978faeabda939fb1d",
       "skill_md": {
         ".agents/skills/lighthouse-verification/SKILL.md": "secildi",
         ".agents/skills/update-ard-port/SKILL.md": "secildi",
