@@ -9,6 +9,7 @@
   "opsiyonel": [
     "locomotive-scroll",
     "barba-js",
-    "scroll-reveal-libraries"
+    "scroll-reveal-libraries",
+    "web3d-integration-patterns"
   ]
 }

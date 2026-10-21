@@ -4050,10 +4050,33 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "A-Frame ile HTML tabanlı WebXR/VR/AR deneyimleri: entity-component yapısı, sahne, kameralar, ışık, animasyon, özel bileşenler, VR kontrolcü etkileşimi, 360° galeri; sahne/bileşen betikleri ve başlangıç projesi.",
+      "kullanim_alani": "VR/AR/360° içerik, az JavaScript ile immersif sayfalar.",
+      "kullanma": "Klasik masaüstü 3D sayfalar; yüksek performanslı oyunlar.",
+      "teknoloji": [
+        "aframe",
+        "webxr",
+        "html"
+      ],
+      "gerekli_paketler": [
+        "aframe"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "egitim-explainer"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (niş). WebXR için tek kaynak. Dikkat: SKILL.md CDN script'lerine (jsdelivr, cdnjs) bağlanıyor; 335 gün eski, 26.7 KB.",
+      "ortusme_grubu": "webxr-aframe",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 65,
-        "not": "B",
+        "puan": 63,
+        "not": "C",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
           "topluluk 12/20 (★1107)",
@@ -4061,7 +4084,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4129,10 +4153,37 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Babylon.js 3D motoru: engine/sahne başlatma, kameralar, ışık, mesh, materyaller, model yükleme, fizik (Havok), animasyon; sahne ve mesh üreten betikler, Vite başlangıç projesi.",
+      "kullanim_alani": "Three.js dışında tam özellikli motor (fizik, GUI, editör) gereken oyun/görselleştirme projeleri.",
+      "kullanma": "Standart Three.js/R3F işleri; hafif dekoratif efekt.",
+      "teknoloji": [
+        "babylonjs",
+        "webgl",
+        "webgpu",
+        "vite"
+      ],
+      "gerekli_paketler": [
+        "@babylonjs/core",
+        "@babylonjs/loaders",
+        "@babylonjs/gui",
+        "@babylonjs/havok"
+      ],
+      "proje_tipleri": [
+        "oyun",
+        "3d-urun-sergisi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (niş). Başka skill Babylon.js'i kapsamıyor; içerik düzenli ve hacimli. Dikkat: 30 KB (en büyük freshtechbro skilli); 335 gün eski; scene_generator.py yalnız npm komutu yazdırır.",
+      "ortusme_grubu": "babylon-motoru",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 65,
-        "not": "B",
+        "puan": 63,
+        "not": "C",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
           "topluluk 12/20 (★1107)",
@@ -4140,7 +4191,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4206,9 +4258,35 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Blender'dan web için glTF/GLB dışa aktarma: bpy betikleri, toplu işleme, LOD üretimi, model optimizasyonu, Three.js/Babylon.js için hazırlama.",
+      "kullanim_alani": "Blender'da hazırlanan modelleri web'e aktarırken otomasyon.",
+      "kullanma": "Blender kurulu değilse; yalnız küçültme için threejs-asset-pipeline.",
+      "teknoloji": [
+        "blender",
+        "bpy",
+        "gltf",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "Blender (bpy)"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "oyun"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Blender tarafı için tek kaynak, betikler yararlı. Dikkat: Blender kurulu olmalı; scripts/ içeriği bpy ile yerel dosya yazar, ağ çağrısı yok; 335 gün eski.",
+      "ortusme_grubu": "dcc-3d-aktarim",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4217,7 +4295,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4288,10 +4367,40 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Zdog (sözde-3D vektör çizimler), Vanta.js (animasyonlu 3D arka planlar) ve Vanilla-Tilt (paralaks eğim) ile hafif dekoratif 3D efektler; kurulum ve efekt üretici betikler.",
+      "kullanim_alani": "Hero arka planı, dekoratif 3D illüstrasyon, kart tilt efekti; ağır framework istemeyen sayfalar.",
+      "kullanma": "Gerçek 3D sahne/model (Three.js skilleri); erişilebilirlik kritikse sürekli hareket.",
+      "teknoloji": [
+        "zdog",
+        "vanta",
+        "vanilla-tilt",
+        "three"
+      ],
+      "gerekli_paketler": [
+        "zdog",
+        "vanta",
+        "vanilla-tilt",
+        "three"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "marka-sunum"
+      ],
+      "roller": [
+        "ui-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (niş). Hafif efekt için tek kaynak. Dikkat: kırık bağlantı 'illo' yanlış alarm (JS değişkeni, dosya değil); örnekler CDN'den eski three@0.134 ve vanta@0.5 yüklüyor; reduced-motion uyarısı yok.",
+      "ortusme_grubu": "hafif-3d-efekt",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 66,
-        "not": "B",
+        "puan": 64,
+        "not": "C",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
           "topluluk 12/20 (★1107)",
@@ -4299,7 +4408,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4366,9 +4476,32 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "PlayCanvas motoru: Application, entity-component sistemi, güncelleme döngüsü, glTF, materyal, fizik, özel script ve girdi; hazır başlangıç projesi (kamera/girdi script'leri) içerir.",
+      "kullanim_alani": "Hafif WebGL/WebGPU oyun motoru ve PlayCanvas editörüyle çalışan projeler.",
+      "kullanma": "Three.js/R3F tabanlı projeler.",
+      "teknoloji": [
+        "playcanvas",
+        "webgl",
+        "webgpu"
+      ],
+      "gerekli_paketler": [
+        "playcanvas"
+      ],
+      "proje_tipleri": [
+        "oyun",
+        "3d-urun-sergisi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (niş). Ayrı bir motor için tek kaynak. Dikkat: 335 gün eski; starter README'si terser/vercel gibi küresel npm kurulumu öneriyor (otomatik çalışmaz).",
+      "ortusme_grubu": "playcanvas-motoru",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4377,7 +4510,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4448,9 +4582,36 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "React Three Fiber ile deklaratif 3D sahne: Canvas, useFrame/useThree/useLoader, etkileşimli nesneler, glTF yükleme; sahne/bileşen üreten betikler ve Vite başlangıç projesi içerir.",
+      "kullanim_alani": "Hazır R3F başlangıç projesi ve bileşen üretici betik isteniyorsa; R3F v8/React 18 projeleri.",
+      "kullanma": "Güncel R3F+drei bilgisi için threejs-react-three-fiber.",
+      "teknoloji": [
+        "react",
+        "three",
+        "react-three-fiber",
+        "vite"
+      ],
+      "gerekli_paketler": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik makul ve başlangıç şablonu işe yarar, ancak CloudAI-X sürümü daha güncel (WebGPU/TSL, Common Mistakes). Dikkat: starter package.json R3F ^8.18 / three ^0.172 sabitler; React 19 için R3F v9 gerekir. npm install adımları şablon README'sinde.",
+      "ortusme_grubu": "r3f",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4459,7 +4620,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4529,9 +4691,34 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Spline: tarayıcı tabanlı görsel 3D tasarım aracı; sahneyi React/web'e @splinetool/react-spline ile gömme, olay yönetimi, nesne kontrolü ve durum tabanlı animasyon; proje/bileşen üretici betikler.",
+      "kullanim_alani": "Kodsuz tasarlanmış 3D sahneyi siteye gömmek; tasarımcı odaklı hızlı prototip.",
+      "kullanma": "Kod ile tam kontrollü sahne; Spline hesabı/dosyası yoksa.",
+      "teknoloji": [
+        "spline",
+        "react",
+        "three"
+      ],
+      "gerekli_paketler": [
+        "@splinetool/react-spline",
+        "@splinetool/runtime"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "3d-urun-sergisi",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (niş). Hızlı landing page 3D'si için pratik. Dikkat: Spline hesabı ve sahne URL'i gerekir (üçüncü taraf barındırma); ağır runtime paketi; 335 gün eski.",
+      "ortusme_grubu": "spline-gorsel-editor",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4540,7 +4727,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4605,10 +4793,34 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Adobe Substance 3D Painter ile PBR materyal/doku üretimi ve web/oyun motoru için dışa aktarma: export preset'leri, toplu dışa aktarma, çözünürlük geçersiz kılma, Pillow ile web optimizasyonu.",
+      "kullanim_alani": "Substance Painter lisansı olan ekiplerde doku hattı otomasyonu.",
+      "kullanma": "Substance lisansı yoksa; kodla materyal tanımlama (threejs-materials, threejs-textures).",
+      "teknoloji": [
+        "substance-painter",
+        "pbr",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "Adobe Substance 3D Painter",
+        "Pillow"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "oyun"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Ücretli Adobe aracına bağımlı, web odaklı iş akışında nadir gerekir; Painter yoksa işe yaramaz. Dikkat: web_optimizer.py 'pip install Pillow' ister; 335 gün eski.",
+      "ortusme_grubu": "dcc-3d-aktarim",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
-        "not": "B",
+        "puan": 57,
+        "not": "C",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
           "topluluk 12/20 (★1107)",
@@ -4616,7 +4828,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4682,9 +4895,36 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js'te keyframe, iskelet ve morph target animasyonu, AnimationMixer ile klip karıştırma, glTF animasyonlarını oynatma, prosedürel hareket. WebGL ve WebGPU/TSL.",
+      "kullanim_alani": "glTF animasyonlarını oynatırken, kemik/morph kontrolünde, klip geçişlerinde.",
+      "kullanma": "UI/DOM animasyonu (GSAP/Motion skilleri) veya scroll bağlama (web3d-integration-patterns).",
+      "teknoloji": [
+        "three",
+        "webgl",
+        "gltf"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "oyun"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güncel ve derli toplu; mixer/crossfade/additive konuları iyi. Dikkat: yok.",
+      "ortusme_grubu": "three-animasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 83,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -4693,7 +4933,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4757,10 +4998,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js keyframe, iskelet ve morph animasyonu ile AnimationMixer kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-animation) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-animation) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-animasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -4768,7 +5032,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4835,9 +5100,38 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "gltf-transform ile glTF/GLB varlıklarını küçültme: inspect, validate, optimize, Draco/meshopt/quantization, KTX2, WebP/AVIF dokular, her çıktı için gereken loader kurulumu ve React için gltfjsx.",
+      "kullanim_alani": "Model yüklenmeden önce sıkıştırma/doğrulama; yükleme süresi ve GPU belleği düşürme.",
+      "kullanma": "Modeli üretme/Blender'dan dışa aktarma (blender-web-pipeline); sahne kodu yazma.",
+      "teknoloji": [
+        "gltf-transform",
+        "draco",
+        "meshopt",
+        "ktx2",
+        "gltfjsx"
+      ],
+      "gerekli_paketler": [
+        "@gltf-transform/cli (npx)",
+        "gltfjsx (npx)"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "oyun"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Konuyu başka skill kapsamıyor; komutlar net. Dikkat: komutlar npx ile paket indirir (@gltf-transform/cli, gltfjsx); mutlak yol, anahtar veya telemetri yok.",
+      "ortusme_grubu": "glb-optimizasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 91,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -4846,7 +5140,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4916,9 +5211,35 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js sahne kurulumunun temelleri: sahne ve sis, kameralar, renderer ve tone mapping, animasyon döngüsü, nesne hiyerarşisi, dönüşümler, matematik ve temizlik. WebGL ve WebGPU/TSL yolunu birlikte anlatır.",
+      "kullanim_alani": "Sıfırdan Three.js sahnesi kurulurken, kamera/renderer/resize ayarlarında, nesne hiyerarşisi kurarken.",
+      "kullanma": "İsteğe özel konular (ışık, materyal, shader) için ilgili threejs-* skilli; React kullanılıyorsa threejs-react-three-fiber.",
+      "teknoloji": [
+        "three",
+        "webgl",
+        "webgpu"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Serinin temeli; güncel (WebGPU/TSL dahil), kurulum betiği/anahtar yok. Eski calesthio sürümünden kapsamlı. Dikkat: 23 KB; 3d-gelistirici rolünün çekirdeğinde.",
+      "ortusme_grubu": "three-sahne-temelleri",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 91,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -4927,7 +5248,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4992,10 +5314,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js sahne kurulumu, kameralar, renderer, Object3D, koordinat sistemi ve matematik sınıflarına kısa giriş (eski sürüm, WebGPU yok).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-fundamentals) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-fundamentals) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-sahne-temelleri",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -5003,7 +5348,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5070,9 +5416,34 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js geometri: yerleşik şekiller, 3D metin, BufferGeometry ve attribute'lar, birleştirme, instancing, batching, nokta bulutu ve çizgiler.",
+      "kullanim_alani": "Özel mesh/vertex verisi, instanced mesh, nokta bulutu, 3D yazı gerektiğinde.",
+      "kullanma": "Hazır model yüklemek (threejs-loaders).",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güncel ve kapsamlı. Dikkat: 24.8 KB, çekirdeğe girmez; konuya göre çağrılır.",
+      "ortusme_grubu": "three-geometri",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 81,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -5081,7 +5452,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5145,10 +5517,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js yerleşik geometriler, BufferGeometry, instancing ve Points kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-geometry) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-geometry) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-geometri",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -5156,7 +5551,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5224,9 +5620,34 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js'te raycasting ile seçme, kamera kontrolleri (Orbit, Fly, PointerLock vb.), TransformControls, sürükleme, hover ve kutu seçimi; WebGL/WebGPU ortak.",
+      "kullanim_alani": "Tıklanabilir 3D nesneler, kamera kontrolü, sürükle-bırak, ürün konfigüratörü etkileşimi.",
+      "kullanma": "React içinde (threejs-react-three-fiber pointer events bölümü).",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "oyun",
+        "landing-page"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güncel ve eksiksiz. Dikkat: yok.",
+      "ortusme_grubu": "three-etkilesim",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 83,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -5235,7 +5656,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5302,10 +5724,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js raycaster, kontroller, dokunma desteği ve seçim kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-interaction) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-interaction) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-etkilesim",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -5313,7 +5758,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5379,9 +5825,35 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js ışık türleri ve fiziksel birimler, gölge haritaları, HDR ortam aydınlatması (IBL), light probe, gölge ayarları ve ışık performansı.",
+      "kullanim_alani": "Işık kurma/ayarlama, gölge sorunları (acne), IBL kurulumu, ürün sergisi aydınlatması.",
+      "kullanma": "Materyal seçimi (threejs-materials).",
+      "teknoloji": [
+        "three",
+        "webgl",
+        "hdr"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Pratik sorun giderme ve güncel ışık API'leri. Dikkat: yok.",
+      "ortusme_grubu": "three-isik",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 91,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -5390,7 +5862,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5454,10 +5927,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js ışık türleri, gölge kurulumu ve ortam aydınlatması kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-lighting) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-lighting) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-isik",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -5465,7 +5961,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5532,9 +6029,36 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js varlık yükleme: Draco/meshopt/KTX2 destekli glTF, diğer model biçimleri, dokular, HDR/EXR ortamları, ilerleme, önbellek, klonlama ve dispose.",
+      "kullanim_alani": "Model/doku/HDR yüklerken, yükleme ekranı ve bellek yönetimi için.",
+      "kullanma": "Varlık küçültme (threejs-asset-pipeline).",
+      "teknoloji": [
+        "three",
+        "gltf",
+        "draco",
+        "ktx2"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Sıkıştırılmış glTF yükleme ve temizlik konuları güncel. Dikkat: decoder dosyalarını (draco/basis) projeye ayrıca kopyalamak gerekir; skill bunu anlatır.",
+      "ortusme_grubu": "three-yukleme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 91,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -5543,7 +6067,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5608,10 +6133,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js GLTF, doku ve HDR yükleme ile LoadingManager kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-loaders) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-loaders) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-yukleme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -5619,7 +6167,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5685,9 +6234,35 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js materyalleri: unlit, diffuse, PBR (Standard/Physical), toon, nokta/çizgi materyalleri, blending/stencil ve WebGPU node materyal/TSL karşılıkları.",
+      "kullanim_alani": "Mesh stilleme, PBR ayarı, cam/boya gibi gelişmiş materyal, toon görünüm.",
+      "kullanma": "Özel shader yazımı (threejs-shaders).",
+      "teknoloji": [
+        "three",
+        "webgl",
+        "pbr"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güncel, UV kanalı gibi ince ayrıntılar var. Dikkat: 26 KB; opsiyonel, çekirdeğe konmaz.",
+      "ortusme_grubu": "three-materyal",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 81,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -5696,7 +6271,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5760,10 +6336,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js materyal türleri (Basic, Phong, Standard, Physical, Toon) kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-materials) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-materials) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-materyal",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -5771,7 +6370,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5834,9 +6434,36 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js performans ölçümü ve iyileştirme: render istatistikleri, bellek, draw call azaltma (birleştirme, instancing, batching, LOD), fill rate, gölge, CPU yükü, shader derleme takılmaları, GPU compute.",
+      "kullanim_alani": "Sahne yavaş/takılıyorsa, mobil bütçesi gerekiyorsa, üretime almadan önce.",
+      "kullanma": "Temel sahne kurulumu; görsel efektler.",
+      "teknoloji": [
+        "three",
+        "webgl",
+        "webgpu"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "oyun"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Önce ölç yaklaşımı ve yaygın hatalar listesi değerli; calesthio sürümü bu konuda yok. Dikkat: 24.7 KB.",
+      "ortusme_grubu": "three-performans",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 89,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -5845,7 +6472,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5912,9 +6540,36 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js post-processing: composer pass zinciri, bloom, DOF, SSAO, outline, özel ekran efektleri ve WebGPU/TSL node pipeline.",
+      "kullanim_alani": "Parlama, renk derecelendirme, bulanıklık, ekran uzayı efektleri.",
+      "kullanma": "Performans kısıtlı mobil sahneler; temel render.",
+      "teknoloji": [
+        "three",
+        "webgl",
+        "postprocessing"
+      ],
+      "gerekli_paketler": [
+        "three",
+        "postprocessing (isteğe bağlı)"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Pass sırası ve seçici bloom iyi anlatılmış. Dikkat: 26.5 KB; efektler maliyetli, mobilde dikkat.",
+      "ortusme_grubu": "three-postprocessing",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 81,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -5923,7 +6578,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -5988,10 +6644,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js EffectComposer, bloom, DOF, SSAO, film grain kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-postprocessing) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-postprocessing) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-postprocessing",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -5999,7 +6678,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6067,9 +6747,40 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "React Three Fiber ve drei ile Three.js sahnesi: renderer kurulumu, JSX sahne grafı, frame-loop, state ve yükleme hook'ları, pointer olayları, adaptif performans, dispose, WebGPU/TSL.",
+      "kullanim_alani": "React/Next.js uygulamasında 3D sahne, ürün konfigüratörü, drei yardımcıları.",
+      "kullanma": "React dışı projeler (threejs-fundamentals).",
+      "teknoloji": [
+        "react",
+        "three",
+        "react-three-fiber",
+        "drei"
+      ],
+      "gerekli_paketler": [
+        "three",
+        "@react-three/fiber",
+        "@react-three/drei"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "3d-gelistirici",
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Güncel, 'Common Mistakes' bölümü var; freshtechbro'daki react-three-fiber skilline göre daha yeni. Dikkat: 29.3 KB, bu kategorideki en büyük skill; 3d-gelistirici çekirdeğinde.",
+      "ortusme_grubu": "r3f",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 89,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -6078,7 +6789,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6144,9 +6856,36 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Özel GLSL vertex/fragment shader'lar: uniform, varying, shader chunk, yerleşik materyal genişletme, instanced attribute; WebGPU'da TSL node materyal karşılıkları.",
+      "kullanim_alani": "Vertex displacement, fresnel, dissolve gibi özel efektler.",
+      "kullanma": "Hazır materyal yetiyorsa (threejs-materials).",
+      "teknoloji": [
+        "three",
+        "glsl",
+        "tsl",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güncel ve kalıp örnekleri iyi. Dikkat: 25.9 KB.",
+      "ortusme_grubu": "three-shader",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 81,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -6155,7 +6894,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6219,10 +6959,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js GLSL ShaderMaterial, uniform, varying ve yaygın shader kalıpları kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-shaders) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-shaders) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-shader",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -6230,7 +6993,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6297,9 +7061,34 @@
         "ana_sayfa": "https://x.com/cloudxdev",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js dokuları: yükleme, renk uzayı, UV kanalları/dönüşümleri, canvas'tan HDR ve KTX2'ye doku türleri, render target, atlas, doku belleği.",
+      "kullanim_alani": "Materyallere doku bağlama, UV sorunları, cubemap/render target, doku optimizasyonu.",
+      "kullanma": "Model yükleme (threejs-loaders).",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "3d-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Renk uzayı ve slot tablosu pratik. Dikkat: yok.",
+      "ortusme_grubu": "three-doku",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 83,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -6308,7 +7097,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6373,10 +7163,33 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js doku yükleme, ayarlar, UV, cubemap ve HDR kısa özeti (eski sürüm).",
+      "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-textures) özet isteniyorsa; normalde gerek yok.",
+      "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
+      "teknoloji": [
+        "three",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-textures) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.",
+      "ortusme_grubu": "three-doku",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 70,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -6384,7 +7197,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6452,10 +7266,34 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js/WebGL/WebGPU geliştirmesine genel bakış: sahne grafı, temel bileşenler, hazır sahne kalıbı, mesh/ışık/instancing/glTF/gölge örnekleri; kurulum betiği ve başlangıç sahnesi içerir.",
+      "kullanim_alani": "Hızlı başlangıç şablonu isteniyorsa (setup_scene.py).",
+      "kullanma": "Güncel Three.js işleri için threejs-fundamentals ve konu skillleri.",
+      "teknoloji": [
+        "three",
+        "webgl",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "three"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Konu bazında bölünmüş threejs-* serisinin (CloudAI-X) yüzeysel ve eskimiş özeti; hepsini tek dosyada geçiştirir. 335 gün güncellenmemiş. Dikkat: scripts/setup_scene.py yalnız dosya üretir, ağ/yıkıcı çağrı yok.",
+      "ortusme_grubu": "three-sahne-temelleri",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
-        "not": "B",
+        "puan": 57,
+        "not": "C",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
           "topluluk 12/20 (★1107)",
@@ -6463,7 +7301,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6528,9 +7367,37 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Metinden veya yapılandırılmış özetten belirlenimci, düzenlenebilir Three.js dünyaları: arazi, semantik bölgeler, prosedürel biyomlar, landmark'lar, kamera fly-through; OpenMontage threejs_world aracı ve HyperFrames ile entegre.",
+      "kullanim_alani": "OpenMontage/HyperFrames hattında sinematik 3D ortam videosu.",
+      "kullanma": "Web sayfasına gömülü 3D, tek nesne, düz paralaks sahne; OpenMontage yoksa.",
+      "teknoloji": [
+        "three",
+        "hyperframes",
+        "blender",
+        "openmontage"
+      ],
+      "gerekli_paketler": [
+        "OpenMontage (~/.openmontage)",
+        "hyperframes"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "ai-video-uretimi",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir.",
+      "ortusme_grubu": "three-dunya-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -6539,7 +7406,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -6608,9 +7476,42 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Three.js, GSAP ScrollTrigger, React Three Fiber, Motion ve React Spring'i birleştirme desenleri: katmanlı ayrım, birleşik React bileşeni, hibrit R3F+GSAP, scroll güdümlü kamera, Zustand ile durum, performans.",
+      "kullanim_alani": "Scroll ile hareket eden 3D hikaye siteleri, 3D + animasyon kütüphanelerini birlikte kurarken mimari karar.",
+      "kullanma": "Tek kütüphaneli basit sahne.",
+      "teknoloji": [
+        "three",
+        "gsap",
+        "react-three-fiber",
+        "framer-motion",
+        "react-spring",
+        "zustand"
+      ],
+      "gerekli_paketler": [
+        "three",
+        "gsap",
+        "@react-three/fiber",
+        "motion",
+        "zustand"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi",
+        "3d-urun-sergisi",
+        "landing-page"
+      ],
+      "roller": [
+        "scroll-deneyim"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Scroll+3D entegrasyonunu başka skill anlatmıyor; mimari kalıplar faydalı. Dikkat: freshtechbro'nun eski sürüm varsayımları (R3F v8); 3d-gelistirici rolünden çıkarıp scroll-deneyim'e opsiyonel konması öneriliyor (bağlam sınırı); kayıtta betik/başlangıç dosyası yok.",
+      "ortusme_grubu": "3d-animasyon-entegrasyonu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -6619,7 +7520,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
