@@ -14,7 +14,7 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import ARSIV, KAYNAKLAR, KOK, REGISTRY, json_oku  # noqa: E402
+from ortak import ARSIV, KAYNAKLAR, KOK, REGISTRY, json_oku, klasor_hash  # noqa: E402
 
 
 def main():
@@ -27,6 +27,13 @@ def main():
             hatalar.append(f"SKILL.md yok: {s['yol']}")
         if not (k / "KAYNAK.md").exists():
             hatalar.append(f"KAYNAK.md yok: {s['yol']}")
+        if k.exists() and s.get("ana_hash") and klasor_hash(k) != s["ana_hash"]:
+            hatalar.append(f"arşivdeki dosyalar registry ile uyuşmuyor (elle değiştirilmiş?): {s['yol']}")
+        for arac, v in (s.get("varyantlar") or {}).items():
+            if not (KOK / v / "SKILL.md").exists():
+                hatalar.append(f"araç sürümü eksik: {s['id']} -> {v}")
+            elif s.get("varyant_hash", {}).get(arac) and klasor_hash(KOK / v) != s["varyant_hash"][arac]:
+                hatalar.append(f"araç sürümü registry ile uyuşmuyor: {v}")
     kayitli = {str((KOK / s["yol"]).resolve()) for s in skiller}
     for sm in ARSIV.rglob("KAYNAK.md"):
         if str(sm.parent.resolve()) not in kayitli:
@@ -62,6 +69,8 @@ def main():
                             "{pageInfo{hasNextPage endCursor} nodes{nameWithOwner}}}}",
                             "--jq", ".data.viewer.starredRepositories.nodes[].nameWithOwner"],
                            capture_output=True, text=True)
+        if r.returncode != 0 or not r.stdout.strip():
+            uyarilar.append("GitHub yıldız listesi okunamadı (gh auth status?); yeni repo kontrolü YAPILMADI")
         tanimli = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"]}
         for repo in r.stdout.split():
             if repo not in tanimli:

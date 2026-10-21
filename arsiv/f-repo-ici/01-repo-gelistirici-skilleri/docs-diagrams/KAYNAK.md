@@ -4,7 +4,7 @@
 
 - **Kaynak repo:** https://github.com/vercel/next.js
 - **Repo içindeki yol:** `.agents/skills/docs-diagrams`
-- **Commit:** `8db55c19dd35e7b70ab94378996ef170c4972edb`
+- **Commit:** `1984f672c01923e26a23ab24063d42a5263b1561`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
 - **Değerlendirme:** 98/100 (A)

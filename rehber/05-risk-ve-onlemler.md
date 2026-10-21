@@ -33,7 +33,7 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 20 | Kullanıcının kendi skill'inin üzerine yazılır | Kilitte olmayan aynı adlı klasör → HATA | `projede-kendi-skillin` |
 | 21 | Elle değiştirilmiş skill güncellemede ezilir | Kurulu içerik parmak izi kilitte; farklıysa HATA | `elle-degistirilmis` |
 | 22 | Kurulum yarıda kesilir | Önce geçici klasöre kopyalanır, sonra yerine taşınır; hata olursa yedekten geri alınır | `--dogrula` "yarım kalmış kurulum" |
-| 23 | Yanlış kurulum yapıldı | Her işlem öncesi yedek (son 5) | `--geri-al` |
+| 23 | Yanlış kurulum yapıldı | Her işlem öncesi yedek (son 10) | `--geri-al [ad]`, `--yedekler` |
 | 24 | SKILL.md `name` ≠ klasör adı (Codex/Claude tanımaz) | Proje kopyasında ad klasöre eşitlenir | `--dogrula` |
 | 25 | Bir agent'a çok fazla skill → bağlam dolar | Rol sınırları (12 skill / 150 KB / Claude 32) | `baglam-yuku`, `onyukleme-siniri` |
 | 26 | Codex'te allowlist yok, her agent her skill'i görür | Rol dışı proje skilleri `[[skills.config]] enabled=false` ile kapatılır | `.codex/agents/*.toml` |
@@ -46,6 +46,38 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 33 | Skill kendi yolunu içeriyor (`.claude/skills/impeccable/scripts`) ve yeniden adlandırılır | Proje kopyasında bu yollar da yeni ada çevrilir | `ekli-ad` bilgisi |
 | 34 | OpenMontage skilleri OpenMontage kurulmadan kullanılır | `bagimlilik` uyarısı | ön kontrol UYARI |
 | 35 | API anahtarı gerektiren skill (AI medya, Composio) | Teknoloji etiketi `api-anahtari`; rol talimatı "anahtarı koda yazma" der | KATALOG |
+
+## Bağımsız teknik incelemeden sonra kapatılanlar (2026-10-21)
+
+| # | Senaryo | Önlem |
+|---|---|---|
+| 36 | Öncelik değişince aynı `id` başka repo'nun skill'ini gösterir; güncelleme yanlış içeriği kurar | Kilit ve inceleme notları kaynağa (repo + yol) bağlı; kaynak yoksa `kaynak-yok`, asla başka repo |
+| 37 | Sadece Claude/Codex sürümü değişir, güncelleme görünmez | Kurulum parmak izi = ana + araç sürümleri |
+| 38 | SKILL.md aynı, scriptleri farklı iki klasör "kopya" sayılır, farklı dosyalar kaybolur | Kopya tespiti tüm klasör içeriğiyle |
+| 39 | `.DS_Store` / `__pycache__` "elle değiştirildi" alarmı | Parmak izinde yok sayılır |
+| 40 | Kullanıcının kendi `.claude/agents/<rol>.md` dosyası ezilir | Etiketsiz dosya → `kendi-agent-dosyan` (zorlanamaz) |
+| 41 | `--rol-adi ../../x` ile proje dışına dosya yazılır | Rol adı doğrulanır (zorlanamaz) + yazımda ikinci kontrol |
+| 42 | `.claude/skills` → `.agents/skills` ya da globale symlink: kurulum kendini siler / globale yazar | `proje_yapisi_kontrol` (zorlanamaz) |
+| 43 | Global durum registry'de eski kalır; sonradan eklenen global skill görülmez | Kurulum anında canlı okunur; `global-cakisma-yeni` |
+| 44 | Global durum değişince aynı skill ikinci adla tekrar kurulur | Kurulu kaynağın adı kilitten alınır, değişmez |
+| 45 | Güncelleme kaydedilmemiş elle düzenlemeleri de commit'ler | `--uygula` temiz git ağacı ister |
+| 46 | Değişiklik yokken `git commit` hata verir, geçici dosyalar önceden silinmiştir | Sadece değişiklik varsa commit; geçiciler en sonda silinir |
+| 47 | Force-push / silinen repo betiği çökertir | `GhBulunamadi` yakalanır, raporlanır; `KAYIP` tipi kopyaları korur |
+| 48 | Arşiv yer değiştirdikten sonra registry yazılamaz → uyumsuzluk | Registry önce geçiciye yazılır; ikisi art arda yer değiştirir; JSON yazımı atomik |
+| 49 | Araç sürümünün bir dosyası inmez ama kontrolden geçer | Araç sürümü dosya sayısı da kontrol edilir |
+| 50 | İndirme yarıda kesilir, manifest eski kalır | Manifest her repodan sonra yazılır |
+| 51 | Aynı reponun iki kaydı farklı commit'lerden iner | Repo başına tek commit |
+| 52 | Gövdedeki ```yaml name:``` örneği değiştirilir; CRLF bozulur | Ad sadece frontmatter'da değişir; bayt düzeyinde yazım |
+| 53 | Çok satırlı `description` ilk satırını kaybeder | Frontmatter okuyucu düzeltildi |
+| 54 | `--kuru` yine de rapor dosyası yazar | `--kuru` hiçbir dosya yazmaz |
+| 55 | Silinen Claude symlink'i onarılmaz | `ekle`/`--guncelle` onarır; `--durum` gösterir |
+| 56 | Doğrulama Codex'te açık kalan rol dışı skilleri, symlink hedefini, blokları görmez | `--dogrula` hepsini kontrol eder |
+| 57 | `kaldir`/`yenile` hata verirse yarım kalır; geri alma geri alınamaz | Hepsi yedek + otomatik geri alma; `--geri-al <ad>`; 10 yedek |
+| 58 | Bozuk işaret (sadece başlangıç) kullanıcı metnini yutar | Bozuk işarette dosyaya dokunulmaz, HATA |
+| 59 | `İ` küçültülünce Türkçe eşleme bozulur | Türkçe küçük harf dönüşümü |
+| 60 | `gh` oturumu yoksa yeni repo kontrolü sessizce atlanır | Açık UYARI |
+| 61 | Arşivdeki dosyalar elle değiştirilir ya da araç sürümü kaybolur | `dogrula.py` içerik parmak izlerini yeniden hesaplar |
+| 62 | Kapsam denetimi araç sürümü kararlarını doğrulamaz | Registry + diskte kontrol edilir |
 
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).

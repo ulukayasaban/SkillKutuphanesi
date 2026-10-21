@@ -2,21 +2,21 @@
 
 > `araclar/katalog-uret.py` üretir — elle düzenleme. Kaynak: `registry.json`.
 
-Toplam **327** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-içi `notlar/referans/repo-ici-skiller.md`).
+Toplam **335** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-içi `notlar/referans/repo-ici-skiller.md`).
 
 **İşaretler:** ⭐ tercih edilen · `alt` aynı isimli alternatif sürüm · Codex: ✅ tam uyumlu, 🟡 Claude araç adları geçiyor ama çalışır, 🔵 konusu Claude Code'a özel · Yük: S/M/L (agent bağlamına etkisi) · globalde: bilgisayardaki genel klasörde aynı isimli skill (ayni/farkli)
 
 ## İçindekiler
 
-- **Tasarım ve Ön Yüz** (104)
-  - [01-ui-ux-tasarim-dili](#01-ui-ux-tasarim-dili) — 14 skill · Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi
-  - [02-tasarim-sistemi-marka](#02-tasarim-sistemi-marka) — 6 skill · Design token, tema, marka kimliği, banner/logo
+- **Tasarım ve Ön Yüz** (109)
+  - [01-ui-ux-tasarim-dili](#01-ui-ux-tasarim-dili) — 15 skill · Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi
+  - [02-tasarim-sistemi-marka](#02-tasarim-sistemi-marka) — 8 skill · Design token, tema, marka kimliği, banner/logo
   - [03-animasyon-motion](#03-animasyon-motion) — 17 skill · GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim
   - [04-scroll-deneyimi](#04-scroll-deneyimi) — 6 skill · Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri
   - [05-3d-webgl](#05-3d-webgl) — 34 skill · Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader
   - [06-oyun-2d-grafik](#06-oyun-2d-grafik) — 12 skill · Oyun geliştirme, PixiJS, 2D grafik
-  - [07-gorsel-sanat-sunum](#07-gorsel-sanat-sunum) — 9 skill · Poster/canvas tasarımı, generative art, slayt, GIF
-  - [08-onyuz-test-kalite](#08-onyuz-test-kalite) — 6 skill · Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı
+  - [07-gorsel-sanat-sunum](#07-gorsel-sanat-sunum) — 10 skill · Poster/canvas tasarımı, generative art, slayt, GIF
+  - [08-onyuz-test-kalite](#08-onyuz-test-kalite) — 7 skill · Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı
 - **Yazılım Geliştirme** (78)
   - [01-planlama-metodoloji](#01-planlama-metodoloji) — 15 skill · Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini
   - [02-kod-kalitesi-review](#02-kod-kalitesi-review) — 13 skill · Code review, sadeleştirme, temiz kod
@@ -25,16 +25,16 @@ Toplam **327** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
   - [05-git-pr-surum](#05-git-pr-surum) — 8 skill · Git, worktree, PR, sürüm/release, changelog
   - [06-devops-guvenlik-performans](#06-devops-guvenlik-performans) — 10 skill · CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans
   - [07-framework-ozel](#07-framework-ozel) — 7 skill · Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)
-- **Doküman ve İçerik** (42)
+- **Doküman ve İçerik** (43)
   - [01-ofis-dokumanlari](#01-ofis-dokumanlari) — 8 skill · Word, Excel, PowerPoint, PDF üretme/düzenleme
   - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 6 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
-  - [03-yazi-iletisim-icerik](#03-yazi-iletisim-icerik) — 14 skill · Yazı, iletişim, pazarlama/içerik, kariyer
+  - [03-yazi-iletisim-icerik](#03-yazi-iletisim-icerik) — 15 skill · Yazı, iletişim, pazarlama/içerik, kariyer
   - [04-not-alma-bilgi-yonetimi](#04-not-alma-bilgi-yonetimi) — 14 skill · Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni
-- **AI ve Otomasyon** (40)
+- **AI ve Otomasyon** (42)
   - [01-claude-api-mcp](#01-claude-api-mcp) — 9 skill · Claude API, MCP sunucusu, model geçişi
   - [02-agent-orkestrasyon](#02-agent-orkestrasyon) — 14 skill · Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları
   - [03-web-arastirma-veri](#03-web-arastirma-veri) — 3 skill · Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma
-  - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 14 skill · Skill yazma, plugin/hook/komut geliştirme
+  - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 16 skill · Skill yazma, plugin/hook/komut geliştirme
 - **Video, Ses ve AI Medya Üretimi** (63)
   - [01-video-uretim-montaj](#01-video-uretim-montaj) — 22 skill · Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg
   - [02-ses-muzik-konusma](#02-ses-muzik-konusma) — 13 skill · Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi
@@ -50,10 +50,11 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
 | `design` | ⭐ | Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corpor… | api-anahtari, css, html, playwright, python | 🟡 | 88 A | M 284KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `design-dna` | ⭐ | Extract, define, and apply design DNA across three dimensions: design system (tokens), design style (qualitative feel), and visual effects (… | api-anahtari, canvas, css, gsap, html | ✅ | 84 A | M 709KB | claude:ayni | zanwei/design-dna |
+| `design-dna` | ⭐ | Extract, define, and apply design DNA across three dimensions: design system (tokens), design style (qualitative feel), and visual effects (… | api-anahtari, canvas, css, gsap, html | ✅ | 84 A | M 709KB | claude:farkli | zanwei/design-dna |
 | `design-spec` | ⭐ | How to author a DESIGN.md file — the machine-readable design-token + human-rationale format that must exist before any UI is built. YAML fro… | api-anahtari, node, tailwind | ✅ | 89 A | S 21KB | - | vudovn/ag-kit |
 | `design-taste-frontend` | ⭐ | tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated gallery sites (One Page Love,… | api-anahtari, css, html, next.js, node | ✅ | 88 A | L 2363KB | - | Leonxlnx/taste-skill |
 | `frontend-design` | ⭐ | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typog… | api-anahtari, css | ✅ | 86 A | M 9KB | - | anthropics/claude-code |
+| `frontend-design@anthropics` | alt | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typog… | api-anahtari, css | ✅ | 86 A | M 19KB | - | anthropics/skills |
 | `frontend-design@vudovn` | alt | Anti-slop frontend design for web UI — landing pages, portfolios, marketing/product sites, and redesigns. Reads the brief, infers the right … | api-anahtari, canvas, css, git, gsap | ✅ | 84 A | L 161KB | - | vudovn/ag-kit |
 | `impeccable` | ⭐ | Use when the user wants to design, redesign, shape, critique, audit, polish, simplify, harden, animate, or otherwise improve a frontend inte… | api-anahtari, css, node | ✅ | 91 A | M 2138KB | - | pbakaus/impeccable |
 | `mobile-design` | ⭐ | Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions. Te… | api-anahtari, python, react, typescript | ✅ | 87 A | M 216KB | - | vudovn/ag-kit |
@@ -73,9 +74,11 @@ _Design token, tema, marka kimliği, banner/logo_ · not: `notlar/a-tasarim-onyu
 | `banner-design` | ⭐ | Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or … | canvas, css, html | 🟡 | 90 A | S 12KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
 | `brand` | ⭐ | Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, market… | api-anahtari, css, node, tailwind | ✅ | 95 A | S 106KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
 | `brand-guidelines` | ⭐ | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use… | python | ✅ | 88 A | S 13KB | - | anthropics/skills |
+| `brand-guidelines@composiohq` | alt | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use… | python | ✅ | 88 A | S 13KB | - | ComposioHQ/awesome-claude-skills |
 | `design-system` | ⭐ | Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacin… | api-anahtari, canvas, css, html, node | ✅ | 95 A | S 178KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
 | `tailwind-design-system` | ⭐ | Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component… | api-anahtari, css, react, tailwind, typescript | ✅ | 90 A | M 22KB | claude:ayni | calesthio/OpenMontage |
 | `theme-factory` | ⭐ | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set t… | html | ✅ | 88 A | S 141KB | - | anthropics/skills |
+| `theme-factory@composiohq` | alt | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set t… | html | ✅ | 88 A | S 141KB | - | ComposioHQ/awesome-claude-skills |
 
 ### 03-animasyon-motion
 
@@ -90,7 +93,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_ · not: `notlar/
 | `gsap-frameworks` | ⭐ | Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wa… | gsap, react, svelte, typescript, vue | ✅ | 95 A | M 10KB | claude:farkli | greensock/gsap-skills |
 | `gsap-frameworks@calesthio` | alt | Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wa… | gsap, react, svelte, vue | ✅ | 92 A | S 6KB | claude:ayni | calesthio/OpenMontage |
 | `gsap-performance` | ⭐ | Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations,… | css, gsap | ✅ | 97 A | S 4KB | claude:ayni | greensock/gsap-skills |
-| `gsap-plugins` | ⭐ | Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, Scramble… | api-anahtari, canvas, css, gsap, html | ✅ | 95 A | M 21KB | claude:ayni | greensock/gsap-skills |
+| `gsap-plugins` | ⭐ | Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, Scramble… | api-anahtari, canvas, css, gsap, html | ✅ | 95 A | M 21KB | claude:farkli | greensock/gsap-skills |
 | `gsap-plugins@calesthio` | alt | Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, Scramble… | canvas, css, gsap, html, react | ✅ | 90 A | M 20KB | claude:farkli | calesthio/OpenMontage |
 | `gsap-react` | ⭐ | Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks … | gsap, next.js, node, react, svelte | ✅ | 97 A | S 6KB | claude:ayni | greensock/gsap-skills |
 | `gsap-timeline` | ⭐ | Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing k… | gsap, react | ✅ | 97 A | S 4KB | claude:ayni | greensock/gsap-skills |
@@ -183,6 +186,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_ · not: `notlar/a-tasarim
 | `algorithmic-art` | ⭐ | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art … | canvas, html, next.js | ✅ | 86 A | M 58KB | - | anthropics/skills |
 | `artifacts-builder` | ⭐ | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS,… | css, html, node, playwright, react | ✅ | 88 A | S 45KB | - | ComposioHQ/awesome-claude-skills |
 | `canvas-design` | ⭐ | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a pos… | canvas | ✅ | 86 A | M 5424KB | - | anthropics/skills |
+| `canvas-design@composiohq` | alt | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a pos… | canvas | ✅ | 86 A | M 5424KB | - | ComposioHQ/awesome-claude-skills |
 | `d3-viz` | ⭐ | Creating interactive data visualisations using d3.js. This skill should be used when creating custom charts, graphs, network diagrams, geogr… | canvas, html, node, react, svelte | ✅ | 90 A | M 80KB | claude:ayni | calesthio/OpenMontage |
 | `image-enhancer` | ⭐ | Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for pr… |  | ✅ | 88 A | S 2KB | - | ComposioHQ/awesome-claude-skills |
 | `slack-gif-creator` | ⭐ | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use … | python | ✅ | 88 A | S 43KB | - | anthropics/skills |
@@ -201,6 +205,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_ · not: 
 | `playwright-trace` | ⭐ | Inspect Playwright trace files from the command line — list actions, view requests, console, errors, snapshots and screenshots. | html, node, playwright | ✅ | 100 A | S 5KB | - | microsoft/playwright |
 | `react-doctor` | ⭐ | Use when finishing a feature, fixing a bug, before committing React code, or when the user types `/doctor`, asks to scan, triage, or clean u… | node, react | ✅ | 92 A | S 3KB | - | darkroomengineering/satus |
 | `webapp-testing` | ⭐ | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI be… | css, html, node, playwright, python | ✅ | 88 A | S 22KB | - | anthropics/skills |
+| `webapp-testing@composiohq` | alt | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI be… | css, html, node, playwright, python | ✅ | 88 A | S 22KB | - | ComposioHQ/awesome-claude-skills |
 | `webapp-testing@vudovn` | alt | Web application testing principles. E2E, Playwright, deep audit strategies. | playwright, python, typescript | ✅ | 89 A | S 10KB | - | vudovn/ag-kit |
 
 ## Yazılım Geliştirme
@@ -376,6 +381,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_ · not: `notlar/c-dokuman-icerik/
 | `geo-fundamentals` | ⭐ | Generative Engine Optimization for AI search engines (ChatGPT, Claude, Perplexity). | html, python | ✅ | 89 A | S 14KB | - | vudovn/ag-kit |
 | `i18n-localization` | ⭐ | Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support. | css, next.js, python, react | ✅ | 89 A | S 12KB | - | vudovn/ag-kit |
 | `internal-comms` | ⭐ | A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use … |  | ✅ | 88 A | S 22KB | - | anthropics/skills |
+| `internal-comms@composiohq` | alt | A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use … |  | ✅ | 88 A | S 22KB | - | ComposioHQ/awesome-claude-skills |
 | `lead-research-assistant` | ⭐ | Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionab… |  | ✅ | 88 A | S 6KB | - | ComposioHQ/awesome-claude-skills |
 | `meeting-insights-analyzer` | ⭐ | Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when… |  | ✅ | 86 A | M 10KB | - | ComposioHQ/awesome-claude-skills |
 | `raffle-winner-picker` | ⭐ | Picks random winners from lists, spreadsheets, or Google Sheets for giveaways, raffles, and contests. Ensures fair, unbiased selection with … |  | ✅ | 88 A | S 4KB | - | ComposioHQ/awesome-claude-skills |
@@ -466,7 +472,9 @@ _Skill yazma, plugin/hook/komut geliştirme_ · not: `notlar/d-ai-otomasyon/04-s
 | `plugin-settings` | ⭐ | This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md f… | api-anahtari, git, typescript | 🔵 | 74 B | M 43KB | - | anthropics/claude-code |
 | `plugin-structure` | ⭐ | This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin comp… | api-anahtari, node, python | 🔵 | 74 B | M 73KB | - | anthropics/claude-code |
 | `skill-creator` | ⭐ | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, ed… | api-anahtari, html, node, python | ✅ | 83 A | L 220KB | - | anthropics/skills |
+| `skill-creator@composiohq` | alt | Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that exte… | api-anahtari, html, python, react | ✅ | 86 A | M 38KB | - | ComposioHQ/awesome-claude-skills |
 | `skill-creator@freshtechbro` | alt | Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that exte… | api-anahtari, html, python, react | ✅ | 68 B | M 41KB | - | freshtechbro/claudedesignskills |
+| `skill-creator@heyitsnoah` | alt | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, ed… | api-anahtari, html, node, python | ✅ | 67 B | L 221KB | - | heyitsnoah/claudesidian |
 | `skill-development` | ⭐ | This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description"… | api-anahtari, html, python, react | 🔵 | 74 B | M 34KB | - | anthropics/claude-code |
 | `skill-share` | ⭐ | A skill that creates new Claude skills and automatically shares them on Slack using Rube for seamless team collaboration and skill discovery… | python | ✅ | 88 A | S 3KB | - | ComposioHQ/awesome-claude-skills |
 | `skillify` | ⭐ | Auto-create new skills from repetitive workflows. When you notice yourself doing the same multi-step process repeatedly, extract it into a r… | tailwind | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |

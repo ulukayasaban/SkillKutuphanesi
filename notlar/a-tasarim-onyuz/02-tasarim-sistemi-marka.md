@@ -2,7 +2,7 @@
 
 _Design token, tema, marka kimliği, banner/logo_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/6**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/8**
 
 ### banner-design  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 90 (A)
 
@@ -34,6 +34,16 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 13 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
+### brand-guidelines@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 88 (A)
+
+- **Ne yapar:** Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 13 KB (SKILL.md 2.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### design-system  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 95 (A)
 
 - **Ne yapar:** Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
@@ -61,5 +71,15 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
 - **Durum:** tercih
+- **Boyut:** 141 KB (SKILL.md 3.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### theme-factory@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 88 (A)
+
+- **Ne yapar:** Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.
+- **Teknoloji:** html _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Durum:** alternatif
 - **Boyut:** 141 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik

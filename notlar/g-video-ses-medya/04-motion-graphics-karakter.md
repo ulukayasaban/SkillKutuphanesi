@@ -36,7 +36,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
 ### manim-composer  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
 
-- **Ne yapar:** Trigger when: (1) User wants to create an educational/explainer video, (2) User has a vague concept they want visualized, (3) User mentions "3b1b style" or "explain like 3Blue1Brown", (4) User wants to plan a Manim video or animation sequence, (5) User asks to "compose" or "plan" a math/science visualization.  Transforms vague video ideas into detailed scene-by-scene plans (scenes.md). Conducts re
+- **Ne yapar:** Trigger when: (1) User wants to create an educational/explainer video, (2) User has a vague concept they want visualized, (3) User mentions "3b1b style" or "explain like 3Blue1Brown", (4) User wants to plan a Manim video or animation sequence, (5) User asks to "compose" or "plan" a math/science visualization. Transforms vague video ideas into detailed scene-by-scene plans (scenes.md). Conducts res
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
@@ -46,7 +46,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
 ### manimce-best-practices  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
 
-- **Ne yapar:** Trigger when: (1) User mentions "manim" or "Manim Community" or "ManimCE", (2) Code contains `from manim import *`, (3) User runs `manim` CLI commands, (4) Working with Scene, MathTex, Create(), or ManimCE-specific classes.  Best practices for Manim Community Edition - the community-maintained Python animation engine. Covers Scene structure, animations, LaTeX/MathTex, 3D with ThreeDScene, camera c
+- **Ne yapar:** Trigger when: (1) User mentions "manim" or "Manim Community" or "ManimCE", (2) Code contains `from manim import *`, (3) User runs `manim` CLI commands, (4) Working with Scene, MathTex, Create(), or ManimCE-specific classes. Best practices for Manim Community Edition - the community-maintained Python animation engine. Covers Scene structure, animations, LaTeX/MathTex, 3D with ThreeDScene, camera co
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
@@ -56,7 +56,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
 ### manimgl-best-practices  ·  calesthio/OpenMontage @ c806645  ·  puan 90 (A)
 
-- **Ne yapar:** Trigger when: (1) User mentions "manimgl" or "ManimGL" or "3b1b manim", (2) Code contains `from manimlib import *`, (3) User runs `manimgl` CLI commands, (4) Working with InteractiveScene, self.frame, self.embed(), ShowCreation(), or ManimGL-specific patterns.  Best practices for ManimGL (Grant Sanderson's 3Blue1Brown version) - OpenGL-based animation engine with interactive development. Covers In
+- **Ne yapar:** Trigger when: (1) User mentions "manimgl" or "ManimGL" or "3b1b manim", (2) Code contains `from manimlib import *`, (3) User runs `manimgl` CLI commands, (4) Working with InteractiveScene, self.frame, self.embed(), ShowCreation(), or ManimGL-specific patterns. Best practices for ManimGL (Grant Sanderson's 3Blue1Brown version) - OpenGL-based animation engine with interactive development. Covers Int
 - **Teknoloji:** python, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)

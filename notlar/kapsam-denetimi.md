@@ -2,13 +2,13 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-10-21 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 1366 · Arşivdeki skill kaydı: 1205 · Bileşen (komut/agent): 67
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 1366 · Arşivdeki skill kaydı: 1213 · Bileşen (komut/agent): 67
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
 | secildi | 1220 | arşivde (ana sürüm) |
-| ayna-ayni | 119 | birebir kopya (tek kopya yeter) |
-| ayna-baska-arac | 18 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
+| ayna-ayni | 117 | birebir kopya (tek kopya yeter) |
+| ayna-baska-arac | 20 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 | haric | 5 | bilinçli hariç (test/örnek/şablon) |
 | arac-varyanti | 4 | arşivde (Claude/Codex'e özel sürüm) |
 
@@ -26,13 +26,13 @@
 | anthropics/skills | 20 | secildi 19, haric 1 |
 | calesthio/OpenMontage | 139 | secildi 91, ayna-ayni 46, arac-varyanti 2 |
 | darkroomengineering/satus | 1 | secildi 1 |
-| freshtechbro/claudedesignskills | 90 | ayna-ayni 67, secildi 23 |
+| freshtechbro/claudedesignskills | 90 | ayna-ayni 66, secildi 23, ayna-baska-arac 1 |
 | greensock/gsap-skills | 8 | secildi 8 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
 | microsoft/playwright | 9 | secildi 9 |
 | motiondivision/motion | 2 | secildi 2 |
 | nateherkai/scroll-craft | 1 | secildi 1 |
-| nextlevelbuilder/ui-ux-pro-max-skill | 13 | secildi 7, ayna-ayni 6 |
+| nextlevelbuilder/ui-ux-pro-max-skill | 13 | secildi 7, ayna-ayni 5, ayna-baska-arac 1 |
 | obra/superpowers | 15 | secildi 15 |
 | pbakaus/impeccable | 25 | ayna-baska-arac 18, haric 4, arac-varyanti 2, secildi 1 |
 | react/react | 14 | secildi 14 |

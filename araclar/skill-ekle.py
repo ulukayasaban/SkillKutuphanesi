@@ -9,8 +9,8 @@ Projede oluşanlar:
   .codex/agents/<rol>.toml         Codex alt-agent'ı (rol dışı proje skilleri [[skills.config]] ile kapalı)
   AGENTS.md / CLAUDE.md            işaretli blok (sadece o blok yeniden yazılır)
   .skill-kutuphanesi/kilit.json    hangi skill, hangi commit, hangi rol, kurulu içerik parmak izi
-  .skill-kutuphanesi/yedek/        her işlemden önce otomatik yedek (son 5)
-  .skill-kutuphanesi/son-rapor.md  son ön kontrol raporu
+  .skill-kutuphanesi/yedek/        her işlemden önce otomatik yedek (son 10; --yedekler, --geri-al [ad])
+  .skill-kutuphanesi/son-rapor.md  son UYGULANAN kurulumun ön kontrol raporu (--kuru hiçbir dosya yazmaz)
 
 Güvenlik kuralları:
   * Her işlemden önce ÖN KONTROL çalışır. HATA varsa işlem yapılmaz (--zorla ile yedek alınarak geçilebilir).
@@ -40,14 +40,19 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, json_oku, json_yaz, klasor_hash  # noqa: E402
+from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, global_durum, json_oku, json_yaz, klasor_hash  # noqa: E402
 
 ROLLER = KOK / "roller"
 PROFILLER = KOK / "profiller"
 BLOK_BAS, BLOK_SON = "<!-- skill-kutuphanesi:basla -->", "<!-- skill-kutuphanesi:bitir -->"
 URETILDI = "skill-kutuphanesi tarafından üretildi"
 META = ".skill-kutuphanesi"
-KILIT_SURUM = 2
+KILIT_SURUM = 3
+ROL_ADI = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
+YEDEK_SAYISI = 10
+# --zorla ile bile GEÇİLEMEYEN hatalar (güvenlik / tutarlılık)
+ZORLANAMAZ = {"gecersiz-rol-adi", "global-baglanti", "proje-disi-baglanti", "ayni-klasor", "bulunamadi",
+              "isim-cakismasi", "onyukleme-siniri", "farkli-kaynak", "kendi-agent-dosyan"}
 SINIR_ROL_SKILL = 12          # bir role önerilen en fazla skill
 SINIR_ROL_KB = 150            # bir rolün önyüklenen SKILL.md toplamı (KB)
 SINIR_CLAUDE_ONYUKLEME = 32   # Claude alt-agent 'skills:' sınırı
@@ -121,6 +126,7 @@ def registry():
 
 
 def bul(skiller, anahtar):
+    """Kullanıcı isteği için: id ile tam eşleşme; yoksa ad ile 'tercih' kaydı."""
     for s in skiller:
         if s["id"] == anahtar:
             return s
@@ -128,12 +134,33 @@ def bul(skiller, anahtar):
     return adaylar[0] if adaylar else None
 
 
-def kurulum_adi(s):
-    """Claude'da kişisel (global) skill aynı adlı proje skill'ini ezer; global'de FARKLI içerik varsa ekli ad verilir."""
-    ad = s["ad"] if re.match(r"^[a-z0-9][a-z0-9-]{0,63}$", s["ad"]) else re.sub(r"[^a-z0-9-]+", "-", s["ad"]).strip("-")[:64]
+def kaynak_bul(skiller, k):
+    """Kurulu bir skill'i KAYNAĞINA göre bul (repo + repo içi yol). id değişse bile doğru skill bulunur;
+    kaynak artık yoksa None (başka bir repo'nun aynı adlı skill'i ASLA yerine konmaz)."""
+    if "kaynak_yol" in k:
+        return next((s for s in skiller if s["repo"] == k["repo"] and s["kaynak_yol"] == k["kaynak_yol"]), None)
+    s = next((s for s in skiller if s["id"] == k["id"]), None)  # eski kilit: sadece aynı repodan kabul et
+    return s if s and s["repo"] == k.get("repo", s["repo"]) else None
+
+
+def canli_global(s):
+    """Global klasörler kurulum anında yeniden okunur (registry'deki bilgi eskimiş olabilir)."""
+    return global_durum(s["ad"], s.get("ana_hash") or s["klasor_hash"])
+
+
+def kurulum_adi(s, kilit=None):
+    """Projede kullanılacak klasör/skill adı.
+    - Kilitte bu KAYNAK zaten kuruluysa: o ad (ad sonradan değişmez, çift kurulum olmaz).
+    - Alternatif sürüm: <ad>--<kaynak>.
+    - Global klasörde aynı adlı FARKLI içerik varsa (Claude'da kişisel skill proje skill'ini ezer): <ad>--kutuphane."""
+    if kilit:
+        for ad, k in kilit["skiller"].items():
+            if k.get("repo") == s["repo"] and k.get("kaynak_yol", None) == s["kaynak_yol"]:
+                return ad
+    ad = s["ad"] if ROL_ADI.match(s["ad"]) else (re.sub(r"[^a-z0-9-]+", "-", s["ad"].lower()).strip("-")[:64] or "skill")
     if "@" in s["id"]:
         ad = f"{ad}--{s['id'].split('@')[1]}"
-    elif any(v == "farkli" for v in s.get("globalde", {}).values()):
+    elif any(v == "farkli" for v in canli_global(s).values()):
         ad = f"{ad}--kutuphane"
     return ad[:64]
 
@@ -149,7 +176,12 @@ def kilit_oku(proje):
         k = json_oku(eski) if eski.exists() else None
     if k is None:
         k = {"surum": KILIT_SURUM, "kutuphane": str(KOK), "profil": None, "roller": [], "skiller": {}}
-    k.setdefault("surum", KILIT_SURUM)
+    k.setdefault("roller", [])
+    k.setdefault("skiller", {})
+    k.setdefault("profil", None)
+    for v in k["skiller"].values():
+        v.setdefault("roller", [])
+    k["surum"] = KILIT_SURUM
     return k
 
 
@@ -195,7 +227,7 @@ def yedekle(proje, adlar, neden):
             var_olan.append(rel)
     json_yaz(y / "yedek.json", {"neden": neden, "zaman": zaman, "hedefler": hedefler, "var_olan": var_olan})
     yedekler = sorted((meta(proje) / "yedek").iterdir())
-    for eski in yedekler[:-5]:
+    for eski in yedekler[:-YEDEK_SAYISI]:
         shutil.rmtree(eski, ignore_errors=True)
     return y
 
@@ -224,34 +256,52 @@ def geri_yukle(proje, y: Path):
 
 
 # ================================================================== kurulum
-def yollari_yeniden_adlandir(klasor: Path, eski: str, yeni: str):
+def metin_oku(f: Path):
+    return f.read_bytes().decode("utf-8")
+
+
+def metin_yaz(f: Path, metin: str):
+    f.write_bytes(metin.encode("utf-8"))  # satır sonları (CRLF/LF) olduğu gibi kalır
+
+
+def yollari_yeniden_adlandir(klasor: Path, eski_adlar, yeni: str):
     """Skill kendi yolunu içeriyorsa (.claude/skills/<ad>/scripts…) yeniden adlandırınca bu yolları da düzelt."""
-    if eski == yeni:
+    eski_adlar = {a for a in eski_adlar if a and a != yeni}
+    if not eski_adlar:
         return
-    desen = re.compile(r"(\.(?:claude|agents|codex)/skills/)" + re.escape(eski) + r"(?=[/\s`'\")\]]|$)")
+    desen = re.compile(r"(\.(?:claude|agents|codex)/skills/)(?:" + "|".join(re.escape(a) for a in eski_adlar)
+                       + r")(?=[/\s`'\")\]]|$)", re.M)
     for f in klasor.rglob("*"):
         if f.is_file() and f.suffix.lower() in (".md", ".sh", ".cmd", ".ps1", ".py", ".js", ".mjs", ".json", ".txt", ""):
             try:
-                t = f.read_text(encoding="utf-8")
+                metin = metin_oku(f)
             except (UnicodeDecodeError, OSError):
                 continue
-            y = desen.sub(lambda m: m.group(1) + yeni, t)
-            if y != t:
-                f.write_text(y, encoding="utf-8")
+            yeni_metin = desen.sub(lambda m: m.group(1) + yeni, metin)
+            if yeni_metin != metin:
+                metin_yaz(f, yeni_metin)
 
 
 def isim_esitle(skill_md: Path, ad: str):
-    metin = skill_md.read_text(encoding="utf-8")
-    m = re.search(r"^name:\s*(.+)$", metin, re.M)
-    if m and m.group(1).strip().strip("'\"") == ad:
+    """SADECE frontmatter içindeki name alanını klasör adına eşitler (gövdedeki örnek yaml'lara dokunmaz)."""
+    metin = metin_oku(skill_md)
+    m = re.match(r"^(\ufeff?---[ \t]*(\r?\n))(.*?)(\r?\n---[ \t]*(?:\r?\n|$))", metin, re.S)
+    if not m:
+        nl = "\r\n" if "\r\n" in metin else "\n"
+        metin_yaz(skill_md, f"---{nl}name: {ad}{nl}description: {ad}{nl}---{nl}{nl}" + metin)
         return
-    if m:
-        metin = re.sub(r"^name:\s*.*$", f"name: {ad}", metin, count=1, flags=re.M)
-    elif metin.startswith("---"):
-        metin = metin.replace("---\n", f"---\nname: {ad}\n", 1)
-    else:
-        metin = f"---\nname: {ad}\ndescription: {ad}\n---\n\n" + metin
-    skill_md.write_text(metin, encoding="utf-8")
+    bas, nl, govde, son = m.group(1), m.group(2), m.group(3), m.group(4)
+    nm = re.search(r"^name:[ \t]*(.*)$", govde, re.M)
+    if nm and nm.group(1).strip().strip("'\"") == ad:
+        return
+    govde = (govde[:nm.start()] + f"name: {ad}" + govde[nm.end():]) if nm else f"name: {ad}{nl}" + govde
+    metin_yaz(skill_md, bas + govde + son + metin[m.end():])
+
+
+def frontmatter_adi(skill_md: Path):
+    m = re.match(r"^\ufeff?---[ \t]*\r?\n(.*?)\r?\n---", metin_oku(skill_md), re.S)
+    nm = re.search(r"^name:[ \t]*(.*)$", m.group(1), re.M) if m else None
+    return nm.group(1).strip().strip("'\"") if nm else None
 
 
 def hazirla(kaynak: Path, hedef: Path, s, ad):
@@ -261,13 +311,12 @@ def hazirla(kaynak: Path, hedef: Path, s, ad):
     gecici.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(kaynak, gecici, ignore=shutil.ignore_patterns("KAYNAK.md"))
     isim_esitle(gecici / "SKILL.md", ad)
-    yollari_yeniden_adlandir(gecici, s["ad"], ad)
+    yollari_yeniden_adlandir(gecici, {s["ad"], s.get("klasor_adi")}, ad)
     sil_yol(hedef)
     gecici.rename(hedef)
 
 
-def kur(s, proje: Path):
-    ad = kurulum_adi(s)
+def kur(s, proje: Path, ad: str):
     codex_hedef = proje / ".agents" / "skills" / ad
     claude_hedef = proje / ".claude" / "skills" / ad
     var = s.get("varyantlar") or {}
@@ -278,12 +327,11 @@ def kur(s, proje: Path):
     else:
         sil_yol(claude_hedef)
         os.symlink(os.path.relpath(codex_hedef, claude_hedef.parent), claude_hedef)
-    return ad
 
 
 # ================================================================== agent dosyaları
 def toml_str(x):
-    return '"""' + x.replace("\\", "\\\\").replace('"""', '\\"\\"\\"') + '"""'
+    return json.dumps(x, ensure_ascii=False)  # JSON dizgesi geçerli bir TOML temel dizgesidir
 
 
 def onyuklenebilir(s):
@@ -300,26 +348,29 @@ def agent_dosyalari(proje: Path, kilit: dict, skiller):
         (proje / ".claude" / "agents").mkdir(parents=True, exist_ok=True)
         (proje / ".codex" / "agents").mkdir(parents=True, exist_ok=True)
     for rol in kilit["roller"]:
+        if not ROL_ADI.match(rol):  # savunma: geçersiz ad asla dosya yoluna dönüşmez
+            continue
         tanim = json_oku(ROLLER / f"{rol}.json") or {"aciklama": rol, "gorev": f"{rol} rolü."}
         benim = sorted(rol_kur.get(rol, []))
-        onyukle = [a for a in benim if onyuklenebilir(bul(skiller, kilit["skiller"][a]["id"]) or {})]
+        onyukle = [a for a in benim if onyuklenebilir(kaynak_bul(skiller, kilit["skiller"][a]) or {})]
         elle = [a for a in benim if a not in onyukle]
         talimat = (f"{tanim['gorev']}\n\nBu rolün skilleri: {', '.join(benim) or '-'}.\n"
                    "İşe başlamadan önce ilgili skill'in SKILL.md dosyasını oku ve kurallarına uy. "
                    "Skill'de olmayan bir konuda varsayım yapma; emin değilsen ana agent'a sor."
                    + (f"\nŞu skiller otomatik yüklenmez, gerektiğinde açıkça çağır: {', '.join(elle)}." if elle else ""))
         (proje / ".claude" / "agents" / f"{rol}.md").write_text(
-            "---\n" f"name: {rol}\n" f"description: {tanim['aciklama']}\n"
+            "---\n" f"name: {rol}\n" f"description: {json.dumps(tanim['aciklama'], ensure_ascii=False)}\n"
             + ("skills:\n" + "".join(f"  - {a}\n" for a in onyukle) if onyukle else "")
             + "---\n\n" f"<!-- {URETILDI}; elle değiştirme, skill-ekle.py --yenile ile yeniden üret -->\n\n{talimat}\n",
             encoding="utf-8")
         toml = [f"# {URETILDI}; elle değiştirme, skill-ekle.py --yenile ile yeniden üret",
-                f'name = "{rol}"', f'description = {toml_str(tanim["aciklama"])}',
+                f"name = {json.dumps(rol)}", f'description = {toml_str(tanim["aciklama"])}',
                 f"developer_instructions = {toml_str(talimat)}"]
         for a in tum:
             if a not in benim:  # Codex'te allowlist yok: rol dışı proje skilleri kapatılır
                 toml += ["", "[[skills.config]]",
-                         f'path = "{(proje / ".agents" / "skills" / a / "SKILL.md").resolve()}"', "enabled = false"]
+                         f'path = {json.dumps(str((proje / ".agents" / "skills" / a / "SKILL.md").resolve()), ensure_ascii=False)}',
+                         "enabled = false"]
         (proje / ".codex" / "agents" / f"{rol}.toml").write_text("\n".join(toml) + "\n", encoding="utf-8")
     for klasor, uz in ((proje / ".claude" / "agents", ".md"), (proje / ".codex" / "agents", ".toml")):
         if klasor.is_dir():
@@ -331,6 +382,9 @@ def agent_dosyalari(proje: Path, kilit: dict, skiller):
 def blok_yaz(dosya: Path, icerik: str):
     eski = dosya.read_text(encoding="utf-8") if dosya.exists() else ""
     blok = f"{BLOK_BAS}\n{icerik}\n{BLOK_SON}"
+    if (BLOK_BAS in eski) != (BLOK_SON in eski) or eski.count(BLOK_BAS) > 1:
+        raise RuntimeError(f"{dosya.name}: skill-kutuphanesi işaretleri bozuk (başlangıç/bitiş eşleşmiyor); "
+                           "kullanıcı metnini korumak için dokunulmadı. İşaretleri elle düzelt.")
     if BLOK_BAS in eski and BLOK_SON in eski:
         yeni = re.sub(re.escape(BLOK_BAS) + r".*?" + re.escape(BLOK_SON), lambda _: blok, eski, flags=re.S)
     else:
@@ -386,8 +440,12 @@ DURAK = {"ile", "ve", "veya", "için", "icin", "bir", "bu", "şu", "olan", "gibi
          "the", "and", "for", "with", "use", "using", "when", "this", "that", "from", "your", "you"}
 
 
+def tr_kucuk(x):
+    return x.replace("İ", "i").replace("I", "ı").lower()
+
+
 def kelimeler(metin):
-    metin = metin.lower()
+    metin = tr_kucuk(metin)
     ek = " ".join(v for k, v in ES_ANLAM.items() if k in metin)
     sozcuk = re.findall(r"[\w.+#-]+", metin + " " + ek, re.U)
     # Türkçe karakter içeren kelimeler İngilizce açıklamalarda eşleşmez; onlar ES_ANLAM ile çevrildi
@@ -434,28 +492,59 @@ def kutuphane_taramasi(skiller, sorgu_metni, teknolojiler, haric_idler=(), n=12,
 
 
 # ================================================================== ön kontrol
+def proje_yapisi_kontrol(proje, roller, rapor: Rapor):
+    """Projede skill/agent klasörleri güvenli mi? (symlink ile başka yere/globale gidiyor mu, rol adları geçerli mi)"""
+    korunan = [g.resolve() for g in GLOBAL_KLASORLER.values()] + [KOK.resolve(), (Path.home() / ".openmontage").resolve()]
+    hedefler = {}
+    for rel in (".agents/skills", ".claude/skills", ".claude/agents", ".codex/agents", ".agents", ".claude", ".codex"):
+        p = proje / rel
+        if p.is_symlink() or p.exists():
+            gercek = p.resolve()
+            if any(gercek == k or k in gercek.parents for k in korunan):
+                rapor.ekle("HATA", "global-baglanti", f"{rel} -> {gercek}: global/korunan bir klasöre gidiyor; işlem yapılmaz")
+            elif proje.resolve() not in [gercek, *gercek.parents]:
+                rapor.ekle("HATA", "proje-disi-baglanti", f"{rel} -> {gercek}: proje dışına gidiyor; işlem yapılmaz")
+            hedefler[rel] = gercek
+    if ".agents/skills" in hedefler and hedefler.get(".agents/skills") == hedefler.get(".claude/skills"):
+        rapor.ekle("HATA", "ayni-klasor", ".claude/skills ve .agents/skills aynı klasöre gidiyor (symlink); "
+                   "araç sürümleri ve bağlantılar bozulur. İkisini ayrı klasör yap.")
+    for rol in roller:
+        if not ROL_ADI.match(rol or ""):
+            rapor.ekle("HATA", "gecersiz-rol-adi", f"'{rol}': rol adı sadece küçük harf, rakam ve - içerebilir")
+            continue
+        for dosya in (proje / ".claude" / "agents" / f"{rol}.md", proje / ".codex" / "agents" / f"{rol}.toml"):
+            if dosya.exists() and URETILDI not in dosya.read_text(encoding="utf-8", errors="replace"):
+                rapor.ekle("HATA", "kendi-agent-dosyan", f"{dosya.relative_to(proje)} senin dosyan (kütüphane üretmedi); "
+                           "üzerine yazılmaz. Rolü farklı adla ekle ya da dosyayı yeniden adlandır")
+
+
 def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
-    """plan: [(skill kaydı, rol|None)]"""
-    hedef_adlar = {}
-    for s, rol in plan:
-        ad = kurulum_adi(s)
-        if ad in hedef_adlar and hedef_adlar[ad] != s["id"]:
-            rapor.ekle("HATA", "isim-cakismasi", f"{s['id']} ve {hedef_adlar[ad]} aynı adla ({ad}) kurulacaktı")
-        hedef_adlar[ad] = s["id"]
-    kur_listesi = {}
+    """plan: [(skill kaydı, rol|None)] -> (kur_listesi {id: (s, roller)}, adlar {id: kurulum adı})"""
+    proje_yapisi_kontrol(proje, roller, rapor)
+    kur_listesi, adlar, hedef_adlar = {}, {}, {}
     for s, rol in plan:
         kur_listesi.setdefault(s["id"], (s, set()))[1].add(rol)
+    for sid, (s, _) in kur_listesi.items():
+        adlar[sid] = ad = kurulum_adi(s, kilit)
+        if ad in hedef_adlar:
+            rapor.ekle("HATA", "isim-cakismasi", f"{sid} ve {hedef_adlar[ad]} aynı adla ({ad}) kurulacaktı")
+        hedef_adlar[ad] = sid
 
     for sid, (s, rol_kumesi) in kur_listesi.items():
-        ad = kurulum_adi(s)
+        ad = adlar[sid]
         onceki = kilit["skiller"].get(ad)
         for yer in (proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad):
             if (yer.exists() or yer.is_symlink()) and not onceki:
                 rapor.ekle("HATA", "projede-kendi-skillin",
                            f"{yer.relative_to(proje)} zaten var ve kütüphaneden gelmemiş; üzerine yazılmaz "
                            f"(--zorla ile yedeklenip değiştirilir)")
-        if onceki and onceki["id"] != sid:
-            rapor.ekle("HATA", "farkli-kaynak", f"{ad} projede {onceki['id']} olarak kurulu; {sid} ile değiştirilmez")
+        if onceki and (onceki.get("repo"), onceki.get("kaynak_yol", s["kaynak_yol"])) != (s["repo"], s["kaynak_yol"]):
+            rapor.ekle("HATA", "farkli-kaynak", f"{ad} projede {onceki.get('repo')}:{onceki.get('kaynak_yol', '?')} kaynağından "
+                       f"kurulu; {s['repo']}:{s['kaynak_yol']} ile değiştirilmez (önce --kaldir)")
+        canli = canli_global(s)
+        if onceki and ad == s["ad"] and any(v == "farkli" for v in canli.values()):
+            rapor.ekle("UYARI", "global-cakisma-yeni", f"{ad}: globale sonradan aynı adlı FARKLI skill eklenmiş; Claude'da global "
+                       "sürüm kazanır. Kütüphane sürümü için: --kaldir ve yeniden ekle (ekli adla kurulur)")
         if onceki and elle_degismis(proje, ad, onceki):
             rapor.ekle("HATA", "elle-degistirilmis", f"{ad} projede elle değiştirilmiş; ezilmez (--zorla: yedekle ve ez)")
         if ad != s["ad"]:
@@ -463,7 +552,7 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                 if "--kutuphane" in ad else "aynı adlı alternatif sürüm"
             rapor.ekle("BİLGİ", "ekli-ad", f"{s['id']} -> `{ad}` adıyla kurulacak: {neden}"
                        + ("; skill içindeki kendi yol referansları da düzeltilecek" if s.get("yol_bagimliligi") else ""))
-        if any(v == "ayni" for v in s.get("globalde", {}).values()):
+        if any(v == "ayni" for v in canli.values()):
             rapor.ekle("BİLGİ", "globalde-ayni", f"{ad}: bilgisayarında birebir aynısı global olarak da var (sorun değil)")
         u = s["uyum"]
         if u["codex"] == "uyarlanabilir":
@@ -498,7 +587,7 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
     # rol bazında bağlam ve örtüşme
     for rol in roller:
         rs = [s for s, rk in kur_listesi.values() if rol in rk]
-        eski = [bul(skiller, k["id"]) for a, k in kilit["skiller"].items() if rol in k["roller"]]
+        eski = [kaynak_bul(skiller, k) for a, k in kilit["skiller"].items() if rol in k["roller"]]
         rs += [x for x in eski if x and x["id"] not in {y["id"] for y in rs}]
         kb = sum(x["skill_md_kb"] for x in rs)
         if len(rs) > SINIR_CLAUDE_ONYUKLEME:
@@ -513,13 +602,13 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
         for (g, r), ids in gruplar.items():
             if r == "birincil" and len(ids) > 1:
                 rapor.ekle("UYARI", "ortusme", f"rol {rol}: '{g}' grubundan {len(ids)} birincil skill: {', '.join(ids)}")
-        adlar = {}
+        surumler = {}
         for x in rs:
-            adlar.setdefault(x["ad"], []).append(x["id"])
-        for a, ids in adlar.items():
+            surumler.setdefault(x["ad"], []).append(x["id"])
+        for a, ids in surumler.items():
             if len(ids) > 1:
                 rapor.ekle("UYARI", "ortusme", f"rol {rol}: aynı skill'in birden fazla sürümü: {', '.join(ids)}")
-    return kur_listesi
+    return kur_listesi, adlar
 
 
 def kapsam_raporu(proje, roller, kur_listesi, skiller, rapor: Rapor, ek_sorgu=""):
@@ -570,6 +659,10 @@ def istek_coz(a, skiller):
 
 
 def onay(a, rapor):
+    kesin = sorted({k for s, k, _ in rapor.satirlar if s == "HATA" and k in ZORLANAMAZ})
+    if kesin:
+        print(f"\nDURDU: şu hatalar --zorla ile de geçilemez: {', '.join(kesin)}")
+        return False
     if rapor.say("HATA") and not a.zorla:
         print(f"\nDURDU: {rapor.say('HATA')} hata var. Düzelt ya da (yedek alınarak) --zorla ile geç.")
         return False
@@ -584,44 +677,60 @@ def onay(a, rapor):
     return True
 
 
+def kayit_guncelle(kilit, proje, ad, s, roller=()):
+    k = kilit["skiller"].setdefault(ad, {"roller": []})
+    k.update(id=s["id"], repo=s["repo"], kaynak_yol=s["kaynak_yol"], commit=s["commit"], klasor_hash=s["klasor_hash"],
+             varyantlar=sorted(s.get("varyantlar") or {}), kurulu_hash=kurulu_hash(proje, ad))
+    for r in roller:
+        if r and r not in k["roller"]:
+            k["roller"].append(r)
+
+
+def claude_baglanti_saglam(proje, ad):
+    c = proje / ".claude" / "skills" / ad
+    return (c / "SKILL.md").exists()
+
+
+def guvenli_islem(proje, yedek, islem):
+    """islem() hata verirse yedekten geri alır."""
+    try:
+        islem()
+    except Exception as e:  # noqa: BLE001
+        geri_yukle(proje, yedek)
+        sys.exit(f"HATA: {e}\nYapılan değişiklikler geri alındı ({yedek.name}).")
+
+
 def ekle(a, proje, skiller):
     kilit = kilit_oku(proje)
     plan, roller, profil, bulunamayan = istek_coz(a, skiller)
     rapor = Rapor()
     for b in bulunamayan:
         rapor.ekle("HATA", "bulunamadi", f"kütüphanede yok: {b} (ara: skill-ekle.py --ara {b})")
-    kur_listesi = on_kontrol(proje, kilit, plan, roller, skiller, rapor)
+    kur_listesi, adlar = on_kontrol(proje, kilit, plan, roller, skiller, rapor)
     kapsam_raporu(proje, roller, kur_listesi, skiller, rapor, a.oner or "")
     print(f"Proje: {proje}\nKurulacak: {len(kur_listesi)} skill · Roller: {', '.join(roller) or '-'}")
     for sid, (s, rk) in kur_listesi.items():
-        print(f"  {sid:42s} -> {kurulum_adi(s):42s} [{', '.join(sorted(r for r in rk if r)) or 'genel'}]")
+        print(f"  {sid:42s} -> {adlar[sid]:42s} [{', '.join(sorted(r for r in rk if r)) or 'genel'}]")
     print("\nÖN KONTROL:")
     rapor.yazdir()
-    meta(proje).mkdir(exist_ok=True)
-    (meta(proje) / "son-rapor.md").write_text(rapor.markdown("Skill ekleme ön kontrol raporu"), encoding="utf-8")
     if not onay(a, rapor):
         return 2
-    adlar = [kurulum_adi(s) for s, _ in kur_listesi.values()]
-    yedek = yedekle(proje, adlar, "ekle")
-    try:
+    yedek = yedekle(proje, list(adlar.values()), "ekle")
+
+    def islem():
         for sid, (s, rk) in kur_listesi.items():
-            ad = kurulum_adi(s)
+            ad = adlar[sid]
             k = kilit["skiller"].get(ad)
-            if not k or k["klasor_hash"] != s["klasor_hash"] or a.zorla or kurulu_hash(proje, ad)["codex"] is None:
-                kur(s, proje)
+            if (not k or k["klasor_hash"] != s["klasor_hash"] or a.zorla
+                    or kurulu_hash(proje, ad)["codex"] is None or not claude_baglanti_saglam(proje, ad)):
+                kur(s, proje, ad)
                 print(f"  + {ad}")
-            k = kilit["skiller"].setdefault(ad, {"id": sid, "roller": []})
-            k.update(id=sid, repo=s["repo"], commit=s["commit"], klasor_hash=s["klasor_hash"],
-                     varyantlar=sorted(s.get("varyantlar") or {}), kurulu_hash=kurulu_hash(proje, ad))
-            for r in rk:
-                if r and r not in k["roller"]:
-                    k["roller"].append(r)
+            kayit_guncelle(kilit, proje, ad, s, rk)
         kilit["roller"] = list(dict.fromkeys(kilit["roller"] + roller))
         kilit["profil"] = profil or kilit.get("profil")
         tumunu_yaz(proje, kilit, skiller)
-    except Exception as e:  # noqa: BLE001
-        geri_yukle(proje, yedek)
-        sys.exit(f"HATA: {e}\nYapılan değişiklikler geri alındı ({yedek.name}).")
+        (meta(proje) / "son-rapor.md").write_text(rapor.markdown("Skill ekleme ön kontrol raporu"), encoding="utf-8")
+    guvenli_islem(proje, yedek, islem)
     sonuc = dogrula(proje, skiller, sessiz=True)
     print(f"\nTamam: {len(kilit['skiller'])} skill, {len(kilit['roller'])} rol · doğrulama: "
           f"{'✅' if not sonuc else '❌ ' + '; '.join(sonuc)} · yedek: {yedek.name}")
@@ -632,6 +741,7 @@ def kaldir(a, proje, skiller):
     kilit = kilit_oku(proje)
     hedefler = list(kilit["skiller"]) if a.kaldir == ["hepsi"] else a.kaldir
     rapor = Rapor()
+    proje_yapisi_kontrol(proje, [], rapor)
     for ad in hedefler:
         if ad not in kilit["skiller"]:
             rapor.ekle("HATA", "kutuphaneden-degil", f"{ad} bu projeye kütüphaneden eklenmemiş; dokunulmaz")
@@ -643,56 +753,62 @@ def kaldir(a, proje, skiller):
     if not onay(a, rapor):
         return 2
     yedek = yedekle(proje, hedefler, "kaldir")
-    for ad in hedefler:
-        if ad in kilit["skiller"]:
-            sil_yol(proje / ".claude" / "skills" / ad)
-            sil_yol(proje / ".agents" / "skills" / ad)
-            del kilit["skiller"][ad]
-    if a.kaldir == ["hepsi"]:
-        kilit["roller"] = []
-    tumunu_yaz(proje, kilit, skiller)
-    print(f"Kaldırıldı. Geri almak için: --geri-al ({yedek.name})")
+
+    def islem():
+        for ad in hedefler:
+            if ad in kilit["skiller"]:
+                sil_yol(proje / ".claude" / "skills" / ad)
+                sil_yol(proje / ".agents" / "skills" / ad)
+                del kilit["skiller"][ad]
+        if a.kaldir == ["hepsi"]:
+            kilit["roller"] = []
+        tumunu_yaz(proje, kilit, skiller)
+    guvenli_islem(proje, yedek, islem)
+    print(f"Kaldırıldı. Geri almak için: --geri-al {yedek.name}")
     return 0
 
 
 def guncelle(a, proje, skiller):
     kilit = kilit_oku(proje)
     rapor, degisen = Rapor(), []
+    proje_yapisi_kontrol(proje, kilit["roller"], rapor)
     for ad, k in kilit["skiller"].items():
-        s = bul(skiller, k["id"])
+        s = kaynak_bul(skiller, k)
         if not s:
-            rapor.ekle("UYARI", "kutuphanede-yok", f"{k['id']} kütüphaneden kalkmış; projede olduğu gibi bırakıldı")
+            rapor.ekle("UYARI", "kaynak-yok", f"{ad}: kaynağı ({k.get('repo')}:{k.get('kaynak_yol', k['id'])}) kütüphanede artık "
+                       "yok; projede olduğu gibi bırakıldı. Başka bir repo'nun aynı adlı skill'i otomatik konmaz")
             continue
+        canli = canli_global(s)
+        if ad == s["ad"] and any(v == "farkli" for v in canli.values()):
+            rapor.ekle("UYARI", "global-cakisma-yeni", f"{ad}: globale aynı adlı FARKLI skill eklenmiş; Claude'da global sürüm "
+                       "kazanır. Kütüphane sürümü için --kaldir ve yeniden ekle")
         if s["klasor_hash"] == k["klasor_hash"]:
+            if not claude_baglanti_saglam(proje, ad) or kurulu_hash(proje, ad)["codex"] is None:
+                degisen.append((ad, s))
+                rapor.ekle("BİLGİ", "onarilacak", f"{ad}: eksik/bozuk kurulum onarılacak")
             continue
         if elle_degismis(proje, ad, k) and not a.zorla:
             rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş; güncellenmez (--zorla: yedekle ve ez)")
             continue
-        if kurulum_adi(s) != ad:
-            rapor.ekle("UYARI", "ad-degisti", f"{k['id']} artık `{kurulum_adi(s)}` adıyla kurulmalı (global durum değişmiş); "
-                       "kaldırıp yeniden ekle")
-            continue
         degisen.append((ad, s))
         rapor.ekle("BİLGİ", "guncellenecek", f"{ad}: {k['commit'][:7]} -> {s['commit'][:7]}")
-        for u in [x for x in s.get("yapisal_sorunlar", [])]:
+        for u in s.get("yapisal_sorunlar", []):
             rapor.ekle("BİLGİ", "yapi", f"{ad}: {u}")
-    print(f"Güncellenecek: {len(degisen)}")
+    print(f"Güncellenecek/onarılacak: {len(degisen)}")
     rapor.yazdir()
     if not degisen:
-        return 0
+        return 1 if rapor.say("HATA") else 0
     if not onay(a, rapor):
         return 2
     yedek = yedekle(proje, [d for d, _ in degisen], "guncelle")
-    try:
+
+    def islem():
         for ad, s in degisen:
-            kur(s, proje)
-            kilit["skiller"][ad].update(commit=s["commit"], klasor_hash=s["klasor_hash"],
-                                        varyantlar=sorted(s.get("varyantlar") or {}), kurulu_hash=kurulu_hash(proje, ad))
+            kur(s, proje, ad)
+            kayit_guncelle(kilit, proje, ad, s)
         tumunu_yaz(proje, kilit, skiller)
-    except Exception as e:  # noqa: BLE001
-        geri_yukle(proje, yedek)
-        sys.exit(f"HATA: {e}\nGeri alındı ({yedek.name}).")
-    print(f"Güncellendi. Geri almak için: --geri-al ({yedek.name})")
+    guvenli_islem(proje, yedek, islem)
+    print(f"Güncellendi. Geri almak için: --geri-al {yedek.name}")
     return 0
 
 
@@ -705,27 +821,40 @@ def dogrula(proje, skiller, sessiz=False):
             sorun.append(f"{ad}: .agents/skills kopyası yok")
         if not (cl / "SKILL.md").exists():
             sorun.append(f"{ad}: .claude/skills bağlantısı/kopyası çalışmıyor")
+        elif cl.is_symlink() and cl.resolve() != c.resolve():
+            sorun.append(f"{ad}: .claude/skills bağlantısı yanlış yere gidiyor ({cl.resolve()})")
+        if "claude" not in k.get("varyantlar", []) and cl.exists() and not cl.is_symlink():
+            sorun.append(f"{ad}: .claude/skills'te beklenmeyen gerçek klasör (symlink olmalıydı)")
         for yer in (c, cl):
-            sm = yer / "SKILL.md"
-            if sm.exists():
-                m = re.search(r"^name:\s*(.+)$", sm.read_text(encoding="utf-8"), re.M)
-                if not m or m.group(1).strip().strip("'\"") != ad:
-                    sorun.append(f"{yer.relative_to(proje)}: SKILL.md name klasör adıyla aynı değil")
+            if (yer / "SKILL.md").exists() and frontmatter_adi(yer / "SKILL.md") != ad:
+                sorun.append(f"{yer.relative_to(proje)}: SKILL.md name klasör adıyla aynı değil")
         if elle_degismis(proje, ad, k):
             sorun.append(f"{ad}: kurulumdan sonra elle değiştirilmiş")
-        if not bul(skiller, k["id"]):
-            sorun.append(f"{ad}: kütüphanede artık yok ({k['id']})")
+        if not kaynak_bul(skiller, k):
+            sorun.append(f"{ad}: kaynağı kütüphanede artık yok ({k.get('repo')}:{k.get('kaynak_yol', k['id'])})")
+    tum = set(kilit["skiller"])
     for rol in kilit["roller"]:
         md, toml = proje / ".claude" / "agents" / f"{rol}.md", proje / ".codex" / "agents" / f"{rol}.toml"
         if not md.exists() or not toml.exists():
             sorun.append(f"rol {rol}: agent dosyası eksik (--yenile)")
             continue
         for a in re.findall(r"^  - (.+)$", md.read_text(encoding="utf-8"), re.M):
-            if a not in kilit["skiller"]:
+            if a not in tum:
                 sorun.append(f"rol {rol}: Claude agent'ı olmayan skill'e bakıyor: {a}")
+        rol_skilleri = {a for a, k in kilit["skiller"].items() if rol in k["roller"]}
+        kapali = set()
         for p in re.findall(r'^path = "(.+)"$', toml.read_text(encoding="utf-8"), re.M):
             if not Path(p).exists():
                 sorun.append(f"rol {rol}: Codex agent'ında geçersiz yol (proje taşınmış olabilir, --yenile): {p}")
+            kapali.add(Path(p).parent.name)
+        acik_kalan = tum - rol_skilleri - kapali
+        if acik_kalan:
+            sorun.append(f"rol {rol}: Codex'te kapatılmamış rol dışı skiller: {', '.join(sorted(acik_kalan))} (--yenile)")
+    if kilit["skiller"]:
+        for f in ("AGENTS.md", "CLAUDE.md"):
+            d = proje / f
+            if not d.exists() or BLOK_BAS not in d.read_text(encoding="utf-8") or BLOK_SON not in d.read_text(encoding="utf-8"):
+                sorun.append(f"{f}: skill-kutuphanesi bloğu eksik/bozuk (--yenile)")
     if kilit.get("proje_yolu") and kilit["proje_yolu"] != str(proje):
         sorun.append(f"proje taşınmış ({kilit['proje_yolu']} -> {proje}); --yenile çalıştır")
     for d in (proje / ".agents" / "skills", proje / ".claude" / "skills"):
@@ -744,16 +873,43 @@ def durum(proje, skiller):
     kilit = kilit_oku(proje)
     print(f"Proje: {proje}\nProfil: {kilit.get('profil')}  Roller: {', '.join(kilit['roller']) or '-'}")
     for ad, k in sorted(kilit["skiller"].items()):
-        s = bul(skiller, k["id"])
+        s = kaynak_bul(skiller, k)
         if not s:
-            isaret = "kütüphanede yok"
+            isaret = "KAYNAK KÜTÜPHANEDE YOK"
         elif elle_degismis(proje, ad, k):
             isaret = "ELLE DEĞİŞTİRİLMİŞ"
         elif s["klasor_hash"] != k["klasor_hash"]:
             isaret = f"GÜNCELLEME VAR ({k['commit'][:7]} -> {s['commit'][:7]})"
+        elif not claude_baglanti_saglam(proje, ad):
+            isaret = "CLAUDE BAĞLANTISI BOZUK (--guncelle onarır)"
         else:
             isaret = "güncel"
         print(f"  {ad:42s} {', '.join(k['roller']) or 'genel':34s} {isaret}")
+
+
+def yedekler_listesi(proje):
+    ydir = meta(proje) / "yedek"
+    return sorted(ydir.iterdir()) if ydir.is_dir() else []
+
+
+def geri_al(a, proje):
+    yedekler = yedekler_listesi(proje)
+    if not yedekler:
+        sys.exit("Yedek yok.")
+    if a.geri_al is True:
+        hedef = next((y for y in reversed(yedekler) if json_oku(y / "yedek.json", {}).get("neden") != "geri-al-oncesi"), None)
+    else:
+        hedef = next((y for y in yedekler if y.name == a.geri_al), None)
+    if not hedef:
+        sys.exit("Uygun yedek bulunamadı. Liste: --yedekler")
+    kilit = kilit_oku(proje)
+    bilgi = json_oku(hedef / "yedek.json")
+    adlar = set(kilit["skiller"]) | {r.split("/")[-1] for r in bilgi["hedefler"] if "/skills/" in r}
+    once = yedekle(proje, sorted(adlar), "geri-al-oncesi")  # geri almanın kendisi de geri alınabilir
+    geri_yukle(proje, hedef)
+    shutil.rmtree(hedef)
+    print(f"Geri alındı: {bilgi['neden']} ({bilgi['zaman']}). Bunu da geri almak için: --geri-al {once.name}")
+    return 0
 
 
 def oner(a, proje, skiller):
@@ -812,7 +968,8 @@ def main():
     ap.add_argument("--durum", action="store_true")
     ap.add_argument("--dogrula", action="store_true")
     ap.add_argument("--yenile", action="store_true", help="agent dosyalarını ve blokları yeniden üret (proje taşındıysa)")
-    ap.add_argument("--geri-al", action="store_true", help="son yedeğe dön")
+    ap.add_argument("--geri-al", nargs="?", const=True, default=None, help="son yedeğe (ya da adı verilen yedeğe) dön")
+    ap.add_argument("--yedekler", action="store_true", help="yedekleri listele")
     ap.add_argument("--oner", help="ihtiyacı yaz; tüm kütüphane taranır")
     ap.add_argument("--adet", type=int, default=24)
     ap.add_argument("--kategori-basi", type=int, default=5, help="--oner: her kategoriden en fazla (0 = sınırsız)")
@@ -844,19 +1001,22 @@ def main():
         return durum(proje, skiller)
     if a.dogrula:
         return 1 if dogrula(proje, skiller) else 0
-    if a.geri_al:
-        ydir = meta(proje) / "yedek"
-        yedekler = sorted(ydir.iterdir()) if ydir.is_dir() else []
-        if not yedekler:
-            sys.exit("Yedek yok.")
-        b = geri_yukle(proje, yedekler[-1])
-        shutil.rmtree(yedekler[-1])
-        print(f"Geri alındı: {b['neden']} ({b['zaman']})")
+    if a.yedekler:
+        for y in yedekler_listesi(proje):
+            b = json_oku(y / "yedek.json", {})
+            print(f"  {y.name}  {b.get('neden', '?')}")
         return 0
+    if a.geri_al:
+        return geri_al(a, proje)
     if a.yenile:
         kilit = kilit_oku(proje)
-        yedekle(proje, [], "yenile")
-        tumunu_yaz(proje, kilit, skiller)
+        rapor = Rapor()
+        proje_yapisi_kontrol(proje, kilit["roller"], rapor)
+        if rapor.say("HATA"):
+            rapor.yazdir()
+            return 2
+        yedek = yedekle(proje, list(kilit["skiller"]), "yenile")
+        guvenli_islem(proje, yedek, lambda: tumunu_yaz(proje, kilit, skiller))
         return 1 if dogrula(proje, skiller) else 0
     if a.kaldir:
         return kaldir(a, proje, skiller)

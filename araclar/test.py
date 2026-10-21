@@ -39,7 +39,8 @@ def parmak_izi():
 
 
 def agac(p: Path):
-    return sorted(str(x.relative_to(p)) for x in p.rglob("*"))
+    """Proje içeriği (yedek klasörü hariç: her işlem yeni yedek bırakır)."""
+    return sorted(str(x.relative_to(p)) for x in p.rglob("*") if "/yedek" not in "/" + str(x.relative_to(p)))
 
 
 def main():
@@ -119,6 +120,67 @@ def main():
     kod, out = calistir(yeni, "--yenile")
     out2 = calistir(yeni, "--dogrula")[1]
     test("--yenile Codex yollarını düzeltir", "taşınmış" not in out2 and "geçersiz yol" not in out2, out2)
+
+    # --- inceleme sonrası eklenen senaryolar
+    p2 = kok / "proje2"
+    p2.mkdir()
+    kod, out = calistir(p2, "--skill", "gsap-core", "--kuru")
+    test("--kuru projeye hiçbir dosya yazmaz", not any(p2.iterdir()), out)
+
+    kod, out = calistir(p2, "--skill", "gsap-core", "--rol-adi", "../../kacis", "--evet", "--zorla")
+    test("geçersiz rol adı --zorla ile bile reddedilir (proje dışına yazılamaz)",
+         kod == 2 and "gecersiz-rol-adi" in out and not (kok / "kacis.md").exists() and not (p2 / "kacis.md").exists(), out)
+
+    (p2 / ".claude" / "agents").mkdir(parents=True)
+    (p2 / ".claude" / "agents" / "planlayici.md").write_text("benim agent'ım\n", encoding="utf-8")
+    kod, out = calistir(p2, "--rol", "planlayici", "--evet", "--zorla")
+    test("kullanıcının kendi agent dosyasının üzerine yazılmaz",
+         kod == 2 and "kendi-agent-dosyan" in out
+         and (p2 / ".claude" / "agents" / "planlayici.md").read_text(encoding="utf-8") == "benim agent'ım\n", out)
+    shutil.rmtree(p2 / ".claude")
+
+    (p2 / ".agents" / "skills").mkdir(parents=True)
+    (p2 / ".claude").mkdir()
+    (p2 / ".claude" / "skills").symlink_to("../.agents/skills")
+    kod, out = calistir(p2, "--skill", "gsap-core", "--evet", "--zorla")
+    test(".claude/skills ve .agents/skills aynı klasörse kurulum yapılmaz", kod == 2 and "ayni-klasor" in out, out)
+    (p2 / ".claude" / "skills").unlink()
+
+    kod, out = calistir(p2, "--skill", "gsap-core", "gsap-timeline", "--rol-adi", "animasyoncu", "--evet")
+    test("tek tek skill + özel rol adı kurulur", kod == 0, out)
+    (p2 / ".agents" / "skills" / "gsap-core" / ".DS_Store").write_bytes(b"x")
+    kod, out = calistir(p2, "--dogrula")
+    test(".DS_Store elle değişiklik sayılmaz", kod == 0, out)
+
+    import json as _j
+    kp = p2 / ".skill-kutuphanesi" / "kilit.json"
+    kl = _j.loads(kp.read_text(encoding="utf-8"))
+    kl["skiller"]["gsap-timeline"]["kaynak_yol"] = "yok/boyle/bir/yol"
+    kl["skiller"]["gsap-timeline"]["klasor_hash"] = "eski"
+    kp.write_text(_j.dumps(kl), encoding="utf-8")
+    once_tl = (p2 / ".agents" / "skills" / "gsap-timeline" / "SKILL.md").read_bytes()
+    kod, out = calistir(p2, "--guncelle", "--evet")
+    test("kaynağı kaybolan skill'in yerine başka repo'nun aynı adlı skill'i konmaz",
+         "kaynak-yok" in out and (p2 / ".agents" / "skills" / "gsap-timeline" / "SKILL.md").read_bytes() == once_tl, out)
+
+    sys.path.insert(0, str(KOK / "araclar"))
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("se", KOK / "araclar" / "skill-ekle.py")
+    se = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(se)
+    sm = kok / "SKILL.md"
+    sm.write_bytes(b"---\r\ndescription: x\r\n---\r\n\r\n```yaml\r\nname: ornek\r\n```\r\n")
+    se.isim_esitle(sm, "yeni-ad")
+    b = sm.read_bytes()
+    test("ad eşitleme sadece frontmatter'a dokunur ve CRLF'yi korur",
+         b.startswith(b"---\r\nname: yeni-ad\r\n") and b"name: ornek\r\n" in b, b.decode())
+
+    kod, out = calistir(p2, "--kaldir", "gsap-core", "--evet")
+    kod2, out2 = calistir(p2, "--geri-al")
+    test("geri al: kaldırılan skill geri gelir", kod2 == 0 and (p2 / ".agents" / "skills" / "gsap-core" / "SKILL.md").exists(), out2)
+    ad = out2.strip().split("--geri-al ")[-1].split()[0] if "--geri-al " in out2 else ""
+    kod3, out3 = calistir(p2, "--geri-al", ad)
+    test("geri almanın kendisi de geri alınabilir", kod3 == 0 and not (p2 / ".agents" / "skills" / "gsap-core").exists(), out3)
 
     for g in GLOBAL_KLASORLER.values():
         kod, out = calistir(g, "--skill", "gsap-core", "--evet")

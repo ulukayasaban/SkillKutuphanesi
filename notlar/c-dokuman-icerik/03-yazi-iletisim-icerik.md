@@ -2,7 +2,7 @@
 
 _Yazı, iletişim, pazarlama/içerik, kariyer_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/15**
 
 ### competitive-ads-extractor  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 88 (A)
 
@@ -81,6 +81,16 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
 - **Durum:** tercih
+- **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### internal-comms@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 88 (A)
+
+- **Ne yapar:** A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Durum:** alternatif
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 

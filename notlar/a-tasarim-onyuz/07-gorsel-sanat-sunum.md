@@ -2,7 +2,7 @@
 
 _Poster/canvas tasarımı, generative art, slayt, GIF_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/9**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/10**
 
 ### algorithmic-art  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
 
@@ -31,6 +31,16 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
 - **Durum:** tercih
+- **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
+- **İnceleme:** otomatik
+
+### canvas-design@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 86 (A)
+
+- **Ne yapar:** Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.
+- **Teknoloji:** canvas _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Durum:** alternatif
 - **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** otomatik
 

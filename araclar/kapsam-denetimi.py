@@ -34,14 +34,21 @@ def main():
     kayitlar = json_oku(KAYNAKLAR)["repolar"]
     arsiv_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] in ("T1", "T2", "T3", "T4")})
     referans_repolari = sorted({k["repo"] for k in kayitlar} - set(arsiv_repolari))
-    yol_index = set()
+    yol_index, varyant_index = set(), set()
     for s in reg["skiller"]:
+        for arac, v in (s.get("varyantlar") or {}).items():
+            if (KOK / v / "SKILL.md").exists():
+                varyant_index.add((s["repo"], arac))
+
         yol_index.add((s["repo"], s["kaynak_yol"]))
         for kk in s.get("kopya_kaynaklar", []):
             r, _, y = kk.partition(":")
             yol_index.add((r, "" if y == "." else y))
 
     sorunlar, satirlar, toplam = [], [], Counter()
+    for s in reg["skiller"]:
+        if not (KOK / s["yol"] / "SKILL.md").exists():
+            sorunlar.append(f"registry'de var ama arşivde SKILL.md yok: {s['yol']}")
     for repo in arsiv_repolari:
         d = denetim.get(repo)
         if not d:
@@ -60,6 +67,8 @@ def main():
                 continue
             tur = karar.split(":")[0]
             sayac[tur] += 1
+            if tur == "arac-varyanti" and (repo, karar.split(":")[1]) not in varyant_index:
+                sorunlar.append(f"{repo}: araç sürümü kararı var ama arşivde sürüm yok -> {p}")
             if tur in ("secildi", "ayri-surum"):
                 klasor = p.rsplit("/", 1)[0] if "/" in p else ""
                 if (repo, klasor) not in yol_index:

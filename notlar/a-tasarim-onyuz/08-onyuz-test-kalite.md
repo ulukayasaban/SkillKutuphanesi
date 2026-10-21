@@ -2,7 +2,7 @@
 
 _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/6**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/7**
 
 ### browser-testing-with-devtools  ·  addyosmani/agent-skills @ aeac41d  ·  puan 91 (A)
 
@@ -51,6 +51,16 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
 - **Durum:** tercih
+- **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### webapp-testing@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 88 (A)
+
+- **Ne yapar:** Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
+- **Teknoloji:** css, html, node, playwright, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Durum:** alternatif
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 

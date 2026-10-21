@@ -15,12 +15,19 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 
 | Kod | Seviye | Ne demek | Ne yapmalı |
 |---|---|---|---|
-| `bulunamadi` | HATA | İstenen skill kütüphanede yok | `--ara <kelime>` ile doğru adı bul |
-| `isim-cakismasi` | HATA | İki farklı skill aynı klasör adına kurulacaktı | Birini çıkar |
+| `global-baglanti` / `proje-disi-baglanti` | HATA* | Projedeki `.claude`/`.agents`/`.codex` klasörü symlink ile global ya da proje dışı bir yere gidiyor | Symlink'i kaldır, gerçek klasör yap |
+| `ayni-klasor` | HATA* | `.claude/skills` ve `.agents/skills` aynı klasör | İkisini ayrı klasör yap (araç kendisi bağlar) |
+| `gecersiz-rol-adi` | HATA* | Rol adı küçük harf/rakam/- dışında karakter içeriyor | Geçerli ad ver |
+| `kendi-agent-dosyan` | HATA* | `.claude/agents/<rol>.md` ya da `.codex/agents/<rol>.toml` senin dosyan | Rolü başka adla ekle |
+| `global-cakisma-yeni` | UYARI | Kurulumdan sonra globale aynı adlı farklı skill eklenmiş (Claude'da global kazanır) | `--kaldir` + yeniden ekle (ekli adla kurulur) |
+| `kaynak-yok` | UYARI | Kurulu skill'in kaynağı kütüphanede artık yok | Projede olduğu gibi kalır; başka repo'nunki otomatik konmaz |
+| `onarilacak` | BİLGİ | Eksik/bozuk kurulum (`--guncelle` onarır) | — |
+| `bulunamadi` | HATA* | İstenen skill kütüphanede yok | `--ara <kelime>` ile doğru adı bul |
+| `isim-cakismasi` | HATA* | İki farklı skill aynı klasör adına kurulacaktı | Birini çıkar |
 | `projede-kendi-skillin` | HATA | Projede kütüphaneden gelmemiş aynı adlı skill var | Dokunulmaz. Seninkini yeniden adlandır ya da `--zorla` (yedeklenir) |
-| `farkli-kaynak` | HATA | O ad projede başka bir kaynaktan kurulu | Önce `--kaldir` |
+| `farkli-kaynak` | HATA* | O ad projede başka bir kaynaktan kurulu | Önce `--kaldir` |
 | `elle-degistirilmis` | HATA | Kurulu skill sonradan elle değiştirilmiş | Değişikliği korumak için dokunma; ezmek için `--zorla` |
-| `onyukleme-siniri` | HATA | Rolde 32'den fazla skill (Claude sınırı) | Rolü böl |
+| `onyukleme-siniri` | HATA* | Rolde 32'den fazla skill (Claude sınırı) | Rolü böl |
 | `baglam-yuku` | UYARI | Rol çok fazla skill/metin önyükleyecek | Opsiyonelleri çıkar |
 | `ortusme` | UYARI | Aynı örtüşme grubundan birden çok birincil ya da aynı skill'in iki sürümü | Birini seç |
 | `alternatif-surum` | UYARI | Tercih edilen değil, alternatif sürüm seçildi | Bilerek seçtiysen sorun yok |
@@ -37,6 +44,8 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `alt-skill` | BİLGİ | Başka bir skill'in alt klasörü | Üst skill'i de kurmak isteyebilirsin |
 | `gizli-katalog` | BİLGİ | Entegrasyon ya da repo-içi katalogdan | — |
 | `incelenmedi` | BİLGİ | Kategori incelemesi henüz yapılmadı | Kritik işte SKILL.md'yi oku |
+
+**HATA\*** = `--zorla` ile de geçilemez (güvenlik/tutarlılık). Diğer HATA'lar `--zorla` ile, önce yedek alınarak geçilebilir.
 
 ## C. Kurulumdan sonra
 - [ ] `--dogrula` → ✅ (kopya, symlink, SKILL.md adı = klasör adı, agent dosyaları, Codex yolları, yarım kurulum yok)

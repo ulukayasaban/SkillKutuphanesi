@@ -10,4 +10,3 @@
 - **Değerlendirme:** 88/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
-- **Birebir aynısı şuralarda da var:** ComposioHQ/awesome-claude-skills:theme-factory

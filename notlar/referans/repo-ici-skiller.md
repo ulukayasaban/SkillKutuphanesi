@@ -49,4 +49,4 @@
 | `v8-jit` | vercel/next.js | V8 JIT optimization patterns for writing high-performance JavaScript in Next.js server internals. Use when wri |
 | `verify` | react/react | Use when you want to validate changes before committing, or when you need to check all React contribution requ |
 | `write-api-reference` | vercel/next.js | Produces API reference documentation for Next.js APIs: functions, components, file conventions, directives, an |
-| `write-guide` | vercel/next.js | Generates technical guides that teach real-world use cases through progressive examples.  **Auto-activation:** |
+| `write-guide` | vercel/next.js | Generates technical guides that teach real-world use cases through progressive examples. **Auto-activation:**  |

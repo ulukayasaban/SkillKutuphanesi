@@ -80,7 +80,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** api-anahtari, canvas, css, gsap, html, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16802, son güncelleme 2026-07-29, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Globalde:** claude:farkli
 - **Boyut:** 21 KB (SKILL.md 21.1 KB, yük orta)
 - **İnceleme:** otomatik
 

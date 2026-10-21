@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/16**
 
 ### academy-guide  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
 
@@ -74,6 +74,16 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
 
+### skill-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 86 (A)
+
+- **Ne yapar:** Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.
+- **Teknoloji:** api-anahtari, html, python, react _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 38 KB (SKILL.md 11.3 KB, yük orta)
+- **İnceleme:** otomatik
+
 ### skill-creator@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 68 (B)
 
 - **Ne yapar:** Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.
@@ -82,6 +92,16 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Geliştirici:** freshtechbro (kisi, ★1102, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** alternatif
 - **Boyut:** 41 KB (SKILL.md 11.3 KB, yük orta)
+- **İnceleme:** otomatik
+
+### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 67 (B)
+
+- **Ne yapar:** Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
+- **Teknoloji:** api-anahtari, html, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
+- **Durum:** alternatif
+- **Boyut:** 221 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
 
 ### skill-development  ·  anthropics/claude-code @ d014fc0  ·  puan 74 (B)

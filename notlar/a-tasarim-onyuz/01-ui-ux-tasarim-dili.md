@@ -2,7 +2,7 @@
 
 _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/15**
 
 ### design  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 88 (A)
 
@@ -20,7 +20,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Teknoloji:** api-anahtari, canvas, css, gsap, html, lottie, node, three.js, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** zanwei (kisi, ★2008, son güncelleme 2026-08-28, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:ayni
+- **Durum:** tercih · **Globalde:** claude:farkli
 - **Boyut:** 709 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
 
@@ -52,6 +52,16 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Geliştirici:** anthropics (kurum, resmî, ★152692, son güncelleme 2026-10-21, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta)
+- **İnceleme:** otomatik
+
+### frontend-design@anthropics  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
+
+- **Ne yapar:** Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.
+- **Teknoloji:** api-anahtari, css _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 19 KB (SKILL.md 9.2 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### frontend-design@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 84 (A)

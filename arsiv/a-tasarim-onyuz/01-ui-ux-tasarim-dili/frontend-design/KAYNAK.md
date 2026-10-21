@@ -10,4 +10,3 @@
 - **Değerlendirme:** 86/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
-- **Birebir aynısı şuralarda da var:** anthropics/skills:skills/frontend-design

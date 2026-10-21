@@ -10,4 +10,3 @@
 - **Değerlendirme:** 68/100 (B)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** alternatif
-- **Birebir aynısı şuralarda da var:** ComposioHQ/awesome-claude-skills:skill-creator

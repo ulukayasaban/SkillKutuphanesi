@@ -28,7 +28,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GECICI, KAYNAKLAR, frontmatter, gh_api, json_oku, json_yaz  # noqa: E402
+from ortak import GECICI, KAYNAKLAR, GhBulunamadi, frontmatter, gh_api, json_oku, json_yaz  # noqa: E402
 
 ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4")
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
@@ -52,6 +52,20 @@ def ilk_eslesen(desenler, metin):
 
 def is_skill_md(yol):
     return yol.split("/")[-1].lower() == "skill.md"
+
+
+def agac_klasor_hash(agac, d, ayar):
+    """Ağaçtaki bir klasörün tüm dosyalarının (göreli yol, blob sha) özeti; kopya tespiti SKILL.md'ye değil buna bakar."""
+    import hashlib
+    h = hashlib.sha256()
+    on = (d + "/") if d else ""
+    for e in sorted((e for e in agac if e["type"] == "blob" and e["path"].startswith(on)), key=lambda e: e["path"]):
+        rel = e["path"][len(on):]
+        if ilk_eslesen(ayar["skill_ici_haric"], rel):
+            continue
+        h.update(rel.encode())
+        h.update(e["sha"].encode())
+    return h.hexdigest()
 
 
 def skill_klasorlerini_sec(kayit, agac, ayar):
@@ -92,7 +106,7 @@ def skill_klasorlerini_sec(kayit, agac, ayar):
             if re.match(CODEX_YOL, d + "/"):
                 return "codex"
             return "genel"
-        siniflanmis = [(d, tam, tur(d), blob_sha[tam]) for d, tam in yollar]
+        siniflanmis = [(d, tam, tur(d), agac_klasor_hash(agac, d, ayar) if d else blob_sha[tam]) for d, tam in yollar]
         ana_havuz = [x for x in siniflanmis if x[2] != "baska-arac"] or siniflanmis
         ana_havuz.sort(key=lambda x: (yol_puani(x[0]), x[0].count("/"), x[0]))
         ana = ana_havuz[0]
@@ -174,15 +188,17 @@ def bilesenleri_bul(kayit, agac, secilen, ayar):
 
 
 def indir(url, hedef):
+    import time
     hedef.parent.mkdir(parents=True, exist_ok=True)
-    for i in range(4):
+    for i in range(5):
         try:
             with urllib.request.urlopen(url, timeout=60) as r:
                 hedef.write_bytes(r.read())
             return True
         except Exception:  # noqa: BLE001
-            if i == 3:
+            if i == 4:
                 return False
+            time.sleep(1.5 * 2 ** i)  # 1.5, 3, 6, 12 sn
 
 
 def main():
@@ -202,13 +218,21 @@ def main():
     else:
         manifest = {"kayitlar": [], "denetim": {}, "bilesenler": []}
 
-    toplam_hata = 0
+    toplam_hata, repo_sha, agaclar = 0, {}, {}
     for kayit in kayitlar:
         repo = kayit["repo"]
         kimlik = kayit.get("kimlik") or repo.replace("/", "__")
-        sha = gh_api(f"repos/{repo}/commits/HEAD")["sha"]
-        lisans = (gh_api(f"repos/{repo}").get("license") or {}).get("spdx_id") or "belirtilmemiş"
-        govde = gh_api(f"repos/{repo}/git/trees/{sha}?recursive=1")
+        try:
+            if repo not in repo_sha:  # aynı reponun tüm kayıtları AYNI commit'i kullanır
+                repo_sha[repo] = gh_api(f"repos/{repo}/commits/HEAD")["sha"]
+                agaclar[repo] = gh_api(f"repos/{repo}/git/trees/{repo_sha[repo]}?recursive=1")
+                agaclar[repo]["_lisans"] = (gh_api(f"repos/{repo}").get("license") or {}).get("spdx_id") or "belirtilmemiş"
+        except GhBulunamadi as e:
+            sys.exit(f"HATA: {repo} erişilemiyor (silinmiş/private olmuş olabilir): {e}\n"
+                     f"Arşivdeki kopya korunur. kaynaklar.json'da bu kaydı 'tip': 'KAYIP' yap ya da kaldır.")
+        sha = repo_sha[repo]
+        govde = agaclar[repo]
+        lisans = govde["_lisans"]
         if govde.get("truncated"):
             sys.exit(f"HATA: {repo} dosya ağacı GitHub tarafından kesildi; eksik skill riski. Bu repo için sparse clone gerekir.")
         agac = govde["tree"]
@@ -249,9 +273,14 @@ def main():
             sm = hedef_kok / ad / "SKILL.md"
             fm = frontmatter(sm.read_text(encoding="utf-8", errors="replace")) if sm.exists() else {}
             gercek = sum(1 for p in (hedef_kok / ad).rglob("*") if p.is_file()) if (hedef_kok / ad).exists() else 0
-            varyantlar = {}
+            varyantlar, varyant_eksik = {}, []
             for arac, d in bilgi["varyantlar"].items():
                 yerel = hedef_kok / "_varyant" / ad / arac
+                alt = f"_varyant/{ad}/{arac}"
+                if alt in beklenen:
+                    inen = sum(1 for p in yerel.rglob("*") if p.is_file()) if yerel.exists() else 0
+                    if inen < beklenen[alt]:
+                        varyant_eksik.append(arac)
                 varyantlar[arac] = str(yerel.relative_to(GECICI)) if yerel.exists() else None
             manifest["kayitlar"].append({
                 "repo": repo, "tip": kayit["tip"], "oncelik": kayit.get("oncelik", 5), "kimlik": kimlik,
@@ -261,9 +290,10 @@ def main():
                 "varyantlar": varyantlar, "varyant_yollari": bilgi["varyantlar"],
                 "ad": fm.get("name") or bilgi.get("asil_ad") or ad, "aciklama": fm.get("description", ""),
                 "bagimlilik": kayit.get("bagimlilik"),
-                "beklenen_dosya": beklenen.get(ad, 0), "inen_dosya": gercek,
+                "beklenen_dosya": beklenen.get(ad, 0), "inen_dosya": gercek, "varyant_eksik": varyant_eksik,
                 "yerel": str((hedef_kok / ad).relative_to(GECICI)),
             })
+        json_yaz(cikis / "manifest.json", manifest)  # her repodan sonra yaz: yarıda kesilirse bilgi kaybolmaz
         print(f"{repo:42s} {kayit['tip']} {sha[:7]}  skill={len(secilen):4d}  dosya={len(isler):5d}  "
               f"bilesen={len(bilesenler):3d}  hata={hatali}")
     json_yaz(cikis / "manifest.json", manifest)

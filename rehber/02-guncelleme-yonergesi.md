@@ -18,7 +18,7 @@ python3 araclar/arsiv-guncelle.py --uygula   # değişiklik varsa: yeniden indir
                                              # doğrula → geçici dosyaları sil → git kayıt noktası
 ```
 
-`--uygula` bu sırayla çalışır; herhangi bir adım hata verirse durur ve **git kaydı atmaz**:
+`--uygula` önce iki şeyi şart koşar: kütüphanede **kaydedilmemiş değişiklik olmayacak** (elle düzenlemeni önce `git commit` et) ve tüm kaynaklara **erişilebilecek**. Sonra bu sırayla çalışır; herhangi bir adım hata verirse durur ve **git kaydı atmaz**:
 1. `kaynak-cek.py` — tüm kaynaklar sabit commit'ten yeniden iner (indirme hatası varsa durur).
 2. `arsiv-yerlestir.py` — tekilleştirme, kategori, değerlendirme. **Elle yaptığın inceleme alanları korunur**
    (`ozet_tr`, `kullanim_alani`, `teknoloji`, `roller`, `kalite`, `ortusme_grubu`, `kategori_elle`…).
@@ -52,13 +52,19 @@ python3 araclar/skill-ekle.py <proje> --geri-al               # beğenmediysen g
 Kurallar:
 - Projede **elle değiştirdiğin** bir skill güncellenmez (HATA: `elle-degistirilmis`). Değişikliğini korumak istiyorsan
   dokunma. Kütüphane sürümünü istiyorsan `--zorla` ver; önce yedek alınır.
-- Kütüphaneden **kaldırılmış** bir skill projede olduğu gibi kalır (UYARI).
+- Kaynağı kütüphaneden **kaldırılmış** bir skill projede olduğu gibi kalır (UYARI `kaynak-yok`). Skill kimliği kaynağa (repo + yol) bağlıdır; öncelikler değişse bile güncelleme başka bir repo'nun aynı adlı skill'ini **asla** koymaz.
+- Sadece Claude ya da Codex sürümü değişse bile güncelleme görünür (kurulum parmak izi ana + araç sürümlerini kapsar).
+- `--guncelle` eksik/bozuk kurulumları (silinmiş symlink vb.) da onarır.
 - Güncelleme sonrası agent dosyaları (`.claude/agents`, `.codex/agents`) ve AGENTS.md/CLAUDE.md blokları yeniden üretilir.
 
 ## 3) Skill'i projede özelleştirmek istersen
 Kütüphane kopyasını elle değiştirmek yerine:
 1. Skill'i kendi adınla kopyala (ör. `.claude/skills/benim-tasarim-kurallarim/`). Bu senin skill'in olur; araç ona hiç dokunmaz.
 2. Ya da kütüphanede `registry.json`'a not ekle ve iyileştirmeyi kaynağa (GitHub) öner.
+
+## 3b) Bir kaynak repo silinirse / private olursa
+`arsiv-guncelle.py` bunu `! erişilemiyor` diye raporlar ve `--uygula` durur. `kaynaklar.json`'da o kaydın `tip` alanını
+`"KAYIP"` yap: arşivdeki kopyalar ve registry kayıtları korunur (`kaynak_durumu: kayip`), projeler etkilenmez.
 
 ## 4) Global skiller
 Global klasörlerdeki skiller (OpenMontage, addyosmani…) **bu sistemle güncellenmez**; onları kuran araç günceller

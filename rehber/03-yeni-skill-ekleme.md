@@ -20,6 +20,7 @@ python3 araclar/dogrula.py --github     # "UYARI: yıldızlı ama kaynaklar.json
    | T3 | Repoya katkı yapanlar için iç skiller | `{"repo": "owner/ad", "tip": "T3", "oncelik": 8, "dahil": ["^\\.claude/"], "kimlik": "owner__ad__repo-ici"}` |
    | T4 | Yüzlerce uygulama-entegrasyon skilli | `{"repo": "owner/ad", "tip": "T4", "oncelik": 9, "dahil": ["^entegrasyonlar/"], "kimlik": "ad-entegrasyon"}` |
    | T5 | Kütüphane/araç, skill yok | `{"repo": "owner/ad", "tip": "T5"}` + `notlar/referans/kutuphaneler.md`'ye satır |
+   | KAYIP | Repo silindi/private oldu; arşivdeki kopya korunsun | `tip`'i `"KAYIP"` yap |
    | T6 | Tasarım teknolojisi, skill yok | `{"repo": "owner/ad", "tip": "T6"}` + `notlar/referans/tasarim-teknolojileri.md`'ye kart |
 
    Alanlar:

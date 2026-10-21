@@ -30,7 +30,15 @@ def json_oku(yol, varsayilan=None):
 
 
 def json_yaz(yol, veri):
-    Path(yol).write_text(json.dumps(veri, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    """Atomik yazım: önce geçici dosya, sonra yerine taşı (yarım JSON kalmaz)."""
+    yol = Path(yol)
+    gecici = yol.with_name(f".{yol.name}.tmp")
+    gecici.write_text(json.dumps(veri, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(gecici, yol)
+
+
+class GhBulunamadi(RuntimeError):
+    """GitHub 404/422: kaynak yok, private olmuş ya da commit geçmişi yeniden yazılmış."""
 
 
 def gh_api(yol, deneme=4):
@@ -38,6 +46,8 @@ def gh_api(yol, deneme=4):
         r = subprocess.run(["gh", "api", yol], capture_output=True, text=True)
         if r.returncode == 0:
             return json.loads(r.stdout)
+        if "HTTP 404" in r.stderr or "HTTP 422" in r.stderr:
+            raise GhBulunamadi(f"{yol}: {r.stderr.strip()[:200]}")
         time.sleep(2 * (i + 1))
     raise RuntimeError(f"gh api başarısız: {yol}: {r.stderr.strip()}")
 
@@ -46,10 +56,19 @@ def git_blob_hash(veri: bytes) -> str:
     return hashlib.sha1(b"blob %d\0" % len(veri) + veri).hexdigest()
 
 
+GURULTU = re.compile(r"(^|/)(\.DS_Store|__pycache__|\.git|Thumbs\.db|\.ipynb_checkpoints)(/|$)|\.pyc$")
+
+
+def onemli_dosyalar(klasor: Path):
+    """İçerik karşılaştırmasına giren dosyalar: KAYNAK.md ve işletim sistemi/çalışma çöpleri hariç."""
+    return sorted(p for p in klasor.rglob("*") if p.is_file() and p.name != "KAYNAK.md"
+                  and not GURULTU.search(str(p.relative_to(klasor))))
+
+
 def klasor_hash(klasor: Path) -> str:
     """Klasör içeriğinin kimliği: (göreli yol, git blob hash) listesinin sha256'sı."""
     h = hashlib.sha256()
-    for f in sorted(p for p in klasor.rglob("*") if p.is_file() and p.name != "KAYNAK.md"):
+    for f in onemli_dosyalar(klasor):
         h.update(str(f.relative_to(klasor)).encode())
         h.update(git_blob_hash(f.read_bytes()).encode())
     return h.hexdigest()
@@ -61,28 +80,25 @@ def skill_md_hash(klasor: Path):
 
 
 def frontmatter(metin: str) -> dict:
-    """SKILL.md başındaki YAML frontmatter'ı basitçe okur (name, description vb.)."""
-    m = re.match(r"^---\s*\n(.*?)\n---\s*(\n|$)", metin, re.S)
+    """SKILL.md başındaki YAML frontmatter'ı basitçe okur (üst düzey anahtarlar; çok satırlı değerler birleştirilir)."""
+    m = re.match(r"^\ufeff?---\s*\r?\n(.*?)\r?\n---\s*(\r?\n|$)", metin, re.S)
     if not m:
         return {}
     sonuc, anahtar, blok = {}, None, []
+
+    def kapat():
+        if anahtar is not None:
+            sonuc[anahtar] = " ".join(s.strip() for s in blok if s.strip()).strip().strip("'\"")
+
     for satir in m.group(1).splitlines():
         km = re.match(r"^([A-Za-z0-9_-]+):\s*(.*)$", satir)
-        if km and not satir.startswith(" "):
-            if anahtar and blok:
-                sonuc[anahtar] = " ".join(s.strip() for s in blok).strip()
+        if km and not satir[:1].isspace():
+            kapat()
             anahtar, deger = km.group(1), km.group(2).strip()
-            if deger in (">", "|", ">-", "|-", ""):
-                blok = []
-            else:
-                sonuc[anahtar] = deger.strip("'\"")
-                blok = []
-                if not deger:
-                    blok = []
+            blok = [] if deger in (">", "|", ">-", "|-", ">+", "|+", "") else [deger]
         elif anahtar is not None:
             blok.append(satir)
-    if anahtar and blok:
-        sonuc[anahtar] = " ".join(s.strip() for s in blok).strip()
+    kapat()
     return sonuc
 
 
@@ -90,14 +106,14 @@ def boyut(klasor: Path) -> int:
     return sum(p.stat().st_size for p in klasor.rglob("*") if p.is_file())
 
 
-def global_durum(ad: str, sm_hash: str) -> dict:
-    """Aynı isimli skill global klasörlerde var mı, içerik aynı mı? (salt okuma)"""
+def global_durum(ad: str, ana_hash: str) -> dict:
+    """Aynı isimli skill global klasörlerde var mı, TÜM klasör içeriği aynı mı? (salt okuma, anlık)"""
     durum = {}
     for arac, klasor in GLOBAL_KLASORLER.items():
-        f = klasor / ad / "SKILL.md"
-        if f.exists():
+        d = klasor / ad
+        if (d / "SKILL.md").exists():
             try:
-                durum[arac] = "ayni" if git_blob_hash(f.read_bytes()) == sm_hash else "farkli"
+                durum[arac] = "ayni" if klasor_hash(d.resolve()) == ana_hash else "farkli"
             except OSError:
                 durum[arac] = "okunamadi"
     return durum

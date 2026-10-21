@@ -21,7 +21,7 @@
 
 1. **İhtiyaç:** proje tipi, kullanılacak teknoloji, agent'lar.
 2. **Öneri:** `--oner "..."` kütüphanedeki tüm skilleri (gizliler dahil sayılır) puanlar; hangi rolün uygun olduğunu söyler.
-3. **Kuru çalıştırma:** `--kuru` hiçbir şey değiştirmeden ön kontrol raporunu üretir (`.skill-kutuphanesi/son-rapor.md`).
+3. **Kuru çalıştırma:** `--kuru` ön kontrol raporunu ekrana yazar; projeye **hiçbir dosya yazmaz**. (Uygulanan kurulumun raporu `.skill-kutuphanesi/son-rapor.md`'ye kaydedilir.)
 4. **Onay:** HATA varsa işlem yapılmaz. UYARI varsa sen onaylarsın (`--evet`).
 5. **Kurulum:** Önce otomatik yedek alınır. Bir adım hata verirse her şey yedekten geri alınır.
 6. **Doğrulama:** Her kopyanın, bağlantının, agent dosyasının ve Codex yolunun çalıştığı kontrol edilir.
@@ -59,7 +59,7 @@ urun-3d/
 └─ .skill-kutuphanesi/
    ├─ kilit.json                         ← hangi skill, hangi commit, hangi rol, içerik parmak izi
    ├─ son-rapor.md                       ← son ön kontrol raporu
-   └─ yedek/                             ← son 5 işlemin yedeği
+   └─ yedek/                             ← son 10 işlemin yedeği (`--yedekler`)
 ```
 
 ## Örnek 2 — Var olan projeye tek agent ve birkaç skill
@@ -102,6 +102,8 @@ Agent `SkillKutuphanesi/CLAUDE.md` (Codex: `AGENTS.md`) talimatına göre:
 python3 araclar/skill-ekle.py <proje> --kaldir gsap-core --evet   # tek skill
 python3 araclar/skill-ekle.py <proje> --kaldir hepsi --evet       # kütüphaneden gelen her şey
 python3 araclar/skill-ekle.py <proje> --geri-al                   # son işlemi geri al
+python3 araclar/skill-ekle.py <proje> --yedekler                  # yedekleri listele
+python3 araclar/skill-ekle.py <proje> --geri-al <yedek-adi>       # belirli bir yedeğe dön (geri almayı geri almak dahil)
 ```
 `--kaldir` sadece kütüphaneden gelmiş ve elle değiştirilmemiş skilleri siler. Senin eklediğin skillere dokunmaz.
 

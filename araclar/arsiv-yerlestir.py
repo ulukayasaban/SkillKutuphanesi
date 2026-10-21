@@ -9,7 +9,9 @@ Kurallar:
 - Elle yapılan inceleme alanları korunur (ELLE_ALANLAR).
 Kullanım: python3 araclar/arsiv-yerlestir.py
 """
+import hashlib
 import math
+import os
 import re
 import shutil
 import sys
@@ -176,14 +178,16 @@ def main():
     manifest = json_oku(GECICI / "cekilen" / "manifest.json")
     if not manifest:
         sys.exit("Önce araclar/kaynak-cek.py çalıştır.")
-    eksik = [m for m in manifest["kayitlar"] if m["inen_dosya"] < m["beklenen_dosya"]]
+    eksik = [m for m in manifest["kayitlar"] if m["inen_dosya"] < m["beklenen_dosya"] or m.get("varyant_eksik")]
     if eksik:
         sys.exit("HATA: eksik inen skiller: " + ", ".join(f"{m['repo']}:{m['klasor_adi']}" for m in eksik))
     kural = json_oku(KURALLAR, {})
     kategoriler = json_oku(KATEGORILER)
     gelistiriciler = json_oku(GELISTIRICILER, {"repolar": {}})["repolar"]
     gecerli_kat = {f"{a}/{k}" for a, v in kategoriler["alanlar"].items() for k in v["kategoriler"]}
-    eski = {s["id"]: s for s in json_oku(REGISTRY, {"skiller": []})["skiller"]}
+    eski_liste = json_oku(REGISTRY, {"skiller": []})["skiller"]
+    # Elle inceleme alanları KAYNAĞA (repo + repo içi yol) bağlıdır; öncelik değişip id kaysa bile doğru skill'e gider
+    eski_kaynak = {(s["repo"], s["kaynak_yol"]): s for s in eski_liste}
 
     gruplar = {}
     for k in manifest["kayitlar"]:
@@ -193,6 +197,7 @@ def main():
             print(f"UYARI: SKILL.md inmemiş -> {k['repo']}:{k['kaynak_yol']}")
             continue
         k["_smh"] = skill_md_hash(k["_yerel"])
+        k["_kh"] = klasor_hash(k["_yerel"])
         gruplar.setdefault(k["ad"], []).append(k)
 
     yeni, kullanilan = [], set()
@@ -200,7 +205,7 @@ def main():
         liste.sort(key=lambda x: (x["oncelik"], x["repo"], x["kaynak_yol"]))
         tekil = []
         for k in liste:
-            ayni = next((t for t in tekil if t["_smh"] == k["_smh"]), None)
+            ayni = next((t for t in tekil if t["_kh"] == k["_kh"]), None)  # TÜM klasör aynıysa kopya
             if ayni:
                 ayni.setdefault("kopya_kaynaklar", []).append(f"{k['repo']}:{k['kaynak_yol'] or '.'}")
             else:
@@ -226,7 +231,7 @@ def main():
     skiller = []
     bugun = date.today().isoformat()
     for k in yeni:
-        onceki = eski.get(k["id"], {})
+        onceki = eski_kaynak.get((k["repo"], k["kaynak_yol"]), {})
         kat = onceki["kategori"] if onceki.get("kategori_elle") else kurallari_uygula(kural, k)
         if k["tip"] == "T4":
             kat = "e-entegrasyon-katalogu/01-uygulama-entegrasyonlari"
@@ -246,7 +251,11 @@ def main():
         fm = frontmatter(metin)
         tum_metin = metin  # teknoloji tespiti sadece SKILL.md'den (referans dosyaları gürültü yapıyor)
         gel = gelistiriciler.get(k["repo"])
-        yol_bag = sorted(set(re.findall(r"\.(claude|agents|codex)/skills/" + re.escape(k["klasor_adi"]) + r"\b", metin)))
+        adlar = "|".join(re.escape(x) for x in {k["klasor_adi"].split("~")[0], k["ad"]})
+        yol_bag = sorted(set(re.findall(r"\.(?:claude|agents|codex)/skills/(?:" + adlar + r")\b", metin)))
+        ana_hash = klasor_hash(hedef)
+        varyant_hash = {a: klasor_hash(YENI / Path(v).relative_to("arsiv")) for a, v in varyantlar.items()}
+        kurulum_hash = hashlib.sha256((ana_hash + "".join(f"|{a}:{h}" for a, h in sorted(varyant_hash.items()))).encode()).hexdigest()
         kayit = {
             "id": k["id"], "ad": k["ad"], "durum": k["durum"], "kategori": kat, "alan": kat.split("/")[0],
             "yol": goreli(hedef), "varyantlar": varyantlar,
@@ -264,8 +273,10 @@ def main():
             "kirik_baglantilar": kirik_baglantilar(hedef),
             "baglam_yuku": baglam_yuku(hedef), "boyut_kb": round(boyut(hedef) / 1024),
             "skill_md_kb": round((hedef / "SKILL.md").stat().st_size / 1024, 1),
-            "skill_md_hash": k["_smh"], "klasor_hash": klasor_hash(hedef),
-            "globalde": global_durum(k["ad"], k["_smh"]),
+            "klasor_adi": k["klasor_adi"].split("~")[0],
+            "skill_md_hash": k["_smh"], "ana_hash": ana_hash, "varyant_hash": varyant_hash,
+            "klasor_hash": kurulum_hash,  # ana + araç sürümleri: herhangi biri değişirse güncelleme görünür
+            "globalde": global_durum(k["ad"], ana_hash),
             "gelistirici": gel or {}, "inceleme": "otomatik",
         }
         for alan in ELLE_ALANLAR:
@@ -277,6 +288,22 @@ def main():
         (hedef / "KAYNAK.md").write_text(kaynak_md({**k, **kayit}), encoding="utf-8")
         skiller.append(kayit)
 
+    # KAYIP kaynaklar (silinmiş/private olmuş repo): eski arşiv kopyaları ve kayıtları olduğu gibi korunur
+    kayip = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] == "KAYIP"}
+    for s in eski_liste:
+        if s["repo"] not in kayip or any(x["id"] == s["id"] for x in skiller):
+            continue
+        eski_yol = KOK / s["yol"]
+        if not (eski_yol / "SKILL.md").exists():
+            print(f"UYARI: KAYIP kaynağın arşiv kopyası da yok: {s['yol']}")
+            continue
+        shutil.copytree(eski_yol, YENI / Path(s["yol"]).relative_to("arsiv"))
+        for v in (s.get("varyantlar") or {}).values():
+            if (KOK / v).exists():
+                shutil.copytree(KOK / v, YENI / Path(v).relative_to("arsiv"))
+        s["kaynak_durumu"] = "kayip"
+        skiller.append(s)
+
     bilesenler = []
     for b in manifest.get("bilesenler", []):
         h = YENI / "_bilesenler" / b["kimlik"] / b["yol"]
@@ -286,16 +313,24 @@ def main():
         bilesenler.append({"repo": b["repo"], "commit": b["commit"], "tur": tur, "kaynak_yol": b["yol"],
                            "yol": goreli(h), "ad": Path(b["yol"]).stem})
 
+    skiller.sort(key=lambda s: (s["kategori"], s["id"]))
+    reg_yeni = KOK / ".registry-yeni.json"
+    json_yaz(reg_yeni, {"_aciklama": "TEK GERÇEK KAYNAK. araclar/arsiv-yerlestir.py üretir; inceleme alanları elle doldurulur ve korunur.",
+                        "guncelleme": bugun, "skiller": skiller, "bilesenler": bilesenler,
+                        "denetim": manifest.get("denetim", {})})
+    # Yer değiştirme: önce her şey hazır, sonra iki hızlı rename
     eski_arsiv = KOK / ".arsiv-eski"
     shutil.rmtree(eski_arsiv, ignore_errors=True)
     if ARSIV.exists():
         ARSIV.rename(eski_arsiv)
-    YENI.rename(ARSIV)
+    try:
+        YENI.rename(ARSIV)
+        os.replace(reg_yeni, REGISTRY)
+    except Exception:
+        if eski_arsiv.exists() and not ARSIV.exists():
+            eski_arsiv.rename(ARSIV)
+        raise
     shutil.rmtree(eski_arsiv, ignore_errors=True)
-    skiller.sort(key=lambda s: (s["kategori"], s["id"]))
-    json_yaz(REGISTRY, {"_aciklama": "TEK GERÇEK KAYNAK. araclar/arsiv-yerlestir.py üretir; inceleme alanları elle doldurulur ve korunur.",
-                        "guncelleme": bugun, "skiller": skiller, "bilesenler": bilesenler,
-                        "denetim": manifest.get("denetim", {})})
     tercih = sum(1 for s in skiller if s["durum"] == "tercih")
     print(f"Arşive yerleşen: {len(skiller)} (tercih {tercih}, alternatif {len(skiller) - tercih}, "
           f"gizli {sum(s['gizli'] for s in skiller)}, araç sürümlü {sum(1 for s in skiller if s['varyantlar'])}, "
