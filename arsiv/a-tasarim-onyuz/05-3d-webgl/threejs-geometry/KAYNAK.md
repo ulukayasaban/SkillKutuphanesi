@@ -7,6 +7,6 @@
 - **Commit:** `0e181866f095b5f06d005133876e926515390d95`
 - **Lisans:** MIT
 - **Geliştirici:** CloudAI-X (kisi)
-- **Değerlendirme:** 82/100 (A)
+- **Değerlendirme:** 81/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

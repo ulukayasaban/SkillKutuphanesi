@@ -7,10 +7,11 @@
     "playwright-cli"
   ],
   "opsiyonel": [
-    "react-doctor",
     "browser-testing-with-devtools",
     "performance-optimization",
     "impeccable",
-    "web-design-guidelines"
+    "web-design-guidelines",
+    "playwright-trace",
+    "playwright-component-testing"
   ]
 }
