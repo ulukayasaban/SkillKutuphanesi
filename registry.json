@@ -3994,7 +3994,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -4007,7 +4007,32 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Barba.js ile çok sayfalı sitelerde SPA benzeri sayfa geçişleri: wrapper/container yapısı, transition hook'ları, view'lar, prefetch ve GSAP ile geçiş animasyonları; proje kurulum ve geçiş üreteci betikleri.",
+      "kullanim_alani": "Statik/çok sayfalı (CMS, Webflow benzeri) sitelerde sayfalar arası animasyonlu geçiş.",
+      "kullanma": "React/Next/Astro gibi kendi yönlendiricisi olan projeler (View Transitions API veya çatı çözümü daha uygun); geçişin önemsiz olduğu sayfalar.",
+      "teknoloji": [
+        "barba 2",
+        "gsap 3.15"
+      ],
+      "gerekli_paketler": [
+        "@barba/core",
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "scroll-deneyim"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. @barba/core v2 API'si hâlâ geçerli; ama native View Transitions API (artık tüm büyük tarayıcılarda) alternatifinden bahsetmiyor ve Locomotive v4 entegrasyonu eski. 129 KB.",
+      "ortusme_grubu": "sayfa-gecisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-scrolltrigger",
@@ -4072,7 +4097,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -4085,7 +4110,36 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Resmî GSAP ScrollTrigger skilli: scroll'a bağlı animasyon, pin, scrub, start/end, toggleActions, batch, matchMedia, React'te useGSAP ile temizlik, refresh ve smooth scroll (ScrollSmoother/Lenis) ile birlikte kullanım.",
+      "kullanim_alani": "Scroll ile tetiklenen veya scroll'a bağlı (scrub) animasyon, pinlenen bölümler, parallax, yatay kaydırma bölümleri.",
+      "kullanma": "Sadece görünür olunca basit fade (CSS scroll-driven animation veya IntersectionObserver yeter).",
+      "teknoloji": [
+        "gsap 3.15",
+        "scrolltrigger",
+        "lenis 1.3"
+      ],
+      "gerekli_paketler": [
+        "gsap",
+        "@gsap/react (React)"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi",
+        "landing-page",
+        "3d-urun-sergisi",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "scroll-deneyim",
+        "motion-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). scroll-deneyimi grubunun birincili: resmî, güncel, kısa (18 KB) ve kütüphane seviyesinde varsayılan. freshtechbro kopyası daha uzun ama eski; locomotive v4 entegrasyonu içeriyor. OpenMontage kopyası birebir aynı.",
+      "ortusme_grubu": "scroll-deneyimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-scrolltrigger@freshtechbro",
@@ -4153,7 +4207,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -4166,7 +4220,31 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "GSAP tween/timeline temelleri ile ScrollTrigger'ı tek skillde anlatan kapsamlı rehber: pin, scrub, parallax, yatay kaydırma, batch, Three.js ve React entegrasyonu, görüntü dizisi scrub'ı, easing görselleştirici ve başlangıç projesi.",
+      "kullanim_alani": "Tek dosyada hem GSAP temeli hem ScrollTrigger örnek koleksiyonu istendiğinde; görüntü dizisi (image sequence) scrub örneği için.",
+      "kullanma": "Normalde: resmî gsap-scrolltrigger + gsap-core daha güncel ve doğru; Locomotive Scroll entegrasyon bölümü eski v4 API'sine dayanıyor.",
+      "teknoloji": [
+        "gsap 3.15",
+        "scrolltrigger",
+        "three.js",
+        "react"
+      ],
+      "gerekli_paketler": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Örnek zengin ama resmî skillerle örtüşüyor; 159 KB, freshtechbro 2025-11'den beri güncellenmedi.",
+      "ortusme_grubu": "scroll-deneyimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "locomotive-scroll",
@@ -4231,7 +4309,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -4244,7 +4322,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Locomotive Scroll ile smooth scroll, data-scroll öznitelikleriyle parallax ve görünürlük tespiti, ScrollTrigger entegrasyonu; yapılandırma ve entegrasyon yardımcı betikleri, Vite başlangıç projesi.",
+      "kullanim_alani": "Projede Locomotive Scroll v4 zaten kullanılıyorsa bakım için.",
+      "kullanma": "Yeni projeler: Lenis (gsap-scrolltrigger ve scroll-craft içinde anlatılıyor) tercih edilmeli; Locomotive v5 Lenis tabanlı ve API'si farklı.",
+      "teknoloji": [
+        "locomotive-scroll 4",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "locomotive-scroll@4"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Eski v4 API'si (data-scroll-container, scrollerProxy); başlangıç projesi ^4.1.4. Locomotive Scroll v5 (Lenis üzerine) bu kalıpları değiştirdi; native scroll'u ele geçiren v4 yaklaşımı sticky/erişilebilirlik sorunları çıkarır.",
+      "ortusme_grubu": "scroll-deneyimi",
+      "ortusme_rolu": "alternatif",
+      "notlar": "Locomotive v4 API; yeni projede Lenis + ScrollTrigger kullan.",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "scroll-craft",
@@ -4310,7 +4410,7 @@
         "ana_sayfa": "https://github.com/nateherkai/scroll-craft",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -4323,7 +4423,39 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Hizmet, ürün, yiyecek-içecek markaları için premium scroll odaklı landing page üreten uçtan uca iş akışı: brief röportajı, sayfa grameri, müşteri yolculuğu ve duygu eğrisi, imza hareketi, katmanlı (çok düzlemli) hero, kendi scroll motoru (scrollcraft.js/css) ve masaüstü/mobil/reduced-motion ekran görüntüsüyle doğrulama. İsteğe bağlı olarak kie.ai ile fotogerçekçi görsel/video üretir.",
+      "kullanim_alani": "'Deneyim gibi' hissettiren, şablon görünmeyen scroll hikâyesi/kampanya sitesi sıfırdan kurulurken; sanat yönetimi + uygulama + görsel doğrulama birlikte isteniyorsa.",
+      "kullanma": "Var olan React/Next projesine birkaç scroll animasyonu eklemek (gsap-scrolltrigger); uzun içerikli doküman/uygulama ekranları; Node ve Chrome/Chromium yoksa doğrulama betikleri çalışmaz.",
+      "teknoloji": [
+        "html",
+        "css",
+        "javascript",
+        "node",
+        "chromium",
+        "kie.ai"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "Chrome/Edge/Chromium",
+        "ffmpeg (encode.sh)",
+        "KIE_AI_API_KEY (isteğe bağlı, görsel üretimi)"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi",
+        "landing-page",
+        "3d-urun-sergisi"
+      ],
+      "roller": [
+        "scroll-deneyim"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Site seviyesinde sanat yönetimi ve doğrulama; ScrollTrigger'ın yerine değil üstüne gelir (kendi hafif motorunu kullanır). Aktif (0.3.1, 2026-09-30; serve.mjs varsayılan 127.0.0.1). Dikkat: kie.mjs görsel üretimi için api.kie.ai'ye istek atar ve KIE_AI_API_KEY ister (ücretli); 24 KB SKILL.md + çok sayıda referans, bağlam yükü yüksek.",
+      "ortusme_grubu": "scroll-deneyimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "scroll-reveal-libraries",
@@ -4389,7 +4521,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -4402,7 +4534,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "AOS (Animate On Scroll) ile data-aos öznitelikleri üzerinden basit fade/slide/zoom scroll açılış animasyonları; animasyon kataloğu ve yapılandırma üreteci betikleri.",
+      "kullanim_alani": "Projede AOS zaten varsa veya derleme adımı olmayan çok basit statik sayfada hızlı açılış efekti.",
+      "kullanma": "Yeni projeler: CSS scroll-driven animations (animation-timeline: view()) veya IntersectionObserver + CSS, ya da gsap-scrolltrigger batch daha güncel ve hafif.",
+      "teknoloji": [
+        "aos",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "aos@next"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. AOS uzun süredir bakımsız (aos@next hâlâ beta); skill native CSS scroll-driven animation seçeneğinden hiç bahsetmiyor.",
+      "ortusme_grubu": "scroll-deneyimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "aframe-webxr",
