@@ -88883,7 +88883,8 @@
           "yapı 3/5",
           "elle kalite 3/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "notlar": "Kırık bağlantılar (SKILL.md, references/step-3-storyboard.md, references/beat-builder-guide.md): ../hyperframes/references/techniques.md ve ../hyperframes/references/html-in-canvas-patterns.md. Bu skill heygen-com/hyperframes v0.7.17'den alınmış eski bir kopya; dosyalar upstream'de hyperframes-animation skilline taşındı: hyperframes-animation/techniques.md ve hyperframes-animation/adapters/html-in-canvas-patterns.md. Skill upstream'de kaldırıldı; site turu ve web sitesinden tanıtım için product-launch-video kullan. Yine de kurulursa hyperframes-animation'ı da ekle ve bu iki dosyayı oradan oku."
     },
     {
       "id": "acestep",

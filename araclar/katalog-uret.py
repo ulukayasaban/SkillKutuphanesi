@@ -117,8 +117,10 @@ def main():
                        f"- **Boyut:** {s['boyut_kb']} KB (SKILL.md {s['skill_md_kb']} KB, yük {s['baglam_yuku']})"
                        + (f" · **Bağımlılık:** {s['bagimlilik']}" if s.get("bagimlilik") else "")
                        + (f" · **Kırık bağlantı:** {len(s['kirik_baglantilar'])}" if s.get("kirik_baglantilar") else ""),
-                       f"- **İnceleme:** {s.get('inceleme', 'otomatik')}" + (f" · kalite {s['kalite']}/5 — {s.get('kalite_notu', '')}" if s.get("kalite") else ""),
-                       ""]
+                       f"- **İnceleme:** {s.get('inceleme', 'otomatik')}" + (f" · kalite {s['kalite']}/5 — {s.get('kalite_notu', '')}" if s.get("kalite") else "")]
+                if s.get("notlar"):
+                    md.append(f"- **Not:** {s['notlar']}")
+                md.append("")
             yol = KOK / "notlar" / a / f"{k}.md"
             yol.parent.mkdir(parents=True, exist_ok=True)
             yol.write_text("\n".join(md), encoding="utf-8")

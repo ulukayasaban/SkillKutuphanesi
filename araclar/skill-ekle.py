@@ -632,6 +632,8 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                 rapor.ekle("BİLGİ", "kardes-yol", f"{ad}: ../{kad}/ bağlantıları projedeki ada çevrilecek: ../{kurulum}/")
         if s.get("bagimlilik"):
             rapor.ekle("UYARI", "bagimlilik", f"{ad}: {s['bagimlilik']}")
+        if s.get("notlar"):
+            rapor.ekle("BİLGİ", "inceleme-notu", f"{ad}: {s['notlar']}")
         if s.get("gizli"):
             rapor.ekle("BİLGİ", "gizli-katalog", f"{ad}: varsayılan listede gizli kategoriden ({s['kategori']})")
         if s.get("ust_skill"):
