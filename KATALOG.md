@@ -434,20 +434,20 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_ ·
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `batch-operations` | ⭐ | Apply operations across multiple files simultaneously. Pattern-based bulk modifications, search-and-replace across codebases, consistent cha… | git, node, typescript | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `behavioral-modes` | ⭐ | AI operational modes (brainstorm, implement, debug, review, teach, ship, orchestrate). Use to adapt behavior based on task type. | node, typescript | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `context-compression` | ⭐ | Manage and compress conversation context in long sessions. Detect when context is growing large, summarize completed work phases, archive ol… | api-anahtari, next.js, typescript | ✅ | 89 A | S 5KB | - | vudovn/ag-kit |
-| `context-engineering` | ⭐ | Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when yo… | api-anahtari, css, git, node, react | ✅ | 91 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `coordinator-mode` | ⭐ | Advanced multi-agent orchestration with parallel workers, synthesis protocols, and coordinator lifecycle. Use when complex tasks require mul… | api-anahtari, typescript | ✅ | 89 A | S 8KB | - | vudovn/ag-kit |
-| `diagnosing-superpowers` | ⭐ | Use when a superpowers session went wrong and your human partner wants to know why — repeated work, ignored plans, stumbles, poor results, a… | api-anahtari | ✅ | 93 A | S 41KB | - | obra/superpowers |
-| `discernment-nudge` | ⭐ | After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, p… | html | ✅ | 86 A | M 21KB | - | anthropics/skills |
-| `dispatching-parallel-agents` | ⭐ | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies | typescript | ✅ | 93 A | S 6KB | - | obra/superpowers |
-| `intelligent-routing` | ⭐ | Automatic agent selection and intelligent task routing. Analyzes user requests and automatically selects the best specialist agent(s) withou… | api-anahtari, css, docker, html, node | ✅ | 87 A | M 11KB | - | vudovn/ag-kit |
-| `memory-system` | ⭐ | Persistent cross-session memory management. Enables agents to remember user preferences, project conventions, and past decisions across diff… | api-anahtari, git, node, tailwind | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `parallel-agents` | ⭐ | Multi-agent orchestration patterns. Use when multiple independent tasks can run with different domain expertise or when comprehensive analys… | react | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `subagent-driven-development` | ⭐ | Use when executing implementation plans with independent tasks in the current session | api-anahtari, git | ✅ | 88 A | L 58KB | - | obra/superpowers |
-| `using-agent-skills` | ⭐ | Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to the piece of … | git | ✅ | 91 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `using-superpowers` | ⭐ | Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarif… | git | ✅ | 93 A | S 20KB | - | obra/superpowers |
+| `batch-operations` | ⭐ birincil | Birçok dosyaya aynı değişikliği güvenle uygulama protokolü: deseni tanımla, önce grep ile etkilenen dosyaları önizle, toplu uygula, sonra do… | bash, git | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
+| `behavioral-modes` | ⭐ alternatif | Görev türüne göre yedi çalışma modu tanımlar (brainstorm, implement, debug, review, teach, ship, orchestrate); her mod için davranış kuralla… | node, typescript | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
+| `context-compression` | ⭐ tamamlayıcı | Uzun oturumlarda bağlamı sıkıştırma: büyük araç çıktılarını anlamsal özete indirme (mikro), biten iş aşamalarını özetleme ve oturum kontrol … | api-anahtari, next.js, typescript | ✅ | 89 A | S 5KB | - | vudovn/ag-kit |
+| `context-engineering` | ⭐ birincil | Agent'a doğru bağlamı doğru zamanda verme: kalıcıdan geçiciye bağlam hiyerarşisi (kural dosyaları CLAUDE.md/AGENTS.md, spec, ilgili kaynak d… | markdown | ✅ | 91 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `coordinator-mode` | ⭐ alternatif | Koordinatör olarak çok agent'lı orkestrasyon: görevi ayrıştır, sınıflandır (araştırma/uygulama/doğrulama), okuma işlerini paralel yazma işle… | api-anahtari, typescript | ✅ | 89 A | S 8KB | - | vudovn/ag-kit |
+| `diagnosing-superpowers` | ⭐ tamamlayıcı | Bir superpowers oturumu kötü gittiğinde (tekrar eden iş, yok sayılan plan, tetiklenmeyen skill, pahalılık) diskteki transkriptleri okuyup ka… | bash, jsonl | ✅ | 93 A | S 41KB | - | obra/superpowers |
+| `discernment-nudge` | ⭐ birincil | Kullanıcının üzerine karar vereceği önemli bir cevap ya da taslaktan sonra, cevaptaki belirli noktalara bağlı 2-3 kısa takip sorusu ekler: ö… | html | ✅ | 86 A | M 21KB | - | anthropics/skills |
+| `dispatching-parallel-agents` | ⭐ tamamlayıcı | Bağımsız 2+ problemi (farklı test dosyaları, alt sistemler) her birine izole bağlamlı ayrı bir agent vererek paralel çözme kalıbı: bağımsız … | typescript | ✅ | 93 A | S 6KB | - | obra/superpowers |
+| `intelligent-routing` | ⭐ alternatif | Her kullanıcı isteğini sessizce analiz edip anahtar kelime/alan/karmaşıklığa göre uygun uzman agent'ı (security-auditor, frontend-specialist… | api-anahtari, css, docker, html, node | ✅ | 87 A | M 11KB | - | vudovn/ag-kit |
+| `memory-system` | ⭐ birincil | Oturumlar arası kalıcı bellek: .agents/memory/MEMORY.md indeksi (en fazla 200 satır) ve konu dosyaları (kullanıcı tercihleri, proje kurallar… | markdown | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
+| `parallel-agents` | ⭐ alternatif | Güvenli paralel agent kullanımı: ne zaman paralelleştirilir/paralelleştirilmez, çalışma ortamından bağımsız yetenek keşfi, güven sınırı, del… | react | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
+| `subagent-driven-development` | ⭐ birincil | Yazılı uygulama planını görev başına taze bir uygulayıcı alt-agent göndererek yürütür; her görevden sonra spec uyumu + kod kalitesi inceleme… | git, bash | ✅ | 88 A | L 58KB | - | obra/superpowers |
+| `using-agent-skills` | ⭐ birincil | addyosmani/agent-skills ailesinin meta-skill'i: işin geliştirme aşamasına göre hangi skill'in uygulanacağını gösteren karar ağacı (interview… | git | ✅ | 91 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `using-superpowers` | ⭐ alternatif | superpowers ailesinin meta-skill'i: '%1 ihtimal bile varsa skill'i çağır' kuralı, süreç skillerinin önceliği, rasyonalizasyon kırmızı bayrak… | git | ✅ | 93 A | S 20KB | - | obra/superpowers |
 
 ### 03-web-arastirma-veri
 

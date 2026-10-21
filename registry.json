@@ -19568,7 +19568,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -19581,7 +19581,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Birçok dosyaya aynı değişikliği güvenle uygulama protokolü: deseni tanımla, önce grep ile etkilenen dosyaları önizle, toplu uygula, sonra doğrula (sayım, derleme, test). Yeniden adlandırma, import ekleme, sürüm güncelleme gibi yaygın kalıplar ve güvenlik kuralları içerir.",
+      "kullanim_alani": "Kod tabanında desen tabanlı toplu değişiklik: fonksiyon yeniden adlandırma, API geçişi, sürüm numarası güncelleme.",
+      "kullanma": "Tek dosya düzenlemesi ya da her dosyada ayrı yargı gerektiren değişiklik (alt-agent'lara böl). allowed-tools/effort frontmatter alanları Claude Code'a özgü; Codex yok sayar, protokol aynen geçerli.",
+      "teknoloji": [
+        "bash",
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "agent-orkestra"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve doğru 'önizle → uygula → doğrula' disiplini; içerik genel bilgi düzeyinde. Aslında yazılım geliştirme konusu ama alt-agent'a bölme kararıyla bağlantılı.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "behavioral-modes",
@@ -19641,7 +19662,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -19654,7 +19675,21 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Görev türüne göre yedi çalışma modu tanımlar (brainstorm, implement, debug, review, teach, ship, orchestrate); her mod için davranış kuralları ve çıktı biçimi verir.",
+      "kullanim_alani": "ag-kit ailesini kuran projelerde agent'ın tonunu/yaklaşımını göreve göre değiştirmek.",
+      "kullanma": "Diğer ailelerle (superpowers, agent-skills) birlikte — süreç skilleri zaten bu davranışları tanımlıyor ve çakışır; IMPLEMENT modu kütüphanede olmayan 'clean-code' skill'ine atıf yapıyor. allowed-tools Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Genel istem metni; ag-kit'in diğer skillerine bağımlı, ek değeri düşük.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "context-compression",
@@ -19715,7 +19750,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -19728,7 +19763,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Uzun oturumlarda bağlamı sıkıştırma: büyük araç çıktılarını anlamsal özete indirme (mikro), biten iş aşamalarını özetleme ve oturum kontrol noktası yazma; kararları ve değişen dosyaları koruma protokolü.",
+      "kullanim_alani": "20+ turluk oturumlar, agent tekrar etmeye başladığında, iş aşaması değişiminde.",
+      "kullanma": "Kısa oturumlarda; harness otomatik sıkıştırma yapıyorsa (Claude Code/Codex compaction) çoğu zaman gereksiz — yalnızca elle kontrol noktası yazımı için. allowed-tools/effort Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "agent-orkestra"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Üç seviyeli sıkıştırma ve kontrol noktası şablonu kullanışlı; token kazancı rakamları tahmini.",
+      "ortusme_grubu": "baglam-yonetimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "context-engineering",
@@ -19796,7 +19847,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -19809,7 +19860,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Agent'a doğru bağlamı doğru zamanda verme: kalıcıdan geçiciye bağlam hiyerarşisi (kural dosyaları CLAUDE.md/AGENTS.md, spec, ilgili kaynak dosyalar, hata çıktısı, konuşma), yeniden başlatılabilir oturum sınırları ve bağlam paketleme stratejileri.",
+      "kullanim_alani": "Yeni oturum/proje kurulumu, kural dosyası yazımı, agent çıktı kalitesi düştüğünde, kod tabanının farklı bölümüne geçerken.",
+      "kullanma": "Tek seferlik küçük sorularda gereksiz.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "agent-orkestra",
+        "ai-entegrasyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil.",
+      "ortusme_grubu": "baglam-yonetimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "coordinator-mode",
@@ -19869,7 +19942,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -19882,7 +19955,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Koordinatör olarak çok agent'lı orkestrasyon: görevi ayrıştır, sınıflandır (araştırma/uygulama/doğrulama), okuma işlerini paralel yazma işlerini sıralı dağıt, izle, sentezle ve doğrula. 'Anlamayı devretme' kuralı, işçi istem şablonları ve fork kuralları içerir.",
+      "kullanim_alani": "Birden çok alanı kapsayan büyük görevde agent'ın kendisi kod yazmadan işçi alt-agent'ları yönetmesi.",
+      "kullanma": "Tek alanlı işlerde; yazılı bir uygulama planı varsa subagent-driven-development daha disiplinli. allowed-tools içinde Claude Code'un 'Agent' aracı geçiyor; Codex'te alt-agent desteği olan sürümde aynı akış, yoksa işçi görevleri ayrı Codex oturumları/`codex exec` çağrılarıyla çalıştırılır.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. İşçi istemi yazma rehberi ve eşzamanlılık kuralları güçlü; ama plan tabanlı inceleme döngüsü yok. Orkestrasyon grubunda birincil subagent-driven-development.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "diagnosing-superpowers",
@@ -19941,7 +20030,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -19954,7 +20043,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bir superpowers oturumu kötü gittiğinde (tekrar eden iş, yok sayılan plan, tetiklenmeyen skill, pahalılık) diskteki transkriptleri okuyup kanıta dayalı rapor çıkarır; her bulgu path:line ile alıntılanır. Oturum bulma, gizli veri karartma ve GitHub issue paketi rehberleri içerir.",
+      "kullanim_alani": "superpowers skill ailesiyle çalışan oturumların neden yanlış gittiğini incelemek, bakımcılara hata raporu hazırlamak.",
+      "kullanma": "superpowers kullanılmıyorsa; genel kod hata ayıklaması için (systematic-debugging).",
+      "teknoloji": [
+        "bash",
+        "jsonl"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (dar). Kanıt disiplini ve redaksiyon politikası örnek alınacak düzeyde; çok harness'li (Claude Code, Codex vb.) oturum keşfi var. Yalnızca superpowers kullanıcıları için.",
+      "ortusme_grubu": "superpowers-ailesi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "discernment-nudge",
@@ -20013,7 +20119,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -20026,7 +20132,25 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kullanıcının üzerine karar vereceği önemli bir cevap ya da taslaktan sonra, cevaptaki belirli noktalara bağlı 2-3 kısa takip sorusu ekler: önemli olguları doğrulama, varsayımları sorgulama, eksik bağlamı fark etme. Konuşma başına en fazla bir kez; basit sorularda, kodda ve yaratıcı yazıda devreye girmez.",
+      "kullanim_alani": "Tavsiye, plan, tahmin, veri yorumu gibi kullanıcının harekete geçeceği çıktılar üreten sohbet/asistan agent'ları.",
+      "kullanma": "Kod yazan agent'larda (skill zaten kapsam dışı sayar); otomatik iş hatlarında (kullanıcı yokken soru eklemek gürültü).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi; ne zaman kullanılmayacağı ve çıktı biçimi çok net. Orkestrasyon değil 'cevap kalitesi' skill'i; rapor/tavsiye üreten rollere opsiyonel.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "dispatching-parallel-agents",
@@ -20085,7 +20209,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -20098,7 +20222,26 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bağımsız 2+ problemi (farklı test dosyaları, alt sistemler) her birine izole bağlamlı ayrı bir agent vererek paralel çözme kalıbı: bağımsız alanları belirle, odaklı görev istemi yaz, paralel dağıt, sonuçları incele ve birleştir.",
+      "kullanim_alani": "Birbirinden bağımsız birden çok hata/araştırma işini paralel yürütmek.",
+      "kullanma": "Görevler ortak durum paylaşıyor ya da aynı dosyalara yazıyorsa; tek kök nedenli hatalarda. Codex'te alt-agent yoksa paralel `codex exec` süreçleri ya da ayrı worktree'lerle uygulanır.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "agent-orkestra",
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). superpowers; kısa (6 KB), karar ağacı ve istem yapısı net. subagent-driven-development ile birlikte kullanılır.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "intelligent-routing",
@@ -20165,7 +20308,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -20178,7 +20321,23 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Her kullanıcı isteğini sessizce analiz edip anahtar kelime/alan/karmaşıklığa göre uygun uzman agent'ı (security-auditor, frontend-specialist, orchestrator…) otomatik seçen yönlendirme kuralları.",
+      "kullanim_alani": "ag-kit'in uzman agent tanımlarının kurulu olduğu projelerde.",
+      "kullanma": "ag-kit agent'ları (security-auditor, backend-specialist vb.) kurulu değilse — bu kütüphanede yoklar, rol sistemi zaten skill-ekle.py ile kuruluyor. 'Her zaman aktif' talimatı bağlamı ve davranışı etkiler. allowed-tools Claude Code'a özgü.",
+      "teknoloji": [],
+      "gerekli_paketler": [
+        "ag-kit agent tanımları"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Var olmayan agent adlarına bağımlı; bu kütüphanenin rol sistemiyle çakışır.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "memory-system",
@@ -20240,7 +20399,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -20253,7 +20412,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Oturumlar arası kalıcı bellek: .agents/memory/MEMORY.md indeksi (en fazla 200 satır) ve konu dosyaları (kullanıcı tercihleri, proje kuralları, teknik kararlar, geri bildirim); kaydetme, hatırlama, arama işlemleri ve neyin kaydedilmeyeceği kuralları.",
+      "kullanim_alani": "Harness'in yerleşik belleği olmayan ortamlarda (ya da projeye taşınabilir, git'te tutulan bellek istendiğinde) tercih ve kararları saklamak.",
+      "kullanma": "Claude Code'un yerleşik auto-memory'si veya claude-mem gibi bir bellek eklentisi zaten kullanılıyorsa (çift kayıt olur); gizli bilgi saklamak için. Codex'te uygundur — AGENTS.md'ye 'oturum başında .agents/memory/MEMORY.md oku' satırı eklenmeli.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel). İndeks + konu dosyası yapısı sağlam ve Claude Code belleğine benzer; harness belleğiyle çakışma riski var.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "parallel-agents",
@@ -20312,7 +20487,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -20325,7 +20500,21 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Güvenli paralel agent kullanımı: ne zaman paralelleştirilir/paralelleştirilmez, çalışma ortamından bağımsız yetenek keşfi, güven sınırı, delegasyon bütçesi, izolasyon politikası (worktree/sandbox), delegasyon şablonu, ilerleme yok tespiti ve sentez protokolü. Google Antigravity öncelikli yazılmış.",
+      "kullanim_alani": "Güvenlik/izolasyon kuralları önemli olan çok agent'lı işler; delegasyon bütçesi ve izleme gerektiğinde.",
+      "kullanma": "Claude Code/Codex'te Antigravity'ye özgü kısımlar uygulanamaz — genel kurallar geçerli. Plan yürütmek için subagent-driven-development, basit paralel hata ayıklama için dispatching-parallel-agents. allowed-tools/effort Claude Code'a özgü.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Güvenlik ve izolasyon bölümleri iyi; Antigravity odaklı olması diğer harness'lerde gürültü yaratıyor.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "subagent-driven-development",
@@ -20385,7 +20574,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "kardes_bagimliliklari": {
         "requesting-code-review": {
           "id": "requesting-code-review",
@@ -20404,7 +20593,30 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Yazılı uygulama planını görev başına taze bir uygulayıcı alt-agent göndererek yürütür; her görevden sonra spec uyumu + kod kalitesi incelemesi, düzeltme döngüsü ve sonda tüm dal incelemesi yapar. Rol başına model seçimi, karar defteri (ledger), kesintisiz yürütme kuralları ve görev özeti/inceleme paketi betikleri içerir.",
+      "kullanim_alani": "Bağımsız görevlere bölünmüş bir planı tek oturumda yüksek kaliteyle uygulamak.",
+      "kullanma": "Plan yoksa (önce writing-plans/planning-and-task-breakdown); görevler sıkı bağımlıysa; küçük tek dosyalık işlerde. Codex'te alt-agent desteği yoksa her görev için ayrı `codex exec` çağrısı ya da executing-plans ile sıralı yürütme kullanılır.",
+      "teknoloji": [
+        "git",
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "agent-orkestra",
+        "planlayici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Orkestrasyon ailesinde en olgun süreç: görev başına inceleme, düzeltme döngüsü eskalasyonu, model katmanlama ve betik desteği. 32 KB SKILL.md ağır ama tek başına bir yürütme sistemi. coordinator-mode ve parallel-agents alternatif, dispatching-parallel-agents tamamlayıcı.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "using-agent-skills",
@@ -20466,7 +20678,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -20479,7 +20691,21 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "addyosmani/agent-skills ailesinin meta-skill'i: işin geliştirme aşamasına göre hangi skill'in uygulanacağını gösteren karar ağacı (interview-me, spec, plan, incremental-implementation, test, review, ship…) ve temel çalışma davranışları (varsayımları açığa çıkar, karışıklığı yönet, sadeliği koru, kapsamı koru, doğrula).",
+      "kullanim_alani": "agent-skills ailesinden birden çok skill kurulu projelerde oturum başında doğru skill'i seçmek.",
+      "kullanma": "Ailenin skilleri kurulu değilse karar ağacındaki adlar boşa düşer; superpowers ailesi kullanılıyorsa using-superpowers ile birlikte kurma (iki meta-skill çakışır).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil, meta grubunda). Zorlayıcı dil kullanmadan net yönlendirme yapıyor; çalışma davranışları bölümü aileden bağımsız da değerli.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "using-superpowers",
@@ -20538,7 +20764,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -20551,7 +20777,21 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "superpowers ailesinin meta-skill'i: '%1 ihtimal bile varsa skill'i çağır' kuralı, süreç skillerinin önceliği, rasyonalizasyon kırmızı bayrakları ve Claude Code, Codex, Pi, Antigravity, Gemini, Hermes, Muse için araç eşleme dosyaları.",
+      "kullanim_alani": "superpowers ailesinin (brainstorming, writing-plans, systematic-debugging, subagent-driven-development…) birlikte kurulduğu projeler.",
+      "kullanma": "Aile kurulu değilse; agent-skills ailesinin meta-skill'iyle birlikte. Çok agresif tetikleme dili küçük işlerde gereksiz süreç yükü yaratabilir. Codex'te references/codex-tools.md araç eşlemesini kullanır — ek uyarlama gerekmez.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF (meta grubunda). Çok harness'li araç eşlemesi en güçlü yanı; aile dışında kullanılmaz. superpowers ailesi seçilen projede birincil olur.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "agent-reach",
