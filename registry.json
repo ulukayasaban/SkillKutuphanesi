@@ -18692,7 +18692,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 76,
         "not": "B",
@@ -18705,12 +18705,43 @@
           "bağlam yükü 5/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prompt caching, compaction, MCP, Managed Agents, Files/Skills API. Dil algılayıp (Python, TS, Go, Java, C#, PHP, Ruby, cURL) ilgili klasörü okutur; migrate, prompt-audit, upgrade, cost-optimize, build-eval, hillclimb alt komutları içerir.",
+      "kullanim_alani": "Claude çağıran her kod: yeni LLM özelliği, agent/araç tanımı, model geçişi, maliyet optimizasyonu, eval kurma, SDK sürüm yükseltme.",
+      "kullanma": "Projede başka sağlayıcı (OpenAI, Gemini, Ollama…) kullanılıyorsa — skill bunu kendisi kontrol eder. SKILL.md 103 KB: rol bütçesinin büyük kısmını yer; sadece Claude entegrasyonu yapan agent'a ver. Codex'te: WebFetch gibi Claude araç adları geçiyor; Codex'in web/arama aracıyla aynı adımlar uygulanır, içerik ve kod kalıpları aynen geçerli.",
+      "teknoloji": [
+        "anthropic-sdk",
+        "python",
+        "typescript",
+        "go",
+        "java",
+        "csharp",
+        "php",
+        "ruby",
+        "curl"
+      ],
+      "gerekli_paketler": [
+        "anthropic (pip) veya @anthropic-ai/sdk (npm) — dile göre resmi SDK",
+        "ANTHROPIC_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic resmi, sürekli güncel (model listesi 2026-10-06), API kayması uyarı tablosu ve dil başına doğrulanmış kalıplar. Tek eksi: SKILL.md 103 KB, klasör 2.2 MB. claude-opus-4-5-migration'ın işini 'migrate' alt komutu güncel modellerle yapıyor.",
+      "ortusme_grubu": "claude-api-gecis",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "claude-opus-4-5-migration",
       "ad": "claude-opus-4-5-migration",
-      "durum": "tercih",
+      "durum": "alternatif",
       "kategori": "d-ai-otomasyon/01-claude-api-mcp",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/01-claude-api-mcp/claude-opus-4-5-migration",
@@ -18764,7 +18795,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -18777,7 +18808,26 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Sonnet 4.0/4.5 ve Opus 4.1'den Opus 4.5'e tek seferlik geçiş: platforma göre (Anthropic, Bedrock, Vertex, Azure) model dizgelerini değiştirir, desteklenmeyen beta başlığını kaldırır, effort parametresi ekler ve Opus 4.5 davranış farklarına göre (araç aşırı tetikleme, aşırı mühendislik) istem ayarı önerir.",
+      "kullanim_alani": "Yalnızca hedef özellikle Opus 4.5 ise (eski kod tabanlarını tam bu sürüme sabitlemek).",
+      "kullanma": "Güncel modellere (Opus 5.5, Sonnet 5.5, Fable 5.1) geçişte — claude-api 'migrate' alt komutu kullanılmalı. Haiku 4.5 geçişi kapsam dışı.",
+      "teknoloji": [
+        "anthropic-sdk"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. İyi yazılmış ama eskidi: hedef model Opus 4.5 ve 1M bağlam notu artık geçerli değil. Aynı iş claude-api/shared/model-migration.md'de güncel.",
+      "ortusme_grubu": "claude-api-gecis",
+      "ortusme_rolu": "alternatif",
+      "durum_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "connect",
@@ -18839,7 +18889,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -18852,7 +18902,33 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Composio SDK (Python/TS) ile agent'ı Gmail, Slack, GitHub, Notion gibi 1000+ uygulamaya bağlar; e-posta gönderme, issue açma, mesaj atma gibi gerçek eylemler yaptırır. API anahtarı, OAuth akışı, framework desteği ve sorun giderme anlatılır.",
+      "kullanim_alani": "Kendi uygulamasında/agent'ında harici servislere eylem yaptırmak isteyen projeler (Composio kullanmayı kabul ederek).",
+      "kullanma": "Üçüncü taraf aracı servise (Composio) veri/OAuth yetkisi vermek istenmiyorsa; tek bir servis için resmi MCP sunucusu varsa. Gerçek e-posta/mesaj gönderir — onaysız çalıştırma.",
+      "teknoloji": [
+        "composio",
+        "python",
+        "typescript",
+        "oauth"
+      ],
+      "gerekli_paketler": [
+        "composio (pip) veya @composio/core (npm)",
+        "COMPOSIO_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil, Composio grubunda). Kurulum ve kod örnekleri kısa ve çalışır; pazarlama dili yoğun. Araçtan bağımsız (SDK) olduğu için connect-apps'e tercih edildi.",
+      "ortusme_grubu": "composio-baglanti",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "connect-apps",
@@ -18911,7 +18987,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -18924,7 +19000,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code'a `/plugin install composio-toolrouter` ile Composio Tool Router eklentisini kurup 1000+ uygulamada (Gmail, Slack, GitHub, Notion) eylem yaptırmayı anlatan hızlı başlangıç.",
+      "kullanim_alani": "Claude Code kullanıcısının kendi oturumundan harici uygulamalara eylem yaptırması.",
+      "kullanma": "Codex'te plugin komutları yok: Composio'nun MCP sunucusunu `~/.codex/config.toml` içine `[mcp_servers.composio]` olarak ekle ya da SDK tabanlı connect skill'ini kullan. Uygulama koduna entegrasyon için connect.",
+      "teknoloji": [
+        "composio",
+        "claude-code",
+        "mcp"
+      ],
+      "gerekli_paketler": [
+        "composio-toolrouter Claude Code eklentisi",
+        "Composio API anahtarı"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF. Çok kısa bir kurulum tarifi; skill'den çok eklenti reklamı. Claude Code eklenti sistemine bağlı.",
+      "ortusme_grubu": "composio-baglanti",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "langsmith-fetch",
@@ -18985,7 +19082,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -18998,7 +19095,32 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, belirli iz derin incelemesi, hata tespiti, bellek işlemleri, araç çağrıları, süre ve token kullanımını raporlar.",
+      "kullanim_alani": "LangSmith izlemesi açık LangChain/LangGraph agent projelerinde hata ayıklama ve performans analizi.",
+      "kullanma": "LangChain kullanmayan projelerde (Claude Agent SDK, ham API); LangSmith hesabı/API anahtarı yoksa.",
+      "teknoloji": [
+        "langchain",
+        "langgraph",
+        "langsmith",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "langsmith-fetch (pip)",
+        "LANGSMITH_API_KEY",
+        "LANGSMITH_PROJECT"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (dar). İş akışları ve komutlar somut; yalnızca LangSmith ekosistemine yarar. Lisans belirtilmemiş.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-builder",
@@ -19059,7 +19181,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19072,7 +19194,33 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti oluşturma; değerlendirmeyi çalıştıran evaluation.py betiği içerir.",
+      "kullanim_alani": "Harici bir API/servisi agent'lara açan yeni MCP sunucusu yazmak ve değerlendirmek.",
+      "kullanma": "Mevcut bir MCP sunucusunu Claude Code eklentisine bağlamak (mcp-integration); protokol sürüm geçişi/güvenlik denetimi ağırlıklı işler (mcp-builder@vudovn daha güncel).",
+      "teknoloji": [
+        "mcp",
+        "python",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm)",
+        "@modelcontextprotocol/inspector",
+        "anthropic (eval betiği için)"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic resmi, ComposioHQ kopyasından daha güncel ve kısa; dil rehberleri ve eval betiği tek pakette. vudovn sürümü spec/güvenlik tarafını tamamlıyor; birincil bu çünkü uçtan uca iş akışı ve değerlendirme aracı içeriyor.",
+      "ortusme_grubu": "mcp-sunucu-gelistirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-builder@composiohq",
@@ -19134,7 +19282,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19147,7 +19295,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve değerlendirme adımları.",
+      "kullanim_alani": "Eski sürümdeki daha ayrıntılı 'ajan merkezli tasarım ilkeleri' bölümü özellikle istenirse.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/mcp-builder güncel ve daha az bağlam tüketir.",
+      "teknoloji": [
+        "mcp",
+        "python",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm)"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Güncel sürümün eski kopyası (350 satır fark); tasarım ilkeleri bölümü daha uzun ama 'iş akışı araçları' önerisi güncelde dengelenmiş.",
+      "ortusme_grubu": "mcp-sunucu-gelistirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-builder@vudovn",
@@ -19204,7 +19374,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -19217,7 +19387,28 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/çıktı şemaları, $ref güvenliği, araç/kaynak/istem tasarımı, güvenlik gereksinimleri, eklentiler (Tasks, Skills over MCP, MCP Apps), eski sürümlerden geçiş ve test matrisi.",
+      "kullanim_alani": "MCP sunucu/istemcisini güncel spesifikasyona taşımak, güvenlik/birlikte çalışabilirlik incelemesi, şema tasarımı.",
+      "kullanma": "Sıfırdan sunucu yazıp değerlendirme seti kurmak için anthropics/mcp-builder ile birlikte kullan (tek başına iş akışı/kod iskeleti vermez). allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "mcp",
+        "json-schema"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Üç sürüm içinde en güncel spesifikasyon bilgisi ve güvenlik kontrol listesi; MIT, 10 KB. İş akışı ve eval aracı olmadığı için birincil değil.",
+      "ortusme_grubu": "mcp-sunucu-gelistirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-integration",
@@ -19281,7 +19472,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -19294,7 +19485,29 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tipleri, ${CLAUDE_PLUGIN_ROOT} ve ortam değişkeni genişletme, MCP araç adlandırması (mcp__eklenti__sunucu__araç), yaşam döngüsü ve OAuth/token kimlik doğrulama kalıpları.",
+      "kullanim_alani": "Bir Claude Code eklentisine hazır MCP sunucusu eklemek/yapılandırmak.",
+      "kullanma": "MCP sunucusunun kendisini yazmak için (mcp-builder). Codex'te eklenti paketleme yok: MCP sunucusu `~/.codex/config.toml` dosyasında `[mcp_servers.<ad>]` tablosuyla (command, args, env ya da url) tanımlanır; .mcp.json ve ${CLAUDE_PLUGIN_ROOT} kullanılmaz. Sunucu tipleri, kimlik doğrulama ve güvenlik bölümleri Codex'te de geçerli, plugin.json kısımlarını atla.",
+      "teknoloji": [
+        "mcp",
+        "claude-code",
+        "json"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir. Asıl yeri skill/plugin yazımı ile birlikte (plugin-dev ailesi).",
+      "ortusme_grubu": "plugin-dev",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "batch-operations",

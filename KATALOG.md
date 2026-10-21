@@ -418,15 +418,15 @@ _Claude API, MCP sunucusu, model geçişi_ · not: `notlar/d-ai-otomasyon/01-cla
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `claude-api` | ⭐ | Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model … | api-anahtari, html, python, three.js, typescript | 🟡 | 76 B | L 2031KB | - | anthropics/skills |
-| `claude-opus-4-5-migration` | ⭐ | Migrate prompts and code from Claude Sonnet 4.0, Sonnet 4.5, or Opus 4.1 to Opus 4.5. Use when the user wants to update their codebase, prom… | python | ✅ | 88 A | S 12KB | - | anthropics/claude-code |
-| `connect` | ⭐ | Connect Claude to any app. Send emails, create issues, post messages, update databases - take real actions across Gmail, Slack, GitHub, Noti… | api-anahtari, node, python, typescript | ✅ | 88 A | S 4KB | - | ComposioHQ/awesome-claude-skills |
-| `connect-apps` | ⭐ | Connect Claude to external apps like Gmail, Slack, GitHub. Use this skill when the user wants to send emails, create issues, post messages, … | api-anahtari | 🟡 | 83 A | S 2KB | - | ComposioHQ/awesome-claude-skills |
-| `langsmith-fetch` | ⭐ | Debug LangChain and LangGraph agents by fetching execution traces from LangSmith Studio. Use when debugging agent behavior, investigating er… | api-anahtari, node, python | ✅ | 86 A | M 11KB | - | ComposioHQ/awesome-claude-skills |
-| `mcp-builder` | ⭐ | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-design… | node, python, typescript | ✅ | 86 A | M 119KB | - | anthropics/skills |
-| `mcp-builder@composiohq` | alt | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-design… | api-anahtari, node, python, typescript | ✅ | 86 A | M 144KB | - | ComposioHQ/awesome-claude-skills |
-| `mcp-builder@vudovn` | alt | MCP (Model Context Protocol) server and client engineering. Protocol design, schemas, transports, extensions, security, and migration. |  | ✅ | 87 A | M 10KB | - | vudovn/ag-kit |
-| `mcp-integration` | ⭐ | This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use .mcp.json", "set up Model… | api-anahtari, git, node, python | 🔵 | 74 B | M 46KB | - | anthropics/claude-code |
+| `claude-api` | ⭐ birincil | Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prom… | anthropic-sdk, python, typescript, go, java, csharp, php, ruby, curl | 🟡 | 76 B | L 2031KB | - | anthropics/skills |
+| `claude-opus-4-5-migration` | alt alternatif | Sonnet 4.0/4.5 ve Opus 4.1'den Opus 4.5'e tek seferlik geçiş: platforma göre (Anthropic, Bedrock, Vertex, Azure) model dizgelerini değiştiri… | anthropic-sdk | ✅ | 88 A | S 12KB | - | anthropics/claude-code |
+| `connect` | ⭐ birincil | Composio SDK (Python/TS) ile agent'ı Gmail, Slack, GitHub, Notion gibi 1000+ uygulamaya bağlar; e-posta gönderme, issue açma, mesaj atma gib… | composio, python, typescript, oauth | ✅ | 88 A | S 4KB | - | ComposioHQ/awesome-claude-skills |
+| `connect-apps` | ⭐ alternatif | Claude Code'a `/plugin install composio-toolrouter` ile Composio Tool Router eklentisini kurup 1000+ uygulamada (Gmail, Slack, GitHub, Notio… | composio, claude-code, mcp | 🟡 | 83 A | S 2KB | - | ComposioHQ/awesome-claude-skills |
+| `langsmith-fetch` | ⭐ birincil | LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, bel… | langchain, langgraph, langsmith, python | ✅ | 86 A | M 11KB | - | ComposioHQ/awesome-claude-skills |
+| `mcp-builder` | ⭐ birincil | Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya … | mcp, python, typescript | ✅ | 86 A | M 119KB | - | anthropics/skills |
+| `mcp-builder@composiohq` | alt alternatif | Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve … | mcp, python, typescript | ✅ | 86 A | M 144KB | - | ComposioHQ/awesome-claude-skills |
+| `mcp-builder@vudovn` | alt tamamlayıcı | MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/ç… | mcp, json-schema | ✅ | 87 A | M 10KB | - | vudovn/ag-kit |
+| `mcp-integration` | ⭐ tamamlayıcı | Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tip… | mcp, claude-code, json | 🔵 | 74 B | M 46KB | - | anthropics/claude-code |
 
 ### 02-agent-orkestrasyon
 
