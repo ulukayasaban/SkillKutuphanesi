@@ -1,0 +1,14 @@
+{
+  "ad": "agent-orkestra",
+  "aciklama": "Yazılı bir planı alt-agent'lara dağıtıp yürüten, bağlamı yöneten koordinatör agent.",
+  "gorev": "Planı bağımsız görevlere böl, her görevi izole bağlamlı alt-agent'a ver, her sonucu incele ve birleştir; aynı dosyaya iki yazıcı verme, uzun oturumda bağlamı sıkıştır.",
+  "cekirdek": [
+    "subagent-driven-development",
+    "dispatching-parallel-agents",
+    "context-engineering"
+  ],
+  "opsiyonel": [
+    "context-compression",
+    "batch-operations"
+  ]
+}

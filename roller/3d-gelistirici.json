@@ -8,11 +8,8 @@
     "threejs-performance"
   ],
   "opsiyonel": [
-    "threejs-shaders",
-    "threejs-postprocessing",
     "threejs-materials",
     "threejs-lighting",
-    "threejs-loaders",
-    "web3d-integration-patterns"
+    "threejs-loaders"
   ]
 }
