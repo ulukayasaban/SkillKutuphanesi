@@ -2246,7 +2246,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -2259,7 +2259,38 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Hazır animasyonlu React bileşen koleksiyonları: Magic UI (Tailwind + Motion, shadcn uyumlu) ve React Bits (az bağımlılıklı, bazıları OGL/WebGL). Bileşen seçimi, kurulum, özelleştirme ve prop üreteci betikleri.",
+      "kullanim_alani": "Landing page/pazarlama sitesinde hızlıca hazır animasyonlu hero, metin efekti, arka plan veya bento grid eklemek.",
+      "kullanma": "Özgün, markaya özel hareket dili gereken projeler (hazır bileşenler 'şablon' görünür); React dışı yığınlar.",
+      "teknoloji": [
+        "react 19",
+        "tailwind 4",
+        "motion v14",
+        "shadcn-ui",
+        "ogl"
+      ],
+      "gerekli_paketler": [
+        "motion",
+        "tailwindcss",
+        "shadcn (npx)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "motion-gelistirici",
+        "frontend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Hazır bileşen için kategoride tek skill. Magic UI örnekleri güncel ('motion/react'); React Bits bölümü hâlâ 'npm install framer-motion' diyor. Kopyala-yapıştır akışı yerine shadcn CLI kayıtları tercih edilmeli.",
+      "ortusme_grubu": "hazir-animasyonlu-bilesen",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "animejs",
@@ -2322,7 +2353,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -2335,7 +2366,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anime.js ile DOM/CSS/SVG/JS nesnesi animasyonu: timeline, stagger, keyframe, SVG yol ve morph animasyonları; Python ile animasyon/timeline kod üreteci betikleri içerir.",
+      "kullanim_alani": "Projede zaten Anime.js varsa veya çok hafif bir GSAP alternatifi isteniyorsa (kodu v4'e uyarlayarak).",
+      "kullanma": "Yeni projelerde varsayılan olarak (gsap-core birincil); örnekler Anime.js v3 API'siyle yazıldığı için doğrudan kopyalanmamalı.",
+      "teknoloji": [
+        "animejs 4",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "animejs"
+      ],
+      "proje_tipleri": [
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF. Güncel değil: tüm örnekler v3 API'si (import anime from 'animejs'; anime({targets…})). Anime.js v4 (2025) adlandırılmış export'lara geçti: import { animate, createTimeline, stagger } from 'animejs'; animate(hedef, {…}). npm'den bugün kurulan sürümle örnekler çalışmaz.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "alternatif",
+      "notlar": "Örnekler Anime.js v3 API'si; v4 için animate()/createTimeline() kullan.",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "framer-motion",
@@ -2397,7 +2450,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -2410,7 +2463,31 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Disney'in 12 animasyon ilkesini (squash & stretch, anticipation, staging, follow-through, easing, arcs…) Framer Motion örnekleriyle gösteren kısa ilke kartı (3 KB).",
+      "kullanim_alani": "Motion ile yazılan animasyonlara 'canlılık' ilkeleri eklemek; animasyon eleştirisi.",
+      "kullanma": "Motion API'sini öğrenmek (motion-framer); React dışı projeler.",
+      "teknoloji": [
+        "motion v14",
+        "react"
+      ],
+      "gerekli_paketler": [
+        "motion"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Çok kısa ve ucuz; API öğretmez, ilke uygular. Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.",
+      "ortusme_grubu": "react-animasyonu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-core",
@@ -2477,7 +2554,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -2490,7 +2567,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "GreenSock'un resmî GSAP çekirdek skilli: gsap.to/from/fromTo, easing, duration, stagger, defaults ve gsap.matchMedia() ile responsive ve prefers-reduced-motion uyumlu animasyon. Ne zaman GSAP önerileceğini ve temel hataları (transform kısaltmaları, autoAlpha, immediateRender) anlatır.",
+      "kullanim_alani": "DOM/SVG animasyonu yazılan her projede GSAP temel API'si; vanilla, React, Vue veya Svelte fark etmez.",
+      "kullanma": "Sadece basit hover/fade (CSS yeter); React state'e bağlı layout/çıkış animasyonları (motion-framer daha doğal).",
+      "teknoloji": [
+        "gsap 3.15",
+        "javascript",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "kurumsal-site",
+        "3d-urun-sergisi"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. dom-animasyon-motoru grubunun birincili: resmî kaynak, GSAP 3.13+ (tüm eklentiler ücretsiz) dönemine güncel, kısa (14 KB). OpenMontage'daki gsap-core birebir aynı kopya (arşivde tek kayıt).",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-frameworks",
@@ -2555,7 +2659,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -2568,7 +2672,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Resmî GSAP skilli Vue, Nuxt 4, Svelte/SvelteKit ve diğer React dışı çatılar için: yaşam döngüsü (onMounted/onMount), seçici kapsamı, unmount'ta gsap.context().revert() ile temizlik, Nuxt'ta eklenti kaydı ve tembel yükleme.",
+      "kullanim_alani": "Vue/Nuxt veya Svelte/SvelteKit projesinde GSAP kullanılırken.",
+      "kullanma": "React projeleri (gsap-react); vanilla JS (gsap-core yeter).",
+      "teknoloji": [
+        "gsap 3.15",
+        "vue 3",
+        "nuxt 4",
+        "svelte 5"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Birincil sürüm: OpenMontage kopyasında olmayan Nuxt 4 bölümü var. Not: SKILL.md'nin andığı examples/vue ve examples/nuxt klasörleri arşive alınmamış (skill klasörü dışında); metin onlarsız da yeterli.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-frameworks@calesthio",
@@ -2632,7 +2763,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -2645,7 +2776,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "gsap-frameworks skillinin OpenMontage'daki eski kopyası: Vue ve Svelte kalıpları aynı, Nuxt 4 bölümü yok.",
+      "kullanim_alani": "Yalnızca OpenMontage içi tutarlılık gerektiğinde.",
+      "kullanma": "Normalde: greensock sürümü (gsap-frameworks) daha kapsamlı.",
+      "teknoloji": [
+        "gsap 3.15",
+        "vue 3",
+        "svelte"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kaynağın eski kopyası (Nuxt 4 eksik). Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-performance",
@@ -2709,7 +2860,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 97,
         "not": "A",
@@ -2722,7 +2873,32 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Resmî GSAP performans skilli: transform/opacity tercih et, layout thrashing'den kaçın, will-change'i ölçülü kullan, quickTo/quickSetter ve toplu güncelleme ile 60 fps hedefle.",
+      "kullanim_alani": "Takılan (jank) animasyonları düzeltme, mobilde FPS sorunları, çok sayıda eleman canlandırma.",
+      "kullanma": "Genel performans optimizasyonu (bundle, LCP vb.); GSAP dışı kütüphaneler.",
+      "teknoloji": [
+        "gsap 3.15",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "3d-urun-sergisi"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. 4 KB ile en ucuz bağlam; resmî, güncel, her motion rolüne çekirdek olarak uygun.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-plugins",
@@ -2789,7 +2965,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -2802,7 +2978,32 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Resmî GSAP eklentileri skilli: kayıt (registerPlugin), ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, DrawSVG/MorphSVG/MotionPath, CustomEase ve GSDevTools. Tüm eklentilerin artık ücretsiz ve public npm paketinde olduğunu açıkça yazar.",
+      "kullanim_alani": "SplitText metin animasyonu, Flip layout geçişi, Draggable, SVG çizim/morph, smooth scroll (ScrollSmoother) gibi eklenti gerektiren işler.",
+      "kullanma": "Eklenti gerektirmeyen temel animasyonlar; scroll tetikleyicileri (gsap-scrolltrigger).",
+      "teknoloji": [
+        "gsap 3.15"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "motion-gelistirici",
+        "scroll-deneyim"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Birincil sürüm: OpenMontage kopyasında olmayan 'Licensing & Install' bölümü var (eski Club GSAP .npmrc/token talimatlarını önler).",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-plugins@calesthio",
@@ -2867,7 +3068,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 90,
         "not": "A",
@@ -2880,7 +3081,25 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "gsap-plugins skillinin OpenMontage'daki eski anlık görüntüsü: aynı eklenti anlatımı, fakat eklentilerin ücretsiz olduğunu ve token/özel registry kullanılmaması gerektiğini anlatan lisans bölümü yok.",
+      "kullanim_alani": "Yalnızca OpenMontage içinde zaten kurulu kopyayla tutarlılık gerektiğinde.",
+      "kullanma": "Normalde: greensock/gsap-skills sürümü (gsap-plugins) daha güncel.",
+      "teknoloji": [
+        "gsap 3.15"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kaynağın eski kopyası; lisans/kurulum bölümü eksik. Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-react",
@@ -2948,7 +3167,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 97,
         "not": "A",
@@ -2961,7 +3180,36 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Resmî GSAP + React skilli: @gsap/react paketinin useGSAP() hook'u, scope ile seçici sınırlama, contextSafe ile olay işleyicileri, SSR/Next.js ve otomatik temizlik.",
+      "kullanim_alani": "React veya Next.js projesinde GSAP kullanılırken (bileşen ömrü, temizlik, StrictMode).",
+      "kullanma": "React dışı projeler (Vue/Svelte için gsap-frameworks); GSAP kullanılmayan React animasyonları (motion-framer).",
+      "teknoloji": [
+        "gsap 3.15",
+        "@gsap/react 2",
+        "react 19",
+        "next.js"
+      ],
+      "gerekli_paketler": [
+        "gsap",
+        "@gsap/react"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. useGSAP kalıbını doğru öğretiyor (gsap.context elle yönetimi yerine). Resmî, güncel; OpenMontage kopyası aynı.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-timeline",
@@ -3025,7 +3273,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 97,
         "not": "A",
@@ -3038,7 +3286,32 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Resmî GSAP timeline skilli: gsap.timeline() ile sıralama, konum parametreleri ('<', '+=0.2', etiketler), iç içe timeline'lar ve oynatma kontrolü (play/pause/reverse/seek).",
+      "kullanim_alani": "Birden fazla adımlı, sıralı veya örtüşen animasyon koreografisi (hero girişleri, intro sekansları).",
+      "kullanma": "Tek tween'lik basit animasyonlar; scroll'a bağlı zamanlama (gsap-scrolltrigger ile birlikte kullan).",
+      "teknoloji": [
+        "gsap 3.15",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "scroll-hikaye-sitesi",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Kısa (4 KB), resmî ve güncel; gsap-core'un doğal tamamlayıcısı. OpenMontage kopyası birebir aynı.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gsap-utils",
@@ -3103,7 +3376,7 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -3116,7 +3389,31 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Resmî GSAP yardımcıları skilli: gsap.utils içindeki clamp, mapRange, normalize, interpolate, snap, wrap, distribute, toArray, random, pipe gibi fonksiyonlar ve kullanım örnekleri.",
+      "kullanim_alani": "Değer eşleme/kırpma, rastgele dağıtım, stagger hesapları, imleç/scroll'a bağlı değer dönüşümleri.",
+      "kullanma": "Temel tween/timeline yazımı (gsap-core yeter).",
+      "teknoloji": [
+        "gsap 3.15",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Resmî ve doğru; ama her projede gerekmez, opsiyonel tut.",
+      "ortusme_grubu": "dom-animasyon-motoru",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "lottie-animations",
@@ -3188,7 +3485,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -3201,7 +3498,35 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "After Effects/Bodymovin JSON animasyonlarını web ve React'te oynatma: lottie-web, @lottiefiles/dotlottie-web ve dotlottie-react, lottie-react; oynatma kontrolü, etkileşim, scroll'a bağlama ve performans. JSON küçültme ve React bileşeni üretme betikleri içerir.",
+      "kullanim_alani": "Tasarımcının hazırladığı After Effects animasyonu (ikon, illüstrasyon, onboarding, yükleme) siteye konacaksa.",
+      "kullanma": "Kodla kolayca üretilebilecek basit hareketler; durum makinesi gereken etkileşimli animasyon (rive-interactive).",
+      "teknoloji": [
+        "lottie-web 5.13",
+        "dotlottie-web",
+        "react"
+      ],
+      "gerekli_paketler": [
+        "@lottiefiles/dotlottie-web",
+        "@lottiefiles/dotlottie-react",
+        "lottie-web"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "motion-gelistirici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Seçim gerekçesi: dotLottie'yi (modern, küçük dosya) önerir, kurulum/oynatma/performans kapsamı tam; lottie-bodymovin yalnızca ilke kartı.",
+      "ortusme_grubu": "tasarimci-animasyonu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "lottie-bodymovin",
@@ -3263,7 +3588,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -3276,7 +3601,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Disney'in 12 animasyon ilkesini After Effects'te kurup Bodymovin/Lottie ile dışa aktarma ve playSegments/setSpeed ile çalışma zamanında uygulama üzerine kısa ilke kartı.",
+      "kullanim_alani": "Lottie animasyonu tasarlanırken/eleştirilirken ilke rehberi olarak.",
+      "kullanma": "Lottie kurulumu ve oynatıcı seçimi (lottie-animations).",
+      "teknoloji": [
+        "lottie-web 5.13",
+        "after-effects"
+      ],
+      "gerekli_paketler": [
+        "lottie-web"
+      ],
+      "proje_tipleri": [
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Kısa (4 KB), işlevsel ama derinliği az. Kayıttaki 'OpenMontage kurulumu gerekir' bağımlılığı bu skill için geçersiz: içerikte OpenMontage aracı/komutu yok, düz kütüphane dokümantasyonu; tek başına kurulabilir.",
+      "ortusme_grubu": "tasarimci-animasyonu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "motion-framer",
@@ -3345,7 +3691,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -3358,7 +3704,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Motion (eski Framer Motion) ile React animasyonu: motion bileşenleri, variants, hover/tap/drag jestleri, layout animasyonu, AnimatePresence çıkış animasyonu, spring fiziği ve useScroll/useTransform ile scroll'a bağlı değerler. Vite başlangıç projesi ve varyant üreteci betikleri içerir.",
+      "kullanim_alani": "React uygulamasında state/route geçişleri, mikro etkileşim, liste ekleme-çıkarma, paylaşılan eleman geçişi.",
+      "kullanma": "Uzun sinematik sekanslar ve scroll hikâyesi (GSAP timeline/ScrollTrigger daha güçlü); React dışı projeler.",
+      "teknoloji": [
+        "motion v14",
+        "react 19"
+      ],
+      "gerekli_paketler": [
+        "motion"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "motion-gelistirici",
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil). react-animasyonu grubunda en kapsamlı Motion skilli; seçim gerekçesi: tam API kapsamı (layout, AnimatePresence, jestler, scroll). Dikkat: örnekler eski paket adını kullanıyor (import from 'framer-motion'); güncel kurulum npm i motion + import { motion } from 'motion/react'. Başlangıç projesi React 18 / framer-motion 11.",
+      "ortusme_grubu": "react-animasyonu",
+      "ortusme_rolu": "birincil",
+      "notlar": "Kodda 'framer-motion' yerine 'motion/react' import et.",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "react-spring-physics",
@@ -3422,7 +3795,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -3435,7 +3808,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React Spring (@react-spring/web, @react-spring/three) ile yay fiziği tabanlı animasyon: useSpring, useTrail, useTransition, jestlerle sürükleme; düşük seviye yardımcılar için Popmotion. Yay parametresi hesaplayıcı betikler içerir.",
+      "kullanim_alani": "Projede react-spring zaten varsa; fiziksel olarak kesintisiz, jest tabanlı arayüzler; R3F sahnesinde @react-spring/three.",
+      "kullanma": "Yeni React projelerinde varsayılan (motion-framer yay fiziğini de kapsar); Popmotion kısmı (kütüphane Motion'a devredildi, bakımsız).",
+      "teknoloji": [
+        "react-spring 10",
+        "react"
+      ],
+      "gerekli_paketler": [
+        "@react-spring/web",
+        "@use-gesture/react"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "3d-urun-sergisi"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. react-spring kısmı geçerli; Popmotion artık ayrı geliştirilmiyor (Motion'a katıldı). freshtechbro 2025-11'den beri güncellenmedi.",
+      "ortusme_grubu": "react-animasyonu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "rive-interactive",
@@ -3499,7 +3895,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -3512,7 +3908,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Rive ile durum makinesi tabanlı etkileşimli vektör animasyonu: state machine girdileri, ViewModel veri bağlama, React entegrasyonu ve olay dinleme. ViewModel ve bileşen üreteci betikleri içerir.",
+      "kullanim_alani": "Girdiye/duruma göre tepki veren animasyon (etkileşimli buton, karakter, onboarding) gerektiğinde; Lottie yetmediğinde.",
+      "kullanma": "Tek yönlü oynatılan basit animasyon (lottie-animations); Rive editörüne erişim yoksa.",
+      "teknoloji": [
+        "rive",
+        "react"
+      ],
+      "gerekli_paketler": [
+        "@rive-app/react-canvas"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. ViewModel veri bağlama gibi yeni API'leri kapsıyor; ama import'lar eski 'rive-react' paket adını kullanıyor (güncel: @rive-app/react-canvas veya @rive-app/react-webgl2).",
+      "ortusme_grubu": "tasarimci-animasyonu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "barba-js",
