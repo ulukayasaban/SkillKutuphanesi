@@ -88,12 +88,15 @@ def main():
     test("aynı kurulumu tekrar çalıştırmak güvenli (idempotent)", kod == 0, out)
 
     (proje / ".claude" / "skills" / "benim-skillim").mkdir(parents=True)
-    (proje / ".agents" / "skills" / "gsap-core").mkdir(parents=True)
-    (proje / ".agents" / "skills" / "gsap-core" / "SKILL.md").write_text("---\nname: gsap-core\n---\nbenim\n", encoding="utf-8")
-    kod, out = calistir(proje, "--skill", "gsap-core", "--evet")
+    # profille kurulmamış bir kütüphane skill'i seç (rol içerikleri değişse de test sağlam kalsın)
+    kurulu = {a.removesuffix("--kutuphane") for a in (json_oku(proje / ".skill-kutuphanesi" / "kilit.json") or {}).get("skiller", {})}
+    kendi = next(a for a in ("pixijs-2d", "gsap-core", "d3-viz") if a not in kurulu and not (proje / ".agents" / "skills" / a).exists())
+    (proje / ".agents" / "skills" / kendi).mkdir(parents=True)
+    (proje / ".agents" / "skills" / kendi / "SKILL.md").write_text(f"---\nname: {kendi}\n---\nbenim\n", encoding="utf-8")
+    kod, out = calistir(proje, "--skill", kendi, "--evet")
     test("projedeki kendi skill'inin üzerine yazılmaz", kod == 2 and "projede-kendi-skillin" in out
-         and "benim" in (proje / ".agents" / "skills" / "gsap-core" / "SKILL.md").read_text(encoding="utf-8"), out)
-    shutil.rmtree(proje / ".agents" / "skills" / "gsap-core")
+         and "benim" in (proje / ".agents" / "skills" / kendi / "SKILL.md").read_text(encoding="utf-8"), out)
+    shutil.rmtree(proje / ".agents" / "skills" / kendi)
 
     hedef = next(iter(kilit["skiller"]))
     (proje / ".agents" / "skills" / hedef / "SKILL.md").open("a", encoding="utf-8").write("\nelle eklendi\n")
