@@ -345,14 +345,14 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_ · not: `notlar/c-dokuman-icer
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `docx` | ⭐ | Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Tr… | node, python | ✅ | 88 A | S 1102KB | - | anthropics/skills |
-| `docx@composiohq` | alt | Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extract… | node, python, typescript | ✅ | 86 A | M 1158KB | - | ComposioHQ/awesome-claude-skills |
-| `pdf` | ⭐ | Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining o… | canvas, python | ✅ | 86 A | M 57KB | - | anthropics/skills |
-| `pdf@composiohq` | alt | Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. W… | canvas, python | ✅ | 88 A | S 63KB | - | ComposioHQ/awesome-claude-skills |
-| `pptx` | ⭐ | Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch… | canvas, node, python, react | ✅ | 86 A | M 1112KB | - | anthropics/skills |
-| `pptx@composiohq` | alt | Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations… | html, node, playwright, python, react | ✅ | 83 A | L 1201KB | - | ComposioHQ/awesome-claude-skills |
-| `xlsx` | ⭐ | Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or… | html, python | ✅ | 86 A | M 1077KB | - | anthropics/skills |
-| `xlsx@composiohq` | alt | Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Clau… | python | ✅ | 86 A | M 18KB | - | ComposioHQ/awesome-claude-skills |
+| `docx` | ⭐ birincil | Word (.docx/.dotx) belgelerini oluşturur, okur ve düzenler. Yeni belge için docx-js (npm), mevcut belge için unzip → XML düzenleme → zip akı… | node, python, docx-js, libreoffice | ✅ | 88 A | S 1102KB | - | anthropics/skills |
+| `docx@composiohq` | alt alternatif | Anthropic docx skill'inin ComposioHQ deposundaki eski sürümü. docx-js ile yeni belge, Python 'Document' kütüphanesi (ooxml) ile düzenleme ve… | node, python, docx-js, libreoffice | ✅ | 86 A | M 1158KB | - | ComposioHQ/awesome-claude-skills |
+| `pdf` | ⭐ birincil | PDF okuma, metin/tablo çıkarma, birleştirme, bölme, döndürme, filigran, form doldurma, şifreleme ve OCR işlerini Python (pypdf, pdfplumber, … | python | ✅ | 86 A | M 57KB | - | anthropics/skills |
+| `pdf@composiohq` | alt alternatif | Anthropic pdf skill'inin ComposioHQ'daki eski kopyası: pypdf/pdfplumber/reportlab ile PDF okuma, çıkarma, birleştirme/bölme ve form doldurma… | python | ✅ | 88 A | S 63KB | - | ComposioHQ/awesome-claude-skills |
+| `pptx` | ⭐ birincil | PowerPoint (.pptx/.potx) sunumlarını oluşturur, okur ve düzenler. Yeni deste için pptxgenjs, şablon/düzenleme için XML akışı kullanır; slayt… | node, python, pptxgenjs, libreoffice | ✅ | 86 A | M 1112KB | - | anthropics/skills |
+| `pptx@composiohq` | alt alternatif | Anthropic pptx skill'inin eski sürümü (ComposioHQ). HTML slaytları playwright ile html2pptx dönüştürerek sunum üretir; şablonlu üretimde sla… | node, python, pptxgenjs, playwright, html | ✅ | 83 A | L 1201KB | - | ComposioHQ/awesome-claude-skills |
+| `xlsx` | ⭐ birincil | Excel/CSV/TSV dosyalarını openpyxl ve pandas ile oluşturur, okur, düzenler ve temizler. Formül kullanımını zorunlu tutar, LibreOffice ile ye… | python, libreoffice | ✅ | 86 A | M 1077KB | - | anthropics/skills |
+| `xlsx@composiohq` | alt alternatif | Anthropic xlsx skill'inin eski kopyası (ComposioHQ): formül zorunluluğu, finansal model renk/sayı biçimi kuralları, pandas/openpyxl örnekler… | python, libreoffice | ✅ | 86 A | M 18KB | - | ComposioHQ/awesome-claude-skills |
 
 ### 02-diyagram-dokumantasyon
 

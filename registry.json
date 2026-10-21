@@ -14626,7 +14626,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -14639,7 +14639,38 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Word (.docx/.dotx) belgelerini oluşturur, okur ve düzenler. Yeni belge için docx-js (npm), mevcut belge için unzip → XML düzenleme → zip akışı kullanır; run birleştirme, XSD doğrulama, izlenen değişiklik (redline) ve yorum ekleme betikleri içerir. Çıktıyı LibreOffice ile PDF'e çevirip görsel olarak kontrol ettirir.",
+      "kullanim_alani": "Rapor, mektup, sözleşme, şablon gibi teslimatın Word dosyası olduğu her iş; mevcut .docx üzerinde izlenen değişiklik veya yorum.",
+      "kullanma": "Teslimat PDF (pdf), Google Docs ya da Markdown/HTML ise; içerik yazımı/yapılandırma için doc-coauthoring.",
+      "teknoloji": [
+        "node",
+        "python",
+        "docx-js",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "docx (npm)",
+        "pandoc",
+        "libreoffice",
+        "poppler (pdftoppm)",
+        "defusedxml",
+        "lxml"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "marka-sunum"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic'in güncel sürümü: kısa SKILL.md (6.7 KB), net görev tablosu, docx-js tuzakları, merge_runs/validate/comment betikleri ve render ile doğrulama. ComposioHQ kopyası bunun eski anlık görüntüsü; bu yüzden birincil bu.",
+      "ortusme_grubu": "ofis-docx",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "docx@composiohq",
@@ -14700,7 +14731,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -14713,7 +14744,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic docx skill'inin ComposioHQ deposundaki eski sürümü. docx-js ile yeni belge, Python 'Document' kütüphanesi (ooxml) ile düzenleme ve markdown planlı redline (izlenen değişiklik) akışı sunar; okumadan önce 500-600 satırlık docx-js.md/ooxml.md dosyalarının tamamını okumayı zorunlu tutar.",
+      "kullanim_alani": "Sadece ooxml Python Document kütüphanesiyle toplu redline yapılması gerekiyorsa (eski API'ye bağlı iş akışları).",
+      "kullanma": "Varsayılan olarak kullanma; güncel ve daha az bağlam tüketen anthropics/docx birincil.",
+      "teknoloji": [
+        "node",
+        "python",
+        "docx-js",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "docx (npm)",
+        "pandoc",
+        "libreoffice",
+        "poppler (pdftoppm)",
+        "defusedxml"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Anthropic sürümünün eski kopyası; 'tamamını oku' talimatları bağlamı şişiriyor (1.1 MB klasör). Redline planlama bölümü ayrıntılı ama güncel sürümde validate --author ile daha sağlam karşılanıyor.",
+      "ortusme_grubu": "ofis-docx",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pdf",
@@ -14773,7 +14831,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -14786,7 +14844,35 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "PDF okuma, metin/tablo çıkarma, birleştirme, bölme, döndürme, filigran, form doldurma, şifreleme ve OCR işlerini Python (pypdf, pdfplumber, reportlab) ve CLI araçlarıyla yapar. Form doldurma için ayrı forms.md, ileri kullanım için reference.md içerir.",
+      "kullanim_alani": "Girdi ya da çıktı PDF olduğunda: rapor PDF'i üretmek, PDF'ten veri çekmek, form doldurmak, sayfa işlemleri.",
+      "kullanma": "Teslimat düzenlenebilir Word/Excel/PowerPoint ise (docx/xlsx/pptx); HTML'den tasarımlı PDF gerekiyorsa önce HTML üretip tarayıcıyla dönüştürmek daha iyi olabilir.",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "pypdf",
+        "pdfplumber",
+        "reportlab",
+        "pypdfium2",
+        "poppler-utils",
+        "qpdf",
+        "pytesseract (OCR)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Kapsamlı ve pratik kod örnekleri; form doldurma betikleri iyi. Diğer ofis skillerine göre daha az 'doğrula' disiplini var. ComposioHQ sürümü neredeyse aynı (39 satır fark) ama eski; birincil bu.",
+      "ortusme_grubu": "ofis-pdf",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pdf@composiohq",
@@ -14846,7 +14932,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -14859,7 +14945,31 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic pdf skill'inin ComposioHQ'daki eski kopyası: pypdf/pdfplumber/reportlab ile PDF okuma, çıkarma, birleştirme/bölme ve form doldurma. İçerik güncel sürümle neredeyse aynı.",
+      "kullanim_alani": "Güncel sürüm erişilemezse yedek olarak.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/pdf aynı içeriğin güncel hâli.",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "pypdf",
+        "pdfplumber",
+        "reportlab",
+        "poppler-utils",
+        "qpdf"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Güncel sürümün eski kopyası, kendine özgü katkısı yok.",
+      "ortusme_grubu": "ofis-pdf",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pptx",
@@ -14921,7 +15031,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -14934,7 +15044,39 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "PowerPoint (.pptx/.potx) sunumlarını oluşturur, okur ve düzenler. Yeni deste için pptxgenjs, şablon/düzenleme için XML akışı kullanır; slayt kopyalama, temizlik, küçük resim ızgarası ve doğrulama betikleri içerir. Renk paleti, tipografi, yerleşim önerileri ve zorunlu içerik/görsel QA adımları vardır.",
+      "kullanim_alani": "Sunum, pitch deck, eğitim slaytı üretimi; mevcut desteyi ya da kurumsal şablonu düzenleme; .pptx'ten metin çıkarma.",
+      "kullanma": "Web tabanlı/HTML slayt (slides, reveal.js) ya da video istenirse; sadece içerik/metin taslağı gerekiyorsa.",
+      "teknoloji": [
+        "node",
+        "python",
+        "pptxgenjs",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "pptxgenjs (npm)",
+        "markitdown[pptx]",
+        "Pillow",
+        "defusedxml",
+        "lxml",
+        "libreoffice",
+        "poppler (pdftoppm)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "marka-sunum"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Güncel Anthropic sürümü; betik tablosu, pptxgenjs tuzakları, tasarım rehberi ve zorunlu render QA'sı tek dosyada. ComposioHQ sürümü html2pptx tabanlı eski akış; birincil bu.",
+      "ortusme_grubu": "ofis-pptx",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pptx@composiohq",
@@ -14997,7 +15139,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -15010,7 +15152,36 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic pptx skill'inin eski sürümü (ComposioHQ). HTML slaytları playwright ile html2pptx dönüştürerek sunum üretir; şablonlu üretimde slayt envanteri, değiştirme JSON'u ve küçük resim ızgarası kullanan uzun bir iş akışı tarif eder.",
+      "kullanim_alani": "HTML/CSS ile tasarlanıp PowerPoint'e çevrilecek sunumlar (html2pptx akışı özellikle isteniyorsa).",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/pptx daha kısa ve günceldir. Playwright/Chromium kurulumu olmayan ortamlarda.",
+      "teknoloji": [
+        "node",
+        "python",
+        "pptxgenjs",
+        "playwright",
+        "html"
+      ],
+      "gerekli_paketler": [
+        "pptxgenjs (npm)",
+        "playwright",
+        "sharp",
+        "markitdown",
+        "libreoffice"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "marka-sunum"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. html2pptx yaklaşımı tasarım özgürlüğü veriyor ama SKILL.md 25 KB ve 'tamamını oku' dosyalarıyla bağlam yükü yüksek; bağımlılıkları ağır.",
+      "ortusme_grubu": "ofis-pptx",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "xlsx",
@@ -15070,7 +15241,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -15083,7 +15254,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Excel/CSV/TSV dosyalarını openpyxl ve pandas ile oluşturur, okur, düzenler ve temizler. Formül kullanımını zorunlu tutar, LibreOffice ile yeniden hesaplatıp hata raporlayan recalc.py içerir; finansal model renk ve sayı biçimi kuralları tanımlar.",
+      "kullanim_alani": "Teslimatın elektronik tablo olduğu işler: finansal model, veri temizleme, formüllü tablo, format dönüştürme.",
+      "kullanma": "Teslimat Word/HTML rapor, bağımsız Python betiği, veritabanı hattı ya da Google Sheets API entegrasyonu ise.",
+      "teknoloji": [
+        "python",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "openpyxl",
+        "pandas",
+        "markitdown",
+        "libreoffice"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). 'Yeşil recalc doğru demek değil' gibi doğrulama disiplini ve mevcut dosya kurallarına uyma talimatı çok iyi. ComposioHQ sürümünden güncel ve daha net; birincil bu.",
+      "ortusme_grubu": "ofis-xlsx",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "xlsx@composiohq",
@@ -15142,7 +15340,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -15155,7 +15353,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic xlsx skill'inin eski kopyası (ComposioHQ): formül zorunluluğu, finansal model renk/sayı biçimi kuralları, pandas/openpyxl örnekleri ve LibreOffice ile recalc.py yeniden hesaplama.",
+      "kullanim_alani": "Güncel sürüm yoksa yedek; içerik büyük ölçüde aynı.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/xlsx daha güncel doğrulama kuralları içerir.",
+      "teknoloji": [
+        "python",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "openpyxl",
+        "pandas",
+        "libreoffice"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Eski kopya; bölüm başlıkları iki kez tekrarlanıyor, recalc.py tek dosya hâlinde (18 KB, hafif) — tek avantajı küçük olması.",
+      "ortusme_grubu": "ofis-xlsx",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "archify",
