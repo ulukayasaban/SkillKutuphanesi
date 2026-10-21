@@ -11538,7 +11538,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -11551,7 +11551,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kök neden odaklı hata ayıklama: 'hattı durdur' kuralı, yeniden üret → yerelleştir → küçült → kök nedeni düzelt → tekrarı önle → uçtan uca doğrula triyajı; test, build ve çalışma zamanı hataları için ayrı triyaj desenleri, güvenli geri dönüş kalıpları, enstrümantasyon kuralları ve hata çıktısını güvenilmeyen veri sayma uyarısı.",
+      "kullanim_alani": "superpowers zinciri kullanılmayan projelerde hata ayıklama; build/runtime hata tipine göre hazır triyaj listesi istendiğinde.",
+      "kullanma": "systematic-debugging kuruluysa aynı rolde ikinci hata ayıklama skilli olarak.",
+      "teknoloji": [
+        "git",
+        "node",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Kaliteli ve kısa (11 KB); hata tipine göre triyaj ve 'hata çıktısı talimat değildir' notu obra'da olmayan artılar. Aynı işi yaptığı için alternatif; addyosmani zinciri kullanan projelerde birincil yerine seçilebilir.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "systematic-debugging",
@@ -11610,7 +11633,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -11623,7 +11646,32 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "superpowers'ın hata ayıklama skilli: 'kök neden bulunmadan düzeltme yok' demir yasasıyla dört faz (kök neden araştırması, desen analizi, hipotez ve test, uygulama); çok bileşenli sistemlerde sınırlara tanı günlüğü ekletme, 3 başarısız düzeltmeden sonra mimariyi sorgulama. Ek dosyalar: root-cause-tracing, defense-in-depth, condition-based-waiting (+ TS örneği) ve testleri kirleten testi bulan find-polluter.sh.",
+      "kullanim_alani": "Her hata, test başarısızlığı, build kırılması veya beklenmeyen davranışta düzeltme önermeden önce; özellikle zaman baskısı ve ardışık başarısız düzeltmelerde.",
+      "kullanma": "Kök nedeni zaten bilinen önemsiz yazım hataları; hata yokken genel kod incelemesi.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici",
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, hata-ayiklama grubunun birincili. Gerekçe (4 aday): obra'nın güncel sürümü ve yardımcı teknik dosyaları (find-polluter.sh, condition-based-waiting) en pratik araç setini veriyor. heyitsnoah sürümü aynı metnin eski bir kopyası (teknikleri SKILL.md içine gömülü) → alternatif; vudovn sürümü obra'dan kısaltılmış şablon → alternatif; addyosmani debugging-and-error-recovery eşdeğer kalitede ama aynı işi yapıyor → alternatif. Not: test-pressure-*.md ve CREATION-LOG.md skill geliştirme kalıntısı, çalışma anında okunmaz.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "systematic-debugging@heyitsnoah",
@@ -11684,7 +11732,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 70,
         "not": "B",
@@ -11697,7 +11745,26 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "obra/superpowers systematic-debugging'in claudesidian'daki kopyası: aynı dört faz ve demir yasa; kök neden izleme, stack trace ekleme, kirleten testi bulma ve dört katmanlı savunma tekniklerini ayrı dosya yerine SKILL.md içinde taşır.",
+      "kullanim_alani": "Tek dosyalık (ek dosyasız) sürüm tercih edildiğinde; claudesidian kasası kullanan projeler.",
+      "kullanma": "obra sürümü kuruluysa (aynı ad, aynı içerik); güncel superpowers değişikliklerini almak istendiğinde.",
+      "teknoloji": [
+        "git",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik iyi ama obra'nın eski sürümünden türetilmiş kopya; upstream ile senkron değil.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "systematic-debugging@vudovn",
@@ -11757,7 +11824,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -11770,7 +11837,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "ag-kit'in kısaltılmış hata ayıklama şablonu (obra/superpowers'tan uyarlanmış): yeniden üret, izole et, anla (5 Neden), düzelt ve doğrula fazları; kontrol listeleri ve temel git/grep/pm2 komutları.",
+      "kullanim_alani": "ag-kit /debug iş akışında veya yalnız kısa bir hatırlatıcı yeterliyse.",
+      "kullanma": "Genel kullanımda (obra sürümü çok daha güçlü); aynı adlı diğer sürümlerle birlikte.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF / SADECE ARŞİV. 2.5 KB şablon; demir yasa, çok bileşenli tanı ve 'üç düzeltmede dur' gibi asıl değerli kısımlar çıkarılmış.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "tdd-workflow",
@@ -11827,7 +11912,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -11840,7 +11925,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "ag-kit'in TDD ilke özeti: RED-GREEN-REFACTOR döngüsü, TDD'nin üç yasası, her faz için kurallar, AAA, TDD'nin ne zaman değerli olduğu tablosu ve test yazan/kod yazan agent'ları ayıran çoklu agent deseni.",
+      "kullanim_alani": "ag-kit iş akışı kullanan projelerde veya çok kısa bir TDD hatırlatıcısı yeterliyse.",
+      "kullanma": "Gerçek uygulama rehberi gerektiğinde (test-driven-development); diğer TDD sürümleriyle birlikte.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF / SADECE ARŞİV. 3 KB tablo özeti; 'testi çalıştırıp başarısızlığı gör' gibi uygulama adımları yok, iki birincil sürümün kapsadığı her şeyi daha zayıf veriyor.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "test-driven-development",
@@ -11908,7 +12010,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -11921,7 +12023,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kırmızı-yeşil-refactor döngüsüyle geliştirme: önce projenin test yığınını keşfeder, başarısız test yazdırır, minimum kodla geçirtir, sonra temizletir. Hata düzeltmeleri için 'önce kanıtla' (hatayı yeniden üreten test) deseni, test piramidi ve test boyutları, davranışı test etme, DAMP, sahte yerine gerçek implementasyon, AAA ve DevTools ile tarayıcı testi rehberi içerir.",
+      "kullanim_alani": "Mantık yazarken, hata düzeltirken veya davranış değiştirirken; kullanıcı test istemese de kod satır içi verilmiş olsa bile.",
+      "kullanma": "Atılacak prototip/spike; salt yapılandırma veya üretilmiş kod; superpowers zincirinin katı 'test öncesi kodu sil' disiplini isteniyorsa (test-driven-development@obra).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici",
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "test-driven-development@obra",
@@ -11984,7 +12109,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -11997,7 +12122,28 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "superpowers'ın TDD skilli: 'başarısız test olmadan üretim kodu yok' demir yasası; testten önce yazılan kodu silip baştan başlatır, kırmızıyı ve yeşili mutlaka çalıştırıp gözlemletir, iyi/kötü test örnekleri, gerekçe-çürütme tablosu ve writing-good-tests.md ek rehberi sunar.",
+      "kullanim_alani": "superpowers zinciri (writing-plans → subagent-driven-development / executing-plans) uçtan uca kullanılırken; agent'ın TDD'yi atlama eğilimine karşı en katı disiplin istendiğinde.",
+      "kullanma": "addyosmani sürümü kuruluysa (aynı ad, aynı iş); test yığını keşfi ve test piramidi rehberi gerekiyorsa.",
+      "teknoloji": [
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik kalitesi çok yüksek ve baskı testleriyle geliştirilmiş; birincilden farkı kapsam değil sertlik. Aynı adı taşıdığı için bir projede yalnız biri kurulmalı.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "test-value",
@@ -12054,7 +12200,7 @@
         "ana_sayfa": "https://archify.si",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -12067,7 +12213,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Testlerin değerini ve geri bildirim maliyetini denetler: yavaş, kararsız, yinelenen veya kırılgan testleri bulur; uygulama sırasında hangi testin ekleneceğine/uyarlanacağına/silineceğine karar verdirir. Her yeni test için 'hangi somut hatayı yakalar, eşdeğer refactor'da da kırılır mı, başka bir kontrol zaten yakalıyor mu' sorularını şart koşar; AI'nın hem kodu hem testi aynı yanlış varsayımla yazma riskine dikkat çeker.",
+      "kullanim_alani": "Test paketi yavaş/kararsız olduğunda denetim; commit/PR öncesi test değişikliklerini incelemek; başarısız bir kontrolün gerçek regresyon mu eskimiş assertion mı olduğunu ayırmak.",
+      "kullanma": "Test yazma yöntemi öğretmek (test-driven-development); kapsam dışı depo geneli denetim (yalnız istenirse).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, test-degeri grubunun birincili. Archify'dan ama genel amaçlı (internal işaretli olsa da); test sayısı/kapsama yüzdesini kanıt olarak görüp ürün yargısını öne alması diğer test skillerinde yok. Yalnız ilgili davranışa odaklı kapsam kuralı bağlamı korur.",
+      "ortusme_grubu": "test-degeri",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "testing-patterns",
@@ -12124,7 +12290,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -12137,7 +12303,29 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Test ilkeleri özeti: test piramidi, AAA, birim/entegrasyon/E2E seçimi, iyi birim testi özellikleri, mock ne zaman/hangi tür (stub, spy, mock, fake), isimlendirme ve gruplama, test verisi stratejileri (factory, fixture, builder); test_runner.py betiği proje tipine göre testleri çalıştırır.",
+      "kullanim_alani": "Test çerçevesi ve mock stratejisi seçerken hızlı başvuru; ag-kit kullanan projeler.",
+      "kullanma": "TDD döngüsü veya test değeri kararları (test-driven-development, test-value bunları daha derin kapsar).",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (test_runner.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Doğru ama yüzeysel tablo özeti; içerik test-driven-development'ın 'Writing Good Tests' ve test piramidi bölümlerinde daha iyi var.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "verification-before-completion",
@@ -12194,7 +12382,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -12207,7 +12395,30 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "'Taze doğrulama kanıtı olmadan tamamlandı iddiası yok' kuralı: bir durum iddia etmeden önce kanıtlayan komutu belirle, tam çalıştır, çıktıyı ve çıkış kodunu oku, ancak sonra iddia et. Testler, lint, build, hata düzeltmesi, regresyon testi ve alt-agent raporları için neyin yeterli kanıt olduğunu tablolar.",
+      "kullanim_alani": "İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman.",
+      "kullanma": "Neredeyse hiçbir zaman gereksiz değildir; yalnız doğrulanacak çalıştırılabilir bir şey yoksa (salt doküman işi) etkisiz.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici",
+        "frontend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, tamamlanma-dogrulama grubunun birincili. 4 KB ile en yüksek fayda/bağlam oranı; 'alt-agent başarılı dedi → bağımsız doğrula' maddesi orkestratör için kritik. verify-changes yürütme yöntemini, bu skill iddia disiplinini veriyor.",
+      "ortusme_grubu": "tamamlanma-dogrulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "verify-changes",
@@ -12267,7 +12478,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -12280,7 +12491,29 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kodun çalıştığını incelemeyle değil çalıştırarak kanıtlatır: değişen dosyaları ve beklenen davranışı belirle, değişiklik tipine göre doğrulama yöntemini seç (hata senaryosunu yeniden üret, endpoint çağır, bileşeni render et, build al), komutları çalıştır ve 'doğrulanamayanlar' bölümü olan kanıt raporu yaz. Web, API ve CLI için kontrol listeleri içerir.",
+      "kullanim_alani": "Özellik/hata düzeltmesi bittikten sonra somut doğrulama planı ve rapor biçimi gerektiğinde; 'çalışıyor mu?' sorusunda.",
+      "kullanma": "Yeni kod yazımı; yalnız iddia disiplini yeterliyse (verification-before-completion).",
+      "teknoloji": [
+        "node",
+        "python"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı (opsiyonel). Değişiklik tipi → doğrulama yöntemi tablosu ve 'doğrulanamayanlar' raporu pratik; ilkesi verification-before-completion ile aynı, onun yanında yinelenen bağlam olabilir.",
+      "ortusme_grubu": "tamamlanma-dogrulama",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "api-and-interface-design",

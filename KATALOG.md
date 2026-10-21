@@ -256,17 +256,17 @@ _TDD, hata ayıklama, doğrulama_ · not: `notlar/b-yazilim-gelistirme/03-test-h
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `debugging-and-error-recovery` | ⭐ | Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match exp… | git, node, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `systematic-debugging` | ⭐ | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes | git | ✅ | 91 A | M 40KB | - | obra/superpowers |
-| `systematic-debugging@heyitsnoah` | alt | ALWAYS use before attempting any fix. Never jump to solutions - investigate root cause first. Use when encountering any technical issue, bug… | git, node, typescript | ✅ | 70 B | M 13KB | - | heyitsnoah/claudesidian |
-| `systematic-debugging@vudovn` | alt | 4-phase systematic debugging methodology with root cause analysis and evidence-based verification. Use when debugging complex issues. | git, typescript | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `tdd-workflow` | ⭐ | Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle. |  | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `test-driven-development` | ⭐ | Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. … | api-anahtari, css, html, node, playwright | ✅ | 91 A | M 16KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `test-driven-development@obra` | alt | Use when implementing any feature or bugfix, before writing implementation code | node, typescript | ✅ | 91 A | M 17KB | claude:farkli,agents:farkli | obra/superpowers |
-| `test-value` | ⭐ | Improve test value and feedback cost when auditing slow, flaky, redundant or brittle tests; choosing tests during implementation; or reviewi… |  | ✅ | 91 A | M 19KB | - | tt-a1i/archify |
-| `testing-patterns` | ⭐ | Testing patterns and principles. Unit, integration, mocking strategies. |  | ✅ | 89 A | S 10KB | - | vudovn/ag-kit |
-| `verification-before-completion` | ⭐ | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and … |  | ✅ | 93 A | S 4KB | - | obra/superpowers |
-| `verify-changes` | ⭐ | Prove code works by running it, not just checking it exists. Verification through execution rather than inspection. Use after writing or mod… | node, python | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
+| `debugging-and-error-recovery` | ⭐ alternatif | Kök neden odaklı hata ayıklama: 'hattı durdur' kuralı, yeniden üret → yerelleştir → küçült → kök nedeni düzelt → tekrarı önle → uçtan uca do… | git, node, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `systematic-debugging` | ⭐ birincil | superpowers'ın hata ayıklama skilli: 'kök neden bulunmadan düzeltme yok' demir yasasıyla dört faz (kök neden araştırması, desen analizi, hip… | git | ✅ | 91 A | M 40KB | - | obra/superpowers |
+| `systematic-debugging@heyitsnoah` | alt alternatif | obra/superpowers systematic-debugging'in claudesidian'daki kopyası: aynı dört faz ve demir yasa; kök neden izleme, stack trace ekleme, kirle… | git, typescript | ✅ | 70 B | M 13KB | - | heyitsnoah/claudesidian |
+| `systematic-debugging@vudovn` | alt alternatif | ag-kit'in kısaltılmış hata ayıklama şablonu (obra/superpowers'tan uyarlanmış): yeniden üret, izole et, anla (5 Neden), düzelt ve doğrula faz… | git | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
+| `tdd-workflow` | ⭐ alternatif | ag-kit'in TDD ilke özeti: RED-GREEN-REFACTOR döngüsü, TDD'nin üç yasası, her faz için kurallar, AAA, TDD'nin ne zaman değerli olduğu tablosu… |  | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
+| `test-driven-development` | ⭐ birincil | Kırmızı-yeşil-refactor döngüsüyle geliştirme: önce projenin test yığınını keşfeder, başarısız test yazdırır, minimum kodla geçirtir, sonra t… | api-anahtari, css, html, node, playwright | ✅ | 91 A | M 16KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `test-driven-development@obra` | alt alternatif | superpowers'ın TDD skilli: 'başarısız test olmadan üretim kodu yok' demir yasası; testten önce yazılan kodu silip baştan başlatır, kırmızıyı… | typescript | ✅ | 91 A | M 17KB | claude:farkli,agents:farkli | obra/superpowers |
+| `test-value` | ⭐ birincil | Testlerin değerini ve geri bildirim maliyetini denetler: yavaş, kararsız, yinelenen veya kırılgan testleri bulur; uygulama sırasında hangi t… |  | ✅ | 91 A | M 19KB | - | tt-a1i/archify |
+| `testing-patterns` | ⭐ alternatif | Test ilkeleri özeti: test piramidi, AAA, birim/entegrasyon/E2E seçimi, iyi birim testi özellikleri, mock ne zaman/hangi tür (stub, spy, mock… | python | ✅ | 89 A | S 10KB | - | vudovn/ag-kit |
+| `verification-before-completion` | ⭐ birincil | 'Taze doğrulama kanıtı olmadan tamamlandı iddiası yok' kuralı: bir durum iddia etmeden önce kanıtlayan komutu belirle, tam çalıştır, çıktıyı… |  | ✅ | 93 A | S 4KB | - | obra/superpowers |
+| `verify-changes` | ⭐ tamamlayıcı | Kodun çalıştığını incelemeyle değil çalıştırarak kanıtlatır: değişen dosyaları ve beklenen davranışı belirle, değişiklik tipine göre doğrula… | node, python | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
 
 ### 04-mimari-api-veritabani
 
