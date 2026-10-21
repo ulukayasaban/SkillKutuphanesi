@@ -10,6 +10,7 @@
     "next-dev-loop",
     "tailwind-patterns",
     "web-artifacts-builder",
-    "d3-viz"
+    "d3-viz",
+    "tailwind-design-system"
   ]
 }

@@ -1332,10 +1332,33 @@
         "ana_sayfa": "https://www.uupm.cc/",
         "katkici": 100
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Sosyal medya kapakları, reklam bannerları, web hero görselleri ve baskı bannerları için çok formatlı tasarım akışı. Gereksinimleri sorar, 2-3 sanat yönü üretir, bannerı tam piksel boyutunda HTML/CSS olarak kurar ve PNG'ye aktarır; platform ölçüleri ve 22 stil için bundled referans içerir.",
+      "kullanim_alani": "Belirli bir platform boyutuna (Twitter başlığı, LinkedIn kapağı, Google Display, hero) birden fazla sanat yönü alternatifli banner gerekince.",
+      "kullanma": "Video düzenleme, tam web sitesi tasarımı veya baskı üretimi (CMYK/bleed ayrıntısı) için değil; marka kuralı yoksa kendi marka kuralını uydurmaz, önce brand/design gerekir.",
+      "teknoloji": [
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "marka-sunum",
+        "landing-page"
+      ],
+      "roller": [
+        "tasarim-sistemi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel). Kısa ve kendi kendine yeten (6.9 KB); beceri, kurulum, anahtar ve ağ istemez, görsel üretimi ve PNG dışa aktarımını 'varsa' kaydıyla opsiyonel bırakıyor. Dikkat: kalite doğası gereği `design` skill'indeki banner alt akışıyla büyük ölçüde örtüşüyor; yalnız banner iş akışı gerekiyorsa tercih edilir. PNG aktarımı için ayrı bir tarayıcı/ekran görüntüsü aracı gerekir.",
+      "ortusme_grubu": "marka-gorsel-varlik",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
-        "not": "A",
+        "puan": 78,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
           "topluluk 20/20 (★138431)",
@@ -1343,7 +1366,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1407,9 +1431,34 @@
         "ana_sayfa": "https://www.uupm.cc/",
         "katkici": 100
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Marka sesi, görsel kimlik, mesajlaşma çerçeveleri, varlık yönetimi ve tutarlılık denetimi için kapsamlı kılavuz seti. `docs/brand-guidelines.md`'yi tek doğruluk kaynağı yapar; betikler renkleri çıkarır, varlıkları doğrular ve markayı `assets/design-tokens.json/css` dosyalarına senkronlar.",
+      "kullanim_alani": "Yeni bir marka kimliği/ses rehberi yazılırken veya mevcut marka kurallarını tasarım token'larına bağlarken; marka uyum denetimlerinde.",
+      "kullanma": "Tek seferlik logo üretimi veya hazır tema seçimi için değil (design / theme-factory). Projede zaten token/`@theme` dosyaları varsa sync betiği durur; üzerine yazmaz.",
+      "teknoloji": [
+        "node",
+        "css",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "marka-sunum",
+        "kurumsal-site",
+        "landing-page",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "tasarim-sistemi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. İçerik düzenli (ses, mesaj, tipografi, logo, onay kontrol listeleri) ve betikler yalnız Node standart kütüphanesini kullanıyor; sync betiği mevcut token dosyalarını görünce durup `--force` istiyor, bu güvenli bir tasarım. Dikkat: `sync-brand-to-tokens.cjs` kardeş `../design-system/scripts/generate-tokens.cjs` yoluna bağlı (yoksa yalnız uyarı verip CSS'i üretmez); design-system ile birlikte kurulmalı. `/brand:update` komutu ve `docs/` yolları proje köküne göre çalışır.",
+      "ortusme_grubu": "marka-gorsel-varlik",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 95,
+        "puan": 89,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -1418,7 +1467,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1479,10 +1529,31 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Anthropic'in kurumsal renk (koyu #141413, açık #faf9f5, turuncu/mavi/yeşil vurgu) ve tipografi (Poppins başlık, Lora gövde) kurallarını sunum ve belgelere uygulayan kısa skill. python-pptx RGBColor ile renk uygular, yazı tipi yoksa Arial/Georgia'ya düşer.",
+      "kullanim_alani": "Yalnızca Anthropic markalı sunum/belge üretirken veya tek bir markanın kuralının skill'e nasıl yazıldığına örnek olarak.",
+      "kullanma": "Kullanıcının kendi markası için değil: renk ve yazı tipleri Anthropic'e sabit. Genel marka rehberi için brand, hazır tema için theme-factory kullan.",
+      "teknoloji": [
+        "python-pptx"
+      ],
+      "gerekli_paketler": [
+        "python-pptx"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. İçerik tek bir kuruma (Anthropic) bağlı ve dar; kullanıcı projelerinde yanlış marka renkleri uygulama riski taşır, rol önyüklemesine girmemeli. Dikkat: registry 'lisans yok' diyor ama klasörde Apache-2.0 LICENSE.txt var (telif satırı Anthropic). Yapı olarak temiz, hiçbir şey kurmaz/indirmez.",
+      "ortusme_grubu": "hazir-tema-marka-stili",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
           "topluluk 20/20 (★182720)",
@@ -1490,7 +1561,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1551,10 +1623,31 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "anthropics/skills'teki brand-guidelines'ın birebir kopyası: Anthropic renk ve tipografi kurallarını sunum/belgelere uygular.",
+      "kullanim_alani": "Yalnızca birincil kopya (anthropics/skills) alınamazsa; aynı Anthropic marka içeriği.",
+      "kullanma": "Birincil kopya varken kullanma. Kullanıcının kendi markası için değil.",
+      "teknoloji": [
+        "python-pptx"
+      ],
+      "gerekli_paketler": [
+        "python-pptx"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. SKILL.md anthropics/skills sürümüyle birebir aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: bu kopyanın LICENSE.txt'inde telif satırı doldurulmamış şablon ('Copyright [yyyy] [name of copyright owner]'), yani lisans sahipliği net değil; resmî kopya tercih edilmeli.",
+      "ortusme_grubu": "hazir-tema-marka-stili",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (33 gün önce)",
           "topluluk 20/20 (★77605)",
@@ -1562,7 +1655,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1840,9 +1934,37 @@
         "ana_sayfa": "https://www.uupm.cc/",
         "katkici": 100
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Üç katmanlı (primitive, semantic, component) token mimarisi, CSS değişkenleri, boşluk/tipografi ölçekleri, bileşen durum spesifikasyonları ve token'dan kod üretimi. Ayrıca token'larla uyumlu sunum (slide) üretimi için BM25 arama, 8 karar CSV'si ve Chart.js tabanlı bir slayt sistemi içerir.",
+      "kullanim_alani": "Sıfırdan veya mevcut projede token sistemi kurarken; hardcode renk/boşluk denetimi (`validate-tokens.cjs`) ve Tailwind entegrasyonu için.",
+      "kullanma": "Sadece Tailwind v4 bileşen kitaplığı yazacaksan tailwind-design-system daha doğrudan; tek seferlik sunum için slides skill'i. Marka sesi/mesaj için brand.",
+      "teknoloji": [
+        "css",
+        "node",
+        "python",
+        "tailwindcss",
+        "chart.js"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "landing-page",
+        "kurumsal-site",
+        "marka-sunum"
+      ],
+      "roller": [
+        "tasarim-sistemi",
+        "ui-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Token hiyerarşisi, durum matrisi ve doğrulama/üretim betikleri (testli, yalnız stdlib) net; hardcode değer denetimi gerçek kazanç. Dikkat: slayt sistemi (7+ py/csv, ~250 KB klasör) token konusundan bağımsız bir yan ürün ve `slides` skill'iyle örtüşüyor. SKILL.md var olmayan dosyalara başvuruyor: `assets/designs/slides/claudekit-pitch-251223.html`, `assets/css/slide-animations.css`, `/slides:create` komutu. 'Skill Dependencies: brand, ui-styling' — ikisi de kütüphanede var (ui-styling 01'de). `fetch-background.py` yalnız hazır Pexels URL'leri döndürür, indirme/anahtar yok; Chart.js CDN'den sabit sürümle (4.4.1) yükleniyor.",
+      "ortusme_grubu": "tasarim-token-mimarisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 95,
+        "puan": 89,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -1851,7 +1973,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1918,9 +2041,45 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Tailwind CSS v4 ile (CSS-first `@theme`, OKLCH renk) üretim kalitesinde tasarım sistemi kurma tarifi: semantik token'lar, CVA ile bileşen varyantları, React 19 bileşik bileşenler, form bileşenleri, responsive grid, native CSS animasyonlar, @custom-variant ile koyu mod ve v3→v4 geçiş kontrol listesi.",
+      "kullanim_alani": "Tailwind v4 projesinde bileşen kitaplığı/token sistemi yazarken veya v3'ten v4'e geçerken; shadcn tarzı (CVA + Radix Slot) bileşenler gerekince.",
+      "kullanma": "Tailwind kullanmayan projelerde değil; Tailwind v3 projesinde (yöntemler farklı) uygun değil. Yalnız kısa ilke özeti istiyorsan tailwind-patterns; shadcn bileşen kurulumu için ui-styling.",
+      "teknoloji": [
+        "tailwindcss",
+        "react",
+        "typescript",
+        "radix-ui"
+      ],
+      "gerekli_paketler": [
+        "tailwindcss@4",
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge",
+        "@radix-ui/react-slot",
+        "react-hook-form",
+        "zod",
+        "lucide-react"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "landing-page",
+        "kurumsal-site",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "tasarim-sistemi",
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (opsiyonel). tailwind-patterns ile ilişki: ikisi de v4 CSS-first, ama tailwind-patterns kısa ilke/karar özeti (6.8 KB, kod azdır), tailwind-design-system ise kod ağırlıklı uygulama tarifi (21.8 KB; CVA, bileşik bileşen, form, animasyon, koyu mod, geçiş listesi). Çatışmazlar, tamamlayıcıdır; bağlam tasarrufu için önce patterns, bileşen yazarken bu seçilir. Dikkat: büyük (21.8 KB). Registry'deki 'OpenMontage kurulumu gerekir' bağımlılığı yanlış pozitif: SKILL.md'de OpenMontage/python/tools/ referansı yok, düz Tailwind skill'i. Lisans AGPL-3.0 görünüyor ama bu OpenMontage deposunun lisansı; içeriğin kendi lisansı (muhtemelen farklı bir üst kaynaktan alınmış) doğrulanmadı. Örnekler `@/lib/utils` (cn), ThemeProvider gibi proje dosyalarını varsayar.",
+      "ortusme_grubu": "shadcn-tailwind-uygulama",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -1929,7 +2088,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -2093,10 +2253,34 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "10 hazır renk+yazı tipi temasıyla (Ocean Depths, Midnight Galaxy, Tech Innovation vb.) slayt, belge, rapor veya HTML sayfasını tek seferde stillendirir; tema önizleme PDF'i sunar, seçim sonrası ilgili `themes/*.md` dosyasındaki hex ve yazı tiplerini uygular, uygun tema yoksa yenisini üretir.",
+      "kullanim_alani": "Hızlı, tutarlı görünüm gerektiren sunum/belge/landing için hazır palet+font çifti seçerken; marka rehberi yokken.",
+      "kullanma": "Markanın kurallı renkleri varsa (brand/design-system önce). Kod tabanında token sistemi kurmak için değil.",
+      "teknoloji": [
+        "html",
+        "css",
+        "pptx"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "marka-sunum",
+        "rapor-dokuman",
+        "landing-page"
+      ],
+      "roller": [
+        "tasarim-sistemi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel). 10 tema hazır ve tutarlı, bağımlılığı yok. Dikkat: temalar genel amaçlı/jenerik; 'yapay zeka şablonu' görünümünden kaçınmak isteyen projede tasarım yönü için yeterli değildir (design-taste-frontend). Akış 'PDF'i göster, seçim bekle' diye kullanıcı etkileşimi varsayar; otomatik/tek atışta zorlaşır. Resmî kopya (anthropics/skills) tercih; composiohq kopyası birebir aynı.",
+      "ortusme_grubu": "hazir-tema-marka-stili",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
           "topluluk 20/20 (★182720)",
@@ -2104,7 +2288,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -2165,10 +2350,32 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "anthropics/skills'teki theme-factory'nin birebir kopyası: 10 hazır tema ile slayt/belge/HTML stillendirme.",
+      "kullanim_alani": "Yalnızca resmî kopya alınamazsa.",
+      "kullanma": "Resmî kopya varken kullanma.",
+      "teknoloji": [
+        "html",
+        "css",
+        "pptx"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "marka-sunum",
+        "rapor-dokuman",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. SKILL.md, themes/ ve PDF resmî sürümle aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te telif satırı doldurulmamış şablon.",
+      "ortusme_grubu": "hazir-tema-marka-stili",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (33 gün önce)",
           "topluluk 20/20 (★77605)",
@@ -2176,7 +2383,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },

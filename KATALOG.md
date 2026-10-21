@@ -68,17 +68,17 @@ _Design token, tema, marka kimliği, banner/logo_ · not: `notlar/a-tasarim-onyu
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `banner-design` | ⭐ | Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with optional generated or … | canvas, css, html | 🟡 | 90 A | S 12KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `brand` | ⭐ | Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, market… | api-anahtari, css, node, tailwind | ✅ | 95 A | S 106KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `brand-guidelines` | ⭐ | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use… | python | ✅ | 88 A | S 13KB | - | anthropics/skills |
-| `brand-guidelines@composiohq` | alt | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use… | python | ✅ | 88 A | S 13KB | - | ComposioHQ/awesome-claude-skills |
+| `banner-design` | ⭐ tamamlayıcı | Sosyal medya kapakları, reklam bannerları, web hero görselleri ve baskı bannerları için çok formatlı tasarım akışı. Gereksinimleri sorar, 2-… | html, css | 🟡 | 78 B | S 12KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
+| `brand` | ⭐ tamamlayıcı | Marka sesi, görsel kimlik, mesajlaşma çerçeveleri, varlık yönetimi ve tutarlılık denetimi için kapsamlı kılavuz seti. `docs/brand-guidelines… | node, css, markdown | ✅ | 89 A | S 106KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
+| `brand-guidelines` | ⭐ tamamlayıcı | Anthropic'in kurumsal renk (koyu #141413, açık #faf9f5, turuncu/mavi/yeşil vurgu) ve tipografi (Poppins başlık, Lora gövde) kurallarını sunu… | python-pptx | ✅ | 69 B | S 13KB | - | anthropics/skills |
+| `brand-guidelines@composiohq` | alt alternatif | anthropics/skills'teki brand-guidelines'ın birebir kopyası: Anthropic renk ve tipografi kurallarını sunum/belgelere uygular. | python-pptx | ✅ | 69 B | S 13KB | - | ComposioHQ/awesome-claude-skills |
 | `design` | ⭐ birincil | claudekit birleşik tasarım skilli: marka kimliği, token, UI stili, AI ile logo üretimi (55 stil; Gemini, Atlas Cloud veya MuAPI), 50 teslima… | python, html, css, gemini, api-anahtari | 🟡 | 77 B | M 284KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
 | `design-spec` | ⭐ tamamlayıcı | DESIGN.md dosyası yazma rehberi: makinece okunur tasarım token'ları (YAML ön bilgi: renk, tipografi, boşluk, köşe, bileşen) ile insan okunur… | markdown, yaml | ✅ | 85 A | S 21KB | - | vudovn/ag-kit |
-| `design-system` | ⭐ | Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacin… | api-anahtari, canvas, css, html, node | ✅ | 95 A | S 178KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `tailwind-design-system` | ⭐ | Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component… | api-anahtari, css, react, tailwind, typescript | ✅ | 90 A | M 22KB | claude:ayni | calesthio/OpenMontage |
+| `design-system` | ⭐ birincil | Üç katmanlı (primitive, semantic, component) token mimarisi, CSS değişkenleri, boşluk/tipografi ölçekleri, bileşen durum spesifikasyonları v… | css, node, python, tailwindcss, chart.js | ✅ | 89 A | S 178KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
+| `tailwind-design-system` | ⭐ tamamlayıcı | Tailwind CSS v4 ile (CSS-first `@theme`, OKLCH renk) üretim kalitesinde tasarım sistemi kurma tarifi: semantik token'lar, CVA ile bileşen va… | tailwindcss, react, typescript, radix-ui | ✅ | 86 A | M 22KB | claude:ayni | calesthio/OpenMontage |
 | `tailwind-patterns` | ⭐ tamamlayıcı | Tailwind CSS v4 ilkeleri: CSS-öncelikli @theme yapılandırması, kapsayıcı sorguları, OKLCH renk token mimarisi, karanlık mod, tipografi ölçeğ… | tailwind, css | ✅ | 77 B | S 7KB | - | vudovn/ag-kit |
-| `theme-factory` | ⭐ | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set t… | html | ✅ | 88 A | S 141KB | - | anthropics/skills |
-| `theme-factory@composiohq` | alt | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set t… | html | ✅ | 88 A | S 141KB | - | ComposioHQ/awesome-claude-skills |
+| `theme-factory` | ⭐ birincil | 10 hazır renk+yazı tipi temasıyla (Ocean Depths, Midnight Galaxy, Tech Innovation vb.) slayt, belge, rapor veya HTML sayfasını tek seferde s… | html, css, pptx | ✅ | 77 B | S 141KB | - | anthropics/skills |
+| `theme-factory@composiohq` | alt alternatif | anthropics/skills'teki theme-factory'nin birebir kopyası: 10 hazır tema ile slayt/belge/HTML stillendirme. | html, css, pptx | ✅ | 77 B | S 141KB | - | ComposioHQ/awesome-claude-skills |
 
 ### 03-animasyon-motion
 
