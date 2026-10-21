@@ -17423,7 +17423,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -17436,7 +17436,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian notlarını (tek dosya ya da klasör) okuyup not türüne göre (toplantı, günlük, referans, proje) YAML frontmatter özellikleri ekler veya normalleştirir; mevcut geçerli özellikleri korur, adlandırma ve değer tipi kurallarını uygular.",
+      "kullanim_alani": "Obsidian kasasında etiket/özellik düzeni kurmak, Bases görünümlerine veri hazırlamak.",
+      "kullanma": "Obsidian dışı Markdown projelerinde (Jekyll/Hugo frontmatter şeması farklı).",
+      "teknoloji": [
+        "obsidian",
+        "markdown",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Not türüne göre hazır özellik şablonları ve kalite kontrolleri net; MIT, küçük (4 KB).",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "daily-review",
@@ -17493,7 +17511,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -17506,7 +17524,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Gün sonu değerlendirmesi: bugün değişen/oluşan notları bulur, ilerlemeyi, takılan işleri ve içgörüleri çıkarır, yarının ilk 3 önceliğini ve açık döngüleri içeren bir günlük not yazar.",
+      "kullanim_alani": "Obsidian/Markdown kasasında günlük kapanış ve ertesi gün planı.",
+      "kullanma": "Not kasası yoksa; ekip durum raporu için internal-comms daha uygun.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve kullanışlı şablon; weekly-synthesis ile aynı ailede (gün/hafta).",
+      "ortusme_grubu": "periyodik-degerlendirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "download-attachment",
@@ -17566,7 +17601,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -17579,7 +17614,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Verilen URL'lerden dosyaları Obsidian kasasının 05_Attachments klasörüne indirir (yalnızca http/https, dosya adı temizleme, zaman aşımı), içeriğe göre anlamlı adlandırır, dizini günceller ve git commit atar.",
+      "kullanim_alani": "Claudesidian düzenindeki kasaya web'den PDF/görsel ek kaydetmek.",
+      "kullanma": "Claudesidian klasör düzeni (05_Attachments, organize-attachments) yoksa yolları uyarlamadan; güvenilmeyen kaynaklardan dosya indirmek için.",
+      "teknoloji": [
+        "bash",
+        "obsidian"
+      ],
+      "gerekli_paketler": [
+        "curl veya wget",
+        "pdftotext (poppler)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (dar). URL doğrulama ve yol temizleme gibi güvenlik adımları iyi; claudesidian'a özgü klasör adları ve komutlara bağımlı.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "file-organizer",
@@ -17636,7 +17691,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -17649,7 +17704,23 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bilgisayardaki klasörleri (İndirilenler, Belgeler, projeler) analiz eder; kopya dosyaları bulur, mantıklı klasör yapısı önerir ve kullanıcı onayıyla taşıma/yeniden adlandırma yapar.",
+      "kullanim_alani": "Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik.",
+      "kullanma": "Onay almadan toplu taşıma/silme gerektiğinde (geri alınamaz işler); Obsidian kasası için inbox-processor daha uygun.",
+      "teknoloji": [
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Onay isteyen adımlar ve örnekler makul; betik yok, kopya tespiti agent'ın komutlarına bağlı. Lisans belirtilmemiş.",
+      "ortusme_grubu": "dosya-duzenleme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "inbox-processor",
@@ -17706,7 +17777,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -17719,7 +17790,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kasanın 00_Inbox klasöründeki notları PARA yöntemine göre (Projects/Areas/Resources/Archive/Sil) sınıflandırır; her not için hedef klasör, gerekçe ve ilişkili notlar içeren bir eylem planı sunar.",
+      "kullanim_alani": "PARA düzenli Obsidian kasasında gelen kutusu temizliği.",
+      "kullanma": "PARA klasör yapısı yoksa (klasör adları uyarlanmalı); genel dosya düzeni için file-organizer.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve net sınıflandırma kuralları; claudesidian klasör adlarına bağlı.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "init-bootstrap",
@@ -17781,7 +17869,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 67,
         "not": "B",
@@ -17794,7 +17882,28 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Claudesidian kasası için etkileşimli kurulum sihirbazı: klasör adı, bağımlılık kurulumu (pnpm/npm), git durumu, mevcut kasa yapısı ve çalışma alışkanlıkları hakkında sorular sorup kişiselleştirilmiş CLAUDE.md üretir.",
+      "kullanim_alani": "claudesidian şablonuyla yeni Obsidian kasası kurarken ilk yapılandırma.",
+      "kullanma": "claudesidian dışındaki projelerde. Codex'te: allowed-tools (Task, MultiEdit) Claude Code'a özgü; üretilen dosyayı CLAUDE.md yerine AGENTS.md olarak yazdırmak gerekir.",
+      "teknoloji": [
+        "obsidian",
+        "node",
+        "git"
+      ],
+      "gerekli_paketler": [
+        "pnpm veya npm",
+        "git"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV (şablona özgü). Ayrıntılı ama 30 KB ve tamamen claudesidian deposuna bağlı; git origin silme gibi geri alınması zor adımlar içeriyor.",
+      "ortusme_grubu": "claudesidian-kurulum",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "install-claudesidian-command",
@@ -17853,7 +17962,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 65,
         "not": "B",
@@ -17866,7 +17975,26 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kabuğa (bash/zsh/fish) `claudesidian` adlı bir alias/fonksiyon ekler: kasa klasörüne geçip `claude --resume` ile oturumu sürdürür ya da yeni oturum açar; yol kaçışlama ve güvenlik notları içerir.",
+      "kullanim_alani": "claudesidian kasasını terminalden tek komutla açmak.",
+      "kullanma": "Codex kullanıcıları için olduğu gibi kullanma: komut `claude` CLI'ını çağırıyor; Codex'te alias içindeki komutu `codex resume --last || codex` olarak değiştirerek uyarlanabilir. Kabuk yapılandırma dosyasını değiştirir — onaysız çalıştırma.",
+      "teknoloji": [
+        "bash",
+        "claude-code"
+      ],
+      "gerekli_paketler": [
+        "claude CLI"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. İşini iyi tarif ediyor (fish desteği, özel karakter kaçışı) ama tek amaçlı ve Claude CLI'a bağlı.",
+      "ortusme_grubu": "claudesidian-kurulum",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "invoice-organizer",
@@ -17923,7 +18051,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -17936,7 +18064,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Fatura ve fişleri (PDF, taranmış görsel, e-posta eki) okuyup satıcı, tarih, tutar, fatura no gibi bilgileri çıkarır; `YYYY-AA-GG Satıcı - Fatura - Ürün.pdf` biçiminde yeniden adlandırıp satıcıya/kategoriye/döneme göre klasörler, CSV özet üretir; orijinalleri korur.",
+      "kullanim_alani": "Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama.",
+      "kullanma": "Muhasebe kaydı/vergi beyanı yerine geçmez; OCR doğruluğu kontrol edilmeden finansal karar için kullanma.",
+      "teknoloji": [
+        "python",
+        "pdf"
+      ],
+      "gerekli_paketler": [
+        "pdftotext veya pdfplumber",
+        "OCR aracı (taranmış fişler için)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Adlandırma standardı ve klasör stratejileri iyi; çıkarma için pdf skilliyle birlikte kullanılır. Lisans belirtilmemiş.",
+      "ortusme_grubu": "dosya-duzenleme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "obsidian-bases",
@@ -17996,7 +18146,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 70,
         "not": "B",
@@ -18009,7 +18159,24 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian Bases (.base) dosyalarını oluşturur ve düzenler: tam YAML şeması, global/görünüm filtreleri, formül sözdizimi ve fonksiyon başvurusu, tablo/kart/liste/harita görünümleri, özet formülleri.",
+      "kullanim_alani": "Obsidian'da notlardan veritabanı benzeri tablo/kart görünümü kurmak.",
+      "kullanma": "Obsidian Bases kullanılmıyorsa (Dataview eklentisi farklı sözdizimi kullanır).",
+      "teknoloji": [
+        "obsidian",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Şema ve fonksiyon başvurusu eksiksiz ve örnekli (kaynak kepano/obsidian-skills içeriğiyle uyumlu); MIT.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "obsidian-markdown",
@@ -18074,7 +18241,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -18087,7 +18254,24 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian Flavored Markdown yazımı: wikilink, gömme (embed), callout, özellikler (properties), etiketler, blok referansları, LaTeX matematik ve diğer Obsidian'a özgü sözdizimi; örneklerle eksiksiz başvuru.",
+      "kullanim_alani": "Obsidian kasasına not yazan/düzenleyen her iş; diğer Obsidian skillerinin temeli.",
+      "kullanma": "Obsidian dışında (GitHub/GFM) Markdown yazarken wikilink ve callout kullanımı uyumsuz olur.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Obsidian sözdiziminin en eksiksiz başvurusu; diğer kasa skilleri buna yaslanır.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "research-assistant",
@@ -18144,7 +18328,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -18157,7 +18341,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bir konuyu kasadaki notlar üzerinden araştırır: ilgili notları bulup okur, temaları, çelişkileri ve boşlukları çıkarır, wikilink'li bir araştırma özeti ve sonraki adımlar yazar.",
+      "kullanim_alani": "Kasada bir konu hakkında birikmiş bilgiyi sentezlemek.",
+      "kullanma": "Web araştırması gerekiyorsa (agent-reach, content-research-writer); kasa yoksa.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa, net çıktı yapısı; çelişkileri öne çıkarması değerli.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "thinking-partner",
@@ -18214,7 +18415,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -18227,7 +18428,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Karmaşık bir problemi çözüme koşmadan sorularla birlikte düşünme modu: önce sorar, varsayımları yüzeye çıkarır, içgörüleri kaydeder, kasadaki ilgili notlarla bağlantı kurar ve periyodik özet çıkarır.",
+      "kullanim_alani": "Fikir keşfi, sesli düşünme, karar öncesi problem çerçeveleme.",
+      "kullanma": "Kullanıcı doğrudan çözüm/uygulama istiyorsa; yapılandırılmış spec gerekiyorsa (planlama skilleri).",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Çok kısa davranış tarifi; brainstorming/idea-refine ile benzer ama 'çözüm üretme' yasağı ayırt edici.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "upgrade",
@@ -18289,7 +18506,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 65,
         "not": "B",
@@ -18302,7 +18519,28 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "claudesidian kurulumunu GitHub'daki son sürüme yükseltir: sürüm kontrolü, yedek, upstream çekme, dosya dosya anlamsal karşılaştırma ile kullanıcı özelleştirmelerini koruyarak birleştirme, .agents/skills sembolik bağlantı hijyeni ve eski düzenden geçiş.",
+      "kullanim_alani": "claudesidian tabanlı kasayı güncellemek.",
+      "kullanma": "claudesidian dışı her yerde. Codex'te: allowed-tools (WebFetch, MultiEdit) Claude Code'a özgü; .claude/skills sembolik bağlantı adımları Codex için .agents/skills kanonik konumuyla zaten uyumlu, yalnızca .claude ve .pi bağlantı adımları atlanabilir.",
+      "teknoloji": [
+        "git",
+        "bash",
+        "obsidian"
+      ],
+      "gerekli_paketler": [
+        "git",
+        "curl"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV (şablona özgü). Yedek ve çatışma çözüm felsefesi iyi düşünülmüş ama sadece claudesidian'a yarar.",
+      "ortusme_grubu": "claudesidian-kurulum",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "weekly-synthesis",
@@ -18359,7 +18597,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -18372,7 +18610,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Haftanın notlarını ve çalışmalarını tarayıp tekrar eden temaları, içgörüleri, proje ilerlemesini, ortaya çıkan soruları, enerji denetimini ve not bağlantılarını içeren haftalık sentez notu yazar.",
+      "kullanim_alani": "Haftalık değerlendirme, bir sonraki haftanın planı.",
+      "kullanma": "Kasa/not geçmişi yoksa; ekip haftalık raporu için internal-comms (3P).",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil). Haftalık şablon günlükten daha kapsamlı; daily-review ile birlikte kullanılır.",
+      "ortusme_grubu": "periyodik-degerlendirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "claude-api",

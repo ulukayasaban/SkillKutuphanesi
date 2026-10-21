@@ -2,7 +2,7 @@
 
 _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **1/15**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/15**
 
 ### json-canvas  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
 
@@ -17,140 +17,154 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 
 ### add-frontmatter  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
-- **Ne yapar:** Add or update YAML frontmatter properties to enhance Obsidian note organization. Use when the user asks to add, fix, normalize, or improve frontmatter, properties, metadata, tags, or YAML on a note or folder of notes.
-- **Teknoloji:** obsidian _(otomatik tespit)_
+- **Ne yapar:** Obsidian notlarını (tek dosya ya da klasör) okuyup not türüne göre (toplantı, günlük, referans, proje) YAML frontmatter özellikleri ekler veya normalleştirir; mevcut geçerli özellikleri korur, adlandırma ve değer tipi kurallarını uygular.
+- **Ne zaman:** Obsidian kasasında etiket/özellik düzeni kurmak, Bases görünümlerine veri hazırlamak. · **Ne zaman değil:** Obsidian dışı Markdown projelerinde (Jekyll/Hugo frontmatter şeması farklı).
+- **Teknoloji:** obsidian, markdown, yaml
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** obsidian-kasasi → tamamlayıcı
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Not türüne göre hazır özellik şablonları ve kalite kontrolleri net; MIT, küçük (4 KB).
 
 ### daily-review  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
-- **Ne yapar:** Conduct an end-of-day review to capture progress and set up tomorrow. Use when the user asks for a daily review, end of day wrap-up, EOD note, what they did today, or wants to reflect on the day and plan tomorrow.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Gün sonu değerlendirmesi: bugün değişen/oluşan notları bulur, ilerlemeyi, takılan işleri ve içgörüleri çıkarır, yarının ilk 3 önceliğini ve açık döngüleri içeren bir günlük not yazar.
+- **Ne zaman:** Obsidian/Markdown kasasında günlük kapanış ve ertesi gün planı. · **Ne zaman değil:** Not kasası yoksa; ekip durum raporu için internal-comms daha uygun.
+- **Teknoloji:** obsidian, markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** periyodik-degerlendirme → tamamlayıcı
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve kullanışlı şablon; weekly-synthesis ile aynı ailede (gün/hafta).
 
 ### download-attachment  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
-- **Ne yapar:** Download files from URLs to the Obsidian attachments folder and organize them with descriptive names. Use when the user provides URLs to download, asks to save files from the web, or wants to add web content as attachments.
-- **Teknoloji:** git, obsidian _(otomatik tespit)_
+- **Ne yapar:** Verilen URL'lerden dosyaları Obsidian kasasının 05_Attachments klasörüne indirir (yalnızca http/https, dosya adı temizleme, zaman aşımı), içeriğe göre anlamlı adlandırır, dizini günceller ve git commit atar.
+- **Ne zaman:** Claudesidian düzenindeki kasaya web'den PDF/görsel ek kaydetmek. · **Ne zaman değil:** Claudesidian klasör düzeni (05_Attachments, organize-attachments) yoksa yolları uyarlamadan; güvenilmeyen kaynaklardan dosya indirmek için.
+- **Teknoloji:** bash, obsidian · **Paketler:** curl veya wget, pdftotext (poppler)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** obsidian-kasasi → alternatif
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (dar). URL doğrulama ve yol temizleme gibi güvenlik adımları iyi; claudesidian'a özgü klasör adları ve komutlara bağımlı.
 
 ### file-organizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 86 (A)
 
-- **Ne yapar:** Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Bilgisayardaki klasörleri (İndirilenler, Belgeler, projeler) analiz eder; kopya dosyaları bulur, mantıklı klasör yapısı önerir ve kullanıcı onayıyla taşıma/yeniden adlandırma yapar.
+- **Ne zaman:** Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik. · **Ne zaman değil:** Onay almadan toplu taşıma/silme gerektiğinde (geri alınamaz işler); Obsidian kasası için inbox-processor daha uygun.
+- **Teknoloji:** bash
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** dosya-duzenleme → birincil
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Onay isteyen adımlar ve örnekler makul; betik yok, kopya tespiti agent'ın komutlarına bağlı. Lisans belirtilmemiş.
 
 ### inbox-processor  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
-- **Ne yapar:** Help organize and process items in the 00_Inbox folder according to the PARA method. Use when the user asks to process, clear, sort, triage, or organize their inbox.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Kasanın 00_Inbox klasöründeki notları PARA yöntemine göre (Projects/Areas/Resources/Archive/Sil) sınıflandırır; her not için hedef klasör, gerekçe ve ilişkili notlar içeren bir eylem planı sunar.
+- **Ne zaman:** PARA düzenli Obsidian kasasında gelen kutusu temizliği. · **Ne zaman değil:** PARA klasör yapısı yoksa (klasör adları uyarlanmalı); genel dosya düzeni için file-organizer.
+- **Teknoloji:** obsidian, markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** obsidian-kasasi → tamamlayıcı
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve net sınıflandırma kuralları; claudesidian klasör adlarına bağlı.
 
 ### init-bootstrap  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 67 (B)
 
-- **Ne yapar:** Interactive setup wizard that helps new users create a personalized CLAUDE.md file based on their Obsidian workflow preferences. Use when the user wants to set up claudesidian, onboard a new vault, or run the bootstrap/init/setup wizard.
-- **Teknoloji:** api-anahtari, git, node, obsidian _(otomatik tespit)_
+- **Ne yapar:** Claudesidian kasası için etkileşimli kurulum sihirbazı: klasör adı, bağımlılık kurulumu (pnpm/npm), git durumu, mevcut kasa yapısı ve çalışma alışkanlıkları hakkında sorular sorup kişiselleştirilmiş CLAUDE.md üretir.
+- **Ne zaman:** claudesidian şablonuyla yeni Obsidian kasası kurarken ilk yapılandırma. · **Ne zaman değil:** claudesidian dışındaki projelerde. Codex'te: allowed-tools (Task, MultiEdit) Claude Code'a özgü; üretilen dosyayı CLAUDE.md yerine AGENTS.md olarak yazdırmak gerekir.
+- **Teknoloji:** obsidian, node, git · **Paketler:** pnpm veya npm, git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** claudesidian-kurulum → birincil
 - **Boyut:** 30 KB (SKILL.md 29.6 KB, yük buyuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV (şablona özgü). Ayrıntılı ama 30 KB ve tamamen claudesidian deposuna bağlı; git origin silme gibi geri alınması zor adımlar içeriyor.
 
 ### install-claudesidian-command  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 65 (B)
 
-- **Ne yapar:** Install claudesidian shell command to launch Claude Code from anywhere. Use when the user wants to install a shell alias/launcher for their vault, or asks to set up the claudesidian command.
-- **Teknoloji:** obsidian _(otomatik tespit)_
+- **Ne yapar:** Kabuğa (bash/zsh/fish) `claudesidian` adlı bir alias/fonksiyon ekler: kasa klasörüne geçip `claude --resume` ile oturumu sürdürür ya da yeni oturum açar; yol kaçışlama ve güvenlik notları içerir.
+- **Ne zaman:** claudesidian kasasını terminalden tek komutla açmak. · **Ne zaman değil:** Codex kullanıcıları için olduğu gibi kullanma: komut `claude` CLI'ını çağırıyor; Codex'te alias içindeki komutu `codex resume --last || codex` olarak değiştirerek uyarlanabilir. Kabuk yapılandırma dosyasını değiştirir — onaysız çalıştırma.
+- **Teknoloji:** bash, claude-code · **Paketler:** claude CLI
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** claudesidian-kurulum → tamamlayıcı
 - **Boyut:** 10 KB (SKILL.md 10.5 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. İşini iyi tarif ediyor (fish desteği, özel karakter kaçışı) ama tek amaçlı ve Claude CLI'a bağlı.
 
 ### invoice-organizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 86 (A)
 
-- **Ne yapar:** Automatically organizes invoices and receipts for tax preparation by reading messy files, extracting key information, renaming them consistently, and sorting them into logical folders. Turns hours of manual bookkeeping into minutes of automated organization.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Fatura ve fişleri (PDF, taranmış görsel, e-posta eki) okuyup satıcı, tarih, tutar, fatura no gibi bilgileri çıkarır; `YYYY-AA-GG Satıcı - Fatura - Ürün.pdf` biçiminde yeniden adlandırıp satıcıya/kategoriye/döneme göre klasörler, CSV özet üretir; orijinalleri korur.
+- **Ne zaman:** Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama. · **Ne zaman değil:** Muhasebe kaydı/vergi beyanı yerine geçmez; OCR doğruluğu kontrol edilmeden finansal karar için kullanma.
+- **Teknoloji:** python, pdf · **Paketler:** pdftotext veya pdfplumber, OCR aracı (taranmış fişler için)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** dosya-duzenleme → tamamlayıcı
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Adlandırma standardı ve klasör stratejileri iyi; çıkarma için pdf skilliyle birlikte kullanılır. Lisans belirtilmemiş.
 
 ### obsidian-bases  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
 
-- **Ne yapar:** Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.
-- **Teknoloji:** html, obsidian _(otomatik tespit)_
+- **Ne yapar:** Obsidian Bases (.base) dosyalarını oluşturur ve düzenler: tam YAML şeması, global/görünüm filtreleri, formül sözdizimi ve fonksiyon başvurusu, tablo/kart/liste/harita görünümleri, özet formülleri.
+- **Ne zaman:** Obsidian'da notlardan veritabanı benzeri tablo/kart görünümü kurmak. · **Ne zaman değil:** Obsidian Bases kullanılmıyorsa (Dataview eklentisi farklı sözdizimi kullanır).
+- **Teknoloji:** obsidian, yaml
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** obsidian-kasasi → tamamlayıcı
 - **Boyut:** 16 KB (SKILL.md 16.1 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Şema ve fonksiyon başvurusu eksiksiz ve örnekli (kaynak kepano/obsidian-skills içeriğiyle uyumlu); MIT.
 
 ### obsidian-markdown  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 68 (B)
 
-- **Ne yapar:** Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.
-- **Teknoloji:** css, html, obsidian, python _(otomatik tespit)_
+- **Ne yapar:** Obsidian Flavored Markdown yazımı: wikilink, gömme (embed), callout, özellikler (properties), etiketler, blok referansları, LaTeX matematik ve diğer Obsidian'a özgü sözdizimi; örneklerle eksiksiz başvuru.
+- **Ne zaman:** Obsidian kasasına not yazan/düzenleyen her iş; diğer Obsidian skillerinin temeli. · **Ne zaman değil:** Obsidian dışında (GitHub/GFM) Markdown yazarken wikilink ve callout kullanımı uyumsuz olur.
+- **Teknoloji:** obsidian, markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** obsidian-kasasi → birincil
 - **Boyut:** 11 KB (SKILL.md 10.6 KB, yük orta) · **Kırık bağlantı:** 2
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Obsidian sözdiziminin en eksiksiz başvurusu; diğer kasa skilleri buna yaslanır.
 
 ### research-assistant  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
-- **Ne yapar:** Conduct thorough research on topics by searching the vault and synthesizing findings. Use when the user asks to research a topic, dig into something across notes, or wants a synthesis of what the vault knows about a subject.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Bir konuyu kasadaki notlar üzerinden araştırır: ilgili notları bulup okur, temaları, çelişkileri ve boşlukları çıkarır, wikilink'li bir araştırma özeti ve sonraki adımlar yazar.
+- **Ne zaman:** Kasada bir konu hakkında birikmiş bilgiyi sentezlemek. · **Ne zaman değil:** Web araştırması gerekiyorsa (agent-reach, content-research-writer); kasa yoksa.
+- **Teknoloji:** obsidian, markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa, net çıktı yapısı; çelişkileri öne çıkarması değerli.
 
 ### thinking-partner  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
-- **Ne yapar:** Act as a collaborative thinking partner for exploring complex problems through questioning, not solutioning. Use when the user wants to think out loud, explore an idea, work through a problem, or asks for a thinking partner.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Karmaşık bir problemi çözüme koşmadan sorularla birlikte düşünme modu: önce sorar, varsayımları yüzeye çıkarır, içgörüleri kaydeder, kasadaki ilgili notlarla bağlantı kurar ve periyodik özet çıkarır.
+- **Ne zaman:** Fikir keşfi, sesli düşünme, karar öncesi problem çerçeveleme. · **Ne zaman değil:** Kullanıcı doğrudan çözüm/uygulama istiyorsa; yapılandırılmış spec gerekiyorsa (planlama skilleri).
+- **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Çok kısa davranış tarifi; brainstorming/idea-refine ile benzer ama 'çözüm üretme' yasağı ayırt edici.
 
 ### upgrade  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 65 (B)
 
-- **Ne yapar:** Intelligently upgrade claudesidian with new features while preserving user customizations using AI-powered semantic analysis. Use when the user wants to upgrade claudesidian, pull in upstream changes, or update their installation.
-- **Teknoloji:** api-anahtari, git, obsidian, python _(otomatik tespit)_
+- **Ne yapar:** claudesidian kurulumunu GitHub'daki son sürüme yükseltir: sürüm kontrolü, yedek, upstream çekme, dosya dosya anlamsal karşılaştırma ile kullanıcı özelleştirmelerini koruyarak birleştirme, .agents/skills sembolik bağlantı hijyeni ve eski düzenden geçiş.
+- **Ne zaman:** claudesidian tabanlı kasayı güncellemek. · **Ne zaman değil:** claudesidian dışı her yerde. Codex'te: allowed-tools (WebFetch, MultiEdit) Claude Code'a özgü; .claude/skills sembolik bağlantı adımları Codex için .agents/skills kanonik konumuyla zaten uyumlu, yalnızca .claude ve .pi bağlantı adımları atlanabilir.
+- **Teknoloji:** git, bash, obsidian · **Paketler:** git, curl
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (commands, hooks, settings); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** claudesidian-kurulum → tamamlayıcı
 - **Boyut:** 11 KB (SKILL.md 11.1 KB, yük orta)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV (şablona özgü). Yedek ve çatışma çözüm felsefesi iyi düşünülmüş ama sadece claudesidian'a yarar.
 
 ### weekly-synthesis  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
-- **Ne yapar:** Create a comprehensive synthesis of the week's work and thinking. Use when the user asks for a weekly review, weekly synthesis, week-in-review, weekly wrap-up, or wants to reflect on the week and plan the next one.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Haftanın notlarını ve çalışmalarını tarayıp tekrar eden temaları, içgörüleri, proje ilerlemesini, ortaya çıkan soruları, enerji denetimini ve not bağlantılarını içeren haftalık sentez notu yazar.
+- **Ne zaman:** Haftalık değerlendirme, bir sonraki haftanın planı. · **Ne zaman değil:** Kasa/not geçmişi yoksa; ekip haftalık raporu için internal-comms (3P).
+- **Teknoloji:** obsidian, markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** periyodik-degerlendirme → birincil
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil). Haftalık şablon günlükten daha kapsamlı; daily-review ile birlikte kullanılır.
