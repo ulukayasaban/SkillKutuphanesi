@@ -109,7 +109,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-animation) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-animasyon → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-animation) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -142,7 +142,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-fundamentals) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-sahne-temelleri → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-fundamentals) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -164,7 +164,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-geometry) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-geometri → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 13.5 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-geometry) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -186,7 +186,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-interaction) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-etkilesim → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 16 KB (SKILL.md 15.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-interaction) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -208,7 +208,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-lighting) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-isik → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-lighting) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -230,7 +230,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-loaders) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-yukleme → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-loaders) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -252,7 +252,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-materials) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-materyal → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 13 KB (SKILL.md 13.1 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-materials) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -285,7 +285,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-postprocessing) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-postprocessing → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-postprocessing) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -318,7 +318,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-shaders) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-shader → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-shaders) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
@@ -340,7 +340,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-textures) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
 - **Teknoloji:** three.js, webgl · **Paketler:** three
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** three-doku → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-textures) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.

@@ -10,7 +10,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** REST/GraphQL endpoint'i, modül sınırı veya ön yüz-arka yüz sözleşmesi tasarlarken; herkese açık bir arayüzü değiştirirken. · **Ne zaman değil:** Yalnız iç, tek kullanımlık fonksiyonlar; API stil seçimi (REST mi GraphQL mi tRPC mi) ağırlıklıysa api-patterns ile birlikte.
 - **Teknoloji:** typescript, rest, graphql
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** api-tasarimi → birincil · **Roller:** backend-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 15 KB (SKILL.md 14.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı.
@@ -21,7 +21,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** API stili ve kimlik doğrulama yöntemi seçerken; rate limiting veya sürümleme stratejisi belirlerken. · **Ne zaman değil:** Sözleşme/arayüz ilkeleri ağırlıklı işlerde tek başına (api-and-interface-design); UI işleri.
 - **Teknoloji:** rest, graphql, trpc, typescript, python · **Paketler:** python3 (api_validator.py)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** api-tasarimi → tamamlayıcı · **Roller:** backend-muhendis
 - **Boyut:** 20 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Seçici okuma kuralı bağlamı küçük tutuyor (SKILL.md 2.5 KB), auth ve rate-limiting dosyaları yararlı. İçerik yer yer yüzeysel; @[skills/...] biçimindeki çapraz referanslar ag-kit sözdizimi.
@@ -32,7 +32,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** Sistem tasarımı, desen seçimi (monolit/mikroservis, katmanlar), önemli kararların ADR olarak kaydı. · **Ne zaman değil:** Doğrudan kod uygulaması; ayrıntılı ADR/dokümantasyon süreci (c-dokuman'daki documentation-and-adrs daha kapsamlı olabilir).
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** mimari-karar → birincil · **Roller:** backend-muhendis
 - **Boyut:** 12 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Tek mimari karar skilli; seçici okuma ile hafif (SKILL.md 1.9 KB). İçerik genel ve yer yer ders kitabı düzeyinde ama ADR ve ödünleşim şablonları iş görüyor.
@@ -43,7 +43,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** Şema tasarlarken, ORM/veritabanı seçerken, migrasyon planlarken veya yavaş sorgu optimize ederken (Prisma, Drizzle, SQL). · **Ne zaman değil:** Kesintisiz üretim migrasyonu (expand/contract) ayrıntısı gerekiyorsa deprecation-and-migration ile birlikte; NoSQL ağırlıklı projeler (sınırlı içerik).
 - **Teknoloji:** postgresql, sqlite, prisma, drizzle, sql · **Paketler:** python3 (schema_validator.py)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** veritabani-tasarimi → birincil · **Roller:** backend-muhendis
 - **Boyut:** 13 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, veritabani-tasarimi grubunun tek üyesi. 'Her şeye PostgreSQL deme' ve seçim tabloları dengeli; içerik ilke düzeyinde, derin şema örnekleri az.
@@ -54,7 +54,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** React/Next veya Vue kod tabanını yapılandırırken ya da organizasyonunu incelerken: mantık, API çağrısı, durum ve tiplerin nerede yaşayacağı. · **Ne zaman değil:** Görsel tasarım (frontend-design, design-taste-frontend); React/Next performans kuralları (vercel-react-best-practices).
 - **Teknoloji:** react, next.js, vue, typescript, tailwind
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** frontend-mimarisi → birincil · **Roller:** frontend-muhendis
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-mimarisi grubunun birincili. ag-kit'in en somut skillerinden; React ve Vue'yu birlikte kapsaması ve 'görsel tasarım değil yapı' sınırı net. ../app-builder ve ../frontend-design kardeş bağlantıları kurulumda o skiller yoksa boşa düşer (yalnız atıf).
@@ -66,7 +66,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde. · **Ne zaman değil:** Sanat yönetimi/görsel yön belirleme (a-tasarim skilleri); salt backend işleri.
 - **Teknoloji:** react, typescript, css, tailwind
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** frontend-ui-uygulama → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı.
@@ -77,7 +77,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** Node.js backend kurarken veya framework seçerken; mevcut Node servisinin yapısını gözden geçirirken. · **Ne zaman değil:** Next.js API route'larıyla sınırlı basit işler; ayrıntılı API sözleşmesi tasarımı (api-and-interface-design).
 - **Teknoloji:** node, typescript, express, fastify, hono, nestjs
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** node-backend → birincil · **Roller:** backend-muhendis
 - **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Güncel seçenekleri (Hono, yerel TS) kapsıyor ve benchmark iddialarında temkinli; ilke düzeyinde, kod örneği az.
@@ -88,7 +88,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** Python backend/servis kurarken veya framework seçerken; tip ipucu ve proje yapısı kararlarında. · **Ne zaman değil:** Veri bilimi/notebook işleri (kapsam dışı); tek dosyalık betikler.
 - **Teknoloji:** python, fastapi, django, flask, pydantic
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** python-gelistirme → birincil · **Roller:** backend-muhendis
 - **Boyut:** 9 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve dengeli karar rehberi; ilke düzeyinde, derinlik sınırlı. Backend bağlamında kaldığı için kategorisi 04'te bırakıldı.

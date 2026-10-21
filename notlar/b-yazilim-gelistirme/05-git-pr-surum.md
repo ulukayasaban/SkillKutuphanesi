@@ -10,7 +10,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne zaman:** Sürüm notları, haftalık/aylık ürün güncellemesi, app store değişiklik metni veya herkese açık changelog sayfası hazırlarken. · **Ne zaman değil:** Geliştirici odaklı Keep a Changelog bakımı (release / git-workflow-and-versioning); commit mesajları anlamsızsa sonuç zayıf.
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** surum-yayini → tamamlayıcı
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Kısa (3 KB) ve tek amaçlı; 'kullanıcı diline çevir' odağı diğer git skillerinde yok. İçerik çoğunlukla örnek; kategori kuralları yüzeysel.
@@ -21,7 +21,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne zaman:** Bir API/özelliği emekliye ayırırken; kullanıcıları yeni sisteme taşırken; üretimde kolon yeniden adlandırma/silme gibi kesintisiz şema değişikliğinde; bakım mı emeklilik mi kararında. · **Ne zaman değil:** Yeni özellik geliştirme; sürüm/tag işlemleri (git-workflow-and-versioning).
 - **Teknoloji:** sql
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kullanimdan-kaldirma → birincil · **Roller:** backend-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı.
@@ -32,7 +32,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne zaman:** Tüm testler geçtikten sonra dalı birleştirme/PR/bekletme kararı ve worktree temizliği. · **Ne zaman değil:** Testler kırmızıyken; ekip PR'ları başka bir araçla yönetiyorsa.
 - **Teknoloji:** git, gh · **Paketler:** gh CLI (PR seçeneği için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** dal-bitirme → birincil · **Roller:** planlayici
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, dal-bitirme grubunun birincili. Gerekçe: kullanıcıya karar bırakan sabit menü, temel dal doğrulaması ve kökene dayalı worktree temizliği ile en güvenli kapanış; pull-request (heyitsnoah) onaysız push eğilimli tek komut → alternatif.
@@ -43,7 +43,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne zaman:** Her kod değişikliğinde commit/dal/PR düzeni; karışık çalışma ağacını temiz atomik commit'lere bölmek; sürüm numarası seçmek ve release kesmek. · **Ne zaman değil:** Ekibin farklı ve yazılı bir git akışı (ör. git-flow) varsa çatışabilir; salt worktree kurulumu (using-git-worktrees).
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** git-is-akisi → birincil · **Roller:** backend-muhendis, devops-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 13.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor.
@@ -87,7 +87,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne zaman:** Yalıtım gerektiren özellik işine başlarken veya bir uygulama planını yürütmeden önce (superpowers zinciri). · **Ne zaman değil:** Zaten harness tarafından yönetilen bir worktree'deyken (skill bunu kendisi algılar); tek dosyalık hızlı düzeltmeler.
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** worktree → birincil · **Roller:** planlayici
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, worktree grubunun birincili. Gerekçe: 'harness ile kavga etme' ilkesi, var olan yalıtımı algılama, alt modül koruması ve onay adımı; Claude Code/Codex worktree araçlarıyla uyumlu. heyitsnoah git-worktrees yalnız komut başvurusu → alternatif.

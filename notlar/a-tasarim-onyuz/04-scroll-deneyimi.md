@@ -21,7 +21,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Ne zaman:** Scroll'a bağlı animasyon, pinli bölüm, parallax, scrub gerektiğinde (özellikle kütüphane belirtilmemişse). · **Ne zaman değil:** Basit fade-in reveal (scroll-reveal-libraries yeter).
 - **Teknoloji:** gsap 3.15, scrolltrigger, lenis 1.3 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** scroll-animasyonu → birincil · **Roller:** scroll-deneyim, motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 18 KB (SKILL.md 18.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, güncel (18 KB), pin/scrub/cleanup kuralları doğru; gsap-core ile birlikte kullanılmalı. Dikkat: yok.
@@ -55,7 +55,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Ne zaman:** Hizmet/ürün/yiyecek markaları için sinematik, katmanlı hero'lu, 'şablon gibi görünmeyen' scroll hikaye sitesi kurarken. · **Ne zaman değil:** Küçük scroll efekti eklemek; GSAP ScrollTrigger'a bağlı mevcut proje; dashboard/uygulama arayüzleri.
 - **Teknoloji:** html, css, javascript, node, chromium, kie.ai · **Paketler:** playwright-core, ffmpeg (tam sürüm), KIE_AI_API_KEY (isteğe bağlı)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** nateherkai (kisi, ★3806, son güncelleme 2026-09-30, lisans MIT)
+- **Geliştirici:** nateherkai (kisi, ★3824, son güncelleme 2026-09-30, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** scroll-hikaye-uretimi → birincil · **Roller:** scroll-deneyim
 - **Boyut:** 380 KB (SKILL.md 24.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güçlü süreç (brief, çeşitlilik kapısı, doğrulama), güncel (21 gün) ve MIT; büyük ama gerçek bir uçtan uca sistem. Dikkat: SKILL.md 24 KB + ~170 KB referans; GSAP değil kendi motorunu kullanıyor; varlık üretimi kie.ai API anahtarı ister ve api.kie.ai'ye istek atar (isteğe bağlı); tam ffmpeg ve playwright-core gerekir; serve.mjs varsayılan 127.0.0.1 (--lan açık uyarılı); 'Windows/OtherWorlds' yol örnekleri taşıyor.

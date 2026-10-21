@@ -4,7 +4,7 @@
 
 - **Kaynak repo:** https://github.com/vercel/next.js
 - **Repo içindeki yol:** `.agents/skills/pr-status-triage`
-- **Commit:** `9ff8ba95440dc43b0f275b1caffd953074e0f75b`
+- **Commit:** `13ae649ea60769e91b06818e7b252c7e3040f92c`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
 - **Değerlendirme:** 84/100 (A)

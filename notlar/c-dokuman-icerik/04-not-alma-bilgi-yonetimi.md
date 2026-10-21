@@ -43,7 +43,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Ne zaman:** Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik. · **Ne zaman değil:** Onay almadan toplu taşıma/silme gerektiğinde (geri alınamaz işler); Obsidian kasası için inbox-processor daha uygun.
 - **Teknoloji:** bash
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** dosya-duzenleme → birincil
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Onay isteyen adımlar ve örnekler makul; betik yok, kopya tespiti agent'ın komutlarına bağlı. Lisans belirtilmemiş.
@@ -87,7 +87,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Ne zaman:** Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama. · **Ne zaman değil:** Muhasebe kaydı/vergi beyanı yerine geçmez; OCR doğruluğu kontrol edilmeden finansal karar için kullanma.
 - **Teknoloji:** python, pdf · **Paketler:** pdftotext veya pdfplumber, OCR aracı (taranmış fişler için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** dosya-duzenleme → tamamlayıcı
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Adlandırma standardı ve klasör stratejileri iyi; çıkarma için pdf skilliyle birlikte kullanılır. Lisans belirtilmemiş.

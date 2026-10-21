@@ -10,7 +10,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** 2D oyun mekaniği, sprite/tilemap ve kamera kararlarında hızlı hatırlatma. · **Ne zaman değil:** Motorun gerçek API'si veya render kodu için değil; PixiJS için pixijs-2d.
 - **Teknoloji:** 2d, sprite, tilemap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. 2.1 KB'lık özlü kontrol listesi; faydalı ama sığ (tablolar, kod yok). Dikkat: SKILL.md `game-development/2d-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -21,7 +21,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** 3D oyun performans ve kamera kararlarında kısa hatırlatma. · **Ne zaman değil:** Three.js/WebGL kodu için threejs-* skill'leri; derin render bilgisi için değil.
 - **Teknoloji:** 3d, shader, lod
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF. En sığ olanlardan (2.5 KB): ders kitabı özeti, uygulanabilir yönerge yok; threejs-* skill'leri 3D tarafında çok daha somut. Dikkat: SKILL.md `game-development/3d-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -32,7 +32,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** Oyunun görsel stilini seçerken ve varlık hattı/adlandırma standardı kurarken. · **Ne zaman değil:** Gerçek sprite/model üretimi için değil (üretim yapmaz, karar çerçevesi verir).
 - **Teknoloji:** pixel-art, blender, aseprite
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Stil karar ağacı ve adlandırma düzeni gerçekten işe yarar (4.9 KB), ama sığ bir çerçeve. Dikkat: SKILL.md `game-development/game-art/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -43,7 +43,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** Oyunda ses mimarisi ve mix dengesi kararlarında. · **Ne zaman değil:** Ses üretmek için değil (elevenlabs/music skill'leri); motora özel ses API'si için değil.
 - **Teknoloji:** web-audio, fmod, wwise
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Mix seviyeleri ve ducking tabloları somut (5.2 KB); yine de ilke düzeyinde. Dikkat: SKILL.md `game-development/game-audio/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -54,7 +54,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** GDD yazarken ve çekirdek döngü/zorluk kararlarında. · **Ne zaman değil:** Seviye tasarımı, hikâye veya ekonomi dengeleme derinliği için değil.
 - **Teknoloji:** gdd, game-design
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısa (2.6 KB) ve sağlam temel, fakat tamamı genel geçer maddeler. Dikkat: SKILL.md `game-development/game-design/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -65,7 +65,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** Hangi motor/platformla olursa olsun oyun projesine başlarken ilke ve yönlendirme için; alt skill'lerin hepsi tek klasörde gelir. · **Ne zaman değil:** Somut motor/API kodu aramak için değil (içerik ilke ve tablo düzeyinde). Sadece web 2D render kodu için pixijs-2d, 3D web için threejs-* skill'leri.
 - **Teknoloji:** game-design, unity, godot, unreal, phaser
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → birincil
 - **Boyut:** 35 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kütüphanedeki tek oyun giriş noktası; kısa (4.7 KB) ve alt skill'leri iç içe taşıyor (10 alt klasör, byte aynı). Dikkat: içerik genel ilke tablolarından ibaret, kod/motor özelliği yok; kalite orta. Yönlendirme `game-development/web-games` gibi iç içe yollara dayanır ve alt klasörler ayrı skill olarak otomatik keşfedilmez; ajan o dosyaları açıkça okumalı. Uygun rol yok (oyun rolü tanımlı değil), role eklenmedi.
@@ -76,7 +76,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** iOS/Android oyun kısıtlarını ve mağaza gerekliliklerini hatırlamak için. · **Ne zaman değil:** Motor veya SDK entegrasyonu için değil.
 - **Teknoloji:** ios, android, touch
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısa (2.2 KB) kontrol listesi; mağaza gereksinimleri tarih bağımlı ve hızla eskir. Dikkat: SKILL.md `game-development/mobile-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -87,7 +87,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** Ağ mimarisi ve senkronizasyon stratejisi kararlarında. · **Ne zaman değil:** Belirli ağ kütüphanesi (Photon, Colyseus, Netcode) kullanımı için değil.
 - **Teknoloji:** networking, websocket
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. 'İstemciye güvenme' ilkesini ve teknik adları doğru sıralıyor (2.7 KB); uygulama ayrıntısı yok. Dikkat: SKILL.md `game-development/multiplayer/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -98,7 +98,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** PC/konsol için motor seçerken ve platform özelliklerini planlarken. · **Ne zaman değil:** Web oyunları için web-games; motor içi kodlama için değil.
 - **Teknoloji:** unity, godot, unreal, steam
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Motor karşılaştırma tablosu işe yarar (2.9 KB) ancak lisans/ücret bilgisi tarih bağımlı ve eskimiş olabilir. Dikkat: SKILL.md `game-development/pc-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -120,7 +120,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** VR/AR projesinde konfor ve performans hedeflerini belirlerken. · **Ne zaman değil:** WebXR kodu için aframe-webxr (05); cihaza özel SDK için değil.
 - **Teknoloji:** webxr, quest, arkit
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF. İlkeler doğru ama çok kısa (2.3 KB); cihaz metrikleri hızla eskir. Başlık 2D grafik kategorisine uymuyor (VR/AR 3D) ama oyun ailesi için kalabilir. Dikkat: SKILL.md `game-development/vr-ar/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.
@@ -131,7 +131,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne zaman:** Web tabanlı oyun için çatı ve varlık/performans stratejisi seçerken. · **Ne zaman değil:** Kod örneği arıyorsan değil; PixiJS için pixijs-2d, 3D için threejs-*.
 - **Teknoloji:** phaser, pixi.js, three.js, webgpu, pwa
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → alternatif
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Web oyunu için en uygulanabilir ilke seti (3.0 KB); tarayıcı destek yüzdeleri (~%73 WebGPU) tarih bağımlı. Dikkat: SKILL.md `game-development/web-games/SKILL.md` ile birebir aynı (diff doğrulandı); game-development kurulursa zaten gelir, ayrıca kurmak gereksiz.

@@ -10,7 +10,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Kod yazan agent'lar için kısa, her zaman açık stil ve disiplin kuralı olarak. · **Ne zaman değil:** Projenin kendi stil rehberi/lint kuralları güçlü ve farklıysa (çatışabilir); 'hata bildirilince açıklama yapma, düzelt' kuralı açıklama isteyen kullanıcılarla uyumsuz olabilir.
 - **Teknoloji:** playwright, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** temiz-kod → birincil
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, temiz-kod grubunun tek üyesi. 7 KB, yararlı kurallar ve 'düzenlemeden önce bağımlıları kontrol et' adımı değerli; ancak katı sayılar (fonksiyon ≤20 satır) ve 'priority: CRITICAL, her zaman aktif' iddiası bağlam dışı uygulanabilir.
@@ -21,7 +21,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Birleştirmeden önce her değişiklikte; kendi, başka agent'ın veya insanın yazdığı diff/PR'ı incelerken (diff satır içi yapıştırılmış olsa da). · **Ne zaman değil:** Yalnız YAGNI/aşırı mühendislik taraması istendiğinde (pragmatic-review daha odaklı); inceleme alt-agent'ını başlatma akışı (requesting-code-review).
 - **Teknoloji:** node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → birincil · **Roller:** kod-inceleyici · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 20 KB (SKILL.md 20.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, kod-inceleme grubunun birincili. Gerekçe: en kapsamlı ve yığından bağımsız inceleme yöntemi; 'önce testleri oku' ve 'doğrulamayı doğrula' adımları agent incelemelerinin tipik açığını kapatıyor. obra requesting-code-review inceleme yapmaz, inceleyiciyi başlatır (ayrı grup); pragmatic-review ve code-review-checklist daha dar.
@@ -32,7 +32,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Hızlı, hafif bir kontrol listesi yeterli olduğunda; ag-kit iş akışı kullanan projelerde. · **Ne zaman değil:** Derinlemesine inceleme gerektiğinde (code-review-and-quality).
 - **Teknoloji:** typescript
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. 3 KB, yararlı ama yüzeysel; maddeler code-review-and-quality'nin alt kümesi. AI'ya özgü kontroller (prompt injection, çıktı temizleme) küçük bir artı.
@@ -43,7 +43,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** 500+ dosyalı depolar, monorepo'lar, modüller arası bağımlılıklı değişiklikler; ölü kod tespiti ve refactor önizlemesi. · **Ne zaman değil:** ~200 dosyanın altındaki projeler; yoğun dinamik import/yansıma kullanan kod; MCP kurmak istenmiyorsa.
 - **Teknoloji:** python, tree-sitter, sqlite, mcp · **Paketler:** code-review-graph (pip), MCP sunucu yapılandırması
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: effort, when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** buyuk-depo-baglami → birincil
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel, --skill ile). Dürüst kullan/kullanma eşikleri ve onaysız kurulum yasağı iyi. Üçüncü taraf PyPI paketine ve MCP kurulumuna bağlı; skill tek başına iş yapmaz. Rol çekirdeğine alınmadı.
@@ -54,7 +54,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Çalışan ama okunması/bakımı zor koda refactor; incelemede biriken karmaşıklık fark edildiğinde; yeni yazılan kodu teslim öncesi toparlamak. · **Ne zaman değil:** Depo genelinde ölü kod/katman denetimi (simplify-codebase); davranış değiştiren yeniden tasarım; performans ayarı.
 - **Teknoloji:** typescript, javascript, python, react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → birincil · **Roller:** kod-inceleyici · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 13 KB (SKILL.md 13.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, kod-sadelestirme grubunun birincili. Gerekçe: davranış koruma ve 'değişen kapsamla sınırla' kuralları varsayılan kullanım için en güvenli sürüm; dile özgü rehber somut. simplify-codebase depo geneli denetim için tamamlayıcı; simplify-code (vudovn) daha yüzeysel alternatif.
@@ -65,7 +65,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** TypeScript/JavaScript veya Python projelerinde her değişiklik sonrası otomatik kalite kapısı. · **Ne zaman değil:** Lint/tip araçları yapılandırılmamış projeler (önce yapılandırma); farklı ekosistemler (Go, Rust…) için komut yok.
 - **Teknoloji:** node, typescript, python · **Paketler:** eslint, typescript, ruff/mypy/bandit (Python)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** lint-dogrulama → birincil
 - **Boyut:** 16 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve uygulanabilir; betikler proje tipini algılıyor. 'FINAL AUDIT REPORT' bölümüne atıf betik çıktısıyla tam örtüşmüyor; npm audit her değişiklikte gereksiz yavaş olabilir.
@@ -87,7 +87,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken. · **Ne zaman değil:** Geri bildirim yokken; incelemeyi yapan tarafta.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** inceleme-dongusu → tamamlayıcı
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.
@@ -98,7 +98,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** subagent-driven-development'ta her görevden sonra; büyük özellik bitiminde; main'e birleştirmeden önce taze bağlamlı inceleme gerektiğinde. · **Ne zaman değil:** Alt-agent aracı olmayan ortamlar (inceleme satır içi yapılır); incelemenin kendisini yapan agent için yöntem değil (code-review-and-quality).
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** inceleme-dongusu → birincil · **Roller:** kod-inceleyici, planlayici
 - **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, inceleme-dongusu grubunun birincili. Kısa, superpowers zincirinin parçası; code-reviewer.md şablonu 'spec bir vizyon belgesidir' ilkesiyle güçlü. İnceleme yöntemi değil orkestrasyon olduğu için code-review-and-quality ile çakışmaz.
@@ -109,7 +109,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Hızlı, kontrol listesi tarzı sadeleştirme; ag-kit iş akışı kullanan projeler. · **Ne zaman değil:** Davranış korumaya ve proje geleneklerine özen gereken işlerde (code-simplification daha dikkatli); depo geneli denetim (simplify-codebase).
 - **Teknoloji:** typescript, javascript
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: effort, when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → alternatif
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Okunur ve kısa, ama 'tek implementasyonlu arayüzü kaldır' gibi kurallar bağlamsız uygulanırsa zarar verebilir; code-simplification'ın kapsadığı işi daha kaba yapıyor.
@@ -120,7 +120,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Var olan bir depoda sadeleştirme denetimi veya açıkça yetkilendirilmiş büyük çaplı temizlik; 'nereler gereksiz?' sorusuna kanıtlı yanıt. · **Ne zaman değil:** Genel code review, onboarding, sadece stil refactor'ü veya performans ayarı (skill kendisi de bunları dışlıyor); küçük diff sadeleştirmesi (code-simplification).
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → tamamlayıcı · **Roller:** kod-inceleyici
 - **Boyut:** 27 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlayıcı. Bu alanda gördüğüm en titiz sadeleştirme protokolü (kanıt kaydı, kör nokta bildirimi, ürün kararı ayrımı); dil bağımsız. metadata.internal işaretli ama Archify'a bağlı değil. mevcut-kod-iyilestirme profilinin ana skilli.

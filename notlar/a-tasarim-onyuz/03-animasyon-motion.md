@@ -33,7 +33,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Animasyona 'Disney ilkeleri' çerçevesi verilmek istendiğinde fikir ve parça kaynağı. · **Ne zaman değil:** Framer Motion API'sini öğrenmek veya üretim kodu yazmak (motion-framer).
 - **Teknoloji:** motion v14, react · **Paketler:** framer-motion
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Adı yanıltıcı: framer-motion rehberi değil, 12 ilke örnek listesi (3 KB); motion-framer'ın yerini tutmaz. OpenMontage'a özgü, AGPL repo kopyası, OpenMontage bağımlılığı. Kullanıcının global ortamında aynı adlı skill zaten var.
@@ -44,7 +44,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Kütüphane belirtilmeden JS animasyonu istendiğinde; tween, ease, stagger, reduced-motion kuralları. · **Ne zaman değil:** CSS geçişi yeterli olan basit hover'lar; React'te kurulum ayrıntısı için gsap-react.
 - **Teknoloji:** gsap 3.15, javascript, typescript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → birincil · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 14.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, kısa ve doğru (14 KB); matchMedia ile reduced-motion kuralı öğretiyor. OpenMontage kopyasıyla birebir aynı. Dikkat: yok.
@@ -55,7 +55,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Vue, Nuxt veya Svelte projesinde GSAP kullanılırken. · **Ne zaman değil:** React/Next.js (gsap-react).
 - **Teknoloji:** gsap 3.15, vue 3, nuxt 4, svelte 5 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, frontend-muhendis · **Globalde:** claude:farkli
 - **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmî. Dikkat: metin 'examples/vue/' ve 'examples/nuxt/' klasörlerine atıf yapıyor, ama arşivde yalnız SKILL.md var; bu örnekler yok. OpenMontage kopyası (@calesthio) Nuxt bölümü olmayan eski halidir.
@@ -66,7 +66,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Yalnız OpenMontage uyumu gerekirse. · **Ne zaman değil:** Her durumda greensock/gsap-skills sürümü tercih edilir.
 - **Teknoloji:** gsap 3.15, vue 3, svelte · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. diff: resmî sürümde fazladan ~110 satırlık Nuxt 4 bölümü ve örnek atıfları var; bu kopya daha eski/eksik. AGPL-3.0 repo kopyası, OpenMontage bağımlılığı.
@@ -77,7 +77,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Takılan animasyon, jank, çok elemanlı sahnelerin optimizasyonu. · **Ne zaman değil:** Henüz çalışan animasyon yokken ilk kurulum (gsap-core).
 - **Teknoloji:** gsap 3.15, css · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, 4 KB, her animasyon işinde okunmaya değer. Dikkat: yok.
@@ -88,7 +88,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Flip, SplitText, SVG çizim/morph, sürükle-bırak, ScrollSmoother gibi eklenti gerektiğinde. · **Ne zaman değil:** Yalnız temel tween/timeline işleri.
 - **Teknoloji:** gsap 3.15 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, scroll-deneyim · **Globalde:** claude:farkli
 - **Boyut:** 21 KB (SKILL.md 21.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî ve güncel; aşağıdaki OpenMontage kopyasında olmayan 'Licensing & Install' bölümü eski Club GSAP / .npmrc token yönlendirmesini engelliyor. 21 KB. Dikkat: büyük dosya, çekirdeğe koyma.
@@ -99,7 +99,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Yalnız OpenMontage uyumu gerekirse. · **Ne zaman değil:** Her durumda greensock/gsap-skills sürümü tercih edilir.
 - **Teknoloji:** gsap 3.15 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici · **Globalde:** claude:farkli
 - **Boyut:** 20 KB (SKILL.md 20.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. diff: tek fark resmî sürümdeki lisans/kurulum bölümü (11 satır); eski kopya Club GSAP bilgisini güncellemiyor. AGPL-3.0 repo kopyası, OpenMontage kurulum bağımlılığı var.
@@ -110,7 +110,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** React veya Next.js projesinde GSAP animasyonu yazılırken. · **Ne zaman değil:** Vue/Svelte (gsap-frameworks); React dışı projeler.
 - **Teknoloji:** gsap 3.15, @gsap/react 2, react 19, next.js · **Paketler:** gsap, @gsap/react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa (6 KB), useGSAP temizlik kuralları tam. Dikkat: yok.
@@ -121,7 +121,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Birden çok tween'i sıraya veya paralele koyarken, keyframe benzeri koreografide. · **Ne zaman değil:** Tek tween'lik işler (gsap-core yeter).
 - **Teknoloji:** gsap 3.15, javascript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, çok kısa (4 KB), net. Position parametresi tablosu pratik. Dikkat: yok.
@@ -132,7 +132,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Değer eşleme, rastgele/snap, wrap döngüleri gerektiğinde. · **Ne zaman değil:** Genel animasyon kurulumu.
 - **Teknoloji:** gsap 3.15, javascript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 11.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmî ve doğru; referans niteliğinde (12 KB), her işte gerekmiyor. Dikkat: yok.
@@ -154,7 +154,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** 12 ilkeye göre Lottie hazırlama ipuçları. · **Ne zaman değil:** Lottie'yi uygulamaya gömmek (lottie-animations).
 - **Teknoloji:** lottie-web 5.13, after-effects · **Paketler:** lottie-web
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** vektor-animasyon → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Yüzeysel (3.6 KB); adı lottie-bodymovin ama gömme rehberi değil, ilke listesi. lottie-animations bunun yerini tutar. OpenMontage bağımlılığı. Not: motion-graphics-sanatcisi rolünün opsiyonelinde duruyor (video oturumunun alanı); yerine lottie-animations önerilir.

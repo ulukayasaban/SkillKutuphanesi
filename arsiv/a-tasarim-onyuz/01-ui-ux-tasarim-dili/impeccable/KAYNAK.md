@@ -4,7 +4,7 @@
 
 - **Kaynak repo:** https://github.com/pbakaus/impeccable
 - **Repo içindeki yol:** `plugin/skills/impeccable`
-- **Commit:** `e3083ac3301e4d10517dd6cb58ab645bc2cb6e1b`
+- **Commit:** `89097b912d714e1324691be46e1ff513bf597f25`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** pbakaus (kisi)
 - **Değerlendirme:** 95/100 (A)
