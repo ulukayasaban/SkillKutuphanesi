@@ -12575,7 +12575,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -12588,7 +12588,31 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kararlı API ve modül arayüzü tasarımı: Hyrum yasası ve tek sürüm kuralı, önce sözleşme, tutarlı hata semantiği, sınırda doğrulama, değiştirmek yerine ekleme, öngörülebilir isimlendirme ve idempotency anahtarını doğru uygulama; REST kaynak tasarımı, sayfalama, filtreleme, PATCH ve TypeScript arayüz desenleri (ayrık birleşimler, girdi/çıktı ayrımı, markalı ID tipleri).",
+      "kullanim_alani": "REST/GraphQL endpoint'i, modül sınırı veya ön yüz-arka yüz sözleşmesi tasarlarken; herkese açık bir arayüzü değiştirirken.",
+      "kullanma": "Yalnız iç, tek kullanımlık fonksiyonlar; API stil seçimi (REST mi GraphQL mi tRPC mi) ağırlıklıysa api-patterns ile birlikte.",
+      "teknoloji": [
+        "typescript",
+        "rest",
+        "graphql"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı.",
+      "ortusme_grubu": "api-tasarimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "api-patterns",
@@ -12649,7 +12673,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -12662,7 +12686,34 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "ag-kit'in API tasarım karar rehberi: REST/GraphQL/tRPC seçim ağacı, kaynak isimlendirme ve durum kodları, zarf/hata/sayfalama yanıt biçimleri, sürümleme, kimlik doğrulama (JWT, OAuth, Passkey, API anahtarı), rate limiting, OpenAPI dokümantasyonu ve OWASP API Top 10 güvenlik testini ayrı dosyalarda seçici okumayla sunar; api_validator.py betiği içerir.",
+      "kullanim_alani": "API stili ve kimlik doğrulama yöntemi seçerken; rate limiting veya sürümleme stratejisi belirlerken.",
+      "kullanma": "Sözleşme/arayüz ilkeleri ağırlıklı işlerde tek başına (api-and-interface-design); UI işleri.",
+      "teknoloji": [
+        "rest",
+        "graphql",
+        "trpc",
+        "typescript",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (api_validator.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Seçici okuma kuralı bağlamı küçük tutuyor (SKILL.md 2.5 KB), auth ve rate-limiting dosyaları yararlı. İçerik yer yer yüzeysel; @[skills/...] biçimindeki çapraz referanslar ag-kit sözdizimi.",
+      "ortusme_grubu": "api-tasarimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "architecture",
@@ -12719,7 +12770,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -12732,13 +12783,34 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Mimari karar çerçevesi: bağlam keşfi soruları ve proje sınıflandırması, ödünleşim (trade-off) analizi ve ADR şablonları, desen seçimi karar ağaçları, MVP/SaaS/kurumsal örnekler ve desen hızlı başvurusu; 'basit başla, karmaşıklığı ancak kanıtlanınca ekle' ilkesi.",
+      "kullanim_alani": "Sistem tasarımı, desen seçimi (monolit/mikroservis, katmanlar), önemli kararların ADR olarak kaydı.",
+      "kullanma": "Doğrudan kod uygulaması; ayrıntılı ADR/dokümantasyon süreci (c-dokuman'daki documentation-and-adrs daha kapsamlı olabilir).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "backend-muhendis",
+        "planlayici"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Tek mimari karar skilli; seçici okuma ile hafif (SKILL.md 1.9 KB). İçerik genel ve yer yer ders kitabı düzeyinde ama ADR ve ödünleşim şablonları iş görüyor.",
+      "ortusme_grubu": "mimari-karar",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "bash-linux",
       "ad": "bash-linux",
       "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/bash-linux",
       "varyantlar": {},
@@ -12791,7 +12863,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -12804,7 +12876,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "macOS/Linux Bash kalıpları: komut zincirleme operatörleri, dosya işlemleri, süreç yönetimi (port tutan süreci bulma/öldürme), metin işleme (grep/sed/awk/cut/sort), ortam değişkenleri, ağ komutları, hata işlemeli betik şablonu ve sık desenler.",
+      "kullanim_alani": "macOS/Linux'ta terminal komutları ve bash betikleri yazarken hızlı başvuru.",
+      "kullanma": "Windows/PowerShell ortamı (powershell-windows); model zaten bu komutları bildiği için deneyimli kullanımda düşük katkı.",
+      "teknoloji": [
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV / opsiyonel. Doğru ama temel komut tablosu; 'sed -i' gibi macOS/GNU farkı olan komutlarda uyarı yok. Araç rehberi olarak 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "kabuk-komutlari",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "database-design",
@@ -12861,7 +12950,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -12874,7 +12963,34 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Veritabanı tasarım kararları: PostgreSQL/Neon/Turso/SQLite seçimi, Drizzle/Prisma/Kysely ORM seçimi, normalizasyon ve ilişkiler, indeks tipleri, N+1 ve EXPLAIN ANALYZE ile sorgu optimizasyonu, güvenli migrasyonlar; schema_validator.py betiği içerir. Tercih belirsizse kullanıcıya sormayı şart koşar.",
+      "kullanim_alani": "Şema tasarlarken, ORM/veritabanı seçerken, migrasyon planlarken veya yavaş sorgu optimize ederken (Prisma, Drizzle, SQL).",
+      "kullanma": "Kesintisiz üretim migrasyonu (expand/contract) ayrıntısı gerekiyorsa deprecation-and-migration ile birlikte; NoSQL ağırlıklı projeler (sınırlı içerik).",
+      "teknoloji": [
+        "postgresql",
+        "sqlite",
+        "prisma",
+        "drizzle",
+        "sql"
+      ],
+      "gerekli_paketler": [
+        "python3 (schema_validator.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, veritabani-tasarimi grubunun tek üyesi. 'Her şeye PostgreSQL deme' ve seçim tabloları dengeli; içerik ilke düzeyinde, derin şema örnekleri az.",
+      "ortusme_grubu": "veritabani-tasarimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "frontend-architecture",
@@ -12938,7 +13054,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "kardes_bagimliliklari": {
         "app-builder": {
           "id": "app-builder",
@@ -12965,7 +13081,35 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Ön yüz kodunu ölçeklenir biçimde düzenleme kuralları: UI / mantık (hook, composable) / veri (servis dosyaları) / tip / doğrulama (şema) katmanlarına ayırma, dosya sorumluluğu ve boyutu, Next.js'te varsayılan Server Component, Vue Composition API, durumu yerelden başlatma, form şeması, prop ve isimlendirme kuralları, 'god component' önleme, Tailwind sınıf hijyeni ve minimum test/erişilebilirlik tabanı.",
+      "kullanim_alani": "React/Next veya Vue kod tabanını yapılandırırken ya da organizasyonunu incelerken: mantık, API çağrısı, durum ve tiplerin nerede yaşayacağı.",
+      "kullanma": "Görsel tasarım (frontend-design, design-taste-frontend); React/Next performans kuralları (vercel-react-best-practices).",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "vue",
+        "typescript",
+        "tailwind"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, frontend-mimarisi grubunun birincili. ag-kit'in en somut skillerinden; React ve Vue'yu birlikte kapsaması ve 'görsel tasarım değil yapı' sınırı net. ../app-builder ve ../frontend-design kardeş bağlantıları kurulumda o skiller yoksa boşa düşer (yalnız atıf).",
+      "ortusme_grubu": "frontend-mimarisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "frontend-ui-engineering",
@@ -13031,7 +13175,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -13044,13 +13188,39 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Üretim kalitesinde, erişilebilir ve responsive arayüz kurma: bileşen dosya yapısı ve desenleri, durum yönetimi, tasarım sistemine bağlılık ve 'AI estetiğinden' kaçınma, boşluk/tipografi/renk, WCAG 2.1 AA (klavye, ARIA, odak yönetimi, anlamlı boş/hata durumları), responsive tasarım, yükleme ve geçiş durumları.",
+      "kullanim_alani": "Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde.",
+      "kullanma": "Sanat yönetimi/görsel yön belirleme (a-tasarim skilleri); salt backend işleri.",
+      "teknoloji": [
+        "react",
+        "typescript",
+        "css",
+        "tailwind"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı.",
+      "ortusme_grubu": "frontend-ui-uygulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "nextjs-react-expert",
       "ad": "nextjs-react-expert",
       "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/nextjs-react-expert",
       "varyantlar": {},
@@ -13106,7 +13276,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -13119,7 +13289,33 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Vercel'in React/Next.js performans kurallarının ag-kit uyarlaması: 58 kural etki sırasına göre 8 dosyada, ek olarak Next.js 16 Cache Components bölümü; hızlı karar ağacı, performans inceleme kontrol listesi ve react_performance_checker.py denetim betiği.",
+      "kullanim_alani": "ag-kit kullanan projelerde veya Cache Components notlarını aynı skillde isteyenlerde React/Next performans incelemesi.",
+      "kullanma": "vercel-react-best-practices kuruluysa (aynı kurallar); React dışı projeler.",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (react_performance_checker.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kurallar özgün kaynaktan geliyor ve denetim betiği bir artı, ama kural sayısı özgünden geride (58/65) ve tek dosyalarda toplu (her dosya 250-350 satır). 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "react-performans",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "nodejs-best-practices",
@@ -13182,7 +13378,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -13195,13 +13391,39 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Node.js arka yüz karar ilkeleri: Hono/Fastify/NestJS/Express seçim ağacı, yerel TypeScript ve modül sistemi kararları, katmanlı mimari, merkezi hata işleme, async desenleri, doğrulama ve güvenlik ilkeleri; sabit kod yerine bağlama göre karar vermeyi öğretir.",
+      "kullanim_alani": "Node.js backend kurarken veya framework seçerken; mevcut Node servisinin yapısını gözden geçirirken.",
+      "kullanma": "Next.js API route'larıyla sınırlı basit işler; ayrıntılı API sözleşmesi tasarımı (api-and-interface-design).",
+      "teknoloji": [
+        "node",
+        "typescript",
+        "express",
+        "fastify",
+        "hono",
+        "nestjs"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Güncel seçenekleri (Hono, yerel TS) kapsıyor ve benchmark iddialarında temkinli; ilke düzeyinde, kod örneği az.",
+      "ortusme_grubu": "node-backend",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "powershell-windows",
       "ad": "powershell-windows",
       "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/powershell-windows",
       "varyantlar": {},
@@ -13254,7 +13476,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -13267,7 +13489,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Windows PowerShell tuzakları ve kalıpları: mantıksal operatörlerde cmdlet'i paranteze alma, betiklerde Unicode/emoji yasağı, null kontrolleri, karmaşık string enterpolasyonu, ErrorActionPreference ve try/catch, Join-Path ile yol işlemleri.",
+      "kullanim_alani": "Proje Windows'ta çalışıyorsa veya PowerShell betiği yazılıyorsa; agent'ın tipik PowerShell sözdizimi hatalarını önlemek için.",
+      "kullanma": "macOS/Linux ortamı (bash-linux).",
+      "teknoloji": [
+        "powershell",
+        "windows"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (Windows ortamında kullanılır). Kısa ve agent'ların gerçekten yaptığı hatalara odaklı (parantez, Unicode). Araç rehberi olarak 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "kabuk-komutlari",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "python-patterns",
@@ -13327,7 +13567,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -13340,13 +13580,38 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Python geliştirme karar ilkeleri: FastAPI/Django/Flask seçim ağacı, async/sync kararı ve kütüphane seçimi, tip ipucu stratejisi ve Pydantic doğrulama, proje yapısı, hata işleme ve test ilkeleri.",
+      "kullanim_alani": "Python backend/servis kurarken veya framework seçerken; tip ipucu ve proje yapısı kararlarında.",
+      "kullanma": "Veri bilimi/notebook işleri (kapsam dışı); tek dosyalık betikler.",
+      "teknoloji": [
+        "python",
+        "fastapi",
+        "django",
+        "flask",
+        "pydantic"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve dengeli karar rehberi; ilke düzeyinde, derinlik sınırlı. Backend bağlamında kaldığı için kategorisi 04'te bırakıldı.",
+      "ortusme_grubu": "python-gelistirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "rust-pro",
       "ad": "rust-pro",
       "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/rust-pro",
       "varyantlar": {},
@@ -13397,7 +13662,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -13410,13 +13675,34 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Modern Rust (2024 sürümü) uzman persona tanımı: async (Tokio), axum, sahiplik/ömür, tip sistemi ve trait'ler, performans ve sistem programlama, hata işleme yeteneklerini listeler; dört adımlı kısa talimat (kısıtları netleştir, runtime/crate seç, testle uygula, profille).",
+      "kullanim_alani": "Rust servisi, kütüphanesi veya sistem aracı yazarken; sahiplik/ömür ve async tasarım sorunlarında.",
+      "kullanma": "Hızlı betik veya dinamik runtime gerektiğinde; Rust yığına alınamıyorsa.",
+      "teknoloji": [
+        "rust",
+        "tokio",
+        "axum"
+      ],
+      "gerekli_paketler": [
+        "rust toolchain (cargo)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 2,
+      "kalite_notu": "Karar: TUT (yalnız Rust projelerinde --skill ile). İçerik çoğunlukla yetenek listesi (anahtar kelime yığını); somut kural veya örnek az, modelin zaten bildiğini tekrar ediyor. Dil rehberi olduğu için 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "rust-gelistirme",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "vercel-composition-patterns",
       "ad": "vercel-composition-patterns",
       "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/vercel-composition-patterns",
       "varyantlar": {},
@@ -13471,7 +13757,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -13484,13 +13770,36 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Vercel'in ölçeklenen React kompozisyon desenleri: boolean prop çoğalmasını compound component, state lifting ve iç yapıyı birleştirme ile önleme; durum yönetimi (context arayüzü, implementasyonu ayırma), uygulama desenleri ve React 19 API değişiklikleri (forwardRef'siz ref vb.). Kurallar ayrı dosyalarda.",
+      "kullanim_alani": "Çok boolean prop'lu bileşenleri refactor ederken, yeniden kullanılabilir bileşen kütüphanesi veya esnek bileşen API'si tasarlarken.",
+      "kullanma": "Performans optimizasyonu (vercel-react-best-practices); React dışı projeler.",
+      "teknoloji": [
+        "react"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "react-kompozisyon",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "vercel-react-best-practices",
       "ad": "vercel-react-best-practices",
       "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/vercel-react-best-practices",
       "varyantlar": {},
@@ -13547,7 +13856,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -13560,7 +13869,32 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Vercel Engineering'in React/Next.js performans kuralları: etkiye göre 8 kategoride 65 kural (şelaleleri kaldırma, bundle boyutu, sunucu tarafı performans, istemci veri çekme, yeniden render, render performansı, JS performansı, ileri desenler); her kural ayrı dosyada iyi/kötü örnekle, tam derlenmiş AGENTS.md ile.",
+      "kullanim_alani": "React bileşeni veya Next.js sayfası yazarken/incelerken; veri çekme, bundle ve render performansı sorunlarında.",
+      "kullanma": "React dışı projeler; Next.js 16 Cache Components geçişi (next-cache-components-* skilleri); bileşen API tasarımı (vercel-composition-patterns).",
+      "teknoloji": [
+        "react",
+        "next.js"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, react-performans grubunun birincili. Gerekçe: Vercel'in özgün kural seti, kural başına dosya ile seçici okuma (SKILL.md 7 KB, toplam 207 KB); nextjs-react-expert aynı kuralların ag-kit uyarlaması. Bu kopya OpenMontage'a gömülü (upstream vercel-labs/agent-skills arşivde yok); güncellemeler OpenMontage üzerinden gelir. Dil/framework rehberi olduğu için 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "react-performans",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "changelog-generator",

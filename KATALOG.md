@@ -21,10 +21,10 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
   - [01-planlama-metodoloji](#01-planlama-metodoloji) — 15 skill · Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini
   - [02-kod-kalitesi-review](#02-kod-kalitesi-review) — 11 skill · Code review, sadeleştirme, temiz kod
   - [03-test-hata-ayiklama](#03-test-hata-ayiklama) — 11 skill · TDD, hata ayıklama, doğrulama
-  - [04-mimari-api-veritabani](#04-mimari-api-veritabani) — 14 skill · Mimari, API/arayüz tasarımı, veritabanı, backend
+  - [04-mimari-api-veritabani](#04-mimari-api-veritabani) — 8 skill · Mimari, API/arayüz tasarımı, veritabanı, backend
   - [05-git-pr-surum](#05-git-pr-surum) — 8 skill · Git, worktree, PR, sürüm/release, changelog
   - [06-devops-guvenlik-performans](#06-devops-guvenlik-performans) — 10 skill · CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans
-  - [07-framework-ozel](#07-framework-ozel) — 7 skill · Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)
+  - [07-framework-ozel](#07-framework-ozel) — 13 skill · Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)
 - **Doküman ve İçerik** (43)
   - [01-ofis-dokumanlari](#01-ofis-dokumanlari) — 8 skill · Word, Excel, PowerPoint, PDF üretme/düzenleme
   - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 6 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
@@ -274,20 +274,14 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_ · not: `notlar/b-yazilim
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `api-and-interface-design` | ⭐ | Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or Graph… | typescript | ✅ | 91 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `api-patterns` | ⭐ | API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination. | api-anahtari, python, typescript | ✅ | 89 A | S 20KB | - | vudovn/ag-kit |
-| `architecture` | ⭐ | Architectural decision-making framework. Requirements analysis, trade-off evaluation, ADR documentation. Use when making architecture decisi… |  | ✅ | 89 A | S 12KB | - | vudovn/ag-kit |
-| `bash-linux` | ⭐ | Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems. | node | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `database-design` | ⭐ | Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases. |  | ✅ | 89 A | S 13KB | - | vudovn/ag-kit |
-| `frontend-architecture` | ⭐ | How to organize frontend code — separation of concerns (UI / logic / data / type), file responsibility, state tiers, API services, schema va… | api-anahtari, next.js, react, tailwind, typescript | ✅ | 87 A | M 8KB | - | vudovn/ag-kit |
-| `frontend-ui-engineering` | ⭐ | Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components,… | api-anahtari, css, react, tailwind, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `nextjs-react-expert` | ⭐ | React and Next.js performance optimization from Vercel Engineering. Use when building React components, optimizing performance, eliminating … | next.js, python, react, typescript | ✅ | 87 A | M 111KB | - | vudovn/ag-kit |
-| `nodejs-best-practices` | ⭐ | Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches thinking, not c… | next.js, node, playwright, react, typescript | ✅ | 87 A | M 8KB | - | vudovn/ag-kit |
-| `powershell-windows` | ⭐ | PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling. | api-anahtari | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `python-patterns` | ⭐ | Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not… | api-anahtari, python | ✅ | 87 A | M 9KB | - | vudovn/ag-kit |
-| `rust-pro` | ⭐ | Master modern Rust (2024 edition) with async patterns, advanced type system features, and production-ready systems programming. Expert in th… |  | ✅ | 89 A | S 8KB | - | vudovn/ag-kit |
-| `vercel-composition-patterns` | ⭐ | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component librarie… | react | ✅ | 92 A | S 49KB | claude:ayni | calesthio/OpenMontage |
-| `vercel-react-best-practices` | ⭐ | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refacto… | css, next.js, react | ✅ | 92 A | S 207KB | claude:ayni | calesthio/OpenMontage |
+| `api-and-interface-design` | ⭐ birincil | Kararlı API ve modül arayüzü tasarımı: Hyrum yasası ve tek sürüm kuralı, önce sözleşme, tutarlı hata semantiği, sınırda doğrulama, değiştirm… | typescript, rest, graphql | ✅ | 91 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `api-patterns` | ⭐ tamamlayıcı | ag-kit'in API tasarım karar rehberi: REST/GraphQL/tRPC seçim ağacı, kaynak isimlendirme ve durum kodları, zarf/hata/sayfalama yanıt biçimler… | rest, graphql, trpc, typescript, python | ✅ | 89 A | S 20KB | - | vudovn/ag-kit |
+| `architecture` | ⭐ birincil | Mimari karar çerçevesi: bağlam keşfi soruları ve proje sınıflandırması, ödünleşim (trade-off) analizi ve ADR şablonları, desen seçimi karar … |  | ✅ | 89 A | S 12KB | - | vudovn/ag-kit |
+| `database-design` | ⭐ birincil | Veritabanı tasarım kararları: PostgreSQL/Neon/Turso/SQLite seçimi, Drizzle/Prisma/Kysely ORM seçimi, normalizasyon ve ilişkiler, indeks tipl… | postgresql, sqlite, prisma, drizzle, sql | ✅ | 89 A | S 13KB | - | vudovn/ag-kit |
+| `frontend-architecture` | ⭐ birincil | Ön yüz kodunu ölçeklenir biçimde düzenleme kuralları: UI / mantık (hook, composable) / veri (servis dosyaları) / tip / doğrulama (şema) katm… | react, next.js, vue, typescript, tailwind | ✅ | 87 A | M 8KB | - | vudovn/ag-kit |
+| `frontend-ui-engineering` | ⭐ birincil | Üretim kalitesinde, erişilebilir ve responsive arayüz kurma: bileşen dosya yapısı ve desenleri, durum yönetimi, tasarım sistemine bağlılık v… | react, typescript, css, tailwind | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `nodejs-best-practices` | ⭐ birincil | Node.js arka yüz karar ilkeleri: Hono/Fastify/NestJS/Express seçim ağacı, yerel TypeScript ve modül sistemi kararları, katmanlı mimari, merk… | node, typescript, express, fastify, hono, nestjs | ✅ | 87 A | M 8KB | - | vudovn/ag-kit |
+| `python-patterns` | ⭐ birincil | Python geliştirme karar ilkeleri: FastAPI/Django/Flask seçim ağacı, async/sync kararı ve kütüphane seçimi, tip ipucu stratejisi ve Pydantic … | python, fastapi, django, flask, pydantic | ✅ | 87 A | M 9KB | - | vudovn/ag-kit |
 
 ### 05-git-pr-surum
 
@@ -327,6 +321,12 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
+| `bash-linux` | ⭐ birincil | macOS/Linux Bash kalıpları: komut zincirleme operatörleri, dosya işlemleri, süreç yönetimi (port tutan süreci bulma/öldürme), metin işleme (… | bash | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
+| `nextjs-react-expert` | ⭐ alternatif | Vercel'in React/Next.js performans kurallarının ag-kit uyarlaması: 58 kural etki sırasına göre 8 dosyada, ek olarak Next.js 16 Cache Compone… | react, next.js, python | ✅ | 87 A | M 111KB | - | vudovn/ag-kit |
+| `powershell-windows` | ⭐ alternatif | Windows PowerShell tuzakları ve kalıpları: mantıksal operatörlerde cmdlet'i paranteze alma, betiklerde Unicode/emoji yasağı, null kontroller… | powershell, windows | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
+| `rust-pro` | ⭐ birincil | Modern Rust (2024 sürümü) uzman persona tanımı: async (Tokio), axum, sahiplik/ömür, tip sistemi ve trait'ler, performans ve sistem programla… | rust, tokio, axum | ✅ | 89 A | S 8KB | - | vudovn/ag-kit |
+| `vercel-composition-patterns` | ⭐ birincil | Vercel'in ölçeklenen React kompozisyon desenleri: boolean prop çoğalmasını compound component, state lifting ve iç yapıyı birleştirme ile ön… | react | ✅ | 92 A | S 49KB | claude:ayni | calesthio/OpenMontage |
+| `vercel-react-best-practices` | ⭐ birincil | Vercel Engineering'in React/Next.js performans kuralları: etkiye göre 8 kategoride 65 kural (şelaleleri kaldırma, bundle boyutu, sunucu tara… | react, next.js | ✅ | 92 A | S 207KB | claude:ayni | calesthio/OpenMontage |
 | `next-bundle-optimizer` | ⭐ | Audit and reduce Next.js browser initial-load work. Use for slow route startup, oversized client bundles, duplicate browser dependencies, or… | next.js, node | ✅ | 98 A | M 15KB | - | vercel/next.js |
 | `next-cache-components-adoption` | ⭐ | Turn on Cache Components in a Next.js app and resolve the blocking routes it surfaces. Use when the user wants to enable, adopt, or migrate … | html, next.js, node, playwright, react | ✅ | 95 A | L 40KB | - | vercel/next.js |
 | `next-cache-components-optimizer` | ⭐ | Optimize the meaningful UI available immediately from a Next.js route on an initial load (hard navigation) or named client-side navigation (… | next.js, node, playwright, typescript | ✅ | 98 A | M 50KB | - | vercel/next.js |
