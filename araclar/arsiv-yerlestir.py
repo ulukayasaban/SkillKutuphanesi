@@ -335,20 +335,45 @@ def main():
         kayit["degerlendirme"] = degerlendir(kayit, gel)
         (hedef / "KAYNAK.md").write_text(kaynak_md({**k, **kayit}), encoding="utf-8")
 
-    # KAYIP kaynaklar (silinmiş/private olmuş repo): eski arşiv kopyaları ve kayıtları olduğu gibi korunur
+    # Korunan eski kayıtlar:
+    #  - KAYIP kaynaklar (silinmiş/private olmuş repo)
+    #  - Kaynakta KALDIRILAN skiller (repo duruyor ama skill yeni commit'te yok; ör. emekliye ayrılan iş akışı skilleri)
+    # Eski arşiv kopyası ve kayıt (elle inceleme alanlarıyla) korunur; projeler ve roller bozulmaz.
     kayip = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] == "KAYIP"}
+    cekilen_repolar = {m["repo"] for m in manifest["kayitlar"]}
+    yeni_kaynaklar = {(x["repo"], x["kaynak_yol"]) for x in skiller}
+    kullanilan_id = {x["id"] for x in skiller}
     for s in eski_liste:
-        if s["repo"] not in kayip or any(x["id"] == s["id"] for x in skiller):
+        kaynak = (s["repo"], s["kaynak_yol"])
+        if kaynak in yeni_kaynaklar:
             continue
+        if s["repo"] in kayip:
+            s["kaynak_durumu"] = "kayip"
+        elif s["repo"] in cekilen_repolar and s.get("tip") in ("T1", "T2", "T3", "T4"):
+            s["kaynak_durumu"] = "kaynakta-kaldirildi"
+            s.setdefault("kaldirilma_tarihi", bugun)
+            s.setdefault("kaldirildigi_commit", next(m["commit"] for m in manifest["kayitlar"] if m["repo"] == s["repo"]))
+        else:
+            continue
+        if any(x["ad"] == s["ad"] and x["durum"] == "tercih" for x in skiller):
+            s["durum"] = "alternatif"  # aynı adın güncel bir tercihi varsa o kazanır
+        if s["id"] in kullanilan_id:
+            s["id"] = f"{s['ad']}@{kisa_kaynak(s['repo'])}-eski"
+        kullanilan_id.add(s["id"])
         eski_yol = KOK / s["yol"]
         if not (eski_yol / "SKILL.md").exists():
             print(f"UYARI: KAYIP kaynağın arşiv kopyası da yok: {s['yol']}")
             continue
-        shutil.copytree(eski_yol, YENI / Path(s["yol"]).relative_to("arsiv"))
-        for v in (s.get("varyantlar") or {}).values():
+        hedef_yeni = YENI / s["kategori"] / s["id"]  # id değişmiş olabilir (-eski): yeni yola kopyala
+        shutil.copytree(eski_yol, hedef_yeni)
+        s["yol"] = goreli(hedef_yeni)
+        yeni_var = {}
+        for arac, v in (s.get("varyantlar") or {}).items():
             if (KOK / v).exists():
-                shutil.copytree(KOK / v, YENI / Path(v).relative_to("arsiv"))
-        s["kaynak_durumu"] = "kayip"
+                vh = YENI / "_varyantlar" / s["id"] / arac
+                shutil.copytree(KOK / v, vh)
+                yeni_var[arac] = goreli(vh)
+        s["varyantlar"] = yeni_var
         skiller.append(s)
 
     bilesenler = []

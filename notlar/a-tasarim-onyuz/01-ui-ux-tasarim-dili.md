@@ -59,7 +59,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Boyut:** 161 KB (SKILL.md 86.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kapsamlı ama 86 KB SKILL.md ile bağlam yükü çok yüksek; taste-skill v1 türevi, kaynağı v2'ye geçti. Kendi yoluna sabit referans içeriyor (yol bağımlılığı).
 
-### impeccable  ·  pbakaus/impeccable @ dad8dbb  ·  puan 95 (A)
+### impeccable  ·  pbakaus/impeccable @ e3083ac  ·  puan 95 (A)
 
 - **Ne yapar:** Ön yüz arayüzlerini tasarlama, yeniden tasarlama, eleştirme, denetleme, cilalama ve sağlamlaştırma için komut tabanlı tasarım direktörü: shape, audit/critique, animate, bolder/quieter, colorize, typeset, harden, polish, document/extract gibi alt komutlar. PRODUCT.md/DESIGN.md bağlamını yükleyen bir başlatıcı ve canlı tarayıcı DOM denetimi içerir; iOS/Android ekranlarını da kapsar.
 - **Ne zaman:** Var olan arayüzü denetleme/iyileştirme, UX eleştirisi, erişilebilirlik ve responsive sağlamlaştırma; yeni yüzeyde tasarım yönü belirleme. · **Ne zaman değil:** Backend veya UI dışı işler; tek seferlik küçük stil düzeltmesi (fazla ağır).
@@ -67,7 +67,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, user-invocable (Codex bunları yok sayar) · Araca özel sürümler mevcut: claude, codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** pbakaus (kisi, ★84353, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** ui-denetim-iyilestirme → birincil · **Roller:** ui-tasarimci, qa-erisilebilirlik
-- **Boyut:** 2138 KB (SKILL.md 11.7 KB, yük orta)
+- **Boyut:** 2140 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kapsamlı ve olgun (v4.7), Claude/Codex için ayrı sürümler. Dikkat: başlatıcı ilk çalıştırmada GitHub releases'ten ikili dosya indirip çalıştırıyor; .sha256 doğrulaması yapıyor ve doğrulanamazsa reddediyor. IMPECCABLE_DOWNLOAD_BASE ile kaynak değiştirilebilir.
 
 ### mobile-design  ·  vudovn/ag-kit @ 549ba3d  ·  puan 84 (A)
@@ -92,7 +92,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Boyut:** 151 KB (SKILL.md 26.0 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Yüzeysel trend listesi, tarihli (2024-2025) ve diğer skillerin özeti; anti-slop skillerinin kaçındığı varsayılanları öneriyor. Bakımı eski (2025-11).
 
-### ui-styling  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 88 (A)
+### ui-styling  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3eccfd8  ·  puan 88 (A)
 
 - **Ne yapar:** shadcn/ui (Radix + Tailwind) bileşenleri, Tailwind yardımcı sınıf stili ve canvas tabanlı görsel tasarımla erişilebilir arayüz kurma: tema/karanlık mod, responsive düzen, erişilebilir bileşen kalıpları ve shadcn ekleme / Tailwind yapılandırma betikleri; poster için OFL lisanslı font paketi.
 - **Ne zaman:** React tabanlı projede shadcn/ui + Tailwind ile bileşen ve tema kurarken. · **Ne zaman değil:** shadcn kullanılmayan yığınlar; estetik yön belirleme (bu skill uygulama katmanıdır).
@@ -103,7 +103,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Boyut:** 5627 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Pratik ve kod odaklı; canvas fontları lisanslarıyla birlikte paketlenmiş (5.6 MB). design skillinin kardeş alt skilli.
 
-### ui-ux-pro-max  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 85 (A)
+### ui-ux-pro-max  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3eccfd8  ·  puan 85 (A)
 
 - **Ne yapar:** Yerel aranabilir UI/UX veri tabanı: 79 stil, 192 ürün paleti ve gerekçe profili, 74 font eşleşmesi, 119 UX kuralı, ikonlar, GSAP ön ayarları, grafik türleri ve 22 teknoloji yığını. Python betiğiyle ürün/sektöre göre tasarım sistemi üretir, isteğe bağlı MASTER + sayfa bazlı geçersiz kılma dosyalarına kaydeder.
 - **Ne zaman:** Yeni sayfa/proje için palet, font ve stil kararlarını veriye dayandırmak; UX kural kontrol listesi gerektiğinde. · **Ne zaman değil:** Sanat yönetimi gerektiren özgün sayfalarda tek başına (veri tabanı ortalama sonuçlar verir; design-taste-frontend ile birlikte kullan); Python yoksa.

@@ -15,7 +15,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Boyut:** 46 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Çok kanallı, doctor ile kendini denetleyen, hata durumunda yeniden deneme zinciri tanımlı; MIT. Eksi: varsayılan SKILL.md Çince (İngilizce sürüm SKILL_en.md içinde) ve Çin platformlarına ağırlık veriyor.
 
-### notebooklm  ·  teng-lin/notebooklm-py @ 4d55183  ·  puan 85 (A)
+### notebooklm  ·  teng-lin/notebooklm-py @ 99f2bd2  ·  puan 85 (A)
 
 - **Ne yapar:** Google NotebookLM (Gemini Notebook) için notebooklm-py CLI ve async Python API'si: kurulum, kimlik doğrulama (master token, tarayıcı çerezi), not defteri/kaynak yönetimi, kaynaklara dayalı sohbet ve derin araştırma, sesli özet/podcast gibi artefakt üretimi ve indirme; yetki sınırları ve hata giderme kuralları.
 - **Ne zaman:** Belgeleri NotebookLM'e yükleyip kaynaklı soru-cevap, derin araştırma ya da Audio Overview/podcast üretmek; bunu otomasyona bağlamak. · **Ne zaman değil:** Genel Gemini API işleri için değil; resmi olmayan bir istemci (Google hesap çerezleri/master token kullanır) — kurumsal hesapta politikaya aykırı olabilir.

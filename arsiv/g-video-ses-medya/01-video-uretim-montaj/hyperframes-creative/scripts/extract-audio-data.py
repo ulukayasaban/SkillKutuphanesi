@@ -22,14 +22,6 @@ import sys
 
 import numpy as np
 
-# Windows sizes stdio to the ANSI code page (cp1252). These scripts emit UTF-8 on
-# every platform; say so rather than depending on the console's code page. Carry
-# `errors` across: reconfigure() resets it to "strict", and CPython deliberately gives
-# stderr "backslashreplace" so the diagnostic path can never itself raise.
-for _stream in (sys.stdout, sys.stderr):
-    if hasattr(_stream, "reconfigure"):
-        _stream.reconfigure(encoding="utf-8", errors=_stream.errors)
-
 # ---------------------------------------------------------------------------
 # FFT parameters
 #
@@ -59,10 +51,7 @@ def decode_audio(path: str) -> np.ndarray:
     ]
     result = subprocess.run(cmd, capture_output=True)
     if result.returncode != 0:
-        # Decoding ffmpeg's diagnostics strictly makes the reporter the thing that
-        # crashes: a Windows ffmpeg emits cp1252 bytes, and UnicodeDecodeError here
-        # would bury the actual failure it was trying to report.
-        print(f"ffmpeg error: {result.stderr.decode('utf-8', errors='replace')}", file=sys.stderr)
+        print(f"ffmpeg error: {result.stderr.decode()}", file=sys.stderr)
         sys.exit(1)
     return np.frombuffer(result.stdout, dtype=np.int16).astype(np.float32) / 32768.0
 
@@ -189,7 +178,7 @@ def main():
 
     data = extract(args.input, args.fps, args.bands)
 
-    with open(args.output, "w", encoding="utf-8") as f:
+    with open(args.output, "w") as f:
         json.dump(data, f)
 
     print(f"Wrote {args.output} ({data['totalFrames']} frames, {data['bands']} bands)", file=sys.stderr)

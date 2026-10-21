@@ -75,6 +75,7 @@ def main():
     calistir(sys.executable, "araclar/katalog-uret.py")
     calistir(sys.executable, "araclar/dogrula.py")
     calistir("git", "add", "-A")
+    calistir("git", "add", "-f", "arsiv")  # skillerin kendi .gitignore dosyaları arşiv dosyalarını gizlemesin
     if git("diff", "--cached", "--quiet").returncode == 0:
         print("Yeni commit'ler skill içeriğini değiştirmemiş; kayıt atılmadı.")
     else:

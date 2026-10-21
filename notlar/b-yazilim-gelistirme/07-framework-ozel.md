@@ -15,7 +15,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV / opsiyonel. Doğru ama temel komut tablosu; 'sed -i' gibi macOS/GNU farkı olan komutlarda uyarı yok. Araç rehberi olarak 07-framework-ozel'e taşındı.
 
-### next-bundle-optimizer  ·  vercel/next.js @ 691ec2a  ·  puan 91 (A)
+### next-bundle-optimizer  ·  vercel/next.js @ 9ff8ba9  ·  puan 91 (A)
 
 - **Ne yapar:** Next.js'te tarayıcının ilk yükleme işini denetler ve azaltır: varsayılan 'audit' kipinde next analyze ile anlık görüntü alıp dışa aktarır, modül grafiğinden aday bölmeleri (topluluk → min-cut) kanıtla açıklar; 'fix' kipi yalnız açık istekle tek değişikliği doğrulayarak uygular ve rapor verip durur.
 - **Ne zaman:** Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları veya etkileşime ertelenebilecek özellikler. · **Ne zaman değil:** Next.js dışı projeler; statik App Shell sorunları (next-cache-components-optimizer) ve prefetch işleri (next-partial-prefetching-optimizer); next analyze içermeyen eski Next sürümleri.
@@ -26,7 +26,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 15 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel, --skill ile). Audit/fix ayrımı ve 'ölçülmüş tek değişiklik' kuralı sağlam. Not: Codex sandbox'ı port açmayı engellediği için capture sandbox dışında çalışmalı (skill bunu belirtiyor); diğer next-* skillerini npx skills add ile kurmayı önerir.
 
-### next-cache-components-adoption  ·  vercel/next.js @ 691ec2a  ·  puan 97 (A)
+### next-cache-components-adoption  ·  vercel/next.js @ 9ff8ba9  ·  puan 97 (A)
 
 - **Ne yapar:** Next.js uygulamasında Cache Components'i açar ve ortaya çıkan engelleyici route'ları çözerek build'i geçirir: App Router ve app dizinini doğrular, artımlı (cache-components-instant-false codemod ile önce opt-out) ya da doğrudan stratejiyi seçtirir, sonra opt-out'ları özellik özellik tarayıcıda veya build ile doğrulayarak kaldırır.
 - **Ne zaman:** cacheComponents bayrağını açmak, blocking-prerender/instant doğrulama hatası selini çözmek, 'export const instant = false' ile yerinde düzeltme arasında karar vermek. · **Ne zaman değil:** Yalnız pages/ dizinli projeler (önce App Router geçişi); Cache Components zaten benimsenmişse (optimizer); çalıştırılamayan uygulama.
@@ -37,7 +37,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 40 KB (SKILL.md 32.6 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (opsiyonel), nextjs-cache-components grubunun birincili. Next.js ekibinin geçiş rehberi; önkoşul kontrolleri (src/app gölgelemesi, import anında DB okuma) çok titiz. 33 KB SKILL.md, yalnız geçiş işinde kurulmalı.
 
-### next-cache-components-optimizer  ·  vercel/next.js @ 691ec2a  ·  puan 99 (A)
+### next-cache-components-optimizer  ·  vercel/next.js @ 9ff8ba9  ·  puan 99 (A)
 
 - **Ne yapar:** Cache Components benimsenmiş Next.js 16.3+ uygulamasında bir route'un ilk yüklemede veya istemci geçişinde anında gösterdiği anlamlı UI'yi (statik kabuk) büyütür: hedefi başarısız bir @next/playwright instant() e2e testine çevirir, üretim benzeri rig'de RED → düzeltme → GREEN döngüsünü, eşitlik ve fark kontrollerini yürütür; geçen test regresyon koruması olarak kalır.
 - **Ne zaman:** Yavaş ilk boyama, anında olmayan gezinme, hangi Suspense sınırının UI'yi engellediğini bulma veya instant() regresyon kapsamı ekleme. · **Ne zaman değil:** Cache Components henüz açılmadıysa (önce adoption skilli); Next.js 16.3 altı.
@@ -48,7 +48,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 50 KB (SKILL.md 22.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (opsiyonel), tamamlayıcı. Test güdümlü optimizasyonun örnek uygulaması (boş geçemeyen RED kapısı, eşitlik kontrolü); rig ve test şablonları dahil.
 
-### next-dev-loop  ·  vercel/next.js @ 691ec2a  ·  puan 99 (A)
+### next-dev-loop  ·  vercel/next.js @ 9ff8ba9  ·  puan 99 (A)
 
 - **Ne yapar:** Vercel'in Next.js düzenle-doğrula döngüsü: kod değişikliğinden sonra uygulamanın çalışma anında gerçekten çalıştığını iki görünümle kanıtlar — Next.js'in kendi /_next/mcp uç noktası (route, RSC, server action, sunucu logları, derleme hataları) ve gerçek Chrome süren agent-browser CLI (DOM, konsol, ağ, React fiber, vitals). Ön kontrol, döngü, tuzaklar ve kapanış adımları içerir.
 - **Ne zaman:** next dev çalışırken uygulama kodu düzenlendikten sonra değişikliğin derlenmenin ötesinde çalıştığını doğrulamak. · **Ne zaman değil:** Next.js 16.3+ (Turbopack) ve agent-browser >= 0.31.1 yoksa (skill bu durumda durur); Next.js dışı projeler.
@@ -59,7 +59,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 9 KB (SKILL.md 9.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, nextjs-calisma-dogrulama grubunun birincili. Next.js ekibinin resmî skilli; iki bağımsız görünümle çapraz doğrulama ve sürüm tabanı açıkça belirtilmiş. Sert bağımlılıklar (16.3+, agent-browser) nedeniyle frontend-muhendis'te opsiyonel kalır.
 
-### next-partial-prefetching-adoption  ·  vercel/next.js @ 691ec2a  ·  puan 97 (A)
+### next-partial-prefetching-adoption  ·  vercel/next.js @ 9ff8ba9  ·  puan 97 (A)
 
 - **Ne yapar:** Next.js'te Partial Prefetching'i açar ve ortaya çıkan içgörüleri çözer: önce <Link prefetch={true}> gezinmelerini denetler, mevcut prefetch davranışını bayrak kapalıyken geçen instant() testleriyle sabitler (koruma kapısı), hedefleri benimser, bayrağı açar, URL-veri içgörülerini next dev'de tarar ve doğrular.
 - **Ne zaman:** partialPrefetching bayrağını açmak, route'ları 'export const prefetch = partial' ile dahil etmek, prefetch davranışını korurken geçiş yapmak. · **Ne zaman değil:** Cache Components benimsenmemişse; Next.js 16.3 altı; seçili gezinmeleri ince ayar (optimizer).
@@ -70,7 +70,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 35 KB (SKILL.md 26.6 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (opsiyonel), nextjs-partial-prefetching grubunun birincili. Önce koruma testi sonra geçiş kuralı davranış kaybını engelliyor; resmî ve güncel.
 
-### next-partial-prefetching-optimizer  ·  vercel/next.js @ 691ec2a  ·  puan 99 (A)
+### next-partial-prefetching-optimizer  ·  vercel/next.js @ 9ff8ba9  ·  puan 99 (A)
 
 - **Ne yapar:** Partial Prefetching altında seçili istemci gezinmelerinin tıklamadan önce neyi içereceğini optimize eder: her kaynak link/hedef için prefetch edilen ve yalnız gezinmede gelen UI'yi ve tetikleyiciyi (varsayılan, viewport, intent) instant() testine çevirir, mevcut davranışı kanıtlar, en küçük değişikliği yapar ve farkı doğrular.
 - **Ne zaman:** URL'ye özgü UI'nin anında gelmesini istemek, yeniden kullanılabilir içeriği gezinmeye bırakmak veya prefetch tetikleyicisi seçmek. · **Ne zaman değil:** Cache Components veya Partial Prefetching benimsenmemişse (adoption skilleri); App Shell commit edemiyorsa (önce cache-components-optimizer).

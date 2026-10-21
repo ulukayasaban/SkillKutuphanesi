@@ -92,7 +92,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 208 KB (SKILL.md 16.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Daha zengin ama ağır (16,7 KB SKILL.md, 208 KB) ve güncel upstream ile ayrışmış; core/*.py dosyaları farklı. Dikkat: pip install pillow imageio numpy; aynı ad nedeniyle iki sürüm birlikte kurulursa çakışır.
 
-### slides  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 81 (A)
+### slides  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3eccfd8  ·  puan 81 (A)
 
 - **Ne yapar:** Chart.js, tasarım token'ları, yerleşim kalıpları ve metin yazım formülleri ile stratejik HTML sunum (pitch deck, pazarlama slaytı) üretir; `slides create` alt komutu references/create.md'yi yükler. Yerleşim, strateji ve copywriting bilgisini ayrı referans dosyalarında tutar.
 - **Ne zaman:** HTML tabanlı pitch deck, veri destekli pazarlama sunumu; marka-sunum profili için. · **Ne zaman değil:** PowerPoint/.pptx çıktısı gerekiyorsa pptx; video slayt gösterisi için slideshow (HyperFrames); sıfırdan görsel poster için canvas-design.

@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/vercel/next.js
 - **Repo içindeki yol:** `.agents/skills/next-rspack`
-- **Commit:** `691ec2a1a21b9644a8cfd22452cec82d57c84d0d`
+- **Commit:** `9ff8ba95440dc43b0f275b1caffd953074e0f75b`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
 - **Değerlendirme:** 91/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

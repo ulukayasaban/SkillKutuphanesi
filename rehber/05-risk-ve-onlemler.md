@@ -80,6 +80,13 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 61 | Arşivdeki dosyalar elle değiştirilir ya da araç sürümü kaybolur | `dogrula.py` içerik parmak izlerini yeniden hesaplar |
 | 62 | Kapsam denetimi araç sürümü kararlarını doğrulamaz | Registry + diskte kontrol edilir |
 
+## İlk güncellemede (2026-10-22) bulunan ve kapatılanlar
+
+| # | Senaryo | Önlem |
+|---|---|---|
+| 63 | Geliştirici skill'leri kaynakta kaldırır (HyperFrames iş akışı skilleri emekliye ayrıldı); güncelleme onları arşivden ve rollerden düşürür | Kaynakta kaldırılan skill arşivde kalır, `kaynak_durumu: kaynakta-kaldirildi`; ön kontrolde `kaynakta-kaldirildi` UYARI, dogrula'da rol UYARISI, katalogda 🗄️emekli |
+| 64 | Skill'in kendi `.gitignore`'u arşiv dosyalarını git'ten gizler (embedded-captions `transcript.json`) → git yedeği eksik | Commit'ler `git add -f arsiv` ile; dogrula git'e girmeyen arşiv dosyasını HATA sayar |
+
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).
 - Değerlendirme puanı GitHub verisinden hesaplanır; içerik kalitesini ölçmez. Elle `kalite` (1–5) verince %40 ağırlıkla katılır.

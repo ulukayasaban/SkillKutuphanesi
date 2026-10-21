@@ -81,7 +81,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. YAGNI odağı ve CI modu farklılaştırıcı; claudesidian (Obsidian kasası) reposundan geliyor ama içerik genel. Etkileşimli menü varsayılan, --auto/--ci ile atlanır.
 
-### receiving-code-review  ·  obra/superpowers @ b739a8a  ·  puan 88 (A)
+### receiving-code-review  ·  obra/superpowers @ 2ce8aa1  ·  puan 88 (A)
 
 - **Ne yapar:** Gelen kod inceleme geri bildirimine teknik titizlikle yaklaşmayı öğretir: oku, kendi sözlerinle yeniden ifade et, kod tabanında doğrula, değerlendir, gerekirse gerekçeli itiraz et, maddeleri tek tek uygulayıp test et; 'harika fikir!' gibi gösterişli onayı ve doğrulamadan uygulamayı yasaklar.
 - **Ne zaman:** İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken. · **Ne zaman değil:** Geri bildirim yokken; incelemeyi yapan tarafta.
@@ -92,7 +92,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.
 
-### requesting-code-review  ·  obra/superpowers @ b739a8a  ·  puan 96 (A)
+### requesting-code-review  ·  obra/superpowers @ 2ce8aa1  ·  puan 96 (A)
 
 - **Ne yapar:** İş bitince veya birleştirmeden önce, oturum geçmişini değil özenle hazırlanmış bağlamı (açıklama, plan, BASE/HEAD SHA) vererek bir inceleyici alt-agent başlatır; code-reviewer.md şablonu ile Kritik/Önemli/Küçük bulguları ister ve bunlara göre ilerler.
 - **Ne zaman:** subagent-driven-development'ta her görevden sonra; büyük özellik bitiminde; main'e birleştirmeden önce taze bağlamlı inceleme gerektiğinde. · **Ne zaman değil:** Alt-agent aracı olmayan ortamlar (inceleme satır içi yapılır); incelemenin kendisini yapan agent için yöntem değil (code-review-and-quality).

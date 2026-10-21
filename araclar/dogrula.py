@@ -46,6 +46,10 @@ def main():
         for x in r["cekirdek"] + r.get("opsiyonel", []):
             if x not in ids and not any(s["ad"] == x for s in skiller):
                 hatalar.append(f"rol {f.stem}: skill yok -> {x}")
+        for x in r["cekirdek"] + r.get("opsiyonel", []):
+            s = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
+            if s and s.get("kaynak_durumu") in ("kaynakta-kaldirildi", "kayip"):
+                uyarilar.append(f"rol {f.stem}: '{x}' kaynakta {s['kaynak_durumu']}; arşiv kopyası kullanılıyor (yerine yenisini düşün)")
         gruplar = Counter()
         for x in r["cekirdek"]:
             s = ids.get(x)
@@ -63,6 +67,12 @@ def main():
         for x in p.get("ek_skiller", []):
             if x not in ids and not any(s["ad"] == x for s in skiller):
                 hatalar.append(f"profil {f.stem}: skill yok -> {x}")
+    # Skillerin kendi .gitignore'u yüzünden git'e girmeyen arşiv dosyası var mı? (git yedeği eksik kalır)
+    gi = subprocess.run(["git", "status", "--ignored", "--porcelain", "arsiv"], cwd=KOK, capture_output=True, text=True)
+    from ortak import GURULTU
+    for satir in gi.stdout.splitlines():
+        if satir.startswith("!! ") and not GURULTU.search(satir[3:].rstrip("/")):
+            hatalar.append(f"git'e girmeyen arşiv dosyası (skill'in kendi .gitignore'u): {satir[3:]} -> `git add -f arsiv`")
     if "--github" in sys.argv:
         r = subprocess.run(["gh", "api", "graphql", "--paginate", "-f",
                             "query=query($endCursor:String){viewer{starredRepositories(first:100,after:$endCursor)"

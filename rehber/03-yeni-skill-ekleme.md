@@ -41,7 +41,7 @@ python3 araclar/dogrula.py --github     # "UYARI: yıldızlı ama kaynaklar.json
    python3 araclar/kapsam-denetimi.py              # 0 sorun olmalı
    python3 araclar/katalog-uret.py
    python3 araclar/dogrula.py --github             # 0 hata olmalı
-   git add -A && git commit -m "Yeni kaynak: owner/ad"
+   git add -A && git add -f arsiv && git commit -m "Yeni kaynak: owner/ad"
    ```
 5. **Sonuçları kontrol et:**
    - `KATALOG.md`'de yeni skiller doğru kategoride mi?

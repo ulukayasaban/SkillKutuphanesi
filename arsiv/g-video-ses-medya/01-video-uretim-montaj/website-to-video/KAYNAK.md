@@ -11,4 +11,5 @@
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
 - **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
+- **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `hyperframes`
 - **SKILL.md'de olup bulunamayan dosyalar:** `../hyperframes/references/html-in-canvas-patterns.md`, `../hyperframes/references/techniques.md`

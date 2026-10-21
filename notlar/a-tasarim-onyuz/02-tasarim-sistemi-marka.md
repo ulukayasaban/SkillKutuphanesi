@@ -4,7 +4,7 @@ _Design token, tema, marka kimliği, banner/logo_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/11**
 
-### banner-design  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 78 (B)
+### banner-design  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3eccfd8  ·  puan 78 (B)
 
 - **Ne yapar:** Sosyal medya kapakları, reklam bannerları, web hero görselleri ve baskı bannerları için çok formatlı tasarım akışı. Gereksinimleri sorar, 2-3 sanat yönü üretir, bannerı tam piksel boyutunda HTML/CSS olarak kurar ve PNG'ye aktarır; platform ölçüleri ve 22 stil için bundled referans içerir.
 - **Ne zaman:** Belirli bir platform boyutuna (Twitter başlığı, LinkedIn kapağı, Google Display, hero) birden fazla sanat yönü alternatifli banner gerekince. · **Ne zaman değil:** Video düzenleme, tam web sitesi tasarımı veya baskı üretimi (CMYK/bleed ayrıntısı) için değil; marka kuralı yoksa kendi marka kuralını uydurmaz, önce brand/design gerekir.
@@ -15,7 +15,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 12 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel). Kısa ve kendi kendine yeten (6.9 KB); beceri, kurulum, anahtar ve ağ istemez, görsel üretimi ve PNG dışa aktarımını 'varsa' kaydıyla opsiyonel bırakıyor. Dikkat: kalite doğası gereği `design` skill'indeki banner alt akışıyla büyük ölçüde örtüşüyor; yalnız banner iş akışı gerekiyorsa tercih edilir. PNG aktarımı için ayrı bir tarayıcı/ekran görüntüsü aracı gerekir.
 
-### brand  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 89 (A)
+### brand  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3eccfd8  ·  puan 89 (A)
 
 - **Ne yapar:** Marka sesi, görsel kimlik, mesajlaşma çerçeveleri, varlık yönetimi ve tutarlılık denetimi için kapsamlı kılavuz seti. `docs/brand-guidelines.md`'yi tek doğruluk kaynağı yapar; betikler renkleri çıkarır, varlıkları doğrular ve markayı `assets/design-tokens.json/css` dosyalarına senkronlar.
 - **Ne zaman:** Yeni bir marka kimliği/ses rehberi yazılırken veya mevcut marka kurallarını tasarım token'larına bağlarken; marka uyum denetimlerinde. · **Ne zaman değil:** Tek seferlik logo üretimi veya hazır tema seçimi için değil (design / theme-factory). Projede zaten token/`@theme` dosyaları varsa sync betiği durur; üzerine yazmaz.
@@ -48,7 +48,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 13 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. SKILL.md anthropics/skills sürümüyle birebir aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: bu kopyanın LICENSE.txt'inde telif satırı doldurulmamış şablon ('Copyright [yyyy] [name of copyright owner]'), yani lisans sahipliği net değil; resmî kopya tercih edilmeli.
 
-### design  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 77 (B)
+### design  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3eccfd8  ·  puan 77 (B)
 
 - **Ne yapar:** claudekit birleşik tasarım skilli: marka kimliği, token, UI stili, AI ile logo üretimi (55 stil; Gemini, Atlas Cloud veya MuAPI), 50 teslimatlı kurumsal kimlik (CIP) maketleri, HTML sunumlar, banner (22 stil), SVG ikon ve sosyal medya görselleri. brand, design-system ve ui-styling kardeş alt skillerine yönlendirir.
 - **Ne zaman:** Logo, kurumsal kimlik seti, banner, ikon veya sosyal medya görseli üretimi; marka paketi çıkarma. · **Ne zaman değil:** Web sayfası tasarımı (01 kategorisindeki skiller); API anahtarı olmadan AI logo/ikon üretimi.
@@ -70,7 +70,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 21 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Net şema ve gerçek örnek kütüphanesi; impeccable ve design-dna çıktılarıyla uyumlu. Konu itibarıyla tasarım sistemi kategorisine taşındı.
 
-### design-system  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 56ea9cf  ·  puan 89 (A)
+### design-system  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3eccfd8  ·  puan 89 (A)
 
 - **Ne yapar:** Üç katmanlı (primitive, semantic, component) token mimarisi, CSS değişkenleri, boşluk/tipografi ölçekleri, bileşen durum spesifikasyonları ve token'dan kod üretimi. Ayrıca token'larla uyumlu sunum (slide) üretimi için BM25 arama, 8 karar CSV'si ve Chart.js tabanlı bir slayt sistemi içerir.
 - **Ne zaman:** Sıfırdan veya mevcut projede token sistemi kurarken; hardcode renk/boşluk denetimi (`validate-tokens.cjs`) ve Tailwind entegrasyonu için. · **Ne zaman değil:** Sadece Tailwind v4 bileşen kitaplığı yazacaksan tailwind-design-system daha doğrudan; tek seferlik sunum için slides skill'i. Marka sesi/mesaj için brand.

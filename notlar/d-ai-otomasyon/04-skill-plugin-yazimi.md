@@ -158,7 +158,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (alternatif, hook grubunda). Anthropic resmi; kısa ve örnekli. hook-development'ın kod gerektirmeyen hafif alternatifi.
 
-### writing-skills  ·  obra/superpowers @ b739a8a  ·  puan 93 (A)
+### writing-skills  ·  obra/superpowers @ 2ce8aa1  ·  puan 95 (A)
 
 - **Ne yapar:** Skill yazımını süreç dokümantasyonuna uygulanmış TDD olarak ele alır: önce alt-agent'larla baskı senaryosu çalıştırıp skill'siz başarısızlığı gözle (RED), skill'i yaz (GREEN), açıkları kapat (REFACTOR). Skill türleri, yapı, keşfedilebilirlik (SDO), ikna ilkeleri ve Anthropic en iyi uygulamaları ekleri içerir.
 - **Ne zaman:** Agent davranışını değiştiren süreç/disiplin skillerini yazmak ve gerçekten işe yaradığını kanıtlamak. · **Ne zaman değil:** Basit başvuru/format skilleri için ağır (skill-creator yeterli). superpowers:test-driven-development'ı ön koşul sayar. Codex'te: alt-agent baskı testleri ayrı `codex exec` oturumlarıyla yapılır; skill yolu `~/.agents/skills/` (skill bunu kendisi belirtir).
@@ -166,5 +166,5 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → tamamlayıcı · **Roller:** skill-gelistirici
-- **Boyut:** 105 KB (SKILL.md 26.0 KB, yük buyuk)
+- **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (tamamlayıcı). Skill'in işe yaradığını test etme disiplini başka hiçbir sürümde yok; çok harness'li yol bilgisi var. 27 KB + ekler ağır. skill-creator birincil kalır (eval altyapısı ve daha geniş kapsam), bu onu tamamlar.

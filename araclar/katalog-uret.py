@@ -17,6 +17,10 @@ def satir(s):
     tek = ", ".join(s.get("teknoloji") or s["teknoloji_oto"][:5])
     glob = ",".join(f"{k}:{v}" for k, v in s.get("globalde", {}).items()) or "-"
     durum = "⭐" if s["durum"] == "tercih" else "alt"
+    if s.get("kaynak_durumu") == "kaynakta-kaldirildi":
+        durum += " 🗄️emekli"
+    elif s.get("kaynak_durumu") == "kayip":
+        durum += " 🗄️kayıp"
     if s.get("ortusme_rolu"):
         durum += f" {s['ortusme_rolu']}"
     d = s.get("degerlendirme", {})

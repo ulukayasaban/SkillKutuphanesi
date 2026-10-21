@@ -45,7 +45,6 @@ function probe(img) {
     "stream=width,height",
     "-of",
     "csv=p=0",
-    "--",
     img,
   ])
     .toString()

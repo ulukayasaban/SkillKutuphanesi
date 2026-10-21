@@ -26,7 +26,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı.
 
-### finishing-a-development-branch  ·  obra/superpowers @ b739a8a  ·  puan 96 (A)
+### finishing-a-development-branch  ·  obra/superpowers @ 2ce8aa1  ·  puan 96 (A)
 
 - **Ne yapar:** Uygulama bittiğinde işi nasıl birleştireceğine karar verdirir: tam test paketini çalıştır (kırmızıysa dur), ortamı (normal repo / worktree / detached HEAD) algıla, temel dalı doğrulat, sabit seçenek menüsü sun (yerelde birleştir, push + PR, olduğu gibi bırak), seçimi uygula ve worktree'yi kökenine göre güvenle temizle. İşi atma yalnız açık istekle.
 - **Ne zaman:** Tüm testler geçtikten sonra dalı birleştirme/PR/bekletme kararı ve worktree temizliği. · **Ne zaman değil:** Testler kırmızıyken; ekip PR'ları başka bir araçla yönetiyorsa.
@@ -81,7 +81,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel, --skill ile). Sürüm artış kuralları net; ancak push ve GitHub release yayını geri alınması zor dışa dönük eylemler, skill bunları onay adımı olmadan zincirliyor. Yalnız Node/package.json varsayımı.
 
-### using-git-worktrees  ·  obra/superpowers @ b739a8a  ·  puan 96 (A)
+### using-git-worktrees  ·  obra/superpowers @ 2ce8aa1  ·  puan 96 (A)
 
 - **Ne yapar:** İşin yalıtılmış bir çalışma alanında yapılmasını sağlar: önce zaten bir worktree içinde olunup olunmadığını (alt modül korumasıyla) tespit eder, kullanıcı onayı ister, platformun yerel worktree aracını (EnterWorktree, /worktree…) tercih eder, yoksa git worktree'ye düşer; proje kurulumu yapıp temiz test tabanını doğrular.
 - **Ne zaman:** Yalıtım gerektiren özellik işine başlarken veya bir uygulama planını yürütmeden önce (superpowers zinciri). · **Ne zaman değil:** Zaten harness tarafından yönetilen bir worktree'deyken (skill bunu kendisi algılar); tek dosyalık hızlı düzeltmeler.

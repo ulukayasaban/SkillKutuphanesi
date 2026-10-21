@@ -59,7 +59,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İşçi istemi yazma rehberi ve eşzamanlılık kuralları güçlü; ama plan tabanlı inceleme döngüsü yok. Orkestrasyon grubunda birincil subagent-driven-development.
 
-### diagnosing-superpowers  ·  obra/superpowers @ b739a8a  ·  puan 88 (A)
+### diagnosing-superpowers  ·  obra/superpowers @ 2ce8aa1  ·  puan 88 (A)
 
 - **Ne yapar:** Bir superpowers oturumu kötü gittiğinde (tekrar eden iş, yok sayılan plan, tetiklenmeyen skill, pahalılık) diskteki transkriptleri okuyup kanıta dayalı rapor çıkarır; her bulgu path:line ile alıntılanır. Oturum bulma, gizli veri karartma ve GitHub issue paketi rehberleri içerir.
 - **Ne zaman:** superpowers skill ailesiyle çalışan oturumların neden yanlış gittiğini incelemek, bakımcılara hata raporu hazırlamak. · **Ne zaman değil:** superpowers kullanılmıyorsa; genel kod hata ayıklaması için (systematic-debugging).
@@ -81,7 +81,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 21 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi; ne zaman kullanılmayacağı ve çıktı biçimi çok net. Orkestrasyon değil 'cevap kalitesi' skill'i; rapor/tavsiye üreten rollere opsiyonel.
 
-### dispatching-parallel-agents  ·  obra/superpowers @ b739a8a  ·  puan 96 (A)
+### dispatching-parallel-agents  ·  obra/superpowers @ 2ce8aa1  ·  puan 96 (A)
 
 - **Ne yapar:** Bağımsız 2+ problemi (farklı test dosyaları, alt sistemler) her birine izole bağlamlı ayrı bir agent vererek paralel çözme kalıbı: bağımsız alanları belirle, odaklı görev istemi yaz, paralel dağıt, sonuçları incele ve birleştir.
 - **Ne zaman:** Birbirinden bağımsız birden çok hata/araştırma işini paralel yürütmek. · **Ne zaman değil:** Görevler ortak durum paylaşıyor ya da aynı dosyalara yazıyorsa; tek kök nedenli hatalarda. Codex'te alt-agent yoksa paralel `codex exec` süreçleri ya da ayrı worktree'lerle uygulanır.
@@ -125,7 +125,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güvenlik ve izolasyon bölümleri iyi; Antigravity odaklı olması diğer harness'lerde gürültü yaratıyor.
 
-### subagent-driven-development  ·  obra/superpowers @ b739a8a  ·  puan 93 (A)
+### subagent-driven-development  ·  obra/superpowers @ 2ce8aa1  ·  puan 95 (A)
 
 - **Ne yapar:** Yazılı uygulama planını görev başına taze bir uygulayıcı alt-agent göndererek yürütür; her görevden sonra spec uyumu + kod kalitesi incelemesi, düzeltme döngüsü ve sonda tüm dal incelemesi yapar. Rol başına model seçimi, karar defteri (ledger), kesintisiz yürütme kuralları ve görev özeti/inceleme paketi betikleri içerir.
 - **Ne zaman:** Bağımsız görevlere bölünmüş bir planı tek oturumda yüksek kaliteyle uygulamak. · **Ne zaman değil:** Plan yoksa (önce writing-plans/planning-and-task-breakdown); görevler sıkı bağımlıysa; küçük tek dosyalık işlerde. Codex'te alt-agent desteği yoksa her görev için ayrı `codex exec` çağrısı ya da executing-plans ile sıralı yürütme kullanılır.
@@ -133,7 +133,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** alt-agent-orkestrasyon → birincil · **Roller:** agent-orkestra, planlayici
-- **Boyut:** 58 KB (SKILL.md 31.8 KB, yük buyuk)
+- **Boyut:** 56 KB (SKILL.md 19.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Orkestrasyon ailesinde en olgun süreç: görev başına inceleme, düzeltme döngüsü eskalasyonu, model katmanlama ve betik desteği. 32 KB SKILL.md ağır ama tek başına bir yürütme sistemi. coordinator-mode ve parallel-agents alternatif, dispatching-parallel-agents tamamlayıcı.
 
 ### using-agent-skills  ·  addyosmani/agent-skills @ aeac41d  ·  puan 87 (A)
@@ -147,7 +147,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 10 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil, meta grubunda). Zorlayıcı dil kullanmadan net yönlendirme yapıyor; çalışma davranışları bölümü aileden bağımsız da değerli.
 
-### using-superpowers  ·  obra/superpowers @ b739a8a  ·  puan 88 (A)
+### using-superpowers  ·  obra/superpowers @ 2ce8aa1  ·  puan 88 (A)
 
 - **Ne yapar:** superpowers ailesinin meta-skill'i: '%1 ihtimal bile varsa skill'i çağır' kuralı, süreç skillerinin önceliği, rasyonalizasyon kırmızı bayrakları ve Claude Code, Codex, Pi, Antigravity, Gemini, Hermes, Muse için araç eşleme dosyaları.
 - **Ne zaman:** superpowers ailesinin (brainstorming, writing-plans, systematic-debugging, subagent-driven-development…) birlikte kurulduğu projeler. · **Ne zaman değil:** Aile kurulu değilse; agent-skills ailesinin meta-skill'iyle birlikte. Çok agresif tetikleme dili küçük işlerde gereksiz süreç yükü yaratabilir. Codex'te references/codex-tools.md araç eşlemesini kullanır — ek uyarlama gerekmez.
