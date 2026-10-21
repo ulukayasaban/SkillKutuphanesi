@@ -15453,7 +15453,7 @@
         "ana_sayfa": "https://archify.si",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -15466,7 +15466,34 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Mimari, iş akışı, sequence, veri akışı, yaşam döngüsü, ERD, class, ağaç, zaman çizelgesi ve waterfall diyagramlarını doğrulanmış, temalı, animasyonlu tek dosyalık HTML olarak üretir; Mermaid girdisini de anlamına göre yeniden yazar. Kod tabanından kanıta dayalı diyagram çıkarır ve bir cevabı tek sayfalık 'explainer' sayfasına çevirebilir. `node bin/archify.mjs finalize` şema, teslim ve gerçek tarayıcı kontrollerinden geçirir.",
+      "kullanim_alani": "Sistem/mimari açıklama, kod tabanı haritası, API çağrı zinciri, veritabanı şeması, olay zaman çizelgesi; paylaşılabilir etkileşimli diyagram ya da tek sayfa açıklama.",
+      "kullanma": "Hızlı statik SVG/PNG (beautiful-mermaid) ya da Markdown içine gömülecek Mermaid kodu yeterliyse; dashboard için; Node.js olmayan ortamda (yalnızca elle SVG yedeği var).",
+      "teknoloji": [
+        "node",
+        "html",
+        "svg"
+      ],
+      "gerekli_paketler": [
+        "node (paket içinde, ek kurulum yok)",
+        "chromium/playwright (browser-check için)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "egitim-explainer",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; MIT. Klasör çok büyük (7.6 MB) ve SKILL.md 18 KB; ama referanslar ihtiyaç anında okunuyor. Diyagram grubunda en kapsamlı ve doğrulanabilir seçenek.",
+      "ortusme_grubu": "diyagram-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "beautiful-mermaid",
@@ -15530,7 +15557,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -15543,7 +15570,36 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevirir. Flowchart, sequence, state, class ve ER diyagramlarını, 13 hazır temayı (Tokyo Night, Nord, GitHub…) destekler.",
+      "kullanim_alani": "Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde.",
+      "kullanma": "Etkileşimli/keşfedilebilir diyagram ya da kod tabanından kanıtlı mimari gerekiyorsa (archify). PNG adımı 'agent-browser' skill'ini istiyor; kütüphanede yok — PNG için playwright/chromium ile ekran görüntüsü alınarak uyarlanmalı.",
+      "teknoloji": [
+        "typescript",
+        "bun",
+        "mermaid",
+        "svg"
+      ],
+      "gerekli_paketler": [
+        "bun veya tsx/deno",
+        "beautiful-mermaid (npm)",
+        "agent-browser CLI (PNG için; yoksa playwright)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "egitim-explainer",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa, net, sözdizimi tuzakları belgelenmiş. AGPL-3.0 (OpenMontage). PNG adımı kütüphanede olmayan agent-browser'a bağlı. Statik görsel için iyi; birincil archify.",
+      "ortusme_grubu": "diyagram-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "doc-coauthoring",
@@ -15600,7 +15656,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -15613,7 +15669,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kullanıcıyla birlikte doküman (spec, öneri, karar dokümanı, PRD, RFC) yazmak için üç aşamalı bir süreç yürütür: bağlam toplama, bölüm bölüm yapılandırma/iyileştirme ve bağlamsız bir alt-agent ile 'okuyucu testi'. Format değil içerik ve okunabilirlik odaklı.",
+      "kullanim_alani": "Önemli bir teknik/iş dokümanı yazılırken; okuyucunun soru işaretlerini önceden yakalamak için.",
+      "kullanma": "Kısa not, README ya da ADR şablonu yeterliyse (documentation-and-adrs); dosya formatı üretimi için (docx/pptx/pdf).",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Anthropic resmi; okuyucu testi (taze bağlamlı alt-agent) diğer doküman skillerinde yok. Codex'te alt-agent yoksa yeni oturumla aynı test elle yapılabilir. Doküman ve format skilleriyle tamamlayıcı.",
+      "ortusme_grubu": "teknik-dokumantasyon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "documentation-and-adrs",
@@ -15677,7 +15753,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -15690,7 +15766,31 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belgeleme, API dokümantasyonu (TSDoc, OpenAPI), README ve changelog. Gereksiz yorumdan kaçınmayı vurgular.",
+      "kullanim_alani": "Mimari karar, public API değişikliği, özellik teslimi; kod tabanına gelecek mühendis/agent için bağlam bırakmak.",
+      "kullanma": "Uzun iş/strateji dokümanı ortak yazımı (doc-coauthoring); atılacak prototip; Word/PDF teslimatı.",
+      "teknoloji": [
+        "markdown",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "mevcut-kod-iyilestirme",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "dokuman-yazari",
+        "kod-inceleyici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu.",
+      "ortusme_grubu": "teknik-dokumantasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "documentation-templates",
@@ -15752,7 +15852,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -15765,13 +15865,32 @@
           "bağlam yükü 10/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "README, endpoint bazlı API dokümanı, JSDoc/TSDoc yorumu, Keep-a-Changelog, kısa ADR ve llms.txt gibi AI dostu doküman için hazır şablonlar ve yapı ilkeleri verir.",
+      "kullanim_alani": "Hızlıca README/CHANGELOG/llms.txt iskeleti gerektiğinde; çok kısa bağlam bütçesiyle.",
+      "kullanma": "Karar kaydı ve 'neden' belgelemesi gerekiyorsa documentation-and-adrs daha iyi. Frontmatter'daki allowed-tools (Read, Glob, Grep) Claude Code'a özgü; Codex bunu yok sayar, skill yine çalışır.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.",
+      "ortusme_grubu": "teknik-dokumantasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "json-canvas",
       "ad": "json-canvas",
       "durum": "tercih",
-      "kategori": "c-dokuman-icerik/02-diyagram-dokumantasyon",
+      "kategori": "c-dokuman-icerik/04-not-alma-bilgi-yonetimi",
       "alan": "c-dokuman-icerik",
       "yol": "arsiv/c-dokuman-icerik/02-diyagram-dokumantasyon/json-canvas",
       "varyantlar": {},
@@ -15826,7 +15945,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 70,
         "not": "B",
@@ -15839,7 +15958,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian'ın kullandığı JSON Canvas 1.0 (.canvas) dosyalarını oluşturur ve düzenler: text/file/link/group düğümleri, kenarlar, renkler, yerleşim önerileri ve doğrulama kuralları. Zihin haritası, proje panosu ve akış şeması örnekleri içerir.",
+      "kullanim_alani": "Obsidian kasasında görsel tuval, zihin haritası ya da not bağlantı haritası üretmek.",
+      "kullanma": "Obsidian/JSON Canvas kullanılmıyorsa; yayınlanacak diyagram için archify veya beautiful-mermaid.",
+      "teknoloji": [
+        "json",
+        "obsidian"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Spesifikasyonu eksiksiz ve örnekli anlatıyor; dar kapsamlı. Asıl yeri Obsidian not yönetimi olduğu için 04-not-alma-bilgi-yonetimi kategorisine taşındı.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "competitive-ads-extractor",

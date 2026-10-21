@@ -2,7 +2,18 @@
 
 _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **1/15**
+
+### json-canvas  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
+
+- **Ne yapar:** Obsidian'ın kullandığı JSON Canvas 1.0 (.canvas) dosyalarını oluşturur ve düzenler: text/file/link/group düğümleri, kenarlar, renkler, yerleşim önerileri ve doğrulama kuralları. Zihin haritası, proje panosu ve akış şeması örnekleri içerir.
+- **Ne zaman:** Obsidian kasasında görsel tuval, zihin haritası ya da not bağlantı haritası üretmek. · **Ne zaman değil:** Obsidian/JSON Canvas kullanılmıyorsa; yayınlanacak diyagram için archify veya beautiful-mermaid.
+- **Teknoloji:** json, obsidian
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** obsidian-kasasi → tamamlayıcı
+- **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta)
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Spesifikasyonu eksiksiz ve örnekli anlatıyor; dar kapsamlı. Asıl yeri Obsidian not yönetimi olduğu için 04-not-alma-bilgi-yonetimi kategorisine taşındı.
 
 ### add-frontmatter  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 

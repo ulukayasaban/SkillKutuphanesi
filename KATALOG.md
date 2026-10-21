@@ -27,9 +27,9 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
   - [07-framework-ozel](#07-framework-ozel) — 7 skill · Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)
 - **Doküman ve İçerik** (43)
   - [01-ofis-dokumanlari](#01-ofis-dokumanlari) — 8 skill · Word, Excel, PowerPoint, PDF üretme/düzenleme
-  - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 6 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
+  - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 5 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
   - [03-yazi-iletisim-icerik](#03-yazi-iletisim-icerik) — 15 skill · Yazı, iletişim, pazarlama/içerik, kariyer
-  - [04-not-alma-bilgi-yonetimi](#04-not-alma-bilgi-yonetimi) — 14 skill · Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni
+  - [04-not-alma-bilgi-yonetimi](#04-not-alma-bilgi-yonetimi) — 15 skill · Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni
 - **AI ve Otomasyon** (42)
   - [01-claude-api-mcp](#01-claude-api-mcp) — 9 skill · Claude API, MCP sunucusu, model geçişi
   - [02-agent-orkestrasyon](#02-agent-orkestrasyon) — 14 skill · Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları
@@ -360,12 +360,11 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_ · not: `notlar/c-dokuman-i
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `archify` | ⭐ | Create validated architecture, workflow, sequence, data-flow, lifecycle/state, ERD, class, tree, timeline, and waterfall diagrams as explora… | canvas, css, html, node | ✅ | 89 A | M 7616KB | - | tt-a1i/archify |
-| `beautiful-mermaid` | ⭐ | Render Mermaid diagrams as SVG and PNG using the Beautiful Mermaid library. Use when the user asks to render a Mermaid diagram. | css, html, node, typescript | ✅ | 92 A | S 19KB | claude:ayni | calesthio/OpenMontage |
-| `doc-coauthoring` | ⭐ | Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical s… |  | ✅ | 86 A | M 15KB | - | anthropics/skills |
-| `documentation-and-adrs` | ⭐ | Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning behind a design choice, w… | git, node, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `documentation-templates` | ⭐ | Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation. | typescript | ✅ | 87 A | S 3KB | - | vudovn/ag-kit |
-| `json-canvas` | ⭐ | Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual… | canvas, node, obsidian | ✅ | 70 B | M 14KB | - | heyitsnoah/claudesidian |
+| `archify` | ⭐ birincil | Mimari, iş akışı, sequence, veri akışı, yaşam döngüsü, ERD, class, ağaç, zaman çizelgesi ve waterfall diyagramlarını doğrulanmış, temalı, an… | node, html, svg | ✅ | 89 A | M 7616KB | - | tt-a1i/archify |
+| `beautiful-mermaid` | ⭐ alternatif | Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevir… | typescript, bun, mermaid, svg | ✅ | 92 A | S 19KB | claude:ayni | calesthio/OpenMontage |
+| `doc-coauthoring` | ⭐ tamamlayıcı | Kullanıcıyla birlikte doküman (spec, öneri, karar dokümanı, PRD, RFC) yazmak için üç aşamalı bir süreç yürütür: bağlam toplama, bölüm bölüm … | markdown | ✅ | 86 A | M 15KB | - | anthropics/skills |
+| `documentation-and-adrs` | ⭐ birincil | Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belg… | markdown, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `documentation-templates` | ⭐ alternatif | README, endpoint bazlı API dokümanı, JSDoc/TSDoc yorumu, Keep-a-Changelog, kısa ADR ve llms.txt gibi AI dostu doküman için hazır şablonlar v… | markdown | ✅ | 87 A | S 3KB | - | vudovn/ag-kit |
 
 ### 03-yazi-iletisim-icerik
 
@@ -395,6 +394,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_ · not: `notl
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
+| `json-canvas` | ⭐ tamamlayıcı | Obsidian'ın kullandığı JSON Canvas 1.0 (.canvas) dosyalarını oluşturur ve düzenler: text/file/link/group düğümleri, kenarlar, renkler, yerle… | json, obsidian | ✅ | 70 B | M 14KB | - | heyitsnoah/claudesidian |
 | `add-frontmatter` | ⭐ | Add or update YAML frontmatter properties to enhance Obsidian note organization. Use when the user asks to add, fix, normalize, or improve f… | obsidian | ✅ | 72 B | S 4KB | - | heyitsnoah/claudesidian |
 | `daily-review` | ⭐ | Conduct an end-of-day review to capture progress and set up tomorrow. Use when the user asks for a daily review, end of day wrap-up, EOD not… |  | ✅ | 72 B | S 2KB | - | heyitsnoah/claudesidian |
 | `download-attachment` | ⭐ | Download files from URLs to the Obsidian attachments folder and organize them with descriptive names. Use when the user provides URLs to dow… | git, obsidian | ✅ | 72 B | S 3KB | - | heyitsnoah/claudesidian |
