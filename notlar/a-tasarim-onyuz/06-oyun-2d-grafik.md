@@ -99,7 +99,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Ne yapar:** Fast, lightweight 2D rendering engine for creating interactive graphics, particle effects, and canvas-based applications using WebGL/WebGPU. Use this skill when building 2D games, particle systems, interactive canvases, sprite animations, or UI overlays on 3D scenes. Triggers on tasks involving PixiJS, 2D rendering, sprite sheets, particle effects, filters, or high-performance canvas graphics. Alt
 - **Teknoloji:** canvas, gsap, r3f, react, three.js, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1102, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 253 KB (SKILL.md 20.6 KB, yük orta)
 - **İnceleme:** otomatik

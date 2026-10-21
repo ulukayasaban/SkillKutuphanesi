@@ -9,7 +9,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.
 - **Teknoloji:** api-anahtari, node, playwright, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** otomatik
@@ -29,7 +29,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works. Use when production issues are reported but you can't tell what happened from the available data.
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 13.6 KB, yük orta)
 - **İnceleme:** otomatik
@@ -39,7 +39,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load times need improvement, when N+1 query patterns need fixing, or when profiling reveals bottlenecks.
 - **Teknoloji:** css, git, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 26 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -69,7 +69,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authentication, data storage, or external integrations, or when checking a login flow is safe against the OWASP Top Ten. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services. Use when auditing dependencies for kn
 - **Teknoloji:** api-anahtari, git, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 30 KB (SKILL.md 17.1 KB, yük orta)
 - **İnceleme:** otomatik
@@ -89,7 +89,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.
 - **Teknoloji:** git, node, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** otomatik

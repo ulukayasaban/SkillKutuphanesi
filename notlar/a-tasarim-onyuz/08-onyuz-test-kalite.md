@@ -9,7 +9,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires the chrome-devtools MCP server to be configured.
 - **Teknoloji:** api-anahtari, css, html, node, react, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta)
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Set up component testing with Playwright using a story gallery — scaffold stories and a gallery dev page driven by the built-in mount fixture, no dedicated component-testing runtime. Use when asked to test React or Vue components in isolation with Playwright, or to migrate off @playwright/experimental-ct-react / -vue.
 - **Teknoloji:** css, html, next.js, node, playwright, react, typescript, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98217, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98228, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 38 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
@@ -29,7 +29,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Inspect Playwright trace files from the command line — list actions, view requests, console, errors, snapshots and screenshots.
 - **Teknoloji:** html, node, playwright _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98217, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98228, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -49,7 +49,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
 - **Teknoloji:** css, html, node, playwright, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★182720, son güncelleme 2026-10-09, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -59,7 +59,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
 - **Teknoloji:** css, html, node, playwright, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik

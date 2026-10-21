@@ -9,7 +9,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Review Archify issues, PRs, or code through value, cost, and impact to support evidence-based maintenance decisions. Use for issue triage, change reviews, and code quality assessments.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★86907, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Improve Archify diagram accuracy, visual quality and complete authoring speed with fewer repairs. Use for generation experiments or evaluating changes to layout, routing, diagnostics, authoring instructions and acceptance rules against actual diagrams and agent traces.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★86907, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 57 KB (SKILL.md 8.9 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -39,7 +39,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch. Use when asked to review a diff or a pull request, even when the diff is pasted inline.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 20 KB (SKILL.md 20.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -69,7 +69,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.
 - **Teknoloji:** git, python, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 13 KB (SKILL.md 13.2 KB, yük orta)
 - **İnceleme:** otomatik
@@ -99,7 +99,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -109,7 +109,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -129,7 +129,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Simplification audit or authorized codebase simplification whose stated objective is to remove accidental complexity. Use for evidence-backed deletion or consolidation of dead code, duplicate state, redundant APIs or layers, ownerless abstractions, obsolete compatibility or design records, and over-engineering in any language; also use for 代码简化 or 熵回收. Do not use for general code review, onboardin
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★86907, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 27 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik

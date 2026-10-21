@@ -9,7 +9,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne yapar:** Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne yapar:** Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when migrating a database schema in production, such as renaming or dropping a column without downtime (expand/contract). Use when deciding whether to maintain or sunset existing code.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -29,7 +29,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne yapar:** Use when implementation is complete, all tests pass, and you need to decide how to integrate the work
 - **Teknoloji:** git, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -39,7 +39,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne yapar:** Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitting uncommitted work in a messy working tree into clean atomic commits, opening or reviewing a pull request (PR), pushing to a remote, or when you need to organize work across multiple parallel streams. Use when cutting a release, choosing a semantic version bump, tagging,
 - **Teknoloji:** api-anahtari, git, next.js, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 13.8 KB, yük orta)
 - **İnceleme:** otomatik
@@ -79,7 +79,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne yapar:** Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
 - **Teknoloji:** git, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** otomatik

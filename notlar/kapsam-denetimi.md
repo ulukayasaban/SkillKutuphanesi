@@ -2,14 +2,14 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-10-21 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 1366 · Arşivdeki skill kaydı: 1213 · Bileşen (komut/agent): 67
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 1406 · Arşivdeki skill kaydı: 1240 · Bileşen (komut/agent): 67
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 1220 | arşivde (ana sürüm) |
-| ayna-ayni | 117 | birebir kopya (tek kopya yeter) |
+| secildi | 1247 | arşivde (ana sürüm) |
+| ayna-ayni | 123 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 20 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
-| haric | 5 | bilinçli hariç (test/örnek/şablon) |
+| haric | 12 | bilinçli hariç (test/örnek/şablon) |
 | arac-varyanti | 4 | arşivde (Claude/Codex'e özel sürüm) |
 
 ## Repo bazında
@@ -28,6 +28,7 @@
 | darkroomengineering/satus | 1 | secildi 1 |
 | freshtechbro/claudedesignskills | 90 | ayna-ayni 66, secildi 23, ayna-baska-arac 1 |
 | greensock/gsap-skills | 8 | secildi 8 |
+| heygen-com/hyperframes | 40 | secildi 27, haric 7, ayna-ayni 6 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
 | microsoft/playwright | 9 | secildi 9 |
 | motiondivision/motion | 2 | secildi 2 |
@@ -50,3 +51,4 @@
 
 - **anthropics/skills**: `template/SKILL.md` (^template/)
 - **pbakaus/impeccable**: `tests/oracle/workspaces/ctx-pin/.agents/skills/impeccable/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.claude/skills/audit/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.claude/skills/impeccable/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.cursor/skills/impeccable/SKILL.md` ((^|/)tests?/)
+- **heygen-com/hyperframes**: `registry/blocks/canopy-part-title/SKILL.md` (^registry/blocks/), `registry/blocks/code-slice-hero/SKILL.md` (^registry/blocks/), `registry/blocks/cuboid-carousel/SKILL.md` (^registry/blocks/), `registry/blocks/frost-sequence-camera-orbit/SKILL.md` (^registry/blocks/), `registry/blocks/glass-shard-title/SKILL.md` (^registry/blocks/), `registry/blocks/orbit-card/SKILL.md` (^registry/blocks/), `registry/blocks/wireframe-portal-title/SKILL.md` (^registry/blocks/)

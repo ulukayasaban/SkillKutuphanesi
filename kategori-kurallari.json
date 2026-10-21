@@ -2,6 +2,14 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur.",
   "ad_kurallari": [
     {
+      "desen": "^(general-video|faceless-explainer|product-launch-video|pr-to-video|slideshow|changelog-video|talking-head-recut|embedded-captions|captions-overlay|oversized-cursor|figma)$",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
+      "desen": "^(cut-the-curve|seam-craft|motion-doctrine)$",
+      "kategori": "g-video-ses-medya/04-motion-graphics-karakter"
+    },
+    {
       "desen": "^templates$",
       "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji"
     },

@@ -146,6 +146,22 @@
       "kimlik": "composio-entegrasyon"
     },
     {
+      "repo": "heygen-com/hyperframes",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^skills/",
+        "^\\.agents/skills/",
+        "^\\.claude/skills/",
+        "^registry/blocks/"
+      ],
+      "haric": [
+        "^registry/blocks/"
+      ],
+      "bagimlilik": "HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.",
+      "not": "Resmî HyperFrames reposu (yıldızlı değil; kullanıcı onayıyla 2026-10-21'de eklendi). registry/blocks/* SKILL.md'leri 'hyperframes add' ile kurulan kompozisyon şablonlarıdır, ayrı skill değildir."
+    },
+    {
       "repo": "calesthio/OpenMontage",
       "tip": "T1",
       "oncelik": 6,

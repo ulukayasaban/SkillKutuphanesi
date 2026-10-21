@@ -39,7 +39,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Optimizes agent context setup. Use when starting a new session, when agent output quality degrades, when switching between tasks, or when you need to configure rules files and context for a project.
 - **Teknoloji:** api-anahtari, css, git, node, react, tailwind, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 15 KB (SKILL.md 15.1 KB, yük orta)
 - **İnceleme:** otomatik
@@ -59,7 +59,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Use when a superpowers session went wrong and your human partner wants to know why — repeated work, ignored plans, stumbles, poor results, a skill that didn't fire, "it took too long", "why is it so expensive", "what is it doing" — or wants to build a bug report for the superpowers maintainers, for the current session or a past one identified by id or path, on any harness.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 41 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -69,7 +69,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, analysis or interpretation of data, factual claims they may rely on, or a multi-step argument — invoke this skill BEFORE finalizing your reply and then, if it applies, append 2-3 short follow-up questions
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★182720, son güncelleme 2026-10-09, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 21 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -79,7 +79,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -119,7 +119,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Use when executing implementation plans with independent tasks in the current session
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 58 KB (SKILL.md 31.8 KB, yük buyuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -129,7 +129,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to the piece of work at hand. This is the meta-skill that governs how all other skills are discovered and invoked.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 10 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
@@ -139,7 +139,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 20 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik

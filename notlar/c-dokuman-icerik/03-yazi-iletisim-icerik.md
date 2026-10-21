@@ -9,7 +9,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 14 KB (SKILL.md 13.9 KB, yük orta)
 - **İnceleme:** otomatik
@@ -39,7 +39,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a personalized growth report to your Slack DMs.
 - **Teknoloji:** api-anahtari, css, node, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** otomatik
@@ -49,7 +49,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Generates creative domain name ideas for your project and checks availability across multiple TLDs (.com, .io, .dev, .ai, etc.). Saves hours of brainstorming and manual checking.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -79,7 +79,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182672, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★182720, son güncelleme 2026-10-09, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -89,7 +89,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -99,7 +99,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business development, and marketing professionals.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -109,7 +109,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when you avoid conflict, use filler words, dominate conversations, or miss opportunities to listen. Perfect for professionals seeking to improve their communication and leadership skills.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** otomatik
@@ -119,7 +119,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Picks random winners from lists, spreadsheets, or Google Sheets for giveaways, raffles, and contests. Ensures fair, unbiased selection with transparency.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -139,7 +139,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Analyzes job descriptions and generates tailored resumes that highlight relevant experience, skills, and achievements to maximize interview chances
 - **Teknoloji:** python, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** otomatik
@@ -149,7 +149,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights. Rewrite and edit user tweets to improve engagement and visibility based on how the recommendation system ranks content.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik

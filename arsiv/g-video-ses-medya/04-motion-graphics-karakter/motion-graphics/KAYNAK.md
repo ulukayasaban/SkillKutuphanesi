@@ -2,12 +2,13 @@
 
 > Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
 
-- **Kaynak repo:** https://github.com/calesthio/OpenMontage
-- **Repo içindeki yol:** `.agents/skills/motion-graphics`
-- **Commit:** `c8066452325cb57c8fc1ba8c2a71b6e8842e6b65`
-- **Lisans:** AGPL-3.0
-- **Geliştirici:** calesthio (kisi)
-- **Değerlendirme:** 86/100 (A)
+- **Kaynak repo:** https://github.com/heygen-com/hyperframes
+- **Repo içindeki yol:** `skills/motion-graphics`
+- **Commit:** `25126bca6ced6cb8c839213430cde51e48261b7c`
+- **Lisans:** Apache-2.0
+- **Geliştirici:** heygen-com (kurum)
+- **Değerlendirme:** 85/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
-- **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
+- **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
+- **SKILL.md'de olup bulunamayan dosyalar:** `../hyperframes-creative/references/data-in-motion.md`, `../hyperframes-creative/references/motion-principles.md`, `../hyperframes/references/plugin-installation.md`

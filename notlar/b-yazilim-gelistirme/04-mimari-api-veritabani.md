@@ -9,7 +9,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne yapar:** Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 15 KB (SKILL.md 14.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -69,7 +69,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne yapar:** Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG accessibility requirements, managing state, or when the output needs to look and feel production-quality rather than AI-generated.
 - **Teknoloji:** api-anahtari, css, react, tailwind, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
@@ -129,7 +129,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne yapar:** React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.
 - **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Globalde:** claude:ayni
 - **Boyut:** 49 KB (SKILL.md 3.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** otomatik
@@ -139,7 +139,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne yapar:** React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.
 - **Teknoloji:** css, next.js, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70531, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Globalde:** claude:ayni
 - **Boyut:** 207 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** otomatik

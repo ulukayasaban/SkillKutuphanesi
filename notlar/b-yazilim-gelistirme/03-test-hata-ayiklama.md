@@ -9,7 +9,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne yapar:** Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need to figure out what broke and why — a systematic approach to finding and fixing the root cause rather than guessing.
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne yapar:** Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 40 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -59,7 +59,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne yapar:** Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality. Use when asked to add tests to a function, fix a bug in it or change its behavior, even when the code is pasted inline and the request
 - **Teknoloji:** api-anahtari, css, html, node, playwright, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109198, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 16 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -69,7 +69,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne yapar:** Use when implementing any feature or bugfix, before writing implementation code
 - **Teknoloji:** node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** alternatif · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 17 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
@@ -79,7 +79,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne yapar:** Improve test value and feedback cost when auditing slow, flaky, redundant or brittle tests; choosing tests during implementation; or reviewing test changes before a commit or PR. Keep ordinary implementation and pre-commit use scoped to the affected behavior, not a repository-wide audit.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★86907, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 19 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
@@ -99,7 +99,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne yapar:** Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★302965, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik

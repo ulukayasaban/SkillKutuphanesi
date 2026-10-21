@@ -39,7 +39,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Ne yapar:** Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** otomatik
@@ -79,7 +79,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Ne yapar:** Automatically organizes invoices and receipts for tax preparation by reading messy files, extracting key information, renaming them consistently, and sorting them into logical folders. Turns hours of manual bookkeeping into minutes of automated organization.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77588, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★77605, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** otomatik
