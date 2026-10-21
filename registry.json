@@ -7539,10 +7539,34 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Önce bir 'algoritmik felsefe' (manifesto .md) yazdırıp ardından bunu seed'li rastgelelik ve parametre paneliyle p5.js üretken sanatına (akış alanları, parçacık sistemleri) çevirir. Çıktı .md + etkileşimli HTML görüntüleyici + .js algoritmadır; şablon olarak viewer.html ve generator_template.js verilir.",
+      "kullanim_alani": "Kodla üretken sanat, akış alanı/parçacık görselleri, seed ile tekrarlanabilir etkileşimli sanat parçası istendiğinde.",
+      "kullanma": "Ürün arayüzü, veri görselleştirme (d3-viz) veya 3D sahne (threejs-*) için değil; statik poster için canvas-design daha uygun. Mevcut bir sanatçının işini taklit etmek için kullanılmaz.",
+      "teknoloji": [
+        "p5.js",
+        "canvas",
+        "html",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "p5.js (CDN)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "marka-sunum"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Niş ama iyi kurgulanmış; felsefe -> kod iki adımı ve seed'li parametre paneli tutarlı çıktı verir. Dikkat: viewer.html p5.js (cdnjs) ve Google Fonts'u CDN'den çeker, çevrimdışı çalışmaz; lisans alanı 'LICENSE.txt' (Anthropic) ve açık kaynak değil; sanat odaklı olduğundan çoğu ürün projesinde gerekmez.",
+      "ortusme_grubu": "uretken-sanat",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
-        "not": "A",
+        "puan": 76,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
           "topluluk 20/20 (★182720)",
@@ -7550,7 +7574,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -7617,10 +7642,40 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "React 18 + TypeScript + Vite + Tailwind + shadcn/ui ile karmaşık claude.ai HTML artifact'ı kurar (init-artifact.sh) ve Parcel + html-inline ile tek bir bundle.html'e paketler. web-artifacts-builder'ın eski adıyla yayımlanmış kopyasıdır; SKILL.md yalnızca ad/başlık satırlarında farklıdır.",
+      "kullanim_alani": "Durum yönetimi, yönlendirme veya shadcn bileşeni gerektiren tek dosyalık paylaşılabilir HTML çıktısı.",
+      "kullanma": "web-artifacts-builder ile birebir aynı içerik; ikisini birden kurmayın. Basit tek dosya HTML/JSX için gereksiz ağır.",
+      "teknoloji": [
+        "react",
+        "typescript",
+        "vite",
+        "tailwind",
+        "shadcn-ui",
+        "parcel"
+      ],
+      "gerekli_paketler": [
+        "node>=18",
+        "pnpm",
+        "parcel",
+        "html-inline"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas",
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. web-artifacts-builder (Anthropic) ile aynı betikler ve metin, yalnızca ad farkı var; yinelenen kopya. Dikkat: init-artifact.sh 'npm install -g pnpm' ile global kurulum yapar ve ~40 Radix/shadcn paketi indirir; bundle betiği paket kurar.",
+      "ortusme_grubu": "artifact-uygulama-paketleme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (33 gün önce)",
           "topluluk 20/20 (★77605)",
@@ -7628,7 +7683,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -7689,9 +7745,36 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Bir 'tasarım felsefesi' (hareket adı + 4-6 paragraf manifesto) yazdırıp ardından bunu %90 görsel / %10 metin olan özgün PNG veya PDF posterine, sanat parçasına dönüştürür. Yaklaşık 5 MB'lık OFL lisanslı font klasörü (canvas-fonts) ile gelir ve iki geçişli iyileştirme ister.",
+      "kullanim_alani": "Poster, kapak görseli, statik sanat/tasarım parçası, marka kampanya görseli üretirken (PNG/PDF).",
+      "kullanma": "Etkileşimli/web arayüzü (frontend-design, design-taste-frontend); çok sayfalı sunum (slides, pptx); veri grafiği (d3-viz).",
+      "teknoloji": [
+        "canvas",
+        "python",
+        "png",
+        "pdf"
+      ],
+      "gerekli_paketler": [
+        "pillow / reportlab (agent ortamına göre)"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "sosyal-medya-icerik",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "ui-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Marka-sunum profilinin ek skilli; özgünlük ve 'zanaat' vurgusu ile şablon görünümünü engeller, fontlar yerel ve OFL. Dikkat: skill klasörü ~5,4 MB (ağırlıkla ttf); SKILL.md 11,7 KB. Yalnızca SKILL.md bağlama girer. Betik yok, ağ/anahtar yok. LICENSE.txt Anthropic'e ait, repo lisans alanı boş.",
+      "ortusme_grubu": "statik-gorsel-poster",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
@@ -7700,7 +7783,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -7761,10 +7845,31 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Anthropic canvas-design'ın ComposioHQ kopyası; SKILL.md ve font klasörü birebir aynıdır, yalnızca LICENSE.txt farklı (şablon Apache metni, telif sahibi boş).",
+      "kullanim_alani": "Yalnızca upstream sürümü erişilemezse; aynı işi yapar.",
+      "kullanma": "Anthropic sürümü varken kurmayın (yinelenen, lisans metni eksik).",
+      "teknoloji": [
+        "canvas",
+        "png",
+        "pdf"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "marka-sunum",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. diff -rq: tek fark LICENSE.txt ve KAYNAK.md; içerik birebir upstream ile aynı. Dikkat: ~5,4 MB font tekrar eder; lisans başlığı '[yyyy] [name of copyright owner]' doldurulmamış.",
+      "ortusme_grubu": "statik-gorsel-poster",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
-        "not": "A",
+        "puan": 68,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (33 gün önce)",
           "topluluk 20/20 (★77605)",
@@ -7772,7 +7877,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -7841,9 +7947,37 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "d3.js ile özel, etkileşimli veri görselleştirmeleri (ağ/grafik, hiyerarşi, coğrafi harita, geçişli grafikler) kurmayı anlatır; React ve vanilla JS şablonları (chart-template.jsx, interactive-template.jsx), renk şeması ve ölçek başvuruları ile örnek veri içerir. Hazır grafik kütüphanesinin yetmediği özgün işler içindir.",
+      "kullanim_alani": "Standart grafik kütüphanesinde olmayan özel SVG görselleştirme, force-directed ağ, zoom/brush etkileşimi, haritalar.",
+      "kullanma": "Hızlı standart grafik/dashboard (dataviz skilli veya grafik kütüphanesi); 3D görselleştirme (threejs-*).",
+      "teknoloji": [
+        "d3",
+        "svg",
+        "react",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "d3"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "rapor-dokuman",
+        "egitim-explainer",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Konu odaklı, başvuru dosyaları ve şablonlar kaliteli; kategoride tek veri görselleştirme skilli. Dikkat: registry'de bagimlilik uyarısı var ama d3-viz'in kendi içeriği OpenMontage komutu çağırmıyor, bağımsız çalışır. Repo lisansı AGPL-3.0 (skill dosyasında ayrı lisans yok); aynı skill ~/.claude/skills'te zaten global kurulu (globalde: ayni). d3 CDN'den yüklenebilir.",
+      "ortusme_grubu": "veri-gorsellestirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 90,
+        "puan": 86,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -7852,7 +7986,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -7911,10 +8046,29 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ekran görüntüsü ve görsellerin çözünürlüğünü, keskinliğini ve sıkıştırma artefaktlarını iyileştirmeyi anlatan, betiği olmayan yalnızca yönerge niteliğinde kısa bir skill. Örnek çıktı biçimi verir ama gerçek bir araç/kütüphane belirtmez.",
+      "kullanim_alani": "Dokümantasyon veya sunum öncesi ekran görüntüsü iyileştirme isteğinde başvuru metni olarak.",
+      "kullanma": "Gerçek yapay zekâ upscale için: ai-medya-uretici akışındaki upscale araçları, ffmpeg veya ImageMagick doğrudan kullanılmalı.",
+      "teknoloji": [
+        "imagemagick"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Hangi aracı çalıştıracağını söylemiyor; örnek çıktı uydurma gibi (\"Enhancements applied\") ve agent'ı yanlış beklentiye sokabilir. Dikkat: 2,5 KB, ek dosya yok, kurulum yok; değer katmıyor. Gerçek işi görsel upscale/arka plan araçları yapar.",
+      "ortusme_grubu": "gorsel-iyilestirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (33 gün önce)",
           "topluluk 20/20 (★77605)",
@@ -7922,7 +8076,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -7983,10 +8138,37 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Slack için animasyonlu GIF üretimi: PIL ile kare çizimi, GIFBuilder, easing fonksiyonları, kare birleştirici ve Slack boyut/FPS/renk sınırlarını denetleyen doğrulayıcı. Emoji (128x128) ve mesaj (480x480) GIF'leri için kısa, sade bir araç seti.",
+      "kullanim_alani": "Slack emoji veya mesaj GIF'i, kısa döngülü basit animasyon isteklerinde.",
+      "kullanma": "Video/hareketli grafik (hyperframes, motion-graphics); karmaşık sahneler ve gerçek görsel efektler.",
+      "teknoloji": [
+        "python",
+        "pillow",
+        "imageio",
+        "numpy",
+        "gif"
+      ],
+      "gerekli_paketler": [
+        "pillow",
+        "imageio",
+        "imageio-ffmpeg",
+        "numpy"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Küçük, bağımsız, Python modülleri düzenli; Slack sınırlarını doğrulaması işe yarar. Dikkat: 'pip install pillow imageio numpy' ister (--break-system-packages yok; venv önerilir). Composio sürümü eski ve farklı bir kod tabanı (ayrı alternatif).",
+      "ortusme_grubu": "slack-gif",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
           "topluluk 20/20 (★182720)",
@@ -7994,7 +8176,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8055,10 +8238,36 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Aynı skill'in ComposioHQ'daki daha eski/geniş sürümü: SKILL.md 16,7 KB, ek color_palettes.py, typography.py, visual_effects.py ve templates/ klasörü içerir; Slack sınırları (emoji 64 KB, mesaj ~2 MB) ayrıntılıdır.",
+      "kullanim_alani": "Anthropic sürümündeki yardımcılar yetmezse; hazır şablon, tipografi ve görsel efekt modülleri gerektiğinde.",
+      "kullanma": "Varsayılan olarak Anthropic sürümünü kullanın; ikisini birden kurmayın (aynı ad/iş).",
+      "teknoloji": [
+        "python",
+        "pillow",
+        "imageio",
+        "numpy",
+        "gif"
+      ],
+      "gerekli_paketler": [
+        "pillow",
+        "imageio",
+        "numpy"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Daha zengin ama ağır (16,7 KB SKILL.md, 208 KB) ve güncel upstream ile ayrışmış; core/*.py dosyaları farklı. Dikkat: pip install pillow imageio numpy; aynı ad nedeniyle iki sürüm birlikte kurulursa çakışır.",
+      "ortusme_grubu": "slack-gif",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
-        "not": "A",
+        "puan": 76,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (33 gün önce)",
           "topluluk 20/20 (★77605)",
@@ -8066,7 +8275,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8128,9 +8338,34 @@
         "ana_sayfa": "https://www.uupm.cc/",
         "katkici": 100
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Chart.js, tasarım token'ları, yerleşim kalıpları ve metin yazım formülleri ile stratejik HTML sunum (pitch deck, pazarlama slaytı) üretir; `slides create` alt komutu references/create.md'yi yükler. Yerleşim, strateji ve copywriting bilgisini ayrı referans dosyalarında tutar.",
+      "kullanim_alani": "HTML tabanlı pitch deck, veri destekli pazarlama sunumu; marka-sunum profili için.",
+      "kullanma": "PowerPoint/.pptx çıktısı gerekiyorsa pptx; video slayt gösterisi için slideshow (HyperFrames); sıfırdan görsel poster için canvas-design.",
+      "teknoloji": [
+        "html",
+        "chart.js",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "chart.js (CDN)"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. İçerik stratejisi ve yerleşim bilgisi iyi, MIT. Dikkat: referanslar `python ../design-system/scripts/search-slides.py` (kardeş design-system skill'ine ve onun veri tabanına) başvurur; design-system kurulu değilse bu komutlar kırık kalır, registry bunu bağımlılık olarak işaretlemiyor. Chart.js jsdelivr CDN'den yüklenir. SKILL.md yalnızca 1,7 KB. slideshow (video) ve design (claudekit) ile karıştırılmamalı.",
+      "ortusme_grubu": "html-sunum",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 95,
+        "puan": 81,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -8139,7 +8374,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -8206,9 +8442,41 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "React + TypeScript + Vite + Tailwind + shadcn/ui ile çok bileşenli claude.ai HTML artifact'ı kurar ve Parcel/html-inline ile tek dosyalık bundle.html üretir; 'AI slop'tan kaçınma (mor gradient, Inter, aşırı yuvarlak köşe) uyarısı içerir. 40+ shadcn bileşeni hazır tarball olarak gelir.",
+      "kullanim_alani": "Paylaşılabilir tek HTML dosyası olarak teslim edilecek React tabanlı araç/dashboard/prototip.",
+      "kullanma": "Üretim uygulaması (Next.js proje kurulumu); basit tek sayfa HTML. Artifact aracının doğrudan HTML yayınladığı durumlarda gerekmez.",
+      "teknoloji": [
+        "react",
+        "typescript",
+        "vite",
+        "tailwind",
+        "shadcn-ui",
+        "parcel"
+      ],
+      "gerekli_paketler": [
+        "node>=18",
+        "pnpm",
+        "parcel",
+        "html-inline"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "landing-page",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Tek dosyalık dağıtım için kanıtlanmış akış; frontend-muhendis rolünde zaten opsiyonel. Dikkat: init-artifact.sh 'npm install -g pnpm' ile global kurulum yapar ve çok sayıda paket indirir (ağ + disk); betikler skill klasörüne göre göreli çağrılır. Eski adı artifacts-builder aynı içeriktir.",
+      "ortusme_grubu": "artifact-uygulama-paketleme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
@@ -8217,7 +8485,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -89282,6 +89551,7 @@
       "kalite_notu": "Karar: ALTERNATİF. HyperFrames HEAD'de kaldırıldı; site turları ve web sitesinden tanıtım artık product-launch-video'da (heygen-com/hyperframes). Eski projeler için arşivde tutuluyor.",
       "ortusme_grubu": "hyperframes-is-akislari",
       "ortusme_rolu": "alternatif",
+      "notlar": "Kırık bağlantılar (SKILL.md, references/step-3-storyboard.md, references/beat-builder-guide.md): ../hyperframes/references/techniques.md ve ../hyperframes/references/html-in-canvas-patterns.md. Bu skill heygen-com/hyperframes v0.7.17'den alınmış eski bir kopya; dosyalar upstream'de hyperframes-animation skilline taşındı: hyperframes-animation/techniques.md ve hyperframes-animation/adapters/html-in-canvas-patterns.md. Skill upstream'de kaldırıldı; site turu ve web sitesinden tanıtım için product-launch-video kullan. Yine de kurulursa hyperframes-animation'ı da ekle ve bu iki dosyayı oradan oku.",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -89297,8 +89567,7 @@
           "yapı 3/5",
           "elle kalite 3/5 (%40 ağırlık)"
         ]
-      },
-      "notlar": "Kırık bağlantılar (SKILL.md, references/step-3-storyboard.md, references/beat-builder-guide.md): ../hyperframes/references/techniques.md ve ../hyperframes/references/html-in-canvas-patterns.md. Bu skill heygen-com/hyperframes v0.7.17'den alınmış eski bir kopya; dosyalar upstream'de hyperframes-animation skilline taşındı: hyperframes-animation/techniques.md ve hyperframes-animation/adapters/html-in-canvas-patterns.md. Skill upstream'de kaldırıldı; site turu ve web sitesinden tanıtım için product-launch-video kullan. Yine de kurulursa hyperframes-animation'ı da ekle ve bu iki dosyayı oradan oku."
+      }
     },
     {
       "id": "acestep",

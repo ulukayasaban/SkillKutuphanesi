@@ -183,16 +183,16 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_ · not: `notlar/a-tasarim
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `algorithmic-art` | ⭐ | Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art … | canvas, html, next.js | ✅ | 86 A | M 58KB | - | anthropics/skills |
-| `artifacts-builder` | ⭐ | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS,… | css, html, node, playwright, react | ✅ | 88 A | S 45KB | - | ComposioHQ/awesome-claude-skills |
-| `canvas-design` | ⭐ | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a pos… | canvas | ✅ | 86 A | M 5424KB | - | anthropics/skills |
-| `canvas-design@composiohq` | alt | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a pos… | canvas | ✅ | 86 A | M 5424KB | - | ComposioHQ/awesome-claude-skills |
-| `d3-viz` | ⭐ | Creating interactive data visualisations using d3.js. This skill should be used when creating custom charts, graphs, network diagrams, geogr… | canvas, html, node, react, svelte | ✅ | 90 A | M 80KB | claude:ayni | calesthio/OpenMontage |
-| `image-enhancer` | ⭐ | Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for pr… |  | ✅ | 88 A | S 2KB | - | ComposioHQ/awesome-claude-skills |
-| `slack-gif-creator` | ⭐ | Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use … | python | ✅ | 88 A | S 43KB | - | anthropics/skills |
-| `slack-gif-creator@composiohq` | alt | Toolkit for creating animated GIFs optimized for Slack, with validators for size constraints and composable animation primitives. This skill… | python | ✅ | 86 A | M 208KB | - | ComposioHQ/awesome-claude-skills |
-| `slides` | ⭐ | Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies. | api-anahtari, html | ✅ | 95 A | S 19KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `web-artifacts-builder` | ⭐ | Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS,… | css, html, node, playwright, react | ✅ | 88 A | S 45KB | - | anthropics/skills |
+| `algorithmic-art` | ⭐ birincil | Önce bir 'algoritmik felsefe' (manifesto .md) yazdırıp ardından bunu seed'li rastgelelik ve parametre paneliyle p5.js üretken sanatına (akış… | p5.js, canvas, html, javascript | ✅ | 76 B | M 58KB | - | anthropics/skills |
+| `artifacts-builder` | ⭐ alternatif | React 18 + TypeScript + Vite + Tailwind + shadcn/ui ile karmaşık claude.ai HTML artifact'ı kurar (init-artifact.sh) ve Parcel + html-inline … | react, typescript, vite, tailwind, shadcn-ui, parcel | ✅ | 69 B | S 45KB | - | ComposioHQ/awesome-claude-skills |
+| `canvas-design` | ⭐ birincil | Bir 'tasarım felsefesi' (hareket adı + 4-6 paragraf manifesto) yazdırıp ardından bunu %90 görsel / %10 metin olan özgün PNG veya PDF posteri… | canvas, python, png, pdf | ✅ | 84 A | M 5424KB | - | anthropics/skills |
+| `canvas-design@composiohq` | alt alternatif | Anthropic canvas-design'ın ComposioHQ kopyası; SKILL.md ve font klasörü birebir aynıdır, yalnızca LICENSE.txt farklı (şablon Apache metni, t… | canvas, png, pdf | ✅ | 68 B | M 5424KB | - | ComposioHQ/awesome-claude-skills |
+| `d3-viz` | ⭐ birincil | d3.js ile özel, etkileşimli veri görselleştirmeleri (ağ/grafik, hiyerarşi, coğrafi harita, geçişli grafikler) kurmayı anlatır; React ve vani… | d3, svg, react, javascript | ✅ | 86 A | M 80KB | claude:ayni | calesthio/OpenMontage |
+| `image-enhancer` | ⭐ birincil | Ekran görüntüsü ve görsellerin çözünürlüğünü, keskinliğini ve sıkıştırma artefaktlarını iyileştirmeyi anlatan, betiği olmayan yalnızca yöner… | imagemagick | ✅ | 69 B | S 2KB | - | ComposioHQ/awesome-claude-skills |
+| `slack-gif-creator` | ⭐ birincil | Slack için animasyonlu GIF üretimi: PIL ile kare çizimi, GIFBuilder, easing fonksiyonları, kare birleştirici ve Slack boyut/FPS/renk sınırla… | python, pillow, imageio, numpy, gif | ✅ | 77 B | S 43KB | - | anthropics/skills |
+| `slack-gif-creator@composiohq` | alt alternatif | Aynı skill'in ComposioHQ'daki daha eski/geniş sürümü: SKILL.md 16,7 KB, ek color_palettes.py, typography.py, visual_effects.py ve templates/… | python, pillow, imageio, numpy, gif | ✅ | 76 B | M 208KB | - | ComposioHQ/awesome-claude-skills |
+| `slides` | ⭐ birincil | Chart.js, tasarım token'ları, yerleşim kalıpları ve metin yazım formülleri ile stratejik HTML sunum (pitch deck, pazarlama slaytı) üretir; `… | html, chart.js, css | ✅ | 81 A | S 19KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
+| `web-artifacts-builder` | ⭐ birincil | React + TypeScript + Vite + Tailwind + shadcn/ui ile çok bileşenli claude.ai HTML artifact'ı kurar ve Parcel/html-inline ile tek dosyalık bu… | react, typescript, vite, tailwind, shadcn-ui, parcel | ✅ | 85 A | S 45KB | - | anthropics/skills |
 
 ### 08-onyuz-test-kalite
 

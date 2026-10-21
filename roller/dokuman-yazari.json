@@ -11,6 +11,7 @@
   "opsiyonel": [
     "xlsx",
     "doc-coauthoring",
-    "documentation-and-adrs"
+    "documentation-and-adrs",
+    "slides"
   ]
 }

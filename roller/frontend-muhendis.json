@@ -9,6 +9,7 @@
   "opsiyonel": [
     "next-dev-loop",
     "tailwind-patterns",
-    "web-artifacts-builder"
+    "web-artifacts-builder",
+    "d3-viz"
   ]
 }
