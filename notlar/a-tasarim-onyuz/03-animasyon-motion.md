@@ -8,7 +8,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** Magic UI (150+) ve React Bits (90+) hazır animasyonlu React bileşenlerini kullanma: shadcn CLI ile ekleme, özelleştirme, performans ve yaygın hatalar. Elle animasyon yazmadan hero/arka plan efektleri için.
 - **Ne zaman:** Landing page'de hazır animasyonlu bileşen (shimmer, beam, particles) eklerken. · **Ne zaman değil:** Özgün marka hareketi gerektiğinde; kurumsal sade sitelerde.
-- **Teknoloji:** react, tailwind, shadcn, motion · **Paketler:** motion, clsx, tailwind-merge, ogl
+- **Teknoloji:** react 19, tailwind 4, motion v14, shadcn-ui, ogl · **Paketler:** motion, clsx, tailwind-merge, ogl
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** hazir-animasyonlu-bilesen → birincil · **Roller:** motion-gelistirici, frontend-muhendis
@@ -19,18 +19,19 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** Anime.js ile DOM, CSS, SVG ve JS nesnesi animasyonu: timeline, stagger, SVG path/morph. GSAP'a hafif alternatif olarak anlatılır; üreticiler, referans ve betikler içerir.
 - **Ne zaman:** GSAP lisansı/boyutu istenmeyip hafif bir motor tercih edildiğinde. · **Ne zaman değil:** Yeni projelerde varsayılan olarak; GSAP varken gerek yok.
-- **Teknoloji:** animejs · **Paketler:** animejs
+- **Teknoloji:** animejs 4, javascript · **Paketler:** animejs
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici
 - **Boyut:** 62 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kapsamlı ama anime v3 API'si ('anime({targets})', 'import anime from animejs') kullanıyor; güncel v4 API'si farklı. 335 gün önce güncellenmiş. Dikkat: animejs@3 sabitleyin.
+- **Not:** Örnekler Anime.js v3 API'si; v4 için animate()/createTimeline() kullan.
 
 ### framer-motion  ·  calesthio/OpenMontage @ c806645  ·  puan 71 (B)
 
 - **Ne yapar:** Disney'in 12 animasyon prensibini (squash/stretch, anticipation, staging...) Framer Motion kod parçalarıyla örnekler. Kurulum, reduced-motion veya performans içermez; prensip-örnek listesidir.
 - **Ne zaman:** Animasyona 'Disney ilkeleri' çerçevesi verilmek istendiğinde fikir ve parça kaynağı. · **Ne zaman değil:** Framer Motion API'sini öğrenmek veya üretim kodu yazmak (motion-framer).
-- **Teknoloji:** react, framer-motion · **Paketler:** framer-motion
+- **Teknoloji:** motion v14, react · **Paketler:** framer-motion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** animasyon-12-ilke → alternatif · **Globalde:** claude:ayni
@@ -41,7 +42,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** GSAP çekirdek API'si: gsap.to/from/fromTo, ease, stagger, varsayılanlar ve gsap.matchMedia() ile responsive / prefers-reduced-motion animasyonu. GSAP'ın resmî ekibi yazmıştır; ne zaman GSAP seçileceğini ve CSS animasyonuna göre farkını da anlatır.
 - **Ne zaman:** Kütüphane belirtilmeden JS animasyonu istendiğinde; tween, ease, stagger, reduced-motion kuralları. · **Ne zaman değil:** CSS geçişi yeterli olan basit hover'lar; React'te kurulum ayrıntısı için gsap-react.
-- **Teknoloji:** gsap · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, javascript, typescript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → birincil · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
@@ -52,7 +53,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** GSAP'ı Vue/Nuxt, Svelte/SvelteKit ve diğer yaşam döngülü framework'lerde kullanma: onMounted/onMount, selector scope, unmount temizliği, ScrollTrigger kill. Nuxt 4 için composable ile eklenti yükleme örneği içerir.
 - **Ne zaman:** Vue, Nuxt veya Svelte projesinde GSAP kullanılırken. · **Ne zaman değil:** React/Next.js (gsap-react).
-- **Teknoloji:** gsap, vue, nuxt, svelte · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, vue 3, nuxt 4, svelte 5 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, frontend-muhendis · **Globalde:** claude:farkli
@@ -63,7 +64,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** gsap-frameworks'ün OpenMontage'daki eski kopyası: Vue ve Svelte bölümleri aynı, Nuxt 4 bölümü ve örnek klasörü atıfları yok.
 - **Ne zaman:** Yalnız OpenMontage uyumu gerekirse. · **Ne zaman değil:** Her durumda greensock/gsap-skills sürümü tercih edilir.
-- **Teknoloji:** gsap, vue, svelte · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, vue 3, svelte · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
@@ -74,7 +75,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** GSAP animasyonlarında performans: transform/opacity tercihi, will-change, okuma/yazma gruplama, çok elemanlı stagger ve ScrollTrigger maliyeti. 60fps için kısa kontrol listesi.
 - **Ne zaman:** Takılan animasyon, jank, çok elemanlı sahnelerin optimizasyonu. · **Ne zaman değil:** Henüz çalışan animasyon yokken ilk kurulum (gsap-core).
-- **Teknoloji:** gsap · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, css · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
@@ -85,7 +86,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** GSAP eklentileri: ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, DrawSVG, MorphSVG, MotionPath, CustomEase, GSDevTools vb. Güncel sürümde tüm eklentilerin ücretsiz ve 'npm install gsap' ile gelen paket içinde olduğunu belirtir.
 - **Ne zaman:** Flip, SplitText, SVG çizim/morph, sürükle-bırak, ScrollSmoother gibi eklenti gerektiğinde. · **Ne zaman değil:** Yalnız temel tween/timeline işleri.
-- **Teknoloji:** gsap · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, scroll-deneyim · **Globalde:** claude:farkli
@@ -96,7 +97,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** gsap-plugins'in OpenMontage'daki eski kopyası. İçerik aynı eklenti kataloğu; tek fark yeni sürümdeki 'Licensing & Install' (tüm eklentiler ücretsiz, .npmrc/token önerme) bölümünün eksik olması.
 - **Ne zaman:** Yalnız OpenMontage uyumu gerekirse. · **Ne zaman değil:** Her durumda greensock/gsap-skills sürümü tercih edilir.
-- **Teknoloji:** gsap · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici · **Globalde:** claude:farkli
@@ -107,7 +108,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** GSAP'ı React/Next.js'te kullanma: useGSAP hook'u, ref'ler, scope, gsap.context() ve unmount temizliği, SSR notları. Resmî skill; en sık yapılan temizlik hatalarını 'Do Not' listesiyle önler.
 - **Ne zaman:** React veya Next.js projesinde GSAP animasyonu yazılırken. · **Ne zaman değil:** Vue/Svelte (gsap-frameworks); React dışı projeler.
-- **Teknoloji:** gsap, react, next.js · **Paketler:** gsap, @gsap/react
+- **Teknoloji:** gsap 3.15, @gsap/react 2, react 19, next.js · **Paketler:** gsap, @gsap/react
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
@@ -118,7 +119,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** GSAP timeline'ları: gsap.timeline(), position parametresi, iç içe timeline ve oynatma kontrolü. Çok adımlı animasyon koreografisi için kısa ve resmî bir rehber.
 - **Ne zaman:** Birden çok tween'i sıraya veya paralele koyarken, keyframe benzeri koreografide. · **Ne zaman değil:** Tek tween'lik işler (gsap-core yeter).
-- **Teknoloji:** gsap · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, javascript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
@@ -129,7 +130,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** gsap.utils yardımcıları: clamp, mapRange, normalize, interpolate, random, snap, distribute, toArray, wrap, pipe. Scroll değerini eşleme, ızgaraya yapıştırma, döngüsel dizi gibi işlerde kullanılan matematik araçları.
 - **Ne zaman:** Değer eşleme, rastgele/snap, wrap döngüleri gerektiğinde. · **Ne zaman değil:** Genel animasyon kurulumu.
-- **Teknoloji:** gsap · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, javascript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
@@ -140,7 +141,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** Lottie (lottie-web, lottie-react, dotLottie) ile After Effects JSON animasyonlarını web/React'e gömme: oynatma kontrolü, etkileşim, optimizasyon betiği ve AE dışa aktarma rehberi.
 - **Ne zaman:** Tasarımcının hazırladığı ikon/yükleme/mikro-etkileşim animasyonlarını sitede oynatırken. · **Ne zaman değil:** Animasyonu kodla sıfırdan yazmak; durum makinesi gereken etkileşimler (rive-interactive).
-- **Teknoloji:** lottie-web, lottie-react, dotlottie · **Paketler:** lottie-react
+- **Teknoloji:** lottie-web 5.13, dotlottie-web, react · **Paketler:** lottie-react
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** vektor-animasyon → birincil · **Roller:** motion-gelistirici
@@ -151,7 +152,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** Disney'in 12 animasyon prensibini Lottie/After Effects iş akışıyla örnekler (AE ifadeleri, segment oynatma). Kısa ilke-örnek listesi.
 - **Ne zaman:** 12 ilkeye göre Lottie hazırlama ipuçları. · **Ne zaman değil:** Lottie'yi uygulamaya gömmek (lottie-animations).
-- **Teknoloji:** lottie, after-effects · **Paketler:** lottie-web
+- **Teknoloji:** lottie-web 5.13, after-effects · **Paketler:** lottie-web
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** animasyon-12-ilke → alternatif · **Globalde:** claude:ayni
@@ -162,18 +163,19 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
 - **Ne yapar:** Motion/Framer Motion ile React animasyonu: motion bileşenleri, variants, hover/tap/drag hareketleri, layout animasyonu, AnimatePresence, spring, scroll hook'ları. Başlangıç projesi (Vite) ve üretici betikleri içerir.
 - **Ne zaman:** React'te bileşen düzeyi animasyon, çıkış animasyonu, jest etkileşimi ve layout geçişleri. · **Ne zaman değil:** Zaman çizelgesi ağırlıklı koreografi veya scroll pinleme (GSAP).
-- **Teknoloji:** react, framer-motion · **Paketler:** framer-motion
+- **Teknoloji:** motion v14, react 19 · **Paketler:** framer-motion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → birincil · **Roller:** motion-gelistirici
 - **Boyut:** 159 KB (SKILL.md 20.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. React için ana animasyon rehberi, geniş ve düzenli. Dikkat: 'framer-motion' paketi ve import'ları kullanıyor (yeni ad 'motion/react'); starter package.json framer-motion ^11. 20 KB SKILL.md.
+- **Not:** Kodda 'framer-motion' yerine 'motion/react' import et.
 
 ### react-spring-physics  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 65 (B)
 
 - **Ne yapar:** React Spring ve Popmotion ile fizik tabanlı (yay) animasyon: spring hook'ları, jest entegrasyonu, düşük seviye animasyon yardımcıları. Doğal hissettiren arayüz hareketleri için.
 - **Ne zaman:** Yay fiziği ve jestle sürülen arayüz hareketi gerektiğinde. · **Ne zaman değil:** Genel UI animasyonu (motion-framer) veya zaman çizelgesi işleri.
-- **Teknoloji:** react, react-spring, popmotion · **Paketler:** @react-spring/web, popmotion
+- **Teknoloji:** react-spring 10, react · **Paketler:** @react-spring/web, popmotion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → alternatif · **Roller:** motion-gelistirici

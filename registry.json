@@ -2458,10 +2458,11 @@
       "kullanim_alani": "Landing page'de hazır animasyonlu bileşen (shimmer, beam, particles) eklerken.",
       "kullanma": "Özgün marka hareketi gerektiğinde; kurumsal sade sitelerde.",
       "teknoloji": [
-        "react",
-        "tailwind",
-        "shadcn",
-        "motion"
+        "react 19",
+        "tailwind 4",
+        "motion v14",
+        "shadcn-ui",
+        "ogl"
       ],
       "gerekli_paketler": [
         "motion",
@@ -2565,7 +2566,8 @@
       "kullanim_alani": "GSAP lisansı/boyutu istenmeyip hafif bir motor tercih edildiğinde.",
       "kullanma": "Yeni projelerde varsayılan olarak; GSAP varken gerek yok.",
       "teknoloji": [
-        "animejs"
+        "animejs 4",
+        "javascript"
       ],
       "gerekli_paketler": [
         "animejs"
@@ -2597,7 +2599,8 @@
           "yapı 5/5",
           "elle kalite 3/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "notlar": "Örnekler Anime.js v3 API'si; v4 için animate()/createTimeline() kullan."
     },
     {
       "id": "framer-motion",
@@ -2664,8 +2667,8 @@
       "kullanim_alani": "Animasyona 'Disney ilkeleri' çerçevesi verilmek istendiğinde fikir ve parça kaynağı.",
       "kullanma": "Framer Motion API'sini öğrenmek veya üretim kodu yazmak (motion-framer).",
       "teknoloji": [
-        "react",
-        "framer-motion"
+        "motion v14",
+        "react"
       ],
       "gerekli_paketler": [
         "framer-motion"
@@ -2767,7 +2770,9 @@
       "kullanim_alani": "Kütüphane belirtilmeden JS animasyonu istendiğinde; tween, ease, stagger, reduced-motion kuralları.",
       "kullanma": "CSS geçişi yeterli olan basit hover'lar; React'te kurulum ayrıntısı için gsap-react.",
       "teknoloji": [
-        "gsap"
+        "gsap 3.15",
+        "javascript",
+        "typescript"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -2872,10 +2877,10 @@
       "kullanim_alani": "Vue, Nuxt veya Svelte projesinde GSAP kullanılırken.",
       "kullanma": "React/Next.js (gsap-react).",
       "teknoloji": [
-        "gsap",
-        "vue",
-        "nuxt",
-        "svelte"
+        "gsap 3.15",
+        "vue 3",
+        "nuxt 4",
+        "svelte 5"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -2978,8 +2983,8 @@
       "kullanim_alani": "Yalnız OpenMontage uyumu gerekirse.",
       "kullanma": "Her durumda greensock/gsap-skills sürümü tercih edilir.",
       "teknoloji": [
-        "gsap",
-        "vue",
+        "gsap 3.15",
+        "vue 3",
         "svelte"
       ],
       "gerekli_paketler": [
@@ -3082,7 +3087,8 @@
       "kullanim_alani": "Takılan animasyon, jank, çok elemanlı sahnelerin optimizasyonu.",
       "kullanma": "Henüz çalışan animasyon yokken ilk kurulum (gsap-core).",
       "teknoloji": [
-        "gsap"
+        "gsap 3.15",
+        "css"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -3188,7 +3194,7 @@
       "kullanim_alani": "Flip, SplitText, SVG çizim/morph, sürükle-bırak, ScrollSmoother gibi eklenti gerektiğinde.",
       "kullanma": "Yalnız temel tween/timeline işleri.",
       "teknoloji": [
-        "gsap"
+        "gsap 3.15"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -3292,7 +3298,7 @@
       "kullanim_alani": "Yalnız OpenMontage uyumu gerekirse.",
       "kullanma": "Her durumda greensock/gsap-skills sürümü tercih edilir.",
       "teknoloji": [
-        "gsap"
+        "gsap 3.15"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -3398,8 +3404,9 @@
       "kullanim_alani": "React veya Next.js projesinde GSAP animasyonu yazılırken.",
       "kullanma": "Vue/Svelte (gsap-frameworks); React dışı projeler.",
       "teknoloji": [
-        "gsap",
-        "react",
+        "gsap 3.15",
+        "@gsap/react 2",
+        "react 19",
         "next.js"
       ],
       "gerekli_paketler": [
@@ -3504,7 +3511,8 @@
       "kullanim_alani": "Birden çok tween'i sıraya veya paralele koyarken, keyframe benzeri koreografide.",
       "kullanma": "Tek tween'lik işler (gsap-core yeter).",
       "teknoloji": [
-        "gsap"
+        "gsap 3.15",
+        "javascript"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -3608,7 +3616,8 @@
       "kullanim_alani": "Değer eşleme, rastgele/snap, wrap döngüleri gerektiğinde.",
       "kullanma": "Genel animasyon kurulumu.",
       "teknoloji": [
-        "gsap"
+        "gsap 3.15",
+        "javascript"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -3718,9 +3727,9 @@
       "kullanim_alani": "Tasarımcının hazırladığı ikon/yükleme/mikro-etkileşim animasyonlarını sitede oynatırken.",
       "kullanma": "Animasyonu kodla sıfırdan yazmak; durum makinesi gereken etkileşimler (rive-interactive).",
       "teknoloji": [
-        "lottie-web",
-        "lottie-react",
-        "dotlottie"
+        "lottie-web 5.13",
+        "dotlottie-web",
+        "react"
       ],
       "gerekli_paketler": [
         "lottie-react"
@@ -3820,7 +3829,7 @@
       "kullanim_alani": "12 ilkeye göre Lottie hazırlama ipuçları.",
       "kullanma": "Lottie'yi uygulamaya gömmek (lottie-animations).",
       "teknoloji": [
-        "lottie",
+        "lottie-web 5.13",
         "after-effects"
       ],
       "gerekli_paketler": [
@@ -3924,8 +3933,8 @@
       "kullanim_alani": "React'te bileşen düzeyi animasyon, çıkış animasyonu, jest etkileşimi ve layout geçişleri.",
       "kullanma": "Zaman çizelgesi ağırlıklı koreografi veya scroll pinleme (GSAP).",
       "teknoloji": [
-        "react",
-        "framer-motion"
+        "motion v14",
+        "react 19"
       ],
       "gerekli_paketler": [
         "framer-motion"
@@ -3959,7 +3968,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "notlar": "Kodda 'framer-motion' yerine 'motion/react' import et."
     },
     {
       "id": "react-spring-physics",
@@ -4028,9 +4038,8 @@
       "kullanim_alani": "Yay fiziği ve jestle sürülen arayüz hareketi gerektiğinde.",
       "kullanma": "Genel UI animasyonu (motion-framer) veya zaman çizelgesi işleri.",
       "teknoloji": [
-        "react",
-        "react-spring",
-        "popmotion"
+        "react-spring 10",
+        "react"
       ],
       "gerekli_paketler": [
         "@react-spring/web",
@@ -4236,8 +4245,8 @@
       "kullanim_alani": "SPA hissi veren sayfa geçişleri (ör. perde/fade) çok sayfalı statik sitelerde.",
       "kullanma": "React/Next.js router geçişleri (framework'ün kendi çözümü); tek sayfalık siteler.",
       "teknoloji": [
-        "barba.js",
-        "gsap"
+        "barba 2",
+        "gsap 3.15"
       ],
       "gerekli_paketler": [
         "@barba/core",
@@ -4341,8 +4350,9 @@
       "kullanim_alani": "Scroll'a bağlı animasyon, pinli bölüm, parallax, scrub gerektiğinde (özellikle kütüphane belirtilmemişse).",
       "kullanma": "Basit fade-in reveal (scroll-reveal-libraries yeter).",
       "teknoloji": [
-        "gsap",
-        "scrolltrigger"
+        "gsap 3.15",
+        "scrolltrigger",
+        "lenis 1.3"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -4449,8 +4459,10 @@
       "kullanim_alani": "Resmî sürümün yetmediği, başlangıç projesi/ease görselleştirici gibi ek varlıklar istendiğinde.",
       "kullanma": "Normal durumda resmî gsap-scrolltrigger + gsap-core/timeline.",
       "teknoloji": [
-        "gsap",
-        "scrolltrigger"
+        "gsap 3.15",
+        "scrolltrigger",
+        "three.js",
+        "react"
       ],
       "gerekli_paketler": [
         "gsap"
@@ -4553,8 +4565,8 @@
       "kullanim_alani": "Smooth-scroll + parallax içeren sürükleyici sitelerde (kategorideki tek smooth-scroll skill'i).",
       "kullanma": "Erişilebilirlik/mobil önceliği olan siteler; ScrollTrigger tek başına yeterliyse.",
       "teknoloji": [
-        "locomotive-scroll",
-        "gsap"
+        "locomotive-scroll 4",
+        "gsap 3.15"
       ],
       "gerekli_paketler": [
         "locomotive-scroll"
@@ -4587,7 +4599,8 @@
           "yapı 5/5",
           "elle kalite 3/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "notlar": "Locomotive v4 API; yeni projede Lenis + ScrollTrigger kullan."
     },
     {
       "id": "scroll-craft",
@@ -4662,8 +4675,8 @@
         "css",
         "javascript",
         "node",
-        "playwright",
-        "ffmpeg"
+        "chromium",
+        "kie.ai"
       ],
       "gerekli_paketler": [
         "playwright-core",
@@ -4769,7 +4782,8 @@
       "kullanim_alani": "Pazarlama sayfasında karmaşıklık olmadan fade/slide reveal gerektiğinde.",
       "kullanma": "Pin, scrub, timeline; React'te animasyon (motion-framer).",
       "teknoloji": [
-        "aos"
+        "aos",
+        "css"
       ],
       "gerekli_paketler": [
         "aos"
@@ -4870,9 +4884,9 @@
       "kullanim_alani": "VR/AR/360° içerik, az JavaScript ile immersif sayfalar.",
       "kullanma": "Klasik masaüstü 3D sayfalar; yüksek performanslı oyunlar.",
       "teknoloji": [
-        "aframe",
+        "aframe 1.7",
         "webxr",
-        "html"
+        "three.js"
       ],
       "gerekli_paketler": [
         "aframe"
@@ -4973,10 +4987,10 @@
       "kullanim_alani": "Three.js dışında tam özellikli motor (fizik, GUI, editör) gereken oyun/görselleştirme projeleri.",
       "kullanma": "Standart Three.js/R3F işleri; hafif dekoratif efekt.",
       "teknoloji": [
-        "babylonjs",
-        "webgl",
+        "babylonjs 7",
+        "webgl2",
         "webgpu",
-        "vite"
+        "havok"
       ],
       "gerekli_paketler": [
         "@babylonjs/core",
@@ -5078,9 +5092,9 @@
       "kullanim_alani": "Blender'da hazırlanan modelleri web'e aktarırken otomasyon.",
       "kullanma": "Blender kurulu değilse; yalnız küçültme için threejs-asset-pipeline.",
       "teknoloji": [
-        "blender",
+        "blender 4",
         "bpy",
-        "gltf",
+        "gltf 2.0",
         "python"
       ],
       "gerekli_paketler": [
@@ -5190,7 +5204,7 @@
         "zdog",
         "vanta",
         "vanilla-tilt",
-        "three"
+        "three.js"
       ],
       "gerekli_paketler": [
         "zdog",
@@ -5296,8 +5310,8 @@
       "kullanim_alani": "Hafif WebGL/WebGPU oyun motoru ve PlayCanvas editörüyle çalışan projeler.",
       "kullanma": "Three.js/R3F tabanlı projeler.",
       "teknoloji": [
-        "playcanvas",
-        "webgl",
+        "playcanvas 2",
+        "webgl2",
         "webgpu"
       ],
       "gerekli_paketler": [
@@ -5402,10 +5416,10 @@
       "kullanim_alani": "Hazır R3F başlangıç projesi ve bileşen üretici betik isteniyorsa; R3F v8/React 18 projeleri.",
       "kullanma": "Güncel R3F+drei bilgisi için threejs-react-three-fiber.",
       "teknoloji": [
-        "react",
-        "three",
-        "react-three-fiber",
-        "vite"
+        "R3F v8",
+        "drei 9",
+        "three r172",
+        "react 18"
       ],
       "gerekli_paketler": [
         "three",
@@ -5512,8 +5526,7 @@
       "kullanma": "Kod ile tam kontrollü sahne; Spline hesabı/dosyası yoksa.",
       "teknoloji": [
         "spline",
-        "react",
-        "three"
+        "react"
       ],
       "gerekli_paketler": [
         "@splinetool/react-spline",
@@ -5613,9 +5626,9 @@
       "kullanim_alani": "Substance Painter lisansı olan ekiplerde doku hattı otomasyonu.",
       "kullanma": "Substance lisansı yoksa; kodla materyal tanımlama (threejs-materials, threejs-textures).",
       "teknoloji": [
-        "substance-painter",
-        "pbr",
-        "python"
+        "substance-3d-painter",
+        "python",
+        "pbr"
       ],
       "gerekli_paketler": [
         "Adobe Substance 3D Painter",
@@ -5715,9 +5728,10 @@
       "kullanim_alani": "glTF animasyonlarını oynatırken, kemik/morph kontrolünde, klip geçişlerinde.",
       "kullanma": "UI/DOM animasyonu (GSAP/Motion skilleri) veya scroll bağlama (web3d-integration-patterns).",
       "teknoloji": [
-        "three",
-        "webgl",
-        "gltf"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -5818,7 +5832,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-animation) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -5920,10 +5934,11 @@
       "kullanim_alani": "Model yüklenmeden önce sıkıştırma/doğrulama; yükleme süresi ve GPU belleği düşürme.",
       "kullanma": "Modeli üretme/Blender'dan dışa aktarma (blender-web-pipeline); sahne kodu yazma.",
       "teknoloji": [
-        "gltf-transform",
+        "three r186",
+        "gltf-transform 4",
+        "ktx2",
         "draco",
         "meshopt",
-        "ktx2",
         "gltfjsx"
       ],
       "gerekli_paketler": [
@@ -6031,9 +6046,10 @@
       "kullanim_alani": "Sıfırdan Three.js sahnesi kurulurken, kamera/renderer/resize ayarlarında, nesne hiyerarşisi kurarken.",
       "kullanma": "İsteğe özel konular (ışık, materyal, shader) için ilgili threejs-* skilli; React kullanılıyorsa threejs-react-three-fiber.",
       "teknoloji": [
-        "three",
-        "webgl",
-        "webgpu"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -6134,7 +6150,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-fundamentals) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -6236,8 +6252,10 @@
       "kullanim_alani": "Özel mesh/vertex verisi, instanced mesh, nokta bulutu, 3D yazı gerektiğinde.",
       "kullanma": "Hazır model yüklemek (threejs-loaders).",
       "teknoloji": [
-        "three",
-        "webgl"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -6337,7 +6355,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-geometry) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -6440,8 +6458,10 @@
       "kullanim_alani": "Tıklanabilir 3D nesneler, kamera kontrolü, sürükle-bırak, ürün konfigüratörü etkileşimi.",
       "kullanma": "React içinde (threejs-react-three-fiber pointer events bölümü).",
       "teknoloji": [
-        "three",
-        "webgl"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -6544,7 +6564,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-interaction) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -6645,9 +6665,10 @@
       "kullanim_alani": "Işık kurma/ayarlama, gölge sorunları (acne), IBL kurulumu, ürün sergisi aydınlatması.",
       "kullanma": "Materyal seçimi (threejs-materials).",
       "teknoloji": [
-        "three",
-        "webgl",
-        "hdr"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -6747,7 +6768,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-lighting) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -6849,10 +6870,10 @@
       "kullanim_alani": "Model/doku/HDR yüklerken, yükleme ekranı ve bellek yönetimi için.",
       "kullanma": "Varlık küçültme (threejs-asset-pipeline).",
       "teknoloji": [
-        "three",
-        "gltf",
-        "draco",
-        "ktx2"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -6953,7 +6974,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-loaders) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -7054,9 +7075,10 @@
       "kullanim_alani": "Mesh stilleme, PBR ayarı, cam/boya gibi gelişmiş materyal, toon görünüm.",
       "kullanma": "Özel shader yazımı (threejs-shaders).",
       "teknoloji": [
-        "three",
-        "webgl",
-        "pbr"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -7156,7 +7178,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-materials) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -7254,9 +7276,10 @@
       "kullanim_alani": "Sahne yavaş/takılıyorsa, mobil bütçesi gerekiyorsa, üretime almadan önce.",
       "kullanma": "Temel sahne kurulumu; görsel efektler.",
       "teknoloji": [
-        "three",
-        "webgl",
-        "webgpu"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -7360,9 +7383,10 @@
       "kullanim_alani": "Parlama, renk derecelendirme, bulanıklık, ekran uzayı efektleri.",
       "kullanma": "Performans kısıtlı mobil sahneler; temel render.",
       "teknoloji": [
-        "three",
-        "webgl",
-        "postprocessing"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three",
@@ -7464,7 +7488,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-postprocessing) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -7567,10 +7591,10 @@
       "kullanim_alani": "React/Next.js uygulamasında 3D sahne, ürün konfigüratörü, drei yardımcıları.",
       "kullanma": "React dışı projeler (threejs-fundamentals).",
       "teknoloji": [
-        "react",
-        "three",
-        "react-three-fiber",
-        "drei"
+        "R3F v9",
+        "drei 10",
+        "three r186",
+        "react 19"
       ],
       "gerekli_paketler": [
         "three",
@@ -7676,10 +7700,10 @@
       "kullanim_alani": "Vertex displacement, fresnel, dissolve gibi özel efektler.",
       "kullanma": "Hazır materyal yetiyorsa (threejs-materials).",
       "teknoloji": [
-        "three",
-        "glsl",
-        "tsl",
-        "webgl"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -7779,7 +7803,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-shaders) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -7881,8 +7905,10 @@
       "kullanim_alani": "Materyallere doku bağlama, UV sorunları, cubemap/render target, doku optimizasyonu.",
       "kullanma": "Model yükleme (threejs-loaders).",
       "teknoloji": [
-        "three",
-        "webgl"
+        "three r186",
+        "webgl2",
+        "webgpu",
+        "tsl"
       ],
       "gerekli_paketler": [
         "three"
@@ -7983,7 +8009,7 @@
       "kullanim_alani": "CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-textures) özet isteniyorsa; normalde gerek yok.",
       "kullanma": "CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl"
       ],
       "gerekli_paketler": [
@@ -8086,9 +8112,10 @@
       "kullanim_alani": "Hızlı başlangıç şablonu isteniyorsa (setup_scene.py).",
       "kullanma": "Güncel Three.js işleri için threejs-fundamentals ve konu skillleri.",
       "teknoloji": [
-        "three",
+        "three.js",
         "webgl",
-        "python"
+        "webgpu",
+        "gsap 3.15"
       ],
       "gerekli_paketler": [
         "three"
@@ -8125,7 +8152,7 @@
       "id": "threejs-world-generation",
       "ad": "threejs-world-generation",
       "durum": "tercih",
-      "kategori": "a-tasarim-onyuz/05-3d-webgl",
+      "kategori": "g-video-ses-medya/04-motion-graphics-karakter",
       "alan": "a-tasarim-onyuz",
       "yol": "arsiv/a-tasarim-onyuz/05-3d-webgl/threejs-world-generation",
       "varyantlar": {},
@@ -8187,10 +8214,11 @@
       "kullanim_alani": "OpenMontage/HyperFrames hattında sinematik 3D ortam videosu.",
       "kullanma": "Web sayfasına gömülü 3D, tek nesne, düz paralaks sahne; OpenMontage yoksa.",
       "teknoloji": [
-        "three",
+        "three.js",
         "hyperframes",
-        "blender",
-        "openmontage"
+        "openmontage",
+        "python",
+        "blender"
       ],
       "gerekli_paketler": [
         "OpenMontage (~/.openmontage)",
@@ -8206,7 +8234,7 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir.",
+      "kalite_notu": "Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir. Kategori düzeltildi (05-3d-webgl → g-video-ses-medya/04-motion-graphics-karakter): web 3D'si değil, OpenMontage video boru hattının parçası (tools.graphics.threejs_world).",
       "ortusme_grubu": "three-dunya-uretimi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
@@ -8224,7 +8252,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "kategori_elle": true
     },
     {
       "id": "web3d-integration-patterns",
@@ -8296,11 +8325,11 @@
       "kullanim_alani": "Scroll ile hareket eden 3D hikaye siteleri, 3D + animasyon kütüphanelerini birlikte kurarken mimari karar.",
       "kullanma": "Tek kütüphaneli basit sahne.",
       "teknoloji": [
-        "three",
-        "gsap",
-        "react-three-fiber",
-        "framer-motion",
-        "react-spring",
+        "three.js",
+        "R3F v8",
+        "gsap 3.15",
+        "motion v14",
+        "react-spring 10",
         "zustand"
       ],
       "gerekli_paketler": [
@@ -18840,7 +18869,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -18853,7 +18882,38 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Word (.docx/.dotx) belgelerini oluşturur, okur ve düzenler. Yeni belge için docx-js (npm), mevcut belge için unzip → XML düzenleme → zip akışı kullanır; run birleştirme, XSD doğrulama, izlenen değişiklik (redline) ve yorum ekleme betikleri içerir. Çıktıyı LibreOffice ile PDF'e çevirip görsel olarak kontrol ettirir.",
+      "kullanim_alani": "Rapor, mektup, sözleşme, şablon gibi teslimatın Word dosyası olduğu her iş; mevcut .docx üzerinde izlenen değişiklik veya yorum.",
+      "kullanma": "Teslimat PDF (pdf), Google Docs ya da Markdown/HTML ise; içerik yazımı/yapılandırma için doc-coauthoring.",
+      "teknoloji": [
+        "node",
+        "python",
+        "docx-js",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "docx (npm)",
+        "pandoc",
+        "libreoffice",
+        "poppler (pdftoppm)",
+        "defusedxml",
+        "lxml"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "marka-sunum"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic'in güncel sürümü: kısa SKILL.md (6.7 KB), net görev tablosu, docx-js tuzakları, merge_runs/validate/comment betikleri ve render ile doğrulama. ComposioHQ kopyası bunun eski anlık görüntüsü; bu yüzden birincil bu.",
+      "ortusme_grubu": "ofis-docx",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "docx@composiohq",
@@ -18914,7 +18974,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -18927,7 +18987,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic docx skill'inin ComposioHQ deposundaki eski sürümü. docx-js ile yeni belge, Python 'Document' kütüphanesi (ooxml) ile düzenleme ve markdown planlı redline (izlenen değişiklik) akışı sunar; okumadan önce 500-600 satırlık docx-js.md/ooxml.md dosyalarının tamamını okumayı zorunlu tutar.",
+      "kullanim_alani": "Sadece ooxml Python Document kütüphanesiyle toplu redline yapılması gerekiyorsa (eski API'ye bağlı iş akışları).",
+      "kullanma": "Varsayılan olarak kullanma; güncel ve daha az bağlam tüketen anthropics/docx birincil.",
+      "teknoloji": [
+        "node",
+        "python",
+        "docx-js",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "docx (npm)",
+        "pandoc",
+        "libreoffice",
+        "poppler (pdftoppm)",
+        "defusedxml"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Anthropic sürümünün eski kopyası; 'tamamını oku' talimatları bağlamı şişiriyor (1.1 MB klasör). Redline planlama bölümü ayrıntılı ama güncel sürümde validate --author ile daha sağlam karşılanıyor.",
+      "ortusme_grubu": "ofis-docx",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pdf",
@@ -18987,7 +19074,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19000,7 +19087,35 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "PDF okuma, metin/tablo çıkarma, birleştirme, bölme, döndürme, filigran, form doldurma, şifreleme ve OCR işlerini Python (pypdf, pdfplumber, reportlab) ve CLI araçlarıyla yapar. Form doldurma için ayrı forms.md, ileri kullanım için reference.md içerir.",
+      "kullanim_alani": "Girdi ya da çıktı PDF olduğunda: rapor PDF'i üretmek, PDF'ten veri çekmek, form doldurmak, sayfa işlemleri.",
+      "kullanma": "Teslimat düzenlenebilir Word/Excel/PowerPoint ise (docx/xlsx/pptx); HTML'den tasarımlı PDF gerekiyorsa önce HTML üretip tarayıcıyla dönüştürmek daha iyi olabilir.",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "pypdf",
+        "pdfplumber",
+        "reportlab",
+        "pypdfium2",
+        "poppler-utils",
+        "qpdf",
+        "pytesseract (OCR)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Kapsamlı ve pratik kod örnekleri; form doldurma betikleri iyi. Diğer ofis skillerine göre daha az 'doğrula' disiplini var. ComposioHQ sürümü neredeyse aynı (39 satır fark) ama eski; birincil bu.",
+      "ortusme_grubu": "ofis-pdf",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pdf@composiohq",
@@ -19060,7 +19175,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -19073,7 +19188,31 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic pdf skill'inin ComposioHQ'daki eski kopyası: pypdf/pdfplumber/reportlab ile PDF okuma, çıkarma, birleştirme/bölme ve form doldurma. İçerik güncel sürümle neredeyse aynı.",
+      "kullanim_alani": "Güncel sürüm erişilemezse yedek olarak.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/pdf aynı içeriğin güncel hâli.",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "pypdf",
+        "pdfplumber",
+        "reportlab",
+        "poppler-utils",
+        "qpdf"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Güncel sürümün eski kopyası, kendine özgü katkısı yok.",
+      "ortusme_grubu": "ofis-pdf",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pptx",
@@ -19135,7 +19274,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19148,7 +19287,39 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "PowerPoint (.pptx/.potx) sunumlarını oluşturur, okur ve düzenler. Yeni deste için pptxgenjs, şablon/düzenleme için XML akışı kullanır; slayt kopyalama, temizlik, küçük resim ızgarası ve doğrulama betikleri içerir. Renk paleti, tipografi, yerleşim önerileri ve zorunlu içerik/görsel QA adımları vardır.",
+      "kullanim_alani": "Sunum, pitch deck, eğitim slaytı üretimi; mevcut desteyi ya da kurumsal şablonu düzenleme; .pptx'ten metin çıkarma.",
+      "kullanma": "Web tabanlı/HTML slayt (slides, reveal.js) ya da video istenirse; sadece içerik/metin taslağı gerekiyorsa.",
+      "teknoloji": [
+        "node",
+        "python",
+        "pptxgenjs",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "pptxgenjs (npm)",
+        "markitdown[pptx]",
+        "Pillow",
+        "defusedxml",
+        "lxml",
+        "libreoffice",
+        "poppler (pdftoppm)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "marka-sunum"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Güncel Anthropic sürümü; betik tablosu, pptxgenjs tuzakları, tasarım rehberi ve zorunlu render QA'sı tek dosyada. ComposioHQ sürümü html2pptx tabanlı eski akış; birincil bu.",
+      "ortusme_grubu": "ofis-pptx",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pptx@composiohq",
@@ -19211,7 +19382,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -19224,7 +19395,36 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic pptx skill'inin eski sürümü (ComposioHQ). HTML slaytları playwright ile html2pptx dönüştürerek sunum üretir; şablonlu üretimde slayt envanteri, değiştirme JSON'u ve küçük resim ızgarası kullanan uzun bir iş akışı tarif eder.",
+      "kullanim_alani": "HTML/CSS ile tasarlanıp PowerPoint'e çevrilecek sunumlar (html2pptx akışı özellikle isteniyorsa).",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/pptx daha kısa ve günceldir. Playwright/Chromium kurulumu olmayan ortamlarda.",
+      "teknoloji": [
+        "node",
+        "python",
+        "pptxgenjs",
+        "playwright",
+        "html"
+      ],
+      "gerekli_paketler": [
+        "pptxgenjs (npm)",
+        "playwright",
+        "sharp",
+        "markitdown",
+        "libreoffice"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "marka-sunum"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. html2pptx yaklaşımı tasarım özgürlüğü veriyor ama SKILL.md 25 KB ve 'tamamını oku' dosyalarıyla bağlam yükü yüksek; bağımlılıkları ağır.",
+      "ortusme_grubu": "ofis-pptx",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "xlsx",
@@ -19284,7 +19484,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19297,7 +19497,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Excel/CSV/TSV dosyalarını openpyxl ve pandas ile oluşturur, okur, düzenler ve temizler. Formül kullanımını zorunlu tutar, LibreOffice ile yeniden hesaplatıp hata raporlayan recalc.py içerir; finansal model renk ve sayı biçimi kuralları tanımlar.",
+      "kullanim_alani": "Teslimatın elektronik tablo olduğu işler: finansal model, veri temizleme, formüllü tablo, format dönüştürme.",
+      "kullanma": "Teslimat Word/HTML rapor, bağımsız Python betiği, veritabanı hattı ya da Google Sheets API entegrasyonu ise.",
+      "teknoloji": [
+        "python",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "openpyxl",
+        "pandas",
+        "markitdown",
+        "libreoffice"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). 'Yeşil recalc doğru demek değil' gibi doğrulama disiplini ve mevcut dosya kurallarına uyma talimatı çok iyi. ComposioHQ sürümünden güncel ve daha net; birincil bu.",
+      "ortusme_grubu": "ofis-xlsx",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "xlsx@composiohq",
@@ -19356,7 +19583,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19369,7 +19596,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic xlsx skill'inin eski kopyası (ComposioHQ): formül zorunluluğu, finansal model renk/sayı biçimi kuralları, pandas/openpyxl örnekleri ve LibreOffice ile recalc.py yeniden hesaplama.",
+      "kullanim_alani": "Güncel sürüm yoksa yedek; içerik büyük ölçüde aynı.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/xlsx daha güncel doğrulama kuralları içerir.",
+      "teknoloji": [
+        "python",
+        "libreoffice"
+      ],
+      "gerekli_paketler": [
+        "openpyxl",
+        "pandas",
+        "libreoffice"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Eski kopya; bölüm başlıkları iki kez tekrarlanıyor, recalc.py tek dosya hâlinde (18 KB, hafif) — tek avantajı küçük olması.",
+      "ortusme_grubu": "ofis-xlsx",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "archify",
@@ -19446,7 +19696,7 @@
         "ana_sayfa": "https://archify.si",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -19459,7 +19709,35 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Mimari, iş akışı, sequence, veri akışı, yaşam döngüsü, ERD, class, ağaç, zaman çizelgesi ve waterfall diyagramlarını doğrulanmış, temalı, animasyonlu tek dosyalık HTML olarak üretir; Mermaid girdisini de anlamına göre yeniden yazar. Kod tabanından kanıta dayalı diyagram çıkarır ve bir cevabı tek sayfalık 'explainer' sayfasına çevirebilir. `node bin/archify.mjs finalize` şema, teslim ve gerçek tarayıcı kontrollerinden geçirir.",
+      "kullanim_alani": "Sistem/mimari açıklama, kod tabanı haritası, API çağrı zinciri, veritabanı şeması, olay zaman çizelgesi; paylaşılabilir etkileşimli diyagram ya da tek sayfa açıklama.",
+      "kullanma": "Hızlı statik SVG/PNG (beautiful-mermaid) ya da Markdown içine gömülecek Mermaid kodu yeterliyse; dashboard için; Node.js olmayan ortamda (yalnızca elle SVG yedeği var).",
+      "teknoloji": [
+        "node",
+        "html",
+        "svg"
+      ],
+      "gerekli_paketler": [
+        "node (paket içinde, ek kurulum yok)",
+        "chromium/playwright (browser-check için)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "egitim-explainer",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; MIT. Klasör çok büyük (7.6 MB) ve SKILL.md 18 KB; ama referanslar ihtiyaç anında okunuyor. Diyagram grubunda en kapsamlı ve doğrulanabilir seçenek.",
+      "ortusme_grubu": "diyagram-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok."
     },
     {
       "id": "beautiful-mermaid",
@@ -19523,7 +19801,7 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -19536,7 +19814,36 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevirir. Flowchart, sequence, state, class ve ER diyagramlarını, 13 hazır temayı (Tokyo Night, Nord, GitHub…) destekler.",
+      "kullanim_alani": "Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde.",
+      "kullanma": "Etkileşimli/keşfedilebilir diyagram ya da kod tabanından kanıtlı mimari gerekiyorsa (archify). PNG adımı 'agent-browser' skill'ini istiyor; kütüphanede yok — PNG için playwright/chromium ile ekran görüntüsü alınarak uyarlanmalı.",
+      "teknoloji": [
+        "typescript",
+        "bun",
+        "mermaid",
+        "svg"
+      ],
+      "gerekli_paketler": [
+        "bun veya tsx/deno",
+        "beautiful-mermaid (npm)",
+        "agent-browser CLI (PNG için; yoksa playwright)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "egitim-explainer",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa, net, sözdizimi tuzakları belgelenmiş. AGPL-3.0 (OpenMontage). PNG adımı kütüphanede olmayan agent-browser'a bağlı. Statik görsel için iyi; birincil archify.",
+      "ortusme_grubu": "diyagram-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "doc-coauthoring",
@@ -19593,7 +19900,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19606,7 +19913,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kullanıcıyla birlikte doküman (spec, öneri, karar dokümanı, PRD, RFC) yazmak için üç aşamalı bir süreç yürütür: bağlam toplama, bölüm bölüm yapılandırma/iyileştirme ve bağlamsız bir alt-agent ile 'okuyucu testi'. Format değil içerik ve okunabilirlik odaklı.",
+      "kullanim_alani": "Önemli bir teknik/iş dokümanı yazılırken; okuyucunun soru işaretlerini önceden yakalamak için.",
+      "kullanma": "Kısa not, README ya da ADR şablonu yeterliyse (documentation-and-adrs); dosya formatı üretimi için (docx/pptx/pdf).",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Anthropic resmi; okuyucu testi (taze bağlamlı alt-agent) diğer doküman skillerinde yok. Codex'te alt-agent yoksa yeni oturumla aynı test elle yapılabilir. Doküman ve format skilleriyle tamamlayıcı.",
+      "ortusme_grubu": "teknik-dokumantasyon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "documentation-and-adrs",
@@ -19670,7 +19997,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -19683,7 +20010,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belgeleme, API dokümantasyonu (TSDoc, OpenAPI), README ve changelog. Gereksiz yorumdan kaçınmayı vurgular.",
+      "kullanim_alani": "Mimari karar, public API değişikliği, özellik teslimi; kod tabanına gelecek mühendis/agent için bağlam bırakmak.",
+      "kullanma": "Uzun iş/strateji dokümanı ortak yazımı (doc-coauthoring); atılacak prototip; Word/PDF teslimatı.",
+      "teknoloji": [
+        "markdown",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "mevcut-kod-iyilestirme",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu.",
+      "ortusme_grubu": "teknik-dokumantasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "documentation-templates",
@@ -19745,7 +20095,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -19758,13 +20108,32 @@
           "bağlam yükü 10/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "README, endpoint bazlı API dokümanı, JSDoc/TSDoc yorumu, Keep-a-Changelog, kısa ADR ve llms.txt gibi AI dostu doküman için hazır şablonlar ve yapı ilkeleri verir.",
+      "kullanim_alani": "Hızlıca README/CHANGELOG/llms.txt iskeleti gerektiğinde; çok kısa bağlam bütçesiyle.",
+      "kullanma": "Karar kaydı ve 'neden' belgelemesi gerekiyorsa documentation-and-adrs daha iyi. Frontmatter'daki allowed-tools (Read, Glob, Grep) Claude Code'a özgü; Codex bunu yok sayar, skill yine çalışır.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.",
+      "ortusme_grubu": "teknik-dokumantasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "json-canvas",
       "ad": "json-canvas",
       "durum": "tercih",
-      "kategori": "c-dokuman-icerik/02-diyagram-dokumantasyon",
+      "kategori": "c-dokuman-icerik/04-not-alma-bilgi-yonetimi",
       "alan": "c-dokuman-icerik",
       "yol": "arsiv/c-dokuman-icerik/02-diyagram-dokumantasyon/json-canvas",
       "varyantlar": {},
@@ -19819,7 +20188,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 70,
         "not": "B",
@@ -19832,7 +20201,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian'ın kullandığı JSON Canvas 1.0 (.canvas) dosyalarını oluşturur ve düzenler: text/file/link/group düğümleri, kenarlar, renkler, yerleşim önerileri ve doğrulama kuralları. Zihin haritası, proje panosu ve akış şeması örnekleri içerir.",
+      "kullanim_alani": "Obsidian kasasında görsel tuval, zihin haritası ya da not bağlantı haritası üretmek.",
+      "kullanma": "Obsidian/JSON Canvas kullanılmıyorsa; yayınlanacak diyagram için archify veya beautiful-mermaid.",
+      "teknoloji": [
+        "json",
+        "obsidian"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Spesifikasyonu eksiksiz ve örnekli anlatıyor; dar kapsamlı. Asıl yeri Obsidian not yönetimi olduğu için 04-not-alma-bilgi-yonetimi kategorisine taşındı.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "competitive-ads-extractor",
@@ -19889,7 +20278,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -19902,7 +20291,29 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Rakiplerin Facebook Ad Library, LinkedIn gibi reklam kütüphanelerindeki reklamlarını toplayıp mesaj, vurgulanan problem, hedef kitle ve kreatif kalıplarını analiz etmeyi tarif eder. Betik yok; tarayıcı/kazıma yeteneği agent'ın kendi araçlarına bırakılmış.",
+      "kullanim_alani": "Reklam kampanyası öncesi rakip mesajlarını ve kreatif kalıplarını çıkarmak.",
+      "kullanma": "Tarayıcı otomasyonu ya da web kazıma aracı yoksa (skill kendi aracını getirmiyor); platform kullanım şartlarının kazımaya izin vermediği durumlarda.",
+      "teknoloji": [
+        "web-arama",
+        "tarayici-otomasyonu"
+      ],
+      "gerekli_paketler": [
+        "tarayıcı aracı (playwright/MCP)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "marka-sunum"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.",
+      "ortusme_grubu": "pazarlama-arastirma",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "content-research-writer",
@@ -19959,7 +20370,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -19972,7 +20383,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Blog, makale, bülten gibi içerikleri kullanıcıyla birlikte yazar: taslak/ana hat oluşturma, araştırma ve kaynak gösterme, giriş (hook) iyileştirme, bölüm bölüm geri bildirim ve kullanıcının üslubunu koruma adımlarını tarif eder.",
+      "kullanim_alani": "Kaynaklı blog yazısı, makale, vaka çalışması, düşünce liderliği içeriği.",
+      "kullanma": "Kurumsal teknik/karar dokümanı (doc-coauthoring); kısa sosyal medya metni; dosya formatı üretimi.",
+      "teknoloji": [
+        "markdown",
+        "web-arama"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil). İçerik yazımı için en derli toplu süreç; ana hat şablonu ve kaynak formatı faydalı. Lisans belirtilmemiş; araştırma adımı agent'ın web aracına bağlı.",
+      "ortusme_grubu": "icerik-yazimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "de-ai-ify",
@@ -20029,7 +20463,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -20042,7 +20476,29 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Metindeki yapay zekâ kokan kalıpları (aşırı geçiş kelimeleri, klişeler, kaçamak ifadeler, kurumsal jargon, üçlü sıralamalar) temizleyip doğal insan sesine çevirir; '-HUMAN' ekli kopya ve değişiklik listesi üretir.",
+      "kullanim_alani": "Yayın öncesi metni insansılaştırmak; AI tonu taşıyan blog/e-posta/sosyal medya metinleri.",
+      "kullanma": "Türkçe metinde kalıp listesi doğrudan uymaz (İngilizce odaklı); teknik doküman doğruluğu kontrolü için değil.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "icerik-pazarlama",
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Çok küçük (2 KB), net kalıp listesi ve somut önce/sonra örneği; MIT. Her yazı skilline tamamlayıcı son rötuş.",
+      "ortusme_grubu": "icerik-yazimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "developer-growth-analysis",
@@ -20105,7 +20561,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -20118,7 +20574,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Son 24-48 saatlik Claude Code sohbet geçmişini (~/.claude/history.jsonl) okuyup kodlama kalıplarını, eksik alanları ve gelişim önerilerini çıkarır; HackerNews'ten ilgili kaynak toplar ve raporu Rube MCP üzerinden kullanıcının Slack DM'ine gönderir.",
+      "kullanim_alani": "Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi.",
+      "kullanma": "Codex'te doğrudan çalışmaz: geçmiş ~/.codex/sessions altında farklı biçimde tutulur; Codex'te kullanılacaksa okunacak dosya yolu ve JSONL alanları elle uyarlanmalı. Rube/Composio Slack bağlantısı yoksa son adımı atla, raporu dosyaya yaz. Gizli veri içeren geçmişi dışarı göndermek istenmiyorsa kullanma.",
+      "teknoloji": [
+        "claude-code",
+        "mcp",
+        "slack"
+      ],
+      "gerekli_paketler": [
+        "Rube MCP (Composio) — Slack gönderimi için"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Claude Code geçmiş dosyasına ve Composio Rube MCP'ye sıkı bağlı; sohbet geçmişini dış servise gönderiyor. Kategorisi de içerikten çok kişisel geliştirici analizi.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "domain-name-brainstormer",
@@ -20175,7 +20651,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -20188,7 +20664,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Proje için yaratıcı alan adı fikirleri üretir ve .com/.io/.dev/.ai gibi uzantılarda müsaitlik kontrolü yapılmasını tarif eder; marka açısından neden iyi olduklarını açıklar ve TLD rehberi verir.",
+      "kullanim_alani": "Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası.",
+      "kullanma": "Müsaitlik kontrolü için gerçek whois/DNS aracı yoksa sonuçlar tahmin olur — kayıt kararını buna dayandırma.",
+      "teknoloji": [
+        "web-arama"
+      ],
+      "gerekli_paketler": [
+        "whois/DNS sorgu aracı (önerilir)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "marka-sunum"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. İsim önerisi kısmı makul ama müsaitlik kontrolünün nasıl yapılacağı tanımsız; örnek çıktı uydurma 'available' işaretleri içeriyor.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "geo-fundamentals",
@@ -20248,7 +20745,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -20261,7 +20758,31 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Generative Engine Optimization: içeriğin ChatGPT, Claude, Perplexity, Gemini gibi AI arama motorlarında kaynak gösterilmesi için ilkeler, alıntılanan içerik türleri, kontrol listesi, AI tarayıcı (user-agent) erişimi ve ölçüm. Sayfaları denetleyen geo_checker.py betiği içerir.",
+      "kullanim_alani": "Web sitesi/blog içeriğini AI aramada görünür kılmak; llms.txt, FAQ şeması, AI bot erişim kararı.",
+      "kullanma": "Klasik Google SEO için seo-fundamentals; uygulama içi metinler için gereksiz. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "html",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (geo_checker.py)"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Kısa ve tablolu; ağırlık yüzdeleri gibi bazı rakamlar kaynaksız tahmin. seo-fundamentals ile birlikte kullanılır.",
+      "ortusme_grubu": "seo-geo",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "i18n-localization",
@@ -20323,7 +20844,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -20336,7 +20857,34 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Uluslararasılaştırma ve yerelleştirme kalıpları: react-i18next, next-intl, gettext örnekleri, locale dosya yapısı, çoğul/tarih/sayı biçimleri, RTL desteği ve kontrol listesi. Kodda sabit metinleri bulan i18n_checker.py betiği içerir.",
+      "kullanim_alani": "Uygulamaya çok dil desteği eklemek, sabit metinleri ayıklamak, Türkçe/Arapça (RTL) yerelleştirme.",
+      "kullanma": "Metin çevirisinin kendisi (içerik yazımı) için değil; tek dilli küçük projelerde. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "react-i18next veya next-intl (projeye göre)",
+        "python3 (i18n_checker.py)"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "dashboard-saas",
+        "mobil-uygulama"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve doğru temel bilgiler + betik. Aslında yazılım geliştirme konusu; kategori incelemesi b-yazilim oturumunda ele alındığı için burada bırakıldı (frontend-muhendis rolüne uygun).",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "internal-comms",
@@ -20393,7 +20941,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -20406,7 +20954,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Şirket içi iletişim metinleri yazar: 3P güncellemeleri (Progress/Plans/Problems), şirket bülteni, SSS cevapları, durum raporu, liderlik ve proje güncellemesi, olay raporu. Türüne göre examples/ altındaki yönerge dosyasını yükler.",
+      "kullanim_alani": "Haftalık durum güncellemesi, yönetime rapor, olay sonrası bilgilendirme, bülten.",
+      "kullanma": "Dışa dönük pazarlama metni ya da uzun teknik doküman için.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic resmi; küçük SKILL.md, türe göre ayrı örnek dosyalar. ComposioHQ kopyası birebir aynı içerik; birincil resmi kaynak.",
+      "ortusme_grubu": "ic-iletisim",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "internal-comms@composiohq",
@@ -20463,7 +21031,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -20476,7 +21044,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic internal-comms skill'inin ComposioHQ'daki birebir kopyası: 3P güncellemesi, bülten, SSS ve genel iç iletişim yönergeleri.",
+      "kullanim_alani": "Resmi sürüm kullanılamıyorsa yedek.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/internal-comms ile aynı içerik.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Dosyalar resmi sürümle aynı; ek değer yok.",
+      "ortusme_grubu": "ic-iletisim",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "lead-research-assistant",
@@ -20533,7 +21119,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -20546,7 +21132,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Ürünü/kod tabanını analiz edip ideal müşteri profiline uyan şirketleri bulmayı, uygunluk puanıyla sıralamayı ve kişiselleştirilmiş iletişim stratejisi önermeyi tarif eder.",
+      "kullanim_alani": "B2B satış/iş geliştirme için potansiyel müşteri listesi ve yaklaşım önerisi.",
+      "kullanma": "Web araması yoksa (şirket listesi uydurulabilir); kişisel veri toplama/zenginleştirme hukuki açıdan sorunluysa.",
+      "teknoloji": [
+        "web-arama"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.",
+      "ortusme_grubu": "pazarlama-arastirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "meeting-insights-analyzer",
@@ -20603,7 +21205,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -20616,7 +21218,23 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Toplantı transkriptlerinden iletişim kalıplarını çıkarır: çatışmadan kaçınma, konuşma oranı, dolgu kelimeler, dinleme ve kolaylaştırma; zaman damgalı örneklerle eyleme dönük geri bildirim ve zaman içinde trend karşılaştırması verir.",
+      "kullanim_alani": "Liderlik/iletişim koçluğu, performans değerlendirmesine hazırlık, ekip toplantı analizi (transkript mevcutsa).",
+      "kullanma": "Ses kaydı tek başına varsa önce STT gerekir (speech-to-text); toplantı özeti/aksiyon listesi çıkarmak tek amaçsa gereğinden ağır.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Analiz boyutları ve geri bildirim formatı iyi tanımlı; dar kullanım alanı.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "raffle-winner-picker",
@@ -20673,7 +21291,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -20686,7 +21304,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Liste, CSV/Excel ya da Google Sheets'ten çekiliş/yarışma kazananını rastgele seçer; çoklu kazanan, tekrar engelleme, ağırlıklı seçim ve yedek kazanan seçeneklerini tarif eder.",
+      "kullanim_alani": "Sosyal medya çekilişi, etkinlik çekilişi, rastgele katılımcı seçimi.",
+      "kullanma": "Yasal denetim gerektiren çekilişlerde (noter vb.) tek kanıt olarak; Google Sheets erişimi yoksa.",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python secrets modülü (önerilir)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Betik yok; 'kriptografik rastgele' iddiası agent'ın yazacağı koda bağlı. Kategoriye de tam uymuyor (araç).",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "seo-fundamentals",
@@ -20743,7 +21381,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -20756,7 +21394,33 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "SEO temelleri: E-E-A-T, Core Web Vitals hedefleri, teknik SEO (sitemap, robots, canonical), sayfa öğeleri, schema türleri, AI içerik kuralları ve ölçüm. HTML/JSX sayfalarını denetleyen seo_checker.py betiği içerir.",
+      "kullanim_alani": "Web sitesi yayın öncesi SEO denetimi; meta etiketleri, başlık hiyerarşisi, schema ekleme.",
+      "kullanma": "AI arama görünürlüğü için geo-fundamentals; uygulama içi (giriş gerektiren) sayfalarda. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "html",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (seo_checker.py)"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "icerik-pazarlama",
+        "frontend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil). Kısa, güncel metrikler (INP) ve betikli denetim. Derinlik sınırlı ama kontrol listesi olarak yeterli.",
+      "ortusme_grubu": "seo-geo",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "tailored-resume-generator",
@@ -20816,7 +21480,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -20829,7 +21493,25 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "İş ilanını analiz edip anahtar gereksinimleri çıkarır ve adayın deneyimini buna göre yeniden düzenleyen, ATS uyumlu, ilana özel özgeçmiş üretir; kariyer geçişi senaryosu ve eksik/iyileştirme önerileri içerir.",
+      "kullanim_alani": "Belirli bir iş başvurusu için CV uyarlama.",
+      "kullanma": "Özgeçmişte olmayan deneyimi uydurmak için asla; tasarımlı PDF/Word çıktısı gerekiyorsa docx/pdf ile birlikte kullan.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Adımlar ve örnek çıktı makul; kişisel kullanım için uygun, proje rollerine eklenmez.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "twitter-algorithm-optimizer",
@@ -20886,7 +21568,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -20899,7 +21581,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Twitter/X'in açık kaynak öneri algoritması bileşenlerine (Real-graph, SimClusters, TwHIN, Tweepcred) dayanarak tweet taslaklarını analiz edip etkileşim ve erişim için yeniden yazar; olumsuz sinyallerden kaçınma taktikleri verir.",
+      "kullanim_alani": "X/Twitter gönderisi optimizasyonu, içerik stratejisi.",
+      "kullanma": "Diğer platformlar (LinkedIn, Instagram) için; algoritma 2023 açık kaynak sürümüne dayanıyor, güncel davranış farklı olabilir.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Algoritma kavramlarını somut yazım taktiklerine bağlıyor; güncellik riski var. Lisans AGPL-3.0 olarak beyan edilmiş.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "add-frontmatter",
@@ -20958,7 +21660,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -20971,7 +21673,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian notlarını (tek dosya ya da klasör) okuyup not türüne göre (toplantı, günlük, referans, proje) YAML frontmatter özellikleri ekler veya normalleştirir; mevcut geçerli özellikleri korur, adlandırma ve değer tipi kurallarını uygular.",
+      "kullanim_alani": "Obsidian kasasında etiket/özellik düzeni kurmak, Bases görünümlerine veri hazırlamak.",
+      "kullanma": "Obsidian dışı Markdown projelerinde (Jekyll/Hugo frontmatter şeması farklı).",
+      "teknoloji": [
+        "obsidian",
+        "markdown",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Not türüne göre hazır özellik şablonları ve kalite kontrolleri net; MIT, küçük (4 KB).",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "daily-review",
@@ -21028,7 +21748,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -21041,7 +21761,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Gün sonu değerlendirmesi: bugün değişen/oluşan notları bulur, ilerlemeyi, takılan işleri ve içgörüleri çıkarır, yarının ilk 3 önceliğini ve açık döngüleri içeren bir günlük not yazar.",
+      "kullanim_alani": "Obsidian/Markdown kasasında günlük kapanış ve ertesi gün planı.",
+      "kullanma": "Not kasası yoksa; ekip durum raporu için internal-comms daha uygun.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve kullanışlı şablon; weekly-synthesis ile aynı ailede (gün/hafta).",
+      "ortusme_grubu": "periyodik-degerlendirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "download-attachment",
@@ -21101,7 +21838,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -21114,7 +21851,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Verilen URL'lerden dosyaları Obsidian kasasının 05_Attachments klasörüne indirir (yalnızca http/https, dosya adı temizleme, zaman aşımı), içeriğe göre anlamlı adlandırır, dizini günceller ve git commit atar.",
+      "kullanim_alani": "Claudesidian düzenindeki kasaya web'den PDF/görsel ek kaydetmek.",
+      "kullanma": "Claudesidian klasör düzeni (05_Attachments, organize-attachments) yoksa yolları uyarlamadan; güvenilmeyen kaynaklardan dosya indirmek için.",
+      "teknoloji": [
+        "bash",
+        "obsidian"
+      ],
+      "gerekli_paketler": [
+        "curl veya wget",
+        "pdftotext (poppler)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (dar). URL doğrulama ve yol temizleme gibi güvenlik adımları iyi; claudesidian'a özgü klasör adları ve komutlara bağımlı.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "file-organizer",
@@ -21171,7 +21928,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -21184,7 +21941,23 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bilgisayardaki klasörleri (İndirilenler, Belgeler, projeler) analiz eder; kopya dosyaları bulur, mantıklı klasör yapısı önerir ve kullanıcı onayıyla taşıma/yeniden adlandırma yapar.",
+      "kullanim_alani": "Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik.",
+      "kullanma": "Onay almadan toplu taşıma/silme gerektiğinde (geri alınamaz işler); Obsidian kasası için inbox-processor daha uygun.",
+      "teknoloji": [
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Onay isteyen adımlar ve örnekler makul; betik yok, kopya tespiti agent'ın komutlarına bağlı. Lisans belirtilmemiş.",
+      "ortusme_grubu": "dosya-duzenleme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "inbox-processor",
@@ -21241,7 +22014,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -21254,7 +22027,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kasanın 00_Inbox klasöründeki notları PARA yöntemine göre (Projects/Areas/Resources/Archive/Sil) sınıflandırır; her not için hedef klasör, gerekçe ve ilişkili notlar içeren bir eylem planı sunar.",
+      "kullanim_alani": "PARA düzenli Obsidian kasasında gelen kutusu temizliği.",
+      "kullanma": "PARA klasör yapısı yoksa (klasör adları uyarlanmalı); genel dosya düzeni için file-organizer.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve net sınıflandırma kuralları; claudesidian klasör adlarına bağlı.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "init-bootstrap",
@@ -21316,7 +22106,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 67,
         "not": "B",
@@ -21329,7 +22119,28 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Claudesidian kasası için etkileşimli kurulum sihirbazı: klasör adı, bağımlılık kurulumu (pnpm/npm), git durumu, mevcut kasa yapısı ve çalışma alışkanlıkları hakkında sorular sorup kişiselleştirilmiş CLAUDE.md üretir.",
+      "kullanim_alani": "claudesidian şablonuyla yeni Obsidian kasası kurarken ilk yapılandırma.",
+      "kullanma": "claudesidian dışındaki projelerde. Codex'te: allowed-tools (Task, MultiEdit) Claude Code'a özgü; üretilen dosyayı CLAUDE.md yerine AGENTS.md olarak yazdırmak gerekir.",
+      "teknoloji": [
+        "obsidian",
+        "node",
+        "git"
+      ],
+      "gerekli_paketler": [
+        "pnpm veya npm",
+        "git"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV (şablona özgü). Ayrıntılı ama 30 KB ve tamamen claudesidian deposuna bağlı; git origin silme gibi geri alınması zor adımlar içeriyor.",
+      "ortusme_grubu": "claudesidian-kurulum",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "install-claudesidian-command",
@@ -21388,7 +22199,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 65,
         "not": "B",
@@ -21401,7 +22212,26 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kabuğa (bash/zsh/fish) `claudesidian` adlı bir alias/fonksiyon ekler: kasa klasörüne geçip `claude --resume` ile oturumu sürdürür ya da yeni oturum açar; yol kaçışlama ve güvenlik notları içerir.",
+      "kullanim_alani": "claudesidian kasasını terminalden tek komutla açmak.",
+      "kullanma": "Codex kullanıcıları için olduğu gibi kullanma: komut `claude` CLI'ını çağırıyor; Codex'te alias içindeki komutu `codex resume --last || codex` olarak değiştirerek uyarlanabilir. Kabuk yapılandırma dosyasını değiştirir — onaysız çalıştırma.",
+      "teknoloji": [
+        "bash",
+        "claude-code"
+      ],
+      "gerekli_paketler": [
+        "claude CLI"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. İşini iyi tarif ediyor (fish desteği, özel karakter kaçışı) ama tek amaçlı ve Claude CLI'a bağlı.",
+      "ortusme_grubu": "claudesidian-kurulum",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "invoice-organizer",
@@ -21458,7 +22288,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -21471,7 +22301,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Fatura ve fişleri (PDF, taranmış görsel, e-posta eki) okuyup satıcı, tarih, tutar, fatura no gibi bilgileri çıkarır; `YYYY-AA-GG Satıcı - Fatura - Ürün.pdf` biçiminde yeniden adlandırıp satıcıya/kategoriye/döneme göre klasörler, CSV özet üretir; orijinalleri korur.",
+      "kullanim_alani": "Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama.",
+      "kullanma": "Muhasebe kaydı/vergi beyanı yerine geçmez; OCR doğruluğu kontrol edilmeden finansal karar için kullanma.",
+      "teknoloji": [
+        "python",
+        "pdf"
+      ],
+      "gerekli_paketler": [
+        "pdftotext veya pdfplumber",
+        "OCR aracı (taranmış fişler için)"
+      ],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Adlandırma standardı ve klasör stratejileri iyi; çıkarma için pdf skilliyle birlikte kullanılır. Lisans belirtilmemiş.",
+      "ortusme_grubu": "dosya-duzenleme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "obsidian-bases",
@@ -21531,7 +22383,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 70,
         "not": "B",
@@ -21544,7 +22396,24 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian Bases (.base) dosyalarını oluşturur ve düzenler: tam YAML şeması, global/görünüm filtreleri, formül sözdizimi ve fonksiyon başvurusu, tablo/kart/liste/harita görünümleri, özet formülleri.",
+      "kullanim_alani": "Obsidian'da notlardan veritabanı benzeri tablo/kart görünümü kurmak.",
+      "kullanma": "Obsidian Bases kullanılmıyorsa (Dataview eklentisi farklı sözdizimi kullanır).",
+      "teknoloji": [
+        "obsidian",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Şema ve fonksiyon başvurusu eksiksiz ve örnekli (kaynak kepano/obsidian-skills içeriğiyle uyumlu); MIT.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "obsidian-markdown",
@@ -21609,7 +22478,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -21622,7 +22491,24 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Obsidian Flavored Markdown yazımı: wikilink, gömme (embed), callout, özellikler (properties), etiketler, blok referansları, LaTeX matematik ve diğer Obsidian'a özgü sözdizimi; örneklerle eksiksiz başvuru.",
+      "kullanim_alani": "Obsidian kasasına not yazan/düzenleyen her iş; diğer Obsidian skillerinin temeli.",
+      "kullanma": "Obsidian dışında (GitHub/GFM) Markdown yazarken wikilink ve callout kullanımı uyumsuz olur.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Obsidian sözdiziminin en eksiksiz başvurusu; diğer kasa skilleri buna yaslanır.",
+      "ortusme_grubu": "obsidian-kasasi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "research-assistant",
@@ -21679,7 +22565,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -21692,7 +22578,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bir konuyu kasadaki notlar üzerinden araştırır: ilgili notları bulup okur, temaları, çelişkileri ve boşlukları çıkarır, wikilink'li bir araştırma özeti ve sonraki adımlar yazar.",
+      "kullanim_alani": "Kasada bir konu hakkında birikmiş bilgiyi sentezlemek.",
+      "kullanma": "Web araştırması gerekiyorsa (agent-reach, content-research-writer); kasa yoksa.",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa, net çıktı yapısı; çelişkileri öne çıkarması değerli.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "thinking-partner",
@@ -21749,7 +22652,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -21762,7 +22665,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Karmaşık bir problemi çözüme koşmadan sorularla birlikte düşünme modu: önce sorar, varsayımları yüzeye çıkarır, içgörüleri kaydeder, kasadaki ilgili notlarla bağlantı kurar ve periyodik özet çıkarır.",
+      "kullanim_alani": "Fikir keşfi, sesli düşünme, karar öncesi problem çerçeveleme.",
+      "kullanma": "Kullanıcı doğrudan çözüm/uygulama istiyorsa; yapılandırılmış spec gerekiyorsa (planlama skilleri).",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Çok kısa davranış tarifi; brainstorming/idea-refine ile benzer ama 'çözüm üretme' yasağı ayırt edici.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "upgrade",
@@ -21824,7 +22743,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 65,
         "not": "B",
@@ -21837,7 +22756,28 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "claudesidian kurulumunu GitHub'daki son sürüme yükseltir: sürüm kontrolü, yedek, upstream çekme, dosya dosya anlamsal karşılaştırma ile kullanıcı özelleştirmelerini koruyarak birleştirme, .agents/skills sembolik bağlantı hijyeni ve eski düzenden geçiş.",
+      "kullanim_alani": "claudesidian tabanlı kasayı güncellemek.",
+      "kullanma": "claudesidian dışı her yerde. Codex'te: allowed-tools (WebFetch, MultiEdit) Claude Code'a özgü; .claude/skills sembolik bağlantı adımları Codex için .agents/skills kanonik konumuyla zaten uyumlu, yalnızca .claude ve .pi bağlantı adımları atlanabilir.",
+      "teknoloji": [
+        "git",
+        "bash",
+        "obsidian"
+      ],
+      "gerekli_paketler": [
+        "git",
+        "curl"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV (şablona özgü). Yedek ve çatışma çözüm felsefesi iyi düşünülmüş ama sadece claudesidian'a yarar.",
+      "ortusme_grubu": "claudesidian-kurulum",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "weekly-synthesis",
@@ -21894,7 +22834,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -21907,7 +22847,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Haftanın notlarını ve çalışmalarını tarayıp tekrar eden temaları, içgörüleri, proje ilerlemesini, ortaya çıkan soruları, enerji denetimini ve not bağlantılarını içeren haftalık sentez notu yazar.",
+      "kullanim_alani": "Haftalık değerlendirme, bir sonraki haftanın planı.",
+      "kullanma": "Kasa/not geçmişi yoksa; ekip haftalık raporu için internal-comms (3P).",
+      "teknoloji": [
+        "obsidian",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil). Haftalık şablon günlükten daha kapsamlı; daily-review ile birlikte kullanılır.",
+      "ortusme_grubu": "periyodik-degerlendirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "claude-api",
@@ -21972,7 +22929,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 76,
         "not": "B",
@@ -21985,12 +22942,43 @@
           "bağlam yükü 5/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prompt caching, compaction, MCP, Managed Agents, Files/Skills API. Dil algılayıp (Python, TS, Go, Java, C#, PHP, Ruby, cURL) ilgili klasörü okutur; migrate, prompt-audit, upgrade, cost-optimize, build-eval, hillclimb alt komutları içerir.",
+      "kullanim_alani": "Claude çağıran her kod: yeni LLM özelliği, agent/araç tanımı, model geçişi, maliyet optimizasyonu, eval kurma, SDK sürüm yükseltme.",
+      "kullanma": "Projede başka sağlayıcı (OpenAI, Gemini, Ollama…) kullanılıyorsa — skill bunu kendisi kontrol eder. SKILL.md 103 KB: rol bütçesinin büyük kısmını yer; sadece Claude entegrasyonu yapan agent'a ver. Codex'te: WebFetch gibi Claude araç adları geçiyor; Codex'in web/arama aracıyla aynı adımlar uygulanır, içerik ve kod kalıpları aynen geçerli.",
+      "teknoloji": [
+        "anthropic-sdk",
+        "python",
+        "typescript",
+        "go",
+        "java",
+        "csharp",
+        "php",
+        "ruby",
+        "curl"
+      ],
+      "gerekli_paketler": [
+        "anthropic (pip) veya @anthropic-ai/sdk (npm) — dile göre resmi SDK",
+        "ANTHROPIC_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic resmi, sürekli güncel (model listesi 2026-10-06), API kayması uyarı tablosu ve dil başına doğrulanmış kalıplar. Tek eksi: SKILL.md 103 KB, klasör 2.2 MB. claude-opus-4-5-migration'ın işini 'migrate' alt komutu güncel modellerle yapıyor.",
+      "ortusme_grubu": "claude-api-gecis",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "claude-opus-4-5-migration",
       "ad": "claude-opus-4-5-migration",
-      "durum": "tercih",
+      "durum": "alternatif",
       "kategori": "d-ai-otomasyon/01-claude-api-mcp",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/01-claude-api-mcp/claude-opus-4-5-migration",
@@ -22044,7 +23032,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -22057,7 +23045,26 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Sonnet 4.0/4.5 ve Opus 4.1'den Opus 4.5'e tek seferlik geçiş: platforma göre (Anthropic, Bedrock, Vertex, Azure) model dizgelerini değiştirir, desteklenmeyen beta başlığını kaldırır, effort parametresi ekler ve Opus 4.5 davranış farklarına göre (araç aşırı tetikleme, aşırı mühendislik) istem ayarı önerir.",
+      "kullanim_alani": "Yalnızca hedef özellikle Opus 4.5 ise (eski kod tabanlarını tam bu sürüme sabitlemek).",
+      "kullanma": "Güncel modellere (Opus 5.5, Sonnet 5.5, Fable 5.1) geçişte — claude-api 'migrate' alt komutu kullanılmalı. Haiku 4.5 geçişi kapsam dışı.",
+      "teknoloji": [
+        "anthropic-sdk"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. İyi yazılmış ama eskidi: hedef model Opus 4.5 ve 1M bağlam notu artık geçerli değil. Aynı iş claude-api/shared/model-migration.md'de güncel.",
+      "ortusme_grubu": "claude-api-gecis",
+      "ortusme_rolu": "alternatif",
+      "durum_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "connect",
@@ -22119,7 +23126,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -22132,7 +23139,33 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Composio SDK (Python/TS) ile agent'ı Gmail, Slack, GitHub, Notion gibi 1000+ uygulamaya bağlar; e-posta gönderme, issue açma, mesaj atma gibi gerçek eylemler yaptırır. API anahtarı, OAuth akışı, framework desteği ve sorun giderme anlatılır.",
+      "kullanim_alani": "Kendi uygulamasında/agent'ında harici servislere eylem yaptırmak isteyen projeler (Composio kullanmayı kabul ederek).",
+      "kullanma": "Üçüncü taraf aracı servise (Composio) veri/OAuth yetkisi vermek istenmiyorsa; tek bir servis için resmi MCP sunucusu varsa. Gerçek e-posta/mesaj gönderir — onaysız çalıştırma.",
+      "teknoloji": [
+        "composio",
+        "python",
+        "typescript",
+        "oauth"
+      ],
+      "gerekli_paketler": [
+        "composio (pip) veya @composio/core (npm)",
+        "COMPOSIO_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil, Composio grubunda). Kurulum ve kod örnekleri kısa ve çalışır; pazarlama dili yoğun. Araçtan bağımsız (SDK) olduğu için connect-apps'e tercih edildi.",
+      "ortusme_grubu": "composio-baglanti",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "connect-apps",
@@ -22191,7 +23224,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -22204,7 +23237,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code'a `/plugin install composio-toolrouter` ile Composio Tool Router eklentisini kurup 1000+ uygulamada (Gmail, Slack, GitHub, Notion) eylem yaptırmayı anlatan hızlı başlangıç.",
+      "kullanim_alani": "Claude Code kullanıcısının kendi oturumundan harici uygulamalara eylem yaptırması.",
+      "kullanma": "Codex'te plugin komutları yok: Composio'nun MCP sunucusunu `~/.codex/config.toml` içine `[mcp_servers.composio]` olarak ekle ya da SDK tabanlı connect skill'ini kullan. Uygulama koduna entegrasyon için connect.",
+      "teknoloji": [
+        "composio",
+        "claude-code",
+        "mcp"
+      ],
+      "gerekli_paketler": [
+        "composio-toolrouter Claude Code eklentisi",
+        "Composio API anahtarı"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF. Çok kısa bir kurulum tarifi; skill'den çok eklenti reklamı. Claude Code eklenti sistemine bağlı.",
+      "ortusme_grubu": "composio-baglanti",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "langsmith-fetch",
@@ -22265,7 +23319,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -22278,7 +23332,32 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, belirli iz derin incelemesi, hata tespiti, bellek işlemleri, araç çağrıları, süre ve token kullanımını raporlar.",
+      "kullanim_alani": "LangSmith izlemesi açık LangChain/LangGraph agent projelerinde hata ayıklama ve performans analizi.",
+      "kullanma": "LangChain kullanmayan projelerde (Claude Agent SDK, ham API); LangSmith hesabı/API anahtarı yoksa.",
+      "teknoloji": [
+        "langchain",
+        "langgraph",
+        "langsmith",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "langsmith-fetch (pip)",
+        "LANGSMITH_API_KEY",
+        "LANGSMITH_PROJECT"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (dar). İş akışları ve komutlar somut; yalnızca LangSmith ekosistemine yarar. Lisans belirtilmemiş.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-builder",
@@ -22339,7 +23418,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -22352,7 +23431,33 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti oluşturma; değerlendirmeyi çalıştıran evaluation.py betiği içerir.",
+      "kullanim_alani": "Harici bir API/servisi agent'lara açan yeni MCP sunucusu yazmak ve değerlendirmek.",
+      "kullanma": "Mevcut bir MCP sunucusunu Claude Code eklentisine bağlamak (mcp-integration); protokol sürüm geçişi/güvenlik denetimi ağırlıklı işler (mcp-builder@vudovn daha güncel).",
+      "teknoloji": [
+        "mcp",
+        "python",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm)",
+        "@modelcontextprotocol/inspector",
+        "anthropic (eval betiği için)"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic resmi, ComposioHQ kopyasından daha güncel ve kısa; dil rehberleri ve eval betiği tek pakette. vudovn sürümü spec/güvenlik tarafını tamamlıyor; birincil bu çünkü uçtan uca iş akışı ve değerlendirme aracı içeriyor.",
+      "ortusme_grubu": "mcp-sunucu-gelistirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-builder@composiohq",
@@ -22414,7 +23519,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -22427,7 +23532,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve değerlendirme adımları.",
+      "kullanim_alani": "Eski sürümdeki daha ayrıntılı 'ajan merkezli tasarım ilkeleri' bölümü özellikle istenirse.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/mcp-builder güncel ve daha az bağlam tüketir.",
+      "teknoloji": [
+        "mcp",
+        "python",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm)"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Güncel sürümün eski kopyası (350 satır fark); tasarım ilkeleri bölümü daha uzun ama 'iş akışı araçları' önerisi güncelde dengelenmiş.",
+      "ortusme_grubu": "mcp-sunucu-gelistirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-builder@vudovn",
@@ -22484,7 +23611,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -22497,7 +23624,28 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/çıktı şemaları, $ref güvenliği, araç/kaynak/istem tasarımı, güvenlik gereksinimleri, eklentiler (Tasks, Skills over MCP, MCP Apps), eski sürümlerden geçiş ve test matrisi.",
+      "kullanim_alani": "MCP sunucu/istemcisini güncel spesifikasyona taşımak, güvenlik/birlikte çalışabilirlik incelemesi, şema tasarımı.",
+      "kullanma": "Sıfırdan sunucu yazıp değerlendirme seti kurmak için anthropics/mcp-builder ile birlikte kullan (tek başına iş akışı/kod iskeleti vermez). allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "mcp",
+        "json-schema"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "ai-entegrasyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Üç sürüm içinde en güncel spesifikasyon bilgisi ve güvenlik kontrol listesi; MIT, 10 KB. İş akışı ve eval aracı olmadığı için birincil değil.",
+      "ortusme_grubu": "mcp-sunucu-gelistirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "mcp-integration",
@@ -22561,7 +23709,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -22574,7 +23722,29 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tipleri, ${CLAUDE_PLUGIN_ROOT} ve ortam değişkeni genişletme, MCP araç adlandırması (mcp__eklenti__sunucu__araç), yaşam döngüsü ve OAuth/token kimlik doğrulama kalıpları.",
+      "kullanim_alani": "Bir Claude Code eklentisine hazır MCP sunucusu eklemek/yapılandırmak.",
+      "kullanma": "MCP sunucusunun kendisini yazmak için (mcp-builder). Codex'te eklenti paketleme yok: MCP sunucusu `~/.codex/config.toml` dosyasında `[mcp_servers.<ad>]` tablosuyla (command, args, env ya da url) tanımlanır; .mcp.json ve ${CLAUDE_PLUGIN_ROOT} kullanılmaz. Sunucu tipleri, kimlik doğrulama ve güvenlik bölümleri Codex'te de geçerli, plugin.json kısımlarını atla.",
+      "teknoloji": [
+        "mcp",
+        "claude-code",
+        "json"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama"
+      ],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir.",
+      "ortusme_grubu": "claude-plugin-mcp",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "batch-operations",
@@ -22635,7 +23805,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -22648,7 +23818,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Birçok dosyaya aynı değişikliği güvenle uygulama protokolü: deseni tanımla, önce grep ile etkilenen dosyaları önizle, toplu uygula, sonra doğrula (sayım, derleme, test). Yeniden adlandırma, import ekleme, sürüm güncelleme gibi yaygın kalıplar ve güvenlik kuralları içerir.",
+      "kullanim_alani": "Kod tabanında desen tabanlı toplu değişiklik: fonksiyon yeniden adlandırma, API geçişi, sürüm numarası güncelleme.",
+      "kullanma": "Tek dosya düzenlemesi ya da her dosyada ayrı yargı gerektiren değişiklik (alt-agent'lara böl). allowed-tools/effort frontmatter alanları Claude Code'a özgü; Codex yok sayar, protokol aynen geçerli.",
+      "teknoloji": [
+        "bash",
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "agent-orkestra"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve doğru 'önizle → uygula → doğrula' disiplini; içerik genel bilgi düzeyinde. Aslında yazılım geliştirme konusu ama alt-agent'a bölme kararıyla bağlantılı.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "behavioral-modes",
@@ -22708,7 +23899,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -22721,7 +23912,21 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Görev türüne göre yedi çalışma modu tanımlar (brainstorm, implement, debug, review, teach, ship, orchestrate); her mod için davranış kuralları ve çıktı biçimi verir.",
+      "kullanim_alani": "ag-kit ailesini kuran projelerde agent'ın tonunu/yaklaşımını göreve göre değiştirmek.",
+      "kullanma": "Diğer ailelerle (superpowers, agent-skills) birlikte — süreç skilleri zaten bu davranışları tanımlıyor ve çakışır; IMPLEMENT modu kütüphanede olmayan 'clean-code' skill'ine atıf yapıyor. allowed-tools Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Genel istem metni; ag-kit'in diğer skillerine bağımlı, ek değeri düşük.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "context-compression",
@@ -22782,7 +23987,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -22795,7 +24000,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Uzun oturumlarda bağlamı sıkıştırma: büyük araç çıktılarını anlamsal özete indirme (mikro), biten iş aşamalarını özetleme ve oturum kontrol noktası yazma; kararları ve değişen dosyaları koruma protokolü.",
+      "kullanim_alani": "20+ turluk oturumlar, agent tekrar etmeye başladığında, iş aşaması değişiminde.",
+      "kullanma": "Kısa oturumlarda; harness otomatik sıkıştırma yapıyorsa (Claude Code/Codex compaction) çoğu zaman gereksiz — yalnızca elle kontrol noktası yazımı için. allowed-tools/effort Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "agent-orkestra"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Üç seviyeli sıkıştırma ve kontrol noktası şablonu kullanışlı; token kazancı rakamları tahmini.",
+      "ortusme_grubu": "baglam-yonetimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "context-engineering",
@@ -22863,7 +24084,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -22876,7 +24097,28 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Agent'a doğru bağlamı doğru zamanda verme: kalıcıdan geçiciye bağlam hiyerarşisi (kural dosyaları CLAUDE.md/AGENTS.md, spec, ilgili kaynak dosyalar, hata çıktısı, konuşma), yeniden başlatılabilir oturum sınırları ve bağlam paketleme stratejileri.",
+      "kullanim_alani": "Yeni oturum/proje kurulumu, kural dosyası yazımı, agent çıktı kalitesi düştüğünde, kod tabanının farklı bölümüne geçerken.",
+      "kullanma": "Tek seferlik küçük sorularda gereksiz.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "agent-orkestra"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil.",
+      "ortusme_grubu": "baglam-yonetimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "coordinator-mode",
@@ -22936,7 +24178,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -22949,7 +24191,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Koordinatör olarak çok agent'lı orkestrasyon: görevi ayrıştır, sınıflandır (araştırma/uygulama/doğrulama), okuma işlerini paralel yazma işlerini sıralı dağıt, izle, sentezle ve doğrula. 'Anlamayı devretme' kuralı, işçi istem şablonları ve fork kuralları içerir.",
+      "kullanim_alani": "Birden çok alanı kapsayan büyük görevde agent'ın kendisi kod yazmadan işçi alt-agent'ları yönetmesi.",
+      "kullanma": "Tek alanlı işlerde; yazılı bir uygulama planı varsa subagent-driven-development daha disiplinli. allowed-tools içinde Claude Code'un 'Agent' aracı geçiyor; Codex'te alt-agent desteği olan sürümde aynı akış, yoksa işçi görevleri ayrı Codex oturumları/`codex exec` çağrılarıyla çalıştırılır.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. İşçi istemi yazma rehberi ve eşzamanlılık kuralları güçlü; ama plan tabanlı inceleme döngüsü yok. Orkestrasyon grubunda birincil subagent-driven-development.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "diagnosing-superpowers",
@@ -23008,7 +24266,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -23021,7 +24279,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bir superpowers oturumu kötü gittiğinde (tekrar eden iş, yok sayılan plan, tetiklenmeyen skill, pahalılık) diskteki transkriptleri okuyup kanıta dayalı rapor çıkarır; her bulgu path:line ile alıntılanır. Oturum bulma, gizli veri karartma ve GitHub issue paketi rehberleri içerir.",
+      "kullanim_alani": "superpowers skill ailesiyle çalışan oturumların neden yanlış gittiğini incelemek, bakımcılara hata raporu hazırlamak.",
+      "kullanma": "superpowers kullanılmıyorsa; genel kod hata ayıklaması için (systematic-debugging).",
+      "teknoloji": [
+        "bash",
+        "jsonl"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (dar). Kanıt disiplini ve redaksiyon politikası örnek alınacak düzeyde; çok harness'li (Claude Code, Codex vb.) oturum keşfi var. Yalnızca superpowers kullanıcıları için.",
+      "ortusme_grubu": "superpowers-ailesi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "discernment-nudge",
@@ -23080,7 +24355,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -23093,7 +24368,25 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kullanıcının üzerine karar vereceği önemli bir cevap ya da taslaktan sonra, cevaptaki belirli noktalara bağlı 2-3 kısa takip sorusu ekler: önemli olguları doğrulama, varsayımları sorgulama, eksik bağlamı fark etme. Konuşma başına en fazla bir kez; basit sorularda, kodda ve yaratıcı yazıda devreye girmez.",
+      "kullanim_alani": "Tavsiye, plan, tahmin, veri yorumu gibi kullanıcının harekete geçeceği çıktılar üreten sohbet/asistan agent'ları.",
+      "kullanma": "Kod yazan agent'larda (skill zaten kapsam dışı sayar); otomatik iş hatlarında (kullanıcı yokken soru eklemek gürültü).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi; ne zaman kullanılmayacağı ve çıktı biçimi çok net. Orkestrasyon değil 'cevap kalitesi' skill'i; rapor/tavsiye üreten rollere opsiyonel.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "dispatching-parallel-agents",
@@ -23152,7 +24445,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -23165,7 +24458,26 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bağımsız 2+ problemi (farklı test dosyaları, alt sistemler) her birine izole bağlamlı ayrı bir agent vererek paralel çözme kalıbı: bağımsız alanları belirle, odaklı görev istemi yaz, paralel dağıt, sonuçları incele ve birleştir.",
+      "kullanim_alani": "Birbirinden bağımsız birden çok hata/araştırma işini paralel yürütmek.",
+      "kullanma": "Görevler ortak durum paylaşıyor ya da aynı dosyalara yazıyorsa; tek kök nedenli hatalarda. Codex'te alt-agent yoksa paralel `codex exec` süreçleri ya da ayrı worktree'lerle uygulanır.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "agent-orkestra",
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). superpowers; kısa (6 KB), karar ağacı ve istem yapısı net. subagent-driven-development ile birlikte kullanılır.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "intelligent-routing",
@@ -23232,7 +24544,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -23245,7 +24557,23 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Her kullanıcı isteğini sessizce analiz edip anahtar kelime/alan/karmaşıklığa göre uygun uzman agent'ı (security-auditor, frontend-specialist, orchestrator…) otomatik seçen yönlendirme kuralları.",
+      "kullanim_alani": "ag-kit'in uzman agent tanımlarının kurulu olduğu projelerde.",
+      "kullanma": "ag-kit agent'ları (security-auditor, backend-specialist vb.) kurulu değilse — bu kütüphanede yoklar, rol sistemi zaten skill-ekle.py ile kuruluyor. 'Her zaman aktif' talimatı bağlamı ve davranışı etkiler. allowed-tools Claude Code'a özgü.",
+      "teknoloji": [],
+      "gerekli_paketler": [
+        "ag-kit agent tanımları"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Var olmayan agent adlarına bağımlı; bu kütüphanenin rol sistemiyle çakışır.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "memory-system",
@@ -23307,7 +24635,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -23320,7 +24648,23 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Oturumlar arası kalıcı bellek: .agents/memory/MEMORY.md indeksi (en fazla 200 satır) ve konu dosyaları (kullanıcı tercihleri, proje kuralları, teknik kararlar, geri bildirim); kaydetme, hatırlama, arama işlemleri ve neyin kaydedilmeyeceği kuralları.",
+      "kullanim_alani": "Harness'in yerleşik belleği olmayan ortamlarda (ya da projeye taşınabilir, git'te tutulan bellek istendiğinde) tercih ve kararları saklamak.",
+      "kullanma": "Claude Code'un yerleşik auto-memory'si veya claude-mem gibi bir bellek eklentisi zaten kullanılıyorsa (çift kayıt olur); gizli bilgi saklamak için. Codex'te uygundur — AGENTS.md'ye 'oturum başında .agents/memory/MEMORY.md oku' satırı eklenmeli.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel). İndeks + konu dosyası yapısı sağlam ve Claude Code belleğine benzer; harness belleğiyle çakışma riski var.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "parallel-agents",
@@ -23379,7 +24723,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -23392,7 +24736,21 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Güvenli paralel agent kullanımı: ne zaman paralelleştirilir/paralelleştirilmez, çalışma ortamından bağımsız yetenek keşfi, güven sınırı, delegasyon bütçesi, izolasyon politikası (worktree/sandbox), delegasyon şablonu, ilerleme yok tespiti ve sentez protokolü. Google Antigravity öncelikli yazılmış.",
+      "kullanim_alani": "Güvenlik/izolasyon kuralları önemli olan çok agent'lı işler; delegasyon bütçesi ve izleme gerektiğinde.",
+      "kullanma": "Claude Code/Codex'te Antigravity'ye özgü kısımlar uygulanamaz — genel kurallar geçerli. Plan yürütmek için subagent-driven-development, basit paralel hata ayıklama için dispatching-parallel-agents. allowed-tools/effort Claude Code'a özgü.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Güvenlik ve izolasyon bölümleri iyi; Antigravity odaklı olması diğer harness'lerde gürültü yaratıyor.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "subagent-driven-development",
@@ -23452,7 +24810,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "kardes_bagimliliklari": {
         "requesting-code-review": {
           "id": "requesting-code-review",
@@ -23471,7 +24829,30 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Yazılı uygulama planını görev başına taze bir uygulayıcı alt-agent göndererek yürütür; her görevden sonra spec uyumu + kod kalitesi incelemesi, düzeltme döngüsü ve sonda tüm dal incelemesi yapar. Rol başına model seçimi, karar defteri (ledger), kesintisiz yürütme kuralları ve görev özeti/inceleme paketi betikleri içerir.",
+      "kullanim_alani": "Bağımsız görevlere bölünmüş bir planı tek oturumda yüksek kaliteyle uygulamak.",
+      "kullanma": "Plan yoksa (önce writing-plans/planning-and-task-breakdown); görevler sıkı bağımlıysa; küçük tek dosyalık işlerde. Codex'te alt-agent desteği yoksa her görev için ayrı `codex exec` çağrısı ya da executing-plans ile sıralı yürütme kullanılır.",
+      "teknoloji": [
+        "git",
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "agent-orkestra",
+        "planlayici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Orkestrasyon ailesinde en olgun süreç: görev başına inceleme, düzeltme döngüsü eskalasyonu, model katmanlama ve betik desteği. 32 KB SKILL.md ağır ama tek başına bir yürütme sistemi. coordinator-mode ve parallel-agents alternatif, dispatching-parallel-agents tamamlayıcı.",
+      "ortusme_grubu": "alt-agent-orkestrasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "using-agent-skills",
@@ -23533,7 +24914,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -23546,7 +24927,21 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "addyosmani/agent-skills ailesinin meta-skill'i: işin geliştirme aşamasına göre hangi skill'in uygulanacağını gösteren karar ağacı (interview-me, spec, plan, incremental-implementation, test, review, ship…) ve temel çalışma davranışları (varsayımları açığa çıkar, karışıklığı yönet, sadeliği koru, kapsamı koru, doğrula).",
+      "kullanim_alani": "agent-skills ailesinden birden çok skill kurulu projelerde oturum başında doğru skill'i seçmek.",
+      "kullanma": "Ailenin skilleri kurulu değilse karar ağacındaki adlar boşa düşer; superpowers ailesi kullanılıyorsa using-superpowers ile birlikte kurma (iki meta-skill çakışır).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil, meta grubunda). Zorlayıcı dil kullanmadan net yönlendirme yapıyor; çalışma davranışları bölümü aileden bağımsız da değerli.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "using-superpowers",
@@ -23605,7 +25000,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -23618,7 +25013,21 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "superpowers ailesinin meta-skill'i: '%1 ihtimal bile varsa skill'i çağır' kuralı, süreç skillerinin önceliği, rasyonalizasyon kırmızı bayrakları ve Claude Code, Codex, Pi, Antigravity, Gemini, Hermes, Muse için araç eşleme dosyaları.",
+      "kullanim_alani": "superpowers ailesinin (brainstorming, writing-plans, systematic-debugging, subagent-driven-development…) birlikte kurulduğu projeler.",
+      "kullanma": "Aile kurulu değilse; agent-skills ailesinin meta-skill'iyle birlikte. Çok agresif tetikleme dili küçük işlerde gereksiz süreç yükü yaratabilir. Codex'te references/codex-tools.md araç eşlemesini kullanır — ek uyarlama gerekmez.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF (meta grubunda). Çok harness'li araç eşlemesi en güçlü yanı; aile dışında kullanılmaz. superpowers ailesi seçilen projede birincil olur.",
+      "ortusme_grubu": "agent-davranis-meta",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "agent-reach",
@@ -23677,7 +25086,7 @@
         "ana_sayfa": "",
         "katkici": 36
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -23690,7 +25099,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub kod arama, RSS, podcast, hisse verisi) çoklu arka uçla (OpenCLI, platform CLI'ları, API'ler) içerik okur. `agent-reach doctor --json` ile hangi kanalın çalıştığını denetler; kategori başına references/ dosyaları var. SKILL.md Çince, SKILL_en.md İngilizce.",
+      "kullanim_alani": "Çok platformlu web/sosyal medya araştırması, 'internette ne konuşuluyor' taraması, URL'den içerik okuma.",
+      "kullanma": "Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulmamışsa. Açıklamadaki 'MUST USE' tetikleme dili her URL'de devreye girer — yalnızca araştırma rolüne ver. Giriş gerektiren platformlar tarayıcı çerezi okuyabilir; gizlilik açısından dikkat.",
+      "teknoloji": [
+        "python",
+        "cli",
+        "web-arama"
+      ],
+      "gerekli_paketler": [
+        "agent-reach CLI (pip/uv)",
+        "platforma göre: OpenCLI, yt-dlp, gh, Exa API"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ai-entegrasyon",
+        "icerik-pazarlama"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Çok kanallı, doctor ile kendini denetleyen, hata durumunda yeniden deneme zinciri tanımlı; MIT. Eksi: varsayılan SKILL.md Çince (İngilizce sürüm SKILL_en.md içinde) ve Çin platformlarına ağırlık veriyor.",
+      "ortusme_grubu": "web-arastirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "notebooklm",
@@ -23752,7 +25188,7 @@
         "ana_sayfa": "https://github.com/teng-lin/notebooklm-py",
         "katkici": 40
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -23765,13 +25201,39 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Google NotebookLM (Gemini Notebook) için notebooklm-py CLI ve async Python API'si: kurulum, kimlik doğrulama (master token, tarayıcı çerezi), not defteri/kaynak yönetimi, kaynaklara dayalı sohbet ve derin araştırma, sesli özet/podcast gibi artefakt üretimi ve indirme; yetki sınırları ve hata giderme kuralları.",
+      "kullanim_alani": "Belgeleri NotebookLM'e yükleyip kaynaklı soru-cevap, derin araştırma ya da Audio Overview/podcast üretmek; bunu otomasyona bağlamak.",
+      "kullanma": "Genel Gemini API işleri için değil; resmi olmayan bir istemci (Google hesap çerezleri/master token kullanır) — kurumsal hesapta politikaya aykırı olabilir.",
+      "teknoloji": [
+        "python",
+        "notebooklm",
+        "cli"
+      ],
+      "gerekli_paketler": [
+        "notebooklm-py[browser] (pip, Python 3.10+)",
+        "Google hesabı oturumu"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kimlik doğrulama ve yetki sınırları özenle yazılmış, --json ve açık ID kullanımı ile güvenli otomasyon; MIT. Resmi olmayan API riski taşıyor.",
+      "ortusme_grubu": "web-arastirma",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "youtube-downloader",
       "ad": "youtube-downloader",
       "durum": "tercih",
-      "kategori": "d-ai-otomasyon/03-web-arastirma-veri",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/03-web-arastirma-veri/youtube-downloader",
       "varyantlar": {},
@@ -23824,7 +25286,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -23837,13 +25299,38 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "yt-dlp kullanan download_video.py betiğiyle YouTube videosu indirir: kalite (best…360p), format (mp4/webm/mkv) ve yalnızca ses (MP3) seçenekleri; yt-dlp yoksa kendisi kurar.",
+      "kullanim_alani": "Tek bir YouTube videosunu ya da sesini hızlıca indirmek.",
+      "kullanma": "Varsayılan çıktı yolu /mnt/user-data/outputs/ (claude.ai sandbox'ı) — yerelde -o ile yol ver. Altyazı/transkript, oynatma listesi veya çok platform için OpenMontage video-download (birincil). Telif hakkı korumalı içerikte.",
+      "teknoloji": [
+        "python",
+        "yt-dlp",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "yt-dlp",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Basit ve çalışır betik; sandbox'a özgü varsayılan yol ve otomatik pip kurulumu eksi. Kategori: video indirme g-video-ses-medya/01 kapsamında, oraya taşındı ve video-indirme grubuna alternatif olarak eklendi.",
+      "ortusme_grubu": "video-indirme",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "academy-guide",
       "ad": "academy-guide",
       "durum": "tercih",
-      "kategori": "d-ai-otomasyon/04-skill-plugin-yazimi",
+      "kategori": "d-ai-otomasyon/01-claude-api-mcp",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/04-skill-plugin-yazimi/academy-guide",
       "varyantlar": {},
@@ -23896,7 +25383,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -23909,7 +25396,24 @@
           "bağlam yükü 10/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca güçlü eşleşme varsa uygun kurs/eğitim/kullanım örneği önerisi ekler. Katalog skill içine gömülü değil; güncel JSON katalog çalışma anında çekilir ve tazeliği kontrol edilir.",
+      "kullanim_alani": "Claude öğrenmeye yönelik destek/eğitim asistanları; ekibe Claude yaygınlaştırma soruları.",
+      "kullanma": "Kod/proje agent'larında (iş ortasındaki kullanıcıya kurs önermek gürültü); web erişimi yoksa (katalog çekilemez, uydurma yasak). Skill yazımı ile ilgisi yok — kategorisi Claude ürün desteği.",
+      "teknoloji": [
+        "web-fetch"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "agent-development",
@@ -23968,7 +25472,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -23981,7 +25485,27 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentileri için alt-agent (subagent) yazımı: Markdown + YAML frontmatter yapısı, name/description/model/color/tools alanları, <example> bloklarıyla tetikleme koşulları, sistem istemi tasarımı, AI destekli üretim ve doğrulama kuralları; doğrulama betiği ve örnekler içerir.",
+      "kullanim_alani": "Claude Code projesine/eklentisine özel alt-agent tanımı yazmak ya da mevcut agent'ın tetiklenmesini düzeltmek.",
+      "kullanma": "Codex'te frontmatter biçimi geçerli değil: Codex özel agent'ları `.codex/agents/<ad>.toml` dosyasında `name`, `description`, `developer_instructions` (ve isteğe bağlı skills.config) alanlarıyla tanımlanır — bu kütüphanenin skill-ekle.py'si rolleri zaten bu biçimde üretir. Skill'in sistem istemi tasarımı ve 'ne zaman tetiklenmeli' açıklaması yazım ilkeleri Codex'te de geçerli; color/model/tools alanlarını atla.",
+      "teknoloji": [
+        "claude-code",
+        "markdown",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi plugin-dev setinden; alan alan doğrulama kuralları ve örnekler net. Claude Code'a özel (Codex için yukarıdaki uyarlama).",
+      "ortusme_grubu": "claude-alt-agent-tanimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "command-development",
@@ -24044,7 +25568,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -24057,7 +25581,27 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code slash komutu yazımı: komut konumları (proje/kullanıcı/eklenti), YAML frontmatter (description, allowed-tools, model, argument-hint, disable-model-invocation), $ARGUMENTS ve konumsal argümanlar, @dosya başvuruları, satır içi bash çalıştırma, AskUserQuestion ile etkileşim ve organizasyon/namespacing.",
+      "kullanim_alani": "Ekipte tekrar eden istemleri Claude Code slash komutuna çevirmek.",
+      "kullanma": "Codex'te Claude slash komut biçimi yok: karşılığı `~/.codex/prompts/<ad>.md` özel istem dosyaları (`/prompts:<ad>` ile çağrılır; $ARGUMENTS/$1 yer tutucuları desteklenir) ya da doğrudan bir skill'dir. allowed-tools, model, satır içi `!bash` çalıştırma ve @dosya başvurusu Codex'te çalışmaz — bunları istemin içinde 'şu komutu çalıştır / şu dosyayı oku' talimatına çevir.",
+      "teknoloji": [
+        "claude-code",
+        "markdown",
+        "yaml"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Anthropic resmi, çok sayıda örnek ve referans; SKILL.md 19 KB ve klasör 150 KB ile ağırca. Claude Code'a özel.",
+      "ortusme_grubu": "claude-slash-komut",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "hook-development",
@@ -24118,7 +25662,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -24131,7 +25675,29 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code hook'ları: prompt tabanlı (LLM kararlı) ve komut hook'ları, eklenti hooks.json ve settings biçimi, PreToolUse/PostToolUse/Stop/SubagentStop/SessionStart/SessionEnd/UserPromptSubmit/PreCompact/Notification olayları, çıktı biçimi, ${CLAUDE_PLUGIN_ROOT}; doğrulama/test betikleri ve örnek hook'lar içerir.",
+      "kullanim_alani": "Tehlikeli komutu engelleme, düzenleme sonrası otomatik format/test, oturum başında bağlam yükleme gibi olay tabanlı Claude Code otomasyonu.",
+      "kullanma": "Codex'te Claude Code hook olayları ve hooks.json biçimi birebir yok; Codex'in kendi onay/sandbox politikası (`approval_policy`, `sandbox_mode`) ve sürümüne göre sunduğu hook/notify ayarları `~/.codex/config.toml` içinde yapılır. Bu skilldeki betik mantığı Codex'te sandbox kuralı, AGENTS.md talimatı ya da git pre-commit hook'u olarak uygulanabilir; prompt tabanlı hook'ların karşılığı yoktur. Basit 'şunu görünce uyar' kuralları için writing-hookify-rules daha hızlı.",
+      "teknoloji": [
+        "claude-code",
+        "bash",
+        "json"
+      ],
+      "gerekli_paketler": [
+        "jq (betikler için)"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil, hook grubunda). Anthropic resmi; tüm olaylar, girdi/çıktı şemaları ve test betikleri tek yerde. hookify kuralına göre daha güçlü ama daha zahmetli.",
+      "ortusme_grubu": "claude-hook",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "plugin-settings",
@@ -24194,7 +25760,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -24207,7 +25773,27 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentilerinde kullanıcıya özel ayar ve durum saklama kalıbı: proje kökünde `.claude/<eklenti>.local.md` dosyası (YAML frontmatter + Markdown gövde); hook betiklerinden, komutlardan ve agent'lardan okuma, frontmatter ayrıştırma teknikleri ve geçici aktif hook, agent durum yönetimi gibi kalıplar.",
+      "kullanim_alani": "Proje başına açılıp kapatılabilen ya da yapılandırılabilen bir Claude Code eklentisi yazarken.",
+      "kullanma": "Codex'te `.claude/*.local.md` dosyalarını okuyan bir mekanizma yok; aynı kalıp Codex'te skill'in kendisinin okuyacağı bir proje dosyası (örn. `.agents/<ad>.local.md`) olarak elle uygulanabilir, hook entegrasyonu kısmı uygulanamaz.",
+      "teknoloji": [
+        "claude-code",
+        "yaml",
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Dar ama iyi örneklenmiş bir kalıp; plugin-structure ile birlikte kullanılır.",
+      "ortusme_grubu": "claude-plugin-yapisi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "plugin-structure",
@@ -24270,7 +25856,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -24283,7 +25869,26 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklenti mimarisi: dizin düzeni (.claude-plugin/plugin.json, commands, agents, skills, hooks, .mcp.json), manifest alanları ve bileşen yolu yapılandırması, otomatik keşif, ${CLAUDE_PLUGIN_ROOT} ile taşınabilir yollar ve dosya adlandırma kuralları.",
+      "kullanim_alani": "Yeni Claude Code eklentisi iskeleti kurmak, bileşenleri düzenlemek, marketplace'e hazırlamak.",
+      "kullanma": "Codex'te Claude Code eklenti biçimi (.claude-plugin/plugin.json, ${CLAUDE_PLUGIN_ROOT}) desteklenmez; bileşenler ayrı ayrı kurulur: skiller `.agents/skills/<ad>/SKILL.md`, agent'lar `.codex/agents/<ad>.toml`, MCP sunucuları `~/.codex/config.toml` [mcp_servers], özel istemler `~/.codex/prompts/`. Dizin düzeni ve adlandırma ilkeleri yine yol gösterir.",
+      "teknoloji": [
+        "claude-code",
+        "json"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil, eklenti grubunda). plugin-dev ailesinin giriş noktası; diğer plugin-dev skilleri (komut, agent, hook, ayar, MCP) bunu tamamlar.",
+      "ortusme_grubu": "claude-plugin-yapisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator",
@@ -24345,7 +25950,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -24358,7 +25963,29 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istemleriyle skill'li/skill'siz çalıştırma, değerlendirici/karşılaştırıcı/analizci agent'lar, eval görüntüleyici, benchmark ve varyans analizi, açıklama (tetikleme) optimizasyonu ve paketleme betikleri.",
+      "kullanim_alani": "Yeni skill yazmak ya da mevcut skill'i ölçülebilir biçimde iyileştirmek (tetikleme doğruluğu dahil).",
+      "kullanma": "Claude Code eklentisine özgü yerleşim için skill-development'ı da oku. Eval döngüsü `claude -p` ile alt süreç çalıştırır; Codex'te bu adımlar `codex exec` ile değiştirilmeli ya da test istemleri elle çalıştırılmalı — yazım rehberi ve betiklerin çoğu (quick_validate, package_skill) araçtan bağımsız çalışır.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3",
+        "claude CLI (eval döngüsü için)"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator@composiohq",
@@ -24420,7 +26047,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -24433,7 +26060,26 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "skill-creator'ın eski sürümü (ComposioHQ): skill anatomisi, aşamalı açılım ilkesi ve 6 adımlı süreç (örnekle anlama, içerik planlama, init_skill.py ile iskelet, düzenleme, package_skill.py ile paketleme, yineleme).",
+      "kullanim_alani": "Ölçüm/eval istemeden, basit iskelet + paketleme akışı yeterliyse.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/skill-creator güncel ve eval destekli.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Eski sürüm; freshtechbro kopyasıyla neredeyse aynı (yalnızca package_skill.py farkı).",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator@freshtechbro",
@@ -24495,7 +26141,7 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 68,
         "not": "B",
@@ -24508,7 +26154,26 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "skill-creator'ın eski sürümünün freshtechbro/claudedesignskills kopyası: skill anatomisi, aşamalı açılım ve init/package betikli 6 adımlı süreç.",
+      "kullanim_alani": "Güncel sürüme erişilemiyorsa yedek.",
+      "kullanma": "Varsayılan olarak kullanma; composiohq kopyasıyla aynı içerik, anthropics/skill-creator güncel.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-creator@heyitsnoah",
@@ -24570,7 +26235,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 67,
         "not": "B",
@@ -24583,7 +26248,27 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark ve açıklama optimizasyonu dahil); NOTICE.md ile lisans notu eklenmiş.",
+      "kullanim_alani": "claudesidian kasası içinde skill geliştirirken (kasa bu kopyayı bekler).",
+      "kullanma": "Diğer projelerde; anthropics/skill-creator ile aynı içerik.",
+      "teknoloji": [
+        "python",
+        "markdown"
+      ],
+      "gerekli_paketler": [
+        "python3",
+        "claude CLI (eval döngüsü için)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik resmi sürümle aynı; çift kurulum bağlamı boşa harcar.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-development",
@@ -24647,7 +26332,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -24660,7 +26345,24 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Claude Code eklentileri için skill yazım rehberi: skill anatomisi, aşamalı açılım, örnekle anlama → içerik planlama → yapı oluşturma → SKILL.md düzenleme adımları; eklentideki skills/ dizinine yerleştirme, üçüncü şahıs açıklama ve tetikleme ifadeleri, doğrulama kontrol listesi.",
+      "kullanim_alani": "Bir Claude Code eklentisinin içine skill eklemek (plugin-dev akışı içinde).",
+      "kullanma": "Bağımsız skill yazımı ve ölçümü için skill-creator birincil. Codex'te: eklenti yerleşimi (plugins/<ad>/skills/) ve ${CLAUDE_PLUGIN_ROOT} geçerli değil — skill'i doğrudan `.agents/skills/<ad>/SKILL.md` olarak yaz; SKILL.md yazım ilkeleri (frontmatter name/description, aşamalı açılım) Codex'te de aynen geçerli.",
+      "teknoloji": [
+        "claude-code",
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İçeriğin çoğu eski skill-creator metninden türetilmiş (22 KB); eklentiye özgü kısım ince. writing-skills ve skill-creator varken ek değeri düşük.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skill-share",
@@ -24719,7 +26421,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -24732,7 +26434,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Yeni skill iskeleti oluşturur, doğrular, zip paketler ve Rube (Composio) MCP üzerinden Slack kanalına paylaşır.",
+      "kullanim_alani": "Ekipte skill paylaşımını Slack bildirimiyle otomatikleştirmek (Composio Rube bağlıysa).",
+      "kullanma": "Rube/Composio bağlantısı yoksa; skill yazım kalitesi için skill-creator. Betik içermiyor — paketleme adımları agent'ın yorumuna kalıyor.",
+      "teknoloji": [
+        "mcp",
+        "slack",
+        "composio"
+      ],
+      "gerekli_paketler": [
+        "Rube MCP (Composio)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Asıl değer Slack paylaşımı; skill oluşturma kısmı skill-creator'ın zayıf özeti.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "skillify",
@@ -24791,7 +26513,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -24804,12 +26526,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Tekrar eden çok adımlı iş akışlarını yeniden kullanılabilir SKILL.md'ye dönüştürür: kalıbı tanımla, şablondan SKILL.md üret, yerleştir, doğrula; adlandırma kuralları ve kalite kontrol listesi.",
+      "kullanim_alani": "'Bunu skill yap' dendiğinde ya da aynı iş 3+ kez tekrarlandığında hızlı skill çıkarımı.",
+      "kullanma": "Ölçülebilir, test edilmiş skill gerekiyorsa (skill-creator, writing-skills). Şablon when_to_use/allowed-tools/effort gibi ag-kit/Claude Code'a özgü alanlar üretir; Codex için yalnızca name + description bırak.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa ve pratik 'iş akışından skill' tarifi; doğrulama yüzeysel.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "template-skill",
       "ad": "template-skill",
-      "durum": "tercih",
+      "durum": "alternatif",
       "kategori": "d-ai-otomasyon/04-skill-plugin-yazimi",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/04-skill-plugin-yazimi/template-skill",
@@ -24861,7 +26599,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -24874,7 +26612,24 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Boş skill şablonu: yalnızca name/description yer tutucuları ve 'talimatları buraya yaz' satırı.",
+      "kullanim_alani": "Yok — yeni skill için skill-creator'ın init/şablonları daha iyi.",
+      "kullanma": "Hiçbir projeye kurma; içerik yok.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 1,
+      "kalite_notu": "Karar: SADECE ARŞİV. 140 baytlık boş şablon.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "alternatif",
+      "durum_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "writing-hookify-rules",
@@ -24937,7 +26692,7 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 74,
         "not": "B",
@@ -24950,7 +26705,29 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "hookify eklentisi için kural yazımı: `.claude/hookify.<kural>.local.md` dosyalarında YAML frontmatter (name, enabled, event: bash/file/stop/prompt/all, pattern, action: warn/block) ve Claude'a gösterilecek mesaj; çoklu koşul, olay türü rehberi, regex ipuçları ve tuzaklar.",
+      "kullanim_alani": "Kod yazmadan 'tehlikeli rm uyarısı', 'console.log engelle' gibi hızlı koruma kuralları eklemek (hookify kuruluysa).",
+      "kullanma": "hookify eklentisi kurulu değilse; karmaşık mantık gerekiyorsa hook-development. Codex'te hookify yok: aynı korumalar Codex'in sandbox/onay politikasıyla (`~/.codex/config.toml`), AGENTS.md'deki yasak komut listesiyle ya da git pre-commit hook'uyla sağlanır; kuralın regex'i ve mesajı bu araçlara aynen taşınabilir.",
+      "teknoloji": [
+        "claude-code",
+        "yaml",
+        "regex"
+      ],
+      "gerekli_paketler": [
+        "hookify Claude Code eklentisi"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif, hook grubunda). Anthropic resmi; kısa ve örnekli. hook-development'ın kod gerektirmeyen hafif alternatifi.",
+      "ortusme_grubu": "claude-hook",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "writing-skills",
@@ -25014,7 +26791,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "kardes_bagimliliklari": {
         "using-superpowers": {
           "id": "using-superpowers",
@@ -25033,7 +26810,28 @@
           "bağlam yükü 5/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Skill yazımını süreç dokümantasyonuna uygulanmış TDD olarak ele alır: önce alt-agent'larla baskı senaryosu çalıştırıp skill'siz başarısızlığı gözle (RED), skill'i yaz (GREEN), açıkları kapat (REFACTOR). Skill türleri, yapı, keşfedilebilirlik (SDO), ikna ilkeleri ve Anthropic en iyi uygulamaları ekleri içerir.",
+      "kullanim_alani": "Agent davranışını değiştiren süreç/disiplin skillerini yazmak ve gerçekten işe yaradığını kanıtlamak.",
+      "kullanma": "Basit başvuru/format skilleri için ağır (skill-creator yeterli). superpowers:test-driven-development'ı ön koşul sayar. Codex'te: alt-agent baskı testleri ayrı `codex exec` oturumlarıyla yapılır; skill yolu `~/.agents/skills/` (skill bunu kendisi belirtir).",
+      "teknoloji": [
+        "markdown",
+        "graphviz"
+      ],
+      "gerekli_paketler": [
+        "graphviz (isteğe bağlı, render-graphs.js için node)"
+      ],
+      "proje_tipleri": [],
+      "roller": [
+        "skill-gelistirici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Skill'in işe yaradığını test etme disiplini başka hiçbir sürümde yok; çok harness'li yol bilgisi var. 27 KB + ekler ağır. skill-creator birincil kalır (eval altyapısı ve daha geniş kapsam), bu onu tamamlar.",
+      "ortusme_grubu": "skill-yazimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "21risk-automation",

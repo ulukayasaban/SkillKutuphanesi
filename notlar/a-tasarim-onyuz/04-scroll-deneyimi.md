@@ -8,7 +8,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
 - **Ne yapar:** Barba.js ile çok sayfalı sitelerde sayfalar arası geçiş animasyonu: hook'lar, router/prefetch/head eklentileri, GSAP entegrasyonu, geçiş kalıpları ve proje kurulum betikleri.
 - **Ne zaman:** SPA hissi veren sayfa geçişleri (ör. perde/fade) çok sayfalı statik sitelerde. · **Ne zaman değil:** React/Next.js router geçişleri (framework'ün kendi çözümü); tek sayfalık siteler.
-- **Teknoloji:** barba.js, gsap · **Paketler:** @barba/core, @barba/prefetch, @barba/router
+- **Teknoloji:** barba 2, gsap 3.15 · **Paketler:** @barba/core, @barba/prefetch, @barba/router
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** sayfa-gecisi → birincil · **Roller:** scroll-deneyim
@@ -19,7 +19,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
 - **Ne yapar:** GSAP ScrollTrigger resmî rehberi: scroll'a bağlı animasyon, pinleme, scrub, tetikleyiciler, refresh ve temizlik. Parallax, pinli bölüm ve scroll hikayeleri için varsayılan seçimdir.
 - **Ne zaman:** Scroll'a bağlı animasyon, pinli bölüm, parallax, scrub gerektiğinde (özellikle kütüphane belirtilmemişse). · **Ne zaman değil:** Basit fade-in reveal (scroll-reveal-libraries yeter).
-- **Teknoloji:** gsap, scrolltrigger · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, scrolltrigger, lenis 1.3 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** scroll-animasyonu → birincil · **Roller:** scroll-deneyim, motion-gelistirici · **Globalde:** claude:ayni
@@ -30,7 +30,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
 - **Ne yapar:** GSAP ve ScrollTrigger için kapsamlı (765 satır) genel rehber: tween, timeline, ScrollTrigger, kalıplar, ease referansı, başlangıç projesi ve üretici betikler (generate_animation.py, timeline_builder.py).
 - **Ne zaman:** Resmî sürümün yetmediği, başlangıç projesi/ease görselleştirici gibi ek varlıklar istendiğinde. · **Ne zaman değil:** Normal durumda resmî gsap-scrolltrigger + gsap-core/timeline.
-- **Teknoloji:** gsap, scrolltrigger · **Paketler:** gsap
+- **Teknoloji:** gsap 3.15, scrolltrigger, three.js, react · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** scroll-animasyonu → alternatif · **Roller:** scroll-deneyim · **Globalde:** claude:farkli
@@ -41,18 +41,19 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
 - **Ne yapar:** Locomotive Scroll ile yumuşak (smooth) kaydırma, parallax ve viewport algılama; GSAP ScrollTrigger entegrasyon notları ve başlangıç projesi.
 - **Ne zaman:** Smooth-scroll + parallax içeren sürükleyici sitelerde (kategorideki tek smooth-scroll skill'i). · **Ne zaman değil:** Erişilebilirlik/mobil önceliği olan siteler; ScrollTrigger tek başına yeterliyse.
-- **Teknoloji:** locomotive-scroll, gsap · **Paketler:** locomotive-scroll
+- **Teknoloji:** locomotive-scroll 4, gsap 3.15 · **Paketler:** locomotive-scroll
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** yumusak-kaydirma → birincil · **Roller:** scroll-deneyim
 - **Boyut:** 81 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kategoride smooth-scroll için tek seçenek. Dikkat: v4 tarzı API ('el', 'data-scroll-container'); v5 Lenis tabanlı ve API farklı; Lenis için ayrı skill yok. Smooth-scroll mobil ve reduced-motion'da kapatılmalı.
+- **Not:** Locomotive v4 API; yeni projede Lenis + ScrollTrigger kullan.
 
 ### scroll-craft  ·  nateherkai/scroll-craft @ 75d81f7  ·  puan 80 (A)
 
 - **Ne yapar:** Premium scroll-driven landing page üretir: brief/röportaj, sayfa grameri, duygu eğrisi, 'imza hamle', çok katmanlı (dimensional) hero, kendi scrollcraft.js motoru ve ekran görüntüsüyle masaüstü/mobil/reduced-motion doğrulaması. Varlıkları kie.ai ile üretebilir.
 - **Ne zaman:** Hizmet/ürün/yiyecek markaları için sinematik, katmanlı hero'lu, 'şablon gibi görünmeyen' scroll hikaye sitesi kurarken. · **Ne zaman değil:** Küçük scroll efekti eklemek; GSAP ScrollTrigger'a bağlı mevcut proje; dashboard/uygulama arayüzleri.
-- **Teknoloji:** html, css, javascript, node, playwright, ffmpeg · **Paketler:** playwright-core, ffmpeg (tam sürüm), KIE_AI_API_KEY (isteğe bağlı)
+- **Teknoloji:** html, css, javascript, node, chromium, kie.ai · **Paketler:** playwright-core, ffmpeg (tam sürüm), KIE_AI_API_KEY (isteğe bağlı)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** nateherkai (kisi, ★3806, son güncelleme 2026-09-30, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** scroll-hikaye-uretimi → birincil · **Roller:** scroll-deneyim
@@ -63,7 +64,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
 - **Ne yapar:** AOS (Animate On Scroll) ile basit scroll reveal animasyonları: data-aos öznitelikleri, yerleşik animasyonlar, özel animasyon, karşılaştırma tablosu ve yapılandırma betikleri.
 - **Ne zaman:** Pazarlama sayfasında karmaşıklık olmadan fade/slide reveal gerektiğinde. · **Ne zaman değil:** Pin, scrub, timeline; React'te animasyon (motion-framer).
-- **Teknoloji:** aos · **Paketler:** aos
+- **Teknoloji:** aos, css · **Paketler:** aos
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** scroll-animasyonu → alternatif
