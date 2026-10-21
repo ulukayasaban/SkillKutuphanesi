@@ -50,6 +50,10 @@ def main():
             s = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
             if s and s.get("kaynak_durumu") in ("kaynakta-kaldirildi", "kayip"):
                 uyarilar.append(f"rol {f.stem}: '{x}' kaynakta {s['kaynak_durumu']}; arşiv kopyası kullanılıyor (yerine yenisini düşün)")
+        for x in r["cekirdek"]:
+            s = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
+            if s and s.get("inceleme") == "yeniden-incelenecek":
+                uyarilar.append(f"rol {f.stem}: çekirdek skill '{x}' güncellemeden sonra yeniden incelenmeli")
         gruplar = Counter()
         for x in r["cekirdek"]:
             s = ids.get(x)

@@ -17,14 +17,14 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 
 ### brainstorming  ·  obra/superpowers @ 2ce8aa1  ·  puan 95 (A)
 
-- **Ne yapar:** superpowers'ın tasarım öncesi sohbet skilli: kullanıcının ne istediğini ve nedenini tek seferde tek soruyla açar, gerektiğinde kodu/web'i keşfetmeyi ve tarayıcıda çalışan görsel yardımcıyla (yerel Node sunucusu) maket göstermeyi önerir, sonra yazılı tasarım belgesi üretip writing-plans'a devreder.
+- **Ne yapar:** superpowers'ın tasarım öncesi skili: uygulamaya geçmeden önce sırayla yaklaşımları ayrı bir mesajda sunup birini seçtirmek, kısa ya da tam tasarım dokümanı yazmak, onay almak ve writing-plans'a geçmek. Var olan projede önce okuyup sonra sorar ('Look Before You Ask').
 - **Ne zaman:** Yeni özellik, bileşen veya proje fikrinde gereksinim belirsizken; kodlamaya başlamadan önce ortak anlayış ve yazılı tasarım gerektiğinde. · **Ne zaman değil:** İstekte her şey açıksa (küçük, net görev); etkileşimsiz ortamlar (CI, zamanlanmış çalışma). Hızlı niyet doğrulaması yeterliyse interview-me daha hafif.
 - **Teknoloji:** node, html · **Paketler:** node (görsel yardımcı sunucusu, isteğe bağlı)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** fikir-netlestirme → birincil · **Roller:** planlayici
 - **Boyut:** 76 KB (SKILL.md 13.3 KB, yük orta)
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, fikir-netlestirme grubunun birincili. Gerekçe: en olgun ve en çok kullanılan sürüm (★300k+), soru disiplini (tek soru, somut örnek) ve tasarımdan plana devir zinciri net; görsel yardımcı farklılaştırıcı. vudovn sürümü 3 zorunlu soru şablonuna indirgenmiş, interview-me ise yalnız niyet çıkarıyor. Not: superpowers:writing-plans gibi ad alanlı referanslar proje kurulumunda düz adla çözülür.
+- **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: zorunlu sıra (yaklaşımlar → tasarım dokümanı → onay → writing-plans) açık hâle geldi; soru sormadan önce projeyi/bağlamı okuma kuralı eklendi; spike ve 'soruları atla' istisnaları netleşti.
 
 ### brainstorming@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 
@@ -68,7 +68,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** plan-yurutme → birincil · **Roller:** planlayici
 - **Boyut:** 20 KB (SKILL.md 17.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, plan-yurutme grubunun birincili (bu kategoride). Durma koşulları ve ledger disiplini çok net. Not: alt-agent'lı yürütme d-ai-otomasyon'daki subagent-driven-development'ta; planlayıcı rolü onu çekirdekte, bunu opsiyonelde tutar. ../using-superpowers/references bağlantısı ayrı skill'e işaret ediyor.
+- **İnceleme:** incelendi · kalite 4/5 — 2026-10 güncellemesi: uzun örnek iş akışı çıkarıldı, kurallar aynı; SKILL.md kısaldı. Alt-agent kullanmadan aynı oturumda plan yürütme için hâlâ geçerli.
 
 ### idea-refine  ·  addyosmani/agent-skills @ aeac41d  ·  puan 84 (A)
 

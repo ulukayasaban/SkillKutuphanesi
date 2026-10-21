@@ -29,7 +29,8 @@ GIZLI_TIPLER = ("T3", "T4")
 # İnceleme sırasında elle doldurulan alanlar: yeniden yerleştirmede korunur.
 ELLE_ALANLAR = ["ozet_tr", "kullanim_alani", "kullanma", "teknoloji", "gerekli_paketler", "proje_tipleri",
                 "roller", "zorluk", "kalite", "kalite_notu", "ortusme_grubu", "ortusme_rolu", "inceleme",
-                "notlar", "uyum_elle", "kategori_elle", "durum_elle", "inceleyen", "inceleme_tarihi", "uygulama_grubu"]
+                "notlar", "uyum_elle", "kategori_elle", "durum_elle", "inceleyen", "inceleme_tarihi", "uygulama_grubu",
+                "inceleme_commit", "onceki_inceleme"]
 
 TEKNOLOJI_DESENLERI = {
     "react": r"\breact\b", "next.js": r"next\.?js|\bnext/|app router", "vue": r"\bvue\b", "svelte": r"\bsvelte\b",
@@ -319,6 +320,12 @@ def main():
                 kayit[alan] = onceki[alan]
         if onceki.get("durum_elle"):
             kayit["durum"] = onceki["durum"]
+        # İncelenmiş bir skill'in içeriği güncellemede değiştiyse inceleme eskidi: yeniden incelenecek olarak işaretle
+        if (onceki.get("inceleme") in ("incelendi", "toplu-incelendi")
+                and onceki.get("klasor_hash") and onceki["klasor_hash"] != kayit["klasor_hash"]):
+            kayit["inceleme"] = "yeniden-incelenecek"
+            kayit["onceki_inceleme"] = {"inceleme": onceki["inceleme"], "tarih": onceki.get("inceleme_tarihi"),
+                                        "commit": onceki.get("inceleme_commit") or onceki.get("commit")}
         skiller.append(kayit)
         bekleyen.append((k, kayit, hedef, gel))
 

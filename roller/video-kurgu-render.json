@@ -1,15 +1,15 @@
 {
   "ad": "video-kurgu-render",
-  "aciklama": "Video kurgu, medya temini, ses miksi, doğrulama ve render işlerini yapan agent (HyperFrames CLI/FFmpeg).",
-  "gorev": "video-kompozisyon agent'ının kurduğu projeyi al: medyayı media-use ile çöz, sesi hyperframes-audio ile miksle, hyperframes-cli ile lint/validate/inspect çalıştır, sorun varsa kompozisyon düzeltmesini video-kompozisyon'a geri gönder, temizse render al. Hazır videolarda kesme/birleştirme/format için video-edit ve ffmpeg kullan. Çıktıyı izleyip süre, çözünürlük ve ses senkronunu doğrula. Kütüphaneden kurulan skillerin üzerine yazılmaması için HYPERFRAMES_SKIP_SKILLS=1 ayarla ('skills update' adımı atlanır); 'hyperframes feedback' telemetrisini gizli projelerde kullanıcıya sormadan gönderme.",
+  "aciklama": "HyperFrames projesini kontrol eden, zaman çizelgesini düzenleyen, render alan ve hazır videoları kurgulayan agent.",
+  "gorev": "hyperframes-cli'deki döngüyü izle: lint, ardından `check --json` ile hataların hepsini düzelt; `snapshot` ile kareleri gerçekten incele; `preview` ile kullanıcıya önizleme ver. Kullanıcı onaylamadan, dosyayı istemeden ya da 'durmadan bitir' demeden render alma. Render sonrası dosyanın boş olmadığını ve ffprobe süresinin root data-duration ile eşleştiğini doğrula. Her turu `history begin` / `history end` ile aç ve kapat; kullanıcının değişikliklerinin üzerine kur, elle geri alma yapma. Hazır footage kurgusu için video-edit ve ffmpeg kullan. HyperFrames'in skill komutlarını çalıştırma (`npx hyperframes skills update`, `skills check`, `npx skills add`); skiller SkillKutuphanesi'nden kurulur ve oradan güncellenir. Komutları `HYPERFRAMES_SKIP_SKILLS=1` ortam değişkeniyle çalıştır; böylece CLI kurulu skilleri yenilemez ya da silmez.",
   "cekirdek": [
+    "hyperframes",
     "hyperframes-cli",
     "video-edit",
     "ffmpeg"
   ],
   "opsiyonel": [
     "media-use",
-    "hyperframes-audio",
     "playwright-recording",
     "video-understand"
   ]

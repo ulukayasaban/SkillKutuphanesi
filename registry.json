@@ -620,11 +620,11 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Kapsamlı ve olgun (v4.7), Claude/Codex için ayrı sürümler. Dikkat: başlatıcı ilk çalıştırmada GitHub releases'ten ikili dosya indirip çalıştırıyor; .sha256 doğrulaması yapıyor ve doğrulanamazsa reddediyor. IMPECCABLE_DOWNLOAD_BASE ile kaynak değiştirilebilir.",
+      "kalite_notu": "2026-10 güncellemesi: SKILL.md değişmedi; referanslara Arapça alfabesi yerelleştirme kuralları (ZWNJ, Yeh/Kaf varyantları, yerel rakamlar, Hicri/Celali takvim) eklendi. Kalite 5 korunur; Claude ve Codex için ayrı uyarlanmış sürümleri var.",
       "ortusme_grubu": "ui-denetim-iyilestirme",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -638,7 +638,8 @@
           "yapı 5/5",
           "elle kalite 5/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "e3083ac3301e4d10517dd6cb58ab645bc2cb6e1b"
     },
     {
       "id": "mobile-design",
@@ -11272,7 +11273,7 @@
         "katkici": 44
       },
       "inceleme": "incelendi",
-      "ozet_tr": "superpowers'ın tasarım öncesi sohbet skilli: kullanıcının ne istediğini ve nedenini tek seferde tek soruyla açar, gerektiğinde kodu/web'i keşfetmeyi ve tarayıcıda çalışan görsel yardımcıyla (yerel Node sunucusu) maket göstermeyi önerir, sonra yazılı tasarım belgesi üretip writing-plans'a devreder.",
+      "ozet_tr": "superpowers'ın tasarım öncesi skili: uygulamaya geçmeden önce sırayla yaklaşımları ayrı bir mesajda sunup birini seçtirmek, kısa ya da tam tasarım dokümanı yazmak, onay almak ve writing-plans'a geçmek. Var olan projede önce okuyup sonra sorar ('Look Before You Ask').",
       "kullanim_alani": "Yeni özellik, bileşen veya proje fikrinde gereksinim belirsizken; kodlamaya başlamadan önce ortak anlayış ve yazılı tasarım gerektiğinde.",
       "kullanma": "İstekte her şey açıksa (küçük, net görev); etkileşimsiz ortamlar (CI, zamanlanmış çalışma). Hızlı niyet doğrulaması yeterliyse interview-me daha hafif.",
       "teknoloji": [
@@ -11294,11 +11295,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT, fikir-netlestirme grubunun birincili. Gerekçe: en olgun ve en çok kullanılan sürüm (★300k+), soru disiplini (tek soru, somut örnek) ve tasarımdan plana devir zinciri net; görsel yardımcı farklılaştırıcı. vudovn sürümü 3 zorunlu soru şablonuna indirgenmiş, interview-me ise yalnız niyet çıkarıyor. Not: superpowers:writing-plans gibi ad alanlı referanslar proje kurulumunda düz adla çözülür.",
+      "kalite_notu": "2026-10 güncellemesi: zorunlu sıra (yaklaşımlar → tasarım dokümanı → onay → writing-plans) açık hâle geldi; soru sormadan önce projeyi/bağlamı okuma kuralı eklendi; spike ve 'soruları atla' istisnaları netleşti.",
       "ortusme_grubu": "fikir-netlestirme",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -11312,7 +11313,8 @@
           "yapı 5/5",
           "elle kalite 5/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b"
     },
     {
       "id": "brainstorming@vudovn",
@@ -11681,11 +11683,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, plan-yurutme grubunun birincili (bu kategoride). Durma koşulları ve ledger disiplini çok net. Not: alt-agent'lı yürütme d-ai-otomasyon'daki subagent-driven-development'ta; planlayıcı rolü onu çekirdekte, bunu opsiyonelde tutar. ../using-superpowers/references bağlantısı ayrı skill'e işaret ediyor.",
+      "kalite_notu": "2026-10 güncellemesi: uzun örnek iş akışı çıkarıldı, kurallar aynı; SKILL.md kısaldı. Alt-agent kullanmadan aynı oturumda plan yürütme için hâlâ geçerli.",
       "ortusme_grubu": "plan-yurutme",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "requesting-code-review": {
           "id": "requesting-code-review",
@@ -11705,7 +11707,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b"
     },
     {
       "id": "idea-refine",
@@ -24767,11 +24770,11 @@
       ],
       "zorluk": "ileri",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT (birincil). Orkestrasyon ailesinde en olgun süreç: görev başına inceleme, düzeltme döngüsü eskalasyonu, model katmanlama ve betik desteği. 32 KB SKILL.md ağır ama tek başına bir yürütme sistemi. coordinator-mode ve parallel-agents alternatif, dispatching-parallel-agents tamamlayıcı.",
+      "kalite_notu": "2026-10 güncellemesi: düzeltme döngüsü ve final inceleme ayrıntıları references/fix-loop.md ve references/final-review.md dosyalarına taşındı; SKILL.md 260 satır kısaldı, akış diyagramı sadeleşti. Davranış aynı, bağlam yükü azaldı.",
       "ortusme_grubu": "alt-agent-orkestrasyon",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "requesting-code-review": {
           "id": "requesting-code-review",
@@ -24791,7 +24794,8 @@
           "yapı 5/5",
           "elle kalite 5/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b"
     },
     {
       "id": "using-agent-skills",
@@ -26578,11 +26582,11 @@
       ],
       "zorluk": "ileri",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT (tamamlayıcı). Skill'in işe yaradığını test etme disiplini başka hiçbir sürümde yok; çok harness'li yol bilgisi var. 27 KB + ekler ağır. skill-creator birincil kalır (eval altyapısı ve daha geniş kapsam), bu onu tamamlar.",
+      "kalite_notu": "2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.",
       "ortusme_grubu": "skill-yazimi",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "using-superpowers": {
           "id": "using-superpowers",
@@ -26602,7 +26606,8 @@
           "yapı 5/5",
           "elle kalite 5/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b"
     },
     {
       "id": "21risk-automation",
@@ -104245,13 +104250,11 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "embedded-captions iş akışının üzerine uygulanan overlay doktrini: altyazı modeli (at / ray / göm) ve altyazının filme bindirilen bir katman olduğu, içerik yukarı kaydırılarak ayrılmış alt bant olmadığı kuralı; sahneyi altyazı altında gerçek kare merkezine hizalama.",
-      "kullanim_alani": "Konuşan kafa veya lansman videosuna altyazı eklerken; altyazı taşıyacak kompozisyon düzenlenirken.",
-      "kullanma": "Altyazısız işlerde; embedded-captions olmadan tek başına.",
+      "ozet_tr": "HyperFrames videolarında altyazı doktrini: her cümle drop / rail / embed olarak sınıflanır (embed nadir zirve), altyazı alttan rezerve bir şerit değil filmin üstüne bindirilen overlay'dir; kompozisyon gerçek dikey merkeze göre yerleşir.",
+      "kullanim_alani": "Konuşan kafa, tanıtım ya da explainer videolarına altyazı eklerken yerleşim ve vurgu kararları.",
+      "kullanma": "Altyazısız videolar; altyazının teknik kurulumu için hyperframes references/captions.md yeterli.",
       "teknoloji": [
-        "hyperframes",
-        "html",
-        "css"
+        "hyperframes"
       ],
       "gerekli_paketler": [
         "hyperframes (npx)"
@@ -104265,11 +104268,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve net, embedded-captions ve product-launch-video kurallarını alıntılayarak birleştiriyor.",
-      "ortusme_grubu": "hyperframes-ev-stili",
+      "kalite_notu": "Güncellemede hyperframes'in references/captions.md dosyasının üstüne uygulanan doktrin olarak konumlandı (metadata internal: true). Emekli embedded-captions iş akışına atıf içeriyor; artık hyperframes skiliyle birlikte kullanılır.",
+      "ortusme_grubu": "altyazi",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -104283,7 +104286,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "changelog-video",
@@ -104592,9 +104596,9 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Karar kapısı ve ön kontroller güçlü, DNA stil kayıt defteri zengin; kurulum ağır (özne maskeleme modeli) ve SKILL.md büyük (34 KB). captions-overlay ile birlikte kullanılır. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "kalite_notu": "Karar: TUT. Karar kapısı ve ön kontroller güçlü, DNA stil kayıt defteri zengin; kurulum ağır (özne maskeleme modeli) ve SKILL.md büyük (34 KB). captions-overlay ile birlikte kullanılır. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -104710,9 +104714,9 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Olgun, testli betikler ve kapılı aşamalar; çok ajanlı olduğu için uzun/maliyetli. Bağlam yükü yüksek (30 KB SKILL.md). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "kalite_notu": "Karar: TUT. Olgun, testli betikler ve kapılı aşamalar; çok ajanlı olduğu için uzun/maliyetli. Bağlam yükü yüksek (30 KB SKILL.md). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -104920,13 +104924,13 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "Figma içeriğini HyperFrames kompozisyonuna aktarır: render edilmiş varlıklar, marka token'ları, bileşenler (REST/CLI), bir SECTION içindeki sahne karelerinden hareket kurgusu, bağlayıcı varsa Figma hareketleri ve shader'lar. İki ayrı kimlik bilgisi (token) kapsamını tanımlar.",
-      "kullanim_alani": "Kullanıcı figma.com bağlantısı verdiğinde veya Figma tasarımını/logosunu/animasyonunu videoya getirmek istediğinde.",
-      "kullanma": "Figma'dan web/uygulama kodu üretmek için (video dışı); Figma erişimi yoksa.",
+      "ozet_tr": "Figma içeriğini HyperFrames videosuna getirir: asset (SVG/PNG), marka token'ları, frame'leri düzenlenebilir HTML bileşen olarak, connector ile motion (GSAP'e çevirip doğrulama), shader ve storyboard (frame'ler slayt değil, aynı öğenin durumları).",
+      "kullanim_alani": "Figma linki verildiğinde; marka renkleri/tipografisi, logo, bileşen ya da storyboard'u videoya taşımak.",
+      "kullanma": "FIGMA_TOKEN yoksa ve kullanıcı oluşturmak istemiyorsa; Figma dışı tasarım kaynakları.",
       "teknoloji": [
         "hyperframes",
-        "figma-api",
-        "node"
+        "figma api",
+        "gsap"
       ],
       "gerekli_paketler": [
         "hyperframes (npx)",
@@ -104941,11 +104945,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Faz faz net akış ve determinizm bölümü iyi; adı genel ama yalnız HyperFrames'e aktarım içindir (Figma→kod değil). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
-      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "kalite_notu": "Güncellemede komutlar sadeleşti, storyboard kuralları (frame = keyframe) ve motion doğrulama betiği netleşti. Token sohbete yapıştırılmaz; kullanıcı kendisi ayarlar.",
+      "ortusme_grubu": "hyperframes-iceri-aktarma",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -104965,7 +104969,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "general-video",
@@ -105059,9 +105064,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. İş akışlarının 'her şey dahil' yedeği; kapsamı dar tutma ve tasarımı HTML'den önce kurma kuralları iyi. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "kalite_notu": "Karar: TUT. İş akışlarının 'her şey dahil' yedeği; kapsamı dar tutma ve tasarımı HTML'den önce kurma kuralları iyi. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "birincil",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -105156,14 +105161,15 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "HyperFrames ekosisteminin zorunlu giriş noktası: proje durumunu okur, gerekirse niyet görüşmesi yapar, isteği girdi türüne göre tek bir iş akışına (general-video, faceless-explainer, product-launch-video, pr-to-video, music-to-video, motion-graphics, embedded-captions, talking-head-recut, slideshow, remotion-to-hyperframes) yönlendirir ve alan skillerini gerektikçe yükletir. Brief, storyboard, senaryo ve alt ajan sözleşmeleri references/ altındadır.",
-      "kullanim_alani": "Herhangi bir video/animasyon/motion graphic oluşturma, düzenleme veya render isteğinde ilk okunacak skill; mevcut HyperFrames projesini incelerken de.",
-      "kullanma": "Kullanıcı açıkça Remotion veya başka bir çerçeve istiyorsa; sadece hazır videoyu kesip biçen FFmpeg işlerinde; yalnız tarayıcı oturumu kaydı istendiğinde.",
+      "ozet_tr": "HyperFrames'in yeni tek giriş skili: HTML'i kare kare render ederek videoya çeviren sistemin render sözleşmesini (12 kural), düzenlenebilirlik kurallarını, iş döngüsünü (story → SPEC → check → snapshot → review → render) ve video türlerine göre okunacak referansları (launch, explainer, müzik, data, dikey, 3D, karakter, altyazı, overlay, motion) tek yerde toplar.",
+      "kullanim_alani": "HyperFrames ile her türlü video: tanıtım filmi, explainer, müzik videosu, grafik/harita, dikey sosyal klip, altyazı ve overlay; eskiden ayrı iş akışı skilleri olan türlerin hepsi artık buradaki references/types dosyalarıyla yürür.",
+      "kullanma": "Remotion ya da başka bir çerçeve açıkça istenirse; sadece tarayıcı ekran kaydı gerekiyorsa (playwright-recording).",
       "teknoloji": [
         "hyperframes",
         "html",
         "gsap",
-        "node"
+        "node 22+",
+        "ffmpeg"
       ],
       "gerekli_paketler": [
         "hyperframes (npx)",
@@ -105177,15 +105183,17 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-kompozisyon"
+        "video-kompozisyon",
+        "video-kurgu-render",
+        "motion-graphics-sanatcisi"
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Ekosistemin yönlendiricisi; rota tablosu ve 'bir kez yönlendir, sonra çık' kuralı net. OpenMontage c806645 kopyasındaki kırık iş akışı yönlendirmeleri bu kaynakla çözüldü. Her oluşturmada 'npx hyperframes usage' ile kota kontrolü ister. Kütüphane kurulumunda HYPERFRAMES_SKIP_SKILLS=1 ayarlanmalı; aksi halde 'npx hyperframes skills update/init' skill setini kendi kurar/günceller.",
-      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "kalite_notu": "2026-10 güncellemesi (heygen-com/hyperframes 6882293): iş akışı skilleri emekliye ayrıldı, içerikleri bu skilin references/types ve references/*.md dosyalarına taşındı; SKILL.md 7 KB'a indi, sözleşme daha net. Önceki iş akışı skillerinin (general-video, faceless-explainer, product-launch-video…) yerine birincil seçim budur.",
+      "ortusme_grubu": "hyperframes-cekirdek",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -105199,7 +105207,8 @@
           "yapı 5/5",
           "elle kalite 5/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "hyperframes-animation",
@@ -105297,7 +105306,7 @@
       "roller": [],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-animation, heygen-com/hyperframes). Çok zengin kural/blueprint kütüphanesi (2.5 MB); SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-animation, heygen-com/hyperframes). Çok zengin kural/blueprint kütüphanesi (2.5 MB); SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
@@ -105414,9 +105423,9 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Çok zengin kural/blueprint kütüphanesi; SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor.",
+      "kalite_notu": "Karar: TUT. Çok zengin kural/blueprint kütüphanesi; SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -105533,9 +105542,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Belirti→çözüm yaklaşımı iyi; carve betiği testli. OpenMontage kopyasında yoktu (yeni).",
+      "kalite_notu": "Karar: TUT. Belirti→çözüm yaklaşımı iyi; carve betiği testli. OpenMontage kopyasında yoktu (yeni). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -105627,15 +105636,14 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "HyperFrames CLI geliştirme döngüsü: init, add, capture, check (lint dahil), snapshot, preview, render (yerel, HeyGen bulut, AWS Lambda, Cloud Run), beats, keyframes, tts, transcribe, remove-background ve sorun giderme. validate/inspect/layout yerine artık 'check' kullanılır.",
-      "kullanim_alani": "HyperFrames projesi kurarken, doğrularken, önizlerken, render alırken veya render hatası ayıklarken.",
-      "kullanma": "Kompozisyon HTML'inin içeriği için (hyperframes-core); HyperFrames kullanılmayan projelerde.",
+      "ozet_tr": "HyperFrames CLI'yi işe göre anlatır: init/capture, check, snapshot, timeline düzenleme (move/trim/split…), preview, yerel/bulut render, proje geçmişi (history begin/undo/end) ve hata tablosu. Render öncesi doğrulama döngüsünü tanımlar.",
+      "kullanim_alani": "HyperFrames projesini kontrol etme, görsel olarak inceleme, zaman çizelgesi düzenleme ve render alma.",
+      "kullanma": "Kompozisyonun içeriğine karar verirken tek başına yetmez; hyperframes skiliyle birlikte kullanılır.",
       "teknoloji": [
         "hyperframes",
-        "node",
+        "node 22+",
         "ffmpeg",
-        "aws-lambda",
-        "cloud-run"
+        "chrome"
       ],
       "gerekli_paketler": [
         "hyperframes (npx)",
@@ -105652,12 +105660,12 @@
         "video-kurgu-render"
       ],
       "zorluk": "orta",
-      "kalite": 4,
-      "kalite_notu": "Karar: TUT. Pratik ve ajan dostu. Dikkat: başarılı renderdan sonra ve eksik özellik durumunda varsayılan olarak 'hyperframes feedback' ile herkese açık kanala geri bildirim gönderilmesini ister (telemetri kapatılmadıkça); gizli projelerde kullanıcıya sorulmalı veya telemetri kapatılmalı. Kütüphane kurulumunda HYPERFRAMES_SKIP_SKILLS=1 ayarlanmalı; aksi halde 'npx hyperframes skills update/init' skill setini kendi kurar/günceller.",
-      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "kalite": 5,
+      "kalite_notu": "Güncellemede komutlar iş bazlı tabloya, render ve hata kurtarma tablolara toplandı; proje geçmişi (history) eklendi. Node 22+ ve FFmpeg gerekir.",
+      "ortusme_grubu": "hyperframes-cekirdek",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -105677,7 +105685,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "hyperframes-cli@calesthio",
@@ -105879,7 +105888,7 @@
       "roller": [],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-core, heygen-com/hyperframes). Net teknik sözleşme ve referans dizini; diğer alt skillerin temeli.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-core, heygen-com/hyperframes). Net teknik sözleşme ve referans dizini; diğer alt skillerin temeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
@@ -105992,9 +106001,9 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Net teknik sözleşme; 'ilk lint hataları' ve sessiz hata listeleri pratik. Diğer alt skillerin temeli.",
+      "kalite_notu": "Karar: TUT. Net teknik sözleşme; 'ilk lint hataları' ve sessiz hata listeleri pratik. Diğer alt skillerin temeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "birincil",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -106106,7 +106115,7 @@
       "roller": [],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-creative, heygen-com/hyperframes). Çıktı kalitesini en çok etkileyen alt skill; house-style ve video-composition referansları güçlü.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-creative, heygen-com/hyperframes). Çıktı kalitesini en çok etkileyen alt skill; house-style ve video-composition referansları güçlü. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
@@ -106214,9 +106223,9 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Çıktı kalitesini en çok etkileyen alt skill; frame preset kütüphanesi güçlü.",
+      "kalite_notu": "Karar: TUT. Çıktı kalitesini en çok etkileyen alt skill; frame preset kütüphanesi güçlü. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -106336,9 +106345,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Dar ve kesin kapsam; CLI kanıtı (proof) ile bitiş kriteri iyi. hyperframes-animation ile tamamlayıcı. Yeni (OpenMontage'da yoktu).",
+      "kalite_notu": "Karar: TUT. Dar ve kesin kapsam; CLI kanıtı (proof) ile bitiş kriteri iyi. hyperframes-animation ile tamamlayıcı. Yeni (OpenMontage'da yoktu). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -106533,13 +106542,13 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "HyperFrames kayıt defterindeki ~400 hazır blok ve bileşeni arar, 'hyperframes add' ile kurar ve kompozisyona bağlar; adı geçen bir görünüm/efekt (CRT, glitch, grain, grafik, terminal, harita…) elle yazılmadan önce katalog taranır. Yeni blok/bileşen yazıp üst projeye katkı akışını da anlatır.",
-      "kullanim_alani": "Brief veya storyboard adlandırılmış bir efekt/geçiş/görsel istediğinde, elle yazmadan önce.",
-      "kullanma": "Katalogda karşılığı olmayan tamamen özel sahnelerde; HyperFrames dışı projelerde.",
+      "ozet_tr": "~450 hazır HyperFrames bloğu ve bileşenini (geçişler, overlay, başlık, kinetik tipografi, altyazı stilleri, grafik, harita, 3D, kamera hareketi) arama (`catalog --query`) ve projeye düzenlenebilir kaynak olarak kurma (`add`) rehberi.",
+      "kullanim_alani": "Adı olan bir görsel efekti (glitch, film grain, bar chart race, lower third…) elle yazmadan önce; blok/bileşen bağlama.",
+      "kullanma": "Kayıt defterinde karşılığı olmayan, tamamen özgün sahneler.",
       "teknoloji": [
         "hyperframes",
         "html",
-        "node"
+        "gsap"
       ],
       "gerekli_paketler": [
         "hyperframes (npx)"
@@ -106551,15 +106560,16 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-kompozisyon"
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
       ],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. 'Önce katalog' kuralı tekrar üretimi azaltır; registry ağ erişimi gerektirir. Repodaki registry/blocks/* SKILL.md'leri bu skill ile kurulan şablonlardır (kütüphanede ayrıca arşivlenmedi).",
-      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "kalite_notu": "Güncellemede ~400 → ~450 öğe; yerel arama katmanları (words / on-device) ve 'gap' raporlama eklendi. Arama İngilizce yapılmalı.",
+      "ortusme_grubu": "hyperframes-cekirdek",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -106579,7 +106589,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "hyperframes-registry@calesthio",
@@ -106771,9 +106782,9 @@
       ],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Kısa, davranış odaklı ('değiştirme deme, önce konuş'). Yeni (OpenMontage'da yoktu).",
+      "kalite_notu": "Karar: TUT. Kısa, davranış odaklı ('değiştirme deme, önce konuş'). Yeni (OpenMontage'da yoktu). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -106978,14 +106989,14 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "HyperFrames projesinin medya işletim katmanı: BGM, SFX, görsel, ikon, marka logosu, ses, renk/LUT ihtiyacını tek 'resolve' komutuyla bulup yerelde dondurur ve deftere kaydeder; katalog yetmezse TTS/müzik/görsel modelleriyle üretir; seslendirme, transkripsiyon, altyazı ve arka plan silme için ortak ses motoru sunar; kesme/yeniden çerçeveleme gibi medya işlemlerini yapar.",
-      "kullanim_alani": "Kompozisyona stok/üretilmiş müzik, efekt, görsel, ses veya transkript gerektiğinde; 'görüntü karanlık/sıkıcı/retro olsun' gibi medya geri bildirimlerinde.",
-      "kullanma": "Yerleşmiş sesin miksajı için (hyperframes-audio); HyperFrames dışı projelerde; HeyGen hesabı olmadan BGM araması (SFX hesapsız çalışır).",
+      "ozet_tr": "HyperFrames videosu için her türlü medyayı tek komutla (`media-use resolve`) bulur ya da üretir: müzik, ses efekti, görsel/ikon/logo, seslendirme, avatar/üretilmiş video, transkript, arka plan silme, renk düzeltme; ayrıca yerleştirilen sesleri miksler. Her ihtiyaç için HeyGen (ücretli, en iyi kalite) ve ücretsiz yerel yolu tablo hâlinde verir.",
+      "kullanim_alani": "Videoya müzik, SFX, seslendirme (Kokoro TTS dahil), avatar, transkript, renk/LUT, yüz gizleme gibi medya eklemek; eski hyperframes-audio işlerinin yerine.",
+      "kullanma": "HyperFrames dışı projeler; özel bir sağlayıcı (ElevenLabs, Kling…) açıkça istenirse o sağlayıcının kendi skili.",
       "teknoloji": [
-        "node",
+        "hyperframes",
         "heygen",
         "ffmpeg",
-        "api-anahtari"
+        "python 3.10+ (kokoro tts)"
       ],
       "gerekli_paketler": [
         "node",
@@ -106999,15 +107010,17 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
+        "video-kompozisyon",
+        "ses-tasarimci",
         "video-kurgu-render"
       ],
       "zorluk": "orta",
-      "kalite": 4,
-      "kalite_notu": "Karar: TUT. OpenMontage kopyasına göre çok genişlemiş: hyperframes-media'nın TTS/transkripsiyon/arka plan silme işlevlerini devraldı. HeyGen CLI girişine (OAuth) bağımlı kısımlar var; SFX hesapsız.",
-      "ortusme_grubu": "medya-varlik-temini",
+      "kalite": 5,
+      "kalite_notu": "Güncellemede ses (hyperframes-audio) bu skile katıldı; ücretli çağrıdan önce onay kuralı ve 'sessizce ekleme, bir kez öner' ilkesi net. HeyGen için heygen CLI + OAuth, ücretsiz yol için yerel modeller gerekir.",
+      "ortusme_grubu": "hyperframes-medya",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -107027,7 +107040,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "media-use@calesthio",
@@ -107219,7 +107233,7 @@
       "roller": [],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (music-to-video, heygen-com/hyperframes). Kapılı (gate) iş akışı ve alt ajan dağıtımı olgun; çok ajanlı olduğu için maliyetli/uzun.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (music-to-video, heygen-com/hyperframes). Kapılı (gate) iş akışı ve alt ajan dağıtımı olgun; çok ajanlı olduğu için maliyetli/uzun. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
@@ -107329,9 +107343,9 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Kullanıcı onaylı plan adımı ve devam (resume) tablosu olgun; çok ajanlı olduğu için maliyetli/uzun.",
+      "kalite_notu": "Karar: TUT. Kullanıcı onaylı plan adımı ve devam (resume) tablosu olgun; çok ajanlı olduğu için maliyetli/uzun. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -107656,9 +107670,9 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Büyük PR'larda sayfalı çekme ve özel repo hatalarını açık ele alıyor. Katkıcı adları/avatarları videoya girer; özel repolarda paylaşmadan önce kontrol edilmeli.",
+      "kalite_notu": "Karar: TUT. Büyük PR'larda sayfalı çekme ve özel repo hatalarını açık ele alıyor. Katkıcı adları/avatarları videoya girer; özel repolarda paylaşmadan önce kontrol edilmeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -107788,9 +107802,9 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. OpenMontage'daki website-to-video'nun güncel halefi (site turları da buraya yönleniyor). Testli betikler ve yakalama korkulukları güçlü; bağlam yükü yüksek (35 KB).",
+      "kalite_notu": "Karar: TUT. OpenMontage'daki website-to-video'nun güncel halefi (site turları da buraya yönleniyor). Testli betikler ve yakalama korkulukları güçlü; bağlam yükü yüksek (35 KB). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -108112,15 +108126,14 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "Mevcut bir Remotion (React) kompozisyonunun kaynağını HyperFrames HTML'ine taşır; yalnızca açık taşıma isteğinde, tek yönlü. Eşlenebilen kalıpları çevirir, uyumsuzları işaretler ve SSIM eşikli test korpusuyla çeviriyi doğrular.",
-      "kullanim_alani": "Kullanıcı açıkça Remotion projesini HyperFrames'e taşımak istediğinde.",
-      "kullanma": "Remotion sadece referans olarak geçiyorsa veya 'Remotion videom gibi bir şey' isteniyorsa (general-video); ters yönde dönüşüm.",
+      "ozet_tr": "Başka araçlarla yapılmış video kodunu ya da çıktısını HyperFrames'e alır ve kare kare karşılaştırarak doğrular: Native (Remotion/HTML/GSAP çevirisi), Hosted (canvas, p5, Three.js, Lottie kodunu HyperFrames zamanıyla sürme), Media (Manim, After Effects, Blender çıktısını klip olarak koyma).",
+      "kullanim_alani": "Remotion projesini taşımak; Lottie/Three.js/p5 animasyonlarını ya da Manim/AE renderlarını HyperFrames videosunda kullanmak.",
+      "kullanma": "Sıfırdan yeni video (hyperframes yeter).",
       "teknoloji": [
-        "remotion",
         "hyperframes",
+        "remotion",
         "react",
-        "html",
-        "gsap"
+        "python"
       ],
       "gerekli_paketler": [
         "hyperframes (npx)",
@@ -108134,11 +108147,11 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Dar kapsamlı ama disiplinli (SSIM eval). /general-video yönlendirmesi artık arşivde.",
-      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "kalite_notu": "Güncellemede kapsam Remotion'dan tüm araçlara genişledi (üç seviye modeli); SSIM ile kare kare doğrulama betikleri korunuyor.",
+      "ortusme_grubu": "hyperframes-iceri-aktarma",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -108158,7 +108171,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "remotion-to-hyperframes@calesthio",
@@ -108333,9 +108347,9 @@
         "katkici": 107
       },
       "inceleme": "incelendi",
-      "ozet_tr": "HyperFrames ile gezilebilir sunum/pitch deck yazar: ayrık slaytlar, parça parça açılma (fragment), dallanma, hotspot gezinme ve konuşmacı notlu sunum modu; mevcut bir sayfayı desteye çevirebilir. Çıktı render edilmiş MP4 değil, etkileşimli destedir.",
-      "kullanim_alani": "Kullanıcı açıkça sunum, pitch deck veya etkileşimli deste istediğinde.",
-      "kullanma": "Doğrusal video istendiğinde; kullanıcı slayt istemediyse (önce onay alınmalı); ofis formatı (.pptx) gerektiğinde.",
+      "ozet_tr": "HyperFrames ile canlı sunulan slayt gösterisi kurar: her slayt bir sahne, JSON adası ile fragment reveal, dallanan hotspot'lar ve konuşmacı notları; `hyperframes present` ile sunulur; var olan bir sayfayı desteye çevirme kuralları içerir.",
+      "kullanim_alani": "MP4 yerine canlı sunulacak deste/pitch deck; mevcut bir web sayfasını sunuma çevirmek.",
+      "kullanma": "Render edilmiş video isteniyorsa (hyperframes); PowerPoint dosyası gerekiyorsa (pptx).",
       "teknoloji": [
         "hyperframes",
         "html",
@@ -108353,11 +108367,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Şema (SlideshowManifest) ve çalışan örnek net. Bağımsız çalıştırma için geçici harness gerekiyor; kategori sınırında (sunum).",
-      "ortusme_grubu": "hyperframes-is-akislari",
+      "kalite_notu": "Güncellemede SKILL.md 497 satırdan ~45 satıra indi; kurallar özlü. ttsScript alanları henüz bağlı değil.",
+      "ortusme_grubu": "sunum-desteleri",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
+      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
+      "inceleme_tarihi": "2026-10-22",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -108377,7 +108391,8 @@
           "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
-      }
+      },
+      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434"
     },
     {
       "id": "synthetic-screen-recording",
@@ -108578,9 +108593,9 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Ayrıntılı ve kendi kendine yeterli (font, GSAP, stil kütüphanesi paketli; NOTICE.md lisansları belirtiyor). Çok büyük SKILL.md (64 KB) — bağlam yükü yüksek.",
+      "kalite_notu": "Karar: TUT. Ayrıntılı ve kendi kendine yeterli (font, GSAP, stil kütüphanesi paketli; NOTICE.md lisansları belirtiyor). Çok büyük SKILL.md (64 KB) — bağlam yükü yüksek. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
@@ -113413,7 +113428,7 @@
       "roller": [],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (motion-graphics, heygen-com/hyperframes). Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (motion-graphics, heygen-com/hyperframes). Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
@@ -113525,9 +113540,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Olgun kategori modülleri. Yönlendirdiği iş akışları artık arşivde (heygen-com/hyperframes). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "kalite_notu": "Karar: TUT. Olgun kategori modülleri. Yönlendirdiği iş akışları artık arşivde (heygen-com/hyperframes). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {

@@ -1,8 +1,9 @@
 {
   "ad": "ses-tasarimci",
-  "aciklama": "Seslendirme, müzik ve ses efekti üreten agent.",
-  "gorev": "Metni seslendir (varsayılan ElevenLabs; Azure/fish.audio/HeyGen alternatif), müzik ve efektleri üret, transkript/altyazı çıkar, ses seviyelerini dengele. Uzun üretimden önce kısa örnekle onay al. Hangi sağlayıcının API anahtarı kurulu ise onu kullan; anahtar yoksa setup-api-key ile kur.",
+  "aciklama": "Seslendirme, müzik, ses efekti ve transkript işlerini yapan agent.",
+  "gorev": "HyperFrames projesinde ses ihtiyaçları için önce media-use kullan (resolve, mixing, audio referansları): ücretsiz yerel yolu (Kokoro TTS, MusicGen, Openverse SFX) ve HeyGen yolunu tartıp seç; ücretli çağrıdan önce onay al. Kullanıcı belirli bir sağlayıcı isterse (ElevenLabs, Lyria, Azure, fish.audio…) o sağlayıcının skilini kullan; API anahtarını asla koda yazma (setup-api-key). Ses seviyelerini dengele, konuşma varken müziği kıs (ducking), sonucu dinleyerek doğrula. HyperFrames'in skill komutlarını çalıştırma (`npx hyperframes skills update`, `skills check`, `npx skills add`); skiller SkillKutuphanesi'nden kurulur ve oradan güncellenir. Komutları `HYPERFRAMES_SKIP_SKILLS=1` ortam değişkeniyle çalıştır; böylece CLI kurulu skilleri yenilemez ya da silmez.",
   "cekirdek": [
+    "media-use",
     "elevenlabs",
     "speech-to-text",
     "music",
@@ -15,7 +16,6 @@
     "azure-text-to-speech",
     "azure-speech-to-text",
     "fish-audio-tts",
-    "dashscope",
-    "hyperframes-audio"
+    "dashscope"
   ]
 }

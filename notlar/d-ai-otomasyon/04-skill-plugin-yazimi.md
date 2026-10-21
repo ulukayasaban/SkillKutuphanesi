@@ -167,4 +167,4 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → tamamlayıcı · **Roller:** skill-gelistirici
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (tamamlayıcı). Skill'in işe yaradığını test etme disiplini başka hiçbir sürümde yok; çok harness'li yol bilgisi var. 27 KB + ekler ağır. skill-creator birincil kalır (eval altyapısı ve daha geniş kapsam), bu onu tamamlar.
+- **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.

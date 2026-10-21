@@ -1,14 +1,16 @@
 {
   "ad": "video-kompozisyon",
-  "aciklama": "HyperFrames ile video kompozisyonunu kuran agent: iş akışı seçimi, sahne planı ve kompozisyon HTML'i.",
-  "gorev": "Önce hyperframes yönlendiricisini oku ve girdiye göre tek iş akışını seç (general-video, product-launch-video, faceless-explainer; embedded-captions, talking-head-recut, pr-to-video, music-to-video, slideshow gibi diğerleri gerektiğinde --skill ile eklenir). Kompozisyonu hyperframes-core sözleşmesine göre kur ve projeyi video-kurgu-render agent'ına devret: o lint/validate/inspect, ses miksi ve render'ı yapar, bulduğu kompozisyon hatalarını sana geri gönderir; düzeltip yeniden devret. Remotion sadece kullanıcı isterse. Kütüphaneden kurulan skillerin üzerine yazılmaması için HYPERFRAMES_SKIP_SKILLS=1 ayarla ('skills update' adımı atlanır); 'hyperframes feedback' telemetrisini gizli projelerde kullanıcıya sormadan gönderme.",
+  "aciklama": "HyperFrames ile videonun sahnelerini, kompozisyonunu ve medyasını kuran agent.",
+  "gorev": "Önce hyperframes skilini oku: render sözleşmesi, düzenlenebilirlik kuralları ve iş döngüsü oradadır. İsteğin türüne göre references/types dosyasını (launch, explainer, music, data, vertical, 3d, character) ve gerekiyorsa captions/overlays/motion referanslarını oku. Uzun ve hikâye anlatan filmlerde önce story.md ile üç farklı kurgu öner, kullanıcı seçince SPEC.md yaz. Adı olan bir efekti elle yazmadan önce hyperframes-registry ile kayıt defterinde ara. Müzik, ses efekti, seslendirme, görsel, avatar ve renk düzeltme için media-use kullan; ücretli bir çağrıdan önce onay al. Sahneyi gerçek kaynaktan göster (ürün ekranı, marka logosu); sadece kaynağı olmayanı çiz. Render ve kontrol işini video-kurgu-render rolü yapar. HyperFrames'in skill komutlarını çalıştırma (`npx hyperframes skills update`, `skills check`, `npx skills add`); skiller SkillKutuphanesi'nden kurulur ve oradan güncellenir. Komutları `HYPERFRAMES_SKIP_SKILLS=1` ortam değişkeniyle çalıştır; böylece CLI kurulu skilleri yenilemez ya da silmez.",
   "cekirdek": [
     "hyperframes",
-    "hyperframes-core",
-    "general-video"
+    "hyperframes-registry",
+    "media-use"
   ],
   "opsiyonel": [
-    "product-launch-video",
-    "faceless-explainer"
+    "captions-overlay",
+    "figma",
+    "slideshow",
+    "remotion-to-hyperframes"
   ]
 }

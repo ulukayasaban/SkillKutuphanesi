@@ -1,17 +1,15 @@
 {
   "ad": "motion-graphics-sanatcisi",
-  "aciklama": "Motion graphics, açıklayıcı animasyon ve karakter animasyonu yapan agent.",
-  "gorev": "Görsel stili belirle (visual-style, hyperframes-creative), animasyon dilini tutarlı kur (zamanlama, easing, geçiş). Kısa anlatımsız grafiklerde motion-graphics akışını izle; matematik anlatımında Manim (önce manim-composer ile plan), karakter işlerinde rig → poz → SVG animasyon → QA sırasını kullan. Çok sahneli HyperFrames videolarında geçişleri motion-doctrine yasasıyla (vektör yasası, Seam Gate) ve cut-the-curve kataloğuyla kur.",
+  "aciklama": "Motion graphics, kinetik tipografi, geçiş ve açıklayıcı animasyon yapan agent.",
+  "gorev": "Hareket kuralları için hyperframes'in references/motion.md dosyasını oku: easing, başlıklar, kesmeler, punch-in, hız, duraklamalar. Ev stili için motion-doctrine'e uy; görsel dili visual-style ile tutarlı tut. Geçişleri cut-the-curve tekniklerine göre kur (hız eşleşmeli kesmeler, waterfall, rack-focus). Adı olan bir efekt gerekiyorsa önce hyperframes-registry'de ara. Matematiksel ve açıklayıcı animasyonlar için Manim'i, karakter animasyonu için SVG'yi kullan; bunlar hyperframes'e media ya da hosted seviyesinde girer. HyperFrames'in skill komutlarını çalıştırma (`npx hyperframes skills update`, `skills check`, `npx skills add`); skiller SkillKutuphanesi'nden kurulur ve oradan güncellenir. Komutları `HYPERFRAMES_SKIP_SKILLS=1` ortam değişkeniyle çalıştır; böylece CLI kurulu skilleri yenilemez ya da silmez.",
   "cekirdek": [
-    "motion-graphics",
-    "hyperframes-animation",
+    "hyperframes",
     "motion-doctrine",
     "visual-style",
-    "hyperframes-creative"
+    "cut-the-curve"
   ],
   "opsiyonel": [
-    "hyperframes-keyframes",
-    "cut-the-curve",
+    "hyperframes-registry",
     "seam-craft",
     "oversized-cursor",
     "manim-composer",

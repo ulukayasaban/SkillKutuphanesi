@@ -68,7 +68,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Geliştirici:** pbakaus (kisi, ★84353, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** ui-denetim-iyilestirme → birincil · **Roller:** ui-tasarimci, qa-erisilebilirlik
 - **Boyut:** 2140 KB (SKILL.md 11.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kapsamlı ve olgun (v4.7), Claude/Codex için ayrı sürümler. Dikkat: başlatıcı ilk çalıştırmada GitHub releases'ten ikili dosya indirip çalıştırıyor; .sha256 doğrulaması yapıyor ve doğrulanamazsa reddediyor. IMPECCABLE_DOWNLOAD_BASE ile kaynak değiştirilebilir.
+- **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: SKILL.md değişmedi; referanslara Arapça alfabesi yerelleştirme kuralları (ZWNJ, Yeh/Kaf varyantları, yerel rakamlar, Hicri/Celali takvim) eklendi. Kalite 5 korunur; Claude ve Codex için ayrı uyarlanmış sürümleri var.
 
 ### mobile-design  ·  vudovn/ag-kit @ 549ba3d  ·  puan 84 (A)
 

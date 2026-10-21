@@ -643,6 +643,9 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
             rapor.ekle("BİLGİ", "gizli-katalog", f"{ad}: varsayılan listede gizli kategoriden ({s['kategori']})")
         if s.get("ust_skill"):
             rapor.ekle("BİLGİ", "alt-skill", f"{ad}: '{s['ust_skill']}' skill'inin alt klasörü; tek başına da çalışır")
+        if s.get("inceleme") == "yeniden-incelenecek":
+            rapor.ekle("UYARI", "inceleme-eskidi", f"{ad}: içeriği son güncellemede değişti, inceleme notları eski sürüme ait "
+                       "(rehber/07-kategori-inceleme.md ile yeniden incele)")
         if s.get("inceleme", "otomatik") == "otomatik":
             rapor.ekle("BİLGİ", "incelenmedi", f"{ad}: henüz elle incelenmedi (otomatik bilgilerle)")
 

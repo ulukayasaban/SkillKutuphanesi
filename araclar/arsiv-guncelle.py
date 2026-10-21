@@ -74,6 +74,11 @@ def main():
     calistir(sys.executable, "araclar/kapsam-denetimi.py")
     calistir(sys.executable, "araclar/katalog-uret.py")
     calistir(sys.executable, "araclar/dogrula.py")
+    reg = json_oku(REGISTRY)["skiller"]
+    eskiyen = [s["id"] for s in reg if s.get("inceleme") == "yeniden-incelenecek"]
+    emekli = [s["id"] for s in reg if s.get("kaynak_durumu") == "kaynakta-kaldirildi"]
+    print(f"Yeniden incelenecek (içeriği değişen) skill: {len(eskiyen)}" + (f" -> {', '.join(eskiyen[:30])}" if eskiyen else ""))
+    print(f"Kaynakta kaldırılıp arşivde korunan skill: {len(emekli)}")
     calistir("git", "add", "-A")
     calistir("git", "add", "-f", "arsiv")  # skillerin kendi .gitignore dosyaları arşiv dosyalarını gizlemesin
     if git("diff", "--cached", "--quiet").returncode == 0:

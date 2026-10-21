@@ -232,6 +232,15 @@ def main():
     kod3, out3 = calistir(p2, "--geri-al", ad)
     test("geri almanın kendisi de geri alınabilir", kod3 == 0 and not (p2 / ".agents" / "skills" / "gsap-core").exists(), out3)
 
+    # Kaynakta kaldırılan (emekli) skill kurulmak istenirse ön kontrol uyarır
+    reg = json_oku(KOK / "registry.json")["skiller"]
+    emekli = next((s for s in reg if s.get("kaynak_durumu") == "kaynakta-kaldirildi" and s["durum"] == "tercih"), None)
+    if emekli:
+        p3 = kok / "proje-emekli"
+        p3.mkdir()
+        kod, out = calistir(p3, "--skill", emekli["id"], "--kuru")
+        test("emekli skill için ön kontrol 'kaynakta-kaldirildi' uyarısı verir", "kaynakta-kaldirildi" in out and not any(p3.iterdir()), out)
+
     for g in GLOBAL_KLASORLER.values():
         kod, out = calistir(g, "--skill", "gsap-core", "--evet")
         test(f"güvenlik: {g} reddedilir", kod != 0 and "Güvenlik" in out, out)

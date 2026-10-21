@@ -33,6 +33,17 @@ python3 araclar/arsiv-guncelle.py --uygula   # değişiklik varsa: yeniden indir
 - Bir skill'in globaldeki durumu değiştiyse (ör. global sürüm güncellendi) kurulum adı değişebilir;
   `skill-ekle.py --guncelle` bunu `ad-degisti` uyarısıyla bildirir.
 
+### Güncellemeden sonra yeniden inceleme
+İçeriği değişen ve daha önce incelenmiş her skill otomatik olarak `inceleme: yeniden-incelenecek` olur
+(eski inceleme `onceki_inceleme` alanında saklanır). `arsiv-guncelle.py --uygula` bunların listesini yazar;
+ön kontrol `inceleme-eskidi` UYARISI, dogrula çekirdek rol skilleri için UYARI verir.
+Yapılacak: `rehber/07-kategori-inceleme.md` adımlarıyla sadece bu skilleri yeniden incele, `inceleme: incelendi` yap, kaydet.
+
+### Kaynakta kaldırılan skiller
+Repo duruyor ama skill yeni commit'te yoksa skill arşivde kalır: `kaynak_durumu: kaynakta-kaldirildi`, katalogda 🗄️emekli.
+Rollerde kullanılıyorsa dogrula UYARI verir: rolü güncel karşılığına geçir (örnek: 2026-10'da HyperFrames iş akışı skilleri
+emekliye ayrıldı, video rolleri `hyperframes` + `media-use` + `hyperframes-cli` yapısına taşındı).
+
 ### Geri alma
 ```bash
 git -C ~/Documents/SkillKutuphanesi log --oneline | head     # kayıt noktaları

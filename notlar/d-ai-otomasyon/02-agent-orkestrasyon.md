@@ -134,7 +134,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** alt-agent-orkestrasyon → birincil · **Roller:** agent-orkestra, planlayici
 - **Boyut:** 56 KB (SKILL.md 19.0 KB, yük orta)
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Orkestrasyon ailesinde en olgun süreç: görev başına inceleme, düzeltme döngüsü eskalasyonu, model katmanlama ve betik desteği. 32 KB SKILL.md ağır ama tek başına bir yürütme sistemi. coordinator-mode ve parallel-agents alternatif, dispatching-parallel-agents tamamlayıcı.
+- **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: düzeltme döngüsü ve final inceleme ayrıntıları references/fix-loop.md ve references/final-review.md dosyalarına taşındı; SKILL.md 260 satır kısaldı, akış diyagramı sadeleşti. Davranış aynı, bağlam yükü azaldı.
 
 ### using-agent-skills  ·  addyosmani/agent-skills @ aeac41d  ·  puan 87 (A)
 
