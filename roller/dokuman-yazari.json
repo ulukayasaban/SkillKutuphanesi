@@ -1,0 +1,16 @@
+{
+  "ad": "dokuman-yazari",
+  "aciklama": "Rapor, sunum, diyagram ve teknik doküman hazırlayan agent.",
+  "gorev": "İçeriği okuyucuya göre yapılandır; gerektiğinde Word/PowerPoint/PDF üret, diyagramla açıkla.",
+  "cekirdek": [
+    "docx",
+    "pptx",
+    "pdf",
+    "archify"
+  ],
+  "opsiyonel": [
+    "xlsx",
+    "doc-coauthoring",
+    "documentation-and-adrs"
+  ]
+}

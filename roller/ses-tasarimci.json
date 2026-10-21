@@ -1,0 +1,19 @@
+{
+  "ad": "ses-tasarimci",
+  "aciklama": "Seslendirme, müzik ve ses efekti üreten agent.",
+  "gorev": "Metni seslendir, müzik ve efektleri üret, ses seviyelerini dengele. Hangi sağlayıcının API anahtarı kurulu ise onu kullan.",
+  "cekirdek": [
+    "text-to-speech",
+    "elevenlabs",
+    "music",
+    "sound-effects"
+  ],
+  "opsiyonel": [
+    "speech-to-text",
+    "acestep",
+    "lyria",
+    "fish-audio-tts",
+    "azure-text-to-speech",
+    "doubao-tts"
+  ]
+}

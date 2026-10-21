@@ -1,0 +1,15 @@
+{
+  "ad": "qa-erisilebilirlik",
+  "aciklama": "Görsel QA, erişilebilirlik ve performans kontrolü yapan agent.",
+  "gorev": "Sayfayı gerçek tarayıcıda kontrol et: görsel hatalar, kontrast, klavye erişimi, konsol hataları, performans. Bulguları önceliklendirerek raporla.",
+  "cekirdek": [
+    "webapp-testing",
+    "playwright-cli"
+  ],
+  "opsiyonel": [
+    "react-doctor",
+    "browser-testing-with-devtools",
+    "performance-optimization",
+    "impeccable"
+  ]
+}

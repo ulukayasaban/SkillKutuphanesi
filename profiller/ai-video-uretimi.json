@@ -1,0 +1,10 @@
+{
+  "ad": "ai-video-uretimi",
+  "baslik": "AI ile üretilmiş video (model seçimi, seslendirme, kurgu)",
+  "roller": [
+    "ai-medya-uretici",
+    "video-produksiyon",
+    "ses-tasarimci"
+  ],
+  "ek_skiller": []
+}

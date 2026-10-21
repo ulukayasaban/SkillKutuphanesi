@@ -1,0 +1,8 @@
+{
+  "ad": "rapor-dokuman",
+  "baslik": "Rapor, Word/Excel/PowerPoint/PDF çıktısı",
+  "roller": [
+    "dokuman-yazari"
+  ],
+  "ek_skiller": []
+}

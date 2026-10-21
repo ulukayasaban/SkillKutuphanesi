@@ -1,0 +1,9 @@
+{
+  "ad": "mevcut-kod-iyilestirme",
+  "baslik": "Var olan kod tabanını inceleme ve sadeleştirme",
+  "roller": [
+    "kod-inceleyici",
+    "planlayici"
+  ],
+  "ek_skiller": []
+}

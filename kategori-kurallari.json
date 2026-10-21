@@ -1,0 +1,185 @@
+{
+  "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur.",
+  "ad_kurallari": [
+    {
+      "desen": "^templates$",
+      "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji"
+    },
+    {
+      "desen": "^(2d-games|3d-games|game-art|game-audio|game-design|mobile-games|multiplayer|pc-games|vr-ar|web-games)$",
+      "kategori": "a-tasarim-onyuz/06-oyun-2d-grafik"
+    },
+    {
+      "desen": "^(hyperframes|remotion|video-|create-video$|website-to-video|music-to-video|ffmpeg$|playwright-recording|synthetic-screen-recording|media-use$)",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
+      "desen": "^(acestep|elevenlabs|azure-(speech|text)|doubao-tts|fish-audio-tts|text-to-speech|speech-to-text|sound-effects|music$|lyria|dashscope|agents$)",
+      "kategori": "g-video-ses-medya/02-ses-muzik-konusma"
+    },
+    {
+      "desen": "^(ai-video-gen|atlas-cloud|avatar-video|bfl-api|comfyui|faceswap|flux-best-practices|gemini-omni|grok-media|heygen|kling-official|ltx2|minimax-h3|seedance-|3d-asset-generation|provider-model-refresh|setup-api-key)",
+      "kategori": "g-video-ses-medya/03-ai-gorsel-video-modelleri"
+    },
+    {
+      "desen": "^(motion-graphics|manim|character-|canvas-procedural-animation|svg-character-animation|pose-library-design|visual-style$)",
+      "kategori": "g-video-ses-medya/04-motion-graphics-karakter"
+    },
+    {
+      "desen": "^(gsap|framer-motion|lottie-bodymovin)$",
+      "kategori": "a-tasarim-onyuz/03-animasyon-motion"
+    },
+    {
+      "desen": "^tailwind-design-system$",
+      "kategori": "a-tasarim-onyuz/02-tasarim-sistemi-marka"
+    },
+    {
+      "desen": "^threejs-world-generation$",
+      "kategori": "a-tasarim-onyuz/05-3d-webgl"
+    },
+    {
+      "desen": "^d3-viz$",
+      "kategori": "a-tasarim-onyuz/07-gorsel-sanat-sunum"
+    },
+    {
+      "desen": "^beautiful-mermaid$",
+      "kategori": "c-dokuman-icerik/02-diyagram-dokumantasyon"
+    },
+    {
+      "desen": "^vercel-(composition|react)",
+      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani"
+    },
+    {
+      "desen": "^(design-taste-frontend|taste-skill)$",
+      "kategori": "a-tasarim-onyuz/01-ui-ux-tasarim-dili"
+    },
+    {
+      "desen": "^image-enhancer$",
+      "kategori": "a-tasarim-onyuz/07-gorsel-sanat-sunum"
+    },
+    {
+      "desen": "^(youtube-downloader|video-downloader)$",
+      "kategori": "d-ai-otomasyon/03-web-arastirma-veri"
+    },
+    {
+      "desen": "^(connect|connect-apps)$",
+      "kategori": "d-ai-otomasyon/01-claude-api-mcp"
+    },
+    {
+      "desen": "^raffle-winner-picker$",
+      "kategori": "c-dokuman-icerik/03-yazi-iletisim-icerik"
+    },
+    {
+      "desen": "^(gsap-scrolltrigger|scroll-craft|locomotive-scroll|barba-js|scroll-reveal-libraries)",
+      "kategori": "a-tasarim-onyuz/04-scroll-deneyimi"
+    },
+    {
+      "desen": "^(gsap-|motion-framer|animejs|react-spring|lottie|rive-|animated-component)",
+      "kategori": "a-tasarim-onyuz/03-animasyon-motion"
+    },
+    {
+      "desen": "^(threejs|react-three-fiber|babylonjs|playcanvas|aframe|spline|lightweight-3d|web3d|blender-web|substance-3d)",
+      "kategori": "a-tasarim-onyuz/05-3d-webgl"
+    },
+    {
+      "desen": "^(pixijs|game-development)",
+      "kategori": "a-tasarim-onyuz/06-oyun-2d-grafik"
+    },
+    {
+      "desen": "^(design-system|brand|banner-design|theme-factory|brand-guidelines)",
+      "kategori": "a-tasarim-onyuz/02-tasarim-sistemi-marka"
+    },
+    {
+      "desen": "^(taste-skill|ui-ux-pro-max|design|ui-styling|frontend-design|modern-web-design|design-dna|impeccable|audit|web-design-guidelines|mobile-design|design-spec|tailwind-patterns)$",
+      "kategori": "a-tasarim-onyuz/01-ui-ux-tasarim-dili"
+    },
+    {
+      "desen": "^(canvas-design|algorithmic-art|slides|slack-gif-creator|artifacts-builder|web-artifacts-builder)$",
+      "kategori": "a-tasarim-onyuz/07-gorsel-sanat-sunum"
+    },
+    {
+      "desen": "^(webapp-testing|browser-testing|react-doctor|playwright-component-testing|playwright-trace)",
+      "kategori": "a-tasarim-onyuz/08-onyuz-test-kalite"
+    },
+    {
+      "desen": "^(docx|xlsx|pptx|pdf)$",
+      "kategori": "c-dokuman-icerik/01-ofis-dokumanlari"
+    },
+    {
+      "desen": "^(archify$|doc-coauthoring|documentation|json-canvas|docs-diagrams)",
+      "kategori": "c-dokuman-icerik/02-diyagram-dokumantasyon"
+    },
+    {
+      "desen": "^(internal-comms|content-research-writer|de-ai-ify|tailored-resume|twitter-algorithm|competitive-ads|domain-name|lead-research|meeting-insights|developer-growth|seo-fundamentals|geo-fundamentals|i18n)",
+      "kategori": "c-dokuman-icerik/03-yazi-iletisim-icerik"
+    },
+    {
+      "desen": "^(obsidian|daily-review|weekly-synthesis|inbox-processor|add-frontmatter|download-attachment|file-organizer|invoice-organizer|thinking-partner|research-assistant|init-bootstrap|install-claudesidian|upgrade$)",
+      "kategori": "c-dokuman-icerik/04-not-alma-bilgi-yonetimi"
+    },
+    {
+      "desen": "^(claude-api|mcp-builder|mcp-integration|claude-opus|langsmith)",
+      "kategori": "d-ai-otomasyon/01-claude-api-mcp"
+    },
+    {
+      "desen": "^(subagent-driven|dispatching-parallel|parallel-agents|coordinator-mode|context-engineering|context-compression|behavioral-modes|intelligent-routing|memory-system|using-superpowers|diagnosing-superpowers|using-agent-skills|discernment-nudge|connect|connect-apps|batch-operations)",
+      "kategori": "d-ai-otomasyon/02-agent-orkestrasyon"
+    },
+    {
+      "desen": "^(agent-reach|notebooklm|video-downloader)",
+      "kategori": "d-ai-otomasyon/03-web-arastirma-veri"
+    },
+    {
+      "desen": "^(skill-creator|writing-skills|skill-share|skillify|skill-development|agent-development|command-development|hook-development|plugin-settings|plugin-structure|writing-rules|template-skill|authoring-skills|academy-guide)",
+      "kategori": "d-ai-otomasyon/04-skill-plugin-yazimi"
+    },
+    {
+      "desen": "^(brainstorming|writing-plans|plan-writing|executing-plans|idea-refine|interview-me|spec-driven|planning-and-task|incremental-implementation|source-driven|constraint-driven|doubt-driven|app-builder)",
+      "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji"
+    },
+    {
+      "desen": "(code-review|receiving-code-review|requesting-code-review|clean-code|simplify|code-simplification|pragmatic-review|archify-review|archify-tuning|lint-and-validate)",
+      "kategori": "b-yazilim-gelistirme/02-kod-kalitesi-review"
+    },
+    {
+      "desen": "^(test-driven|tdd-workflow|testing-patterns|test-value|systematic-debugging|debugging|verification-before|verify-changes|webapp-test)",
+      "kategori": "b-yazilim-gelistirme/03-test-hata-ayiklama"
+    },
+    {
+      "desen": "^(api-|architecture|database-design|nodejs-best|python-patterns|rust-pro|frontend-architecture|frontend-ui-engineering|nextjs-react-expert|bash-linux|powershell)",
+      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani"
+    },
+    {
+      "desen": "^(using-git-worktrees|git-worktrees|git-workflow|finishing-a-development|pull-request|release|changelog-generator|deprecation)",
+      "kategori": "b-yazilim-gelistirme/05-git-pr-surum"
+    },
+    {
+      "desen": "^(ci-cd|deployment|server-management|security|vulnerability|red-team|observability|performance|shipping-and-launch)",
+      "kategori": "b-yazilim-gelistirme/06-devops-guvenlik-performans"
+    },
+    {
+      "desen": "^(next-|playwright-cli)",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel"
+    }
+  ],
+  "yol_kurallari": [],
+  "repo_varsayilan": {
+    "anthropics/claude-code": "d-ai-otomasyon/04-skill-plugin-yazimi",
+    "vercel/next.js": "b-yazilim-gelistirme/07-framework-ozel",
+    "microsoft/playwright": "a-tasarim-onyuz/08-onyuz-test-kalite",
+    "nextlevelbuilder/ui-ux-pro-max-skill": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
+    "freshtechbro/claudedesignskills": "a-tasarim-onyuz/05-3d-webgl",
+    "CloudAI-X/threejs-skills": "a-tasarim-onyuz/05-3d-webgl",
+    "greensock/gsap-skills": "a-tasarim-onyuz/03-animasyon-motion",
+    "obra/superpowers": "b-yazilim-gelistirme/01-planlama-metodoloji",
+    "addyosmani/agent-skills": "b-yazilim-gelistirme/01-planlama-metodoloji",
+    "heyitsnoah/claudesidian": "c-dokuman-icerik/04-not-alma-bilgi-yonetimi",
+    "vudovn/ag-kit": "b-yazilim-gelistirme/04-mimari-api-veritabani",
+    "ComposioHQ/awesome-claude-skills": "c-dokuman-icerik/03-yazi-iletisim-icerik",
+    "tt-a1i/archify": "b-yazilim-gelistirme/02-kod-kalitesi-review",
+    "Panniantong/Agent-Reach": "d-ai-otomasyon/03-web-arastirma-veri",
+    "teng-lin/notebooklm-py": "d-ai-otomasyon/03-web-arastirma-veri",
+    "calesthio/OpenMontage": "g-video-ses-medya/01-video-uretim-montaj",
+    "_T3": "f-repo-ici/01-repo-gelistirici-skilleri"
+  }
+}

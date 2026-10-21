@@ -1,0 +1,13 @@
+{
+  "ad": "ai-entegrasyon",
+  "aciklama": "Claude API, MCP sunucusu ve web verisi entegrasyonlarını kuran agent.",
+  "gorev": "Model çağrılarını, araç tanımlarını ve MCP sunucularını kur; anahtarları koda gömme.",
+  "cekirdek": [
+    "claude-api",
+    "mcp-builder"
+  ],
+  "opsiyonel": [
+    "agent-reach",
+    "notebooklm"
+  ]
+}

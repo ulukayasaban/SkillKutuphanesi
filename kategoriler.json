@@ -1,0 +1,69 @@
+{
+  "_aciklama": "5 ana alan ve alt kategoriler. Skillin kategorisi registry.json'da 'kategori' alanında durur; ilk atama kurallar ile yapılır, inceleme sırasında elle düzeltilir (registry'de 'kategori_elle': true işaretlenirse kurallar bir daha ezmez).",
+  "alanlar": {
+    "a-tasarim-onyuz": {
+      "baslik": "Tasarım ve Ön Yüz",
+      "kategoriler": {
+        "01-ui-ux-tasarim-dili": "Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi",
+        "02-tasarim-sistemi-marka": "Design token, tema, marka kimliği, banner/logo",
+        "03-animasyon-motion": "GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim",
+        "04-scroll-deneyimi": "Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri",
+        "05-3d-webgl": "Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader",
+        "06-oyun-2d-grafik": "Oyun geliştirme, PixiJS, 2D grafik",
+        "07-gorsel-sanat-sunum": "Poster/canvas tasarımı, generative art, slayt, GIF",
+        "08-onyuz-test-kalite": "Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı"
+      }
+    },
+    "b-yazilim-gelistirme": {
+      "baslik": "Yazılım Geliştirme",
+      "kategoriler": {
+        "01-planlama-metodoloji": "Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini",
+        "02-kod-kalitesi-review": "Code review, sadeleştirme, temiz kod",
+        "03-test-hata-ayiklama": "TDD, hata ayıklama, doğrulama",
+        "04-mimari-api-veritabani": "Mimari, API/arayüz tasarımı, veritabanı, backend",
+        "05-git-pr-surum": "Git, worktree, PR, sürüm/release, changelog",
+        "06-devops-guvenlik-performans": "CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans",
+        "07-framework-ozel": "Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)"
+      }
+    },
+    "c-dokuman-icerik": {
+      "baslik": "Doküman ve İçerik",
+      "kategoriler": {
+        "01-ofis-dokumanlari": "Word, Excel, PowerPoint, PDF üretme/düzenleme",
+        "02-diyagram-dokumantasyon": "Diyagram, teknik dokümantasyon, ADR, ortak yazım",
+        "03-yazi-iletisim-icerik": "Yazı, iletişim, pazarlama/içerik, kariyer",
+        "04-not-alma-bilgi-yonetimi": "Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni"
+      }
+    },
+    "d-ai-otomasyon": {
+      "baslik": "AI ve Otomasyon",
+      "kategoriler": {
+        "01-claude-api-mcp": "Claude API, MCP sunucusu, model geçişi",
+        "02-agent-orkestrasyon": "Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları",
+        "03-web-arastirma-veri": "Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma",
+        "04-skill-plugin-yazimi": "Skill yazma, plugin/hook/komut geliştirme"
+      }
+    },
+    "g-video-ses-medya": {
+      "baslik": "Video, Ses ve AI Medya Üretimi",
+      "kategoriler": {
+        "01-video-uretim-montaj": "Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg",
+        "02-ses-muzik-konusma": "Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi",
+        "03-ai-gorsel-video-modelleri": "AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu",
+        "04-motion-graphics-karakter": "Motion graphics, Manim, karakter animasyonu/rig, görsel stil"
+      }
+    },
+    "e-entegrasyon-katalogu": {
+      "baslik": "Entegrasyon Kataloğu (varsayılan listede gizli)",
+      "kategoriler": {
+        "01-uygulama-entegrasyonlari": "Composio üzerinden 800+ uygulama (Gmail, Slack, Notion…); Composio API anahtarı gerekir"
+      }
+    },
+    "f-repo-ici": {
+      "baslik": "Repo-İçi Geliştirici Skilleri (varsayılan listede gizli)",
+      "kategoriler": {
+        "01-repo-gelistirici-skilleri": "Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için iç süreç skilleri; kendi projelerinde nadiren gerekir"
+      }
+    }
+  }
+}

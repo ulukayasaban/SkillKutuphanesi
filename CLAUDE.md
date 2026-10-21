@@ -1,0 +1,25 @@
+# SkillKutuphanesi — Agent Talimatı
+
+Bu klasör kullanıcının skill kütüphanesidir. Kullanıcı "şu projeye / şu agent'lara skill ekle" dediğinde aşağıdaki
+akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `rehber/04-kontrol-listesi.md`.
+
+## Kesin kurallar
+1. Global skill klasörlerine (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, `~/.openmontage`) **asla** yazma,
+   kopyalama, symlink koyma ya da silme. Skiller sadece kullanıcının verdiği proje klasörüne, sadece `skill-ekle.py` ile kurulur.
+2. Elle `cp`/`ln` ile skill kurma; kilit, yedek ve ön kontrol atlanmış olur.
+3. `arsiv/` altındaki orijinal skill dosyalarını düzenleme. Notlar `registry.json` (inceleme alanları) ve `notlar/` içine yazılır.
+4. `--evet` sadece kullanıcı raporu görüp onayladıktan sonra; `--zorla` sadece kullanıcı açıkça isterse.
+
+## Skill ekleme akışı
+1. İhtiyacı netleştir: proje yolu, proje tipi, teknoloji, agent rolleri (bilinmiyorsa sor).
+2. Öneri: `python3 araclar/skill-ekle.py <proje> --oner "<ihtiyaç>"` (tüm kütüphane taranır). Uygun profil/rolleri seç.
+3. Ön kontrol: `python3 araclar/skill-ekle.py <proje> --profil <p> [--rol …] [--skill …] --kuru`
+4. Raporu kullanıcıya göster: kurulacak skiller, roller, HATA/UYARI/BİLGİ satırları ve `ek-aday` listesi
+   (kütüphanede ilgili olup seçilmeyen skiller). HATA varsa nedenini ve seçenekleri açıkla, kurma.
+5. Onay gelirse aynı komutu `--evet` ile çalıştır. Sonra `--dogrula` sonucunu bildir.
+
+## Bakım isteklerinde
+- "Skilleri güncelle" → önce `python3 araclar/arsiv-guncelle.py` (rapor), onayla `--uygula`. Sonra etkilenen projeler için
+  `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
+- "Yeni repo yıldızladım" → `rehber/03-yeni-skill-ekleme.md`.
+- Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.

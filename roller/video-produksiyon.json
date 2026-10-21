@@ -1,0 +1,19 @@
+{
+  "ad": "video-produksiyon",
+  "aciklama": "Video kurgu, kompozisyon ve render işlerini yapan agent (HyperFrames/Remotion/FFmpeg).",
+  "gorev": "Videoyu sahnelere böl, kompozisyonu kur, kurgu ve render'ı yap. Çıktıyı izleyip kontrol et; süre, çözünürlük ve ses senkronunu doğrula.",
+  "cekirdek": [
+    "hyperframes",
+    "video-edit",
+    "ffmpeg"
+  ],
+  "opsiyonel": [
+    "remotion-best-practices",
+    "remotion",
+    "video-toolkit",
+    "playwright-recording",
+    "synthetic-screen-recording",
+    "media-use",
+    "website-to-video"
+  ]
+}

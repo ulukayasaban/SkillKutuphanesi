@@ -1,0 +1,15 @@
+{
+  "ad": "kod-inceleyici",
+  "aciklama": "Kod inceleme, sadeleştirme ve test değeri kontrolü yapan agent.",
+  "gorev": "Değişiklikleri doğruluk, sadelik ve test kalitesi açısından incele; somut, önceliklendirilmiş öneriler ver.",
+  "cekirdek": [
+    "requesting-code-review",
+    "simplify-codebase",
+    "test-value",
+    "systematic-debugging"
+  ],
+  "opsiyonel": [
+    "code-review-and-quality",
+    "test-driven-development"
+  ]
+}

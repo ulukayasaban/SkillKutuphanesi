@@ -1,0 +1,14 @@
+{
+  "ad": "frontend-muhendis",
+  "aciklama": "Uygulama kodunu yazan ön yüz mühendisi (React/Next.js).",
+  "gorev": "Tasarımı üretim kalitesinde koda dök: bileşen yapısı, durum yönetimi, erişilebilirlik, responsive davranış.",
+  "cekirdek": [
+    "frontend-ui-engineering",
+    "frontend-design"
+  ],
+  "opsiyonel": [
+    "next-dev-loop",
+    "tailwind-patterns",
+    "web-artifacts-builder"
+  ]
+}

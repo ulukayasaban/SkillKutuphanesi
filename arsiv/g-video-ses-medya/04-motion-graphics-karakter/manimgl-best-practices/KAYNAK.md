@@ -1,0 +1,14 @@
+# manimgl-best-practices
+
+> Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
+
+- **Kaynak repo:** https://github.com/calesthio/OpenMontage
+- **Repo içindeki yol:** `.claude/skills/manimgl-best-practices`
+- **Commit:** `c8066452325cb57c8fc1ba8c2a71b6e8842e6b65`
+- **Lisans:** AGPL-3.0
+- **Geliştirici:** calesthio (kisi)
+- **Değerlendirme:** 90/100 (A)
+- **Arşive alınma:** 2026-10-21
+- **Durum:** tercih
+- **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
+- **SKILL.md'de olup bulunamayan dosyalar:** `examples/3d_visualization.py`, `examples/basic_animations.py`, `examples/graph_plotting.py`, `examples/math_visualization.py`, `examples/updater_patterns.py`

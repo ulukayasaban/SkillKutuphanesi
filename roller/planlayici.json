@@ -1,0 +1,15 @@
+{
+  "ad": "planlayici",
+  "aciklama": "İşi planlayan ve alt-agent'lara bölen orkestra agent'ı.",
+  "gorev": "İsteği netleştir, plan yaz, işi bağımsız parçalara böl, her parçayı doğru role ver ve bitişte doğrula.",
+  "cekirdek": [
+    "brainstorming",
+    "writing-plans",
+    "subagent-driven-development",
+    "verification-before-completion"
+  ],
+  "opsiyonel": [
+    "dispatching-parallel-agents",
+    "executing-plans"
+  ]
+}

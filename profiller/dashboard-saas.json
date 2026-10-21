@@ -1,0 +1,11 @@
+{
+  "ad": "dashboard-saas",
+  "baslik": "Panel / SaaS uygulama arayüzü",
+  "roller": [
+    "ui-tasarimci",
+    "tasarim-sistemi",
+    "frontend-muhendis",
+    "qa-erisilebilirlik"
+  ],
+  "ek_skiller": []
+}

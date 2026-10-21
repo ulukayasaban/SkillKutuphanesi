@@ -1,0 +1,14 @@
+{
+  "ad": "tasarim-sistemi",
+  "aciklama": "Design token, tema ve marka kimliğini kuran agent.",
+  "gorev": "Renk, tipografi, boşluk, radius, gölge token'larını ve tema yapısını kur; bileşenlerin bu token'ları kullanmasını sağla.",
+  "cekirdek": [
+    "design-system",
+    "brand"
+  ],
+  "opsiyonel": [
+    "theme-factory",
+    "brand-guidelines",
+    "banner-design"
+  ]
+}

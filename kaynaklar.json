@@ -1,0 +1,334 @@
+{
+  "_aciklama": "Arşivin kaynak listesi. Yeni repo eklemek için buraya bir kayıt ekle ve `python3 araclar/arsiv-olustur.py` çalıştır. tip: T1 skill koleksiyonu | T2 ürün skilleri (sadece 'dahil' yolları) | T3 repo-içi geliştirici skilli (arşivlenir, varsayılan listede gizli) | T4 entegrasyon kataloğu (arşivlenir, varsayılan listede gizli) | T5 kütüphane/araç (kod indirilmez, referans notu) | T6 tasarım teknolojisi (kod indirilmez, 'nasıl çalışır' kartı). oncelik: aynı isimli skill çakışmasında küçük sayı kazanır.",
+  "ayna_klasorler": [
+    "^\\.factory/",
+    "^cli/assets/",
+    "^plugins/bundles/",
+    "^plugins/individual/",
+    "^\\.(agent|cursor|dsh|gemini|github|grok|hermes|kiro|omp|opencode|pi|qoder|rovodev|trae|trae-cn|veto|vibe)/",
+    "^cursor-plugin/"
+  ],
+  "max_dosya_mb": 5,
+  "repolar": [
+    {
+      "repo": "anthropics/skills",
+      "tip": "T1",
+      "oncelik": 1,
+      "haric": [
+        "^template/"
+      ]
+    },
+    {
+      "repo": "greensock/gsap-skills",
+      "tip": "T1",
+      "oncelik": 1
+    },
+    {
+      "repo": "vercel/next.js",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^skills/"
+      ]
+    },
+    {
+      "repo": "microsoft/playwright",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^packages/playwright-core/src/tools/skills/"
+      ]
+    },
+    {
+      "repo": "anthropics/claude-code",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^plugins/"
+      ]
+    },
+    {
+      "repo": "darkroomengineering/satus",
+      "tip": "T2",
+      "oncelik": 2,
+      "dahil": [
+        "^\\.agents/skills/react-doctor/"
+      ]
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "Leonxlnx/taste-skill",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "nateherkai/scroll-craft",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "zanwei/design-dna",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "tt-a1i/archify",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "CloudAI-X/threejs-skills",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "Panniantong/Agent-Reach",
+      "tip": "T1",
+      "oncelik": 2
+    },
+    {
+      "repo": "teng-lin/notebooklm-py",
+      "tip": "T1",
+      "oncelik": 2,
+      "kok_dosyalari": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "repo": "obra/superpowers",
+      "tip": "T1",
+      "oncelik": 3
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "tip": "T1",
+      "oncelik": 3
+    },
+    {
+      "repo": "freshtechbro/claudedesignskills",
+      "tip": "T1",
+      "oncelik": 4
+    },
+    {
+      "repo": "vudovn/ag-kit",
+      "tip": "T1",
+      "oncelik": 4
+    },
+    {
+      "repo": "heyitsnoah/claudesidian",
+      "tip": "T1",
+      "oncelik": 4
+    },
+    {
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "tip": "T1",
+      "oncelik": 5,
+      "dahil_degil": [
+        "^composio-skills/"
+      ]
+    },
+    {
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "tip": "T4",
+      "oncelik": 9,
+      "dahil": [
+        "^composio-skills/"
+      ],
+      "kimlik": "composio-entegrasyon"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "tip": "T1",
+      "oncelik": 6,
+      "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
+      "not": "Global klasörlerde zaten kurulu sürümü var; kütüphane kopyası sadece yeni projeler için."
+    },
+    {
+      "repo": "vercel/next.js",
+      "tip": "T3",
+      "oncelik": 8,
+      "dahil": [
+        "^\\.agents/"
+      ],
+      "kimlik": "vercel__next.js__repo-ici"
+    },
+    {
+      "repo": "microsoft/playwright",
+      "tip": "T3",
+      "oncelik": 8,
+      "dahil": [
+        "^\\.claude/"
+      ],
+      "kimlik": "microsoft__playwright__repo-ici"
+    },
+    {
+      "repo": "react/react",
+      "tip": "T3",
+      "oncelik": 8
+    },
+    {
+      "repo": "GoogleChrome/lighthouse",
+      "tip": "T3",
+      "oncelik": 8
+    },
+    {
+      "repo": "motiondivision/motion",
+      "tip": "T3",
+      "oncelik": 8
+    },
+    {
+      "repo": "mrdoob/three.js",
+      "tip": "T6"
+    },
+    {
+      "repo": "pmndrs/react-three-fiber",
+      "tip": "T6"
+    },
+    {
+      "repo": "pmndrs/drei",
+      "tip": "T6"
+    },
+    {
+      "repo": "pmndrs/react-three-a11y",
+      "tip": "T6"
+    },
+    {
+      "repo": "14islands/r3f-scroll-rig",
+      "tip": "T6"
+    },
+    {
+      "repo": "oframe/ogl",
+      "tip": "T6"
+    },
+    {
+      "repo": "greensock/GSAP",
+      "tip": "T6"
+    },
+    {
+      "repo": "motiondivision/motion",
+      "tip": "T6",
+      "kimlik": "motion-kutuphane"
+    },
+    {
+      "repo": "darkroomengineering/lenis",
+      "tip": "T6"
+    },
+    {
+      "repo": "airbnb/lottie-web",
+      "tip": "T6"
+    },
+    {
+      "repo": "barvian/number-flow",
+      "tip": "T6"
+    },
+    {
+      "repo": "tailwindlabs/tailwindcss",
+      "tip": "T6"
+    },
+    {
+      "repo": "argyleink/open-props",
+      "tip": "T6"
+    },
+    {
+      "repo": "seek-oss/capsize",
+      "tip": "T6"
+    },
+    {
+      "repo": "fontsource/fontsource",
+      "tip": "T6"
+    },
+    {
+      "repo": "figma/code-connect",
+      "tip": "T6"
+    },
+    {
+      "repo": "darkroomengineering/satus",
+      "tip": "T6",
+      "kimlik": "satus-starter"
+    },
+    {
+      "repo": "gchahal1982/pixeljury",
+      "tip": "T6"
+    },
+    {
+      "repo": "dequelabs/axe-core",
+      "tip": "T6"
+    },
+    {
+      "repo": "GoogleChrome/lighthouse",
+      "tip": "T5",
+      "kimlik": "lighthouse-arac"
+    },
+    {
+      "repo": "microsoft/playwright",
+      "tip": "T5",
+      "kimlik": "playwright-arac"
+    },
+    {
+      "repo": "vercel/next.js",
+      "tip": "T5",
+      "kimlik": "nextjs-framework"
+    },
+    {
+      "repo": "react/react",
+      "tip": "T5",
+      "kimlik": "react-kutuphane"
+    },
+    {
+      "repo": "QwikDev/partytown",
+      "tip": "T5"
+    },
+    {
+      "repo": "ai/size-limit",
+      "tip": "T5"
+    },
+    {
+      "repo": "FFmpeg/FFmpeg",
+      "tip": "T5"
+    },
+    {
+      "repo": "bytefer/awesome-nextjs",
+      "tip": "T5"
+    },
+    {
+      "repo": "arturitu/the-delegation",
+      "tip": "T5"
+    },
+    {
+      "repo": "haticesahin/SanalFuar",
+      "tip": "T5"
+    },
+    {
+      "repo": "linvi/tweetinvi",
+      "tip": "T5"
+    },
+    {
+      "repo": "anthropics/claude-code",
+      "tip": "T5",
+      "kimlik": "claude-code-arac"
+    }
+  ],
+  "konum_haric": [
+    "(^|/)tests?/",
+    "(^|/)examples?/",
+    "(^|/)fixtures?/",
+    "(^|/)node_modules/",
+    "(^|/)\\.git/"
+  ],
+  "skill_ici_haric": [
+    "(^|/)node_modules/",
+    "(^|/)\\.git/",
+    "\\.(mp4|mov|webm|mkv|avi)$",
+    "-rendered\\.html$"
+  ],
+  "_aciklama_haric": "konum_haric: SKILL.md'nin bulunduğu klasörün ÜST yolunda aranır (skill'in kendi adı test/examples olsa bile alınır). skill_ici_haric: skill klasörü içindeki dosyalara uygulanır (sadece video ve büyük render). Repo kaydındaki 'haric' tam yola uygulanır."
+}

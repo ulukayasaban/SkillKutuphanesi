@@ -1,0 +1,17 @@
+{
+  "ad": "motion-gelistirici",
+  "aciklama": "Animasyon ve mikro-etkileşimleri yazan agent (GSAP / Motion).",
+  "gorev": "Animasyonları performanslı ve erişilebilir yaz: transform/opacity kullan, prefers-reduced-motion'a uy, timeline'ları düzenli tut.",
+  "cekirdek": [
+    "gsap-core",
+    "gsap-timeline",
+    "gsap-react",
+    "gsap-performance"
+  ],
+  "opsiyonel": [
+    "gsap-plugins",
+    "gsap-utils",
+    "motion-framer",
+    "lottie-animations"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "ad": "scroll-deneyim",
+  "aciklama": "Scroll ile ilerleyen hikâye, pinlenen bölümler ve smooth scroll deneyimini kuran agent.",
+  "gorev": "Scroll anlatısını bölümlere ayır, ScrollTrigger/Lenis ile kur, mobilde ve reduced-motion'da sade bir sürüm sun.",
+  "cekirdek": [
+    "scroll-craft",
+    "gsap-scrolltrigger"
+  ],
+  "opsiyonel": [
+    "locomotive-scroll",
+    "barba-js",
+    "scroll-reveal-libraries"
+  ]
+}

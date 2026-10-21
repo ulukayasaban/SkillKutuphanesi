@@ -1,0 +1,18 @@
+{
+  "ad": "3d-gelistirici",
+  "aciklama": "Three.js / React Three Fiber sahnelerini kuran agent.",
+  "gorev": "3D sahneyi kur: ışık, materyal, kamera, etkileşim. Performans bütçesine uy (draw call, texture boyutu, DPR sınırı).",
+  "cekirdek": [
+    "threejs-fundamentals",
+    "threejs-react-three-fiber",
+    "threejs-performance"
+  ],
+  "opsiyonel": [
+    "threejs-shaders",
+    "threejs-postprocessing",
+    "threejs-materials",
+    "threejs-lighting",
+    "threejs-loaders",
+    "web3d-integration-patterns"
+  ]
+}
