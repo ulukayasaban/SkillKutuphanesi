@@ -30,7 +30,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 
 - **Ne yapar:** ag-kit'in Sokratik soru protokolü: belirsiz isteklerde kodlamadan önce en az 3 soru (amaç, kullanıcı, kapsam) sorar, soruları seçenek/artı-eksi tablosuyla biçimlendirir; ilerleme panosu, hata iletişimi ve tamamlanma mesajı kalıplarını da içerir. .agents/memory klasörünü okur.
 - **Ne zaman:** ag-kit iş akışı kullanan projelerde; seçenek tablolu, karar odaklı soru listesi tercih edildiğinde. · **Ne zaman değil:** Genel kullanımda (obra brainstorming daha doğal ve olgun); aynı adı taşıdığı için birincille birlikte kurulamaz.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** fikir-netlestirme → alternatif
@@ -74,7 +74,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 
 - **Ne yapar:** Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı, önerilen yön, doğrulanacak varsayımlar, MVP kapsamı ve 'yapmayacaklarımız' içeren bir belge (docs/ideas/) üretir.
 - **Ne zaman:** Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde. · **Ne zaman değil:** Ne yapılacağı belli, yalnız gereksinim ayrıntısı eksikse (brainstorming / interview-me); kod düzeyi planlama (writing-plans).
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** fikir-netlestirme → alternatif · **Globalde:** claude:ayni, agents:ayni

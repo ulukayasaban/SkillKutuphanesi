@@ -38,13 +38,13 @@
 
 `add-frontmatter`, `agent-development`, `brand`, `command-development`, `content-research-writer`, `context-engineering`, `daily-review`, `de-ai-ify`, `design-spec`, `doc-coauthoring`, `documentation-and-adrs`, `documentation-templates`, `inbox-processor`, `internal-comms`, `meeting-insights-analyzer`, `memory-system`, `obsidian-markdown`, `research-assistant`, `skill-creator`, `skill-development`, `skillify`, `tailored-resume-generator`, `thinking-partner`, `twitter-algorithm-optimizer`, `visual-style`, `weekly-synthesis`, `writing-skills`
 
+## git (25)
+
+`archify-review`, `batch-operations`, `changelog-generator`, `constraint-driven-development`, `debugging-and-error-recovery`, `deployment-procedures`, `executing-plans`, `finishing-a-development-branch`, `git-workflow-and-versioning`, `git-worktrees`, `incremental-implementation`, `init-bootstrap`, `pragmatic-review`, `pull-request`, `release`, `requesting-code-review`, `shipping-and-launch`, `simplify-codebase`, `subagent-driven-development`, `systematic-debugging`, `upgrade`, `using-agent-skills`, `using-git-worktrees`, `using-superpowers`, `writing-plans`
+
 ## gsap (23)
 
 `changelog-video`, `character-rigging`, `cut-the-curve`, `embedded-captions`, `faceless-explainer`, `figma`, `general-video`, `hyperframes`, `hyperframes-animation`, `hyperframes-core`, `hyperframes-keyframes`, `hyperframes-registry`, `modern-web-design`, `motion-doctrine`, `motion-graphics`, `music-to-video`, `oversized-cursor`, `pose-library-design`, `pr-to-video`, `product-launch-video`, `slideshow`, `svg-character-animation`, `talking-head-recut`
-
-## git (23)
-
-`batch-operations`, `changelog-generator`, `constraint-driven-development`, `debugging-and-error-recovery`, `deployment-procedures`, `executing-plans`, `finishing-a-development-branch`, `git-workflow-and-versioning`, `git-worktrees`, `incremental-implementation`, `init-bootstrap`, `pragmatic-review`, `pull-request`, `release`, `requesting-code-review`, `shipping-and-launch`, `subagent-driven-development`, `systematic-debugging`, `upgrade`, `using-agent-skills`, `using-git-worktrees`, `using-superpowers`, `writing-plans`
 
 ## webgpu (16)
 
@@ -105,6 +105,10 @@
 ## heygen (10)
 
 `ai-video-gen`, `avatar-video`, `changelog-video`, `create-video`, `faceswap`, `heygen`, `hyperframes-media`, `media-use`, `text-to-speech`, `video-translate`
+
+## dil-bagimsiz (8)
+
+`archify-review`, `architecture`, `idea-refine`, `receiving-code-review`, `simplify-codebase`, `tdd-workflow`, `test-value`, `verification-before-completion`
 
 ## remotion (8)
 
@@ -654,6 +658,10 @@
 
 `code-review-graph`
 
+## test-araclari (1)
+
+`test-value`
+
 ## trpc (1)
 
 `api-patterns`
@@ -829,6 +837,10 @@
 ## graphviz (1)
 
 `writing-skills`
+
+## github (1)
+
+`archify-review`
 
 ## figma api (1)
 

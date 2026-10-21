@@ -8,7 +8,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 
 - **Ne yapar:** Archify reposunun iç bakım skilli: issue, PR veya kodu değer, maliyet ve etki üzerinden değerlendirip kanıta dayalı bakım kararı verdirir; depo kökündeki REVIEWING.md ve CONTRIBUTING.md'ye yönlendirir.
 - **Ne zaman:** Yalnız tt-a1i/archify reposuna katkı yaparken issue triyajı ve PR değerlendirmesi. · **Ne zaman değil:** Kendi projelerinde genel code review (code-review-and-quality); bağlantı verdiği REVIEWING.md/CONTRIBUTING.md arşivde yok.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz, git, github
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif

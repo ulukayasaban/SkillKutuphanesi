@@ -52,7 +52,7 @@ _TDD, hata ayıklama, doğrulama_
 
 - **Ne yapar:** ag-kit'in TDD ilke özeti: RED-GREEN-REFACTOR döngüsü, TDD'nin üç yasası, her faz için kurallar, AAA, TDD'nin ne zaman değerli olduğu tablosu ve test yazan/kod yazan agent'ları ayıran çoklu agent deseni.
 - **Ne zaman:** ag-kit iş akışı kullanan projelerde veya çok kısa bir TDD hatırlatıcısı yeterliyse. · **Ne zaman değil:** Gerçek uygulama rehberi gerektiğinde (test-driven-development); diğer TDD sürümleriyle birlikte.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** tdd → alternatif
@@ -85,7 +85,7 @@ _TDD, hata ayıklama, doğrulama_
 
 - **Ne yapar:** Testlerin değerini ve geri bildirim maliyetini denetler: yavaş, kararsız, yinelenen veya kırılgan testleri bulur; uygulama sırasında hangi testin ekleneceğine/uyarlanacağına/silineceğine karar verdirir. Her yeni test için 'hangi somut hatayı yakalar, eşdeğer refactor'da da kırılır mı, başka bir kontrol zaten yakalıyor mu' sorularını şart koşar; AI'nın hem kodu hem testi aynı yanlış varsayımla yazma riskine dikkat çeker.
 - **Ne zaman:** Test paketi yavaş/kararsız olduğunda denetim; commit/PR öncesi test değişikliklerini incelemek; başarısız bir kontrolün gerçek regresyon mu eskimiş assertion mı olduğunu ayırmak. · **Ne zaman değil:** Test yazma yöntemi öğretmek (test-driven-development); kapsam dışı depo geneli denetim (yalnız istenirse).
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz, test-araclari
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** test-degeri → birincil · **Roller:** kod-inceleyici
@@ -107,7 +107,7 @@ _TDD, hata ayıklama, doğrulama_
 
 - **Ne yapar:** 'Taze doğrulama kanıtı olmadan tamamlandı iddiası yok' kuralı: bir durum iddia etmeden önce kanıtlayan komutu belirle, tam çalıştır, çıktıyı ve çıkış kodunu oku, ancak sonra iddia et. Testler, lint, build, hata düzeltmesi, regresyon testi ve alt-agent raporları için neyin yeterli kanıt olduğunu tablolar.
 - **Ne zaman:** İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman. · **Ne zaman değil:** Neredeyse hiçbir zaman gereksiz değildir; yalnız doğrulanacak çalıştırılabilir bir şey yoksa (salt doküman işi) etkisiz.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** tamamlanma-dogrulama → birincil · **Roller:** backend-muhendis, frontend-muhendis, planlayici

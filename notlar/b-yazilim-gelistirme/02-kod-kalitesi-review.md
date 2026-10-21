@@ -85,7 +85,7 @@ _Code review, sadeleştirme, temiz kod_
 
 - **Ne yapar:** Gelen kod inceleme geri bildirimine teknik titizlikle yaklaşmayı öğretir: oku, kendi sözlerinle yeniden ifade et, kod tabanında doğrula, değerlendir, gerekirse gerekçeli itiraz et, maddeleri tek tek uygulayıp test et; 'harika fikir!' gibi gösterişli onayı ve doğrulamadan uygulamayı yasaklar.
 - **Ne zaman:** İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken. · **Ne zaman değil:** Geri bildirim yokken; incelemeyi yapan tarafta.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** inceleme-dongusu → tamamlayıcı
@@ -118,7 +118,7 @@ _Code review, sadeleştirme, temiz kod_
 
 - **Ne yapar:** Kod tabanından kazara karmaşıklığı kanıta dayalı olarak ayıklar: Survey (salt okuma, sıralı bulgular) ve Change (yetkili silme/birleştirme) kipleri; sözleşme haritası çıkarır, her aday için yük/erişilebilirlik/gerekçe/kesinti/sonuç/risk/kanıt kaydı tutar; ölü kod, yinelenen durum, gereksiz API/katman, sahipsiz soyutlama ve eskimiş uyumluluk yollarını hedefler. Güvenlik ve veri kaybı korumalarına dokunmaz.
 - **Ne zaman:** Var olan bir depoda sadeleştirme denetimi veya açıkça yetkilendirilmiş büyük çaplı temizlik; 'nereler gereksiz?' sorusuna kanıtlı yanıt. · **Ne zaman değil:** Genel code review, onboarding, sadece stil refactor'ü veya performans ayarı (skill kendisi de bunları dışlıyor); küçük diff sadeleştirmesi (code-simplification).
-- **Teknoloji:** - _(otomatik tespit)_
+- **Teknoloji:** dil-bagimsiz, git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → tamamlayıcı · **Roller:** kod-inceleyici

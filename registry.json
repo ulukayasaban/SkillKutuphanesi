@@ -11375,7 +11375,9 @@
       "ozet_tr": "ag-kit'in Sokratik soru protokolü: belirsiz isteklerde kodlamadan önce en az 3 soru (amaç, kullanıcı, kapsam) sorar, soruları seçenek/artı-eksi tablosuyla biçimlendirir; ilerleme panosu, hata iletişimi ve tamamlanma mesajı kalıplarını da içerir. .agents/memory klasörünü okur.",
       "kullanim_alani": "ag-kit iş akışı kullanan projelerde; seçenek tablolu, karar odaklı soru listesi tercih edildiğinde.",
       "kullanma": "Genel kullanımda (obra brainstorming daha doğal ve olgun); aynı adı taşıdığı için birincille birlikte kurulamaz.",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "dashboard-saas",
@@ -11772,7 +11774,9 @@
       "ozet_tr": "Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı, önerilen yön, doğrulanacak varsayımlar, MVP kapsamı ve 'yapmayacaklarımız' içeren bir belge (docs/ideas/) üretir.",
       "kullanim_alani": "Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde.",
       "kullanma": "Ne yapılacağı belli, yalnız gereksinim ayrıntısı eksikse (brainstorming / interview-me); kod düzeyi planlama (writing-plans).",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "ai-uygulama",
@@ -13351,7 +13355,9 @@
       "ozet_tr": "Gelen kod inceleme geri bildirimine teknik titizlikle yaklaşmayı öğretir: oku, kendi sözlerinle yeniden ifade et, kod tabanında doğrula, değerlendir, gerekirse gerekçeli itiraz et, maddeleri tek tek uygulayıp test et; 'harika fikir!' gibi gösterişli onayı ve doğrulamadan uygulamayı yasaklar.",
       "kullanim_alani": "İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken.",
       "kullanma": "Geri bildirim yokken; incelemeyi yapan tarafta.",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "dashboard-saas",
@@ -13634,7 +13640,10 @@
       "ozet_tr": "Kod tabanından kazara karmaşıklığı kanıta dayalı olarak ayıklar: Survey (salt okuma, sıralı bulgular) ve Change (yetkili silme/birleştirme) kipleri; sözleşme haritası çıkarır, her aday için yük/erişilebilirlik/gerekçe/kesinti/sonuç/risk/kanıt kaydı tutar; ölü kod, yinelenen durum, gereksiz API/katman, sahipsiz soyutlama ve eskimiş uyumluluk yollarını hedefler. Güvenlik ve veri kaybı korumalarına dokunmaz.",
       "kullanim_alani": "Var olan bir depoda sadeleştirme denetimi veya açıkça yetkilendirilmiş büyük çaplı temizlik; 'nereler gereksiz?' sorusuna kanıtlı yanıt.",
       "kullanma": "Genel code review, onboarding, sadece stil refactor'ü veya performans ayarı (skill kendisi de bunları dışlıyor); küçük diff sadeleştirmesi (code-simplification).",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz",
+        "git"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "mevcut-kod-iyilestirme"
@@ -14107,7 +14116,9 @@
       "ozet_tr": "ag-kit'in TDD ilke özeti: RED-GREEN-REFACTOR döngüsü, TDD'nin üç yasası, her faz için kurallar, AAA, TDD'nin ne zaman değerli olduğu tablosu ve test yazan/kod yazan agent'ları ayıran çoklu agent deseni.",
       "kullanim_alani": "ag-kit iş akışı kullanan projelerde veya çok kısa bir TDD hatırlatıcısı yeterliyse.",
       "kullanma": "Gerçek uygulama rehberi gerektiğinde (test-driven-development); diğer TDD sürümleriyle birlikte.",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "dashboard-saas",
@@ -14399,7 +14410,10 @@
       "ozet_tr": "Testlerin değerini ve geri bildirim maliyetini denetler: yavaş, kararsız, yinelenen veya kırılgan testleri bulur; uygulama sırasında hangi testin ekleneceğine/uyarlanacağına/silineceğine karar verdirir. Her yeni test için 'hangi somut hatayı yakalar, eşdeğer refactor'da da kırılır mı, başka bir kontrol zaten yakalıyor mu' sorularını şart koşar; AI'nın hem kodu hem testi aynı yanlış varsayımla yazma riskine dikkat çeker.",
       "kullanim_alani": "Test paketi yavaş/kararsız olduğunda denetim; commit/PR öncesi test değişikliklerini incelemek; başarısız bir kontrolün gerçek regresyon mu eskimiş assertion mı olduğunu ayırmak.",
       "kullanma": "Test yazma yöntemi öğretmek (test-driven-development); kapsam dışı depo geneli denetim (yalnız istenirse).",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz",
+        "test-araclari"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "mevcut-kod-iyilestirme",
@@ -14583,7 +14597,9 @@
       "ozet_tr": "'Taze doğrulama kanıtı olmadan tamamlandı iddiası yok' kuralı: bir durum iddia etmeden önce kanıtlayan komutu belirle, tam çalıştır, çıktıyı ve çıkış kodunu oku, ancak sonra iddia et. Testler, lint, build, hata düzeltmesi, regresyon testi ve alt-agent raporları için neyin yeterli kanıt olduğunu tablolar.",
       "kullanim_alani": "İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman.",
       "kullanma": "Neredeyse hiçbir zaman gereksiz değildir; yalnız doğrulanacak çalıştırılabilir bir şey yoksa (salt doküman işi) etkisiz.",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "dashboard-saas",
@@ -14976,7 +14992,9 @@
       "ozet_tr": "Mimari karar çerçevesi: bağlam keşfi soruları ve proje sınıflandırması, ödünleşim (trade-off) analizi ve ADR şablonları, desen seçimi karar ağaçları, MVP/SaaS/kurumsal örnekler ve desen hızlı başvurusu; 'basit başla, karmaşıklığı ancak kanıtlanınca ekle' ilkesi.",
       "kullanim_alani": "Sistem tasarımı, desen seçimi (monolit/mikroservis, katmanlar), önemli kararların ADR olarak kaydı.",
       "kullanma": "Doğrudan kod uygulaması; ayrıntılı ADR/dokümantasyon süreci (c-dokuman'daki documentation-and-adrs daha kapsamlı olabilir).",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [
         "dashboard-saas",
@@ -100022,7 +100040,11 @@
       "ozet_tr": "Archify reposunun iç bakım skilli: issue, PR veya kodu değer, maliyet ve etki üzerinden değerlendirip kanıta dayalı bakım kararı verdirir; depo kökündeki REVIEWING.md ve CONTRIBUTING.md'ye yönlendirir.",
       "kullanim_alani": "Yalnız tt-a1i/archify reposuna katkı yaparken issue triyajı ve PR değerlendirmesi.",
       "kullanma": "Kendi projelerinde genel code review (code-review-and-quality); bağlantı verdiği REVIEWING.md/CONTRIBUTING.md arşivde yok.",
-      "teknoloji": [],
+      "teknoloji": [
+        "dil-bagimsiz",
+        "git",
+        "github"
+      ],
       "gerekli_paketler": [],
       "proje_tipleri": [],
       "roller": [],
