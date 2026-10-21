@@ -11,3 +11,4 @@
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
 - **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
+- **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `hyperframes`, `hyperframes-core`

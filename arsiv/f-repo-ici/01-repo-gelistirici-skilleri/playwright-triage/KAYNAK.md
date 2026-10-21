@@ -10,4 +10,5 @@
 - **Değerlendirme:** 96/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
+- **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `playwright-dev`
 - **SKILL.md'de olup bulunamayan dosyalar:** `../../../packages/playwright-core/src/tools/skills/playwright-cli/SKILL.md`, `../../../tests/page/page-network-request.spec.ts`, `../../../tests/page/selectors-css.spec.ts`, `../../../tests/page/workers.spec.ts`

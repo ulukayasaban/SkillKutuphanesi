@@ -54,14 +54,14 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 13 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frontend-architecture  ·  vudovn/ag-kit @ 549ba3d  ·  puan 85 (A)
+### frontend-architecture  ·  vudovn/ag-kit @ 549ba3d  ·  puan 87 (A)
 
 - **Ne yapar:** How to organize frontend code — separation of concerns (UI / logic / data / type), file responsibility, state tiers, API services, schema validation, and framework conventions for React/Next and Vue. Structural rules, not visual design.
 - **Teknoloji:** api-anahtari, next.js, react, tailwind, typescript, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih
-- **Boyut:** 8 KB (SKILL.md 7.8 KB, yük orta) · **Kırık bağlantı:** 3
+- **Boyut:** 8 KB (SKILL.md 7.8 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### frontend-ui-engineering  ·  addyosmani/agent-skills @ aeac41d  ·  puan 91 (A)

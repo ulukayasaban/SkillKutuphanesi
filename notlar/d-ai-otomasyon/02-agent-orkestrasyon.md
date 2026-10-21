@@ -114,14 +114,14 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### subagent-driven-development  ·  obra/superpowers @ b739a8a  ·  puan 86 (A)
+### subagent-driven-development  ·  obra/superpowers @ b739a8a  ·  puan 88 (A)
 
 - **Ne yapar:** Use when executing implementation plans with independent tasks in the current session
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
-- **Boyut:** 58 KB (SKILL.md 31.8 KB, yük buyuk) · **Kırık bağlantı:** 1
+- **Boyut:** 58 KB (SKILL.md 31.8 KB, yük buyuk)
 - **İnceleme:** otomatik
 
 ### using-agent-skills  ·  addyosmani/agent-skills @ aeac41d  ·  puan 91 (A)

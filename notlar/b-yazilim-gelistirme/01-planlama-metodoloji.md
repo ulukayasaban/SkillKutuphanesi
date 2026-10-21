@@ -54,14 +54,14 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 16 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### executing-plans  ·  obra/superpowers @ b739a8a  ·  puan 89 (A)
+### executing-plans  ·  obra/superpowers @ b739a8a  ·  puan 91 (A)
 
 - **Ne yapar:** Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available
 - **Teknoloji:** git, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
-- **Boyut:** 23 KB (SKILL.md 19.9 KB, yük orta) · **Kırık bağlantı:** 1
+- **Boyut:** 23 KB (SKILL.md 19.9 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### idea-refine  ·  addyosmani/agent-skills @ aeac41d  ·  puan 86 (A)

@@ -1081,6 +1081,12 @@
         "katkici": 10
       },
       "inceleme": "otomatik",
+      "kardes_bagimliliklari": {
+        "frontend-design": {
+          "id": "frontend-design@vudovn",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -8735,9 +8741,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../requesting-code-review/code-reviewer.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "orta",
       "boyut_kb": 23,
       "skill_md_kb": 19.9,
@@ -8764,8 +8768,14 @@
         "katkici": 44
       },
       "inceleme": "otomatik",
+      "kardes_bagimliliklari": {
+        "requesting-code-review": {
+          "id": "requesting-code-review",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 89,
+        "puan": 91,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -8774,7 +8784,7 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 5/5"
         ]
       }
     },
@@ -11626,11 +11636,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../app-builder/scaffolding.md",
-        "../frontend-design/SKILL.md",
-        "../nextjs-react-expert/SKILL.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "orta",
       "boyut_kb": 8,
       "skill_md_kb": 7.8,
@@ -11657,8 +11663,22 @@
         "katkici": 10
       },
       "inceleme": "otomatik",
+      "kardes_bagimliliklari": {
+        "app-builder": {
+          "id": "app-builder",
+          "dosya_sayisi": 1
+        },
+        "frontend-design": {
+          "id": "frontend-design@vudovn",
+          "dosya_sayisi": 1
+        },
+        "nextjs-react-expert": {
+          "id": "nextjs-react-expert",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 85,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
@@ -11667,7 +11687,7 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 5/5"
         ]
       }
     },
@@ -18778,9 +18798,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../requesting-code-review/code-reviewer.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "buyuk",
       "boyut_kb": 58,
       "skill_md_kb": 31.8,
@@ -18807,8 +18825,14 @@
         "katkici": 44
       },
       "inceleme": "otomatik",
+      "kardes_bagimliliklari": {
+        "requesting-code-review": {
+          "id": "requesting-code-review",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 86,
+        "puan": 88,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -18817,7 +18841,7 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 3/5"
+          "yapı 5/5"
         ]
       }
     },
@@ -20336,10 +20360,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../using-superpowers/references/codex-tools.md",
-        "../using-superpowers/references/gemini-tools.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "buyuk",
       "boyut_kb": 105,
       "skill_md_kb": 26.0,
@@ -20366,8 +20387,14 @@
         "katkici": 44
       },
       "inceleme": "otomatik",
+      "kardes_bagimliliklari": {
+        "using-superpowers": {
+          "id": "using-superpowers",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 86,
+        "puan": 88,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -20376,7 +20403,7 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 3/5"
+          "yapı 5/5"
         ]
       }
     },
@@ -82704,6 +82731,12 @@
         "katkici": 823
       },
       "inceleme": "otomatik",
+      "kardes_bagimliliklari": {
+        "playwright-dev": {
+          "id": "playwright-dev",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -84179,9 +84212,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../hyperframes/references/plugin-installation.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "buyuk",
       "boyut_kb": 3421,
       "skill_md_kb": 33.8,
@@ -84243,8 +84274,14 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 81,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84253,7 +84290,7 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 3/5",
+          "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
@@ -84292,21 +84329,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../hyperframes-animation/blueprints-index.md",
-        "../hyperframes-animation/rules-index.md",
-        "../hyperframes-animation/rules/",
-        "../hyperframes-creative/frame-presets/",
-        "../hyperframes-creative/references/design-spec.md",
-        "../hyperframes-creative/references/story-spine.md",
-        "../hyperframes/references/brief-contract.md",
-        "../hyperframes/references/frame-worker-core.md",
-        "../hyperframes/references/plugin-installation.md",
-        "../hyperframes/references/script-format.md",
-        "../hyperframes/references/storyboard-format.md",
-        "../hyperframes/references/subagent-dispatch.md",
-        "../media-use/audio/references/tts.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "buyuk",
       "boyut_kb": 284,
       "skill_md_kb": 30.5,
@@ -84366,8 +84389,26 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-animation": {
+          "id": "hyperframes-animation",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-creative": {
+          "id": "hyperframes-creative",
+          "dosya_sayisi": 1
+        },
+        "media-use": {
+          "id": "media-use",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 81,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84376,7 +84417,7 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 3/5",
+          "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
@@ -84520,9 +84561,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../hyperframes/references/plugin-installation.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "orta",
       "boyut_kb": 23,
       "skill_md_kb": 17.9,
@@ -84579,8 +84618,14 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 83,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84589,7 +84634,7 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 3/5",
+          "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
@@ -84629,9 +84674,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../hyperframes/references/plugin-installation.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "orta",
       "boyut_kb": 36,
       "skill_md_kb": 21.4,
@@ -84693,8 +84736,14 @@
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
-        "puan": 83,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84703,7 +84752,7 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 3/5",
+          "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
@@ -84923,6 +84972,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -85149,6 +85204,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 82,
         "not": "A",
@@ -85264,6 +85325,16 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-core": {
+          "id": "hyperframes-core",
+          "dosya_sayisi": 3
+        }
+      },
       "degerlendirme": {
         "puan": 82,
         "not": "A",
@@ -85490,6 +85561,12 @@
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 92,
         "not": "A",
@@ -85705,6 +85782,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -85923,6 +86006,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 84,
         "not": "A",
@@ -86135,6 +86224,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 84,
         "not": "A",
@@ -86345,6 +86440,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 84,
         "not": "A",
@@ -86568,6 +86669,12 @@
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 84,
         "not": "A",
@@ -86781,6 +86888,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 84,
         "not": "A",
@@ -87206,6 +87319,24 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-animation": {
+          "id": "hyperframes-animation",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-creative": {
+          "id": "hyperframes-creative",
+          "dosya_sayisi": 1
+        },
+        "media-use": {
+          "id": "media-use",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 82,
         "not": "A",
@@ -87317,6 +87448,24 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-animation": {
+          "id": "hyperframes-animation",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-creative": {
+          "id": "hyperframes-creative",
+          "dosya_sayisi": 1
+        },
+        "media-use": {
+          "id": "media-use",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 82,
         "not": "A",
@@ -87641,6 +87790,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 84,
         "not": "A",
@@ -87859,6 +88014,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 82,
         "not": "A",
@@ -88078,6 +88239,12 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        }
+      },
       "degerlendirme": {
         "puan": 82,
         "not": "A",
@@ -92741,11 +92908,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../hyperframes-creative/references/data-in-motion.md",
-        "../hyperframes-creative/references/motion-principles.md",
-        "../hyperframes/references/plugin-installation.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "orta",
       "boyut_kb": 113,
       "skill_md_kb": 15.7,
@@ -92806,8 +92969,18 @@
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
+      "kardes_bagimliliklari": {
+        "hyperframes": {
+          "id": "hyperframes",
+          "dosya_sayisi": 1
+        },
+        "hyperframes-creative": {
+          "id": "hyperframes-creative",
+          "dosya_sayisi": 4
+        }
+      },
       "degerlendirme": {
-        "puan": 83,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -92816,7 +92989,7 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 3/5",
+          "yapı 5/5",
           "elle kalite 4/5 (%40 ağırlık)"
         ]
       }

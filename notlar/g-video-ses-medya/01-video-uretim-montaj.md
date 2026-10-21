@@ -37,7 +37,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 92 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı ve güncel HeyGen resmi skill'i; MCP varsa onu tercih ediyor. Ücretli API, sonuç kontrolü sınırlı.
 
-### embedded-captions  ·  heygen-com/hyperframes @ 25126bc  ·  puan 81 (A)
+### embedded-captions  ·  heygen-com/hyperframes @ 25126bc  ·  puan 82 (A)
 
 - **Ne yapar:** Tek kişilik konuşan kafa videosuna görüntüyü düzenlemeden altyazı ekler: düz birebir altyazı, öznenin arkasına gömülü sinematik altyazı, VFX altyazı veya 35 stillik katalogdan adlı bir kimlik. Varsayılan sakin 'anchor' rayıdır; transkripsiyon ve özne maskeleme dahil uçtan uca yerel çalışır.
 - **Ne zaman:** Var olan konuşan kafa videosuna altyazı/sinematik yazı eklenmek istendiğinde. · **Ne zaman değil:** Grafik overlay kartları (talking-head-recut); çok çekimli görüntü (önce bölünmeli); altyazı dosyası (SRT) üretimi yeterliyse.
@@ -45,10 +45,10 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → tamamlayıcı · **Roller:** video-produksiyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
-- **Boyut:** 3421 KB (SKILL.md 33.8 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır. · **Kırık bağlantı:** 1
+- **Boyut:** 3421 KB (SKILL.md 33.8 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Karar kapısı ve ön kontroller güçlü, DNA stil kayıt defteri zengin; kurulum ağır (özne maskeleme modeli) ve SKILL.md büyük (34 KB). captions-overlay ile birlikte kullanılır. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.
 
-### faceless-explainer  ·  heygen-com/hyperframes @ 25126bc  ·  puan 81 (A)
+### faceless-explainer  ·  heygen-com/hyperframes @ 25126bc  ·  puan 82 (A)
 
 - **Ne yapar:** Makale, not, konu veya brief gibi düz metni yüzsüz (faceless) açıklayıcı videoya çevirir: yakalanacak site/görüntü olmadığı için görseller sahne başına tipografi, soyut grafik, diyagram ve veri görselleştirmesiyle icat edilir. Brief→tasarım sistemi→storyboard/senaryo→ses→kare tasarımı→kare yapımı→birleştirme adımları kapılıdır, kareler alt ajanlara dağıtılır.
 - **Ne zaman:** Konu anlatımı, kavram açıklaması, nasıl yapılır ve liste videolarında; elde yalnız metin varken. · **Ne zaman değil:** Web sitesinden ürün/tanıtım videosu (product-launch-video); PR anlatımı (pr-to-video); müzik videosu.
@@ -56,7 +56,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → tamamlayıcı · **Roller:** video-produksiyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
-- **Boyut:** 284 KB (SKILL.md 30.5 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır. · **Kırık bağlantı:** 13
+- **Boyut:** 284 KB (SKILL.md 30.5 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun, testli betikler ve kapılı aşamalar; çok ajanlı olduğu için uzun/maliyetli. Bağlam yükü yüksek (30 KB SKILL.md). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.
 
 ### ffmpeg  ·  calesthio/OpenMontage @ c806645  ·  puan 86 (A)
@@ -70,7 +70,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 17 KB (SKILL.md 12.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kapsamlı ve doğru tarifler; Remotion odaklı örnekler ağırlıkta. video-edit ile birlikte kullanılır.
 
-### figma  ·  heygen-com/hyperframes @ 25126bc  ·  puan 83 (A)
+### figma  ·  heygen-com/hyperframes @ 25126bc  ·  puan 84 (A)
 
 - **Ne yapar:** Figma içeriğini HyperFrames kompozisyonuna aktarır: render edilmiş varlıklar, marka token'ları, bileşenler (REST/CLI), bir SECTION içindeki sahne karelerinden hareket kurgusu, bağlayıcı varsa Figma hareketleri ve shader'lar. İki ayrı kimlik bilgisi (token) kapsamını tanımlar.
 - **Ne zaman:** Kullanıcı figma.com bağlantısı verdiğinde veya Figma tasarımını/logosunu/animasyonunu videoya getirmek istediğinde. · **Ne zaman değil:** Figma'dan web/uygulama kodu üretmek için (video dışı); Figma erişimi yoksa.
@@ -78,10 +78,10 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → tamamlayıcı · **Roller:** video-produksiyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
-- **Boyut:** 23 KB (SKILL.md 17.9 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır. · **Kırık bağlantı:** 1
+- **Boyut:** 23 KB (SKILL.md 17.9 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Faz faz net akış ve determinizm bölümü iyi; adı genel ama yalnız HyperFrames'e aktarım içindir (Figma→kod değil). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.
 
-### general-video  ·  heygen-com/hyperframes @ 25126bc  ·  puan 83 (A)
+### general-video  ·  heygen-com/hyperframes @ 25126bc  ·  puan 84 (A)
 
 - **Ne yapar:** Uzmanlaşmış bir iş akışına uymayan özel HyperFrames kompozisyonları için genel iş akışı: uzun veya çok sahneli işler, marka/sizzle reel, montaj, statik döngü ve başlık kartı, mevcut görüntü remiksi; BRIEF.md 'flow: companion' dediğinde eşlikçi akış. Proje durumundan başlar, aşama başına gerekli bilgi skillerini yükletir ve kapıları uygular.
 - **Ne zaman:** hyperframes yönlendiricisi başka iş akışı bulamadığında; serbest, çok sahneli kompozisyonlarda. · **Ne zaman değil:** Kısa anlatımsız motion graphic (motion-graphics); web sitesi/PR/metin/müzik/konuşan kafa girdili işler (ilgili özel akış); yönlendirici okunmadan doğrudan.
@@ -89,7 +89,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → birincil · **Roller:** video-produksiyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
-- **Boyut:** 36 KB (SKILL.md 21.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır. · **Kırık bağlantı:** 1
+- **Boyut:** 36 KB (SKILL.md 21.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İş akışlarının 'her şey dahil' yedeği; kapsamı dar tutma ve tasarımı HTML'den önce kurma kuralları iyi. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.
 
 ### hyperframes  ·  heygen-com/hyperframes @ 25126bc  ·  puan 92 (A)

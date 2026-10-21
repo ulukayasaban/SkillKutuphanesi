@@ -10,3 +10,4 @@
 - **Değerlendirme:** 89/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
+- **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `frontend-design`

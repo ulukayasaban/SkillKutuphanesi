@@ -154,12 +154,12 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### writing-skills  ·  obra/superpowers @ b739a8a  ·  puan 86 (A)
+### writing-skills  ·  obra/superpowers @ b739a8a  ·  puan 88 (A)
 
 - **Ne yapar:** Use when creating new skills, editing existing skills, or verifying skills work before deployment
 - **Teknoloji:** api-anahtari, git, node, python, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
 - **Durum:** tercih
-- **Boyut:** 105 KB (SKILL.md 26.0 KB, yük buyuk) · **Kırık bağlantı:** 2
+- **Boyut:** 105 KB (SKILL.md 26.0 KB, yük buyuk)
 - **İnceleme:** otomatik

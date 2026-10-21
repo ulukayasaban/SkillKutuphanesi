@@ -175,6 +175,53 @@ def main():
     test("ad eşitleme sadece frontmatter'a dokunur ve CRLF'yi korur",
          b.startswith(b"---\r\nname: yeni-ad\r\n") and b"name: ornek\r\n" in b, b.decode())
 
+    # --- kardeş skill bağımlılıkları (../<kardeş>/ bağlantıları)
+    kd = kok / "kardes"
+    ana_kok = kok / "baska-kategori" / "ana"  # arşivde kardeşler farklı kategori klasörlerinde durur
+    for yer, govde in {ana_kok: "# ana\n", kd / "yan": "[r](../ana/references/x.md) [k](../yok-skill/a.md) [d](../../disari.md)\n"}.items():
+        (yer / "references").mkdir(parents=True)
+        (yer / "SKILL.md").write_text(f"---\nname: {yer.name}\n---\n{govde}", encoding="utf-8")
+    (ana_kok / "references" / "x.md").write_text("x", encoding="utf-8")
+    (kd / "yan" / "references" / "r.md").write_text("[a](../../ana/references/x.md) `../ana/` ../anaconda/\n", encoding="utf-8")
+    spec_y = importlib.util.spec_from_file_location("ay", KOK / "araclar" / "arsiv-yerlestir.py")
+    ay = importlib.util.module_from_spec(spec_y)
+    spec_y.loader.exec_module(ay)
+    kayit = lambda ad: {"id": ad, "ad": ad, "klasor_adi": ad, "repo": "r/r", "durum": "tercih"}
+    kardes, cozulen = ay.kardes_baglantilari(kd / "yan", {"ana": [(kayit("ana"), ana_kok)]}, kayit("yan"))
+    test("arşiv: ../<kardeş>/ bağlantısı kardeş bağımlılığı sayılır, kırık sayılmaz",
+         kardes == {"ana": {"id": "ana", "dosya_sayisi": 2}} and cozulen == {"../ana/references/x.md"}
+         and "../ana/references/x.md" in ay.kirik_baglantilar(kd / "yan"), str((kardes, cozulen)))
+    se.kardes_yollarini_yeniden_adlandir(kd / "yan", {"ana": "ana--kutuphane"})
+    test("kurulum: kardeş yolları dosya derinliğine göre projedeki ada çevrilir",
+         "](../ana--kutuphane/references/x.md)" in (kd / "yan" / "SKILL.md").read_text(encoding="utf-8")
+         and (kd / "yan" / "references" / "r.md").read_text(encoding="utf-8")
+         == "[a](../../ana--kutuphane/references/x.md) `../ana/` ../anaconda/\n",
+         (kd / "yan" / "references" / "r.md").read_text(encoding="utf-8"))
+
+    reg = json_oku(KOK / "registry.json")["skiller"]
+    idler = {s["id"]: s for s in reg}
+    ornek = next((s for s in reg if s["durum"] == "tercih" and not s.get("kirik_baglantilar")
+                  and len(s.get("kardes_bagimliliklari") or {}) == 1
+                  and not idler[next(iter(s["kardes_bagimliliklari"].values()))["id"]].get("kardes_bagimliliklari")), None)
+    if ornek:
+        kad, bilgi = next(iter(ornek["kardes_bagimliliklari"].items()))
+        p3 = kok / "proje3"
+        p3.mkdir()
+        kod, out = calistir(p3, "--skill", ornek["id"], "--kuru")
+        test("kardeş skill kurulmuyorsa uyarılır", "kardes-eksik" in out and "kirik-baglanti" not in out, out)
+        kod, out = calistir(p3, "--skill", ornek["id"], bilgi["id"], "--evet")
+        kl3 = json_oku(p3 / ".skill-kutuphanesi" / "kilit.json")["skiller"]
+        ad3 = next(a for a, k in kl3.items() if k["id"] == ornek["id"])
+        kardes_ad = next(a for a, k in kl3.items() if k["id"] == bilgi["id"])
+        kok3 = p3 / ".agents" / "skills" / ad3
+        import os as _os, re as _re
+        kirik3 = [h for f in kok3.rglob("*.md") for h in _re.findall(r"\]\(([^)\s#]+)", f.read_text(encoding="utf-8"))
+                  if h.startswith("../") and _os.path.normpath(f.parent / h).startswith(str(kok3.parent))
+                  and not Path(_os.path.normpath(f.parent / h)).exists()]
+        test(f"kardeşle birlikte kurulunca ../{kad}/ bağlantıları projede çözülür (kardeş adı: {kardes_ad})",
+             kod == 0 and "kardes-eksik" not in out and not kirik3 and kl3[ad3].get("kardes") == {kad: kardes_ad},
+             out + str(kirik3))
+
     kod, out = calistir(p2, "--kaldir", "gsap-core", "--evet")
     kod2, out2 = calistir(p2, "--geri-al")
     test("geri al: kaldırılan skill geri gelir", kod2 == 0 and (p2 / ".agents" / "skills" / "gsap-core" / "SKILL.md").exists(), out2)

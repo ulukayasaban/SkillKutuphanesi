@@ -92,7 +92,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 44 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut.
 
-### motion-graphics  ·  heygen-com/hyperframes @ 25126bc  ·  puan 83 (A)
+### motion-graphics  ·  heygen-com/hyperframes @ 25126bc  ·  puan 84 (A)
 
 - **Ne yapar:** Hareketin mesaj olduğu kısa (genelde <10 sn, en çok ~30 sn), anlatımsız motion graphic üretimi: kinetik tipografi, sayaç, grafik, logo sting, lower-third, animasyonlu harita, tweet/haber, web/UI animasyonu, görsel geometrisini grafiğe kaynaştırma. Plan→kaynak→tasarım→yapım→doğrulama→render aşamalarını alt ajanlarla yürütür; MP4 veya şeffaf overlay çıkarır.
 - **Ne zaman:** Kısa, tasarım odaklı, seslendirmesiz grafik/overlay istendiğinde. · **Ne zaman değil:** Uzun, çok sahneli veya anlatımlı videolar (general-video); mevcut görüntüye altyazı (embedded-captions).
@@ -100,7 +100,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, video-produksiyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
-- **Boyut:** 113 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır. · **Kırık bağlantı:** 3
+- **Boyut:** 113 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun kategori modülleri. Yönlendirdiği iş akışları artık arşivde (heygen-com/hyperframes). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.
 
 ### motion-graphics@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 86 (A)

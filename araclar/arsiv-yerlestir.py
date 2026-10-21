@@ -115,6 +115,38 @@ def kirik_baglantilar(klasor: Path):
     return sorted(set(kirik))
 
 
+METIN_UZANTILARI = (".md", ".mdx", ".txt")
+
+
+def kardes_baglantilari(klasor: Path, indeks, kendi):
+    """Skill'in .md dosyalarındaki ../<kardeş>/... bağlantıları: hedef arşivdeki kardeş skillde var mı?
+    indeks: klasör adı -> [(skill kaydı, arşivdeki klasörü)]. Aynı repodaki kardeş tercih edilir.
+    Döner: ({kardeş adı: {"id", "dosya_sayisi"}}, SKILL.md'de kardeşte bulunan bağlantılar kümesi)"""
+    kardesler, cozulen = {}, set()
+    for f in sorted(klasor.rglob("*")):
+        if not f.is_file() or f.suffix.lower() not in METIN_UZANTILARI:
+            continue
+        metin = f.read_text(encoding="utf-8", errors="replace")
+        derinlik = len(f.relative_to(klasor).parts) - 1
+        for hedef in re.findall(r"\]\(([^)\s]+)\)", metin):
+            yol = hedef.split("#")[0]
+            onek = "../" * (derinlik + 1)
+            if not yol.startswith(onek) or yol.startswith(onek + "../"):
+                continue
+            ad, _, kalan = yol[len(onek):].partition("/")
+            if not ad or ad == kendi["klasor_adi"]:
+                continue
+            adaylar = sorted(indeks.get(ad, []), key=lambda x: (x[0]["repo"] != kendi["repo"], x[0]["durum"] != "tercih"))
+            if not adaylar or (kalan and not any((d / kalan).exists() for _, d in adaylar)):
+                continue
+            s, _ = next(((s, d) for s, d in adaylar if not kalan or (d / kalan).exists()))
+            k = kardesler.setdefault(ad, {"id": s["id"], "dosyalar": set()})
+            k["dosyalar"].add(str(f.relative_to(klasor)))
+            if derinlik == 0:
+                cozulen.add(yol)
+    return ({a: {"id": k["id"], "dosya_sayisi": len(k["dosyalar"])} for a, k in sorted(kardesler.items())}, cozulen)
+
+
 def degerlendir(s, gel):
     """0-100 otomatik puan. Elle 'kalite' (1-5) varsa ağırlıklı katılır."""
     p, ac = 0, []
@@ -164,6 +196,9 @@ def kaynak_md(k):
         satirlar.append(f"- **Bağımlılık:** {k['bagimlilik']}")
     if k.get("varyantlar"):
         satirlar.append("- **Araç sürümleri:** " + ", ".join(f"{a} → `{v}`" for a, v in k["varyantlar"].items()))
+    if k.get("kardes_bagimliliklari"):
+        satirlar.append("- **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): "
+                        + ", ".join(f"`{a}`" for a in k["kardes_bagimliliklari"]))
     if k.get("kirik_baglantilar"):
         satirlar.append("- **SKILL.md'de olup bulunamayan dosyalar:** " + ", ".join(f"`{x}`" for x in k["kirik_baglantilar"][:15]))
     if k.get("kopya_kaynaklar"):
@@ -228,7 +263,7 @@ def main():
 
     def goreli(p: Path) -> str:
         return "arsiv/" + str(p.relative_to(YENI))
-    skiller = []
+    skiller, bekleyen = [], []
     bugun = date.today().isoformat()
     for k in yeni:
         onceki = eski_kaynak.get((k["repo"], k["kaynak_yol"]), {})
@@ -284,9 +319,21 @@ def main():
                 kayit[alan] = onceki[alan]
         if onceki.get("durum_elle"):
             kayit["durum"] = onceki["durum"]
+        skiller.append(kayit)
+        bekleyen.append((k, kayit, hedef, gel))
+
+    # Kardeş bağımlılıkları: ../<kardeş-skill>/... bağlantıları kırık değil, kardeş skill'e bağımlılıktır
+    indeks = {}
+    for _, kayit, hedef, _ in bekleyen:
+        for ad in {kayit["klasor_adi"], kayit["ad"]}:
+            indeks.setdefault(ad, []).append((kayit, hedef))
+    for k, kayit, hedef, gel in bekleyen:
+        kardes, cozulen = kardes_baglantilari(hedef, indeks, kayit)
+        if kardes:
+            kayit["kardes_bagimliliklari"] = kardes
+        kayit["kirik_baglantilar"] = [x for x in kayit["kirik_baglantilar"] if x not in cozulen]
         kayit["degerlendirme"] = degerlendir(kayit, gel)
         (hedef / "KAYNAK.md").write_text(kaynak_md({**k, **kayit}), encoding="utf-8")
-        skiller.append(kayit)
 
     # KAYIP kaynaklar (silinmiş/private olmuş repo): eski arşiv kopyaları ve kayıtları olduğu gibi korunur
     kayip = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] == "KAYIP"}

@@ -16,7 +16,8 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 8 | Aynı repo iki kayda bölünüp (T1+T4) karar çakışır | Kararlar "güç" sırasıyla birleşir (arşivde > kopya > hariç > kapsam dışı) | denetim |
 | 9 | GitHub dosya ağacı çok büyük olup kesilir | `truncated` görülürse indirme durur | `kaynak-cek.py` HATA |
 | 10 | Dosya inmez / yarım iner | Her dosya 4 kez denenir; beklenen ve inen dosya sayısı karşılaştırılır | `kaynak-cek.py`, `arsiv-yerlestir.py` HATA |
-| 11 | SKILL.md'nin gösterdiği dosya arşivde yok (atlanan video vb.) | Göreli bağlantılar kontrol edilir | `kirik_baglantilar`, ön kontrol UYARI |
+| 11 | SKILL.md'nin gösterdiği dosya arşivde yok (atlanan video vb.) | Göreli bağlantılar kontrol edilir; `../<kardeş>/` hedefi arşivdeki kardeş skillde varsa kırık değil `kardes_bagimliliklari` sayılır | `kirik_baglantilar`, ön kontrol UYARI |
+| 11a | Kardeş skill projeye kurulmaz ya da `<ad>--kutuphane` gibi farklı adla kurulur, `../<kardeş>/` yolları kırılır | Kurulumda kardeş yolları projedeki ada çevrilir (eşleme `kilit.json` → `kardes`); `--guncelle` eşleme değişince yeniden yazar | `kardes-eksik` UYARI, `kardes-yol` BİLGİ |
 | 12 | Repo silinir / private olur | Arşiv kopyası kalır; commit SHA KAYNAK.md'de | `arsiv-guncelle.py` gh hatası |
 | 13 | Repo kötü niyetli bir değişiklik alır | Güncelleme önce **rapor** verir, sen onaylarsın; git ile geri alınır; scriptler hiçbir zaman otomatik çalıştırılmaz | `arsiv-guncelle.py` (rapor modu) |
 | 14 | Kategori kuralı yanlış eşleşir | KATALOG gözden geçirilir; elle düzeltme `kategori_elle: true` ile kalıcı | kategori incelemesi |

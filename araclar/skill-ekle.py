@@ -282,6 +282,53 @@ def yollari_yeniden_adlandir(klasor: Path, eski_adlar, yeni: str):
                 metin_yaz(f, yeni_metin)
 
 
+def kardes_haritasi(s, skiller, kilit, kur_listesi=None, adlar=None):
+    """Skill'in ../<kardeş>/ bağlantıları için {kardeş adı: (projedeki kurulum adı, kurulu mu)}.
+    Öncelik: bu işlemde kurulan, sonra projede zaten kurulu olan; ikisi de yoksa kardeşin alacağı ad tahmin edilir."""
+    harita = {}
+    for kad, bilgi in (s.get("kardes_bagimliliklari") or {}).items():
+        bulunan = None
+        for sid, (x, _) in (kur_listesi or {}).items():
+            if x["ad"] == kad or x.get("klasor_adi") == kad:
+                bulunan = (sid == bilgi["id"], adlar[sid])
+                if bulunan[0]:
+                    break
+        if not bulunan:
+            for ad, k in kilit["skiller"].items():
+                x = kaynak_bul(skiller, k)
+                if x and (x["ad"] == kad or x.get("klasor_adi") == kad):
+                    bulunan = (x["id"] == bilgi["id"], ad)
+                    if bulunan[0]:
+                        break
+        if bulunan:
+            harita[kad] = (bulunan[1], True)
+        else:
+            x = next((x for x in skiller if x["id"] == bilgi["id"]), None)
+            harita[kad] = (kurulum_adi(x, kilit) if x else kad, False)
+    return harita
+
+
+def kardes_yollarini_yeniden_adlandir(klasor: Path, harita):
+    """../<kardeş>/... bağlantılarını kardeşin projedeki adına çevirir (ör. ../hyperframes/ -> ../hyperframes--kutuphane/).
+    Sadece skill kökünden tam bir seviye yukarı çıkan yollar değişir (dosya derinliğine göre ../ sayısı)."""
+    harita = {k: v for k, v in harita.items() if k != v}
+    if not harita:
+        return
+    adlar = "|".join(re.escape(a) for a in sorted(harita, key=len, reverse=True))
+    for f in klasor.rglob("*"):
+        if not f.is_file() or f.suffix.lower() not in (".md", ".mdx", ".txt", ".sh", ".py", ".js", ".mjs", ".json", ""):
+            continue
+        try:
+            metin = metin_oku(f)
+        except (UnicodeDecodeError, OSError):
+            continue
+        onek = re.escape("../" * len(f.relative_to(klasor).parts))
+        desen = re.compile(r"(?<![\w./-])(" + onek + r")(" + adlar + r")(?=[/)\s`'\"#]|$)", re.M)
+        yeni_metin = desen.sub(lambda m: m.group(1) + harita[m.group(2)], metin)
+        if yeni_metin != metin:
+            metin_yaz(f, yeni_metin)
+
+
 def isim_esitle(skill_md: Path, ad: str):
     """SADECE frontmatter içindeki name alanını klasör adına eşitler (gövdedeki örnek yaml'lara dokunmaz)."""
     metin = metin_oku(skill_md)
@@ -304,7 +351,7 @@ def frontmatter_adi(skill_md: Path):
     return nm.group(1).strip().strip("'\"") if nm else None
 
 
-def hazirla(kaynak: Path, hedef: Path, s, ad):
+def hazirla(kaynak: Path, hedef: Path, s, ad, kardes=None):
     """Geçici klasöre kopyala, adı ve iç yolları düzelt, sonra yerine taşı (yarım kurulum kalmaz)."""
     gecici = hedef.parent / f".{ad}.kurulum-tmp"
     sil_yol(gecici)
@@ -312,18 +359,19 @@ def hazirla(kaynak: Path, hedef: Path, s, ad):
     shutil.copytree(kaynak, gecici, ignore=shutil.ignore_patterns("KAYNAK.md"))
     isim_esitle(gecici / "SKILL.md", ad)
     yollari_yeniden_adlandir(gecici, {s["ad"], s.get("klasor_adi")}, ad)
+    kardes_yollarini_yeniden_adlandir(gecici, {k: v[0] for k, v in (kardes or {}).items()})
     sil_yol(hedef)
     gecici.rename(hedef)
 
 
-def kur(s, proje: Path, ad: str):
+def kur(s, proje: Path, ad: str, kardes=None):
     codex_hedef = proje / ".agents" / "skills" / ad
     claude_hedef = proje / ".claude" / "skills" / ad
     var = s.get("varyantlar") or {}
-    hazirla(KOK / var.get("codex", s["yol"]), codex_hedef, s, ad)
+    hazirla(KOK / var.get("codex", s["yol"]), codex_hedef, s, ad, kardes)
     claude_hedef.parent.mkdir(parents=True, exist_ok=True)
     if var.get("claude"):
-        hazirla(KOK / var["claude"], claude_hedef, s, ad)
+        hazirla(KOK / var["claude"], claude_hedef, s, ad, kardes)
     else:
         sil_yol(claude_hedef)
         os.symlink(os.path.relpath(codex_hedef, claude_hedef.parent), claude_hedef)
@@ -575,6 +623,13 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
         if s.get("kirik_baglantilar"):
             rapor.ekle("UYARI", "kirik-baglanti", f"{ad}: SKILL.md'nin gösterdiği {len(s['kirik_baglantilar'])} dosya "
                        f"kaynakta da yok ya da arşive alınmadı: {', '.join(s['kirik_baglantilar'][:5])}")
+        for kad, (kurulum, kurulu) in kardes_haritasi(s, skiller, kilit, kur_listesi, adlar).items():
+            bilgi = s["kardes_bagimliliklari"][kad]
+            if not kurulu:
+                rapor.ekle("UYARI", "kardes-eksik", f"{ad}: {bilgi['dosya_sayisi']} dosyası ../{kad}/ bağlantısıyla kardeş "
+                           f"skill'e dayanıyor ama '{kad}' projeye kurulmuyor; bağlantılar boşa düşer (ekle: --skill {bilgi['id']})")
+            elif kurulum != kad:
+                rapor.ekle("BİLGİ", "kardes-yol", f"{ad}: ../{kad}/ bağlantıları projedeki ada çevrilecek: ../{kurulum}/")
         if s.get("bagimlilik"):
             rapor.ekle("UYARI", "bagimlilik", f"{ad}: {s['bagimlilik']}")
         if s.get("gizli"):
@@ -677,10 +732,16 @@ def onay(a, rapor):
     return True
 
 
-def kayit_guncelle(kilit, proje, ad, s, roller=()):
+def kardes_adlari(harita):
+    return {k: v[0] for k, v in harita.items()}
+
+
+def kayit_guncelle(kilit, proje, ad, s, roller=(), kardes=None):
     k = kilit["skiller"].setdefault(ad, {"roller": []})
     k.update(id=s["id"], repo=s["repo"], kaynak_yol=s["kaynak_yol"], commit=s["commit"], klasor_hash=s["klasor_hash"],
              varyantlar=sorted(s.get("varyantlar") or {}), kurulu_hash=kurulu_hash(proje, ad))
+    if kardes is not None:
+        k["kardes"] = kardes_adlari(kardes)
     for r in roller:
         if r and r not in k["roller"]:
             k["roller"].append(r)
@@ -721,11 +782,12 @@ def ekle(a, proje, skiller):
         for sid, (s, rk) in kur_listesi.items():
             ad = adlar[sid]
             k = kilit["skiller"].get(ad)
-            if (not k or k["klasor_hash"] != s["klasor_hash"] or a.zorla
+            kardes = kardes_haritasi(s, skiller, kilit, kur_listesi, adlar)
+            if (not k or k["klasor_hash"] != s["klasor_hash"] or a.zorla or k.get("kardes", {}) != kardes_adlari(kardes)
                     or kurulu_hash(proje, ad)["codex"] is None or not claude_baglanti_saglam(proje, ad)):
-                kur(s, proje, ad)
+                kur(s, proje, ad, kardes)
                 print(f"  + {ad}")
-            kayit_guncelle(kilit, proje, ad, s, rk)
+            kayit_guncelle(kilit, proje, ad, s, rk, kardes)
         kilit["roller"] = list(dict.fromkeys(kilit["roller"] + roller))
         kilit["profil"] = profil or kilit.get("profil")
         tumunu_yaz(proje, kilit, skiller)
@@ -782,10 +844,19 @@ def guncelle(a, proje, skiller):
         if ad == s["ad"] and any(v == "farkli" for v in canli.values()):
             rapor.ekle("UYARI", "global-cakisma-yeni", f"{ad}: globale aynı adlı FARKLI skill eklenmiş; Claude'da global sürüm "
                        "kazanır. Kütüphane sürümü için --kaldir ve yeniden ekle")
+        kardes_degisti = k.get("kardes", {}) != kardes_adlari(kardes_haritasi(s, skiller, kilit))
         if s["klasor_hash"] == k["klasor_hash"]:
             if not claude_baglanti_saglam(proje, ad) or kurulu_hash(proje, ad)["codex"] is None:
                 degisen.append((ad, s))
                 rapor.ekle("BİLGİ", "onarilacak", f"{ad}: eksik/bozuk kurulum onarılacak")
+                continue
+            if not kardes_degisti:
+                continue
+            if elle_degismis(proje, ad, k) and not a.zorla:
+                rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş; kardeş yolları düzeltilmez (--zorla)")
+                continue
+            degisen.append((ad, s))
+            rapor.ekle("BİLGİ", "kardes-yol", f"{ad}: ../<kardeş>/ bağlantıları projedeki adlara göre yeniden yazılacak")
             continue
         if elle_degismis(proje, ad, k) and not a.zorla:
             rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş; güncellenmez (--zorla: yedekle ve ez)")
@@ -804,8 +875,9 @@ def guncelle(a, proje, skiller):
 
     def islem():
         for ad, s in degisen:
-            kur(s, proje, ad)
-            kayit_guncelle(kilit, proje, ad, s)
+            kardes = kardes_haritasi(s, skiller, kilit)
+            kur(s, proje, ad, kardes)
+            kayit_guncelle(kilit, proje, ad, s, kardes=kardes)
         tumunu_yaz(proje, kilit, skiller)
     guvenli_islem(proje, yedek, islem)
     print(f"Güncellendi. Geri almak için: --geri-al {yedek.name}")

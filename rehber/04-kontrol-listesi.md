@@ -34,7 +34,9 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `codex-uyum` | UYARI | SKILL.md'de Claude'a özgü araç adları var | Codex mantığı uygular; kritik işte test et |
 | `claude-ozel` | UYARI | Konu Claude Code'a özel (plugin/hook) | Codex agent'ına verme |
 | `bagimlilik` | UYARI | Başka bir kurulum gerekir (ör. OpenMontage) | Kurulumun hazır olduğundan emin ol |
-| `kirik-baglanti` | UYARI | SKILL.md'nin gösterdiği bir dosya yok | Kaynak repoda da yoksa önemsiz; değilse kategoriyi incele |
+| `kirik-baglanti` | UYARI | SKILL.md'nin gösterdiği bir dosya yok (kardeş skilldeki hedefler sayılmaz) | Kaynak repoda da yoksa önemsiz; değilse kategoriyi incele |
+| `kardes-eksik` | UYARI | Skill `../<kardeş>/` bağlantılarıyla başka bir skill'e dayanıyor ama kardeş kurulmuyor | Önerilen `--skill <id>` ile kardeşi de ekle |
+| `kardes-yol` | BİLGİ | Kardeş projede farklı adla (ör. `--kutuphane`) kurulu; `../<kardeş>/` yolları o ada çevrilir | Bilgi; elle bir şey gerekmez |
 | `lisans` | UYARI | Lisans belirtilmemiş | Ticari projede dikkat |
 | `dusuk-puan` | UYARI | Değerlendirme < 50 (D) | Alternatife bak |
 | `yapi` | UYARI/BİLGİ | Frontmatter sorunları (uzun açıklama, standart dışı ad, otomatik çağrılamaz) | Ad kurulumda otomatik düzeltilir |
