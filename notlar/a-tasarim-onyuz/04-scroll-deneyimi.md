@@ -55,7 +55,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Teknoloji:** html, css, javascript, node, playwright, ffmpeg · **Paketler:** playwright-core, ffmpeg (tam sürüm), KIE_AI_API_KEY (isteğe bağlı)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** nateherkai (kisi, ★3806, son güncelleme 2026-09-30, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** scroll-hikaye-uretimi → birincil · **Roller:** scroll-deneyim, ui-tasarimci
+- **Durum:** tercih · **Örtüşme:** scroll-hikaye-uretimi → birincil · **Roller:** scroll-deneyim
 - **Boyut:** 380 KB (SKILL.md 24.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güçlü süreç (brief, çeşitlilik kapısı, doğrulama), güncel (21 gün) ve MIT; büyük ama gerçek bir uçtan uca sistem. Dikkat: SKILL.md 24 KB + ~170 KB referans; GSAP değil kendi motorunu kullanıyor; varlık üretimi kie.ai API anahtarı ister ve api.kie.ai'ye istek atar (isteğe bağlı); tam ffmpeg ve playwright-core gerekir; serve.mjs varsayılan 127.0.0.1 (--lan açık uyarılı); 'Windows/OtherWorlds' yol örnekleri taşıyor.
 
@@ -66,6 +66,6 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Teknoloji:** aos · **Paketler:** aos
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** scroll-animasyonu → alternatif · **Roller:** scroll-deneyim
+- **Durum:** tercih · **Örtüşme:** scroll-animasyonu → alternatif
 - **Boyut:** 94 KB (SKILL.md 16.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İşini yapıyor ama 820 satır (17 KB) AOS için fazla ve kütüphane yıllardır durağan; 'aos@next' kullanıyor. Dikkat: reveal için CSS/IntersectionObserver veya ScrollTrigger yeterli; unpkg CDN örnekleri.

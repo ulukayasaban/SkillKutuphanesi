@@ -4679,8 +4679,7 @@
         "urun-tanitim-videosu"
       ],
       "roller": [
-        "scroll-deneyim",
-        "ui-tasarimci"
+        "scroll-deneyim"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -4782,9 +4781,7 @@
         "landing-page",
         "kurumsal-site"
       ],
-      "roller": [
-        "scroll-deneyim"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 3,
       "kalite_notu": "Karar: ALTERNATİF. İşini yapıyor ama 820 satır (17 KB) AOS için fazla ve kütüphane yıllardır durağan; 'aos@next' kullanıyor. Dikkat: reveal için CSS/IntersectionObserver veya ScrollTrigger yeterli; unpkg CDN örnekleri.",

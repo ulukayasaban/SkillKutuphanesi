@@ -10,7 +10,6 @@
   "opsiyonel": [
     "locomotive-scroll",
     "barba-js",
-    "scroll-reveal-libraries",
     "web3d-integration-patterns",
     "gsap-timeline",
     "gsap-plugins",
