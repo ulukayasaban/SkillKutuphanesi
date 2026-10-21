@@ -16035,7 +16035,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -16048,7 +16048,31 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Rakiplerin Facebook Ad Library, LinkedIn gibi reklam kütüphanelerindeki reklamlarını toplayıp mesaj, vurgulanan problem, hedef kitle ve kreatif kalıplarını analiz etmeyi tarif eder. Betik yok; tarayıcı/kazıma yeteneği agent'ın kendi araçlarına bırakılmış.",
+      "kullanim_alani": "Reklam kampanyası öncesi rakip mesajlarını ve kreatif kalıplarını çıkarmak.",
+      "kullanma": "Tarayıcı otomasyonu ya da web kazıma aracı yoksa (skill kendi aracını getirmiyor); platform kullanım şartlarının kazımaya izin vermediği durumlarda.",
+      "teknoloji": [
+        "web-arama",
+        "tarayici-otomasyonu"
+      ],
+      "gerekli_paketler": [
+        "tarayıcı aracı (playwright/MCP)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "marka-sunum"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.",
+      "ortusme_grubu": "pazarlama-arastirma",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "content-research-writer",
@@ -16105,7 +16129,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -16118,7 +16142,30 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Blog, makale, bülten gibi içerikleri kullanıcıyla birlikte yazar: taslak/ana hat oluşturma, araştırma ve kaynak gösterme, giriş (hook) iyileştirme, bölüm bölüm geri bildirim ve kullanıcının üslubunu koruma adımlarını tarif eder.",
+      "kullanim_alani": "Kaynaklı blog yazısı, makale, vaka çalışması, düşünce liderliği içeriği.",
+      "kullanma": "Kurumsal teknik/karar dokümanı (doc-coauthoring); kısa sosyal medya metni; dosya formatı üretimi.",
+      "teknoloji": [
+        "markdown",
+        "web-arama"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman",
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil). İçerik yazımı için en derli toplu süreç; ana hat şablonu ve kaynak formatı faydalı. Lisans belirtilmemiş; araştırma adımı agent'ın web aracına bağlı.",
+      "ortusme_grubu": "icerik-yazimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "de-ai-ify",
@@ -16175,7 +16222,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -16188,7 +16235,29 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Metindeki yapay zekâ kokan kalıpları (aşırı geçiş kelimeleri, klişeler, kaçamak ifadeler, kurumsal jargon, üçlü sıralamalar) temizleyip doğal insan sesine çevirir; '-HUMAN' ekli kopya ve değişiklik listesi üretir.",
+      "kullanim_alani": "Yayın öncesi metni insansılaştırmak; AI tonu taşıyan blog/e-posta/sosyal medya metinleri.",
+      "kullanma": "Türkçe metinde kalıp listesi doğrudan uymaz (İngilizce odaklı); teknik doküman doğruluğu kontrolü için değil.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "icerik-pazarlama",
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Çok küçük (2 KB), net kalıp listesi ve somut önce/sonra örneği; MIT. Her yazı skilline tamamlayıcı son rötuş.",
+      "ortusme_grubu": "icerik-yazimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "developer-growth-analysis",
@@ -16251,7 +16320,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -16264,7 +16333,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Son 24-48 saatlik Claude Code sohbet geçmişini (~/.claude/history.jsonl) okuyup kodlama kalıplarını, eksik alanları ve gelişim önerilerini çıkarır; HackerNews'ten ilgili kaynak toplar ve raporu Rube MCP üzerinden kullanıcının Slack DM'ine gönderir.",
+      "kullanim_alani": "Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi.",
+      "kullanma": "Codex'te doğrudan çalışmaz: geçmiş ~/.codex/sessions altında farklı biçimde tutulur; Codex'te kullanılacaksa okunacak dosya yolu ve JSONL alanları elle uyarlanmalı. Rube/Composio Slack bağlantısı yoksa son adımı atla, raporu dosyaya yaz. Gizli veri içeren geçmişi dışarı göndermek istenmiyorsa kullanma.",
+      "teknoloji": [
+        "claude-code",
+        "mcp",
+        "slack"
+      ],
+      "gerekli_paketler": [
+        "Rube MCP (Composio) — Slack gönderimi için"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Claude Code geçmiş dosyasına ve Composio Rube MCP'ye sıkı bağlı; sohbet geçmişini dış servise gönderiyor. Kategorisi de içerikten çok kişisel geliştirici analizi.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "domain-name-brainstormer",
@@ -16321,7 +16410,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -16334,7 +16423,30 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Proje için yaratıcı alan adı fikirleri üretir ve .com/.io/.dev/.ai gibi uzantılarda müsaitlik kontrolü yapılmasını tarif eder; marka açısından neden iyi olduklarını açıklar ve TLD rehberi verir.",
+      "kullanim_alani": "Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası.",
+      "kullanma": "Müsaitlik kontrolü için gerçek whois/DNS aracı yoksa sonuçlar tahmin olur — kayıt kararını buna dayandırma.",
+      "teknoloji": [
+        "web-arama"
+      ],
+      "gerekli_paketler": [
+        "whois/DNS sorgu aracı (önerilir)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "marka-sunum"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. İsim önerisi kısmı makul ama müsaitlik kontrolünün nasıl yapılacağı tanımsız; örnek çıktı uydurma 'available' işaretleri içeriyor.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "geo-fundamentals",
@@ -16394,7 +16506,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -16407,7 +16519,31 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Generative Engine Optimization: içeriğin ChatGPT, Claude, Perplexity, Gemini gibi AI arama motorlarında kaynak gösterilmesi için ilkeler, alıntılanan içerik türleri, kontrol listesi, AI tarayıcı (user-agent) erişimi ve ölçüm. Sayfaları denetleyen geo_checker.py betiği içerir.",
+      "kullanim_alani": "Web sitesi/blog içeriğini AI aramada görünür kılmak; llms.txt, FAQ şeması, AI bot erişim kararı.",
+      "kullanma": "Klasik Google SEO için seo-fundamentals; uygulama içi metinler için gereksiz. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "html",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (geo_checker.py)"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Kısa ve tablolu; ağırlık yüzdeleri gibi bazı rakamlar kaynaksız tahmin. seo-fundamentals ile birlikte kullanılır.",
+      "ortusme_grubu": "seo-geo",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "i18n-localization",
@@ -16469,7 +16605,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -16482,7 +16618,34 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Uluslararasılaştırma ve yerelleştirme kalıpları: react-i18next, next-intl, gettext örnekleri, locale dosya yapısı, çoğul/tarih/sayı biçimleri, RTL desteği ve kontrol listesi. Kodda sabit metinleri bulan i18n_checker.py betiği içerir.",
+      "kullanim_alani": "Uygulamaya çok dil desteği eklemek, sabit metinleri ayıklamak, Türkçe/Arapça (RTL) yerelleştirme.",
+      "kullanma": "Metin çevirisinin kendisi (içerik yazımı) için değil; tek dilli küçük projelerde. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "react-i18next veya next-intl (projeye göre)",
+        "python3 (i18n_checker.py)"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "dashboard-saas",
+        "mobil-uygulama"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve doğru temel bilgiler + betik. Aslında yazılım geliştirme konusu; kategori incelemesi b-yazilim oturumunda ele alındığı için burada bırakıldı (frontend-muhendis rolüne uygun).",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "internal-comms",
@@ -16539,7 +16702,7 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -16552,7 +16715,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Şirket içi iletişim metinleri yazar: 3P güncellemeleri (Progress/Plans/Problems), şirket bülteni, SSS cevapları, durum raporu, liderlik ve proje güncellemesi, olay raporu. Türüne göre examples/ altındaki yönerge dosyasını yükler.",
+      "kullanim_alani": "Haftalık durum güncellemesi, yönetime rapor, olay sonrası bilgilendirme, bülten.",
+      "kullanma": "Dışa dönük pazarlama metni ya da uzun teknik doküman için.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "dokuman-yazari"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Anthropic resmi; küçük SKILL.md, türe göre ayrı örnek dosyalar. ComposioHQ kopyası birebir aynı içerik; birincil resmi kaynak.",
+      "ortusme_grubu": "ic-iletisim",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "internal-comms@composiohq",
@@ -16609,7 +16792,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -16622,7 +16805,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Anthropic internal-comms skill'inin ComposioHQ'daki birebir kopyası: 3P güncellemesi, bülten, SSS ve genel iç iletişim yönergeleri.",
+      "kullanim_alani": "Resmi sürüm kullanılamıyorsa yedek.",
+      "kullanma": "Varsayılan olarak kullanma; anthropics/internal-comms ile aynı içerik.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Dosyalar resmi sürümle aynı; ek değer yok.",
+      "ortusme_grubu": "ic-iletisim",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "lead-research-assistant",
@@ -16679,7 +16880,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -16692,7 +16893,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Ürünü/kod tabanını analiz edip ideal müşteri profiline uyan şirketleri bulmayı, uygunluk puanıyla sıralamayı ve kişiselleştirilmiş iletişim stratejisi önermeyi tarif eder.",
+      "kullanim_alani": "B2B satış/iş geliştirme için potansiyel müşteri listesi ve yaklaşım önerisi.",
+      "kullanma": "Web araması yoksa (şirket listesi uydurulabilir); kişisel veri toplama/zenginleştirme hukuki açıdan sorunluysa.",
+      "teknoloji": [
+        "web-arama"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.",
+      "ortusme_grubu": "pazarlama-arastirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "meeting-insights-analyzer",
@@ -16749,7 +16968,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -16762,7 +16981,23 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Toplantı transkriptlerinden iletişim kalıplarını çıkarır: çatışmadan kaçınma, konuşma oranı, dolgu kelimeler, dinleme ve kolaylaştırma; zaman damgalı örneklerle eyleme dönük geri bildirim ve zaman içinde trend karşılaştırması verir.",
+      "kullanim_alani": "Liderlik/iletişim koçluğu, performans değerlendirmesine hazırlık, ekip toplantı analizi (transkript mevcutsa).",
+      "kullanma": "Ses kaydı tek başına varsa önce STT gerekir (speech-to-text); toplantı özeti/aksiyon listesi çıkarmak tek amaçsa gereğinden ağır.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Analiz boyutları ve geri bildirim formatı iyi tanımlı; dar kullanım alanı.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "raffle-winner-picker",
@@ -16819,7 +17054,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -16832,7 +17067,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Liste, CSV/Excel ya da Google Sheets'ten çekiliş/yarışma kazananını rastgele seçer; çoklu kazanan, tekrar engelleme, ağırlıklı seçim ve yedek kazanan seçeneklerini tarif eder.",
+      "kullanim_alani": "Sosyal medya çekilişi, etkinlik çekilişi, rastgele katılımcı seçimi.",
+      "kullanma": "Yasal denetim gerektiren çekilişlerde (noter vb.) tek kanıt olarak; Google Sheets erişimi yoksa.",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python secrets modülü (önerilir)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Betik yok; 'kriptografik rastgele' iddiası agent'ın yazacağı koda bağlı. Kategoriye de tam uymuyor (araç).",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "seo-fundamentals",
@@ -16889,7 +17144,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -16902,7 +17157,33 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "SEO temelleri: E-E-A-T, Core Web Vitals hedefleri, teknik SEO (sitemap, robots, canonical), sayfa öğeleri, schema türleri, AI içerik kuralları ve ölçüm. HTML/JSX sayfalarını denetleyen seo_checker.py betiği içerir.",
+      "kullanim_alani": "Web sitesi yayın öncesi SEO denetimi; meta etiketleri, başlık hiyerarşisi, schema ekleme.",
+      "kullanma": "AI arama görünürlüğü için geo-fundamentals; uygulama içi (giriş gerektiren) sayfalarda. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.",
+      "teknoloji": [
+        "html",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (seo_checker.py)"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "landing-page",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "icerik-pazarlama",
+        "frontend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (birincil). Kısa, güncel metrikler (INP) ve betikli denetim. Derinlik sınırlı ama kontrol listesi olarak yeterli.",
+      "ortusme_grubu": "seo-geo",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "tailored-resume-generator",
@@ -16962,7 +17243,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -16975,7 +17256,25 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "İş ilanını analiz edip anahtar gereksinimleri çıkarır ve adayın deneyimini buna göre yeniden düzenleyen, ATS uyumlu, ilana özel özgeçmiş üretir; kariyer geçişi senaryosu ve eksik/iyileştirme önerileri içerir.",
+      "kullanim_alani": "Belirli bir iş başvurusu için CV uyarlama.",
+      "kullanma": "Özgeçmişte olmayan deneyimi uydurmak için asla; tasarımlı PDF/Word çıktısı gerekiyorsa docx/pdf ile birlikte kullan.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "rapor-dokuman"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Adımlar ve örnek çıktı makul; kişisel kullanım için uygun, proje rollerine eklenmez.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "twitter-algorithm-optimizer",
@@ -17032,7 +17331,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 86,
         "not": "A",
@@ -17045,7 +17344,27 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Twitter/X'in açık kaynak öneri algoritması bileşenlerine (Real-graph, SimClusters, TwHIN, Tweepcred) dayanarak tweet taslaklarını analiz edip etkileşim ve erişim için yeniden yazar; olumsuz sinyallerden kaçınma taktikleri verir.",
+      "kullanim_alani": "X/Twitter gönderisi optimizasyonu, içerik stratejisi.",
+      "kullanma": "Diğer platformlar (LinkedIn, Instagram) için; algoritma 2023 açık kaynak sürümüne dayanıyor, güncel davranış farklı olabilir.",
+      "teknoloji": [
+        "markdown"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "icerik-pazarlama"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Algoritma kavramlarını somut yazım taktiklerine bağlıyor; güncellik riski var. Lisans AGPL-3.0 olarak beyan edilmiş.",
+      "ortusme_grubu": "",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "add-frontmatter",
