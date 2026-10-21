@@ -4234,9 +4234,35 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Barba.js ile çok sayfalı sitelerde sayfalar arası geçiş animasyonu: hook'lar, router/prefetch/head eklentileri, GSAP entegrasyonu, geçiş kalıpları ve proje kurulum betikleri.",
+      "kullanim_alani": "SPA hissi veren sayfa geçişleri (ör. perde/fade) çok sayfalı statik sitelerde.",
+      "kullanma": "React/Next.js router geçişleri (framework'ün kendi çözümü); tek sayfalık siteler.",
+      "teknoloji": [
+        "barba.js",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "@barba/core",
+        "@barba/prefetch",
+        "@barba/router"
+      ],
+      "proje_tipleri": [
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "scroll-deneyim"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Konusunda tek skill, kapsamlı (19 KB); 'scroll' kategorisine sınırda oturuyor ama sayfa geçişi scroll sıfırlama ve ScrollTrigger yenileme ile iç içe. Dikkat: bundan sonra ScrollTrigger kill/refresh unutulursa sızıntı olur; 335 gün eski.",
+      "ortusme_grubu": "sayfa-gecisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4245,7 +4271,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4312,9 +4339,35 @@
         "ana_sayfa": "",
         "katkici": 4
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "GSAP ScrollTrigger resmî rehberi: scroll'a bağlı animasyon, pinleme, scrub, tetikleyiciler, refresh ve temizlik. Parallax, pinli bölüm ve scroll hikayeleri için varsayılan seçimdir.",
+      "kullanim_alani": "Scroll'a bağlı animasyon, pinli bölüm, parallax, scrub gerektiğinde (özellikle kütüphane belirtilmemişse).",
+      "kullanma": "Basit fade-in reveal (scroll-reveal-libraries yeter).",
+      "teknoloji": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi",
+        "landing-page",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "scroll-deneyim",
+        "motion-gelistirici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Resmî, güncel (18 KB), pin/scrub/cleanup kuralları doğru; gsap-core ile birlikte kullanılmalı. Dikkat: yok.",
+      "ortusme_grubu": "scroll-animasyonu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 95,
+        "puan": 97,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (84 gün önce)",
@@ -4323,7 +4376,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4393,9 +4447,34 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "GSAP ve ScrollTrigger için kapsamlı (765 satır) genel rehber: tween, timeline, ScrollTrigger, kalıplar, ease referansı, başlangıç projesi ve üretici betikler (generate_animation.py, timeline_builder.py).",
+      "kullanim_alani": "Resmî sürümün yetmediği, başlangıç projesi/ease görselleştirici gibi ek varlıklar istendiğinde.",
+      "kullanma": "Normal durumda resmî gsap-scrolltrigger + gsap-core/timeline.",
+      "teknoloji": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi",
+        "landing-page",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "scroll-deneyim"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Aynı ad, farklı içerik: resmî sürüm yalnız ScrollTrigger'a odaklı ve güncel; bu sürüm tween+timeline+ScrollTrigger'ı tek dosyada jenerik anlatıyor, 335 gün eski, resmî rehberlerde olan matchMedia/cleanup disiplininden yoksun. Betikler yerel kod üretici, risk yok.",
+      "ortusme_grubu": "scroll-animasyonu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4404,7 +4483,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4471,9 +4551,34 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Locomotive Scroll ile yumuşak (smooth) kaydırma, parallax ve viewport algılama; GSAP ScrollTrigger entegrasyon notları ve başlangıç projesi.",
+      "kullanim_alani": "Smooth-scroll + parallax içeren sürükleyici sitelerde (kategorideki tek smooth-scroll skill'i).",
+      "kullanma": "Erişilebilirlik/mobil önceliği olan siteler; ScrollTrigger tek başına yeterliyse.",
+      "teknoloji": [
+        "locomotive-scroll",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "locomotive-scroll"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi",
+        "landing-page",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "scroll-deneyim"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kategoride smooth-scroll için tek seçenek. Dikkat: v4 tarzı API ('el', 'data-scroll-container'); v5 Lenis tabanlı ve API farklı; Lenis için ayrı skill yok. Smooth-scroll mobil ve reduced-motion'da kapatılmalı.",
+      "ortusme_grubu": "yumusak-kaydirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4482,7 +4587,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4550,7 +4656,39 @@
         "ana_sayfa": "https://github.com/nateherkai/scroll-craft",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Premium scroll-driven landing page üretir: brief/röportaj, sayfa grameri, duygu eğrisi, 'imza hamle', çok katmanlı (dimensional) hero, kendi scrollcraft.js motoru ve ekran görüntüsüyle masaüstü/mobil/reduced-motion doğrulaması. Varlıkları kie.ai ile üretebilir.",
+      "kullanim_alani": "Hizmet/ürün/yiyecek markaları için sinematik, katmanlı hero'lu, 'şablon gibi görünmeyen' scroll hikaye sitesi kurarken.",
+      "kullanma": "Küçük scroll efekti eklemek; GSAP ScrollTrigger'a bağlı mevcut proje; dashboard/uygulama arayüzleri.",
+      "teknoloji": [
+        "html",
+        "css",
+        "javascript",
+        "node",
+        "playwright",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "playwright-core",
+        "ffmpeg (tam sürüm)",
+        "KIE_AI_API_KEY (isteğe bağlı)"
+      ],
+      "proje_tipleri": [
+        "scroll-hikaye-sitesi",
+        "landing-page",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "scroll-deneyim",
+        "ui-tasarimci"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güçlü süreç (brief, çeşitlilik kapısı, doğrulama), güncel (21 gün) ve MIT; büyük ama gerçek bir uçtan uca sistem. Dikkat: SKILL.md 24 KB + ~170 KB referans; GSAP değil kendi motorunu kullanıyor; varlık üretimi kie.ai API anahtarı ister ve api.kie.ai'ye istek atar (isteğe bağlı); tam ffmpeg ve playwright-core gerekir; serve.mjs varsayılan 127.0.0.1 (--lan açık uyarılı); 'Windows/OtherWorlds' yol örnekleri taşıyor.",
+      "ortusme_grubu": "scroll-hikaye-uretimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -4561,7 +4699,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -4629,9 +4768,32 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "AOS (Animate On Scroll) ile basit scroll reveal animasyonları: data-aos öznitelikleri, yerleşik animasyonlar, özel animasyon, karşılaştırma tablosu ve yapılandırma betikleri.",
+      "kullanim_alani": "Pazarlama sayfasında karmaşıklık olmadan fade/slide reveal gerektiğinde.",
+      "kullanma": "Pin, scrub, timeline; React'te animasyon (motion-framer).",
+      "teknoloji": [
+        "aos"
+      ],
+      "gerekli_paketler": [
+        "aos"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "scroll-deneyim"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İşini yapıyor ama 820 satır (17 KB) AOS için fazla ve kütüphane yıllardır durağan; 'aos@next' kullanıyor. Dikkat: reveal için CSS/IntersectionObserver veya ScrollTrigger yeterli; unpkg CDN örnekleri.",
+      "ortusme_grubu": "scroll-animasyonu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
@@ -4640,7 +4802,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },

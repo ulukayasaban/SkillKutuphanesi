@@ -4,12 +4,16 @@
   "gorev": "Scroll anlatısını bölümlere ayır, ScrollTrigger/Lenis ile kur, mobilde ve reduced-motion'da sade bir sürüm sun.",
   "cekirdek": [
     "scroll-craft",
-    "gsap-scrolltrigger"
+    "gsap-scrolltrigger",
+    "gsap-core"
   ],
   "opsiyonel": [
     "locomotive-scroll",
     "barba-js",
     "scroll-reveal-libraries",
-    "web3d-integration-patterns"
+    "web3d-integration-patterns",
+    "gsap-timeline",
+    "gsap-plugins",
+    "gsap-react"
   ]
 }

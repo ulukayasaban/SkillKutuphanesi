@@ -110,12 +110,12 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_ · not: `not
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `barba-js` | ⭐ | Page transitions library for creating fluid, smooth transitions between website pages. Use this skill when implementing page transitions, cr… | css, gsap, html, node, python | ✅ | 68 B | M 129KB | - | freshtechbro/claudedesignskills |
-| `gsap-scrolltrigger` | ⭐ | Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based a… | gsap, node, react | ✅ | 95 A | M 18KB | claude:ayni | greensock/gsap-skills |
-| `gsap-scrolltrigger@freshtechbro` | alt | Comprehensive skill for GSAP (GreenSock Animation Platform) and ScrollTrigger plugin. Use this skill when creating web animations, scroll-dr… | canvas, css, gsap, html, python | ✅ | 68 B | M 159KB | claude:farkli | freshtechbro/claudedesignskills |
-| `locomotive-scroll` | ⭐ | Comprehensive skill for Locomotive Scroll smooth scrolling library with parallax effects, viewport detection, and scroll-driven animations. … | css, gsap, html, node, python | ✅ | 68 B | M 81KB | - | freshtechbro/claudedesignskills |
-| `scroll-craft` | ⭐ | Build premium scroll-driven landing pages for service, product, food, and drink brands. Plan the visitor journey, page grammar, emotional pe… | api-anahtari, canvas, css, ffmpeg, git | 🟡 | 80 A | M 380KB | - | nateherkai/scroll-craft |
-| `scroll-reveal-libraries` | ⭐ | Simple scroll-triggered reveal animations using AOS (Animate On Scroll). Use this skill when building marketing pages, landing pages, or con… | css, gsap, html, next.js, node | ✅ | 68 B | M 94KB | - | freshtechbro/claudedesignskills |
+| `barba-js` | ⭐ birincil | Barba.js ile çok sayfalı sitelerde sayfalar arası geçiş animasyonu: hook'lar, router/prefetch/head eklentileri, GSAP entegrasyonu, geçiş kal… | barba.js, gsap | ✅ | 65 B | M 129KB | - | freshtechbro/claudedesignskills |
+| `gsap-scrolltrigger` | ⭐ birincil | GSAP ScrollTrigger resmî rehberi: scroll'a bağlı animasyon, pinleme, scrub, tetikleyiciler, refresh ve temizlik. Parallax, pinli bölüm ve sc… | gsap, scrolltrigger | ✅ | 97 A | M 18KB | claude:ayni | greensock/gsap-skills |
+| `gsap-scrolltrigger@freshtechbro` | alt alternatif | GSAP ve ScrollTrigger için kapsamlı (765 satır) genel rehber: tween, timeline, ScrollTrigger, kalıplar, ease referansı, başlangıç projesi ve… | gsap, scrolltrigger | ✅ | 65 B | M 159KB | claude:farkli | freshtechbro/claudedesignskills |
+| `locomotive-scroll` | ⭐ birincil | Locomotive Scroll ile yumuşak (smooth) kaydırma, parallax ve viewport algılama; GSAP ScrollTrigger entegrasyon notları ve başlangıç projesi. | locomotive-scroll, gsap | ✅ | 65 B | M 81KB | - | freshtechbro/claudedesignskills |
+| `scroll-craft` | ⭐ birincil | Premium scroll-driven landing page üretir: brief/röportaj, sayfa grameri, duygu eğrisi, 'imza hamle', çok katmanlı (dimensional) hero, kendi… | html, css, javascript, node, playwright, ffmpeg | 🟡 | 80 A | M 380KB | - | nateherkai/scroll-craft |
+| `scroll-reveal-libraries` | ⭐ alternatif | AOS (Animate On Scroll) ile basit scroll reveal animasyonları: data-aos öznitelikleri, yerleşik animasyonlar, özel animasyon, karşılaştırma … | aos | ✅ | 65 B | M 94KB | - | freshtechbro/claudedesignskills |
 
 ### 05-3d-webgl
 
