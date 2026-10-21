@@ -289,14 +289,14 @@ _Git, worktree, PR, sürüm/release, changelog_ · not: `notlar/b-yazilim-gelist
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `changelog-generator` | ⭐ | Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical … | git | ✅ | 88 A | S 3KB | - | ComposioHQ/awesome-claude-skills |
-| `deprecation-and-migration` | ⭐ | Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to ano… | node, typescript | ✅ | 91 A | M 12KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `finishing-a-development-branch` | ⭐ | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work | git, node | ✅ | 93 A | S 8KB | - | obra/superpowers |
-| `git-workflow-and-versioning` | ⭐ | Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitting uncommitt… | api-anahtari, git, next.js, node, typescript | ✅ | 91 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `git-worktrees` | ⭐ | Work with git worktrees for isolated parallel development. Use when starting feature work in isolation, when need separate workspace without… | git, node | ✅ | 72 B | S 4KB | - | heyitsnoah/claudesidian |
-| `pull-request` | ⭐ | Create a new feature branch, commit changes, push to GitHub, and open a pull request — all in one command. Use when the user asks to open a … | git | ✅ | 72 B | S 5KB | - | heyitsnoah/claudesidian |
-| `release` | ⭐ | Automatically bump version, update changelog, commit, tag, and push a new release based on recent changes. Use when the user wants to cut a … | git | ✅ | 72 B | S 6KB | - | heyitsnoah/claudesidian |
-| `using-git-worktrees` | ⭐ | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated wo… | git, node, python | ✅ | 93 A | S 7KB | - | obra/superpowers |
+| `changelog-generator` | ⭐ tamamlayıcı | Git commit geçmişini tarayıp değişiklikleri kategorilere (yeni özellik, iyileştirme, düzeltme, kırıcı değişiklik, güvenlik) ayırır, iç commi… | git | ✅ | 88 A | S 3KB | - | ComposioHQ/awesome-claude-skills |
+| `deprecation-and-migration` | ⭐ birincil | Eski sistem, API veya özellikleri kaldırma ve kullanıcıları yeni uygulamaya taşıma: 'kod bir yüktür' ve Hyrum yasası ilkeleri, kaldırma kara… | sql | ✅ | 91 A | M 12KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `finishing-a-development-branch` | ⭐ birincil | Uygulama bittiğinde işi nasıl birleştireceğine karar verdirir: tam test paketini çalıştır (kırmızıysa dur), ortamı (normal repo / worktree /… | git, gh | ✅ | 93 A | S 8KB | - | obra/superpowers |
+| `git-workflow-and-versioning` | ⭐ birincil | Git iş akışı disiplini: trunk tabanlı geliştirme, erken ve sık commit, atomik commit ve açıklayıcı mesajlar, konuları ayırma, değişiklik boy… | git | ✅ | 91 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `git-worktrees` | ⭐ alternatif | git worktree komut başvurusu: oluşturma (yeni/var olan dal), .worktrees/ dizin düzeni, kurulum sonrası adımlar (bağımlılık, env dosyası), co… | git | ✅ | 72 B | S 4KB | - | heyitsnoah/claudesidian |
+| `pull-request` | ⭐ alternatif | Tek komutla PR akışı: önkoşulları kontrol eder (git, gh), başlıktan dal adı üretir, değişiklikleri gösterip onay ister, conventional commit … | git, gh | ✅ | 72 B | S 5KB | - | heyitsnoah/claudesidian |
+| `release` | ⭐ birincil | Release akışını otomatikleştirir: son tag'den beri commit'leri analiz edip (BREAKING/feat/fix) sürüm artışını belirler, package.json sürümün… | git, gh, node | ✅ | 72 B | S 6KB | - | heyitsnoah/claudesidian |
+| `using-git-worktrees` | ⭐ birincil | İşin yalıtılmış bir çalışma alanında yapılmasını sağlar: önce zaten bir worktree içinde olunup olunmadığını (alt modül korumasıyla) tespit e… | git | ✅ | 93 A | S 7KB | - | obra/superpowers |
 
 ### 06-devops-guvenlik-performans
 

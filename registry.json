@@ -13953,7 +13953,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -13966,7 +13966,27 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Git commit geçmişini tarayıp değişiklikleri kategorilere (yeni özellik, iyileştirme, düzeltme, kırıcı değişiklik, güvenlik) ayırır, iç commit'leri eler ve teknik mesajları son kullanıcının anlayacağı sürüm notlarına çevirir; isteğe bağlı stil rehberi dosyası okur.",
+      "kullanim_alani": "Sürüm notları, haftalık/aylık ürün güncellemesi, app store değişiklik metni veya herkese açık changelog sayfası hazırlarken.",
+      "kullanma": "Geliştirici odaklı Keep a Changelog bakımı (release / git-workflow-and-versioning); commit mesajları anlamsızsa sonuç zayıf.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Kısa (3 KB) ve tek amaçlı; 'kullanıcı diline çevir' odağı diğer git skillerinde yok. İçerik çoğunlukla örnek; kategori kuralları yüzeysel.",
+      "ortusme_grubu": "surum-yayini",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "deprecation-and-migration",
@@ -14029,7 +14049,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -14042,7 +14062,29 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Eski sistem, API veya özellikleri kaldırma ve kullanıcıları yeni uygulamaya taşıma: 'kod bir yüktür' ve Hyrum yasası ilkeleri, kaldırma kararı, zorunlu/öneri niteliğinde kullanımdan kaldırma, yerini yap → duyur → kademeli taşı → kaldır süreci; strangler, adapter ve feature flag geçiş desenleri, üretimde kesintisiz şema migrasyonu (expand/contract) ve zombi kod.",
+      "kullanim_alani": "Bir API/özelliği emekliye ayırırken; kullanıcıları yeni sisteme taşırken; üretimde kolon yeniden adlandırma/silme gibi kesintisiz şema değişikliğinde; bakım mı emeklilik mi kararında.",
+      "kullanma": "Yeni özellik geliştirme; sürüm/tag işlemleri (git-workflow-and-versioning).",
+      "teknoloji": [
+        "sql"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı.",
+      "ortusme_grubu": "kullanimdan-kaldirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "finishing-a-development-branch",
@@ -14102,7 +14144,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -14115,7 +14157,34 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Uygulama bittiğinde işi nasıl birleştireceğine karar verdirir: tam test paketini çalıştır (kırmızıysa dur), ortamı (normal repo / worktree / detached HEAD) algıla, temel dalı doğrulat, sabit seçenek menüsü sun (yerelde birleştir, push + PR, olduğu gibi bırak), seçimi uygula ve worktree'yi kökenine göre güvenle temizle. İşi atma yalnız açık istekle.",
+      "kullanim_alani": "Tüm testler geçtikten sonra dalı birleştirme/PR/bekletme kararı ve worktree temizliği.",
+      "kullanma": "Testler kırmızıyken; ekip PR'ları başka bir araçla yönetiyorsa.",
+      "teknoloji": [
+        "git",
+        "gh"
+      ],
+      "gerekli_paketler": [
+        "gh CLI (PR seçeneği için)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, dal-bitirme grubunun birincili. Gerekçe: kullanıcıya karar bırakan sabit menü, temel dal doğrulaması ve kökene dayalı worktree temizliği ile en güvenli kapanış; pull-request (heyitsnoah) onaysız push eğilimli tek komut → alternatif.",
+      "ortusme_grubu": "dal-bitirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "git-workflow-and-versioning",
@@ -14181,7 +14250,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -14194,7 +14263,32 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Git iş akışı disiplini: trunk tabanlı geliştirme, erken ve sık commit, atomik commit ve açıklayıcı mesajlar, konuları ayırma, değişiklik boyutu, dal stratejisi ve isimlendirme, worktree ile paralel iş, 'kayıt noktası' deseni, değişiklik özetleri, commit öncesi hijyen, üretilmiş dosyalar, git ile hata ayıklama (bisect), semantik sürümleme, tag'i doğruluk kaynağı yapma ve insanlar için changelog.",
+      "kullanim_alani": "Her kod değişikliğinde commit/dal/PR düzeni; karışık çalışma ağacını temiz atomik commit'lere bölmek; sürüm numarası seçmek ve release kesmek.",
+      "kullanma": "Ekibin farklı ve yazılı bir git akışı (ör. git-flow) varsa çatışabilir; salt worktree kurulumu (using-git-worktrees).",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici",
+        "backend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor.",
+      "ortusme_grubu": "git-is-akisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "git-worktrees",
@@ -14254,7 +14348,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -14267,7 +14361,25 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "git worktree komut başvurusu: oluşturma (yeni/var olan dal), .worktrees/ dizin düzeni, kurulum sonrası adımlar (bağımlılık, env dosyası), commit edilmemiş değişiklik varken silmeme kuralı, kaldırma karar matrisi ve temizlik/prune.",
+      "kullanim_alani": "Elle worktree yönetimi, PR incelemesi için ayrı checkout veya birleşme sonrası temizlik komutları gerektiğinde.",
+      "kullanma": "Agent iş akışında yalıtım kurulumu (using-git-worktrees daha güvenli ve harness farkında).",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Doğru ve kısa komut başvurusu; mevcut worktree'yi algılama veya yerel araç tercih etme yok. '.env kopyala' önerisi gizli bilgiyi çoğaltabilir.",
+      "ortusme_grubu": "worktree",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pull-request",
@@ -14326,7 +14438,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -14339,7 +14451,28 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Tek komutla PR akışı: önkoşulları kontrol eder (git, gh), başlıktan dal adı üretir, değişiklikleri gösterip onay ister, conventional commit mesajıyla commit eder, push eder ve özet/değişiklikler/test listesi içeren gövdeyle gh pr create çalıştırır.",
+      "kullanim_alani": "Kullanıcı açıkça 'PR aç' dediğinde hızlı dal + commit + push + PR.",
+      "kullanma": "Kullanıcı birleştirme yöntemini henüz seçmediyse (finishing-a-development-branch); push'un onay gerektirdiği ortamlar; değişiklikler zaten bir dalda düzenliyse.",
+      "teknoloji": [
+        "git",
+        "gh"
+      ],
+      "gerekli_paketler": [
+        "gh CLI (oturum açık)"
+      ],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kullanışlı ama 'staged yoksa git add -A' ve sabit 'Generated with Claude Code' imzası körlemesine; push ve PR dışa dönük eylem, yalnız kullanıcı isteğiyle çalışmalı.",
+      "ortusme_grubu": "dal-bitirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "release",
@@ -14398,7 +14531,7 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 72,
         "not": "B",
@@ -14411,7 +14544,30 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Release akışını otomatikleştirir: son tag'den beri commit'leri analiz edip (BREAKING/feat/fix) sürüm artışını belirler, package.json sürümünü günceller, CHANGELOG.md'deki Unreleased bölümünü yeni sürüme taşır, commit + annotated tag atar, push eder ve gh release create ile GitHub sürümü yayınlar.",
+      "kullanim_alani": "package.json ve CHANGELOG.md (Keep a Changelog) kullanan Node projelerinde sürüm kesmek.",
+      "kullanma": "package.json olmayan projeler (Python, Rust…); sürüm otomasyonu CI'da (release-please, changesets) yapılıyorsa; push/yayın onayı alınmadan.",
+      "teknoloji": [
+        "git",
+        "gh",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "gh CLI (oturum açık)"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel, --skill ile). Sürüm artış kuralları net; ancak push ve GitHub release yayını geri alınması zor dışa dönük eylemler, skill bunları onay adımı olmadan zincirliyor. Yalnız Node/package.json varsayımı.",
+      "ortusme_grubu": "surum-yayini",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "using-git-worktrees",
@@ -14472,7 +14628,7 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 93,
         "not": "A",
@@ -14485,7 +14641,30 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "İşin yalıtılmış bir çalışma alanında yapılmasını sağlar: önce zaten bir worktree içinde olunup olunmadığını (alt modül korumasıyla) tespit eder, kullanıcı onayı ister, platformun yerel worktree aracını (EnterWorktree, /worktree…) tercih eder, yoksa git worktree'ye düşer; proje kurulumu yapıp temiz test tabanını doğrular.",
+      "kullanim_alani": "Yalıtım gerektiren özellik işine başlarken veya bir uygulama planını yürütmeden önce (superpowers zinciri).",
+      "kullanma": "Zaten harness tarafından yönetilen bir worktree'deyken (skill bunu kendisi algılar); tek dosyalık hızlı düzeltmeler.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, worktree grubunun birincili. Gerekçe: 'harness ile kavga etme' ilkesi, var olan yalıtımı algılama, alt modül koruması ve onay adımı; Claude Code/Codex worktree araçlarıyla uyumlu. heyitsnoah git-worktrees yalnız komut başvurusu → alternatif.",
+      "ortusme_grubu": "worktree",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "ci-cd-and-automation",
