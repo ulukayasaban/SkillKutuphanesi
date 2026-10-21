@@ -33,7 +33,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** opentelemetry, node, typescript
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** gozlemlenebilirlik → birincil · **Roller:** devops-muhendis, backend-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** gozlemlenebilirlik → birincil · **Roller:** backend-muhendis, devops-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 13.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, gozlemlenebilirlik grubunun birincili. 'Telemetriyi de doğrula' ve runbook bölümleri pratik; satıcıdan bağımsız.
 
@@ -44,7 +44,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** node, react, css
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** performans → birincil · **Roller:** frontend-muhendis, backend-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** performans → birincil · **Roller:** devops-muhendis, kod-inceleyici, qa-erisilebilirlik · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 26 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı.
 
@@ -77,7 +77,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** node, html
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** guvenlik-sertlestirme → birincil · **Roller:** kod-inceleyici, backend-muhendis, devops-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** guvenlik-sertlestirme → birincil · **Roller:** backend-muhendis, devops-muhendis, kod-inceleyici · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 30 KB (SKILL.md 17.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı.
 

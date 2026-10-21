@@ -6,10 +6,16 @@
     "brainstorming",
     "writing-plans",
     "subagent-driven-development",
-    "verification-before-completion"
+    "requesting-code-review",
+    "verification-before-completion",
+    "using-git-worktrees"
   ],
   "opsiyonel": [
+    "interview-me",
+    "spec-driven-development",
+    "executing-plans",
+    "finishing-a-development-branch",
     "dispatching-parallel-agents",
-    "executing-plans"
+    "doubt-driven-development"
   ]
 }

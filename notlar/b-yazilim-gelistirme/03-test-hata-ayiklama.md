@@ -22,7 +22,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** hata-ayiklama → birincil · **Roller:** kod-inceleyici, frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** hata-ayiklama → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 40 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, hata-ayiklama grubunun birincili. Gerekçe (4 aday): obra'nın güncel sürümü ve yardımcı teknik dosyaları (find-polluter.sh, condition-based-waiting) en pratik araç setini veriyor. heyitsnoah sürümü aynı metnin eski bir kopyası (teknikleri SKILL.md içine gömülü) → alternatif; vudovn sürümü obra'dan kısaltılmış şablon → alternatif; addyosmani debugging-and-error-recovery eşdeğer kalitede ama aynı işi yapıyor → alternatif. Not: test-pressure-*.md ve CREATION-LOG.md skill geliştirme kalıntısı, çalışma anında okunmaz.
 
@@ -66,7 +66,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Teknoloji:** api-anahtari, css, html, node, playwright, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** tdd → birincil · **Roller:** kod-inceleyici, frontend-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** tdd → birincil · **Roller:** backend-muhendis, frontend-muhendis, kod-inceleyici · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 16 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar.
 
@@ -110,7 +110,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** tamamlanma-dogrulama → birincil · **Roller:** planlayici, frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** tamamlanma-dogrulama → birincil · **Roller:** backend-muhendis, frontend-muhendis, planlayici
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlanma-dogrulama grubunun birincili. 4 KB ile en yüksek fayda/bağlam oranı; 'alt-agent başarılı dedi → bağımsız doğrula' maddesi orkestratör için kritik. verify-changes yürütme yöntemini, bu skill iddia disiplinini veriyor.
 

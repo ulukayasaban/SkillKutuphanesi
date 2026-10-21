@@ -1,0 +1,17 @@
+{
+  "ad": "devops-muhendis",
+  "aciklama": "CI/CD, deploy, izleme ve güvenlik taramasını kuran altyapı agent'ı.",
+  "gorev": "Kalite kapılı CI hattını kur, üretime çıkışı kontrol listesi ve kademeli yayınla planla, geri alma ve izlemeyi hazırla, güvenlik taramasını otomatikleştir.",
+  "cekirdek": [
+    "ci-cd-and-automation",
+    "shipping-and-launch",
+    "observability-and-instrumentation",
+    "security-and-hardening"
+  ],
+  "opsiyonel": [
+    "deployment-procedures",
+    "vulnerability-scanner",
+    "performance-optimization",
+    "git-workflow-and-versioning"
+  ]
+}

@@ -33,7 +33,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** mimari-karar → birincil · **Roller:** backend-muhendis, planlayici
+- **Durum:** tercih · **Örtüşme:** mimari-karar → birincil · **Roller:** backend-muhendis
 - **Boyut:** 12 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Tek mimari karar skilli; seçici okuma ile hafif (SKILL.md 1.9 KB). İçerik genel ve yer yer ders kitabı düzeyinde ama ADR ve ödünleşim şablonları iş görüyor.
 
@@ -58,6 +58,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Durum:** tercih · **Örtüşme:** frontend-mimarisi → birincil · **Roller:** frontend-muhendis
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-mimarisi grubunun birincili. ag-kit'in en somut skillerinden; React ve Vue'yu birlikte kapsaması ve 'görsel tasarım değil yapı' sınırı net. ../app-builder ve ../frontend-design kardeş bağlantıları kurulumda o skiller yoksa boşa düşer (yalnız atıf).
+- **Not:** ../app-builder ve ../nextjs-react-expert kardeş bağlantıları yalnız 'ayrıca bkz' atfı; bu skiller kurulmasa da skill çalışır (kardes-eksik uyarısı göz ardı edilebilir).
 
 ### frontend-ui-engineering  ·  addyosmani/agent-skills @ aeac41d  ·  puan 91 (A)
 

@@ -8848,9 +8848,7 @@
         "kurumsal-site",
         "mobil-uygulama"
       ],
-      "roller": [
-        "planlayici"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 3,
       "kalite_notu": "Karar: TUT (yığın/şablon rehberi olarak). Şablonlar güncel (2026-05 sürümleri) ve seçici okuma kuralı bağlamı korur. Ancak agent koordinasyon bölümü ag-kit'in kendi agent'larına ve /create iş akışına bağlı; kütüphanede bu agent'lar yok. templates/ alt klasörü ayrı 'templates' skill'iyle birebir aynı.",
@@ -9430,9 +9428,7 @@
         "dashboard-saas",
         "landing-page"
       ],
-      "roller": [
-        "planlayici"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
       "kalite_notu": "Karar: TUT, alternatif. Çerçeveler (frameworks.md) ve örnekler iyi; ürün/konsept aşamasında brainstorming'den daha yapılandırılmış. Betik yalnız docs/ideas klasörü açıyor.",
@@ -9531,10 +9527,7 @@
         "landing-page",
         "mevcut-kod-iyilestirme"
       ],
-      "roller": [
-        "planlayici",
-        "frontend-muhendis"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
       "kalite_notu": "Karar: TUT, tamamlayıcı. Kısa (9 KB), yığından bağımsız; 'Rule 0.5 kapsam disiplini' agent'ların taşmasını iyi engelliyor. ../../references/definition-of-done.md arşivde yok (yalnız 'ayrıca bkz').",
@@ -9924,9 +9917,7 @@
         "kurumsal-site",
         "mevcut-kod-iyilestirme"
       ],
-      "roller": [
-        "frontend-muhendis"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
       "kalite_notu": "Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı.",
@@ -10500,9 +10491,7 @@
         "landing-page",
         "mevcut-kod-iyilestirme"
       ],
-      "roller": [
-        "frontend-muhendis"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 3,
       "kalite_notu": "Karar: TUT, temiz-kod grubunun tek üyesi. 7 KB, yararlı kurallar ve 'düzenlemeden önce bağımlıları kontrol et' adımı değerli; ancak katı sayılar (fonksiyon ≤20 satır) ve 'priority: CRITICAL, her zaman aktif' iddiası bağlam dışı uygulanabilir.",
@@ -11001,9 +10990,7 @@
         "landing-page",
         "mevcut-kod-iyilestirme"
       ],
-      "roller": [
-        "frontend-muhendis"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 3,
       "kalite_notu": "Karar: TUT. Kısa ve uygulanabilir; betikler proje tipini algılıyor. 'FINAL AUDIT REPORT' bölümüne atıf betik çıktısıyla tam örtüşmüyor; npm audit her değişiklikte gereksiz yavaş olabilir.",
@@ -11097,7 +11084,9 @@
         "dashboard-saas",
         "ai-uygulama"
       ],
-      "roller": [],
+      "roller": [
+        "kod-inceleyici"
+      ],
       "zorluk": "kolay",
       "kalite": 4,
       "kalite_notu": "Karar: ALTERNATİF. YAGNI odağı ve CI modu farklılaştırıcı; claudesidian (Obsidian kasası) reposundan geliyor ama içerik genel. Etkileşimli menü varsayılan, --auto/--ci ile atlanır.",
@@ -11187,9 +11176,7 @@
         "landing-page",
         "mevcut-kod-iyilestirme"
       ],
-      "roller": [
-        "frontend-muhendis"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
       "kalite_notu": "Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.",
@@ -11662,8 +11649,7 @@
         "mevcut-kod-iyilestirme"
       ],
       "roller": [
-        "kod-inceleyici",
-        "frontend-muhendis"
+        "kod-inceleyici"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -12037,8 +12023,9 @@
         "mevcut-kod-iyilestirme"
       ],
       "roller": [
-        "kod-inceleyici",
-        "frontend-muhendis"
+        "backend-muhendis",
+        "frontend-muhendis",
+        "kod-inceleyici"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -12409,8 +12396,9 @@
         "mevcut-kod-iyilestirme"
       ],
       "roller": [
-        "planlayici",
-        "frontend-muhendis"
+        "backend-muhendis",
+        "frontend-muhendis",
+        "planlayici"
       ],
       "zorluk": "kolay",
       "kalite": 5,
@@ -12795,8 +12783,7 @@
         "kurumsal-site"
       ],
       "roller": [
-        "backend-muhendis",
-        "planlayici"
+        "backend-muhendis"
       ],
       "zorluk": "orta",
       "kalite": 3,
@@ -13109,7 +13096,8 @@
       "ortusme_grubu": "frontend-mimarisi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21"
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "../app-builder ve ../nextjs-react-expert kardeş bağlantıları yalnız 'ayrıca bkz' atfı; bu skiller kurulmasa da skill çalışır (kardes-eksik uyarısı göz ardı edilebilir)."
     },
     {
       "id": "frontend-ui-engineering",
@@ -13783,9 +13771,7 @@
         "ai-uygulama",
         "kurumsal-site"
       ],
-      "roller": [
-        "frontend-muhendis"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 4,
       "kalite_notu": "Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.",
@@ -13793,7 +13779,8 @@
       "ortusme_rolu": "birincil",
       "kategori_elle": true,
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21"
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React kompozisyon kuralları, OpenMontage araçlarını çağırmaz."
     },
     {
       "id": "vercel-react-best-practices",
@@ -13894,7 +13881,8 @@
       "ortusme_rolu": "birincil",
       "kategori_elle": true,
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21"
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React/Next.js kuralları, OpenMontage araçlarını çağırmaz."
     },
     {
       "id": "changelog-generator",
@@ -14279,8 +14267,8 @@
         "mevcut-kod-iyilestirme"
       ],
       "roller": [
-        "planlayici",
-        "backend-muhendis"
+        "backend-muhendis",
+        "devops-muhendis"
       ],
       "zorluk": "kolay",
       "kalite": 5,
@@ -14956,8 +14944,8 @@
         "ai-uygulama"
       ],
       "roller": [
-        "devops-muhendis",
-        "backend-muhendis"
+        "backend-muhendis",
+        "devops-muhendis"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -15061,8 +15049,9 @@
         "mevcut-kod-iyilestirme"
       ],
       "roller": [
-        "frontend-muhendis",
-        "backend-muhendis"
+        "devops-muhendis",
+        "kod-inceleyici",
+        "qa-erisilebilirlik"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -15348,9 +15337,9 @@
         "mevcut-kod-iyilestirme"
       ],
       "roller": [
-        "kod-inceleyici",
         "backend-muhendis",
-        "devops-muhendis"
+        "devops-muhendis",
+        "kod-inceleyici"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -16348,7 +16337,8 @@
         "landing-page"
       ],
       "roller": [
-        "frontend-muhendis"
+        "frontend-muhendis",
+        "qa-erisilebilirlik"
       ],
       "zorluk": "orta",
       "kalite": 4,

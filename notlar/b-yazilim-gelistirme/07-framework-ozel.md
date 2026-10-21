@@ -55,9 +55,10 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Teknoloji:** react
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** react-kompozisyon → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** react-kompozisyon → birincil · **Globalde:** claude:ayni
 - **Boyut:** 49 KB (SKILL.md 3.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.
+- **Not:** Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React kompozisyon kuralları, OpenMontage araçlarını çağırmaz.
 
 ### vercel-react-best-practices  ·  calesthio/OpenMontage @ c806645  ·  puan 92 (A)
 
@@ -69,6 +70,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Durum:** tercih · **Örtüşme:** react-performans → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:ayni
 - **Boyut:** 207 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, react-performans grubunun birincili. Gerekçe: Vercel'in özgün kural seti, kural başına dosya ile seçici okuma (SKILL.md 7 KB, toplam 207 KB); nextjs-react-expert aynı kuralların ag-kit uyarlaması. Bu kopya OpenMontage'a gömülü (upstream vercel-labs/agent-skills arşivde yok); güncellemeler OpenMontage üzerinden gelir. Dil/framework rehberi olduğu için 07-framework-ozel'e taşındı.
+- **Not:** Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React/Next.js kuralları, OpenMontage araçlarını çağırmaz.
 
 ### next-bundle-optimizer  ·  vercel/next.js @ 691ec2a  ·  puan 98 (A)
 
@@ -143,6 +145,6 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Teknoloji:** playwright, node · **Paketler:** @playwright/cli (playwright-cli), Playwright tarayıcıları
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** microsoft (kurum, resmî, ★98228, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** tarayici-otomasyonu → birincil · **Roller:** frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** tarayici-otomasyonu → birincil · **Roller:** frontend-muhendis, qa-erisilebilirlik
 - **Boyut:** 68 KB (SKILL.md 15.3 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tarayici-otomasyonu grubunun birincili. Resmî (microsoft/playwright) ve kapsamlı; snapshot ref modeli token dostu. Kırık bağlantı: .playwright-cli/page-*.yml örnek çıktı yolu (çalışma anında üretilen dosya, işlevi etkilemez). a-tasarim/08'deki tarayıcı test skilleriyle örtüşme o kategorinin incelemesinde ele alınmalı.

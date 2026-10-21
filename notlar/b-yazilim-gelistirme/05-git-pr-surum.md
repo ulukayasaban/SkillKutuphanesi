@@ -44,7 +44,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** git-is-akisi → birincil · **Roller:** planlayici, backend-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** git-is-akisi → birincil · **Roller:** backend-muhendis, devops-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 13.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor.
 

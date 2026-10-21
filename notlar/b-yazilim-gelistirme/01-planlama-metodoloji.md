@@ -11,7 +11,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** next.js, react, node, python, vue, flutter, react-native
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** proje-iskeleti → birincil · **Roller:** planlayici
+- **Durum:** tercih · **Örtüşme:** proje-iskeleti → birincil
 - **Boyut:** 63 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (yığın/şablon rehberi olarak). Şablonlar güncel (2026-05 sürümleri) ve seçici okuma kuralı bağlamı korur. Ancak agent koordinasyon bölümü ag-kit'in kendi agent'larına ve /create iş akışına bağlı; kütüphanede bu agent'lar yok. templates/ alt klasörü ayrı 'templates' skill'iyle birebir aynı.
 
@@ -77,7 +77,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** fikir-netlestirme → alternatif · **Roller:** planlayici · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** fikir-netlestirme → alternatif · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 40 KB (SKILL.md 9.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, alternatif. Çerçeveler (frameworks.md) ve örnekler iyi; ürün/konsept aşamasında brainstorming'den daha yapılandırılmış. Betik yalnız docs/ideas klasörü açıyor.
 
@@ -88,7 +88,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** plan-yurutme → tamamlayıcı · **Roller:** planlayici, frontend-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** plan-yurutme → tamamlayıcı · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 9 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Kısa (9 KB), yığından bağımsız; 'Rule 0.5 kapsam disiplini' agent'ların taşmasını iyi engelliyor. ../../references/definition-of-done.md arşivde yok (yalnız 'ayrıca bkz').
 
@@ -132,7 +132,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** api-anahtari, css, html, next.js, node, python, react, svelte, tailwind, typescript, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★109268, son güncelleme 2026-10-13, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** resmi-dokuman-dayanagi → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** resmi-dokuman-dayanagi → birincil · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 10 KB (SKILL.md 9.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı.
 

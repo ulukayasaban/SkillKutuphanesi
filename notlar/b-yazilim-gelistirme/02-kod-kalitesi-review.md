@@ -11,7 +11,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Teknoloji:** playwright, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** temiz-kod → birincil · **Roller:** frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** temiz-kod → birincil
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, temiz-kod grubunun tek üyesi. 7 KB, yararlı kurallar ve 'düzenlemeden önce bağımlıları kontrol et' adımı değerli; ancak katı sayılar (fonksiyon ≤20 satır) ve 'priority: CRITICAL, her zaman aktif' iddiası bağlam dışı uygulanabilir.
 
@@ -66,7 +66,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Teknoloji:** node, typescript, python · **Paketler:** eslint, typescript, ruff/mypy/bandit (Python)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8200, son güncelleme 2026-10-18, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** lint-dogrulama → birincil · **Roller:** frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** lint-dogrulama → birincil
 - **Boyut:** 16 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve uygulanabilir; betikler proje tipini algılıyor. 'FINAL AUDIT REPORT' bölümüne atıf betik çıktısıyla tam örtüşmüyor; npm audit her değişiklikte gereksiz yavaş olabilir.
 
@@ -77,7 +77,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
+- **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif · **Roller:** kod-inceleyici
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. YAGNI odağı ve CI modu farklılaştırıcı; claudesidian (Obsidian kasası) reposundan geliyor ama içerik genel. Etkileşimli menü varsayılan, --auto/--ci ile atlanır.
 
@@ -88,7 +88,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** inceleme-dongusu → tamamlayıcı · **Roller:** frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** inceleme-dongusu → tamamlayıcı
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.
 
