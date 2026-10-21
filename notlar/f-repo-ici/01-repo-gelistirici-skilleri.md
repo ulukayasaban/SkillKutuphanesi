@@ -2,7 +2,29 @@
 
 _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için iç süreç skilleri; kendi projelerinde nadiren gerekir_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/46**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **2/48**
+
+### archify-review  ·  tt-a1i/archify @ 25cf370  ·  puan 91 (A)
+
+- **Ne yapar:** Archify reposunun iç bakım skilli: issue, PR veya kodu değer, maliyet ve etki üzerinden değerlendirip kanıta dayalı bakım kararı verdirir; depo kökündeki REVIEWING.md ve CONTRIBUTING.md'ye yönlendirir.
+- **Ne zaman:** Yalnız tt-a1i/archify reposuna katkı yaparken issue triyajı ve PR değerlendirmesi. · **Ne zaman değil:** Kendi projelerinde genel code review (code-review-and-quality); bağlantı verdiği REVIEWING.md/CONTRIBUTING.md arşivde yok.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
+- **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Kırık bağlantı:** 2
+- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. metadata.internal: true; değer/maliyet/etki çerçevesi kısa ve genel, asıl kurallar repo kökündeki belgelerde (kırık bağlantı). Repo-içi skill olduğu için f-repo-ici'ye taşındı.
+
+### archify-tuning  ·  tt-a1i/archify @ 25cf370  ·  puan 89 (A)
+
+- **Ne yapar:** Archify diyagram üretecinin doğruluk, görsel kalite ve üretim hızını deneylerle iyileştirmek için iç ayar skilli: ölçüler, ajan iz (trace) toplama, sabit girdiyle tekrar oynatma ve ekran görüntüsü karşılaştırma betikleri (Node 22.13+, Chrome) içerir.
+- **Ne zaman:** Yalnız Archify reposunda yerleşim/yönlendirme/doğrulama kurallarını değiştirirken deney turu yürütmek. · **Ne zaman değil:** Archify dışındaki her proje; kod incelemesi için değil.
+- **Teknoloji:** node, chromium · **Paketler:** node>=22.13, Chrome/Chromium
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** archify-ic-surec → alternatif
+- **Boyut:** 57 KB (SKILL.md 8.9 KB, yük orta) · **Kırık bağlantı:** 1
+- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Archify'ın kendi geliştirme döngüsüne özel (metadata.internal), kategori olarak da code review değil; CONTRIBUTING.md bağlantısı kırık, betikler repo yapısına bağlı. f-repo-ici'ye taşındı.
 
 ### authoring-skills  ·  vercel/next.js @ 691ec2a  ·  puan 100 (A)
 

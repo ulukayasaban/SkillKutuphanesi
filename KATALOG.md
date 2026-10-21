@@ -17,9 +17,9 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
   - [06-oyun-2d-grafik](#06-oyun-2d-grafik) — 12 skill · Oyun geliştirme, PixiJS, 2D grafik
   - [07-gorsel-sanat-sunum](#07-gorsel-sanat-sunum) — 10 skill · Poster/canvas tasarımı, generative art, slayt, GIF
   - [08-onyuz-test-kalite](#08-onyuz-test-kalite) — 7 skill · Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı
-- **Yazılım Geliştirme** (78)
+- **Yazılım Geliştirme** (76)
   - [01-planlama-metodoloji](#01-planlama-metodoloji) — 15 skill · Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini
-  - [02-kod-kalitesi-review](#02-kod-kalitesi-review) — 13 skill · Code review, sadeleştirme, temiz kod
+  - [02-kod-kalitesi-review](#02-kod-kalitesi-review) — 11 skill · Code review, sadeleştirme, temiz kod
   - [03-test-hata-ayiklama](#03-test-hata-ayiklama) — 11 skill · TDD, hata ayıklama, doğrulama
   - [04-mimari-api-veritabani](#04-mimari-api-veritabani) — 14 skill · Mimari, API/arayüz tasarımı, veritabanı, backend
   - [05-git-pr-surum](#05-git-pr-surum) — 8 skill · Git, worktree, PR, sürüm/release, changelog
@@ -238,19 +238,17 @@ _Code review, sadeleştirme, temiz kod_ · not: `notlar/b-yazilim-gelistirme/02-
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `archify-review` | ⭐ | Review Archify issues, PRs, or code through value, cost, and impact to support evidence-based maintenance decisions. Use for issue triage, c… |  | ✅ | 91 A | S 2KB | - | tt-a1i/archify |
-| `archify-tuning` | ⭐ | Improve Archify diagram accuracy, visual quality and complete authoring speed with fewer repairs. Use for generation experiments or evaluati… | node | ✅ | 89 A | M 57KB | - | tt-a1i/archify |
-| `clean-code` | ⭐ | Pragmatic coding standards - concise, direct, no over-engineering, no unnecessary comments | playwright, python, typescript | ✅ | 89 A | S 7KB | - | vudovn/ag-kit |
-| `code-review-and-quality` | ⭐ | Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use … | node, typescript | ✅ | 91 A | M 20KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `code-review-checklist` | ⭐ | Code review guidelines covering code quality, security, and best practices. | typescript | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `code-review-graph` | ⭐ | Token-efficient code review using Tree-sitter AST graphs and MCP. Cuts AI token usage on large codebases by computing the blast radius of ch… | api-anahtari, git, next.js, node, python | ✅ | 87 A | M 11KB | - | vudovn/ag-kit |
-| `code-simplification` | ⭐ | Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, mai… | git, python, react, typescript | ✅ | 91 A | M 13KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `lint-and-validate` | ⭐ | Automatic quality control, linting, and static analysis procedures. Use after every code modification to ensure syntax correctness and proje… | node, python, typescript | ✅ | 89 A | S 16KB | - | vudovn/ag-kit |
-| `pragmatic-review` | ⭐ | Interactive pragmatic code review focusing on YAGNI and KISS principles. Use when the user asks for a code review, wants to check for over-e… | git, html, typescript | ✅ | 70 B | M 11KB | - | heyitsnoah/claudesidian |
-| `receiving-code-review` | ⭐ | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable -… |  | ✅ | 93 A | S 6KB | - | obra/superpowers |
-| `requesting-code-review` | ⭐ | Use when completing tasks, implementing major features, or before merging to verify work meets requirements | git | ✅ | 93 A | S 9KB | - | obra/superpowers |
-| `simplify-code` | ⭐ | Reduce complexity of over-engineered code. Identify unnecessary abstractions, remove dead code, flatten deep nesting, and simplify logic whi… | git, node, typescript | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `simplify-codebase` | ⭐ | Simplification audit or authorized codebase simplification whose stated objective is to remove accidental complexity. Use for evidence-backe… |  | ✅ | 93 A | S 27KB | - | tt-a1i/archify |
+| `clean-code` | ⭐ birincil | ag-kit'in her kod yazımında açık tutulan pragmatik kodlama standardı: SRP/DRY/KISS/YAGNI, isimlendirme kuralları, küçük fonksiyon ve sığ iç … | playwright, python, typescript | ✅ | 89 A | S 7KB | - | vudovn/ag-kit |
+| `code-review-and-quality` | ⭐ birincil | Beş eksenli kod incelemesi yaptırır: doğruluk, okunabilirlik/sadelik, mimari, güvenlik, performans. Önce testleri sonra uygulamayı okur, bul… | node, typescript | ✅ | 91 A | M 20KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `code-review-checklist` | ⭐ alternatif | Kısa kod inceleme kontrol listesi: doğruluk, güvenlik (enjeksiyon, XSS, gizli anahtar, prompt injection), performans, kod kalitesi, test ve … | typescript | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
+| `code-review-graph` | ⭐ birincil | code-review-graph MCP sunucusunun kullanım rehberi: Tree-sitter ile kod tabanını SQLite'ta AST grafiğine çevirip değişikliğin etki alanını (… | python, tree-sitter, sqlite, mcp | ✅ | 87 A | M 11KB | - | vudovn/ag-kit |
+| `code-simplification` | ⭐ birincil | Davranışı birebir koruyarak kodu açıklık için sadeleştirir: Chesterton'ın çiti (önce neden var olduğunu anla), proje geleneklerine uyma, zek… | typescript, javascript, python, react | ✅ | 91 A | M 13KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `lint-and-validate` | ⭐ birincil | Her kod değişikliğinden sonra ekosisteme göre lint, tip denetimi ve güvenlik taramasını çalıştırır (Node/TS: eslint, tsc --noEmit, npm audit… | node, typescript, python | ✅ | 89 A | S 16KB | - | vudovn/ag-kit |
+| `pragmatic-review` | ⭐ alternatif | YAGNI ve KISS odaklı etkileşimli kod incelemesi: git durumundan kapsamı seçtirir (commit edilmemiş, dal, dosya, son N commit), aşırı mühendi… | git | ✅ | 70 B | M 11KB | - | heyitsnoah/claudesidian |
+| `receiving-code-review` | ⭐ tamamlayıcı | Gelen kod inceleme geri bildirimine teknik titizlikle yaklaşmayı öğretir: oku, kendi sözlerinle yeniden ifade et, kod tabanında doğrula, değ… |  | ✅ | 93 A | S 6KB | - | obra/superpowers |
+| `requesting-code-review` | ⭐ birincil | İş bitince veya birleştirmeden önce, oturum geçmişini değil özenle hazırlanmış bağlamı (açıklama, plan, BASE/HEAD SHA) vererek bir inceleyic… | git | ✅ | 93 A | S 9KB | - | obra/superpowers |
+| `simplify-code` | ⭐ alternatif | Aşırı mühendislik içeren kodu sadeleştirme kontrol listesi: gereksiz soyutlamalar, ölü kod, derin iç içelik, çok parametreli fonksiyonlar ve… | typescript, javascript | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
+| `simplify-codebase` | ⭐ tamamlayıcı | Kod tabanından kazara karmaşıklığı kanıta dayalı olarak ayıklar: Survey (salt okuma, sıralı bulgular) ve Change (yetkili silme/birleştirme) … |  | ✅ | 93 A | S 27KB | - | tt-a1i/archify |
 
 ### 03-test-hata-ayiklama
 
