@@ -8,9 +8,9 @@
   ],
   "opsiyonel": [
     "theme-factory",
-    "brand-guidelines",
     "banner-design",
     "design-spec",
-    "design"
+    "design",
+    "tailwind-design-system"
   ]
 }

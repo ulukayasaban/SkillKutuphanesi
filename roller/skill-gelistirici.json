@@ -1,0 +1,18 @@
+{
+  "ad": "skill-gelistirici",
+  "aciklama": "Agent skill'i, Claude Code eklentisi, hook, slash komut ve alt-agent tanımı yazan agent.",
+  "gorev": "Skill'i önce test senaryosuyla tasarla, SKILL.md'yi kısa tut, tetikleme açıklamasını ölç; Claude Code'a özgü bileşenlerde Codex karşılığını (AGENTS.md, .codex/agents, config.toml) da belirt.",
+  "cekirdek": [
+    "skill-creator",
+    "writing-skills",
+    "plugin-structure"
+  ],
+  "opsiyonel": [
+    "hook-development",
+    "command-development",
+    "agent-development",
+    "mcp-integration",
+    "writing-hookify-rules",
+    "plugin-settings"
+  ]
+}

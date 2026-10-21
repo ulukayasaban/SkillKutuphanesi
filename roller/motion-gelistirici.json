@@ -1,7 +1,7 @@
 {
   "ad": "motion-gelistirici",
   "aciklama": "Animasyon ve mikro-etkileşimleri yazan agent (GSAP / Motion).",
-  "gorev": "Animasyonları performanslı ve erişilebilir yaz: transform/opacity kullan, prefers-reduced-motion'a uy, timeline'ları düzenli tut. React state/route geçişlerinde Motion ('motion/react' import'u), sıralı ve scroll'a bağlı sekanslarda GSAP kullan; ikisini aynı elemanda karıştırma.",
+  "gorev": "Animasyonları performanslı ve erişilebilir yaz: transform/opacity kullan, prefers-reduced-motion'a uy, timeline'ları düzenli tut.",
   "cekirdek": [
     "gsap-core",
     "gsap-timeline",
@@ -11,10 +11,7 @@
   "opsiyonel": [
     "gsap-plugins",
     "gsap-utils",
-    "gsap-frameworks",
     "motion-framer",
-    "framer-motion",
-    "lottie-animations",
-    "animated-component-libraries"
+    "lottie-animations"
   ]
 }

@@ -1,15 +1,15 @@
 {
   "ad": "3d-gelistirici",
   "aciklama": "Three.js / React Three Fiber sahnelerini kuran agent.",
-  "gorev": "3D sahneyi kur: ışık, materyal, kamera, etkileşim. Performans bütçesine uy (draw call, texture boyutu, DPR sınırı). three r186 API'lerini kullan; React projesinde R3F v9 + drei, modelleri yüklemeden önce gltf-transform ile sıkıştır (Draco/meshopt, KTX2).",
+  "gorev": "3D sahneyi kur: ışık, materyal, kamera, etkileşim. Performans bütçesine uy (draw call, texture boyutu, DPR sınırı).",
   "cekirdek": [
     "threejs-fundamentals",
     "threejs-react-three-fiber",
     "threejs-performance"
   ],
   "opsiyonel": [
-    "threejs-loaders",
     "threejs-materials",
-    "threejs-lighting"
+    "threejs-lighting",
+    "threejs-loaders"
   ]
 }

@@ -60,10 +60,18 @@ def main():
     (KOK / "KATALOG.md").write_text("\n".join(out) + "\n", encoding="utf-8")
 
     ent = ["# Entegrasyon Kataloğu (Composio)", "",
-           "> Varsayılan listede gizli. Composio API anahtarı gerekir. Arama: "
-           "`skill-ekle.py --listele --gizli --ara gmail`", "",
-           "| Skill | Ne yapar |", "|---|---|"]
-    ent += [f"| `{s['id']}` | {s['aciklama'][:120].replace('|', '/')} |" for s in gizli if s["tip"] == "T4"]
+           "> Varsayılan listede gizli. Rube MCP (rube.app) bağlantısı ve uygulama başına Composio hesabı bağlantısı gerekir (COMPOSIO_API_KEY değil). Arama: "
+           "`skill-ekle.py --listele --gizli --ara drive`. İnceleme raporu: `notlar/referans/composio-inceleme.md`", ""]
+    t4 = [s for s in gizli if s["tip"] == "T4"]
+    gruplar = defaultdict(list)
+    for s in t4:
+        gruplar[s.get("uygulama_grubu") or "diger"].append(s)
+    sira = sorted(gruplar, key=lambda g: (g == "diger", -len(gruplar[g])))
+    ent += ["## Gruplar", ""] + [f"- [{g}](#{g}) — {len(gruplar[g])}" for g in sira]
+    for g in sira:
+        ent += ["", f"## {g}", "", "| Skill | İnceleme | Ne yapar |", "|---|---|---|"]
+        ent += [f"| `{s['id']}` | {s.get('inceleme', 'otomatik')} | {(s.get('ozet_tr') or s['aciklama'])[:140].replace('|', '/')} |"
+                for s in gruplar[g]]
     (KOK / "KATALOG-entegrasyon.md").write_text("\n".join(ent) + "\n", encoding="utf-8")
 
     reg = json_oku(REGISTRY)

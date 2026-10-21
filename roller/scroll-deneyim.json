@@ -1,14 +1,14 @@
 {
   "ad": "scroll-deneyim",
   "aciklama": "Scroll ile ilerleyen hikâye, pinlenen bölümler ve smooth scroll deneyimini kuran agent.",
-  "gorev": "Scroll anlatısını bölümlere ayır, ScrollTrigger/Lenis ile kur, mobilde ve reduced-motion'da sade bir sürüm sun. Yeni projede Locomotive v4 veya AOS kullanma; smooth scroll için Lenis, basit açılışlar için CSS scroll-driven animation veya ScrollTrigger.batch kullan.",
+  "gorev": "Scroll anlatısını bölümlere ayır, ScrollTrigger/Lenis ile kur, mobilde ve reduced-motion'da sade bir sürüm sun.",
   "cekirdek": [
-    "gsap-scrolltrigger",
-    "scroll-craft"
+    "scroll-craft",
+    "gsap-scrolltrigger"
   ],
   "opsiyonel": [
-    "gsap-plugins",
+    "locomotive-scroll",
     "barba-js",
-    "web3d-integration-patterns"
+    "scroll-reveal-libraries"
   ]
 }

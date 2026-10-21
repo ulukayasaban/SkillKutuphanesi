@@ -7,6 +7,6 @@
 - **Commit:** `be2a406907dbc61b73e6827ded415c96139d13a2`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** ComposioHQ (kurum)
-- **Değerlendirme:** 88/100 (A)
+- **Değerlendirme:** 69/100 (B)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** alternatif
