@@ -16,8 +16,6 @@
     "oversized-cursor",
     "manim-composer",
     "manimce-best-practices",
-    "svg-character-animation",
-    "character-rigging",
-    "lottie-bodymovin"
+    "svg-character-animation"
   ]
 }
