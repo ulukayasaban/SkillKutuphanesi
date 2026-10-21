@@ -33,10 +33,10 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
 - **AI ve Otomasyon** (42)
   - [01-claude-api-mcp](#01-claude-api-mcp) — 9 skill · Claude API, MCP sunucusu, model geçişi
   - [02-agent-orkestrasyon](#02-agent-orkestrasyon) — 14 skill · Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları
-  - [03-web-arastirma-veri](#03-web-arastirma-veri) — 3 skill · Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma
+  - [03-web-arastirma-veri](#03-web-arastirma-veri) — 2 skill · Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma
   - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 16 skill · Skill yazma, plugin/hook/komut geliştirme
 - **Video, Ses ve AI Medya Üretimi** (90)
-  - [01-video-uretim-montaj](#01-video-uretim-montaj) — 45 skill · Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg
+  - [01-video-uretim-montaj](#01-video-uretim-montaj) — 46 skill · Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg
   - [02-ses-muzik-konusma](#02-ses-muzik-konusma) — 14 skill · Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi
   - [03-ai-gorsel-video-modelleri](#03-ai-gorsel-video-modelleri) — 17 skill · AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu
   - [04-motion-graphics-karakter](#04-motion-graphics-karakter) — 14 skill · Motion graphics, Manim, karakter animasyonu/rig, görsel stil
@@ -455,9 +455,8 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_ · not: `notla
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `agent-reach` | ⭐ | MUST USE when user wants to 调研/research/搜索/search/查/找/look up anything on the internet — e.g. 全网调研 X / 帮我调研一下 X / 查一下 X / 搜搜 X / 看看大家怎么评价 X … | api-anahtari | ✅ | 91 A | M 46KB | - | Panniantong/Agent-Reach |
-| `notebooklm` | ⭐ | Install, authenticate, troubleshoot, and operate Gemini Notebook through the notebooklm-py CLI or typed async Python API. Use for notebook a… | api-anahtari, python | ✅ | 88 A | M 16KB | claude:farkli | teng-lin/notebooklm-py |
-| `youtube-downloader` | ⭐ | Download YouTube videos with customizable quality and format options. Use this skill when the user asks to download, save, or grab YouTube v… | python | ✅ | 88 A | S 7KB | - | ComposioHQ/awesome-claude-skills |
+| `agent-reach` | ⭐ birincil | İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub … | python, cli, web-arama | ✅ | 91 A | M 46KB | - | Panniantong/Agent-Reach |
+| `notebooklm` | ⭐ tamamlayıcı | Google NotebookLM (Gemini Notebook) için notebooklm-py CLI ve async Python API'si: kurulum, kimlik doğrulama (master token, tarayıcı çerezi)… | python, notebooklm, cli | ✅ | 88 A | M 16KB | claude:farkli | teng-lin/notebooklm-py |
 
 ### 04-skill-plugin-yazimi
 
@@ -490,6 +489,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
+| `youtube-downloader` | ⭐ alternatif | yt-dlp kullanan download_video.py betiğiyle YouTube videosu indirir: kalite (best…360p), format (mp4/webm/mkv) ve yalnızca ses (MP3) seçenek… | python, yt-dlp, ffmpeg | ✅ | 88 A | S 7KB | - | ComposioHQ/awesome-claude-skills |
 | `captions-overlay` | ⭐ tamamlayıcı | embedded-captions iş akışının üzerine uygulanan overlay doktrini: altyazı modeli (at / ray / göm) ve altyazının filme bindirilen bir katman … | hyperframes, html, css | ✅ | 88 A | S 6KB | claude:ayni,codex:ayni,agents:farkli | heygen-com/hyperframes |
 | `changelog-video` | ⭐ alternatif | Haftalık changelog markdown'ını HeyGen markalı kare (1080) changelog videosuna çevirir: 'Annie' HeyGen seslendirmesi, animasyonlu marka arka… | hyperframes, html, gsap, node, heygen | ✅ | 71 B | M 521KB | claude:farkli,codex:farkli,agents:farkli | heygen-com/hyperframes |
 | `create-video` | ⭐ birincil | HeyGen Video Agent ile tek bir metin isteminden komple video üretir; senaryo, avatar, görsel, seslendirme ve altyazıyı ajan kendisi seçer. Ö… | heygen, api-anahtari, rest-api | ✅ | 87 A | S 92KB | claude:ayni | calesthio/OpenMontage |

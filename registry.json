@@ -20850,7 +20850,7 @@
         "ana_sayfa": "",
         "katkici": 36
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -20863,7 +20863,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub kod arama, RSS, podcast, hisse verisi) çoklu arka uçla (OpenCLI, platform CLI'ları, API'ler) içerik okur. `agent-reach doctor --json` ile hangi kanalın çalıştığını denetler; kategori başına references/ dosyaları var. SKILL.md Çince, SKILL_en.md İngilizce.",
+      "kullanim_alani": "Çok platformlu web/sosyal medya araştırması, 'internette ne konuşuluyor' taraması, URL'den içerik okuma.",
+      "kullanma": "Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulmamışsa. Açıklamadaki 'MUST USE' tetikleme dili her URL'de devreye girer — yalnızca araştırma rolüne ver. Giriş gerektiren platformlar tarayıcı çerezi okuyabilir; gizlilik açısından dikkat.",
+      "teknoloji": [
+        "python",
+        "cli",
+        "web-arama"
+      ],
+      "gerekli_paketler": [
+        "agent-reach CLI (pip/uv)",
+        "platforma göre: OpenCLI, yt-dlp, gh, Exa API"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "arastirmaci",
+        "ai-entegrasyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (birincil). Çok kanallı, doctor ile kendini denetleyen, hata durumunda yeniden deneme zinciri tanımlı; MIT. Eksi: varsayılan SKILL.md Çince (İngilizce sürüm SKILL_en.md içinde) ve Çin platformlarına ağırlık veriyor.",
+      "ortusme_grubu": "web-arastirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "notebooklm",
@@ -20925,7 +20952,7 @@
         "ana_sayfa": "https://github.com/teng-lin/notebooklm-py",
         "katkici": 40
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -20938,13 +20965,39 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Google NotebookLM (Gemini Notebook) için notebooklm-py CLI ve async Python API'si: kurulum, kimlik doğrulama (master token, tarayıcı çerezi), not defteri/kaynak yönetimi, kaynaklara dayalı sohbet ve derin araştırma, sesli özet/podcast gibi artefakt üretimi ve indirme; yetki sınırları ve hata giderme kuralları.",
+      "kullanim_alani": "Belgeleri NotebookLM'e yükleyip kaynaklı soru-cevap, derin araştırma ya da Audio Overview/podcast üretmek; bunu otomasyona bağlamak.",
+      "kullanma": "Genel Gemini API işleri için değil; resmi olmayan bir istemci (Google hesap çerezleri/master token kullanır) — kurumsal hesapta politikaya aykırı olabilir.",
+      "teknoloji": [
+        "python",
+        "notebooklm",
+        "cli"
+      ],
+      "gerekli_paketler": [
+        "notebooklm-py[browser] (pip, Python 3.10+)",
+        "Google hesabı oturumu"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "rapor-dokuman"
+      ],
+      "roller": [
+        "arastirmaci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kimlik doğrulama ve yetki sınırları özenle yazılmış, --json ve açık ID kullanımı ile güvenli otomasyon; MIT. Resmi olmayan API riski taşıyor.",
+      "ortusme_grubu": "web-arastirma",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "youtube-downloader",
       "ad": "youtube-downloader",
       "durum": "tercih",
-      "kategori": "d-ai-otomasyon/03-web-arastirma-veri",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj",
       "alan": "d-ai-otomasyon",
       "yol": "arsiv/d-ai-otomasyon/03-web-arastirma-veri/youtube-downloader",
       "varyantlar": {},
@@ -20997,7 +21050,7 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -21010,7 +21063,32 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "yt-dlp kullanan download_video.py betiğiyle YouTube videosu indirir: kalite (best…360p), format (mp4/webm/mkv) ve yalnızca ses (MP3) seçenekleri; yt-dlp yoksa kendisi kurar.",
+      "kullanim_alani": "Tek bir YouTube videosunu ya da sesini hızlıca indirmek.",
+      "kullanma": "Varsayılan çıktı yolu /mnt/user-data/outputs/ (claude.ai sandbox'ı) — yerelde -o ile yol ver. Altyazı/transkript, oynatma listesi veya çok platform için OpenMontage video-download (birincil). Telif hakkı korumalı içerikte.",
+      "teknoloji": [
+        "python",
+        "yt-dlp",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "yt-dlp",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Basit ve çalışır betik; sandbox'a özgü varsayılan yol ve otomatik pip kurulumu eksi. Kategori: video indirme g-video-ses-medya/01 kapsamında, oraya taşındı ve video-indirme grubuna alternatif olarak eklendi.",
+      "ortusme_grubu": "video-indirme",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "academy-guide",
