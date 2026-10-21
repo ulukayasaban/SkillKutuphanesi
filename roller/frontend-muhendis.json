@@ -11,6 +11,8 @@
     "tailwind-patterns",
     "web-artifacts-builder",
     "d3-viz",
-    "tailwind-design-system"
+    "tailwind-design-system",
+    "motion-framer",
+    "gsap-react"
   ]
 }
