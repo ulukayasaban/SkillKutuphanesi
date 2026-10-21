@@ -2,37 +2,37 @@
 
 > Otomatik üretilir. Teknoloji etiketleri inceleme sırasında elle düzeltilir (`teknoloji` alanı); henüz incelenmemiş skillerde otomatik tespit (`teknoloji_oto`) kullanılır.
 
-## node (84)
+## node (79)
 
-`app-builder`, `archify`, `archify-tuning`, `bash-linux`, `batch-operations`, `beautiful-mermaid`, `behavioral-modes`, `brand`, `browser-testing-with-devtools`, `changelog-video`, `ci-cd-and-automation`, `code-review-and-quality`, `code-review-graph`, `command-development`, `connect`, `constraint-driven-development`, `context-engineering`, `debugging-and-error-recovery`, `deprecation-and-migration`, `design-dna`, `design-system`, `design-taste-frontend`, `developer-growth-analysis`, `documentation-and-adrs`, `docx`, `executing-plans`, `faceless-explainer`, `figma`, `finishing-a-development-branch`, `general-video`, `git-workflow-and-versioning`, `git-worktrees`, `hyperframes`, `hyperframes-audio`, `hyperframes-cli`, `hyperframes-media`, `hyperframes-registry`, `impeccable`, `incremental-implementation`, `init-bootstrap`, `intelligent-routing`, `json-canvas`, `langsmith-fetch`, `lint-and-validate`, `mcp-builder`, `mcp-integration`, `media-use`, `memory-system`, `motion-doctrine`, `music-to-video`, `next-bundle-optimizer`, `next-cache-components-adoption`, `next-cache-components-optimizer`, `next-dev-loop`, `next-partial-prefetching-adoption`, `nodejs-best-practices`, `observability-and-instrumentation`, `performance-optimization`, `plan-writing`, `playwright-cli`, `playwright-component-testing`, `playwright-recording`, `playwright-trace`, `plugin-structure`, `pptx`, `pr-to-video`, `product-launch-video`, `react-doctor`, `scroll-craft`, `security-and-hardening`, `server-management`, `shipping-and-launch`, `simplify-code`, `skill-creator`, `source-driven-development`, `spec-driven-development`, `templates`, `test-driven-development`, `using-git-worktrees`, `verify-changes`, `video-toolkit`, `webapp-testing`, `website-to-video`, `writing-skills`
+`app-builder`, `archify`, `archify-tuning`, `bash-linux`, `batch-operations`, `beautiful-mermaid`, `behavioral-modes`, `brand`, `changelog-video`, `ci-cd-and-automation`, `code-review-and-quality`, `code-review-graph`, `command-development`, `connect`, `constraint-driven-development`, `context-engineering`, `debugging-and-error-recovery`, `deprecation-and-migration`, `design-dna`, `design-system`, `design-taste-frontend`, `developer-growth-analysis`, `documentation-and-adrs`, `docx`, `executing-plans`, `faceless-explainer`, `figma`, `finishing-a-development-branch`, `general-video`, `git-workflow-and-versioning`, `git-worktrees`, `hyperframes`, `hyperframes-audio`, `hyperframes-cli`, `hyperframes-media`, `hyperframes-registry`, `impeccable`, `incremental-implementation`, `init-bootstrap`, `intelligent-routing`, `json-canvas`, `langsmith-fetch`, `lint-and-validate`, `mcp-builder`, `mcp-integration`, `media-use`, `memory-system`, `motion-doctrine`, `music-to-video`, `next-bundle-optimizer`, `next-cache-components-adoption`, `next-cache-components-optimizer`, `next-dev-loop`, `next-partial-prefetching-adoption`, `nodejs-best-practices`, `observability-and-instrumentation`, `performance-optimization`, `plan-writing`, `playwright-cli`, `playwright-recording`, `plugin-structure`, `pptx`, `pr-to-video`, `product-launch-video`, `scroll-craft`, `security-and-hardening`, `server-management`, `shipping-and-launch`, `simplify-code`, `skill-creator`, `source-driven-development`, `spec-driven-development`, `templates`, `test-driven-development`, `using-git-worktrees`, `verify-changes`, `video-toolkit`, `website-to-video`, `writing-skills`
 
 ## python (73)
 
 `acestep`, `agents`, `api-patterns`, `app-builder`, `atlas-cloud`, `azure-speech-to-text`, `azure-text-to-speech`, `bfl-api`, `blender-web-pipeline`, `canvas-design`, `claude-api`, `claude-opus-4-5-migration`, `clean-code`, `code-review-graph`, `code-simplification`, `comfyui`, `connect`, `constraint-driven-development`, `dashscope`, `design`, `design-system`, `docx`, `doubao-tts`, `elevenlabs`, `embedded-captions`, `fish-audio-tts`, `geo-fundamentals`, `i18n-localization`, `kling-official`, `langsmith-fetch`, `lint-and-validate`, `ltx2`, `manimce-best-practices`, `manimgl-best-practices`, `mcp-builder`, `mcp-integration`, `mobile-design`, `music`, `nextjs-react-expert`, `notebooklm`, `obsidian-markdown`, `pdf`, `performance-profiling`, `plan-writing`, `plugin-structure`, `pptx`, `provider-model-refresh`, `python-patterns`, `skill-creator`, `skill-development`, `skill-share`, `slack-gif-creator`, `sound-effects`, `source-driven-development`, `speech-to-text`, `substance-3d-texturing`, `tailored-resume-generator`, `templates`, `threejs-webgl`, `ui-styling`, `ui-ux-pro-max`, `upgrade`, `using-git-worktrees`, `verify-changes`, `video-toolkit`, `video-understand`, `vulnerability-scanner`, `webapp-testing`, `writing-hookify-rules`, `writing-plans`, `writing-skills`, `xlsx`, `youtube-downloader`
 
-## api-anahtari (71)
+## api-anahtari (70)
 
-`3d-asset-generation`, `agent-reach`, `agents`, `ai-video-gen`, `api-patterns`, `atlas-cloud`, `avatar-video`, `azure-speech-to-text`, `azure-text-to-speech`, `bfl-api`, `browser-testing-with-devtools`, `ci-cd-and-automation`, `claude-api`, `code-review-graph`, `connect`, `connect-apps`, `context-compression`, `context-engineering`, `coordinator-mode`, `create-video`, `dashscope`, `design`, `developer-growth-analysis`, `diagnosing-superpowers`, `doubao-tts`, `doubt-driven-development`, `elevenlabs`, `faceswap`, `fish-audio-tts`, `frontend-architecture`, `frontend-ui-engineering`, `gemini-omni`, `git-workflow-and-versioning`, `grok-media`, `heygen`, `init-bootstrap`, `intelligent-routing`, `kling-official`, `langsmith-fetch`, `lyria`, `mcp-integration`, `media-use`, `memory-system`, `minimax-h3`, `music`, `notebooklm`, `observability-and-instrumentation`, `playwright-cli`, `plugin-settings`, `plugin-structure`, `powershell-windows`, `provider-model-refresh`, `python-patterns`, `red-team-tactics`, `security-and-hardening`, `seedance-2-0`, `seedance-2-5`, `setup-api-key`, `skill-creator`, `skill-development`, `sound-effects`, `source-driven-development`, `speech-to-text`, `subagent-driven-development`, `test-driven-development`, `text-to-speech`, `upgrade`, `video-translate`, `vulnerability-scanner`, `writing-hookify-rules`, `writing-skills`
+`3d-asset-generation`, `agent-reach`, `agents`, `ai-video-gen`, `api-patterns`, `atlas-cloud`, `avatar-video`, `azure-speech-to-text`, `azure-text-to-speech`, `bfl-api`, `ci-cd-and-automation`, `claude-api`, `code-review-graph`, `connect`, `connect-apps`, `context-compression`, `context-engineering`, `coordinator-mode`, `create-video`, `dashscope`, `design`, `developer-growth-analysis`, `diagnosing-superpowers`, `doubao-tts`, `doubt-driven-development`, `elevenlabs`, `faceswap`, `fish-audio-tts`, `frontend-architecture`, `frontend-ui-engineering`, `gemini-omni`, `git-workflow-and-versioning`, `grok-media`, `heygen`, `init-bootstrap`, `intelligent-routing`, `kling-official`, `langsmith-fetch`, `lyria`, `mcp-integration`, `media-use`, `memory-system`, `minimax-h3`, `music`, `notebooklm`, `observability-and-instrumentation`, `playwright-cli`, `plugin-settings`, `plugin-structure`, `powershell-windows`, `provider-model-refresh`, `python-patterns`, `red-team-tactics`, `security-and-hardening`, `seedance-2-0`, `seedance-2-5`, `setup-api-key`, `skill-creator`, `skill-development`, `sound-effects`, `source-driven-development`, `speech-to-text`, `subagent-driven-development`, `test-driven-development`, `text-to-speech`, `upgrade`, `video-translate`, `vulnerability-scanner`, `writing-hookify-rules`, `writing-skills`
 
 ## typescript (58)
 
 `agents`, `api-and-interface-design`, `api-patterns`, `artifacts-builder`, `batch-operations`, `beautiful-mermaid`, `behavioral-modes`, `bfl-api`, `ci-cd-and-automation`, `claude-api`, `clean-code`, `code-review-and-quality`, `code-review-checklist`, `code-review-graph`, `code-simplification`, `command-development`, `connect`, `context-compression`, `context-engineering`, `coordinator-mode`, `debugging-and-error-recovery`, `deprecation-and-migration`, `developer-growth-analysis`, `dispatching-parallel-agents`, `documentation-and-adrs`, `documentation-templates`, `frontend-architecture`, `frontend-ui-engineering`, `git-workflow-and-versioning`, `incremental-implementation`, `lint-and-validate`, `mcp-builder`, `music`, `next-cache-components-adoption`, `next-cache-components-optimizer`, `next-partial-prefetching-adoption`, `nextjs-react-expert`, `nodejs-best-practices`, `observability-and-instrumentation`, `plan-writing`, `planning-and-task-breakdown`, `playwright-component-testing`, `playwright-recording`, `plugin-settings`, `pragmatic-review`, `remotion`, `remotion-best-practices`, `shipping-and-launch`, `simplify-code`, `sound-effects`, `source-driven-development`, `speech-to-text`, `synthetic-screen-recording`, `tailwind-design-system`, `test-driven-development`, `web-artifacts-builder`, `writing-hookify-rules`, `writing-skills`
 
-## html (57)
+## html (53)
 
-`aframe-webxr`, `algorithmic-art`, `archify`, `banner-design`, `beautiful-mermaid`, `browser-testing-with-devtools`, `captions-overlay`, `changelog-video`, `claude-api`, `design`, `design-dna`, `design-taste-frontend`, `discernment-nudge`, `embedded-captions`, `faceless-explainer`, `frontend-design`, `general-video`, `geo-fundamentals`, `hyperframes`, `hyperframes-animation`, `hyperframes-audio`, `hyperframes-core`, `hyperframes-creative`, `hyperframes-registry`, `hyperframes-studio`, `impeccable`, `intelligent-routing`, `modern-web-design`, `motion-graphics`, `music-to-video`, `next-cache-components-adoption`, `obsidian-bases`, `obsidian-markdown`, `playwright-cli`, `playwright-component-testing`, `playwright-trace`, `pr-to-video`, `pragmatic-review`, `product-launch-video`, `remotion-to-hyperframes`, `scroll-craft`, `seam-craft`, `security-and-hardening`, `skill-creator`, `skill-development`, `slides`, `slideshow`, `source-driven-development`, `talking-head-recut`, `test-driven-development`, `theme-factory`, `ui-ux-pro-max`, `visual-style`, `web-design-guidelines`, `webapp-testing`, `website-to-video`, `xlsx`
+`aframe-webxr`, `algorithmic-art`, `archify`, `banner-design`, `beautiful-mermaid`, `captions-overlay`, `changelog-video`, `claude-api`, `design`, `design-dna`, `design-taste-frontend`, `discernment-nudge`, `embedded-captions`, `faceless-explainer`, `frontend-design`, `general-video`, `geo-fundamentals`, `hyperframes`, `hyperframes-animation`, `hyperframes-audio`, `hyperframes-core`, `hyperframes-creative`, `hyperframes-registry`, `hyperframes-studio`, `impeccable`, `intelligent-routing`, `modern-web-design`, `motion-graphics`, `music-to-video`, `next-cache-components-adoption`, `obsidian-bases`, `obsidian-markdown`, `playwright-cli`, `pr-to-video`, `pragmatic-review`, `product-launch-video`, `remotion-to-hyperframes`, `scroll-craft`, `seam-craft`, `security-and-hardening`, `skill-creator`, `skill-development`, `slides`, `slideshow`, `source-driven-development`, `talking-head-recut`, `test-driven-development`, `theme-factory`, `ui-ux-pro-max`, `visual-style`, `web-design-guidelines`, `website-to-video`, `xlsx`
 
-## react (52)
+## react (51)
 
-`animated-component-libraries`, `app-builder`, `artifacts-builder`, `brainstorming`, `browser-testing-with-devtools`, `code-simplification`, `context-engineering`, `d3-viz`, `developer-growth-analysis`, `framer-motion`, `frontend-architecture`, `frontend-ui-engineering`, `gsap-react`, `hook-development`, `i18n-localization`, `intelligent-routing`, `interview-me`, `modern-web-design`, `motion-framer`, `next-cache-components-adoption`, `next-dev-loop`, `nextjs-react-expert`, `nodejs-best-practices`, `parallel-agents`, `performance-optimization`, `plan-writing`, `playwright-component-testing`, `pptx`, `react-doctor`, `react-spring-physics`, `react-three-fiber`, `remotion`, `remotion-best-practices`, `remotion-to-hyperframes`, `rive-interactive`, `shipping-and-launch`, `skill-development`, `source-driven-development`, `spec-driven-development`, `spline-interactive`, `synthetic-screen-recording`, `tailored-resume-generator`, `tailwind-design-system`, `templates`, `test-driven-development`, `threejs-react-three-fiber`, `ui-styling`, `vercel-composition-patterns`, `vercel-react-best-practices`, `web-artifacts-builder`, `web-design-guidelines`, `writing-skills`
-
-## css (37)
-
-`archify`, `banner-design`, `beautiful-mermaid`, `brand`, `browser-testing-with-devtools`, `captions-overlay`, `context-engineering`, `design`, `design-dna`, `design-system`, `design-taste-frontend`, `developer-growth-analysis`, `frontend-design`, `frontend-ui-engineering`, `hyperframes-animation`, `hyperframes-creative`, `hyperframes-keyframes`, `i18n-localization`, `impeccable`, `intelligent-routing`, `modern-web-design`, `obsidian-markdown`, `oversized-cursor`, `performance-optimization`, `playwright-cli`, `playwright-component-testing`, `scroll-craft`, `seam-craft`, `slides`, `source-driven-development`, `tailwind-patterns`, `test-driven-development`, `theme-factory`, `ui-ux-pro-max`, `vercel-react-best-practices`, `web-design-guidelines`, `webapp-testing`
+`animated-component-libraries`, `app-builder`, `artifacts-builder`, `brainstorming`, `code-simplification`, `context-engineering`, `d3-viz`, `developer-growth-analysis`, `framer-motion`, `frontend-architecture`, `frontend-ui-engineering`, `gsap-react`, `hook-development`, `i18n-localization`, `intelligent-routing`, `interview-me`, `modern-web-design`, `motion-framer`, `next-cache-components-adoption`, `next-dev-loop`, `nextjs-react-expert`, `nodejs-best-practices`, `parallel-agents`, `performance-optimization`, `plan-writing`, `playwright-component-testing`, `pptx`, `react-doctor`, `react-spring-physics`, `react-three-fiber`, `remotion`, `remotion-best-practices`, `remotion-to-hyperframes`, `rive-interactive`, `shipping-and-launch`, `skill-development`, `source-driven-development`, `spec-driven-development`, `spline-interactive`, `synthetic-screen-recording`, `tailored-resume-generator`, `tailwind-design-system`, `templates`, `test-driven-development`, `threejs-react-three-fiber`, `ui-styling`, `vercel-composition-patterns`, `vercel-react-best-practices`, `web-artifacts-builder`, `web-design-guidelines`, `writing-skills`
 
 ## git (36)
 
 `batch-operations`, `changelog-generator`, `code-review-graph`, `code-simplification`, `command-development`, `constraint-driven-development`, `context-engineering`, `debugging-and-error-recovery`, `deployment-procedures`, `documentation-and-adrs`, `download-attachment`, `executing-plans`, `finishing-a-development-branch`, `git-workflow-and-versioning`, `git-worktrees`, `incremental-implementation`, `init-bootstrap`, `mcp-integration`, `memory-system`, `performance-optimization`, `plugin-settings`, `pragmatic-review`, `pull-request`, `release`, `requesting-code-review`, `security-and-hardening`, `shipping-and-launch`, `simplify-code`, `subagent-driven-development`, `systematic-debugging`, `upgrade`, `using-agent-skills`, `using-git-worktrees`, `using-superpowers`, `writing-plans`, `writing-skills`
+
+## css (34)
+
+`archify`, `banner-design`, `beautiful-mermaid`, `brand`, `captions-overlay`, `context-engineering`, `design`, `design-dna`, `design-system`, `design-taste-frontend`, `developer-growth-analysis`, `frontend-design`, `frontend-ui-engineering`, `hyperframes-animation`, `hyperframes-creative`, `hyperframes-keyframes`, `i18n-localization`, `impeccable`, `intelligent-routing`, `modern-web-design`, `obsidian-markdown`, `oversized-cursor`, `performance-optimization`, `playwright-cli`, `scroll-craft`, `seam-craft`, `slides`, `source-driven-development`, `tailwind-patterns`, `test-driven-development`, `theme-factory`, `ui-ux-pro-max`, `vercel-react-best-practices`, `web-design-guidelines`
 
 ## gsap (33)
 
@@ -44,7 +44,7 @@
 
 ## next.js (19)
 
-`app-builder`, `code-review-graph`, `context-compression`, `frontend-architecture`, `git-workflow-and-versioning`, `gsap-react`, `i18n-localization`, `next-bundle-optimizer`, `next-cache-components-adoption`, `next-cache-components-optimizer`, `next-dev-loop`, `next-partial-prefetching-adoption`, `next-partial-prefetching-optimizer`, `nextjs-react-expert`, `nodejs-best-practices`, `playwright-component-testing`, `source-driven-development`, `templates`, `vercel-react-best-practices`
+`app-builder`, `code-review-graph`, `context-compression`, `frontend-architecture`, `git-workflow-and-versioning`, `gsap-react`, `i18n-localization`, `next-bundle-optimizer`, `next-cache-components-adoption`, `next-cache-components-optimizer`, `next-dev-loop`, `next-partial-prefetching-adoption`, `next-partial-prefetching-optimizer`, `nextjs-react-expert`, `nodejs-best-practices`, `react-doctor`, `source-driven-development`, `templates`, `vercel-react-best-practices`
 
 ## three (18)
 
@@ -70,9 +70,9 @@
 
 `ai-video-gen`, `avatar-video`, `changelog-video`, `create-video`, `faceswap`, `heygen`, `hyperframes-media`, `media-use`, `text-to-speech`, `video-translate`
 
-## vue (9)
+## vue (8)
 
-`app-builder`, `browser-testing-with-devtools`, `code-review-graph`, `frontend-architecture`, `gsap-frameworks`, `intelligent-routing`, `playwright-component-testing`, `source-driven-development`, `templates`
+`app-builder`, `code-review-graph`, `frontend-architecture`, `gsap-frameworks`, `intelligent-routing`, `playwright-component-testing`, `source-driven-development`, `templates`
 
 ## obsidian (8)
 
@@ -94,21 +94,21 @@
 
 `3d-asset-generation`, `claude-api`, `hyperframes-animation`, `hyperframes-keyframes`, `modern-web-design`, `web-games`
 
+## javascript (6)
+
+`algorithmic-art`, `browser-testing-with-devtools`, `canvas-procedural-animation`, `d3-viz`, `pixijs-2d`, `scroll-craft`
+
 ## webgpu (6)
 
 `babylonjs-engine`, `pixijs-2d`, `playcanvas-engine`, `threejs-fundamentals`, `threejs-performance`, `web-games`
 
-## javascript (5)
+## vite (5)
 
-`algorithmic-art`, `canvas-procedural-animation`, `d3-viz`, `pixijs-2d`, `scroll-craft`
+`artifacts-builder`, `babylonjs-engine`, `playwright-component-testing`, `react-three-fiber`, `web-artifacts-builder`
 
 ## rest-api (5)
 
 `avatar-video`, `create-video`, `faceswap`, `text-to-speech`, `video-translate`
-
-## vite (4)
-
-`artifacts-builder`, `babylonjs-engine`, `react-three-fiber`, `web-artifacts-builder`
 
 ## blender (4)
 
@@ -541,6 +541,18 @@
 ## gif (1)
 
 `slack-gif-creator`
+
+## chrome-devtools-mcp (1)
+
+`browser-testing-with-devtools`
+
+## chrome (1)
+
+`browser-testing-with-devtools`
+
+## eslint (1)
+
+`react-doctor`
 
 ## figma-api (1)
 

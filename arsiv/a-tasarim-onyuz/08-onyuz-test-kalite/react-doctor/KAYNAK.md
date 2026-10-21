@@ -7,6 +7,6 @@
 - **Commit:** `83220268418c8f4d4fb2b4547846693f8b291d8e`
 - **Lisans:** MIT
 - **Geliştirici:** darkroomengineering (kurum)
-- **Değerlendirme:** 92/100 (A)
+- **Değerlendirme:** 79/100 (B)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

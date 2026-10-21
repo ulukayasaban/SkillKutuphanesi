@@ -13,6 +13,8 @@
     "d3-viz",
     "tailwind-design-system",
     "motion-framer",
-    "gsap-react"
+    "gsap-react",
+    "react-doctor",
+    "playwright-component-testing"
   ]
 }

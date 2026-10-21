@@ -10539,9 +10539,37 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Chrome DevTools MCP ile ajana canlı tarayıcı gözü kazandırır: ekran görüntüsü, DOM, konsol, ağ istekleri, performans izi (LCP/CLS/INP), hesaplanmış stiller ve erişilebilirlik ağacı. UI/ağ/performans hata ayıklama akışları, test planı şablonu ve tarayıcı içeriğini güvenilmez veri sayan güvenlik sınırları içerir.",
+      "kullanim_alani": "Çalışan sayfada konsol hatası, ağ sorunu, performans veya erişilebilirlik ağacı doğrulaması gerektiğinde (özellikle gerçek tarayıcı verisiyle).",
+      "kullanma": "chrome-devtools MCP sunucusu kurulu değilse çalışmaz; yalnız backend/CLI işlerinde değil. Betikli, yeniden çalıştırılabilir E2E testi için webapp-testing / Playwright.",
+      "teknoloji": [
+        "chrome-devtools-mcp",
+        "chrome",
+        "javascript"
+      ],
+      "gerekli_paketler": [
+        "chrome-devtools-mcp (npx)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas",
+        "kurumsal-site",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "qa-erisilebilirlik",
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB.",
+      "ortusme_grubu": "canli-tarayici-denetimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (8 gün önce)",
@@ -10550,7 +10578,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -10618,9 +10647,39 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Playwright ile React/Vue bileşenlerini 'hikâye galerisi' sayfası üzerinden, dahili `mount` fixture'ı ve düz Playwright testleriyle izole test etme kurulumu. Galeri sözleşmesi, tiplendirme, Vite entegrasyonu ve eski `@playwright/experimental-ct-react/-vue`'dan geçiş rehberi içerir.",
+      "kullanim_alani": "Bileşenleri tarayıcıda ayrı ayrı (props, olay, görsel regresyon) test etmek veya experimental-ct'den geçmek için.",
+      "kullanma": "Salt E2E akışları için değil (webapp-testing / playwright-cli); Playwright'sız projelerde ve React/Vue dışı çatılarda hazır şablon yok.",
+      "teknoloji": [
+        "playwright",
+        "react",
+        "vue",
+        "vite",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "@playwright/test",
+        "vite"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "landing-page"
+      ],
+      "roller": [
+        "qa-erisilebilirlik",
+        "frontend-muhendis"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (opsiyonel). Resmî Microsoft skill'i; kavram (hikâye + galeri + mount fixture) net ve geçiş yolu belgeli. Dikkat: galeri sayfasını (`references/gallery-spec.md`'ye göre) projede kendin yazman gerekir, hazır şablon yok; yeni bir Playwright sürümünü varsayar (mount fixture/`reuseContext`), eski sürümde çalışmayabilir. Next.js/webpack'te ayrı Vite sunucusu ekler (devDependency). 10.2 KB + 5 referans.",
+      "ortusme_grubu": "playwright-test-altyapisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 98,
+        "puan": 91,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -10629,7 +10688,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -10692,9 +10752,33 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Playwright trace (.zip) dosyalarını komut satırından inceler: eylem listesi, ağ istekleri, konsol, hatalar, DOM/erişilebilirlik anlık görüntüleri ve ekran görüntüleri; tarayıcı açmadan başarısız testi adım adım teşhis ettirir.",
+      "kullanim_alani": "Başarısız bir Playwright testinin trace.zip'ini ajanla çözümlerken.",
+      "kullanma": "Trace üretmek veya test yazmak için değil; trace yoksa işe yaramaz.",
+      "teknoloji": [
+        "playwright"
+      ],
+      "gerekli_paketler": [
+        "playwright (npx playwright trace)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "landing-page",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "qa-erisilebilirlik"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (opsiyonel). Kısa (4.7 KB), odaklı ve resmî; komutlar tutarlı ve tipik bir inceleme akışı veriyor. Dikkat: yalnızca `npx playwright trace` alt komutunu içeren yeni Playwright sürümlerinde çalışır; `allowed-tools: Bash(npx playwright trace:*)` ile kapsam sınırlı, ek kurulum/ağ yok.",
+      "ortusme_grubu": "playwright-test-altyapisi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 100,
+        "puan": 92,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -10703,7 +10787,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -10765,10 +10850,36 @@
         "ana_sayfa": "https://satus.darkroom.engineering",
         "katkici": 19
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "React kod tabanını güvenlik, performans, doğruluk, erişilebilirlik ve mimari açısından tarayıp 0-100 sağlık puanı veren `react-doctor` CLI'ının skill'i. Değişiklik sonrası `--diff` ile gerileme kontrolü, tam tarama ve `/doctor` ile uzaktan çekilen triyaj playbook'u akışı vardır.",
+      "kullanim_alani": "React kodu bitirirken/commit öncesi puan gerilemesini yakalamak, lint-erişilebilirlik-bundle sorunlarını önceliklendirmek için.",
+      "kullanma": "React olmayan projelerde değil. Ağdan talimat çekmek istemeyen/izole ortamlarda `/doctor` akışı kullanılmamalı.",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "eslint"
+      ],
+      "gerekli_paketler": [
+        "react-doctor (npx)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "landing-page",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel, uyarılı). Çekirdek kullanım (`npx react-doctor@latest --verbose --diff`) basit ve işe yarar. Dikkat (risk): `/doctor` akışı `curl https://www.react.doctor/prompts/react-doctor-agent.md` ile uzaktan talimat metni çekip 'her adımını izle' diyor ve çalışma ağacını düzenleten bir döngü başlatıyor; içerik üçüncü tarafça istenildiği an değişebilir (prompt-injection yüzeyi). `npx ...@latest` sürümsüz uzak paket çalıştırır. Referans verilen `doctor-explain` skill'i kütüphanede yok. Kullanılırsa yalnız yerel `--diff` komutu önerilir. Kaynak, satus başlangıç şablonunun içindeki kopya.",
+      "ortusme_grubu": "react-kod-sagligi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 79,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
           "topluluk 12/20 (★1008)",
@@ -10776,7 +10887,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -10841,9 +10953,35 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Yerel web uygulamalarını Python Playwright betikleriyle test etme araç seti: statik/dinamik karar ağacı, `with_server.py` ile bir veya birden fazla sunucunun yaşam döngüsü yönetimi, 'önce keşfet, sonra eyle' deseni ve networkidle beklemesi. Konsol günlüğü, öğe keşfi ve statik HTML otomasyonu için örnek betikler içerir.",
+      "kullanim_alani": "Çalışan yerel uygulamada UI davranışını doğrulamak, ekran görüntüsü almak ve tarayıcı günlüklerini görmek için.",
+      "kullanma": "MCP tabanlı canlı denetim (browser-testing-with-devtools) veya Node tarafı Playwright test koşucusu istiyorsan değil; erişilebilirlik denetimi yapmaz.",
+      "teknoloji": [
+        "playwright",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "playwright (pip)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas",
+        "kurumsal-site",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "qa-erisilebilirlik"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Küçük (3.8 KB), net karar ağacı; betikleri 'kara kutu' kullandırarak bağlamı koruyor. Dikkat: python `playwright` paketi ve tarayıcıların (`pip install playwright && playwright install chromium`) kurulu olduğunu varsayıyor ama bunu belirtmiyor. `with_server.py` verilen komutları `shell=True` ile çalıştırıyor (cd/&& desteği için; komutu kullanıcı/ajan verir, dış girdi değil). Registry 'lisans yok' diyor ama LICENSE.txt (Apache-2.0) mevcut.",
+      "ortusme_grubu": "tarayici-otomasyon-testi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
@@ -10852,7 +10990,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -10917,9 +11056,33 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "anthropics/skills webapp-testing'in kopyası: Python Playwright ile yerel web uygulaması testi, with_server.py ve örnek betikler.",
+      "kullanim_alani": "Yalnızca resmî kopya alınamazsa.",
+      "kullanma": "Resmî kopya varken kullanma.",
+      "teknoloji": [
+        "playwright",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "playwright (pip)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas",
+        "kurumsal-site",
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. SKILL.md, scripts/ ve examples/ resmî kopyayla aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te doldurulmamış şablon telif satırı.",
+      "ortusme_grubu": "tarayici-otomasyon-testi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (33 gün önce)",
@@ -10928,7 +11091,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -10991,10 +11155,33 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Web testi ilkeleri (derin denetim, test piramidi, E2E, Playwright kavramları, görsel test, API test, CI) ve hafif `playwright_runner.py` betiği: URL'yi açar, ekran görüntüsü alır, temel erişilebilirlik kontrolü (alt, buton/link adı, input etiketi) ve konsol hatası raporu verir.",
+      "kullanim_alani": "Hızlı bir sayfa duman testi ve temel erişilebilirlik kontrolü için; test stratejisi hatırlatması.",
+      "kullanma": "Karmaşık akışlı testler ve sunucu yönetimi için değil (resmî webapp-testing).",
+      "teknoloji": [
+        "playwright",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "playwright (pip)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "dashboard-saas",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Aynı adlı resmî skill'den farklı içerik (ilke ağırlıklı + tek betik). `--a11y` bayrağı resmî sürümde olmayan hafif bir erişilebilirlik kontrolü sağlıyor ama axe benzeri gerçek denetim değil. Dikkat: `pip install playwright && playwright install chromium` gerektirir (betik yoksa bunu söyler); ekran görüntülerini sistem temp klasörüne (`agkit_screenshots`) yazar. Betik yalnız http/https URL kabul ediyor.",
+      "ortusme_grubu": "tarayici-otomasyon-testi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -11002,7 +11189,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },

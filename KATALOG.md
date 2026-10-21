@@ -200,13 +200,13 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_ · not: 
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `browser-testing-with-devtools` | ⭐ | Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect… | api-anahtari, css, html, node, react | ✅ | 91 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `playwright-component-testing` | ⭐ | Set up component testing with Playwright using a story gallery — scaffold stories and a gallery dev page driven by the built-in mount fixtur… | css, html, next.js, node, playwright | ✅ | 98 A | M 38KB | - | microsoft/playwright |
-| `playwright-trace` | ⭐ | Inspect Playwright trace files from the command line — list actions, view requests, console, errors, snapshots and screenshots. | html, node, playwright | ✅ | 100 A | S 5KB | - | microsoft/playwright |
-| `react-doctor` | ⭐ | Use when finishing a feature, fixing a bug, before committing React code, or when the user types `/doctor`, asks to scan, triage, or clean u… | node, react | ✅ | 92 A | S 3KB | - | darkroomengineering/satus |
-| `webapp-testing` | ⭐ | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI be… | css, html, node, playwright, python | ✅ | 88 A | S 22KB | - | anthropics/skills |
-| `webapp-testing@composiohq` | alt | Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI be… | css, html, node, playwright, python | ✅ | 88 A | S 22KB | - | ComposioHQ/awesome-claude-skills |
-| `webapp-testing@vudovn` | alt | Web application testing principles. E2E, Playwright, deep audit strategies. | playwright, python, typescript | ✅ | 89 A | S 10KB | - | vudovn/ag-kit |
+| `browser-testing-with-devtools` | ⭐ birincil | Chrome DevTools MCP ile ajana canlı tarayıcı gözü kazandırır: ekran görüntüsü, DOM, konsol, ağ istekleri, performans izi (LCP/CLS/INP), hesa… | chrome-devtools-mcp, chrome, javascript | ✅ | 87 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `playwright-component-testing` | ⭐ birincil | Playwright ile React/Vue bileşenlerini 'hikâye galerisi' sayfası üzerinden, dahili `mount` fixture'ı ve düz Playwright testleriyle izole tes… | playwright, react, vue, vite, typescript | ✅ | 91 A | M 38KB | - | microsoft/playwright |
+| `playwright-trace` | ⭐ tamamlayıcı | Playwright trace (.zip) dosyalarını komut satırından inceler: eylem listesi, ağ istekleri, konsol, hatalar, DOM/erişilebilirlik anlık görünt… | playwright | ✅ | 92 A | S 5KB | - | microsoft/playwright |
+| `react-doctor` | ⭐ birincil | React kod tabanını güvenlik, performans, doğruluk, erişilebilirlik ve mimari açısından tarayıp 0-100 sağlık puanı veren `react-doctor` CLI'ı… | react, next.js, eslint | ✅ | 79 B | S 3KB | - | darkroomengineering/satus |
+| `webapp-testing` | ⭐ birincil | Yerel web uygulamalarını Python Playwright betikleriyle test etme araç seti: statik/dinamik karar ağacı, `with_server.py` ile bir veya birde… | playwright, python | ✅ | 85 A | S 22KB | - | anthropics/skills |
+| `webapp-testing@composiohq` | alt alternatif | anthropics/skills webapp-testing'in kopyası: Python Playwright ile yerel web uygulaması testi, with_server.py ve örnek betikler. | playwright, python | ✅ | 85 A | S 22KB | - | ComposioHQ/awesome-claude-skills |
+| `webapp-testing@vudovn` | alt alternatif | Web testi ilkeleri (derin denetim, test piramidi, E2E, Playwright kavramları, görsel test, API test, CI) ve hafif `playwright_runner.py` bet… | playwright, python | ✅ | 77 B | S 10KB | - | vudovn/ag-kit |
 
 ## Yazılım Geliştirme
 
