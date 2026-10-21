@@ -2,7 +2,7 @@
 
 _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/14**
 
 ### canvas-procedural-animation  ·  calesthio/OpenMontage @ c806645  ·  puan 79 (B)
 
@@ -37,15 +37,16 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ama doğru kalıplar; OpenMontage rig_plan artefaktına göre yazılmış.
 
-### cut-the-curve  ·  heygen-com/hyperframes @ 25126bc  ·  puan 92 (A)
+### cut-the-curve  ·  heygen-com/hyperframes @ 25126bc  ·  puan 95 (A)
 
-- **Ne yapar:** The technique catalog: five velocity-matched SEAMS (zoom-through, INVERSE zoom-through, cut-the-curve, waterfall cut, rack-focus blur-cut) plus the two in-scene techniques — waterfall ENTRY (staggered arrival cascades for title cards / segment openers) and the nudge curve (slow-fast-slow three-phase group slides). Covers partial-travel (~12% of frame) velocity matching via mirrored power4 eases, t
-- **Teknoloji:** canvas, css, gsap _(otomatik tespit)_
+- **Ne yapar:** Hız eşlemeli sahne geçişleri kataloğu: zoom-through, ters zoom-through, cut-the-curve, waterfall cut, rack-focus blur-cut; ayrıca sahne içi waterfall giriş ve üç fazlı 'nudge' grup kaydırma. Ayna power4 easing ile kısmi hareket eşleme, boyuta göre bulanıklık ve 10/65/25 kaydırma oranı gibi sayısal kurallar verir.
+- **Ne zaman:** Herhangi bir geçiş, metin vuruşu devri, kinetik metin girişi veya grup yeniden konumlandırma yazılmadan önce. · **Ne zaman değil:** Tek sahnelik statik işlerde; HyperFrames/GSAP dışı ortamlarda.
+- **Teknoloji:** gsap, hyperframes · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Globalde:** claude:ayni, codex:ayni, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 28 KB (SKILL.md 18.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Sayısal, uygulanabilir teknik kataloğu; GSAP örnekleri dahil. Ev stili kökenli olsa da genel geçer değerde.
 
 ### manim-composer  ·  calesthio/OpenMontage @ c806645  ·  puan 87 (A)
 
@@ -80,25 +81,27 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 729 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 5
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli; kurulumu ve sürüm uyumu CE'ye göre zahmetli.
 
-### motion-doctrine  ·  heygen-com/hyperframes @ 25126bc  ·  puan 92 (A)
+### motion-doctrine  ·  heygen-com/hyperframes @ 25126bc  ·  puan 87 (A)
 
-- **Ne yapar:** GATEWAY — load FIRST before composing any HyperFrames animation or video. The high-level motion law that makes a multi-scene video feel like ONE continuous camera move instead of a stack of independently-animated slides. Covers the vector law (how you exit determines how you enter, incl. the Z scale-sign rule), the film's current, carrier elements, causal motion, the Seam Gate (build-gate enforcem
-- **Teknoloji:** html, node _(otomatik tespit)_
+- **Ne yapar:** Çok sahneli videonun bağımsız slaytlar yığını değil tek kesintisiz kamera hareketi gibi hissettirmesi için üst düzey hareket yasası: vektör yasası (çıkış girişi belirler, Z ölçek işareti), filmin akıntısı, taşıyıcı öğeler, nedensel hareket, Seam Gate doğrulayıcısı, boşta sallanma yasağı ve doruk öncesi durgunluk. Alt teknik skillere (cut-the-curve, seam-craft, oversized-cursor) yönlendirir.
+- **Ne zaman:** Çok sahneli HyperFrames videosunda geçiş ve hareket dili kurulmadan önce. · **Ne zaman değil:** Tek sahnelik kısa grafiklerde; HyperFrames dışı web animasyonunda.
+- **Teknoloji:** hyperframes, gsap, node · **Paketler:** hyperframes (npx), node
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Globalde:** claude:ayni, codex:ayni, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 44 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut.
 
-### motion-graphics  ·  heygen-com/hyperframes @ 25126bc  ·  puan 85 (A)
+### motion-graphics  ·  heygen-com/hyperframes @ 25126bc  ·  puan 83 (A)
 
-- **Ne yapar:** Use when creating a short, design-led motion graphic where motion is the message — kinetic typography, stat count-up, chart/data-viz hit, logo sting / brand lockup, lower-third / callout / social overlay, animated map (highlight regions, connect places, zoom to a location), animated tweet / news-article / headline, webpage / UI animation (scroll, cursor, callouts), or fusing a real image's geometr
-- **Teknoloji:** api-anahtari, ffmpeg, gsap, html, node, remotion _(otomatik tespit)_
+- **Ne yapar:** Hareketin mesaj olduğu kısa (genelde <10 sn, en çok ~30 sn), anlatımsız motion graphic üretimi: kinetik tipografi, sayaç, grafik, logo sting, lower-third, animasyonlu harita, tweet/haber, web/UI animasyonu, görsel geometrisini grafiğe kaynaştırma. Plan→kaynak→tasarım→yapım→doğrulama→render aşamalarını alt ajanlarla yürütür; MP4 veya şeffaf overlay çıkarır.
+- **Ne zaman:** Kısa, tasarım odaklı, seslendirmesiz grafik/overlay istendiğinde. · **Ne zaman değil:** Uzun, çok sahneli veya anlatımlı videolar (general-video); mevcut görüntüye altyazı (embedded-captions).
+- **Teknoloji:** hyperframes, html, gsap, ffmpeg · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, video-produksiyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 113 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır. · **Kırık bağlantı:** 3
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun kategori modülleri. Yönlendirdiği iş akışları artık arşivde (heygen-com/hyperframes). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.
 
 ### motion-graphics@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 86 (A)
 
@@ -107,9 +110,9 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** hyperframes, html, gsap, ffmpeg · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-is-akislari → birincil · **Roller:** motion-graphics-sanatcisi, video-produksiyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-is-akislari → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 108 KB (SKILL.md 13.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (motion-graphics, heygen-com/hyperframes). Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok.
 
 ### pose-library-design  ·  calesthio/OpenMontage @ c806645  ·  puan 79 (B)
 
@@ -122,15 +125,16 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve doğru; tek başına derinliği sınırlı.
 
-### seam-craft  ·  heygen-com/hyperframes @ 25126bc  ·  puan 94 (A)
+### seam-craft  ·  heygen-com/hyperframes @ 25126bc  ·  puan 80 (A)
 
-- **Ne yapar:** Render-correctness doctrine for scene-to-scene seams in HyperFrames launch videos — the prerequisites that make transitions composite correctly on the master timeline. Load when assembling the master timeline / index.html, when a white flash appears at a cut or crossfade seam (especially on dark films), when reasoning about why a transition opacity dip shows through, or when verifying the render-s
-- **Teknoloji:** api-anahtari, canvas, gsap, html, typescript, webgl _(otomatik tespit)_
+- **Ne yapar:** Sahneden sahneye geçişlerin ana zaman çizelgesinde doğru birleşmesi için render önkoşulları: koyu filmlerde kesmede beyaz parlamayı önleyen opak sahne zemini, enjektörün sarmalayıcıları nasıl örtüştürdüğü, son kareyi tuttuğu ve şablon kodunu nasıl yerleştirdiği.
+- **Ne zaman:** Ana index.html birleştirilirken veya geçişte beyaz parlama/opaklık sızması görüldüğünde. · **Ne zaman değil:** Geçiş seçimi için (cut-the-curve); tek sahnelik işlerde.
+- **Teknoloji:** hyperframes, html, css · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Globalde:** claude:ayni, codex:ayni, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.
 
 ### svg-character-animation  ·  calesthio/OpenMontage @ c806645  ·  puan 87 (A)
 

@@ -1,21 +1,26 @@
 {
   "ad": "motion-graphics-sanatcisi",
   "aciklama": "Motion graphics, açıklayıcı animasyon ve karakter animasyonu yapan agent.",
-  "gorev": "Görsel stili belirle (visual-style, hyperframes-creative), animasyon dilini tutarlı kur (zamanlama, easing, geçiş). Kısa anlatımsız grafiklerde motion-graphics akışını izle; matematik anlatımında Manim (önce manim-composer ile plan), karakter işlerinde rig → poz → SVG animasyon → QA sırasını kullan.",
+  "gorev": "Görsel stili belirle (visual-style, hyperframes-creative), animasyon dilini tutarlı kur (zamanlama, easing, geçiş). Kısa anlatımsız grafiklerde motion-graphics akışını izle; matematik anlatımında Manim (önce manim-composer ile plan), karakter işlerinde rig → poz → SVG animasyon → QA sırasını kullan. Çok sahneli HyperFrames videolarında geçişleri motion-doctrine yasasıyla (vektör yasası, Seam Gate) ve cut-the-curve kataloğuyla kur.",
   "cekirdek": [
     "motion-graphics",
     "hyperframes-animation",
+    "motion-doctrine",
     "visual-style"
   ],
   "opsiyonel": [
     "hyperframes-creative",
+    "hyperframes-keyframes",
+    "cut-the-curve",
+    "seam-craft",
+    "oversized-cursor",
+    "hyperframes-keyframes",
+    "motion-doctrine",
+    "cut-the-curve",
     "manim-composer",
     "manimce-best-practices",
     "svg-character-animation",
     "character-rigging",
-    "pose-library-design",
-    "character-animation-qa",
-    "lottie-bodymovin",
-    "canvas-procedural-animation"
+    "lottie-bodymovin"
   ]
 }

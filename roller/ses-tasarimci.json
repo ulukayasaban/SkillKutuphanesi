@@ -16,6 +16,7 @@
     "azure-speech-to-text",
     "fish-audio-tts",
     "doubao-tts",
-    "dashscope"
+    "dashscope",
+    "hyperframes-audio"
   ]
 }

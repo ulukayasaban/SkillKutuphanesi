@@ -83888,9 +83888,34 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "embedded-captions iş akışının üzerine uygulanan overlay doktrini: altyazı modeli (at / ray / göm) ve altyazının filme bindirilen bir katman olduğu, içerik yukarı kaydırılarak ayrılmış alt bant olmadığı kuralı; sahneyi altyazı altında gerçek kare merkezine hizalama.",
+      "kullanim_alani": "Konuşan kafa veya lansman videosuna altyazı eklerken; altyazı taşıyacak kompozisyon düzenlenirken.",
+      "kullanma": "Altyazısız işlerde; embedded-captions olmadan tek başına.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve net, embedded-captions ve product-launch-video kurallarını alıntılayarak birleştiriyor.",
+      "ortusme_grubu": "hyperframes-ev-stili",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 94,
+        "puan": 88,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -83899,7 +83924,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -83971,10 +83997,37 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Haftalık changelog markdown'ını HeyGen markalı kare (1080) changelog videosuna çevirir: 'Annie' HeyGen seslendirmesi, animasyonlu marka arka planı, sahte UI görselleştirmeleri ve sakin altyazılar; fontlar, arka plan müziği ve betikler skill içinde paketli.",
+      "kullanim_alani": "Yalnız HeyGen'in kendi haftalık changelog videosu için; kendi markan için örnek/şablon olarak incelenebilir.",
+      "kullanma": "Kendi ürününün changelog videosunda doğrudan (pr-to-video veya product-launch-video kullan); marka varlıkları HeyGen'e ait.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node",
+        "heygen"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg",
+        "HeyGen hesabı (TTS)"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. HeyGen iç skilli (internal:true): HeyGen marka kimliğine, sabit seslendirmene ve repo köküne bağlı; paketlenen TT Norms Pro / ABC Solar ticari fontlarının yeniden kullanım lisansı belirsiz. Rollere eklenmedi.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
-        "not": "A",
+        "puan": 71,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
           "topluluk 19/20 (★69086)",
@@ -83982,7 +84035,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84157,9 +84211,40 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Tek kişilik konuşan kafa videosuna görüntüyü düzenlemeden altyazı ekler: düz birebir altyazı, öznenin arkasına gömülü sinematik altyazı, VFX altyazı veya 35 stillik katalogdan adlı bir kimlik. Varsayılan sakin 'anchor' rayıdır; transkripsiyon ve özne maskeleme dahil uçtan uca yerel çalışır.",
+      "kullanim_alani": "Var olan konuşan kafa videosuna altyazı/sinematik yazı eklenmek istendiğinde.",
+      "kullanma": "Grafik overlay kartları (talking-head-recut); çok çekimli görüntü (önce bölünmeli); altyazı dosyası (SRT) üretimi yeterliyse.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "ffmpeg",
+        "whisper",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg",
+        "python3"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Karar kapısı ve ön kontroller güçlü, DNA stil kayıt defteri zengin; kurulum ağır (özne maskeleme modeli) ve SKILL.md büyük (34 KB). captions-overlay ile birlikte kullanılır. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 81,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84168,7 +84253,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84250,9 +84336,38 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Makale, not, konu veya brief gibi düz metni yüzsüz (faceless) açıklayıcı videoya çevirir: yakalanacak site/görüntü olmadığı için görseller sahne başına tipografi, soyut grafik, diyagram ve veri görselleştirmesiyle icat edilir. Brief→tasarım sistemi→storyboard/senaryo→ses→kare tasarımı→kare yapımı→birleştirme adımları kapılıdır, kareler alt ajanlara dağıtılır.",
+      "kullanim_alani": "Konu anlatımı, kavram açıklaması, nasıl yapılır ve liste videolarında; elde yalnız metin varken.",
+      "kullanma": "Web sitesinden ürün/tanıtım videosu (product-launch-video); PR anlatımı (pr-to-video); müzik videosu.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Olgun, testli betikler ve kapılı aşamalar; çok ajanlı olduğu için uzun/maliyetli. Bağlam yükü yüksek (30 KB SKILL.md). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 82,
+        "puan": 81,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84261,7 +84376,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84436,9 +84552,35 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Figma içeriğini HyperFrames kompozisyonuna aktarır: render edilmiş varlıklar, marka token'ları, bileşenler (REST/CLI), bir SECTION içindeki sahne karelerinden hareket kurgusu, bağlayıcı varsa Figma hareketleri ve shader'lar. İki ayrı kimlik bilgisi (token) kapsamını tanımlar.",
+      "kullanim_alani": "Kullanıcı figma.com bağlantısı verdiğinde veya Figma tasarımını/logosunu/animasyonunu videoya getirmek istediğinde.",
+      "kullanma": "Figma'dan web/uygulama kodu üretmek için (video dışı); Figma erişimi yoksa.",
+      "teknoloji": [
+        "hyperframes",
+        "figma-api",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "FIGMA_TOKEN"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "marka-sunum"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Faz faz net akış ve determinizm bölümü iyi; adı genel ama yalnız HyperFrames'e aktarım içindir (Figma→kod değil). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 83,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84447,7 +84589,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84518,9 +84661,40 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Uzmanlaşmış bir iş akışına uymayan özel HyperFrames kompozisyonları için genel iş akışı: uzun veya çok sahneli işler, marka/sizzle reel, montaj, statik döngü ve başlık kartı, mevcut görüntü remiksi; BRIEF.md 'flow: companion' dediğinde eşlikçi akış. Proje durumundan başlar, aşama başına gerekli bilgi skillerini yükletir ve kapıları uygular.",
+      "kullanim_alani": "hyperframes yönlendiricisi başka iş akışı bulamadığında; serbest, çok sahneli kompozisyonlarda.",
+      "kullanma": "Kısa anlatımsız motion graphic (motion-graphics); web sitesi/PR/metin/müzik/konuşan kafa girdili işler (ilgili özel akış); yönlendirici okunmadan doğrudan.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik",
+        "marka-sunum"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. İş akışlarının 'her şey dahil' yedeği; kapsamı dar tutma ve tasarımı HTML'den önce kurma kuralları iyi. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 83,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84529,7 +84703,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84600,9 +84775,39 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames ekosisteminin zorunlu giriş noktası: proje durumunu okur, gerekirse niyet görüşmesi yapar, isteği girdi türüne göre tek bir iş akışına (general-video, faceless-explainer, product-launch-video, pr-to-video, music-to-video, motion-graphics, embedded-captions, talking-head-recut, slideshow, remotion-to-hyperframes) yönlendirir ve alan skillerini gerektikçe yükletir. Brief, storyboard, senaryo ve alt ajan sözleşmeleri references/ altındadır.",
+      "kullanim_alani": "Herhangi bir video/animasyon/motion graphic oluşturma, düzenleme veya render isteğinde ilk okunacak skill; mevcut HyperFrames projesini incelerken de.",
+      "kullanma": "Kullanıcı açıkça Remotion veya başka bir çerçeve istiyorsa; sadece hazır videoyu kesip biçen FFmpeg işlerinde; yalnız tarayıcı oturumu kaydı istendiğinde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Ekosistemin yönlendiricisi; rota tablosu ve 'bir kez yönlendir, sonra çık' kuralı net. OpenMontage c806645 kopyasındaki kırık iş akışı yönlendirmeleri bu kaynakla çözüldü. Her oluşturmada 'npx hyperframes usage' ile kota kontrolü ister. Kütüphane kurulumunda HYPERFRAMES_SKIP_SKILLS=1 ayarlanmalı; aksi halde 'npx hyperframes skills update/init' skill setini kendi kurar/günceller.",
+      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 92,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84611,7 +84816,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84684,9 +84890,41 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames için tüm animasyon bilgisi: atomik hareket kuralları, çok fazlı sahne şablonları (blueprint), sahne geçişleri, 24 adlı metin efekti ve GSAP, Lottie, Three.js, Anime.js, CSS, WAAPI, TypeGPU çalışma zamanı adaptörleri. Mevcut kompozisyonun koreografisini denetlemeyi (animation map) de kapsar.",
+      "kullanim_alani": "HyperFrames kompozisyonunda hareket, geçiş veya sahne koreografisi yazarken ya da denetlerken.",
+      "kullanma": "HyperFrames dışı web animasyonu (gsap-* veya framer-motion); tek bir kamera hareketi/punch-in için (hyperframes-keyframes daha dar).",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "html",
+        "css",
+        "lottie",
+        "three.js"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Çok zengin kural/blueprint kütüphanesi; SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 92,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84695,7 +84933,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84792,15 +85031,12 @@
         "egitim-explainer",
         "sosyal-medya-icerik"
       ],
-      "roller": [
-        "motion-graphics-sanatcisi",
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Çok zengin kural/blueprint kütüphanesi (2.5 MB); SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-animation, heygen-com/hyperframes). Çok zengin kural/blueprint kütüphanesi (2.5 MB); SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -84883,9 +85119,38 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kompozisyona yerleşmiş sesin miksajı: fade/crossfade, iz kazancı, otomasyon zarfları, seslendirme altında müzik kısma (voiceover carve), EQ/kompresör/limiter/reverb gibi efekt zincirleri ve birden çok izi taşıyan <hf-audio-group> alt miks veriyolu. Belirtiden başlayan teşhis tablosu sunar.",
+      "kullanim_alani": "Müzik seslendirmeyle çakıştığında, ses seviyesi/geçişler kötü olduğunda veya izlere efekt gerektiğinde.",
+      "kullanma": "Ses bulma/üretme için (media-use); klip zamanlaması ve iz düzeni için (hyperframes-core).",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "web-audio",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon",
+        "ses-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Belirti→çözüm yaklaşımı iyi; carve betiği testli. OpenMontage kopyasında yoktu (yeni).",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84894,7 +85159,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -84966,9 +85232,40 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames CLI geliştirme döngüsü: init, add, capture, check (lint dahil), snapshot, preview, render (yerel, HeyGen bulut, AWS Lambda, Cloud Run), beats, keyframes, tts, transcribe, remove-background ve sorun giderme. validate/inspect/layout yerine artık 'check' kullanılır.",
+      "kullanim_alani": "HyperFrames projesi kurarken, doğrularken, önizlerken, render alırken veya render hatası ayıklarken.",
+      "kullanma": "Kompozisyon HTML'inin içeriği için (hyperframes-core); HyperFrames kullanılmayan projelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "node",
+        "ffmpeg",
+        "aws-lambda",
+        "cloud-run"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Pratik ve ajan dostu. Dikkat: başarılı renderdan sonra ve eksik özellik durumunda varsayılan olarak 'hyperframes feedback' ile herkese açık kanala geri bildirim gönderilmesini ister (telemetri kapatılmadıkça); gizli projelerde kullanıcıya sorulmalı veya telemetri kapatılmalı. Kütüphane kurulumunda HYPERFRAMES_SKIP_SKILLS=1 ayarlanmalı; aksi halde 'npx hyperframes skills update/init' skill setini kendi kurar/günceller.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -84977,7 +85274,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85071,14 +85369,12 @@
         "egitim-explainer",
         "sosyal-medya-icerik"
       ],
-      "roller": [
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Pratik ve ajan dostu. Not: 'init' global skill setini otomatik güncelliyor; kütüphane kuralı gereği bu davranış izlenmeli.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-cli, heygen-com/hyperframes). Pratik ve ajan dostu. Not: 'init' global skill setini otomatik güncelliyor; kütüphane kuralı gereği bu davranış izlenmeli.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -85166,9 +85462,36 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames kompozisyon sözleşmesi: data-* zamanlama öznitelikleri, class=\"clip\", izler, alt kompozisyonlar, değişkenler, çerçevenin yönettiği medya oynatma ve deterministik render kuralları; mevcut kompozisyonu düzenleme tarifleri (creator-editing-recipes) de burada.",
+      "kullanim_alani": "Kompozisyon HTML'i yazmadan veya düzenlemeden önce; bölme, kırpma, yeniden zamanlama gibi tekil düzenlemelerde.",
+      "kullanma": "Sadece hareket tarifi arıyorsan (hyperframes-animation / hyperframes-keyframes); HyperFrames dışı projelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Net teknik sözleşme; 'ilk lint hataları' ve sessiz hata listeleri pratik. Diğer alt skillerin temeli.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 92,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -85177,7 +85500,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85265,14 +85589,12 @@
         "egitim-explainer",
         "sosyal-medya-icerik"
       ],
-      "roller": [
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Net teknik sözleşme ve referans dizini; diğer alt skillerin temeli.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-core, heygen-com/hyperframes). Net teknik sözleşme ve referans dizini; diğer alt skillerin temeli.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "birincil",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -85355,9 +85677,36 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames videoları için animasyon dışı yaratıcı yön: frame.md/design.md tasarım spesifikasyonu, palet, tipografi, anlatım, vuruş planı, sese duyarlı görseller ve marka kararları; 25+ hazır frame preset (FRAME.md + altyazı derisi) içerir.",
+      "kullanim_alani": "Çok sahneli veya markalı bir HyperFrames videosunun görsel dilini ve ritmini planlarken.",
+      "kullanma": "Atomik hareket ve geçişler için (hyperframes-animation); tek satırlık düzenlemelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Çıktı kalitesini en çok etkileyen alt skill; frame preset kütüphanesi güçlü.",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
+        "puan": 93,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -85366,7 +85715,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85452,15 +85802,12 @@
         "egitim-explainer",
         "marka-sunum"
       ],
-      "roller": [
-        "motion-graphics-sanatcisi",
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Çıktı kalitesini en çok etkileyen alt skill; house-style ve video-composition referansları güçlü.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-creative, heygen-com/hyperframes). Çıktı kalitesini en çok etkileyen alt skill; house-style ve video-composition referansları güçlü.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -85544,9 +85891,40 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Seek-güvenli 2D/3D anahtar kare tarifleri: punch-in/out, zoom, yeniden çerçeveleme, Ken Burns, kamera hareketi, whip/match geçişleri, maske, yol, SVG morph/draw, metin izleri ve 'hyperframes keyframes' teşhis çıktısının okunması.",
+      "kullanim_alani": "Tek bir kamera hareketi, zoom veya maske animasyonu gerektiğinde ya da keyframes teşhisi okunurken.",
+      "kullanma": "Genel sahne stratejisi, marka tasarımı, medya temini, altyazı veya video planlaması için.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "css",
+        "svg",
+        "three.js"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Dar ve kesin kapsam; CLI kanıtı (proof) ile bitiş kriteri iyi. hyperframes-animation ile tamamlayıcı. Yeni (OpenMontage'da yoktu).",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -85555,7 +85933,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85640,20 +86019,17 @@
         "urun-tanitim-videosu",
         "egitim-explainer"
       ],
-      "roller": [
-        "video-produksiyon",
-        "ses-tasarimci"
-      ],
+      "roller": [],
       "zorluk": "orta",
-      "kalite": 4,
-      "kalite_notu": "Karar: TUT. Sağlayıcı zinciri ve yedek yollar iyi tasarlanmış; varsayılanı HeyGen'e bağlı.",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. HyperFrames HEAD'de ayrı skill olarak kaldırıldı; TTS, transkripsiyon ve arka plan silme media-use (heygen-com/hyperframes) içine taşındı. Eski projeler için arşivde tutuluyor.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
-        "not": "A",
+        "puan": 78,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -85662,7 +86038,7 @@
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
           "yapı 5/5",
-          "elle kalite 4/5 (%40 ağırlık)"
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85731,9 +86107,36 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames kayıt defterindeki ~400 hazır blok ve bileşeni arar, 'hyperframes add' ile kurar ve kompozisyona bağlar; adı geçen bir görünüm/efekt (CRT, glitch, grain, grafik, terminal, harita…) elle yazılmadan önce katalog taranır. Yeni blok/bileşen yazıp üst projeye katkı akışını da anlatır.",
+      "kullanim_alani": "Brief veya storyboard adlandırılmış bir efekt/geçiş/görsel istediğinde, elle yazmadan önce.",
+      "kullanma": "Katalogda karşılığı olmayan tamamen özel sahnelerde; HyperFrames dışı projelerde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. 'Önce katalog' kuralı tekrar üretimi azaltır; registry ağ erişimi gerektirir. Repodaki registry/blocks/* SKILL.md'leri bu skill ile kurulan şablonlardır (kütüphanede ayrıca arşivlenmedi).",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -85742,7 +86145,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -85827,14 +86231,12 @@
         "urun-tanitim-videosu",
         "sosyal-medya-icerik"
       ],
-      "roller": [
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Dar ama net kapsam; registry ağ erişimi gerektirir.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-registry, heygen-com/hyperframes). Dar ama net kapsam; registry ağ erişimi gerektirir.",
       "ortusme_grubu": "hyperframes-alt-skilleri",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -85916,9 +86318,35 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames Studio'da bir kişiyle birlikte çalışma kuralları: mesaj gerçekten değişiklik istiyor mu önce anla; yeni film için plan→storyboard→yapım sırası; her sahne alt kompozisyon, tek altyazı izi, iz başına tek öğe türü ve güvenli alanlar.",
+      "kullanim_alani": "Studio/masaüstü uygulamasında kullanıcıyla etkileşimli düzenleme yaparken; zaman çizelgesini okunur düzenlemek gerektiğinde.",
+      "kullanma": "Tekil düzenleme işleminin nasıl yapılacağı için (hyperframes-core/creator-editing-recipes); Studio kullanılmayan toplu üretimde.",
+      "teknoloji": [
+        "hyperframes",
+        "html"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kısa, davranış odaklı ('değiştirme deme, önce konuş'). Yeni (OpenMontage'da yoktu).",
+      "ortusme_grubu": "hyperframes-alt-skilleri",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -85927,7 +86355,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86021,14 +86450,12 @@
         "egitim-explainer",
         "sosyal-medya-icerik"
       ],
-      "roller": [
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Ekosistemin yönlendiricisi, iyi yapılandırılmış. Dikkat: /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok (OpenMontage c806645'te bulunmuyor).",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes, heygen-com/hyperframes). Ekosistemin yönlendiricisi, iyi yapılandırılmış. Dikkat: /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok (OpenMontage c806645'te bulunmuyor).",
       "ortusme_grubu": "video-kompozisyon-cercevesi",
-      "ortusme_rolu": "birincil",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -86110,9 +86537,39 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames projesinin medya işletim katmanı: BGM, SFX, görsel, ikon, marka logosu, ses, renk/LUT ihtiyacını tek 'resolve' komutuyla bulup yerelde dondurur ve deftere kaydeder; katalog yetmezse TTS/müzik/görsel modelleriyle üretir; seslendirme, transkripsiyon, altyazı ve arka plan silme için ortak ses motoru sunar; kesme/yeniden çerçeveleme gibi medya işlemlerini yapar.",
+      "kullanim_alani": "Kompozisyona stok/üretilmiş müzik, efekt, görsel, ses veya transkript gerektiğinde; 'görüntü karanlık/sıkıcı/retro olsun' gibi medya geri bildirimlerinde.",
+      "kullanma": "Yerleşmiş sesin miksajı için (hyperframes-audio); HyperFrames dışı projelerde; HeyGen hesabı olmadan BGM araması (SFX hesapsız çalışır).",
+      "teknoloji": [
+        "node",
+        "heygen",
+        "ffmpeg",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "heygen CLI (BGM/TTS için)",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. OpenMontage kopyasına göre çok genişlemiş: hyperframes-media'nın TTS/transkripsiyon/arka plan silme işlevlerini devraldı. HeyGen CLI girişine (OAuth) bağımlı kısımlar var; SFX hesapsız.",
+      "ortusme_grubu": "medya-varlik-temini",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -86121,7 +86578,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86205,14 +86663,12 @@
         "urun-tanitim-videosu",
         "sosyal-medya-icerik"
       ],
-      "roller": [
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Bağlam dostu tasarım (tek satır çıktı, önbellek). HeyGen kataloğuna bağımlı.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (media-use, heygen-com/hyperframes). Bağlam dostu tasarım (tek satır çıktı, önbellek). HeyGen kataloğuna bağımlı.",
       "ortusme_grubu": "medya-varlik-temini",
-      "ortusme_rolu": "birincil",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -86295,9 +86751,38 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Bir müzik parçasından (ses dosyası, sesi alınacak video veya ruh hali brief'inden üretilen parça) vuruşa senkron video üretir: lyric video, slayt gösterisi veya kinetik tanıtım. Müzik tüm ritmi belirler; kullanıcı görselleri aynı vuruş ızgarasına kesilir, hiç varlık olmadan da tam video çıkar. 80+ hareket primitifi içerir.",
+      "kullanim_alani": "Elinde müzik olan, ritme oturan klip/lyric video isteklerinde.",
+      "kullanma": "Anlatımlı işler (girdiye uygun diğer akış); müziği olmayan işler.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "video-produksiyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kullanıcı onaylı plan adımı ve devam (resume) tablosu olgun; çok ajanlı olduğu için maliyetli/uzun.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -86306,7 +86791,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86394,15 +86880,12 @@
         "sosyal-medya-icerik",
         "ai-video-uretimi"
       ],
-      "roller": [
-        "video-produksiyon",
-        "motion-graphics-sanatcisi"
-      ],
+      "roller": [],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Kapılı (gate) iş akışı ve alt ajan dağıtımı olgun; çok ajanlı olduğu için maliyetli/uzun.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (music-to-video, heygen-com/hyperframes). Kapılı (gate) iş akışı ve alt ajan dağıtımı olgun; çok ajanlı olduğu için maliyetli/uzun.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -86482,9 +86965,33 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Lansman videolarında göz taşıyıcı olarak büyük macOS imleci tekniği: boyut/görünüm (marka motifli imleçler dahil), ekran dışından giriş yasası, uç hedefleme ve tıklama vuruşu, tıklamanın bir sonraki vuruşu ateşlemesi ve sahneler arası çıkış/devir.",
+      "kullanim_alani": "UI sahnesinde imleç/işaretçi eylemi olduğunda veya sahne durağan kaldığında ucuz hareket kaynağı olarak.",
+      "kullanma": "İmleç içermeyen sahneler; gerçek ekran kaydı (playwright-recording).",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa, kontrol listeli ve UI demo videolarında yüksek getirili.",
+      "ortusme_grubu": "hyperframes-ev-stili",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 94,
+        "puan": 88,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -86493,7 +87000,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86667,9 +87175,39 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "GitHub pull request'ini (URL, owner/repo#N veya 'bu PR') kod değişikliği açıklayıcı videoya çevirir: changelog, özellik duyurusu, hata düzeltmesi veya refactor anlatımı. gh ile diff, commit ve dosyaları deterministik çeker, katkıcı avatarlarıyla jenerik kapanışı kurar.",
+      "kullanim_alani": "Bir PR'ın ne değiştirdiğini video olarak anlatmak istendiğinde.",
+      "kullanma": "Ürün tanıtımı (product-launch-video); PR'sız konu anlatımı (faceless-explainer).",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node",
+        "github-cli"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg",
+        "gh"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Büyük PR'larda sayfalı çekme ve özel repo hatalarını açık ele alıyor. Katkıcı adları/avatarları videoya girer; özel repolarda paylaşmadan önce kontrol edilmeli.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -86678,7 +87216,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -86747,9 +87286,39 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ürün/pazarlama URL'si, yapıştırılmış senaryo veya brief'ten ürün lansmanı/tanıtım videosu üretir: SaaS tanıtımları, özellik duyuruları, ürün demoları, şirket/uygulama lansmanları ve web sitesi turları. Siteden varlık yakalar, tasarım sistemi çıkarır, storyboard/senaryo/ses ve kareleri kapılı adımlarla kurar.",
+      "kullanim_alani": "Ticari bir URL veya ürünü tanıtma/lanse etme isteğinde; bir web sitesini olduğu gibi gezdiren tur videolarında.",
+      "kullanma": "Metinden konu anlatımı (faceless-explainer); kod değişikliği anlatımı (pr-to-video); 10 sn altı tek motion graphic.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "node",
+        "playwright"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "marka-sunum",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. OpenMontage'daki website-to-video'nun güncel halefi (site turları da buraya yönleniyor). Testli betikler ve yakalama korkulukları güçlü; bağlam yükü yüksek (35 KB).",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -86758,7 +87327,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87043,9 +87613,36 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Mevcut bir Remotion (React) kompozisyonunun kaynağını HyperFrames HTML'ine taşır; yalnızca açık taşıma isteğinde, tek yönlü. Eşlenebilen kalıpları çevirir, uyumsuzları işaretler ve SSIM eşikli test korpusuyla çeviriyi doğrular.",
+      "kullanim_alani": "Kullanıcı açıkça Remotion projesini HyperFrames'e taşımak istediğinde.",
+      "kullanma": "Remotion sadece referans olarak geçiyorsa veya 'Remotion videom gibi bir şey' isteniyorsa (general-video); ters yönde dönüşüm.",
+      "teknoloji": [
+        "remotion",
+        "hyperframes",
+        "react",
+        "html",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "remotion"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Dar kapsamlı ama disiplinli (SSIM eval). /general-video yönlendirmesi artık arşivde.",
+      "ortusme_grubu": "video-kompozisyon-cercevesi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -87054,7 +87651,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87145,14 +87743,12 @@
       "proje_tipleri": [
         "urun-tanitim-videosu"
       ],
-      "roller": [
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Dar kapsamlı ama disiplinli (eval zorunlu). /general-video yönlendirmesi arşivde yok.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (remotion-to-hyperframes, heygen-com/hyperframes). Dar kapsamlı ama disiplinli (eval zorunlu). /general-video yönlendirmesi arşivde yok.",
       "ortusme_grubu": "video-kompozisyon-cercevesi",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -87237,9 +87833,34 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames ile gezilebilir sunum/pitch deck yazar: ayrık slaytlar, parça parça açılma (fragment), dallanma, hotspot gezinme ve konuşmacı notlu sunum modu; mevcut bir sayfayı desteye çevirebilir. Çıktı render edilmiş MP4 değil, etkileşimli destedir.",
+      "kullanim_alani": "Kullanıcı açıkça sunum, pitch deck veya etkileşimli deste istediğinde.",
+      "kullanma": "Doğrusal video istendiğinde; kullanıcı slayt istemediyse (önce onay alınmalı); ofis formatı (.pptx) gerektiğinde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Şema (SlideshowManifest) ve çalışan örnek net. Bağımsız çalıştırma için geçici harness gerekiyor; kategori sınırında (sunum).",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -87248,7 +87869,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -87426,9 +88048,38 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Mevcut konuşan kafa/röportaj/podcast videosunu transkripte senkron tasarlanmış grafik overlay kartlarıyla paketler: kinetik başlık, lower-third, veri vurgusu, alıntı, yan panel, resim içinde resim; 16:9, 9:16 veya 4:5 tuvalde orijinal klip altta dokunulmadan oynar. Yerel Whisper transkripsiyonu, kart HTML sözleşmesi ve render adımlarını içerir.",
+      "kullanim_alani": "'Videomu grafiklerle süsle', 'ekran grafikleri ekle' isteklerinde; konuşan kafa videosunu sosyal formata uyarlarken.",
+      "kullanma": "Düz altyazı (embedded-captions); görüntüyü kesip yeniden kurgulamak (video-edit/ffmpeg).",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "ffmpeg",
+        "whisper"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-produksiyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Ayrıntılı ve kendi kendine yeterli (font, GSAP, stil kütüphanesi paketli; NOTICE.md lisansları belirtiyor). Çok büyük SKILL.md (64 KB) — bağlam yükü yüksek.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -87437,7 +88088,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -88043,19 +88695,17 @@
         "sosyal-medya-icerik",
         "landing-page"
       ],
-      "roller": [
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "ileri",
-      "kalite": 4,
-      "kalite_notu": "Karar: TUT. Kalite kapıları güçlü. /product-launch-video ve /faceless-explainer yönlendirmeleri arşivde yok.",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. HyperFrames HEAD'de kaldırıldı; site turları ve web sitesinden tanıtım artık product-launch-video'da (heygen-com/hyperframes). Eski projeler için arşivde tutuluyor.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "tamamlayıcı",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
           "topluluk 19/20 (★70579)",
@@ -88064,7 +88714,7 @@
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
           "yapı 3/5",
-          "elle kalite 4/5 (%40 ağırlık)"
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -91607,9 +92257,34 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Hız eşlemeli sahne geçişleri kataloğu: zoom-through, ters zoom-through, cut-the-curve, waterfall cut, rack-focus blur-cut; ayrıca sahne içi waterfall giriş ve üç fazlı 'nudge' grup kaydırma. Ayna power4 easing ile kısmi hareket eşleme, boyuta göre bulanıklık ve 10/65/25 kaydırma oranı gibi sayısal kurallar verir.",
+      "kullanim_alani": "Herhangi bir geçiş, metin vuruşu devri, kinetik metin girişi veya grup yeniden konumlandırma yazılmadan önce.",
+      "kullanma": "Tek sahnelik statik işlerde; HyperFrames/GSAP dışı ortamlarda.",
+      "teknoloji": [
+        "gsap",
+        "hyperframes"
+      ],
+      "gerekli_paketler": [
+        "gsap"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "marka-sunum",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Sayısal, uygulanabilir teknik kataloğu; GSAP örnekleri dahil. Ev stili kökenli olsa da genel geçer değerde.",
+      "ortusme_grubu": "hyperframes-ev-stili",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -91618,7 +92293,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -91987,9 +92663,35 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Çok sahneli videonun bağımsız slaytlar yığını değil tek kesintisiz kamera hareketi gibi hissettirmesi için üst düzey hareket yasası: vektör yasası (çıkış girişi belirler, Z ölçek işareti), filmin akıntısı, taşıyıcı öğeler, nedensel hareket, Seam Gate doğrulayıcısı, boşta sallanma yasağı ve doruk öncesi durgunluk. Alt teknik skillere (cut-the-curve, seam-craft, oversized-cursor) yönlendirir.",
+      "kullanim_alani": "Çok sahneli HyperFrames videosunda geçiş ve hareket dili kurulmadan önce.",
+      "kullanma": "Tek sahnelik kısa grafiklerde; HyperFrames dışı web animasyonunda.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut.",
+      "ortusme_grubu": "hyperframes-ev-stili",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -91998,7 +92700,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -92072,9 +92775,39 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Hareketin mesaj olduğu kısa (genelde <10 sn, en çok ~30 sn), anlatımsız motion graphic üretimi: kinetik tipografi, sayaç, grafik, logo sting, lower-third, animasyonlu harita, tweet/haber, web/UI animasyonu, görsel geometrisini grafiğe kaynaştırma. Plan→kaynak→tasarım→yapım→doğrulama→render aşamalarını alt ajanlarla yürütür; MP4 veya şeffaf overlay çıkarır.",
+      "kullanim_alani": "Kısa, tasarım odaklı, seslendirmesiz grafik/overlay istendiğinde.",
+      "kullanma": "Uzun, çok sahneli veya anlatımlı videolar (general-video); mevcut görüntüye altyazı (embedded-captions).",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "gsap",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node>=22",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-produksiyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Olgun kategori modülleri. Yönlendirdiği iş akışları artık arşivde (heygen-com/hyperframes). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı.",
+      "ortusme_grubu": "hyperframes-is-akislari",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 85,
+        "puan": 83,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -92083,7 +92816,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -92173,15 +92907,12 @@
         "urun-tanitim-videosu",
         "marka-sunum"
       ],
-      "roller": [
-        "motion-graphics-sanatcisi",
-        "video-produksiyon"
-      ],
+      "roller": [],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok.",
+      "kalite_notu": "Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (motion-graphics, heygen-com/hyperframes). Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok.",
       "ortusme_grubu": "hyperframes-is-akislari",
-      "ortusme_rolu": "birincil",
+      "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
       "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
@@ -92363,9 +93094,33 @@
         "ana_sayfa": "https://hyperframes.dev",
         "katkici": 107
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Sahneden sahneye geçişlerin ana zaman çizelgesinde doğru birleşmesi için render önkoşulları: koyu filmlerde kesmede beyaz parlamayı önleyen opak sahne zemini, enjektörün sarmalayıcıları nasıl örtüştürdüğü, son kareyi tuttuğu ve şablon kodunu nasıl yerleştirdiği.",
+      "kullanim_alani": "Ana index.html birleştirilirken veya geçişte beyaz parlama/opaklık sızması görüldüğünde.",
+      "kullanma": "Geçiş seçimi için (cut-the-curve); tek sahnelik işlerde.",
+      "teknoloji": [
+        "hyperframes",
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.",
+      "ortusme_grubu": "hyperframes-ev-stili",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 94,
+        "puan": 80,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -92374,7 +93129,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
