@@ -1,0 +1,11 @@
+{
+  "ad": "skill-plugin-gelistirme",
+  "baslik": "Agent skill'i, Claude Code eklentisi, hook ve MCP entegrasyonu geliştirme",
+  "roller": [
+    "skill-gelistirici",
+    "kod-inceleyici"
+  ],
+  "ek_skiller": [
+    "mcp-builder"
+  ]
+}

@@ -351,12 +351,15 @@ Tasarım (A) ve diğer konular (B) birbirinden bağımsız: 03, 05 ve 09–14 ay
 | `kod-inceleyici` | review, sadeleştirme, test değeri | requesting-code-review, simplify-codebase, test-value, systematic-debugging |
 | `dokuman-yazari` | rapor, sunum, diyagram | docx, pptx, pdf, archify, doc-coauthoring |
 | `ai-entegrasyon` | Claude API, MCP, web veri | claude-api, mcp-builder, Agent-Reach |
+| `agent-orkestra` | planı alt-agent'larla yürütme, bağlam yönetimi | subagent-driven-development, dispatching-parallel-agents, context-engineering |
+| `skill-gelistirici` | skill, Claude Code eklentisi, hook, komut | skill-creator, writing-skills, plugin-structure |
+| `icerik-pazarlama` | blog/makale, sosyal metin, SEO/GEO | content-research-writer, de-ai-ify, seo-fundamentals |
 
 ### Profiller (proje tipi → roller)
 | Profil | Roller |
 |---|---|
-| `landing-page` | ui-tasarimci, motion-gelistirici, frontend-muhendis, qa-erisilebilirlik |
-| `kurumsal-site` | ui-tasarimci, tasarim-sistemi, frontend-muhendis, qa-erisilebilirlik |
+| `landing-page` | ui-tasarimci, motion-gelistirici, frontend-muhendis, qa-erisilebilirlik, icerik-pazarlama |
+| `kurumsal-site` | ui-tasarimci, tasarim-sistemi, frontend-muhendis, qa-erisilebilirlik, icerik-pazarlama |
 | `scroll-hikaye-sitesi` | ui-tasarimci, scroll-deneyim, motion-gelistirici, qa-erisilebilirlik |
 | `3d-urun-sergisi` | ui-tasarimci, 3d-gelistirici, scroll-deneyim, qa-erisilebilirlik |
 | `dashboard-saas` | ui-tasarimci, tasarim-sistemi, frontend-muhendis, qa-erisilebilirlik |
@@ -364,7 +367,9 @@ Tasarım (A) ve diğer konular (B) birbirinden bağımsız: 03, 05 ve 09–14 ay
 | `marka-sunum` | tasarim-sistemi, dokuman-yazari |
 | `rapor-dokuman` | dokuman-yazari |
 | `ai-uygulama` | ai-entegrasyon, frontend-muhendis, kod-inceleyici |
-| `mevcut-kod-iyilestirme` | kod-inceleyici, planlayici |
+| `mevcut-kod-iyilestirme` | kod-inceleyici, planlayici, agent-orkestra |
+| `sosyal-medya-icerik` | ai-medya-uretici, video-kompozisyon, video-kurgu-render, icerik-pazarlama |
+| `skill-plugin-gelistirme` | skill-gelistirici, kod-inceleyici (+ mcp-builder) |
 
 Her profile `planlayici` isteğe bağlı eklenir (`--planlayici`).
 

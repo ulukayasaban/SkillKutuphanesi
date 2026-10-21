@@ -3,7 +3,8 @@
   "baslik": "Var olan kod tabanını inceleme ve sadeleştirme",
   "roller": [
     "kod-inceleyici",
-    "planlayici"
+    "planlayici",
+    "agent-orkestra"
   ],
   "ek_skiller": []
 }
