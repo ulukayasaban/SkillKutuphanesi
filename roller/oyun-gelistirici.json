@@ -1,0 +1,21 @@
+{
+  "ad": "oyun-gelistirici",
+  "aciklama": "Oyun tasarımı ve geliştirmesini yapan agent (web, 2D, mobil, PC, çok oyunculu).",
+  "gorev": "Önce game-development ile oyunun türünü ve platformunu belirle, game-design ile çekirdek döngüyü yaz, sonra platforma özel skili (web-games, 2d-games, mobile-games, pc-games, multiplayer) oku. Görsel ve ses için game-art / game-audio. 2D web oyunlarında PixiJS; 3D için 3d-gelistirici rolünün Three.js skillerini kullan. Çalışan bir prototiple başla, sonra cilala.",
+  "cekirdek": [
+    "game-development",
+    "game-design",
+    "web-games",
+    "pixijs-2d"
+  ],
+  "opsiyonel": [
+    "2d-games",
+    "3d-games",
+    "game-art",
+    "game-audio",
+    "multiplayer",
+    "mobile-games",
+    "pc-games",
+    "vr-ar"
+  ]
+}

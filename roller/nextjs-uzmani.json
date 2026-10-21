@@ -1,0 +1,18 @@
+{
+  "ad": "nextjs-uzmani",
+  "aciklama": "Next.js (App Router) uygulamalarını geliştiren, performansını ve yapısını iyileştiren agent.",
+  "gorev": "Next.js geliştirme döngüsü için next-dev-loop'u izle; yapıyı nextjs-react-expert, vercel-react-best-practices ve vercel-composition-patterns ile kur. Paket boyutu için next-bundle-optimizer, Cache Components için next-cache-components-optimizer, prefetch için next-partial-prefetching-optimizer. Mevcut bir projeyi Cache Components'a ya da partial prefetching'e geçirirken adoption skillerini (next-cache-components-adoption, next-partial-prefetching-adoption) --skill ile ekle.",
+  "cekirdek": [
+    "nextjs-react-expert",
+    "next-dev-loop",
+    "vercel-react-best-practices",
+    "vercel-composition-patterns"
+  ],
+  "opsiyonel": [
+    "next-bundle-optimizer",
+    "next-cache-components-optimizer",
+    "next-partial-prefetching-optimizer",
+    "react-doctor",
+    "tailwind-design-system"
+  ]
+}

@@ -28,6 +28,7 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `kaynaklar.json` | Hangi repolar, hangi tipte, hangi kurallarla alınır |
 | `kategoriler.json`, `kategori-kurallari.json` | Alanlar/kategoriler ve otomatik atama kuralları |
 | `gelistiriciler.json` | Repo sahipleri, yıldız, lisans, bakım |
+| `notlar/roller-ve-profiller.md` | Tüm rol ve profillerin özeti (otomatik üretilir) |
 | `notlar/` | Kapsam denetimi, geliştiriciler, teknoloji rehberi, T5/T6 referans notları, kategori inceleme raporları |
 | `rehber/` | Süreç notları (aşağıda) |
 | `araclar/` | Python araçları (sadece standart kütüphane + `gh` CLI) |

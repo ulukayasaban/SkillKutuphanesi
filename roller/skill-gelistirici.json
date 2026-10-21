@@ -14,5 +14,6 @@
     "mcp-integration",
     "writing-hookify-rules",
     "plugin-settings"
-  ]
+  ],
+  "notlar": "Çekirdekteki plugin-structure, hook-development vb. Claude Code'a özgü (plugin/hook/komut/alt-agent formatı). Codex'te kavram referansı olarak kalır; Codex plugin'i yazarken Codex dokümanı esas alınır. Bilinçli tasarım."
 }

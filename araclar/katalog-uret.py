@@ -139,6 +139,27 @@ def main():
             yol.parent.mkdir(parents=True, exist_ok=True)
             yol.write_text("\n".join(md), encoding="utf-8")
 
+    # Roller ve profiller özeti (roller/*.json ve profiller/*.json'dan üretilir)
+    import glob as _g
+    rl = {Path(p).stem: json_oku(p) for p in sorted(_g.glob(str(KOK / "roller" / "*.json")))}
+    pr = {Path(p).stem: json_oku(p) for p in sorted(_g.glob(str(KOK / "profiller" / "*.json")))}
+    kb = {s["id"]: s["skill_md_kb"] for s in skiller}
+    out2 = ["# Roller ve Profiller", "",
+            "> `araclar/katalog-uret.py` üretir (roller/*.json, profiller/*.json). Kullanım: "
+            "`skill-ekle.py <proje> --profil <ad>` veya `--rol <ad>`.", "",
+            f"## Profiller ({len(pr)})", "", "| Profil | Ne için | Roller |", "|---|---|---|"]
+    out2 += [f"| `{a}` | {p['baslik']} | {', '.join(f'`{r}`' for r in p['roller'])} |" for a, p in pr.items()]
+    out2 += ["", f"## Roller ({len(rl)})", "", "| Rol | Görevi | Çekirdek | Opsiyonel (`--opsiyonel`) | Yük |", "|---|---|---|---|---|"]
+    for a, r in rl.items():
+        tum = r["cekirdek"] + r.get("opsiyonel", [])
+        out2.append(f"| `{a}` | {r['aciklama']} | {', '.join(r['cekirdek'])} | {', '.join(r.get('opsiyonel', []))} | "
+                    f"{len(tum)} skill, {sum(kb.get(x, 0) for x in tum):.0f} KB |")
+    kullanilan = {x for p in pr.values() for x in p["roller"]}
+    kayip = sorted(set(rl) - kullanilan)
+    if kayip:
+        out2 += ["", f"Hiçbir profilde olmayan roller (yalnız `--rol` ile): {', '.join(kayip)}"]
+    (KOK / "notlar" / "roller-ve-profiller.md").write_text("\n".join(out2) + "\n", encoding="utf-8")
+
     tek = defaultdict(list)
     for s in gorunur:
         if s["durum"] != "tercih":
