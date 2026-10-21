@@ -80919,7 +80919,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -80932,7 +80932,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js repo'sunun .agents/skills/ altındaki skilleri nasıl yazdığını anlatır: desteklenen frontmatter alanları, iyi description yazımı (dosya adı + anahtar kelime), AGENTS.md ile skill arasındaki iş bölümü, isimlendirme ve hub+detay dosya yapısı.",
+      "kullanim_alani": "Kendi projen veya kütüphanen için yeni SKILL.md yazarken/düzenlerken; description ve AGENTS.md ayrımına karar verirken.",
+      "kullanma": "Next.js'e özel kural listesi değil, genel rehber; çok ayrıntılı skill-yazım süreci için d-ai-otomasyon/04 altındaki skill-creator türleri daha kapsamlı.",
+      "teknoloji": [
+        "claude-code",
+        "agent-skills"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (genel kullanım). Kısa, doğru ve pratik; yalnızca örnekler Next.js'ten. Desteklenen alan listesi Claude Code'a göre, Codex bazı alanları yok sayar.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: skill/AGENTS.md yazım rehberi olarak doğrudan kullanılabilir."
     },
     {
       "id": "backport-pr",
@@ -80993,7 +81006,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81006,7 +81019,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js'te canary'ye birleşmiş bir PR'ı LTS sürüm dalına (releases/lts/active|maintenance) taşır: birleşme commit'ini bulur, sürüm dalından backport dalı açar, cherry-pick -x yapar, doğrular ve taslak PR açar.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. LTS dalına düzeltme taşırken.",
+      "kullanma": "Kendi projelerinde: dal adları, PR başlık biçimi ve $create-pr bağımlılığı Next.js'e özel.",
+      "teknoloji": [
+        "git",
+        "github-cli",
+        "next.js"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Güvenli adımlar (kullanıcı değişikliklerini koru, boş cherry-pick kontrolü) iyi; genel backport için şablon olarak okunabilir.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "compiler-commit",
@@ -81065,7 +81091,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81078,7 +81104,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React Compiler değişikliklerini /compiler-verify ve /compiler-review'dan geçirip [compiler] veya [rust-compiler] önekiyle commit'ler; Rust portu için orkestratör günlüğünü günceller.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. compiler klasöründe commit atarken.",
+      "kullanma": "Diğer tüm projeler.",
+      "teknoloji": [
+        "git",
+        "react-compiler",
+        "rust"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. compiler-verify/compiler-review ve repo içi alt-agent'lara bağlı; tek başına çalışmaz.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "compiler-orchestrator",
@@ -81139,7 +81178,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -81152,7 +81191,20 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React Compiler'ın TypeScript→Rust portunu döngü halinde ilerletir: sınırdaki geçişi bulur, hataları düzeltir, yeni geçişleri port eder, inceler ve commit'ler. 50+ geçişin sıralı tablosunu içerir.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust portu üzerinde çalışırken.",
+      "kullanma": "Diğer tüm projeler.",
+      "teknoloji": [
+        "react-compiler",
+        "rust",
+        "typescript"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Uzun-süreli agent döngüsü örneği olarak ilginç; içerik tamamen porta özel (13 KB).",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "compiler-port",
@@ -81212,7 +81264,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81225,7 +81277,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Tek bir React Compiler geçişini TypeScript'ten Rust'a port eder: geçiş adını doğrular, TS dosyalarını ve hedef crate'i eşler, plan çıkarır, port-pass alt-agent'ıyla test-düzelt döngüsü yürütür, inceleme döngüsüyle bitirir.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust portunda.",
+      "kullanma": "Diğer tüm projeler.",
+      "teknoloji": [
+        "react-compiler",
+        "rust",
+        "typescript"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Repo içindeki port-pass agent'ına bağımlı.",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "compiler-review",
@@ -81285,7 +81350,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81298,7 +81363,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Rust port kodunu orijinal TypeScript ile karşılaştırarak port sadakati, konvansiyon ve hata işleme açısından inceletir; diff'i repo içindeki compiler-review agent'ına verir.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust port değişikliklerini incelerken.",
+      "kullanma": "Genel kod incelemesi (b-yazilim-gelistirme/02 altındaki review skilleri).",
+      "teknoloji": [
+        "react-compiler",
+        "rust"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. İnce sarmalayıcı; asıl mantık arşivde olmayan agent tanımında. 'React compiler review' adı yanıltıcı: React Compiler kullanan uygulamaları değil, compiler'ın Rust portunu inceler.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "compiler-verify",
@@ -81358,7 +81435,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81371,7 +81448,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React Compiler'da değişen kodu (TS mi Rust mı) tespit edip ilgili test, lint ve biçimlendirme komutlarını (yarn snap, test-rust-port.sh, prettier-all) sırayla çalıştırır.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. compiler commit'i öncesi.",
+      "kullanma": "Diğer tüm projeler.",
+      "teknoloji": [
+        "react-compiler",
+        "rust",
+        "yarn"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Net ve doğru, ama komutların hepsi repoya özel.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "create-pr",
@@ -81431,7 +81521,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81444,7 +81534,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js'te yerel değişikliği dal, commit, push ve taslak PR'a çevirir: <agent-adı>/ dal öneki, sadece ilgili dosyaları stage etme, canary tabanı, Summary/Verification PR gövdesi, fork PR politikası ve kurtarma adımları.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. PR açarken.",
+      "kullanma": "Kendi projelerinde: canary tabanı, NEXT_JS_LLM işareti ve 'co-author ekleme' kuralı sana uymayabilir.",
+      "teknoloji": [
+        "git",
+        "github-cli"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. PR gövdesi formatı (ne + neden + doğrulama) iyi bir örnek; genel git/PR akışı için b-yazilim-gelistirme/05 skilleri tercih edilmeli.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "dce-edge",
@@ -81505,7 +81607,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81518,7 +81620,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js iç kodunda webpack ölü kod elemesine (DCE) uygun require() kalıplarını ve edge runtime kısıtlarını anlatır: if/else zorunluluğu, TypeScript kesin atama, NEXT_RUNTIME'ın özellik bayrağı olmadığı, edge için bayrakları false'a zorlama.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. koşullu require/edge kodu yazarken.",
+      "kullanma": "Uygulama geliştirme; Next.js kullanan bir sitede bu iç ayrıntılar gerekmez.",
+      "teknoloji": [
+        "next.js",
+        "webpack",
+        "typescript"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Webpack DCE bilgisi genel olarak doğru ve öğretici, ama dosya yolları Next.js iç yapısına ait.",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "deploy-release-test",
@@ -81580,7 +81695,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -81593,7 +81708,20 @@
           "bağlam yükü 10/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js PR'ının commit'e özel önizleme paketini doğrulayıp test_e2e_deploy_release.yml iş akışını gh ile elle tetikler; dal SHA'sının değişip değişmediğini tekrar kontrol eder ve oluşan run'ı doğrular.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. (yalnızca dahili dallar) tüm deploy test paketini çalıştırırken.",
+      "kullanma": "Diğer projeler; fork dalları.",
+      "teknoloji": [
+        "github-actions",
+        "github-cli",
+        "next.js"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Yarış durumlarına karşı dikkatli yazılmış; gizli anahtarlı workflow tetiklediği için başka yerde kullanılmamalı.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "docs-diagrams",
@@ -81661,7 +81789,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -81674,7 +81802,22 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js dokümanlarındaki diyagram stilini (ızgara arka plan, gölgeli paneller, gri iskelet UI, anlamlı renk paleti) koddan üretir: el yazımı SVG primitif kütüphanesi (lib.mjs/gen.mjs), headless Chrome ile 2x açık/koyu PNG, kenar boşluğu ölçümü ve inceleme listesi. AI görsel üretimi yok.",
+      "kullanim_alani": "Next.js docs'a diyagram eklerken; kendi dokümanların için tutarlı açık/koyu teknik diyagram üretmek istersen yöntem ve betikler uyarlanabilir.",
+      "kullanma": "Mermaid/hızlı diyagram (c-dokuman-icerik/02 altındaki diyagram skilleri daha pratik); renk tokenları Next.js'e ait.",
+      "teknoloji": [
+        "svg",
+        "node",
+        "headless-chrome",
+        "python"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (uyarlanabilir). disable-model-invocation: true (sadece elle çağrılır). Betikli, ölçülebilir kalite kontrollü nadir bir docs-diyagram skili.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: SVG primitif + Chrome render + ölçüm yaklaşımı kendi docs diyagramlarına uyarlanabilir (tokenları değiştir)."
     },
     {
       "id": "extract-errors",
@@ -81733,7 +81876,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81746,7 +81889,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React'e yeni hata mesajı eklendiğinde yarn extract-errors çalıştırıp yeni hata kodlarını raporlar.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer tüm projeler.",
+      "teknoloji": [
+        "yarn",
+        "react"
+      ],
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Üç satırlık komut hatırlatıcısı.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "feature-flags",
@@ -81805,7 +81960,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81818,7 +81973,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React'in özellik bayrağı dosyalarını, @gate pragması ve gate() satır içi kullanımını, yeni bayrak ekleme ve __VARIANT__ (www/RN) testlerini anlatır; kanal farklarından doğan test hatalarını ayıklama adımları.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. bayrak/test işlerinde.",
+      "kullanma": "Kendi projendeki feature-flag sistemi için değil.",
+      "teknoloji": [
+        "react",
+        "jest"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Açık tablo ve 'sık hatalar' bölümü iyi; flags ve test skilleriyle birlikte çalışır.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "fix",
@@ -81879,7 +82046,7 @@
         "ana_sayfa": "https://motion.dev",
         "katkici": 147
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -81892,7 +82059,22 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Motion repo'sunda bir GitHub issue'yu, açık PR'ı ya da plans/ altındaki plan dosyasını birleşmeye hazır PR'a dönüştüren 'yürütücü' skill: önce başarısız test, sonra en küçük düzeltme, repo kapılarıyla doğrulama, PR açma. 'Plan spesifikasyondur' ve 'repro yoksa düzeltme yok' kuralları.",
+      "kullanim_alani": "Motion'a katkıda; ayrıca improve skill'inin ürettiği plans/ dosyalarını başka bir projede uygulatırken (improve ile çift).",
+      "kullanma": "Plan/issue olmadan serbest geliştirme. Yarn/Cypress/React 18-19 komutları Motion'a özel, uyarlamak gerekir.",
+      "teknoloji": [
+        "git",
+        "github-cli",
+        "jest",
+        "cypress"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (improve ile birlikte). Sağlam yürütücü disiplini (TDD, sadık raporlama, main'e commit yok). Doğrulama adımları Motion'a göre yazılmış.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: improve'un planlarını uygulatan yürütücü olarak; doğrulama komutlarını kendi projene göre değiştir."
     },
     {
       "id": "fix@react",
@@ -81949,7 +82131,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -81962,7 +82144,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React'te yarn prettier ve yarn linc ile biçim/lint düzeltir, kalan elle düzeltmeleri raporlar.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "yarn",
+        "prettier"
+      ],
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV (alternatif; aynı adlı fix'in tercihi Motion sürümü). Komut hatırlatıcısı.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "flags",
@@ -82021,7 +82215,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -82034,7 +82228,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React'te yarn flags ile özellik bayraklarının kanallar (www, canary, experimental, RN…) arası durumunu gösterir, --diff ile karşılaştırır ve çıktıyı açıklar.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "yarn",
+        "react"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. feature-flags skill'inin yardımcısı.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "flags@vercel",
@@ -82095,7 +82301,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -82108,7 +82314,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js'e deneysel özellik bayrağı eklemenin uçtan uca kablolamasını anlatır: config-shared.ts tipi, zod şeması, define-env ile derleme zamanı enjeksiyonu, çalışma zamanı env değişkeni ya da ayrı bundle varyantı kararı.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Next.js kullanan uygulamalar (next.config bayrağı açmak bu skill'i gerektirmez).",
+      "teknoloji": [
+        "next.js",
+        "webpack",
+        "typescript"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV (alternatif; 'flags' adının tercihi React sürümü).",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "flow",
@@ -82168,7 +82387,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -82181,7 +82400,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React'te Flow tip denetimini doğru renderer ile (dom-node, native, fabric…) çalıştırır ve hataları dosya konumlarıyla raporlar.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Flow kullanmayan projeler.",
+      "teknoloji": [
+        "flow",
+        "yarn"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gate-tests",
@@ -82243,7 +82474,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -82256,7 +82487,19 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js testlerinde it.skip / 'dev modda atla' gibi sahte-yeşil kalıplar yerine @gate / @force-gate yönergelerini kullanmayı öğretir: yönerge seçimi, koşul katmanları, test-ekseni fixture kalıbı, tuzaklar ve doğrulama komutları.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. test yazarken.",
+      "kullanma": "Diğer projeler (yönerge Next.js test altyapısına ait). Fikir — bilinen hatayı atlamak yerine 'beklenen hata' olarak işaretlemek — genel olarak değerli.",
+      "teknoloji": [
+        "jest",
+        "next.js"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. İyi gerekçelendirilmiş; 'fake-green' kavramı genel test kültürü için okunmaya değer.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "gh-stack",
@@ -82316,7 +82559,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -82329,7 +82572,21 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "GitHub'ın gh-stack eklentisiyle yığın (stacked) PR yönetir: yığın kurma, katman ekleme, push/submit/sync/rebase/merge; agent'lar için TTY'siz güvenli bayraklar tablosu, çoklu remote kuralları, yığın tasarımı ve sorun giderme referansları.",
+      "kullanim_alani": "Herhangi bir GitHub reposunda büyük işi gözden geçirilebilir bağımlı PR'lara bölmek istediğinde (gh extension install github/gh-stack gerekir).",
+      "kullanma": "Tek PR'lık küçük işler; gh-stack kurulu değilse.",
+      "teknoloji": [
+        "git",
+        "github-cli",
+        "gh-stack"
+      ],
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (genel kullanım). Kaynağı GitHub (metadata author: github); Next.js repo'suna kopyalanmış. Agent'ların TUI'de takılmasını önleyen bayrak tablosu çok değerli.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: repo-bağımsız, herhangi bir GitHub projesinde stacked PR için."
     },
     {
       "id": "improve",
@@ -82390,7 +82647,7 @@
         "ana_sayfa": "https://motion.dev",
         "katkici": 147
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -82403,7 +82660,20 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Bir kod tabanını kıdemli danışman gibi salt-okunur tarar (doğruluk, güvenlik, performans, test, teknik borç, bağımlılık, DX, doküman, yön) ve başka bir modelin/agent'ın sıfır bağlamla uygulayabileceği önceliklendirilmiş, kendi kendine yeterli planları plans/ altına yazar. Kaynak koda asla dokunmaz; isteğe bağlı execute varyantı ayrı worktree'deki yürütücüyü inceler.",
+      "kullanim_alani": "Herhangi bir projede denetim/iyileştirme fırsatı bulma, yol haritası, başka agent'a devredilecek uygulama planları üretme.",
+      "kullanma": "Hemen kod değişikliği istiyorsan (skill bilerek uygulamaz); çok küçük repolar.",
+      "teknoloji": [
+        "git",
+        "github-cli"
+      ],
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (genel kullanım). Yazarı shadcn (MIT); Motion repo'sunda barınıyor ama repo-bağımsız. Pahalı model planlar / ucuz model uygular ekonomisi, sır değeri yazmama kuralı ve plan şablonu güçlü.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: repo-bağımsız denetim + plan üretici; fix skill'i yürütücü olarak eşlik eder. mevcut-kod-iyilestirme profiline aday."
     },
     {
       "id": "insight-error-page",
@@ -82471,7 +82741,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -82484,7 +82754,19 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js dev overlay'deki 'insight' türü hata sayfalarını (errors/<slug>.mdx) yazar veya denetler: zorunlu sayfa yapısı, overlay FixCard verisiyle başlık/ID eşleşmesi, kopyalanabilir prompt kartları, terminoloji doğrulama ve Vercel teknik yazım üslubu.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. errors/ sayfaları için.",
+      "kullanma": "Diğer projeler; 22 KB ile bağlam yükü yüksek.",
+      "teknoloji": [
+        "next.js",
+        "mdx"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Çok ayrıntılı ve kaynak-zinciri disiplini iyi, ama tamamen Next.js'e özel ve büyük.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "lighthouse-verification",
@@ -82541,7 +82823,7 @@
         "ana_sayfa": "https://developer.chrome.com/docs/lighthouse/overview/",
         "katkici": 397
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -82554,7 +82836,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Lighthouse'ta değişiklik sonrası seçili mocha testleri, type-check, lint ve update:sample-json çalıştırmayı hatırlatır.",
+      "kullanim_alani": "Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Lighthouse'u araç olarak kullanmak (performans denetimi) için değil.",
+      "teknoloji": [
+        "yarn",
+        "mocha"
+      ],
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Kısa komut listesi.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "next-rspack",
@@ -82615,7 +82909,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -82628,7 +82922,20 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js içindeki @next/rspack-core ve @next/rspack-binding paketlerinin bakımını anlatır: @rspack/core ve rspack_* crate sürüm yükseltme, rspack/ altındaki Rust toolchain, yerel derleme/bağlama ve NEXT_RSPACK kullanımı.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. rspack/ klasöründe.",
+      "kullanma": "Rspack'i kendi projende kullanmak (bu skill paket bakımı içindir).",
+      "teknoloji": [
+        "rspack",
+        "rust",
+        "next.js"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Kapsam sınırı (kök rust-toolchain Turbopack'e ait) açıkça belirtilmiş.",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "plan-update",
@@ -82687,7 +82994,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -82700,7 +83007,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React Compiler Rust portu için bir konunun tüm compiler geçişlerine etkisini 8 paralel alt-agent'la araştırıp plan dokümanını yerinde günceller.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler; paralel araştırma kalıbı için d-ai-otomasyon/02 orkestrasyon skilleri daha genel.",
+      "teknoloji": [
+        "react-compiler",
+        "rust"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Paralel alt-agent fan-out örneği; analyze-pass-impact agent'ına bağımlı.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "playwright-cherry-pick",
@@ -82760,7 +83079,7 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -82773,7 +83092,18 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Playwright'ta bir commit/PR'ı release-<sürüm> dalına cherry-pick edip 'cherry-pick(#pr): başlık' olarak yeniden adlandırır; asla kendiliğinden push etmez.",
+      "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "git"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Kısa ve güvenli.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "playwright-dev",
@@ -82835,7 +83165,7 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -82848,7 +83178,19 @@
           "bağlam yükü 10/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Playwright geliştirme rehberine giriş: kütüphane mimarisi, API ekleme, MCP araçları ve CLI komutları, vendored bağımlılıklar, WebKit/WebView, sürümler arası bisect ve dashboard için repo içi rehberlere bağlantı verir.",
+      "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Playwright ile test yazmak (a-tasarim-onyuz/08 ve b-yazilim-gelistirme/03 skilleri).",
+      "teknoloji": [
+        "playwright",
+        "typescript"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Hub + 9 ayrıntı dosyası (library, api, tools, vendor, bisect, webview…) arşivde mevcut; yalnızca AGENTS.md bağlantısı repo dışında kalıyor.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "playwright-devops",
@@ -82907,7 +83249,7 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -82920,7 +83262,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Playwright CI başarısızlık analizi ve sürüm operasyonları için repo içi rehberlere (commit-failures.md, fetch-commit-logs.sh) yönlendirir.",
+      "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "github-actions",
+        "github-cli"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut).",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "playwright-release-notes",
@@ -82988,7 +83342,7 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -83001,7 +83355,19 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Playwright sürüm notlarını yazar: Node.js notları + Python/Java/.NET çevirileri (dile özgü API adları, langs filtreleri), dokümantasyon link makroları ve her dil için GitHub release markdown'ı.",
+      "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Kendi projenin changelog'u (genel sürüm notu skilleri daha uygun).",
+      "teknoloji": [
+        "playwright",
+        "markdown"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Çok dilli doküman çevirisinin titiz bir örneği; tamamen repoya özel (13 KB).",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "playwright-test-results",
@@ -83063,7 +83429,7 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -83076,7 +83442,20 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Playwright CI test sonuçlarını toplanmış DuckDB veritabanından SQL ile sorgular: flaky testler, hata oranları, yavaş testler, run/SHA/PR bazında sonuçlar; GitHub API bütçesini korumak için veritabanını silmeme kuralı.",
+      "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Kendi CI'ın (şema ve CLI repoya özel). Fikir — CI sonuçlarını parquet/DuckDB'ye toplamak — uyarlanabilir.",
+      "teknoloji": [
+        "duckdb",
+        "node",
+        "github-actions"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Şema tablosu ve örnek sorgular iyi.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "playwright-triage",
@@ -83144,7 +83523,7 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "kardes_bagimliliklari": {
         "playwright-dev": {
           "id": "playwright-dev",
@@ -83163,7 +83542,19 @@
           "bağlam yükü 8/10",
           "yapı 3/5"
         ]
-      }
+      },
+      "ozet_tr": "Playwright hata raporunu sınıflandırır (bug, özellik isteği, upstream, soru) ve bug'ı tip-of-tree üzerinde, tarayıcılar arası, gerekirse sürüm bisect ederek yeniden üretir; amaç düzeltme değil doğrulanmış durum raporu.",
+      "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz. issue triage'ında.",
+      "kullanma": "Kendi projendeki issue'lar için doğrudan değil; yöntem (önce sınıflandır, ToT'ta dene, kabul testi yaz) uyarlanabilir.",
+      "teknoloji": [
+        "playwright",
+        "github-cli"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Triage yöntemi iyi; kardeş playwright-dev skill'indeki bisect rehberine bağlı, test dosyası bağlantıları repo dışında kalıyor.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "pr-status-triage",
@@ -83224,7 +83615,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -83237,7 +83628,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js PR'ının CI hatalarını ve inceleme yorumlarını scripts/pr-status.js ile toplar; build > lint > types > test öncelik sırası, bilinen flaky test ayrımı, CI ortamıyla yerel yeniden üretim ve thread yanıtla-çöz komutları.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler (pr-status.js betiği yok).",
+      "teknoloji": [
+        "github-cli",
+        "next.js"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Öncelik sırası genel olarak iyi bir pratik; workflow.md ve local-repro.md arşivde mevcut, pr-status.js betiği repoda.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "react-sync",
@@ -83297,7 +83700,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -83310,7 +83713,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Yerel React değişikliklerini Next.js'in kullandığı bundle varyantlarında derler, pnpm sync-react ile yerel Next.js checkout'una aktarır ve entegrasyonu test eder; Codex PATH/Corepack hatasına çözüm içerir.",
+      "kullanim_alani": "react/react ve vercel/next.js'e birlikte katkı yaparken.",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "pnpm"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. scripts/build-for-next.sh arşivde mevcut; iki repo checkout'u gerektirir.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "react-vendoring",
@@ -83372,7 +83788,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -83385,7 +83801,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js'in React'i App Router için nasıl vendor'ladığını ve react-server katman sınırlarını anlatır: entry-base.ts sınırı, kanal ayrımı, $$compiled.internal.d.ts tip bildirimleri, Turbopack remap ve ComponentMod erişimi.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Next.js ile uygulama geliştirme.",
+      "teknoloji": [
+        "next.js",
+        "react",
+        "typescript"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. İç mimariyi anlamak için değerli not.",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "router-act",
@@ -83447,7 +83876,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -83460,7 +83889,20 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js e2e testlerinde createRouterAct ve LinkAccordion ile prefetch/navigasyon isteklerinin zamanlamasını kontrol etmeyi ve yanıtlarını doğrulamayı öğretir; 'no-requests' iddiası, sahte saat, flaky kalıplardan kaçınma.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. router testlerinde.",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "next.js",
+        "playwright",
+        "typescript"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Retry/polling yerine deterministik act ilkesi genel test kültürü için iyi örnek.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "runtime-debug",
@@ -83523,7 +83965,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -83536,7 +83978,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js runtime-bundle ve modül çözümleme gerilemelerini ayıklama akışı: CI env değişkenlerini aynalama, __NEXT_SHOW_IGNORE_LISTED ile tam yığın izi, nft.json trace incelemesi, webpack stats diff'iyle dahil edilme kanıtı.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Uygulama hatası ayıklama (b-yazilim-gelistirme/03).",
+      "teknoloji": [
+        "next.js",
+        "webpack"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. webpack stats ile 'neden dahil edildi' kanıtı kendi Next.js uygulamanda bundle şişmesi araştırırken de fikir verebilir.",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "rust-port-status",
@@ -83595,7 +84049,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -83608,7 +84062,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React Compiler Rust port plan dokümanlarının durumunu ve ilgili son commit'leri tablo halinde gösterir.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "git",
+        "react-compiler"
+      ],
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "sandbox-bench",
@@ -83671,7 +84137,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -83684,7 +84150,21 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React veya Next.js revizyonlarını Vercel Sandbox VM'lerinde eşleştirilmiş A/B istatistikle ölçer (rps, gecikme, p95, TTFB, RSS, Flight byte); doğruluk kapıları, içerik-adresli önbellek, boot düzeyinde güven aralıkları. Faturalanan Vercel takım/proje bilgisini asla tahmin etmez.",
+      "kullanim_alani": "react/react ya da vercel/next.js değişikliklerinin sunucu tarafı performans etkisini ölçerken.",
+      "kullanma": "Kendi uygulamanın performansı (b-yazilim-gelistirme/06); Vercel Sandbox erişimi yoksa. Faturalı kaynak kullanır.",
+      "teknoloji": [
+        "vercel-sandbox",
+        "node",
+        "next.js",
+        "react"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. İstatistik yaklaşımı (boot = replikasyon birimi) örnek niteliğinde; 16 KB, betikli.",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "test",
@@ -83744,7 +84224,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -83757,7 +84237,19 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React çekirdek testlerini kanal (source, experimental, www, stable, classic) ve __VARIANT__ seçenekleriyle doğru yarn komutuna çevirip çalıştırır; --silent ve --no-watchman zorunlu.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "jest",
+        "yarn"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "update-ard-port",
@@ -83818,7 +84310,7 @@
         "ana_sayfa": "https://developer.chrome.com/docs/lighthouse/overview/",
         "katkici": 397
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -83831,7 +84323,19 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Lighthouse'un Agentic Resource Discovery (ARD) uygunluk portunu upstream ards-project/ard-spec ile 1:1 eşitler: değişen dosyaların karşılaştırması, şema senkronu, mesaj metinlerini kelimesi kelimesine koruma, hash'li inceleme kaydı ve testler.",
+      "kullanim_alani": "Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "node",
+        "json-schema"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "update-docs",
@@ -83892,7 +84396,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -83905,7 +84409,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js'te dal değişikliklerine göre etkilenen dokümanları bulur (kaynak→doküman eşleme tablosu), mevcut MDX'i okuyup güncellemeyi kullanıcı onayıyla yürütür, yeni özellik için iskelet açar ve pnpm lint ile doğrular.",
+      "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. docs/ altında.",
+      "kullanma": "Kendi projen: eşleme tablosu ve MDX kuralları Next.js'e ait; 'kod değişince docs etkisini bul' akışı uyarlanabilir.",
+      "teknoloji": [
+        "next.js",
+        "mdx",
+        "git"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: SADECE ARŞİV. references/ klasörüyle birlikte eksiksiz.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "update-trace-engine",
@@ -83966,7 +84483,7 @@
         "ana_sayfa": "https://developer.chrome.com/docs/lighthouse/overview/",
         "katkici": 397
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -83979,7 +84496,20 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Chrome DevTools'un trace işlemcisini @paulirish/trace_engine paketi olarak derleyip yayınlar ve Lighthouse'a aktarır: devtools-frontend birleştirme, gn/autoninja derleme, shim'ler, sürüm artırma ve npm yayını.",
+      "kullanim_alani": "Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz. (paket bakımcıları).",
+      "kullanma": "Diğer herkes; npm publish yetkisi gerektirir.",
+      "teknoloji": [
+        "node",
+        "npm",
+        "devtools"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. Çok kişiye özel (Paul Irish'in fork'u, yerel yollar).",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "v8-jit",
@@ -84040,7 +84570,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -84053,7 +84583,21 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "V8 JIT optimizasyon kalıpları: Ignition→Sparkplug→Maglev→Turbofan katmanları, hidden class/shape tutarlılığı, monomorfik çağrı noktaları, inline cache, megamorfik deopt, closure tahsisi, dizi paketleme ve --trace-opt/--trace-deopt ile profilleme.",
+      "kullanim_alani": "Node.js/JS'te sıcak yol (istek başına çalışan kod, render, stream, döngü) performansı yazarken veya incelerken; kendi Node sunucularında da geçerli.",
+      "kullanma": "Sıradan uygulama kodu; ölçmeden mikro-optimizasyon. Örnek dosya yolları Next.js'e ait.",
+      "teknoloji": [
+        "javascript",
+        "node",
+        "v8"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (genel kullanım). İçerik %90 genel V8 bilgisi; yalnızca örnek bağlamı Next.js. 14 KB, bağlam yükü orta.",
+      "zorluk": "zor",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: Node/JS sıcak yol performans incelemesi için genel V8 rehberi."
     },
     {
       "id": "verify",
@@ -84112,7 +84656,7 @@
         "ana_sayfa": "https://react.dev",
         "katkici": 2025
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -84125,7 +84669,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "React katkı gereksinimlerinin tamamını doğrular: önce prettier ve linc, sonra alt-agent'larla paralel /flow, /test ve /test www; hata olursa durup öneriyle raporlar.",
+      "kullanim_alani": "Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz..",
+      "kullanma": "Diğer projeler.",
+      "teknoloji": [
+        "yarn",
+        "jest",
+        "flow"
+      ],
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. flow ve test skillerine bağlı.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "write-api-reference",
@@ -84186,7 +84743,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -84199,7 +84756,20 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Next.js API'leri (fonksiyon, bileşen, dosya konvansiyonu, direktif, config) için tek API'lik referans sayfası üretir: kategoriye göre şablon, TS/JS switcher örnekleri, Reference/Behavior/Examples bölümleri ve yazım kuralları.",
+      "kullanim_alani": "Next.js docs'a katkı; ayrıca kendi kütüphanen/framework'ün için API referans sayfası yazarken şablon olarak.",
+      "kullanma": "Uzun anlatımlı rehber (write-guide); Next.js'e özel frontmatter ve switcher sözdizimi uyarlama ister.",
+      "teknoloji": [
+        "mdx",
+        "markdown"
+      ],
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (uyarlanabilir). Kategori bazlı şablonlar ve 'sayfa başına tek API' kuralı genel geçer. context: fork + agent: Plan alanları Claude Code'a özgü.",
+      "zorluk": "orta",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: kendi kütüphanenin API referans dokümanı için şablon (Next.js docs yazım tarzı)."
     },
     {
       "id": "write-guide",
@@ -84259,7 +84829,7 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -84272,7 +84842,20 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Gerçek bir kullanım senaryosunu aşamalı örneklerle öğreten teknik rehber yazar: giriş → örnek → 2-4 adım (çalışan kod → yeni gereksinim → sürtünme → açıklama → çözüm → gözlemlenebilir kanıt) → sonraki adımlar; em dash yok, satış dili yok, SEO için eski terimle köprü.",
+      "kullanim_alani": "Next.js docs; ayrıca kendi ürünün/kütüphanen için tutorial/how-to rehberi yazarken.",
+      "kullanma": "API referansı (write-api-reference); pazarlama metni.",
+      "teknoloji": [
+        "mdx",
+        "markdown"
+      ],
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (genel kullanım). Next.js docs ekibinin yazım ilkeleri; 'sürtünme anında kavramı adlandır' döngüsü her teknik rehbere uygulanabilir.",
+      "zorluk": "kolay",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "notlar": "Kendi projende de işe yarar: teknik rehber/tutorial yazımı (Next.js docs tarzı). Docs yazarı rolüne aday."
     },
     {
       "id": "captions-overlay",
