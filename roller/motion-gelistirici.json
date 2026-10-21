@@ -12,8 +12,6 @@
     "gsap-plugins",
     "gsap-utils",
     "motion-framer",
-    "lottie-animations",
-    "gsap-frameworks",
-    "rive-interactive"
+    "lottie-animations"
   ]
 }
