@@ -111,7 +111,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** gsap 3.15, @gsap/react 2, react 19, next.js · **Paketler:** gsap, @gsap/react
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★16829, son güncelleme 2026-07-29, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, frontend-muhendis · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa (6 KB), useGSAP temizlik kuralları tam. Dikkat: yok.
 
@@ -166,7 +166,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** motion v14, react 19 · **Paketler:** framer-motion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → birincil · **Roller:** motion-gelistirici, frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → birincil · **Roller:** motion-gelistirici
 - **Boyut:** 159 KB (SKILL.md 20.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. React için ana animasyon rehberi, geniş ve düzenli. Dikkat: 'framer-motion' paketi ve import'ları kullanıyor (yeni ad 'motion/react'); starter package.json framer-motion ^11. 20 KB SKILL.md.
 - **Not:** Kodda 'framer-motion' yerine 'motion/react' import et.

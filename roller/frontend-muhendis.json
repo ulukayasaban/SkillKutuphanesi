@@ -4,17 +4,18 @@
   "gorev": "Tasarımı üretim kalitesinde koda dök: bileşen yapısı, durum yönetimi, erişilebilirlik, responsive davranış.",
   "cekirdek": [
     "frontend-ui-engineering",
-    "frontend-design"
+    "frontend-design",
+    "frontend-architecture",
+    "test-driven-development",
+    "verification-before-completion"
   ],
   "opsiyonel": [
+    "vercel-react-best-practices",
     "next-dev-loop",
     "tailwind-patterns",
-    "web-artifacts-builder",
-    "d3-viz",
-    "tailwind-design-system",
-    "motion-framer",
-    "gsap-react",
     "react-doctor",
-    "playwright-component-testing"
+    "playwright-cli",
+    "d3-viz",
+    "web-artifacts-builder"
   ]
 }

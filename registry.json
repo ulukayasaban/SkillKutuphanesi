@@ -2068,8 +2068,7 @@
         "ai-uygulama"
       ],
       "roller": [
-        "tasarim-sistemi",
-        "frontend-muhendis"
+        "tasarim-sistemi"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -3421,8 +3420,7 @@
         "scroll-hikaye-sitesi"
       ],
       "roller": [
-        "motion-gelistirici",
-        "frontend-muhendis"
+        "motion-gelistirici"
       ],
       "zorluk": "kolay",
       "kalite": 5,
@@ -3948,8 +3946,7 @@
         "mobil-uygulama"
       ],
       "roller": [
-        "motion-gelistirici",
-        "frontend-muhendis"
+        "motion-gelistirici"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -10587,8 +10584,7 @@
         "landing-page"
       ],
       "roller": [
-        "qa-erisilebilirlik",
-        "frontend-muhendis"
+        "qa-erisilebilirlik"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -11174,10 +11170,38 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in uygulama kurma orkestratörü: doğal dil isteğinden proje tipini tespit eder, 2026 varsayılan teknoloji yığınını (Next.js 16, Tailwind v4, Prisma/Drizzle, Auth.js) seçer, klasör iskeletini kurar ve planlayıcı/frontend/backend/veritabanı agent'larını sıraya koyar. 13 proje şablonunu (Next.js SaaS, FastAPI, Expo, Flutter, Electron, Chrome eklentisi, CLI, Turborepo…) alt klasörde taşır.",
+      "kullanim_alani": "Sıfırdan full-stack uygulama başlatırken yığın seçimi ve iskelet kurulumu; hangi şablonun uygun olduğuna hızlı karar.",
+      "kullanma": "Var olan kod tabanında özellik ekleme (writing-plans + incremental-implementation); ag-kit agent'ları (project-planner, frontend-specialist…) ve /create iş akışı projede yoksa orkestrasyon kısmı boşa düşer.",
+      "teknoloji": [
+        "next.js",
+        "react",
+        "node",
+        "python",
+        "vue",
+        "flutter",
+        "react-native"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "landing-page",
+        "kurumsal-site",
+        "mobil-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (yığın/şablon rehberi olarak). Şablonlar güncel (2026-05 sürümleri) ve seçici okuma kuralı bağlamı korur. Ancak agent koordinasyon bölümü ag-kit'in kendi agent'larına ve /create iş akışına bağlı; kütüphanede bu agent'lar yok. templates/ alt klasörü ayrı 'templates' skill'iyle birebir aynı.",
+      "ortusme_grubu": "proje-iskeleti",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -11185,7 +11209,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11246,9 +11271,36 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "superpowers'ın tasarım öncesi sohbet skilli: kullanıcının ne istediğini ve nedenini tek seferde tek soruyla açar, gerektiğinde kodu/web'i keşfetmeyi ve tarayıcıda çalışan görsel yardımcıyla (yerel Node sunucusu) maket göstermeyi önerir, sonra yazılı tasarım belgesi üretip writing-plans'a devreder.",
+      "kullanim_alani": "Yeni özellik, bileşen veya proje fikrinde gereksinim belirsizken; kodlamaya başlamadan önce ortak anlayış ve yazılı tasarım gerektiğinde.",
+      "kullanma": "İstekte her şey açıksa (küçük, net görev); etkileşimsiz ortamlar (CI, zamanlanmış çalışma). Hızlı niyet doğrulaması yeterliyse interview-me daha hafif.",
+      "teknoloji": [
+        "node",
+        "html"
+      ],
+      "gerekli_paketler": [
+        "node (görsel yardımcı sunucusu, isteğe bağlı)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "landing-page",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, fikir-netlestirme grubunun birincili. Gerekçe: en olgun ve en çok kullanılan sürüm (★300k+), soru disiplini (tek soru, somut örnek) ve tasarımdan plana devir zinciri net; görsel yardımcı farklılaştırıcı. vudovn sürümü 3 zorunlu soru şablonuna indirgenmiş, interview-me ise yalnız niyet çıkarıyor. Not: superpowers:writing-plans gibi ad alanlı referanslar proje kurulumunda düz adla çözülür.",
+      "ortusme_grubu": "fikir-netlestirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -11257,7 +11309,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11316,10 +11369,27 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in Sokratik soru protokolü: belirsiz isteklerde kodlamadan önce en az 3 soru (amaç, kullanıcı, kapsam) sorar, soruları seçenek/artı-eksi tablosuyla biçimlendirir; ilerleme panosu, hata iletişimi ve tamamlanma mesajı kalıplarını da içerir. .agents/memory klasörünü okur.",
+      "kullanim_alani": "ag-kit iş akışı kullanan projelerde; seçenek tablolu, karar odaklı soru listesi tercih edildiğinde.",
+      "kullanma": "Genel kullanımda (obra brainstorming daha doğal ve olgun); aynı adı taşıdığı için birincille birlikte kurulamaz.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Soru biçimi (öncelik + seçenek tablosu + varsayılan) yararlı ama 'her zaman 3 soru' kuralı küçük işlerde sürtünme yaratıyor; ag-kit'e özgü /remember ve .agents/memory varsayımları var.",
+      "ortusme_grubu": "fikir-netlestirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -11327,7 +11397,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11393,9 +11464,34 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Projenin kalite çıtasını CONSTRAINTS.md'de yazılı sözleşmeye çevirir: kullanıcıya hangi boyutların önemli olduğunu sorar, sayı yoksa makul varsayılan eşikler önerir, gereken araçları kurdurur ve diff'te çıtanın sessizce düşürülmesini (yeni @ts-ignore/eslint-disable, atlanan/silinen test, kaldırılan assertion, eşik düşürme) yakalar.",
+      "kullanim_alani": "Yazılı kalite çıtası yoksa; agent testleri atlayıp/susturup yeşile ulaşmaya çalışıyorsa; erişilebilirlik, performans veya kapsama eşiği tanımlanacaksa.",
+      "kullanma": "Kısa ömürlü prototip/spike; zaten CI'da zorlanan, belgelenmiş standartları olan ekip.",
+      "teknoloji": [
+        "git",
+        "node",
+        "python"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Agent'ların çıtayı düşürme davranışına özel tek skill; varsayılan eşik tablosu ve floor-guard referansı pratik. 20 KB SKILL.md ile bağlam yükü orta-yüksek.",
+      "ortusme_grubu": "kalite-sozlesmesi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -11404,7 +11500,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11468,9 +11565,31 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Önemsiz olmayan her kararı (iddia → en küçük incelenebilir birim → taze bağlamlı karşıt inceleme → uzlaştırma → dur) döngüsünden geçirir; gerekirse Codex veya Gemini CLI ile çapraz model incelemesi yaptırır. Ana oturum orkestratörü için tasarlanmıştır.",
+      "kullanim_alani": "Yüksek riskli işler (üretim kimlik doğrulama, güvenlik, geri alınamaz migrasyon), tanıdık olmayan kod, planın gizli hata modlarının sınanması.",
+      "kullanma": "Alt-agent/persona içinde (iç içe agent çağıramaz); hızın önemli olduğu düşük riskli işler.",
+      "teknoloji": [],
+      "gerekli_paketler": [
+        "isteğe bağlı: codex CLI veya gemini CLI (çapraz model inceleme)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, opsiyonel. Sınırlı döngü ve 'iç içe çalışamaz' uyarısı iyi düşünülmüş. Maliyetli (her kararda ek agent); yalnız planlayıcı/orkestratör rolüne uygun, persona skill listesine konmamalı.",
+      "ortusme_grubu": "karsit-dogrulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -11479,7 +11598,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11541,7 +11661,32 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Yazılmış bir planı alt-agent kullanmadan, aynı oturumda görev görev uygular: her görev için brief ve kayıt defteri (ledger) tutar, TDD ile ilerler, plan sorunlarında 'karar' kaydı düşerek durmadan devam eder, sonunda tek bir taze bağlamlı inceleme yaptırıp finishing-a-development-branch'e geçer. task-start/task-done betikleri içerir.",
+      "kullanim_alani": "writing-plans planı hazır ve kullanıcı satır içi yürütmeyi seçtiyse; alt-agent aracı olmayan ortamlarda (ör. bazı Codex kurulumları).",
+      "kullanma": "Her görevde ayrı inceleme kapısı isteniyorsa veya plan çok uzunsa (subagent-driven-development); planı olmayan işler.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [
+        "bash (task-start/task-done betikleri)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, plan-yurutme grubunun birincili (bu kategoride). Durma koşulları ve ledger disiplini çok net. Not: alt-agent'lı yürütme d-ai-otomasyon'daki subagent-driven-development'ta; planlayıcı rolü onu çekirdekte, bunu opsiyonelde tutar. ../using-superpowers/references bağlantısı ayrı skill'e işaret ediyor.",
+      "ortusme_grubu": "plan-yurutme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
         "requesting-code-review": {
           "id": "requesting-code-review",
@@ -11549,7 +11694,7 @@
         }
       },
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -11558,7 +11703,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11620,9 +11766,27 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı, önerilen yön, doğrulanacak varsayımlar, MVP kapsamı ve 'yapmayacaklarımız' içeren bir belge (docs/ideas/) üretir.",
+      "kullanim_alani": "Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde.",
+      "kullanma": "Ne yapılacağı belli, yalnız gereksinim ayrıntısı eksikse (brainstorming / interview-me); kod düzeyi planlama (writing-plans).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "dashboard-saas",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, alternatif. Çerçeveler (frameworks.md) ve örnekler iyi; ürün/konsept aşamasında brainstorming'den daha yapılandırılmış. Betik yalnız docs/ideas klasörü açıyor.",
+      "ortusme_grubu": "fikir-netlestirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -11631,7 +11795,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11697,9 +11862,31 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Değişiklikleri ince, doğrulanabilir dilimlerle teslim ettirir: dikey/sözleşme-önce/risk-önce dilimleme, 'önce sadelik' ve kapsam disiplini, her adımda derlenebilir kalma, yarım özellikleri feature flag arkasına alma, güvenli varsayılanlar ve geri alınabilirlik kuralları.",
+      "kullanim_alani": "Birden çok dosyaya dokunan her özellik/değişiklikte; plandan sıradaki görevi alırken; büyük kod bloğu yazma eğilimi olduğunda.",
+      "kullanma": "Tek satırlık düzeltmeler; planın kendisini yazmak (writing-plans).",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Kısa (9 KB), yığından bağımsız; 'Rule 0.5 kapsam disiplini' agent'ların taşmasını iyi engelliyor. ../../references/definition-of-done.md arşivde yok (yalnız 'ayrıca bkz').",
+      "ortusme_grubu": "plan-yurutme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -11708,7 +11895,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11772,9 +11960,31 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kullanıcının gerçekte ne istediğini (yapması gerektiğini düşündüğü şeyi değil) bulmak için tek soruluk turlarla ~%95 güvene kadar görüşme yapar; her soruya bir tahmin ekler, niyeti kullanıcının kendi sözleriyle özetleyip açık onay ister ve durur.",
+      "kullanim_alani": "İstek 'kimin için / neden şimdi' bilgisi olmadan geldiğinde; kullanıcı 'beni sorgula', 'emin miyiz?' dediğinde; plan veya spec yazılmadan önce kısa niyet doğrulaması.",
+      "kullanma": "Etkileşimsiz bağlamlar (CI, /loop); gereksinim zaten netse; tam tasarım belgesi gerekiyorsa (brainstorming).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "landing-page",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Net durma kuralı ve 'istek vs. olması gereken' ayrımı brainstorming'den farklı bir boşluğu dolduruyor; kısa ve yan etkisiz.",
+      "ortusme_grubu": "fikir-netlestirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -11783,7 +11993,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11848,10 +12059,28 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in kısa plan yazma rehberi (obra/superpowers'tan uyarlanmış): 5-10 görevlik, her görevin doğrulaması belli, bir sayfayı geçmeyen planı proje kökünde {görev-adı}.md olarak yazdırır; proje tipine göre ag-kit doğrulama betiklerini önerir.",
+      "kullanim_alani": "ag-kit kullanan projelerde veya çok kısa, tek sayfalık plan yeterliyse.",
+      "kullanma": "Alt-agent'lara devredilecek ayrıntılı plan gerektiğinde (writing-plans); ag-kit betikleri (ux_audit.py, security_scan.py…) projede yoksa betik önerileri boşa düşer.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kısalık ilkesi iyi ama içerik writing-plans'ın sadeleştirilmiş türevi; plan dosyasını proje köküne yazma kuralı ve var olmayan ag-kit betiklerine atıf zayıflık.",
+      "ortusme_grubu": "uygulama-plani",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -11859,7 +12088,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -11923,9 +12153,28 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Spec'i bağımlılık grafiği çıkarıp dikey dilimlere bölerek sıralı, boyutlandırılmış görevlere çevirir; her görev için kabul ölçütü ve doğrulama, fazlar arası kontrol noktaları, riskler ve paralelleştirme fırsatları içeren plan şablonu verir.",
+      "kullanim_alani": "Spec hazır, iş büyük ve dilimlenmesi gerekiyorsa; tahmin/kapsam çıkarma veya paralel iş fırsatı aranırken; superpowers zinciri kullanılmayan projelerde.",
+      "kullanma": "writing-plans kurulu bir rolde ikinci plan skilli olarak (aynı iş); tek adımlık işler.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. İyi yapılandırılmış ve kısa; dikey dilim ve kontrol noktası anlatımı güçlü. writing-plans'tan daha az ayrıntılı (arayüz sözleşmesi, TDD adımları yok), bu yüzden alternatif. ../../references/ bağlantıları arşivde yok (yalnız 'ayrıca bkz').",
+      "ortusme_grubu": "uygulama-plani",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -11934,7 +12183,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12008,9 +12258,29 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Her uygulama kararını resmî dokümantasyona dayandırır: yığını ve sürümleri tespit eder, resmî belgeyi çeker (çekilen içeriği talimat değil veri sayar), belgelenmiş kalıpla uygular ve kaynakları kodda/yanıtta alıntılar.",
+      "kullanim_alani": "Framework/kütüphane sürümüne duyarlı işler; güncelliğini yitirmiş kalıp riski olan hızlı değişen API'ler (Next.js, React 19, Tailwind v4…).",
+      "kullanma": "İnternet erişimi yoksa; saf algoritma/iş mantığı değişiklikleri.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "landing-page",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı.",
+      "ortusme_grubu": "resmi-dokuman-dayanagi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -12019,7 +12289,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12084,9 +12355,29 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kodlamadan önce spec yazdırır: kapsam kontrolü (gerekirse yetenek haritasına bölme), amaç/yığın/komutlar/yapı/test stratejisi/sınırlar/başarı ölçütü içeren spec, ardından plan, görevler ve uygulama aşamalarını kapılı bir akışla yürütür; spec'i canlı tutma kurallarını verir.",
+      "kullanim_alani": "Yeni proje/özellik başlarken spec veya PRD yoksa; tek bir isteğin birden çok bağımsız yeteneğe bölünmesi gerektiğinde.",
+      "kullanma": "Küçük, net değişiklikler; gereksinim hâlâ belirsizse önce brainstorming/interview-me.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, birincil (spec yazımı). superpowers'ta brainstorming'in ürettiği tasarım belgesine karşılık gelir ama daha yapılandırılmış şablon ve 'spec'i canlı tut' kuralları sunar; writing-plans ile birlikte kullanılır.",
+      "ortusme_grubu": "spec-yazimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -12095,14 +12386,15 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
     {
       "id": "templates",
       "ad": "templates",
-      "durum": "tercih",
+      "durum": "alternatif",
       "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/01-planlama-metodoloji/templates",
@@ -12160,10 +12452,38 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "13 proje iskelet şablonunun (Next.js fullstack/SaaS/static, Nuxt, Express, FastAPI, Expo, Flutter, Electron, Chrome MV3, CLI, Turborepo, Astro) dizini; her şablon yığın, sürüm ve klasör yapısını verir.",
+      "kullanim_alani": "Sadece şablon dosyaları istenip app-builder'ın orkestrasyon kısmı istenmediğinde.",
+      "kullanma": "app-builder kuruluysa (aynı dosyaları templates/ altında zaten taşıyor); adı genel olduğundan başka 'templates' skilleriyle çakışabilir.",
+      "teknoloji": [
+        "next.js",
+        "react",
+        "node",
+        "python",
+        "vue",
+        "flutter",
+        "react-native"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "landing-page",
+        "kurumsal-site",
+        "mobil-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV / ALTERNATİF. İçerik app-builder/templates ile birebir aynı (diff: yalnız KAYNAK.md farkı); ayrı kurulması yinelenen bağlam. Durum alternatife çekildi.",
+      "ortusme_grubu": "proje-iskeleti",
+      "ortusme_rolu": "alternatif",
+      "durum_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -12171,7 +12491,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12233,9 +12554,33 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Spec'ten, kod tabanını hiç görmemiş bir mühendisin uygulayabileceği ayrıntılı uygulama planı yazdırır: dosya yapısı, her görev için dosyalar, arayüz imzaları (üretir/tüketir), TDD adımları (başarısız test → minimum kod → geçen test → commit), global kısıtlar ve inceleme odağı. Plan subagent-driven-development veya executing-plans'a devredilir.",
+      "kullanim_alani": "Çok adımlı bir iş için spec/gereksinim hazırsa, koda dokunmadan önce; alt-agent'lara dağıtılacak görevler gerektiğinde.",
+      "kullanma": "Tek dosyalık küçük düzeltmeler; spec henüz yoksa (önce brainstorming/spec-driven-development).",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, uygulama-plani grubunun birincili. Gerekçe: arayüz sözleşmeleri, görev boyutlandırma ve 'inceleme odağı' bölümüyle en uygulanabilir plan biçimi; superpowers yürütme zinciriyle (subagent-driven-development, executing-plans, TDD, verification) uçtan uca bağlı. addyosmani planning-and-task-breakdown daha hafif ve yığından bağımsız; vudovn plan-writing kısa ama ag-kit betiklerine atıf yapıyor.",
+      "ortusme_grubu": "uygulama-plani",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -12244,154 +12589,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "archify-review",
-      "ad": "archify-review",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/02-kod-kalitesi-review",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/02-kod-kalitesi-review/archify-review",
-      "varyantlar": {},
-      "repo": "tt-a1i/archify",
-      "kaynak_yol": ".agents/skills/archify-review",
-      "commit": "25cf37080fc8b1dbe758a4efc3935b55f3327083",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "Review Archify issues, PRs, or code through value, cost, and impact to support evidence-based maintenance decisions. Use for issue triage, change reviews, and code quality assessments.",
-      "teknoloji_oto": [],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": ""
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "../../../CONTRIBUTING.md",
-        "../../../REVIEWING.md"
-      ],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 2,
-      "skill_md_kb": 1.6,
-      "klasor_adi": "archify-review",
-      "skill_md_hash": "d28b635c84b1c66dbadc015058a6c91224933841",
-      "ana_hash": "832949f4a1167fae54c656d71351b6b1b4629e27e92e0911cf63fd5c77bc3c69",
-      "varyant_hash": {},
-      "klasor_hash": "00ab3e997104755aa2ea4611d435ec3a904f1752a8a7b8ef4d30db39164753f9",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "tt-a1i",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/tt-a1i",
-        "resmi_kaynak": false,
-        "yildiz": 86998,
-        "fork": 5856,
-        "acik_issue": 277,
-        "son_guncelleme": "2026-10-21",
-        "olusturulma": "2026-04-15",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-        "ana_sayfa": "https://archify.si",
-        "katkici": 93
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 91,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (1 gün önce)",
-          "topluluk 20/20 (★86998)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 3/5"
-        ]
-      }
-    },
-    {
-      "id": "archify-tuning",
-      "ad": "archify-tuning",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/02-kod-kalitesi-review",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/02-kod-kalitesi-review/archify-tuning",
-      "varyantlar": {},
-      "repo": "tt-a1i/archify",
-      "kaynak_yol": ".agents/skills/archify-tuning",
-      "commit": "25cf37080fc8b1dbe758a4efc3935b55f3327083",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "Improve Archify diagram accuracy, visual quality and complete authoring speed with fewer repairs. Use for generation experiments or evaluating changes to layout, routing, diagnostics, authoring instructions and acceptance rules against actual diagrams and agent traces.",
-      "teknoloji_oto": [
-        "node"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": ""
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": true,
-      "kirik_baglantilar": [
-        "../../../CONTRIBUTING.md"
-      ],
-      "baglam_yuku": "orta",
-      "boyut_kb": 57,
-      "skill_md_kb": 8.9,
-      "klasor_adi": "archify-tuning",
-      "skill_md_hash": "f21c71c871aa86882d01f063ae32477e86244758",
-      "ana_hash": "fe778f709935b4a9babfc6e07a0a29c606b081df10ae02d667d23b8fc96ae9c9",
-      "varyant_hash": {},
-      "klasor_hash": "69807d9896c3d3f3449d856099686804be649b35d13665036ecc67c46c26dcce",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "tt-a1i",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/tt-a1i",
-        "resmi_kaynak": false,
-        "yildiz": 86998,
-        "fork": 5856,
-        "acik_issue": 277,
-        "son_guncelleme": "2026-10-21",
-        "olusturulma": "2026-04-15",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-        "ana_sayfa": "https://archify.si",
-        "katkici": 93
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 89,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (1 gün önce)",
-          "topluluk 20/20 (★86998)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12454,10 +12653,30 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in her kod yazımında açık tutulan pragmatik kodlama standardı: SRP/DRY/KISS/YAGNI, isimlendirme kuralları, küçük fonksiyon ve sığ iç içelik, gereksiz yorum/yardımcı/dosya yasakları; bir dosyayı düzenlemeden önce onu kimin içe aktardığını ve hangi testlerin kapsadığını kontrol etmeyi şart koşar.",
+      "kullanim_alani": "Kod yazan agent'lar için kısa, her zaman açık stil ve disiplin kuralı olarak.",
+      "kullanma": "Projenin kendi stil rehberi/lint kuralları güçlü ve farklıysa (çatışabilir); 'hata bildirilince açıklama yapma, düzelt' kuralı açıklama isteyen kullanıcılarla uyumsuz olabilir.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, temiz-kod grubunun tek üyesi. 7 KB, yararlı kurallar ve 'düzenlemeden önce bağımlıları kontrol et' adımı değerli; ancak katı sayılar (fonksiyon ≤20 satır) ve 'priority: CRITICAL, her zaman aktif' iddiası bağlam dışı uygulanabilir.",
+      "ortusme_grubu": "temiz-kod",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -12465,7 +12684,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12530,9 +12750,31 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Beş eksenli kod incelemesi yaptırır: doğruluk, okunabilirlik/sadelik, mimari, güvenlik, performans. Önce testleri sonra uygulamayı okur, bulguları ciddiyete göre sınıflar, değişiklik boyutu ve açıklama kuralları, çoklu model inceleme deseni, ölü kod hijyeni, bağımlılık disiplini ve hazır inceleme şablonu verir.",
+      "kullanim_alani": "Birleştirmeden önce her değişiklikte; kendi, başka agent'ın veya insanın yazdığı diff/PR'ı incelerken (diff satır içi yapıştırılmış olsa da).",
+      "kullanma": "Yalnız YAGNI/aşırı mühendislik taraması istendiğinde (pragmatic-review daha odaklı); inceleme alt-agent'ını başlatma akışı (requesting-code-review).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, kod-inceleme grubunun birincili. Gerekçe: en kapsamlı ve yığından bağımsız inceleme yöntemi; 'önce testleri oku' ve 'doğrulamayı doğrula' adımları agent incelemelerinin tipik açığını kapatıyor. obra requesting-code-review inceleme yapmaz, inceleyiciyi başlatır (ayrı grup); pragmatic-review ve code-review-checklist daha dar.",
+      "ortusme_grubu": "kod-inceleme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -12541,7 +12783,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12602,10 +12845,30 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kısa kod inceleme kontrol listesi: doğruluk, güvenlik (enjeksiyon, XSS, gizli anahtar, prompt injection), performans, kod kalitesi, test ve dokümantasyon maddeleri; AI/LLM kodu için ek kontroller ve 🔴/🟡/🟢 yorum etiketleri.",
+      "kullanim_alani": "Hızlı, hafif bir kontrol listesi yeterli olduğunda; ag-kit iş akışı kullanan projelerde.",
+      "kullanma": "Derinlemesine inceleme gerektiğinde (code-review-and-quality).",
+      "teknoloji": [
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. 3 KB, yararlı ama yüzeysel; maddeler code-review-and-quality'nin alt kümesi. AI'ya özgü kontroller (prompt injection, çıktı temizleme) küçük bir artı.",
+      "ortusme_grubu": "kod-inceleme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -12613,7 +12876,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12680,10 +12944,34 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "code-review-graph MCP sunucusunun kullanım rehberi: Tree-sitter ile kod tabanını SQLite'ta AST grafiğine çevirip değişikliğin etki alanını (blast radius) hesaplar; büyük depolarda inceleme ve çok dosyalı değişikliklerde yalnız ilgili dosyaları okutarak token tasarrufu sağlar. Kurulum ve indeks oluşturmayı kullanıcı onayına bağlar.",
+      "kullanim_alani": "500+ dosyalı depolar, monorepo'lar, modüller arası bağımlılıklı değişiklikler; ölü kod tespiti ve refactor önizlemesi.",
+      "kullanma": "~200 dosyanın altındaki projeler; yoğun dinamik import/yansıma kullanan kod; MCP kurmak istenmiyorsa.",
+      "teknoloji": [
+        "python",
+        "tree-sitter",
+        "sqlite",
+        "mcp"
+      ],
+      "gerekli_paketler": [
+        "code-review-graph (pip)",
+        "MCP sunucu yapılandırması"
+      ],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel, --skill ile). Dürüst kullan/kullanma eşikleri ve onaysız kurulum yasağı iyi. Üçüncü taraf PyPI paketine ve MCP kurulumuna bağlı; skill tek başına iş yapmaz. Rol çekirdeğine alınmadı.",
+      "ortusme_grubu": "buyuk-depo-baglami",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
-        "not": "A",
+        "puan": 76,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -12691,7 +12979,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12758,9 +13047,36 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Davranışı birebir koruyarak kodu açıklık için sadeleştirir: Chesterton'ın çiti (önce neden var olduğunu anla), proje geleneklerine uyma, zekice yerine açık kod, denge ve yalnız değişen kapsama odaklanma ilkeleri; TypeScript/JavaScript, Python ve React için dile özgü örnekler.",
+      "kullanim_alani": "Çalışan ama okunması/bakımı zor koda refactor; incelemede biriken karmaşıklık fark edildiğinde; yeni yazılan kodu teslim öncesi toparlamak.",
+      "kullanma": "Depo genelinde ölü kod/katman denetimi (simplify-codebase); davranış değiştiren yeniden tasarım; performans ayarı.",
+      "teknoloji": [
+        "typescript",
+        "javascript",
+        "python",
+        "react"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, kod-sadelestirme grubunun birincili. Gerekçe: davranış koruma ve 'değişen kapsamla sınırla' kuralları varsayılan kullanım için en güvenli sürüm; dile özgü rehber somut. simplify-codebase depo geneli denetim için tamamlayıcı; simplify-code (vudovn) daha yüzeysel alternatif.",
+      "ortusme_grubu": "kod-sadelestirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -12769,7 +13085,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12832,10 +13149,38 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Her kod değişikliğinden sonra ekosisteme göre lint, tip denetimi ve güvenlik taramasını çalıştırır (Node/TS: eslint, tsc --noEmit, npm audit; Python: ruff, mypy, bandit) ve hata kalmadan işi bitmiş saymaz; proje tipini algılayıp uygun komutları çalıştıran lint_runner.py ve type_coverage.py betikleri içerir.",
+      "kullanim_alani": "TypeScript/JavaScript veya Python projelerinde her değişiklik sonrası otomatik kalite kapısı.",
+      "kullanma": "Lint/tip araçları yapılandırılmamış projeler (önce yapılandırma); farklı ekosistemler (Go, Rust…) için komut yok.",
+      "teknoloji": [
+        "node",
+        "typescript",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "eslint",
+        "typescript",
+        "ruff/mypy/bandit (Python)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve uygulanabilir; betikler proje tipini algılıyor. 'FINAL AUDIT REPORT' bölümüne atıf betik çıktısıyla tam örtüşmüyor; npm audit her değişiklikte gereksiz yavaş olabilir.",
+      "ortusme_grubu": "lint-dogrulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -12843,7 +13188,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12906,9 +13252,31 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "YAGNI ve KISS odaklı etkileşimli kod incelemesi: git durumundan kapsamı seçtirir (commit edilmemiş, dal, dosya, son N commit), aşırı mühendislik kalıplarını tarar, temel güvenlik/performans kontrolü yapar ve bulguları kanıtla öz-denetler. --deep altı geçişli kapsamlı inceleme, --ci GitHub Actions için etkileşimsiz mod sunar.",
+      "kullanim_alani": "Aşırı mühendislik, gereksiz soyutlama şüphesi olan değişikliklerde; CI'da otomatik inceleme yorumu üretmek.",
+      "kullanma": "Genel çok eksenli inceleme varsayılanı olarak (code-review-and-quality); git dışı projeler.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. YAGNI odağı ve CI modu farklılaştırıcı; claudesidian (Obsidian kasası) reposundan geliyor ama içerik genel. Etkileşimli menü varsayılan, --auto/--ci ile atlanır.",
+      "ortusme_grubu": "kod-inceleme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 70,
+        "puan": 74,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (194 gün önce)",
@@ -12917,7 +13285,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -12976,9 +13345,29 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Gelen kod inceleme geri bildirimine teknik titizlikle yaklaşmayı öğretir: oku, kendi sözlerinle yeniden ifade et, kod tabanında doğrula, değerlendir, gerekirse gerekçeli itiraz et, maddeleri tek tek uygulayıp test et; 'harika fikir!' gibi gösterişli onayı ve doğrulamadan uygulamayı yasaklar.",
+      "kullanim_alani": "İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken.",
+      "kullanma": "Geri bildirim yokken; incelemeyi yapan tarafta.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.",
+      "ortusme_grubu": "inceleme-dongusu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 93,
+        "puan": 88,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -12987,7 +13376,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13048,9 +13438,34 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "İş bitince veya birleştirmeden önce, oturum geçmişini değil özenle hazırlanmış bağlamı (açıklama, plan, BASE/HEAD SHA) vererek bir inceleyici alt-agent başlatır; code-reviewer.md şablonu ile Kritik/Önemli/Küçük bulguları ister ve bunlara göre ilerler.",
+      "kullanim_alani": "subagent-driven-development'ta her görevden sonra; büyük özellik bitiminde; main'e birleştirmeden önce taze bağlamlı inceleme gerektiğinde.",
+      "kullanma": "Alt-agent aracı olmayan ortamlar (inceleme satır içi yapılır); incelemenin kendisini yapan agent için yöntem değil (code-review-and-quality).",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici",
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, inceleme-dongusu grubunun birincili. Kısa, superpowers zincirinin parçası; code-reviewer.md şablonu 'spec bir vizyon belgesidir' ilkesiyle güçlü. İnceleme yöntemi değil orkestrasyon olduğu için code-review-and-quality ile çakışmaz.",
+      "ortusme_grubu": "inceleme-dongusu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 93,
+        "puan": 96,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -13059,7 +13474,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13122,10 +13538,29 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Aşırı mühendislik içeren kodu sadeleştirme kontrol listesi: gereksiz soyutlamalar, ölü kod, derin iç içelik, çok parametreli fonksiyonlar ve erken optimizasyon için koku → çözüm tabloları; sayısal hedefler (iç içelik ≤3, parametre ≤4, fonksiyon ≤30 satır) ve adım adım protokol.",
+      "kullanim_alani": "Hızlı, kontrol listesi tarzı sadeleştirme; ag-kit iş akışı kullanan projeler.",
+      "kullanma": "Davranış korumaya ve proje geleneklerine özen gereken işlerde (code-simplification daha dikkatli); depo geneli denetim (simplify-codebase).",
+      "teknoloji": [
+        "typescript",
+        "javascript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Okunur ve kısa, ama 'tek implementasyonlu arayüzü kaldır' gibi kurallar bağlamsız uygulanırsa zarar verebilir; code-simplification'ın kapsadığı işi daha kaba yapıyor.",
+      "ortusme_grubu": "kod-sadelestirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -13133,7 +13568,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13192,9 +13628,27 @@
         "ana_sayfa": "https://archify.si",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kod tabanından kazara karmaşıklığı kanıta dayalı olarak ayıklar: Survey (salt okuma, sıralı bulgular) ve Change (yetkili silme/birleştirme) kipleri; sözleşme haritası çıkarır, her aday için yük/erişilebilirlik/gerekçe/kesinti/sonuç/risk/kanıt kaydı tutar; ölü kod, yinelenen durum, gereksiz API/katman, sahipsiz soyutlama ve eskimiş uyumluluk yollarını hedefler. Güvenlik ve veri kaybı korumalarına dokunmaz.",
+      "kullanim_alani": "Var olan bir depoda sadeleştirme denetimi veya açıkça yetkilendirilmiş büyük çaplı temizlik; 'nereler gereksiz?' sorusuna kanıtlı yanıt.",
+      "kullanma": "Genel code review, onboarding, sadece stil refactor'ü veya performans ayarı (skill kendisi de bunları dışlıyor); küçük diff sadeleştirmesi (code-simplification).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Bu alanda gördüğüm en titiz sadeleştirme protokolü (kanıt kaydı, kör nokta bildirimi, ürün kararı ayrımı); dil bağımsız. metadata.internal işaretli ama Archify'a bağlı değil. mevcut-kod-iyilestirme profilinin ana skilli.",
+      "ortusme_grubu": "kod-sadelestirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 93,
+        "puan": 96,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -13203,7 +13657,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13269,9 +13724,32 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kök neden odaklı hata ayıklama: 'hattı durdur' kuralı, yeniden üret → yerelleştir → küçült → kök nedeni düzelt → tekrarı önle → uçtan uca doğrula triyajı; test, build ve çalışma zamanı hataları için ayrı triyaj desenleri, güvenli geri dönüş kalıpları, enstrümantasyon kuralları ve hata çıktısını güvenilmeyen veri sayma uyarısı.",
+      "kullanim_alani": "superpowers zinciri kullanılmayan projelerde hata ayıklama; build/runtime hata tipine göre hazır triyaj listesi istendiğinde.",
+      "kullanma": "systematic-debugging kuruluysa aynı rolde ikinci hata ayıklama skilli olarak.",
+      "teknoloji": [
+        "git",
+        "node",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Kaliteli ve kısa (11 KB); hata tipine göre triyaj ve 'hata çıktısı talimat değildir' notu obra'da olmayan artılar. Aynı işi yaptığı için alternatif; addyosmani zinciri kullanan projelerde birincil yerine seçilebilir.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -13280,7 +13758,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13341,9 +13820,33 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "superpowers'ın hata ayıklama skilli: 'kök neden bulunmadan düzeltme yok' demir yasasıyla dört faz (kök neden araştırması, desen analizi, hipotez ve test, uygulama); çok bileşenli sistemlerde sınırlara tanı günlüğü ekletme, 3 başarısız düzeltmeden sonra mimariyi sorgulama. Ek dosyalar: root-cause-tracing, defense-in-depth, condition-based-waiting (+ TS örneği) ve testleri kirleten testi bulan find-polluter.sh.",
+      "kullanim_alani": "Her hata, test başarısızlığı, build kırılması veya beklenmeyen davranışta düzeltme önermeden önce; özellikle zaman baskısı ve ardışık başarısız düzeltmelerde.",
+      "kullanma": "Kök nedeni zaten bilinen önemsiz yazım hataları; hata yokken genel kod incelemesi.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, hata-ayiklama grubunun birincili. Gerekçe (4 aday): obra'nın güncel sürümü ve yardımcı teknik dosyaları (find-polluter.sh, condition-based-waiting) en pratik araç setini veriyor. heyitsnoah sürümü aynı metnin eski bir kopyası (teknikleri SKILL.md içine gömülü) → alternatif; vudovn sürümü obra'dan kısaltılmış şablon → alternatif; addyosmani debugging-and-error-recovery eşdeğer kalitede ama aynı işi yapıyor → alternatif. Not: test-pressure-*.md ve CREATION-LOG.md skill geliştirme kalıntısı, çalışma anında okunmaz.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -13352,7 +13855,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13415,9 +13919,28 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "obra/superpowers systematic-debugging'in claudesidian'daki kopyası: aynı dört faz ve demir yasa; kök neden izleme, stack trace ekleme, kirleten testi bulma ve dört katmanlı savunma tekniklerini ayrı dosya yerine SKILL.md içinde taşır.",
+      "kullanim_alani": "Tek dosyalık (ek dosyasız) sürüm tercih edildiğinde; claudesidian kasası kullanan projeler.",
+      "kullanma": "obra sürümü kuruluysa (aynı ad, aynı içerik); güncel superpowers değişikliklerini almak istendiğinde.",
+      "teknoloji": [
+        "git",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik iyi ama obra'nın eski sürümünden türetilmiş kopya; upstream ile senkron değil.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 70,
+        "puan": 74,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (194 gün önce)",
@@ -13426,7 +13949,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13488,10 +14012,28 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in kısaltılmış hata ayıklama şablonu (obra/superpowers'tan uyarlanmış): yeniden üret, izole et, anla (5 Neden), düzelt ve doğrula fazları; kontrol listeleri ve temel git/grep/pm2 komutları.",
+      "kullanim_alani": "ag-kit /debug iş akışında veya yalnız kısa bir hatırlatıcı yeterliyse.",
+      "kullanma": "Genel kullanımda (obra sürümü çok daha güçlü); aynı adlı diğer sürümlerle birlikte.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF / SADECE ARŞİV. 2.5 KB şablon; demir yasa, çok bileşenli tanı ve 'üç düzeltmede dur' gibi asıl değerli kısımlar çıkarılmış.",
+      "ortusme_grubu": "hata-ayiklama",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -13499,7 +14041,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13558,10 +14101,27 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in TDD ilke özeti: RED-GREEN-REFACTOR döngüsü, TDD'nin üç yasası, her faz için kurallar, AAA, TDD'nin ne zaman değerli olduğu tablosu ve test yazan/kod yazan agent'ları ayıran çoklu agent deseni.",
+      "kullanim_alani": "ag-kit iş akışı kullanan projelerde veya çok kısa bir TDD hatırlatıcısı yeterliyse.",
+      "kullanma": "Gerçek uygulama rehberi gerektiğinde (test-driven-development); diğer TDD sürümleriyle birlikte.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: ALTERNATİF / SADECE ARŞİV. 3 KB tablo özeti; 'testi çalıştırıp başarısızlığı gör' gibi uygulama adımları yok, iki birincil sürümün kapsadığı her şeyi daha zayıf veriyor.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -13569,7 +14129,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13639,9 +14200,33 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kırmızı-yeşil-refactor döngüsüyle geliştirme: önce projenin test yığınını keşfeder, başarısız test yazdırır, minimum kodla geçirtir, sonra temizletir. Hata düzeltmeleri için 'önce kanıtla' (hatayı yeniden üreten test) deseni, test piramidi ve test boyutları, davranışı test etme, DAMP, sahte yerine gerçek implementasyon, AAA ve DevTools ile tarayıcı testi rehberi içerir.",
+      "kullanim_alani": "Mantık yazarken, hata düzeltirken veya davranış değiştirirken; kullanıcı test istemese de kod satır içi verilmiş olsa bile.",
+      "kullanma": "Atılacak prototip/spike; salt yapılandırma veya üretilmiş kod; superpowers zincirinin katı 'test öncesi kodu sil' disiplini isteniyorsa (test-driven-development@obra).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "backend-muhendis",
+        "frontend-muhendis",
+        "kod-inceleyici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -13650,7 +14235,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13715,9 +14301,30 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "superpowers'ın TDD skilli: 'başarısız test olmadan üretim kodu yok' demir yasası; testten önce yazılan kodu silip baştan başlatır, kırmızıyı ve yeşili mutlaka çalıştırıp gözlemletir, iyi/kötü test örnekleri, gerekçe-çürütme tablosu ve writing-good-tests.md ek rehberi sunar.",
+      "kullanim_alani": "superpowers zinciri (writing-plans → subagent-driven-development / executing-plans) uçtan uca kullanılırken; agent'ın TDD'yi atlama eğilimine karşı en katı disiplin istendiğinde.",
+      "kullanma": "addyosmani sürümü kuruluysa (aynı ad, aynı iş); test yığını keşfi ve test piramidi rehberi gerekiyorsa.",
+      "teknoloji": [
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik kalitesi çok yüksek ve baskı testleriyle geliştirilmiş; birincilden farkı kapsam değil sertlik. Aynı adı taşıdığı için bir projede yalnız biri kurulmalı.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -13726,7 +14333,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13785,9 +14393,29 @@
         "ana_sayfa": "https://archify.si",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Testlerin değerini ve geri bildirim maliyetini denetler: yavaş, kararsız, yinelenen veya kırılgan testleri bulur; uygulama sırasında hangi testin ekleneceğine/uyarlanacağına/silineceğine karar verdirir. Her yeni test için 'hangi somut hatayı yakalar, eşdeğer refactor'da da kırılır mı, başka bir kontrol zaten yakalıyor mu' sorularını şart koşar; AI'nın hem kodu hem testi aynı yanlış varsayımla yazma riskine dikkat çeker.",
+      "kullanim_alani": "Test paketi yavaş/kararsız olduğunda denetim; commit/PR öncesi test değişikliklerini incelemek; başarısız bir kontrolün gerçek regresyon mu eskimiş assertion mı olduğunu ayırmak.",
+      "kullanma": "Test yazma yöntemi öğretmek (test-driven-development); kapsam dışı depo geneli denetim (yalnız istenirse).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "kod-inceleyici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, test-degeri grubunun birincili. Archify'dan ama genel amaçlı (internal işaretli olsa da); test sayısı/kapsama yüzdesini kanıt olarak görüp ürün yargısını öne alması diğer test skillerinde yok. Yalnız ilgili davranışa odaklı kapsam kuralı bağlamı korur.",
+      "ortusme_grubu": "test-degeri",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -13796,7 +14424,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13855,10 +14484,32 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Test ilkeleri özeti: test piramidi, AAA, birim/entegrasyon/E2E seçimi, iyi birim testi özellikleri, mock ne zaman/hangi tür (stub, spy, mock, fake), isimlendirme ve gruplama, test verisi stratejileri (factory, fixture, builder); test_runner.py betiği proje tipine göre testleri çalıştırır.",
+      "kullanim_alani": "Test çerçevesi ve mock stratejisi seçerken hızlı başvuru; ag-kit kullanan projeler.",
+      "kullanma": "TDD döngüsü veya test değeri kararları (test-driven-development, test-value bunları daha derin kapsar).",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (test_runner.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Doğru ama yüzeysel tablo özeti; içerik test-driven-development'ın 'Writing Good Tests' ve test piramidi bölümlerinde daha iyi var.",
+      "ortusme_grubu": "tdd",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -13866,7 +14517,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13925,9 +14577,33 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "'Taze doğrulama kanıtı olmadan tamamlandı iddiası yok' kuralı: bir durum iddia etmeden önce kanıtlayan komutu belirle, tam çalıştır, çıktıyı ve çıkış kodunu oku, ancak sonra iddia et. Testler, lint, build, hata düzeltmesi, regresyon testi ve alt-agent raporları için neyin yeterli kanıt olduğunu tablolar.",
+      "kullanim_alani": "İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman.",
+      "kullanma": "Neredeyse hiçbir zaman gereksiz değildir; yalnız doğrulanacak çalıştırılabilir bir şey yoksa (salt doküman işi) etkisiz.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "backend-muhendis",
+        "frontend-muhendis",
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, tamamlanma-dogrulama grubunun birincili. 4 KB ile en yüksek fayda/bağlam oranı; 'alt-agent başarılı dedi → bağımsız doğrula' maddesi orkestratör için kritik. verify-changes yürütme yöntemini, bu skill iddia disiplinini veriyor.",
+      "ortusme_grubu": "tamamlanma-dogrulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 93,
+        "puan": 96,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -13936,7 +14612,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -13998,10 +14675,32 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kodun çalıştığını incelemeyle değil çalıştırarak kanıtlatır: değişen dosyaları ve beklenen davranışı belirle, değişiklik tipine göre doğrulama yöntemini seç (hata senaryosunu yeniden üret, endpoint çağır, bileşeni render et, build al), komutları çalıştır ve 'doğrulanamayanlar' bölümü olan kanıt raporu yaz. Web, API ve CLI için kontrol listeleri içerir.",
+      "kullanim_alani": "Özellik/hata düzeltmesi bittikten sonra somut doğrulama planı ve rapor biçimi gerektiğinde; 'çalışıyor mu?' sorusunda.",
+      "kullanma": "Yeni kod yazımı; yalnız iddia disiplini yeterliyse (verification-before-completion).",
+      "teknoloji": [
+        "node",
+        "python"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı (opsiyonel). Değişiklik tipi → doğrulama yöntemi tablosu ve 'doğrulanamayanlar' raporu pratik; ilkesi verification-before-completion ile aynı, onun yanında yinelenen bağlam olabilir.",
+      "ortusme_grubu": "tamamlanma-dogrulama",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -14009,7 +14708,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14073,9 +14773,33 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kararlı API ve modül arayüzü tasarımı: Hyrum yasası ve tek sürüm kuralı, önce sözleşme, tutarlı hata semantiği, sınırda doğrulama, değiştirmek yerine ekleme, öngörülebilir isimlendirme ve idempotency anahtarını doğru uygulama; REST kaynak tasarımı, sayfalama, filtreleme, PATCH ve TypeScript arayüz desenleri (ayrık birleşimler, girdi/çıktı ayrımı, markalı ID tipleri).",
+      "kullanim_alani": "REST/GraphQL endpoint'i, modül sınırı veya ön yüz-arka yüz sözleşmesi tasarlarken; herkese açık bir arayüzü değiştirirken.",
+      "kullanma": "Yalnız iç, tek kullanımlık fonksiyonlar; API stil seçimi (REST mi GraphQL mi tRPC mi) ağırlıklıysa api-patterns ile birlikte.",
+      "teknoloji": [
+        "typescript",
+        "rest",
+        "graphql"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı.",
+      "ortusme_grubu": "api-tasarimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -14084,7 +14808,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14147,10 +14872,37 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in API tasarım karar rehberi: REST/GraphQL/tRPC seçim ağacı, kaynak isimlendirme ve durum kodları, zarf/hata/sayfalama yanıt biçimleri, sürümleme, kimlik doğrulama (JWT, OAuth, Passkey, API anahtarı), rate limiting, OpenAPI dokümantasyonu ve OWASP API Top 10 güvenlik testini ayrı dosyalarda seçici okumayla sunar; api_validator.py betiği içerir.",
+      "kullanim_alani": "API stili ve kimlik doğrulama yöntemi seçerken; rate limiting veya sürümleme stratejisi belirlerken.",
+      "kullanma": "Sözleşme/arayüz ilkeleri ağırlıklı işlerde tek başına (api-and-interface-design); UI işleri.",
+      "teknoloji": [
+        "rest",
+        "graphql",
+        "trpc",
+        "typescript",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (api_validator.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Seçici okuma kuralı bağlamı küçük tutuyor (SKILL.md 2.5 KB), auth ve rate-limiting dosyaları yararlı. İçerik yer yer yüzeysel; @[skills/...] biçimindeki çapraz referanslar ag-kit sözdizimi.",
+      "ortusme_grubu": "api-tasarimi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -14158,7 +14910,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14217,82 +14970,30 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 89,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (4 gün önce)",
-          "topluluk 16/20 (★8200)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "bash-linux",
-      "ad": "bash-linux",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/bash-linux",
-      "varyantlar": {},
-      "repo": "vudovn/ag-kit",
-      "kaynak_yol": ".agents/skills/bash-linux",
-      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems.",
-      "teknoloji_oto": [
-        "node"
+      "inceleme": "incelendi",
+      "ozet_tr": "Mimari karar çerçevesi: bağlam keşfi soruları ve proje sınıflandırması, ödünleşim (trade-off) analizi ve ADR şablonları, desen seçimi karar ağaçları, MVP/SaaS/kurumsal örnekler ve desen hızlı başvurusu; 'basit başla, karmaşıklığı ancak kanıtlanınca ekle' ilkesi.",
+      "kullanim_alani": "Sistem tasarımı, desen seçimi (monolit/mikroservis, katmanlar), önemli kararların ADR olarak kaydı.",
+      "kullanma": "Doğrudan kod uygulaması; ayrıntılı ADR/dokümantasyon süreci (c-dokuman'daki documentation-and-adrs daha kapsamlı olabilir).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
       ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 4,
-      "skill_md_kb": 4.2,
-      "klasor_adi": "bash-linux",
-      "skill_md_hash": "66b940901faec5d95e34a18ac0c5511310b4123c",
-      "ana_hash": "11c4b3cb07929b68a84787fca8e78250f843da32f2ea54c241f609a4d8481ef9",
-      "varyant_hash": {},
-      "klasor_hash": "a4af273bbe51c58149ad9d1cd5be490dcf2b725de6d0a2a6b32fb823d8592f44",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "vudovn",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/vudovn",
-        "resmi_kaynak": false,
-        "yildiz": 8200,
-        "fork": 1508,
-        "acik_issue": 59,
-        "son_guncelleme": "2026-10-18",
-        "olusturulma": "2026-01-14",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "",
-        "ana_sayfa": "https://ag-kit.unikorn.vn",
-        "katkici": 10
-      },
-      "inceleme": "otomatik",
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Tek mimari karar skilli; seçici okuma ile hafif (SKILL.md 1.9 KB). İçerik genel ve yer yer ders kitabı düzeyinde ama ADR ve ödünleşim şablonları iş görüyor.",
+      "ortusme_grubu": "mimari-karar",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -14300,7 +15001,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14359,10 +15061,37 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Veritabanı tasarım kararları: PostgreSQL/Neon/Turso/SQLite seçimi, Drizzle/Prisma/Kysely ORM seçimi, normalizasyon ve ilişkiler, indeks tipleri, N+1 ve EXPLAIN ANALYZE ile sorgu optimizasyonu, güvenli migrasyonlar; schema_validator.py betiği içerir. Tercih belirsizse kullanıcıya sormayı şart koşar.",
+      "kullanim_alani": "Şema tasarlarken, ORM/veritabanı seçerken, migrasyon planlarken veya yavaş sorgu optimize ederken (Prisma, Drizzle, SQL).",
+      "kullanma": "Kesintisiz üretim migrasyonu (expand/contract) ayrıntısı gerekiyorsa deprecation-and-migration ile birlikte; NoSQL ağırlıklı projeler (sınırlı içerik).",
+      "teknoloji": [
+        "postgresql",
+        "sqlite",
+        "prisma",
+        "drizzle",
+        "sql"
+      ],
+      "gerekli_paketler": [
+        "python3 (schema_validator.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, veritabani-tasarimi grubunun tek üyesi. 'Her şeye PostgreSQL deme' ve seçim tabloları dengeli; içerik ilke düzeyinde, derin şema örnekleri az.",
+      "ortusme_grubu": "veritabani-tasarimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -14370,7 +15099,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14436,7 +15166,36 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ön yüz kodunu ölçeklenir biçimde düzenleme kuralları: UI / mantık (hook, composable) / veri (servis dosyaları) / tip / doğrulama (şema) katmanlarına ayırma, dosya sorumluluğu ve boyutu, Next.js'te varsayılan Server Component, Vue Composition API, durumu yerelden başlatma, form şeması, prop ve isimlendirme kuralları, 'god component' önleme, Tailwind sınıf hijyeni ve minimum test/erişilebilirlik tabanı.",
+      "kullanim_alani": "React/Next veya Vue kod tabanını yapılandırırken ya da organizasyonunu incelerken: mantık, API çağrısı, durum ve tiplerin nerede yaşayacağı.",
+      "kullanma": "Görsel tasarım (frontend-design, design-taste-frontend); React/Next performans kuralları (vercel-react-best-practices).",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "vue",
+        "typescript",
+        "tailwind"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, frontend-mimarisi grubunun birincili. ag-kit'in en somut skillerinden; React ve Vue'yu birlikte kapsaması ve 'görsel tasarım değil yapı' sınırı net. ../app-builder ve ../frontend-design kardeş bağlantıları kurulumda o skiller yoksa boşa düşer (yalnız atıf).",
+      "ortusme_grubu": "frontend-mimarisi",
+      "ortusme_rolu": "birincil",
+      "notlar": "../app-builder ve ../nextjs-react-expert kardeş bağlantıları yalnız 'ayrıca bkz' atfı; bu skiller kurulmasa da skill çalışır (kardes-eksik uyarısı göz ardı edilebilir).",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
         "app-builder": {
           "id": "app-builder",
@@ -14452,7 +15211,7 @@
         }
       },
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
@@ -14461,7 +15220,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14529,9 +15289,35 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Üretim kalitesinde, erişilebilir ve responsive arayüz kurma: bileşen dosya yapısı ve desenleri, durum yönetimi, tasarım sistemine bağlılık ve 'AI estetiğinden' kaçınma, boşluk/tipografi/renk, WCAG 2.1 AA (klavye, ARIA, odak yönetimi, anlamlı boş/hata durumları), responsive tasarım, yükleme ve geçiş durumları.",
+      "kullanim_alani": "Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde.",
+      "kullanma": "Sanat yönetimi/görsel yön belirleme (a-tasarim skilleri); salt backend işleri.",
+      "teknoloji": [
+        "react",
+        "typescript",
+        "css",
+        "tailwind"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı.",
+      "ortusme_grubu": "frontend-ui-uygulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -14540,82 +15326,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "nextjs-react-expert",
-      "ad": "nextjs-react-expert",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/nextjs-react-expert",
-      "varyantlar": {},
-      "repo": "vudovn/ag-kit",
-      "kaynak_yol": ".agents/skills/nextjs-react-expert",
-      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "React and Next.js performance optimization from Vercel Engineering. Use when building React components, optimizing performance, eliminating waterfalls, reducing bundle size, reviewing code for performance issues, or implementing server/client-side optimizations.",
-      "teknoloji_oto": [
-        "next.js",
-        "python",
-        "react",
-        "typescript"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "orta",
-      "boyut_kb": 111,
-      "skill_md_kb": 10.3,
-      "klasor_adi": "nextjs-react-expert",
-      "skill_md_hash": "4cde867eaf5cc06fb2973a430b3426e965667fc0",
-      "ana_hash": "34c976091751f1827105f052c18c7b879e3aa53809c6e6b39081f4c9f6b6ca7e",
-      "varyant_hash": {},
-      "klasor_hash": "02ec1f803066db10aef5caaaad6d67a568659ac668a60cdfe2042c4f9362f17b",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "vudovn",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/vudovn",
-        "resmi_kaynak": false,
-        "yildiz": 8200,
-        "fork": 1508,
-        "acik_issue": 59,
-        "son_guncelleme": "2026-10-18",
-        "olusturulma": "2026-01-14",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "",
-        "ana_sayfa": "https://ag-kit.unikorn.vn",
-        "katkici": 10
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 87,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (4 gün önce)",
-          "topluluk 16/20 (★8200)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14680,10 +15392,36 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Node.js arka yüz karar ilkeleri: Hono/Fastify/NestJS/Express seçim ağacı, yerel TypeScript ve modül sistemi kararları, katmanlı mimari, merkezi hata işleme, async desenleri, doğrulama ve güvenlik ilkeleri; sabit kod yerine bağlama göre karar vermeyi öğretir.",
+      "kullanim_alani": "Node.js backend kurarken veya framework seçerken; mevcut Node servisinin yapısını gözden geçirirken.",
+      "kullanma": "Next.js API route'larıyla sınırlı basit işler; ayrıntılı API sözleşmesi tasarımı (api-and-interface-design).",
+      "teknoloji": [
+        "node",
+        "typescript",
+        "express",
+        "fastify",
+        "hono",
+        "nestjs"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Güncel seçenekleri (Hono, yerel TS) kapsıyor ve benchmark iddialarında temkinli; ilke düzeyinde, kod örneği az.",
+      "ortusme_grubu": "node-backend",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
-        "not": "A",
+        "puan": 76,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -14691,79 +15429,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "powershell-windows",
-      "ad": "powershell-windows",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/powershell-windows",
-      "varyantlar": {},
-      "repo": "vudovn/ag-kit",
-      "kaynak_yol": ".agents/skills/powershell-windows",
-      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling.",
-      "teknoloji_oto": [
-        "api-anahtari"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 4,
-      "skill_md_kb": 3.6,
-      "klasor_adi": "powershell-windows",
-      "skill_md_hash": "44870dc6ac54da75046b7dc86defa91ce4b3121f",
-      "ana_hash": "e7fcbb0627a457d5e09d3e82a76d0b791db37663aab34724fcfbdf1551b060bf",
-      "varyant_hash": {},
-      "klasor_hash": "047cd924201f74609f1418998839b6830fdd4137dae579f03a0057b923698529",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "vudovn",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/vudovn",
-        "resmi_kaynak": false,
-        "yildiz": 8200,
-        "fork": 1508,
-        "acik_issue": 59,
-        "son_guncelleme": "2026-10-18",
-        "olusturulma": "2026-01-14",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "",
-        "ana_sayfa": "https://ag-kit.unikorn.vn",
-        "katkici": 10
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 89,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (4 gün önce)",
-          "topluluk 16/20 (★8200)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -14825,10 +15492,35 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Python geliştirme karar ilkeleri: FastAPI/Django/Flask seçim ağacı, async/sync kararı ve kütüphane seçimi, tip ipucu stratejisi ve Pydantic doğrulama, proje yapısı, hata işleme ve test ilkeleri.",
+      "kullanim_alani": "Python backend/servis kurarken veya framework seçerken; tip ipucu ve proje yapısı kararlarında.",
+      "kullanma": "Veri bilimi/notebook işleri (kapsam dışı); tek dosyalık betikler.",
+      "teknoloji": [
+        "python",
+        "fastapi",
+        "django",
+        "flask",
+        "pydantic"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ve dengeli karar rehberi; ilke düzeyinde, derinlik sınırlı. Backend bağlamında kaldığı için kategorisi 04'te bırakıldı.",
+      "ortusme_grubu": "python-gelistirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
-        "not": "A",
+        "puan": 76,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -14836,227 +15528,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "rust-pro",
-      "ad": "rust-pro",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/rust-pro",
-      "varyantlar": {},
-      "repo": "vudovn/ag-kit",
-      "kaynak_yol": ".agents/skills/rust-pro",
-      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "Master modern Rust (2024 edition) with async patterns, advanced type system features, and production-ready systems programming. Expert in the current Rust ecosystem including Tokio, axum, and modern crates. Use PROACTIVELY for Rust development, performance optimization, or systems programming.",
-      "teknoloji_oto": [],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 8,
-      "skill_md_kb": 7.6,
-      "klasor_adi": "rust-pro",
-      "skill_md_hash": "325227e7c5359656987a0b6411ddfda6a0395997",
-      "ana_hash": "46bb43aa2c28d906b0da832a45d56e14e6457bc4290060e3b8e7bd767e7b168f",
-      "varyant_hash": {},
-      "klasor_hash": "c3194a68bff0755b1ccf69a8b46e017710547404e970deb0432a7c0b771b6fa9",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "vudovn",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/vudovn",
-        "resmi_kaynak": false,
-        "yildiz": 8200,
-        "fork": 1508,
-        "acik_issue": 59,
-        "son_guncelleme": "2026-10-18",
-        "olusturulma": "2026-01-14",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "",
-        "ana_sayfa": "https://ag-kit.unikorn.vn",
-        "katkici": 10
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 89,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (4 gün önce)",
-          "topluluk 16/20 (★8200)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "vercel-composition-patterns",
-      "ad": "vercel-composition-patterns",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/vercel-composition-patterns",
-      "varyantlar": {},
-      "repo": "calesthio/OpenMontage",
-      "kaynak_yol": ".claude/skills/vercel-composition-patterns",
-      "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
-      "lisans": "AGPL-3.0",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 1,
-      "atlanan_dosyalar": [],
-      "aciklama": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
-      "teknoloji_oto": [
-        "react"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": ""
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 49,
-      "skill_md_kb": 3.1,
-      "klasor_adi": "vercel-composition-patterns",
-      "skill_md_hash": "a460ad73811b75a977045ae03a6df662d10bab6f",
-      "ana_hash": "0c1dcd3fafe5dbc77f64beb21393c8863fd1dc3fcf5b94ad7be3cb4c6b63fe5c",
-      "varyant_hash": {},
-      "klasor_hash": "54df12addca9398d5d9cdd0dbc6c5c28f6b03ed759547d23d8ad6ecb16ce9cdd",
-      "globalde": {
-        "claude": "ayni"
-      },
-      "gelistirici": {
-        "sahip": "calesthio",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/calesthio",
-        "resmi_kaynak": false,
-        "yildiz": 70579,
-        "fork": 9116,
-        "acik_issue": 412,
-        "son_guncelleme": "2026-10-16",
-        "olusturulma": "2026-03-29",
-        "lisans": "AGPL-3.0",
-        "arsivlenmis": false,
-        "aciklama": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
-        "ana_sayfa": "https://www.openmontage.video/",
-        "katkici": 69
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 92,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (6 gün önce)",
-          "topluluk 19/20 (★70579)",
-          "lisans 15/15 (AGPL-3.0)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "vercel-react-best-practices",
-      "ad": "vercel-react-best-practices",
-      "durum": "tercih",
-      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani",
-      "alan": "b-yazilim-gelistirme",
-      "yol": "arsiv/b-yazilim-gelistirme/04-mimari-api-veritabani/vercel-react-best-practices",
-      "varyantlar": {},
-      "repo": "calesthio/OpenMontage",
-      "kaynak_yol": ".claude/skills/vercel-react-best-practices",
-      "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
-      "lisans": "AGPL-3.0",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 1,
-      "atlanan_dosyalar": [],
-      "aciklama": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
-      "teknoloji_oto": [
-        "css",
-        "next.js",
-        "react"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": ""
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 207,
-      "skill_md_kb": 7.0,
-      "klasor_adi": "vercel-react-best-practices",
-      "skill_md_hash": "c836c90f27cfb772528d01b05e887d57a17d7de6",
-      "ana_hash": "c11ccacd53ed29f6f856908e2374dd4f4d32ae627379d4749cbb7a653fc0bcfa",
-      "varyant_hash": {},
-      "klasor_hash": "e50071289417e2348296b2e4e570268dd0b10301436f85eed01a9b984ce4aadc",
-      "globalde": {
-        "claude": "ayni"
-      },
-      "gelistirici": {
-        "sahip": "calesthio",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/calesthio",
-        "resmi_kaynak": false,
-        "yildiz": 70579,
-        "fork": 9116,
-        "acik_issue": 412,
-        "son_guncelleme": "2026-10-16",
-        "olusturulma": "2026-03-29",
-        "lisans": "AGPL-3.0",
-        "arsivlenmis": false,
-        "aciklama": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
-        "ana_sayfa": "https://www.openmontage.video/",
-        "katkici": 69
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 92,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (6 gün önce)",
-          "topluluk 19/20 (★70579)",
-          "lisans 15/15 (AGPL-3.0)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15117,10 +15590,30 @@
         "ana_sayfa": "",
         "katkici": 29
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Git commit geçmişini tarayıp değişiklikleri kategorilere (yeni özellik, iyileştirme, düzeltme, kırıcı değişiklik, güvenlik) ayırır, iç commit'leri eler ve teknik mesajları son kullanıcının anlayacağı sürüm notlarına çevirir; isteğe bağlı stil rehberi dosyası okur.",
+      "kullanim_alani": "Sürüm notları, haftalık/aylık ürün güncellemesi, app store değişiklik metni veya herkese açık changelog sayfası hazırlarken.",
+      "kullanma": "Geliştirici odaklı Keep a Changelog bakımı (release / git-workflow-and-versioning); commit mesajları anlamsızsa sonuç zayıf.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Kısa (3 KB) ve tek amaçlı; 'kullanıcı diline çevir' odağı diğer git skillerinde yok. İçerik çoğunlukla örnek; kategori kuralları yüzeysel.",
+      "ortusme_grubu": "surum-yayini",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (34 gün önce)",
           "topluluk 20/20 (★77605)",
@@ -15128,7 +15621,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15193,9 +15687,31 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Eski sistem, API veya özellikleri kaldırma ve kullanıcıları yeni uygulamaya taşıma: 'kod bir yüktür' ve Hyrum yasası ilkeleri, kaldırma kararı, zorunlu/öneri niteliğinde kullanımdan kaldırma, yerini yap → duyur → kademeli taşı → kaldır süreci; strangler, adapter ve feature flag geçiş desenleri, üretimde kesintisiz şema migrasyonu (expand/contract) ve zombi kod.",
+      "kullanim_alani": "Bir API/özelliği emekliye ayırırken; kullanıcıları yeni sisteme taşırken; üretimde kolon yeniden adlandırma/silme gibi kesintisiz şema değişikliğinde; bakım mı emeklilik mi kararında.",
+      "kullanma": "Yeni özellik geliştirme; sürüm/tag işlemleri (git-workflow-and-versioning).",
+      "teknoloji": [
+        "sql"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme",
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı.",
+      "ortusme_grubu": "kullanimdan-kaldirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -15204,7 +15720,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15266,9 +15783,36 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Uygulama bittiğinde işi nasıl birleştireceğine karar verdirir: tam test paketini çalıştır (kırmızıysa dur), ortamı (normal repo / worktree / detached HEAD) algıla, temel dalı doğrulat, sabit seçenek menüsü sun (yerelde birleştir, push + PR, olduğu gibi bırak), seçimi uygula ve worktree'yi kökenine göre güvenle temizle. İşi atma yalnız açık istekle.",
+      "kullanim_alani": "Tüm testler geçtikten sonra dalı birleştirme/PR/bekletme kararı ve worktree temizliği.",
+      "kullanma": "Testler kırmızıyken; ekip PR'ları başka bir araçla yönetiyorsa.",
+      "teknoloji": [
+        "git",
+        "gh"
+      ],
+      "gerekli_paketler": [
+        "gh CLI (PR seçeneği için)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, dal-bitirme grubunun birincili. Gerekçe: kullanıcıya karar bırakan sabit menü, temel dal doğrulaması ve kökene dayalı worktree temizliği ile en güvenli kapanış; pull-request (heyitsnoah) onaysız push eğilimli tek komut → alternatif.",
+      "ortusme_grubu": "dal-bitirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 93,
+        "puan": 96,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -15277,7 +15821,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15345,9 +15890,34 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Git iş akışı disiplini: trunk tabanlı geliştirme, erken ve sık commit, atomik commit ve açıklayıcı mesajlar, konuları ayırma, değişiklik boyutu, dal stratejisi ve isimlendirme, worktree ile paralel iş, 'kayıt noktası' deseni, değişiklik özetleri, commit öncesi hijyen, üretilmiş dosyalar, git ile hata ayıklama (bisect), semantik sürümleme, tag'i doğruluk kaynağı yapma ve insanlar için changelog.",
+      "kullanim_alani": "Her kod değişikliğinde commit/dal/PR düzeni; karışık çalışma ağacını temiz atomik commit'lere bölmek; sürüm numarası seçmek ve release kesmek.",
+      "kullanma": "Ekibin farklı ve yazılı bir git akışı (ör. git-flow) varsa çatışabilir; salt worktree kurulumu (using-git-worktrees).",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "backend-muhendis",
+        "devops-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor.",
+      "ortusme_grubu": "git-is-akisi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -15356,7 +15926,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15418,9 +15989,27 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "git worktree komut başvurusu: oluşturma (yeni/var olan dal), .worktrees/ dizin düzeni, kurulum sonrası adımlar (bağımlılık, env dosyası), commit edilmemiş değişiklik varken silmeme kuralı, kaldırma karar matrisi ve temizlik/prune.",
+      "kullanim_alani": "Elle worktree yönetimi, PR incelemesi için ayrı checkout veya birleşme sonrası temizlik komutları gerektiğinde.",
+      "kullanma": "Agent iş akışında yalıtım kurulumu (using-git-worktrees daha güvenli ve harness farkında).",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Doğru ve kısa komut başvurusu; mevcut worktree'yi algılama veya yerel araç tercih etme yok. '.env kopyala' önerisi gizli bilgiyi çoğaltabilir.",
+      "ortusme_grubu": "worktree",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 72,
+        "puan": 67,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (194 gün önce)",
@@ -15429,7 +16018,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15490,9 +16080,30 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Tek komutla PR akışı: önkoşulları kontrol eder (git, gh), başlıktan dal adı üretir, değişiklikleri gösterip onay ister, conventional commit mesajıyla commit eder, push eder ve özet/değişiklikler/test listesi içeren gövdeyle gh pr create çalıştırır.",
+      "kullanim_alani": "Kullanıcı açıkça 'PR aç' dediğinde hızlı dal + commit + push + PR.",
+      "kullanma": "Kullanıcı birleştirme yöntemini henüz seçmediyse (finishing-a-development-branch); push'un onay gerektirdiği ortamlar; değişiklikler zaten bir dalda düzenliyse.",
+      "teknoloji": [
+        "git",
+        "gh"
+      ],
+      "gerekli_paketler": [
+        "gh CLI (oturum açık)"
+      ],
+      "proje_tipleri": [
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kullanışlı ama 'staged yoksa git add -A' ve sabit 'Generated with Claude Code' imzası körlemesine; push ve PR dışa dönük eylem, yalnız kullanıcı isteğiyle çalışmalı.",
+      "ortusme_grubu": "dal-bitirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 72,
+        "puan": 67,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (194 gün önce)",
@@ -15501,7 +16112,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15562,9 +16174,32 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Release akışını otomatikleştirir: son tag'den beri commit'leri analiz edip (BREAKING/feat/fix) sürüm artışını belirler, package.json sürümünü günceller, CHANGELOG.md'deki Unreleased bölümünü yeni sürüme taşır, commit + annotated tag atar, push eder ve gh release create ile GitHub sürümü yayınlar.",
+      "kullanim_alani": "package.json ve CHANGELOG.md (Keep a Changelog) kullanan Node projelerinde sürüm kesmek.",
+      "kullanma": "package.json olmayan projeler (Python, Rust…); sürüm otomasyonu CI'da (release-please, changesets) yapılıyorsa; push/yayın onayı alınmadan.",
+      "teknoloji": [
+        "git",
+        "gh",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "gh CLI (oturum açık)"
+      ],
+      "proje_tipleri": [
+        "ai-uygulama",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (opsiyonel, --skill ile). Sürüm artış kuralları net; ancak push ve GitHub release yayını geri alınması zor dışa dönük eylemler, skill bunları onay adımı olmadan zincirliyor. Yalnız Node/package.json varsayımı.",
+      "ortusme_grubu": "surum-yayini",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 72,
+        "puan": 67,
         "not": "B",
         "ayrinti": [
           "bakım 10/25 (194 gün önce)",
@@ -15573,7 +16208,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15636,9 +16272,32 @@
         "ana_sayfa": "",
         "katkici": 44
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "İşin yalıtılmış bir çalışma alanında yapılmasını sağlar: önce zaten bir worktree içinde olunup olunmadığını (alt modül korumasıyla) tespit eder, kullanıcı onayı ister, platformun yerel worktree aracını (EnterWorktree, /worktree…) tercih eder, yoksa git worktree'ye düşer; proje kurulumu yapıp temiz test tabanını doğrular.",
+      "kullanim_alani": "Yalıtım gerektiren özellik işine başlarken veya bir uygulama planını yürütmeden önce (superpowers zinciri).",
+      "kullanma": "Zaten harness tarafından yönetilen bir worktree'deyken (skill bunu kendisi algılar); tek dosyalık hızlı düzeltmeler.",
+      "teknoloji": [
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "planlayici"
+      ],
+      "zorluk": "kolay",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, worktree grubunun birincili. Gerekçe: 'harness ile kavga etme' ilkesi, var olan yalıtımı algılama, alt modül koruması ve onay adımı; Claude Code/Codex worktree araçlarıyla uyumlu. heyitsnoah git-worktrees yalnız komut başvurusu → alternatif.",
+      "ortusme_grubu": "worktree",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 93,
+        "puan": 96,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -15647,7 +16306,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15714,9 +16374,34 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "CI/CD hattı kurulumu: kalite kapısı sırası (lint → tip → birim → build → entegrasyon → E2E → güvenlik), GitHub Actions örnekleri (veritabanlı entegrasyon ve E2E dahil), CI hatalarını agent'a geri besleme, preview deploy, feature flag, kademeli yayın ve geri alma planı, ortam yönetimi, Dependabot/Renovate ve CI hızlandırma.",
+      "kullanim_alani": "Build/deploy hattı kurarken veya değiştirirken; kalite kapılarını otomatikleştirirken; test çalıştırıcısını CI'a bağlarken.",
+      "kullanma": "GitHub Actions dışı CI'da örnekler doğrudan uymaz (ilkeler geçerli); tek seferlik yerel betikler.",
+      "teknoloji": [
+        "github-actions",
+        "node",
+        "playwright"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı.",
+      "ortusme_grubu": "ci-cd",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -15725,7 +16410,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15787,10 +16473,34 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Üretim deploy ilkeleri: platform seçim ağacı (Vercel/Netlify, Railway/Render/Fly, VPS+PM2/Docker, Kubernetes, serverless), deploy öncesi dört doğrulama kategorisi, beş fazlı deploy akışı, deploy sonrası doğrulama penceresi ve geri alma ilkeleri; betik değil karar öğretir.",
+      "kullanim_alani": "Barındırma platformu seçerken veya deploy prosedürü yazarken; ag-kit /deploy iş akışında.",
+      "kullanma": "Kademeli yayın ve izleme ayrıntısı (shipping-and-launch); CI hattı yazımı (ci-cd-and-automation).",
+      "teknoloji": [
+        "docker",
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Kısa (6 KB) platform karar tablosu yararlı; içerik genel ilkeler, shipping-and-launch ile kısmen örtüşüyor.",
+      "ortusme_grubu": "deploy-yayin",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -15798,7 +16508,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15864,9 +16575,33 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kodu üretimde görünür ve teşhis edilebilir kılar: önce 'çalışıyor'un tanımı, her soru için doğru sinyal (log, metrik, iz), yapılandırılmış loglama, metrikler, dağıtık izleme, uyarılar ve runbook yazımı, son olarak telemetrinin kendisini doğrulama.",
+      "kullanim_alani": "Loglama/metrik/izleme/uyarı eklerken; üretime çıkan her özellikte çalıştığına dair kanıt gerektiğinde; üretim sorunu mevcut veriden anlaşılamıyorsa.",
+      "kullanma": "Yerel prototip; belirli bir APM ürününün kurulumu (ürün belgeleri).",
+      "teknoloji": [
+        "opentelemetry",
+        "node",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "backend-muhendis",
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, gozlemlenebilirlik grubunun birincili. 'Telemetriyi de doğrula' ve runbook bölümleri pratik; satıcıdan bağımsız.",
+      "ortusme_grubu": "gozlemlenebilirlik",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -15875,7 +16610,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -15942,9 +16678,37 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ölçüme dayalı performans iyileştirme: Core Web Vitals hedefleri, önce ölç → darboğazı bul → düzelt → doğrula (tut ya da geri al, geri alınan denemeleri de kaydet) → regresyona karşı koru akışı; ön yüz, arka yüz, sorgu ve veritabanı için nereden ölçmeye başlanacağı ve optimization-patterns.md desen dosyası.",
+      "kullanim_alani": "Performans gereksinimi veya regresyon şüphesi olduğunda; Core Web Vitals/yükleme süresi iyileştirmede; N+1 sorgu düzeltmede; profil çıkarılmış darboğazlarda.",
+      "kullanma": "Ölçüm yapılmadan 'erken optimizasyon'; React'e özgü kural listesi gerekiyorsa vercel-react-best-practices ile birlikte.",
+      "teknoloji": [
+        "node",
+        "react",
+        "css"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "devops-muhendis",
+        "kod-inceleyici",
+        "qa-erisilebilirlik"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı.",
+      "ortusme_grubu": "performans",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -15953,7 +16717,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16014,10 +16779,35 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Performans profil çıkarma ilkeleri: Core Web Vitals hedefleri, taban → tespit → düzelt → doğrula süreci, sorun tipine göre araç seçimi (Lighthouse, bundle analyzer, DevTools Performance/Memory/Network), bundle ve çalışma zamanı analizi, yaygın darboğazlar; lighthouse_audit.py ve bundle_analyzer.py betikleri.",
+      "kullanim_alani": "Lighthouse denetimi çalıştırmak, bundle boyutunu analiz etmek veya DevTools ile çalışma zamanı profili çıkarmak gerektiğinde.",
+      "kullanma": "Optimizasyon kararı ve doğrulama disiplini (performance-optimization); backend/veritabanı darboğazları (sınırlı içerik).",
+      "teknoloji": [
+        "lighthouse",
+        "python",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "python3",
+        "lighthouse (npx)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı (opsiyonel). Kısa ve betikli; içerik büyük ölçüde performance-optimization'ın ölçüm bölümünün tablo özeti.",
+      "ortusme_grubu": "performans",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -16025,7 +16815,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16086,10 +16877,24 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "MITRE ATT&CK tabanlı kırmızı takım ilkeleri: saldırı yaşam döngüsü fazları ve amaçları, pasif/aktif keşif, ilk erişim vektörleri, Windows/Linux yetki yükseltme ilkeleri, tespitten kaçınma ve operasyonel güvenlik, raporlama. İlke düzeyinde; exploit kodu içermez.",
+      "kullanim_alani": "Yalnız yetkili sızma testi veya kırmızı takım tatbikatında saldırı yüzeyini çerçevelemek ve rapor yapısı kurmak.",
+      "kullanma": "Yetkisiz hedefler; uygulama geliştirme rolleri (savunma tarafı için security-and-hardening).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Çift kullanımlı (tespitten kaçınma bölümü var) ve yüzeysel; web uygulaması projelerinde savunmaya katkısı düşük. Hiçbir role eklenmedi.",
+      "ortusme_grubu": "saldiri-simulasyonu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -16097,7 +16902,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16164,9 +16970,36 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kodu güvenlik açıklarına karşı sertleştirir: önce tehdit modeli, 'her zaman yap / önce sor / asla yapma' üç katmanlı sınır sistemi; enjeksiyon, XSS, erişim kontrolü, kimlik doğrulama ve oturum, başlıklar/CORS, girdi doğrulama ve yüklemeler, SSRF, türetilmiş yollarda yıkıcı işlemler, rate limit, gizli anahtarlar, bağımlılık ve tedarik zinciri, kişisel veri ve AI/LLM özellikleri için kontroller; inceleme kontrol listesi ve hardening-patterns.md.",
+      "kullanim_alani": "Kullanıcı girdisi, kimlik doğrulama, veri saklama veya dış entegrasyon içeren her özellikte; OWASP Top 10'a karşı giriş akışı denetimi; bağımlılık denetimi.",
+      "kullanma": "Saldırı simülasyonu/sızma testi (red-team-tactics); otomatik tarama betiği gerektiğinde vulnerability-scanner ile birlikte.",
+      "teknoloji": [
+        "node",
+        "html"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "backend-muhendis",
+        "devops-muhendis",
+        "kod-inceleyici"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı.",
+      "ortusme_grubu": "guvenlik-sertlestirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -16175,7 +17008,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16237,10 +17071,32 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Sunucu işletim ilkeleri: süreç yöneticisi seçimi (PM2, systemd, Docker, Kubernetes), izleme metrikleri ve uyarı seviyeleri, izleme aracı seçimi, log yönetimi (rotasyon, yapılandırılmış log), ölçekleme kararları ve sağlık kontrolü ilkeleri.",
+      "kullanim_alani": "VPS/kendi sunucusunda çalışan uygulamalarda PM2/systemd yapılandırması, izleme ve ölçekleme kararları.",
+      "kullanma": "Yönetilen platformlar (Vercel, Railway) — çoğu konu platformca çözülür; ayrıntılı gözlemlenebilirlik (observability-and-instrumentation).",
+      "teknoloji": [
+        "pm2",
+        "systemd",
+        "docker",
+        "node"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: TUT (opsiyonel). Yalnız tablo düzeyinde ilkeler; komut veya yapılandırma örneği yok, modelin zaten bildiğini özetliyor.",
+      "ortusme_grubu": "sunucu-yonetimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -16248,7 +17104,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16315,9 +17172,30 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Üretime çıkış hazırlığı: kod kalitesi, güvenlik, performans, erişilebilirlik, altyapı ve dokümantasyon için ön yayın kontrol listesi; feature flag stratejisi, eşik değerli kademeli yayın sırası ve geri alma koşulları, izlenecek metrikler ve hata raporlama, yayın sonrası doğrulama, hata bütçesi kapısı ve geri alma planı şablonu.",
+      "kullanim_alani": "Üretime deploy öncesi 'neler hazır olmalı?' sorusunda; kademeli yayın ve geri alma stratejisi planlarken.",
+      "kullanma": "Platforma özgü deploy komutları (deployment-procedures veya platform belgeleri); CI kurulumu (ci-cd-and-automation).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı.",
+      "ortusme_grubu": "deploy-yayin",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (9 gün önce)",
@@ -16326,7 +17204,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16388,10 +17267,35 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Güvenlik açığı analizi ilkeleri: varsayılan ihlal, sıfır güven, derinlemesine savunma; OWASP Top 10:2025 (yeni A03 tedarik zinciri), saldırı yüzeyi haritalama ve risk önceliklendirme; checklists.md ile OWASP/kimlik doğrulama/API/veri koruma kontrol listeleri, security_scan.py ve dependency_analyzer.py tarama betikleri.",
+      "kullanim_alani": "Projede güvenlik taraması, OWASP 2025 uyum kontrolü veya tedarik zinciri (bağımlılık) analizi yaparken.",
+      "kullanma": "Özellik geliştirirken güvenli kodlama kuralları (security-and-hardening); gerçek bir SAST/DAST aracının yerine (betikler basit desen taraması).",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (security_scan.py, dependency_analyzer.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.",
+      "ortusme_grubu": "guvenlik-sertlestirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 89,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (4 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -16399,7 +17303,98 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "bash-linux",
+      "ad": "bash-linux",
+      "durum": "tercih",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
+      "alan": "b-yazilim-gelistirme",
+      "yol": "arsiv/b-yazilim-gelistirme/07-framework-ozel/bash-linux",
+      "varyantlar": {},
+      "repo": "vudovn/ag-kit",
+      "kaynak_yol": ".agents/skills/bash-linux",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems.",
+      "teknoloji_oto": [
+        "node"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 4,
+      "skill_md_kb": 4.2,
+      "klasor_adi": "bash-linux",
+      "skill_md_hash": "66b940901faec5d95e34a18ac0c5511310b4123c",
+      "ana_hash": "11c4b3cb07929b68a84787fca8e78250f843da32f2ea54c241f609a4d8481ef9",
+      "varyant_hash": {},
+      "klasor_hash": "a4af273bbe51c58149ad9d1cd5be490dcf2b725de6d0a2a6b32fb823d8592f44",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "vudovn",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/vudovn",
+        "resmi_kaynak": false,
+        "yildiz": 8200,
+        "fork": 1508,
+        "acik_issue": 59,
+        "son_guncelleme": "2026-10-18",
+        "olusturulma": "2026-01-14",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "",
+        "ana_sayfa": "https://ag-kit.unikorn.vn",
+        "katkici": 10
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "macOS/Linux Bash kalıpları: komut zincirleme operatörleri, dosya işlemleri, süreç yönetimi (port tutan süreci bulma/öldürme), metin işleme (grep/sed/awk/cut/sort), ortam değişkenleri, ağ komutları, hata işlemeli betik şablonu ve sık desenler.",
+      "kullanim_alani": "macOS/Linux'ta terminal komutları ve bash betikleri yazarken hızlı başvuru.",
+      "kullanma": "Windows/PowerShell ortamı (powershell-windows); model zaten bu komutları bildiği için deneyimli kullanımda düşük katkı.",
+      "teknoloji": [
+        "bash"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV / opsiyonel. Doğru ama temel komut tablosu; 'sed -i' gibi macOS/GNU farkı olan komutlarda uyarı yok. Araç rehberi olarak 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "kabuk-komutlari",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 69,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (4 gün önce)",
+          "topluluk 16/20 (★8200)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16461,9 +17456,33 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Next.js'te tarayıcının ilk yükleme işini denetler ve azaltır: varsayılan 'audit' kipinde next analyze ile anlık görüntü alıp dışa aktarır, modül grafiğinden aday bölmeleri (topluluk → min-cut) kanıtla açıklar; 'fix' kipi yalnız açık istekle tek değişikliği doğrulayarak uygular ve rapor verip durur.",
+      "kullanim_alani": "Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları veya etkileşime ertelenebilecek özellikler.",
+      "kullanma": "Next.js dışı projeler; statik App Shell sorunları (next-cache-components-optimizer) ve prefetch işleri (next-partial-prefetching-optimizer); next analyze içermeyen eski Next sürümleri.",
+      "teknoloji": [
+        "next.js",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "next (next analyze içeren sürüm)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (opsiyonel, --skill ile). Audit/fix ayrımı ve 'ölçülmüş tek değişiklik' kuralı sağlam. Not: Codex sandbox'ı port açmayı engellediği için capture sandbox dışında çalışmalı (skill bunu belirtiyor); diğer next-* skillerini npx skills add ile kurmayı önerir.",
+      "ortusme_grubu": "nextjs-bundle",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 98,
+        "puan": 91,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -16472,7 +17491,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16538,9 +17558,35 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Next.js uygulamasında Cache Components'i açar ve ortaya çıkan engelleyici route'ları çözerek build'i geçirir: App Router ve app dizinini doğrular, artımlı (cache-components-instant-false codemod ile önce opt-out) ya da doğrudan stratejiyi seçtirir, sonra opt-out'ları özellik özellik tarayıcıda veya build ile doğrulayarak kaldırır.",
+      "kullanim_alani": "cacheComponents bayrağını açmak, blocking-prerender/instant doğrulama hatası selini çözmek, 'export const instant = false' ile yerinde düzeltme arasında karar vermek.",
+      "kullanma": "Yalnız pages/ dizinli projeler (önce App Router geçişi); Cache Components zaten benimsenmişse (optimizer); çalıştırılamayan uygulama.",
+      "teknoloji": [
+        "next.js",
+        "react",
+        "typescript",
+        "playwright"
+      ],
+      "gerekli_paketler": [
+        "next>=16 (App Router)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (opsiyonel), nextjs-cache-components grubunun birincili. Next.js ekibinin geçiş rehberi; önkoşul kontrolleri (src/app gölgelemesi, import anında DB okuma) çok titiz. 33 KB SKILL.md, yalnız geçiş işinde kurulmalı.",
+      "ortusme_grubu": "nextjs-cache-components",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 95,
+        "puan": 97,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -16549,7 +17595,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16613,9 +17660,35 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Cache Components benimsenmiş Next.js 16.3+ uygulamasında bir route'un ilk yüklemede veya istemci geçişinde anında gösterdiği anlamlı UI'yi (statik kabuk) büyütür: hedefi başarısız bir @next/playwright instant() e2e testine çevirir, üretim benzeri rig'de RED → düzeltme → GREEN döngüsünü, eşitlik ve fark kontrollerini yürütür; geçen test regresyon koruması olarak kalır.",
+      "kullanim_alani": "Yavaş ilk boyama, anında olmayan gezinme, hangi Suspense sınırının UI'yi engellediğini bulma veya instant() regresyon kapsamı ekleme.",
+      "kullanma": "Cache Components henüz açılmadıysa (önce adoption skilli); Next.js 16.3 altı.",
+      "teknoloji": [
+        "next.js",
+        "playwright",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "next>=16.3",
+        "@next/playwright",
+        "@playwright/test"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (opsiyonel), tamamlayıcı. Test güdümlü optimizasyonun örnek uygulaması (boş geçemeyen RED kapısı, eşitlik kontrolü); rig ve test şablonları dahil.",
+      "ortusme_grubu": "nextjs-cache-components",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 98,
+        "puan": 99,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -16624,7 +17697,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16687,9 +17761,38 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Vercel'in Next.js düzenle-doğrula döngüsü: kod değişikliğinden sonra uygulamanın çalışma anında gerçekten çalıştığını iki görünümle kanıtlar — Next.js'in kendi /_next/mcp uç noktası (route, RSC, server action, sunucu logları, derleme hataları) ve gerçek Chrome süren agent-browser CLI (DOM, konsol, ağ, React fiber, vitals). Ön kontrol, döngü, tuzaklar ve kapanış adımları içerir.",
+      "kullanim_alani": "next dev çalışırken uygulama kodu düzenlendikten sonra değişikliğin derlenmenin ötesinde çalıştığını doğrulamak.",
+      "kullanma": "Next.js 16.3+ (Turbopack) ve agent-browser >= 0.31.1 yoksa (skill bu durumda durur); Next.js dışı projeler.",
+      "teknoloji": [
+        "next.js",
+        "react",
+        "node",
+        "turbopack"
+      ],
+      "gerekli_paketler": [
+        "next>=16.3 (Turbopack)",
+        "agent-browser>=0.31.1 (npm -g)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, nextjs-calisma-dogrulama grubunun birincili. Next.js ekibinin resmî skilli; iki bağımsız görünümle çapraz doğrulama ve sürüm tabanı açıkça belirtilmiş. Sert bağımlılıklar (16.3+, agent-browser) nedeniyle frontend-muhendis'te opsiyonel kalır.",
+      "ortusme_grubu": "nextjs-calisma-dogrulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 98,
+        "puan": 99,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -16698,7 +17801,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16762,9 +17866,34 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Next.js'te Partial Prefetching'i açar ve ortaya çıkan içgörüleri çözer: önce <Link prefetch={true}> gezinmelerini denetler, mevcut prefetch davranışını bayrak kapalıyken geçen instant() testleriyle sabitler (koruma kapısı), hedefleri benimser, bayrağı açar, URL-veri içgörülerini next dev'de tarar ve doğrular.",
+      "kullanim_alani": "partialPrefetching bayrağını açmak, route'ları 'export const prefetch = partial' ile dahil etmek, prefetch davranışını korurken geçiş yapmak.",
+      "kullanma": "Cache Components benimsenmemişse; Next.js 16.3 altı; seçili gezinmeleri ince ayar (optimizer).",
+      "teknoloji": [
+        "next.js",
+        "playwright",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "next>=16.3",
+        "@next/playwright"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (opsiyonel), nextjs-partial-prefetching grubunun birincili. Önce koruma testi sonra geçiş kuralı davranış kaybını engelliyor; resmî ve güncel.",
+      "ortusme_grubu": "nextjs-partial-prefetching",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 95,
+        "puan": 97,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -16773,7 +17902,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16835,9 +17965,33 @@
         "ana_sayfa": "https://nextjs.org",
         "katkici": 4174
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Partial Prefetching altında seçili istemci gezinmelerinin tıklamadan önce neyi içereceğini optimize eder: her kaynak link/hedef için prefetch edilen ve yalnız gezinmede gelen UI'yi ve tetikleyiciyi (varsayılan, viewport, intent) instant() testine çevirir, mevcut davranışı kanıtlar, en küçük değişikliği yapar ve farkı doğrular.",
+      "kullanim_alani": "URL'ye özgü UI'nin anında gelmesini istemek, yeniden kullanılabilir içeriği gezinmeye bırakmak veya prefetch tetikleyicisi seçmek.",
+      "kullanma": "Cache Components veya Partial Prefetching benimsenmemişse (adoption skilleri); App Shell commit edemiyorsa (önce cache-components-optimizer).",
+      "teknoloji": [
+        "next.js",
+        "playwright"
+      ],
+      "gerekli_paketler": [
+        "next>=16.3",
+        "@next/playwright"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT (opsiyonel), tamamlayıcı. Bağlantı başına sözleşme yaklaşımı ve gözetimsiz çalışma kuralı net; adoption skilliyle birlikte kurulmalı.",
+      "ortusme_grubu": "nextjs-partial-prefetching",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 98,
+        "puan": 99,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -16846,7 +18000,110 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "nextjs-react-expert",
+      "ad": "nextjs-react-expert",
+      "durum": "tercih",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
+      "alan": "b-yazilim-gelistirme",
+      "yol": "arsiv/b-yazilim-gelistirme/07-framework-ozel/nextjs-react-expert",
+      "varyantlar": {},
+      "repo": "vudovn/ag-kit",
+      "kaynak_yol": ".agents/skills/nextjs-react-expert",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "React and Next.js performance optimization from Vercel Engineering. Use when building React components, optimizing performance, eliminating waterfalls, reducing bundle size, reviewing code for performance issues, or implementing server/client-side optimizations.",
+      "teknoloji_oto": [
+        "next.js",
+        "python",
+        "react",
+        "typescript"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "orta",
+      "boyut_kb": 111,
+      "skill_md_kb": 10.3,
+      "klasor_adi": "nextjs-react-expert",
+      "skill_md_hash": "4cde867eaf5cc06fb2973a430b3426e965667fc0",
+      "ana_hash": "34c976091751f1827105f052c18c7b879e3aa53809c6e6b39081f4c9f6b6ca7e",
+      "varyant_hash": {},
+      "klasor_hash": "02ec1f803066db10aef5caaaad6d67a568659ac668a60cdfe2042c4f9362f17b",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "vudovn",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/vudovn",
+        "resmi_kaynak": false,
+        "yildiz": 8200,
+        "fork": 1508,
+        "acik_issue": 59,
+        "son_guncelleme": "2026-10-18",
+        "olusturulma": "2026-01-14",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "",
+        "ana_sayfa": "https://ag-kit.unikorn.vn",
+        "katkici": 10
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Vercel'in React/Next.js performans kurallarının ag-kit uyarlaması: 58 kural etki sırasına göre 8 dosyada, ek olarak Next.js 16 Cache Components bölümü; hızlı karar ağacı, performans inceleme kontrol listesi ve react_performance_checker.py denetim betiği.",
+      "kullanim_alani": "ag-kit kullanan projelerde veya Cache Components notlarını aynı skillde isteyenlerde React/Next performans incelemesi.",
+      "kullanma": "vercel-react-best-practices kuruluysa (aynı kurallar); React dışı projeler.",
+      "teknoloji": [
+        "react",
+        "next.js",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (react_performance_checker.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kurallar özgün kaynaktan geliyor ve denetim betiği bir artı, ama kural sayısı özgünden geride (58/65) ve tek dosyalarda toplu (her dosya 250-350 satır). 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "react-performans",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 76,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (4 gün önce)",
+          "topluluk 16/20 (★8200)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 8/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -16913,9 +18170,37 @@
         "ana_sayfa": "https://playwright.dev",
         "katkici": 823
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Microsoft'un playwright-cli aracıyla tarayıcı otomasyonu: aç/git, snapshot'taki ref'lerle tıklama/yazma/doldurma/sürükleme/yükleme, metin arama, eval, sekmeler, depolama durumu, emülasyon, ağ (istek taklidi), DevTools, izleme (trace), video kaydı, oturum yönetimi ve Playwright test üretimi; ayrıntılar ek başvuru dosyalarında.",
+      "kullanim_alani": "Agent'ın gerçek tarayıcıda sayfayla etkileşmesi, akış doğrulaması, ekran görüntüsü/trace/video alması veya Playwright testleri üretip çalıştırması gerektiğinde.",
+      "kullanma": "Playwright MCP sunucusu zaten kullanılıyorsa (aynı iş); playwright-cli kurulmamışsa.",
+      "teknoloji": [
+        "playwright",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "@playwright/cli (playwright-cli)",
+        "Playwright tarayıcıları"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "frontend-muhendis",
+        "qa-erisilebilirlik"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, tarayici-otomasyonu grubunun birincili. Resmî (microsoft/playwright) ve kapsamlı; snapshot ref modeli token dostu. Kırık bağlantı: .playwright-cli/page-*.yml örnek çıktı yolu (çalışma anında üretilen dosya, işlevi etkilemez). a-tasarim/08'deki tarayıcı test skilleriyle örtüşme o kategorinin incelemesinde ele alınmalı.",
+      "ortusme_grubu": "tarayici-otomasyonu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 96,
+        "puan": 90,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -16924,7 +18209,391 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 4/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "powershell-windows",
+      "ad": "powershell-windows",
+      "durum": "tercih",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
+      "alan": "b-yazilim-gelistirme",
+      "yol": "arsiv/b-yazilim-gelistirme/07-framework-ozel/powershell-windows",
+      "varyantlar": {},
+      "repo": "vudovn/ag-kit",
+      "kaynak_yol": ".agents/skills/powershell-windows",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling.",
+      "teknoloji_oto": [
+        "api-anahtari"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 4,
+      "skill_md_kb": 3.6,
+      "klasor_adi": "powershell-windows",
+      "skill_md_hash": "44870dc6ac54da75046b7dc86defa91ce4b3121f",
+      "ana_hash": "e7fcbb0627a457d5e09d3e82a76d0b791db37663aab34724fcfbdf1551b060bf",
+      "varyant_hash": {},
+      "klasor_hash": "047cd924201f74609f1418998839b6830fdd4137dae579f03a0057b923698529",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "vudovn",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/vudovn",
+        "resmi_kaynak": false,
+        "yildiz": 8200,
+        "fork": 1508,
+        "acik_issue": 59,
+        "son_guncelleme": "2026-10-18",
+        "olusturulma": "2026-01-14",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "",
+        "ana_sayfa": "https://ag-kit.unikorn.vn",
+        "katkici": 10
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Windows PowerShell tuzakları ve kalıpları: mantıksal operatörlerde cmdlet'i paranteze alma, betiklerde Unicode/emoji yasağı, null kontrolleri, karmaşık string enterpolasyonu, ErrorActionPreference ve try/catch, Join-Path ile yol işlemleri.",
+      "kullanim_alani": "Proje Windows'ta çalışıyorsa veya PowerShell betiği yazılıyorsa; agent'ın tipik PowerShell sözdizimi hatalarını önlemek için.",
+      "kullanma": "macOS/Linux ortamı (bash-linux).",
+      "teknoloji": [
+        "powershell",
+        "windows"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (Windows ortamında kullanılır). Kısa ve agent'ların gerçekten yaptığı hatalara odaklı (parantez, Unicode). Araç rehberi olarak 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "kabuk-komutlari",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 77,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (4 gün önce)",
+          "topluluk 16/20 (★8200)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "rust-pro",
+      "ad": "rust-pro",
+      "durum": "tercih",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
+      "alan": "b-yazilim-gelistirme",
+      "yol": "arsiv/b-yazilim-gelistirme/07-framework-ozel/rust-pro",
+      "varyantlar": {},
+      "repo": "vudovn/ag-kit",
+      "kaynak_yol": ".agents/skills/rust-pro",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "Master modern Rust (2024 edition) with async patterns, advanced type system features, and production-ready systems programming. Expert in the current Rust ecosystem including Tokio, axum, and modern crates. Use PROACTIVELY for Rust development, performance optimization, or systems programming.",
+      "teknoloji_oto": [],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 8,
+      "skill_md_kb": 7.6,
+      "klasor_adi": "rust-pro",
+      "skill_md_hash": "325227e7c5359656987a0b6411ddfda6a0395997",
+      "ana_hash": "46bb43aa2c28d906b0da832a45d56e14e6457bc4290060e3b8e7bd767e7b168f",
+      "varyant_hash": {},
+      "klasor_hash": "c3194a68bff0755b1ccf69a8b46e017710547404e970deb0432a7c0b771b6fa9",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "vudovn",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/vudovn",
+        "resmi_kaynak": false,
+        "yildiz": 8200,
+        "fork": 1508,
+        "acik_issue": 59,
+        "son_guncelleme": "2026-10-18",
+        "olusturulma": "2026-01-14",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "",
+        "ana_sayfa": "https://ag-kit.unikorn.vn",
+        "katkici": 10
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Modern Rust (2024 sürümü) uzman persona tanımı: async (Tokio), axum, sahiplik/ömür, tip sistemi ve trait'ler, performans ve sistem programlama, hata işleme yeteneklerini listeler; dört adımlı kısa talimat (kısıtları netleştir, runtime/crate seç, testle uygula, profille).",
+      "kullanim_alani": "Rust servisi, kütüphanesi veya sistem aracı yazarken; sahiplik/ömür ve async tasarım sorunlarında.",
+      "kullanma": "Hızlı betik veya dinamik runtime gerektiğinde; Rust yığına alınamıyorsa.",
+      "teknoloji": [
+        "rust",
+        "tokio",
+        "axum"
+      ],
+      "gerekli_paketler": [
+        "rust toolchain (cargo)"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 2,
+      "kalite_notu": "Karar: TUT (yalnız Rust projelerinde --skill ile). İçerik çoğunlukla yetenek listesi (anahtar kelime yığını); somut kural veya örnek az, modelin zaten bildiğini tekrar ediyor. Dil rehberi olduğu için 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "rust-gelistirme",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 69,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (4 gün önce)",
+          "topluluk 16/20 (★8200)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "vercel-composition-patterns",
+      "ad": "vercel-composition-patterns",
+      "durum": "tercih",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
+      "alan": "b-yazilim-gelistirme",
+      "yol": "arsiv/b-yazilim-gelistirme/07-framework-ozel/vercel-composition-patterns",
+      "varyantlar": {},
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".claude/skills/vercel-composition-patterns",
+      "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
+      "lisans": "AGPL-3.0",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 1,
+      "atlanan_dosyalar": [],
+      "aciklama": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+      "teknoloji_oto": [
+        "react"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": ""
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 49,
+      "skill_md_kb": 3.1,
+      "klasor_adi": "vercel-composition-patterns",
+      "skill_md_hash": "a460ad73811b75a977045ae03a6df662d10bab6f",
+      "ana_hash": "0c1dcd3fafe5dbc77f64beb21393c8863fd1dc3fcf5b94ad7be3cb4c6b63fe5c",
+      "varyant_hash": {},
+      "klasor_hash": "54df12addca9398d5d9cdd0dbc6c5c28f6b03ed759547d23d8ad6ecb16ce9cdd",
+      "globalde": {
+        "claude": "ayni"
+      },
+      "gelistirici": {
+        "sahip": "calesthio",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/calesthio",
+        "resmi_kaynak": false,
+        "yildiz": 70579,
+        "fork": 9116,
+        "acik_issue": 412,
+        "son_guncelleme": "2026-10-16",
+        "olusturulma": "2026-03-29",
+        "lisans": "AGPL-3.0",
+        "arsivlenmis": false,
+        "aciklama": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "ana_sayfa": "https://www.openmontage.video/",
+        "katkici": 69
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Vercel'in ölçeklenen React kompozisyon desenleri: boolean prop çoğalmasını compound component, state lifting ve iç yapıyı birleştirme ile önleme; durum yönetimi (context arayüzü, implementasyonu ayırma), uygulama desenleri ve React 19 API değişiklikleri (forwardRef'siz ref vb.). Kurallar ayrı dosyalarda.",
+      "kullanim_alani": "Çok boolean prop'lu bileşenleri refactor ederken, yeniden kullanılabilir bileşen kütüphanesi veya esnek bileşen API'si tasarlarken.",
+      "kullanma": "Performans optimizasyonu (vercel-react-best-practices); React dışı projeler.",
+      "teknoloji": [
+        "react"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "react-kompozisyon",
+      "ortusme_rolu": "birincil",
+      "notlar": "Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React kompozisyon kuralları, OpenMontage araçlarını çağırmaz.",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 87,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (6 gün önce)",
+          "topluluk 19/20 (★70579)",
+          "lisans 15/15 (AGPL-3.0)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "vercel-react-best-practices",
+      "ad": "vercel-react-best-practices",
+      "durum": "tercih",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel",
+      "alan": "b-yazilim-gelistirme",
+      "yol": "arsiv/b-yazilim-gelistirme/07-framework-ozel/vercel-react-best-practices",
+      "varyantlar": {},
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".claude/skills/vercel-react-best-practices",
+      "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
+      "lisans": "AGPL-3.0",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 1,
+      "atlanan_dosyalar": [],
+      "aciklama": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "teknoloji_oto": [
+        "css",
+        "next.js",
+        "react"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": ""
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 207,
+      "skill_md_kb": 7.0,
+      "klasor_adi": "vercel-react-best-practices",
+      "skill_md_hash": "c836c90f27cfb772528d01b05e887d57a17d7de6",
+      "ana_hash": "c11ccacd53ed29f6f856908e2374dd4f4d32ae627379d4749cbb7a653fc0bcfa",
+      "varyant_hash": {},
+      "klasor_hash": "e50071289417e2348296b2e4e570268dd0b10301436f85eed01a9b984ce4aadc",
+      "globalde": {
+        "claude": "ayni"
+      },
+      "gelistirici": {
+        "sahip": "calesthio",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/calesthio",
+        "resmi_kaynak": false,
+        "yildiz": 70579,
+        "fork": 9116,
+        "acik_issue": 412,
+        "son_guncelleme": "2026-10-16",
+        "olusturulma": "2026-03-29",
+        "lisans": "AGPL-3.0",
+        "arsivlenmis": false,
+        "aciklama": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+        "ana_sayfa": "https://www.openmontage.video/",
+        "katkici": 69
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Vercel Engineering'in React/Next.js performans kuralları: etkiye göre 8 kategoride 65 kural (şelaleleri kaldırma, bundle boyutu, sunucu tarafı performans, istemci veri çekme, yeniden render, render performansı, JS performansı, ileri desenler); her kural ayrı dosyada iyi/kötü örnekle, tam derlenmiş AGENTS.md ile.",
+      "kullanim_alani": "React bileşeni veya Next.js sayfası yazarken/incelerken; veri çekme, bundle ve render performansı sorunlarında.",
+      "kullanma": "React dışı projeler; Next.js 16 Cache Components geçişi (next-cache-components-* skilleri); bileşen API tasarımı (vercel-composition-patterns).",
+      "teknoloji": [
+        "react",
+        "next.js"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, react-performans grubunun birincili. Gerekçe: Vercel'in özgün kural seti, kural başına dosya ile seçici okuma (SKILL.md 7 KB, toplam 207 KB); nextjs-react-expert aynı kuralların ag-kit uyarlaması. Bu kopya OpenMontage'a gömülü (upstream vercel-labs/agent-skills arşivde yok); güncellemeler OpenMontage üzerinden gelir. Dil/framework rehberi olduğu için 07-framework-ozel'e taşındı.",
+      "ortusme_grubu": "react-performans",
+      "ortusme_rolu": "birincil",
+      "notlar": "Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React/Next.js kuralları, OpenMontage araçlarını çağırmaz.",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 87,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (6 gün önce)",
+          "topluluk 19/20 (★70579)",
+          "lisans 15/15 (AGPL-3.0)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -98284,6 +99953,191 @@
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
           "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "archify-review",
+      "ad": "archify-review",
+      "durum": "tercih",
+      "kategori": "f-repo-ici/01-repo-gelistirici-skilleri",
+      "alan": "f-repo-ici",
+      "yol": "arsiv/f-repo-ici/01-repo-gelistirici-skilleri/archify-review",
+      "varyantlar": {},
+      "repo": "tt-a1i/archify",
+      "kaynak_yol": ".agents/skills/archify-review",
+      "commit": "25cf37080fc8b1dbe758a4efc3935b55f3327083",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "Review Archify issues, PRs, or code through value, cost, and impact to support evidence-based maintenance decisions. Use for issue triage, change reviews, and code quality assessments.",
+      "teknoloji_oto": [],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": ""
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [
+        "../../../CONTRIBUTING.md",
+        "../../../REVIEWING.md"
+      ],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 2,
+      "skill_md_kb": 1.6,
+      "klasor_adi": "archify-review",
+      "skill_md_hash": "d28b635c84b1c66dbadc015058a6c91224933841",
+      "ana_hash": "832949f4a1167fae54c656d71351b6b1b4629e27e92e0911cf63fd5c77bc3c69",
+      "varyant_hash": {},
+      "klasor_hash": "00ab3e997104755aa2ea4611d435ec3a904f1752a8a7b8ef4d30db39164753f9",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "tt-a1i",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/tt-a1i",
+        "resmi_kaynak": false,
+        "yildiz": 86998,
+        "fork": 5856,
+        "acik_issue": 277,
+        "son_guncelleme": "2026-10-21",
+        "olusturulma": "2026-04-15",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+        "ana_sayfa": "https://archify.si",
+        "katkici": 93
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Archify reposunun iç bakım skilli: issue, PR veya kodu değer, maliyet ve etki üzerinden değerlendirip kanıta dayalı bakım kararı verdirir; depo kökündeki REVIEWING.md ve CONTRIBUTING.md'ye yönlendirir.",
+      "kullanim_alani": "Yalnız tt-a1i/archify reposuna katkı yaparken issue triyajı ve PR değerlendirmesi.",
+      "kullanma": "Kendi projelerinde genel code review (code-review-and-quality); bağlantı verdiği REVIEWING.md/CONTRIBUTING.md arşivde yok.",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. metadata.internal: true; değer/maliyet/etki çerçevesi kısa ve genel, asıl kurallar repo kökündeki belgelerde (kırık bağlantı). Repo-içi skill olduğu için f-repo-ici'ye taşındı.",
+      "ortusme_grubu": "kod-inceleme",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 71,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (1 gün önce)",
+          "topluluk 20/20 (★86998)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 3/5",
+          "elle kalite 2/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "archify-tuning",
+      "ad": "archify-tuning",
+      "durum": "tercih",
+      "kategori": "f-repo-ici/01-repo-gelistirici-skilleri",
+      "alan": "f-repo-ici",
+      "yol": "arsiv/f-repo-ici/01-repo-gelistirici-skilleri/archify-tuning",
+      "varyantlar": {},
+      "repo": "tt-a1i/archify",
+      "kaynak_yol": ".agents/skills/archify-tuning",
+      "commit": "25cf37080fc8b1dbe758a4efc3935b55f3327083",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "Improve Archify diagram accuracy, visual quality and complete authoring speed with fewer repairs. Use for generation experiments or evaluating changes to layout, routing, diagnostics, authoring instructions and acceptance rules against actual diagrams and agent traces.",
+      "teknoloji_oto": [
+        "node"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": ""
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": true,
+      "kirik_baglantilar": [
+        "../../../CONTRIBUTING.md"
+      ],
+      "baglam_yuku": "orta",
+      "boyut_kb": 57,
+      "skill_md_kb": 8.9,
+      "klasor_adi": "archify-tuning",
+      "skill_md_hash": "f21c71c871aa86882d01f063ae32477e86244758",
+      "ana_hash": "fe778f709935b4a9babfc6e07a0a29c606b081df10ae02d667d23b8fc96ae9c9",
+      "varyant_hash": {},
+      "klasor_hash": "69807d9896c3d3f3449d856099686804be649b35d13665036ecc67c46c26dcce",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "tt-a1i",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/tt-a1i",
+        "resmi_kaynak": false,
+        "yildiz": 86998,
+        "fork": 5856,
+        "acik_issue": 277,
+        "son_guncelleme": "2026-10-21",
+        "olusturulma": "2026-04-15",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+        "ana_sayfa": "https://archify.si",
+        "katkici": 93
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Archify diyagram üretecinin doğruluk, görsel kalite ve üretim hızını deneylerle iyileştirmek için iç ayar skilli: ölçüler, ajan iz (trace) toplama, sabit girdiyle tekrar oynatma ve ekran görüntüsü karşılaştırma betikleri (Node 22.13+, Chrome) içerir.",
+      "kullanim_alani": "Yalnız Archify reposunda yerleşim/yönlendirme/doğrulama kurallarını değiştirirken deney turu yürütmek.",
+      "kullanma": "Archify dışındaki her proje; kod incelemesi için değil.",
+      "teknoloji": [
+        "node",
+        "chromium"
+      ],
+      "gerekli_paketler": [
+        "node>=22.13",
+        "Chrome/Chromium"
+      ],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Archify'ın kendi geliştirme döngüsüne özel (metadata.internal), kategori olarak da code review değil; CONTRIBUTING.md bağlantısı kırık, betikler repo yapısına bağlı. f-repo-ici'ye taşındı.",
+      "ortusme_grubu": "archify-ic-surec",
+      "ortusme_rolu": "alternatif",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 69,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (1 gün önce)",
+          "topluluk 20/20 (★86998)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 8/10",
+          "yapı 3/5",
           "elle kalite 2/5 (%40 ağırlık)"
         ]
       }

@@ -17,14 +17,14 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
   - [06-oyun-2d-grafik](#06-oyun-2d-grafik) — 12 skill · Oyun geliştirme, PixiJS, 2D grafik
   - [07-gorsel-sanat-sunum](#07-gorsel-sanat-sunum) — 10 skill · Poster/canvas tasarımı, generative art, slayt, GIF
   - [08-onyuz-test-kalite](#08-onyuz-test-kalite) — 7 skill · Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı
-- **Yazılım Geliştirme** (78)
+- **Yazılım Geliştirme** (76)
   - [01-planlama-metodoloji](#01-planlama-metodoloji) — 15 skill · Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini
-  - [02-kod-kalitesi-review](#02-kod-kalitesi-review) — 13 skill · Code review, sadeleştirme, temiz kod
+  - [02-kod-kalitesi-review](#02-kod-kalitesi-review) — 11 skill · Code review, sadeleştirme, temiz kod
   - [03-test-hata-ayiklama](#03-test-hata-ayiklama) — 11 skill · TDD, hata ayıklama, doğrulama
-  - [04-mimari-api-veritabani](#04-mimari-api-veritabani) — 14 skill · Mimari, API/arayüz tasarımı, veritabanı, backend
+  - [04-mimari-api-veritabani](#04-mimari-api-veritabani) — 8 skill · Mimari, API/arayüz tasarımı, veritabanı, backend
   - [05-git-pr-surum](#05-git-pr-surum) — 8 skill · Git, worktree, PR, sürüm/release, changelog
   - [06-devops-guvenlik-performans](#06-devops-guvenlik-performans) — 10 skill · CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans
-  - [07-framework-ozel](#07-framework-ozel) — 7 skill · Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)
+  - [07-framework-ozel](#07-framework-ozel) — 13 skill · Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)
 - **Doküman ve İçerik** (43)
   - [01-ofis-dokumanlari](#01-ofis-dokumanlari) — 8 skill · Word, Excel, PowerPoint, PDF üretme/düzenleme
   - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 5 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
@@ -215,21 +215,21 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_ · not:
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `app-builder` | ⭐ | Main application building orchestrator. Creates full-stack applications from natural language requests. Determines project type, selects tec… | next.js, node, python, react, vue | ✅ | 89 A | S 63KB | - | vudovn/ag-kit |
-| `brainstorming` | ⭐ | You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, or planning a… | react | ✅ | 91 A | M 72KB | - | obra/superpowers |
-| `brainstorming@vudovn` | alt | Socratic questioning protocol + user communication. MANDATORY for complex requests, new features, or unclear requirements. Includes progress… |  | ✅ | 89 A | S 17KB | - | vudovn/ag-kit |
-| `constraint-driven-development` | ⭐ | Establishes a project's quality bar as a written contract and stops agents quietly lowering it. Interviews the user on which dimensions matt… | git, node, python | ✅ | 91 A | M 31KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `doubt-driven-development` | ⭐ | Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when you want every assumption cross-examine… | api-anahtari | ✅ | 91 A | M 16KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `executing-plans` | ⭐ | Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or… | git, node | ✅ | 91 A | M 23KB | - | obra/superpowers |
-| `idea-refine` | ⭐ | Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, whe… |  | 🟡 | 86 A | M 40KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `incremental-implementation` | ⭐ | Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches more than one file, or w… | git, node, typescript | ✅ | 91 A | M 9KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `interview-me` | ⭐ | Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview un… | react | ✅ | 91 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `plan-writing` | ⭐ | Structured task planning with clear breakdowns, dependencies, and verification criteria. Use when implementing features, refactoring, or any… | node, python, react, tailwind, typescript | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `planning-and-task-breakdown` | ⭐ | Breaks work into ordered tasks. Use when you have a spec or clear requirements and need to break work into implementable tasks. Use when a t… | typescript | ✅ | 91 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `source-driven-development` | ⭐ | Grounds every implementation decision in official documentation. Use when you want to verify an approach against the official docs before im… | api-anahtari, css, html, next.js, node | ✅ | 91 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `spec-driven-development` | ⭐ | Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when draft… | node, react | ✅ | 91 A | M 13KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `templates` | ⭐ | Project scaffolding templates for new applications. Use when creating new projects from scratch. Contains 13 templates for various tech stac… | next.js, node, python, react, vue | ✅ | 89 A | S 43KB | - | vudovn/ag-kit |
-| `writing-plans` | ⭐ | Use when you have a spec or requirements for a multi-step task, before touching code | git, python | ✅ | 91 A | M 10KB | - | obra/superpowers |
+| `app-builder` | ⭐ birincil | ag-kit'in uygulama kurma orkestratörü: doğal dil isteğinden proje tipini tespit eder, 2026 varsayılan teknoloji yığınını (Next.js 16, Tailwi… | next.js, react, node, python, vue, flutter, react-native | ✅ | 77 B | S 63KB | - | vudovn/ag-kit |
+| `brainstorming` | ⭐ birincil | superpowers'ın tasarım öncesi sohbet skilli: kullanıcının ne istediğini ve nedenini tek seferde tek soruyla açar, gerektiğinde kodu/web'i ke… | node, html | ✅ | 95 A | M 72KB | - | obra/superpowers |
+| `brainstorming@vudovn` | alt alternatif | ag-kit'in Sokratik soru protokolü: belirsiz isteklerde kodlamadan önce en az 3 soru (amaç, kullanıcı, kapsam) sorar, soruları seçenek/artı-e… |  | ✅ | 77 B | S 17KB | - | vudovn/ag-kit |
+| `constraint-driven-development` | ⭐ birincil | Projenin kalite çıtasını CONSTRAINTS.md'de yazılı sözleşmeye çevirir: kullanıcıya hangi boyutların önemli olduğunu sorar, sayı yoksa makul v… | git, node, python | ✅ | 87 A | M 31KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `doubt-driven-development` | ⭐ birincil | Önemsiz olmayan her kararı (iddia → en küçük incelenebilir birim → taze bağlamlı karşıt inceleme → uzlaştırma → dur) döngüsünden geçirir; ge… | api-anahtari | ✅ | 87 A | M 16KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `executing-plans` | ⭐ birincil | Yazılmış bir planı alt-agent kullanmadan, aynı oturumda görev görev uygular: her görev için brief ve kayıt defteri (ledger) tutar, TDD ile i… | git | ✅ | 87 A | M 23KB | - | obra/superpowers |
+| `idea-refine` | ⭐ alternatif | Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı,… |  | 🟡 | 84 A | M 40KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `incremental-implementation` | ⭐ tamamlayıcı | Değişiklikleri ince, doğrulanabilir dilimlerle teslim ettirir: dikey/sözleşme-önce/risk-önce dilimleme, 'önce sadelik' ve kapsam disiplini, … | git | ✅ | 87 A | M 9KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `interview-me` | ⭐ tamamlayıcı | Kullanıcının gerçekte ne istediğini (yapması gerektiğini düşündüğü şeyi değil) bulmak için tek soruluk turlarla ~%95 güvene kadar görüşme ya… | react | ✅ | 87 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `plan-writing` | ⭐ alternatif | ag-kit'in kısa plan yazma rehberi (obra/superpowers'tan uyarlanmış): 5-10 görevlik, her görevin doğrulaması belli, bir sayfayı geçmeyen plan… | node, python, react, tailwind, typescript | ✅ | 77 B | S 4KB | - | vudovn/ag-kit |
+| `planning-and-task-breakdown` | ⭐ alternatif | Spec'i bağımlılık grafiği çıkarıp dikey dilimlere bölerek sıralı, boyutlandırılmış görevlere çevirir; her görev için kabul ölçütü ve doğrula… | typescript | ✅ | 87 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `source-driven-development` | ⭐ birincil | Her uygulama kararını resmî dokümantasyona dayandırır: yığını ve sürümleri tespit eder, resmî belgeyi çeker (çekilen içeriği talimat değil v… | api-anahtari, css, html, next.js, node | ✅ | 87 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `spec-driven-development` | ⭐ birincil | Kodlamadan önce spec yazdırır: kapsam kontrolü (gerekirse yetenek haritasına bölme), amaç/yığın/komutlar/yapı/test stratejisi/sınırlar/başar… | node, react | ✅ | 87 A | M 13KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `templates` | alt alternatif | 13 proje iskelet şablonunun (Next.js fullstack/SaaS/static, Nuxt, Express, FastAPI, Expo, Flutter, Electron, Chrome MV3, CLI, Turborepo, Ast… | next.js, react, node, python, vue, flutter, react-native | ✅ | 69 B | S 43KB | - | vudovn/ag-kit |
+| `writing-plans` | ⭐ birincil | Spec'ten, kod tabanını hiç görmemiş bir mühendisin uygulayabileceği ayrıntılı uygulama planı yazdırır: dosya yapısı, her görev için dosyalar… | git | ✅ | 95 A | M 10KB | - | obra/superpowers |
 
 ### 02-kod-kalitesi-review
 
@@ -237,19 +237,17 @@ _Code review, sadeleştirme, temiz kod_ · not: `notlar/b-yazilim-gelistirme/02-
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `archify-review` | ⭐ | Review Archify issues, PRs, or code through value, cost, and impact to support evidence-based maintenance decisions. Use for issue triage, c… |  | ✅ | 91 A | S 2KB | - | tt-a1i/archify |
-| `archify-tuning` | ⭐ | Improve Archify diagram accuracy, visual quality and complete authoring speed with fewer repairs. Use for generation experiments or evaluati… | node | ✅ | 89 A | M 57KB | - | tt-a1i/archify |
-| `clean-code` | ⭐ | Pragmatic coding standards - concise, direct, no over-engineering, no unnecessary comments | playwright, python, typescript | ✅ | 89 A | S 7KB | - | vudovn/ag-kit |
-| `code-review-and-quality` | ⭐ | Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use … | node, typescript | ✅ | 91 A | M 20KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `code-review-checklist` | ⭐ | Code review guidelines covering code quality, security, and best practices. | typescript | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `code-review-graph` | ⭐ | Token-efficient code review using Tree-sitter AST graphs and MCP. Cuts AI token usage on large codebases by computing the blast radius of ch… | api-anahtari, git, next.js, node, python | ✅ | 87 A | M 11KB | - | vudovn/ag-kit |
-| `code-simplification` | ⭐ | Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, mai… | git, python, react, typescript | ✅ | 91 A | M 13KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `lint-and-validate` | ⭐ | Automatic quality control, linting, and static analysis procedures. Use after every code modification to ensure syntax correctness and proje… | node, python, typescript | ✅ | 89 A | S 16KB | - | vudovn/ag-kit |
-| `pragmatic-review` | ⭐ | Interactive pragmatic code review focusing on YAGNI and KISS principles. Use when the user asks for a code review, wants to check for over-e… | git, html, typescript | ✅ | 70 B | M 11KB | - | heyitsnoah/claudesidian |
-| `receiving-code-review` | ⭐ | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable -… |  | ✅ | 93 A | S 6KB | - | obra/superpowers |
-| `requesting-code-review` | ⭐ | Use when completing tasks, implementing major features, or before merging to verify work meets requirements | git | ✅ | 93 A | S 9KB | - | obra/superpowers |
-| `simplify-code` | ⭐ | Reduce complexity of over-engineered code. Identify unnecessary abstractions, remove dead code, flatten deep nesting, and simplify logic whi… | git, node, typescript | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `simplify-codebase` | ⭐ | Simplification audit or authorized codebase simplification whose stated objective is to remove accidental complexity. Use for evidence-backe… |  | ✅ | 93 A | S 27KB | - | tt-a1i/archify |
+| `clean-code` | ⭐ birincil | ag-kit'in her kod yazımında açık tutulan pragmatik kodlama standardı: SRP/DRY/KISS/YAGNI, isimlendirme kuralları, küçük fonksiyon ve sığ iç … | playwright, python, typescript | ✅ | 77 B | S 7KB | - | vudovn/ag-kit |
+| `code-review-and-quality` | ⭐ birincil | Beş eksenli kod incelemesi yaptırır: doğruluk, okunabilirlik/sadelik, mimari, güvenlik, performans. Önce testleri sonra uygulamayı okur, bul… | node, typescript | ✅ | 95 A | M 20KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `code-review-checklist` | ⭐ alternatif | Kısa kod inceleme kontrol listesi: doğruluk, güvenlik (enjeksiyon, XSS, gizli anahtar, prompt injection), performans, kod kalitesi, test ve … | typescript | ✅ | 77 B | S 3KB | - | vudovn/ag-kit |
+| `code-review-graph` | ⭐ birincil | code-review-graph MCP sunucusunun kullanım rehberi: Tree-sitter ile kod tabanını SQLite'ta AST grafiğine çevirip değişikliğin etki alanını (… | python, tree-sitter, sqlite, mcp | ✅ | 76 B | M 11KB | - | vudovn/ag-kit |
+| `code-simplification` | ⭐ birincil | Davranışı birebir koruyarak kodu açıklık için sadeleştirir: Chesterton'ın çiti (önce neden var olduğunu anla), proje geleneklerine uyma, zek… | typescript, javascript, python, react | ✅ | 95 A | M 13KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `lint-and-validate` | ⭐ birincil | Her kod değişikliğinden sonra ekosisteme göre lint, tip denetimi ve güvenlik taramasını çalıştırır (Node/TS: eslint, tsc --noEmit, npm audit… | node, typescript, python | ✅ | 77 B | S 16KB | - | vudovn/ag-kit |
+| `pragmatic-review` | ⭐ alternatif | YAGNI ve KISS odaklı etkileşimli kod incelemesi: git durumundan kapsamı seçtirir (commit edilmemiş, dal, dosya, son N commit), aşırı mühendi… | git | ✅ | 74 B | M 11KB | - | heyitsnoah/claudesidian |
+| `receiving-code-review` | ⭐ tamamlayıcı | Gelen kod inceleme geri bildirimine teknik titizlikle yaklaşmayı öğretir: oku, kendi sözlerinle yeniden ifade et, kod tabanında doğrula, değ… |  | ✅ | 88 A | S 6KB | - | obra/superpowers |
+| `requesting-code-review` | ⭐ birincil | İş bitince veya birleştirmeden önce, oturum geçmişini değil özenle hazırlanmış bağlamı (açıklama, plan, BASE/HEAD SHA) vererek bir inceleyic… | git | ✅ | 96 A | S 9KB | - | obra/superpowers |
+| `simplify-code` | ⭐ alternatif | Aşırı mühendislik içeren kodu sadeleştirme kontrol listesi: gereksiz soyutlamalar, ölü kod, derin iç içelik, çok parametreli fonksiyonlar ve… | typescript, javascript | ✅ | 77 B | S 4KB | - | vudovn/ag-kit |
+| `simplify-codebase` | ⭐ tamamlayıcı | Kod tabanından kazara karmaşıklığı kanıta dayalı olarak ayıklar: Survey (salt okuma, sıralı bulgular) ve Change (yetkili silme/birleştirme) … |  | ✅ | 96 A | S 27KB | - | tt-a1i/archify |
 
 ### 03-test-hata-ayiklama
 
@@ -257,17 +255,17 @@ _TDD, hata ayıklama, doğrulama_ · not: `notlar/b-yazilim-gelistirme/03-test-h
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `debugging-and-error-recovery` | ⭐ | Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match exp… | git, node, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `systematic-debugging` | ⭐ | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes | git | ✅ | 91 A | M 40KB | - | obra/superpowers |
-| `systematic-debugging@heyitsnoah` | alt | ALWAYS use before attempting any fix. Never jump to solutions - investigate root cause first. Use when encountering any technical issue, bug… | git, node, typescript | ✅ | 70 B | M 13KB | - | heyitsnoah/claudesidian |
-| `systematic-debugging@vudovn` | alt | 4-phase systematic debugging methodology with root cause analysis and evidence-based verification. Use when debugging complex issues. | git, typescript | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `tdd-workflow` | ⭐ | Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle. |  | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `test-driven-development` | ⭐ | Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. … | api-anahtari, css, html, node, playwright | ✅ | 91 A | M 16KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `test-driven-development@obra` | alt | Use when implementing any feature or bugfix, before writing implementation code | node, typescript | ✅ | 91 A | M 17KB | claude:farkli,agents:farkli | obra/superpowers |
-| `test-value` | ⭐ | Improve test value and feedback cost when auditing slow, flaky, redundant or brittle tests; choosing tests during implementation; or reviewi… |  | ✅ | 91 A | M 19KB | - | tt-a1i/archify |
-| `testing-patterns` | ⭐ | Testing patterns and principles. Unit, integration, mocking strategies. |  | ✅ | 89 A | S 10KB | - | vudovn/ag-kit |
-| `verification-before-completion` | ⭐ | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and … |  | ✅ | 93 A | S 4KB | - | obra/superpowers |
-| `verify-changes` | ⭐ | Prove code works by running it, not just checking it exists. Verification through execution rather than inspection. Use after writing or mod… | node, python | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
+| `debugging-and-error-recovery` | ⭐ alternatif | Kök neden odaklı hata ayıklama: 'hattı durdur' kuralı, yeniden üret → yerelleştir → küçült → kök nedeni düzelt → tekrarı önle → uçtan uca do… | git, node, typescript | ✅ | 87 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `systematic-debugging` | ⭐ birincil | superpowers'ın hata ayıklama skilli: 'kök neden bulunmadan düzeltme yok' demir yasasıyla dört faz (kök neden araştırması, desen analizi, hip… | git | ✅ | 95 A | M 40KB | - | obra/superpowers |
+| `systematic-debugging@heyitsnoah` | alt alternatif | obra/superpowers systematic-debugging'in claudesidian'daki kopyası: aynı dört faz ve demir yasa; kök neden izleme, stack trace ekleme, kirle… | git, typescript | ✅ | 74 B | M 13KB | - | heyitsnoah/claudesidian |
+| `systematic-debugging@vudovn` | alt alternatif | ag-kit'in kısaltılmış hata ayıklama şablonu (obra/superpowers'tan uyarlanmış): yeniden üret, izole et, anla (5 Neden), düzelt ve doğrula faz… | git | ✅ | 69 B | S 3KB | - | vudovn/ag-kit |
+| `tdd-workflow` | ⭐ alternatif | ag-kit'in TDD ilke özeti: RED-GREEN-REFACTOR döngüsü, TDD'nin üç yasası, her faz için kurallar, AAA, TDD'nin ne zaman değerli olduğu tablosu… |  | ✅ | 69 B | S 3KB | - | vudovn/ag-kit |
+| `test-driven-development` | ⭐ birincil | Kırmızı-yeşil-refactor döngüsüyle geliştirme: önce projenin test yığınını keşfeder, başarısız test yazdırır, minimum kodla geçirtir, sonra t… | api-anahtari, css, html, node, playwright | ✅ | 95 A | M 16KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `test-driven-development@obra` | alt alternatif | superpowers'ın TDD skilli: 'başarısız test olmadan üretim kodu yok' demir yasası; testten önce yazılan kodu silip baştan başlatır, kırmızıyı… | typescript | ✅ | 95 A | M 17KB | claude:farkli,agents:farkli | obra/superpowers |
+| `test-value` | ⭐ birincil | Testlerin değerini ve geri bildirim maliyetini denetler: yavaş, kararsız, yinelenen veya kırılgan testleri bulur; uygulama sırasında hangi t… |  | ✅ | 95 A | M 19KB | - | tt-a1i/archify |
+| `testing-patterns` | ⭐ alternatif | Test ilkeleri özeti: test piramidi, AAA, birim/entegrasyon/E2E seçimi, iyi birim testi özellikleri, mock ne zaman/hangi tür (stub, spy, mock… | python | ✅ | 77 B | S 10KB | - | vudovn/ag-kit |
+| `verification-before-completion` | ⭐ birincil | 'Taze doğrulama kanıtı olmadan tamamlandı iddiası yok' kuralı: bir durum iddia etmeden önce kanıtlayan komutu belirle, tam çalıştır, çıktıyı… |  | ✅ | 96 A | S 4KB | - | obra/superpowers |
+| `verify-changes` | ⭐ tamamlayıcı | Kodun çalıştığını incelemeyle değil çalıştırarak kanıtlatır: değişen dosyaları ve beklenen davranışı belirle, değişiklik tipine göre doğrula… | node, python | ✅ | 77 B | S 4KB | - | vudovn/ag-kit |
 
 ### 04-mimari-api-veritabani
 
@@ -275,20 +273,14 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_ · not: `notlar/b-yazilim
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `api-and-interface-design` | ⭐ | Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or Graph… | typescript | ✅ | 91 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `api-patterns` | ⭐ | API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination. | api-anahtari, python, typescript | ✅ | 89 A | S 20KB | - | vudovn/ag-kit |
-| `architecture` | ⭐ | Architectural decision-making framework. Requirements analysis, trade-off evaluation, ADR documentation. Use when making architecture decisi… |  | ✅ | 89 A | S 12KB | - | vudovn/ag-kit |
-| `bash-linux` | ⭐ | Bash/Linux terminal patterns. Critical commands, piping, error handling, scripting. Use when working on macOS or Linux systems. | node | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `database-design` | ⭐ | Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases. |  | ✅ | 89 A | S 13KB | - | vudovn/ag-kit |
-| `frontend-architecture` | ⭐ | How to organize frontend code — separation of concerns (UI / logic / data / type), file responsibility, state tiers, API services, schema va… | api-anahtari, next.js, react, tailwind, typescript | ✅ | 87 A | M 8KB | - | vudovn/ag-kit |
-| `frontend-ui-engineering` | ⭐ | Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components,… | api-anahtari, css, react, tailwind, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `nextjs-react-expert` | ⭐ | React and Next.js performance optimization from Vercel Engineering. Use when building React components, optimizing performance, eliminating … | next.js, python, react, typescript | ✅ | 87 A | M 111KB | - | vudovn/ag-kit |
-| `nodejs-best-practices` | ⭐ | Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches thinking, not c… | next.js, node, playwright, react, typescript | ✅ | 87 A | M 8KB | - | vudovn/ag-kit |
-| `powershell-windows` | ⭐ | PowerShell Windows patterns. Critical pitfalls, operator syntax, error handling. | api-anahtari | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `python-patterns` | ⭐ | Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not… | api-anahtari, python | ✅ | 87 A | M 9KB | - | vudovn/ag-kit |
-| `rust-pro` | ⭐ | Master modern Rust (2024 edition) with async patterns, advanced type system features, and production-ready systems programming. Expert in th… |  | ✅ | 89 A | S 8KB | - | vudovn/ag-kit |
-| `vercel-composition-patterns` | ⭐ | React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component librarie… | react | ✅ | 92 A | S 49KB | claude:ayni | calesthio/OpenMontage |
-| `vercel-react-best-practices` | ⭐ | React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refacto… | css, next.js, react | ✅ | 92 A | S 207KB | claude:ayni | calesthio/OpenMontage |
+| `api-and-interface-design` | ⭐ birincil | Kararlı API ve modül arayüzü tasarımı: Hyrum yasası ve tek sürüm kuralı, önce sözleşme, tutarlı hata semantiği, sınırda doğrulama, değiştirm… | typescript, rest, graphql | ✅ | 95 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `api-patterns` | ⭐ tamamlayıcı | ag-kit'in API tasarım karar rehberi: REST/GraphQL/tRPC seçim ağacı, kaynak isimlendirme ve durum kodları, zarf/hata/sayfalama yanıt biçimler… | rest, graphql, trpc, typescript, python | ✅ | 77 B | S 20KB | - | vudovn/ag-kit |
+| `architecture` | ⭐ birincil | Mimari karar çerçevesi: bağlam keşfi soruları ve proje sınıflandırması, ödünleşim (trade-off) analizi ve ADR şablonları, desen seçimi karar … |  | ✅ | 77 B | S 12KB | - | vudovn/ag-kit |
+| `database-design` | ⭐ birincil | Veritabanı tasarım kararları: PostgreSQL/Neon/Turso/SQLite seçimi, Drizzle/Prisma/Kysely ORM seçimi, normalizasyon ve ilişkiler, indeks tipl… | postgresql, sqlite, prisma, drizzle, sql | ✅ | 77 B | S 13KB | - | vudovn/ag-kit |
+| `frontend-architecture` | ⭐ birincil | Ön yüz kodunu ölçeklenir biçimde düzenleme kuralları: UI / mantık (hook, composable) / veri (servis dosyaları) / tip / doğrulama (şema) katm… | react, next.js, vue, typescript, tailwind | ✅ | 84 A | M 8KB | - | vudovn/ag-kit |
+| `frontend-ui-engineering` | ⭐ birincil | Üretim kalitesinde, erişilebilir ve responsive arayüz kurma: bileşen dosya yapısı ve desenleri, durum yönetimi, tasarım sistemine bağlılık v… | react, typescript, css, tailwind | ✅ | 87 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `nodejs-best-practices` | ⭐ birincil | Node.js arka yüz karar ilkeleri: Hono/Fastify/NestJS/Express seçim ağacı, yerel TypeScript ve modül sistemi kararları, katmanlı mimari, merk… | node, typescript, express, fastify, hono, nestjs | ✅ | 76 B | M 8KB | - | vudovn/ag-kit |
+| `python-patterns` | ⭐ birincil | Python geliştirme karar ilkeleri: FastAPI/Django/Flask seçim ağacı, async/sync kararı ve kütüphane seçimi, tip ipucu stratejisi ve Pydantic … | python, fastapi, django, flask, pydantic | ✅ | 76 B | M 9KB | - | vudovn/ag-kit |
 
 ### 05-git-pr-surum
 
@@ -296,14 +288,14 @@ _Git, worktree, PR, sürüm/release, changelog_ · not: `notlar/b-yazilim-gelist
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `changelog-generator` | ⭐ | Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical … | git | ✅ | 88 A | S 3KB | - | ComposioHQ/awesome-claude-skills |
-| `deprecation-and-migration` | ⭐ | Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to ano… | node, typescript | ✅ | 91 A | M 12KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `finishing-a-development-branch` | ⭐ | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work | git, node | ✅ | 93 A | S 8KB | - | obra/superpowers |
-| `git-workflow-and-versioning` | ⭐ | Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitting uncommitt… | api-anahtari, git, next.js, node, typescript | ✅ | 91 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `git-worktrees` | ⭐ | Work with git worktrees for isolated parallel development. Use when starting feature work in isolation, when need separate workspace without… | git, node | ✅ | 72 B | S 4KB | - | heyitsnoah/claudesidian |
-| `pull-request` | ⭐ | Create a new feature branch, commit changes, push to GitHub, and open a pull request — all in one command. Use when the user asks to open a … | git | ✅ | 72 B | S 5KB | - | heyitsnoah/claudesidian |
-| `release` | ⭐ | Automatically bump version, update changelog, commit, tag, and push a new release based on recent changes. Use when the user wants to cut a … | git | ✅ | 72 B | S 6KB | - | heyitsnoah/claudesidian |
-| `using-git-worktrees` | ⭐ | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated wo… | git, node, python | ✅ | 93 A | S 7KB | - | obra/superpowers |
+| `changelog-generator` | ⭐ tamamlayıcı | Git commit geçmişini tarayıp değişiklikleri kategorilere (yeni özellik, iyileştirme, düzeltme, kırıcı değişiklik, güvenlik) ayırır, iç commi… | git | ✅ | 77 B | S 3KB | - | ComposioHQ/awesome-claude-skills |
+| `deprecation-and-migration` | ⭐ birincil | Eski sistem, API veya özellikleri kaldırma ve kullanıcıları yeni uygulamaya taşıma: 'kod bir yüktür' ve Hyrum yasası ilkeleri, kaldırma kara… | sql | ✅ | 87 A | M 12KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `finishing-a-development-branch` | ⭐ birincil | Uygulama bittiğinde işi nasıl birleştireceğine karar verdirir: tam test paketini çalıştır (kırmızıysa dur), ortamı (normal repo / worktree /… | git, gh | ✅ | 96 A | S 8KB | - | obra/superpowers |
+| `git-workflow-and-versioning` | ⭐ birincil | Git iş akışı disiplini: trunk tabanlı geliştirme, erken ve sık commit, atomik commit ve açıklayıcı mesajlar, konuları ayırma, değişiklik boy… | git | ✅ | 95 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `git-worktrees` | ⭐ alternatif | git worktree komut başvurusu: oluşturma (yeni/var olan dal), .worktrees/ dizin düzeni, kurulum sonrası adımlar (bağımlılık, env dosyası), co… | git | ✅ | 67 B | S 4KB | - | heyitsnoah/claudesidian |
+| `pull-request` | ⭐ alternatif | Tek komutla PR akışı: önkoşulları kontrol eder (git, gh), başlıktan dal adı üretir, değişiklikleri gösterip onay ister, conventional commit … | git, gh | ✅ | 67 B | S 5KB | - | heyitsnoah/claudesidian |
+| `release` | ⭐ birincil | Release akışını otomatikleştirir: son tag'den beri commit'leri analiz edip (BREAKING/feat/fix) sürüm artışını belirler, package.json sürümün… | git, gh, node | ✅ | 67 B | S 6KB | - | heyitsnoah/claudesidian |
+| `using-git-worktrees` | ⭐ birincil | İşin yalıtılmış bir çalışma alanında yapılmasını sağlar: önce zaten bir worktree içinde olunup olunmadığını (alt modül korumasıyla) tespit e… | git | ✅ | 96 A | S 7KB | - | obra/superpowers |
 
 ### 06-devops-guvenlik-performans
 
@@ -311,16 +303,16 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_ · not: `notlar/b-ya
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `ci-cd-and-automation` | ⭐ | Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates… | api-anahtari, node, playwright, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `deployment-procedures` | ⭐ | Production deployment principles and decision-making. Safe deployment workflows, rollback strategies, and verification. Teaches thinking, no… | docker, git | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `observability-and-instrumentation` | ⭐ | Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shippin… | api-anahtari, node, typescript | ✅ | 91 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `performance-optimization` | ⭐ | Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspec… | css, git, node, react | ✅ | 91 A | M 26KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `performance-profiling` | ⭐ | Performance profiling principles. Measurement, analysis, and optimization techniques. | python | ✅ | 89 A | S 13KB | - | vudovn/ag-kit |
-| `red-team-tactics` | ⭐ | Red team tactics principles based on MITRE ATT&CK. Attack phases, detection evasion, reporting. | api-anahtari | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `security-and-hardening` | ⭐ | Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authentication, data… | api-anahtari, git, html, node | ✅ | 91 A | M 30KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `server-management` | ⭐ | Server management principles and decision-making. Process management, monitoring strategy, and scaling decisions. Teaches thinking, not comm… | docker, node | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `shipping-and-launch` | ⭐ | Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when… | git, node, react, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `vulnerability-scanner` | ⭐ | Advanced vulnerability analysis principles. OWASP 2025, Supply Chain Security, attack surface mapping, risk prioritization. | api-anahtari, python | ✅ | 89 A | S 35KB | - | vudovn/ag-kit |
+| `ci-cd-and-automation` | ⭐ birincil | CI/CD hattı kurulumu: kalite kapısı sırası (lint → tip → birim → build → entegrasyon → E2E → güvenlik), GitHub Actions örnekleri (veritabanl… | github-actions, node, playwright | ✅ | 87 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `deployment-procedures` | ⭐ tamamlayıcı | Üretim deploy ilkeleri: platform seçim ağacı (Vercel/Netlify, Railway/Render/Fly, VPS+PM2/Docker, Kubernetes, serverless), deploy öncesi dör… | docker, git | ✅ | 77 B | S 6KB | - | vudovn/ag-kit |
+| `observability-and-instrumentation` | ⭐ birincil | Kodu üretimde görünür ve teşhis edilebilir kılar: önce 'çalışıyor'un tanımı, her soru için doğru sinyal (log, metrik, iz), yapılandırılmış l… | opentelemetry, node, typescript | ✅ | 87 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `performance-optimization` | ⭐ birincil | Ölçüme dayalı performans iyileştirme: Core Web Vitals hedefleri, önce ölç → darboğazı bul → düzelt → doğrula (tut ya da geri al, geri alınan… | node, react, css | ✅ | 87 A | M 26KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `performance-profiling` | ⭐ tamamlayıcı | Performans profil çıkarma ilkeleri: Core Web Vitals hedefleri, taban → tespit → düzelt → doğrula süreci, sorun tipine göre araç seçimi (Ligh… | lighthouse, python, node | ✅ | 77 B | S 13KB | - | vudovn/ag-kit |
+| `red-team-tactics` | ⭐ birincil | MITRE ATT&CK tabanlı kırmızı takım ilkeleri: saldırı yaşam döngüsü fazları ve amaçları, pasif/aktif keşif, ilk erişim vektörleri, Windows/Li… | api-anahtari | ✅ | 69 B | S 4KB | - | vudovn/ag-kit |
+| `security-and-hardening` | ⭐ birincil | Kodu güvenlik açıklarına karşı sertleştirir: önce tehdit modeli, 'her zaman yap / önce sor / asla yapma' üç katmanlı sınır sistemi; enjeksiy… | node, html | ✅ | 95 A | M 30KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `server-management` | ⭐ birincil | Sunucu işletim ilkeleri: süreç yöneticisi seçimi (PM2, systemd, Docker, Kubernetes), izleme metrikleri ve uyarı seviyeleri, izleme aracı seç… | pm2, systemd, docker, node | ✅ | 69 B | S 4KB | - | vudovn/ag-kit |
+| `shipping-and-launch` | ⭐ birincil | Üretime çıkış hazırlığı: kod kalitesi, güvenlik, performans, erişilebilirlik, altyapı ve dokümantasyon için ön yayın kontrol listesi; featur… | git, node, react, typescript | ✅ | 87 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `vulnerability-scanner` | ⭐ tamamlayıcı | Güvenlik açığı analizi ilkeleri: varsayılan ihlal, sıfır güven, derinlemesine savunma; OWASP Top 10:2025 (yeni A03 tedarik zinciri), saldırı… | python | ✅ | 77 B | S 35KB | - | vudovn/ag-kit |
 
 ### 07-framework-ozel
 
@@ -328,13 +320,19 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `next-bundle-optimizer` | ⭐ | Audit and reduce Next.js browser initial-load work. Use for slow route startup, oversized client bundles, duplicate browser dependencies, or… | next.js, node | ✅ | 98 A | M 15KB | - | vercel/next.js |
-| `next-cache-components-adoption` | ⭐ | Turn on Cache Components in a Next.js app and resolve the blocking routes it surfaces. Use when the user wants to enable, adopt, or migrate … | html, next.js, node, playwright, react | ✅ | 95 A | L 40KB | - | vercel/next.js |
-| `next-cache-components-optimizer` | ⭐ | Optimize the meaningful UI available immediately from a Next.js route on an initial load (hard navigation) or named client-side navigation (… | next.js, node, playwright, typescript | ✅ | 98 A | M 50KB | - | vercel/next.js |
-| `next-dev-loop` | ⭐ | Verify Next.js runtime behavior after editing app code. Use this skill to confirm a change actually works in a running app — not just that i… | next.js, node, react | ✅ | 98 A | M 9KB | - | vercel/next.js |
-| `next-partial-prefetching-adoption` | ⭐ | Turn on Partial Prefetching in a Next.js app and work through the insights it surfaces. Use when the user wants to enable or adopt Partial P… | next.js, node, playwright, typescript | ✅ | 95 A | L 35KB | - | vercel/next.js |
-| `next-partial-prefetching-optimizer` | ⭐ | Optimize what selected Next.js client navigations include before the click under Partial Prefetching. Use after Cache Components and Partial… | next.js, playwright | ✅ | 98 A | M 26KB | - | vercel/next.js |
-| `playwright-cli` | ⭐ | Automate browser interactions, test web pages and work with Playwright tests. | api-anahtari, css, html, node, playwright | ✅ | 96 A | M 68KB | - | microsoft/playwright |
+| `bash-linux` | ⭐ birincil | macOS/Linux Bash kalıpları: komut zincirleme operatörleri, dosya işlemleri, süreç yönetimi (port tutan süreci bulma/öldürme), metin işleme (… | bash | ✅ | 69 B | S 4KB | - | vudovn/ag-kit |
+| `next-bundle-optimizer` | ⭐ birincil | Next.js'te tarayıcının ilk yükleme işini denetler ve azaltır: varsayılan 'audit' kipinde next analyze ile anlık görüntü alıp dışa aktarır, m… | next.js, node | ✅ | 91 A | M 15KB | - | vercel/next.js |
+| `next-cache-components-adoption` | ⭐ birincil | Next.js uygulamasında Cache Components'i açar ve ortaya çıkan engelleyici route'ları çözerek build'i geçirir: App Router ve app dizinini doğ… | next.js, react, typescript, playwright | ✅ | 97 A | L 40KB | - | vercel/next.js |
+| `next-cache-components-optimizer` | ⭐ tamamlayıcı | Cache Components benimsenmiş Next.js 16.3+ uygulamasında bir route'un ilk yüklemede veya istemci geçişinde anında gösterdiği anlamlı UI'yi (… | next.js, playwright, typescript | ✅ | 99 A | M 50KB | - | vercel/next.js |
+| `next-dev-loop` | ⭐ birincil | Vercel'in Next.js düzenle-doğrula döngüsü: kod değişikliğinden sonra uygulamanın çalışma anında gerçekten çalıştığını iki görünümle kanıtlar… | next.js, react, node, turbopack | ✅ | 99 A | M 9KB | - | vercel/next.js |
+| `next-partial-prefetching-adoption` | ⭐ birincil | Next.js'te Partial Prefetching'i açar ve ortaya çıkan içgörüleri çözer: önce <Link prefetch={true}> gezinmelerini denetler, mevcut prefetch … | next.js, playwright, typescript | ✅ | 97 A | L 35KB | - | vercel/next.js |
+| `next-partial-prefetching-optimizer` | ⭐ tamamlayıcı | Partial Prefetching altında seçili istemci gezinmelerinin tıklamadan önce neyi içereceğini optimize eder: her kaynak link/hedef için prefetc… | next.js, playwright | ✅ | 99 A | M 26KB | - | vercel/next.js |
+| `nextjs-react-expert` | ⭐ alternatif | Vercel'in React/Next.js performans kurallarının ag-kit uyarlaması: 58 kural etki sırasına göre 8 dosyada, ek olarak Next.js 16 Cache Compone… | react, next.js, python | ✅ | 76 B | M 111KB | - | vudovn/ag-kit |
+| `playwright-cli` | ⭐ birincil | Microsoft'un playwright-cli aracıyla tarayıcı otomasyonu: aç/git, snapshot'taki ref'lerle tıklama/yazma/doldurma/sürükleme/yükleme, metin ar… | playwright, node | ✅ | 90 A | M 68KB | - | microsoft/playwright |
+| `powershell-windows` | ⭐ alternatif | Windows PowerShell tuzakları ve kalıpları: mantıksal operatörlerde cmdlet'i paranteze alma, betiklerde Unicode/emoji yasağı, null kontroller… | powershell, windows | ✅ | 77 B | S 4KB | - | vudovn/ag-kit |
+| `rust-pro` | ⭐ birincil | Modern Rust (2024 sürümü) uzman persona tanımı: async (Tokio), axum, sahiplik/ömür, tip sistemi ve trait'ler, performans ve sistem programla… | rust, tokio, axum | ✅ | 69 B | S 8KB | - | vudovn/ag-kit |
+| `vercel-composition-patterns` | ⭐ birincil | Vercel'in ölçeklenen React kompozisyon desenleri: boolean prop çoğalmasını compound component, state lifting ve iç yapıyı birleştirme ile ön… | react | ✅ | 87 A | S 49KB | claude:ayni | calesthio/OpenMontage |
+| `vercel-react-best-practices` | ⭐ birincil | Vercel Engineering'in React/Next.js performans kuralları: etkiye göre 8 kategoride 65 kural (şelaleleri kaldırma, bundle boyutu, sunucu tara… | react, next.js | ✅ | 87 A | S 207KB | claude:ayni | calesthio/OpenMontage |
 
 ## Doküman ve İçerik
 

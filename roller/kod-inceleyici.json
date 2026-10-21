@@ -3,13 +3,18 @@
   "aciklama": "Kod inceleme, sadeleştirme ve test değeri kontrolü yapan agent.",
   "gorev": "Değişiklikleri doğruluk, sadelik ve test kalitesi açısından incele; somut, önceliklendirilmiş öneriler ver.",
   "cekirdek": [
-    "requesting-code-review",
+    "code-review-and-quality",
+    "code-simplification",
     "simplify-codebase",
     "test-value",
-    "systematic-debugging"
+    "systematic-debugging",
+    "security-and-hardening"
   ],
   "opsiyonel": [
-    "code-review-and-quality",
-    "test-driven-development"
+    "test-driven-development",
+    "constraint-driven-development",
+    "pragmatic-review",
+    "performance-optimization",
+    "requesting-code-review"
   ]
 }

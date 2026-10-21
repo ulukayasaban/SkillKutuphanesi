@@ -22,7 +22,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Teknoloji:** playwright, react, vue, vite, typescript · **Paketler:** @playwright/test, vite
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** microsoft (kurum, resmî, ★98228, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** playwright-test-altyapisi → birincil · **Roller:** qa-erisilebilirlik, frontend-muhendis
+- **Durum:** tercih · **Örtüşme:** playwright-test-altyapisi → birincil · **Roller:** qa-erisilebilirlik
 - **Boyut:** 38 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Resmî Microsoft skill'i; kavram (hikâye + galeri + mount fixture) net ve geçiş yolu belgeli. Dikkat: galeri sayfasını (`references/gallery-spec.md`'ye göre) projede kendin yazman gerekir, hazır şablon yok; yeni bir Playwright sürümünü varsayar (mount fixture/`reuseContext`), eski sürümde çalışmayabilir. Next.js/webpack'te ayrı Vite sunucusu ekler (devDependency). 10.2 KB + 5 referans.
 
