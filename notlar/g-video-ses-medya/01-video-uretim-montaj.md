@@ -22,7 +22,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node, heygen · **Paketler:** hyperframes (npx), node>=22, ffmpeg, HeyGen hesabı (TTS)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 521 KB (SKILL.md 13.1 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. HeyGen iç skilli (internal:true): HeyGen marka kimliğine, sabit seslendirmene ve repo köküne bağlı; paketlenen TT Norms Pro / ABC Solar ticari fontlarının yeniden kullanım lisansı belirsiz. Rollere eklenmedi.
 
@@ -44,9 +44,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, ffmpeg, whisper, python · **Paketler:** hyperframes (npx), node>=22, ffmpeg, python3
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** altyazi → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 3421 KB (SKILL.md 33.8 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Karar kapısı ve ön kontroller güçlü, DNA stil kayıt defteri zengin; kurulum ağır (özne maskeleme modeli) ve SKILL.md büyük (34 KB). captions-overlay ile birlikte kullanılır. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Karar kapısı ve ön kontroller güçlü, DNA stil kayıt defteri zengin; kurulum ağır (özne maskeleme modeli) ve SKILL.md büyük (34 KB). captions-overlay ile birlikte kullanılır. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### faceless-explainer  ·  heygen-com/hyperframes @ 25126bc  ·  puan 82 (A)
 
@@ -55,9 +55,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 284 KB (SKILL.md 30.5 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun, testli betikler ve kapılı aşamalar; çok ajanlı olduğu için uzun/maliyetli. Bağlam yükü yüksek (30 KB SKILL.md). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun, testli betikler ve kapılı aşamalar; çok ajanlı olduğu için uzun/maliyetli. Bağlam yükü yüksek (30 KB SKILL.md). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### ffmpeg  ·  calesthio/OpenMontage @ c806645  ·  puan 86 (A)
 
@@ -88,9 +88,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
 - **Boyut:** 36 KB (SKILL.md 21.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İş akışlarının 'her şey dahil' yedeği; kapsamı dar tutma ve tasarımı HTML'den önce kurma kuralları iyi. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İş akışlarının 'her şey dahil' yedeği; kapsamı dar tutma ve tasarımı HTML'den önce kurma kuralları iyi. Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes  ·  heygen-com/hyperframes @ 4371981  ·  puan 93 (A)
 
@@ -110,9 +110,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, gsap, html, css, lottie, three.js · **Paketler:** hyperframes (npx), gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 2521 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-animation, heygen-com/hyperframes). Çok zengin kural/blueprint kütüphanesi (2.5 MB); SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-animation, heygen-com/hyperframes). Çok zengin kural/blueprint kütüphanesi (2.5 MB); SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-animation@heygen-com-eski  ·  heygen-com/hyperframes @ 25126bc  ·  puan 92 (A)
 
@@ -121,9 +121,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, gsap, html, css, lottie, three.js · **Paketler:** hyperframes (npx), gsap
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 1240 KB (SKILL.md 20.2 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Çok zengin kural/blueprint kütüphanesi; SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Çok zengin kural/blueprint kütüphanesi; SKILL.md kısa yönlendirici, ayrıntı isteğe bağlı yükleniyor. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-audio  ·  heygen-com/hyperframes @ 25126bc  ·  puan 82 (A)
 
@@ -132,9 +132,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, web-audio, node · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Roller:** video-kurgu-render, ses-tasarimci · **Globalde:** claude:ayni, codex:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** hyperframes-medya → emekli · **Roller:** video-kurgu-render, ses-tasarimci · **Globalde:** claude:ayni, codex:ayni, agents:ayni
 - **Boyut:** 100 KB (SKILL.md 25.9 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Belirti→çözüm yaklaşımı iyi; carve betiği testli. OpenMontage kopyasında yoktu (yeni). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Belirti→çözüm yaklaşımı iyi; carve betiği testli. OpenMontage kopyasında yoktu (yeni). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-cli  ·  heygen-com/hyperframes @ 4371981  ·  puan 85 (A)
 
@@ -154,9 +154,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, node, ffmpeg, docker, aws-lambda · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 54 KB (SKILL.md 9.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-cli, heygen-com/hyperframes). Pratik ve ajan dostu. Not: 'init' global skill setini otomatik güncelliyor; kütüphane kuralı gereği bu davranış izlenmeli.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-cli, heygen-com/hyperframes). Pratik ve ajan dostu. Not: 'init' global skill setini otomatik güncelliyor; kütüphane kuralı gereği bu davranış izlenmeli. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-core  ·  calesthio/OpenMontage @ c806645  ·  puan 95 (A)
 
@@ -165,9 +165,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 78 KB (SKILL.md 6.9 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-core, heygen-com/hyperframes). Net teknik sözleşme ve referans dizini; diğer alt skillerin temeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-core, heygen-com/hyperframes). Net teknik sözleşme ve referans dizini; diğer alt skillerin temeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-core@heygen-com-eski  ·  heygen-com/hyperframes @ 25126bc  ·  puan 92 (A)
 
@@ -176,9 +176,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
 - **Boyut:** 98 KB (SKILL.md 12.6 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Net teknik sözleşme; 'ilk lint hataları' ve sessiz hata listeleri pratik. Diğer alt skillerin temeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Net teknik sözleşme; 'ilk lint hataları' ve sessiz hata listeleri pratik. Diğer alt skillerin temeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-creative  ·  calesthio/OpenMontage @ c806645  ·  puan 95 (A)
 
@@ -187,9 +187,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, css · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 1000 KB (SKILL.md 5.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-creative, heygen-com/hyperframes). Çıktı kalitesini en çok etkileyen alt skill; house-style ve video-composition referansları güçlü. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-creative, heygen-com/hyperframes). Çıktı kalitesini en çok etkileyen alt skill; house-style ve video-composition referansları güçlü. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-creative@heygen-com-eski  ·  heygen-com/hyperframes @ 25126bc  ·  puan 93 (A)
 
@@ -198,9 +198,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, css · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 1176 KB (SKILL.md 6.4 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Çıktı kalitesini en çok etkileyen alt skill; frame preset kütüphanesi güçlü. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Çıktı kalitesini en çok etkileyen alt skill; frame preset kütüphanesi güçlü. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-keyframes  ·  heygen-com/hyperframes @ 25126bc  ·  puan 84 (A)
 
@@ -209,9 +209,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, gsap, css, svg, three.js · **Paketler:** hyperframes (npx), gsap
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
 - **Boyut:** 23 KB (SKILL.md 15.9 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Dar ve kesin kapsam; CLI kanıtı (proof) ile bitiş kriteri iyi. hyperframes-animation ile tamamlayıcı. Yeni (OpenMontage'da yoktu). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Dar ve kesin kapsam; CLI kanıtı (proof) ile bitiş kriteri iyi. hyperframes-animation ile tamamlayıcı. Yeni (OpenMontage'da yoktu). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-media  ·  calesthio/OpenMontage @ c806645  ·  puan 78 (B)
 
@@ -220,9 +220,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, node, heygen, elevenlabs, whisper · **Paketler:** node>=22, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** hyperframes-medya → emekli · **Globalde:** claude:ayni
 - **Boyut:** 1396 KB (SKILL.md 11.2 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. HyperFrames HEAD'de ayrı skill olarak kaldırıldı; TTS, transkripsiyon ve arka plan silme media-use (heygen-com/hyperframes) içine taşındı. Eski projeler için arşivde tutuluyor.
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. HyperFrames HEAD'de ayrı skill olarak kaldırıldı; TTS, transkripsiyon ve arka plan silme media-use (heygen-com/hyperframes) içine taşındı. Eski projeler için arşivde tutuluyor. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-registry  ·  heygen-com/hyperframes @ 4371981  ·  puan 85 (A)
 
@@ -242,9 +242,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, node · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 49 KB (SKILL.md 4.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-registry, heygen-com/hyperframes). Dar ama net kapsam; registry ağ erişimi gerektirir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes-registry, heygen-com/hyperframes). Dar ama net kapsam; registry ağ erişimi gerektirir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes-studio  ·  heygen-com/hyperframes @ 25126bc  ·  puan 84 (A)
 
@@ -253,9 +253,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-alt-skilleri → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa, davranış odaklı ('değiştirme deme, önce konuş'). Yeni (OpenMontage'da yoktu). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa, davranış odaklı ('değiştirme deme, önce konuş'). Yeni (OpenMontage'da yoktu). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### hyperframes@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 94 (A)
 
@@ -264,9 +264,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** video-kompozisyon-cercevesi → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 20 KB (SKILL.md 16.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes, heygen-com/hyperframes). Ekosistemin yönlendiricisi, iyi yapılandırılmış. Dikkat: /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok (OpenMontage c806645'te bulunmuyor).
+- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes, heygen-com/hyperframes). Ekosistemin yönlendiricisi, iyi yapılandırılmış. Dikkat: /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok (OpenMontage c806645'te bulunmuyor). · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### media-use  ·  heygen-com/hyperframes @ 4371981  ·  puan 85 (A)
 
@@ -286,9 +286,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** node, heygen, api-anahtari · **Paketler:** node, HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** medya-varlik-temini → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-medya → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 66 KB (SKILL.md 5.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (media-use, heygen-com/hyperframes). Bağlam dostu tasarım (tek satır çıktı, önbellek). HeyGen kataloğuna bağımlı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (media-use, heygen-com/hyperframes). Bağlam dostu tasarım (tek satır çıktı, önbellek). HeyGen kataloğuna bağımlı. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### music-to-video  ·  calesthio/OpenMontage @ c806645  ·  puan 86 (A)
 
@@ -297,9 +297,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, python, html, gsap · **Paketler:** hyperframes (npx), python3, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 6053 KB (SKILL.md 15.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (music-to-video, heygen-com/hyperframes). Kapılı (gate) iş akışı ve alt ajan dağıtımı olgun; çok ajanlı olduğu için maliyetli/uzun. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (music-to-video, heygen-com/hyperframes). Kapılı (gate) iş akışı ve alt ajan dağıtımı olgun; çok ajanlı olduğu için maliyetli/uzun. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### music-to-video@heygen-com-eski  ·  heygen-com/hyperframes @ 25126bc  ·  puan 84 (A)
 
@@ -308,9 +308,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** video-kompozisyon, motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon, motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 6081 KB (SKILL.md 18.6 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kullanıcı onaylı plan adımı ve devam (resume) tablosu olgun; çok ajanlı olduğu için maliyetli/uzun. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kullanıcı onaylı plan adımı ve devam (resume) tablosu olgun; çok ajanlı olduğu için maliyetli/uzun. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### oversized-cursor  ·  heygen-com/hyperframes @ 4371981  ·  puan 88 (A)
 
@@ -341,9 +341,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node, github-cli · **Paketler:** hyperframes (npx), node>=22, ffmpeg, gh
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 358 KB (SKILL.md 33.3 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Büyük PR'larda sayfalı çekme ve özel repo hatalarını açık ele alıyor. Katkıcı adları/avatarları videoya girer; özel repolarda paylaşmadan önce kontrol edilmeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Büyük PR'larda sayfalı çekme ve özel repo hatalarını açık ele alıyor. Katkıcı adları/avatarları videoya girer; özel repolarda paylaşmadan önce kontrol edilmeli. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### product-launch-video  ·  heygen-com/hyperframes @ 25126bc  ·  puan 82 (A)
 
@@ -352,9 +352,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node, playwright · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 341 KB (SKILL.md 35.1 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. OpenMontage'daki website-to-video'nun güncel halefi (site turları da buraya yönleniyor). Testli betikler ve yakalama korkulukları güçlü; bağlam yükü yüksek (35 KB). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. OpenMontage'daki website-to-video'nun güncel halefi (site turları da buraya yönleniyor). Testli betikler ve yakalama korkulukları güçlü; bağlam yükü yüksek (35 KB). · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### remotion  ·  calesthio/OpenMontage @ c806645  ·  puan 71 (B)
 
@@ -363,7 +363,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/transitions
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** video-kompozisyon-cercevesi → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** remotion-cercevesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 16 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu lib/components, lib/transitions ve remotion-official bu kurulumda/arşivde yok; tek başına çalışmaz.
 
@@ -374,7 +374,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/cli
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** video-kompozisyon-cercevesi → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** remotion-cercevesi → birincil · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 112 KB (SKILL.md 4.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Remotion ekibinin resmi kural seti, kaliteli. Varsayılan çerçeve HyperFrames olduğu için alternatif; Remotion projelerinde birincil.
 
@@ -396,9 +396,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** remotion, hyperframes, react, html, gsap · **Paketler:** hyperframes (npx), remotion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** video-kompozisyon-cercevesi → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-iceri-aktarma → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 168 KB (SKILL.md 9.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (remotion-to-hyperframes, heygen-com/hyperframes). Dar kapsamlı ama disiplinli (eval zorunlu). /general-video yönlendirmesi arşivde yok.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (remotion-to-hyperframes, heygen-com/hyperframes). Dar kapsamlı ama disiplinli (eval zorunlu). /general-video yönlendirmesi arşivde yok. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### slideshow  ·  heygen-com/hyperframes @ 4371981  ·  puan 85 (A)
 
@@ -429,9 +429,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, ffmpeg, whisper · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** video-kompozisyon · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 509 KB (SKILL.md 64.0 KB, yük buyuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Ayrıntılı ve kendi kendine yeterli (font, GSAP, stil kütüphanesi paketli; NOTICE.md lisansları belirtiyor). Çok büyük SKILL.md (64 KB) — bağlam yükü yüksek. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Ayrıntılı ve kendi kendine yeterli (font, GSAP, stil kütüphanesi paketli; NOTICE.md lisansları belirtiyor). Çok büyük SKILL.md (64 KB) — bağlam yükü yüksek. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### video-download  ·  calesthio/OpenMontage @ c806645  ·  puan 87 (A)
 
@@ -462,7 +462,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** remotion, python, node, modal, runpod · **Paketler:** claude-code-video-toolkit, modal, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** video-kompozisyon-cercevesi → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** remotion-cercevesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 15 KB (SKILL.md 14.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sabit ~/.openclaw yoluna ve ayrı toolkit kurulumuna bağımlı; bu ortamda yok. --break-system-packages önerisi riskli.
 
@@ -495,9 +495,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, node, chrome-headless · **Paketler:** hyperframes (npx), node>=22
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:ayni
 - **Boyut:** 1541 KB (SKILL.md 11.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 2
-- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. HyperFrames HEAD'de kaldırıldı; site turları ve web sitesinden tanıtım artık product-launch-video'da (heygen-com/hyperframes). Eski projeler için arşivde tutuluyor.
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. HyperFrames HEAD'de kaldırıldı; site turları ve web sitesinden tanıtım artık product-launch-video'da (heygen-com/hyperframes). Eski projeler için arşivde tutuluyor. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 - **Not:** Kırık bağlantılar (SKILL.md, references/step-3-storyboard.md, references/beat-builder-guide.md): ../hyperframes/references/techniques.md ve ../hyperframes/references/html-in-canvas-patterns.md. Bu skill heygen-com/hyperframes v0.7.17'den alınmış eski bir kopya; dosyalar upstream'de hyperframes-animation skilline taşındı: hyperframes-animation/techniques.md ve hyperframes-animation/adapters/html-in-canvas-patterns.md. Skill upstream'de kaldırıldı; site turu ve web sitesinden tanıtım için product-launch-video kullan. Yine de kurulursa hyperframes-animation'ı da ekle ve bu iki dosyayı oradan oku.
 
 ### youtube-downloader  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 77 (B)

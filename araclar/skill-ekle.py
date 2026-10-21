@@ -630,6 +630,9 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                            f"skill'e dayanıyor ama '{kad}' projeye kurulmuyor; bağlantılar boşa düşer (ekle: --skill {bilgi['id']})")
             elif kurulum != kad:
                 rapor.ekle("BİLGİ", "kardes-yol", f"{ad}: ../{kad}/ bağlantıları projedeki ada çevrilecek: ../{kurulum}/")
+        if s.get("ortusme_rolu") == "emekli" and s.get("kaynak_durumu") != "kaynakta-kaldirildi":
+            rapor.ekle("UYARI", "emekli", f"{ad}: eski/emekli bir sürüm (yerine geçeni var); inceleme notu: "
+                       f"{(s.get('kalite_notu') or '')[-160:]}")
         if s.get("kaynak_durumu") == "kaynakta-kaldirildi":
             rapor.ekle("UYARI", "kaynakta-kaldirildi", f"{ad}: geliştiricisi bu skill'i {s.get('kaldirilma_tarihi', '?')} "
                        f"tarihli güncellemede kaldırdı ({s['repo']}); arşivdeki son sürüm kuruluyor, artık güncellenmeyecek")

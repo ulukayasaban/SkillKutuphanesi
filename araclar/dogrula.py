@@ -48,8 +48,8 @@ def main():
                 hatalar.append(f"rol {f.stem}: skill yok -> {x}")
         for x in r["cekirdek"] + r.get("opsiyonel", []):
             s = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
-            if s and s.get("kaynak_durumu") in ("kaynakta-kaldirildi", "kayip"):
-                uyarilar.append(f"rol {f.stem}: '{x}' kaynakta {s['kaynak_durumu']}; arşiv kopyası kullanılıyor (yerine yenisini düşün)")
+            if s and (s.get("kaynak_durumu") in ("kaynakta-kaldirildi", "kayip") or s.get("ortusme_rolu") == "emekli"):
+                uyarilar.append(f"rol {f.stem}: '{x}' emekli/kaynakta kaldırılmış; arşiv kopyası kullanılıyor (yerine yenisini düşün)")
         for x in r["cekirdek"]:
             s = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
             if s and s.get("inceleme") == "yeniden-incelenecek":
@@ -62,6 +62,18 @@ def main():
         for (g, rol), n in gruplar.items():
             if rol == "birincil" and n > 1:
                 uyarilar.append(f"rol {f.stem}: '{g}' grubundan {n} birincil skill")
+    # Örtüşme grupları: 'alternatif' üyesi olan grubun mutlaka bir 'birincil'i olmalı (yoksa alternatif neye alternatif?)
+    gruplar = {}
+    for s in skiller:
+        if s.get("ortusme_grubu"):
+            gruplar.setdefault(s["ortusme_grubu"], []).append(s)
+    for g, uyeler in sorted(gruplar.items()):
+        roller_g = {u.get("ortusme_rolu") for u in uyeler}
+        if "alternatif" in roller_g and "birincil" not in roller_g:
+            uyarilar.append(f"örtüşme grubu '{g}': alternatifler var ama birincil yok ({', '.join(u['id'] for u in uyeler[:4])}…)")
+        gecersiz = roller_g - {"birincil", "tamamlayıcı", "alternatif", "emekli", None}
+        if gecersiz:
+            hatalar.append(f"örtüşme grubu '{g}': geçersiz rol değeri {sorted(map(str, gecersiz))}")
     roller = {f.stem for f in (KOK / "roller").glob("*.json")}
     for f in sorted((KOK / "profiller").glob("*.json")):
         p = json_oku(f)

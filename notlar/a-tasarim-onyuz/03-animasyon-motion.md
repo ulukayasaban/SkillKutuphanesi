@@ -34,7 +34,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** motion v14, react · **Paketler:** framer-motion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** animasyon-12-ilke → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Adı yanıltıcı: framer-motion rehberi değil, 12 ilke örnek listesi (3 KB); motion-framer'ın yerini tutmaz. OpenMontage'a özgü, AGPL repo kopyası, OpenMontage bağımlılığı. Kullanıcının global ortamında aynı adlı skill zaten var.
 
@@ -155,7 +155,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** lottie-web 5.13, after-effects · **Paketler:** lottie-web
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** animasyon-12-ilke → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** vektor-animasyon → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Yüzeysel (3.6 KB); adı lottie-bodymovin ama gömme rehberi değil, ilke listesi. lottie-animations bunun yerini tutar. OpenMontage bağımlılığı. Not: motion-graphics-sanatcisi rolünün opsiyonelinde duruyor (video oturumunun alanı); yerine lottie-animations önerilir.
 

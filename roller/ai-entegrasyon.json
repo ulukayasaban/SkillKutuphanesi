@@ -10,5 +10,6 @@
     "mcp-builder@vudovn",
     "agent-reach",
     "connect"
-  ]
+  ],
+  "notlar": "mcp-builder@vudovn bilinçli olarak opsiyonelde: inceleme kararı 'tamamlayıcı' (güncel MCP spesifikasyonu + güvenlik kontrol listesi). Birincil sürüm çekirdekteki mcp-builder (Anthropic)."
 }

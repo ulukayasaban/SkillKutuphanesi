@@ -99,9 +99,9 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** hyperframes, html, gsap, ffmpeg · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-is-akislari → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 108 KB (SKILL.md 13.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (motion-graphics, heygen-com/hyperframes). Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (motion-graphics, heygen-com/hyperframes). Olgun kategori modülleri; /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Bu kopya OpenMontage'ın eski HyperFrames sürümüne dayanır. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### motion-graphics@heygen-com-eski  ·  heygen-com/hyperframes @ 25126bc  ·  puan 84 (A)
 
@@ -110,9 +110,9 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** hyperframes, html, gsap, ffmpeg · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, ★69086, son güncelleme 2026-10-21, lisans Apache-2.0)
-- **Durum:** alternatif · **Örtüşme:** hyperframes-is-akislari → alternatif · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Roller:** motion-graphics-sanatcisi, video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 113 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun kategori modülleri. Yönlendirdiği iş akışları artık arşivde (heygen-com/hyperframes). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Olgun kategori modülleri. Yönlendirdiği iş akışları artık arşivde (heygen-com/hyperframes). Kardeş skillere (../hyperframes, ../hyperframes-*) bağlantı verir; tek başına kurulursa bağlantılar kırılır, hyperframes çekirdeğiyle birlikte kurulmalı. · HyperFrames geliştiricisi 2026-10'da bu iş akışını emekliye ayırdı; içeriği hyperframes skilinin references dosyalarına taşındı. Arşivdeki son sürüm korunuyor, güncellenmeyecek. Yeni projelerde hyperframes + media-use tercih edilir. · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
 
 ### pose-library-design  ·  calesthio/OpenMontage @ c806645  ·  puan 79 (B)
 

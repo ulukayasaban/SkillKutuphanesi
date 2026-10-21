@@ -22,7 +22,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Teknoloji:** node, chromium · **Paketler:** node>=22.13, Chrome/Chromium
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** tt-a1i (kisi, ★86998, son güncelleme 2026-10-21, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** archify-ic-surec → alternatif
+- **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
 - **Boyut:** 57 KB (SKILL.md 8.9 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Archify'ın kendi geliştirme döngüsüne özel (metadata.internal), kategori olarak da code review değil; CONTRIBUTING.md bağlantısı kırık, betikler repo yapısına bağlı. f-repo-ici'ye taşındı.
 

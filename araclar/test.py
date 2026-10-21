@@ -241,6 +241,14 @@ def main():
         kod, out = calistir(p3, "--skill", emekli["id"], "--kuru")
         test("emekli skill için ön kontrol 'kaynakta-kaldirildi' uyarısı verir", "kaynakta-kaldirildi" in out and not any(p3.iterdir()), out)
 
+    # 'emekli' rolündeki (eski/yerine geçeni olan) skill ön kontrolde uyarı verir
+    om_eski = next((s for s in reg if s.get("ortusme_rolu") == "emekli" and s["repo"] == "calesthio/OpenMontage" and s["durum"] == "tercih"), None)
+    if om_eski:
+        p4 = kok / "proje-emekli-om"
+        p4.mkdir()
+        kod, out = calistir(p4, "--skill", om_eski["id"], "--kuru")
+        test("emekli (eski kopya) skill için ön kontrol 'emekli' uyarısı verir", "[UYARI] emekli" in out, out)
+
     for g in GLOBAL_KLASORLER.values():
         kod, out = calistir(g, "--skill", "gsap-core", "--evet")
         test(f"güvenlik: {g} reddedilir", kod != 0 and "Güvenlik" in out, out)

@@ -66,7 +66,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Teknoloji:** bash, jsonl
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★303068, son güncelleme 2026-10-21, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** superpowers-ailesi → tamamlayıcı
+- **Durum:** tercih
 - **Boyut:** 41 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (dar). Kanıt disiplini ve redaksiyon politikası örnek alınacak düzeyde; çok harness'li (Claude Code, Codex vb.) oturum keşfi var. Yalnızca superpowers kullanıcıları için.
 
