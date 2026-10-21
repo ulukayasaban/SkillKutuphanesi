@@ -4,7 +4,18 @@ _Claude API, MCP sunucusu, model geçişi_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/10**
 
-### claude-api  ·  anthropics/skills @ dbd4588  ·  puan 76 (B)
+### academy-guide  ·  anthropics/skills @ dbd4588  ·  puan 84 (A)
+
+- **Ne yapar:** Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca güçlü eşleşme varsa uygun kurs/eğitim/kullanım örneği önerisi ekler. Katalog skill içine gömülü değil; güncel JSON katalog çalışma anında çekilir ve tazeliği kontrol edilir.
+- **Ne zaman:** Claude öğrenmeye yönelik destek/eğitim asistanları; ekibe Claude yaygınlaştırma soruları. · **Ne zaman değil:** Kod/proje agent'larında (iş ortasındaki kullanıcıya kurs önermek gürültü); web erişimi yoksa (katalog çekilemez, uydurma yasak). Skill yazımı ile ilgisi yok — kategorisi Claude ürün desteği.
+- **Teknoloji:** web-fetch
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** anthropics (kurum, resmî, ★182720, son güncelleme 2026-10-09, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 1
+- **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.
+
+### claude-api  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
 
 - **Ne yapar:** Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prompt caching, compaction, MCP, Managed Agents, Files/Skills API. Dil algılayıp (Python, TS, Go, Java, C#, PHP, Ruby, cURL) ilgili klasörü okutur; migrate, prompt-audit, upgrade, cost-optimize, build-eval, hillclimb alt komutları içerir.
 - **Ne zaman:** Claude çağıran her kod: yeni LLM özelliği, agent/araç tanımı, model geçişi, maliyet optimizasyonu, eval kurma, SDK sürüm yükseltme. · **Ne zaman değil:** Projede başka sağlayıcı (OpenAI, Gemini, Ollama…) kullanılıyorsa — skill bunu kendisi kontrol eder. SKILL.md 103 KB: rol bütçesinin büyük kısmını yer; sadece Claude entegrasyonu yapan agent'a ver. Codex'te: WebFetch gibi Claude araç adları geçiyor; Codex'in web/arama aracıyla aynı adımlar uygulanır, içerik ve kod kalıpları aynen geçerli.
@@ -15,7 +26,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 2031 KB (SKILL.md 102.7 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, sürekli güncel (model listesi 2026-10-06), API kayması uyarı tablosu ve dil başına doğrulanmış kalıplar. Tek eksi: SKILL.md 103 KB, klasör 2.2 MB. claude-opus-4-5-migration'ın işini 'migrate' alt komutu güncel modellerle yapıyor.
 
-### claude-opus-4-5-migration  ·  anthropics/claude-code @ d014fc0  ·  puan 88 (A)
+### claude-opus-4-5-migration  ·  anthropics/claude-code @ d014fc0  ·  puan 69 (B)
 
 - **Ne yapar:** Sonnet 4.0/4.5 ve Opus 4.1'den Opus 4.5'e tek seferlik geçiş: platforma göre (Anthropic, Bedrock, Vertex, Azure) model dizgelerini değiştirir, desteklenmeyen beta başlığını kaldırır, effort parametresi ekler ve Opus 4.5 davranış farklarına göre (araç aşırı tetikleme, aşırı mühendislik) istem ayarı önerir.
 - **Ne zaman:** Yalnızca hedef özellikle Opus 4.5 ise (eski kod tabanlarını tam bu sürüme sabitlemek). · **Ne zaman değil:** Güncel modellere (Opus 5.5, Sonnet 5.5, Fable 5.1) geçişte — claude-api 'migrate' alt komutu kullanılmalı. Haiku 4.5 geçişi kapsam dışı.
@@ -26,7 +37,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 12 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İyi yazılmış ama eskidi: hedef model Opus 4.5 ve 1M bağlam notu artık geçerli değil. Aynı iş claude-api/shared/model-migration.md'de güncel.
 
-### connect  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 88 (A)
+### connect  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 77 (B)
 
 - **Ne yapar:** Composio SDK (Python/TS) ile agent'ı Gmail, Slack, GitHub, Notion gibi 1000+ uygulamaya bağlar; e-posta gönderme, issue açma, mesaj atma gibi gerçek eylemler yaptırır. API anahtarı, OAuth akışı, framework desteği ve sorun giderme anlatılır.
 - **Ne zaman:** Kendi uygulamasında/agent'ında harici servislere eylem yaptırmak isteyen projeler (Composio kullanmayı kabul ederek). · **Ne zaman değil:** Üçüncü taraf aracı servise (Composio) veri/OAuth yetkisi vermek istenmiyorsa; tek bir servis için resmi MCP sunucusu varsa. Gerçek e-posta/mesaj gönderir — onaysız çalıştırma.
@@ -37,7 +48,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil, Composio grubunda). Kurulum ve kod örnekleri kısa ve çalışır; pazarlama dili yoğun. Araçtan bağımsız (SDK) olduğu için connect-apps'e tercih edildi.
 
-### connect-apps  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 83 (A)
+### connect-apps  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 66 (B)
 
 - **Ne yapar:** Claude Code'a `/plugin install composio-toolrouter` ile Composio Tool Router eklentisini kurup 1000+ uygulamada (Gmail, Slack, GitHub, Notion) eylem yaptırmayı anlatan hızlı başlangıç.
 - **Ne zaman:** Claude Code kullanıcısının kendi oturumundan harici uygulamalara eylem yaptırması. · **Ne zaman değil:** Codex'te plugin komutları yok: Composio'nun MCP sunucusunu `~/.codex/config.toml` içine `[mcp_servers.composio]` olarak ekle ya da SDK tabanlı connect skill'ini kullan. Uygulama koduna entegrasyon için connect.
@@ -48,7 +59,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF. Çok kısa bir kurulum tarifi; skill'den çok eklenti reklamı. Claude Code eklenti sistemine bağlı.
 
-### langsmith-fetch  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 86 (A)
+### langsmith-fetch  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 76 (B)
 
 - **Ne yapar:** LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, belirli iz derin incelemesi, hata tespiti, bellek işlemleri, araç çağrıları, süre ve token kullanımını raporlar.
 - **Ne zaman:** LangSmith izlemesi açık LangChain/LangGraph agent projelerinde hata ayıklama ve performans analizi. · **Ne zaman değil:** LangChain kullanmayan projelerde (Claude Agent SDK, ham API); LangSmith hesabı/API anahtarı yoksa.
@@ -59,7 +70,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (dar). İş akışları ve komutlar somut; yalnızca LangSmith ekosistemine yarar. Lisans belirtilmemiş.
 
-### mcp-builder  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
+### mcp-builder  ·  anthropics/skills @ dbd4588  ·  puan 92 (A)
 
 - **Ne yapar:** Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti oluşturma; değerlendirmeyi çalıştıran evaluation.py betiği içerir.
 - **Ne zaman:** Harici bir API/servisi agent'lara açan yeni MCP sunucusu yazmak ve değerlendirmek. · **Ne zaman değil:** Mevcut bir MCP sunucusunu Claude Code eklentisine bağlamak (mcp-integration); protokol sürüm geçişi/güvenlik denetimi ağırlıklı işler (mcp-builder@vudovn daha güncel).
@@ -70,7 +81,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 119 KB (SKILL.md 8.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, ComposioHQ kopyasından daha güncel ve kısa; dil rehberleri ve eval betiği tek pakette. vudovn sürümü spec/güvenlik tarafını tamamlıyor; birincil bu çünkü uçtan uca iş akışı ve değerlendirme aracı içeriyor.
 
-### mcp-builder@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 86 (A)
+### mcp-builder@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 76 (B)
 
 - **Ne yapar:** Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve değerlendirme adımları.
 - **Ne zaman:** Eski sürümdeki daha ayrıntılı 'ajan merkezli tasarım ilkeleri' bölümü özellikle istenirse. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/mcp-builder güncel ve daha az bağlam tüketir.
@@ -81,7 +92,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 144 KB (SKILL.md 13.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güncel sürümün eski kopyası (350 satır fark); tasarım ilkeleri bölümü daha uzun ama 'iş akışı araçları' önerisi güncelde dengelenmiş.
 
-### mcp-builder@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 87 (A)
+### mcp-builder@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 84 (A)
 
 - **Ne yapar:** MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/çıktı şemaları, $ref güvenliği, araç/kaynak/istem tasarımı, güvenlik gereksinimleri, eklentiler (Tasks, Skills over MCP, MCP Apps), eski sürümlerden geçiş ve test matrisi.
 - **Ne zaman:** MCP sunucu/istemcisini güncel spesifikasyona taşımak, güvenlik/birlikte çalışabilirlik incelemesi, şema tasarımı. · **Ne zaman değil:** Sıfırdan sunucu yazıp değerlendirme seti kurmak için anthropics/mcp-builder ile birlikte kullan (tek başına iş akışı/kod iskeleti vermez). allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.
@@ -92,7 +103,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Üç sürüm içinde en güncel spesifikasyon bilgisi ve güvenlik kontrol listesi; MIT, 10 KB. İş akışı ve eval aracı olmadığı için birincil değil.
 
-### mcp-integration  ·  anthropics/claude-code @ d014fc0  ·  puan 74 (B)
+### mcp-integration  ·  anthropics/claude-code @ d014fc0  ·  puan 76 (B)
 
 - **Ne yapar:** Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tipleri, ${CLAUDE_PLUGIN_ROOT} ve ortam değişkeni genişletme, MCP araç adlandırması (mcp__eklenti__sunucu__araç), yaşam döngüsü ve OAuth/token kimlik doğrulama kalıpları.
 - **Ne zaman:** Bir Claude Code eklentisine hazır MCP sunucusu eklemek/yapılandırmak. · **Ne zaman değil:** MCP sunucusunun kendisini yazmak için (mcp-builder). Codex'te eklenti paketleme yok: MCP sunucusu `~/.codex/config.toml` dosyasında `[mcp_servers.<ad>]` tablosuyla (command, args, env ya da url) tanımlanır; .mcp.json ve ${CLAUDE_PLUGIN_ROOT} kullanılmaz. Sunucu tipleri, kimlik doğrulama ve güvenlik bölümleri Codex'te de geçerli, plugin.json kısımlarını atla.
@@ -102,14 +113,3 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Durum:** tercih · **Örtüşme:** claude-plugin-mcp → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 46 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir.
-
-### academy-guide  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
-
-- **Ne yapar:** Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca güçlü eşleşme varsa uygun kurs/eğitim/kullanım örneği önerisi ekler. Katalog skill içine gömülü değil; güncel JSON katalog çalışma anında çekilir ve tazeliği kontrol edilir.
-- **Ne zaman:** Claude öğrenmeye yönelik destek/eğitim asistanları; ekibe Claude yaygınlaştırma soruları. · **Ne zaman değil:** Kod/proje agent'larında (iş ortasındaki kullanıcıya kurs önermek gürültü); web erişimi yoksa (katalog çekilemez, uydurma yasak). Skill yazımı ile ilgisi yok — kategorisi Claude ürün desteği.
-- **Teknoloji:** web-fetch
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182720, son güncelleme 2026-10-09, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 1
-- **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.

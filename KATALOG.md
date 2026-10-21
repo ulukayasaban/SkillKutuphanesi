@@ -8,7 +8,7 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
 
 ## İçindekiler
 
-- **Tasarım ve Ön Yüz** (109)
+- **Tasarım ve Ön Yüz** (108)
   - [01-ui-ux-tasarim-dili](#01-ui-ux-tasarim-dili) — 12 skill · Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi
   - [02-tasarim-sistemi-marka](#02-tasarim-sistemi-marka) — 11 skill · Design token, tema, marka kimliği, banner/logo
   - [03-animasyon-motion](#03-animasyon-motion) — 17 skill · GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim
@@ -30,12 +30,12 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
   - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 5 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
   - [03-yazi-iletisim-icerik](#03-yazi-iletisim-icerik) — 15 skill · Yazı, iletişim, pazarlama/içerik, kariyer
   - [04-not-alma-bilgi-yonetimi](#04-not-alma-bilgi-yonetimi) — 15 skill · Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni
-- **AI ve Otomasyon** (42)
+- **AI ve Otomasyon** (41)
   - [01-claude-api-mcp](#01-claude-api-mcp) — 10 skill · Claude API, MCP sunucusu, model geçişi
   - [02-agent-orkestrasyon](#02-agent-orkestrasyon) — 14 skill · Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları
   - [03-web-arastirma-veri](#03-web-arastirma-veri) — 2 skill · Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma
   - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 15 skill · Skill yazma, plugin/hook/komut geliştirme
-- **Video, Ses ve AI Medya Üretimi** (90)
+- **Video, Ses ve AI Medya Üretimi** (92)
   - [01-video-uretim-montaj](#01-video-uretim-montaj) — 46 skill · Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg
   - [02-ses-muzik-konusma](#02-ses-muzik-konusma) — 14 skill · Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi
   - [03-ai-gorsel-video-modelleri](#03-ai-gorsel-video-modelleri) — 17 skill · AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu
@@ -344,14 +344,14 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_ · not: `notlar/c-dokuman-icer
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `docx` | ⭐ birincil | Word (.docx/.dotx) belgelerini oluşturur, okur ve düzenler. Yeni belge için docx-js (npm), mevcut belge için unzip → XML düzenleme → zip akı… | node, python, docx-js, libreoffice | ✅ | 88 A | S 1102KB | - | anthropics/skills |
-| `docx@composiohq` | alt alternatif | Anthropic docx skill'inin ComposioHQ deposundaki eski sürümü. docx-js ile yeni belge, Python 'Document' kütüphanesi (ooxml) ile düzenleme ve… | node, python, docx-js, libreoffice | ✅ | 86 A | M 1158KB | - | ComposioHQ/awesome-claude-skills |
-| `pdf` | ⭐ birincil | PDF okuma, metin/tablo çıkarma, birleştirme, bölme, döndürme, filigran, form doldurma, şifreleme ve OCR işlerini Python (pypdf, pdfplumber, … | python | ✅ | 86 A | M 57KB | - | anthropics/skills |
-| `pdf@composiohq` | alt alternatif | Anthropic pdf skill'inin ComposioHQ'daki eski kopyası: pypdf/pdfplumber/reportlab ile PDF okuma, çıkarma, birleştirme/bölme ve form doldurma… | python | ✅ | 88 A | S 63KB | - | ComposioHQ/awesome-claude-skills |
-| `pptx` | ⭐ birincil | PowerPoint (.pptx/.potx) sunumlarını oluşturur, okur ve düzenler. Yeni deste için pptxgenjs, şablon/düzenleme için XML akışı kullanır; slayt… | node, python, pptxgenjs, libreoffice | ✅ | 86 A | M 1112KB | - | anthropics/skills |
-| `pptx@composiohq` | alt alternatif | Anthropic pptx skill'inin eski sürümü (ComposioHQ). HTML slaytları playwright ile html2pptx dönüştürerek sunum üretir; şablonlu üretimde sla… | node, python, pptxgenjs, playwright, html | ✅ | 83 A | L 1201KB | - | ComposioHQ/awesome-claude-skills |
-| `xlsx` | ⭐ birincil | Excel/CSV/TSV dosyalarını openpyxl ve pandas ile oluşturur, okur, düzenler ve temizler. Formül kullanımını zorunlu tutar, LibreOffice ile ye… | python, libreoffice | ✅ | 86 A | M 1077KB | - | anthropics/skills |
-| `xlsx@composiohq` | alt alternatif | Anthropic xlsx skill'inin eski kopyası (ComposioHQ): formül zorunluluğu, finansal model renk/sayı biçimi kuralları, pandas/openpyxl örnekler… | python, libreoffice | ✅ | 86 A | M 18KB | - | ComposioHQ/awesome-claude-skills |
+| `docx` | ⭐ birincil | Word (.docx/.dotx) belgelerini oluşturur, okur ve düzenler. Yeni belge için docx-js (npm), mevcut belge için unzip → XML düzenleme → zip akı… | node, python, docx-js, libreoffice | ✅ | 93 A | S 1102KB | - | anthropics/skills |
+| `docx@composiohq` | alt alternatif | Anthropic docx skill'inin ComposioHQ deposundaki eski sürümü. docx-js ile yeni belge, Python 'Document' kütüphanesi (ooxml) ile düzenleme ve… | node, python, docx-js, libreoffice | ✅ | 76 B | M 1158KB | - | ComposioHQ/awesome-claude-skills |
+| `pdf` | ⭐ birincil | PDF okuma, metin/tablo çıkarma, birleştirme, bölme, döndürme, filigran, form doldurma, şifreleme ve OCR işlerini Python (pypdf, pdfplumber, … | python | ✅ | 84 A | M 57KB | - | anthropics/skills |
+| `pdf@composiohq` | alt alternatif | Anthropic pdf skill'inin ComposioHQ'daki eski kopyası: pypdf/pdfplumber/reportlab ile PDF okuma, çıkarma, birleştirme/bölme ve form doldurma… | python | ✅ | 77 B | S 63KB | - | ComposioHQ/awesome-claude-skills |
+| `pptx` | ⭐ birincil | PowerPoint (.pptx/.potx) sunumlarını oluşturur, okur ve düzenler. Yeni deste için pptxgenjs, şablon/düzenleme için XML akışı kullanır; slayt… | node, python, pptxgenjs, libreoffice | ✅ | 92 A | M 1112KB | - | anthropics/skills |
+| `pptx@composiohq` | alt alternatif | Anthropic pptx skill'inin eski sürümü (ComposioHQ). HTML slaytları playwright ile html2pptx dönüştürerek sunum üretir; şablonlu üretimde sla… | node, python, pptxgenjs, playwright, html | ✅ | 74 B | L 1201KB | - | ComposioHQ/awesome-claude-skills |
+| `xlsx` | ⭐ birincil | Excel/CSV/TSV dosyalarını openpyxl ve pandas ile oluşturur, okur, düzenler ve temizler. Formül kullanımını zorunlu tutar, LibreOffice ile ye… | python, libreoffice | ✅ | 92 A | M 1077KB | - | anthropics/skills |
+| `xlsx@composiohq` | alt alternatif | Anthropic xlsx skill'inin eski kopyası (ComposioHQ): formül zorunluluğu, finansal model renk/sayı biçimi kuralları, pandas/openpyxl örnekler… | python, libreoffice | ✅ | 76 B | M 18KB | - | ComposioHQ/awesome-claude-skills |
 
 ### 02-diyagram-dokumantasyon
 
@@ -359,11 +359,11 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_ · not: `notlar/c-dokuman-i
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `archify` | ⭐ birincil | Mimari, iş akışı, sequence, veri akışı, yaşam döngüsü, ERD, class, ağaç, zaman çizelgesi ve waterfall diyagramlarını doğrulanmış, temalı, an… | node, html, svg | ✅ | 89 A | M 7616KB | - | tt-a1i/archify |
-| `beautiful-mermaid` | ⭐ alternatif | Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevir… | typescript, bun, mermaid, svg | ✅ | 92 A | S 19KB | claude:ayni | calesthio/OpenMontage |
-| `doc-coauthoring` | ⭐ tamamlayıcı | Kullanıcıyla birlikte doküman (spec, öneri, karar dokümanı, PRD, RFC) yazmak için üç aşamalı bir süreç yürütür: bağlam toplama, bölüm bölüm … | markdown | ✅ | 86 A | M 15KB | - | anthropics/skills |
-| `documentation-and-adrs` | ⭐ birincil | Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belg… | markdown, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `documentation-templates` | ⭐ alternatif | README, endpoint bazlı API dokümanı, JSDoc/TSDoc yorumu, Keep-a-Changelog, kısa ADR ve llms.txt gibi AI dostu doküman için hazır şablonlar v… | markdown | ✅ | 87 A | S 3KB | - | vudovn/ag-kit |
+| `archify` | ⭐ birincil | Mimari, iş akışı, sequence, veri akışı, yaşam döngüsü, ERD, class, ağaç, zaman çizelgesi ve waterfall diyagramlarını doğrulanmış, temalı, an… | node, html, svg | ✅ | 93 A | M 7616KB | - | tt-a1i/archify |
+| `beautiful-mermaid` | ⭐ alternatif | Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevir… | typescript, bun, mermaid, svg | ✅ | 87 A | S 19KB | claude:ayni | calesthio/OpenMontage |
+| `doc-coauthoring` | ⭐ tamamlayıcı | Kullanıcıyla birlikte doküman (spec, öneri, karar dokümanı, PRD, RFC) yazmak için üç aşamalı bir süreç yürütür: bağlam toplama, bölüm bölüm … | markdown | ✅ | 92 A | M 15KB | - | anthropics/skills |
+| `documentation-and-adrs` | ⭐ birincil | Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belg… | markdown, typescript | ✅ | 95 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `documentation-templates` | ⭐ alternatif | README, endpoint bazlı API dokümanı, JSDoc/TSDoc yorumu, Keep-a-Changelog, kısa ADR ve llms.txt gibi AI dostu doküman için hazır şablonlar v… | markdown | ✅ | 76 B | S 3KB | - | vudovn/ag-kit |
 
 ### 03-yazi-iletisim-icerik
 
@@ -371,21 +371,21 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_ · not: `notlar/c-dokuman-icerik/
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `competitive-ads-extractor` | ⭐ alternatif | Rakiplerin Facebook Ad Library, LinkedIn gibi reklam kütüphanelerindeki reklamlarını toplayıp mesaj, vurgulanan problem, hedef kitle ve krea… | web-arama, tarayici-otomasyonu | ✅ | 88 A | S 8KB | - | ComposioHQ/awesome-claude-skills |
-| `content-research-writer` | ⭐ birincil | Blog, makale, bülten gibi içerikleri kullanıcıyla birlikte yazar: taslak/ana hat oluşturma, araştırma ve kaynak gösterme, giriş (hook) iyile… | markdown, web-arama | ✅ | 86 A | M 14KB | - | ComposioHQ/awesome-claude-skills |
-| `de-ai-ify` | ⭐ tamamlayıcı | Metindeki yapay zekâ kokan kalıpları (aşırı geçiş kelimeleri, klişeler, kaçamak ifadeler, kurumsal jargon, üçlü sıralamalar) temizleyip doğa… | markdown | ✅ | 72 B | S 2KB | - | heyitsnoah/claudesidian |
-| `developer-growth-analysis` | ⭐ alternatif | Son 24-48 saatlik Claude Code sohbet geçmişini (~/.claude/history.jsonl) okuyup kodlama kalıplarını, eksik alanları ve gelişim önerilerini ç… | claude-code, mcp, slack | ✅ | 86 A | M 15KB | - | ComposioHQ/awesome-claude-skills |
-| `domain-name-brainstormer` | ⭐ alternatif | Proje için yaratıcı alan adı fikirleri üretir ve .com/.io/.dev/.ai gibi uzantılarda müsaitlik kontrolü yapılmasını tarif eder; marka açısınd… | web-arama | ✅ | 88 A | S 6KB | - | ComposioHQ/awesome-claude-skills |
-| `geo-fundamentals` | ⭐ tamamlayıcı | Generative Engine Optimization: içeriğin ChatGPT, Claude, Perplexity, Gemini gibi AI arama motorlarında kaynak gösterilmesi için ilkeler, al… | html, python | ✅ | 89 A | S 14KB | - | vudovn/ag-kit |
-| `i18n-localization` | ⭐ birincil | Uluslararasılaştırma ve yerelleştirme kalıpları: react-i18next, next-intl, gettext örnekleri, locale dosya yapısı, çoğul/tarih/sayı biçimler… | react, next.js, python | ✅ | 89 A | S 12KB | - | vudovn/ag-kit |
-| `internal-comms` | ⭐ birincil | Şirket içi iletişim metinleri yazar: 3P güncellemeleri (Progress/Plans/Problems), şirket bülteni, SSS cevapları, durum raporu, liderlik ve p… | markdown | ✅ | 88 A | S 22KB | - | anthropics/skills |
-| `internal-comms@composiohq` | alt alternatif | Anthropic internal-comms skill'inin ComposioHQ'daki birebir kopyası: 3P güncellemesi, bülten, SSS ve genel iç iletişim yönergeleri. | markdown | ✅ | 88 A | S 22KB | - | ComposioHQ/awesome-claude-skills |
-| `lead-research-assistant` | ⭐ birincil | Ürünü/kod tabanını analiz edip ideal müşteri profiline uyan şirketleri bulmayı, uygunluk puanıyla sıralamayı ve kişiselleştirilmiş iletişim … | web-arama | ✅ | 88 A | S 6KB | - | ComposioHQ/awesome-claude-skills |
-| `meeting-insights-analyzer` | ⭐ birincil | Toplantı transkriptlerinden iletişim kalıplarını çıkarır: çatışmadan kaçınma, konuşma oranı, dolgu kelimeler, dinleme ve kolaylaştırma; zama… | markdown | ✅ | 86 A | M 10KB | - | ComposioHQ/awesome-claude-skills |
-| `raffle-winner-picker` | ⭐ alternatif | Liste, CSV/Excel ya da Google Sheets'ten çekiliş/yarışma kazananını rastgele seçer; çoklu kazanan, tekrar engelleme, ağırlıklı seçim ve yede… | python | ✅ | 88 A | S 4KB | - | ComposioHQ/awesome-claude-skills |
-| `seo-fundamentals` | ⭐ birincil | SEO temelleri: E-E-A-T, Core Web Vitals hedefleri, teknik SEO (sitemap, robots, canonical), sayfa öğeleri, schema türleri, AI içerik kuralla… | html, python | ✅ | 89 A | S 9KB | - | vudovn/ag-kit |
-| `tailored-resume-generator` | ⭐ birincil | İş ilanını analiz edip anahtar gereksinimleri çıkarır ve adayın deneyimini buna göre yeniden düzenleyen, ATS uyumlu, ilana özel özgeçmiş üre… | markdown | ✅ | 86 A | M 12KB | - | ComposioHQ/awesome-claude-skills |
-| `twitter-algorithm-optimizer` | ⭐ birincil | Twitter/X'in açık kaynak öneri algoritması bileşenlerine (Real-graph, SimClusters, TwHIN, Tweepcred) dayanarak tweet taslaklarını analiz edi… | markdown | ✅ | 86 A | M 13KB | - | ComposioHQ/awesome-claude-skills |
+| `competitive-ads-extractor` | ⭐ alternatif | Rakiplerin Facebook Ad Library, LinkedIn gibi reklam kütüphanelerindeki reklamlarını toplayıp mesaj, vurgulanan problem, hedef kitle ve krea… | web-arama, tarayici-otomasyonu | ✅ | 69 B | S 8KB | - | ComposioHQ/awesome-claude-skills |
+| `content-research-writer` | ⭐ birincil | Blog, makale, bülten gibi içerikleri kullanıcıyla birlikte yazar: taslak/ana hat oluşturma, araştırma ve kaynak gösterme, giriş (hook) iyile… | markdown, web-arama | ✅ | 76 B | M 14KB | - | ComposioHQ/awesome-claude-skills |
+| `de-ai-ify` | ⭐ tamamlayıcı | Metindeki yapay zekâ kokan kalıpları (aşırı geçiş kelimeleri, klişeler, kaçamak ifadeler, kurumsal jargon, üçlü sıralamalar) temizleyip doğa… | markdown | ✅ | 75 B | S 2KB | - | heyitsnoah/claudesidian |
+| `developer-growth-analysis` | ⭐ alternatif | Son 24-48 saatlik Claude Code sohbet geçmişini (~/.claude/history.jsonl) okuyup kodlama kalıplarını, eksik alanları ve gelişim önerilerini ç… | claude-code, mcp, slack | ✅ | 68 B | M 15KB | - | ComposioHQ/awesome-claude-skills |
+| `domain-name-brainstormer` | ⭐ alternatif | Proje için yaratıcı alan adı fikirleri üretir ve .com/.io/.dev/.ai gibi uzantılarda müsaitlik kontrolü yapılmasını tarif eder; marka açısınd… | web-arama | ✅ | 69 B | S 6KB | - | ComposioHQ/awesome-claude-skills |
+| `geo-fundamentals` | ⭐ tamamlayıcı | Generative Engine Optimization: içeriğin ChatGPT, Claude, Perplexity, Gemini gibi AI arama motorlarında kaynak gösterilmesi için ilkeler, al… | html, python | ✅ | 77 B | S 14KB | - | vudovn/ag-kit |
+| `i18n-localization` | ⭐ birincil | Uluslararasılaştırma ve yerelleştirme kalıpları: react-i18next, next-intl, gettext örnekleri, locale dosya yapısı, çoğul/tarih/sayı biçimler… | react, next.js, python | ✅ | 77 B | S 12KB | - | vudovn/ag-kit |
+| `internal-comms` | ⭐ birincil | Şirket içi iletişim metinleri yazar: 3P güncellemeleri (Progress/Plans/Problems), şirket bülteni, SSS cevapları, durum raporu, liderlik ve p… | markdown | ✅ | 85 A | S 22KB | - | anthropics/skills |
+| `internal-comms@composiohq` | alt alternatif | Anthropic internal-comms skill'inin ComposioHQ'daki birebir kopyası: 3P güncellemesi, bülten, SSS ve genel iç iletişim yönergeleri. | markdown | ✅ | 77 B | S 22KB | - | ComposioHQ/awesome-claude-skills |
+| `lead-research-assistant` | ⭐ birincil | Ürünü/kod tabanını analiz edip ideal müşteri profiline uyan şirketleri bulmayı, uygunluk puanıyla sıralamayı ve kişiselleştirilmiş iletişim … | web-arama | ✅ | 69 B | S 6KB | - | ComposioHQ/awesome-claude-skills |
+| `meeting-insights-analyzer` | ⭐ birincil | Toplantı transkriptlerinden iletişim kalıplarını çıkarır: çatışmadan kaçınma, konuşma oranı, dolgu kelimeler, dinleme ve kolaylaştırma; zama… | markdown | ✅ | 76 B | M 10KB | - | ComposioHQ/awesome-claude-skills |
+| `raffle-winner-picker` | ⭐ alternatif | Liste, CSV/Excel ya da Google Sheets'ten çekiliş/yarışma kazananını rastgele seçer; çoklu kazanan, tekrar engelleme, ağırlıklı seçim ve yede… | python | ✅ | 69 B | S 4KB | - | ComposioHQ/awesome-claude-skills |
+| `seo-fundamentals` | ⭐ birincil | SEO temelleri: E-E-A-T, Core Web Vitals hedefleri, teknik SEO (sitemap, robots, canonical), sayfa öğeleri, schema türleri, AI içerik kuralla… | html, python | ✅ | 77 B | S 9KB | - | vudovn/ag-kit |
+| `tailored-resume-generator` | ⭐ birincil | İş ilanını analiz edip anahtar gereksinimleri çıkarır ve adayın deneyimini buna göre yeniden düzenleyen, ATS uyumlu, ilana özel özgeçmiş üre… | markdown | ✅ | 76 B | M 12KB | - | ComposioHQ/awesome-claude-skills |
+| `twitter-algorithm-optimizer` | ⭐ birincil | Twitter/X'in açık kaynak öneri algoritması bileşenlerine (Real-graph, SimClusters, TwHIN, Tweepcred) dayanarak tweet taslaklarını analiz edi… | markdown | ✅ | 76 B | M 13KB | - | ComposioHQ/awesome-claude-skills |
 
 ### 04-not-alma-bilgi-yonetimi
 
@@ -393,21 +393,21 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_ · not: `notl
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `json-canvas` | ⭐ tamamlayıcı | Obsidian'ın kullandığı JSON Canvas 1.0 (.canvas) dosyalarını oluşturur ve düzenler: text/file/link/group düğümleri, kenarlar, renkler, yerle… | json, obsidian | ✅ | 70 B | M 14KB | - | heyitsnoah/claudesidian |
-| `add-frontmatter` | ⭐ tamamlayıcı | Obsidian notlarını (tek dosya ya da klasör) okuyup not türüne göre (toplantı, günlük, referans, proje) YAML frontmatter özellikleri ekler ve… | obsidian, markdown, yaml | ✅ | 72 B | S 4KB | - | heyitsnoah/claudesidian |
-| `daily-review` | ⭐ tamamlayıcı | Gün sonu değerlendirmesi: bugün değişen/oluşan notları bulur, ilerlemeyi, takılan işleri ve içgörüleri çıkarır, yarının ilk 3 önceliğini ve … | obsidian, markdown | ✅ | 72 B | S 2KB | - | heyitsnoah/claudesidian |
-| `download-attachment` | ⭐ alternatif | Verilen URL'lerden dosyaları Obsidian kasasının 05_Attachments klasörüne indirir (yalnızca http/https, dosya adı temizleme, zaman aşımı), iç… | bash, obsidian | ✅ | 72 B | S 3KB | - | heyitsnoah/claudesidian |
-| `file-organizer` | ⭐ birincil | Bilgisayardaki klasörleri (İndirilenler, Belgeler, projeler) analiz eder; kopya dosyaları bulur, mantıklı klasör yapısı önerir ve kullanıcı … | bash | ✅ | 86 A | M 11KB | - | ComposioHQ/awesome-claude-skills |
-| `inbox-processor` | ⭐ tamamlayıcı | Kasanın 00_Inbox klasöründeki notları PARA yöntemine göre (Projects/Areas/Resources/Archive/Sil) sınıflandırır; her not için hedef klasör, g… | obsidian, markdown | ✅ | 72 B | S 2KB | - | heyitsnoah/claudesidian |
-| `init-bootstrap` | ⭐ birincil | Claudesidian kasası için etkileşimli kurulum sihirbazı: klasör adı, bağımlılık kurulumu (pnpm/npm), git durumu, mevcut kasa yapısı ve çalışm… | obsidian, node, git | ✅ | 67 B | L 30KB | - | heyitsnoah/claudesidian |
-| `install-claudesidian-command` | ⭐ tamamlayıcı | Kabuğa (bash/zsh/fish) `claudesidian` adlı bir alias/fonksiyon ekler: kasa klasörüne geçip `claude --resume` ile oturumu sürdürür ya da yeni… | bash, claude-code | 🟡 | 65 B | M 10KB | - | heyitsnoah/claudesidian |
-| `invoice-organizer` | ⭐ tamamlayıcı | Fatura ve fişleri (PDF, taranmış görsel, e-posta eki) okuyup satıcı, tarih, tutar, fatura no gibi bilgileri çıkarır; `YYYY-AA-GG Satıcı - Fa… | python, pdf | ✅ | 86 A | M 12KB | - | ComposioHQ/awesome-claude-skills |
-| `obsidian-bases` | ⭐ tamamlayıcı | Obsidian Bases (.base) dosyalarını oluşturur ve düzenler: tam YAML şeması, global/görünüm filtreleri, formül sözdizimi ve fonksiyon başvurus… | obsidian, yaml | ✅ | 70 B | M 16KB | - | heyitsnoah/claudesidian |
-| `obsidian-markdown` | ⭐ birincil | Obsidian Flavored Markdown yazımı: wikilink, gömme (embed), callout, özellikler (properties), etiketler, blok referansları, LaTeX matematik … | obsidian, markdown | ✅ | 68 B | M 11KB | - | heyitsnoah/claudesidian |
-| `research-assistant` | ⭐ birincil | Bir konuyu kasadaki notlar üzerinden araştırır: ilgili notları bulup okur, temaları, çelişkileri ve boşlukları çıkarır, wikilink'li bir araş… | obsidian, markdown | ✅ | 72 B | S 2KB | - | heyitsnoah/claudesidian |
-| `thinking-partner` | ⭐ birincil | Karmaşık bir problemi çözüme koşmadan sorularla birlikte düşünme modu: önce sorar, varsayımları yüzeye çıkarır, içgörüleri kaydeder, kasadak… | markdown | ✅ | 72 B | S 2KB | - | heyitsnoah/claudesidian |
-| `upgrade` | ⭐ tamamlayıcı | claudesidian kurulumunu GitHub'daki son sürüme yükseltir: sürüm kontrolü, yedek, upstream çekme, dosya dosya anlamsal karşılaştırma ile kull… | git, bash, obsidian | 🟡 | 65 B | M 11KB | - | heyitsnoah/claudesidian |
-| `weekly-synthesis` | ⭐ birincil | Haftanın notlarını ve çalışmalarını tarayıp tekrar eden temaları, içgörüleri, proje ilerlemesini, ortaya çıkan soruları, enerji denetimini v… | obsidian, markdown | ✅ | 72 B | S 2KB | - | heyitsnoah/claudesidian |
+| `add-frontmatter` | ⭐ tamamlayıcı | Obsidian notlarını (tek dosya ya da klasör) okuyup not türüne göre (toplantı, günlük, referans, proje) YAML frontmatter özellikleri ekler ve… | obsidian, markdown, yaml | ✅ | 75 B | S 4KB | - | heyitsnoah/claudesidian |
+| `daily-review` | ⭐ tamamlayıcı | Gün sonu değerlendirmesi: bugün değişen/oluşan notları bulur, ilerlemeyi, takılan işleri ve içgörüleri çıkarır, yarının ilk 3 önceliğini ve … | obsidian, markdown | ✅ | 67 B | S 2KB | - | heyitsnoah/claudesidian |
+| `download-attachment` | ⭐ alternatif | Verilen URL'lerden dosyaları Obsidian kasasının 05_Attachments klasörüne indirir (yalnızca http/https, dosya adı temizleme, zaman aşımı), iç… | bash, obsidian | ✅ | 67 B | S 3KB | - | heyitsnoah/claudesidian |
+| `file-organizer` | ⭐ birincil | Bilgisayardaki klasörleri (İndirilenler, Belgeler, projeler) analiz eder; kopya dosyaları bulur, mantıklı klasör yapısı önerir ve kullanıcı … | bash | ✅ | 76 B | M 11KB | - | ComposioHQ/awesome-claude-skills |
+| `inbox-processor` | ⭐ tamamlayıcı | Kasanın 00_Inbox klasöründeki notları PARA yöntemine göre (Projects/Areas/Resources/Archive/Sil) sınıflandırır; her not için hedef klasör, g… | obsidian, markdown | ✅ | 67 B | S 2KB | - | heyitsnoah/claudesidian |
+| `init-bootstrap` | ⭐ birincil | Claudesidian kasası için etkileşimli kurulum sihirbazı: klasör adı, bağımlılık kurulumu (pnpm/npm), git durumu, mevcut kasa yapısı ve çalışm… | obsidian, node, git | ✅ | 64 C | L 30KB | - | heyitsnoah/claudesidian |
+| `install-claudesidian-command` | ⭐ tamamlayıcı | Kabuğa (bash/zsh/fish) `claudesidian` adlı bir alias/fonksiyon ekler: kasa klasörüne geçip `claude --resume` ile oturumu sürdürür ya da yeni… | bash, claude-code | 🟡 | 63 C | M 10KB | - | heyitsnoah/claudesidian |
+| `invoice-organizer` | ⭐ tamamlayıcı | Fatura ve fişleri (PDF, taranmış görsel, e-posta eki) okuyup satıcı, tarih, tutar, fatura no gibi bilgileri çıkarır; `YYYY-AA-GG Satıcı - Fa… | python, pdf | ✅ | 76 B | M 12KB | - | ComposioHQ/awesome-claude-skills |
+| `json-canvas` | ⭐ tamamlayıcı | Obsidian'ın kullandığı JSON Canvas 1.0 (.canvas) dosyalarını oluşturur ve düzenler: text/file/link/group düğümleri, kenarlar, renkler, yerle… | json, obsidian | ✅ | 74 B | M 14KB | - | heyitsnoah/claudesidian |
+| `obsidian-bases` | ⭐ tamamlayıcı | Obsidian Bases (.base) dosyalarını oluşturur ve düzenler: tam YAML şeması, global/görünüm filtreleri, formül sözdizimi ve fonksiyon başvurus… | obsidian, yaml | ✅ | 74 B | M 16KB | - | heyitsnoah/claudesidian |
+| `obsidian-markdown` | ⭐ birincil | Obsidian Flavored Markdown yazımı: wikilink, gömme (embed), callout, özellikler (properties), etiketler, blok referansları, LaTeX matematik … | obsidian, markdown | ✅ | 73 B | M 11KB | - | heyitsnoah/claudesidian |
+| `research-assistant` | ⭐ birincil | Bir konuyu kasadaki notlar üzerinden araştırır: ilgili notları bulup okur, temaları, çelişkileri ve boşlukları çıkarır, wikilink'li bir araş… | obsidian, markdown | ✅ | 67 B | S 2KB | - | heyitsnoah/claudesidian |
+| `thinking-partner` | ⭐ birincil | Karmaşık bir problemi çözüme koşmadan sorularla birlikte düşünme modu: önce sorar, varsayımları yüzeye çıkarır, içgörüleri kaydeder, kasadak… | markdown | ✅ | 67 B | S 2KB | - | heyitsnoah/claudesidian |
+| `upgrade` | ⭐ tamamlayıcı | claudesidian kurulumunu GitHub'daki son sürüme yükseltir: sürüm kontrolü, yedek, upstream çekme, dosya dosya anlamsal karşılaştırma ile kull… | git, bash, obsidian | 🟡 | 63 C | M 11KB | - | heyitsnoah/claudesidian |
+| `weekly-synthesis` | ⭐ birincil | Haftanın notlarını ve çalışmalarını tarayıp tekrar eden temaları, içgörüleri, proje ilerlemesini, ortaya çıkan soruları, enerji denetimini v… | obsidian, markdown | ✅ | 67 B | S 2KB | - | heyitsnoah/claudesidian |
 
 ## AI ve Otomasyon
 
@@ -417,16 +417,16 @@ _Claude API, MCP sunucusu, model geçişi_ · not: `notlar/d-ai-otomasyon/01-cla
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `claude-api` | ⭐ birincil | Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prom… | anthropic-sdk, python, typescript, go, java, csharp, php, ruby, curl | 🟡 | 76 B | L 2031KB | - | anthropics/skills |
-| `claude-opus-4-5-migration` | alt alternatif | Sonnet 4.0/4.5 ve Opus 4.1'den Opus 4.5'e tek seferlik geçiş: platforma göre (Anthropic, Bedrock, Vertex, Azure) model dizgelerini değiştiri… | anthropic-sdk | ✅ | 88 A | S 12KB | - | anthropics/claude-code |
-| `connect` | ⭐ birincil | Composio SDK (Python/TS) ile agent'ı Gmail, Slack, GitHub, Notion gibi 1000+ uygulamaya bağlar; e-posta gönderme, issue açma, mesaj atma gib… | composio, python, typescript, oauth | ✅ | 88 A | S 4KB | - | ComposioHQ/awesome-claude-skills |
-| `connect-apps` | ⭐ alternatif | Claude Code'a `/plugin install composio-toolrouter` ile Composio Tool Router eklentisini kurup 1000+ uygulamada (Gmail, Slack, GitHub, Notio… | composio, claude-code, mcp | 🟡 | 83 A | S 2KB | - | ComposioHQ/awesome-claude-skills |
-| `langsmith-fetch` | ⭐ birincil | LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, bel… | langchain, langgraph, langsmith, python | ✅ | 86 A | M 11KB | - | ComposioHQ/awesome-claude-skills |
-| `mcp-builder` | ⭐ birincil | Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya … | mcp, python, typescript | ✅ | 86 A | M 119KB | - | anthropics/skills |
-| `mcp-builder@composiohq` | alt alternatif | Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve … | mcp, python, typescript | ✅ | 86 A | M 144KB | - | ComposioHQ/awesome-claude-skills |
-| `mcp-builder@vudovn` | alt tamamlayıcı | MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/ç… | mcp, json-schema | ✅ | 87 A | M 10KB | - | vudovn/ag-kit |
-| `mcp-integration` | ⭐ birincil | Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tip… | mcp, claude-code, json | 🔵 | 74 B | M 46KB | - | anthropics/claude-code |
-| `academy-guide` | ⭐ birincil | Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca… | web-fetch | ✅ | 86 A | S 19KB | - | anthropics/skills |
+| `academy-guide` | ⭐ birincil | Claude veya bir Claude ürününün nasıl kullanılacağına dair sorulara verilen cevabın sonuna, Claude Academy'den (academy.claude.com) yalnızca… | web-fetch | ✅ | 84 A | S 19KB | - | anthropics/skills |
+| `claude-api` | ⭐ birincil | Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prom… | anthropic-sdk, python, typescript, go, java, csharp, php, ruby, curl | 🟡 | 86 A | L 2031KB | - | anthropics/skills |
+| `claude-opus-4-5-migration` | alt alternatif | Sonnet 4.0/4.5 ve Opus 4.1'den Opus 4.5'e tek seferlik geçiş: platforma göre (Anthropic, Bedrock, Vertex, Azure) model dizgelerini değiştiri… | anthropic-sdk | ✅ | 69 B | S 12KB | - | anthropics/claude-code |
+| `connect` | ⭐ birincil | Composio SDK (Python/TS) ile agent'ı Gmail, Slack, GitHub, Notion gibi 1000+ uygulamaya bağlar; e-posta gönderme, issue açma, mesaj atma gib… | composio, python, typescript, oauth | ✅ | 77 B | S 4KB | - | ComposioHQ/awesome-claude-skills |
+| `connect-apps` | ⭐ alternatif | Claude Code'a `/plugin install composio-toolrouter` ile Composio Tool Router eklentisini kurup 1000+ uygulamada (Gmail, Slack, GitHub, Notio… | composio, claude-code, mcp | 🟡 | 66 B | S 2KB | - | ComposioHQ/awesome-claude-skills |
+| `langsmith-fetch` | ⭐ birincil | LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, bel… | langchain, langgraph, langsmith, python | ✅ | 76 B | M 11KB | - | ComposioHQ/awesome-claude-skills |
+| `mcp-builder` | ⭐ birincil | Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya … | mcp, python, typescript | ✅ | 92 A | M 119KB | - | anthropics/skills |
+| `mcp-builder@composiohq` | alt alternatif | Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve … | mcp, python, typescript | ✅ | 76 B | M 144KB | - | ComposioHQ/awesome-claude-skills |
+| `mcp-builder@vudovn` | alt tamamlayıcı | MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/ç… | mcp, json-schema | ✅ | 84 A | M 10KB | - | vudovn/ag-kit |
+| `mcp-integration` | ⭐ birincil | Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tip… | mcp, claude-code, json | 🔵 | 76 B | M 46KB | - | anthropics/claude-code |
 
 ### 02-agent-orkestrasyon
 
@@ -434,20 +434,20 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_ ·
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `batch-operations` | ⭐ birincil | Birçok dosyaya aynı değişikliği güvenle uygulama protokolü: deseni tanımla, önce grep ile etkilenen dosyaları önizle, toplu uygula, sonra do… | bash, git | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `behavioral-modes` | ⭐ alternatif | Görev türüne göre yedi çalışma modu tanımlar (brainstorm, implement, debug, review, teach, ship, orchestrate); her mod için davranış kuralla… | node, typescript | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `context-compression` | ⭐ tamamlayıcı | Uzun oturumlarda bağlamı sıkıştırma: büyük araç çıktılarını anlamsal özete indirme (mikro), biten iş aşamalarını özetleme ve oturum kontrol … | api-anahtari, next.js, typescript | ✅ | 89 A | S 5KB | - | vudovn/ag-kit |
-| `context-engineering` | ⭐ birincil | Agent'a doğru bağlamı doğru zamanda verme: kalıcıdan geçiciye bağlam hiyerarşisi (kural dosyaları CLAUDE.md/AGENTS.md, spec, ilgili kaynak d… | markdown | ✅ | 91 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `coordinator-mode` | ⭐ alternatif | Koordinatör olarak çok agent'lı orkestrasyon: görevi ayrıştır, sınıflandır (araştırma/uygulama/doğrulama), okuma işlerini paralel yazma işle… | api-anahtari, typescript | ✅ | 89 A | S 8KB | - | vudovn/ag-kit |
-| `diagnosing-superpowers` | ⭐ tamamlayıcı | Bir superpowers oturumu kötü gittiğinde (tekrar eden iş, yok sayılan plan, tetiklenmeyen skill, pahalılık) diskteki transkriptleri okuyup ka… | bash, jsonl | ✅ | 93 A | S 41KB | - | obra/superpowers |
-| `discernment-nudge` | ⭐ birincil | Kullanıcının üzerine karar vereceği önemli bir cevap ya da taslaktan sonra, cevaptaki belirli noktalara bağlı 2-3 kısa takip sorusu ekler: ö… | html | ✅ | 86 A | M 21KB | - | anthropics/skills |
-| `dispatching-parallel-agents` | ⭐ tamamlayıcı | Bağımsız 2+ problemi (farklı test dosyaları, alt sistemler) her birine izole bağlamlı ayrı bir agent vererek paralel çözme kalıbı: bağımsız … | typescript | ✅ | 93 A | S 6KB | - | obra/superpowers |
-| `intelligent-routing` | ⭐ alternatif | Her kullanıcı isteğini sessizce analiz edip anahtar kelime/alan/karmaşıklığa göre uygun uzman agent'ı (security-auditor, frontend-specialist… | api-anahtari, css, docker, html, node | ✅ | 87 A | M 11KB | - | vudovn/ag-kit |
-| `memory-system` | ⭐ birincil | Oturumlar arası kalıcı bellek: .agents/memory/MEMORY.md indeksi (en fazla 200 satır) ve konu dosyaları (kullanıcı tercihleri, proje kurallar… | markdown | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `parallel-agents` | ⭐ alternatif | Güvenli paralel agent kullanımı: ne zaman paralelleştirilir/paralelleştirilmez, çalışma ortamından bağımsız yetenek keşfi, güven sınırı, del… | react | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `subagent-driven-development` | ⭐ birincil | Yazılı uygulama planını görev başına taze bir uygulayıcı alt-agent göndererek yürütür; her görevden sonra spec uyumu + kod kalitesi inceleme… | git, bash | ✅ | 88 A | L 58KB | - | obra/superpowers |
-| `using-agent-skills` | ⭐ birincil | addyosmani/agent-skills ailesinin meta-skill'i: işin geliştirme aşamasına göre hangi skill'in uygulanacağını gösteren karar ağacı (interview… | git | ✅ | 91 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `using-superpowers` | ⭐ alternatif | superpowers ailesinin meta-skill'i: '%1 ihtimal bile varsa skill'i çağır' kuralı, süreç skillerinin önceliği, rasyonalizasyon kırmızı bayrak… | git | ✅ | 93 A | S 20KB | - | obra/superpowers |
+| `batch-operations` | ⭐ birincil | Birçok dosyaya aynı değişikliği güvenle uygulama protokolü: deseni tanımla, önce grep ile etkilenen dosyaları önizle, toplu uygula, sonra do… | bash, git | ✅ | 77 B | S 3KB | - | vudovn/ag-kit |
+| `behavioral-modes` | ⭐ alternatif | Görev türüne göre yedi çalışma modu tanımlar (brainstorm, implement, debug, review, teach, ship, orchestrate); her mod için davranış kuralla… | node, typescript | ✅ | 69 B | S 6KB | - | vudovn/ag-kit |
+| `context-compression` | ⭐ tamamlayıcı | Uzun oturumlarda bağlamı sıkıştırma: büyük araç çıktılarını anlamsal özete indirme (mikro), biten iş aşamalarını özetleme ve oturum kontrol … | api-anahtari, next.js, typescript | ✅ | 77 B | S 5KB | - | vudovn/ag-kit |
+| `context-engineering` | ⭐ birincil | Agent'a doğru bağlamı doğru zamanda verme: kalıcıdan geçiciye bağlam hiyerarşisi (kural dosyaları CLAUDE.md/AGENTS.md, spec, ilgili kaynak d… | markdown | ✅ | 95 A | M 15KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `coordinator-mode` | ⭐ alternatif | Koordinatör olarak çok agent'lı orkestrasyon: görevi ayrıştır, sınıflandır (araştırma/uygulama/doğrulama), okuma işlerini paralel yazma işle… | api-anahtari, typescript | ✅ | 85 A | S 8KB | - | vudovn/ag-kit |
+| `diagnosing-superpowers` | ⭐ tamamlayıcı | Bir superpowers oturumu kötü gittiğinde (tekrar eden iş, yok sayılan plan, tetiklenmeyen skill, pahalılık) diskteki transkriptleri okuyup ka… | bash, jsonl | ✅ | 88 A | S 41KB | - | obra/superpowers |
+| `discernment-nudge` | ⭐ birincil | Kullanıcının üzerine karar vereceği önemli bir cevap ya da taslaktan sonra, cevaptaki belirli noktalara bağlı 2-3 kısa takip sorusu ekler: ö… | html | ✅ | 84 A | M 21KB | - | anthropics/skills |
+| `dispatching-parallel-agents` | ⭐ tamamlayıcı | Bağımsız 2+ problemi (farklı test dosyaları, alt sistemler) her birine izole bağlamlı ayrı bir agent vererek paralel çözme kalıbı: bağımsız … | typescript | ✅ | 96 A | S 6KB | - | obra/superpowers |
+| `intelligent-routing` | ⭐ alternatif | Her kullanıcı isteğini sessizce analiz edip anahtar kelime/alan/karmaşıklığa göre uygun uzman agent'ı (security-auditor, frontend-specialist… | api-anahtari, css, docker, html, node | ✅ | 68 B | M 11KB | - | vudovn/ag-kit |
+| `memory-system` | ⭐ birincil | Oturumlar arası kalıcı bellek: .agents/memory/MEMORY.md indeksi (en fazla 200 satır) ve konu dosyaları (kullanıcı tercihleri, proje kurallar… | markdown | ✅ | 77 B | S 6KB | - | vudovn/ag-kit |
+| `parallel-agents` | ⭐ alternatif | Güvenli paralel agent kullanımı: ne zaman paralelleştirilir/paralelleştirilmez, çalışma ortamından bağımsız yetenek keşfi, güven sınırı, del… | react | ✅ | 77 B | S 6KB | - | vudovn/ag-kit |
+| `subagent-driven-development` | ⭐ birincil | Yazılı uygulama planını görev başına taze bir uygulayıcı alt-agent göndererek yürütür; her görevden sonra spec uyumu + kod kalitesi inceleme… | git, bash | ✅ | 93 A | L 58KB | - | obra/superpowers |
+| `using-agent-skills` | ⭐ birincil | addyosmani/agent-skills ailesinin meta-skill'i: işin geliştirme aşamasına göre hangi skill'in uygulanacağını gösteren karar ağacı (interview… | git | ✅ | 87 A | M 10KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `using-superpowers` | ⭐ alternatif | superpowers ailesinin meta-skill'i: '%1 ihtimal bile varsa skill'i çağır' kuralı, süreç skillerinin önceliği, rasyonalizasyon kırmızı bayrak… | git | ✅ | 88 A | S 20KB | - | obra/superpowers |
 
 ### 03-web-arastirma-veri
 
@@ -455,8 +455,8 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_ · not: `notla
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `agent-reach` | ⭐ birincil | İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub … | python, cli, web-arama | ✅ | 91 A | M 46KB | - | Panniantong/Agent-Reach |
-| `notebooklm` | ⭐ tamamlayıcı | Google NotebookLM (Gemini Notebook) için notebooklm-py CLI ve async Python API'si: kurulum, kimlik doğrulama (master token, tarayıcı çerezi)… | python, notebooklm, cli | ✅ | 88 A | M 16KB | claude:farkli | teng-lin/notebooklm-py |
+| `agent-reach` | ⭐ birincil | İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub … | python, cli, web-arama | ✅ | 87 A | M 46KB | - | Panniantong/Agent-Reach |
+| `notebooklm` | ⭐ tamamlayıcı | Google NotebookLM (Gemini Notebook) için notebooklm-py CLI ve async Python API'si: kurulum, kimlik doğrulama (master token, tarayıcı çerezi)… | python, notebooklm, cli | ✅ | 85 A | M 16KB | claude:farkli | teng-lin/notebooklm-py |
 
 ### 04-skill-plugin-yazimi
 
@@ -464,21 +464,21 @@ _Skill yazma, plugin/hook/komut geliştirme_ · not: `notlar/d-ai-otomasyon/04-s
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `agent-development` | ⭐ birincil | Claude Code eklentileri için alt-agent (subagent) yazımı: Markdown + YAML frontmatter yapısı, name/description/model/color/tools alanları, <… | claude-code, markdown, yaml | 🔵 | 74 B | M 69KB | - | anthropics/claude-code |
-| `command-development` | ⭐ birincil | Claude Code slash komutu yazımı: komut konumları (proje/kullanıcı/eklenti), YAML frontmatter (description, allowed-tools, model, argument-hi… | claude-code, markdown, yaml | 🔵 | 74 B | M 150KB | - | anthropics/claude-code |
-| `hook-development` | ⭐ birincil | Claude Code hook'ları: prompt tabanlı (LLM kararlı) ve komut hook'ları, eklenti hooks.json ve settings biçimi, PreToolUse/PostToolUse/Stop/S… | claude-code, bash, json | 🔵 | 74 B | M 63KB | - | anthropics/claude-code |
-| `plugin-settings` | ⭐ tamamlayıcı | Claude Code eklentilerinde kullanıcıya özel ayar ve durum saklama kalıbı: proje kökünde `.claude/<eklenti>.local.md` dosyası (YAML frontmatt… | claude-code, yaml, bash | 🔵 | 74 B | M 43KB | - | anthropics/claude-code |
-| `plugin-structure` | ⭐ birincil | Claude Code eklenti mimarisi: dizin düzeni (.claude-plugin/plugin.json, commands, agents, skills, hooks, .mcp.json), manifest alanları ve bi… | claude-code, json | 🔵 | 74 B | M 73KB | - | anthropics/claude-code |
-| `skill-creator` | ⭐ birincil | Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istem… | python, markdown | ✅ | 83 A | L 220KB | - | anthropics/skills |
-| `skill-creator@composiohq` | alt alternatif | skill-creator'ın eski sürümü (ComposioHQ): skill anatomisi, aşamalı açılım ilkesi ve 6 adımlı süreç (örnekle anlama, içerik planlama, init_s… | python, markdown | ✅ | 86 A | M 38KB | - | ComposioHQ/awesome-claude-skills |
-| `skill-creator@freshtechbro` | alt alternatif | skill-creator'ın eski sürümünün freshtechbro/claudedesignskills kopyası: skill anatomisi, aşamalı açılım ve init/package betikli 6 adımlı sü… | python, markdown | ✅ | 68 B | M 41KB | - | freshtechbro/claudedesignskills |
-| `skill-creator@heyitsnoah` | alt alternatif | Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark v… | python, markdown | ✅ | 67 B | L 221KB | - | heyitsnoah/claudesidian |
-| `skill-development` | ⭐ alternatif | Claude Code eklentileri için skill yazım rehberi: skill anatomisi, aşamalı açılım, örnekle anlama → içerik planlama → yapı oluşturma → SKILL… | claude-code, markdown | 🔵 | 74 B | M 34KB | - | anthropics/claude-code |
-| `skill-share` | ⭐ alternatif | Yeni skill iskeleti oluşturur, doğrular, zip paketler ve Rube (Composio) MCP üzerinden Slack kanalına paylaşır. | mcp, slack, composio | ✅ | 88 A | S 3KB | - | ComposioHQ/awesome-claude-skills |
-| `skillify` | ⭐ alternatif | Tekrar eden çok adımlı iş akışlarını yeniden kullanılabilir SKILL.md'ye dönüştürür: kalıbı tanımla, şablondan SKILL.md üret, yerleştir, doğr… | markdown | ✅ | 89 A | S 3KB | - | vudovn/ag-kit |
-| `template-skill` | alt alternatif | Boş skill şablonu: yalnızca name/description yer tutucuları ve 'talimatları buraya yaz' satırı. | markdown | ✅ | 88 A | S 0KB | - | ComposioHQ/awesome-claude-skills |
-| `writing-hookify-rules` | ⭐ alternatif | hookify eklentisi için kural yazımı: `.claude/hookify.<kural>.local.md` dosyalarında YAML frontmatter (name, enabled, event: bash/file/stop/… | claude-code, yaml, regex | 🔵 | 74 B | M 8KB | - | anthropics/claude-code |
-| `writing-skills` | ⭐ tamamlayıcı | Skill yazımını süreç dokümantasyonuna uygulanmış TDD olarak ele alır: önce alt-agent'larla baskı senaryosu çalıştırıp skill'siz başarısızlığ… | markdown, graphviz | ✅ | 88 A | L 105KB | - | obra/superpowers |
+| `agent-development` | ⭐ birincil | Claude Code eklentileri için alt-agent (subagent) yazımı: Markdown + YAML frontmatter yapısı, name/description/model/color/tools alanları, <… | claude-code, markdown, yaml | 🔵 | 76 B | M 69KB | - | anthropics/claude-code |
+| `command-development` | ⭐ birincil | Claude Code slash komutu yazımı: komut konumları (proje/kullanıcı/eklenti), YAML frontmatter (description, allowed-tools, model, argument-hi… | claude-code, markdown, yaml | 🔵 | 76 B | M 150KB | - | anthropics/claude-code |
+| `hook-development` | ⭐ birincil | Claude Code hook'ları: prompt tabanlı (LLM kararlı) ve komut hook'ları, eklenti hooks.json ve settings biçimi, PreToolUse/PostToolUse/Stop/S… | claude-code, bash, json | 🔵 | 84 A | M 63KB | - | anthropics/claude-code |
+| `plugin-settings` | ⭐ tamamlayıcı | Claude Code eklentilerinde kullanıcıya özel ayar ve durum saklama kalıbı: proje kökünde `.claude/<eklenti>.local.md` dosyası (YAML frontmatt… | claude-code, yaml, bash | 🔵 | 76 B | M 43KB | - | anthropics/claude-code |
+| `plugin-structure` | ⭐ birincil | Claude Code eklenti mimarisi: dizin düzeni (.claude-plugin/plugin.json, commands, agents, skills, hooks, .mcp.json), manifest alanları ve bi… | claude-code, json | 🔵 | 84 A | M 73KB | - | anthropics/claude-code |
+| `skill-creator` | ⭐ birincil | Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istem… | python, markdown | ✅ | 90 A | L 220KB | - | anthropics/skills |
+| `skill-creator@composiohq` | alt alternatif | skill-creator'ın eski sürümü (ComposioHQ): skill anatomisi, aşamalı açılım ilkesi ve 6 adımlı süreç (örnekle anlama, içerik planlama, init_s… | python, markdown | ✅ | 76 B | M 38KB | - | ComposioHQ/awesome-claude-skills |
+| `skill-creator@freshtechbro` | alt alternatif | skill-creator'ın eski sürümünün freshtechbro/claudedesignskills kopyası: skill anatomisi, aşamalı açılım ve init/package betikli 6 adımlı sü… | python, markdown | ✅ | 57 C | M 41KB | - | freshtechbro/claudedesignskills |
+| `skill-creator@heyitsnoah` | alt alternatif | Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark v… | python, markdown | ✅ | 64 C | L 221KB | - | heyitsnoah/claudesidian |
+| `skill-development` | ⭐ alternatif | Claude Code eklentileri için skill yazım rehberi: skill anatomisi, aşamalı açılım, örnekle anlama → içerik planlama → yapı oluşturma → SKILL… | claude-code, markdown | 🔵 | 68 B | M 34KB | - | anthropics/claude-code |
+| `skill-share` | ⭐ alternatif | Yeni skill iskeleti oluşturur, doğrular, zip paketler ve Rube (Composio) MCP üzerinden Slack kanalına paylaşır. | mcp, slack, composio | ✅ | 69 B | S 3KB | - | ComposioHQ/awesome-claude-skills |
+| `skillify` | ⭐ alternatif | Tekrar eden çok adımlı iş akışlarını yeniden kullanılabilir SKILL.md'ye dönüştürür: kalıbı tanımla, şablondan SKILL.md üret, yerleştir, doğr… | markdown | ✅ | 77 B | S 3KB | - | vudovn/ag-kit |
+| `template-skill` | alt alternatif | Boş skill şablonu: yalnızca name/description yer tutucuları ve 'talimatları buraya yaz' satırı. | markdown | ✅ | 61 C | S 0KB | - | ComposioHQ/awesome-claude-skills |
+| `writing-hookify-rules` | ⭐ alternatif | hookify eklentisi için kural yazımı: `.claude/hookify.<kural>.local.md` dosyalarında YAML frontmatter (name, enabled, event: bash/file/stop/… | claude-code, yaml, regex | 🔵 | 76 B | M 8KB | - | anthropics/claude-code |
+| `writing-skills` | ⭐ tamamlayıcı | Skill yazımını süreç dokümantasyonuna uygulanmış TDD olarak ele alır: önce alt-agent'larla baskı senaryosu çalıştırıp skill'siz başarısızlığ… | markdown, graphviz | ✅ | 93 A | L 105KB | - | obra/superpowers |
 
 ## Video, Ses ve AI Medya Üretimi
 
@@ -488,7 +488,6 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `youtube-downloader` | ⭐ alternatif | yt-dlp kullanan download_video.py betiğiyle YouTube videosu indirir: kalite (best…360p), format (mp4/webm/mkv) ve yalnızca ses (MP3) seçenek… | python, yt-dlp, ffmpeg | ✅ | 88 A | S 7KB | - | ComposioHQ/awesome-claude-skills |
 | `captions-overlay` | ⭐ tamamlayıcı | embedded-captions iş akışının üzerine uygulanan overlay doktrini: altyazı modeli (at / ray / göm) ve altyazının filme bindirilen bir katman … | hyperframes, html, css | ✅ | 88 A | S 6KB | claude:ayni,codex:ayni,agents:farkli | heygen-com/hyperframes |
 | `changelog-video` | ⭐ alternatif | Haftalık changelog markdown'ını HeyGen markalı kare (1080) changelog videosuna çevirir: 'Annie' HeyGen seslendirmesi, animasyonlu marka arka… | hyperframes, html, gsap, node, heygen | ✅ | 71 B | M 521KB | claude:farkli,codex:farkli,agents:farkli | heygen-com/hyperframes |
 | `create-video` | ⭐ birincil | HeyGen Video Agent ile tek bir metin isteminden komple video üretir; senaryo, avatar, görsel, seslendirme ve altyazıyı ajan kendisi seçer. Ö… | heygen, api-anahtari, rest-api | ✅ | 87 A | S 92KB | claude:ayni | calesthio/OpenMontage |
@@ -534,6 +533,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 | `video-translate` | ⭐ birincil | HeyGen /v2/video_translate ile mevcut videoyu başka dillere çevirip dudak senkronlu dublaj yapar; sadece ses çevirisi, konuşmacı sayısı ve w… | heygen, api-anahtari, rest-api | ✅ | 86 A | M 11KB | claude:ayni | calesthio/OpenMontage |
 | `video-understand` | ⭐ birincil | ffmpeg ile sahne/anahtar kare çıkarıp Whisper ile sesi yerelde yazıya döken betik; videonun içeriğini JSON olarak özetler. API anahtarı gere… | ffmpeg, python, whisper | ✅ | 87 A | S 27KB | claude:ayni | calesthio/OpenMontage |
 | `website-to-video` | ⭐ alternatif | Bir web sitesini headless Chrome ile yakalayıp marka varlıklarıyla HyperFrames videosuna (site turu, vitrin, sosyal klip) dönüştüren 7 adıml… | hyperframes, html, node, chrome-headless | ✅ | 77 B | M 1541KB | claude:ayni | calesthio/OpenMontage |
+| `youtube-downloader` | ⭐ alternatif | yt-dlp kullanan download_video.py betiğiyle YouTube videosu indirir: kalite (best…360p), format (mp4/webm/mkv) ve yalnızca ses (MP3) seçenek… | python, yt-dlp, ffmpeg | ✅ | 77 B | S 7KB | - | ComposioHQ/awesome-claude-skills |
 
 ### 02-ses-muzik-konusma
 
@@ -586,7 +586,6 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_ · not: `notlar/
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `threejs-world-generation` | ⭐ birincil | Metinden veya yapılandırılmış özetten belirlenimci, düzenlenebilir Three.js dünyaları: arazi, semantik bölgeler, prosedürel biyomlar, landma… | three.js, hyperframes, openmontage, python, blender | ✅ | 86 A | M 16KB | claude:ayni | calesthio/OpenMontage |
 | `canvas-procedural-animation` | ⭐ alternatif | p5.js/Canvas ile karakter destekleyici prosedürel hareket: parçacık, hava efekti, yaprak, squash/stretch ve basit yürüme döngüleri; zaman/ka… | p5js, canvas, javascript | ✅ | 79 B | S 1KB | claude:ayni | calesthio/OpenMontage |
 | `character-animation-qa` | ⭐ tamamlayıcı | Karakter animasyonunu sunmadan önce katmanlı kontrol: şema doğrulama, varlık kontrolü, Playwright ile tarayıcı önizleme ve ekran görüntüsü, … | playwright, ffmpeg | ✅ | 79 B | S 2KB | claude:ayni | calesthio/OpenMontage |
 | `character-rigging` | ⭐ tamamlayıcı | Yerel 2D karakter animasyonu için veri güdümlü rig paketi: parçalar, pivotlar, katman sırası, kısıtlar ve görünümler; her karakteri jenerik … | svg, gsap, remotion | ✅ | 79 B | S 2KB | claude:ayni | calesthio/OpenMontage |
@@ -600,4 +599,5 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_ · not: `notlar/
 | `pose-library-design` | ⭐ tamamlayıcı | Veri güdümlü 2D animasyon için yeniden kullanılabilir poz kütüphanesi, aksiyon döngüleri ve ifade durumları tasarlar; hazırlık→aksiyon→bekle… | gsap, remotion | ✅ | 79 B | S 1KB | claude:ayni | calesthio/OpenMontage |
 | `seam-craft` | ⭐ tamamlayıcı | Sahneden sahneye geçişlerin ana zaman çizelgesinde doğru birleşmesi için render önkoşulları: koyu filmlerde kesmede beyaz parlamayı önleyen … | hyperframes, html, css | ✅ | 80 A | S 5KB | claude:ayni,codex:ayni,agents:farkli | heygen-com/hyperframes |
 | `svg-character-animation` | ⭐ birincil | SVG parçalarından oluşan karakter rig'lerini GSAP, CSS dönüşümleri, Remotion kare kontrolü ve HyperFrames uyumlu önizlemeyle canlandırır; pi… | svg, gsap, remotion, hyperframes | ✅ | 87 A | S 2KB | claude:ayni | calesthio/OpenMontage |
+| `threejs-world-generation` | ⭐ birincil | Metinden veya yapılandırılmış özetten belirlenimci, düzenlenebilir Three.js dünyaları: arazi, semantik bölgeler, prosedürel biyomlar, landma… | three.js, hyperframes, openmontage, python, blender | ✅ | 86 A | M 16KB | claude:ayni | calesthio/OpenMontage |
 | `visual-style` | ⭐ birincil | Taşınabilir görsel tasarım sistemi dosyası (visual-style.md) oluşturur, web sitesi/video/PDF'den çıkarır ve HeyGen, HTML slayt, Figma, paper… | markdown, html | ✅ | 87 A | S 81KB | claude:ayni | calesthio/OpenMontage |

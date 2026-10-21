@@ -7,7 +7,7 @@
 - **Commit:** `691ec2a1a21b9644a8cfd22452cec82d57c84d0d`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
-- **Değerlendirme:** 96/100 (A)
+- **Değerlendirme:** 90/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
 - **SKILL.md'de olup bulunamayan dosyalar:** `../../../test/lib/gate/README.md`

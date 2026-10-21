@@ -7,7 +7,7 @@
 - **Commit:** `691ec2a1a21b9644a8cfd22452cec82d57c84d0d`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
-- **Değerlendirme:** 96/100 (A)
+- **Değerlendirme:** 82/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
 - **SKILL.md'de olup bulunamayan dosyalar:** `/docs/app/api-reference/config/next-config-js/cacheComponents`, `/docs/app/api-reference/file-conventions/route-segment-config/instant`, `/docs/app/glossary`, `/docs/app/guides/instant-navigation`, `/docs/app/guides/preventing-flash-before-hydration`

@@ -7,7 +7,7 @@
 - **Commit:** `66070a1eaa0b869379607a9e0e1a652ddf2a77da`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** microsoft (kurum)
-- **Değerlendirme:** 96/100 (A)
+- **Değerlendirme:** 90/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `playwright-dev`

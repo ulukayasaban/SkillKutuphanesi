@@ -7,6 +7,6 @@
 - **Commit:** `4d551830df2680b1bd288330c6c249b4b34d4cd0`
 - **Lisans:** MIT
 - **Geliştirici:** teng-lin (kisi)
-- **Değerlendirme:** 88/100 (A)
+- **Değerlendirme:** 85/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

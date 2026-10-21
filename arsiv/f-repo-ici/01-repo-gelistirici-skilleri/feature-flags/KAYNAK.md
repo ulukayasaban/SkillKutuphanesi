@@ -7,6 +7,6 @@
 - **Commit:** `ab0d927f53f6e1b5dcfc2c4e9fc438bdb5ffb678`
 - **Lisans:** MIT
 - **Geliştirici:** react (kurum)
-- **Değerlendirme:** 100/100 (A)
+- **Değerlendirme:** 92/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

@@ -7,7 +7,7 @@
 - **Commit:** `b739a8af570e10a95898f2bdf6cec97467fa6c12`
 - **Lisans:** MIT
 - **Geliştirici:** obra (kisi)
-- **Değerlendirme:** 88/100 (A)
+- **Değerlendirme:** 93/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `requesting-code-review`

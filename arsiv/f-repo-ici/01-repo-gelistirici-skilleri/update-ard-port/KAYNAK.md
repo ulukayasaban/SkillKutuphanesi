@@ -7,6 +7,6 @@
 - **Commit:** `d94c35d9c772bb87b7a16ee978faeabda939fb1d`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** GoogleChrome (kurum)
-- **Değerlendirme:** 96/100 (A)
+- **Değerlendirme:** 90/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

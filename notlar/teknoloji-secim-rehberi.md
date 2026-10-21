@@ -78,13 +78,13 @@
 
 `threejs-animation`, `threejs-fundamentals`, `threejs-geometry`, `threejs-interaction`, `threejs-lighting`, `threejs-loaders`, `threejs-materials`, `threejs-performance`, `threejs-postprocessing`, `threejs-shaders`, `threejs-textures`
 
-## obsidian (11)
-
-`add-frontmatter`, `daily-review`, `download-attachment`, `inbox-processor`, `init-bootstrap`, `json-canvas`, `obsidian-bases`, `obsidian-markdown`, `research-assistant`, `upgrade`, `weekly-synthesis`
-
 ## claude-code (11)
 
 `agent-development`, `command-development`, `connect-apps`, `developer-growth-analysis`, `hook-development`, `install-claudesidian-command`, `mcp-integration`, `plugin-settings`, `plugin-structure`, `skill-development`, `writing-hookify-rules`
+
+## obsidian (11)
+
+`add-frontmatter`, `daily-review`, `download-attachment`, `inbox-processor`, `init-bootstrap`, `json-canvas`, `obsidian-bases`, `obsidian-markdown`, `research-assistant`, `upgrade`, `weekly-synthesis`
 
 ## three.js (10)
 
@@ -226,10 +226,6 @@
 
 `react-three-fiber`, `web3d-integration-patterns`
 
-## openmontage (2)
-
-`provider-model-refresh`, `threejs-world-generation`
-
 ## web-audio (2)
 
 `game-audio`, `hyperframes-audio`
@@ -301,6 +297,10 @@
 ## comfyui (2)
 
 `comfyui`, `minimax-h3`
+
+## openmontage (2)
+
+`provider-model-refresh`, `threejs-world-generation`
 
 ## seedance (2)
 
@@ -646,6 +646,10 @@
 
 `competitive-ads-extractor`
 
+## web-fetch (1)
+
+`academy-guide`
+
 ## anthropic-sdk (1)
 
 `claude-api`
@@ -697,10 +701,6 @@
 ## notebooklm (1)
 
 `notebooklm`
-
-## web-fetch (1)
-
-`academy-guide`
 
 ## regex (1)
 
