@@ -304,16 +304,16 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_ · not: `notlar/b-ya
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `ci-cd-and-automation` | ⭐ | Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates… | api-anahtari, node, playwright, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `deployment-procedures` | ⭐ | Production deployment principles and decision-making. Safe deployment workflows, rollback strategies, and verification. Teaches thinking, no… | docker, git | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
-| `observability-and-instrumentation` | ⭐ | Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shippin… | api-anahtari, node, typescript | ✅ | 91 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `performance-optimization` | ⭐ | Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspec… | css, git, node, react | ✅ | 91 A | M 26KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `performance-profiling` | ⭐ | Performance profiling principles. Measurement, analysis, and optimization techniques. | python | ✅ | 89 A | S 13KB | - | vudovn/ag-kit |
-| `red-team-tactics` | ⭐ | Red team tactics principles based on MITRE ATT&CK. Attack phases, detection evasion, reporting. | api-anahtari | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `security-and-hardening` | ⭐ | Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authentication, data… | api-anahtari, git, html, node | ✅ | 91 A | M 30KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `server-management` | ⭐ | Server management principles and decision-making. Process management, monitoring strategy, and scaling decisions. Teaches thinking, not comm… | docker, node | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
-| `shipping-and-launch` | ⭐ | Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when… | git, node, react, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
-| `vulnerability-scanner` | ⭐ | Advanced vulnerability analysis principles. OWASP 2025, Supply Chain Security, attack surface mapping, risk prioritization. | api-anahtari, python | ✅ | 89 A | S 35KB | - | vudovn/ag-kit |
+| `ci-cd-and-automation` | ⭐ birincil | CI/CD hattı kurulumu: kalite kapısı sırası (lint → tip → birim → build → entegrasyon → E2E → güvenlik), GitHub Actions örnekleri (veritabanl… | github-actions, node, playwright | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `deployment-procedures` | ⭐ tamamlayıcı | Üretim deploy ilkeleri: platform seçim ağacı (Vercel/Netlify, Railway/Render/Fly, VPS+PM2/Docker, Kubernetes, serverless), deploy öncesi dör… | docker, git | ✅ | 89 A | S 6KB | - | vudovn/ag-kit |
+| `observability-and-instrumentation` | ⭐ birincil | Kodu üretimde görünür ve teşhis edilebilir kılar: önce 'çalışıyor'un tanımı, her soru için doğru sinyal (log, metrik, iz), yapılandırılmış l… | opentelemetry, node, typescript | ✅ | 91 A | M 14KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `performance-optimization` | ⭐ birincil | Ölçüme dayalı performans iyileştirme: Core Web Vitals hedefleri, önce ölç → darboğazı bul → düzelt → doğrula (tut ya da geri al, geri alınan… | node, react, css | ✅ | 91 A | M 26KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `performance-profiling` | ⭐ tamamlayıcı | Performans profil çıkarma ilkeleri: Core Web Vitals hedefleri, taban → tespit → düzelt → doğrula süreci, sorun tipine göre araç seçimi (Ligh… | lighthouse, python, node | ✅ | 89 A | S 13KB | - | vudovn/ag-kit |
+| `red-team-tactics` | ⭐ birincil | MITRE ATT&CK tabanlı kırmızı takım ilkeleri: saldırı yaşam döngüsü fazları ve amaçları, pasif/aktif keşif, ilk erişim vektörleri, Windows/Li… | api-anahtari | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
+| `security-and-hardening` | ⭐ birincil | Kodu güvenlik açıklarına karşı sertleştirir: önce tehdit modeli, 'her zaman yap / önce sor / asla yapma' üç katmanlı sınır sistemi; enjeksiy… | node, html | ✅ | 91 A | M 30KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `server-management` | ⭐ birincil | Sunucu işletim ilkeleri: süreç yöneticisi seçimi (PM2, systemd, Docker, Kubernetes), izleme metrikleri ve uyarı seviyeleri, izleme aracı seç… | pm2, systemd, docker, node | ✅ | 89 A | S 4KB | - | vudovn/ag-kit |
+| `shipping-and-launch` | ⭐ birincil | Üretime çıkış hazırlığı: kod kalitesi, güvenlik, performans, erişilebilirlik, altyapı ve dokümantasyon için ön yayın kontrol listesi; featur… | git, node, react, typescript | ✅ | 91 A | M 11KB | claude:ayni,agents:ayni | addyosmani/agent-skills |
+| `vulnerability-scanner` | ⭐ tamamlayıcı | Güvenlik açığı analizi ilkeleri: varsayılan ihlal, sıfır güven, derinlemesine savunma; OWASP Top 10:2025 (yeni A03 tedarik zinciri), saldırı… | python | ✅ | 89 A | S 35KB | - | vudovn/ag-kit |
 
 ### 07-framework-ozel
 

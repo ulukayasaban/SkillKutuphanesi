@@ -14729,7 +14729,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -14742,7 +14742,32 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "CI/CD hattı kurulumu: kalite kapısı sırası (lint → tip → birim → build → entegrasyon → E2E → güvenlik), GitHub Actions örnekleri (veritabanlı entegrasyon ve E2E dahil), CI hatalarını agent'a geri besleme, preview deploy, feature flag, kademeli yayın ve geri alma planı, ortam yönetimi, Dependabot/Renovate ve CI hızlandırma.",
+      "kullanim_alani": "Build/deploy hattı kurarken veya değiştirirken; kalite kapılarını otomatikleştirirken; test çalıştırıcısını CI'a bağlarken.",
+      "kullanma": "GitHub Actions dışı CI'da örnekler doğrudan uymaz (ilkeler geçerli); tek seferlik yerel betikler.",
+      "teknoloji": [
+        "github-actions",
+        "node",
+        "playwright"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı.",
+      "ortusme_grubu": "ci-cd",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "deployment-procedures",
@@ -14802,7 +14827,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -14815,7 +14840,31 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Üretim deploy ilkeleri: platform seçim ağacı (Vercel/Netlify, Railway/Render/Fly, VPS+PM2/Docker, Kubernetes, serverless), deploy öncesi dört doğrulama kategorisi, beş fazlı deploy akışı, deploy sonrası doğrulama penceresi ve geri alma ilkeleri; betik değil karar öğretir.",
+      "kullanim_alani": "Barındırma platformu seçerken veya deploy prosedürü yazarken; ag-kit /deploy iş akışında.",
+      "kullanma": "Kademeli yayın ve izleme ayrıntısı (shipping-and-launch); CI hattı yazımı (ci-cd-and-automation).",
+      "teknoloji": [
+        "docker",
+        "git"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. Kısa (6 KB) platform karar tablosu yararlı; içerik genel ilkeler, shipping-and-launch ile kısmen örtüşüyor.",
+      "ortusme_grubu": "deploy-yayin",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "observability-and-instrumentation",
@@ -14879,7 +14928,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -14892,7 +14941,31 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kodu üretimde görünür ve teşhis edilebilir kılar: önce 'çalışıyor'un tanımı, her soru için doğru sinyal (log, metrik, iz), yapılandırılmış loglama, metrikler, dağıtık izleme, uyarılar ve runbook yazımı, son olarak telemetrinin kendisini doğrulama.",
+      "kullanim_alani": "Loglama/metrik/izleme/uyarı eklerken; üretime çıkan her özellikte çalıştığına dair kanıt gerektiğinde; üretim sorunu mevcut veriden anlaşılamıyorsa.",
+      "kullanma": "Yerel prototip; belirli bir APM ürününün kurulumu (ürün belgeleri).",
+      "teknoloji": [
+        "opentelemetry",
+        "node",
+        "typescript"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [
+        "devops-muhendis",
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, gozlemlenebilirlik grubunun birincili. 'Telemetriyi de doğrula' ve runbook bölümleri pratik; satıcıdan bağımsız.",
+      "ortusme_grubu": "gozlemlenebilirlik",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "performance-optimization",
@@ -14957,7 +15030,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -14970,7 +15043,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Ölçüme dayalı performans iyileştirme: Core Web Vitals hedefleri, önce ölç → darboğazı bul → düzelt → doğrula (tut ya da geri al, geri alınan denemeleri de kaydet) → regresyona karşı koru akışı; ön yüz, arka yüz, sorgu ve veritabanı için nereden ölçmeye başlanacağı ve optimization-patterns.md desen dosyası.",
+      "kullanim_alani": "Performans gereksinimi veya regresyon şüphesi olduğunda; Core Web Vitals/yükleme süresi iyileştirmede; N+1 sorgu düzeltmede; profil çıkarılmış darboğazlarda.",
+      "kullanma": "Ölçüm yapılmadan 'erken optimizasyon'; React'e özgü kural listesi gerekiyorsa vercel-react-best-practices ile birlikte.",
+      "teknoloji": [
+        "node",
+        "react",
+        "css"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "frontend-muhendis",
+        "backend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı.",
+      "ortusme_grubu": "performans",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "performance-profiling",
@@ -15029,7 +15129,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -15042,7 +15142,32 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Performans profil çıkarma ilkeleri: Core Web Vitals hedefleri, taban → tespit → düzelt → doğrula süreci, sorun tipine göre araç seçimi (Lighthouse, bundle analyzer, DevTools Performance/Memory/Network), bundle ve çalışma zamanı analizi, yaygın darboğazlar; lighthouse_audit.py ve bundle_analyzer.py betikleri.",
+      "kullanim_alani": "Lighthouse denetimi çalıştırmak, bundle boyutunu analiz etmek veya DevTools ile çalışma zamanı profili çıkarmak gerektiğinde.",
+      "kullanma": "Optimizasyon kararı ve doğrulama disiplini (performance-optimization); backend/veritabanı darboğazları (sınırlı içerik).",
+      "teknoloji": [
+        "lighthouse",
+        "python",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "python3",
+        "lighthouse (npx)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı (opsiyonel). Kısa ve betikli; içerik büyük ölçüde performance-optimization'ın ölçüm bölümünün tablo özeti.",
+      "ortusme_grubu": "performans",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "red-team-tactics",
@@ -15101,7 +15226,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -15114,7 +15239,21 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "MITRE ATT&CK tabanlı kırmızı takım ilkeleri: saldırı yaşam döngüsü fazları ve amaçları, pasif/aktif keşif, ilk erişim vektörleri, Windows/Linux yetki yükseltme ilkeleri, tespitten kaçınma ve operasyonel güvenlik, raporlama. İlke düzeyinde; exploit kodu içermez.",
+      "kullanim_alani": "Yalnız yetkili sızma testi veya kırmızı takım tatbikatında saldırı yüzeyini çerçevelemek ve rapor yapısı kurmak.",
+      "kullanma": "Yetkisiz hedefler; uygulama geliştirme rolleri (savunma tarafı için security-and-hardening).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Çift kullanımlı (tespitten kaçınma bölümü var) ve yüzeysel; web uygulaması projelerinde savunmaya katkısı düşük. Hiçbir role eklenmedi.",
+      "ortusme_grubu": "saldiri-simulasyonu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "security-and-hardening",
@@ -15179,7 +15318,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -15192,7 +15331,34 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Kodu güvenlik açıklarına karşı sertleştirir: önce tehdit modeli, 'her zaman yap / önce sor / asla yapma' üç katmanlı sınır sistemi; enjeksiyon, XSS, erişim kontrolü, kimlik doğrulama ve oturum, başlıklar/CORS, girdi doğrulama ve yüklemeler, SSRF, türetilmiş yollarda yıkıcı işlemler, rate limit, gizli anahtarlar, bağımlılık ve tedarik zinciri, kişisel veri ve AI/LLM özellikleri için kontroller; inceleme kontrol listesi ve hardening-patterns.md.",
+      "kullanim_alani": "Kullanıcı girdisi, kimlik doğrulama, veri saklama veya dış entegrasyon içeren her özellikte; OWASP Top 10'a karşı giriş akışı denetimi; bağımlılık denetimi.",
+      "kullanma": "Saldırı simülasyonu/sızma testi (red-team-tactics); otomatik tarama betiği gerektiğinde vulnerability-scanner ile birlikte.",
+      "teknoloji": [
+        "node",
+        "html"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "kod-inceleyici",
+        "backend-muhendis",
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı.",
+      "ortusme_grubu": "guvenlik-sertlestirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "server-management",
@@ -15252,7 +15418,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -15265,7 +15431,29 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Sunucu işletim ilkeleri: süreç yöneticisi seçimi (PM2, systemd, Docker, Kubernetes), izleme metrikleri ve uyarı seviyeleri, izleme aracı seçimi, log yönetimi (rotasyon, yapılandırılmış log), ölçekleme kararları ve sağlık kontrolü ilkeleri.",
+      "kullanim_alani": "VPS/kendi sunucusunda çalışan uygulamalarda PM2/systemd yapılandırması, izleme ve ölçekleme kararları.",
+      "kullanma": "Yönetilen platformlar (Vercel, Railway) — çoğu konu platformca çözülür; ayrıntılı gözlemlenebilirlik (observability-and-instrumentation).",
+      "teknoloji": [
+        "pm2",
+        "systemd",
+        "docker",
+        "node"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: TUT (opsiyonel). Yalnız tablo düzeyinde ilkeler; komut veya yapılandırma örneği yok, modelin zaten bildiğini özetliyor.",
+      "ortusme_grubu": "sunucu-yonetimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "shipping-and-launch",
@@ -15330,7 +15518,7 @@
         "ana_sayfa": "https://skills.addy.ie",
         "katkici": 93
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 91,
         "not": "A",
@@ -15343,7 +15531,28 @@
           "bağlam yükü 8/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Üretime çıkış hazırlığı: kod kalitesi, güvenlik, performans, erişilebilirlik, altyapı ve dokümantasyon için ön yayın kontrol listesi; feature flag stratejisi, eşik değerli kademeli yayın sırası ve geri alma koşulları, izlenecek metrikler ve hata raporlama, yayın sonrası doğrulama, hata bütçesi kapısı ve geri alma planı şablonu.",
+      "kullanim_alani": "Üretime deploy öncesi 'neler hazır olmalı?' sorusunda; kademeli yayın ve geri alma stratejisi planlarken.",
+      "kullanma": "Platforma özgü deploy komutları (deployment-procedures veya platform belgeleri); CI kurulumu (ci-cd-and-automation).",
+      "teknoloji": [],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı.",
+      "ortusme_grubu": "deploy-yayin",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "vulnerability-scanner",
@@ -15403,7 +15612,7 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 89,
         "not": "A",
@@ -15416,7 +15625,32 @@
           "bağlam yükü 10/10",
           "yapı 5/5"
         ]
-      }
+      },
+      "ozet_tr": "Güvenlik açığı analizi ilkeleri: varsayılan ihlal, sıfır güven, derinlemesine savunma; OWASP Top 10:2025 (yeni A03 tedarik zinciri), saldırı yüzeyi haritalama ve risk önceliklendirme; checklists.md ile OWASP/kimlik doğrulama/API/veri koruma kontrol listeleri, security_scan.py ve dependency_analyzer.py tarama betikleri.",
+      "kullanim_alani": "Projede güvenlik taraması, OWASP 2025 uyum kontrolü veya tedarik zinciri (bağımlılık) analizi yaparken.",
+      "kullanma": "Özellik geliştirirken güvenli kodlama kuralları (security-and-hardening); gerçek bir SAST/DAST aracının yerine (betikler basit desen taraması).",
+      "teknoloji": [
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (security_scan.py, dependency_analyzer.py)"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "ai-uygulama",
+        "kurumsal-site",
+        "mevcut-kod-iyilestirme"
+      ],
+      "roller": [
+        "devops-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.",
+      "ortusme_grubu": "guvenlik-sertlestirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21"
     },
     {
       "id": "next-bundle-optimizer",
