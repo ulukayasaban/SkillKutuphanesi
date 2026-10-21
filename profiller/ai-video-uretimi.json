@@ -3,7 +3,8 @@
   "baslik": "AI ile üretilmiş video (model seçimi, seslendirme, kurgu)",
   "roller": [
     "ai-medya-uretici",
-    "video-produksiyon",
+    "video-kompozisyon",
+    "video-kurgu-render",
     "ses-tasarimci"
   ],
   "ek_skiller": []

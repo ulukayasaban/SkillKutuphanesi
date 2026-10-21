@@ -2,7 +2,8 @@
   "ad": "urun-tanitim-videosu",
   "baslik": "Ürün/özellik tanıtım videosu",
   "roller": [
-    "video-produksiyon",
+    "video-kompozisyon",
+    "video-kurgu-render",
     "motion-graphics-sanatcisi",
     "ses-tasarimci"
   ],

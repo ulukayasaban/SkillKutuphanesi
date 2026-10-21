@@ -9,8 +9,8 @@ Toplam **362** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-iç
 ## İçindekiler
 
 - **Tasarım ve Ön Yüz** (109)
-  - [01-ui-ux-tasarim-dili](#01-ui-ux-tasarim-dili) — 15 skill · Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi
-  - [02-tasarim-sistemi-marka](#02-tasarim-sistemi-marka) — 8 skill · Design token, tema, marka kimliği, banner/logo
+  - [01-ui-ux-tasarim-dili](#01-ui-ux-tasarim-dili) — 12 skill · Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi
+  - [02-tasarim-sistemi-marka](#02-tasarim-sistemi-marka) — 11 skill · Design token, tema, marka kimliği, banner/logo
   - [03-animasyon-motion](#03-animasyon-motion) — 17 skill · GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim
   - [04-scroll-deneyimi](#04-scroll-deneyimi) — 6 skill · Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri
   - [05-3d-webgl](#05-3d-webgl) — 34 skill · Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader
@@ -49,21 +49,18 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 
 | Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |
 |---|---|---|---|---|---|---|---|---|
-| `design` | ⭐ | Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corpor… | api-anahtari, css, html, playwright, python | 🟡 | 88 A | M 284KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `design-dna` | ⭐ | Extract, define, and apply design DNA across three dimensions: design system (tokens), design style (qualitative feel), and visual effects (… | api-anahtari, canvas, css, gsap, html | ✅ | 84 A | M 709KB | claude:farkli | zanwei/design-dna |
-| `design-spec` | ⭐ | How to author a DESIGN.md file — the machine-readable design-token + human-rationale format that must exist before any UI is built. YAML fro… | api-anahtari, node, tailwind | ✅ | 89 A | S 21KB | - | vudovn/ag-kit |
-| `design-taste-frontend` | ⭐ | tasteskill v2, the anti-slop frontend skill. Art direction for websites, distilled from a study of 247 curated gallery sites (One Page Love,… | api-anahtari, css, html, next.js, node | ✅ | 88 A | L 2363KB | - | Leonxlnx/taste-skill |
-| `frontend-design` | ⭐ | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typog… | api-anahtari, css | ✅ | 86 A | M 9KB | - | anthropics/claude-code |
-| `frontend-design@anthropics` | alt | Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typog… | api-anahtari, css | ✅ | 86 A | M 19KB | - | anthropics/skills |
-| `frontend-design@vudovn` | alt | Anti-slop frontend design for web UI — landing pages, portfolios, marketing/product sites, and redesigns. Reads the brief, infers the right … | api-anahtari, canvas, css, git, gsap | ✅ | 84 A | L 161KB | - | vudovn/ag-kit |
-| `impeccable` | ⭐ | Use when the user wants to design, redesign, shape, critique, audit, polish, simplify, harden, animate, or otherwise improve a frontend inte… | api-anahtari, css, node | ✅ | 91 A | M 2138KB | - | pbakaus/impeccable |
-| `mobile-design` | ⭐ | Mobile-first design thinking and decision-making for iOS and Android apps. Touch interaction, performance patterns, platform conventions. Te… | api-anahtari, python, react, typescript | ✅ | 87 A | M 216KB | - | vudovn/ag-kit |
-| `modern-web-design` | ⭐ | Modern web design trends, principles, and implementation patterns for 2024-2025. Use this skill when designing websites, creating interactiv… | api-anahtari, canvas, css, gsap, html | ✅ | 65 B | L 151KB | - | freshtechbro/claudedesignskills |
-| `tailwind-patterns` | ⭐ | Tailwind CSS v4 principles. CSS-first configuration, container queries, modern patterns, design token architecture. | api-anahtari, css, react, tailwind, vue | ✅ | 89 A | S 7KB | - | vudovn/ag-kit |
-| `ui-styling` | ⭐ | Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, a… | api-anahtari, canvas, css, html, next.js | ✅ | 93 A | M 5627KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `ui-ux-pro-max` | ⭐ | UI/UX design intelligence for web, mobile, and desktop. This skill should be used when designing, building, reviewing, or fixing interfaces,… | api-anahtari, css, gsap, html, next.js | 🟡 | 88 A | M 3499KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
-| `web-design-guidelines` | ⭐ | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX"… |  | ✅ | 89 A | S 2KB | claude:farkli | vudovn/ag-kit |
-| `web-design-guidelines@calesthio` | alt | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX"… |  | ✅ | 92 A | S 1KB | claude:ayni | calesthio/OpenMontage |
+| `design-dna` | ⭐ birincil | Tasarım DNA'sını üç boyutta çıkarır, tanımlar ve uygular: tasarım sistemi (token), tasarım stili (nitel his) ve görsel efektler (Canvas, Web… | html, css, node, webgl | ✅ | 82 A | M 709KB | claude:farkli | zanwei/design-dna |
+| `design-taste-frontend` | ⭐ birincil | tasteskill v2: 247 seçkin galeri sitesinden damıtılmış 'anti-slop' sanat yönetimi. Betik araştırılmış 20 yönden üçünü dağıtır, seçilen yöne … | html, css, node, chromium | ✅ | 93 A | L 2363KB | - | Leonxlnx/taste-skill |
+| `frontend-design` | ⭐ tamamlayıcı | Anthropic'in kısa tasarım ilkeleri skilli: tasarım stüdyosu yöneticisi gibi konuya özgü, şablon gibi görünmeyen palet/tipografi/düzen kararl… | html, css | ✅ | 84 A | M 9KB | - | anthropics/claude-code |
+| `frontend-design@anthropics` | alt alternatif | frontend-design'ın anthropics/skills kopyası: içerik claude-code eklentisindekiyle birebir aynı, ayrıca LICENSE.txt içerir. | html, css | ✅ | 84 A | M 19KB | - | anthropics/skills |
+| `frontend-design@vudovn` | alt alternatif | ag-kit'in 'anti-slop' web UI skilli: brief çıkarımı, üç kadranlı (varyans/hareket/yoğunluk) yapılandırma, gerçek tasarım sistemi eşlemesi, t… | html, css, react, next.js, tailwind, python | ✅ | 74 B | L 161KB | - | vudovn/ag-kit |
+| `impeccable` | ⭐ birincil | Ön yüz arayüzlerini tasarlama, yeniden tasarlama, eleştirme, denetleme, cilalama ve sağlamlaştırma için komut tabanlı tasarım direktörü: sha… | html, css, node | ✅ | 95 A | M 2138KB | - | pbakaus/impeccable |
+| `mobile-design` | ⭐ birincil | iOS ve Android uygulamaları için mobil öncelikli tasarım düşüncesi: dokunma etkileşimi, başparmak bölgesi, platform gelenekleri, performans … | react-native, flutter, python | ✅ | 84 A | M 216KB | - | vudovn/ag-kit |
+| `modern-web-design` | ⭐ alternatif | 2024-2025 web tasarım trendleri ve kalıpları özeti: performans öncelikli tasarım, cesur minimalizm, mikro etkileşim, scrollytelling, imleç U… | html, css, gsap, three.js, react | ✅ | 55 C | L 151KB | - | freshtechbro/claudedesignskills |
+| `ui-styling` | ⭐ birincil | shadcn/ui (Radix + Tailwind) bileşenleri, Tailwind yardımcı sınıf stili ve canvas tabanlı görsel tasarımla erişilebilir arayüz kurma: tema/k… | react, tailwind, shadcn-ui, radix, python | ✅ | 88 A | M 5627KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
+| `ui-ux-pro-max` | ⭐ tamamlayıcı | Yerel aranabilir UI/UX veri tabanı: 79 stil, 192 ürün paleti ve gerekçe profili, 74 font eşleşmesi, 119 UX kuralı, ikonlar, GSAP ön ayarları… | python, html, css, tailwind | 🟡 | 85 A | M 3499KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
+| `web-design-guidelines` | ⭐ tamamlayıcı | UI kodunu Vercel'in Web Interface Guidelines kurallarına göre denetler: kuralları her çalıştırmada GitHub'dan (vercel-labs/web-interface-gui… | html, css, react | ✅ | 85 A | S 2KB | claude:farkli | vudovn/ag-kit |
+| `web-design-guidelines@calesthio` | alt alternatif | web-design-guidelines'ın OpenMontage kopyası; ag-kit sürümünün 'İlgili skiller' ve iş akışı bölümleri olmadan aynı içerik. | html, css | ✅ | 87 A | S 1KB | claude:ayni | calesthio/OpenMontage |
 
 ### 02-tasarim-sistemi-marka
 
@@ -75,8 +72,11 @@ _Design token, tema, marka kimliği, banner/logo_ · not: `notlar/a-tasarim-onyu
 | `brand` | ⭐ | Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, market… | api-anahtari, css, node, tailwind | ✅ | 95 A | S 106KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
 | `brand-guidelines` | ⭐ | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use… | python | ✅ | 88 A | S 13KB | - | anthropics/skills |
 | `brand-guidelines@composiohq` | alt | Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use… | python | ✅ | 88 A | S 13KB | - | ComposioHQ/awesome-claude-skills |
+| `design` | ⭐ birincil | claudekit birleşik tasarım skilli: marka kimliği, token, UI stili, AI ile logo üretimi (55 stil; Gemini, Atlas Cloud veya MuAPI), 50 teslima… | python, html, css, gemini, api-anahtari | 🟡 | 77 B | M 284KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
+| `design-spec` | ⭐ tamamlayıcı | DESIGN.md dosyası yazma rehberi: makinece okunur tasarım token'ları (YAML ön bilgi: renk, tipografi, boşluk, köşe, bileşen) ile insan okunur… | markdown, yaml | ✅ | 85 A | S 21KB | - | vudovn/ag-kit |
 | `design-system` | ⭐ | Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacin… | api-anahtari, canvas, css, html, node | ✅ | 95 A | S 178KB | - | nextlevelbuilder/ui-ux-pro-max-skill |
 | `tailwind-design-system` | ⭐ | Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component… | api-anahtari, css, react, tailwind, typescript | ✅ | 90 A | M 22KB | claude:ayni | calesthio/OpenMontage |
+| `tailwind-patterns` | ⭐ tamamlayıcı | Tailwind CSS v4 ilkeleri: CSS-öncelikli @theme yapılandırması, kapsayıcı sorguları, OKLCH renk token mimarisi, karanlık mod, tipografi ölçeğ… | tailwind, css | ✅ | 77 B | S 7KB | - | vudovn/ag-kit |
 | `theme-factory` | ⭐ | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set t… | html | ✅ | 88 A | S 141KB | - | anthropics/skills |
 | `theme-factory@composiohq` | alt | Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set t… | html | ✅ | 88 A | S 141KB | - | ComposioHQ/awesome-claude-skills |
 

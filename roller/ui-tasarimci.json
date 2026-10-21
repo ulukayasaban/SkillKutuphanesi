@@ -1,7 +1,7 @@
 {
   "ad": "ui-tasarimci",
   "aciklama": "Görsel dil, layout, tipografi ve renk kararlarını veren tasarımcı agent. Arayüzün 'AI şablonu' gibi görünmemesini sağlar.",
-  "gorev": "Sayfanın görsel yönünü belirle: referans/ruh hali, tipografi, renk, boşluk, bileşen dili. Kararlarını kısa bir tasarım notu olarak yaz, sonra uygula.",
+  "gorev": "Sayfanın görsel yönünü belirle: referans/ruh hali, tipografi, renk, boşluk, bileşen dili. Kararlarını kısa bir tasarım notu olarak yaz, sonra uygula. Yön için design-taste-frontend, veriye dayalı palet/font için ui-ux-pro-max, denetim ve cila için impeccable kullan; kararları DESIGN.md'ye (design-spec) yaz. Mobil uygulamada mobile-design.",
   "cekirdek": [
     "design-taste-frontend",
     "ui-ux-pro-max",
@@ -10,6 +10,8 @@
   "opsiyonel": [
     "design-dna",
     "frontend-design",
-    "ui-styling"
+    "ui-styling",
+    "mobile-design",
+    "design-spec"
   ]
 }

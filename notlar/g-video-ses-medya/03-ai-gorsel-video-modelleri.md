@@ -44,7 +44,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★70579, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** heygen-video → tamamlayıcı · **Roller:** ai-medya-uretici, video-produksiyon · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** heygen-video → tamamlayıcı · **Roller:** ai-medya-uretici, video-kompozisyon · **Globalde:** claude:ayni
 - **Boyut:** 177 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmi ve iyi bölümlenmiş referanslar.
 

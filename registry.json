@@ -3,83 +3,6 @@
   "guncelleme": "2026-10-21",
   "skiller": [
     {
-      "id": "design",
-      "ad": "design",
-      "durum": "tercih",
-      "kategori": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
-      "alan": "a-tasarim-onyuz",
-      "yol": "arsiv/a-tasarim-onyuz/01-ui-ux-tasarim-dili/design",
-      "varyantlar": {},
-      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
-      "kaynak_yol": ".claude/skills/design",
-      "commit": "56ea9cf174ed86786187daa9de0e6247cb0747e4",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 1,
-      "atlanan_dosyalar": [],
-      "aciklama": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pi",
-      "teknoloji_oto": [
-        "api-anahtari",
-        "css",
-        "html",
-        "playwright",
-        "python",
-        "tailwind"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "uyarlanabilir",
-        "not": "Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)"
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "orta",
-      "boyut_kb": 284,
-      "skill_md_kb": 13.9,
-      "klasor_adi": "design",
-      "skill_md_hash": "0dda90057cd5aa19b127c51ac1227fbf8a1465c2",
-      "ana_hash": "e950272a0845a68288ab46a3c633f26d62a3ebcb0552fa1830c8095b8eac873d",
-      "varyant_hash": {},
-      "klasor_hash": "47818ecc7a79848445c497eb136c9042b95dc9ca2dd60a72c14952bba822e8ce",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "nextlevelbuilder",
-        "sahip_tipi": "kurum",
-        "sahip_url": "https://github.com/nextlevelbuilder",
-        "resmi_kaynak": false,
-        "yildiz": 138431,
-        "fork": 14670,
-        "acik_issue": 91,
-        "son_guncelleme": "2026-10-21",
-        "olusturulma": "2025-11-30",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
-        "ana_sayfa": "https://www.uupm.cc/",
-        "katkici": 100
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 88,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (0 gün önce)",
-          "topluluk 20/20 (★138431)",
-          "lisans 15/15 (MIT)",
-          "kaynak 5/10 (kurum)",
-          "Codex uyumu 10/15",
-          "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
       "id": "design-dna",
       "ad": "design-dna",
       "durum": "tercih",
@@ -146,9 +69,37 @@
         "ana_sayfa": "",
         "katkici": 3
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Tasarım DNA'sını üç boyutta çıkarır, tanımlar ve uygular: tasarım sistemi (token), tasarım stili (nitel his) ve görsel efektler (Canvas, WebGL, 3D, parçacık, shader, scroll efektleri). Referans görsel/URL'leri yapılandırılmış JSON profile çevirir ve bu profilden yeni tasarım üretir; renk ölçümü için betik içerir.",
+      "kullanim_alani": "Referans sitelerin/ekran görüntülerinin stilini analiz edip yeniden kullanılabilir profile çevirmek; stil aktarımı.",
+      "kullanma": "Referans yoksa sıfırdan yön belirleme (design-taste-frontend); tek bir DESIGN.md yazımı (design-spec).",
+      "teknoloji": [
+        "html",
+        "css",
+        "node",
+        "webgl"
+      ],
+      "gerekli_paketler": [
+        "node (renk betiği)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas",
+        "3d-urun-sergisi"
+      ],
+      "roller": [
+        "ui-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Üç boyutlu şema ve fazlar net; efekt boyutu diğer skillerde yok. Çok dilli README'ler boyutu şişiriyor (709 KB).",
+      "ortusme_grubu": "tasarim-referans-analizi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (54 gün önce)",
@@ -157,81 +108,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "design-spec",
-      "ad": "design-spec",
-      "durum": "tercih",
-      "kategori": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
-      "alan": "a-tasarim-onyuz",
-      "yol": "arsiv/a-tasarim-onyuz/01-ui-ux-tasarim-dili/design-spec",
-      "varyantlar": {},
-      "repo": "vudovn/ag-kit",
-      "kaynak_yol": ".agents/skills/design-spec",
-      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "How to author a DESIGN.md file — the machine-readable design-token + human-rationale format that must exist before any UI is built. YAML front-matter token schema (colors, typography, spacing, rounded, components), type system, token references, and canonical section order.",
-      "teknoloji_oto": [
-        "api-anahtari",
-        "node",
-        "tailwind"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 21,
-      "skill_md_kb": 7.2,
-      "klasor_adi": "design-spec",
-      "skill_md_hash": "483f7f5fc3f3ddd041a3a4ca96aa01e39fe9a894",
-      "ana_hash": "4c87a08a3f476d4ffb05d4aa0f40f2219fa8406f37d168e0afda0ef450f2faa5",
-      "varyant_hash": {},
-      "klasor_hash": "166411bdfa472a2cd35c06e4c6f176c76d3fcb996204a7595a3cd92bc81774b5",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "vudovn",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/vudovn",
-        "resmi_kaynak": false,
-        "yildiz": 8200,
-        "fork": 1508,
-        "acik_issue": 59,
-        "son_guncelleme": "2026-10-18",
-        "olusturulma": "2026-01-14",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "",
-        "ana_sayfa": "https://ag-kit.unikorn.vn",
-        "katkici": 10
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 89,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "topluluk 16/20 (★8200)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -300,9 +178,39 @@
         "ana_sayfa": "https://tasteskill.dev",
         "katkici": 21
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "tasteskill v2: 247 seçkin galeri sitesinden damıtılmış 'anti-slop' sanat yönetimi. Betik araştırılmış 20 yönden üçünü dağıtır, seçilen yöne göre tip sistemi, palet, hero ve bölüm kompozisyonlarını verir; katı ev kuralları, gerçek tarayıcı denetçisi (inspect.mjs) ve ekran görüntüsü üzerinden bak-düzelt döngüsü uygular. Uygulama ekranları (dashboard, ayarlar, gelen kutusu) için ayrı kurallar içerir.",
+      "kullanim_alani": "Landing page, pazarlama sitesi, portfolyo, ürün sayfası veya uygulama ekranı tasarlanır/yeniden tasarlanırken; sayfa 'şablon / AI yapımı' görünüyorsa.",
+      "kullanma": "Mobil uygulama (mobile-design); var olan tasarım sistemine sıkı bağlı küçük bileşen işleri; Node 22 ve Chrome/Chromium yoksa betikler çalışmaz (yalnız lint.mjs).",
+      "teknoloji": [
+        "html",
+        "css",
+        "node",
+        "chromium"
+      ],
+      "gerekli_paketler": [
+        "node>=22",
+        "Chrome/Edge/Chromium"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas",
+        "scroll-hikaye-sitesi",
+        "3d-urun-sergisi"
+      ],
+      "roller": [
+        "ui-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Kararları betikle dağıtıp doğrulamayı gerçek tarayıcıyla yapması 'ortalama sayfa' sorununa en güçlü çözüm; hiçbir şey kurmaz, API anahtarı istemez, eval seti var. Bağlam yükü yüksek (37 KB SKILL.md).",
+      "ortusme_grubu": "web-gorsel-yon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
+        "puan": 93,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -311,7 +219,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -373,9 +282,33 @@
         "ana_sayfa": "https://code.claude.com/docs/en/overview",
         "katkici": 59
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Anthropic'in kısa tasarım ilkeleri skilli: tasarım stüdyosu yöneticisi gibi konuya özgü, şablon gibi görünmeyen palet/tipografi/düzen kararları al; konuyu belirle, planla, brief'e göre gözden geçir, uygula ve eleştir; ölçülü ol.",
+      "kullanim_alani": "Herhangi bir yeni UI veya yeniden tasarım işinde hafif, her zaman açık tutulabilecek estetik ilke seti olarak.",
+      "kullanma": "Ayrıntılı yön/kontrol listesi gereken işlerde tek başına (design-taste-frontend veya impeccable daha kapsamlı).",
+      "teknoloji": [
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "ui-tasarimci",
+        "frontend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kısa (9 KB) ve bağlam dostu. anthropics/skills kopyasıyla SKILL.md birebir aynı; bu kopyada SKILL.md'nin andığı LICENSE.txt yok (lisans metni alternatif kopyada). Rol adları id ile eşleştiği için tercih bu kopyada bırakıldı.",
+      "ortusme_grubu": "web-gorsel-yon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -384,7 +317,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -446,9 +380,30 @@
         "ana_sayfa": "",
         "katkici": 16
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "frontend-design'ın anthropics/skills kopyası: içerik claude-code eklentisindekiyle birebir aynı, ayrıca LICENSE.txt içerir.",
+      "kullanim_alani": "Lisans metninin skill içinde bulunması gerektiğinde tercih sürümü yerine.",
+      "kullanma": "Normalde (tercih sürümü aynı içeriği taşır).",
+      "teknoloji": [
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. İçerik tercih sürümüyle aynı; tek fark LICENSE.txt.",
+      "ortusme_grubu": "web-gorsel-yon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (12 gün önce)",
@@ -457,7 +412,8 @@
           "kaynak 10/10 (resmî)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -532,10 +488,37 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "ag-kit'in 'anti-slop' web UI skilli: brief çıkarımı, üç kadranlı (varyans/hareket/yoğunluk) yapılandırma, gerçek tasarım sistemi eşlemesi, tipografi/renk/düzen yanlılık düzeltmeleri, minimalist ve brutalist stil dosyaları, yeniden tasarım denetimi ve UX/erişilebilirlik betikleri. taste-skill v1 kurallarından uyarlanmış.",
+      "kullanim_alani": "ag-kit iş akışı kullanan projelerde veya kadran tabanlı yapılandırma istendiğinde.",
+      "kullanma": "Genel kullanımda (design-taste-frontend v2 daha güncel ve hafif); mobil uygulama.",
+      "teknoloji": [
+        "html",
+        "css",
+        "react",
+        "next.js",
+        "tailwind",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (denetim betikleri)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kapsamlı ama 86 KB SKILL.md ile bağlam yükü çok yüksek; taste-skill v1 türevi, kaynağı v2'ye geçti. Kendi yoluna sabit referans içeriyor (yol bağımlılığı).",
+      "ortusme_grubu": "web-gorsel-yon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 84,
-        "not": "A",
+        "puan": 74,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
           "topluluk 16/20 (★8200)",
@@ -543,7 +526,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -612,9 +596,37 @@
         "ana_sayfa": "https://impeccable.style",
         "katkici": 57
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ön yüz arayüzlerini tasarlama, yeniden tasarlama, eleştirme, denetleme, cilalama ve sağlamlaştırma için komut tabanlı tasarım direktörü: shape, audit/critique, animate, bolder/quieter, colorize, typeset, harden, polish, document/extract gibi alt komutlar. PRODUCT.md/DESIGN.md bağlamını yükleyen bir başlatıcı ve canlı tarayıcı DOM denetimi içerir; iOS/Android ekranlarını da kapsar.",
+      "kullanim_alani": "Var olan arayüzü denetleme/iyileştirme, UX eleştirisi, erişilebilirlik ve responsive sağlamlaştırma; yeni yüzeyde tasarım yönü belirleme.",
+      "kullanma": "Backend veya UI dışı işler; tek seferlik küçük stil düzeltmesi (fazla ağır).",
+      "teknoloji": [
+        "html",
+        "css",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "impeccable başlatıcısı (ilk çalıştırmada GitHub releases'ten indirilir)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas",
+        "scroll-hikaye-sitesi"
+      ],
+      "roller": [
+        "ui-tasarimci",
+        "qa-erisilebilirlik"
+      ],
+      "zorluk": "orta",
+      "kalite": 5,
+      "kalite_notu": "Karar: TUT. Kapsamlı ve olgun (v4.7), Claude/Codex için ayrı sürümler. Dikkat: başlatıcı ilk çalıştırmada GitHub releases'ten ikili dosya indirip çalıştırıyor; .sha256 doğrulaması yapıyor ve doğrulanamazsa reddediyor. IMPECCABLE_DOWNLOAD_BASE ile kaynak değiştirilebilir.",
+      "ortusme_grubu": "ui-denetim-iyilestirme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 91,
+        "puan": 95,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -623,7 +635,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
         ]
       }
     },
@@ -687,9 +700,33 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "iOS ve Android uygulamaları için mobil öncelikli tasarım düşüncesi: dokunma etkileşimi, başparmak bölgesi, platform gelenekleri, performans ilkeleri (React Native, Flutter), yasaklı AI mobil kalıpları listesi ve bir mobil UX denetim betiği. Sabit değerler değil ilke öğretir; platform belirtilmediyse sormayı zorunlu tutar.",
+      "kullanim_alani": "React Native, Flutter veya native mobil uygulama ekranı tasarlanırken.",
+      "kullanma": "Web uygulamaları ve responsive web (frontend skilleri).",
+      "teknoloji": [
+        "react-native",
+        "flutter",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "python3 (denetim betiği)"
+      ],
+      "proje_tipleri": [
+        "mobil-uygulama"
+      ],
+      "roller": [
+        "ui-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kategoride mobile özgü tek skill; referans dosyaları kapsamlı. 'Önce oku' zorunlulukları bağlamı hızla dolduruyor.",
+      "ortusme_grubu": "mobil-ui-tasarimi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 87,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
@@ -698,7 +735,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -769,10 +807,36 @@
         "ana_sayfa": "",
         "katkici": 1
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "2024-2025 web tasarım trendleri ve kalıpları özeti: performans öncelikli tasarım, cesur minimalizm, mikro etkileşim, scrollytelling, imleç UX'i, glassmorphism; hero, yatay kaydırma galerisi, 3D ürün görüntüleyici gibi kalıplar ve erişilebilirlik/performans kontrol listeleri.",
+      "kullanim_alani": "Trend taraması veya fikir listesi gerektiğinde referans olarak.",
+      "kullanma": "Gerçek tasarım kararı/uygulaması için (genel ve tarihli; 'AI ortalaması' sayfaya iter).",
+      "teknoloji": [
+        "html",
+        "css",
+        "gsap",
+        "three.js",
+        "react"
+      ],
+      "gerekli_paketler": [
+        "python3 (yardımcı betikler)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Yüzeysel trend listesi, tarihli (2024-2025) ve diğer skillerin özeti; anti-slop skillerinin kaçındığı varsayılanları öneriyor. Bakımı eski (2025-11).",
+      "ortusme_grubu": "web-gorsel-yon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 65,
-        "not": "B",
+        "puan": 55,
+        "not": "C",
         "ayrinti": [
           "bakım 10/25 (335 gün önce)",
           "topluluk 12/20 (★1107)",
@@ -780,83 +844,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
-        ]
-      }
-    },
-    {
-      "id": "tailwind-patterns",
-      "ad": "tailwind-patterns",
-      "durum": "tercih",
-      "kategori": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
-      "alan": "a-tasarim-onyuz",
-      "yol": "arsiv/a-tasarim-onyuz/01-ui-ux-tasarim-dili/tailwind-patterns",
-      "varyantlar": {},
-      "repo": "vudovn/ag-kit",
-      "kaynak_yol": ".agents/skills/tailwind-patterns",
-      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
-      "lisans": "MIT",
-      "tip": "T1",
-      "gizli": false,
-      "arsiv_tarihi": "2026-10-21",
-      "ust_skill": null,
-      "bagimlilik": null,
-      "kopya_kaynaklar": [],
-      "ayna_sayisi": 0,
-      "atlanan_dosyalar": [],
-      "aciklama": "Tailwind CSS v4 principles. CSS-first configuration, container queries, modern patterns, design token architecture.",
-      "teknoloji_oto": [
-        "api-anahtari",
-        "css",
-        "react",
-        "tailwind",
-        "vue"
-      ],
-      "uyum": {
-        "claude": "tam",
-        "codex": "tam",
-        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
-      },
-      "yapisal_sorunlar": [],
-      "yol_bagimliligi": false,
-      "kirik_baglantilar": [],
-      "baglam_yuku": "kucuk",
-      "boyut_kb": 7,
-      "skill_md_kb": 6.8,
-      "klasor_adi": "tailwind-patterns",
-      "skill_md_hash": "1ebaf42d9693053135dd308fe5fb105d3698952b",
-      "ana_hash": "42c516aacdb6a00e7e4dee227553a6660c466c66970f90ca0a1d988c17755526",
-      "varyant_hash": {},
-      "klasor_hash": "5f8731bac6d28ca5a750b0b3d6cddf27217273c9fbe389b5a97534bddb6ed1aa",
-      "globalde": {},
-      "gelistirici": {
-        "sahip": "vudovn",
-        "sahip_tipi": "kisi",
-        "sahip_url": "https://github.com/vudovn",
-        "resmi_kaynak": false,
-        "yildiz": 8200,
-        "fork": 1508,
-        "acik_issue": 59,
-        "son_guncelleme": "2026-10-18",
-        "olusturulma": "2026-01-14",
-        "lisans": "MIT",
-        "arsivlenmis": false,
-        "aciklama": "",
-        "ana_sayfa": "https://ag-kit.unikorn.vn",
-        "katkici": 10
-      },
-      "inceleme": "otomatik",
-      "degerlendirme": {
-        "puan": 89,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "topluluk 16/20 (★8200)",
-          "lisans 15/15 (MIT)",
-          "kaynak 3/10 (kisi)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       }
     },
@@ -926,9 +915,40 @@
         "ana_sayfa": "https://www.uupm.cc/",
         "katkici": 100
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "shadcn/ui (Radix + Tailwind) bileşenleri, Tailwind yardımcı sınıf stili ve canvas tabanlı görsel tasarımla erişilebilir arayüz kurma: tema/karanlık mod, responsive düzen, erişilebilir bileşen kalıpları ve shadcn ekleme / Tailwind yapılandırma betikleri; poster için OFL lisanslı font paketi.",
+      "kullanim_alani": "React tabanlı projede shadcn/ui + Tailwind ile bileşen ve tema kurarken.",
+      "kullanma": "shadcn kullanılmayan yığınlar; estetik yön belirleme (bu skill uygulama katmanıdır).",
+      "teknoloji": [
+        "react",
+        "tailwind",
+        "shadcn-ui",
+        "radix",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "shadcn (npx)",
+        "tailwindcss",
+        "python3"
+      ],
+      "proje_tipleri": [
+        "dashboard-saas",
+        "kurumsal-site",
+        "landing-page"
+      ],
+      "roller": [
+        "ui-tasarimci",
+        "frontend-muhendis"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Pratik ve kod odaklı; canvas fontları lisanslarıyla birlikte paketlenmiş (5.6 MB). design skillinin kardeş alt skilli.",
+      "ortusme_grubu": "shadcn-tailwind-uygulama",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 93,
+        "puan": 88,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -937,7 +957,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1008,9 +1029,36 @@
         "ana_sayfa": "https://www.uupm.cc/",
         "katkici": 100
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Yerel aranabilir UI/UX veri tabanı: 79 stil, 192 ürün paleti ve gerekçe profili, 74 font eşleşmesi, 119 UX kuralı, ikonlar, GSAP ön ayarları, grafik türleri ve 22 teknoloji yığını. Python betiğiyle ürün/sektöre göre tasarım sistemi üretir, isteğe bağlı MASTER + sayfa bazlı geçersiz kılma dosyalarına kaydeder.",
+      "kullanim_alani": "Yeni sayfa/proje için palet, font ve stil kararlarını veriye dayandırmak; UX kural kontrol listesi gerektiğinde.",
+      "kullanma": "Sanat yönetimi gerektiren özgün sayfalarda tek başına (veri tabanı ortalama sonuçlar verir; design-taste-frontend ile birlikte kullan); Python yoksa.",
+      "teknoloji": [
+        "python",
+        "html",
+        "css",
+        "tailwind"
+      ],
+      "gerekli_paketler": [
+        "python3"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "ui-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Zengin, bağımlılıksız veri ve kural seti; veri kökeni ve font lisansları belgelenmiş. Dikkat: betik yolu `${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/...` biçiminde; projeye kurulduğunda CLAUDE_PLUGIN_ROOT boş kalır ve yol bozulur (skill-ekle bu kalıbı düzeltmiyor). Ajan betiği skill klasöründen çağırmalı.",
+      "ortusme_grubu": "web-gorsel-yon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 88,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (0 gün önce)",
@@ -1019,7 +1067,8 @@
           "kaynak 5/10 (kurum)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1080,7 +1129,33 @@
         "ana_sayfa": "https://ag-kit.unikorn.vn",
         "katkici": 10
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "UI kodunu Vercel'in Web Interface Guidelines kurallarına göre denetler: kuralları her çalıştırmada GitHub'dan (vercel-labs/web-interface-guidelines) çeker, belirtilen dosyaları okuyup bulguları kısa 'dosya:satır' biçiminde raporlar.",
+      "kullanim_alani": "'UI'ımı incele', 'erişilebilirliği kontrol et', 'tasarımı denetle' isteklerinde hızlı kural denetimi.",
+      "kullanma": "Ağ erişimi yoksa; görsel/estetik eleştiri (impeccable critique) gerektiğinde.",
+      "teknoloji": [
+        "html",
+        "css",
+        "react"
+      ],
+      "gerekli_paketler": [
+        "WebFetch / ağ erişimi"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "qa-erisilebilirlik"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Çok kısa ve etkili. Dikkat: talimatların asıl gövdesi çalışma anında uzak bir URL'den çekiliyor (sürüm sabitlenmemiş); kaynak güvenilir (vercel-labs) ama içerik değişebilir.",
+      "ortusme_grubu": "ui-denetim-iyilestirme",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "kardes_bagimliliklari": {
         "frontend-design": {
           "id": "frontend-design@vudovn",
@@ -1088,7 +1163,7 @@
         }
       },
       "degerlendirme": {
-        "puan": 89,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
@@ -1097,7 +1172,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1158,9 +1234,32 @@
         "ana_sayfa": "https://www.openmontage.video/",
         "katkici": 69
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "web-design-guidelines'ın OpenMontage kopyası; ag-kit sürümünün 'İlgili skiller' ve iş akışı bölümleri olmadan aynı içerik.",
+      "kullanim_alani": "Globalde kurulu sürümle birebir aynı içerik gerektiğinde.",
+      "kullanma": "Normalde (tercih sürümü aynı işi yapar).",
+      "teknoloji": [
+        "html",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "WebFetch / ağ erişimi"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Tercih sürümüyle aynı denetim; ek bölümler yok. Globaldeki kopyayla aynı.",
+      "ortusme_grubu": "ui-denetim-iyilestirme",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
       "degerlendirme": {
-        "puan": 92,
+        "puan": 87,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (5 gün önce)",
@@ -1169,7 +1268,8 @@
           "kaynak 3/10 (kisi)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       }
     },
@@ -1467,6 +1567,217 @@
       }
     },
     {
+      "id": "design",
+      "ad": "design",
+      "durum": "tercih",
+      "kategori": "a-tasarim-onyuz/02-tasarim-sistemi-marka",
+      "alan": "a-tasarim-onyuz",
+      "yol": "arsiv/a-tasarim-onyuz/02-tasarim-sistemi-marka/design",
+      "varyantlar": {},
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "kaynak_yol": ".claude/skills/design",
+      "commit": "56ea9cf174ed86786187daa9de0e6247cb0747e4",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 1,
+      "atlanan_dosyalar": [],
+      "aciklama": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini, Atlas Cloud, or MuAPI AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pi",
+      "teknoloji_oto": [
+        "api-anahtari",
+        "css",
+        "html",
+        "playwright",
+        "python",
+        "tailwind"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "uyarlanabilir",
+        "not": "Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)"
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "orta",
+      "boyut_kb": 284,
+      "skill_md_kb": 13.9,
+      "klasor_adi": "design",
+      "skill_md_hash": "0dda90057cd5aa19b127c51ac1227fbf8a1465c2",
+      "ana_hash": "e950272a0845a68288ab46a3c633f26d62a3ebcb0552fa1830c8095b8eac873d",
+      "varyant_hash": {},
+      "klasor_hash": "47818ecc7a79848445c497eb136c9042b95dc9ca2dd60a72c14952bba822e8ce",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "nextlevelbuilder",
+        "sahip_tipi": "kurum",
+        "sahip_url": "https://github.com/nextlevelbuilder",
+        "resmi_kaynak": false,
+        "yildiz": 138431,
+        "fork": 14670,
+        "acik_issue": 91,
+        "son_guncelleme": "2026-10-21",
+        "olusturulma": "2025-11-30",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
+        "ana_sayfa": "https://www.uupm.cc/",
+        "katkici": 100
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "claudekit birleşik tasarım skilli: marka kimliği, token, UI stili, AI ile logo üretimi (55 stil; Gemini, Atlas Cloud veya MuAPI), 50 teslimatlı kurumsal kimlik (CIP) maketleri, HTML sunumlar, banner (22 stil), SVG ikon ve sosyal medya görselleri. brand, design-system ve ui-styling kardeş alt skillerine yönlendirir.",
+      "kullanim_alani": "Logo, kurumsal kimlik seti, banner, ikon veya sosyal medya görseli üretimi; marka paketi çıkarma.",
+      "kullanma": "Web sayfası tasarımı (01 kategorisindeki skiller); API anahtarı olmadan AI logo/ikon üretimi.",
+      "teknoloji": [
+        "python",
+        "html",
+        "css",
+        "gemini",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "python3",
+        "google-genai",
+        "pillow",
+        "GEMINI_API_KEY veya MUAPI_API_KEY"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "tasarim-sistemi"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Geniş kapsamlı 'her şey' skilli; marka/banner/logo işleri için 02 kategorisine taşındı. Kardeş skiller (brand, design-system, ui-styling) olmadan eksik çalışır; AI üretimi için ücretli API anahtarı ve pip kurulumu gerekir.",
+      "ortusme_grubu": "marka-gorsel-varlik",
+      "ortusme_rolu": "birincil",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 77,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (0 gün önce)",
+          "topluluk 20/20 (★138431)",
+          "lisans 15/15 (MIT)",
+          "kaynak 5/10 (kurum)",
+          "Codex uyumu 10/15",
+          "bağlam yükü 8/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
+      "id": "design-spec",
+      "ad": "design-spec",
+      "durum": "tercih",
+      "kategori": "a-tasarim-onyuz/02-tasarim-sistemi-marka",
+      "alan": "a-tasarim-onyuz",
+      "yol": "arsiv/a-tasarim-onyuz/02-tasarim-sistemi-marka/design-spec",
+      "varyantlar": {},
+      "repo": "vudovn/ag-kit",
+      "kaynak_yol": ".agents/skills/design-spec",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "How to author a DESIGN.md file — the machine-readable design-token + human-rationale format that must exist before any UI is built. YAML front-matter token schema (colors, typography, spacing, rounded, components), type system, token references, and canonical section order.",
+      "teknoloji_oto": [
+        "api-anahtari",
+        "node",
+        "tailwind"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 21,
+      "skill_md_kb": 7.2,
+      "klasor_adi": "design-spec",
+      "skill_md_hash": "483f7f5fc3f3ddd041a3a4ca96aa01e39fe9a894",
+      "ana_hash": "4c87a08a3f476d4ffb05d4aa0f40f2219fa8406f37d168e0afda0ef450f2faa5",
+      "varyant_hash": {},
+      "klasor_hash": "166411bdfa472a2cd35c06e4c6f176c76d3fcb996204a7595a3cd92bc81774b5",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "vudovn",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/vudovn",
+        "resmi_kaynak": false,
+        "yildiz": 8200,
+        "fork": 1508,
+        "acik_issue": 59,
+        "son_guncelleme": "2026-10-18",
+        "olusturulma": "2026-01-14",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "",
+        "ana_sayfa": "https://ag-kit.unikorn.vn",
+        "katkici": 10
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "DESIGN.md dosyası yazma rehberi: makinece okunur tasarım token'ları (YAML ön bilgi: renk, tipografi, boşluk, köşe, bileşen) ile insan okunur gerekçenin tek gerçek kaynakta birleştiği format; kanonik bölüm sırası, token adlandırma önerileri ve 70+ gerçek DESIGN.md örneği (collection.md). Google Labs DESIGN.md spesifikasyonundan uyarlanmış.",
+      "kullanim_alani": "UI koduna başlamadan önce projenin DESIGN.md'sini oluştururken veya güncellerken.",
+      "kullanma": "Görsel yön henüz belirsizken (önce design-taste-frontend / design-dna); tek bileşenlik işler.",
+      "teknoloji": [
+        "markdown",
+        "yaml"
+      ],
+      "gerekli_paketler": [
+        "@google/design.md (npx, isteğe bağlı linter)"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "ui-tasarimci",
+        "tasarim-sistemi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Net şema ve gerçek örnek kütüphanesi; impeccable ve design-dna çıktılarıyla uyumlu. Konu itibarıyla tasarım sistemi kategorisine taşındı.",
+      "ortusme_grubu": "tasarim-referans-analizi",
+      "ortusme_rolu": "tamamlayıcı",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 85,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (3 gün önce)",
+          "topluluk 16/20 (★8200)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
+        ]
+      }
+    },
+    {
       "id": "design-system",
       "ad": "design-system",
       "durum": "tercih",
@@ -1619,6 +1930,109 @@
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
           "yapı 5/5"
+        ]
+      }
+    },
+    {
+      "id": "tailwind-patterns",
+      "ad": "tailwind-patterns",
+      "durum": "tercih",
+      "kategori": "a-tasarim-onyuz/02-tasarim-sistemi-marka",
+      "alan": "a-tasarim-onyuz",
+      "yol": "arsiv/a-tasarim-onyuz/02-tasarim-sistemi-marka/tailwind-patterns",
+      "varyantlar": {},
+      "repo": "vudovn/ag-kit",
+      "kaynak_yol": ".agents/skills/tailwind-patterns",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "lisans": "MIT",
+      "tip": "T1",
+      "gizli": false,
+      "arsiv_tarihi": "2026-10-21",
+      "ust_skill": null,
+      "bagimlilik": null,
+      "kopya_kaynaklar": [],
+      "ayna_sayisi": 0,
+      "atlanan_dosyalar": [],
+      "aciklama": "Tailwind CSS v4 principles. CSS-first configuration, container queries, modern patterns, design token architecture.",
+      "teknoloji_oto": [
+        "api-anahtari",
+        "css",
+        "react",
+        "tailwind",
+        "vue"
+      ],
+      "uyum": {
+        "claude": "tam",
+        "codex": "tam",
+        "not": "Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)"
+      },
+      "yapisal_sorunlar": [],
+      "yol_bagimliligi": false,
+      "kirik_baglantilar": [],
+      "baglam_yuku": "kucuk",
+      "boyut_kb": 7,
+      "skill_md_kb": 6.8,
+      "klasor_adi": "tailwind-patterns",
+      "skill_md_hash": "1ebaf42d9693053135dd308fe5fb105d3698952b",
+      "ana_hash": "42c516aacdb6a00e7e4dee227553a6660c466c66970f90ca0a1d988c17755526",
+      "varyant_hash": {},
+      "klasor_hash": "5f8731bac6d28ca5a750b0b3d6cddf27217273c9fbe389b5a97534bddb6ed1aa",
+      "globalde": {},
+      "gelistirici": {
+        "sahip": "vudovn",
+        "sahip_tipi": "kisi",
+        "sahip_url": "https://github.com/vudovn",
+        "resmi_kaynak": false,
+        "yildiz": 8200,
+        "fork": 1508,
+        "acik_issue": 59,
+        "son_guncelleme": "2026-10-18",
+        "olusturulma": "2026-01-14",
+        "lisans": "MIT",
+        "arsivlenmis": false,
+        "aciklama": "",
+        "ana_sayfa": "https://ag-kit.unikorn.vn",
+        "katkici": 10
+      },
+      "inceleme": "incelendi",
+      "ozet_tr": "Tailwind CSS v4 ilkeleri: CSS-öncelikli @theme yapılandırması, kapsayıcı sorguları, OKLCH renk token mimarisi, karanlık mod, tipografi ölçeği, bileşen çıkarma ve anti-kalıplar.",
+      "kullanim_alani": "Tailwind v4 projesinde token mimarisi ve modern CSS kalıpları kurulurken.",
+      "kullanma": "Tailwind v3 projeleri (yapılandırma farklı); Tailwind kullanılmayan projeler.",
+      "teknoloji": [
+        "tailwind",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "tailwindcss>=4"
+      ],
+      "proje_tipleri": [
+        "landing-page",
+        "kurumsal-site",
+        "dashboard-saas"
+      ],
+      "roller": [
+        "frontend-muhendis"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT. Kısa ilke özeti, v3→v4 farkları faydalı; kod örneği derinliği sınırlı. Konu itibarıyla tasarım sistemi kategorisine taşındı (tailwind-design-system ile birlikte değerlendirilmeli).",
+      "ortusme_grubu": "shadcn-tailwind-uygulama",
+      "ortusme_rolu": "tamamlayıcı",
+      "kategori_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-10-21",
+      "degerlendirme": {
+        "puan": 77,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (3 gün önce)",
+          "topluluk 16/20 (★8200)",
+          "lisans 15/15 (MIT)",
+          "kaynak 3/10 (kisi)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       }
     },
@@ -83938,7 +84352,7 @@
         "urun-tanitim-videosu"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "kolay",
       "kalite": 4,
@@ -84150,7 +84564,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon",
+        "video-kompozisyon",
         "ai-medya-uretici"
       ],
       "zorluk": "kolay",
@@ -84265,7 +84679,7 @@
         "egitim-explainer"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -84380,7 +84794,7 @@
         "ai-video-uretimi"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -84499,7 +84913,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "kolay",
       "kalite": 4,
@@ -84609,7 +85023,7 @@
         "marka-sunum"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -84727,7 +85141,7 @@
         "marka-sunum"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -84846,7 +85260,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -84963,7 +85377,7 @@
       ],
       "roller": [
         "motion-graphics-sanatcisi",
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -85194,7 +85608,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon",
+        "video-kurgu-render",
         "ses-tasarimci"
       ],
       "zorluk": "orta",
@@ -85316,7 +85730,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -85552,7 +85966,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -85773,7 +86187,7 @@
       ],
       "roller": [
         "motion-graphics-sanatcisi",
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -85997,7 +86411,7 @@
       ],
       "roller": [
         "motion-graphics-sanatcisi",
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -86215,7 +86629,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "kolay",
       "kalite": 4,
@@ -86431,7 +86845,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "kolay",
       "kalite": 4,
@@ -86660,7 +87074,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -86878,7 +87292,7 @@
         "ai-video-uretimi"
       ],
       "roller": [
-        "video-produksiyon",
+        "video-kompozisyon",
         "motion-graphics-sanatcisi"
       ],
       "zorluk": "ileri",
@@ -87200,7 +87614,7 @@
         "egitim-explainer"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -87310,7 +87724,7 @@
         "egitim-explainer"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -87439,7 +87853,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -87668,7 +88082,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 5,
@@ -87781,7 +88195,7 @@
         "urun-tanitim-videosu"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -88005,7 +88419,7 @@
         "egitim-explainer"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -88118,7 +88532,7 @@
         "urun-tanitim-videosu"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "orta",
       "kalite": 3,
@@ -88230,7 +88644,7 @@
         "egitim-explainer"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "ileri",
       "kalite": 4,
@@ -88338,7 +88752,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "kolay",
       "kalite": 4,
@@ -88438,7 +88852,7 @@
         "egitim-explainer"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "kolay",
       "kalite": 5,
@@ -88651,7 +89065,7 @@
         "egitim-explainer"
       ],
       "roller": [
-        "video-produksiyon",
+        "video-kurgu-render",
         "ai-medya-uretici"
       ],
       "zorluk": "kolay",
@@ -88755,7 +89169,7 @@
         "sosyal-medya-icerik"
       ],
       "roller": [
-        "video-produksiyon"
+        "video-kurgu-render"
       ],
       "zorluk": "kolay",
       "kalite": 4,
@@ -90734,7 +91148,7 @@
       ],
       "roller": [
         "ai-medya-uretici",
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 4,
@@ -92961,7 +93375,7 @@
       ],
       "roller": [
         "motion-graphics-sanatcisi",
-        "video-produksiyon"
+        "video-kompozisyon"
       ],
       "zorluk": "orta",
       "kalite": 4,

@@ -1,0 +1,14 @@
+{
+  "ad": "video-kompozisyon",
+  "aciklama": "HyperFrames ile video kompozisyonunu kuran agent: iş akışı seçimi, sahne planı ve kompozisyon HTML'i.",
+  "gorev": "Önce hyperframes yönlendiricisini oku ve girdiye göre tek iş akışını seç (general-video, product-launch-video, faceless-explainer; embedded-captions, talking-head-recut, pr-to-video, music-to-video, slideshow gibi diğerleri gerektiğinde --skill ile eklenir). Kompozisyonu hyperframes-core sözleşmesine göre kur ve projeyi video-kurgu-render agent'ına devret: o lint/validate/inspect, ses miksi ve render'ı yapar, bulduğu kompozisyon hatalarını sana geri gönderir; düzeltip yeniden devret. Remotion sadece kullanıcı isterse. Kütüphaneden kurulan skillerin üzerine yazılmaması için HYPERFRAMES_SKIP_SKILLS=1 ayarla ('skills update' adımı atlanır); 'hyperframes feedback' telemetrisini gizli projelerde kullanıcıya sormadan gönderme.",
+  "cekirdek": [
+    "hyperframes",
+    "hyperframes-core",
+    "general-video"
+  ],
+  "opsiyonel": [
+    "product-launch-video",
+    "faceless-explainer"
+  ]
+}

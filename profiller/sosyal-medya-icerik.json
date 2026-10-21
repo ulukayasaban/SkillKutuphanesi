@@ -3,7 +3,8 @@
   "baslik": "Kısa sosyal medya videoları ve görselleri",
   "roller": [
     "ai-medya-uretici",
-    "video-produksiyon"
+    "video-kompozisyon",
+    "video-kurgu-render"
   ],
   "ek_skiller": []
 }
