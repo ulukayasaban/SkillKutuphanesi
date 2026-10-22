@@ -2,7 +2,7 @@
 
 _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/15**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **16/20**
 
 ### app-builder  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 
@@ -25,6 +25,16 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Durum:** tercih · **Örtüşme:** fikir-netlestirme → birincil · **Roller:** planlayici
 - **Boyut:** 76 KB (SKILL.md 13.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: zorunlu sıra (yaklaşımlar → tasarım dokümanı → onay → writing-plans) açık hâle geldi; soru sormadan önce projeyi/bağlamı okuma kuralı eklendi; spike ve 'soruları atla' istisnaları netleşti.
+
+### brainstorming@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+
+- **Ne yapar:** Transform rough ideas into fully-formed designs through structured questioning and alternative exploration. Useful early in concept work.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** alternatif
+- **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
+- **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
 ### brainstorming@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 
@@ -103,6 +113,26 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 15 KB (SKILL.md 14.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Net durma kuralı ve 'istek vs. olması gereken' ayrımı brainstorming'den farklı bir boşluğu dolduruyor; kısa ve yan etkisiz.
 
+### karpathy-guidelines  ·  multica-ai/andrej-karpathy-skills @ 2c60614  ·  puan 30 (D)
+
+- **Ne yapar:** Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans belirtilmemiş)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### math-olympiad  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 28 (D)
+
+- **Ne yapar:** Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification that catches the errors self-verification misses. Activates when asked to 'solve this IMO problem', 'prove this olympiad inequality', 'verify this competition proof', 'find a counterexample', 'is this proof correct', or for any problem with 'IMO', 'Putnam', 'USAMO', 'olympiad', or 'competition math' in it. Use
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 62 KB (SKILL.md 19.5 KB, yük orta)
+- **İnceleme:** otomatik
+
 ### plan-writing  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 
 - **Ne yapar:** ag-kit'in kısa plan yazma rehberi (obra/superpowers'tan uyarlanmış): 5-10 görevlik, her görevin doğrulaması belli, bir sayfayı geçmeyen planı proje kökünde {görev-adı}.md olarak yazdırır; proje tipine göre ag-kit doğrulama betiklerini önerir.
@@ -124,6 +154,26 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Durum:** tercih · **Örtüşme:** uygulama-plani → alternatif · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 10 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İyi yapılandırılmış ve kısa; dikey dilim ve kontrol noktası anlatımı güçlü. writing-plans'tan daha az ayrıntılı (arayüz sözleşmesi, TDD adımları yok), bu yüzden alternatif. ../../references/ bağlantıları arşivde yok (yalnız 'ayrıca bkz').
+
+### siege  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 20 (D)
+
+- **Ne yapar:** Work on one hard mathematics problem in rounds: each round a judge writes a few self-contained questions, independent workers answer them, and the judge keeps a ledger of what is proved, refuted and open, until the judge concludes or the rounds run out, and then a proof.md says plainly what is and is not proved. A run takes hours and dozens of worker runs. Usage: /math-proof:siege [NAME=value sett
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation, disallowed-tools (Codex bunları yok sayar)
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 104 KB (SKILL.md 73.7 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### solo  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 25 (D)
+
+- **Ne yapar:** Work on one hard mathematics problem in this session yourself, with no sub-agents: reason in stages, record each settled step in a notes file so that nothing written is lost if a response is cut off, and end with a self-contained proof.md. Usage: /math-proof:solo <the problem, stated in full, or the path of a file holding it>.
+- **Teknoloji:** api-anahtari _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation, disallowed-tools (Codex bunları yok sayar)
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### source-driven-development  ·  addyosmani/agent-skills @ aeac41d  ·  puan 87 (A)
 

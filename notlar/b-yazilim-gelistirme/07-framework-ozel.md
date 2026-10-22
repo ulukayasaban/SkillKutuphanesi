@@ -2,7 +2,7 @@
 
 _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/13**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/15**
 
 ### bash-linux  ·  vudovn/ag-kit @ 549ba3d  ·  puan 69 (B)
 
@@ -14,6 +14,26 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Durum:** tercih · **Örtüşme:** kabuk-komutlari → birincil
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV / opsiyonel. Doğru ama temel komut tablosu; 'sed -i' gibi macOS/GNU farkı olan komutlarda uyarı yok. Araç rehberi olarak 07-framework-ozel'e taşındı.
+
+### cardputer-buddy  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 30 (D)
+
+- **Ne yapar:** Iterate on the Cardputer-Adv MicroPython app bundle (Claude Buddy, Snake, Hello) after the device is already provisioned via m5-onboard. Use when the user wants to add a new app, push a single changed .py without re-flashing, watch device serial logs, or run a one-shot REPL command. Trigger on "add an app", "push to the cardputer", "tail the device", "run on the device", or follow-up work after /m
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### m5-onboard  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 28 (D)
+
+- **Ne yapar:** End-to-end onboarding for a freshly-plugged-in M5Stack ESP32 device (Cardputer, Cardputer-Adv, Core, CoreS3, Stick) — detect on USB, flash UIFlow 2.0 firmware, and install the Claude Buddy MicroPython app bundle. Use whenever the user plugs in or wants to flash/provision/reset an M5Stack or ESP32 board, or says "m5-onboard go".
+- **Teknoloji:** git, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 23 KB (SKILL.md 23.4 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### next-bundle-optimizer  ·  vercel/next.js @ 13ae649  ·  puan 91 (A)
 
@@ -131,7 +151,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne zaman:** Çok boolean prop'lu bileşenleri refactor ederken, yeniden kullanılabilir bileşen kütüphanesi veya esnek bileşen API'si tasarlarken. · **Ne zaman değil:** Performans optimizasyonu (vercel-react-best-practices); React dışı projeler.
 - **Teknoloji:** react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70788, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** react-kompozisyon → birincil · **Globalde:** claude:ayni
 - **Boyut:** 49 KB (SKILL.md 3.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.
@@ -143,7 +163,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne zaman:** React bileşeni veya Next.js sayfası yazarken/incelerken; veri çekme, bundle ve render performansı sorunlarında. · **Ne zaman değil:** React dışı projeler; Next.js 16 Cache Components geçişi (next-cache-components-* skilleri); bileşen API tasarımı (vercel-composition-patterns).
 - **Teknoloji:** react, next.js
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70605, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70788, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** react-performans → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:ayni
 - **Boyut:** 207 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, react-performans grubunun birincili. Gerekçe: Vercel'in özgün kural seti, kural başına dosya ile seçici okuma (SKILL.md 7 KB, toplam 207 KB); nextjs-react-expert aynı kuralların ag-kit uyarlaması. Bu kopya OpenMontage'a gömülü (upstream vercel-labs/agent-skills arşivde yok); güncellemeler OpenMontage üzerinden gelir. Dil/framework rehberi olduğu için 07-framework-ozel'e taşındı.

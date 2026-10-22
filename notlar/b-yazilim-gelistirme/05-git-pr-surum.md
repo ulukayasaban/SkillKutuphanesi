@@ -2,7 +2,7 @@
 
 _Git, worktree, PR, sürüm/release, changelog_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/8**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/10**
 
 ### changelog-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 77 (B)
 
@@ -59,6 +59,16 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ve kısa komut başvurusu; mevcut worktree'yi algılama veya yerel araç tercih etme yok. '.env kopyala' önerisi gizli bilgiyi çoğaltabilir.
 
+### pr-feedback-quality-gate  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+
+- **Ne yapar:** Safely track pull request feedback, resolve review comments or merge conflicts, validate fixes, and use a read-only cross-review before committing or pushing follow-up changes.
+- **Teknoloji:** git _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### pull-request  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 67 (B)
 
 - **Ne yapar:** Tek komutla PR akışı: önkoşulları kontrol eder (git, gh), başlıktan dal adı üretir, değişiklikleri gösterip onay ister, conventional commit mesajıyla commit eder, push eder ve özet/değişiklikler/test listesi içeren gövdeyle gh pr create çalıştırır.
@@ -80,6 +90,16 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Durum:** tercih · **Örtüşme:** surum-yayini → birincil
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel, --skill ile). Sürüm artış kuralları net; ancak push ve GitHub release yayını geri alınması zor dışa dönük eylemler, skill bunları onay adımı olmadan zincirliyor. Yalnız Node/package.json varsayımı.
+
+### release-notes-one-pager  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+
+- **Ne yapar:** Release notes one-page HTML with highlights, Added, Fixed, Breaking changes, Known issues, and Upgrade note. Writes explicit "None" style sections whenever the user does not provide details.
+- **Teknoloji:** css, html _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 41 KB (SKILL.md 3.7 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### using-git-worktrees  ·  obra/superpowers @ 2ce8aa1  ·  puan 96 (A)
 

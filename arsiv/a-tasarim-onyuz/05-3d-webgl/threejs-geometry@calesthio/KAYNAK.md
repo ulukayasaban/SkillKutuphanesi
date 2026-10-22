@@ -9,5 +9,5 @@
 - **Geliştirici:** calesthio (kisi)
 - **Değerlendirme:** 70/100 (B)
 - **Arşive alınma:** 2026-10-21
-- **Durum:** alternatif
+- **Durum:** tercih
 - **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.

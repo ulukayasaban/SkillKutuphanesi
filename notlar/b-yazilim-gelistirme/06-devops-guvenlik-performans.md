@@ -2,7 +2,7 @@
 
 _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/10**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/11**
 
 ### ci-cd-and-automation  ·  addyosmani/agent-skills @ aeac41d  ·  puan 87 (A)
 
@@ -14,6 +14,16 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Durum:** tercih · **Örtüşme:** ci-cd → birincil · **Roller:** devops-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı.
+
+### claude-security  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 25 (D)
+
+- **Ne yapar:** Claude Security: scan the codebase (the whole repository or a scoped part of it), scan changes (this branch's or a pull request's diff, or one commit), or suggest patches (findings turned into targeted patch files, each verified by a panel of agents, that you apply when you choose). Use when the user asks to scan, audit or check code with Claude Security, to scan their changes with Claude Security
+- **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 133 KB (SKILL.md 5.4 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### deployment-procedures  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 

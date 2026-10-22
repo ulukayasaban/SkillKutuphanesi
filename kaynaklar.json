@@ -43,10 +43,11 @@
     {
       "repo": "anthropics/claude-code",
       "tip": "T2",
-      "oncelik": 1,
+      "oncelik": 2,
       "dahil": [
         "^plugins/"
-      ]
+      ],
+      "not": "plugin-dev skillleri claude-plugins-official'da daha güncel (2026-02 > 2025-11); o yüzden öncelik 2."
     },
     {
       "repo": "darkroomengineering/satus",
@@ -351,6 +352,75 @@
     {
       "repo": "zhuyansen/awesome-claude-video-skills",
       "tip": "T5"
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "tip": "T1",
+      "oncelik": 1,
+      "haric": [
+        "^external_plugins/",
+        "^plugins/example-plugin/"
+      ],
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Resmî Claude Code plugin pazarı. external_plugins/ (Discord/Telegram/iMessage kanal bot ayarları, token ister; proje skilli değil) ve example-plugin (şablon) bilinçli hariç."
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "tip": "T2",
+      "oncelik": 5,
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Sadece skills/ alınır; diğerleri gerekçeli hariç (plugins/_official, design-templates, spec: uygulamanın kendi şablon/eklentileri, 100+ MB). Birçok skill anthropics/gsap/Composio kopyası; toplama koleksiyon olduğu için öncelik 5.",
+      "haric": [
+        "^(plugins|design-templates|tools|docs|apps|\\.claude)/"
+      ]
+    },
+    {
+      "repo": "multica-ai/andrej-karpathy-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Lisans belirtilmemiş."
+    },
+    {
+      "repo": "yaojingang/yao-meta-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "dosya_haric": [
+        "^\\.previews/",
+        "^reports/",
+        "^tests/",
+        "^\\.github/"
+      ],
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kökte tek skill; önizleme görselleri, rapor çıktıları ve testler alınmaz (~8 MB tasarruf)."
+    },
+    {
+      "repo": "ythx-101/live-panel-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "dosya_haric": [
+        "^examples/.*\\.(webp|gif|png|jpe?g)$",
+        "^tests/"
+      ],
+      "bagimlilik": "Python 3 + tarayıcı (Playwright/Chromium) ile kare yakalayıp ffmpeg ile mp4 üretir.",
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kökte tek skill; örneklerin JSON ayarları alınır, önizleme görselleri/videoları alınmaz."
+    },
+    {
+      "repo": "lemomo-ai/lemo-wake",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. upload skill'i çıktıyı kullanıcı onayıyla herkese açık GitHub galerisine yükler."
+    },
+    {
+      "repo": "lemomo-ai/codex-radar",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Codex'e özel."
+    },
+    {
+      "repo": "Fei-Away/Codex-Dream-Skin",
+      "tip": "T1",
+      "oncelik": 8,
+      "haric": [
+        "^(macos|windows)/"
+      ],
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kullanıcı kararı: sadece referans. Codex Desktop tema/duvar kağıdı uygulaması; macos/ ve windows/ SKILL.md'leri uygulamanın kurulum girişi (proje skilli değil, CDP ile arayüze CSS enjekte eder, paketler imzasız). Arşive alınmaz; notlar/referans/kutuphaneler.md."
     }
   ],
   "konum_haric": [
@@ -366,5 +436,216 @@
     "\\.(mp4|mov|webm|mkv|avi)$",
     "-rendered\\.html$"
   ],
-  "_aciklama_haric": "konum_haric: SKILL.md'nin bulunduğu klasörün ÜST yolunda aranır (skill'in kendi adı test/examples olsa bile alınır). skill_ici_haric: skill klasörü içindeki dosyalara uygulanır (sadece video ve büyük render). Repo kaydındaki 'haric' tam yola uygulanır."
+  "_aciklama_haric": "konum_haric: SKILL.md'nin bulunduğu klasörün ÜST yolunda aranır (skill'in kendi adı test/examples olsa bile alınır). skill_ici_haric: skill klasörü içindeki dosyalara uygulanır (sadece video ve büyük render). Repo kaydındaki 'haric' tam yola uygulanır.",
+  "arsivden_cikarilanlar": [
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/embedded-captions",
+      "ad": "embedded-captions",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/faceless-explainer",
+      "ad": "faceless-explainer",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/general-video",
+      "ad": "general-video",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/hyperframes-animation",
+      "ad": "hyperframes-animation",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/hyperframes-animation",
+      "ad": "hyperframes-animation",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/hyperframes-audio",
+      "ad": "hyperframes-audio",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/hyperframes-cli",
+      "ad": "hyperframes-cli",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/hyperframes-core",
+      "ad": "hyperframes-core",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/hyperframes-core",
+      "ad": "hyperframes-core",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/hyperframes-creative",
+      "ad": "hyperframes-creative",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/hyperframes-creative",
+      "ad": "hyperframes-creative",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/hyperframes-keyframes",
+      "ad": "hyperframes-keyframes",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/hyperframes-media",
+      "ad": "hyperframes-media",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/hyperframes-registry",
+      "ad": "hyperframes-registry",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/hyperframes-studio",
+      "ad": "hyperframes-studio",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/hyperframes",
+      "ad": "hyperframes",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/media-use",
+      "ad": "media-use",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/music-to-video",
+      "ad": "music-to-video",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/music-to-video",
+      "ad": "music-to-video",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/pr-to-video",
+      "ad": "pr-to-video",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/product-launch-video",
+      "ad": "product-launch-video",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/remotion-to-hyperframes",
+      "ad": "remotion-to-hyperframes",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/talking-head-recut",
+      "ad": "talking-head-recut",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/website-to-video",
+      "ad": "website-to-video",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".agents/skills/motion-graphics",
+      "ad": "motion-graphics",
+      "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "kaynak_yol": "skills/motion-graphics",
+      "ad": "motion-graphics",
+      "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-22",
+      "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    }
+  ],
+  "_aciklama_cikarilan": "arsivden_cikarilanlar: kullanıcı kararıyla arşivden çıkarılan skiller. Yeniden indirilmez (kapsam kararı 'haric:arsivden-cikarildi'), korunmaz. Geri almak için kaydı sil ve kaynak-cek + arsiv-yerlestir çalıştır; eski dosyalar git geçmişinde (son_commit)."
 }

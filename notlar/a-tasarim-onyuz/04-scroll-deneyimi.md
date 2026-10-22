@@ -2,7 +2,7 @@
 
 _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/6**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/7**
 
 ### barba-js  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 65 (B)
 
@@ -36,6 +36,16 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Durum:** alternatif · **Örtüşme:** scroll-animasyonu → alternatif · **Roller:** scroll-deneyim · **Globalde:** claude:farkli
 - **Boyut:** 159 KB (SKILL.md 16.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Aynı ad, farklı içerik: resmî sürüm yalnız ScrollTrigger'a odaklı ve güncel; bu sürüm tween+timeline+ScrollTrigger'ı tek dosyada jenerik anlatıyor, 335 gün eski, resmî rehberlerde olan matchMedia/cleanup disiplininden yoksun. Betikler yerel kod üretici, risk yok.
+
+### gsap-scrolltrigger@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 28 (D)
+
+- **Ne yapar:** Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.
+- **Teknoloji:** gsap, node, react _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Boyut:** 20 KB (SKILL.md 18.6 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### locomotive-scroll  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 65 (B)
 

@@ -17,3 +17,4 @@
 | haticesahin/SanalFuar | (skill içermiyor) sanal fuar projesi referansı | – | – |
 | linvi/tweetinvi | C# Twitter/X API kütüphanesi | .NET ile X entegrasyonu | – |
 | zhuyansen/awesome-claude-video-skills | (skill içermiyor) Claude Code/Codex ile video yapan 300+ skill reposunun türe göre, güvenlik notlu keşif listesi | Yeni video skilli ararken; aday repoyu kütüphaneye eklemeden önce `rehber/03` çakışma + ücret kontrolü | video-kompozisyon, video-kurgu-render |
+| Fei-Away/Codex-Dream-Skin | Codex Desktop'a duvar kağıdı/tema giydiren macOS/Windows uygulaması (MIT, 15 bin ★). İçindeki tek SKILL.md uygulamanın kurulum girişi | Sadece kişisel görünüm için; kurulumu kendin yap. Resmî değil, paketler imzasız, arayüze CDP ile CSS enjekte eder; README'de API aracı sponsor reklamı var | – (kütüphaneye skill olarak alınmadı) |

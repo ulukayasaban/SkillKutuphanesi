@@ -71,6 +71,7 @@ def agac_klasor_hash(agac, d, ayar):
 def skill_klasorlerini_sec(kayit, agac, ayar):
     """(secilenler, denetim) döndürür. denetim: her SKILL.md yolu -> karar."""
     konum_haric, repo_haric = ayar["konum_haric"], kayit.get("haric", [])
+    cikarilan = {(c["repo"], c["kaynak_yol"]) for c in ayar.get("arsivden_cikarilanlar", [])}
     blob_sha = {e["path"]: e["sha"] for e in agac if e["type"] == "blob"}
     denetim, adaylar = {}, []
     for e in agac:
@@ -86,6 +87,8 @@ def skill_klasorlerini_sec(kayit, agac, ayar):
             continue
         ust = (d.rsplit("/", 1)[0] + "/") if "/" in d else ""
         h = ilk_eslesen(repo_haric, kontrol) or ilk_eslesen(konum_haric, ust)
+        if (kayit["repo"], d) in cikarilan:  # kullanıcı kararıyla arşivden çıkarıldı (kaynaklar.json)
+            h = "arsivden-cikarildi"
         if d and h:
             denetim[e["path"]] = f"haric:{h}"
             continue
@@ -148,7 +151,8 @@ def skill_klasorlerini_sec(kayit, agac, ayar):
 
 
 def dosyalari_listele(kayit, agac, d, ayar):
-    haric = ayar["skill_ici_haric"]
+    # dosya_haric: repo kaydına özel, skill klasörü içindeki göreli yollara uygulanır (ör. kökteki skill'in .previews/ klasörü)
+    haric = ayar["skill_ici_haric"] + kayit.get("dosya_haric", [])
     sinir = ayar["max_dosya_mb"] * 1024 * 1024
     sonuc, atlanan = [], []
     for e in agac:

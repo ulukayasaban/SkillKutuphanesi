@@ -2,7 +2,7 @@
 
 _Oyun geliştirme, PixiJS, 2D grafik_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/12**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/13**
 
 ### 2d-games  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 
@@ -69,6 +69,16 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Durum:** tercih · **Örtüşme:** oyun-gelistirme-rehberi → birincil
 - **Boyut:** 35 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kütüphanedeki tek oyun giriş noktası; kısa (4.7 KB) ve alt skill'leri iç içe taşıyor (10 alt klasör, byte aynı). Dikkat: içerik genel ilke tablolarından ibaret, kod/motor özelliği yok; kalite orta. Yönlendirme `game-development/web-games` gibi iç içe yollara dayanır ve alt klasörler ayrı skill olarak otomatik keşfedilmez; ajan o dosyaları açıkça okumalı. Uygun rol yok (oyun rolü tanımlı değil), role eklenmedi.
+
+### hatch-pet  ·  nexu-io/open-design @ e03d5c2  ·  puan 28 (D)
+
+- **Ne yapar:** Create, repair, validate, preview, and package Codex-compatible animated pet spritesheets from character art, screenshots, generated images, or visual references. Use when a user wants to hatch a Codex pet, create a custom animated pet, or build a built-in pet asset with an 8x9 atlas, transparent unused cells, row-by-row animation prompts, QA contact sheets, preview videos, and pet.json packaging.
+- **Teknoloji:** api-anahtari, canvas, css, html, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 160 KB (SKILL.md 23.3 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### mobile-games  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 

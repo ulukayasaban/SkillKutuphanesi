@@ -2,60 +2,130 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/15**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/26**
 
-### agent-development  ·  anthropics/claude-code @ 1132b8a  ·  puan 76 (B)
+### agent-development  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 28 (D)
+
+- **Ne yapar:** This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description", "agent examples", "agent tools", "agent colors", "autonomous agent", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 68 KB (SKILL.md 10.9 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-development@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 76 (B)
 
 - **Ne yapar:** Claude Code eklentileri için alt-agent (subagent) yazımı: Markdown + YAML frontmatter yapısı, name/description/model/color/tools alanları, <example> bloklarıyla tetikleme koşulları, sistem istemi tasarımı, AI destekli üretim ve doğrulama kuralları; doğrulama betiği ve örnekler içerir.
 - **Ne zaman:** Claude Code projesine/eklentisine özel alt-agent tanımı yazmak ya da mevcut agent'ın tetiklenmesini düzeltmek. · **Ne zaman değil:** Codex'te frontmatter biçimi geçerli değil: Codex özel agent'ları `.codex/agents/<ad>.toml` dosyasında `name`, `description`, `developer_instructions` (ve isteğe bağlı skills.config) alanlarıyla tanımlanır — bu kütüphanenin skill-ekle.py'si rolleri zaten bu biçimde üretir. Skill'in sistem istemi tasarımı ve 'ne zaman tetiklenmeli' açıklaması yazım ilkeleri Codex'te de geçerli; color/model/tools alanlarını atla.
 - **Teknoloji:** claude-code, markdown, yaml
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** claude-alt-agent-tanimi → birincil · **Roller:** skill-gelistirici
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** claude-alt-agent-tanimi → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 69 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi plugin-dev setinden; alan alan doğrulama kuralları ve örnekler net. Claude Code'a özel (Codex için yukarıdaki uyarlama).
 
-### command-development  ·  anthropics/claude-code @ 1132b8a  ·  puan 76 (B)
+### command-development  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** This skill should be used when the user asks to "create a slash command", "add a command", "write a custom command", "define command arguments", "use command frontmatter", "organize commands", "create command with file references", "interactive command", "use AskUserQuestion in command", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in com
+- **Teknoloji:** git, node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (, commands); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 151 KB (SKILL.md 18.8 KB, yük orta)
+- **İnceleme:** otomatik
+
+### command-development@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 76 (B)
 
 - **Ne yapar:** Claude Code slash komutu yazımı: komut konumları (proje/kullanıcı/eklenti), YAML frontmatter (description, allowed-tools, model, argument-hint, disable-model-invocation), $ARGUMENTS ve konumsal argümanlar, @dosya başvuruları, satır içi bash çalıştırma, AskUserQuestion ile etkileşim ve organizasyon/namespacing.
 - **Ne zaman:** Ekipte tekrar eden istemleri Claude Code slash komutuna çevirmek. · **Ne zaman değil:** Codex'te Claude slash komut biçimi yok: karşılığı `~/.codex/prompts/<ad>.md` özel istem dosyaları (`/prompts:<ad>` ile çağrılır; $ARGUMENTS/$1 yer tutucuları desteklenir) ya da doğrudan bir skill'dir. allowed-tools, model, satır içi `!bash` çalıştırma ve @dosya başvurusu Codex'te çalışmaz — bunları istemin içinde 'şu komutu çalıştır / şu dosyayı oku' talimatına çevir.
 - **Teknoloji:** claude-code, markdown, yaml
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** claude-slash-komut → birincil · **Roller:** skill-gelistirici
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** claude-slash-komut → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 150 KB (SKILL.md 18.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi, çok sayıda örnek ve referans; SKILL.md 19 KB ve klasör 150 KB ile ağırca. Claude Code'a özel.
 
-### hook-development  ·  anthropics/claude-code @ 1132b8a  ·  puan 84 (A)
+### hook-development  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement prompt-based hooks", "use ${CLAUDE_PLUGIN_ROOT}", "set up event-driven automation", "block dangerous commands", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides
+- **Teknoloji:** react _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (, settings); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 63 KB (SKILL.md 15.9 KB, yük orta)
+- **İnceleme:** otomatik
+
+### hook-development@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 84 (A)
 
 - **Ne yapar:** Claude Code hook'ları: prompt tabanlı (LLM kararlı) ve komut hook'ları, eklenti hooks.json ve settings biçimi, PreToolUse/PostToolUse/Stop/SubagentStop/SessionStart/SessionEnd/UserPromptSubmit/PreCompact/Notification olayları, çıktı biçimi, ${CLAUDE_PLUGIN_ROOT}; doğrulama/test betikleri ve örnek hook'lar içerir.
 - **Ne zaman:** Tehlikeli komutu engelleme, düzenleme sonrası otomatik format/test, oturum başında bağlam yükleme gibi olay tabanlı Claude Code otomasyonu. · **Ne zaman değil:** Codex'te Claude Code hook olayları ve hooks.json biçimi birebir yok; Codex'in kendi onay/sandbox politikası (`approval_policy`, `sandbox_mode`) ve sürümüne göre sunduğu hook/notify ayarları `~/.codex/config.toml` içinde yapılır. Bu skilldeki betik mantığı Codex'te sandbox kuralı, AGENTS.md talimatı ya da git pre-commit hook'u olarak uygulanabilir; prompt tabanlı hook'ların karşılığı yoktur. Basit 'şunu görünce uyar' kuralları için writing-hookify-rules daha hızlı.
 - **Teknoloji:** claude-code, bash, json · **Paketler:** jq (betikler için)
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** claude-hook → birincil · **Roller:** skill-gelistirici
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** claude-hook → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 63 KB (SKILL.md 15.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil, hook grubunda). Anthropic resmi; tüm olaylar, girdi/çıktı şemaları ve test betikleri tek yerde. hookify kuralına göre daha güçlü ama daha zahmetli.
 
-### plugin-settings  ·  anthropics/claude-code @ 1132b8a  ·  puan 76 (B)
+### library-curator  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+
+- **Ne yapar:** Search the OD Library (the global asset registry) and apply matching assets into the current project mid-task. Use when the user asks to reuse an image they captured/uploaded earlier, "pull a logo/screenshot from my library", or to find and drop a stored asset into the page being built.
+- **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### od-next-media-inputs  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+
+- **Ne yapar:** Prepare required media inputs within an existing OD Next plan. Reuse capability evidence, acquire and measure assets efficiently, and resolve asynchronous jobs without removing required content or weakening quality standards.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### plugin-settings  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md files", "plugin state files", "read YAML frontmatter", "per-project plugin settings", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown 
+- **Teknoloji:** api-anahtari, git, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 43 KB (SKILL.md 11.8 KB, yük orta)
+- **İnceleme:** otomatik
+
+### plugin-settings@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 76 (B)
 
 - **Ne yapar:** Claude Code eklentilerinde kullanıcıya özel ayar ve durum saklama kalıbı: proje kökünde `.claude/<eklenti>.local.md` dosyası (YAML frontmatter + Markdown gövde); hook betiklerinden, komutlardan ve agent'lardan okuma, frontmatter ayrıştırma teknikleri ve geçici aktif hook, agent durum yönetimi gibi kalıplar.
 - **Ne zaman:** Proje başına açılıp kapatılabilen ya da yapılandırılabilen bir Claude Code eklentisi yazarken. · **Ne zaman değil:** Codex'te `.claude/*.local.md` dosyalarını okuyan bir mekanizma yok; aynı kalıp Codex'te skill'in kendisinin okuyacağı bir proje dosyası (örn. `.agents/<ad>.local.md`) olarak elle uygulanabilir, hook entegrasyonu kısmı uygulanamaz.
 - **Teknoloji:** claude-code, yaml, bash
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** claude-plugin-yapisi → tamamlayıcı · **Roller:** skill-gelistirici
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** claude-plugin-yapisi → tamamlayıcı · **Roller:** skill-gelistirici
 - **Boyut:** 43 KB (SKILL.md 11.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Dar ama iyi örneklenmiş bir kalıp; plugin-structure ile birlikte kullanılır.
 
-### plugin-structure  ·  anthropics/claude-code @ 1132b8a  ·  puan 84 (A)
+### plugin-structure  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "set up plugin.json", "use ${CLAUDE_PLUGIN_ROOT}", "add commands/agents/skills/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code pl
+- **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 73 KB (SKILL.md 13.5 KB, yük orta)
+- **İnceleme:** otomatik
+
+### plugin-structure@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 84 (A)
 
 - **Ne yapar:** Claude Code eklenti mimarisi: dizin düzeni (.claude-plugin/plugin.json, commands, agents, skills, hooks, .mcp.json), manifest alanları ve bileşen yolu yapılandırması, otomatik keşif, ${CLAUDE_PLUGIN_ROOT} ile taşınabilir yollar ve dosya adlandırma kuralları.
 - **Ne zaman:** Yeni Claude Code eklentisi iskeleti kurmak, bileşenleri düzenlemek, marketplace'e hazırlamak. · **Ne zaman değil:** Codex'te Claude Code eklenti biçimi (.claude-plugin/plugin.json, ${CLAUDE_PLUGIN_ROOT}) desteklenmez; bileşenler ayrı ayrı kurulur: skiller `.agents/skills/<ad>/SKILL.md`, agent'lar `.codex/agents/<ad>.toml`, MCP sunucuları `~/.codex/config.toml` [mcp_servers], özel istemler `~/.codex/prompts/`. Dizin düzeni ve adlandırma ilkeleri yine yol gösterir.
 - **Teknoloji:** claude-code, json
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** claude-plugin-yapisi → birincil · **Roller:** skill-gelistirici
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** claude-plugin-yapisi → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 73 KB (SKILL.md 13.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil, eklenti grubunda). plugin-dev ailesinin giriş noktası; diğer plugin-dev skilleri (komut, agent, hook, ayar, MCP) bunu tamamlar.
 
@@ -69,6 +139,16 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).
+
+### skill-creator@anthropics  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 25 (D)
+
+- **Ne yapar:** Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
+- **Teknoloji:** api-anahtari, html, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** alternatif
+- **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
+- **İnceleme:** otomatik
 
 ### skill-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 76 (B)
 
@@ -103,14 +183,24 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 221 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İçerik resmi sürümle aynı; çift kurulum bağlamı boşa harcar.
 
-### skill-development  ·  anthropics/claude-code @ 1132b8a  ·  puan 68 (B)
+### skill-development  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.
+- **Teknoloji:** api-anahtari, html, python, react _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 34 KB (SKILL.md 22.3 KB, yük orta)
+- **İnceleme:** otomatik
+
+### skill-development@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 68 (B)
 
 - **Ne yapar:** Claude Code eklentileri için skill yazım rehberi: skill anatomisi, aşamalı açılım, örnekle anlama → içerik planlama → yapı oluşturma → SKILL.md düzenleme adımları; eklentideki skills/ dizinine yerleştirme, üçüncü şahıs açıklama ve tetikleme ifadeleri, doğrulama kontrol listesi.
 - **Ne zaman:** Bir Claude Code eklentisinin içine skill eklemek (plugin-dev akışı içinde). · **Ne zaman değil:** Bağımsız skill yazımı ve ölçümü için skill-creator birincil. Codex'te: eklenti yerleşimi (plugins/<ad>/skills/) ve ${CLAUDE_PLUGIN_ROOT} geçerli değil — skill'i doğrudan `.agents/skills/<ad>/SKILL.md` olarak yaz; SKILL.md yazım ilkeleri (frontmatter name/description, aşamalı açılım) Codex'te de aynen geçerli.
 - **Teknoloji:** claude-code, markdown
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** skill-yazimi → alternatif
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 34 KB (SKILL.md 22.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İçeriğin çoğu eski skill-creator metninden türetilmiş (22 KB); eklentiye özgü kısım ince. writing-skills ve skill-creator varken ek değeri düşük.
 
@@ -147,14 +237,24 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 0 KB (SKILL.md 0.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Karar: SADECE ARŞİV. 140 baytlık boş şablon.
 
-### writing-hookify-rules  ·  anthropics/claude-code @ 1132b8a  ·  puan 76 (B)
+### writing-hookify-rules  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** This skill should be used when the user asks to "create a hookify rule", "write a hook rule", "configure hookify", "add a hookify rule", or needs guidance on hookify rule syntax and patterns.
+- **Teknoloji:** api-anahtari, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta)
+- **İnceleme:** otomatik
+
+### writing-hookify-rules@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 76 (B)
 
 - **Ne yapar:** hookify eklentisi için kural yazımı: `.claude/hookify.<kural>.local.md` dosyalarında YAML frontmatter (name, enabled, event: bash/file/stop/prompt/all, pattern, action: warn/block) ve Claude'a gösterilecek mesaj; çoklu koşul, olay türü rehberi, regex ipuçları ve tuzaklar.
 - **Ne zaman:** Kod yazmadan 'tehlikeli rm uyarısı', 'console.log engelle' gibi hızlı koruma kuralları eklemek (hookify kuruluysa). · **Ne zaman değil:** hookify eklentisi kurulu değilse; karmaşık mantık gerekiyorsa hook-development. Codex'te hookify yok: aynı korumalar Codex'in sandbox/onay politikasıyla (`~/.codex/config.toml`), AGENTS.md'deki yasak komut listesiyle ya da git pre-commit hook'uyla sağlanır; kuralın regex'i ve mesajı bu araçlara aynen taşınabilir.
 - **Teknoloji:** claude-code, yaml, regex · **Paketler:** hookify Claude Code eklentisi
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** claude-hook → alternatif · **Roller:** skill-gelistirici
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** claude-hook → alternatif · **Roller:** skill-gelistirici
 - **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (alternatif, hook grubunda). Anthropic resmi; kısa ve örnekli. hook-development'ın kod gerektirmeyen hafif alternatifi.
 
@@ -168,3 +268,13 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → tamamlayıcı · **Roller:** skill-gelistirici
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.
+
+### yao-meta-skill  ·  yaojingang/yao-meta-skill @ f5d8f68  ·  puan 30 (D)
+
+- **Ne yapar:** Create, improve, or evaluate an existing skill from workflows, prompts, SOPs, scripts. Use for migration/release/package, routing, evals/tests, install/trust checks, 优化已有 skill, 补 trigger 评测. Exclude summary/translation/docs, brainstorming, one-off prompts, copy-only edits, outline-only requests.
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3172 KB (SKILL.md 3.0 KB, yük kucuk)
+- **İnceleme:** otomatik

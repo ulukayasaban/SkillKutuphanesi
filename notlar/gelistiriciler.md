@@ -19,8 +19,8 @@
 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | tt-a1i | kisi |  | 87418 | 93 | 2026-10-22 | MIT | 5 |
 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | pbakaus | kisi |  | 84767 | 60 | 2026-10-22 | Apache-2.0 | 1 |
 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | ComposioHQ | kurum | ✅ | 77660 | 29 | 2026-09-18 | yok | 864 |
-| [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | calesthio | kisi |  | 70788 | 69 | 2026-10-16 | AGPL-3.0 | 84 |
-| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | heygen-com | kurum |  | 69710 | 107 | 2026-10-22 | Apache-2.0 | 27 |
+| [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | calesthio | kisi |  | 70788 | 69 | 2026-10-16 | AGPL-3.0 | 72 |
+| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | heygen-com | kurum |  | 69710 | 107 | 2026-10-22 | Apache-2.0 | 13 |
 | [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) | FFmpeg | kurum | ✅ | 65561 | 2787 | 2026-10-22 | NOASSERTION | 0 |
 | [motiondivision/motion](https://github.com/motiondivision/motion) | motiondivision | kurum | ✅ | 34438 | 147 | 2026-10-22 | MIT | 2 |
 | [pmndrs/react-three-fiber](https://github.com/pmndrs/react-three-fiber) | pmndrs | kurum | ✅ | 33161 | 246 | 2026-10-21 | MIT | 0 |

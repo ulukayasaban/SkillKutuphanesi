@@ -2,7 +2,7 @@
 
 _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/23**
 
 ### batch-operations  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 
@@ -25,6 +25,36 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Durum:** tercih · **Örtüşme:** agent-davranis-meta → alternatif
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Genel istem metni; ag-kit'in diğer skillerine bağımlı, ek değeri düşük.
+
+### claude-automation-recommender  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.
+- **Teknoloji:** docker, git, next.js, node, playwright, react, typescript, vue _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (agents, settings); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 42 KB (SKILL.md 10.7 KB, yük orta)
+- **İnceleme:** otomatik
+
+### claude-md-improver  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 30 (D)
+
+- **Ne yapar:** Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions "CLAUDE.md maintenance" or "project memory optimization".
+- **Teknoloji:** git, node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 15 KB (SKILL.md 5.9 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### codex-radar  ·  lemomo-ai/codex-radar @ c388223  ·  puan 28 (D)
+
+- **Ne yapar:** Analyze local Codex session history and create an evidence-grounded HTML collaboration report. Use when the user asks to run Codex Radar, score how they work with Codex, analyze Codex collaboration, or generate a Codex Radar report. Do not use for Claude Code history, generic code review, or workspace usage analytics.
+- **Teknoloji:** html, node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 179 KB (SKILL.md 8.6 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### context-compression  ·  vudovn/ag-kit @ 549ba3d  ·  puan 77 (B)
 
@@ -59,6 +89,16 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İşçi istemi yazma rehberi ve eşzamanlılık kuralları güçlü; ama plan tabanlı inceleme döngüsü yok. Orkestrasyon grubunda birincil subagent-driven-development.
 
+### creative-director  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+
+- **Ne yapar:** AI creative director with recursive self-assessment: 20+ methodologies (SIT, TRIZ, Bisociation, SCAMPER, Synectics), 3-axis evaluation calibrated against Cannes/D&AD/HumanKind, 5-phase process from brief to presentation.
+- **Teknoloji:** html _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### diagnosing-superpowers  ·  obra/superpowers @ 2ce8aa1  ·  puan 88 (A)
 
 - **Ne yapar:** Bir superpowers oturumu kötü gittiğinde (tekrar eden iş, yok sayılan plan, tetiklenmeyen skill, pahalılık) diskteki transkriptleri okuyup kanıta dayalı rapor çıkarır; her bulgu path:line ile alıntılanır. Oturum bulma, gizli veri karartma ve GitHub issue paketi rehberleri içerir.
@@ -92,6 +132,26 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 6 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (tamamlayıcı). superpowers; kısa (6 KB), karar ağacı ve istem yapısı net. subagent-driven-development ile birlikte kullanılır.
 
+### enhance-prompt  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+
+- **Ne yapar:** Improve prompts with design specs and UI/UX vocabulary. Useful for design-to-code workflows and clarifying requests for visual output.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
+- **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
+
+### full-output-enforcement  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+
+- **Ne yapar:** Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.
+- **Teknoloji:** api-anahtari, html _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 4 KB (SKILL.md 3.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### intelligent-routing  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
 - **Ne yapar:** Her kullanıcı isteğini sessizce analiz edip anahtar kelime/alan/karmaşıklığa göre uygun uzman agent'ı (security-auditor, frontend-specialist, orchestrator…) otomatik seçen yönlendirme kuralları.
@@ -124,6 +184,36 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Durum:** tercih · **Örtüşme:** alt-agent-orkestrasyon → alternatif
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güvenlik ve izolasyon bölümleri iyi; Antigravity odaklı olması diğer harness'lerde gürültü yaratıyor.
+
+### project-artifact  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 28 (D)
+
+- **Ne yapar:** Generate and publish a project status artifact — an opinionated, tabbed status page for a project too big for one update (overview & success criteria, the workstream sequence, next steps, plus background, plan, risks & open questions, and decisions/FAQ when they earn a tab) — published with the built-in Artifact tool to a default-private claude.ai page the user can share with teammates. Use when a
+- **Teknoloji:** css, git, html _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar)
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 46 KB (SKILL.md 19.9 KB, yük orta)
+- **İnceleme:** otomatik
+
+### receipts  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 28 (D)
+
+- **Ne yapar:** Generate a personal Claude Code usage & impact report ("receipts") from this machine's local session transcripts — for justifying Claude Code usage/spend to a manager, self-review, or "what have I been using this for" check-ins. Mines ~/.claude/projects locally (no extra API calls beyond one final write-up), cross-references local git history, and writes a markdown report plus a self-contained HTM
+- **Teknoloji:** api-anahtari, git, html, node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 82 KB (SKILL.md 16.8 KB, yük orta)
+- **İnceleme:** otomatik
+
+### session-report  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 25 (D)
+
+- **Ne yapar:** Generate an explorable HTML report of Claude Code session usage (tokens, cache, subagents, skills, expensive prompts) from ~/.claude/projects transcripts.
+- **Teknoloji:** api-anahtari, css, html, node _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 56 KB (SKILL.md 3.1 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### subagent-driven-development  ·  obra/superpowers @ 2ce8aa1  ·  puan 95 (A)
 

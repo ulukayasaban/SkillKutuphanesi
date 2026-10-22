@@ -93,6 +93,10 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 67 | Ücretli servis gerektiren skill fark edilmeden role/projeye girer, beklenmedik maliyet | `ucret-siniflandirma.json` (elle, gerekçeli), ön kontrolde `ucretli` UYARI, öneride ücretsizler önde, rol çekirdeğinde ücretli skill dogrula UYARISI, `notlar/ucretli-skiller.md` |
 | 68 | Yeni repoda aynı adlı iki farklı SKILL.md (lemo-opuscar) | İçerik karşılaştırması: biri tercih, diğeri `ad@kaynak` alternatif; projeye birlikte aynı adla kurulamaz |
 | 69 | Skill repoları birden çok GitHub listesinde dağınık; yeni eklenen skill gözden kaçar | Tek kaynak liste "Yapay Zeka Skillleri"; `github-skill-listesi.py` YENİ/kopya/eksik raporu, dogrula --github "YENİ SKILL REPOSU" uyarısı |
+| 70 | Kısmi indirmede yeni skill, korunan (indirilmeyen) aynı adlı skill ile aynı kimliği alır → arşiv kurulumu `FileExistsError` ile durur | Korunan skill kimliğini korur; yeni skill `ad@kaynak`'a taşınır (`KİMLİK:` satırı). Kurulumlar kaynağa (repo+yol) bağlı olduğu için kimlik değişimi projeleri bozmaz |
+| 71 | Elle verilen tercih (`durum_elle`) kısmi indirmede öncelik kuralıyla ezilir (ör. 1 KB'lık yönlendirme `remotion` OpenMontage'ı geçti) | Çakışma çözümü `durum_elle`'yi önceliğin önüne koyar; iki tur üst üste çalıştırılıp kararlılık doğrulandı |
+| 72 | Toplama repolarında içeriği olmayan "yönlendirme" skilleri (sadece upstream linki; open-design'da 82 tane) öneride öne çıkar | Elle `kalite: 1` + `kalite_notu`; puan düşer, `--oner` alt sıralara iter. Upstream'deki tam sürümü ya da kütüphanedeki eşini kullan |
+| 73 | Yeni ad kuralı başka repodaki aynı adlı skillin kategorisini sessizce değiştirir | `ad_kurallari` kaydında `repo` alanı: kural sadece o repoya uygulanır; ekleme sonrası eski kayıtların kategori farkı (git HEAD'e göre) kontrol edilir |
 
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).

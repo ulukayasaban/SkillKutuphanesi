@@ -37,12 +37,17 @@ python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da ay
    Alanlar:
    - `oncelik`: aynı isimli skill başka repoda da varsa küçük sayı kazanır ("tercih"). 1 = resmî üretici, 2 = tek konulu
      uzman repo, 3 = metodoloji, 4–6 = toplama koleksiyon, 8–9 = gizli.
-   - `dahil` / `dahil_degil`: sadece şu yollardaki SKILL.md'ler (regex). Bir repoyu iki kayda bölüyorsan
+   - `dahil` / `dahil_degil`: sadece şu yollardaki SKILL.md'ler (regex). Dışarıda kalanları başka bir kayıt almıyorsa
+     `dahil` yerine gerekçeli `haric` kullan (kapsam denetimi "açıklanamayan" der). Bir repoyu iki kayda bölüyorsan
      (ör. T1 + T4) her SKILL.md'yi **tam olarak bir** kayıt almalı; kapsam denetimi bunu kontrol eder.
    - `haric`: repo özelinde bilinçli hariç (tam yola uygulanır, ör. `^template/`).
    - `kok_dosyalari`: SKILL.md repo kökündeyse sadece bu dosyaları al (ör. `["SKILL.md"]`). Repodaki diğer kodu indirmez.
+   - `dosya_haric`: skill klasörü içindeki göreli yollar için hariç (regex). Kökte duran skilllerde önizleme/rapor/test
+     klasörlerini indirmemek için (ör. `["^\\.previews/", "^reports/"]`). Skill'in kullandığı `scripts/`, `references/` alınır.
    - `bagimlilik`: skill çalışmak için başka bir kurulum istiyorsa açıklaması (ön kontrolde UYARI olur).
 3. **Kategori kuralı gerekiyorsa** `kategori-kurallari.json` → `ad_kurallari` başına ekle (ilk eşleşen kazanır).
+   Yeni repoya ait kurala `"repo": "owner/ad"` yaz; başka repodaki aynı adlı skill etkilenmez. Repo geneli için `repo_varsayilan`.
+   Ekledikten sonra eski kayıtların kategorisi/durumu değişmiş mi bak (git HEAD'deki registry ile karşılaştır).
    Yeni bir konu alanı gerekiyorsa `kategoriler.json`'a alan/kategori ekle.
 4. **Çalıştır:**
    ```bash

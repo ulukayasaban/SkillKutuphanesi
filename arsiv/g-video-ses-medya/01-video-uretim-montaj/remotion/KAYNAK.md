@@ -2,12 +2,11 @@
 
 > Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
 
-- **Kaynak repo:** https://github.com/calesthio/OpenMontage
-- **Repo içindeki yol:** `.claude/skills/remotion`
-- **Commit:** `c8066452325cb57c8fc1ba8c2a71b6e8842e6b65`
-- **Lisans:** AGPL-3.0
-- **Geliştirici:** calesthio (kisi)
-- **Değerlendirme:** 71/100 (B)
-- **Arşive alınma:** 2026-10-21
-- **Durum:** tercih
-- **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
+- **Kaynak repo:** https://github.com/nexu-io/open-design
+- **Repo içindeki yol:** `skills/remotion`
+- **Commit:** `e03d5c23f308c39f4de7c057568df66c29a84385`
+- **Lisans:** Apache-2.0
+- **Geliştirici:** ?
+- **Değerlendirme:** 26/100 (D)
+- **Arşive alınma:** 2026-10-22
+- **Durum:** alternatif

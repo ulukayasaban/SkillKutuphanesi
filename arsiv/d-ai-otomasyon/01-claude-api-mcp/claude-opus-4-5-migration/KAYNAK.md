@@ -4,7 +4,7 @@
 
 - **Kaynak repo:** https://github.com/anthropics/claude-code
 - **Repo içindeki yol:** `plugins/claude-opus-4-5-migration/skills/claude-opus-4-5-migration`
-- **Commit:** `1132b8a98e93300bb3822197fb7eee12ce4fb906`
+- **Commit:** `5ed799e5cc56bea9efff57398ca43e31d82784ff`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** anthropics (kurum)
 - **Değerlendirme:** 69/100 (B)

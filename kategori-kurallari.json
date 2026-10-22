@@ -1,6 +1,136 @@
 {
-  "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur.",
+  "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(fal-|venice-(image|video)|replicate$|sora$|imagegen$|imagen$|pixelbin-media$|gif-sticker-maker$|nanobanana-ppt$|ecommerce-image-workflow$)",
+      "kategori": "g-video-ses-medya/03-ai-gorsel-video-modelleri"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(venice-audio-|speech$|ai-music-album$)",
+      "kategori": "g-video-ses-medya/02-ses-muzik-konusma"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "(-video-template$|^frame-|^social-(reddit|spotify|x-post)-card$|^chat-motion-overlay$|^vfx-text-cursor$|^youtube-clipper$|^video-|^after-hours-editorial-template$|^motion-design$)",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(huashu-art-motion|oil-motion)$",
+      "kategori": "g-video-ses-medya/04-motion-graphics-karakter"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(animate|emil-design-eng|emilkowalski-motion|motion-lab|review-animations|ui-animation|flutter-animating-apps|gpt-taste)$",
+      "kategori": "a-tasarim-onyuz/03-animasyon-motion"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(deck-|html-ppt|ppt-keynote$|frontend-slides$|pptx-|nanobanana|.*-template$|poster-hero$|card-(twitter|xiaohongshu)$|hand-drawn-diagrams$|mockup-device-3d$)",
+      "kategori": "a-tasarim-onyuz/07-gorsel-sanat-sunum"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(doc|minimax-docx|minimax-pdf|resume-modern|article-magazine|doc-kami-parchment)$",
+      "kategori": "c-dokuman-icerik/01-ofis-dokumanlari"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(copywriting|marketing-psychology|ad-creative|writing-guidelines|research-decision-room|paywall-upgrade-cro)$",
+      "kategori": "c-dokuman-icerik/03-yazi-iletisim-icerik"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(d3-visualization|data-report)$",
+      "kategori": "c-dokuman-icerik/02-diyagram-dokumantasyon"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(figma-|design-md$|stitch-|wpds$|color-expert$|design-consultation$|apple-hig$|platform-design$|design-system)",
+      "kategori": "a-tasarim-onyuz/02-tasarim-sistemi-marka"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(shader-dev)$",
+      "kategori": "a-tasarim-onyuz/05-3d-webgl"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(design-review|plan-design-review|impeccable-design-polish|full-page-screenshot|screenshots-marketing|screenshot|export-download-debugging|agent-browser|pptx-html-fidelity-audit)$",
+      "kategori": "a-tasarim-onyuz/08-onyuz-test-kalite"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(pr-feedback-quality-gate)$",
+      "kategori": "b-yazilim-gelistirme/05-git-pr-surum"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(full-output-enforcement|enhance-prompt|creative-director)$",
+      "kategori": "d-ai-otomasyon/02-agent-orkestrasyon"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(hatch-pet)$",
+      "kategori": "a-tasarim-onyuz/06-oyun-2d-grafik"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^(od-next-media-inputs|library-curator)$",
+      "kategori": "d-ai-otomasyon/04-skill-plugin-yazimi"
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "desen": "^build-mcp",
+      "kategori": "d-ai-otomasyon/01-claude-api-mcp"
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "desen": "^(claude-automation-recommender|claude-md-improver|session-report|receipts|project-artifact)$",
+      "kategori": "d-ai-otomasyon/02-agent-orkestrasyon"
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "desen": "^claude-security$",
+      "kategori": "b-yazilim-gelistirme/06-devops-guvenlik-performans"
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "desen": "^(math-olympiad|siege|solo)$",
+      "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji"
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "desen": "^playground$",
+      "kategori": "a-tasarim-onyuz/07-gorsel-sanat-sunum"
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "desen": "^(cardputer-buddy|m5-onboard)$",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel"
+    },
+    {
+      "repo": "lemomo-ai/lemo-wake",
+      "desen": ".",
+      "kategori": "g-video-ses-medya/04-motion-graphics-karakter"
+    },
+    {
+      "repo": "lemomo-ai/codex-radar",
+      "desen": ".",
+      "kategori": "d-ai-otomasyon/02-agent-orkestrasyon"
+    },
+    {
+      "repo": "multica-ai/andrej-karpathy-skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji"
+    },
+    {
+      "repo": "ythx-101/live-panel-skill",
+      "desen": ".",
+      "kategori": "c-dokuman-icerik/02-diyagram-dokumantasyon"
+    },
     {
       "desen": "^lemo-opuscar$",
       "kategori": "g-video-ses-medya/01-video-uretim-montaj"
@@ -192,6 +322,9 @@
     "Panniantong/Agent-Reach": "d-ai-otomasyon/03-web-arastirma-veri",
     "teng-lin/notebooklm-py": "d-ai-otomasyon/03-web-arastirma-veri",
     "calesthio/OpenMontage": "g-video-ses-medya/01-video-uretim-montaj",
-    "_T3": "f-repo-ici/01-repo-gelistirici-skilleri"
+    "_T3": "f-repo-ici/01-repo-gelistirici-skilleri",
+    "nexu-io/open-design": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
+    "anthropics/claude-plugins-official": "d-ai-otomasyon/04-skill-plugin-yazimi",
+    "yaojingang/yao-meta-skill": "d-ai-otomasyon/04-skill-plugin-yazimi"
   }
 }

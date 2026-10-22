@@ -53,6 +53,8 @@ def kurallari_uygula(kural, kayit):
         return kural["repo_varsayilan"]["_T3"]
     ad, repo = kayit["ad"], kayit["repo"]
     for k in kural.get("ad_kurallari", []):
+        if k.get("repo") and k["repo"] != repo:  # repo'ya özel kural: başka repodaki aynı adlı skill etkilenmez
+            continue
         if re.search(k["desen"], ad, re.I):
             return k["kategori"]
     return kural.get("repo_varsayilan", {}).get(repo, "d-ai-otomasyon/04-skill-plugin-yazimi")
@@ -374,9 +376,11 @@ def main():
     kullanilan_id = {x["id"] for x in skiller}
     arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}
     korunan_indirilmeyen = set()
+    # Kullanıcı kararıyla arşivden çıkarılanlar (ör. emekli eski sürümler): korunmaz, kayıp kilidine takılmaz
+    cikarilan = {(c["repo"], c["kaynak_yol"]) for c in json_oku(KOK / "kaynaklar.json").get("arsivden_cikarilanlar", [])}
     for s in eski_liste:
         kaynak = (s["repo"], s["kaynak_yol"])
-        if kaynak in yeni_kaynaklar:
+        if kaynak in yeni_kaynaklar or kaynak in cikarilan:
             continue
         if s["repo"] in kayip:
             s["kaynak_durumu"] = "kayip"
@@ -394,6 +398,26 @@ def main():
             s["durum"] = "alternatif"  # aynı adın güncel bir tercihi varsa o kazanır
         if s["id"] in kullanilan_id and s["id"] not in korunan_indirilmeyen:
             s["id"] = f"{s['ad']}@{kisa_kaynak(s['repo'])}-eski"
+        elif s["id"] in kullanilan_id:
+            # Korunan (indirilmeyen) skill kimliğini korur (projelerdeki kilit dosyaları ona bağlı);
+            # aynı kimliği almış YENİ indirilen skill 'ad@kaynak' kimliğine taşınır. Tercihi aşağıda öncelik belirler.
+            y = next(x for x in skiller if x["id"] == s["id"])
+            yeni_id = f"{y['ad']}@{kisa_kaynak(y['repo'])}"
+            n = 2
+            while yeni_id in kullanilan_id:
+                yeni_id = f"{y['ad']}@{kisa_kaynak(y['repo'])}-{n}"
+                n += 1
+            eski_k = YENI / Path(y["yol"]).relative_to("arsiv")
+            yeni_k = eski_k.parent / yeni_id
+            eski_k.rename(yeni_k)
+            vk = YENI / "_varyantlar" / y["id"]
+            if vk.exists():
+                vk.rename(YENI / "_varyantlar" / yeni_id)
+                y["varyantlar"] = {a: v.replace(f"/_varyantlar/{y['id']}/", f"/_varyantlar/{yeni_id}/")
+                                   for a, v in (y.get("varyantlar") or {}).items()}
+            print(f"KİMLİK: yeni {y['repo']} '{y['id']}' -> '{yeni_id}' (korunan {s['repo']} kimliğini korur)")
+            y["id"], y["yol"] = yeni_id, goreli(yeni_k)
+            kullanilan_id.add(yeni_id)
         kullanilan_id.add(s["id"])
         eski_yol = KOK / s["yol"]
         if not (eski_yol / "SKILL.md").exists():
@@ -428,6 +452,15 @@ def main():
             print(f"ÇAKIŞMA: {y['id']} birebir aynısı {rakip['id']} -> kopya olarak not edildi")
             continue
         yeni_kazanir = oncelik.get(y["repo"], 5) < oncelik.get(rakip["repo"], 5)
+        # elle verilen karar (durum_elle) önceliği ezer
+        if (rakip.get("durum_elle") and rakip["durum"] == "tercih") or (y.get("durum_elle") and y["durum"] == "alternatif"):
+            yeni_kazanir = False
+        elif y.get("durum_elle") and y["durum"] == "tercih":
+            yeni_kazanir = True
+        elif rakip.get("durum_elle") and rakip["durum"] == "alternatif":
+            # korunan elle 'alternatif': ona dokunma; yeni skill indirme sırasındaki (aynı adlı yenilerle) kararını korur
+            print(f"ÇAKIŞMA: '{y['ad']}' -> korunan {rakip['id']} elle alternatif; {y['id']} durumu: {y['durum']}")
+            continue
         kaybeden = rakip if yeni_kazanir else y
         kazanan = y if yeni_kazanir else rakip
         if kazanan["durum"] != "tercih" and not any(x["ad"] == kazanan["ad"] and x["durum"] == "tercih" and x is not kaybeden for x in skiller):
@@ -476,6 +509,7 @@ def main():
     # Güvenlik kilidi: önceki registry'deki kaynakların hepsi ya yeniden yerleşmiş ya da korunmuş olmalı.
     yeni_k = {(s["repo"], s["kaynak_yol"]) for s in skiller}
     kayip_k = [s["id"] for s in eski_liste if (s["repo"], s["kaynak_yol"]) not in yeni_k
+               and (s["repo"], s["kaynak_yol"]) not in cikarilan
                and not any(f"{s['repo']}:{s['kaynak_yol'] or '.'}" in x.get("kopya_kaynaklar", []) for x in skiller)]
     if kayip_k and "--kayba-izin-ver" not in sys.argv:
         shutil.rmtree(YENI, ignore_errors=True)

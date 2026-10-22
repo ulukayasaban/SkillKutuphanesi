@@ -297,6 +297,318 @@
     "video-toolkit": [
       "ucretli",
       "Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli"
+    ],
+    "fal-3d": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-generate": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-image-edit": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-kling-o3": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-lip-sync": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-realtime": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-restore": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-train": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-tryon": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-upscale": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-video-edit": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "fal-vision": [
+      "ucretli",
+      "fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret"
+    ],
+    "venice-audio-music": [
+      "ucretli",
+      "Venice.ai API anahtarı ve ücretli kullanım"
+    ],
+    "venice-audio-speech": [
+      "ucretli",
+      "Venice.ai API anahtarı ve ücretli kullanım"
+    ],
+    "venice-image-edit": [
+      "ucretli",
+      "Venice.ai API anahtarı ve ücretli kullanım"
+    ],
+    "venice-image-generate": [
+      "ucretli",
+      "Venice.ai API anahtarı ve ücretli kullanım"
+    ],
+    "venice-video": [
+      "ucretli",
+      "Venice.ai API anahtarı ve ücretli kullanım"
+    ],
+    "replicate": [
+      "ucretli",
+      "Replicate API: model çalıştırma başına ücret"
+    ],
+    "sora": [
+      "ucretli",
+      "OpenAI Sora video API: ücretli"
+    ],
+    "imagegen": [
+      "ucretli",
+      "OpenAI Image API (OPENAI_API_KEY): görsel başına ücret"
+    ],
+    "speech": [
+      "ucretli",
+      "OpenAI TTS API: karakter başına ücret"
+    ],
+    "gif-sticker-maker": [
+      "ucretli",
+      "MiniMax API ile görsel/video üretimi: ücretli"
+    ],
+    "imagen": [
+      "kismen",
+      "Google Gemini görsel API: sınırlı ücretsiz kota, sonrası ücretli"
+    ],
+    "nanobanana-ppt": [
+      "kismen",
+      "Gemini (Nano Banana) görsel üretimi: sınırlı ücretsiz kota, sonrası ücretli; deste yapısı yerel"
+    ],
+    "frontend-dev": [
+      "kismen",
+      "Arayüz kodu ücretsiz; AI medya üretimi MiniMax API (ücretli)"
+    ],
+    "pixelbin-media": [
+      "kismen",
+      "Pixelbin hesabı: ücretsiz kredi var, sonrası ücretli"
+    ],
+    "hatch-pet": [
+      "kismen",
+      "Yerel yol ücretsiz; ikincil yedek yol OPENAI_API_KEY ister (ücretli)"
+    ],
+    "design-taste-frontend": [
+      "ucretsiz",
+      "Ortamda görsel üretim aracı varsa onu kullanır; zorunlu ücretli servis yok"
+    ],
+    "stitch-loop": [
+      "ucretsiz",
+      "Google Stitch (Google Labs) ücretsiz"
+    ],
+    "stitch-design-taste": [
+      "ucretsiz",
+      "Google Stitch için DESIGN.md üretir; ücretsiz"
+    ],
+    "design-md": [
+      "ucretsiz",
+      "Google Stitch DESIGN.md biçimi; ücretsiz"
+    ],
+    "enhance-prompt": [
+      "ucretsiz",
+      "Stitch için prompt iyileştirme; ücretsiz"
+    ],
+    "shadcn-ui": [
+      "ucretsiz",
+      "shadcn/ui açık kaynak"
+    ],
+    "doc": [
+      "ucretsiz",
+      "OpenAI skills reposundan derlenmiş yerel .docx işleme; API gerekmez"
+    ],
+    "frontend-skill": [
+      "ucretsiz",
+      "OpenAI skills reposundan derlenmiş tasarım rehberi; API gerekmez"
+    ],
+    "screenshot": [
+      "ucretsiz",
+      "Yerel ekran görüntüsü; API gerekmez"
+    ],
+    "minimax-docx": [
+      "ucretsiz",
+      "MiniMax skills reposundan derlenmiş yerel belge işleme; API gerekmez"
+    ],
+    "minimax-pdf": [
+      "ucretsiz",
+      "MiniMax skills reposundan derlenmiş yerel PDF işleme; API gerekmez"
+    ],
+    "pptx-generator": [
+      "ucretsiz",
+      "PptxGenJS ile yerel; API gerekmez"
+    ],
+    "shader-dev": [
+      "ucretsiz",
+      "Yerel shader geliştirme; API gerekmez"
+    ],
+    "motion-design": [
+      "ucretsiz",
+      "Açıkça: video üretim API anahtarı gerektirmez"
+    ],
+    "oil-motion": [
+      "ucretsiz",
+      "Yerel Python + FFmpeg"
+    ],
+    "library-curator": [
+      "ucretsiz",
+      "Open Design uygulamasının kendi iç araç token'ı; harici ücret yok"
+    ],
+    "od-next-media-inputs": [
+      "ucretsiz",
+      "Open Design iç medya girişi; sağlayıcı anahtarları sunucuda"
+    ],
+    "hand-drawn-diagrams": [
+      "ucretsiz",
+      "Excalidraw; ücretsiz"
+    ],
+    "layers": [
+      "ucretsiz",
+      "Görsel üretimi ve API anahtarı yok; yerel küçük modeller"
+    ],
+    "wake": [
+      "ucretsiz",
+      "Görsel üretimi ve API anahtarı yok; yerel"
+    ],
+    "upload": [
+      "ucretsiz",
+      "Ücretsiz; çıktıyı kullanıcı onayıyla herkese açık GitHub galerisine yükler"
+    ],
+    "m5-onboard": [
+      "ucretsiz",
+      "M5Stack donanımı gerekir; yazılım ücretsiz"
+    ],
+    "writing-hookify-rules": [
+      "ucretsiz",
+      "API anahtarı sadece örnek kural içeriğinde geçiyor"
+    ],
+    "build-mcp-server": [
+      "ucretsiz",
+      "MCP sunucusu yazma rehberi; ücret yok"
+    ],
+    "claude-automation-recommender": [
+      "ucretsiz",
+      "Claude Code ayar önerileri; ücret yok"
+    ],
+    "siege": [
+      "ucretsiz",
+      "Yerel matematik ispat iş akışı"
+    ],
+    "ad-creative": [
+      "ucretsiz",
+      "Pazarlama metni; ücretli servis gerekmez"
+    ],
+    "design-brief": [
+      "ucretsiz",
+      "Tasarım özeti; ücret yok"
+    ],
+    "faq-page": [
+      "ucretsiz",
+      "Sayfa şablonu"
+    ],
+    "gpt-taste": [
+      "ucretsiz",
+      "Tasarım rehberi"
+    ],
+    "image-to-code": [
+      "ucretsiz",
+      "Tasarım rehberi"
+    ],
+    "imagegen-frontend-web": [
+      "ucretsiz",
+      "Ortamdaki görsel üretim aracını kullanır; zorunlu ücretli servis yok"
+    ],
+    "marketing-psychology": [
+      "ucretsiz",
+      "Pazarlama rehberi"
+    ],
+    "paywall-upgrade-cro": [
+      "ucretsiz",
+      "Dönüşüm optimizasyonu rehberi"
+    ],
+    "redesign-existing-projects": [
+      "ucretsiz",
+      "Tasarım rehberi"
+    ],
+    "reference-design-contract": [
+      "ucretsiz",
+      "Tasarım rehberi"
+    ],
+    "high-end-visual-design": [
+      "ucretsiz",
+      "Tasarım rehberi"
+    ],
+    "pptx-html-fidelity-audit": [
+      "ucretsiz",
+      "Yerel ImageMagick/headless tarayıcı"
+    ],
+    "frame-flowchart-sticky": [
+      "ucretsiz",
+      "HyperFrames kompozisyon şablonu"
+    ],
+    "mockup-device-3d": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "frame-data-chart-nyt": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "frame-glitch-title": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "frame-light-leak-cinema": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "frame-liquid-bg-hero": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "frame-logo-outro": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "frame-macos-notification": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "social-reddit-card": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "social-spotify-card": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "social-x-post-card": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "vfx-text-cursor": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "video-hyperframes": [
+      "ucretsiz",
+      "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
     ]
   }
 }

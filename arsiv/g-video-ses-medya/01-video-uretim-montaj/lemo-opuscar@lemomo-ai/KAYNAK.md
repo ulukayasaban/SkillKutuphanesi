@@ -7,7 +7,7 @@
 - **Commit:** `3961ddb3d24d8876e0e2754f7790d66908acee51`
 - **Lisans:** MIT
 - **Geliştirici:** lemomo-ai (kisi)
-- **Değerlendirme:** 88/100 (A)
+- **Değerlendirme:** 69/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** alternatif
 - **Bağımlılık:** Çalışınca kendi kütüphanesini ev dizinine indirir/kopyalar (~/lemo-opuscar veya ~/.lemo-opuscar), Node + ffmpeg (+ seslendirme için Python/Kokoro) ister. Ücretsiz: varsayılan TTS çevrimdışı Kokoro; edge-tts metni Microsoft'a gönderir (sadece kullanıcı onaylarsa).

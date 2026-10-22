@@ -2,7 +2,7 @@
 
 _Claude API, MCP sunucusu, model geçişi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/10**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/14**
 
 ### academy-guide  ·  anthropics/skills @ dbd4588  ·  puan 84 (A)
 
@@ -15,6 +15,36 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.
 
+### build-mcp-app  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 28 (D)
+
+- **Ne yapar:** This skill should be used when the user wants to build an "MCP app", add "interactive UI" or "widgets" to an MCP server, "render components in chat", build "MCP UI resources", make a tool that shows a "form", "picker", "dashboard" or "confirmation dialog" inline in the conversation, or mentions "apps SDK" in the context of MCP. Use AFTER the build-mcp-server skill has settled the deployment model,
+- **Teknoloji:** css, html, node, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 47 KB (SKILL.md 18.9 KB, yük orta)
+- **İnceleme:** otomatik
+
+### build-mcp-server  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 28 (D)
+
+- **Ne yapar:** This skill should be used when the user asks to "build an MCP server", "create an MCP", "make an MCP integration", "wrap an API for Claude", "expose tools to Claude", "make an MCP app", or discusses building something with the Model Context Protocol. It is the entry point for MCP server development — it interrogates the user about their use case, determines the right deployment model (remote HTTP,
+- **Teknoloji:** api-anahtari, node, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 49 KB (SKILL.md 11.8 KB, yük orta)
+- **İnceleme:** otomatik
+
+### build-mcpb  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 30 (D)
+
+- **Ne yapar:** This skill should be used when the user wants to "package an MCP server", "bundle an MCP", "make an MCPB", "ship a local MCP server", "distribute a local MCP", discusses ".mcpb files", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the local filesystem, desktop apps, or OS and must be installable without the user having Node/Python set 
+- **Teknoloji:** node, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 18 KB (SKILL.md 7.7 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### claude-api  ·  anthropics/skills @ dbd4588  ·  puan 86 (A)
 
 - **Ne yapar:** Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prompt caching, compaction, MCP, Managed Agents, Files/Skills API. Dil algılayıp (Python, TS, Go, Java, C#, PHP, Ruby, cURL) ilgili klasörü okutur; migrate, prompt-audit, upgrade, cost-optimize, build-eval, hillclimb alt komutları içerir.
@@ -26,13 +56,13 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 2031 KB (SKILL.md 102.7 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, sürekli güncel (model listesi 2026-10-06), API kayması uyarı tablosu ve dil başına doğrulanmış kalıplar. Tek eksi: SKILL.md 103 KB, klasör 2.2 MB. claude-opus-4-5-migration'ın işini 'migrate' alt komutu güncel modellerle yapıyor.
 
-### claude-opus-4-5-migration  ·  anthropics/claude-code @ 1132b8a  ·  puan 69 (B)
+### claude-opus-4-5-migration  ·  anthropics/claude-code @ 5ed799e  ·  puan 69 (B)
 
 - **Ne yapar:** Sonnet 4.0/4.5 ve Opus 4.1'den Opus 4.5'e tek seferlik geçiş: platforma göre (Anthropic, Bedrock, Vertex, Azure) model dizgelerini değiştirir, desteklenmeyen beta başlığını kaldırır, effort parametresi ekler ve Opus 4.5 davranış farklarına göre (araç aşırı tetikleme, aşırı mühendislik) istem ayarı önerir.
 - **Ne zaman:** Yalnızca hedef özellikle Opus 4.5 ise (eski kod tabanlarını tam bu sürüme sabitlemek). · **Ne zaman değil:** Güncel modellere (Opus 5.5, Sonnet 5.5, Fable 5.1) geçişte — claude-api 'migrate' alt komutu kullanılmalı. Haiku 4.5 geçişi kapsam dışı.
 - **Teknoloji:** anthropic-sdk
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** claude-api-gecis → alternatif
 - **Boyut:** 12 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İyi yazılmış ama eskidi: hedef model Opus 4.5 ve 1M bağlam notu artık geçerli değil. Aynı iş claude-api/shared/model-migration.md'de güncel.
@@ -103,13 +133,23 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Üç sürüm içinde en güncel spesifikasyon bilgisi ve güvenlik kontrol listesi; MIT, 10 KB. İş akışı ve eval aracı olmadığı için birincil değil.
 
-### mcp-integration  ·  anthropics/claude-code @ 1132b8a  ·  puan 76 (B)
+### mcp-integration  ·  anthropics/claude-plugins-official @ af59ee3  ·  puan 23 (D)
+
+- **Ne yapar:** This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use .mcp.json", "set up Model Context Protocol", "connect external service", mentions "${CLAUDE_PLUGIN_ROOT} with MCP", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for 
+- **Teknoloji:** api-anahtari, git, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 45 KB (SKILL.md 12.2 KB, yük orta)
+- **İnceleme:** otomatik
+
+### mcp-integration@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 76 (B)
 
 - **Ne yapar:** Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tipleri, ${CLAUDE_PLUGIN_ROOT} ve ortam değişkeni genişletme, MCP araç adlandırması (mcp__eklenti__sunucu__araç), yaşam döngüsü ve OAuth/token kimlik doğrulama kalıpları.
 - **Ne zaman:** Bir Claude Code eklentisine hazır MCP sunucusu eklemek/yapılandırmak. · **Ne zaman değil:** MCP sunucusunun kendisini yazmak için (mcp-builder). Codex'te eklenti paketleme yok: MCP sunucusu `~/.codex/config.toml` dosyasında `[mcp_servers.<ad>]` tablosuyla (command, args, env ya da url) tanımlanır; .mcp.json ve ${CLAUDE_PLUGIN_ROOT} kullanılmaz. Sunucu tipleri, kimlik doğrulama ve güvenlik bölümleri Codex'te de geçerli, plugin.json kısımlarını atla.
 - **Teknoloji:** mcp, claude-code, json
 - **Claude / Codex:** tam / konu-claude-ozel — Konu Claude Code plugin/hook/komut/alt-agent geliştirme. Codex'in de kendi hook, plugin ve slash command sistemi var ama dosya formatları farklı (Claude: hooks.json, plugin.json, ${CLAUDE_PLUGIN_ROOT}). Codex'te sadece kavram referansı olarak kullan. 
-- **Geliştirici:** anthropics (kurum, resmî, ★152747, son güncelleme 2026-10-21, lisans yok)
-- **Durum:** tercih · **Örtüşme:** claude-plugin-mcp → birincil · **Roller:** skill-gelistirici
+- **Geliştirici:** anthropics (kurum, resmî, ★152857, son güncelleme 2026-10-22, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** claude-plugin-mcp → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 46 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir.
