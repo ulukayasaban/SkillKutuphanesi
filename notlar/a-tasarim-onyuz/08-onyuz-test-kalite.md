@@ -9,7 +9,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Browser automation CLI for AI agents. Use when the user needs to inspect, test, or automate browser behavior: navigating pages, filling forms, clicking buttons, taking screenshots, extracting page data, reading selected OpenDesign browser-tab context, testing web apps, dogfooding OpenDesign previews, QA, bug hunts, or reviewing app quality. Prefer local OpenDesign preview URLs unless the user expl
 - **Teknoloji:** api-anahtari, css, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -30,7 +30,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Designer Who Codes: visual audit then fixes with atomic commits and before/after screenshots. Useful for tightening shipped UI before launch.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -40,7 +40,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Diagnose and fix browser, preview, or Electron export/download failures, especially image export issues involving Save As, Blob/Data URLs, the File System Access API, createWritable failures, and 0 KB files.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -50,7 +50,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Capture full-page screenshots of web pages via Chrome DevTools Protocol with zero dependencies. Useful for portfolios, case studies, and audit reports.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -60,7 +60,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Follow-up design polish skill inspired by Impeccable. Use after a web or HTML artifact exists to audit, critique, polish, animate, harden, and prepare the page for a live/share pass.
 - **Teknoloji:** css, gsap, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -70,7 +70,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Senior Designer review: rates each design dimension 0-10, explains what a 10 looks like, and flags AI Slop signals. Useful as a gate before merging UI work.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -113,7 +113,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Capture desktop, app windows, or pixel regions across OS platforms. Useful for marketing screenshots, design reviews, and bug reports.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -123,7 +123,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Generate marketing screenshots with Playwright. Useful for landing-page hero shots, App Store screenshots, and changelog visuals.
 - **Teknoloji:** playwright _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -133,7 +133,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32823, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, ★32831, son güncelleme 2026-10-14, lisans yok)
 - **Durum:** tercih · **Örtüşme:** ui-denetim-iyilestirme → birincil · **Globalde:** claude:ayni
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik

@@ -64,7 +64,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne yapar:** Safely track pull request feedback, resolve review comments or merge conflicts, validate fixes, and use a read-only cross-review before committing or pushing follow-up changes.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -96,7 +96,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Ne yapar:** Release notes one-page HTML with highlights, Added, Fixed, Breaking changes, Known issues, and Upgrade note. Writes explicit "None" style sections whenever the user does not provide details.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 41 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik

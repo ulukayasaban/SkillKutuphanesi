@@ -2,11 +2,11 @@
 
 > Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
 
-- **Kaynak repo:** https://github.com/OrcaQubits/agentic-commerce-skills-plugins
-- **Repo içindeki yol:** `magento2-commerce/skills/magento-api`
-- **Commit:** `30cd25c74c8aa7dc49b3ec4847d463f6104439f6`
+- **Kaynak repo:** https://github.com/magendooro/magento-claude-skills
+- **Repo içindeki yol:** `.claude/skills/magento-api`
+- **Commit:** `7b0f2a0d8b92fe4239363fbe13b3e7cea4e5d708`
 - **Lisans:** MIT
-- **Geliştirici:** OrcaQubits (kurum)
-- **Değerlendirme:** 81/100 (A)
+- **Geliştirici:** magendooro (kurum)
+- **Değerlendirme:** 65/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

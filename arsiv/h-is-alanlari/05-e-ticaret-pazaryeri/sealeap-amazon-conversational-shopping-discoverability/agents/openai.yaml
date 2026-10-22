@@ -1,0 +1,4 @@
+interface:
+  display_name: "Amazon 对话式购物可发现性"
+  short_description: "用真实属性、场景证据和结构化内容服务购物助手，依据真实证据形成可复核的判断与行动方案"
+  default_prompt: "使用 $sealeap-amazon-conversational-shopping-discoverability，把这些商品事实映射到购物任务和指定 Listing 字段，并设计验证问题。"

@@ -246,3 +246,15 @@
 | agent | `ucp-expert` | OrcaQubits/agentic-commerce-skills-plugins | `ucp-agentic-commerce/agents/ucp-expert.md` |
 | agent | `webmcp-expert` | OrcaQubits/agentic-commerce-skills-plugins | `webmcp-browser-agents/agents/webmcp-expert.md` |
 | agent | `woocommerce-expert` | OrcaQubits/agentic-commerce-skills-plugins | `woocommerce-commerce/agents/woocommerce-expert.md` |
+| komut | `mp-commerce` | mercadopago/mercadopago-claude-marketplace | `plugins/mercadopago-commerce/commands/mp-commerce.md` |
+| agent | `mp-integration-expert` | mercadopago/mercadopago-claude-marketplace | `plugins/mercadopago/agents/mp-integration-expert.md` |
+| komut | `mp-connect` | mercadopago/mercadopago-claude-marketplace | `plugins/mercadopago/commands/mp-connect.md` |
+| komut | `mp-integrate` | mercadopago/mercadopago-claude-marketplace | `plugins/mercadopago/commands/mp-integrate.md` |
+| komut | `mp-review` | mercadopago/mercadopago-claude-marketplace | `plugins/mercadopago/commands/mp-review.md` |
+| komut | `mp-test-cards` | mercadopago/mercadopago-claude-marketplace | `plugins/mercadopago/commands/mp-test-cards.md` |
+| agent | `fixer` | mmiani/kotlin-kmp-claude-agent-skills | `agents/fixer.md` |
+| agent | `implementer` | mmiani/kotlin-kmp-claude-agent-skills | `agents/implementer.md` |
+| agent | `planner` | mmiani/kotlin-kmp-claude-agent-skills | `agents/planner.md` |
+| agent | `reviewer` | mmiani/kotlin-kmp-claude-agent-skills | `agents/reviewer.md` |
+| agent | `validator` | mmiani/kotlin-kmp-claude-agent-skills | `agents/validator.md` |
+| komut | `execute-ticket` | mmiani/kotlin-kmp-claude-agent-skills | `commands/execute-ticket.md` |

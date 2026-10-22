@@ -1,96 +1,139 @@
 ---
 name: magento-api
-description: Build Magento 2 REST and GraphQL APIs — webapi.xml, schema.graphqls, resolvers, authentication, and ACL. Use when creating custom API endpoints, extending the GraphQL schema, or integrating external systems.
-allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch
+description: Quick reference for Magento 2 REST and GraphQL API endpoints, searchCriteria syntax, and authentication patterns. Background knowledge — loaded automatically when working with Magento APIs.
+user-invocable: false
+allowed-tools: []
 ---
 
-# Magento 2 REST & GraphQL API Development
+# Magento API Reference
 
-## Before writing code
+Provide quick-reference Magento 2 API information relevant to the tool the user is building or asking about. If the user specifies a domain (products, orders, customers, inventory, etc.), focus on that domain.
 
-**Fetch live docs**:
-1. Fetch `https://developer.adobe.com/commerce/webapi/` for Web API overview
-2. Fetch `https://developer.adobe.com/commerce/webapi/graphql/develop/` for GraphQL development guide
-3. Fetch `https://developer.adobe.com/commerce/webapi/get-started/` for authentication
-4. Web-search `site:developer.adobe.com commerce php development components web-api` for webapi.xml reference
+## REST API Endpoints
 
-## REST API
+### Products / Catalog
 
-### How It Works
+| Operation | Method | Endpoint |
+|-----------|--------|----------|
+| Get product by SKU | GET | `/rest/V1/products/{sku}` |
+| Search products | GET | `/rest/V1/products?searchCriteria[...]` |
+| Get categories | GET | `/rest/V1/categories` |
+| Get category by ID | GET | `/rest/V1/categories/{id}` |
+| Product attributes | GET | `/rest/V1/products/attributes/{attributeCode}` |
+| Product media | GET | `/rest/V1/products/{sku}/media` |
+| Configurable options | GET | `/rest/V1/configurable-products/{sku}/options/all` |
 
-REST endpoints map HTTP methods + URL paths to service contract methods. Defined in `etc/webapi.xml`.
+### Orders
 
-### webapi.xml Structure
+| Operation | Method | Endpoint |
+|-----------|--------|----------|
+| Get order by ID | GET | `/rest/V1/orders/{id}` |
+| Search orders | GET | `/rest/V1/orders?searchCriteria[...]` |
+| Order items | GET | `/rest/V1/orders/items?searchCriteria[...]` |
+| Order comments | GET | `/rest/V1/orders/{id}/comments` |
+| Invoices | GET | `/rest/V1/invoices?searchCriteria[...]` |
+| Shipments | GET | `/rest/V1/shipments?searchCriteria[...]` |
+| Credit memos | GET | `/rest/V1/creditmemos?searchCriteria[...]` |
 
-Each route defines:
-- `url` — endpoint path (e.g., `/V1/custom/items/:id`)
-- `method` — HTTP method (GET, POST, PUT, DELETE)
-- `service` — class + method implementing the endpoint
-- `resource` — ACL resource for authorization
+### Customers
 
-Path parameters (`:id`) map to method parameters by name.
+| Operation | Method | Endpoint |
+|-----------|--------|----------|
+| Get customer by ID | GET | `/rest/V1/customers/{id}` |
+| Search customers | GET | `/rest/V1/customers/search?searchCriteria[...]` |
+| Customer groups | GET | `/rest/V1/customerGroups/search?searchCriteria[...]` |
+| Customer addresses | GET | `/rest/V1/customers/{id}/billingAddress` |
 
-### Authentication Types
+### Inventory / Stock
 
-| Type | Header | Use Case |
-|------|--------|----------|
-| **Admin Token** | `Authorization: Bearer <token>` | Back-office integrations |
-| **Customer Token** | `Authorization: Bearer <token>` | Customer-facing apps |
-| **OAuth 1.0a** | OAuth headers | Third-party integrations |
-| **Session** | PHP session cookie | Storefront JS widgets |
-| **Anonymous** | `resource="anonymous"` | Public endpoints |
+| Operation | Method | Endpoint |
+|-----------|--------|----------|
+| Stock item by SKU | GET | `/rest/V1/stockItems/{sku}` |
+| Source items | GET | `/rest/V1/inventory/source-items?searchCriteria[...]` |
+| Stock status (MSI) | GET | `/rest/V1/inventory/get-product-salable-qty/{sku}/{stockId}` |
+| Sources | GET | `/rest/V1/inventory/sources?searchCriteria[...]` |
+| Stocks | GET | `/rest/V1/inventory/stocks?searchCriteria[...]` |
 
-### Swagger/OpenAPI
+### CMS
 
-Available at `/rest/<store>/schema` — auto-generated from webapi.xml and service contracts.
+| Operation | Method | Endpoint |
+|-----------|--------|----------|
+| CMS pages | GET | `/rest/V1/cmsPage/search?searchCriteria[...]` |
+| CMS blocks | GET | `/rest/V1/cmsBlock/search?searchCriteria[...]` |
 
-## GraphQL API
+### Store / Config
 
-### How It Works
+| Operation | Method | Endpoint |
+|-----------|--------|----------|
+| Store configs | GET | `/rest/V1/store/storeConfigs` |
+| Store groups | GET | `/rest/V1/store/storeGroups` |
+| Websites | GET | `/rest/V1/store/websites` |
+| Modules | GET | `/rest/V1/modules` |
 
-GraphQL uses a single endpoint (`/graphql`) with schema files and resolver classes.
+## searchCriteria Pattern
 
-### Schema Files (schema.graphqls)
+Magento uses a standard searchCriteria query pattern for list endpoints:
 
-Define types, queries, and mutations in `etc/schema.graphqls`:
-- Custom types with fields
-- Query definitions mapping to resolver classes
-- Mutation definitions with input/output types
-- Extend existing types with new fields
+```
+?searchCriteria[filterGroups][0][filters][0][field]=status
+&searchCriteria[filterGroups][0][filters][0][value]=processing
+&searchCriteria[filterGroups][0][filters][0][conditionType]=eq
+&searchCriteria[pageSize]=20
+&searchCriteria[currentPage]=1
+&searchCriteria[sortOrders][0][field]=created_at
+&searchCriteria[sortOrders][0][direction]=DESC
+```
 
-### Resolver Classes
+Condition types: `eq`, `neq`, `gt`, `gteq`, `lt`, `lteq`, `like`, `in`, `notnull`, `null`, `from`, `to`.
 
-Implement `Magento\Framework\GraphQl\Query\ResolverInterface`:
-- `resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)`
-- Return arrays matching the GraphQL type definition
-- Context provides store, customer, and extension attributes
+## GraphQL Queries
 
-### Identity for Cache
+### Products
 
-Implement `Magento\Framework\GraphQl\Query\Resolver\IdentityInterface` for full-page cache invalidation of GraphQL responses.
+```graphql
+{
+  products(search: "jacket", filter: { price: { from: "10", to: "100" } }, pageSize: 20) {
+    items {
+      sku
+      name
+      price_range { minimum_price { final_price { value currency } } }
+      stock_status
+    }
+    total_count
+  }
+}
+```
 
-### GraphQL Authorization
+### Categories
 
-- Customer context via `Authorization: Bearer <customer-token>` header
-- Admin context not supported in GraphQL (by design — GraphQL is storefront-facing)
-- Use `$context->getExtensionAttributes()->getIsCustomer()` for auth checks
+```graphql
+{
+  categories(filters: { ids: { eq: "2" } }) {
+    items { id name children { id name url_path } }
+  }
+}
+```
 
-## ACL (Access Control List)
+### Customer Orders (authenticated)
 
-### acl.xml
+```graphql
+{
+  customer {
+    orders(filter: { number: { eq: "000000001" } }) {
+      items {
+        order_number
+        status
+        total { grand_total { value currency } }
+        items { product_name quantity_ordered }
+      }
+    }
+  }
+}
+```
 
-Defines the resource tree for authorization:
-- Nested `<resource>` elements form a hierarchy
-- Referenced in `webapi.xml` via `<resource ref="Vendor_Module::resource_name"/>`
-- Special values: `anonymous` (no auth), `self` (customer's own data)
+## Authentication
 
-## Best Practices
+- **REST**: Bearer token via `Authorization: Bearer <token>` header. Admin tokens from `POST /rest/V1/integration/admin/token`. Customer tokens from `POST /rest/V1/integration/customer/token`.
+- **GraphQL**: Same bearer token in header. Customer queries require customer token. Admin-only queries (orders list, customer search) require admin token or integration token.
+- **Integration tokens**: Long-lived, configured in Admin > System > Integrations. Preferred for MCP server use.
 
-- Always define service contract interfaces first, then expose via webapi.xml
-- Use ACL resources for all non-public endpoints
-- Prefer GraphQL for storefront/headless, REST for integrations
-- Return proper HTTP status codes (200, 201, 400, 401, 403, 404)
-- Use SearchCriteria for list endpoints
-- Add cache identity classes for GraphQL resolver performance
-
-Fetch the Web API and GraphQL development docs for exact XML schema, resolver signatures, and authentication patterns before implementing.

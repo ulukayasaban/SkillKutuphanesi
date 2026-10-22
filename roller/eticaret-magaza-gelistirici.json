@@ -13,6 +13,8 @@
     "wc-cart-checkout-classic",
     "wc-order-lifecycle-and-items",
     "medusa-setup",
-    "saleor-setup"
+    "saleor-setup",
+    "mp-commerce-checkout",
+    "mp-integrate"
   ]
 }

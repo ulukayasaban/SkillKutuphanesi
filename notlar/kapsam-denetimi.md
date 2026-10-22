@@ -2,11 +2,11 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-10-22 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 5214 · Arşivdeki skill kaydı: 2902 · Bileşen (komut/agent): 242
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6014 · Arşivdeki skill kaydı: 3702 · Bileşen (komut/agent): 254
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 2894 | arşivde (ana sürüm) |
+| secildi | 3694 | arşivde (ana sürüm) |
 | haric | 2113 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 146 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 26 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
@@ -17,6 +17,7 @@
 
 | Repo | SKILL.md | Dağılım |
 |---|---|---|
+| 40RTY-ai/shopify-admin-skills | 117 | secildi 117 |
 | CloudAI-X/threejs-skills | 13 | secildi 13 |
 | ComposioHQ/awesome-claude-skills | 864 | secildi 864 |
 | DietrichGebert/ponytail | 12 | ayna-baska-arac 6, secildi 6 |
@@ -27,33 +28,44 @@
 | J-DTurner/etsy-api-skill | 1 | secildi 1 |
 | K-Dense-AI/scientific-agent-skills | 177 | secildi 177 |
 | Leonxlnx/taste-skill | 1 | secildi 1 |
+| Livsy90/iOS-Performance-Agent-Skills | 6 | secildi 6 |
 | Lonsdale201/wp-agent-skills | 246 | haric 215, secildi 31 |
 | OrcaQubits/agentic-commerce-skills-plugins | 1733 | haric 1425, secildi 275, ayna-ayni 23, ayri-surum 10 |
 | Panniantong/Agent-Reach | 1 | secildi 1 |
 | Shopify/agent-skills | 30 | secildi 15, arac-varyanti 15 |
 | Trendyol/trendyol-integration-developer-tool | 1 | secildi 1 |
 | addyosmani/agent-skills | 25 | secildi 25 |
+| aldefy/compose-skill | 1 | secildi 1 |
 | android/skills | 33 | secildi 33 |
 | anthropics/claude-code | 10 | secildi 10 |
 | anthropics/claude-plugins-official | 33 | secildi 25, haric 8 |
 | anthropics/knowledge-work-plugins | 252 | secildi 189, haric 57, ayri-surum 6 |
 | anthropics/skills | 20 | secildi 19, haric 1 |
+| buluslan/ecommerce-competitor-analyzer | 1 | secildi 1 |
 | calesthio/OpenMontage | 139 | secildi 79, ayna-ayni 46, haric 12, arac-varyanti 2 |
 | cloudflare/security-audit-skill | 1 | secildi 1 |
 | cloudflare/skills | 19 | secildi 19 |
 | czlonkowski/n8n-skills | 15 | secildi 15 |
+| dadederk/iOS-Accessibility-Agent-Skill | 1 | secildi 1 |
 | darkroomengineering/satus | 1 | secildi 1 |
+| dpconde/claude-android-skill | 1 | secildi 1 |
 | earthtojake/text-to-cad | 13 | secildi 12, haric 1 |
+| evanca/flutter-ai-rules | 36 | secildi 36 |
 | expo/skills | 25 | secildi 24, haric 1 |
 | finsilabs/awesome-ecommerce-skills | 178 | secildi 178 |
 | freshtechbro/claudedesignskills | 90 | ayna-ayni 66, secildi 23, ayna-baska-arac 1 |
 | greensock/gsap-skills | 8 | secildi 8 |
+| hamen/compose_skill | 2 | secildi 2 |
 | heygen-com/hyperframes | 26 | secildi 13, haric 7, ayna-ayni 6 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
+| itsncki-design/app-store-submission-auditor | 1 | secildi 1 |
 | lemomo-ai/codex-radar | 1 | secildi 1 |
 | lemomo-ai/lemo-opuscar | 2 | secildi 2 |
 | lemomo-ai/lemo-wake | 3 | secildi 3 |
+| magendooro/magento-claude-skills | 10 | secildi 10 |
+| mercadopago/mercadopago-claude-marketplace | 5 | secildi 5 |
 | microsoft/playwright | 9 | secildi 9 |
+| mmiani/kotlin-kmp-claude-agent-skills | 15 | secildi 15 |
 | motiondivision/motion | 2 | secildi 2 |
 | multica-ai/andrej-karpathy-skills | 1 | secildi 1 |
 | nateherkai/scroll-craft | 1 | secildi 1 |
@@ -62,13 +74,16 @@
 | nextlevelbuilder/ui-ux-pro-max-skill | 13 | secildi 7, ayna-ayni 5, ayna-baska-arac 1 |
 | nexu-io/open-design | 549 | haric 380, secildi 169 |
 | obra/superpowers | 15 | secildi 15 |
+| oldred-byte/ec-visual-skill | 1 | secildi 1 |
 | pbakaus/impeccable | 25 | ayna-baska-arac 18, haric 4, arac-varyanti 2, secildi 1 |
 | react/react | 14 | secildi 14 |
 | teng-lin/notebooklm-py | 1 | secildi 1 |
 | tt-a1i/archify | 5 | secildi 5 |
+| vagabond911/aso-auditor | 1 | secildi 1 |
 | vercel-labs/agent-skills | 9 | secildi 9 |
 | vercel/next.js | 27 | secildi 27 |
 | vudovn/ag-kit | 58 | secildi 58 |
+| xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
 | ythx-101/live-panel-skill | 1 | secildi 1 |

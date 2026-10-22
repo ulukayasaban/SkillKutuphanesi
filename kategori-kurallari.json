@@ -2,6 +2,81 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "mercadopago/mercadopago-claude-marketplace",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "40RTY-ai/shopify-admin-skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "xjli360/sealeap-amazon-skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "magendooro/magento-claude-skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "oldred-byte/ec-visual-skill",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "buluslan/ecommerce-competitor-analyzer",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "evanca/flutter-ai-rules",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "aldefy/compose-skill",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "hamen/compose_skill",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "dpconde/claude-android-skill",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "mmiani/kotlin-kmp-claude-agent-skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "Livsy90/iOS-Performance-Agent-Skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "dadederk/iOS-Accessibility-Agent-Skill",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "vagabond911/aso-auditor",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "itsncki-design/app-store-submission-auditor",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
       "repo": "OrcaQubits/agentic-commerce-skills-plugins",
       "desen": ".",
       "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"

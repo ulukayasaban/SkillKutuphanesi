@@ -62,7 +62,7 @@
 | `generate-image` | 04-bilimsel-yazim-literatur | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 100
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 106
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -126,10 +126,16 @@
 | `cross-sell-upsell-engine` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Rebuy (ücretli Shopify uygulaması) |
 | `customer-lifetime-value` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `customer-segmentation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `ecommerce-competitor-analyzer` | 05-e-ticaret-pazaryeri | Gemini API (ücretsiz kota) + Olostep kazıma API'si (ücretsiz deneme, sonrası ücretli) |
 | `email-service-integration` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: SendGrid (ücretsiz kota) |
 | `free-shipping-thresholds` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `invoice-generation-automation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: PDFMonkey (ücretsiz kota) |
 | `loyalty-points-system` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `mp-commerce-checkout` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
+| `mp-integrate` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
+| `mp-review` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
+| `mp-test-setup` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
+| `mp-webhooks` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
 | `mpp-service-discovery` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `mpp-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `multi-currency` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Open Exchange Rates (ücretsiz kota) |

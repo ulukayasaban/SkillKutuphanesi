@@ -140,6 +140,101 @@
       "karar": "reddedildi",
       "neden": "Doküman reposu; repo-içi skiller",
       "tarih": "2026-10-22"
+    },
+    "woocommerce/agent-skills": {
+      "karar": "reddedildi",
+      "neden": "Repo-içi katkı skilleri (abilities API, eski PR denetimi), mağaza işi değil",
+      "tarih": "2026-10-22"
+    },
+    "bigcommerce/catalyst": {
+      "karar": "reddedildi",
+      "neden": "Repo-içi sürüm/dal skilleri",
+      "tarih": "2026-10-22"
+    },
+    "medusajs/medusa": {
+      "karar": "reddedildi",
+      "neden": "Repo-içi katkı skilleri (PR, issue, doküman)",
+      "tarih": "2026-10-22"
+    },
+    "nexscope-ai/nexscope-ecommerce-skills": {
+      "karar": "reddedildi",
+      "neden": "Lisans yok; eklenen nexscope-ai/eCommerce-Skills ile büyük ölçüde örtüşüyor; lisans gelirse yeniden bak",
+      "tarih": "2026-10-22"
+    },
+    "mercadopago/mercadopago-claude-marketplace": {
+      "karar": "eklendi",
+      "neden": "Mercado Pago resmî ödeme entegrasyonu (checkout, webhook, test).",
+      "tarih": "2026-10-22"
+    },
+    "40RTY-ai/shopify-admin-skills": {
+      "karar": "eklendi",
+      "neden": "Shopify mağaza yönetimi iş akışları.",
+      "tarih": "2026-10-22"
+    },
+    "xjli360/sealeap-amazon-skills": {
+      "karar": "eklendi",
+      "neden": "Amazon araştırma, listeleme, reklam, stok.",
+      "tarih": "2026-10-22"
+    },
+    "magendooro/magento-claude-skills": {
+      "karar": "eklendi",
+      "neden": "Magento 2 / Adobe Commerce mağaza yönetimi (ürün, sipariş, stok, müşteri).",
+      "tarih": "2026-10-22"
+    },
+    "oldred-byte/ec-visual-skill": {
+      "karar": "eklendi",
+      "neden": "E-ticaret ürün görselleri (ürün + referans görsellerden).",
+      "tarih": "2026-10-22"
+    },
+    "buluslan/ecommerce-competitor-analyzer": {
+      "karar": "eklendi",
+      "neden": "Çok platformlu e-ticaret rakip analizi.",
+      "tarih": "2026-10-22"
+    },
+    "evanca/flutter-ai-rules": {
+      "karar": "eklendi",
+      "neden": "Flutter/Dart skilleri (mimari, Bloc, Firebase, erişilebilirlik).",
+      "tarih": "2026-10-22"
+    },
+    "aldefy/compose-skill": {
+      "karar": "eklendi",
+      "neden": "Jetpack Compose uzman rehberi (androidx kaynaklarına dayalı). Lisans belirsiz.",
+      "tarih": "2026-10-22"
+    },
+    "hamen/compose_skill": {
+      "karar": "eklendi",
+      "neden": "Jetpack Compose denetimi ve agent.",
+      "tarih": "2026-10-22"
+    },
+    "dpconde/claude-android-skill": {
+      "karar": "eklendi",
+      "neden": "Modern Android uygulama geliştirme en iyi uygulamaları.",
+      "tarih": "2026-10-22"
+    },
+    "mmiani/kotlin-kmp-claude-agent-skills": {
+      "karar": "eklendi",
+      "neden": "Kotlin Multiplatform. Lisans belirsiz.",
+      "tarih": "2026-10-22"
+    },
+    "Livsy90/iOS-Performance-Agent-Skills": {
+      "karar": "eklendi",
+      "neden": "iOS/Swift/SwiftUI performans.",
+      "tarih": "2026-10-22"
+    },
+    "dadederk/iOS-Accessibility-Agent-Skill": {
+      "karar": "eklendi",
+      "neden": "iOS erişilebilirlik.",
+      "tarih": "2026-10-22"
+    },
+    "vagabond911/aso-auditor": {
+      "karar": "eklendi",
+      "neden": "App Store / Google Play listeleme (ASO) denetimi. Lisans yok.",
+      "tarih": "2026-10-22"
+    },
+    "itsncki-design/app-store-submission-auditor": {
+      "karar": "eklendi",
+      "neden": "App Store ret riski denetimi. Lisans yok.",
+      "tarih": "2026-10-22"
     }
   },
   "konular": {

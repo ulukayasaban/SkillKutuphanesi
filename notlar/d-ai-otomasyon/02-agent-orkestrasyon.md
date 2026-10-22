@@ -31,7 +31,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.
 - **Teknoloji:** docker, git, next.js, node, playwright, react, typescript, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (agents, settings); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★43832, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 42 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** otomatik
@@ -41,7 +41,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions "CLAUDE.md maintenance" or "project memory optimization".
 - **Teknoloji:** git, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★43832, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 15 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -94,7 +94,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** AI creative director with recursive self-assessment: 20+ methodologies (SIT, TRIZ, Bisociation, SCAMPER, Synectics), 3-axis evaluation calibrated against Cannes/D&AD/HumanKind, 5-phase process from brief to presentation.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -137,7 +137,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Improve prompts with design specs and UI/UX vocabulary. Useful for design-to-code workflows and clarifying requests for visual output.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -147,7 +147,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.
 - **Teknoloji:** api-anahtari, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -330,7 +330,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Generate and publish a project status artifact — an opinionated, tabbed status page for a project too big for one update (overview & success criteria, the workstream sequence, next steps, plus background, plan, risks & open questions, and decisions/FAQ when they earn a tab) — published with the built-in Artifact tool to a default-private claude.ai page the user can share with teammates. Use when a
 - **Teknoloji:** css, git, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★43832, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 46 KB (SKILL.md 19.9 KB, yük orta)
 - **İnceleme:** otomatik
@@ -340,7 +340,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Generate a personal Claude Code usage & impact report ("receipts") from this machine's local session transcripts — for justifying Claude Code usage/spend to a manager, self-review, or "what have I been using this for" check-ins. Mines ~/.claude/projects locally (no extra API calls beyond one final write-up), cross-references local git history, and writes a markdown report plus a self-contained HTM
 - **Teknoloji:** api-anahtari, git, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★43832, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 82 KB (SKILL.md 16.8 KB, yük orta)
 - **İnceleme:** otomatik
@@ -350,7 +350,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Ne yapar:** Generate an explorable HTML report of Claude Code session usage (tokens, cache, subagents, skills, expensive prompts) from ~/.claude/projects transcripts.
 - **Teknoloji:** api-anahtari, css, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★43832, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 56 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik

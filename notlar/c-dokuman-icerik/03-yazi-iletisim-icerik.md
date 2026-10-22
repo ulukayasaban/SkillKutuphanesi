@@ -9,7 +9,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Generate and iterate ad creative including headlines, descriptions, and primary text. Useful for paid social and search ad iteration.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -30,7 +30,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Extract and analyze competitors' ads from ad libraries to understand messaging and creative approaches that resonate.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -51,7 +51,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write and rewrite marketing copy for landing pages, homepages, and ads. Useful as a copy chief partner during launches.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -94,7 +94,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Generate creative domain name ideas and check availability across multiple TLDs including .com, .io, .dev, and .ai.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -159,7 +159,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Apply psychological principles and behavioral science to copy and design. Useful for tightening hooks, framing, and pricing presentation.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -180,7 +180,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Design and optimize upgrade screens, paywalls, and upsell modals. Useful for SaaS conversion design and pricing-page experiments.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -201,7 +201,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Turn messy user research notes, interviews, support tickets, surveys, and product context into an evidence-backed decision room: a single HTML artifact with an evidence ledger, theme map, confidence heatmap, opportunity matrix, decision memo, and experiment queue. Use when teams need to move from qualitative signals to product or design decisions without fabricating certainty.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 38 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -244,7 +244,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32823, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, ★32831, son güncelleme 2026-10-14, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -254,7 +254,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 17 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik

@@ -566,6 +566,96 @@
       "oncelik": 2,
       "bagimlilik": "Trendyol satıcı hesabı ve entegrasyon API bilgileri gerekir.",
       "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Trendyol'un resmî entegrasyon geliştirici skili. Lisans belirtilmemiş."
+    },
+    {
+      "repo": "mercadopago/mercadopago-claude-marketplace",
+      "tip": "T1",
+      "oncelik": 1,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Mercado Pago resmî ödeme entegrasyonu (checkout, webhook, test)."
+    },
+    {
+      "repo": "40RTY-ai/shopify-admin-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Shopify mağaza yönetimi iş akışları."
+    },
+    {
+      "repo": "xjli360/sealeap-amazon-skills",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Amazon araştırma, listeleme, reklam, stok."
+    },
+    {
+      "repo": "magendooro/magento-claude-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Magento 2 / Adobe Commerce mağaza yönetimi (ürün, sipariş, stok, müşteri)."
+    },
+    {
+      "repo": "oldred-byte/ec-visual-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). E-ticaret ürün görselleri (ürün + referans görsellerden)."
+    },
+    {
+      "repo": "buluslan/ecommerce-competitor-analyzer",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Çok platformlu e-ticaret rakip analizi."
+    },
+    {
+      "repo": "evanca/flutter-ai-rules",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Flutter/Dart skilleri (mimari, Bloc, Firebase, erişilebilirlik)."
+    },
+    {
+      "repo": "aldefy/compose-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Jetpack Compose uzman rehberi (androidx kaynaklarına dayalı). Lisans belirsiz."
+    },
+    {
+      "repo": "hamen/compose_skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Jetpack Compose denetimi ve agent."
+    },
+    {
+      "repo": "dpconde/claude-android-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Modern Android uygulama geliştirme en iyi uygulamaları."
+    },
+    {
+      "repo": "mmiani/kotlin-kmp-claude-agent-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Kotlin Multiplatform. Lisans belirsiz."
+    },
+    {
+      "repo": "Livsy90/iOS-Performance-Agent-Skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). iOS/Swift/SwiftUI performans."
+    },
+    {
+      "repo": "dadederk/iOS-Accessibility-Agent-Skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). iOS erişilebilirlik."
+    },
+    {
+      "repo": "vagabond911/aso-auditor",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). App Store / Google Play listeleme (ASO) denetimi. Lisans yok."
+    },
+    {
+      "repo": "itsncki-design/app-store-submission-auditor",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). App Store ret riski denetimi. Lisans yok."
     }
   ],
   "konum_haric": [
