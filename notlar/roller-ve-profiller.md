@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir (roller/*.json, profiller/*.json). Kullanım: `skill-ekle.py <proje> --profil <ad>` veya `--rol <ad>`.
 
-## Profiller (21)
+## Profiller (22)
 
 | Profil | Ne için | Roller |
 |---|---|---|
@@ -16,6 +16,7 @@
 | `landing-page` | Tek sayfalık tanıtım / ürün sayfası | `ui-tasarimci`, `motion-gelistirici`, `frontend-muhendis`, `qa-erisilebilirlik`, `icerik-pazarlama` |
 | `marka-sunum` | Marka kimliği, sunum ve görsel materyal | `tasarim-sistemi`, `dokuman-yazari` |
 | `mevcut-kod-iyilestirme` | Var olan kod tabanını inceleme ve sadeleştirme | `kod-inceleyici`, `planlayici`, `agent-orkestra` |
+| `mobil-uygulama` | Mobil uygulama (Android / Expo-React Native) — iskelet, roller henüz atanmadı |  |
 | `nextjs-web-uygulamasi` | Next.js web uygulaması | `nextjs-uzmani`, `ui-tasarimci`, `qa-erisilebilirlik` |
 | `obsidian-bilgi-sistemi` | Obsidian not alma ve bilgi yönetimi sistemi | `bilgi-yoneticisi` |
 | `oyun-gelistirme` | Oyun geliştirme (web, mobil, PC) | `oyun-gelistirici`, `qa-erisilebilirlik` |
