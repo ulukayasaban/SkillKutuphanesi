@@ -50,10 +50,11 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | Komut | Ne yapar |
 |---|---|
 | `skill-ekle.py` | Projeye ekle / öner / listele / durum / doğrula / güncelle / kaldır / geri al |
-| `arsiv-guncelle.py [--uygula]` | Kaynaklarda yeni commit ve yeni yıldızlı repo raporu; onayla arşivi günceller |
+| `arsiv-guncelle.py [--uygula --dal] [--birlestir <dal>]` | Aylık güncelleme: rapor → `guncelleme/YYYY-AA` dalında güncelleme → onayla master'a birleştirme |
 | `kaynak-cek.py` → `arsiv-yerlestir.py` | İndir → tekilleştir, kategorile, değerlendir |
 | `kapsam-denetimi.py` | Her SKILL.md'nin açıklandığını bağımsız doğrular |
 | `katalog-uret.py` | KATALOG ve notları üretir |
 | `dogrula.py [--github]` | Tutarlılık; yıldızlı ama tanımsız repo |
 | `gelistirici-bilgisi.py` | Geliştirici bilgileri |
-| `test.py` | Uçtan uca test (geçici projede) |
+| `test.py` | Uçtan uca güvenlik testleri (geçici projede) |
+| `duman-testi.py [--araclar]` | Tüm sürecin hızlı uçtan uca duman testi (git, doğrulama, kapsam, testler, tüm profiller, kurulum yaşam döngüsü, isteğe bağlı gerçek Claude/Codex) |
