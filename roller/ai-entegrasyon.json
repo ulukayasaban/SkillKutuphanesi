@@ -11,5 +11,6 @@
     "agent-reach",
     "connect"
   ],
-  "notlar": "mcp-builder@vudovn bilinçli olarak opsiyonelde: inceleme kararı 'tamamlayıcı' (güncel MCP spesifikasyonu + güvenlik kontrol listesi). Birincil sürüm çekirdekteki mcp-builder (Anthropic)."
+  "notlar": "mcp-builder@vudovn bilinçli olarak opsiyonelde: inceleme kararı 'tamamlayıcı' (güncel MCP spesifikasyonu + güvenlik kontrol listesi). Birincil sürüm çekirdekteki mcp-builder (Anthropic).",
+  "ucretli_bilincli": "Claude API ile uygulama geliştirmek API kullanımı (token bazlı ücret) gerektirir; bu iş için ücretsiz bir alternatif yok."
 }

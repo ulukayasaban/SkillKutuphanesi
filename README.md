@@ -29,9 +29,13 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `kategoriler.json`, `kategori-kurallari.json` | Alanlar/kategoriler ve otomatik atama kuralları |
 | `gelistiriciler.json` | Repo sahipleri, yıldız, lisans, bakım |
 | `notlar/roller-ve-profiller.md` | Tüm rol ve profillerin özeti (otomatik üretilir) |
+| `notlar/ucretli-skiller.md`, `ucret-siniflandirma.json` | Ücretli / kısmen ücretli skiller ve gerekçeleri (sınıflandırma elle, liste otomatik) |
 | `notlar/` | Kapsam denetimi, geliştiriciler, teknoloji rehberi, T5/T6 referans notları, kategori inceleme raporları |
 | `rehber/` | Süreç notları (aşağıda) |
 | `araclar/` | Python araçları (sadece standart kütüphane + `gh` CLI) |
+
+## Hazır promptlar
+Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 10 prompt: [promptlar/README.md](promptlar/README.md)
 
 ## Rehberler
 1. [Skill ekleme süreci ve örnekler](rehber/01-skill-ekleme-sureci.md)
@@ -56,5 +60,6 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `katalog-uret.py` | KATALOG ve notları üretir |
 | `dogrula.py [--github]` | Tutarlılık; yıldızlı ama tanımsız repo |
 | `gelistirici-bilgisi.py` | Geliştirici bilgileri |
+| `github-skill-listesi.py [--duzenle]` | GitHub 'Yapay Zeka Skillleri' listesi: yeni skill repoları, kopya/eksik üyelik raporu; skill repolarını tek listede toplar |
 | `test.py` | Uçtan uca güvenlik testleri (geçici projede) |
 | `duman-testi.py [--araclar]` | Tüm sürecin hızlı uçtan uca duman testi (git, doğrulama, kapsam, testler, tüm profiller, kurulum yaşam döngüsü, isteğe bağlı gerçek Claude/Codex) |

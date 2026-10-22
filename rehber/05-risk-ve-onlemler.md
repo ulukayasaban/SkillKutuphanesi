@@ -89,6 +89,11 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 
 | 65 | Aylık güncelleme doğrudan master'ı değiştirir, kötü bir kaynak değişikliği fark edilmeden yayılır | Güncelleme `guncelleme/YYYY-AA` dalında; master sadece `--birlestir` ile ve kontroller geçerse değişir; geçmiş `notlar/guncelleme-gecmisi.md` |
 
+| 66 | Tek repo eklerken (`kaynak-cek --repo X`) geçici klasör boşsa yerleştirme diğer TÜM skilleri arşivden düşürür | İndirilmeyen kaynaklar olduğu gibi korunur; boş manifestte yerleştirme başlamaz; önceki bir skill kaybolursa güvenlik kilidi arşive dokunmadan durur (`--kayba-izin-ver` yalnız bilerek) |
+| 67 | Ücretli servis gerektiren skill fark edilmeden role/projeye girer, beklenmedik maliyet | `ucret-siniflandirma.json` (elle, gerekçeli), ön kontrolde `ucretli` UYARI, öneride ücretsizler önde, rol çekirdeğinde ücretli skill dogrula UYARISI, `notlar/ucretli-skiller.md` |
+| 68 | Yeni repoda aynı adlı iki farklı SKILL.md (lemo-opuscar) | İçerik karşılaştırması: biri tercih, diğeri `ad@kaynak` alternatif; projeye birlikte aynı adla kurulamaz |
+| 69 | Skill repoları birden çok GitHub listesinde dağınık; yeni eklenen skill gözden kaçar | Tek kaynak liste "Yapay Zeka Skillleri"; `github-skill-listesi.py` YENİ/kopya/eksik raporu, dogrula --github "YENİ SKILL REPOSU" uyarısı |
+
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).
 - Değerlendirme puanı GitHub verisinden hesaplanır; içerik kalitesini ölçmez. Elle `kalite` (1–5) verince %40 ağırlıkla katılır.

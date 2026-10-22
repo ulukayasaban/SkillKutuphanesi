@@ -249,6 +249,18 @@ def main():
         kod, out = calistir(p4, "--skill", om_eski["id"], "--kuru")
         test("emekli (eski kopya) skill için ön kontrol 'emekli' uyarısı verir", "[UYARI] emekli" in out, out)
 
+    # Ücretli skill ön kontrolde 'ucretli' uyarısı verir; ücretsiz skill vermez
+    ucretli = next((s for s in reg if s.get("ucret") == "ucretli" and not s.get("gizli") and s["durum"] == "tercih"), None)
+    ucretsiz = next((s for s in reg if s.get("ucret") == "ucretsiz" and not s.get("gizli") and s["durum"] == "tercih"
+                     and not s.get("globalde")), None)
+    if ucretli and ucretsiz:
+        p5 = kok / "proje-ucret"
+        p5.mkdir()
+        kod, out = calistir(p5, "--skill", ucretli["id"], "--kuru")
+        kod2, out2 = calistir(p5, "--skill", ucretsiz["id"], "--kuru")
+        test("ücretli skill 'ucretli' uyarısı verir, ücretsiz vermez",
+             "[UYARI] ucretli" in out and "[UYARI] ucretli" not in out2, out + out2)
+
     for g in GLOBAL_KLASORLER.values():
         kod, out = calistir(g, "--skill", "gsap-core", "--evet")
         test(f"güvenlik: {g} reddedilir", kod != 0 and "Güvenlik" in out, out)

@@ -177,6 +177,26 @@ def degerlendir(s, gel):
     return {"puan": p, "not": "A" if p >= 80 else "B" if p >= 65 else "C" if p >= 50 else "D", "ayrinti": ac}
 
 
+UCRET_IZI = re.compile(r"\b[A-Z][A-Z0-9]*_API_KEY\b|primaryEnv|requires? (an? )?[\w .-]{0,30}api key|prepaid|paid (plan|tier|api)|"
+                       r"\b(elevenlabs|heygen|fal\.ai|replicate|runpod|atlas ?cloud|dashscope|volcengine|fish\.audio|minimax)\b", re.I)
+
+
+def ucret_belirle(s, tablo):
+    """Ücret sınıfı: elle tablo > T4 toplu 'kismen' > ücretli servis izi varsa 'belirsiz' > 'ucretsiz'."""
+    for anahtar in (s["id"], s["ad"]):
+        if anahtar in tablo:
+            sinif, not_ = tablo[anahtar]
+            return sinif, not_, "elle"
+    if s.get("tip") == "T4":
+        return "kismen", "Composio hesabı gerekir (ücretsiz katman var); bağlanan uygulamanın kendi planı geçerli", "toplu"
+    sm = KOK / s["yol"] / "SKILL.md"
+    metin = sm.read_text(encoding="utf-8", errors="ignore") if sm.exists() else ""
+    iz = sorted({m.group(0) for m in UCRET_IZI.finditer(metin)})[:5]
+    if iz:
+        return "belirsiz", "ücretli servis izi: " + ", ".join(iz) + " -> ucret-siniflandirma.json'a ekle", "otomatik"
+    return "ucretsiz", "", "otomatik"
+
+
 def kaynak_md(k):
     satirlar = [
         f"# {k['ad']}", "",
@@ -214,6 +234,8 @@ def main():
     manifest = json_oku(GECICI / "cekilen" / "manifest.json")
     if not manifest:
         sys.exit("Önce araclar/kaynak-cek.py çalıştır.")
+    if not manifest.get("kayitlar"):
+        sys.exit("DURDU: indirme manifestinde hiç kayıt yok (kaynak-cek.py hiçbir şey indirmedi). Arşive dokunulmadı.")
     eksik = [m for m in manifest["kayitlar"] if m["inen_dosya"] < m["beklenen_dosya"] or m.get("varyant_eksik")]
     if eksik:
         sys.exit("HATA: eksik inen skiller: " + ", ".join(f"{m['repo']}:{m['klasor_adi']}" for m in eksik))
@@ -350,21 +372,27 @@ def main():
     cekilen_repolar = {m["repo"] for m in manifest["kayitlar"]}
     yeni_kaynaklar = {(x["repo"], x["kaynak_yol"]) for x in skiller}
     kullanilan_id = {x["id"] for x in skiller}
+    arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}
+    korunan_indirilmeyen = set()
     for s in eski_liste:
         kaynak = (s["repo"], s["kaynak_yol"])
         if kaynak in yeni_kaynaklar:
             continue
         if s["repo"] in kayip:
             s["kaynak_durumu"] = "kayip"
+        elif s["repo"] not in cekilen_repolar and s["repo"] in arsivlenen_repolar:
+            # Bu çalıştırmada İNDİRİLMEMİŞ kaynak (ör. `kaynak-cek.py --repo X` ile tek repo eklendi):
+            # kayıt ve arşiv kopyası OLDUĞU GİBİ korunur; aksi hâlde kısmi çalıştırma tüm arşivi silerdi.
+            korunan_indirilmeyen.add(s["id"])
         elif s["repo"] in cekilen_repolar and s.get("tip") in ("T1", "T2", "T3", "T4"):
             s["kaynak_durumu"] = "kaynakta-kaldirildi"
             s.setdefault("kaldirilma_tarihi", bugun)
             s.setdefault("kaldirildigi_commit", next(m["commit"] for m in manifest["kayitlar"] if m["repo"] == s["repo"]))
         else:
             continue
-        if any(x["ad"] == s["ad"] and x["durum"] == "tercih" for x in skiller):
+        if s["id"] not in korunan_indirilmeyen and any(x["ad"] == s["ad"] and x["durum"] == "tercih" for x in skiller):
             s["durum"] = "alternatif"  # aynı adın güncel bir tercihi varsa o kazanır
-        if s["id"] in kullanilan_id:
+        if s["id"] in kullanilan_id and s["id"] not in korunan_indirilmeyen:
             s["id"] = f"{s['ad']}@{kisa_kaynak(s['repo'])}-eski"
         kullanilan_id.add(s["id"])
         eski_yol = KOK / s["yol"]
@@ -383,7 +411,56 @@ def main():
         s["varyantlar"] = yeni_var
         skiller.append(s)
 
+    # Kısmi indirme: korunan (indirilmeyen) bir skill ile yeni indirilen skill aynı adı taşıyorsa çakışmayı çöz
+    oncelik = {}
+    for k in json_oku(KOK / "kaynaklar.json")["repolar"]:
+        oncelik[k["repo"]] = min(oncelik.get(k["repo"], 99), k.get("oncelik", 5))
+    korunan = {s["id"]: s for s in skiller if s["id"] in korunan_indirilmeyen}
+    for y in [s for s in skiller if s["id"] not in korunan_indirilmeyen]:
+        rakip = next((k for k in korunan.values() if k["ad"] == y["ad"]), None)
+        if not rakip:
+            continue
+        if rakip.get("ana_hash") == y.get("ana_hash"):
+            # birebir aynı içerik: yeni kayıt eklenmez, korunanın kopya kaynağı olur
+            rakip.setdefault("kopya_kaynaklar", []).append(f"{y['repo']}:{y['kaynak_yol'] or '.'}")
+            shutil.rmtree(YENI / Path(y["yol"]).relative_to("arsiv"), ignore_errors=True)
+            skiller.remove(y)
+            print(f"ÇAKIŞMA: {y['id']} birebir aynısı {rakip['id']} -> kopya olarak not edildi")
+            continue
+        yeni_kazanir = oncelik.get(y["repo"], 5) < oncelik.get(rakip["repo"], 5)
+        kaybeden = rakip if yeni_kazanir else y
+        kazanan = y if yeni_kazanir else rakip
+        if kazanan["durum"] != "tercih" and not any(x["ad"] == kazanan["ad"] and x["durum"] == "tercih" and x is not kaybeden for x in skiller):
+            kazanan["durum"] = "tercih"
+        kaybeden["durum"] = "alternatif"
+        if kaybeden["id"] == kaybeden["ad"]:
+            yeni_id = f"{kaybeden['ad']}@{kisa_kaynak(kaybeden['repo'])}"
+            n = 2
+            while yeni_id in kullanilan_id:
+                yeni_id = f"{kaybeden['ad']}@{kisa_kaynak(kaybeden['repo'])}-{n}"
+                n += 1
+            eski_k = YENI / Path(kaybeden["yol"]).relative_to("arsiv")
+            yeni_k = eski_k.parent / yeni_id
+            if eski_k.exists():
+                eski_k.rename(yeni_k)
+            vk = YENI / "_varyantlar" / kaybeden["id"]
+            if vk.exists():
+                vk.rename(YENI / "_varyantlar" / yeni_id)
+                kaybeden["varyantlar"] = {a: v.replace(f"/_varyantlar/{kaybeden['id']}/", f"/_varyantlar/{yeni_id}/")
+                                          for a, v in (kaybeden.get("varyantlar") or {}).items()}
+            kaybeden["id"] = yeni_id
+            kaybeden["yol"] = goreli(yeni_k)
+            kullanilan_id.add(yeni_id)
+        print(f"ÇAKIŞMA: '{kazanan['ad']}' -> tercih {kazanan['id']} ({kazanan['repo']}), alternatif {kaybeden['id']} ({kaybeden['repo']})")
+
     bilesenler = []
+    # indirilmeyen kaynakların bileşenleri korunur
+    for b in json_oku(REGISTRY, {}).get("bilesenler", []):
+        if b["repo"] not in cekilen_repolar and b["repo"] in arsivlenen_repolar and (KOK / b["yol"]).exists():
+            h = YENI / Path(b["yol"]).relative_to("arsiv")
+            h.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(KOK / b["yol"], h)
+            bilesenler.append(b)
     for b in manifest.get("bilesenler", []):
         h = YENI / "_bilesenler" / b["kimlik"] / b["yol"]
         h.parent.mkdir(parents=True, exist_ok=True)
@@ -392,11 +469,24 @@ def main():
         bilesenler.append({"repo": b["repo"], "commit": b["commit"], "tur": tur, "kaynak_yol": b["yol"],
                            "yol": goreli(h), "ad": Path(b["yol"]).stem})
 
+    ucret_tablo = json_oku(KOK / "ucret-siniflandirma.json", {"siniflar": {}})["siniflar"]
+    for s in skiller:
+        s["ucret"], s["ucret_notu"], s["ucret_kaynagi"] = ucret_belirle(s, ucret_tablo)
     skiller.sort(key=lambda s: (s["kategori"], s["id"]))
+    # Güvenlik kilidi: önceki registry'deki kaynakların hepsi ya yeniden yerleşmiş ya da korunmuş olmalı.
+    yeni_k = {(s["repo"], s["kaynak_yol"]) for s in skiller}
+    kayip_k = [s["id"] for s in eski_liste if (s["repo"], s["kaynak_yol"]) not in yeni_k
+               and not any(f"{s['repo']}:{s['kaynak_yol'] or '.'}" in x.get("kopya_kaynaklar", []) for x in skiller)]
+    if kayip_k and "--kayba-izin-ver" not in sys.argv:
+        shutil.rmtree(YENI, ignore_errors=True)
+        sys.exit(f"DURDU (güvenlik kilidi): önceki {len(kayip_k)} skill yeni arşivde yok ({', '.join(kayip_k[:8])}…). "
+                 "Arşive ve registry'ye DOKUNULMADI. Bilerek kaldırıyorsan --kayba-izin-ver ile çalıştır.")
     reg_yeni = KOK / ".registry-yeni.json"
     json_yaz(reg_yeni, {"_aciklama": "TEK GERÇEK KAYNAK. araclar/arsiv-yerlestir.py üretir; inceleme alanları elle doldurulur ve korunur.",
                         "guncelleme": bugun, "skiller": skiller, "bilesenler": bilesenler,
-                        "denetim": manifest.get("denetim", {})})
+                        "denetim": {**{r: d for r, d in json_oku(REGISTRY, {}).get("denetim", {}).items()
+                                        if r not in cekilen_repolar and r in arsivlenen_repolar},
+                                     **manifest.get("denetim", {})}})
     # Yer değiştirme: önce her şey hazır, sonra iki hızlı rename
     eski_arsiv = KOK / ".arsiv-eski"
     shutil.rmtree(eski_arsiv, ignore_errors=True)

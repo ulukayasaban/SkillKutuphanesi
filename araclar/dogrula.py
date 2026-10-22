@@ -34,6 +34,11 @@ def main():
                 hatalar.append(f"araç sürümü eksik: {s['id']} -> {v}")
             elif s.get("varyant_hash", {}).get(arac) and klasor_hash(KOK / v) != s["varyant_hash"][arac]:
                 hatalar.append(f"araç sürümü registry ile uyuşmuyor: {v}")
+    for s in skiller:
+        if s.get("ucret") == "belirsiz" and not s.get("gizli"):
+            uyarilar.append(f"ücret sınıflandırılmadı: {s['id']} ({s.get('ucret_notu', '')[:90]})")
+        if "ucret" not in s:
+            hatalar.append(f"ücret alanı yok: {s['id']} (arsiv-yerlestir.py çalıştır)")
     kayitli = {str((KOK / s["yol"]).resolve()) for s in skiller}
     for sm in ARSIV.rglob("KAYNAK.md"):
         if str(sm.parent.resolve()) not in kayitli:
@@ -52,6 +57,9 @@ def main():
                 uyarilar.append(f"rol {f.stem}: '{x}' emekli/kaynakta kaldırılmış; arşiv kopyası kullanılıyor (yerine yenisini düşün)")
         for x in r["cekirdek"]:
             s = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
+            if s and s.get("ucret") == "ucretli" and "ucretli_bilincli" not in r:
+                uyarilar.append(f"rol {f.stem}: çekirdekte ÜCRETLİ skill '{x}' (ücretsiz alternatif varsa çekirdeğe onu koy; "
+                                "rol bilinçli olarak ücretliyse rol dosyasına \"ucretli_bilincli\": \"gerekçe\" ekle)")
             if s and s.get("inceleme") == "yeniden-incelenecek":
                 uyarilar.append(f"rol {f.stem}: çekirdek skill '{x}' güncellemeden sonra yeniden incelenmeli")
         gruplar = Counter()
@@ -98,6 +106,15 @@ def main():
         if r.returncode != 0 or not r.stdout.strip():
             uyarilar.append("GitHub yıldız listesi okunamadı (gh auth status?); yeni repo kontrolü YAPILMADI")
         tanimli = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"]}
+        # Skill listesindeki ('Yapay Zeka Skillleri') ama kütüphanede olmayan repolar: yeni eklenecek skill kaynakları
+        hs = json_oku(KAYNAKLAR).get("github_skill_listesi", "yapay-zeka-skillleri")
+        lr = subprocess.run(["gh", "api", "graphql", "-f", "query={viewer{lists(first:50){nodes{slug items(first:100)"
+                             "{nodes{... on Repository{nameWithOwner}}}}}}}", "--jq",
+                             f'.data.viewer.lists.nodes[]|select(.slug=="{hs}")|.items.nodes[].nameWithOwner'],
+                            capture_output=True, text=True)
+        for repo in lr.stdout.split():
+            if repo not in tanimli:
+                uyarilar.append(f"YENİ SKILL REPOSU (skill listesinde, kütüphanede yok): {repo} -> rehber/03-yeni-skill-ekleme.md")
         for repo in r.stdout.split():
             if repo not in tanimli:
                 uyarilar.append(f"yıldızlı ama kaynaklar.json'da yok: {repo}")

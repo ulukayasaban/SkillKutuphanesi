@@ -512,6 +512,9 @@ def puanla(s, sorgu, teknolojiler):
         p += s["degerlendirme"]["puan"] / 50
         if s["durum"] == "alternatif":
             p -= 1
+        p -= {"ucretli": 2, "belirsiz": 1, "kismen": 0.5}.get(s.get("ucret"), 0)  # ücretsizler önde
+        if s.get("ortusme_rolu") == "emekli" or s.get("kaynak_durumu"):
+            p -= 6  # emekli / kaynakta kaldırılmış: yerine geçeni varken öne çıkmasın
     return p, eslesen, tek_esl
 
 
@@ -630,6 +633,12 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                            f"skill'e dayanıyor ama '{kad}' projeye kurulmuyor; bağlantılar boşa düşer (ekle: --skill {bilgi['id']})")
             elif kurulum != kad:
                 rapor.ekle("BİLGİ", "kardes-yol", f"{ad}: ../{kad}/ bağlantıları projedeki ada çevrilecek: ../{kurulum}/")
+        if s.get("ucret") == "ucretli":
+            rapor.ekle("UYARI", "ucretli", f"{ad}: ÜCRETLİ servis gerektirir — {s.get('ucret_notu', '')}")
+        elif s.get("ucret") == "kismen":
+            rapor.ekle("BİLGİ", "kismen-ucretli", f"{ad}: ücretsiz yolu var, bazı kısımlar ücretli/koşullu — {s.get('ucret_notu', '')}")
+        elif s.get("ucret") == "belirsiz":
+            rapor.ekle("UYARI", "ucret-belirsiz", f"{ad}: ücret durumu sınıflandırılmadı ({s.get('ucret_notu', '')})")
         if s.get("ortusme_rolu") == "emekli" and s.get("kaynak_durumu") != "kaynakta-kaldirildi":
             rapor.ekle("UYARI", "emekli", f"{ad}: eski/emekli bir sürüm (yerine geçeni var); inceleme notu: "
                        f"{(s.get('kalite_notu') or '')[-160:]}")
@@ -1010,7 +1019,10 @@ def oner(a, proje, skiller):
     for k, l in kategori.items():
         print(f"\n## {k}")
         for p, s, e, t in l:
-            print(f"  {s['id']:40s} puan {s['degerlendirme']['puan']:3d} ({s['degerlendirme']['not']}) · "
+            ucret = {"ucretli": " 💲ÜCRETLİ", "kismen": " (kısmen ücretli)", "belirsiz": " (ücret?)"}.get(s.get("ucret"), "")
+            if s.get("ortusme_rolu") == "emekli" or s.get("kaynak_durumu"):
+                ucret += " 🗄️emekli"
+            print(f"  {s['id'] + ucret:40s} puan {s['degerlendirme']['puan']:3d} ({s['degerlendirme']['not']}) · "
                   f"Codex {s['uyum']['codex']:16s} · eşleşen: {', '.join(e + sorted(t))}")
     roller = {}
     for f in ROLLER.glob("*.json"):
@@ -1035,7 +1047,8 @@ def listele(a, skiller):
             continue
         n += 1
         ozet = (s.get("ozet_tr") or s["aciklama"])[:80]
-        print(f"{s['kategori']:46s} {s['id']:38s} {s['degerlendirme']['puan']:3d} {s['uyum']['codex']:16s} {ozet}")
+        u = {"ucretli": "💲", "kismen": "½", "belirsiz": "?"}.get(s.get("ucret"), " ")
+        print(f"{s['kategori']:46s} {u} {s['id']:38s} {s['degerlendirme']['puan']:3d} {s['uyum']['codex']:16s} {ozet}")
     print(f"\n{n} skill")
 
 

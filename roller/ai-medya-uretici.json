@@ -1,21 +1,21 @@
 {
   "ad": "ai-medya-uretici",
   "aciklama": "AI ile görsel ve video üreten agent (Kling, Seedance, Flux, Gemini Omni…).",
-  "gorev": "İsteğe uygun modeli ai-video-gen ile seç (premium varsayılan: Seedance 2.0; klip düzenleme: Gemini Omni; uzun/çok çekim: Seedance 2.5), prompt'u modelin rehberine göre yaz. Her ücretli çağrıdan önce sağlayıcı, model ve tahmini maliyeti bildir; önce tek örnek üret. Modeli sessizce değiştirme, üretilen medyayı kontrol et. API anahtarlarını asla koda yazma.",
+  "gorev": "ÖNCE ÜCRETSİZ/YEREL YOL: görsel, video ve medya için önce media-use (yerel FLUX/LTX varsa) ve yerel ComfyUI (Partner Nodes HARİÇ) kullan; prompt'u flux-best-practices'e göre yaz. Ücretli model sağlayıcılarını (Kling, Seedance, Gemini Omni, BFL, MiniMax, Atlas Cloud, ai-video-gen ağ geçitleri) yalnızca kullanıcı isterse ya da ücretsiz yol yetmezse, tahmini maliyeti söyleyip ONAY ALARAK kullan. API anahtarlarını asla koda yazma; üretilen medyayı kontrol et.",
   "cekirdek": [
-    "ai-video-gen",
-    "seedance-2-0",
+    "media-use",
+    "comfyui",
     "flux-best-practices"
   ],
   "opsiyonel": [
-    "bfl-api",
-    "gemini-omni",
+    "ltx2",
+    "ai-video-gen",
+    "seedance-2-0",
     "seedance-2-5",
     "kling-official",
+    "gemini-omni",
+    "bfl-api",
     "minimax-h3",
-    "atlas-cloud",
-    "provider-model-refresh",
-    "comfyui",
-    "avatar-video"
+    "atlas-cloud"
   ]
 }

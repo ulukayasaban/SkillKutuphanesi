@@ -1,16 +1,27 @@
 # 03 — Sonradan Yeni Skill / Repo Ekleme
 
-## A) GitHub'da yeni bir repo yıldızladın
+## A) "Yapay Zeka Skillleri" listesine yeni repo ekledin ("kontrol et")
+
+Tüm skill repoları GitHub'da tek listede durur: **"Yapay Zeka Skillleri"** (`kaynaklar.json` → `github_skill_listesi`).
+Hazır prompt: `promptlar/07-yeni-skill-reposu-ekle.md`.
 
 ```bash
 cd ~/Documents/SkillKutuphanesi
-python3 araclar/dogrula.py --github     # "UYARI: yıldızlı ama kaynaklar.json'da yok: owner/repo"
+python3 araclar/github-skill-listesi.py   # YENİ: listede olup kütüphanede olmayan repolar; ayrıca kopya/eksik liste üyeliği
+python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da aynı listeyi kullanır
 ```
 
-1. **Repoyu tanı** (skill var mı, nerede, kaç tane?):
+1. **Repoyu tanı** (skill var mı, nerede, kaç tane, lisans, ücret):
    ```bash
    gh api "repos/OWNER/REPO/git/trees/HEAD?recursive=1" --jq '.tree[].path | select(test("(^|/)SKILL\\.md$";"i"))'
    ```
+   **Çakışma kontrolü (zorunlu, eklemeden önce):**
+   - Aynı **ad**: `registry.json`'da aynı `ad` var mı? İçerik aynıysa kopya sayılır; farklıysa `oncelik` küçük olan "tercih" olur.
+   - Aynı **iş**: aynı örtüşme grubunda (`ortusme_grubu`) birincil var mı? Yeni skill birincil / tamamlayıcı / alternatif mi?
+   - Repo içinde **aynı adlı birden fazla SKILL.md** (araç sürümleri ya da farklı sürümler) var mı? Araç bunları otomatik ayırır.
+   - **Global'de** aynı adlı farklı skill var mı? Projeye `<ad>--kutuphane` adıyla kurulur.
+   **Ücret kontrolü (zorunlu):** ücretli API/abonelik/lisans gerektiriyor mu? `ucret-siniflandirma.json`'a gerekçesiyle ekle
+   (`ucretsiz` / `kismen` / `ucretli`); eklemezsen ücretli servis izi olan skill `belirsiz` olur ve dogrula uyarır.
 2. **Tipini seç** ve `kaynaklar.json` → `repolar` listesine bir kayıt ekle:
 
    | Tip | Ne zaman | Örnek kayıt |
@@ -36,6 +47,7 @@ python3 araclar/dogrula.py --github     # "UYARI: yıldızlı ama kaynaklar.json
 4. **Çalıştır:**
    ```bash
    python3 araclar/gelistirici-bilgisi.py         # geliştirici bilgisi (yıldız, lisans, bakım)
+   # (kısmi indirme güvenli: indirilmeyen kaynaklar korunur; bir skill kaybolursa güvenlik kilidi işlemi durdurur)
    python3 araclar/kaynak-cek.py --repo owner/ad   # sadece bu repo
    python3 araclar/arsiv-yerlestir.py
    python3 araclar/kapsam-denetimi.py              # 0 sorun olmalı

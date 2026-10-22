@@ -1,0 +1,302 @@
+{
+  "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
+  "guncelleme": "2026-10-22",
+  "siniflar": {
+    "elevenlabs": [
+      "ucretli",
+      "ElevenLabs API anahtarı (ELEVENLABS_API_KEY); ücretsiz deneme kotası sınırlı. Ücretsiz yol: media-use (Kokoro TTS, MusicGen, Openverse SFX)"
+    ],
+    "agents": [
+      "ucretli",
+      "ElevenLabs sesli agent platformu (API anahtarı)"
+    ],
+    "music": [
+      "ucretli",
+      "ElevenLabs Music API. Ücretsiz yol: media-use (yerel MusicGen)"
+    ],
+    "sound-effects": [
+      "ucretli",
+      "ElevenLabs SFX API. Ücretsiz yol: media-use (Openverse + 21 yerleşik çevrimdışı efekt)"
+    ],
+    "speech-to-text": [
+      "ucretli",
+      "ElevenLabs Scribe API. Ücretsiz yol: media-use transcribe (Parakeet/Whisper), video-understand"
+    ],
+    "setup-api-key": [
+      "ucretli",
+      "ElevenLabs API anahtarı kurulum rehberi"
+    ],
+    "text-to-speech": [
+      "ucretli",
+      "HeyGen Starfish TTS (HEYGEN_API_KEY). Ücretsiz yol: media-use (Kokoro)"
+    ],
+    "heygen": [
+      "ucretli",
+      "HeyGen API (kullanımdan kaldırıldı; create-video / avatar-video)"
+    ],
+    "avatar-video": [
+      "ucretli",
+      "HeyGen API"
+    ],
+    "create-video": [
+      "ucretli",
+      "HeyGen Video Agent API"
+    ],
+    "faceswap": [
+      "ucretli",
+      "HeyGen API"
+    ],
+    "video-translate": [
+      "ucretli",
+      "HeyGen API"
+    ],
+    "kling-official": [
+      "ucretli",
+      "Kling / fal.ai API"
+    ],
+    "seedance-2-0": [
+      "ucretli",
+      "Seedance (Atlas Cloud / fal.ai / BytePlus) API"
+    ],
+    "seedance-2-5": [
+      "ucretli",
+      "Seedance API sağlayıcıları"
+    ],
+    "minimax-h3": [
+      "ucretli",
+      "MiniMax / fal.ai API"
+    ],
+    "atlas-cloud": [
+      "ucretli",
+      "Atlas Cloud API (ATLASCLOUD_API_KEY)"
+    ],
+    "bfl-api": [
+      "ucretli",
+      "Black Forest Labs FLUX API (BFL_API_KEY)"
+    ],
+    "gemini-omni": [
+      "ucretli",
+      "Gemini API / fal.ai (video üretimi ücretli kotada)"
+    ],
+    "grok-media": [
+      "ucretli",
+      "xAI API"
+    ],
+    "lyria": [
+      "ucretli",
+      "Google Lyria (Gemini/Vertex API)"
+    ],
+    "doubao-tts": [
+      "ucretli",
+      "Volcengine Doubao API"
+    ],
+    "dashscope": [
+      "ucretli",
+      "Alibaba Cloud DashScope API"
+    ],
+    "fish-audio-tts": [
+      "ucretli",
+      "fish.audio API"
+    ],
+    "azure-speech-to-text": [
+      "ucretli",
+      "Azure Speech kaynağı (ücretsiz F0 katmanı sınırlı, kart gerektirir)"
+    ],
+    "azure-text-to-speech": [
+      "ucretli",
+      "Azure Speech kaynağı (ücretsiz F0 katmanı sınırlı, kart gerektirir)"
+    ],
+    "ai-video-gen": [
+      "ucretli",
+      "HeyGen / fal.ai / Kling / Gemini API ağ geçitleri"
+    ],
+    "acestep": [
+      "ucretli",
+      "RunPod uç noktası (RUNPOD_API_KEY)"
+    ],
+    "3d-asset-generation": [
+      "kismen",
+      "Üretim Atlas Cloud / fal.ai ile ücretli; CC0 Kenney kataloğu ve Blender yolu ücretsiz"
+    ],
+    "claude-api": [
+      "ucretli",
+      "Anthropic API kullanımı ücretli (token bazlı)"
+    ],
+    "claude-opus-4-5-migration": [
+      "ucretli",
+      "Claude API ile çalışan kodun geçişi; API kullanımı ücretli"
+    ],
+    "substance-3d-texturing": [
+      "ucretli",
+      "Adobe Substance 3D Painter lisansı/aboneliği"
+    ],
+    "provider-model-refresh": [
+      "kismen",
+      "Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel)"
+    ],
+    "ltx2": [
+      "kismen",
+      "Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir"
+    ],
+    "comfyui": [
+      "kismen",
+      "Yerel ComfyUI ücretsiz; 'Partner Nodes' Comfy hesabı ve ön ödemeli kredi ister"
+    ],
+    "media-use": [
+      "kismen",
+      "Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HeyGen isteğe bağlı ve ücretli çağrıdan önce onay ister"
+    ],
+    "hyperframes": [
+      "kismen",
+      "HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı"
+    ],
+    "hyperframes-media": [
+      "kismen",
+      "Ücretsiz yerel yol var; ElevenLabs/HeyGen/Lyria isteğe bağlı"
+    ],
+    "music-to-video": [
+      "kismen",
+      "Ücretsiz yol var; ElevenLabs/HeyGen/Lyria isteğe bağlı"
+    ],
+    "website-to-video": [
+      "kismen",
+      "Ücretsiz yol var; ElevenLabs/HeyGen isteğe bağlı"
+    ],
+    "product-launch-video": [
+      "kismen",
+      "HeyGen/Gemini isteğe bağlı"
+    ],
+    "pr-to-video": [
+      "kismen",
+      "HeyGen isteğe bağlı"
+    ],
+    "faceless-explainer": [
+      "kismen",
+      "HeyGen isteğe bağlı"
+    ],
+    "changelog-video": [
+      "kismen",
+      "Yerel Whisper; HeyGen sesi isteğe bağlı"
+    ],
+    "motion-graphics": [
+      "kismen",
+      "GEMINI/GOOGLE anahtarları isteğe bağlı; yoksa yerel/varlıksız yol"
+    ],
+    "design": [
+      "kismen",
+      "Logo/görsel üretimi Gemini/MuAPI anahtarı ister; tasarım rehberi ücretsiz"
+    ],
+    "remotion": [
+      "kismen",
+      "Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir"
+    ],
+    "remotion-best-practices": [
+      "kismen",
+      "Remotion lisansı: şirketler için ticari lisans gerekebilir"
+    ],
+    "figma": [
+      "kismen",
+      "FIGMA_TOKEN (ücretsiz planla çalışır); değişkenler (variables) Enterprise ister"
+    ],
+    "spline-interactive": [
+      "kismen",
+      "Spline ücretsiz plan; bazı dışa aktarma/ekip özellikleri ücretli"
+    ],
+    "rive-interactive": [
+      "kismen",
+      "Rive ücretsiz plan; bazı özellikler ücretli"
+    ],
+    "init-bootstrap": [
+      "kismen",
+      "Gemini API anahtarı isteğe bağlı (ücretsiz katman var)"
+    ],
+    "notebooklm": [
+      "kismen",
+      "Google hesabı; NotebookLM kullanım kotaları/planları"
+    ],
+    "langsmith-fetch": [
+      "kismen",
+      "LangSmith hesabı (ücretsiz katman var)"
+    ],
+    "connect": [
+      "kismen",
+      "Composio hesabı (ücretsiz katman var)"
+    ],
+    "connect-apps": [
+      "kismen",
+      "Composio hesabı (ücretsiz katman var)"
+    ],
+    "lemo-opuscar": [
+      "ucretsiz",
+      "MIT; varsayılan seslendirme çevrimdışı Kokoro. edge-tts ücretsiz ama metni Microsoft'a gönderir (yalnızca onayla)"
+    ],
+    "agent-reach": [
+      "ucretsiz",
+      "API ücreti yok (kendi CLI'si)"
+    ],
+    "video-understand": [
+      "ucretsiz",
+      "Yerel ffmpeg + Whisper, API anahtarı yok"
+    ],
+    "video-edit": [
+      "ucretsiz",
+      "Yerel ffmpeg"
+    ],
+    "ffmpeg": [
+      "ucretsiz",
+      "Yerel ffmpeg"
+    ],
+    "playwright-recording": [
+      "ucretsiz",
+      "Yerel Playwright"
+    ],
+    "synthetic-screen-recording": [
+      "ucretsiz",
+      "Remotion sahne rehberi; ücretli servis yok (Remotion lisans notu remotion skilinde)"
+    ],
+    "hyperframes-studio": [
+      "ucretsiz",
+      "HyperFrames masaüstü uygulaması/Studio rehberi"
+    ],
+    "visual-style": [
+      "ucretsiz",
+      "Görsel stil dosyası rehberi"
+    ],
+    "seo-fundamentals": [
+      "ucretsiz",
+      "Bilgi rehberi; araç önerileri isteğe bağlı"
+    ],
+    "geo-fundamentals": [
+      "ucretsiz",
+      "Bilgi rehberi"
+    ],
+    "frontend-design@vudovn": [
+      "ucretsiz",
+      "SHOPIFY_API_KEY sadece örnek kodda geçiyor; skill bir tasarım rehberi"
+    ],
+    "gsap-plugins": [
+      "ucretsiz",
+      "Tüm GSAP eklentileri ticari kullanım dahil ücretsiz (Webflow sonrası)"
+    ],
+    "deprecation-and-migration": [
+      "ucretsiz",
+      "'replicate' kelimesi kopyalama anlamında; ücretli servis yok"
+    ],
+    "mcp-integration": [
+      "ucretsiz",
+      "MY_API_KEY yapılandırma örneği; ücretli servis gerektirmez"
+    ],
+    "hyperframes-registry@calesthio": [
+      "kismen",
+      "Eski OpenMontage kopyası; HeyGen isteğe bağlı"
+    ],
+    "remotion-to-hyperframes@calesthio": [
+      "kismen",
+      "Eski OpenMontage kopyası; HeyGen isteğe bağlı"
+    ],
+    "video-toolkit": [
+      "ucretli",
+      "Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli"
+    ]
+  }
+}

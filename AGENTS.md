@@ -22,5 +22,11 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 - "Skilleri güncelle" (aylık) → `python3 araclar/arsiv-guncelle.py` (rapor) → `--uygula --dal` (güncelleme `guncelleme/YYYY-AA`
   dalında; master değişmez) → kullanıcıya dal özetini ve `notlar/guncelleme-gecmisi.md` kaydını göster → onay gelirse
   `--birlestir <dal>`. Sonra yeniden incelenecek skilleri incele, etkilenen projeler için `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
-- "Yeni repo yıldızladım" → `rehber/03-yeni-skill-ekleme.md`.
+- "Yeni skill ekledim, kontrol et" → kaynak: GitHub **"Yapay Zeka Skillleri"** listesi (tüm skill repoları tek listede).
+  `python3 araclar/github-skill-listesi.py` ile YENİ repoları bul, `promptlar/07-yeni-skill-reposu-ekle.md` /
+  `rehber/03-yeni-skill-ekleme.md` adımlarını uygula: **çakışma kontrolü** (aynı ad, aynı iş, aynı repoda birden fazla sürüm, global'de
+  farklı sürüm) ve **ücret sınıflandırması** (`ucret-siniflandirma.json`) zorunlu; kullanıcı onayı olmadan kaynak ekleme.
+- Ücret: ücretsiz yol önce. Ücretli skill (`ucret: ucretli`) rol çekirdeğine ancak gerekçeyle (`ucretli_bilincli`); kurulum raporunda
+  ücretli skilleri ayrıca belirt. Liste: `notlar/ucretli-skiller.md`.
+- Hazır promptlar: `promptlar/` (kullanıcıya proje başlangıcı, ekleme, güncelleme, bakım için).
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.

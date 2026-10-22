@@ -26,7 +26,8 @@ def satir(s):
     if s.get("ortusme_rolu"):
         durum += f" {s['ortusme_rolu']}"
     d = s.get("degerlendirme", {})
-    return (f"| `{s['id']}` | {durum} | {ozet} | {tek} | {UYUM.get(s['uyum']['codex'], '?')} | "
+    ucret = {"ucretli": "💲 ücretli", "kismen": "½ kısmen", "belirsiz": "? belirsiz"}.get(s.get("ucret"), "ücretsiz")
+    return (f"| `{s['id']}` | {durum} | {ozet} | {tek} | {ucret} | {UYUM.get(s['uyum']['codex'], '?')} | "
             f"{d.get('puan', '-')} {d.get('not', '')} | {YUK[s['baglam_yuku']]} {s['boyut_kb']}KB | {glob} | {s['repo']} |")
 
 
@@ -60,9 +61,9 @@ def main():
         for k, acik in v["kategoriler"].items():
             liste = [s for s in gorunur if s["kategori"] == f"{a}/{k}"]
             out += ["", f"### {k}", "", f"_{acik}_ · not: `notlar/{a}/{k}.md`", "",
-                    "| Skill | Durum | Ne yapar | Teknoloji | Codex | Puan | Yük | Globalde | Kaynak |",
-                    "|---|---|---|---|---|---|---|---|---|"]
-            out += [satir(s) for s in liste] or ["| – | | | | | | | | |"]
+                    "| Skill | Durum | Ne yapar | Teknoloji | Ücret | Codex | Puan | Yük | Globalde | Kaynak |",
+                    "|---|---|---|---|---|---|---|---|---|---|"]
+            out += [satir(s) for s in liste] or ["| – | | | | | | | | | |"]
     (KOK / "KATALOG.md").write_text("\n".join(out) + "\n", encoding="utf-8")
 
     ent = ["# Entegrasyon Kataloğu (Composio)", "",
@@ -159,6 +160,23 @@ def main():
     if kayip:
         out2 += ["", f"Hiçbir profilde olmayan roller (yalnız `--rol` ile): {', '.join(kayip)}"]
     (KOK / "notlar" / "roller-ve-profiller.md").write_text("\n".join(out2) + "\n", encoding="utf-8")
+
+    # Ücretli / kısmen ücretli skiller
+    uc = ["# Ücretli ve Kısmen Ücretli Skiller", "",
+          "> `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; "
+          "ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.", ""]
+    for sinif, baslik in (("ucretli", "💲 Ücretli (ücretli API/abonelik olmadan çalışmaz)"),
+                          ("kismen", "½ Kısmen (ücretsiz yolu var; ücretli kısım isteğe bağlı/koşullu)"),
+                          ("belirsiz", "? Sınıflandırılmamış")):
+        liste = sorted((s for s in gorunur if s.get("ucret") == sinif), key=lambda s: (s["kategori"], s["id"]))
+        if not liste:
+            continue
+        uc += [f"## {baslik} — {len(liste)}", "", "| Skill | Kategori | Neden |", "|---|---|---|"]
+        uc += [f"| `{s['id']}` | {s['kategori'].split('/')[1]} | {s.get('ucret_notu', '').replace('|', '/')} |" for s in liste]
+        uc.append("")
+    gizli_k = sum(1 for s in gizli if s.get("ucret") == "kismen")
+    uc += [f"Gizli entegrasyon kataloğundaki {gizli_k} Composio skili toplu olarak 'kısmen' (Composio hesabı; ücretsiz katman var)."]
+    (KOK / "notlar" / "ucretli-skiller.md").write_text("\n".join(uc) + "\n", encoding="utf-8")
 
     tek = defaultdict(list)
     for s in gorunur:

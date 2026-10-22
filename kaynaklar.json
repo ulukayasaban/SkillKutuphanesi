@@ -1,5 +1,6 @@
 {
   "_aciklama": "Arşivin kaynak listesi. Yeni repo eklemek için buraya bir kayıt ekle ve `python3 araclar/arsiv-olustur.py` çalıştır. tip: T1 skill koleksiyonu | T2 ürün skilleri (sadece 'dahil' yolları) | T3 repo-içi geliştirici skilli (arşivlenir, varsayılan listede gizli) | T4 entegrasyon kataloğu (arşivlenir, varsayılan listede gizli) | T5 kütüphane/araç (kod indirilmez, referans notu) | T6 tasarım teknolojisi (kod indirilmez, 'nasıl çalışır' kartı). oncelik: aynı isimli skill çakışmasında küçük sayı kazanır.",
+  "github_skill_listesi": "yapay-zeka-skillleri",
   "ayna_klasorler": [
     "^\\.factory/",
     "^cli/assets/",
@@ -167,6 +168,13 @@
       "oncelik": 6,
       "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
       "not": "Global klasörlerde zaten kurulu sürümü var; kütüphane kopyası sadece yeni projeler için."
+    },
+    {
+      "repo": "lemomo-ai/lemo-opuscar",
+      "tip": "T1",
+      "oncelik": 3,
+      "bagimlilik": "Çalışınca kendi kütüphanesini ev dizinine indirir/kopyalar (~/lemo-opuscar veya ~/.lemo-opuscar), Node + ffmpeg (+ seslendirme için Python/Kokoro) ister. Ücretsiz: varsayılan TTS çevrimdışı Kokoro; edge-tts metni Microsoft'a gönderir (sadece kullanıcı onaylarsa).",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-10-22'de eklendi. plugin/skills ve tools/directory altında aynı adlı iki farklı SKILL.md var (çakışma kuralı: biri tercih, diğeri alternatif)."
     },
     {
       "repo": "vercel/next.js",

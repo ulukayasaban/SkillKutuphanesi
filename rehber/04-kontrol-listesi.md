@@ -22,6 +22,10 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `global-cakisma-yeni` | UYARI | Kurulumdan sonra globale aynı adlı farklı skill eklenmiş (Claude'da global kazanır) | `--kaldir` + yeniden ekle (ekli adla kurulur) |
 | `kaynak-yok` | UYARI | Kurulu skill'in kaynağı kütüphanede artık yok | Projede olduğu gibi kalır; başka repo'nunki otomatik konmaz |
 | `onarilacak` | BİLGİ | Eksik/bozuk kurulum (`--guncelle` onarır) | — |
+| `ucretli` | UYARI | Skill ücretli bir API/abonelik/lisans gerektirir (`notlar/ucretli-skiller.md`) | Ücretsiz alternatifini seç; gerekiyorsa bilerek onayla |
+| `kismen-ucretli` | BİLGİ | Ücretsiz yolu var, bazı kısımları ücretli/koşullu | Agent'a ücretsiz yolu önce kullanmasını söyle (`promptlar/06`) |
+| `ucret-belirsiz` | UYARI | Ücret durumu sınıflandırılmamış | `ucret-siniflandirma.json`'a ekle |
+| `emekli` | UYARI | Eski/emekli sürüm (yerine geçeni var) | Yerine geçeni kur |
 | `bulunamadi` | HATA* | İstenen skill kütüphanede yok | `--ara <kelime>` ile doğru adı bul |
 | `isim-cakismasi` | HATA* | İki farklı skill aynı klasör adına kurulacaktı | Birini çıkar |
 | `projede-kendi-skillin` | HATA | Projede kütüphaneden gelmemiş aynı adlı skill var | Dokunulmaz. Seninkini yeniden adlandır ya da `--zorla` (yedeklenir) |

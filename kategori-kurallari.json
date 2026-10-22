@@ -2,6 +2,10 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur.",
   "ad_kurallari": [
     {
+      "desen": "^lemo-opuscar$",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
       "desen": "^(general-video|faceless-explainer|product-launch-video|pr-to-video|slideshow|changelog-video|talking-head-recut|embedded-captions|captions-overlay|oversized-cursor|figma)$",
       "kategori": "g-video-ses-medya/01-video-uretim-montaj"
     },

@@ -2,7 +2,7 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **46/46**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **48/48**
 
 ### captions-overlay  ·  heygen-com/hyperframes @ 4371981  ·  puan 88 (A)
 
@@ -267,6 +267,28 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Durum:** alternatif · **Örtüşme:** hyperframes-cekirdek → emekli · **Globalde:** claude:farkli, codex:farkli, agents:farkli
 - **Boyut:** 20 KB (SKILL.md 16.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. OpenMontage'ın eski kopyası; tercih üreticinin güncel sürümü (hyperframes, heygen-com/hyperframes). Ekosistemin yönlendiricisi, iyi yapılandırılmış. Dikkat: /general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions yönlendirmeleri arşivde yok (OpenMontage c806645'te bulunmuyor). · Yerine geçen: hyperframes (+ media-use); yeni projelerde bunu seçme.
+
+### lemo-opuscar  ·  lemomo-ai/lemo-opuscar @ 3961ddb  ·  puan 88 (A)
+
+- **Ne yapar:** Lemo-Opuscar film stili kütüphanesine giriş skili: 59 hazır stilden birini seçip (ya da kendi stilini oluşturup) video modeli kullanmadan, tamamen kodla kısa film yönetir ve üretir. Kütüphaneyi ilk çalıştırmada GitHub'dan ev dizinine (~/lemo-opuscar) seyrek klonlar, gerekli Node/Python paketlerini kurar ve kütüphanenin AGENTS.md akışını izler.
+- **Ne zaman:** Belirli bir görsel stilde (yağlı boya, suluboya, ukiyo-e, uydu brifingi, ürün parçalama vb.) kodla üretilmiş kısa film, tanıtım, açıklayıcı video; uydu görüntüsü/lazer tarama/CAD/arşiv gibi gerçek malzemeden veri anlatımı; kendi film stilini oluşturma. · **Ne zaman değil:** Mevcut bir videoyu sadece kesip birleştirmek/dönüştürmek (video-edit, ffmpeg); HyperFrames projesi içinde sahne kurmak (hyperframes).
+- **Teknoloji:** node, three.js, ffmpeg, python, kokoro tts · **Paketler:** node, ffmpeg, python3 (seslendirme için)
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** lemomo-ai (kisi, ★5286, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** kodla-film-stilleri → birincil · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
+- **Boyut:** 10 KB (SKILL.md 3.4 KB, yük kucuk) · **Bağımlılık:** Çalışınca kendi kütüphanesini ev dizinine indirir/kopyalar (~/lemo-opuscar veya ~/.lemo-opuscar), Node + ffmpeg (+ seslendirme için Python/Kokoro) ister. Ücretsiz: varsayılan TTS çevrimdışı Kokoro; edge-tts metni Microsoft'a gönderir (sadece kullanıcı onaylarsa).
+- **İnceleme:** incelendi · kalite 4/5 — MIT, ücretsiz; varsayılan seslendirme çevrimdışı Kokoro, edge-tts sadece onayla. DİKKAT: kodun asıl kısmı çalışma anında GitHub'ın main dalından (sabit commit değil) ~/lemo-opuscar'a indirilir; yani arşivlenen skill küçük bir başlatıcıdır, davranış upstream değiştikçe değişir. Proje klasörü dışına (ev dizinine) yazar. HyperFrames'e alternatif değil, farklı bir motor (kendi render araçları).
+
+### lemo-opuscar@lemomo-ai  ·  lemomo-ai/lemo-opuscar @ 3961ddb  ·  puan 88 (A)
+
+- **Ne yapar:** Aynı Lemo-Opuscar skilinin 'dizin/eklenti paketi' sürümü: kütüphanenin yanında paketlenmiş (library/) gelmesini bekler, ~/.lemo-opuscar'a kopyalar.
+- **Ne zaman:** Belirli bir görsel stilde (yağlı boya, suluboya, ukiyo-e, uydu brifingi, ürün parçalama vb.) kodla üretilmiş kısa film, tanıtım, açıklayıcı video; uydu görüntüsü/lazer tarama/CAD/arşiv gibi gerçek malzemeden veri anlatımı; kendi film stilini oluşturma. · **Ne zaman değil:** Doğrudan kurulum: library/ klasörü olmadan çalışmaz; birincil lemo-opuscar'ı kullan.
+- **Teknoloji:** node, three.js, ffmpeg, python, kokoro tts · **Paketler:** node, ffmpeg, python3 (seslendirme için)
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** lemomo-ai (kisi, ★5286, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** alternatif · **Örtüşme:** kodla-film-stilleri → alternatif · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
+- **Boyut:** 123 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** Çalışınca kendi kütüphanesini ev dizinine indirir/kopyalar (~/lemo-opuscar veya ~/.lemo-opuscar), Node + ffmpeg (+ seslendirme için Python/Kokoro) ister. Ücretsiz: varsayılan TTS çevrimdışı Kokoro; edge-tts metni Microsoft'a gönderir (sadece kullanıcı onaylarsa).
+- **İnceleme:** incelendi · kalite 2/5 — Tek başına ÇALIŞMAZ: beklediği library/ klasörü bu repo yolunda yok (yalnızca paketlenmiş eklenti dağıtımında bulunur). Kurulum için birincil sürüm (lemo-opuscar) kullanılmalı.
 
 ### media-use  ·  heygen-com/hyperframes @ 4371981  ·  puan 93 (A)
 
