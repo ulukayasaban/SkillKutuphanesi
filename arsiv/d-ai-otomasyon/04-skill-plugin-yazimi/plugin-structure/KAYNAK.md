@@ -6,7 +6,7 @@
 - **Repo içindeki yol:** `plugins/plugin-dev/skills/plugin-structure`
 - **Commit:** `af59ee3a1051a29dda4a2e7a2af221aa457ae08b`
 - **Lisans:** Apache-2.0
-- **Geliştirici:** ?
-- **Değerlendirme:** 23/100 (D)
+- **Geliştirici:** anthropics (kurum)
+- **Değerlendirme:** 92/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

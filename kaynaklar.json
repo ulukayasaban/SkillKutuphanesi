@@ -7,7 +7,8 @@
     "^plugins/bundles/",
     "^plugins/individual/",
     "^\\.(agent|cursor|dsh|gemini|github|grok|hermes|kiro|omp|opencode|pi|qoder|rovodev|trae|trae-cn|veto|vibe)/",
-    "^cursor-plugin/"
+    "^cursor-plugin/",
+    "^\\.openclaw/"
   ],
   "max_dosya_mb": 5,
   "repolar": [
@@ -421,6 +422,88 @@
         "^(macos|windows)/"
       ],
       "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kullanıcı kararı: sadece referans. Codex Desktop tema/duvar kağıdı uygulaması; macos/ ve windows/ SKILL.md'leri uygulamanın kurulum girişi (proje skilli değil, CDP ile arayüze CSS enjekte eder, paketler imzasız). Arşive alınmaz; notlar/referans/kutuphaneler.md."
+    },
+    {
+      "repo": "android/skills",
+      "tip": "T1",
+      "oncelik": 1,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil / Android)."
+    },
+    {
+      "repo": "expo/skills",
+      "tip": "T1",
+      "oncelik": 1,
+      "haric": [
+        "^\\.claude/"
+      ],
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil / Expo-React Native). .claude/skills/expo-skill-eval reponun kendi değerlendirme aracı (hariç)."
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "tip": "T1",
+      "oncelik": 1,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil React Native + resmî Vercel skilleri). Lisans belirtilmemiş."
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "tip": "T1",
+      "oncelik": 1,
+      "haric": [
+        "^partner-built/zoom-plugin/"
+      ],
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: iş alanları: satış, finans, hukuk, İK, operasyon). partner-built/zoom-plugin (57 skill, Zoom geliştirici hesabı/API kataloğu) bilinçli hariç."
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: bilim/araştırma)."
+    },
+    {
+      "repo": "earthtojake/text-to-cad",
+      "tip": "T1",
+      "oncelik": 2,
+      "haric": [
+        "^apps/"
+      ],
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: CAD/imalat). apps/web/skills (uygulamanın kendi arayüz skili) hariç."
+    },
+    {
+      "repo": "cloudflare/skills",
+      "tip": "T1",
+      "oncelik": 1,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: bulut/edge deploy)."
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "tip": "T1",
+      "oncelik": 1,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: güvenlik denetimi)."
+    },
+    {
+      "repo": "czlonkowski/n8n-skills",
+      "tip": "T1",
+      "oncelik": 2,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: iş akışı otomasyonu / n8n)."
+    },
+    {
+      "repo": "Donchitos/Claude-Code-Game-Studios",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: oyun geliştirme stüdyosu)."
+    },
+    {
+      "repo": "Graphify-Labs/graphify",
+      "tip": "T1",
+      "oncelik": 2,
+      "bagimlilik": "graphify Python paketi (pip install graphifyy) kurulu olmalı.",
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: kod tabanı bilgi grafiği)."
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: sade/az kod yazma disiplini). .openclaw/ ayna."
     }
   ],
   "konum_haric": [

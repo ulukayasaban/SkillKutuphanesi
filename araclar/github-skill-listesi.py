@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""GitHub yıldız listeleri ↔ kütüphane eşlemesi. Skill repoları TEK listede ('Yapay Zeka Skillleri') durur.
+"""GitHub yıldız listeleri ↔ kütüphane eşlemesi. Kütüphanenin TÜM kaynakları (skill repoları + süreçte kullanılan
+referans kütüphaneleri T5/T6) TEK listede ('Yapay Zeka Skillleri') durur; başka skill listesi tutulmaz (2026-10-22 kararı).
 
   python3 araclar/github-skill-listesi.py            # RAPOR (hiçbir şeyi değiştirmez):
                                                      #  - skill listesindeki ama kütüphanede olmayan repolar (= YENİ, eklenecek)
@@ -8,7 +9,7 @@
   python3 araclar/github-skill-listesi.py --duzenle  # skill repolarını sadece skill listesine taşır (başka listelerden çıkarır).
                                                      # GitHub oturumunda 'user' izni gerekir:  gh auth refresh -h github.com -s user
 Skill listesinin adı/slug'ı kaynaklar.json -> "github_skill_listesi".
-Yıldızlar kaldırılmaz; skill olmayan repolar (kütüphane/araç) bulundukları listelerde kalır.
+Yıldızlar kaldırılmaz. Kütüphanede olmayan repolar (kişisel yıldızlar) bulundukları listelerde kalır.
 """
 import json
 import subprocess
@@ -45,7 +46,7 @@ def main():
     hedef = next((l for l in tumu if l["slug"] == hedef_slug), None)
     if not hedef:
         sys.exit(f"Skill listesi bulunamadı: '{hedef_slug}'. Mevcut: {', '.join(l['slug'] for l in tumu)}")
-    skill_repolari = sorted({k["repo"] for k in ayar["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")})
+    skill_repolari = sorted({k["repo"] for k in ayar["repolar"] if k["tip"] != "KAYIP"})
     uyelik, idler = {}, {}
     for l in tumu:
         for r in l["items"]["nodes"]:
@@ -63,6 +64,8 @@ def main():
         print("  -> rehber/03-yeni-skill-ekleme.md (çakışma kontrolü + ücret sınıflandırması dahil)")
     print(f"\nSkill listesinde OLMAYAN skill kaynakları — {len(eksik)}:" + (" " + ", ".join(eksik) if eksik else " yok"))
     print(f"Birden fazla listede duran skill repoları — {len(kopya)}:" + ("".join(f"\n  {r}: {', '.join(l)}" for r, l in kopya) or " yok"))
+    diger = [f"{l['name']} ({len([x for x in l['items']['nodes'] if x])})" for l in tumu if l is not hedef]
+    print(f"Diğer listeler — {len(diger)}:" + (" " + ", ".join(diger) if diger else " yok"))
 
     if "--duzenle" not in sys.argv:
         if eksik or kopya:
@@ -71,6 +74,7 @@ def main():
     tasinacak = sorted(set(eksik) | {r for r, _ in kopya})
     hata = 0
     for r in tasinacak:
+        subprocess.run(["gh", "api", "-X", "PUT", f"user/starred/{r}"], capture_output=True)  # yıldızlı değilse yıldızla
         rid = idler.get(r)
         if not rid:
             rid = json.loads(subprocess.run(["gh", "api", f"repos/{r}", "--jq", "{id:.node_id}"],

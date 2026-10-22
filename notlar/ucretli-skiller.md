@@ -2,30 +2,24 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücretli API/abonelik olmadan çalışmaz) — 54
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 55
 
 | Skill | Kategori | Neden |
 |---|---|---|
 | `substance-3d-texturing` | 05-3d-webgl | Adobe Substance 3D Painter lisansı/aboneliği |
-| `claude-api` | 01-claude-api-mcp | Anthropic API kullanımı ücretli (token bazlı) |
-| `claude-opus-4-5-migration` | 01-claude-api-mcp | Claude API ile çalışan kodun geçişi; API kullanımı ücretli |
+| `sandbox-migrate-to-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
+| `sandbox-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
+| `sandbox-stable` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `create-video` | 01-video-uretim-montaj | HeyGen Video Agent API |
 | `video-toolkit` | 01-video-uretim-montaj | Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli |
 | `video-translate` | 01-video-uretim-montaj | HeyGen API |
 | `acestep` | 02-ses-muzik-konusma | RunPod uç noktası (RUNPOD_API_KEY) |
-| `agents` | 02-ses-muzik-konusma | ElevenLabs sesli agent platformu (API anahtarı) |
-| `azure-speech-to-text` | 02-ses-muzik-konusma | Azure Speech kaynağı (ücretsiz F0 katmanı sınırlı, kart gerektirir) |
-| `azure-text-to-speech` | 02-ses-muzik-konusma | Azure Speech kaynağı (ücretsiz F0 katmanı sınırlı, kart gerektirir) |
 | `dashscope` | 02-ses-muzik-konusma | Alibaba Cloud DashScope API |
 | `doubao-tts` | 02-ses-muzik-konusma | Volcengine Doubao API |
-| `elevenlabs` | 02-ses-muzik-konusma | ElevenLabs API anahtarı (ELEVENLABS_API_KEY); ücretsiz deneme kotası sınırlı. Ücretsiz yol: media-use (Kokoro TTS, MusicGen, Openverse SFX) |
 | `fish-audio-tts` | 02-ses-muzik-konusma | fish.audio API |
 | `lyria` | 02-ses-muzik-konusma | Google Lyria (Gemini/Vertex API) |
 | `music` | 02-ses-muzik-konusma | ElevenLabs Music API. Ücretsiz yol: media-use (yerel MusicGen) |
-| `setup-api-key` | 02-ses-muzik-konusma | ElevenLabs API anahtarı kurulum rehberi |
-| `sound-effects` | 02-ses-muzik-konusma | ElevenLabs SFX API. Ücretsiz yol: media-use (Openverse + 21 yerleşik çevrimdışı efekt) |
 | `speech` | 02-ses-muzik-konusma | OpenAI TTS API: karakter başına ücret |
-| `speech-to-text` | 02-ses-muzik-konusma | ElevenLabs Scribe API. Ücretsiz yol: media-use transcribe (Parakeet/Whisper), video-understand |
 | `text-to-speech` | 02-ses-muzik-konusma | HeyGen Starfish TTS (HEYGEN_API_KEY). Ücretsiz yol: media-use (Kokoro) |
 | `venice-audio-music` | 02-ses-muzik-konusma | Venice.ai API anahtarı ve ücretli kullanım |
 | `venice-audio-speech` | 02-ses-muzik-konusma | Venice.ai API anahtarı ve ücretli kullanım |
@@ -60,8 +54,15 @@
 | `venice-image-edit` | 03-ai-gorsel-video-modelleri | Venice.ai API anahtarı ve ücretli kullanım |
 | `venice-image-generate` | 03-ai-gorsel-video-modelleri | Venice.ai API anahtarı ve ücretli kullanım |
 | `venice-video` | 03-ai-gorsel-video-modelleri | Venice.ai API anahtarı ve ücretli kullanım |
+| `adaptyv` | 01-yasam-bilimleri-kimya | Adaptyv Bio protein deney hizmeti: ücretli |
+| `benchling-integration` | 01-yasam-bilimleri-kimya | Benchling kurumsal lisansı/hesabı gerekir |
+| `dnanexus-integration` | 01-yasam-bilimleri-kimya | DNAnexus hesabı/kurum lisansı gerekir |
+| `ginkgo-cloud-lab` | 01-yasam-bilimleri-kimya | Ginkgo bulut laboratuvarı: deney siparişi ücretli |
+| `labarchive-integration` | 01-yasam-bilimleri-kimya | LabArchives kurumsal hesap gerekir |
+| `generate-image` | 04-bilimsel-yazim-literatur | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
+| `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücretsiz yolu var; ücretli kısım isteğe bağlı/koşullu) — 24
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 75
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -70,10 +71,33 @@
 | `rive-interactive` | 03-animasyon-motion | Rive ücretsiz plan; bazı özellikler ücretli |
 | `spline-interactive` | 05-3d-webgl | Spline ücretsiz plan; bazı dışa aktarma/ekip özellikleri ücretli |
 | `hatch-pet` | 06-oyun-2d-grafik | Yerel yol ücretsiz; ikincil yedek yol OPENAI_API_KEY ister (ücretli) |
+| `basin` | 06-devops-guvenlik-performans | Cloudflare R2/Basin: ücretsiz kota, sonrası kullanım başına |
+| `cloudflare` | 06-devops-guvenlik-performans | Cloudflare ücretsiz plan ile çalışır; bazı ürünler ücretli |
+| `cloudflare-email-service` | 06-devops-guvenlik-performans | Cloudflare ücretsiz kota, sonrası ücretli |
+| `cloudflare-one` | 06-devops-guvenlik-performans | Cloudflare Zero Trust ücretsiz plan (50 kullanıcıya kadar); kurumsal özellikler ücretli |
+| `cloudflare-one-migrations` | 06-devops-guvenlik-performans | Cloudflare Zero Trust ücretsiz plan; kurumsal özellikler ücretli |
+| `deploy-to-vercel` | 06-devops-guvenlik-performans | Vercel Hobby planı ücretsiz; ekip/ticari kullanım ücretli |
+| `durable-objects` | 06-devops-guvenlik-performans | Workers ücretsiz planında sınırlı; fazlası ücretli |
+| `k2` | 06-devops-guvenlik-performans | Cloudflare ürünü: ücretsiz kota + kullanım başına ücret |
+| `vercel-cli-with-tokens` | 06-devops-guvenlik-performans | Vercel Hobby planı ücretsiz; ekip/ticari kullanım ücretli |
+| `vercel-optimize` | 06-devops-guvenlik-performans | Vercel Hobby planı ücretsiz; bazı analizler ücretli planlarda |
+| `eas-app-stores` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `eas-hosting` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `eas-observe` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `eas-simulator` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `eas-update` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `eas-update-insights` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `eas-workflows` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `expo-app-clip` | 08-mobil-uygulama | Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli |
+| `expo-dev-client` | 08-mobil-uygulama | Yerel derleme ücretsiz; EAS bulut derlemesi ücretsiz planla sınırlı |
+| `play-billing-library-version-upgrade` | 08-mobil-uygulama | Kod geçişi ücretsiz; Play Console geliştirici hesabı tek seferlik ücretli |
 | `init-bootstrap` | 04-not-alma-bilgi-yonetimi | Gemini API anahtarı isteğe bağlı (ücretsiz katman var) |
+| `claude-api` | 01-claude-api-mcp | Skill kod yazmaya/rehberliğe ücretsiz yardım eder; yazılan kodun Anthropic API çağrıları token bazlı ücretli |
+| `claude-opus-4-5-migration` | 01-claude-api-mcp | Kod geçişi ücretsiz yapılır; geçirilen kodun API çağrıları ücretli |
 | `connect` | 01-claude-api-mcp | Composio hesabı (ücretsiz katman var) |
 | `connect-apps` | 01-claude-api-mcp | Composio hesabı (ücretsiz katman var) |
 | `langsmith-fetch` | 01-claude-api-mcp | LangSmith hesabı (ücretsiz katman var) |
+| `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
 | `figma` | 01-video-uretim-montaj | FIGMA_TOKEN (ücretsiz planla çalışır); değişkenler (variables) Enterprise ister |
@@ -82,6 +106,13 @@
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion@calesthio` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
+| `agents` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planındaki sesli agent dakikalarıyla denenebilir; üretim kullanımı ücretli |
+| `azure-speech-to-text` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: faster-whisper |
+| `azure-text-to-speech` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: piper |
+| `elevenlabs` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planı (aylık sınırlı kota) ile kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Kokoro) |
+| `setup-api-key` | 02-ses-muzik-konusma | Sadece anahtar kurulum rehberi; ElevenLabs ücretsiz planıyla da çalışır |
+| `sound-effects` | 02-ses-muzik-konusma | ElevenLabs ücretsiz kotasıyla kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Openverse + yerleşik efektler) |
+| `speech-to-text` | 02-ses-muzik-konusma | ElevenLabs Scribe ücretsiz kotası var; fazlası ücretli. Tamamen ücretsiz yol: media-use transcribe (Whisper/Parakeet) |
 | `3d-asset-generation` | 03-ai-gorsel-video-modelleri | Üretim Atlas Cloud / fal.ai ile ücretli; CC0 Kenney kataloğu ve Blender yolu ücretsiz |
 | `comfyui` | 03-ai-gorsel-video-modelleri | Yerel ComfyUI ücretsiz; 'Partner Nodes' Comfy hesabı ve ön ödemeli kredi ister |
 | `imagen` | 03-ai-gorsel-video-modelleri | Google Gemini görsel API: sınırlı ücretsiz kota, sonrası ücretli |
@@ -89,5 +120,26 @@
 | `nanobanana-ppt` | 03-ai-gorsel-video-modelleri | Gemini (Nano Banana) görsel üretimi: sınırlı ücretsiz kota, sonrası ücretli; deste yapısı yerel |
 | `pixelbin-media` | 03-ai-gorsel-video-modelleri | Pixelbin hesabı: ücretsiz kredi var, sonrası ücretli |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
+| `alphagenome` | 01-yasam-bilimleri-kimya | AlphaGenome API ticari olmayan kullanım için ücretsiz |
+| `esm` | 01-yasam-bilimleri-kimya | Açık ağırlıklarla yerel çalışır; EvolutionaryScale Forge API isteğe bağlı |
+| `genomic-intelligence` | 01-yasam-bilimleri-kimya | GI REST API anahtarı; ücretsiz/ücretli katmanlar |
+| `latchbio-integration` | 01-yasam-bilimleri-kimya | Latch hesabı: ücretsiz katman, hesaplama ücretli |
+| `rowan` | 01-yasam-bilimleri-kimya | Rowan hesabı: ücretsiz kredi, sonrası ücretli |
+| `tamarind` | 01-yasam-bilimleri-kimya | Tamarind Bio hesabı: ücretsiz katman, sonrası ücretli |
+| `modal` | 03-veri-bilimi-ml | Modal: aylık ücretsiz kredi, sonrası kullanım başına |
+| `autoskill` | 04-bilimsel-yazim-literatur | İsteğe bağlı Anthropic/Foundry API (ücretli) |
+| `bgpt-paper-search` | 04-bilimsel-yazim-literatur | BGPT API anahtarı; ücretsiz/ücretli katmanlar |
+| `database-lookup` | 04-bilimsel-yazim-literatur | Çoğu kamu veritabanı anahtarı ücretsiz; bazı sağlayıcılar (Alpha Vantage vb.) ücretli katmanlı |
+| `exa-search` | 04-bilimsel-yazim-literatur | Exa API ücretsiz kota (aylık sınırlı); fazlası ücretli |
+| `hypogenic` | 04-bilimsel-yazim-literatur | LLM API (Anthropic/OpenAI) kullanım başına ücretli; yerel model de kullanılabilir |
+| `infographics` | 04-bilimsel-yazim-literatur | İnceleme ücretsiz; görsel üretimi OpenRouter (ücretli, anahtar isteğe bağlı) |
+| `latex-posters` | 04-bilimsel-yazim-literatur | LaTeX yerel ve ücretsiz; isteğe bağlı AI şemaları OpenRouter (ücretli) |
+| `literature-review` | 04-bilimsel-yazim-literatur | Temel tarama ücretsiz (DOI/açık kaynaklar); Parallel/OpenRouter isteğe bağlı ücretli |
+| `paperclip` | 04-bilimsel-yazim-literatur | GXL Paperclip CLI; anahtar isteğe bağlı, kapsamlı kullanım ücretli olabilir |
+| `parallel-web` | 04-bilimsel-yazim-literatur | Parallel API ücretsiz başlangıç kredisi; sonrası ücretli |
+| `research-grants` | 04-bilimsel-yazim-literatur | Rehber ücretsiz; isteğe bağlı görseller OpenRouter (ücretli) |
+| `research-lookup` | 04-bilimsel-yazim-literatur | Parallel CLI: ücretsiz başlangıç kredisi, sonrası ücretli |
+| `scientific-schematics` | 04-bilimsel-yazim-literatur | AI şema üretimi OpenRouter (ücretli); elle şema yolu ücretsiz |
+| `scientific-slides` | 04-bilimsel-yazim-literatur | Slayt yerel; isteğe bağlı AI görsel OpenRouter (ücretli) |
 
 Gizli entegrasyon kataloğundaki 832 Composio skili toplu olarak 'kısmen' (Composio hesabı; ücretsiz katman var).

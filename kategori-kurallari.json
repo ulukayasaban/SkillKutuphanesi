@@ -2,6 +2,101 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "desen": "^(qiskit|cirq|pennylane|qutip|astropy|pymatgen|pycalphad|cantera|fluidsim|pybamm|openpiv|sympy|matlab|simpy|uncertainty-and-units|geomaster|geopandas|marine-carbonate-chemistry|usfiscaldata)$",
+      "kategori": "i-bilim-muhendislik/02-fizik-kuantum-malzeme"
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "desen": "^(scikit-learn|scikit-survival|statsmodels|pymc|pymoo|polars|dask|vaex|zarr-python|networkx|matplotlib|seaborn|shap|umap-learn|transformers|pytorch-lightning|torch-geometric|stable-baselines3|pufferlib|timesfm-forecasting|statistical-analysis|statistical-power|exploratory-data-analysis|optimize-for-gpu|scientific-visualization|hugging-science|modal|get-available-resources)$",
+      "kategori": "i-bilim-muhendislik/03-veri-bilimi-ml"
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "desen": "^(literature-review|citation-management|peer-review|research-grants|research-lookup|scientific-writing|scientific-slides|scientific-schematics|scientific-brainstorming|scientific-critical-thinking|scholar-evaluation|hypothesis-generation|hypogenic|venue-templates|latex-posters|pptx-posters|paper-lookup|paperzilla|paperclip|bgpt-paper-search|pyzotero|markdown-mermaid-writing|infographics|market-research-reports|open-notebook|exa-search|parallel-web|markitdown|liteparse|what-if-oracle|consciousness-council|experimental-design|generate-image|autoskill|pi-agent|iso-standards-readiness|database-lookup)$",
+      "kategori": "i-bilim-muhendislik/04-bilimsel-yazim-literatur"
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "desen": "^(lab-hardware-cad|fictiv)$",
+      "kategori": "i-bilim-muhendislik/05-cad-imalat-robotik"
+    },
+    {
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "desen": ".",
+      "kategori": "i-bilim-muhendislik/01-yasam-bilimleri-kimya"
+    },
+    {
+      "repo": "earthtojake/text-to-cad",
+      "desen": ".",
+      "kategori": "i-bilim-muhendislik/05-cad-imalat-robotik"
+    },
+    {
+      "repo": "android/skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "expo/skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "desen": "^(react-native-skills)$",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "desen": "(deploy-to-vercel|vercel-cli|vercel-optimize)",
+      "kategori": "b-yazilim-gelistirme/06-devops-guvenlik-performans"
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "desen": "writing-guidelines",
+      "kategori": "c-dokuman-icerik/03-yazi-iletisim-icerik"
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "desen": "web-design-guidelines",
+      "kategori": "a-tasarim-onyuz/08-onyuz-test-kalite"
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/07-framework-ozel"
+    },
+    {
+      "repo": "cloudflare/skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/06-devops-guvenlik-performans"
+    },
+    {
+      "repo": "cloudflare/security-audit-skill",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/06-devops-guvenlik-performans"
+    },
+    {
+      "repo": "czlonkowski/n8n-skills",
+      "desen": ".",
+      "kategori": "d-ai-otomasyon/02-agent-orkestrasyon"
+    },
+    {
+      "repo": "Donchitos/Claude-Code-Game-Studios",
+      "desen": ".",
+      "kategori": "a-tasarim-onyuz/06-oyun-2d-grafik"
+    },
+    {
+      "repo": "Graphify-Labs/graphify",
+      "desen": ".",
+      "kategori": "d-ai-otomasyon/03-web-arastirma-veri"
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/02-kod-kalitesi-review"
+    },
+    {
       "repo": "nexu-io/open-design",
       "desen": "^(fal-|venice-(image|video)|replicate$|sora$|imagegen$|imagen$|pixelbin-media$|gif-sticker-maker$|nanobanana-ppt$|ecommerce-image-workflow$)",
       "kategori": "g-video-ses-medya/03-ai-gorsel-video-modelleri"
@@ -304,7 +399,53 @@
       "kategori": "b-yazilim-gelistirme/07-framework-ozel"
     }
   ],
-  "yol_kurallari": [],
+  "yol_kurallari": [
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^(sales|marketing|customer-support|partner-built/(apollo|brand-voice|common-room))/",
+      "kategori": "h-is-alanlari/01-satis-pazarlama-musteri"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^(finance|legal|human-resources)/",
+      "kategori": "h-is-alanlari/02-finans-hukuk-ik"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^(operations|product-management|small-business|productivity|enterprise-search|partner-built/slack)/",
+      "kategori": "h-is-alanlari/03-operasyon-urun-isletme"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^data/",
+      "kategori": "h-is-alanlari/04-veri-analizi-raporlama"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^engineering/",
+      "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^design/",
+      "kategori": "a-tasarim-onyuz/01-ui-ux-tasarim-dili"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^bio-research/",
+      "kategori": "i-bilim-muhendislik/01-yasam-bilimleri-kimya"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^cowork-plugin-management/",
+      "kategori": "d-ai-otomasyon/04-skill-plugin-yazimi"
+    },
+    {
+      "repo": "anthropics/knowledge-work-plugins",
+      "desen": "^pdf-viewer/",
+      "kategori": "c-dokuman-icerik/01-ofis-dokumanlari"
+    }
+  ],
   "repo_varsayilan": {
     "anthropics/claude-code": "d-ai-otomasyon/04-skill-plugin-yazimi",
     "vercel/next.js": "b-yazilim-gelistirme/07-framework-ozel",
@@ -325,6 +466,7 @@
     "_T3": "f-repo-ici/01-repo-gelistirici-skilleri",
     "nexu-io/open-design": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
     "anthropics/claude-plugins-official": "d-ai-otomasyon/04-skill-plugin-yazimi",
-    "yaojingang/yao-meta-skill": "d-ai-otomasyon/04-skill-plugin-yazimi"
+    "yaojingang/yao-meta-skill": "d-ai-otomasyon/04-skill-plugin-yazimi",
+    "anthropics/knowledge-work-plugins": "h-is-alanlari/03-operasyon-urun-isletme"
   }
 }

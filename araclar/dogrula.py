@@ -39,6 +39,10 @@ def main():
             uyarilar.append(f"ücret sınıflandırılmadı: {s['id']} ({s.get('ucret_notu', '')[:90]})")
         if "ucret" not in s:
             hatalar.append(f"ücret alanı yok: {s['id']} (arsiv-yerlestir.py çalıştır)")
+    eksik_gel = sorted({s["repo"] for s in skiller if not s.get("gelistirici")})
+    if eksik_gel:
+        uyarilar.append(f"geliştirici bilgisi yok (değerlendirme puanı düşük çıkar): {', '.join(eksik_gel[:6])} "
+                        "-> python3 araclar/gelistirici-bilgisi.py && python3 araclar/arsiv-yerlestir.py")
     kayitli = {str((KOK / s["yol"]).resolve()) for s in skiller}
     for sm in ARSIV.rglob("KAYNAK.md"):
         if str(sm.parent.resolve()) not in kayitli:

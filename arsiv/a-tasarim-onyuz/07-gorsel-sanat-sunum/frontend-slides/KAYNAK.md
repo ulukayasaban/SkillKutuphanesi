@@ -6,7 +6,7 @@
 - **Repo içindeki yol:** `skills/frontend-slides`
 - **Commit:** `e03d5c23f308c39f4de7c057568df66c29a84385`
 - **Lisans:** Apache-2.0
-- **Geliştirici:** ?
-- **Değerlendirme:** 26/100 (D)
+- **Geliştirici:** nexu-io (kurum)
+- **Değerlendirme:** 65/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

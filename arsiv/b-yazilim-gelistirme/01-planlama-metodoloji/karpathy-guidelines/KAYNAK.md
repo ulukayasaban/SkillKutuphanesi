@@ -6,7 +6,7 @@
 - **Repo içindeki yol:** `skills/karpathy-guidelines`
 - **Commit:** `2c606141936f1eeef17fa3043a72095b4765b9c2`
 - **Lisans:** belirtilmemiş
-- **Geliştirici:** ?
-- **Değerlendirme:** 30/100 (D)
+- **Geliştirici:** multica-ai (kurum)
+- **Değerlendirme:** 68/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

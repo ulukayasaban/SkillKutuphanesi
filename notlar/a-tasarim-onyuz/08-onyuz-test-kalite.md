@@ -2,19 +2,19 @@
 
 _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/15**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/16**
 
-### agent-browser  ·  nexu-io/open-design @ e03d5c2  ·  puan 28 (D)
+### agent-browser  ·  nexu-io/open-design @ e03d5c2  ·  puan 93 (A)
 
 - **Ne yapar:** Browser automation CLI for AI agents. Use when the user needs to inspect, test, or automate browser behavior: navigating pages, filling forms, clicking buttons, taking screenshots, extracting page data, reading selected OpenDesign browser-tab context, testing web apps, dogfooding OpenDesign previews, QA, bug hunts, or reviewing app quality. Prefer local OpenDesign preview URLs unless the user expl
 - **Teknoloji:** api-anahtari, css, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### browser-testing-with-devtools  ·  addyosmani/agent-skills @ aeac41d  ·  puan 87 (A)
+### browser-testing-with-devtools  ·  addyosmani/agent-skills @ aeac41d  ·  puan 97 (A)
 
 - **Ne yapar:** Chrome DevTools MCP ile ajana canlı tarayıcı gözü kazandırır: ekran görüntüsü, DOM, konsol, ağ istekleri, performans izi (LCP/CLS/INP), hesaplanmış stiller ve erişilebilirlik ağacı. UI/ağ/performans hata ayıklama akışları, test planı şablonu ve tarayıcı içeriğini güvenilmez veri sayan güvenlik sınırları içerir.
 - **Ne zaman:** Çalışan sayfada konsol hatası, ağ sorunu, performans veya erişilebilirlik ağacı doğrulaması gerektiğinde (özellikle gerçek tarayıcı verisiyle). · **Ne zaman değil:** chrome-devtools MCP sunucusu kurulu değilse çalışmaz; yalnız backend/CLI işlerinde değil. Betikli, yeniden çalıştırılabilir E2E testi için webapp-testing / Playwright.
@@ -25,52 +25,52 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB.
 
-### design-review  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### design-review@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Designer Who Codes: visual audit then fixes with atomic commits and before/after screenshots. Useful for tightening shipped UI before launch.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
-- **Durum:** tercih
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
-### export-download-debugging  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+### export-download-debugging  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
 
 - **Ne yapar:** Diagnose and fix browser, preview, or Electron export/download failures, especially image export issues involving Save As, Blob/Data URLs, the File System Access API, createWritable failures, and 0 KB files.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### full-page-screenshot  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### full-page-screenshot  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Capture full-page screenshots of web pages via Chrome DevTools Protocol with zero dependencies. Useful for portfolios, case studies, and audit reports.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
-### impeccable-design-polish  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+### impeccable-design-polish  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
 
 - **Ne yapar:** Follow-up design polish skill inspired by Impeccable. Use after a web or HTML artifact exists to audit, critique, polish, animate, harden, and prepare the page for a live/share pass.
 - **Teknoloji:** css, gsap, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### plan-design-review  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### plan-design-review  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Senior Designer review: rates each design dimension 0-10, explains what a 10 looks like, and flags AI Slop signals. Useful as a gate before merging UI work.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -108,25 +108,36 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel, uyarılı). Çekirdek kullanım (`npx react-doctor@latest --verbose --diff`) basit ve işe yarar. Dikkat (risk): `/doctor` akışı `curl https://www.react.doctor/prompts/react-doctor-agent.md` ile uzaktan talimat metni çekip 'her adımını izle' diyor ve çalışma ağacını düzenleten bir döngü başlatıyor; içerik üçüncü tarafça istenildiği an değişebilir (prompt-injection yüzeyi). `npx ...@latest` sürümsüz uzak paket çalıştırır. Referans verilen `doctor-explain` skill'i kütüphanede yok. Kullanılırsa yalnız yerel `--diff` komutu önerilir. Kaynak, satus başlangıç şablonunun içindeki kopya.
 
-### screenshot  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### screenshot  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Capture desktop, app windows, or pixel regions across OS platforms. Useful for marketing screenshots, design reviews, and bug reports.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
-### screenshots-marketing  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### screenshots-marketing  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Generate marketing screenshots with Playwright. Useful for landing-page hero shots, App Store screenshots, and changelog visuals.
 - **Teknoloji:** playwright _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
+
+### web-design-guidelines  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 91 (A)
+
+- **Ne yapar:** Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** vercel-labs (kurum, ★32819, son güncelleme 2026-10-14, lisans yok)
+- **Durum:** tercih · **Örtüşme:** ui-denetim-iyilestirme → birincil · **Globalde:** claude:ayni
+- **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+- **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).
 
 ### webapp-testing  ·  anthropics/skills @ dbd4588  ·  puan 85 (A)
 

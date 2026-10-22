@@ -26,6 +26,7 @@
 | Bağlam yükü | 10 | SKILL.md <8 KB 10 · <25 KB 8 · daha büyük 5 |
 | Yapı | 5 | Frontmatter sorunu ve kırık bağlantı başına düşer |
 | Arşivlenmiş repo | −15 | |
+| GitHub Trending | +10 / +6 / +2 | Kaynak repo son taramada trend'de +10 · son 90 günde görülmüş +6 · daha önce görülmüş +2 (`trend.json`, `araclar/github-trend.py`; puan 100'ü geçmez) |
 
 Not: **A** ≥80 · **B** ≥65 · **C** ≥50 · **D** <50. Elle `kalite` (1–5) girilirse son puan = %60 otomatik + %40 elle.
 
@@ -51,3 +52,6 @@ registry'de skill kaydına şu alanlar eklenir (güncellemede korunur):
 - `--oner` ve `--listele` çıktısında puan görünür.
 - Aynı işi yapan iki skill arasında: önce **elle kalite**, sonra **resmî kaynak**, sonra **puan**.
 - D notlu skill ön kontrolde UYARI üretir.
+
+## Öneride trend önceliği (`skill-ekle.py --oner`)
+Sıralama önce **konuya uygunluğa** (anahtar kelime + teknoloji eşleşmesi) bakar. Eşleşen skiller arasında kaynağı GitHub Trending'e girmiş olanlar öne alınır (trendde +1,5 · son 90 gün +1 · eski +0,3; çıktıda `🔥trend`). Trend tek başına bir skill'i öneriye sokmaz; ücretli (−2), alternatif (−1) ve emekli (−6) cezaları geçerlidir.

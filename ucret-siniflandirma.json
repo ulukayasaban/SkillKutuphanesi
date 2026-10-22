@@ -3,28 +3,28 @@
   "guncelleme": "2026-10-22",
   "siniflar": {
     "elevenlabs": [
-      "ucretli",
-      "ElevenLabs API anahtarı (ELEVENLABS_API_KEY); ücretsiz deneme kotası sınırlı. Ücretsiz yol: media-use (Kokoro TTS, MusicGen, Openverse SFX)"
+      "kismen",
+      "ElevenLabs ücretsiz planı (aylık sınırlı kota) ile kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Kokoro)"
     ],
     "agents": [
-      "ucretli",
-      "ElevenLabs sesli agent platformu (API anahtarı)"
+      "kismen",
+      "ElevenLabs ücretsiz planındaki sesli agent dakikalarıyla denenebilir; üretim kullanımı ücretli"
     ],
     "music": [
       "ucretli",
       "ElevenLabs Music API. Ücretsiz yol: media-use (yerel MusicGen)"
     ],
     "sound-effects": [
-      "ucretli",
-      "ElevenLabs SFX API. Ücretsiz yol: media-use (Openverse + 21 yerleşik çevrimdışı efekt)"
+      "kismen",
+      "ElevenLabs ücretsiz kotasıyla kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Openverse + yerleşik efektler)"
     ],
     "speech-to-text": [
-      "ucretli",
-      "ElevenLabs Scribe API. Ücretsiz yol: media-use transcribe (Parakeet/Whisper), video-understand"
+      "kismen",
+      "ElevenLabs Scribe ücretsiz kotası var; fazlası ücretli. Tamamen ücretsiz yol: media-use transcribe (Whisper/Parakeet)"
     ],
     "setup-api-key": [
-      "ucretli",
-      "ElevenLabs API anahtarı kurulum rehberi"
+      "kismen",
+      "Sadece anahtar kurulum rehberi; ElevenLabs ücretsiz planıyla da çalışır"
     ],
     "text-to-speech": [
       "ucretli",
@@ -99,12 +99,12 @@
       "fish.audio API"
     ],
     "azure-speech-to-text": [
-      "ucretli",
-      "Azure Speech kaynağı (ücretsiz F0 katmanı sınırlı, kart gerektirir)"
+      "kismen",
+      "Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: faster-whisper"
     ],
     "azure-text-to-speech": [
-      "ucretli",
-      "Azure Speech kaynağı (ücretsiz F0 katmanı sınırlı, kart gerektirir)"
+      "kismen",
+      "Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: piper"
     ],
     "ai-video-gen": [
       "ucretli",
@@ -119,12 +119,12 @@
       "Üretim Atlas Cloud / fal.ai ile ücretli; CC0 Kenney kataloğu ve Blender yolu ücretsiz"
     ],
     "claude-api": [
-      "ucretli",
-      "Anthropic API kullanımı ücretli (token bazlı)"
+      "kismen",
+      "Skill kod yazmaya/rehberliğe ücretsiz yardım eder; yazılan kodun Anthropic API çağrıları token bazlı ücretli"
     ],
     "claude-opus-4-5-migration": [
-      "ucretli",
-      "Claude API ile çalışan kodun geçişi; API kullanımı ücretli"
+      "kismen",
+      "Kod geçişi ücretsiz yapılır; geçirilen kodun API çağrıları ücretli"
     ],
     "substance-3d-texturing": [
       "ucretli",
@@ -609,6 +609,311 @@
     "video-hyperframes": [
       "ucretsiz",
       "HyperFrames (HeyGen'in açık kaynak aracı) kompozisyonu; yerel render, ücretli HeyGen servisi gerekmez"
+    ],
+    "eas-app-stores": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "eas-hosting": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "eas-observe": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "eas-simulator": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "eas-update-insights": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "eas-update": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "eas-workflows": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "expo-app-clip": [
+      "kismen",
+      "Expo Application Services: ücretsiz EAS planı (sınırlı derleme/kullanıcı) ile kullanılabilir; fazlası ücretli"
+    ],
+    "expo-dev-client": [
+      "kismen",
+      "Yerel derleme ücretsiz; EAS bulut derlemesi ücretsiz planla sınırlı"
+    ],
+    "android-cli": [
+      "ucretsiz",
+      "Android SDK araçları ücretsiz"
+    ],
+    "verified-email": [
+      "ucretsiz",
+      "Credential Manager API ücretsiz"
+    ],
+    "play-billing-library-version-upgrade": [
+      "kismen",
+      "Kod geçişi ücretsiz; Play Console geliştirici hesabı tek seferlik ücretli"
+    ],
+    "expo-data-fetching": [
+      "ucretsiz",
+      "Ücretsiz"
+    ],
+    "vercel-react-native-skills": [
+      "ucretsiz",
+      "Ücretsiz rehber"
+    ],
+    "vercel-cli-with-tokens": [
+      "kismen",
+      "Vercel Hobby planı ücretsiz; ekip/ticari kullanım ücretli"
+    ],
+    "vercel-optimize": [
+      "kismen",
+      "Vercel Hobby planı ücretsiz; bazı analizler ücretli planlarda"
+    ],
+    "deploy-to-vercel": [
+      "kismen",
+      "Vercel Hobby planı ücretsiz; ekip/ticari kullanım ücretli"
+    ],
+    "basin": [
+      "kismen",
+      "Cloudflare R2/Basin: ücretsiz kota, sonrası kullanım başına"
+    ],
+    "k2": [
+      "kismen",
+      "Cloudflare ürünü: ücretsiz kota + kullanım başına ücret"
+    ],
+    "cloudflare-email-service": [
+      "kismen",
+      "Cloudflare ücretsiz kota, sonrası ücretli"
+    ],
+    "cloudflare-one": [
+      "kismen",
+      "Cloudflare Zero Trust ücretsiz plan (50 kullanıcıya kadar); kurumsal özellikler ücretli"
+    ],
+    "cloudflare-one-migrations": [
+      "kismen",
+      "Cloudflare Zero Trust ücretsiz plan; kurumsal özellikler ücretli"
+    ],
+    "cloudflare": [
+      "kismen",
+      "Cloudflare ücretsiz plan ile çalışır; bazı ürünler ücretli"
+    ],
+    "durable-objects": [
+      "kismen",
+      "Workers ücretsiz planında sınırlı; fazlası ücretli"
+    ],
+    "sandbox-next": [
+      "ucretli",
+      "Cloudflare Sandbox/Containers Workers Paid planı gerektirir"
+    ],
+    "sandbox-stable": [
+      "ucretli",
+      "Cloudflare Sandbox/Containers Workers Paid planı gerektirir"
+    ],
+    "sandbox-migrate-to-next": [
+      "ucretli",
+      "Cloudflare Sandbox/Containers Workers Paid planı gerektirir"
+    ],
+    "turnstile-spin": [
+      "ucretsiz",
+      "Turnstile ücretsiz"
+    ],
+    "security-audit": [
+      "ucretsiz",
+      "Yerel denetim; ücretli servis gerekmez"
+    ],
+    "n8n-code-tool": [
+      "ucretsiz",
+      "n8n kendi sunucunda ücretsiz"
+    ],
+    "n8n-mcp-tools-expert": [
+      "ucretsiz",
+      "n8n API anahtarı kendi (ücretsiz, self-host) n8n'inden"
+    ],
+    "using-n8n-mcp-skills": [
+      "ucretsiz",
+      "n8n API anahtarı kendi (ücretsiz, self-host) n8n'inden"
+    ],
+    "n8n-node-configuration": [
+      "ucretsiz",
+      "Ücretsiz"
+    ],
+    "n8n-self-hosting": [
+      "ucretsiz",
+      "Topluluk sürümü ücretsiz; Enterprise özellikleri ayrı"
+    ],
+    "n8n-subworkflows": [
+      "ucretsiz",
+      "Ücretsiz"
+    ],
+    "generate-image": [
+      "ucretli",
+      "OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret"
+    ],
+    "ginkgo-cloud-lab": [
+      "ucretli",
+      "Ginkgo bulut laboratuvarı: deney siparişi ücretli"
+    ],
+    "adaptyv": [
+      "ucretli",
+      "Adaptyv Bio protein deney hizmeti: ücretli"
+    ],
+    "benchling-integration": [
+      "ucretli",
+      "Benchling kurumsal lisansı/hesabı gerekir"
+    ],
+    "exa-search": [
+      "kismen",
+      "Exa API ücretsiz kota (aylık sınırlı); fazlası ücretli"
+    ],
+    "parallel-web": [
+      "kismen",
+      "Parallel API ücretsiz başlangıç kredisi; sonrası ücretli"
+    ],
+    "research-lookup": [
+      "kismen",
+      "Parallel CLI: ücretsiz başlangıç kredisi, sonrası ücretli"
+    ],
+    "literature-review": [
+      "kismen",
+      "Temel tarama ücretsiz (DOI/açık kaynaklar); Parallel/OpenRouter isteğe bağlı ücretli"
+    ],
+    "rowan": [
+      "kismen",
+      "Rowan hesabı: ücretsiz kredi, sonrası ücretli"
+    ],
+    "tamarind": [
+      "kismen",
+      "Tamarind Bio hesabı: ücretsiz katman, sonrası ücretli"
+    ],
+    "infographics": [
+      "kismen",
+      "İnceleme ücretsiz; görsel üretimi OpenRouter (ücretli, anahtar isteğe bağlı)"
+    ],
+    "latex-posters": [
+      "kismen",
+      "LaTeX yerel ve ücretsiz; isteğe bağlı AI şemaları OpenRouter (ücretli)"
+    ],
+    "scientific-schematics": [
+      "kismen",
+      "AI şema üretimi OpenRouter (ücretli); elle şema yolu ücretsiz"
+    ],
+    "scientific-slides": [
+      "kismen",
+      "Slayt yerel; isteğe bağlı AI görsel OpenRouter (ücretli)"
+    ],
+    "scientific-critical-thinking": [
+      "ucretsiz",
+      "Analiz ağ gerektirmez; görsel isteğe bağlı"
+    ],
+    "research-grants": [
+      "kismen",
+      "Rehber ücretsiz; isteğe bağlı görseller OpenRouter (ücretli)"
+    ],
+    "neuropixels-analysis": [
+      "ucretsiz",
+      "Yerel Python; Anthropic anahtarı isteğe bağlı"
+    ],
+    "hypogenic": [
+      "kismen",
+      "LLM API (Anthropic/OpenAI) kullanım başına ücretli; yerel model de kullanılabilir"
+    ],
+    "autoskill": [
+      "kismen",
+      "İsteğe bağlı Anthropic/Foundry API (ücretli)"
+    ],
+    "paperclip": [
+      "kismen",
+      "GXL Paperclip CLI; anahtar isteğe bağlı, kapsamlı kullanım ücretli olabilir"
+    ],
+    "genomic-intelligence": [
+      "kismen",
+      "GI REST API anahtarı; ücretsiz/ücretli katmanlar"
+    ],
+    "alphagenome": [
+      "kismen",
+      "AlphaGenome API ticari olmayan kullanım için ücretsiz"
+    ],
+    "esm": [
+      "kismen",
+      "Açık ağırlıklarla yerel çalışır; EvolutionaryScale Forge API isteğe bağlı"
+    ],
+    "waypoint-bio": [
+      "ucretsiz",
+      "Hugging Face token ücretsiz"
+    ],
+    "pufferlib": [
+      "ucretsiz",
+      "W&B isteğe bağlı (ücretsiz plan)"
+    ],
+    "biopython": [
+      "ucretsiz",
+      "NCBI API anahtarı ücretsiz (isteğe bağlı)"
+    ],
+    "citation-management": [
+      "ucretsiz",
+      "NCBI/OpenAlex anahtarları ücretsiz"
+    ],
+    "paper-lookup": [
+      "ucretsiz",
+      "CORE/NCBI/OpenAlex/Semantic Scholar anahtarları ücretsiz"
+    ],
+    "pymatgen": [
+      "ucretsiz",
+      "Materials Project API anahtarı ücretsiz"
+    ],
+    "pyzotero": [
+      "ucretsiz",
+      "Zotero API anahtarı ücretsiz"
+    ],
+    "database-lookup": [
+      "kismen",
+      "Çoğu kamu veritabanı anahtarı ücretsiz; bazı sağlayıcılar (Alpha Vantage vb.) ücretli katmanlı"
+    ],
+    "bgpt-paper-search": [
+      "kismen",
+      "BGPT API anahtarı; ücretsiz/ücretli katmanlar"
+    ],
+    "protocolsio-integration": [
+      "ucretsiz",
+      "protocols.io ücretsiz hesap"
+    ],
+    "graphify": [
+      "kismen",
+      "Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli)"
+    ],
+    "n8n-agents": [
+      "ucretsiz",
+      "n8n self-host ücretsiz; ElevenLabs sadece örnek entegrasyon"
+    ],
+    "dnanexus-integration": [
+      "ucretli",
+      "DNAnexus hesabı/kurum lisansı gerekir"
+    ],
+    "latchbio-integration": [
+      "kismen",
+      "Latch hesabı: ücretsiz katman, hesaplama ücretli"
+    ],
+    "labarchive-integration": [
+      "ucretli",
+      "LabArchives kurumsal hesap gerekir"
+    ],
+    "modal": [
+      "kismen",
+      "Modal: aylık ücretsiz kredi, sonrası kullanım başına"
+    ],
+    "fictiv": [
+      "ucretli",
+      "Fictiv imalat siparişi ücretli"
+    ],
+    "scientific-writing": [
+      "ucretsiz",
+      "Açıkça API anahtarı gerektirmez"
     ]
-  }
+  },
+  "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."
 }

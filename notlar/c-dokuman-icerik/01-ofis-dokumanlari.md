@@ -2,34 +2,34 @@
 
 _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/17**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/18**
 
-### article-magazine  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+### article-magazine  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
 
 - **Ne yapar:** Huashu / huashu-md-html-inspired magazine article layout for turning Markdown or notes into a polished long-form HTML essay.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### doc  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### doc  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Read, create, and edit .docx documents with formatting and layout fidelity via OpenAI's document skill.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
-### doc-kami-parchment  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+### doc-kami-parchment  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
 
 - **Ne yapar:** Warm parchment canvas (#f5f4ed), monochrome ink-blue accent (#1B365D), one serif family, and editorial-grade typography.
 - **Teknoloji:** canvas, css, html, tailwind _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -56,32 +56,32 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 1158 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Anthropic sürümünün eski kopyası; 'tamamını oku' talimatları bağlamı şişiriyor (1.1 MB klasör). Redline planlama bölümü ayrıntılı ama güncel sürümde validate --author ile daha sağlam karşılanıyor.
 
-### docx@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### docx@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Create, edit, and analyze Word documents with tracked changes, comments, and formatting. Useful for design briefs, copy docs, and review-ready deliverables.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
-### minimax-docx  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### minimax-docx  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Professional DOCX document creation and editing using OpenXML SDK. Useful for branded reports, polished proposals, and template-based authoring.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
-### minimax-pdf  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### minimax-pdf  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Generate, fill, and reformat PDFs with a token-based design system and 15 cover styles. Useful for branded PDFs, e-guides, and reports.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -108,12 +108,12 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 63 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güncel sürümün eski kopyası, kendine özgü katkısı yok.
 
-### pdf@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### pdf@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Extract text, create PDFs, and handle forms. Useful for press releases, branded one-pagers, and printable design deliverables.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -140,24 +140,34 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 1201 KB (SKILL.md 25.0 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. html2pptx yaklaşımı tasarım özgürlüğü veriyor ama SKILL.md 25 KB ve 'tamamını oku' dosyalarıyla bağlam yükü yüksek; bağımlılıkları ağır.
 
-### pptx@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### pptx@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Read, generate, and adjust PowerPoint slides, layouts, and templates. Useful for executive decks, training material, and product reviews.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
 
-### resume-modern  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+### resume-modern  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
 
 - **Ne yapar:** Modern minimal resume, single A4 page, ready for print or PDF export.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### view-pdf  ·  anthropics/knowledge-work-plugins @ 33d3dea  ·  puan 100 (A)
+
+- **Ne yapar:** Interactive PDF viewer. Use when the user wants to open, show, or view a PDF and collaborate on it visually — annotate, highlight, stamp, fill form fields, place signature/initials, or review markup together. Not for summarization or text extraction (use native Read instead).
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** anthropics (kurum, resmî, ★31401, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### xlsx  ·  anthropics/skills @ dbd4588  ·  puan 92 (A)

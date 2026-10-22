@@ -23,6 +23,8 @@ def satir(s):
         durum += " 🗄️emekli"
     elif s.get("kaynak_durumu") == "kayip":
         durum += " 🗄️kayıp"
+    if s.get("trend"):
+        durum += " 🔥"
     if s.get("ortusme_rolu"):
         durum += f" {s['ortusme_rolu']}"
     d = s.get("degerlendirme", {})
@@ -43,7 +45,7 @@ def main():
     out = ["# Skill Kataloğu", "",
            "> `araclar/katalog-uret.py` üretir — elle düzenleme. Kaynak: `registry.json`.", "",
            f"Toplam **{len(gorunur)}** skill (+{len(gizli)} gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-içi `notlar/referans/repo-ici-skiller.md`).", "",
-           "**İşaretler:** ⭐ tercih edilen · `alt` aynı isimli alternatif sürüm · Codex: ✅ tam uyumlu, "
+           "**İşaretler:** ⭐ tercih edilen · `alt` aynı isimli alternatif sürüm · 🔥 kaynağı GitHub Trending'e girmiş (notlar/github-trend.md) · Codex: ✅ tam uyumlu, "
            "🟡 Claude araç adları geçiyor ama çalışır, 🔵 konusu Claude Code'a özel · Yük: S/M/L (agent bağlamına etkisi) · "
            "globalde: bilgisayardaki genel klasörde aynı isimli skill (ayni/farkli)", "",
            "## İçindekiler", ""]
@@ -165,8 +167,8 @@ def main():
     uc = ["# Ücretli ve Kısmen Ücretli Skiller", "",
           "> `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; "
           "ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.", ""]
-    for sinif, baslik in (("ucretli", "💲 Ücretli (ücretli API/abonelik olmadan çalışmaz)"),
-                          ("kismen", "½ Kısmen (ücretsiz yolu var; ücretli kısım isteğe bağlı/koşullu)"),
+    for sinif, baslik in (("ucretli", "💲 Ücretli (ücret ödemeden hiç kullanılamaz)"),
+                          ("kismen", "½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek)"),
                           ("belirsiz", "? Sınıflandırılmamış")):
         liste = sorted((s for s in gorunur if s.get("ucret") == sinif), key=lambda s: (s["kategori"], s["id"]))
         if not liste:

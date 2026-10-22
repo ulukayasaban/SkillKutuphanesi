@@ -2,14 +2,14 @@
 
 _Yazı, iletişim, pazarlama/içerik, kariyer_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **21/23**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **21/24**
 
-### ad-creative  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### ad-creative  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Generate and iterate ad creative including headlines, descriptions, and primary text. Useful for paid social and search ad iteration.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -25,12 +25,12 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.
 
-### competitive-ads-extractor@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### competitive-ads-extractor@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Extract and analyze competitors' ads from ad libraries to understand messaging and creative approaches that resonate.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -46,12 +46,12 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 14 KB (SKILL.md 13.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil). İçerik yazımı için en derli toplu süreç; ana hat şablonu ve kaynak formatı faydalı. Lisans belirtilmemiş; araştırma adımı agent'ın web aracına bağlı.
 
-### copywriting  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### copywriting  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Write and rewrite marketing copy for landing pages, homepages, and ads. Useful as a copy chief partner during launches.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -89,12 +89,12 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İsim önerisi kısmı makul ama müsaitlik kontrolünün nasıl yapılacağı tanımsız; örnek çıktı uydurma 'available' işaretleri içeriyor.
 
-### domain-name-brainstormer@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### domain-name-brainstormer@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Generate creative domain name ideas and check availability across multiple TLDs including .com, .io, .dev, and .ai.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -154,12 +154,12 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.
 
-### marketing-psychology  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### marketing-psychology  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Apply psychological principles and behavioral science to copy and design. Useful for tightening hooks, framing, and pricing presentation.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -175,12 +175,12 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Analiz boyutları ve geri bildirim formatı iyi tanımlı; dar kullanım alanı.
 
-### paywall-upgrade-cro  ·  nexu-io/open-design @ e03d5c2  ·  puan 26 (D)
+### paywall-upgrade-cro  ·  nexu-io/open-design @ e03d5c2  ·  puan 65 (B)
 
 - **Ne yapar:** Design and optimize upgrade screens, paywalls, and upsell modals. Useful for SaaS conversion design and pricing-page experiments.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -196,12 +196,12 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Betik yok; 'kriptografik rastgele' iddiası agent'ın yazacağı koda bağlı. Kategoriye de tam uymuyor (araç).
 
-### research-decision-room  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+### research-decision-room  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
 
 - **Ne yapar:** Turn messy user research notes, interviews, support tickets, surveys, and product context into an evidence-backed decision room: a single HTML artifact with an evidence ledger, theme map, confidence heatmap, opportunity matrix, decision memo, and experiment queue. Use when teams need to move from qualitative signals to product or design decisions without fabricating certainty.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 38 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -239,12 +239,22 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 13 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Algoritma kavramlarını somut yazım taktiklerine bağlıyor; güncellik riski var. Lisans AGPL-3.0 olarak beyan edilmiş.
 
-### writing-guidelines  ·  nexu-io/open-design @ e03d5c2  ·  puan 30 (D)
+### writing-guidelines  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 91 (A)
 
 - **Ne yapar:** Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ? (?, ★?, son güncelleme ?, lisans Apache-2.0)
+- **Geliştirici:** vercel-labs (kurum, ★32819, son güncelleme 2026-10-14, lisans yok)
 - **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### writing-guidelines@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
+
+- **Ne yapar:** Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook".
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Durum:** alternatif
 - **Boyut:** 17 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik

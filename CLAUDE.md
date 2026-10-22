@@ -13,6 +13,7 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 ## Skill ekleme akışı
 1. İhtiyacı netleştir: proje yolu, proje tipi, teknoloji, agent rolleri (bilinmiyorsa sor).
 2. Öneri: `python3 araclar/skill-ekle.py <proje> --oner "<ihtiyaç>"` (tüm kütüphane taranır). Uygun profil/rolleri seç.
+   Konuya uygun skiller arasında GitHub Trending'e girmiş olanları (`🔥trend`) öncele; trend tek başına seçim sebebi değildir.
 3. Ön kontrol: `python3 araclar/skill-ekle.py <proje> --profil <p> [--rol …] [--skill …] --kuru`
 4. Raporu kullanıcıya göster: kurulacak skiller, roller, HATA/UYARI/BİLGİ satırları ve `ek-aday` listesi
    (kütüphanede ilgili olup seçilmeyen skiller). HATA varsa nedenini ve seçenekleri açıkla, kurma.
@@ -26,7 +27,10 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
   `python3 araclar/github-skill-listesi.py` ile YENİ repoları bul, `promptlar/07-yeni-skill-reposu-ekle.md` /
   `rehber/03-yeni-skill-ekleme.md` adımlarını uygula: **çakışma kontrolü** (aynı ad, aynı iş, aynı repoda birden fazla sürüm, global'de
   farklı sürüm) ve **ücret sınıflandırması** (`ucret-siniflandirma.json`) zorunlu; kullanıcı onayı olmadan kaynak ekleme.
-- Ücret: ücretsiz yol önce. Ücretli skill (`ucret: ucretli`) rol çekirdeğine ancak gerekçeyle (`ucretli_bilincli`); kurulum raporunda
+- Ücret: ücretsiz yol önce. `ucretli` = ücret ödemeden hiç kullanılamayan skill (ücretli servis sadece bir seçenekse `kismen`). Ücretli skill (`ucret: ucretli`) rol çekirdeğine ancak gerekçeyle (`ucretli_bilincli`); kurulum raporunda
   ücretli skilleri ayrıca belirt. Liste: `notlar/ucretli-skiller.md`.
+- Trend: `python3 araclar/github-trend.py --aday` → `notlar/github-trend.md` (trend'deki kaynaklar + aday skill repoları;
+  adaylar onaysız eklenmez). Aylık güncelleme bunu otomatik çalıştırır.
+- Eski sürümler: bilerek çıkarılan skiller `kaynaklar.json` → `arsivden_cikarilanlar`.
 - Hazır promptlar: `promptlar/` (kullanıcıya proje başlangıcı, ekleme, güncelleme, bakım için).
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.

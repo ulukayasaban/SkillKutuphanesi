@@ -2,11 +2,11 @@
 
 > Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
 
-- **Kaynak repo:** https://github.com/nexu-io/open-design
+- **Kaynak repo:** https://github.com/vercel-labs/agent-skills
 - **Repo içindeki yol:** `skills/writing-guidelines`
-- **Commit:** `e03d5c23f308c39f4de7c057568df66c29a84385`
-- **Lisans:** Apache-2.0
-- **Geliştirici:** ?
-- **Değerlendirme:** 30/100 (D)
+- **Commit:** `063bee94c3f4df8453406c830b0a7df0f2860278`
+- **Lisans:** belirtilmemiş
+- **Geliştirici:** vercel-labs (kurum)
+- **Değerlendirme:** 81/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

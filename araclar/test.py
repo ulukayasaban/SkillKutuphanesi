@@ -261,6 +261,39 @@ def main():
         test("ücretli skill 'ucretli' uyarısı verir, ücretsiz vermez",
              "[UYARI] ucretli" in out and "[UYARI] ucretli" not in out2, out + out2)
 
+    # Ücret dedektörü: yeni arşiv (.arsiv-yeni) yolundan okur; İngilizce "replicate"/"prepaid" yanlış pozitif vermez
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("yerlestir", KOK / "araclar" / "arsiv-yerlestir.py")
+    yer = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(yer)
+    yeni_arsiv = kok / "arsiv-yeni"
+    for ad, metin in (("ucretli-iz", "Set FAL_KEY and call fal.ai"), ("fiil", "Replicate the experiment; book prepaid expenses.")):
+        (yeni_arsiv / ad).mkdir(parents=True)
+        (yeni_arsiv / ad / "SKILL.md").write_text(f"---\nname: {ad}\n---\n{metin}\n")
+    s1 = {"id": "ucretli-iz", "ad": "ucretli-iz", "yol": "arsiv/ucretli-iz", "tip": "T1"}
+    s2 = {"id": "fiil", "ad": "fiil", "yol": "arsiv/fiil", "tip": "T1"}
+    test("ücret dedektörü yeni arşivdeki SKILL.md'yi okur (yeni skill sessizce 'ücretsiz' sayılmaz)",
+         yer.ucret_belirle(s1, {}, yeni_arsiv)[0] == "belirsiz")
+    test("'replicate' fiili / 'prepaid' muhasebe terimi ücretli iz sayılmaz", yer.ucret_belirle(s2, {}, yeni_arsiv)[0] == "ucretsiz")
+
+    # Trend: seviye hesabı, değerlendirme bonusu ve öneride sadece konuya uygun skille bonus
+    from ortak import trend_durumu
+    tr = {"son_tarama": "2026-10-22", "gecmis": {"a/b": {"ilk": "2026-10-01", "son": "2026-10-22", "gorulme": 3},
+                                                 "c/d": {"ilk": "2026-06-01", "son": "2026-08-01", "gorulme": 1},
+                                                 "e/f": {"ilk": "2025-01-01", "son": "2025-02-01", "gorulme": 1}}}
+    test("trend seviyeleri: trendde / yakinda / gecmiste / yok",
+         [(trend_durumu(r, tr) or {}).get("seviye") for r in ("a/b", "c/d", "e/f", "x/y")] == ["trendde", "yakinda", "gecmiste", None])
+    spec = importlib.util.spec_from_file_location("skillekle", KOK / "araclar" / "skill-ekle.py")
+    ekle = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ekle)
+    taban = {"id": "x", "aciklama": "android compose helper", "kategori": "b/08-mobil", "teknoloji_oto": [],
+             "degerlendirme": {"puan": 80}, "durum": "tercih", "ucret": "ucretsiz"}
+    p_yok = ekle.puanla(dict(taban), ["android"], set())[0]
+    p_trend = ekle.puanla(dict(taban, trend={"seviye": "trendde"}), ["android"], set())[0]
+    p_alakasiz = ekle.puanla(dict(taban, trend={"seviye": "trendde"}), ["video"], set())[0]
+    test("öneride trend bonusu: uygun skill öne çıkar, alakasız skill trend yüzünden öneriye girmez",
+         p_trend > p_yok and p_alakasiz == 0, f"{p_yok} {p_trend} {p_alakasiz}")
+
     for g in GLOBAL_KLASORLER.values():
         kod, out = calistir(g, "--skill", "gsap-core", "--evet")
         test(f"güvenlik: {g} reddedilir", kod != 0 and "Güvenlik" in out, out)

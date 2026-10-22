@@ -20,7 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter, global_durum,  # noqa: E402
-                   json_oku, json_yaz, klasor_hash, skill_md_hash)
+                   TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu)
 
 KURALLAR = KOK / "kategori-kurallari.json"
 GELISTIRICILER = KOK / "gelistiriciler.json"
@@ -52,6 +52,9 @@ def kurallari_uygula(kural, kayit):
     if kayit["tip"] == "T3":
         return kural["repo_varsayilan"]["_T3"]
     ad, repo = kayit["ad"], kayit["repo"]
+    for k in kural.get("yol_kurallari", []):  # repo içi klasöre göre (ör. knowledge-work-plugins/sales/...): ad kurallarından önce
+        if k["repo"] == repo and re.search(k["desen"], kayit.get("kaynak_yol", ""), re.I):
+            return k["kategori"]
     for k in kural.get("ad_kurallari", []):
         if k.get("repo") and k["repo"] != repo:  # repo'ya özel kural: başka repodaki aynı adlı skill etkilenmez
             continue
@@ -175,15 +178,20 @@ def degerlendir(s, gel):
     p += yp; ac.append(f"yapı {yp}/5")
     if s.get("kalite"):
         p = round(0.6 * p + 0.4 * s["kalite"] * 20); ac.append(f"elle kalite {s['kalite']}/5 (%40 ağırlık)")
+    t = s.get("trend")
+    if t:  # GitHub Trending'e girmiş kaynak (araclar/github-trend.py)
+        p += TREND_BONUS[t["seviye"]]; ac.append(f"GitHub trend +{TREND_BONUS[t['seviye']]} ({t['seviye']}, son {t['son']})")
     p = max(0, min(100, p))
     return {"puan": p, "not": "A" if p >= 80 else "B" if p >= 65 else "C" if p >= 50 else "D", "ayrinti": ac}
 
 
-UCRET_IZI = re.compile(r"\b[A-Z][A-Z0-9]*_API_KEY\b|primaryEnv|requires? (an? )?[\w .-]{0,30}api key|prepaid|paid (plan|tier|api)|"
-                       r"\b(elevenlabs|heygen|fal\.ai|replicate|runpod|atlas ?cloud|dashscope|volcengine|fish\.audio|minimax)\b", re.I)
+# "replicate" (İngilizce fiil) ve "prepaid" (muhasebe terimi) tek başına yanlış pozitif verir: servis adı/plan bağlamıyla aranır
+UCRET_IZI = re.compile(r"\b[A-Z][A-Z0-9]*_API_KEY\b|primaryEnv|requires? (an? )?[\w .-]{0,30}api key|prepaid (credits?|plan|balance)|"
+                       r"paid (plan|tier|api)|replicate\.com|REPLICATE_API|\breplicate (api|model)|"
+                       r"\b(elevenlabs|heygen|fal\.ai|runpod|atlas ?cloud|dashscope|volcengine|fish\.audio|minimax)\b", re.I)
 
 
-def ucret_belirle(s, tablo):
+def ucret_belirle(s, tablo, kok_arsiv=None):
     """Ücret sınıfı: elle tablo > T4 toplu 'kismen' > ücretli servis izi varsa 'belirsiz' > 'ucretsiz'."""
     for anahtar in (s["id"], s["ad"]):
         if anahtar in tablo:
@@ -191,7 +199,8 @@ def ucret_belirle(s, tablo):
             return sinif, not_, "elle"
     if s.get("tip") == "T4":
         return "kismen", "Composio hesabı gerekir (ücretsiz katman var); bağlanan uygulamanın kendi planı geçerli", "toplu"
-    sm = KOK / s["yol"] / "SKILL.md"
+    # Yeni arşiv henüz .arsiv-yeni içinde: yol "arsiv/..." oraya çevrilir (yoksa yeni skiller hiç taranmadan ücretsiz sayılırdı)
+    sm = (kok_arsiv / Path(s["yol"]).relative_to("arsiv") if kok_arsiv else KOK / s["yol"]) / "SKILL.md"
     metin = sm.read_text(encoding="utf-8", errors="ignore") if sm.exists() else ""
     iz = sorted({m.group(0) for m in UCRET_IZI.finditer(metin)})[:5]
     if iz:
@@ -503,8 +512,15 @@ def main():
                            "yol": goreli(h), "ad": Path(b["yol"]).stem})
 
     ucret_tablo = json_oku(KOK / "ucret-siniflandirma.json", {"siniflar": {}})["siniflar"]
+    trend = json_oku(TREND, {})
     for s in skiller:
-        s["ucret"], s["ucret_notu"], s["ucret_kaynagi"] = ucret_belirle(s, ucret_tablo)
+        s["ucret"], s["ucret_notu"], s["ucret_kaynagi"] = ucret_belirle(s, ucret_tablo, YENI)
+        t = trend_durumu(s["repo"], trend)
+        if t:
+            s["trend"] = t
+        else:
+            s.pop("trend", None)
+        s["degerlendirme"] = degerlendir(s, s.get("gelistirici"))  # trend ve korunan kayıtlar dahil hepsi güncel puanla
     skiller.sort(key=lambda s: (s["kategori"], s["id"]))
     # Güvenlik kilidi: önceki registry'deki kaynakların hepsi ya yeniden yerleşmiş ya da korunmuş olmalı.
     yeni_k = {(s["repo"], s["kaynak_yol"]) for s in skiller}

@@ -4,7 +4,7 @@ _TDD, hata ayıklama, doğrulama_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/11**
 
-### debugging-and-error-recovery  ·  addyosmani/agent-skills @ aeac41d  ·  puan 87 (A)
+### debugging-and-error-recovery  ·  addyosmani/agent-skills @ aeac41d  ·  puan 97 (A)
 
 - **Ne yapar:** Kök neden odaklı hata ayıklama: 'hattı durdur' kuralı, yeniden üret → yerelleştir → küçült → kök nedeni düzelt → tekrarı önle → uçtan uca doğrula triyajı; test, build ve çalışma zamanı hataları için ayrı triyaj desenleri, güvenli geri dönüş kalıpları, enstrümantasyon kuralları ve hata çıktısını güvenilmeyen veri sayma uyarısı.
 - **Ne zaman:** superpowers zinciri kullanılmayan projelerde hata ayıklama; build/runtime hata tipine göre hazır triyaj listesi istendiğinde. · **Ne zaman değil:** systematic-debugging kuruluysa aynı rolde ikinci hata ayıklama skilli olarak.
@@ -15,7 +15,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli ve kısa (11 KB); hata tipine göre triyaj ve 'hata çıktısı talimat değildir' notu obra'da olmayan artılar. Aynı işi yaptığı için alternatif; addyosmani zinciri kullanan projelerde birincil yerine seçilebilir.
 
-### systematic-debugging  ·  obra/superpowers @ 2ce8aa1  ·  puan 95 (A)
+### systematic-debugging  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
 
 - **Ne yapar:** superpowers'ın hata ayıklama skilli: 'kök neden bulunmadan düzeltme yok' demir yasasıyla dört faz (kök neden araştırması, desen analizi, hipotez ve test, uygulama); çok bileşenli sistemlerde sınırlara tanı günlüğü ekletme, 3 başarısız düzeltmeden sonra mimariyi sorgulama. Ek dosyalar: root-cause-tracing, defense-in-depth, condition-based-waiting (+ TS örneği) ve testleri kirleten testi bulan find-polluter.sh.
 - **Ne zaman:** Her hata, test başarısızlığı, build kırılması veya beklenmeyen davranışta düzeltme önermeden önce; özellikle zaman baskısı ve ardışık başarısız düzeltmelerde. · **Ne zaman değil:** Kök nedeni zaten bilinen önemsiz yazım hataları; hata yokken genel kod incelemesi.
@@ -59,7 +59,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF / SADECE ARŞİV. 3 KB tablo özeti; 'testi çalıştırıp başarısızlığı gör' gibi uygulama adımları yok, iki birincil sürümün kapsadığı her şeyi daha zayıf veriyor.
 
-### test-driven-development  ·  addyosmani/agent-skills @ aeac41d  ·  puan 95 (A)
+### test-driven-development  ·  addyosmani/agent-skills @ aeac41d  ·  puan 100 (A)
 
 - **Ne yapar:** Kırmızı-yeşil-refactor döngüsüyle geliştirme: önce projenin test yığınını keşfeder, başarısız test yazdırır, minimum kodla geçirtir, sonra temizletir. Hata düzeltmeleri için 'önce kanıtla' (hatayı yeniden üreten test) deseni, test piramidi ve test boyutları, davranışı test etme, DAMP, sahte yerine gerçek implementasyon, AAA ve DevTools ile tarayıcı testi rehberi içerir.
 - **Ne zaman:** Mantık yazarken, hata düzeltirken veya davranış değiştirirken; kullanıcı test istemese de kod satır içi verilmiş olsa bile. · **Ne zaman değil:** Atılacak prototip/spike; salt yapılandırma veya üretilmiş kod; superpowers zincirinin katı 'test öncesi kodu sil' disiplini isteniyorsa (test-driven-development@obra).
@@ -70,7 +70,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 16 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar.
 
-### test-driven-development@obra  ·  obra/superpowers @ 2ce8aa1  ·  puan 95 (A)
+### test-driven-development@obra  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
 
 - **Ne yapar:** superpowers'ın TDD skilli: 'başarısız test olmadan üretim kodu yok' demir yasası; testten önce yazılan kodu silip baştan başlatır, kırmızıyı ve yeşili mutlaka çalıştırıp gözlemletir, iyi/kötü test örnekleri, gerekçe-çürütme tablosu ve writing-good-tests.md ek rehberi sunar.
 - **Ne zaman:** superpowers zinciri (writing-plans → subagent-driven-development / executing-plans) uçtan uca kullanılırken; agent'ın TDD'yi atlama eğilimine karşı en katı disiplin istendiğinde. · **Ne zaman değil:** addyosmani sürümü kuruluysa (aynı ad, aynı iş); test yığını keşfi ve test piramidi rehberi gerekiyorsa.
@@ -103,7 +103,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 10 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ama yüzeysel tablo özeti; içerik test-driven-development'ın 'Writing Good Tests' ve test piramidi bölümlerinde daha iyi var.
 
-### verification-before-completion  ·  obra/superpowers @ 2ce8aa1  ·  puan 96 (A)
+### verification-before-completion  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
 
 - **Ne yapar:** 'Taze doğrulama kanıtı olmadan tamamlandı iddiası yok' kuralı: bir durum iddia etmeden önce kanıtlayan komutu belirle, tam çalıştır, çıktıyı ve çıkış kodunu oku, ancak sonra iddia et. Testler, lint, build, hata düzeltmesi, regresyon testi ve alt-agent raporları için neyin yeterli kanıt olduğunu tablolar.
 - **Ne zaman:** İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman. · **Ne zaman değil:** Neredeyse hiçbir zaman gereksiz değildir; yalnız doğrulanacak çalıştırılabilir bir şey yoksa (salt doküman işi) etkisiz.

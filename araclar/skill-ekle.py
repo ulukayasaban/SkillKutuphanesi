@@ -513,6 +513,8 @@ def puanla(s, sorgu, teknolojiler):
         if s["durum"] == "alternatif":
             p -= 1
         p -= {"ucretli": 2, "belirsiz": 1, "kismen": 0.5}.get(s.get("ucret"), 0)  # ücretsizler önde
+        # GitHub Trending'e girmiş kaynak: konuya UYGUN skiller arasında öne al (eşleşme yoksa p=0, trend tek başına sokmaz)
+        p += {"trendde": 1.5, "yakinda": 1, "gecmiste": 0.3}.get((s.get("trend") or {}).get("seviye"), 0)
         if s.get("ortusme_rolu") == "emekli" or s.get("kaynak_durumu"):
             p -= 6  # emekli / kaynakta kaldırılmış: yerine geçeni varken öne çıkmasın
     return p, eslesen, tek_esl
@@ -634,9 +636,9 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
             elif kurulum != kad:
                 rapor.ekle("BİLGİ", "kardes-yol", f"{ad}: ../{kad}/ bağlantıları projedeki ada çevrilecek: ../{kurulum}/")
         if s.get("ucret") == "ucretli":
-            rapor.ekle("UYARI", "ucretli", f"{ad}: ÜCRETLİ servis gerektirir — {s.get('ucret_notu', '')}")
+            rapor.ekle("UYARI", "ucretli", f"{ad}: ÜCRETLİ — ücret ödemeden kullanılamaz — {s.get('ucret_notu', '')}")
         elif s.get("ucret") == "kismen":
-            rapor.ekle("BİLGİ", "kismen-ucretli", f"{ad}: ücretsiz yolu var, bazı kısımlar ücretli/koşullu — {s.get('ucret_notu', '')}")
+            rapor.ekle("BİLGİ", "kismen-ucretli", f"{ad}: ücret ödemeden kullanılabilir, bazı yollar ücretli — {s.get('ucret_notu', '')}")
         elif s.get("ucret") == "belirsiz":
             rapor.ekle("UYARI", "ucret-belirsiz", f"{ad}: ücret durumu sınıflandırılmadı ({s.get('ucret_notu', '')})")
         if s.get("ortusme_rolu") == "emekli" and s.get("kaynak_durumu") != "kaynakta-kaldirildi":
@@ -1022,6 +1024,8 @@ def oner(a, proje, skiller):
             ucret = {"ucretli": " 💲ÜCRETLİ", "kismen": " (kısmen ücretli)", "belirsiz": " (ücret?)"}.get(s.get("ucret"), "")
             if s.get("ortusme_rolu") == "emekli" or s.get("kaynak_durumu"):
                 ucret += " 🗄️emekli"
+            if s.get("trend"):
+                ucret += " 🔥trend"
             print(f"  {s['id'] + ucret:40s} puan {s['degerlendirme']['puan']:3d} ({s['degerlendirme']['not']}) · "
                   f"Codex {s['uyum']['codex']:16s} · eşleşen: {', '.join(e + sorted(t))}")
     roller = {}

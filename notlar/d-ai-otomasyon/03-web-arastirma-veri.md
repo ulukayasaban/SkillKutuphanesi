@@ -2,9 +2,9 @@
 
 _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **2/2**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **2/3**
 
-### agent-reach  ·  Panniantong/Agent-Reach @ 94f06c1  ·  puan 87 (A)
+### agent-reach  ·  Panniantong/Agent-Reach @ 94f06c1  ·  puan 97 (A)
 
 - **Ne yapar:** İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub kod arama, RSS, podcast, hisse verisi) çoklu arka uçla (OpenCLI, platform CLI'ları, API'ler) içerik okur. `agent-reach doctor --json` ile hangi kanalın çalıştığını denetler; kategori başına references/ dosyaları var. SKILL.md Çince, SKILL_en.md İngilizce.
 - **Ne zaman:** Çok platformlu web/sosyal medya araştırması, 'internette ne konuşuluyor' taraması, URL'den içerik okuma. · **Ne zaman değil:** Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulmamışsa. Açıklamadaki 'MUST USE' tetikleme dili her URL'de devreye girer — yalnızca araştırma rolüne ver. Giriş gerektiren platformlar tarayıcı çerezi okuyabilir; gizlilik açısından dikkat.
@@ -14,6 +14,16 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Durum:** tercih · **Örtüşme:** web-arastirma → birincil · **Roller:** ai-entegrasyon, icerik-pazarlama
 - **Boyut:** 46 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Çok kanallı, doctor ile kendini denetleyen, hata durumunda yeniden deneme zinciri tanımlı; MIT. Eksi: varsayılan SKILL.md Çince (İngilizce sürüm SKILL_en.md içinde) ve Çin platformlarına ağırlık veriyor.
+
+### graphify  ·  Graphify-Labs/graphify @ 847a93f  ·  puan 95 (A)
+
+- **Ne yapar:** Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the question should be treated as a graphify query first. Turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools.
+- **Teknoloji:** api-anahtari, git, html, node, obsidian, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** Graphify-Labs (kurum, ★132570, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 5398 KB (SKILL.md 46.4 KB, yük buyuk) · **Bağımlılık:** graphify Python paketi (pip install graphifyy) kurulu olmalı.
+- **İnceleme:** otomatik
 
 ### notebooklm  ·  teng-lin/notebooklm-py @ 99f2bd2  ·  puan 85 (A)
 

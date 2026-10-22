@@ -97,6 +97,12 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 71 | Elle verilen tercih (`durum_elle`) kısmi indirmede öncelik kuralıyla ezilir (ör. 1 KB'lık yönlendirme `remotion` OpenMontage'ı geçti) | Çakışma çözümü `durum_elle`'yi önceliğin önüne koyar; iki tur üst üste çalıştırılıp kararlılık doğrulandı |
 | 72 | Toplama repolarında içeriği olmayan "yönlendirme" skilleri (sadece upstream linki; open-design'da 82 tane) öneride öne çıkar | Elle `kalite: 1` + `kalite_notu`; puan düşer, `--oner` alt sıralara iter. Upstream'deki tam sürümü ya da kütüphanedeki eşini kullan |
 | 73 | Yeni ad kuralı başka repodaki aynı adlı skillin kategorisini sessizce değiştirir | `ad_kurallari` kaydında `repo` alanı: kural sadece o repoya uygulanır; ekleme sonrası eski kayıtların kategori farkı (git HEAD'e göre) kontrol edilir |
+| 74 | Yeni eklenen skillerin ücreti hiç taranmadan "ücretsiz" sayılır (dedektör eski arşiv yolunu okuyordu) | Dedektör `.arsiv-yeni` yolunu okur; test: "ücret dedektörü yeni arşivdeki SKILL.md'yi okur" |
+| 75 | Ücret izi regex'i İngilizce kelimelerde yanlış pozitif verir ("replicate the experiment", "prepaid expenses") | Servis bağlamıyla aranır (`replicate.com`, `REPLICATE_API`, `prepaid credits`); test eklendi |
+| 76 | Yeni kaynakta geliştirici bilgisi toplanmaz → değerlendirme yarı puanla (D) çıkar, öneride geri düşer | `dogrula.py` UYARI: "geliştirici bilgisi yok"; sıra: `gelistirici-bilgisi.py` → `arsiv-yerlestir.py` |
+| 77 | Aynı ad, farklı iş (ör. `design-system`: token mimarisi ↔ tasarım sistemi denetimi) yeni resmî kaynak gelince rolün skill'i sessizce değişir | Ekleme sonrası eski kayıtların durum farkı (git HEAD'e göre) incelenir; rollerde kullanılanlar `durum_elle` ile sabitlenir |
+| 78 | Trend tek başına alakasız skill'i öneriye sokar ya da trend sayfası okunamaz | Bonus sadece konu eşleşmesi varsa eklenir (test); tarama başarısızsa `trend.json`'a dokunulmaz, aylık güncelleme durmaz |
+| 79 | Emekli eski sürümler sonraki güncellemede geri gelir | `kaynaklar.json` → `arsivden_cikarilanlar`: yeniden indirilmez (`haric:arsivden-cikarildi`), korunmaz; geri almak için kaydı sil |
 
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).

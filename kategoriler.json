@@ -23,7 +23,8 @@
         "04-mimari-api-veritabani": "Mimari, API/arayüz tasarımı, veritabanı, backend",
         "05-git-pr-surum": "Git, worktree, PR, sürüm/release, changelog",
         "06-devops-guvenlik-performans": "CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans",
-        "07-framework-ozel": "Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)"
+        "07-framework-ozel": "Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)",
+        "08-mobil-uygulama": "Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans"
       }
     },
     "c-dokuman-icerik": {
@@ -63,6 +64,25 @@
       "baslik": "Repo-İçi Geliştirici Skilleri (varsayılan listede gizli)",
       "kategoriler": {
         "01-repo-gelistirici-skilleri": "Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için iç süreç skilleri; kendi projelerinde nadiren gerekir"
+      }
+    },
+    "h-is-alanlari": {
+      "baslik": "İş Alanları (Bilgi Çalışanı)",
+      "kategoriler": {
+        "01-satis-pazarlama-musteri": "Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları",
+        "02-finans-hukuk-ik": "Finans/muhasebe, hukuk/sözleşme, insan kaynakları",
+        "03-operasyon-urun-isletme": "Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama",
+        "04-veri-analizi-raporlama": "İş verisi analizi, SQL, pano/rapor, öngörü"
+      }
+    },
+    "i-bilim-muhendislik": {
+      "baslik": "Bilim, Araştırma ve Mühendislik",
+      "kategoriler": {
+        "01-yasam-bilimleri-kimya": "Biyoinformatik, genomik, ilaç/kimya, klinik ve tıbbi veri, laboratuvar otomasyonu",
+        "02-fizik-kuantum-malzeme": "Fizik, kuantum hesaplama, malzeme/astronomi, simülasyon",
+        "03-veri-bilimi-ml": "Bilimsel Python, istatistik, makine öğrenmesi, görselleştirme, büyük veri",
+        "04-bilimsel-yazim-literatur": "Literatür tarama, makale/hibe yazımı, atıf, hakem değerlendirmesi, bilimsel sunum",
+        "05-cad-imalat-robotik": "CAD (STEP/DXF), 3D baskı/G-code, imalat (DFM), robot tanımı (URDF/SRDF)"
       }
     }
   }

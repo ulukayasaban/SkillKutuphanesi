@@ -13,6 +13,7 @@ REGISTRY = KOK / "registry.json"
 KAYNAKLAR = KOK / "kaynaklar.json"
 KATEGORILER = KOK / "kategoriler.json"
 GECICI = KOK / ".gecici"
+TREND = KOK / "trend.json"
 
 # Bilgisayardaki global skill klasörleri: SADECE OKUNUR, asla yazılmaz.
 GLOBAL_KLASORLER = {
@@ -117,3 +118,18 @@ def global_durum(ad: str, ana_hash: str) -> dict:
             except OSError:
                 durum[arac] = "okunamadi"
     return durum
+
+
+TREND_BONUS = {"trendde": 10, "yakinda": 6, "gecmiste": 2}  # değerlendirme puanına (0-100) eklenen
+
+
+def trend_durumu(repo: str, trend: dict):
+    """Repo GitHub Trending'de görüldü mü? trendde = son taramada · yakinda = son 90 gün · gecmiste = daha eski."""
+    g = (trend or {}).get("gecmis", {}).get(repo)
+    if not g:
+        return None
+    from datetime import date
+    gun = (date.fromisoformat(trend["son_tarama"]) - date.fromisoformat(g["son"])).days
+    seviye = "trendde" if g["son"] == trend["son_tarama"] else "yakinda" if gun <= 90 else "gecmiste"
+    return {"seviye": seviye, "son": g["son"], "ilk": g["ilk"], "gorulme": g["gorulme"],
+            "en_iyi": g.get("en_iyi", {})}

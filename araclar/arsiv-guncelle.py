@@ -123,6 +123,9 @@ def uygula(degisen, ayrinti, dal_modu):
         calistir("git", "switch", "-q", "-c", dal)
     try:
         calistir(sys.executable, "araclar/gelistirici-bilgisi.py")
+        # GitHub Trending: ağ/sayfa sorunu güncellemeyi durdurmaz (önceki trend geçmişi kullanılır)
+        if subprocess.run([sys.executable, "araclar/github-trend.py", "--aday"], cwd=KOK).returncode:
+            print("UYARI: GitHub trend taraması yapılamadı; önceki trend.json ile devam")
         calistir(sys.executable, "araclar/kaynak-cek.py")
         calistir(sys.executable, "araclar/arsiv-yerlestir.py")
         calistir(sys.executable, "araclar/kapsam-denetimi.py")

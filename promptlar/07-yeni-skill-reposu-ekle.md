@@ -8,8 +8,10 @@ Yapay Zeka Skillleri listeme yeni repolar ekledim, kontrol et ve kütüphaneye d
 ~/Documents/SkillKutuphanesi/AGENTS.md ve rehber/03-yeni-skill-ekleme.md'yi oku ve adımları ATLAMADAN uygula:
 
 1. python3 araclar/github-skill-listesi.py  → "YENİ" bölümündeki repoları listele.
+   python3 araclar/github-trend.py --aday  → trend'deki aday skill repolarını da listele (eksik alanlarımıza uyanları işaretle).
 2. Her yeni repo için incele ve bana tablo halinde göster: ne yapıyor, kaç SKILL.md var ve nerede, lisans, son güncelleme,
-   ÜCRET (ücretli API/abonelik gerekiyor mu, ücretsiz yolu var mı), çalışırken proje dışına yazıyor mu/ağdan kod indiriyor mu,
+   ÜCRET (ücretli = ücret ödemeden HİÇ kullanılamıyor; ücretli servis sadece bir seçenekse ya da ücretsiz katman varsa kısmen),
+   GitHub trend durumu, çalışırken proje dışına yazıyor mu/ağdan kod indiriyor mu,
    tip önerisi (T1–T6) ve kategori önerisi.
 3. ÇAKIŞMA KONTROLÜ (zorunlu): her SKILL.md için
    - kütüphanede aynı ADLI skill var mı (registry.json 'ad'); varsa içerik aynı mı farklı mı, hangisi 'tercih' olmalı (oncelik),
@@ -25,6 +27,9 @@ Yapay Zeka Skillleri listeme yeni repolar ekledim, kontrol et ve kütüphaneye d
    python3 araclar/kapsam-denetimi.py                   (0 sorun olmalı)
    python3 araclar/katalog-uret.py
    python3 araclar/dogrula.py                           (0 hata, 0 uyarı olmalı)
+   Eski kayıtların kategori/durum/ücret farkını git HEAD'deki registry ile karşılaştır; rollerde kullanılan bir adın tercihi
+   değiştiyse (aynı ad, farklı iş) durum_elle ile sabitle.
+   python3 araclar/github-skill-listesi.py --duzenle  (yeni repoları yıldızla, 'Yapay Zeka Skillleri' listesine koy)
 5. Yeni skilleri rehber/07-kategori-inceleme.md'ye göre incele (ozet_tr, kullanım, teknoloji, kalite, örtüşme rolü, ücret notu).
 6. Gerekirse rollere/profillere ekle (ücretli skill çekirdeğe ancak gerekçeyle). python3 araclar/test.py ve
    python3 araclar/duman-testi.py çalıştır; hepsi geçerse git add -A && git add -f arsiv && git commit.

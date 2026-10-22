@@ -2,12 +2,11 @@
 
 > Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
 
-- **Kaynak repo:** https://github.com/calesthio/OpenMontage
-- **Repo içindeki yol:** `.claude/skills/vercel-composition-patterns`
-- **Commit:** `c8066452325cb57c8fc1ba8c2a71b6e8842e6b65`
-- **Lisans:** AGPL-3.0
-- **Geliştirici:** calesthio (kisi)
-- **Değerlendirme:** 87/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Kaynak repo:** https://github.com/vercel-labs/agent-skills
+- **Repo içindeki yol:** `skills/composition-patterns`
+- **Commit:** `063bee94c3f4df8453406c830b0a7df0f2860278`
+- **Lisans:** belirtilmemiş
+- **Geliştirici:** vercel-labs (kurum)
+- **Değerlendirme:** 81/100 (A)
+- **Arşive alınma:** 2026-10-22
 - **Durum:** tercih
-- **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.

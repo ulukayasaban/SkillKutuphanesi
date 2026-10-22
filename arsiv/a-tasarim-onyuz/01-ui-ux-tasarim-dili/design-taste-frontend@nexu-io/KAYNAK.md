@@ -6,7 +6,7 @@
 - **Repo içindeki yol:** `skills/taste-skill`
 - **Commit:** `e03d5c23f308c39f4de7c057568df66c29a84385`
 - **Lisans:** Apache-2.0
-- **Geliştirici:** ?
-- **Değerlendirme:** 25/100 (D)
+- **Geliştirici:** nexu-io (kurum)
+- **Değerlendirme:** 90/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih
