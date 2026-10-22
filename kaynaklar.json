@@ -339,6 +339,18 @@
       "repo": "anthropics/claude-code",
       "tip": "T5",
       "kimlik": "claude-code-arac"
+    },
+    {
+      "repo": "VoltAgent/awesome-design-md",
+      "tip": "T6"
+    },
+    {
+      "repo": "nevertoday/350-layout-compositions",
+      "tip": "T6"
+    },
+    {
+      "repo": "zhuyansen/awesome-claude-video-skills",
+      "tip": "T5"
     }
   ],
   "konum_haric": [

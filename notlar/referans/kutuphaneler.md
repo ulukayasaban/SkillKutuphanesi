@@ -16,3 +16,4 @@
 | arturitu/the-delegation | (skill içermiyor) proje referansı | – | – |
 | haticesahin/SanalFuar | (skill içermiyor) sanal fuar projesi referansı | – | – |
 | linvi/tweetinvi | C# Twitter/X API kütüphanesi | .NET ile X entegrasyonu | – |
+| zhuyansen/awesome-claude-video-skills | (skill içermiyor) Claude Code/Codex ile video yapan 300+ skill reposunun türe göre, güvenlik notlu keşif listesi | Yeni video skilli ararken; aday repoyu kütüphaneye eklemeden önce `rehber/03` çakışma + ücret kontrolü | video-kompozisyon, video-kurgu-render |

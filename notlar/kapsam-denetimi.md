@@ -46,7 +46,7 @@
 
 ## Referans repoları (T5/T6)
 
-24 repo tarandı; içlerinde skill yok.
+27 repo tarandı; içlerinde skill yok.
 
 ## Bilinçli hariç tutulanlar (gerekçeli)
 
