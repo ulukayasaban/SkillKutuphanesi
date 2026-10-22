@@ -87,6 +87,8 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 63 | Geliştirici skill'leri kaynakta kaldırır (HyperFrames iş akışı skilleri emekliye ayrıldı); güncelleme onları arşivden ve rollerden düşürür | Kaynakta kaldırılan skill arşivde kalır, `kaynak_durumu: kaynakta-kaldirildi`; ön kontrolde `kaynakta-kaldirildi` UYARI, dogrula'da rol UYARISI, katalogda 🗄️emekli |
 | 64 | Skill'in kendi `.gitignore`'u arşiv dosyalarını git'ten gizler (embedded-captions `transcript.json`) → git yedeği eksik | Commit'ler `git add -f arsiv` ile; dogrula git'e girmeyen arşiv dosyasını HATA sayar |
 
+| 65 | Aylık güncelleme doğrudan master'ı değiştirir, kötü bir kaynak değişikliği fark edilmeden yayılır | Güncelleme `guncelleme/YYYY-AA` dalında; master sadece `--birlestir` ile ve kontroller geçerse değişir; geçmiş `notlar/guncelleme-gecmisi.md` |
+
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).
 - Değerlendirme puanı GitHub verisinden hesaplanır; içerik kalitesini ölçmez. Elle `kalite` (1–5) verince %40 ağırlıkla katılır.

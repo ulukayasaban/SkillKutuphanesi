@@ -8,15 +8,33 @@ GitHub repoları ──(1) arsiv-guncelle.py──► SkillKutuphanesi ──(2)
                                              (git kayıt noktası)                    (proje yedeği)
 ```
 
-## 1) Kütüphaneyi güncelleme (önerilen: ayda bir)
+## 1) Kütüphaneyi güncelleme — aylık, git dalıyla (önerilen)
+
+Güncelleme **ayda bir** yapılır ve **git ile takip edilir**: her güncelleme kendi dalında (`guncelleme/YYYY-AA`) hazırlanır,
+`master` sen onaylayana kadar değişmez.
+
+```
+master ──┬──────────────────────────────── (onay) ── merge --no-ff ──► master
+         └─ guncelleme/2026-11: indir → yerleştir → denetle → geçmiş kaydı → commit
+```
 
 ```bash
 cd ~/Documents/SkillKutuphanesi
-python3 araclar/arsiv-guncelle.py            # SADECE RAPOR: hangi repoda yeni commit var, hangi skill dosyaları değişti,
-                                             # yıldızlarına yeni repo eklenmiş mi
-python3 araclar/arsiv-guncelle.py --uygula   # değişiklik varsa: yeniden indir → yerleştir → kapsam denetimi → katalog →
-                                             # doğrula → geçici dosyaları sil → git kayıt noktası
+python3 araclar/arsiv-guncelle.py                      # 1. RAPOR: hangi repoda yeni commit var, yeni yıldız var mı
+python3 araclar/arsiv-guncelle.py --uygula --dal       # 2. guncelleme/YYYY-AA dalında güncelle (master değişmez)
+git log master..guncelleme/2026-11                     # 3. incele (ve dalda notlar/guncelleme-gecmisi.md)
+python3 araclar/arsiv-guncelle.py --birlestir guncelleme/2026-11   # 4a. onay: master'a birleştir + kontroller + dal silinir
+git branch -D guncelleme/2026-11                       # 4b. ret: dalı sil, hiçbir şey değişmez
 ```
+
+- **Otomatik aylık rapor:** "SkillKutuphanesi aylık güncelleme" zamanlanmış görevi her ayın 1'inde 10:00'da 1–2. adımları
+  çalıştırır, sonucu raporlar; **birleştirmez**. Birleştirme her zaman senin onayınla yapılır (4a).
+- **Takip:** her güncelleme `notlar/guncelleme-gecmisi.md`'ye kayıt düşer (kaynak commit'leri, içeriği değişen / yeni /
+  kaynakta kaldırılan skiller, yeniden incelenecekler, durum: bekliyor → birleştirildi). Ayrıntı: `git log --oneline -- registry.json`.
+- Bekleyen bir güncelleme dalı varken yeni `--dal` güncellemesi başlamaz (önce birleştir ya da sil).
+- `--birlestir` sonrası doğrulama, kapsam denetimi ya da testler geçmezse `master` otomatik eski hâline döner, dal kalır.
+
+`--uygula` tek başına (dal olmadan) da çalışır: güncellemeyi bulunulan dalda yapar. Aylık rutin için `--dal` kullan.
 
 `--uygula` önce iki şeyi şart koşar: kütüphanede **kaydedilmemiş değişiklik olmayacak** (elle düzenlemeni önce `git commit` et) ve tüm kaynaklara **erişilebilecek**. Sonra bu sırayla çalışır; herhangi bir adım hata verirse durur ve **git kaydı atmaz**:
 1. `kaynak-cek.py` — tüm kaynaklar sabit commit'ten yeniden iner (indirme hatası varsa durur).

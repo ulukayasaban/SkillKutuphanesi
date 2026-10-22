@@ -19,7 +19,8 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 5. Onay gelirse aynı komutu `--evet` ile çalıştır. Sonra `--dogrula` sonucunu bildir.
 
 ## Bakım isteklerinde
-- "Skilleri güncelle" → önce `python3 araclar/arsiv-guncelle.py` (rapor), onayla `--uygula`. Sonra etkilenen projeler için
-  `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
+- "Skilleri güncelle" (aylık) → `python3 araclar/arsiv-guncelle.py` (rapor) → `--uygula --dal` (güncelleme `guncelleme/YYYY-AA`
+  dalında; master değişmez) → kullanıcıya dal özetini ve `notlar/guncelleme-gecmisi.md` kaydını göster → onay gelirse
+  `--birlestir <dal>`. Sonra yeniden incelenecek skilleri incele, etkilenen projeler için `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
 - "Yeni repo yıldızladım" → `rehber/03-yeni-skill-ekleme.md`.
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.
