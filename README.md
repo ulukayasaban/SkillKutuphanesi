@@ -27,6 +27,7 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `roller/`, `profiller/` | Agent rolleri (rol → skiller) ve proje tipleri (profil → roller) |
 | `kaynaklar.json` | Hangi repolar, hangi tipte, hangi kurallarla alınır; `arsivden_cikarilanlar` (bilerek çıkarılan eski sürümler) |
 | `trend.json`, `notlar/github-trend.md` | GitHub Trending geçmişi ve raporu |
+| `konu-takip.json`, `notlar/konu-takip.md` | Konu takibi (aday repolar, değerlendirme kararları) |
 | `kategoriler.json`, `kategori-kurallari.json` | Alanlar/kategoriler ve otomatik atama kuralları |
 | `gelistiriciler.json` | Repo sahipleri, yıldız, lisans, bakım |
 | `notlar/roller-ve-profiller.md` | Tüm rol ve profillerin özeti (otomatik üretilir) |
@@ -48,7 +49,7 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 10 prompt: [prompt
 7. [Kategori inceleme süreci](rehber/07-kategori-inceleme.md)
 
 ## Alanlar
-`a-tasarim-onyuz` · `b-yazilim-gelistirme` · `c-dokuman-icerik` · `d-ai-otomasyon` · `g-video-ses-medya` · `h-is-alanlari` · `i-bilim-muhendislik`
+`a-tasarim-onyuz` · `b-yazilim-gelistirme` · `c-dokuman-icerik` · `d-ai-otomasyon` · `g-video-ses-medya` · `h-is-alanlari` (e-ticaret/pazaryeri dahil) · `i-bilim-muhendislik`
 · gizli: `e-entegrasyon-katalogu` (Composio), `f-repo-ici` (repo katkı skilleri)
 
 ## Araçlar
@@ -61,6 +62,7 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 10 prompt: [prompt
 | `katalog-uret.py` | KATALOG ve notları üretir |
 | `dogrula.py [--github]` | Tutarlılık; yıldızlı ama tanımsız repo |
 | `gelistirici-bilgisi.py` | Geliştirici bilgileri |
+| `konu-takip.py [--konu X] [--rapor] [--karar repo karar neden]` | Takip edilen alanlarda (e-ticaret/Etsy, mobil…) GitHub'da yeni skill repolarını arar → `notlar/konu-takip.md`; değerlendirilenler tekrar gösterilmez |
 | `github-trend.py [--rapor] [--aday]` | GitHub Trending takibi: trend'e giren kaynaklar (değerlendirme +10/+6/+2, öneride öne alma), trend'deki aday skill repoları → `notlar/github-trend.md` |
 | `github-skill-listesi.py [--duzenle]` | GitHub 'Yapay Zeka Skillleri' listesi: kütüphanenin tüm kaynakları tek listede (başka skill listesi yok); yeni/kopya/eksik raporu, `--duzenle` yıldızlar ve taşır |
 | `test.py` | Uçtan uca güvenlik testleri (geçici projede) |

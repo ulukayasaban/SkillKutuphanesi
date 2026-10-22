@@ -1,0 +1,21 @@
+{
+  "ad": "eticaret-fiyat-pazarlama",
+  "aciklama": "Fiyatlama, kâr marjı, reklam ve pazarlama (e-posta, sosyal medya, mevsimsel kampanya) planlayan agent.",
+  "gorev": "Kâr marjını tüm maliyetlerle (komisyon, kargo, reklam) hesapla; kampanyaları ölçülebilir hedefle kur. Reklam bütçesi harcamadan önce kullanıcı onayı al.",
+  "cekirdek": [
+    "competitive-pricing-strategy",
+    "etsy-pricing-strategy",
+    "profit-margin-analysis",
+    "ecommerce-marketing-strategy-builder",
+    "etsy-advertising",
+    "ecommerce-email-marketing-builder"
+  ],
+  "opsiyonel": [
+    "etsy-offsite-ads",
+    "etsy-seasonal-strategy",
+    "ecommerce-social-media-marketing",
+    "etsy-social-media-marketing",
+    "amazon-ppc-campaign",
+    "dynamic-pricing-ecommerce"
+  ]
+}

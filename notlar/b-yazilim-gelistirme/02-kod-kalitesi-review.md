@@ -75,7 +75,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. Use on any coding task (writing, fixing, refactoring, reviewing, choosing dependencies) and when the user says "ponytail", "be lazy", "simplest solution", "yagni", or complains about over-engineering or bloat. Levels: lite, full (default), ultra.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** DietrichGebert (kisi, ★172936, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★173095, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -85,7 +85,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Quality audit of a whole repo: bugs, security holes, what breaks under real load, risky code without tests, slow paths, and what to delete, merge or split. Ranked, each finding explained in plain English. One-shot report, changes nothing. Use for "audit this codebase", "review the whole repo", "find bloat", "what can I delete", /ponytail-audit.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★172936, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★173095, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -95,7 +95,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** List every `shortcut:` comment (and older `ponytail:` ones) as a debt ledger. One-shot report, changes nothing. Use for "ponytail debt", "what did ponytail defer", "list the shortcuts", /ponytail-debt.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★172936, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★173095, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -105,7 +105,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Show ponytail's measured savings (code, cost, speed) from the benchmark. One-shot display. Use for /ponytail-gain, "what does ponytail save", "ponytail impact".
 - **Teknoloji:** api-anahtari, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★172936, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★173095, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -115,7 +115,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Quick reference for ponytail levels, skills and commands. One-shot display. Use for /ponytail-help, "ponytail help", "how do I use ponytail".
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** DietrichGebert (kisi, ★172936, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★173095, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -125,7 +125,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne yapar:** Quality review of a change: is the logic right, is it safe, does it hold under real load, is risky code tested, is it fast enough, and is every line needed. Reads the connected code, not only the diff. Each finding is explained in plain English. Use for "review this", "code review", "review the last commit", "review my PR", "is this over-engineered", /ponytail-review.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★172936, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★173095, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik

@@ -504,6 +504,68 @@
       "tip": "T1",
       "oncelik": 3,
       "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: sade/az kod yazma disiplini). .openclaw/ ayna."
+    },
+    {
+      "repo": "nexscope-ai/eCommerce-Skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Etsy, Shopify, eBay, TikTok Shop, Walmart; çoğu yerel betikli, API anahtarı istemez."
+    },
+    {
+      "repo": "nexscope-ai/Amazon-Skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Amazon satıcı skilleri."
+    },
+    {
+      "repo": "Shopify/agent-skills",
+      "tip": "T1",
+      "oncelik": 1,
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Resmî Shopify geliştirme skilleri. Lisans belirtilmemiş."
+    },
+    {
+      "repo": "Lonsdale201/wp-agent-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "haric": [
+        "^(?!woocommerce/)"
+      ],
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Sadece woocommerce/ alınır; diğer klasörler belirli WordPress eklentilerine (ACF, Elementor, Fluent, Macar kargo…) özel, bilinçli hariç."
+    },
+    {
+      "repo": "J-DTurner/etsy-api-skill",
+      "tip": "T1",
+      "oncelik": 2,
+      "bagimlilik": "Etsy geliştirici uygulaması (API anahtarı + OAuth 2.0 PKCE) gerekir; ücretsiz, Etsy onayı ister.",
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Etsy Open API v3: ürün, stok, sipariş, mağaza, webhook."
+    },
+    {
+      "repo": "OrcaQubits/agentic-commerce-skills-plugins",
+      "tip": "T1",
+      "oncelik": 4,
+      "haric": [
+        "^dist/"
+      ],
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Magento, BigCommerce, Medusa, Saleor, Salesforce Commerce, Shopify, WooCommerce, agentic commerce protokolleri (UCP/ACP/AP2/A2A/NLWeb). dist/ = diğer AI araçları için derlenmiş kopyalar (hariç)."
+    },
+    {
+      "repo": "xjli360/sealeap-ecommerce-skills",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Pazaryeri bazlı: Etsy, eBay, Mercado Libre, OZON, Shopify, TikTok Shop, Walmart, Wayfair."
+    },
+    {
+      "repo": "finsilabs/awesome-ecommerce-skills",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Platformdan bağımsız e-ticaret operasyonları (katalog, sipariş, B2B, iade, talep tahmini)."
+    },
+    {
+      "repo": "Trendyol/trendyol-integration-developer-tool",
+      "tip": "T1",
+      "oncelik": 2,
+      "bagimlilik": "Trendyol satıcı hesabı ve entegrasyon API bilgileri gerekir.",
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Trendyol'un resmî entegrasyon geliştirici skili. Lisans belirtilmemiş."
     }
   ],
   "konum_haric": [
@@ -730,5 +792,59 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     }
   ],
-  "_aciklama_cikarilan": "arsivden_cikarilanlar: kullanıcı kararıyla arşivden çıkarılan skiller. Yeniden indirilmez (kapsam kararı 'haric:arsivden-cikarildi'), korunmaz. Geri almak için kaydı sil ve kaynak-cek + arsiv-yerlestir çalıştır; eski dosyalar git geçmişinde (son_commit)."
+  "_aciklama_cikarilan": "arsivden_cikarilanlar: kullanıcı kararıyla arşivden çıkarılan skiller. Yeniden indirilmez (kapsam kararı 'haric:arsivden-cikarildi'), korunmaz. Geri almak için kaydı sil ve kaynak-cek + arsiv-yerlestir çalıştır; eski dosyalar git geçmişinde (son_commit).",
+  "takip_konulari": [
+    {
+      "konu": "e-ticaret",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri",
+      "min_yildiz": 10,
+      "sorgular": [
+        "etsy",
+        "shopify",
+        "woocommerce",
+        "amazon seller",
+        "ebay seller",
+        "tiktok shop",
+        "ecommerce",
+        "e-commerce",
+        "dropshipping",
+        "print on demand",
+        "printify",
+        "printful",
+        "magento",
+        "bigcommerce",
+        "prestashop",
+        "medusajs",
+        "saleor",
+        "trendyol",
+        "hepsiburada",
+        "mercado libre",
+        "shopee",
+        "gumroad",
+        "google merchant",
+        "product listing",
+        "marketplace seller",
+        "order management",
+        "inventory management"
+      ],
+      "odak": "e-?commerce|etsy|shopify|woocommerce|amazon|seller|marketplace|dropship|print.on.demand|\\bshop\\b|commerce|retail|trendyol|hepsiburada|mercado|shopee|ebay|tiktok.?shop|product (listing|detail|page)|电商|跨境"
+    },
+    {
+      "konu": "mobil",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama",
+      "min_yildiz": 20,
+      "sorgular": [
+        "jetpack compose",
+        "react native",
+        "expo router",
+        "swiftui",
+        "flutter",
+        "kotlin multiplatform",
+        "app store connect",
+        "google play console"
+      ],
+      "odak": "android|\\bios\\b|mobile|react.?native|\\bexpo\\b|swift|flutter|kotlin|jetpack|compose|app store|play store"
+    }
+  ],
+  "_aciklama_takip": "takip_konulari: araclar/konu-takip.py bu alanlarda GitHub'da yeni skill repolarını arar (aylık güncellemede otomatik). Aday eklemek onaylıdır."
 }

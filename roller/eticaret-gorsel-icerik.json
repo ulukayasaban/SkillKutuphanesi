@@ -1,0 +1,17 @@
+{
+  "ad": "eticaret-gorsel-icerik",
+  "aciklama": "Ürün fotoğrafı, mockup ve listeleme görselleri planlayıp üreten agent.",
+  "gorev": "Platformun görsel kurallarına (boyut, arka plan, sıra) uy; ürünü gerçeğe uygun göster. Ücretsiz/yerel yol önce; ücretli görsel modeli sadece onayla.",
+  "cekirdek": [
+    "etsy-listing-photography",
+    "shopify-product-photography-guide",
+    "amazon-product-photography",
+    "ecommerce-image-workflow"
+  ],
+  "opsiyonel": [
+    "sealeap-etsy-listing-visuals",
+    "canvas-design",
+    "image-optimization-cdn",
+    "ecommerce-video-marketing"
+  ]
+}

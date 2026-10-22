@@ -9,7 +9,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Apple Human Interface Guidelines as 14 agent skills covering platforms, foundations, components, patterns, inputs, and technologies for iOS, macOS, visionOS, watchOS, and tvOS.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -41,7 +41,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Extract a complete Brand Kit from a live website by driving the in-app browser. Use when a brand-extraction project opens with a site in the Browser tab, or when the user asks to "extract a brand", "pull the brand from <url>", "get the colors/fonts/logo from this site", or build a brand/design system from a reference website. Pairs with the agent-browser tool for measurement and pauses for the use
 - **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 68 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
@@ -73,7 +73,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Apply Anthropic's official brand colors and typography to artifacts for consistent visual identity and professional design standards. A reference for shaping your own.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -83,7 +83,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, p
 - **Teknoloji:** canvas, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 17 KB (SKILL.md 16.1 KB, yük orta)
 - **İnceleme:** otomatik
@@ -93,7 +93,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Color science expert skill with 286K words of reference material covering OKLCH/OKLAB, palette generation, accessibility/contrast, color naming, pigment mixing, and historical color theory.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -114,7 +114,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Build a complete design system from scratch with creative risks and realistic product mockups. Useful for kickoff workshops and brand-from-zero work.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -124,7 +124,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Create and manage DESIGN.md files. Useful for capturing design direction, tokens, and visual rules in a single source of truth.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -156,7 +156,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Connect Figma design components to code components using Code Connect so design-system updates flow into the codebase automatically.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -166,7 +166,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Generate project-specific design system rules for Figma-to-code workflows. Useful for capturing tokens, naming, and lint rules in one source.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -176,7 +176,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Create a new blank Figma Design or FigJam file. Useful as the first step in scripted design-system or workshop workflows.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -186,7 +186,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Build or update screens in Figma from code or description using design system components. Translate app pages into Figma using design tokens.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -196,7 +196,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Build or update a professional-grade design system library in Figma from a codebase. Useful for keeping the Figma source of truth in sync with shipped components.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -206,7 +206,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Translate Figma designs into production-ready code with 1:1 visual fidelity. Useful for handing off Figma frames straight to a frontend agent.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -216,7 +216,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Run Figma Plugin API scripts for canvas writes, inspections, variables, and design-system work. Prerequisite for every other Figma skill in this catalogue.
 - **Teknoloji:** canvas _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -226,7 +226,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** 300+ design rules from Apple HIG, Material Design 3, and WCAG 2.2 for cross-platform apps. Useful when shipping a single design across iOS, Android, and the web.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -236,7 +236,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.
 - **Teknoloji:** api-anahtari, canvas, css _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 25 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
@@ -246,7 +246,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Iterative design-to-code feedback loop. Critique → adjust → ship cycle for tightening visual fidelity between brief and built UI.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -257,7 +257,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne zaman:** Tailwind v4 projesinde bileşen kitaplığı/token sistemi yazarken veya v3'ten v4'e geçerken; shadcn tarzı (CVA + Radix Slot) bileşenler gerekince. · **Ne zaman değil:** Tailwind kullanmayan projelerde değil; Tailwind v3 projesinde (yöntemler farklı) uygun değil. Yalnız kısa ilke özeti istiyorsan tailwind-patterns; shadcn bileşen kurulumu için ui-styling.
 - **Teknoloji:** tailwindcss, react, typescript, radix-ui · **Paketler:** tailwindcss@4, class-variance-authority, clsx, tailwind-merge, @radix-ui/react-slot, react-hook-form, zod, lucide-react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** shadcn-tailwind-uygulama → tamamlayıcı · **Roller:** tasarim-sistemi · **Globalde:** claude:ayni
 - **Boyut:** 22 KB (SKILL.md 21.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). tailwind-patterns ile ilişki: ikisi de v4 CSS-first, ama tailwind-patterns kısa ilke/karar özeti (6.8 KB, kod azdır), tailwind-design-system ise kod ağırlıklı uygulama tarifi (21.8 KB; CVA, bileşik bileşen, form, animasyon, koyu mod, geçiş listesi). Çatışmazlar, tamamlayıcıdır; bağlam tasarrufu için önce patterns, bileşen yazarken bu seçilir. Dikkat: büyük (21.8 KB). Registry'deki 'OpenMontage kurulumu gerekir' bağımlılığı yanlış pozitif: SKILL.md'de OpenMontage/python/tools/ referansı yok, düz Tailwind skill'i. Lisans AGPL-3.0 görünüyor ama bu OpenMontage deposunun lisansı; içeriğin kendi lisansı (muhtemelen farklı bir üst kaynaktan alınmış) doğrulanmadı. Örnekler `@/lib/utils` (cn), ThemeProvider gibi proje dosyalarını varsayar.
@@ -300,7 +300,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** Apply professional font and color themes to artifacts including slides, docs, reports, and HTML landing pages. Ships 10 pre-set themes.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -310,7 +310,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Ne yapar:** WordPress Design System. Apply WordPress's official design tokens, typography, and component patterns to themes and sites.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.

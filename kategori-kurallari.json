@@ -2,6 +2,61 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "OrcaQubits/agentic-commerce-skills-plugins",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "xjli360/sealeap-ecommerce-skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "finsilabs/awesome-ecommerce-skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "Trendyol/trendyol-integration-developer-tool",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "nexscope-ai/eCommerce-Skills",
+      "desen": "^(api-monitoring|domain-monitoring|file-integrity-monitoring|synthetic-monitoring|public-status-page|localization-testing)$",
+      "kategori": "b-yazilim-gelistirme/06-devops-guvenlik-performans"
+    },
+    {
+      "repo": "nexscope-ai/eCommerce-Skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "nexscope-ai/Amazon-Skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "Shopify/agent-skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "Lonsdale201/wp-agent-skills",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "J-DTurner/etsy-api-skill",
+      "desen": ".",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "desen": "^ecommerce-image-workflow$",
+      "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"
+    },
+    {
       "repo": "K-Dense-AI/scientific-agent-skills",
       "desen": "^(qiskit|cirq|pennylane|qutip|astropy|pymatgen|pycalphad|cantera|fluidsim|pybamm|openpiv|sympy|matlab|simpy|uncertainty-and-units|geomaster|geopandas|marine-carbonate-chemistry|usfiscaldata)$",
       "kategori": "i-bilim-muhendislik/02-fizik-kuantum-malzeme"

@@ -126,6 +126,9 @@ def uygula(degisen, ayrinti, dal_modu):
         # GitHub Trending: ağ/sayfa sorunu güncellemeyi durdurmaz (önceki trend geçmişi kullanılır)
         if subprocess.run([sys.executable, "araclar/github-trend.py", "--aday"], cwd=KOK).returncode:
             print("UYARI: GitHub trend taraması yapılamadı; önceki trend.json ile devam")
+        # Konu takibi (e-ticaret, mobil…): yeni aday skill repoları raporlanır, eklenmez
+        if subprocess.run([sys.executable, "araclar/konu-takip.py"], cwd=KOK).returncode:
+            print("UYARI: konu takibi taraması yapılamadı; önceki konu-takip.json ile devam")
         calistir(sys.executable, "araclar/kaynak-cek.py")
         calistir(sys.executable, "araclar/arsiv-yerlestir.py")
         calistir(sys.executable, "araclar/kapsam-denetimi.py")

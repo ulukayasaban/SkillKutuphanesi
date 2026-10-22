@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir (roller/*.json, profiller/*.json). Kullanım: `skill-ekle.py <proje> --profil <ad>` veya `--rol <ad>`.
 
-## Profiller (22)
+## Profiller (23)
 
 | Profil | Ne için | Roller |
 |---|---|---|
@@ -11,6 +11,7 @@
 | `ai-video-uretimi` | AI ile üretilmiş video (model seçimi, seslendirme, kurgu) | `ai-medya-uretici`, `video-kompozisyon`, `video-kurgu-render`, `ses-tasarimci` |
 | `backend-api-servisi` | Backend / API servisi geliştirme | `backend-muhendis`, `kod-inceleyici` |
 | `dashboard-saas` | Panel / SaaS uygulama arayüzü | `ui-tasarimci`, `tasarim-sistemi`, `frontend-muhendis`, `qa-erisilebilirlik` |
+| `e-ticaret` | E-ticaret ve pazaryeri satışı (Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Trendyol…) | `eticaret-urun-arastirmaci`, `eticaret-listeleme-seo`, `eticaret-gorsel-icerik`, `eticaret-fiyat-pazarlama`, `eticaret-magaza-operasyon` |
 | `egitim-explainer` | Eğitim / açıklayıcı video | `motion-graphics-sanatcisi`, `ses-tasarimci`, `video-kompozisyon`, `video-kurgu-render` |
 | `kurumsal-site` | Çok sayfalı kurumsal web sitesi | `ui-tasarimci`, `tasarim-sistemi`, `frontend-muhendis`, `qa-erisilebilirlik`, `icerik-pazarlama` |
 | `landing-page` | Tek sayfalık tanıtım / ürün sayfası | `ui-tasarimci`, `motion-gelistirici`, `frontend-muhendis`, `qa-erisilebilirlik`, `icerik-pazarlama` |
@@ -29,7 +30,7 @@
 | `webgl-gorsel-efekt` | WebGL / Three.js görsel efektli site | `3d-gelistirici`, `webgl-efekt-sanatcisi`, `qa-erisilebilirlik` |
 | `yayin-devops` | CI/CD, yayın ve operasyon kurulumu | `devops-muhendis`, `kod-inceleyici` |
 
-## Roller (25)
+## Roller (31)
 
 | Rol | Görevi | Çekirdek | Opsiyonel (`--opsiyonel`) | Yük |
 |---|---|---|---|---|
@@ -41,6 +42,12 @@
 | `bilgi-yoneticisi` | Obsidian tabanlı not alma ve bilgi yönetimini kuran agent. | obsidian-markdown, obsidian-bases, json-canvas, daily-review, inbox-processor | research-assistant, thinking-partner, add-frontmatter, file-organizer, download-attachment, notebooklm, doc-coauthoring | 12 skill, 96 KB |
 | `devops-muhendis` | CI/CD, deploy, izleme ve güvenlik taramasını kuran altyapı agent'ı. | ci-cd-and-automation, shipping-and-launch, observability-and-instrumentation, security-and-hardening | deployment-procedures, vulnerability-scanner, performance-optimization, git-workflow-and-versioning | 8 skill, 96 KB |
 | `dokuman-yazari` | Rapor, sunum, diyagram ve teknik doküman hazırlayan agent. | docx, pptx, pdf, xlsx, archify, doc-coauthoring | documentation-and-adrs, beautiful-mermaid, internal-comms, de-ai-ify, discernment-nudge, slides | 12 skill, 108 KB |
+| `eticaret-fiyat-pazarlama` | Fiyatlama, kâr marjı, reklam ve pazarlama (e-posta, sosyal medya, mevsimsel kampanya) planlayan agent. | competitive-pricing-strategy, etsy-pricing-strategy, profit-margin-analysis, ecommerce-marketing-strategy-builder, etsy-advertising, ecommerce-email-marketing-builder | etsy-offsite-ads, etsy-seasonal-strategy, ecommerce-social-media-marketing, etsy-social-media-marketing, amazon-ppc-campaign, dynamic-pricing-ecommerce | 12 skill, 128 KB |
+| `eticaret-gorsel-icerik` | Ürün fotoğrafı, mockup ve listeleme görselleri planlayıp üreten agent. | etsy-listing-photography, shopify-product-photography-guide, amazon-product-photography, ecommerce-image-workflow | sealeap-etsy-listing-visuals, canvas-design, image-optimization-cdn, ecommerce-video-marketing | 8 skill, 51 KB |
+| `eticaret-listeleme-seo` | Ürün sayfası/listeleme başlığı, açıklama, etiket ve SEO'su hazırlayan agent (Etsy, Shopify, Amazon, eBay, Google Shopping). | product-title-optimization, product-description-generator, product-page-seo, etsy-seo, etsy-seo-tags, etsy-product-description | amazon-listing-optimization, ebay-seo, shopify-seo, sealeap-etsy-listing-seo, ecommerce-seo, google-shopping-optimization | 12 skill, 60 KB |
+| `eticaret-magaza-gelistirici` | Kendi e-ticaret sitesini/mağaza temasını geliştiren agent (Shopify, WooCommerce, Medusa, Saleor). | shopify-dev, shopify-liquid, shopify-admin, ecommerce-checkout-optimization | shopify-storefront-graphql, wc-cart-checkout-classic, wc-order-lifecycle-and-items, medusa-setup, saleor-setup | 9 skill, 101 KB |
+| `eticaret-magaza-operasyon` | Mağaza yönetimi: stok, sipariş, kargo, iade, müşteri yorumları ve satış analizi (Etsy API dahil, çok kanallı). | etsy-api, etsy-shop-analytics, order-management-system, inventory-tracking, ecommerce-returns-management, etsy-shipping-strategy | etsy-review-strategy, etsy-custom-orders, multichannel-ecommerce, shipment-tracking, trendyol-integration-developer-tool, customer-feedback-analysis | 12 skill, 73 KB |
+| `eticaret-urun-arastirmaci` | Pazaryerlerinde (Etsy, Amazon, eBay, TikTok Shop, Shopify) ürün/niş ve anahtar kelime araştırması yapan agent. | ecommerce-keyword-research, dropshipping-product-research, ecommerce-competitor-analysis, market-gap-analysis, etsy-keyword-research, etsy-competitor-analysis | amazon-niche-finder, amazon-product-research, tiktok-shop-product-research, ebay-product-research, sealeap-ozon-niche-screening, amazon-trending-products | 12 skill, 63 KB |
 | `frontend-muhendis` | Uygulama kodunu yazan ön yüz mühendisi (React/Next.js). | frontend-ui-engineering, frontend-design, frontend-architecture, test-driven-development, verification-before-completion | vercel-react-best-practices, next-dev-loop, tailwind-patterns, react-doctor, playwright-cli, d3-viz, web-artifacts-builder | 12 skill, 104 KB |
 | `icerik-pazarlama` | Blog/makale, sosyal medya metni ve SEO/GEO odaklı web içeriği hazırlayan agent. | content-research-writer, de-ai-ify, seo-fundamentals | geo-fundamentals, twitter-algorithm-optimizer, agent-reach, notebooklm | 7 skill, 59 KB |
 | `kod-inceleyici` | Kod inceleme, sadeleştirme ve test değeri kontrolü yapan agent. | code-review-and-quality, code-simplification, simplify-codebase, test-value, systematic-debugging, security-and-hardening | test-driven-development, constraint-driven-development, pragmatic-review, performance-optimization, requesting-code-review | 11 skill, 143 KB |
@@ -58,3 +65,5 @@
 | `video-kompozisyon` | HyperFrames ile videonun sahnelerini, kompozisyonunu ve medyasını kuran agent. | hyperframes, hyperframes-registry, media-use | captions-overlay, figma, slideshow, remotion-to-hyperframes | 7 skill, 37 KB |
 | `video-kurgu-render` | HyperFrames projesini kontrol eden, zaman çizelgesini düzenleyen, render alan ve hazır videoları kurgulayan agent. | hyperframes, hyperframes-cli, video-edit, ffmpeg | media-use, playwright-recording, video-understand | 7 skill, 51 KB |
 | `webgl-efekt-sanatcisi` | Three.js ile shader, post-processing ve özel geometri efektleri yapan agent (3d-gelistirici ile birlikte çalışır). | threejs-shaders, threejs-postprocessing, threejs-geometry | threejs-interaction, threejs-asset-pipeline, lightweight-3d-effects | 6 skill, 139 KB |
+
+Hiçbir profilde olmayan roller (yalnız `--rol` ile): eticaret-magaza-gelistirici

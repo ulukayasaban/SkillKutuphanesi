@@ -42,7 +42,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Ne yapar:** Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.
 - **Teknoloji:** gsap, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif · **Globalde:** claude:farkli
 - **Boyut:** 20 KB (SKILL.md 18.6 KB, yük orta)
 - **İnceleme:** otomatik

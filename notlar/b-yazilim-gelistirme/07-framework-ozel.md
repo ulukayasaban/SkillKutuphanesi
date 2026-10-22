@@ -20,7 +20,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne yapar:** Iterate on the Cardputer-Adv MicroPython app bundle (Claude Buddy, Snake, Hello) after the device is already provisioned via m5-onboard. Use when the user wants to add a new app, push a single changed .py without re-flashing, watch device serial logs, or run a one-shot REPL command. Trigger on "add an app", "push to the cardputer", "tail the device", "run on the device", or follow-up work after /m
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★43807, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★43832, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -30,7 +30,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne yapar:** End-to-end onboarding for a freshly-plugged-in M5Stack ESP32 device (Cardputer, Cardputer-Adv, Core, CoreS3, Stick) — detect on USB, flash UIFlow 2.0 firmware, and install the Claude Buddy MicroPython app bundle. Use whenever the user plugs in or wants to flash/provision/reset an M5Stack or ESP32 board, or says "m5-onboard go".
 - **Teknoloji:** git, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★43807, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★43832, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 23 KB (SKILL.md 23.4 KB, yük orta)
 - **İnceleme:** otomatik
@@ -150,7 +150,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne yapar:** React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.
 - **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32819, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, ★32823, son güncelleme 2026-10-14, lisans yok)
 - **Durum:** tercih · **Örtüşme:** react-kompozisyon → birincil · **Globalde:** claude:farkli
 - **Boyut:** 49 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -162,7 +162,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne zaman:** Çok boolean prop'lu bileşenleri refactor ederken, yeniden kullanılabilir bileşen kütüphanesi veya esnek bileşen API'si tasarlarken. · **Ne zaman değil:** Performans optimizasyonu (vercel-react-best-practices); React dışı projeler.
 - **Teknoloji:** react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** react-kompozisyon → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 49 KB (SKILL.md 3.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.
@@ -173,7 +173,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne yapar:** React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.
 - **Teknoloji:** css, next.js, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32819, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, ★32823, son güncelleme 2026-10-14, lisans yok)
 - **Durum:** tercih · **Örtüşme:** react-performans → birincil · **Globalde:** claude:farkli
 - **Boyut:** 225 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -185,7 +185,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne zaman:** React bileşeni veya Next.js sayfası yazarken/incelerken; veri çekme, bundle ve render performansı sorunlarında. · **Ne zaman değil:** React dışı projeler; Next.js 16 Cache Components geçişi (next-cache-components-* skilleri); bileşen API tasarımı (vercel-composition-patterns).
 - **Teknoloji:** react, next.js
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** react-performans → alternatif · **Roller:** frontend-muhendis · **Globalde:** claude:ayni
 - **Boyut:** 207 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, react-performans grubunun birincili. Gerekçe: Vercel'in özgün kural seti, kural başına dosya ile seçici okuma (SKILL.md 7 KB, toplam 207 KB); nextjs-react-expert aynı kuralların ag-kit uyarlaması. Bu kopya OpenMontage'a gömülü (upstream vercel-labs/agent-skills arşivde yok); güncellemeler OpenMontage üzerinden gelir. Dil/framework rehberi olduğu için 07-framework-ozel'e taşındı.
@@ -196,7 +196,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne yapar:** React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules. Triggers on tasks involving React Native, Expo, mobile performance, or native platform APIs.
 - **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32819, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, ★32823, son güncelleme 2026-10-14, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 155 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -206,7 +206,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Ne yapar:** Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) n
 - **Teknoloji:** css, next.js, node, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32819, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, ★32823, son güncelleme 2026-10-14, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 119 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** otomatik

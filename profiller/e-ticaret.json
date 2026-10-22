@@ -1,0 +1,13 @@
+{
+  "ad": "e-ticaret",
+  "baslik": "E-ticaret ve pazaryeri satışı (Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Trendyol…)",
+  "roller": [
+    "eticaret-urun-arastirmaci",
+    "eticaret-listeleme-seo",
+    "eticaret-gorsel-icerik",
+    "eticaret-fiyat-pazarlama",
+    "eticaret-magaza-operasyon"
+  ],
+  "ek_skiller": [],
+  "not": "Kendi mağaza sitesini geliştiriyorsan --rol eticaret-magaza-gelistirici ekle. Etsy işlemleri rollerin içinde (etsy-api, etsy-seo, etsy-pricing-strategy…)."
+}

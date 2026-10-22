@@ -103,6 +103,8 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 77 | Aynı ad, farklı iş (ör. `design-system`: token mimarisi ↔ tasarım sistemi denetimi) yeni resmî kaynak gelince rolün skill'i sessizce değişir | Ekleme sonrası eski kayıtların durum farkı (git HEAD'e göre) incelenir; rollerde kullanılanlar `durum_elle` ile sabitlenir |
 | 78 | Trend tek başına alakasız skill'i öneriye sokar ya da trend sayfası okunamaz | Bonus sadece konu eşleşmesi varsa eklenir (test); tarama başarısızsa `trend.json`'a dokunulmaz, aylık güncelleme durmaz |
 | 79 | Emekli eski sürümler sonraki güncellemede geri gelir | `kaynaklar.json` → `arsivden_cikarilanlar`: yeniden indirilmez (`haric:arsivden-cikarildi`), korunmaz; geri almak için kaydı sil |
+| 80 | Bir alanda (ör. e-ticaret/Etsy) yeni çıkan skill repoları gözden kaçar; ya da aynı reddedilen aday her ay tekrar önüne gelir | `konu-takip.py` (`takip_konulari`): GitHub kod aramasıyla düzenli tarama, ★ eşiği, `degerlendirilen` kararları (gerekçeli) tekrar gösterilmez; aylık görev çalıştırır |
+| 81 | Çok platformlu toplama repolarında yüzlerce benzer skill (ör. üç farklı kaynaktan Etsy SEO) öneriyi boğar | Roller platformdan bağımsız çekirdek + Etsy'ye özel skillerle kuruldu; diğerleri opsiyonel. Öneride kalite/puan ve rol ortaklığı belirleyici |
 
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).

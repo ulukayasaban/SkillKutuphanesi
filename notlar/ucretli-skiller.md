@@ -62,7 +62,7 @@
 | `generate-image` | 04-bilimsel-yazim-literatur | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 75
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 100
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -120,6 +120,31 @@
 | `nanobanana-ppt` | 03-ai-gorsel-video-modelleri | Gemini (Nano Banana) görsel üretimi: sınırlı ücretsiz kota, sonrası ücretli; deste yapısı yerel |
 | `pixelbin-media` | 03-ai-gorsel-video-modelleri | Pixelbin hesabı: ücretsiz kredi var, sonrası ücretli |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
+| `acp-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz), ACP/Stripe (işlem başı) |
+| `ap2-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Google API (ücretsiz kota) |
+| `b2b-commerce` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `cross-sell-upsell-engine` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Rebuy (ücretli Shopify uygulaması) |
+| `customer-lifetime-value` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `customer-segmentation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `email-service-integration` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: SendGrid (ücretsiz kota) |
+| `free-shipping-thresholds` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `invoice-generation-automation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: PDFMonkey (ücretsiz kota) |
+| `loyalty-points-system` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `mpp-service-discovery` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `mpp-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `multi-currency` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Open Exchange Rates (ücretsiz kota) |
+| `nlweb-llm-providers` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: LLM API'leri (ücretli; yerel model seçeneği) |
+| `nlweb-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Qdrant (yerel ücretsiz / bulut ücretli), LLM API'leri (ücretli; yerel model seçeneği) |
+| `order-fulfillment-workflow` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Shippo (ücretsiz plan + etiket başı) |
+| `returns-management` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Shippo (ücretsiz plan + etiket başı) |
+| `returns-refund-policy` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `revenue-recognition-accounting` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `shipment-tracking` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: EasyPost (ücretsiz kota + etiket başı) |
+| `shipping-rate-calculator` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: EasyPost (ücretsiz kota + etiket başı) |
+| `spree-payments` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz) |
+| `tax-calculation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: TaxJar (ücretli abonelik; ücretsiz deneme) |
+| `tax-compliance-automation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: TaxJar (ücretli abonelik; ücretsiz deneme) |
+| `volume-pricing` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `alphagenome` | 01-yasam-bilimleri-kimya | AlphaGenome API ticari olmayan kullanım için ücretsiz |
 | `esm` | 01-yasam-bilimleri-kimya | Açık ağırlıklarla yerel çalışır; EvolutionaryScale Forge API isteğe bağlı |
 | `genomic-intelligence` | 01-yasam-bilimleri-kimya | GI REST API anahtarı; ücretsiz/ücretli katmanlar |

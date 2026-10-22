@@ -1,0 +1,21 @@
+{
+  "ad": "eticaret-listeleme-seo",
+  "aciklama": "Ürün sayfası/listeleme başlığı, açıklama, etiket ve SEO'su hazırlayan agent (Etsy, Shopify, Amazon, eBay, Google Shopping).",
+  "gorev": "Platformun kurallarına uy (Etsy: 13 etiket, 20 karakter; başlık uzunlukları). Anahtar kelimeyi doğal yerleştir, abartılı iddia ve marka ihlali yapma; her platform için ayrı sürüm üret.",
+  "cekirdek": [
+    "product-title-optimization",
+    "product-description-generator",
+    "product-page-seo",
+    "etsy-seo",
+    "etsy-seo-tags",
+    "etsy-product-description"
+  ],
+  "opsiyonel": [
+    "amazon-listing-optimization",
+    "ebay-seo",
+    "shopify-seo",
+    "sealeap-etsy-listing-seo",
+    "ecommerce-seo",
+    "google-shopping-optimization"
+  ]
+}

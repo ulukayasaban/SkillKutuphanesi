@@ -1,0 +1,21 @@
+{
+  "ad": "eticaret-magaza-operasyon",
+  "aciklama": "Mağaza yönetimi: stok, sipariş, kargo, iade, müşteri yorumları ve satış analizi (Etsy API dahil, çok kanallı).",
+  "gorev": "Mağaza verisini değiştiren (ürün, stok, fiyat, sipariş) her API işleminden önce kullanıcı onayı al; önce okuma/rapor. Anahtarları dosyaya yazma, ortam değişkeni kullan.",
+  "cekirdek": [
+    "etsy-api",
+    "etsy-shop-analytics",
+    "order-management-system",
+    "inventory-tracking",
+    "ecommerce-returns-management",
+    "etsy-shipping-strategy"
+  ],
+  "opsiyonel": [
+    "etsy-review-strategy",
+    "etsy-custom-orders",
+    "multichannel-ecommerce",
+    "shipment-tracking",
+    "trendyol-integration-developer-tool",
+    "customer-feedback-analysis"
+  ]
+}

@@ -22,7 +22,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde. · **Ne zaman değil:** Etkileşimli/keşfedilebilir diyagram ya da kod tabanından kanıtlı mimari gerekiyorsa (archify). PNG adımı 'agent-browser' skill'ini istiyor; kütüphanede yok — PNG için playwright/chromium ile ekran görüntüsü alınarak uyarlanmalı.
 - **Teknoloji:** typescript, bun, mermaid, svg · **Paketler:** bun veya tsx/deno, beautiful-mermaid (npm), agent-browser CLI (PNG için; yoksa playwright)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** diyagram-uretimi → alternatif · **Roller:** dokuman-yazari · **Globalde:** claude:ayni
 - **Boyut:** 19 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kısa, net, sözdizimi tuzakları belgelenmiş. AGPL-3.0 (OpenMontage). PNG adımı kütüphanede olmayan agent-browser'a bağlı. Statik görsel için iyi; birincil archify.
@@ -32,7 +32,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne yapar:** Teaches the agent to produce D3 charts and interactive data visualizations. A comprehensive D3.js skill with examples across chart types and techniques giving the agent expert-level knowledge to generate complex, interactive visualizations. Useful for editorial dashboards, reports, data-rich prototypes, and explanatory graphics.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -42,7 +42,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne yapar:** Turns CSV, Excel, or JSON data into a polished visual report page.
 - **Teknoloji:** canvas, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -85,7 +85,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne yapar:** Build a terminal-style, always-running animated architecture diagram (a "live panel") from a JSON config and render it to an mp4. Use when the user wants a system, agent or org architecture diagram that looks like a monitoring dashboard in a terminal window - fixed layout, glowing packets on the wires, scrolling log, counters, bars that flip state - as a screen-recording-style video or a live web 
 - **Teknoloji:** canvas, css, ffmpeg, html, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ythx-101 (kisi, ★797, son güncelleme 2026-10-20, lisans MIT)
+- **Geliştirici:** ythx-101 (kisi, ★798, son güncelleme 2026-10-20, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1704 KB (SKILL.md 10.8 KB, yük orta) · **Bağımlılık:** Python 3 + tarayıcı (Playwright/Chromium) ile kare yakalayıp ffmpeg ile mp4 üretir.
 - **İnceleme:** otomatik

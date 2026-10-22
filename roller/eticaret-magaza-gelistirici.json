@@ -1,0 +1,18 @@
+{
+  "ad": "eticaret-magaza-gelistirici",
+  "aciklama": "Kendi e-ticaret sitesini/mağaza temasını geliştiren agent (Shopify, WooCommerce, Medusa, Saleor).",
+  "gorev": "Platformun resmî API ve tema kurallarını kullan; ödeme/checkout kodunu test modunda doğrula; müşteri verisini güvenli işle.",
+  "cekirdek": [
+    "shopify-dev",
+    "shopify-liquid",
+    "shopify-admin",
+    "ecommerce-checkout-optimization"
+  ],
+  "opsiyonel": [
+    "shopify-storefront-graphql",
+    "wc-cart-checkout-classic",
+    "wc-order-lifecycle-and-items",
+    "medusa-setup",
+    "saleor-setup"
+  ]
+}

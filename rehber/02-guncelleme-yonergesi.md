@@ -40,6 +40,8 @@ git branch -D guncelleme/2026-11                       # 4b. ret: dalı sil, hi�
 0. `github-trend.py --aday` — GitHub Trending (günlük/haftalık/aylık; tüm diller + Python/TS/JS/Shell) taranır, `trend.json`
    geçmişine eklenir; kütüphanedeki kaynakların trend durumu ve trend'deki yeni skill repoları `notlar/github-trend.md`'ye yazılır.
    Trend'deki aday repolar otomatik EKLENMEZ: rapordaki eksik alanlara uyanlar `03-yeni-skill-ekleme.md` ile, onayla eklenir.
+0b. `konu-takip.py` — `kaynaklar.json` → `takip_konulari` (e-ticaret/Etsy, mobil…) için GitHub'da yeni skill repoları aranır;
+   adaylar `notlar/konu-takip.md`'ye yazılır (eklenmez). Değerlendirdiğin adayı `--karar owner/ad reddedildi "neden"` ile kapat.
 1. `kaynak-cek.py` — tüm kaynaklar sabit commit'ten yeniden iner (indirme hatası varsa durur).
 2. `arsiv-yerlestir.py` — tekilleştirme, kategori, değerlendirme. **Elle yaptığın inceleme alanları korunur**
    (`ozet_tr`, `kullanim_alani`, `teknoloji`, `roller`, `kalite`, `ortusme_grubu`, `kategori_elle`…).
@@ -106,6 +108,7 @@ Global klasörlerdeki skiller (OpenMontage, addyosmani…) **bu sistemle güncel
 | Ne zaman | Ne |
 |---|---|
 | Ayda bir | `arsiv-guncelle.py` raporu → gerekirse `--uygula` (GitHub trend taraması dahil) |
+| İstediğin zaman | `konu-takip.py [--konu e-ticaret]` → `notlar/konu-takip.md`: takip edilen alanlarda yeni skill repoları |
 | İstediğin zaman | `github-trend.py --aday` → `notlar/github-trend.md`: trend'e giren kaynaklar ve aday skill repoları |
 | Yeni repo yıldızladığında | `arsiv-guncelle.py` raporu "yıldızlı ama kaynaklar.json'da yok" der → `03-yeni-skill-ekleme.md` |
 | Projeye başlamadan önce | `skill-ekle.py <proje> --durum` |

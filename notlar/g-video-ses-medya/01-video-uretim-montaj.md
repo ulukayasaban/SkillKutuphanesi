@@ -9,7 +9,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Hyperframes-based video template for retro pixel deck motion design. Use when users want a high-fidelity, multi-scene HTML-to-video composition with advanced transitions, interactive preview controls, and ready-to-render default style.
 - **Teknoloji:** css, gsap, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 20 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Luxury dark-editorial HyperFrames template for three-page cinematic storyboards, inspired by haute couture title cards and magazine chapter spreads. Use when the user asks for premium fashion-style motion pages, moody serif-led storytelling, or a high-end dark presentation aesthetic with rich transitions.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 16 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -51,7 +51,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Generate configurable chat motion overlays from a transcript or screenshot, including plain bubble scenes, app-style chat containers, optional device frames, preset or uploaded avatars, nickname display rules, and transparent-video-ready Remotion bundles. Use when Codex needs to create reusable short-form chat clips for Douyin, demo videos, story reenactments, social-message proof scenes, or embed
 - **Teknoloji:** python, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1308 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -62,7 +62,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Hızlı taslak, tanıtım veya açıklayıcı videoyu avatar/ses ayrıntısı belirtmeden tek adımda almak istendiğinde. · **Ne zaman değil:** Tam metin, belirli avatar/ses veya sahne bazlı kontrol gerekiyorsa (avatar-video); kendi kompozisyonunu kurmak istiyorsan (hyperframes).
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** heygen-video → birincil · **Roller:** video-kompozisyon, ai-medya-uretici · **Globalde:** claude:ayni
 - **Boyut:** 92 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı ve güncel HeyGen resmi skill'i; MCP varsa onu tercih ediyor. Ücretli API, sonuç kontrolü sınırlı.
@@ -73,7 +73,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Remotion/HyperFrames projesine girecek GIF, video ve ses dosyalarını hazırlarken ya da derin FFmpeg tarifi gerektiğinde. · **Ne zaman değil:** Basit kırp/birleştir/boyutlandır işleri için video-edit daha kısa ve yeterli.
 - **Teknoloji:** ffmpeg · **Paketler:** ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ffmpeg-kurgu → tamamlayıcı · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 17 KB (SKILL.md 12.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kapsamlı ve doğru tarifler; Remotion odaklı örnekler ağırlıkta. video-edit ile birlikte kullanılır.
@@ -94,7 +94,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** NYT-newsroom typography, staggered reveal animation, and editorial-grade charts (line, bar, or range band).
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -104,7 +104,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** SVG curve connectors, sticky-note nodes, and cursor interaction with a whiteboard-brainstorm feel.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -114,7 +114,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Digital glitch, chromatic offset, and data-corruption title frame for video transitions or cyberpunk heroes.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -124,7 +124,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Film light leaks, grain, 16:9 letterbox, and large serif type for cinematic openings or chapter cards.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -134,7 +134,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** WebGL-style fluid displacement background with a quote overlay, suited to video intros, landing heroes, or posters.
 - **Teknoloji:** canvas, css, html, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -144,7 +144,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Segmented logo assembly, glow bloom, and tagline reveal for video outros or brand closing frames.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -154,7 +154,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Realistic macOS notification banner with app icon, title, and body, suited to video overlays or product teasers.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -198,7 +198,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Belirli bir görsel stilde (yağlı boya, suluboya, ukiyo-e, uydu brifingi, ürün parçalama vb.) kodla üretilmiş kısa film, tanıtım, açıklayıcı video; uydu görüntüsü/lazer tarama/CAD/arşiv gibi gerçek malzemeden veri anlatımı; kendi film stilini oluşturma. · **Ne zaman değil:** Mevcut bir videoyu sadece kesip birleştirmek/dönüştürmek (video-edit, ffmpeg); HyperFrames projesi içinde sahne kurmak (hyperframes).
 - **Teknoloji:** node, three.js, ffmpeg, python, kokoro tts · **Paketler:** node, ffmpeg, python3 (seslendirme için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** lemomo-ai (kisi, ★5419, son güncelleme 2026-10-22, lisans MIT)
+- **Geliştirici:** lemomo-ai (kisi, ★5479, son güncelleme 2026-10-22, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kodla-film-stilleri → birincil · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 10 KB (SKILL.md 3.4 KB, yük kucuk) · **Bağımlılık:** Çalışınca kendi kütüphanesini ev dizinine indirir/kopyalar (~/lemo-opuscar veya ~/.lemo-opuscar), Node + ffmpeg (+ seslendirme için Python/Kokoro) ister. Ücretsiz: varsayılan TTS çevrimdışı Kokoro; edge-tts metni Microsoft'a gönderir (sadece kullanıcı onaylarsa).
 - **İnceleme:** incelendi · kalite 4/5 — MIT, ücretsiz; varsayılan seslendirme çevrimdışı Kokoro, edge-tts sadece onayla. DİKKAT: kodun asıl kısmı çalışma anında GitHub'ın main dalından (sabit commit değil) ~/lemo-opuscar'a indirilir; yani arşivlenen skill küçük bir başlatıcıdır, davranış upstream değiştikçe değişir. Proje klasörü dışına (ev dizinine) yazar. HyperFrames'e alternatif değil, farklı bir motor (kendi render araçları).
@@ -209,7 +209,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Belirli bir görsel stilde (yağlı boya, suluboya, ukiyo-e, uydu brifingi, ürün parçalama vb.) kodla üretilmiş kısa film, tanıtım, açıklayıcı video; uydu görüntüsü/lazer tarama/CAD/arşiv gibi gerçek malzemeden veri anlatımı; kendi film stilini oluşturma. · **Ne zaman değil:** Doğrudan kurulum: library/ klasörü olmadan çalışmaz; birincil lemo-opuscar'ı kullan.
 - **Teknoloji:** node, three.js, ffmpeg, python, kokoro tts · **Paketler:** node, ffmpeg, python3 (seslendirme için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** lemomo-ai (kisi, ★5419, son güncelleme 2026-10-22, lisans MIT)
+- **Geliştirici:** lemomo-ai (kisi, ★5479, son güncelleme 2026-10-22, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** kodla-film-stilleri → alternatif · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 123 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** Çalışınca kendi kütüphanesini ev dizinine indirir/kopyalar (~/lemo-opuscar veya ~/.lemo-opuscar), Node + ffmpeg (+ seslendirme için Python/Kokoro) ister. Ücretsiz: varsayılan TTS çevrimdışı Kokoro; edge-tts metni Microsoft'a gönderir (sadece kullanıcı onaylarsa).
 - **İnceleme:** incelendi · kalite 2/5 — Tek başına ÇALIŞMAZ: beklediği library/ klasörü bu repo yolunda yok (yalnızca paketlenmiş eklenti dağıtımında bulunur). Kurulum için birincil sürüm (lemo-opuscar) kullanılmalı.
@@ -230,7 +230,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Apply motion craft to an active task: refine a brief, beat map, visual continuity, typography, pacing, and timeline implementation. Use when planning or improving motion graphics; the host task owns artifact creation, output format, and export.
 - **Teknoloji:** api-anahtari, canvas, css, gsap, html, node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih · **Globalde:** claude:farkli
 - **Boyut:** 24 KB (SKILL.md 23.0 KB, yük orta)
 - **İnceleme:** otomatik
@@ -252,7 +252,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Gerçek bir web uygulamasının demo/walkthrough görüntüsü video kompozisyonuna girecekse. · **Ne zaman değil:** Terminal/CLI demosu (synthetic-screen-recording); masaüstü uygulama kaydı.
 - **Teknoloji:** playwright, typescript, node · **Paketler:** playwright, @playwright/test
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ekran-kaydi-demo → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 20 KB (SKILL.md 12.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Genel ve bağımsız çalışan tarifler; Remotion odaklı örnekler.
@@ -262,7 +262,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Programmatic video creation with React. Useful for branded explainers, social cuts, dashboards-to-video, and reproducible motion graphics.
 - **Teknoloji:** react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** alternatif · **Globalde:** claude:farkli
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -273,7 +273,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Remotion kodu yazılan veya düzenlenen her projede. · **Ne zaman değil:** HyperFrames ile yazılan videolarda; Remotion'dan HyperFrames'e taşıma için remotion-to-hyperframes.
 - **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** remotion-cercevesi → birincil · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 112 KB (SKILL.md 4.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Remotion ekibinin resmi kural seti, kaliteli. Varsayılan çerçeve HyperFrames olduğu için alternatif; Remotion projelerinde birincil.
@@ -295,7 +295,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Sadece o toolkit'in lib/components ve lib/transitions klasörleri bulunan bir projede. · **Ne zaman değil:** Genel Remotion işleri (remotion-best-practices); OpenMontage kurulumunda lib/ klasörleri yok.
 - **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/transitions
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** remotion-cercevesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 16 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu lib/components, lib/transitions ve remotion-official bu kurulumda/arşivde yok; tek başına çalışmaz.
@@ -316,7 +316,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Realistic Reddit post card with vote rail and comment count, suited to video overlays or story sharing.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -326,7 +326,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Spotify Now Playing-style card with album art, progress bar, and playback controls, suited to video overlays or personal homepages.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -336,7 +336,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Realistic X post card with engagement metrics (likes, reposts, views), suited to video overlays or shareable image cards.
 - **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -346,7 +346,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Swiss-style user-research narrative template in warm-paper editorial aesthetics. Use when users ask for a premium research deck or story-first live artifact with minimalist typography, high-clarity layout, subtle motion, donut breakdowns, and keyboard/click navigation across slides in a single HTML file.
 - **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 23 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -357,7 +357,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Kurulum/CLI eğitimi gibi komut ve çıktısı önceden bilinen terminal demolarında. · **Ne zaman değil:** Gerçek uygulama arayüzü veya tarayıcı akışı (playwright-recording); OpenMontage remotion-composer'ı yoksa.
 - **Teknoloji:** remotion, react, typescript · **Paketler:** OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ekran-kaydi-demo → alternatif · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Fikir iyi; ancak OpenMontage'ın remotion-composer/TerminalScene bileşenine bağımlı.
@@ -367,7 +367,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Cursor light trail, chromatic rays, and directional flares for word-by-word quote reveals in video intros.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -378,7 +378,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Referans/kaynak video, ses veya altyazı indirmek ya da metadata almak gerektiğinde. · **Ne zaman değil:** YouTube'da arama/listeleme için; telif veya platform koşullarına aykırı kullanımda.
 - **Teknoloji:** yt-dlp, ffmpeg · **Paketler:** yt-dlp, ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** video-indirme → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 3 KB (SKILL.md 3.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa, doğru, bağımsız. Telif sorumluluğu kullanıcıda.
@@ -388,7 +388,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Download videos from YouTube and other platforms for offline viewing, editing, or archival with support for various formats and quality options.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -399,7 +399,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Hazır videolar üzerinde hızlı kurgu ve sosyal medya formatına uyarlama işlerinde. · **Ne zaman değil:** Sahne kompozisyonu/animasyon gerekiyorsa (hyperframes); karmaşık filtre zincirleri için ffmpeg skill'i.
 - **Teknoloji:** ffmpeg · **Paketler:** ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ffmpeg-kurgu → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa, genel, platform ön ayarlı; bağımlılığı sadece ffmpeg.
@@ -409,7 +409,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** Hyperframes / Remotion-compatible continuous frame animation with autoplay support.
 - **Teknoloji:** html, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -420,7 +420,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Toolkit ~/.openclaw/workspace/claude-code-video-toolkit yolunda kuruluysa ve bulut GPU kullanılacaksa. · **Ne zaman değil:** OpenMontage veya HyperFrames ile çalışırken; toolkit kurulu değilse.
 - **Teknoloji:** remotion, python, node, modal, runpod · **Paketler:** claude-code-video-toolkit, modal, ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** remotion-cercevesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 15 KB (SKILL.md 14.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sabit ~/.openclaw yoluna ve ayrı toolkit kurulumuna bağımlı; bu ortamda yok. --break-system-packages önerisi riskli.
@@ -431,7 +431,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Hazır bir videonun çok dilli (ör. Türkçe→İngilizce) dublajlı sürümleri gerektiğinde. · **Ne zaman değil:** Sadece altyazı çevirisi yeterliyse; HeyGen anahtarı yoksa.
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** video-ceviri-dublaj → birincil · **Roller:** video-kurgu-render, ai-medya-uretici · **Globalde:** claude:ayni
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı resmi HeyGen skill'i; ücretli.
@@ -442,7 +442,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Bir videoyu kurgulamadan önce ne içerdiğini anlamak, kareleri incelemek veya yerel transkript almak gerektiğinde. · **Ne zaman değil:** Yüksek doğruluklu çok dilli transkript (speech-to-text) veya konuşmacı ayrımı gerekiyorsa.
 - **Teknoloji:** ffmpeg, python, whisper · **Paketler:** ffmpeg, openai-whisper
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70824, son güncelleme 2026-10-16, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★70850, son güncelleme 2026-10-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** video-analiz → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 27 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Betiği skill klasöründe; yol skills/video-understand/... diye yazılmış, kurulumda skill yoluna göre çalıştırılmalı.
@@ -452,7 +452,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** WeRead-inspired HyperFrames video template for vertical annual reading reports, personal reading dashboards, book-note recaps, and shareable year-in-review stories. Use when users want a 9:16 HTML-to-MP4 reading report with warm paper texture, editorial Chinese typography, book-page metaphors, data highlights, and deterministic motion.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 33 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -462,7 +462,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne yapar:** YouTube clip generation and editing with automated workflows — pull source video, slice highlights, add captions, and export.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103302, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★103320, son güncelleme 2026-10-22, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
