@@ -33,6 +33,8 @@ def parmak_izi():
     for g in list(GLOBAL_KLASORLER.values()) + [Path.home() / ".openmontage" / ".agents" / "skills"]:
         if g.exists():
             for p in sorted(g.iterdir()):
+                if p.name in ("synced", ".system"):  # Claude hesap senkronu / Codex'in kendi yerleşik skilleri
+                    continue
                 h.update(p.name.encode())
                 h.update(str(p.lstat().st_mtime_ns).encode())
     return h.hexdigest()

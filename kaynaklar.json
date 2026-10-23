@@ -880,6 +880,14 @@
       "neden": "Kaynakta kaldırıldı (HyperFrames eski iş akışı kuşağı); kullanıcı kararı: eski sürümler kaldırılsın",
       "tarih": "2026-10-22",
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
+    },
+    {
+      "repo": "calesthio/OpenMontage",
+      "kaynak_yol": ".claude/skills/web-design-guidelines",
+      "ad": "web-design-guidelines",
+      "neden": "OpenMontage'da kaynaktan kaldırıldı; güncel aslı vercel-labs/agent-skills web-design-guidelines (tercih); kullanıcı kararı: eski sürümler kaldırılsın",
+      "tarih": "2026-10-23",
+      "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
     }
   ],
   "_aciklama_cikarilan": "arsivden_cikarilanlar: kullanıcı kararıyla arşivden çıkarılan skiller. Yeniden indirilmez (kapsam kararı 'haric:arsivden-cikarildi'), korunmaz. Geri almak için kaydı sil ve kaynak-cek + arsiv-yerlestir çalıştır; eski dosyalar git geçmişinde (son_commit).",

@@ -10,6 +10,7 @@ Ayrıca kütüphane/araç (T5/T6) repolarında sonradan skill eklenmiş mi diye 
 Çıktı: notlar/kapsam-denetimi.md
 Kullanım: python3 araclar/kapsam-denetimi.py
 """
+import re
 import sys
 from collections import Counter, defaultdict
 from datetime import date
@@ -113,7 +114,10 @@ def main():
             out.append(f"- **{repo}**: " + ", ".join(l[:20]) + (f" … (+{len(l) - 20})" if len(l) > 20 else ""))
     if sorunlar:
         out += ["", "## Sorunlar", ""] + [f"- {x}" for x in sorunlar]
-    (KOK / "notlar" / "kapsam-denetimi.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    hedef, yeni = KOK / "notlar" / "kapsam-denetimi.md", "\n".join(out) + "\n"
+    tarihsiz = lambda m: re.sub(r"\d{4}-\d{2}-\d{2}", "", m, count=1)  # noqa: E731
+    if not hedef.exists() or tarihsiz(hedef.read_text(encoding="utf-8")) != tarihsiz(yeni):
+        hedef.write_text(yeni, encoding="utf-8")  # sadece içerik değişince yaz (gün değişti diye çalışma ağacı kirlenmesin)
     for x in sorunlar:
         print("SORUN:", x)
     print(f"Taranan SKILL.md: {sum(n for _, n, _ in satirlar)} · sorun: {len(sorunlar)} · dağılım: {dict(toplam)}")

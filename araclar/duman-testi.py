@@ -46,8 +46,8 @@ def parmak_izi():
     for g in GLOBAL_KLASORLER.values():
         if g.exists():
             for p in sorted(g.iterdir()):
-                if p.name == "synced":  # Claude uygulamasının hesap senkronizasyonu (bizim araçlarımız yazmaz)
-                    continue
+                if p.name in ("synced", ".system"):  # Claude hesap senkronu / Codex'in kendi yerleşik skilleri
+                    continue  # (gerçek Codex çalışınca .system'i tazeler; bizim araçlarımız yazmaz)
                 h.update(p.name.encode())
                 h.update(str(p.lstat().st_mtime_ns).encode())
     return h.hexdigest()

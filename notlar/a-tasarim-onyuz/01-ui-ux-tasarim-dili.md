@@ -2,7 +2,7 @@
 
 _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/41**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **16/40**
 
 ### accessibility-review  ·  anthropics/knowledge-work-plugins @ 33d3dea  ·  puan 100 (A)
 
@@ -394,17 +394,6 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Durum:** tercih
 - **Boyut:** 198 KB (SKILL.md 20.8 KB, yük orta)
 - **İnceleme:** otomatik
-
-### web-design-guidelines@calesthio  ·  calesthio/OpenMontage @ c806645  ·  puan 97 (A)
-
-- **Ne yapar:** web-design-guidelines'ın OpenMontage kopyası; ag-kit sürümünün 'İlgili skiller' ve iş akışı bölümleri olmadan aynı içerik.
-- **Ne zaman:** Globalde kurulu sürümle birebir aynı içerik gerektiğinde. · **Ne zaman değil:** Normalde (tercih sürümü aynı işi yapar).
-- **Teknoloji:** html, css · **Paketler:** WebFetch / ağ erişimi
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★70788, son güncelleme 2026-10-16, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** ui-denetim-iyilestirme → alternatif · **Globalde:** claude:ayni
-- **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Tercih sürümüyle aynı denetim; ek bölümler yok. Globaldeki kopyayla aynı.
 
 ### web-design-guidelines@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 95 (A)
 

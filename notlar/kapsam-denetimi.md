@@ -1,8 +1,8 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-10-22 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-10-23 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6014 · Arşivdeki skill kaydı: 3702 · Bileşen (komut/agent): 254
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6014 · Arşivdeki skill kaydı: 3701 · Bileşen (komut/agent): 254
 
 | Karar | Sayı | Anlamı |
 |---|---|---|

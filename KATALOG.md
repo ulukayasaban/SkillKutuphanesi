@@ -2,14 +2,14 @@
 
 > `araclar/katalog-uret.py` üretir — elle düzenleme. Kaynak: `registry.json`.
 
-Toplam **2824** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-içi `notlar/referans/repo-ici-skiller.md`).
+Toplam **2823** skill (+878 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-içi `notlar/referans/repo-ici-skiller.md`).
 
 **İşaretler:** ⭐ tercih edilen · `alt` aynı isimli alternatif sürüm · 🔥 kaynağı GitHub Trending'e girmiş (notlar/github-trend.md) · Codex: ✅ tam uyumlu, 🟡 Claude araç adları geçiyor ama çalışır, 🔵 konusu Claude Code'a özel · Yük: S/M/L (agent bağlamına etkisi) · globalde: bilgisayardaki genel klasörde aynı isimli skill (ayni/farkli)
 
 ## İçindekiler
 
-- **Tasarım ve Ön Yüz** (283)
-  - [01-ui-ux-tasarim-dili](#01-ui-ux-tasarim-dili) — 41 skill · Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi
+- **Tasarım ve Ön Yüz** (282)
+  - [01-ui-ux-tasarim-dili](#01-ui-ux-tasarim-dili) — 40 skill · Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi
   - [02-tasarim-sistemi-marka](#02-tasarim-sistemi-marka) — 30 skill · Design token, tema, marka kimliği, banner/logo
   - [03-animasyon-motion](#03-animasyon-motion) — 32 skill · GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim
   - [04-scroll-deneyimi](#04-scroll-deneyimi) — 7 skill · Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri
@@ -100,7 +100,6 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 | `user-research` | ⭐ 🔥 | Plan, conduct, and synthesize user research. Trigger with "user research plan", "interview guide", "usability test", "survey design", "resea… |  | ücretsiz | ✅ | 100 A | S 2KB | - | anthropics/knowledge-work-plugins |
 | `ux-copy` | ⭐ 🔥 | Write or review UX copy — microcopy, error messages, empty states, CTAs. Trigger with "write copy for", "what should this button say?", "rev… |  | ücretsiz | ✅ | 100 A | S 3KB | - | anthropics/knowledge-work-plugins |
 | `web-clone` | ⭐ | 网站复刻 / 克隆方法论。USE WHEN 用户说 复刻网站、克隆网站、clone website、抄个站、仿站、 照着这个站做一个、reproduce site、还原某个网页效果、把这个站搬下来改成我的、 复刻某个交互/WebGL/Canvas/Three.js 效果。提供「先… | api-anahtari, canvas, css, git, gsap | ücretsiz | ✅ | 93 A | M 198KB | - | nexu-io/open-design |
-| `web-design-guidelines@calesthio` | alt 🗄️emekli 🔥 alternatif | web-design-guidelines'ın OpenMontage kopyası; ag-kit sürümünün 'İlgili skiller' ve iş akışı bölümleri olmadan aynı içerik. | html, css | ücretsiz | ✅ | 97 A | S 1KB | claude:ayni | calesthio/OpenMontage |
 | `web-design-guidelines@nexu-io` | alt | Review UI code for Web Interface Guidelines compliance by the Vercel engineering team. Covers layout, typography, color, motion, and accessi… |  | ücretsiz | ✅ | 95 A | S 10KB | claude:farkli | nexu-io/open-design |
 | `web-design-guidelines@vudovn` | alt tamamlayıcı | UI kodunu Vercel'in Web Interface Guidelines kurallarına göre denetler: kuralları her çalıştırmada GitHub'dan (vercel-labs/web-interface-gui… | html, css, react | ücretsiz | ✅ | 85 A | S 2KB | claude:farkli | vudovn/ag-kit |
 

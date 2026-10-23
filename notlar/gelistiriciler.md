@@ -24,7 +24,7 @@
 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | tt-a1i | kisi |  | 87554 | 93 | 2026-10-22 | MIT | 5 |
 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | pbakaus | kisi |  | 84904 | 60 | 2026-10-22 | Apache-2.0 | 1 |
 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | ComposioHQ | kurum | ✅ | 77679 | 29 | 2026-09-18 | yok | 864 |
-| [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | calesthio | kisi |  | 70866 | 69 | 2026-10-16 | AGPL-3.0 | 72 |
+| [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | calesthio | kisi |  | 70866 | 69 | 2026-10-16 | AGPL-3.0 | 71 |
 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | heygen-com | kurum |  | 69905 | 107 | 2026-10-22 | Apache-2.0 | 13 |
 | [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) | FFmpeg | kurum | ✅ | 65568 | 2787 | 2026-10-22 | NOASSERTION | 0 |
 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | K-Dense-AI | kurum |  | 53867 | 58 | 2026-10-19 | MIT | 177 |
