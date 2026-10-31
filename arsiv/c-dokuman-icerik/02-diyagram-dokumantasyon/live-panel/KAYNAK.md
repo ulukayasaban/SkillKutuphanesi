@@ -7,7 +7,7 @@
 - **Commit:** `439c9addce7e7ac2b4e384aa847a351926c8f945`
 - **Lisans:** MIT
 - **Geliştirici:** ythx-101 (kisi)
-- **Değerlendirme:** 83/100 (A)
+- **Değerlendirme:** 81/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih
 - **Bağımlılık:** Python 3 + tarayıcı (Playwright/Chromium) ile kare yakalayıp ffmpeg ile mp4 üretir.

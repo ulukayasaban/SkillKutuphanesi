@@ -19,9 +19,8 @@
 | Ölçüt | Puan | Kural |
 |---|---|---|
 | Bakım | 25 | Son güncelleme ≤90 gün 25 · ≤180 18 · ≤365 10 · daha eski 3 |
-| Topluluk | 20 | 4 × log10(yıldız + 1), en fazla 20 |
+| GitHub güveni | 30 | `guven` puanı × 0,30 (aşağıda) |
 | Lisans | 15 | Açık lisans 15 · yok/belirsiz 3 |
-| Kaynak | 10 | Resmî üretici 10 · kurum 5 · kişi 3 |
 | Codex uyumu | 15 | Tam 15 · uyarlanabilir 10 · Claude'a özel 5 |
 | Bağlam yükü | 10 | SKILL.md <8 KB 10 · <25 KB 8 · daha büyük 5 |
 | Yapı | 5 | Frontmatter sorunu ve kırık bağlantı başına düşer |
@@ -55,3 +54,22 @@ registry'de skill kaydına şu alanlar eklenir (güncellemede korunur):
 
 ## Öneride trend önceliği (`skill-ekle.py --oner`)
 Sıralama önce **konuya uygunluğa** (anahtar kelime + teknoloji eşleşmesi) bakar. Eşleşen skiller arasında kaynağı GitHub Trending'e girmiş olanlar öne alınır (trendde +1,5 · son 90 gün +1 · eski +0,3; çıktıda `🔥trend`). Trend tek başına bir skill'i öneriye sokmaz; ücretli (−2), alternatif (−1) ve emekli (−6) cezaları geçerlidir.
+
+## GitHub güven puanı (`gelistiriciler.json` → `guven`, rapor: `notlar/guven-siralamasi.md`)
+Sadece resmî olmaya bakmaz; GitHub etkileşimlerinin **kütüphanedeki skill kaynakları (T1–T4) arasındaki yüzdelik sırasıdır**:
+
+| Ölçüt | Ağırlık |
+|---|---|
+| Yıldız | 25 |
+| Yıldız hızı (★ / repo yaşı ay) | 15 |
+| Katkıcı sayısı | 15 |
+| Son 90 gün commit | 15 |
+| Fork | 10 |
+| İzleyici (watch) | 5 |
+| Son 180 günde sürüm (release) | 5 |
+| Açık lisans | 5 |
+| Resmî üretici 5 · kurum 3 | 5 |
+| Arşivlenmiş repo | ×0,5 |
+
+Derece A ≥80 · B ≥65 · C ≥50 · D <50 (göreli). `sira`: skill kaynakları içindeki yeri. Referans kütüphaneleri (three.js, React…)
+havuzu şişirmesin diye ayrı sıralanır (`referans_sira`) ve skill seçiminde kanıt olarak kullanılır (prompt 11, ADIM 1b).

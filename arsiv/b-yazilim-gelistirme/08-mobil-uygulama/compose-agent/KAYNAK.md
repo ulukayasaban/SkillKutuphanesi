@@ -7,6 +7,6 @@
 - **Commit:** `f815c31d6cc1a4af4ce2796d08eb7d8b506785c9`
 - **Lisans:** MIT
 - **Geliştirici:** hamen (kisi)
-- **Değerlendirme:** 74/100 (B)
+- **Değerlendirme:** 71/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

@@ -7,6 +7,6 @@
 - **Commit:** `4a36ff1ea921744392642af433e66b8ba550c08c`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** vagabond911 (kisi)
-- **Değerlendirme:** 62/100 (C)
+- **Değerlendirme:** 57/100 (C)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

@@ -160,12 +160,18 @@ def degerlendir(s, gel):
         gun = (date.today() - date.fromisoformat(gel["son_guncelleme"])).days
         bakim = 25 if gun <= 90 else 18 if gun <= 180 else 10 if gun <= 365 else 3
         p += bakim; ac.append(f"bakım {bakim}/25 ({gun} gün önce)")
-        top = min(20, round(4 * math.log10(max(gel["yildiz"], 1) + 1)))
-        p += top; ac.append(f"topluluk {top}/20 (★{gel['yildiz']})")
+        gv = gel.get("guven")
+        if gv:  # GitHub etkileşimleri (yıldız, hız, katkıcı, commit, fork, izleyici, sürüm…) kaynaklar arası sıralaması
+            top = round(30 * gv["puan"] / 100)
+            p += top; ac.append(f"GitHub güveni {top}/30 (güven {gv['puan']} {gv['derece']}" + (f", #{gv['sira']}/{gv['toplam']})" if gv.get("sira") else ")"))
+        else:  # eski gelistiriciler.json (güven hesaplanmamış): yıldız + kaynak tipi
+            top = min(20, round(4 * math.log10(max(gel["yildiz"], 1) + 1)))
+            p += top; ac.append(f"topluluk {top}/20 (★{gel['yildiz']})")
         lis = 15 if gel["lisans"] not in ("yok", "NOASSERTION", "belirtilmemiş") else 3
         p += lis; ac.append(f"lisans {lis}/15 ({gel['lisans']})")
-        res = 10 if gel["resmi_kaynak"] else 5 if gel["sahip_tipi"] == "kurum" else 3
-        p += res; ac.append(f"kaynak {res}/10 ({'resmî' if gel['resmi_kaynak'] else gel['sahip_tipi']})")
+        if not gv:
+            res = 10 if gel["resmi_kaynak"] else 5 if gel["sahip_tipi"] == "kurum" else 3
+            p += res; ac.append(f"kaynak {res}/10 ({'resmî' if gel['resmi_kaynak'] else gel['sahip_tipi']})")
         if gel.get("arsivlenmis"):
             p -= 15; ac.append("repo arşivlenmiş -15")
     uy = {"tam": 15, "uyarlanabilir": 10, "konu-claude-ozel": 5}[s["uyum"]["codex"]]

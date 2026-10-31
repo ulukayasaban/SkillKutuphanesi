@@ -7,6 +7,6 @@
 - **Commit:** `fead6fa34679a920ed67c7119e2df526ed2d139c`
 - **Lisans:** MIT
 - **Geliştirici:** oldred-byte (kisi)
-- **Değerlendirme:** 72/100 (B)
+- **Değerlendirme:** 68/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

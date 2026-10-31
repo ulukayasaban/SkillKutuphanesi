@@ -7,7 +7,7 @@
 - **Commit:** `c640094d949c5a7bfce7d51fc9c049e3dcd3be44`
 - **Lisans:** MIT
 - **Geliştirici:** czlonkowski (kisi)
-- **Değerlendirme:** 86/100 (A)
+- **Değerlendirme:** 85/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `n8n-node-configuration`

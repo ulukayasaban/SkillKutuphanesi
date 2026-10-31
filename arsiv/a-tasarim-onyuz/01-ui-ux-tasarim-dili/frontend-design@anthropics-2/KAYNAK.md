@@ -7,6 +7,6 @@
 - **Commit:** `5ed799e5cc56bea9efff57398ca43e31d82784ff`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** anthropics (kurum)
-- **Değerlendirme:** 84/100 (A)
+- **Değerlendirme:** 81/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

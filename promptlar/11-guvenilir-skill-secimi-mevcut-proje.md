@@ -32,6 +32,18 @@ Proje hakkında (boşsa projeden çıkar ve bana doğrulat):
 - CLAUDE.md / AGENTS.md'deki kurallar.
 Bana kısa bir özet tablo ver: teknoloji · mevcut agent'lar ve görevleri · mevcut skiller · eksik görünen yetenekler.
 
+═══ ADIM 1b — Kendini kanıtlamış referans kütüphaneleri (three.js, React, Next.js, GSAP, Tailwind, Playwright…) ═══
+- Projede kullanılan kütüphaneleri ve SÜRÜMLERİNİ çıkar (package.json, lock dosyası, import'lar).
+- Her biri için referans kartını oku (salt okuma):
+  ~/Documents/SkillKutuphanesi/notlar/referans/tasarim-teknolojileri.md (nasıl çalışır, ne zaman seç, performans/a11y, **Skill & rol eşleşmesi**)
+  ~/Documents/SkillKutuphanesi/notlar/referans/kutuphaneler.md (diğer kütüphaneler ve ilgili skiller)
+- Kütüphanenin güvenini gör: ~/Documents/SkillKutuphanesi/notlar/guven-siralamasi.md → "Referans kütüphaneleri" tablosu
+  (yıldız, katkıcı, son 90 gün commit, son sürüm).
+- Kartta o kütüphane için önerilen skilleri ADIM 2'de öncelikli aday say. Skill'in anlattığı sürüm/API projendeki sürümle
+  uyumlu mu kontrol et (ör. Three.js r17x, Tailwind v4, GSAP 3.13+, Next.js App Router); uyumsuzsa ele ya da bana işaretle.
+- Kütüphanenin kendisini kurma/yükseltme; sadece skill seçiminde kanıt olarak kullan.
+- Bana tablo ver: kütüphane · projedeki sürüm · kütüphane güveni · kartın önerdiği skiller · sürüm uyumu.
+
 ═══ ADIM 2 — Adayları bul (tüm kütüphane taranır) ═══
 - Her ihtiyaç / her agent görevi için ayrı çalıştır:
   `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py . --oner "<ihtiyaç + teknoloji>" --adet 15`
@@ -49,15 +61,23 @@ for i in ids:
     s = R.get(i) or next((x for x in R.values() if x["ad"] == i and x["durum"] == "tercih"), None)
     if not s: print(i, "YOK"); continue
     g, d, t = s.get("gelistirici") or {}, s["degerlendirme"], s.get("trend") or {}
-    print(f"{s['id']:34s} puan {d['puan']:3d}({d['not']}) ★{g.get('yildiz','?')} lisans {g.get('lisans','?')} "
-          f"son {g.get('son_guncelleme','?')} resmî {g.get('resmi_kaynak')} trend {t.get('seviye','-')} "
+    gv = g.get("guven") or {}
+    print(f"{s['id']:34s} puan {d['puan']:3d}({d['not']}) GÜVEN {gv.get('puan','?')}({gv.get('derece','?')}) "
+          f"#{gv.get('sira','?')}/{gv.get('toplam','?')} ★{g.get('yildiz','?')} ★/ay {g.get('yildiz_hizi','?')} "
+          f"katkıcı {g.get('katkici','?')} commit90g {g.get('commit_90g','?')} sürüm {g.get('son_surum') or '-'} "
+          f"lisans {g.get('lisans','?')} son {g.get('son_guncelleme','?')} resmî {g.get('resmi_kaynak')} trend {t.get('seviye','-')} "
           f"ücret {s['ucret']} durum {s['durum']} kalite {s.get('kalite','-')} codex {s['uyum']['codex']} "
           f"örtüşme {s.get('ortusme_grubu') or '-'}/{s.get('ortusme_rolu') or '-'} kaynak {s['repo']}")
 PY
 Kabul ölçütleri (hepsini birlikte değerlendir, gerekçesini yaz):
 - Değerlendirme puanı ≥ 65 (A/B). 50–64 (C) sadece daha iyi alternatif yoksa ve gerekçeyle. D ve `kalite: 1` (sadece yönlendirme) ALMA.
-- Kaynak güveni: resmî üretici (resmi_kaynak) ya da kurum/topluluk tarafından benimsenmiş (yıldız sayısı yüksek), bakımı
-  güncel (son güncelleme ≤ 180 gün tercih). GitHub Trending'e girmiş (`trend`) olanlar eşit durumda öne geçer, ama trend
+- GitHub GÜVENİ (`guven`, 0–100, ~/Documents/SkillKutuphanesi/notlar/guven-siralamasi.md): kaynağın GitHub etkileşimlerinin
+  kütüphanedeki skill kaynakları arasındaki sırası — yıldız, yıldız hızı (★/ay), katkıcı sayısı, son 90 gün commit, fork,
+  izleyici, son sürüm, lisans; resmî üretici olmak sadece küçük bir parçası. Güveni A/B olanı tercih et; C'yi gerekçeyle al;
+  D (az etkileşim, tek katkıcı, commit yok) ancak benzersiz bir iş yapıyorsa ve SKILL.md'yi inceledikten sonra öner.
+  Aynı işi yapan iki adayda güven derecesi ve sırası yüksek olan kazanır. Resmî olmayan ama güveni yüksek kaynak, resmî ama
+  etkileşimi zayıf kaynaktan önce gelebilir.
+- Bakım: son güncelleme ≤ 180 gün tercih. GitHub Trending'e girmiş (`trend`) olanlar eşit durumda öne geçer, ama trend
   tek başına seçim sebebi değildir.
 - Lisans açık (MIT, Apache-2.0, BSD…). Lisansı "yok/NOASSERTION" olanı ancak alternatif yoksa al ve bana işaretle.
 - Ücret: `ucretsiz` önce. `kismen` olursa ücretsiz yolunu yaz. `ucretli` (ücret ödemeden hiç kullanılamayan) skili sadece
@@ -82,7 +102,8 @@ Kabul ölçütleri (hepsini birlikte değerlendir, gerekçesini yaz):
       agent dosyamın `skills:` alanına elle ekle; (b) kütüphanedeki hazır rolü farklı bir adla ekle.
   Kütüphane rolü benim agent dosyamla aynı adı taşıyamaz (araç `kendi-agent-dosyan` hatası verir).
 - Agent'ım yoksa: uygun profil/rolleri öner (`--profil`, `--rol`).
-Bana tablo ver: agent/rol → çekirdek skiller → opsiyonel skiller → neden (puan, kaynak, lisans, ücret, trend).
+Bana tablo ver: agent/rol → çekirdek skiller → opsiyonel skiller → neden (puan, GÜVEN derece/sıra, ilgili referans
+kütüphanesi, lisans, ücret, trend).
 Seçmediğin ama ilgili güçlü adayları ve neden seçmediğini de listele.
 
 ═══ ADIM 6 — Ön kontrol (hiçbir şey değişmez) ═══
@@ -107,6 +128,9 @@ Geri alma her zaman mümkün: `skill-ekle.py . --geri-al` (son yedek) ya da `--k
 ## Neden böyle?
 - **Kütüphane salt okunur:** Başka projedeki agent kütüphaneyi bozamaz; başta ve sonda `git status` karşılaştırması bunun kanıtı.
 - **Proje kendi kopyasıyla çalışır:** `skill-ekle.py` skilleri projeye kopyalar ve `kilit.json`'a kaynağını (repo + commit) yazar.
-- **Güven filtresi** registry'deki verilere dayanır: değerlendirme puanı (bakım, yıldız, lisans, resmî kaynak, Codex uyumu,
-  bağlam yükü, yapı, GitHub trend), ücret sınıfı, inceleme kalitesi, örtüşme grubu.
+- **Güven filtresi** registry'deki verilere dayanır: GitHub güveni (yıldız, yıldız hızı, katkıcı, commit, fork, izleyici, sürüm,
+  lisans; kaynaklar arası sıra ve derece), değerlendirme puanı (bakım, lisans, Codex uyumu, bağlam yükü, yapı, trend),
+  ücret sınıfı, inceleme kalitesi, örtüşme grubu.
+- **Referans kütüphaneleri** (three.js, React, GSAP…) skill seçiminde kanıt olarak kullanılır: projendeki kütüphaneyi öğreten,
+  sürümü uyumlu skiller öne çıkar.
 - **Çakışma kontrolünü** hem agent (ADIM 4) hem araç (`--kuru` ön kontrolü) yapar; HATA varken kurulum olmaz.

@@ -7,6 +7,6 @@
 - **Commit:** `1283764556e61cbe56c600bbe504b8731b2254cb`
 - **Lisans:** MIT
 - **Geliştirici:** xjli360 (kisi)
-- **Değerlendirme:** 81/100 (A)
+- **Değerlendirme:** 78/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

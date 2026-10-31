@@ -7,6 +7,6 @@
 - **Commit:** `c388223514a770e62ccbac8e7833ee790cfb9c1e`
 - **Lisans:** NOASSERTION
 - **Geliştirici:** lemomo-ai (kisi)
-- **Değerlendirme:** 65/100 (B)
+- **Değerlendirme:** 61/100 (C)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

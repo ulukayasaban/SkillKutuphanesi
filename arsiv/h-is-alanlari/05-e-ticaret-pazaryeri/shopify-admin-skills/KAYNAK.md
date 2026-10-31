@@ -7,6 +7,6 @@
 - **Commit:** `60c6945d49034407924648851de4e80c4ac3d7c6`
 - **Lisans:** MIT
 - **Geliştirici:** 40RTY-ai (kurum)
-- **Değerlendirme:** 84/100 (A)
+- **Değerlendirme:** 82/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

@@ -7,6 +7,6 @@
 - **Commit:** `063bee94c3f4df8453406c830b0a7df0f2860278`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** vercel-labs (kurum)
-- **Değerlendirme:** 84/100 (A)
+- **Değerlendirme:** 75/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

@@ -7,6 +7,6 @@
 - **Commit:** `30a1fb674e41284e738608c059690c251699eb07`
 - **Lisans:** MIT
 - **Geliştirici:** finsilabs (kurum)
-- **Değerlendirme:** 80/100 (A)
+- **Değerlendirme:** 76/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** alternatif

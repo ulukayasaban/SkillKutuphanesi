@@ -7,7 +7,7 @@
 - **Commit:** `593377bb048752abb0152deab9fbb1083a6087df`
 - **Lisans:** MIT
 - **Geliştirici:** K-Dense-AI (kurum)
-- **Değerlendirme:** 92/100 (A)
+- **Değerlendirme:** 90/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih
 - **SKILL.md'de olup bulunamayan dosyalar:** `url`

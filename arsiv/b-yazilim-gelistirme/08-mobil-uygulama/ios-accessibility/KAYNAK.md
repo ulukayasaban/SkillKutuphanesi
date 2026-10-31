@@ -7,6 +7,6 @@
 - **Commit:** `dcc3a36ce1d0099341d545c1af4eb5a8c989bf66`
 - **Lisans:** MIT
 - **Geliştirici:** dadederk (kisi)
-- **Değerlendirme:** 65/100 (B)
+- **Değerlendirme:** 60/100 (C)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

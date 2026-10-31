@@ -15,7 +15,30 @@
       "arsivlenmis": false,
       "aciklama": "A react-three-fiber scroll-rig for syncing 3D meshes and DOM elements.",
       "ana_sayfa": "",
-      "katkici": 11
+      "katkici": 11,
+      "izleyici": 13,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 13.0,
+      "guven": {
+        "puan": 37,
+        "ayrinti": [
+          "yildiz 989 (%37) → 9.2/25",
+          "yildiz_hizi 13.0 (%17) → 2.5/15",
+          "katkici 11 (%58) → 8.7/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 55 (%32) → 3.2/10",
+          "izleyici 13 (%45) → 2.3/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 20,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "40RTY-ai/shopify-admin-skills": {
       "sahip": "40RTY-ai",
@@ -31,7 +54,28 @@
       "arsivlenmis": false,
       "aciklama": "Community-maintained AI agent skills for operating Shopify stores — workflows, optimization, reports and more",
       "ana_sayfa": "http://skills.40rty.ai",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 3,
+      "commit_90g": 13,
+      "son_surum": "2026-06-17",
+      "yildiz_hizi": 30.1,
+      "guven": {
+        "puan": 39,
+        "ayrinti": [
+          "yildiz 201 (%25) → 6.3/25",
+          "yildiz_hizi 30.1 (%25) → 3.8/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 13 (%44) → 6.5/15",
+          "fork 22 (%24) → 2.4/10",
+          "izleyici 3 (%30) → 1.5/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 45,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "CloudAI-X/threejs-skills": {
       "sahip": "CloudAI-X",
@@ -47,15 +91,36 @@
       "arsivlenmis": false,
       "aciklama": "",
       "ana_sayfa": "https://x.com/cloudxdev",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 11,
+      "commit_90g": 20,
+      "son_surum": null,
+      "yildiz_hizi": 413.1,
+      "guven": {
+        "puan": 44,
+        "ayrinti": [
+          "yildiz 3873 (%48) → 12.0/25",
+          "yildiz_hizi 413.1 (%51) → 7.6/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 20 (%54) → 8.0/15",
+          "fork 445 (%49) → 4.9/10",
+          "izleyici 11 (%44) → 2.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 41,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "ComposioHQ/awesome-claude-skills": {
       "sahip": "ComposioHQ",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/ComposioHQ",
       "resmi_kaynak": true,
-      "yildiz": 78362,
-      "fork": 9442,
+      "yildiz": 78366,
+      "fork": 9444,
       "acik_issue": 1877,
       "son_guncelleme": "2026-09-18",
       "olusturulma": "2025-10-17",
@@ -63,14 +128,35 @@
       "arsivlenmis": false,
       "aciklama": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "ana_sayfa": "",
-      "katkici": 29
+      "katkici": 29,
+      "izleyici": 459,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 6285.8,
+      "guven": {
+        "puan": 61,
+        "ayrinti": [
+          "yildiz 78366 (%77) → 19.4/25",
+          "yildiz_hizi 6285.8 (%76) → 11.4/15",
+          "katkici 29 (%66) → 9.9/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 9444 (%80) → 8.0/10",
+          "izleyici 459 (%86) → 4.3/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 30,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "DietrichGebert/ponytail": {
       "sahip": "DietrichGebert",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/DietrichGebert",
       "resmi_kaynak": false,
-      "yildiz": 181030,
+      "yildiz": 181045,
       "fork": 9950,
       "acik_issue": 140,
       "son_guncelleme": "2026-10-29",
@@ -79,15 +165,36 @@
       "arsivlenmis": false,
       "aciklama": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "ana_sayfa": "https://ponytail.dev",
-      "katkici": 133
+      "katkici": 133,
+      "izleyici": 425,
+      "commit_90g": 163,
+      "son_surum": "2026-10-29",
+      "yildiz_hizi": 39033.8,
+      "guven": {
+        "puan": 86,
+        "ayrinti": [
+          "yildiz 181045 (%94) → 23.6/25",
+          "yildiz_hizi 39033.8 (%100) → 15.0/15",
+          "katkici 133 (%90) → 13.5/15",
+          "commit_90g 163 (%75) → 11.2/15",
+          "fork 9950 (%86) → 8.6/10",
+          "izleyici 425 (%85) → 4.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 5,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "Donchitos/Claude-Code-Game-Studios": {
       "sahip": "Donchitos",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/Donchitos",
       "resmi_kaynak": false,
-      "yildiz": 30487,
-      "fork": 4174,
+      "yildiz": 30499,
+      "fork": 4175,
       "acik_issue": 71,
       "son_guncelleme": "2026-10-19",
       "olusturulma": "2026-02-12",
@@ -95,7 +202,28 @@
       "arsivlenmis": false,
       "aciklama": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 208,
+      "commit_90g": 5,
+      "son_surum": "2026-10-19",
+      "yildiz_hizi": 3552.4,
+      "guven": {
+        "puan": 56,
+        "ayrinti": [
+          "yildiz 30499 (%63) → 15.8/25",
+          "yildiz_hizi 3552.4 (%68) → 10.1/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 5 (%34) → 5.1/15",
+          "fork 4175 (%69) → 6.9/10",
+          "izleyici 208 (%72) → 3.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 33,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "FFmpeg/FFmpeg": {
       "sahip": "FFmpeg",
@@ -111,15 +239,38 @@
       "arsivlenmis": false,
       "aciklama": "Mirror of https://git.ffmpeg.org/ffmpeg.git",
       "ana_sayfa": "https://ffmpeg.org/",
-      "katkici": 2792
+      "katkici": 2792,
+      "izleyici": 1552,
+      "commit_90g": 2328,
+      "son_surum": null,
+      "yildiz_hizi": 353.8,
+      "guven": {
+        "puan": 74,
+        "ayrinti": [
+          "yildiz 66100 (%73) → 18.3/25",
+          "yildiz_hizi 353.8 (%45) → 6.8/15",
+          "katkici 2792 (%99) → 14.8/15",
+          "commit_90g 2328 (%99) → 14.8/15",
+          "fork 14475 (%90) → 9.0/10",
+          "izleyici 1552 (%97) → 4.9/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 3,
+        "referans_toplam": 27,
+        "derece": "B"
+      }
     },
     "Fei-Away/Codex-Dream-Skin": {
       "sahip": "Fei-Away",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/Fei-Away",
       "resmi_kaynak": false,
-      "yildiz": 15263,
-      "fork": 1393,
+      "yildiz": 15264,
+      "fork": 1394,
       "acik_issue": 62,
       "son_guncelleme": "2026-10-15",
       "olusturulma": "2026-07-15",
@@ -127,14 +278,35 @@
       "arsivlenmis": false,
       "aciklama": "Codex Dream Skin",
       "ana_sayfa": "https://www.dreamskin.cc",
-      "katkici": 23
+      "katkici": 23,
+      "izleyici": 17,
+      "commit_90g": 46,
+      "son_surum": "2026-10-15",
+      "yildiz_hizi": 4296.5,
+      "guven": {
+        "puan": 62,
+        "ayrinti": [
+          "yildiz 15264 (%58) → 14.4/25",
+          "yildiz_hizi 4296.5 (%73) → 11.0/15",
+          "katkici 23 (%62) → 9.3/15",
+          "commit_90g 46 (%62) → 9.3/15",
+          "fork 1394 (%58) → 5.8/10",
+          "izleyici 17 (%46) → 2.3/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 28,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "GoogleChrome/lighthouse": {
       "sahip": "GoogleChrome",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/GoogleChrome",
       "resmi_kaynak": true,
-      "yildiz": 30985,
+      "yildiz": 30986,
       "fork": 9780,
       "acik_issue": 428,
       "son_guncelleme": "2026-10-30",
@@ -143,15 +315,36 @@
       "arsivlenmis": false,
       "aciklama": "Automated auditing, performance metrics, and best practices for the web.",
       "ana_sayfa": "https://developer.chrome.com/docs/lighthouse/overview/",
-      "katkici": 397
+      "katkici": 397,
+      "izleyici": 608,
+      "commit_90g": 184,
+      "son_surum": "2026-10-27",
+      "yildiz_hizi": 242.2,
+      "guven": {
+        "puan": 76,
+        "ayrinti": [
+          "yildiz 30986 (%65) → 16.2/25",
+          "yildiz_hizi 242.2 (%42) → 6.3/15",
+          "katkici 397 (%94) → 14.2/15",
+          "commit_90g 184 (%77) → 11.6/15",
+          "fork 9780 (%85) → 8.5/10",
+          "izleyici 608 (%90) → 4.5/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 15,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "Graphify-Labs/graphify": {
       "sahip": "Graphify-Labs",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/Graphify-Labs",
       "resmi_kaynak": false,
-      "yildiz": 139534,
-      "fork": 13315,
+      "yildiz": 139554,
+      "fork": 13319,
       "acik_issue": 1642,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2026-04-03",
@@ -159,7 +352,28 @@
       "arsivlenmis": false,
       "aciklama": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
       "ana_sayfa": "https://www.graphify.com",
-      "katkici": 378
+      "katkici": 378,
+      "izleyici": 411,
+      "commit_90g": 1333,
+      "son_surum": "2026-10-30",
+      "yildiz_hizi": 20106.4,
+      "guven": {
+        "puan": 91,
+        "ayrinti": [
+          "yildiz 139554 (%89) → 22.2/25",
+          "yildiz_hizi 20106.4 (%96) → 14.4/15",
+          "katkici 378 (%93) → 13.9/15",
+          "commit_90g 1333 (%94) → 14.2/15",
+          "fork 13319 (%90) → 9.0/10",
+          "izleyici 411 (%83) → 4.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 1,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "J-DTurner/etsy-api-skill": {
       "sahip": "J-DTurner",
@@ -175,15 +389,36 @@
       "arsivlenmis": false,
       "aciklama": "Agent skill for Etsy API integration - browse, search, and analyze products on Etsy marketplace",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 0,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 0.7,
+      "guven": {
+        "puan": 14,
+        "ayrinti": [
+          "yildiz 6 (%1) → 0.4/25",
+          "yildiz_hizi 0.7 (%1) → 0.2/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 0 (%4) → 0.4/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 69,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "K-Dense-AI/scientific-agent-skills": {
       "sahip": "K-Dense-AI",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/K-Dense-AI",
       "resmi_kaynak": false,
-      "yildiz": 55418,
-      "fork": 4877,
+      "yildiz": 55425,
+      "fork": 4878,
       "acik_issue": 74,
       "son_guncelleme": "2026-10-26",
       "olusturulma": "2025-10-19",
@@ -191,15 +426,36 @@
       "arsivlenmis": false,
       "aciklama": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
       "ana_sayfa": "https://arxiv.org/abs/2609.00065",
-      "katkici": 58
+      "katkici": 58,
+      "izleyici": 208,
+      "commit_90g": 95,
+      "son_surum": "2026-10-01",
+      "yildiz_hizi": 4469.3,
+      "guven": {
+        "puan": 75,
+        "ayrinti": [
+          "yildiz 55425 (%73) → 18.3/25",
+          "yildiz_hizi 4469.3 (%75) → 11.2/15",
+          "katkici 58 (%79) → 11.8/15",
+          "commit_90g 95 (%69) → 10.4/15",
+          "fork 4878 (%72) → 7.2/10",
+          "izleyici 208 (%72) → 3.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 17,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "Leonxlnx/taste-skill": {
       "sahip": "Leonxlnx",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/Leonxlnx",
       "resmi_kaynak": false,
-      "yildiz": 106414,
-      "fork": 7201,
+      "yildiz": 106429,
+      "fork": 7203,
       "acik_issue": 8,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2026-02-19",
@@ -207,7 +463,28 @@
       "arsivlenmis": false,
       "aciklama": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
       "ana_sayfa": "https://tasteskill.dev",
-      "katkici": 24
+      "katkici": 24,
+      "izleyici": 295,
+      "commit_90g": 103,
+      "son_surum": "2026-10-24",
+      "yildiz_hizi": 12738.0,
+      "guven": {
+        "puan": 76,
+        "ayrinti": [
+          "yildiz 106429 (%85) → 21.1/25",
+          "yildiz_hizi 12738.0 (%86) → 12.9/15",
+          "katkici 24 (%63) → 9.5/15",
+          "commit_90g 103 (%70) → 10.6/15",
+          "fork 7203 (%79) → 7.9/10",
+          "izleyici 295 (%77) → 3.9/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 16,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "Livsy90/iOS-Performance-Agent-Skills": {
       "sahip": "Livsy90",
@@ -223,7 +500,28 @@
       "arsivlenmis": false,
       "aciklama": "A collection of AI-agent skills for reviewing, diagnosing, and improving performance in iOS applications.",
       "ana_sayfa": "",
-      "katkici": 2
+      "katkici": 2,
+      "izleyici": 0,
+      "commit_90g": 0,
+      "son_surum": "2026-07-12",
+      "yildiz_hizi": 22.8,
+      "guven": {
+        "puan": 29,
+        "ayrinti": [
+          "yildiz 119 (%23) → 5.6/25",
+          "yildiz_hizi 22.8 (%24) → 3.6/15",
+          "katkici 2 (%28) → 4.2/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 11 (%17) → 1.7/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 56,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "Lonsdale201/wp-agent-skills": {
       "sahip": "Lonsdale201",
@@ -239,7 +537,28 @@
       "arsivlenmis": false,
       "aciklama": "A community-maintained collection of agent skills for WordPress plugin and theme development.",
       "ana_sayfa": "",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 0,
+      "commit_90g": 29,
+      "son_surum": null,
+      "yildiz_hizi": 4.3,
+      "guven": {
+        "puan": 23,
+        "ayrinti": [
+          "yildiz 26 (%6) → 1.4/25",
+          "yildiz_hizi 4.3 (%7) → 1.1/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 29 (%56) → 8.5/15",
+          "fork 2 (%7) → 0.7/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 61,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "OrcaQubits/agentic-commerce-skills-plugins": {
       "sahip": "OrcaQubits",
@@ -255,15 +574,36 @@
       "arsivlenmis": false,
       "aciklama": "Skills & plugins for agentic commerce : UCP, ACP, AP2, A2A, WebMCP, Magento 2, BigCommerce, WooCommerce",
       "ana_sayfa": "",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 1,
+      "commit_90g": 11,
+      "son_surum": "2026-05-13",
+      "yildiz_hizi": 5.0,
+      "guven": {
+        "puan": 33,
+        "ayrinti": [
+          "yildiz 40 (%13) → 3.2/25",
+          "yildiz_hizi 5.0 (%11) → 1.7/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 11 (%42) → 6.3/15",
+          "fork 17 (%20) → 2.0/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 52,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "Panniantong/Agent-Reach": {
       "sahip": "Panniantong",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/Panniantong",
       "resmi_kaynak": false,
-      "yildiz": 106872,
-      "fork": 9501,
+      "yildiz": 106889,
+      "fork": 9502,
       "acik_issue": 273,
       "son_guncelleme": "2026-10-25",
       "olusturulma": "2026-02-24",
@@ -271,7 +611,28 @@
       "arsivlenmis": false,
       "aciklama": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
       "ana_sayfa": "",
-      "katkici": 38
+      "katkici": 38,
+      "izleyici": 348,
+      "commit_90g": 110,
+      "son_surum": "2026-10-23",
+      "yildiz_hizi": 13049.9,
+      "guven": {
+        "puan": 79,
+        "ayrinti": [
+          "yildiz 106889 (%86) → 21.5/25",
+          "yildiz_hizi 13049.9 (%89) → 13.3/15",
+          "katkici 38 (%72) → 10.8/15",
+          "commit_90g 110 (%72) → 10.8/15",
+          "fork 9502 (%82) → 8.2/10",
+          "izleyici 348 (%80) → 4.0/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 13,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "QwikDev/partytown": {
       "sahip": "QwikDev",
@@ -287,7 +648,30 @@
       "arsivlenmis": false,
       "aciklama": "Relocate resource intensive third-party scripts off of the main thread and into a web worker. 🎉",
       "ana_sayfa": "https://partytown.qwik.dev",
-      "katkici": 138
+      "katkici": 138,
+      "izleyici": 58,
+      "commit_90g": 69,
+      "son_surum": "2026-10-29",
+      "yildiz_hizi": 221.1,
+      "guven": {
+        "puan": 66,
+        "ayrinti": [
+          "yildiz 13807 (%56) → 14.1/25",
+          "yildiz_hizi 221.1 (%41) → 6.1/15",
+          "katkici 138 (%90) → 13.5/15",
+          "commit_90g 69 (%65) → 9.7/15",
+          "fork 460 (%49) → 4.9/10",
+          "izleyici 58 (%55) → 2.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 6,
+        "referans_toplam": 27,
+        "derece": "B"
+      }
     },
     "Shopify/agent-skills": {
       "sahip": "Shopify",
@@ -303,7 +687,28 @@
       "arsivlenmis": false,
       "aciklama": "Shopify skills for agent collaboration",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 2,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 14.1,
+      "guven": {
+        "puan": 23,
+        "ayrinti": [
+          "yildiz 99 (%18) → 4.6/25",
+          "yildiz_hizi 14.1 (%18) → 2.7/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 21 (%23) → 2.3/10",
+          "izleyici 2 (%28) → 1.4/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 62,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "Trendyol/trendyol-integration-developer-tool": {
       "sahip": "Trendyol",
@@ -319,14 +724,35 @@
       "arsivlenmis": false,
       "aciklama": "",
       "ana_sayfa": "",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 1,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 1.9,
+      "guven": {
+        "puan": 17,
+        "ayrinti": [
+          "yildiz 11 (%3) → 0.7/25",
+          "yildiz_hizi 1.9 (%3) → 0.4/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 0 (%4) → 0.4/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 67,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "VoltAgent/awesome-design-md": {
       "sahip": "VoltAgent",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/VoltAgent",
       "resmi_kaynak": false,
-      "yildiz": 124719,
+      "yildiz": 124726,
       "fork": 13839,
       "acik_issue": 311,
       "son_guncelleme": "2026-10-28",
@@ -335,15 +761,38 @@
       "arsivlenmis": false,
       "aciklama": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
       "ana_sayfa": "https://starterkit.getdesign.md/",
-      "katkici": 4
+      "katkici": 4,
+      "izleyici": 461,
+      "commit_90g": 8,
+      "son_surum": null,
+      "yildiz_hizi": 17718.1,
+      "guven": {
+        "puan": 70,
+        "ayrinti": [
+          "yildiz 124726 (%87) → 21.8/25",
+          "yildiz_hizi 17718.1 (%94) → 14.2/15",
+          "katkici 4 (%46) → 7.0/15",
+          "commit_90g 8 (%39) → 5.9/15",
+          "fork 13839 (%90) → 9.0/10",
+          "izleyici 461 (%86) → 4.3/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 5,
+        "referans_toplam": 27,
+        "derece": "B"
+      }
     },
     "addyosmani/agent-skills": {
       "sahip": "addyosmani",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/addyosmani",
       "resmi_kaynak": false,
-      "yildiz": 112018,
-      "fork": 11726,
+      "yildiz": 112026,
+      "fork": 11727,
       "acik_issue": 145,
       "son_guncelleme": "2026-10-29",
       "olusturulma": "2026-02-15",
@@ -351,7 +800,28 @@
       "arsivlenmis": false,
       "aciklama": "Production-grade engineering skills for AI coding agents.",
       "ana_sayfa": "https://skills.addy.ie",
-      "katkici": 96
+      "katkici": 96,
+      "izleyici": 550,
+      "commit_90g": 383,
+      "son_surum": "2026-10-29",
+      "yildiz_hizi": 13200.0,
+      "guven": {
+        "puan": 84,
+        "ayrinti": [
+          "yildiz 112026 (%87) → 21.8/25",
+          "yildiz_hizi 13200.0 (%90) → 13.5/15",
+          "katkici 96 (%86) → 12.9/15",
+          "commit_90g 383 (%83) → 12.5/15",
+          "fork 11727 (%87) → 8.7/10",
+          "izleyici 550 (%87) → 4.4/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 8,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "ai/size-limit": {
       "sahip": "ai",
@@ -367,14 +837,37 @@
       "arsivlenmis": false,
       "aciklama": "Calculate the real cost to run your JS app or lib to keep good performance. Show error in pull request if the cost exceeds the limit.",
       "ana_sayfa": "",
-      "katkici": 103
+      "katkici": 103,
+      "izleyici": 36,
+      "commit_90g": 35,
+      "son_surum": "2026-10-22",
+      "yildiz_hizi": 62.7,
+      "guven": {
+        "puan": 58,
+        "ayrinti": [
+          "yildiz 7042 (%52) → 13.0/25",
+          "yildiz_hizi 62.7 (%30) → 4.4/15",
+          "katkici 103 (%86) → 12.9/15",
+          "commit_90g 35 (%58) → 8.7/15",
+          "fork 1751 (%61) → 6.1/10",
+          "izleyici 36 (%54) → 2.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 12,
+        "referans_toplam": 27,
+        "derece": "C"
+      }
     },
     "airbnb/lottie-web": {
       "sahip": "airbnb",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/airbnb",
       "resmi_kaynak": true,
-      "yildiz": 32294,
+      "yildiz": 32292,
       "fork": 2953,
       "acik_issue": 861,
       "son_guncelleme": "2025-09-01",
@@ -383,7 +876,30 @@
       "arsivlenmis": false,
       "aciklama": "Render After Effects animations natively on Web, Android and iOS, and React Native. http://airbnb.io/lottie/",
       "ana_sayfa": "",
-      "katkici": 109
+      "katkici": 109,
+      "izleyici": 435,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 229.8,
+      "guven": {
+        "puan": 60,
+        "ayrinti": [
+          "yildiz 32292 (%65) → 16.2/25",
+          "yildiz_hizi 229.8 (%41) → 6.1/15",
+          "katkici 109 (%87) → 13.1/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 2953 (%65) → 6.5/10",
+          "izleyici 435 (%85) → 4.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 9,
+        "referans_toplam": 27,
+        "derece": "C"
+      }
     },
     "aldefy/compose-skill": {
       "sahip": "aldefy",
@@ -399,14 +915,35 @@
       "arsivlenmis": false,
       "aciklama": "Jetpack Compose Agent Skill — AI-powered coding guidance with actual androidx/androidx source code receipts. Works with Claude Code, Codex CLI, Gemini CLI, Cursor, Copilot, Windsurf, and more.",
       "ana_sayfa": "",
-      "katkici": 5
+      "katkici": 5,
+      "izleyici": 8,
+      "commit_90g": 0,
+      "son_surum": "2026-07-08",
+      "yildiz_hizi": 74.2,
+      "guven": {
+        "puan": 33,
+        "ayrinti": [
+          "yildiz 598 (%32) → 8.1/25",
+          "yildiz_hizi 74.2 (%31) → 4.6/15",
+          "katkici 5 (%49) → 7.4/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 39 (%30) → 3.0/10",
+          "izleyici 8 (%37) → 1.8/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 53,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "android/skills": {
       "sahip": "android",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/android",
       "resmi_kaynak": true,
-      "yildiz": 10108,
+      "yildiz": 10109,
       "fork": 660,
       "acik_issue": 36,
       "son_guncelleme": "2026-10-29",
@@ -415,31 +952,73 @@
       "arsivlenmis": false,
       "aciklama": "",
       "ana_sayfa": "",
-      "katkici": 8
+      "katkici": 8,
+      "izleyici": 100,
+      "commit_90g": 39,
+      "son_surum": "2026-10-29",
+      "yildiz_hizi": 1342.0,
+      "guven": {
+        "puan": 63,
+        "ayrinti": [
+          "yildiz 10109 (%56) → 14.1/25",
+          "yildiz_hizi 1342.0 (%59) → 8.9/15",
+          "katkici 8 (%55) → 8.2/15",
+          "commit_90g 39 (%59) → 8.9/15",
+          "fork 660 (%52) → 5.2/10",
+          "izleyici 100 (%59) → 3.0/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 27,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "anthropics/claude-code": {
       "sahip": "anthropics",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/anthropics",
       "resmi_kaynak": true,
-      "yildiz": 153993,
-      "fork": 26088,
-      "acik_issue": 16182,
+      "yildiz": 153992,
+      "fork": 26090,
+      "acik_issue": 16190,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2025-02-22",
       "lisans": "yok",
       "arsivlenmis": false,
       "aciklama": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
       "ana_sayfa": "https://code.claude.com/docs/en/overview",
-      "katkici": 59
+      "katkici": 59,
+      "izleyici": 902,
+      "commit_90g": 243,
+      "son_surum": "2026-10-31",
+      "yildiz_hizi": 7599.6,
+      "guven": {
+        "puan": 83,
+        "ayrinti": [
+          "yildiz 153992 (%93) → 23.2/25",
+          "yildiz_hizi 7599.6 (%77) → 11.6/15",
+          "katkici 59 (%80) → 12.0/15",
+          "commit_90g 243 (%80) → 12.0/15",
+          "fork 26090 (%96) → 9.6/10",
+          "izleyici 902 (%93) → 4.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 10,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "anthropics/claude-plugins-official": {
       "sahip": "anthropics",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/anthropics",
       "resmi_kaynak": true,
-      "yildiz": 45463,
-      "fork": 4739,
+      "yildiz": 45465,
+      "fork": 4740,
       "acik_issue": 1256,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2025-11-20",
@@ -447,15 +1026,36 @@
       "arsivlenmis": false,
       "aciklama": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
       "ana_sayfa": "https://code.claude.com/docs/en/plugins",
-      "katkici": 42
+      "katkici": 42,
+      "izleyici": 253,
+      "commit_90g": 1889,
+      "son_surum": null,
+      "yildiz_hizi": 4006.2,
+      "guven": {
+        "puan": 75,
+        "ayrinti": [
+          "yildiz 45465 (%70) → 17.6/25",
+          "yildiz_hizi 4006.2 (%72) → 10.8/15",
+          "katkici 42 (%75) → 11.2/15",
+          "commit_90g 1889 (%99) → 14.8/15",
+          "fork 4740 (%70) → 7.0/10",
+          "izleyici 253 (%76) → 3.8/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 18,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "anthropics/knowledge-work-plugins": {
       "sahip": "anthropics",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/anthropics",
       "resmi_kaynak": true,
-      "yildiz": 34059,
-      "fork": 3750,
+      "yildiz": 34064,
+      "fork": 3754,
       "acik_issue": 157,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2026-01-23",
@@ -463,15 +1063,36 @@
       "arsivlenmis": false,
       "aciklama": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "ana_sayfa": "",
-      "katkici": 32
+      "katkici": 32,
+      "izleyici": 208,
+      "commit_90g": 605,
+      "son_surum": null,
+      "yildiz_hizi": 3685.2,
+      "guven": {
+        "puan": 71,
+        "ayrinti": [
+          "yildiz 34064 (%68) → 16.9/25",
+          "yildiz_hizi 3685.2 (%69) → 10.4/15",
+          "katkici 32 (%70) → 10.6/15",
+          "commit_90g 605 (%85) → 12.7/15",
+          "fork 3754 (%68) → 6.8/10",
+          "izleyici 208 (%72) → 3.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 21,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "anthropics/skills": {
       "sahip": "anthropics",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/anthropics",
       "resmi_kaynak": true,
-      "yildiz": 185402,
-      "fork": 21903,
+      "yildiz": 185425,
+      "fork": 21904,
       "acik_issue": 1450,
       "son_guncelleme": "2026-10-28",
       "olusturulma": "2025-09-22",
@@ -479,7 +1100,28 @@
       "arsivlenmis": false,
       "aciklama": "Public repository for Agent Skills",
       "ana_sayfa": "",
-      "katkici": 17
+      "katkici": 17,
+      "izleyici": 1130,
+      "commit_90g": 15,
+      "son_surum": null,
+      "yildiz_hizi": 13952.8,
+      "guven": {
+        "puan": 73,
+        "ayrinti": [
+          "yildiz 185425 (%96) → 23.9/25",
+          "yildiz_hizi 13952.8 (%92) → 13.7/15",
+          "katkici 17 (%59) → 8.9/15",
+          "commit_90g 15 (%51) → 7.6/15",
+          "fork 21904 (%93) → 9.3/10",
+          "izleyici 1130 (%96) → 4.8/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 19,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "argyleink/open-props": {
       "sahip": "argyleink",
@@ -495,7 +1137,30 @@
       "arsivlenmis": false,
       "aciklama": "CSS custom properties to help accelerate adaptive and consistent design.",
       "ana_sayfa": "https://open-props.style",
-      "katkici": 67
+      "katkici": 67,
+      "izleyici": 38,
+      "commit_90g": 2,
+      "son_surum": "2023-09-29",
+      "yildiz_hizi": 89.7,
+      "guven": {
+        "puan": 46,
+        "ayrinti": [
+          "yildiz 5560 (%51) → 12.7/25",
+          "yildiz_hizi 89.7 (%31) → 4.6/15",
+          "katkici 67 (%82) → 12.3/15",
+          "commit_90g 2 (%27) → 4.0/15",
+          "fork 220 (%44) → 4.4/10",
+          "izleyici 38 (%54) → 2.7/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 15,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "arturitu/the-delegation": {
       "sahip": "arturitu",
@@ -511,7 +1176,30 @@
       "arsivlenmis": false,
       "aciklama": "A no-code 3D playground to explore, design, and interact with Agentic AI systems",
       "ana_sayfa": "https://arturitu.github.io/the-delegation/",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 9,
+      "commit_90g": 0,
+      "son_surum": "2026-04-04",
+      "yildiz_hizi": 86.1,
+      "guven": {
+        "puan": 26,
+        "ayrinti": [
+          "yildiz 719 (%34) → 8.5/25",
+          "yildiz_hizi 86.1 (%31) → 4.6/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 142 (%39) → 3.9/10",
+          "izleyici 9 (%38) → 1.9/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 24,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "barvian/number-flow": {
       "sahip": "barvian",
@@ -527,7 +1215,30 @@
       "arsivlenmis": false,
       "aciklama": "An animated number component for React, Vue, Svelte, and TS/JS.",
       "ana_sayfa": "https://number-flow.barvian.me",
-      "katkici": 7
+      "katkici": 7,
+      "izleyici": 11,
+      "commit_90g": 1,
+      "son_surum": "2026-07-18",
+      "yildiz_hizi": 281.7,
+      "guven": {
+        "puan": 48,
+        "ayrinti": [
+          "yildiz 7765 (%52) → 13.0/25",
+          "yildiz_hizi 281.7 (%44) → 6.5/15",
+          "katkici 7 (%54) → 8.0/15",
+          "commit_90g 1 (%27) → 4.0/15",
+          "fork 161 (%39) → 3.9/10",
+          "izleyici 11 (%44) → 2.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 13,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "buluslan/ecommerce-competitor-analyzer": {
       "sahip": "buluslan",
@@ -543,7 +1254,28 @@
       "arsivlenmis": false,
       "aciklama": "A powerful multi-platform e-commerce competitor analysis skill for Claude Code",
       "ana_sayfa": "",
-      "katkici": null
+      "katkici": 1,
+      "izleyici": 1,
+      "commit_90g": 3,
+      "son_surum": "2026-01-29",
+      "yildiz_hizi": 6.7,
+      "guven": {
+        "puan": 22,
+        "ayrinti": [
+          "yildiz 61 (%15) → 3.9/25",
+          "yildiz_hizi 6.7 (%13) → 1.9/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 3 (%31) → 4.6/15",
+          "fork 12 (%18) → 1.8/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 64,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "bytefer/awesome-nextjs": {
       "sahip": "bytefer",
@@ -559,15 +1291,38 @@
       "arsivlenmis": false,
       "aciklama": "A curated list of awesome things related to Next.js.",
       "ana_sayfa": "https://nextjs.batchtool.com/",
-      "katkici": 4
+      "katkici": 4,
+      "izleyici": 1,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 3.3,
+      "guven": {
+        "puan": 24,
+        "ayrinti": [
+          "yildiz 77 (%15) → 3.9/25",
+          "yildiz_hizi 3.3 (%4) → 0.6/15",
+          "katkici 4 (%46) → 7.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 36 (%28) → 2.8/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 25,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "calesthio/OpenMontage": {
       "sahip": "calesthio",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/calesthio",
       "resmi_kaynak": false,
-      "yildiz": 73510,
-      "fork": 9631,
+      "yildiz": 73527,
+      "fork": 9634,
       "acik_issue": 418,
       "son_guncelleme": "2026-10-28",
       "olusturulma": "2026-03-29",
@@ -575,15 +1330,36 @@
       "arsivlenmis": false,
       "aciklama": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
       "ana_sayfa": "https://www.openmontage.video/",
-      "katkici": 76
+      "katkici": 76,
+      "izleyici": 367,
+      "commit_90g": 169,
+      "son_surum": null,
+      "yildiz_hizi": 10348.2,
+      "guven": {
+        "puan": 72,
+        "ayrinti": [
+          "yildiz 73527 (%75) → 18.7/25",
+          "yildiz_hizi 10348.2 (%83) → 12.5/15",
+          "katkici 76 (%83) → 12.5/15",
+          "commit_90g 169 (%76) → 11.4/15",
+          "fork 9634 (%83) → 8.3/10",
+          "izleyici 367 (%82) → 4.1/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 20,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "cloudflare/security-audit-skill": {
       "sahip": "cloudflare",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/cloudflare",
       "resmi_kaynak": true,
-      "yildiz": 54239,
-      "fork": 3512,
+      "yildiz": 54277,
+      "fork": 3515,
       "acik_issue": 103,
       "son_guncelleme": "2026-09-14",
       "olusturulma": "2026-06-18",
@@ -591,7 +1367,28 @@
       "arsivlenmis": false,
       "aciklama": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "ana_sayfa": "",
-      "katkici": 4
+      "katkici": 4,
+      "izleyici": 206,
+      "commit_90g": 3,
+      "son_surum": null,
+      "yildiz_hizi": 12222.4,
+      "guven": {
+        "puan": 62,
+        "ayrinti": [
+          "yildiz 54277 (%72) → 18.0/25",
+          "yildiz_hizi 12222.4 (%85) → 12.7/15",
+          "katkici 4 (%46) → 7.0/15",
+          "commit_90g 3 (%31) → 4.6/15",
+          "fork 3515 (%66) → 6.6/10",
+          "izleyici 206 (%68) → 3.4/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 29,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "cloudflare/skills": {
       "sahip": "cloudflare",
@@ -607,14 +1404,35 @@
       "arsivlenmis": false,
       "aciklama": "Skills for teaching agents how to build on Cloudflare.",
       "ana_sayfa": "",
-      "katkici": 48
+      "katkici": 48,
+      "izleyici": 32,
+      "commit_90g": 254,
+      "son_surum": null,
+      "yildiz_hizi": 301.7,
+      "guven": {
+        "puan": 60,
+        "ayrinti": [
+          "yildiz 3225 (%46) → 11.6/25",
+          "yildiz_hizi 301.7 (%45) → 6.8/15",
+          "katkici 48 (%77) → 11.6/15",
+          "commit_90g 254 (%82) → 12.3/15",
+          "fork 335 (%48) → 4.8/10",
+          "izleyici 32 (%54) → 2.7/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 32,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "czlonkowski/n8n-skills": {
       "sahip": "czlonkowski",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/czlonkowski",
       "resmi_kaynak": false,
-      "yildiz": 6553,
+      "yildiz": 6554,
       "fork": 1077,
       "acik_issue": 22,
       "son_guncelleme": "2026-10-24",
@@ -623,7 +1441,28 @@
       "arsivlenmis": false,
       "aciklama": "n8n skillset for Claude Code to build flawless n8n workflows",
       "ana_sayfa": "https://www.n8n-skills.com",
-      "katkici": 7
+      "katkici": 7,
+      "izleyici": 65,
+      "commit_90g": 35,
+      "son_surum": "2026-10-24",
+      "yildiz_hizi": 529.9,
+      "guven": {
+        "puan": 56,
+        "ayrinti": [
+          "yildiz 6554 (%52) → 13.0/25",
+          "yildiz_hizi 529.9 (%52) → 7.8/15",
+          "katkici 7 (%54) → 8.0/15",
+          "commit_90g 35 (%58) → 8.7/15",
+          "fork 1077 (%54) → 5.4/10",
+          "izleyici 65 (%56) → 2.8/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 34,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "dadederk/iOS-Accessibility-Agent-Skill": {
       "sahip": "dadederk",
@@ -639,7 +1478,28 @@
       "arsivlenmis": false,
       "aciklama": "Add expert iOS Accessibility Best Practices guidance to your AI coding tool (Agent Skills open format).",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 4,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 19.1,
+      "guven": {
+        "puan": 24,
+        "ayrinti": [
+          "yildiz 175 (%24) → 6.0/25",
+          "yildiz_hizi 19.1 (%23) → 3.4/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 4 (%10) → 1.0/10",
+          "izleyici 4 (%31) → 1.5/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 60,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "darkroomengineering/lenis": {
       "sahip": "darkroomengineering",
@@ -655,7 +1515,30 @@
       "arsivlenmis": false,
       "aciklama": "Smooth scroll as it should be",
       "ana_sayfa": "https://lenis.dev",
-      "katkici": 36
+      "katkici": 36,
+      "izleyici": 63,
+      "commit_90g": 10,
+      "son_surum": "2026-10-15",
+      "yildiz_hizi": 301.6,
+      "guven": {
+        "puan": 60,
+        "ayrinti": [
+          "yildiz 16995 (%58) → 14.4/25",
+          "yildiz_hizi 301.6 (%44) → 6.5/15",
+          "katkici 36 (%70) → 10.6/15",
+          "commit_90g 10 (%39) → 5.9/15",
+          "fork 767 (%52) → 5.2/10",
+          "izleyici 63 (%55) → 2.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 10,
+        "referans_toplam": 27,
+        "derece": "C"
+      }
     },
     "darkroomengineering/satus": {
       "sahip": "darkroomengineering",
@@ -671,7 +1554,28 @@
       "arsivlenmis": false,
       "aciklama": "Advanced Next.js App Router starter for content-driven sites",
       "ana_sayfa": "https://satus.darkroom.engineering",
-      "katkici": 19
+      "katkici": 19,
+      "izleyici": 6,
+      "commit_90g": 210,
+      "son_surum": "2026-08-28",
+      "yildiz_hizi": 16.6,
+      "guven": {
+        "puan": 54,
+        "ayrinti": [
+          "yildiz 1012 (%38) → 9.5/25",
+          "yildiz_hizi 16.6 (%20) → 3.0/15",
+          "katkici 19 (%61) → 9.1/15",
+          "commit_90g 210 (%79) → 11.8/15",
+          "fork 97 (%35) → 3.5/10",
+          "izleyici 6 (%35) → 1.8/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 37,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "dequelabs/axe-core": {
       "sahip": "dequelabs",
@@ -687,7 +1591,30 @@
       "arsivlenmis": false,
       "aciklama": "Accessibility engine for automated Web UI testing",
       "ana_sayfa": "https://www.deque.com/axe/",
-      "katkici": 272
+      "katkici": 272,
+      "izleyici": 172,
+      "commit_90g": 104,
+      "son_surum": "2026-10-05",
+      "yildiz_hizi": 56.5,
+      "guven": {
+        "puan": 65,
+        "ayrinti": [
+          "yildiz 7734 (%52) → 13.0/25",
+          "yildiz_hizi 56.5 (%28) → 4.2/15",
+          "katkici 272 (%92) → 13.7/15",
+          "commit_90g 104 (%70) → 10.6/15",
+          "fork 972 (%52) → 5.2/10",
+          "izleyici 172 (%65) → 3.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 7,
+        "referans_toplam": 27,
+        "derece": "B"
+      }
     },
     "dpconde/claude-android-skill": {
       "sahip": "dpconde",
@@ -703,15 +1630,36 @@
       "arsivlenmis": false,
       "aciklama": "Claude Code skill for building modern Android apps following best practices.",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 6,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 32.4,
+      "guven": {
+        "puan": 29,
+        "ayrinti": [
+          "yildiz 350 (%30) → 7.4/25",
+          "yildiz_hizi 32.4 (%27) → 4.0/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 49 (%32) → 3.2/10",
+          "izleyici 6 (%35) → 1.8/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 57,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "earthtojake/text-to-cad": {
       "sahip": "earthtojake",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/earthtojake",
       "resmi_kaynak": false,
-      "yildiz": 24367,
-      "fork": 2339,
+      "yildiz": 24373,
+      "fork": 2340,
       "acik_issue": 41,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2026-04-22",
@@ -719,7 +1667,28 @@
       "arsivlenmis": false,
       "aciklama": "Design physical products with AI",
       "ana_sayfa": "https://www.texttocad.dev",
-      "katkici": 30
+      "katkici": 30,
+      "izleyici": 104,
+      "commit_90g": 904,
+      "son_surum": "2026-10-30",
+      "yildiz_hizi": 3859.1,
+      "guven": {
+        "puan": 69,
+        "ayrinti": [
+          "yildiz 24373 (%62) → 15.5/25",
+          "yildiz_hizi 3859.1 (%70) → 10.6/15",
+          "katkici 30 (%68) → 10.1/15",
+          "commit_90g 904 (%90) → 13.5/15",
+          "fork 2340 (%62) → 6.2/10",
+          "izleyici 104 (%61) → 3.0/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 23,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "evanca/flutter-ai-rules": {
       "sahip": "evanca",
@@ -735,14 +1704,35 @@
       "arsivlenmis": false,
       "aciklama": "Flutter AI Skills and Rules for Claude, Codex, Cursor, and Other AI-Powered IDEs",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 11,
+      "commit_90g": 15,
+      "son_surum": null,
+      "yildiz_hizi": 36.3,
+      "guven": {
+        "puan": 35,
+        "ayrinti": [
+          "yildiz 665 (%34) → 8.5/25",
+          "yildiz_hizi 36.3 (%28) → 4.2/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 15 (%51) → 7.6/15",
+          "fork 67 (%34) → 3.4/10",
+          "izleyici 11 (%44) → 2.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 48,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "expo/skills": {
       "sahip": "expo",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/expo",
       "resmi_kaynak": true,
-      "yildiz": 3914,
+      "yildiz": 3915,
       "fork": 247,
       "acik_issue": 103,
       "son_guncelleme": "2026-10-30",
@@ -751,7 +1741,28 @@
       "arsivlenmis": false,
       "aciklama": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
       "ana_sayfa": "",
-      "katkici": 31
+      "katkici": 31,
+      "izleyici": 22,
+      "commit_90g": 51,
+      "son_surum": null,
+      "yildiz_hizi": 355.3,
+      "guven": {
+        "puan": 56,
+        "ayrinti": [
+          "yildiz 3915 (%49) → 12.3/25",
+          "yildiz_hizi 355.3 (%46) → 7.0/15",
+          "katkici 31 (%69) → 10.4/15",
+          "commit_90g 51 (%63) → 9.5/15",
+          "fork 247 (%45) → 4.5/10",
+          "izleyici 22 (%48) → 2.4/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 35,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "figma/code-connect": {
       "sahip": "figma",
@@ -767,7 +1778,30 @@
       "arsivlenmis": false,
       "aciklama": "A tool for connecting your design system components in code with your design system in Figma",
       "ana_sayfa": "",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 22,
+      "commit_90g": 6,
+      "son_surum": "2026-10-26",
+      "yildiz_hizi": 52.0,
+      "guven": {
+        "puan": 47,
+        "ayrinti": [
+          "yildiz 1595 (%41) → 10.2/25",
+          "yildiz_hizi 52.0 (%28) → 4.2/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 6 (%35) → 5.3/15",
+          "fork 128 (%38) → 3.8/10",
+          "izleyici 22 (%48) → 2.4/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 14,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "finsilabs/awesome-ecommerce-skills": {
       "sahip": "finsilabs",
@@ -783,7 +1817,28 @@
       "arsivlenmis": false,
       "aciklama": "",
       "ana_sayfa": "",
-      "katkici": 4
+      "katkici": 4,
+      "izleyici": 1,
+      "commit_90g": 3,
+      "son_surum": null,
+      "yildiz_hizi": 7.8,
+      "guven": {
+        "puan": 28,
+        "ayrinti": [
+          "yildiz 60 (%14) → 3.5/25",
+          "yildiz_hizi 7.8 (%14) → 2.1/15",
+          "katkici 4 (%46) → 7.0/15",
+          "commit_90g 3 (%31) → 4.6/15",
+          "fork 10 (%15) → 1.5/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 59,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "fontsource/fontsource": {
       "sahip": "fontsource",
@@ -799,14 +1854,37 @@
       "arsivlenmis": false,
       "aciklama": "Self-host Open Source fonts in neatly bundled NPM packages.",
       "ana_sayfa": "https://fontsource.org",
-      "katkici": 46
+      "katkici": 46,
+      "izleyici": 18,
+      "commit_90g": 103,
+      "son_surum": "2026-10-12",
+      "yildiz_hizi": 80.6,
+      "guven": {
+        "puan": 59,
+        "ayrinti": [
+          "yildiz 6253 (%51) → 12.7/25",
+          "yildiz_hizi 80.6 (%31) → 4.6/15",
+          "katkici 46 (%76) → 11.4/15",
+          "commit_90g 103 (%70) → 10.6/15",
+          "fork 195 (%42) → 4.2/10",
+          "izleyici 18 (%46) → 2.3/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 11,
+        "referans_toplam": 27,
+        "derece": "C"
+      }
     },
     "freshtechbro/claudedesignskills": {
       "sahip": "freshtechbro",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/freshtechbro",
       "resmi_kaynak": false,
-      "yildiz": 1188,
+      "yildiz": 1189,
       "fork": 199,
       "acik_issue": 6,
       "son_guncelleme": "2025-11-20",
@@ -815,7 +1893,28 @@
       "arsivlenmis": false,
       "aciklama": "A comprehensive collection of Claude Code skills for modern web development, specializing in 3D graphics, animation, and interactive web experiences.",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 11,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 97.4,
+      "guven": {
+        "puan": 34,
+        "ayrinti": [
+          "yildiz 1189 (%39) → 9.9/25",
+          "yildiz_hizi 97.4 (%34) → 5.1/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 199 (%44) → 4.4/10",
+          "izleyici 11 (%44) → 2.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 49,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "gchahal1982/pixeljury": {
       "sahip": "gchahal1982",
@@ -831,7 +1930,30 @@
       "arsivlenmis": false,
       "aciklama": "Visual QA CLI for AI-built frontends that renders pages, finds design and accessibility issues, and writes agent-ready fix prompts.",
       "ana_sayfa": "https://www.npmjs.com/package/pixeljury",
-      "katkici": 2
+      "katkici": 2,
+      "izleyici": 0,
+      "commit_90g": 1,
+      "son_surum": "2026-07-08",
+      "yildiz_hizi": 1.3,
+      "guven": {
+        "puan": 20,
+        "ayrinti": [
+          "yildiz 6 (%1) → 0.4/25",
+          "yildiz_hizi 1.3 (%1) → 0.2/15",
+          "katkici 2 (%28) → 4.2/15",
+          "commit_90g 1 (%27) → 4.0/15",
+          "fork 1 (%4) → 0.4/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 26,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "greensock/GSAP": {
       "sahip": "greensock",
@@ -847,7 +1969,30 @@
       "arsivlenmis": false,
       "aciklama": "GSAP (GreenSock Animation Platform), a JavaScript animation library for the modern web",
       "ana_sayfa": "https://gsap.com",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 419,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 176.7,
+      "guven": {
+        "puan": 46,
+        "ayrinti": [
+          "yildiz 29954 (%62) → 15.5/25",
+          "yildiz_hizi 176.7 (%38) → 5.7/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 2319 (%61) → 6.1/10",
+          "izleyici 419 (%83) → 4.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 16,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "greensock/gsap-skills": {
       "sahip": "greensock",
@@ -863,7 +2008,28 @@
       "arsivlenmis": false,
       "aciklama": "Official AI skills for GSAP. These skills teach AI coding agents how to correctly use GSAP (GreenSock Animation Platform), including best practices, common animation patterns, and plugin usage.",
       "ana_sayfa": "",
-      "katkici": 4
+      "katkici": 4,
+      "izleyici": 52,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 2220.3,
+      "guven": {
+        "puan": 53,
+        "ayrinti": [
+          "yildiz 17602 (%59) → 14.8/25",
+          "yildiz_hizi 2220.3 (%65) → 9.7/15",
+          "katkici 4 (%46) → 7.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 1088 (%55) → 5.5/10",
+          "izleyici 52 (%55) → 2.7/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 38,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "hamen/compose_skill": {
       "sahip": "hamen",
@@ -879,7 +2045,28 @@
       "arsivlenmis": false,
       "aciklama": "A strict, evidence-based audit skill for Android Jetpack Compose repositories.",
       "ana_sayfa": "",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 0,
+      "commit_90g": 0,
+      "son_surum": "2026-07-07",
+      "yildiz_hizi": 56.9,
+      "guven": {
+        "puan": 34,
+        "ayrinti": [
+          "yildiz 376 (%31) → 7.7/25",
+          "yildiz_hizi 56.9 (%30) → 4.4/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 21 (%23) → 2.3/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 50,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "haticesahin/SanalFuar": {
       "sahip": "haticesahin",
@@ -895,23 +2082,67 @@
       "arsivlenmis": false,
       "aciklama": "",
       "ana_sayfa": "",
-      "katkici": 5
+      "katkici": 5,
+      "izleyici": 1,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 0.0,
+      "guven": {
+        "puan": 12,
+        "ayrinti": [
+          "yildiz 2 (%0) → 0.0/25",
+          "yildiz_hizi 0.0 (%0) → 0.0/15",
+          "katkici 5 (%49) → 7.4/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 0 (%4) → 0.4/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 27,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "heygen-com/hyperframes": {
       "sahip": "heygen-com",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/heygen-com",
       "resmi_kaynak": true,
-      "yildiz": 76108,
-      "fork": 6937,
-      "acik_issue": 202,
+      "yildiz": 76120,
+      "fork": 6941,
+      "acik_issue": 203,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2026-03-10",
       "lisans": "Apache-2.0",
       "arsivlenmis": false,
       "aciklama": "Write HTML. Render video. Built for agents.",
       "ana_sayfa": "https://hyperframes.heygen.com",
-      "katkici": 125
+      "katkici": 125,
+      "izleyici": 187,
+      "commit_90g": 2984,
+      "son_surum": "2026-10-31",
+      "yildiz_hizi": 9847.0,
+      "guven": {
+        "puan": 86,
+        "ayrinti": [
+          "yildiz 76120 (%76) → 19.0/25",
+          "yildiz_hizi 9847.0 (%82) → 12.3/15",
+          "katkici 125 (%89) → 13.3/15",
+          "commit_90g 2984 (%100) → 15.0/15",
+          "fork 6941 (%77) → 7.7/10",
+          "izleyici 187 (%66) → 3.3/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 6,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "heyitsnoah/claudesidian": {
       "sahip": "heyitsnoah",
@@ -927,7 +2158,28 @@
       "arsivlenmis": false,
       "aciklama": "",
       "ana_sayfa": "",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 29,
+      "commit_90g": 0,
+      "son_surum": "2026-04-11",
+      "yildiz_hizi": 191.4,
+      "guven": {
+        "puan": 38,
+        "ayrinti": [
+          "yildiz 2607 (%44) → 10.9/25",
+          "yildiz_hizi 191.4 (%39) → 5.9/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 194 (%42) → 4.2/10",
+          "izleyici 29 (%52) → 2.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 46,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "itsncki-design/app-store-submission-auditor": {
       "sahip": "itsncki-design",
@@ -943,7 +2195,28 @@
       "arsivlenmis": false,
       "aciklama": "A Claude skill that audits your iOS app for App Store rejection risks",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 1,
+      "commit_90g": 0,
+      "son_surum": "2026-03-19",
+      "yildiz_hizi": 4.6,
+      "guven": {
+        "puan": 13,
+        "ayrinti": [
+          "yildiz 34 (%10) → 2.5/25",
+          "yildiz_hizi 4.6 (%8) → 1.3/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 2 (%7) → 0.7/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 70,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "lemomo-ai/codex-radar": {
       "sahip": "lemomo-ai",
@@ -959,15 +2232,36 @@
       "arsivlenmis": false,
       "aciklama": "A Codex CLI plugin that grades how you collaborate with Codex across 9 dimensions in 3 categories — your Codex model writes a free-form diagnosis and at-least-5 pastable prompt rewrites. 100% local single-file dashboard. · 一款评估你和 Codex 协作质量的 Codex CLI 插件 —— 9 维评分、由你的 Codex 模型撰写诊断、可粘贴改进 prompt，全程本地。",
       "ana_sayfa": "https://lemomo-ai.github.io/codex-radar/",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 0,
+      "commit_90g": 8,
+      "son_surum": null,
+      "yildiz_hizi": 8.0,
+      "guven": {
+        "puan": 17,
+        "ayrinti": [
+          "yildiz 39 (%11) → 2.8/25",
+          "yildiz_hizi 8.0 (%15) → 2.3/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 8 (%39) → 5.9/15",
+          "fork 3 (%8) → 0.8/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 68,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "lemomo-ai/lemo-opuscar": {
       "sahip": "lemomo-ai",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/lemomo-ai",
       "resmi_kaynak": false,
-      "yildiz": 9804,
-      "fork": 1096,
+      "yildiz": 9809,
+      "fork": 1097,
       "acik_issue": 8,
       "son_guncelleme": "2026-10-29",
       "olusturulma": "2026-09-26",
@@ -975,7 +2269,28 @@
       "arsivlenmis": false,
       "aciklama": "A toolbox of film styles made in code for Claude Code: 66 ready to use, and your own. Each style is a style prompt plus a demo film made entirely in code by Claude Opus 5.5, with no video model. By Lemomo. · 一套用代码做片的风格工具箱：66 种现成风格，也能做出你自己的",
       "ana_sayfa": "https://lemomo-ai.github.io/lemo-opuscar/",
-      "katkici": 4
+      "katkici": 4,
+      "izleyici": 27,
+      "commit_90g": 72,
+      "son_surum": "2026-10-12",
+      "yildiz_hizi": 8519.8,
+      "guven": {
+        "puan": 61,
+        "ayrinti": [
+          "yildiz 9809 (%55) → 13.7/25",
+          "yildiz_hizi 8519.8 (%80) → 12.0/15",
+          "katkici 4 (%46) → 7.0/15",
+          "commit_90g 72 (%66) → 9.9/15",
+          "fork 1097 (%56) → 5.6/10",
+          "izleyici 27 (%49) → 2.5/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 31,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "lemomo-ai/lemo-wake": {
       "sahip": "lemomo-ai",
@@ -991,7 +2306,28 @@
       "arsivlenmis": false,
       "aciklama": "Claude Code plugin: turn one still image into a ~5 s seamless looping animation (MP4, GIF, WebP, Live Photo). · 把一张图做成约 5 秒的无缝循环动图。",
       "ana_sayfa": "https://lemomo-ai.github.io/lemo-wake/",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 1,
+      "commit_90g": 15,
+      "son_surum": "2026-10-05",
+      "yildiz_hizi": 221.0,
+      "guven": {
+        "puan": 33,
+        "ayrinti": [
+          "yildiz 221 (%27) → 6.7/25",
+          "yildiz_hizi 221.0 (%41) → 6.1/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 15 (%51) → 7.6/15",
+          "fork 28 (%28) → 2.8/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 54,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "linvi/tweetinvi": {
       "sahip": "linvi",
@@ -1007,7 +2343,30 @@
       "arsivlenmis": false,
       "aciklama": "Tweetinvi, an intuitive Twitter C# library for the REST and Stream API. It supports .NET, .NETCore, UAP (Xamarin)...",
       "ana_sayfa": "",
-      "katkici": 26
+      "katkici": 26,
+      "izleyici": 55,
+      "commit_90g": 0,
+      "son_surum": "2020-10-05",
+      "yildiz_hizi": 7.2,
+      "guven": {
+        "puan": 36,
+        "ayrinti": [
+          "yildiz 997 (%37) → 9.2/25",
+          "yildiz_hizi 7.2 (%13) → 1.9/15",
+          "katkici 26 (%63) → 9.5/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 213 (%44) → 4.4/10",
+          "izleyici 55 (%55) → 2.7/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 21,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "magendooro/magento-claude-skills": {
       "sahip": "magendooro",
@@ -1023,7 +2382,28 @@
       "arsivlenmis": false,
       "aciklama": "Claude Code skills for Magento 2 / Adobe Commerce — interact with your store via REST and GraphQL directly from Claude, no MCP server needed",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 1,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 2.1,
+      "guven": {
+        "puan": 19,
+        "ayrinti": [
+          "yildiz 15 (%4) → 1.1/25",
+          "yildiz_hizi 2.1 (%4) → 0.6/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 6 (%11) → 1.1/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 65,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "mercadopago/mercadopago-claude-marketplace": {
       "sahip": "mercadopago",
@@ -1039,23 +2419,65 @@
       "arsivlenmis": false,
       "aciklama": "Claude Code plugin marketplace for Mercado Pago payment integrations — checkout, webhooks, credential protection, and SDK patterns.",
       "ana_sayfa": "",
-      "katkici": 10
+      "katkici": 10,
+      "izleyici": 2,
+      "commit_90g": 15,
+      "son_surum": null,
+      "yildiz_hizi": 3.9,
+      "guven": {
+        "puan": 33,
+        "ayrinti": [
+          "yildiz 32 (%7) → 1.8/25",
+          "yildiz_hizi 3.9 (%6) → 0.8/15",
+          "katkici 10 (%58) → 8.7/15",
+          "commit_90g 15 (%51) → 7.6/15",
+          "fork 24 (%25) → 2.5/10",
+          "izleyici 2 (%28) → 1.4/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 55,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "microsoft/playwright": {
       "sahip": "microsoft",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/microsoft",
       "resmi_kaynak": true,
-      "yildiz": 98914,
+      "yildiz": 98916,
       "fork": 6750,
-      "acik_issue": 46,
+      "acik_issue": 44,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2019-11-15",
       "lisans": "Apache-2.0",
       "arsivlenmis": false,
       "aciklama": "Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API. ",
       "ana_sayfa": "https://playwright.dev",
-      "katkici": 827
+      "katkici": 827,
+      "izleyici": 614,
+      "commit_90g": 730,
+      "son_surum": "2026-10-14",
+      "yildiz_hizi": 1182.9,
+      "guven": {
+        "puan": 84,
+        "ayrinti": [
+          "yildiz 98916 (%82) → 20.4/25",
+          "yildiz_hizi 1182.9 (%56) → 8.5/15",
+          "katkici 827 (%97) → 14.6/15",
+          "commit_90g 730 (%87) → 13.1/15",
+          "fork 6750 (%76) → 7.6/10",
+          "izleyici 614 (%92) → 4.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 9,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "mmiani/kotlin-kmp-claude-agent-skills": {
       "sahip": "mmiani",
@@ -1071,15 +2493,36 @@
       "arsivlenmis": false,
       "aciklama": "Public AI agent skills for Kotlin Multiplatform projects, grounded in official Android, Kotlin Multiplatform, Compose, navigation, testing, and modularization guidance.",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 0,
+      "commit_90g": 8,
+      "son_surum": null,
+      "yildiz_hizi": 12.4,
+      "guven": {
+        "puan": 19,
+        "ayrinti": [
+          "yildiz 89 (%17) → 4.2/25",
+          "yildiz_hizi 12.4 (%17) → 2.5/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 8 (%39) → 5.9/15",
+          "fork 9 (%14) → 1.4/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 66,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "motiondivision/motion": {
       "sahip": "motiondivision",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/motiondivision",
       "resmi_kaynak": true,
-      "yildiz": 34682,
-      "fork": 1483,
+      "yildiz": 34683,
+      "fork": 1482,
       "acik_issue": 10,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2018-11-16",
@@ -1087,7 +2530,28 @@
       "arsivlenmis": false,
       "aciklama": "A modern animation library for React and JavaScript",
       "ana_sayfa": "https://motion.dev",
-      "katkici": 147
+      "katkici": 147,
+      "izleyici": 121,
+      "commit_90g": 1002,
+      "son_surum": null,
+      "yildiz_hizi": 362.8,
+      "guven": {
+        "puan": 71,
+        "ayrinti": [
+          "yildiz 34683 (%69) → 17.3/25",
+          "yildiz_hizi 362.8 (%48) → 7.2/15",
+          "katkici 147 (%92) → 13.7/15",
+          "commit_90g 1002 (%92) → 13.7/15",
+          "fork 1482 (%59) → 5.9/10",
+          "izleyici 121 (%63) → 3.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 22,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "mrdoob/three.js": {
       "sahip": "mrdoob",
@@ -1095,23 +2559,46 @@
       "sahip_url": "https://github.com/mrdoob",
       "resmi_kaynak": true,
       "yildiz": 117248,
-      "fork": 36827,
-      "acik_issue": 381,
+      "fork": 36828,
+      "acik_issue": 383,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2010-03-23",
       "lisans": "MIT",
       "arsivlenmis": false,
       "aciklama": "JavaScript 3D Library.",
       "ana_sayfa": "https://threejs.org/",
-      "katkici": 2612
+      "katkici": 2612,
+      "izleyici": 2518,
+      "commit_90g": 768,
+      "son_surum": "2026-10-30",
+      "yildiz_hizi": 587.6,
+      "guven": {
+        "puan": 87,
+        "ayrinti": [
+          "yildiz 117248 (%87) → 21.8/25",
+          "yildiz_hizi 587.6 (%52) → 7.8/15",
+          "katkici 2612 (%99) → 14.8/15",
+          "commit_90g 768 (%87) → 13.1/15",
+          "fork 36828 (%99) → 9.9/10",
+          "izleyici 2518 (%99) → 4.9/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 1,
+        "referans_toplam": 27,
+        "derece": "A"
+      }
     },
     "multica-ai/andrej-karpathy-skills": {
       "sahip": "multica-ai",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/multica-ai",
       "resmi_kaynak": false,
-      "yildiz": 226923,
-      "fork": 22658,
+      "yildiz": 226943,
+      "fork": 22659,
       "acik_issue": 138,
       "son_guncelleme": "2026-04-20",
       "olusturulma": "2026-01-27",
@@ -1119,15 +2606,36 @@
       "arsivlenmis": false,
       "aciklama": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "ana_sayfa": "",
-      "katkici": 7
+      "katkici": 7,
+      "izleyici": 1295,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 24906.4,
+      "guven": {
+        "puan": 68,
+        "ayrinti": [
+          "yildiz 226943 (%97) → 24.3/25",
+          "yildiz_hizi 24906.4 (%99) → 14.8/15",
+          "katkici 7 (%54) → 8.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 22659 (%94) → 9.4/10",
+          "izleyici 1295 (%97) → 4.9/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 24,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "nateherkai/scroll-craft": {
       "sahip": "nateherkai",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/nateherkai",
       "resmi_kaynak": false,
-      "yildiz": 4274,
-      "fork": 610,
+      "yildiz": 4277,
+      "fork": 611,
       "acik_issue": 11,
       "son_guncelleme": "2026-09-30",
       "olusturulma": "2026-08-22",
@@ -1135,7 +2643,28 @@
       "arsivlenmis": false,
       "aciklama": "An agent skill for building premium, immersive, scroll-driven websites. Works with Codex, Claude Code, and other coding agents. Also available as a Claude Code plugin.",
       "ana_sayfa": "https://github.com/nateherkai/scroll-craft",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 28,
+      "commit_90g": 16,
+      "son_surum": null,
+      "yildiz_hizi": 1857.4,
+      "guven": {
+        "puan": 46,
+        "ayrinti": [
+          "yildiz 4277 (%51) → 12.7/25",
+          "yildiz_hizi 1857.4 (%62) → 9.3/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 16 (%52) → 7.8/15",
+          "fork 611 (%51) → 5.1/10",
+          "izleyici 28 (%51) → 2.5/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 39,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "nevertoday/350-layout-compositions": {
       "sahip": "nevertoday",
@@ -1151,7 +2680,30 @@
       "arsivlenmis": false,
       "aciklama": "350 layout composition references across visual principles, editorial design, typography, grids, web UI, film, Chinese art, and presentations.",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 1,
+      "commit_90g": 7,
+      "son_surum": "2026-08-31",
+      "yildiz_hizi": 163.7,
+      "guven": {
+        "puan": 34,
+        "ayrinti": [
+          "yildiz 856 (%37) → 9.2/25",
+          "yildiz_hizi 163.7 (%37) → 5.5/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 7 (%35) → 5.3/15",
+          "fork 100 (%35) → 3.5/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 22,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "nexscope-ai/Amazon-Skills": {
       "sahip": "nexscope-ai",
@@ -1167,14 +2719,35 @@
       "arsivlenmis": false,
       "aciklama": "Free AI agent skills for Amazon sellers—  keyword research, competitor analysis, listing audit & more. Works with OpenClaw, Claude Code, Cursor, Windsurf, Codex and any agent that supports the Skills format.",
       "ana_sayfa": "",
-      "katkici": 5
+      "katkici": 5,
+      "izleyici": 13,
+      "commit_90g": 1,
+      "son_surum": null,
+      "yildiz_hizi": 106.1,
+      "guven": {
+        "puan": 40,
+        "ayrinti": [
+          "yildiz 820 (%35) → 8.8/25",
+          "yildiz_hizi 106.1 (%35) → 5.3/15",
+          "katkici 5 (%49) → 7.4/15",
+          "commit_90g 1 (%27) → 4.0/15",
+          "fork 139 (%39) → 3.9/10",
+          "izleyici 13 (%45) → 2.3/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 44,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "nexscope-ai/eCommerce-Skills": {
       "sahip": "nexscope-ai",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/nexscope-ai",
       "resmi_kaynak": false,
-      "yildiz": 1302,
+      "yildiz": 1304,
       "fork": 172,
       "acik_issue": 6,
       "son_guncelleme": "2026-08-26",
@@ -1183,15 +2756,36 @@
       "arsivlenmis": false,
       "aciklama": "E-commerce skills for AI agents — product research, marketing automation, supply chain optimization, and business analytics for online sellers across Amazon, Shopify, Etsy, TikTok Shop, and all platforms.",
       "ana_sayfa": "",
-      "katkici": 7
+      "katkici": 7,
+      "izleyici": 9,
+      "commit_90g": 1,
+      "son_surum": null,
+      "yildiz_hizi": 174.6,
+      "guven": {
+        "puan": 42,
+        "ayrinti": [
+          "yildiz 1304 (%41) → 10.2/25",
+          "yildiz_hizi 174.6 (%38) → 5.7/15",
+          "katkici 7 (%54) → 8.0/15",
+          "commit_90g 1 (%27) → 4.0/15",
+          "fork 172 (%41) → 4.1/10",
+          "izleyici 9 (%38) → 1.9/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 43,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "nextlevelbuilder/ui-ux-pro-max-skill": {
       "sahip": "nextlevelbuilder",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/nextlevelbuilder",
       "resmi_kaynak": false,
-      "yildiz": 143070,
-      "fork": 15150,
+      "yildiz": 143087,
+      "fork": 15151,
       "acik_issue": 90,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2025-11-30",
@@ -1199,15 +2793,36 @@
       "arsivlenmis": false,
       "aciklama": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
       "ana_sayfa": "https://www.uupm.cc/",
-      "katkici": 106
+      "katkici": 106,
+      "izleyici": 572,
+      "commit_90g": 79,
+      "son_surum": "2026-08-13",
+      "yildiz_hizi": 12984.6,
+      "guven": {
+        "puan": 85,
+        "ayrinti": [
+          "yildiz 143087 (%90) → 22.5/25",
+          "yildiz_hizi 12984.6 (%87) → 13.1/15",
+          "katkici 106 (%87) → 13.1/15",
+          "commit_90g 79 (%68) → 10.1/15",
+          "fork 15151 (%92) → 9.2/10",
+          "izleyici 572 (%89) → 4.4/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 7,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "nexu-io/open-design": {
       "sahip": "nexu-io",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/nexu-io",
       "resmi_kaynak": false,
-      "yildiz": 105063,
-      "fork": 11985,
+      "yildiz": 105071,
+      "fork": 11984,
       "acik_issue": 1318,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2026-04-28",
@@ -1215,15 +2830,36 @@
       "arsivlenmis": false,
       "aciklama": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Share work, exchange feedback, and iterate together in one workspace.",
       "ana_sayfa": "https://open-design.ai",
-      "katkici": 451
+      "katkici": 451,
+      "izleyici": 307,
+      "commit_90g": 787,
+      "son_surum": "2026-10-22",
+      "yildiz_hizi": 17172.9,
+      "guven": {
+        "puan": 88,
+        "ayrinti": [
+          "yildiz 105071 (%83) → 20.8/25",
+          "yildiz_hizi 17172.9 (%94) → 14.2/15",
+          "katkici 451 (%96) → 14.4/15",
+          "commit_90g 787 (%89) → 13.3/15",
+          "fork 11984 (%89) → 8.9/10",
+          "izleyici 307 (%79) → 3.9/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": 4,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "obra/superpowers": {
       "sahip": "obra",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/obra",
       "resmi_kaynak": false,
-      "yildiz": 309499,
-      "fork": 27539,
+      "yildiz": 309519,
+      "fork": 27543,
       "acik_issue": 375,
       "son_guncelleme": "2026-10-29",
       "olusturulma": "2025-10-09",
@@ -1231,7 +2867,28 @@
       "arsivlenmis": false,
       "aciklama": "An agentic skills framework & software development methodology that works.",
       "ana_sayfa": "",
-      "katkici": 44
+      "katkici": 44,
+      "izleyici": 1120,
+      "commit_90g": 6,
+      "son_surum": "2026-10-21",
+      "yildiz_hizi": 24313.6,
+      "guven": {
+        "puan": 81,
+        "ayrinti": [
+          "yildiz 309519 (%100) → 25.0/25",
+          "yildiz_hizi 24313.6 (%97) → 14.6/15",
+          "katkici 44 (%76) → 11.4/15",
+          "commit_90g 6 (%35) → 5.3/15",
+          "fork 27543 (%97) → 9.7/10",
+          "izleyici 1120 (%94) → 4.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 12,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "oframe/ogl": {
       "sahip": "oframe",
@@ -1247,7 +2904,30 @@
       "arsivlenmis": false,
       "aciklama": "Minimal WebGL Library",
       "ana_sayfa": "https://oframe.github.io/ogl/examples",
-      "katkici": 29
+      "katkici": 29,
+      "izleyici": 66,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 46.8,
+      "guven": {
+        "puan": 40,
+        "ayrinti": [
+          "yildiz 4743 (%51) → 12.7/25",
+          "yildiz_hizi 46.8 (%28) → 4.2/15",
+          "katkici 29 (%66) → 9.9/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 245 (%44) → 4.4/10",
+          "izleyici 66 (%56) → 2.8/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 18,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "oldred-byte/ec-visual-skill": {
       "sahip": "oldred-byte",
@@ -1263,23 +2943,65 @@
       "arsivlenmis": false,
       "aciklama": "Codex skill for e-commerce product visuals from product and reference images",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 0,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 17.2,
+      "guven": {
+        "puan": 23,
+        "ayrinti": [
+          "yildiz 101 (%20) → 4.9/25",
+          "yildiz_hizi 17.2 (%21) → 3.2/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 0 (%23) → 3.4/15",
+          "fork 9 (%14) → 1.4/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 63,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "pbakaus/impeccable": {
       "sahip": "pbakaus",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/pbakaus",
       "resmi_kaynak": false,
-      "yildiz": 97203,
-      "fork": 5726,
-      "acik_issue": 64,
+      "yildiz": 97252,
+      "fork": 5730,
+      "acik_issue": 66,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2025-11-16",
       "lisans": "Apache-2.0",
       "arsivlenmis": false,
       "aciklama": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "ana_sayfa": "https://impeccable.style",
-      "katkici": 61
+      "katkici": 61,
+      "izleyici": 213,
+      "commit_90g": 1226,
+      "son_surum": "2026-10-26",
+      "yildiz_hizi": 8471.2,
+      "guven": {
+        "puan": 79,
+        "ayrinti": [
+          "yildiz 97252 (%80) → 20.1/25",
+          "yildiz_hizi 8471.2 (%79) → 11.8/15",
+          "katkici 61 (%82) → 12.3/15",
+          "commit_90g 1226 (%93) → 13.9/15",
+          "fork 5730 (%73) → 7.3/10",
+          "izleyici 213 (%73) → 3.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 14,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "pmndrs/drei": {
       "sahip": "pmndrs",
@@ -1295,7 +3017,30 @@
       "arsivlenmis": false,
       "aciklama": "🥉 useful helpers for react-three-fiber",
       "ana_sayfa": "https://docs.pmnd.rs/drei",
-      "katkici": 252
+      "katkici": 252,
+      "izleyici": 50,
+      "commit_90g": 11,
+      "son_surum": "2026-09-25",
+      "yildiz_hizi": 128.8,
+      "guven": {
+        "puan": 62,
+        "ayrinti": [
+          "yildiz 10083 (%55) → 13.7/25",
+          "yildiz_hizi 128.8 (%35) → 5.3/15",
+          "katkici 252 (%92) → 13.7/15",
+          "commit_90g 11 (%42) → 6.3/15",
+          "fork 867 (%52) → 5.2/10",
+          "izleyici 50 (%54) → 2.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 8,
+        "referans_toplam": 27,
+        "derece": "C"
+      }
     },
     "pmndrs/react-three-a11y": {
       "sahip": "pmndrs",
@@ -1311,7 +3056,30 @@
       "arsivlenmis": false,
       "aciklama": "♿️ Accessibility tools for React Three Fiber",
       "ana_sayfa": "https://docs.pmnd.rs/a11y/introduction",
-      "katkici": 10
+      "katkici": 10,
+      "izleyici": 5,
+      "commit_90g": 1,
+      "son_surum": "2022-05-15",
+      "yildiz_hizi": 9.0,
+      "guven": {
+        "puan": 32,
+        "ayrinti": [
+          "yildiz 631 (%32) → 8.1/25",
+          "yildiz_hizi 9.0 (%15) → 2.3/15",
+          "katkici 10 (%58) → 8.7/15",
+          "commit_90g 1 (%27) → 4.0/15",
+          "fork 22 (%24) → 2.4/10",
+          "izleyici 5 (%31) → 1.5/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 23,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "pmndrs/react-three-fiber": {
       "sahip": "pmndrs",
@@ -1327,23 +3095,67 @@
       "arsivlenmis": false,
       "aciklama": "🇨🇭 A React renderer for Three.js",
       "ana_sayfa": "https://docs.pmnd.rs/react-three-fiber",
-      "katkici": 246
+      "katkici": 246,
+      "izleyici": 214,
+      "commit_90g": 44,
+      "son_surum": "2026-10-17",
+      "yildiz_hizi": 361.8,
+      "guven": {
+        "puan": 71,
+        "ayrinti": [
+          "yildiz 33380 (%66) → 16.5/25",
+          "yildiz_hizi 361.8 (%46) → 7.0/15",
+          "katkici 246 (%92) → 13.7/15",
+          "commit_90g 44 (%61) → 9.1/15",
+          "fork 2058 (%61) → 6.1/10",
+          "izleyici 214 (%73) → 3.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 4,
+        "referans_toplam": 27,
+        "derece": "B"
+      }
     },
     "react/react": {
       "sahip": "react",
       "sahip_tipi": "kurum",
       "sahip_url": "https://github.com/react",
       "resmi_kaynak": true,
-      "yildiz": 251799,
+      "yildiz": 251801,
       "fork": 51606,
-      "acik_issue": 1481,
+      "acik_issue": 1482,
       "son_guncelleme": "2026-10-30",
       "olusturulma": "2013-05-24",
       "lisans": "MIT",
       "arsivlenmis": false,
       "aciklama": "The library for web and native user interfaces.",
       "ana_sayfa": "https://react.dev",
-      "katkici": 2028
+      "katkici": 2028,
+      "izleyici": 6609,
+      "commit_90g": 137,
+      "son_surum": "2026-10-14",
+      "yildiz_hizi": 1559.6,
+      "guven": {
+        "puan": 90,
+        "ayrinti": [
+          "yildiz 251801 (%99) → 24.6/25",
+          "yildiz_hizi 1559.6 (%61) → 9.1/15",
+          "katkici 2028 (%99) → 14.8/15",
+          "commit_90g 137 (%73) → 11.0/15",
+          "fork 51606 (%100) → 10.0/10",
+          "izleyici 6609 (%100) → 5.0/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 3,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "seek-oss/capsize": {
       "sahip": "seek-oss",
@@ -1359,7 +3171,30 @@
       "arsivlenmis": false,
       "aciklama": "Flipping how we define typography in CSS.",
       "ana_sayfa": "https://seek-oss.github.io/capsize/",
-      "katkici": 23
+      "katkici": 23,
+      "izleyici": 9,
+      "commit_90g": 5,
+      "son_surum": "2026-10-15",
+      "yildiz_hizi": 22.5,
+      "guven": {
+        "puan": 46,
+        "ayrinti": [
+          "yildiz 1735 (%41) → 10.2/25",
+          "yildiz_hizi 22.5 (%23) → 3.4/15",
+          "katkici 23 (%62) → 9.3/15",
+          "commit_90g 5 (%34) → 5.1/15",
+          "fork 48 (%31) → 3.1/10",
+          "izleyici 9 (%38) → 1.9/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 3/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 17,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     },
     "tailwindlabs/tailwindcss": {
       "sahip": "tailwindlabs",
@@ -1367,22 +3202,45 @@
       "sahip_url": "https://github.com/tailwindlabs",
       "resmi_kaynak": true,
       "yildiz": 98031,
-      "fork": 7699,
-      "acik_issue": 112,
+      "fork": 7700,
+      "acik_issue": 113,
       "son_guncelleme": "2026-10-19",
       "olusturulma": "2017-10-06",
       "lisans": "MIT",
       "arsivlenmis": false,
       "aciklama": "A utility-first CSS framework for rapid UI development.",
       "ana_sayfa": "https://tailwindcss.com/",
-      "katkici": 385
+      "katkici": 385,
+      "izleyici": 728,
+      "commit_90g": 56,
+      "son_surum": "2026-07-16",
+      "yildiz_hizi": 899.8,
+      "guven": {
+        "puan": 79,
+        "ayrinti": [
+          "yildiz 98031 (%80) → 20.1/25",
+          "yildiz_hizi 899.8 (%55) → 8.2/15",
+          "katkici 385 (%93) → 13.9/15",
+          "commit_90g 56 (%65) → 9.7/15",
+          "fork 7700 (%79) → 7.9/10",
+          "izleyici 728 (%92) → 4.6/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 2,
+        "referans_toplam": 27,
+        "derece": "B"
+      }
     },
     "teng-lin/notebooklm-py": {
       "sahip": "teng-lin",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/teng-lin",
       "resmi_kaynak": false,
-      "yildiz": 20013,
+      "yildiz": 20014,
       "fork": 2667,
       "acik_issue": 19,
       "son_guncelleme": "2026-10-31",
@@ -1391,23 +3249,65 @@
       "arsivlenmis": false,
       "aciklama": "Unofficial Python API and agentic skill for Google Gemini Notebook. Full programmatic access to Gemini Notebook's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
       "ana_sayfa": "https://github.com/teng-lin/notebooklm-py",
-      "katkici": 42
+      "katkici": 42,
+      "izleyici": 89,
+      "commit_90g": 701,
+      "son_surum": "2026-10-29",
+      "yildiz_hizi": 2048.6,
+      "guven": {
+        "puan": 68,
+        "ayrinti": [
+          "yildiz 20014 (%61) → 15.1/25",
+          "yildiz_hizi 2048.6 (%63) → 9.5/15",
+          "katkici 42 (%75) → 11.2/15",
+          "commit_90g 701 (%86) → 12.9/15",
+          "fork 2667 (%63) → 6.3/10",
+          "izleyici 89 (%58) → 2.9/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 25,
+        "toplam": 71,
+        "derece": "B"
+      }
     },
     "tt-a1i/archify": {
       "sahip": "tt-a1i",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/tt-a1i",
       "resmi_kaynak": false,
-      "yildiz": 91869,
-      "fork": 6263,
-      "acik_issue": 268,
+      "yildiz": 91880,
+      "fork": 6265,
+      "acik_issue": 269,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2026-04-15",
       "lisans": "Apache-2.0",
       "arsivlenmis": false,
       "aciklama": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
       "ana_sayfa": "https://archify.si",
-      "katkici": 92
+      "katkici": 92,
+      "izleyici": 229,
+      "commit_90g": 1635,
+      "son_surum": "2026-10-19",
+      "yildiz_hizi": 14035.9,
+      "guven": {
+        "puan": 82,
+        "ayrinti": [
+          "yildiz 91880 (%79) → 19.7/25",
+          "yildiz_hizi 14035.9 (%93) → 13.9/15",
+          "katkici 92 (%85) → 12.7/15",
+          "commit_90g 1635 (%97) → 14.6/15",
+          "fork 6265 (%75) → 7.5/10",
+          "izleyici 229 (%75) → 3.7/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 11,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "vagabond911/aso-auditor": {
       "sahip": "vagabond911",
@@ -1423,7 +3323,28 @@
       "arsivlenmis": false,
       "aciklama": "ASO Auditor — scores iOS and Android app store listings across 7 pillars and   delivers an interactive HTML audit report with prioritized fixes.   ",
       "ana_sayfa": "",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 0,
+      "commit_90g": 1,
+      "son_surum": null,
+      "yildiz_hizi": 4.9,
+      "guven": {
+        "puan": 13,
+        "ayrinti": [
+          "yildiz 33 (%8) → 2.1/25",
+          "yildiz_hizi 4.9 (%10) → 1.5/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 1 (%27) → 4.0/15",
+          "fork 0 (%4) → 0.4/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 71,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "vercel-labs/agent-skills": {
       "sahip": "vercel-labs",
@@ -1439,7 +3360,28 @@
       "arsivlenmis": false,
       "aciklama": "Vercel's official collection of agent skills",
       "ana_sayfa": "https://skills.sh/vercel-labs/agent-skills",
-      "katkici": 28
+      "katkici": 28,
+      "izleyici": 125,
+      "commit_90g": 23,
+      "son_surum": "2026-10-27",
+      "yildiz_hizi": 3093.2,
+      "guven": {
+        "puan": 64,
+        "ayrinti": [
+          "yildiz 33272 (%66) → 16.5/25",
+          "yildiz_hizi 3093.2 (%66) → 9.9/15",
+          "katkici 28 (%65) → 9.7/15",
+          "commit_90g 23 (%55) → 8.2/15",
+          "fork 2913 (%65) → 6.5/10",
+          "izleyici 125 (%65) → 3.2/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 0/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 26,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "vercel/next.js": {
       "sahip": "vercel",
@@ -1448,14 +3390,35 @@
       "resmi_kaynak": true,
       "yildiz": 143230,
       "fork": 34171,
-      "acik_issue": 3778,
+      "acik_issue": 3779,
       "son_guncelleme": "2026-10-31",
       "olusturulma": "2016-10-05",
       "lisans": "MIT",
       "arsivlenmis": false,
       "aciklama": "The React Framework",
       "ana_sayfa": "https://nextjs.org",
-      "katkici": 4180
+      "katkici": 4180,
+      "izleyici": 1619,
+      "commit_90g": 1547,
+      "son_surum": "2026-10-30",
+      "yildiz_hizi": 1183.8,
+      "guven": {
+        "puan": 91,
+        "ayrinti": [
+          "yildiz 143230 (%92) → 22.9/25",
+          "yildiz_hizi 1183.8 (%58) → 8.7/15",
+          "katkici 4180 (%100) → 15.0/15",
+          "commit_90g 1547 (%96) → 14.4/15",
+          "fork 34171 (%99) → 9.9/10",
+          "izleyici 1619 (%99) → 4.9/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": 2,
+        "toplam": 71,
+        "derece": "A"
+      }
     },
     "vudovn/ag-kit": {
       "sahip": "vudovn",
@@ -1471,7 +3434,28 @@
       "arsivlenmis": false,
       "aciklama": "",
       "ana_sayfa": "https://ag-kit.unikorn.vn",
-      "katkici": 10
+      "katkici": 10,
+      "izleyici": 116,
+      "commit_90g": 8,
+      "son_surum": "2026-08-31",
+      "yildiz_hizi": 860.1,
+      "guven": {
+        "puan": 55,
+        "ayrinti": [
+          "yildiz 8205 (%54) → 13.4/25",
+          "yildiz_hizi 860.1 (%55) → 8.2/15",
+          "katkici 10 (%58) → 8.7/15",
+          "commit_90g 8 (%39) → 5.9/15",
+          "fork 1510 (%61) → 6.1/10",
+          "izleyici 116 (%62) → 3.1/5",
+          "son 180 günde sürüm 5/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 36,
+        "toplam": 71,
+        "derece": "C"
+      }
     },
     "xjli360/sealeap-amazon-skills": {
       "sahip": "xjli360",
@@ -1487,7 +3471,28 @@
       "arsivlenmis": false,
       "aciklama": "Reusable Agent Skills for Amazon product research, listings, advertising, inventory, and operations.",
       "ana_sayfa": "https://sealeap.cn/",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 6,
+      "commit_90g": 15,
+      "son_surum": null,
+      "yildiz_hizi": 145.6,
+      "guven": {
+        "puan": 34,
+        "ayrinti": [
+          "yildiz 340 (%28) → 7.0/25",
+          "yildiz_hizi 145.6 (%37) → 5.5/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 15 (%51) → 7.6/15",
+          "fork 48 (%31) → 3.1/10",
+          "izleyici 6 (%35) → 1.8/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 51,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "xjli360/sealeap-ecommerce-skills": {
       "sahip": "xjli360",
@@ -1503,7 +3508,28 @@
       "arsivlenmis": false,
       "aciklama": "195 MIT-licensed Agent Skills for Shopify, Etsy, eBay, TikTok Shop, Walmart, Mercado Libre, OZON and Wayfair. Includes MPstats-backed OZON workflows and Wayfair wholesale economics / multi-carton tools. SeaLeap · sealeap.cn",
       "ana_sayfa": "https://sealeap.cn",
-      "katkici": 1
+      "katkici": 1,
+      "izleyici": 0,
+      "commit_90g": 11,
+      "son_surum": null,
+      "yildiz_hizi": 93.7,
+      "guven": {
+        "puan": 29,
+        "ayrinti": [
+          "yildiz 114 (%21) → 5.3/25",
+          "yildiz_hizi 93.7 (%32) → 4.9/15",
+          "katkici 1 (%27) → 4.0/15",
+          "commit_90g 11 (%42) → 6.3/15",
+          "fork 25 (%27) → 2.7/10",
+          "izleyici 0 (%13) → 0.6/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 58,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "yaojingang/yao-meta-skill": {
       "sahip": "yaojingang",
@@ -1519,7 +3545,28 @@
       "arsivlenmis": false,
       "aciklama": "YAO = Yielding AI Outcomes. A rigorous engineering, evaluation, governance, and portability system for reusable agent skills.",
       "ana_sayfa": "https://github.com/yaojingang/yao-meta-skill#readme",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 10,
+      "commit_90g": 56,
+      "son_surum": null,
+      "yildiz_hizi": 386.1,
+      "guven": {
+        "puan": 46,
+        "ayrinti": [
+          "yildiz 2718 (%45) → 11.3/25",
+          "yildiz_hizi 386.1 (%49) → 7.4/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 56 (%65) → 9.7/15",
+          "fork 252 (%46) → 4.6/10",
+          "izleyici 10 (%39) → 2.0/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 40,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "ythx-101/live-panel-skill": {
       "sahip": "ythx-101",
@@ -1535,7 +3582,28 @@
       "arsivlenmis": false,
       "aciklama": "Config-driven animated architecture diagrams: turn one JSON file into a terminal-style, always-running diagram or a light-theme infographic that moves. Outputs H.264 mp4 or a live web page; also a Claude Code style skill (SKILL.md).",
       "ana_sayfa": "",
-      "katkici": 4
+      "katkici": 4,
+      "izleyici": 1,
+      "commit_90g": 40,
+      "son_surum": null,
+      "yildiz_hizi": 827.0,
+      "guven": {
+        "puan": 43,
+        "ayrinti": [
+          "yildiz 827 (%37) → 9.2/25",
+          "yildiz_hizi 827.0 (%54) → 8.0/15",
+          "katkici 4 (%46) → 7.0/15",
+          "commit_90g 40 (%61) → 9.1/15",
+          "fork 108 (%37) → 3.7/10",
+          "izleyici 1 (%24) → 1.2/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 42,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "zanwei/design-dna": {
       "sahip": "zanwei",
@@ -1551,14 +3619,35 @@
       "arsivlenmis": false,
       "aciklama": "Turn reference UIs (images, screenshots, URLs) into quantified Design DNA JSON—tokens, qualitative style, visual effects—then generate matching UI from your content.",
       "ana_sayfa": "",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 2,
+      "commit_90g": 4,
+      "son_surum": null,
+      "yildiz_hizi": 281.4,
+      "guven": {
+        "puan": 38,
+        "ayrinti": [
+          "yildiz 2055 (%42) → 10.6/25",
+          "yildiz_hizi 281.4 (%44) → 6.5/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 4 (%32) → 4.9/15",
+          "fork 114 (%38) → 3.8/10",
+          "izleyici 2 (%28) → 1.4/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": 47,
+        "toplam": 71,
+        "derece": "D"
+      }
     },
     "zhuyansen/awesome-claude-video-skills": {
       "sahip": "zhuyansen",
       "sahip_tipi": "kisi",
       "sahip_url": "https://github.com/zhuyansen",
       "resmi_kaynak": false,
-      "yildiz": 1316,
+      "yildiz": 1317,
       "fork": 128,
       "acik_issue": 6,
       "son_guncelleme": "2026-10-30",
@@ -1567,7 +3656,30 @@
       "arsivlenmis": false,
       "aciklama": "Open-source skills and toolkits that let Claude Code, Codex and other coding agents make video. 180 repos by type, each security-graded. English / 中文.",
       "ana_sayfa": "https://agentskillshub.top/best/claude-video-skills/",
-      "katkici": 3
+      "katkici": 3,
+      "izleyici": 9,
+      "commit_90g": 46,
+      "son_surum": null,
+      "yildiz_hizi": 1177.6,
+      "guven": {
+        "puan": 39,
+        "ayrinti": [
+          "yildiz 1317 (%41) → 10.2/25",
+          "yildiz_hizi 1177.6 (%55) → 8.2/15",
+          "katkici 3 (%39) → 5.9/15",
+          "commit_90g 46 (%62) → 9.3/15",
+          "fork 128 (%38) → 3.8/10",
+          "izleyici 9 (%38) → 1.9/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 0/5",
+          "resmî/kurum 0/5"
+        ],
+        "sira": null,
+        "toplam": 71,
+        "referans_sira": 19,
+        "referans_toplam": 27,
+        "derece": "D"
+      }
     }
   }
 }

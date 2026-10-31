@@ -156,13 +156,13 @@
 - **Ne işe yarar:** Tanınmış ürün sitelerinin (geliştirici odaklı markalar) tasarım dilini çözümleyen 80+ `DESIGN.md` dosyası. DESIGN.md, Google Stitch'in getirdiği düz metin tasarım sistemi belgesidir: renk token'ları, tipografi, boşluk, bileşen kuralları.
 - **Nasıl çalışır:** Bir markanın `DESIGN.md`'sini proje köküne koyarsın; agent (Claude/Codex) UI üretirken bu dosyayı okuyup aynı tasarım diline uyar. Kurulum, araç ya da şema yok; sadece markdown.
 - **Seç:** Hızlı prototip için "şu siteye benzesin" yönü, tasarım tutarlılığı. **Seçme:** Müşterinin kendi marka kimliği varken (o zaman kendi DESIGN.md'sini `design-dna` / `design-system` ile çıkar). Markaların görünümünü birebir kopyalamak ticari projede marka/telif riski taşır; ilham ve yapı için kullan.
-- **Skill:** `design-dna` (referanstan token çıkarma), `design-system`, `taste-skill` · **Rol:** ui-tasarimci
+- **Skill:** `design-dna` (referanstan token çıkarma), `design-system`, `design-taste-frontend` (taste-skill) · **Rol:** ui-tasarimci
 
 ### 350 Layout Compositions — `nevertoday/350-layout-compositions` · lisans belirtilmemiş · 2026-08
 - **Ne işe yarar:** 350 yerleşim/kompozisyon referans görseli; 8 ana bölüm: kompozisyon mantığı, görsel ilkeler, yayın/reklam, tipografi-grid, web UI, film karesi, Çin geleneksel kompozisyonu, sunum. Açıklamalar Çince.
 - **Nasıl çalışır:** Görsel katalog (repo ~700 MB, indirilmez). İhtiyaç olan kompozisyonun (ör. üçte bir kuralı, negatif alan, Z-düzeni) görselini açıp agent'a "bu kompozisyonla" diye referans verirsin.
 - **Seç:** Landing page hero, sunum slaytı, poster, video karesi yerleşimi ararken. **Seçme:** Kod/bileşen gerektiğinde (skill değil). Lisans belirtilmediği için görselleri ürüne koyma; sadece referans.
-- **Skill:** `taste-skill`, `canvas-design`, `slides` · **Rol:** ui-tasarimci, sunum
+- **Skill:** `design-taste-frontend` (taste-skill), `canvas-design`, `slides` · **Rol:** ui-tasarimci, sunum
 
 ---
 

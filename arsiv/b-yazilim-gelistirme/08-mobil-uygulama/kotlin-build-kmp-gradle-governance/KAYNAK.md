@@ -7,6 +7,6 @@
 - **Commit:** `939786cb13b49daacea7d5fb0a10877b6005e6be`
 - **Lisans:** NOASSERTION
 - **Geliştirici:** mmiani (kisi)
-- **Değerlendirme:** 62/100 (C)
+- **Değerlendirme:** 57/100 (C)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih
