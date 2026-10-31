@@ -7,6 +7,5 @@
 - **Commit:** `7fcb6ddfbdf51e266f2d90488272929835f402da`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** itsncki-design (kisi)
-- **Değerlendirme:** 43/100 (D)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

@@ -7,6 +7,5 @@
 - **Commit:** `0f3b13fa0e5ed0a9f3d600dc18518bc76ddd813b`
 - **Lisans:** MIT
 - **Geliştirici:** nexscope-ai (kurum)
-- **Değerlendirme:** 79/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

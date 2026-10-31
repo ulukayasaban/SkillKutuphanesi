@@ -7,6 +7,5 @@
 - **Commit:** `30f908d3878ac8f2fe2c62c86b724be161d75a55`
 - **Lisans:** MIT
 - **Geliştirici:** evanca (kisi)
-- **Değerlendirme:** 78/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

@@ -278,13 +278,35 @@ def main():
          yer.ucret_belirle(s1, {}, yeni_arsiv)[0] == "belirsiz")
     test("'replicate' fiili / 'prepaid' muhasebe terimi ücretli iz sayılmaz", yer.ucret_belirle(s2, {}, yeni_arsiv)[0] == "ucretsiz")
 
+    # Kimlik/tercih ataması KARARLI olmalı (yeni kaynak eşit öncelikte eskinin yerini alamaz; elle tercih ezilmez; tek tercih)
+    def kayit(repo, kh, oncelik=3, yol="skills/x"):
+        return {"ad": "x", "repo": repo, "kaynak_yol": yol, "_kh": kh, "oncelik": oncelik}
+    eski = {("zzz/eski", "skills/x"): {"durum": "tercih", "id": "x"}}
+    yeni = yer.kimlik_ata({"x": [kayit("aaa/yeni", "H2"), kayit("zzz/eski", "H1")]}, eski)
+    d = {k["repo"]: k for k in yeni}
+    test("kimlik: eşit öncelikte alfabetik önce gelen YENİ kaynak eski kaydın tercihini/kimliğini almaz",
+         d["zzz/eski"]["durum"] == "tercih" and d["zzz/eski"]["id"] == "x" and d["aaa/yeni"]["durum"] == "alternatif", str(yeni))
+    yeni = yer.kimlik_ata({"x": [kayit("aaa/yeni", "H1"), kayit("zzz/eski", "H1")]}, eski)
+    test("kimlik: birebir aynı içerikte ESKİ (incelenmiş) kayıt temsilci kalır, yeni kopya olarak notlanır",
+         len(yeni) == 1 and yeni[0]["repo"] == "zzz/eski" and any("aaa/yeni" in c for c in yeni[0].get("kopya_kaynaklar", [])), str(yeni))
+    eski2 = {("zzz/eski", "skills/x"): {"durum": "tercih", "durum_elle": True, "id": "x"}}
+    yeni = yer.kimlik_ata({"x": [kayit("aaa/oto", "H3", oncelik=1), kayit("zzz/eski", "H1", oncelik=5)]}, eski2)
+    test("kimlik: elle verilen tercih (durum_elle) otomatik tercihi ezer ve aynı adda TEK tercih kalır",
+         sorted(k["durum"] for k in yeni) == ["alternatif", "tercih"]
+         and next(k for k in yeni if k["durum"] == "tercih")["repo"] == "zzz/eski", str(yeni))
+
     # Trend: seviye hesabı, değerlendirme bonusu ve öneride sadece konuya uygun skille bonus
     from ortak import trend_durumu
-    tr = {"son_tarama": "2026-10-22", "gecmis": {"a/b": {"ilk": "2026-10-01", "son": "2026-10-22", "gorulme": 3},
-                                                 "c/d": {"ilk": "2026-06-01", "son": "2026-08-01", "gorulme": 1},
-                                                 "e/f": {"ilk": "2025-01-01", "son": "2025-02-01", "gorulme": 1}}}
+    from datetime import date as _d, timedelta as _td
+    gun = lambda n: (_d.today() - _td(days=n)).isoformat()  # noqa: E731  (testler tarihten bağımsız: hep bugüne göre)
+    tr = {"son_tarama": gun(3), "gecmis": {"a/b": {"ilk": gun(30), "son": gun(3), "gorulme": 3},
+                                           "c/d": {"ilk": gun(200), "son": gun(60), "gorulme": 1},
+                                           "e/f": {"ilk": gun(900), "son": gun(500), "gorulme": 1}}}
     test("trend seviyeleri: trendde / yakinda / gecmiste / yok",
          [(trend_durumu(r, tr) or {}).get("seviye") for r in ("a/b", "c/d", "e/f", "x/y")] == ["trendde", "yakinda", "gecmiste", None])
+    tr_eski = {"son_tarama": gun(60), "gecmis": {"a/b": {"ilk": gun(90), "son": gun(60), "gorulme": 3}}}
+    test("trend bonusu söner: tarama durursa (60 gün önce) 'trendde' olmaz, 'yakinda'ya düşer",
+         trend_durumu("a/b", tr_eski)["seviye"] == "yakinda")
     spec = importlib.util.spec_from_file_location("skillekle", KOK / "araclar" / "skill-ekle.py")
     ekle = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(ekle)

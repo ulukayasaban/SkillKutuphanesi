@@ -23,6 +23,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import KAYNAKLAR, KOK, TREND, json_oku, json_yaz, trend_durumu  # noqa: E402
 
+BILGI_YASI_GUN = 90   # aday repo bilgisi bu kadar günde bir tazelenir
+BILGI_SINIRI = 400    # bir turda en çok bu kadar repo bilgisi çekilir
 DURUM = KOK / "konu-takip.json"
 RAPOR = KOK / "notlar" / "konu-takip.md"
 
@@ -71,12 +73,23 @@ def tara(durum, ayar, secili):
         hedef["basarisiz_sorgu"] = basarisiz
         # Sadece aday olabileceklerin bilgisini çek (kütüphanede/değerlendirilmiş olanlar hariç)
         bilinen = bilinenler(durum)
+        # API bütçesi: aday bilgisi en çok 90 günde bir tazelenir ve bir turda en çok BILGI_SINIRI çağrı yapılır
+        # (aday havuzu sürekli büyür; sınırsız çağrı aylık güncellemeyi hız sınırına çarptırırdı)
+        cagri = 0
         for repo, r in hedef["repolar"].items():
-            if repo not in bilinen and r.get("bilgi_tarihi") != bugun:
-                bilgi = repo_bilgisi(repo)
-                if bilgi:
-                    r.update(bilgi)
-                    r["bilgi_tarihi"] = bugun
+            if repo in bilinen:
+                continue
+            taze = r.get("bilgi_tarihi") and r.get("yildiz") is not None and \
+                (date.fromisoformat(bugun) - date.fromisoformat(r["bilgi_tarihi"])).days < BILGI_YASI_GUN
+            if taze:
+                continue
+            if cagri >= BILGI_SINIRI:
+                break
+            cagri += 1
+            bilgi = repo_bilgisi(repo)
+            if bilgi:
+                r.update(bilgi)
+                r["bilgi_tarihi"] = bugun
 
 
 def bilinenler(durum):
@@ -136,6 +149,14 @@ def main():
     elif "--rapor" not in sys.argv:
         secili = sys.argv[sys.argv.index("--konu") + 1] if "--konu" in sys.argv else None
         tara(durum, ayar, secili)
+        topl = sum(len(k["sorgular"]) for k in ayar["takip_konulari"] if not secili or k["konu"] == secili)
+        bas = sum(durum.get("konular", {}).get(k["konu"], {}).get("basarisiz_sorgu", 0) for k in ayar["takip_konulari"]
+                  if not secili or k["konu"] == secili)
+        if topl and bas * 2 > topl:  # sorguların yarıdan fazlası başarısız: çağıran (aylık güncelleme) uyarı versin
+            json_yaz(DURUM, durum)
+            rapor(durum, ayar)
+            print(f"UYARI: {bas}/{topl} sorgu başarısız (GitHub kod araması yavaş/hız sınırı); sonuçlar eksik olabilir.")
+            sys.exit(1)
     json_yaz(DURUM, durum)
     rapor(durum, ayar)
     for k in ayar["takip_konulari"]:

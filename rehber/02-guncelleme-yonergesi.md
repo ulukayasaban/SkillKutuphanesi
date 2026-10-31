@@ -10,6 +10,8 @@ GitHub repoları ──(1) arsiv-guncelle.py──► SkillKutuphanesi ──(2)
 
 ## 1) Kütüphaneyi güncelleme — aylık, git dalıyla (önerilen)
 
+> **Güncelleme sürerken:** kütüphane geçici olarak `guncelleme/*` dalındadır ve `.guncelleme-kilidi` vardır; `skill-ekle.py` kurulum/güncellemeyi "BEKLE" diyerek durdurur (15–40 dk). Başlamadan GitHub API hakkı (≥1500) denetlenir. Ölü ya da 6 saatten eski kilit yok sayılır.
+
 Güncelleme **ayda bir** yapılır ve **git ile takip edilir**: her güncelleme kendi dalında (`guncelleme/YYYY-AA`) hazırlanır,
 `master` sen onaylayana kadar değişmez.
 

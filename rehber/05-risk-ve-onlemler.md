@@ -105,6 +105,15 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 79 | Emekli eski sürümler sonraki güncellemede geri gelir | `kaynaklar.json` → `arsivden_cikarilanlar`: yeniden indirilmez (`haric:arsivden-cikarildi`), korunmaz; geri almak için kaydı sil |
 | 80 | Bir alanda (ör. e-ticaret/Etsy) yeni çıkan skill repoları gözden kaçar; ya da aynı reddedilen aday her ay tekrar önüne gelir | `konu-takip.py` (`takip_konulari`): GitHub kod aramasıyla düzenli tarama, ★ eşiği, `degerlendirilen` kararları (gerekçeli) tekrar gösterilmez; aylık görev çalıştırır |
 | 81 | Çok platformlu toplama repolarında yüzlerce benzer skill (ör. üç farklı kaynaktan Etsy SEO) öneriyi boğar | Roller platformdan bağımsız çekirdek + Etsy'ye özel skillerle kuruldu; diğerleri opsiyonel. Öneride kalite/puan ve rol ortaklığı belirleyici |
+| 82 | Yeni kaynak, eşit öncelikte alfabetik önce geldiği için eski kaydın tercihini/kimliğini alır; birebir aynı içerikte incelenmiş eski kayıt "kopya" olup elle inceleme notları kaybolur | `kimlik_ata()`: sıra (öncelik, eskiden kayıtlı, repo, yol); aynı içerikte eski kayıt temsilci kalır; testler `test.py` |
+| 83 | Elle verilen tercih (`durum_elle`) ile otomatik tercih aynı adda iki "tercih" üretir → doğrulama hata verir, her ay güncelleme geri alınır | `kimlik_ata()` içinde elle tercih ezer, aynı adda tek tercih kalır (test) |
+| 84 | Aylık güncelleme sırasında kütüphane onaylanmamış dalda; o sırada başka projede kurulum onaylanmamış içeriği taşır | `.guncelleme-kilidi` (git dışı); `skill-ekle.py` kurulum/güncellemeyi bekletir, `--durum/--dogrula/--oner` çalışır; ölü pid ya da 6 saatten eski kilit yok sayılır |
+| 85 | GitHub API hakkı yetmeyince güncelleme ortasında çöker | Başlamadan `gh api rate_limit` (≥1500); `gh_api` hız sınırında dakikalarca bekler; konu takibi aday bilgisini 90 günde bir tazeler ve turda en çok 400 çağrı yapar |
+| 86 | Geçici ağ hatası katkıcı/commit/sürüm değerini boşaltır, güven puanı sessizce düşer | `gh_dene` yeniden dener; başarısızsa önceki değer korunur |
+| 87 | Kısmi çalıştırmada `kopya_kaynaklar` her seferinde aynı kaydı yeniden ekler (listeler şişer) | Yazmadan önce sırayı koruyarak tekilleştirilir |
+| 88 | KAYNAK.md'de her ay değişen puan satırı ~3.900 dosyayı değiştirip onaylanacak güncelleme farkını boğar | Puan KAYNAK.md'den çıkarıldı (registry/KATALOG/rehberde) |
+| 89 | Kaynağı kaldırılmış skill projede "güncel" görünür; trend bonusu tarama durunca hiç sönmez | `--durum` "EMEKLİ" gösterir (kaynak-yok/emekli); trend bugünün tarihine göre söner (14 günden eski tarama "trendde" sayılmaz) |
+| 90 | Prompt 11'in andığı bayrak/ön kontrol kodu/rehber sütunu yeniden adlandırılınca prompt sessizce bozulur; roldeki skill başka kaynağa geçer | `dogrula.py`: prompttaki bayraklar ve kodlar `skill-ekle.py`'de aranır; `Kart` sütunu; rol kaynağı git HEAD ile karşılaştırılır |
 
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).

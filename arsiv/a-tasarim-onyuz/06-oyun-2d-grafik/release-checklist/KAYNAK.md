@@ -7,6 +7,5 @@
 - **Commit:** `05ad7c8a5b8aa2aa86bbd3439ae7cf7295cac418`
 - **Lisans:** MIT
 - **Geliştirici:** Donchitos (kisi)
-- **Değerlendirme:** 80/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

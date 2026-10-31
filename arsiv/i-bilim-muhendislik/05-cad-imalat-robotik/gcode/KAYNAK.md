@@ -7,6 +7,5 @@
 - **Commit:** `2f793659fb7bab537e2f00836e06448fc4087cb2`
 - **Lisans:** MIT
 - **Geliştirici:** earthtojake (kisi)
-- **Değerlendirme:** 91/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

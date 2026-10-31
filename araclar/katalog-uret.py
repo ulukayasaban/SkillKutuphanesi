@@ -110,7 +110,7 @@ def guven_raporu(skiller):
          "| Durum | Karar |", "|---|---|",
          "| Skill puanı ≥ 65 **ve** kaynak güveni A/B | Doğrudan aday |",
          "| Skill puanı ≥ 65, kaynak güveni C | Aday; aynı işi yapan A/B kaynaklı skill varsa onu seç |",
-         "| Kaynak güveni D | Sadece benzersiz bir iş yapıyorsa, SKILL.md'yi okuduktan sonra, kullanıcıya \"düşük güven\" diye işaretleyerek |",
+         "| Kaynak güveni D | Derece GÖRELİDİR: D = topluluk etkileşimi az (yeni/küçük repo), kalitesiz demek değil. Skill puanı ≥ 80 ise SKILL.md'yi okuyup \"düşük topluluk güveni\" diye işaretleyerek aday; < 80 ise sadece benzersiz bir iş yapıyorsa |",
          "| Skill puanı < 50 ya da `kalite 1` (yönlendirme) | Alma |",
          "| Aynı işi yapan iki aday | Önce skill puanı, eşitse kaynak güveni (sıra) yüksek olan; 🔥 trend eşitlikte öne geçirir |",
          "| Projede bir referans kütüphanesi kullanılıyor (bölüm 3) | O kütüphanenin \"ilgili skiller\"i öncelikli aday; skill'in anlattığı sürüm projedekine uymalı |",

@@ -17,6 +17,8 @@ Güvenceler:
 Projeler otomatik güncellenmez; her proje için ayrıca:  skill-ekle.py <proje> --durum / --guncelle
 """
 import shutil
+import json
+import os
 import subprocess
 import sys
 from datetime import date, datetime
@@ -42,8 +44,11 @@ def rapor():
     """Kaynakları kontrol eder. (degisen, sorunlu, ayrinti) döndürür."""
     skiller = json_oku(REGISTRY, {"skiller": []})["skiller"]
     mevcut = {}
+    for s in skiller:  # kaynakta kaldırılmış kayıt eski commit'te kalır; her ay sahte "değişti" sinyali vermesin
+        if not s.get("kaynak_durumu"):
+            mevcut.setdefault(s["repo"], s["commit"])
     for s in skiller:
-        mevcut.setdefault(s["repo"], s["commit"])
+        mevcut.setdefault(s["repo"], s["commit"])  # repodaki tüm kayıtlar kaldırılmışsa eski commit'e düş
     degisen, sorunlu, ayrinti = [], [], {}
     for repo in sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}):
         try:
@@ -106,12 +111,44 @@ def gecmis_yaz(dal, ayrinti, onceki):
     return icerik, eskiyen
 
 
+KILIT = KOK / ".guncelleme-kilidi"  # .gitignore'da; skill-ekle.py bu dosyayı görünce kurulum/güncellemeyi bekletir
+
+
+def api_hakki_kontrol(gerekli=1500):
+    """Güncellemeden önce GitHub API hakkı yeterli mi? Yetmezse HİÇBİR ŞEY başlamaz (yarım ay-ortası çökme olmasın)."""
+    r = subprocess.run(["gh", "api", "rate_limit", "--jq", ".resources.core.remaining"], capture_output=True, text=True)
+    if r.returncode != 0 or not r.stdout.strip().isdigit():
+        sys.exit("DURDU: GitHub API'ye ulaşılamıyor ya da oturum yok (`gh auth status`). Hiçbir şey değişmedi.")
+    kalan = int(r.stdout.strip())
+    if kalan < gerekli:
+        sys.exit(f"DURDU: GitHub API hakkı yetersiz (kalan {kalan}, gereken ~{gerekli}). Saat başı yenilenir; sonra tekrar çalıştır. "
+                 "Hiçbir şey değişmedi.")
+    print(f"GitHub API hakkı: {kalan}")
+
+
 def uygula(degisen, ayrinti, dal_modu):
     if git("status", "--porcelain").stdout.strip():
         sys.exit("DURDU: kütüphanede kaydedilmemiş değişiklik var. Önce `git -C ~/Documents/SkillKutuphanesi status` "
                  "ile bak, kaydet (git commit) ya da geri al; sonra tekrar çalıştır.")
+    api_hakki_kontrol()
     onceki = json_oku(REGISTRY)["skiller"]
     dal = git("branch", "--show-current").stdout.strip()
+    if KILIT.exists():
+        try:
+            k = json.loads(KILIT.read_text())
+            canli = Path(f"/proc/{k['pid']}").exists() or subprocess.run(["kill", "-0", str(k["pid"])], capture_output=True).returncode == 0
+        except Exception:  # noqa: BLE001
+            canli = False
+        if canli:
+            sys.exit(f"DURDU: başka bir güncelleme sürüyor (pid {k['pid']}, {k.get('baslangic')}).")
+    KILIT.write_text(json.dumps({"pid": os.getpid(), "baslangic": datetime.now().isoformat(timespec="seconds")}))
+    try:
+        return _uygula(degisen, ayrinti, dal_modu, onceki, dal)
+    finally:
+        KILIT.unlink(missing_ok=True)
+
+
+def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
     if dal_modu:
         if dal != ANA_DAL:
             sys.exit(f"DURDU: --dal modu '{ANA_DAL}' dalından başlatılmalı (şu an '{dal}').")
@@ -203,8 +240,9 @@ def main():
     if "--uygula" not in sys.argv or not degisen:
         return 1 if sorunlu else 0
     if sorunlu:
-        sys.exit(f"DURDU: erişilemeyen kaynaklar var ({', '.join(sorunlu)}). kaynaklar.json'da bu kayıtları kaldır "
-                 "ya da 'tip': 'KAYIP' yap; arşivdeki kopyaları korunur.")
+        sys.exit(f"DURDU: erişilemeyen kaynaklar var ({', '.join(sorunlu)}). kaynaklar.json'da bu kayıtların 'tip' alanını "
+                 "'KAYIP' yap (arşivdeki kopyaları korunur). Kaydı SİLME: güvenlik kilidi skillleri kayıp sayıp güncellemeyi durdurur; "
+                 "bilerek çıkarmak istiyorsan skilleri kaynaklar.json -> arsivden_cikarilanlar'a da yaz.")
     if bekleyen and "--dal" in sys.argv:
         sys.exit(f"DURDU: önce bekleyen güncelleme dalını birleştir ya da sil: {', '.join(bekleyen)}")
     return uygula(degisen, ayrinti, "--dal" in sys.argv)

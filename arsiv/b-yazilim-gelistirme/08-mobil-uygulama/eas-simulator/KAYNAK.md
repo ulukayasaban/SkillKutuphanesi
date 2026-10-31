@@ -7,6 +7,5 @@
 - **Commit:** `0d035556e37737de83199d8e623641bad7a7cced`
 - **Lisans:** MIT
 - **Geliştirici:** expo (kurum)
-- **Değerlendirme:** 81/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

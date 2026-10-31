@@ -8,6 +8,7 @@
 - Bir rol aynı örtüşme grubundan en fazla 1 birincil + 1 tamamlayıcı alıyor mu
 - Kaynaklar.json yıldızlı repoların hepsini kapsıyor mu (--github ile)
 """
+import json
 import subprocess
 import sys
 from collections import Counter
@@ -123,6 +124,39 @@ def main():
         eksik_r = [r for r in eksik_r if f"| {r} |" not in t]
         if eksik_r or gel.get("guncelleme", "") not in t:
             uyarilar.append(f"prompt uyumu: guven-siralamasi.md eski ({', '.join(eksik_r[:4]) or 'tarih'}) -> katalog-uret.py")
+    # Prompt 11'in andığı komut bayrakları ve ön kontrol kodları skill-ekle.py'de gerçekten var mı? (yeniden adlandırma promptu sessizce bozmasın)
+    if p11.exists():
+        ptxt = p11.read_text(encoding="utf-8")
+        ekle_kaynak = (KOK / "araclar" / "skill-ekle.py").read_text(encoding="utf-8")
+        for bayrak in sorted(set(_re.findall(r"(?<![\w-])(--[a-z]+(?:-[a-z]+)*)", ptxt))):
+            if bayrak not in ekle_kaynak and bayrak not in ("--porcelain", "--skip-git-repo-check"):
+                hatalar.append(f"prompt 11 olmayan bayrağı anıyor: {bayrak} (skill-ekle.py)")
+        kodlar04 = set(_re.findall(r"^\| `([a-z]+(?:-[a-z]+)+)` \|", (KOK / "rehber" / "04-kontrol-listesi.md").read_text(encoding="utf-8"), _re.M))
+        for kod in sorted(set(_re.findall(r"`([a-z]+(?:-[a-z]+)+)`", ptxt)) & kodlar04):
+            if kod not in ekle_kaynak:
+                hatalar.append(f"prompt 11 olmayan ön kontrol kodunu anıyor: {kod} (skill-ekle.py)")
+        for jeton in ("kaynak-yok", "emekli"):  # prompt 11 ADIM 10: --durum çıktısında geçmesi beklenen sözcükler
+            if jeton in ptxt and jeton not in ekle_kaynak:
+                hatalar.append(f"prompt 11 --durum çıktısında '{jeton}' bekliyor ama skill-ekle.py üretmiyor")
+    rehber2 = KOK / "notlar" / "guven-siralamasi.md"
+    if rehber2.exists() and "| Kart |" not in rehber2.read_text(encoding="utf-8"):
+        hatalar.append("prompt uyumu: guven-siralamasi.md bölüm 3'te 'Kart' sütunu yok (prompt 11 ADIM 3 buna dayanır)")
+    # Roldeki bir skill son kayıttan beri başka bir KAYNAĞA geçtiyse (öncelik/yeni kaynak yüzünden) fark edilsin
+    git_eski = subprocess.run(["git", "show", "HEAD:registry.json"], cwd=KOK, capture_output=True, text=True)
+    if git_eski.returncode == 0:
+        try:
+            eski_reg = {x["id"]: x["repo"] for x in json.loads(git_eski.stdout)["skiller"]}
+            eski_tercih = {x["ad"]: x["repo"] for x in json.loads(git_eski.stdout)["skiller"] if x["durum"] == "tercih"}
+            for f in sorted((KOK / "roller").glob("*.json")):
+                r = json_oku(f)
+                for x in r["cekirdek"] + r.get("opsiyonel", []):
+                    simdi = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
+                    once = eski_reg.get(x) or eski_tercih.get(x)
+                    if simdi and once and simdi["repo"] != once:
+                        uyarilar.append(f"rol {f.stem}: '{x}' kaynağı değişti ({once} -> {simdi['repo']}); rolün istediği sürüm bu mu? "
+                                        "(sabitlemek için registry.json'da durum_elle)")
+        except (ValueError, KeyError):
+            pass
     kartlar = (KOK / "notlar" / "referans" / "tasarim-teknolojileri.md").read_text(encoding="utf-8") + \
         (KOK / "notlar" / "referans" / "kutuphaneler.md").read_text(encoding="utf-8")
     kartsiz = [k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T5", "T6")

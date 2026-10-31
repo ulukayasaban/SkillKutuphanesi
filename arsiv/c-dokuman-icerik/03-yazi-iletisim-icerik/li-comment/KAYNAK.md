@@ -7,6 +7,5 @@
 - **Commit:** `add2c23882fe79180737d242ff80a5da205eda6a`
 - **Lisans:** MIT
 - **Geliştirici:** Jakeschincariol (kisi)
-- **Değerlendirme:** 82/100 (A)
 - **Arşive alınma:** 2026-10-31
 - **Durum:** tercih

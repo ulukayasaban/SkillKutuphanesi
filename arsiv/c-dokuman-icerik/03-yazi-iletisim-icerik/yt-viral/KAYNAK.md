@@ -7,7 +7,6 @@
 - **Commit:** `a2feb2104981a375ffd4f87ee04f4f5344ac43c6`
 - **Lisans:** MIT
 - **Geliştirici:** Jakeschincariol (kisi)
-- **Değerlendirme:** 79/100 (B)
 - **Arşive alınma:** 2026-10-31
 - **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `yt-script`

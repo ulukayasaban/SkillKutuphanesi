@@ -35,6 +35,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -971,7 +972,11 @@ def durum(proje, skiller):
     for ad, k in sorted(kilit["skiller"].items()):
         s = kaynak_bul(skiller, k)
         if not s:
-            isaret = "KAYNAK KÜTÜPHANEDE YOK"
+            isaret = "KAYNAK KÜTÜPHANEDE YOK (kaynak-yok: yerine geçeni KATALOG.md / guven-siralamasi.md'den bul)"
+        elif s.get("kaynak_durumu") in ("kaynakta-kaldirildi", "kayip"):
+            # Kaynak GitHub'da kaldırıldı/kayboldu: arşiv kopyası duruyor ama artık güncellenmeyecek (güncel gibi görünmesin)
+            isaret = "EMEKLİ: KAYNAKTA KALDIRILDI" if s["kaynak_durumu"] == "kaynakta-kaldirildi" else "EMEKLİ: KAYNAK KAYIP"
+            isaret += " (emekli: artık güncellenmez, yerine geçeni bul)"
         elif elle_degismis(proje, ad, k):
             isaret = "ELLE DEĞİŞTİRİLMİŞ"
         elif s["klasor_hash"] != k["klasor_hash"]:
@@ -1056,6 +1061,20 @@ def listele(a, skiller):
     print(f"\n{n} skill")
 
 
+def guncelleme_suruyor():
+    """arsiv-guncelle.py çalışırken kütüphane onaylanmamış güncelleme dalındadır: kurulum/güncelleme o içeriği projeye taşımasın."""
+    kilit = KOK / ".guncelleme-kilidi"
+    if not kilit.exists():
+        return None
+    try:
+        b = json.loads(kilit.read_text())
+        canli = subprocess.run(["kill", "-0", str(b["pid"])], capture_output=True).returncode == 0
+        yas = (datetime.now() - datetime.fromisoformat(b["baslangic"])).total_seconds()
+    except Exception:  # noqa: BLE001
+        return None
+    return b if canli and yas < 6 * 3600 else None  # ölü süreç ya da 6 saatten eski kilit = bayat, yok say
+
+
 def main():
     ap = argparse.ArgumentParser(description="SkillKutuphanesi: projeye skill ekle (güvenli)")
     ap.add_argument("proje", nargs="?")
@@ -1099,6 +1118,10 @@ def main():
         sys.exit(f"Güvenlik: {proje} bir proje klasörü değil (global skill klasörü, kütüphane ya da ev dizini).")
     if not proje.is_dir():
         sys.exit(f"Klasör yok: {proje}")
+    gk = guncelleme_suruyor()
+    if gk and (a.profil or a.rol or a.skill or a.planlayici or a.guncelle or a.yenile):
+        sys.exit(f"BEKLE: kütüphane şu an aylık güncelleniyor ({gk['baslangic']}); onaylanmamış içerik projeye kurulmasın diye "
+                 "kurulum/güncelleme birkaç dakika bekletiliyor. Bitince tekrar dene (--durum/--dogrula/--oner çalışır).")
     if a.durum:
         return durum(proje, skiller)
     if a.dogrula:

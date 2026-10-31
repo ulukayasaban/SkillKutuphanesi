@@ -2009,7 +2009,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Reference-product ecommerce image workflow for generating a compact set of product-faithful main, feature, and lifestyle images from real product reference photos. V1 requires uploaded product imagery and intentionally defers brief-only concept generation and platform-specific batch exports.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105084, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 24 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -7509,7 +7509,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 广告归因与账单对账。用于General费用争议、Priority Direct/Halo和重复收入；交付订单级对账。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7519,7 +7519,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 推广广告与归因。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7529,7 +7529,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 品牌与 VeRO 证据初筛。用于疑似假货、图片抄用、商标问题和VeRO材料准备；交付权利与证据矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7539,7 +7539,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 类目与商品属性需求。用于工具类目建议、长尾词、兼容型号和搜索集合核验；交付查询与类目表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7549,7 +7549,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 合并运费与购物篮验收。用于追加件运费、跨刊登合并规则、付款前发票和付款后差额；不自动退款。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7559,7 +7559,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 成色分层与整备价值。用于二手、翻新、缺配件商品与维修采购判断；交付成色证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7569,7 +7569,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay General 费率与商品选择。用于General推广、按成交收费、费率上限与商品池；交付商品池。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7579,7 +7579,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 国际配送范围与政策变更。用于eIS参与、国家排除、账户/政策/刊登作用范围及批量变更验收；不替代一般运费定价。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7589,7 +7589,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 单件库存与多渠道同步。用于超卖、唯一二手品、SKU映射和跨渠道预留；交付库存身份表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7599,7 +7599,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 标题、属性与变体修正。用于刊登SEO、item specifics、分类和变体；交付刊登字段变更表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7609,7 +7609,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 实物照片与缺陷披露。用于二手照片、配件清单、尺寸和成色证据；交付拍摄清单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7619,7 +7619,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 费用、运费与价格底线。用于采购利润、拍卖起价、议价底线与广告费情景；交付订单利润表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7629,7 +7629,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 议价与促销贡献。用于Best Offer、优惠券、降价活动和组合折扣；交付促销/议价方案。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7639,7 +7639,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 竞品价格观察与响应。用于价格变化监控、跟价、成色分层与异常报价；交付价格变化表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7649,7 +7649,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay Priority CPC 与关键词。用于按点击广告、搜索词、匹配与出价边界；交付关键词诊断。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7659,7 +7659,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 成交数据选品。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7669,7 +7669,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 退货与描述不符诊断。用于退货上升、成色争议、配件缺失和逆向成本；交付退货根因表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7679,7 +7679,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 卖家绩效与缺陷复核。用于交易缺陷、延迟发货、未解决纠纷及申诉材料；交付绩效口径表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7689,7 +7689,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 配送模板与到货承诺。用于处理时间、运费、承运服务和国际运输比较；交付配送方案表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7699,7 +7699,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 已售样本与成交比价。用于成交价格、已售研究、售出率与样本清洗；交付同口径成交表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7709,7 +7709,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 商品队列与销售复盘。用于销量变化、成色组合、拍卖/定价绩效和库存周转；交付队列指标表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7719,7 +7719,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay 商品、履约与店铺运营。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7729,7 +7729,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** eBay Time Away 与休假履约准备。用于允许休假接单、暂停销售、拍卖例外、已有订单和自动回复安排；交付休假覆盖与恢复清单，不代替 Etsy 休店规则。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7739,7 +7739,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 站内与站外广告诊断。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7749,7 +7749,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 品牌表达与站外内容。用于店铺品牌一致性、社媒选题与商品页承接；交付品牌信息表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7759,7 +7759,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 材料库存与手作产能。用于手作排单、定制积压、物料采购和暂停接单条件；交付工序产能表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7769,7 +7769,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 竞品与可制作差异。用于竞争集合、设计差异、评论痛点与商品机会；交付竞品比较表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7779,7 +7779,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 定制订单与返工控制。用于个性化需求确认、报价、打样确认和变更管理；交付定制输入模板。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7789,7 +7789,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 数字商品与下载验收。用于模板、打印文件、数字定制和交付设置；交付数字交付清单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7799,7 +7799,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy站内广告商品测试。用于投放商品选择、逐Listing策略、预算资格及小样本止损；不设计手动逐关键词竞价。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7809,7 +7809,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 标题、标签与属性。用于Listing关键词布局、标签、分类和属性校正；交付字段改写表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7819,7 +7819,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 商品摄影与信息图 brief。用于主图、尺寸图、定制示例、实物/POD视觉规划；交付图片序列。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7829,7 +7829,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy搜索需求与关键词分层。用于Marketplace Insights取数、长尾词、礼赠需求与选品词库；搜索热度不代替真实订单。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7839,7 +7839,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy Offsite Ads 资格与费用。用于站外广告费、退出资格、费用情景与订单归因；交付资格判定。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7849,7 +7849,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 原创与 POD 上市检查。用于原创资格、生产伙伴、POD打样与可售判断；交付原创与许可清单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7859,7 +7859,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 工时定价与净贡献。用于原创商品、定制工时、免费运费和促销定价；交付成本与工时报价表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7869,7 +7869,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 商品描述与购买预期。用于用途卖点、定制说明、数字文件和交付限制文案；交付描述与FAQ草稿。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7879,7 +7879,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 原创选品与需求验证。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7889,7 +7889,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy储备金与可用现金诊断。用于新版Current、Pending、Ready for Deposit、储备释放及生产资金缺口；不把可用余额当银行到账。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7899,7 +7899,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 季节选品与交付倒排。用于节日礼品、季节新品、上架与生产排期；交付季节倒排表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7909,7 +7909,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 客服问题与评价改进。用于差评原因、客服流程、评价响应及返工预防；交付问题分类表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7919,7 +7919,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy Share & Save 资格与费用对账。用于外部引流链接、Share & Save 订单资格、Offsite Ads 重叠和费用返还差异；交付链接登记与订单账桥，不保证引流收益。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7929,7 +7929,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 运费、制作与交期承诺。用于包邮、运输模板、节日截止和跨境交付；交付地区运费/交期表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7939,7 +7939,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 流量、订单与经营复盘。用于店铺统计、商品表现、流量来源和转化异常；交付指标字典。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7949,7 +7949,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 搜索、商品与交付运营。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -7959,7 +7959,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Etsy 休店与恢复接单验收。用于主动休店、恢复接单、旧单责任与费用检查；不预测恢复排名或保证出单时间。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8829,7 +8829,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多广告归因与贡献对账。用于ROAS、ACOS、TACOS、直接/辅助成交及广告账单的核对；不把平台归因销售当已证明的增量。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8839,7 +8839,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多广告曝光损失诊断。用于曝光不足、预算损失、排名损失及点击/转化瓶颈的分支排查；不把所有低曝光都归因于预算不足。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8849,7 +8849,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多目录匹配与资料更正。用于关联目录前身份核对、错误目录绑定、共享字段更正和关联库存检查；不做目录套利或虚假改绑。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8859,7 +8859,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多类目需求与新品验证。用于筛候选品类、校验需求与新品机会；不把搜索结果数量、评论量或单条爆款内容当成销量。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8869,7 +8869,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多同款报价与目录竞争分析。用于比较竞品总价、交付条件与目录竞争位置；不执行自动跟价或为了赢价更换不匹配的目录。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8879,7 +8879,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多售前问答与事实回复。用于商品页Questions的分类、回复草稿与重复问题改进；不把公开问答、订单私信和投诉处理混为一项。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8889,7 +8889,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多订单履约与交接控制。用于直邮、本土配送或Full订单的待发、标签、交承运和延误诊断；不把本土物流入口外推到跨境店。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8899,7 +8899,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多 Full 入仓包装与计划预检。用于创建或复核Full入仓计划、可售单元包装、商品码、外箱和预约准备；不凭教程推断所有账户已开通Full。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8909,7 +8909,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多 Full 库存、仓龄与移出决策。用于Full补货、容量、不可售库存、仓龄费用和移出/弃置方案；不把固定库存天数套到所有商品。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8919,7 +8919,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多 Full 实收与可售对账。用于Full已发、已签收、实收和可售不一致的检查及支持材料准备；不把承运签收当成仓库完成收货。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8929,7 +8929,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多知识产权与刊登限制初筛。用于BPP通知、品牌/素材权利、错用目录和受限刊登的初步分析及回应材料；不代替正式法律意见。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8939,7 +8939,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多刊登事实与本地化文案。用于标题、属性、描述和当地语言表达的创建或修正；不把竞品内容直接搬入刊登。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8949,7 +8949,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多站点与经营模式评审。用于比较国家站、本土或跨境模式、直邮与Full的进入条件和投入；不代办主体注册或替用户填写身份资料。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8959,7 +8959,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多回款、费用与退货对账。用于订单收入、平台费用、退款、资金释放及银行到账差异；不自动转账或把可用余额直接算净利润。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8969,7 +8969,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多广告组与商品映射。用于Product Ads活动结构、Catalog/Family/Item广告组、变体成员和迁移评审；不照搬每个SKU独立活动的旧结构。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8979,7 +8979,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多 Product Ads 投放准备。用于Product Ads开通条件、广告主/站点、商品资格和投放前准备；不把Brand Ads、Display或旧Mercado Shops教程当同一产品。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8989,7 +8989,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多商品图片与 Clips 验收。用于商品图、信息表达、短视频Clips脚本与发布验收；不保证流量倍增或用AI素材伪造产品效果。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -8999,7 +8999,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多促销资格与净回款评审。用于日常折扣、平台共担、自动价格活动及B2B多件价迁移前核验；不默认所有跨境账号具有相同权限。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9009,7 +9009,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多信誉指标与异常处理。用于信誉颜色变化、取消/延迟/投诉率和保护期状态诊断；不承诺固定销量后变绿或通过操纵订单恢复。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9019,7 +9019,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多退货案件与证据处理。用于退货、投诉、仓库检验和卖家复核的状态诊断与材料准备；不诱导错误退货原因或保证申诉成功。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9029,7 +9029,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多目标 ROAS 与预算试验。用于目标ROAS、预算调整和扩量/保利润的受控试验；不把目标值视为实际收益或单日绝对限额。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9039,7 +9039,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多季节需求与备货倒排。用于墨西哥等站点的节庆、返校和季节需求规划；不把某年热点榜或北半球节奏直接复制到其他国家。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9049,7 +9049,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多供应报价与样品验证。用于候选商品的同规格询价、样品、包装和供货可行性检查；不自动采购或把供应商宣传当检验报告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9059,7 +9059,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多单位经济与现金测算。用于单品、首批备货或售价情景的贡献、广告承受力与现金测算；不预置国家税率或把平台净回款当净利润。
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 18 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9069,7 +9069,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 美客多变体与尺码表验收。用于颜色、尺码、容量等变体映射及尺码表验证；不为聚合评价而合并不同产品。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9079,7 +9079,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 为 OZON 广告选择有需求、供给和贡献基础的商品。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9089,7 +9089,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于利用 MPstats 为 OZON 现有店铺筛选相邻品类与扩展规格。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9099,7 +9099,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于用 MPstats 市场基线和 Ozon 明细核对广告收入、同模型订单及站内外重复归因。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9109,7 +9109,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于利用 MPstats 需求走势与商品贡献分配 OZON 广告预算。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9119,7 +9119,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于建立 OZON 竞品池，判断卖家集中程度和可突破的位置。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9129,7 +9129,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于依据 MPstats 需求和库存表现比较 OZON 可用履约模式。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9139,7 +9139,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于借 MPstats 市场走势辅助判断 OZON 推广是否带来新增贡献。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9149,7 +9149,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于用 MPstats 建立 OZON 俄语关键词库和商品信息对应关系。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9159,7 +9159,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 搜索意图改写 OZON 标题、描述和真实属性草稿。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9169,7 +9169,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于连接 MPstats、验收 OZON 导出、排查数据不一致或为经营分析准备可追溯数据。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 35 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9179,7 +9179,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于判断 OZON 细分是否给新商品机会并制定首批试销验证。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9189,7 +9189,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于筛选 OZON 类目、评估某个细分市场是否值得小额测试。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9199,7 +9199,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 竞争环境设计 OZON CPC 测试和亏损诊断。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9209,7 +9209,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 评估 OZON 按订单付费与 CPC 组合推广是否有净贡献。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9219,7 +9219,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于寻找 OZON 可进入价格带，避免拿不同规格商品直接比价。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9229,7 +9229,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于利用 MPstats 价格和库存变化评估 OZON 促销折扣及价格竞争。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9239,7 +9239,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 市场趋势与内部真实库存制定 OZON 补货或清仓方案。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9249,7 +9249,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 评论与内部订单状态诊断 OZON 退货、取消和产品问题。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9259,7 +9259,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 评论、评分和需求，形成 OZON 可验证产品改进方向。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9269,7 +9269,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于用 MPstats 判断 OZON 关键词排名消失、下滑和搜索流量异常。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9279,7 +9279,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于用 MPstats 验证 OZON 季节性，安排备货和上新时间。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9289,7 +9289,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于核对 MPstats 内部 OZON 报表与平台结算、折扣积分及广告收费。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9299,7 +9299,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于结合 MPstats 价格带与自家成本测算 OZON 单品贡献、保本价和广告上限。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9309,7 +9309,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于从 MPstats 可比商品和评论问题生成 OZON 主图、图文与富内容测试简报。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9319,7 +9319,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于用 MPstats 仓库与需求观察辅助 OZON 配仓方案。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9329,7 +9329,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 用于以 MPstats 市场基线和内部经营数据解释 OZON 周度变化。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9989,7 +9989,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 获客广告与实验。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -9999,7 +9999,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 验收Shopify Agentic Storefronts的渠道资格、Catalog商品映射、购买路径与B2B排除。用于商品在AI渠道不可见、价格库存错误、渠道可售检查或隐藏批发商品；不保证AI排名、曝光或成交。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10009,7 +10009,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 组合商品库存与履约验收。用于固定组合、多件装的组件库存、渠道兼容、拆单与退货；不做组合优惠创意。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10019,7 +10019,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 结账排错与弃单恢复。用于支付失败、运费阻力、弃单恢复与重复邮件排查；交付结账问题分层。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10029,7 +10029,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 竞品定位与差异化。用于同类独立站比较、价值主张与产品差异化；交付竞品对照表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10039,7 +10039,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 搜索内容与购买指南。用于博客选题、购买指南、内容集群及商品内链规划；交付意图到页面映射。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10049,7 +10049,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 转化漏斗与页面实验。用于有流量无成交、移动转化异常与落地页测试；交付漏斗口径表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10059,7 +10059,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 生命周期邮件与留存。用于欢迎、购后教育、补货提醒、召回与邮件分群；交付流程矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10069,7 +10069,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 履约与退货成本诊断。用于3PL服务、配送异常、退货原因与逆向物流；交付履约异常矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10079,7 +10079,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify Google 商品广告优化。用于Shopping/PMax分组、商品盈利与广告诊断；交付商品分组表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10089,7 +10089,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 增量与营销实验。用于归因冲突、渠道蚕食、预算增量与A/B试验；交付实验设计单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10099,7 +10099,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 多市场本地化验收。用于跨国站点、语言、币种、目录及交付一致性；交付市场差异表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10109,7 +10109,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 多仓库存与补货。用于缺货、积压、可售库存、跨仓调拨与补货量；交付SKU补货表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10119,7 +10119,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 边际收益与预算方案评审。用于已有营销模型的响应曲线、预算约束和可执行性复核；不替代模型训练或直接投放。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10129,7 +10129,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify Meta 素材假设与测试。用于Meta素材疲劳、受众与创意分离、广告brief；交付素材矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10139,7 +10139,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 营销组合建模数据准备。用于多渠道MMM建模前的数据适用性、口径和可识别性审计；不输出尚未拟合的渠道ROI。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10149,7 +10149,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 商品Feed映射与诊断。用于Merchant Center同步、变体身份、Content API退役及Merchant API迁移验收；区分自建和第三方连接器责任。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10159,7 +10159,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 商品页事实与文案。用于商品页标题、卖点、规格、FAQ与购买阻力改写；交付字段级文案草稿。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10169,7 +10169,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 选品与市场验证。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10179,7 +10179,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 复购、组合与优惠经济性。用于加购推荐、组合包、会员权益和复购试验；交付组合候选表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10189,7 +10189,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 店铺运营与转化。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 16 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10199,7 +10199,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 站内筛选与买家结果验收。用于 Search & Discovery 筛选不显示、重复属性、变体匹配、语言或币种下结果异常；交付数据映射和买家端验收，不修改主题代码。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10209,7 +10209,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 订阅上线与购买路径验收。用于订阅计划、一次性购买选项、顾客自助管理和上线前验收；不处理通用邮件营销。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10219,7 +10219,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 续费失败与合同状态诊断。用于续费失败、库存不足、重试耗尽、暂停/取消与重复通知；不代替支付争议处理。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10229,7 +10229,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 供应商与样品验证。用于代发、供应商比较、小批试产和履约模式选择；交付供应比较表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10239,7 +10239,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 技术 SEO 与页面性能。用于索引、规范网址、重复页、移动性能与主题应用影响；交付URL问题表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10249,7 +10249,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 主题许可与恢复准备。用于主题授权告警、跨店主题迁移、草稿副本与恢复验收；不编写主题代码或自动关闭商店。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10259,7 +10259,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Shopify 单位经济与获客上限。用于首单利润、CAC上限、LTV回收期及渠道费用核算；交付订单贡献桥接表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10779,7 +10779,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop GMV Max 广告诊断。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10789,7 +10789,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 联盟佣金设计。用于Open/Target协作、佣金梯度、激励和净贡献；交付佣金情景。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10799,7 +10799,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 全域指标与贡献对账。用于短视频/直播/达人/广告报表重叠和经营复盘；交付指标字典。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10809,7 +10809,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 商用音乐与跨平台素材验收。用于带货视频、品牌合作、广告音轨及跨平台再利用的许可核对；不提供侵权规避技巧。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10819,7 +10819,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 内容日历与素材资产。用于内容矩阵、生产排期、卖点复用和素材寿命；交付内容矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10829,7 +10829,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 商品与演示适配。用于短视频/达人/直播选品适配和可展示价值；交付演示适配矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10839,7 +10839,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 达人 brief 与素材许可。用于达人脚本要求、内容验收、广告许可和再利用范围；交付合作brief。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10849,7 +10849,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 达人筛选与匹配。用于达人候选、内容任务匹配、受众与历史表现核验；交付匿名候选矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10859,7 +10859,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 履约与客服时限。用于FBT、平台物流、自发货的SLA、有效追踪、VTR和物流SPS诊断；区分市场与订单模式。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10869,7 +10869,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop GMV Max 目标与预算实验。用于GMV Max低消耗、目标ROI、素材供给和有限放量；交付诊断表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10879,7 +10879,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 爆量与库存风险。用于达人发布峰值、断货、预售承诺和补货；交付SKU情景表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10889,7 +10889,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 商品卡、AI商品图片与本地表达验收。用于标题属性、图片实物一致性及欧盟制造商资料缺口；交付草稿和核验清单。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10899,7 +10899,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 直播排品与场次复盘。用于直播脚本、排品、演示、优惠和库存承接；交付场次runbook。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10909,7 +10909,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 视频挂链与失效商品验收。用于橱窗商品、发布前挂链、发布后补链及失效商品重新挂链；核对角色、资格、音轨与视频商品一致性，不承诺任意换品。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10919,7 +10919,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 内容适配选品。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10929,7 +10929,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 活动与优惠叠加。用于平台大促、券、闪购、包邮和联盟佣金叠加；交付优惠叠加表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10939,7 +10939,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 退货与内容预期诊断。用于退货原因、美国POD取消与FBT仓退责任、售后成本及商品承诺修正。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10949,7 +10949,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 寄样与内容交付。用于样品预算、寄送状态、未出片和素材验收；交付寄样状态表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10959,7 +10959,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 短视频脚本与测试。用于开头、卖点、演示、行动提示和内容效果实验；交付脚本矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10969,7 +10969,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 内容、达人、履约与店铺评分诊断。用于多环节经营问题、美国SPS版本切换及地区规则核验；明确的单项任务优先使用专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10979,7 +10979,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** TikTok Shop 趋势与需求验证。用于爆款线索、趋势寿命、季节性和跟进判断；交付趋势证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10989,7 +10989,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 计算TikTok Shop佣金、寄样、内容、广告、优惠和退款后的SKU贡献，使用离线Python脚本输出标准联盟与Shop Ads佣金经济上限、目标利润下的广告预算及联合费用约束。不自动修改店铺费率或投放。
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 48 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -10999,7 +10999,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 广告与订单贡献对账。用于广告ROAS、归因窗口、SKU利润和销售差异；交付广告到账单桥接。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11009,7 +11009,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart Connect 广告与利润。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11019,7 +11019,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 商品组合与竞争空缺。用于规格缺口、价格带、包装数量和差异化组合；交付组合地图。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11029,7 +11029,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 商品身份与 Feed 回读。用于GTIN/SKU/item ID、变体、目录冲突和更新未生效；交付身份映射。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11039,7 +11039,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart WFS 与自发货比较。用于WFS、自发货或混合履约的成本与服务选择；交付履约总成本表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11049,7 +11049,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 库存健康与仓龄行动。用于WFS/自发货缺货、积压、仓龄和补货；交付库存风险表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11059,7 +11059,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 搜索词迁移与关键词验证。用于自动活动挖词、查询相关性、匹配和CPC；交付词证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11069,7 +11069,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart Listing Quality 与内容修正。用于属性缺失、质量分、图片文案和内容采纳；交付质量问题表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11079,7 +11079,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 搜索需求与候选验证。用于站内需求、查询意图、季节变化和跨平台迁移；交付需求证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11089,7 +11089,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart Offer 与 Buy Box 准备。用于价格配送、可售、库存稳定和Buy Box异常；交付Offer对照。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11099,7 +11099,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 广告位与加价测试。用于搜索/商品页等广告位差异、加价和组合风险；交付版位对比。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11109,7 +11109,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 价格监控与利润响应。用于竞品总价、报价波动、自动调价和价格竞争；交付可比价格快照。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11119,7 +11119,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 价格底线与优惠情景。用于商品定价、Buy Box报价、折扣和自动调价边界；交付SKU价格底线。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11129,7 +11129,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 市场与商品选择。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11139,7 +11139,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 退货、库存与结算对账。用于WFS退货、退款、库存回收和费用差异；交付退货状态桥接。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11149,7 +11149,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 官方评价计划资格与预算。用于 Review Accelerator 子项目选择、商品资格、成本与退出后对账；交付候选和有限预算方案，不组织站外返现评价或保证好评。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11159,7 +11159,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 搜索排名与查询份额。用于Search Insights、Query Score、漏斗排名和查询机会；交付指标字典。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11169,7 +11169,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 卖家绩效与异常修复。用于取消、送达、追踪、响应、退货和负面反馈；交付绩效定义表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11179,7 +11179,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart Sponsored Products 结构。用于自动/手动活动、商品分组、命名和预算边界；交付活动结构。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11189,7 +11189,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart 目录、报价与履约运营。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11199,7 +11199,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart WFS 箱内明细与数量核对。用于装箱表、目的仓、唯一收货标签及计划数量对账；附离线JSON核对脚本。
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 16 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11209,7 +11209,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart WFS 费用与仓龄情景。用于WFS利润、尺寸重量、旺季/长期仓储和履约比较；交付WFS成本表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11219,7 +11219,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart WFS 包装与标签预检。用于入仓可售单元包装、单品/收货/承运标签及交接准备；不创建或购买物流服务。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11229,7 +11229,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** Walmart WFS 收货差异与处理准备。用于Delivered后未可售、收货未完成、缺少数量和争议材料；不保证赔付。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11239,7 +11239,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 挑选Wayfair值得投入广告测试的商品并确认当前可用推广能力。用于广告投前资格与商品筛选相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11249,7 +11249,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 结合Partner Home可用消费者洞察和产品能力，筛选Wayfair新品方向。用于品类机会与优势产品筛选相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11259,7 +11259,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 校验Wayfair类目字段、尺寸单位、文案和合规材料。用于本地化及批量字段修改前后验收，先核当前Partner Home能力和父SKU/部件范围。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11269,7 +11269,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 核对Wayfair广告报表的收入范围，并评估是否改善真实供货贡献。用于广告归因、供货回报与增量相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11279,7 +11279,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 按Wayfair商品供货贡献、库存和广告成熟数据分配预算与出价。用于预算、出价与供货贡献分配相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11289,7 +11289,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 准备Wayfair CastleGate入仓并核对送达、验收、数量和可售差异。用于CastleGate 入仓与实收对账相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11299,7 +11299,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 梳理Wayfair SKU、供应商零件号、变体和组合商品映射。用于SKU、组件与商品组建模相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11309,7 +11309,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 建立Wayfair同用途商品池，寻找可证明的规格、风格或服务差异。用于竞品价格、规格与风格对照相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11319,7 +11319,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 设计Wayfair场景图、尺寸图、功能图和WayMore内容的原创改进方案。用于家居图片与 WayMore 简报相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11329,7 +11329,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 校验Wayfair多仓可售库存、组件约束及API/EDI同步结果。用于多仓库存与同步验收相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11339,7 +11339,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 诊断Wayfair备货交期、取消、履约率和供应商评分卡异常。用于交期承诺与供应商绩效相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11349,7 +11349,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 校验Wayfair订单的料号、组件、箱数、仓库和追踪信息是否完整一致。用于订单、多箱与发货前校验相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 27 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11359,7 +11359,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 从Wayfair破损、缺件和装配反馈定位包装或产品改进。用于包装、货损与装配改进相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11369,7 +11369,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 评估产品进入Wayfair Professional商业采购场景的适配性。用于Wayfair Professional 商用品类相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11379,7 +11379,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 评估Wayfair活动、批发折扣或Closeout对供应商贡献与库存回收的影响。用于促销、Closeout 与折扣经济性相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11389,7 +11389,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 结合Wayfair真实动销和仓库约束制定补货、转仓或积压退出方案。用于补货、仓龄与退出计划相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11399,7 +11399,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 区分Wayfair无理由退货、货损缺陷与缺件，并准备补件或退货处理方案。用于退货、缺陷与补件决策相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11409,7 +11409,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 为Wayfair季节品和活动新品安排生产、到仓、上架与补货窗口。用于季节选品与到仓倒排相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11419,7 +11419,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 将Wayfair PO、发票、Payment Voucher和银行实收桥接到同一供货批次。用于供货发票与扣款回款对账相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11429,7 +11429,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 设计Wayfair Sponsored Products的小规模测试和曝光点击转化诊断。用于Sponsored Products 测试与诊断相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11439,7 +11439,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 为Wayfair Sponsored Shops或当前等效品牌展示活动准备素材与目录落地页。用于Sponsored Shops 素材与落地页相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11449,7 +11449,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 评估企业、产品和履约能力是否适合进入某个Wayfair市场。用于供应商模式与市场进入相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11459,7 +11459,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 综合Wayfair销售、内容、库存、绩效与费用，形成SKU级经营周报。用于SKU经营周报与行动复盘相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -11469,7 +11469,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Ne yapar:** 计算Wayfair供货收入扣除折扣、Allowance、履约及货损后的贡献与投流空间。用于供货贡献与广告预算测算相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** xjli360 (kisi, ★114, son güncelleme 2026-10-16, lisans MIT)
+- **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 32 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik

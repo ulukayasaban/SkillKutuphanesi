@@ -7,6 +7,5 @@
 - **Commit:** `914f920b368fd73f867e3d03af7e48b9ab1e18ed`
 - **Lisans:** MIT
 - **Geliştirici:** xjli360 (kisi)
-- **Değerlendirme:** 78/100 (B)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

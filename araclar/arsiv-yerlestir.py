@@ -224,7 +224,6 @@ def kaynak_md(k):
         f"- **Lisans:** {k['lisans']}",
         f"- **Geliştirici:** {k['gelistirici'].get('sahip', '?')} ({k['gelistirici'].get('sahip_tipi', '?')})"
         if k.get("gelistirici") else "- **Geliştirici:** ?",
-        f"- **Değerlendirme:** {k['degerlendirme']['puan']}/100 ({k['degerlendirme']['not']})",
         f"- **Arşive alınma:** {k['arsiv_tarihi']}",
         f"- **Durum:** {k['durum']}",
     ]
@@ -245,6 +244,53 @@ def kaynak_md(k):
         satirlar.append(f"- **Arşive alınmayan dosyalar ({len(k['atlanan_dosyalar'])}):** "
                         + ", ".join(f"`{x}`" for x in k["atlanan_dosyalar"][:15]))
     return "\n".join(satirlar) + "\n"
+
+
+def kimlik_ata(gruplar, eski_kaynak):
+    """Aynı adlı skiller içinde tercih/alternatif ve kimlik (id) ataması. KARARLIDIR: yeni eklenen bir kaynak, eşit öncelikte
+    daha önce kayıtlı olanın yerini alamaz (kimlik kayması ve elle inceleme notlarının kaybı olmasın).
+      1. sıra: (öncelik, daha önce kayıtlı olan, repo, yol)
+      2. birebir aynı içerikte daha önce kayıtlı (incelenmiş olabilir) kayıt temsilci kalır, yenisi 'kopya' olarak not edilir
+      3. elle verilen tercih (durum_elle) otomatik tercihi ezer; aynı adda tek 'tercih' kalır
+    """
+    def eskiden_var(k):
+        return (k["repo"], k["kaynak_yol"]) in eski_kaynak
+
+    def onceki(k):
+        return eski_kaynak.get((k["repo"], k["kaynak_yol"]), {})
+
+    yeni, kullanilan = [], set()
+    for ad, liste in sorted(gruplar.items()):
+        liste.sort(key=lambda x: (x["oncelik"], 0 if eskiden_var(x) else 1, x["repo"], x["kaynak_yol"]))
+        tekil = []
+        for k in liste:
+            ayni = next((t for t in tekil if t["_kh"] == k["_kh"]), None)  # TÜM klasör aynıysa kopya
+            if ayni and eskiden_var(k) and not eskiden_var(ayni):
+                # eski (incelenmiş) kayıt temsilci kalır; kayıt sırası/önceliği temsilcinin yerinde
+                k.setdefault("kopya_kaynaklar", []).extend(ayni.get("kopya_kaynaklar", []))
+                k["kopya_kaynaklar"].append(f"{ayni['repo']}:{ayni['kaynak_yol'] or '.'}")
+                tekil[tekil.index(ayni)] = k
+            elif ayni:
+                ayni.setdefault("kopya_kaynaklar", []).append(f"{k['repo']}:{k['kaynak_yol'] or '.'}")
+            else:
+                tekil.append(k)
+        for i, k in enumerate(tekil):
+            k["durum"] = "tercih" if i == 0 else "alternatif"
+            kid = ad if i == 0 else f"{ad}@{kisa_kaynak(k['repo'])}"
+            n = 2
+            while kid in kullanilan:
+                kid = f"{ad}@{kisa_kaynak(k['repo'])}-{n}"
+                n += 1
+            kullanilan.add(kid)
+            k["id"] = kid
+            yeni.append(k)
+        elle_tercih = [k for k in tekil if onceki(k).get("durum_elle") and onceki(k).get("durum") == "tercih"]
+        elle_alt = {id(k) for k in tekil if onceki(k).get("durum_elle") and onceki(k).get("durum") == "alternatif"}
+        if elle_tercih or elle_alt:
+            secilen = elle_tercih[0] if elle_tercih else next((k for k in tekil if id(k) not in elle_alt), tekil[0])
+            for k in tekil:
+                k["durum"] = "tercih" if k is secilen else "alternatif"
+    return yeni
 
 
 def main():
@@ -275,26 +321,7 @@ def main():
         k["_kh"] = klasor_hash(k["_yerel"])
         gruplar.setdefault(k["ad"], []).append(k)
 
-    yeni, kullanilan = [], set()
-    for ad, liste in sorted(gruplar.items()):
-        liste.sort(key=lambda x: (x["oncelik"], x["repo"], x["kaynak_yol"]))
-        tekil = []
-        for k in liste:
-            ayni = next((t for t in tekil if t["_kh"] == k["_kh"]), None)  # TÜM klasör aynıysa kopya
-            if ayni:
-                ayni.setdefault("kopya_kaynaklar", []).append(f"{k['repo']}:{k['kaynak_yol'] or '.'}")
-            else:
-                tekil.append(k)
-        for i, k in enumerate(tekil):
-            k["durum"] = "tercih" if i == 0 else "alternatif"
-            kid = ad if i == 0 else f"{ad}@{kisa_kaynak(k['repo'])}"
-            n = 2
-            while kid in kullanilan:
-                kid = f"{ad}@{kisa_kaynak(k['repo'])}-{n}"
-                n += 1
-            kullanilan.add(kid)
-            k["id"] = kid
-            yeni.append(k)
+    yeni = kimlik_ata(gruplar, eski_kaynak)
 
     # Yeni arşiv önce geçici klasöre kurulur; her şey başarılıysa eskisiyle yer değiştirir (yarım arşiv kalmaz)
     YENI = KOK / ".arsiv-yeni"
@@ -521,6 +548,9 @@ def main():
         bilesenler.append({"repo": b["repo"], "commit": b["commit"], "tur": tur, "kaynak_yol": b["yol"],
                            "yol": goreli(h), "ad": Path(b["yol"]).stem})
 
+    for s in skiller:  # kısmi çalıştırma yolu aynı kopyayı her seferinde yeniden ekliyordu: sırayı koruyarak tekilleştir
+        if s.get("kopya_kaynaklar"):
+            s["kopya_kaynaklar"] = list(dict.fromkeys(s["kopya_kaynaklar"]))
     ucret_tablo = json_oku(KOK / "ucret-siniflandirma.json", {"siniflar": {}})["siniflar"]
     trend = json_oku(TREND, {})
     for s in skiller:

@@ -7,6 +7,5 @@
 - **Commit:** `33d3dea41a341b341d4f5da2e8801ae0c89be2b8`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** anthropics (kurum)
-- **Değerlendirme:** 84/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

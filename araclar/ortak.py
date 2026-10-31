@@ -49,7 +49,9 @@ def gh_api(yol, deneme=4):
             return json.loads(r.stdout)
         if "HTTP 404" in r.stderr or "HTTP 422" in r.stderr:
             raise GhBulunamadi(f"{yol}: {r.stderr.strip()[:200]}")
-        time.sleep(2 * (i + 1))
+        # hız sınırı: kısa bekleme işe yaramaz; dakikalarca bekleyip yeniden dene (ay-ortası çökme yerine)
+        limit = "rate limit" in r.stderr.lower() or "HTTP 403" in r.stderr or "HTTP 429" in r.stderr
+        time.sleep(60 * (i + 1) if limit else 2 * (i + 1))
     raise RuntimeError(f"gh api başarısız: {yol}: {r.stderr.strip()}")
 
 
@@ -129,7 +131,10 @@ def trend_durumu(repo: str, trend: dict):
     if not g:
         return None
     from datetime import date
-    gun = (date.fromisoformat(trend["son_tarama"]) - date.fromisoformat(g["son"])).days
-    seviye = "trendde" if g["son"] == trend["son_tarama"] else "yakinda" if gun <= 90 else "gecmiste"
+    # BUGÜNÜN tarihine göre: tarama durursa bonus sönmeli ("trendde" sadece son tarama taze ve repo o taramadaysa)
+    bugun = date.today()
+    gun = (bugun - date.fromisoformat(g["son"])).days
+    taze_tarama = (bugun - date.fromisoformat(trend["son_tarama"])).days <= 14
+    seviye = "trendde" if (g["son"] == trend["son_tarama"] and taze_tarama) else "yakinda" if gun <= 90 else "gecmiste"
     return {"seviye": seviye, "son": g["son"], "ilk": g["ilk"], "gorulme": g["gorulme"],
             "en_iyi": g.get("en_iyi", {})}

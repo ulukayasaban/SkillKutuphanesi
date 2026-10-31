@@ -1022,21 +1022,21 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 | `oversized-cursor` | ⭐ 🔥 tamamlayıcı | Lansman videolarında göz taşıyıcı olarak büyük macOS imleci tekniği: boyut/görünüm (marka motifli imleçler dahil), ekran dışından giriş yasa… | hyperframes, gsap, css | ücretsiz | ✅ | 100 A | S 6KB | claude:ayni,codex:ayni,agents:farkli | heygen-com/hyperframes |
 | `playwright-recording` | ⭐ 🔥 birincil | Playwright ile tarayıcı etkileşimlerini video olarak kaydeder; form doldurma, gezinti, yavaşlatma ve çözünürlük ayarlarıyla demo ve ürün tur… | playwright, typescript, node | ücretsiz | ✅ | 96 A | M 20KB | claude:ayni | calesthio/OpenMontage |
 | `remotion` | alt | Programmatic video creation with React. Useful for branded explainers, social cuts, dashboards-to-video, and reproducible motion graphics. | react, remotion | ½ kısmen | ✅ | 66 B | S 1KB | claude:farkli | nexu-io/open-design |
-| `remotion-best-practices` | ⭐ 🔥 | Router for all Remotion skills | node, react, remotion | ½ kısmen | ✅ | 88 A | S 6KB | claude:farkli,agents:farkli | remotion-dev/remotion |
+| `remotion-best-practices` | ⭐ 🔥 | Router for all Remotion skills | node, react, remotion | ½ kısmen | ✅ | 89 A | S 6KB | claude:farkli,agents:farkli | remotion-dev/remotion |
 | `remotion-best-practices@calesthio` | alt 🔥 birincil | Remotion (React ile video) için resmi en iyi uygulamalar: animasyon, kompozisyon, ses, altyazı, FFmpeg, 3D, grafik, font ve Mediabunny ile m… | remotion, react, typescript | ½ kısmen | ✅ | 100 A | S 112KB | claude:farkli,agents:farkli | calesthio/OpenMontage |
-| `remotion-captions` | ⭐ 🔥 | Transcribing, displaying and animating captions | remotion | ücretsiz | ✅ | 90 A | S 16KB | - | remotion-dev/remotion |
-| `remotion-create` | ⭐ 🔥 | Create a new Remotion video | git, node, react, remotion, tailwind | ücretsiz | ✅ | 90 A | S 5KB | - | remotion-dev/remotion |
-| `remotion-docs` | ⭐ 🔥 | Search Remotion documentation | api-anahtari, remotion | ücretsiz | ✅ | 90 A | S 3KB | - | remotion-dev/remotion |
-| `remotion-interactivity` | ⭐ 🔥 | Structure Remotion markup for interactivity | css, html, react, remotion | ücretsiz | ✅ | 88 A | M 23KB | - | remotion-dev/remotion |
-| `remotion-license` | ⭐ 🔥 | Find Remotion license information, FAQs, terms, and where to buy a license. | remotion | ücretsiz | ✅ | 90 A | S 2KB | - | remotion-dev/remotion |
-| `remotion-maps` | ⭐ 🔥 | Remotion Map animation knowledge | api-anahtari, remotion | ½ kısmen | ✅ | 90 A | S 477KB | - | remotion-dev/remotion |
-| `remotion-markup` | ⭐ 🔥 | Content, animation and effects best practices | canvas, css, ffmpeg, html, lottie | ücretsiz | ✅ | 86 A | M 123KB | - | remotion-dev/remotion |
-| `remotion-multimedia` | ⭐ 🔥 | Interacting with Mediabunny | remotion | ücretsiz | ✅ | 90 A | S 7KB | - | remotion-dev/remotion |
-| `remotion-render` | ⭐ 🔥 | Export a Remotion video | node, remotion | ücretsiz | ✅ | 90 A | S 5KB | - | remotion-dev/remotion |
-| `remotion-saas` | ⭐ 🔥 | Build an app with Remotion | node, react, remotion, svelte, vue | ücretsiz | ✅ | 90 A | S 8KB | - | remotion-dev/remotion |
-| `remotion-studio` | ⭐ 🔥 | Preview a Remotion video | node, remotion | ücretsiz | ✅ | 90 A | S 3KB | - | remotion-dev/remotion |
+| `remotion-captions` | ⭐ 🔥 | Transcribing, displaying and animating captions | remotion | ücretsiz | ✅ | 91 A | S 16KB | - | remotion-dev/remotion |
+| `remotion-create` | ⭐ 🔥 | Create a new Remotion video | git, node, react, remotion, tailwind | ücretsiz | ✅ | 91 A | S 5KB | - | remotion-dev/remotion |
+| `remotion-docs` | ⭐ 🔥 | Search Remotion documentation | api-anahtari, remotion | ücretsiz | ✅ | 91 A | S 3KB | - | remotion-dev/remotion |
+| `remotion-interactivity` | ⭐ 🔥 | Structure Remotion markup for interactivity | css, html, react, remotion | ücretsiz | ✅ | 89 A | M 23KB | - | remotion-dev/remotion |
+| `remotion-license` | ⭐ 🔥 | Find Remotion license information, FAQs, terms, and where to buy a license. | remotion | ücretsiz | ✅ | 91 A | S 2KB | - | remotion-dev/remotion |
+| `remotion-maps` | ⭐ 🔥 | Remotion Map animation knowledge | api-anahtari, remotion | ½ kısmen | ✅ | 91 A | S 477KB | - | remotion-dev/remotion |
+| `remotion-markup` | ⭐ 🔥 | Content, animation and effects best practices | canvas, css, ffmpeg, html, lottie | ücretsiz | ✅ | 87 A | M 123KB | - | remotion-dev/remotion |
+| `remotion-multimedia` | ⭐ 🔥 | Interacting with Mediabunny | remotion | ücretsiz | ✅ | 91 A | S 7KB | - | remotion-dev/remotion |
+| `remotion-render` | ⭐ 🔥 | Export a Remotion video | node, remotion | ücretsiz | ✅ | 91 A | S 5KB | - | remotion-dev/remotion |
+| `remotion-saas` | ⭐ 🔥 | Build an app with Remotion | node, react, remotion, svelte, vue | ücretsiz | ✅ | 91 A | S 8KB | - | remotion-dev/remotion |
+| `remotion-studio` | ⭐ 🔥 | Preview a Remotion video | node, remotion | ücretsiz | ✅ | 91 A | S 3KB | - | remotion-dev/remotion |
 | `remotion-to-hyperframes` | ⭐ 🔥 tamamlayıcı | Başka araçlarla yapılmış video kodunu ya da çıktısını HyperFrames'e alır ve kare kare karşılaştırarak doğrular: Native (Remotion/HTML/GSAP ç… | hyperframes, remotion, react, python | ücretsiz | 🟡 | 97 A | S 170KB | claude:farkli,codex:farkli,agents:farkli | heygen-com/hyperframes |
-| `remotion-upgrade` | ⭐ 🔥 | Upgrade Remotion, and related packages | node, remotion | ücretsiz | ✅ | 90 A | S 3KB | - | remotion-dev/remotion |
+| `remotion-upgrade` | ⭐ 🔥 | Upgrade Remotion, and related packages | node, remotion | ücretsiz | ✅ | 91 A | S 3KB | - | remotion-dev/remotion |
 | `remotion@calesthio` | ⭐ 🔥 alternatif | claude-code-video-toolkit'e özgü Remotion uzantıları: paylaşılan bileşenler (AnimatedBackground, SlideTransition…) ve özel geçişler (glitch,… | remotion, react, typescript | ½ kısmen | ✅ | 81 A | S 16KB | claude:ayni | calesthio/OpenMontage |
 | `slideshow` | ⭐ 🔥 tamamlayıcı | HyperFrames ile canlı sunulan slayt gösterisi kurar: her slayt bir sahne, JSON adası ile fragment reveal, dallanan hotspot'lar ve konuşmacı … | hyperframes, html, gsap | ücretsiz | 🟡 | 97 A | S 48KB | claude:farkli,codex:farkli,agents:farkli | heygen-com/hyperframes |
 | `social-reddit-card` | ⭐ | Realistic Reddit post card with vote rail and comment count, suited to video overlays or story sharing. | css, html | ücretsiz | ✅ | 96 A | S 8KB | - | nexu-io/open-design |

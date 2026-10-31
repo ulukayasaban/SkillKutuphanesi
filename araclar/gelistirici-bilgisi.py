@@ -16,6 +16,7 @@ Kullanım: python3 araclar/gelistirici-bilgisi.py
 """
 import re
 import subprocess
+import time
 import sys
 from datetime import date
 from pathlib import Path
@@ -27,28 +28,46 @@ from ortak import KAYNAKLAR, KOK, gh_api, json_oku, json_yaz  # noqa: E402
 RESMI = {"anthropics", "greensock", "vercel", "microsoft", "pmndrs", "mrdoob", "motiondivision",
          "darkroomengineering", "tailwindlabs", "figma", "GoogleChrome", "dequelabs", "airbnb", "react",
          "FFmpeg", "QwikDev", "ComposioHQ", "heygen-com", "android", "expo", "vercel-labs", "cloudflare", "Shopify",
-         "mercadopago", "Trendyol"}
+         "mercadopago", "Trendyol", "remotion-dev", "openai"}
+# Ayrıca: sahip adı = repo adı (pixijs/pixijs, d3/d3, KaTeX/KaTeX, blender/blender…) teknolojinin kendi üreticisi sayılır (kural: resmi_mi)
+
+
+def resmi_mi(repo, sahip_login):
+    return sahip_login in RESMI or sahip_login.lower() == repo.split("/")[1].lower()
+
+
+def gh_dene(komut, deneme=3):
+    """gh çağrısı: geçici ağ/hız sınırı hatasında yeniden dener. Başarısızsa None (çağıran önceki değeri korur)."""
+    for i in range(deneme):
+        r = subprocess.run(komut, capture_output=True, text=True)
+        if r.returncode == 0:
+            return r
+        time.sleep(3 * (i + 1) if "rate limit" not in r.stderr.lower() else 60 * (i + 1))
+    return None
 
 
 def katkici_sayisi(repo):
-    r = subprocess.run(["gh", "api", "-i", f"repos/{repo}/contributors?per_page=1&anon=true"],
-                       capture_output=True, text=True)
+    r = gh_dene(["gh", "api", "-i", f"repos/{repo}/contributors?per_page=1&anon=true"])
+    if r is None:
+        return None
     m = re.search(r'page=(\d+)>; rel="last"', r.stdout)
-    return int(m.group(1)) if m else (1 if r.returncode == 0 else None)
+    return int(m.group(1)) if m else 1
 
 
 def say(yol):
     """Sayfalı GitHub listesinin eleman sayısı (per_page=1 + Link başlığındaki son sayfa)."""
-    r = subprocess.run(["gh", "api", "-i", yol], capture_output=True, text=True)
-    if r.returncode != 0:
+    r = gh_dene(["gh", "api", "-i", yol])
+    if r is None:
         return None
     m = re.search(r'page=(\d+)>; rel="last"', r.stdout)
     return int(m.group(1)) if m else (0 if r.stdout.rstrip().endswith("[]") else 1)
 
 
 def son_surum(repo):
-    r = subprocess.run(["gh", "api", f"repos/{repo}/releases?per_page=1", "--jq", ".[0].published_at // empty"],
-                       capture_output=True, text=True)
+    """Son sürüm tarihi; sürüm yoksa None, ÇAĞRI BAŞARISIZSA "?" (çağıran önceki değeri korur)."""
+    r = gh_dene(["gh", "api", f"repos/{repo}/releases?per_page=1", "--jq", ".[0].published_at // empty"])
+    if r is None:
+        return "?"
     return r.stdout.strip()[:10] or None
 
 
@@ -60,7 +79,7 @@ def yuzdelik(degerler, x):
     return sum(1 for v in d if v <= x) / len(d)
 
 
-def guven_hesapla(sonuc, havuz):
+def guven_hesapla(sonuc, havuz, referans):
     """havuz: karşılaştırmanın yapıldığı skill kaynakları (T1-T4). Dev referans kütüphaneleri (React, three.js…)
     yüzdelikleri şişirmesin diye havuza girmez; onların puanı da bu havuza göre hesaplanır."""
     bugun = date.today()
@@ -89,7 +108,7 @@ def guven_hesapla(sonuc, havuz):
     for i, r in enumerate(sirali, 1):
         sonuc[r]["guven"]["sira"], sonuc[r]["guven"]["toplam"] = i, len(sirali)
     # Referans kütüphaneleri (T5/T6: three.js, React, GSAP…) kendi aralarında sıralanır ("referans_sira")
-    ref = sorted((r for r in sonuc if r not in havuz), key=lambda r: -sonuc[r]["guven"]["puan"])
+    ref = sorted((r for r in sonuc if r not in havuz and r in referans), key=lambda r: -sonuc[r]["guven"]["puan"])
     for i, r in enumerate(ref, 1):
         g = sonuc[r]["guven"]
         g["sira"], g["toplam"] = None, len(sirali)
@@ -118,7 +137,7 @@ def main():
             "sahip": sahip["login"],
             "sahip_tipi": "kurum" if sahip["type"] == "Organization" else "kisi",
             "sahip_url": sahip["html_url"],
-            "resmi_kaynak": sahip["login"] in RESMI,
+            "resmi_kaynak": resmi_mi(repo, sahip["login"]),
             "yildiz": d["stargazers_count"], "fork": d["forks_count"], "acik_issue": d["open_issues_count"],
             "son_guncelleme": d["pushed_at"][:10], "olusturulma": d["created_at"][:10],
             "lisans": (d.get("license") or {}).get("spdx_id") or "yok",
@@ -128,9 +147,14 @@ def main():
             "commit_90g": say(f"repos/{repo}/commits?per_page=1&since={date.fromordinal(date.today().toordinal() - 90)}T00:00:00Z"),
             "son_surum": son_surum(repo),
         }
+        eski = onceki.get(repo) or {}
+        for alan in ("katkici", "commit_90g", "izleyici", "son_surum"):  # geçici ağ hatası puanı sessizce düşürmesin
+            if sonuc[repo].get(alan) in (None, "?"):
+                sonuc[repo][alan] = eski.get(alan) if sonuc[repo].get(alan) == "?" or eski.get(alan) is not None else None
         print(f"{repo:42s} ★{d['stargazers_count']:>7}  {sonuc[repo]['sahip_tipi']:5s}  {sonuc[repo]['son_guncelleme']}")
     havuz = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}
-    guven_hesapla(sonuc, havuz)
+    referans = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T5", "T6")}
+    guven_hesapla(sonuc, havuz, referans)
     print("\nGüven sıralaması (ilk 15):")
     for r in sorted((r for r in sonuc if sonuc[r]["guven"]["sira"]), key=lambda r: sonuc[r]["guven"]["sira"])[:15]:
         g = sonuc[r]["guven"]
