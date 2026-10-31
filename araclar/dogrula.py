@@ -95,6 +95,41 @@ def main():
         for x in p.get("ek_skiller", []):
             if x not in ids and not any(s["ad"] == x for s in skiller):
                 hatalar.append(f"profil {f.stem}: skill yok -> {x}")
+    # PROMPT UYUMU: promptlar/11 (başka projenin agent'ı) sabit bilgi içermez; her şeyi bu yapılardan okur.
+    # Kütüphane ne kadar büyürse büyüsün bu sözleşme bozulmamalı.
+    import re as _re
+    p11 = KOK / "promptlar" / "11-guvenilir-skill-secimi-mevcut-proje.md"
+    if p11.exists():
+        for f in set(_re.findall(r"~/Documents/SkillKutuphanesi/([\w./-]+\.(?:md|json|py))", p11.read_text(encoding="utf-8"))):
+            if not (KOK / f).exists():
+                hatalar.append(f"prompt 11 olmayan dosyaya bakıyor: {f}")
+    for s in skiller:  # prompt 11'deki kanıt sorgusunun okuduğu alanlar
+        if not all(k in s for k in ("id", "ad", "durum", "degerlendirme", "ucret", "uyum", "yol", "repo", "teknoloji_oto")) \
+                or "puan" not in s["degerlendirme"] or "codex" not in s["uyum"]:
+            hatalar.append(f"prompt uyumu: {s['id']} kaydında kanıt alanı eksik (arsiv-yerlestir.py çalıştır)")
+    gel = json_oku(KOK / "gelistiriciler.json", {"repolar": {}})
+    guvensiz = sorted({s["repo"] for s in skiller if not (s.get("gelistirici") or {}).get("guven")})
+    if guvensiz:
+        uyarilar.append(f"prompt uyumu: kaynak güveni yok: {', '.join(guvensiz[:5])} -> gelistirici-bilgisi.py, arsiv-yerlestir.py, katalog-uret.py")
+    rehber = KOK / "notlar" / "guven-siralamasi.md"
+    if not rehber.exists():
+        hatalar.append("prompt uyumu: notlar/guven-siralamasi.md yok -> katalog-uret.py")
+    else:
+        t = rehber.read_text(encoding="utf-8")
+        for b in ("## 0.", "## 1.", "## 2.", "## 3.", "## 4."):
+            if b not in t:
+                hatalar.append(f"prompt uyumu: guven-siralamasi.md bölümü eksik: {b}")
+        eksik_r = [r for r, v in gel["repolar"].items() if (v.get("guven") or {}).get("sira") or (v.get("guven") or {}).get("referans_sira")]
+        eksik_r = [r for r in eksik_r if f"| {r} |" not in t]
+        if eksik_r or gel.get("guncelleme", "") not in t:
+            uyarilar.append(f"prompt uyumu: guven-siralamasi.md eski ({', '.join(eksik_r[:4]) or 'tarih'}) -> katalog-uret.py")
+    kartlar = (KOK / "notlar" / "referans" / "tasarim-teknolojileri.md").read_text(encoding="utf-8") + \
+        (KOK / "notlar" / "referans" / "kutuphaneler.md").read_text(encoding="utf-8")
+    kartsiz = [k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T5", "T6")
+               and f"`{k['repo']}`" not in kartlar and f"| {k['repo']} |" not in kartlar]
+    if kartsiz:
+        uyarilar.append(f"prompt uyumu: referans kütüphanesinin kartı/satırı yok: {', '.join(kartsiz[:5])} "
+                        "-> notlar/referans/tasarim-teknolojileri.md (T6 kart) ya da kutuphaneler.md (T5 satır)")
     # Skillerin kendi .gitignore'u yüzünden git'e girmeyen arşiv dosyası var mı? (git yedeği eksik kalır)
     gi = subprocess.run(["git", "status", "--ignored", "--porcelain", "arsiv"], cwd=KOK, capture_output=True, text=True)
     from ortak import GURULTU

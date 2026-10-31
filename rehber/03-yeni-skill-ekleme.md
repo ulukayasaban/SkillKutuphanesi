@@ -62,6 +62,13 @@ python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da ay
    python3 araclar/dogrula.py --github             # 0 hata olmalı
    git add -A && git add -f arsiv && git commit -m "Yeni kaynak: owner/ad"
    ```
+**Prompt 11 uyumu (zorunlu, her eklemede):** Başka projelerdeki agent'lar `promptlar/11` ile bu kütüphaneden seçim yapar; prompt
+sabit bilgi içermez, şu yapılardan okur: `registry.json` (puan, ücret, uyum, yol), `gelistiriciler.json` (`guven`),
+`notlar/guven-siralamasi.md` (bölüm 0–4), referans kartları. Bu yüzden:
+   - Sıra: `gelistirici-bilgisi.py` → `kaynak-cek.py` → `arsiv-yerlestir.py` → `katalog-uret.py` (rehberi yeniden üretir).
+   - T5/T6 referans kütüphanesi eklerken kart (`tasarim-teknolojileri.md`, `### Ad — \`owner/repo\` · sürüm` + `**Skill:**` satırı)
+     ya da satır (`kutuphaneler.md`, son sütunda ilgili skiller) ZORUNLU; isteğe bağlı `katalog-uret.py` → `REF_DESEN`'e desen.
+   - `dogrula.py`'de "prompt uyumu" HATA/UYARI'sı 0 olmalı. Prompt 11'i değiştirmek gerekmez.
 5. **Sonuçları kontrol et:**
    - `KATALOG.md`'de yeni skiller doğru kategoride mi?
    - Aynı isimli skill varsa hangisi `tercih` oldu? Yanlışsa `oncelik`'i değiştir ya da registry'de `durum_elle`.
