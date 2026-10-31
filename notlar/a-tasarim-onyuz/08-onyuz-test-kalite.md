@@ -20,7 +20,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Çalışan sayfada konsol hatası, ağ sorunu, performans veya erişilebilirlik ağacı doğrulaması gerektiğinde (özellikle gerçek tarayıcı verisiyle). · **Ne zaman değil:** chrome-devtools MCP sunucusu kurulu değilse çalışmaz; yalnız backend/CLI işlerinde değil. Betikli, yeniden çalıştırılabilir E2E testi için webapp-testing / Playwright.
 - **Teknoloji:** chrome-devtools-mcp, chrome, javascript · **Paketler:** chrome-devtools-mcp (npx)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★112018, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** canli-tarayici-denetimi → birincil · **Roller:** qa-erisilebilirlik, frontend-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB.
@@ -81,7 +81,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Bileşenleri tarayıcıda ayrı ayrı (props, olay, görsel regresyon) test etmek veya experimental-ct'den geçmek için. · **Ne zaman değil:** Salt E2E akışları için değil (webapp-testing / playwright-cli); Playwright'sız projelerde ve React/Vue dışı çatılarda hazır şablon yok.
 - **Teknoloji:** playwright, react, vue, vite, typescript · **Paketler:** @playwright/test, vite
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** playwright-test-altyapisi → birincil · **Roller:** qa-erisilebilirlik
 - **Boyut:** 38 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Resmî Microsoft skill'i; kavram (hikâye + galeri + mount fixture) net ve geçiş yolu belgeli. Dikkat: galeri sayfasını (`references/gallery-spec.md`'ye göre) projede kendin yazman gerekir, hazır şablon yok; yeni bir Playwright sürümünü varsayar (mount fixture/`reuseContext`), eski sürümde çalışmayabilir. Next.js/webpack'te ayrı Vite sunucusu ekler (devDependency). 10.2 KB + 5 referans.
@@ -92,7 +92,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Başarısız bir Playwright testinin trace.zip'ini ajanla çözümlerken. · **Ne zaman değil:** Trace üretmek veya test yazmak için değil; trace yoksa işe yaramaz.
 - **Teknoloji:** playwright · **Paketler:** playwright (npx playwright trace)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** playwright-test-altyapisi → tamamlayıcı · **Roller:** qa-erisilebilirlik
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa (4.7 KB), odaklı ve resmî; komutlar tutarlı ve tipik bir inceleme akışı veriyor. Dikkat: yalnızca `npx playwright trace` alt komutunu içeren yeni Playwright sürümlerinde çalışır; `allowed-tools: Bash(npx playwright trace:*)` ile kapsam sınırlı, ek kurulum/ağ yok.
@@ -103,7 +103,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** React kodu bitirirken/commit öncesi puan gerilemesini yakalamak, lint-erişilebilirlik-bundle sorunlarını önceliklendirmek için. · **Ne zaman değil:** React olmayan projelerde değil. Ağdan talimat çekmek istemeyen/izole ortamlarda `/doctor` akışı kullanılmamalı.
 - **Teknoloji:** react, next.js, eslint · **Paketler:** react-doctor (npx)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** darkroomengineering (kurum, resmî, ★1008, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** darkroomengineering (kurum, resmî, ★1012, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** react-kod-sagligi → birincil · **Roller:** frontend-muhendis
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel, uyarılı). Çekirdek kullanım (`npx react-doctor@latest --verbose --diff`) basit ve işe yarar. Dikkat (risk): `/doctor` akışı `curl https://www.react.doctor/prompts/react-doctor-agent.md` ile uzaktan talimat metni çekip 'her adımını izle' diyor ve çalışma ağacını düzenleten bir döngü başlatıyor; içerik üçüncü tarafça istenildiği an değişebilir (prompt-injection yüzeyi). `npx ...@latest` sürümsüz uzak paket çalıştırır. Referans verilen `doctor-explain` skill'i kütüphanede yok. Kullanılırsa yalnız yerel `--diff` komutu önerilir. Kaynak, satus başlangıç şablonunun içindeki kopya.
@@ -145,7 +145,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Çalışan yerel uygulamada UI davranışını doğrulamak, ekran görüntüsü almak ve tarayıcı günlüklerini görmek için. · **Ne zaman değil:** MCP tabanlı canlı denetim (browser-testing-with-devtools) veya Node tarafı Playwright test koşucusu istiyorsan değil; erişilebilirlik denetimi yapmaz.
 - **Teknoloji:** playwright, python · **Paketler:** playwright (pip)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** tarayici-otomasyon-testi → birincil · **Roller:** qa-erisilebilirlik
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Küçük (3.8 KB), net karar ağacı; betikleri 'kara kutu' kullandırarak bağlamı koruyor. Dikkat: python `playwright` paketi ve tarayıcıların (`pip install playwright && playwright install chromium`) kurulu olduğunu varsayıyor ama bunu belirtmiyor. `with_server.py` verilen komutları `shell=True` ile çalıştırıyor (cd/&& desteği için; komutu kullanıcı/ajan verir, dış girdi değil). Registry 'lisans yok' diyor ama LICENSE.txt (Apache-2.0) mevcut.
@@ -156,7 +156,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Yalnızca resmî kopya alınamazsa. · **Ne zaman değil:** Resmî kopya varken kullanma.
 - **Teknoloji:** playwright, python · **Paketler:** playwright (pip)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** tarayici-otomasyon-testi → alternatif
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. SKILL.md, scripts/ ve examples/ resmî kopyayla aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te doldurulmamış şablon telif satırı.
@@ -167,7 +167,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Hızlı bir sayfa duman testi ve temel erişilebilirlik kontrolü için; test stratejisi hatırlatması. · **Ne zaman değil:** Karmaşık akışlı testler ve sunucu yönetimi için değil (resmî webapp-testing).
 - **Teknoloji:** playwright, python · **Paketler:** playwright (pip)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** tarayici-otomasyon-testi → alternatif
 - **Boyut:** 10 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Aynı adlı resmî skill'den farklı içerik (ilke ağırlıklı + tek betik). `--a11y` bayrağı resmî sürümde olmayan hafif bir erişilebilirlik kontrolü sağlıyor ama axe benzeri gerçek denetim değil. Dikkat: `pip install playwright && playwright install chromium` gerektirir (betik yoksa bunu söyler); ekran görüntülerini sistem temp klasörüne (`agkit_screenshots`) yazar. Betik yalnız http/https URL kabul ediyor.

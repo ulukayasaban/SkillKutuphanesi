@@ -155,7 +155,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Yeni skill yazmak ya da mevcut skill'i ölçülebilir biçimde iyileştirmek (tetikleme doğruluğu dahil). · **Ne zaman değil:** Claude Code eklentisine özgü yerleşim için skill-development'ı da oku. Eval döngüsü `claude -p` ile alt süreç çalıştırır; Codex'te bu adımlar `codex exec` ile değiştirilmeli ya da test istemleri elle çalıştırılmalı — yazım rehberi ve betiklerin çoğu (quick_validate, package_skill) araçtan bağımsız çalışır.
 - **Teknoloji:** python, markdown · **Paketler:** python3, claude CLI (eval döngüsü için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).
@@ -176,7 +176,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Ölçüm/eval istemeden, basit iskelet + paketleme akışı yeterliyse. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/skill-creator güncel ve eval destekli.
 - **Teknoloji:** python, markdown · **Paketler:** python3
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 38 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Eski sürüm; freshtechbro kopyasıyla neredeyse aynı (yalnızca package_skill.py farkı).
@@ -187,7 +187,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Güncel sürüme erişilemiyorsa yedek. · **Ne zaman değil:** Varsayılan olarak kullanma; composiohq kopyasıyla aynı içerik, anthropics/skill-creator güncel.
 - **Teknoloji:** python, markdown · **Paketler:** python3
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1188, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 41 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).
@@ -198,7 +198,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** claudesidian kasası içinde skill geliştirirken (kasa bu kopyayı bekler). · **Ne zaman değil:** Diğer projelerde; anthropics/skill-creator ile aynı içerik.
 - **Teknoloji:** python, markdown · **Paketler:** python3, claude CLI (eval döngüsü için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
+- **Geliştirici:** heyitsnoah (kisi, ★2607, son güncelleme 2026-04-11, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 221 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İçerik resmi sürümle aynı; çift kurulum bağlamı boşa harcar.
@@ -230,7 +230,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Ekipte skill paylaşımını Slack bildirimiyle otomatikleştirmek (Composio Rube bağlıysa). · **Ne zaman değil:** Rube/Composio bağlantısı yoksa; skill yazım kalitesi için skill-creator. Betik içermiyor — paketleme adımları agent'ın yorumuna kalıyor.
 - **Teknoloji:** mcp, slack, composio · **Paketler:** Rube MCP (Composio)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Asıl değer Slack paylaşımı; skill oluşturma kısmı skill-creator'ın zayıf özeti.
@@ -241,7 +241,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** 'Bunu skill yap' dendiğinde ya da aynı iş 3+ kez tekrarlandığında hızlı skill çıkarımı. · **Ne zaman değil:** Ölçülebilir, test edilmiş skill gerekiyorsa (skill-creator, writing-skills). Şablon when_to_use/allowed-tools/effort gibi ag-kit/Claude Code'a özgü alanlar üretir; Codex için yalnızca name + description bırak.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: effort, when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısa ve pratik 'iş akışından skill' tarifi; doğrulama yüzeysel.
@@ -252,7 +252,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Yok — yeni skill için skill-creator'ın init/şablonları daha iyi. · **Ne zaman değil:** Hiçbir projeye kurma; içerik yok.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 0 KB (SKILL.md 0.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Karar: SADECE ARŞİV. 140 baytlık boş şablon.
@@ -284,7 +284,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Agent davranışını değiştiren süreç/disiplin skillerini yazmak ve gerçekten işe yaradığını kanıtlamak. · **Ne zaman değil:** Basit başvuru/format skilleri için ağır (skill-creator yeterli). superpowers:test-driven-development'ı ön koşul sayar. Codex'te: alt-agent baskı testleri ayrı `codex exec` oturumlarıyla yapılır; skill yolu `~/.agents/skills/` (skill bunu kendisi belirtir).
 - **Teknoloji:** markdown, graphviz · **Paketler:** graphviz (isteğe bağlı, render-graphs.js için node)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★309499, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → tamamlayıcı · **Roller:** skill-gelistirici
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.

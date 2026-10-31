@@ -43,7 +43,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Herhangi bir geçiş, metin vuruşu devri, kinetik metin girişi veya grup yeniden konumlandırma yazılmadan önce. · **Ne zaman değil:** Tek sahnelik statik işlerde; HyperFrames/GSAP dışı ortamlarda.
 - **Teknoloji:** gsap, hyperframes · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heygen-com (kurum, ★69189, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** heygen-com (kurum, resmî, ★76108, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 28 KB (SKILL.md 18.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Sayısal, uygulanabilir teknik kataloğu; GSAP örnekleri dahil. Ev stili kökenli olsa da genel geçer değerde.
@@ -101,13 +101,13 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 729 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 5
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli; kurulumu ve sürüm uyumu CE'ye göre zahmetli.
 
-### motion-doctrine  ·  heygen-com/hyperframes @ 4371981  ·  puan 97 (A)
+### motion-doctrine  ·  heygen-com/hyperframes @ 4371981  ·  puan 100 (A)
 
 - **Ne yapar:** Çok sahneli videonun bağımsız slaytlar yığını değil tek kesintisiz kamera hareketi gibi hissettirmesi için üst düzey hareket yasası: vektör yasası (çıkış girişi belirler, Z ölçek işareti), filmin akıntısı, taşıyıcı öğeler, nedensel hareket, Seam Gate doğrulayıcısı, boşta sallanma yasağı ve doruk öncesi durgunluk. Alt teknik skillere (cut-the-curve, seam-craft, oversized-cursor) yönlendirir.
 - **Ne zaman:** Çok sahneli HyperFrames videosunda geçiş ve hareket dili kurulmadan önce. · **Ne zaman değil:** Tek sahnelik kısa grafiklerde; HyperFrames dışı web animasyonunda.
 - **Teknoloji:** hyperframes, gsap, node · **Paketler:** hyperframes (npx), node
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heygen-com (kurum, ★69189, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** heygen-com (kurum, resmî, ★76108, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 44 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut.
@@ -133,13 +133,13 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve doğru; tek başına derinliği sınırlı.
 
-### seam-craft  ·  heygen-com/hyperframes @ 4371981  ·  puan 90 (A)
+### seam-craft  ·  heygen-com/hyperframes @ 4371981  ·  puan 94 (A)
 
 - **Ne yapar:** Sahneden sahneye geçişlerin ana zaman çizelgesinde doğru birleşmesi için render önkoşulları: koyu filmlerde kesmede beyaz parlamayı önleyen opak sahne zemini, enjektörün sarmalayıcıları nasıl örtüştürdüğü, son kareyi tuttuğu ve şablon kodunu nasıl yerleştirdiği.
 - **Ne zaman:** Ana index.html birleştirilirken veya geçişte beyaz parlama/opaklık sızması görüldüğünde. · **Ne zaman değil:** Geçiş seçimi için (cut-the-curve); tek sahnelik işlerde.
 - **Teknoloji:** hyperframes, html, css · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heygen-com (kurum, ★69189, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** heygen-com (kurum, resmî, ★76108, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.

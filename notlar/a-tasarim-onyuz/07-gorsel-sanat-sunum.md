@@ -10,7 +10,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Kodla üretken sanat, akış alanı/parçacık görselleri, seed ile tekrarlanabilir etkileşimli sanat parçası istendiğinde. · **Ne zaman değil:** Ürün arayüzü, veri görselleştirme (d3-viz) veya 3D sahne (threejs-*) için değil; statik poster için canvas-design daha uygun. Mevcut bir sanatçının işini taklit etmek için kullanılmaz.
 - **Teknoloji:** p5.js, canvas, html, javascript · **Paketler:** p5.js (CDN)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** uretken-sanat → birincil
 - **Boyut:** 58 KB (SKILL.md 19.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Niş ama iyi kurgulanmış; felsefe -> kod iki adımı ve seed'li parametre paneli tutarlı çıktı verir. Dikkat: viewer.html p5.js (cdnjs) ve Google Fonts'u CDN'den çeker, çevrimdışı çalışmaz; lisans alanı 'LICENSE.txt' (Anthropic) ve açık kaynak değil; sanat odaklı olduğundan çoğu ürün projesinde gerekmez.
@@ -31,7 +31,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Durum yönetimi, yönlendirme veya shadcn bileşeni gerektiren tek dosyalık paylaşılabilir HTML çıktısı. · **Ne zaman değil:** web-artifacts-builder ile birebir aynı içerik; ikisini birden kurmayın. Basit tek dosya HTML/JSX için gereksiz ağır.
 - **Teknoloji:** react, typescript, vite, tailwind, shadcn-ui, parcel · **Paketler:** node>=18, pnpm, parcel, html-inline
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** artifact-uygulama-paketleme → alternatif
 - **Boyut:** 45 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. web-artifacts-builder (Anthropic) ile aynı betikler ve metin, yalnızca ad farkı var; yinelenen kopya. Dikkat: init-artifact.sh 'npm install -g pnpm' ile global kurulum yapar ve ~40 Radix/shadcn paketi indirir; bundle betiği paket kurar.
@@ -52,7 +52,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Poster, kapak görseli, statik sanat/tasarım parçası, marka kampanya görseli üretirken (PNG/PDF). · **Ne zaman değil:** Etkileşimli/web arayüzü (frontend-design, design-taste-frontend); çok sayfalı sunum (slides, pptx); veri grafiği (d3-viz).
 - **Teknoloji:** canvas, python, png, pdf · **Paketler:** pillow / reportlab (agent ortamına göre)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** statik-gorsel-poster → birincil · **Roller:** ui-tasarimci
 - **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Marka-sunum profilinin ek skilli; özgünlük ve 'zanaat' vurgusu ile şablon görünümünü engeller, fontlar yerel ve OFL. Dikkat: skill klasörü ~5,4 MB (ağırlıkla ttf); SKILL.md 11,7 KB. Yalnızca SKILL.md bağlama girer. Betik yok, ağ/anahtar yok. LICENSE.txt Anthropic'e ait, repo lisans alanı boş.
@@ -63,7 +63,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Yalnızca upstream sürümü erişilemezse; aynı işi yapar. · **Ne zaman değil:** Anthropic sürümü varken kurmayın (yinelenen, lisans metni eksik).
 - **Teknoloji:** canvas, png, pdf
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** statik-gorsel-poster → alternatif
 - **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. diff -rq: tek fark LICENSE.txt ve KAYNAK.md; içerik birebir upstream ile aynı. Dikkat: ~5,4 MB font tekrar eder; lisans başlığı '[yyyy] [name of copyright owner]' doldurulmamış.
@@ -205,7 +205,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Dokümantasyon veya sunum öncesi ekran görüntüsü iyileştirme isteğinde başvuru metni olarak. · **Ne zaman değil:** Gerçek yapay zekâ upscale için: ai-medya-uretici akışındaki upscale araçları, ffmpeg veya ImageMagick doğrudan kullanılmalı.
 - **Teknoloji:** imagemagick
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** gorsel-iyilestirme → birincil
 - **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Hangi aracı çalıştıracağını söylemiyor; örnek çıktı uydurma gibi ("Enhancements applied") ve agent'ı yanlış beklentiye sokabilir. Dikkat: 2,5 KB, ek dosya yok, kurulum yok; değer katmıyor. Gerçek işi görsel upscale/arka plan araçları yapar.
@@ -286,7 +286,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Slack emoji veya mesaj GIF'i, kısa döngülü basit animasyon isteklerinde. · **Ne zaman değil:** Video/hareketli grafik (hyperframes, motion-graphics); karmaşık sahneler ve gerçek görsel efektler.
 - **Teknoloji:** python, pillow, imageio, numpy, gif · **Paketler:** pillow, imageio, imageio-ffmpeg, numpy
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** slack-gif → birincil
 - **Boyut:** 43 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Küçük, bağımsız, Python modülleri düzenli; Slack sınırlarını doğrulaması işe yarar. Dikkat: 'pip install pillow imageio numpy' ister (--break-system-packages yok; venv önerilir). Composio sürümü eski ve farklı bir kod tabanı (ayrı alternatif).
@@ -297,7 +297,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Anthropic sürümündeki yardımcılar yetmezse; hazır şablon, tipografi ve görsel efekt modülleri gerektiğinde. · **Ne zaman değil:** Varsayılan olarak Anthropic sürümünü kullanın; ikisini birden kurmayın (aynı ad/iş).
 - **Teknoloji:** python, pillow, imageio, numpy, gif · **Paketler:** pillow, imageio, numpy
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** slack-gif → alternatif
 - **Boyut:** 208 KB (SKILL.md 16.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Daha zengin ama ağır (16,7 KB SKILL.md, 208 KB) ve güncel upstream ile ayrışmış; core/*.py dosyaları farklı. Dikkat: pip install pillow imageio numpy; aynı ad nedeniyle iki sürüm birlikte kurulursa çakışır.
@@ -318,7 +318,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** HTML tabanlı pitch deck, veri destekli pazarlama sunumu; marka-sunum profili için. · **Ne zaman değil:** PowerPoint/.pptx çıktısı gerekiyorsa pptx; video slayt gösterisi için slideshow (HyperFrames); sıfırdan görsel poster için canvas-design.
 - **Teknoloji:** html, chart.js, css · **Paketler:** chart.js (CDN)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** nextlevelbuilder (kurum, ★138484, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** nextlevelbuilder (kurum, ★143070, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** html-sunum → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 19 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. İçerik stratejisi ve yerleşim bilgisi iyi, MIT. Dikkat: referanslar `python ../design-system/scripts/search-slides.py` (kardeş design-system skill'ine ve onun veri tabanına) başvurur; design-system kurulu değilse bu komutlar kırık kalır, registry bunu bağımlılık olarak işaretlemiyor. Chart.js jsdelivr CDN'den yüklenir. SKILL.md yalnızca 1,7 KB. slideshow (video) ve design (claudekit) ile karıştırılmamalı.
@@ -349,7 +349,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Ne zaman:** Paylaşılabilir tek HTML dosyası olarak teslim edilecek React tabanlı araç/dashboard/prototip. · **Ne zaman değil:** Üretim uygulaması (Next.js proje kurulumu); basit tek sayfa HTML. Artifact aracının doğrudan HTML yayınladığı durumlarda gerekmez.
 - **Teknoloji:** react, typescript, vite, tailwind, shadcn-ui, parcel · **Paketler:** node>=18, pnpm, parcel, html-inline
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** artifact-uygulama-paketleme → birincil · **Roller:** frontend-muhendis
 - **Boyut:** 45 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Tek dosyalık dağıtım için kanıtlanmış akış; frontend-muhendis rolünde zaten opsiyonel. Dikkat: init-artifact.sh 'npm install -g pnpm' ile global kurulum yapar ve çok sayıda paket indirir (ağ + disk); betikler skill klasörüne göre göreli çağrılır. Eski adı artifacts-builder aynı içeriktir.

@@ -520,6 +520,8 @@ def main():
             s["trend"] = t
         else:
             s.pop("trend", None)
+        if gelistiriciler.get(s["repo"]):  # indirilmeyen (korunan) kayıtlar da güncel geliştirici bilgisini alsın
+            s["gelistirici"] = gelistiriciler[s["repo"]]
         s["degerlendirme"] = degerlendir(s, s.get("gelistirici"))  # trend ve korunan kayıtlar dahil hepsi güncel puanla
     skiller.sort(key=lambda s: (s["kategori"], s["id"]))
     # Güvenlik kilidi: önceki registry'deki kaynakların hepsi ya yeniden yerleşmiş ya da korunmuş olmalı.

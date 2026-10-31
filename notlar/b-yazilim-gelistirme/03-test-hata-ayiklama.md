@@ -10,7 +10,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** superpowers zinciri kullanılmayan projelerde hata ayıklama; build/runtime hata tipine göre hazır triyaj listesi istendiğinde. · **Ne zaman değil:** systematic-debugging kuruluysa aynı rolde ikinci hata ayıklama skilli olarak.
 - **Teknoloji:** git, node, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★112018, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** hata-ayiklama → alternatif · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli ve kısa (11 KB); hata tipine göre triyaj ve 'hata çıktısı talimat değildir' notu obra'da olmayan artılar. Aynı işi yaptığı için alternatif; addyosmani zinciri kullanan projelerde birincil yerine seçilebilir.
@@ -21,7 +21,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** Her hata, test başarısızlığı, build kırılması veya beklenmeyen davranışta düzeltme önermeden önce; özellikle zaman baskısı ve ardışık başarısız düzeltmelerde. · **Ne zaman değil:** Kök nedeni zaten bilinen önemsiz yazım hataları; hata yokken genel kod incelemesi.
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★309499, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** hata-ayiklama → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 40 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, hata-ayiklama grubunun birincili. Gerekçe (4 aday): obra'nın güncel sürümü ve yardımcı teknik dosyaları (find-polluter.sh, condition-based-waiting) en pratik araç setini veriyor. heyitsnoah sürümü aynı metnin eski bir kopyası (teknikleri SKILL.md içine gömülü) → alternatif; vudovn sürümü obra'dan kısaltılmış şablon → alternatif; addyosmani debugging-and-error-recovery eşdeğer kalitede ama aynı işi yapıyor → alternatif. Not: test-pressure-*.md ve CREATION-LOG.md skill geliştirme kalıntısı, çalışma anında okunmaz.
@@ -32,7 +32,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** Tek dosyalık (ek dosyasız) sürüm tercih edildiğinde; claudesidian kasası kullanan projeler. · **Ne zaman değil:** obra sürümü kuruluysa (aynı ad, aynı içerik); güncel superpowers değişikliklerini almak istendiğinde.
 - **Teknoloji:** git, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
+- **Geliştirici:** heyitsnoah (kisi, ★2607, son güncelleme 2026-04-11, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** hata-ayiklama → alternatif
 - **Boyut:** 13 KB (SKILL.md 12.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İçerik iyi ama obra'nın eski sürümünden türetilmiş kopya; upstream ile senkron değil.
@@ -43,7 +43,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** ag-kit /debug iş akışında veya yalnız kısa bir hatırlatıcı yeterliyse. · **Ne zaman değil:** Genel kullanımda (obra sürümü çok daha güçlü); aynı adlı diğer sürümlerle birlikte.
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** hata-ayiklama → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF / SADECE ARŞİV. 2.5 KB şablon; demir yasa, çok bileşenli tanı ve 'üç düzeltmede dur' gibi asıl değerli kısımlar çıkarılmış.
@@ -54,7 +54,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** ag-kit iş akışı kullanan projelerde veya çok kısa bir TDD hatırlatıcısı yeterliyse. · **Ne zaman değil:** Gerçek uygulama rehberi gerektiğinde (test-driven-development); diğer TDD sürümleriyle birlikte.
 - **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** tdd → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF / SADECE ARŞİV. 3 KB tablo özeti; 'testi çalıştırıp başarısızlığı gör' gibi uygulama adımları yok, iki birincil sürümün kapsadığı her şeyi daha zayıf veriyor.
@@ -65,7 +65,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** Mantık yazarken, hata düzeltirken veya davranış değiştirirken; kullanıcı test istemese de kod satır içi verilmiş olsa bile. · **Ne zaman değil:** Atılacak prototip/spike; salt yapılandırma veya üretilmiş kod; superpowers zincirinin katı 'test öncesi kodu sil' disiplini isteniyorsa (test-driven-development@obra).
 - **Teknoloji:** api-anahtari, css, html, node, playwright, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★112018, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** tdd → birincil · **Roller:** backend-muhendis, frontend-muhendis, kod-inceleyici · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 16 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar.
@@ -76,7 +76,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** superpowers zinciri (writing-plans → subagent-driven-development / executing-plans) uçtan uca kullanılırken; agent'ın TDD'yi atlama eğilimine karşı en katı disiplin istendiğinde. · **Ne zaman değil:** addyosmani sürümü kuruluysa (aynı ad, aynı iş); test yığını keşfi ve test piramidi rehberi gerekiyorsa.
 - **Teknoloji:** typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★309499, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** tdd → alternatif · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 17 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. İçerik kalitesi çok yüksek ve baskı testleriyle geliştirilmiş; birincilden farkı kapsam değil sertlik. Aynı adı taşıdığı için bir projede yalnız biri kurulmalı.
@@ -87,7 +87,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** Test paketi yavaş/kararsız olduğunda denetim; commit/PR öncesi test değişikliklerini incelemek; başarısız bir kontrolün gerçek regresyon mu eskimiş assertion mı olduğunu ayırmak. · **Ne zaman değil:** Test yazma yöntemi öğretmek (test-driven-development); kapsam dışı depo geneli denetim (yalnız istenirse).
 - **Teknoloji:** dil-bagimsiz, test-araclari
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★91869, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** test-degeri → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 19 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, test-degeri grubunun birincili. Archify'dan ama genel amaçlı (internal işaretli olsa da); test sayısı/kapsama yüzdesini kanıt olarak görüp ürün yargısını öne alması diğer test skillerinde yok. Yalnız ilgili davranışa odaklı kapsam kuralı bağlamı korur.
@@ -98,7 +98,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** Test çerçevesi ve mock stratejisi seçerken hızlı başvuru; ag-kit kullanan projeler. · **Ne zaman değil:** TDD döngüsü veya test değeri kararları (test-driven-development, test-value bunları daha derin kapsar).
 - **Teknoloji:** python · **Paketler:** python3 (test_runner.py)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** tdd → alternatif
 - **Boyut:** 10 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ama yüzeysel tablo özeti; içerik test-driven-development'ın 'Writing Good Tests' ve test piramidi bölümlerinde daha iyi var.
@@ -109,7 +109,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman. · **Ne zaman değil:** Neredeyse hiçbir zaman gereksiz değildir; yalnız doğrulanacak çalıştırılabilir bir şey yoksa (salt doküman işi) etkisiz.
 - **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★303144, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** obra (kisi, ★309499, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** tamamlanma-dogrulama → birincil · **Roller:** backend-muhendis, frontend-muhendis, planlayici
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlanma-dogrulama grubunun birincili. 4 KB ile en yüksek fayda/bağlam oranı; 'alt-agent başarılı dedi → bağımsız doğrula' maddesi orkestratör için kritik. verify-changes yürütme yöntemini, bu skill iddia disiplinini veriyor.
@@ -120,7 +120,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Ne zaman:** Özellik/hata düzeltmesi bittikten sonra somut doğrulama planı ve rapor biçimi gerektiğinde; 'çalışıyor mu?' sorusunda. · **Ne zaman değil:** Yeni kod yazımı; yalnız iddia disiplini yeterliyse (verification-before-completion).
 - **Teknoloji:** node, python
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: effort, when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** tamamlanma-dogrulama → tamamlayıcı
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı (opsiyonel). Değişiklik tipi → doğrulama yöntemi tablosu ve 'doğrulanamayanlar' raporu pratik; ilkesi verification-before-completion ile aynı, onun yanında yinelenen bağlam olabilir.

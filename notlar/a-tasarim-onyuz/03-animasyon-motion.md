@@ -20,7 +20,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Landing page'de hazır animasyonlu bileşen (shimmer, beam, particles) eklerken. · **Ne zaman değil:** Özgün marka hareketi gerektiğinde; kurumsal sade sitelerde.
 - **Teknoloji:** react 19, tailwind 4, motion v14, shadcn-ui, ogl · **Paketler:** motion, clsx, tailwind-merge, ogl
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1188, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** hazir-animasyonlu-bilesen → birincil · **Roller:** motion-gelistirici, frontend-muhendis
 - **Boyut:** 89 KB (SKILL.md 22.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Hazır bileşen kataloğu pratik, ama bileşen listeleri anlık görüntüdür; komutlar 'npx shadcn@latest add ...' ile üçüncü taraf kayıttan kod çeker. 22 KB, çok kod örneği.
@@ -31,7 +31,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** GSAP lisansı/boyutu istenmeyip hafif bir motor tercih edildiğinde. · **Ne zaman değil:** Yeni projelerde varsayılan olarak; GSAP varken gerek yok.
 - **Teknoloji:** animejs 4, javascript · **Paketler:** animejs
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1188, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici
 - **Boyut:** 62 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kapsamlı ama anime v3 API'si ('anime({targets})', 'import anime from animejs') kullanıyor; güncel v4 API'si farklı. 335 gün önce güncellenmiş. Dikkat: animejs@3 sabitleyin.
@@ -94,7 +94,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Kütüphane belirtilmeden JS animasyonu istendiğinde; tween, ease, stagger, reduced-motion kuralları. · **Ne zaman değil:** CSS geçişi yeterli olan basit hover'lar; React'te kurulum ayrıntısı için gsap-react.
 - **Teknoloji:** gsap 3.15, javascript, typescript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17602, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → birincil · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 14 KB (SKILL.md 14.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, kısa ve doğru (14 KB); matchMedia ile reduced-motion kuralı öğretiyor. OpenMontage kopyasıyla birebir aynı. Dikkat: yok.
@@ -115,7 +115,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Vue, Nuxt veya Svelte projesinde GSAP kullanılırken. · **Ne zaman değil:** React/Next.js (gsap-react).
 - **Teknoloji:** gsap 3.15, vue 3, nuxt 4, svelte 5 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17602, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, frontend-muhendis · **Globalde:** claude:farkli
 - **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmî. Dikkat: metin 'examples/vue/' ve 'examples/nuxt/' klasörlerine atıf yapıyor, ama arşivde yalnız SKILL.md var; bu örnekler yok. OpenMontage kopyası (@calesthio) Nuxt bölümü olmayan eski halidir.
@@ -147,7 +147,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Takılan animasyon, jank, çok elemanlı sahnelerin optimizasyonu. · **Ne zaman değil:** Henüz çalışan animasyon yokken ilk kurulum (gsap-core).
 - **Teknoloji:** gsap 3.15, css · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17602, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, 4 KB, her animasyon işinde okunmaya değer. Dikkat: yok.
@@ -168,7 +168,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Flip, SplitText, SVG çizim/morph, sürükle-bırak, ScrollSmoother gibi eklenti gerektiğinde. · **Ne zaman değil:** Yalnız temel tween/timeline işleri.
 - **Teknoloji:** gsap 3.15 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17602, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, scroll-deneyim · **Globalde:** claude:farkli
 - **Boyut:** 21 KB (SKILL.md 21.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî ve güncel; aşağıdaki OpenMontage kopyasında olmayan 'Licensing & Install' bölümü eski Club GSAP / .npmrc token yönlendirmesini engelliyor. 21 KB. Dikkat: büyük dosya, çekirdeğe koyma.
@@ -200,7 +200,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** React veya Next.js projesinde GSAP animasyonu yazılırken. · **Ne zaman değil:** Vue/Svelte (gsap-frameworks); React dışı projeler.
 - **Teknoloji:** gsap 3.15, @gsap/react 2, react 19, next.js · **Paketler:** gsap, @gsap/react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17602, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa (6 KB), useGSAP temizlik kuralları tam. Dikkat: yok.
@@ -221,7 +221,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Birden çok tween'i sıraya veya paralele koyarken, keyframe benzeri koreografide. · **Ne zaman değil:** Tek tween'lik işler (gsap-core yeter).
 - **Teknoloji:** gsap 3.15, javascript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17602, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, çok kısa (4 KB), net. Position parametresi tablosu pratik. Dikkat: yok.
@@ -242,7 +242,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Değer eşleme, rastgele/snap, wrap döngüleri gerektiğinde. · **Ne zaman değil:** Genel animasyon kurulumu.
 - **Teknoloji:** gsap 3.15, javascript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★16853, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17602, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 11.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmî ve doğru; referans niteliğinde (12 KB), her işte gerekmiyor. Dikkat: yok.
@@ -263,7 +263,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Tasarımcının hazırladığı ikon/yükleme/mikro-etkileşim animasyonlarını sitede oynatırken. · **Ne zaman değil:** Animasyonu kodla sıfırdan yazmak; durum makinesi gereken etkileşimler (rive-interactive).
 - **Teknoloji:** lottie-web 5.13, dotlottie-web, react · **Paketler:** lottie-react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1188, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** vektor-animasyon → birincil · **Roller:** motion-gelistirici
 - **Boyut:** 64 KB (SKILL.md 17.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Konunun en kapsamlı skill'i (referans + optimize_lottie.py). Dikkat: 335 gün eski; 'dotlottie' ayrıntısı sınırlı.
@@ -285,7 +285,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** React'te bileşen düzeyi animasyon, çıkış animasyonu, jest etkileşimi ve layout geçişleri. · **Ne zaman değil:** Zaman çizelgesi ağırlıklı koreografi veya scroll pinleme (GSAP).
 - **Teknoloji:** motion v14, react 19 · **Paketler:** framer-motion
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1188, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → birincil · **Roller:** motion-gelistirici
 - **Boyut:** 159 KB (SKILL.md 20.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. React için ana animasyon rehberi, geniş ve düzenli. Dikkat: 'framer-motion' paketi ve import'ları kullanıyor (yeni ad 'motion/react'); starter package.json framer-motion ^11. 20 KB SKILL.md.
@@ -307,7 +307,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Yay fiziği ve jestle sürülen arayüz hareketi gerektiğinde. · **Ne zaman değil:** Genel UI animasyonu (motion-framer) veya zaman çizelgesi işleri.
 - **Teknoloji:** react-spring 10, react · **Paketler:** @react-spring/web, popmotion
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1188, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** react-animasyon-kutuphanesi → alternatif · **Roller:** motion-gelistirici
 - **Boyut:** 71 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ama dar niş; motion-framer de spring sunuyor. 335 gün eski.
@@ -328,7 +328,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Ne zaman:** Girdiye tepki veren, mantıklı (state machine) animasyon bileşeni gerektiğinde. · **Ne zaman değil:** Düz bir kez oynayan animasyon (lottie-animations).
 - **Teknoloji:** rive, react · **Paketler:** rive-react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1107, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1188, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** vektor-animasyon → alternatif · **Roller:** motion-gelistirici
 - **Boyut:** 26 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Niş ve yararlı ama 'rive-react' paketini kullanıyor (resmî güncel paketler @rive-app/react-canvas / react-webgl2). .riv dosyası tasarım aracı gerektirir. 335 gün eski.

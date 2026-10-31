@@ -20,7 +20,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Reklam kampanyası öncesi rakip mesajlarını ve kreatif kalıplarını çıkarmak. · **Ne zaman değil:** Tarayıcı otomasyonu ya da web kazıma aracı yoksa (skill kendi aracını getirmiyor); platform kullanım şartlarının kazımaya izin vermediği durumlarda.
 - **Teknoloji:** web-arama, tarayici-otomasyonu · **Paketler:** tarayıcı aracı (playwright/MCP)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → alternatif
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.
@@ -41,7 +41,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Kaynaklı blog yazısı, makale, vaka çalışması, düşünce liderliği içeriği. · **Ne zaman değil:** Kurumsal teknik/karar dokümanı (doc-coauthoring); kısa sosyal medya metni; dosya formatı üretimi.
 - **Teknoloji:** markdown, web-arama
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** icerik-yazimi → birincil · **Roller:** icerik-pazarlama
 - **Boyut:** 14 KB (SKILL.md 13.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil). İçerik yazımı için en derli toplu süreç; ana hat şablonu ve kaynak formatı faydalı. Lisans belirtilmemiş; araştırma adımı agent'ın web aracına bağlı.
@@ -62,7 +62,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Yayın öncesi metni insansılaştırmak; AI tonu taşıyan blog/e-posta/sosyal medya metinleri. · **Ne zaman değil:** Türkçe metinde kalıp listesi doğrudan uymaz (İngilizce odaklı); teknik doküman doğruluğu kontrolü için değil.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heyitsnoah (kisi, ★2599, son güncelleme 2026-04-11, lisans MIT)
+- **Geliştirici:** heyitsnoah (kisi, ★2607, son güncelleme 2026-04-11, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** icerik-yazimi → tamamlayıcı · **Roller:** icerik-pazarlama, dokuman-yazari
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Çok küçük (2 KB), net kalıp listesi ve somut önce/sonra örneği; MIT. Her yazı skilline tamamlayıcı son rötuş.
@@ -73,7 +73,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi. · **Ne zaman değil:** Codex'te doğrudan çalışmaz: geçmiş ~/.codex/sessions altında farklı biçimde tutulur; Codex'te kullanılacaksa okunacak dosya yolu ve JSONL alanları elle uyarlanmalı. Rube/Composio Slack bağlantısı yoksa son adımı atla, raporu dosyaya yaz. Gizli veri içeren geçmişi dışarı göndermek istenmiyorsa kullanma.
 - **Teknoloji:** claude-code, mcp, slack · **Paketler:** Rube MCP (Composio) — Slack gönderimi için
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Claude Code geçmiş dosyasına ve Composio Rube MCP'ye sıkı bağlı; sohbet geçmişini dış servise gönderiyor. Kategorisi de içerikten çok kişisel geliştirici analizi.
@@ -84,7 +84,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası. · **Ne zaman değil:** Müsaitlik kontrolü için gerçek whois/DNS aracı yoksa sonuçlar tahmin olur — kayıt kararını buna dayandırma.
 - **Teknoloji:** web-arama · **Paketler:** whois/DNS sorgu aracı (önerilir)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İsim önerisi kısmı makul ama müsaitlik kontrolünün nasıl yapılacağı tanımsız; örnek çıktı uydurma 'available' işaretleri içeriyor.
@@ -105,7 +105,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Web sitesi/blog içeriğini AI aramada görünür kılmak; llms.txt, FAQ şeması, AI bot erişim kararı. · **Ne zaman değil:** Klasik Google SEO için seo-fundamentals; uygulama içi metinler için gereksiz. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.
 - **Teknoloji:** html, python · **Paketler:** python3 (geo_checker.py)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** seo-geo → tamamlayıcı · **Roller:** icerik-pazarlama
 - **Boyut:** 14 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (tamamlayıcı). Kısa ve tablolu; ağırlık yüzdeleri gibi bazı rakamlar kaynaksız tahmin. seo-fundamentals ile birlikte kullanılır.
@@ -116,7 +116,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Uygulamaya çok dil desteği eklemek, sabit metinleri ayıklamak, Türkçe/Arapça (RTL) yerelleştirme. · **Ne zaman değil:** Metin çevirisinin kendisi (içerik yazımı) için değil; tek dilli küçük projelerde. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.
 - **Teknoloji:** react, next.js, python · **Paketler:** react-i18next veya next-intl (projeye göre), python3 (i18n_checker.py)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Roller:** frontend-muhendis
 - **Boyut:** 12 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve doğru temel bilgiler + betik. Aslında yazılım geliştirme konusu; kategori incelemesi b-yazilim oturumunda ele alındığı için burada bırakıldı (frontend-muhendis rolüne uygun).
@@ -127,7 +127,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Haftalık durum güncellemesi, yönetime rapor, olay sonrası bilgilendirme, bülten. · **Ne zaman değil:** Dışa dönük pazarlama metni ya da uzun teknik doküman için.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** ic-iletisim → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Anthropic resmi; küçük SKILL.md, türe göre ayrı örnek dosyalar. ComposioHQ kopyası birebir aynı içerik; birincil resmi kaynak.
@@ -138,7 +138,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Resmi sürüm kullanılamıyorsa yedek. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/internal-comms ile aynı içerik.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** ic-iletisim → alternatif
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Dosyalar resmi sürümle aynı; ek değer yok.
@@ -149,7 +149,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** B2B satış/iş geliştirme için potansiyel müşteri listesi ve yaklaşım önerisi. · **Ne zaman değil:** Web araması yoksa (şirket listesi uydurulabilir); kişisel veri toplama/zenginleştirme hukuki açıdan sorunluysa.
 - **Teknoloji:** web-arama
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → birincil
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.
@@ -170,7 +170,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Liderlik/iletişim koçluğu, performans değerlendirmesine hazırlık, ekip toplantı analizi (transkript mevcutsa). · **Ne zaman değil:** Ses kaydı tek başına varsa önce STT gerekir (speech-to-text); toplantı özeti/aksiyon listesi çıkarmak tek amaçsa gereğinden ağır.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Analiz boyutları ve geri bildirim formatı iyi tanımlı; dar kullanım alanı.
@@ -191,7 +191,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Sosyal medya çekilişi, etkinlik çekilişi, rastgele katılımcı seçimi. · **Ne zaman değil:** Yasal denetim gerektiren çekilişlerde (noter vb.) tek kanıt olarak; Google Sheets erişimi yoksa.
 - **Teknoloji:** python · **Paketler:** python secrets modülü (önerilir)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Betik yok; 'kriptografik rastgele' iddiası agent'ın yazacağı koda bağlı. Kategoriye de tam uymuyor (araç).
@@ -212,7 +212,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Web sitesi yayın öncesi SEO denetimi; meta etiketleri, başlık hiyerarşisi, schema ekleme. · **Ne zaman değil:** AI arama görünürlüğü için geo-fundamentals; uygulama içi (giriş gerektiren) sayfalarda. allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.
 - **Teknoloji:** html, python · **Paketler:** python3 (seo_checker.py)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** seo-geo → birincil · **Roller:** icerik-pazarlama, frontend-muhendis
 - **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil). Kısa, güncel metrikler (INP) ve betikli denetim. Derinlik sınırlı ama kontrol listesi olarak yeterli.
@@ -223,7 +223,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Belirli bir iş başvurusu için CV uyarlama. · **Ne zaman değil:** Özgeçmişte olmayan deneyimi uydurmak için asla; tasarımlı PDF/Word çıktısı gerekiyorsa docx/pdf ile birlikte kullan.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Adımlar ve örnek çıktı makul; kişisel kullanım için uygun, proje rollerine eklenmez.
@@ -234,7 +234,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** X/Twitter gönderisi optimizasyonu, içerik stratejisi. · **Ne zaman değil:** Diğer platformlar (LinkedIn, Instagram) için; algoritma 2023 açık kaynak sürümüne dayanıyor, güncel davranış farklı olabilir.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Roller:** icerik-pazarlama
 - **Boyut:** 13 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Algoritma kavramlarını somut yazım taktiklerine bağlıyor; güncellik riski var. Lisans AGPL-3.0 olarak beyan edilmiş.

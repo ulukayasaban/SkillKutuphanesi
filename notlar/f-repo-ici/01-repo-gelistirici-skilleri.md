@@ -10,7 +10,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Yalnız tt-a1i/archify reposuna katkı yaparken issue triyajı ve PR değerlendirmesi. · **Ne zaman değil:** Kendi projelerinde genel code review (code-review-and-quality); bağlantı verdiği REVIEWING.md/CONTRIBUTING.md arşivde yok.
 - **Teknoloji:** dil-bagimsiz, git, github
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★91869, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. metadata.internal: true; değer/maliyet/etki çerçevesi kısa ve genel, asıl kurallar repo kökündeki belgelerde (kırık bağlantı). Repo-içi skill olduğu için f-repo-ici'ye taşındı.
@@ -21,7 +21,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Yalnız Archify reposunda yerleşim/yönlendirme/doğrulama kurallarını değiştirirken deney turu yürütmek. · **Ne zaman değil:** Archify dışındaki her proje; kod incelemesi için değil.
 - **Teknoloji:** node, chromium · **Paketler:** node>=22.13, Chrome/Chromium
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★91869, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
 - **Boyut:** 57 KB (SKILL.md 8.9 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Archify'ın kendi geliştirme döngüsüne özel (metadata.internal), kategori olarak da code review değil; CONTRIBUTING.md bağlantısı kırık, betikler repo yapısına bağlı. f-repo-ici'ye taşındı.
@@ -32,7 +32,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Kendi projen veya kütüphanen için yeni SKILL.md yazarken/düzenlerken; description ve AGENTS.md ayrımına karar verirken. · **Ne zaman değil:** Next.js'e özel kural listesi değil, genel rehber; çok ayrıntılı skill-yazım süreci için d-ai-otomasyon/04 altındaki skill-creator türleri daha kapsamlı.
 - **Teknoloji:** claude-code, agent-skills
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar)
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (genel kullanım). Kısa, doğru ve pratik; yalnızca örnekler Next.js'ten. Desteklenen alan listesi Claude Code'a göre, Codex bazı alanları yok sayar.
@@ -44,7 +44,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. LTS dalına düzeltme taşırken. · **Ne zaman değil:** Kendi projelerinde: dal adları, PR başlık biçimi ve $create-pr bağımlılığı Next.js'e özel.
 - **Teknoloji:** git, github-cli, next.js
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Güvenli adımlar (kullanıcı değişikliklerini koru, boş cherry-pick kontrolü) iyi; genel backport için şablon olarak okunabilir.
@@ -55,7 +55,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. compiler klasöründe commit atarken. · **Ne zaman değil:** Diğer tüm projeler.
 - **Teknoloji:** git, react-compiler, rust
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. compiler-verify/compiler-review ve repo içi alt-agent'lara bağlı; tek başına çalışmaz.
@@ -66,7 +66,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust portu üzerinde çalışırken. · **Ne zaman değil:** Diğer tüm projeler.
 - **Teknoloji:** react-compiler, rust, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 13.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Uzun-süreli agent döngüsü örneği olarak ilginç; içerik tamamen porta özel (13 KB).
@@ -77,7 +77,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust portunda. · **Ne zaman değil:** Diğer tüm projeler.
 - **Teknoloji:** react-compiler, rust, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Repo içindeki port-pass agent'ına bağımlı.
@@ -88,7 +88,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust port değişikliklerini incelerken. · **Ne zaman değil:** Genel kod incelemesi (b-yazilim-gelistirme/02 altındaki review skilleri).
 - **Teknoloji:** react-compiler, rust
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. İnce sarmalayıcı; asıl mantık arşivde olmayan agent tanımında. 'React compiler review' adı yanıltıcı: React Compiler kullanan uygulamaları değil, compiler'ın Rust portunu inceler.
@@ -99,7 +99,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. compiler commit'i öncesi. · **Ne zaman değil:** Diğer tüm projeler.
 - **Teknoloji:** react-compiler, rust, yarn
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Net ve doğru, ama komutların hepsi repoya özel.
@@ -110,7 +110,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. PR açarken. · **Ne zaman değil:** Kendi projelerinde: canary tabanı, NEXT_JS_LLM işareti ve 'co-author ekleme' kuralı sana uymayabilir.
 - **Teknoloji:** git, github-cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. PR gövdesi formatı (ne + neden + doğrulama) iyi bir örnek; genel git/PR akışı için b-yazilim-gelistirme/05 skilleri tercih edilmeli.
@@ -121,7 +121,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. koşullu require/edge kodu yazarken. · **Ne zaman değil:** Uygulama geliştirme; Next.js kullanan bir sitede bu iç ayrıntılar gerekmez.
 - **Teknoloji:** next.js, webpack, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Webpack DCE bilgisi genel olarak doğru ve öğretici, ama dosya yolları Next.js iç yapısına ait.
@@ -132,7 +132,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. (yalnızca dahili dallar) tüm deploy test paketini çalıştırırken. · **Ne zaman değil:** Diğer projeler; fork dalları.
 - **Teknoloji:** github-actions, github-cli, next.js
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Yarış durumlarına karşı dikkatli yazılmış; gizli anahtarlı workflow tetiklediği için başka yerde kullanılmamalı.
@@ -143,7 +143,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Next.js docs'a diyagram eklerken; kendi dokümanların için tutarlı açık/koyu teknik diyagram üretmek istersen yöntem ve betikler uyarlanabilir. · **Ne zaman değil:** Mermaid/hızlı diyagram (c-dokuman-icerik/02 altındaki diyagram skilleri daha pratik); renk tokenları Next.js'e ait.
 - **Teknoloji:** svg, node, headless-chrome, python
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 59 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (uyarlanabilir). disable-model-invocation: true (sadece elle çağrılır). Betikli, ölçülebilir kalite kontrollü nadir bir docs-diyagram skili.
@@ -155,7 +155,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer tüm projeler.
 - **Teknoloji:** yarn, react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Üç satırlık komut hatırlatıcısı.
@@ -166,7 +166,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. bayrak/test işlerinde. · **Ne zaman değil:** Kendi projendeki feature-flag sistemi için değil.
 - **Teknoloji:** react, jest
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Açık tablo ve 'sık hatalar' bölümü iyi; flags ve test skilleriyle birlikte çalışır.
@@ -177,7 +177,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Motion'a katkıda; ayrıca improve skill'inin ürettiği plans/ dosyalarını başka bir projede uygulatırken (improve ile çift). · **Ne zaman değil:** Plan/issue olmadan serbest geliştirme. Yarn/Cypress/React 18-19 komutları Motion'a özel, uyarlamak gerekir.
 - **Teknoloji:** git, github-cli, jest, cypress
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** motiondivision (kurum, resmî, ★34418, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** motiondivision (kurum, resmî, ★34682, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (improve ile birlikte). Sağlam yürütücü disiplini (TDD, sadık raporlama, main'e commit yok). Doğrulama adımları Motion'a göre yazılmış.
@@ -189,7 +189,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** yarn, prettier
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** alternatif
 - **Boyut:** 0 KB (SKILL.md 0.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV (alternatif; aynı adlı fix'in tercihi Motion sürümü). Komut hatırlatıcısı.
@@ -200,7 +200,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** yarn, react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. feature-flags skill'inin yardımcısı.
@@ -211,7 +211,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Next.js kullanan uygulamalar (next.config bayrağı açmak bu skill'i gerektirmez).
 - **Teknoloji:** next.js, webpack, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** alternatif
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (alternatif; 'flags' adının tercihi React sürümü).
@@ -222,7 +222,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Flow kullanmayan projeler.
 - **Teknoloji:** flow, yarn
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV.
@@ -233,7 +233,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. test yazarken. · **Ne zaman değil:** Diğer projeler (yönerge Next.js test altyapısına ait). Fikir — bilinen hatayı atlamak yerine 'beklenen hata' olarak işaretlemek — genel olarak değerli.
 - **Teknoloji:** jest, next.js
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar)
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. İyi gerekçelendirilmiş; 'fake-green' kavramı genel test kültürü için okunmaya değer.
@@ -244,7 +244,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Herhangi bir GitHub reposunda büyük işi gözden geçirilebilir bağımlı PR'lara bölmek istediğinde (gh extension install github/gh-stack gerekir). · **Ne zaman değil:** Tek PR'lık küçük işler; gh-stack kurulu değilse.
 - **Teknoloji:** git, github-cli, gh-stack
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 29 KB (SKILL.md 9.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (genel kullanım). Kaynağı GitHub (metadata author: github); Next.js repo'suna kopyalanmış. Agent'ların TUI'de takılmasını önleyen bayrak tablosu çok değerli.
@@ -256,7 +256,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Herhangi bir projede denetim/iyileştirme fırsatı bulma, yol haritası, başka agent'a devredilecek uygulama planları üretme. · **Ne zaman değil:** Hemen kod değişikliği istiyorsan (skill bilerek uygulamaz); çok küçük repolar.
 - **Teknoloji:** git, github-cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** motiondivision (kurum, resmî, ★34418, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** motiondivision (kurum, resmî, ★34682, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 39 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (genel kullanım). Yazarı shadcn (MIT); Motion repo'sunda barınıyor ama repo-bağımsız. Pahalı model planlar / ucuz model uygular ekonomisi, sır değeri yazmama kuralı ve plan şablonu güçlü.
@@ -268,7 +268,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. errors/ sayfaları için. · **Ne zaman değil:** Diğer projeler; 22 KB ile bağlam yükü yüksek.
 - **Teknoloji:** next.js, mdx
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 22 KB (SKILL.md 21.6 KB, yük orta) · **Kırık bağlantı:** 5
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok ayrıntılı ve kaynak-zinciri disiplini iyi, ama tamamen Next.js'e özel ve büyük.
@@ -279,7 +279,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Lighthouse'u araç olarak kullanmak (performans denetimi) için değil.
 - **Teknoloji:** yarn, mocha
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** GoogleChrome (kurum, resmî, ★30924, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** GoogleChrome (kurum, resmî, ★30985, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Kısa komut listesi.
@@ -290,7 +290,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. rspack/ klasöründe. · **Ne zaman değil:** Rspack'i kendi projende kullanmak (bu skill paket bakımı içindir).
 - **Teknoloji:** rspack, rust, next.js
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Kapsam sınırı (kök rust-toolchain Turbopack'e ait) açıkça belirtilmiş.
@@ -301,7 +301,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler; paralel araştırma kalıbı için d-ai-otomasyon/02 orkestrasyon skilleri daha genel.
 - **Teknoloji:** react-compiler, rust
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Paralel alt-agent fan-out örneği; analyze-pass-impact agent'ına bağımlı.
@@ -312,7 +312,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Kısa ve güvenli.
@@ -323,7 +323,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Playwright ile test yazmak (a-tasarim-onyuz/08 ve b-yazilim-gelistirme/03 skilleri).
 - **Teknoloji:** playwright, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 95 KB (SKILL.md 1.3 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Hub + 9 ayrıntı dosyası (library, api, tools, vendor, bisect, webview…) arşivde mevcut; yalnızca AGENTS.md bağlantısı repo dışında kalıyor.
@@ -334,7 +334,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** github-actions, github-cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 0.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut).
@@ -345,7 +345,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Kendi projenin changelog'u (genel sürüm notu skilleri daha uygun).
 - **Teknoloji:** playwright, markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta) · **Kırık bağlantı:** 4
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok dilli doküman çevirisinin titiz bir örneği; tamamen repoya özel (13 KB).
@@ -356,7 +356,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Kendi CI'ın (şema ve CLI repoya özel). Fikir — CI sonuçlarını parquet/DuckDB'ye toplamak — uyarlanabilir.
 - **Teknoloji:** duckdb, node, github-actions
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Şema tablosu ve örnek sorgular iyi.
@@ -367,7 +367,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz. issue triage'ında. · **Ne zaman değil:** Kendi projendeki issue'lar için doğrudan değil; yöntem (önce sınıflandır, ToT'ta dene, kabul testi yaz) uyarlanabilir.
 - **Teknoloji:** playwright, github-cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98234, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98914, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta) · **Kırık bağlantı:** 4
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Triage yöntemi iyi; kardeş playwright-dev skill'indeki bisect rehberine bağlı, test dosyası bağlantıları repo dışında kalıyor.
@@ -378,7 +378,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler (pr-status.js betiği yok).
 - **Teknoloji:** github-cli, next.js
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Öncelik sırası genel olarak iyi bir pratik; workflow.md ve local-repro.md arşivde mevcut, pr-status.js betiği repoda.
@@ -389,7 +389,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** react/react ve vercel/next.js'e birlikte katkı yaparken. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** react, next.js, pnpm
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. scripts/build-for-next.sh arşivde mevcut; iki repo checkout'u gerektirir.
@@ -400,7 +400,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Next.js ile uygulama geliştirme.
 - **Teknoloji:** next.js, react, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. İç mimariyi anlamak için değerli not.
@@ -411,7 +411,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. router testlerinde. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** next.js, playwright, typescript
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar)
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Retry/polling yerine deterministik act ilkesi genel test kültürü için iyi örnek.
@@ -422,7 +422,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Uygulama hatası ayıklama (b-yazilim-gelistirme/03).
 - **Teknoloji:** next.js, webpack
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. webpack stats ile 'neden dahil edildi' kanıtı kendi Next.js uygulamanda bundle şişmesi araştırırken de fikir verebilir.
@@ -433,7 +433,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** git, react-compiler
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV.
@@ -444,7 +444,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** react/react ya da vercel/next.js değişikliklerinin sunucu tarafı performans etkisini ölçerken. · **Ne zaman değil:** Kendi uygulamanın performansı (b-yazilim-gelistirme/06); Vercel Sandbox erişimi yoksa. Faturalı kaynak kullanır.
 - **Teknoloji:** vercel-sandbox, node, next.js, react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 160 KB (SKILL.md 16.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. İstatistik yaklaşımı (boot = replikasyon birimi) örnek niteliğinde; 16 KB, betikli.
@@ -455,7 +455,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** jest, yarn
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV.
@@ -466,7 +466,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** node, json-schema
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** GoogleChrome (kurum, resmî, ★30924, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** GoogleChrome (kurum, resmî, ★30985, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği.
@@ -477,7 +477,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. docs/ altında. · **Ne zaman değil:** Kendi projen: eşleme tablosu ve MDX kuralları Next.js'e ait; 'kod değişince docs etkisini bul' akışı uyarlanabilir.
 - **Teknoloji:** next.js, mdx, git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 21 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. references/ klasörüyle birlikte eksiksiz.
@@ -488,7 +488,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz. (paket bakımcıları). · **Ne zaman değil:** Diğer herkes; npm publish yetkisi gerektirir.
 - **Teknoloji:** node, npm, devtools
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** GoogleChrome (kurum, resmî, ★30924, son güncelleme 2026-10-21, lisans Apache-2.0)
+- **Geliştirici:** GoogleChrome (kurum, resmî, ★30985, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok kişiye özel (Paul Irish'in fork'u, yerel yollar).
@@ -499,7 +499,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Node.js/JS'te sıcak yol (istek başına çalışan kod, render, stream, döngü) performansı yazarken veya incelerken; kendi Node sunucularında da geçerli. · **Ne zaman değil:** Sıradan uygulama kodu; ölçmeden mikro-optimizasyon. Örnek dosya yolları Next.js'e ait.
 - **Teknoloji:** javascript, node, v8
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar)
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (genel kullanım). İçerik %90 genel V8 bilgisi; yalnızca örnek bağlamı Next.js. 14 KB, bağlam yükü orta.
@@ -511,7 +511,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** yarn, jest, flow
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** react (kurum, resmî, ★251622, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** react (kurum, resmî, ★251799, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. flow ve test skillerine bağlı.
@@ -522,7 +522,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Next.js docs'a katkı; ayrıca kendi kütüphanen/framework'ün için API referans sayfası yazarken şablon olarak. · **Ne zaman değil:** Uzun anlatımlı rehber (write-guide); Next.js'e özel frontmatter ve switcher sözdizimi uyarlama ister.
 - **Teknoloji:** mdx, markdown
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: agent, context (Codex bunları yok sayar)
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (uyarlanabilir). Kategori bazlı şablonlar ve 'sayfa başına tek API' kuralı genel geçer. context: fork + agent: Plan alanları Claude Code'a özgü.
@@ -534,7 +534,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Next.js docs; ayrıca kendi ürünün/kütüphanen için tutorial/how-to rehberi yazarken. · **Ne zaman değil:** API referansı (write-api-reference); pazarlama metni.
 - **Teknoloji:** mdx, markdown
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: agent, context (Codex bunları yok sayar)
-- **Geliştirici:** vercel (kurum, resmî, ★143127, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** vercel (kurum, resmî, ★143230, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (genel kullanım). Next.js docs ekibinin yazım ilkeleri; 'sürtünme anında kavramı adlandır' döngüsü her teknik rehbere uygulanabilir.

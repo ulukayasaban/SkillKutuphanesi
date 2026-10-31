@@ -10,7 +10,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Sistem/mimari açıklama, kod tabanı haritası, API çağrı zinciri, veritabanı şeması, olay zaman çizelgesi; paylaşılabilir etkileşimli diyagram ya da tek sayfa açıklama. · **Ne zaman değil:** Hızlı statik SVG/PNG (beautiful-mermaid) ya da Markdown içine gömülecek Mermaid kodu yeterliyse; dashboard için; Node.js olmayan ortamda (yalnızca elle SVG yedeği var).
 - **Teknoloji:** node, html, svg · **Paketler:** node (paket içinde, ek kurulum yok), chromium/playwright (browser-check için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★87053, son güncelleme 2026-10-21, lisans MIT)
+- **Geliştirici:** tt-a1i (kisi, ★91869, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** diyagram-uretimi → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 7616 KB (SKILL.md 18.4 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; MIT. Klasör çok büyük (7.6 MB) ve SKILL.md 18 KB; ama referanslar ihtiyaç anında okunuyor. Diyagram grubunda en kapsamlı ve doğrulanabilir seçenek.
@@ -53,7 +53,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Önemli bir teknik/iş dokümanı yazılırken; okuyucunun soru işaretlerini önceden yakalamak için. · **Ne zaman değil:** Kısa not, README ya da ADR şablonu yeterliyse (documentation-and-adrs); dosya formatı üretimi için (docx/pptx/pdf).
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → tamamlayıcı · **Roller:** dokuman-yazari
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Anthropic resmi; okuyucu testi (taze bağlamlı alt-agent) diğer doküman skillerinde yok. Codex'te alt-agent yoksa yeni oturumla aynı test elle yapılabilir. Doküman ve format skilleriyle tamamlayıcı.
@@ -64,7 +64,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Mimari karar, public API değişikliği, özellik teslimi; kod tabanına gelecek mühendis/agent için bağlam bırakmak. · **Ne zaman değil:** Uzun iş/strateji dokümanı ortak yazımı (doc-coauthoring); atılacak prototip; Word/PDF teslimatı.
 - **Teknoloji:** markdown, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★109322, son güncelleme 2026-10-13, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★112018, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → birincil · **Roller:** dokuman-yazari · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu.
@@ -75,7 +75,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Hızlıca README/CHANGELOG/llms.txt iskeleti gerektiğinde; çok kısa bağlam bütçesiyle. · **Ne zaman değil:** Karar kaydı ve 'neden' belgelemesi gerekiyorsa documentation-and-adrs daha iyi. Frontmatter'daki allowed-tools (Read, Glob, Grep) Claude Code'a özgü; Codex bunu yok sayar, skill yine çalışır.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → alternatif
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.

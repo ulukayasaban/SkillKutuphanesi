@@ -10,7 +10,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** Claude öğrenmeye yönelik destek/eğitim asistanları; ekibe Claude yaygınlaştırma soruları. · **Ne zaman değil:** Kod/proje agent'larında (iş ortasındaki kullanıcıya kurs önermek gürültü); web erişimi yoksa (katalog çekilemez, uydurma yasak). Skill yazımı ile ilgisi yok — kategorisi Claude ürün desteği.
 - **Teknoloji:** web-fetch
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.
@@ -51,7 +51,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** Claude çağıran her kod: yeni LLM özelliği, agent/araç tanımı, model geçişi, maliyet optimizasyonu, eval kurma, SDK sürüm yükseltme. · **Ne zaman değil:** Projede başka sağlayıcı (OpenAI, Gemini, Ollama…) kullanılıyorsa — skill bunu kendisi kontrol eder. SKILL.md 103 KB: rol bütçesinin büyük kısmını yer; sadece Claude entegrasyonu yapan agent'a ver. Codex'te: WebFetch gibi Claude araç adları geçiyor; Codex'in web/arama aracıyla aynı adımlar uygulanır, içerik ve kod kalıpları aynen geçerli.
 - **Teknoloji:** anthropic-sdk, python, typescript, go, java, csharp, php, ruby, curl · **Paketler:** anthropic (pip) veya @anthropic-ai/sdk (npm) — dile göre resmi SDK, ANTHROPIC_API_KEY
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** claude-api-gecis → birincil · **Roller:** ai-entegrasyon
 - **Boyut:** 2031 KB (SKILL.md 102.7 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, sürekli güncel (model listesi 2026-10-06), API kayması uyarı tablosu ve dil başına doğrulanmış kalıplar. Tek eksi: SKILL.md 103 KB, klasör 2.2 MB. claude-opus-4-5-migration'ın işini 'migrate' alt komutu güncel modellerle yapıyor.
@@ -73,7 +73,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** Kendi uygulamasında/agent'ında harici servislere eylem yaptırmak isteyen projeler (Composio kullanmayı kabul ederek). · **Ne zaman değil:** Üçüncü taraf aracı servise (Composio) veri/OAuth yetkisi vermek istenmiyorsa; tek bir servis için resmi MCP sunucusu varsa. Gerçek e-posta/mesaj gönderir — onaysız çalıştırma.
 - **Teknoloji:** composio, python, typescript, oauth · **Paketler:** composio (pip) veya @composio/core (npm), COMPOSIO_API_KEY
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** composio-baglanti → birincil · **Roller:** ai-entegrasyon
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil, Composio grubunda). Kurulum ve kod örnekleri kısa ve çalışır; pazarlama dili yoğun. Araçtan bağımsız (SDK) olduğu için connect-apps'e tercih edildi.
@@ -84,7 +84,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** Claude Code kullanıcısının kendi oturumundan harici uygulamalara eylem yaptırması. · **Ne zaman değil:** Codex'te plugin komutları yok: Composio'nun MCP sunucusunu `~/.codex/config.toml` içine `[mcp_servers.composio]` olarak ekle ya da SDK tabanlı connect skill'ini kullan. Uygulama koduna entegrasyon için connect.
 - **Teknoloji:** composio, claude-code, mcp · **Paketler:** composio-toolrouter Claude Code eklentisi, Composio API anahtarı
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** composio-baglanti → alternatif
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF. Çok kısa bir kurulum tarifi; skill'den çok eklenti reklamı. Claude Code eklenti sistemine bağlı.
@@ -95,7 +95,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** LangSmith izlemesi açık LangChain/LangGraph agent projelerinde hata ayıklama ve performans analizi. · **Ne zaman değil:** LangChain kullanmayan projelerde (Claude Agent SDK, ham API); LangSmith hesabı/API anahtarı yoksa.
 - **Teknoloji:** langchain, langgraph, langsmith, python · **Paketler:** langsmith-fetch (pip), LANGSMITH_API_KEY, LANGSMITH_PROJECT
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (dar). İş akışları ve komutlar somut; yalnızca LangSmith ekosistemine yarar. Lisans belirtilmemiş.
@@ -106,7 +106,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** Harici bir API/servisi agent'lara açan yeni MCP sunucusu yazmak ve değerlendirmek. · **Ne zaman değil:** Mevcut bir MCP sunucusunu Claude Code eklentisine bağlamak (mcp-integration); protokol sürüm geçişi/güvenlik denetimi ağırlıklı işler (mcp-builder@vudovn daha güncel).
 - **Teknoloji:** mcp, python, typescript · **Paketler:** mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm), @modelcontextprotocol/inspector, anthropic (eval betiği için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★182751, son güncelleme 2026-10-09, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185402, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** mcp-sunucu-gelistirme → birincil · **Roller:** ai-entegrasyon
 - **Boyut:** 119 KB (SKILL.md 8.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, ComposioHQ kopyasından daha güncel ve kısa; dil rehberleri ve eval betiği tek pakette. vudovn sürümü spec/güvenlik tarafını tamamlıyor; birincil bu çünkü uçtan uca iş akışı ve değerlendirme aracı içeriyor.
@@ -117,7 +117,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** Eski sürümdeki daha ayrıntılı 'ajan merkezli tasarım ilkeleri' bölümü özellikle istenirse. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/mcp-builder güncel ve daha az bağlam tüketir.
 - **Teknoloji:** mcp, python, typescript · **Paketler:** mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★77619, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78362, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** mcp-sunucu-gelistirme → alternatif
 - **Boyut:** 144 KB (SKILL.md 13.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güncel sürümün eski kopyası (350 satır fark); tasarım ilkeleri bölümü daha uzun ama 'iş akışı araçları' önerisi güncelde dengelenmiş.
@@ -128,7 +128,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Ne zaman:** MCP sunucu/istemcisini güncel spesifikasyona taşımak, güvenlik/birlikte çalışabilirlik incelemesi, şema tasarımı. · **Ne zaman değil:** Sıfırdan sunucu yazıp değerlendirme seti kurmak için anthropics/mcp-builder ile birlikte kullan (tek başına iş akışı/kod iskeleti vermez). allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.
 - **Teknoloji:** mcp, json-schema
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8203, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8205, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** mcp-sunucu-gelistirme → tamamlayıcı · **Roller:** ai-entegrasyon
 - **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Üç sürüm içinde en güncel spesifikasyon bilgisi ve güvenlik kontrol listesi; MIT, 10 KB. İş akışı ve eval aracı olmadığı için birincil değil.
