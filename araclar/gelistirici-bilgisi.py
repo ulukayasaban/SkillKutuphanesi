@@ -136,29 +136,7 @@ def main():
         g = sonuc[r]["guven"]
         print(f"  #{g['sira']:<3} {r:44s} {g['puan']:3d} ({g['derece']})")
     json_yaz(KOK / "gelistiriciler.json", {"guncelleme": date.today().isoformat(), "repolar": sonuc})
-    rapor_yaz(sonuc, havuz)
-
-
-def rapor_yaz(sonuc, havuz):
-    satir = ["# GitHub Güven Sıralaması", "", f"> `araclar/gelistirici-bilgisi.py` üretir · {date.today().isoformat()}. "
-             "Güven = GitHub etkileşimlerinin yüzdelik sırası: yıldız 25 · yıldız hızı 15 · katkıcı 15 · son 90 gün commit 15 · "
-             "fork 10 · izleyici 5 · son 180 günde sürüm 5 · lisans 5 · resmî üretici 5 (kurum 3). Derece GÖRELİDİR "
-             "(skill kaynakları arasındaki yer). Değerlendirme puanının 30'u buradan gelir.", "",
-             "## Skill kaynakları", "", "| # | Repo | Güven | ★ | ★/ay | Katkıcı | Commit 90g | Fork | Son sürüm | Lisans | Resmî |",
-             "|---|---|---|---|---|---|---|---|---|---|---|"]
-    for r in sorted((r for r in sonuc if r in havuz), key=lambda r: sonuc[r]["guven"]["sira"]):
-        v, g = sonuc[r], sonuc[r]["guven"]
-        satir.append(f"| {g['sira']} | {r} | {g['puan']} {g['derece']} | {v['yildiz']} | {v.get('yildiz_hizi')} | {v.get('katkici')} | "
-                     f"{v.get('commit_90g')} | {v['fork']} | {v.get('son_surum') or '-'} | {v['lisans']} | {'✓' if v['resmi_kaynak'] else ''} |")
-    satir += ["", "## Referans kütüphaneleri (T5/T6 — skill içermez, teknolojinin kendisi)", "",
-              "Projede bu kütüphaneler kullanılıyorsa, kartlarındaki (`notlar/referans/tasarim-teknolojileri.md`, "
-              "`notlar/referans/kutuphaneler.md`) **Skill & rol eşleşmesi** satırındaki skiller öncelikli seçilir.", "",
-              "| # | Repo | Güven | ★ | Katkıcı | Commit 90g | Son sürüm | Lisans |", "|---|---|---|---|---|---|---|---|"]
-    for r in sorted((r for r in sonuc if r not in havuz), key=lambda r: sonuc[r]["guven"]["referans_sira"]):
-        v, g = sonuc[r], sonuc[r]["guven"]
-        satir.append(f"| {g['referans_sira']} | {r} | {g['puan']} {g['derece']} | {v['yildiz']} | {v.get('katkici')} | "
-                     f"{v.get('commit_90g')} | {v.get('son_surum') or '-'} | {v['lisans']} |")
-    (KOK / "notlar" / "guven-siralamasi.md").write_text("\n".join(satir) + "\n", encoding="utf-8")
+    # notlar/guven-siralamasi.md'yi katalog-uret.py üretir (skill sayıları/kategoriler arsiv-yerlestir'den sonra kesinleşir)
 
 
 if __name__ == "__main__":

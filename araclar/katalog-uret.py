@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """registry.json -> KATALOG.md (+ KATALOG-entegrasyon.md, notlar/teknoloji-secim-rehberi.md). Elle düzenleme yapma."""
+import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KATEGORILER, KOK, REGISTRY, json_oku  # noqa: E402
+from ortak import KATEGORILER, KAYNAKLAR, KOK, REGISTRY, json_oku  # noqa: E402
 
 UYUM = {"tam": "✅", "uyarlanabilir": "🟡", "konu-claude-ozel": "🔵"}
 YUK = {"kucuk": "S", "orta": "M", "buyuk": "L"}
@@ -31,6 +32,141 @@ def satir(s):
     ucret = {"ucretli": "💲 ücretli", "kismen": "½ kısmen", "belirsiz": "? belirsiz"}.get(s.get("ucret"), "ücretsiz")
     return (f"| `{s['id']}` | {durum} | {ozet} | {tek} | {ucret} | {UYUM.get(s['uyum']['codex'], '?')} | "
             f"{d.get('puan', '-')} {d.get('not', '')} | {YUK[s['baglam_yuku']]} {s['boyut_kb']}KB | {glob} | {s['repo']} |")
+
+
+# Referans kütüphanesi -> ilgili skill eşlemesi (kartında "Skill:" satırı olmayanlar ya da ek adaylar için).
+# Skill'in adı/açıklaması bu deseni içermeli (otomatik teknoloji etiketleri tek başına gürültülü).
+REF_DESEN = {"mrdoob/three.js": r"three\.?js|threejs|webgl|webgpu", "pmndrs/react-three-fiber": r"react.three.fiber|\br3f\b",
+             "pmndrs/drei": r"\bdrei\b", "tailwindlabs/tailwindcss": r"tailwind", "greensock/GSAP": r"\bgsap\b",
+             "FFmpeg/FFmpeg": r"ffmpeg", "airbnb/lottie-web": r"lottie|bodymovin", "darkroomengineering/lenis": r"\blenis\b|smooth.scroll",
+             "oframe/ogl": r"\bogl\b", "dequelabs/axe-core": r"axe-core|\baxe\b|wcag|accessibility audit",
+             "figma/code-connect": r"code.connect", "QwikDev/partytown": r"partytown|third-party script",
+             "ai/size-limit": r"size-limit|bundle size|bundle budget", "fontsource/fontsource": r"fontsource|self-host(ed)? font",
+             "seek-oss/capsize": r"capsize|font metric", "barvian/number-flow": r"number.?flow|animated number",
+             "argyleink/open-props": r"open.props", "14islands/r3f-scroll-rig": r"scroll.rig|r3f", "pmndrs/react-three-a11y": r"react-three-a11y",
+             "vercel/next.js": r"next\.?js", "react/react": r"\breact\b", "microsoft/playwright": r"playwright",
+             "GoogleChrome/lighthouse": r"lighthouse|core web vitals"}
+
+
+def ref_kartlari():
+    """notlar/referans kartlarından: repo -> (sürüm, [skill adları], kart dosyası)."""
+    kart = {}
+    t6 = (KOK / "notlar" / "referans" / "tasarim-teknolojileri.md").read_text(encoding="utf-8")
+    for blok in re.split(r"\n(?=### )", t6):
+        m = re.match(r"### (.+?) — `([^`]+/[^`]+)`(?: · ([^·\n]+))?", blok)
+        if m:
+            sk = []
+            for satir in blok.splitlines():
+                if "**Skill:**" in satir:
+                    sk += re.findall(r"`([a-z0-9][a-z0-9._@-]*)`", satir.split("**Skill:**", 1)[1].split("**Rol:**")[0])
+            surum = (m.group(3) or "").strip()
+            surum = surum if re.match(r"^(v?\d|r\d|metrics)", surum) else ""  # başlıkta sürüm yerine lisans/tarih olabilir
+            kart[m.group(2)] = (surum, sk, "notlar/referans/tasarim-teknolojileri.md")
+    t5 = (KOK / "notlar" / "referans" / "kutuphaneler.md").read_text(encoding="utf-8")
+    for satir in t5.splitlines():
+        h = [x.strip() for x in satir.strip("|").split("|")]
+        if len(h) >= 4 and "/" in h[0] and not h[0].startswith("-") and h[0] != "Repo":
+            kart.setdefault(h[0], ("", re.findall(r"`([a-z0-9][a-z0-9._@-]*)`", h[-1]), "notlar/referans/kutuphaneler.md"))
+    return kart
+
+
+def guven_raporu(skiller):
+    """notlar/guven-siralamasi.md: başka bir projenin agent'ının DOĞRUDAN kullanacağı güven + referans rehberi."""
+    gel = json_oku(KOK / "gelistiriciler.json", {"repolar": {}})["repolar"]
+    tip = {}
+    for k in json_oku(KAYNAKLAR)["repolar"]:
+        tip.setdefault(k["repo"], k["tip"])
+    kat_ad = {f"{a}/{c}": d for a, v in json_oku(KATEGORILER)["alanlar"].items() for c, d in v["kategoriler"].items()}
+    gor = [s for s in skiller if not s.get("gizli") and s["durum"] == "tercih"]
+    by_ad = {s["ad"]: s for s in gor}
+    by_id = {s["id"]: s for s in skiller}
+    repo_sk = defaultdict(list)
+    for s in gor:
+        repo_sk[s["repo"]].append(s)
+
+    def gv(repo):
+        return (gel.get(repo) or {}).get("guven") or {}
+
+    def sk_etiket(s):
+        g = gv(s["repo"])
+        return f"`{s['id']}` {s['degerlendirme']['puan']}/{g.get('derece', '?')}"
+
+    tarih = json_oku(KOK / "gelistiriciler.json", {}).get("guncelleme", "?")
+    o = ["# Güven ve Referans Rehberi (agent için)", "",
+         f"> Otomatik üretilir (`araclar/katalog-uret.py`, veri: `gelistiriciler.json` {tarih}, `registry.json`). **ELLE DÜZENLEME** — "
+         "her güncellemede yeniden yazılır. Kütüphane: `~/Documents/SkillKutuphanesi` (salt okunur kullan).", "",
+         "## 0. Bu dosyayı nasıl kullanırsın (karar kuralları)", "",
+         "İki ayrı puan var, ikisine birden bak:",
+         "- **Skill puanı** (0–100, A/B/C/D) — skill'in kendisi: bakım, lisans, Codex uyumu, bağlam yükü, yapı, elle kalite, trend + kaynağın GitHub güveninin 30 puanı.",
+         "- **Kaynak güveni** (0–100, A/B/C/D, `#sıra`) — skill'in geldiği GitHub reposunun etkileşimi: yıldız, yıldız hızı, katkıcı, "
+         "son 90 gün commit, fork, izleyici, son sürüm, lisans; resmî üretici sadece 5 puan. Derece GÖRELİ (kütüphanedeki skill kaynakları arasındaki yer).", "",
+         "| Durum | Karar |", "|---|---|",
+         "| Skill puanı ≥ 65 **ve** kaynak güveni A/B | Doğrudan aday |",
+         "| Skill puanı ≥ 65, kaynak güveni C | Aday; aynı işi yapan A/B kaynaklı skill varsa onu seç |",
+         "| Kaynak güveni D | Sadece benzersiz bir iş yapıyorsa, SKILL.md'yi okuduktan sonra, kullanıcıya \"düşük güven\" diye işaretleyerek |",
+         "| Skill puanı < 50 ya da `kalite 1` (yönlendirme) | Alma |",
+         "| Aynı işi yapan iki aday | Önce skill puanı, eşitse kaynak güveni (sıra) yüksek olan; 🔥 trend eşitlikte öne geçirir |",
+         "| Projede bir referans kütüphanesi kullanılıyor (bölüm 3) | O kütüphanenin \"ilgili skiller\"i öncelikli aday; skill'in anlattığı sürüm projedekine uymalı |",
+         "| Ücret: 💲 ücretli | Ücret ödemeden kullanılamaz; sadece açıkça gerekiyorsa ve kullanıcıya belirterek |",
+         "| Lisans `yok`/`NOASSERTION` | Ticari projede kullanıcıya işaretle |", "",
+         "Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py <proje> … --kuru` → onay → `--evet`. "
+         "Bir skill'in ayrıntısı: `KATALOG.md`, `registry.json` (id ile), SKILL.md (`registry.json` → `yol`).", ""]
+    # 1. Kategori -> en güvenilir kaynaklar ve skiller
+    o += ["## 1. Kategoriye göre en güvenilir kaynaklar ve en iyi skiller", "",
+          "| Kategori | En güvenilir kaynaklar (güven · o kategorideki skill) | En yüksek puanlı skiller (`id` puan/kaynak derecesi) |", "|---|---|---|"]
+    kat_sk = defaultdict(list)
+    for s in gor:
+        kat_sk[s["kategori"]].append(s)
+    for k in sorted(kat_sk):
+        l = kat_sk[k]
+        rc = Counter(s["repo"] for s in l)
+        kay = sorted(rc, key=lambda r: (-(gv(r).get("puan") or 0), -rc[r]))[:3]
+        kays = " · ".join(f"{r} {gv(r).get('puan', '?')}{gv(r).get('derece', '')} ({rc[r]})" for r in kay)
+        en = sorted(l, key=lambda s: (-s["degerlendirme"]["puan"], -(gv(s["repo"]).get("puan") or 0)))[:4]
+        o.append(f"| `{k}` — {kat_ad.get(k, '')[:60]} | {kays} | {', '.join(sk_etiket(s) for s in en)} |")
+    # 2. Skill kaynakları
+    o += ["", "## 2. Skill kaynakları (GitHub güven sıralaması)", "",
+          "| # | Kaynak | Güven | Skill | Ana kategoriler | Ücret (ücretsiz/kısmen/💲) | Lisans | Resmî | ★ | ★/ay | Katkıcı | Commit 90g | Son sürüm | 🔥 |",
+          "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    havuz = [r for r in gel if gv(r).get("sira")]
+    for r in sorted(havuz, key=lambda r: gv(r)["sira"]):
+        v, g, l = gel[r], gv(r), repo_sk.get(r, [])
+        kc = Counter(s["kategori"].split("/")[1] for s in l).most_common(2)
+        uc = Counter(s["ucret"] for s in l)
+        tr = "🔥" if any(s.get("trend") for s in l) else ""
+        o.append(f"| {g['sira']} | {r} | {g['puan']} {g['derece']} | {len(l)} | {', '.join(f'{a} ({n})' for a, n in kc) or '-'} | "
+                 f"{uc.get('ucretsiz', 0)}/{uc.get('kismen', 0)}/{uc.get('ucretli', 0)} | {v['lisans']} | {'✓' if v['resmi_kaynak'] else ''} | "
+                 f"{v['yildiz']} | {v.get('yildiz_hizi', '')} | {v.get('katkici', '')} | {v.get('commit_90g', '')} | {v.get('son_surum') or '-'} | {tr} |")
+    # 3. Referans kütüphaneleri -> ilgili skiller
+    kart = ref_kartlari()
+    o += ["", "## 3. Referans kütüphaneleri (skill içermez) → onları öğreten skiller", "",
+          "Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **Sürüm** sütunu kartın yazıldığı sürümdür: "
+          "projendeki sürüm çok farklıysa (ana sürüm) skill'in API'sini kontrol et. Kartın tamamı: \"Kart\" sütunu.", "",
+          "| # | Kütüphane | Güven | Sürüm (kart) | İlgili skiller (`id` puan/kaynak derecesi) | Kart |", "|---|---|---|---|---|---|"]
+    ref = [r for r in gel if gv(r).get("referans_sira")]
+    for r in sorted(ref, key=lambda r: gv(r)["referans_sira"]):
+        g = gv(r)
+        surum, adlar, dosya = kart.get(r, ("", [], ""))
+        sk = []
+        for a in adlar:
+            s = by_id.get(a) or by_ad.get(a)
+            if s and s not in sk and not s.get("gizli"):
+                sk.append(s)
+        desen = REF_DESEN.get(r)
+        if desen:
+            d = re.compile(desen, re.I)
+            ek = sorted((s for s in gor if s not in sk and d.search(s["id"] + " " + s["aciklama"])),
+                        key=lambda s: (-s["degerlendirme"]["puan"], -(gv(s["repo"]).get("puan") or 0)))
+            sk += ek[: max(0, 8 - len(sk))]
+        o.append(f"| {g['referans_sira']} | {r} | {g['puan']} {g['derece']} | {surum or '-'} | "
+                 f"{', '.join(sk_etiket(s) for s in sk[:10]) or '— (skill eşlemesi yok)'} | {dosya.replace('notlar/referans/', '') or '-'} |")
+    o += ["", "## 4. Hesap ayrıntısı", "",
+          "Kaynak güveni = her ölçütün skill kaynakları (T1–T4) içindeki yüzdelik sırası × ağırlık: yıldız 25 · yıldız hızı (★/ay) 15 · "
+          "katkıcı 15 · son 90 gün commit 15 · fork 10 · izleyici 5 · son 180 günde sürüm 5 · açık lisans 5 · resmî üretici 5 (kurum 3); "
+          "arşivlenmiş repo ×0,5. A ≥80 · B ≥65 · C ≥50 · D <50. Referans kütüphaneleri havuza girmez, kendi aralarında sıralanır. "
+          "Skill puanının ayrıntısı: `registry.json` → `degerlendirme.ayrinti`. Güncelleme: `gelistirici-bilgisi.py` → `arsiv-yerlestir.py` → `katalog-uret.py` "
+          "(aylık güncellemede otomatik)."]
+    (KOK / "notlar" / "guven-siralamasi.md").write_text("\n".join(o) + "\n", encoding="utf-8")
 
 
 def main():
@@ -192,6 +328,7 @@ def main():
     for t in sorted(tek, key=lambda x: -len(tek[x])):
         rehber += [f"## {t} ({len(tek[t])})", "", ", ".join(f"`{x}`" for x in sorted(tek[t])), ""]
     (KOK / "notlar" / "teknoloji-secim-rehberi.md").write_text("\n".join(rehber), encoding="utf-8")
+    guven_raporu(skiller)
     print(f"KATALOG.md: {len(gorunur)} · gizli: {len(gizli)} (repo-içi {len(repo_ici)}) · bileşen: {len(reg.get('bilesenler', []))} · teknoloji: {len(tek)}")
 
 
