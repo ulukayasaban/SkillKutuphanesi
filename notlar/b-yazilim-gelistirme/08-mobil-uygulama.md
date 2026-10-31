@@ -143,7 +143,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Durum:** tercih · **Örtüşme:** flutter-mimari → tamamlayıcı
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### aso-auditor  ·  vagabond911/aso-auditor @ 4a36ff1  ·  puan 57 (C)
 
@@ -674,7 +674,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Durum:** tercih · **Örtüşme:** flutter-mimari → birincil
 - **Boyut:** 7 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### flutter-architecture  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 63 (C)
 
@@ -685,7 +685,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Durum:** tercih · **Örtüşme:** flutter-mimari → alternatif
 - **Boyut:** 46 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### flutter-best-practices  ·  evanca/flutter-ai-rules @ 30f908d  ·  puan 81 (A)
 
@@ -786,7 +786,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Durum:** tercih · **Örtüşme:** flutter-test → alternatif
 - **Boyut:** 56 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### flutter-testing  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 58 (C)
 
@@ -797,7 +797,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Durum:** tercih · **Örtüşme:** flutter-test → alternatif
 - **Boyut:** 79 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### flutter-use-column-row-first  ·  evanca/flutter-ai-rules @ 30f908d  ·  puan 81 (A)
 
@@ -1305,10 +1305,10 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** Viniciuscarvalho (kisi, ★39, son güncelleme 2026-05-13, lisans MIT)
-- **Durum:** alternatif · **Örtüşme:** swift-eszamanlilik → alternatif
+- **Durum:** tercih · **Örtüşme:** swift-eszamanlilik → alternatif
 - **Boyut:** 164 KB (SKILL.md 10.6 KB, yük orta)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### swift-concurrency-performance  ·  Livsy90/iOS-Performance-Agent-Skills @ c259885  ·  puan 71 (B)
 
@@ -1326,10 +1326,10 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** tuist (kurum, ★158, son güncelleme 2026-10-28, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** swift-eszamanlilik → birincil
+- **Durum:** alternatif · **Örtüşme:** swift-eszamanlilik → birincil
 - **Boyut:** 725 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### swift-expert  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 71 (B)
 
@@ -1410,7 +1410,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Durum:** tercih · **Örtüşme:** flutter-test → birincil
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### testing-setup  ·  android/skills @ 95ea931  ·  puan 98 (A)
 

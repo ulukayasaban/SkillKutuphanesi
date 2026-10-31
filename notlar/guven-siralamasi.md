@@ -131,14 +131,14 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 60 | lemomo-ai/lemo-wake | 37 D | 3 | 04-motion-graphics-karakter (3) | 3/0/0 | NOASSERTION |  | 221 | 221.0 | 1 | 15 | 2026-10-05 |  |
 | 61 | OrcaQubits/agentic-commerce-skills-plugins | 36 D | 271 | 05-e-ticaret-pazaryeri (271) | 264/7/0 | MIT |  | 40 | 5.0 | 3 | 11 | 2026-05-13 |  |
 | 62 | freshtechbro/claudedesignskills | 36 D | 21 | 05-3d-webgl (10), 03-animasyon-motion (6) | 18/2/1 | MIT |  | 1191 | 97.6 | 1 | 0 | - |  |
-| 63 | tuist/fuckingapproachableswiftconcurrency | 35 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 158 | 15.3 | 15 | 0 | - |  |
+| 63 | tuist/fuckingapproachableswiftconcurrency | 35 D | 0 | - | 0/0/0 | MIT |  | 158 | 15.3 | 15 | 0 | - |  |
 | 64 | mercadopago/mercadopago-claude-marketplace | 34 D | 5 | 05-e-ticaret-pazaryeri (5) | 0/5/0 | Apache-2.0 | ✓ | 32 | 3.9 | 10 | 15 | - |  |
 | 65 | Livsy90/iOS-Performance-Agent-Skills | 32 D | 6 | 08-mobil-uygulama (6) | 6/0/0 | MIT |  | 119 | 22.8 | 2 | 0 | 2026-07-12 |  |
 | 66 | dpconde/claude-android-skill | 32 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 349 | 32.3 | 1 | 0 | - |  |
 | 67 | xjli360/sealeap-ecommerce-skills | 32 D | 195 | 05-e-ticaret-pazaryeri (195) | 195/0/0 | MIT |  | 115 | 94.5 | 1 | 11 | - |  |
 | 68 | ParthJadhav/ios-marketing-capture | 31 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 266 | 39.6 | 1 | 1 | - |  |
 | 69 | finsilabs/awesome-ecommerce-skills | 31 D | 175 | 05-e-ticaret-pazaryeri (175) | 157/18/0 | MIT |  | 60 | 7.8 | 4 | 3 | - |  |
-| 70 | Viniciuscarvalho/swift-code-reviewer-skill | 28 D | 5 | 08-mobil-uygulama (5) | 5/0/0 | MIT |  | 39 | 4.5 | 5 | 0 | 2026-05-07 |  |
+| 70 | Viniciuscarvalho/swift-code-reviewer-skill | 28 D | 6 | 08-mobil-uygulama (6) | 6/0/0 | MIT |  | 39 | 4.5 | 5 | 0 | 2026-05-07 |  |
 | 71 | MADTeacher/mad-agents-skills | 27 D | 11 | 08-mobil-uygulama (11) | 11/0/0 | MIT |  | 111 | 11.6 | 2 | 0 | - |  |
 | 72 | dadederk/iOS-Accessibility-Agent-Skill | 27 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 175 | 19.1 | 1 | 0 | - |  |
 | 73 | Kappaemme-git/codex-phone-lab | 26 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 95 | 17.6 | 1 | 0 | - |  |

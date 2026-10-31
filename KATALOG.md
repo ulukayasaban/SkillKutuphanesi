@@ -713,9 +713,9 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 | `riverpod` | ⭐ | Use when setting up providers, combining requests, managing state disposal, passing arguments, performing side effects, or testing providers… |  | ücretsiz | ✅ | 81 A | S 7KB | - | evanca/flutter-ai-rules |
 | `styles` | ⭐ 🔥 | Use this skill to integrate the Jetpack Compose Styles API into an Android project. This skill guides you through upgrading dependencies, se… | api-anahtari | ücretsiz | ✅ | 98 A | M 65KB | - | android/skills |
 | `swift-code-reviewer` | ⭐ | Perform thorough code reviews for Swift/SwiftUI code, including spec adherence (PR description + linked issues), code quality, architecture,… | git | ücretsiz | ✅ | 69 B | M 1813KB | - | Viniciuscarvalho/swift-code-reviewer-skill |
-| `swift-concurrency` | alt alternatif | Expert guidance on Swift Concurrency best practices, patterns, and implementation. Use when developers mention: (1) Swift Concurrency, async… |  | ücretsiz | ✅ | 69 B | M 164KB | - | Viniciuscarvalho/swift-code-reviewer-skill |
+| `swift-concurrency` | ⭐ alternatif | Expert guidance on Swift Concurrency best practices, patterns, and implementation. Use when developers mention: (1) Swift Concurrency, async… |  | ücretsiz | ✅ | 69 B | M 164KB | - | Viniciuscarvalho/swift-code-reviewer-skill |
 | `swift-concurrency-performance` | ⭐ | Use this skill when reviewing Swift Concurrency performance and responsiveness, including task explosions, actor hopping, MainActor bottlene… |  | ücretsiz | ✅ | 71 B | M 259KB | - | Livsy90/iOS-Performance-Agent-Skills |
-| `swift-concurrency@tuist` | ⭐ birincil | Expert guidance on Swift Concurrency concepts. Use when working with async/await, Tasks, actors, MainActor, Sendable, isolation domains, or … |  | ücretsiz | ✅ | 80 A | S 725KB | - | tuist/fuckingapproachableswiftconcurrency |
+| `swift-concurrency@tuist` | alt birincil | Expert guidance on Swift Concurrency concepts. Use when working with async/await, Tasks, actors, MainActor, Sendable, isolation domains, or … |  | ücretsiz | ✅ | 80 A | S 725KB | - | tuist/fuckingapproachableswiftconcurrency |
 | `swift-expert` | ⭐ | Swift specialist for iOS/macOS development with Swift 6.0+, SwiftUI, async/await concurrency, and protocol-oriented design. Invoke for Apple… |  | ücretsiz | ✅ | 71 B | S 48KB | - | Viniciuscarvalho/swift-code-reviewer-skill |
 | `swift-runtime-performance` | ⭐ | Use this skill when reviewing Swift code for runtime-level performance costs, including heap allocation, ARC traffic, stack vs heap storage,… |  | ücretsiz | ✅ | 71 B | M 215KB | - | Livsy90/iOS-Performance-Agent-Skills |
 | `swift-testing` | ⭐ | Expert guidance on Swift Testing best practices, patterns, and implementation. Use when developers mention: (1) Swift Testing, @Test, #expec… | html | ücretsiz | ✅ | 69 B | M 54KB | - | Viniciuscarvalho/swift-code-reviewer-skill |
@@ -1499,10 +1499,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `dropshipping-product-research` | ⭐ | Product research for dropshipping businesses. Identify profitable products with reliable suppliers, healthy margins, and manageable competit… | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `dynamic-pricing` | ⭐ | Automatically adjust prices based on demand signals, competitor prices, and inventory levels to maximize revenue and stay competitive | typescript | ücretsiz | ✅ | 77 B | M 27KB | - | finsilabs/awesome-ecommerce-skills |
 | `dynamic-pricing-ecommerce` | ⭐ | Design a controlled dynamic-pricing or repricing system for ecommerce products. Use when a seller asks for demand-based, inventory-based, co… | node | ücretsiz | ✅ | 81 A | M 13KB | - | nexscope-ai/eCommerce-Skills |
-| `ebay-advertising` | ⭐ birincil |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
-| `ebay-product-research` | ⭐ birincil |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
+| `ebay-advertising` | ⭐ alternatif |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
+| `ebay-product-research` | ⭐ alternatif |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `ebay-review-checker` | ⭐ | eBay review and feedback authenticity analyzer. Detect fake reviews, suspicious seller feedback patterns, and buyer manipulation. Includes t… | api-anahtari, node, python | ücretsiz | ✅ | 83 A | S 54KB | - | nexscope-ai/eCommerce-Skills |
-| `ebay-seller-guide` | ⭐ birincil |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
+| `ebay-seller-guide` | ⭐ alternatif |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `ebay-seller-tools` | ⭐ |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `ebay-seo` | ⭐ |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `ec-visual` | ⭐ | Use when the user uploads product images and visual references to create or improve marketplace head images and product detail pages. Includ… |  | ücretsiz | ✅ | 69 B | M 138KB | - | oldred-byte/ec-visual-skill |
@@ -1548,7 +1548,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `etsy-offsite-ads` | ⭐ | Offsite Ads analysis — when to opt out, ROI tracking, fee impact on margins, attribution | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `etsy-pricing-strategy` | ⭐ | Etsy pricing — cost calculation, competitor pricing, perceived value, shipping cost integration, sales and coupons | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `etsy-print-on-demand` | ⭐ | POD integration — Printful, Printify, mockups, niche selection, margin optimization | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
-| `etsy-product-description` | ⭐ birincil | Product description writing — keyword integration, benefit-focused copy, FAQ, formatting | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
+| `etsy-product-description` | ⭐ alternatif | Product description writing — keyword integration, benefit-focused copy, FAQ, formatting | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `etsy-review-strategy` | ⭐ | Etsy review generation — thank you cards, follow-up messages, photo review incentives | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `etsy-seasonal-strategy` | ⭐ | Seasonal selling calendar — holiday prep, trending categories, listing refresh timing, inventory planning | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `etsy-seller-guide` | ⭐ |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
@@ -2071,7 +2071,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `sealeap-dijiang-amazon-variation-category-and-hero-ad` | ⭐ | Judge whether multiple product variants genuinely qualify to share one Amazon listing under the category's allowed variation themes before m… |  | ücretsiz | ✅ | 81 A | S 10KB | - | xjli360/sealeap-amazon-skills |
 | `sealeap-dijiang-amazon-variation-listing-setup` | ⭐ | Set up an Amazon parent-child variation listing by first creating compliant child listings, then linking them through a parent record with m… |  | ücretsiz | ✅ | 81 A | S 10KB | - | xjli360/sealeap-amazon-skills |
 | `sealeap-ebay-ad-attribution` | ⭐ | eBay 广告归因与账单对账。用于General费用争议、Priority Direct/Halo和重复收入；交付订单级对账。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 6KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-ebay-advertising` | ⭐ alternatif | eBay 推广广告与归因。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 8KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-ebay-advertising` | ⭐ birincil | eBay 推广广告与归因。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 8KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-brand-ip-triage` | ⭐ | eBay 品牌与 VeRO 证据初筛。用于疑似假货、图片抄用、商标问题和VeRO材料准备；交付权利与证据矩阵。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-category-keywords` | ⭐ | eBay 类目与商品属性需求。用于工具类目建议、长尾词、兼容型号和搜索集合核验；交付查询与类目表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-combined-shipping-audit` | ⭐ | eBay 合并运费与购物篮验收。用于追加件运费、跨刊登合并规则、付款前发票和付款后差额；不自动退款。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
@@ -2085,9 +2085,9 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `sealeap-ebay-offer-promotions` | ⭐ | eBay 议价与促销贡献。用于Best Offer、优惠券、降价活动和组合折扣；交付促销/议价方案。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-price-monitoring` | ⭐ | eBay 竞品价格观察与响应。用于价格变化监控、跟价、成色分层与异常报价；交付价格变化表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-priority-ads` | ⭐ | eBay Priority CPC 与关键词。用于按点击广告、搜索词、匹配与出价边界；交付关键词诊断。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-ebay-product-selection` | ⭐ alternatif | eBay 成交数据选品。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 11KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-ebay-product-selection` | ⭐ birincil | eBay 成交数据选品。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 11KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-returns-diagnosis` | ⭐ | eBay 退货与描述不符诊断。用于退货上升、成色争议、配件缺失和逆向成本；交付退货根因表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-ebay-seller-performance` | ⭐ alternatif | eBay 卖家绩效与缺陷复核。用于交易缺陷、延迟发货、未解决纠纷及申诉材料；交付绩效口径表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-ebay-seller-performance` | ⭐ birincil | eBay 卖家绩效与缺陷复核。用于交易缺陷、延迟发货、未解决纠纷及申诉材料；交付绩效口径表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-shipping-policy` | ⭐ | eBay 配送模板与到货承诺。用于处理时间、运费、承运服务和国际运输比较；交付配送方案表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 8KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-sold-comps` | ⭐ | eBay 已售样本与成交比价。用于成交价格、已售研究、售出率与样本清洗；交付同口径成交表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-ebay-store-analytics` | ⭐ | eBay 商品队列与销售复盘。用于销量变化、成色组合、拍卖/定价绩效和库存周转；交付队列指标表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
@@ -2106,7 +2106,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `sealeap-etsy-offsite-ads-profit` | ⭐ | Etsy Offsite Ads 资格与费用。用于站外广告费、退出资格、费用情景与订单归因；交付资格判定。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-etsy-originality-pod` | ⭐ | Etsy 原创与 POD 上市检查。用于原创资格、生产伙伴、POD打样与可售判断；交付原创与许可清单。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-etsy-pricing-capacity` | ⭐ | Etsy 工时定价与净贡献。用于原创商品、定制工时、免费运费和促销定价；交付成本与工时报价表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-etsy-product-copy` | ⭐ alternatif | Etsy 商品描述与购买预期。用于用途卖点、定制说明、数字文件和交付限制文案；交付描述与FAQ草稿。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 6KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-etsy-product-copy` | ⭐ birincil | Etsy 商品描述与购买预期。用于用途卖点、定制说明、数字文件和交付限制文案；交付描述与FAQ草稿。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 6KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-etsy-product-selection` | ⭐ | Etsy 原创选品与需求验证。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 13KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-etsy-reserve-cashflow` | ⭐ | Etsy储备金与可用现金诊断。用于新版Current、Pending、Ready for Deposit、储备释放及生产资金缺口；不把可用余额当银行到账。 |  | ücretsiz | ✅ | 80 A | S 9KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-etsy-seasonal-planning` | ⭐ | Etsy 季节选品与交付倒排。用于节日礼品、季节新品、上架与生产排期；交付季节倒排表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 6KB | - | xjli360/sealeap-ecommerce-skills |
@@ -2324,7 +2324,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `sealeap-shopify-checkout-recovery` | ⭐ | Shopify 结账排错与弃单恢复。用于支付失败、运费阻力、弃单恢复与重复邮件排查；交付结账问题分层。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-competitor-positioning` | ⭐ | Shopify 竞品定位与差异化。用于同类独立站比较、价值主张与产品差异化；交付竞品对照表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-content-plan` | ⭐ | Shopify 搜索内容与购买指南。用于博客选题、购买指南、内容集群及商品内链规划；交付意图到页面映射。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-shopify-conversion-audit` | ⭐ alternatif | Shopify 转化漏斗与页面实验。用于有流量无成交、移动转化异常与落地页测试；交付漏斗口径表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-shopify-conversion-audit` | ⭐ birincil | Shopify 转化漏斗与页面实验。用于有流量无成交、移动转化异常与落地页测试；交付漏斗口径表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-email-lifecycle` | ⭐ | Shopify 生命周期邮件与留存。用于欢迎、购后教育、补货提醒、召回与邮件分群；交付流程矩阵。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-fulfillment-returns` | ⭐ | Shopify 履约与退货成本诊断。用于3PL服务、配送异常、退货原因与逆向物流；交付履约异常矩阵。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-google-shopping` | ⭐ | Shopify Google 商品广告优化。用于Shopping/PMax分组、商品盈利与广告诊断；交付商品分组表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 9KB | - | xjli360/sealeap-ecommerce-skills |
@@ -2343,7 +2343,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `sealeap-shopify-subscription-launch-audit` | ⭐ | Shopify 订阅上线与购买路径验收。用于订阅计划、一次性购买选项、顾客自助管理和上线前验收；不处理通用邮件营销。 |  | ücretsiz | ✅ | 80 A | S 8KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-subscription-renewal-recovery` | ⭐ | Shopify 续费失败与合同状态诊断。用于续费失败、库存不足、重试耗尽、暂停/取消与重复通知；不代替支付争议处理。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-supplier-validation` | ⭐ | Shopify 供应商与样品验证。用于代发、供应商比较、小批试产和履约模式选择；交付供应比较表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-shopify-technical-seo` | ⭐ alternatif | Shopify 技术 SEO 与页面性能。用于索引、规范网址、重复页、移动性能与主题应用影响；交付URL问题表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 9KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-shopify-technical-seo` | ⭐ birincil | Shopify 技术 SEO 与页面性能。用于索引、规范网址、重复页、移动性能与主题应用影响；交付URL问题表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 9KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-theme-license-recovery` | ⭐ | Shopify 主题许可与恢复准备。用于主题授权告警、跨店主题迁移、草稿副本与恢复验收；不编写主题代码或自动关闭商店。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-shopify-unit-economics` | ⭐ | Shopify 单位经济与获客上限。用于首单利润、CAC上限、LTV回收期及渠道费用核算；交付订单贡献桥接表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-suanni-amazon-aplus-brand-story-video` | ⭐ | Prepare, submit and verify Amazon A+ content, Brand Story and product video for a listing: confirm eligibility and module set, benchmark com… | api-anahtari, git, python | ücretsiz | ✅ | 81 A | S 49KB | - | xjli360/sealeap-amazon-skills |
@@ -2420,7 +2420,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `sealeap-tiktokshop-trend-validation` | ⭐ | TikTok Shop 趋势与需求验证。用于爆款线索、趋势寿命、季节性和跟进判断；交付趋势证据表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-tiktokshop-unit-economics` | ⭐ | 计算TikTok Shop佣金、寄样、内容、广告、优惠和退款后的SKU贡献，使用离线Python脚本输出标准联盟与Shop Ads佣金经济上限、目标利润下的广告预算及联合费用约束。不自动修改店铺费率或投放。 | python | ücretsiz | ✅ | 80 A | S 48KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-ads-reconciliation` | ⭐ | Walmart 广告与订单贡献对账。用于广告ROAS、归因窗口、SKU利润和销售差异；交付广告到账单桥接。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-walmart-advertising` | ⭐ alternatif | Walmart Connect 广告与利润。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 13KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-walmart-advertising` | ⭐ birincil | Walmart Connect 广告与利润。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 13KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-assortment-gaps` | ⭐ | Walmart 商品组合与竞争空缺。用于规格缺口、价格带、包装数量和差异化组合；交付组合地图。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-catalog-identity` | ⭐ | Walmart 商品身份与 Feed 回读。用于GTIN/SKU/item ID、变体、目录冲突和更新未生效；交付身份映射。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-fulfillment-comparison` | ⭐ | Walmart WFS 与自发货比较。用于WFS、自发货或混合履约的成本与服务选择；交付履约总成本表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
@@ -2430,13 +2430,13 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `sealeap-walmart-market-demand` | ⭐ | Walmart 搜索需求与候选验证。用于站内需求、查询意图、季节变化和跨平台迁移；交付需求证据表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-offer-buybox` | ⭐ | Walmart Offer 与 Buy Box 准备。用于价格配送、可售、库存稳定和Buy Box异常；交付Offer对照。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-placement-testing` | ⭐ | Walmart 广告位与加价测试。用于搜索/商品页等广告位差异、加价和组合风险；交付版位对比。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-walmart-price-monitoring` | ⭐ alternatif | Walmart 价格监控与利润响应。用于竞品总价、报价波动、自动调价和价格竞争；交付可比价格快照。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-walmart-price-monitoring` | ⭐ birincil | Walmart 价格监控与利润响应。用于竞品总价、报价波动、自动调价和价格竞争；交付可比价格快照。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-pricing-floors` | ⭐ | Walmart 价格底线与优惠情景。用于商品定价、Buy Box报价、折扣和自动调价边界；交付SKU价格底线。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-product-selection` | ⭐ | Walmart 市场与商品选择。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 8KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-returns-recovery` | ⭐ | Walmart 退货、库存与结算对账。用于WFS退货、退款、库存回收和费用差异；交付退货状态桥接。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 8KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-review-program-planning` | ⭐ | Walmart 官方评价计划资格与预算。用于 Review Accelerator 子项目选择、商品资格、成本与退出后对账；交付候选和有限预算方案，不组织站外返现评价或保证好评。 |  | ücretsiz | ✅ | 80 A | S 9KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-search-query-insights` | ⭐ | Walmart 搜索排名与查询份额。用于Search Insights、Query Score、漏斗排名和查询机会；交付指标字典。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
-| `sealeap-walmart-seller-performance` | ⭐ alternatif | Walmart 卖家绩效与异常修复。用于取消、送达、追踪、响应、退货和负面反馈；交付绩效定义表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
+| `sealeap-walmart-seller-performance` | ⭐ birincil | Walmart 卖家绩效与异常修复。用于取消、送达、追踪、响应、退货和负面反馈；交付绩效定义表。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-sponsored-products-structure` | ⭐ | Walmart Sponsored Products 结构。用于自动/手动活动、商品分组、命名和预算边界；交付活动结构。不替代跨环节经营总诊断。 |  | ücretsiz | ✅ | 80 A | S 7KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-store-operations` | ⭐ | Walmart 目录、报价与履约运营。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。 |  | ücretsiz | ✅ | 80 A | S 12KB | - | xjli360/sealeap-ecommerce-skills |
 | `sealeap-walmart-wfs-box-reconciliation` | ⭐ | Walmart WFS 箱内明细与数量核对。用于装箱表、目的仓、唯一收货标签及计划数量对账；附离线JSON核对脚本。 | python | ücretsiz | ✅ | 80 A | S 16KB | - | xjli360/sealeap-ecommerce-skills |
@@ -2744,7 +2744,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `shopify-checkout-customization` | ⭐ | Checkout optimization — Checkout Extensibility, custom fields, express payments, trust elements | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `shopify-checkout-extensions` | ⭐ | Customize Shopify's checkout with UI extensions for upsells and custom fields, plus Shopify Functions for serverless discount and shipping l… | html, node, react, typescript | ücretsiz | ✅ | 77 B | M 23KB | - | finsilabs/awesome-ecommerce-skills |
 | `shopify-checkout-ui` | ⭐ | Build Shopify checkout UI extensions — extension targets, UI primitives, Preact/Remote DOM rendering, checkout APIs, metafield access, post-… | api-anahtari, html, react, typescript | ücretsiz | ✅ | 81 A | S 5KB | - | OrcaQubits/agentic-commerce-skills-plugins |
-| `shopify-conversion-optimization` | ⭐ birincil |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
+| `shopify-conversion-optimization` | ⭐ alternatif |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `shopify-custom-data` | ⭐ |  | git, node, typescript | ücretsiz | ✅ | 53 C | M 15KB | - | Shopify/agent-skills |
 | `shopify-customer` | ⭐ |  | node | ücretsiz | ✅ | 55 C | S 84KB | - | Shopify/agent-skills |
 | `shopify-customers` | ⭐ | Manage Shopify customers — Customer Account API, new vs classic accounts, Multipass SSO, customer segmentation, B2B company accounts, metafi… | api-anahtari, node | ücretsiz | ✅ | 81 A | S 6KB | - | OrcaQubits/agentic-commerce-skills-plugins |
@@ -2781,7 +2781,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `shopify-pos-ui` | ⭐ |  | html, node | ücretsiz | ✅ | 53 C | M 38KB | - | Shopify/agent-skills |
 | `shopify-product-photography-guide` | ⭐ | DIY product photography — setup, lighting, backgrounds, editing, lifestyle shots, 360 views | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `shopify-security` | ⭐ | Secure Shopify applications — HMAC webhook verification, session token validation, OAuth scope management, Content Security Policy, GDPR man… | api-anahtari, node, typescript | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
-| `shopify-seo` | ⭐ birincil |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
+| `shopify-seo` | ⭐ alternatif |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `shopify-setup` | ⭐ | Set up a Shopify development environment — Shopify CLI installation, Partner account, development stores, environment variables, project str… | api-anahtari, css, node, typescript | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `shopify-speed-optimization` | ⭐ | Store speed audit — lazy loading, image compression, app bloat removal, theme code optimization | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `shopify-store-setup` | ⭐ |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
@@ -2893,11 +2893,11 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `video-commerce-integration` | ⭐ | Enable shoppable video experiences with live shopping events, interactive product hotspots, and one-click checkout directly from video and l… | react, typescript | ücretsiz | ✅ | 77 B | M 29KB | - | finsilabs/awesome-ecommerce-skills |
 | `visual-regression-testing` | ⭐ |  | api-anahtari | ücretsiz | ✅ | 81 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `volume-pricing` | ⭐ | Offer quantity-based price breaks so wholesale and bulk buyers automatically see lower prices as they add more units to their cart | typescript | ½ kısmen | ✅ | 77 B | M 24KB | - | finsilabs/awesome-ecommerce-skills |
-| `walmart-advertising-strategy` | ⭐ birincil |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
+| `walmart-advertising-strategy` | ⭐ alternatif |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `walmart-listing-optimization` | ⭐ | Optimize Walmart Marketplace product listings for search visibility and conversion. Covers Walmart SEO, content quality scoring, rich media,… | node | ücretsiz | ✅ | 83 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
-| `walmart-price-tracker` | ⭐ birincil |  | api-anahtari | ücretsiz | ✅ | 81 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
+| `walmart-price-tracker` | ⭐ alternatif |  | api-anahtari | ücretsiz | ✅ | 81 A | S 2KB | - | nexscope-ai/eCommerce-Skills |
 | `walmart-review-checker` | ⭐ | Walmart review authenticity analyzer. Detect fake reviews, suspicious patterns, and rating manipulation. Includes WFS verified badge analysi… | api-anahtari, node, python | ücretsiz | ✅ | 83 A | S 54KB | - | nexscope-ai/eCommerce-Skills |
-| `walmart-seller-guide` | ⭐ birincil |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
+| `walmart-seller-guide` | ⭐ alternatif |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `walmart-seller-tools` | ⭐ |  | node | ücretsiz | ✅ | 79 B | S 1KB | - | nexscope-ai/eCommerce-Skills |
 | `warehouse-optimization` | ⭐ | E-commerce warehouse and inventory optimization advisor. Analyzes inventory health, calculates safety stock and reorder points, performs ABC… | api-anahtari, node | ücretsiz | ✅ | 81 A | M 15KB | - | nexscope-ai/eCommerce-Skills |
 | `wc-abandoned-cart-recovery` | ⭐ | Integrate with or audit WooCommerce 11.0's experimental abandoned-cart recovery email. Covers feature and email gates, manual versus two-hou… |  | ücretsiz | ✅ | 78 B | S 8KB | - | Lonsdale201/wp-agent-skills |

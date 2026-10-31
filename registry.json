@@ -19354,7 +19354,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "pixijs-2d-render",
       "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "kardes_bagimliliklari": {
         "pixijs-accessibility": {
           "id": "pixijs-accessibility",
@@ -19597,7 +19597,7 @@
       "ucret": "ucretsiz",
       "ucret_notu": "",
       "ucret_kaynagi": "otomatik",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi."
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi."
     },
     {
       "id": "pixijs-accessibility",
@@ -49599,7 +49599,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "flutter-mimari",
       "ortusme_rolu": "tamamlayıcı",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -55232,7 +55232,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "flutter-mimari",
       "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -55328,7 +55328,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "flutter-mimari",
       "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 63,
         "not": "C",
@@ -56274,7 +56274,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "flutter-test",
       "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 78,
         "not": "B",
@@ -56370,7 +56370,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "flutter-test",
       "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 58,
         "not": "C",
@@ -61319,7 +61319,7 @@
     {
       "id": "swift-concurrency",
       "ad": "swift-concurrency",
-      "durum": "alternatif",
+      "durum": "tercih",
       "kategori": "b-yazilim-gelistirme/08-mobil-uygulama",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/08-mobil-uygulama/swift-concurrency",
@@ -61395,8 +61395,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "swift-eszamanlilik",
       "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
-      "durum_elle": true,
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 69,
         "not": "B",
@@ -61509,7 +61508,7 @@
     {
       "id": "swift-concurrency@tuist",
       "ad": "swift-concurrency",
-      "durum": "tercih",
+      "durum": "alternatif",
       "kategori": "b-yazilim-gelistirme/08-mobil-uygulama",
       "alan": "b-yazilim-gelistirme",
       "yol": "arsiv/b-yazilim-gelistirme/08-mobil-uygulama/swift-concurrency@tuist",
@@ -61585,8 +61584,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "swift-eszamanlilik",
       "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
-      "durum_elle": true,
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -62337,7 +62335,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "flutter-test",
       "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -239093,8 +239091,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "ebay-reklam",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -239194,8 +239192,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "ebay-urun-secimi",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -239392,8 +239390,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "ebay-satici-performansi",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -241504,7 +241502,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "eticaret-kisisellestirme",
       "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -243801,8 +243799,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "etsy-urun-aciklamasi",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -259223,7 +259221,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "eticaret-kisisellestirme",
       "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 77,
         "not": "B",
@@ -259980,7 +259978,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "eticaret-kisisellestirme",
       "ortusme_rolu": "tamamlayıcı",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 77,
         "not": "B",
@@ -261417,7 +261415,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "eticaret-urun-lansmani",
       "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 77,
         "not": "B",
@@ -261515,7 +261513,7 @@
       "inceleme": "otomatik",
       "ortusme_grubu": "eticaret-urun-lansmani",
       "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 83,
         "not": "A",
@@ -293466,8 +293464,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "ebay-reklam",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -294771,8 +294769,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "ebay-urun-secimi",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -294960,8 +294958,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "ebay-satici-performansi",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -296730,8 +296728,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "etsy-urun-aciklamasi",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -317147,8 +317145,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "shopify-donusum",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -318917,8 +318915,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "shopify-seo",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -326143,8 +326141,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "walmart-reklam",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -327076,8 +327074,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "walmart-fiyat-izleme",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -327637,8 +327635,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "walmart-satici-performansi",
-      "ortusme_rolu": "alternatif",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "birincil",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -356806,8 +356804,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "shopify-donusum",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -360502,8 +360500,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "shopify-seo",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -371220,8 +371218,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "walmart-reklam",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -371415,8 +371413,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "walmart-fiyat-izleme",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -371613,8 +371611,8 @@
       },
       "inceleme": "otomatik",
       "ortusme_grubu": "walmart-satici-performansi",
-      "ortusme_rolu": "birincil",
-      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.",
+      "ortusme_rolu": "alternatif",
+      "notlar": "İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.",
       "degerlendirme": {
         "puan": 79,
         "not": "B",

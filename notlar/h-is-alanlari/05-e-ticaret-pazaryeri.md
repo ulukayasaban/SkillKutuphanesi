@@ -1800,10 +1800,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** ebay-reklam → birincil
+- **Durum:** tercih · **Örtüşme:** ebay-reklam → alternatif
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### ebay-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
@@ -1811,10 +1811,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** ebay-urun-secimi → birincil
+- **Durum:** tercih · **Örtüşme:** ebay-urun-secimi → alternatif
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### ebay-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 83 (A)
 
@@ -1832,10 +1832,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** ebay-satici-performansi → birincil
+- **Durum:** tercih · **Örtüşme:** ebay-satici-performansi → alternatif
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### ebay-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
@@ -2056,7 +2056,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Durum:** tercih · **Örtüşme:** eticaret-kisisellestirme → birincil
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### ecommerce-ppc-strategy-planner  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
@@ -2294,10 +2294,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** etsy-urun-aciklamasi → birincil
+- **Durum:** tercih · **Örtüşme:** etsy-urun-aciklamasi → alternatif
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### etsy-review-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 83 (A)
 
@@ -3908,7 +3908,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Durum:** tercih · **Örtüşme:** eticaret-kisisellestirme → alternatif
 - **Boyut:** 28 KB (SKILL.md 13.3 KB, yük orta)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### php-modern  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)
 
@@ -3989,7 +3989,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Durum:** tercih · **Örtüşme:** eticaret-kisisellestirme → tamamlayıcı
 - **Boyut:** 25 KB (SKILL.md 9.6 KB, yük orta)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### price-optimization-tool  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
@@ -4140,7 +4140,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Durum:** tercih · **Örtüşme:** eticaret-urun-lansmani → alternatif
 - **Boyut:** 24 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### product-launch-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 83 (A)
 
@@ -4151,7 +4151,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Durum:** tercih · **Örtüşme:** eticaret-urun-lansmani → birincil
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### product-page-design  ·  finsilabs/awesome-ecommerce-skills @ 30a1fb6  ·  puan 77 (B)
 
@@ -7529,10 +7529,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** ebay-reklam → alternatif
+- **Durum:** tercih · **Örtüşme:** ebay-reklam → birincil
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-ebay-brand-ip-triage  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -7670,10 +7670,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** ebay-urun-secimi → alternatif
+- **Durum:** tercih · **Örtüşme:** ebay-urun-secimi → birincil
 - **Boyut:** 11 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-ebay-returns-diagnosis  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -7691,10 +7691,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** ebay-satici-performansi → alternatif
+- **Durum:** tercih · **Örtüşme:** ebay-satici-performansi → birincil
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-ebay-shipping-policy  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -7882,10 +7882,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** etsy-urun-aciklamasi → alternatif
+- **Durum:** tercih · **Örtüşme:** etsy-urun-aciklamasi → birincil
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-etsy-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -10063,10 +10063,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** shopify-donusum → alternatif
+- **Durum:** tercih · **Örtüşme:** shopify-donusum → birincil
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-shopify-email-lifecycle  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -10254,10 +10254,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** shopify-seo → alternatif
+- **Durum:** tercih · **Örtüşme:** shopify-seo → birincil
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-shopify-theme-license-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -11025,10 +11025,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** walmart-reklam → alternatif
+- **Durum:** tercih · **Örtüşme:** walmart-reklam → birincil
 - **Boyut:** 13 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-walmart-assortment-gaps  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -11126,10 +11126,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** walmart-fiyat-izleme → alternatif
+- **Durum:** tercih · **Örtüşme:** walmart-fiyat-izleme → birincil
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-walmart-pricing-floors  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -11187,10 +11187,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** xjli360 (kisi, ★115, son güncelleme 2026-10-16, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** walmart-satici-performansi → alternatif
+- **Durum:** tercih · **Örtüşme:** walmart-satici-performansi → birincil
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
 ### sealeap-walmart-sponsored-products-structure  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 80 (A)
 
@@ -14268,10 +14268,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** shopify-donusum → birincil
+- **Durum:** tercih · **Örtüşme:** shopify-donusum → alternatif
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### shopify-custom-data  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 53 (C)
 
@@ -14639,10 +14639,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** shopify-seo → birincil
+- **Durum:** tercih · **Örtüşme:** shopify-seo → alternatif
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### shopify-setup  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)
 
@@ -15760,10 +15760,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** walmart-reklam → birincil
+- **Durum:** tercih · **Örtüşme:** walmart-reklam → alternatif
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### walmart-listing-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 83 (A)
 
@@ -15781,10 +15781,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** walmart-fiyat-izleme → birincil
+- **Durum:** tercih · **Örtüşme:** walmart-fiyat-izleme → alternatif
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### walmart-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 83 (A)
 
@@ -15802,10 +15802,10 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1304, son güncelleme 2026-08-26, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** walmart-satici-performansi → birincil
+- **Durum:** tercih · **Örtüşme:** walmart-satici-performansi → alternatif
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### walmart-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 

@@ -452,7 +452,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Durum:** tercih · **Örtüşme:** pixijs-2d-render → birincil
 - **Boyut:** 21 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### pixijs-2d  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 70 (B)
 
@@ -464,7 +464,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **Durum:** tercih · **Örtüşme:** pixijs-2d-render → alternatif
 - **Boyut:** 253 KB (SKILL.md 20.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kütüphanedeki tek somut 2D render rehberi; v8 API'si (async `app.init`, `Graphics.rect().fill()`, `Particle`) doğru ve kod örnekleri çalışır düzende. Dikkat: büyük (20.6 KB SKILL.md, 935 satır; klasör 280 KB). Şablon ve betikler PixiJS'i sürümsüz `https://pixijs.download/release/pixi.js` CDN adresinden yüklüyor (sürüm sabitlenmemiş). 'Related Skills' bölümü var olmayan adlara (threejs-webgl, motion-framer) başvuruyor. Son güncelleme 335 gün önce. Betikler yalnız stdlib python, HTML/JS şablonu üretir; kurulum/anahtar yok. Oyun rolü olmadığı için role eklenmedi.
-- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): SKILL.md açıklamaları okunarak aynı iş olduğu doğrulandı; silinmedi.
+- **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
 ### pixijs-accessibility  ·  pixijs/pixijs @ 4fabfa6  ·  puan 91 (A)
 

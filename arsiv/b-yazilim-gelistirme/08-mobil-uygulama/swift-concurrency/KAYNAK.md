@@ -8,5 +8,5 @@
 - **Lisans:** MIT
 - **Geliştirici:** Viniciuscarvalho (kisi)
 - **Arşive alınma:** 2026-10-31
-- **Durum:** alternatif
+- **Durum:** tercih
 - **Üst skill:** `swift-code-reviewer-skill` (bu skill onun alt klasörü; ayrıca da kurulabilir)
