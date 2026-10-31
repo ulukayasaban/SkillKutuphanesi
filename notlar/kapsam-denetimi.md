@@ -2,11 +2,11 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-10-31 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 5517 · Arşivdeki skill kaydı: 3093 · Bileşen (komut/agent): 254
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6237 · Arşivdeki skill kaydı: 3813 · Bileşen (komut/agent): 254
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 3086 | arşivde (ana sürüm) |
+| secildi | 3806 | arşivde (ana sürüm) |
 | haric | 2212 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 146 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
@@ -17,6 +17,7 @@
 
 | Repo | SKILL.md | Dağılım |
 |---|---|---|
+| 40RTY-ai/shopify-admin-skills | 117 | secildi 117 |
 | CloudAI-X/threejs-skills | 13 | secildi 13 |
 | ComposioHQ/awesome-claude-skills | 864 | secildi 864 |
 | DietrichGebert/ponytail | 12 | ayna-baska-arac 6, secildi 6 |
@@ -58,6 +59,7 @@
 | czlonkowski/n8n-skills | 15 | secildi 15 |
 | dadederk/iOS-Accessibility-Agent-Skill | 1 | secildi 1 |
 | darkroomengineering/satus | 1 | secildi 1 |
+| dpconde/claude-android-skill | 1 | secildi 1 |
 | earthtojake/text-to-cad | 13 | secildi 12, haric 1 |
 | evanca/flutter-ai-rules | 36 | secildi 36 |
 | expo/skills | 25 | secildi 24, haric 1 |
@@ -97,6 +99,7 @@
 | vercel-labs/agent-skills | 9 | secildi 9 |
 | vercel/next.js | 27 | secildi 27 |
 | vudovn/ag-kit | 58 | secildi 58 |
+| xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
 | ythx-101/live-panel-skill | 1 | secildi 1 |

@@ -166,16 +166,6 @@
       "neden": "Mercado Pago resmî ödeme entegrasyonu (checkout, webhook, test).",
       "tarih": "2026-10-22"
     },
-    "40RTY-ai/shopify-admin-skills": {
-      "karar": "reddedildi",
-      "neden": "Kütüphaneden kaldırıldı: Shopify yönetimi resmî Shopify/agent-skills + nexscope shopify-* ile karşılanıyor; güven 39 D, ★201, hiçbir role bağlı değil",
-      "tarih": "2026-10-31"
-    },
-    "xjli360/sealeap-amazon-skills": {
-      "karar": "reddedildi",
-      "neden": "Kütüphaneden kaldırıldı: 602 skillin 564'ü Amazon değil (Douyin/WeChat/Bilibili/YouTube/Xiaohongshu/app); gerçek Amazon karşılığı nexscope-ai/Amazon-Skills'te; güven 33 D, ★340, 19 MB",
-      "tarih": "2026-10-31"
-    },
     "magendooro/magento-claude-skills": {
       "karar": "eklendi",
       "neden": "Magento 2 / Adobe Commerce mağaza yönetimi (ürün, sipariş, stok, müşteri).",
@@ -198,18 +188,13 @@
     },
     "aldefy/compose-skill": {
       "karar": "reddedildi",
-      "neden": "Kütüphaneden kaldırıldı: Jetpack Compose: resmî android/skills (97-99 puan) ve hamen/compose_skill daha iyi; lisans belirsiz; güven 31 D",
+      "neden": "Kütüphaneden kaldırıldı: lisans belirsiz (NOASSERTION); lisans netleşirse yeniden değerlendir",
       "tarih": "2026-10-31"
     },
     "hamen/compose_skill": {
       "karar": "eklendi",
       "neden": "Jetpack Compose denetimi ve agent.",
       "tarih": "2026-10-22"
-    },
-    "dpconde/claude-android-skill": {
-      "karar": "reddedildi",
-      "neden": "Kütüphaneden kaldırıldı: Genel Android rehberi: resmî android/skills daha kapsamlı; tek skill, güven 27 D",
-      "tarih": "2026-10-31"
     },
     "mmiani/kotlin-kmp-claude-agent-skills": {
       "karar": "eklendi",

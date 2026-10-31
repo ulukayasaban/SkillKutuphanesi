@@ -95,6 +95,11 @@ Kütüphane kaynakları **herkese açık GitHub repolarıdır** (sabit commit ve
 ## D) Kaynak / skill KALDIRMAK (azaltma)
 Ölçüt (hepsi birlikte): GitHub güveni düşük (D) **ve** yıldız az **ve** işlevi kütüphanede daha iyi bir kaynaktan karşılanıyor **ve**
 hiçbir role/profile bağlı değil. Benzersiz işi olan düşük güvenli kaynak tutulur. Adımlar:
+0. **Önce içerik (zorunlu):** her alt klasörden örnek SKILL.md OKU ve gerekçeyi içerikle doğrula; klasör adından konu çıkarma
+   (bkz. rehber/05 #97: `sealeap-amazon-skills` olayı). "Daha iyi alternatif var" diyorsan alternatifin SKILL.md'sini de oku:
+   aynı işi mi yapıyor (geliştirici dokümanı ≠ işletme akışı)? Benzerlik puanları yalnızca aday üretir; Çince metinde çalışmaz.
+   Projelerde kurulu mu bak (`find ~ -path '*/.skill-kutuphanesi/kilit.json'`). Varsayılan sonuç **örtüşme grubu** (birincil/alternatif);
+   silme listesini kanıtıyla kullanıcıya sun ve **onay** al.
 1. `kaynaklar.json`: repo kaydını `repolar`dan sil; `arsivden_cikarilan_repolar`a `{repo, skill_sayisi, neden, tarih, geri_alma}` ekle
    (tek tek skill için `arsivden_cikarilanlar`: `{repo, kaynak_yol, ad, neden, tarih}`).
 2. Çalışma sırası: `kaynak-cek.py --repo <repo>` (yalnız tek skill çıkarıyorsan) → `arsiv-yerlestir.py` → `kapsam-denetimi.py` →

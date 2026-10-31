@@ -8,4 +8,4 @@
 - **Lisans:** MIT
 - **Geliştirici:** tuist (kurum)
 - **Arşive alınma:** 2026-10-31
-- **Durum:** alternatif
+- **Durum:** tercih

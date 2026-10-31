@@ -10,7 +10,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Karaktere eşlik eden çevre efektleri veya basit prosedürel gövdeler gerektiğinde. · **Ne zaman değil:** Karmaşık yüz oyunculuğu (SVG rig daha uygun) veya kare-kesin final render.
 - **Teknoloji:** p5js, canvas, javascript · **Paketler:** p5
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** karakter-animasyonu → alternatif · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Çok kısa (ipucu düzeyi); kaynak bağlantıları doğru.
@@ -21,7 +21,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Karakter animasyonu önizlemesi veya finali teslim edilmeden önce. · **Ne zaman değil:** Karakter içermeyen genel video kontrolü (hyperframes-cli inspect/validate).
 - **Teknoloji:** playwright, ffmpeg · **Paketler:** playwright, ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, qa-erisilebilirlik · **Globalde:** claude:ayni
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa kontrol listesi; OpenMontage karakter hattının şema adlarına atıf yapıyor.
@@ -32,7 +32,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** SVG/2D karakter animasyonu için rig planı hazırlarken. · **Ne zaman değil:** 3D rig (Blender/Three.js); hazır Lottie animasyonu yeterliyse.
 - **Teknoloji:** svg, gsap, remotion
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ama doğru kalıplar; OpenMontage rig_plan artefaktına göre yazılmış.
@@ -43,17 +43,17 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Herhangi bir geçiş, metin vuruşu devri, kinetik metin girişi veya grup yeniden konumlandırma yazılmadan önce. · **Ne zaman değil:** Tek sahnelik statik işlerde; HyperFrames/GSAP dışı ortamlarda.
 - **Teknoloji:** gsap, hyperframes · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heygen-com (kurum, resmî, ★76165, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** heygen-com (kurum, resmî, ★76226, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 28 KB (SKILL.md 18.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Sayısal, uygulanabilir teknik kataloğu; GSAP örnekleri dahil. Ev stili kökenli olsa da genel geçer değerde.
 
-### huashu-art-motion  ·  nexu-io/open-design @ 12d970e  ·  puan 96 (A)
+### huashu-art-motion  ·  nexu-io/open-design @ 12d970e  ·  puan 97 (A)
 
 - **Ne yapar:** 辅助艺术动画与解说任务：35 种艺术风格配方、9 种解说语法、分镜与确定性 Canvas 绘制工具。按宿主时间轴实现，素材与导出使用宿主能力。
 - **Teknoloji:** canvas _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105085, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105114, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 424 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -74,7 +74,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Matematik/bilim açıklayıcı videosu planlanırken, Manim kodundan önce. · **Ne zaman değil:** Kod yazımı (manimce/manimgl-best-practices); matematik dışı tanıtım videoları.
 - **Teknoloji:** manim
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** manim-animasyon → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, planlayici · **Globalde:** claude:ayni
 - **Boyut:** 22 KB (SKILL.md 4.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İyi planlama şablonu ve 3b1b ilkeleri; references/ dosyaları faydalı.
@@ -85,7 +85,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** 'from manim import *' kullanan matematik/bilim animasyonlarında. · **Ne zaman değil:** ManimGL (manimlib) projelerinde; matematik dışı motion graphic işlerinde.
 - **Teknoloji:** manim, python, latex · **Paketler:** manim, latex, ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** manim-animasyon → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
 - **Boyut:** 206 KB (SKILL.md 5.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kapsamlı kural seti, test edilmiş örnekler; CE topluluk sürümü daha yaygın olduğu için birincil.
@@ -96,7 +96,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** 'from manimlib import *' kullanan veya etkileşimli geliştirme isteyen projelerde. · **Ne zaman değil:** Manim Community Edition projelerinde (API'ler farklı).
 - **Teknoloji:** manim, python, opengl, latex · **Paketler:** manimgl, latex
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** manim-animasyon → alternatif · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
 - **Boyut:** 729 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 5
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli; kurulumu ve sürüm uyumu CE'ye göre zahmetli.
@@ -107,17 +107,17 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Çok sahneli HyperFrames videosunda geçiş ve hareket dili kurulmadan önce. · **Ne zaman değil:** Tek sahnelik kısa grafiklerde; HyperFrames dışı web animasyonunda.
 - **Teknoloji:** hyperframes, gsap, node · **Paketler:** hyperframes (npx), node
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heygen-com (kurum, resmî, ★76165, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** heygen-com (kurum, resmî, ★76226, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 44 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut.
 
-### oil-motion  ·  nexu-io/open-design @ 12d970e  ·  puan 94 (A)
+### oil-motion  ·  nexu-io/open-design @ 12d970e  ·  puan 95 (A)
 
 - **Ne yapar:** 处理视频和序列帧，编译滚动、指针、拖动与状态驱动的网页动效；内含本地媒体处理脚本和运行时。新素材生成使用宿主工具。
 - **Teknoloji:** api-anahtari, css, ffmpeg, html, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105085, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105114, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 318 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** otomatik
@@ -128,7 +128,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Karakterin duygu ve aksiyonlarını tutarlı pozlarla anlatmak gerektiğinde. · **Ne zaman değil:** Tek seferlik basit hareketler; rig henüz yoksa (önce character-rigging).
 - **Teknoloji:** gsap, remotion
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve doğru; tek başına derinliği sınırlı.
@@ -139,7 +139,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Ana index.html birleştirilirken veya geçişte beyaz parlama/opaklık sızması görüldüğünde. · **Ne zaman değil:** Geçiş seçimi için (cut-the-curve); tek sahnelik işlerde.
 - **Teknoloji:** hyperframes, html, css · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heygen-com (kurum, resmî, ★76165, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** heygen-com (kurum, resmî, ★76226, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.
@@ -150,7 +150,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Açıklayıcı videoda konuşan/hareket eden 2D karakter gerektiğinde. · **Ne zaman değil:** 3D karakter; hazır Lottie dosyası oynatılacaksa (lottie-bodymovin).
 - **Teknoloji:** svg, gsap, remotion, hyperframes · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** karakter-animasyonu → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Remotion'da GSAP'ı kareye bağlama gibi kritik kuralları doğru veriyor.
@@ -161,7 +161,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** OpenMontage/HyperFrames hattında sinematik 3D ortam videosu. · **Ne zaman değil:** Web sayfasına gömülü 3D, tek nesne, düz paralaks sahne; OpenMontage yoksa.
 - **Teknoloji:** three.js, hyperframes, openmontage, python, blender · **Paketler:** OpenMontage (~/.openmontage), hyperframes
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** three-dunya-uretimi → birincil · **Roller:** video-kompozisyon · **Globalde:** claude:ayni
 - **Boyut:** 16 KB (SKILL.md 8.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir. Kategori düzeltildi (05-3d-webgl → g-video-ses-medya/04-motion-graphics-karakter): web 3D'si değil, OpenMontage video boru hattının parçası (tools.graphics.threejs_world).
@@ -182,7 +182,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Ne zaman:** Video veya sunum serisinde tutarlı renk, tipografi, hareket ve ruh hali tanımlanacaksa. · **Ne zaman değil:** Kod tabanlı web tasarım sistemi/token kurulumu (a-tasarim/02 skilleri daha uygun).
 - **Teknoloji:** markdown, html
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★73594, son güncelleme 2026-10-28, lisans AGPL-3.0)
+- **Geliştirici:** calesthio (kisi, ★73673, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** gorsel-stil-sistemi → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
 - **Boyut:** 81 KB (SKILL.md 6.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Pratik mod tablosu ve galeri; a-tasarim/02 tasarım sistemi skilleriyle kısmen örtüşür.

@@ -865,6 +865,24 @@
         "^skill/"
       ],
       "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Expo uygulamasını gerçek telefonda canlı geliştirme (Codex skill'i)."
+    },
+    {
+      "repo": "xjli360/sealeap-amazon-skills",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Amazon araştırma, listeleme, reklam, stok. DİL: 602 skillin 485'inin açıklaması Çince (Amazon/sınır ötesi satıcı bilgisi, Çin platformlarındaki videolardan derlenmiş); 117'si İngilizce. Klasör adları (douyin/bilibili/weixin…) bilginin KAYNAĞINI gösterir, konusunu değil."
+    },
+    {
+      "repo": "40RTY-ai/shopify-admin-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Shopify mağaza yönetimi iş akışları."
+    },
+    {
+      "repo": "dpconde/claude-android-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Modern Android uygulama geliştirme en iyi uygulamaları. Genel Android mimari rehberi (NowInAndroid: modüller, katmanlar, Gradle, test); resmî android/skills'te bu genel rehberin karşılığı yok."
     }
   ],
   "konum_haric": [
@@ -1816,30 +1834,9 @@
   "_aciklama_korunan": "korunan_listeler: kullanıcının kendi GitHub listeleri (ör. 'Yapay Zeka araçları'). github-skill-listesi.py --duzenle bu listelerdeki üyeliği SİLMEZ; skill içeren repo ayrıca skill listesine girer.",
   "arsivden_cikarilan_repolar": [
     {
-      "repo": "xjli360/sealeap-amazon-skills",
-      "skill_sayisi": 602,
-      "neden": "602 skillin 564'ü Amazon değil (Douyin/WeChat/Bilibili/YouTube/Xiaohongshu/app); gerçek Amazon karşılığı nexscope-ai/Amazon-Skills'te; güven 33 D, ★340, 19 MB",
-      "tarih": "2026-10-31",
-      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
-    },
-    {
-      "repo": "40RTY-ai/shopify-admin-skills",
-      "skill_sayisi": 117,
-      "neden": "Shopify yönetimi resmî Shopify/agent-skills + nexscope shopify-* ile karşılanıyor; güven 39 D, ★201, hiçbir role bağlı değil",
-      "tarih": "2026-10-31",
-      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
-    },
-    {
       "repo": "aldefy/compose-skill",
       "skill_sayisi": 1,
-      "neden": "Jetpack Compose: resmî android/skills (97-99 puan) ve hamen/compose_skill daha iyi; lisans belirsiz; güven 31 D",
-      "tarih": "2026-10-31",
-      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
-    },
-    {
-      "repo": "dpconde/claude-android-skill",
-      "skill_sayisi": 1,
-      "neden": "Genel Android rehberi: resmî android/skills daha kapsamlı; tek skill, güven 27 D",
+      "neden": "Lisans belirsiz (NOASSERTION), güven 31 D. Compose için hamen/compose_skill ve resmî android/skills'in Compose konuları kalıyor; bu genel 'compose-expert' rehberinin birebir karşılığı YOK (lisans netleşirse geri alınabilir).",
       "tarih": "2026-10-31",
       "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
     },
