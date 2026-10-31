@@ -114,6 +114,9 @@ Her satır gerçek bir hata olasılığıdır. "Nasıl yakalanır" sütunu, soru
 | 88 | KAYNAK.md'de her ay değişen puan satırı ~3.900 dosyayı değiştirip onaylanacak güncelleme farkını boğar | Puan KAYNAK.md'den çıkarıldı (registry/KATALOG/rehberde) |
 | 89 | Kaynağı kaldırılmış skill projede "güncel" görünür; trend bonusu tarama durunca hiç sönmez | `--durum` "EMEKLİ" gösterir (kaynak-yok/emekli); trend bugünün tarihine göre söner (14 günden eski tarama "trendde" sayılmaz) |
 | 90 | Prompt 11'in andığı bayrak/ön kontrol kodu/rehber sütunu yeniden adlandırılınca prompt sessizce bozulur; roldeki skill başka kaynağa geçer | `dogrula.py`: prompttaki bayraklar ve kodlar `skill-ekle.py`'de aranır; `Kart` sütunu; rol kaynağı git HEAD ile karşılaştırılır |
+| 91 | Kaynak listesinden silinen repo, indirme önbelleğindeki (.gecici) kayıtla arşive geri dirilir (602 skilllik bir repo silinmiş görünüp arşivde kalmıştı) | `arsiv-yerlestir.py` manifesti yalnızca kaynaklar.json'da hâlâ tanımlı (repo, tip) kayıtlarıyla kullanır; silinenler `arsivden_cikarilan_repolar` ile açıkça kayıtlıdır |
+| 92 | Düşük güvenli ama yedeği olmayan repo silinirse kapsam kaybolur (Trendyol, Flutter, ASO…) | Silme ölçütü: güven düşük **ve** yıldız az **ve** işlevi kütüphanede daha iyi bir kaynaktan karşılanıyor **ve** hiçbir role bağlı değil. Benzersiz işi olan düşük güvenli kaynaklar tutulur ve raporda belirtilir |
+| 93 | Toplama repolarında içi boş yönlendirme (stub) skilleri kataloğu şişirir ve öneriye karışır | `kalite: 1` olan stub'lar `arsivden_cikarilanlar`'a yazılıp çıkarıldı (open-design 82); aylık güncellemede yeniden gelmezler |
 
 ## Bilinen sınırlar (bilinçli)
 - Kategori ve teknoloji etiketleri **ilk aşamada otomatiktir**; kesin bilgi kategori incelemesiyle gelir (`07-kategori-inceleme.md`).

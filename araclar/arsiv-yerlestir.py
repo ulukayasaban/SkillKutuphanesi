@@ -299,6 +299,12 @@ def main():
         sys.exit("Önce araclar/kaynak-cek.py çalıştır.")
     if not manifest.get("kayitlar"):
         sys.exit("DURDU: indirme manifestinde hiç kayıt yok (kaynak-cek.py hiçbir şey indirmedi). Arşive dokunulmadı.")
+    # İndirme önbelleği (.gecici) kaynak listesinden SONRADAN silinen/kaldırılan repoların kayıtlarını taşıyabilir: onları diriltme
+    _ayar0 = json_oku(KOK / "kaynaklar.json")
+    _aktif = {(k["repo"], k["tip"]) for k in _ayar0["repolar"]}
+    _cikar = {c["repo"] for c in _ayar0.get("arsivden_cikarilan_repolar", [])}
+    manifest["kayitlar"] = [m for m in manifest["kayitlar"] if (m["repo"], m["tip"]) in _aktif and m["repo"] not in _cikar]
+    manifest["bilesenler"] = [b for b in manifest.get("bilesenler", []) if b["repo"] in {r for r, _ in _aktif} and b["repo"] not in _cikar]
     eksik = [m for m in manifest["kayitlar"] if m["inen_dosya"] < m["beklenen_dosya"] or m.get("varyant_eksik")]
     if eksik:
         sys.exit("HATA: eksik inen skiller: " + ", ".join(f"{m['repo']}:{m['klasor_adi']}" for m in eksik))
@@ -419,10 +425,12 @@ def main():
     arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}
     korunan_indirilmeyen = set()
     # Kullanıcı kararıyla arşivden çıkarılanlar (ör. emekli eski sürümler): korunmaz, kayıp kilidine takılmaz
-    cikarilan = {(c["repo"], c["kaynak_yol"]) for c in json_oku(KOK / "kaynaklar.json").get("arsivden_cikarilanlar", [])}
+    _ayar = json_oku(KOK / "kaynaklar.json")
+    cikarilan = {(c["repo"], c["kaynak_yol"]) for c in _ayar.get("arsivden_cikarilanlar", [])}
+    cikarilan_repo = {c["repo"] for c in _ayar.get("arsivden_cikarilan_repolar", [])}  # bütün repo bilerek kaldırıldı
     for s in eski_liste:
         kaynak = (s["repo"], s["kaynak_yol"])
-        if kaynak in yeni_kaynaklar or kaynak in cikarilan:
+        if kaynak in yeni_kaynaklar or kaynak in cikarilan or s["repo"] in cikarilan_repo:
             continue
         if s["repo"] in kayip:
             s["kaynak_durumu"] = "kayip"
@@ -567,7 +575,7 @@ def main():
     # Güvenlik kilidi: önceki registry'deki kaynakların hepsi ya yeniden yerleşmiş ya da korunmuş olmalı.
     yeni_k = {(s["repo"], s["kaynak_yol"]) for s in skiller}
     kayip_k = [s["id"] for s in eski_liste if (s["repo"], s["kaynak_yol"]) not in yeni_k
-               and (s["repo"], s["kaynak_yol"]) not in cikarilan
+               and (s["repo"], s["kaynak_yol"]) not in cikarilan and s["repo"] not in cikarilan_repo
                and not any(f"{s['repo']}:{s['kaynak_yol'] or '.'}" in x.get("kopya_kaynaklar", []) for x in skiller)]
     if kayip_k and "--kayba-izin-ver" not in sys.argv:
         shutil.rmtree(YENI, ignore_errors=True)

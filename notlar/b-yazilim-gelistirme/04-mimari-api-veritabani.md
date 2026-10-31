@@ -10,7 +10,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** REST/GraphQL endpoint'i, modül sınırı veya ön yüz-arka yüz sözleşmesi tasarlarken; herkese açık bir arayüzü değiştirirken. · **Ne zaman değil:** Yalnız iç, tek kullanımlık fonksiyonlar; API stil seçimi (REST mi GraphQL mi tRPC mi) ağırlıklıysa api-patterns ile birlikte.
 - **Teknoloji:** typescript, rest, graphql
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★112036, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★112040, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** api-tasarimi → birincil · **Roller:** backend-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 15 KB (SKILL.md 14.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı.
@@ -66,7 +66,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Ne zaman:** Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde. · **Ne zaman değil:** Sanat yönetimi/görsel yön belirleme (a-tasarim skilleri); salt backend işleri.
 - **Teknoloji:** react, typescript, css, tailwind
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★112036, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★112040, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** frontend-ui-uygulama → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı.

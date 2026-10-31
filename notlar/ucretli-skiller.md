@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 55
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 33
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -19,41 +19,19 @@
 | `fish-audio-tts` | 02-ses-muzik-konusma | fish.audio API |
 | `lyria` | 02-ses-muzik-konusma | Google Lyria (Gemini/Vertex API) |
 | `music` | 02-ses-muzik-konusma | ElevenLabs Music API. Ücretsiz yol: media-use (yerel MusicGen) |
-| `speech` | 02-ses-muzik-konusma | OpenAI TTS API: karakter başına ücret |
 | `text-to-speech` | 02-ses-muzik-konusma | HeyGen Starfish TTS (HEYGEN_API_KEY). Ücretsiz yol: media-use (Kokoro) |
-| `venice-audio-music` | 02-ses-muzik-konusma | Venice.ai API anahtarı ve ücretli kullanım |
-| `venice-audio-speech` | 02-ses-muzik-konusma | Venice.ai API anahtarı ve ücretli kullanım |
 | `ai-video-gen` | 03-ai-gorsel-video-modelleri | HeyGen / fal.ai / Kling / Gemini API ağ geçitleri |
 | `atlas-cloud` | 03-ai-gorsel-video-modelleri | Atlas Cloud API (ATLASCLOUD_API_KEY) |
 | `avatar-video` | 03-ai-gorsel-video-modelleri | HeyGen API |
 | `bfl-api` | 03-ai-gorsel-video-modelleri | Black Forest Labs FLUX API (BFL_API_KEY) |
 | `faceswap` | 03-ai-gorsel-video-modelleri | HeyGen API |
-| `fal-3d` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-generate` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-image-edit` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-kling-o3` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-lip-sync` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-realtime` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-restore` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-train` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-tryon` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-upscale` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-video-edit` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
-| `fal-vision` | 03-ai-gorsel-video-modelleri | fal.ai API anahtarı (FAL_KEY) ve kullanım başına ücret |
 | `gemini-omni` | 03-ai-gorsel-video-modelleri | Gemini API / fal.ai (video üretimi ücretli kotada) |
-| `gif-sticker-maker` | 03-ai-gorsel-video-modelleri | MiniMax API ile görsel/video üretimi: ücretli |
 | `grok-media` | 03-ai-gorsel-video-modelleri | xAI API |
 | `heygen` | 03-ai-gorsel-video-modelleri | HeyGen API (kullanımdan kaldırıldı; create-video / avatar-video) |
-| `imagegen` | 03-ai-gorsel-video-modelleri | OpenAI Image API (OPENAI_API_KEY): görsel başına ücret |
 | `kling-official` | 03-ai-gorsel-video-modelleri | Kling / fal.ai API |
 | `minimax-h3` | 03-ai-gorsel-video-modelleri | MiniMax / fal.ai API |
-| `replicate` | 03-ai-gorsel-video-modelleri | Replicate API: model çalıştırma başına ücret |
 | `seedance-2-0` | 03-ai-gorsel-video-modelleri | Seedance (Atlas Cloud / fal.ai / BytePlus) API |
 | `seedance-2-5` | 03-ai-gorsel-video-modelleri | Seedance API sağlayıcıları |
-| `sora` | 03-ai-gorsel-video-modelleri | OpenAI Sora video API: ücretli |
-| `venice-image-edit` | 03-ai-gorsel-video-modelleri | Venice.ai API anahtarı ve ücretli kullanım |
-| `venice-image-generate` | 03-ai-gorsel-video-modelleri | Venice.ai API anahtarı ve ücretli kullanım |
-| `venice-video` | 03-ai-gorsel-video-modelleri | Venice.ai API anahtarı ve ücretli kullanım |
 | `adaptyv` | 01-yasam-bilimleri-kimya | Adaptyv Bio protein deney hizmeti: ücretli |
 | `benchling-integration` | 01-yasam-bilimleri-kimya | Benchling kurumsal lisansı/hesabı gerekir |
 | `dnanexus-integration` | 01-yasam-bilimleri-kimya | DNAnexus hesabı/kurum lisansı gerekir |
@@ -62,11 +40,10 @@
 | `generate-image` | 04-bilimsel-yazim-literatur | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 109
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 104
 
 | Skill | Kategori | Neden |
 |---|---|---|
-| `frontend-dev` | 01-ui-ux-tasarim-dili | Arayüz kodu ücretsiz; AI medya üretimi MiniMax API (ücretli) |
 | `design` | 02-tasarim-sistemi-marka | Logo/görsel üretimi Gemini/MuAPI anahtarı ister; tasarım rehberi ücretsiz |
 | `rive-interactive` | 03-animasyon-motion | Rive ücretsiz plan; bazı özellikler ücretli |
 | `spline-interactive` | 05-3d-webgl | Spline ücretsiz plan; bazı dışa aktarma/ekip özellikleri ücretli |
@@ -107,7 +84,6 @@
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices@calesthio` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-maps` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
-| `remotion@calesthio` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `agents` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planındaki sesli agent dakikalarıyla denenebilir; üretim kullanımı ücretli |
 | `azure-speech-to-text` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: faster-whisper |
 | `azure-text-to-speech` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: piper |
@@ -117,10 +93,7 @@
 | `speech-to-text` | 02-ses-muzik-konusma | ElevenLabs Scribe ücretsiz kotası var; fazlası ücretli. Tamamen ücretsiz yol: media-use transcribe (Whisper/Parakeet) |
 | `3d-asset-generation` | 03-ai-gorsel-video-modelleri | Üretim Atlas Cloud / fal.ai ile ücretli; CC0 Kenney kataloğu ve Blender yolu ücretsiz |
 | `comfyui` | 03-ai-gorsel-video-modelleri | Yerel ComfyUI ücretsiz; 'Partner Nodes' Comfy hesabı ve ön ödemeli kredi ister |
-| `imagen` | 03-ai-gorsel-video-modelleri | Google Gemini görsel API: sınırlı ücretsiz kota, sonrası ücretli |
 | `ltx2` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
-| `nanobanana-ppt` | 03-ai-gorsel-video-modelleri | Gemini (Nano Banana) görsel üretimi: sınırlı ücretsiz kota, sonrası ücretli; deste yapısı yerel |
-| `pixelbin-media` | 03-ai-gorsel-video-modelleri | Pixelbin hesabı: ücretsiz kredi var, sonrası ücretli |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
 | `trader-broker` | 02-finans-hukuk-ik | Alpaca: ücretsiz kâğıt (paper) hesapla denenir; gerçek hesapta komisyonsuz ama GERÇEK PARA riski — işlem öncesi kullanıcı onayı şart |
 | `acp-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz), ACP/Stripe (işlem başı) |

@@ -283,10 +283,6 @@
       "kimlik": "satus-starter"
     },
     {
-      "repo": "gchahal1982/pixeljury",
-      "tip": "T6"
-    },
-    {
       "repo": "dequelabs/axe-core",
       "tip": "T6"
     },
@@ -323,15 +319,7 @@
       "tip": "T5"
     },
     {
-      "repo": "bytefer/awesome-nextjs",
-      "tip": "T5"
-    },
-    {
       "repo": "arturitu/the-delegation",
-      "tip": "T5"
-    },
-    {
-      "repo": "haticesahin/SanalFuar",
       "tip": "T5"
     },
     {
@@ -575,18 +563,6 @@
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Mercado Pago resmî ödeme entegrasyonu (checkout, webhook, test)."
     },
     {
-      "repo": "40RTY-ai/shopify-admin-skills",
-      "tip": "T1",
-      "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Shopify mağaza yönetimi iş akışları."
-    },
-    {
-      "repo": "xjli360/sealeap-amazon-skills",
-      "tip": "T1",
-      "oncelik": 4,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Amazon araştırma, listeleme, reklam, stok."
-    },
-    {
       "repo": "magendooro/magento-claude-skills",
       "tip": "T1",
       "oncelik": 3,
@@ -611,22 +587,10 @@
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Flutter/Dart skilleri (mimari, Bloc, Firebase, erişilebilirlik)."
     },
     {
-      "repo": "aldefy/compose-skill",
-      "tip": "T1",
-      "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Jetpack Compose uzman rehberi (androidx kaynaklarına dayalı). Lisans belirsiz."
-    },
-    {
       "repo": "hamen/compose_skill",
       "tip": "T1",
       "oncelik": 3,
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Jetpack Compose denetimi ve agent."
-    },
-    {
-      "repo": "dpconde/claude-android-skill",
-      "tip": "T1",
-      "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Modern Android uygulama geliştirme en iyi uygulamaları."
     },
     {
       "repo": "mmiani/kotlin-kmp-claude-agent-skills",
@@ -797,11 +761,6 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
     },
     {
-      "repo": "darkroomengineering/react-lenis",
-      "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
-    },
-    {
       "repo": "KaTeX/KaTeX",
       "tip": "T5",
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
@@ -842,6 +801,70 @@
       "kimlik": "remotion__resmi-skiller",
       "bagimlilik": "Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.",
       "not": "Remotion'ın resmî kullanıcı skilleri (packages/skills/skills). Repo-içi katkı skilleri ayrı T3 kaydında. packages/codex-plugin/skills = aynı skillerin Codex eklentisi kopyası (ayna)."
+    },
+    {
+      "repo": "MADTeacher/mad-agents-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Flutter/Dart: mimari, navigasyon, ağ, test, animasyon, uyarlanabilir arayüz, i18n, Drift veritabanı."
+    },
+    {
+      "repo": "Harishwarrior/flutter-claude-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Flutter test ve OWASP mobil güvenlik denetimi."
+    },
+    {
+      "repo": "Viniciuscarvalho/swift-code-reviewer-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Swift/SwiftUI: eşzamanlılık, test, uzman rehberi, arayüz kalıpları."
+    },
+    {
+      "repo": "tuist/fuckingapproachableswiftconcurrency",
+      "tip": "T1",
+      "oncelik": 3,
+      "dahil": [
+        "^src/"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Swift eşzamanlılığı (Tuist ekibi); skill src/ içinde."
+    },
+    {
+      "repo": "ParthJadhav/ios-marketing-capture",
+      "tip": "T1",
+      "oncelik": 3,
+      "dosya_haric": [
+        "^\\.github/",
+        "^CONTRIBUTING"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. iOS uygulama mağazası görsellerini çok dilli otomatik üretir."
+    },
+    {
+      "repo": "jazzychad/ios-code-audit",
+      "tip": "T1",
+      "oncelik": 3,
+      "dosya_haric": [
+        "^\\.github/"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. iOS kod tabanı denetimi."
+    },
+    {
+      "repo": "arjitj2/swiftui-design-principles",
+      "tip": "T1",
+      "oncelik": 3,
+      "dosya_haric": [
+        "^\\.github/"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. SwiftUI/WidgetKit tasarım ilkeleri."
+    },
+    {
+      "repo": "Kappaemme-git/codex-phone-lab",
+      "tip": "T1",
+      "oncelik": 3,
+      "dahil": [
+        "^skill/"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Expo uygulamasını gerçek telefonda canlı geliştirme (Codex skill'i)."
     }
   ],
   "konum_haric": [
@@ -1074,6 +1097,662 @@
       "neden": "OpenMontage'da kaynaktan kaldırıldı; güncel aslı vercel-labs/agent-skills web-design-guidelines (tercih); kullanıcı kararı: eski sürümler kaldırılsın",
       "tarih": "2026-10-23",
       "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/frontend-dev",
+      "ad": "frontend-dev",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/frontend-skill",
+      "ad": "frontend-skill",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/shadcn-ui",
+      "ad": "shadcn-ui",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/swiftui-design",
+      "ad": "swiftui-design",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/ui-skills",
+      "ad": "ui-skills",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/apple-hig",
+      "ad": "apple-hig",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/brand-guidelines",
+      "ad": "brand-guidelines",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/color-expert",
+      "ad": "color-expert",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/design-consultation",
+      "ad": "design-consultation",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/design-md",
+      "ad": "design-md",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/figma-code-connect-components",
+      "ad": "figma-code-connect-components",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/figma-create-design-system-rules",
+      "ad": "figma-create-design-system-rules",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/figma-create-new-file",
+      "ad": "figma-create-new-file",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/figma-generate-design",
+      "ad": "figma-generate-design",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/figma-generate-library",
+      "ad": "figma-generate-library",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/figma-implement-design",
+      "ad": "figma-implement-design",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/figma-use",
+      "ad": "figma-use",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/platform-design",
+      "ad": "platform-design",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/stitch-loop",
+      "ad": "stitch-loop",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/theme-factory",
+      "ad": "theme-factory",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/wpds",
+      "ad": "wpds",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/flutter-animating-apps",
+      "ad": "flutter-animating-apps",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/shader-dev",
+      "ad": "shader-dev",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/threejs",
+      "ad": "threejs",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/algorithmic-art",
+      "ad": "algorithmic-art",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/artifacts-builder",
+      "ad": "artifacts-builder",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/canvas-design",
+      "ad": "canvas-design",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/frontend-slides",
+      "ad": "frontend-slides",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/hand-drawn-diagrams",
+      "ad": "hand-drawn-diagrams",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/image-enhancer",
+      "ad": "image-enhancer",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/pptx-generator",
+      "ad": "pptx-generator",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/slack-gif-creator",
+      "ad": "slack-gif-creator",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/slides",
+      "ad": "slides",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/web-artifacts-builder",
+      "ad": "web-artifacts-builder",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/design-review",
+      "ad": "design-review",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/full-page-screenshot",
+      "ad": "full-page-screenshot",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/plan-design-review",
+      "ad": "plan-design-review",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/screenshot",
+      "ad": "screenshot",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/screenshots-marketing",
+      "ad": "screenshots-marketing",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/brainstorming",
+      "ad": "brainstorming",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/doc",
+      "ad": "doc",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/docx",
+      "ad": "docx",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/minimax-docx",
+      "ad": "minimax-docx",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/minimax-pdf",
+      "ad": "minimax-pdf",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/pdf",
+      "ad": "pdf",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/pptx",
+      "ad": "pptx",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/ad-creative",
+      "ad": "ad-creative",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/competitive-ads-extractor",
+      "ad": "competitive-ads-extractor",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/copywriting",
+      "ad": "copywriting",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/domain-name-brainstormer",
+      "ad": "domain-name-brainstormer",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/marketing-psychology",
+      "ad": "marketing-psychology",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/paywall-upgrade-cro",
+      "ad": "paywall-upgrade-cro",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/enhance-prompt",
+      "ad": "enhance-prompt",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/remotion",
+      "ad": "remotion",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/video-downloader",
+      "ad": "video-downloader",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/youtube-clipper",
+      "ad": "youtube-clipper",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/ai-music-album",
+      "ad": "ai-music-album",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/speech",
+      "ad": "speech",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/venice-audio-music",
+      "ad": "venice-audio-music",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/venice-audio-speech",
+      "ad": "venice-audio-speech",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-3d",
+      "ad": "fal-3d",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-generate",
+      "ad": "fal-generate",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-image-edit",
+      "ad": "fal-image-edit",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-kling-o3",
+      "ad": "fal-kling-o3",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-lip-sync",
+      "ad": "fal-lip-sync",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-realtime",
+      "ad": "fal-realtime",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-restore",
+      "ad": "fal-restore",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-train",
+      "ad": "fal-train",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-tryon",
+      "ad": "fal-tryon",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-upscale",
+      "ad": "fal-upscale",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-video-edit",
+      "ad": "fal-video-edit",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/fal-vision",
+      "ad": "fal-vision",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/gif-sticker-maker",
+      "ad": "gif-sticker-maker",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/imagegen",
+      "ad": "imagegen",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/imagen",
+      "ad": "imagen",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/nanobanana-ppt",
+      "ad": "nanobanana-ppt",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/pixelbin-media",
+      "ad": "pixelbin-media",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/replicate",
+      "ad": "replicate",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/sora",
+      "ad": "sora",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/venice-image-edit",
+      "ad": "venice-image-edit",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/venice-image-generate",
+      "ad": "venice-image-generate",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "kaynak_yol": "skills/venice-video",
+      "ad": "venice-video",
+      "neden": "İçi boş yönlendirme (SKILL.md yalnız upstream'e işaret ediyor, talimat yok); kalite 1",
+      "tarih": "2026-10-31",
+      "son_commit": "e03d5c23f308c39f4de7c057568df66c29a84385"
     }
   ],
   "_aciklama_cikarilan": "arsivden_cikarilanlar: kullanıcı kararıyla arşivden çıkarılan skiller. Yeniden indirilmez (kapsam kararı 'haric:arsivden-cikarildi'), korunmaz. Geri almak için kaydı sil ve kaynak-cek + arsiv-yerlestir çalıştır; eski dosyalar git geçmişinde (son_commit).",
@@ -1134,5 +1813,63 @@
   "korunan_listeler": [
     "yapay-zeka-araçları"
   ],
-  "_aciklama_korunan": "korunan_listeler: kullanıcının kendi GitHub listeleri (ör. 'Yapay Zeka araçları'). github-skill-listesi.py --duzenle bu listelerdeki üyeliği SİLMEZ; skill içeren repo ayrıca skill listesine girer."
+  "_aciklama_korunan": "korunan_listeler: kullanıcının kendi GitHub listeleri (ör. 'Yapay Zeka araçları'). github-skill-listesi.py --duzenle bu listelerdeki üyeliği SİLMEZ; skill içeren repo ayrıca skill listesine girer.",
+  "arsivden_cikarilan_repolar": [
+    {
+      "repo": "xjli360/sealeap-amazon-skills",
+      "skill_sayisi": 602,
+      "neden": "602 skillin 564'ü Amazon değil (Douyin/WeChat/Bilibili/YouTube/Xiaohongshu/app); gerçek Amazon karşılığı nexscope-ai/Amazon-Skills'te; güven 33 D, ★340, 19 MB",
+      "tarih": "2026-10-31",
+      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
+    },
+    {
+      "repo": "40RTY-ai/shopify-admin-skills",
+      "skill_sayisi": 117,
+      "neden": "Shopify yönetimi resmî Shopify/agent-skills + nexscope shopify-* ile karşılanıyor; güven 39 D, ★201, hiçbir role bağlı değil",
+      "tarih": "2026-10-31",
+      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
+    },
+    {
+      "repo": "aldefy/compose-skill",
+      "skill_sayisi": 1,
+      "neden": "Jetpack Compose: resmî android/skills (97-99 puan) ve hamen/compose_skill daha iyi; lisans belirsiz; güven 31 D",
+      "tarih": "2026-10-31",
+      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
+    },
+    {
+      "repo": "dpconde/claude-android-skill",
+      "skill_sayisi": 1,
+      "neden": "Genel Android rehberi: resmî android/skills daha kapsamlı; tek skill, güven 27 D",
+      "tarih": "2026-10-31",
+      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır"
+    },
+    {
+      "repo": "gchahal1982/pixeljury",
+      "skill_sayisi": 0,
+      "neden": "★6, güven 21 D, skill eşlemesi yok; Playwright+axe-core+Lighthouse zaten kartlarda",
+      "tarih": "2026-10-31",
+      "geri_alma": "kaynaklar.json'a T5/T6 olarak yeniden ekle"
+    },
+    {
+      "repo": "bytefer/awesome-nextjs",
+      "skill_sayisi": 0,
+      "neden": "★77 düz liste, güven 23 D, skill eşlemesi yok; Next.js için resmî vercel/next.js kaynağı var",
+      "tarih": "2026-10-31",
+      "geri_alma": "kaynaklar.json'a T5/T6 olarak yeniden ekle"
+    },
+    {
+      "repo": "haticesahin/SanalFuar",
+      "skill_sayisi": 0,
+      "neden": "★2, 2021'den beri güncellenmiyor, güven 12 D; skill/tasarım kaynağı değil",
+      "tarih": "2026-10-31",
+      "geri_alma": "kaynaklar.json'a T5/T6 olarak yeniden ekle"
+    },
+    {
+      "repo": "darkroomengineering/react-lenis",
+      "skill_sayisi": 0,
+      "neden": "Eski sarmalayıcı (v0.0.37); güncel Lenis paketi lenis/react kullanılır; güven 13 D",
+      "tarih": "2026-10-31",
+      "geri_alma": "kaynaklar.json'a T5/T6 olarak yeniden ekle"
+    }
+  ]
 }

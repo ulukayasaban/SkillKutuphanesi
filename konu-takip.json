@@ -167,14 +167,14 @@
       "tarih": "2026-10-22"
     },
     "40RTY-ai/shopify-admin-skills": {
-      "karar": "eklendi",
-      "neden": "Shopify mağaza yönetimi iş akışları.",
-      "tarih": "2026-10-22"
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: Shopify yönetimi resmî Shopify/agent-skills + nexscope shopify-* ile karşılanıyor; güven 39 D, ★201, hiçbir role bağlı değil",
+      "tarih": "2026-10-31"
     },
     "xjli360/sealeap-amazon-skills": {
-      "karar": "eklendi",
-      "neden": "Amazon araştırma, listeleme, reklam, stok.",
-      "tarih": "2026-10-22"
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: 602 skillin 564'ü Amazon değil (Douyin/WeChat/Bilibili/YouTube/Xiaohongshu/app); gerçek Amazon karşılığı nexscope-ai/Amazon-Skills'te; güven 33 D, ★340, 19 MB",
+      "tarih": "2026-10-31"
     },
     "magendooro/magento-claude-skills": {
       "karar": "eklendi",
@@ -197,9 +197,9 @@
       "tarih": "2026-10-22"
     },
     "aldefy/compose-skill": {
-      "karar": "eklendi",
-      "neden": "Jetpack Compose uzman rehberi (androidx kaynaklarına dayalı). Lisans belirsiz.",
-      "tarih": "2026-10-22"
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: Jetpack Compose: resmî android/skills (97-99 puan) ve hamen/compose_skill daha iyi; lisans belirsiz; güven 31 D",
+      "tarih": "2026-10-31"
     },
     "hamen/compose_skill": {
       "karar": "eklendi",
@@ -207,9 +207,9 @@
       "tarih": "2026-10-22"
     },
     "dpconde/claude-android-skill": {
-      "karar": "eklendi",
-      "neden": "Modern Android uygulama geliştirme en iyi uygulamaları.",
-      "tarih": "2026-10-22"
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: Genel Android rehberi: resmî android/skills daha kapsamlı; tek skill, güven 27 D",
+      "tarih": "2026-10-31"
     },
     "mmiani/kotlin-kmp-claude-agent-skills": {
       "karar": "eklendi",
@@ -235,6 +235,246 @@
       "karar": "eklendi",
       "neden": "App Store ret riski denetimi. Lisans yok.",
       "tarih": "2026-10-22"
+    },
+    "MADTeacher/mad-agents-skills": {
+      "karar": "eklendi",
+      "neden": "Flutter/Dart: mimari, navigasyon, ağ, test, animasyon, uyarlanabilir arayüz, i18n, Drift veritabanı.",
+      "tarih": "2026-10-31"
+    },
+    "Harishwarrior/flutter-claude-skills": {
+      "karar": "eklendi",
+      "neden": "Flutter test ve OWASP mobil güvenlik denetimi.",
+      "tarih": "2026-10-31"
+    },
+    "Viniciuscarvalho/swift-code-reviewer-skill": {
+      "karar": "eklendi",
+      "neden": "Swift/SwiftUI: eşzamanlılık, test, uzman rehberi, arayüz kalıpları.",
+      "tarih": "2026-10-31"
+    },
+    "tuist/fuckingapproachableswiftconcurrency": {
+      "karar": "eklendi",
+      "neden": "Swift eşzamanlılığı (Tuist ekibi); skill src/ içinde.",
+      "tarih": "2026-10-31"
+    },
+    "ParthJadhav/ios-marketing-capture": {
+      "karar": "eklendi",
+      "neden": "iOS uygulama mağazası görsellerini çok dilli otomatik üretir.",
+      "tarih": "2026-10-31"
+    },
+    "jazzychad/ios-code-audit": {
+      "karar": "eklendi",
+      "neden": "iOS kod tabanı denetimi.",
+      "tarih": "2026-10-31"
+    },
+    "arjitj2/swiftui-design-principles": {
+      "karar": "eklendi",
+      "neden": "SwiftUI/WidgetKit tasarım ilkeleri.",
+      "tarih": "2026-10-31"
+    },
+    "Kappaemme-git/codex-phone-lab": {
+      "karar": "eklendi",
+      "neden": "Expo uygulamasını gerçek telefonda canlı geliştirme (Codex skill'i).",
+      "tarih": "2026-10-31"
+    },
+    "remotion-dev/skills": {
+      "karar": "reddedildi",
+      "neden": "remotion-dev/remotion monorepodaki packages/skills'ten üretilen türev dağıtım ve geride; asıl kaynak zaten kütüphanede",
+      "tarih": "2026-10-31"
+    },
+    "Gayaya999/ecommerce-detail-page-generator": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "liangdabiao/Amazon-Skills-Liang": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "Weaverse/shopify-hydrogen-skills": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "woocommerce/woocommerce-android": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "woocommerce/qit-cli": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "scavio-ai/skills": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "aronhy/tiktok-agent-skills": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "AJbeckliy/detail-flow": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "MagentaJaguar/r13-danielrosehill-claude-slash-commands-ecommerce": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "buluslan/review-analyzer-skill": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "wzj177/shop-tryon-skill": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "alwin-m/liora": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "NewTurn2017/codex-sangpye-skill": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "tomtoto757/ecomm-ai-skills-hub": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "beshuaxian/higgsfield-seedance2-jineng": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "hashgraph-online/awesome-codex-plugins": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "PrestaShopCorp/ps_mbo": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "mercurjs/mercur": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "aiskillstore/marketplace": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "abbesm0hamed/paydusa": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "mirumee/nimara-ecommerce": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "Trendyol/stove": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "EcomPHP/shopee-php": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "congminh1254/shopee-sdk": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "feichanggege/ecommerce-visual-copywriting-skill": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "davepoon/buildwithclaude": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "shen169/amazon-product-research-skill": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "mguozhen/voc-amazon-reviews": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "BWB03/amazon-catalog-cli": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "JayGPTPro/amazon-pro-skills": {
+      "karar": "reddedildi",
+      "neden": "lisans belirtilmemiş (e-ticaret adayı)",
+      "tarih": "2026-10-31"
+    },
+    "ertugrulakben/HYRVE-AI": {
+      "karar": "reddedildi",
+      "neden": "skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor",
+      "tarih": "2026-10-31"
+    },
+    "liseami/ChunUI": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "nullptrx/pangle_flutter": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "zjinhu/SwiftMesh": {
+      "karar": "reddedildi",
+      "neden": "Çince/Korece içerik; kapsam dışı",
+      "tarih": "2026-10-31"
+    },
+    "gchahal1982/pixeljury": {
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: ★6, güven 21 D, skill eşlemesi yok; Playwright+axe-core+Lighthouse zaten kartlarda",
+      "tarih": "2026-10-31"
+    },
+    "bytefer/awesome-nextjs": {
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: ★77 düz liste, güven 23 D, skill eşlemesi yok; Next.js için resmî vercel/next.js kaynağı var",
+      "tarih": "2026-10-31"
+    },
+    "haticesahin/SanalFuar": {
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: ★2, 2021'den beri güncellenmiyor, güven 12 D; skill/tasarım kaynağı değil",
+      "tarih": "2026-10-31"
+    },
+    "darkroomengineering/react-lenis": {
+      "karar": "reddedildi",
+      "neden": "Kütüphaneden kaldırıldı: Eski sarmalayıcı (v0.0.37); güncel Lenis paketi lenis/react kullanılır; güven 13 D",
+      "tarih": "2026-10-31"
     }
   },
   "konular": {

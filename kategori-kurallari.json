@@ -2,6 +2,46 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "MADTeacher/mad-agents-skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "Harishwarrior/flutter-claude-skills",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "Viniciuscarvalho/swift-code-reviewer-skill",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "tuist/fuckingapproachableswiftconcurrency",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "ParthJadhav/ios-marketing-capture",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "jazzychad/ios-code-audit",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "arjitj2/swiftui-design-principles",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "Kappaemme-git/codex-phone-lab",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
       "repo": "remotion-dev/remotion",
       "desen": ".",
       "kategori": "g-video-ses-medya/01-video-uretim-montaj"

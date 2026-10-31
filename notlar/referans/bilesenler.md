@@ -136,7 +136,6 @@
 | komut | `cancel-ralph` | anthropics/claude-plugins-official | `plugins/ralph-loop/commands/cancel-ralph.md` |
 | komut | `help` | anthropics/claude-plugins-official | `plugins/ralph-loop/commands/help.md` |
 | komut | `ralph-loop` | anthropics/claude-plugins-official | `plugins/ralph-loop/commands/ralph-loop.md` |
-| komut | `od-contribute` | nexu-io/open-design | `.claude/commands/od-contribute.md` |
 | agent | `SKILL` | calesthio/OpenMontage | `.agents/skills/agents/SKILL.md` |
 | agent | `builder` | calesthio/OpenMontage | `.agents/skills/motion-graphics/agents/builder.md` |
 | agent | `director` | calesthio/OpenMontage | `.agents/skills/motion-graphics/agents/director.md` |
@@ -258,3 +257,4 @@
 | agent | `reviewer` | mmiani/kotlin-kmp-claude-agent-skills | `agents/reviewer.md` |
 | agent | `validator` | mmiani/kotlin-kmp-claude-agent-skills | `agents/validator.md` |
 | komut | `execute-ticket` | mmiani/kotlin-kmp-claude-agent-skills | `commands/execute-ticket.md` |
+| komut | `od-contribute` | nexu-io/open-design | `.claude/commands/od-contribute.md` |

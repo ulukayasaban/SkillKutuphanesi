@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Phone Lab"
+  short_description: "Build Expo apps live on your phone"
+  default_prompt: "Use $codex-phone-lab to create an Expo app and run it on my phone."

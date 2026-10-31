@@ -91,3 +91,14 @@ Kütüphane kaynakları **herkese açık GitHub repolarıdır** (sabit commit ve
 ## Kontrol: "hiçbir skill atlanmadı" kanıtı
 `notlar/kapsam-denetimi.md` her çalıştırmada yeniden üretilir: her repodaki her SKILL.md için karar
 (arşivde / birebir kopya / başka AI aracı kopyası / gerekçeli hariç). **Açıklanamayan sayısı 0 değilse iş bitmemiştir.**
+
+## D) Kaynak / skill KALDIRMAK (azaltma)
+Ölçüt (hepsi birlikte): GitHub güveni düşük (D) **ve** yıldız az **ve** işlevi kütüphanede daha iyi bir kaynaktan karşılanıyor **ve**
+hiçbir role/profile bağlı değil. Benzersiz işi olan düşük güvenli kaynak tutulur. Adımlar:
+1. `kaynaklar.json`: repo kaydını `repolar`dan sil; `arsivden_cikarilan_repolar`a `{repo, skill_sayisi, neden, tarih, geri_alma}` ekle
+   (tek tek skill için `arsivden_cikarilanlar`: `{repo, kaynak_yol, ad, neden, tarih}`).
+2. Çalışma sırası: `kaynak-cek.py --repo <repo>` (yalnız tek skill çıkarıyorsan) → `arsiv-yerlestir.py` → `kapsam-denetimi.py` →
+   `katalog-uret.py` → `dogrula.py` (0 hata) → `test.py`. Rolde/profilde kullanılan skill varsa önce yerine geçeni koy.
+3. GitHub: repoyu listeden çıkar ve yıldızı kaldır (`gh api -X DELETE user/starred/<repo>`); `konu-takip.json` → `degerlendirilen`'e
+   "reddedildi: kütüphaneden kaldırıldı" yaz ki aday olarak geri gelmesin. T5/T6 ise kartı/satırı da sil.
+4. Geri alma: arşiv dosyaları git geçmişinde; repoyu `kaynaklar.json`'a geri yaz, `kaynak-cek` + `arsiv-yerlestir`, yeniden yıldızla.

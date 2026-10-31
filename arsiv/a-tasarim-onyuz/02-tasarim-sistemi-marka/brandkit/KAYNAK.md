@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/nexu-io/open-design
 - **Repo içindeki yol:** `skills/brandkit`
-- **Commit:** `e03d5c23f308c39f4de7c057568df66c29a84385`
+- **Commit:** `12d970eacc8971150e3c76470d2a9afe16dc2ed1`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** nexu-io (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-10-31
 - **Durum:** tercih

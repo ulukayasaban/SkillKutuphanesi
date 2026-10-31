@@ -138,10 +138,6 @@
 - **Ne işe yarar:** Chromium/Firefox/WebKit'te uçtan uca test ve tarayıcı otomasyonu.
 - **Nasıl çalışır:** Otomatik bekleme (auto-wait) yapan locator'lar (`page.getByRole('button', {name})`), ekran görüntüsü karşılaştırma (`toHaveScreenshot`), trace viewer. Agent'lar için `playwright-cli` skill'i. **Skill:** `playwright-cli`, `playwright-component-testing`, `playwright-trace`, `webapp-testing` · **Rol:** qa-erisilebilirlik
 
-### PixelJury — `gchahal1982/pixeljury` · v0.1.5
-- **Ne işe yarar:** AI ile yapılmış ön yüzler için görsel QA CLI'ı: sayfayı render eder, tasarım ve erişilebilirlik sorunlarını bulur, agent'a verilecek düzeltme prompt'u yazar.
-- **Nasıl çalışır:** Playwright ile sayfayı farklı viewport'larda açar, kurallara göre ("AI slop" kalıpları, hizalama, kontrast) rapor üretir. `npx pixeljury <url>`. Henüz erken sürüm. **Rol:** qa-erisilebilirlik
-
 ### Partytown — `QwikDev/partytown` · v1.0 (T5)
 - Üçüncü parti script'leri (analytics, pixel) web worker'a taşıyıp ana thread'i boşaltır; `type="text/partytown"`. Pazarlama sitelerinde INP iyileştirir.
 
@@ -225,10 +221,6 @@
 - **Ne işe yarar:** Kopyala-yapıştır animasyonlu React bileşenleri/arka planları. **Not:** Lisans belirtilmemiş (NOASSERTION); ticari projede kontrol et.
 - **Skill:** `animated-component-libraries`, `frontend-ui-engineering` · **Rol:** frontend-muhendis, motion-gelistirici
 
-### react-lenis — `darkroomengineering/react-lenis` · v0.0.37
-- **Ne işe yarar:** Lenis'in eski React sarmalayıcısı. **Not:** Arşivlenmiş/eski; güncel Lenis paketi `lenis/react` kullan.
-- **Skill:** `scroll-craft`, `gsap-scrolltrigger` · **Rol:** scroll-deneyim
-
 ---
 
 ## Hızlı seçim tablosu
@@ -246,4 +238,4 @@
 | Token / stil | Tailwind v4 veya Open Props | design-system, ui-styling |
 | Hassas tipografi | Capsize + Fontsource | – |
 | Figma ↔ kod | Code Connect | – |
-| A11y / performans QA | axe-core, Lighthouse, Playwright, PixelJury | webapp-testing, playwright-cli, audit |
+| A11y / performans QA | axe-core, Lighthouse, Playwright | webapp-testing, playwright-cli, audit |

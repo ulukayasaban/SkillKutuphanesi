@@ -21,7 +21,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Ne zaman:** Scroll'a bağlı animasyon, pinli bölüm, parallax, scrub gerektiğinde (özellikle kütüphane belirtilmemişse). · **Ne zaman değil:** Basit fade-in reveal (scroll-reveal-libraries yeter).
 - **Teknoloji:** gsap 3.15, scrolltrigger, lenis 1.3 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** greensock (kurum, resmî, ★17604, son güncelleme 2026-07-29, lisans MIT)
+- **Geliştirici:** greensock (kurum, resmî, ★17605, son güncelleme 2026-07-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** scroll-animasyonu → birincil · **Roller:** scroll-deneyim, motion-gelistirici · **Globalde:** claude:ayni
 - **Boyut:** 18 KB (SKILL.md 18.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, güncel (18 KB), pin/scrub/cleanup kuralları doğru; gsap-core ile birlikte kullanılmalı. Dikkat: yok.
@@ -37,12 +37,12 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Boyut:** 159 KB (SKILL.md 16.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Aynı ad, farklı içerik: resmî sürüm yalnız ScrollTrigger'a odaklı ve güncel; bu sürüm tween+timeline+ScrollTrigger'ı tek dosyada jenerik anlatıyor, 335 gün eski, resmî rehberlerde olan matchMedia/cleanup disiplininden yoksun. Betikler yerel kod üretici, risk yok.
 
-### gsap-scrolltrigger@nexu-io  ·  nexu-io/open-design @ e03d5c2  ·  puan 94 (A)
+### gsap-scrolltrigger@nexu-io  ·  nexu-io/open-design @ 12d970e  ·  puan 94 (A)
 
 - **Ne yapar:** Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.
 - **Teknoloji:** gsap, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105084, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105085, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** alternatif · **Globalde:** claude:farkli
 - **Boyut:** 20 KB (SKILL.md 18.6 KB, yük orta)
 - **İnceleme:** otomatik

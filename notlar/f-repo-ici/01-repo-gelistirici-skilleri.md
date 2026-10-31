@@ -9,7 +9,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add a new Remotion bug entry to packages/bugs/api/[v].ts. Use when the user describes a bug and affected Remotion versions that should be surfaced through the bugs API.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add a new Remotion CLI or config option by creating an AnyRemotionOption, registering CLI parsing, wiring config setters, and updating documentation. Use when adding or converting command-line flags or Remotion options.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -29,7 +29,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add a new effect to @remotion/effects, including implementation, package exports, docs, demos, preview images, Remotion skill updates, formatting, and builds.
 - **Teknoloji:** canvas, git, react, remotion, typescript, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -39,7 +39,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add a new expert to the Remotion experts page
 - **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -49,7 +49,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add a new package to the Remotion monorepo, including package scaffolding, monorepo registration, documentation, build scripts, and release checklist updates. Use when creating a new @remotion package.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -59,7 +59,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add a new sound effect to @remotion/sfx
 - **Teknoloji:** ffmpeg, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -69,7 +69,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add a browser WebCodecs bug to the Remotion Mediabunny WebCodecs bugs docs page. Use when given a Chromium, WebKit, or Firefox issue URL that should be tracked in packages/docs/docs/mediabunny/webcodecs-bugs.mdx, especially when needing to look up the issue title, filing date, reporter, and resolution state before editing the MDX table.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -80,7 +80,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Yalnız tt-a1i/archify reposuna katkı yaparken issue triyajı ve PR değerlendirmesi. · **Ne zaman değil:** Kendi projelerinde genel code review (code-review-and-quality); bağlantı verdiği REVIEWING.md/CONTRIBUTING.md arşivde yok.
 - **Teknoloji:** dil-bagimsiz, git, github
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★91911, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** tt-a1i (kisi, ★91917, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. metadata.internal: true; değer/maliyet/etki çerçevesi kısa ve genel, asıl kurallar repo kökündeki belgelerde (kırık bağlantı). Repo-içi skill olduğu için f-repo-ici'ye taşındı.
@@ -91,7 +91,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Yalnız Archify reposunda yerleşim/yönlendirme/doğrulama kurallarını değiştirirken deney turu yürütmek. · **Ne zaman değil:** Archify dışındaki her proje; kod incelemesi için değil.
 - **Teknoloji:** node, chromium · **Paketler:** node>=22.13, Chrome/Chromium
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★91911, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** tt-a1i (kisi, ★91917, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
 - **Boyut:** 57 KB (SKILL.md 8.9 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Archify'ın kendi geliştirme döngüsüne özel (metadata.internal), kategori olarak da code review değil; CONTRIBUTING.md bağlantısı kırık, betikler repo yapısına bağlı. f-repo-ici'ye taşındı.
@@ -124,7 +124,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Rebuild, install, and reload the private Remotion Canvas Capture unpacked Chrome extension. Use when the extension needs to be restored after a Codex worktree was deleted, rebuilt after source changes, moved to its durable install directory, or reloaded in Chrome or Chrome Canary.
 - **Teknoloji:** canvas, html, react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -134,7 +134,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Checkout a requested branch or ref in the Remotion repo, rename the current task to the associated PR title when running in Codex, then install dependencies and build. Use when the user asks to checkout a ref and prepare the workspace.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -199,7 +199,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Start the local @remotion/convert app and open it in the Codex browser. Use when the user invokes /convert or $convert, asks to launch convert.remotion.dev locally, or wants to inspect the Convert package UI.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -242,7 +242,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Reference for how deprecation of public Remotion APIs is represented in TypeScript source and documentation. Use when adding, reviewing, or discussing a deprecation of a function, component, hook, type, prop, option, or other public API that remains available.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -252,7 +252,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Start the Remotion docs site and open it in the Codex browser. Use when the user invokes /docs or $docs, asks to launch the local documentation site, or wants to preview docs changes in Docusaurus.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -262,7 +262,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add an interactive demo to the Remotion documentation. Use when creating a new <Demo> component for docs pages.
 - **Teknoloji:** canvas, react, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -284,7 +284,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Maintain Remotion's experts directory and its generated assets. Use when adding, removing, or editing experts; changing experts data or portraits; rendering expert cards; or regenerating the homepage experts animation for Chrome and Safari.
 - **Teknoloji:** ffmpeg, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -316,7 +316,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Audit and clean the Remotion GitHub masterplan hierarchy. Use when finding open issues that lack a masterplan ancestor, identifying orphaned issues that need a parent, or recursively removing closed issues from the masterplan rooted at issue #9081.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 16 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -327,7 +327,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Motion'a katkıda; ayrıca improve skill'inin ürettiği plans/ dosyalarını başka bir projede uygulatırken (improve ile çift). · **Ne zaman değil:** Plan/issue olmadan serbest geliştirme. Yarn/Cypress/React 18-19 komutları Motion'a özel, uyarlamak gerekir.
 - **Teknoloji:** git, github-cli, jest, cypress
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** motiondivision (kurum, resmî, ★34686, son güncelleme 2026-10-30, lisans MIT)
+- **Geliştirici:** motiondivision (kurum, resmî, ★34687, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (improve ile birlikte). Sağlam yürütücü disiplini (TDD, sadık raporlama, main'e commit yok). Doğrulama adımları Motion'a göre yazılmış.
@@ -338,7 +338,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Fix a Dependabot PR by updating all monorepo instances of the dependency, running bun install, and pushing
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -381,7 +381,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Track Remotion CI flakes in issue #8375, increment repeated signatures, discover failed PR checks when no PR is given, and rerun flaky GitHub Actions jobs.
 - **Teknoloji:** html, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -402,7 +402,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Run Remotion formatting and style checks until they pass. Use when the user asks to fix formatting or run the formatting command.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -435,7 +435,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Manages stacked PRs and splits multi-part work into reviewable branches with gh-stack. Use for stack creation, viewing, edits, push, submit, sync, rebase, merge, or checkout; when asked to split or isolate work for review; whenever a user mentions a stack, branch layers, dependent PRs, or gh stack; or when a stack is checked out.
 - **Teknoloji:** git, three.js _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** alternatif
 - **Boyut:** 29 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -445,7 +445,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Use when rendering or replacing Remotion homepage creator strip videos, especially transparent Chrome WebM and Safari MP4 assets hosted on remotion.media.
 - **Teknoloji:** ffmpeg, git, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -455,7 +455,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Import a recorded Remotion Canvas Capture into a project without Studio interactions using the internal experimental-codemod command. Use when adding a capture file as an editable composition with cursor keyframes.
 - **Teknoloji:** canvas, node, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -466,7 +466,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Herhangi bir projede denetim/iyileştirme fırsatı bulma, yol haritası, başka agent'a devredilecek uygulama planları üretme. · **Ne zaman değil:** Hemen kod değişikliği istiyorsan (skill bilerek uygulamaz); çok küçük repolar.
 - **Teknoloji:** git, github-cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** motiondivision (kurum, resmî, ★34686, son güncelleme 2026-10-30, lisans MIT)
+- **Geliştirici:** motiondivision (kurum, resmî, ★34687, son güncelleme 2026-10-30, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 39 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (genel kullanım). Yazarı shadcn (MIT); Motion repo'sunda barınıyor ama repo-bağımsız. Pahalı model planlar / ucuz model uygular ekonomisi, sır değeri yazmama kuralı ve plan şablonu güçlü.
@@ -488,7 +488,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Best practices for writing Remotion animations that stay intuitive for agents and editable in Remotion Studio Visual Mode.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
@@ -498,7 +498,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Create, edit, or comment on Remotion GitHub issues.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -508,18 +508,18 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Manage GitHub Issues 2.0 relationships with gh CLI: parent issues, sub-issues, blocked-by, and blocking links.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### lighthouse-verification  ·  GoogleChrome/lighthouse @ 903ee14  ·  puan 71 (B)
+### lighthouse-verification  ·  GoogleChrome/lighthouse @ 903ee14  ·  puan 72 (B)
 
 - **Ne yapar:** Lighthouse'ta değişiklik sonrası seçili mocha testleri, type-check, lint ve update:sample-json çalıştırmayı hatırlatır.
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Lighthouse'u araç olarak kullanmak (performans denetimi) için değil.
 - **Teknoloji:** yarn, mocha
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** GoogleChrome (kurum, resmî, ★30986, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** GoogleChrome (kurum, resmî, ★30987, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Kısa komut listesi.
@@ -529,7 +529,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Wait for a Remotion pull request to become mergeable, handle merge conflicts, distinguish genuine CI failures from flakes, rerun flaky checks through the flake skill, and merge the PR. Use when asked to run /merge, merge a current PR after checks pass, or shepherd a Remotion PR through CI to merge.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -550,7 +550,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Apply Remotion Studio's pointerless interaction styling to clickable controls. Use when adding or revising Studio buttons or links that should use the default cursor, brighten on hover, and show focus decoration only for keyboard navigation.
 - **Teknoloji:** css, react, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -560,7 +560,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Fix newly added optional parameters, optional React props, and optional type/interface members in Remotion monorepo diffs by converting internal APIs to required nullable values and updating call sites. Use when a PR, review, or user asks to forbid new `foo?: T` / `param?: T` additions except for exported or documented public APIs where requiring the value would be breaking.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -570,7 +570,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Upload Remotion repository media assets to the Cloudflare R2 bucket behind remotion.media, switch source code to hosted URLs, verify the public objects, and remove repository-local copies.
 - **Teknoloji:** git, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -591,7 +591,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Start the @remotion/player example app and open it in the Codex browser. Use when the user invokes /player-example or $player-example, asks to launch the player testbed, or wants to inspect @remotion/player locally.
 - **Teknoloji:** next.js, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -602,7 +602,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98921, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Kısa ve güvenli.
@@ -613,7 +613,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Playwright ile test yazmak (a-tasarim-onyuz/08 ve b-yazilim-gelistirme/03 skilleri).
 - **Teknoloji:** playwright, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98921, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 95 KB (SKILL.md 1.3 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Hub + 9 ayrıntı dosyası (library, api, tools, vendor, bisect, webview…) arşivde mevcut; yalnızca AGENTS.md bağlantısı repo dışında kalıyor.
@@ -624,7 +624,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** github-actions, github-cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98921, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 0.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut).
@@ -635,7 +635,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Kendi projenin changelog'u (genel sürüm notu skilleri daha uygun).
 - **Teknoloji:** playwright, markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98921, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta) · **Kırık bağlantı:** 4
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok dilli doküman çevirisinin titiz bir örneği; tamamen repoya özel (13 KB).
@@ -646,7 +646,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Kendi CI'ın (şema ve CLI repoya özel). Fikir — CI sonuçlarını parquet/DuckDB'ye toplamak — uyarlanabilir.
 - **Teknoloji:** duckdb, node, github-actions
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98921, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Şema tablosu ve örnek sorgular iyi.
@@ -657,7 +657,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz. issue triage'ında. · **Ne zaman değil:** Kendi projendeki issue'lar için doğrudan değil; yöntem (önce sınıflandır, ToT'ta dene, kabul testi yaz) uyarlanabilir.
 - **Teknoloji:** playwright, github-cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98921, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta) · **Kırık bağlantı:** 4
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Triage yöntemi iyi; kardeş playwright-dev skill'indeki bisect rehberine bağlı, test dosyası bağlantıları repo dışında kalıyor.
@@ -667,7 +667,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Open a pull request for the current feature
 - **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -677,7 +677,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Review or correct a Remotion pull request title
 - **Teknoloji:** css, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -687,7 +687,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Resolve CI failures, merge conflicts, or local branch changes to get a PR ready
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -708,7 +708,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Prepare Remotion Studio for a user-recorded product demo with Canvas Capture, then import the downloaded take into packages/brand as an editable composition. Use for recording Studio interactions, timeline demos, and product shots.
 - **Teknoloji:** canvas, css, node, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -718,7 +718,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Capture and analyze Remotion Studio React render profiles through development-only WebMCP tools. Use when diagnosing unnecessary re-renders, slow commits, frame-reactive component trees, or when comparing render performance before and after a change.
 - **Teknoloji:** react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -750,7 +750,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Release a new Remotion version
 - **Teknoloji:** api-anahtari, git, node, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** alternatif
 - **Boyut:** 10 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -760,7 +760,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Write or refactor editable Remotion markup with appropriate tracks, shared timing boundaries, and connected compositions.
 - **Teknoloji:** react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk) · **Kırık bağlantı:** 3
 - **İnceleme:** otomatik
@@ -814,7 +814,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Scaffold a new Remotion Element for development in the docs Remotion Studio.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
@@ -824,7 +824,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Document Remotion skill placement. Use when adding, moving, or editing Remotion skills to decide whether a skill belongs in .agents/skills as an internal skill or packages/skills as a public skill.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -834,7 +834,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Start Remotion Studio from packages/example and open it in the Codex browser. Use when the user invokes /studio or $studio, asks to launch the example Studio, or wants the Remotion Studio dev UI available locally.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -844,7 +844,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Classify and wire Remotion Studio config options as either startup-fixed or reloadable while preventing mixed lifecycle behavior across consumers. Use when adding, changing, or reviewing a Config setter or CLI option consumed by Studio, its preview server, compiler, HTML bootstrap, public-folder watcher, or render queue.
 - **Teknoloji:** html, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -854,7 +854,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Style Remotion Studio UI inside `.css-reset` containers without relying on inherited reset properties.
 - **Teknoloji:** css, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -864,7 +864,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Understand the capabilities and restrictions of each Remotion Studio mode. Use when implementing or reviewing Studio actions, permissions, availability, or UI across interactive, detached, deployed, and browser-based Studios.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -874,7 +874,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Optimize Remotion Studio render performance by minimizing frame-reactive component surfaces, preferring imperative timeline state reads, and memoizing stable render boundaries. Use when code reads the current frame with `useTimelinePosition()` or components unnecessarily render on every frame.
 - **Teknoloji:** react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -895,18 +895,18 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Capture matching 2x Remotion Studio timeline screenshots and make a before/after crop reveal in packages/brand. Use for timeline layout comparison videos, including recapturing a historical layout.
 - **Teknoloji:** css, git, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### update-ard-port  ·  GoogleChrome/lighthouse @ 903ee14  ·  puan 86 (A)
+### update-ard-port  ·  GoogleChrome/lighthouse @ 903ee14  ·  puan 87 (A)
 
 - **Ne yapar:** Lighthouse'un Agentic Resource Discovery (ARD) uygunluk portunu upstream ards-project/ard-spec ile 1:1 eşitler: değişen dosyaların karşılaştırması, şema senkronu, mesaj metinlerini kelimesi kelimesine koruma, hash'li inceleme kaydı ve testler.
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
 - **Teknoloji:** node, json-schema
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** GoogleChrome (kurum, resmî, ★30986, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** GoogleChrome (kurum, resmî, ★30987, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği.
@@ -916,7 +916,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Publish Remotion Lambda Chrome binaries to the eu-central-1 test region and update hosted layer and Chrome version references. Use when updating Chrome binaries before full regional rollout.
 - **Teknoloji:** canvas, docker, html, playwright, remotion, three.js, typescript, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -926,7 +926,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Update Remotion's published Codex and ChatGPT directory plugin to a released Remotion version. Prepare the ZIP from the official Codex plugin repository, preserve its listing metadata, and upload and publish through OpenAI Platform.
 - **Teknoloji:** python, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 14 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -947,7 +947,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Update the monorepo FFmpeg archives, regenerate bindings, rebuild compositor binaries, and validate a single Remotion pull request. Use after the seven-platform FFmpeg build completes.
 - **Teknoloji:** ffmpeg, git, node, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -957,7 +957,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Update the current Remotion branch with the latest canonical main branch. Use when asked to update or sync from upstream main, merge the latest main into a feature branch, fast-forward local main, or bring a pull request branch up to date without rewriting published history.
 - **Teknoloji:** git, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -967,7 +967,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Regenerate the downloadable PDF copies of Remotion's Terms, Privacy Policy, DPA Statement, and DPIA Statement after editing their docs pages.
 - **Teknoloji:** python, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -977,18 +977,18 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Update Remotion homepage GitHub star counts. Use when asked to refresh the displayed GitHub star count and push the change to main.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### update-trace-engine  ·  GoogleChrome/lighthouse @ 903ee14  ·  puan 78 (B)
+### update-trace-engine  ·  GoogleChrome/lighthouse @ 903ee14  ·  puan 79 (B)
 
 - **Ne yapar:** Chrome DevTools'un trace işlemcisini @paulirish/trace_engine paketi olarak derleyip yayınlar ve Lighthouse'a aktarır: devtools-frontend birleştirme, gn/autoninja derleme, shim'ler, sürüm artırma ve npm yayını.
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz. (paket bakımcıları). · **Ne zaman değil:** Diğer herkes; npm publish yetkisi gerektirir.
 - **Teknoloji:** node, npm, devtools
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** GoogleChrome (kurum, resmî, ★30986, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** GoogleChrome (kurum, resmî, ★30987, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok kişiye özel (Paul Irish'in fork'u, yerel yollar).
@@ -998,7 +998,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Update `AvailableFrom` in a PR to the next Remotion patch version (`main` + `0.0.1`).
 - **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1008,7 +1008,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Upgrade the caniuse-lite override in the Remotion repo. Use when asked to update caniuse-lite to the latest npm version.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 0 KB (SKILL.md 0.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1018,7 +1018,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Upgrade Mediabunny and related @mediabunny packages across the Remotion repo. Use when asked to update Mediabunny to the latest version.
 - **Teknoloji:** node, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1028,7 +1028,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Upload a Remotion Element's preview assets to remotion.media and replace local preview URLs. Use when given an Element slug, or when exactly one Element's preview assets are present in the current worktree.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1038,7 +1038,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Upload large Remotion repository assets to the Cloudflare R2 bucket behind remotion.media and replace local public/ assets with hosted URLs. Use when a file is too large for Git or when a PR should avoid committing media binaries by hosting them on remotion.media.
 - **Teknoloji:** git, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1048,7 +1048,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Implement or review a Remotion 5 breaking change while the v4 and v5 release lines still share code. Use when v4 behavior and public types must remain compatible on main, but flipping the central v5 flag should activate a new runtime behavior, default, or TypeScript API.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1070,7 +1070,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Set up a Codex monitor for Vercel deployments and preview URLs. Use when the user invokes /vercel or $vercel, asks Codex to watch or monitor a Vercel deployment, waits for a Vercel preview or PR preview to become ready, or wants to be notified with both the deployment URL and preview URL once Vercel is READY.
 - **Teknoloji:** python, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1091,7 +1091,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** The version of Remotion we are working on.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1101,7 +1101,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Generate a report about a video
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1111,7 +1111,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Guidance for working on Remotion Studio Visual Mode, sequence identity, node paths, symbolicated stacks, override IDs, and hot reload behavior. Use when implementing or debugging visual editing of Sequences.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1121,7 +1121,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Add explicitly requested web renderer tests or update existing ones for implementation changes.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -1155,7 +1155,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Guides for writing and editing Remotion documentation. Use when adding docs pages, editing MDX files in packages/docs, or writing documentation content.
 - **Teknoloji:** node, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 4
 - **İnceleme:** otomatik
@@ -1165,7 +1165,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Ne yapar:** Guidance for explicitly requested new tests and for updating or reviewing existing tests in the Remotion repository.
 - **Teknoloji:** css, playwright, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69197, son güncelleme 2026-10-30, lisans NOASSERTION)
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69205, son güncelleme 2026-10-30, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta)
 - **İnceleme:** otomatik
