@@ -261,7 +261,9 @@ def kimlik_ata(gruplar, eski_kaynak):
 
     yeni, kullanilan = [], set()
     for ad, liste in sorted(gruplar.items()):
-        liste.sort(key=lambda x: (x["oncelik"], 0 if eskiden_var(x) else 1, x["repo"], x["kaynak_yol"]))
+        # Eşit öncelikte: önceki TERCİH kazanır, sonra diğer eski kayıtlar, en son yeniler (alfabetik sıra tercihi çevirmesin)
+        liste.sort(key=lambda x: (x["oncelik"], 0 if onceki(x).get("durum") == "tercih" else 1 if eskiden_var(x) else 2,
+                                  x["repo"], x["kaynak_yol"]))
         tekil = []
         for k in liste:
             ayni = next((t for t in tekil if t["_kh"] == k["_kh"]), None)  # TÜM klasör aynıysa kopya
@@ -274,15 +276,23 @@ def kimlik_ata(gruplar, eski_kaynak):
                 ayni.setdefault("kopya_kaynaklar", []).append(f"{k['repo']}:{k['kaynak_yol'] or '.'}")
             else:
                 tekil.append(k)
+        # 1. geçiş: eski kayıtlar KİMLİKLERİNİ korur (roller/projeler çıplak adla çözülür; tam çalıştırmada kimlik kaymasın)
+        for k in tekil:
+            oid = onceki(k).get("id")
+            if oid and (oid == ad or oid.startswith(ad + "@")) and oid not in kullanilan:
+                k["id"] = oid
+                kullanilan.add(oid)
+        # 2. geçiş: yeni kayıtlar kuralla: ilk sıradaki çıplak ad, diğerleri ad@kaynak
         for i, k in enumerate(tekil):
             k["durum"] = "tercih" if i == 0 else "alternatif"
-            kid = ad if i == 0 else f"{ad}@{kisa_kaynak(k['repo'])}"
-            n = 2
-            while kid in kullanilan:
-                kid = f"{ad}@{kisa_kaynak(k['repo'])}-{n}"
-                n += 1
-            kullanilan.add(kid)
-            k["id"] = kid
+            if "id" not in k:
+                kid = ad if i == 0 else f"{ad}@{kisa_kaynak(k['repo'])}"
+                n = 2
+                while kid in kullanilan:
+                    kid = f"{ad}@{kisa_kaynak(k['repo'])}-{n}"
+                    n += 1
+                kullanilan.add(kid)
+                k["id"] = kid
             yeni.append(k)
         elle_tercih = [k for k in tekil if onceki(k).get("durum_elle") and onceki(k).get("durum") == "tercih"]
         elle_alt = {id(k) for k in tekil if onceki(k).get("durum_elle") and onceki(k).get("durum") == "alternatif"}

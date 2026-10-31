@@ -115,3 +115,14 @@ Global klasörlerdeki skiller (OpenMontage, addyosmani…) **bu sistemle güncel
 | Yeni repo yıldızladığında | `arsiv-guncelle.py` raporu "yıldızlı ama kaynaklar.json'da yok" der → `03-yeni-skill-ekleme.md` |
 | Projeye başlamadan önce | `skill-ekle.py <proje> --durum` |
 | Büyük sürüm (ör. GSAP 4, three r200) | İlgili kategori incelemesini tekrarla (`07-kategori-inceleme.md`) |
+
+## Güvenli deneme (araçlarda değişiklik yaptıysan, yarınki gerçek güncellemeden ÖNCE)
+Gerçek kütüphaneye dokunmadan aylık akışı tam veriyle dene (yaklaşık 40 dk, GitHub'dan her şeyi yeniden indirir):
+```bash
+S=$(mktemp -d); rsync -a --exclude '.gecici' ~/Documents/SkillKutuphanesi/ $S/ && cd $S && python3 -u araclar/arsiv-guncelle.py --uygula --dal
+```
+Kontrol: (1) `DURDU`/güvenlik kilidi yok, (2) kopyada `master`a dönülmüş, `.guncelleme-kilidi` silinmiş, `guncelleme/YYYY-AA` dalı var,
+(3) git HEAD'e göre `id`, `durum`, `kategori`, `ucret` kayması **0** (yalnızca upstream'in gerçekten eklediği skiller yeni görünür),
+(4) `notlar/guncelleme-gecmisi.md` kaydında "Karar bekleyen yeni skiller" satırı. Kısmi (`--repo`) çalıştırma bu hataları gizler.
+**Karar bekleyen yeni skiller:** upstream bir repoya yeni skill eklediyse arşive alınmaz ve güncellemeyi durdurmaz; listeyi gör, `kaynaklar.json`'da
+repo kaydının `dahil` listesine ekle (almak için) ya da `haric`e yaz (almamak için).

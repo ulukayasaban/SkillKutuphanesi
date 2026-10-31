@@ -295,6 +295,16 @@ def main():
          sorted(k["durum"] for k in yeni) == ["alternatif", "tercih"]
          and next(k for k in yeni if k["durum"] == "tercih")["repo"] == "zzz/eski", str(yeni))
 
+    eski3 = {("aaa/p", "skills/x"): {"durum": "alternatif", "id": "x@aaa"}, ("zzz/q", "skills/x"): {"durum": "tercih", "id": "x"}}
+    yeni = yer.kimlik_ata({"x": [kayit("aaa/p", "H1"), kayit("zzz/q", "H2")]}, eski3)
+    d = {k["repo"]: k for k in yeni}
+    test("kimlik: eşit öncelikte ÖNCEKİ tercih kalır (alfabetik sıra çevirmez) ve kimlikler korunur (tam çalıştırma kaymaz)",
+         d["zzz/q"]["durum"] == "tercih" and d["zzz/q"]["id"] == "x" and d["aaa/p"]["id"] == "x@aaa" and d["aaa/p"]["durum"] == "alternatif", str(yeni))
+    yeni = yer.kimlik_ata({"x": [kayit("aaa/p", "H1"), kayit("zzz/q", "H2")]}, eski3)
+    test("kimlik: aynı girdiyle ikinci çalıştırma aynı sonucu verir (idempotent)",
+         [(k["repo"], k["id"], k["durum"]) for k in sorted(yeni, key=lambda k: k["repo"])]
+         == [(k["repo"], k["id"], k["durum"]) for k in sorted(yer.kimlik_ata({"x": [kayit("aaa/p", "H1"), kayit("zzz/q", "H2")]}, eski3), key=lambda k: k["repo"])])
+
     # Trend: seviye hesabı, değerlendirme bonusu ve öneride sadece konuya uygun skille bonus
     from ortak import trend_durumu
     from datetime import date as _d, timedelta as _td

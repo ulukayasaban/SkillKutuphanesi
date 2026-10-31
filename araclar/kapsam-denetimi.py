@@ -26,6 +26,7 @@ ACIKLAMA = {
     "ayna-ayni": "birebir kopya (tek kopya yeter)",
     "ayna-baska-arac": "başka AI aracı (Cursor/Gemini/Kiro…) için kopya",
     "haric": "bilinçli hariç (test/örnek/şablon)",
+    "KARAR_BEKLIYOR": "yeni/kapsam dışı skill: arşive alınmadı, karar bekliyor (kaynaklar.json: dahil'e ekle ya da haric'e yaz)",
 }
 
 
@@ -46,7 +47,7 @@ def main():
             r, _, y = kk.partition(":")
             yol_index.add((r, "" if y == "." else y))
 
-    sorunlar, satirlar, toplam = [], [], Counter()
+    sorunlar, satirlar, toplam, bekleyen = [], [], Counter(), []
     for s in reg["skiller"]:
         if not (KOK / s["yol"] / "SKILL.md").exists():
             sorunlar.append(f"registry'de var ama arşivde SKILL.md yok: {s['yol']}")
@@ -62,8 +63,14 @@ def main():
         sayac = Counter()
         for p in gercek:
             karar = d["skill_md"].get(p)
-            if karar is None or karar == "dahil-disi":
-                sorunlar.append(f"{repo}: AÇIKLANAMAYAN SKILL.md -> {p}")
+            if karar == "dahil-disi":
+                # Hiçbir kaydın kapsamına girmeyen skill (genelde upstream'in sonradan eklediği yeni skill): arşive ALINMAZ,
+                # ama aylık güncellemeyi de durdurmaz; raporda "karar bekliyor" olarak görünür (dahil'e ekle ya da haric'e yaz).
+                bekleyen.append(f"{repo}: {p}")
+                sayac["KARAR_BEKLIYOR"] += 1
+                continue
+            if karar is None:
+                sorunlar.append(f"{repo}: AÇIKLANAMAYAN SKILL.md (denetimde hiç kaydı yok) -> {p}")
                 sayac["ACIKLANAMAYAN"] += 1
                 continue
             tur = karar.split(":")[0]
@@ -112,12 +119,18 @@ def main():
         out += ["", "## Bilinçli hariç tutulanlar (gerekçeli)", ""]
         for repo, l in hariclar.items():
             out.append(f"- **{repo}**: " + ", ".join(l[:20]) + (f" … (+{len(l) - 20})" if len(l) > 20 else ""))
+    if bekleyen:
+        out += ["", f"## Karar bekleyen yeni skiller ({len(bekleyen)})", "",
+                "Hiçbir kayıt kapsamına girmiyor (upstream sonradan eklemiş olabilir). Almak için `kaynaklar.json` → repo kaydının `dahil` "
+                "listesine ekle; almamak için `haric`e yaz. Bu skiller arşivde YOK ve güncellemeyi durdurmaz.", ""] + [f"- {x}" for x in bekleyen]
     if sorunlar:
         out += ["", "## Sorunlar", ""] + [f"- {x}" for x in sorunlar]
     hedef, yeni = KOK / "notlar" / "kapsam-denetimi.md", "\n".join(out) + "\n"
     tarihsiz = lambda m: re.sub(r"\d{4}-\d{2}-\d{2}", "", m, count=1)  # noqa: E731
     if not hedef.exists() or tarihsiz(hedef.read_text(encoding="utf-8")) != tarihsiz(yeni):
         hedef.write_text(yeni, encoding="utf-8")  # sadece içerik değişince yaz (gün değişti diye çalışma ağacı kirlenmesin)
+    for x in bekleyen:
+        print("KARAR BEKLİYOR:", x)
     for x in sorunlar:
         print("SORUN:", x)
     print(f"Taranan SKILL.md: {sum(n for _, n, _ in satirlar)} · sorun: {len(sorunlar)} · dağılım: {dict(toplam)}")

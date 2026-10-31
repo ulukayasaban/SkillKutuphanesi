@@ -94,7 +94,12 @@ def gecmis_yaz(dal, ayrinti, onceki):
              f"Durum: **master'a birleştirilmeyi bekliyor** (onay sonrası: `python3 araclar/arsiv-guncelle.py --birlestir {dal}`)", "",
              "| Kaynak | Eski | Yeni | Değişen skill dosyası |", "|---|---|---|---|"]
     satir += [f"| {r} | `{(a['eski'] or '-')[:7]}` | `{a['yeni'][:7]}` | {a['dosya']}{a['not']} |" for r, a in ayrinti.items()]
+    bekleyen = [f"{r}: {y}" for r, d in (json_oku(REGISTRY).get("denetim") or {}).items()
+                for y, k in d.get("skill_md", {}).items() if k == "dahil-disi"]
     satir += ["",
+              f"- **Karar bekleyen yeni skiller** ({len(bekleyen)}; arşive alınmadı): "
+              + (", ".join(f"`{x}`" for x in bekleyen[:15]) + (f" … (+{len(bekleyen) - 15})" if len(bekleyen) > 15 else "") or "-")
+              + " → almak için kaynaklar.json `dahil`, almamak için `haric`",
               f"- İçeriği değişen skill ({len(icerik)}): {', '.join(f'`{x}`' for x in icerik) or '-'}",
               f"- Yeni eklenen skill ({len(eklenen)}): {', '.join(f'`{x}`' for x in eklenen) or '-'}",
               f"- Kaynakta kaldırılıp arşivde korunan (bu güncellemede) ({len(yeni_emekli)}): {', '.join(f'`{x}`' for x in yeni_emekli) or '-'}",
