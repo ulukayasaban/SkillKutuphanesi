@@ -7,6 +7,6 @@
 - **Commit:** `86505e44f87d801aa1864a3c4109e9a8ae5c409f`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** cloudflare (kurum)
-- **Değerlendirme:** 83/100 (A)
+- **Değerlendirme:** 82/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

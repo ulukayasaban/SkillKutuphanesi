@@ -2,6 +2,51 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "remotion-dev/remotion",
+      "desen": ".",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
+      "repo": "pixijs/pixijs",
+      "desen": ".",
+      "kategori": "a-tasarim-onyuz/06-oyun-2d-grafik"
+    },
+    {
+      "repo": "Jakeschincariol/youtube-agent-skill",
+      "desen": ".",
+      "kategori": "c-dokuman-icerik/03-yazi-iletisim-icerik"
+    },
+    {
+      "repo": "Jakeschincariol/instagram-agent-skill",
+      "desen": ".",
+      "kategori": "c-dokuman-icerik/03-yazi-iletisim-icerik"
+    },
+    {
+      "repo": "Jakeschincariol/linkedin-agent-skill",
+      "desen": ".",
+      "kategori": "c-dokuman-icerik/03-yazi-iletisim-icerik"
+    },
+    {
+      "repo": "Jakeschincariol/founder-skill",
+      "desen": ".",
+      "kategori": "h-is-alanlari/03-operasyon-urun-isletme"
+    },
+    {
+      "repo": "Jakeschincariol/replica-skill",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/01-planlama-metodoloji"
+    },
+    {
+      "repo": "Jakeschincariol/day-trader-skill",
+      "desen": ".",
+      "kategori": "h-is-alanlari/02-finans-hukuk-ik"
+    },
+    {
+      "repo": "morluto/rea",
+      "desen": ".",
+      "kategori": "b-yazilim-gelistirme/06-devops-guvenlik-performans"
+    },
+    {
       "repo": "mercadopago/mercadopago-claude-marketplace",
       "desen": ".",
       "kategori": "h-is-alanlari/05-e-ticaret-pazaryeri"

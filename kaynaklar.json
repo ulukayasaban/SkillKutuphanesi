@@ -8,7 +8,8 @@
     "^plugins/individual/",
     "^\\.(agent|cursor|dsh|gemini|github|grok|hermes|kiro|omp|opencode|pi|qoder|rovodev|trae|trae-cn|veto|vibe)/",
     "^cursor-plugin/",
-    "^\\.openclaw/"
+    "^\\.openclaw/",
+    "^packages/codex-plugin/"
   ],
   "max_dosya_mb": 5,
   "repolar": [
@@ -656,6 +657,191 @@
       "tip": "T1",
       "oncelik": 4,
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). App Store ret riski denetimi. Lisans yok."
+    },
+    {
+      "repo": "pixijs/pixijs",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^skills/"
+      ],
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Resmî PixiJS v8 skilleri."
+    },
+    {
+      "repo": "Jakeschincariol/youtube-agent-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. YouTube kanal yönetimi (senaryo, SEO, shorts, retention)."
+    },
+    {
+      "repo": "Jakeschincariol/instagram-agent-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Instagram hesap yönetimi."
+    },
+    {
+      "repo": "Jakeschincariol/linkedin-agent-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. LinkedIn hesap yönetimi."
+    },
+    {
+      "repo": "Jakeschincariol/founder-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. İş fikrini lansmandan önce test eden kurucu skilleri."
+    },
+    {
+      "repo": "Jakeschincariol/replica-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Uygulamayı inceleyip yeniden kurma (keşif, mimari, test, deploy)."
+    },
+    {
+      "repo": "Jakeschincariol/day-trader-skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Gün içi alım-satım analizi. Yatırım tavsiyesi değildir; broker/veri servisleri ayrı."
+    },
+    {
+      "repo": "morluto/rea",
+      "tip": "T2",
+      "oncelik": 3,
+      "dahil": [
+        "^\\.agents/skills/"
+      ],
+      "haric": [
+        "^\\.agents/skills/rea-"
+      ],
+      "bagimlilik": "REA aracı (repo) kurulu olmalı.",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. 'Yapay Zeka araçları' listesinde. reverse-engineer-anything kullanıcıya yönelik; rea-* skilleri repo katkı süreci (hariç)."
+    },
+    {
+      "repo": "remotion-dev/remotion",
+      "tip": "T3",
+      "oncelik": 8,
+      "dahil": [
+        "^\\.agents/skills/"
+      ],
+      "kimlik": "remotion__repo-ici",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Remotion monoreposunun katkı süreci skilleri (repo-içi, gizli). Kullanıcıya yönelik Remotion skilleri: remotion-best-practices (OpenMontage) / remotion-dev/skills."
+    },
+    {
+      "repo": "motion-canvas/motion-canvas",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "d3/d3",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "Tonejs/Tone.js",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "ManimCommunity/manim",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "liabru/matter-js",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "paperjs/paper.js",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "rough-stuff/rough",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "theatre-js/theatre",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "pmndrs/postprocessing",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "pmndrs/cannon-es",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "opentypejs/opentype.js",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "metafizzy/zdog",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "jwagner/simplex-noise.js",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "DavidHDev/react-bits",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "darkroomengineering/react-lenis",
+      "tip": "T6",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "KaTeX/KaTeX",
+      "tip": "T5",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "openai/whisper",
+      "tip": "T5",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "librosa/librosa",
+      "tip": "T5",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "meyda/meyda",
+      "tip": "T5",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "blender/blender",
+      "tip": "T5",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "666ghj/MiroFish",
+      "tip": "T5",
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+    },
+    {
+      "repo": "remotion-dev/remotion",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^packages/skills/skills/",
+        "^packages/codex-plugin/skills/"
+      ],
+      "kimlik": "remotion__resmi-skiller",
+      "bagimlilik": "Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.",
+      "not": "Remotion'ın resmî kullanıcı skilleri (packages/skills/skills). Repo-içi katkı skilleri ayrı T3 kaydında. packages/codex-plugin/skills = aynı skillerin Codex eklentisi kopyası (ayna)."
     }
   ],
   "konum_haric": [
@@ -944,5 +1130,9 @@
       "odak": "android|\\bios\\b|mobile|react.?native|\\bexpo\\b|swift|flutter|kotlin|jetpack|compose|app store|play store"
     }
   ],
-  "_aciklama_takip": "takip_konulari: araclar/konu-takip.py bu alanlarda GitHub'da yeni skill repolarını arar (aylık güncellemede otomatik). Aday eklemek onaylıdır."
+  "_aciklama_takip": "takip_konulari: araclar/konu-takip.py bu alanlarda GitHub'da yeni skill repolarını arar (aylık güncellemede otomatik). Aday eklemek onaylıdır.",
+  "korunan_listeler": [
+    "yapay-zeka-araçları"
+  ],
+  "_aciklama_korunan": "korunan_listeler: kullanıcının kendi GitHub listeleri (ör. 'Yapay Zeka araçları'). github-skill-listesi.py --duzenle bu listelerdeki üyeliği SİLMEZ; skill içeren repo ayrıca skill listesine girer."
 }

@@ -164,6 +164,71 @@
 - **Seç:** Landing page hero, sunum slaytı, poster, video karesi yerleşimi ararken. **Seçme:** Kod/bileşen gerektiğinde (skill değil). Lisans belirtilmediği için görselleri ürüne koyma; sadece referans.
 - **Skill:** `design-taste-frontend` (taste-skill), `canvas-design`, `slides` · **Rol:** ui-tasarimci, sunum
 
+## Ek teknolojiler (2026-10-31): animasyon, 2D/fizik, veri görselleştirme, ses, tipografi
+
+### Motion Canvas — `motion-canvas/motion-canvas` · v3.17
+- **Ne işe yarar:** TypeScript ile kodla açıklayıcı video/animasyon (generator fonksiyonlarıyla zaman çizelgesi), canlı önizleme editörü.
+- **Seç:** Teknik anlatım, diyagram animasyonu, kodla tekrarlanabilir video. **Seçme:** Web sitesi animasyonu (GSAP/Motion daha uygun).
+- **Skill:** `remotion-to-hyperframes` (Motion Canvas işini HyperFrames'e taşıma), `hyperframes`, `manim-composer` · **Rol:** video-kompozisyon
+
+### D3.js — `d3/d3` · v7.9
+- **Ne işe yarar:** Veriye dayalı SVG/Canvas görselleştirme: ölçekler, eksenler, şekiller, coğrafya, kuvvet yerleşimi, geçişler.
+- **Seç:** Özel/etkileşimli grafik, ağ, harita. **Seçme:** Standart pano grafiği (hazır grafik kütüphanesi yeter).
+- **Skill:** `d3-viz`, `d3-visualization` · **Rol:** frontend-muhendis, veri/rapor
+
+### Tone.js — `Tonejs/Tone.js` · 15.1
+- **Ne işe yarar:** Web Audio üstünde sentezleyici, efekt, zamanlayıcı (Transport) ile tarayıcıda müzik/ses üretimi.
+- **Seç:** Etkileşimli ses, generatif müzik, oyun sesi. **Performans:** AudioContext kullanıcı etkileşimiyle başlatılmalı.
+- **Skill:** `sound-effects`, `music` (ElevenLabs, kısmen ücretli; Tone.js tamamen yerel) · **Rol:** ses-tasarimci
+
+### Manim — `ManimCommunity/manim` · v0.22
+- **Ne işe yarar:** Python ile matematiksel/açıklayıcı animasyon (3Blue1Brown tarzı), LaTeX formülleri.
+- **Skill:** `manim-composer`, `manimce-best-practices`, `manimgl-best-practices` · **Rol:** video-kompozisyon, egitim-explainer
+
+### Matter.js — `liabru/matter-js` · 0.20
+- **Ne işe yarar:** 2D fizik motoru (katı cisim, çarpışma, kısıt). **Seç:** 2D oyun/etkileşimli fizik efekti.
+- **Skill:** `pixijs-2d`, `canvas-procedural-animation` · **Rol:** oyun-gelistirici
+
+### cannon-es — `pmndrs/cannon-es` · v0.20
+- **Ne işe yarar:** 3D fizik motoru (Three.js / R3F ile). **Not:** 2024'ten beri bakımı yavaş; yeni projede Rapier'ı da değerlendir.
+- **Skill:** `threejs-world-generation`, `threejs-interaction` · **Rol:** 3d-gelistirici
+
+### Paper.js — `paperjs/paper.js` · v0.16
+- **Ne işe yarar:** Canvas üzerinde vektör grafik sahne grafiği (path, boolean, segment). **Seç:** Generatif vektör sanat, çizim aracı.
+- **Skill:** `algorithmic-art`, `canvas-procedural-animation` · **Rol:** gorsel-sanat
+
+### Rough.js — `rough-stuff/rough` · v3.1
+- **Ne işe yarar:** El çizimi/eskiz görünümlü SVG/Canvas şekiller. **Seç:** Whiteboard, eskiz diyagram, samimi infografik.
+- **Skill:** `hand-drawn-diagrams` · **Rol:** ui-tasarimci, sunum
+
+### simplex-noise — `jwagner/simplex-noise.js` · 4.0
+- **Ne işe yarar:** Hızlı 2D/3D/4D simplex gürültü: prosedürel arazi, akış alanı, organik hareket.
+- **Skill:** `algorithmic-art`, `threejs-shaders`, `threejs-world-generation` · **Rol:** gorsel-sanat, 3d-gelistirici
+
+### Zdog — `metafizzy/zdog` · v1.1
+- **Ne işe yarar:** Düz tasarımlı sahte-3D (pseudo-3D) çizim, çok küçük. **Not:** 2023'ten beri güncellenmiyor.
+- **Skill:** `svg-character-animation`, `canvas-procedural-animation` · **Rol:** motion-gelistirici
+
+### Theatre.js — `theatre-js/theatre` · 0.4 (r3f)
+- **Ne işe yarar:** Web için görsel animasyon editörü (keyframe/sekans), R3F ve DOM ile. **Not:** 2024'ten beri yavaş.
+- **Skill:** `threejs-animation`, `gsap-timeline` · **Rol:** 3d-gelistirici, motion-gelistirici
+
+### postprocessing — `pmndrs/postprocessing` · v6.39
+- **Ne işe yarar:** Three.js için verimli efekt zinciri (bloom, DOF, SSAO, tone mapping). **Seç:** Sinematik 3D sahne.
+- **Skill:** `threejs-postprocessing`, `threejs-shaders` · **Rol:** 3d-gelistirici
+
+### opentype.js — `opentypejs/opentype.js` · 2.0
+- **Ne işe yarar:** Yazı tipi dosyalarını okuyup glif yollarına çevirir (metin → SVG path, kinetik tipografi).
+- **Skill:** `svg-character-animation`, `hyperframes` (kinetik tipografi) · **Rol:** motion-gelistirici
+
+### React Bits — `DavidHDev/react-bits`
+- **Ne işe yarar:** Kopyala-yapıştır animasyonlu React bileşenleri/arka planları. **Not:** Lisans belirtilmemiş (NOASSERTION); ticari projede kontrol et.
+- **Skill:** `animated-component-libraries`, `frontend-ui-engineering` · **Rol:** frontend-muhendis, motion-gelistirici
+
+### react-lenis — `darkroomengineering/react-lenis` · v0.0.37
+- **Ne işe yarar:** Lenis'in eski React sarmalayıcısı. **Not:** Arşivlenmiş/eski; güncel Lenis paketi `lenis/react` kullan.
+- **Skill:** `scroll-craft`, `gsap-scrolltrigger` · **Rol:** scroll-deneyim
+
 ---
 
 ## Hızlı seçim tablosu

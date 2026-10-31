@@ -1,15 +1,15 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-10-23 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-10-31 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6014 · Arşivdeki skill kaydı: 3701 · Bileşen (komut/agent): 254
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6201 · Arşivdeki skill kaydı: 3872 · Bileşen (komut/agent): 254
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 3694 | arşivde (ana sürüm) |
-| haric | 2113 | bilinçli hariç (test/örnek/şablon) |
+| secildi | 3865 | arşivde (ana sürüm) |
+| haric | 2117 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 146 | birebir kopya (tek kopya yeter) |
-| ayna-baska-arac | 26 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
+| ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 | arac-varyanti | 19 | arşivde (Claude/Codex'e özel sürüm) |
 | ayri-surum | 16 | arşivde (aynı adlı farklı içerik, ayrı skill) |
 
@@ -26,6 +26,12 @@
 | GoogleChrome/lighthouse | 3 | secildi 3 |
 | Graphify-Labs/graphify | 1 | secildi 1 |
 | J-DTurner/etsy-api-skill | 1 | secildi 1 |
+| Jakeschincariol/day-trader-skill | 11 | secildi 11 |
+| Jakeschincariol/founder-skill | 11 | secildi 11 |
+| Jakeschincariol/instagram-agent-skill | 13 | secildi 13 |
+| Jakeschincariol/linkedin-agent-skill | 11 | secildi 11 |
+| Jakeschincariol/replica-skill | 11 | secildi 11 |
+| Jakeschincariol/youtube-agent-skill | 11 | secildi 11 |
 | K-Dense-AI/scientific-agent-skills | 177 | secildi 177 |
 | Leonxlnx/taste-skill | 1 | secildi 1 |
 | Livsy90/iOS-Performance-Agent-Skills | 6 | secildi 6 |
@@ -66,6 +72,7 @@
 | mercadopago/mercadopago-claude-marketplace | 5 | secildi 5 |
 | microsoft/playwright | 9 | secildi 9 |
 | mmiani/kotlin-kmp-claude-agent-skills | 15 | secildi 15 |
+| morluto/rea | 5 | haric 4, secildi 1 |
 | motiondivision/motion | 2 | secildi 2 |
 | multica-ai/andrej-karpathy-skills | 1 | secildi 1 |
 | nateherkai/scroll-craft | 1 | secildi 1 |
@@ -76,7 +83,9 @@
 | obra/superpowers | 15 | secildi 15 |
 | oldred-byte/ec-visual-skill | 1 | secildi 1 |
 | pbakaus/impeccable | 25 | ayna-baska-arac 18, haric 4, arac-varyanti 2, secildi 1 |
+| pixijs/pixijs | 26 | secildi 26 |
 | react/react | 14 | secildi 14 |
+| remotion-dev/remotion | 88 | secildi 76, ayna-baska-arac 12 |
 | teng-lin/notebooklm-py | 1 | secildi 1 |
 | tt-a1i/archify | 5 | secildi 5 |
 | vagabond911/aso-auditor | 1 | secildi 1 |
@@ -91,7 +100,7 @@
 
 ## Referans repoları (T5/T6)
 
-27 repo tarandı; içlerinde skill yok.
+48 repo tarandı; içlerinde skill yok.
 
 ## Bilinçli hariç tutulanlar (gerekçeli)
 
@@ -107,3 +116,4 @@
 - **earthtojake/text-to-cad**: `apps/web/skills/smui/SKILL.md` (^apps/)
 - **Lonsdale201/wp-agent-skills**: `acf/acf-custom-field-type/SKILL.md` (^(?!woocommerce/)), `acf/acf-field-group-development/SKILL.md` (^(?!woocommerce/)), `acf/acf-pro-complex-fields/SKILL.md` (^(?!woocommerce/)), `acf/acf-pro-options-pages/SKILL.md` (^(?!woocommerce/)), `acf/acf-relational-fields/SKILL.md` (^(?!woocommerce/)), `acf/acf-value-storage-frontend/SKILL.md` (^(?!woocommerce/)), `better-data/bd-attribute/SKILL.md` (^(?!woocommerce/)), `better-data/bd-better-route-bridge/SKILL.md` (^(?!woocommerce/)), `better-data/bd-companion-plugin/SKILL.md` (^(?!woocommerce/)), `better-data/bd-data-object/SKILL.md` (^(?!woocommerce/)), `better-data/bd-hydration-coercion/SKILL.md` (^(?!woocommerce/)), `better-data/bd-presenter/SKILL.md` (^(?!woocommerce/)), `better-data/bd-security/SKILL.md` (^(?!woocommerce/)), `better-data/bd-sink/SKILL.md` (^(?!woocommerce/)), `better-data/bd-source-adapter/SKILL.md` (^(?!woocommerce/)), `better-data/bd-validation-rule/SKILL.md` (^(?!woocommerce/)), `better-route/br-atomic-idempotency/SKILL.md` (^(?!woocommerce/)), `better-route/br-audit-enrichment/SKILL.md` (^(?!woocommerce/)), `better-route/br-auth-middleware/SKILL.md` (^(?!woocommerce/)), `better-route/br-cors-public-client/SKILL.md` (^(?!woocommerce/)) … (+195)
 - **OrcaQubits/agentic-commerce-skills-plugins**: `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-agent-card/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-authentication/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-client/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-dev-patterns/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-error-handling/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-framework-integration/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-jsonrpc-transport/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-mcp-bridge/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-messages-parts/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-multi-turn/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-push-notifications/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-server/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-setup/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-streaming/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-task-lifecycle/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-testing/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-affiliate-attribution/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-capability-negotiation/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-cart/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-checkout-mcp/SKILL.md` (^dist/) … (+1405)
+- **morluto/rea**: `.agents/skills/rea-analysis-optimization/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-changelog-update/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-ci-tests-audit/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-tool-design/SKILL.md` (^\.agents/skills/rea-)

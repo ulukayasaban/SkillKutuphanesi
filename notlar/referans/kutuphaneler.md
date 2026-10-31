@@ -18,3 +18,9 @@
 | linvi/tweetinvi | C# Twitter/X API kütüphanesi | .NET ile X entegrasyonu | – |
 | zhuyansen/awesome-claude-video-skills | (skill içermiyor) Claude Code/Codex ile video yapan 300+ skill reposunun türe göre, güvenlik notlu keşif listesi | Yeni video skilli ararken; aday repoyu kütüphaneye eklemeden önce `rehber/03` çakışma + ücret kontrolü | video-kompozisyon, video-kurgu-render |
 | Fei-Away/Codex-Dream-Skin | Codex Desktop'a duvar kağıdı/tema giydiren macOS/Windows uygulaması (MIT, 15 bin ★). İçindeki tek SKILL.md uygulamanın kurulum girişi | Sadece kişisel görünüm için; kurulumu kendin yap. Resmî değil, paketler imzasız, arayüze CDP ile CSS enjekte eder; README'de API aracı sponsor reklamı var | – (kütüphaneye skill olarak alınmadı) |
+| KaTeX/KaTeX | Hızlı LaTeX matematik dizgisi (web) | Bilimsel/eğitim içerikte formül | `latex-posters`, `scientific-writing`, `manim-composer` |
+| openai/whisper | Açık kaynak konuşma tanıma (STT) modeli, yerel | Ücretsiz transkripsiyon/altyazı | `media-use` (yerel transkripsiyon), `speech-to-text` (ElevenLabs, kısmen), `video-understand` |
+| librosa/librosa | Python ses/müzik analizi (tempo, beat, spektrum) | Müziğe senkron video, ses analizi | `music-to-video`, `media-use` |
+| meyda/meyda | Tarayıcı/Node ses özelliği çıkarımı (RMS, spektral) | Sese tepki veren görsel | `canvas-procedural-animation` |
+| blender/blender | 3D modelleme/render (açık kaynak) | 3D varlık, web için GLB hazırlama | `blender-web-pipeline`, `3d-asset-generation`, `threejs-loaders` |
+| 666ghj/MiroFish | Sürü zekâsı (çok ajanlı) tahmin/simülasyon motoru (AGPL-3.0) | Senaryo/tahmin deneyleri ("Yapay Zeka araçları" listesi) | – |

@@ -9,7 +9,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Browser automation CLI for AI agents. Use when the user needs to inspect, test, or automate browser behavior: navigating pages, filling forms, clicking buttons, taking screenshots, extracting page data, reading selected OpenDesign browser-tab context, testing web apps, dogfooding OpenDesign previews, QA, bug hunts, or reviewing app quality. Prefer local OpenDesign preview URLs unless the user expl
 - **Teknoloji:** api-anahtari, css, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -20,7 +20,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Çalışan sayfada konsol hatası, ağ sorunu, performans veya erişilebilirlik ağacı doğrulaması gerektiğinde (özellikle gerçek tarayıcı verisiyle). · **Ne zaman değil:** chrome-devtools MCP sunucusu kurulu değilse çalışmaz; yalnız backend/CLI işlerinde değil. Betikli, yeniden çalıştırılabilir E2E testi için webapp-testing / Playwright.
 - **Teknoloji:** chrome-devtools-mcp, chrome, javascript · **Paketler:** chrome-devtools-mcp (npx)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★112026, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★112028, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** canli-tarayici-denetimi → birincil · **Roller:** qa-erisilebilirlik, frontend-muhendis · **Globalde:** claude:ayni, agents:ayni
 - **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB.
@@ -30,7 +30,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Designer Who Codes: visual audit then fixes with atomic commits and before/after screenshots. Useful for tightening shipped UI before launch.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -40,7 +40,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Diagnose and fix browser, preview, or Electron export/download failures, especially image export issues involving Save As, Blob/Data URLs, the File System Access API, createWritable failures, and 0 KB files.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -50,7 +50,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Capture full-page screenshots of web pages via Chrome DevTools Protocol with zero dependencies. Useful for portfolios, case studies, and audit reports.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -60,7 +60,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Follow-up design polish skill inspired by Impeccable. Use after a web or HTML artifact exists to audit, critique, polish, animate, harden, and prepare the page for a live/share pass.
 - **Teknoloji:** css, gsap, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -70,7 +70,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Senior Designer review: rates each design dimension 0-10, explains what a 10 looks like, and flags AI Slop signals. Useful as a gate before merging UI work.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -81,7 +81,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Bileşenleri tarayıcıda ayrı ayrı (props, olay, görsel regresyon) test etmek veya experimental-ct'den geçmek için. · **Ne zaman değil:** Salt E2E akışları için değil (webapp-testing / playwright-cli); Playwright'sız projelerde ve React/Vue dışı çatılarda hazır şablon yok.
 - **Teknoloji:** playwright, react, vue, vite, typescript · **Paketler:** @playwright/test, vite
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98916, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** playwright-test-altyapisi → birincil · **Roller:** qa-erisilebilirlik
 - **Boyut:** 38 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Resmî Microsoft skill'i; kavram (hikâye + galeri + mount fixture) net ve geçiş yolu belgeli. Dikkat: galeri sayfasını (`references/gallery-spec.md`'ye göre) projede kendin yazman gerekir, hazır şablon yok; yeni bir Playwright sürümünü varsayar (mount fixture/`reuseContext`), eski sürümde çalışmayabilir. Next.js/webpack'te ayrı Vite sunucusu ekler (devDependency). 10.2 KB + 5 referans.
@@ -92,7 +92,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Başarısız bir Playwright testinin trace.zip'ini ajanla çözümlerken. · **Ne zaman değil:** Trace üretmek veya test yazmak için değil; trace yoksa işe yaramaz.
 - **Teknoloji:** playwright · **Paketler:** playwright (npx playwright trace)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** microsoft (kurum, resmî, ★98916, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** microsoft (kurum, resmî, ★98919, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** playwright-test-altyapisi → tamamlayıcı · **Roller:** qa-erisilebilirlik
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa (4.7 KB), odaklı ve resmî; komutlar tutarlı ve tipik bir inceleme akışı veriyor. Dikkat: yalnızca `npx playwright trace` alt komutunu içeren yeni Playwright sürümlerinde çalışır; `allowed-tools: Bash(npx playwright trace:*)` ile kapsam sınırlı, ek kurulum/ağ yok.
@@ -113,7 +113,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Capture desktop, app windows, or pixel regions across OS platforms. Useful for marketing screenshots, design reviews, and bug reports.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -123,7 +123,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne yapar:** Generate marketing screenshots with Playwright. Useful for landing-page hero shots, App Store screenshots, and changelog visuals.
 - **Teknoloji:** playwright _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -145,7 +145,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Çalışan yerel uygulamada UI davranışını doğrulamak, ekran görüntüsü almak ve tarayıcı günlüklerini görmek için. · **Ne zaman değil:** MCP tabanlı canlı denetim (browser-testing-with-devtools) veya Node tarafı Playwright test koşucusu istiyorsan değil; erişilebilirlik denetimi yapmaz.
 - **Teknoloji:** playwright, python · **Paketler:** playwright (pip)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★185425, son güncelleme 2026-10-28, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185446, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** tarayici-otomasyon-testi → birincil · **Roller:** qa-erisilebilirlik
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Küçük (3.8 KB), net karar ağacı; betikleri 'kara kutu' kullandırarak bağlamı koruyor. Dikkat: python `playwright` paketi ve tarayıcıların (`pip install playwright && playwright install chromium`) kurulu olduğunu varsayıyor ama bunu belirtmiyor. `with_server.py` verilen komutları `shell=True` ile çalıştırıyor (cd/&& desteği için; komutu kullanıcı/ajan verir, dış girdi değil). Registry 'lisans yok' diyor ama LICENSE.txt (Apache-2.0) mevcut.
@@ -156,7 +156,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Ne zaman:** Yalnızca resmî kopya alınamazsa. · **Ne zaman değil:** Resmî kopya varken kullanma.
 - **Teknoloji:** playwright, python · **Paketler:** playwright (pip)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78366, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78369, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** tarayici-otomasyon-testi → alternatif
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. SKILL.md, scripts/ ve examples/ resmî kopyayla aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te doldurulmamış şablon telif satırı.

@@ -467,6 +467,10 @@ def main():
             print(f"ÇAKIŞMA: {y['id']} birebir aynısı {rakip['id']} -> kopya olarak not edildi")
             continue
         yeni_kazanir = oncelik.get(y["repo"], 5) < oncelik.get(rakip["repo"], 5)
+        # Gizli (repo-içi T3 / entegrasyon T4) skill görünür skill'i asla geçmez (repo bazlı öncelik aynı repodaki
+        # resmî bir kayıttan gelebilir: ör. remotion-dev/remotion T2 öncelik 1 + T3 repo-içi 'release')
+        if y.get("gizli") != rakip.get("gizli"):
+            yeni_kazanir = not y.get("gizli")
         # elle verilen karar (durum_elle) önceliği ezer
         if (rakip.get("durum_elle") and rakip["durum"] == "tercih") or (y.get("durum_elle") and y["durum"] == "alternatif"):
             yeni_kazanir = False

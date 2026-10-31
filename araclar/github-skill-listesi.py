@@ -35,8 +35,21 @@ def gql(sorgu, **degisken):
 
 
 def listeler():
-    d = gql("query{viewer{lists(first:50){nodes{id name slug items(first:100){nodes{... on Repository{nameWithOwner id}}}}}}}")
-    return d["data"]["viewer"]["lists"]["nodes"]
+    """Tüm listeler ve TÜM öğeleri (GitHub sayfa başına en fazla 100 öğe verir: sayfalanır)."""
+    d = gql("query{viewer{lists(first:50){nodes{id name slug}}}}")
+    sonuc = []
+    for l in d["data"]["viewer"]["lists"]["nodes"]:
+        ogeler, imlec = [], None
+        while True:
+            q = ("query($id:ID!,$c:String){node(id:$id){... on UserList{items(first:100,after:$c){pageInfo{hasNextPage endCursor}"
+                 " nodes{... on Repository{nameWithOwner id}}}}}}")
+            r = gql(q, id=l["id"], **({"c": imlec} if imlec else {}))["data"]["node"]["items"]
+            ogeler += r["nodes"]
+            if not r["pageInfo"]["hasNextPage"]:
+                break
+            imlec = r["pageInfo"]["endCursor"]
+        sonuc.append({**l, "items": {"nodes": ogeler}})
+    return sonuc
 
 
 def main():
@@ -56,15 +69,19 @@ def main():
     hedeftekiler = [r["nameWithOwner"] for r in hedef["items"]["nodes"] if r]
 
     yeni = [r for r in hedeftekiler if r not in {k["repo"] for k in ayar["repolar"]}]
+    # Kullanıcının kendi listeleri (kaynaklar.json -> korunan_listeler, ör. 'Yapay Zeka araçları'): üyelik korunur, kopya sayılmaz
+    korunan = {l["name"] for l in tumu if l["slug"] in set(ayar.get("korunan_listeler", []))}
+    korunan_id = {l["name"]: l["id"] for l in tumu if l["name"] in korunan}
     eksik = [r for r in skill_repolari if hedef["name"] not in uyelik.get(r, [])]
-    kopya = [(r, uyelik[r]) for r in skill_repolari if len(uyelik.get(r, [])) > 1]
+    kopya = [(r, uyelik[r]) for r in skill_repolari if len([x for x in uyelik.get(r, []) if x not in korunan]) > 1]
     print(f"Skill listesi: '{hedef['name']}' ({len(hedeftekiler)} repo) · kütüphanedeki skill kaynağı: {len(skill_repolari)}")
     print(f"\nYENİ (listede var, kütüphanede yok) — {len(yeni)}:" + ("".join(f"\n  + {r}" for r in yeni) or " yok"))
     if yeni:
         print("  -> rehber/03-yeni-skill-ekleme.md (çakışma kontrolü + ücret sınıflandırması dahil)")
     print(f"\nSkill listesinde OLMAYAN skill kaynakları — {len(eksik)}:" + (" " + ", ".join(eksik) if eksik else " yok"))
     print(f"Birden fazla listede duran skill repoları — {len(kopya)}:" + ("".join(f"\n  {r}: {', '.join(l)}" for r, l in kopya) or " yok"))
-    diger = [f"{l['name']} ({len([x for x in l['items']['nodes'] if x])})" for l in tumu if l is not hedef]
+    diger = [f"{l['name']} ({len([x for x in l['items']['nodes'] if x])})" + (" [korunan]" if l["name"] in korunan else "")
+             for l in tumu if l is not hedef]
     print(f"Diğer listeler — {len(diger)}:" + (" " + ", ".join(diger) if diger else " yok"))
 
     if "--duzenle" not in sys.argv:
@@ -80,9 +97,10 @@ def main():
             rid = json.loads(subprocess.run(["gh", "api", f"repos/{r}", "--jq", "{id:.node_id}"],
                                             capture_output=True, text=True).stdout)["id"]
         try:
+            listeler_ = [hedef["id"]] + [korunan_id[n] for n in uyelik.get(r, []) if n in korunan_id]
             gql("mutation($item:ID!,$l:[ID!]!){updateUserListsForItem(input:{itemId:$item,listIds:$l}){lists{name}}}",
-                item=rid, l=[hedef["id"]])
-            print(f"  ✓ {r} -> yalnız '{hedef['name']}'")
+                item=rid, l=listeler_)
+            print(f"  ✓ {r} -> '{hedef['name']}'" + (f" (+ korunan: {', '.join(n for n in uyelik.get(r, []) if n in korunan_id)})" if any(n in korunan_id for n in uyelik.get(r, [])) else ""))
         except RuntimeError as e:
             hata += 1
             if "INSUFFICIENT_SCOPES" in str(e):

@@ -45,7 +45,14 @@ REF_DESEN = {"mrdoob/three.js": r"three\.?js|threejs|webgl|webgpu", "pmndrs/reac
              "seek-oss/capsize": r"capsize|font metric", "barvian/number-flow": r"number.?flow|animated number",
              "argyleink/open-props": r"open.props", "14islands/r3f-scroll-rig": r"scroll.rig|r3f", "pmndrs/react-three-a11y": r"react-three-a11y",
              "vercel/next.js": r"next\.?js", "react/react": r"\breact\b", "microsoft/playwright": r"playwright",
-             "GoogleChrome/lighthouse": r"lighthouse|core web vitals"}
+             "GoogleChrome/lighthouse": r"lighthouse|core web vitals", "motion-canvas/motion-canvas": r"motion.canvas",
+             "d3/d3": r"\bd3\b", "Tonejs/Tone.js": r"tone\.js|web audio", "ManimCommunity/manim": r"\bmanim",
+             "liabru/matter-js": r"matter\.?js|2d physics", "pmndrs/cannon-es": r"cannon|3d physics", "paperjs/paper.js": r"paper\.js",
+             "rough-stuff/rough": r"rough\.?js|hand.drawn|sketchy", "jwagner/simplex-noise.js": r"simplex|perlin|noise field",
+             "metafizzy/zdog": r"zdog|pseudo.3d", "theatre-js/theatre": r"theatre\.js", "pmndrs/postprocessing": r"post.?processing|bloom",
+             "opentypejs/opentype.js": r"opentype|glyph", "DavidHDev/react-bits": r"react.bits", "darkroomengineering/react-lenis": r"\blenis\b",
+             "KaTeX/KaTeX": r"katex|latex", "openai/whisper": r"whisper", "librosa/librosa": r"librosa|beat detect",
+             "meyda/meyda": r"meyda|audio feature", "blender/blender": r"blender"}
 
 
 def ref_kartlari():

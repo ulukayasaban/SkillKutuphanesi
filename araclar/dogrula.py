@@ -112,11 +112,17 @@ def main():
         tanimli = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"]}
         # Skill listesindeki ('Yapay Zeka Skillleri') ama kütüphanede olmayan repolar: yeni eklenecek skill kaynakları
         hs = json_oku(KAYNAKLAR).get("github_skill_listesi", "yapay-zeka-skillleri")
-        lr = subprocess.run(["gh", "api", "graphql", "-f", "query={viewer{lists(first:50){nodes{slug items(first:100)"
-                             "{nodes{... on Repository{nameWithOwner}}}}}}}", "--jq",
-                             f'.data.viewer.lists.nodes[]|select(.slug=="{hs}")|.items.nodes[].nameWithOwner'],
-                            capture_output=True, text=True)
-        for repo in lr.stdout.split():
+        # Listedeki TÜM öğeler (GitHub sayfa başına 100 öğe verir; sayfalanmazsa yeni eklenen repolar kaçar)
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("gsl", Path(__file__).parent / "github-skill-listesi.py")
+        gsl = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gsl)
+        try:
+            liste_repolari = [x["nameWithOwner"] for l in gsl.listeler() if l["slug"] == hs for x in l["items"]["nodes"] if x]
+        except RuntimeError:
+            liste_repolari = []
+            uyarilar.append("GitHub skill listesi okunamadı; YENİ SKILL REPOSU kontrolü YAPILMADI")
+        for repo in liste_repolari:
             if repo not in tanimli:
                 uyarilar.append(f"YENİ SKILL REPOSU (skill listesinde, kütüphanede yok): {repo} -> rehber/03-yeni-skill-ekleme.md")
         for repo in r.stdout.split():

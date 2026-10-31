@@ -9,7 +9,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description", "agent examples", "agent tools", "agent colors", "autonomous agent", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 68 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
@@ -30,7 +30,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** This skill should be used when the user asks to "create a slash command", "add a command", "write a custom command", "define command arguments", "use command frontmatter", "organize commands", "create command with file references", "interactive command", "use AskUserQuestion in command", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in com
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (, commands); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 151 KB (SKILL.md 18.8 KB, yük orta)
 - **İnceleme:** otomatik
@@ -51,7 +51,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** Customize a Claude Code plugin for a specific organization's tools and workflows. Use when: customize plugin, set up plugin, configure plugin, tailor plugin, adjust plugin settings, customize plugin connectors, customize plugin skill, tweak plugin, modify plugin configuration.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★34064, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34066, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 26 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -61,7 +61,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** Guide users through creating a new plugin from scratch in a cowork session. Use when users want to create a plugin, build a plugin, make a new plugin, develop a plugin, scaffold a plugin, start a plugin from scratch, or design a plugin. This skill requires Cowork mode with access to the outputs directory for delivering the final .plugin file.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★34064, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34066, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 33 KB (SKILL.md 13.0 KB, yük orta)
 - **İnceleme:** otomatik
@@ -71,7 +71,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement prompt-based hooks", "use ${CLAUDE_PLUGIN_ROOT}", "set up event-driven automation", "block dangerous commands", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides
 - **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (, settings); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 63 KB (SKILL.md 15.9 KB, yük orta)
 - **İnceleme:** otomatik
@@ -92,7 +92,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** Search the OD Library (the global asset registry) and apply matching assets into the current project mid-task. Use when the user asks to reuse an image they captured/uploaded earlier, "pull a logo/screenshot from my library", or to find and drop a stored asset into the page being built.
 - **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -102,7 +102,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** Prepare required media inputs within an existing OD Next plan. Reuse capability evidence, acquire and measure assets efficiently, and resolve asynchronous jobs without removing required content or weakening quality standards.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★105071, son güncelleme 2026-10-31, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105078, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -112,7 +112,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md files", "plugin state files", "read YAML frontmatter", "per-project plugin settings", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown 
 - **Teknoloji:** api-anahtari, git, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 43 KB (SKILL.md 11.8 KB, yük orta)
 - **İnceleme:** otomatik
@@ -133,7 +133,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "set up plugin.json", "use ${CLAUDE_PLUGIN_ROOT}", "add commands/agents/skills/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code pl
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 73 KB (SKILL.md 13.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -155,7 +155,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Yeni skill yazmak ya da mevcut skill'i ölçülebilir biçimde iyileştirmek (tetikleme doğruluğu dahil). · **Ne zaman değil:** Claude Code eklentisine özgü yerleşim için skill-development'ı da oku. Eval döngüsü `claude -p` ile alt süreç çalıştırır; Codex'te bu adımlar `codex exec` ile değiştirilmeli ya da test istemleri elle çalıştırılmalı — yazım rehberi ve betiklerin çoğu (quick_validate, package_skill) araçtan bağımsız çalışır.
 - **Teknoloji:** python, markdown · **Paketler:** python3, claude CLI (eval döngüsü için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★185425, son güncelleme 2026-10-28, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★185446, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).
@@ -165,7 +165,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 - **Teknoloji:** api-anahtari, html, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
@@ -176,7 +176,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Ölçüm/eval istemeden, basit iskelet + paketleme akışı yeterliyse. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/skill-creator güncel ve eval destekli.
 - **Teknoloji:** python, markdown · **Paketler:** python3
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78366, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78369, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 38 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Eski sürüm; freshtechbro kopyasıyla neredeyse aynı (yalnızca package_skill.py farkı).
@@ -187,7 +187,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Güncel sürüme erişilemiyorsa yedek. · **Ne zaman değil:** Varsayılan olarak kullanma; composiohq kopyasıyla aynı içerik, anthropics/skill-creator güncel.
 - **Teknoloji:** python, markdown · **Paketler:** python3
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** freshtechbro (kisi, ★1189, son güncelleme 2025-11-20, lisans MIT)
+- **Geliştirici:** freshtechbro (kisi, ★1190, son güncelleme 2025-11-20, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 41 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).
@@ -208,7 +208,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.
 - **Teknoloji:** api-anahtari, html, python, react _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 34 KB (SKILL.md 22.3 KB, yük orta)
 - **İnceleme:** otomatik
@@ -230,7 +230,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Ekipte skill paylaşımını Slack bildirimiyle otomatikleştirmek (Composio Rube bağlıysa). · **Ne zaman değil:** Rube/Composio bağlantısı yoksa; skill yazım kalitesi için skill-creator. Betik içermiyor — paketleme adımları agent'ın yorumuna kalıyor.
 - **Teknoloji:** mcp, slack, composio · **Paketler:** Rube MCP (Composio)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78366, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78369, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Asıl değer Slack paylaşımı; skill oluşturma kısmı skill-creator'ın zayıf özeti.
@@ -252,7 +252,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Yok — yeni skill için skill-creator'ın init/şablonları daha iyi. · **Ne zaman değil:** Hiçbir projeye kurma; içerik yok.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78366, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78369, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 0 KB (SKILL.md 0.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Karar: SADECE ARŞİV. 140 baytlık boş şablon.
@@ -262,7 +262,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne yapar:** This skill should be used when the user asks to "create a hookify rule", "write a hook rule", "configure hookify", "add a hookify rule", or needs guidance on hookify rule syntax and patterns.
 - **Teknoloji:** api-anahtari, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★45465, son güncelleme 2026-10-30, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45466, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
@@ -284,12 +284,12 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Ne zaman:** Agent davranışını değiştiren süreç/disiplin skillerini yazmak ve gerçekten işe yaradığını kanıtlamak. · **Ne zaman değil:** Basit başvuru/format skilleri için ağır (skill-creator yeterli). superpowers:test-driven-development'ı ön koşul sayar. Codex'te: alt-agent baskı testleri ayrı `codex exec` oturumlarıyla yapılır; skill yolu `~/.agents/skills/` (skill bunu kendisi belirtir).
 - **Teknoloji:** markdown, graphviz · **Paketler:** graphviz (isteğe bağlı, render-graphs.js için node)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★309519, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** obra (kisi, ★309535, son güncelleme 2026-10-29, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → tamamlayıcı · **Roller:** skill-gelistirici
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.
 
-### yao-meta-skill  ·  yaojingang/yao-meta-skill @ f5d8f68  ·  puan 84 (A)
+### yao-meta-skill  ·  yaojingang/yao-meta-skill @ f5d8f68  ·  puan 83 (A)
 
 - **Ne yapar:** Create, improve, or evaluate an existing skill from workflows, prompts, SOPs, scripts. Use for migration/release/package, routing, evals/tests, install/trust checks, 优化已有 skill, 补 trigger 评测. Exclude summary/translation/docs, brainstorming, one-off prompts, copy-only edits, outline-only requests.
 - **Teknoloji:** python _(otomatik tespit)_
