@@ -37,7 +37,7 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `araclar/` | Python araçları (sadece standart kütüphane + `gh` CLI) |
 
 ## Hazır promptlar
-Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 10 prompt: [promptlar/README.md](promptlar/README.md)
+Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [promptlar/README.md](promptlar/README.md)
 
 ## Rehberler
 1. [Skill ekleme süreci ve örnekler](rehber/01-skill-ekleme-sureci.md)

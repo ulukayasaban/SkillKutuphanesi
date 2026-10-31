@@ -17,6 +17,7 @@ Codex Desktop'ta **proje klasöründe** (kütüphane bakımı için `~/Documents
 | 08 | [08-aylik-guncelleme-onayi.md](08-aylik-guncelleme-onayi.md) | Aylık güncelleme dalını incelemek ve birleştirmek / reddetmek |
 | 09 | [09-proje-tasindi-veya-bozuldu.md](09-proje-tasindi-veya-bozuldu.md) | Proje klasörü taşındı, skiller görünmüyor, bir şeyler bozuldu |
 | 10 | [10-kutuphane-saglik-kontrolu.md](10-kutuphane-saglik-kontrolu.md) | Kütüphanenin tamamını kontrol ettirmek (duman testi) |
+| 11 | [11-guvenilir-skill-secimi-mevcut-proje.md](11-guvenilir-skill-secimi-mevcut-proje.md) | Mevcut (başka) bir projeye, agent'larına göre güvenilir ve çakışmasız skill seçip kurmak; kütüphane salt okunur |
 
 **Değişmeyen kurallar (her promptta geçerli):**
 - Global skill klasörlerine (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, `~/.openmontage`) dokunulmaz.
