@@ -36,3 +36,6 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 - Eski sürümler: bilerek çıkarılan skiller `kaynaklar.json` → `arsivden_cikarilanlar`.
 - Hazır promptlar: `promptlar/` (kullanıcıya proje başlangıcı, ekleme, güncelleme, bakım için).
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.
+- GitHub: kütüphane `ulukayasaban/SkillKutuphanesi` deposunda **private** (varsayılan dal `master`). Push ve PR **sadece kullanıcı
+  isteyince**; depoyu public yapma. Aylık güncelleme PR'ı GitHub'da birleştirilmez: onaydan sonra yerelde `--birlestir`, sonra
+  `git push origin master`. Ayrıntı: README "GitHub deposu (private)", `rehber/02-guncelleme-yonergesi.md`.
