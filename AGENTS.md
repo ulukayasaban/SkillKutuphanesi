@@ -9,6 +9,9 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 2. Elle `cp`/`ln` ile skill kurma; kilit, yedek ve ön kontrol atlanmış olur.
 3. `arsiv/` altındaki orijinal skill dosyalarını düzenleme. Notlar `registry.json` (inceleme alanları) ve `notlar/` içine yazılır.
 4. `--evet` sadece kullanıcı raporu görüp onayladıktan sonra; `--zorla` sadece kullanıcı açıkça isterse.
+5. GitHub'da **sadece `ulukayasaban/SkillKutuphanesi`** ile işlem yapılır. Proje repolarında (Etsy-Arif, Etsy-Yeni, Akil Disi…)
+   ve başka hiçbir GitHub reposunda push, PR, birleştirme, dal, issue ya da yorum işlemi yapılmaz; gerekiyorsa kullanıcıya
+   anlatılır, işlemi kendisi yapar. (Projeye `skill-ekle.py` ile onaylı yerel kurulum ve kaynak repoları okumak bu kurala girmez.)
 
 ## Skill ekleme akışı
 1. İhtiyacı netleştir: proje yolu, proje tipi, teknoloji, agent rolleri (bilinmiyorsa sor).
