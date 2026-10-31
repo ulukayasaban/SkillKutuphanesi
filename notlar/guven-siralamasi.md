@@ -129,7 +129,7 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 58 | hamen/compose_skill | 38 D | 2 | 08-mobil-uygulama (2) | 2/0/0 | MIT |  | 376 | 56.9 | 3 | 0 | 2026-07-07 |  |
 | 59 | xjli360/sealeap-amazon-skills | 38 D | 602 | 05-e-ticaret-pazaryeri (602) | 602/0/0 | MIT |  | 339 | 145.1 | 1 | 15 | - |  |
 | 60 | lemomo-ai/lemo-wake | 37 D | 3 | 04-motion-graphics-karakter (3) | 3/0/0 | NOASSERTION |  | 221 | 221.0 | 1 | 15 | 2026-10-05 |  |
-| 61 | OrcaQubits/agentic-commerce-skills-plugins | 36 D | 271 | 05-e-ticaret-pazaryeri (271) | 264/7/0 | MIT |  | 40 | 5.0 | 3 | 11 | 2026-05-13 |  |
+| 61 | OrcaQubits/agentic-commerce-skills-plugins | 36 D | 272 | 05-e-ticaret-pazaryeri (272) | 265/7/0 | MIT |  | 40 | 5.0 | 3 | 11 | 2026-05-13 |  |
 | 62 | freshtechbro/claudedesignskills | 36 D | 21 | 05-3d-webgl (10), 03-animasyon-motion (6) | 18/2/1 | MIT |  | 1191 | 97.6 | 1 | 0 | - |  |
 | 63 | tuist/fuckingapproachableswiftconcurrency | 35 D | 0 | - | 0/0/0 | MIT |  | 158 | 15.3 | 15 | 0 | - |  |
 | 64 | mercadopago/mercadopago-claude-marketplace | 34 D | 5 | 05-e-ticaret-pazaryeri (5) | 0/5/0 | Apache-2.0 | ✓ | 32 | 3.9 | 10 | 15 | - |  |
@@ -149,13 +149,13 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 78 | oldred-byte/ec-visual-skill | 25 D | 1 | 05-e-ticaret-pazaryeri (1) | 1/0/0 | MIT |  | 101 | 17.2 | 1 | 0 | - |  |
 | 79 | mmiani/kotlin-kmp-claude-agent-skills | 22 D | 15 | 08-mobil-uygulama (15) | 15/0/0 | NOASSERTION |  | 89 | 12.4 | 1 | 8 | - |  |
 | 80 | jazzychad/ios-code-audit | 21 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 41 | 7.6 | 1 | 0 | - |  |
-| 81 | magendooro/magento-claude-skills | 21 D | 10 | 05-e-ticaret-pazaryeri (10) | 10/0/0 | MIT |  | 15 | 2.1 | 1 | 0 | - |  |
+| 81 | magendooro/magento-claude-skills | 21 D | 0 | - | 0/0/0 | MIT |  | 15 | 2.1 | 1 | 0 | - |  |
 | 82 | arjitj2/swiftui-design-principles | 19 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 33 | 4.0 | 1 | 0 | - |  |
 | 83 | lemomo-ai/codex-radar | 19 D | 1 | 02-agent-orkestrasyon (1) | 1/0/0 | NOASSERTION |  | 39 | 8.0 | 1 | 8 | - |  |
 | 84 | Trendyol/trendyol-integration-developer-tool | 18 D | 1 | 05-e-ticaret-pazaryeri (1) | 1/0/0 | yok | ✓ | 11 | 1.9 | 3 | 0 | - |  |
 | 85 | J-DTurner/etsy-api-skill | 15 D | 1 | 05-e-ticaret-pazaryeri (1) | 1/0/0 | MIT |  | 6 | 0.7 | 1 | 0 | - |  |
-| 86 | vagabond911/aso-auditor | 15 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | yok |  | 33 | 4.9 | 1 | 1 | - |  |
-| 87 | itsncki-design/app-store-submission-auditor | 14 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | yok |  | 34 | 4.6 | 1 | 0 | 2026-03-19 |  |
+| 86 | vagabond911/aso-auditor | 15 D | 0 | - | 0/0/0 | yok |  | 33 | 4.9 | 1 | 1 | - |  |
+| 87 | itsncki-design/app-store-submission-auditor | 14 D | 0 | - | 0/0/0 | yok |  | 34 | 4.6 | 1 | 0 | 2026-03-19 |  |
 
 ## 3. Referans kütüphaneleri (skill içermez) → onları öğreten skiller
 

@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir — elle düzenleme. Kaynak: `registry.json`.
 
-Toplam **2872** skill (+941 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-içi `notlar/referans/repo-ici-skiller.md`).
+Toplam **2860** skill (+941 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-içi `notlar/referans/repo-ici-skiller.md`).
 
 **İşaretler:** ⭐ tercih edilen · `alt` aynı isimli alternatif sürüm · 🔥 kaynağı GitHub Trending'e girmiş (notlar/github-trend.md) · Codex: ✅ tam uyumlu, 🟡 Claude araç adları geçiyor ama çalışır, 🔵 konusu Claude Code'a özel · Yük: S/M/L (agent bağlamına etkisi) · globalde: bilgisayardaki genel klasörde aynı isimli skill (ayni/farkli)
 
@@ -17,7 +17,7 @@ Toplam **2872** skill (+941 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-i�
   - [06-oyun-2d-grafik](#06-oyun-2d-grafik) — 113 skill · Oyun geliştirme, PixiJS, 2D grafik
   - [07-gorsel-sanat-sunum](#07-gorsel-sanat-sunum) — 25 skill · Poster/canvas tasarımı, generative art, slayt, GIF
   - [08-onyuz-test-kalite](#08-onyuz-test-kalite) — 11 skill · Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı
-- **Yazılım Geliştirme** (290)
+- **Yazılım Geliştirme** (288)
   - [01-planlama-metodoloji](#01-planlama-metodoloji) — 40 skill · Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini
   - [02-kod-kalitesi-review](#02-kod-kalitesi-review) — 17 skill · Code review, sadeleştirme, temiz kod
   - [03-test-hata-ayiklama](#03-test-hata-ayiklama) — 11 skill · TDD, hata ayıklama, doğrulama
@@ -25,7 +25,7 @@ Toplam **2872** skill (+941 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-i�
   - [05-git-pr-surum](#05-git-pr-surum) — 10 skill · Git, worktree, PR, sürüm/release, changelog
   - [06-devops-guvenlik-performans](#06-devops-guvenlik-performans) — 41 skill · CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans
   - [07-framework-ozel](#07-framework-ozel) — 19 skill · Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)
-  - [08-mobil-uygulama](#08-mobil-uygulama) — 144 skill · Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans
+  - [08-mobil-uygulama](#08-mobil-uygulama) — 142 skill · Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans
 - **Doküman ve İçerik** (88)
   - [01-ofis-dokumanlari](#01-ofis-dokumanlari) — 12 skill · Word, Excel, PowerPoint, PDF üretme/düzenleme
   - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 8 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
@@ -41,12 +41,12 @@ Toplam **2872** skill (+941 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-i�
   - [02-ses-muzik-konusma](#02-ses-muzik-konusma) — 14 skill · Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi
   - [03-ai-gorsel-video-modelleri](#03-ai-gorsel-video-modelleri) — 17 skill · AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu
   - [04-motion-graphics-karakter](#04-motion-graphics-karakter) — 18 skill · Motion graphics, Manim, karakter animasyonu/rig, görsel stil
-- **İş Alanları (Bilgi Çalışanı)** (1842)
+- **İş Alanları (Bilgi Çalışanı)** (1832)
   - [01-satis-pazarlama-musteri](#01-satis-pazarlama-musteri) — 61 skill · Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları
   - [02-finans-hukuk-ik](#02-finans-hukuk-ik) — 37 skill · Finans/muhasebe, hukuk/sözleşme, insan kaynakları
   - [03-operasyon-urun-isletme](#03-operasyon-urun-isletme) — 83 skill · Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama
   - [04-veri-analizi-raporlama](#04-veri-analizi-raporlama) — 10 skill · İş verisi analizi, SQL, pano/rapor, öngörü
-  - [05-e-ticaret-pazaryeri](#05-e-ticaret-pazaryeri) — 1651 skill · E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listeleme ve SEO, ürün görseli, fiyatlama, reklam, mağaza yönetimi (stok/sipariş/müşteri), mağaza geliştirme
+  - [05-e-ticaret-pazaryeri](#05-e-ticaret-pazaryeri) — 1641 skill · E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listeleme ve SEO, ürün görseli, fiyatlama, reklam, mağaza yönetimi (stok/sipariş/müşteri), mağaza geliştirme
 - **Bilim, Araştırma ve Mühendislik** (195)
   - [01-yasam-bilimleri-kimya](#01-yasam-bilimleri-kimya) — 97 skill · Biyoinformatik, genomik, ilaç/kimya, klinik ve tıbbi veri, laboratuvar otomasyonu
   - [02-fizik-kuantum-malzeme](#02-fizik-kuantum-malzeme) — 19 skill · Fizik, kuantum hesaplama, malzeme/astronomi, simülasyon
@@ -595,10 +595,8 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 | `android-permissions-security` | ⭐ 🔥 | Audits, detects gaps, and remediates Android permissions and IPC component security vulnerabilities. Use when reviewing AndroidManifest.xml,… | api-anahtari | ücretsiz | ✅ | 95 A | L 82KB | - | android/skills |
 | `android-profiler` | ⭐ 🔥 | Records and analyzes Android performance data and diagnoses performance bottlenecks across user apps, system apps, and system services, even… |  | ücretsiz | ✅ | 100 A | S 80KB | - | android/skills |
 | `anr-audit-and-fix` | ⭐ 🔥 | Audits Android codebases for ANR risks and diagnoses ANR stack dumps. Use this skill when scanning Android code for ANR risks or triaging AN… |  | ücretsiz | ✅ | 100 A | S 22KB | - | android/skills |
-| `app-store-submission-auditor` | ⭐ | Scans an iOS app project for App Store rejection risks. Reads source code directly — no back-and-forth. Auto-detects vibe coder vs developer… | react | ücretsiz | ✅ | 43 D | M 35KB | - | itsncki-design/app-store-submission-auditor |
 | `appfunctions` | ⭐ 🔥 | Analyzes Android apps to identify key user workflows for AppFunctions such as creating a note, playing media, or sending an automated or AI … |  | ücretsiz | ✅ | 100 A | S 34KB | - | android/skills |
 | `architecture-feature-first` | ⭐ tamamlayıcı | Use when creating a feature, designing folder structure, adding repositories/services/view models, wiring dependency injection, or deciding … |  | ücretsiz | ✅ | 79 B | M 8KB | - | evanca/flutter-ai-rules |
-| `aso-auditor` | ⭐ | ASO (App Store Optimization) Scoring Checklist Auditor. Triggers automatically whenever a user pastes an App Store URL (apps.apple.com) or G… | api-anahtari, css, html, next.js, react | ücretsiz | ✅ | 57 C | L 135KB | - | vagabond911/aso-auditor |
 | `bloc` | ⭐ | Use when creating a Cubit or Bloc, modeling state with sealed classes or status enums, wiring BlocBuilder/BlocListener/BlocProvider, writing… |  | ücretsiz | ✅ | 79 B | M 11KB | - | evanca/flutter-ai-rules |
 | `camerax` | ⭐ 🔥 | Provide technical guidance for Android camera development with CameraX. Use when implementing camera features, handling asynchronous recordi… |  | ücretsiz | ✅ | 100 A | S 44KB | - | android/skills |
 | `code-review@evanca` | alt | Use when asked to review a PR, MR, branch, or diff, audit changed files, or check code quality. | api-anahtari | ücretsiz | ✅ | 79 B | M 22KB | - | evanca/flutter-ai-rules |
@@ -1598,31 +1596,21 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 | `loyalty-points-system` | ⭐ | Reward repeat customers with points they earn on every purchase, redeem for discounts, and accumulate to unlock higher-tier benefits | typescript | ½ kısmen | ✅ | 77 B | M 24KB | - | finsilabs/awesome-ecommerce-skills |
 | `loyalty-program-optimization` | ⭐ | Design and optimize tiered loyalty programs with points, rewards, exclusive perks, and member-only benefits that increase repeat purchase ra… | typescript | ücretsiz | ✅ | 77 B | M 24KB | - | finsilabs/awesome-ecommerce-skills |
 | `magento-admin-ui` | ⭐ | Build Magento 2 admin interfaces — UI component grids, forms, system configuration, ACL, and admin controllers. Use when creating admin pane… | html | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
-| `magento-api` | ⭐ | Quick reference for Magento 2 REST and GraphQL API endpoints, searchCriteria syntax, and authentication patterns. Background knowledge — loa… | api-anahtari | ücretsiz | ✅ | 61 C | S 5KB | - | magendooro/magento-claude-skills |
-| `magento-api@orcaqubits` | alt | Build Magento 2 REST and GraphQL APIs — webapi.xml, schema.graphqls, resolvers, authentication, and ACL. Use when creating custom API endpoi… | api-anahtari | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
+| `magento-api@orcaqubits` | ⭐ | Build Magento 2 REST and GraphQL APIs — webapi.xml, schema.graphqls, resolvers, authentication, and ACL. Use when creating custom API endpoi… | api-anahtari | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-catalog` | ⭐ | Work with Magento 2 catalog — product types, categories, attributes, indexing, and search integration. Use when building catalog features, c… |  | ücretsiz | ✅ | 81 A | S 5KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-checkout` | ⭐ | Customize Magento 2 checkout — payment methods, shipping carriers, totals collectors, and checkout UI. Use when building custom payment/ship… |  | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
-| `magento-connect` | ⭐ | Test Magento connectivity and show store configuration. Use when setting up or verifying the Magento connection. | api-anahtari | ücretsiz | ✅ | 61 C | S 2KB | - | magendooro/magento-claude-skills |
-| `magento-content` | ⭐ | Read and manage Magento CMS pages and blocks via GraphQL (storefront) and admin REST API. Covers policy pages, store content, page search, a… | api-anahtari, html | ücretsiz | ✅ | 61 C | S 7KB | - | magendooro/magento-claude-skills |
-| `magento-customers` | ⭐ | Search and view Magento customer data via admin REST API. Covers customer search by email/name/id, order history, customer groups. Requires … | api-anahtari | ücretsiz | ✅ | 61 C | S 5KB | - | magendooro/magento-claude-skills |
 | `magento-deploy` | ⭐ | Deploy Magento 2 — deployment modes, static content deployment, DI compilation, CLI commands, zero-downtime strategies, and CI/CD pipeline s… | css, git, html | ücretsiz | ✅ | 81 A | S 5KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-di` | ⭐ | Configure Magento 2 dependency injection — di.xml, types, virtual types, preferences, argument replacement, and Object Manager. Use when wir… |  | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-eav-attributes` | ⭐ | Work with Magento 2 EAV (Entity-Attribute-Value) system — create custom attributes, attribute sets, manage EAV tables, and understand the EA… |  | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-events-cron` | ⭐ | Implement Magento 2 events, observers, cron jobs, and message queues. Use when building event-driven logic, scheduled tasks, or asynchronous… |  | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-frontend` | ⭐ | Build Magento 2 frontend — layout XML, blocks, PHTML templates, ViewModels, themes, JavaScript (RequireJS/KnockoutJS), and LESS/CSS. Use whe… | css, html, tailwind | ücretsiz | ✅ | 81 A | S 5KB | - | OrcaQubits/agentic-commerce-skills-plugins |
-| `magento-fulfillment` | ⭐ | Manage Magento order fulfillment documents via admin REST API. Covers invoices (search, get, create), shipments (search, get, create), credi… | api-anahtari | ücretsiz | ✅ | 59 C | M 9KB | - | magendooro/magento-claude-skills |
 | `magento-graphql` | ⭐ | Query Magento's GraphQL API to build headless storefronts or PWA Studio frontends with products, cart, checkout, and customer operations | api-anahtari, html, next.js, react, typescript | ücretsiz | ✅ | 77 B | M 29KB | - | finsilabs/awesome-ecommerce-skills |
 | `magento-indexing-caching` | ⭐ | Speed up Magento by managing indexers correctly, configuring Varnish full-page cache, and using Redis for session and object caching | html | ücretsiz | ✅ | 77 B | M 27KB | - | finsilabs/awesome-ecommerce-skills |
-| `magento-inventory` | ⭐ | Check and manage Magento product inventory via admin REST API. Covers salable quantity, source items (MSI), legacy stock, inventory updates,… | api-anahtari | ücretsiz | ✅ | 59 C | M 8KB | - | magendooro/magento-claude-skills |
 | `magento-module-dev` | ⭐ | Create Magento 2 custom modules — registration, directory structure, models, resource models, collections, declarative schema, and data/sche… | css | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-module-development` | ⭐ | Build custom Magento 2 modules using dependency injection, plugins, observers, and service contracts to extend core functionality cleanly | node | ücretsiz | ✅ | 77 B | M 33KB | - | finsilabs/awesome-ecommerce-skills |
 | `magento-multi-store` | ⭐ | Configure multiple websites and store views in Magento with shared or scoped catalogs, separate URL structures, and store-specific settings |  | ücretsiz | ✅ | 77 B | M 29KB | - | finsilabs/awesome-ecommerce-skills |
-| `magento-orders` | ⭐ | Look up, inspect, and manage Magento orders via the admin REST API. Covers order search, detail, tracking, status history, analytics (revenu… | api-anahtari | ücretsiz | ✅ | 59 C | M 16KB | - | magendooro/magento-claude-skills |
 | `magento-performance` | ⭐ | Optimize Magento 2 performance — full page cache (Varnish), Redis, indexer tuning, JavaScript/CSS optimization, database optimization, and p… | css, html | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-plugins-interceptors` | ⭐ | Implement Magento 2 plugins (interceptors) — before, after, and around methods for modifying class behavior without inheritance. Use when ex… |  | ücretsiz | ✅ | 81 A | S 3KB | - | OrcaQubits/agentic-commerce-skills-plugins |
-| `magento-product-admin` | ⭐ | Manage Magento products via admin REST API. Covers product search, full product detail, attribute inspection, and product updates with autom… | api-anahtari | ücretsiz | ✅ | 59 C | M 8KB | - | magendooro/magento-claude-skills |
-| `magento-products` | ⭐ | Search and explore Magento product catalog via GraphQL. Supports text search, category/price/attribute filters, aggregations (faceted search… | api-anahtari, html | ücretsiz | ✅ | 59 C | M 10KB | - | magendooro/magento-claude-skills |
-| `magento-promotions` | ⭐ | Manage Magento cart price rules and coupons via admin REST API. Covers sales rule search, rule detail, coupon search, and coupon generation.… | api-anahtari | ücretsiz | ✅ | 61 C | S 7KB | - | magendooro/magento-claude-skills |
 | `magento-security` | ⭐ | Implement Magento 2 security — CSP, 2FA, CSRF protection, ACL, admin security configuration, input validation, and security best practices. … | api-anahtari, css, html | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-service-contracts` | ⭐ | Implement Magento 2 service contracts — repository interfaces, data interfaces, SearchCriteria, and the repository pattern. Use when buildin… |  | ücretsiz | ✅ | 81 A | S 4KB | - | OrcaQubits/agentic-commerce-skills-plugins |
 | `magento-setup` | ⭐ | Set up a Magento 2 Open Source project — installation, Composer setup, system requirements verification, and initial configuration. Use when… | docker | ücretsiz | ✅ | 81 A | S 3KB | - | OrcaQubits/agentic-commerce-skills-plugins |

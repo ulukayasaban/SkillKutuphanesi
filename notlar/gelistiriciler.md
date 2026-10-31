@@ -127,11 +127,11 @@
 | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins) | OrcaQubits | kurum |  | 40 | 3 | 2026-09-14 | MIT | 285 |
 | [Viniciuscarvalho/swift-code-reviewer-skill](https://github.com/Viniciuscarvalho/swift-code-reviewer-skill) | Viniciuscarvalho | kisi |  | 39 | 5 | 2026-05-13 | MIT | 6 |
 | [lemomo-ai/codex-radar](https://github.com/lemomo-ai/codex-radar) | lemomo-ai | kisi |  | 39 | 1 | 2026-09-20 | NOASSERTION | 1 |
-| [itsncki-design/app-store-submission-auditor](https://github.com/itsncki-design/app-store-submission-auditor) | itsncki-design | kisi |  | 34 | 1 | 2026-03-19 | yok | 1 |
+| [itsncki-design/app-store-submission-auditor](https://github.com/itsncki-design/app-store-submission-auditor) | itsncki-design | kisi |  | 34 | 1 | 2026-03-19 | yok | 0 |
 | [arjitj2/swiftui-design-principles](https://github.com/arjitj2/swiftui-design-principles) | arjitj2 | kisi |  | 33 | 1 | 2026-03-16 | MIT | 1 |
-| [vagabond911/aso-auditor](https://github.com/vagabond911/aso-auditor) | vagabond911 | kisi |  | 33 | 1 | 2026-09-18 | yok | 1 |
+| [vagabond911/aso-auditor](https://github.com/vagabond911/aso-auditor) | vagabond911 | kisi |  | 33 | 1 | 2026-09-18 | yok | 0 |
 | [mercadopago/mercadopago-claude-marketplace](https://github.com/mercadopago/mercadopago-claude-marketplace) | mercadopago | kurum | ✅ | 32 | 10 | 2026-10-19 | Apache-2.0 | 5 |
 | [Lonsdale201/wp-agent-skills](https://github.com/Lonsdale201/wp-agent-skills) | Lonsdale201 | kisi |  | 26 | 3 | 2026-10-20 | MIT | 31 |
-| [magendooro/magento-claude-skills](https://github.com/magendooro/magento-claude-skills) | magendooro | kurum |  | 15 | 1 | 2026-03-26 | MIT | 10 |
+| [magendooro/magento-claude-skills](https://github.com/magendooro/magento-claude-skills) | magendooro | kurum |  | 15 | 1 | 2026-03-26 | MIT | 0 |
 | [Trendyol/trendyol-integration-developer-tool](https://github.com/Trendyol/trendyol-integration-developer-tool) | Trendyol | kurum | ✅ | 11 | 3 | 2026-06-11 | yok | 1 |
 | [J-DTurner/etsy-api-skill](https://github.com/J-DTurner/etsy-api-skill) | J-DTurner | kisi |  | 6 | 1 | 2026-01-25 | MIT | 1 |

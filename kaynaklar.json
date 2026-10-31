@@ -563,12 +563,6 @@
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Mercado Pago resmî ödeme entegrasyonu (checkout, webhook, test)."
     },
     {
-      "repo": "magendooro/magento-claude-skills",
-      "tip": "T1",
-      "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Magento 2 / Adobe Commerce mağaza yönetimi (ürün, sipariş, stok, müşteri)."
-    },
-    {
       "repo": "oldred-byte/ec-visual-skill",
       "tip": "T1",
       "oncelik": 3,
@@ -609,18 +603,6 @@
       "tip": "T1",
       "oncelik": 3,
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). iOS erişilebilirlik."
-    },
-    {
-      "repo": "vagabond911/aso-auditor",
-      "tip": "T1",
-      "oncelik": 4,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). App Store / Google Play listeleme (ASO) denetimi. Lisans yok."
-    },
-    {
-      "repo": "itsncki-design/app-store-submission-auditor",
-      "tip": "T1",
-      "oncelik": 4,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). App Store ret riski denetimi. Lisans yok."
     },
     {
       "repo": "pixijs/pixijs",
@@ -1867,6 +1849,27 @@
       "neden": "Eski sarmalayıcı (v0.0.37); güncel Lenis paketi lenis/react kullanılır; güven 13 D",
       "tarih": "2026-10-31",
       "geri_alma": "kaynaklar.json'a T5/T6 olarak yeniden ekle"
+    },
+    {
+      "repo": "itsncki-design/app-store-submission-auditor",
+      "skill_sayisi": 1,
+      "neden": "Lisans yok (GitHub API doğrulandı), ★34, skill puanı 43 (kütüphanedeki en düşük), Mart'tan beri güncellenmedi; hiçbir role/projeye bağlı değil. Kullanıcı onayıyla (silme-adaylari.md #1).",
+      "tarih": "2026-10-31",
+      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır, yeniden yıldızla"
+    },
+    {
+      "repo": "vagabond911/aso-auditor",
+      "skill_sayisi": 1,
+      "neden": "Lisans yok (GitHub API doğrulandı), ★33, SKILL.md 95 KB (agent bağlamını tek başına doldurur); hiçbir role/projeye bağlı değil. Kullanıcı onayıyla (silme-adaylari.md #2).",
+      "tarih": "2026-10-31",
+      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır, yeniden yıldızla"
+    },
+    {
+      "repo": "magendooro/magento-claude-skills",
+      "skill_sayisi": 10,
+      "neden": "★15, tek katkıcı, Mart'tan beri güncellenmedi; 10 ince Magento başvuru notu (2-7 KB, tek dosya); Magento kullanılmıyor, geliştirici tarafı OrcaQubits'te. Kullanıcı onayıyla (silme-adaylari.md #3).",
+      "tarih": "2026-10-31",
+      "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır, yeniden yıldızla"
     }
   ]
 }

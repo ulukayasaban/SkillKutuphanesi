@@ -2,11 +2,11 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-10-31 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6237 · Arşivdeki skill kaydı: 3813 · Bileşen (komut/agent): 254
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 6225 · Arşivdeki skill kaydı: 3801 · Bileşen (komut/agent): 254
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 3806 | arşivde (ana sürüm) |
+| secildi | 3794 | arşivde (ana sürüm) |
 | haric | 2212 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 146 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
@@ -69,12 +69,10 @@
 | hamen/compose_skill | 2 | secildi 2 |
 | heygen-com/hyperframes | 26 | secildi 13, haric 7, ayna-ayni 6 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
-| itsncki-design/app-store-submission-auditor | 1 | secildi 1 |
 | jazzychad/ios-code-audit | 1 | secildi 1 |
 | lemomo-ai/codex-radar | 1 | secildi 1 |
 | lemomo-ai/lemo-opuscar | 2 | secildi 2 |
 | lemomo-ai/lemo-wake | 3 | secildi 3 |
-| magendooro/magento-claude-skills | 10 | secildi 10 |
 | mercadopago/mercadopago-claude-marketplace | 5 | secildi 5 |
 | microsoft/playwright | 9 | secildi 9 |
 | mmiani/kotlin-kmp-claude-agent-skills | 15 | secildi 15 |
@@ -95,7 +93,6 @@
 | teng-lin/notebooklm-py | 1 | secildi 1 |
 | tt-a1i/archify | 5 | secildi 5 |
 | tuist/fuckingapproachableswiftconcurrency | 1 | secildi 1 |
-| vagabond911/aso-auditor | 1 | secildi 1 |
 | vercel-labs/agent-skills | 9 | secildi 9 |
 | vercel/next.js | 27 | secildi 27 |
 | vudovn/ag-kit | 58 | secildi 58 |

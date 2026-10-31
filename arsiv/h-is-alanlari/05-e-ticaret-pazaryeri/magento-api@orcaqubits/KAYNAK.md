@@ -8,4 +8,4 @@
 - **Lisans:** MIT
 - **Geliştirici:** OrcaQubits (kurum)
 - **Arşive alınma:** 2026-10-22
-- **Durum:** alternatif
+- **Durum:** tercih

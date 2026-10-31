@@ -2,7 +2,7 @@
 
 _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listeleme ve SEO, ürün görseli, fiyatlama, reklam, mağaza yönetimi (stok/sipariş/müşteri), mağaza geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/1651**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/1641**
 
 ### a2a-agent-card  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)
 
@@ -2789,23 +2789,13 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### magento-api  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 61 (C)
-
-- **Ne yapar:** Quick reference for Magento 2 REST and GraphQL API endpoints, searchCriteria syntax, and authentication patterns. Background knowledge — loaded automatically when working with Magento APIs.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 5 KB (SKILL.md 4.6 KB, yük kucuk)
-- **İnceleme:** otomatik
-
 ### magento-api@orcaqubits  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)
 
 - **Ne yapar:** Build Magento 2 REST and GraphQL APIs — webapi.xml, schema.graphqls, resolvers, authentication, and ACL. Use when creating custom API endpoints, extending the GraphQL schema, or integrating external systems.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OrcaQubits (kurum, ★40, son güncelleme 2026-09-14, lisans MIT)
-- **Durum:** alternatif
+- **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
@@ -2827,36 +2817,6 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Geliştirici:** OrcaQubits (kurum, ★40, son güncelleme 2026-09-14, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### magento-connect  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 61 (C)
-
-- **Ne yapar:** Test Magento connectivity and show store configuration. Use when setting up or verifying the Magento connection.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### magento-content  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 61 (C)
-
-- **Ne yapar:** Read and manage Magento CMS pages and blocks via GraphQL (storefront) and admin REST API. Covers policy pages, store content, page search, and page updates. Use for 'what is your return policy', 'show shipping info', or any CMS content question.
-- **Teknoloji:** api-anahtari, html _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### magento-customers  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 61 (C)
-
-- **Ne yapar:** Search and view Magento customer data via admin REST API. Covers customer search by email/name/id, order history, customer groups. Requires MAGENTO_ADMIN_TOKEN. Never expose raw PII — mask emails and names in output.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 5 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### magento-deploy  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)
@@ -2909,16 +2869,6 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### magento-fulfillment  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 59 (C)
-
-- **Ne yapar:** Manage Magento order fulfillment documents via admin REST API. Covers invoices (search, get, create), shipments (search, get, create), credit memos, order email, and returns/RMA. Requires MAGENTO_ADMIN_TOKEN.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
-- **İnceleme:** otomatik
-
 ### magento-graphql  ·  finsilabs/awesome-ecommerce-skills @ 30a1fb6  ·  puan 77 (B)
 
 - **Ne yapar:** Query Magento's GraphQL API to build headless storefronts or PWA Studio frontends with products, cart, checkout, and customer operations
@@ -2937,16 +2887,6 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Geliştirici:** finsilabs (kurum, ★60, son güncelleme 2026-10-23, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 27 KB (SKILL.md 13.0 KB, yük orta)
-- **İnceleme:** otomatik
-
-### magento-inventory  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 59 (C)
-
-- **Ne yapar:** Check and manage Magento product inventory via admin REST API. Covers salable quantity, source items (MSI), legacy stock, inventory updates, and async bulk operations. Requires MAGENTO_ADMIN_TOKEN.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 8 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### magento-module-dev  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)
@@ -2979,16 +2919,6 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 29 KB (SKILL.md 14.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### magento-orders  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 59 (C)
-
-- **Ne yapar:** Look up, inspect, and manage Magento orders via the admin REST API. Covers order search, detail, tracking, status history, analytics (revenue/AOV), abandoned cart quotes, and guarded write operations (cancel, hold, comment). Requires MAGENTO_ADMIN_TOKEN.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 16 KB (SKILL.md 15.8 KB, yük orta)
-- **İnceleme:** otomatik
-
 ### magento-performance  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)
 
 - **Ne yapar:** Optimize Magento 2 performance — full page cache (Varnish), Redis, indexer tuning, JavaScript/CSS optimization, database optimization, and profiling. Use when diagnosing slow pages, optimizing load times, or configuring caching.
@@ -3007,36 +2937,6 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Geliştirici:** OrcaQubits (kurum, ★40, son güncelleme 2026-09-14, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### magento-product-admin  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 59 (C)
-
-- **Ne yapar:** Manage Magento products via admin REST API. Covers product search, full product detail, attribute inspection, and product updates with automatic EAV label-to-ID resolution. Requires MAGENTO_ADMIN_TOKEN.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta)
-- **İnceleme:** otomatik
-
-### magento-products  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 59 (C)
-
-- **Ne yapar:** Search and explore Magento product catalog via GraphQL. Supports text search, category/price/attribute filters, aggregations (faceted search), and full product detail by SKU. Use for any product-related question.
-- **Teknoloji:** api-anahtari, html _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 10 KB (SKILL.md 10.5 KB, yük orta)
-- **İnceleme:** otomatik
-
-### magento-promotions  ·  magendooro/magento-claude-skills @ 7b0f2a0  ·  puan 61 (C)
-
-- **Ne yapar:** Manage Magento cart price rules and coupons via admin REST API. Covers sales rule search, rule detail, coupon search, and coupon generation. Requires MAGENTO_ADMIN_TOKEN.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, effort (Codex bunları yok sayar)
-- **Geliştirici:** magendooro (kurum, ★15, son güncelleme 2026-03-26, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### magento-security  ·  OrcaQubits/agentic-commerce-skills-plugins @ 30cd25c  ·  puan 81 (A)

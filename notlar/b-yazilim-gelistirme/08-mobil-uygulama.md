@@ -2,7 +2,7 @@
 
 _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/144**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/142**
 
 ### accessibility  ·  evanca/flutter-ai-rules @ 30f908d  ·  puan 79 (B)
 
@@ -114,16 +114,6 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 22 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### app-store-submission-auditor  ·  itsncki-design/app-store-submission-auditor @ 7fcb6dd  ·  puan 43 (D)
-
-- **Ne yapar:** Scans an iOS app project for App Store rejection risks. Reads source code directly — no back-and-forth. Auto-detects vibe coder vs developer and adapts language. Detects mid-build apps and asks before switching modes. Outputs a risk register, detailed findings with dynamic copy-paste fixes, reviewer experience checklist, draft App Store Connect reviewer notes, and a post-scan manual checklist. TRI
-- **Teknoloji:** react _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** itsncki-design (kisi, ★34, son güncelleme 2026-03-19, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 35 KB (SKILL.md 20.1 KB, yük orta)
-- **İnceleme:** otomatik
-
 ### appfunctions  ·  android/skills @ 95ea931  ·  puan 100 (A)
 
 - **Ne yapar:** Analyzes Android apps to identify key user workflows for AppFunctions such as creating a note, playing media, or sending an automated or AI agent triggered message, voice commands, or system shortcuts, without needing to open the app UI. Generates Kotlin code to expose these workflows to the Android system, allowing agents to discover and execute them on-device. Also refines KDoc documentation to 
@@ -144,16 +134,6 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
-
-### aso-auditor  ·  vagabond911/aso-auditor @ 4a36ff1  ·  puan 57 (C)
-
-- **Ne yapar:** ASO (App Store Optimization) Scoring Checklist Auditor. Triggers automatically whenever a user pastes an App Store URL (apps.apple.com) or Google Play Store URL (play.google.com/store/apps), or asks to audit, score, review, or optimize an app listing, app store page, or app metadata. Also triggers on phrases like "ASO audit", "app store checklist", "optimize my app listing", "score my app", "scree
-- **Teknoloji:** api-anahtari, css, html, next.js, react, tailwind _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** vagabond911 (kisi, ★33, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 135 KB (SKILL.md 97.5 KB, yük buyuk)
-- **İnceleme:** otomatik
 
 ### bloc  ·  evanca/flutter-ai-rules @ 30f908d  ·  puan 79 (B)
 
