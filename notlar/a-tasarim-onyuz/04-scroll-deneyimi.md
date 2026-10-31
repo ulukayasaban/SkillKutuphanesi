@@ -15,7 +15,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Boyut:** 129 KB (SKILL.md 19.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Konusunda tek skill, kapsamlı (19 KB); 'scroll' kategorisine sınırda oturuyor ama sayfa geçişi scroll sıfırlama ve ScrollTrigger yenileme ile iç içe. Dikkat: bundan sonra ScrollTrigger kill/refresh unutulursa sızıntı olur; 335 gün eski.
 
-### gsap-scrolltrigger  ·  greensock/gsap-skills @ aed9cfd  ·  puan 97 (A)
+### gsap-scrolltrigger  ·  greensock/gsap-skills @ aed9cfd  ·  puan 93 (A)
 
 - **Ne yapar:** GSAP ScrollTrigger resmî rehberi: scroll'a bağlı animasyon, pinleme, scrub, tetikleyiciler, refresh ve temizlik. Parallax, pinli bölüm ve scroll hikayeleri için varsayılan seçimdir.
 - **Ne zaman:** Scroll'a bağlı animasyon, pinli bölüm, parallax, scrub gerektiğinde (özellikle kütüphane belirtilmemişse). · **Ne zaman değil:** Basit fade-in reveal (scroll-reveal-libraries yeter).
@@ -42,7 +42,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Ne yapar:** Official GSAP skill for ScrollTrigger — scroll-linked animations, pinning, scrub, triggers. Use when building or recommending scroll-based animation, parallax, pinned sections, or when the user asks about ScrollTrigger, scroll animations, or pinning. Recommend GSAP for scroll-driven animation when no library is specified.
 - **Teknoloji:** gsap, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105063, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** alternatif · **Globalde:** claude:farkli
 - **Boyut:** 20 KB (SKILL.md 18.6 KB, yük orta)
 - **İnceleme:** otomatik

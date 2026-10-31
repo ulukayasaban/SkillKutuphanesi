@@ -7,7 +7,7 @@
 - **Commit:** `86505e44f87d801aa1864a3c4109e9a8ae5c409f`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** cloudflare (kurum)
-- **Değerlendirme:** 87/100 (A)
+- **Değerlendirme:** 92/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `gateway-workers`

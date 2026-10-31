@@ -19,7 +19,8 @@ from ortak import KAYNAKLAR, KOK, gh_api, json_oku, json_yaz  # noqa: E402
 # Teknolojinin kendi üreticisi olan kurumlar (resmî kaynak)
 RESMI = {"anthropics", "greensock", "vercel", "microsoft", "pmndrs", "mrdoob", "motiondivision",
          "darkroomengineering", "tailwindlabs", "figma", "GoogleChrome", "dequelabs", "airbnb", "react",
-         "FFmpeg", "QwikDev", "ComposioHQ"}
+         "FFmpeg", "QwikDev", "ComposioHQ", "heygen-com", "android", "expo", "vercel-labs", "cloudflare", "Shopify",
+         "mercadopago", "Trendyol"}
 
 
 def katkici_sayisi(repo):

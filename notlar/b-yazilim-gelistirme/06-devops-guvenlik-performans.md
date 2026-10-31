@@ -4,12 +4,12 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/40**
 
-### agents-sdk  ·  cloudflare/skills @ 86505e4  ·  puan 97 (A)
+### agents-sdk  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build, debug, or review Cloudflare Agents SDK applications using the agents package.
 - **Teknoloji:** api-anahtari, node, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 46 KB (SKILL.md 11.8 KB, yük orta)
 - **İnceleme:** otomatik
@@ -19,27 +19,27 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** 
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexscope-ai (kurum, ★1229, son güncelleme 2026-08-26, lisans MIT)
+- **Geliştirici:** nexscope-ai (kurum, ★1302, son güncelleme 2026-08-26, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### basin  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### basin  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build and troubleshoot Cloudflare Basin analytics workflows with Basin Pipelines, Basin Catalog, and Basin SQL. Use for streaming data into R2 Iceberg tables, managing catalogs, or querying those tables; also use for requests using the former Data Platform, Pipelines, R2 Data Catalog, or R2 SQL names.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 52 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cf-cli  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### cf-cli  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Cloudflare's official cf CLI (beta) for the public Cloudflare API and Workers projects. Use for finding and running Cloudflare commands from the terminal — sign-in and profiles, cf cli search, cf schema, cf deploy/dev/build, resource commands for DNS, zones, D1, KV, and R2 — and for choosing between cf and Wrangler in a project.
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -60,57 +60,57 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** Claude Security: scan the codebase (the whole repository or a scoped part of it), scan changes (this branch's or a pull request's diff, or one commit), or suggest patches (findings turned into targeted patch files, each verified by a panel of agents, that you apply when you choose). Use when the user asks to scan, audit or check code with Claude Security, to scan their changes with Claude Security
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45463, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 133 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloudflare  ·  cloudflare/skills @ 86505e4  ·  puan 94 (A)
+### cloudflare  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
 
 - **Ne yapar:** Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use for architecture and product selection, including when the user describes a need without naming a Cloudflare product; then find the relevant skill or documentation.
 - **Teknoloji:** api-anahtari, git, next.js, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 320 KB (SKILL.md 26.5 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### cloudflare-email-service  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### cloudflare-email-service  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Implement or troubleshoot Cloudflare Email Sending and Email Routing integrations and their delivery configuration.
 - **Teknoloji:** api-anahtari, html, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 31 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloudflare-one  ·  cloudflare/skills @ 86505e4  ·  puan 97 (A)
+### cloudflare-one  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Design, configure, troubleshoot, or review Cloudflare One Zero Trust and SASE deployments. Use cloudflare-one-migrations for migration planning from other vendors.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 23 KB (SKILL.md 23.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloudflare-one-migrations  ·  cloudflare/skills @ 86505e4  ·  puan 97 (A)
+### cloudflare-one-migrations  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Assess and plan migrations from existing VPN, SWG, or SASE platforms to Cloudflare One, including policy mapping, parity gaps, and rollout.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### deploy-to-vercel  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 89 (A)
+### deploy-to-vercel  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 94 (A)
 
 - **Ne yapar:** Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
 - **Teknoloji:** git, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32831, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, resmî, ★33272, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 40 KB (SKILL.md 11.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -131,17 +131,17 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** 
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexscope-ai (kurum, ★1229, son güncelleme 2026-08-26, lisans MIT)
+- **Geliştirici:** nexscope-ai (kurum, ★1302, son güncelleme 2026-08-26, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### durable-objects  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### durable-objects  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build, debug, or review Cloudflare Durable Objects code for persistent state and coordination.
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 19 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -151,27 +151,27 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** 
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexscope-ai (kurum, ★1229, son güncelleme 2026-08-26, lisans MIT)
+- **Geliştirici:** nexscope-ai (kurum, ★1302, son güncelleme 2026-08-26, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gateway-workers  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### gateway-workers  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build, debug, or review Cloudflare Workers invoked by the Forward action in Gateway HTTP policies, including the GatewayMiddleware entrypoint, Gateway types, context, and continuation.
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### k2  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### k2  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build and troubleshoot Cloudflare K2 or K2 Streams durable logs. Use for stream setup, producing from Workers or HTTP, configuring retention and inputs, and consuming through subscriptions.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -181,17 +181,17 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** 
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexscope-ai (kurum, ★1229, son güncelleme 2026-08-26, lisans MIT)
+- **Geliştirici:** nexscope-ai (kurum, ★1302, son güncelleme 2026-08-26, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### nextjs-on-cloudflare  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### nextjs-on-cloudflare  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build, migrate, and deploy Next.js apps on Cloudflare Workers with vinext. Use when starting a Next.js project on Cloudflare, moving an existing app to Workers, choosing between vinext and OpenNext, or setting up vinext for Workers. For setup, migration, or deployment, install vinext's upstream skills with `npx skills add cloudflare/vinext` if missing, then read and follow the applicable skill and
 - **Teknoloji:** next.js, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -234,7 +234,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** 
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexscope-ai (kurum, ★1229, son güncelleme 2026-08-26, lisans MIT)
+- **Geliştirici:** nexscope-ai (kurum, ★1302, son güncelleme 2026-08-26, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -250,32 +250,32 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Çift kullanımlı (tespitten kaçınma bölümü var) ve yüzeysel; web uygulaması projelerinde savunmaya katkısı düşük. Hiçbir role eklenmedi.
 
-### sandbox-migrate-to-next  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### sandbox-migrate-to-next  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Migrate Cloudflare Sandbox apps from stable @cloudflare/sandbox to @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-next for apps already on the preview.
 - **Teknoloji:** docker, git, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sandbox-next  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### sandbox-next  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build or maintain Cloudflare Sandbox apps on @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-migrate-to-next when porting a stable app.
 - **Teknoloji:** docker, next.js, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sandbox-stable  ·  cloudflare/skills @ 86505e4  ·  puan 97 (A)
+### sandbox-stable  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Build or maintain Cloudflare Sandbox apps on the stable @cloudflare/sandbox package. Use sandbox-next for preview apps and sandbox-migrate-to-next for stable-to-preview migrations.
 - **Teknoloji:** docker, git, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 9.1 KB, yük orta)
 - **İnceleme:** otomatik
@@ -291,12 +291,12 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 30 KB (SKILL.md 17.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı.
 
-### security-audit  ·  cloudflare/security-audit-skill @ c1c8a8c  ·  puan 96 (A)
+### security-audit  ·  cloudflare/security-audit-skill @ c1c8a8c  ·  puan 100 (A)
 
 - **Ne yapar:** Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, focused reviews, vulnerability research, security audits, or pen tests. Run the complete workflow only for explicit codebase audit or pen-test requests, full/comprehensive/end-to-end reviews, or requested report artifacts.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** cloudflare (kurum, ★39125, son güncelleme 2026-09-14, lisans MIT)
+- **Geliştirici:** cloudflare (kurum, resmî, ★54239, son güncelleme 2026-09-14, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 307 KB (SKILL.md 21.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -328,37 +328,37 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Ne yapar:** 
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexscope-ai (kurum, ★1229, son güncelleme 2026-08-26, lisans MIT)
+- **Geliştirici:** nexscope-ai (kurum, ★1302, son güncelleme 2026-08-26, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### turnstile-spin  ·  cloudflare/skills @ 86505e4  ·  puan 94 (A)
+### turnstile-spin  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
 
 - **Ne yapar:** Set up, repair, or migrate to Cloudflare Turnstile bot verification in an existing frontend and backend, including server-side Siteverify.
 - **Teknoloji:** api-anahtari, git, html, next.js, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 92 KB (SKILL.md 28.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### vercel-cli-with-tokens  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 89 (A)
+### vercel-cli-with-tokens  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 94 (A)
 
 - **Ne yapar:** Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel", "set up vercel", "add environment variables to vercel".
 - **Teknoloji:** api-anahtari, git, next.js, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32831, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, resmî, ★33272, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### vercel-optimize  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 89 (A)
+### vercel-optimize  ·  vercel-labs/agent-skills @ 063bee9  ·  puan 94 (A)
 
 - **Ne yapar:** Use for Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps. Collect Vercel metrics, usage, project config, and code scan results first; investigate only metric-backed candidates; produce ranked recommendations grounded in verified files and version-aware Vercel/framework docs. Trigger for Vercel bill reduction, slow or expensi
 - **Teknoloji:** api-anahtari, next.js, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, ★32831, son güncelleme 2026-10-14, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, resmî, ★33272, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 808 KB (SKILL.md 16.9 KB, yük orta)
 - **İnceleme:** otomatik
@@ -374,42 +374,42 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.
 
-### web-perf  ·  cloudflare/skills @ 86505e4  ·  puan 97 (A)
+### web-perf  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores.
 - **Teknoloji:** css, next.js, node, svelte, tailwind, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### workers-best-practices  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### workers-best-practices  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Cloudflare Workers best practices for production applications. Use when writing, reviewing, or configuring Workers.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 28 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### workers-profiling  ·  cloudflare/skills @ 86505e4  ·  puan 99 (A)
+### workers-profiling  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Profile or debug CPU usage and memory allocation in deployed Cloudflare Workers and Durable Objects. Then use this information to optimize your code.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wrangler  ·  cloudflare/skills @ 86505e4  ·  puan 97 (A)
+### wrangler  ·  cloudflare/skills @ 86505e4  ·  puan 100 (A)
 
 - **Ne yapar:** Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, including local development, Previews, deployment, and resource management. For new projects and projects without a Wrangler configuration file, use the cf CLI instead.
 - **Teknoloji:** api-anahtari, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cloudflare (kurum, ★3143, son güncelleme 2026-10-19, lisans Apache-2.0)
+- **Geliştirici:** cloudflare (kurum, resmî, ★3225, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik

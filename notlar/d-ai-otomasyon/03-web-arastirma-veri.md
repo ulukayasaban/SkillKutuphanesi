@@ -20,7 +20,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne yapar:** Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the question should be treated as a graphify query first. Turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools.
 - **Teknoloji:** api-anahtari, git, html, node, obsidian, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Graphify-Labs (kurum, ★132770, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** Graphify-Labs (kurum, ★139534, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 5398 KB (SKILL.md 46.4 KB, yük buyuk) · **Bağımlılık:** graphify Python paketi (pip install graphifyy) kurulu olmalı.
 - **İnceleme:** otomatik

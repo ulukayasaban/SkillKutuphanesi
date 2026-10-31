@@ -7,6 +7,6 @@
 - **Commit:** `c1c8a8c1471069fb0e188eeaff69b8e8db6564a8`
 - **Lisans:** MIT
 - **Geliştirici:** cloudflare (kurum)
-- **Değerlendirme:** 86/100 (A)
+- **Değerlendirme:** 92/100 (A)
 - **Arşive alınma:** 2026-10-22
 - **Durum:** tercih

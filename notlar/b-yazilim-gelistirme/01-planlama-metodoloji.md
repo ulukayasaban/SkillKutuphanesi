@@ -20,7 +20,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Create or evaluate an architecture decision record (ADR). Use when choosing between technologies (e.g., Kafka vs SQS), documenting a design decision with trade-offs and consequences, reviewing a system design proposal, or designing a new component from requirements and constraints.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** alternatif · **Örtüşme:** mimari-karar → tamamlayıcı
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -42,7 +42,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Transform rough ideas into fully-formed designs through structured questioning and alternative exploration. Useful early in concept work.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★103328, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★105063, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Sadece yönlendirme: talimat yok, asıl skill upstream repoda (SKILL.md 'Source' bölümüne bak). Kurmak yerine upstream'i ya da kütüphanedeki tam sürümü kullan.
@@ -63,7 +63,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Review code changes for security, performance, and correctness. Trigger with a PR URL or diff, "review this before I merge", "is this code safe?", or when checking a change for N+1 queries, injection risks, missing edge cases, or error handling gaps.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -84,7 +84,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Structured debugging session — reproduce, isolate, diagnose, and fix. Trigger with an error message or stack trace, "this works in staging but not prod", "something broke after the deploy", or when behavior diverges from expected and the cause isn't obvious.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -94,7 +94,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Pre-deployment verification checklist. Use when about to ship a release, deploying a change with database migrations or feature flags, verifying CI status and approvals before going to production, or documenting rollback triggers ahead of time.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -104,7 +104,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Write and maintain technical documentation. Trigger with "write docs for", "document this", "create a README", "write a runbook", "onboarding guide", or when the user needs help with any form of technical writing — API docs, architecture docs, or operational runbooks.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -147,7 +147,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Run an incident response workflow — triage, communicate, and write postmortem. Trigger with "we have an incident", "production is down", an alert that needs severity assessment, a status update mid-incident, or when writing a blameless postmortem after resolution.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.5 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -179,7 +179,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** multica-ai (kurum, ★222446, son güncelleme 2026-04-20, lisans yok)
+- **Geliştirici:** multica-ai (kurum, ★226923, son güncelleme 2026-04-20, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -189,7 +189,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification that catches the errors self-verification misses. Activates when asked to 'solve this IMO problem', 'prove this olympiad inequality', 'verify this competition proof', 'find a counterexample', 'is this proof correct', or for any problem with 'IMO', 'Putnam', 'USAMO', 'olympiad', or 'competition math' in it. Use
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45463, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 62 KB (SKILL.md 19.5 KB, yük orta)
 - **İnceleme:** otomatik
@@ -221,7 +221,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Work on one hard mathematics problem in rounds: each round a judge writes a few self-contained questions, independent workers answer them, and the judge keeps a ledger of what is proved, refuted and open, until the judge concludes or the rounds run out, and then a proof.md says plainly what is and is not proved. A run takes hours and dozens of worker runs. Usage: /math-proof:siege [NAME=value sett
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation, disallowed-tools (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45463, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 104 KB (SKILL.md 73.7 KB, yük buyuk)
 - **İnceleme:** otomatik
@@ -231,7 +231,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Work on one hard mathematics problem in this session yourself, with no sub-agents: reason in stages, record each settled step in a notes file so that nothing written is lost if a response is cut off, and end with a self-contained proof.md. Usage: /math-proof:solo <the problem, stated in full, or the path of a file holding it>.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation, disallowed-tools (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★43849, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★45463, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -263,7 +263,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Generate a standup update from recent activity. Use when preparing for daily standup, summarizing yesterday's commits and PRs and ticket moves, formatting work into yesterday/today/blockers, or structuring a few rough notes into a shareable update.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
@@ -273,7 +273,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Design systems, services, and architectures. Trigger with "design a system for", "how should we architect", "system design for", "what's the right architecture for", or when the user needs help with API design, data modeling, or service boundaries.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -283,7 +283,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Identify, categorize, and prioritize technical debt. Trigger with "tech debt", "technical debt audit", "what should we refactor", "code health", or when the user asks about code quality, refactoring priorities, or maintenance backlog.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -304,7 +304,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Design test strategies and test plans. Trigger with "how should we test", "test strategy for", "write tests for", "test plan", "what tests do we need", or when the user needs help with testing approaches, coverage, or test architecture.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★31494, son güncelleme 2026-10-22, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★34059, son güncelleme 2026-10-30, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
