@@ -97,6 +97,16 @@ Agent `SkillKutuphanesi/CLAUDE.md` (Codex: `AGENTS.md`) talimatına göre:
 - **Codex:** skillleri `.agents/skills`'ten, agent'ları `.codex/agents`'tan görür.
 - 2026-10-21 testi: deneme projesinde iki araç da 10 skill'in hepsini listeledi.
 
+### Sadece Claude kullanan proje (`--arac claude`)
+Proje Codex kullanmıyorsa (ya da Windows'ta açılıyorsa: git orada symlink'i açamaz) skiller `.claude/skills` altında
+**gerçek kopya** olur; `.agents/skills`, `.codex/agents` ve AGENTS.md bloğu kurulmaz. Seçim `kilit.json` → `araclar`'a
+yazılır; sonraki `--skill`/`--guncelle` bu düzene uyar. Geri dönüş: `--arac ikisi`.
+```bash
+python3 araclar/skill-ekle.py <proje> --arac claude --kuru     # ne değişecek
+python3 araclar/skill-ekle.py <proje> --arac claude --evet     # uygula (önce yedek; içerik değişmez)
+```
+Not: symlink'in aynı içerikli gerçek kopyaya dönmesi (klasör kopyalanınca/Windows) artık "elle değiştirilmiş" sayılmaz.
+
 ## Kaldırma / geri alma
 ```bash
 python3 araclar/skill-ekle.py <proje> --kaldir gsap-core --evet   # tek skill

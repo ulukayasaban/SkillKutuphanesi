@@ -168,6 +168,42 @@ def main():
     test("kaynağı kaybolan skill'in yerine başka repo'nun aynı adlı skill'i konmaz",
          "kaynak-yok" in out and (p2 / ".agents" / "skills" / "gsap-timeline" / "SKILL.md").read_bytes() == once_tl, out)
 
+    # --- sadece Claude kullanan proje (--arac claude)
+    p3 = kok / "proje-claude"
+    p3.mkdir()
+    (p3 / "AGENTS.md").write_text("# Kendi notum\n", encoding="utf-8")
+    kod, out = calistir(p3, "--skill", "gsap-core", "gsap-timeline", "--rol-adi", "animasyoncu", "--evet")
+    # klasör kopyalanınca symlink'in aynı içerikli gerçek kopyaya dönmesi (Etsy-Arif'te görülen durum)
+    l = p3 / ".claude" / "skills" / "gsap-core"
+    l.unlink()
+    shutil.copytree(p3 / ".agents" / "skills" / "gsap-core", l)
+    kod, out = calistir(p3, "--durum")
+    test("symlink yerine aynı içerikli kopya elle değişiklik sayılmaz", "ELLE" not in out, out)
+    once3 = agac(p3)
+    kod, out = calistir(p3, "--arac", "claude", "--kuru")
+    test("--arac claude --kuru hiçbir şey değiştirmez", agac(p3) == once3, out)
+    kod, out = calistir(p3, "--arac", "claude", "--evet")
+    test("--arac claude: Claude'da gerçek kopya, .agents/.codex kaldırılır",
+         kod == 0 and (p3 / ".claude" / "skills" / "gsap-core" / "SKILL.md").exists()
+         and not (p3 / ".claude" / "skills" / "gsap-core").is_symlink()
+         and not (p3 / ".agents").exists() and not (p3 / ".codex" / "agents" / "animasyoncu.toml").exists()
+         and (p3 / ".claude" / "agents" / "animasyoncu.md").exists(), out)
+    test("--arac claude: AGENTS.md'deki kullanıcı metni kalır, blok çıkar",
+         (p3 / "AGENTS.md").read_text(encoding="utf-8") == "# Kendi notum\n"
+         and "skill-kutuphanesi:basla" in (p3 / "CLAUDE.md").read_text(encoding="utf-8"))
+    kod, out = calistir(p3, "--dogrula")
+    test("sadece Claude projesi doğrulamadan temiz geçer", kod == 0, out)
+    kod, out = calistir(p3, "--skill", "d3-viz", "--evet")
+    test("sadece Claude projesine yeni skill .agents oluşturmadan kurulur",
+         kod == 0 and not (p3 / ".agents").exists() and (p3 / ".claude" / "skills" / "d3-viz" / "SKILL.md").exists(), out)
+    (p3 / ".claude" / "skills" / "gsap-core" / "SKILL.md").open("a", encoding="utf-8").write("\nelle\n")
+    kod, out = calistir(p3, "--dogrula")
+    test("sadece Claude projesinde elle değişiklik yakalanır", kod == 1 and "elle değiştirilmiş" in out, out)
+    kod, out = calistir(p3, "--arac", "ikisi", "--evet", "--zorla")
+    test("--arac ikisi: Codex düzenine geri dönülebilir",
+         kod == 0 and (p3 / ".agents" / "skills" / "gsap-core" / "SKILL.md").exists()
+         and (p3 / ".claude" / "skills" / "gsap-core").is_symlink(), out)
+
     sys.path.insert(0, str(KOK / "araclar"))
     import importlib.util
     spec = importlib.util.spec_from_file_location("se", KOK / "araclar" / "skill-ekle.py")

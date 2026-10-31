@@ -92,6 +92,7 @@ Kurallar:
 - Sadece Claude ya da Codex sürümü değişse bile güncelleme görünür (kurulum parmak izi ana + araç sürümlerini kapsar).
 - `--guncelle` eksik/bozuk kurulumları (silinmiş symlink vb.) da onarır.
 - Güncelleme sonrası agent dosyaları (`.claude/agents`, `.codex/agents`) ve AGENTS.md/CLAUDE.md blokları yeniden üretilir.
+- Sadece Claude kullanan projede (`--arac claude`, kilit `araclar: [claude]`) güncelleme skilleri `.claude/skills`'e gerçek kopya olarak yazar; Codex dosyası üretmez.
 
 ## 3) Skill'i projede özelleştirmek istersen
 Kütüphane kopyasını elle değiştirmek yerine:
