@@ -52,6 +52,22 @@ git branch -D guncelleme/2026-11                       # 4b. ret: dalı sil, hi�
 5. `dogrula.py` — roller/profiller var olan skillere mi bakıyor, tekrar isim var mı.
 6. `git commit` — kayıt noktası.
 
+### GitHub'a gönderme (private depo)
+Kütüphane `ulukayasaban/SkillKutuphanesi` (private) deposuna yedeklenir. Güncelleme dalı GitHub'da **PR olarak incelenir**, ama
+**birleştirme yerelde** `--birlestir` ile yapılır (birleştirme sonrası kontroller ve otomatik geri alma sadece orada var):
+
+```bash
+git push -u origin guncelleme/2026-11                                   # 1. dalı gönder
+gh pr create --base master --head guncelleme/2026-11 \
+  --title "Aylık güncelleme 2026-11" --body-file notlar/guncelleme-gecmisi.md   # 2. inceleme kaydı (PR)
+python3 araclar/arsiv-guncelle.py --birlestir guncelleme/2026-11        # 3. onaydan sonra yerelde birleştir
+git push origin master                                                  # 4. PR kendiliğinden "merged" görünür
+git push origin --delete guncelleme/2026-11                             # 5. uzak dalı sil
+```
+- Ret: `gh pr close <no>` + `git push origin --delete <dal>` + `git branch -D <dal>`.
+- GitHub'daki **Merge düğmesini kullanma**; yerel ve uzak `master` ayrışır.
+- Push/PR sadece kullanıcı isteyince yapılır. Zamanlanmış aylık görev sadece yerelde rapor ve dal hazırlar; push etmez.
+
 ### Güncellemeden sonra kontrol et
 - `git -C ~/Documents/SkillKutuphanesi show --stat HEAD` → hangi skiller değişti.
 - Rollerde kullanılan bir skill **kaldırıldıysa** `dogrula.py` HATA verir → rol dosyasını düzelt.

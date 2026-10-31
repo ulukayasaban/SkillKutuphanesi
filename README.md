@@ -36,6 +36,32 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `rehber/` | Süreç notları (aşağıda) |
 | `araclar/` | Python araçları (sadece standart kütüphane + `gh` CLI) |
 
+## GitHub deposu (private)
+Kütüphane [ulukayasaban/SkillKutuphanesi](https://github.com/ulukayasaban/SkillKutuphanesi) deposunda **private** tutulur;
+varsayılan dal `master` (araçlar `ANA_DAL = "master"` kullanır).
+
+- **Neden private:** `arsiv/` üçüncü taraf repolardan alınmış skillerin kopyalarını içerir; bazılarının lisansı yok ya da belirsiz
+  (`NOASSERTION`). Depo herkese açık yapılmaz, başkasıyla paylaşılmadan önce lisanslar ayrıca incelenir.
+- **Yerel kopya asıl kopyadır.** Tüm araçlar `~/Documents/SkillKutuphanesi` üzerinde çalışır; GitHub yedek ve inceleme (PR) kaydıdır.
+  Push ve PR **sadece kullanıcı isteyince** yapılır; aylık zamanlanmış görev hiçbir şey push etmez.
+- **Gönderilmeyenler** (`.gitignore`): `.gecici/`, `.arsiv-yeni/`, `.arsiv-eski/`, `.guncelleme-kilidi`, `__pycache__/`, `.DS_Store`.
+- **Başka bilgisayarda kurmak:** Python 3 (sadece standart kütüphane) + `gh` CLI (`gh auth login`) yeterli.
+  ```bash
+  gh repo clone ulukayasaban/SkillKutuphanesi ~/Documents/SkillKutuphanesi
+  cd ~/Documents/SkillKutuphanesi && python3 araclar/dogrula.py && python3 araclar/kapsam-denetimi.py
+  ```
+  Projelerin `kilit.json` dosyaları kütüphane yolunu tutar; kütüphane farklı bir yola klonlanırsa `promptlar/09-proje-tasindi-veya-bozuldu.md`.
+
+### Değişiklik süreci (PR)
+| Değişiklik | Akış |
+|---|---|
+| Araç, rehber, rol/profil, not | Dal aç → değiştir → `kapsam-denetimi.py` (0 sorun) + `dogrula.py` (0 hata) + `test.py` → commit → push → PR (`master`'a) → incele → GitHub'da birleştir → yerelde `git switch master && git pull` |
+| Aylık güncelleme (`guncelleme/YYYY-AA`) | `arsiv-guncelle.py --uygula --dal` → dalı push et, PR aç (inceleme kaydı) → onay → **yerelde** `--birlestir <dal>` → `git push origin master` (PR kendiliğinden "merged" olur) → `git push origin --delete <dal>` |
+
+Aylık güncelleme PR'ı GitHub'daki **Merge düğmesiyle birleştirilmez**: `--birlestir` birleştirmeden sonra doğrulama/kapsam/testleri
+çalıştırır ve başarısızsa `master`'ı otomatik geri alır; bu güvence sadece yerel birleştirmede vardır. Ayrıntı: [rehber/02](rehber/02-guncelleme-yonergesi.md#githuba-gönderme-private-depo).
+PR açıklaması `.github/pull_request_template.md` kontrol listesiyle gelir.
+
 ## Hazır promptlar
 Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [promptlar/README.md](promptlar/README.md)
 
