@@ -2,7 +2,7 @@
 
 _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/11**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **7/11**
 
 ### agent-browser  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
 
@@ -23,7 +23,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** canli-tarayici-denetimi → birincil · **Roller:** qa-erisilebilirlik, frontend-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 14 KB (SKILL.md 14.3 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### export-download-debugging  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
 

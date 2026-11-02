@@ -2,7 +2,7 @@
 
 _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/14**
 
 ### acestep  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
 
@@ -79,7 +79,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Geliştirici:** calesthio (kisi, ★74392, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** tts-saglayici → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:farkli
 - **Boyut:** 16 KB (SKILL.md 10.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT. Pratik üretim bilgisi (ayar tabloları, SSML sınırları, ellipsis uyarısı) çok değerli; Türkçe destekli multilingual_v2.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Pratik üretim bilgisi (ayar tabloları, SSML sınırları, ellipsis uyarısı) çok değerli; Türkçe destekli multilingual_v2. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### fish-audio-tts  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
 
@@ -156,4 +156,4 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Geliştirici:** calesthio (kisi, ★74392, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
 - **Boyut:** 10 KB (SKILL.md 9.5 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: ALTERNATİF. Adı genel olsa da HeyGen'e özel; önceki ses-tasarimci çekirdeğinden opsiyonele alındı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Adı genel olsa da HeyGen'e özel; önceki ses-tasarimci çekirdeğinden opsiyonele alındı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.

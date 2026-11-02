@@ -2,7 +2,7 @@
 
 _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/36**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/36**
 
 ### accessibility-review  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
 
@@ -75,7 +75,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Geliştirici:** Leonxlnx (kisi, ★107836, son güncelleme 2026-10-31, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** web-gorsel-yon → birincil · **Roller:** ui-tasarimci
 - **Boyut:** 2367 KB (SKILL.md 38.6 KB, yük buyuk)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT. Kararları betikle dağıtıp doğrulamayı gerçek tarayıcıyla yapması 'ortalama sayfa' sorununa en güçlü çözüm; hiçbir şey kurmaz, API anahtarı istemez, eval seti var. Bağlam yükü yüksek (37 KB SKILL.md).
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kararları betikle dağıtıp doğrulamayı gerçek tarayıcıyla yapması 'ortalama sayfa' sorununa en güçlü çözüm; hiçbir şey kurmaz, API anahtarı istemez, eval seti var. Bağlam yükü yüksek (37 KB SKILL.md). · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### design-taste-frontend-v1  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
 
@@ -194,12 +194,12 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 
 - **Ne yapar:** Ön yüz arayüzlerini tasarlama, yeniden tasarlama, eleştirme, denetleme, cilalama ve sağlamlaştırma için komut tabanlı tasarım direktörü: shape, audit/critique, animate, bolder/quieter, colorize, typeset, harden, polish, document/extract gibi alt komutlar. PRODUCT.md/DESIGN.md bağlamını yükleyen bir başlatıcı ve canlı tarayıcı DOM denetimi içerir; iOS/Android ekranlarını da kapsar.
 - **Ne zaman:** Var olan arayüzü denetleme/iyileştirme, UX eleştirisi, erişilebilirlik ve responsive sağlamlaştırma; yeni yüzeyde tasarım yönü belirleme. · **Ne zaman değil:** Backend veya UI dışı işler; tek seferlik küçük stil düzeltmesi (fazla ağır).
-- **Teknoloji:** html, css, node · **Paketler:** impeccable başlatıcısı (ilk çalıştırmada GitHub releases'ten indirilir)
+- **Teknoloji:** html, css, node · **Paketler:** impeccable başlatıcısı (ilk çalıştırmada GitHub releases'ten motor indirilir; SHA-256 scripts/engine-checksums.txt ile doğrulanır)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, user-invocable (Codex bunları yok sayar) · Araca özel sürümler mevcut: claude, codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** pbakaus (kisi, ★99404, son güncelleme 2026-11-01, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** ui-denetim-iyilestirme → birincil · **Roller:** ui-tasarimci, qa-erisilebilirlik
 - **Boyut:** 2163 KB (SKILL.md 11.8 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — 2026-10 güncellemesi: SKILL.md değişmedi; referanslara Arapça alfabesi yerelleştirme kuralları (ZWNJ, Yeh/Kaf varyantları, yerel rakamlar, Hicri/Celali takvim) eklendi. Kalite 5 korunur; Claude ve Codex için ayrı uyarlanmış sürümleri var. · 2026-10-22 (yeniden kurulum): Windows PowerShell çağrısı düzeltildi (`& "…/impeccable.cmd"`); davranış ve kalite değişmedi.
+- **İnceleme:** incelendi · kalite 5/5 — 2026-11 (v4.8.0, motor 0.1.18): başlatıcı sertleştirildi; indirilen motor ikilisi skill içindeki engine-checksums.txt ile doğrulanıyor, doğrulanamazsa çalıştırılmıyor. Hook belgeleri Cursor'u postToolUse'a taşıdı, Hermes Agent desteği; canlı tarayıcı modu genişledi. Hook motoru sandbox dışında çalışır. Kalite 5 korunur. · Önceki not: 2026-10 güncellemesi: SKILL.md değişmedi; referanslara Arapça alfabesi yerelleştirme kuralları (ZWNJ, Yeh/Kaf varyantları, yerel rakamlar, Hicri/Celali takvim) eklendi. Kalite 5 korunur; Claude ve Codex için ayrı uyarlanmış sürümleri var. · 2026-10-22 (yeniden kurulum): Windows PowerShell çağrısı düzeltildi (`& "…/impeccable.cmd"`); davranış ve kalite değişmedi.
 
 ### impeccable@pbakaus  ·  pbakaus/impeccable @ e89e3ad  ·  puan 100 (A)
 
@@ -313,7 +313,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Geliştirici:** nextlevelbuilder (kurum, ★143857, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** web-gorsel-yon → tamamlayıcı · **Roller:** ui-tasarimci
 - **Boyut:** 3503 KB (SKILL.md 15.6 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT. Zengin, bağımlılıksız veri ve kural seti; veri kökeni ve font lisansları belgelenmiş. Dikkat: betik yolu `${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/...` biçiminde; projeye kurulduğunda CLAUDE_PLUGIN_ROOT boş kalır ve yol bozulur (skill-ekle bu kalıbı düzeltmiyor). Ajan betiği skill klasöründen çağırmalı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Zengin, bağımlılıksız veri ve kural seti; veri kökeni ve font lisansları belgelenmiş. Dikkat: betik yolu `${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/...` biçiminde; projeye kurulduğunda CLAUDE_PLUGIN_ROOT boş kalır ve yol bozulur (skill-ekle bu kalıbı düzeltmiyor). Ajan betiği skill klasöründen çağırmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### ui-ux-pro-max@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
 

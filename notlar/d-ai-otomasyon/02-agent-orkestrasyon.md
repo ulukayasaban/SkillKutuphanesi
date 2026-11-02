@@ -2,7 +2,7 @@
 
 _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/37**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/37**
 
 ### batch-operations  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -76,7 +76,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** baglam-yonetimi → birincil · **Roller:** agent-orkestra · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 15 KB (SKILL.md 15.2 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### coordinator-mode  ·  vudovn/ag-kit @ 549ba3d  ·  puan 84 (A)
 

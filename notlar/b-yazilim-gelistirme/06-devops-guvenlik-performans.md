@@ -2,7 +2,7 @@
 
 _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/41**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/41**
 
 ### agents-sdk  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
@@ -53,7 +53,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** ci-cd → birincil · **Roller:** devops-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### claude-security  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 97 (A)
 
@@ -216,7 +216,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** performans → birincil · **Roller:** devops-muhendis, kod-inceleyici, qa-erisilebilirlik · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 26 KB (SKILL.md 16.4 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### performance-profiling  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -299,7 +299,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** guvenlik-sertlestirme → birincil · **Roller:** backend-muhendis, devops-muhendis, kod-inceleyici · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 30 KB (SKILL.md 17.2 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### security-audit  ·  cloudflare/security-audit-skill @ c1c8a8c  ·  puan 93 (A)
 
@@ -331,7 +331,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** deploy-yayin → birincil · **Roller:** devops-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 11 KB (SKILL.md 11.3 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### synthetic-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 

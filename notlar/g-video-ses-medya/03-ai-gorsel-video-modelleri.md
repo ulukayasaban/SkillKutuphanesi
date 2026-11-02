@@ -2,7 +2,7 @@
 
 _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/17**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/17**
 
 ### 3d-asset-generation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
 
@@ -95,13 +95,13 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 ### gemini-omni  ·  calesthio/OpenMontage @ 195eab2  ·  puan 100 (A)
 
 - **Ne yapar:** Google Gemini Omni Flash ile 3-10 sn 720p sesli video üretimi ve aynı klibi doğal dille durum korumalı (interaction_id) düzenleme; referans görsel etiketleri, zaman kodlu vuruşlar ve rota sınırlamaları.
-- **Ne zaman:** Üretilen bir klibi yeniden üretmeden adım adım düzeltmek veya mevcut videoyu düzenlemek gerektiğinde. · **Ne zaman değil:** Tek seferlik sinematik kahraman klip (seedance-2-0), 10 sn'den uzun veya 720p üstü çıktı, İngilizce dışı anlatım.
+- **Ne zaman:** Üretilen bir klibi yeniden üretmeden adım adım düzeltmek veya mevcut videoyu düzenlemek gerektiğinde. · **Ne zaman değil:** Tek seferlik sinematik kahraman klip (seedance-2-0), 10 sn'den uzun veya 720p üstü çıktı (model destekler ama adaptör henüz uygulamıyor), İngilizce dışı anlatım.
 - **Teknoloji:** google-gemini, api-anahtari · **Paketler:** GEMINI_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** calesthio (kisi, ★74392, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici · **Globalde:** claude:farkli
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: ALTERNATİF. Ne zaman seçilip seçilmeyeceği tablosu çok net; benzersiz düzenleme yeteneği.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Ne zaman seçilip seçilmeyeceği tablosu net; benzersiz düzenleme yeteneği. 2026-11: kararlı gemini-omni-1.1-flash modeline geçti; maliyet ~$0.10/sn, süre ipucu faturayı sınırlamıyor (en kötü ~$1.01/klip).
 
 ### grok-media  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
 
@@ -167,7 +167,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Geliştirici:** calesthio (kisi, ★74392, son güncelleme 2026-10-28, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** medya-saglayici-yonlendirme → birincil · **Roller:** ai-medya-uretici
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT. Güncel model kataloğu ve katı yönlendirme kuralları; tamamen OpenMontage registry'sine bağlı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güncel model kataloğu ve katı yönlendirme kuralları; tamamen OpenMontage registry'sine bağlı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### seedance-2-0  ·  calesthio/OpenMontage @ 195eab2  ·  puan 100 (A)
 

@@ -2,7 +2,7 @@
 
 _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/19**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/19**
 
 ### bash-linux  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
@@ -37,14 +37,14 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 
 ### next-bundle-optimizer  ·  vercel/next.js @ 3bccd4d  ·  puan 95 (A)
 
-- **Ne yapar:** Next.js'te tarayıcının ilk yükleme işini denetler ve azaltır: varsayılan 'audit' kipinde next analyze ile anlık görüntü alıp dışa aktarır, modül grafiğinden aday bölmeleri (topluluk → min-cut) kanıtla açıklar; 'fix' kipi yalnız açık istekle tek değişikliği doğrulayarak uygular ve rapor verip durur.
-- **Ne zaman:** Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları veya etkileşime ertelenebilecek özellikler. · **Ne zaman değil:** Next.js dışı projeler; statik App Shell sorunları (next-cache-components-optimizer) ve prefetch işleri (next-partial-prefetching-optimizer); next analyze içermeyen eski Next sürümleri.
+- **Ne yapar:** Next.js'te tarayıcının ilk yükleme işini denetler ve azaltır: varsayılan 'audit' kipinde next analyze ile anlık görüntü alır, modül grafiğinden aday bölmeleri kanıtla açıklar ve istemci paketine sızmış olabilecek sunucu modüllerini ve istemciye aktarılan Server Action'ları tarar ('Possible server-only leaks' raporu). 'fix' kipi yalnız açık istekle tek değişikliği doğrulayarak uygular (sınır düzeltmeleri ayrıca onay ister).
+- **Ne zaman:** Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları, etkileşime ertelenebilecek özellikler veya istemci paketine istemeden giren sunucu kodu şüphesi. · **Ne zaman değil:** Next.js dışı projeler; statik App Shell sorunları (next-cache-components-optimizer) ve prefetch işleri (next-partial-prefetching-optimizer); next analyze içermeyen eski Next sürümleri.
 - **Teknoloji:** next.js, node · **Paketler:** next (next analyze içeren sürüm)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** vercel (kurum, resmî, ★143460, son güncelleme 2026-11-02, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** nextjs-bundle → birincil
 - **Boyut:** 21 KB (SKILL.md 12.2 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT (opsiyonel, --skill ile). Audit/fix ayrımı ve 'ölçülmüş tek değişiklik' kuralı sağlam. Not: Codex sandbox'ı port açmayı engellediği için capture sandbox dışında çalışmalı (skill bunu belirtiyor); diğer next-* skillerini npx skills add ile kurmayı önerir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel, --skill ile). Audit/fix ayrımı ve 'ölçülmüş tek değişiklik' kuralı sağlam. 2026-11: sunucu sızıntısı taraması ve zorunlu rapor tablosu eklendi; fix kipinde boyut ve sınır düzeltmesi ayrıldı. Codex sandbox'ı port açmayı engellediği için capture sandbox dışında çalışmalı.
 
 ### next-cache-components-adoption  ·  vercel/next.js @ 3bccd4d  ·  puan 100 (A)
 
@@ -121,7 +121,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Geliştirici:** microsoft (kurum, resmî, ★99065, son güncelleme 2026-11-01, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** tarayici-otomasyonu → birincil · **Roller:** frontend-muhendis, qa-erisilebilirlik
 - **Boyut:** 68 KB (SKILL.md 15.3 KB, yük orta) · **Kırık bağlantı:** 1
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT, tarayici-otomasyonu grubunun birincili. Resmî (microsoft/playwright) ve kapsamlı; snapshot ref modeli token dostu. Kırık bağlantı: .playwright-cli/page-*.yml örnek çıktı yolu (çalışma anında üretilen dosya, işlevi etkilemez). a-tasarim/08'deki tarayıcı test skilleriyle örtüşme o kategorinin incelemesinde ele alınmalı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tarayici-otomasyonu grubunun birincili. Resmî (microsoft/playwright) ve kapsamlı; snapshot ref modeli token dostu. Kırık bağlantı: .playwright-cli/page-*.yml örnek çıktı yolu (çalışma anında üretilen dosya, işlevi etkilemez). a-tasarim/08'deki tarayıcı test skilleriyle örtüşme o kategorinin incelemesinde ele alınmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### powershell-windows  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 

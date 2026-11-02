@@ -780,7 +780,7 @@
           "derece": "B"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "tasteskill v2: 247 seçkin galeri sitesinden damıtılmış 'anti-slop' sanat yönetimi. Betik araştırılmış 20 yönden üçünü dağıtır, seçilen yöne göre tip sistemi, palet, hero ve bölüm kompozisyonlarını verir; katı ev kuralları, gerçek tarayıcı denetçisi (inspect.mjs) ve ekran görüntüsü üzerinden bak-düzelt döngüsü uygular. Uygulama ekranları (dashboard, ayarlar, gelen kutusu) için ayrı kurallar içerir.",
       "kullanim_alani": "Landing page, pazarlama sitesi, portfolyo, ürün sayfası veya uygulama ekranı tasarlanır/yeniden tasarlanırken; sayfa 'şablon / AI yapımı' görünüyorsa.",
       "kullanma": "Mobil uygulama (mobile-design); var olan tasarım sistemine sıkı bağlı küçük bileşen işleri; Node 22 ve Chrome/Chromium yoksa betikler çalışmaz (yalnız lint.mjs).",
@@ -806,16 +806,11 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Kararları betikle dağıtıp doğrulamayı gerçek tarayıcıyla yapması 'ortalama sayfa' sorununa en güçlü çözüm; hiçbir şey kurmaz, API anahtarı istemez, eval seti var. Bağlam yükü yüksek (37 KB SKILL.md).",
+      "kalite_notu": "Karar: TUT. Kararları betikle dağıtıp doğrulamayı gerçek tarayıcıyla yapması 'ortalama sayfa' sorununa en güçlü çözüm; hiçbir şey kurmaz, API anahtarı istemez, eval seti var. Bağlam yükü yüksek (37 KB SKILL.md). · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "web-gorsel-yon",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "6010f91a9935f1c167dfc500fb1a475681892e6b"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -852,7 +847,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "12af471f627f866411b4bd785b19646d3672784c"
     },
     {
       "id": "design-taste-frontend-v1",
@@ -2149,7 +2145,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Ön yüz arayüzlerini tasarlama, yeniden tasarlama, eleştirme, denetleme, cilalama ve sağlamlaştırma için komut tabanlı tasarım direktörü: shape, audit/critique, animate, bolder/quieter, colorize, typeset, harden, polish, document/extract gibi alt komutlar. PRODUCT.md/DESIGN.md bağlamını yükleyen bir başlatıcı ve canlı tarayıcı DOM denetimi içerir; iOS/Android ekranlarını da kapsar.",
       "kullanim_alani": "Var olan arayüzü denetleme/iyileştirme, UX eleştirisi, erişilebilirlik ve responsive sağlamlaştırma; yeni yüzeyde tasarım yönü belirleme.",
       "kullanma": "Backend veya UI dışı işler; tek seferlik küçük stil düzeltmesi (fazla ağır).",
@@ -2159,7 +2155,7 @@
         "node"
       ],
       "gerekli_paketler": [
-        "impeccable başlatıcısı (ilk çalıştırmada GitHub releases'ten indirilir)"
+        "impeccable başlatıcısı (ilk çalıştırmada GitHub releases'ten motor indirilir; SHA-256 scripts/engine-checksums.txt ile doğrulanır)"
       ],
       "proje_tipleri": [
         "landing-page",
@@ -2173,17 +2169,12 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "2026-10 güncellemesi: SKILL.md değişmedi; referanslara Arapça alfabesi yerelleştirme kuralları (ZWNJ, Yeh/Kaf varyantları, yerel rakamlar, Hicri/Celali takvim) eklendi. Kalite 5 korunur; Claude ve Codex için ayrı uyarlanmış sürümleri var. · 2026-10-22 (yeniden kurulum): Windows PowerShell çağrısı düzeltildi (`& \"…/impeccable.cmd\"`); davranış ve kalite değişmedi.",
+      "kalite_notu": "2026-11 (v4.8.0, motor 0.1.18): başlatıcı sertleştirildi; indirilen motor ikilisi skill içindeki engine-checksums.txt ile doğrulanıyor, doğrulanamazsa çalıştırılmıyor. Hook belgeleri Cursor'u postToolUse'a taşıdı, Hermes Agent desteği; canlı tarayıcı modu genişledi. Hook motoru sandbox dışında çalışır. Kalite 5 korunur. · Önceki not: 2026-10 güncellemesi: SKILL.md değişmedi; referanslara Arapça alfabesi yerelleştirme kuralları (ZWNJ, Yeh/Kaf varyantları, yerel rakamlar, Hicri/Celali takvim) eklendi. Kalite 5 korunur; Claude ve Codex için ayrı uyarlanmış sürümleri var. · 2026-10-22 (yeniden kurulum): Windows PowerShell çağrısı düzeltildi (`& \"…/impeccable.cmd\"`); davranış ve kalite değişmedi.",
       "ortusme_grubu": "ui-denetim-iyilestirme",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude (yeniden kurulum incelemesi)",
-      "inceleme_tarihi": "2026-10-22",
-      "inceleme_commit": "89097b912d714e1324691be46e1ff513bf597f25",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-22",
-        "commit": "89097b912d714e1324691be46e1ff513bf597f25"
-      },
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-02",
+      "inceleme_commit": "e89e3ada3e875a89ac2c5d33d11e65ebef6fe285",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -3407,7 +3398,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Yerel aranabilir UI/UX veri tabanı: 79 stil, 192 ürün paleti ve gerekçe profili, 74 font eşleşmesi, 119 UX kuralı, ikonlar, GSAP ön ayarları, grafik türleri ve 22 teknoloji yığını. Python betiğiyle ürün/sektöre göre tasarım sistemi üretir, isteğe bağlı MASTER + sayfa bazlı geçersiz kılma dosyalarına kaydeder.",
       "kullanim_alani": "Yeni sayfa/proje için palet, font ve stil kararlarını veriye dayandırmak; UX kural kontrol listesi gerektiğinde.",
       "kullanma": "Sanat yönetimi gerektiren özgün sayfalarda tek başına (veri tabanı ortalama sonuçlar verir; design-taste-frontend ile birlikte kullan); Python yoksa.",
@@ -3430,16 +3421,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Zengin, bağımlılıksız veri ve kural seti; veri kökeni ve font lisansları belgelenmiş. Dikkat: betik yolu `${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/...` biçiminde; projeye kurulduğunda CLAUDE_PLUGIN_ROOT boş kalır ve yol bozulur (skill-ekle bu kalıbı düzeltmiyor). Ajan betiği skill klasöründen çağırmalı.",
+      "kalite_notu": "Karar: TUT. Zengin, bağımlılıksız veri ve kural seti; veri kökeni ve font lisansları belgelenmiş. Dikkat: betik yolu `${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/...` biçiminde; projeye kurulduğunda CLAUDE_PLUGIN_ROOT boş kalır ve yol bozulur (skill-ekle bu kalıbı düzeltmiyor). Ajan betiği skill klasöründen çağırmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "web-gorsel-yon",
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "623a9a9037d006ea727f8213f084d02a6b6f11b5"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -3455,7 +3441,8 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret_kaynagi": "otomatik",
+      "inceleme_commit": "3a13158ff1f32156cbe144108de48eda2ecaed9a"
     },
     {
       "id": "ui-ux-pro-max@nexu-io",
@@ -30343,7 +30330,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Chrome DevTools MCP ile ajana canlı tarayıcı gözü kazandırır: ekran görüntüsü, DOM, konsol, ağ istekleri, performans izi (LCP/CLS/INP), hesaplanmış stiller ve erişilebilirlik ağacı. UI/ağ/performans hata ayıklama akışları, test planı şablonu ve tarayıcı içeriğini güvenilmez veri sayan güvenlik sınırları içerir.",
       "kullanim_alani": "Çalışan sayfada konsol hatası, ağ sorunu, performans veya erişilebilirlik ağacı doğrulaması gerektiğinde (özellikle gerçek tarayıcı verisiyle).",
       "kullanma": "chrome-devtools MCP sunucusu kurulu değilse çalışmaz; yalnız backend/CLI işlerinde değil. Betikli, yeniden çalıştırılabilir E2E testi için webapp-testing / Playwright.",
@@ -30367,16 +30354,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB.",
+      "kalite_notu": "Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "canli-tarayici-denetimi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -30405,7 +30387,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "export-download-debugging",
@@ -32172,8 +32155,8 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
-      "ozet_tr": "Projenin kalite çıtasını CONSTRAINTS.md'de yazılı sözleşmeye çevirir: kullanıcıya hangi boyutların önemli olduğunu sorar, sayı yoksa makul varsayılan eşikler önerir, gereken araçları kurdurur ve diff'te çıtanın sessizce düşürülmesini (yeni @ts-ignore/eslint-disable, atlanan/silinen test, kaldırılan assertion, eşik düşürme) yakalar.",
+      "inceleme": "incelendi",
+      "ozet_tr": "Projenin kalite çıtasını CONSTRAINTS.md'de yazılı sözleşmeye çevirir: hangi boyutların önemli olduğunu sorar, sayı yoksa makul varsayılan eşikler önerir, gereken araçları kurdurur ve diff'te çıtanın sessizce düşürülmesini (yeni @ts-ignore/eslint-disable, atlanan/silinen test, kaldırılan assertion, eşik düşürme) yakalar. Semgrep/axe çıktısını eşiğe göre zorlayan yerel bir betik (quality-gate.mjs) ve 'her komut gerçekten başarısız oluyor mu' doğrulaması içerir.",
       "kullanim_alani": "Yazılı kalite çıtası yoksa; agent testleri atlayıp/susturup yeşile ulaşmaya çalışıyorsa; erişilebilirlik, performans veya kapsama eşiği tanımlanacaksa.",
       "kullanma": "Kısa ömürlü prototip/spike; zaten CI'da zorlanan, belgelenmiş standartları olan ekip.",
       "teknoloji": [
@@ -32193,16 +32176,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Agent'ların çıtayı düşürme davranışına özel tek skill; varsayılan eşik tablosu ve floor-guard referansı pratik. 20 KB SKILL.md ile bağlam yükü orta-yüksek.",
+      "kalite_notu": "Karar: TUT. Agent'ların çıtayı düşürme davranışına özel tek skill; varsayılan eşik tablosu ve floor-guard referansı pratik. 2026-11: semgrep/axe'in bulguda 0 ile çıkması sorunu quality-gate.mjs ile çözüldü; kasıtlı ihlalle doğrulama adımı eklendi. SKILL.md ~21,7 KB.",
       "ortusme_grubu": "kalite-sozlesmesi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -32231,7 +32209,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "debug",
@@ -32648,7 +32627,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Önemsiz olmayan her kararı (iddia → en küçük incelenebilir birim → taze bağlamlı karşıt inceleme → uzlaştırma → dur) döngüsünden geçirir; gerekirse Codex veya Gemini CLI ile çapraz model incelemesi yaptırır. Ana oturum orkestratörü için tasarlanmıştır.",
       "kullanim_alani": "Yüksek riskli işler (üretim kimlik doğrulama, güvenlik, geri alınamaz migrasyon), tanıdık olmayan kod, planın gizli hata modlarının sınanması.",
       "kullanma": "Alt-agent/persona içinde (iç içe agent çağıramaz); hızın önemli olduğu düşük riskli işler.",
@@ -32666,16 +32645,11 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, opsiyonel. Sınırlı döngü ve 'iç içe çalışamaz' uyarısı iyi düşünülmüş. Maliyetli (her kararda ek agent); yalnız planlayıcı/orkestratör rolüne uygun, persona skill listesine konmamalı.",
+      "kalite_notu": "Karar: TUT, opsiyonel. Sınırlı döngü ve 'iç içe çalışamaz' uyarısı iyi düşünülmüş. Maliyetli (her kararda ek agent); yalnız planlayıcı/orkestratör rolüne uygun, persona skill listesine konmamalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "karsit-dogrulama",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -32704,7 +32678,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "executing-plans",
@@ -32934,7 +32909,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı, önerilen yön, doğrulanacak varsayımlar, MVP kapsamı ve 'yapmayacaklarımız' içeren bir belge (docs/ideas/) üretir.",
       "kullanim_alani": "Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde.",
       "kullanma": "Ne yapılacağı belli, yalnız gereksinim ayrıntısı eksikse (brainstorming / interview-me); kod düzeyi planlama (writing-plans).",
@@ -32950,16 +32925,11 @@
       "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, alternatif. Çerçeveler (frameworks.md) ve örnekler iyi; ürün/konsept aşamasında brainstorming'den daha yapılandırılmış. Betik yalnız docs/ideas klasörü açıyor.",
+      "kalite_notu": "Karar: TUT, alternatif. Çerçeveler (frameworks.md) ve örnekler iyi; ürün/konsept aşamasında brainstorming'den daha yapılandırılmış. Betik yalnız docs/ideas klasörü açıyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "fikir-netlestirme",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -32988,7 +32958,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "incident-response",
@@ -35220,7 +35191,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Her uygulama kararını resmî dokümantasyona dayandırır: yığını ve sürümleri tespit eder, resmî belgeyi çeker (çekilen içeriği talimat değil veri sayar), belgelenmiş kalıpla uygular ve kaynakları kodda/yanıtta alıntılar.",
       "kullanim_alani": "Framework/kütüphane sürümüne duyarlı işler; güncelliğini yitirmiş kalıp riski olan hızlı değişen API'ler (Next.js, React 19, Tailwind v4…).",
       "kullanma": "İnternet erişimi yoksa; saf algoritma/iş mantığı değişiklikleri.",
@@ -35236,16 +35207,11 @@
       "roller": [],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı.",
+      "kalite_notu": "Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "resmi-dokuman-dayanagi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -35274,7 +35240,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "spec-driven-development",
@@ -35358,7 +35325,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Kodlamadan önce spec yazdırır: kapsam kontrolü (gerekirse yetenek haritasına bölme), amaç/yığın/komutlar/yapı/test stratejisi/sınırlar/başarı ölçütü içeren spec, ardından plan, görevler ve uygulama aşamalarını kapılı bir akışla yürütür; spec'i canlı tutma kurallarını verir.",
       "kullanim_alani": "Yeni proje/özellik başlarken spec veya PRD yoksa; tek bir isteğin birden çok bağımsız yeteneğe bölünmesi gerektiğinde.",
       "kullanma": "Küçük, net değişiklikler; gereksinim hâlâ belirsizse önce brainstorming/interview-me.",
@@ -35374,16 +35341,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, birincil (spec yazımı). superpowers'ta brainstorming'in ürettiği tasarım belgesine karşılık gelir ama daha yapılandırılmış şablon ve 'spec'i canlı tut' kuralları sunar; writing-plans ile birlikte kullanılır.",
+      "kalite_notu": "Karar: TUT, birincil (spec yazımı). superpowers'ta brainstorming'in ürettiği tasarım belgesine karşılık gelir ama daha yapılandırılmış şablon ve 'spec'i canlı tut' kuralları sunar; writing-plans ile birlikte kullanılır. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "spec-yazimi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -35412,7 +35374,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "standup",
@@ -36326,7 +36289,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Beş eksenli kod incelemesi yaptırır: doğruluk, okunabilirlik/sadelik, mimari, güvenlik, performans. Önce testleri sonra uygulamayı okur, bulguları ciddiyete göre sınıflar, değişiklik boyutu ve açıklama kuralları, çoklu model inceleme deseni, ölü kod hijyeni, bağımlılık disiplini ve hazır inceleme şablonu verir.",
       "kullanim_alani": "Birleştirmeden önce her değişiklikte; kendi, başka agent'ın veya insanın yazdığı diff/PR'ı incelerken (diff satır içi yapıştırılmış olsa da).",
       "kullanma": "Yalnız YAGNI/aşırı mühendislik taraması istendiğinde (pragmatic-review daha odaklı); inceleme alt-agent'ını başlatma akışı (requesting-code-review).",
@@ -36344,16 +36307,11 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT, kod-inceleme grubunun birincili. Gerekçe: en kapsamlı ve yığından bağımsız inceleme yöntemi; 'önce testleri oku' ve 'doğrulamayı doğrula' adımları agent incelemelerinin tipik açığını kapatıyor. obra requesting-code-review inceleme yapmaz, inceleyiciyi başlatır (ayrı grup); pragmatic-review ve code-review-checklist daha dar.",
+      "kalite_notu": "Karar: TUT, kod-inceleme grubunun birincili. Gerekçe: en kapsamlı ve yığından bağımsız inceleme yöntemi; 'önce testleri oku' ve 'doğrulamayı doğrula' adımları agent incelemelerinin tipik açığını kapatıyor. obra requesting-code-review inceleme yapmaz, inceleyiciyi başlatır (ayrı grup); pragmatic-review ve code-review-checklist daha dar. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "kod-inceleme",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -36382,7 +36340,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "code-review-checklist",
@@ -36710,7 +36669,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Davranışı birebir koruyarak kodu açıklık için sadeleştirir: Chesterton'ın çiti (önce neden var olduğunu anla), proje geleneklerine uyma, zekice yerine açık kod, denge ve yalnız değişen kapsama odaklanma ilkeleri; TypeScript/JavaScript, Python ve React için dile özgü örnekler.",
       "kullanim_alani": "Çalışan ama okunması/bakımı zor koda refactor; incelemede biriken karmaşıklık fark edildiğinde; yeni yazılan kodu teslim öncesi toparlamak.",
       "kullanma": "Depo genelinde ölü kod/katman denetimi (simplify-codebase); davranış değiştiren yeniden tasarım; performans ayarı.",
@@ -36733,16 +36692,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT, kod-sadelestirme grubunun birincili. Gerekçe: davranış koruma ve 'değişen kapsamla sınırla' kuralları varsayılan kullanım için en güvenli sürüm; dile özgü rehber somut. simplify-codebase depo geneli denetim için tamamlayıcı; simplify-code (vudovn) daha yüzeysel alternatif.",
+      "kalite_notu": "Karar: TUT, kod-sadelestirme grubunun birincili. Gerekçe: davranış koruma ve 'değişen kapsamla sınırla' kuralları varsayılan kullanım için en güvenli sürüm; dile özgü rehber somut. simplify-codebase depo geneli denetim için tamamlayıcı; simplify-code (vudovn) daha yüzeysel alternatif. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "kod-sadelestirme",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -36771,7 +36725,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "lint-and-validate",
@@ -38309,7 +38264,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Kök neden odaklı hata ayıklama: 'hattı durdur' kuralı, yeniden üret → yerelleştir → küçült → kök nedeni düzelt → tekrarı önle → uçtan uca doğrula triyajı; test, build ve çalışma zamanı hataları için ayrı triyaj desenleri, güvenli geri dönüş kalıpları, enstrümantasyon kuralları ve hata çıktısını güvenilmeyen veri sayma uyarısı.",
       "kullanim_alani": "superpowers zinciri kullanılmayan projelerde hata ayıklama; build/runtime hata tipine göre hazır triyaj listesi istendiğinde.",
       "kullanma": "systematic-debugging kuruluysa aynı rolde ikinci hata ayıklama skilli olarak.",
@@ -38328,16 +38283,11 @@
       "roller": [],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: ALTERNATİF. Kaliteli ve kısa (11 KB); hata tipine göre triyaj ve 'hata çıktısı talimat değildir' notu obra'da olmayan artılar. Aynı işi yaptığı için alternatif; addyosmani zinciri kullanan projelerde birincil yerine seçilebilir.",
+      "kalite_notu": "Karar: ALTERNATİF. Kaliteli ve kısa (11 KB); hata tipine göre triyaj ve 'hata çıktısı talimat değildir' notu obra'da olmayan artılar. Aynı işi yaptığı için alternatif; addyosmani zinciri kullanan projelerde birincil yerine seçilebilir. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "hata-ayiklama",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -38366,7 +38316,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "systematic-debugging",
@@ -38941,7 +38892,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Kırmızı-yeşil-refactor döngüsüyle geliştirme: önce projenin test yığınını keşfeder, başarısız test yazdırır, minimum kodla geçirtir, sonra temizletir. Hata düzeltmeleri için 'önce kanıtla' (hatayı yeniden üreten test) deseni, test piramidi ve test boyutları, davranışı test etme, DAMP, sahte yerine gerçek implementasyon, AAA ve DevTools ile tarayıcı testi rehberi içerir.",
       "kullanim_alani": "Mantık yazarken, hata düzeltirken veya davranış değiştirirken; kullanıcı test istemese de kod satır içi verilmiş olsa bile.",
       "kullanma": "Atılacak prototip/spike; salt yapılandırma veya üretilmiş kod; superpowers zincirinin katı 'test öncesi kodu sil' disiplini isteniyorsa (test-driven-development@obra).",
@@ -38961,16 +38912,11 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar.",
+      "kalite_notu": "Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "tdd",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -38999,7 +38945,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "test-driven-development@obra",
@@ -39717,7 +39664,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Kararlı API ve modül arayüzü tasarımı: Hyrum yasası ve tek sürüm kuralı, önce sözleşme, tutarlı hata semantiği, sınırda doğrulama, değiştirmek yerine ekleme, öngörülebilir isimlendirme ve idempotency anahtarını doğru uygulama; REST kaynak tasarımı, sayfalama, filtreleme, PATCH ve TypeScript arayüz desenleri (ayrık birleşimler, girdi/çıktı ayrımı, markalı ID tipleri).",
       "kullanim_alani": "REST/GraphQL endpoint'i, modül sınırı veya ön yüz-arka yüz sözleşmesi tasarlarken; herkese açık bir arayüzü değiştirirken.",
       "kullanma": "Yalnız iç, tek kullanımlık fonksiyonlar; API stil seçimi (REST mi GraphQL mi tRPC mi) ağırlıklıysa api-patterns ile birlikte.",
@@ -39737,16 +39684,11 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı.",
+      "kalite_notu": "Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "api-tasarimi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -39775,7 +39717,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "api-patterns",
@@ -40369,7 +40312,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Üretim kalitesinde, erişilebilir ve responsive arayüz kurma: bileşen dosya yapısı ve desenleri, durum yönetimi, tasarım sistemine bağlılık ve 'AI estetiğinden' kaçınma, boşluk/tipografi/renk, WCAG 2.1 AA (klavye, ARIA, odak yönetimi, anlamlı boş/hata durumları), responsive tasarım, yükleme ve geçiş durumları.",
       "kullanim_alani": "Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde.",
       "kullanma": "Sanat yönetimi/görsel yön belirleme (a-tasarim skilleri); salt backend işleri.",
@@ -40391,16 +40334,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı.",
+      "kalite_notu": "Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "frontend-ui-uygulama",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -40429,7 +40367,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "nodejs-best-practices",
@@ -40877,7 +40816,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Eski sistem, API veya özellikleri kaldırma ve kullanıcıları yeni uygulamaya taşıma: 'kod bir yüktür' ve Hyrum yasası ilkeleri, kaldırma kararı, zorunlu/öneri niteliğinde kullanımdan kaldırma, yerini yap → duyur → kademeli taşı → kaldır süreci; strangler, adapter ve feature flag geçiş desenleri, üretimde kesintisiz şema migrasyonu (expand/contract) ve zombi kod.",
       "kullanim_alani": "Bir API/özelliği emekliye ayırırken; kullanıcıları yeni sisteme taşırken; üretimde kolon yeniden adlandırma/silme gibi kesintisiz şema değişikliğinde; bakım mı emeklilik mi kararında.",
       "kullanma": "Yeni özellik geliştirme; sürüm/tag işlemleri (git-workflow-and-versioning).",
@@ -40895,16 +40834,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı.",
+      "kalite_notu": "Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "kullanimdan-kaldirma",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -40933,7 +40867,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "finishing-a-development-branch",
@@ -41165,7 +41100,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Git iş akışı disiplini: trunk tabanlı geliştirme, erken ve sık commit, atomik commit ve açıklayıcı mesajlar, konuları ayırma, değişiklik boyutu, dal stratejisi ve isimlendirme, worktree ile paralel iş, 'kayıt noktası' deseni, değişiklik özetleri, commit öncesi hijyen, üretilmiş dosyalar, git ile hata ayıklama (bisect), semantik sürümleme, tag'i doğruluk kaynağı yapma ve insanlar için changelog.",
       "kullanim_alani": "Her kod değişikliğinde commit/dal/PR düzeni; karışık çalışma ağacını temiz atomik commit'lere bölmek; sürüm numarası seçmek ve release kesmek.",
       "kullanma": "Ekibin farklı ve yazılı bir git akışı (ör. git-flow) varsa çatışabilir; salt worktree kurulumu (using-git-worktrees).",
@@ -41186,16 +41121,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor.",
+      "kalite_notu": "Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "git-is-akisi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -41224,7 +41154,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "git-worktrees",
@@ -42432,7 +42363,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "CI/CD hattı kurulumu: kalite kapısı sırası (lint → tip → birim → build → entegrasyon → E2E → güvenlik), GitHub Actions örnekleri (veritabanlı entegrasyon ve E2E dahil), CI hatalarını agent'a geri besleme, preview deploy, feature flag, kademeli yayın ve geri alma planı, ortam yönetimi, Dependabot/Renovate ve CI hızlandırma.",
       "kullanim_alani": "Build/deploy hattı kurarken veya değiştirirken; kalite kapılarını otomatikleştirirken; test çalıştırıcısını CI'a bağlarken.",
       "kullanma": "GitHub Actions dışı CI'da örnekler doğrudan uymaz (ilkeler geçerli); tek seferlik yerel betikler.",
@@ -42453,16 +42384,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı.",
+      "kalite_notu": "Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "ci-cd",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -42491,7 +42417,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "claude-security",
@@ -44287,7 +44214,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Ölçüme dayalı performans iyileştirme: Core Web Vitals hedefleri, önce ölç → darboğazı bul → düzelt → doğrula (tut ya da geri al, geri alınan denemeleri de kaydet) → regresyona karşı koru akışı; ön yüz, arka yüz, sorgu ve veritabanı için nereden ölçmeye başlanacağı ve optimization-patterns.md desen dosyası.",
       "kullanim_alani": "Performans gereksinimi veya regresyon şüphesi olduğunda; Core Web Vitals/yükleme süresi iyileştirmede; N+1 sorgu düzeltmede; profil çıkarılmış darboğazlarda.",
       "kullanma": "Ölçüm yapılmadan 'erken optimizasyon'; React'e özgü kural listesi gerekiyorsa vercel-react-best-practices ile birlikte.",
@@ -44311,16 +44238,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı.",
+      "kalite_notu": "Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "performans",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -44349,7 +44271,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "performance-profiling",
@@ -45216,7 +45139,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Kodu güvenlik açıklarına karşı sertleştirir: önce tehdit modeli, 'her zaman yap / önce sor / asla yapma' üç katmanlı sınır sistemi; enjeksiyon, XSS, erişim kontrolü, kimlik doğrulama ve oturum, başlıklar/CORS, girdi doğrulama ve yüklemeler, SSRF, türetilmiş yollarda yıkıcı işlemler, rate limit, gizli anahtarlar, bağımlılık ve tedarik zinciri, kişisel veri ve AI/LLM özellikleri için kontroller; inceleme kontrol listesi ve hardening-patterns.md.",
       "kullanim_alani": "Kullanıcı girdisi, kimlik doğrulama, veri saklama veya dış entegrasyon içeren her özellikte; OWASP Top 10'a karşı giriş akışı denetimi; bağımlılık denetimi.",
       "kullanma": "Saldırı simülasyonu/sızma testi (red-team-tactics); otomatik tarama betiği gerektiğinde vulnerability-scanner ile birlikte.",
@@ -45239,16 +45162,11 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı.",
+      "kalite_notu": "Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "guvenlik-sertlestirme",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -45277,7 +45195,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "security-audit",
@@ -45598,7 +45517,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Üretime çıkış hazırlığı: kod kalitesi, güvenlik, performans, erişilebilirlik, altyapı ve dokümantasyon için ön yayın kontrol listesi; feature flag stratejisi, eşik değerli kademeli yayın sırası ve geri alma koşulları, izlenecek metrikler ve hata raporlama, yayın sonrası doğrulama, hata bütçesi kapısı ve geri alma planı şablonu.",
       "kullanim_alani": "Üretime deploy öncesi 'neler hazır olmalı?' sorusunda; kademeli yayın ve geri alma stratejisi planlarken.",
       "kullanma": "Platforma özgü deploy komutları (deployment-procedures veya platform belgeleri); CI kurulumu (ci-cd-and-automation).",
@@ -45615,16 +45534,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı.",
+      "kalite_notu": "Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "deploy-yayin",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -45653,7 +45567,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "synthetic-monitoring",
@@ -47082,9 +46997,9 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
-      "ozet_tr": "Next.js'te tarayıcının ilk yükleme işini denetler ve azaltır: varsayılan 'audit' kipinde next analyze ile anlık görüntü alıp dışa aktarır, modül grafiğinden aday bölmeleri (topluluk → min-cut) kanıtla açıklar; 'fix' kipi yalnız açık istekle tek değişikliği doğrulayarak uygular ve rapor verip durur.",
-      "kullanim_alani": "Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları veya etkileşime ertelenebilecek özellikler.",
+      "inceleme": "incelendi",
+      "ozet_tr": "Next.js'te tarayıcının ilk yükleme işini denetler ve azaltır: varsayılan 'audit' kipinde next analyze ile anlık görüntü alır, modül grafiğinden aday bölmeleri kanıtla açıklar ve istemci paketine sızmış olabilecek sunucu modüllerini ve istemciye aktarılan Server Action'ları tarar ('Possible server-only leaks' raporu). 'fix' kipi yalnız açık istekle tek değişikliği doğrulayarak uygular (sınır düzeltmeleri ayrıca onay ister).",
+      "kullanim_alani": "Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları, etkileşime ertelenebilecek özellikler veya istemci paketine istemeden giren sunucu kodu şüphesi.",
       "kullanma": "Next.js dışı projeler; statik App Shell sorunları (next-cache-components-optimizer) ve prefetch işleri (next-partial-prefetching-optimizer); next analyze içermeyen eski Next sürümleri.",
       "teknoloji": [
         "next.js",
@@ -47102,16 +47017,11 @@
       "roller": [],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT (opsiyonel, --skill ile). Audit/fix ayrımı ve 'ölçülmüş tek değişiklik' kuralı sağlam. Not: Codex sandbox'ı port açmayı engellediği için capture sandbox dışında çalışmalı (skill bunu belirtiyor); diğer next-* skillerini npx skills add ile kurmayı önerir.",
+      "kalite_notu": "Karar: TUT (opsiyonel, --skill ile). Audit/fix ayrımı ve 'ölçülmüş tek değişiklik' kuralı sağlam. 2026-11: sunucu sızıntısı taraması ve zorunlu rapor tablosu eklendi; fix kipinde boyut ve sınır düzeltmesi ayrıldı. Codex sandbox'ı port açmayı engellediği için capture sandbox dışında çalışmalı.",
       "ortusme_grubu": "nextjs-bundle",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "13ae649ea60769e91b06818e7b252c7e3040f92c"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -47140,7 +47050,8 @@
             "tarih": "2026-10-22"
           }
         }
-      }
+      },
+      "inceleme_commit": "3bccd4df910c984ca60f796e50b8d43db3227162"
     },
     {
       "id": "next-cache-components-adoption",
@@ -48040,7 +47951,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Microsoft'un playwright-cli aracıyla tarayıcı otomasyonu: aç/git, snapshot'taki ref'lerle tıklama/yazma/doldurma/sürükleme/yükleme, metin arama, eval, sekmeler, depolama durumu, emülasyon, ağ (istek taklidi), DevTools, izleme (trace), video kaydı, oturum yönetimi ve Playwright test üretimi; ayrıntılar ek başvuru dosyalarında.",
       "kullanim_alani": "Agent'ın gerçek tarayıcıda sayfayla etkileşmesi, akış doğrulaması, ekran görüntüsü/trace/video alması veya Playwright testleri üretip çalıştırması gerektiğinde.",
       "kullanma": "Playwright MCP sunucusu zaten kullanılıyorsa (aynı iş); playwright-cli kurulmamışsa.",
@@ -48064,16 +47975,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT, tarayici-otomasyonu grubunun birincili. Resmî (microsoft/playwright) ve kapsamlı; snapshot ref modeli token dostu. Kırık bağlantı: .playwright-cli/page-*.yml örnek çıktı yolu (çalışma anında üretilen dosya, işlevi etkilemez). a-tasarim/08'deki tarayıcı test skilleriyle örtüşme o kategorinin incelemesinde ele alınmalı.",
+      "kalite_notu": "Karar: TUT, tarayici-otomasyonu grubunun birincili. Resmî (microsoft/playwright) ve kapsamlı; snapshot ref modeli token dostu. Kırık bağlantı: .playwright-cli/page-*.yml örnek çıktı yolu (çalışma anında üretilen dosya, işlevi etkilemez). a-tasarim/08'deki tarayıcı test skilleriyle örtüşme o kategorinin incelemesinde ele alınmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "tarayici-otomasyonu",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "66070a1eaa0b869379607a9e0e1a652ddf2a77da"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -48089,7 +47995,8 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret_kaynagi": "otomatik",
+      "inceleme_commit": "3b3ac2576f600eca31f1781a631cacf7210e80b1"
     },
     {
       "id": "powershell-windows",
@@ -65700,7 +65607,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Mimari, iş akışı, sequence, veri akışı, yaşam döngüsü, ERD, class, ağaç, zaman çizelgesi ve waterfall diyagramlarını doğrulanmış, temalı, animasyonlu tek dosyalık HTML olarak üretir; Mermaid girdisini de anlamına göre yeniden yazar. Kod tabanından kanıta dayalı diyagram çıkarır ve bir cevabı tek sayfalık 'explainer' sayfasına çevirebilir. `node bin/archify.mjs finalize` şema, teslim ve gerçek tarayıcı kontrollerinden geçirir.",
       "kullanim_alani": "Sistem/mimari açıklama, kod tabanı haritası, API çağrı zinciri, veritabanı şeması, olay zaman çizelgesi; paylaşılabilir etkileşimli diyagram ya da tek sayfa açıklama.",
       "kullanma": "Hızlı statik SVG/PNG (beautiful-mermaid) ya da Markdown içine gömülecek Mermaid kodu yeterliyse; dashboard için; Node.js olmayan ortamda (yalnızca elle SVG yedeği var).",
@@ -65723,17 +65630,12 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; MIT. Klasör çok büyük (7.6 MB) ve SKILL.md 18 KB; ama referanslar ihtiyaç anında okunuyor. Diyagram grubunda en kapsamlı ve doğrulanabilir seçenek.",
+      "kalite_notu": "Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; lisans 2026-11'de Apache-2.0'a geçti (eski MIT sürümleri LICENSE-MIT'te; üretilen HTML'lere lisans bildirimi gömülür). Klasör büyük (7.6 MB), SKILL.md 18 KB; referanslar ihtiyaç anında okunuyor.",
       "ortusme_grubu": "diyagram-uretimi",
       "ortusme_rolu": "birincil",
       "notlar": "Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok.",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "25cf37080fc8b1dbe758a4efc3935b55f3327083"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -65749,7 +65651,8 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret_kaynagi": "otomatik",
+      "inceleme_commit": "a4065941f12be7967436261d9934784e381d423c"
     },
     {
       "id": "beautiful-mermaid",
@@ -66303,7 +66206,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belgeleme, API dokümantasyonu (TSDoc, OpenAPI), README ve changelog. Gereksiz yorumdan kaçınmayı vurgular.",
       "kullanim_alani": "Mimari karar, public API değişikliği, özellik teslimi; kod tabanına gelecek mühendis/agent için bağlam bırakmak.",
       "kullanma": "Uzun iş/strateji dokümanı ortak yazımı (doc-coauthoring); atılacak prototip; Word/PDF teslimatı.",
@@ -66322,16 +66225,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu.",
+      "kalite_notu": "Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "teknik-dokumantasyon",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -66360,7 +66258,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "documentation-templates",
@@ -74862,8 +74761,8 @@
           "derece": "B"
         }
       },
-      "inceleme": "yeniden-incelenecek",
-      "ozet_tr": "Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti oluşturma; değerlendirmeyi çalıştıran evaluation.py betiği içerir.",
+      "inceleme": "incelendi",
+      "ozet_tr": "Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK v2 (@modelcontextprotocol/server; v1 yalnızca mevcut projeler için, codemod ile geçiş) ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti; değerlendirmeyi çalıştıran evaluation.py betiği içerir.",
       "kullanim_alani": "Harici bir API/servisi agent'lara açan yeni MCP sunucusu yazmak ve değerlendirmek.",
       "kullanma": "Mevcut bir MCP sunucusunu Claude Code eklentisine bağlamak (mcp-integration); protokol sürüm geçişi/güvenlik denetimi ağırlıklı işler (mcp-builder@vudovn daha güncel).",
       "teknoloji": [
@@ -74872,7 +74771,7 @@
         "typescript"
       ],
       "gerekli_paketler": [
-        "mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm)",
+        "mcp / fastmcp (pip) veya @modelcontextprotocol/server + zod (npm, SDK v2; eski projelerde @modelcontextprotocol/sdk v1)",
         "@modelcontextprotocol/inspector",
         "anthropic (eval betiği için)"
       ],
@@ -74888,12 +74787,7 @@
       "ortusme_grubu": "mcp-sunucu-gelistirme",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 97,
         "not": "A",
@@ -74926,7 +74820,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "ca45fc496a3436251f191354091d557da31c15b5"
     },
     {
       "id": "mcp-builder@composiohq",
@@ -76178,7 +76073,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Agent'a doğru bağlamı doğru zamanda verme: kalıcıdan geçiciye bağlam hiyerarşisi (kural dosyaları CLAUDE.md/AGENTS.md, spec, ilgili kaynak dosyalar, hata çıktısı, konuşma), yeniden başlatılabilir oturum sınırları ve bağlam paketleme stratejileri.",
       "kullanim_alani": "Yeni oturum/proje kurulumu, kural dosyası yazımı, agent çıktı kalitesi düştüğünde, kod tabanının farklı bölümüne geçerken.",
       "kullanma": "Tek seferlik küçük sorularda gereksiz.",
@@ -76195,16 +76090,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil.",
+      "kalite_notu": "Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "baglam-yonetimi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -76233,7 +76123,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "301b02b12bff98e4688e6984af6556802322bbde"
     },
     {
       "id": "coordinator-mode",
@@ -79779,18 +79670,19 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
-      "ozet_tr": "İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub kod arama, RSS, podcast, hisse verisi) çoklu arka uçla (OpenCLI, platform CLI'ları, API'ler) içerik okur. `agent-reach doctor --json` ile hangi kanalın çalıştığını denetler; kategori başına references/ dosyaları var. SKILL.md Çince, SKILL_en.md İngilizce.",
-      "kullanim_alani": "Çok platformlu web/sosyal medya araştırması, 'internette ne konuşuluyor' taraması, URL'den içerik okuma.",
-      "kullanma": "Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulmamışsa. Açıklamadaki 'MUST USE' tetikleme dili her URL'de devreye girer — yalnızca araştırma rolüne ver. Giriş gerektiren platformlar tarayıcı çerezi okuyabilir; gizlilik açısından dikkat.",
+      "inceleme": "incelendi",
+      "ozet_tr": "Çok platformlu salt-okunur içerik erişimi için tek CLI (`agent-reach <kanal> <eylem>`, `read <url>`): GitHub, YouTube, Bilibili, Reddit, X/Twitter, Xiaohongshu, Instagram, Facebook, LinkedIn, V2EX, Xueqiu, podcast ve anonim web arama/okuma. JSON çıktı ve hata kodlarıyla çalışır; tarayıcı gerektiren kanallar ortak özel tarayıcıyı (CloakBrowser/Chrome + OpenCLI) kullanır. Önce agent'ın kendi araçlarını dener, Reach boşlukları doldurur. SKILL.md Çince (SKILL_en.md İngilizce).",
+      "kullanim_alani": "Çok platformlu web/sosyal medya araştırması, URL'den içerik okuma, YouTube/Bilibili altyazısı, iş ilanı ve hisse verisi okuma, podcast transkripsiyonu.",
+      "kullanma": "Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulu değilse (kanal tablosu kurulumda doldurulan şablon). Gizlilik: kullanıcının Chrome'una OpenCLI eklentisi bağlıysa o sitenin giriş çerezleri özel tarayıcıya kopyalanır; açık onay olmadan kurma. 2026-11'de eski Exa/RSS/jina/yt-dlp doğrudan komutları kaldırıldı.",
       "teknoloji": [
         "python",
         "cli",
         "web-arama"
       ],
       "gerekli_paketler": [
-        "agent-reach CLI (pip/uv)",
-        "platforma göre: OpenCLI, yt-dlp, gh, Exa API"
+        "agent-reach CLI (pip/uv; browser setup ile Node, OpenCLI, CloakBrowser/Chrome indirilir)",
+        "platforma göre: yt-dlp, gh, bili CLI",
+        "opsiyonel: Groq anahtarı (podcast transkripsiyonu), github-token, proxy"
       ],
       "proje_tipleri": [
         "ai-uygulama",
@@ -79802,16 +79694,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT (birincil). Çok kanallı, doctor ile kendini denetleyen, hata durumunda yeniden deneme zinciri tanımlı; MIT. Eksi: varsayılan SKILL.md Çince (İngilizce sürüm SKILL_en.md içinde) ve Çin platformlarına ağırlık veriyor.",
+      "kalite_notu": "Karar: TUT. 2026-11 yeniden yazımı: hata kodlarına göre dallanan akış, döngüsel yeniden deneme yasağı, 'yazma/giriş/şifre isteme yok' çizgileri, önce yerleşik araç ilkesi; MIT. Eksiler: SKILL.md varsayılan Çince, CLI kurulumu şart, tarayıcı indirme ve çerez kopyalama ile izin yüzeyi büyüdü; RSS, Exa genel arama ve bazı yorum okuma eylemleri artık yok.",
       "ortusme_grubu": "web-arastirma",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "94f06c1969dfc1834001269d79d3ad0972d9dee6"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 98,
         "not": "A",
@@ -79827,7 +79714,7 @@
         ]
       },
       "ucret": "ucretsiz",
-      "ucret_notu": "API ücreti yok (kendi CLI'si)",
+      "ucret_notu": "API ücreti yok (kendi CLI'si); Groq anahtarı yalnızca podcast transkripsiyonu için opsiyonel",
       "ucret_kaynagi": "elle",
       "trend": {
         "seviye": "trendde",
@@ -79840,7 +79727,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "7a38047acf26a729cbb27851e3cb81639da86b29"
     },
     {
       "id": "graphify",
@@ -81839,9 +81727,9 @@
           "GitHub trend +10 (trendde, son 2026-11-02)"
         ]
       },
-      "ucret": "belirsiz",
-      "ucret_notu": "ücretli servis izi: HeyGen, paid plan -> ucret-siniflandirma.json'a ekle",
-      "ucret_kaynagi": "otomatik",
+      "ucret": "ucretli",
+      "ucret_notu": "HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta",
+      "ucret_kaynagi": "elle",
       "trend": {
         "seviye": "trendde",
         "son": "2026-11-02",
@@ -177755,7 +177643,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Next.js'te canary'ye birleşmiş bir PR'ı LTS sürüm dalına (releases/lts/active|maintenance) taşır: birleşme commit'ini bulur, sürüm dalından backport dalı açar, cherry-pick -x yapar, doğrular ve taslak PR açar.",
       "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. LTS dalına düzeltme taşırken.",
       "kullanma": "Kendi projelerinde: dal adları, PR başlık biçimi ve $create-pr bağımlılığı Next.js'e özel.",
@@ -177766,14 +177654,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: SADECE ARŞİV. Güvenli adımlar (kullanıcı değişikliklerini koru, boş cherry-pick kontrolü) iyi; genel backport için şablon olarak okunabilir.",
+      "kalite_notu": "Karar: SADECE ARŞİV. Güvenli adımlar (kullanıcı değişikliklerini koru, boş cherry-pick kontrolü) iyi; genel backport için şablon olarak okunabilir. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "13ae649ea60769e91b06818e7b252c7e3040f92c"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -177802,7 +177685,8 @@
             "tarih": "2026-10-22"
           }
         }
-      }
+      },
+      "inceleme_commit": "3bccd4df910c984ca60f796e50b8d43db3227162"
     },
     {
       "id": "canvas-capture-extension",
@@ -179581,7 +179465,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Next.js dokümanlarındaki diyagram stilini (ızgara arka plan, gölgeli paneller, gri iskelet UI, anlamlı renk paleti) koddan üretir: el yazımı SVG primitif kütüphanesi (lib.mjs/gen.mjs), headless Chrome ile 2x açık/koyu PNG, kenar boşluğu ölçümü ve inceleme listesi. AI görsel üretimi yok.",
       "kullanim_alani": "Next.js docs'a diyagram eklerken; kendi dokümanların için tutarlı açık/koyu teknik diyagram üretmek istersen yöntem ve betikler uyarlanabilir.",
       "kullanma": "Mermaid/hızlı diyagram (c-dokuman-icerik/02 altındaki diyagram skilleri daha pratik); renk tokenları Next.js'e ait.",
@@ -179593,15 +179477,10 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT (uyarlanabilir). disable-model-invocation: true (sadece elle çağrılır). Betikli, ölçülebilir kalite kontrollü nadir bir docs-diyagram skili.",
+      "kalite_notu": "Karar: TUT (uyarlanabilir). disable-model-invocation: true (sadece elle çağrılır). Betikli, ölçülebilir kalite kontrollü nadir bir docs-diyagram skili. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "notlar": "Kendi projende de işe yarar: SVG primitif + Chrome render + ölçüm yaklaşımı kendi docs diyagramlarına uyarlanabilir (tokenları değiştir).",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "13ae649ea60769e91b06818e7b252c7e3040f92c"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 95,
         "not": "A",
@@ -179630,7 +179509,8 @@
             "tarih": "2026-10-22"
           }
         }
-      }
+      },
+      "inceleme_commit": "3bccd4df910c984ca60f796e50b8d43db3227162"
     },
     {
       "id": "experts",
@@ -181151,7 +181031,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Next.js testlerinde it.skip / 'dev modda atla' gibi sahte-yeşil kalıplar yerine @gate / @force-gate yönergelerini kullanmayı öğretir: yönerge seçimi, koşul katmanları, test-ekseni fixture kalıbı, tuzaklar ve doğrulama komutları.",
       "kullanim_alani": "Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. test yazarken.",
       "kullanma": "Diğer projeler (yönerge Next.js test altyapısına ait). Fikir — bilinen hatayı atlamak yerine 'beklenen hata' olarak işaretlemek — genel olarak değerli.",
@@ -181161,14 +181041,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: SADECE ARŞİV. İyi gerekçelendirilmiş; 'fake-green' kavramı genel test kültürü için okunmaya değer.",
+      "kalite_notu": "Karar: SADECE ARŞİV. İyi gerekçelendirilmiş; 'fake-green' kavramı genel test kültürü için okunmaya değer. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "13ae649ea60769e91b06818e7b252c7e3040f92c"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 94,
         "not": "A",
@@ -181197,7 +181072,8 @@
             "tarih": "2026-10-22"
           }
         }
-      }
+      },
+      "inceleme_commit": "3bccd4df910c984ca60f796e50b8d43db3227162"
     },
     {
       "id": "gh-stack",
@@ -183541,7 +183417,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Playwright CI başarısızlık analizi ve sürüm operasyonları için repo içi rehberlere (commit-failures.md, fetch-commit-logs.sh) yönlendirir.",
       "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz..",
       "kullanma": "Diğer projeler.",
@@ -183551,14 +183427,9 @@
       ],
       "zorluk": "kolay",
       "kalite": 3,
-      "kalite_notu": "Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut).",
+      "kalite_notu": "Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut). · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "66070a1eaa0b869379607a9e0e1a652ddf2a77da"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -183574,7 +183445,8 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret_kaynagi": "otomatik",
+      "inceleme_commit": "3b3ac2576f600eca31f1781a631cacf7210e80b1"
     },
     {
       "id": "playwright-release-notes",
@@ -183891,24 +183763,19 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
-      "ozet_tr": "Playwright hata raporunu sınıflandırır (bug, özellik isteği, upstream, soru) ve bug'ı tip-of-tree üzerinde, tarayıcılar arası, gerekirse sürüm bisect ederek yeniden üretir; amaç düzeltme değil doğrulanmış durum raporu.",
-      "kullanim_alani": "Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz. issue triage'ında.",
-      "kullanma": "Kendi projendeki issue'lar için doğrudan değil; yöntem (önce sınıflandır, ToT'ta dene, kabul testi yaz) uyarlanabilir.",
+      "inceleme": "incelendi",
+      "ozet_tr": "Yalnızca microsoft/playwright deposunun 'Issue triage' GitHub Actions iş akışında gözetimsiz çalışmak için ek yönerge: yayınlanmış sürümü kurup bisect etme, port raporlarını yeniden üretme, tarayıcı kaynaklı hataları playwright-browsers'a rapor etme. Asıl triage yöntemi depodaki triage.md ve AGENTS.md dosyalarında; tek başına çalışmaz.",
+      "kullanim_alani": "Yalnızca microsoft/playwright deposunun kendi CI triage iş akışı; yöntem fikri (sınıflandır, tip-of-tree'de dene, sürümler arası bisect) referans olarak okunabilir.",
+      "kullanma": "Kendi projendeki issue'lar için kullanma; başka repoda GitHub issue açma çağrıları tarif ettiği için hiçbir projeye kurma. Başvurduğu kılavuz dosyaları arşivde yok.",
       "teknoloji": [
         "playwright",
         "github-cli"
       ],
       "zorluk": "orta",
-      "kalite": 4,
-      "kalite_notu": "Karar: SADECE ARŞİV. Triage yöntemi iyi; kardeş playwright-dev skill'indeki bisect rehberine bağlı, test dosyası bağlantıları repo dışında kalıyor.",
+      "kalite": 3,
+      "kalite_notu": "Karar: SADECE ARŞİV. 2026-11'de genel triage rehberi kaldırıldı; kalan metin yalnızca playwright CI iş akışına özgü ve dış dosyalara (triage.md, AGENTS.md) bağımlı.",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "66070a1eaa0b869379607a9e0e1a652ddf2a77da"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 88,
         "not": "A",
@@ -183924,7 +183791,8 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret_kaynagi": "otomatik",
+      "inceleme_commit": "3b3ac2576f600eca31f1781a631cacf7210e80b1"
     },
     {
       "id": "pr",
@@ -187114,7 +186982,7 @@
           "derece": "B"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Lighthouse'un Agentic Resource Discovery (ARD) uygunluk portunu upstream ards-project/ard-spec ile 1:1 eşitler: değişen dosyaların karşılaştırması, şema senkronu, mesaj metinlerini kelimesi kelimesine koruma, hash'li inceleme kaydı ve testler.",
       "kullanim_alani": "Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz..",
       "kullanma": "Diğer projeler.",
@@ -187124,14 +186992,9 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği.",
+      "kalite_notu": "Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "903ee1417ce45867962bffc0b711dcb16c5b4c54"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -187147,7 +187010,8 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret_kaynagi": "otomatik",
+      "inceleme_commit": "2934860cdc5ed2b622497055b5f1a63594927c8a"
     },
     {
       "id": "update-chrome-binaries-test-region",
@@ -191915,7 +191779,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "HyperFrames'in yeni tek giriş skili: HTML'i kare kare render ederek videoya çeviren sistemin render sözleşmesini (12 kural), düzenlenebilirlik kurallarını, iş döngüsünü (story → SPEC → check → snapshot → review → render) ve video türlerine göre okunacak referansları (launch, explainer, müzik, data, dikey, 3D, karakter, altyazı, overlay, motion) tek yerde toplar.",
       "kullanim_alani": "HyperFrames ile her türlü video: tanıtım filmi, explainer, müzik videosu, grafik/harita, dikey sosyal klip, altyazı ve overlay; eskiden ayrı iş akışı skilleri olan türlerin hepsi artık buradaki references/types dosyalarıyla yürür.",
       "kullanma": "Remotion ya da başka bir çerçeve açıkça istenirse; sadece tarayıcı ekran kaydı gerekiyorsa (playwright-recording).",
@@ -191944,17 +191808,12 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "2026-10 güncellemesi (heygen-com/hyperframes 6882293): iş akışı skilleri emekliye ayrıldı, içerikleri bu skilin references/types ve references/*.md dosyalarına taşındı; SKILL.md 7 KB'a indi, sözleşme daha net. Önceki iş akışı skillerinin (general-video, faceless-explainer, product-launch-video…) yerine birincil seçim budur.",
+      "kalite_notu": "2026-10 güncellemesi (heygen-com/hyperframes 6882293): iş akışı skilleri emekliye ayrıldı, içerikleri bu skilin references/types ve references/*.md dosyalarına taşındı; SKILL.md 7 KB'a indi, sözleşme daha net. Önceki iş akışı skillerinin (general-video, faceless-explainer, product-launch-video…) yerine birincil seçim budur. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "hyperframes-cekirdek",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
-      "inceleme_tarihi": "2026-10-22",
-      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-22",
-        "commit": "4371981b740d92f70e520cfbec34db68a1c93434"
-      },
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-02",
+      "inceleme_commit": "f8309b356ecc878418d780d7147d8644dd412292",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -192073,8 +191932,8 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
-      "ozet_tr": "HyperFrames CLI'yi işe göre anlatır: init/capture, check, snapshot, timeline düzenleme (move/trim/split…), preview, yerel/bulut render, proje geçmişi (history begin/undo/end) ve hata tablosu. Render öncesi doğrulama döngüsünü tanımlar.",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames CLI'yi işe göre anlatır: init/capture, check (lint/validate/inspect, ses denetimleri dahil), snapshot, timeline düzenleme, preview, yerel render (fps 1-240, bitrate/keyframe ayarı) ve isteğe bağlı bulut/Lambda/Cloud Run render, proje geçmişi ve hata tablosu. Render öncesi doğrulama döngüsünü tanımlar.",
       "kullanim_alani": "HyperFrames projesini kontrol etme, görsel olarak inceleme, zaman çizelgesi düzenleme ve render alma.",
       "kullanma": "Kompozisyonun içeriğine karar verirken tek başına yetmez; hyperframes skiliyle birlikte kullanılır.",
       "teknoloji": [
@@ -192099,17 +191958,12 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Güncellemede komutlar iş bazlı tabloya, render ve hata kurtarma tablolara toplandı; proje geçmişi (history) eklendi. Node 22+ ve FFmpeg gerekir.",
+      "kalite_notu": "2026-11: ses (audio_*) lint denetimleri ve yeni render bayrakları eklendi; bulut render ayrı HyperFrames OAuth'una (~/.hyperframes) taşındı, ücretli planda son render için cloud render öneriliyor (yerel render ücretsiz). Telemetri girişten sonra hesaba bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır. Node 22+ ve FFmpeg gerekir.",
       "ortusme_grubu": "hyperframes-cekirdek",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
-      "inceleme_tarihi": "2026-10-22",
-      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-22",
-        "commit": "4371981b740d92f70e520cfbec34db68a1c93434"
-      },
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-02",
+      "inceleme_commit": "f8309b356ecc878418d780d7147d8644dd412292",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -192130,9 +191984,9 @@
           "GitHub trend +10 (trendde, son 2026-11-02)"
         ]
       },
-      "ucret": "belirsiz",
-      "ucret_notu": "ücretli servis izi: paid plan -> ucret-siniflandirma.json'a ekle",
-      "ucret_kaynagi": "otomatik",
+      "ucret": "kismen",
+      "ucret_notu": "Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister",
+      "ucret_kaynagi": "elle",
       "trend": {
         "seviye": "trendde",
         "son": "2026-11-02",
@@ -192233,7 +192087,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "~450 hazır HyperFrames bloğu ve bileşenini (geçişler, overlay, başlık, kinetik tipografi, altyazı stilleri, grafik, harita, 3D, kamera hareketi) arama (`catalog --query`) ve projeye düzenlenebilir kaynak olarak kurma (`add`) rehberi.",
       "kullanim_alani": "Adı olan bir görsel efekti (glitch, film grain, bar chart race, lower third…) elle yazmadan önce; blok/bileşen bağlama.",
       "kullanma": "Kayıt defterinde karşılığı olmayan, tamamen özgün sahneler.",
@@ -192257,17 +192111,12 @@
       ],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Güncellemede ~400 → ~450 öğe; yerel arama katmanları (words / on-device) ve 'gap' raporlama eklendi. Arama İngilizce yapılmalı.",
+      "kalite_notu": "Güncellemede ~400 → ~450 öğe; yerel arama katmanları (words / on-device) ve 'gap' raporlama eklendi. Arama İngilizce yapılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "hyperframes-cekirdek",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
-      "inceleme_tarihi": "2026-10-22",
-      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-22",
-        "commit": "4371981b740d92f70e520cfbec34db68a1c93434"
-      },
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-02",
+      "inceleme_commit": "f8309b356ecc878418d780d7147d8644dd412292",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -192388,7 +192237,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Lemo-Opuscar film stili kütüphanesine giriş skili: 59 hazır stilden birini seçip (ya da kendi stilini oluşturup) video modeli kullanmadan, tamamen kodla kısa film yönetir ve üretir. Kütüphaneyi ilk çalıştırmada GitHub'dan ev dizinine (~/lemo-opuscar) seyrek klonlar, gerekli Node/Python paketlerini kurar ve kütüphanenin AGENTS.md akışını izler.",
       "kullanim_alani": "Belirli bir görsel stilde (yağlı boya, suluboya, ukiyo-e, uydu brifingi, ürün parçalama vb.) kodla üretilmiş kısa film, tanıtım, açıklayıcı video; uydu görüntüsü/lazer tarama/CAD/arşiv gibi gerçek malzemeden veri anlatımı; kendi film stilini oluşturma.",
       "kullanma": "Mevcut bir videoyu sadece kesip birleştirmek/dönüştürmek (video-edit, ffmpeg); HyperFrames projesi içinde sahne kurmak (hyperframes).",
@@ -192415,16 +192264,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "MIT, ücretsiz; varsayılan seslendirme çevrimdışı Kokoro, edge-tts sadece onayla. DİKKAT: kodun asıl kısmı çalışma anında GitHub'ın main dalından (sabit commit değil) ~/lemo-opuscar'a indirilir; yani arşivlenen skill küçük bir başlatıcıdır, davranış upstream değiştikçe değişir. Proje klasörü dışına (ev dizinine) yazar. HyperFrames'e alternatif değil, farklı bir motor (kendi render araçları).",
+      "kalite_notu": "MIT, ücretsiz; varsayılan seslendirme çevrimdışı Kokoro, edge-tts sadece onayla. DİKKAT: kodun asıl kısmı çalışma anında GitHub'ın main dalından (sabit commit değil) ~/lemo-opuscar'a indirilir; yani arşivlenen skill küçük bir başlatıcıdır, davranış upstream değiştikçe değişir. Proje klasörü dışına (ev dizinine) yazar. HyperFrames'e alternatif değil, farklı bir motor (kendi render araçları). · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "kodla-film-stilleri",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-22",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-22",
-        "commit": "3961ddb3d24d8876e0e2754f7790d66908acee51"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -192440,7 +192284,8 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "MIT; varsayılan seslendirme çevrimdışı Kokoro. edge-tts ücretsiz ama metni Microsoft'a gönderir (yalnızca onayla)",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "inceleme_commit": "bebbbe1aa92a3cb4bb6f83500e61b23a17d1aa00"
     },
     {
       "id": "lemo-opuscar@lemomo-ai",
@@ -192655,10 +192500,10 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
-      "ozet_tr": "HyperFrames videosu için her türlü medyayı tek komutla (`media-use resolve`) bulur ya da üretir: müzik, ses efekti, görsel/ikon/logo, seslendirme, avatar/üretilmiş video, transkript, arka plan silme, renk düzeltme; ayrıca yerleştirilen sesleri miksler. Her ihtiyaç için HeyGen (ücretli, en iyi kalite) ve ücretsiz yerel yolu tablo hâlinde verir.",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames videosu için medyayı tek komutla (`media-use resolve` / `media-use generate`) bulur ya da üretir: müzik, ses efekti, görsel/ikon/logo, seslendirme, avatar/üretilmiş video, transkript, arka plan silme, renk düzeltme; yerleştirilen sesleri miksler. Kaynaklar: ücretsiz (HyperFrames girişi: Voice Turbo, müzik kataloğu, asset arama; Openverse, Whisper), HyperFrames kredisi (üretilmiş görsel/video/avatar, ses klonlama) ve yerel modeller (Kokoro, MusicGen, FLUX, LTX).",
       "kullanim_alani": "Videoya müzik, SFX, seslendirme (Kokoro TTS dahil), avatar, transkript, renk/LUT, yüz gizleme gibi medya eklemek; eski hyperframes-audio işlerinin yerine.",
-      "kullanma": "HyperFrames dışı projeler; özel bir sağlayıcı (ElevenLabs, Kling…) açıkça istenirse o sağlayıcının kendi skili.",
+      "kullanma": "HyperFrames dışı projeler; özel bir sağlayıcı açıkça istenirse o sağlayıcının skili. DİKKAT (2026-11): skill 'ucuz/ücretsiz seçeneğe kendiliğinden geçme, fiyat söyleme' diyor ve ücretli çağrıdan önce onay kuralı kaldırıldı; ücretsiz yol tercih ediliyorsa agent'a yerel/ücretsiz sağlayıcıyı (--local-only) açıkça söyle.",
       "teknoloji": [
         "hyperframes",
         "heygen",
@@ -192667,7 +192512,8 @@
       ],
       "gerekli_paketler": [
         "node",
-        "heygen CLI (BGM/TTS için)",
+        "hyperframes auth login (HyperFrames OAuth)",
+        "heygen CLI (yardımcı tarifler için)",
         "ffmpeg"
       ],
       "proje_tipleri": [
@@ -192683,17 +192529,12 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Güncellemede ses (hyperframes-audio) bu skile katıldı; ücretli çağrıdan önce onay kuralı ve 'sessizce ekleme, bir kez öner' ilkesi net. HeyGen için heygen CLI + OAuth, ücretsiz yol için yerel modeller gerekir.",
+      "kalite_notu": "2026-11: giriş 'npx hyperframes auth login' (HyperFrames OAuth); 'media-use generate' ile heygen CLI olmadan üretim eklendi. Kredi harcamada ücretsiz yola geçmeme ve fiyat söylememe yönergesi kullanıcının ücretsiz-önce tercihiyle çelişir. Telemetri girişten sonra HeyGen hesabına bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır.",
       "ortusme_grubu": "hyperframes-medya",
       "ortusme_rolu": "birincil",
-      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
-      "inceleme_tarihi": "2026-10-22",
-      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-22",
-        "commit": "4371981b740d92f70e520cfbec34db68a1c93434"
-      },
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-02",
+      "inceleme_commit": "f8309b356ecc878418d780d7147d8644dd412292",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -192715,7 +192556,7 @@
         ]
       },
       "ucret": "kismen",
-      "ucret_notu": "Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HeyGen isteğe bağlı ve ücretli çağrıdan önce onay ister",
+      "ucret_notu": "Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli",
       "ucret_kaynagi": "elle",
       "trend": {
         "seviye": "trendde",
@@ -193215,9 +193056,9 @@
           "GitHub trend +10 (trendde, son 2026-11-02)"
         ]
       },
-      "ucret": "belirsiz",
-      "ucret_notu": "ücretli servis izi: ElevenLabs, elevenlabs, heygen -> ucret-siniflandirma.json'a ekle",
-      "ucret_kaynagi": "otomatik",
+      "ucret": "kismen",
+      "ucret_notu": "Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde",
+      "ucret_kaynagi": "elle",
       "trend": {
         "seviye": "trendde",
         "son": "2026-11-02",
@@ -195127,7 +194968,7 @@
           "derece": "A"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Başka araçlarla yapılmış video kodunu ya da çıktısını HyperFrames'e alır ve kare kare karşılaştırarak doğrular: Native (Remotion/HTML/GSAP çevirisi), Hosted (canvas, p5, Three.js, Lottie kodunu HyperFrames zamanıyla sürme), Media (Manim, After Effects, Blender çıktısını klip olarak koyma).",
       "kullanim_alani": "Remotion projesini taşımak; Lottie/Three.js/p5 animasyonlarını ya da Manim/AE renderlarını HyperFrames videosunda kullanmak.",
       "kullanma": "Sıfırdan yeni video (hyperframes yeter).",
@@ -195149,17 +194990,12 @@
       ],
       "zorluk": "ileri",
       "kalite": 4,
-      "kalite_notu": "Güncellemede kapsam Remotion'dan tüm araçlara genişledi (üç seviye modeli); SSIM ile kare kare doğrulama betikleri korunuyor.",
+      "kalite_notu": "2026-11: SSIM karşılaştırması betikler yerine `npx hyperframes diff` komutuna taşındı (render_diff.sh/frame_strip.sh kaldırıldı); box-sizing kuralı ve lottie/timing notları eklendi. Üç seviyeli model (Native/Hosted/Media) korunuyor.",
       "ortusme_grubu": "hyperframes-iceri-aktarma",
       "ortusme_rolu": "tamamlayıcı",
-      "inceleyen": "claude (güncelleme sonrası yeniden inceleme)",
-      "inceleme_tarihi": "2026-10-22",
-      "inceleme_commit": "4371981b740d92f70e520cfbec34db68a1c93434",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-22",
-        "commit": "4371981b740d92f70e520cfbec34db68a1c93434"
-      },
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-02",
+      "inceleme_commit": "f8309b356ecc878418d780d7147d8644dd412292",
       "kardes_bagimliliklari": {
         "hyperframes": {
           "id": "hyperframes",
@@ -198073,7 +197909,7 @@
           "derece": "B"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "ElevenLabs ile seslendirme, ses klonlama, ses efekti ve müzik üretimini tek skillde toplar; model seçimi, stile göre ses ayarları, duraklama/telaffuz kontrolü ve yinelemeli üretim akışını verir.",
       "kullanim_alani": "Video seslendirmesi, anlatım veya ses klonlama gereken her işte varsayılan TTS olarak.",
       "kullanma": "Sadece müzik (music) veya sadece efekt (sound-effects) için ayrıntılı API gerekiyorsa; sesli ajan (agents).",
@@ -198098,16 +197934,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 5,
-      "kalite_notu": "Karar: TUT. Pratik üretim bilgisi (ayar tabloları, SSML sınırları, ellipsis uyarısı) çok değerli; Türkçe destekli multilingual_v2.",
+      "kalite_notu": "Karar: TUT. Pratik üretim bilgisi (ayar tabloları, SSML sınırları, ellipsis uyarısı) çok değerli; Türkçe destekli multilingual_v2. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "tts-saglayici",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -198140,7 +197971,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "195eab24478dc9363326aec437aefc3701635ddf"
     },
     {
       "id": "fish-audio-tts",
@@ -199084,7 +198916,7 @@
           "derece": "B"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "HeyGen'in Starfish TTS modeliyle bağımsız ses dosyası üretir; ses listeleme, hız/perde kontrolü ve MCP araçlarını tercih etme kuralını içerir.",
       "kullanim_alani": "Zaten HeyGen kullanılan projelerde, HeyGen avatarlarıyla tutarlı ses gerektiğinde.",
       "kullanma": "Genel seslendirme için (elevenlabs daha esnek); ses klonlama gerekiyorsa.",
@@ -199105,16 +198937,11 @@
       ],
       "zorluk": "kolay",
       "kalite": 4,
-      "kalite_notu": "Karar: ALTERNATİF. Adı genel olsa da HeyGen'e özel; önceki ses-tasarimci çekirdeğinden opsiyonele alındı.",
+      "kalite_notu": "Karar: ALTERNATİF. Adı genel olsa da HeyGen'e özel; önceki ses-tasarimci çekirdeğinden opsiyonele alındı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "tts-saglayici",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 96,
         "not": "A",
@@ -199147,7 +198974,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "195eab24478dc9363326aec437aefc3701635ddf"
     },
     {
       "id": "3d-asset-generation",
@@ -200372,10 +200200,10 @@
           "derece": "B"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Google Gemini Omni Flash ile 3-10 sn 720p sesli video üretimi ve aynı klibi doğal dille durum korumalı (interaction_id) düzenleme; referans görsel etiketleri, zaman kodlu vuruşlar ve rota sınırlamaları.",
       "kullanim_alani": "Üretilen bir klibi yeniden üretmeden adım adım düzeltmek veya mevcut videoyu düzenlemek gerektiğinde.",
-      "kullanma": "Tek seferlik sinematik kahraman klip (seedance-2-0), 10 sn'den uzun veya 720p üstü çıktı, İngilizce dışı anlatım.",
+      "kullanma": "Tek seferlik sinematik kahraman klip (seedance-2-0), 10 sn'den uzun veya 720p üstü çıktı (model destekler ama adaptör henüz uygulamıyor), İngilizce dışı anlatım.",
       "teknoloji": [
         "google-gemini",
         "api-anahtari"
@@ -200393,16 +200221,11 @@
       ],
       "zorluk": "orta",
       "kalite": 5,
-      "kalite_notu": "Karar: ALTERNATİF. Ne zaman seçilip seçilmeyeceği tablosu çok net; benzersiz düzenleme yeteneği.",
+      "kalite_notu": "Karar: ALTERNATİF. Ne zaman seçilip seçilmeyeceği tablosu net; benzersiz düzenleme yeteneği. 2026-11: kararlı gemini-omni-1.1-flash modeline geçti; maliyet ~$0.10/sn, süre ipucu faturayı sınırlamıyor (en kötü ~$1.01/klip).",
       "ortusme_grubu": "ai-video-uretimi",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "degerlendirme": {
         "puan": 100,
         "not": "A",
@@ -200435,7 +200258,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "195eab24478dc9363326aec437aefc3701635ddf"
     },
     {
       "id": "grok-media",
@@ -201211,7 +201035,7 @@
           "derece": "B"
         }
       },
-      "inceleme": "yeniden-incelenecek",
+      "inceleme": "incelendi",
       "ozet_tr": "Eylül 2026 görsel, video, konuşma ve Avatar V adaptörleri (GPT Image 2.5, Gemini 3 Pro Image, Ideogram 4.5, Wan 3.0, LTX-2.5, Eleven v4, Lyria 3.5…) için kesin model/host sözleşmeleri; mevcut olmayan modelin sessizce değiştirilmemesini şart koşar.",
       "kullanim_alani": "OpenMontage'ın yeni nesil adaptörleriyle belirli bir model/host zorunlu tutularak üretim yapılacaksa.",
       "kullanma": "OpenMontage dışında; genel model seçimi için ai-video-gen.",
@@ -201231,16 +201055,11 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Güncel model kataloğu ve katı yönlendirme kuralları; tamamen OpenMontage registry'sine bağlı.",
+      "kalite_notu": "Karar: TUT. Güncel model kataloğu ve katı yönlendirme kuralları; tamamen OpenMontage registry'sine bağlı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.",
       "ortusme_grubu": "medya-saglayici-yonlendirme",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-10-21",
-      "onceki_inceleme": {
-        "inceleme": "incelendi",
-        "tarih": "2026-10-21",
-        "commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
-      },
+      "inceleme_tarihi": "2026-11-02",
       "kardes_bagimliliklari": {
         "provider-refresh-oct23": {
           "id": "provider-refresh-oct23",
@@ -201279,7 +201098,8 @@
             "tarih": "2026-11-02"
           }
         }
-      }
+      },
+      "inceleme_commit": "195eab24478dc9363326aec437aefc3701635ddf"
     },
     {
       "id": "seedance-2-0",

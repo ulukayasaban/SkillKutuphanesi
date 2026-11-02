@@ -2,7 +2,7 @@
 
 _Claude API, MCP sunucusu, model geçişi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **9/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/14**
 
 ### academy-guide  ·  anthropics/skills @ ca45fc4  ·  puan 89 (A)
 
@@ -102,14 +102,14 @@ _Claude API, MCP sunucusu, model geçişi_
 
 ### mcp-builder  ·  anthropics/skills @ ca45fc4  ·  puan 97 (A)
 
-- **Ne yapar:** Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti oluşturma; değerlendirmeyi çalıştıran evaluation.py betiği içerir.
+- **Ne yapar:** Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK v2 (@modelcontextprotocol/server; v1 yalnızca mevcut projeler için, codemod ile geçiş) ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti; değerlendirmeyi çalıştıran evaluation.py betiği içerir.
 - **Ne zaman:** Harici bir API/servisi agent'lara açan yeni MCP sunucusu yazmak ve değerlendirmek. · **Ne zaman değil:** Mevcut bir MCP sunucusunu Claude Code eklentisine bağlamak (mcp-integration); protokol sürüm geçişi/güvenlik denetimi ağırlıklı işler (mcp-builder@vudovn daha güncel).
-- **Teknoloji:** mcp, python, typescript · **Paketler:** mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm), @modelcontextprotocol/inspector, anthropic (eval betiği için)
+- **Teknoloji:** mcp, python, typescript · **Paketler:** mcp / fastmcp (pip) veya @modelcontextprotocol/server + zod (npm, SDK v2; eski projelerde @modelcontextprotocol/sdk v1), @modelcontextprotocol/inspector, anthropic (eval betiği için)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★186390, son güncelleme 2026-10-28, lisans yok)
 - **Durum:** tercih · **Örtüşme:** mcp-sunucu-gelistirme → birincil · **Roller:** ai-entegrasyon
 - **Boyut:** 155 KB (SKILL.md 10.9 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, ComposioHQ kopyasından daha güncel ve kısa; dil rehberleri ve eval betiği tek pakette. vudovn sürümü spec/güvenlik tarafını tamamlıyor; birincil bu çünkü uçtan uca iş akışı ve değerlendirme aracı içeriyor.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, ComposioHQ kopyasından daha güncel ve kısa; dil rehberleri ve eval betiği tek pakette. vudovn sürümü spec/güvenlik tarafını tamamlıyor; birincil bu çünkü uçtan uca iş akışı ve değerlendirme aracı içeriyor.
 
 ### mcp-builder@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
 

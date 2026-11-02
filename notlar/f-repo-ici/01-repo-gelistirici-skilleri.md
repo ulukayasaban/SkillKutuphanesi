@@ -2,7 +2,7 @@
 
 _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için iç süreç skilleri; kendi projelerinde nadiren gerekir_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **42/114**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **48/114**
 
 ### add-bug  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
@@ -127,7 +127,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Geliştirici:** vercel (kurum, resmî, ★143460, son güncelleme 2026-11-02, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: SADECE ARŞİV. Güvenli adımlar (kullanıcı değişikliklerini koru, boş cherry-pick kontrolü) iyi; genel backport için şablon olarak okunabilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Güvenli adımlar (kullanıcı değişikliklerini koru, boş cherry-pick kontrolü) iyi; genel backport için şablon olarak okunabilir. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### canvas-capture-extension  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
@@ -286,7 +286,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Geliştirici:** vercel (kurum, resmî, ★143460, son güncelleme 2026-11-02, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 59 KB (SKILL.md 11.2 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT (uyarlanabilir). disable-model-invocation: true (sadece elle çağrılır). Betikli, ölçülebilir kalite kontrollü nadir bir docs-diyagram skili.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (uyarlanabilir). disable-model-invocation: true (sadece elle çağrılır). Betikli, ölçülebilir kalite kontrollü nadir bir docs-diyagram skili. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 - **Not:** Kendi projende de işe yarar: SVG primitif + Chrome render + ölçüm yaklaşımı kendi docs diyagramlarına uyarlanabilir (tokenları değiştir).
 
 ### experts  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
@@ -426,7 +426,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Geliştirici:** vercel (kurum, resmî, ★143460, son güncelleme 2026-11-02, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta) · **Kırık bağlantı:** 1
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: SADECE ARŞİV. İyi gerekçelendirilmiş; 'fake-green' kavramı genel test kültürü için okunmaya değer.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. İyi gerekçelendirilmiş; 'fake-green' kavramı genel test kültürü için okunmaya değer. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### gh-stack  ·  vercel/next.js @ 3bccd4d  ·  puan 100 (A)
 
@@ -637,7 +637,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Geliştirici:** microsoft (kurum, resmî, ★99065, son güncelleme 2026-11-01, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 0.6 KB, yük kucuk) · **Kırık bağlantı:** 1
-- **İnceleme:** yeniden-incelenecek · kalite 3/5 — Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut).
+- **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut). · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### playwright-release-notes  ·  microsoft/playwright @ 3b3ac25  ·  puan 79 (B)
 
@@ -663,14 +663,14 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 
 ### playwright-triage  ·  microsoft/playwright @ 3b3ac25  ·  puan 88 (A)
 
-- **Ne yapar:** Playwright hata raporunu sınıflandırır (bug, özellik isteği, upstream, soru) ve bug'ı tip-of-tree üzerinde, tarayıcılar arası, gerekirse sürüm bisect ederek yeniden üretir; amaç düzeltme değil doğrulanmış durum raporu.
-- **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz. issue triage'ında. · **Ne zaman değil:** Kendi projendeki issue'lar için doğrudan değil; yöntem (önce sınıflandır, ToT'ta dene, kabul testi yaz) uyarlanabilir.
+- **Ne yapar:** Yalnızca microsoft/playwright deposunun 'Issue triage' GitHub Actions iş akışında gözetimsiz çalışmak için ek yönerge: yayınlanmış sürümü kurup bisect etme, port raporlarını yeniden üretme, tarayıcı kaynaklı hataları playwright-browsers'a rapor etme. Asıl triage yöntemi depodaki triage.md ve AGENTS.md dosyalarında; tek başına çalışmaz.
+- **Ne zaman:** Yalnızca microsoft/playwright deposunun kendi CI triage iş akışı; yöntem fikri (sınıflandır, tip-of-tree'de dene, sürümler arası bisect) referans olarak okunabilir. · **Ne zaman değil:** Kendi projendeki issue'lar için kullanma; başka repoda GitHub issue açma çağrıları tarif ettiği için hiçbir projeye kurma. Başvurduğu kılavuz dosyaları arşivde yok.
 - **Teknoloji:** playwright, github-cli
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** microsoft (kurum, resmî, ★99065, son güncelleme 2026-11-01, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Kırık bağlantı:** 3
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: SADECE ARŞİV. Triage yöntemi iyi; kardeş playwright-dev skill'indeki bisect rehberine bağlı, test dosyası bağlantıları repo dışında kalıyor.
+- **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. 2026-11'de genel triage rehberi kaldırıldı; kalan metin yalnızca playwright CI iş akışına özgü ve dış dosyalara (triage.md, AGENTS.md) bağımlı.
 
 ### pr  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
@@ -939,7 +939,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Geliştirici:** GoogleChrome (kurum, resmî, ★30996, son güncelleme 2026-11-01, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### update-chrome-binaries-test-region  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 

@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 33
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 34
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -10,6 +10,7 @@
 | `sandbox-migrate-to-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `sandbox-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `sandbox-stable` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
+| `reverse-any-video` | 04-skill-plugin-yazimi | HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta |
 | `create-video` | 01-video-uretim-montaj | HeyGen Video Agent API |
 | `video-toolkit` | 01-video-uretim-montaj | Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli |
 | `video-translate` | 01-video-uretim-montaj | HeyGen API |
@@ -40,7 +41,7 @@
 | `generate-image` | 04-bilimsel-yazim-literatur | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 104
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 106
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -79,7 +80,9 @@
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
 | `figma` | 01-video-uretim-montaj | FIGMA_TOKEN (ücretsiz planla çalışır); değişkenler (variables) Enterprise ister |
 | `hyperframes` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
-| `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HeyGen isteğe bağlı ve ücretli çağrıdan önce onay ister |
+| `hyperframes-cli` | 01-video-uretim-montaj | Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister |
+| `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli |
+| `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices@calesthio` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
@@ -148,13 +151,5 @@
 | `research-lookup` | 04-bilimsel-yazim-literatur | Parallel CLI: ücretsiz başlangıç kredisi, sonrası ücretli |
 | `scientific-schematics` | 04-bilimsel-yazim-literatur | AI şema üretimi OpenRouter (ücretli); elle şema yolu ücretsiz |
 | `scientific-slides` | 04-bilimsel-yazim-literatur | Slayt yerel; isteğe bağlı AI görsel OpenRouter (ücretli) |
-
-## ? Sınıflandırılmamış — 3
-
-| Skill | Kategori | Neden |
-|---|---|---|
-| `reverse-any-video` | 04-skill-plugin-yazimi | ücretli servis izi: HeyGen, paid plan -> ucret-siniflandirma.json'a ekle |
-| `hyperframes-cli` | 01-video-uretim-montaj | ücretli servis izi: paid plan -> ucret-siniflandirma.json'a ekle |
-| `provider-refresh-oct23` | 01-video-uretim-montaj | ücretli servis izi: ElevenLabs, elevenlabs, heygen -> ucret-siniflandirma.json'a ekle |
 
 Gizli entegrasyon kataloğundaki 832 Composio skili toplu olarak 'kısmen' (Composio hesabı; ücretsiz katman var).

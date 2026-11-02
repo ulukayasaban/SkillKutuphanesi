@@ -2,7 +2,7 @@
 
 _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **3/8**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **5/8**
 
 ### archify  ·  tt-a1i/archify @ a406594  ·  puan 95 (A)
 
@@ -13,7 +13,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Geliştirici:** tt-a1i (kisi, ★92406, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** diyagram-uretimi → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 7690 KB (SKILL.md 18.4 KB, yük orta) · **Kırık bağlantı:** 1
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; MIT. Klasör çok büyük (7.6 MB) ve SKILL.md 18 KB; ama referanslar ihtiyaç anında okunuyor. Diyagram grubunda en kapsamlı ve doğrulanabilir seçenek.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; lisans 2026-11'de Apache-2.0'a geçti (eski MIT sürümleri LICENSE-MIT'te; üretilen HTML'lere lisans bildirimi gömülür). Klasör büyük (7.6 MB), SKILL.md 18 KB; referanslar ihtiyaç anında okunuyor.
 - **Not:** Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok.
 
 ### beautiful-mermaid  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
@@ -67,7 +67,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → birincil · **Roller:** dokuman-yazari · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### documentation-templates  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
 

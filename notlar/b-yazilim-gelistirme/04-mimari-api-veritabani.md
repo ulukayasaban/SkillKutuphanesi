@@ -2,7 +2,7 @@
 
 _Mimari, API/arayüz tasarımı, veritabanı, backend_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/8**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/8**
 
 ### api-and-interface-design  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
@@ -13,7 +13,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** api-tasarimi → birincil · **Roller:** backend-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 15 KB (SKILL.md 14.6 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### api-patterns  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -69,7 +69,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** frontend-ui-uygulama → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### nodejs-best-practices  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
 

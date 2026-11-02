@@ -144,7 +144,7 @@
     ],
     "media-use": [
       "kismen",
-      "Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HeyGen isteğe bağlı ve ücretli çağrıdan önce onay ister"
+      "Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli"
     ],
     "hyperframes": [
       "kismen",
@@ -232,7 +232,7 @@
     ],
     "agent-reach": [
       "ucretsiz",
-      "API ücreti yok (kendi CLI'si)"
+      "API ücreti yok (kendi CLI'si); Groq anahtarı yalnızca podcast transkripsiyonu için opsiyonel"
     ],
     "video-understand": [
       "ucretsiz",
@@ -1089,6 +1089,18 @@
     "owasp-mobile-security-checker": [
       "ucretsiz",
       "Yerel güvenlik kontrol listesi; API anahtarı yalnızca yer tutucu"
+    ],
+    "hyperframes-cli": [
+      "kismen",
+      "Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister"
+    ],
+    "provider-refresh-oct23": [
+      "kismen",
+      "Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde"
+    ],
+    "reverse-any-video": [
+      "ucretli",
+      "HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

@@ -2,18 +2,18 @@
 
 _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **1/3**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **2/3**
 
 ### agent-reach  ·  Panniantong/Agent-Reach @ 7a38047  ·  puan 98 (A)
 
-- **Ne yapar:** İnternet erişimi için yönlendirici: 16 platformda (web arama/Exa, Twitter/X, Reddit, YouTube, Bilibili, Xiaohongshu, V2EX, LinkedIn, GitHub kod arama, RSS, podcast, hisse verisi) çoklu arka uçla (OpenCLI, platform CLI'ları, API'ler) içerik okur. `agent-reach doctor --json` ile hangi kanalın çalıştığını denetler; kategori başına references/ dosyaları var. SKILL.md Çince, SKILL_en.md İngilizce.
-- **Ne zaman:** Çok platformlu web/sosyal medya araştırması, 'internette ne konuşuluyor' taraması, URL'den içerik okuma. · **Ne zaman değil:** Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulmamışsa. Açıklamadaki 'MUST USE' tetikleme dili her URL'de devreye girer — yalnızca araştırma rolüne ver. Giriş gerektiren platformlar tarayıcı çerezi okuyabilir; gizlilik açısından dikkat.
-- **Teknoloji:** python, cli, web-arama · **Paketler:** agent-reach CLI (pip/uv), platforma göre: OpenCLI, yt-dlp, gh, Exa API
+- **Ne yapar:** Çok platformlu salt-okunur içerik erişimi için tek CLI (`agent-reach <kanal> <eylem>`, `read <url>`): GitHub, YouTube, Bilibili, Reddit, X/Twitter, Xiaohongshu, Instagram, Facebook, LinkedIn, V2EX, Xueqiu, podcast ve anonim web arama/okuma. JSON çıktı ve hata kodlarıyla çalışır; tarayıcı gerektiren kanallar ortak özel tarayıcıyı (CloakBrowser/Chrome + OpenCLI) kullanır. Önce agent'ın kendi araçlarını dener, Reach boşlukları doldurur. SKILL.md Çince (SKILL_en.md İngilizce).
+- **Ne zaman:** Çok platformlu web/sosyal medya araştırması, URL'den içerik okuma, YouTube/Bilibili altyazısı, iş ilanı ve hisse verisi okuma, podcast transkripsiyonu. · **Ne zaman değil:** Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulu değilse (kanal tablosu kurulumda doldurulan şablon). Gizlilik: kullanıcının Chrome'una OpenCLI eklentisi bağlıysa o sitenin giriş çerezleri özel tarayıcıya kopyalanır; açık onay olmadan kurma. 2026-11'de eski Exa/RSS/jina/yt-dlp doğrudan komutları kaldırıldı.
+- **Teknoloji:** python, cli, web-arama · **Paketler:** agent-reach CLI (pip/uv; browser setup ile Node, OpenCLI, CloakBrowser/Chrome indirilir), platforma göre: yt-dlp, gh, bili CLI, opsiyonel: Groq anahtarı (podcast transkripsiyonu), github-token, proxy
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** Panniantong (kisi, ★107638, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** web-arastirma → birincil · **Roller:** ai-entegrasyon, icerik-pazarlama
 - **Boyut:** 23 KB (SKILL.md 7.0 KB, yük kucuk)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT (birincil). Çok kanallı, doctor ile kendini denetleyen, hata durumunda yeniden deneme zinciri tanımlı; MIT. Eksi: varsayılan SKILL.md Çince (İngilizce sürüm SKILL_en.md içinde) ve Çin platformlarına ağırlık veriyor.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. 2026-11 yeniden yazımı: hata kodlarına göre dallanan akış, döngüsel yeniden deneme yasağı, 'yazma/giriş/şifre isteme yok' çizgileri, önce yerleşik araç ilkesi; MIT. Eksiler: SKILL.md varsayılan Çince, CLI kurulumu şart, tarayıcı indirme ve çerez kopyalama ile izin yüzeyi büyüdü; RSS, Exa genel arama ve bazı yorum okuma eylemleri artık yok.
 
 ### graphify  ·  Graphify-Labs/graphify @ 32e5efe  ·  puan 97 (A)
 

@@ -75,7 +75,7 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 4 | react/react | 89 A | 0 | - | 0/0/0 | MIT | ✓ | 252077 | 1560.7 | 2027 | 137 | 2026-10-14 |  |
 | 5 | nexu-io/open-design | 88 A | 74 | 01-video-uretim-montaj (18), 07-gorsel-sanat-sunum (14) | 73/1/0 | Apache-2.0 |  | 105353 | 17035.8 | 451 | 780 | 2026-10-22 |  |
 | 6 | DietrichGebert/ponytail | 86 A | 6 | 02-kod-kalitesi-review (6) | 6/0/0 | MIT |  | 182163 | 38725.6 | 133 | 163 | 2026-10-29 | 🔥 |
-| 7 | heygen-com/hyperframes | 86 A | 14 | 01-video-uretim-montaj (10), 04-motion-graphics-karakter (3) | 8/4/0 | Apache-2.0 | ✓ | 77137 | 9894.4 | 125 | 3039 | 2026-11-02 | 🔥 |
+| 7 | heygen-com/hyperframes | 86 A | 14 | 01-video-uretim-montaj (10), 04-motion-graphics-karakter (3) | 8/5/1 | Apache-2.0 | ✓ | 77137 | 9894.4 | 125 | 3039 | 2026-11-02 | 🔥 |
 | 8 | nextlevelbuilder/ui-ux-pro-max-skill | 86 A | 7 | 02-tasarim-sistemi-marka (4), 01-ui-ux-tasarim-dili (2) | 6/1/0 | MIT |  | 143857 | 12977.0 | 107 | 80 | 2026-08-13 |  |
 | 9 | addyosmani/agent-skills | 84 A | 25 | 01-planlama-metodoloji (8), 06-devops-guvenlik-performans (5) | 25/0/0 | MIT |  | 112570 | 13162.0 | 97 | 412 | 2026-10-31 | 🔥 |
 | 10 | microsoft/playwright | 84 A | 3 | 08-onyuz-test-kalite (2), 07-framework-ozel (1) | 3/0/0 | Apache-2.0 | ✓ | 99065 | 1183.8 | 827 | 729 | 2026-10-14 |  |
@@ -91,7 +91,7 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 20 | K-Dense-AI/scientific-agent-skills | 76 B | 175 | 01-yasam-bilimleri-kimya (90), 04-bilimsel-yazim-literatur (37) | 147/21/7 | MIT |  | 55677 | 4465.9 | 58 | 94 | 2026-10-01 | 🔥 |
 | 21 | anthropics/claude-plugins-official | 75 B | 23 | 04-skill-plugin-yazimi (7), 02-agent-orkestrasyon (5) | 23/0/0 | Apache-2.0 | ✓ | 45728 | 4006.1 | 42 | 1851 | - | 🔥 |
 | 22 | anthropics/skills | 74 B | 18 | 07-gorsel-sanat-sunum (4), 01-ofis-dokumanlari (4) | 17/1/0 | yok | ✓ | 186390 | 13956.3 | 17 | 15 | - | 🔥 |
-| 23 | calesthio/OpenMontage | 73 B | 57 | 03-ai-gorsel-video-modelleri (17), 02-ses-muzik-konusma (14) | 22/12/22 | AGPL-3.0 |  | 74392 | 10373.9 | 76 | 162 | - | 🔥 |
+| 23 | calesthio/OpenMontage | 73 B | 57 | 03-ai-gorsel-video-modelleri (17), 02-ses-muzik-konusma (14) | 22/13/22 | AGPL-3.0 |  | 74392 | 10373.9 | 76 | 162 | - | 🔥 |
 | 24 | anthropics/knowledge-work-plugins | 72 B | 187 | 03-operasyon-urun-isletme (69), 01-satis-pazarlama-musteri (58) | 187/0/0 | Apache-2.0 | ✓ | 34376 | 3692.7 | 32 | 597 | - | 🔥 |
 | 25 | motiondivision/motion | 71 B | 0 | - | 0/0/0 | MIT | ✓ | 34780 | 363.6 | 147 | 1002 | - |  |
 | 26 | earthtojake/text-to-cad | 70 B | 12 | 05-cad-imalat-robotik (12) | 12/0/0 | MIT |  | 24772 | 3881.8 | 31 | 903 | 2026-10-30 | 🔥 |

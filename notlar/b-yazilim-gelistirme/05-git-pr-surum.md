@@ -2,7 +2,7 @@
 
 _Git, worktree, PR, sürüm/release, changelog_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/10**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/10**
 
 ### changelog-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
@@ -24,7 +24,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kullanimdan-kaldirma → birincil · **Roller:** backend-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 13 KB (SKILL.md 12.5 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### finishing-a-development-branch  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
 
@@ -46,7 +46,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Geliştirici:** addyosmani (kisi, ★112570, son güncelleme 2026-11-01, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** git-is-akisi → birincil · **Roller:** backend-muhendis, devops-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta)
-- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor.
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### git-worktrees  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
 
