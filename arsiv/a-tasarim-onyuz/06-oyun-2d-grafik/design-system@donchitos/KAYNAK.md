@@ -8,4 +8,4 @@
 - **Lisans:** MIT
 - **Geliştirici:** Donchitos (kisi)
 - **Arşive alınma:** 2026-10-22
-- **Durum:** tercih
+- **Durum:** alternatif

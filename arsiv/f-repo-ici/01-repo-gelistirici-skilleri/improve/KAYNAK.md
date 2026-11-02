@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/motiondivision/motion
 - **Repo içindeki yol:** `.agents/skills/improve`
-- **Commit:** `a03a6daf30d6ff63286e716a0f612d3b3a493802`
+- **Commit:** `7415b6cd14dfdb35d91dfc5b9758994444cc228b`
 - **Lisans:** MIT
 - **Geliştirici:** motiondivision (kurum)
-- **Değerlendirme:** 98/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

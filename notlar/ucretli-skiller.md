@@ -149,4 +149,12 @@
 | `scientific-schematics` | 04-bilimsel-yazim-literatur | AI şema üretimi OpenRouter (ücretli); elle şema yolu ücretsiz |
 | `scientific-slides` | 04-bilimsel-yazim-literatur | Slayt yerel; isteğe bağlı AI görsel OpenRouter (ücretli) |
 
+## ? Sınıflandırılmamış — 3
+
+| Skill | Kategori | Neden |
+|---|---|---|
+| `reverse-any-video` | 04-skill-plugin-yazimi | ücretli servis izi: HeyGen, paid plan -> ucret-siniflandirma.json'a ekle |
+| `hyperframes-cli` | 01-video-uretim-montaj | ücretli servis izi: paid plan -> ucret-siniflandirma.json'a ekle |
+| `provider-refresh-oct23` | 01-video-uretim-montaj | ücretli servis izi: ElevenLabs, elevenlabs, heygen -> ucret-siniflandirma.json'a ekle |
+
 Gizli entegrasyon kataloğundaki 832 Composio skili toplu olarak 'kısmen' (Composio hesabı; ücretsiz katman var).

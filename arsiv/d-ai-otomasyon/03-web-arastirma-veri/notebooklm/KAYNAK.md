@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/teng-lin/notebooklm-py
 - **Repo içindeki yol:** `(kök)`
-- **Commit:** `99f2bd2d7ff83dcc77e4da01f6cc421ec2511d80`
+- **Commit:** `7db1000b516c3f3a7d3afe7c4c572924ee7a5264`
 - **Lisans:** MIT
 - **Geliştirici:** teng-lin (kisi)
-- **Değerlendirme:** 85/100 (A)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

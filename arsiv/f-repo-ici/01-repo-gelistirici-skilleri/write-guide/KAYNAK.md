@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/vercel/next.js
 - **Repo içindeki yol:** `.agents/skills/write-guide`
-- **Commit:** `13ae649ea60769e91b06818e7b252c7e3040f92c`
+- **Commit:** `3bccd4df910c984ca60f796e50b8d43db3227162`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
-- **Değerlendirme:** 100/100 (A)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

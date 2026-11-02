@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/DietrichGebert/ponytail
 - **Repo içindeki yol:** `skills/ponytail-help`
-- **Commit:** `09c434ab73ca43761c5d8b0c5d341926c2fba710`
+- **Commit:** `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846`
 - **Lisans:** MIT
 - **Geliştirici:** DietrichGebert (kisi)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/anthropics/skills
 - **Repo içindeki yol:** `skills/algorithmic-art`
-- **Commit:** `dbd4588f9e1033efb41dad4bef2f7947c8993d44`
+- **Commit:** `ca45fc496a3436251f191354091d557da31c15b5`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** anthropics (kurum)
-- **Değerlendirme:** 76/100 (B)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

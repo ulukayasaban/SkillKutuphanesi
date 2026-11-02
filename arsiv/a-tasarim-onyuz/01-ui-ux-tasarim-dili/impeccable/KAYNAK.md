@@ -4,10 +4,9 @@
 
 - **Kaynak repo:** https://github.com/pbakaus/impeccable
 - **Repo içindeki yol:** `plugin/skills/impeccable`
-- **Commit:** `89097b912d714e1324691be46e1ff513bf597f25`
+- **Commit:** `e89e3ada3e875a89ac2c5d33d11e65ebef6fe285`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** pbakaus (kisi)
-- **Değerlendirme:** 95/100 (A)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
 - **Araç sürümleri:** claude → `arsiv/_varyantlar/impeccable/claude`, codex → `arsiv/_varyantlar/impeccable/codex`

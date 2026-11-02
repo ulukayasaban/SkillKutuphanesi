@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/microsoft/playwright
 - **Repo içindeki yol:** `.claude/skills/playwright-devops`
-- **Commit:** `66070a1eaa0b869379607a9e0e1a652ddf2a77da`
+- **Commit:** `3b3ac2576f600eca31f1781a631cacf7210e80b1`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** microsoft (kurum)
-- **Değerlendirme:** 84/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
+- **SKILL.md'de olup bulunamayan dosyalar:** `../../../.github/workflows/bots.md`

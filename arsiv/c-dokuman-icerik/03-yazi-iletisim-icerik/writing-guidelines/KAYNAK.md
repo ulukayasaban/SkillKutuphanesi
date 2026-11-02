@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/vercel-labs/agent-skills
 - **Repo içindeki yol:** `skills/writing-guidelines`
-- **Commit:** `063bee94c3f4df8453406c830b0a7df0f2860278`
+- **Commit:** `1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** vercel-labs (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

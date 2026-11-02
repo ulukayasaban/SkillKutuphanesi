@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/tt-a1i/archify
 - **Repo içindeki yol:** `.agents/skills/test-value`
-- **Commit:** `25cf37080fc8b1dbe758a4efc3935b55f3327083`
-- **Lisans:** MIT
+- **Commit:** `a4065941f12be7967436261d9934784e381d423c`
+- **Lisans:** Apache-2.0
 - **Geliştirici:** tt-a1i (kisi)
-- **Değerlendirme:** 95/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

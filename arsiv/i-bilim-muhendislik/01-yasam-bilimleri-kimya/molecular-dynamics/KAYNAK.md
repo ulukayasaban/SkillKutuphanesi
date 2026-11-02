@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/K-Dense-AI/scientific-agent-skills
 - **Repo içindeki yol:** `skills/molecular-dynamics`
-- **Commit:** `593377bb048752abb0152deab9fbb1083a6087df`
+- **Commit:** `5f2bc0341354fd5590aef76a533ada1e1e5b4e62`
 - **Lisans:** MIT
 - **Geliştirici:** K-Dense-AI (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

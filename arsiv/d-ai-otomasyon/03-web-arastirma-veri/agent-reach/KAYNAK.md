@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/Panniantong/Agent-Reach
 - **Repo içindeki yol:** `agent_reach/skill`
-- **Commit:** `94f06c1969dfc1834001269d79d3ad0972d9dee6`
+- **Commit:** `7a38047acf26a729cbb27851e3cb81639da86b29`
 - **Lisans:** MIT
 - **Geliştirici:** Panniantong (kisi)
-- **Değerlendirme:** 87/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

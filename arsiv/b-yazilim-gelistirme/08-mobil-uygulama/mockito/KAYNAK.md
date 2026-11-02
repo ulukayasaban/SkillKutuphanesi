@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/evanca/flutter-ai-rules
 - **Repo içindeki yol:** `skills/mockito`
-- **Commit:** `30f908d3878ac8f2fe2c62c86b724be161d75a55`
+- **Commit:** `f170aabcae6db4d2fe0cb5d43f232943b422fa3d`
 - **Lisans:** MIT
 - **Geliştirici:** evanca (kisi)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
