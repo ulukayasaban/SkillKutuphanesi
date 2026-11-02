@@ -1,0 +1,11 @@
+# return-fraud-prevention
+
+> Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
+
+- **Kaynak repo:** https://github.com/finsilabs/awesome-ecommerce-skills
+- **Repo içindeki yol:** `skills/security-compliance/return-fraud-prevention`
+- **Commit:** `fa38550a7fa27626246146dd856a5c4775fb3254`
+- **Lisans:** MIT
+- **Geliştirici:** finsilabs (kurum)
+- **Arşive alınma:** 2026-11-02
+- **Durum:** tercih

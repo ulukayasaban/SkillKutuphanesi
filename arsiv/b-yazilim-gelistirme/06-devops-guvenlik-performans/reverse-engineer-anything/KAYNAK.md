@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/morluto/rea
 - **Repo içindeki yol:** `.agents/skills/reverse-engineer-anything`
-- **Commit:** `6e2404b8690f6faa75227d895c937be5b77ef238`
+- **Commit:** `d3ab0faf52a02ff5a618f3ed7beb608b78752abd`
 - **Lisans:** MIT
 - **Geliştirici:** morluto (kisi)
-- **Arşive alınma:** 2026-10-31
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
 - **Bağımlılık:** REA aracı (repo) kurulu olmalı.

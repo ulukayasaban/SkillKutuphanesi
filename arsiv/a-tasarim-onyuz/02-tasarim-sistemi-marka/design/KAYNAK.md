@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
 - **Repo içindeki yol:** `.claude/skills/design`
-- **Commit:** `623a9a9037d006ea727f8213f084d02a6b6f11b5`
+- **Commit:** `3a13158ff1f32156cbe144108de48eda2ecaed9a`
 - **Lisans:** MIT
 - **Geliştirici:** nextlevelbuilder (kurum)
-- **Değerlendirme:** 77/100 (B)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

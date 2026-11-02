@@ -4,10 +4,9 @@
 
 - **Kaynak repo:** https://github.com/microsoft/playwright
 - **Repo içindeki yol:** `packages/playwright-core/src/tools/skills/playwright-cli`
-- **Commit:** `66070a1eaa0b869379607a9e0e1a652ddf2a77da`
+- **Commit:** `3b3ac2576f600eca31f1781a631cacf7210e80b1`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** microsoft (kurum)
-- **Değerlendirme:** 90/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
 - **SKILL.md'de olup bulunamayan dosyalar:** `.playwright-cli/page-2026-02-14T19-22-42-679Z.yml`

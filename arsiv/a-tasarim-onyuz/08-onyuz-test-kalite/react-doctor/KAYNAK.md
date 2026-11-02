@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/darkroomengineering/satus
 - **Repo içindeki yol:** `.agents/skills/react-doctor`
-- **Commit:** `83220268418c8f4d4fb2b4547846693f8b291d8e`
+- **Commit:** `7907deda2a5792776cbafa5dd26cdd148f692139`
 - **Lisans:** MIT
 - **Geliştirici:** darkroomengineering (kurum)
-- **Değerlendirme:** 79/100 (B)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

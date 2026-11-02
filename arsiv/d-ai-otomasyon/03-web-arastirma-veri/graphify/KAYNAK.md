@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/Graphify-Labs/graphify
 - **Repo içindeki yol:** `graphify`
-- **Commit:** `847a93f3cab5e2c82ea9170014b21cd2c52a4417`
+- **Commit:** `32e5efe935e6844ef39a5e33409e4efe848f2172`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** Graphify-Labs (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
 - **Bağımlılık:** graphify Python paketi (pip install graphifyy) kurulu olmalı.

@@ -7,6 +7,5 @@
 - **Commit:** `593e39bc9e3652734653bd75544a333d7d43615e`
 - **Lisans:** MIT
 - **Geliştirici:** zanwei (kisi)
-- **Değerlendirme:** 82/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/cloudflare/skills
 - **Repo içindeki yol:** `skills/sandbox-migrate-to-next`
-- **Commit:** `86505e44f87d801aa1864a3c4109e9a8ae5c409f`
+- **Commit:** `1a33048817d06df12882cb881dfc754e7039954a`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** cloudflare (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

@@ -11,6 +11,7 @@
 | `add-new-package` | remotion-dev/remotion | Add a new package to the Remotion monorepo, including package scaffolding, monorepo registration, documentatio |
 | `add-sfx` | remotion-dev/remotion | Add a new sound effect to @remotion/sfx |
 | `add-webcodecs-bug` | remotion-dev/remotion | Add a browser WebCodecs bug to the Remotion Mediabunny WebCodecs bugs docs page. Use when given a Chromium, We |
+| `api-review` | microsoft/playwright | Produce the "Playwright 1.xx API Review" artifact for a range of commits - the public API additions and the br |
 | `authoring-skills` | vercel/next.js | How to create and maintain agent skills in .agents/skills/. Use when creating a new SKILL.md, writing skill de |
 | `backport-pr` | vercel/next.js | Backport a merged Next.js pull request from canary to an LTS release branch (releases/lts/active or releases/l |
 | `canvas-capture-extension` | remotion-dev/remotion | Rebuild, install, and reload the private Remotion Canvas Capture unpacked Chrome extension. Use when the exten |
@@ -63,7 +64,7 @@
 | `playwright-devops` | microsoft/playwright | DevOps workflows for Playwright - CI failure analysis, workflow debugging, and release operations. |
 | `playwright-release-notes` | microsoft/playwright | Write the release notes for a Playwright release - the Node.js notes in docs/src/release-notes-js.md together  |
 | `playwright-test-results` | microsoft/playwright | Query Playwright CI test results from the aggregated DuckDB database. Answers questions about flaky tests, fai |
-| `playwright-triage` | microsoft/playwright | Triage a Playwright bug report by reproducing it from the information in the issue. Use when asked to triage,  |
+| `playwright-triage` | microsoft/playwright | Triage and fix one microsoft/playwright issue, or do a maintainer's task, unattended inside the Issue triage G |
 | `pr` | remotion-dev/remotion | Open a pull request for the current feature |
 | `pr-name` | remotion-dev/remotion | Review or correct a Remotion pull request title |
 | `pr-ready` | remotion-dev/remotion | Resolve CI failures, merge conflicts, or local branch changes to get a PR ready |
@@ -83,6 +84,8 @@
 | `studio` | remotion-dev/remotion | Start Remotion Studio from packages/example and open it in the Codex browser. Use when the user invokes /studi |
 | `studio-config-option-lifecycle` | remotion-dev/remotion | Classify and wire Remotion Studio config options as either startup-fixed or reloadable while preventing mixed  |
 | `studio-css-reset` | remotion-dev/remotion | Style Remotion Studio UI inside `.css-reset` containers without relying on inherited reset properties. |
+| `studio-dev` | remotion-dev/remotion | Develop or review Remotion Studio features and UI. Apply Studio principles for optimistic updates, agent acces |
+| `studio-loop` | remotion-dev/remotion | Continuously improve Remotion Studio by making a video, reproducing real UX and performance issues, fixing the |
 | `studio-mode` | remotion-dev/remotion | Understand the capabilities and restrictions of each Remotion Studio mode. Use when implementing or reviewing  |
 | `studio-perf` | remotion-dev/remotion | Optimize Remotion Studio render performance by minimizing frame-reactive component surfaces, preferring impera |
 | `test` | react/react | Use when you need to run tests for React core. Supports source, www, stable, and experimental channels. |

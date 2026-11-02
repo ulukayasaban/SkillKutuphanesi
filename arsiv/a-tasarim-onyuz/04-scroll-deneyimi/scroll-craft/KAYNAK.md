@@ -7,6 +7,5 @@
 - **Commit:** `75d81f74e83692add18cd7a8a8e078b8a887a579`
 - **Lisans:** MIT
 - **Geliştirici:** nateherkai (kisi)
-- **Değerlendirme:** 80/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

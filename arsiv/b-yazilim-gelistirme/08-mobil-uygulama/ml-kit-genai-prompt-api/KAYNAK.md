@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/android/skills
 - **Repo içindeki yol:** `device-ai/ml-kit-genai-prompt-api`
-- **Commit:** `95ea931a1ad8f9b2be132ae0cfb2aad964d71118`
+- **Commit:** `6daa53ef27fa2aa87827d183a85c06cedceca833`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** android (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/anthropics/claude-plugins-official
 - **Repo içindeki yol:** `plugins/mcp-server-dev/skills/build-mcp-server`
-- **Commit:** `af59ee3a1051a29dda4a2e7a2af221aa457ae08b`
+- **Commit:** `a7ba5b93db0c7c8d17f3f1d25853adca79598a1a`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** anthropics (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

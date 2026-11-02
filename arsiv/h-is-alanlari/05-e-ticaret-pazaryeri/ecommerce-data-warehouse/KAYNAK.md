@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/finsilabs/awesome-ecommerce-skills
 - **Repo içindeki yol:** `skills/data-analytics/ecommerce-data-warehouse`
-- **Commit:** `30a1fb674e41284e738608c059690c251699eb07`
+- **Commit:** `fa38550a7fa27626246146dd856a5c4775fb3254`
 - **Lisans:** MIT
 - **Geliştirici:** finsilabs (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

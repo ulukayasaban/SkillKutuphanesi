@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/addyosmani/agent-skills
 - **Repo içindeki yol:** `skills/documentation-and-adrs`
-- **Commit:** `aeac41d4d005999432bb7312f7ff06383a91d59d`
+- **Commit:** `301b02b12bff98e4688e6984af6556802322bbde`
 - **Lisans:** MIT
 - **Geliştirici:** addyosmani (kisi)
-- **Değerlendirme:** 95/100 (A)
-- **Arşive alınma:** 2026-10-21
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

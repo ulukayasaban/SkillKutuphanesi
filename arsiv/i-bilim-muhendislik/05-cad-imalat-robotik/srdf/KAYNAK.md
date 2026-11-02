@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/earthtojake/text-to-cad
 - **Repo içindeki yol:** `skills/srdf`
-- **Commit:** `2f793659fb7bab537e2f00836e06448fc4087cb2`
+- **Commit:** `5a5dab9503d140b8cf62a28d21ba2573a722d2d6`
 - **Lisans:** MIT
 - **Geliştirici:** earthtojake (kisi)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

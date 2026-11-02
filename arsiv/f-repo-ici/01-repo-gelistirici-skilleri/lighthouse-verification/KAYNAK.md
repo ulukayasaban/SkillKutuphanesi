@@ -4,9 +4,8 @@
 
 - **Kaynak repo:** https://github.com/GoogleChrome/lighthouse
 - **Repo içindeki yol:** `.agents/skills/lighthouse-verification`
-- **Commit:** `903ee1417ce45867962bffc0b711dcb16c5b4c54`
+- **Commit:** `2934860cdc5ed2b622497055b5f1a63594927c8a`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** GoogleChrome (kurum)
-- **Değerlendirme:** 75/100 (B)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

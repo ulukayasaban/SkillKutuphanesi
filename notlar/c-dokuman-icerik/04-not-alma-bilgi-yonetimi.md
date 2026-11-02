@@ -43,7 +43,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Ne zaman:** Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik. · **Ne zaman değil:** Onay almadan toplu taşıma/silme gerektiğinde (geri alınamaz işler); Obsidian kasası için inbox-processor daha uygun.
 - **Teknoloji:** bash
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78386, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78523, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** dosya-duzenleme → birincil
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Onay isteyen adımlar ve örnekler makul; betik yok, kopya tespiti agent'ın komutlarına bağlı. Lisans belirtilmemiş.
@@ -70,7 +70,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 30 KB (SKILL.md 29.6 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV (şablona özgü). Ayrıntılı ama 30 KB ve tamamen claudesidian deposuna bağlı; git origin silme gibi geri alınması zor adımlar içeriyor.
 
-### install-claudesidian-command  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 60 (C)
+### install-claudesidian-command  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 59 (C)
 
 - **Ne yapar:** Kabuğa (bash/zsh/fish) `claudesidian` adlı bir alias/fonksiyon ekler: kasa klasörüne geçip `claude --resume` ile oturumu sürdürür ya da yeni oturum açar; yol kaçışlama ve güvenlik notları içerir.
 - **Ne zaman:** claudesidian kasasını terminalden tek komutla açmak. · **Ne zaman değil:** Codex kullanıcıları için olduğu gibi kullanma: komut `claude` CLI'ını çağırıyor; Codex'te alias içindeki komutu `codex resume --last || codex` olarak değiştirerek uyarlanabilir. Kabuk yapılandırma dosyasını değiştirir — onaysız çalıştırma.
@@ -87,12 +87,12 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Ne zaman:** Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama. · **Ne zaman değil:** Muhasebe kaydı/vergi beyanı yerine geçmez; OCR doğruluğu kontrol edilmeden finansal karar için kullanma.
 - **Teknoloji:** python, pdf · **Paketler:** pdftotext veya pdfplumber, OCR aracı (taranmış fişler için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78386, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★78523, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** dosya-duzenleme → tamamlayıcı
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Adlandırma standardı ve klasör stratejileri iyi; çıkarma için pdf skilliyle birlikte kullanılır. Lisans belirtilmemiş.
 
-### json-canvas  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 71 (B)
+### json-canvas  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
 
 - **Ne yapar:** Obsidian'ın kullandığı JSON Canvas 1.0 (.canvas) dosyalarını oluşturur ve düzenler: text/file/link/group düğümleri, kenarlar, renkler, yerleşim önerileri ve doğrulama kuralları. Zihin haritası, proje panosu ve akış şeması örnekleri içerir.
 - **Ne zaman:** Obsidian kasasında görsel tuval, zihin haritası ya da not bağlantı haritası üretmek. · **Ne zaman değil:** Obsidian/JSON Canvas kullanılmıyorsa; yayınlanacak diyagram için archify veya beautiful-mermaid.
@@ -103,7 +103,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Spesifikasyonu eksiksiz ve örnekli anlatıyor; dar kapsamlı. Asıl yeri Obsidian not yönetimi olduğu için 04-not-alma-bilgi-yonetimi kategorisine taşındı.
 
-### obsidian-bases  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 71 (B)
+### obsidian-bases  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
 
 - **Ne yapar:** Obsidian Bases (.base) dosyalarını oluşturur ve düzenler: tam YAML şeması, global/görünüm filtreleri, formül sözdizimi ve fonksiyon başvurusu, tablo/kart/liste/harita görünümleri, özet formülleri.
 - **Ne zaman:** Obsidian'da notlardan veritabanı benzeri tablo/kart görünümü kurmak. · **Ne zaman değil:** Obsidian Bases kullanılmıyorsa (Dataview eklentisi farklı sözdizimi kullanır).
@@ -114,7 +114,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 16 KB (SKILL.md 16.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Şema ve fonksiyon başvurusu eksiksiz ve örnekli (kaynak kepano/obsidian-skills içeriğiyle uyumlu); MIT.
 
-### obsidian-markdown  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
+### obsidian-markdown  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 69 (B)
 
 - **Ne yapar:** Obsidian Flavored Markdown yazımı: wikilink, gömme (embed), callout, özellikler (properties), etiketler, blok referansları, LaTeX matematik ve diğer Obsidian'a özgü sözdizimi; örneklerle eksiksiz başvuru.
 - **Ne zaman:** Obsidian kasasına not yazan/düzenleyen her iş; diğer Obsidian skillerinin temeli. · **Ne zaman değil:** Obsidian dışında (GitHub/GFM) Markdown yazarken wikilink ve callout kullanımı uyumsuz olur.
@@ -147,7 +147,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Çok kısa davranış tarifi; brainstorming/idea-refine ile benzer ama 'çözüm üretme' yasağı ayırt edici.
 
-### upgrade  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 60 (C)
+### upgrade  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 59 (C)
 
 - **Ne yapar:** claudesidian kurulumunu GitHub'daki son sürüme yükseltir: sürüm kontrolü, yedek, upstream çekme, dosya dosya anlamsal karşılaştırma ile kullanıcı özelleştirmelerini koruyarak birleştirme, .agents/skills sembolik bağlantı hijyeni ve eski düzenden geçiş.
 - **Ne zaman:** claudesidian tabanlı kasayı güncellemek. · **Ne zaman değil:** claudesidian dışı her yerde. Codex'te: allowed-tools (WebFetch, MultiEdit) Claude Code'a özgü; .claude/skills sembolik bağlantı adımları Codex için .agents/skills kanonik konumuyla zaten uyumlu, yalnızca .claude ve .pi bağlantı adımları atlanabilir.

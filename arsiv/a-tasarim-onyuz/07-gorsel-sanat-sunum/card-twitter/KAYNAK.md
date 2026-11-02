@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/nexu-io/open-design
 - **Repo içindeki yol:** `skills/card-twitter`
-- **Commit:** `12d970eacc8971150e3c76470d2a9afe16dc2ed1`
+- **Commit:** `987b2475d65bc420ed4f3ee98d4e66461034ed1e`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** nexu-io (kurum)
-- **Arşive alınma:** 2026-10-31
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih

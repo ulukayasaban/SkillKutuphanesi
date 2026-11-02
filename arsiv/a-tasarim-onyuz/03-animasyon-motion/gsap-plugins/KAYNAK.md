@@ -7,6 +7,5 @@
 - **Commit:** `aed9cfd3277740755f6bfc1155c7aa645403b760`
 - **Lisans:** MIT
 - **Geliştirici:** greensock (kurum)
-- **Değerlendirme:** 97/100 (A)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih

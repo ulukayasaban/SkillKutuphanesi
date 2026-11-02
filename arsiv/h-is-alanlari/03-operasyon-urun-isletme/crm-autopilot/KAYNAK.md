@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/anthropics/knowledge-work-plugins
 - **Repo içindeki yol:** `small-business/skills/crm-autopilot`
-- **Commit:** `33d3dea41a341b341d4f5da2e8801ae0c89be2b8`
+- **Commit:** `2574e29377c7173d0cecffef29a6ecbd7f8ccb5d`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** anthropics (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
 - **SKILL.md'de olup bulunamayan dosyalar:** `../../shared/voice-profile.md`
