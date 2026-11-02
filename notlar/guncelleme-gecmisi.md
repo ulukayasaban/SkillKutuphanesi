@@ -4,7 +4,7 @@
 
 ## 2026-11-02 — `guncelleme/2026-11`
 
-Durum: **master'a birleştirilmeyi bekliyor** (onay sonrası: `python3 araclar/arsiv-guncelle.py --birlestir guncelleme/2026-11`)
+Durum: **master'a birleştirildi** (2026-11-02 08:10)
 
 | Kaynak | Eski | Yeni | Değişen skill dosyası |
 |---|---|---|---|
