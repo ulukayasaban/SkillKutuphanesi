@@ -60,6 +60,5 @@ git switch master && git pull origin master
 ```
 Beklenen: `python3 araclar/dogrula.py` → `5250 skill · 0 hata`.
 
-## 6. Bekleyen tek karar
-`kapsam-denetimi.py` 1 "karar bekliyor" bırakıyor: `darkroomengineering/satus` reposu sonradan `.agents/skills/next-bundle-optimizer`
-skill'ini eklemiş. Kütüphaneye alınsın mı? Kararını Claude'a söyle (`dahil`e ekler ya da gerekçeli `haric` yazar).
+## 6. (Tamamlandı) satus kararı
+`next-bundle-optimizer` kullanıcı onayıyla kapsama alındı; `vercel/next.js`'teki skill'in birebir kopyası çıktığı için ayrı skill eklenmedi, kopya kaynağı olarak notlandı. Kapsam denetimi: 0 bekleyen.

@@ -6,13 +6,12 @@
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5213 | arşivde (ana sürüm) |
+| secildi | 5214 | arşivde (ana sürüm) |
 | haric | 2369 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 144 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 | ayri-surum | 35 | arşivde (aynı adlı farklı içerik, ayrı skill) |
 | arac-varyanti | 20 | arşivde (Claude/Codex'e özel sürüm) |
-| KARAR_BEKLIYOR | 1 | yeni/kapsam dışı skill: arşive alınmadı, karar bekliyor (kaynaklar.json: dahil'e ekle ya da haric'e yaz) |
 
 ## Repo bazında
 
@@ -70,7 +69,7 @@
 | coreyhaines31/marketingskills | 53 | secildi 53 |
 | czlonkowski/n8n-skills | 15 | secildi 15 |
 | dadederk/iOS-Accessibility-Agent-Skill | 1 | secildi 1 |
-| darkroomengineering/satus | 2 | KARAR_BEKLIYOR 1, secildi 1 |
+| darkroomengineering/satus | 2 | secildi 2 |
 | dpconde/claude-android-skill | 1 | secildi 1 |
 | dreammis/social-auto-upload | 18 | secildi 18 |
 | earthtojake/text-to-cad | 12 | secildi 12 |
@@ -150,9 +149,3 @@
 - **JuliusBrussee/caveman**: `plugins/caveman/skills/cavecrew/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-compress/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-stats/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman/SKILL.md` (^plugins/), `plugins/caveman/skills/megacave/SKILL.md` (^plugins/), `plugins/caveman/skills/ultracave/SKILL.md` (^plugins/)
 - **krillinai/OpenCreator**: `apps/daemon/runtime/opencreator-runtime/SKILL.md` (^apps/), `packages/writing-templates/templates/community/khazix-writer/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/research-paper-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/sun-style-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/insight/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/news-analysis/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/story/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/tutorial/skill/SKILL.md` (^packages/)
 - **openai/plugins**: `.agents/skills/plugin-creator/SKILL.md` (^\.agents/), `plugins/plugin-eval/fixtures/minimal-plugin/skills/minimal-plugin-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/minimal-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/alpha/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/beta/SKILL.md` (^plugins/plugin-eval/fixtures/)
-
-## Karar bekleyen yeni skiller (1)
-
-Hiçbir kayıt kapsamına girmiyor (upstream sonradan eklemiş olabilir). Almak için `kaynaklar.json` → repo kaydının `dahil` listesine ekle; almamak için `haric`e yaz. Bu skiller arşivde YOK ve güncellemeyi durdurmaz.
-
-- darkroomengineering/satus: .agents/skills/next-bundle-optimizer/SKILL.md
