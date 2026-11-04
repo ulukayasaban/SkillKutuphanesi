@@ -2,9 +2,9 @@
 
 _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **7/11**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **7/12**
 
-### agent-browser  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### agent-browser  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Browser automation CLI for AI agents. Use when the user needs to inspect, test, or automate browser behavior: navigating pages, filling forms, clicking buttons, taking screenshots, extracting page data, reading selected OpenDesign browser-tab context, testing web apps, dogfooding OpenDesign previews, QA, bug hunts, or reviewing app quality. Prefer local OpenDesign preview URLs unless the user expl
 - **Teknoloji:** api-anahtari, css, html, node _(otomatik tespit)_
@@ -25,7 +25,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 14 KB (SKILL.md 14.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### export-download-debugging  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### export-download-debugging  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Diagnose and fix browser, preview, or Electron export/download failures, especially image export issues involving Save As, Blob/Data URLs, the File System Access API, createWritable failures, and 0 KB files.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -35,7 +35,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### impeccable-design-polish  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### impeccable-design-polish  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Follow-up design polish skill inspired by Impeccable. Use after a web or HTML artifact exists to audit, critique, polish, animate, harden, and prepare the page for a live/share pass.
 - **Teknoloji:** css, gsap, html _(otomatik tespit)_
@@ -67,7 +67,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa (4.7 KB), odaklı ve resmî; komutlar tutarlı ve tipik bir inceleme akışı veriyor. Dikkat: yalnızca `npx playwright trace` alt komutunu içeren yeni Playwright sürümlerinde çalışır; `allowed-tools: Bash(npx playwright trace:*)` ile kapsam sınırlı, ek kurulum/ağ yok.
 
-### react-doctor  ·  darkroomengineering/satus @ 7907ded  ·  puan 76 (B)
+### react-doctor  ·  darkroomengineering/satus @ 7907ded  ·  puan 75 (B)
 
 - **Ne yapar:** React kod tabanını güvenlik, performans, doğruluk, erişilebilirlik ve mimari açısından tarayıp 0-100 sağlık puanı veren `react-doctor` CLI'ının skill'i. Değişiklik sonrası `--diff` ile gerileme kontrolü, tam tarama ve `/doctor` ile uzaktan çekilen triyaj playbook'u akışı vardır.
 - **Ne zaman:** React kodu bitirirken/commit öncesi puan gerilemesini yakalamak, lint-erişilebilirlik-bundle sorunlarını önceliklendirmek için. · **Ne zaman değil:** React olmayan projelerde değil. Ağdan talimat çekmek istemeyen/izole ortamlarda `/doctor` akışı kullanılmamalı.
@@ -110,6 +110,16 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Durum:** alternatif · **Örtüşme:** tarayici-otomasyon-testi → alternatif
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. SKILL.md, scripts/ ve examples/ resmî kopyayla aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te doldurulmamış şablon telif satırı.
+
+### webapp-testing@github  ·  github/awesome-copilot @ 7e40881  ·  puan 83 (A)
+
+- **Ne yapar:** Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
+- **Teknoloji:** css, node, playwright, react _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** alternatif
+- **Boyut:** 5 KB (SKILL.md 3.7 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### webapp-testing@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 

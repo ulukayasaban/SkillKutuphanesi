@@ -4,7 +4,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/12**
 
-### article-magazine  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### article-magazine  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Huashu / huashu-md-html-inspired magazine article layout for turning Markdown or notes into a polished long-form HTML essay.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -14,7 +14,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 11 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### doc-kami-parchment  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### doc-kami-parchment  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Warm parchment canvas (#f5f4ed), monochrome ink-blue accent (#1B365D), one serif family, and editorial-grade typography.
 - **Teknoloji:** canvas, css, html, tailwind _(otomatik tespit)_
@@ -90,7 +90,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 1201 KB (SKILL.md 25.0 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. html2pptx yaklaşımı tasarım özgürlüğü veriyor ama SKILL.md 25 KB ve 'tamamını oku' dosyalarıyla bağlam yükü yüksek; bağımlılıkları ağır.
 
-### resume-modern  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### resume-modern  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Modern minimal resume, single A4 page, ready for print or PDF export.
 - **Teknoloji:** html _(otomatik tespit)_

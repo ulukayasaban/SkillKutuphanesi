@@ -1,67 +1,204 @@
 # Örnek görevler ve test sonucu › h-is-alanlari
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 1835 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 1972 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
+| `ab-testing` | ✅ | the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," "hypothesis," "should I test this," "which ve |
 | `account-context` | ✅ | the user asks "tell me about [account]" (an existing customer; for a prospect, account-research), "account context for [name]", "what's going on with [account]" |
 | `account-plan` | ✅ | the user says "build an account plan for [account]", "update the [account] plan", "account planning for [account]", or before a planning cycle / QBR. |
 | `account-research` | ⚠️ | 'research [company]', 'tell me about [domain]', 'pull up signals for [account]', 'what's going on with [company]', or any account-level question. |
 | `account-research@anthropics` | ✅ | the user asks to "research [company]", "look into [company]", "prospect research on [company]", "look up [person]", "intel on [prospect]", "who is [person] at [ |
 | `account-tiering` | ✅ | the user asks to "tier my accounts", "prioritize my book", "which accounts should I focus on", or "score these accounts". |
+| `ad-creative` | ✅ | the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'creative testing,' 'write me some ads,' 'Facebook |
+| `ads` | ✅ | account intake, source-grounded audits, strategy, budget and measurement planning, creative production, experiments, reporting, monitoring, and explicitly appro |
+| `ads-amazon` | ✅ | Amazon Ads, sponsored ads, Amazon PPC, ACOS, TACOS, ASIN advertising, Amazon DSP, or retail-media optimization. |
+| `ads-apple` | ✅ | Apple Ads, Apple Search Ads, App Store ads, Search Match, custom product pages, AdServices, or Apple app-install campaigns. |
+| `ads-attribution` | ✅ | attribution audit, attribution models, conversion windows, requests to add or total Meta and Google conversions, incompatible reporting-window aggregation, GA4  |
+| `ads-audit` | ✅ | full ad checks, account health reviews, paid-media diagnostics, partial audits after authentication or worker failure, missing-platform weighting, beta-feature  |
+| `ads-budget` | ✅ | ad budget allocation, media budget, bidding strategy, scaling, spend pacing, ROAS target, or investment tradeoffs |
+| `ads-competitor` | ✅ | competitor ads, ad libraries, ad spy, competitive PPC analysis, competitor creative, Google Ads Transparency, Meta Ad Library, or paid-media competitor research |
+| `ads-create` | ✅ | : campaign brief, campaign concepts, create a campaign, ad concepts, ad copy, ad messaging, creative brief, headlines, descriptions. |
+| `ads-creative` | ✅ | creative audit, ad creative, creative fatigue, creative diversity, ad copy review, video review, image review, or production priorities. |
+| `ads-dna` | ✅ | : brand DNA, brand profile, brand identity, brand style, brand colors, brand voice, visual identity, style guide, website brand analysis. |
+| `ads-generate` | ✅ | : generate ads, generate ad images, create ad creatives, create ad images, make ad images, generate visuals, make campaign visuals, generate images from campaig |
+| `ads-google` | ✅ | Google Ads, AdWords, Search campaigns, search terms reports, broad negatives, Shopping, Performance Max, PMax, Demand Gen, GAQL, or Google conversion tracking |
+| `ads-landing` | ⚠️ | landing-page audit, post-click experience, LP audit, conversion-rate optimization, form optimization, ad-to-page message match, redirects, blocked navigation, o |
+| `ads-launch` | ✅ | campaign creation, launch plans, publishing ads, activating campaigns, uploading creative, or requests to push a campaign live. |
+| `ads-linkedin` | ✅ | LinkedIn Ads, Campaign Manager, Insight Tag, Lead Gen Forms, Thought Leader Ads, ABM campaigns, or B2B paid media. |
+| `ads-math` | ✅ | PPC math, ad calculator, break-even analysis, ROAS calculator, CPA calculator, budget forecast, LTV CAC, or MER. |
+| `ads-meta` | ✅ | Meta Ads, Facebook Ads, Instagram Ads, Advantage+, Pixel, Events Manager, or Meta account structure |
+| `ads-microsoft` | ✅ | Microsoft Ads, Bing Ads, UET, Microsoft Audience Network, or Google Ads import |
+| `ads-monitor` | ✅ | daily or weekly checks, anomaly review, budget pacing, post-launch verification, or campaign monitoring. |
+| `ads-optimize` | ✅ | campaign optimization, budget reallocation, bid changes, pausing or archiving ads, requests to delete campaigns, search-term or negative-keyword actions, creati |
+| `ads-photoshoot` | ✅ | : product photo, product photography, virtual photoshoot, photoshoot, enhance product image, studio shot, lifestyle shot, lifestyle product image, floating prod |
+| `ads-pinterest` | ✅ | Pinterest Ads, promoted Pins, shopping ads, catalog sales, Pinterest Tag, Pinterest Conversions API, or Pinterest Performance+. |
+| `ads-plan` | ✅ | ad plan, media plan, PPC strategy, paid-social strategy, campaign architecture, advertising roadmap, or channel planning. |
+| `ads-reddit` | ✅ | Reddit Ads, conversation ads, community targeting, Reddit Pixel, Reddit Conversions API, or Reddit dynamic product ads. |
+| `ads-report` | ✅ | ads report, client report, audit PDF, executive audience reporting, or exporting prior audit and plan results. |
+| `ads-research` | ✅ | ads research refresh, expired refresh_due dates, stale API or platform claims, reverify-or-demote decisions, release-current claim validation, ecosystem review, |
+| `ads-server-side-tracking` | ✅ | server-side tracking, sGTM, server-side tagging, Meta CAPI, TikTok Events API, event_id, deduplication, pixel debugging, first-party measurement, or conversion  |
+| `ads-setup` | ✅ | onboarding, initial configuration, API tokens or credential profiles, environment-variable or keychain setup, connecting exports or read adapters, safe native o |
+| `ads-snapchat` | ✅ | Snapchat Ads, Snap Ads, Snap Pixel, Snapchat Conversions API, AR Lens ads, app-install campaigns, or Snapchat dynamic product ads. |
+| `ads-test` | ✅ | A/B test, split test, experiment design, hypothesis, statistical significance, sample size, test duration, or experiment readout. |
+| `ads-tiktok` | ✅ | TikTok Ads, TikTok Pixel, Smart+, TikTok Shop Ads, GMV Max, or Spark Ads |
+| `ads-validate` | ✅ | ads validate, ads status, ads next, maturity checks, ownership-manifest uninstall, preserving unrelated ads-* skills, checksum verification, preflight, QA, or r |
+| `ads-x` | ✅ | X Ads, Twitter Ads, promoted posts, X Pixel, X Conversions API, conversation targeting, or paid campaigns on X. |
+| `ads-youtube` | ✅ | YouTube Ads, video ads, pre-roll, bumper ads, skippable in-stream, Shorts ads, VAC migration, or CTV |
+| `ads@coreyhaines31` | ✅ | the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budg |
+| `ai-seo` | ✅ | the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize  |
+| `ai-visibility` | ✅ | asked "AI visibility", "GEO/AEO check", "do LLMs cite us", "traffic from ChatGPT", or "how do we show up in AI search". |
+| `analytics` | ✅ | the user mentions "set up tracking," "GA4," "Google Analytics," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking  |
+| `aso` | ✅ | the user mentions 'ASO audit,' 'app store optimization,' 'optimize my app listing,' 'improve app visibility,' 'app store ranking,' 'audit my listing,' 'why aren |
+| `attribution` | ✅ | the user mentions "attribution," "attribution model," "first-touch vs last-touch," "multi-touch," "which channel drives revenue," "what's my real CAC," "my dash |
+| `backlink-check` | ✅ | asked "check my backlinks", "backlink profile of X", "who links to them", or "link gap vs competitor". |
 | `brand-review` | ⚠️ | checking a draft before it ships, when auditing copy for voice consistency and terminology, or when screening for unsubstantiated claims, missing disclaimers, a |
 | `brand-voice-enforcement` | ✅ | "on-brand", "brand voice", "enforce voice", "apply brand guidelines", "brand-aligned content", "write in our voice", "use our brand tone", "make this sound like |
 | `call-prep` | ⚠️ | 'prep me for my call with [company]', 'prepare for a meeting with [company]', 'what should I know before talking to [company]', or any call preparation request. |
 | `call-prep@anthropics` | ✅ | the user asks "prep me for [meeting/company]", "call prep [company]", "I'm meeting with [company], prep me", "get me ready for [meeting]", or "what do I need to |
 | `call-summary` | ✅ | the user says "call summary", "follow up on my [company] call", "summarize my call with [account]", "write the recap", "process this transcript", "process my ca |
 | `campaign-plan` | ⚠️ | planning a product launch, lead-gen push, or awareness campaign, when you need a week-by-week content calendar with dependencies, or when translating a marketin |
+| `churn-prevention` | ✅ | the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subs |
 | `close-plan` | ✅ | the user says "build a close plan for [deal]", "mutual action plan for [account]", "business case for [opp]", or "what's the path to signature". |
+| `co-marketing` | ✅ | the user says 'co-marketing,' 'partner marketing,' 'joint campaign,' 'who should we partner with,' 'integration marketing,' 'cross-promotion,' 'collaborate with |
+| `cold-email` | ✅ | the user mentions "cold email," "cold outreach," "outbound," "prospecting email," "SDR emails," "follow-up sequence," "nobody's replying," "email deliverability |
+| `community-marketing` | ✅ | the user wants to create a community strategy, grow a Discord or Slack community, manage a forum or subreddit, build brand advocates, increase word-of-mouth, dr |
 | `competitive-brief` | ⚠️ | building sales battlecards, when finding positioning gaps and messaging angles competitors haven't claimed, or when a competitor makes a move and you need to as |
 | `competitive-intelligence` | ✅ | the user asks "competitive intel", "research competitors", "how do we compare to [competitor]", "what's new with [competitor]", "battlecard for [competitor]", " |
+| `competitor-gap` | ✅ | asked "what does competitor.com rank for", "keyword gap vs X", "steal competitor keywords", or "why do they outrank us". |
+| `competitor-profiling` | ✅ | the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence |
+| `competitors` | ✅ | the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive lan |
 | `compose-outreach` | ⚠️ | 'draft outreach to [person]', 'write an email to [name]', 'compose a message for [contact]', or any outreach drafting request. |
 | `contact-research` | ✅ | 'who is [name]', 'look up [email]', 'research [contact]', 'is [name] a warm lead', or any contact-level question. |
+| `content-brief` | ✅ | asked for a "content brief", "outline to rank for X", "what should this article cover", or before writing any SEO page. |
 | `content-creation` | ✅ | writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action. |
+| `content-strategy@coreyhaines31` | ✅ | the user mentions "content strategy," "what should I write about," "content ideas," "blog strategy," "topic clusters," "content planning," "editorial calendar," |
+| `conversion-tracking` | ✅ | the conversion is a form submission, booked meeting, chat, phone call, signup, or purchase; when conversions must reach Google Ads, Meta, GA4, LinkedIn, TikTok, |
+| `copy-editing` | ✅ | the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this re |
+| `copywriting` | ✅ | the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "value proposition," "tagline," "hero s |
 | `create-an-asset` | ✅ | the user asks for a sales asset, one-pager, deck, leave-behind, "create an asset for [prospect]", or "make something for [account]". |
 | `crm-hygiene-check` | ✅ | the user asks "check my CRM hygiene", "check my Salesforce or HubSpot data", "clean up my CRM", "audit my opps", "what's missing in the CRM", or "clean up my pi |
+| `cro` | ✅ | the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'improve conversions,' 'why isn't this page working,' 'my landing page sucks, |
 | `customer-escalation` | ⚠️ | a bug needs engineering attention beyond normal support, multiple customers report the same issue, a customer is threatening to churn, or an issue has sat unres |
 | `customer-health` | ✅ | the user asks "how healthy is [account]", "customer health check", "prep the [account] QBR", "business review prep", or "are we at risk with [customer]". |
 | `customer-research` | ⚠️ | a customer asks something you need to look up, investigating whether a bug has been reported before, checking what was previously told to a specific account, or |
+| `customer-research@coreyhaines31` | ✅ | the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer interviews," "survey analysis," "support ticket ana |
 | `customer-voice` | ✅ | the user asks "what are customers saying about [topic]", "pull quotes on [objection/feature/competitor]", "voice of customer on [X]", or "what's coming up in ca |
 | `daily-briefing` | ✅ | the user says "daily briefing", "daily brief", "morning briefing", "what's my day", "what's on my plate today", "prep my day", "start my day", "morning rundown" |
 | `deal-advance-gap` | ✅ | the user asks "what's missing to advance [deal]", "what do I need to move [opp] forward", "why is [deal] stuck", or "what's between [account] and a close". |
 | `deal-review` | ✅ | the user asks "review the [account] deal", "deal review on [opp]", "is [opp] going to close", or "what's the risk on [deal]". |
 | `deal-signals` | ✅ | the user asks "what changed in my book", "any deals gone quiet", "what should I be worried about today", "run my deal signals", or sets it up as a recurring sch |
 | `deal-slip-scenario` | ✅ | the user asks "what if [deal] slips", "what happens if [account] pushes to next quarter", "can I still hit my number without [deal]", or "model losing [deal]". |
+| `directory-submissions` | ✅ | the user mentions "directory submissions," "submit to directories," "backlinks from directories," "list my product," "submit to Product Hunt," "BetaList," "TAAF |
 | `discover-brand` | ✅ | This skill orchestrates autonomous discovery of brand materials across enterprise platforms (Notion, Confluence, Google Drive, Box, SharePoint, Figma, Gong, Gra |
 | `draft-content` | ⚠️ | writing any marketing content, when you need headline or subject line options, or when adapting a message for a specific platform, audience, and brand voice. |
 | `draft-outreach` | ✅ | the user asks to "draft outreach to [person/company]", "write a cold email to [prospect]", "re-engage [prospect]", "draft a 3-touch sequence", or "reach out to  |
 | `draft-response` | ⚠️ | answering a product question, responding to an escalation or outage, delivering bad news like a delay or won't-fix, declining a feature request, or replying to  |
 | `email-sequence` | ⚠️ | building onboarding, lead nurture, re-engagement, win-back, or product launch flows, when you need a complete drip campaign with A/B test suggestions, or when m |
+| `emails` | ✅ | the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," "l |
 | `end-of-day` | ✅ | the user says "end of day", "close out my day", "process today's calls", "EOD", or on an evening schedule |
 | `enrich-lead` | ✅ | Instant lead enrichment. |
+| `events` | ✅ | the user mentions 'event marketing,' 'field marketing,' 'run a webinar,' 'webinar funnel,' 'show-up rate,' 'should we sponsor,' 'sponsor a conference,' 'trade s |
 | `expansion-whitespace` | ✅ | the user asks "what's the whitespace at [account]", "where can I expand [account]", "upsell opportunities in my book", or "which customers should I be growing". |
 | `forecast` | ✅ | the user asks "write my forecast", "forecast narrative", "prep for forecast call", "prep for my quarterly forecast call", "which deals should I commit vs |
+| `free-tools` | ✅ | the user mentions "engineering as marketing," "free tool," "marketing tool," "calculator," "generator," "interactive tool," "lead gen tool," "build a tool for l |
+| `geo` | ✅ | user says "geo", "seo", "audit", "AI search", "AI visibility", "optimize", "citability", "llms.txt", "schema", "brand mentions", "GEO report", or any URL for an |
+| `geo-audit` | ✅ | Full website GEO+SEO audit with parallel subagent delegation. |
+| `geo-brand-mentions` | ✅ | Brand mention and authority scanner for AI visibility. |
+| `geo-citability` | ✅ | AI citability scoring and optimization. |
+| `geo-compare` | ✅ | user says "compare", "delta", "monthly report", "progress", "confronta", "progressi", "report mensile", or when running a monthly client check-in. |
+| `geo-content` | ✅ | Content quality and E-E-A-T assessment for AI citability — evaluate experience, expertise, authoritativeness, trustworthiness, and content structure |
+| `geo-crawlers` | ✅ | AI crawler access analysis. |
+| `geo-llmstxt` | ⚠️ | Analyzes and generates llms.txt files -- the emerging standard for helping AI systems understand website structure and content. |
+| `geo-platform-optimizer` | ✅ | Platform-specific AI search optimization — audit and optimize for Google AI Overviews, ChatGPT, Perplexity, Gemini, and Bing Copilot individually |
+| `geo-proposal` | ✅ | user says "proposal", "proposta", "offerta", "preventivo", "generate proposal", or after completing a GEO audit for a prospect. |
+| `geo-prospect` | ✅ | user says "prospect", "lead", "client", "pipeline", "crm", "nuovo prospect", "aggiungi cliente", or when managing the business side of GEO services. |
+| `geo-report` | ✅ | Generate a professional, client-facing GEO report combining all audit results into a single deliverable with scores, findings, and prioritized actions |
+| `geo-report-pdf` | ✅ | Generate a professional PDF report from a GEO audit using pandoc + Chrome headless. |
+| `geo-schema` | ✅ | Schema.org structured data audit and generation optimized for AI discoverability — detect, validate, and generate JSON-LD markup |
+| `geo-technical` | ✅ | Technical SEO audit with GEO-specific checks — crawlability, indexability, security, performance, SSR, and AI crawler access |
+| `geo-update` | ✅ | Pull the latest GEO-SEO skill updates from the upstream repository. |
 | `guideline-generation` | ✅ | the user has a discovery report and wants to convert it into actionable guidelines. |
 | `handle-objection` | ✅ | the user says "they said we're too expensive", "how do I respond to [objection]", "[competitor] is in the deal", "help me handle this pushback", or pastes an ob |
+| `image` | ✅ | the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover |
 | `inbox-sweep` | ✅ | the user asks "sweep my inbox", "what customer emails need a reply", "draft replies to my customer emails", or "what needs a response". |
+| `influencer-marketing` | ✅ | the user mentions 'influencer marketing,' 'creator partnerships,' 'sponsorships,' 'YouTube sponsorships,' 'podcast sponsorships,' 'newsletter sponsorship,' 'new |
 | `kb-article` | ⚠️ | a ticket resolution is worth documenting for self-service, the same question keeps coming up, a workaround needs to be published, or a known issue should be com |
+| `keyword-research` | ✅ | asked to "find keywords", "keyword research for X", "what should I rank for", or "build a keyword plan". |
+| `launch` | ✅ | the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how |
+| `lead-magnets` | ✅ | the user mentions "lead magnet," "gated content," "content upgrade," "downloadable," "ebook," "cheat sheet," "checklist," "template download," "opt-in," "freebi |
 | `lead-triage` | ✅ | the user asks "triage this lead", "triage my leads", "rank my lead backlog", "is [company] a good lead", "qualify [lead]", or pastes or uploads lead info. |
+| `link-building` | ⚠️ | the user mentions 'link building,' 'linkbuilding,' 'backlinks,' 'get more backlinks,' 'link prospecting,' 'link gap,' 'competitor backlinks,' 'unlinked mentions |
 | `log-activity` | ✅ | the user says "log this call", "log my meeting with [account]", "log that I emailed [contact]", "track this conversation in the CRM", or "what activities are lo |
+| `marketing-council` | ✅ | the user mentions 'marketing council,' 'board of advisors,' 'advisory board,' 'what would Seth Godin say,' 'what would Ogilvy think,' 'channel Hormozi,' 'get mu |
+| `marketing-ideas` | ✅ | the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what els |
+| `marketing-loops` | ✅ | u |
+| `marketing-plan` | ✅ | the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market plan," "AARRR plan," "90-day marketing plan," "12-month marketing roadmap," "fracti |
+| `marketing-psychology` | ✅ | the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' |
+| `offers` | ✅ | the user mentions 'offer,' 'offer design,' 'build an offer,' 'grand slam offer,' 'irresistible offer,' 'value stack,' 'bonus stack,' 'guarantee,' 'risk reversal |
+| `onboarding@coreyhaines31` | ✅ | the user mentions "onboarding flow," "activation rate," "user activation," "first-run experience," "empty states," "onboarding checklist," "aha moment," "new us |
+| `paywalls` | ✅ | the user mentions "paywall," "upgrade screen," "upgrade modal," "upsell," "feature gate," "convert free to paid," "freemium conversion," "trial expiration scree |
 | `performance-report` | ⚠️ | wrapping a campaign, when preparing weekly, monthly, or quarterly channel summaries for stakeholders, or when you need data translated into an executive summary |
 | `pipeline-review` | ✅ | the user asks "review my pipeline", "pipeline health", "where's my pipeline stuck", "weekly pipeline review", "which deals should I focus on this week", "any st |
+| `popups` | ✅ | the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," "overlay," "collect emai |
+| `pricing` | ✅ | the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' ' |
+| `product-marketing` | ✅ | the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal cus |
+| `programmatic-seo` | ✅ | the user mentions "programmatic SEO," "template pages," "pages at scale," "directory pages," "location pages," "[keyword] + [city] pages," "comparison pages," " |
 | `prospect` | ✅ | Full ICP-to-leads pipeline. |
 | `prospect@anthropics` | ✅ | 'find companies that match [criteria]', 'build a prospect list', 'find contacts at [type of company]', 'show me companies hiring [role]', or any list-building r |
+| `prospecting` | ✅ | the user mentions "prospecting," "build a prospect list," "find leads," "lead list," "outbound list," "target account list," "ICP-fit accounts," "find local bus |
+| `public-relations` | ✅ | the user mentions 'PR,' 'press,' 'press release,' 'media outreach,' 'pitch a journalist,' 'get featured,' 'media list,' 'media kit,' 'press kit,' 'newsjacking,' |
+| `rank-tracking` | ✅ | asked "how are my rankings", "what moved this week/month", "track my keywords", or "did the update hit me". |
+| `referrals` | ✅ | the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get r |
 | `renewal-radar` | ✅ | the user asks "what renewals are coming up", "renewal radar", "is [account] going to renew", "prep the [account] renewal", or "which renewals are at risk". |
 | `rep-context` | ✅ | the user asks "prep for my 1:1 with [rep]" (a rep you manage), "how is [rep] doing", or "what's [rep] working on". |
+| `reverse-engineer-marketing` | ✅ | the user mentions 'reverse engineer,' 'how did X grow,' 'how does X get customers,' 'growth teardown,' 'marketing teardown,' 'GTM teardown,' 'growth blueprint,' |
+| `revops` | ✅ | the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'outbound pipeline stages,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM |
 | `route-lead` | ✅ | the user says "route this lead", "who should own [lead/opp]", "work the routing queue", "assign [company] to a rep", or on a scheduled intake sweep. |
+| `sales-enablement` | ✅ | the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sal |
 | `schedule-meeting` | ✅ | the user says "schedule a follow-up with [contact]", "book the demo with [account]", "find time with [name] next week", "send my Calendly link", or "get the QBR |
+| `schema` | ✅ | the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.org," "FAQ schema," "product schema," "review schema," "breadcrumb sch |
+| `seo` | ✅ | : SEO, audit, schema, Core Web Vitals, sitemap, E-E-A-T, AI Overviews, GEO, technical SEO, content quality, page speed |
+| `seo-agentic` | ✅ | the user asks whether AI agents can use or browse the site, or about llms.txt or WebMCP |
 | `seo-audit` | ⚠️ | assessing a site's SEO health, when finding keyword opportunities and content gaps competitors own, or when you need a prioritized action plan split into quick  |
+| `seo-audit@agricidaniel` | ✅ | Run a full-site SEO audit and return a scored, prioritized report. |
+| `seo-audit@coreyhaines31` | ✅ | the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," "SEO health check," "my traffic dropped |
+| `seo-audit@ryze-ai-adgent` | ✅ | asked to "audit my site", "SEO audit", "why is my organic traffic down", or "SEO health check". |
+| `seo-backlinks` | ✅ | Analyze a site's backlink profile, anchors, toxic signals, competitors, gaps, and disavow candidates. |
+| `seo-cluster` | ✅ | planning; `/seo cluster execute` then writes the posts with claude-blog's blog-write skill when it is installed, or content briefs when it is not. |
+| `seo-competitor-pages` | ✅ | user says "comparison page", "vs page", "alternatives page", "competitor comparison", "X vs Y", "versus", "compare competitors", or "alternative to". |
+| `seo-content` | ✅ | content-only analysis, not full-page technical checks. |
+| `seo-content-brief` | ✅ | user says "content brief", "write a brief", "content outline", "blog brief", "service page brief", "brief for", "writing brief", "content plan", or "outline for |
+| `seo-dataforseo` | ✅ | user says "dataforseo", "live SERP", "keyword volume", "backlink data", "AI visibility check", or "real search data". |
+| `seo-drift` | ✅ | user says "SEO drift", "baseline", "track changes", "did anything break", "SEO regression", "compare SEO", "before and after", "monitor SEO changes", or "deploy |
+| `seo-ecommerce` | ✅ | Analyze ecommerce SEO across product pages, product schema, Shopping visibility, marketplace signals, and keyword gaps. |
+| `seo-flow` | ✅ | user says "FLOW", "FLOW framework", "seo flow", "evidence-led SEO", "find leverage optimize win", or wants stage-specific SEO prompts. |
+| `seo-geo` | ⚠️ | the user asks about AI Overviews, AI Mode, ChatGPT, Perplexity or Gemini citations, GEO, or AI search visibility. |
+| `seo-google` | ✅ | user says "search console", "GSC", "PageSpeed", "CrUX", "field data", "indexing API", "GA4 organic", "URL inspection", or "real CWV data". |
+| `seo-hreflang` | ✅ | user says "hreflang", "i18n SEO", "international SEO", "multi-language", "multi-region", or "language tags". |
+| `seo-image-gen` | ✅ | the user wants an SEO asset and says \"OG image\", \"social preview\", \"hero image\", \"blog image\", \"product photo\", \"infographic\", \"seo image\", \"imag |
+| `seo-images` | ✅ | user says "image optimization", "alt text", "image SEO", "image size", "image audit", "optimize images", "image metadata", "image SERP", "convert to webp", or " |
+| `seo-local` | ✅ | the user asks about local SEO, a local business, the map pack, or a GBP profile; use seo-maps for geo-grid rank tracking. |
+| `seo-maps` | ✅ | user says "maps", "geo-grid", "rank tracking", "GBP audit", "review velocity", "competitor radius", or "SoLV". |
+| `seo-page` | ✅ | Analyze one supplied URL across on-page, content, technical metadata, schema, images, and performance. |
+| `seo-plan` | ✅ | user says "SEO plan", "SEO strategy", "SEO planning", "content strategy", "keyword strategy", "content calendar", "site architecture", or "SEO roadmap". |
+| `seo-programmatic` | ✅ | user says "programmatic SEO", "pages at scale", "dynamic pages", "template pages", "generated pages", or "data-driven SEO". |
+| `seo-schema` | ✅ | Detect, validate, or generate Schema.org JSON-LD for a supplied page or entity. |
+| `seo-sitemap` | ✅ | user says "sitemap", "generate sitemap", "sitemap issues", or "XML sitemap". |
+| `seo-sxo` | ✅ | ranking problems appear intent- or layout-driven. |
+| `seo-technical` | ✅ | the user asks for a technical SEO audit or about crawling, indexing, rendering, or site speed |
+| `seo-vs-ads` | ✅ | asked "am I paying for clicks I'd get free", "brand bidding waste", "SEO vs ads overlap", or "cut wasted ad spend with SEO". |
 | `sequence-load` | ✅ | Find leads matching criteria and bulk-add them to an Apollo outreach sequence. |
 | `setup` | ✅ | First-run setup - checks which tools are connected, shows what's connected and what each one unlocks, learns how you write from your sent email, and renders a s |
+| `signup` | ✅ | the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," "account creation flo |
+| `site-architecture` | ✅ | the user mentions "sitemap," "site map," "visual sitemap," "site structure," "page hierarchy," "information architecture," "IA," "navigation design," "URL struc |
+| `sms` | ✅ | the user mentions "SMS marketing," "text message campaigns," "SMS sequence," "SMS automation," "abandoned cart text," "post-purchase SMS," "Klaviyo SMS," "Posts |
+| `social` | ✅ | the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post |
 | `stakeholder-map` | ✅ | the user asks "who are the players at [account]", "who's my way in", "am I single-threaded on [deal]", "map the stakeholders", or "who else should I be talking  |
 | `team-pipeline` | ✅ | the user asks "show my team's pipeline", "team forecast", "prep for my team's pipeline review", or "where does my team need help". |
 | `ticket-triage` | ⚠️ | a new ticket comes in and needs categorization, assigning P1-P4 priority, deciding which team should handle it, or checking whether it's a duplicate or known is |
 | `update-opportunity` | ✅ | the user says "push [deal] to [stage]", "move the close date on [opp]", "update next steps on [account]", "mark [deal] commit", or accepts a suggested update fr |
+| `video` | ✅ | the user mentions 'video production,' 'AI video,' 'Remotion,' 'Hyperframes,' 'HeyGen,' 'Synthesia,' 'Veo,' 'Sora,' 'Runway,' 'Kling,' 'Seedance,' 'Hailuo,' 'Min |
 | `weekly-prep-brief` | ✅ | 'weekly prep brief', 'prepare my week', 'what calls do I have this week', 'Monday prep', or any weekly planning request. |
 | `weekly-wrap` | ✅ | the user says "weekly wrap", "week in review", "what happened this week", or "Friday summary". |
 | `win-loss-review` | ✅ | the user asks "win loss review", "why are we losing deals", "what's working", or "analyze closed opps". |

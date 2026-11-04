@@ -2,7 +2,7 @@
 
 _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme)_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/19**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/23**
 
 ### bash-linux  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
@@ -46,6 +46,16 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 21 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel, --skill ile). Audit/fix ayrımı ve 'ölçülmüş tek değişiklik' kuralı sağlam. 2026-11: sunucu sızıntısı taraması ve zorunlu rapor tablosu eklendi; fix kipinde boyut ve sınır düzeltmesi ayrıldı. Codex sandbox'ı port açmayı engellediği için capture sandbox dışında çalışmalı.
 
+### next-cache-components  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Next.js 16 Cache Components guidance — PPR, use cache directive, cacheLife, cacheTag, updateTag, and migration from unstable_cache. Use when implementing partial prerendering, caching strategies, or migrating from older Next.js cache patterns.
+- **Teknoloji:** next.js, node, react, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
+- **İnceleme:** otomatik
+
 ### next-cache-components-adoption  ·  vercel/next.js @ 3bccd4d  ·  puan 100 (A)
 
 - **Ne yapar:** Next.js uygulamasında Cache Components'i açar ve ortaya çıkan engelleyici route'ları çözerek build'i geçirir: App Router ve app dizinini doğrular, artımlı (cache-components-instant-false codemod ile önce opt-out) ya da doğrudan stratejiyi seçtirir, sonra opt-out'ları özellik özellik tarayıcıda veya build ile doğrulayarak kaldırır.
@@ -79,6 +89,26 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 9 KB (SKILL.md 9.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, nextjs-calisma-dogrulama grubunun birincili. Next.js ekibinin resmî skilli; iki bağımsız görünümle çapraz doğrulama ve sürüm tabanı açıkça belirtilmiş. Sert bağımlılıklar (16.3+, agent-browser) nedeniyle frontend-muhendis'te opsiyonel kalır.
 
+### next-forge  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.
+- **Teknoloji:** api-anahtari, next.js, node, react, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 32 KB (SKILL.md 7.3 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### next-intl-add-language  ·  github/awesome-copilot @ 7e40881  ·  puan 83 (A)
+
+- **Ne yapar:** Add new language to a Next.js + next-intl application
+- **Teknoloji:** next.js, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### next-partial-prefetching-adoption  ·  vercel/next.js @ 3bccd4d  ·  puan 100 (A)
 
 - **Ne yapar:** Next.js'te Partial Prefetching'i açar ve ortaya çıkan içgörüleri çözer: önce <Link prefetch={true}> gezinmelerini denetler, mevcut prefetch davranışını bayrak kapalıyken geçen instant() testleriyle sabitler (koruma kapısı), hedefleri benimser, bayrağı açar, URL-veri içgörülerini next dev'de tarar ve doğrular.
@@ -101,7 +131,17 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 26 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (opsiyonel), tamamlayıcı. Bağlantı başına sözleşme yaklaşımı ve gözetimsiz çalışma kuralı net; adoption skilliyle birlikte kurulmalı.
 
-### nextjs-react-expert  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
+### next-upgrade  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Upgrade Next.js to the latest version following official migration guides and codemods. Use when upgrading Next.js versions, running codemods, or migrating between major releases.
+- **Teknoloji:** next.js, node, react, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### nextjs-react-expert  ·  vudovn/ag-kit @ 549ba3d  ·  puan 74 (B)
 
 - **Ne yapar:** Vercel'in React/Next.js performans kurallarının ag-kit uyarlaması: 58 kural etki sırasına göre 8 dosyada, ek olarak Next.js 16 Cache Components bölümü; hızlı karar ağacı, performans inceleme kontrol listesi ve react_performance_checker.py denetim betiği.
 - **Ne zaman:** ag-kit kullanan projelerde veya Cache Components notlarını aynı skillde isteyenlerde React/Next performans incelemesi. · **Ne zaman değil:** vercel-react-best-practices kuruluysa (aynı kurallar); React dışı projeler.

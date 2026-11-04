@@ -1,6 +1,6 @@
 # Tetiklenme denetimi (klasör yapısı + description)
 
-Son denetim: 2026-11-04 · 3815 skill (+ araç sürümleri) tarandı · **77 skill kurulunca doğru durumda tetiklenmiyordu**.
+Son denetim: 2026-11-04 (ilk tur 3815 skill; 20 yeni kaynaktan sonra 5250 skill, `aciklama_duzeltme` toplam 96) · 3815 skill (+ araç sürümleri) tarandı · **77 skill kurulunca doğru durumda tetiklenmiyordu**.
 Hepsi kurulan kopyada düzeltilir; `arsiv/` altındaki orijinallere dokunulmadı. Yöntem: `rehber/03-yeni-skill-ekleme.md` →
 "Description ve tetiklenme". Sürekli kontrol: `python3 araclar/dogrula.py` (kurulacak hali okur, tetiklenemeyen varsa HATA).
 

@@ -54,7 +54,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### add-sfx  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### add-sfx  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 87 (A)
 
 - **Ne yapar:** Add a new sound effect to the @remotion/sfx package in the Remotion monorepo (WAV, CC0, normalized; first added to remotion.media). Use when contributing a new sound effect to Remotion's SFX library.
 - **Teknoloji:** ffmpeg, remotion, typescript _(otomatik tespit)_
@@ -160,7 +160,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. compiler-verify/compiler-review ve repo içi alt-agent'lara bağlı; tek başına çalışmaz.
 
-### compiler-orchestrator  ·  react/react @ 76baa3b  ·  puan 87 (A)
+### compiler-orchestrator  ·  react/react @ 76baa3b  ·  puan 86 (A)
 
 - **Ne yapar:** React Compiler'ın TypeScript→Rust portunu döngü halinde ilerletir: sınırdaki geçişi bulur, hataları düzeltir, yeni geçişleri port eder, inceler ve commit'ler. 50+ geçişin sıralı tablosunu içerir.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust portu üzerinde çalışırken. · **Ne zaman değil:** Diğer tüm projeler.
@@ -331,7 +331,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 16 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### fix  ·  motiondivision/motion @ 7415b6c  ·  puan 97 (A)
+### fix  ·  motiondivision/motion @ 7415b6c  ·  puan 96 (A)
 
 - **Ne yapar:** Motion repo'sunda bir GitHub issue'yu, açık PR'ı ya da plans/ altındaki plan dosyasını birleşmeye hazır PR'a dönüştüren 'yürütücü' skill: önce başarısız test, sonra en küçük düzeltme, repo kapılarıyla doğrulama, PR açma. 'Plan spesifikasyondur' ve 'repro yoksa düzeltme yok' kuralları.
 - **Ne zaman:** Motion'a katkıda; ayrıca improve skill'inin ürettiği plans/ dosyalarını başka bir projede uygulatırken (improve ile çift). · **Ne zaman değil:** Plan/issue olmadan serbest geliştirme. Yarn/Cypress/React 18-19 komutları Motion'a özel, uyarlamak gerekir.
@@ -386,7 +386,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (alternatif; 'flags' adının tercihi React sürümü).
 
-### flake  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### flake  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
 - **Ne yapar:** Track Remotion CI flakes in issue #8375, increment repeated signatures, discover failed PR checks when no PR is given, and rerun flaky GitHub Actions jobs.
 - **Teknoloji:** html, remotion _(otomatik tespit)_
@@ -523,7 +523,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### lighthouse-verification  ·  GoogleChrome/lighthouse @ 2934860  ·  puan 72 (B)
+### lighthouse-verification  ·  GoogleChrome/lighthouse @ 2934860  ·  puan 71 (B)
 
 - **Ne yapar:** Lighthouse'ta değişiklik sonrası seçili mocha testleri, type-check, lint ve update:sample-json çalıştırmayı hatırlatır.
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Lighthouse'u araç olarak kullanmak (performans denetimi) için değil.
@@ -606,7 +606,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### playwright-cherry-pick  ·  microsoft/playwright @ 3b3ac25  ·  puan 81 (A)
+### playwright-cherry-pick  ·  microsoft/playwright @ 3b3ac25  ·  puan 80 (A)
 
 - **Ne yapar:** Playwright'ta bir commit/PR'ı release-<sürüm> dalına cherry-pick edip 'cherry-pick(#pr): başlık' olarak yeniden adlandırır; asla kendiliğinden push etmez.
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -661,7 +661,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Şema tablosu ve örnek sorgular iyi.
 
-### playwright-triage  ·  microsoft/playwright @ 3b3ac25  ·  puan 88 (A)
+### playwright-triage  ·  microsoft/playwright @ 3b3ac25  ·  puan 80 (A)
 
 - **Ne yapar:** Yalnızca microsoft/playwright deposunun 'Issue triage' GitHub Actions iş akışında gözetimsiz çalışmak için ek yönerge: yayınlanmış sürümü kurup bisect etme, port raporlarını yeniden üretme, tarayıcı kaynaklı hataları playwright-browsers'a rapor etme. Asıl triage yöntemi depodaki triage.md ve AGENTS.md dosyalarında; tek başına çalışmaz.
 - **Ne zaman:** Yalnızca microsoft/playwright deposunun kendi CI triage iş akışı; yöntem fikri (sınıflandır, tip-of-tree'de dene, sürümler arası bisect) referans olarak okunabilir. · **Ne zaman değil:** Kendi projendeki issue'lar için kullanma; başka repoda GitHub issue açma çağrıları tarif ettiği için hiçbir projeye kurma. Başvurduğu kılavuz dosyaları arşivde yok.
@@ -671,16 +671,6 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Kırık bağlantı:** 3
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. 2026-11'de genel triage rehberi kaldırıldı; kalan metin yalnızca playwright CI iş akışına özgü ve dış dosyalara (triage.md, AGENTS.md) bağımlı.
-
-### pr  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
-
-- **Ne yapar:** Open a pull request for the current feature
-- **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
-- **Durum:** tercih
-- **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk) · **Kırık bağlantı:** 1
-- **İnceleme:** otomatik
 
 ### pr-name  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
@@ -712,6 +702,16 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Öncelik sırası genel olarak iyi bir pratik; workflow.md ve local-repro.md arşivde mevcut, pr-status.js betiği repoda.
+
+### pr@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+
+- **Ne yapar:** Open a pull request for the current feature
+- **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
+- **Durum:** alternatif
+- **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk) · **Kırık bağlantı:** 1
+- **İnceleme:** otomatik
 
 ### product-recording  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
@@ -755,7 +755,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. İç mimariyi anlamak için değerli not.
 
-### release@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### release@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 87 (A)
 
 - **Ne yapar:** Publish a new Remotion release from the Remotion monorepo: auth checks (gcloud, npm, 1Password), npm token, build and publish steps. Use only when a Remotion maintainer asks to release a new Remotion version.
 - **Teknoloji:** api-anahtari, git, node, remotion, typescript _(otomatik tespit)_
@@ -930,7 +930,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### update-ard-port  ·  GoogleChrome/lighthouse @ 2934860  ·  puan 87 (A)
+### update-ard-port  ·  GoogleChrome/lighthouse @ 2934860  ·  puan 86 (A)
 
 - **Ne yapar:** Lighthouse'un Agentic Resource Discovery (ARD) uygunluk portunu upstream ards-project/ard-spec ile 1:1 eşitler: değişen dosyaların karşılaştırması, şema senkronu, mesaj metinlerini kelimesi kelimesine koruma, hash'li inceleme kaydı ve testler.
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -1012,7 +1012,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### update-trace-engine  ·  GoogleChrome/lighthouse @ 2934860  ·  puan 79 (B)
+### update-trace-engine  ·  GoogleChrome/lighthouse @ 2934860  ·  puan 78 (B)
 
 - **Ne yapar:** Chrome DevTools'un trace işlemcisini @paulirish/trace_engine paketi olarak derleyip yayınlar ve Lighthouse'a aktarır: devtools-frontend birleştirme, gn/autoninja derleme, shim'ler, sürüm artırma ve npm yayını.
 - **Ne zaman:** Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz. (paket bakımcıları). · **Ne zaman değil:** Diğer herkes; npm publish yetkisi gerektirir.
@@ -1126,7 +1126,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### video-report  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### video-report  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
 - **Ne yapar:** Reproduce a user-reported broken video in the Remotion monorepo by putting its URL in packages/example NewVideo.tsx and rendering with verbose logs. Use when someone reports that a video does not work in Remotion.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_

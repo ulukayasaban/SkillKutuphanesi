@@ -1,28 +1,53 @@
 # Örnek görevler ve test sonucu › b-yazilim-gelistirme
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 293 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 358 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
 | `app-builder` | ✅ | Sıfırdan full-stack uygulama başlatırken yığın seçimi ve iskelet kurulumu; hangi şablonun uygun olduğuna hızlı karar. |
 | `architecture@anthropics` | ⚠️ | choosing between technologies (e.g., Kafka vs SQS), documenting a design decision with trade-offs and consequences, reviewing a system design proposal, or desig |
+| `ask-matt` | ✅ | Ask which skill or flow fits your situation. |
 | `brainstorming` | ✅ | Yeni özellik, bileşen veya proje fikrinde gereksinim belirsizken; kodlamaya başlamadan önce ortak anlayış ve yazılı tasarım gerektiğinde. |
+| `brainstorming-research-ideas` | ✅ | exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work. |
+| `brainstorming@openai` | ✅ | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. |
 | `brainstorming@vudovn` | ✅ | ag-kit iş akışı kullanan projelerde; seçenek tablolu, karar odaklı soru listesi tercih edildiğinde. |
 | `code-review` | ⚠️ | a PR URL or diff, "review this before I merge", "is this code safe?", or when checking a change for N+1 queries, injection risks, missing edge cases, or error h |
+| `codebase-design` | ✅ | the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or wh |
 | `constraint-driven-development` | ✅ | Yazılı kalite çıtası yoksa; agent testleri atlayıp/susturup yeşile ulaşmaya çalışıyorsa; erişilebilirlik, performans veya kapsama eşiği tanımlanacaksa. |
 | `debug` | ⚠️ | an error message or stack trace, "this works in staging but not prod", "something broke after the deploy", or when behavior diverges from expected and the cause |
 | `deploy-checklist` | ⚠️ | about to ship a release, deploying a change with database migrations or feature flags, verifying CI status and approvals before going to production, or document |
+| `diagnosing-bugs` | ✅ | the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow. |
 | `documentation` | ✅ | "write docs for", "document this", "create a README", "write a runbook", "onboarding guide", or when the user needs help with any form of technical writing — AP |
+| `domain-modeling` | ✅ | discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR. |
 | `doubt-driven-development` | ✅ | Yüksek riskli işler (üretim kimlik doğrulama, güvenlik, geri alınamaz migrasyon), tanıdık olmayan kod, planın gizli hata modlarının sınanması. |
+| `egm-bootstrap` | ⚠️ | Bootstrap directory README.md files across a repository subtree. |
+| `egm-brainstorm` | ⚠️ | Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). |
+| `egm-draft` | ⚠️ | you are ready to write a design doc after aligning on requirements + solution. |
+| `egm-drift-report` | ⚠️ | the user asks to detect drift or check for consistency across all design documents or READMEs in a directory. |
+| `egm-resolve` | ⚠️ | The Elephant resolution skill. |
+| `egm-review` | ⚠️ | Orchestrates the EGM Goldfish Review Protocol. |
+| `egm-review-loop` | ⚠️ | reviewing design docs, READMEs, feature specifications, implementation plans, or verifying document completeness and tone. |
 | `executing-plans` | ✅ | writing-plans planı hazır ve kullanıcı satır içi yürütmeyi seçtiyse; alt-agent aracı olmayan ortamlarda (ör. bazı Codex kurulumları). |
+| `executing-plans@openai` | ✅ | you have a written implementation plan to execute in a separate session with review checkpoints |
+| `git-guardrails-claude-code` | ✅ | user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code. |
+| `grill-me` | ✅ | A relentless interview to sharpen a plan or design. |
+| `grill-with-docs` | ✅ | A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go. |
+| `grilling` | ✅ | the user wants to stress-test their thinking, or uses any 'grill' trigger phrases. |
+| `handoff` | ✅ | Compact the current conversation into a handoff document for another agent to pick up. |
 | `idea-refine` | ✅ | Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde. |
+| `implement` | ✅ | Implement a piece of work based on a spec or set of tickets. |
+| `implement-spec` | ✅ | Implement the result of /to-spec and /to-tickets in code. |
+| `improve-codebase-architecture` | ✅ | Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick. |
 | `incident-response` | ⚠️ | "we have an incident", "production is down", an alert that needs severity assessment, a status update mid-incident, or when writing a blameless postmortem after |
 | `incremental-implementation` | ✅ | Birden çok dosyaya dokunan her özellik/değişiklikte; plandan sıradaki görevi alırken; büyük kod bloğu yazma eğilimi olduğunda. |
 | `interview-me` | ✅ | İstek 'kimin için / neden şimdi' bilgisi olmadan geldiğinde; kullanıcı 'beni sorgula', 'emin miyiz?' dediğinde; plan veya spec yazılmadan önce kısa niyet doğrul |
 | `karpathy-guidelines` | ✅ | writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria. |
 | `math-olympiad` | ✅ | Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification that catches the errors self-verification misses. |
+| `migrate-to-shoehorn` | ✅ | user mentions shoehorn, wants to replace `as` in tests, or needs partial test data. |
 | `plan-writing` | ✅ | ag-kit kullanan projelerde veya çok kısa, tek sayfalık plan yeterliyse. |
 | `planning-and-task-breakdown` | ✅ | Spec hazır, iş büyük ve dilimlenmesi gerekiyorsa; tahmin/kapsam çıkarma veya paralel iş fırsatı aranırken; superpowers zinciri kullanılmayan projelerde. |
+| `pr@mattpocock` | ✅ | opening a PR or asked to write a PR description. |
+| `prototype@mattpocock` | ✅ | the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like. |
 | `replica-architect` | ✅ | the user says "plan the clone", "what stack should I use", "design the database", "write the schema", "plan the API", "architecture for my version of X", or aft |
 | `replica-backend` | ✅ | the user says "add login", "set up auth", "wire up the database", "add payments", "connect Stripe", "add Google Calendar", "send emails", "backend for my clone" |
 | `replica-brand` | ✅ | the user says "name my app", "rebrand the clone", "make it mine", "pick a name and colours", "logo brief", "brand voice", "check for leftovers", or after /repli |
@@ -34,20 +59,38 @@
 | `replica-launch` | ✅ | the user says "landing page", "pricing", "how much should I charge", "App Store listing", "store screenshots", "launch plan", "Product Hunt", or after /replica- |
 | `replica-recon` | ✅ | the user says "clone this app", "reverse engineer X", "how does X work", "map out X", "what screens does X have", "I want to build my own version of X", "copy t |
 | `replica-test` | ✅ | the user says "test my clone", "find bugs", "QA this", "click through everything", "write e2e tests", "does it work", or after /replica-build or /replica-backen |
+| `research` | ✅ | the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent. |
+| `retro` | ✅ | Conduct a retrospective on a coding session. |
+| `scaffold-exercises` | ✅ | user wants to scaffold exercises, create exercise stubs, or set up a new course section. |
+| `setup-matt-pocock-skills` | ✅ | Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. |
+| `setup-pre-commit` | ✅ | user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing. |
 | `siege` | ✅ | Work on one hard mathematics problem in rounds: each round a judge writes a few self-contained questions, independent workers answer them, and the judge keeps a |
 | `solo` | ✅ | Work on one hard mathematics problem in this session yourself, with no sub-agents: reason in stages, record each settled step in a notes file so that nothing wr |
 | `source-driven-development` | ✅ | Framework/kütüphane sürümüne duyarlı işler; güncelliğini yitirmiş kalıp riski olan hızlı değişen API'ler (Next.js, React 19, Tailwind v4…). |
 | `spec-driven-development` | ✅ | Yeni proje/özellik başlarken spec veya PRD yoksa; tek bir isteğin birden çok bağımsız yeteneğe bölünmesi gerektiğinde. |
 | `standup` | ⚠️ | preparing for daily standup, summarizing yesterday's commits and PRs and ticket moves, formatting work into yesterday/today/blockers, or structuring a few rough |
 | `system-design` | ✅ | "design a system for", "how should we architect", "system design for", "what's the right architecture for", or when the user needs help with API design, data mo |
+| `tdd` | ✅ | the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests. |
+| `teach` | ✅ | Teach the user a new skill or concept, within this workspace. |
 | `tech-debt` | ✅ | "tech debt", "technical debt audit", "what should we refactor", "code health", or when the user asks about code quality, refactoring priorities, or maintenance  |
 | `templates` | ✅ | Sadece şablon dosyaları istenip app-builder'ın orkestrasyon kısmı istenmediğinde. |
 | `testing-strategy` | ✅ | "how should we test", "test strategy for", "write tests for", "test plan", "what tests do we need", or when the user needs help with testing approaches, coverag |
+| `to-questionnaire` | ✅ | Turn a decision you can't fully answer into a questionnaire for someone else to fill in. |
+| `to-spec` | ✅ | Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed. |
+| `to-tickets` | ✅ | Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edg |
+| `triage` | ✅ | Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs. |
+| `wait-what` | ✅ | Stop. |
+| `wayfinder` | ⚠️ | Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until |
+| `wizard` | ✅ | provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover |
+| `writing-for-agents` | ✅ | creating or editing skills, or modifying AGENTS.md or CLAUDE.md. |
 | `writing-plans` | ✅ | Çok adımlı bir iş için spec/gereksinim hazırsa, koda dokunmadan önce; alt-agent'lara dağıtılacak görevler gerektiğinde. |
+| `writing-plans@openai` | ✅ | you have a spec or requirements for a multi-step task, before touching code |
 | `clean-code` | ✅ | Kod yazan agent'lar için kısa, her zaman açık stil ve disiplin kuralı olarak. |
 | `code-review-and-quality` | ✅ | Birleştirmeden önce her değişiklikte; kendi, başka agent'ın veya insanın yazdığı diff/PR'ı incelerken (diff satır içi yapıştırılmış olsa da). |
 | `code-review-checklist` | ✅ | Hızlı, hafif bir kontrol listesi yeterli olduğunda; ag-kit iş akışı kullanan projelerde. |
 | `code-review-graph` | ✅ | 500+ dosyalı depolar, monorepo'lar, modüller arası bağımlılıklı değişiklikler; ölü kod tespiti ve refactor önizlemesi. |
+| `code-review@mattpocock` | ✅ | the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\". |
+| `code-review@openai` | ✅ | user asks for code review, PR feedback, code quality checks, security issues, or requests fix-review cycles. |
 | `code-simplification` | ✅ | Çalışan ama okunması/bakımı zor koda refactor; incelemede biriken karmaşıklık fark edildiğinde; yeni yazılan kodu teslim öncesi toparlamak. |
 | `lint-and-validate` | ✅ | TypeScript/JavaScript veya Python projelerinde her değişiklik sonrası otomatik kalite kapısı. |
 | `ponytail` | ✅ | Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. |
@@ -56,24 +99,33 @@
 | `ponytail-gain` | ✅ | /ponytail-gain, "what does ponytail save", "ponytail impact". |
 | `ponytail-help` | ✅ | /ponytail-help, "ponytail help", "how do I use ponytail". |
 | `ponytail-review` | ✅ | "review this", "code review", "review the last commit", "review my PR", "is this over-engineered", /ponytail-review. |
+| `postgresql-code-review` | ✅ | PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. |
 | `pragmatic-review` | ✅ | Aşırı mühendislik, gereksiz soyutlama şüphesi olan değişikliklerde; CI'da otomatik inceleme yorumu üretmek. |
 | `receiving-code-review` | ✅ | İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken. |
+| `receiving-code-review@openai` | ✅ | receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and |
 | `requesting-code-review` | ✅ | subagent-driven-development'ta her görevden sonra; büyük özellik bitiminde; main'e birleştirmeden önce taze bağlamlı inceleme gerektiğinde. |
+| `requesting-code-review@openai` | ✅ | completing tasks, implementing major features, or before merging to verify work meets requirements |
 | `simplify-code` | ✅ | Hızlı, kontrol listesi tarzı sadeleştirme; ag-kit iş akışı kullanan projeler. |
 | `simplify-codebase` | ✅ | Var olan bir depoda sadeleştirme denetimi veya açıkça yetkilendirilmiş büyük çaplı temizlik; 'nereler gereksiz?' sorusuna kanıtlı yanıt. |
+| `sql-code-review` | ✅ | Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL |
 | `debugging-and-error-recovery` | ✅ | superpowers zinciri kullanılmayan projelerde hata ayıklama; build/runtime hata tipine göre hazır triyaj listesi istendiğinde. |
 | `systematic-debugging` | ✅ | Her hata, test başarısızlığı, build kırılması veya beklenmeyen davranışta düzeltme önermeden önce; özellikle zaman baskısı ve ardışık başarısız düzeltmelerde. |
 | `systematic-debugging@heyitsnoah` | ✅ | Tek dosyalık (ek dosyasız) sürüm tercih edildiğinde; claudesidian kasası kullanan projeler. |
+| `systematic-debugging@openai` | ✅ | encountering any bug, test failure, or unexpected behavior, before proposing fixes |
 | `systematic-debugging@vudovn` | ✅ | ag-kit /debug iş akışında veya yalnız kısa bir hatırlatıcı yeterliyse. |
 | `tdd-workflow` | ✅ | ag-kit iş akışı kullanan projelerde veya çok kısa bir TDD hatırlatıcısı yeterliyse. |
 | `test-driven-development` | ✅ | Mantık yazarken, hata düzeltirken veya davranış değiştirirken; kullanıcı test istemese de kod satır içi verilmiş olsa bile. |
 | `test-driven-development@obra` | ✅ | superpowers zinciri (writing-plans → subagent-driven-development / executing-plans) uçtan uca kullanılırken; agent'ın TDD'yi atlama eğilimine karşı en katı disi |
+| `test-driven-development@openai` | ✅ | implementing any feature or bugfix, before writing implementation code |
 | `test-value` | ✅ | Test paketi yavaş/kararsız olduğunda denetim; commit/PR öncesi test değişikliklerini incelemek; başarısız bir kontrolün gerçek regresyon mu eskimiş assertion mı |
 | `testing-patterns` | ✅ | Test çerçevesi ve mock stratejisi seçerken hızlı başvuru; ag-kit kullanan projeler. |
 | `verification-before-completion` | ✅ | İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman. |
+| `verification-before-completion@openai` | ✅ | about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before maki |
 | `verify-changes` | ✅ | Özellik/hata düzeltmesi bittikten sonra somut doğrulama planı ve rapor biçimi gerektiğinde; 'çalışıyor mu?' sorusunda. |
 | `api-and-interface-design` | ✅ | REST/GraphQL endpoint'i, modül sınırı veya ön yüz-arka yüz sözleşmesi tasarlarken; herkese açık bir arayüzü değiştirirken. |
+| `api-breaking-change-detector` | ✅ | the user asks to check for breaking API changes, verify frontend/backend contract sync, or audit |
 | `api-patterns` | ✅ | API stili ve kimlik doğrulama yöntemi seçerken; rate limiting veya sürümleme stratejisi belirlerken. |
+| `architecture-blueprint-generator` | ✅ | Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. |
 | `architecture@vudovn` | ✅ | Sistem tasarımı, desen seçimi (monolit/mikroservis, katmanlar), önemli kararların ADR olarak kaydı. |
 | `database-design` | ✅ | Şema tasarlarken, ORM/veritabanı seçerken, migrasyon planlarken veya yavaş sorgu optimize ederken (Prisma, Drizzle, SQL). |
 | `frontend-architecture` | ✅ | React/Next veya Vue kod tabanını yapılandırırken ya da organizasyonunu incelerken: mantık, API çağrısı, durum ve tiplerin nerede yaşayacağı. |
@@ -83,6 +135,7 @@
 | `changelog-generator` | ✅ | Sürüm notları, haftalık/aylık ürün güncellemesi, app store değişiklik metni veya herkese açık changelog sayfası hazırlarken. |
 | `deprecation-and-migration` | ✅ | Bir API/özelliği emekliye ayırırken; kullanıcıları yeni sisteme taşırken; üretimde kolon yeniden adlandırma/silme gibi kesintisiz şema değişikliğinde; bakım mı  |
 | `finishing-a-development-branch` | ✅ | Tüm testler geçtikten sonra dalı birleştirme/PR/bekletme kararı ve worktree temizliği. |
+| `finishing-a-development-branch@openai` | ✅ | implementation is complete, all tests pass, and you need to decide how to integrate the work |
 | `git-workflow-and-versioning` | ✅ | Her kod değişikliğinde commit/dal/PR düzeni; karışık çalışma ağacını temiz atomik commit'lere bölmek; sürüm numarası seçmek ve release kesmek. |
 | `git-worktrees` | ✅ | Elle worktree yönetimi, PR incelemesi için ayrı checkout veya birleşme sonrası temizlik komutları gerektiğinde. |
 | `pr-feedback-quality-gate` | ✅ | Safely track pull request feedback, resolve review comments or merge conflicts, validate fixes, and use a read-only cross-review before committing or pushing fo |
@@ -90,6 +143,7 @@
 | `release-notes-one-pager` | ✅ | Release notes one-page HTML with highlights, Added, Fixed, Breaking changes, Known issues, and Upgrade note. |
 | `release@heyitsnoah` | ✅ | package.json ve CHANGELOG.md (Keep a Changelog) kullanan Node projelerinde sürüm kesmek. |
 | `using-git-worktrees` | ✅ | Yalıtım gerektiren özellik işine başlarken veya bir uygulama planını yürütmeden önce (superpowers zinciri). |
+| `using-git-worktrees@openai` | ✅ | starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native too |
 | `agents-sdk` | ✅ | Build, debug, or review Cloudflare Agents SDK applications using the agents package. |
 | `api-monitoring` | ✅ | setting up uptime/error alerts for store APIs, webhooks failing silently, or planning integration SLAs. |
 | `basin` | ✅ | streaming data into R2 Iceberg tables, managing catalogs, or querying those tables; also use for requests using the former Data Platform, Pipelines, R2 Data Cat |
@@ -102,6 +156,7 @@
 | `cloudflare-one-migrations` | ✅ | Assess and plan migrations from existing VPN, SWG, or SASE platforms to Cloudflare One, including policy mapping, parity gaps, and rollout. |
 | `deploy-to-vercel` | ✅ | the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment". |
 | `deployment-procedures` | ✅ | Barındırma platformu seçerken veya deploy prosedürü yazarken; ag-kit /deploy iş akışında. |
+| `deployments-cicd` | ✅ | deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel. |
 | `domain-monitoring` | ✅ | a store needs certificate or domain-renewal alerts, DNS change monitoring, or a website security health check plan. |
 | `durable-objects` | ✅ | Build, debug, or review Cloudflare Durable Objects code for persistent state and coordination. |
 | `file-integrity-monitoring` | ✅ | protecting a store (WooCommerce, Magento, custom) from malicious code injection, card skimmers or unauthorized theme/plugin edits. |
@@ -109,9 +164,11 @@
 | `k2` | ✅ | stream setup, producing from Workers or HTTP, configuring retention and inputs, and consuming through subscriptions. |
 | `localization-testing` | ✅ | launching a store in a new country or language, or auditing translations, currencies and local legal requirements. |
 | `nextjs-on-cloudflare` | ✅ | starting a Next.js project on Cloudflare, moving an existing app to Workers, choosing between vinext and OpenNext, or setting up vinext for Workers |
+| `observability` | ✅ | instrumenting, debugging, or optimizing application performance and user experience on Vercel. |
 | `observability-and-instrumentation` | ✅ | Loglama/metrik/izleme/uyarı eklerken; üretime çıkan her özellikte çalıştığına dair kanıt gerektiğinde; üretim sorunu mevcut veriden anlaşılamıyorsa. |
 | `performance-optimization` | ✅ | Performans gereksinimi veya regresyon şüphesi olduğunda; Core Web Vitals/yükleme süresi iyileştirmede; N+1 sorgu düzeltmede; profil çıkarılmış darboğazlarda. |
 | `performance-profiling` | ✅ | Lighthouse denetimi çalıştırmak, bundle boyutunu analiz etmek veya DevTools ile çalışma zamanı profili çıkarmak gerektiğinde. |
+| `performance-review-writer` | ✅ | : write my performance review, draft self-assessment, peer review, 360 feedback, annual review, mid-year review, upward feedback, write review for colleague, pe |
 | `public-status-page` | ✅ | creating or improving a status page, or writing customer-facing incident and outage updates. |
 | `red-team-tactics` | ✅ | Yalnız yetkili sızma testi veya kırmızı takım tatbikatında saldırı yüzeyini çerçevelemek ve rapor yapısı kurmak. |
 | `reverse-engineer-anything` | ✅ | Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA, and build agent environments (AgentEnv bundles) of web  |
@@ -120,6 +177,9 @@
 | `sandbox-stable` | ✅ | Build or maintain Cloudflare Sandbox apps on the stable @cloudflare/sandbox package. |
 | `security-and-hardening` | ✅ | Kullanıcı girdisi, kimlik doğrulama, veri saklama veya dış entegrasyon içeren her özellikte; OWASP Top 10'a karşı giriş akışı denetimi; bağımlılık denetimi. |
 | `security-audit` | ✅ | security questions, focused reviews, vulnerability research, security audits, or pen tests |
+| `security-diff-scan` | ✅ | Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities. |
+| `security-review` | ✅ | asked to scan code for security vulnerabilities, find bugs, check for SQL injection, XSS, command injection, exposed API keys, hardcoded secrets, insecure depen |
+| `security-scan` | ✅ | a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review |
 | `server-management` | ✅ | VPS/kendi sunucusunda çalışan uygulamalarda PM2/systemd yapılandırması, izleme ve ölçekleme kararları. |
 | `shipping-and-launch` | ✅ | Üretime deploy öncesi 'neler hazır olmalı?' sorusunda; kademeli yayın ve geri alma stratejisi planlarken. |
 | `synthetic-monitoring` | ✅ | you need to catch broken checkout or cart flows before customers do. |
@@ -127,6 +187,7 @@
 | `vercel-cli-with-tokens` | ✅ | working with Vercel CLI using access tokens rather than interactive login — e.g |
 | `vercel-optimize` | ✅ | Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps |
 | `vulnerability-scanner` | ✅ | Projede güvenlik taraması, OWASP 2025 uyum kontrolü veya tedarik zinciri (bağımlılık) analizi yaparken. |
+| `vulnerability-writeup` | ✅ | one vulnerability or a disclosure campaign; a Codex Security scan is optional. |
 | `web-perf` | ✅ | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores. |
 | `workers-best-practices` | ✅ | writing, reviewing, or configuring Workers. |
 | `workers-profiling` | ✅ | Profile or debug CPU usage and memory allocation in deployed Cloudflare Workers and Durable Objects. |
@@ -135,11 +196,15 @@
 | `cardputer-buddy` | ✅ | the user wants to add a new app, push a single changed .py without re-flashing, watch device serial logs, or run a one-shot REPL command |
 | `m5-onboard` | ⚠️ | the user plugs in or wants to flash/provision/reset an M5Stack or ESP32 board, or says "m5-onboard go". |
 | `next-bundle-optimizer` | ✅ | Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları, etkileşime ertelenebilecek özellikler veya istemci paketine istemeden giren sun |
+| `next-cache-components` | ✅ | implementing partial prerendering, caching strategies, or migrating from older Next.js cache patterns. |
 | `next-cache-components-adoption` | ✅ | cacheComponents bayrağını açmak, blocking-prerender/instant doğrulama hatası selini çözmek, 'export const instant = false' ile yerinde düzeltme arasında karar v |
 | `next-cache-components-optimizer` | ✅ | Yavaş ilk boyama, anında olmayan gezinme, hangi Suspense sınırının UI'yi engellediğini bulma veya instant() regresyon kapsamı ekleme. |
 | `next-dev-loop` | ✅ | next dev çalışırken uygulama kodu düzenlendikten sonra değişikliğin derlenmenin ötesinde çalıştığını doğrulamak. |
+| `next-forge` | ✅ | working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages. |
+| `next-intl-add-language` | ✅ | Add new language to a Next.js + next-intl application |
 | `next-partial-prefetching-adoption` | ✅ | partialPrefetching bayrağını açmak, route'ları 'export const prefetch = partial' ile dahil etmek, prefetch davranışını korurken geçiş yapmak. |
 | `next-partial-prefetching-optimizer` | ✅ | URL'ye özgü UI'nin anında gelmesini istemek, yeniden kullanılabilir içeriği gezinmeye bırakmak veya prefetch tetikleyicisi seçmek. |
+| `next-upgrade` | ✅ | upgrading Next.js versions, running codemods, or migrating between major releases. |
 | `nextjs-react-expert` | ✅ | ag-kit kullanan projelerde veya Cache Components notlarını aynı skillde isteyenlerde React/Next performans incelemesi. |
 | `playwright-cli` | ⚠️ | Agent'ın gerçek tarayıcıda sayfayla etkileşmesi, akış doğrulaması, ekran görüntüsü/trace/video alması veya Playwright testleri üretip çalıştırması gerektiğinde. |
 | `powershell-windows` | ✅ | Proje Windows'ta çalışıyorsa veya PowerShell betiği yazılıyorsa; agent'ın tipik PowerShell sözdizimi hatalarını önlemek için. |

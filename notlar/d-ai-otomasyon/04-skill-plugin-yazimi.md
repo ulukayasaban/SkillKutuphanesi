@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/29**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/30**
 
 ### agent-development  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 100 (A)
 
@@ -46,7 +46,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 150 KB (SKILL.md 18.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi, çok sayıda örnek ve referans; SKILL.md 19 KB ve klasör 150 KB ile ağırca. Claude Code'a özel.
 
-### cowork-plugin-customizer  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 95 (A)
+### cowork-plugin-customizer  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 94 (A)
 
 - **Ne yapar:** Customize a Claude Code plugin for a specific organization's tools and workflows. Use when: customize plugin, set up plugin, configure plugin, tailor plugin, adjust plugin settings, customize plugin connectors, customize plugin skill, tweak plugin, modify plugin configuration.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -56,7 +56,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 26 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### create-cowork-plugin  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 95 (A)
+### create-cowork-plugin  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 94 (A)
 
 - **Ne yapar:** Guide users through creating a new plugin from scratch in a cowork session. Use when users want to create a plugin, build a plugin, make a new plugin, develop a plugin, scaffold a plugin, start a plugin from scratch, or design a plugin. This skill requires Cowork mode with access to the outputs directory for delivering the final .plugin file.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -87,7 +87,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 63 KB (SKILL.md 15.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil, hook grubunda). Anthropic resmi; tüm olaylar, girdi/çıktı şemaları ve test betikleri tek yerde. hookify kuralına göre daha güçlü ama daha zahmetli.
 
-### library-curator  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### library-curator  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Search the OD Library (the global asset registry) and apply matching assets into the current project mid-task. Use when the user asks to reuse an image they captured/uploaded earlier, "pull a logo/screenshot from my library", or to find and drop a stored asset into the page being built.
 - **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
@@ -97,7 +97,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### od-next-media-inputs  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### od-next-media-inputs  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Prepare required media inputs within an existing OD Next plan. Reuse capability evidence, acquire and measure assets efficiently, and resolve asynchronous jobs without removing required content or weakening quality standards.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -191,7 +191,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 38 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Eski sürüm; freshtechbro kopyasıyla neredeyse aynı (yalnızca package_skill.py farkı).
 
-### skill-creator@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 54 (C)
+### skill-creator@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 53 (C)
 
 - **Ne yapar:** skill-creator'ın eski sürümünün freshtechbro/claudedesignskills kopyası: skill anatomisi, aşamalı açılım ve init/package betikli 6 adımlı süreç.
 - **Ne zaman:** Güncel sürüme erişilemiyorsa yedek. · **Ne zaman değil:** Varsayılan olarak kullanma; composiohq kopyasıyla aynı içerik, anthropics/skill-creator güncel.
@@ -202,7 +202,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 41 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).
 
-### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 61 (C)
+### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 60 (C)
 
 - **Ne yapar:** Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark ve açıklama optimizasyonu dahil); NOTICE.md ile lisans notu eklenmiş.
 - **Ne zaman:** claudesidian kasası içinde skill geliştirirken (kasa bu kopyayı bekler). · **Ne zaman değil:** Diğer projelerde; anthropics/skill-creator ile aynı içerik.
@@ -299,7 +299,17 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.
 
-### yao-meta-skill  ·  yaojingang/yao-meta-skill @ f5d8f68  ·  puan 84 (A)
+### writing-skills@openai  ·  openai/plugins @ b767f8f  ·  puan 61 (C)
+
+- **Ne yapar:** Use when creating new skills, editing existing skills, or verifying skills work before deployment
+- **Teknoloji:** api-anahtari, git, python, react, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 105 KB (SKILL.md 25.7 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### yao-meta-skill  ·  yaojingang/yao-meta-skill @ f5d8f68  ·  puan 83 (A)
 
 - **Ne yapar:** Create, improve, or evaluate an existing skill from workflows, prompts, SOPs, scripts. Use for migration/release/package, routing, evals/tests, install/trust checks, 优化已有 skill, 补 trigger 评测. Exclude summary/translation/docs, brainstorming, one-off prompts, copy-only edits, outline-only requests.
 - **Teknoloji:** python _(otomatik tespit)_

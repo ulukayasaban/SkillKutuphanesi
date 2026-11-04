@@ -12,7 +12,7 @@ GÜVEN PUANI (0-100, 'guven'): GitHub etkileşimlerinin kütüphanedeki TÜM kay
   Resmî olmak tek başına belirleyici değil (sadece 5 puan); topluluk etkileşimi ağırlıklı.
 arsiv-yerlestir.py bu dosyayı okuyup her skill'e 'gelistirici' ve 'degerlendirme' ekler (güven = değerlendirmenin 30 puanı).
 
-Kullanım: python3 araclar/gelistirici-bilgisi.py
+Kullanım: python3 araclar/gelistirici-bilgisi.py [--repo owner/ad …]   (--repo: sadece o repolar yenilenir)
 """
 import re
 import subprocess
@@ -22,7 +22,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, gh_api, json_oku, json_yaz  # noqa: E402
+from ortak import KAYNAKLAR, KOK, api_kapali, gh_api, json_oku, json_yaz  # noqa: E402
 
 # Teknolojinin kendi üreticisi olan kurumlar (resmî kaynak)
 RESMI = {"anthropics", "greensock", "vercel", "microsoft", "pmndrs", "mrdoob", "motiondivision",
@@ -42,6 +42,8 @@ def gh_dene(komut, deneme=3):
         r = subprocess.run(komut, capture_output=True, text=True)
         if r.returncode == 0:
             return r
+        if api_kapali(r.stderr):  # repo API'si bu oturumda kapalı: yeniden denemek anlamsız
+            return None
         time.sleep(3 * (i + 1) if "rate limit" not in r.stderr.lower() else 60 * (i + 1))
     return None
 
@@ -120,11 +122,23 @@ def guven_hesapla(sonuc, havuz, referans):
 
 def main():
     repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"]})
-    sonuc = {}
     onceki = json_oku(KOK / "gelistiriciler.json", {"repolar": {}})["repolar"]
+    secili = [a for a in sys.argv[1:] if "/" in a]  # --repo owner/ad …: sadece bunlar yenilenir, diğerleri önceki değerden
+    sonuc = {r: onceki[r] for r in repolar if secili and r not in secili and r in onceki}
+    if secili:
+        repolar = [r for r in repolar if r in secili]
     for repo in repolar:
         try:
-            d = gh_api(f"repos/{repo}")
+            try:
+                d = gh_api(f"repos/{repo}")
+            except RuntimeError as e:  # repo API'si kapalı (bulut oturumu) -> arama API'si aynı temel alanları verir
+                if not any(x in str(e) for x in ("not enabled", "not available", "HTTP 403")):
+                    raise
+                d = (gh_api(f"search/repositories?q=repo:{repo}").get("items") or [None])[0]
+                if not d:
+                    raise RuntimeError(f"{repo} aramada bulunamadı") from e
+                d.setdefault("subscribers_count", None)
+                print(f"  {repo}: repo API'si kapalı, arama API'sinden temel bilgi alındı (katkıcı/commit/sürüm eski değerden)")
         except Exception as e:  # noqa: BLE001  ağ kesintisi / silinmiş repo: önceki bilgiyle devam
             if repo in onceki:
                 sonuc[repo] = onceki[repo]

@@ -5,6 +5,7 @@
 | Repo | Sahip | Tip | Resmî | ★ | Katkıcı | Son güncelleme | Lisans | Arşivdeki skill |
 |---|---|---|---|---|---|---|---|---|
 | [morluto/rea](https://github.com/morluto/rea) | morluto | kisi |  | 419002 | 356 | 2026-11-02 | MIT | 1 |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | mattpocock | kisi |  | 313013 | - | 2026-11-04 | MIT | 31 |
 | [obra/superpowers](https://github.com/obra/superpowers) | obra | kisi |  | 310663 | 44 | 2026-10-29 | MIT | 15 |
 | [react/react](https://github.com/react/react) | react | kurum | ✅ | 252077 | 2027 | 2026-10-31 | MIT | 14 |
 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | multica-ai | kurum |  | 228018 | 7 | 2026-04-20 | yok | 1 |
@@ -15,6 +16,7 @@
 | [vercel/next.js](https://github.com/vercel/next.js) | vercel | kurum | ✅ | 143460 | 4180 | 2026-11-02 | MIT | 27 |
 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | Graphify-Labs | kurum |  | 140568 | 382 | 2026-11-01 | Apache-2.0 | 1 |
 | [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) | VoltAgent | kurum |  | 125102 | 4 | 2026-10-28 | MIT | 0 |
+| [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | JuliusBrussee | kisi |  | 117484 | - | 2026-11-04 | Apache-2.0 | 22 |
 | [mrdoob/three.js](https://github.com/mrdoob/three.js) | mrdoob | kisi | ✅ | 117380 | 2613 | 2026-11-01 | MIT | 0 |
 | [d3/d3](https://github.com/d3/d3) | d3 | kurum | ✅ | 113847 | 155 | 2026-10-21 | ISC | 0 |
 | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | addyosmani | kisi |  | 112570 | 97 | 2026-11-01 | MIT | 25 |
@@ -32,12 +34,18 @@
 | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | calesthio | kisi |  | 74392 | 76 | 2026-10-28 | AGPL-3.0 | 72 |
 | [remotion-dev/remotion](https://github.com/remotion-dev/remotion) | remotion-dev | kurum | ✅ | 69773 | 479 | 2026-11-01 | NOASSERTION | 78 |
 | [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) | FFmpeg | kurum | ✅ | 66236 | 2797 | 2026-11-01 | NOASSERTION | 0 |
+| [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | cathrynlavery | kisi |  | 64968 | - | 2026-11-03 | MIT | 1 |
+| [blader/humanizer](https://github.com/blader/humanizer) | blader | kisi |  | 64788 | - | 2026-10-28 | MIT | 1 |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | coreyhaines31 | kisi |  | 58500 | - | 2026-11-04 | MIT | 53 |
 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | cloudflare | kurum | ✅ | 56433 | 4 | 2026-09-14 | MIT | 1 |
 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | K-Dense-AI | kurum |  | 55677 | 58 | 2026-10-26 | MIT | 177 |
 | [DavidHDev/react-bits](https://github.com/DavidHDev/react-bits) | DavidHDev | kisi |  | 50984 | 140 | 2026-10-31 | NOASSERTION | 0 |
+| [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | kepano | kisi |  | 50748 | - | 2026-09-15 | MIT | 6 |
 | [pixijs/pixijs](https://github.com/pixijs/pixijs) | pixijs | kurum | ✅ | 48612 | 639 | 2026-10-30 | MIT | 26 |
+| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | Nutlope | kisi |  | 47794 | - | 2026-11-04 | MIT | 1 |
 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | anthropics | kurum | ✅ | 45728 | 42 | 2026-11-01 | Apache-2.0 | 24 |
 | [ManimCommunity/manim](https://github.com/ManimCommunity/manim) | ManimCommunity | kurum |  | 42116 | 538 | 2026-10-29 | MIT | 0 |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | github | kurum |  | 40795 | - | 2026-11-04 | MIT | 472 |
 | [motiondivision/motion](https://github.com/motiondivision/motion) | motiondivision | kurum | ✅ | 34780 | 147 | 2026-11-01 | MIT | 2 |
 | [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | anthropics | kurum | ✅ | 34376 | 32 | 2026-11-01 | Apache-2.0 | 195 |
 | [pmndrs/react-three-fiber](https://github.com/pmndrs/react-three-fiber) | pmndrs | kurum | ✅ | 33420 | 246 | 2026-10-21 | MIT | 0 |
@@ -46,27 +54,39 @@
 | [airbnb/lottie-web](https://github.com/airbnb/lottie-web) | airbnb | kurum | ✅ | 32327 | 109 | 2025-09-01 | MIT | 0 |
 | [GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse) | GoogleChrome | kurum | ✅ | 30996 | 397 | 2026-11-01 | Apache-2.0 | 3 |
 | [greensock/GSAP](https://github.com/greensock/GSAP) | greensock | kurum | ✅ | 30031 | 3 | 2026-04-13 | yok | 0 |
+| [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | AgriciDaniel | kisi |  | 26601 | - | 2026-11-01 | MIT | 26 |
 | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | earthtojake | kisi |  | 24772 | 31 | 2026-11-01 | MIT | 12 |
 | [blender/blender](https://github.com/blender/blender) | blender | kurum | ✅ | 21510 | 1597 | 2026-11-02 | NOASSERTION | 0 |
 | [rough-stuff/rough](https://github.com/rough-stuff/rough) | rough-stuff | kurum |  | 21338 | 13 | 2024-07-28 | MIT | 0 |
 | [KaTeX/KaTeX](https://github.com/KaTeX/KaTeX) | KaTeX | kurum | ✅ | 20488 | 197 | 2026-10-30 | MIT | 0 |
 | [teng-lin/notebooklm-py](https://github.com/teng-lin/notebooklm-py) | teng-lin | kisi |  | 20059 | 42 | 2026-11-01 | MIT | 1 |
 | [motion-canvas/motion-canvas](https://github.com/motion-canvas/motion-canvas) | motion-canvas | kurum | ✅ | 19636 | 98 | 2026-07-02 | MIT | 0 |
+| [wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | wanshuiyin | kisi |  | 18644 | - | 2026-11-03 | MIT | 87 |
 | [liabru/matter-js](https://github.com/liabru/matter-js) | liabru | kisi |  | 18582 | 25 | 2026-09-30 | MIT | 0 |
 | [greensock/gsap-skills](https://github.com/greensock/gsap-skills) | greensock | kurum | ✅ | 17696 | 4 | 2026-07-29 | MIT | 8 |
 | [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis) | darkroomengineering | kurum | ✅ | 17029 | 36 | 2026-10-29 | MIT | 0 |
+| [Vincentwei1021/video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) | Vincentwei1021 | kisi |  | 16948 | - | 2026-10-29 | Apache-2.0 | 1 |
+| [AgriciDaniel/claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) | AgriciDaniel | kisi |  | 16164 | - | 2026-10-25 | MIT | 15 |
+| [dreammis/social-auto-upload](https://github.com/dreammis/social-auto-upload) | dreammis | kisi |  | 16117 | - | 2026-10-22 | MIT | 18 |
 | [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) | Fei-Away | kisi |  | 15289 | 23 | 2026-10-15 | MIT | 0 |
 | [paperjs/paper.js](https://github.com/paperjs/paper.js) | paperjs | kurum |  | 15181 | 99 | 2026-11-01 | NOASSERTION | 0 |
 | [Tonejs/Tone.js](https://github.com/Tonejs/Tone.js) | Tonejs | kurum |  | 14866 | 118 | 2026-11-01 | MIT | 0 |
+| [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs) | Orchestra-Research | kurum |  | 14267 | - | 2026-10-11 | MIT | 98 |
+| [krillinai/OpenCreator](https://github.com/krillinai/OpenCreator) | krillinai | kisi |  | 14154 | - | 2026-11-04 | Apache-2.0 | 7 |
 | [QwikDev/partytown](https://github.com/QwikDev/partytown) | QwikDev | kurum | ✅ | 13807 | 138 | 2026-10-29 | MIT | 0 |
 | [theatre-js/theatre](https://github.com/theatre-js/theatre) | theatre-js | kurum |  | 12833 | 24 | 2024-08-14 | Apache-2.0 | 0 |
+| [google/elephant-goldfish-model](https://github.com/google/elephant-goldfish-model) | google | kurum |  | 11664 | - | 2026-11-04 | Apache-2.0 | 7 |
+| [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude) | zubair-trabzada | kisi |  | 11508 | - | 2026-11-04 | MIT | 16 |
+| [AgriciDaniel/claude-ads](https://github.com/AgriciDaniel/claude-ads) | AgriciDaniel | kisi |  | 10738 | - | 2026-11-01 | MIT | 34 |
 | [metafizzy/zdog](https://github.com/metafizzy/zdog) | metafizzy | kurum |  | 10682 | 5 | 2023-07-18 | yok | 0 |
 | [lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) | lemomo-ai | kisi |  | 10618 | 4 | 2026-10-31 | MIT | 2 |
 | [android/skills](https://github.com/android/skills) | android | kurum | ✅ | 10235 | 8 | 2026-10-29 | Apache-2.0 | 37 |
 | [pmndrs/drei](https://github.com/pmndrs/drei) | pmndrs | kurum | ✅ | 10102 | 252 | 2026-10-21 | MIT | 0 |
+| [Ryze-AI-Adgent/open-seo-mcp-skills](https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills) | Ryze-AI-Adgent | kurum |  | 8802 | - | 2026-10-27 | MIT | 8 |
 | [librosa/librosa](https://github.com/librosa/librosa) | librosa | kurum | ✅ | 8751 | 144 | 2026-10-06 | ISC | 0 |
 | [vudovn/ag-kit](https://github.com/vudovn/ag-kit) | vudovn | kisi |  | 8205 | 10 | 2026-10-18 | MIT | 58 |
 | [barvian/number-flow](https://github.com/barvian/number-flow) | barvian | kisi |  | 7769 | 7 | 2026-09-20 | MIT | 0 |
+| [openai/plugins](https://github.com/openai/plugins) | openai | kurum | ✅ | 7753 | - | 2026-11-03 | yok | 531 |
 | [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | dequelabs | kurum | ✅ | 7736 | 272 | 2026-11-01 | MPL-2.0 | 0 |
 | [ai/size-limit](https://github.com/ai/size-limit) | ai | kisi |  | 7043 | 103 | 2026-11-01 | MIT | 0 |
 | [Jakeschincariol/replica-skill](https://github.com/Jakeschincariol/replica-skill) | Jakeschincariol | kisi |  | 6998 | 1 | 2026-10-03 | MIT | 11 |

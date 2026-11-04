@@ -1,5 +1,12 @@
 # Popüler skill taraması — değerlendirme (2026-11-04)
 
+> **Sonuç (2026-11-04):** Kullanıcı A bölümündeki 20 repoyu "Yapay Zeka Skillleri" listesine ekledi ve "kütüphaneye al" dedi.
+> Hepsi `kaynaklar.json`'a eklendi ve arşive alındı: **+1435 skill (3815 → 5250)**; çakışma ve ücret kontrolü yapıldı
+> (`kaynaklar.json` kayıtlarındaki `not` alanları, `ucret-siniflandirma.json`'a 78 sınıf). Kararlar: kepano Obsidian skilleri
+> claudesidian kopyalarının yerine tercih oldu; mattpocock `pr`/`prototype` tercih, `code-review` anthropics'te kaldı;
+> openai/plugins kopyaları (60 ad) alternatif. Bulut oturumunda repo API'si kapalı olduğu için `kaynak-cek.py`,
+> `kapsam-denetimi.py` ve `gelistirici-bilgisi.py` git/arama yedeğiyle çalıştı (`rehber/03`).
+
 Tarama: `araclar/populer-tarama.py` (15 REST sorgusu, son 120 günde push, ★150+) → 373 aday, **320'sinde SKILL.md var**
 (`notlar/populer-skiller.md`). Burada o listeden elenmiş öneriler var. **Hiçbiri eklenmedi**; ekleme kararı senin
 (`rehber/03-yeni-skill-ekleme.md`: çakışma + ücret kontrolü, onay). Reddettiklerini kaydet:

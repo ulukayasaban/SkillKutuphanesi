@@ -51,7 +51,9 @@ python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da ay
    Yeni repoya ait kurala `"repo": "owner/ad"` yaz; başka repodaki aynı adlı skill etkilenmez. Repo geneli için `repo_varsayilan`.
    Ekledikten sonra eski kayıtların kategorisi/durumu değişmiş mi bak (git HEAD'deki registry ile karşılaştır).
    Yeni bir konu alanı gerekiyorsa `kategoriler.json`'a alan/kategori ekle.
-4. **Çalıştır:**
+4. **Çalıştır:** (Bulut/kısıtlı oturumda GitHub repo API'si kapalıysa araçlar kendiliğinden git'e düşer: ağaç blob'suz sığ
+   fetch ile, dosyalar tek pack isteğiyle, lisans arama API'sinden; `gelistirici-bilgisi.py --repo owner/ad` sadece o repoları
+   yeniler. `github-skill-listesi.py` ise GraphQL gerektirir, yerelde çalıştırılır.)
    ```bash
    python3 araclar/gelistirici-bilgisi.py         # geliştirici bilgisi (yıldız, lisans, bakım)
    # (kısmi indirme güvenli: indirilmeyen kaynaklar korunur; bir skill kaybolursa güvenlik kilidi işlemi durdurur)

@@ -26,7 +26,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 106 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İçerik düzenli (ses, mesaj, tipografi, logo, onay kontrol listeleri) ve betikler yalnız Node standart kütüphanesini kullanıyor; sync betiği mevcut token dosyalarını görünce durup `--force` istiyor, bu güvenli bir tasarım. Dikkat: `sync-brand-to-tokens.cjs` kardeş `../design-system/scripts/generate-tokens.cjs` yoluna bağlı (yoksa yalnız uyarı verip CSS'i üretmez); design-system ile birlikte kurulmalı. `/brand:update` komutu ve `docs/` yolları proje köküne göre çalışır.
 
-### brand-extract  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### brand-extract  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Extract a complete Brand Kit from a live website by driving the in-app browser. Use when a brand-extraction project opens with a site in the Browser tab, or when the user asks to "extract a brand", "pull the brand from <url>", "get the colors/fonts/logo from this site", or build a brand/design system from a reference website. Pairs with the agent-browser tool for measurement and pauses for the use
 - **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
@@ -58,7 +58,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 13 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. SKILL.md anthropics/skills sürümüyle birebir aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: bu kopyanın LICENSE.txt'inde telif satırı doldurulmamış şablon ('Copyright [yyyy] [name of copyright owner]'), yani lisans sahipliği net değil; resmî kopya tercih edilmeli.
 
-### brandkit  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### brandkit  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, p
 - **Teknoloji:** canvas, node _(otomatik tespit)_
@@ -101,7 +101,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 178 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Token hiyerarşisi, durum matrisi ve doğrulama/üretim betikleri (testli, yalnız stdlib) net; hardcode değer denetimi gerçek kazanç. Dikkat: slayt sistemi (7+ py/csv, ~250 KB klasör) token konusundan bağımsız bir yan ürün ve `slides` skill'iyle örtüşüyor. SKILL.md var olmayan dosyalara başvuruyor: `assets/designs/slides/claudekit-pitch-251223.html`, `assets/css/slide-animations.css`, `/slides:create` komutu. 'Skill Dependencies: brand, ui-styling' — ikisi de kütüphanede var (ui-styling 01'de). `fetch-background.py` yalnız hazır Pexels URL'leri döndürür, indirme/anahtar yok; Chart.js CDN'den sabit sürümle (4.4.1) yükleniyor.
 
-### stitch-design-taste  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### stitch-design-taste  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.
 - **Teknoloji:** api-anahtari, canvas, css _(otomatik tespit)_

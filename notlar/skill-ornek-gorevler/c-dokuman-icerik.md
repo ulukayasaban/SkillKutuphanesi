@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › c-dokuman-icerik
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 88 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 112 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
@@ -20,9 +20,12 @@
 | `beautiful-mermaid` | ✅ | Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde. |
 | `d3-visualization` | ✅ | Teaches the agent to produce D3 charts and interactive data visualizations. |
 | `data-report` | ✅ | Turns CSV, Excel, or JSON data into a polished visual report page. |
+| `diagram-design` | ✅ | Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider |
 | `doc-coauthoring` | ✅ | Önemli bir teknik/iş dokümanı yazılırken; okuyucunun soru işaretlerini önceden yakalamak için. |
 | `documentation-and-adrs` | ✅ | Mimari karar, public API değişikliği, özellik teslimi; kod tabanına gelecek mühendis/agent için bağlam bırakmak. |
 | `documentation-templates` | ⚠️ | Hızlıca README/CHANGELOG/llms.txt iskeleti gerektiğinde; çok kısa bağlam bütçesiyle. |
+| `documentation-writer` | ✅ | Diátaxis Documentation Expert. |
+| `json-canvas@kepano` | ✅ | working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian. |
 | `live-panel` | ✅ | the user wants a system, agent or org architecture diagram that looks like a monitoring dashboard in a terminal window - fixed layout, glowing packets on the wi |
 | `competitive-ads-extractor` | ✅ | Reklam kampanyası öncesi rakip mesajlarını ve kreatif kalıplarını çıkarmak. |
 | `content-research-writer` | ✅ | Kaynaklı blog yazısı, makale, vaka çalışması, düşünce liderliği içeriği. |
@@ -30,6 +33,7 @@
 | `developer-growth-analysis` | ✅ | Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi. |
 | `domain-name-brainstormer` | ✅ | Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası. |
 | `geo-fundamentals` | ✅ | Web sitesi/blog içeriğini AI aramada görünür kılmak; llms.txt, FAQ şeması, AI bot erişim kararı. |
+| `humanizer` | ✅ | editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line closers, staged openers, forced triads, dashes everywhere, inflated claims, sales langu |
 | `i18n-localization` | ✅ | Uygulamaya çok dil desteği eklemek, sabit metinleri ayıklamak, Türkçe/Arapça (RTL) yerelleştirme. |
 | `ig-audit` | ✅ | the user pastes their Instagram insights or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know |
 | `ig-caption` | ✅ | the user says "write the caption", "caption this", "what do I put in the description", has a reel or a carousel ready and needs the text, or asks about hashtags |
@@ -78,17 +82,37 @@
 | `yt-shorts` | ✅ | "cut this into shorts", "clip this", "repurpose this video", "what should I clip". |
 | `yt-viral` | ✅ | "what's working right now", "find viral videos in my niche", "why did this blow up", competitor research, or a swipe file. |
 | `add-frontmatter` | ✅ | Obsidian kasasında etiket/özellik düzeni kurmak, Bases görünümlerine veri hazırlamak. |
+| `autoresearch@agricidaniel` | ✅ | the user wants autonomous or deep research that may access the public web |
+| `canvas` | ✅ | canvas status, canvas lists, visual maps, zones, spatial layouts, adding vault notes or media to a .canvas file, and requests such as create canvas, add to canv |
 | `daily-review` | ✅ | Obsidian/Markdown kasasında günlük kapanış ve ertesi gün planı. |
+| `defuddle` | ✅ | Extract clean Markdown from HTML pages with Defuddle CLI. |
+| `defuddle@agricidaniel` | ✅ | defuddle, clean this URL, strip page clutter, readable Markdown from a web page, or preparing a web source for later wiki ingestion |
 | `download-attachment` | ✅ | Claudesidian düzenindeki kasaya web'den PDF/görsel ek kaydetmek. |
 | `file-organizer` | ✅ | Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik. |
 | `inbox-processor` | ✅ | PARA düzenli Obsidian kasasında gelen kutusu temizliği. |
 | `init-bootstrap` | ✅ | claudesidian şablonuyla yeni Obsidian kasası kurarken ilk yapılandırma. |
 | `install-claudesidian-command` | ✅ | claudesidian kasasını terminalden tek komutla açmak. |
 | `invoice-organizer` | ✅ | Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama. |
-| `json-canvas` | ✅ | Obsidian kasasında görsel tuval, zihin haritası ya da not bağlantı haritası üretmek. |
-| `obsidian-bases` | ✅ | Obsidian'da notlardan veritabanı benzeri tablo/kart görünümü kurmak. |
-| `obsidian-markdown` | ⚠️ | Obsidian kasasına not yazan/düzenleyen her iş; diğer Obsidian skillerinin temeli. |
+| `json-canvas@heyitsnoah` | ✅ | Obsidian kasasında görsel tuval, zihin haritası ya da not bağlantı haritası üretmek. |
+| `knap` | ✅ | the user asks to apply a Knap template, turn JSON or CSV data into notes, batch-generate Markdown files, or format Defuddle output into a note. |
+| `obsidian-bases@agricidaniel` | ⚠️ | Obsidian Bases, database-like vault views, dynamic tables, reading lists, task trackers, filters, formulas, summaries, and .base file edits. |
+| `obsidian-bases@heyitsnoah` | ✅ | Obsidian'da notlardan veritabanı benzeri tablo/kart görünümü kurmak. |
+| `obsidian-bases@kepano` | ✅ | working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian. |
+| `obsidian-cli` | ✅ | the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Ob |
+| `obsidian-markdown@agricidaniel` | ✅ | the user explicitly requests Obsidian note formatting or syntax help, not for general Markdown or broad vault operations. |
+| `obsidian-markdown@heyitsnoah` | ⚠️ | Obsidian kasasına not yazan/düzenleyen her iş; diğer Obsidian skillerinin temeli. |
+| `obsidian-markdown@kepano` | ⚠️ | working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes. |
 | `research-assistant` | ✅ | Kasada bir konu hakkında birikmiş bilgiyi sentezlemek. |
+| `save` | ⚠️ | /save, save this, save that answer, file this conversation, save this analysis, keep this insight, preserve this chat result. |
+| `think` | ✅ | think this through, deep think, architecture review, postmortem, tradeoff analysis, or challenges to assumptions |
 | `thinking-partner` | ✅ | Fikir keşfi, sesli düşünme, karar öncesi problem çerçeveleme. |
 | `upgrade` | ✅ | claudesidian tabanlı kasayı güncellemek. |
 | `weekly-synthesis` | ✅ | Haftalık değerlendirme, bir sonraki haftanın planı. |
+| `wiki` | ⚠️ | vault setup, scaffolding, workspace selection, cross-project configuration, or choosing the correct wiki sub-skill |
+| `wiki-cli` | ✅ | wiki-cli, Obsidian CLI, Obsidian read, Obsidian search, vault transport, which transport, transport detection, backlinks, tags, or Obsidian command line |
+| `wiki-fold` | ✅ | manual log compression without modifying child pages |
+| `wiki-ingest` | ⚠️ | a single source or bounded batch, not for saving an assistant answer |
+| `wiki-lint` | ✅ | lint, vault health check, audit wiki health, find orphans, find dead links, frontmatter audit, provenance audit, or wiki audit |
+| `wiki-mode` | ⚠️ | wiki mode, methodology mode, what is my vault mode, set vault mode, switch to PARA, use LYT, Zettelkasten setup, change mode, configure mode, or methodology rou |
+| `wiki-query` | ✅ | the user selects the vault as the evidence source: query the wiki, query quick, query deep, explain from the wiki, summarize the vault, find in wiki, search the |
+| `wiki-retrieve` | ⚠️ | retrieve, hybrid retrieval, BM25, rerank, contextual retrieval, chunk search, vault search, semantic search, find relevant passages, or retrieval diagnostics |

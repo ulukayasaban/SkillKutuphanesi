@@ -66,10 +66,118 @@ def gh_api(yol, deneme=4):
             return json.loads(r.stdout)
         if "HTTP 404" in r.stderr or "HTTP 422" in r.stderr:
             raise GhBulunamadi(f"{yol}: {r.stderr.strip()[:200]}")
+        if "not enabled" in r.stderr or "not available" in r.stderr:  # bu oturumda kapalı uç nokta: beklemek anlamsız
+            raise RuntimeError(f"gh api kapalı: {yol}: {r.stderr.strip()[:200]}")
         # hız sınırı: kısa bekleme işe yaramaz; dakikalarca bekleyip yeniden dene (ay-ortası çökme yerine)
         limit = "rate limit" in r.stderr.lower() or "HTTP 403" in r.stderr or "HTTP 429" in r.stderr
         time.sleep(60 * (i + 1) if limit else 2 * (i + 1))
     raise RuntimeError(f"gh api başarısız: {yol}: {r.stderr.strip()}")
+
+
+API_KAPALI = ("not enabled", "not available", "HTTP 403")
+
+
+def api_kapali(hata) -> bool:
+    """gh api hatası 'bu oturumda repo API'si kapalı' türünden mi? (bulut oturumu: sadece bağlı depo; ya da izin yok)"""
+    return any(x in str(hata) for x in API_KAPALI)
+
+
+def repo_agaci(repo: str, sha: str = None):
+    """Reponun dosya ağacı: önce GitHub API (repos/{repo}/git/trees), API kapalıysa git ile (blob'suz sığ fetch; dosya indirilmez).
+    Döner: (sha, {"tree": [{"path","type","sha","size"}], "truncated": False, "_kaynak": "api"|"git"})"""
+    try:
+        if not sha:
+            sha = gh_api(f"repos/{repo}/commits/HEAD")["sha"]
+        govde = gh_api(f"repos/{repo}/git/trees/{sha}?recursive=1")
+        govde["_kaynak"] = "api"
+        return sha, govde
+    except RuntimeError as e:
+        if not api_kapali(e):
+            raise
+    d = GECICI / "git-agac" / repo.replace("/", "__")
+    import shutil
+    shutil.rmtree(d, ignore_errors=True)
+    d.mkdir(parents=True)
+    komutlar = [["git", "init", "-q"], ["git", "remote", "add", "origin", f"https://github.com/{repo}"],
+                ["git", "fetch", "-q", "--depth", "1", "--filter=blob:none", "origin", sha or "HEAD"]]
+    for k in komutlar:
+        r = subprocess.run(k, cwd=d, capture_output=True, text=True)
+        if r.returncode:
+            shutil.rmtree(d, ignore_errors=True)
+            raise GhBulunamadi(f"{repo}: API kapalı ve git ile de okunamadı: {r.stderr.strip()[-200:]}")
+    sha = sha or subprocess.run(["git", "rev-parse", "FETCH_HEAD"], cwd=d, capture_output=True, text=True).stdout.strip()
+    agac = []
+    # --long KULLANILMAZ: blob'suz klonda boyut için her blob tek tek indirilir (binlerce istek). Boyut None; dosya boyutu
+    # sınırı, dosyalar klon_dosyalari_al() ile çekildikten sonra yerelde uygulanır.
+    for satir in subprocess.run(["git", "ls-tree", "-r", "FETCH_HEAD"], cwd=d, capture_output=True, text=True).stdout.splitlines():
+        meta, yol = satir.split("\t", 1)
+        mod, tur, oid = meta.split()
+        agac.append({"path": yol, "type": tur, "mode": mod, "sha": oid, "size": None})
+    return sha, {"tree": agac, "truncated": False, "_kaynak": "git", "_klon": str(d), "_sha": sha}  # klon kalır: klon_dosyalari_al / klon_temizle
+
+
+def klon_dosyalari_al(govde, yollar):
+    """repo_agaci git modunda seçilen dosyaları indirir: önce dosyaların blob kimlikleri TOPLU olarak çekilir
+    (git fetch --stdin, 300'lük partiler; ağ koparsa 4 deneme), sonra çevrimdışı checkout. Böylece binlerce tek tek blob
+    isteği (yavaş, proxy'de kopuyor) yerine birkaç pack isteği yapılır.
+    Döner: {yol: Path} (klon içindeki dosya). Çağıran kopyalar ve klon_temizle() ile klonu siler."""
+    d = Path(govde["_klon"])
+    oid = {x["path"]: x["sha"] for x in govde["tree"] if x["type"] == "blob"}
+    istenen = sorted({oid[y] for y in yollar if y in oid})
+    for i in range(0, len(istenen), 300):
+        parti = "\n".join(istenen[i:i + 300]) + "\n"
+        for deneme in range(4):
+            r = subprocess.run(["git", "fetch", "-q", "--no-tags", "--filter=blob:none", "--stdin", "origin"],
+                               cwd=d, input=parti, capture_output=True, text=True)
+            if r.returncode == 0:
+                break
+            time.sleep(3 * (deneme + 1))
+        else:
+            raise RuntimeError(f"git fetch (blob partisi {i // 300 + 1}) başarısız: {r.stderr.strip()[-300:]}")
+    liste = d / ".skill-kutuphanesi-yollar"
+    liste.write_text("\n".join(yollar) + "\n", encoding="utf-8")
+    # blob fetch'leri FETCH_HEAD'i ezdiği için commit sha'sı kullanılır
+    r = subprocess.run(["git", "checkout", "-q", f"--pathspec-from-file={liste}", govde["_sha"]], cwd=d, capture_output=True, text=True)
+    if r.returncode:
+        raise RuntimeError(f"git checkout başarısız: {r.stderr.strip()[-300:]}")
+    liste.unlink(missing_ok=True)
+    return {y: d / y for y in yollar if (d / y).is_file()}
+
+
+def klon_temizle(govde):
+    import shutil
+    if govde and govde.get("_klon"):
+        shutil.rmtree(govde["_klon"], ignore_errors=True)
+
+
+def repo_lisansi(repo: str, agac=None) -> str:
+    """Lisans: repo API'si → arama API'si → LICENSE dosyası (raw) → 'belirtilmemiş'."""
+    for yol in (f"repos/{repo}", f"search/repositories?q=repo:{repo}"):
+        try:
+            d = gh_api(yol)
+            d = (d.get("items") or [{}])[0] if "items" in d else d
+            lis = (d.get("license") or {}).get("spdx_id")
+            if lis:
+                return lis
+            if "items" not in d:
+                return "belirtilmemiş"
+        except RuntimeError as e:
+            if not api_kapali(e):
+                raise
+    for x in agac or []:
+        if re.match(r"^LICEN[SC]E", x["path"], re.I):
+            try:
+                import urllib.request
+                with urllib.request.urlopen(f"https://raw.githubusercontent.com/{repo}/HEAD/{x['path']}", timeout=30) as r:
+                    metin = r.read(3000).decode("utf-8", "replace")
+            except OSError:
+                return "NOASSERTION"
+            for k, desen in (("MIT", r"MIT License"), ("Apache-2.0", r"Apache License"), ("AGPL-3.0", r"GNU AFFERO"),
+                             ("GPL-3.0", r"GNU GENERAL PUBLIC LICENSE.*Version 3"), ("BSD-3-Clause", r"BSD 3-Clause|Redistribution and use")):
+                if re.search(desen, metin, re.S):
+                    return k
+            return "NOASSERTION"
+    return "belirtilmemiş"
 
 
 def git_blob_hash(veri: bytes) -> str:

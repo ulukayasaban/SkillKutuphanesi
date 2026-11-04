@@ -512,7 +512,11 @@ def main():
         oncelik[k["repo"]] = min(oncelik.get(k["repo"], 99), k.get("oncelik", 5))
     korunan = {s["id"]: s for s in skiller if s["id"] in korunan_indirilmeyen}
     for y in [s for s in skiller if s["id"] not in korunan_indirilmeyen]:
-        rakip = next((k for k in korunan.values() if k["ad"] == y["ad"]), None)
+        adaylar = [k for k in korunan.values() if k["ad"] == y["ad"]]
+        # Rakip: korunanlar içinde TERCİH olan (yoksa en yüksek öncelikli); rastgele bir alternatifle kıyaslanırsa
+        # yeni skill onu geçip ikinci bir 'tercih' olabiliyordu (ör. code-review: anthropics tercih dururken mattpocock)
+        rakip = next((k for k in adaylar if k["durum"] == "tercih"), None) or \
+            (min(adaylar, key=lambda k: oncelik.get(k["repo"], 5)) if adaylar else None)
         if not rakip:
             continue
         if rakip.get("ana_hash") == y.get("ana_hash"):

@@ -65,10 +65,10 @@
 | `playwright-release-notes` | microsoft/playwright | Write the release notes for a Playwright release - the Node.js notes in docs/src/release-notes-js.md together  |
 | `playwright-test-results` | microsoft/playwright | Query Playwright CI test results from the aggregated DuckDB database. Answers questions about flaky tests, fai |
 | `playwright-triage` | microsoft/playwright | Triage and fix one microsoft/playwright issue, or do a maintainer's task, unattended inside the Issue triage G |
-| `pr` | remotion-dev/remotion | Open a pull request for the current feature |
 | `pr-name` | remotion-dev/remotion | Review or correct a Remotion pull request title |
 | `pr-ready` | remotion-dev/remotion | Resolve CI failures, merge conflicts, or local branch changes to get a PR ready |
 | `pr-status-triage` | vercel/next.js | Triage CI failures and PR review comments using scripts/pr-status.js. Use when investigating failing CI jobs,  |
+| `pr@remotion-dev` | remotion-dev/remotion | Open a pull request for the current feature |
 | `product-recording` | remotion-dev/remotion | Prepare Remotion Studio for a user-recorded product demo with Canvas Capture, then import the downloaded take  |
 | `react-scan` | remotion-dev/remotion | Capture and analyze Remotion Studio React render profiles through development-only WebMCP tools. Use when diag |
 | `react-sync` | vercel/next.js | Build local React changes in the bundle variants consumed by Next.js, sync them into a local Next.js checkout, |

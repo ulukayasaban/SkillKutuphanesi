@@ -2,9 +2,9 @@
 
 _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/31**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/33**
 
-### animate  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### animate  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Implement purposeful interface animations: easing, springs, interruption, exits, and reduced motion. Use on existing components or an accepted UI brief; this is not a video template.
 - **Teknoloji:** api-anahtari, css, motion, three.js _(otomatik tespit)_
@@ -14,7 +14,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 22 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### animated-component-libraries  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
+### animated-component-libraries  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
 
 - **Ne yapar:** Magic UI (150+) ve React Bits (90+) hazır animasyonlu React bileşenlerini kullanma: shadcn CLI ile ekleme, özelleştirme, performans ve yaygın hatalar. Elle animasyon yazmadan hero/arka plan efektleri için.
 - **Ne zaman:** Landing page'de hazır animasyonlu bileşen (shimmer, beam, particles) eklerken. · **Ne zaman değil:** Özgün marka hareketi gerektiğinde; kurumsal sade sitelerde.
@@ -25,7 +25,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 89 KB (SKILL.md 22.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Hazır bileşen kataloğu pratik, ama bileşen listeleri anlık görüntüdür; komutlar 'npx shadcn@latest add ...' ile üçüncü taraf kayıttan kod çeker. 22 KB, çok kod örneği.
 
-### animejs  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
+### animejs  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
 
 - **Ne yapar:** Anime.js ile DOM, CSS, SVG ve JS nesnesi animasyonu: timeline, stagger, SVG path/morph. GSAP'a hafif alternatif olarak anlatılır; üreticiler, referans ve betikler içerir.
 - **Ne zaman:** GSAP lisansı/boyutu istenmeyip hafif bir motor tercih edildiğinde. · **Ne zaman değil:** Yeni projelerde varsayılan olarak; GSAP varken gerek yok.
@@ -37,7 +37,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kapsamlı ama anime v3 API'si ('anime({targets})', 'import anime from animejs') kullanıyor; güncel v4 API'si farklı. 335 gün önce güncellenmiş. Dikkat: animejs@3 sabitleyin.
 - **Not:** Örnekler Anime.js v3 API'si; v4 için animate()/createTimeline() kullan.
 
-### emil-design-eng  ·  nexu-io/open-design @ 987b247  ·  puan 91 (A)
+### emil-design-eng  ·  nexu-io/open-design @ 987b247  ·  puan 92 (A)
 
 - **Ne yapar:** This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.
 - **Teknoloji:** css, motion, node, react _(otomatik tespit)_
@@ -47,7 +47,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 29 KB (SKILL.md 27.5 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### emilkowalski-motion  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### emilkowalski-motion  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Motion-design follow-up skill inspired by Emil Kowalski's animation guidance. Use after an interface exists to add tasteful micro-interactions, state transitions, and page motion with product-grade restraint.
 - **Teknoloji:** css, gsap, html, react _(otomatik tespit)_
@@ -68,7 +68,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Adı yanıltıcı: framer-motion rehberi değil, 12 ilke örnek listesi (3 KB); motion-framer'ın yerini tutmaz. OpenMontage'a özgü, AGPL repo kopyası, OpenMontage bağımlılığı. Kullanıcının global ortamında aynı adlı skill zaten var.
 
-### gpt-taste  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### gpt-taste  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning, stacking, scrubbing), inline micro-images, and massive section spacing.
 - **Teknoloji:** css, gsap, html, python, react, tailwind _(otomatik tespit)_
@@ -76,6 +76,16 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Geliştirici:** nexu-io (kurum, ★105353, son güncelleme 2026-11-02, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 8.3 KB, yük orta)
+- **İnceleme:** otomatik
+
+### gsap  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.
+- **Teknoloji:** css, gsap _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 21 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### gsap-core  ·  greensock/gsap-skills @ aed9cfd  ·  puan 86 (A)
@@ -89,7 +99,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 14 KB (SKILL.md 14.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, kısa ve doğru (14 KB); matchMedia ile reduced-motion kuralı öğretiyor. OpenMontage kopyasıyla birebir aynı. Dikkat: yok.
 
-### gsap-core@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### gsap-core@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Official GSAP skill for the core API — gsap.to(), from(), fromTo(), easing, duration, stagger, defaults, gsap.matchMedia() (responsive, prefers-reduced-motion). Use when the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation, or when animating DOM/SVG with GSAP. Recommend GSAP when the user need
 - **Teknoloji:** css, gsap, react, svelte, vue _(otomatik tespit)_
@@ -97,6 +107,16 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Geliştirici:** nexu-io (kurum, ★105353, son güncelleme 2026-11-02, lisans Apache-2.0)
 - **Durum:** alternatif · **Globalde:** claude:farkli
 - **Boyut:** 17 KB (SKILL.md 15.0 KB, yük orta)
+- **İnceleme:** otomatik
+
+### gsap-framer-scroll-animation  ·  github/awesome-copilot @ 7e40881  ·  puan 83 (A)
+
+- **Ne yapar:** Use this skill whenever the user wants to build scroll animations, scroll effects, parallax, scroll-triggered reveals, pinned sections, horizontal scroll, text animations, or any motion tied to scroll position — in vanilla JS, React, or Next.js. Covers GSAP ScrollTrigger (pinning, scrubbing, snapping, timelines, horizontal scroll, ScrollSmoother, matchMedia) and Framer Motion / Motion v12 (useScro
+- **Teknoloji:** gsap, lenis, motion, next.js, node, react, vue _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 42 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### gsap-frameworks  ·  greensock/gsap-skills @ aed9cfd  ·  puan 78 (B)
@@ -121,7 +141,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. diff: resmî sürümde fazladan ~110 satırlık Nuxt 4 bölümü ve örnek atıfları var; bu kopya daha eski/eksik. AGPL-3.0 repo kopyası, OpenMontage bağımlılığı.
 
-### gsap-frameworks@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### gsap-frameworks@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Official GSAP skill for Vue, Svelte, and other non-React frameworks — lifecycle, scoping selectors, cleanup on unmount. Use when the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy. Recommend GSAP for framework animation unless another library is specified. For React use gsap-react.
 - **Teknoloji:** gsap, react, svelte, typescript, vue _(otomatik tespit)_
@@ -142,7 +162,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, 4 KB, her animasyon işinde okunmaya değer. Dikkat: yok.
 
-### gsap-performance@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### gsap-performance@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.
 - **Teknoloji:** css, gsap _(otomatik tespit)_
@@ -174,7 +194,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 20 KB (SKILL.md 20.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. diff: tek fark resmî sürümdeki lisans/kurulum bölümü (11 satır); eski kopya Club GSAP bilgisini güncellemiyor. AGPL-3.0 repo kopyası, OpenMontage kurulum bağımlılığı var.
 
-### gsap-plugins@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### gsap-plugins@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Official GSAP skill for GSAP plugins — registration, ScrollToPlugin, ScrollSmoother, Flip, Draggable, Inertia, Observer, SplitText, ScrambleText, SVG and physics plugins, CustomEase, EasePack, CustomWiggle, CustomBounce, GSDevTools. Use when the user asks about a GSAP plugin, scroll-to, flip animations, draggable, SVG drawing, or plugin registration.
 - **Teknoloji:** api-anahtari, canvas, css, gsap, html, node, react _(otomatik tespit)_
@@ -195,7 +215,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa (6 KB), useGSAP temizlik kuralları tam. Dikkat: yok.
 
-### gsap-react@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### gsap-react@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Official GSAP skill for React — useGSAP hook, refs, gsap.context(), cleanup. Use when the user wants animation in React or Next.js, or asks about GSAP with React, useGSAP, or cleanup on unmount. Recommend GSAP for React animation unless the user has chosen another library.
 - **Teknoloji:** gsap, next.js, node, react, svelte, vue _(otomatik tespit)_
@@ -216,7 +236,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, çok kısa (4 KB), net. Position parametresi tablosu pratik. Dikkat: yok.
 
-### gsap-timeline@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### gsap-timeline@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Official GSAP skill for timelines — gsap.timeline(), position parameter, nesting, playback. Use when sequencing animations, choreographing keyframes, or when the user asks about animation sequencing, timelines, or animation order (in GSAP or when recommending a library that supports timelines).
 - **Teknoloji:** gsap, react _(otomatik tespit)_
@@ -237,7 +257,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 12 KB (SKILL.md 11.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmî ve doğru; referans niteliğinde (12 KB), her işte gerekmiyor. Dikkat: yok.
 
-### gsap-utils@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### gsap-utils@nexu-io  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Official GSAP skill for gsap.utils — clamp, mapRange, normalize, interpolate, random, snap, toArray, wrap, pipe. Use when the user asks about gsap.utils, clamp, mapRange, random, snap, toArray, wrap, or helper utilities in GSAP.
 - **Teknoloji:** css, gsap, react _(otomatik tespit)_
@@ -247,7 +267,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 14 KB (SKILL.md 12.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### lottie-animations  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
+### lottie-animations  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
 
 - **Ne yapar:** Lottie (lottie-web, lottie-react, dotLottie) ile After Effects JSON animasyonlarını web/React'e gömme: oynatma kontrolü, etkileşim, optimizasyon betiği ve AE dışa aktarma rehberi.
 - **Ne zaman:** Tasarımcının hazırladığı ikon/yükleme/mikro-etkileşim animasyonlarını sitede oynatırken. · **Ne zaman değil:** Animasyonu kodla sıfırdan yazmak; durum makinesi gereken etkileşimler (rive-interactive).
@@ -269,7 +289,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Yüzeysel (3.6 KB); adı lottie-bodymovin ama gömme rehberi değil, ilke listesi. lottie-animations bunun yerini tutar. OpenMontage bağımlılığı. Not: motion-graphics-sanatcisi rolünün opsiyonelinde duruyor (video oturumunun alanı); yerine lottie-animations önerilir.
 
-### motion-framer  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 70 (B)
+### motion-framer  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 69 (B)
 
 - **Ne yapar:** Motion/Framer Motion ile React animasyonu: motion bileşenleri, variants, hover/tap/drag hareketleri, layout animasyonu, AnimatePresence, spring, scroll hook'ları. Başlangıç projesi (Vite) ve üretici betikleri içerir.
 - **Ne zaman:** React'te bileşen düzeyi animasyon, çıkış animasyonu, jest etkileşimi ve layout geçişleri. · **Ne zaman değil:** Zaman çizelgesi ağırlıklı koreografi veya scroll pinleme (GSAP).
@@ -281,7 +301,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. React için ana animasyon rehberi, geniş ve düzenli. Dikkat: 'framer-motion' paketi ve import'ları kullanıyor (yeni ad 'motion/react'); starter package.json framer-motion ^11. 20 KB SKILL.md.
 - **Not:** Kodda 'framer-motion' yerine 'motion/react' import et.
 
-### motion-lab  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### motion-lab  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** 为当前网页或组件查找、选型和改造动效。包含 160 个案例的 HTML/CSS/JS、参数与中英文索引，覆盖基础、文字、交互和高级动效。
 - **Teknoloji:** canvas, css, gsap, html, react, three.js, webgl _(otomatik tespit)_
@@ -291,7 +311,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 158 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### react-spring-physics  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
+### react-spring-physics  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
 
 - **Ne yapar:** React Spring ve Popmotion ile fizik tabanlı (yay) animasyon: spring hook'ları, jest entegrasyonu, düşük seviye animasyon yardımcıları. Doğal hissettiren arayüz hareketleri için.
 - **Ne zaman:** Yay fiziği ve jestle sürülen arayüz hareketi gerektiğinde. · **Ne zaman değil:** Genel UI animasyonu (motion-framer) veya zaman çizelgesi işleri.
@@ -302,7 +322,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 71 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ama dar niş; motion-framer de spring sunuyor. 335 gün eski.
 
-### review-animations  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### review-animations  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.
 - **Teknoloji:** css _(otomatik tespit)_
@@ -312,7 +332,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 19 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### rive-interactive  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
+### rive-interactive  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
 
 - **Ne yapar:** Rive durum makinesi tabanlı etkileşimli vektör animasyonu: girdi işleme, ViewModel veri bağlama, rive-react entegrasyonu. Betikler bileşen ve ViewModel iskeleti üretir.
 - **Ne zaman:** Girdiye tepki veren, mantıklı (state machine) animasyon bileşeni gerektiğinde. · **Ne zaman değil:** Düz bir kez oynayan animasyon (lottie-animations).
@@ -323,7 +343,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 26 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Niş ve yararlı ama 'rive-react' paketini kullanıyor (resmî güncel paketler @rive-app/react-canvas / react-webgl2). .riv dosyası tasarım aracı gerektirir. 335 gün eski.
 
-### ui-animation  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### ui-animation  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Implement, review, and measure UI motion. Reconstruct easing, springs and gestures from a recording using bundled frame extraction, tracking and curve-fitting tools when available.
 - **Teknoloji:** api-anahtari, canvas, css, ffmpeg, motion, python, react, tailwind _(otomatik tespit)_

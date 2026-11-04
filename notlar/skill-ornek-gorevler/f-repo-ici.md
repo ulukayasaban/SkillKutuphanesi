@@ -67,10 +67,10 @@
 | `playwright-release-notes` | ⚠️ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `playwright-test-results` | ✅ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `playwright-triage` | ⚠️ | Yalnızca microsoft/playwright deposunun kendi CI triage iş akışı; yöntem fikri (sınıflandır, tip-of-tree'de dene, sürümler arası bisect) referans olarak okunabi |
-| `pr` | ⚠️ | Open a pull request for the current feature |
 | `pr-name` | ✅ | Review or correct a Remotion pull request title |
 | `pr-ready` | ✅ | Resolve CI failures, merge conflicts, or local branch changes to get a PR ready |
 | `pr-status-triage` | ⚠️ | Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
+| `pr@remotion-dev` | ⚠️ | Open a pull request for the current feature |
 | `product-recording` | ✅ | recording Studio interactions, timeline demos, and product shots. |
 | `react-scan` | ✅ | diagnosing unnecessary re-renders, slow commits, frame-reactive component trees, or when comparing render performance before and after a change. |
 | `react-sync` | ✅ | react/react ve vercel/next.js'e birlikte katkı yaparken. |

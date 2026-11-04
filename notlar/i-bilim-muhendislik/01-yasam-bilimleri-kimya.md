@@ -414,7 +414,7 @@ _Biyoinformatik, genomik, ilaç/kimya, klinik ve tıbbi veri, laboratuvar otomas
 - **Boyut:** 239 KB (SKILL.md 30.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### instrument-data-to-allotrope  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### instrument-data-to-allotrope  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Convert laboratory instrument output files (PDF, CSV, Excel, TXT) to Allotrope Simple Model (ASM) JSON format or flattened 2D CSV. Use this skill when scientists need to standardize instrument data for LIMS systems, data lakes, or downstream analysis. Supports auto-detection of instrument types. Outputs include full ASM JSON, flattened CSV for easy import, and exportable Python code for data engin
 - **Teknoloji:** python _(otomatik tespit)_
@@ -544,7 +544,7 @@ _Biyoinformatik, genomik, ilaç/kimya, klinik ve tıbbi veri, laboratuvar otomas
 - **Boyut:** 91 KB (SKILL.md 14.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### nextflow-development  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### nextflow-development  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on sequencing data. Use when analyzing RNA-seq, WGS/WES, or ATAC-seq data—either local FASTQs or public datasets from GEO/SRA. Triggers on nf-core, Nextflow, FASTQ analysis, variant calling, gene expression, differential expression, GEO reanalysis, GSE/GSM/SRR accessions, or samplesheet creation.
 - **Teknoloji:** docker, html, python _(otomatik tespit)_
@@ -844,7 +844,7 @@ _Biyoinformatik, genomik, ilaç/kimya, klinik ve tıbbi veri, laboratuvar otomas
 - **Boyut:** 148 KB (SKILL.md 19.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### scientific-problem-selection  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### scientific-problem-selection  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** This skill should be used when scientists need help with research problem selection, project ideation, troubleshooting stuck projects, or strategic scientific decisions. Use this skill when users ask to pitch a new research idea, work through a project problem, evaluate project risks, plan research strategy, navigate decision trees, or get help choosing what scientific problem to work on. Typical 
 - **Teknoloji:** - _(otomatik tespit)_
@@ -904,7 +904,7 @@ _Biyoinformatik, genomik, ilaç/kimya, klinik ve tıbbi veri, laboratuvar otomas
 - **Boyut:** 49 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### start  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### start  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Set up your bio-research environment and explore available tools. Use when first getting oriented with the plugin, checking which literature, drug-discovery, or visualization MCP servers are connected, or surveying available analysis skills before starting a new project.
 - **Teknoloji:** node _(otomatik tespit)_

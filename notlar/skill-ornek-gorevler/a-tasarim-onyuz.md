@@ -1,10 +1,11 @@
 # Örnek görevler ve test sonucu › a-tasarim-onyuz
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 270 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 277 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
 | `accessibility-review` | ⚠️ | "audit accessibility", "check a11y", "is this accessible?", or when reviewing a design for color contrast, keyboard navigation, touch target size, or screen rea |
+| `audit` | ⚠️ | the user asks to audit, review, critique, inspect, assess, analyze, evaluate, or give feedback on a product experience. |
 | `design-brief` | ✅ | "design brief", "create a design brief", "ilang brief", "structured brief". |
 | `design-critique` | ⚠️ | "review this design", "critique this mockup", "what do you think of this screen?", or when sharing a Figma link or screenshot for feedback at any stage from exp |
 | `design-dna` | ✅ | Referans sitelerin/ekran görüntülerinin stilini analiz edip yeniden kullanılabilir profile çevirmek; stil aktarımı. |
@@ -18,6 +19,7 @@
 | `frontend-design@anthropics-2` | ✅ | Herhangi bir yeni UI veya yeniden tasarım işinde hafif, her zaman açık tutulabilecek estetik ilke seti olarak. |
 | `frontend-design@nexu-io` | ✅ | websites, landing pages, dashboards, React components, application screens, and UI beautification. |
 | `frontend-design@vudovn` | ✅ | ag-kit iş akışı kullanan projelerde veya kadran tabanlı yapılandırma istendiğinde. |
+| `hallmark` | ✅ | the user asks to build or design something new, or names Hallmark |
 | `high-end-visual-design` | ✅ | Teaches the AI to design like a high-end agency. |
 | `image-to-code` | ✅ | Elite website image-to-code skill for Codex. |
 | `imagegen-frontend-mobile` | ✅ | Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. |
@@ -61,8 +63,10 @@
 | `emilkowalski-motion` | ✅ | Motion-design follow-up skill inspired by Emil Kowalski's animation guidance. |
 | `framer-motion` | ✅ | Animasyona 'Disney ilkeleri' çerçevesi verilmek istendiğinde fikir ve parça kaynağı. |
 | `gpt-taste` | ✅ | . |
+| `gsap` | ✅ | writing GSAP animations in HyperFrames compositions. |
 | `gsap-core` | ✅ | Kütüphane belirtilmeden JS animasyonu istendiğinde; tween, ease, stagger, reduced-motion kuralları. |
 | `gsap-core@nexu-io` | ✅ | the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation,  |
+| `gsap-framer-scroll-animation` | ✅ | the user wants to build scroll animations, scroll effects, parallax, scroll-triggered reveals, pinned sections, horizontal scroll, text animations, or any motio |
 | `gsap-frameworks` | ✅ | Vue, Nuxt veya Svelte projesinde GSAP kullanılırken. |
 | `gsap-frameworks@calesthio` | ✅ | Yalnız OpenMontage uyumu gerekirse. |
 | `gsap-frameworks@nexu-io` | ✅ | the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy |
@@ -98,11 +102,13 @@
 | `lightweight-3d-effects` | ⚠️ | Hero arka planı, dekoratif 3D illüstrasyon, kart tilt efekti; ağır framework istemeyen sayfalar. |
 | `playcanvas-engine` | ✅ | Hafif WebGL/WebGPU oyun motoru ve PlayCanvas editörüyle çalışan projeler. |
 | `react-three-fiber` | ⚠️ | Hazır R3F başlangıç projesi ve bileşen üretici betik isteniyorsa; R3F v8/React 18 projeleri. |
+| `react-three-fiber-game` | ✅ | the user wants pmndrs-based scene composition, shared React state, and 3D HUD integration inside a React app. |
 | `spline-interactive` | ✅ | Kodsuz tasarlanmış 3D sahneyi siteye gömmek; tasarımcı odaklı hızlı prototip. |
 | `substance-3d-texturing` | ✅ | Substance Painter lisansı olan ekiplerde doku hattı otomasyonu. |
 | `threejs-animation` | ✅ | glTF animasyonlarını oynatırken, kemik/morph kontrolünde, klip geçişlerinde. |
 | `threejs-animation@calesthio` | ✅ | CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-animation) özet isteniyorsa; normalde gerek yok. |
 | `threejs-asset-pipeline` | ✅ | Model yüklenmeden önce sıkıştırma/doğrulama; yükleme süresi ve GPU belleği düşürme. |
+| `threejs-data-visualization` | ✅ | the visualization needs true spatial structure, dense 2D or 3D GPU rendering, particle or flow animation, volumetric views, or interactive exploration that adds |
 | `threejs-fundamentals` | ✅ | Sıfırdan Three.js sahnesi kurulurken, kamera/renderer/resize ayarlarında, nesne hiyerarşisi kurarken. |
 | `threejs-fundamentals@calesthio` | ✅ | CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-fundamentals) özet isteniyorsa; normalde gerek yok. |
 | `threejs-geometry` | ✅ | Özel mesh/vertex verisi, instanced mesh, nokta bulutu, 3D yazı gerektiğinde. |
@@ -198,7 +204,7 @@
 | `playtest-report` | ✅ | Structured playtest report template, or turn existing playtest notes into structured feedback. |
 | `project-stage-detect` | ✅ | Analyze project state, detect stage, identify gaps, recommend next steps. |
 | `propagate-design-change` | ✅ | the user changed a number or rule in a GDD and asks which ADRs or architecture decisions are now out of date. |
-| `prototype` | ✅ | Concept prototype before GDDs — throwaway HTML, Engine or Paper build, PROCEED/PIVOT/KILL/NOT ASSESSED. |
+| `prototype@donchitos` | ✅ | Concept prototype before GDDs — throwaway HTML, Engine or Paper build, PROCEED/PIVOT/KILL/NOT ASSESSED. |
 | `qa-plan` | ✅ | QA test plan for a sprint — classifies stories by Logic/Integration/Visual/UI, covers automated tests, manual cases, smoke scope. |
 | `quick-design` | ✅ | Lightweight spec for small changes — tuning adjustments, minor mechanics. |
 | `regression-suite` | ✅ | Map test coverage to GDD critical paths, find fixed bugs lacking regression tests, flag drift from new features. |
@@ -273,4 +279,5 @@
 | `web-design-guidelines` | ✅ | asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices". |
 | `webapp-testing` | ✅ | Çalışan yerel uygulamada UI davranışını doğrulamak, ekran görüntüsü almak ve tarayıcı günlüklerini görmek için. |
 | `webapp-testing@composiohq` | ✅ | Yalnızca resmî kopya alınamazsa. |
+| `webapp-testing@github` | ✅ | Toolkit for interacting with and testing local web applications using Playwright. |
 | `webapp-testing@vudovn` | ✅ | Hızlı bir sayfa duman testi ve temel erişilebilirlik kontrolü için; test stratejisi hatırlatması. |

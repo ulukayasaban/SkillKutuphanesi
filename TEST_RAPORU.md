@@ -18,13 +18,13 @@ Her skill (Claude ve Codex sürümü ayrı ayrı) **gerçek kurulum yoluyla** (`
 ## Özet
 | | Sayı |
 |---|---|
-| Test edilen skill | 3815 |
-| ✅ Geçti | 3654 |
-| ⚠️ Uyarı (çalışır, eksik dosya bağlantısı var) | 161 |
+| Test edilen skill | 5250 |
+| ✅ Geçti | 4912 |
+| ⚠️ Uyarı (çalışır, eksik dosya bağlantısı var) | 338 |
 | ❌ Hata | 0 |
-| Sözdizimi denetlenen dosya | py 1654 · sh 67 · js 440 · json 1156 |
+| Sözdizimi denetlenen dosya | py 2035 · sh 115 · js 608 · json 1405 |
 
-## Gerçek agent testi (örneklem: 38 skill · model: varsayılan · tetiklenen 38/38 · maliyet ≈ $2.14 (7 koşu kayıtlı; diğerleri ≈ $0.31/koşu))
+## Gerçek agent testi (örneklem: 43 skill · model: varsayılan · tetiklenen 43/43 · maliyet ≈ $8.05 (12 koşu kayıtlı; diğerleri ≈ $0.67/koşu))
 | Skill | Örnek görev | Sonuç | Yüklenen |
 |---|---|---|---|
 | `gsap-scrolltrigger` | Sayfayı kaydırırken ürün görseli pinlensin ve scroll ile birlikte dönsün (scrub). GSAP ScrollTrigger kodu yaz. | ✅ tetiklendi | gsap-scrolltrigger |
@@ -65,6 +65,11 @@ Her skill (Claude ve Codex sürümü ayrı ayrı) **gerçek kurulum yoluyla** (`
 | `sealeap-ebay-brand-ip-triage` | eBay'de markamın görsellerini kopyalayan sahte ürün ilanları var; VeRO şikayeti için kanıtları nasıl hazırlarım? | ✅ tetiklendi | sealeap-ebay-brand-ip-triage |
 | `web-clone` | Şu sitenin aynısını klonlamak istiyorum, Three.js efektleri dahil: https://example.com | ✅ tetiklendi | web-clone |
 | `motion-lab` | Web sayfamdaki bileşen için uygun bir hover ve metin animasyonu efekti seçip uyarla. | ✅ tetiklendi | motion-lab |
+| `obsidian-markdown@kepano` | Obsidian notlarımda callout, wikilink ve embed sözdizimini doğru kullanarak bir proje notu yaz. | ✅ tetiklendi | obsidian-markdown |
+| `seo-audit@agricidaniel` | Sitemin teknik SEO denetimini yap: Core Web Vitals, indeksleme, schema ve E-E-A-T açısından. | ✅ tetiklendi | seo-audit |
+| `egm-brainstorm` | Yeni bir özellik için spec yazmadan önce Google EGM yöntemiyle beyin fırtınası yap. | ✅ tetiklendi | egm-brainstorm (Read) |
+| `humanizer` | Şu blog yazısındaki yapay zeka yazım izlerini temizle, daha insani olsun. | ✅ tetiklendi | humanizer |
+| `video-shotcraft` | Remotion ile ürünüm için 20 saniyelik sinematik bir tanıtım videosu kurgula. | ✅ tetiklendi | video-shotcraft |
 
 ## 🔧 Bulunan ve düzeltilen hatalar
 Hepsi **kurulan kopyada** düzeltilir; `arsiv/` altındaki orijinaller değişmez. Bu düzeltmeler olmadan aşağıdaki skiller ❌ çıkıyordu.
@@ -75,10 +80,10 @@ Hepsi **kurulan kopyada** düzeltilir; `arsiv/` altındaki orijinaller değişme
 | Kaynaktaki git symlink'leri arşive düz metin olarak gelmiş (12 dosya, ör. `remotion-license` → `../remotion-license`): SKILL.md'deki alt-skill bağlantıları ölüydü | `remotion-best-practices` | Kurulumda taslak silinir, bağlantılar kardeş skill'e çevrilir; kardeş kurulmazsa ön kontrol `kardes-eksik` uyarır |
 | Kaynaktaki git symlink'leri arşive düz metin olarak gelmiş (1 dosya, ör. `remotion-maps` → `../remotion-maps`): SKILL.md'deki alt-skill bağlantıları ölüydü | `remotion-markup` | Kurulumda taslak silinir, bağlantılar kardeş skill'e çevrilir; kardeş kurulmazsa ön kontrol `kardes-eksik` uyarır |
 | Claude hesabındaki aynı adlı skill (`anthropic-skills:<ad>`) kütüphane sürümünün yerine seçiliyordu (agent testinde `docx`). Bu makinede ad çakışması: `docs`, `docx`, `pdf`, `pptx`, `skill-creator`, `xlsx` | 6 skill | Kurulumda proje `.claude/settings.json` → `skillOverrides` ile hesaptaki o projede `off`; ön kontrol `hesap-cakismasi` bildirir, `--dogrula` denetler. Düzeltmeden sonra `docx` agent testi ✅ |
-| Description yok / çok kısa / 1024'ten uzun: agent skill'i doğru durumda seçemiyordu | 56 skill | `registry.json` → `aciklama_duzeltme` (`notlar/tetiklenme-denetimi.md`) |
+| Description yok / çok kısa / 1024'ten uzun: agent skill'i doğru durumda seçemiyordu | 96 skill | `registry.json` → `aciklama_duzeltme` (`notlar/tetiklenme-denetimi.md`) |
 | Frontmatter HTML yorumunun arkasında ya da description YAML'ı bozuyor | 21 skill | Kurulumda kendiliğinden |
 
-## ⚠️ Uyarılar (161)
+## ⚠️ Uyarılar (338)
 Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yok (çoğu kaynak repoda da yok ya da kullanıcının projesindeki bir dosyayı gösteriyor).
 
 <details><summary>Liste</summary>
@@ -86,6 +91,7 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | Skill | Uyarı |
 |---|---|
 | `accessibility-review` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
+| `audit` | SKILL.md'nin andığı 1 dosya pakette yok: ../../references/critical-overrides.md |
 | `design-critique` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `design-handoff` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `design-system@anthropics` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
@@ -110,8 +116,16 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | `code-review` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `debug` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `deploy-checklist` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
+| `egm-bootstrap` | SKILL.md'nin andığı 2 dosya pakette yok: ../../docs/codex.md, ./child/${target_filename} |
+| `egm-brainstorm` | SKILL.md'nin andığı 1 dosya pakette yok: ../../docs/codex.md |
+| `egm-draft` | SKILL.md'nin andığı 2 dosya pakette yok: ../../docs/codex.md, resources/execution_instructions.md |
+| `egm-drift-report` | SKILL.md'nin andığı 1 dosya pakette yok: ../../docs/codex.md |
+| `egm-resolve` | SKILL.md'nin andığı 2 dosya pakette yok: ../../docs/codex.md, [RelativePath] |
+| `egm-review` | SKILL.md'nin andığı 2 dosya pakette yok: ../../docs/codex.md, resources/document_standards/zoom-out-standard.md |
+| `egm-review-loop` | SKILL.md'nin andığı 3 dosya pakette yok: ../../docs/codex.md, resources/document_standards/feature-spec-standard.md, resources/document_standards/implementation-readiness-standard.md |
 | `incident-response` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `standup` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
+| `wayfinder` | SKILL.md'nin andığı 1 dosya pakette yok: link |
 | `cloudflare` | SKILL.md'nin andığı 1 dosya pakette yok: references/mcp.md |
 | `m5-onboard` | SKILL.md'nin andığı 9 dosya pakette yok: references/hardware_signatures.md, references/uiflow2_nvs.md, scripts/detect.py, scripts/fetch_firmware.py |
 | `playwright-cli` | SKILL.md'nin andığı 1 dosya pakette yok: .playwright-cli/page-2026-02-14T19-22-42-679Z.yml |
@@ -121,7 +135,14 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | `flutter-pre-caching` | SKILL.md'nin andığı 2 dosya pakette yok: assets/assets/images/logo.png, assets/images/logo.png |
 | `ios-marketing-capture` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/capture-marketing.sh |
 | `documentation-templates` | SKILL.md'nin andığı 2 dosya pakette yok: ./docs/api.md, ./docs/architecture.md |
-| `obsidian-markdown` | SKILL.md'nin andığı 2 dosya pakette yok: Note%20Name.md, obsidian://open |
+| `obsidian-bases@agricidaniel` | SKILL.md'nin andığı 1 dosya pakette yok: ../../docs/native-conformance.md |
+| `obsidian-markdown@heyitsnoah` | SKILL.md'nin andığı 2 dosya pakette yok: Note%20Name.md, obsidian://open |
+| `obsidian-markdown@kepano` | SKILL.md'nin andığı 1 dosya pakette yok: url |
+| `save` | SKILL.md'nin andığı 1 dosya pakette yok: ../../docs/workflow-acceptance.md |
+| `wiki` | SKILL.md'nin andığı 3 dosya pakette yok: ../../docs/capacity-and-recovery.md, ../../docs/native-conformance.md, ../../docs/upstream-references.md |
+| `wiki-ingest` | SKILL.md'nin andığı 2 dosya pakette yok: ../../docs/workflow-acceptance.md, url |
+| `wiki-mode` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/wiki-mode.py |
+| `wiki-retrieve` | SKILL.md'nin andığı 2 dosya pakette yok: ../../docs/prefix-providers.md, ../../docs/retrieval-evaluation.md |
 | `academy-guide` | SKILL.md'nin andığı 1 dosya pakette yok: URL |
 | `graphify` | SKILL.md'nin andığı 8 dosya pakette yok: references/add-watch.md, references/exports.md, references/extraction-spec.md, references/github-and-merge.md |
 | `od-next-media-inputs` | SKILL.md'nin andığı 1 dosya pakette yok: assets/stock/credits.json |
@@ -130,6 +151,84 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | `skill-development` | SKILL.md'nin andığı 16 dosya pakette yok: assets/font.ttf, assets/logo.png, assets/slides.pptx, examples/script.sh |
 | `skill-development@anthropics` | SKILL.md'nin andığı 16 dosya pakette yok: assets/font.ttf, assets/logo.png, assets/slides.pptx, examples/script.sh |
 | `writing-skills` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/tool.sh |
+| `agents-sdk@openai` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/generate_diagrams.py |
+| `assess-patch-risk` | SKILL.md'nin andığı 1 dosya pakette yok: ../../schemas/patch-risk-assessment.schema.json |
+| `build-report` | SKILL.md'nin andığı 1 dosya pakette yok: ../../assets/demo-product-growth.csv |
+| `canva-resize-for-social-media` | SKILL.md'nin andığı 1 dosya pakette yok: edit_url |
+| `caption-qa` | SKILL.md'nin andığı 1 dosya pakette yok: \d{1,3} |
+| `create-data-context` | SKILL.md'nin andığı 1 dosya pakette yok: references/source-inventory.md |
+| `create-llms` | SKILL.md'nin andığı 12 dosya pakette yok: CODE_OF_CONDUCT.md, CONTRIBUTING.md, README.md, docs/architecture.md |
+| `d365-solution-blueprint` | SKILL.md'nin andığı 1 dosya pakette yok: references/firm-standards.md |
+| `debug-zoom` | SKILL.md'nin andığı 1 dosya pakette yok: ../../README.md |
+| `design-qa` | SKILL.md'nin andığı 1 dosya pakette yok: ../../references/critical-overrides.md |
+| `expo-ui-jetpack-compose` | SKILL.md'nin andığı 1 dosya pakette yok: assets/icons/wifi.xml |
+| `gdpr-compliant` | SKILL.md'nin andığı 2 dosya pakette yok: references/operations.md, references/security.md |
+| `get-context` | SKILL.md'nin andığı 1 dosya pakette yok: ../../references/critical-overrides.md |
+| `google-docs` | SKILL.md'nin andığı 1 dosya pakette yok: plugin://documents@openai-primary-runtime |
+| `google-drive` | SKILL.md'nin andığı 1 dosya pakette yok: plugin://spreadsheets@openai-primary-runtime |
+| `google-sheets` | SKILL.md'nin andığı 1 dosya pakette yok: plugin://spreadsheets@openai-primary-runtime |
+| `google-slides` | SKILL.md'nin andığı 1 dosya pakette yok: plugin://presentations@openai-primary-runtime |
+| `ideate` | SKILL.md'nin andığı 1 dosya pakette yok: ../../references/critical-overrides.md |
+| `image-to-code@openai` | SKILL.md'nin andığı 2 dosya pakette yok: ../../references/critical-overrides.md, ../../references/local-prototype-preflight.md |
+| `index` | SKILL.md'nin andığı 2 dosya pakette yok: ../../.app.json, ../../assets/demo-product-growth.csv |
+| `index@openai` | SKILL.md'nin andığı 2 dosya pakette yok: ../../references/communication-protocol.md, ../../references/critical-overrides.md |
+| `md-to-docx` | SKILL.md'nin andığı 2 dosya pakette yok: diagrams/high-level-architecture.drawio.png, path |
+| `microsoft-skill-creator` | SKILL.md'nin andığı 1 dosya pakette yok: sample_codes/getting-started/hello-kernel.cs |
+| `mixpanel-headless-setup` | SKILL.md'nin andığı 2 dosya pakette yok: ../mixpanelyst/references/analytical-frameworks.md, ../mixpanelyst/references/python-api.md |
+| `ngs-amplicon-microbiome` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-analysis-router` | SKILL.md'nin andığı 2 dosya pakette yok: references/intake-schema.json, references/pipeline-registry.json |
+| `ngs-atacseq-peaks-qc` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-chip-cutrun-peaks-qc` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-dna-germline-variants` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-dna-somatic-variants` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-dna-umi-panel-variants` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-dna-variant-calling` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-scrna-seq` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `ngs-shotgun-metagenomics` | SKILL.md'nin andığı 1 dosya pakette yok: resources/resource_plan.json |
+| `omniverse-cad-to-simready` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/run.py |
+| `omniverse-usd-performance-tuning` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/optimization-report.schema.json |
+| `physical-ai-infrastructure-setup-and-resilient-scaling` | SKILL.md'nin andığı 2 dosya pakette yok: scripts/preflight.sh, scripts/scan_transcript_secrets.py |
+| `plan-zoom-integration` | SKILL.md'nin andığı 1 dosya pakette yok: ../../README.md |
+| `plan-zoom-product` | SKILL.md'nin andığı 1 dosya pakette yok: ../../README.md |
+| `pr-address-feedback` | SKILL.md'nin andığı 2 dosya pakette yok: COMMENT_URL, url |
+| `pr-screenshots` | SKILL.md'nin andığı 3 dosya pakette yok: url, url-to-after-image, url-to-before-image |
+| `qdrant-vertical-scaling` | SKILL.md'nin andığı 1 dosya pakette yok: ../../../qdrant-monitoring/SKILL.md |
+| `quality-playbook` | SKILL.md'nin andığı 3 dosya pakette yok: bin/reference_docs_ingest.py, bin/run_playbook.py, references/filename.md |
+| `research@openai` | SKILL.md'nin andığı 1 dosya pakette yok: ../../references/critical-overrides.md |
+| `screen-recording` | SKILL.md'nin andığı 1 dosya pakette yok: page |
+| `share` | SKILL.md'nin andığı 1 dosya pakette yok: ../../references/critical-overrides.md |
+| `shopify-hydrogen@openai` | SKILL.md'nin andığı 4 dosya pakette yok: docs/api/hydrogen/latest/customer/createcustomeraccount, docs/api/hydrogen/latest/utilities/createcustomeraccountclient, docs/api/hydrogen/latest/utilities/createstorefrontclient, docs/api/hydrogen/utilities/createstorefrontclient |
+| `swiftui-patterns` | SKILL.md'nin andığı 1 dosya pakette yok: references/run-button-bootstrap.md |
+| `track-findings` | SKILL.md'nin andığı 3 dosya pakette yok: app://asdk_app_69a089a326dc8191b32a3f2553f5be2c, app://asdk_app_6a83901dde988191b3f3cefdcc19acfa, app://connector_76869538009648d5b282a4bb21c3d157 |
+| `update-avm-modules-in-bicep` | SKILL.md'nin andığı 1 dosya pakette yok: link |
+| `update-llms` | SKILL.md'nin andığı 12 dosya pakette yok: CODE_OF_CONDUCT.md, CONTRIBUTING.md, README.md, docs/architecture.md |
+| `update-markdown-file-index` | SKILL.md'nin andığı 2 dosya pakette yok: path/to/filename.ext, path/to/filename2.ext |
+| `url-to-code` | SKILL.md'nin andığı 2 dosya pakette yok: ../../references/critical-overrides.md, ../../references/local-prototype-preflight.md |
+| `user-context` | SKILL.md'nin andığı 1 dosya pakette yok: ../../references/critical-overrides.md |
+| `zoom-contact-center-android` | SKILL.md'nin andığı 2 dosya pakette yok: ../../rest-api/SKILL.md, ../../zoom-apps-sdk/SKILL.md |
+| `zoom-contact-center-ios` | SKILL.md'nin andığı 2 dosya pakette yok: ../../oauth/SKILL.md, ../../zoom-apps-sdk/SKILL.md |
+| `zoom-contact-center-web` | SKILL.md'nin andığı 3 dosya pakette yok: ../../cobrowse-sdk/SKILL.md, ../../oauth/SKILL.md, ../../zoom-apps-sdk/SKILL.md |
+| `zoom-meeting-sdk-android` | SKILL.md'nin andığı 3 dosya pakette yok: ../../oauth/SKILL.md, ../SKILL.md, ../references/signature-playbook.md |
+| `zoom-meeting-sdk-electron` | SKILL.md'nin andığı 3 dosya pakette yok: ../../general/SKILL.md, ../../oauth/SKILL.md, ../SKILL.md |
+| `zoom-meeting-sdk-ios` | SKILL.md'nin andığı 1 dosya pakette yok: ../SKILL.md |
+| `zoom-meeting-sdk-linux` | SKILL.md'nin andığı 4 dosya pakette yok: ../references/ai-companion.md, ../references/authorization.md, ../references/bot-authentication.md, ../references/breakout-rooms.md |
+| `zoom-meeting-sdk-macos` | SKILL.md'nin andığı 1 dosya pakette yok: ../SKILL.md |
+| `zoom-meeting-sdk-react-native` | SKILL.md'nin andığı 3 dosya pakette yok: ../../general/SKILL.md, ../../oauth/SKILL.md, ../SKILL.md |
+| `zoom-meeting-sdk-unreal` | SKILL.md'nin andığı 1 dosya pakette yok: ../SKILL.md |
+| `zoom-meeting-sdk-web` | SKILL.md'nin andığı 4 dosya pakette yok: ../../general/use-cases/custom-meeting-ui-web.md, ../../general/use-cases/probe-sdk-preflight-readiness-gate.md, ../../oauth/SKILL.md, ../../probe-sdk/SKILL.md |
+| `zoom-meeting-sdk-web-client-view` | SKILL.md'nin andığı 4 dosya pakette yok: ../SKILL.md, ../concepts/sharedarraybuffer.md, ../troubleshooting/common-issues.md, ../troubleshooting/error-codes.md |
+| `zoom-meeting-sdk-web-component-view` | SKILL.md'nin andığı 4 dosya pakette yok: ../SKILL.md, ../concepts/sharedarraybuffer.md, ../troubleshooting/common-issues.md, ../troubleshooting/error-codes.md |
+| `zoom-meeting-sdk-windows` | SKILL.md'nin andığı 5 dosya pakette yok: ../../oauth/SKILL.md, ../references/ai-companion.md, ../references/authorization.md, ../references/bot-authentication.md |
+| `zoom-video-sdk-android` | SKILL.md'nin andığı 1 dosya pakette yok: ../SKILL.md |
+| `zoom-video-sdk-flutter` | SKILL.md'nin andığı 3 dosya pakette yok: ../../general/SKILL.md, ../../oauth/SKILL.md, ../SKILL.md |
+| `zoom-video-sdk-ios` | SKILL.md'nin andığı 1 dosya pakette yok: ../SKILL.md |
+| `zoom-video-sdk-macos` | SKILL.md'nin andığı 1 dosya pakette yok: ../SKILL.md |
+| `zoom-video-sdk-react-native` | SKILL.md'nin andığı 3 dosya pakette yok: ../../general/SKILL.md, ../../oauth/SKILL.md, ../SKILL.md |
+| `zoom-video-sdk-unity` | SKILL.md'nin andığı 1 dosya pakette yok: ../SKILL.md |
+| `zoom-video-sdk-web` | SKILL.md'nin andığı 3 dosya pakette yok: ../../general/use-cases/probe-sdk-preflight-readiness-gate.md, ../../meeting-sdk/web/component-view/SKILL.md, ../../probe-sdk/SKILL.md |
+| `zoom-virtual-agent-android` | SKILL.md'nin andığı 2 dosya pakette yok: ../../contact-center/android/SKILL.md, ../SKILL.md |
+| `zoom-virtual-agent-ios` | SKILL.md'nin andığı 2 dosya pakette yok: ../../contact-center/ios/SKILL.md, ../SKILL.md |
+| `zoom-virtual-agent-web` | SKILL.md'nin andığı 4 dosya pakette yok: ../../contact-center/web/SKILL.md, ../../oauth/SKILL.md, ../../rest-api/SKILL.md, ../SKILL.md |
 | `add-sfx` | SKILL.md'nin andığı 1 dosya pakette yok: ./packages/remotion-media |
 | `archify-review` | SKILL.md'nin andığı 2 dosya pakette yok: ../../../CONTRIBUTING.md, ../../../REVIEWING.md |
 | `archify-tuning` | SKILL.md'nin andığı 1 dosya pakette yok: ../../../CONTRIBUTING.md |
@@ -140,8 +239,8 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | `playwright-devops` | SKILL.md'nin andığı 1 dosya pakette yok: ../../../.github/workflows/bots.md |
 | `playwright-release-notes` | SKILL.md'nin andığı 4 dosya pakette yok: ./getting-started-mcp.md, ./images/foo.png, ./test-parallel.md, [^(]/$ |
 | `playwright-triage` | SKILL.md'nin andığı 3 dosya pakette yok: ../../../.github/actions/run-agent/guides/triage.md, ../../../.github/workflows/triage.yml, ../../../AGENTS.md |
-| `pr` | SKILL.md'nin andığı 1 dosya pakette yok: ../../../packages/docs/docs/contributing/elements.mdx |
 | `pr-status-triage` | SKILL.md'nin andığı 2 dosya pakette yok: scripts/pr-status/results/index.md, scripts/pr-status/results/thread-N.md |
+| `pr@remotion-dev` | SKILL.md'nin andığı 1 dosya pakette yok: ../../../packages/docs/docs/contributing/elements.mdx |
 | `remotion-new-markup` | SKILL.md'nin andığı 3 dosya pakette yok: ../../../packages/skills/skills/remotion-interactivity/timeline-structure.md, ../../../packages/skills/skills/remotion-markup/connected-compositions.md, ../../../packages/skills/skills/remotion-markup/video-editing.md |
 | `scaffold-element` | SKILL.md'nin andığı 2 dosya pakette yok: ../../../packages/docs/docs/contributing/elements.mdx, ../../../packages/docs/docs/elements.mdx |
 | `studio-dev` | SKILL.md'nin andığı 10 dosya pakette yok: ../../../packages/browser-studio/e2e/browser-studio.test.ts, ../../../packages/docs/docs/ai/webmcp.mdx, ../../../packages/studio/src/components/ActionTooltip.tsx, ../../../packages/studio/src/components/InspectorPanel/optimistic-composition-metadata.ts |
@@ -150,10 +249,14 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | `captions-overlay` | SKILL.md'nin andığı 1 dosya pakette yok: references/captions.md |
 | `remotion-best-practices@calesthio` | SKILL.md'nin andığı 1 dosya pakette yok: ./rules/sound-effects.md |
 | `synthetic-screen-recording` | SKILL.md'nin andığı 1 dosya pakette yok: lib/verify_scene_pacing.py |
+| `tiktok-upload` | SKILL.md'nin andığı 2 dosya pakette yok: examples/get_tk_cookie.py, examples/upload_video_to_tiktok.py |
+| `xueqiu-upload` | SKILL.md'nin andığı 1 dosya pakette yok: images/chart.png |
+| `zhihu-upload` | SKILL.md'nin andığı 1 dosya pakette yok: images/1.png |
 | `elevenlabs` | [codex] SKILL.md'nin andığı 1 dosya pakette yok: ../provider-refresh-oct23/SKILL.md |
 | `text-to-speech` | [codex] SKILL.md'nin andığı 1 dosya pakette yok: ../provider-refresh-oct23/SKILL.md |
 | `manimgl-best-practices` | SKILL.md'nin andığı 5 dosya pakette yok: examples/3d_visualization.py, examples/basic_animations.py, examples/graph_plotting.py, examples/math_visualization.py |
 | `account-research` | SKILL.md'nin andığı 1 dosya pakette yok: references/my-company-context.md |
+| `ads-landing` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/fetch_page.py |
 | `brand-review` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `call-prep` | SKILL.md'nin andığı 1 dosya pakette yok: references/my-company-context.md |
 | `campaign-plan` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
@@ -164,9 +267,12 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | `draft-content` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `draft-response` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `email-sequence` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
+| `geo-llmstxt` | SKILL.md'nin andığı 1 dosya pakette yok: URL |
 | `kb-article` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
+| `link-building` | SKILL.md'nin andığı 6 dosya pakette yok: ../../tools/integrations/ahrefs.md, ../../tools/integrations/dataforseo.md, ../../tools/integrations/exa.md, ../../tools/integrations/firecrawl.md |
 | `performance-report` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `seo-audit` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
+| `seo-geo` | SKILL.md'nin andığı 1 dosya pakette yok: url |
 | `ticket-triage` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `brief` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
 | `comp-analysis` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
@@ -244,10 +350,86 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 | `woo-testing` | SKILL.md'nin andığı 1 dosya pakette yok: bin/install-wp-tests.sh |
 | `bulk-rnaseq` | SKILL.md'nin andığı 1 dosya pakette yok: scripts/run_enrichment.py |
 | `start` | SKILL.md'nin andığı 1 dosya pakette yok: ../../CONNECTORS.md |
+| `autoresearch` | SKILL.md'nin andığı 1 dosya pakette yok: references/citation-workflow.md |
+| `blip-2-vision-language` | SKILL.md'nin andığı 3 dosya pakette yok: image, query, raw_image |
+| `constitutional-ai` | SKILL.md'nin andığı 3 dosya pakette yok: references/constitution-design.md, references/cot-critique.md, references/rlaif-comparison.md |
+| `guidance` | SKILL.md'nin andığı 1 dosya pakette yok: lm["action_input"] |
+| `llamaguard` | SKILL.md'nin andığı 3 dosya pakette yok: references/benchmarks.md, references/custom-categories.md, references/deployment.md |
+| `mamba-architecture` | SKILL.md'nin andığı 3 dosya pakette yok: references/mamba2-details.md, references/performance.md, references/selective-ssm.md |
+| `moe-training` | SKILL.md'nin andığı 1 dosya pakette yok: expert_input |
+| `nemo-guardrails` | SKILL.md'nin andığı 3 dosya pakette yok: references/colang-guide.md, references/integrations.md, references/performance.md |
+| `optimizing-attention-flash` | SKILL.md'nin andığı 2 dosya pakette yok: references/advanced-features.md, references/algorithm.md |
+| `ray-train` | SKILL.md'nin andığı 2 dosya pakette yok: references/custom-loops.md, references/hyperparameter-tuning.md |
+| `segment-anything-model` | SKILL.md'nin andığı 2 dosya pakette yok: checkpoint="sam_vit_b_01ec64.pth", checkpoint="sam_vit_h_4b8939.pth" |
+| `speculative-decoding` | SKILL.md'nin andığı 1 dosya pakette yok: references/draft_model.md |
+| `verl-rl-training` | SKILL.md'nin andığı 1 dosya pakette yok: references/multi-turn.md |
+| `alphaxiv` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/integration-contract.md |
+| `arxiv` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/wiki-helper-resolution.md |
+| `auto-paper-improvement-loop` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/reviewer-backends.md |
+| `auto-review-loop` | SKILL.md'nin andığı 6 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md |
+| `auto-review-loop-llm` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md |
+| `auto-review-loop-minimax` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md |
+| `citation-audit` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/reviewer-backends.md |
+| `citation-crosscheck` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/acceptance-gate.md, ../shared-references/external-cadence.md, ../shared-references/fan-out-pattern.md, ../shared-references/integration-contract.md |
+| `claims-drafting` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `deepxiv` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/wiki-helper-resolution.md |
+| `dse-loop` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/external-cadence.md |
 | `exa-search` | SKILL.md'nin andığı 1 dosya pakette yok: url |
+| `exa-search@wanshuiyin` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/wiki-helper-resolution.md |
+| `experiment-audit` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/reviewer-backends.md |
+| `experiment-bridge` | SKILL.md'nin andığı 5 dosya pakette yok: ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md, ../shared-references/reviewer-backends.md |
+| `experiment-plan` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md |
+| `experiment-queue` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/external-cadence.md |
+| `figure-spec` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/reviewer-backends.md |
+| `firecrawl-search` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/citation-discipline.md, ../shared-references/integration-contract.md, ../shared-references/wiki-helper-resolution.md |
+| `gemini-search` | SKILL.md'nin andığı 1 dosya pakette yok: url |
+| `grant-proposal` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md, ../shared-references/reviewer-backends.md |
+| `idea-creator` | SKILL.md'nin andığı 10 dosya pakette yok: ../shared-references/acceptance-gate.md, ../shared-references/citation-discipline.md, ../shared-references/fan-out-pattern.md, ../shared-references/injection-hygiene.md |
+| `idea-discovery` | SKILL.md'nin andığı 7 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/output-composition.md, ../shared-references/output-language.md, ../shared-references/output-manifest.md |
+| `idea-discovery-robot` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md, ../shared-references/reviewer-backends.md |
+| `interview-cheatsheet` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `invention-structuring` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `keenable-search` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/integration-contract.md |
+| `kill-argument` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/fan-out-pattern.md, ../shared-references/reviewer-backends.md |
+| `lean-formalize` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/fan-out-pattern.md, ../shared-references/reviewer-backends.md, ../shared-references/reviewer-routing.md |
+| `meta-apply` | SKILL.md'nin andığı 5 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/review-scope-limits.md, ../shared-references/review-tracing.md, ../shared-references/reviewer-backends.md |
+| `meta-optimize` | SKILL.md'nin andığı 8 dosya pakette yok: ../../templates/claude-hooks/corpus_write_guard.json, ../shared-references/acceptance-gate.md, ../shared-references/capture-antipatterns.md, ../shared-references/output-language.md |
+| `monitor-experiment` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/external-cadence.md |
+| `novelty-check` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/citation-discipline.md, ../shared-references/integration-contract.md, ../shared-references/reviewer-backends.md |
+| `openalex` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/integration-contract.md |
+| `paper-claim-audit` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/reviewer-backends.md |
+| `paper-figure` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `paper-illustration-image2` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/reviewer-backends.md |
+| `paper-plan` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md, ../shared-references/reviewer-backends.md |
+| `paper-poster-html` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `paper-slides` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `paper-talk` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `paper-write` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `paper-writing` | SKILL.md'nin andığı 5 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md |
 | `parallel-web` | SKILL.md'nin andığı 1 dosya pakette yok: url |
+| `patent-novelty-check` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `patent-pipeline` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `patent-review` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `pixel-art` | SKILL.md'nin andığı 1 dosya pakette yok: filename.svg |
+| `proof-checker` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/fan-out-pattern.md, ../shared-references/reviewer-backends.md |
+| `rebuttal` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `render-html` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/reviewer-backends.md, url |
+| `research-implement-feature` | SKILL.md'nin andığı 11 dosya pakette yok: ../shared-references/acceptance-gate.md, ../shared-references/capture-antipatterns.md, ../shared-references/effort-contract.md, ../shared-references/injection-hygiene.md |
+| `research-lit` | SKILL.md'nin andığı 5 dosya pakette yok: ../shared-references/citation-discipline.md, ../shared-references/fan-out-pattern.md, ../shared-references/integration-contract.md, ../shared-references/output-composition.md |
+| `research-pipeline` | SKILL.md'nin andığı 7 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md |
+| `research-refine` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md, ../shared-references/reviewer-backends.md |
+| `research-refine-pipeline` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/output-language.md, ../shared-references/output-manifest.md, ../shared-references/output-versioning.md, ../shared-references/reviewer-backends.md |
+| `research-review` | SKILL.md'nin andığı 3 dosya pakette yok: ../shared-references/external-cadence.md, ../shared-references/output-composition.md, ../shared-references/reviewer-backends.md |
+| `research-wiki` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/capture-antipatterns.md, ../shared-references/integration-contract.md |
+| `resubmit-pipeline` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `result-to-claim` | SKILL.md'nin andığı 4 dosya pakette yok: ../shared-references/evidence-precheck.md, ../shared-references/external-cadence.md, ../shared-references/reviewer-backends.md, ../shared-references/wiki-helper-resolution.md |
+| `semantic-scholar` | SKILL.md'nin andığı 2 dosya pakette yok: ../shared-references/integration-contract.md, ../shared-references/wiki-helper-resolution.md |
+| `slides-polish` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `specification-writing` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/reviewer-backends.md |
+| `training-check` | SKILL.md'nin andığı 3 dosya pakette yok: ../../tools/watchdog.py, ../shared-references/external-cadence.md, ../shared-references/reviewer-backends.md |
+| `wiki-enrich` | SKILL.md'nin andığı 1 dosya pakette yok: ../shared-references/output-language.md |
 
 </details>
 
 ## Tüm skiller ve örnek görevleri
-3815 skill'in tek tek sonucu ve örnek görevi, alana göre: [a-tasarim-onyuz](notlar/skill-ornek-gorevler/a-tasarim-onyuz.md) (270) · [b-yazilim-gelistirme](notlar/skill-ornek-gorevler/b-yazilim-gelistirme.md) (293) · [c-dokuman-icerik](notlar/skill-ornek-gorevler/c-dokuman-icerik.md) (88) · [d-ai-otomasyon](notlar/skill-ornek-gorevler/d-ai-otomasyon.md) (83) · [e-entegrasyon-katalogu](notlar/skill-ornek-gorevler/e-entegrasyon-katalogu.md) (832) · [f-repo-ici](notlar/skill-ornek-gorevler/f-repo-ici.md) (114) · [g-video-ses-medya](notlar/skill-ornek-gorevler/g-video-ses-medya.md) (105) · [h-is-alanlari](notlar/skill-ornek-gorevler/h-is-alanlari.md) (1835) · [i-bilim-muhendislik](notlar/skill-ornek-gorevler/i-bilim-muhendislik.md) (195)
+5250 skill'in tek tek sonucu ve örnek görevi, alana göre: [a-tasarim-onyuz](notlar/skill-ornek-gorevler/a-tasarim-onyuz.md) (277) · [b-yazilim-gelistirme](notlar/skill-ornek-gorevler/b-yazilim-gelistirme.md) (358) · [c-dokuman-icerik](notlar/skill-ornek-gorevler/c-dokuman-icerik.md) (112) · [d-ai-otomasyon](notlar/skill-ornek-gorevler/d-ai-otomasyon.md) (112) · [e-entegrasyon-katalogu](notlar/skill-ornek-gorevler/e-entegrasyon-katalogu.md) (1781) · [f-repo-ici](notlar/skill-ornek-gorevler/f-repo-ici.md) (114) · [g-video-ses-medya](notlar/skill-ornek-gorevler/g-video-ses-medya.md) (146) · [h-is-alanlari](notlar/skill-ornek-gorevler/h-is-alanlari.md) (1972) · [i-bilim-muhendislik](notlar/skill-ornek-gorevler/i-bilim-muhendislik.md) (378)

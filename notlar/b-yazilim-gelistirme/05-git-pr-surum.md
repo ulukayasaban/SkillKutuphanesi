@@ -2,7 +2,7 @@
 
 _Git, worktree, PR, sürüm/release, changelog_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/10**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/12**
 
 ### changelog-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
@@ -37,6 +37,16 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, dal-bitirme grubunun birincili. Gerekçe: kullanıcıya karar bırakan sabit menü, temel dal doğrulaması ve kökene dayalı worktree temizliği ile en güvenli kapanış; pull-request (heyitsnoah) onaysız push eğilimli tek komut → alternatif.
 
+### finishing-a-development-branch@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Use when implementation is complete, all tests pass, and you need to decide how to integrate the work
+- **Teknoloji:** git, node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### git-workflow-and-versioning  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
 - **Ne yapar:** Git iş akışı disiplini: trunk tabanlı geliştirme, erken ve sık commit, atomik commit ve açıklayıcı mesajlar, konuları ayırma, değişiklik boyutu, dal stratejisi ve isimlendirme, worktree ile paralel iş, 'kayıt noktası' deseni, değişiklik özetleri, commit öncesi hijyen, üretilmiş dosyalar, git ile hata ayıklama (bisect), semantik sürümleme, tag'i doğruluk kaynağı yapma ve insanlar için changelog.
@@ -48,7 +58,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### git-worktrees  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
+### git-worktrees  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
 
 - **Ne yapar:** git worktree komut başvurusu: oluşturma (yeni/var olan dal), .worktrees/ dizin düzeni, kurulum sonrası adımlar (bağımlılık, env dosyası), commit edilmemiş değişiklik varken silmeme kuralı, kaldırma karar matrisi ve temizlik/prune.
 - **Ne zaman:** Elle worktree yönetimi, PR incelemesi için ayrı checkout veya birleşme sonrası temizlik komutları gerektiğinde. · **Ne zaman değil:** Agent iş akışında yalıtım kurulumu (using-git-worktrees daha güvenli ve harness farkında).
@@ -59,7 +69,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ve kısa komut başvurusu; mevcut worktree'yi algılama veya yerel araç tercih etme yok. '.env kopyala' önerisi gizli bilgiyi çoğaltabilir.
 
-### pr-feedback-quality-gate  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### pr-feedback-quality-gate  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Safely track pull request feedback, resolve review comments or merge conflicts, validate fixes, and use a read-only cross-review before committing or pushing follow-up changes.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -69,7 +79,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### pull-request  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
+### pull-request  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
 
 - **Ne yapar:** Tek komutla PR akışı: önkoşulları kontrol eder (git, gh), başlıktan dal adı üretir, değişiklikleri gösterip onay ister, conventional commit mesajıyla commit eder, push eder ve özet/değişiklikler/test listesi içeren gövdeyle gh pr create çalıştırır.
 - **Ne zaman:** Kullanıcı açıkça 'PR aç' dediğinde hızlı dal + commit + push + PR. · **Ne zaman değil:** Kullanıcı birleştirme yöntemini henüz seçmediyse (finishing-a-development-branch); push'un onay gerektirdiği ortamlar; değişiklikler zaten bir dalda düzenliyse.
@@ -80,7 +90,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 5 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kullanışlı ama 'staged yoksa git add -A' ve sabit 'Generated with Claude Code' imzası körlemesine; push ve PR dışa dönük eylem, yalnız kullanıcı isteğiyle çalışmalı.
 
-### release-notes-one-pager  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### release-notes-one-pager  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Release notes one-page HTML with highlights, Added, Fixed, Breaking changes, Known issues, and Upgrade note. Writes explicit "None" style sections whenever the user does not provide details.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -90,7 +100,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 41 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### release@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
+### release@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
 
 - **Ne yapar:** Release akışını otomatikleştirir: son tag'den beri commit'leri analiz edip (BREAKING/feat/fix) sürüm artışını belirler, package.json sürümünü günceller, CHANGELOG.md'deki Unreleased bölümünü yeni sürüme taşır, commit + annotated tag atar, push eder ve gh release create ile GitHub sürümü yayınlar.
 - **Ne zaman:** package.json ve CHANGELOG.md (Keep a Changelog) kullanan Node projelerinde sürüm kesmek. · **Ne zaman değil:** package.json olmayan projeler (Python, Rust…); sürüm otomasyonu CI'da (release-please, changesets) yapılıyorsa; push/yayın onayı alınmadan.
@@ -111,3 +121,13 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Durum:** tercih · **Örtüşme:** worktree → birincil · **Roller:** planlayici
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, worktree grubunun birincili. Gerekçe: 'harness ile kavga etme' ilkesi, var olan yalıtımı algılama, alt modül koruması ve onay adımı; Claude Code/Codex worktree araçlarıyla uyumlu. heyitsnoah git-worktrees yalnız komut başvurusu → alternatif.
+
+### using-git-worktrees@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
+- **Teknoloji:** git, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
+- **İnceleme:** otomatik
