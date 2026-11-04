@@ -67,7 +67,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa (4.7 KB), odaklı ve resmî; komutlar tutarlı ve tipik bir inceleme akışı veriyor. Dikkat: yalnızca `npx playwright trace` alt komutunu içeren yeni Playwright sürümlerinde çalışır; `allowed-tools: Bash(npx playwright trace:*)` ile kapsam sınırlı, ek kurulum/ağ yok.
 
-### react-doctor  ·  darkroomengineering/satus @ 7907ded  ·  puan 75 (B)
+### react-doctor  ·  darkroomengineering/satus @ 5cb0547  ·  puan 75 (B)
 
 - **Ne yapar:** React kod tabanını güvenlik, performans, doğruluk, erişilebilirlik ve mimari açısından tarayıp 0-100 sağlık puanı veren `react-doctor` CLI'ının skill'i. Değişiklik sonrası `--diff` ile gerileme kontrolü, tam tarama ve `/doctor` ile uzaktan çekilen triyaj playbook'u akışı vardır.
 - **Ne zaman:** React kodu bitirirken/commit öncesi puan gerilemesini yakalamak, lint-erişilebilirlik-bundle sorunlarını önceliklendirmek için. · **Ne zaman değil:** React olmayan projelerde değil. Ağdan talimat çekmek istemeyen/izole ortamlarda `/doctor` akışı kullanılmamalı.

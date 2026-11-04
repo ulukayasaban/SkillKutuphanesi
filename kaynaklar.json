@@ -56,8 +56,10 @@
       "tip": "T2",
       "oncelik": 2,
       "dahil": [
-        "^\\.agents/skills/react-doctor/"
-      ]
+        "^\\.agents/skills/react-doctor/",
+        "^\\.agents/skills/next-bundle-optimizer/"
+      ],
+      "not": "next-bundle-optimizer kaynakta sonradan eklendi; kullanıcı onayıyla 2026-11-04'te alındı (kapsam denetimi 'karar bekliyor')."
     },
     {
       "repo": "pbakaus/impeccable",

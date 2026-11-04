@@ -31474,11 +31474,11 @@
       "varyantlar": {},
       "repo": "darkroomengineering/satus",
       "kaynak_yol": ".agents/skills/react-doctor",
-      "commit": "7907deda2a5792776cbafa5dd26cdd148f692139",
+      "commit": "5cb0547b2f1845371a22353d5282bcf1e574094e",
       "lisans": "MIT",
       "tip": "T2",
       "gizli": false,
-      "arsiv_tarihi": "2026-11-02",
+      "arsiv_tarihi": "2026-11-04",
       "ust_skill": null,
       "bagimlilik": null,
       "kopya_kaynaklar": [],
@@ -54221,7 +54221,9 @@
       "arsiv_tarihi": "2026-11-02",
       "ust_skill": null,
       "bagimlilik": null,
-      "kopya_kaynaklar": [],
+      "kopya_kaynaklar": [
+        "darkroomengineering/satus:.agents/skills/next-bundle-optimizer"
+      ],
       "ayna_sayisi": 0,
       "atlanan_dosyalar": [],
       "aciklama": "Audit and reduce Next.js browser initial-load work. Use for slow route startup, oversized client bundles, duplicate browser dependencies, or features that can wait for interaction.",
@@ -549840,13 +549842,6 @@
         "packages/playwright-core/src/tools/skills/playwright-trace/SKILL.md": "secildi"
       }
     },
-    "darkroomengineering/satus": {
-      "commit": "7907deda2a5792776cbafa5dd26cdd148f692139",
-      "skill_md": {
-        ".agents/skills/next-bundle-optimizer/SKILL.md": "dahil-disi",
-        ".agents/skills/react-doctor/SKILL.md": "secildi"
-      }
-    },
     "pbakaus/impeccable": {
       "commit": "e89e3ada3e875a89ac2c5d33d11e65ebef6fe285",
       "skill_md": {
@@ -558081,6 +558076,13 @@
         "plugins/zoom/skills/websockets/SKILL.md": "secildi",
         "plugins/zoom/skills/zoom-apps-sdk/SKILL.md": "secildi",
         "plugins/zotero/skills/zotero/SKILL.md": "secildi"
+      }
+    },
+    "darkroomengineering/satus": {
+      "commit": "5cb0547b2f1845371a22353d5282bcf1e574094e",
+      "skill_md": {
+        ".agents/skills/next-bundle-optimizer/SKILL.md": "secildi",
+        ".agents/skills/react-doctor/SKILL.md": "secildi"
       }
     }
   }
