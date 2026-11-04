@@ -396,7 +396,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### affiliate-marketing-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Build and scale an affiliate program for an e-commerce store: platform choice (ShareASale, Impact, Refersion), commission structures, affiliate recruitment, tracking/attribution and fraud control. Use when launching or optimizing an affiliate or referral partner program for Shopify, Amazon or an independent store.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1566,7 +1566,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### conversion-rate-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Run conversion rate optimization (CRO) for an e-commerce store on any platform: funnel mapping, drop-off analysis, heuristic audits (LIFT, ResearchXL), product page, cart, checkout and mobile fixes, and a test roadmap. Use when traffic is fine but sales are low, or to audit a store's conversion funnel.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1656,7 +1656,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### customer-feedback-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Analyze customer reviews and feedback for e-commerce products: sentiment, recurring pain points, feature requests and improvement priorities across Amazon, Shopify, Etsy, Walmart and other marketplaces. Use when summarizing reviews, finding why ratings drop, or turning feedback into a product/listing action plan.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1796,7 +1796,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ebay-advertising  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan and optimize eBay advertising: Promoted Listings Standard and Advanced, Offsite Ads, ad rates and CPC bids, budget allocation and ROAS tracking. Use when an eBay seller sets up or tunes promoted listing campaigns.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1807,7 +1807,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ebay-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Research profitable products to sell on eBay: completed/sold listings, sell-through rates, average selling prices, competition density, seasonality, fees and sourcing (arbitrage, wholesale, thrift). Use when deciding what to sell or source for eBay.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1828,7 +1828,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ebay-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Complete guide to selling on eBay: account and seller levels, auction vs Buy It Now vs Best Offer, listing and photo best practices, shipping and returns, Top Rated Seller and scaling. Use when starting or growing an eBay store.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1839,7 +1839,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ebay-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Choose tools and software for eBay sellers: listing and bulk-edit tools, repricers, profit analytics, inventory sync, shipping and research tools, free vs paid by seller level. Use when an eBay seller needs to automate or scale operations.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1849,7 +1849,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ebay-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Optimize eBay listings for Cassini/Best Match search: titles, item specifics, category choice, listing quality and seller performance factors. Use when eBay listings get few views or impressions, or when writing eBay titles.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1869,7 +1869,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ecommerce-ab-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan A/B tests for e-commerce on any platform: product pages, pricing, ads, emails and checkout with hypothesis prioritization (ICE, PIE, RICE), sample size and statistical significance. Use when designing, sizing or interpreting a store experiment, including Amazon Manage Your Experiments.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1959,7 +1959,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ecommerce-customer-retention  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Increase e-commerce customer retention and repeat purchases: post-purchase email/SMS flows, loyalty programs, RFM segmentation, subscriptions, win-back campaigns and LTV. Use when repeat purchase rate is low or planning retention marketing.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -1989,7 +1989,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ecommerce-feed-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Manage and monitor e-commerce product feeds: feed health checks, sync error diagnosis, missing SKU detection and attribute completeness for Google Shopping, Meta, Amazon and marketplace catalogs. Use when product feeds are rejected or disapproved, listings go missing, or a catalog sync needs validation.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -2110,7 +2110,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ecommerce-subscription-model  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design and launch an e-commerce subscription: subscribe-and-save, replenishment or curation boxes, pricing tiers, platform setup (Shopify subscriptions, ReCharge, Amazon Subscribe & Save), churn reduction and MRR metrics. Use when adding subscriptions or memberships to a store.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -2120,7 +2120,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### ecommerce-video-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan video marketing for e-commerce brands: product demos, unboxing, tutorials, UGC, live streams and short-form (Reels, TikTok, Shorts), plus Amazon product video and video SEO. Use when creating a product video strategy or scripts for selling online.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -2321,7 +2321,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### etsy-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Complete guide to selling on Etsy: shop setup, Etsy SEO (tags, titles, categories), listing photos and descriptions, pricing with Etsy fees, Etsy Ads, Star Seller and shop analytics for handmade, vintage and digital products. Use when opening, optimizing or growing an Etsy shop.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -2621,7 +2621,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### influencer-outreach  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Find and manage influencer partnerships for e-commerce brands: discovery by niche and audience, cold/warm outreach templates, rate negotiation, campaign briefs, contracts with usage rights, and performance tracking on Instagram, TikTok and YouTube. Use when planning or running influencer campaigns.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -2661,7 +2661,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### inventory-tracking-software  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design inventory tracking for e-commerce businesses: stock monitoring, low-stock alerts, reorder points and multi-channel inventory sync, plus choosing inventory software. Use when preventing overselling or stockouts across Shopify, Amazon, Etsy, Walmart or other channels.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -3271,7 +3271,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### minimum-advertised-price  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Create and enforce a MAP (Minimum Advertised Price) policy: policy drafting, violation monitoring across marketplaces, dealer/reseller compliance and enforcement workflows. Use when a brand's resellers undercut prices or a MAP policy needs to be written or enforced.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -3491,7 +3491,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### multichannel-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Run e-commerce operations across multiple marketplaces: inventory sync and oversell prevention, centralized order routing, listing syndication, cross-channel pricing and unified analytics for Amazon, Shopify, Walmart, eBay, Etsy and TikTok Shop; compares tools like ChannelAdvisor, Sellbrite, LitCommerce. Use when selling on more than one channel.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -3701,7 +3701,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### omnichannel-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan an omnichannel e-commerce strategy: channel selection by product and audience, consistent branding and content, inventory and order unification, cross-channel pricing and customer data/CRM across Amazon, Shopify, Walmart, TikTok Shop, eBay and Etsy. Use when deciding which channels to expand into and how to unify them.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -3711,7 +3711,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### online-reputation-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Manage an e-commerce brand's online reputation: review and mention monitoring, negative review responses, rating recovery plans and crisis communication templates. Use when ratings drop, a bad review or social post spreads, or a brand needs a reputation monitoring routine.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -4295,7 +4295,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### restock-alert  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan restocking for e-commerce inventory: reorder points, safety stock, lead-time math, stockout risk scores and restock alerts. Use when deciding when and how much to reorder, or avoiding lost sales from out-of-stock products.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -12834,7 +12834,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### share-of-shelf  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Measure digital share of shelf: brand visibility and search position within product categories versus competitors on Amazon, Walmart and other marketplaces, and track shelf-position trends. Use when benchmarking category visibility or competitor search rankings.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -12864,7 +12864,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-ab-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Run A/B tests on a Shopify store: tool selection, hypothesis prioritization (ICE/PIE), product page, price, image, copy and checkout tests, sample size, duration and significance. Use when testing changes on Shopify.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -12874,7 +12874,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-admin  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** The Admin GraphQL API lets you build apps and integrations that extend and enhance the Shopify admin.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14064,7 +14064,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-analytics-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Understand Shopify analytics and reporting: sessions, conversion rate, AOV, product and channel reports, attribution, cohorts and LTV, custom reports and GA4/Triple Whale integration. Use when reading Shopify reports or deciding what to change based on store data.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -14194,7 +14194,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-conversion-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Increase a Shopify store's conversion rate: funnel drop-off analysis, product page and checkout optimization, trust signals, mobile UX, page speed and testing. Use when a Shopify store gets traffic but not enough sales.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -14205,7 +14205,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-custom-data  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 52 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** MUST be used first when prompts mention Metafields or Metaobjects. Use Metafields and Metaobjects to model and store custom data for your app. Metafields extend built-in Shopify data types like products or customers, Metaobjects are custom data types that can be used to store bespoke data structures. Metafield and Metaobject definitions provide a schema and configuration for values to follow.
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14215,7 +14215,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-customer  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** The Customer Account API allows customers to access their own data including orders, payment methods, and addresses.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14235,7 +14235,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-dev  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Search Shopify developer documentation across all APIs. Use only when no API-specific skill applies.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14275,7 +14275,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-functions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 49 (D)
 
-- **Ne yapar:** 
+- **Ne yapar:** Shopify Functions allow developers to customize the backend logic that powers parts of Shopify. Available APIs: Discount, Cart and Checkout Validation, Cart Transform, Pickup Point Delivery Option Generator, Delivery Customization, Fulfillment Constraints, Local Pickup Delivery Option Generator, Order Routing Location Rule, Payment Customization
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14305,7 +14305,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-hydrogen  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 48 (D)
 
-- **Ne yapar:** 
+- **Ne yapar:** Hydrogen storefront implementation cookbooks. Some of the available recipes are: B2B Commerce, Bundles, Combined Listings, Custom Cart Method, Dynamic Content with Metaobjects, Express Server, Google Tag Manager Integration, Infinite Scroll, Legacy Customer Account Flow, Markets, Partytown + Google Tag Manager, Subscriptions, Third-party API Queries and Caching. MANDATORY: Use this API for ANY Hyd
 - **Teknoloji:** api-anahtari, html, node, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14365,7 +14365,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-liquid  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 48 (D)
 
-- **Ne yapar:** 
+- **Ne yapar:** Liquid is an open-source templating language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts. Keywords: liquid, theme, shopify-theme, liquid-component, liquid-block, liquid-section, liquid-snippet, liquid-schemas, shopify-theme-schemas
 - **Teknoloji:** css, git, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14435,7 +14435,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-page-speed  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Diagnose and improve Shopify store speed: Core Web Vitals (LCP, CLS, INP), theme and app bloat, image and script optimization. Use when a Shopify store is slow, fails PageSpeed/Lighthouse, or app scripts hurt load time and conversions.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -14445,7 +14445,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-partner  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** The Partner API lets you programmatically access data about your Partner Dashboard, including your apps, themes, and affiliate referrals.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14465,7 +14465,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-payments-apps  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** The Payments Apps API enables payment providers to integrate their payment solutions with Shopify's checkout.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14495,7 +14495,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-polaris-admin-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 52 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Add custom actions and blocks from your app at contextually relevant spots throughout the Shopify Admin. Admin UI Extensions also supports scaffolding new adminextensions using Shopify CLI commands.
 - **Teknoloji:** html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14505,7 +14505,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-polaris-app-home  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 52 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Build your app's primary user interface embedded in the Shopify admin. If the prompt just mentions `Polaris` and you can't tell based off of the context what API they meant, assume they meant this API.
 - **Teknoloji:** api-anahtari, html, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14515,7 +14515,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-polaris-checkout-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 52 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Build custom functionality that merchants can install at defined points in the checkout flow, including product information, shipping, payment, order summary, and Shop Pay. Checkout UI Extensions also supports scaffolding new checkout extensions using Shopify CLI commands.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14525,7 +14525,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-polaris-customer-account-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 52 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Build custom functionality that merchants can install at defined points on the Order index, Order status, and Profile pages in customer accounts. Customer Account UI Extensions also supports scaffolding new customer account extensions using Shopify CLI commands.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14535,7 +14535,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-pos-ui  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 52 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Build retail point-of-sale applications using Shopify's POS UI components. These components provide a consistent and familiar interface for POS applications. POS UI Extensions also supports scaffolding new POS extensions using Shopify CLI commands. Keywords: POS, Retail, smart grid
 - **Teknoloji:** html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14565,7 +14565,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Optimize a Shopify store for search: technical SEO audit, product and collection page titles/meta, URL structure, duplicate content, schema markup, blog strategy, internal links and SEO apps. Use when improving organic Google traffic for Shopify.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -14596,7 +14596,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-store-setup  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Set up a new Shopify store from account creation to first sale: plan and theme choice, product catalog and variants, payments, shipping zones, taxes, domain and launch checklist. Use when building or launching a Shopify store.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -14616,7 +14616,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shopify-storefront-graphql  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Use for custom storefronts requiring direct GraphQL queries/mutations for data fetching and cart operations. Choose this when you need full control over data fetching and rendering your own UI. NOT for Web Components - if the prompt mentions HTML tags like <shopify-store>, <shopify-cart>, use storefront-web-components instead.
 - **Teknoloji:** html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** Shopify (kurum, resmî, ★100, son güncelleme 2026-06-17, lisans yok)
@@ -14726,7 +14726,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### shoppable-video  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Create shoppable video for e-commerce: format choice for TikTok Shop, Instagram Reels, YouTube Shorts and Amazon Live, product tagging, hooks, scripts, CTAs, live shopping events and view-to-purchase analytics. Use when making videos that sell products directly.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -15126,7 +15126,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### tiktok-live-selling  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Run TikTok Shop live selling: session planning, setup, audience engagement, product pinning, flash deals and bundles, GPM (GMV per mille) optimization and post-live analytics. Use when planning or improving TikTok LIVE sales streams.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -15666,7 +15666,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### visual-regression-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design visual regression testing for e-commerce websites: screenshot comparison workflows, mobile/desktop visual checks and change-detection alerts for product, cart and checkout pages. Use when theme updates, app installs or deploys might silently break the store's layout.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -15686,7 +15686,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### walmart-advertising-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan Walmart Connect advertising: Sponsored Products, Sponsored Brands and Videos, Display/DSP, keyword targeting, bidding, budgets and ROAS optimization. Use when a Walmart Marketplace seller launches or tunes ad campaigns.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -15707,7 +15707,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### walmart-price-tracker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Track Walmart Marketplace prices: competitor price positioning, price-trend analysis and repricing strategies for Walmart sellers (Buy Box aware). Use when monitoring Walmart competitor prices or setting repricing rules.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -15728,7 +15728,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### walmart-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Complete guide to selling on Walmart Marketplace: seller application and approval, listing creation and Walmart SEO, Walmart Fulfillment Services (WFS), Buy Box and pricing, Pro Seller badge and advertising. Use when starting or scaling on Walmart.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -15739,7 +15739,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### walmart-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Choose tools for Walmart Marketplace sellers: product research, listing quality, Walmart Connect ad management, inventory and order software, repricers, analytics and WFS planning. Use when a Walmart seller needs to automate or scale.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -16449,7 +16449,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 
 ### woocommerce-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
-- **Ne yapar:** 
+- **Ne yapar:** Optimize a WooCommerce store for search: technical SEO audit, product titles/meta/URLs, schema markup (Product, Review, FAQ, Breadcrumb), site speed, category/tag taxonomy, internal links, XML sitemaps and content strategy. Use when improving organic traffic for a WooCommerce/WordPress shop.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)

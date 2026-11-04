@@ -88,6 +88,29 @@ Kütüphane kaynakları **herkese açık GitHub repolarıdır** (sabit commit ve
 - **Profil:** `profiller/<profil>.json` (`ad`, `baslik`, `roller`, `ek_skiller`).
 - Sonra `python3 araclar/dogrula.py` (var olmayan skill/rol adı HATA verir).
 
+## Description ve tetiklenme (her yeni kaynakta)
+Claude Code ve Codex bir skill'i **sadece** dosyanın ilk satırında başlayan YAML frontmatter'daki `description` ile tanır ve
+"ne zaman kullanılacağına" onunla karar verir. Arşivdeki orijinallere dokunulmadığı için bozukluk **kurulan kopyada** düzeltilir
+(`skill-ekle.py` → `aciklama_onar`, mantık `araclar/ortak.py` → `frontmatter_onar`):
+
+| Sorun | Kurulumda ne olur | Elle iş |
+|---|---|---|
+| Frontmatter'ın önünde HTML yorumu var | Frontmatter başa alınır, yorum altına iner | — |
+| `description` tırnaksız ve `: ` ya da ` #` içeriyor (YAML bozulur / kesilir) | Aynı metin JSON tırnağıyla yazılır | — |
+| Frontmatter yok · `description` yok · 40 karakterden kısa · 1024'ten uzun | `aciklama_duzeltme.description` uygulanır | **Yaz** ↓ |
+
+Elle yazılan düzeltme `registry.json` kaydında (inceleme alanı, `arsiv-yerlestir.py` korur):
+```json
+"aciklama_duzeltme": {"description": "<ne yapar>. Use when <hangi istekte/durumda>.", "neden": "description yok",
+                      "skill_md_hash": "<kaydın skill_md_hash'i>", "tarih": "YYYY-AA-GG"}
+```
+- İngilizce, 40–1024 karakter; önce ne yaptığı, sonra **"Use when …"** ile tetikleyen istekler/anahtar sözcükler.
+- `skill_md_hash` o anki SKILL.md'yi gösterir; kaynak değişirse `dogrula.py` "aciklama_duzeltme eskidi" uyarısı verir
+  (yeni description yeterliyse düzeltmeyi sil, değilse güncelle).
+- `dogrula.py` her skill'in kurulacak halini (onarım uygulanmış) okur; tetiklenemeyen varsa **HATA** verir.
+- Projede zaten kurulu skillere `skill-ekle.py <proje> --guncelle` onarımı uygular (`aciklama-onarim`).
+- Son toplu denetim: `notlar/tetiklenme-denetimi.md`.
+
 ## Kontrol: "hiçbir skill atlanmadı" kanıtı
 `notlar/kapsam-denetimi.md` her çalıştırmada yeniden üretilir: her repodaki her SKILL.md için karar
 (arşivde / birebir kopya / başka AI aracı kopyası / gerekçeli hariç). **Açıklanamayan sayısı 0 değilse iş bitmemiştir.**

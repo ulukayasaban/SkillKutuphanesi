@@ -44,7 +44,8 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, global_durum, json_oku, json_yaz, klasor_hash  # noqa: E402
+from ortak import (GLOBAL_KLASORLER, KOK, REGISTRY, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
+                   klasor_hash, onarim_izi)
 
 ROLLER = KOK / "roller"
 PROFILLER = KOK / "profiller"
@@ -346,13 +347,13 @@ def kardes_yollarini_yeniden_adlandir(klasor: Path, harita):
             metin_yaz(f, yeni_metin)
 
 
-def isim_esitle(skill_md: Path, ad: str):
+def isim_esitle(skill_md: Path, ad: str, aciklama=None):
     """SADECE frontmatter içindeki name alanını klasör adına eşitler (gövdedeki örnek yaml'lara dokunmaz)."""
     metin = metin_oku(skill_md)
     m = re.match(r"^(\ufeff?---[ \t]*(\r?\n))(.*?)(\r?\n---[ \t]*(?:\r?\n|$))", metin, re.S)
     if not m:
         nl = "\r\n" if "\r\n" in metin else "\n"
-        metin_yaz(skill_md, f"---{nl}name: {ad}{nl}description: {ad}{nl}---{nl}{nl}" + metin)
+        metin_yaz(skill_md, f"---{nl}name: {ad}{nl}description: {json.dumps(aciklama or ad, ensure_ascii=False)}{nl}---{nl}{nl}" + metin)
         return
     bas, nl, govde, son = m.group(1), m.group(2), m.group(3), m.group(4)
     nm = re.search(r"^name:[ \t]*(.*)$", govde, re.M)
@@ -360,6 +361,28 @@ def isim_esitle(skill_md: Path, ad: str):
         return
     govde = (govde[:nm.start()] + f"name: {ad}" + govde[nm.end():]) if nm else f"name: {ad}{nl}" + govde
     metin_yaz(skill_md, bas + govde + son + metin[m.end():])
+
+
+def tetikleme_sorunu(y: str) -> bool:
+    """Bu yapısal sorun skill'in description'la tetiklenmesini engeller/bozar mı?"""
+    return any(x in y for x in ("frontmatter yok", "description yok", "description çok uzun", "description çok kısa",
+                                "dosya başında değil", "tırnaksız"))
+
+
+def oto_onarilir(y: str) -> bool:
+    """aciklama_duzeltme gerekmeden kurulumda kendiliğinden düzelen sorunlar."""
+    return "dosya başında değil" in y or "tırnaksız" in y
+
+
+def aciklama_onar(skill_md: Path, s, ad):
+    """Tetiklenmeyi engelleyen frontmatter sorunlarını KURULAN KOPYADA düzeltir (arşivdeki orijinal değişmez):
+    yorum arkasındaki frontmatter başa alınır, YAML'ı bozan description tırnaklanır, registry'deki
+    aciklama_duzeltme.description (eksik/kısa/uzun description için elle yazılmış) uygulanır."""
+    metin = metin_oku(skill_md)
+    yeni, yapilan = frontmatter_onar(metin, ad, (s.get("aciklama_duzeltme") or {}).get("description"))
+    if yeni != metin:
+        metin_yaz(skill_md, yeni)
+    return yapilan
 
 
 def frontmatter_adi(skill_md: Path):
@@ -374,7 +397,8 @@ def hazirla(kaynak: Path, hedef: Path, s, ad, kardes=None):
     sil_yol(gecici)
     gecici.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(kaynak, gecici, ignore=shutil.ignore_patterns("KAYNAK.md"))
-    isim_esitle(gecici / "SKILL.md", ad)
+    aciklama_onar(gecici / "SKILL.md", s, ad)
+    isim_esitle(gecici / "SKILL.md", ad, s.get("aciklama"))
     yollari_yeniden_adlandir(gecici, {s["ad"], s.get("klasor_adi")}, ad)
     kardes_yollarini_yeniden_adlandir(gecici, {k: v[0] for k, v in (kardes or {}).items()})
     sil_yol(hedef)
@@ -661,8 +685,18 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
             rapor.ekle("UYARI", "lisans", f"{ad}: lisans belirtilmemiş ({s['repo']}); ticari kullanımda dikkat")
         if s["degerlendirme"]["not"] == "D":
             rapor.ekle("UYARI", "dusuk-puan", f"{ad}: değerlendirme {s['degerlendirme']['puan']}/100 (D)")
+        duz = s.get("aciklama_duzeltme") or {}
         for y in s.get("yapisal_sorunlar", []):
-            rapor.ekle("UYARI" if "disable-model" in y or "uzun" in y else "BİLGİ", "yapi", f"{ad}: {y}")
+            if tetikleme_sorunu(y) and not duz.get("description") and not oto_onarilir(y):
+                rapor.ekle("UYARI", "tetiklenmez", f"{ad}: {y} -> kurulunca doğru durumda tetiklenmez "
+                           "(registry.json'a aciklama_duzeltme yaz: rehber/03-yeni-skill-ekleme.md)")
+            elif tetikleme_sorunu(y):
+                rapor.ekle("BİLGİ", "yapi", f"{ad}: {y} -> kurulan kopyada düzeltilir")
+            else:
+                rapor.ekle("UYARI" if "disable-model" in y else "BİLGİ", "yapi", f"{ad}: {y}")
+        if duz.get("description"):
+            rapor.ekle("BİLGİ", "aciklama-onarim", f"{ad}: description kurulan kopyada düzeltilecek "
+                       f"({duz.get('neden', 'aciklama_duzeltme')}); arşivdeki orijinal değişmez")
         if s.get("kirik_baglantilar"):
             rapor.ekle("UYARI", "kirik-baglanti", f"{ad}: SKILL.md'nin gösterdiği {len(s['kirik_baglantilar'])} dosya "
                        f"kaynakta da yok ya da arşive alınmadı: {', '.join(s['kirik_baglantilar'][:5])}")
@@ -802,6 +836,10 @@ def kayit_guncelle(kilit, proje, ad, s, roller=(), kardes=None):
     k = kilit["skiller"].setdefault(ad, {"roller": []})
     k.update(id=s["id"], repo=s["repo"], kaynak_yol=s["kaynak_yol"], commit=s["commit"], klasor_hash=s["klasor_hash"],
              varyantlar=sorted(s.get("varyantlar") or {}), kurulu_hash=kurulu_hash(proje, ad))
+    if onarim_izi(s):
+        k["onarim"] = onarim_izi(s)
+    else:
+        k.pop("onarim", None)
     if kardes is not None:
         k["kardes"] = kardes_adlari(kardes)
     for r in roller:
@@ -927,6 +965,14 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
                     continue
                 degisen.append((ad, s))
                 rapor.ekle("BİLGİ", "onarilacak", f"{ad}: eksik/bozuk kurulum onarılacak")
+                continue
+            if not kardes_degisti and k.get("onarim") != onarim_izi(s):
+                if elle_degismis(proje, ad, k) and not a.zorla:
+                    rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş; frontmatter onarılmaz (--zorla)")
+                    continue
+                degisen.append((ad, s))
+                rapor.ekle("BİLGİ", "aciklama-onarim", f"{ad}: frontmatter/description kurulan kopyada yeniden düzeltilecek "
+                           "(tetiklenme onarımı)")
                 continue
             if not kardes_degisti:
                 continue

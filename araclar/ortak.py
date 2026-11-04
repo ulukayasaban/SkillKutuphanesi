@@ -105,6 +105,98 @@ def frontmatter(metin: str) -> dict:
     return sonuc
 
 
+# ------------------------------------------------------------------ frontmatter onarımı (kurulumda)
+# Claude Code ve Codex skill'i SADECE dosyanın ilk satırında başlayan YAML frontmatter'daki description ile tanır ve
+# tetikler. Arşivdeki orijinallere dokunulmaz; bozukluk kurulan kopyada düzeltilir (skill-ekle.py hazirla()).
+FM_BASTA = re.compile(r"^(﻿?---[ \t]*(\r?\n))(.*?)(\r?\n---[ \t]*(?:\r?\n|$))", re.S)
+FM_YORUM_ARKASINDA = re.compile(r"^(﻿?)((?:\s*<!--.*?-->)+)\s*?\r?\n(---[ \t]*\r?\n.*?\r?\n---[ \t]*(?:\r?\n|$))", re.S)
+ACIKLAMA_SINIRI = 1024
+ONARIM_SURUMU = "1"  # onarım mantığı değişirse artır: kilitteki 'onarim' izi değişir, --guncelle kurulumu yeniler
+
+
+def _duz_deger_guvensiz(deger: str) -> bool:
+    """Tırnaksız (plain) tek satırlık YAML değeri ayrıştırıcıyı bozar mı? (': ' ve ' #' en sık sebep)"""
+    if not deger or deger[0] in "'\"|>":
+        return False
+    return (": " in deger or " #" in deger or deger.endswith(":") or deger[0] in "[]{}&*!%@`,?-"
+            or deger.startswith(("- ", "? ")))
+
+
+def frontmatter_teshis(metin: str) -> list:
+    """Skill'in doğru durumda tetiklenmesini engelleyen frontmatter sorunları (YAML kütüphanesi gerektirmez)."""
+    s = []
+    m = FM_BASTA.match(metin)
+    if not m:
+        if FM_YORUM_ARKASINDA.match(metin):
+            s.append("frontmatter dosya başında değil (önünde HTML yorumu var); araçlar description'ı göremez")
+            m = FM_BASTA.match(FM_YORUM_ARKASINDA.sub(lambda x: x.group(1) + x.group(3), metin, count=1))
+        else:
+            return ["frontmatter yok"]
+    satirlar = m.group(3).splitlines()
+    for i, satir in enumerate(satirlar):
+        dm = re.match(r"^description:[ \t]*(.*)$", satir)
+        if not dm:
+            continue
+        deger = dm.group(1).strip()
+        devam = i + 1 < len(satirlar) and satirlar[i + 1][:1].isspace() and satirlar[i + 1].strip()
+        if not devam and _duz_deger_guvensiz(deger):
+            s.append("description tırnaksız ve ': ' gibi YAML'ı bozan karakter içeriyor; frontmatter ayrıştırılamaz")
+        break
+    return s
+
+
+def frontmatter_onar(metin: str, ad: str, aciklama=None):
+    """Kurulan kopyanın frontmatter'ını araçların okuyacağı hale getirir. Döner: (yeni metin, yapılanlar).
+    - Baştaki HTML yorumundan sonra gelen frontmatter dosyanın başına alınır (yorum korunur, frontmatter'ın altına iner).
+    - aciklama verildiyse description onunla değiştirilir/eklenir (frontmatter yoksa oluşturulur).
+    - Tırnaksız ve YAML'ı bozan tek satırlık description JSON tırnağıyla yazılır (içerik aynı kalır)."""
+    yapilan = []
+    nl = "\r\n" if "\r\n" in metin else "\n"
+    ym = FM_YORUM_ARKASINDA.match(metin)
+    if not FM_BASTA.match(metin) and ym:
+        metin = ym.group(1) + ym.group(3) + ym.group(2).strip() + nl + nl + metin[ym.end():].lstrip("\r\n")
+        yapilan.append("frontmatter dosya başına alındı")
+    m = FM_BASTA.match(metin)
+    if not m:
+        if aciklama:
+            metin = f"---{nl}name: {ad}{nl}description: {json.dumps(aciklama, ensure_ascii=False)}{nl}---{nl}{nl}" + metin
+            yapilan.append("frontmatter eklendi")
+        return metin, yapilan
+    bas, govde, son = m.group(1), m.group(3), m.group(4)
+    satirlar = govde.split(nl) if nl in govde else govde.split("\n")
+    sira = next((i for i, x in enumerate(satirlar) if re.match(r"^description:", x)), None)
+    if sira is not None:
+        bitis = sira + 1
+        while bitis < len(satirlar) and (satirlar[bitis][:1].isspace() or not satirlar[bitis].strip()):
+            bitis += 1
+        while bitis > sira + 1 and not satirlar[bitis - 1].strip():  # sondaki boş satırlar description'a ait değil
+            bitis -= 1
+        if aciklama:
+            satirlar[sira:bitis] = [f"description: {json.dumps(aciklama, ensure_ascii=False)}"]
+            yapilan.append("description değiştirildi")
+        elif bitis == sira + 1:
+            deger = satirlar[sira].split(":", 1)[1].strip()
+            if _duz_deger_guvensiz(deger):
+                satirlar[sira] = f"description: {json.dumps(deger, ensure_ascii=False)}"
+                yapilan.append("description tırnaklandı")
+    elif aciklama:
+        ni = next((i + 1 for i, x in enumerate(satirlar) if re.match(r"^name:", x)), 0)
+        satirlar.insert(ni, f"description: {json.dumps(aciklama, ensure_ascii=False)}")
+        yapilan.append("description eklendi")
+    if any("description" in y for y in yapilan):
+        metin = bas + nl.join(satirlar) + son + metin[m.end():]
+    return metin, yapilan
+
+
+def onarim_izi(s: dict):
+    """Kurulan kopyaya uygulanan frontmatter onarımının izi (kilitte saklanır). Onarım yoksa None."""
+    d = (s.get("aciklama_duzeltme") or {}).get("description")
+    oto = [y for y in s.get("yapisal_sorunlar", []) if "dosya başında değil" in y or "tırnaksız" in y]
+    if not d and not oto:
+        return None
+    return hashlib.sha1(f"{ONARIM_SURUMU}|{d or ''}|{'|'.join(oto)}".encode()).hexdigest()[:12]
+
+
 def boyut(klasor: Path) -> int:
     return sum(p.stat().st_size for p in klasor.rglob("*") if p.is_file())
 

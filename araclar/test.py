@@ -216,6 +216,25 @@ def main():
     test("ad eşitleme sadece frontmatter'a dokunur ve CRLF'yi korur",
          b.startswith(b"---\r\nname: yeni-ad\r\n") and b"name: ornek\r\n" in b, b.decode())
 
+    # --- frontmatter/description onarımı (tetiklenme): kurulan kopyada düzeltilir
+    from ortak import frontmatter, frontmatter_onar, frontmatter_teshis
+    m, y = frontmatter_onar("<!-- uyarı -->\n---\nname: a\ndescription: \"x y\"\n---\n# Govde\n", "a")
+    test("yorum arkasındaki frontmatter başa alınır, yorum korunur",
+         m.startswith("---\nname: a\n") and "<!-- uyarı -->" in m and not frontmatter_teshis(m), m)
+    m, y = frontmatter_onar("---\nname: a\ndescription: Track flakes in issue #12: rerun jobs.\nlicense: MIT\n---\n", "a")
+    test("YAML'ı bozan tırnaksız description tırnaklanır, içerik aynı kalır",
+         'description: "Track flakes in issue #12: rerun jobs."\nlicense: MIT' in m and not frontmatter_teshis(m), m)
+    m, y = frontmatter_onar("# Baslik\n\n---\n\nmetin\n", "a", "Does X. Use when Y.")
+    test("frontmatter yoksa düzeltme description'ıyla eklenir (gövdedeki --- çizgisi frontmatter sayılmaz)",
+         m.startswith('---\nname: a\ndescription: "Does X. Use when Y."\n---\n\n# Baslik') and y == ["frontmatter eklendi"], m)
+    m, y = frontmatter_onar("---\nname: a\ndescription: >\n  eski\n  uzun\nlicense: MIT\n---\nx\n", "a", "Yeni: aciklama")
+    test("çok satırlı description düzeltmeyle tek satır olur, diğer alanlar korunur",
+         frontmatter(m) == {"name": "a", "description": "Yeni: aciklama", "license": "MIT"}, m)
+    m, y = frontmatter_onar("---\nname: a\nmeta:\n  k: v\n---\nx\n", "a", "Does X. Use when Y.")
+    test("description yoksa name'in altına eklenir", m.startswith('---\nname: a\ndescription: "Does X. Use when Y."\nmeta:'), m)
+    duz = "---\nname: a\ndescription: Saglam bir aciklama, Use when gerekli.\n---\n"
+    test("sağlam frontmatter'a dokunulmaz", frontmatter_onar(duz, "a") == (duz, []))
+
     # --- kardeş skill bağımlılıkları (../<kardeş>/ bağlantıları)
     kd = kok / "kardes"
     ana_kok = kok / "baska-kategori" / "ana"  # arşivde kardeşler farklı kategori klasörlerinde durur

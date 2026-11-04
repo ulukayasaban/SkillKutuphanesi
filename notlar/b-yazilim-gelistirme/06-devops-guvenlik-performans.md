@@ -16,7 +16,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
 ### api-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design API and webhook monitoring for e-commerce integrations: health checks, alerting rules, SLA reports and integration validation for Shopify, Amazon, Walmart, WooCommerce, Etsy or TikTok Shop endpoints. Use when setting up uptime/error alerts for store APIs, webhooks failing silently, or planning integration SLAs.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -128,7 +128,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
 ### domain-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design domain and SSL monitoring for e-commerce sites: domain/SSL expiry alerts, DNS anomaly detection and security rating checks. Use when a store needs certificate or domain-renewal alerts, DNS change monitoring, or a website security health check plan.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -148,7 +148,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
 ### file-integrity-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design file integrity monitoring for e-commerce websites: file change detection, tamper alerts, security baselines and recovery procedures. Use when protecting a store (WooCommerce, Magento, custom) from malicious code injection, card skimmers or unauthorized theme/plugin edits.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -178,7 +178,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
 ### localization-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan localization and internationalization QA for e-commerce sites: multi-language checks, currency and price formatting, shipping info and regional compliance audits. Use when launching a store in a new country or language, or auditing translations, currencies and local legal requirements.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -231,7 +231,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
 ### public-status-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design a public status page for an e-commerce business: component structure, incident communication templates, subscriber notifications and uptime reporting. Use when creating or improving a status page, or writing customer-facing incident and outage updates.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -335,7 +335,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
 ### synthetic-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design synthetic monitoring for e-commerce sites: scripted user-journey checks for search, add-to-cart, checkout and payment with alert rules and performance baselines. Use when you need to catch broken checkout or cart flows before customers do.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)

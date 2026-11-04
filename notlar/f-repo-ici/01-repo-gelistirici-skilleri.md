@@ -56,7 +56,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 
 ### add-sfx  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
-- **Ne yapar:** Add a new sound effect to @remotion/sfx
+- **Ne yapar:** Add a new sound effect to the @remotion/sfx package in the Remotion monorepo (WAV, CC0, normalized; first added to remotion.media). Use when contributing a new sound effect to Remotion's SFX library.
 - **Teknoloji:** ffmpeg, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -757,7 +757,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 
 ### release@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
-- **Ne yapar:** Release a new Remotion version
+- **Ne yapar:** Publish a new Remotion release from the Remotion monorepo: auth checks (gcloud, npm, 1Password), npm token, build and publish steps. Use only when a Remotion maintainer asks to release a new Remotion version.
 - **Teknoloji:** api-anahtari, git, node, remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -1128,7 +1128,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 
 ### video-report  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Generate a report about a video
+- **Ne yapar:** Reproduce a user-reported broken video in the Remotion monorepo by putting its URL in packages/example NewVideo.tsx and rendering with verbose logs. Use when someone reports that a video does not work in Remotion.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)

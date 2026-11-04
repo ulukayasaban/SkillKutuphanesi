@@ -15,7 +15,50 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import ARSIV, KAYNAKLAR, KOK, REGISTRY, json_oku, klasor_hash  # noqa: E402
+from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, frontmatter, frontmatter_onar,  # noqa: E402
+                   frontmatter_teshis, json_oku, klasor_hash)
+
+
+def tetikleme_denetimi(skiller, hatalar, uyarilar):
+    """Kurulumda projeye konacak SKILL.md'yi (onarım uygulanmış haliyle) araçların göreceği gibi okur: frontmatter
+    dosya başında mı, YAML ayrışıyor mu, description var mı ve 40..1024 karakter mi? Arşivdeki orijinallere dokunmaz."""
+    try:
+        import yaml
+    except ImportError:
+        yaml = None
+    for s in skiller:
+        duz = s.get("aciklama_duzeltme") or {}
+        if duz:
+            if not duz.get("description"):
+                hatalar.append(f"aciklama_duzeltme boş: {s['id']}")
+            elif duz.get("skill_md_hash") and duz["skill_md_hash"] != s.get("skill_md_hash"):
+                uyarilar.append(f"aciklama_duzeltme eskidi (SKILL.md kaynakta değişti): {s['id']} -> yeni description'a bak; "
+                                "gerek kalmadıysa aciklama_duzeltme'yi sil, kalıyorsa skill_md_hash'i güncelle")
+        for yol in [s["yol"]] + list((s.get("varyantlar") or {}).values()):
+            f = KOK / yol / "SKILL.md"
+            if not f.exists():
+                continue
+            metin, _ = frontmatter_onar(f.read_text(encoding="utf-8", errors="replace"), s["ad"], duz.get("description"))
+            sorun = frontmatter_teshis(metin)
+            fm = {}
+            if not sorun:
+                govde = FM_BASTA.match(metin).group(3)
+                try:
+                    fm = yaml.safe_load(govde) if yaml else frontmatter(metin)
+                except yaml.YAMLError as e:
+                    sorun.append("YAML ayrışmıyor: " + str(e).splitlines()[0])
+                if not isinstance(fm, dict):
+                    fm = {}
+            ac = fm.get("description") if isinstance(fm.get("description"), str) else ""
+            if not sorun and not ac.strip():
+                sorun.append("description yok")
+            elif not sorun and len(ac) > ACIKLAMA_SINIRI:
+                sorun.append(f"description {len(ac)} karakter > {ACIKLAMA_SINIRI}")
+            elif not sorun and len(ac.strip()) < 40:
+                sorun.append(f"description çok kısa ({len(ac.strip())} karakter)")
+            if sorun:
+                (hatalar if not s.get("gizli") else uyarilar).append(
+                    f"kurulunca tetiklenmez: {yol} -> {'; '.join(sorun)} (registry.json aciklama_duzeltme)")
 
 
 def main():
@@ -35,6 +78,7 @@ def main():
                 hatalar.append(f"araç sürümü eksik: {s['id']} -> {v}")
             elif s.get("varyant_hash", {}).get(arac) and klasor_hash(KOK / v) != s["varyant_hash"][arac]:
                 hatalar.append(f"araç sürümü registry ile uyuşmuyor: {v}")
+    tetikleme_denetimi(skiller, hatalar, uyarilar)
     for s in skiller:
         if s.get("ucret") == "belirsiz" and not s.get("gizli"):
             uyarilar.append(f"ücret sınıflandırılmadı: {s['id']} ({s.get('ucret_notu', '')[:90]})")

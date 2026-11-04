@@ -161,7 +161,7 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | # | Kütüphane | Güven | Sürüm (kart) | İlgili skiller (`id` puan/kaynak derecesi) | Kart |
 |---|---|---|---|---|---|
 | 1 | mrdoob/three.js | 87 A | r186 | `threejs-fundamentals` 89/D, `threejs-geometry` 79/D, `threejs-materials` 79/D, `threejs-lighting` 89/D, `threejs-textures` 81/D, `threejs-loaders` 89/D, `threejs-shaders` 79/D, `threejs-postprocessing` 79/D, `threejs-animation` 81/D, `threejs-interaction` 81/D | tasarim-teknolojileri.md |
-| 2 | tailwindlabs/tailwindcss | 79 B | v4.3 | `ui-styling` 88/A, `tailwind-patterns` 76/C, `design-system@nextlevelbuilder` 90/A, `tailwind-design-system` 96/B, `web-artifacts-builder` 90/B, `saleor-storefront` 80/D, `nextjs-react` 78/D, `spree-admin-customization` 78/D | tasarim-teknolojileri.md |
+| 2 | tailwindlabs/tailwindcss | 79 B | v4.3 | `ui-styling` 88/A, `tailwind-patterns` 76/C, `design-system@nextlevelbuilder` 90/A, `tailwind-design-system` 96/B, `remotion-create` 91/B, `web-artifacts-builder` 90/B, `saleor-storefront` 80/D, `nextjs-react` 78/D | tasarim-teknolojileri.md |
 | 3 | FFmpeg/FFmpeg | 74 B | - | `ffmpeg` 96/B, `video-edit` 100/B, `video-understand` 97/B, `character-animation-qa` 89/B | kutuphaneler.md |
 | 4 | ManimCommunity/manim | 72 B | v0.22 | `manim-composer` 97/B, `manimce-best-practices` 100/B, `manimgl-best-practices` 96/B, `remotion-to-hyperframes` 97/A | tasarim-teknolojileri.md |
 | 5 | VoltAgent/awesome-design-md | 72 B | - | `design-dna` 80/D, `design-system@nextlevelbuilder` 90/A, `design-taste-frontend` 100/B | tasarim-teknolojileri.md |
@@ -170,7 +170,7 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 8 | pmndrs/react-three-fiber | 72 B | v9.8 | `threejs-react-three-fiber` 87/D, `react-three-fiber` 62/D, `blender-web-pipeline` 62/D, `web3d-integration-patterns` 62/D, `substance-3d-texturing` 54/D, `modern-web-design` 52/D | tasarim-teknolojileri.md |
 | 9 | KaTeX/KaTeX | 69 B | - | `latex-posters` 97/B, `scientific-writing` 97/B, `manim-composer` 97/B, `manimce-best-practices` 100/B, `sympy` 97/B, `scientific-slides` 97/B, `venue-templates` 97/B | kutuphaneler.md |
 | 10 | blender/blender | 67 B | - | `blender-web-pipeline` 62/D, `3d-asset-generation` 97/B, `threejs-loaders` 89/D, `remotion-to-hyperframes` 97/A | kutuphaneler.md |
-| 11 | QwikDev/partytown | 66 B | v1.0 (T5) | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
+| 11 | QwikDev/partytown | 66 B | v1.0 (T5) | `shopify-hydrogen` 48/D | tasarim-teknolojileri.md |
 | 12 | dequelabs/axe-core | 66 B | v4.14 (MPL-2.0) | `accessibility-review` 100/B, `frontend-ui-engineering` 98/A, `replica-design` 85/D, `inclusive-design` 80/D, `accessibility` 78/D, `accessibility-commerce` 77/D | tasarim-teknolojileri.md |
 | 13 | librosa/librosa | 66 B | - | `media-use` 100/A | kutuphaneler.md |
 | 14 | 666ghj/MiroFish | 65 B | - | — (skill eşlemesi yok) | kutuphaneler.md |

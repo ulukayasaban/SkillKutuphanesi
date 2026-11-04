@@ -19,8 +19,8 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter, global_durum,  # noqa: E402
-                   TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu)
+from ortak import (ACIKLAMA_SINIRI, ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter,  # noqa: E402
+                   frontmatter_onar, frontmatter_teshis, global_durum, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu)
 
 KURALLAR = KOK / "kategori-kurallari.json"
 GELISTIRICILER = KOK / "gelistiriciler.json"
@@ -30,7 +30,7 @@ GIZLI_TIPLER = ("T3", "T4")
 ELLE_ALANLAR = ["ozet_tr", "kullanim_alani", "kullanma", "teknoloji", "gerekli_paketler", "proje_tipleri",
                 "roller", "zorluk", "kalite", "kalite_notu", "ortusme_grubu", "ortusme_rolu", "inceleme",
                 "notlar", "uyum_elle", "kategori_elle", "durum_elle", "inceleyen", "inceleme_tarihi", "uygulama_grubu",
-                "inceleme_commit", "onceki_inceleme"]
+                "inceleme_commit", "onceki_inceleme", "aciklama_duzeltme"]
 
 TEKNOLOJI_DESENLERI = {
     "react": r"\breact\b", "next.js": r"next\.?js|\bnext/|app router", "vue": r"\bvue\b", "svelte": r"\bsvelte\b",
@@ -45,6 +45,7 @@ CLAUDE_OZEL_DESEN = (r"TodoWrite|AskUserQuestion|\bTask tool\b|subagent_type|\$\
                      r"\bSkill tool\b|\.claude/(agents|commands|hooks|settings)|hooks\.json|/plugin\b|claude --")
 CLAUDE_FM_ALANLARI = {"when_to_use", "argument-hint", "arguments", "disable-model-invocation", "user-invocable",
                       "disallowed-tools", "model", "effort", "context", "agent", "background", "hooks", "paths", "shell"}
+ACIKLAMA_KISA = 40  # bundan kısa description'da 'ne zaman' bilgisi olmaz; aciklama_duzeltme yazılır
 AD_GECERLI = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 
 
@@ -94,13 +95,17 @@ def baglam_yuku(klasor):
 
 
 def yapisal_sorunlar(fm, metin, ad):
-    s = []
+    """Skill'in araçlarca tanınmasını/doğru tetiklenmesini etkileyen sorunlar. Tetiklenmeyi bozanlar kurulumda
+    onarılır: biçim hataları kendiliğinden, eksik/kısa/uzun description registry'deki aciklama_duzeltme ile."""
+    s = [x for x in frontmatter_teshis(metin) if x != "frontmatter yok"]
     if not fm:
         s.append("frontmatter yok")
     if not fm.get("description"):
         s.append("description yok")
-    elif len(fm["description"]) > 1024:
-        s.append(f"description çok uzun ({len(fm['description'])} karakter > 1024)")
+    elif len(fm["description"]) > ACIKLAMA_SINIRI:
+        s.append(f"description çok uzun ({len(fm['description'])} karakter > {ACIKLAMA_SINIRI}); Codex skill'i yüklemez")
+    elif len(fm["description"]) < ACIKLAMA_KISA:
+        s.append(f"description çok kısa ({len(fm['description'])} karakter); ne zaman kullanılacağı anlaşılmaz")
     if fm.get("name") and not AD_GECERLI.match(fm["name"]):
         s.append(f"name biçimi standart dışı ('{fm['name']}'); kurulumda klasör adına eşitlenir")
     if str(fm.get("disable-model-invocation", "")).lower() == "true":
@@ -366,7 +371,8 @@ def main():
                 varyantlar[arac] = goreli(vh)
         k["varyantlar"] = varyantlar
         metin = (hedef / "SKILL.md").read_text(encoding="utf-8", errors="replace")
-        fm = frontmatter(metin)
+        # Araçların göreceği hali (yorum arkasındaki frontmatter başa alınmış) okunur; teşhis orijinal metinden yapılır
+        fm = frontmatter(frontmatter_onar(metin, k["ad"])[0])
         tum_metin = metin  # teknoloji tespiti sadece SKILL.md'den (referans dosyaları gürültü yapıyor)
         gel = gelistiriciler.get(k["repo"])
         adlar = "|".join(re.escape(x) for x in {k["klasor_adi"].split("~")[0], k["ad"]})
@@ -383,7 +389,8 @@ def main():
             "ust_skill": k.get("ust_skill"), "bagimlilik": k.get("bagimlilik"),
             "kopya_kaynaklar": k.get("kopya_kaynaklar", []), "ayna_sayisi": len(k["aynalar"]),
             "atlanan_dosyalar": k.get("atlanan_dosyalar", []),
-            "aciklama": (fm.get("description") or k["aciklama"])[:600],
+            "aciklama": ((onceki.get("aciklama_duzeltme") or {}).get("description") or fm.get("description")
+                         or k["aciklama"])[:600],  # kurulan kopyanın description'ı (öneri/katalog bununla arar)
             "teknoloji_oto": sorted(t for t, d in TEKNOLOJI_DESENLERI.items() if re.search(d, tum_metin, re.I)),
             "uyum": onceki.get("uyum_elle") or uyum_tespit(metin, k, fm),
             "yapisal_sorunlar": yapisal_sorunlar(fm, metin, k["ad"]),

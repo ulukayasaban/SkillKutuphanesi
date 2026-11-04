@@ -280,7 +280,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-best-practices  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
-- **Ne yapar:** Router for all Remotion skills
+- **Ne yapar:** Entry point and router for Remotion (React video framework) work: points to the right sub-guide for creating a video or project, React markup, animations, captions, maps, multimedia, interactivity, rendering, Studio preview, SaaS apps, docs search, licensing and upgrades. Use whenever the user works on a Remotion project or wants to make videos programmatically with React.
 - **Teknoloji:** node, react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -311,7 +311,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-create  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Create a new Remotion video
+- **Ne yapar:** Scaffold a new Remotion project and build a new video composition (create-video, layout, Tailwind). Use when the user asks to make, create or build a new video or composition with Remotion, or no Remotion project exists yet.
 - **Teknoloji:** git, node, react, remotion, tailwind _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -321,7 +321,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-docs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Search Remotion documentation
+- **Ne yapar:** Search and read current Remotion documentation via its docs search API. Use when you need up-to-date Remotion API details, props or examples instead of relying on memory.
 - **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -351,7 +351,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-maps  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Remotion Map animation knowledge
+- **Ne yapar:** Animated maps in Remotion videos: static satellite maps, Mapbox, MapLibre, MapTiler, GeoJSON routes and markers, and 3D geographic flyovers. Use when a Remotion video needs a map, animated route, location explainer or globe.
 - **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -371,7 +371,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-multimedia  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Interacting with Mediabunny
+- **Ne yapar:** Read and process audio/video files in the browser with Mediabunny for Remotion: get audio or video duration and dimensions, trim, crop and inspect metadata. Use when a Remotion composition needs media durations, sizes or browser-side media processing.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -381,7 +381,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-render  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Export a Remotion video
+- **Ne yapar:** Render and export Remotion videos and stills: npx remotion render/still, codecs, transparent videos and render flags. Use when the user wants to export, render or download an MP4/WebM/GIF/PNG from a Remotion project.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -391,7 +391,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-saas  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Build an app with Remotion
+- **Ne yapar:** Build an app on top of Remotion: SaaS templates and frameworks, embedding @remotion/player in React (or Vue, Angular, Svelte), and client- vs server-side rendering (Lambda, Vercel, Node.js, Cloudflare). Use when making a video-generation product, editor or form-to-video app with Remotion.
 - **Teknoloji:** node, react, remotion, svelte, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -401,7 +401,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-studio  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Preview a Remotion video
+- **Ne yapar:** Start and use Remotion Studio to preview a video while building it (npx remotion studio, --no-open with an in-app browser, useful flags). Use when creating or editing a Remotion video and the user should see a live preview.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -422,7 +422,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-upgrade  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
-- **Ne yapar:** Upgrade Remotion, and related packages
+- **Ne yapar:** Upgrade Remotion and all @remotion/* packages to the same latest version, align auxiliary dependencies and update installed Remotion skills. Use when the user asks to upgrade or update Remotion, or Remotion package versions are mismatched.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)

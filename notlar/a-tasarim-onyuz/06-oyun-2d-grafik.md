@@ -538,7 +538,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 
 ### pixijs-custom-rendering  ·  pixijs/pixijs @ 4fabfa6  ·  puan 89 (A)
 
-- **Ne yapar:** Use this skill when writing custom shaders, uniforms, filters, batchers, or low-level draw code in PixiJS v8. Covers Shader.from({gl, gpu, resources}), GlProgram/GpuProgram, UniformGroup with typed uniforms (f32, vec2, mat4x4), UBO mode, textures as resources, TextureView for depth sampling, 3D and array textures (depth, arrayLayerCount, sampler3D, texture_3d), WebGPU storage textures (storage: tr
+- **Ne yapar:** Write custom shaders, uniforms, filters, batchers and low-level draw code in PixiJS v8: Shader.from({gl, gpu, resources}), GlProgram/GpuProgram, UniformGroup and UBOs, textures as resources (depth, 3D, array, storage), WGSL overrides, gpuLayout bind groups, Buffer.update, Geometry counts, TexturePool, State culling, WebGPU render bundles, Filter.from, GLSL ES 3.0, pixi.js/unsafe-eval for CSP, cust
 - **Teknoloji:** html, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** pixijs (kurum, resmî, ★48612, son güncelleme 2026-10-30, lisans MIT)
