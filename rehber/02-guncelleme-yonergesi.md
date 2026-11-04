@@ -49,6 +49,10 @@ git branch -D guncelleme/2026-11                       # 4b. ret: dalı sil, hi�
    (`ozet_tr`, `kullanim_alani`, `teknoloji`, `roller`, `kalite`, `ortusme_grubu`, `kategori_elle`…).
 3. `kapsam-denetimi.py` — her SKILL.md'nin açıklandığını bağımsız olarak doğrular.
 4. `katalog-uret.py` — KATALOG.md ve rehberleri yeniden üretir.
+4b. `skill-readme.py` — Türkçe skill rehberi (`README-SKILLER.md`, `skiller/`). Yeni/değişen skillerin çevirisi için
+   ayrıca `ceviri-tr.py` (claude -p, ücretli ama ucuz: ~2600 skill ≈ $0,7) sonra yeniden `skill-readme.py`.
+4c. `skill-calistir.py` — her skill kurulup yükleme/bağlantı/betik sözdizimi sınanır → `TEST_RAPORU.md` (agent'sız; HATA
+   güncellemeyi durdurmaz). Yeni HATA varsa yama: `rehber/03` → "Çalışmayan skill". `yama eskidi` uyarısında yamayı yenile.
 5. `dogrula.py` — roller/profiller var olan skillere mi bakıyor, tekrar isim var mı.
 6. `git commit` — kayıt noktası.
 

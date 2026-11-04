@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, frontmatter, frontmatter_onar,  # noqa: E402
-                   frontmatter_teshis, json_oku, klasor_hash)
+                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR)
 
 
 def tetikleme_denetimi(skiller, hatalar, uyarilar):
@@ -34,6 +34,13 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
             elif duz.get("skill_md_hash") and duz["skill_md_hash"] != s.get("skill_md_hash"):
                 uyarilar.append(f"aciklama_duzeltme eskidi (SKILL.md kaynakta değişti): {s['id']} -> yeni description'a bak; "
                                 "gerek kalmadıysa aciklama_duzeltme'yi sil, kalıyorsa skill_md_hash'i güncelle")
+        for rel in ((s.get("yama") or {}).get("dosyalar") or {}):
+            orj, yama = KOK / s["yol"] / rel, YAMALAR / s["id"] / rel
+            if not yama.is_file():
+                hatalar.append(f"yama dosyası yok: yamalar/{s['id']}/{rel}")
+            elif not orj.is_file() or git_blob_hash(orj.read_bytes()) != s["yama"]["dosyalar"][rel]:
+                uyarilar.append(f"yama eskidi (orijinal kaynakta değişti; kurulumda uygulanmaz): {s['id']}/{rel} -> "
+                                "yeni sürümü dene; sorun sürüyorsa yamayı yenile, düzeldiyse yamayı sil")
         for yol in [s["yol"]] + list((s.get("varyantlar") or {}).values()):
             f = KOK / yol / "SKILL.md"
             if not f.exists():

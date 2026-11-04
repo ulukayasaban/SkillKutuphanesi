@@ -19,7 +19,10 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 ## Klasörler
 | Yol | İçerik |
 |---|---|
+| `README-SKILLER.md`, `skiller/` | **Türkçe skill rehberi:** tüm skiller ne işe yarar, ne zaman kullanılır, nasıl çağrılır (`araclar/skill-readme.py` üretir; çeviriler `aciklama-tr.json`, `araclar/ceviri-tr.py`) |
 | `KATALOG.md` | Tüm görünür skiller: kategori, ne yapar, teknoloji, Codex uyumu, puan (otomatik üretilir) |
+| `TEST_RAPORU.md` | Skill çalıştırma testi: her skill kurulup yükleme/bağlantı/betik sözdizimi sınanır, örneklem gerçek agent'la denenir (`araclar/skill-calistir.py`) |
+| `yamalar/<skill id>/` | Kurulan kopyada orijinalin yerine geçen düzeltilmiş dosyalar (arşiv değişmez; `rehber/03`) |
 | `registry.json` | **Tek gerçek kaynak**: her skill'in kaydı (kaynak, commit, kategori, uyum, geliştirici, puan, inceleme notları) |
 | `arsiv/<alan>/<kategori>/<skill>/` | Skill'in orijinal dosyaları + `KAYNAK.md` |
 | `arsiv/_varyantlar/<skill>/<claude|codex>/` | Araca özel uyarlanmış sürümler |

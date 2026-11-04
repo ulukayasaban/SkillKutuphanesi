@@ -11096,7 +11096,14 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret_kaynagi": "otomatik",
+      "yama": {
+        "dosyalar": {
+          "scripts/component_generator.py": "b09511b91f7cf50a32793b2f5783c4c210b3e372"
+        },
+        "neden": "f-string içinde JSX süslü parantezleri kaçırılmamış: betik SyntaxError veriyordu ({{ }} ile düzeltildi)",
+        "tarih": "2026-11-04"
+      }
     },
     {
       "id": "spline-interactive",
@@ -193330,20 +193337,7 @@
         "description çok kısa (30 karakter); ne zaman kullanılacağı anlaşılmaz"
       ],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "./remotion-captions/SKILL.md",
-        "./remotion-create/SKILL.md",
-        "./remotion-docs/SKILL.md",
-        "./remotion-interactivity/SKILL.md",
-        "./remotion-license/SKILL.md",
-        "./remotion-maps/SKILL.md",
-        "./remotion-markup/SKILL.md",
-        "./remotion-multimedia/SKILL.md",
-        "./remotion-render/SKILL.md",
-        "./remotion-saas/SKILL.md",
-        "./remotion-studio/SKILL.md",
-        "./remotion-upgrade/SKILL.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "kucuk",
       "boyut_kb": 6,
       "skill_md_kb": 4.2,
@@ -193435,6 +193429,56 @@
         "neden": "description çok kısa",
         "skill_md_hash": "b39fa4617892bc564deaade7dd4b20f78b672ebf",
         "tarih": "2026-11-04"
+      },
+      "kardes_bagimliliklari": {
+        "remotion-captions": {
+          "id": "remotion-captions",
+          "dosya_sayisi": 1
+        },
+        "remotion-create": {
+          "id": "remotion-create",
+          "dosya_sayisi": 1
+        },
+        "remotion-docs": {
+          "id": "remotion-docs",
+          "dosya_sayisi": 1
+        },
+        "remotion-interactivity": {
+          "id": "remotion-interactivity",
+          "dosya_sayisi": 1
+        },
+        "remotion-license": {
+          "id": "remotion-license",
+          "dosya_sayisi": 1
+        },
+        "remotion-maps": {
+          "id": "remotion-maps",
+          "dosya_sayisi": 1
+        },
+        "remotion-markup": {
+          "id": "remotion-markup",
+          "dosya_sayisi": 1
+        },
+        "remotion-multimedia": {
+          "id": "remotion-multimedia",
+          "dosya_sayisi": 1
+        },
+        "remotion-render": {
+          "id": "remotion-render",
+          "dosya_sayisi": 1
+        },
+        "remotion-saas": {
+          "id": "remotion-saas",
+          "dosya_sayisi": 1
+        },
+        "remotion-studio": {
+          "id": "remotion-studio",
+          "dosya_sayisi": 1
+        },
+        "remotion-upgrade": {
+          "id": "remotion-upgrade",
+          "dosya_sayisi": 1
+        }
       }
     },
     {
@@ -194402,9 +194446,7 @@
       },
       "yapisal_sorunlar": [],
       "yol_bagimliligi": false,
-      "kirik_baglantilar": [
-        "./remotion-maps/SKILL.md"
-      ],
+      "kirik_baglantilar": [],
       "baglam_yuku": "orta",
       "boyut_kb": 123,
       "skill_md_kb": 13.2,
@@ -194464,6 +194506,10 @@
         "remotion-interactivity": {
           "id": "remotion-interactivity",
           "dosya_sayisi": 9
+        },
+        "remotion-maps": {
+          "id": "remotion-maps",
+          "dosya_sayisi": 1
         },
         "remotion-multimedia": {
           "id": "remotion-multimedia",

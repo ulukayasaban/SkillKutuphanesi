@@ -20,7 +20,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter,  # noqa: E402
-                   frontmatter_onar, frontmatter_teshis, global_durum, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu)
+                   frontmatter_onar, frontmatter_teshis, global_durum, symlink_taslaklari,
+                   taslak_baglantilarini_cevir, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu)
 
 KURALLAR = KOK / "kategori-kurallari.json"
 GELISTIRICILER = KOK / "gelistiriciler.json"
@@ -30,7 +31,7 @@ GIZLI_TIPLER = ("T3", "T4")
 ELLE_ALANLAR = ["ozet_tr", "kullanim_alani", "kullanma", "teknoloji", "gerekli_paketler", "proje_tipleri",
                 "roller", "zorluk", "kalite", "kalite_notu", "ortusme_grubu", "ortusme_rolu", "inceleme",
                 "notlar", "uyum_elle", "kategori_elle", "durum_elle", "inceleyen", "inceleme_tarihi", "uygulama_grubu",
-                "inceleme_commit", "onceki_inceleme", "aciklama_duzeltme"]
+                "inceleme_commit", "onceki_inceleme", "aciklama_duzeltme", "yama"]
 
 TEKNOLOJI_DESENLERI = {
     "react": r"\breact\b", "next.js": r"next\.?js|\bnext/|app router", "vue": r"\bvue\b", "svelte": r"\bsvelte\b",
@@ -134,11 +135,12 @@ def kardes_baglantilari(klasor: Path, indeks, kendi):
     indeks: klasör adı -> [(skill kaydı, arşivdeki klasörü)]. Aynı repodaki kardeş tercih edilir.
     Döner: ({kardeş adı: {"id", "dosya_sayisi"}}, SKILL.md'de kardeşte bulunan bağlantılar kümesi)"""
     kardesler, cozulen = {}, set()
+    taslaklar = symlink_taslaklari(klasor)  # kaynakta symlink olan '../<kardeş>' dosyaları: kurulumda kardeş yoluna çevrilir
     for f in sorted(klasor.rglob("*")):
         if not f.is_file() or f.suffix.lower() not in METIN_UZANTILARI:
             continue
-        metin = f.read_text(encoding="utf-8", errors="replace")
         derinlik = len(f.relative_to(klasor).parts) - 1
+        metin = taslak_baglantilarini_cevir(f.read_text(encoding="utf-8", errors="replace"), taslaklar, derinlik)
         for hedef in re.findall(r"\]\(([^)\s]+)\)", metin):
             yol = hedef.split("#")[0]
             onek = "../" * (derinlik + 1)
@@ -155,6 +157,8 @@ def kardes_baglantilari(klasor: Path, indeks, kendi):
             k["dosyalar"].add(str(f.relative_to(klasor)))
             if derinlik == 0:
                 cozulen.add(yol)
+                if ad in taslaklar:  # orijinal metindeki taslak yolu (./X/… ya da X/…) da çözülmüş sayılır
+                    cozulen.update({"./" + yol[3:], yol[3:]})
     return ({a: {"id": k["id"], "dosya_sayisi": len(k["dosyalar"])} for a, k in sorted(kardesler.items())}, cozulen)
 
 

@@ -175,6 +175,11 @@ def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
         calistir(sys.executable, "araclar/arsiv-yerlestir.py")
         calistir(sys.executable, "araclar/kapsam-denetimi.py")
         calistir(sys.executable, "araclar/katalog-uret.py")
+        # Türkçe skill rehberi (çevirisi eksik/eskimiş skiller İngilizce görünür; çeviri ücretli olduğu için elle: ceviri-tr.py)
+        calistir(sys.executable, "araclar/skill-readme.py")
+        # Çalıştırma testi (agent'sız): yeni gelen bozuk skill güncellemeyi durdurmaz, TEST_RAPORU.md'de görünür
+        if subprocess.run([sys.executable, "araclar/skill-calistir.py"], cwd=KOK).returncode:
+            print("UYARI: çalıştırma testinde HATA veren skill var -> TEST_RAPORU.md (yama: rehber/03)")
         calistir(sys.executable, "araclar/dogrula.py")
         icerik, eskiyen = gecmis_yaz(dal, ayrinti, onceki)
         print(f"İçeriği değişen skill: {len(icerik)} · yeniden incelenecek: {len(eskiyen)}"

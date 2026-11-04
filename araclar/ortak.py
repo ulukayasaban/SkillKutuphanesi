@@ -13,6 +13,7 @@ REGISTRY = KOK / "registry.json"
 KAYNAKLAR = KOK / "kaynaklar.json"
 KATEGORILER = KOK / "kategoriler.json"
 GECICI = KOK / ".gecici"
+YAMALAR = KOK / "yamalar"  # kurulan kopyada orijinalin yerine geçen düzeltilmiş dosyalar: yamalar/<skill id>/<yol>
 TREND = KOK / "trend.json"
 
 # Bilgisayardaki global skill klasörleri: SADECE OKUNUR, asla yazılmaz.
@@ -189,12 +190,56 @@ def frontmatter_onar(metin: str, ad: str, aciklama=None):
 
 
 def onarim_izi(s: dict):
-    """Kurulan kopyaya uygulanan frontmatter onarımının izi (kilitte saklanır). Onarım yoksa None."""
+    """Kurulan kopyaya uygulanan onarımın izi (frontmatter + yamalar; kilitte saklanır). Onarım yoksa None."""
     d = (s.get("aciklama_duzeltme") or {}).get("description")
     oto = [y for y in s.get("yapisal_sorunlar", []) if "dosya başında değil" in y or "tırnaksız" in y]
-    if not d and not oto:
+    yama = [f"{rel}:{git_blob_hash((YAMALAR / s['id'] / rel).read_bytes()) if (YAMALAR / s['id'] / rel).exists() else '-'}"
+            for rel in sorted(((s.get("yama") or {}).get("dosyalar") or {}))]
+    if not d and not oto and not yama:
         return None
-    return hashlib.sha1(f"{ONARIM_SURUMU}|{d or ''}|{'|'.join(oto)}".encode()).hexdigest()[:12]
+    return hashlib.sha1(f"{ONARIM_SURUMU}|{d or ''}|{'|'.join(oto)}|{'|'.join(yama)}".encode()).hexdigest()[:12]
+
+
+def yamalari_uygula(klasor: Path, s: dict) -> list:
+    """registry 'yama' kaydındaki dosyaları kurulan kopyada yamalı halleriyle değiştirir. Sadece orijinal dosya yamanın
+    yazıldığı sürümle AYNIYSA uygulanır (kaynak güncellendiyse yama atlanır; dogrula.py 'yama eskidi' der).
+    Döner: [(yol, 'uygulandi' | 'eskidi' | 'yok')]"""
+    sonuc = []
+    for rel, orijinal_hash in sorted(((s.get("yama") or {}).get("dosyalar") or {}).items()):
+        hedef, yama = klasor / rel, YAMALAR / s["id"] / rel
+        if not hedef.is_file() or not yama.is_file():
+            sonuc.append((rel, "yok"))
+        elif git_blob_hash(hedef.read_bytes()) != orijinal_hash:
+            sonuc.append((rel, "eskidi"))
+        else:
+            hedef.write_bytes(yama.read_bytes())
+            sonuc.append((rel, "uygulandi"))
+    return sonuc
+
+
+# Kaynak repodaki git symlink'leri (ör. remotion-best-practices/remotion-create -> ../remotion-create) GitHub API'den düz
+# metin dosyası olarak gelir: içinde sadece hedef yol yazar. Skill kökündeki "../<kardeş>" taslakları kardeş skill demektir.
+SYMLINK_TASLAK = re.compile(r"^\.\./([\w.@+-]+)/?\s*$")
+
+
+def symlink_taslaklari(klasor: Path) -> dict:
+    """Skill kökündeki symlink taslakları: {dosya adı: kardeş skill adı}."""
+    sonuc = {}
+    for f in klasor.iterdir():
+        if f.is_file() and not f.is_symlink() and f.stat().st_size < 300 and not f.suffix:
+            m = SYMLINK_TASLAK.match(f.read_text(encoding="utf-8", errors="replace"))
+            if m and m.group(1) == f.name:
+                sonuc[f.name] = m.group(1)
+    return sonuc
+
+
+def taslak_baglantilarini_cevir(metin: str, taslaklar, derinlik: int = 0) -> str:
+    """Skill kökündeki taslak klasörüne giden bağlantıları (./X/…, X/…) kardeş skill yoluna (../X/…) çevirir."""
+    if not taslaklar:
+        return metin
+    adlar = "|".join(re.escape(a) for a in sorted(taslaklar, key=len, reverse=True))
+    geri = "../" * derinlik
+    return re.sub(r"(\]\(|`)" + re.escape(geri) + r"(?:\./)?(" + adlar + r")/", lambda m: m.group(1) + geri + "../" + taslaklar[m.group(2)] + "/", metin)
 
 
 def boyut(klasor: Path) -> int:

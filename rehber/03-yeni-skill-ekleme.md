@@ -111,6 +111,21 @@ Elle yazılan düzeltme `registry.json` kaydında (inceleme alanı, `arsiv-yerle
 - Projede zaten kurulu skillere `skill-ekle.py <proje> --guncelle` onarımı uygular (`aciklama-onarim`).
 - Son toplu denetim: `notlar/tetiklenme-denetimi.md`.
 
+## Çalışmayan skill: kurulum yaması ve çalıştırma testi
+`python3 araclar/skill-calistir.py` her skill'i gerçek kurulum yoluyla geçici projeye kurar; yüklemeyi, bağlantıları ve
+betiklerin sözdizimini sınar (`.py` derlenir, `.sh` `bash -n`, `.js` `node --check`, `.json`) → `TEST_RAPORU.md`.
+`--ajan araclar/ornek-gorevler.json` ek olarak gerçek Claude Code'a örnek görev verir ve skill'in tetiklenip tetiklenmediğine bakar
+(sadece okuma araçları; maliyeti raporda yazar).
+
+Betiği bozuk bir skill arşivde düzeltilmez; düzeltilmiş dosya **`yamalar/<skill id>/<yol>`** altına konur ve kayda yazılır:
+```json
+"yama": {"dosyalar": {"scripts/x.py": "<orijinal dosyanın git blob hash'i>"}, "neden": "…", "tarih": "YYYY-AA-GG"}
+```
+Kurulumda (`hazirla()`) yama sadece orijinal o hash'teyse uygulanır; kaynak güncellenince yama atlanır ve `dogrula.py`
+"yama eskidi" der (yeni sürümü dene; sorun sürüyorsa yamayı yenile, düzeldiyse yamayı sil). `--guncelle` yamayı kurulu
+projelere de uygular. Kaynakta git symlink'i olan `../<kardeş>` dosyaları (arşive düz metin olarak gelir) kurulumda
+kendiliğinden kardeş skill bağlantısına çevrilir.
+
 ## Kontrol: "hiçbir skill atlanmadı" kanıtı
 `notlar/kapsam-denetimi.md` her çalıştırmada yeniden üretilir: her repodaki her SKILL.md için karar
 (arşivde / birebir kopya / başka AI aracı kopyası / gerekçeli hariç). **Açıklanamayan sayısı 0 değilse iş bitmemiştir.**

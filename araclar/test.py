@@ -235,6 +235,39 @@ def main():
     duz = "---\nname: a\ndescription: Saglam bir aciklama, Use when gerekli.\n---\n"
     test("sağlam frontmatter'a dokunulmaz", frontmatter_onar(duz, "a") == (duz, []))
 
+    # --- kaynakta git symlink'i olan '../<kardeş>' taslakları ve kurulum yamaları
+    ty = kok / "taslakli"
+    (ty / "alt").mkdir(parents=True)
+    (ty / "kardes-a").write_text("../kardes-a", encoding="utf-8")
+    (ty / "SKILL.md").write_text("---\nname: taslakli\ndescription: x\n---\n[a](./kardes-a/SKILL.md) `kardes-a/x.md` [d](./yok/b.md)\n",
+                                 encoding="utf-8")
+    (ty / "alt" / "n.md").write_text("[a](../kardes-a/SKILL.md)\n", encoding="utf-8")
+    se.symlink_taslaklarini_coz(ty)
+    test("symlink taslağı silinir, bağlantıları kardeş yoluna çevrilir (diğer yollar değişmez)",
+         not (ty / "kardes-a").exists() and "[a](../kardes-a/SKILL.md) `../kardes-a/x.md` [d](./yok/b.md)" in
+         (ty / "SKILL.md").read_text(encoding="utf-8") and (ty / "alt" / "n.md").read_text(encoding="utf-8") == "[a](../../kardes-a/SKILL.md)\n",
+         (ty / "SKILL.md").read_text(encoding="utf-8") + (ty / "alt" / "n.md").read_text(encoding="utf-8"))
+    import ortak
+    from ortak import git_blob_hash, yamalari_uygula
+    eski_yamalar = ortak.YAMALAR
+    ortak.YAMALAR = kok / "yamalar"
+    try:
+        (ortak.YAMALAR / "y-skill" / "scripts").mkdir(parents=True)
+        (ortak.YAMALAR / "y-skill" / "scripts" / "a.py").write_text("print('duzeltildi')\n", encoding="utf-8")
+        yk = kok / "yamali"
+        (yk / "scripts").mkdir(parents=True)
+        (yk / "scripts" / "a.py").write_text("print 'bozuk'\n", encoding="utf-8")
+        kayit = {"id": "y-skill", "yama": {"dosyalar": {"scripts/a.py": git_blob_hash(b"print 'bozuk'\n")}}}
+        test("yama, orijinal yazıldığı sürümle aynıysa uygulanır",
+             yamalari_uygula(yk, kayit) == [("scripts/a.py", "uygulandi")]
+             and (yk / "scripts" / "a.py").read_text(encoding="utf-8") == "print('duzeltildi')\n")
+        (yk / "scripts" / "a.py").write_text("print('kaynakta yeni surum')\n", encoding="utf-8")
+        test("kaynak değiştiyse yama uygulanmaz (yeni sürüm ezilmez)",
+             yamalari_uygula(yk, kayit) == [("scripts/a.py", "eskidi")]
+             and "yeni surum" in (yk / "scripts" / "a.py").read_text(encoding="utf-8"))
+    finally:
+        ortak.YAMALAR = eski_yamalar
+
     # --- kardeş skill bağımlılıkları (../<kardeş>/ bağlantıları)
     kd = kok / "kardes"
     ana_kok = kok / "baska-kategori" / "ana"  # arşivde kardeşler farklı kategori klasörlerinde durur

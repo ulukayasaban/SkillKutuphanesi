@@ -45,7 +45,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GLOBAL_KLASORLER, KOK, REGISTRY, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
-                   klasor_hash, onarim_izi)
+                   klasor_hash, onarim_izi, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula)
 
 ROLLER = KOK / "roller"
 PROFILLER = KOK / "profiller"
@@ -374,6 +374,22 @@ def oto_onarilir(y: str) -> bool:
     return "dosya başında değil" in y or "tırnaksız" in y
 
 
+def symlink_taslaklarini_coz(klasor: Path):
+    """Kaynakta git symlink'i olan, arşive düz metin olarak gelmiş '../<kardeş>' taslaklarını kaldırır ve onlara giden
+    bağlantıları kardeş skill yoluna çevirir (sonra kardes_yollarini_yeniden_adlandir projedeki ada eşler)."""
+    taslaklar = symlink_taslaklari(klasor)
+    if not taslaklar:
+        return
+    for ad in taslaklar:
+        (klasor / ad).unlink()
+    for f in klasor.rglob("*"):
+        if f.is_file() and f.suffix.lower() in (".md", ".mdx", ".txt"):
+            metin = metin_oku(f)
+            yeni = taslak_baglantilarini_cevir(metin, taslaklar, len(f.relative_to(klasor).parts) - 1)
+            if yeni != metin:
+                metin_yaz(f, yeni)
+
+
 def aciklama_onar(skill_md: Path, s, ad):
     """Tetiklenmeyi engelleyen frontmatter sorunlarını KURULAN KOPYADA düzeltir (arşivdeki orijinal değişmez):
     yorum arkasındaki frontmatter başa alınır, YAML'ı bozan description tırnaklanır, registry'deki
@@ -397,6 +413,8 @@ def hazirla(kaynak: Path, hedef: Path, s, ad, kardes=None):
     sil_yol(gecici)
     gecici.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(kaynak, gecici, ignore=shutil.ignore_patterns("KAYNAK.md"))
+    symlink_taslaklarini_coz(gecici)
+    yamalari_uygula(gecici, s)
     aciklama_onar(gecici / "SKILL.md", s, ad)
     isim_esitle(gecici / "SKILL.md", ad, s.get("aciklama"))
     yollari_yeniden_adlandir(gecici, {s["ad"], s.get("klasor_adi")}, ad)
@@ -694,6 +712,9 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                 rapor.ekle("BİLGİ", "yapi", f"{ad}: {y} -> kurulan kopyada düzeltilir")
             else:
                 rapor.ekle("UYARI" if "disable-model" in y else "BİLGİ", "yapi", f"{ad}: {y}")
+        if s.get("yama"):
+            rapor.ekle("BİLGİ", "yama", f"{ad}: kurulan kopyada yamalı dosya: {', '.join(s['yama']['dosyalar'])} "
+                       f"({s['yama'].get('neden', '')}); arşivdeki orijinal değişmez")
         if duz.get("description"):
             rapor.ekle("BİLGİ", "aciklama-onarim", f"{ad}: description kurulan kopyada düzeltilecek "
                        f"({duz.get('neden', 'aciklama_duzeltme')}); arşivdeki orijinal değişmez")
