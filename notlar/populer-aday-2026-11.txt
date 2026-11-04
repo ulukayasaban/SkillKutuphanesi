@@ -1,0 +1,23 @@
+# Popüler skill taraması 2026-11-04: yıldızlanıp "Yapay Zeka Skillleri" listesine eklenecek adaylar
+# (notlar/populer-degerlendirme-2026-11.md bölüm A). Kullanım: python3 araclar/listeye-ekle.py --dosya notlar/populer-aday-2026-11.txt
+# Listeye girmek kütüphaneye ekleme DEĞİLDİR; ekleme rehber/03 ile (çakışma + ücret kontrolü, onay) yapılır.
+mattpocock/skills                      # 313k★ 40 skill MIT — mühendislik disiplini
+coreyhaines31/marketingskills          # 58k★ 59 MIT — CRO, copywriting, SEO
+AgriciDaniel/claude-seo                # 27k★ 35 MIT — teknik/e-ticaret SEO
+AgriciDaniel/claude-ads                # 11k★ 34 MIT — 12 reklam platformu
+AgriciDaniel/claude-obsidian           # 16k★ 16 MIT
+kepano/obsidian-skills                 # 51k★ 6 MIT — Obsidian resmî
+google/elephant-goldfish-model         # 12k★ 14 Apache-2.0 — Google spec yöntemi
+openai/plugins                         # 7.7k★ 488 — openai/skills'in yerine; lisansa bak
+github/awesome-copilot                 # 41k★ 475 MIT — seçmeli (T2)
+Vincentwei1021/video-shotcraft         # 17k★ 1 Apache-2.0 — Remotion ürün videosu
+dreammis/social-auto-upload            # 16k★ 18 MIT — YouTube/TikTok yükleme (Çince)
+krillinai/OpenCreator                  # 14k★ 15 Apache-2.0 — video çeviri/dublaj
+blader/humanizer                       # 65k★ 1 MIT
+cathrynlavery/diagram-design           # 65k★ 1 MIT
+Nutlope/hallmark                       # 48k★ 1 MIT — impeccable/taste-skill ile örtüşür
+JuliusBrussee/caveman                  # 117k★ 28 Apache-2.0 — sadece skill kısmı
+Orchestra-Research/AI-Research-SKILLs  # 14k★ 98 MIT
+wanshuiyin/Auto-claude-code-research-in-sleep  # 19k★ 199 MIT
+zubair-trabzada/geo-seo-claude         # 12k★ 16 MIT — claude-seo alternatifi
+Ryze-AI-Adgent/open-seo-mcp-skills     # 9k★ 8 MIT — claude-seo alternatifi
