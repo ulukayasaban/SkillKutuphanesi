@@ -39,10 +39,7 @@ def main():
             repolar = sorted(set(re.findall(r"`([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)`", metin)))
             repolar = [r for r in repolar if not r.endswith((".md", ".py", ".json", ".sh"))]
         repolar = [r for r in repolar if r.lower() not in var]  # kütüphanedekiler zaten listede olmalı (--duzenle)
-        print(f"{args[1]} içinde kütüphanede olmayan {len(repolar)} repo bulundu; devam için e:")
-        print("  " + ", ".join(repolar))
-        if input().strip().lower() not in ("e", "evet", "y"):
-            return 2
+        print(f"{args[1]} içinde kütüphanede olmayan {len(repolar)} repo bulundu:\n  " + ", ".join(repolar))
     else:
         repolar = [a.strip("/") for a in args]
     kotu = [r for r in repolar if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", r)]
@@ -56,7 +53,19 @@ def main():
                  + str(e)[:300])
     hedef = next((l for l in listeler if l["slug"] == slug), None)
     if not hedef:
-        sys.exit(f"DURDU: '{slug}' adlı liste yok (kaynaklar.json -> github_skill_listesi)")
+        sys.exit(f"DURDU: '{slug}' adlı liste yok (kaynaklar.json -> github_skill_listesi). Mevcut listeler: "
+                 + ", ".join(f"{l['name']} ({l['slug']})" for l in listeler))
+    try:  # hedefin açıklaması: yazmadan önce doğru listeyi gösterip onay almak için
+        acik = next((l.get("description") or "" for l in gsl.gql("query{viewer{lists(first:50){nodes{slug description}}}}")
+                     ["data"]["viewer"]["lists"]["nodes"] if l["slug"] == slug), "")
+    except (RuntimeError, KeyError):
+        acik = ""
+    print(f"\nHedef liste: **{hedef['name']}** (slug: {hedef['slug']}, {len([x for x in hedef['items']['nodes'] if x])} öğe)"
+          + (f"\n  \"{acik[:160]}\"" if acik else "") + "\nDiğer listelere dokunulmaz. "
+          f"{len(repolar)} repo yıldızlanıp bu listeye eklenecek. Devam için e:")
+    if input().strip().lower() not in ("e", "evet", "y"):
+        print("iptal; hiçbir şey değişmedi")
+        return 2
     uyelik = {}
     for l in listeler:
         for x in l["items"]["nodes"]:
