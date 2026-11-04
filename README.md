@@ -30,6 +30,7 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `roller/`, `profiller/` | Agent rolleri (rol → skiller) ve proje tipleri (profil → roller) |
 | `kaynaklar.json` | Hangi repolar, hangi tipte, hangi kurallarla alınır; `arsivden_cikarilanlar` (bilerek çıkarılan eski sürümler) |
 | `trend.json`, `notlar/github-trend.md` | GitHub Trending geçmişi ve raporu |
+| `notlar/populer-skiller.md` | GitHub'da popüler skill repoları (REST araması, adayda SKILL.md sayımı; `araclar/populer-tarama.py`) |
 | `konu-takip.json`, `notlar/konu-takip.md` | Konu takibi (aday repolar, değerlendirme kararları) |
 | `kategoriler.json`, `kategori-kurallari.json` | Alanlar/kategoriler ve otomatik atama kuralları |
 | `gelistiriciler.json`, `notlar/guven-siralamasi.md` | Agent için güven ve referans rehberi (karar kuralları, kategori → en güvenilir kaynak/skill, referans kütüphanesi → ilgili skiller); repo sahipleri ve GitHub güven puanı: yıldız, yıldız hızı, katkıcı, commit, fork, izleyici, sürüm; kaynaklar arası sıra ve derece (referans kütüphaneleri ayrı sıralı) |

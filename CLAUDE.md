@@ -34,6 +34,8 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
   ücretli skilleri ayrıca belirt. Liste: `notlar/ucretli-skiller.md`.
 - Trend: `python3 araclar/github-trend.py --aday` → `notlar/github-trend.md` (trend'deki kaynaklar + aday skill repoları;
   adaylar onaysız eklenmez). Aylık güncelleme bunu otomatik çalıştırır.
+- Popüler skiller: `python3 araclar/populer-tarama.py` → `notlar/populer-skiller.md` (GitHub REST araması + adayda SKILL.md sayımı;
+  yıldız listesi/GraphQL ve trending sayfası okunamayan ortamlarda da çalışır). Adaylar onaysız eklenmez; karar `--karar`.
 - Konu takibi: `python3 araclar/konu-takip.py` (e-ticaret/Etsy, mobil… `kaynaklar.json` → `takip_konulari`) → `notlar/konu-takip.md`.
   Kullanıcı bir alan için "takip et" derse oraya konu ekle. Adaylar onaysız eklenmez; reddedileni `--karar` ile kaydet.
 - Eski sürümler: bilerek çıkarılan skiller `kaynaklar.json` → `arsivden_cikarilanlar`.

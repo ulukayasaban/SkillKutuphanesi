@@ -168,6 +168,9 @@ def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
         # GitHub Trending: ağ/sayfa sorunu güncellemeyi durdurmaz (önceki trend geçmişi kullanılır)
         if subprocess.run([sys.executable, "araclar/github-trend.py", "--aday"], cwd=KOK).returncode:
             print("UYARI: GitHub trend taraması yapılamadı; önceki trend.json ile devam")
+        # Popüler skill repoları (REST araması; yıldız listesi/trending okunamadığında da çalışır): rapor, ekleme yok
+        if subprocess.run([sys.executable, "araclar/populer-tarama.py"], cwd=KOK).returncode:
+            print("UYARI: popüler skill taraması yapılamadı; notlar/populer-skiller.md eski kaldı")
         # Konu takibi (e-ticaret, mobil…): yeni aday skill repoları raporlanır, eklenmez
         if subprocess.run([sys.executable, "araclar/konu-takip.py"], cwd=KOK).returncode:
             print("UYARI: konu takibi taraması yapılamadı; önceki konu-takip.json ile devam")

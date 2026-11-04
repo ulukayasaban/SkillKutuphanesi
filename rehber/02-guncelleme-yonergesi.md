@@ -42,6 +42,8 @@ git branch -D guncelleme/2026-11                       # 4b. ret: dalı sil, hi�
 0. `github-trend.py --aday` — GitHub Trending (günlük/haftalık/aylık; tüm diller + Python/TS/JS/Shell) taranır, `trend.json`
    geçmişine eklenir; kütüphanedeki kaynakların trend durumu ve trend'deki yeni skill repoları `notlar/github-trend.md`'ye yazılır.
    Trend'deki aday repolar otomatik EKLENMEZ: rapordaki eksik alanlara uyanlar `03-yeni-skill-ekleme.md` ile, onayla eklenir.
+0a2. `populer-tarama.py` — GitHub REST aramasıyla popüler skill repoları, adayda `SKILL.md` sayımı → `notlar/populer-skiller.md`.
+   `github-skill-listesi.py` (GraphQL) ve `github-trend.py` (trending HTML) bulut/kısıtlı ağda çalışmaz; bu araç onların yedeğidir.
 0b. `konu-takip.py` — `kaynaklar.json` → `takip_konulari` (e-ticaret/Etsy, mobil…) için GitHub'da yeni skill repoları aranır;
    adaylar `notlar/konu-takip.md`'ye yazılır (eklenmez). Değerlendirdiğin adayı `--karar owner/ad reddedildi "neden"` ile kapat.
 1. `kaynak-cek.py` — tüm kaynaklar sabit commit'ten yeniden iner (indirme hatası varsa durur).

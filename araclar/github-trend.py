@@ -58,6 +58,9 @@ def tara(trend):
             html = sayfa(donem, dil)
             if not html:
                 hata += 1
+                if hata == 1 and not anlik:  # ilk sayfa bile gelmiyorsa (ağ/proxy engeli) 15 sayfa × 3 deneme beklenmez
+                    sys.exit("DURDU: github.com/trending okunamadı (ağ ya da proxy engeli; bulut oturumlarında olağan). "
+                             "trend.json'a dokunulmadı. Alternatif: python3 araclar/populer-tarama.py (GitHub REST araması)")
                 continue
             for x in ayristir(html):
                 k = anlik.setdefault(x["repo"], {})
