@@ -1060,8 +1060,11 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
                     rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş; frontmatter onarılmaz (--zorla)")
                     continue
                 degisen.append((ad, s))
-                rapor.ekle("BİLGİ", "aciklama-onarim", f"{ad}: frontmatter/description kurulan kopyada yeniden düzeltilecek "
-                           "(tetiklenme onarımı)")
+                ne = (["description/frontmatter düzeltmesi"] if (s.get("aciklama_duzeltme") or any(
+                    "dosya başında değil" in y or "tırnaksız" in y for y in s.get("yapisal_sorunlar", []))) else []) + \
+                     ([f"betik yaması ({', '.join(s['yama']['dosyalar'])})"] if s.get("yama") else [])
+                rapor.ekle("BİLGİ", "yama" if s.get("yama") and len(ne) == 1 else "aciklama-onarim",
+                           f"{ad}: kurulan kopyaya uygulanacak: {' + '.join(ne) or 'onarım'}")
                 continue
             if not kardes_degisti:
                 continue
