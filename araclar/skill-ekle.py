@@ -1344,6 +1344,9 @@ def main():
                                                                    (Path.home() / ".claude").resolve(), (Path.home() / ".codex").resolve()]
     if proje == Path.home().resolve() or any(proje == k or k in proje.parents for k in korunan):
         sys.exit(f"Güvenlik: {proje} bir proje klasörü değil (global skill klasörü, kütüphane ya da ev dizini).")
+    if META in proje.parts:  # .skill-kutuphanesi/yedek/<zaman>/ içindeki eski anlık görüntüler proje değildir
+        gercek = Path(*proje.parts[:proje.parts.index(META)])
+        sys.exit(f"Güvenlik: {proje} bir yedek/meta klasörü, proje değil. Asıl proje: {gercek}")
     if not proje.is_dir():
         sys.exit(f"Klasör yok: {proje}")
     gk = guncelleme_suruyor()
