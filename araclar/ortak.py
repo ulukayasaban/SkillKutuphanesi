@@ -16,6 +16,22 @@ GECICI = KOK / ".gecici"
 YAMALAR = KOK / "yamalar"  # kurulan kopyada orijinalin yerine geçen düzeltilmiş dosyalar: yamalar/<skill id>/<yol>
 TREND = KOK / "trend.json"
 
+# Claude hesabındaki (claude.ai) skiller Claude Code'a buradan, "anthropic-skills:<ad>" adıyla yüklenir. SADECE OKUNUR.
+# Projeye aynı adlı kütüphane skill'i kurulunca agent çoğu zaman hesaptakini seçer; proje .claude/settings.json'da
+# skillOverrides {"anthropic-skills:<ad>": "off"} ile hesaptaki o proje için gizlenir (skill-ekle.py hesap_gizle).
+HESAP_SKILLERI = Path.home() / ".claude" / "skills" / "synced"
+HESAP_ONEK = "anthropic-skills"
+
+
+def hesap_skilleri() -> dict:
+    """Claude hesabından senkronlanan skiller: {ad: klasör}. Yoksa boş."""
+    sonuc = {}
+    if HESAP_SKILLERI.is_dir():
+        for sm in sorted(HESAP_SKILLERI.glob("*/*/SKILL.md")):
+            sonuc.setdefault(sm.parent.name, sm.parent)
+    return sonuc
+
+
 # Bilgisayardaki global skill klasörleri: SADECE OKUNUR, asla yazılmaz.
 GLOBAL_KLASORLER = {
     "claude": Path.home() / ".claude" / "skills",

@@ -76,6 +76,7 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [prompt
 5. [Riskler ve önlemler](rehber/05-risk-ve-onlemler.md)
 6. [Değerlendirme ve geliştirici bilgisi](rehber/06-degerlendirme-ve-gelistirici.md)
 7. [Kategori inceleme süreci](rehber/07-kategori-inceleme.md)
+8. [Test süreci](rehber/08-test-sureci.md): otomatik kontroller, gerçek agent testi, Claude hesabıyla ad çakışması
 
 ## Alanlar
 `a-tasarim-onyuz` · `b-yazilim-gelistirme` · `c-dokuman-icerik` · `d-ai-otomasyon` · `g-video-ses-medya` · `h-is-alanlari` (e-ticaret/pazaryeri dahil) · `i-bilim-muhendislik`

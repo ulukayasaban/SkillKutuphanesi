@@ -48,6 +48,7 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `yama` | BİLGİ | Kurulan kopyada `yamalar/<id>/` altındaki düzeltilmiş dosya kullanılır (ör. sözdizimi hatalı betik) | Bilgi; arşivdeki orijinal değişmez |
 | `aciklama-onarim` | BİLGİ | Description kurulan kopyada düzeltilir (registry `aciklama_duzeltme`; yorum arkasındaki frontmatter başa alınır, YAML'ı bozan description tırnaklanır). `--guncelle` mevcut kurulumlara da uygular | Bilgi; arşivdeki orijinal değişmez |
 | `ekli-ad` | BİLGİ | Globalde farklı bir sürüm olduğu için `--kutuphane` ekli adla kurulur | Agent dosyaları bu adı kullanır |
+| `hesap-cakismasi` | BİLGİ | Claude hesabında (claude.ai, `~/.claude/skills/synced/`) aynı adlı skill var; agent onu (`anthropic-skills:<ad>`) seçerdi. Proje `.claude/settings.json` → `skillOverrides` ile hesaptaki o projede `off` yapılır; `--dogrula` denetler, `--guncelle` onarır | Hesaptakini istiyorsan değeri `"on"` yap (araç dokunmaz) |
 | `globalde-ayni` | BİLGİ | Globalde birebir aynısı var | Sorun değil |
 | `arac-surumu` | BİLGİ | Claude ve Codex'e ayrı uyarlanmış sürümler kurulacak | — |
 | `alt-skill` | BİLGİ | Başka bir skill'in alt klasörü | Üst skill'i de kurmak isteyebilirsin |

@@ -28,6 +28,9 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 - Tablolardaki **"Sadece elle"** skiller (`disable-model-invocation: true`) otomatik tetiklenmez; adlarıyla çağrılır.
 - **"Menüde görünmez"** skiller (`user-invocable: false`) `/` menüsünde çıkmaz; agent gerekince kendisi yükler.
 - Argüman alan skillerde `/ad <argüman>` biçimi tabloda yazar (ör. `/design-handoff <Figma URL>`).
+- **Claude hesabında aynı adlı skill varsa** (ör. claude.ai'deki `docx`, `pdf`, `xlsx`, `pptx`): Claude Code onu
+  `anthropic-skills:<ad>` olarak yükler ve agent çoğu zaman onu seçer. `skill-ekle.py` kurulumda hesaptakini o projede
+  gizler (`.claude/settings.json` → `skillOverrides`), böylece kütüphane sürümü kullanılır. Ön kontrol `hesap-cakismasi` der.
 
 ## Tablolar nasıl okunur?
 - **Ne yapar / Ne zaman:** elle incelenmiş 1215 skill'de inceleme notu; 2597 skill'de açıklamanın

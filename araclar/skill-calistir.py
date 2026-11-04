@@ -178,6 +178,7 @@ def ajan_test(s, gorev, model, zaman_asimi=240):
         proje = Path(t)
         subprocess.run(["git", "init", "-q"], cwd=proje)
         se.hazirla(KOK / (s.get("varyantlar") or {}).get("claude", s["yol"]), proje / ".claude" / "skills" / s["ad"], s, s["ad"])
+        se.hesap_gizle(proje, {"skiller": {s["ad"]: {}}})  # gerçek kurulumdaki gibi: aynı adlı hesap skill'i gizlenir
         komut = ["claude", "-p", gorev, "--output-format", "stream-json", "--verbose", "--max-turns", "4",
                  "--allowedTools", "Skill,Read,Glob,Grep", "--disallowedTools", "Bash,Write,Edit,NotebookEdit,WebFetch,WebSearch"]
         if model:
@@ -230,6 +231,13 @@ def duzeltilenler():
         m.append(f"| Kaynaktaki git symlink'leri arşive düz metin olarak gelmiş ({len(t)} dosya, ör. `{next(iter(t))}` → "
                  f"`../{next(iter(t))}`): SKILL.md'deki alt-skill bağlantıları ölüydü | `{s['id']}` | Kurulumda taslak silinir, "
                  "bağlantılar kardeş skill'e çevrilir; kardeş kurulmazsa ön kontrol `kardes-eksik` uyarır |\n")
+    from ortak import HESAP_ONEK, hesap_skilleri
+    cakisan = sorted(set(hesap_skilleri()) & {s["ad"] for s in skiller})
+    if cakisan:
+        m.append(f"| Claude hesabındaki aynı adlı skill (`{HESAP_ONEK}:<ad>`) kütüphane sürümünün yerine seçiliyordu "
+                 f"(agent testinde `docx`). Bu makinede ad çakışması: {', '.join(f'`{a}`' for a in cakisan)} | {len(cakisan)} skill | "
+                 "Kurulumda proje `.claude/settings.json` → `skillOverrides` ile hesaptaki o projede `off`; ön kontrol "
+                 "`hesap-cakismasi` bildirir, `--dogrula` denetler. Düzeltmeden sonra `docx` agent testi ✅ |\n")
     m.append(f"| Description yok / çok kısa / 1024'ten uzun: agent skill'i doğru durumda seçemiyordu | {len(duz)} skill | "
              "`registry.json` → `aciklama_duzeltme` (`notlar/tetiklenme-denetimi.md`) |\n")
     m.append(f"| Frontmatter HTML yorumunun arkasında ya da description YAML'ı bozuyor | {len(oto)} skill | Kurulumda kendiliğinden |\n\n")

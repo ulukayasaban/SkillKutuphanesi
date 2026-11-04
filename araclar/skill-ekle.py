@@ -44,7 +44,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (GLOBAL_KLASORLER, KOK, REGISTRY, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
+from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KOK, REGISTRY, hesap_skilleri, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
                    klasor_hash, onarim_izi, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula)
 
 ROLLER = KOK / "roller"
@@ -227,7 +227,7 @@ def yedekle(proje, adlar, neden):
     zaman = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     y = meta(proje) / "yedek" / zaman
     y.mkdir(parents=True)
-    hedefler = [".claude/agents", ".codex/agents", "AGENTS.md", "CLAUDE.md", f"{META}/kilit.json"]
+    hedefler = [".claude/agents", ".codex/agents", "AGENTS.md", "CLAUDE.md", str(AYAR), f"{META}/kilit.json"]
     hedefler += [f".agents/skills/{a}" for a in adlar] + [f".claude/skills/{a}" for a in adlar]
     var_olan = []
     for rel in hedefler:
@@ -539,7 +539,71 @@ def talimat_bloklari(proje: Path, kilit: dict):
         blok_sil(proje / "AGENTS.md")
 
 
+AYAR = Path(".claude") / "settings.json"
+
+
+def hesap_gizleme_hedefi(kilit):
+    """Kurulu skillerden Claude hesabında aynı adlısı olanlar için gizlenecek anahtarlar."""
+    hesap = hesap_skilleri()
+    return sorted(f"{HESAP_ONEK}:{ad}" for ad in kilit["skiller"] if ad in hesap)
+
+
+def hesap_gizle(proje, kilit):
+    """Proje .claude/settings.json → skillOverrides'ta, kurulu kütüphane skill'ini gölgeleyen hesap skill'ini "off" yapar.
+    Sadece kendi eklediği anahtarları yönetir (kilit: hesap_gizlenen); kullanıcının yazdığı değere (ör. "on") dokunmaz.
+    Döner: hata mesajı ya da None."""
+    hedef, onceki = set(hesap_gizleme_hedefi(kilit)), set(kilit.get("hesap_gizlenen", []))
+    if not hedef and not onceki:
+        return None
+    f = proje / AYAR
+    try:
+        veri = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+        if not isinstance(veri, dict):
+            raise ValueError("JSON nesnesi değil")
+    except (ValueError, OSError) as e:
+        return f"{AYAR} okunamadı ({e}); hesap skilleri gizlenmedi, dosyayı düzelt ve --guncelle çalıştır"
+    so = veri.get("skillOverrides") if isinstance(veri.get("skillOverrides"), dict) else {}
+    yonetilen = set()
+    for k in onceki - hedef:
+        if so.get(k) == "off":
+            del so[k]
+    for k in hedef:
+        if k not in so or (k in onceki and so[k] == "off"):
+            so[k] = "off"
+            yonetilen.add(k)
+    if so:
+        veri["skillOverrides"] = dict(sorted(so.items()))
+    else:
+        veri.pop("skillOverrides", None)
+    if veri:
+        f.parent.mkdir(parents=True, exist_ok=True)
+        yeni = json.dumps(veri, ensure_ascii=False, indent=2) + "\n"
+        if not f.exists() or f.read_text(encoding="utf-8") != yeni:
+            f.write_text(yeni, encoding="utf-8")
+    elif f.exists():
+        f.unlink()
+    if yonetilen:
+        kilit["hesap_gizlenen"] = sorted(yonetilen)
+    else:
+        kilit.pop("hesap_gizlenen", None)
+    return None
+
+
+def hesap_gizleme_eksik(proje, kilit):
+    """Gizlenmesi gerekip settings.json'da "off" olmayan hesap skilleri (kullanıcı bilerek "on" yazdıysa sayılmaz)."""
+    f = proje / AYAR
+    try:
+        so = (json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}).get("skillOverrides") or {}
+    except (ValueError, OSError, AttributeError):
+        so = {}
+    return [k for k in hesap_gizleme_hedefi(kilit) if k not in so] + \
+           [k for k in kilit.get("hesap_gizlenen", []) if k not in hesap_gizleme_hedefi(kilit) and so.get(k) == "off"]
+
+
 def tumunu_yaz(proje, kilit, skiller):
+    hata = hesap_gizle(proje, kilit)
+    if hata:
+        print("UYARI:", hata)
     kilit_yaz(proje, kilit)
     agent_dosyalari(proje, kilit, skiller)
     talimat_bloklari(proje, kilit)
@@ -685,6 +749,10 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                        + ("; skill içindeki kendi yol referansları da düzeltilecek" if s.get("yol_bagimliligi") else ""))
         if any(v == "ayni" for v in canli.values()):
             rapor.ekle("BİLGİ", "globalde-ayni", f"{ad}: bilgisayarında birebir aynısı global olarak da var (sorun değil)")
+        if ad in hesap_skilleri():
+            rapor.ekle("BİLGİ", "hesap-cakismasi", f"{ad}: Claude hesabında aynı adlı skill var (`{HESAP_ONEK}:{ad}`); agent "
+                       f"onu seçerdi. Bu projede gizlenecek: {AYAR} → skillOverrides \"{HESAP_ONEK}:{ad}\": \"off\" "
+                       "(hesaba ve globale dokunulmaz; hesaptakini istersen değeri \"on\" yap)")
         u = s["uyum"]
         if not codex_var(kilit):
             pass
@@ -1010,9 +1078,13 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
         rapor.ekle("BİLGİ", "guncellenecek", f"{ad}: {k['commit'][:7]} -> {s['commit'][:7]}")
         for u in s.get("yapisal_sorunlar", []):
             rapor.ekle("BİLGİ", "yapi", f"{ad}: {u}")
+    hesap_eksik = hesap_gizleme_eksik(proje, kilit)
+    for k in hesap_eksik:
+        rapor.ekle("BİLGİ", "hesap-cakismasi", f"{AYAR} → skillOverrides \"{k}\" güncellenecek (Claude hesabındaki aynı adlı "
+                   "skill kütüphane sürümünü gölgelemesin)")
     print(f"Güncellenecek/onarılacak: {len(degisen)}")
     rapor.yazdir()
-    if not degisen and not yapi_degisti:
+    if not degisen and not yapi_degisti and not hesap_eksik:
         return 1 if rapor.say("HATA") else 0
     if not onay(a, rapor):
         return 2
@@ -1100,6 +1172,8 @@ def dogrula(proje, skiller, sessiz=False):
                 sorun.append(f"{f}: skill-kutuphanesi bloğu eksik/bozuk (--yenile)")
         if not codex and (proje / "AGENTS.md").exists() and BLOK_BAS in (proje / "AGENTS.md").read_text(encoding="utf-8"):
             sorun.append("AGENTS.md: proje sadece Claude kullanıyor ama skill-kutuphanesi bloğu duruyor (--yenile)")
+    for k in hesap_gizleme_eksik(proje, kilit):
+        sorun.append(f"{AYAR}: hesap skill'i `{k}` için skillOverrides güncel değil; kütüphane sürümü gölgelenebilir (--guncelle)")
     if kilit.get("proje_yolu") and kilit["proje_yolu"] != str(proje):
         sorun.append(f"proje taşınmış ({kilit['proje_yolu']} -> {proje}); --yenile çalıştır")
     for d in (proje / ".agents" / "skills", proje / ".claude" / "skills"):

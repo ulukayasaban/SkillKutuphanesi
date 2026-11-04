@@ -5,6 +5,7 @@ Global klasörlerin test boyunca değişmediğini de kontrol eder. Kütüphaneyi
 Kullanım: python3 araclar/test.py
 """
 import hashlib
+import json
 import shutil
 import subprocess
 import sys
@@ -267,6 +268,38 @@ def main():
              and "yeni surum" in (yk / "scripts" / "a.py").read_text(encoding="utf-8"))
     finally:
         ortak.YAMALAR = eski_yamalar
+
+    # --- Claude hesabındaki aynı adlı skill (anthropic-skills:<ad>) proje settings.json'da gizlenir
+    eski_hesap = se.hesap_skilleri
+    se.hesap_skilleri = lambda: {"docx": kok, "pdf": kok}
+    try:
+        hp = kok / "hesap-proje"
+        (hp / ".claude").mkdir(parents=True)
+        ayar = hp / ".claude" / "settings.json"
+        ayar.write_text('{"permissions": {"allow": ["Bash(npm test)"]}, "skillOverrides": {"anthropic-skills:pdf": "on"}}',
+                        encoding="utf-8")
+        kl = {"skiller": {"docx": {}, "pdf": {}, "baska": {}}}
+        se.hesap_gizle(hp, kl)
+        d = json.loads(ayar.read_text(encoding="utf-8"))
+        test("hesap skill'i 'off' yapılır, kullanıcının ayarları ve bilerek yazdığı 'on' korunur",
+             d["permissions"] == {"allow": ["Bash(npm test)"]} and d["skillOverrides"] == {"anthropic-skills:docx": "off",
+             "anthropic-skills:pdf": "on"} and kl["hesap_gizlenen"] == ["anthropic-skills:docx"], json.dumps(d) + str(kl))
+        del kl["skiller"]["docx"]
+        se.hesap_gizle(hp, kl)
+        d = json.loads(ayar.read_text(encoding="utf-8"))
+        test("skill kaldırılınca sadece aracın eklediği anahtar silinir",
+             d["skillOverrides"] == {"anthropic-skills:pdf": "on"} and "hesap_gizlenen" not in kl, json.dumps(d))
+        ayar.write_text("{bozuk", encoding="utf-8")
+        hata = se.hesap_gizle(hp, {"skiller": {"docx": {}}})
+        test("bozuk settings.json'a dokunulmaz, hata bildirilir", hata and ayar.read_text(encoding="utf-8") == "{bozuk", str(hata))
+        ayar.unlink()
+        kl = {"skiller": {"docx": {}}}
+        se.hesap_gizle(hp, kl)
+        kl["skiller"] = {}
+        se.hesap_gizle(hp, kl)
+        test("araç oluşturduğu settings.json boş kalınca siler", not ayar.exists())
+    finally:
+        se.hesap_skilleri = eski_hesap
 
     # --- kardeş skill bağımlılıkları (../<kardeş>/ bağlantıları)
     kd = kok / "kardes"

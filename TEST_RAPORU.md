@@ -24,7 +24,7 @@ Her skill (Claude ve Codex sürümü ayrı ayrı) **gerçek kurulum yoluyla** (`
 | ❌ Hata | 0 |
 | Sözdizimi denetlenen dosya | py 1654 · sh 67 · js 440 · json 1156 |
 
-## Gerçek agent testi (örneklem: 38 skill · model: varsayılan · tetiklenen 37/38 · maliyet ≈ $1.80 (6 koşu kayıtlı; diğerleri ≈ $0.30/koşu))
+## Gerçek agent testi (örneklem: 38 skill · model: varsayılan · tetiklenen 38/38 · maliyet ≈ $2.14 (7 koşu kayıtlı; diğerleri ≈ $0.31/koşu))
 | Skill | Örnek görev | Sonuç | Yüklenen |
 |---|---|---|---|
 | `gsap-scrolltrigger` | Sayfayı kaydırırken ürün görseli pinlensin ve scroll ile birlikte dönsün (scrub). GSAP ScrollTrigger kodu yaz. | ✅ tetiklendi | gsap-scrolltrigger |
@@ -47,7 +47,7 @@ Her skill (Claude ve Codex sürümü ayrı ayrı) **gerçek kurulum yoluyla** (`
 | `documentation-and-adrs` | Veritabanını PostgreSQL'den SQLite'a geçirme kararımızı belgeleyen bir mimari karar kaydı (ADR) yaz. | ✅ tetiklendi | documentation-and-adrs |
 | `mcp-builder` | Şirketimizin iç REST API'sini Claude'a açan bir MCP sunucusu yazmak istiyorum. Nereden başlamalıyım? | ✅ tetiklendi | mcp-builder |
 | `agent-reach` | Şu YouTube videosunun altyazısını çıkar ve özetle: https://www.youtube.com/watch?v=dQw4w9WgXcQ | ✅ tetiklendi | agent-reach<br><sub>ilk deneme: tetiklenmedi (görev: Şu YouTube videosunun altyazısını al ve konuyla ilgili X ile Reddit'te)</sub> |
-| `docx` | Müşteriye gönderilecek 3 sayfalık bir hizmet sözleşmesini Word (.docx) dosyası olarak hazırla. | ❌ ortamdaki aynı adlı eklenti skill'i seçildi (anthropic-skills:docx); kurulan ski | anthropic-skills:docx |
+| `docx` | Müşteriye gönderilecek 3 sayfalık bir hizmet sözleşmesini Word (.docx) dosyası olarak hazırla. | ✅ tetiklendi | docx |
 | `context-engineering` | Agent'ımın çıktı kalitesi düştü; CLAUDE.md kural dosyasını ve bağlam yapısını nasıl düzenlemeliyim? | ✅ tetiklendi | context-engineering |
 | `elevenlabs` | Tanıtım videom için Türkçe bir seslendirme (TTS) üret. | ✅ tetiklendi | elevenlabs |
 | `writing-skills` | Agent'ların kod yazmadan önce test yazmasını sağlayan yeni bir skill yazmak istiyorum; işe yaradığını nasıl kanıtlarım? | ✅ tetiklendi | writing-skills |
@@ -74,6 +74,7 @@ Hepsi **kurulan kopyada** düzeltilir; `arsiv/` altındaki orijinaller değişme
 | Betik çalışmıyor: f-string içinde JSX süslü parantezleri kaçırılmamış: betik SyntaxError veriyordu ({{ }} ile düzeltildi) | `react-three-fiber` | `yamalar/react-three-fiber/` (scripts/component_generator.py); yamalı betik örnek görevle çalıştırıldı, üretilen TSX derlendi |
 | Kaynaktaki git symlink'leri arşive düz metin olarak gelmiş (12 dosya, ör. `remotion-license` → `../remotion-license`): SKILL.md'deki alt-skill bağlantıları ölüydü | `remotion-best-practices` | Kurulumda taslak silinir, bağlantılar kardeş skill'e çevrilir; kardeş kurulmazsa ön kontrol `kardes-eksik` uyarır |
 | Kaynaktaki git symlink'leri arşive düz metin olarak gelmiş (1 dosya, ör. `remotion-maps` → `../remotion-maps`): SKILL.md'deki alt-skill bağlantıları ölüydü | `remotion-markup` | Kurulumda taslak silinir, bağlantılar kardeş skill'e çevrilir; kardeş kurulmazsa ön kontrol `kardes-eksik` uyarır |
+| Claude hesabındaki aynı adlı skill (`anthropic-skills:<ad>`) kütüphane sürümünün yerine seçiliyordu (agent testinde `docx`). Bu makinede ad çakışması: `docs`, `docx`, `pdf`, `pptx`, `skill-creator`, `xlsx` | 6 skill | Kurulumda proje `.claude/settings.json` → `skillOverrides` ile hesaptaki o projede `off`; ön kontrol `hesap-cakismasi` bildirir, `--dogrula` denetler. Düzeltmeden sonra `docx` agent testi ✅ |
 | Description yok / çok kısa / 1024'ten uzun: agent skill'i doğru durumda seçemiyordu | 56 skill | `registry.json` → `aciklama_duzeltme` (`notlar/tetiklenme-denetimi.md`) |
 | Frontmatter HTML yorumunun arkasında ya da description YAML'ı bozuyor | 21 skill | Kurulumda kendiliğinden |
 
