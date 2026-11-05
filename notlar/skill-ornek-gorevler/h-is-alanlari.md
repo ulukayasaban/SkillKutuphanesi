@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › h-is-alanlari
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 1972 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 1983 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
@@ -373,6 +373,7 @@
 | `acp-setup` | ✅ | starting a new ACP implementation from scratch. |
 | `affiliate-marketing-strategy` | ✅ | launching or optimizing an affiliate or referral partner program for Shopify, Amazon or an independent store. |
 | `affiliate-program` | ✅ | Track affiliate sales with unique links, manage commission tiers, automate payouts, and detect fraudulent referrals to protect your margins |
+| `amazon-a-plus` | ✅ | A+ content, A+ 页面, EBC, brand story, enhanced brand content. |
 | `amazon-a-plus-content` | ✅ | the user asks about A+ Content, Enhanced Brand Content, product storytelling, or Amazon listing enhancement. |
 | `amazon-advertising-strategy` | ✅ | the user asks about Amazon PPC, advertising strategy, campaign optimization, or Amazon ads management. |
 | `amazon-backend-keywords` | ✅ | the user asks about backend keywords, search terms, Amazon SEO, or keyword optimization. |
@@ -424,6 +425,7 @@
 | `amazon-trending-products` | ✅ | the user asks about what's trending on Amazon, hot products, rising categories, seasonal opportunities, viral products, what to sell next, emerging niches, or e |
 | `amazon-variation-strategy` | ✅ | Parent-child variation planning — when to merge/split, color/size variations, ranking benefits |
 | `amazon-vine-program` | ✅ | Vine review program strategy — enrollment, product selection, timing, review quality maximization |
+| `amazon-white-background` | ✅ | Amazon/Walmart/eBay main images, 白底图, 白底主图, hero image, listing main photo. |
 | `amazon-wholesale-sourcing` | ✅ | Wholesale product sourcing — supplier discovery, negotiation, MOQ optimization, margin analysis |
 | `analytics-integration` | ✅ | Implement GA4, Meta Pixel, and server-side tagging with a proper data layer so you capture accurate conversion events for ad campaigns |
 | `ap2-a2a-extension` | ✅ | integrating AP2 payment capabilities into A2A multi-agent systems. |
@@ -448,6 +450,7 @@
 | `applovin-ads-integration` | ✅ | Integrate AppLovin MAX mediation and ad campaigns for mobile commerce apps with user acquisition, retargeting, and in-app purchase event tracking |
 | `attribution-modeling` | ✅ | Understand which marketing channels drive purchases by implementing multi-touch attribution models across UTM-tracked campaigns and channels |
 | `b2b-commerce` | ✅ | Enable wholesale and B2B sales with company accounts, custom catalogs, quote workflows, purchase orders, and net payment terms |
+| `batch-background-swap` | ✅ | 批量换背景, 批量白底, SKU 换色, colour variants, background replacement, bulk edit. |
 | `bc-api-graphql` | ✅ | building storefront features that need client-side data fetching. |
 | `bc-api-rest` | ✅ | integrating with BigCommerce data via REST API. |
 | `bc-app-dev` | ✅ | creating integrations that install via the BigCommerce App Marketplace. |
@@ -535,6 +538,7 @@
 | `ecommerce-image-workflow` | ✅ | Reference-product ecommerce image workflow for generating a compact set of product-faithful main, feature, and lifestyle images from real product reference phot |
 | `ecommerce-keyword-research` | ✅ | Cross-platform keyword research for e-commerce. |
 | `ecommerce-landing-page` | ✅ | Audit and optimize e-commerce landing pages for conversion. |
+| `ecommerce-listing-suite` | ✅ | the user wants a full listing image set, 全套图, 套图, 一键出图, listing images, PDP image pack. |
 | `ecommerce-marketing-strategy-builder` | ✅ | Full-stack e-commerce marketing strategy builder. |
 | `ecommerce-personalization` | ✅ | Design personalization strategies for e-commerce stores. |
 | `ecommerce-ppc-strategy-planner` | ✅ | Cross-platform PPC strategy planner for ecommerce businesses. |
@@ -563,6 +567,7 @@
 | `etsy-product-description` | ✅ | Product description writing — keyword integration, benefit-focused copy, FAQ, formatting |
 | `etsy-review-strategy` | ✅ | Etsy review generation — thank you cards, follow-up messages, photo review incentives |
 | `etsy-seasonal-strategy` | ✅ | Seasonal selling calendar — holiday prep, trending categories, listing refresh timing, inventory planning |
+| `etsy-seller` | ✅ | Etsy-Arif / Etsy-Yeni gibi Etsy mağazalarında listing SEO'su: mevcut listing'i iyileştirme veya yeni ürün listing'i oluşturma. |
 | `etsy-seller-guide` | ✅ | opening, optimizing or growing an Etsy shop. |
 | `etsy-seo` | ✅ | Etsy SEO analyzer and optimizer. |
 | `etsy-seo-tags` | ✅ | Etsy tag optimization — 13-tag strategy, attribute optimization, search ranking factors |
@@ -604,6 +609,7 @@
 | `js-modern@orcaqubits` | ✅ | writing JavaScript for Salesforce Commerce. |
 | `js-modern@orcaqubits-2` | ✅ | writing JavaScript/TypeScript for Shopify themes, apps, Functions, or Hydrogen storefronts. |
 | `lifecycle-marketing-automation` | ✅ | n |
+| `lifestyle-scene` | ✅ | 场景图, 生活场景图, lifestyle image, in-use photo, context shot. |
 | `live-chat-commerce` | ✅ | Add real-time chat to your storefront using a platform-native app so agents can share product links, assist with cart questions, and close sales |
 | `load-testing-commerce` | ✅ | Simulate realistic shopper traffic on your checkout and catalog pages using k6 or Artillery to find performance bottlenecks before launch |
 | `low-stock-alerts` | ✅ | Set up automated alerts when products fall below custom thresholds so you can reorder before running out of stock |
@@ -659,6 +665,7 @@
 | `merchandising-rules` | ✅ | Control which products appear first in collections using automated ranking rules, manual overrides, and performance-based sorting algorithms |
 | `meta-ads-integration` | ✅ | Set up and optimize Meta (Facebook/Instagram) ad campaigns with Conversions API server-side tracking, dynamic product ads, and catalog sync for ecommerce |
 | `minimum-advertised-price` | ✅ | a brand's resellers undercut prices or a MAP policy needs to be written or enforced. |
+| `model-try-on` | ✅ | 模特图, 上身图, 试穿, try-on, on-model photo, apparel and jewellery. |
 | `monitoring-alerting-commerce` | ✅ | Track store health in real time with dashboards for checkout success rate, payment failures, cart errors, and custom SLO alerting |
 | `mp-commerce-checkout` | ✅ | an agent needs a hosted Mercado Pago payment handoff built from a trusted catalog and rendered outside the model. |
 | `mp-integrate` | ✅ | the developer wants to add or migrate a Mercado Pago payment flow. |
@@ -677,6 +684,7 @@
 | `mpp-spt-lifecycle` | ✅ | building the fiat/card payment flow within MPP using Stripe SPTs. |
 | `mpp-stripe-method` | ✅ | enabling fiat/card payments for machine-to-machine transactions. |
 | `mpp-tempo-method` | ✅ | setting up crypto-native payment rails for machine payments. |
+| `multi-angle-set` | ✅ | 多角度图, 多视角套图, 360 view, angle set, gallery images. |
 | `multi-channel-selling` | ✅ | Sync your catalog and inventory across your own site, Amazon, eBay, and wholesale channels to sell everywhere from one system |
 | `multi-currency` | ✅ | Let international shoppers browse and pay in their local currency with automatic detection, live exchange rates, and locale-specific price formatting |
 | `multi-warehouse` | ✅ | Manage inventory across multiple warehouses with smart allocation rules, transfer orders between locations, and split-fulfillment routing |
@@ -767,6 +775,7 @@
 | `revenue-recognition-accounting` | ✅ | Implement ASC 606 / IFRS 15 revenue recognition for subscriptions, bundles, and multi-element arrangements with deferred revenue tracking and journal entries |
 | `review-generation-engine` | ✅ | Automatically request and collect product reviews post-purchase with timed email/SMS sequences, photo incentives, and fraud detection for fake reviews |
 | `review-monitoring` | ✅ | Set up systematic review monitoring across e-commerce platforms. |
+| `sale-banner` | ✅ | 海报, banner, 首焦图, 大促图, campaign banner, store header. |
 | `saleor-apps` | ⚠️ | building Saleor App extensions. |
 | `saleor-attributes` | ✅ | defining product schemas. |
 | `saleor-catalog` | ✅ | working with Saleor product data. |
@@ -1589,6 +1598,7 @@
 | `search-autocomplete` | ✅ | Speed up product discovery with instant search suggestions, fuzzy typo matching, and category-aware results powered by Algolia or Elasticsearch |
 | `seasonal-campaign-automation` | ✅ | Automate seasonal marketing campaigns for Black Friday, holidays, and shopping events with templated workflows, countdown sequences, and year-round planning |
 | `secure-checkout` | ✅ | Harden your checkout against attacks with HTTPS enforcement, Content Security Policy headers, input sanitization, and card data tokenization |
+| `selling-point-infographic` | ✅ | 卖点图, 信息图, feature image, infographic, benefit graphic. |
 | `sf-b2b-apex` | ✅ | implementing server-side B2B commerce logic. |
 | `sf-b2b-experience` | ✅ | assembling B2B/D2C storefronts. |
 | `sf-b2b-lwc` | ✅ | building B2B storefront UI components. |
@@ -1803,6 +1813,7 @@
 | `shopify-webhooks@finsilabs` | ✅ | Register, verify, and reliably process Shopify webhook events for orders, inventory, and customers with HMAC validation and idempotency handling |
 | `shopify-wholesale-channel` | ✅ | B2B/wholesale setup — wholesale pricing, minimum orders, custom catalogs, net payment terms |
 | `shoppable-video` | ✅ | making videos that sell products directly. |
+| `size-chart` | ✅ | 尺寸图, 规格图, size chart, dimension image, spec sheet. |
 | `sms-marketing` | ✅ | Launch SMS marketing campaigns with opt-in flows, audience segmentation, and full TCPA/GDPR compliance to drive revenue through text messaging |
 | `social-commerce` | ✅ | Sync your catalog to Instagram, TikTok, and Facebook to enable shoppable posts and in-app checkout directly from your social content |
 | `social-media-monitor` | ✅ | Monitor social media mentions, trends, and competitor activity for e-commerce brands. |

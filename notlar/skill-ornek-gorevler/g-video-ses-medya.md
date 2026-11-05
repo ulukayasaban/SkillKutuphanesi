@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › g-video-ses-medya
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 146 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 149 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
@@ -82,6 +82,7 @@
 | `vfx-text-cursor` | ✅ | Cursor light trail, chromatic rays, and directional flares for word-by-word quote reveals in video intros. |
 | `video-download` | ✅ | Referans/kaynak video, ses veya altyazı indirmek ya da metadata almak gerektiğinde. |
 | `video-edit` | ✅ | Hazır videolar üzerinde hızlı kurgu ve sosyal medya formatına uyarlama işlerinde. |
+| `video-edit@yildizdikme` | ✅ | Tek kişilik anlatım videosunu kelime düzeyinde temizleyip hareketli grafik ve SFX ile Short'a çevirmek. |
 | `video-hyperframes` | ✅ | Hyperframes / Remotion-compatible continuous frame animation with autoplay support. |
 | `video-shotcraft` | ✅ | full product promos, reproducing Ink Press, single shot-card effects, or finding, adding, replacing and aligning sound effects in an existing product video or s |
 | `video-toolkit` | ✅ | Toolkit ~/.openclaw/workspace/claude-code-video-toolkit yolunda kuruluysa ve bulut GPU kullanılacaksa. |
@@ -100,6 +101,7 @@
 | `azure-text-to-speech` | ✅ | AZURE_SPEECH_KEY tanımlıysa ve SSML ile ince ayarlı, uygun maliyetli anlatım gerekiyorsa (Türkçe nöral sesler dahil). |
 | `dashscope` | ✅ | Çince içerik veya DASHSCOPE_API_KEY olan, Çin bölgesi modelleri tercih edilen projelerde. |
 | `doubao-tts` | ✅ | Çince seslendirme veya Doubao/Volcengine tercih edildiğinde. |
+| `earshot` | ✅ | Video/ses üretiminde hazır ses efektlerini ya da müziği dinleyip doğru olanı seçmek, miksi kontrol etmek. |
 | `elevenlabs` | ⚠️ | Video seslendirmesi, anlatım veya ses klonlama gereken her işte varsayılan TTS olarak. |
 | `fish-audio-tts` | ✅ | Yüksek duygu ifadeli anlatım veya fish.audio'da hazırlanmış klon ses gerektiğinde. |
 | `krillinai-cli` | ✅ | an agent needs to build or operate the embedded KrillinAI CLI, choose a supported command, or interpret its JSON, manifest, subtitle, dubbing, render, cover, sp |
@@ -111,6 +113,7 @@
 | `krillinai-tts` | ✅ | generating target-language dubbing with KrillinAI CLI from SRT subtitles, including TTS audio creation and optional dubbed video generation. |
 | `lyria` | ✅ | Google anahtarı varken altyapı müziği, döngü veya sözlü şarkı gerektiğinde; ucuz ve hızlı deneme için. |
 | `music` | ✅ | Video için arka plan müziği, jingle veya şarkı üretilecekse. |
+| `real-sound` | ✅ | Sentetik değil gerçek kayıt ses efekti istenen video/oyun projeleri. |
 | `setup-api-key` | ✅ | ElevenLabs skilleri anahtar eksikliğinden çalışmadığında veya anahtar değiştirilecekken. |
 | `sound-effects` | ✅ | Video, oyun veya arayüz için özgün efekt/ambiyans gerektiğinde. |
 | `speech-to-text` | ✅ | Altyazı, toplantı/röportaj dökümü veya kelime senkronlu altyazı gereken video işlerinde. |

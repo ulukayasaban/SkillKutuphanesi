@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › c-dokuman-icerik
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 112 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 113 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
@@ -33,7 +33,7 @@
 | `developer-growth-analysis` | ✅ | Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi. |
 | `domain-name-brainstormer` | ✅ | Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası. |
 | `geo-fundamentals` | ✅ | Web sitesi/blog içeriğini AI aramada görünür kılmak; llms.txt, FAQ şeması, AI bot erişim kararı. |
-| `humanizer` | ✅ | editing or reviewing prose for AI tells: not-X-but-Y contrasts, one-line closers, staged openers, forced triads, dashes everywhere, inflated claims, sales langu |
+| `humanizer` | ✅ | Blog, ürün açıklaması, e-posta, README gibi düzyazıyı yayına hazırlarken yapay zekâ izlerini temizlemek; Etsy listing metinleri dahil. |
 | `i18n-localization` | ✅ | Uygulamaya çok dil desteği eklemek, sabit metinleri ayıklamak, Türkçe/Arapça (RTL) yerelleştirme. |
 | `ig-audit` | ✅ | the user pastes their Instagram insights or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know |
 | `ig-caption` | ✅ | the user says "write the caption", "caption this", "what do I put in the description", has a reel or a carousel ready and needs the text, or asks about hashtags |
@@ -66,6 +66,7 @@
 | `raffle-winner-picker` | ✅ | Sosyal medya çekilişi, etkinlik çekilişi, rastgele katılımcı seçimi. |
 | `research-decision-room` | ✅ | teams need to move from qualitative signals to product or design decisions without fabricating certainty. |
 | `seo-fundamentals` | ✅ | Web sitesi yayın öncesi SEO denetimi; meta etiketleri, başlık hiyerarşisi, schema ekleme. |
+| `stop-slop` | ✅ | Yazarken ya da hızlı düzeltmede hafif, düşük bağlam yüklü kural listesi gerektiğinde. |
 | `tailored-resume-generator` | ✅ | Belirli bir iş başvurusu için CV uyarlama. |
 | `twitter-algorithm-optimizer` | ✅ | X/Twitter gönderisi optimizasyonu, içerik stratejisi. |
 | `writing-guidelines` | ✅ | asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook". |

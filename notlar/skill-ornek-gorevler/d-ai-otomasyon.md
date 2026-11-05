@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › d-ai-otomasyon
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 112 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 112 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|

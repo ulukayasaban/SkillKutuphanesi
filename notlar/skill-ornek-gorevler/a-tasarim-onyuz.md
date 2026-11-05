@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › a-tasarim-onyuz
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 277 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 279 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
@@ -40,6 +40,7 @@
 | `user-research` | ✅ | "user research plan", "interview guide", "usability test", "survey design", "research questions", or when the user needs help with any aspect of understanding t |
 | `ux-copy` | ⚠️ | "write copy for", "what should this button say?", "review this error message", or when naming a CTA, wording a confirmation dialog, filling an empty state, or w |
 | `web-clone` | ⚠️ | 用户说 复刻网站、克隆网站、clone website、抄个站、仿站、 照着这个站做一个、reproduce site、还原某个网页效果、把这个站搬下来改成我的、 复刻某个交互/WebGL/Canvas/Three.js 效果。提供「先拿真源码 → 判路径 → 逆向拆解 → 搭工程 → 替换内容」的可移植决策树，覆盖静 |
+| `web-design-guidelines@ehmo` | ✅ | building web interfaces, auditing accessibility, implementing responsive layouts, or reviewing web UI code |
 | `web-design-guidelines@nexu-io` | ✅ | Review UI code for Web Interface Guidelines compliance by the Vercel engineering team. |
 | `web-design-guidelines@vudovn` | ✅ | 'UI'ımı incele', 'erişilebilirliği kontrol et', 'tasarımı denetle' isteklerinde hızlı kural denetimi. |
 | `banner-design` | ✅ | Belirli bir platform boyutuna (Twitter başlığı, LinkedIn kapağı, Google Display, hero) birden fazla sanat yönü alternatifli banner gerekince. |
@@ -257,6 +258,7 @@
 | `digits-fintech-swiss-template` | ✅ | users ask for premium data-story slides with strict modular layout, bold numeric cards, restrained motion, and keyboard/click navigation in one HTML file. |
 | `editorial-burgundy-principles-template` | ✅ | users ask for premium manifesto or culture slides with pill tags, large typographic statements, principle cards, and guided keyboard/click navigation. |
 | `field-notes-editorial-template` | ✅ | users ask for a premium magazine-style business report, board memo one-pager, or elegant data storytelling layout. |
+| `frontend-slides` | ✅ | Konuşma/pitch için tarayıcıda çalışan, tasarımı özgün HTML sunum; elindeki .pptx'i web sunumuna çevirmek. |
 | `html-ppt-retro-quarterly-review` | ✅ | users ask for a high-impact quarterly review / roadmap deck with heavyweight slab headlines, clean cream paper sections, structured grids, and fast premium moti |
 | `image-enhancer` | ✅ | Dokümantasyon veya sunum öncesi ekran görüntüsü iyileştirme isteğinde başvuru metni olarak. |
 | `mockup-device-3d` | ✅ | Static iPhone and MacBook 3D-style showcase with real HTML embedded on screens, glass-lens refraction, and 360-degree turntable composition. |

@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › i-bilim-muhendislik
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 378 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 378 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|

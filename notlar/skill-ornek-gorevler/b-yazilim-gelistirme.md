@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › b-yazilim-gelistirme
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-04 · 358 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 404 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
@@ -175,6 +175,7 @@
 | `sandbox-migrate-to-next` | ✅ | Migrate Cloudflare Sandbox apps from stable @cloudflare/sandbox to @cloudflare/sandbox@next (SDK 1.0 preview). |
 | `sandbox-next` | ✅ | Build or maintain Cloudflare Sandbox apps on @cloudflare/sandbox@next (SDK 1.0 preview). |
 | `sandbox-stable` | ✅ | Build or maintain Cloudflare Sandbox apps on the stable @cloudflare/sandbox package. |
+| `security` | ✅ | hardening a Google Play Billing integration against fraud |
 | `security-and-hardening` | ✅ | Kullanıcı girdisi, kimlik doğrulama, veri saklama veya dış entegrasyon içeren her özellikte; OWASP Top 10'a karşı giriş akışı denetimi; bağımlılık denetimi. |
 | `security-audit` | ✅ | security questions, focused reviews, vulnerability research, security audits, or pen tests |
 | `security-diff-scan` | ✅ | Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities. |
@@ -216,20 +217,30 @@
 | `vercel-react-native-skills` | ✅ | building React Native components, optimizing list performance, implementing animations, or working with native modules |
 | `vercel-react-view-transitions` | ✅ | the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, impleme |
 | `accessibility` | ✅ | working on accessibility, a11y, WCAG, ARIA, screen readers, keyboard nav, focus order, contrast, alt text, captions, reduced motion, or target sizes; not langua |
+| `ad-attribution` | ✅ | running paid acquisition beyond Apple Ads, measuring re-engagement campaigns, designing conversion values, or migrating from SKAdNetwork. |
 | `adaptive` | ✅ | Instructions to make or update an app's UI so that it adapts to different Android devices including phones, tablets, foldables, laptops, desktop, TV, Auto, and  |
 | `agents-md-generator` | ✅ | missing, bloated, contradictory, or outdated agent instructions, monorepos, services, packages, module context, and portable agent guidance without assuming any |
 | `agp-9-upgrade` | ✅ | migrating Kotlin Multiplatform (KMP) projects. |
+| `alternative-billing` | ✅ | implementing Google Play's alternative billing programs, external offers and billing choice (PBL 5.2 through 9.1) |
 | `android-cli` | ⚠️ | Provides instructions for installing and using the `android` CLI. |
+| `android-design-guidelines` | ✅ | building Android apps with Jetpack Compose or XML layouts, implementing Material You, navigation, or accessibility |
 | `android-development` | ✅ | building Android apps with Kotlin, Jetpack Compose, MVVM architecture, Hilt dependency injection, Room database, or multi-module projects |
 | `android-for-cars-parked-apps` | ✅ | migrating, building, or auditing parked apps for car |
 | `android-intent-security` | ✅ | auditing component configurations in AndroidManifest.xml activities, services, receivers) or source code handling incoming Intents (getIntent, getParcelableExtr |
 | `android-permissions-security` | ✅ | reviewing AndroidManifest.xml, defining custom permissions, securing Services, Receivers, and Providers, verifying caller signatures and UID using Binder, or im |
 | `android-profiler` | ✅ | : recording system traces, CPU call stacks, Vulkan GPU/DRM memory, or Java/native heap profiles; analyzing Perfetto traces for UI jank, frame drops, ANRs, or ap |
 | `anr-audit-and-fix` | ✅ | scanning Android code for ANR risks or triaging ANR stack dumps |
+| `app-description-writer` | ✅ | writing initial descriptions, improving existing copy, or drafting promotional text and What's New for a major update. |
+| `app-store` | ✅ | user needs help with App Store presence, ASO, marketing, or customer communication. |
 | `appfunctions` | ✅ | discovering, implementing, documenting, testing, or upgrading AppFunctions in an Android app, including @AppFunctionDeclaration, @AppFunctionSerializable, @AppF |
+| `apple-search-ads` | ✅ | user asks about running ads, paid user acquisition, or Apple Search Ads campaigns. |
 | `architecture-feature-first` | ✅ | creating a feature, designing folder structure, adding repositories/services/view models, wiring dependency injection, or deciding which layer owns logic. |
+| `backend-architecture` | ✅ | building a backend for Google Play Billing receipt verification |
+| `billing-response-codes` | ✅ | Use this skill as a reference lookup for every Play Billing Library BillingResponseCode and sub response code, with description, category, and handling guidance |
 | `bloc` | ✅ | creating a Cubit or Bloc, modeling state with sealed classes or status enums, wiring BlocBuilder/BlocListener/BlocProvider, writing bloc tests, or choosing betw |
 | `camerax` | ✅ | implementing camera features, handling asynchronous recording lifecycles, wiring low-level hardware interop using CameraX, or integrating ML Kit or Media3 effec |
+| `cancellations-pauses-winback` | ✅ | implementing cancellations, developer initiated revocations, subscription pauses, and winback offers on Google Play |
+| `catalog-management` | ✅ | managing Google Play product and subscription catalogs programmatically with the Google Play Developer API |
 | `code-review@evanca` | ✅ | asked to review a PR, MR, branch, or diff, audit changed files, or check code quality. |
 | `codex-phone-lab` | ✅ | Codex is asked to create a phone app, prototype an iPhone or Android app, run an app on a physical phone, show a QR code for Expo Go, set up a mobile dev workfl |
 | `compose-agent` | ✅ | reading, writing, or reviewing Compose projects. |
@@ -247,6 +258,7 @@
 | `edge-to-edge` | ✅ | migrate your Jetpack Compose app to add adaptive edge-to-edge support and troubleshoot common issues |
 | `effective-dart` | ✅ | writing Dart code, reviewing for style, refactoring naming, adding doc comments, structuring imports, or enforcing type annotations. |
 | `engage-sdk-integration` | ✅ | adding Engage SDK support, generating publishing code, mapping data classes to entities, or fixing SDK-related errors. |
+| `error-handling` | ✅ | designing error handling and retry strategy for the Play Billing Library |
 | `expo-animation` | ✅ | animating anything in an Expo app, adding gestures, sheets, screen transitions, press feedback or haptics, or fixing motion that stutters on device |
 | `expo-app-clip` | ✅ | the user mentions App Clip, AASA, apple-app-site-association, appclips, smart app banner, or wants to ship a lightweight iOS Clip invoked from a URL alongside t |
 | `expo-brownfield` | ✅ | brownfield, embedding a React Native screen in SwiftUI/UIKit or Kotlin, or AAR/XCFramework packaging |
@@ -297,17 +309,22 @@
 | `generate-images-with-firebase-ai` | ✅ | generating or editing images from Flutter/Dart with Firebase AI Logic and a Gemini image model (Nano Banana), making the first call work, choosing Gemini Develo |
 | `glance-appwidget-updates-and-memory` | ✅ | configuring Android 17 (API level 37) compileSdk/targetSdk and AndroidManifest.xml widget receivers, refreshing frozen or stale Glance widget UI after Coroutine |
 | `glance-canonical-layouts` | ✅ | create home screen widgets using Jetpack Glance Canonical Layouts from the Android Platform Samples project, or when asked to implement standard widget layout p |
+| `iap-finalizer` | ✅ | Take a one-time in-app purchase from MISSING_METADATA to READY_TO_SUBMIT in App Store Connect — set its price schedule and localized display name/description (a |
 | `inclusive-design` | ✅ | working on inclusion, i18n/localization, global name/address forms, low-end devices, slow/metered networks, affordability, or first-time/low-confidence users; n |
 | `ink-app-builder` | ✅ | implementing stylus or touch drawing surfaces, rendering wet and dry ink strokes, configuring stock brushes (pressure pen, marker, highlighter), implementing ge |
 | `ink-custom-brush-builder` | ✅ | configuring custom BrushTip shapes, adding pressure, tilt, speed, or noise sensitivity using BrushBehavior node graphs, creating multi-coat layered brushes, app |
+| `integrating-pbl` | ✅ | integrating the Google Play Billing Library client side (adding the dependency, wiring BillingClient, managing its connection lifecycle, and querying product de |
 | `ios-accessibility` | ✅ | developers mention: (1) iOS accessibility, VoiceOver, Dynamic Type, or assistive technologies, (2) accessibility labels, traits, hints, or values, (3) automated |
 | `ios-code-audit` | ✅ | the user asks for a "code audit", "comprehensive review", "find tech debt", "what should I clean up", or similar broad-scope assessment of a Swift project. |
+| `ios-design-guidelines` | ✅ | building, reviewing, or refactoring SwiftUI/UIKit interfaces for iOS |
 | `ios-launch-performance` | ✅ | diagnosing iOS app launch performance, startup regressions, first-frame readiness, or early responsiveness |
 | `ios-marketing-capture` | ⚠️ | the user wants to automate capture of marketing screenshots for a SwiftUI iOS app across multiple locales, devices, or appearances |
 | `ios-perceived-performance` | ✅ | product-level iOS responsiveness and loading/feedback flows, including perceived latency, time to first feedback, progressive rendering, loading states, skeleto |
 | `ios-performance-profiling` | ✅ | choosing, running, or interpreting iOS performance profiling workflows, including Instruments traces, signposts, XCTest metrics, MetricKit, Xcode Organizer, han |
+| `ipados-design-guidelines` | ✅ | building iPad-optimized interfaces, implementing multitasking, pointer support, keyboard shortcuts, or responsive layouts |
 | `jetpack-compose-audit` | ✅ | reviewing a Compose codebase, rating repository quality, inspecting recomposition/state issues, animation issues, or running a Compose audit. |
 | `jetpack-compose-performance` | ✅ | analyzing performance bottlenecks of existing code to minimize recomposition overhead and prevent dropped frames and UI lag. |
+| `keyword-optimizer` | ✅ | launching a new app, improving search rankings, entering new markets/languages, or safely optimizing ASO for an app with existing traffic. |
 | `kotlin-build-kmp-gradle-governance` | ✅ | reviewing or designing Gradle build structure for KMP projects — shared build logic, convention plugins, version catalogs, Android KMP plugin usage, source-set  |
 | `kotlin-data-kmp-data-layer` | ✅ | implementing or reviewing KMP data layers, including repositories, data sources, source-of-truth design, API exposure, conflict resolution, error handling, and  |
 | `kotlin-kmp-code-review` | ✅ | reviewing implemented Kotlin Multiplatform / Compose Multiplatform code for architecture consistency, business-logic placement, state correctness, concurrency,  |
@@ -326,6 +343,8 @@
 | `leanback-to-compose-tv-migration` | ✅ | Leanback to Compose migrations, including browse screen, settings screen, authentication screen, login screen, or video playback screen migrations, or when repl |
 | `litert-lm` | ✅ | creating a chat, summarization, or extraction feature with a .litertlm model from Hugging Face litert-community (Gemma, Qwen, Llama, Phi), including the Gradle  |
 | `litert-runtime` | ✅ | any Android LiteRT or .tflite task, including Gradle setup, image classification or vision/audio/embedding helpers, TensorBuffer reuse, CPU memory optimization, |
+| `macos-design-guidelines` | ✅ | building macOS apps with SwiftUI or AppKit, implementing menu bars, toolbars, window management, or keyboard shortcuts |
+| `marketing-strategy` | ✅ | planning app promotion, launch strategy, user acquisition, or re-engagement campaigns. |
 | `media3-cast-integration` | ✅ | adding Cast functionality or migrating from legacy Cast SDK to Media3 Cast. |
 | `migrate-xml-views-to-jetpack-compose` | ✅ | you need to migrate an XML View to Jetpack Compose in an Android project |
 | `ml-kit-genai-prompt-api` | ✅ | send natural language requests on-device to Gemini Nano, use structured output with Prompt API, implement prefix caching, optimize the current prompt, or apply  |
@@ -335,17 +354,37 @@
 | `mocktail` | ✅ | creating mocks, stubbing methods, verifying interactions, registering fallback values, or choosing between mocks, fakes, and real objects (Mocktail). |
 | `navigation-3` | ✅ | Learn how to install and migrate to Jetpack Navigation 3, and how to implement features and patterns such as deep links, multiple backstacks, scenes (dialogs, b |
 | `navigation-event` | ✅ | Intercept back gestures and run Predictive Back animations using the NavigationEvent (androidx.navigationevent) library in Compose Android. |
+| `one-time-products` | ✅ | implementing, acknowledging, or consuming Google Play one time products (consumables and non consumables) with the Play Billing Library |
+| `originality-check` | ✅ | Guideline-4.3 anti-spam / originality gate — score whether an app (and each portfolio addition) is meaningfully distinct in function, content, and metadata befo |
 | `owasp-mobile-security-checker` | ✅ | performing security audits, vulnerability assessments, or compliance checks on Flutter or mobile applications |
 | `patrol-e2e-testing` | ✅ | writing E2E/integration tests, testing native interactions like permissions or system dialogs, capturing UI regressions, or validating cross-platform behavior ( |
+| `payment-recovery` | ✅ | handling failed subscription renewals on Google Play |
+| `pbl-v7-to-v8-migration` | ✅ | migrating an Android app from Play Billing Library 7.x to 8.x (latest 8.3.0) |
+| `pbl-v7-to-v9-migration` | ✅ | migrating an Android app from Play Billing Library 7.x to 9.x (latest 9.1.0) |
+| `pbl-v8-to-v9-migration` | ✅ | migrating an Android app from Play Billing Library 8.x to 9.x (latest 9.1.0) |
+| `plan-changes` | ✅ | implementing Google Play subscription upgrades, downgrades, or plan switches with SubscriptionProductReplacementParams (PBL 8.1+) plus SubscriptionUpdateParams. |
 | `play-billing-library-version-upgrade` | ✅ | upgrading or migrating an Android project from any legacy Google Play Billing Library (PBL) version to the latest stable version of PBL. |
+| `play-developer-api-reference` | ✅ | Use this skill as a quick reference for billing related Google Play Developer API REST endpoints, covering purchases.products, purchases.subscriptionsv2, purcha |
 | `play-policy-insights` | ✅ | Automated auditor designed to verify Android applications against Google Play Policy domains. |
+| `price-changes` | ✅ | changing subscription prices on Google Play |
 | `projected-hardware` | ✅ | building experiences for intelligent eyewear in an Android app and you need to access device hardware like the camera and microphone, handle glasses-specific ru |
 | `provider` | ✅ | setting up providers, consuming state, optimizing rebuilds, using ProxyProvider, or migrating from deprecated providers (Provider package). |
+| `purchase-flow` | ✅ | implementing the Play Billing purchase flow end to end |
 | `r8-analyzer` | ✅ | developers want to optimize their Android app's size, remove redundant or overly broad keep rules, or troubleshoot ProGuard configurations |
+| `ratings-mechanics` | ✅ | planning ratings strategy for new markets, considering a ratings reset, setting release options, or diagnosing "why is my rating missing in country X. |
+| `rejection-handler` | ✅ | user's app was rejected, is preparing for submission, or needs help with App Review. |
 | `restore-credentials` | ✅ | create, sign in with, and delete restore keys, enabling silent user sign-in on new devices after a restore |
 | `revenuecat-testing` | ✅ | testing RevenueCat purchases/subscriptions, setting up sandbox testing, debugging a purchase/restore/trial, verifying entitlements or events, checking an app is |
+| `review-response-writer` | ✅ | responding to negative reviews, drafting templates for common review types, or improving review management strategy. |
 | `riverpod` | ✅ | setting up providers, combining requests, managing state disposal, passing arguments, performing side effects, or testing providers (Riverpod). |
+| `rtdn` | ✅ | setting up Real Time Developer Notifications (RTDN) for Google Play |
+| `rtdn-reference` | ✅ | . |
+| `screenshot-planner` | ✅ | preparing App Store assets, improving screenshot conversion, or drafting screenshot captions for a launch or major update. |
+| `setup@revenuecat` | ✅ | configuring Play Console, creating products, enabling service account API access, or setting up RTDN before writing billing code |
 | `styles` | ✅ | integrate the Jetpack Compose Styles API into an Android project |
+| `subscription-state-diagram` | ✅ | . |
+| `subscription-states` | ✅ | mapping a Google Play subscription to the eight states (PENDING, ACTIVE, IN_GRACE_PERIOD, ON_HOLD, PAUSED, CANCELED, EXPIRED, PENDING_PURCHASE_CANCELED) and dec |
+| `subscriptions` | ✅ | modeling Google Play subscriptions (the three tier Subscription, Base Plan, Offer hierarchy), choosing a catalog shape, and deciding how to map your paywall to  |
 | `swift-code-reviewer` | ✅ | reviewing PRs/MRs (especially AI-generated ones), performing quality audits, validating against original spec, or providing structured feedback with severity le |
 | `swift-concurrency` | ✅ | developers mention: (1) Swift Concurrency, async/await, actors, or tasks, (2) "use Swift Concurrency" or "modern concurrency patterns", (3) migrating to Swift 6 |
 | `swift-concurrency-performance` | ✅ | reviewing Swift Concurrency performance and responsiveness, including task explosions, actor hopping, MainActor bottlenecks, cancellation, AsyncSequence cleanup |
@@ -353,12 +392,19 @@
 | `swift-expert` | ✅ | Swift specialist for iOS/macOS development with Swift 6.0+, SwiftUI, async/await concurrency, and protocol-oriented design. |
 | `swift-runtime-performance` | ✅ | reviewing Swift code for runtime-level performance costs, including heap allocation, ARC traffic, stack vs heap storage, closure capture contexts, method dispat |
 | `swift-testing` | ✅ | developers mention: (1) Swift Testing, @Test, #expect, #require, or @Suite, (2) "use Swift Testing" or "modern testing patterns", (3) test doubles, mocks, stubs |
+| `swiftdata-pro` | ✅ | reading, writing, or reviewing projects that use SwiftData. |
 | `swiftui-design-principles` | ✅ | creating or modifying SwiftUI views, iOS widgets (WidgetKit), or any native Apple UI |
 | `swiftui-expert-skill` | ✅ | building new SwiftUI features, refactoring existing views, reviewing code quality, or adopting modern SwiftUI patterns. |
 | `swiftui-performance` | ✅ | reviewing or fixing SwiftUI performance issues, including unnecessary invalidation, unstable identity, broad state dependencies, expensive body work, heavy rows |
 | `swiftui-ui-patterns` | ✅ | creating or refactoring SwiftUI UI, designing tab architecture with TabView, composing screens with VStack/HStack, managing @State or @Binding, building declara |
 | `testing` | ✅ | writing or reviewing Flutter/Dart tests (unit, widget, golden), fixing flaky tests, adding coverage, or choosing between unit and widget tests. |
 | `testing-setup` | ✅ | Analyze and create a testing strategy for Android apps - install testing libraries, set up test infrastructure, create harnesses for unit tests, UI tests, scree |
+| `testing@revenuecat` | ✅ | testing a Google Play Billing integration |
+| `tvos-design-guidelines` | ✅ | building tvOS apps with focus-based navigation, Siri Remote input, or living room viewing experiences |
+| `understanding-billing` | ✅ | a developer is new to Google Play Billing or needs to orient themselves before picking an implementation task |
 | `verified-email` | ✅ | integrate a secure, OTP-less email verification flow into an Android app |
+| `visionos-design-guidelines` | ✅ | building spatial computing apps, implementing eye/hand input, or designing immersive experiences |
+| `watchos-design-guidelines` | ✅ | building watchOS apps, complications, or workout features |
 | `wear-compose-m3` | ✅ | Guidance for Wear OS Compose Material3 (Wear Compose Material 3 / Wear Compose Material3) watch and wearable apps. |
 | `wear-widgets` | ✅ | implementing GlanceWearWidget, GlanceWearWidgetService, WearWidgetDocument, Remote Compose UI primitives (RemoteColumn, RemoteRow, RemoteBox, RemoteText, Remote |
+| `web-presence` | ✅ | building a landing page, improving Google visibility for an app, planning a price-drop promotion, or auditing off-store discovery. |

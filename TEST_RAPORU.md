@@ -1,6 +1,6 @@
 # Skill Test Raporu
 
-Tarih: 2026-11-04 · Araç: `python3 araclar/skill-calistir.py` --ajan · Kütüphaneyi ve global skill klasörlerini değiştirmez.
+Tarih: 2026-11-05 · Araç: `python3 araclar/skill-calistir.py` --ajan · Kütüphaneyi ve global skill klasörlerini değiştirmez.
 
 ## Nasıl test edildi
 Her skill (Claude ve Codex sürümü ayrı ayrı) **gerçek kurulum yoluyla** (`skill-ekle.py` → `hazirla()`: ad eşitleme, frontmatter/description onarımı) geçici bir projeye kuruldu ve şunlar sınandı:
@@ -18,11 +18,11 @@ Her skill (Claude ve Codex sürümü ayrı ayrı) **gerçek kurulum yoluyla** (`
 ## Özet
 | | Sayı |
 |---|---|
-| Test edilen skill | 5250 |
-| ✅ Geçti | 4912 |
+| Test edilen skill | 5313 |
+| ✅ Geçti | 4975 |
 | ⚠️ Uyarı (çalışır, eksik dosya bağlantısı var) | 338 |
 | ❌ Hata | 0 |
-| Sözdizimi denetlenen dosya | py 2035 · sh 115 · js 608 · json 1405 |
+| Sözdizimi denetlenen dosya | py 2080 · sh 117 · js 616 · json 1423 |
 
 ## Gerçek agent testi (örneklem: 43 skill · model: varsayılan · tetiklenen 43/43 · maliyet ≈ $8.05 (12 koşu kayıtlı; diğerleri ≈ $0.67/koşu))
 | Skill | Örnek görev | Sonuç | Yüklenen |
@@ -432,4 +432,4 @@ Skill yüklenir ve çalışır; SKILL.md'nin andığı bazı dosyalar pakette yo
 </details>
 
 ## Tüm skiller ve örnek görevleri
-5250 skill'in tek tek sonucu ve örnek görevi, alana göre: [a-tasarim-onyuz](notlar/skill-ornek-gorevler/a-tasarim-onyuz.md) (277) · [b-yazilim-gelistirme](notlar/skill-ornek-gorevler/b-yazilim-gelistirme.md) (358) · [c-dokuman-icerik](notlar/skill-ornek-gorevler/c-dokuman-icerik.md) (112) · [d-ai-otomasyon](notlar/skill-ornek-gorevler/d-ai-otomasyon.md) (112) · [e-entegrasyon-katalogu](notlar/skill-ornek-gorevler/e-entegrasyon-katalogu.md) (1781) · [f-repo-ici](notlar/skill-ornek-gorevler/f-repo-ici.md) (114) · [g-video-ses-medya](notlar/skill-ornek-gorevler/g-video-ses-medya.md) (146) · [h-is-alanlari](notlar/skill-ornek-gorevler/h-is-alanlari.md) (1972) · [i-bilim-muhendislik](notlar/skill-ornek-gorevler/i-bilim-muhendislik.md) (378)
+5313 skill'in tek tek sonucu ve örnek görevi, alana göre: [a-tasarim-onyuz](notlar/skill-ornek-gorevler/a-tasarim-onyuz.md) (279) · [b-yazilim-gelistirme](notlar/skill-ornek-gorevler/b-yazilim-gelistirme.md) (404) · [c-dokuman-icerik](notlar/skill-ornek-gorevler/c-dokuman-icerik.md) (113) · [d-ai-otomasyon](notlar/skill-ornek-gorevler/d-ai-otomasyon.md) (112) · [e-entegrasyon-katalogu](notlar/skill-ornek-gorevler/e-entegrasyon-katalogu.md) (1781) · [f-repo-ici](notlar/skill-ornek-gorevler/f-repo-ici.md) (114) · [g-video-ses-medya](notlar/skill-ornek-gorevler/g-video-ses-medya.md) (149) · [h-is-alanlari](notlar/skill-ornek-gorevler/h-is-alanlari.md) (1983) · [i-bilim-muhendislik](notlar/skill-ornek-gorevler/i-bilim-muhendislik.md) (378)
