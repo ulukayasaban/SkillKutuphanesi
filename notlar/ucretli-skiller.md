@@ -45,7 +45,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 181
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 192
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -54,6 +54,7 @@
 | `rive-interactive` | 03-animasyon-motion | Rive ücretsiz plan; bazı özellikler ücretli |
 | `spline-interactive` | 05-3d-webgl | Spline ücretsiz plan; bazı dışa aktarma/ekip özellikleri ücretli |
 | `hatch-pet` | 06-oyun-2d-grafik | Yerel yol ücretsiz; ikincil yedek yol OPENAI_API_KEY ister (ücretli) |
+| `frontend-slides` | 07-gorsel-sanat-sunum | Yerel HTML sunum ve PDF ücretsiz; isteğe bağlı Vercel yayını hesap gerektirir (ücretsiz Hobby katmanı var). |
 | `basin` | 06-devops-guvenlik-performans | Cloudflare R2/Basin: ücretsiz kota, sonrası kullanım başına |
 | `cloudflare` | 06-devops-guvenlik-performans | Cloudflare ücretsiz plan ile çalışır; bazı ürünler ücretli |
 | `cloudflare-email-service` | 06-devops-guvenlik-performans | Cloudflare ücretsiz kota, sonrası ücretli |
@@ -156,16 +157,22 @@
 | `video` | 01-satis-pazarlama-musteri | AI avatar (HeyGen/Synthesia) ücretli; Remotion gibi programatik yollar ücretsiz. Yöntem seçimi skill'de |
 | `trader-broker` | 02-finans-hukuk-ik | Alpaca: ücretsiz kâğıt (paper) hesapla denenir; gerçek hesapta komisyonsuz ama GERÇEK PARA riski — işlem öncesi kullanıcı onayı şart |
 | `acp-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz), ACP/Stripe (işlem başı) |
+| `amazon-a-plus` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
+| `amazon-white-background` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `ap2-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Google API (ücretsiz kota) |
 | `b2b-commerce` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `batch-background-swap` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `cross-sell-upsell-engine` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Rebuy (ücretli Shopify uygulaması) |
 | `customer-lifetime-value` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `customer-segmentation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `ecommerce-competitor-analyzer` | 05-e-ticaret-pazaryeri | Gemini API (ücretsiz kota) + Olostep kazıma API'si (ücretsiz deneme, sonrası ücretli) |
+| `ecommerce-listing-suite` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `email-service-integration` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: SendGrid (ücretsiz kota) |
 | `free-shipping-thresholds` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `invoice-generation-automation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: PDFMonkey (ücretsiz kota) |
+| `lifestyle-scene` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `loyalty-points-system` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `model-try-on` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `mp-commerce-checkout` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
 | `mp-integrate` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
 | `mp-review` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
@@ -173,6 +180,7 @@
 | `mp-webhooks` | 05-e-ticaret-pazaryeri | Entegrasyon ve test ortamı ücretsiz; gerçek ödemelerde Mercado Pago işlem komisyonu |
 | `mpp-service-discovery` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `mpp-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `multi-angle-set` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `multi-currency` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Open Exchange Rates (ücretsiz kota) |
 | `nlweb-llm-providers` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: LLM API'leri (ücretli; yerel model seçeneği) |
 | `nlweb-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Qdrant (yerel ücretsiz / bulut ücretli), LLM API'leri (ücretli; yerel model seçeneği) |
@@ -180,8 +188,11 @@
 | `returns-management` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Shippo (ücretsiz plan + etiket başı) |
 | `returns-refund-policy` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
 | `revenue-recognition-accounting` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var) |
+| `sale-banner` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
+| `selling-point-infographic` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `shipment-tracking` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: EasyPost (ücretsiz kota + etiket başı) |
 | `shipping-rate-calculator` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: EasyPost (ücretsiz kota + etiket başı) |
+| `size-chart` | 05-e-ticaret-pazaryeri | GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme. |
 | `spree-payments` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz) |
 | `tax-calculation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: TaxJar (ücretli abonelik; ücretsiz deneme) |
 | `tax-compliance-automation` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: TaxJar (ücretli abonelik; ücretsiz deneme) |

@@ -1,13 +1,13 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-04 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-05 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7820 · Arşivdeki skill kaydı: 5250 · Bileşen (komut/agent): 658
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8074 · Arşivdeki skill kaydı: 5310 · Bileşen (komut/agent): 658
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5214 | arşivde (ana sürüm) |
-| haric | 2369 | bilinçli hariç (test/örnek/şablon) |
+| secildi | 5274 | arşivde (ana sürüm) |
+| haric | 2563 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 144 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 | ayri-surum | 35 | arşivde (aynı adlı farklı içerik, ayrı skill) |
@@ -48,6 +48,7 @@
 | Orchestra-Research/AI-Research-SKILLs | 98 | secildi 98 |
 | Panniantong/Agent-Reach | 1 | secildi 1 |
 | ParthJadhav/ios-marketing-capture | 1 | secildi 1 |
+| RevenueCat/play-billing-skills | 45 | secildi 25, haric 20 |
 | Ryze-AI-Adgent/open-seo-mcp-skills | 8 | secildi 8 |
 | Shopify/agent-skills | 30 | secildi 15, arac-varyanti 15 |
 | Trendyol/trendyol-integration-developer-tool | 1 | secildi 1 |
@@ -73,6 +74,7 @@
 | dpconde/claude-android-skill | 1 | secildi 1 |
 | dreammis/social-auto-upload | 18 | secildi 18 |
 | earthtojake/text-to-cad | 12 | secildi 12 |
+| ehmo/platform-design-skills | 8 | secildi 8 |
 | evanca/flutter-ai-rules | 36 | secildi 36 |
 | expo/skills | 25 | secildi 24, haric 1 |
 | finsilabs/awesome-ecommerce-skills | 181 | secildi 181 |
@@ -81,6 +83,7 @@
 | google/elephant-goldfish-model | 14 | haric 7, secildi 7 |
 | greensock/gsap-skills | 8 | secildi 8 |
 | hamen/compose_skill | 2 | secildi 2 |
+| hardikpandya/stop-slop | 1 | secildi 1 |
 | heygen-com/hyperframes | 27 | secildi 14, haric 7, ayna-ayni 6 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
 | jazzychad/ios-code-audit | 1 | secildi 1 |
@@ -93,6 +96,7 @@
 | mercadopago/mercadopago-claude-marketplace | 5 | secildi 5 |
 | microsoft/playwright | 10 | secildi 10 |
 | mmiani/kotlin-kmp-claude-agent-skills | 15 | secildi 15 |
+| moiz-za/etsy-seller-seo-system | 1 | secildi 1 |
 | morluto/rea | 5 | haric 4, secildi 1 |
 | motiondivision/motion | 2 | secildi 2 |
 | multica-ai/andrej-karpathy-skills | 1 | secildi 1 |
@@ -108,18 +112,22 @@
 | pixijs/pixijs | 26 | secildi 26 |
 | react/react | 14 | secildi 14 |
 | remotion-dev/remotion | 90 | secildi 78, ayna-baska-arac 12 |
+| rshankras/claude-code-apple-skills | 184 | haric 171, secildi 13 |
 | teng-lin/notebooklm-py | 1 | secildi 1 |
 | tt-a1i/archify | 5 | secildi 5 |
 | tuist/fuckingapproachableswiftconcurrency | 1 | secildi 1 |
+| twostraws/SwiftData-Agent-Skill | 1 | secildi 1 |
 | vercel-labs/agent-skills | 9 | secildi 9 |
 | vercel/next.js | 27 | secildi 27 |
 | vudovn/ag-kit | 58 | secildi 58 |
 | wanshuiyin/Auto-claude-code-research-in-sleep | 197 | haric 110, secildi 87 |
+| xianyu110/ecommerce-image-skills | 12 | secildi 10, haric 2 |
 | xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
 | ythx-101/live-panel-skill | 1 | secildi 1 |
 | zanwei/design-dna | 1 | secildi 1 |
+| zarazhangrui/frontend-slides | 2 | secildi 1, haric 1 |
 | zubair-trabzada/geo-seo-claude | 16 | secildi 16 |
 
 ## Referans repoları (T5/T6)
@@ -149,3 +157,8 @@
 - **JuliusBrussee/caveman**: `plugins/caveman/skills/cavecrew/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-compress/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-stats/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman/SKILL.md` (^plugins/), `plugins/caveman/skills/megacave/SKILL.md` (^plugins/), `plugins/caveman/skills/ultracave/SKILL.md` (^plugins/)
 - **krillinai/OpenCreator**: `apps/daemon/runtime/opencreator-runtime/SKILL.md` (^apps/), `packages/writing-templates/templates/community/khazix-writer/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/research-paper-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/sun-style-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/insight/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/news-analysis/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/story/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/tutorial/skill/SKILL.md` (^packages/)
 - **openai/plugins**: `.agents/skills/plugin-creator/SKILL.md` (^\.agents/), `plugins/plugin-eval/fixtures/minimal-plugin/skills/minimal-plugin-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/minimal-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/alpha/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/beta/SKILL.md` (^plugins/plugin-eval/fixtures/)
+- **Egonex-AI/Understand-Anything**: `understand-anything-plugin/skills/understand-dashboard/SKILL.md` (^understand-anything-plugin/skills/understand-dashboard/), `understand-anything-plugin/skills/understand-figma/SKILL.md` (^understand-anything-plugin/skills/understand-figma/)
+- **zarazhangrui/frontend-slides**: `plugins/frontend-slides/skills/frontend-slides/SKILL.md` (^plugins/)
+- **xianyu110/ecommerce-image-skills**: `skills/taobao-detail-long-image/SKILL.md` (^skills/taobao-detail-long-image/), `skills/xiaohongshu-cover/SKILL.md` (^skills/xiaohongshu-cover/)
+- **RevenueCat/play-billing-skills**: `revenuecat/alternative-billing/SKILL.md` (^(?!google-play/)), `revenuecat/backend/SKILL.md` (^(?!google-play/)), `revenuecat/cancellations-pauses-winback/SKILL.md` (^(?!google-play/)), `revenuecat/catalog-management/SKILL.md` (^(?!google-play/)), `revenuecat/configuring-the-sdk/SKILL.md` (^(?!google-play/)), `revenuecat/error-handling/SKILL.md` (^(?!google-play/)), `revenuecat/one-time-products/SKILL.md` (^(?!google-play/)), `revenuecat/payment-recovery/SKILL.md` (^(?!google-play/)), `revenuecat/plan-changes/SKILL.md` (^(?!google-play/)), `revenuecat/price-changes/SKILL.md` (^(?!google-play/)), `revenuecat/purchase-flow/SKILL.md` (^(?!google-play/)), `revenuecat/revenuecat-api-quick-reference/SKILL.md` (^(?!google-play/)), `revenuecat/revenuecat-vs-raw-billing/SKILL.md` (^(?!google-play/)), `revenuecat/security/SKILL.md` (^(?!google-play/)), `revenuecat/setup/SKILL.md` (^(?!google-play/)), `revenuecat/subscription-states/SKILL.md` (^(?!google-play/)), `revenuecat/subscriptions/SKILL.md` (^(?!google-play/)), `revenuecat/testing/SKILL.md` (^(?!google-play/)), `revenuecat/understanding-revenuecat/SKILL.md` (^(?!google-play/)), `revenuecat/webhooks/SKILL.md` (^(?!google-play/))
+- **rshankras/claude-code-apple-skills**: `skills/apple-intelligence/SKILL.md` (^(?!skills/app-store/)), `skills/apple-intelligence/app-intents/SKILL.md` (^(?!skills/app-store/)), `skills/apple-intelligence/foundation-models/SKILL.md` (^(?!skills/app-store/)), `skills/apple-intelligence/visual-intelligence/SKILL.md` (^(?!skills/app-store/)), `skills/core-ml/SKILL.md` (^(?!skills/app-store/)), `skills/design/SKILL.md` (^(?!skills/app-store/)), `skills/design/animation-patterns/SKILL.md` (^(?!skills/app-store/)), `skills/design/design-system/SKILL.md` (^(?!skills/app-store/)), `skills/design/game-feel/SKILL.md` (^(?!skills/app-store/)), `skills/design/liquid-glass/SKILL.md` (^(?!skills/app-store/)), `skills/design/sf-symbols/SKILL.md` (^(?!skills/app-store/)), `skills/design/typography/SKILL.md` (^(?!skills/app-store/)), `skills/design/ui-prototyping/SKILL.md` (^(?!skills/app-store/)), `skills/design/ux-writing/SKILL.md` (^(?!skills/app-store/)), `skills/foundation/SKILL.md` (^(?!skills/app-store/)), `skills/foundation/attributed-string/SKILL.md` (^(?!skills/app-store/)), `skills/generators/SKILL.md` (^(?!skills/app-store/)), `skills/generators/accessibility-generator/SKILL.md` (^(?!skills/app-store/)), `skills/generators/account-deletion/SKILL.md` (^(?!skills/app-store/)), `skills/generators/analytics-setup/SKILL.md` (^(?!skills/app-store/)) … (+151)

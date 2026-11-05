@@ -460,6 +460,431 @@
       "karar": "reddedildi",
       "neden": "Kütüphaneden kaldırıldı: Eski sarmalayıcı (v0.0.37); güncel Lenis paketi lenis/react kullanılır; güven 13 D",
       "tarih": "2026-10-31"
+    },
+    "FrancyJGLisboa/agent-skills-platform": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "liangdabiao/ecom-details-image": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "coolqoo/1click-ecom-detailpage": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "DannylydST/sorftime-seller-agent": {
+      "karar": "reddedildi",
+      "neden": "kısa listeye girmedi: skill değil/dar ya da mevcut skillerle karşılanıyor (2026-11-02 incelemesi)",
+      "tarih": "2026-11-03"
+    },
+    "amzn/selling-partner-agentic-toolkit": {
+      "karar": "reddedildi",
+      "neden": "ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy)",
+      "tarih": "2026-11-03"
+    },
+    "yoligehude14753/ecom-agent": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "liangdabiao/amazon-sorftime-research-MCP-skill": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "wzj177/ecommerce-image-suite": {
+      "karar": "reddedildi",
+      "neden": "dil (Çince/Rusça) ya da Rus pazaryerleri",
+      "tarih": "2026-11-03"
+    },
+    "woocommerce/woocommerce-google-analytics-integration": {
+      "karar": "reddedildi",
+      "neden": "skill değil: eklenti/CLI kodu",
+      "tarih": "2026-11-03"
+    },
+    "Vladimir-Human/ru-marketplace-mcp": {
+      "karar": "reddedildi",
+      "neden": "dil (Çince/Rusça) ya da Rus pazaryerleri",
+      "tarih": "2026-11-03"
+    },
+    "duyet/pricetrack": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "xianyu110/ecommerce-image-skills": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02)",
+      "tarih": "2026-11-03"
+    },
+    "vulpy-io/vulpy-commerce-core": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "Automattic/woocommerce-services": {
+      "karar": "reddedildi",
+      "neden": "skill değil: eklenti/CLI kodu",
+      "tarih": "2026-11-03"
+    },
+    "bigcommerce/stencil-cli": {
+      "karar": "reddedildi",
+      "neden": "skill değil: eklenti/CLI kodu",
+      "tarih": "2026-11-03"
+    },
+    "buluslan/amazon-listing-doctor": {
+      "karar": "reddedildi",
+      "neden": "ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy)",
+      "tarih": "2026-11-03"
+    },
+    "SerendipityOneInc/ZooData-Skills": {
+      "karar": "reddedildi",
+      "neden": "ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy)",
+      "tarih": "2026-11-03"
+    },
+    "ilyautov/marketplaces-mcp-ru": {
+      "karar": "reddedildi",
+      "neden": "dil (Çince/Rusça) ya da Rus pazaryerleri",
+      "tarih": "2026-11-03"
+    },
+    "joomcode/joompulse-skills": {
+      "karar": "reddedildi",
+      "neden": "ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy)",
+      "tarih": "2026-11-03"
+    },
+    "liangdabiao/sellersprite-rpa-skills": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "moiz-za/etsy-seller-seo-system": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02)",
+      "tarih": "2026-11-03"
+    },
+    "cosmincraciun97/stonewright-wp-mcp": {
+      "karar": "reddedildi",
+      "neden": "skill değil: eklenti/CLI kodu",
+      "tarih": "2026-11-03"
+    },
+    "aws-solutions-library-samples/guidance-for-advertising-agents-on-aws": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "buluslan/bulus-amazon-skill": {
+      "karar": "reddedildi",
+      "neden": "ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy)",
+      "tarih": "2026-11-03"
+    },
+    "levanduy093-work/agentic-retail-ops": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "saucesteals/shop": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "tonydzi/second-brain-starter-kit": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/platform",
+      "tarih": "2026-11-03"
+    },
+    "bethel-mark/ecom-listing-pro": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "spree/agent-skills": {
+      "karar": "reddedildi",
+      "neden": "ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy)",
+      "tarih": "2026-11-03"
+    },
+    "zaferayan/skills": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "ehmo/platform-design-skills": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02)",
+      "tarih": "2026-11-03"
+    },
+    "Windscribe/Android-App": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "nank1ro/solid": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "ShadAdman/KSensor": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "haidrrrry/compose-kotlin-agent-skills": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "burdiuz/react-native-codeditor": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "androidx/androidx": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "nekomangaorg/Neko": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "maxrave-dev/kotlin-footguns": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "getsentry/sentry-react-native": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "ChiChou/grapefruit": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "hi-manshu/charty": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "dpearson2699/swift-ios-skills": {
+      "karar": "reddedildi",
+      "neden": "lisans sorunlu (PolyForm Perimeter rakip ürün kısıtı)",
+      "tarih": "2026-11-03"
+    },
+    "takahirom/roborazzi": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "rshankras/claude-code-apple-skills": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02)",
+      "tarih": "2026-11-03"
+    },
+    "Kototoro-app/Kototoro": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "pushpalroy/JetLime": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "reduxkotlin/redux-kotlin": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "ldomaradzki/xcsift": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "jamesrochabrun/ShaderKit": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "HDCharts/charts": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "twostraws/SwiftData-Agent-Skill": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02)",
+      "tarih": "2026-11-03"
+    },
+    "Odevio/Odevio-CLI": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "DragonJAR/Android-Pentesting-Skill": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "frankois944/spm4Kmp": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "unixzii/SimRun": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "cvs-health/ios-swiftui-accessibility-techniques": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "manyuegong33/r0crawl_skills": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "superagents-lab/xcode27-skills": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "vRallev/app-platform": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "alexvanyo/composelife": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "ComposeGears/Tiamat": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "rryam/MeshingKit": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "Wholiver/swiftui-design-skill": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "codeyousef/summon": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "GetStream/stream-video-swift": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "SuTechs/abcd_architecture_flutter": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "NativeScript/SimDeck": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "robonuggets/seedance-skill": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "anhvt52/jetpack-compose-skills": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "tayormi/flutter-map": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "vide/matedroid": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "zoom/skills": {
+      "karar": "reddedildi",
+      "neden": "alakasız (Zoom SDK)",
+      "tarih": "2026-11-03"
+    },
+    "po4yka/RIPDPI": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "awesome-skills/mobile-app-design": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "medz/oref": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "ahmed3elshaer/everything-claude-code-mobile": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "ayush016/android-lead-agent-skills": {
+      "karar": "reddedildi",
+      "neden": "mevcut skillerle çakışıyor",
+      "tarih": "2026-11-03"
+    },
+    "RevenueCat/play-billing-skills": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02)",
+      "tarih": "2026-11-03"
+    },
+    "swiftwasm/Swift-Wasm-Agent-Skill": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "aleqsio/react-native-worktree": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
+    },
+    "MobAI-App/mobile-harness": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "reez/BitcoinUI": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "cometchat/calls-sdk-ios": {
+      "karar": "reddedildi",
+      "neden": "skill değil: uygulama/kütüphane/araç kodu ya da çok dar",
+      "tarih": "2026-11-03"
+    },
+    "froessell/app-store-opportunity-research": {
+      "karar": "reddedildi",
+      "neden": "lisans yok",
+      "tarih": "2026-11-03"
     }
   },
   "konular": {

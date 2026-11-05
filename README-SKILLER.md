@@ -1,6 +1,6 @@
 # Skill Rehberi (Türkçe)
 
-Bu kütüphanedeki **5250 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
+Bu kütüphanedeki **5310 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
 `python3 araclar/skill-readme.py`. Test sonuçları: [TEST_RAPORU.md](TEST_RAPORU.md) · kurulum ve araçlar: [README.md](README.md).
 
 ## Skill nedir?
@@ -33,8 +33,8 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
   gizler (`.claude/settings.json` → `skillOverrides`), böylece kütüphane sürümü kullanılır. Ön kontrol `hesap-cakismasi` der.
 
 ## Tablolar nasıl okunur?
-- **Ne yapar / Ne zaman:** elle incelenmiş 1215 skill'de inceleme notu; 4028 skill'de açıklamanın
-  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 7 skill'de henüz İngilizce.
+- **Ne yapar / Ne zaman:** elle incelenmiş 1219 skill'de inceleme notu; 4027 skill'de açıklamanın
+  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 64 skill'de henüz İngilizce.
 - **Puan:** 0–100 otomatik değerlendirme ve derece (A–D): kaynağın bakımı, GitHub güveni, yapı, inceleme notu.
 - **Not:** alternatif sürüm, ücretli/kısmen ücretli (`notlar/ucretli-skiller.md`), Codex uyumu, 🔥trend.
 - **Gizli katalog:** entegrasyon kataloğu (tek bir uygulama için hazır otomasyon) ve repo-içi (bir projenin kendi
@@ -42,19 +42,19 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 
 ## Dizin
 
-### Tasarım ve Ön Yüz (277)
+### Tasarım ve Ön Yüz (279)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-ui-ux-tasarim-dili](skiller/a-tasarim-onyuz/01-ui-ux-tasarim-dili.md) | Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi | 38 |
+| [01-ui-ux-tasarim-dili](skiller/a-tasarim-onyuz/01-ui-ux-tasarim-dili.md) | Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi | 39 |
 | [02-tasarim-sistemi-marka](skiller/a-tasarim-onyuz/02-tasarim-sistemi-marka.md) | Design token, tema, marka kimliği, banner/logo | 14 |
 | [03-animasyon-motion](skiller/a-tasarim-onyuz/03-animasyon-motion.md) | GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim | 33 |
 | [04-scroll-deneyimi](skiller/a-tasarim-onyuz/04-scroll-deneyimi.md) | Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri | 7 |
 | [05-3d-webgl](skiller/a-tasarim-onyuz/05-3d-webgl.md) | Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader | 35 |
 | [06-oyun-2d-grafik](skiller/a-tasarim-onyuz/06-oyun-2d-grafik.md) | Oyun geliştirme, PixiJS, 2D grafik | 113 |
-| [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 25 |
+| [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 26 |
 | [08-onyuz-test-kalite](skiller/a-tasarim-onyuz/08-onyuz-test-kalite.md) | Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı | 12 |
 
-### Yazılım Geliştirme (358)
+### Yazılım Geliştirme (404)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-planlama-metodoloji](skiller/b-yazilim-gelistirme/01-planlama-metodoloji.md) | Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini | 81 |
@@ -62,16 +62,16 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [03-test-hata-ayiklama](skiller/b-yazilim-gelistirme/03-test-hata-ayiklama.md) | TDD, hata ayıklama, doğrulama | 14 |
 | [04-mimari-api-veritabani](skiller/b-yazilim-gelistirme/04-mimari-api-veritabani.md) | Mimari, API/arayüz tasarımı, veritabanı, backend | 10 |
 | [05-git-pr-surum](skiller/b-yazilim-gelistirme/05-git-pr-surum.md) | Git, worktree, PR, sürüm/release, changelog | 12 |
-| [06-devops-guvenlik-performans](skiller/b-yazilim-gelistirme/06-devops-guvenlik-performans.md) | CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | 48 |
+| [06-devops-guvenlik-performans](skiller/b-yazilim-gelistirme/06-devops-guvenlik-performans.md) | CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | 49 |
 | [07-framework-ozel](skiller/b-yazilim-gelistirme/07-framework-ozel.md) | Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme) | 23 |
-| [08-mobil-uygulama](skiller/b-yazilim-gelistirme/08-mobil-uygulama.md) | Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans | 147 |
+| [08-mobil-uygulama](skiller/b-yazilim-gelistirme/08-mobil-uygulama.md) | Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans | 192 |
 
-### Doküman ve İçerik (112)
+### Doküman ve İçerik (113)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-ofis-dokumanlari](skiller/c-dokuman-icerik/01-ofis-dokumanlari.md) | Word, Excel, PowerPoint, PDF üretme/düzenleme | 12 |
 | [02-diyagram-dokumantasyon](skiller/c-dokuman-icerik/02-diyagram-dokumantasyon.md) | Diyagram, teknik dokümantasyon, ADR, ortak yazım | 11 |
-| [03-yazi-iletisim-icerik](skiller/c-dokuman-icerik/03-yazi-iletisim-icerik.md) | Yazı, iletişim, pazarlama/içerik, kariyer | 54 |
+| [03-yazi-iletisim-icerik](skiller/c-dokuman-icerik/03-yazi-iletisim-icerik.md) | Yazı, iletişim, pazarlama/içerik, kariyer | 55 |
 | [04-not-alma-bilgi-yonetimi](skiller/c-dokuman-icerik/04-not-alma-bilgi-yonetimi.md) | Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni | 35 |
 
 ### AI ve Otomasyon (112)
@@ -100,14 +100,14 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 |---|---|---|
 | [01-repo-gelistirici-skilleri](skiller/f-repo-ici/01-repo-gelistirici-skilleri.md) | Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için iç süreç skilleri; kendi projelerinde nad… | 114 |
 
-### İş Alanları (Bilgi Çalışanı) (1972)
+### İş Alanları (Bilgi Çalışanı) (1983)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-satis-pazarlama-musteri](skiller/h-is-alanlari/01-satis-pazarlama-musteri.md) | Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları | 198 |
 | [02-finans-hukuk-ik](skiller/h-is-alanlari/02-finans-hukuk-ik.md) | Finans/muhasebe, hukuk/sözleşme, insan kaynakları | 37 |
 | [03-operasyon-urun-isletme](skiller/h-is-alanlari/03-operasyon-urun-isletme.md) | Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama | 83 |
 | [04-veri-analizi-raporlama](skiller/h-is-alanlari/04-veri-analizi-raporlama.md) | İş verisi analizi, SQL, pano/rapor, öngörü | 10 |
-| 05-e-ticaret-pazaryeri: [1](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-1.md) · [2](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-2.md) · [3](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-3.md) · [4](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-4.md) · [5](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-5.md) | E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listele… | 1644 |
+| 05-e-ticaret-pazaryeri: [1](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-1.md) · [2](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-2.md) · [3](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-3.md) · [4](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-4.md) · [5](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-5.md) | E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listele… | 1655 |
 
 ### Bilim, Araştırma ve Mühendislik (378)
 | Kategori | Kapsam | Skill |

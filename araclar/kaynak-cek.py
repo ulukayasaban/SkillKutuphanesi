@@ -81,7 +81,9 @@ def skill_klasorlerini_sec(kayit, agac, ayar):
         d = e["path"].rsplit("/", 1)[0] if "/" in e["path"] else ""
         kontrol = (d + "/") if d else e["path"]
         if kayit.get("dahil") and not ilk_eslesen(kayit["dahil"], kontrol):
-            denetim[e["path"]] = "dahil-disi"
+            # dahil dışı ama repo 'haric'inde: kullanıcı reddetti, karar bekleyen sayılmaz
+            h = ilk_eslesen(repo_haric, kontrol)
+            denetim[e["path"]] = f"haric:{h}" if h else "dahil-disi"
             continue
         if kayit.get("dahil_degil") and ilk_eslesen(kayit["dahil_degil"], kontrol):
             denetim[e["path"]] = "dahil-disi"

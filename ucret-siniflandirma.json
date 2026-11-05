@@ -1413,6 +1413,86 @@
     "vast-gpu": [
       "ucretli",
       "Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu"
+    ],
+    "frontend-slides": [
+      "kismen",
+      "Yerel HTML sunum ve PDF ücretsiz; isteğe bağlı Vercel yayını hesap gerektirir (ücretsiz Hobby katmanı var)."
+    ],
+    "backend-architecture": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "pbl-v7-to-v8-migration": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "pbl-v7-to-v9-migration": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "plan-changes": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "play-developer-api-reference": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "rtdn-reference": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "subscriptions": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "testing@revenuecat": [
+      "ucretsiz",
+      "'Prepaid plan' Google Play'in ön ödemeli abonelik türü; ücretli servis değil. Sadece google-play/ alındı (RevenueCat servisi gerekmez)."
+    ],
+    "amazon-a-plus": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "amazon-white-background": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "batch-background-swap": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "ecommerce-listing-suite": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "etsy-seller": [
+      "ucretsiz",
+      "Etsy herkese açık arama/autocomplete sayfalarını okur; API anahtarı ya da ücret gerekmez."
+    ],
+    "lifestyle-scene": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "model-try-on": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "multi-angle-set": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "sale-banner": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "selling-point-infographic": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
+    ],
+    "size-chart": [
+      "kismen",
+      "GPT Image API (OpenAI ya da uyumlu) ücretli; agent yerleşik görsel aracıyla ya da istemi elle çalıştırarak ücretsiz kullanılabilir. Önerdiği tryallapi.com aracısına anahtar verme."
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

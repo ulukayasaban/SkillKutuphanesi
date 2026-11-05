@@ -1025,6 +1025,76 @@
       "tip": "T1",
       "oncelik": 3,
       "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Ücretsiz SEO MCP sunucusu + 8 SEO/GEO skill'i (9k★). seo-audit adı anthropics'te var (o kazanır)."
+    },
+    {
+      "repo": "hardikpandya/stop-slop",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-02). humanizer'ın kısa/hafif alternatifi."
+    },
+    {
+      "repo": "zarazhangrui/frontend-slides",
+      "tip": "T1",
+      "oncelik": 4,
+      "haric": [
+        "^plugins/"
+      ],
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-02). Kökteki SKILL.md ile plugins/ kopyası birebir aynı; sadece kök alınır.",
+      "dosya_haric": [
+        "^plugins/"
+      ]
+    },
+    {
+      "repo": "moiz-za/etsy-seller-seo-system",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Etsy başlık/13 etiket/açıklama; canlı Etsy autocomplete ve rakip SERP. DİKKAT: ~/etsy-listings/ altına yazar."
+    },
+    {
+      "repo": "xianyu110/ecommerce-image-skills",
+      "tip": "T1",
+      "oncelik": 4,
+      "haric": [
+        "^skills/taobao-detail-long-image/",
+        "^skills/xiaohongshu-cover/"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Ürün görseli skilleri (GPT Image API ya da prompt paketi). Taobao/Xiaohongshu (Çin platformu) skilleri hariç. Açıklamalar Çince-İngilizce karışık."
+    },
+    {
+      "repo": "ehmo/platform-design-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Apple HIG, Material 3, WCAG 2.2 platform kuralları (ios/android/web/macos…)."
+    },
+    {
+      "repo": "twostraws/SwiftData-Agent-Skill",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). SwiftData kodu yazma/inceleme (Paul Hudson); kütüphanede karşılığı yoktu."
+    },
+    {
+      "repo": "RevenueCat/play-billing-skills",
+      "tip": "T2",
+      "oncelik": 3,
+      "dahil": [
+        "^google-play/"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Sadece google-play/ (Play Billing, ücretsiz). revenuecat/ alt ağacı ücretli RevenueCat servisine bağlı olduğu için alınmadı.",
+      "haric": [
+        "^(?!google-play/)"
+      ]
+    },
+    {
+      "repo": "rshankras/claude-code-apple-skills",
+      "tip": "T2",
+      "oncelik": 4,
+      "dahil": [
+        "^skills/app-store/"
+      ],
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Sadece skills/app-store/ (ASO, red yönetimi, yorum yanıtı, IAP, ekran görüntüsü planı); repo geneli 184 skill.",
+      "haric": [
+        "^(?!skills/app-store/)"
+      ]
     }
   ],
   "konum_haric": [
@@ -2030,6 +2100,13 @@
       "neden": "★15, tek katkıcı, Mart'tan beri güncellenmedi; 10 ince Magento başvuru notu (2-7 KB, tek dosya); Magento kullanılmıyor, geliştirici tarafı OrcaQubits'te. Kullanıcı onayıyla (silme-adaylari.md #3).",
       "tarih": "2026-10-31",
       "geri_alma": "git geçmişinde arşiv dosyaları durur; kaynaklar.json'a repoyu geri yazıp kaynak-cek + arsiv-yerlestir çalıştır, yeniden yıldızla"
+    },
+    {
+      "repo": "Egonex-AI/Understand-Anything",
+      "skill_sayisi": 7,
+      "neden": "Kullanıcı kararı (2026-11-02): arşiv kopyası tek başına çalışmıyor. Ana skill 'understand' eklentinin tam deposunu (pnpm workspace + @understand-anything/core derlemesi) ev klasöründe arar; diğer 6 skill onun ürettiği .ua/knowledge-graph.json'a bağlı. Kullanılacaksa eklenti kendi yöntemiyle kurulmalı.",
+      "tarih": "2026-11-02",
+      "geri_alma": "kaynaklar.json'a T2 + dahil ^understand-anything-plugin/skills/ ile geri yaz; kaynak-cek + arsiv-yerlestir"
     }
   ]
 }

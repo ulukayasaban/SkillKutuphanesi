@@ -702,6 +702,14 @@
     "Nutlope/hallmark": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
     "JuliusBrussee/caveman": "d-ai-otomasyon/02-agent-orkestrasyon",
     "Orchestra-Research/AI-Research-SKILLs": "i-bilim-muhendislik/03-veri-bilimi-ml",
-    "wanshuiyin/Auto-claude-code-research-in-sleep": "i-bilim-muhendislik/04-bilimsel-yazim-literatur"
+    "wanshuiyin/Auto-claude-code-research-in-sleep": "i-bilim-muhendislik/04-bilimsel-yazim-literatur",
+    "hardikpandya/stop-slop": "c-dokuman-icerik/03-yazi-iletisim-icerik",
+    "zarazhangrui/frontend-slides": "a-tasarim-onyuz/07-gorsel-sanat-sunum",
+    "moiz-za/etsy-seller-seo-system": "h-is-alanlari/05-e-ticaret-pazaryeri",
+    "xianyu110/ecommerce-image-skills": "h-is-alanlari/05-e-ticaret-pazaryeri",
+    "ehmo/platform-design-skills": "b-yazilim-gelistirme/08-mobil-uygulama",
+    "twostraws/SwiftData-Agent-Skill": "b-yazilim-gelistirme/08-mobil-uygulama",
+    "RevenueCat/play-billing-skills": "b-yazilim-gelistirme/08-mobil-uygulama",
+    "rshankras/claude-code-apple-skills": "b-yazilim-gelistirme/08-mobil-uygulama"
   }
 }
