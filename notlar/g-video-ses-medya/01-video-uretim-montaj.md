@@ -2,9 +2,9 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **24/56**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **24/90**
 
-### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Hyperframes-based video template for retro pixel deck motion design. Use when users want a high-fidelity, multi-scene HTML-to-video composition with advanced transitions, interactive preview controls, and ready-to-render default style.
 - **Teknoloji:** css, gsap, html _(otomatik tespit)_
@@ -14,7 +14,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 20 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### after-hours-editorial-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### after-hours-editorial-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Luxury dark-editorial HyperFrames template for three-page cinematic storyboards, inspired by haute couture title cards and magazine chapter spreads. Use when the user asks for premium fashion-style motion pages, moody serif-led storytelling, or a high-end dark presentation aesthetic with rich transitions.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -22,6 +22,36 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Geliştirici:** nexu-io (kurum, ★105353, son güncelleme 2026-11-02, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 16 KB (SKILL.md 2.4 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### alipay-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 social-auto-upload 的 `sau alipay` 登录支付宝生活号并发布视频。Use when 用户要向支付宝生活号发布视频或检查创作账号状态。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### baijiahao-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 social-auto-upload 的 `sau baijiahao` 登录百家号、检查账号并发布视频。Use when 用户要向百家号发布视频或核验百家号登录状态。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### bilibili-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成 Bilibili 登录、账号校验或视频上传时使用这个 skill。优先使用 `sau bilibili ...`，程序会自动准备 `biliup`，不要求用户手动安装。
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 9 KB (SKILL.md 2.1 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
 ### captions-overlay  ·  heygen-com/hyperframes @ f8309b3  ·  puan 100 (A)
@@ -46,7 +76,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 521 KB (SKILL.md 13.1 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. HeyGen iç skilli (internal:true): HeyGen marka kimliğine, sabit seslendirmene ve repo köküne bağlı; paketlenen TT Norms Pro / ABC Solar ticari fontlarının yeniden kullanım lisansı belirsiz. Rollere eklenmedi.
 
-### chat-motion-overlay  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### chat-motion-overlay  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Generate configurable chat motion overlays from a transcript or screenshot, including plain bubble scenes, app-style chat containers, optional device frames, preset or uploaded avatars, nickname display rules, and transparent-video-ready Remotion bundles. Use when Codex needs to create reusable short-form chat clips for Douyin, demo videos, story reenactments, social-message proof scenes, or embed
 - **Teknoloji:** python, remotion, typescript _(otomatik tespit)_
@@ -66,6 +96,36 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Durum:** tercih · **Örtüşme:** heygen-video → birincil · **Roller:** video-kompozisyon, ai-medya-uretici · **Globalde:** claude:ayni
 - **Boyut:** 92 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı ve güncel HeyGen resmi skill'i; MCP varsa onu tercih ediyor. Ücretli API, sonuç kontrolü sınırlı.
+
+### dayu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 通过 social-auto-upload 的 sau CLI 完成大鱼号登录、账号核验、视频和文章的立即或定时发布，以及原作品结果查询。文章接收 HTML、Markdown 或 TXT 文件，Markdown 可选择主题。适用于已安装 sau 的环境，无需先阅读上传器源码。
+- **Teknoloji:** html, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 7 KB (SKILL.md 5.3 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### douyin-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成抖音登录、cookie 校验、视频上传或图文发布时使用这个 skill。该 skill 适用于已经安装 `social-auto-upload` 且可调用 `sau` 命令的环境。优先使用这个 skill 进行稳定的命令式抖音工作流，而不是一开始就阅读 uploader 源码。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 11 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### facebook-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 sau CLI 登录 Facebook 个人主页，立即发布视频或图文，查询原作品、移至垃圾箱或永久删除。
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 4 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
 
 ### ffmpeg  ·  calesthio/OpenMontage @ 195eab2  ·  puan 96 (A)
 
@@ -89,7 +149,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 11 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede komutlar sadeleşti, storyboard kuralları (frame = keyframe) ve motion doğrulama betiği netleşti. Token sohbete yapıştırılmaz; kullanıcı kendisi ayarlar.
 
-### frame-data-chart-nyt  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### frame-data-chart-nyt  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** NYT-newsroom typography, staggered reveal animation, and editorial-grade charts (line, bar, or range band).
 - **Teknoloji:** html _(otomatik tespit)_
@@ -99,7 +159,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 9 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frame-flowchart-sticky  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### frame-flowchart-sticky  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** SVG curve connectors, sticky-note nodes, and cursor interaction with a whiteboard-brainstorm feel.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -109,7 +169,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 10 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frame-glitch-title  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### frame-glitch-title  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Digital glitch, chromatic offset, and data-corruption title frame for video transitions or cyberpunk heroes.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -119,7 +179,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 9 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frame-light-leak-cinema  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### frame-light-leak-cinema  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Film light leaks, grain, 16:9 letterbox, and large serif type for cinematic openings or chapter cards.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -129,7 +189,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frame-liquid-bg-hero  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### frame-liquid-bg-hero  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** WebGL-style fluid displacement background with a quote overlay, suited to video intros, landing heroes, or posters.
 - **Teknoloji:** canvas, css, html, webgl _(otomatik tespit)_
@@ -139,7 +199,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frame-logo-outro  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### frame-logo-outro  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Segmented logo assembly, glow bloom, and tagline reveal for video outros or brand closing frames.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -149,7 +209,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frame-macos-notification  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### frame-macos-notification  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Realistic macOS notification banner with app icon, title, and body, suited to video overlays or product teasers.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -157,6 +217,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Geliştirici:** nexu-io (kurum, ★105353, son güncelleme 2026-11-02, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 3.8 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### hupu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 social-auto-upload 的 `sau hupu` 登录虎扑并发布视频，可指定封面。Use when 用户要向虎扑发布视频或检查虎扑账号状态。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
 ### hyperframes  ·  heygen-com/hyperframes @ f8309b3  ·  puan 100 (A)
@@ -181,6 +251,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 124 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-11: ses (audio_*) lint denetimleri ve yeni render bayrakları eklendi; bulut render ayrı HyperFrames OAuth'una (~/.hyperframes) taşındı, ücretli planda son render için cloud render öneriliyor (yerel render ücretsiz). Telemetri girişten sonra hesaba bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır. Node 22+ ve FFmpeg gerekir.
 
+### hyperframes-cli@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** HyperFrames CLI tool — hyperframes init, lint, inspect, preview, render, transcribe, tts, doctor, browser, info, upgrade, compositions, docs, benchmark. Use when scaffolding a project, linting, validating, inspecting visual layout in compositions, previewing in the studio, rendering to video, transcribing audio, generating TTS, or troubleshooting the HyperFrames environment.
+- **Teknoloji:** canvas, docker, ffmpeg, html, node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### hyperframes-registry  ·  heygen-com/hyperframes @ f8309b3  ·  puan 97 (A)
 
 - **Ne yapar:** ~450 hazır HyperFrames bloğu ve bileşenini (geçişler, overlay, başlık, kinetik tipografi, altyazı stilleri, grafik, harita, 3D, kamera hareketi) arama (`catalog --query`) ve projeye düzenlenebilir kaynak olarak kurma (`add`) rehberi.
@@ -191,6 +271,46 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı · **Roller:** video-kompozisyon, motion-graphics-sanatcisi · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 83 KB (SKILL.md 4.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede ~400 → ~450 öğe; yerel arama katmanları (words / on-device) ve 'gap' raporlama eklendi. Arama İngilizce yapılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
+
+### hyperframes-registry@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.
+- **Teknoloji:** canvas, css, gsap, html _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 18 KB (SKILL.md 4.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### hyperframes@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker swee
+- **Teknoloji:** canvas, css, gsap, html, node, webgl _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 157 KB (SKILL.md 21.0 KB, yük orta)
+- **İnceleme:** otomatik
+
+### instagram-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 sau CLI 在 Instagram 独立网页登录、立即发布 Reels/单图/轮播、核验原作品并移至最近删除。
+- **Teknoloji:** git, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### kuaishou-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成快手登录、cookie 校验、视频上传或图文发布时使用这个 skill。该 skill 适用于已经安装 `social-auto-upload` 且可调用 `sau` 命令的环境。优先使用这个 skill 进行稳定的命令式快手工作流，而不是一开始就阅读 uploader 源码。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 11 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
 
 ### lemo-opuscar  ·  lemomo-ai/lemo-opuscar @ bebbbe1  ·  puan 85 (A)
 
@@ -225,7 +345,17 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1860 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-11: giriş 'npx hyperframes auth login' (HyperFrames OAuth); 'media-use generate' ile heygen CLI olmadan üretim eklendi. Kredi harcamada ücretsiz yola geçmeme ve fiyat söylememe yönergesi kullanıcının ücretsiz-önce tercihiyle çelişir. Telemetri girişten sonra HeyGen hesabına bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır.
 
-### motion-design  ·  nexu-io/open-design @ 987b247  ·  puan 91 (A)
+### meta-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 sau CLI 登录 Facebook Page，发布视频或图文、设置北京时间排期、查询原作品并删除。
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### motion-design  ·  nexu-io/open-design @ 987b247  ·  puan 92 (A)
 
 - **Ne yapar:** Apply motion craft to an active task: refine a brief, beat map, visual continuity, typography, pacing, and timeline implementation. Use when planning or improving motion graphics; the host task owns artifact creation, output format, and export.
 - **Teknoloji:** api-anahtari, canvas, css, gsap, html, node, remotion _(otomatik tespit)_
@@ -280,12 +410,12 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion-best-practices  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
-- **Ne yapar:** Router for all Remotion skills
+- **Ne yapar:** Entry point and router for Remotion (React video framework) work: points to the right sub-guide for creating a video or project, React markup, animations, captions, maps, multimedia, interactivity, rendering, Studio preview, SaaS apps, docs search, licensing and upgrades. Use whenever the user works on a Remotion project or wants to make videos programmatically with React.
 - **Teknoloji:** node, react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
 - **Durum:** tercih · **Globalde:** claude:farkli, agents:farkli
-- **Boyut:** 6 KB (SKILL.md 4.2 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir. · **Kırık bağlantı:** 12
+- **Boyut:** 6 KB (SKILL.md 4.2 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
 ### remotion-best-practices@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 100 (A)
@@ -299,6 +429,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 112 KB (SKILL.md 4.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Remotion ekibinin resmi kural seti, kaliteli. Varsayılan çerçeve HyperFrames olduğu için alternatif; Remotion projelerinde birincil.
 
+### remotion-best-practices@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Entry point and router for Remotion (React video framework) work: points to the right sub-guide for creating a video or project, React markup, animations, captions, maps, multimedia, interactivity, rendering, Studio preview, SaaS apps, docs search, licensing and upgrades. Use whenever the user works on a Remotion project or wants to make videos programmatically with React.
+- **Teknoloji:** node, react, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 1059 KB (SKILL.md 2.9 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### remotion-captions  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
 - **Ne yapar:** Transcribing, displaying and animating captions
@@ -309,9 +449,19 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 16 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-create  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-captions@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
 
-- **Ne yapar:** Create a new Remotion video
+- **Ne yapar:** Transcribing, displaying and animating captions
+- **Teknoloji:** remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 12 KB (SKILL.md 0.9 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### remotion-create  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+
+- **Ne yapar:** Scaffold a new Remotion project and build a new video composition (create-video, layout, Tailwind). Use when the user asks to make, create or build a new video or composition with Remotion, or no Remotion project exists yet.
 - **Teknoloji:** git, node, react, remotion, tailwind _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -319,14 +469,34 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 5 KB (SKILL.md 2.9 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-docs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-create@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
 
-- **Ne yapar:** Search Remotion documentation
+- **Ne yapar:** Scaffold a new Remotion project and build a new video composition (create-video, layout, Tailwind). Use when the user asks to make, create or build a new video or composition with Remotion, or no Remotion project exists yet.
+- **Teknoloji:** git, node, react, remotion, tailwind _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 5 KB (SKILL.md 2.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### remotion-docs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+
+- **Ne yapar:** Search and read current Remotion documentation via its docs search API. Use when you need up-to-date Remotion API details, props or examples instead of relying on memory.
 - **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
+- **İnceleme:** otomatik
+
+### remotion-docs@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Search and read current Remotion documentation via its docs search API. Use when you need up-to-date Remotion API details, props or examples instead of relying on memory.
+- **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 3 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### remotion-interactivity  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
@@ -339,6 +509,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 23 KB (SKILL.md 13.5 KB, yük orta) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
+### remotion-interactivity@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Structure Remotion markup for interactivity
+- **Teknoloji:** css, html, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 9 KB (SKILL.md 7.3 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### remotion-license  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
 
 - **Ne yapar:** Find Remotion license information, FAQs, terms, and where to buy a license.
@@ -349,9 +529,9 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 2 KB (SKILL.md 0.5 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-maps  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-maps  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
-- **Ne yapar:** Remotion Map animation knowledge
+- **Ne yapar:** Animated maps in Remotion videos: static satellite maps, Mapbox, MapLibre, MapTiler, GeoJSON routes and markers, and 3D geographic flyovers. Use when a Remotion video needs a map, animated route, location explainer or globe.
 - **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -359,19 +539,39 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 477 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-markup  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 87 (A)
+### remotion-maps@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Animated maps in Remotion videos: static satellite maps, Mapbox, MapLibre, MapTiler, GeoJSON routes and markers, and 3D geographic flyovers. Use when a Remotion video needs a map, animated route, location explainer or globe.
+- **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 454 KB (SKILL.md 1.0 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### remotion-markup  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
 - **Ne yapar:** Content, animation and effects best practices
 - **Teknoloji:** canvas, css, ffmpeg, html, lottie, node, react, remotion, tailwind, three.js _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
 - **Durum:** tercih
-- **Boyut:** 123 KB (SKILL.md 13.2 KB, yük orta) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir. · **Kırık bağlantı:** 1
+- **Boyut:** 123 KB (SKILL.md 13.2 KB, yük orta) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-multimedia  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-markup@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
 
-- **Ne yapar:** Interacting with Mediabunny
+- **Ne yapar:** Content, animation and effects best practices
+- **Teknoloji:** canvas, css, ffmpeg, html, lottie, node, react, remotion, tailwind, three.js, webgl _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 548 KB (SKILL.md 10.6 KB, yük orta)
+- **İnceleme:** otomatik
+
+### remotion-multimedia  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+
+- **Ne yapar:** Read and process audio/video files in the browser with Mediabunny for Remotion: get audio or video duration and dimensions, trim, crop and inspect metadata. Use when a Remotion composition needs media durations, sizes or browser-side media processing.
 - **Teknoloji:** remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -379,9 +579,19 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 0.7 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-render  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-multimedia@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
 
-- **Ne yapar:** Export a Remotion video
+- **Ne yapar:** Read and process audio/video files in the browser with Mediabunny for Remotion: get audio or video duration and dimensions, trim, crop and inspect metadata. Use when a Remotion composition needs media durations, sizes or browser-side media processing.
+- **Teknoloji:** remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 7 KB (SKILL.md 0.7 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### remotion-render  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+
+- **Ne yapar:** Render and export Remotion videos and stills: npx remotion render/still, codecs, transparent videos and render flags. Use when the user wants to export, render or download an MP4/WebM/GIF/PNG from a Remotion project.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -389,9 +599,19 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 5 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-saas  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-render@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
 
-- **Ne yapar:** Build an app with Remotion
+- **Ne yapar:** Render and export Remotion videos and stills: npx remotion render/still, codecs, transparent videos and render flags. Use when the user wants to export, render or download an MP4/WebM/GIF/PNG from a Remotion project.
+- **Teknoloji:** node, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 4 KB (SKILL.md 0.5 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### remotion-saas  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+
+- **Ne yapar:** Build an app on top of Remotion: SaaS templates and frameworks, embedding @remotion/player in React (or Vue, Angular, Svelte), and client- vs server-side rendering (Lambda, Vercel, Node.js, Cloudflare). Use when making a video-generation product, editor or form-to-video app with Remotion.
 - **Teknoloji:** node, react, remotion, svelte, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
@@ -399,14 +619,34 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-studio  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-saas@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
 
-- **Ne yapar:** Preview a Remotion video
+- **Ne yapar:** Build an app on top of Remotion: SaaS templates and frameworks, embedding @remotion/player in React (or Vue, Angular, Svelte), and client- vs server-side rendering (Lambda, Vercel, Node.js, Cloudflare). Use when making a video-generation product, editor or form-to-video app with Remotion.
+- **Teknoloji:** node, react, remotion, svelte, vue _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 8 KB (SKILL.md 1.0 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### remotion-studio  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+
+- **Ne yapar:** Start and use Remotion Studio to preview a video while building it (npx remotion studio, --no-open with an in-app browser, useful flags). Use when creating or editing a Remotion video and the user should see a live preview.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
+- **İnceleme:** otomatik
+
+### remotion-studio@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Start and use Remotion Studio to preview a video while building it (npx remotion studio, --no-open with an in-app browser, useful flags). Use when creating or editing a Remotion video and the user should see a live preview.
+- **Teknoloji:** node, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 2 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### remotion-to-hyperframes  ·  heygen-com/hyperframes @ f8309b3  ·  puan 97 (A)
@@ -420,14 +660,24 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 164 KB (SKILL.md 4.9 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — 2026-11: SSIM karşılaştırması betikler yerine `npx hyperframes diff` komutuna taşındı (render_diff.sh/frame_strip.sh kaldırıldı); box-sizing kuralı ve lottie/timing notları eklendi. Üç seviyeli model (Native/Hosted/Media) korunuyor.
 
-### remotion-upgrade  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### remotion-upgrade  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
-- **Ne yapar:** Upgrade Remotion, and related packages
+- **Ne yapar:** Upgrade Remotion and all @remotion/* packages to the same latest version, align auxiliary dependencies and update installed Remotion skills. Use when the user asks to upgrade or update Remotion, or Remotion package versions are mismatched.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★69773, son güncelleme 2026-11-01, lisans NOASSERTION)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 1.9 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
+- **İnceleme:** otomatik
+
+### remotion-upgrade@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Upgrade Remotion and all @remotion/* packages to the same latest version, align auxiliary dependencies and update installed Remotion skills. Use when the user asks to upgrade or update Remotion, or Remotion package versions are mismatched.
+- **Teknoloji:** node, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 3 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### slideshow  ·  heygen-com/hyperframes @ f8309b3  ·  puan 97 (A)
@@ -441,7 +691,17 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 48 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede SKILL.md 497 satırdan ~45 satıra indi; kurallar özlü. ttsScript alanları henüz bağlı değil.
 
-### social-reddit-card  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### social-auto-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 为 social-auto-upload 提供总入口，按平台和内容类型选择对应发布流程。Use when 用户要在本仓库支持的平台发布视频、文章或图文，或需要把内容分发到多个指定平台。
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### social-reddit-card  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Realistic Reddit post card with vote rail and comment count, suited to video overlays or story sharing.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -451,7 +711,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### social-spotify-card  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### social-spotify-card  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Spotify Now Playing-style card with album art, progress bar, and playback controls, suited to video overlays or personal homepages.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -461,7 +721,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### social-x-post-card  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### social-x-post-card  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Realistic X post card with engagement metrics (likes, reposts, views), suited to video overlays or shareable image cards.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -471,7 +731,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### swiss-user-research-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### swiss-user-research-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Swiss-style user-research narrative template in warm-paper editorial aesthetics. Use when users ask for a premium research deck or story-first live artifact with minimalist typography, high-clarity layout, subtle motion, donut breakdowns, and keyboard/click navigation across slides in a single HTML file.
 - **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
@@ -492,7 +752,27 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Fikir iyi; ancak OpenMontage'ın remotion-composer/TerminalScene bileşenine bağımlı.
 
-### vfx-text-cursor  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### tencent-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 social-auto-upload 的 `sau tencent` 登录视频号并发布或定时发布视频、保存草稿。Use when 用户要向微信视频号发布视频或检查视频号账号状态。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### tiktok-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用仓库现有 Patchright/Playwright Chrome 上传器登录并发布 TikTok 视频。Use when 用户要发布 TikTok 视频，且当前环境可访问本仓库及其本地 Chrome 配置。
+- **Teknoloji:** playwright, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### vfx-text-cursor  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Cursor light trail, chromatic rays, and directional flares for word-by-word quote reveals in video intros.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -524,7 +804,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 12 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa, genel, platform ön ayarlı; bağımlılığı sadece ffmpeg.
 
-### video-hyperframes  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### video-hyperframes  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Hyperframes / Remotion-compatible continuous frame animation with autoplay support.
 - **Teknoloji:** html, remotion _(otomatik tespit)_
@@ -532,6 +812,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Geliştirici:** nexu-io (kurum, ★105353, son güncelleme 2026-11-02, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 2.6 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### video-shotcraft  ·  Vincentwei1021/video-shotcraft @ 1266a3e  ·  puan 79 (B)
+
+- **Ne yapar:** Create cinematic product videos from frontend projects or webpages with Remotion, real page captures, shot cards, the Ink Press template, beat sync and sound design. Use for full product promos, reproducing Ink Press, single shot-card effects, or finding, adding, replacing and aligning sound effects in an existing product video or shot, including candidate-only SFX searches. 用真实页面、镜头卡与 Ink Press 模
+- **Teknoloji:** api-anahtari, ffmpeg, git, html, node, python, r3f, react, remotion, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** Vincentwei1021 (kisi, ★16948, son güncelleme 2026-10-29, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 28250 KB (SKILL.md 21.2 KB, yük orta) · **Bağımlılık:** Remotion (Node.js; npx remotion). Ürün videoları için Remotion projesi gerekir.
 - **İnceleme:** otomatik
 
 ### video-toolkit  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
@@ -567,7 +857,17 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 27 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Betiği skill klasöründe; yol skills/video-understand/... diye yazılmış, kurulumda skill yoluna göre çalıştırılmalı.
 
-### weread-year-in-review-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### weibo-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 social-auto-upload 的 `sau weibo` 登录微博并发布视频，可指定封面。Use when 用户要向微博发布视频或检查微博账号状态。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### weread-year-in-review-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** WeRead-inspired HyperFrames video template for vertical annual reading reports, personal reading dashboards, book-note recaps, and shareable year-in-review stories. Use when users want a 9:16 HTML-to-MP4 reading report with warm paper texture, editorial Chinese typography, book-page metaphors, data highlights, and deterministic motion.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -575,6 +875,26 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Geliştirici:** nexu-io (kurum, ★105353, son güncelleme 2026-11-02, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 33 KB (SKILL.md 3.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### xiaohongshu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成小红书登录、cookie 校验、视频上传或图文发布时使用这个 skill。该 skill 适用于已经安装 `social-auto-upload` 且可调用 `sau` 命令的环境。优先使用这个 skill 进行稳定的命令式小红书工作流，而不是一开始就阅读 uploader 源码。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 11 KB (SKILL.md 2.8 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### xueqiu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 78 (B)
+
+- **Ne yapar:** 通过 social-auto-upload 的 sau CLI 登录和核验雪球账号，发布 HTML、Markdown 或 TXT 长文，保留原稿段间配图、原生文字结构与独立封面，并查询原作品确认结果。适用于雪球创作者平台，不支持定时或视频。
+- **Teknoloji:** css, html, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 4.3 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır). · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
 ### youtube-downloader  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
@@ -587,3 +907,23 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Durum:** tercih · **Örtüşme:** video-indirme → alternatif
 - **Boyut:** 7 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Basit ve çalışır betik; sandbox'a özgü varsayılan yol ve otomatik pip kurulumu eksi. Kategori: video indirme g-video-ses-medya/01 kapsamında, oraya taşındı ve video-indirme grubuna alternatif olarak eklendi.
+
+### youtube-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 80 (A)
+
+- **Ne yapar:** 使用 social-auto-upload 的 `sau youtube` 登录 YouTube 并上传、安排定时或设置视频可见范围。Use when 用户要向 YouTube 发布或定时发布视频，或检查 Google/YouTube 登录状态。
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### zhihu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 78 (B)
+
+- **Ne yapar:** 使用 social-auto-upload 的 sau CLI 登录知乎、发布文章或视频，并按作品链接核对结果；支持原稿位置配图与视频领域、声明选项。
+- **Teknoloji:** css, html, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** dreammis (kisi, ★16117, son güncelleme 2026-10-22, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 6 KB (SKILL.md 4.2 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır). · **Kırık bağlantı:** 1
+- **İnceleme:** otomatik

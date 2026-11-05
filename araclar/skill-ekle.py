@@ -44,7 +44,8 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, global_durum, json_oku, json_yaz, klasor_hash  # noqa: E402
+from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KOK, REGISTRY, hesap_skilleri, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
+                   klasor_hash, onarim_izi, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula)
 
 ROLLER = KOK / "roller"
 PROFILLER = KOK / "profiller"
@@ -226,7 +227,7 @@ def yedekle(proje, adlar, neden):
     zaman = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     y = meta(proje) / "yedek" / zaman
     y.mkdir(parents=True)
-    hedefler = [".claude/agents", ".codex/agents", "AGENTS.md", "CLAUDE.md", f"{META}/kilit.json"]
+    hedefler = [".claude/agents", ".codex/agents", "AGENTS.md", "CLAUDE.md", str(AYAR), f"{META}/kilit.json"]
     hedefler += [f".agents/skills/{a}" for a in adlar] + [f".claude/skills/{a}" for a in adlar]
     var_olan = []
     for rel in hedefler:
@@ -346,13 +347,13 @@ def kardes_yollarini_yeniden_adlandir(klasor: Path, harita):
             metin_yaz(f, yeni_metin)
 
 
-def isim_esitle(skill_md: Path, ad: str):
+def isim_esitle(skill_md: Path, ad: str, aciklama=None):
     """SADECE frontmatter içindeki name alanını klasör adına eşitler (gövdedeki örnek yaml'lara dokunmaz)."""
     metin = metin_oku(skill_md)
     m = re.match(r"^(\ufeff?---[ \t]*(\r?\n))(.*?)(\r?\n---[ \t]*(?:\r?\n|$))", metin, re.S)
     if not m:
         nl = "\r\n" if "\r\n" in metin else "\n"
-        metin_yaz(skill_md, f"---{nl}name: {ad}{nl}description: {ad}{nl}---{nl}{nl}" + metin)
+        metin_yaz(skill_md, f"---{nl}name: {ad}{nl}description: {json.dumps(aciklama or ad, ensure_ascii=False)}{nl}---{nl}{nl}" + metin)
         return
     bas, nl, govde, son = m.group(1), m.group(2), m.group(3), m.group(4)
     nm = re.search(r"^name:[ \t]*(.*)$", govde, re.M)
@@ -360,6 +361,44 @@ def isim_esitle(skill_md: Path, ad: str):
         return
     govde = (govde[:nm.start()] + f"name: {ad}" + govde[nm.end():]) if nm else f"name: {ad}{nl}" + govde
     metin_yaz(skill_md, bas + govde + son + metin[m.end():])
+
+
+def tetikleme_sorunu(y: str) -> bool:
+    """Bu yapısal sorun skill'in description'la tetiklenmesini engeller/bozar mı?"""
+    return any(x in y for x in ("frontmatter yok", "description yok", "description çok uzun", "description çok kısa",
+                                "dosya başında değil", "tırnaksız"))
+
+
+def oto_onarilir(y: str) -> bool:
+    """aciklama_duzeltme gerekmeden kurulumda kendiliğinden düzelen sorunlar."""
+    return "dosya başında değil" in y or "tırnaksız" in y
+
+
+def symlink_taslaklarini_coz(klasor: Path):
+    """Kaynakta git symlink'i olan, arşive düz metin olarak gelmiş '../<kardeş>' taslaklarını kaldırır ve onlara giden
+    bağlantıları kardeş skill yoluna çevirir (sonra kardes_yollarini_yeniden_adlandir projedeki ada eşler)."""
+    taslaklar = symlink_taslaklari(klasor)
+    if not taslaklar:
+        return
+    for ad in taslaklar:
+        (klasor / ad).unlink()
+    for f in klasor.rglob("*"):
+        if f.is_file() and f.suffix.lower() in (".md", ".mdx", ".txt"):
+            metin = metin_oku(f)
+            yeni = taslak_baglantilarini_cevir(metin, taslaklar, len(f.relative_to(klasor).parts) - 1)
+            if yeni != metin:
+                metin_yaz(f, yeni)
+
+
+def aciklama_onar(skill_md: Path, s, ad):
+    """Tetiklenmeyi engelleyen frontmatter sorunlarını KURULAN KOPYADA düzeltir (arşivdeki orijinal değişmez):
+    yorum arkasındaki frontmatter başa alınır, YAML'ı bozan description tırnaklanır, registry'deki
+    aciklama_duzeltme.description (eksik/kısa/uzun description için elle yazılmış) uygulanır."""
+    metin = metin_oku(skill_md)
+    yeni, yapilan = frontmatter_onar(metin, ad, (s.get("aciklama_duzeltme") or {}).get("description"))
+    if yeni != metin:
+        metin_yaz(skill_md, yeni)
+    return yapilan
 
 
 def frontmatter_adi(skill_md: Path):
@@ -374,7 +413,10 @@ def hazirla(kaynak: Path, hedef: Path, s, ad, kardes=None):
     sil_yol(gecici)
     gecici.parent.mkdir(parents=True, exist_ok=True)
     shutil.copytree(kaynak, gecici, ignore=shutil.ignore_patterns("KAYNAK.md"))
-    isim_esitle(gecici / "SKILL.md", ad)
+    symlink_taslaklarini_coz(gecici)
+    yamalari_uygula(gecici, s)
+    aciklama_onar(gecici / "SKILL.md", s, ad)
+    isim_esitle(gecici / "SKILL.md", ad, s.get("aciklama"))
     yollari_yeniden_adlandir(gecici, {s["ad"], s.get("klasor_adi")}, ad)
     kardes_yollarini_yeniden_adlandir(gecici, {k: v[0] for k, v in (kardes or {}).items()})
     sil_yol(hedef)
@@ -497,7 +539,71 @@ def talimat_bloklari(proje: Path, kilit: dict):
         blok_sil(proje / "AGENTS.md")
 
 
+AYAR = Path(".claude") / "settings.json"
+
+
+def hesap_gizleme_hedefi(kilit):
+    """Kurulu skillerden Claude hesabında aynı adlısı olanlar için gizlenecek anahtarlar."""
+    hesap = hesap_skilleri()
+    return sorted(f"{HESAP_ONEK}:{ad}" for ad in kilit["skiller"] if ad in hesap)
+
+
+def hesap_gizle(proje, kilit):
+    """Proje .claude/settings.json → skillOverrides'ta, kurulu kütüphane skill'ini gölgeleyen hesap skill'ini "off" yapar.
+    Sadece kendi eklediği anahtarları yönetir (kilit: hesap_gizlenen); kullanıcının yazdığı değere (ör. "on") dokunmaz.
+    Döner: hata mesajı ya da None."""
+    hedef, onceki = set(hesap_gizleme_hedefi(kilit)), set(kilit.get("hesap_gizlenen", []))
+    if not hedef and not onceki:
+        return None
+    f = proje / AYAR
+    try:
+        veri = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+        if not isinstance(veri, dict):
+            raise ValueError("JSON nesnesi değil")
+    except (ValueError, OSError) as e:
+        return f"{AYAR} okunamadı ({e}); hesap skilleri gizlenmedi, dosyayı düzelt ve --guncelle çalıştır"
+    so = veri.get("skillOverrides") if isinstance(veri.get("skillOverrides"), dict) else {}
+    yonetilen = set()
+    for k in onceki - hedef:
+        if so.get(k) == "off":
+            del so[k]
+    for k in hedef:
+        if k not in so or (k in onceki and so[k] == "off"):
+            so[k] = "off"
+            yonetilen.add(k)
+    if so:
+        veri["skillOverrides"] = dict(sorted(so.items()))
+    else:
+        veri.pop("skillOverrides", None)
+    if veri:
+        f.parent.mkdir(parents=True, exist_ok=True)
+        yeni = json.dumps(veri, ensure_ascii=False, indent=2) + "\n"
+        if not f.exists() or f.read_text(encoding="utf-8") != yeni:
+            f.write_text(yeni, encoding="utf-8")
+    elif f.exists():
+        f.unlink()
+    if yonetilen:
+        kilit["hesap_gizlenen"] = sorted(yonetilen)
+    else:
+        kilit.pop("hesap_gizlenen", None)
+    return None
+
+
+def hesap_gizleme_eksik(proje, kilit):
+    """Gizlenmesi gerekip settings.json'da "off" olmayan hesap skilleri (kullanıcı bilerek "on" yazdıysa sayılmaz)."""
+    f = proje / AYAR
+    try:
+        so = (json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}).get("skillOverrides") or {}
+    except (ValueError, OSError, AttributeError):
+        so = {}
+    return [k for k in hesap_gizleme_hedefi(kilit) if k not in so] + \
+           [k for k in kilit.get("hesap_gizlenen", []) if k not in hesap_gizleme_hedefi(kilit) and so.get(k) == "off"]
+
+
 def tumunu_yaz(proje, kilit, skiller):
+    hata = hesap_gizle(proje, kilit)
+    if hata:
+        print("UYARI:", hata)
     kilit_yaz(proje, kilit)
     agent_dosyalari(proje, kilit, skiller)
     talimat_bloklari(proje, kilit)
@@ -643,6 +749,10 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                        + ("; skill içindeki kendi yol referansları da düzeltilecek" if s.get("yol_bagimliligi") else ""))
         if any(v == "ayni" for v in canli.values()):
             rapor.ekle("BİLGİ", "globalde-ayni", f"{ad}: bilgisayarında birebir aynısı global olarak da var (sorun değil)")
+        if ad in hesap_skilleri():
+            rapor.ekle("BİLGİ", "hesap-cakismasi", f"{ad}: Claude hesabında aynı adlı skill var (`{HESAP_ONEK}:{ad}`); agent "
+                       f"onu seçerdi. Bu projede gizlenecek: {AYAR} → skillOverrides \"{HESAP_ONEK}:{ad}\": \"off\" "
+                       "(hesaba ve globale dokunulmaz; hesaptakini istersen değeri \"on\" yap)")
         u = s["uyum"]
         if not codex_var(kilit):
             pass
@@ -661,8 +771,21 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
             rapor.ekle("UYARI", "lisans", f"{ad}: lisans belirtilmemiş ({s['repo']}); ticari kullanımda dikkat")
         if s["degerlendirme"]["not"] == "D":
             rapor.ekle("UYARI", "dusuk-puan", f"{ad}: değerlendirme {s['degerlendirme']['puan']}/100 (D)")
+        duz = s.get("aciklama_duzeltme") or {}
         for y in s.get("yapisal_sorunlar", []):
-            rapor.ekle("UYARI" if "disable-model" in y or "uzun" in y else "BİLGİ", "yapi", f"{ad}: {y}")
+            if tetikleme_sorunu(y) and not duz.get("description") and not oto_onarilir(y):
+                rapor.ekle("UYARI", "tetiklenmez", f"{ad}: {y} -> kurulunca doğru durumda tetiklenmez "
+                           "(registry.json'a aciklama_duzeltme yaz: rehber/03-yeni-skill-ekleme.md)")
+            elif tetikleme_sorunu(y):
+                rapor.ekle("BİLGİ", "yapi", f"{ad}: {y} -> kurulan kopyada düzeltilir")
+            else:
+                rapor.ekle("UYARI" if "disable-model" in y else "BİLGİ", "yapi", f"{ad}: {y}")
+        if s.get("yama"):
+            rapor.ekle("BİLGİ", "yama", f"{ad}: kurulan kopyada yamalı dosya: {', '.join(s['yama']['dosyalar'])} "
+                       f"({s['yama'].get('neden', '')}); arşivdeki orijinal değişmez")
+        if duz.get("description"):
+            rapor.ekle("BİLGİ", "aciklama-onarim", f"{ad}: description kurulan kopyada düzeltilecek "
+                       f"({duz.get('neden', 'aciklama_duzeltme')}); arşivdeki orijinal değişmez")
         if s.get("kirik_baglantilar"):
             rapor.ekle("UYARI", "kirik-baglanti", f"{ad}: SKILL.md'nin gösterdiği {len(s['kirik_baglantilar'])} dosya "
                        f"kaynakta da yok ya da arşive alınmadı: {', '.join(s['kirik_baglantilar'][:5])}")
@@ -802,6 +925,10 @@ def kayit_guncelle(kilit, proje, ad, s, roller=(), kardes=None):
     k = kilit["skiller"].setdefault(ad, {"roller": []})
     k.update(id=s["id"], repo=s["repo"], kaynak_yol=s["kaynak_yol"], commit=s["commit"], klasor_hash=s["klasor_hash"],
              varyantlar=sorted(s.get("varyantlar") or {}), kurulu_hash=kurulu_hash(proje, ad))
+    if onarim_izi(s):
+        k["onarim"] = onarim_izi(s)
+    else:
+        k.pop("onarim", None)
     if kardes is not None:
         k["kardes"] = kardes_adlari(kardes)
     for r in roller:
@@ -928,6 +1055,17 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
                 degisen.append((ad, s))
                 rapor.ekle("BİLGİ", "onarilacak", f"{ad}: eksik/bozuk kurulum onarılacak")
                 continue
+            if not kardes_degisti and k.get("onarim") != onarim_izi(s):
+                if elle_degismis(proje, ad, k) and not a.zorla:
+                    rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş; frontmatter onarılmaz (--zorla)")
+                    continue
+                degisen.append((ad, s))
+                ne = (["description/frontmatter düzeltmesi"] if (s.get("aciklama_duzeltme") or any(
+                    "dosya başında değil" in y or "tırnaksız" in y for y in s.get("yapisal_sorunlar", []))) else []) + \
+                     ([f"betik yaması ({', '.join(s['yama']['dosyalar'])})"] if s.get("yama") else [])
+                rapor.ekle("BİLGİ", "yama" if s.get("yama") and len(ne) == 1 else "aciklama-onarim",
+                           f"{ad}: kurulan kopyaya uygulanacak: {' + '.join(ne) or 'onarım'}")
+                continue
             if not kardes_degisti:
                 continue
             if elle_degismis(proje, ad, k) and not a.zorla:
@@ -943,9 +1081,13 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
         rapor.ekle("BİLGİ", "guncellenecek", f"{ad}: {k['commit'][:7]} -> {s['commit'][:7]}")
         for u in s.get("yapisal_sorunlar", []):
             rapor.ekle("BİLGİ", "yapi", f"{ad}: {u}")
+    hesap_eksik = hesap_gizleme_eksik(proje, kilit)
+    for k in hesap_eksik:
+        rapor.ekle("BİLGİ", "hesap-cakismasi", f"{AYAR} → skillOverrides \"{k}\" güncellenecek (Claude hesabındaki aynı adlı "
+                   "skill kütüphane sürümünü gölgelemesin)")
     print(f"Güncellenecek/onarılacak: {len(degisen)}")
     rapor.yazdir()
-    if not degisen and not yapi_degisti:
+    if not degisen and not yapi_degisti and not hesap_eksik:
         return 1 if rapor.say("HATA") else 0
     if not onay(a, rapor):
         return 2
@@ -1033,6 +1175,8 @@ def dogrula(proje, skiller, sessiz=False):
                 sorun.append(f"{f}: skill-kutuphanesi bloğu eksik/bozuk (--yenile)")
         if not codex and (proje / "AGENTS.md").exists() and BLOK_BAS in (proje / "AGENTS.md").read_text(encoding="utf-8"):
             sorun.append("AGENTS.md: proje sadece Claude kullanıyor ama skill-kutuphanesi bloğu duruyor (--yenile)")
+    for k in hesap_gizleme_eksik(proje, kilit):
+        sorun.append(f"{AYAR}: hesap skill'i `{k}` için skillOverrides güncel değil; kütüphane sürümü gölgelenebilir (--guncelle)")
     if kilit.get("proje_yolu") and kilit["proje_yolu"] != str(proje):
         sorun.append(f"proje taşınmış ({kilit['proje_yolu']} -> {proje}); --yenile çalıştır")
     for d in (proje / ".agents" / "skills", proje / ".claude" / "skills"):
@@ -1200,6 +1344,9 @@ def main():
                                                                    (Path.home() / ".claude").resolve(), (Path.home() / ".codex").resolve()]
     if proje == Path.home().resolve() or any(proje == k or k in proje.parents for k in korunan):
         sys.exit(f"Güvenlik: {proje} bir proje klasörü değil (global skill klasörü, kütüphane ya da ev dizini).")
+    if META in proje.parts:  # .skill-kutuphanesi/yedek/<zaman>/ içindeki eski anlık görüntüler proje değildir
+        gercek = Path(*proje.parts[:proje.parts.index(META)])
+        sys.exit(f"Güvenlik: {proje} bir yedek/meta klasörü, proje değil. Asıl proje: {gercek}")
     if not proje.is_dir():
         sys.exit(f"Klasör yok: {proje}")
     gk = guncelleme_suruyor()

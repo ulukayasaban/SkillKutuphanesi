@@ -4,7 +4,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/18**
 
-### canvas-procedural-animation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
+### canvas-procedural-animation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 88 (A)
 
 - **Ne yapar:** p5.js/Canvas ile karakter destekleyici prosedürel hareket: parçacık, hava efekti, yaprak, squash/stretch ve basit yürüme döngüleri; zaman/kare tabanlı deterministik durum önerir.
 - **Ne zaman:** Karaktere eşlik eden çevre efektleri veya basit prosedürel gövdeler gerektiğinde. · **Ne zaman değil:** Karmaşık yüz oyunculuğu (SVG rig daha uygun) veya kare-kesin final render.
@@ -26,7 +26,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa kontrol listesi; OpenMontage karakter hattının şema adlarına atıf yapıyor.
 
-### character-rigging  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
+### character-rigging  ·  calesthio/OpenMontage @ 195eab2  ·  puan 88 (A)
 
 - **Ne yapar:** Yerel 2D karakter animasyonu için veri güdümlü rig paketi: parçalar, pivotlar, katman sırası, kısıtlar ve görünümler; her karakteri jenerik çalışma zamanına veri paketi olarak tanımlar.
 - **Ne zaman:** SVG/2D karakter animasyonu için rig planı hazırlarken. · **Ne zaman değil:** 3D rig (Blender/Three.js); hazır Lottie animasyonu yeterliyse.
@@ -48,7 +48,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 28 KB (SKILL.md 18.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Sayısal, uygulanabilir teknik kataloğu; GSAP örnekleri dahil. Ev stili kökenli olsa da genel geçer değerde.
 
-### huashu-art-motion  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### huashu-art-motion  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** 辅助艺术动画与解说任务：35 种艺术风格配方、9 种解说语法、分镜与确定性 Canvas 绘制工具。按宿主时间轴实现，素材与导出使用宿主能力。
 - **Teknoloji:** canvas _(otomatik tespit)_
@@ -112,7 +112,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 44 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut.
 
-### oil-motion  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### oil-motion  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** 处理视频和序列帧，编译滚动、指针、拖动与状态驱动的网页动效；内含本地媒体处理脚本和运行时。新素材生成使用宿主工具。
 - **Teknoloji:** api-anahtari, css, ffmpeg, html, python, typescript _(otomatik tespit)_

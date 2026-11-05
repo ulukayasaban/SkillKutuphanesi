@@ -2,7 +2,7 @@
 
 _Mimari, API/arayüz tasarımı, veritabanı, backend_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/8**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/10**
 
 ### api-and-interface-design  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
@@ -15,6 +15,16 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 15 KB (SKILL.md 14.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
+### api-breaking-change-detector  ·  github/awesome-copilot @ 7e40881  ·  puan 83 (A)
+
+- **Ne yapar:** Cross-references C# Web API controllers/DTOs against their TypeScript/JavaScript consumers (React, Angular, Vue, Svelte, Node.js, or hand-written/auto-generated HTTP clients like Fetch, Axios, NSwag) to catch contract drift in both directions: backend changes that break client applications (renamed/removed JSON keys, new required parameters, status code shifts) and frontend code sending fields the
+- **Teknoloji:** node, react, svelte, typescript, vue _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### api-patterns  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
 - **Ne yapar:** ag-kit'in API tasarım karar rehberi: REST/GraphQL/tRPC seçim ağacı, kaynak isimlendirme ve durum kodları, zarf/hata/sayfalama yanıt biçimleri, sürümleme, kimlik doğrulama (JWT, OAuth, Passkey, API anahtarı), rate limiting, OpenAPI dokümantasyonu ve OWASP API Top 10 güvenlik testini ayrı dosyalarda seçici okumayla sunar; api_validator.py betiği içerir.
@@ -25,6 +35,16 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Durum:** tercih · **Örtüşme:** api-tasarimi → tamamlayıcı · **Roller:** backend-muhendis
 - **Boyut:** 20 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Seçici okuma kuralı bağlamı küçük tutuyor (SKILL.md 2.5 KB), auth ve rate-limiting dosyaları yararlı. İçerik yer yer yüzeysel; @[skills/...] biçimindeki çapraz referanslar ag-kit sözdizimi.
+
+### architecture-blueprint-generator  ·  github/awesome-copilot @ 7e40881  ·  puan 81 (A)
+
+- **Ne yapar:** Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.
+- **Teknoloji:** node, python, react _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 13 KB (SKILL.md 13.0 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### architecture@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -48,7 +68,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 13 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, veritabani-tasarimi grubunun tek üyesi. 'Her şeye PostgreSQL deme' ve seçim tabloları dengeli; içerik ilke düzeyinde, derin şema örnekleri az.
 
-### frontend-architecture  ·  vudovn/ag-kit @ 549ba3d  ·  puan 83 (A)
+### frontend-architecture  ·  vudovn/ag-kit @ 549ba3d  ·  puan 82 (A)
 
 - **Ne yapar:** Ön yüz kodunu ölçeklenir biçimde düzenleme kuralları: UI / mantık (hook, composable) / veri (servis dosyaları) / tip / doğrulama (şema) katmanlarına ayırma, dosya sorumluluğu ve boyutu, Next.js'te varsayılan Server Component, Vue Composition API, durumu yerelden başlatma, form şeması, prop ve isimlendirme kuralları, 'god component' önleme, Tailwind sınıf hijyeni ve minimum test/erişilebilirlik tabanı.
 - **Ne zaman:** React/Next veya Vue kod tabanını yapılandırırken ya da organizasyonunu incelerken: mantık, API çağrısı, durum ve tiplerin nerede yaşayacağı. · **Ne zaman değil:** Görsel tasarım (frontend-design, design-taste-frontend); React/Next performans kuralları (vercel-react-best-practices).
@@ -71,7 +91,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### nodejs-best-practices  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
+### nodejs-best-practices  ·  vudovn/ag-kit @ 549ba3d  ·  puan 74 (B)
 
 - **Ne yapar:** Node.js arka yüz karar ilkeleri: Hono/Fastify/NestJS/Express seçim ağacı, yerel TypeScript ve modül sistemi kararları, katmanlı mimari, merkezi hata işleme, async desenleri, doğrulama ve güvenlik ilkeleri; sabit kod yerine bağlama göre karar vermeyi öğretir.
 - **Ne zaman:** Node.js backend kurarken veya framework seçerken; mevcut Node servisinin yapısını gözden geçirirken. · **Ne zaman değil:** Next.js API route'larıyla sınırlı basit işler; ayrıntılı API sözleşmesi tasarımı (api-and-interface-design).
@@ -82,7 +102,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Güncel seçenekleri (Hono, yerel TS) kapsıyor ve benchmark iddialarında temkinli; ilke düzeyinde, kod örneği az.
 
-### python-patterns  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
+### python-patterns  ·  vudovn/ag-kit @ 549ba3d  ·  puan 74 (B)
 
 - **Ne yapar:** Python geliştirme karar ilkeleri: FastAPI/Django/Flask seçim ağacı, async/sync kararı ve kütüphane seçimi, tip ipucu stratejisi ve Pydantic doğrulama, proje yapısı, hata işleme ve test ilkeleri.
 - **Ne zaman:** Python backend/servis kurarken veya framework seçerken; tip ipucu ve proje yapısı kararlarında. · **Ne zaman değil:** Veri bilimi/notebook işleri (kapsam dışı); tek dosyalık betikler.

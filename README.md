@@ -19,7 +19,10 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 ## Klasörler
 | Yol | İçerik |
 |---|---|
+| `README-SKILLER.md`, `skiller/` | **Türkçe skill rehberi:** tüm skiller ne işe yarar, ne zaman kullanılır, nasıl çağrılır (`araclar/skill-readme.py` üretir; çeviriler `aciklama-tr.json`, `araclar/ceviri-tr.py`) |
 | `KATALOG.md` | Tüm görünür skiller: kategori, ne yapar, teknoloji, Codex uyumu, puan (otomatik üretilir) |
+| `TEST_RAPORU.md` | Skill çalıştırma testi: her skill kurulup yükleme/bağlantı/betik sözdizimi sınanır, örneklem gerçek agent'la denenir (`araclar/skill-calistir.py`) |
+| `yamalar/<skill id>/` | Kurulan kopyada orijinalin yerine geçen düzeltilmiş dosyalar (arşiv değişmez; `rehber/03`) |
 | `registry.json` | **Tek gerçek kaynak**: her skill'in kaydı (kaynak, commit, kategori, uyum, geliştirici, puan, inceleme notları) |
 | `arsiv/<alan>/<kategori>/<skill>/` | Skill'in orijinal dosyaları + `KAYNAK.md` |
 | `arsiv/_varyantlar/<skill>/<claude|codex>/` | Araca özel uyarlanmış sürümler |
@@ -27,6 +30,7 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `roller/`, `profiller/` | Agent rolleri (rol → skiller) ve proje tipleri (profil → roller) |
 | `kaynaklar.json` | Hangi repolar, hangi tipte, hangi kurallarla alınır; `arsivden_cikarilanlar` (bilerek çıkarılan eski sürümler) |
 | `trend.json`, `notlar/github-trend.md` | GitHub Trending geçmişi ve raporu |
+| `notlar/populer-skiller.md` | GitHub'da popüler skill repoları (REST araması, adayda SKILL.md sayımı; `araclar/populer-tarama.py`) |
 | `konu-takip.json`, `notlar/konu-takip.md` | Konu takibi (aday repolar, değerlendirme kararları) |
 | `kategoriler.json`, `kategori-kurallari.json` | Alanlar/kategoriler ve otomatik atama kuralları |
 | `gelistiriciler.json`, `notlar/guven-siralamasi.md` | Agent için güven ve referans rehberi (karar kuralları, kategori → en güvenilir kaynak/skill, referans kütüphanesi → ilgili skiller); repo sahipleri ve GitHub güven puanı: yıldız, yıldız hızı, katkıcı, commit, fork, izleyici, sürüm; kaynaklar arası sıra ve derece (referans kütüphaneleri ayrı sıralı) |
@@ -73,6 +77,7 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [prompt
 5. [Riskler ve önlemler](rehber/05-risk-ve-onlemler.md)
 6. [Değerlendirme ve geliştirici bilgisi](rehber/06-degerlendirme-ve-gelistirici.md)
 7. [Kategori inceleme süreci](rehber/07-kategori-inceleme.md)
+8. [Test süreci](rehber/08-test-sureci.md): otomatik kontroller, gerçek agent testi, Claude hesabıyla ad çakışması
 
 ## Alanlar
 `a-tasarim-onyuz` · `b-yazilim-gelistirme` · `c-dokuman-icerik` · `d-ai-otomasyon` · `g-video-ses-medya` · `h-is-alanlari` (e-ticaret/pazaryeri dahil) · `i-bilim-muhendislik`

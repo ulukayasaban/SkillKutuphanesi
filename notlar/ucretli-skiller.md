@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 34
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 38
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -11,6 +11,8 @@
 | `sandbox-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `sandbox-stable` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `reverse-any-video` | 04-skill-plugin-yazimi | HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta |
+| `generate-image@github` | 01-uygulama-entegrasyonlari | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
+| `nano-banana-pro-openrouter` | 01-uygulama-entegrasyonlari | Tek işi OpenRouter üzerinden Gemini 3 Pro Image çağırmak; model ücretli, kredisiz anahtar çalışmaz |
 | `create-video` | 01-video-uretim-montaj | HeyGen Video Agent API |
 | `video-toolkit` | 01-video-uretim-montaj | Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli |
 | `video-translate` | 01-video-uretim-montaj | HeyGen API |
@@ -38,13 +40,16 @@
 | `dnanexus-integration` | 01-yasam-bilimleri-kimya | DNAnexus hesabı/kurum lisansı gerekir |
 | `ginkgo-cloud-lab` | 01-yasam-bilimleri-kimya | Ginkgo bulut laboratuvarı: deney siparişi ücretli |
 | `labarchive-integration` | 01-yasam-bilimleri-kimya | LabArchives kurumsal hesap gerekir |
+| `lambda-labs-gpu-cloud` | 03-veri-bilimi-ml | Lambda GPU kiralama; ücretsiz katman yok, tek işi bu bulutu kullanmak |
 | `generate-image` | 04-bilimsel-yazim-literatur | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
+| `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 106
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 181
 
 | Skill | Kategori | Neden |
 |---|---|---|
+| `hallmark` | 01-ui-ux-tasarim-dili | TOGETHER_API_KEY sadece isteğe bağlı karşılaştırma adımı için; tasarım skill'i anahtarsız çalışır |
 | `design` | 02-tasarim-sistemi-marka | Logo/görsel üretimi Gemini/MuAPI anahtarı ister; tasarım rehberi ücretsiz |
 | `rive-interactive` | 03-animasyon-motion | Rive ücretsiz plan; bazı özellikler ücretli |
 | `spline-interactive` | 05-3d-webgl | Spline ücretsiz plan; bazı dışa aktarma/ekip özellikleri ücretli |
@@ -75,22 +80,71 @@
 | `connect` | 01-claude-api-mcp | Composio hesabı (ücretsiz katman var) |
 | `connect-apps` | 01-claude-api-mcp | Composio hesabı (ücretsiz katman var) |
 | `langsmith-fetch` | 01-claude-api-mcp | LangSmith hesabı (ücretsiz katman var) |
+| `langsmith-observability` | 01-claude-api-mcp | LangSmith ücretsiz geliştirici katmanı |
+| `caveman-setup` | 02-agent-orkestrasyon | Caveman Cloud gateway'e bağlar (CAVE_API_KEY); BYOK ile mevcut LLM anahtarı kullanılır, gateway'in ücretsiz katmanı var; diğer caveman skilleri anahtarsız |
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
+| `agents-sdk@openai` | 01-uygulama-entegrasyonlari | OpenAI Agents SDK rehberi; çalıştırmak için OpenAI API kredisi gerekir, bilgi/kod üretimi ücretsiz |
+| `ai-gateway` | 01-uygulama-entegrasyonlari | Vercel AI Gateway rehberi; sağlayıcı anahtarı/kredisi gerekir, ücretsiz katman var |
+| `aiq-deploy` | 01-uygulama-entegrasyonlari | NVIDIA AIQ dağıtımı; arama sağlayıcıları (Exa/Serper/Tavily) ücretsiz katman + ücretli |
+| `arize-ai-provider-integration` | 01-uygulama-entegrasyonlari | Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli |
+| `arize-annotation` | 01-uygulama-entegrasyonlari | Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli |
+| `arize-evaluator` | 01-uygulama-entegrasyonlari | Değerlendirme için LLM API anahtarı (OpenAI/Anthropic) gerekir; Phoenix kendisi ücretsiz |
+| `arize-experiment` | 01-uygulama-entegrasyonlari | Deney için LLM API anahtarı gerekir; Phoenix kendisi ücretsiz |
+| `arize-instrumentation` | 01-uygulama-entegrasyonlari | Phoenix yerel (ücretsiz) ya da Arize AX (ücretsiz katman) |
+| `arize-prompt-optimization` | 01-uygulama-entegrasyonlari | LLM API anahtarı gerekir; Phoenix kendisi ücretsiz |
+| `boltz-cli-setup` | 01-uygulama-entegrasyonlari | Boltz CLI kurulum rehberi; API anahtarı isteğe bağlı bulut yolu için |
+| `cloudflare@openai` | 01-uygulama-entegrasyonlari | Cloudflare ücretsiz plan ile çalışır; bazı ürünler ücretli |
+| `durable-objects@openai` | 01-uygulama-entegrasyonlari | Workers ücretsiz planında sınırlı; fazlası ücretli |
+| `email` | 01-uygulama-entegrasyonlari | Resend: aylık ücretsiz kota, fazlası ücretli |
+| `expo-api-routes` | 01-uygulama-entegrasyonlari | Örneklerde OpenAI/Weather API anahtarı; Expo API route rehberi anahtarsız kullanılır |
+| `expo-dev-client@openai` | 01-uygulama-entegrasyonlari | Yerel derleme ücretsiz; EAS bulut derlemesi ücretsiz planla sınırlı |
+| `latchshot-page-capture` | 01-uygulama-entegrasyonlari | Latchshot üçüncü taraf servisi; anahtarsız JPEG demo yolu var, tam kullanım API anahtarı/kota ister |
+| `namecheap` | 01-uygulama-entegrasyonlari | Namecheap hesabı ve API erişimi gerekir (hesap ücretsiz, API için bakiye/alan adı şartı); alan adları ücretli |
+| `nemoclaw-user-get-started` | 01-uygulama-entegrasyonlari | NVIDIA NemoClaw; NGC kaydı ücretsiz, bulut kullanımı ücretli olabilir |
+| `omniverse-cad-to-simready` | 01-uygulama-entegrasyonlari | NVIDIA NGC/NVCF anahtarı: kayıt ücretsiz, bulut işlevleri kotalı |
+| `openai-api-troubleshooting` | 01-uygulama-entegrasyonlari | OpenAI API hata ayıklama rehberi; API kullanımı ücretli ama rehber bilgi skill'i |
+| `openai-platform-api-key` | 01-uygulama-entegrasyonlari | OpenAI API anahtarı yönetimi rehberi; API kullanımı ücretli |
+| `physical-ai-neural-reconstruction` | 01-uygulama-entegrasyonlari | NVIDIA NGC anahtarı: kayıt ücretsiz |
+| `pinecone-rag` | 01-uygulama-entegrasyonlari | Pinecone ücretsiz (starter) katmanı var |
+| `resemble-detect` | 01-uygulama-entegrasyonlari | Resemble AI API anahtarı gerekir; ücretsiz plan sınırlı kota ile var |
+| `subtitles` | 01-uygulama-entegrasyonlari | OpenAI Whisper API ile altyazı; API ücretli, ücretsiz yol: yerel whisper (kütüphanede media-use) |
+| `temporal-cloud-setup` | 01-uygulama-entegrasyonlari | Temporal Cloud ücretli (deneme kredisi); Temporal kendi sunucunda ücretsiz |
+| `temporal-ops` | 01-uygulama-entegrasyonlari | Temporal Cloud ücretli; açık kaynak Temporal ücretsiz |
+| `twilio-agent-connect` | 01-uygulama-entegrasyonlari | Twilio hesabı: deneme kredisi, sonrası kullanım başı ücret |
+| `twilio-ai-agent-architect` | 01-uygulama-entegrasyonlari | Twilio + isteğe bağlı ElevenLabs; deneme kredisi/ücretsiz katman |
+| `twilio-cli-reference` | 01-uygulama-entegrasyonlari | Twilio/SendGrid hesabı; ücretsiz katman/deneme |
+| `twilio-conversation-orchestrator` | 01-uygulama-entegrasyonlari | Twilio + isteğe bağlı ElevenLabs |
+| `twilio-iam-auth-setup` | 01-uygulama-entegrasyonlari | Twilio hesabı (deneme kredisi) |
+| `twilio-security-api-auth` | 01-uygulama-entegrasyonlari | Twilio hesabı (deneme kredisi) |
+| `twilio-sendgrid-account-setup` | 01-uygulama-entegrasyonlari | SendGrid ücretsiz katman (günlük sınırlı e-posta) |
+| `twilio-sendgrid-email-send` | 01-uygulama-entegrasyonlari | SendGrid ücretsiz katman |
+| `twilio-sendgrid-engagement-quality` | 01-uygulama-entegrasyonlari | SendGrid ücretsiz katman |
+| `twilio-sendgrid-inbound-parse` | 01-uygulama-entegrasyonlari | SendGrid ücretsiz katman |
+| `twilio-sendgrid-suppressions` | 01-uygulama-entegrasyonlari | SendGrid ücretsiz katman |
+| `twilio-voice-conversation-relay` | 01-uygulama-entegrasyonlari | Twilio + isteğe bağlı ElevenLabs |
+| `v0-dev` | 01-uygulama-entegrasyonlari | v0 ücretsiz katman; API/SDK için kredi gerekir |
+| `vercel-connect` | 01-uygulama-entegrasyonlari | Vercel + Linear entegrasyonu; her ikisinin ücretsiz katmanı var |
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
 | `figma` | 01-video-uretim-montaj | FIGMA_TOKEN (ücretsiz planla çalışır); değişkenler (variables) Enterprise ister |
 | `hyperframes` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `hyperframes-cli` | 01-video-uretim-montaj | Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister |
+| `hyperframes-cli@openai` | 01-video-uretim-montaj | Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister |
+| `hyperframes-registry@openai` | 01-video-uretim-montaj | HeyGen anılıyor; HyperFrames kendisi açık kaynak (kütüphanede heygen-com/hyperframes ile aynı sınıf) |
+| `hyperframes@openai` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli |
 | `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices@calesthio` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
+| `remotion-best-practices@openai` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-maps` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
+| `remotion-maps@openai` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
 | `agents` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planındaki sesli agent dakikalarıyla denenebilir; üretim kullanımı ücretli |
 | `azure-speech-to-text` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: faster-whisper |
 | `azure-text-to-speech` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: piper |
 | `elevenlabs` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planı (aylık sınırlı kota) ile kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Kokoro) |
+| `krillinai-cli` | 02-ses-muzik-konusma | TTS/LLM için MiniMax gibi sağlayıcı anahtarı gerekebilir; yerel yollar (whisper) var |
 | `setup-api-key` | 02-ses-muzik-konusma | Sadece anahtar kurulum rehberi; ElevenLabs ücretsiz planıyla da çalışır |
 | `sound-effects` | 02-ses-muzik-konusma | ElevenLabs ücretsiz kotasıyla kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Openverse + yerleşik efektler) |
 | `speech-to-text` | 02-ses-muzik-konusma | ElevenLabs Scribe ücretsiz kotası var; fazlası ücretli. Tamamen ücretsiz yol: media-use transcribe (Whisper/Parakeet) |
@@ -98,6 +152,8 @@
 | `comfyui` | 03-ai-gorsel-video-modelleri | Yerel ComfyUI ücretsiz; 'Partner Nodes' Comfy hesabı ve ön ödemeli kredi ister |
 | `ltx2` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
+| `image` | 01-satis-pazarlama-musteri | Görsel üretimi için Gemini/Replicate/Ideogram/OpenAI API seçenekleri; Gemini API ücretsiz katmanı var, skill yönlendirme ve optimizasyon da yapar |
+| `video` | 01-satis-pazarlama-musteri | AI avatar (HeyGen/Synthesia) ücretli; Remotion gibi programatik yollar ücretsiz. Yöntem seçimi skill'de |
 | `trader-broker` | 02-finans-hukuk-ik | Alpaca: ücretsiz kâğıt (paper) hesapla denenir; gerçek hesapta komisyonsuz ama GERÇEK PARA riski — işlem öncesi kullanıcı onayı şart |
 | `acp-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz), ACP/Stripe (işlem başı) |
 | `ap2-setup` | 05-e-ticaret-pazaryeri | Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Google API (ücretsiz kota) |
@@ -136,19 +192,42 @@
 | `latchbio-integration` | 01-yasam-bilimleri-kimya | Latch hesabı: ücretsiz katman, hesaplama ücretli |
 | `rowan` | 01-yasam-bilimleri-kimya | Rowan hesabı: ücretsiz kredi, sonrası ücretli |
 | `tamarind` | 01-yasam-bilimleri-kimya | Tamarind Bio hesabı: ücretsiz katman, sonrası ücretli |
+| `academic-plotting` | 03-veri-bilimi-ml | Gemini API isteğe bağlı; matplotlib ile anahtarsız çalışır |
+| `dspy` | 03-veri-bilimi-ml | LLM API anahtarı gerekir; yerel model de kullanılabilir |
+| `evolving-ai-agents` | 03-veri-bilimi-ml | LLM API anahtarı gerekir; yerel model de kullanılabilir |
+| `experiment-tracking-swanlab` | 03-veri-bilimi-ml | SwanLab bireysel kullanımda ücretsiz; kendi sunucunda da çalışır |
+| `guidance` | 03-veri-bilimi-ml | LLM API ya da yerel model (llama.cpp/transformers) ile çalışır |
+| `langchain` | 03-veri-bilimi-ml | LangChain ücretsiz; LangSmith izleme isteğe bağlı |
+| `miles-rl-training` | 03-veri-bilimi-ml | MiniMax anılıyor; eğitim yerel GPU'da yapılır |
 | `modal` | 03-veri-bilimi-ml | Modal: aylık ücretsiz kredi, sonrası kullanım başına |
+| `modal-serverless-gpu` | 03-veri-bilimi-ml | Modal aylık ücretsiz kredi verir; fazlası ücretli |
+| `nemo-evaluator-sdk` | 03-veri-bilimi-ml | NGC kaydı ücretsiz; yargıç LLM için API anahtarı gerekebilir |
+| `nnsight-remote-interpretability` | 03-veri-bilimi-ml | NDIF uzak erişim anahtarı araştırmacılara ücretsiz; yerel modelle de çalışır |
+| `skypilot-multi-cloud-orchestration` | 03-veri-bilimi-ml | SkyPilot ücretsiz; hedef bulutlar (RunPod vb.) ücretli, yerel küme de desteklenir |
+| `verl-rl-training` | 03-veri-bilimi-ml | veRL açık kaynak, yerel GPU'da; volcengine sadece örnek bulut |
+| `weights-and-biases` | 03-veri-bilimi-ml | W&B kişisel kullanımda ücretsiz; takım planları ücretli |
+| `auto-review-loop-llm` | 04-bilimsel-yazim-literatur | Herhangi bir LLM API anahtarı (MiniMax/DashScope…) gerekir; Claude Code içindeki model de kullanılabilir |
+| `auto-review-loop-minimax` | 04-bilimsel-yazim-literatur | MiniMax API anahtarı gerekir (ücretli); aynı işin LLM-bağımsız sürümü auto-review-loop |
 | `autoskill` | 04-bilimsel-yazim-literatur | İsteğe bağlı Anthropic/Foundry API (ücretli) |
 | `bgpt-paper-search` | 04-bilimsel-yazim-literatur | BGPT API anahtarı; ücretsiz/ücretli katmanlar |
 | `database-lookup` | 04-bilimsel-yazim-literatur | Çoğu kamu veritabanı anahtarı ücretsiz; bazı sağlayıcılar (Alpha Vantage vb.) ücretli katmanlı |
 | `exa-search` | 04-bilimsel-yazim-literatur | Exa API ücretsiz kota (aylık sınırlı); fazlası ücretli |
+| `exa-search@wanshuiyin` | 04-bilimsel-yazim-literatur | Exa API ücretsiz kota (aylık sınırlı); fazlası ücretli |
+| `firecrawl-search` | 04-bilimsel-yazim-literatur | Firecrawl ücretsiz kota, fazlası ücretli |
+| `gemini-search` | 04-bilimsel-yazim-literatur | Gemini API ücretsiz katmanı |
 | `hypogenic` | 04-bilimsel-yazim-literatur | LLM API (Anthropic/OpenAI) kullanım başına ücretli; yerel model de kullanılabilir |
 | `infographics` | 04-bilimsel-yazim-literatur | İnceleme ücretsiz; görsel üretimi OpenRouter (ücretli, anahtar isteğe bağlı) |
+| `keenable-search` | 04-bilimsel-yazim-literatur | Exa/Keenable ücretsiz kota, fazlası ücretli |
 | `latex-posters` | 04-bilimsel-yazim-literatur | LaTeX yerel ve ücretsiz; isteğe bağlı AI şemaları OpenRouter (ücretli) |
 | `literature-review` | 04-bilimsel-yazim-literatur | Temel tarama ücretsiz (DOI/açık kaynaklar); Parallel/OpenRouter isteğe bağlı ücretli |
+| `paper-illustration` | 04-bilimsel-yazim-literatur | Gemini API ücretsiz katmanı |
+| `paper-writing` | 04-bilimsel-yazim-literatur | Gemini API ücretsiz katmanı; anahtarsız da taslak yazar |
 | `paperclip` | 04-bilimsel-yazim-literatur | GXL Paperclip CLI; anahtar isteğe bağlı, kapsamlı kullanım ücretli olabilir |
 | `parallel-web` | 04-bilimsel-yazim-literatur | Parallel API ücretsiz başlangıç kredisi; sonrası ücretli |
+| `proof-checker` | 04-bilimsel-yazim-literatur | MiniMax anılıyor; LLM-bağımsız kullanılabilir |
 | `research-grants` | 04-bilimsel-yazim-literatur | Rehber ücretsiz; isteğe bağlı görseller OpenRouter (ücretli) |
 | `research-lookup` | 04-bilimsel-yazim-literatur | Parallel CLI: ücretsiz başlangıç kredisi, sonrası ücretli |
+| `run-experiment` | 04-bilimsel-yazim-literatur | W&B isteğe bağlı; deney yerelde çalışır |
 | `scientific-schematics` | 04-bilimsel-yazim-literatur | AI şema üretimi OpenRouter (ücretli); elle şema yolu ücretsiz |
 | `scientific-slides` | 04-bilimsel-yazim-literatur | Slayt yerel; isteğe bağlı AI görsel OpenRouter (ücretli) |
 

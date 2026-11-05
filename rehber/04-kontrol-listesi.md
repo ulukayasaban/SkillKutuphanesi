@@ -44,7 +44,11 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `lisans` | UYARI | Lisans belirtilmemiş | Ticari projede dikkat |
 | `dusuk-puan` | UYARI | Değerlendirme < 50 (D) | Alternatife bak |
 | `yapi` | UYARI/BİLGİ | Frontmatter sorunları (uzun açıklama, standart dışı ad, otomatik çağrılamaz) | Ad kurulumda otomatik düzeltilir |
+| `tetiklenmez` | UYARI | description yok/çok kısa/1024'ten uzun ve registry'de `aciklama_duzeltme` yazılmamış: kurulunca agent skill'i doğru durumda seçemez | `registry.json`'a `aciklama_duzeltme` yaz (`rehber/03-yeni-skill-ekleme.md` → "Description ve tetiklenme") |
+| `yama` | BİLGİ | Kurulan kopyada `yamalar/<id>/` altındaki düzeltilmiş dosya kullanılır (ör. sözdizimi hatalı betik) | Bilgi; arşivdeki orijinal değişmez |
+| `aciklama-onarim` | BİLGİ | Description kurulan kopyada düzeltilir (registry `aciklama_duzeltme`; yorum arkasındaki frontmatter başa alınır, YAML'ı bozan description tırnaklanır). `--guncelle` mevcut kurulumlara da uygular | Bilgi; arşivdeki orijinal değişmez |
 | `ekli-ad` | BİLGİ | Globalde farklı bir sürüm olduğu için `--kutuphane` ekli adla kurulur | Agent dosyaları bu adı kullanır |
+| `hesap-cakismasi` | BİLGİ | Claude hesabında (claude.ai, `~/.claude/skills/synced/`) aynı adlı skill var; agent onu (`anthropic-skills:<ad>`) seçerdi. Proje `.claude/settings.json` → `skillOverrides` ile hesaptaki o projede `off` yapılır; `--dogrula` denetler, `--guncelle` onarır | Hesaptakini istiyorsan değeri `"on"` yap (araç dokunmaz) |
 | `globalde-ayni` | BİLGİ | Globalde birebir aynısı var | Sorun değil |
 | `arac-surumu` | BİLGİ | Claude ve Codex'e ayrı uyarlanmış sürümler kurulacak | — |
 | `alt-skill` | BİLGİ | Başka bir skill'in alt klasörü | Üst skill'i de kurmak isteyebilirsin |

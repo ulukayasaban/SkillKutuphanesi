@@ -17,7 +17,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, gh_api, json_oku  # noqa: E402
+from ortak import KAYNAKLAR, KOK, REGISTRY, json_oku, klon_temizle, repo_agaci  # noqa: E402
 
 ACIKLAMA = {
     "secildi": "arşivde (ana sürüm)",
@@ -56,7 +56,8 @@ def main():
         if not d:
             sorunlar.append(f"{repo}: denetim kaydı yok (kaynak-cek çalışmamış)")
             continue
-        govde = gh_api(f"repos/{repo}/git/trees/{d['commit']}?recursive=1")
+        _, govde = repo_agaci(repo, d["commit"])  # API kapalıysa git ile (bağımsız sayım yine yapılır)
+        klon_temizle(govde)
         if govde.get("truncated"):
             sorunlar.append(f"{repo}: GitHub ağacı kesik, bağımsız sayım yapılamadı")
         gercek = [e["path"] for e in govde["tree"] if e["type"] == "blob" and e["path"].split("/")[-1].lower() == "skill.md"]
@@ -89,7 +90,8 @@ def main():
 
     yeni_skill = []
     for repo in referans_repolari:
-        g = gh_api(f"repos/{repo}/git/trees/HEAD?recursive=1")
+        _, g = repo_agaci(repo)  # API kapalıysa git ile
+        klon_temizle(g)
         n = sum(1 for e in g.get("tree", []) if e["type"] == "blob" and e["path"].split("/")[-1].lower() == "skill.md")
         if n:
             yeni_skill.append((repo, n))

@@ -1,6 +1,6 @@
 {
   "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
-  "guncelleme": "2026-10-22",
+  "guncelleme": "2026-11-04",
   "siniflar": {
     "elevenlabs": [
       "kismen",
@@ -1101,6 +1101,318 @@
     "reverse-any-video": [
       "ucretli",
       "HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta"
+    ],
+    "image": [
+      "kismen",
+      "Görsel üretimi için Gemini/Replicate/Ideogram/OpenAI API seçenekleri; Gemini API ücretsiz katmanı var, skill yönlendirme ve optimizasyon da yapar"
+    ],
+    "video": [
+      "kismen",
+      "AI avatar (HeyGen/Synthesia) ücretli; Remotion gibi programatik yollar ücretsiz. Yöntem seçimi skill'de"
+    ],
+    "directory-submissions": [
+      "ucretsiz",
+      "'paid plan' ürün fiyatlandırma sayfası hakkında; skill ücretsiz dizin gönderimi anlatır"
+    ],
+    "seo-google@agricidaniel": [
+      "ucretsiz",
+      "Google Search Console/PageSpeed/CrUX API'leri ücretsiz; sadece Google Cloud projesi + API anahtarı gerekir"
+    ],
+    "seo-google": [
+      "ucretsiz",
+      "Google Search Console/PageSpeed/CrUX API'leri ücretsiz; sadece Google Cloud projesi + API anahtarı gerekir"
+    ],
+    "hallmark": [
+      "kismen",
+      "TOGETHER_API_KEY sadece isteğe bağlı karşılaştırma adımı için; tasarım skill'i anahtarsız çalışır"
+    ],
+    "caveman-setup": [
+      "kismen",
+      "Caveman Cloud gateway'e bağlar (CAVE_API_KEY); BYOK ile mevcut LLM anahtarı kullanılır, gateway'in ücretsiz katmanı var; diğer caveman skilleri anahtarsız"
+    ],
+    "arize-ai-provider-integration": [
+      "kismen",
+      "Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli"
+    ],
+    "arize-annotation": [
+      "kismen",
+      "Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli"
+    ],
+    "arize-evaluator": [
+      "kismen",
+      "Değerlendirme için LLM API anahtarı (OpenAI/Anthropic) gerekir; Phoenix kendisi ücretsiz"
+    ],
+    "arize-experiment": [
+      "kismen",
+      "Deney için LLM API anahtarı gerekir; Phoenix kendisi ücretsiz"
+    ],
+    "arize-instrumentation": [
+      "kismen",
+      "Phoenix yerel (ücretsiz) ya da Arize AX (ücretsiz katman)"
+    ],
+    "arize-prompt-optimization": [
+      "kismen",
+      "LLM API anahtarı gerekir; Phoenix kendisi ücretsiz"
+    ],
+    "phoenix-cli": [
+      "ucretsiz",
+      "Phoenix açık kaynak, yerelde çalışır; API anahtarı sadece kimlik doğrulama açıksa"
+    ],
+    "gtm-product-led-growth": [
+      "ucretsiz",
+      "'paid tier' pazarlama kavramı; skill'in kendisi hiçbir servis istemez"
+    ],
+    "latchshot-page-capture": [
+      "kismen",
+      "Latchshot üçüncü taraf servisi; anahtarsız JPEG demo yolu var, tam kullanım API anahtarı/kota ister"
+    ],
+    "make-blog-post": [
+      "ucretsiz",
+      "'API key' sadece 'sır yazma' kuralında geçiyor; servis gerekmez"
+    ],
+    "mcp-security-audit": [
+      "ucretsiz",
+      "'MY_API_KEY' örnek yer tutucu; servis gerekmez"
+    ],
+    "namecheap": [
+      "kismen",
+      "Namecheap hesabı ve API erişimi gerekir (hesap ücretsiz, API için bakiye/alan adı şartı); alan adları ücretli"
+    ],
+    "nano-banana-pro-openrouter": [
+      "ucretli",
+      "Tek işi OpenRouter üzerinden Gemini 3 Pro Image çağırmak; model ücretli, kredisiz anahtar çalışmaz"
+    ],
+    "pinecone-rag": [
+      "kismen",
+      "Pinecone ücretsiz (starter) katmanı var"
+    ],
+    "resemble-detect": [
+      "kismen",
+      "Resemble AI API anahtarı gerekir; ücretsiz plan sınırlı kota ile var"
+    ],
+    "agents-sdk@openai": [
+      "kismen",
+      "OpenAI Agents SDK rehberi; çalıştırmak için OpenAI API kredisi gerekir, bilgi/kod üretimi ücretsiz"
+    ],
+    "ai-gateway": [
+      "kismen",
+      "Vercel AI Gateway rehberi; sağlayıcı anahtarı/kredisi gerekir, ücretsiz katman var"
+    ],
+    "aiq-deploy": [
+      "kismen",
+      "NVIDIA AIQ dağıtımı; arama sağlayıcıları (Exa/Serper/Tavily) ücretsiz katman + ücretli"
+    ],
+    "boltz-cli-setup": [
+      "kismen",
+      "Boltz CLI kurulum rehberi; API anahtarı isteğe bağlı bulut yolu için"
+    ],
+    "email": [
+      "kismen",
+      "Resend: aylık ücretsiz kota, fazlası ücretli"
+    ],
+    "expo-api-routes": [
+      "kismen",
+      "Örneklerde OpenAI/Weather API anahtarı; Expo API route rehberi anahtarsız kullanılır"
+    ],
+    "nemoclaw-user-get-started": [
+      "kismen",
+      "NVIDIA NemoClaw; NGC kaydı ücretsiz, bulut kullanımı ücretli olabilir"
+    ],
+    "omniverse-cad-to-simready": [
+      "kismen",
+      "NVIDIA NGC/NVCF anahtarı: kayıt ücretsiz, bulut işlevleri kotalı"
+    ],
+    "openai-api-troubleshooting": [
+      "kismen",
+      "OpenAI API hata ayıklama rehberi; API kullanımı ücretli ama rehber bilgi skill'i"
+    ],
+    "openai-platform-api-key": [
+      "kismen",
+      "OpenAI API anahtarı yönetimi rehberi; API kullanımı ücretli"
+    ],
+    "physical-ai-neural-reconstruction": [
+      "kismen",
+      "NVIDIA NGC anahtarı: kayıt ücretsiz"
+    ],
+    "subtitles": [
+      "kismen",
+      "OpenAI Whisper API ile altyazı; API ücretli, ücretsiz yol: yerel whisper (kütüphanede media-use)"
+    ],
+    "temporal-cloud-setup": [
+      "kismen",
+      "Temporal Cloud ücretli (deneme kredisi); Temporal kendi sunucunda ücretsiz"
+    ],
+    "temporal-ops": [
+      "kismen",
+      "Temporal Cloud ücretli; açık kaynak Temporal ücretsiz"
+    ],
+    "twilio-agent-connect": [
+      "kismen",
+      "Twilio hesabı: deneme kredisi, sonrası kullanım başı ücret"
+    ],
+    "twilio-ai-agent-architect": [
+      "kismen",
+      "Twilio + isteğe bağlı ElevenLabs; deneme kredisi/ücretsiz katman"
+    ],
+    "twilio-cli-reference": [
+      "kismen",
+      "Twilio/SendGrid hesabı; ücretsiz katman/deneme"
+    ],
+    "twilio-conversation-orchestrator": [
+      "kismen",
+      "Twilio + isteğe bağlı ElevenLabs"
+    ],
+    "twilio-iam-auth-setup": [
+      "kismen",
+      "Twilio hesabı (deneme kredisi)"
+    ],
+    "twilio-security-api-auth": [
+      "kismen",
+      "Twilio hesabı (deneme kredisi)"
+    ],
+    "twilio-sendgrid-account-setup": [
+      "kismen",
+      "SendGrid ücretsiz katman (günlük sınırlı e-posta)"
+    ],
+    "twilio-sendgrid-email-send": [
+      "kismen",
+      "SendGrid ücretsiz katman"
+    ],
+    "twilio-sendgrid-engagement-quality": [
+      "kismen",
+      "SendGrid ücretsiz katman"
+    ],
+    "twilio-sendgrid-inbound-parse": [
+      "kismen",
+      "SendGrid ücretsiz katman"
+    ],
+    "twilio-sendgrid-suppressions": [
+      "kismen",
+      "SendGrid ücretsiz katman"
+    ],
+    "twilio-voice-conversation-relay": [
+      "kismen",
+      "Twilio + isteğe bağlı ElevenLabs"
+    ],
+    "v0-dev": [
+      "kismen",
+      "v0 ücretsiz katman; API/SDK için kredi gerekir"
+    ],
+    "vercel-connect": [
+      "kismen",
+      "Vercel + Linear entegrasyonu; her ikisinin ücretsiz katmanı var"
+    ],
+    "hyperframes-registry@openai": [
+      "kismen",
+      "HeyGen anılıyor; HyperFrames kendisi açık kaynak (kütüphanede heygen-com/hyperframes ile aynı sınıf)"
+    ],
+    "krillinai-cli": [
+      "kismen",
+      "TTS/LLM için MiniMax gibi sağlayıcı anahtarı gerekebilir; yerel yollar (whisper) var"
+    ],
+    "langsmith-observability": [
+      "kismen",
+      "LangSmith ücretsiz geliştirici katmanı"
+    ],
+    "academic-plotting": [
+      "kismen",
+      "Gemini API isteğe bağlı; matplotlib ile anahtarsız çalışır"
+    ],
+    "dspy": [
+      "kismen",
+      "LLM API anahtarı gerekir; yerel model de kullanılabilir"
+    ],
+    "evolving-ai-agents": [
+      "kismen",
+      "LLM API anahtarı gerekir; yerel model de kullanılabilir"
+    ],
+    "experiment-tracking-swanlab": [
+      "kismen",
+      "SwanLab bireysel kullanımda ücretsiz; kendi sunucunda da çalışır"
+    ],
+    "guidance": [
+      "kismen",
+      "LLM API ya da yerel model (llama.cpp/transformers) ile çalışır"
+    ],
+    "lambda-labs-gpu-cloud": [
+      "ucretli",
+      "Lambda GPU kiralama; ücretsiz katman yok, tek işi bu bulutu kullanmak"
+    ],
+    "langchain": [
+      "kismen",
+      "LangChain ücretsiz; LangSmith izleme isteğe bağlı"
+    ],
+    "miles-rl-training": [
+      "kismen",
+      "MiniMax anılıyor; eğitim yerel GPU'da yapılır"
+    ],
+    "modal-serverless-gpu": [
+      "kismen",
+      "Modal aylık ücretsiz kredi verir; fazlası ücretli"
+    ],
+    "nemo-evaluator-sdk": [
+      "kismen",
+      "NGC kaydı ücretsiz; yargıç LLM için API anahtarı gerekebilir"
+    ],
+    "nnsight-remote-interpretability": [
+      "kismen",
+      "NDIF uzak erişim anahtarı araştırmacılara ücretsiz; yerel modelle de çalışır"
+    ],
+    "skypilot-multi-cloud-orchestration": [
+      "kismen",
+      "SkyPilot ücretsiz; hedef bulutlar (RunPod vb.) ücretli, yerel küme de desteklenir"
+    ],
+    "verl-rl-training": [
+      "kismen",
+      "veRL açık kaynak, yerel GPU'da; volcengine sadece örnek bulut"
+    ],
+    "weights-and-biases": [
+      "kismen",
+      "W&B kişisel kullanımda ücretsiz; takım planları ücretli"
+    ],
+    "auto-review-loop-llm": [
+      "kismen",
+      "Herhangi bir LLM API anahtarı (MiniMax/DashScope…) gerekir; Claude Code içindeki model de kullanılabilir"
+    ],
+    "auto-review-loop-minimax": [
+      "kismen",
+      "MiniMax API anahtarı gerekir (ücretli); aynı işin LLM-bağımsız sürümü auto-review-loop"
+    ],
+    "firecrawl-search": [
+      "kismen",
+      "Firecrawl ücretsiz kota, fazlası ücretli"
+    ],
+    "gemini-search": [
+      "kismen",
+      "Gemini API ücretsiz katmanı"
+    ],
+    "keenable-search": [
+      "kismen",
+      "Exa/Keenable ücretsiz kota, fazlası ücretli"
+    ],
+    "openalex": [
+      "ucretsiz",
+      "OpenAlex API ücretsiz; anahtar isteğe bağlı (daha yüksek kota)"
+    ],
+    "paper-illustration": [
+      "kismen",
+      "Gemini API ücretsiz katmanı"
+    ],
+    "paper-writing": [
+      "kismen",
+      "Gemini API ücretsiz katmanı; anahtarsız da taslak yazar"
+    ],
+    "proof-checker": [
+      "kismen",
+      "MiniMax anılıyor; LLM-bağımsız kullanılabilir"
+    ],
+    "run-experiment": [
+      "kismen",
+      "W&B isteğe bağlı; deney yerelde çalışır"
+    ],
+    "vast-gpu": [
+      "ucretli",
+      "Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

@@ -2,9 +2,9 @@
 
 _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/41**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/48**
 
-### agents-sdk  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
+### agents-sdk  ·  cloudflare/skills @ 1a33048  ·  puan 94 (A)
 
 - **Ne yapar:** Build, debug, or review Cloudflare Agents SDK applications using the agents package.
 - **Teknoloji:** api-anahtari, node, react, typescript _(otomatik tespit)_
@@ -14,9 +14,9 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 49 KB (SKILL.md 12.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### api-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
+### api-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design API and webhook monitoring for e-commerce integrations: health checks, alerting rules, SLA reports and integration validation for Shopify, Amazon, Walmart, WooCommerce, Etsy or TikTok Shop endpoints. Use when setting up uptime/error alerts for store APIs, webhooks failing silently, or planning integration SLAs.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -24,7 +24,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### basin  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### basin  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Build and troubleshoot Cloudflare Basin analytics workflows with Basin Pipelines, Basin Catalog, and Basin SQL. Use for streaming data into R2 Iceberg tables, managing catalogs, or querying those tables; also use for requests using the former Data Platform, Pipelines, R2 Data Catalog, or R2 SQL names.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -34,7 +34,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 55 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cf-cli  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### cf-cli  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Cloudflare's official cf CLI (beta) for the public Cloudflare API and Workers projects. Use for finding and running Cloudflare commands from the terminal — sign-in and profiles, cf cli search, cf schema, cf deploy/dev/build, resource commands for DNS, zones, D1, KV, and R2 — and for choosing between cf and Wrangler in a project.
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
@@ -65,7 +65,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 133 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloudflare  ·  cloudflare/skills @ 1a33048  ·  puan 93 (A)
+### cloudflare  ·  cloudflare/skills @ 1a33048  ·  puan 91 (A)
 
 - **Ne yapar:** Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use for architecture and product selection, including when the user describes a need without naming a Cloudflare product; then find the relevant skill or documentation.
 - **Teknoloji:** api-anahtari, git, next.js, node, typescript _(otomatik tespit)_
@@ -75,7 +75,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 298 KB (SKILL.md 27.1 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### cloudflare-email-service  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### cloudflare-email-service  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Implement or troubleshoot Cloudflare Email Sending and Email Routing integrations and their delivery configuration.
 - **Teknoloji:** api-anahtari, html, node, python _(otomatik tespit)_
@@ -85,7 +85,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 34 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloudflare-one  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
+### cloudflare-one  ·  cloudflare/skills @ 1a33048  ·  puan 94 (A)
 
 - **Ne yapar:** Design, configure, troubleshoot, or review Cloudflare One Zero Trust and SASE deployments. Use cloudflare-one-migrations for migration planning from other vendors.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -95,7 +95,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 26 KB (SKILL.md 23.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloudflare-one-migrations  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
+### cloudflare-one-migrations  ·  cloudflare/skills @ 1a33048  ·  puan 94 (A)
 
 - **Ne yapar:** Assess and plan migrations from existing VPN, SWG, or SASE platforms to Cloudflare One, including policy mapping, parity gaps, and rollout.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -126,9 +126,19 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Kısa (6 KB) platform karar tablosu yararlı; içerik genel ilkeler, shipping-and-launch ile kısmen örtüşüyor.
 
-### domain-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
+### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
 
-- **Ne yapar:** 
+- **Ne yapar:** Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
+- **Teknoloji:** api-anahtari, git, next.js, node, playwright _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
+- **İnceleme:** otomatik
+
+### domain-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+
+- **Ne yapar:** Design domain and SSL monitoring for e-commerce sites: domain/SSL expiry alerts, DNS anomaly detection and security rating checks. Use when a store needs certificate or domain-renewal alerts, DNS change monitoring, or a website security health check plan.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -136,7 +146,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### durable-objects  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### durable-objects  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Build, debug, or review Cloudflare Durable Objects code for persistent state and coordination.
 - **Teknoloji:** typescript _(otomatik tespit)_
@@ -146,9 +156,9 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 22 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### file-integrity-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
+### file-integrity-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design file integrity monitoring for e-commerce websites: file change detection, tamper alerts, security baselines and recovery procedures. Use when protecting a store (WooCommerce, Magento, custom) from malicious code injection, card skimmers or unauthorized theme/plugin edits.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -156,7 +166,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gateway-workers  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### gateway-workers  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Build, debug, or review Cloudflare Workers invoked by the Forward action in Gateway HTTP policies, including the GatewayMiddleware entrypoint, Gateway types, context, and continuation.
 - **Teknoloji:** typescript _(otomatik tespit)_
@@ -166,7 +176,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 7 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### k2  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### k2  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Build and troubleshoot Cloudflare K2 or K2 Streams durable logs. Use for stream setup, producing from Workers or HTTP, configuring retention and inputs, and consuming through subscriptions.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -176,9 +186,9 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 5 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### localization-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
+### localization-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Plan localization and internationalization QA for e-commerce sites: multi-language checks, currency and price formatting, shipping info and regional compliance audits. Use when launching a store in a new country or language, or auditing translations, currencies and local legal requirements.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -186,7 +196,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### nextjs-on-cloudflare  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### nextjs-on-cloudflare  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Build, migrate, and deploy Next.js apps on Cloudflare Workers with vinext. Use when starting a Next.js project on Cloudflare, moving an existing app to Workers, choosing between vinext and OpenNext, or setting up vinext for Workers. For setup, migration, or deployment, install vinext's upstream skills with `npx skills add cloudflare/vinext` if missing, then read and follow the applicable skill and
 - **Teknoloji:** next.js, node, react _(otomatik tespit)_
@@ -194,6 +204,16 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** cloudflare (kurum, resmî, ★3247, son güncelleme 2026-10-31, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 2.8 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### observability  ·  openai/plugins @ b767f8f  ·  puan 61 (C)
+
+- **Ne yapar:** Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.
+- **Teknoloji:** api-anahtari, html, next.js, node, react, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 26 KB (SKILL.md 25.9 KB, yük buyuk)
 - **İnceleme:** otomatik
 
 ### observability-and-instrumentation  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
@@ -229,9 +249,19 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 13 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı (opsiyonel). Kısa ve betikli; içerik büyük ölçüde performance-optimization'ın ölçüm bölümünün tablo özeti.
 
-### public-status-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
+### performance-review-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 81 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Draft performance reviews, self-assessments, peer reviews, and upward feedback in your own voice. Analyzes your contributions, emails, and meeting history via WorkIQ, then produces honest, impact-focused drafts using the STAR format. USE FOR: write my performance review, draft self-assessment, peer review, 360 feedback, annual review, mid-year review, upward feedback, write review for colleague, p
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
+- **İnceleme:** otomatik
+
+### public-status-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+
+- **Ne yapar:** Design a public status page for an e-commerce business: component structure, incident communication templates, subscriber notifications and uptime reporting. Use when creating or improving a status page, or writing customer-facing incident and outage updates.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -260,7 +290,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 159 KB (SKILL.md 35.9 KB, yük buyuk) · **Bağımlılık:** REA aracı (repo) kurulu olmalı.
 - **İnceleme:** otomatik
 
-### sandbox-migrate-to-next  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
+### sandbox-migrate-to-next  ·  cloudflare/skills @ 1a33048  ·  puan 94 (A)
 
 - **Ne yapar:** Migrate Cloudflare Sandbox apps from stable @cloudflare/sandbox to @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-next for apps already on the preview.
 - **Teknoloji:** docker, git, node, python _(otomatik tespit)_
@@ -270,7 +300,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### sandbox-next  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### sandbox-next  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Build or maintain Cloudflare Sandbox apps on @cloudflare/sandbox@next (SDK 1.0 preview). Use sandbox-migrate-to-next when porting a stable app.
 - **Teknoloji:** docker, next.js, node, python _(otomatik tespit)_
@@ -280,7 +310,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sandbox-stable  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
+### sandbox-stable  ·  cloudflare/skills @ 1a33048  ·  puan 94 (A)
 
 - **Ne yapar:** Build or maintain Cloudflare Sandbox apps on the stable @cloudflare/sandbox package. Use sandbox-next for preview apps and sandbox-migrate-to-next for stable-to-preview migrations.
 - **Teknoloji:** docker, git, node _(otomatik tespit)_
@@ -311,6 +341,36 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 307 KB (SKILL.md 21.5 KB, yük orta)
 - **İnceleme:** otomatik
 
+### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities.
+- **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### security-review  ·  github/awesome-copilot @ 7e40881  ·  puan 81 (A)
+
+- **Ne yapar:** AI-powered codebase security scanner that reasons about code like a security researcher — tracing data flows, understanding component interactions, and catching vulnerabilities that pattern-matching tools miss. Use this skill when asked to scan code for security vulnerabilities, find bugs, check for SQL injection, XSS, command injection, exposed API keys, hardcoded secrets, insecure dependencies, 
+- **Teknoloji:** api-anahtari, docker, html, next.js, node, python, react, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 36 KB (SKILL.md 8.9 KB, yük orta)
+- **İnceleme:** otomatik
+
+### security-scan  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR, commit, branch, or working-tree diffs, or for deep, multi-pass scans.
+- **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 28 KB (SKILL.md 8.8 KB, yük orta)
+- **İnceleme:** otomatik
+
 ### server-management  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
 - **Ne yapar:** Sunucu işletim ilkeleri: süreç yöneticisi seçimi (PM2, systemd, Docker, Kubernetes), izleme metrikleri ve uyarı seviyeleri, izleme aracı seçimi, log yönetimi (rotasyon, yapılandırılmış log), ölçekleme kararları ve sağlık kontrolü ilkeleri.
@@ -333,9 +393,9 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### synthetic-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
+### synthetic-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
-- **Ne yapar:** 
+- **Ne yapar:** Design synthetic monitoring for e-commerce sites: scripted user-journey checks for search, add-to-cart, checkout and payment with alert rules and performance baselines. Use when you need to catch broken checkout or cart flows before customers do.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexscope-ai (kurum, ★1312, son güncelleme 2026-08-26, lisans MIT)
@@ -343,7 +403,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### turnstile-spin  ·  cloudflare/skills @ 1a33048  ·  puan 93 (A)
+### turnstile-spin  ·  cloudflare/skills @ 1a33048  ·  puan 91 (A)
 
 - **Ne yapar:** Set up, repair, or migrate to Cloudflare Turnstile bot verification in an existing frontend and backend, including server-side Siteverify.
 - **Teknoloji:** api-anahtari, git, html, next.js, node, python _(otomatik tespit)_
@@ -384,7 +444,17 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.
 
-### web-perf  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
+### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 61 (C)
+
+- **Ne yapar:** Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerability or a disclosure campaign; a Codex Security scan is optional.
+- **Teknoloji:** api-anahtari, git _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** tercih
+- **Boyut:** 42 KB (SKILL.md 27.0 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### web-perf  ·  cloudflare/skills @ 1a33048  ·  puan 94 (A)
 
 - **Ne yapar:** Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores.
 - **Teknoloji:** css, next.js, node, svelte, tailwind, typescript _(otomatik tespit)_
@@ -394,7 +464,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### workers-best-practices  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### workers-best-practices  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Cloudflare Workers best practices for production applications. Use when writing, reviewing, or configuring Workers.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -404,7 +474,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 33 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### workers-profiling  ·  cloudflare/skills @ 1a33048  ·  puan 98 (A)
+### workers-profiling  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
 
 - **Ne yapar:** Profile or debug CPU usage and memory allocation in deployed Cloudflare Workers and Durable Objects. Then use this information to optimize your code.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -414,7 +484,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 5 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wrangler  ·  cloudflare/skills @ 1a33048  ·  puan 96 (A)
+### wrangler  ·  cloudflare/skills @ 1a33048  ·  puan 94 (A)
 
 - **Ne yapar:** Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, including local development, Previews, deployment, and resource management. For new projects and projects without a Wrangler configuration file, use the cf CLI instead.
 - **Teknoloji:** api-anahtari, typescript _(otomatik tespit)_

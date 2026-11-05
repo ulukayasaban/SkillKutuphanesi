@@ -51,7 +51,9 @@ python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da ay
    Yeni repoya ait kurala `"repo": "owner/ad"` yaz; başka repodaki aynı adlı skill etkilenmez. Repo geneli için `repo_varsayilan`.
    Ekledikten sonra eski kayıtların kategorisi/durumu değişmiş mi bak (git HEAD'deki registry ile karşılaştır).
    Yeni bir konu alanı gerekiyorsa `kategoriler.json`'a alan/kategori ekle.
-4. **Çalıştır:**
+4. **Çalıştır:** (Bulut/kısıtlı oturumda GitHub repo API'si kapalıysa araçlar kendiliğinden git'e düşer: ağaç blob'suz sığ
+   fetch ile, dosyalar tek pack isteğiyle, lisans arama API'sinden; `gelistirici-bilgisi.py --repo owner/ad` sadece o repoları
+   yeniler. `github-skill-listesi.py` ise GraphQL gerektirir, yerelde çalıştırılır.)
    ```bash
    python3 araclar/gelistirici-bilgisi.py         # geliştirici bilgisi (yıldız, lisans, bakım)
    # (kısmi indirme güvenli: indirilmeyen kaynaklar korunur; bir skill kaybolursa güvenlik kilidi işlemi durdurur)
@@ -87,6 +89,44 @@ Kütüphane kaynakları **herkese açık GitHub repolarıdır** (sabit commit ve
 - **Rol:** `roller/<rol>.json` (`ad`, `aciklama`, `gorev`, `cekirdek`, `opsiyonel`). Çekirdek ≤ 6 skill önerilir.
 - **Profil:** `profiller/<profil>.json` (`ad`, `baslik`, `roller`, `ek_skiller`).
 - Sonra `python3 araclar/dogrula.py` (var olmayan skill/rol adı HATA verir).
+
+## Description ve tetiklenme (her yeni kaynakta)
+Claude Code ve Codex bir skill'i **sadece** dosyanın ilk satırında başlayan YAML frontmatter'daki `description` ile tanır ve
+"ne zaman kullanılacağına" onunla karar verir. Arşivdeki orijinallere dokunulmadığı için bozukluk **kurulan kopyada** düzeltilir
+(`skill-ekle.py` → `aciklama_onar`, mantık `araclar/ortak.py` → `frontmatter_onar`):
+
+| Sorun | Kurulumda ne olur | Elle iş |
+|---|---|---|
+| Frontmatter'ın önünde HTML yorumu var | Frontmatter başa alınır, yorum altına iner | — |
+| `description` tırnaksız ve `: ` ya da ` #` içeriyor (YAML bozulur / kesilir) | Aynı metin JSON tırnağıyla yazılır | — |
+| Frontmatter yok · `description` yok · 40 karakterden kısa · 1024'ten uzun | `aciklama_duzeltme.description` uygulanır | **Yaz** ↓ |
+
+Elle yazılan düzeltme `registry.json` kaydında (inceleme alanı, `arsiv-yerlestir.py` korur):
+```json
+"aciklama_duzeltme": {"description": "<ne yapar>. Use when <hangi istekte/durumda>.", "neden": "description yok",
+                      "skill_md_hash": "<kaydın skill_md_hash'i>", "tarih": "YYYY-AA-GG"}
+```
+- İngilizce, 40–1024 karakter; önce ne yaptığı, sonra **"Use when …"** ile tetikleyen istekler/anahtar sözcükler.
+- `skill_md_hash` o anki SKILL.md'yi gösterir; kaynak değişirse `dogrula.py` "aciklama_duzeltme eskidi" uyarısı verir
+  (yeni description yeterliyse düzeltmeyi sil, değilse güncelle).
+- `dogrula.py` her skill'in kurulacak halini (onarım uygulanmış) okur; tetiklenemeyen varsa **HATA** verir.
+- Projede zaten kurulu skillere `skill-ekle.py <proje> --guncelle` onarımı uygular (`aciklama-onarim`).
+- Son toplu denetim: `notlar/tetiklenme-denetimi.md`.
+
+## Çalışmayan skill: kurulum yaması ve çalıştırma testi
+`python3 araclar/skill-calistir.py` her skill'i gerçek kurulum yoluyla geçici projeye kurar; yüklemeyi, bağlantıları ve
+betiklerin sözdizimini sınar (`.py` derlenir, `.sh` `bash -n`, `.js` `node --check`, `.json`) → `TEST_RAPORU.md`.
+`--ajan araclar/ornek-gorevler.json` ek olarak gerçek Claude Code'a örnek görev verir ve skill'in tetiklenip tetiklenmediğine bakar
+(sadece okuma araçları; maliyeti raporda yazar).
+
+Betiği bozuk bir skill arşivde düzeltilmez; düzeltilmiş dosya **`yamalar/<skill id>/<yol>`** altına konur ve kayda yazılır:
+```json
+"yama": {"dosyalar": {"scripts/x.py": "<orijinal dosyanın git blob hash'i>"}, "neden": "…", "tarih": "YYYY-AA-GG"}
+```
+Kurulumda (`hazirla()`) yama sadece orijinal o hash'teyse uygulanır; kaynak güncellenince yama atlanır ve `dogrula.py`
+"yama eskidi" der (yeni sürümü dene; sorun sürüyorsa yamayı yenile, düzeldiyse yamayı sil). `--guncelle` yamayı kurulu
+projelere de uygular. Kaynakta git symlink'i olan `../<kardeş>` dosyaları (arşive düz metin olarak gelir) kurulumda
+kendiliğinden kardeş skill bağlantısına çevrilir.
 
 ## Kontrol: "hiçbir skill atlanmadı" kanıtı
 `notlar/kapsam-denetimi.md` her çalıştırmada yeniden üretilir: her repodaki her SKILL.md için karar

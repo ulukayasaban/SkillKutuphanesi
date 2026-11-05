@@ -56,8 +56,10 @@
       "tip": "T2",
       "oncelik": 2,
       "dahil": [
-        "^\\.agents/skills/react-doctor/"
-      ]
+        "^\\.agents/skills/react-doctor/",
+        "^\\.agents/skills/next-bundle-optimizer/"
+      ],
+      "not": "next-bundle-optimizer kaynakta sonradan eklendi; kullanıcı onayıyla 2026-11-04'te alındı (kapsam denetimi 'karar bekliyor')."
     },
     {
       "repo": "pbakaus/impeccable",
@@ -865,6 +867,164 @@
       "tip": "T1",
       "oncelik": 3,
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Modern Android uygulama geliştirme en iyi uygulamaları. Genel Android mimari rehberi (NowInAndroid: modüller, katmanlar, Gradle, test); resmî android/skills'te bu genel rehberin karşılığı yok."
+    },
+    {
+      "repo": "mattpocock/skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "haric": [
+        "^skills/in-progress/"
+      ],
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Matt Pocock'un mühendislik disiplin skilleri (313k★). skills/in-progress yazarın tamamlanmamış dediği 8 skill: bilinçli hariç. code-review/pr/prototype adları kütüphanede var: öncelik 3 ile anthropics (1) kazanır, remotion T3 (8) ve Donchitos'a göre bu kazanır."
+    },
+    {
+      "repo": "coreyhaines31/marketingskills",
+      "tip": "T1",
+      "oncelik": 2,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Corey Haines pazarlama skilleri: CRO, copywriting, SEO, analitik (58k★). content-strategy/customer-research/onboarding/seo-audit adları anthropics/knowledge-work-plugins'te de var (öncelik 1 kazanır, bunlar alternatif)."
+    },
+    {
+      "repo": "AgriciDaniel/claude-seo",
+      "tip": "T1",
+      "oncelik": 2,
+      "haric": [
+        "^extensions/"
+      ],
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 26 SEO alt skill'i + 19 agent (27k★). extensions/: ücretli/hesaplı üçüncü taraf bağlayıcıları (Ahrefs, DataForSEO, SE Ranking, Profound, Firecrawl…) ve seo-image-gen kopyası — bilinçli hariç; gerekirse ayrı T2 kaydıyla alınır."
+    },
+    {
+      "repo": "AgriciDaniel/claude-ads",
+      "tip": "T1",
+      "oncelik": 2,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 12 reklam platformu için ücretli medya operasyonu skilleri (11k★). Skiller ücretsiz (hiçbir ücretli servis/API gerekmez); reklam bütçesi işin kendisidir, ücret sınıfını etkilemez."
+    },
+    {
+      "repo": "AgriciDaniel/claude-obsidian",
+      "tip": "T1",
+      "oncelik": 4,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian ikinci beyin iş akışı (16k★). obsidian-bases/obsidian-markdown adları kepano ve claudesidian'da da var: kepano (öncelik 1) tercih, bu alternatif."
+    },
+    {
+      "repo": "kepano/obsidian-skills",
+      "tip": "T1",
+      "oncelik": 1,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian CEO'su kepano'nun resmî Agent Skills (51k★): obsidian-markdown, obsidian-bases, json-canvas vb. Aynı adlı claudesidian (öncelik 4) kopyaları artık alternatif olur."
+    },
+    {
+      "repo": "google/elephant-goldfish-model",
+      "tip": "T1",
+      "oncelik": 1,
+      "haric": [
+        "^distributions/"
+      ],
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Google EGM: deep-context agent ile spec yazıp zero-context alt-agent'la sınama (12k★). distributions/claude: aynı 7 skill'in Claude dağıtım kopyası (openai.yaml'sız) — bilinçli hariç; skills/ kaynak sürüm."
+    },
+    {
+      "repo": "openai/plugins",
+      "tip": "T1",
+      "oncelik": 6,
+      "haric": [
+        "^\\.agents/",
+        "^plugins/plugin-eval/fixtures/"
+      ],
+      "kimlik": "openai-plugins",
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. openai/skills kullanımdan kaldırıldı; resmî Codex plugin örnekleri artık burada (7.7k★, 536 SKILL.md, çoğu sağlayıcı plugin'i: Twilio, Vercel, Zoom…). LİSANS DOSYASI YOK → belirtilmemiş, ön kontrol uyarır. 60 ad kütüphanede var (çoğu vercel/cloudflare/superpowers kopyası) → toplama olduğu için öncelik 6, kopyalar ayna olarak notlanır. .agents/skills/plugin-creator (repo-içi) ve plugins/plugin-eval/fixtures (test örnekleri) bilinçli hariç."
+    },
+    {
+      "repo": "github/awesome-copilot",
+      "tip": "T1",
+      "oncelik": 6,
+      "haric": [
+        "^\\.github/"
+      ],
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GitHub'ın resmî Copilot topluluk kataloğu (41k★, 475 skill; kalite karışık) → öncelik 6. .github/skills repo-içi 3 skill hariç."
+    },
+    {
+      "repo": "Vincentwei1021/video-shotcraft",
+      "tip": "T1",
+      "oncelik": 2,
+      "dosya_haric": [
+        "^(demos|gallery|shot-polish|workbench)/",
+        "\\.(mp4|webm|mov|gif)$"
+      ],
+      "bagimlilik": "Remotion (Node.js; npx remotion). Ürün videoları için Remotion projesi gerekir.",
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Remotion ile 150 hazır 'shot' içeren ürün tanıtım videosu skill'i (17k★). Kökte tek skill; references/, template/, assets/ alınır; demo/galeri/polish çıktıları (≈1000 dosya) alınmaz."
+    },
+    {
+      "repo": "dreammis/social-auto-upload",
+      "tip": "T1",
+      "oncelik": 2,
+      "bagimlilik": "sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).",
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Douyin/TikTok/YouTube/Bilibili/Xiaohongshu'ya video-yazı yayınlama CLI'sinin 18 skill'i (16k★, Çince). YouTube kanalı işi için eklendi."
+    },
+    {
+      "repo": "krillinai/OpenCreator",
+      "tip": "T1",
+      "oncelik": 5,
+      "bagimlilik": "OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.",
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Video çeviri-dublaj aracının kullanıcı skilleri skills/ (7). apps/ (çalışma zamanı) ve packages/writing-templates (uygulamanın yazı şablonları, frontmatter'sız) bilinçli hariç.",
+      "haric": [
+        "^apps/",
+        "^packages/"
+      ]
+    },
+    {
+      "repo": "blader/humanizer",
+      "tip": "T1",
+      "oncelik": 2,
+      "dosya_haric": [
+        "^\\.github/",
+        "^\\.claude-plugin/"
+      ],
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Metindeki AI yazım izlerini temizleyen tek skill (65k★). Kökte tek skill."
+    },
+    {
+      "repo": "cathrynlavery/diagram-design",
+      "tip": "T1",
+      "oncelik": 2,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Editoryal diyagram tasarımı; skills/diagram-design (65k★). Kök scripts/ ve docs/ skill klasörü dışında, alınmaz."
+    },
+    {
+      "repo": "Nutlope/hallmark",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 'Anti-AI-slop' tasarım skill'i (48k★). impeccable (öncelik 2), taste-skill ile aynı iş: örtüşme grubunda alternatif olarak değerlendirilecek."
+    },
+    {
+      "repo": "JuliusBrussee/caveman",
+      "tip": "T1",
+      "oncelik": 4,
+      "haric": [
+        "^plugins/"
+      ],
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Kısa çıktı / token tasarrufu skilleri (117k★): caveman, ultracave, megacave, cavecrew + inceleme/refactor skilleri. plugins/caveman/skills aynı 6 skill'in plugin kopyası: bilinçli hariç (T1; dahil kullanılmaz çünkü dahil dışı kalanlar 'karar bekliyor' sayılır). proxy/, engine/, packages/ içinde SKILL.md yok."
+    },
+    {
+      "repo": "Orchestra-Research/AI-Research-SKILLs",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. ML araştırma/mühendislik skilleri, 98 skill numaralı konu klasörlerinde (14k★). pytorch-lightning adı K-Dense'te de var."
+    },
+    {
+      "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "tip": "T1",
+      "oncelik": 4,
+      "haric": [
+        "^skills/skills-codex"
+      ],
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. ARIS: otonom ML araştırma skilleri, 87 skill (19k★). skills/skills-codex* (Codex ve Gemini/Claude inceleme kopyaları, 110 dosya) bilinçli hariç; ana sürüm alınır."
+    },
+    {
+      "repo": "zubair-trabzada/geo-seo-claude",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GEO (AI arama) odaklı SEO skilleri (12k★); claude-seo'nun alternatifi."
+    },
+    {
+      "repo": "Ryze-AI-Adgent/open-seo-mcp-skills",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Ücretsiz SEO MCP sunucusu + 8 SEO/GEO skill'i (9k★). seo-audit adı anthropics'te var (o kazanır)."
     }
   ],
   "konum_haric": [

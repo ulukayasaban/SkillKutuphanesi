@@ -2,7 +2,7 @@
 
 _Claude API, MCP sunucusu, model geçişi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/15**
 
 ### academy-guide  ·  anthropics/skills @ ca45fc4  ·  puan 89 (A)
 
@@ -100,6 +100,16 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (dar). İş akışları ve komutlar somut; yalnızca LangSmith ekosistemine yarar. Lisans belirtilmemiş.
 
+### langsmith-observability  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 78 (B)
+
+- **Ne yapar:** LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** Orchestra-Research (kurum, ★14267, son güncelleme 2026-10-11, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 32 KB (SKILL.md 9.5 KB, yük orta)
+- **İnceleme:** otomatik
+
 ### mcp-builder  ·  anthropics/skills @ ca45fc4  ·  puan 97 (A)
 
 - **Ne yapar:** Yüksek kaliteli MCP sunucusu geliştirme rehberi: araştırma/planlama (araç adlandırma, bağlam yönetimi, hata mesajları), Python FastMCP veya TypeScript MCP SDK v2 (@modelcontextprotocol/server; v1 yalnızca mevcut projeler için, codemod ile geçiş) ile uygulama, MCP Inspector ile test ve 10 soruluk değerlendirme (eval) seti; değerlendirmeyi çalıştıran evaluation.py betiği içerir.
@@ -122,7 +132,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 144 KB (SKILL.md 13.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güncel sürümün eski kopyası (350 satır fark); tasarım ilkeleri bölümü daha uzun ama 'iş akışı araçları' önerisi güncelde dengelenmiş.
 
-### mcp-builder@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 83 (A)
+### mcp-builder@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 82 (A)
 
 - **Ne yapar:** MCP sunucu ve istemci mühendisliği: kararlı 2026-07-28 spesifikasyonuna göre durumsuz istek modeli, taşıma ve kimlik doğrulama, araç girdi/çıktı şemaları, $ref güvenliği, araç/kaynak/istem tasarımı, güvenlik gereksinimleri, eklentiler (Tasks, Skills over MCP, MCP Apps), eski sürümlerden geçiş ve test matrisi.
 - **Ne zaman:** MCP sunucu/istemcisini güncel spesifikasyona taşımak, güvenlik/birlikte çalışabilirlik incelemesi, şema tasarımı. · **Ne zaman değil:** Sıfırdan sunucu yazıp değerlendirme seti kurmak için anthropics/mcp-builder ile birlikte kullan (tek başına iş akışı/kod iskeleti vermez). allowed-tools frontmatter'ı Claude Code'a özgü; Codex yok sayar.

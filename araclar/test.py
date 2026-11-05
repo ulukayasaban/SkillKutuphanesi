@@ -5,6 +5,7 @@ Global klasörlerin test boyunca değişmediğini de kontrol eder. Kütüphaneyi
 Kullanım: python3 araclar/test.py
 """
 import hashlib
+import json
 import shutil
 import subprocess
 import sys
@@ -215,6 +216,90 @@ def main():
     b = sm.read_bytes()
     test("ad eşitleme sadece frontmatter'a dokunur ve CRLF'yi korur",
          b.startswith(b"---\r\nname: yeni-ad\r\n") and b"name: ornek\r\n" in b, b.decode())
+
+    # --- frontmatter/description onarımı (tetiklenme): kurulan kopyada düzeltilir
+    from ortak import frontmatter, frontmatter_onar, frontmatter_teshis
+    m, y = frontmatter_onar("<!-- uyarı -->\n---\nname: a\ndescription: \"x y\"\n---\n# Govde\n", "a")
+    test("yorum arkasındaki frontmatter başa alınır, yorum korunur",
+         m.startswith("---\nname: a\n") and "<!-- uyarı -->" in m and not frontmatter_teshis(m), m)
+    m, y = frontmatter_onar("---\nname: a\ndescription: Track flakes in issue #12: rerun jobs.\nlicense: MIT\n---\n", "a")
+    test("YAML'ı bozan tırnaksız description tırnaklanır, içerik aynı kalır",
+         'description: "Track flakes in issue #12: rerun jobs."\nlicense: MIT' in m and not frontmatter_teshis(m), m)
+    m, y = frontmatter_onar("# Baslik\n\n---\n\nmetin\n", "a", "Does X. Use when Y.")
+    test("frontmatter yoksa düzeltme description'ıyla eklenir (gövdedeki --- çizgisi frontmatter sayılmaz)",
+         m.startswith('---\nname: a\ndescription: "Does X. Use when Y."\n---\n\n# Baslik') and y == ["frontmatter eklendi"], m)
+    m, y = frontmatter_onar("---\nname: a\ndescription: >\n  eski\n  uzun\nlicense: MIT\n---\nx\n", "a", "Yeni: aciklama")
+    test("çok satırlı description düzeltmeyle tek satır olur, diğer alanlar korunur",
+         frontmatter(m) == {"name": "a", "description": "Yeni: aciklama", "license": "MIT"}, m)
+    m, y = frontmatter_onar("---\nname: a\nmeta:\n  k: v\n---\nx\n", "a", "Does X. Use when Y.")
+    test("description yoksa name'in altına eklenir", m.startswith('---\nname: a\ndescription: "Does X. Use when Y."\nmeta:'), m)
+    duz = "---\nname: a\ndescription: Saglam bir aciklama, Use when gerekli.\n---\n"
+    test("sağlam frontmatter'a dokunulmaz", frontmatter_onar(duz, "a") == (duz, []))
+
+    # --- kaynakta git symlink'i olan '../<kardeş>' taslakları ve kurulum yamaları
+    ty = kok / "taslakli"
+    (ty / "alt").mkdir(parents=True)
+    (ty / "kardes-a").write_text("../kardes-a", encoding="utf-8")
+    (ty / "SKILL.md").write_text("---\nname: taslakli\ndescription: x\n---\n[a](./kardes-a/SKILL.md) `kardes-a/x.md` [d](./yok/b.md)\n",
+                                 encoding="utf-8")
+    (ty / "alt" / "n.md").write_text("[a](../kardes-a/SKILL.md)\n", encoding="utf-8")
+    se.symlink_taslaklarini_coz(ty)
+    test("symlink taslağı silinir, bağlantıları kardeş yoluna çevrilir (diğer yollar değişmez)",
+         not (ty / "kardes-a").exists() and "[a](../kardes-a/SKILL.md) `../kardes-a/x.md` [d](./yok/b.md)" in
+         (ty / "SKILL.md").read_text(encoding="utf-8") and (ty / "alt" / "n.md").read_text(encoding="utf-8") == "[a](../../kardes-a/SKILL.md)\n",
+         (ty / "SKILL.md").read_text(encoding="utf-8") + (ty / "alt" / "n.md").read_text(encoding="utf-8"))
+    import ortak
+    from ortak import git_blob_hash, yamalari_uygula
+    eski_yamalar = ortak.YAMALAR
+    ortak.YAMALAR = kok / "yamalar"
+    try:
+        (ortak.YAMALAR / "y-skill" / "scripts").mkdir(parents=True)
+        (ortak.YAMALAR / "y-skill" / "scripts" / "a.py").write_text("print('duzeltildi')\n", encoding="utf-8")
+        yk = kok / "yamali"
+        (yk / "scripts").mkdir(parents=True)
+        (yk / "scripts" / "a.py").write_text("print 'bozuk'\n", encoding="utf-8")
+        kayit = {"id": "y-skill", "yama": {"dosyalar": {"scripts/a.py": git_blob_hash(b"print 'bozuk'\n")}}}
+        test("yama, orijinal yazıldığı sürümle aynıysa uygulanır",
+             yamalari_uygula(yk, kayit) == [("scripts/a.py", "uygulandi")]
+             and (yk / "scripts" / "a.py").read_text(encoding="utf-8") == "print('duzeltildi')\n")
+        (yk / "scripts" / "a.py").write_text("print('kaynakta yeni surum')\n", encoding="utf-8")
+        test("kaynak değiştiyse yama uygulanmaz (yeni sürüm ezilmez)",
+             yamalari_uygula(yk, kayit) == [("scripts/a.py", "eskidi")]
+             and "yeni surum" in (yk / "scripts" / "a.py").read_text(encoding="utf-8"))
+    finally:
+        ortak.YAMALAR = eski_yamalar
+
+    # --- Claude hesabındaki aynı adlı skill (anthropic-skills:<ad>) proje settings.json'da gizlenir
+    eski_hesap = se.hesap_skilleri
+    se.hesap_skilleri = lambda: {"docx": kok, "pdf": kok}
+    try:
+        hp = kok / "hesap-proje"
+        (hp / ".claude").mkdir(parents=True)
+        ayar = hp / ".claude" / "settings.json"
+        ayar.write_text('{"permissions": {"allow": ["Bash(npm test)"]}, "skillOverrides": {"anthropic-skills:pdf": "on"}}',
+                        encoding="utf-8")
+        kl = {"skiller": {"docx": {}, "pdf": {}, "baska": {}}}
+        se.hesap_gizle(hp, kl)
+        d = json.loads(ayar.read_text(encoding="utf-8"))
+        test("hesap skill'i 'off' yapılır, kullanıcının ayarları ve bilerek yazdığı 'on' korunur",
+             d["permissions"] == {"allow": ["Bash(npm test)"]} and d["skillOverrides"] == {"anthropic-skills:docx": "off",
+             "anthropic-skills:pdf": "on"} and kl["hesap_gizlenen"] == ["anthropic-skills:docx"], json.dumps(d) + str(kl))
+        del kl["skiller"]["docx"]
+        se.hesap_gizle(hp, kl)
+        d = json.loads(ayar.read_text(encoding="utf-8"))
+        test("skill kaldırılınca sadece aracın eklediği anahtar silinir",
+             d["skillOverrides"] == {"anthropic-skills:pdf": "on"} and "hesap_gizlenen" not in kl, json.dumps(d))
+        ayar.write_text("{bozuk", encoding="utf-8")
+        hata = se.hesap_gizle(hp, {"skiller": {"docx": {}}})
+        test("bozuk settings.json'a dokunulmaz, hata bildirilir", hata and ayar.read_text(encoding="utf-8") == "{bozuk", str(hata))
+        ayar.unlink()
+        kl = {"skiller": {"docx": {}}}
+        se.hesap_gizle(hp, kl)
+        kl["skiller"] = {}
+        se.hesap_gizle(hp, kl)
+        test("araç oluşturduğu settings.json boş kalınca siler", not ayar.exists())
+    finally:
+        se.hesap_skilleri = eski_hesap
 
     # --- kardeş skill bağımlılıkları (../<kardeş>/ bağlantıları)
     kd = kok / "kardes"

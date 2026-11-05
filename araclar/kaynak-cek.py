@@ -28,7 +28,8 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GECICI, KAYNAKLAR, GhBulunamadi, frontmatter, gh_api, json_oku, json_yaz  # noqa: E402
+from ortak import (GECICI, KAYNAKLAR, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
+                   klon_temizle, repo_agaci, repo_lisansi)
 
 ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4")
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
@@ -166,7 +167,7 @@ def dosyalari_listele(kayit, agac, d, ayar):
             rel = e["path"]
             if kayit.get("kok_dosyalari") and rel not in kayit["kok_dosyalari"]:
                 continue
-        if not is_skill_md(rel) and (ilk_eslesen(haric, rel) or e.get("size", 0) > sinir):
+        if not is_skill_md(rel) and (ilk_eslesen(haric, rel) or (e.get("size") or 0) > sinir):  # size None: sonra yerelde
             atlanan.append(rel)
             continue
         sonuc.append((e["path"], "SKILL.md" if is_skill_md(rel) and "/" not in rel else rel))
@@ -228,9 +229,10 @@ def main():
         kimlik = kayit.get("kimlik") or repo.replace("/", "__")
         try:
             if repo not in repo_sha:  # aynı reponun tüm kayıtları AYNI commit'i kullanır
-                repo_sha[repo] = gh_api(f"repos/{repo}/commits/HEAD")["sha"]
-                agaclar[repo] = gh_api(f"repos/{repo}/git/trees/{repo_sha[repo]}?recursive=1")
-                agaclar[repo]["_lisans"] = (gh_api(f"repos/{repo}").get("license") or {}).get("spdx_id") or "belirtilmemiş"
+                repo_sha[repo], agaclar[repo] = repo_agaci(repo)
+                if agaclar[repo].get("_kaynak") == "git":
+                    print(f"  {repo}: GitHub repo API'si kapalı, ağaç git ile okundu")
+                agaclar[repo]["_lisans"] = repo_lisansi(repo, agaclar[repo]["tree"])
         except GhBulunamadi as e:
             sys.exit(f"HATA: {repo} erişilemiyor (silinmiş/private olmuş olabilir): {e}\n"
                      f"Arşivdeki kopya korunur. kaynaklar.json'da bu kaydı 'tip': 'KAYIP' yap ya da kaldır.")
@@ -248,7 +250,7 @@ def main():
                 md["skill_md"][yol] = karar
         hedef_kok = cikis / kimlik
         shutil.rmtree(hedef_kok, ignore_errors=True)
-        isler, beklenen = [], {}
+        isler, beklenen, git_isler = [], {}, []  # git_isler: (repo yolu, hedef, beklenen anahtarı) — git modunda toplu alınır
         for ad, bilgi in secilen.items():
             yollar = {"ana": bilgi["yol"], **bilgi["varyantlar"]}
             bilgi["atlanan"] = []
@@ -263,14 +265,37 @@ def main():
                 for tam, rel in dosyalar:
                     url = f"https://raw.githubusercontent.com/{repo}/{sha}/{urllib.parse.quote(tam)}"
                     isler.append((url, hedef_kok / alt / rel))
+                    git_isler.append((tam, hedef_kok / alt / rel, alt))
         bilesenler = bilesenleri_bul(kayit, agac, secilen, ayar)
         for p in bilesenler:
             isler.append((f"https://raw.githubusercontent.com/{repo}/{sha}/{urllib.parse.quote(p)}",
                           hedef_kok / "_bilesen" / p))
+            git_isler.append((p, hedef_kok / "_bilesen" / p, None))
             manifest["bilesenler"].append({"repo": repo, "kimlik": kimlik, "commit": sha, "yol": p,
                                           "yerel": str((hedef_kok / "_bilesen" / p).relative_to(GECICI))})
-        with ThreadPoolExecutor(16) as ex:
-            sonuclar = list(ex.map(lambda x: indir(*x), isler))
+        if govde.get("_klon"):  # git modu: tek pack isteğiyle al, boyut sınırını yerelde uygula (ağaçta boyut yoktu)
+            sinir = ayar["max_dosya_mb"] * 1024 * 1024
+            yerel = klon_dosyalari_al(govde, [tam for tam, _, _ in git_isler])
+            sonuclar, buyuk = [], []
+            for tam, hedef, alt in git_isler:
+                kaynak_dosya = yerel.get(tam)
+                if not kaynak_dosya:
+                    sonuclar.append(False)
+                    continue
+                if not is_skill_md(tam) and kaynak_dosya.stat().st_size > sinir:
+                    buyuk.append(tam)
+                    if alt in beklenen:
+                        beklenen[alt] -= 1  # listeden sonra elendi: eksik sayılmasın
+                    continue
+                hedef.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(kaynak_dosya, hedef)
+                sonuclar.append(True)
+            if buyuk:
+                print(f"  {repo}: {len(buyuk)} dosya {ayar['max_dosya_mb']} MB sınırını aştığı için alınmadı: {', '.join(buyuk[:3])}")
+            klon_temizle(govde)
+        else:
+            with ThreadPoolExecutor(16) as ex:
+                sonuclar = list(ex.map(lambda x: indir(*x), isler))
         hatali = sum(1 for s in sonuclar if not s)
         toplam_hata += hatali
         for ad, bilgi in secilen.items():

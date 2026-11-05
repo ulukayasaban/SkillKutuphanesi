@@ -9,7 +9,7 @@
 | `add-effect` | remotion-dev/remotion | Add a new effect to @remotion/effects, including implementation, package exports, docs, demos, preview images, |
 | `add-expert` | remotion-dev/remotion | Add a new expert to the Remotion experts page |
 | `add-new-package` | remotion-dev/remotion | Add a new package to the Remotion monorepo, including package scaffolding, monorepo registration, documentatio |
-| `add-sfx` | remotion-dev/remotion | Add a new sound effect to @remotion/sfx |
+| `add-sfx` | remotion-dev/remotion | Add a new sound effect to the @remotion/sfx package in the Remotion monorepo (WAV, CC0, normalized; first adde |
 | `add-webcodecs-bug` | remotion-dev/remotion | Add a browser WebCodecs bug to the Remotion Mediabunny WebCodecs bugs docs page. Use when given a Chromium, We |
 | `api-review` | microsoft/playwright | Produce the "Playwright 1.xx API Review" artifact for a range of commits - the public API additions and the br |
 | `authoring-skills` | vercel/next.js | How to create and maintain agent skills in .agents/skills/. Use when creating a new SKILL.md, writing skill de |
@@ -65,15 +65,15 @@
 | `playwright-release-notes` | microsoft/playwright | Write the release notes for a Playwright release - the Node.js notes in docs/src/release-notes-js.md together  |
 | `playwright-test-results` | microsoft/playwright | Query Playwright CI test results from the aggregated DuckDB database. Answers questions about flaky tests, fai |
 | `playwright-triage` | microsoft/playwright | Triage and fix one microsoft/playwright issue, or do a maintainer's task, unattended inside the Issue triage G |
-| `pr` | remotion-dev/remotion | Open a pull request for the current feature |
 | `pr-name` | remotion-dev/remotion | Review or correct a Remotion pull request title |
 | `pr-ready` | remotion-dev/remotion | Resolve CI failures, merge conflicts, or local branch changes to get a PR ready |
 | `pr-status-triage` | vercel/next.js | Triage CI failures and PR review comments using scripts/pr-status.js. Use when investigating failing CI jobs,  |
+| `pr@remotion-dev` | remotion-dev/remotion | Open a pull request for the current feature |
 | `product-recording` | remotion-dev/remotion | Prepare Remotion Studio for a user-recorded product demo with Canvas Capture, then import the downloaded take  |
 | `react-scan` | remotion-dev/remotion | Capture and analyze Remotion Studio React render profiles through development-only WebMCP tools. Use when diag |
 | `react-sync` | vercel/next.js | Build local React changes in the bundle variants consumed by Next.js, sync them into a local Next.js checkout, |
 | `react-vendoring` | vercel/next.js | React vendoring and react-server layer boundaries. Use when editing entry-base.ts, $$compiled.internal.d.ts, c |
-| `release@remotion-dev` | remotion-dev/remotion | Release a new Remotion version |
+| `release@remotion-dev` | remotion-dev/remotion | Publish a new Remotion release from the Remotion monorepo: auth checks (gcloud, npm, 1Password), npm token, bu |
 | `remotion-new-markup` | remotion-dev/remotion | Write or refactor editable Remotion markup with appropriate tracks, shared timing boundaries, and connected co |
 | `router-act` | vercel/next.js | How to write end-to-end tests using createRouterAct and LinkAccordion. Use when writing or modifying tests tha |
 | `runtime-debug` | vercel/next.js | Debug and verification workflow for runtime-bundle and module-resolution regressions. Use when diagnosing unex |
@@ -109,7 +109,7 @@
 | `vercel` | remotion-dev/remotion | Set up a Codex monitor for Vercel deployments and preview URLs. Use when the user invokes /vercel or $vercel,  |
 | `verify` | react/react | Use when you want to validate changes before committing, or when you need to check all React contribution requ |
 | `version` | remotion-dev/remotion | The version of Remotion we are working on. |
-| `video-report` | remotion-dev/remotion | Generate a report about a video |
+| `video-report` | remotion-dev/remotion | Reproduce a user-reported broken video in the Remotion monorepo by putting its URL in packages/example NewVide |
 | `visual-mode` | remotion-dev/remotion | Guidance for working on Remotion Studio Visual Mode, sequence identity, node paths, symbolicated stacks, overr |
 | `web-renderer-test` | remotion-dev/remotion | Add explicitly requested web renderer tests or update existing ones for implementation changes. |
 | `write-api-reference` | vercel/next.js | Produces API reference documentation for Next.js APIs: functions, components, file conventions, directives, an |

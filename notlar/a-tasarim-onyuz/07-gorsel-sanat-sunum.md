@@ -48,7 +48,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. diff -rq: tek fark LICENSE.txt ve KAYNAK.md; içerik birebir upstream ile aynı. Dikkat: ~5,4 MB font tekrar eder; lisans başlığı '[yyyy] [name of copyright owner]' doldurulmamış.
 
-### card-twitter  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### card-twitter  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Twitter quote or data card designed to pair with a post.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -58,7 +58,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 5 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### card-xiaohongshu  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### card-xiaohongshu  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Xiaohongshu-style knowledge cards, arranged as a swipeable multi-card carousel.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -79,7 +79,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 80 KB (SKILL.md 21.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Konu odaklı, başvuru dosyaları ve şablonlar kaliteli; kategoride tek veri görselleştirme skilli. Dikkat: registry'de bagimlilik uyarısı var ama d3-viz'in kendi içeriği OpenMontage komutu çağırmıyor, bağımsız çalışır. Repo lisansı AGPL-3.0 (skill dosyasında ayrı lisans yok); aynı skill ~/.claude/skills'te zaten global kurulu (globalde: ayni). d3 CDN'den yüklenebilir.
 
-### deck-guizang-editorial  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### deck-guizang-editorial  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Editorial magazine meets e-ink: 10 layouts and 5 palettes (Ink, Indigo Porcelain, Forest Ink, Kraft Paper, Dune).
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -89,7 +89,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 10 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### deck-open-slide-canvas  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### deck-open-slide-canvas  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Locked 1920x1080 canvas deck with React component-level free composition, not bound to a fixed template.
 - **Teknoloji:** canvas, html, react, tailwind _(otomatik tespit)_
@@ -99,7 +99,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 6 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### deck-swiss-international  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### deck-swiss-international  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** 16-column grid, one saturated accent, and 22 locked layouts (Klein Blue, Lemon, Mint, Safety Orange).
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -109,7 +109,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 12 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### digits-fintech-swiss-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### digits-fintech-swiss-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Swiss-grid fintech deck template in black / warm paper / neon-lime contrast. Use when users ask for premium data-story slides with strict modular layout, bold numeric cards, restrained motion, and keyboard/click navigation in one HTML file.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -119,7 +119,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 20 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### editorial-burgundy-principles-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### editorial-burgundy-principles-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Editorial studio deck template in burgundy / blush / muted-gold palette. Use when users ask for premium manifesto or culture slides with pill tags, large typographic statements, principle cards, and guided keyboard/click navigation.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -129,7 +129,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 21 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### field-notes-editorial-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### field-notes-editorial-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Editorial "Field Notes" report template with soft paper background, serif hero typography, rounded pastel insight cards, and a retention chart panel. Use when users ask for a premium magazine-style business report, board memo one-pager, or elegant data storytelling layout.
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -139,7 +139,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 23 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### html-ppt-retro-quarterly-review  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### html-ppt-retro-quarterly-review  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Retro Quarterly Review presentation template in a bold blue + orange editorial language. Use when users ask for a high-impact quarterly review / roadmap deck with heavyweight slab headlines, clean cream paper sections, structured grids, and fast premium motion pacing (3 slides, each hold under 3s in video mode).
 - **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
@@ -160,7 +160,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Hangi aracı çalıştıracağını söylemiyor; örnek çıktı uydurma gibi ("Enhancements applied") ve agent'ı yanlış beklentiye sokabilir. Dikkat: 2,5 KB, ek dosya yok, kurulum yok; değer katmıyor. Gerçek işi görsel upscale/arka plan araçları yapar.
 
-### mockup-device-3d  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### mockup-device-3d  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Static iPhone and MacBook 3D-style showcase with real HTML embedded on screens, glass-lens refraction, and 360-degree turntable composition.
 - **Teknoloji:** canvas, css, html, tailwind _(otomatik tespit)_
@@ -180,7 +180,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 29 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### poster-hero  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### poster-hero  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Vertical poster or Moments-style share image with strong visual impact.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -190,7 +190,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 8 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ppt-keynote  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### ppt-keynote  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Apple Keynote-quality slides, one card per screen, with keyboard left/right navigation.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -200,7 +200,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### pptx-html-fidelity-audit  ·  nexu-io/open-design @ 987b247  ·  puan 94 (A)
+### pptx-html-fidelity-audit  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** Audit a python-pptx export against its source HTML deck, identify layout/content drift (footer overflow, cropped content, missing italic/em, lost styling, off-rhythm spacing), and re-export with strict footer-rail + cursor-flow layout discipline. Use this skill whenever the user has a .pptx that was generated from an HTML slide deck and asks to compare/audit/verify/fix the export — including phras
 - **Teknoloji:** canvas, html, python _(otomatik tespit)_
@@ -243,7 +243,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 19 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. İçerik stratejisi ve yerleşim bilgisi iyi, MIT. Dikkat: referanslar `python ../design-system/scripts/search-slides.py` (kardeş design-system skill'ine ve onun veri tabanına) başvurur; design-system kurulu değilse bu komutlar kırık kalır, registry bunu bağımlılık olarak işaretlemiyor. Chart.js jsdelivr CDN'den yüklenir. SKILL.md yalnızca 1,7 KB. slideshow (video) ve design (claudekit) ile karıştırılmamalı.
 
-### swiss-creative-mode-template  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### swiss-creative-mode-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Swiss-inspired creative-mode presentation template skill with bold editorial typography, high-contrast geometric cards, interactive slide navigation, theme switching, hotspot overlays, and palette choreography in a single-file HTML artifact. Use when users ask for a premium presentation-style landing, a Swiss/brutalist deck look, or a creative launch page with rich interactions.
 - **Teknoloji:** css, html _(otomatik tespit)_

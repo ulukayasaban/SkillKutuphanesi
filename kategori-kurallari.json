@@ -682,6 +682,26 @@
     "nexu-io/open-design": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
     "anthropics/claude-plugins-official": "d-ai-otomasyon/04-skill-plugin-yazimi",
     "yaojingang/yao-meta-skill": "d-ai-otomasyon/04-skill-plugin-yazimi",
-    "anthropics/knowledge-work-plugins": "h-is-alanlari/03-operasyon-urun-isletme"
+    "anthropics/knowledge-work-plugins": "h-is-alanlari/03-operasyon-urun-isletme",
+    "mattpocock/skills": "b-yazilim-gelistirme/01-planlama-metodoloji",
+    "coreyhaines31/marketingskills": "h-is-alanlari/01-satis-pazarlama-musteri",
+    "AgriciDaniel/claude-seo": "h-is-alanlari/01-satis-pazarlama-musteri",
+    "AgriciDaniel/claude-ads": "h-is-alanlari/01-satis-pazarlama-musteri",
+    "zubair-trabzada/geo-seo-claude": "h-is-alanlari/01-satis-pazarlama-musteri",
+    "Ryze-AI-Adgent/open-seo-mcp-skills": "h-is-alanlari/01-satis-pazarlama-musteri",
+    "AgriciDaniel/claude-obsidian": "c-dokuman-icerik/04-not-alma-bilgi-yonetimi",
+    "kepano/obsidian-skills": "c-dokuman-icerik/04-not-alma-bilgi-yonetimi",
+    "google/elephant-goldfish-model": "b-yazilim-gelistirme/01-planlama-metodoloji",
+    "openai/plugins": "e-entegrasyon-katalogu/01-uygulama-entegrasyonlari",
+    "github/awesome-copilot": "e-entegrasyon-katalogu/01-uygulama-entegrasyonlari",
+    "Vincentwei1021/video-shotcraft": "g-video-ses-medya/01-video-uretim-montaj",
+    "dreammis/social-auto-upload": "g-video-ses-medya/01-video-uretim-montaj",
+    "krillinai/OpenCreator": "g-video-ses-medya/02-ses-muzik-konusma",
+    "blader/humanizer": "c-dokuman-icerik/03-yazi-iletisim-icerik",
+    "cathrynlavery/diagram-design": "c-dokuman-icerik/02-diyagram-dokumantasyon",
+    "Nutlope/hallmark": "a-tasarim-onyuz/01-ui-ux-tasarim-dili",
+    "JuliusBrussee/caveman": "d-ai-otomasyon/02-agent-orkestrasyon",
+    "Orchestra-Research/AI-Research-SKILLs": "i-bilim-muhendislik/03-veri-bilimi-ml",
+    "wanshuiyin/Auto-claude-code-research-in-sleep": "i-bilim-muhendislik/04-bilimsel-yazim-literatur"
   }
 }

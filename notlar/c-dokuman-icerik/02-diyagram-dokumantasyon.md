@@ -2,7 +2,7 @@
 
 _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **5/8**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **5/11**
 
 ### archify  ·  tt-a1i/archify @ a406594  ·  puan 95 (A)
 
@@ -27,7 +27,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 19 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kısa, net, sözdizimi tuzakları belgelenmiş. AGPL-3.0 (OpenMontage). PNG adımı kütüphanede olmayan agent-browser'a bağlı. Statik görsel için iyi; birincil archify.
 
-### d3-visualization  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### d3-visualization  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Teaches the agent to produce D3 charts and interactive data visualizations. A comprehensive D3.js skill with examples across chart types and techniques giving the agent expert-level knowledge to generate complex, interactive visualizations. Useful for editorial dashboards, reports, data-rich prototypes, and explanatory graphics.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -37,7 +37,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### data-report  ·  nexu-io/open-design @ 987b247  ·  puan 96 (A)
+### data-report  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Turns CSV, Excel, or JSON data into a polished visual report page.
 - **Teknoloji:** canvas, html _(otomatik tespit)_
@@ -45,6 +45,16 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Geliştirici:** nexu-io (kurum, ★105353, son güncelleme 2026-11-02, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 2.6 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### diagram-design  ·  cathrynlavery/diagram-design @ f24d98b  ·  puan 78 (B)
+
+- **Ne yapar:** Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeli
+- **Teknoloji:** api-anahtari, css, docker, html, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** cathrynlavery (kisi, ★64968, son güncelleme 2026-11-03, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5256 KB (SKILL.md 30.2 KB, yük buyuk)
 - **İnceleme:** otomatik
 
 ### doc-coauthoring  ·  anthropics/skills @ ca45fc4  ·  puan 97 (A)
@@ -69,7 +79,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### documentation-templates  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
+### documentation-templates  ·  vudovn/ag-kit @ 549ba3d  ·  puan 74 (B)
 
 - **Ne yapar:** README, endpoint bazlı API dokümanı, JSDoc/TSDoc yorumu, Keep-a-Changelog, kısa ADR ve llms.txt gibi AI dostu doküman için hazır şablonlar ve yapı ilkeleri verir.
 - **Ne zaman:** Hızlıca README/CHANGELOG/llms.txt iskeleti gerektiğinde; çok kısa bağlam bütçesiyle. · **Ne zaman değil:** Karar kaydı ve 'neden' belgelemesi gerekiyorsa documentation-and-adrs daha iyi. Frontmatter'daki allowed-tools (Read, Glob, Grep) Claude Code'a özgü; Codex bunu yok sayar, skill yine çalışır.
@@ -80,7 +90,27 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.
 
-### live-panel  ·  ythx-101/live-panel-skill @ 439c9ad  ·  puan 81 (A)
+### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 83 (A)
+
+- **Ne yapar:** Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### json-canvas@kepano  ·  kepano/obsidian-skills @ 3ccff53  ·  puan 82 (A)
+
+- **Ne yapar:** Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.
+- **Teknoloji:** canvas, node, obsidian _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** kepano (kisi, ★50748, son güncelleme 2026-09-15, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 14 KB (SKILL.md 7.4 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### live-panel  ·  ythx-101/live-panel-skill @ 439c9ad  ·  puan 80 (A)
 
 - **Ne yapar:** Build a terminal-style, always-running animated architecture diagram (a "live panel") from a JSON config and render it to an mp4. Use when the user wants a system, agent or org architecture diagram that looks like a monitoring dashboard in a terminal window - fixed layout, glowing packets on the wires, scrolling log, counters, bars that flip state - as a screen-recording-style video or a live web 
 - **Teknoloji:** canvas, css, ffmpeg, html, python _(otomatik tespit)_

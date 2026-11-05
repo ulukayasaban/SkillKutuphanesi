@@ -4,7 +4,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/10**
 
-### analyze  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### analyze  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Answer data questions -- from quick lookups to full analyses. Use when looking up a single metric, investigating what's driving a trend or drop, comparing segments over time, or preparing a formal data report for stakeholders.
 - **Teknoloji:** html, python _(otomatik tespit)_
@@ -14,7 +14,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### build-dashboard  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 95 (A)
+### build-dashboard  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 94 (A)
 
 - **Ne yapar:** Build an interactive HTML dashboard with charts, filters, and tables. Use when creating an executive overview with KPI cards, turning query results into a shareable self-contained report, building a team monitoring snapshot, or needing multiple charts with filters in one browser-openable file.
 - **Teknoloji:** canvas, css, html, node _(otomatik tespit)_
@@ -24,7 +24,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 25 KB (SKILL.md 25.4 KB, yük buyuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### create-viz  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### create-viz  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Create publication-quality visualizations with Python. Use when turning query results or a DataFrame into a chart, selecting the right chart type for a trend or comparison, generating a plot for a report or presentation, or needing an interactive chart with hover and zoom.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -44,7 +44,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 28 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### data-visualization  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### data-visualization  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Create effective data visualizations with Python (matplotlib, seaborn, plotly). Use when building charts, choosing the right chart type for a dataset, creating publication-quality figures, or applying design principles like accessibility and color theory.
 - **Teknoloji:** html, python _(otomatik tespit)_
@@ -54,7 +54,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### explore-data  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 98 (A)
+### explore-data  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 97 (A)
 
 - **Ne yapar:** Profile and explore a dataset to understand its shape, quality, and patterns. Use when encountering a new table or file, checking null rates and column distributions, spotting data quality issues like duplicates or suspicious values, or deciding which dimensions and metrics to analyze.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -64,7 +64,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### sql-queries  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### sql-queries  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Write correct, performant SQL across all major data warehouse dialects (Snowflake, BigQuery, Databricks, PostgreSQL, etc.). Use when writing queries, optimizing slow SQL, translating between dialects, or building complex analytical queries with CTEs, window functions, or aggregations.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -74,7 +74,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### statistical-analysis  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### statistical-analysis  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Apply statistical methods including descriptive stats, trend analysis, outlier detection, and hypothesis testing. Use when analyzing distributions, testing for significance, detecting anomalies, computing correlations, or interpreting statistical results.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -84,7 +84,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 10 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### validate-data  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 98 (A)
+### validate-data  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 97 (A)
 
 - **Ne yapar:** QA an analysis before sharing -- methodology, accuracy, and bias checks. Use when reviewing an analysis before a stakeholder presentation, spot-checking calculations and aggregation logic, verifying a SQL query's results look right, or assessing whether conclusions are actually supported by the data.
 - **Teknoloji:** git, python _(otomatik tespit)_
@@ -94,7 +94,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 15 KB (SKILL.md 14.6 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### write-query  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### write-query  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 99 (A)
 
 - **Ne yapar:** Write optimized SQL for your dialect with best practices. Use when translating a natural-language data need into SQL, building a multi-CTE query with joins and aggregations, optimizing a query against a large partitioned table, or getting dialect-specific syntax for Snowflake, BigQuery, Postgres, etc.
 - **Teknoloji:** - _(otomatik tespit)_

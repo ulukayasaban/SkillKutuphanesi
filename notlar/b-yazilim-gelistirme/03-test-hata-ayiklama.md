@@ -2,7 +2,7 @@
 
 _TDD, hata ayıklama, doğrulama_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/11**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/14**
 
 ### debugging-and-error-recovery  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
@@ -36,6 +36,16 @@ _TDD, hata ayıklama, doğrulama_
 - **Durum:** alternatif · **Örtüşme:** hata-ayiklama → alternatif
 - **Boyut:** 13 KB (SKILL.md 12.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İçerik iyi ama obra'nın eski sürümünden türetilmiş kopya; upstream ile senkron değil.
+
+### systematic-debugging@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+- **Teknoloji:** git _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 40 KB (SKILL.md 9.2 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### systematic-debugging@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
@@ -81,6 +91,16 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 17 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. İçerik kalitesi çok yüksek ve baskı testleriyle geliştirilmiş; birincilden farkı kapsam değil sertlik. Aynı adı taşıdığı için bir projede yalnız biri kurulmalı.
 
+### test-driven-development@openai  ·  openai/plugins @ b767f8f  ·  puan 64 (C)
+
+- **Ne yapar:** Use when implementing any feature or bugfix, before writing implementation code
+- **Teknoloji:** node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 17 KB (SKILL.md 8.8 KB, yük orta)
+- **İnceleme:** otomatik
+
 ### test-value  ·  tt-a1i/archify @ a406594  ·  puan 96 (A)
 
 - **Ne yapar:** Testlerin değerini ve geri bildirim maliyetini denetler: yavaş, kararsız, yinelenen veya kırılgan testleri bulur; uygulama sırasında hangi testin ekleneceğine/uyarlanacağına/silineceğine karar verdirir. Her yeni test için 'hangi somut hatayı yakalar, eşdeğer refactor'da da kırılır mı, başka bir kontrol zaten yakalıyor mu' sorularını şart koşar; AI'nın hem kodu hem testi aynı yanlış varsayımla yazma riskine dikkat çeker.
@@ -113,6 +133,16 @@ _TDD, hata ayıklama, doğrulama_
 - **Durum:** tercih · **Örtüşme:** tamamlanma-dogrulama → birincil · **Roller:** backend-muhendis, frontend-muhendis, planlayici
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlanma-dogrulama grubunun birincili. 4 KB ile en yüksek fayda/bağlam oranı; 'alt-agent başarılı dedi → bağımsız doğrula' maddesi orkestratör için kritik. verify-changes yürütme yöntemini, bu skill iddia disiplinini veriyor.
+
+### verification-before-completion@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### verify-changes  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 

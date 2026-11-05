@@ -2,7 +2,7 @@
 
 _Code review, sadeleştirme, temiz kod_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/17**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/23**
 
 ### clean-code  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -37,7 +37,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. 3 KB, yararlı ama yüzeysel; maddeler code-review-and-quality'nin alt kümesi. AI'ya özgü kontroller (prompt injection, çıktı temizleme) küçük bir artı.
 
-### code-review-graph  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
+### code-review-graph  ·  vudovn/ag-kit @ 549ba3d  ·  puan 74 (B)
 
 - **Ne yapar:** code-review-graph MCP sunucusunun kullanım rehberi: Tree-sitter ile kod tabanını SQLite'ta AST grafiğine çevirip değişikliğin etki alanını (blast radius) hesaplar; büyük depolarda inceleme ve çok dosyalı değişikliklerde yalnız ilgili dosyaları okutarak token tasarrufu sağlar. Kurulum ve indeks oluşturmayı kullanıcı onayına bağlar.
 - **Ne zaman:** 500+ dosyalı depolar, monorepo'lar, modüller arası bağımlılıklı değişiklikler; ölü kod tespiti ve refactor önizlemesi. · **Ne zaman değil:** ~200 dosyanın altındaki projeler; yoğun dinamik import/yansıma kullanan kod; MCP kurmak istenmiyorsa.
@@ -47,6 +47,26 @@ _Code review, sadeleştirme, temiz kod_
 - **Durum:** tercih · **Örtüşme:** buyuk-depo-baglami → birincil
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel, --skill ile). Dürüst kullan/kullanma eşikleri ve onaysız kurulum yasağı iyi. Üçüncü taraf PyPI paketine ve MCP kurulumuna bağlı; skill tek başına iş yapmaz. Rol çekirdeğine alınmadı.
+
+### code-review@mattpocock  ·  mattpocock/skills @ 4ae2317  ·  puan 96 (A)
+
+- **Ne yapar:** Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to 
+- **Teknoloji:** git _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** mattpocock (kisi, ★313013, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** alternatif
+- **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Reviews code changes using CodeRabbit AI. Use when user asks for code review, PR feedback, code quality checks, security issues, or requests fix-review cycles.
+- **Teknoloji:** git _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 4 KB (SKILL.md 3.3 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### code-simplification  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
@@ -130,6 +150,16 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
+### postgresql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 83 (A)
+
+- **Ne yapar:** PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### pragmatic-review  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
 
 - **Ne yapar:** YAGNI ve KISS odaklı etkileşimli kod incelemesi: git durumundan kapsamı seçtirir (commit edilmemiş, dal, dosya, son N commit), aşırı mühendislik kalıplarını tarar, temel güvenlik/performans kontrolü yapar ve bulguları kanıtla öz-denetler. --deep altı geçişli kapsamlı inceleme, --ci GitHub Actions için etkileşimsiz mod sunar.
@@ -152,6 +182,16 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.
 
+### receiving-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### requesting-code-review  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
 
 - **Ne yapar:** İş bitince veya birleştirmeden önce, oturum geçmişini değil özenle hazırlanmış bağlamı (açıklama, plan, BASE/HEAD SHA) vererek bir inceleyici alt-agent başlatır; code-reviewer.md şablonu ile Kritik/Önemli/Küçük bulguları ister ve bunlara göre ilerler.
@@ -162,6 +202,16 @@ _Code review, sadeleştirme, temiz kod_
 - **Durum:** tercih · **Örtüşme:** inceleme-dongusu → birincil · **Roller:** kod-inceleyici, planlayici
 - **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, inceleme-dongusu grubunun birincili. Kısa, superpowers zincirinin parçası; code-reviewer.md şablonu 'spec bir vizyon belgesidir' ilkesiyle güçlü. İnceleme yöntemi değil orkestrasyon olduğu için code-review-and-quality ile çakışmaz.
+
+### requesting-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+
+- **Ne yapar:** Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+- **Teknoloji:** git _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** openai (kurum, resmî, ★7753, son güncelleme 2026-11-03, lisans yok)
+- **Durum:** alternatif
+- **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### simplify-code  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -184,3 +234,13 @@ _Code review, sadeleştirme, temiz kod_
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → tamamlayıcı · **Roller:** kod-inceleyici
 - **Boyut:** 27 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlayıcı. Bu alanda gördüğüm en titiz sadeleştirme protokolü (kanıt kaydı, kör nokta bildirimi, ürün kararı ayrımı); dil bağımsız. metadata.internal işaretli ama Archify'a bağlı değil. mevcut-kod-iyilestirme profilinin ana skilli.
+
+### sql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 81 (A)
+
+- **Ne yapar:** Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** github (kurum, ★40795, son güncelleme 2026-11-04, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
+- **İnceleme:** otomatik
