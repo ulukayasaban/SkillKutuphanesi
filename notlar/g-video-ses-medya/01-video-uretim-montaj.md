@@ -2,7 +2,7 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **24/90**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **25/91**
 
 ### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -24,7 +24,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 16 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### alipay-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### alipay-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 `sau alipay` 登录支付宝生活号并发布视频。Use when 用户要向支付宝生活号发布视频或检查创作账号状态。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -34,7 +34,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### baijiahao-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### baijiahao-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 `sau baijiahao` 登录百家号、检查账号并发布视频。Use when 用户要向百家号发布视频或核验百家号登录状态。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -44,7 +44,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### bilibili-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### bilibili-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成 Bilibili 登录、账号校验或视频上传时使用这个 skill。优先使用 `sau bilibili ...`，程序会自动准备 `biliup`，不要求用户手动安装。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -86,7 +86,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1308 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### create-video  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### create-video  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** HeyGen Video Agent ile tek bir metin isteminden komple video üretir; senaryo, avatar, görsel, seslendirme ve altyazıyı ajan kendisi seçer. Önce prompt-optimizer referansıyla sahne/zamanlama yapılandırılmış prompt yazılır, sonra iş gönderilip durum sorgulanır.
 - **Ne zaman:** Hızlı taslak, tanıtım veya açıklayıcı videoyu avatar/ses ayrıntısı belirtmeden tek adımda almak istendiğinde. · **Ne zaman değil:** Tam metin, belirli avatar/ses veya sahne bazlı kontrol gerekiyorsa (avatar-video); kendi kompozisyonunu kurmak istiyorsan (hyperframes).
@@ -97,7 +97,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 92 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı ve güncel HeyGen resmi skill'i; MCP varsa onu tercih ediyor. Ücretli API, sonuç kontrolü sınırlı.
 
-### dayu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### dayu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 通过 social-auto-upload 的 sau CLI 完成大鱼号登录、账号核验、视频和文章的立即或定时发布，以及原作品结果查询。文章接收 HTML、Markdown 或 TXT 文件，Markdown 可选择主题。适用于已安装 sau 的环境，无需先阅读上传器源码。
 - **Teknoloji:** html, node, python _(otomatik tespit)_
@@ -107,7 +107,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 5.3 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### douyin-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### douyin-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成抖音登录、cookie 校验、视频上传或图文发布时使用这个 skill。该 skill 适用于已经安装 `social-auto-upload` 且可调用 `sau` 命令的环境。优先使用这个 skill 进行稳定的命令式抖音工作流，而不是一开始就阅读 uploader 源码。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -117,7 +117,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 11 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### facebook-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### facebook-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 sau CLI 登录 Facebook 个人主页，立即发布视频或图文，查询原作品、移至垃圾箱或永久删除。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -127,7 +127,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 4 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### ffmpeg  ·  calesthio/OpenMontage @ 195eab2  ·  puan 96 (A)
+### ffmpeg  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** FFmpeg ile format dönüştürme, yeniden boyutlandırma, sıkıştırma, ses çıkarma, kırpma ve Remotion'a uygun varlık hazırlama tariflerini toplar. Bayrakların neden kullanıldığını da açıklar.
 - **Ne zaman:** Remotion/HyperFrames projesine girecek GIF, video ve ses dosyalarını hazırlarken ya da derin FFmpeg tarifi gerektiğinde. · **Ne zaman değil:** Basit kırp/birleştir/boyutlandır işleri için video-edit daha kısa ve yeterli.
@@ -219,7 +219,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### hupu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### hupu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 `sau hupu` 登录虎扑并发布视频，可指定封面。Use when 用户要向虎扑发布视频或检查虎扑账号状态。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -292,7 +292,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 157 KB (SKILL.md 21.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### instagram-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### instagram-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 sau CLI 在 Instagram 独立网页登录、立即发布 Reels/单图/轮播、核验原作品并移至最近删除。
 - **Teknoloji:** git, python _(otomatik tespit)_
@@ -302,7 +302,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 5 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### kuaishou-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### kuaishou-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成快手登录、cookie 校验、视频上传或图文发布时使用这个 skill。该 skill 适用于已经安装 `social-auto-upload` 且可调用 `sau` 命令的环境。优先使用这个 skill 进行稳定的命令式快手工作流，而不是一开始就阅读 uploader 源码。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -345,7 +345,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1860 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-11: giriş 'npx hyperframes auth login' (HyperFrames OAuth); 'media-use generate' ile heygen CLI olmadan üretim eklendi. Kredi harcamada ücretsiz yola geçmeme ve fiyat söylememe yönergesi kullanıcının ücretsiz-önce tercihiyle çelişir. Telemetri girişten sonra HeyGen hesabına bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır.
 
-### meta-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### meta-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 sau CLI 登录 Facebook Page，发布视频或图文、设置北京时间排期、查询原作品并删除。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -376,7 +376,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa, kontrol listeli ve UI demo videolarında yüksek getirili.
 
-### playwright-recording  ·  calesthio/OpenMontage @ 195eab2  ·  puan 96 (A)
+### playwright-recording  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** Playwright ile tarayıcı etkileşimlerini video olarak kaydeder; form doldurma, gezinti, yavaşlatma ve çözünürlük ayarlarıyla demo ve ürün turu görüntüsü üretir.
 - **Ne zaman:** Gerçek bir web uygulamasının demo/walkthrough görüntüsü video kompozisyonuna girecekse. · **Ne zaman değil:** Terminal/CLI demosu (synthetic-screen-recording); masaüstü uygulama kaydı.
@@ -397,7 +397,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** otomatik
 
-### remotion  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
+### remotion  ·  calesthio/OpenMontage @ 195eab2  ·  puan 82 (A)
 
 - **Ne yapar:** claude-code-video-toolkit'e özgü Remotion uzantıları: paylaşılan bileşenler (AnimatedBackground, SlideTransition…) ve özel geçişler (glitch, lightLeak, clockWipe). Temel Remotion bilgisi için 'remotion-official' skill'ine yönlendirir.
 - **Ne zaman:** Sadece o toolkit'in lib/components ve lib/transitions klasörleri bulunan bir projede. · **Ne zaman değil:** Genel Remotion işleri (remotion-best-practices); OpenMontage kurulumunda lib/ klasörleri yok.
@@ -691,7 +691,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 48 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede SKILL.md 497 satırdan ~45 satıra indi; kurallar özlü. ttsScript alanları henüz bağlı değil.
 
-### social-auto-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### social-auto-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 为 social-auto-upload 提供总入口，按平台和内容类型选择对应发布流程。Use when 用户要在本仓库支持的平台发布视频、文章或图文，或需要把内容分发到多个指定平台。
 - **Teknoloji:** node _(otomatik tespit)_
@@ -741,7 +741,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 23 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### synthetic-screen-recording  ·  calesthio/OpenMontage @ 195eab2  ·  puan 88 (A)
+### synthetic-screen-recording  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
 
 - **Ne yapar:** Terminal/CLI demosunu gerçek ekran kaydı yerine Remotion'daki TerminalScene bileşeniyle sentetik olarak üretir; komut ve çıktıyı karakter karakter, kareye kadar kontrollü yazar. Ne zaman sentetik, ne zaman canlı kayıt seçileceğini açıklar.
 - **Ne zaman:** Kurulum/CLI eğitimi gibi komut ve çıktısı önceden bilinen terminal demolarında. · **Ne zaman değil:** Gerçek uygulama arayüzü veya tarayıcı akışı (playwright-recording); OpenMontage remotion-composer'ı yoksa.
@@ -752,7 +752,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Fikir iyi; ancak OpenMontage'ın remotion-composer/TerminalScene bileşenine bağımlı.
 
-### tencent-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### tencent-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 `sau tencent` 登录视频号并发布或定时发布视频、保存草稿。Use when 用户要向微信视频号发布视频或检查视频号账号状态。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -762,7 +762,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### tiktok-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### tiktok-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用仓库现有 Patchright/Playwright Chrome 上传器登录并发布 TikTok 视频。Use when 用户要发布 TikTok 视频，且当前环境可访问本仓库及其本地 Chrome 配置。
 - **Teknoloji:** playwright, python _(otomatik tespit)_
@@ -782,7 +782,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### video-download  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### video-download  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** yt-dlp ile YouTube ve 1000+ siteden video, sadece ses, altyazı ve metadata indirme komutlarını verir; kalite ön ayarları ve çıktı şablonlarını içerir. API anahtarı gerekmez.
 - **Ne zaman:** Referans/kaynak video, ses veya altyazı indirmek ya da metadata almak gerektiğinde. · **Ne zaman değil:** YouTube'da arama/listeleme için; telif veya platform koşullarına aykırı kullanımda.
@@ -804,6 +804,17 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 12 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa, genel, platform ön ayarlı; bağımlılığı sadece ffmpeg.
 
+### video-edit@yildizdikme  ·  YildizDikme/claude-video-edit @ b7093e2  ·  puan 68 (B)
+
+- **Ne yapar:** Konuşan kişi (talking-head), eğitim ve Short videoları için kurgu: Whisper ile kelime hassasiyetli kesim, HTML+GSAP sahneler, Python'la sentezlenen ses efektleri, ses seviyesi (loudness) ayarı ve kare-doğru render.
+- **Ne zaman:** Tek kişilik anlatım videosunu kelime düzeyinde temizleyip hareketli grafik ve SFX ile Short'a çevirmek. · **Ne zaman değil:** DİKKAT: adı 'video-edit'; globalde OpenMontage'in video-edit'i olduğu için Claude onu kullanır, bu skill gölgede kalır. Betik yollarını ~/.claude/skills/video-edit varsayar (projeye kurulunca yollar kırılır); ~/.claude/video-edit/ altına profil ve brand/ yazar. Genel kurgu için OpenMontage video-edit, altyazı için embedded-captions, kesim için talking-head-recut.
+- **Teknoloji:** python, ffmpeg, whisper, gsap, html · **Paketler:** ffmpeg, whisper, chrome
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** YildizDikme (kisi, ★33, son güncelleme 2026-11-03, lisans MIT)
+- **Durum:** alternatif · **Örtüşme:** ffmpeg-kurgu → alternatif · **Globalde:** claude:farkli
+- **Boyut:** 730 KB (SKILL.md 15.9 KB, yük orta)
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (kullanıcı isteğiyle; ffmpeg-kurgu grubu, OpenMontage video-edit tercih). MIT, 32★, çok yeni. Yerel, ücretsiz, ağ yok (serve.py sadece 127.0.0.1).
+
 ### video-hyperframes  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Hyperframes / Remotion-compatible continuous frame animation with autoplay support.
@@ -824,7 +835,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 28250 KB (SKILL.md 21.2 KB, yük orta) · **Bağımlılık:** Remotion (Node.js; npx remotion). Ürün videoları için Remotion projesi gerekir.
 - **İnceleme:** otomatik
 
-### video-toolkit  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### video-toolkit  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** claude-code-video-toolkit ile metin brifinden açıklayıcı video üretir: Modal/RunPod bulut GPU'larında seslendirme, görsel, müzik, konuşan kafa üretimi ve Remotion render. Kurulum ve uç nokta yapılandırmasını adım adım anlatır.
 - **Ne zaman:** Toolkit ~/.openclaw/workspace/claude-code-video-toolkit yolunda kuruluysa ve bulut GPU kullanılacaksa. · **Ne zaman değil:** OpenMontage veya HyperFrames ile çalışırken; toolkit kurulu değilse.
@@ -835,7 +846,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 15 KB (SKILL.md 14.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sabit ~/.openclaw yoluna ve ayrı toolkit kurulumuna bağımlı; bu ortamda yok. --break-system-packages önerisi riskli.
 
-### video-translate  ·  calesthio/OpenMontage @ 195eab2  ·  puan 96 (A)
+### video-translate  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** HeyGen /v2/video_translate ile mevcut videoyu başka dillere çevirip dudak senkronlu dublaj yapar; sadece ses çevirisi, konuşmacı sayısı ve webhook seçenekleri vardır.
 - **Ne zaman:** Hazır bir videonun çok dilli (ör. Türkçe→İngilizce) dublajlı sürümleri gerektiğinde. · **Ne zaman değil:** Sadece altyazı çevirisi yeterliyse; HeyGen anahtarı yoksa.
@@ -846,7 +857,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı resmi HeyGen skill'i; ücretli.
 
-### video-understand  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### video-understand  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** ffmpeg ile sahne/anahtar kare çıkarıp Whisper ile sesi yerelde yazıya döken betik; videonun içeriğini JSON olarak özetler. API anahtarı gerekmez, tamamen çevrimdışı çalışır.
 - **Ne zaman:** Bir videoyu kurgulamadan önce ne içerdiğini anlamak, kareleri incelemek veya yerel transkript almak gerektiğinde. · **Ne zaman değil:** Yüksek doğruluklu çok dilli transkript (speech-to-text) veya konuşmacı ayrımı gerekiyorsa.
@@ -857,7 +868,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 27 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Betiği skill klasöründe; yol skills/video-understand/... diye yazılmış, kurulumda skill yoluna göre çalıştırılmalı.
 
-### weibo-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### weibo-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 `sau weibo` 登录微博并发布视频，可指定封面。Use when 用户要向微博发布视频或检查微博账号状态。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -877,7 +888,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 33 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### xiaohongshu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### xiaohongshu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 当 agent 需要通过已安装的 `sau` CLI 完成小红书登录、cookie 校验、视频上传或图文发布时使用这个 skill。该 skill 适用于已经安装 `social-auto-upload` 且可调用 `sau` 命令的环境。优先使用这个 skill 进行稳定的命令式小红书工作流，而不是一开始就阅读 uploader 源码。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -887,7 +898,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 11 KB (SKILL.md 2.8 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### xueqiu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 86 (A)
+### xueqiu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 87 (A)
 
 - **Ne yapar:** 通过 social-auto-upload 的 sau CLI 登录和核验雪球账号，发布 HTML、Markdown 或 TXT 长文，保留原稿段间配图、原生文字结构与独立封面，并查询原作品确认结果。适用于雪球创作者平台，不支持定时或视频。
 - **Teknoloji:** css, html, python _(otomatik tespit)_
@@ -908,7 +919,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Basit ve çalışır betik; sandbox'a özgü varsayılan yol ve otomatik pip kurulumu eksi. Kategori: video indirme g-video-ses-medya/01 kapsamında, oraya taşındı ve video-indirme grubuna alternatif olarak eklendi.
 
-### youtube-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 88 (A)
+### youtube-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 `sau youtube` 登录 YouTube 并上传、安排定时或设置视频可见范围。Use when 用户要向 YouTube 发布或定时发布视频，或检查 Google/YouTube 登录状态。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -918,7 +929,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### zhihu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 86 (A)
+### zhihu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 87 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 sau CLI 登录知乎、发布文章或视频，并按作品链接核对结果；支持原稿位置配图与视频领域、声明选项。
 - **Teknoloji:** css, html, python _(otomatik tespit)_

@@ -160,7 +160,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Boyut:** 161 KB (SKILL.md 86.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kapsamlı ama 86 KB SKILL.md ile bağlam yükü çok yüksek; taste-skill v1 türevi, kaynağı v2'ye geçti. Kendi yoluna sabit referans içeriyor (yol bağımlılığı).
 
-### hallmark  ·  Nutlope/hallmark @ de4999e  ·  puan 97 (A)
+### hallmark  ·  Nutlope/hallmark @ de4999e  ·  puan 98 (A)
 
 - **Ne yapar:** Design skill for websites and new pages that look designed, not generated. Use when the user asks to build or design something new, or names Hallmark. Never use it on an existing design unless the user names Hallmark, as in `/hallmark redesign <path>`.
 - **Teknoloji:** api-anahtari, css, html, node, tailwind _(otomatik tespit)_

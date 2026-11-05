@@ -15,7 +15,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Not türüne göre hazır özellik şablonları ve kalite kontrolleri net; MIT, küçük (4 KB).
 
-### autoresearch@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### autoresearch@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Run a bounded, source-grounded research loop, draft a cited dossier, and optionally propose a separately reviewed canonical vault merge. Use when the user wants autonomous or deep research that may access the public web. Triggers: /autoresearch, autoresearch, research this topic, deep dive into, investigate, find everything about, research and file, go research, build a wiki on.
 - **Teknoloji:** git, obsidian, python _(otomatik tespit)_
@@ -25,7 +25,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 10 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### canvas  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### canvas  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Create, inspect, and update Obsidian JSON Canvas boards with text, file, link, group, and edge nodes. Use for canvas status, canvas lists, visual maps, zones, spatial layouts, adding vault notes or media to a .canvas file, and requests such as create canvas, add to canvas, or put this on the canvas.
 - **Teknoloji:** canvas, git, node, obsidian, python _(otomatik tespit)_
@@ -56,7 +56,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### defuddle@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### defuddle@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Plan optional Defuddle extraction and retain already available local source files through reviewed filesystem capture. Use for defuddle, clean this URL, strip page clutter, readable Markdown from a web page, or preparing a web source for later wiki ingestion. Network extraction remains unavailable until an enforcing adapter is verified.
 - **Teknoloji:** api-anahtari, html, obsidian, python _(otomatik tespit)_
@@ -153,7 +153,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### obsidian-bases@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 86 (A)
+### obsidian-bases@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 87 (A)
 
 - **Ne yapar:** Explain, draft, and validate Obsidian Bases .base files with filters, formulas, properties, summaries, and table, card, list, or version-gated kanban views. Use for Obsidian Bases, database-like vault views, dynamic tables, reading lists, task trackers, filters, formulas, summaries, and .base file edits.
 - **Teknoloji:** git, obsidian, python, typescript _(otomatik tespit)_
@@ -194,7 +194,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### obsidian-markdown@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### obsidian-markdown@agricidaniel  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Explain, draft, or validate Obsidian Flavored Markdown syntax: properties, wikilinks, embeds, callouts, tags, comments, highlights, block references, math, and Mermaid. Use when the user explicitly requests Obsidian note formatting or syntax help, not for general Markdown or broad vault operations.
 - **Teknoloji:** html, obsidian, python _(otomatik tespit)_
@@ -236,7 +236,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa, net çıktı yapısı; çelişkileri öne çıkarması değerli.
 
-### save  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 81 (A)
+### save  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 82 (A)
 
 - **Ne yapar:** Save a user-selected answer, decision, insight, or session summary into an Obsidian vault as one reviewed transaction. Use only when the user explicitly asks to preserve specific conversation content, not when they supply a file or URL to ingest. Triggers: /save, save this, save that answer, file this conversation, save this analysis, keep this insight, preserve this chat result.
 - **Teknoloji:** obsidian, python _(otomatik tespit)_
@@ -246,7 +246,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### think  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### think  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Apply the Fable-derived 10-stage OBSERVE, OBSERVE, LISTEN, THINK, CONNECT, CONNECT, FEEL, ACCEPT, CREATE, GROW loop to consequential or ambiguous reasoning and decisions. Use for think this through, deep think, architecture review, postmortem, tradeoff analysis, or challenges to assumptions. This is a reasoning review, not a deterministic vault health check or repair workflow.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -289,7 +289,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil). Haftalık şablon günlükten daha kapsamlı; daily-review ile birlikte kullanılır.
 
-### wiki  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 86 (A)
+### wiki  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 87 (A)
 
 - **Ne yapar:** Initialize, adopt, and route work for a separate Obsidian knowledge vault through the portable claude-obsidian core. Use for vault setup, scaffolding, workspace selection, cross-project configuration, or choosing the correct wiki sub-skill. Triggers: /wiki, set up wiki, scaffold vault, create knowledge base, adopt this vault, Obsidian vault, second brain setup, persistent wiki.
 - **Teknoloji:** canvas, css, git, obsidian, python _(otomatik tespit)_
@@ -299,7 +299,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 44 KB (SKILL.md 6.1 KB, yük kucuk) · **Kırık bağlantı:** 3
 - **İnceleme:** otomatik
 
-### wiki-cli  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### wiki-cli  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Detect and use the official Obsidian command-line interface for read-only vault access; use for wiki-cli, Obsidian CLI, Obsidian read, Obsidian search, vault transport, which transport, transport detection, backlinks, tags, or Obsidian command line. Mutations always go through the claude-obsidian transaction core.
 - **Teknoloji:** git, obsidian _(otomatik tespit)_
@@ -309,7 +309,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wiki-fold  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### wiki-fold  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Create a bounded, extractive, structurally idempotent rollup of recent Obsidian wiki log entries, with dry-run preview by default and one optional transaction apply. Use for manual log compression without modifying child pages. Triggers: fold the log, run a fold, run wiki-fold, log rollup, roll up log entries, commit the fold.
 - **Teknoloji:** git, obsidian, python _(otomatik tespit)_
@@ -319,7 +319,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 8 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wiki-ingest  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 84 (A)
+### wiki-ingest  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 85 (A)
 
 - **Ne yapar:** Ingest supplied source material into an Obsidian vault with provenance and claim tracking: pasted text, files staged in the selected vault's inbox or .raw archive, or explicitly approved URLs. Use for a single source or bounded batch, not for saving an assistant answer. Triggers: ingest, ingest this file, ingest this URL, process this source, read and file this source, batch ingest, ingest these s
 - **Teknoloji:** git, obsidian, python _(otomatik tespit)_
@@ -329,7 +329,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 9 KB (SKILL.md 8.9 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### wiki-lint  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### wiki-lint  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Run a deterministic, read-only health check on an Obsidian wiki. Use for lint, vault health check, audit wiki health, find orphans, find dead links, frontmatter audit, provenance audit, or wiki audit. Reports graph, link, frontmatter, provenance-ledger, empty-section, and stale-index findings; it does not reason broadly or repair files.
 - **Teknoloji:** git, obsidian, python _(otomatik tespit)_
@@ -339,7 +339,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wiki-mode  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### wiki-mode  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Read or configure the vault filing methodology and suggest destinations for planned knowledge creation under Generic, LYT, PARA, or Zettelkasten. Use for wiki mode, methodology mode, what is my vault mode, set vault mode, switch to PARA, use LYT, Zettelkasten setup, change mode, configure mode, or methodology routing. This skill does not save content or migrate notes.
 - **Teknoloji:** obsidian, python _(otomatik tespit)_
@@ -349,7 +349,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 9 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wiki-query  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 88 (A)
+### wiki-query  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 89 (A)
 
 - **Ne yapar:** Answer an explicitly vault-scoped question from an Obsidian wiki without changing it. Use when the user selects the vault as the evidence source: query the wiki, query quick, query deep, explain from the wiki, summarize the vault, find in wiki, search the wiki, or based on the wiki. Do not route ordinary general-knowledge questions here.
 - **Teknoloji:** obsidian, python _(otomatik tespit)_
@@ -359,7 +359,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 5 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wiki-retrieve  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 86 (A)
+### wiki-retrieve  ·  AgriciDaniel/claude-obsidian @ 2e54556  ·  puan 87 (A)
 
 - **Ne yapar:** Build and query a vault-local contextual BM25 retrieval index with optional multilingual Nomic cosine reranking; use for retrieve, hybrid retrieval, BM25, rerank, contextual retrieval, chunk search, vault search, semantic search, find relevant passages, or retrieval diagnostics. Derived caches stay under .vault-meta, remote egress requires explicit consent, and unavailable reranking falls back det
 - **Teknoloji:** api-anahtari, obsidian, python _(otomatik tespit)_

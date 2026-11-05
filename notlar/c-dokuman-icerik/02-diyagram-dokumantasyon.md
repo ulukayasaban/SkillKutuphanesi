@@ -16,7 +16,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; lisans 2026-11'de Apache-2.0'a geçti (eski MIT sürümleri LICENSE-MIT'te; üretilen HTML'lere lisans bildirimi gömülür). Klasör büyük (7.6 MB), SKILL.md 18 KB; referanslar ihtiyaç anında okunuyor.
 - **Not:** Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok.
 
-### beautiful-mermaid  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### beautiful-mermaid  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevirir. Flowchart, sequence, state, class ve ER diyagramlarını, 13 hazır temayı (Tokyo Night, Nord, GitHub…) destekler.
 - **Ne zaman:** Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde. · **Ne zaman değil:** Etkileşimli/keşfedilebilir diyagram ya da kod tabanından kanıtlı mimari gerekiyorsa (archify). PNG adımı 'agent-browser' skill'ini istiyor; kütüphanede yok — PNG için playwright/chromium ile ekran görüntüsü alınarak uyarlanmalı.

@@ -1,6 +1,6 @@
 # Skill Rehberi (Türkçe)
 
-Bu kütüphanedeki **5310 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
+Bu kütüphanedeki **5313 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
 `python3 araclar/skill-readme.py`. Test sonuçları: [TEST_RAPORU.md](TEST_RAPORU.md) · kurulum ve araçlar: [README.md](README.md).
 
 ## Skill nedir?
@@ -33,7 +33,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
   gizler (`.claude/settings.json` → `skillOverrides`), böylece kütüphane sürümü kullanılır. Ön kontrol `hesap-cakismasi` der.
 
 ## Tablolar nasıl okunur?
-- **Ne yapar / Ne zaman:** elle incelenmiş 1219 skill'de inceleme notu; 4027 skill'de açıklamanın
+- **Ne yapar / Ne zaman:** elle incelenmiş 1222 skill'de inceleme notu; 4027 skill'de açıklamanın
   otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 64 skill'de henüz İngilizce.
 - **Puan:** 0–100 otomatik değerlendirme ve derece (A–D): kaynağın bakımı, GitHub güveni, yapı, inceleme notu.
 - **Not:** alternatif sürüm, ücretli/kısmen ücretli (`notlar/ucretli-skiller.md`), Codex uyumu, 🔥trend.
@@ -82,11 +82,11 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [03-web-arastirma-veri](skiller/d-ai-otomasyon/03-web-arastirma-veri.md) | Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma | 3 |
 | [04-skill-plugin-yazimi](skiller/d-ai-otomasyon/04-skill-plugin-yazimi.md) | Skill yazma, plugin/hook/komut geliştirme | 30 |
 
-### Video, Ses ve AI Medya Üretimi (146)
+### Video, Ses ve AI Medya Üretimi (149)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-video-uretim-montaj](skiller/g-video-ses-medya/01-video-uretim-montaj.md) | Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg | 90 |
-| [02-ses-muzik-konusma](skiller/g-video-ses-medya/02-ses-muzik-konusma.md) | Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi | 21 |
+| [01-video-uretim-montaj](skiller/g-video-ses-medya/01-video-uretim-montaj.md) | Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg | 91 |
+| [02-ses-muzik-konusma](skiller/g-video-ses-medya/02-ses-muzik-konusma.md) | Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi | 23 |
 | [03-ai-gorsel-video-modelleri](skiller/g-video-ses-medya/03-ai-gorsel-video-modelleri.md) | AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu | 17 |
 | [04-motion-graphics-karakter](skiller/g-video-ses-medya/04-motion-graphics-karakter.md) | Motion graphics, Manim, karakter animasyonu/rig, görsel stil | 18 |
 

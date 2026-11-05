@@ -4,7 +4,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **13/18**
 
-### canvas-procedural-animation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 88 (A)
+### canvas-procedural-animation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
 
 - **Ne yapar:** p5.js/Canvas ile karakter destekleyici prosedürel hareket: parçacık, hava efekti, yaprak, squash/stretch ve basit yürüme döngüleri; zaman/kare tabanlı deterministik durum önerir.
 - **Ne zaman:** Karaktere eşlik eden çevre efektleri veya basit prosedürel gövdeler gerektiğinde. · **Ne zaman değil:** Karmaşık yüz oyunculuğu (SVG rig daha uygun) veya kare-kesin final render.
@@ -15,7 +15,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Çok kısa (ipucu düzeyi); kaynak bağlantıları doğru.
 
-### character-animation-qa  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
+### character-animation-qa  ·  calesthio/OpenMontage @ 195eab2  ·  puan 90 (A)
 
 - **Ne yapar:** Karakter animasyonunu sunmadan önce katmanlı kontrol: şema doğrulama, varlık kontrolü, Playwright ile tarayıcı önizleme ve ekran görüntüsü, kare örnekleme, ffprobe ile final MP4 kontrolü ve pass/revise/fail kararı.
 - **Ne zaman:** Karakter animasyonu önizlemesi veya finali teslim edilmeden önce. · **Ne zaman değil:** Karakter içermeyen genel video kontrolü (hyperframes-cli inspect/validate).
@@ -26,7 +26,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa kontrol listesi; OpenMontage karakter hattının şema adlarına atıf yapıyor.
 
-### character-rigging  ·  calesthio/OpenMontage @ 195eab2  ·  puan 88 (A)
+### character-rigging  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
 
 - **Ne yapar:** Yerel 2D karakter animasyonu için veri güdümlü rig paketi: parçalar, pivotlar, katman sırası, kısıtlar ve görünümler; her karakteri jenerik çalışma zamanına veri paketi olarak tanımlar.
 - **Ne zaman:** SVG/2D karakter animasyonu için rig planı hazırlarken. · **Ne zaman değil:** 3D rig (Blender/Three.js); hazır Lottie animasyonu yeterliyse.
@@ -58,7 +58,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 424 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### layers  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 65 (B)
+### layers  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 66 (B)
 
 - **Ne yapar:** Split one image into editable layers (PSD + PNG). 把一张图拆成图层（PSD + PNG）。
 - **Teknoloji:** api-anahtari, canvas, python _(otomatik tespit)_
@@ -68,7 +68,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 31 KB (SKILL.md 12.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### manim-composer  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### manim-composer  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** Belirsiz bir video fikrini 3Blue1Brown tarzında sahne sahne plana (scenes.md) dönüştürür: konuyu araştırır, hedef kitle/kapsam sorularını sorar, anlatı yayı, görsel öğeler, renk paleti ve uygulama sırasını yazar.
 - **Ne zaman:** Matematik/bilim açıklayıcı videosu planlanırken, Manim kodundan önce. · **Ne zaman değil:** Kod yazımı (manimce/manimgl-best-practices); matematik dışı tanıtım videoları.
@@ -90,7 +90,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 206 KB (SKILL.md 5.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kapsamlı kural seti, test edilmiş örnekler; CE topluluk sürümü daha yaygın olduğu için birincil.
 
-### manimgl-best-practices  ·  calesthio/OpenMontage @ 195eab2  ·  puan 96 (A)
+### manimgl-best-practices  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** ManimGL (Grant Sanderson'ın 3b1b sürümü) için en iyi uygulamalar: InteractiveScene, t2c ile Tex renklendirme, kamera çerçevesi, -se etkileşimli mod, checkpoint_paste ve 3D render.
 - **Ne zaman:** 'from manimlib import *' kullanan veya etkileşimli geliştirme isteyen projelerde. · **Ne zaman değil:** Manim Community Edition projelerinde (API'ler farklı).
@@ -122,7 +122,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 318 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### pose-library-design  ·  calesthio/OpenMontage @ 195eab2  ·  puan 89 (A)
+### pose-library-design  ·  calesthio/OpenMontage @ 195eab2  ·  puan 90 (A)
 
 - **Ne yapar:** Veri güdümlü 2D animasyon için yeniden kullanılabilir poz kütüphanesi, aksiyon döngüleri ve ifade durumları tasarlar; hazırlık→aksiyon→bekleme→oturma oyunculuk kalıbını önerir.
 - **Ne zaman:** Karakterin duygu ve aksiyonlarını tutarlı pozlarla anlatmak gerektiğinde. · **Ne zaman değil:** Tek seferlik basit hareketler; rig henüz yoksa (önce character-rigging).
@@ -144,7 +144,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.
 
-### svg-character-animation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### svg-character-animation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** SVG parçalarından oluşan karakter rig'lerini GSAP, CSS dönüşümleri, Remotion kare kontrolü ve HyperFrames uyumlu önizlemeyle canlandırır; pivot, zaman çizelgesi ve kare örnekleme kurallarını verir.
 - **Ne zaman:** Açıklayıcı videoda konuşan/hareket eden 2D karakter gerektiğinde. · **Ne zaman değil:** 3D karakter; hazır Lottie dosyası oynatılacaksa (lottie-bodymovin).
@@ -155,7 +155,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Remotion'da GSAP'ı kareye bağlama gibi kritik kuralları doğru veriyor.
 
-### threejs-world-generation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 96 (A)
+### threejs-world-generation  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** Metinden veya yapılandırılmış özetten belirlenimci, düzenlenebilir Three.js dünyaları: arazi, semantik bölgeler, prosedürel biyomlar, landmark'lar, kamera fly-through; OpenMontage threejs_world aracı ve HyperFrames ile entegre.
 - **Ne zaman:** OpenMontage/HyperFrames hattında sinematik 3D ortam videosu. · **Ne zaman değil:** Web sayfasına gömülü 3D, tek nesne, düz paralaks sahne; OpenMontage yoksa.
@@ -166,7 +166,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 16 KB (SKILL.md 8.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir. Kategori düzeltildi (05-3d-webgl → g-video-ses-medya/04-motion-graphics-karakter): web 3D'si değil, OpenMontage video boru hattının parçası (tools.graphics.threejs_world).
 
-### upload  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 67 (B)
+### upload  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 68 (B)
 
 - **Ne yapar:** Share a film to the lemo-wake gallery. 把动图投稿到作品墙。
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -176,7 +176,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 21 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### visual-style  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### visual-style  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** Taşınabilir görsel tasarım sistemi dosyası (visual-style.md) oluşturur, web sitesi/video/PDF'den çıkarır ve HeyGen, HTML slayt, Figma, paper.design'a uygular; hazır stil galerisi (Swiss, Saul Bass, Game Boy…) içerir.
 - **Ne zaman:** Video veya sunum serisinde tutarlı renk, tipografi, hareket ve ruh hali tanımlanacaksa. · **Ne zaman değil:** Kod tabanlı web tasarım sistemi/token kurulumu (a-tasarim/02 skilleri daha uygun).
@@ -187,7 +187,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 81 KB (SKILL.md 6.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Pratik mod tablosu ve galeri; a-tasarim/02 tasarım sistemi skilleriyle kısmen örtüşür.
 
-### wake  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 65 (B)
+### wake  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 66 (B)
 
 - **Ne yapar:** Turn one image into a ~5 s looping animation. 把一张图做成约 5 秒的循环动图。
 - **Teknoloji:** api-anahtari, canvas, ffmpeg, html, node, python, react, three.js _(otomatik tespit)_

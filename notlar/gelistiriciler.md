@@ -103,6 +103,7 @@
 | [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) | nateherkai | kisi |  | 4529 | 1 | 2026-09-30 | MIT | 1 |
 | [expo/skills](https://github.com/expo/skills) | expo | kurum | ✅ | 4050 | 31 | 2026-11-01 | MIT | 24 |
 | [CloudAI-X/threejs-skills](https://github.com/CloudAI-X/threejs-skills) | CloudAI-X | kisi |  | 3985 | 1 | 2026-10-19 | MIT | 13 |
+| [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) | Leonxlnx | kisi |  | 3898 | 1 | 2026-10-22 | MIT | 2 |
 | [cloudflare/skills](https://github.com/cloudflare/skills) | cloudflare | kurum | ✅ | 3279 | 48 | 2026-11-03 | Apache-2.0 | 19 |
 | [Jakeschincariol/linkedin-agent-skill](https://github.com/Jakeschincariol/linkedin-agent-skill) | Jakeschincariol | kisi |  | 3205 | 1 | 2026-09-17 | MIT | 11 |
 | [pmndrs/postprocessing](https://github.com/pmndrs/postprocessing) | pmndrs | kurum | ✅ | 2951 | 22 | 2026-11-01 | Zlib | 0 |
@@ -156,6 +157,7 @@
 | [Viniciuscarvalho/swift-code-reviewer-skill](https://github.com/Viniciuscarvalho/swift-code-reviewer-skill) | Viniciuscarvalho | kisi |  | 39 | 5 | 2026-05-13 | MIT | 6 |
 | [lemomo-ai/codex-radar](https://github.com/lemomo-ai/codex-radar) | lemomo-ai | kisi |  | 39 | 1 | 2026-09-20 | NOASSERTION | 1 |
 | [arjitj2/swiftui-design-principles](https://github.com/arjitj2/swiftui-design-principles) | arjitj2 | kisi |  | 34 | 1 | 2026-03-16 | MIT | 1 |
+| [YildizDikme/claude-video-edit](https://github.com/YildizDikme/claude-video-edit) | YildizDikme | kisi |  | 33 | 1 | 2026-11-03 | MIT | 1 |
 | [mercadopago/mercadopago-claude-marketplace](https://github.com/mercadopago/mercadopago-claude-marketplace) | mercadopago | kurum | ✅ | 32 | 10 | 2026-11-02 | Apache-2.0 | 5 |
 | [Lonsdale201/wp-agent-skills](https://github.com/Lonsdale201/wp-agent-skills) | Lonsdale201 | kisi |  | 26 | 3 | 2026-10-20 | MIT | 31 |
 | [Trendyol/trendyol-integration-developer-tool](https://github.com/Trendyol/trendyol-integration-developer-tool) | Trendyol | kurum | ✅ | 11 | 3 | 2026-06-11 | yok | 1 |

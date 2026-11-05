@@ -196,7 +196,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **İnceleme:** otomatik
 - **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).
 
-### vercel-composition-patterns@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### vercel-composition-patterns@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** Vercel'in ölçeklenen React kompozisyon desenleri: boolean prop çoğalmasını compound component, state lifting ve iç yapıyı birleştirme ile önleme; durum yönetimi (context arayüzü, implementasyonu ayırma), uygulama desenleri ve React 19 API değişiklikleri (forwardRef'siz ref vb.). Kurallar ayrı dosyalarda.
 - **Ne zaman:** Çok boolean prop'lu bileşenleri refactor ederken, yeniden kullanılabilir bileşen kütüphanesi veya esnek bileşen API'si tasarlarken. · **Ne zaman değil:** Performans optimizasyonu (vercel-react-best-practices); React dışı projeler.
@@ -219,7 +219,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **İnceleme:** otomatik
 - **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).
 
-### vercel-react-best-practices@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### vercel-react-best-practices@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** Vercel Engineering'in React/Next.js performans kuralları: etkiye göre 8 kategoride 65 kural (şelaleleri kaldırma, bundle boyutu, sunucu tarafı performans, istemci veri çekme, yeniden render, render performansı, JS performansı, ileri desenler); her kural ayrı dosyada iyi/kötü örnekle, tam derlenmiş AGENTS.md ile.
 - **Ne zaman:** React bileşeni veya Next.js sayfası yazarken/incelerken; veri çekme, bundle ve render performansı sorunlarında. · **Ne zaman değil:** React dışı projeler; Next.js 16 Cache Components geçişi (next-cache-components-* skilleri); bileşen API tasarımı (vercel-composition-patterns).

@@ -1781,7 +1781,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 20 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### swiftui-design-principles  ·  arjitj2/swiftui-design-principles @ 791d22d  ·  puan 57 (C)
+### swiftui-design-principles  ·  arjitj2/swiftui-design-principles @ 791d22d  ·  puan 58 (C)
 
 - **Ne yapar:** Design principles for building polished, native-feeling SwiftUI apps and widgets. Use this skill when creating or modifying SwiftUI views, iOS widgets (WidgetKit), or any native Apple UI. Ensures proper spacing, typography, colors, and widget implementations that look and feel like quality apps rather than AI-generated slop.
 - **Teknoloji:** canvas _(otomatik tespit)_

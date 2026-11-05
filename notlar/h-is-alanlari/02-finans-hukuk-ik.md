@@ -234,7 +234,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 9 KB (SKILL.md 9.1 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### trader-alerts  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 81 (A)
+### trader-alerts  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Price Alerts. Rings when a price, a stop or the opening bell hits. Turns the trade plan into three alerts in one go (the stop, the target and "flat by close" at your flat-by time), plus above / below / stop / target levels, percent moves from the previous close, any time of day, and the NYSE opening bell, each ringing once so you are not spammed. Knows NYSE hours with the 2026 and 2027 holidays an
 - **Teknoloji:** python _(otomatik tespit)_
@@ -244,7 +244,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 41 KB (SKILL.md 8.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### trader-analyst  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 83 (A)
+### trader-analyst  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 84 (A)
 
 - **Ne yapar:** The Earnings Analyst. Reads a company's reported numbers straight from SEC EDGAR (XBRL company facts from its 10-Qs and 10-Ks, plus the latest earnings 8-K and its press release) and sums up what changed: revenue, gross, operating and net margins, net income and diluted EPS, quarter by quarter, each against the same quarter a year earlier, with the trailing twelve months. Reads an earnings call tr
 - **Teknoloji:** python _(otomatik tespit)_
@@ -254,7 +254,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 32 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-broker  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 76 (B)
+### trader-broker  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 77 (B)
 
 - **Ne yapar:** Order Executor. Sends approved orders to your broker, paper trading by default, never without your yes. Shows each order as a plain ticket (a bracket shows its stop-loss, take-profit and the max loss at the stop) plus the exact JSON for Alpaca's place_stock_order, records your yes word for word, then Claude's own Allow once / Deny card asks again. Builds the sell ticket that closes a day trade by 
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
@@ -264,7 +264,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 43 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### trader-budget  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 81 (A)
+### trader-budget  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Budget Manager. Sizes every position to your budget and your max loss per trade. Reads the trade plan from trader-exit (entry, stop, target), finds the whole shares that fit inside four limits (max loss per trade, position cap, max order, cash after your buffer), says which limit decided it, and writes ONE bracket order (entry, stop-loss, take-profit) to trader/orders.json in the exact shape of Al
 - **Teknoloji:** python _(otomatik tespit)_
@@ -274,7 +274,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 48 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### trader-entry  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 83 (A)
+### trader-entry  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 84 (A)
 
 - **Ne yapar:** Entry Timer. Watches a setup bar by bar and tells you the moment to get in. Reads free Yahoo 1-minute or 5-minute bars, builds the opening range (the first 15 minutes by default) and calls the entry on the first completed bar that CLOSES above the range high, or above a level you give it (like a 20-day high from the scanner), with an optional volume check. Says waiting and how far, triggered with 
 - **Teknoloji:** python _(otomatik tespit)_
@@ -284,7 +284,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 49 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-exit  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 83 (A)
+### trader-exit  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 84 (A)
 
 - **Ne yapar:** Exit Planner. Sets your stop and your target before you enter, so you know when to get out. Reads the entry from trader-entry (or a price you give), puts the stop at the opening-range midpoint by default (or the range low, your price, a percent, or a multiple of the ATR), rounds it down to the cent, and sets the target at 2R (or 1R, or your price). Refuses a stop at or above the entry, a target at
 - **Teknoloji:** python _(otomatik tespit)_
@@ -294,7 +294,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 37 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-news  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 83 (A)
+### trader-news  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 84 (A)
 
 - **Ne yapar:** News Monitor. Tracks breaking news on every stock you watch and flags what moves it: Yahoo Finance headlines per ticker, each company's 8-K filings on SEC EDGAR (earnings, CEO changes, deals, restatements, bankruptcy) and how far each stock is from yesterday's close. Shows only what is new since the last check, newest first, in New York time, tags each item (earnings, analyst, deal, halt, regulato
 - **Teknoloji:** python _(otomatik tespit)_
@@ -304,7 +304,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 27 KB (SKILL.md 5.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-pelosi  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 83 (A)
+### trader-pelosi  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 84 (A)
 
 - **Ne yapar:** The Pelosi Tracker. Watches the stock trades members of Congress must disclose under the STOCK Act: reads the House Clerk's public Periodic Transaction Reports (PTRs) as soon as they are posted, alerts once per new filing, and turns each PDF into clean rows (who, owner, stock, ticker, buy or sell, options strike and expiry, trade date, amount range, how many days it took to disclose). Flags trades
 - **Teknoloji:** python _(otomatik tespit)_
@@ -314,7 +314,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 30 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-risk  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 81 (A)
+### trader-risk  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Risk Manager. Checks every trade against your limits and stops anything over them, before it can reach the broker. For a day trade: a stop is required, the loss at the stop must fit your max loss per trade (measured from the higher of the plan's entry and a fresh price), reward:risk must meet your minimum, the day's total risk must fit your daily loss limit, no more than your trades per day, and n
 - **Teknoloji:** python _(otomatik tespit)_
@@ -324,7 +324,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 48 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### trader-scanner  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 81 (A)
+### trader-scanner  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Chart Scanner. Scans thousands of charts for setups: opening-range breakouts, flags, oversold bounces. Builds the list of US-listed common stocks, ordinary shares and ADRs from Nasdaq Trader's symbol directories, runs a pre-market scan of daily closes (20-day closing-high breakout, bull flag, reclaimed the 20-day average, oversold, oversold bounce) and an intraday opening-range breakout scan on 5-
 - **Teknoloji:** python _(otomatik tespit)_
@@ -334,7 +334,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 57 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### trader-timemachine  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 81 (A)
+### trader-timemachine  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Time Machine. Replays every possible outcome of a trade before you risk a dollar: 10,000 simulated sessions plus every past time the setup fired. Takes the plan from trader-exit (entry, stop, target), rebuilds the rest of the day 10,000 times from the stock's own 5-minute bars over the last 60 days, and re-runs the same rule on every past session. Prints the odds of target first, stop first, or ne
 - **Teknoloji:** python _(otomatik tespit)_

@@ -2,11 +2,11 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-05 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8074 · Arşivdeki skill kaydı: 5310 · Bileşen (komut/agent): 658
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8077 · Arşivdeki skill kaydı: 5313 · Bileşen (komut/agent): 658
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5274 | arşivde (ana sürüm) |
+| secildi | 5277 | arşivde (ana sürüm) |
 | haric | 2563 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 144 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
@@ -39,6 +39,7 @@
 | JuliusBrussee/caveman | 28 | secildi 22, haric 6 |
 | K-Dense-AI/scientific-agent-skills | 177 | secildi 177 |
 | Kappaemme-git/codex-phone-lab | 1 | secildi 1 |
+| Leonxlnx/earshot | 2 | secildi 2 |
 | Leonxlnx/taste-skill | 1 | secildi 1 |
 | Livsy90/iOS-Performance-Agent-Skills | 6 | secildi 6 |
 | Lonsdale201/wp-agent-skills | 246 | haric 215, secildi 31 |
@@ -54,6 +55,7 @@
 | Trendyol/trendyol-integration-developer-tool | 1 | secildi 1 |
 | Vincentwei1021/video-shotcraft | 1 | secildi 1 |
 | Viniciuscarvalho/swift-code-reviewer-skill | 6 | secildi 6 |
+| YildizDikme/claude-video-edit | 1 | secildi 1 |
 | addyosmani/agent-skills | 25 | secildi 25 |
 | android/skills | 36 | secildi 36 |
 | anthropics/claude-code | 0 |  |

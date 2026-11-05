@@ -113,7 +113,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 21 KB (SKILL.md 20.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güncel ve derli toplu; mixer/crossfade/additive konuları iyi. Dikkat: yok.
 
-### threejs-animation@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-animation@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js keyframe, iskelet ve morph animasyonu ile AnimationMixer kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-animation) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -156,7 +156,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 23 KB (SKILL.md 23.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Serinin temeli; güncel (WebGPU/TSL dahil), kurulum betiği/anahtar yok. Eski calesthio sürümünden kapsamlı. Dikkat: 23 KB; 3d-gelistirici rolünün çekirdeğinde.
 
-### threejs-fundamentals@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-fundamentals@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js sahne kurulumu, kameralar, renderer, Object3D, koordinat sistemi ve matematik sınıflarına kısa giriş (eski sürüm, WebGPU yok).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-fundamentals) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -178,7 +178,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 25 KB (SKILL.md 24.8 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güncel ve kapsamlı. Dikkat: 24.8 KB, çekirdeğe girmez; konuya göre çağrılır.
 
-### threejs-geometry@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-geometry@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js yerleşik geometriler, BufferGeometry, instancing ve Points kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-geometry) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -200,7 +200,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 22 KB (SKILL.md 21.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güncel ve eksiksiz. Dikkat: yok.
 
-### threejs-interaction@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-interaction@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js raycaster, kontroller, dokunma desteği ve seçim kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-interaction) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -222,7 +222,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 23 KB (SKILL.md 22.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Pratik sorun giderme ve güncel ışık API'leri. Dikkat: yok.
 
-### threejs-lighting@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-lighting@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js ışık türleri, gölge kurulumu ve ortam aydınlatması kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-lighting) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -244,7 +244,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 22 KB (SKILL.md 21.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Sıkıştırılmış glTF yükleme ve temizlik konuları güncel. Dikkat: decoder dosyalarını (draco/basis) projeye ayrıca kopyalamak gerekir; skill bunu anlatır.
 
-### threejs-loaders@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-loaders@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js GLTF, doku ve HDR yükleme ile LoadingManager kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-loaders) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -266,7 +266,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 26 KB (SKILL.md 26.1 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güncel, UV kanalı gibi ince ayrıntılar var. Dikkat: 26 KB; opsiyonel, çekirdeğe konmaz.
 
-### threejs-materials@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-materials@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js materyal türleri (Basic, Phong, Standard, Physical, Toon) kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-materials) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -299,7 +299,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 26 KB (SKILL.md 26.5 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Pass sırası ve seçici bloom iyi anlatılmış. Dikkat: 26.5 KB; efektler maliyetli, mobilde dikkat.
 
-### threejs-postprocessing@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-postprocessing@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js EffectComposer, bloom, DOF, SSAO, film grain kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-postprocessing) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -332,7 +332,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 26 KB (SKILL.md 25.9 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güncel ve kalıp örnekleri iyi. Dikkat: 25.9 KB.
 
-### threejs-shaders@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-shaders@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js GLSL ShaderMaterial, uniform, varying ve yaygın shader kalıpları kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-shaders) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.
@@ -354,7 +354,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 22 KB (SKILL.md 22.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Renk uzayı ve slot tablosu pratik. Dikkat: yok.
 
-### threejs-textures@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 80 (A)
+### threejs-textures@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 81 (A)
 
 - **Ne yapar:** Three.js doku yükleme, ayarlar, UV, cubemap ve HDR kısa özeti (eski sürüm).
 - **Ne zaman:** CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-textures) özet isteniyorsa; normalde gerek yok. · **Ne zaman değil:** CloudAI-X sürümü varken; WebGPU/TSL gereken işler; bağlam bütçesi önemli değilse ana sürüm daha eksiksiz.

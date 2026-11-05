@@ -1095,6 +1095,21 @@
       "haric": [
         "^(?!skills/app-store/)"
       ]
+    },
+    {
+      "repo": "Leonxlnx/earshot",
+      "tip": "T2",
+      "oncelik": 3,
+      "dahil": [
+        "^skills/"
+      ],
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). earshot: ses analizi (CLAP+AST, Python/torch kurulumu, ilk çalışmada HF model indirir; MCP kaydını user scope'a önerir). real-sound: lisanslı gerçek SFX seçimi/miks, sound-effects alternatifi. Rol çekirdeğine girmez."
+    },
+    {
+      "repo": "YildizDikme/claude-video-edit",
+      "tip": "T1",
+      "oncelik": 6,
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). Kullanıcı: alternatif olarak al. Skill adı 'video-edit' OpenMontage ile aynı; OpenMontage tercih kalır. Betik yollarını ~/.claude/skills/video-edit varsayar, ~/.claude/video-edit/ altına profil yazar."
     }
   ],
   "konum_haric": [
