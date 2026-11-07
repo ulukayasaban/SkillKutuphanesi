@@ -522,6 +522,21 @@ def talimat_bloklari(proje: Path, kilit: dict):
             blok_sil(proje / f)
         return
     codex = codex_var(kilit)
+    if kilit.get("blok") == "kisa":
+        # Kısa blok (token tasarrufu): tablo yok; liste kilit.json'da. --blok kisa ile seçilir, kilitte kalır.
+        n = len(kilit["skiller"])
+        yer = ("`.agents/skills/` (Codex) ve `.claude/skills/` (Claude)" if codex else "`.claude/skills/`")
+        s = ["## Proje skilleri (SkillKutuphanesi)", "",
+             f"{n} skill {yer} altında (liste, kaynak ve commit: `.skill-kutuphanesi/kilit.json`; güncelleme "
+             f"{kilit['guncelleme']}"
+             + (f"; roller: {', '.join(f'`{r}`' for r in kilit['roller'])}" if kilit["roller"] else "") + "). "
+             "Bu skilleri elle düzenleme; ekleme/güncelleme/kaldırma yalnızca kütüphaneyle, kütüphanenin olduğu bilgisayarda: "
+             "`python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py <proje> --durum` / `--guncelle`. "
+             "Kütüphanesiz bilgisayarda (ör. Windows) skill ekleme/silme yapma; ihtiyacı not düş, kütüphane sahibi kurar. "
+             "Kütüphane dışı, elle kurulan skiller (varsa): `.skill-kutuphanesi/elle-kurulan.json`."]
+        blok_yaz(proje / "CLAUDE.md", "\n".join(s))
+        blok_yaz(proje / "AGENTS.md", "\n".join(s)) if codex else blok_sil(proje / "AGENTS.md")
+        return
     s = ["## Proje skilleri (SkillKutuphanesi)", "",
          f"Profil: {kilit.get('profil') or '-'} · Güncelleme: {kilit['guncelleme']}", "",
          "| Skill | Roller | Kaynak |", "|---|---|---|"]
@@ -965,6 +980,8 @@ def ekle(a, proje, skiller):
     kilit = kilit_oku(proje)
     if a.arac:
         kilit["araclar"] = ARACLAR[a.arac]
+    if a.blok:
+        kilit["blok"] = a.blok
     plan, roller, profil, bulunamayan = istek_coz(a, skiller)
     rapor = Rapor()
     for b in bulunamayan:
@@ -1315,6 +1332,8 @@ def main():
     ap.add_argument("--durum", action="store_true")
     ap.add_argument("--dogrula", action="store_true")
     ap.add_argument("--yenile", action="store_true", help="agent dosyalarını ve blokları yeniden üret (proje taşındıysa)")
+    ap.add_argument("--blok", choices=("tam", "kisa"), help="CLAUDE.md/AGENTS.md skill bloğu: tam (tablo) | kisa (tek paragraf, "
+                    "token tasarrufu). Kilide yazılır; sonraki kurulum/güncellemelerde korunur. Tek başına verilirse bloğu yeniler")
     ap.add_argument("--geri-al", nargs="?", const=True, default=None, help="son yedeğe (ya da adı verilen yedeğe) dön")
     ap.add_argument("--yedekler", action="store_true", help="yedekleri listele")
     ap.add_argument("--oner", help="ihtiyacı yaz; tüm kütüphane taranır")
@@ -1350,7 +1369,7 @@ def main():
     if not proje.is_dir():
         sys.exit(f"Klasör yok: {proje}")
     gk = guncelleme_suruyor()
-    if gk and (a.profil or a.rol or a.skill or a.planlayici or a.guncelle or a.yenile or a.arac):
+    if gk and (a.profil or a.rol or a.skill or a.planlayici or a.guncelle or a.yenile or a.arac or a.blok):
         sys.exit(f"BEKLE: kütüphane şu an aylık güncelleniyor ({gk['baslangic']}); onaylanmamış içerik projeye kurulmasın diye "
                  "kurulum/güncelleme birkaç dakika bekletiliyor. Bitince tekrar dene (--durum/--dogrula/--oner çalışır).")
     if a.durum:
@@ -1364,8 +1383,10 @@ def main():
         return 0
     if a.geri_al:
         return geri_al(a, proje)
-    if a.yenile:
+    if a.yenile or (a.blok and not (a.profil or a.rol or a.skill or a.planlayici or a.guncelle)):
         kilit = kilit_oku(proje)
+        if a.blok:
+            kilit["blok"] = a.blok
         rapor = Rapor()
         proje_yapisi_kontrol(proje, kilit["roller"], rapor)
         if rapor.say("HATA"):

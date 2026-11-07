@@ -194,9 +194,17 @@ def main():
          and "skill-kutuphanesi:basla" in (p3 / "CLAUDE.md").read_text(encoding="utf-8"))
     kod, out = calistir(p3, "--dogrula")
     test("sadece Claude projesi doğrulamadan temiz geçer", kod == 0, out)
+    kod, out = calistir(p3, "--blok", "kisa")
+    cm = (p3 / "CLAUDE.md").read_text(encoding="utf-8")
+    test("--blok kisa: tablo yok, işaretler ve skill sayısı var, doğrulama temiz",
+         kod == 0 and "skill-kutuphanesi:basla" in cm and "| Skill |" not in cm and "2 skill `.claude/skills/`" in cm, out)
     kod, out = calistir(p3, "--skill", "d3-viz", "--evet")
     test("sadece Claude projesine yeni skill .agents oluşturmadan kurulur",
          kod == 0 and not (p3 / ".agents").exists() and (p3 / ".claude" / "skills" / "d3-viz" / "SKILL.md").exists(), out)
+    cm = (p3 / "CLAUDE.md").read_text(encoding="utf-8")
+    test("kısa blok sonraki kurulumda korunur ve sayı güncellenir", "| Skill |" not in cm and "3 skill" in cm, cm)
+    kod, out = calistir(p3, "--blok", "tam")
+    test("--blok tam: tablo geri gelir", kod == 0 and "| `d3-viz` |" in (p3 / "CLAUDE.md").read_text(encoding="utf-8"), out)
     (p3 / ".claude" / "skills" / "gsap-core" / "SKILL.md").open("a", encoding="utf-8").write("\nelle\n")
     kod, out = calistir(p3, "--dogrula")
     test("sadece Claude projesinde elle değişiklik yakalanır", kod == 1 and "elle değiştirilmiş" in out, out)

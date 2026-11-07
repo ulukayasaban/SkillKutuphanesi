@@ -55,7 +55,7 @@ urun-3d/
 │  └─ …
 ├─ .claude/agents/ui-tasarimci.md        ← skills: [design-taste-frontend, ui-ux-pro-max, impeccable]
 ├─ .codex/agents/ui-tasarimci.toml       ← diğer proje skilleri enabled=false
-├─ AGENTS.md / CLAUDE.md                 ← "Proje skilleri" bloğu (senin metnine dokunulmaz)
+├─ AGENTS.md / CLAUDE.md                 ← "Proje skilleri" bloğu (senin metnine dokunulmaz; `--blok kisa` ile tablo yerine tek paragraf)
 └─ .skill-kutuphanesi/
    ├─ kilit.json                         ← hangi skill, hangi commit, hangi rol, içerik parmak izi
    ├─ son-rapor.md                       ← son ön kontrol raporu

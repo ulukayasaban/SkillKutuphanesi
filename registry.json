@@ -377197,7 +377197,7 @@
       "inceleme": "incelendi",
       "ozet_tr": "Etsy listing'i için başlık, 13 etiket ve açıklamayı yeniden yazar ya da sıfırdan üretir. Canlı Etsy autocomplete ve arama sonuçlarından rakip verisi toplar; 2026 Etsy kuralları, yapay zekâ/görsel uyum kapısı, marka adı yasak listesi ve listing sağlık puanı içerir.",
       "kullanim_alani": "Etsy-Arif / Etsy-Yeni gibi Etsy mağazalarında listing SEO'su: mevcut listing'i iyileştirme veya yeni ürün listing'i oluşturma.",
-      "kullanma": "DİKKAT: proje dışına, ~/etsy-listings/ klasörüne sessizce şablon ve listing kayıtları yazar (keyword-map, refresh-schedule, listings/). Bunu istemiyorsan projede yolu değiştirmesini söyle. etsy.com'a okuma isteği atar. Etsy API ile mağazaya yazmaz.",
+      "kullanma": "Kütüphane yaması (2026-11-07): durum klasörü proje kökünde `etsy-listings/` (ETSY_LISTINGS_DIR ile değiştirilebilir), ev dizinine yazmaz; kaynak repoda skill dışında kalan 4 şablon bootstrap.py içine gömülü. etsy.com autocomplete ve arama sayfalarını Claude'un web/Chrome araçlarıyla okur; her ilan yayınlanmadan önce insan kontrolü şart (Etsy bot ilan yasağı).",
       "teknoloji": [
         "markdown"
       ],
@@ -377224,7 +377224,17 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "Etsy herkese açık arama/autocomplete sayfalarını okur; API anahtarı ya da ücret gerekmez.",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "yama": {
+        "dosyalar": {
+          "SKILL.md": "81371547c8ddf9f80862c2f7c29b590644248bb4",
+          "references/playbooks/system-laws.md": "ccb065093d130be9458e79dbc5404bcd9afc2845",
+          "references/playbooks/listing-health-score.md": "5e4fd28aa5d8f06d28dd09be188cdb1b8d78529f",
+          "scripts/bootstrap.py": "507a207bd4e745145221604ac9949f361f3984a6"
+        },
+        "neden": "Durum klasörü ev dizinine (~/etsy-listings) değil proje köküne (./etsy-listings, ETSY_LISTINGS_DIR ile değiştirilebilir) yazılır; kaynak repoda skill klasörü dışında kalan 4 şablon bootstrap.py içine gömüldü (yoksa betik 'Templates dir not found' ile duruyordu)",
+        "tarih": "2026-11-07"
+      }
     },
     {
       "id": "etsy-seller-guide",
