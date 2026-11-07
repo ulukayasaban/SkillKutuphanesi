@@ -2,7 +2,7 @@
 
 _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/192**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **1/193**
 
 ### accessibility  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
 
@@ -174,6 +174,17 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 44 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
+### apple-app-review-compliance  ·  yohannescodes/apple-app-review-compliance @ 6e29369  ·  puan 76 (B)
+
+- **Ne yapar:** iOS, iPadOS, macOS, watchOS, tvOS ve visionOS uygulamalarını, planlanan özellikleri, kod değişikliklerini, App Store metinlerini ve gizlilik uygulamalarını Apple App Review kurallarına göre denetler. Güvenlik, performans, iş modeli, tasarım ve yasal/gizlilik başlıklarında alt madde numarası vererek riskleri ve en küçük uyumlu düzeltmeyi raporlar.
+- **Ne zaman:** App Store'a göndermeden önce uyum denetimi, özellik/ödeme modeli planlarken kural kontrolü, Swift PR incelemesi, gizlilik etiketi ve üçüncü taraf SDK denetimi. · **Ne zaman değil:** Red geldikten sonra Resolution Center yanıtı için rejection-handler. Google Play için play-policy-insights. Sonuç onay garantisi ya da hukuki görüş değildir; kurallar 16 Eki 2026 anlık görüntüsü, canlı sayfa her denetimde kontrol edilmeli.
+- **Teknoloji:** swift, swiftui, ios
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** yohannescodes (kisi, ★20, son güncelleme 2026-10-17, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** app-store-uyum → birincil
+- **Boyut:** 39 KB (SKILL.md 14.5 KB, yük orta)
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (app-store-uyum grubunda birincil). MIT, 20★, 2026-10-17. Ücretsiz; ağdan sadece developer.apple.com kural sayfasını okur, dışarı yazmaz. Kanıtı türüne göre etiketler, saklama/gizleme önermez.
+
 ### apple-search-ads  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 73 (B)
 
 - **Ne yapar:** Apple Search Ads campaign strategy for indie developers — paid acquisition, keyword bidding, budget planning, and ROAS optimization. Use when user asks about running ads, paid user acquisition, or Apple Search Ads campaigns.
@@ -265,7 +276,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 22 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### codex-phone-lab  ·  Kappaemme-git/codex-phone-lab @ a0dc6ad  ·  puan 69 (B)
+### codex-phone-lab  ·  Kappaemme-git/codex-phone-lab @ a0dc6ad  ·  puan 70 (B)
 
 - **Ne yapar:** Build and iterate mobile apps that run on a real phone through Expo/React Native live preview. Use when Codex is asked to create a phone app, prototype an iPhone or Android app, run an app on a physical phone, show a QR code for Expo Go, set up a mobile dev workflow, or turn a prompt into a live mobile app without starting from Xcode/TestFlight/App Store distribution.
 - **Teknoloji:** react _(otomatik tespit)_
@@ -867,7 +878,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 19 KB (SKILL.md 18.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### flutter-tester  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 76 (B)
+### flutter-tester  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 77 (B)
 
 - **Ne yapar:** Use when creating, writing, fixing, or reviewing tests in a Flutter project. Covers unit tests, widget tests, integration tests, Riverpod provider testing, and Mockito mocking. Provides Given-When-Then patterns, layer isolation strategies, and test setup for GetIt, SharedPreferences, and FakeDatabase.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1339,7 +1350,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 29 KB (SKILL.md 13.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### mobile-toolchain-unifier  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 74 (B)
+### mobile-toolchain-unifier  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 75 (B)
 
 - **Ne yapar:** Audits, unifies, and optimizes mobile development environments and toolchains across a drive (Android, Flutter, iOS). Consolidates fragmented NDKs, SDK platforms, Gradle distributions, Flutter SDKs (FVM), and Java/JVM daemon versions to the latest stable releases, verifies project builds, reclaims tens of gigabytes of disk space, aggressively trims emulator bloatware using avdslim while preserving
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1409,7 +1420,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### owasp-mobile-security-checker  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 76 (B)
+### owasp-mobile-security-checker  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 77 (B)
 
 - **Ne yapar:** Use when performing security audits, vulnerability assessments, or compliance checks on Flutter or mobile applications. Covers OWASP Mobile Top 10 (2024) — hardcoded secrets (M1), insecure storage (M9), weak cryptography (M10), network issues (M5), and 6 more categories with automated scanners and remediation guidance.
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
@@ -1575,7 +1586,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** rshankras (kisi, ★861, son güncelleme 2026-11-04, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** app-store-uyum → tamamlayıcı
 - **Boyut:** 33 KB (SKILL.md 14.3 KB, yük orta)
 - **İnceleme:** otomatik
 

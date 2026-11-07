@@ -1,6 +1,6 @@
 # Skill Rehberi (Türkçe)
 
-Bu kütüphanedeki **5313 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
+Bu kütüphanedeki **5314 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
 `python3 araclar/skill-readme.py`. Test sonuçları: [TEST_RAPORU.md](TEST_RAPORU.md) · kurulum ve araçlar: [README.md](README.md).
 
 ## Skill nedir?
@@ -33,7 +33,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
   gizler (`.claude/settings.json` → `skillOverrides`), böylece kütüphane sürümü kullanılır. Ön kontrol `hesap-cakismasi` der.
 
 ## Tablolar nasıl okunur?
-- **Ne yapar / Ne zaman:** elle incelenmiş 1222 skill'de inceleme notu; 4027 skill'de açıklamanın
+- **Ne yapar / Ne zaman:** elle incelenmiş 1223 skill'de inceleme notu; 4027 skill'de açıklamanın
   otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 64 skill'de henüz İngilizce.
 - **Puan:** 0–100 otomatik değerlendirme ve derece (A–D): kaynağın bakımı, GitHub güveni, yapı, inceleme notu.
 - **Not:** alternatif sürüm, ücretli/kısmen ücretli (`notlar/ucretli-skiller.md`), Codex uyumu, 🔥trend.
@@ -54,7 +54,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 26 |
 | [08-onyuz-test-kalite](skiller/a-tasarim-onyuz/08-onyuz-test-kalite.md) | Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı | 12 |
 
-### Yazılım Geliştirme (404)
+### Yazılım Geliştirme (405)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-planlama-metodoloji](skiller/b-yazilim-gelistirme/01-planlama-metodoloji.md) | Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini | 81 |
@@ -64,7 +64,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [05-git-pr-surum](skiller/b-yazilim-gelistirme/05-git-pr-surum.md) | Git, worktree, PR, sürüm/release, changelog | 12 |
 | [06-devops-guvenlik-performans](skiller/b-yazilim-gelistirme/06-devops-guvenlik-performans.md) | CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | 49 |
 | [07-framework-ozel](skiller/b-yazilim-gelistirme/07-framework-ozel.md) | Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme) | 23 |
-| [08-mobil-uygulama](skiller/b-yazilim-gelistirme/08-mobil-uygulama.md) | Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans | 192 |
+| [08-mobil-uygulama](skiller/b-yazilim-gelistirme/08-mobil-uygulama.md) | Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans | 193 |
 
 ### Doküman ve İçerik (113)
 | Kategori | Kapsam | Skill |

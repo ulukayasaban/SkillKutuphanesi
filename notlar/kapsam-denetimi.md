@@ -1,12 +1,12 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-05 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-07 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8077 · Arşivdeki skill kaydı: 5313 · Bileşen (komut/agent): 658
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8078 · Arşivdeki skill kaydı: 5314 · Bileşen (komut/agent): 658
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5277 | arşivde (ana sürüm) |
+| secildi | 5278 | arşivde (ana sürüm) |
 | haric | 2563 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 144 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
@@ -127,6 +127,7 @@
 | xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
+| yohannescodes/apple-app-review-compliance | 1 | secildi 1 |
 | ythx-101/live-panel-skill | 1 | secildi 1 |
 | zanwei/design-dna | 1 | secildi 1 |
 | zarazhangrui/frontend-slides | 2 | secildi 1, haric 1 |

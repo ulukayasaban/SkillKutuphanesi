@@ -1505,6 +1505,10 @@
     "video-edit@yildizdikme": [
       "ucretsiz",
       "Yerel araçlar/ücretsiz kaynaklar; ücretli servis gerekmez."
+    ],
+    "apple-app-review-compliance": [
+      "ucretsiz",
+      "Sadece Apple'ın herkese açık kural sayfasını okur; ücretli servis yok."
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

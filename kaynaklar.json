@@ -1110,6 +1110,12 @@
       "tip": "T1",
       "oncelik": 6,
       "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). Kullanıcı: alternatif olarak al. Skill adı 'video-edit' OpenMontage ile aynı; OpenMontage tercih kalır. Betik yollarını ~/.claude/skills/video-edit varsayar, ~/.claude/video-edit/ altına profil yazar."
+    },
+    {
+      "repo": "yohannescodes/apple-app-review-compliance",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "Konu takibi adayıydı; kullanıcı önerileni onayladı (2026-11-07). App Store Review Guidelines (16 Eki 2026) uyum denetimi; rshankras app-store/rejection-handler'ı tamamlar."
     }
   ],
   "konum_haric": [

@@ -885,6 +885,81 @@
       "karar": "reddedildi",
       "neden": "lisans yok",
       "tarih": "2026-11-03"
+    },
+    "buluslan/gpt-image2-ecommerce": {
+      "karar": "reddedildi",
+      "neden": "xianyu110/ecommerce-image-skills aynı işi yapıyor ve eklendi",
+      "tarih": "2026-11-07"
+    },
+    "semihbugrasezer/seerxo": {
+      "karar": "reddedildi",
+      "neden": "Veriyi üçüncü taraf sunucuya gönderiyor, kotalı; etsy-seller aynı işi yapıyor",
+      "tarih": "2026-11-07"
+    },
+    "abutun/etsy-seo-optimizer": {
+      "karar": "reddedildi",
+      "neden": "Lisans yok; Etsy API ile mağazaya yazıyor",
+      "tarih": "2026-11-07"
+    },
+    "Drjacky/claude-android-ninja": {
+      "karar": "reddedildi",
+      "neden": "Mevcut Android/Compose skilleriyle çakışıyor",
+      "tarih": "2026-11-07"
+    },
+    "Meet-Miyani/compose-skill": {
+      "karar": "reddedildi",
+      "neden": "compose-agent, jetpack-compose-audit ve android/skills ile aynı alan",
+      "tarih": "2026-11-07"
+    },
+    "mjmirza/app-store-compliance": {
+      "karar": "reddedildi",
+      "neden": "Standart dışı lisans (OpenRoots ORA); yohannescodes/apple-app-review-compliance aynı işi MIT ile yapıyor",
+      "tarih": "2026-11-07"
+    },
+    "abutun/claude-skill-aso-cosmicmeta-ss": {
+      "karar": "reddedildi",
+      "neden": "rshankras app-store/screenshot-planner aynı işi yapıyor",
+      "tarih": "2026-11-07"
+    },
+    "Jonnycatx/apple-full-stack-genius-skill": {
+      "karar": "reddedildi",
+      "neden": "Ücretli fal.ai kullanıyor; 8 aydır güncellenmiyor",
+      "tarih": "2026-11-07"
+    },
+    "tovimx/maestro-mobile-testing-skill": {
+      "karar": "reddedildi",
+      "neden": "Lisans yok",
+      "tarih": "2026-11-07"
+    },
+    "jeremiahlukus/flutter_template": {
+      "karar": "reddedildi",
+      "neden": "Skill değil: Flutter proje şablonu",
+      "tarih": "2026-11-07"
+    },
+    "xinqingaa/flutter_monitor": {
+      "karar": "reddedildi",
+      "neden": "Skill değil: Flutter izleme SDK'sı",
+      "tarih": "2026-11-07"
+    },
+    "anasfik/FlutterGuard": {
+      "karar": "reddedildi",
+      "neden": "Çok dar: Flutter APK güvenlik denetim aracı",
+      "tarih": "2026-11-07"
+    },
+    "mhaviv/Swift-FocusEngine-Agent-Skill": {
+      "karar": "reddedildi",
+      "neden": "Çok dar: tvOS/Apple odak yönetimi",
+      "tarih": "2026-11-07"
+    },
+    "tungnk123/mobile-best-practices": {
+      "karar": "reddedildi",
+      "neden": "Açıklaması yok, belirsiz; 8 aydır güncellenmiyor",
+      "tarih": "2026-11-07"
+    },
+    "DragonJAR/iOS-Pentesting-Skill": {
+      "karar": "reddedildi",
+      "neden": "Güvenlik odaklı ve dar (sızma testi)",
+      "tarih": "2026-11-07"
     }
   },
   "konular": {
@@ -37089,6 +37164,20 @@
       },
       "son_tarama": "2026-11-04",
       "basarisiz_sorgu": 0
+    }
+  },
+  "izlenen": {
+    "Purple-Horizons/printful-mcp": {
+      "neden": "Kullanıcı şu an Printful kullanmıyor ama ileride kullanabilir; kullanmaya başlarsa eklenir (MCP sunucusu gerektirir)",
+      "tarih": "2026-11-07"
+    },
+    "VeryGoodOpenSource/vgv-ai-flutter-plugin": {
+      "neden": "Mobil teknoloji henüz seçilmedi; Flutter seçilirse eklenir",
+      "tarih": "2026-11-07"
+    },
+    "yusufkaran/swiftui-autotest-skill": {
+      "neden": "Mobil teknoloji henüz seçilmedi; iOS/Swift seçilirse eklenir",
+      "tarih": "2026-11-07"
     }
   }
 }

@@ -274,6 +274,10 @@
 
 `game-development`, `web-games`
 
+## ios (2)
+
+`apple-app-review-compliance`, `mobile-games`
+
 ## pixi.js (2)
 
 `pixijs-2d`, `web-games`
@@ -586,10 +590,6 @@
 
 `game-design`
 
-## ios (1)
-
-`mobile-games`
-
 ## android (1)
 
 `mobile-games`
@@ -761,6 +761,14 @@
 ## axum (1)
 
 `rust-pro`
+
+## swift (1)
+
+`apple-app-review-compliance`
+
+## swiftui (1)
+
+`apple-app-review-compliance`
 
 ## docx-js (1)
 
