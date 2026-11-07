@@ -322,6 +322,11 @@
       "kategori": "g-video-ses-medya/02-ses-muzik-konusma"
     },
     {
+      "repo": "lottiefiles/motion-design-skill",
+      "desen": "^motion-design$",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
       "repo": "nexu-io/open-design",
       "desen": "(-video-template$|^frame-|^social-(reddit|spotify|x-post)-card$|^chat-motion-overlay$|^vfx-text-cursor$|^youtube-clipper$|^video-|^after-hours-editorial-template$|^motion-design$)",
       "kategori": "g-video-ses-medya/01-video-uretim-montaj"

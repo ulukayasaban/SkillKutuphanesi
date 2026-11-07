@@ -31,13 +31,13 @@ Toplam **4373** skill (+944 gizli: entegrasyon `KATALOG-entegrasyon.md`, repo-i�
   - [02-diyagram-dokumantasyon](#02-diyagram-dokumantasyon) — 11 skill · Diyagram, teknik dokümantasyon, ADR, ortak yazım
   - [03-yazi-iletisim-icerik](#03-yazi-iletisim-icerik) — 55 skill · Yazı, iletişim, pazarlama/içerik, kariyer
   - [04-not-alma-bilgi-yonetimi](#04-not-alma-bilgi-yonetimi) — 35 skill · Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni
-- **AI ve Otomasyon** (113)
+- **AI ve Otomasyon** (112)
   - [01-claude-api-mcp](#01-claude-api-mcp) — 15 skill · Claude API, MCP sunucusu, model geçişi
   - [02-agent-orkestrasyon](#02-agent-orkestrasyon) — 64 skill · Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları
   - [03-web-arastirma-veri](#03-web-arastirma-veri) — 3 skill · Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma
-  - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 31 skill · Skill yazma, plugin/hook/komut geliştirme
-- **Video, Ses ve AI Medya Üretimi** (151)
-  - [01-video-uretim-montaj](#01-video-uretim-montaj) — 93 skill · Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg
+  - [04-skill-plugin-yazimi](#04-skill-plugin-yazimi) — 30 skill · Skill yazma, plugin/hook/komut geliştirme
+- **Video, Ses ve AI Medya Üretimi** (152)
+  - [01-video-uretim-montaj](#01-video-uretim-montaj) — 94 skill · Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg
   - [02-ses-muzik-konusma](#02-ses-muzik-konusma) — 23 skill · Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi
   - [03-ai-gorsel-video-modelleri](#03-ai-gorsel-video-modelleri) — 17 skill · AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu
   - [04-motion-graphics-karakter](#04-motion-graphics-karakter) — 18 skill · Motion graphics, Manim, karakter animasyonu/rig, görsel stil
@@ -1117,7 +1117,6 @@ _Skill yazma, plugin/hook/komut geliştirme_ · not: `notlar/d-ai-otomasyon/04-s
 | `hook-development` | ⭐ 🔥 | This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement p… | react | ücretsiz | 🟡 | 96 A | M 63KB | - | anthropics/claude-plugins-official |
 | `hook-development@anthropics` | alt 🔥 birincil | Claude Code hook'ları: prompt tabanlı (LLM kararlı) ve komut hook'ları, eklenti hooks.json ve settings biçimi, PreToolUse/PostToolUse/Stop/S… | claude-code, bash, json | ücretsiz | 🔵 | 92 A | M 63KB | - | anthropics/claude-code |
 | `library-curator` | ⭐ | Search the OD Library (the global asset registry) and apply matching assets into the current project mid-task. Use when the user asks to reu… | api-anahtari, css, html | ücretsiz | ✅ | 97 A | S 2KB | - | nexu-io/open-design |
-| `motion-design@lottiefiles` | ⭐ | Applies motion design principles to create emotionally-driven, technically sound animations and transitions. Provides timing, easing, choreo… | css, gsap, lottie | ücretsiz | ✅ | 72 B | M 55KB | claude:farkli | lottiefiles/motion-design-skill |
 | `od-next-media-inputs` | ⭐ | Prepare required media inputs within an existing OD Next plan. Reuse capability evidence, acquire and measure assets efficiently, and resolv… |  | ücretsiz | ✅ | 97 A | S 7KB | - | nexu-io/open-design |
 | `plugin-settings` | ⭐ 🔥 | This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md f… | api-anahtari, git, typescript | ücretsiz | 🟡 | 96 A | M 43KB | - | anthropics/claude-plugins-official |
 | `plugin-settings@anthropics` | alt 🔥 tamamlayıcı | Claude Code eklentilerinde kullanıcıya özel ayar ve durum saklama kalıbı: proje kökünde `.claude/<eklenti>.local.md` dosyası (YAML frontmatt… | claude-code, yaml, bash | ücretsiz | 🔵 | 84 A | M 43KB | - | anthropics/claude-code |
@@ -1183,6 +1182,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 | `lemo-opuscar@lemomo-ai` | alt alternatif | Aynı Lemo-Opuscar skilinin 'dizin/eklenti paketi' sürümü: kütüphanenin yanında paketlenmiş (library/) gelmesini bekler, ~/.lemo-opuscar'a ko… | node, three.js, ffmpeg, python, kokoro tts | ücretsiz | ✅ | 69 B | S 123KB | - | lemomo-ai/lemo-opuscar |
 | `media-use` | ⭐ 🔥 birincil | HyperFrames videosu için medyayı tek komutla (`media-use resolve` / `media-use generate`) bulur ya da üretir: müzik, ses efekti, görsel/ikon… | hyperframes, heygen, ffmpeg, python 3.10+ (kokoro tts) | ½ kısmen | 🟡 | 100 A | S 1860KB | claude:farkli,codex:farkli,agents:farkli | heygen-com/hyperframes |
 | `meta-upload` | ⭐ | 使用 sau CLI 登录 Facebook Page，发布视频或图文、设置北京时间排期、查询原作品并删除。 | python | ücretsiz | ✅ | 89 A | S 5KB | - | dreammis/social-auto-upload |
+| `motion-design` | ⭐ | Applies motion design principles to create emotionally-driven, technically sound animations and transitions. Provides timing, easing, choreo… | css, gsap, lottie | ücretsiz | ✅ | 72 B | M 55KB | - | lottiefiles/motion-design-skill |
 | `motion-design@nexu-io` | alt | Apply motion craft to an active task: refine a brief, beat map, visual continuity, typography, pacing, and timeline implementation. Use when… | api-anahtari, canvas, css, gsap, html | ücretsiz | ✅ | 92 A | L 35KB | claude:farkli | nexu-io/open-design |
 | `oversized-cursor` | ⭐ 🔥 tamamlayıcı | Lansman videolarında göz taşıyıcı olarak büyük macOS imleci tekniği: boyut/görünüm (marka motifli imleçler dahil), ekran dışından giriş yasa… | hyperframes, gsap, css | ücretsiz | ✅ | 100 A | S 6KB | claude:ayni,codex:ayni,agents:farkli | heygen-com/hyperframes |
 | `playwright-recording` | ⭐ 🔥 birincil | Playwright ile tarayıcı etkileşimlerini video olarak kaydeder; form doldurma, gezinti, yavaşlatma ve çözünürlük ayarlarıyla demo ve ürün tur… | playwright, typescript, node | ücretsiz | ✅ | 97 A | M 20KB | claude:ayni | calesthio/OpenMontage |

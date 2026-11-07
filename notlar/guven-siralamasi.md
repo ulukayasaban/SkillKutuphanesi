@@ -148,7 +148,7 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 76 | Jakeschincariol/linkedin-agent-skill | 39 D | 11 | 03-yazi-iletisim-icerik (11) | 11/0/0 | MIT |  | 3205 | 1597.2 | 1 | 1 | - |  |
 | 77 | nexscope-ai/Amazon-Skills | 38 D | 52 | 05-e-ticaret-pazaryeri (52) | 52/0/0 | MIT |  | 834 | 104.8 | 5 | 1 | - |  |
 | 78 | zanwei/design-dna | 37 D | 1 | 01-ui-ux-tasarim-dili (1) | 1/0/0 | MIT |  | 2079 | 276.0 | 3 | 4 | - |  |
-| 79 | lottiefiles/motion-design-skill | 37 D | 1 | 04-skill-plugin-yazimi (1) | 1/0/0 | MIT |  | 2853 | 361.4 | 1 | 0 | - |  |
+| 79 | lottiefiles/motion-design-skill | 37 D | 1 | 01-video-uretim-montaj (1) | 1/0/0 | MIT |  | 2853 | 361.4 | 1 | 0 | - |  |
 | 80 | heyitsnoah/claudesidian | 35 D | 15 | 04-not-alma-bilgi-yonetimi (10), 05-git-pr-surum (3) | 14/1/0 | MIT |  | 2606 | 188.2 | 3 | 0 | 2026-04-11 |  |
 | 81 | xjli360/sealeap-amazon-skills | 34 D | 602 | 05-e-ticaret-pazaryeri (602) | 602/0/0 | MIT |  | 369 | 143.8 | 1 | 15 | - |  |
 | 82 | OrcaQubits/agentic-commerce-skills-plugins | 33 D | 272 | 05-e-ticaret-pazaryeri (272) | 265/7/0 | MIT |  | 40 | 4.9 | 3 | 11 | 2026-05-13 |  |
@@ -212,7 +212,7 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 16 | DavidHDev/react-bits | 63 C | - | `animated-component-libraries` 62/D, `frontend-ui-engineering` 98/A | tasarim-teknolojileri.md |
 | 17 | paperjs/paper.js | 62 C | v0.16 | `algorithmic-art` 81/B, `canvas-procedural-animation` 89/B | tasarim-teknolojileri.md |
 | 18 | darkroomengineering/lenis | 61 C | v1.3 | `scroll-craft` 78/D, `gsap-scrolltrigger` 86/C, `locomotive-scroll` 62/D | tasarim-teknolojileri.md |
-| 19 | airbnb/lottie-web | 60 C | v5.13 | `lottie-animations` 62/D, `remotion-to-hyperframes` 97/A, `lottie-bodymovin` 82/B, `flutter-pre-caching` 78/D, `motion-design@lottiefiles` 72/D, `rive-interactive` 62/D | tasarim-teknolojileri.md |
+| 19 | airbnb/lottie-web | 60 C | v5.13 | `lottie-animations` 62/D, `remotion-to-hyperframes` 97/A, `lottie-bodymovin` 82/B, `flutter-pre-caching` 78/D, `motion-design` 72/D, `rive-interactive` 62/D | tasarim-teknolojileri.md |
 | 20 | pmndrs/drei | 60 C | v10.7 | `threejs-react-three-fiber` 87/D | tasarim-teknolojileri.md |
 | 21 | fontsource/fontsource | 59 C | - | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
 | 22 | ai/size-limit | 57 C | 14.2 (T5) | `react-doctor` 76/C, `nextjs-react-expert` 74/C | tasarim-teknolojileri.md |

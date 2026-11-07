@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/31**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/30**
 
 ### agent-development  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 100 (A)
 
@@ -95,16 +95,6 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### motion-design@lottiefiles  ·  lottiefiles/motion-design-skill @ f9a8a04  ·  puan 72 (B)
-
-- **Ne yapar:** Applies motion design principles to create emotionally-driven, technically sound animations and transitions. Provides timing, easing, choreography, and Disney animation principles adapted for UI. Use when creating animations, transitions, micro-interactions, loading states, page transitions, scroll-triggered effects, or any motion work. Works with CSS, Framer Motion, GSAP, Lottie, Spring, or any a
-- **Teknoloji:** css, gsap, lottie _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** LottieFiles (kurum, ★2853, son güncelleme 2026-05-18, lisans MIT)
-- **Durum:** tercih · **Globalde:** claude:farkli
-- **Boyut:** 55 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### od-next-media-inputs  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
