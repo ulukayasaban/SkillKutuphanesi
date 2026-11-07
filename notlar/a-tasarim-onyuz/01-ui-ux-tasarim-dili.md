@@ -272,7 +272,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Boyut:** 216 KB (SKILL.md 15.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kategoride mobile özgü tek skill; referans dosyaları kapsamlı. 'Önce oku' zorunlulukları bağlamı hızla dolduruyor.
 
-### modern-web-design  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 51 (C)
+### modern-web-design  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 52 (C)
 
 - **Ne yapar:** 2024-2025 web tasarım trendleri ve kalıpları özeti: performans öncelikli tasarım, cesur minimalizm, mikro etkileşim, scrollytelling, imleç UX'i, glassmorphism; hero, yatay kaydırma galerisi, 3D ürün görüntüleyici gibi kalıplar ve erişilebilirlik/performans kontrol listeleri.
 - **Ne zaman:** Trend taraması veya fikir listesi gerektiğinde referans olarak. · **Ne zaman değil:** Gerçek tasarım kararı/uygulaması için (genel ve tarihli; 'AI ortalaması' sayfaya iter).

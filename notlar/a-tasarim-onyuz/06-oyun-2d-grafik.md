@@ -454,7 +454,7 @@ _Oyun geliştirme, PixiJS, 2D grafik_
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### pixijs-2d  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 69 (B)
+### pixijs-2d  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 70 (B)
 
 - **Ne yapar:** PixiJS v8 ile 2D WebGL/WebGPU render rehberi: Application, sprite/texture, Graphics API, ParticleContainer ile on binlerce parçacık, filtreler ve özel shader filtreleri, sprite sheet animasyonu, metin ve performans kalıpları. Başlangıç şablonu, parçacık/sprite üretici betikler ve referans belgeleri içerir.
 - **Ne zaman:** Tarayıcıda 2D oyun, parçacık efekti, yoğun sprite sahnesi veya 3D sahne üstü HUD yapılırken. · **Ne zaman değil:** 3D için Three.js/R3F; basit UI animasyonu için GSAP/Motion; tam oyun motoru (fizik, sahne yönetimi) gerekiyorsa Phaser.

@@ -4,7 +4,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/7**
 
-### barba-js  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### barba-js  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** Barba.js ile çok sayfalı sitelerde sayfalar arası geçiş animasyonu: hook'lar, router/prefetch/head eklentileri, GSAP entegrasyonu, geçiş kalıpları ve proje kurulum betikleri.
 - **Ne zaman:** SPA hissi veren sayfa geçişleri (ör. perde/fade) çok sayfalı statik sitelerde. · **Ne zaman değil:** React/Next.js router geçişleri (framework'ün kendi çözümü); tek sayfalık siteler.
@@ -26,7 +26,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Boyut:** 18 KB (SKILL.md 18.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, güncel (18 KB), pin/scrub/cleanup kuralları doğru; gsap-core ile birlikte kullanılmalı. Dikkat: yok.
 
-### gsap-scrolltrigger@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### gsap-scrolltrigger@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** GSAP ve ScrollTrigger için kapsamlı (765 satır) genel rehber: tween, timeline, ScrollTrigger, kalıplar, ease referansı, başlangıç projesi ve üretici betikler (generate_animation.py, timeline_builder.py).
 - **Ne zaman:** Resmî sürümün yetmediği, başlangıç projesi/ease görselleştirici gibi ek varlıklar istendiğinde. · **Ne zaman değil:** Normal durumda resmî gsap-scrolltrigger + gsap-core/timeline.
@@ -47,7 +47,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Boyut:** 20 KB (SKILL.md 18.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### locomotive-scroll  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### locomotive-scroll  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** Locomotive Scroll ile yumuşak (smooth) kaydırma, parallax ve viewport algılama; GSAP ScrollTrigger entegrasyon notları ve başlangıç projesi.
 - **Ne zaman:** Smooth-scroll + parallax içeren sürükleyici sitelerde (kategorideki tek smooth-scroll skill'i). · **Ne zaman değil:** Erişilebilirlik/mobil önceliği olan siteler; ScrollTrigger tek başına yeterliyse.
@@ -70,7 +70,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Boyut:** 380 KB (SKILL.md 24.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güçlü süreç (brief, çeşitlilik kapısı, doğrulama), güncel (21 gün) ve MIT; büyük ama gerçek bir uçtan uca sistem. Dikkat: SKILL.md 24 KB + ~170 KB referans; GSAP değil kendi motorunu kullanıyor; varlık üretimi kie.ai API anahtarı ister ve api.kie.ai'ye istek atar (isteğe bağlı); tam ffmpeg ve playwright-core gerekir; serve.mjs varsayılan 127.0.0.1 (--lan açık uyarılı); 'Windows/OtherWorlds' yol örnekleri taşıyor.
 
-### scroll-reveal-libraries  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### scroll-reveal-libraries  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** AOS (Animate On Scroll) ile basit scroll reveal animasyonları: data-aos öznitelikleri, yerleşik animasyonlar, özel animasyon, karşılaştırma tablosu ve yapılandırma betikleri.
 - **Ne zaman:** Pazarlama sayfasında karmaşıklık olmadan fade/slide reveal gerektiğinde. · **Ne zaman değil:** Pin, scrub, timeline; React'te animasyon (motion-framer).

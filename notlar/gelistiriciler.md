@@ -107,6 +107,7 @@
 | [cloudflare/skills](https://github.com/cloudflare/skills) | cloudflare | kurum | ✅ | 3279 | 48 | 2026-11-03 | Apache-2.0 | 19 |
 | [Jakeschincariol/linkedin-agent-skill](https://github.com/Jakeschincariol/linkedin-agent-skill) | Jakeschincariol | kisi |  | 3205 | 1 | 2026-09-17 | MIT | 11 |
 | [pmndrs/postprocessing](https://github.com/pmndrs/postprocessing) | pmndrs | kurum | ✅ | 2951 | 22 | 2026-11-01 | Zlib | 0 |
+| [lottiefiles/motion-design-skill](https://github.com/lottiefiles/motion-design-skill) | LottieFiles | kurum |  | 2853 | 1 | 2026-05-18 | MIT | 1 |
 | [yaojingang/yao-meta-skill](https://github.com/yaojingang/yao-meta-skill) | yaojingang | kisi |  | 2719 | 3 | 2026-08-17 | MIT | 1 |
 | [heyitsnoah/claudesidian](https://github.com/heyitsnoah/claudesidian) | heyitsnoah | kisi |  | 2606 | 3 | 2026-04-11 | MIT | 20 |
 | [Jakeschincariol/founder-skill](https://github.com/Jakeschincariol/founder-skill) | Jakeschincariol | kisi |  | 2452 | 1 | 2026-10-07 | MIT | 11 |

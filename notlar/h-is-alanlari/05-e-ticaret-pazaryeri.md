@@ -2366,7 +2366,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 ### etsy-seller  ·  moiz-za/etsy-seller-seo-system @ 0204bbc  ·  puan 76 (B)
 
 - **Ne yapar:** Etsy listing'i için başlık, 13 etiket ve açıklamayı yeniden yazar ya da sıfırdan üretir. Canlı Etsy autocomplete ve arama sonuçlarından rakip verisi toplar; 2026 Etsy kuralları, yapay zekâ/görsel uyum kapısı, marka adı yasak listesi ve listing sağlık puanı içerir.
-- **Ne zaman:** Etsy-Arif / Etsy-Yeni gibi Etsy mağazalarında listing SEO'su: mevcut listing'i iyileştirme veya yeni ürün listing'i oluşturma. · **Ne zaman değil:** DİKKAT: proje dışına, ~/etsy-listings/ klasörüne sessizce şablon ve listing kayıtları yazar (keyword-map, refresh-schedule, listings/). Bunu istemiyorsan projede yolu değiştirmesini söyle. etsy.com'a okuma isteği atar. Etsy API ile mağazaya yazmaz.
+- **Ne zaman:** Etsy-Arif / Etsy-Yeni gibi Etsy mağazalarında listing SEO'su: mevcut listing'i iyileştirme veya yeni ürün listing'i oluşturma. · **Ne zaman değil:** Kütüphane yaması (2026-11-07): durum klasörü proje kökünde `etsy-listings/` (ETSY_LISTINGS_DIR ile değiştirilebilir), ev dizinine yazmaz; kaynak repoda skill dışında kalan 4 şablon bootstrap.py içine gömülü. etsy.com autocomplete ve arama sayfalarını Claude'un web/Chrome araçlarıyla okur; her ilan yayınlanmadan önce insan kontrolü şart (Etsy bot ilan yasağı).
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** moiz-za (kisi, ★47, son güncelleme 2026-10-23, lisans MIT)

@@ -2,11 +2,11 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-07 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8080 · Arşivdeki skill kaydı: 5316 · Bileşen (komut/agent): 658
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8081 · Arşivdeki skill kaydı: 5317 · Bileşen (komut/agent): 658
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5280 | arşivde (ana sürüm) |
+| secildi | 5281 | arşivde (ana sürüm) |
 | haric | 2563 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 144 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
@@ -95,6 +95,7 @@
 | lemomo-ai/lemo-opuscar | 2 | secildi 2 |
 | lemomo-ai/lemo-wake | 3 | secildi 3 |
 | leodavincs/kalem | 2 | secildi 2 |
+| lottiefiles/motion-design-skill | 1 | secildi 1 |
 | mattpocock/skills | 39 | secildi 31, haric 8 |
 | mercadopago/mercadopago-claude-marketplace | 5 | secildi 5 |
 | microsoft/playwright | 10 | secildi 10 |

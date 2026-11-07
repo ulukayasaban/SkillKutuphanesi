@@ -14,7 +14,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 22 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### animated-component-libraries  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### animated-component-libraries  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** Magic UI (150+) ve React Bits (90+) hazır animasyonlu React bileşenlerini kullanma: shadcn CLI ile ekleme, özelleştirme, performans ve yaygın hatalar. Elle animasyon yazmadan hero/arka plan efektleri için.
 - **Ne zaman:** Landing page'de hazır animasyonlu bileşen (shimmer, beam, particles) eklerken. · **Ne zaman değil:** Özgün marka hareketi gerektiğinde; kurumsal sade sitelerde.
@@ -25,7 +25,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 89 KB (SKILL.md 22.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Hazır bileşen kataloğu pratik, ama bileşen listeleri anlık görüntüdür; komutlar 'npx shadcn@latest add ...' ile üçüncü taraf kayıttan kod çeker. 22 KB, çok kod örneği.
 
-### animejs  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### animejs  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** Anime.js ile DOM, CSS, SVG ve JS nesnesi animasyonu: timeline, stagger, SVG path/morph. GSAP'a hafif alternatif olarak anlatılır; üreticiler, referans ve betikler içerir.
 - **Ne zaman:** GSAP lisansı/boyutu istenmeyip hafif bir motor tercih edildiğinde. · **Ne zaman değil:** Yeni projelerde varsayılan olarak; GSAP varken gerek yok.
@@ -267,7 +267,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 14 KB (SKILL.md 12.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### lottie-animations  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### lottie-animations  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** Lottie (lottie-web, lottie-react, dotLottie) ile After Effects JSON animasyonlarını web/React'e gömme: oynatma kontrolü, etkileşim, optimizasyon betiği ve AE dışa aktarma rehberi.
 - **Ne zaman:** Tasarımcının hazırladığı ikon/yükleme/mikro-etkileşim animasyonlarını sitede oynatırken. · **Ne zaman değil:** Animasyonu kodla sıfırdan yazmak; durum makinesi gereken etkileşimler (rive-interactive).
@@ -289,7 +289,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Yüzeysel (3.6 KB); adı lottie-bodymovin ama gömme rehberi değil, ilke listesi. lottie-animations bunun yerini tutar. OpenMontage bağımlılığı. Not: motion-graphics-sanatcisi rolünün opsiyonelinde duruyor (video oturumunun alanı); yerine lottie-animations önerilir.
 
-### motion-framer  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 69 (B)
+### motion-framer  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 70 (B)
 
 - **Ne yapar:** Motion/Framer Motion ile React animasyonu: motion bileşenleri, variants, hover/tap/drag hareketleri, layout animasyonu, AnimatePresence, spring, scroll hook'ları. Başlangıç projesi (Vite) ve üretici betikleri içerir.
 - **Ne zaman:** React'te bileşen düzeyi animasyon, çıkış animasyonu, jest etkileşimi ve layout geçişleri. · **Ne zaman değil:** Zaman çizelgesi ağırlıklı koreografi veya scroll pinleme (GSAP).
@@ -311,7 +311,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 158 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### react-spring-physics  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### react-spring-physics  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** React Spring ve Popmotion ile fizik tabanlı (yay) animasyon: spring hook'ları, jest entegrasyonu, düşük seviye animasyon yardımcıları. Doğal hissettiren arayüz hareketleri için.
 - **Ne zaman:** Yay fiziği ve jestle sürülen arayüz hareketi gerektiğinde. · **Ne zaman değil:** Genel UI animasyonu (motion-framer) veya zaman çizelgesi işleri.
@@ -332,7 +332,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 19 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### rive-interactive  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### rive-interactive  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 62 (C)
 
 - **Ne yapar:** Rive durum makinesi tabanlı etkileşimli vektör animasyonu: girdi işleme, ViewModel veri bağlama, rive-react entegrasyonu. Betikler bileşen ve ViewModel iskeleti üretir.
 - **Ne zaman:** Girdiye tepki veren, mantıklı (state machine) animasyon bileşeni gerektiğinde. · **Ne zaman değil:** Düz bir kez oynayan animasyon (lottie-animations).
