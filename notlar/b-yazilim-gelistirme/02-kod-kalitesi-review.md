@@ -58,7 +58,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Reviews code changes using CodeRabbit AI. Use when user asks for code review, PR feedback, code quality checks, security issues, or requests fix-review cycles.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -150,7 +150,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### postgresql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 92 (A)
+### postgresql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 93 (A)
 
 - **Ne yapar:** PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -182,7 +182,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.
 
-### receiving-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### receiving-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
 - **Teknoloji:** - _(otomatik tespit)_
@@ -203,7 +203,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, inceleme-dongusu grubunun birincili. Kısa, superpowers zincirinin parçası; code-reviewer.md şablonu 'spec bir vizyon belgesidir' ilkesiyle güçlü. İnceleme yöntemi değil orkestrasyon olduğu için code-review-and-quality ile çakışmaz.
 
-### requesting-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### requesting-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 - **Teknoloji:** git _(otomatik tespit)_
@@ -235,7 +235,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 27 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlayıcı. Bu alanda gördüğüm en titiz sadeleştirme protokolü (kanıt kaydı, kör nokta bildirimi, ürün kararı ayrımı); dil bağımsız. metadata.internal işaretli ama Archify'a bağlı değil. mevcut-kod-iyilestirme profilinin ana skilli.
 
-### sql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 90 (A)
+### sql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 91 (A)
 
 - **Ne yapar:** Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.
 - **Teknoloji:** - _(otomatik tespit)_

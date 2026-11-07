@@ -37,7 +37,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, dal-bitirme grubunun birincili. Gerekçe: kullanıcıya karar bırakan sabit menü, temel dal doğrulaması ve kökene dayalı worktree temizliği ile en güvenli kapanış; pull-request (heyitsnoah) onaysız push eğilimli tek komut → alternatif.
 
-### finishing-a-development-branch@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### finishing-a-development-branch@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when implementation is complete, all tests pass, and you need to decide how to integrate the work
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -122,7 +122,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, worktree grubunun birincili. Gerekçe: 'harness ile kavga etme' ilkesi, var olan yalıtımı algılama, alt modül koruması ve onay adımı; Claude Code/Codex worktree araçlarıyla uyumlu. heyitsnoah git-worktrees yalnız komut başvurusu → alternatif.
 
-### using-git-worktrees@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### using-git-worktrees@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
 - **Teknoloji:** git, node, python _(otomatik tespit)_

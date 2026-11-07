@@ -15,7 +15,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 15 KB (SKILL.md 14.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### api-breaking-change-detector  ·  github/awesome-copilot @ 7e40881  ·  puan 92 (A)
+### api-breaking-change-detector  ·  github/awesome-copilot @ 7e40881  ·  puan 93 (A)
 
 - **Ne yapar:** Cross-references C# Web API controllers/DTOs against their TypeScript/JavaScript consumers (React, Angular, Vue, Svelte, Node.js, or hand-written/auto-generated HTTP clients like Fetch, Axios, NSwag) to catch contract drift in both directions: backend changes that break client applications (renamed/removed JSON keys, new required parameters, status code shifts) and frontend code sending fields the
 - **Teknoloji:** node, react, svelte, typescript, vue _(otomatik tespit)_
@@ -36,7 +36,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 20 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Seçici okuma kuralı bağlamı küçük tutuyor (SKILL.md 2.5 KB), auth ve rate-limiting dosyaları yararlı. İçerik yer yer yüzeysel; @[skills/...] biçimindeki çapraz referanslar ag-kit sözdizimi.
 
-### architecture-blueprint-generator  ·  github/awesome-copilot @ 7e40881  ·  puan 90 (A)
+### architecture-blueprint-generator  ·  github/awesome-copilot @ 7e40881  ·  puan 91 (A)
 
 - **Ne yapar:** Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.
 - **Teknoloji:** node, python, react _(otomatik tespit)_

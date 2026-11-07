@@ -143,6 +143,7 @@
 | [xjli360/sealeap-ecommerce-skills](https://github.com/xjli360/sealeap-ecommerce-skills) | xjli360 | kisi |  | 137 | 1 | 2026-10-16 | MIT | 195 |
 | [Livsy90/iOS-Performance-Agent-Skills](https://github.com/Livsy90/iOS-Performance-Agent-Skills) | Livsy90 | kisi |  | 120 | 2 | 2026-07-12 | MIT | 6 |
 | [MADTeacher/mad-agents-skills](https://github.com/MADTeacher/mad-agents-skills) | MADTeacher | kisi |  | 111 | 2 | 2026-05-01 | MIT | 11 |
+| [leodavincs/kalem](https://github.com/leodavincs/kalem) | leodavincs | kisi |  | 106 | 1 | 2026-11-06 | NOASSERTION | 2 |
 | [oldred-byte/ec-visual-skill](https://github.com/oldred-byte/ec-visual-skill) | oldred-byte | kisi |  | 104 | 1 | 2026-07-06 | MIT | 1 |
 | [Shopify/agent-skills](https://github.com/Shopify/agent-skills) | Shopify | kurum | ✅ | 101 | 1 | 2026-06-17 | yok | 15 |
 | [Kappaemme-git/codex-phone-lab](https://github.com/Kappaemme-git/codex-phone-lab) | Kappaemme-git | kisi |  | 95 | 1 | 2026-05-20 | MIT | 1 |

@@ -57,7 +57,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 19 KB (SKILL.md 18.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### brainstorming@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
+### brainstorming@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
 - **Ne yapar:** You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
@@ -251,7 +251,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 20 KB (SKILL.md 17.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — 2026-10 güncellemesi: uzun örnek iş akışı çıkarıldı, kurallar aynı; SKILL.md kısaldı. Alt-agent kullanmadan aynı oturumda plan yürütme için hâlâ geçerli.
 
-### executing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### executing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when you have a written implementation plan to execute in a separate session with review checkpoints
 - **Teknoloji:** git _(otomatik tespit)_
@@ -820,7 +820,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, uygulama-plani grubunun birincili. Gerekçe: arayüz sözleşmeleri, görev boyutlandırma ve 'inceleme odağı' bölümüyle en uygulanabilir plan biçimi; superpowers yürütme zinciriyle (subagent-driven-development, executing-plans, TDD, verification) uçtan uca bağlı. addyosmani planning-and-task-breakdown daha hafif ve yığından bağımsız; vudovn plan-writing kısa ama ag-kit betiklerine atıf yapıyor.
 
-### writing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### writing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when you have a spec or requirements for a multi-step task, before touching code
 - **Teknoloji:** git, python _(otomatik tespit)_

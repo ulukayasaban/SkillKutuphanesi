@@ -126,7 +126,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Kısa (6 KB) platform karar tablosu yararlı; içerik genel ilkeler, shipping-and-launch ile kısmen örtüşüyor.
 
-### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
+### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
 - **Ne yapar:** Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
 - **Teknoloji:** api-anahtari, git, next.js, node, playwright _(otomatik tespit)_
@@ -206,7 +206,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### observability  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
+### observability  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
 
 - **Ne yapar:** Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.
 - **Teknoloji:** api-anahtari, html, next.js, node, react, typescript _(otomatik tespit)_
@@ -249,7 +249,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 13 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı (opsiyonel). Kısa ve betikli; içerik büyük ölçüde performance-optimization'ın ölçüm bölümünün tablo özeti.
 
-### performance-review-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 90 (A)
+### performance-review-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 91 (A)
 
 - **Ne yapar:** Draft performance reviews, self-assessments, peer reviews, and upward feedback in your own voice. Analyzes your contributions, emails, and meeting history via WorkIQ, then produces honest, impact-focused drafts using the STAR format. USE FOR: write my performance review, draft self-assessment, peer review, 360 feedback, annual review, mid-year review, upward feedback, write review for colleague, p
 - **Teknoloji:** - _(otomatik tespit)_
@@ -351,7 +351,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 307 KB (SKILL.md 21.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities.
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -361,7 +361,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### security-review  ·  github/awesome-copilot @ 7e40881  ·  puan 90 (A)
+### security-review  ·  github/awesome-copilot @ 7e40881  ·  puan 91 (A)
 
 - **Ne yapar:** AI-powered codebase security scanner that reasons about code like a security researcher — tracing data flows, understanding component interactions, and catching vulnerabilities that pattern-matching tools miss. Use this skill when asked to scan code for security vulnerabilities, find bugs, check for SQL injection, XSS, command injection, exposed API keys, hardcoded secrets, insecure dependencies, 
 - **Teknoloji:** api-anahtari, docker, html, next.js, node, python, react, typescript _(otomatik tespit)_
@@ -371,7 +371,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 36 KB (SKILL.md 8.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### security-scan  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
+### security-scan  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
 - **Ne yapar:** Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR, commit, branch, or working-tree diffs, or for deep, multi-pass scans.
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -454,7 +454,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.
 
-### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
+### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
 
 - **Ne yapar:** Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerability or a disclosure campaign; a Codex Security scan is optional.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_

@@ -1116,6 +1116,15 @@
       "tip": "T1",
       "oncelik": 3,
       "not": "Konu takibi adayıydı; kullanıcı önerileni onayladı (2026-11-07). App Store Review Guidelines (16 Eki 2026) uyum denetimi; rshankras app-store/rejection-handler'ı tamamlar."
+    },
+    {
+      "repo": "leodavincs/kalem",
+      "tip": "T2",
+      "oncelik": 4,
+      "dahil": [
+        "^\\.claude/skills/"
+      ],
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; 'ekle' dedi (2026-11-07). Kodla video: sahne başına motor seçimi (Paper.js/PixiJS/HyperFrames/Three.js/Manim/Levha) + referans videodan istem çıkarma. Skiller repo kökünden (motorlar/, kurulum.sh, projeler/) çalışır; tek başına projeye kurulunca betik yolları bozulur — klonlanıp içinde çalışılacak repo."
     }
   ],
   "konum_haric": [

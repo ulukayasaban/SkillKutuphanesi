@@ -111,7 +111,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. SKILL.md, scripts/ ve examples/ resmî kopyayla aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te doldurulmamış şablon telif satırı.
 
-### webapp-testing@github  ·  github/awesome-copilot @ 7e40881  ·  puan 92 (A)
+### webapp-testing@github  ·  github/awesome-copilot @ 7e40881  ·  puan 93 (A)
 
 - **Ne yapar:** Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
 - **Teknoloji:** css, node, playwright, react _(otomatik tespit)_
