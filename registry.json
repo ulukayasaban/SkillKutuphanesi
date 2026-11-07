@@ -377230,9 +377230,11 @@
           "SKILL.md": "81371547c8ddf9f80862c2f7c29b590644248bb4",
           "references/playbooks/system-laws.md": "ccb065093d130be9458e79dbc5404bcd9afc2845",
           "references/playbooks/listing-health-score.md": "5e4fd28aa5d8f06d28dd09be188cdb1b8d78529f",
-          "scripts/bootstrap.py": "507a207bd4e745145221604ac9949f361f3984a6"
+          "scripts/bootstrap.py": "507a207bd4e745145221604ac9949f361f3984a6",
+          "references/data-model/SCHEMA.md": "fddb7e6e7b51737693b543a9ae22943edf29a112",
+          "scripts/README.md": "37ee52494955eaaae5592593eb478e88fb5e4f8d"
         },
-        "neden": "Durum klasörü ev dizinine (~/etsy-listings) değil proje köküne (./etsy-listings, ETSY_LISTINGS_DIR ile değiştirilebilir) yazılır; kaynak repoda skill klasörü dışında kalan 4 şablon bootstrap.py içine gömüldü (yoksa betik 'Templates dir not found' ile duruyordu)",
+        "neden": "Durum klasörü ev dizinine (~/etsy-listings) değil proje köküne (./etsy-listings, ETSY_LISTINGS_DIR ile değiştirilebilir) yazılır; kaynak repoda skill klasörü dışında kalan 4 şablon bootstrap.py içine gömüldü (yoksa betik 'Templates dir not found' ile duruyordu); 2026-11-07b: SCHEMA.md ve scripts/README.md'deki yol metinleri de düzeltildi",
         "tarih": "2026-11-07"
       }
     },
