@@ -125,7 +125,8 @@ Betiği bozuk bir skill arşivde düzeltilmez; düzeltilmiş dosya **`yamalar/<s
 ```
 Kurulumda (`hazirla()`) yama sadece orijinal o hash'teyse uygulanır; kaynak güncellenince yama atlanır ve `dogrula.py`
 "yama eskidi" der (yeni sürümü dene; sorun sürüyorsa yamayı yenile, düzeldiyse yamayı sil). `--guncelle` yamayı kurulu
-projelere de uygular. Kaynakta git symlink'i olan `../<kardeş>` dosyaları (arşive düz metin olarak gelir) kurulumda
+projelere de uygular. Yama yalnızca bozuk betik için değil, projeye uyarlama için de kullanılır: ör. `etsy-seller` kayıtlarını kullanıcının ev dizinine yazıyordu, yamayla proje köküne (`./etsy-listings`) alındı ki iki kişilik projede herkes aynı kaydı görsün; skill klasörü dışında kalan şablonlar da `bootstrap.py` içine gömüldü (`yamalar/etsy-seller/`).
+Kaynakta git symlink'i olan `../<kardeş>` dosyaları (arşive düz metin olarak gelir) kurulumda
 kendiliğinden kardeş skill bağlantısına çevrilir.
 
 ## Kontrol: "hiçbir skill atlanmadı" kanıtı
