@@ -1,0 +1,12 @@
+{
+  "_aciklama": "Proje ↔ skill bilgisinin tek yeri. Skill ve kaynak kayıtlarına proje adı yazılmaz. tarama_kokleri altında bir seviye aranır (.skill-kutuphanesi/kilit.json olan klasörler); başka yerdeki projeler ek_projeler'e tam yolla yazılır. notlar: <proje klasör adı> -> <skill kimliği> -> elle not. Rapor: python3 araclar/proje-kullanimi.py -> notlar/proje-kullanimi.md",
+  "tarama_kokleri": [
+    "~/Documents"
+  ],
+  "ek_projeler": [],
+  "notlar": {
+    "IstatistikYoutube": {
+      "motion-design": "2026-10-15'ten beri bu sürüm kullanılıyor (edit-026); 2026-11-07'de kütüphaneden kurulup güncellemesi izlenmeye başlandı."
+    }
+  }
+}

@@ -24,6 +24,10 @@ python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da ay
    (`ucretsiz` / `kismen` / `ucretli`); eklemezsen ücretli servis izi olan skill `belirsiz` olur ve dogrula uyarır.
    **Ölçüt:** `ucretli` = skill ücret ödemeden HİÇ kullanılamıyor (ör. tek işi fal.ai'yi çağırmak). Ücretli servis skill'in
    seçeneklerinden biriyse, ücretsiz katman/kota varsa ya da sadece üretilen kodun çalışması ücretliyse → `kismen`.
+   **Değerlendirme projeden bağımsızdır:** öncelik, not ve inceleme alanları repo/skill'in kendi niteliğine göre yazılır; proje adı
+   ya da "şu projeye uyar" gerekçesi yazılmaz. Proje ↔ skill bilgisi: `python3 araclar/proje-kullanimi.py` → `notlar/proje-kullanimi.md`.
+   **Aynı ad, farklı iş:** kimlikler değişmez (eski kayıt çıplak adını korur, yeni gelen `ad@kaynak` olur); yeni kaynağın önceliği
+   daha yüksek olsa bile eski kayıt `durum_elle` ile "tercih" sabitlenir ve iki kaydın `notlar` alanına fark yazılır.
 2. **Tipini seç** ve `kaynaklar.json` → `repolar` listesine bir kayıt ekle:
 
    | Tip | Ne zaman | Örnek kayıt |

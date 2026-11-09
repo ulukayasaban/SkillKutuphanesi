@@ -464,6 +464,10 @@ def main():
     kod, out = calistir(KOK, "--skill", "gsap-core", "--evet")
     test("güvenlik: kütüphanenin kendisi reddedilir", kod != 0 and "Güvenlik" in out, out)
 
+    pk = subprocess.run([sys.executable, str(KOK / "araclar" / "proje-kullanimi.py"), "--skill", "boyle-bir-skill-yok"],
+                        capture_output=True, text=True)
+    test("proje-kullanimi: bilinmeyen skill için boş sonuç, rapor yazmaz", pk.returncode == 0 and "kullanılmıyor" in pk.stdout,
+         pk.stdout + pk.stderr)
     test("global klasörler test boyunca DEĞİŞMEDİ", parmak_izi() == once)
     shutil.rmtree(kok, ignore_errors=True)
     basarisiz = [a for a, ok in SONUC if not ok]

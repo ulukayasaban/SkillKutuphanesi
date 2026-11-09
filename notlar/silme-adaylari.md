@@ -23,12 +23,12 @@
 
 | Repo | Güven | ★ | Skill | Bulgu | Engel |
 |---|---|---|---|---|---|
-| [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills) | 43 D | 1.3k | 162 | **95'i tek dosyalık <2 KB genel şablon** ("Beta", yönergesi yüzeysel) | e-ticaret rollerinde 38 skill (22'si ince şablon), `Etsy-Arif` projesinde kurulu. Silmeden önce rolleri sealeap/finsilabs ağırlıklı yeniden kurmak gerekir |
+| [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills) | 43 D | 1.3k | 162 | **95'i tek dosyalık <2 KB genel şablon** ("Beta", yönergesi yüzeysel) | e-ticaret rollerinde 38 skill (22'si ince şablon), kurulu projede kullanılıyor (`python3 araclar/proje-kullanimi.py --repo nexscope-ai/eCommerce-Skills`). Silmeden önce rolleri sealeap/finsilabs ağırlıklı yeniden kurmak gerekir |
 | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) | 41 D | 820 | 52 | 20'si ince şablon; daha zengin Amazon kaynağı (`sealeap-amazon-skills`) geri geldi | e-ticaret rollerinde 6 skill |
 
 ## C. Tutulması önerilenler (düşük güven ama benzersiz/korunan)
 
-Trendyol (resmî, rolde), `J-DTurner/etsy-api-skill` (rolde + `Etsy-Yeni` projesinde), Shopify/agent-skills (resmî, rolde), Mercado Pago
+Trendyol (resmî, rolde), `J-DTurner/etsy-api-skill` (rolde + kurulu projede; `araclar/proje-kullanimi.py --repo`), Shopify/agent-skills (resmî, rolde), Mercado Pago
 (resmî), Swift/iOS kaynakları (Vinicius 131 dosyalık kod inceleme, ios-code-audit, swiftui-design-principles: içerikli ve benzersiz),
 codex-phone-lab (Expo canlı telefon, benzersiz), lemo-wake (benzersiz görsel animasyon), MADTeacher/evanca (Flutter), OrcaQubits
 (Magento/BigCommerce/Medusa/Saleor tek kaynak), finsilabs ve sealeap-ecommerce (rolde/projede).

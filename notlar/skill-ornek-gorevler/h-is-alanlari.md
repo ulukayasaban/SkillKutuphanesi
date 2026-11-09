@@ -567,7 +567,7 @@
 | `etsy-product-description` | ✅ | Product description writing — keyword integration, benefit-focused copy, FAQ, formatting |
 | `etsy-review-strategy` | ✅ | Etsy review generation — thank you cards, follow-up messages, photo review incentives |
 | `etsy-seasonal-strategy` | ✅ | Seasonal selling calendar — holiday prep, trending categories, listing refresh timing, inventory planning |
-| `etsy-seller` | ✅ | Etsy-Arif / Etsy-Yeni gibi Etsy mağazalarında listing SEO'su: mevcut listing'i iyileştirme veya yeni ürün listing'i oluşturma. |
+| `etsy-seller` | ✅ | Etsy mağazalarında listing SEO'su: mevcut listing'i iyileştirme veya yeni ürün listing'i oluşturma. |
 | `etsy-seller-guide` | ✅ | opening, optimizing or growing an Etsy shop. |
 | `etsy-seo` | ✅ | Etsy SEO analyzer and optimizer. |
 | `etsy-seo-tags` | ✅ | Etsy tag optimization — 13-tag strategy, attribute optimization, search ranking factors |

@@ -30,6 +30,7 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `roller/`, `profiller/` | Agent rolleri (rol → skiller) ve proje tipleri (profil → roller) |
 | `kaynaklar.json` | Hangi repolar, hangi tipte, hangi kurallarla alınır; `arsivden_cikarilanlar` (bilerek çıkarılan eski sürümler) |
 | `trend.json`, `notlar/github-trend.md` | GitHub Trending geçmişi ve raporu |
+| `notlar/proje-kullanimi.md` · `projeler.json` | Hangi proje hangi skili kullanıyor (proje bilgisinin tek yeri; `araclar/proje-kullanimi.py` üretir, elle notlar `projeler.json`) |
 | `notlar/populer-skiller.md` | GitHub'da popüler skill repoları (REST araması, adayda SKILL.md sayımı; `araclar/populer-tarama.py`) |
 | `konu-takip.json`, `notlar/konu-takip.md` | Konu takibi (aday repolar, değerlendirme kararları) |
 | `kategoriler.json`, `kategori-kurallari.json` | Alanlar/kategoriler ve otomatik atama kuralları |
@@ -95,6 +96,7 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [prompt
 | `gelistirici-bilgisi.py` | Geliştirici bilgileri + GitHub güven puanı/sıralaması → `notlar/guven-siralamasi.md` |
 | `konu-takip.py [--konu X] [--rapor] [--karar repo karar neden]` | Takip edilen alanlarda (e-ticaret/Etsy, mobil…) GitHub'da yeni skill repolarını arar → `notlar/konu-takip.md`; değerlendirilenler tekrar gösterilmez |
 | `github-trend.py [--rapor] [--aday]` | GitHub Trending takibi: trend'e giren kaynaklar (değerlendirme +10/+6/+2, öneride öne alma), trend'deki aday skill repoları → `notlar/github-trend.md` |
+| `proje-kullanimi.py [--skill id] [--repo owner/ad]` | Projelerin `kilit.json` dosyalarını okur → `notlar/proje-kullanimi.md`; bir skili/kaynağı kullanan projeleri listeler (silmeden, tercih değiştirmeden önce) |
 | `github-skill-listesi.py [--duzenle]` | GitHub 'Yapay Zeka Skillleri' listesi: kütüphanenin tüm kaynakları tek listede (başka skill listesi yok); yeni/kopya/eksik raporu, `--duzenle` yıldızlar ve taşır |
 | `test.py` | Uçtan uca güvenlik testleri (geçici projede) |
 | `duman-testi.py [--araclar]` | Tüm sürecin hızlı uçtan uca duman testi (git, doğrulama, kapsam, testler, tüm profiller, kurulum yaşam döngüsü, isteğe bağlı gerçek Claude/Codex) |
