@@ -125,6 +125,14 @@ Kütüphane kopyasını elle değiştirmek yerine:
 `arsiv-guncelle.py` bunu `! erişilemiyor` diye raporlar ve `--uygula` durur. `kaynaklar.json`'da o kaydın `tip` alanını
 `"KAYIP"` yap: arşivdeki kopyalar ve registry kayıtları korunur (`kaynak_durumu: kayip`), projeler etkilenmez.
 
+## 3c) Bir kaynak repo GitHub'da taşınırsa / adı değişirse
+`github-skill-listesi.py` bunu **AD DEĞİŞMİŞ** diye raporlar. `kaynaklar.json`'da `repo` yeni adla değiştirilir, eski ad
+`eski_adlar` listesine yazılır; kimlikler ve projelerdeki kurulumlar değişmez. Adımlar: `rehber/09-ad-kimlik-ve-cakisma.md`.
+
+## 3d) Güncelleme hangi projeleri etkiler
+`arsiv-guncelle.py` raporu, değişen kaynaklardan skill kullanan projeleri listeler. Elle: `python3 araclar/proje-kullanimi.py --repo owner/ad`.
+Birleştirmeden sonra o projelerde `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
+
 ## 4) Global skiller
 Global klasörlerdeki skiller (OpenMontage, addyosmani…) **bu sistemle güncellenmez**; onları kuran araç günceller
 (ör. OpenMontage için `/openmontage`). Kütüphane bunları sadece okur ve `globalde` alanında karşılaştırır.

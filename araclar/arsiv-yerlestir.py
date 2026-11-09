@@ -255,6 +255,19 @@ def kaynak_md(k):
     return "\n".join(satirlar) + "\n"
 
 
+def kimlik_devri(kaybeden_eski_kayit, kaybeden_ciplak, devral_isaretli):
+    """Kısmi eklemede aynı ad çakışınca kaybedenin kimliğine ne olur?
+      'yok'      kaybedenin kimliği zaten ad@kaynak: dokunma
+      'ekle'     kaybeden YENİ kayıt ve çıplak adı taşıyor: ad@kaynak olur
+      'korunur'  kaybeden ESKİ kayıt ve çıplak adı taşıyor: kimliği DEĞİŞMEZ (varsayılan; sessiz kayma olmaz)
+      'devret'   aynı durum ama yeni kaynak kaynaklar.json'da "ad_devral" ile işaretli: çıplak ad yeni kazanana geçer"""
+    if not kaybeden_ciplak:
+        return "yok"
+    if not kaybeden_eski_kayit:
+        return "ekle"
+    return "devret" if devral_isaretli else "korunur"
+
+
 def kimlik_ata(gruplar, eski_kaynak):
     """Aynı adlı skiller içinde tercih/alternatif ve kimlik (id) ataması. KARARLIDIR: yeni eklenen bir kaynak, eşit öncelikte
     daha önce kayıtlı olanın yerini alamaz (kimlik kayması ve elle inceleme notlarının kaybı olmasın).
@@ -510,6 +523,24 @@ def main():
     oncelik = {}
     for k in json_oku(KOK / "kaynaklar.json")["repolar"]:
         oncelik[k["repo"]] = min(oncelik.get(k["repo"], 99), k.get("oncelik", 5))
+    # Çıplak ad (kimlik) kendiliğinden el değiştirmez: yeni kaynak öncelikle kazansa bile eski kayıt kimliğini korur
+    # (aynı ad her zaman aynı iş değildir; roller ve `--skill <ad>` sessizce başka skile kaymasın). Bilerek devretmek için
+    # yeni kaynağın kaynaklar.json kaydına "ad_devral": ["<ad>"] yazılır.
+    ad_devral = {k["repo"]: set(k.get("ad_devral", [])) for k in json_oku(KOK / "kaynaklar.json")["repolar"]}
+
+    def kimlik_tasi(k, yeni_id):
+        eski_k = YENI / Path(k["yol"]).relative_to("arsiv")
+        yeni_k = eski_k.parent / yeni_id
+        if eski_k.exists():
+            eski_k.rename(yeni_k)
+        vk = YENI / "_varyantlar" / k["id"]
+        if vk.exists():
+            vk.rename(YENI / "_varyantlar" / yeni_id)
+            k["varyantlar"] = {a: v.replace(f"/_varyantlar/{k['id']}/", f"/_varyantlar/{yeni_id}/")
+                               for a, v in (k.get("varyantlar") or {}).items()}
+        k["id"], k["yol"] = yeni_id, goreli(yeni_k)
+        kullanilan_id.add(yeni_id)
+
     korunan = {s["id"]: s for s in skiller if s["id"] in korunan_indirilmeyen}
     for y in [s for s in skiller if s["id"] not in korunan_indirilmeyen]:
         adaylar = [k for k in korunan.values() if k["ad"] == y["ad"]]
@@ -545,24 +576,22 @@ def main():
         if kazanan["durum"] != "tercih" and not any(x["ad"] == kazanan["ad"] and x["durum"] == "tercih" and x is not kaybeden for x in skiller):
             kazanan["durum"] = "tercih"
         kaybeden["durum"] = "alternatif"
-        if kaybeden["id"] == kaybeden["ad"]:
+        devral = kimlik_devri(kaybeden is rakip, kaybeden["id"] == kaybeden["ad"], y["ad"] in ad_devral.get(y["repo"], ()))
+        if devral == "korunur":
+            print(f"KİMLİK KORUNDU: '{kaybeden['ad']}' çıplak adı {kaybeden['repo']} kaydında kaldı (yeni tercih: {kazanan['id']}). "
+                  f"Devretmek için kaynaklar.json -> {y['repo']} -> \"ad_devral\": [\"{y['ad']}\"]")
+        elif devral in ("ekle", "devret"):
             yeni_id = f"{kaybeden['ad']}@{kisa_kaynak(kaybeden['repo'])}"
             n = 2
             while yeni_id in kullanilan_id:
                 yeni_id = f"{kaybeden['ad']}@{kisa_kaynak(kaybeden['repo'])}-{n}"
                 n += 1
-            eski_k = YENI / Path(kaybeden["yol"]).relative_to("arsiv")
-            yeni_k = eski_k.parent / yeni_id
-            if eski_k.exists():
-                eski_k.rename(yeni_k)
-            vk = YENI / "_varyantlar" / kaybeden["id"]
-            if vk.exists():
-                vk.rename(YENI / "_varyantlar" / yeni_id)
-                kaybeden["varyantlar"] = {a: v.replace(f"/_varyantlar/{kaybeden['id']}/", f"/_varyantlar/{yeni_id}/")
-                                          for a, v in (kaybeden.get("varyantlar") or {}).items()}
-            kaybeden["id"] = yeni_id
-            kaybeden["yol"] = goreli(yeni_k)
-            kullanilan_id.add(yeni_id)
+            cipla = kaybeden["id"]
+            kimlik_tasi(kaybeden, yeni_id)
+            if devral == "devret":  # bilerek devir: çıplak ad yeni kazanana geçer
+                kullanilan_id.discard(cipla)
+                kimlik_tasi(kazanan, cipla)
+                print(f"KİMLİK DEVRİ (ad_devral): '{cipla}' artık {kazanan['repo']} kaydında; eski kayıt: {yeni_id}")
         print(f"ÇAKIŞMA: '{kazanan['ad']}' -> tercih {kazanan['id']} ({kazanan['repo']}), alternatif {kaybeden['id']} ({kaybeden['repo']})")
 
     bilesenler = []

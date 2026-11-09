@@ -434,6 +434,14 @@ def main():
          [(k["repo"], k["id"], k["durum"]) for k in sorted(yeni, key=lambda k: k["repo"])]
          == [(k["repo"], k["id"], k["durum"]) for k in sorted(yer.kimlik_ata({"x": [kayit("aaa/p", "H1"), kayit("zzz/q", "H2")]}, eski3), key=lambda k: k["repo"])])
 
+    # Çıplak ad kendiliğinden el değiştirmez (kısmi eklemede yeni kaynak öncelikle kazansa bile); devir sadece ad_devral ile
+    test("kimlik devri: eski kayıt çıplak adı taşıyorsa ve devir işaretli değilse kimlik KORUNUR",
+         yer.kimlik_devri(True, True, False) == "korunur")
+    test("kimlik devri: ad_devral işaretliyse çıplak ad yeni kazanana DEVREDİLİR", yer.kimlik_devri(True, True, True) == "devret")
+    test("kimlik devri: kaybeden yeni kayıtsa ad@kaynak alır; kimliği zaten ekliyse dokunulmaz",
+         yer.kimlik_devri(False, True, False) == "ekle" and yer.kimlik_devri(True, False, True) == "yok"
+         and yer.kimlik_devri(False, False, False) == "yok")
+
     # Trend: seviye hesabı, değerlendirme bonusu ve öneride sadece konuya uygun skille bonus
     from ortak import trend_durumu
     from datetime import date as _d, timedelta as _td
@@ -464,6 +472,30 @@ def main():
     kod, out = calistir(KOK, "--skill", "gsap-core", "--evet")
     test("güvenlik: kütüphanenin kendisi reddedilir", kod != 0 and "Güvenlik" in out, out)
 
+    # Repo GitHub'da taşınırsa (kaynaklar.json -> eski_adlar) kilitteki eski ad kaynağını bulmaya devam eder
+    import ortak as _ortak
+    _onceki_takma = _ortak._TAKMA_ADLAR
+    _ortak._TAKMA_ADLAR = {"eski-sahip/depo": "yeni-sahip/depo"}
+    try:
+        _reg = [{"id": "x", "ad": "x", "repo": "yeni-sahip/depo", "kaynak_yol": "skills/x", "durum": "tercih"}]
+        test("repo adı değişikliği: kilitteki eski repo adı güncel kaynağı bulur",
+             ekle.kaynak_bul(_reg, {"id": "x", "repo": "Eski-Sahip/Depo", "kaynak_yol": "skills/x"}) is _reg[0]
+             and ekle.kurulum_adi(_reg[0], {"skiller": {"x-eski-ad": {"repo": "eski-sahip/depo", "kaynak_yol": "skills/x"}}}) == "x-eski-ad")
+        test("repo adı değişikliği: başka repodaki aynı adlı skill yerine konmaz",
+             ekle.kaynak_bul(_reg, {"id": "x", "repo": "baska/depo", "kaynak_yol": "skills/x"}) is None)
+    finally:
+        _ortak._TAKMA_ADLAR = _onceki_takma
+    _adas = next((s for s in json_oku(KOK / "registry.json")["skiller"]
+                  if s["durum"] == "tercih" and s["id"] == s["ad"] and not s.get("gizli")
+                  and any(x["ad"] == s["ad"] and x["id"] != s["id"] for x in json_oku(KOK / "registry.json")["skiller"])), None)
+    if _adas:
+        pa = kok / "p-adas"
+        pa.mkdir()
+        kod, out = calistir(pa, "--skill", _adas["id"], "--kuru")
+        test("ön kontrol: aynı adlı başka skill varsa 'ayni-ad' bilgisi kurulan kaynağı ve diğerlerini gösterir",
+             "ayni-ad" in out and _adas["repo"] in out, out[-500:])
+    pk_k = subprocess.run([sys.executable, str(KOK / "araclar" / "proje-kullanimi.py"), "--kontrol"], capture_output=True, text=True)
+    test("proje-kullanimi --kontrol: test projeleri (geçici klasör) raporu etkilemez, rapor güncel", pk_k.returncode == 0, pk_k.stdout)
     pk = subprocess.run([sys.executable, str(KOK / "araclar" / "proje-kullanimi.py"), "--skill", "boyle-bir-skill-yok"],
                         capture_output=True, text=True)
     test("proje-kullanimi: bilinmeyen skill için boş sonuç, rapor yazmaz", pk.returncode == 0 and "kullanılmıyor" in pk.stdout,

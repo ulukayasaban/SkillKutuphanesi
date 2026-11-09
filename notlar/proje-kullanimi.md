@@ -1,6 +1,6 @@
 # Proje kullanımı — hangi proje hangi skili kullanıyor
 
-> `araclar/proje-kullanimi.py` üretir (2026-11-09); elle düzenleme. Kaynak: projelerin `.skill-kutuphanesi/kilit.json` dosyaları. Elle notlar `projeler.json` → `notlar`.
+> `araclar/proje-kullanimi.py` üretir (skill-ekle.py her kurulum/güncelleme/kaldırmadan sonra yeniler); elle düzenleme. Kaynak: projelerin `.skill-kutuphanesi/kilit.json` dosyaları. Elle notlar `projeler.json` → `notlar`.
 > Proje bilgisi yalnızca burada tutulur; skill ve kaynak kayıtlarına proje adı yazılmaz.
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |

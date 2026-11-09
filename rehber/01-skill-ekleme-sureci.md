@@ -25,6 +25,9 @@
 4. **Onay:** HATA varsa işlem yapılmaz. UYARI varsa sen onaylarsın (`--evet`).
 5. **Kurulum:** Önce otomatik yedek alınır. Bir adım hata verirse her şey yedekten geri alınır.
 6. **Doğrulama:** Her kopyanın, bağlantının, agent dosyasının ve Codex yolunun çalıştığı kontrol edilir.
+7. **Kayıt:** Kurulum, güncelleme ve kaldırmadan sonra `notlar/proje-kullanimi.md` kendiliğinden yenilenir (hangi proje hangi skili
+   kullanıyor; `rehber/10-proje-kullanimi.md`). Aynı adlı başka skill varsa ön kontrol `ayni-ad` satırıyla hangi kaynağın kurulduğunu
+   gösterir (`rehber/09-ad-kimlik-ve-cakisma.md`).
 
 ## Örnek 1 — Yeni 3D ürün tanıtım sitesi (Next.js + R3F)
 

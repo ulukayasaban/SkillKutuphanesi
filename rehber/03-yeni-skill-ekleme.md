@@ -51,6 +51,9 @@ python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da ay
    - `dosya_haric`: skill klasörü içindeki göreli yollar için hariç (regex). Kökte duran skilllerde önizleme/rapor/test
      klasörlerini indirmemek için (ör. `["^\\.previews/", "^reports/"]`). Skill'in kullandığı `scripts/`, `references/` alınır.
    - `bagimlilik`: skill çalışmak için başka bir kurulum istiyorsa açıklaması (ön kontrolde UYARI olur).
+   - `ad_devral`: bu kaynağın, başka bir kaydın taşıdığı çıplak adı **bilerek** devralacağı adlar (ör. `["motion-design"]`).
+     Yazılmazsa çıplak ad eski kayıtta kalır, yeni skill `ad@kaynak` olur. Kullanıcı onayı gerekir (`rehber/09`).
+   - `eski_adlar`: repo GitHub'da taşındıysa önceki adları (ör. `["eski-sahip/ad"]`); kurulu projelerin kilidi bununla eşlenir.
 3. **Kategori kuralı gerekiyorsa** `kategori-kurallari.json` → `ad_kurallari` başına ekle (ilk eşleşen kazanır).
    Yeni repoya ait kurala `"repo": "owner/ad"` yaz; başka repodaki aynı adlı skill etkilenmez. Repo geneli için `repo_varsayilan`.
    Ekledikten sonra eski kayıtların kategorisi/durumu değişmiş mi bak (git HEAD'deki registry ile karşılaştır).

@@ -35,6 +35,7 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `baglam-yuku` | UYARI | Rol çok fazla skill/metin önyükleyecek | Opsiyonelleri çıkar |
 | `ortusme` | UYARI | Aynı örtüşme grubundan birden çok birincil ya da aynı skill'in iki sürümü | Birini seç |
 | `alternatif-surum` | UYARI | Tercih edilen değil, alternatif sürüm seçildi | Bilerek seçtiysen sorun yok |
+| `ayni-ad` | BİLGİ | Aynı adda birden fazla skill var; kurulan kimlik, kaynağı ve diğer sürümler listelenir | Yanlış kaynaksa tam kimliği yaz: `--skill <ad@kaynak>` (`rehber/09`) |
 | `codex-uyum` | UYARI | SKILL.md'de Claude'a özgü araç adları var | Codex mantığı uygular; kritik işte test et |
 | `claude-ozel` | UYARI | Konu Claude Code'a özel (plugin/hook) | Codex agent'ına verme |
 | `bagimlilik` | UYARI | Başka bir kurulum gerekir (ör. OpenMontage) | Kurulumun hazır olduğundan emin ol |
@@ -60,6 +61,7 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 ## C. Kurulumdan sonra
 - [ ] `--dogrula` → ✅ (kopya, symlink, SKILL.md adı = klasör adı, agent dosyaları, Codex yolları, yarım kurulum yok)
 - [ ] `--durum` → her skill "güncel"
+- [ ] `notlar/proje-kullanimi.md` yenilendi (araç kendisi yapar; kütüphanede bir sonraki bakımda commit edilir)
 - [ ] Claude'da: projeyi aç, alt-agent listesinde rol görünüyor mu (`/agents`)
 - [ ] Codex'te: `codex exec "list available skills"` proje skillerini gösteriyor mu
 - [ ] Proje git'teyse `.agents/`, `.claude/`, `.codex/`, `.skill-kutuphanesi/kilit.json` commit edilebilir;

@@ -74,7 +74,20 @@ def main():
     korunan_id = {l["name"]: l["id"] for l in tumu if l["name"] in korunan}
     eksik = [r for r in skill_repolari if hedef["name"] not in uyelik.get(r, [])]
     kopya = [(r, uyelik[r]) for r in skill_repolari if len([x for x in uyelik.get(r, []) if x not in korunan]) > 1]
+    # Repo GitHub'da taşınmış/yeniden adlandırılmış olabilir: eski ad yönlendirir, liste yeni adı gösterir. Bu YENİ kaynak değildir.
+    tasinan = {}
+    if yeni and eksik:
+        for r in eksik:
+            c = subprocess.run(["gh", "api", f"repos/{r}", "--jq", ".full_name"], capture_output=True, text=True)
+            guncel = c.stdout.strip()
+            if c.returncode == 0 and guncel and guncel.lower() != r.lower() and guncel in yeni:
+                tasinan[r] = guncel
+        yeni = [r for r in yeni if r not in tasinan.values()]
+        eksik = [r for r in eksik if r not in tasinan]
     print(f"Skill listesi: '{hedef['name']}' ({len(hedeftekiler)} repo) · kütüphanedeki skill kaynağı: {len(skill_repolari)}")
+    if tasinan:
+        print(f"\nAD DEĞİŞMİŞ (yeni kaynak DEĞİL) — {len(tasinan)}:" + "".join(f"\n  ~ {e} -> {y}" for e, y in tasinan.items()))
+        print("  -> kaynaklar.json'da 'repo'yu yeni adla değiştir, eski adı \"eski_adlar\" listesine yaz (rehber/03 → Repo adı değişirse)")
     print(f"\nYENİ (listede var, kütüphanede yok) — {len(yeni)}:" + ("".join(f"\n  + {r}" for r in yeni) or " yok"))
     if yeni:
         print("  -> rehber/03-yeni-skill-ekleme.md (çakışma kontrolü + ücret sınıflandırması dahil)")

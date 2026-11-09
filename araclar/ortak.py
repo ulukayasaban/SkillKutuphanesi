@@ -399,3 +399,25 @@ def trend_durumu(repo: str, trend: dict):
     seviye = "trendde" if (g["son"] == trend["son_tarama"] and taze_tarama) else "yakinda" if gun <= 90 else "gecmiste"
     return {"seviye": seviye, "son": g["son"], "ilk": g["ilk"], "gorulme": g["gorulme"],
             "en_iyi": g.get("en_iyi", {})}
+
+
+_TAKMA_ADLAR = None
+
+
+def repo_takma_adlari():
+    """kaynaklar.json -> repolar[].eski_adlar: {eski ad (küçük harf): güncel ad}.
+    Repo GitHub'da taşınınca/yeniden adlandırılınca kaynaklar.json'da 'repo' güncellenir, eski ad 'eski_adlar'a yazılır.
+    Kurulu projelerin kilit dosyaları eski adı taşımaya devam eder; kaynak eşleşmesi bu haritayla yapılır."""
+    harita = {}
+    for k in (json_oku(KAYNAKLAR, {}) or {}).get("repolar", []):
+        for e in k.get("eski_adlar", []):
+            harita[e.lower()] = k["repo"]
+    return harita
+
+
+def repo_guncel(repo):
+    """Eski (taşınmış) repo adını güncel ada çevirir; bilinmiyorsa aynen döner."""
+    global _TAKMA_ADLAR
+    if _TAKMA_ADLAR is None:
+        _TAKMA_ADLAR = repo_takma_adlari()
+    return _TAKMA_ADLAR.get((repo or "").lower(), repo)

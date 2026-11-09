@@ -9,6 +9,7 @@
 - Kaynaklar.json yıldızlı repoların hepsini kapsıyor mu (--github ile)
 """
 import json
+import re
 import subprocess
 import sys
 from collections import Counter
@@ -248,6 +249,28 @@ def main():
         for repo in r.stdout.split():
             if repo not in tanimli:
                 uyarilar.append(f"yıldızlı ama kaynaklar.json'da yok: {repo}")
+    # Proje bilgisi tek yerde (notlar/proje-kullanimi.md): rapor güncel mi, kayıt dosyalarına proje adı sızmış mı?
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("projekullanimi", Path(__file__).parent / "proje-kullanimi.py")
+        pk = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(pk)
+        ok, _n = pk.guncel_mi()
+        if not ok:
+            uyarilar.append("notlar/proje-kullanimi.md güncel değil (projelerde kurulu skiller değişmiş) -> python3 araclar/proje-kullanimi.py")
+        ayar_p = json_oku(KOK / "projeler.json", {}) or {}
+        adlar_p = {p.name for p in pk.projeleri_bul(ayar_p)} | set(ayar_p.get("notlar", {}))
+        skill_adlari = {s["ad"].lower() for s in skiller} | {s["repo"].split("/")[1].lower() for s in skiller}
+        adlar_p = sorted(a for a in adlar_p if len(a) >= 5 and a.lower() not in skill_adlari)
+        if adlar_p:
+            desen = re.compile(r"(?<![\w-])(" + "|".join(re.escape(a) for a in adlar_p) + r")(?![\w-])")
+            for dosya in ("kaynaklar.json", "registry.json", "ucret-siniflandirma.json", "kategori-kurallari.json"):
+                bulunan = sorted(set(desen.findall((KOK / dosya).read_text(encoding="utf-8"))))
+                if bulunan:
+                    uyarilar.append(f"{dosya}: kayıtta proje adı geçiyor ({', '.join(bulunan)}); değerlendirme projeden bağımsız "
+                                    "yazılır, proje bilgisi projeler.json -> notlar'a taşınmalı (CLAUDE.md kural 6)")
+    except Exception as e:  # noqa: BLE001
+        uyarilar.append(f"proje kullanım denetimi çalışmadı: {e}")
     for u in uyarilar:
         print("UYARI:", u)
     for h in hatalar:

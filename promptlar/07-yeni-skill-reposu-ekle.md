@@ -18,6 +18,12 @@ Yapay Zeka Skillleri listeme yeni repolar ekledim, kontrol et ve kütüphaneye d
    - aynı İŞİ yapan skill var mı (ortusme_grubu); yeni skill birincil mi, tamamlayıcı mı, alternatif mi olmalı,
    - repo içinde aynı adlı birden fazla SKILL.md var mı (araç sürümleri / farklı sürümler),
    - global klasörlerde aynı adlı farklı skill var mı (kurulumda '--kutuphane' ekli ad alır).
+   Aynı adlı her çifti İÇERİK olarak karşılaştır (aynı iş mi, farklı iş mi). Kural: çıplak ad kendiliğinden el değiştirmez;
+   yeni gelen ad@kaynak olur. Ad aynı, iş farklıysa eski kaydı durum_elle ile tercih sabitle ve iki kayda fark notu yaz.
+   Çıplak adı bilerek devretmek gerekiyorsa (kaynaklar.json → ad_devral) önce python3 araclar/proje-kullanimi.py --skill <ad>
+   ve rolleri kontrol et, bana sor. 'AD DEĞİŞMİŞ' denen repo yeni kaynak değildir (rehber/09 → Repo adı değişirse).
+   Değerlendirmeyi yalnızca repo/skill'in kendi niteliğiyle yap (üretici, kapsam, bağımlılık, lisans, ücret, kalite); notlara ve
+   öncelik gerekçesine proje adı ya da "şu projeye uyar" yazma.
    Bulgularını göster ve kararını gerekçeleriyle öner. Onayımı bekle.
 4. Onaylarsam: kaynaklar.json'a ekle (tip, oncelik, gerekirse dahil/haric/bagimlilik), gerekirse kategori-kurallari.json ve
    ucret-siniflandirma.json'a ekle; sonra:

@@ -42,6 +42,12 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
   yıldız listesi/GraphQL ve trending sayfası okunamayan ortamlarda da çalışır). Adaylar onaysız eklenmez; karar `--karar`.
 - Konu takibi: `python3 araclar/konu-takip.py` (e-ticaret/Etsy, mobil… `kaynaklar.json` → `takip_konulari`) → `notlar/konu-takip.md`.
   Kullanıcı bir alan için "takip et" derse oraya konu ekle. Adaylar onaysız eklenmez; reddedileni `--karar` ile kaydet.
+- Proje kullanımı: hangi projenin hangi skili kullandığı `notlar/proje-kullanimi.md`'de (kaynak: projelerin `kilit.json`'u; elle
+  notlar `projeler.json`). `skill-ekle.py` her değişiklikten sonra yeniler; elle: `python3 araclar/proje-kullanimi.py`
+  (`--skill <kimlik>` / `--repo owner/ad`: silmeden, tercih değiştirmeden, ad devretmeden önce). Ayrıntı: `rehber/10-proje-kullanimi.md`.
+- Ad ve çakışma: çıplak ad kendiliğinden el değiştirmez (yeni gelen `ad@kaynak` olur); aynı ad farklı işse eski kayıt `durum_elle`
+  ile tercih sabitlenir; bilerek devir `kaynaklar.json` → `ad_devral` ve kullanıcı onayıyla. Repo GitHub'da taşınırsa `repo`
+  güncellenir, eski ad `eski_adlar`'a yazılır. Ayrıntı: `rehber/09-ad-kimlik-ve-cakisma.md`.
 - Eski sürümler: bilerek çıkarılan skiller `kaynaklar.json` → `arsivden_cikarilanlar`.
 - Hazır promptlar: `promptlar/` (kullanıcıya proje başlangıcı, ekleme, güncelleme, bakım için).
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.

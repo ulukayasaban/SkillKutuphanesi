@@ -75,8 +75,30 @@ def rapor():
             print(f"    {f}")
     if not degisen:
         print("Tüm kaynaklar güncel.")
+    else:
+        etkilenen_projeler(degisen)
     subprocess.run([sys.executable, str(KOK / "araclar" / "dogrula.py"), "--github"], cwd=KOK)
     return degisen, sorunlu, ayrinti
+
+
+def etkilenen_projeler(repolar):
+    """Değişen kaynaklardan skill kullanan projeleri yazar (proje bilgisinin tek yeri: araclar/proje-kullanimi.py)."""
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("projekullanimi", Path(__file__).parent / "proje-kullanimi.py")
+        pk = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(pk)
+        kullanan = pk.kullanan_projeler(repolar=repolar)
+    except Exception as e:  # noqa: BLE001
+        print(f"(etkilenen projeler listelenemedi: {e})")
+        return {}
+    if kullanan:
+        print("Bu kaynaklardan skill kullanan projeler (güncellemeden sonra: skill-ekle.py <proje> --durum / --guncelle --kuru):")
+        for proje, adlar in sorted(kullanan.items()):
+            print(f"  {proje}: {', '.join(adlar)}")
+    else:
+        print("Değişen kaynaklardan skill kullanan kurulu proje yok.")
+    return kullanan
 
 
 def gecmis_yaz(dal, ayrinti, onceki):

@@ -10,6 +10,7 @@ Bu projedeki kütüphane skillerinin durumunu kontrol et ve gerekiyorsa güncell
 4. Raporu göster: hangi skill güncellenecek, 'elle-degistirilmis' olan var mı (onlar EZİLMEZ), 'kaynak-yok' olan var mı,
    'inceleme-eskidi' (yeniden incelenecek) olan var mı. Onayımı bekle.
 5. Onaylarsam: --guncelle --evet, sonra --dogrula. Bittiğinde "oturumu yeniden aç" diye hatırlat.
+   (Araç kütüphanedeki notlar/proje-kullanimi.md raporunu kendisi yeniler; raporda 'ayni-ad' satırı varsa kurulan kaynağı bana söyle.)
 ```
 
 ## 5b — Skill kaldır

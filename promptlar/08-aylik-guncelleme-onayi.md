@@ -15,5 +15,7 @@ Skill kütüphanemin aylık güncelleme dalını incele. ~/Documents/SkillKutuph
      (kontroller geçmezse master kendiliğinden geri döner; sonucu bana bildir)
      Ardından 'yeniden-incelenecek' skilleri rehber/07-kategori-inceleme.md ile incele ve kaydet.
    - Reddedersem: git branch -D <dal>
-5. Son olarak projelerim için hatırlat: skill-ekle.py <proje> --durum / --guncelle --kuru (bkz. promptlar/05).
+5. Son olarak etkilenen projeleri listele: python3 araclar/proje-kullanimi.py --repo <güncellenen her kaynak>
+   ve onlar için hatırlat: skill-ekle.py <proje> --durum / --guncelle --kuru (bkz. promptlar/05).
+   Çıktıda 'KİMLİK KORUNDU' ya da 'AD DEĞİŞMİŞ' satırı varsa bana ayrıca göster (rehber/09-ad-kimlik-ve-cakisma.md).
 ```

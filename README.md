@@ -79,6 +79,8 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [prompt
 6. [Değerlendirme ve geliştirici bilgisi](rehber/06-degerlendirme-ve-gelistirici.md)
 7. [Kategori inceleme süreci](rehber/07-kategori-inceleme.md)
 8. [Test süreci](rehber/08-test-sureci.md): otomatik kontroller, gerçek agent testi, Claude hesabıyla ad çakışması
+9. [Ad, kimlik ve çakışma kuralları](rehber/09-ad-kimlik-ve-cakisma.md): çıplak ad el değiştirmez, aynı ad farklı iş, ad devri, repo adı değişirse
+10. [Proje kullanımı](rehber/10-proje-kullanimi.md): hangi proje hangi skili kullanıyor; proje bilgisinin tek yeri
 
 ## Alanlar
 `a-tasarim-onyuz` · `b-yazilim-gelistirme` · `c-dokuman-icerik` · `d-ai-otomasyon` · `g-video-ses-medya` · `h-is-alanlari` (e-ticaret/pazaryeri dahil) · `i-bilim-muhendislik`

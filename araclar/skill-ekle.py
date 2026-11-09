@@ -45,7 +45,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KOK, REGISTRY, hesap_skilleri, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
-                   klasor_hash, onarim_izi, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula)
+                   klasor_hash, onarim_izi, repo_guncel, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula)
 
 ROLLER = KOK / "roller"
 PROFILLER = KOK / "profiller"
@@ -143,10 +143,11 @@ def bul(skiller, anahtar):
 def kaynak_bul(skiller, k):
     """Kurulu bir skill'i KAYNAĞINA göre bul (repo + repo içi yol). id değişse bile doğru skill bulunur;
     kaynak artık yoksa None (başka bir repo'nun aynı adlı skill'i ASLA yerine konmaz)."""
+    repo = repo_guncel(k.get("repo"))  # repo GitHub'da taşındıysa (kaynaklar.json -> eski_adlar) kilitteki eski ad da eşleşir
     if "kaynak_yol" in k:
-        return next((s for s in skiller if s["repo"] == k["repo"] and s["kaynak_yol"] == k["kaynak_yol"]), None)
+        return next((s for s in skiller if s["repo"] == repo and s["kaynak_yol"] == k["kaynak_yol"]), None)
     s = next((s for s in skiller if s["id"] == k["id"]), None)  # eski kilit: sadece aynı repodan kabul et
-    return s if s and s["repo"] == k.get("repo", s["repo"]) else None
+    return s if s and s["repo"] == (repo or s["repo"]) else None
 
 
 def canli_global(s):
@@ -161,7 +162,7 @@ def kurulum_adi(s, kilit=None):
     - Global klasörde aynı adlı FARKLI içerik varsa (Claude'da kişisel skill proje skill'ini ezer): <ad>--kutuphane."""
     if kilit:
         for ad, k in kilit["skiller"].items():
-            if k.get("repo") == s["repo"] and k.get("kaynak_yol", None) == s["kaynak_yol"]:
+            if repo_guncel(k.get("repo")) == s["repo"] and k.get("kaynak_yol", None) == s["kaynak_yol"]:
                 return ad
     ad = s["ad"] if ROL_ADI.match(s["ad"]) else (re.sub(r"[^a-z0-9-]+", "-", s["ad"].lower()).strip("-")[:64] or "skill")
     if "@" in s["id"]:
@@ -748,7 +749,7 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
                 rapor.ekle("HATA", "projede-kendi-skillin",
                            f"{yer.relative_to(proje)} zaten var ve kütüphaneden gelmemiş; üzerine yazılmaz "
                            f"(--zorla ile yedeklenip değiştirilir)")
-        if onceki and (onceki.get("repo"), onceki.get("kaynak_yol", s["kaynak_yol"])) != (s["repo"], s["kaynak_yol"]):
+        if onceki and (repo_guncel(onceki.get("repo")), onceki.get("kaynak_yol", s["kaynak_yol"])) != (s["repo"], s["kaynak_yol"]):
             rapor.ekle("HATA", "farkli-kaynak", f"{ad} projede {onceki.get('repo')}:{onceki.get('kaynak_yol', '?')} kaynağından "
                        f"kurulu; {s['repo']}:{s['kaynak_yol']} ile değiştirilmez (önce --kaldir)")
         canli = canli_global(s)
@@ -777,6 +778,11 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
             rapor.ekle("UYARI", "claude-ozel", f"{ad}: konu Claude Code'a özel; Codex'te sadece kavram referansı")
         if s.get("varyantlar"):
             rapor.ekle("BİLGİ", "arac-surumu", f"{ad}: " + ", ".join(s["varyantlar"]) + " için ayrı uyarlanmış sürüm kurulacak")
+        adaslar = [x for x in skiller if x["ad"] == s["ad"] and x["id"] != s["id"]]
+        if adaslar:  # aynı ad her zaman aynı iş değildir: hangi kaynağın kurulduğu ve diğerleri açıkça görünsün
+            rapor.ekle("BİLGİ", "ayni-ad", f"'{s['ad']}' adında {len(adaslar) + 1} skill var; kurulan: {s['id']} ({s['repo']}, "
+                       f"{s['durum']}). Diğerleri: " + ", ".join(f"{x['id']} ({x['repo']})" for x in adaslar[:6])
+                       + ". Başka sürüm için tam kimliği yaz (--skill <ad@kaynak>)")
         if s["durum"] == "alternatif":
             tercih = next((x for x in skiller if x["ad"] == s["ad"] and x["durum"] == "tercih"), None)
             rapor.ekle("UYARI", "alternatif-surum", f"{s['id']} alternatif sürüm; tercih edilen: {tercih['id'] if tercih else '?'}")
@@ -1406,5 +1412,24 @@ def main():
     return ekle(a, proje, skiller)
 
 
+def proje_raporunu_yenile():
+    """Projede değişiklik yapan işlemden sonra notlar/proje-kullanimi.md'yi yeniler (proje bilgisinin tek yeri).
+    Sadece projeler.json'daki tarama köklerinde/ek_projeler'de olan projeler rapora girer; geçici klasörler girmez."""
+    salt_okur = {"--kuru", "--durum", "--dogrula", "--oner", "--listele", "--ara", "--yedekler"}
+    if salt_okur & set(sys.argv):
+        return
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("projekullanimi", Path(__file__).parent / "proje-kullanimi.py")
+        pk = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(pk)
+        if pk.rapor_guncelle():
+            print(f"Proje kullanım raporu yenilendi: {pk.RAPOR.relative_to(KOK)}")
+    except Exception as e:  # rapor yan üründür; kurulumu asla bozmaz
+        print(f"UYARI: proje kullanım raporu yenilenemedi ({e}); elle: python3 araclar/proje-kullanimi.py")
+
+
 if __name__ == "__main__":
-    sys.exit(main() or 0)
+    kod = main() or 0
+    proje_raporunu_yenile()
+    sys.exit(kod)

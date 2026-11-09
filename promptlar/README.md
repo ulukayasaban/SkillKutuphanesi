@@ -17,6 +17,7 @@ Codex Desktop'ta **proje klasöründe** (kütüphane bakımı için `~/Documents
 | 08 | [08-aylik-guncelleme-onayi.md](08-aylik-guncelleme-onayi.md) | Aylık güncelleme dalını incelemek ve birleştirmek / reddetmek |
 | 09 | [09-proje-tasindi-veya-bozuldu.md](09-proje-tasindi-veya-bozuldu.md) | Proje klasörü taşındı, skiller görünmüyor, bir şeyler bozuldu |
 | 10 | [10-kutuphane-saglik-kontrolu.md](10-kutuphane-saglik-kontrolu.md) | Kütüphanenin tamamını kontrol ettirmek (duman testi) |
+| 12 | [12-proje-kullanimi-ve-etki.md](12-proje-kullanimi-ve-etki.md) | Bir skili/kaynağı hangi projeler kullanıyor; silmeden, tercih ya da ad değiştirmeden önce etkiyi görmek |
 | 11 | [11-guvenilir-skill-secimi-mevcut-proje.md](11-guvenilir-skill-secimi-mevcut-proje.md) | Projesini bilen başka bir agent'a SkillKutuphanesi'nden (salt okunur) güvenilir, çakışmasız skill seçtirip projeye kurdurmak; sonraki seferlerde aynı düzende devam |
 
 **Değişmeyen kurallar (her promptta geçerli):**
@@ -25,5 +26,7 @@ Codex Desktop'ta **proje klasöründe** (kütüphane bakımı için `~/Documents
 - Önce `--kuru` (rapor), sonra senin onayın, sonra `--evet`.
 - **Çakışma:** aynı adlı skill, aynı işi yapan iki birincil skill, global'de farklı sürümü olan skill ve kendi dosyaların raporda
   HATA/UYARI olarak görünür; çözülmeden kurulum yapılmaz.
+- **Ad:** çıplak ad kendiliğinden el değiştirmez; aynı adlı başka skill varsa rapor `ayni-ad` satırıyla kurulan kaynağı gösterir
+  (`rehber/09-ad-kimlik-ve-cakisma.md`). Kayıtlara proje adı yazılmaz; proje bilgisi `notlar/proje-kullanimi.md`'dedir.
 - **Ücret:** ücretli skiller raporda `ucretli` UYARISI ile görünür; ücretsiz yol her zaman önce. Liste: `notlar/ucretli-skiller.md`.
 - Skill/agent kurduktan sonra Codex/Claude oturumunu **yeniden aç** (skiller oturum başında okunur).
