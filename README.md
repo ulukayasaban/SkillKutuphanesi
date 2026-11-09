@@ -99,6 +99,6 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [prompt
 | `konu-takip.py [--konu X] [--rapor] [--karar repo karar neden]` | Takip edilen alanlarda (e-ticaret/Etsy, mobil…) GitHub'da yeni skill repolarını arar → `notlar/konu-takip.md`; değerlendirilenler tekrar gösterilmez |
 | `github-trend.py [--rapor] [--aday]` | GitHub Trending takibi: trend'e giren kaynaklar (değerlendirme +10/+6/+2, öneride öne alma), trend'deki aday skill repoları → `notlar/github-trend.md` |
 | `proje-kullanimi.py [--skill id] [--repo owner/ad]` | Projelerin `kilit.json` dosyalarını okur → `notlar/proje-kullanimi.md`; bir skili/kaynağı kullanan projeleri listeler (silmeden, tercih değiştirmeden önce) |
-| `github-skill-listesi.py [--duzenle]` | GitHub 'Yapay Zeka Skillleri' listesi: kütüphanenin tüm kaynakları tek listede (başka skill listesi yok); yeni/kopya/eksik raporu, `--duzenle` yıldızlar ve taşır |
+| `github-skill-listesi.py [--duzenle] [--ekle owner/ad …]` | GitHub 'Yapay Zeka Skillleri' listesi: kütüphanenin tüm kaynakları tek listede (başka skill listesi yok); yeni/kopya/eksik/adı değişen raporu, `--duzenle` yıldızlar ve taşır, `--ekle` kütüphanede olmayan repoyu yalnızca listeye koyar (kütüphaneye eklemez) |
 | `test.py` | Uçtan uca güvenlik testleri (geçici projede) |
 | `duman-testi.py [--araclar]` | Tüm sürecin hızlı uçtan uca duman testi (git, doğrulama, kapsam, testler, tüm profiller, kurulum yaşam döngüsü, isteğe bağlı gerçek Claude/Codex) |

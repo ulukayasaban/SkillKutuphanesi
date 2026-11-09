@@ -8,6 +8,9 @@ referans kütüphaneleri T5/T6) TEK listede ('Yapay Zeka Skillleri') durur; baş
                                                      #  - birden fazla listede duran skill repoları (kopya)
   python3 araclar/github-skill-listesi.py --duzenle  # skill repolarını sadece skill listesine taşır (başka listelerden çıkarır).
                                                      # GitHub oturumunda 'user' izni gerekir:  gh auth refresh -h github.com -s user
+  python3 araclar/github-skill-listesi.py --ekle owner/ad [owner/ad …]
+                                                     # kütüphanede OLMAYAN bir repoyu yıldızlar ve skill listesine koyar (korunan
+                                                     # liste üyelikleri korunur). Kütüphaneye EKLEMEZ: repo sonraki raporda YENİ görünür.
 Skill listesinin adı/slug'ı kaynaklar.json -> "github_skill_listesi".
 Yıldızlar kaldırılmaz. Kütüphanede olmayan repolar (kişisel yıldızlar) bulundukları listelerde kalır.
 """
@@ -98,6 +101,27 @@ def main():
              for l in tumu if l is not hedef]
     print(f"Diğer listeler — {len(diger)}:" + (" " + ", ".join(diger) if diger else " yok"))
 
+    if "--ekle" in sys.argv:
+        hata = 0
+        for r in [a for a in sys.argv[sys.argv.index("--ekle") + 1:] if "/" in a and not a.startswith("-")]:
+            if hedef["name"] in uyelik.get(r.lower(), []):
+                print(f"  = {r} zaten '{hedef['name']}' listesinde")
+                continue
+            c = subprocess.run(["gh", "api", f"repos/{r}", "--jq", "{id:.node_id,ad:.full_name}"], capture_output=True, text=True)
+            if c.returncode != 0:
+                hata += 1
+                print(f"  ✗ {r}: repo bulunamadı")
+                continue
+            bilgi = json.loads(c.stdout)
+            subprocess.run(["gh", "api", "-X", "PUT", f"user/starred/{bilgi['ad']}"], capture_output=True)
+            try:
+                gql("mutation($item:ID!,$l:[ID!]!){updateUserListsForItem(input:{itemId:$item,listIds:$l}){lists{name}}}",
+                    item=bilgi["id"], l=[hedef["id"]] + [korunan_id[n] for n in uyelik.get(r.lower(), []) if n in korunan_id])
+                print(f"  ✓ {bilgi['ad']} -> '{hedef['name']}' (kütüphaneye eklenmedi; rapor YENİ diye gösterecek)")
+            except RuntimeError as e:
+                hata += 1
+                print(f"  ✗ {r}: {str(e)[:200]}")
+        return 1 if hata else 0
     if "--duzenle" not in sys.argv:
         if eksik or kopya:
             print("\nDüzenlemek için: python3 araclar/github-skill-listesi.py --duzenle")
