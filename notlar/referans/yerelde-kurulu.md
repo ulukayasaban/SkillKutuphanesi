@@ -8,7 +8,7 @@ Yeni projeler skillerini sadece bu kütüphaneden alır. Araçlar bu klasörleri
 | `~/.claude/skills` | ~139 skill: OpenMontage (video, hyperframes, gsap-*, threejs-*, design-dna…) + addyosmani/agent-skills | Tüm Claude Code oturumları |
 | `~/.agents/skills` | ~55 skill: addyosmani/agent-skills + OpenMontage video | Codex (kullanıcı seviyesi) |
 | `~/.codex/skills` | ~28 skill: OpenMontage video | Codex |
-| `~/.openmontage` | calesthio/OpenMontage kurulumu (91 skill kaynağı) | OpenMontage komutları |
+| `~/.openmontage` | OpenMontageInc/OpenMontage kurulumu (91 skill kaynağı) | OpenMontage komutları |
 
 OpenMontage skillerinin bir kopyası kütüphanede de var (`g-video-ses-medya` ve diğer kategoriler) ki yeni projeler onları
 buradan alabilsin. Bu skillerin komutları yine `~/.openmontage` kurulumundan çalışır (ön kontrolde `bagimlilik` uyarısı).

@@ -9,4 +9,4 @@
 - **Geliştirici:** vercel-labs (kurum)
 - **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
-- **Birebir aynısı şuralarda da var:** calesthio/OpenMontage:.agents/skills/web-design-guidelines
+- **Birebir aynısı şuralarda da var:** OpenMontageInc/OpenMontage:.agents/skills/web-design-guidelines

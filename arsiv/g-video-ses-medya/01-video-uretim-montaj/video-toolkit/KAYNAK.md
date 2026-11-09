@@ -2,7 +2,7 @@
 
 > Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
 
-- **Kaynak repo:** https://github.com/calesthio/OpenMontage
+- **Kaynak repo:** https://github.com/OpenMontageInc/OpenMontage
 - **Repo içindeki yol:** `.agents/skills/video-toolkit`
 - **Commit:** `195eab24478dc9363326aec437aefc3701635ddf`
 - **Lisans:** AGPL-3.0
@@ -10,4 +10,4 @@
 - **Arşive alınma:** 2026-11-02
 - **Durum:** tercih
 - **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **Birebir aynısı şuralarda da var:** calesthio/OpenMontage:.claude/skills/video_toolkit
+- **Birebir aynısı şuralarda da var:** OpenMontageInc/OpenMontage:.claude/skills/video_toolkit

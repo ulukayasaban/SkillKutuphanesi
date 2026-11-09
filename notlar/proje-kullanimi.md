@@ -17,7 +17,7 @@
 |---|---|---|---|---|
 | `captions-overlay--kutuphane` (kimlik `captions-overlay`) | heygen-com/hyperframes | `f8309b3` | — |  |
 | `cut-the-curve--kutuphane` (kimlik `cut-the-curve`) | heygen-com/hyperframes | `f8309b3` | — |  |
-| `d3-viz` | calesthio/OpenMontage | `195eab2` | — |  |
+| `d3-viz` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `de-ai-ify` | heyitsnoah/claudesidian | `6c56f35` | — |  |
 | `design-taste-frontend` | Leonxlnx/taste-skill | `12af471` | — |  |
 | `high-end-visual-design` | nexu-io/open-design | `987b247` | — |  |
@@ -26,15 +26,15 @@
 | `hyperframes-registry--kutuphane` (kimlik `hyperframes-registry`) | heygen-com/hyperframes | `f8309b3` | — |  |
 | `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
-| `manim-composer` | calesthio/OpenMontage | `195eab2` | — |  |
-| `manimce-best-practices` | calesthio/OpenMontage | `195eab2` | — |  |
+| `manim-composer` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
+| `manimce-best-practices` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `motion-design--kutuphane` (kimlik `motion-design`) | nexu-io/open-design | `12d970e` | — | kütüphanede şimdi `motion-design@nexu-io` |
 | `motion-doctrine--kutuphane` (kimlik `motion-doctrine`) | heygen-com/hyperframes | `f8309b3` | — |  |
-| `pose-library-design` | calesthio/OpenMontage | `195eab2` | — |  |
+| `pose-library-design` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `seam-craft--kutuphane` (kimlik `seam-craft`) | heygen-com/hyperframes | `f8309b3` | — |  |
-| `svg-character-animation` | calesthio/OpenMontage | `195eab2` | — |  |
-| `visual-style` | calesthio/OpenMontage | `195eab2` | — |  |
+| `svg-character-animation` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
+| `visual-style` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `yt-package` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-retention` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-script` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
@@ -73,19 +73,19 @@ Profil: — · Roller: ui-tasarimci, agent-orkestra
 | `draft-response` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `etsy-seller` | moiz-za/etsy-seller-seo-system | `0204bbc` | — |  |
 | `etsy-seo` | nexscope-ai/eCommerce-Skills | `ee0fb29` | — |  |
-| `ffmpeg` | calesthio/OpenMontage | `c806645` | — |  |
+| `ffmpeg` | OpenMontageInc/OpenMontage | `c806645` | — |  |
 | `impeccable` | pbakaus/impeccable | `e89e3ad` | — |  |
 | `knowledge-synthesis` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `performance-report` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `planning-and-task-breakdown` | addyosmani/agent-skills | `aeac41d` | — |  |
-| `playwright-recording` | calesthio/OpenMontage | `c806645` | — |  |
+| `playwright-recording` | OpenMontageInc/OpenMontage | `c806645` | — |  |
 | `product-brainstorming` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `search-strategy` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `seo-audit` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `session-report` | anthropics/claude-plugins-official | `af59ee3` | — |  |
 | `statistical-analysis` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `ui-ux-pro-max` | nextlevelbuilder/ui-ux-pro-max-skill | `3a13158` | — |  |
-| `video-edit` | calesthio/OpenMontage | `c806645` | — |  |
+| `video-edit` | OpenMontageInc/OpenMontage | `c806645` | — |  |
 | `webapp-testing` | anthropics/skills | `dbd4588` | — |  |
 
 Kütüphane dışı, elle kurulan: `copywriting`, `humanizer`, `marketing-psychology`, `model-aware-image-prompt-engineer`, `visual-qa`

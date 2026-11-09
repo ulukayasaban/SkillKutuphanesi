@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, frontmatter, frontmatter_onar,  # noqa: E402
-                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR)
+                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, repo_guncel)
 
 
 def tetikleme_denetimi(skiller, hatalar, uyarilar):
@@ -204,7 +204,7 @@ def main():
                 for x in r["cekirdek"] + r.get("opsiyonel", []):
                     simdi = ids.get(x) or next((y for y in skiller if y["ad"] == x and y["durum"] == "tercih"), None)
                     once = eski_reg.get(x) or eski_tercih.get(x)
-                    if simdi and once and simdi["repo"] != once:
+                    if simdi and once and simdi["repo"] != repo_guncel(once):  # repo taşınması (eski_adlar) kaynak değişimi değildir
                         uyarilar.append(f"rol {f.stem}: '{x}' kaynağı değişti ({once} -> {simdi['repo']}); rolün istediği sürüm bu mu? "
                                         "(sabitlemek için registry.json'da durum_elle)")
         except (ValueError, KeyError):

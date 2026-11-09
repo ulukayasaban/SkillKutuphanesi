@@ -111,7 +111,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 25 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tailwind-design-system  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### tailwind-design-system  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** Tailwind CSS v4 ile (CSS-first `@theme`, OKLCH renk) üretim kalitesinde tasarım sistemi kurma tarifi: semantik token'lar, CVA ile bileşen varyantları, React 19 bileşik bileşenler, form bileşenleri, responsive grid, native CSS animasyonlar, @custom-variant ile koyu mod ve v3→v4 geçiş kontrol listesi.
 - **Ne zaman:** Tailwind v4 projesinde bileşen kitaplığı/token sistemi yazarken veya v3'ten v4'e geçerken; shadcn tarzı (CVA + Radix Slot) bileşenler gerekince. · **Ne zaman değil:** Tailwind kullanmayan projelerde değil; Tailwind v3 projesinde (yöntemler farklı) uygun değil. Yalnız kısa ilke özeti istiyorsan tailwind-patterns; shadcn bileşen kurulumu için ui-styling.

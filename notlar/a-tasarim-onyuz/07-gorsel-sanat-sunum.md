@@ -68,7 +68,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 9 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### d3-viz  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### d3-viz  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** d3.js ile özel, etkileşimli veri görselleştirmeleri (ağ/grafik, hiyerarşi, coğrafi harita, geçişli grafikler) kurmayı anlatır; React ve vanilla JS şablonları (chart-template.jsx, interactive-template.jsx), renk şeması ve ölçek başvuruları ile örnek veri içerir. Hazır grafik kütüphanesinin yetmediği özgün işler içindir.
 - **Ne zaman:** Standart grafik kütüphanesinde olmayan özel SVG görselleştirme, force-directed ağ, zoom/brush etkileşimi, haritalar. · **Ne zaman değil:** Hızlı standart grafik/dashboard (dataviz skilli veya grafik kütüphanesi); 3D görselleştirme (threejs-*).

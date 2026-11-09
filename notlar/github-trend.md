@@ -25,7 +25,7 @@ Trend'e giren kaynakların skilleri değerlendirmede bonus alır (trendde +10, s
 | anthropics/knowledge-work-plugins | trendde | 195 | 2026-11-09 | 2026-10-22 | 3 | bu ay +7947 (#4 python) |
 | anthropics/skills | trendde | 19 | 2026-11-09 | 2026-11-02 | 2 | bugün +792 (#7 tümü), bu hafta +3169 (#4 tümü), bu ay +9990 (#18 python) |
 | blader/humanizer | trendde | 1 | 2026-11-09 | 2026-11-02 | 2 | bu hafta +3118 (#17 tümü) |
-| calesthio/OpenMontage | yakinda | 72 | 2026-11-02 | 2026-10-22 | 2 |  |
+| OpenMontageInc/OpenMontage | yakinda | 72 | 2026-11-02 | 2026-10-22 | 2 |  |
 | cloudflare/security-audit-skill | trendde | 1 | 2026-11-09 | 2026-10-22 | 3 | bugün +1376 (#2 javascript), bu hafta +10600 (#1 javascript), bu ay +40289 (#3 tümü) |
 | cloudflare/skills | yakinda | 19 | 2026-11-02 | 2026-10-22 | 2 |  |
 | coreyhaines31/marketingskills | trendde | 53 | 2026-11-09 | 2026-11-02 | 2 | bu hafta +1446 (#7 javascript) |

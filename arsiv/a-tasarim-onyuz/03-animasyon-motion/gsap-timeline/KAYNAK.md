@@ -9,4 +9,4 @@
 - **Geliştirici:** greensock (kurum)
 - **Arşive alınma:** 2026-10-21
 - **Durum:** tercih
-- **Birebir aynısı şuralarda da var:** calesthio/OpenMontage:.agents/skills/gsap-timeline
+- **Birebir aynısı şuralarda da var:** OpenMontageInc/OpenMontage:.agents/skills/gsap-timeline

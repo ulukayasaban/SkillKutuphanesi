@@ -2,7 +2,7 @@
 
 > Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
 
-- **Kaynak repo:** https://github.com/calesthio/OpenMontage
+- **Kaynak repo:** https://github.com/OpenMontageInc/OpenMontage
 - **Repo içindeki yol:** `.claude/skills/ffmpeg`
 - **Commit:** `195eab24478dc9363326aec437aefc3701635ddf`
 - **Lisans:** AGPL-3.0

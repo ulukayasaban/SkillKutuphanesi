@@ -52,7 +52,7 @@ Kapsam artık **yıldızladığın 49 reponun tamamı** (2 listedeki 39 repo + l
 | **T3 — Repo-içi geliştirici skilleri** | next.js `.agents/` (21), react (14), playwright `.claude/` (6), lighthouse (3), motion (2) — o repoya katkı yapanlar için | Arşivlenmez; katalogda tek satır not |
 | **T4 — Entegrasyon kataloğu** | Composio `composio-skills/` (832 uygulama: Gmail, Slack, Notion… Composio API anahtarı gerektirir) | Arşivlenir (~8 MB) ama "sadece-arşiv" katmanı; varsayılan listede görünmez, `--entegrasyon <uygulama>` ile aranır |
 | **T5 — Kütüphane / araç (skill yok)** | three.js, GSAP, motion, lenis, r3f, drei, tailwind, lottie, lighthouse, axe-core, playwright, FFmpeg, fontsource, capsize, open-props, ogl, partytown, size-limit, number-flow, r3f-scroll-rig, react-three-a11y, figma/code-connect, pixeljury, awesome-nextjs, the-delegation, SanalFuar, tweetinvi | Kod indirilmez; `notlar/kutuphaneler.md` referans notu + eşleştiği skill |
-| **Zaten kurulu** | calesthio/OpenMontage (91 skill, `~/.openmontage`) | Kopyalanmaz; katalogda "yerelde kurulu" olarak listelenir, yol gösterilir |
+| **Zaten kurulu** | OpenMontageInc/OpenMontage (91 skill, `~/.openmontage`) | Kopyalanmaz; katalogda "yerelde kurulu" olarak listelenir, yol gösterilir |
 
 ### Mevcut kurulumla örtüşme (dokunulmayacak)
 - `~/.claude/skills` → 139 skill (OpenMontage + addyosmani'nin 25'i + GSAP/threejs)

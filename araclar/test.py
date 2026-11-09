@@ -373,7 +373,7 @@ def main():
         test("emekli skill için ön kontrol 'kaynakta-kaldirildi' uyarısı verir", "kaynakta-kaldirildi" in out and not any(p3.iterdir()), out)
 
     # 'emekli' rolündeki (eski/yerine geçeni olan) skill ön kontrolde uyarı verir
-    om_eski = next((s for s in reg if s.get("ortusme_rolu") == "emekli" and s["repo"] == "calesthio/OpenMontage" and s["durum"] == "tercih"), None)
+    om_eski = next((s for s in reg if s.get("ortusme_rolu") == "emekli" and s["repo"] == "OpenMontageInc/OpenMontage" and s["durum"] == "tercih"), None)
     if om_eski:
         p4 = kok / "proje-emekli-om"
         p4.mkdir()

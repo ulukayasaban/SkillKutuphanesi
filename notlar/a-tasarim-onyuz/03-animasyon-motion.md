@@ -57,7 +57,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### framer-motion  ·  calesthio/OpenMontage @ 195eab2  ·  puan 82 (A)
+### framer-motion  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 82 (A)
 
 - **Ne yapar:** Disney'in 12 animasyon prensibini (squash/stretch, anticipation, staging...) Framer Motion kod parçalarıyla örnekler. Kurulum, reduced-motion veya performans içermez; prensip-örnek listesidir.
 - **Ne zaman:** Animasyona 'Disney ilkeleri' çerçevesi verilmek istendiğinde fikir ve parça kaynağı. · **Ne zaman değil:** Framer Motion API'sini öğrenmek veya üretim kodu yazmak (motion-framer).
@@ -130,7 +130,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmî. Dikkat: metin 'examples/vue/' ve 'examples/nuxt/' klasörlerine atıf yapıyor, ama arşivde yalnız SKILL.md var; bu örnekler yok. OpenMontage kopyası (@calesthio) Nuxt bölümü olmayan eski halidir.
 
-### gsap-frameworks@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 90 (A)
+### gsap-frameworks@calesthio  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 90 (A)
 
 - **Ne yapar:** gsap-frameworks'ün OpenMontage'daki eski kopyası: Vue ve Svelte bölümleri aynı, Nuxt 4 bölümü ve örnek klasörü atıfları yok.
 - **Ne zaman:** Yalnız OpenMontage uyumu gerekirse. · **Ne zaman değil:** Her durumda greensock/gsap-skills sürümü tercih edilir.
@@ -183,7 +183,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 21 KB (SKILL.md 21.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî ve güncel; aşağıdaki OpenMontage kopyasında olmayan 'Licensing & Install' bölümü eski Club GSAP / .npmrc token yönlendirmesini engelliyor. 21 KB. Dikkat: büyük dosya, çekirdeğe koyma.
 
-### gsap-plugins@calesthio  ·  calesthio/OpenMontage @ 195eab2  ·  puan 97 (A)
+### gsap-plugins@calesthio  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 97 (A)
 
 - **Ne yapar:** gsap-plugins'in OpenMontage'daki eski kopyası. İçerik aynı eklenti kataloğu; tek fark yeni sürümdeki 'Licensing & Install' (tüm eklentiler ücretsiz, .npmrc/token önerme) bölümünün eksik olması.
 - **Ne zaman:** Yalnız OpenMontage uyumu gerekirse. · **Ne zaman değil:** Her durumda greensock/gsap-skills sürümü tercih edilir.
@@ -278,7 +278,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 64 KB (SKILL.md 17.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Konunun en kapsamlı skill'i (referans + optimize_lottie.py). Dikkat: 335 gün eski; 'dotlottie' ayrıntısı sınırlı.
 
-### lottie-bodymovin  ·  calesthio/OpenMontage @ 195eab2  ·  puan 82 (A)
+### lottie-bodymovin  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 82 (A)
 
 - **Ne yapar:** Disney'in 12 animasyon prensibini Lottie/After Effects iş akışıyla örnekler (AE ifadeleri, segment oynatma). Kısa ilke-örnek listesi.
 - **Ne zaman:** 12 ilkeye göre Lottie hazırlama ipuçları. · **Ne zaman değil:** Lottie'yi uygulamaya gömmek (lottie-animations).

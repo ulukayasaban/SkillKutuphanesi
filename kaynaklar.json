@@ -174,11 +174,14 @@
       "not": "Resmî HyperFrames reposu (yıldızlı değil; kullanıcı onayıyla 2026-10-21'de eklendi). registry/blocks/* SKILL.md'leri 'hyperframes add' ile kurulan kompozisyon şablonlarıdır, ayrı skill değildir."
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "tip": "T1",
       "oncelik": 6,
       "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
-      "not": "Global klasörlerde zaten kurulu sürümü var; kütüphane kopyası sadece yeni projeler için."
+      "not": "Global klasörlerde zaten kurulu sürümü var; kütüphane kopyası sadece yeni projeler için. Repo 2026-11'de GitHub'da calesthio hesabından OpenMontageInc kuruluşuna taşındı (aynı repo; kimlikler `@calesthio` olarak kalır).",
+      "eski_adlar": [
+        "calesthio/OpenMontage"
+      ]
     },
     {
       "repo": "lemomo-ai/lemo-opuscar",
@@ -1173,7 +1176,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/hyperframes-animation",
       "ad": "hyperframes-animation",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1197,7 +1200,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/hyperframes-cli",
       "ad": "hyperframes-cli",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1205,7 +1208,7 @@
       "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/hyperframes-core",
       "ad": "hyperframes-core",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1221,7 +1224,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/hyperframes-creative",
       "ad": "hyperframes-creative",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1245,7 +1248,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/hyperframes-media",
       "ad": "hyperframes-media",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1253,7 +1256,7 @@
       "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/hyperframes-registry",
       "ad": "hyperframes-registry",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1269,7 +1272,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/hyperframes",
       "ad": "hyperframes",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1277,7 +1280,7 @@
       "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/media-use",
       "ad": "media-use",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1285,7 +1288,7 @@
       "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/music-to-video",
       "ad": "music-to-video",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1317,7 +1320,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/remotion-to-hyperframes",
       "ad": "remotion-to-hyperframes",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1333,7 +1336,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/website-to-video",
       "ad": "website-to-video",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1341,7 +1344,7 @@
       "son_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".agents/skills/motion-graphics",
       "ad": "motion-graphics",
       "neden": "OpenMontage'daki eski HyperFrames kopyası; güncel sürüm heygen-com/hyperframes; kullanıcı kararı: eski sürümler kaldırılsın",
@@ -1357,7 +1360,7 @@
       "son_commit": "25126bca6ced6cb8c839213430cde51e48261b7c"
     },
     {
-      "repo": "calesthio/OpenMontage",
+      "repo": "OpenMontageInc/OpenMontage",
       "kaynak_yol": ".claude/skills/web-design-guidelines",
       "ad": "web-design-guidelines",
       "neden": "OpenMontage'da kaynaktan kaldırıldı; güncel aslı vercel-labs/agent-skills web-design-guidelines (tercih); kullanıcı kararı: eski sürümler kaldırılsın",
