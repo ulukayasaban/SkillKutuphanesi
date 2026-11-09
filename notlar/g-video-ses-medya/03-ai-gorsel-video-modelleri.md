@@ -136,7 +136,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 76 KB (SKILL.md 23.3 KB, yük orta) · **Bağımlılık:** Higgsfield hesabı ve Higgsfield CLI gerekir (CLI yoksa skill resmî kurulum betiğini ağdan indirip çalıştırır: curl … | sh; ilk kullanımda `higgsfield auth login`). Higgsfield MCP bağlayıcısı da kullanılabilir. Üretimler Higgsfield kredisi harcar; Soul eğitimi ücretli plan (Basic+) ister. video-prompt-builder üretilen varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir (proje dışı).
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (higgsfield-uretim grubunda birincil). Kişisel koleksiyon (14★), lisans dosyası yok. Kapsamlı model kataloğu ve referanslar. Çalıştırma testi yapılmadı. DİKKAT: CLI'yi ağdan kurar, üretim kredi harcar.
 
-### higgsfield-marketplace-cards  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 62 (C)
+### higgsfield-marketplace-cards  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 61 (C)
 
 - **Ne yapar:** Higgsfield ile pazaryeri ürün görsel kartları üretir: kurallara uygun ana görsel, ikincil ürün görselleri ve A+ tarzı içerik modülleri.
 - **Ne zaman:** Pazaryeri ilan görselleri, ürün detay kartları ve A+ içerik modülleri. · **Ne zaman değil:** DİKKAT: Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok. Serbest ürün çekimi için higgsfield-product-photoshoot.
@@ -158,7 +158,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta) · **Bağımlılık:** Higgsfield hesabı ve Higgsfield CLI gerekir (CLI yoksa skill resmî kurulum betiğini ağdan indirip çalıştırır: curl … | sh; ilk kullanımda `higgsfield auth login`). Higgsfield MCP bağlayıcısı da kullanılabilir. Üretimler Higgsfield kredisi harcar; Soul eğitimi ücretli plan (Basic+) ister. video-prompt-builder üretilen varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir (proje dışı).
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (higgsfield-uretim grubunda tamamlayıcı). Kişisel koleksiyon, lisans dosyası yok. Çalıştırma testi yapılmadı.
 
-### higgsfield-soul-id  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 62 (C)
+### higgsfield-soul-id  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 61 (C)
 
 - **Ne yapar:** Bir kişinin yüzünden kişiselleştirilmiş model (Soul Character) eğitir; Higgsfield bu modeli sonraki görsel ve video üretimlerinde yüz tutarlılığı için kullanır. Fotoğraf seçimi rehberi ve sorun giderme içerir.
 - **Ne zaman:** Aynı yüzü tüm üretimlerde korumak (dijital ikiz, avatar, karakter tutarlılığı). · **Ne zaman değil:** DİKKAT: ücretli plan (Basic ve üstü) ister; ücretsiz planda çalışmaz. Kişinin yüz fotoğrafları Higgsfield'a yüklenir; yalnızca izni olan kişiler için kullanılmalı. Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok.
@@ -235,7 +235,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 23 KB (SKILL.md 12.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Prompt sözleşmesi çok güçlü; uzun/çok çekimli işlerde 2.0 yerine seçilir.
 
-### video-prompt-builder  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 60 (C)
+### video-prompt-builder  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 68 (B)
 
 - **Ne yapar:** Seedance 2.0 için izlenme süresi odaklı yapay zekâ video planı kurar: brief'ten klip klip istemlere, birleştirme ve ses planına, isteğe bağlı Nano Banana varlık hattına kadar. Hedef kitle ön ayarları, anlatı omurgaları, karakter tutarlılığı, içerik filtresi ve kanıtlanmış istem referansları içerir.
 - **Ne zaman:** Çok klipli AI video planlama ve storyboard; Seedance istemlerini sistemli yazmak. · **Ne zaman değil:** Plan ve istem üretir, videoyu kendisi üretmez (üretim için higgsfield-generate ya da başka bir Seedance sağlayıcısı). Varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir; proje içi yol verilmeli. Repoda lisans dosyası yok.

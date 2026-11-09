@@ -1055,7 +1055,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** baglam-yonetimi → birincil · **Roller:** agent-orkestra · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** baglam-yonetimi → birincil · **Roller:** agent-orkestra
 - **Boyut:** 15 KB (SKILL.md 15.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani; araçtan bağımsız (CLAUDE.md ve AGENTS.md'yi birlikte anıyor), somut kural dosyası şablonu ve oturum sınırı önerileri. Bağlam grubunda birincil. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -2465,7 +2465,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** agent-davranis-meta → birincil · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** agent-davranis-meta → birincil
 - **Boyut:** 10 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil, meta grubunda). Zorlayıcı dil kullanmadan net yönlendirme yapıyor; çalışma davranışları bölümü aileden bağımsız da değerli.
 

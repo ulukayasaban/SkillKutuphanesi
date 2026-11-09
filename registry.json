@@ -7196,9 +7196,7 @@
       "ana_hash": "aaf5dd0f2c44b6b2354ae56dc4be98b93efb2c7d974977df277798cadda41e56",
       "varyant_hash": {},
       "klasor_hash": "44ca7af3589fc57c73debd351a9eac2b72248e689ef6431f9384abe3869fa104",
-      "globalde": {
-        "claude": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "greensock",
         "sahip_tipi": "kurum",
@@ -7326,9 +7324,7 @@
       "ana_hash": "ef82be7053453a6c05d73918f9045ee3bd981affd914bad4edbeae1866390761",
       "varyant_hash": {},
       "klasor_hash": "19886ec8254ccf7cfa4c04e29da70d64250dc06d0ff87b23cc1a29db845bc67b",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "nexu-io",
         "sahip_tipi": "kurum",
@@ -7915,9 +7911,7 @@
       "ana_hash": "7e18d5b04764993e1600380a144dfd0758a9fb8a41ad0329f0011be583dd6acd",
       "varyant_hash": {},
       "klasor_hash": "8dd415f0b1c4d9155c344c09733e733f33263922d78b4158a5c205576c6cff2a",
-      "globalde": {
-        "claude": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "greensock",
         "sahip_tipi": "kurum",
@@ -8040,9 +8034,7 @@
       "ana_hash": "df8ad7e5ee1318458f2748b291d3b784e637903964223568980a94d4ad1941ba",
       "varyant_hash": {},
       "klasor_hash": "eede238aaae7734efd79d480f741d677ffc6ff3284052a0621870f659755e515",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "nexu-io",
         "sahip_tipi": "kurum",
@@ -8143,9 +8135,7 @@
       "ana_hash": "9a7b74a3abf237a1ebd81f3e060e6abcd5d22a585720698990ca55cbca3612a1",
       "varyant_hash": {},
       "klasor_hash": "f1b3d7acebd9fee32bd015be6d821f3c41baf91f0deebff881bad28f722d3cd5",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "greensock",
         "sahip_tipi": "kurum",
@@ -8270,9 +8260,7 @@
       "ana_hash": "484409972a172a5f4368f68bc6e8cd6a493abc168e9e61a02e3bd49a74e2a38d",
       "varyant_hash": {},
       "klasor_hash": "5825c2010e785631398962ecd48331cb36161938fb6eecbdf744feb108cf1ad1",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "OpenMontageInc",
         "sahip_tipi": "kurum",
@@ -8415,9 +8403,7 @@
       "ana_hash": "8dead5a1290540a16e72dcd9e088f4c416aabdd398de10aef5123478890559f9",
       "varyant_hash": {},
       "klasor_hash": "88f33b6486b84246fc15152b51da759481d64acaa1c7f9373e505c5f58b09630",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "nexu-io",
         "sahip_tipi": "kurum",
@@ -8751,9 +8737,7 @@
       "ana_hash": "5c01bb2cf7e280fb67aaa56d9b07d1f2231e7c9dd953fd1c26011a17d256cf0d",
       "varyant_hash": {},
       "klasor_hash": "1597458be62ad4d7032a9a2a535ce0d9b4f54649a84165e995a74c631ae604f5",
-      "globalde": {
-        "claude": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "greensock",
         "sahip_tipi": "kurum",
@@ -8876,9 +8860,7 @@
       "ana_hash": "a045d39dd19b45fbbeb12eb376cc86320b7a83f3c3272b7b2c473b800c4342ff",
       "varyant_hash": {},
       "klasor_hash": "fa6655beb635a5574ddd5794678728bcf308a4489124d91a042783c38634ad71",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "nexu-io",
         "sahip_tipi": "kurum",
@@ -31079,21 +31061,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 62,
-        "not": "C",
-        "ayrinti": [
-          "bakım 25/25 (82 gün önce)",
-          "GitHub güveni 4/30 (güven 12 D, #124/124)",
-          "lisans 3/15 (yok)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Site kodu ücretsiz yazılır; görseller ve döngü videoları Higgsfield üzerinden üretilir (kredi harcar). Kendi görsellerinle ücretsiz kullanılabilir.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Bir video, konuşma ya da ders bölümü için koyu temalı, sinematik tek sayfalık sunum sitesi kurar: hareketli panoramalı giriş, bölüm rayı gezinmesi, resimli sözlük kartları ve canlı döngü videoları. Görseller GPT Image 2, döngüler Seedance ile Higgsfield üzerinden üretilir. Türkçe.",
       "kullanim_alani": "Videoya ya da derse eşlik eden tek sayfalık sunum/özet sitesi.",
       "kullanma": "Slayt destesi (PowerPoint, HTML deck) isteniyorsa sunum skilleri. Görsel ve döngü üretimi Higgsfield kredisi harcar; kendi görsellerinle ücretsiz kurulabilir. Repoda lisans dosyası yok.",
@@ -31117,7 +31084,23 @@
       "ortusme_grubu": "video-eslikci-sunum-sitesi",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 61,
+        "not": "C",
+        "ayrinti": [
+          "bakım 25/25 (82 gün önce)",
+          "GitHub güveni 4/30 (güven 12 D, #124/124)",
+          "lisans 3/15 (yok)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Site kodu ücretsiz yazılır; görseller ve döngü videoları Higgsfield üzerinden üretilir (kredi harcar). Kendi görsellerinle ücretsiz kullanılabilir.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "swiss-creative-mode-template",
@@ -31513,10 +31496,7 @@
       "ana_hash": "53994de0946cdbc2310f38dfdc90a93b68ddb5ec36ca57f356cc5bc370899f13",
       "varyant_hash": {},
       "klasor_hash": "ed2e2ca739573afc623fbfd64ae440a57217777e0b7abaa2192710206f5cc5c1",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -34128,10 +34108,7 @@
       "ana_hash": "0741fddefed431367aad3544894fcebc315ab2b43c796b397ed6d0eea4cb55f8",
       "varyant_hash": {},
       "klasor_hash": "4954fe5112e1ee55d88cdb5f7c0a9b060559ed4378bb058405dcb12bab44bdfc",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -34831,10 +34808,7 @@
       "ana_hash": "0cefe74b16c4a4decada78adcaf3d39d2251167ec06bd86fb10708b1eea25757",
       "varyant_hash": {},
       "klasor_hash": "1c7330ed0bee090147ab3d4dfdb668fbb10ecaeec7a4a8897f4151bf68bce9a7",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -36481,10 +36455,7 @@
       "ana_hash": "682459769b5126d73dbe5244bb04792c16521fd5fe3bd2bffc629d08135671d0",
       "varyant_hash": {},
       "klasor_hash": "a938feb3f91961efbccdd391aa1616ffc42a0bba04a4cf59e43e7e681d8d8cd2",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -37081,10 +37052,7 @@
       "ana_hash": "56ceae9d9015c2e1700ea1d2e4a29cd3ae1d696ad70a237832084a56676b9b65",
       "varyant_hash": {},
       "klasor_hash": "0e44aa6b33f2f4fa6d2f2ab8c4342c1fc543d952f53902835b65558e2718fa58",
-      "globalde": {
-        "claude": "ayni",
-        "agents": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -37215,10 +37183,7 @@
       "ana_hash": "2d35584977b7465cc6bdec3c2a45a4a8d60d759057ab07ca57a8e54c7d261d12",
       "varyant_hash": {},
       "klasor_hash": "a20252db6d55cab8d694b9d4d0e24fff81451a580a990290915c6bdd4dfae0f1",
-      "globalde": {
-        "claude": "ayni",
-        "agents": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -37802,10 +37767,7 @@
       "ana_hash": "635c27ef87ba82f9551601090d02ca3a76d5ef379e70162386e7efb24e89419c",
       "varyant_hash": {},
       "klasor_hash": "31c6aefac24d3146e9e2895db778b76f049de1d73b65b12176ffebb7f9c75bbf",
-      "globalde": {
-        "claude": "ayni",
-        "agents": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -40057,10 +40019,7 @@
       "ana_hash": "fd2ffbf4256bf7335e25e5e3e0a0f97f3e46504db9a7688c856744256f31c247",
       "varyant_hash": {},
       "klasor_hash": "7ffebe634ea986a351dddb7d3b738441954978ffa8add49058cc4823a8db3662",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -40758,10 +40717,7 @@
       "ana_hash": "0f373503f99b6248a732fdc75e039dc26467df95d965fa02153e3853d5aa4aaa",
       "varyant_hash": {},
       "klasor_hash": "a1cf1f8b317b7fd40262ca87f5b7a60cba9379c8981386a8bc1bd8ee6bed4650",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -43440,10 +43396,7 @@
       "ana_hash": "432f297df44bf8589fd20eafec7727ebbe7403be8b9e70452dfb4e2d20a56504",
       "varyant_hash": {},
       "klasor_hash": "1a8ed31bded3ca012d66c426668909497dc333e3a5670cf8fb7fcf08f865fb07",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -44031,10 +43984,7 @@
       "ana_hash": "53ec37ba73ddff67324e153becc30734cf0557666c3cd7c359137f0f5916bada",
       "varyant_hash": {},
       "klasor_hash": "ccb2b82648894ed0d657e2defd3d806b6439596c47466d37b3830a36707b3c26",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -46604,10 +46554,7 @@
       "ana_hash": "28a32b5d023450c5cf79406c4ed01059f3390053c8ea221b09fb5d8574fa292d",
       "varyant_hash": {},
       "klasor_hash": "6bb051bd1c5cca89eea314b625bd9f03fb49929b33e953151ec232da451d83bb",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -47558,10 +47505,7 @@
       "ana_hash": "65a25c7307606a6b8b415e3c96be72f0af7b011d90a385c1adfa5359f1f100b1",
       "varyant_hash": {},
       "klasor_hash": "deaac1cfafb6aa01b8ab83e27eb69ed2573749707c695e843d3ae43938c9e97a",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -47696,10 +47640,7 @@
       "ana_hash": "982ba77f2c1962cf9b05301516d05ea2fb14f308124f8106d8dc783feb9cb3c0",
       "varyant_hash": {},
       "klasor_hash": "a04f1832a8ef14b347e3e618d64b27ec6aa4034d9cbb65b58e12691d8e5ca12c",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "obra",
         "sahip_tipi": "kisi",
@@ -48631,10 +48572,7 @@
       "ana_hash": "a96d60a1f4523065c8ec287e8fad5ba26db3561b249b6809df95d09d37e80038",
       "varyant_hash": {},
       "klasor_hash": "94d943c72e2d3cba0edb5a9c9caa45edd936b198c3aa00b4bf6968d13e440089",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -49839,10 +49777,7 @@
       "ana_hash": "a82e3de7faa4ff8dfd63f8dcbef1ff124abd828631e63842d8f56e7bdbe5fcd2",
       "varyant_hash": {},
       "klasor_hash": "a31db8c36e6b311c3e847bea26413f169e287020083fadbda223a3a45eb50192",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -51140,10 +51075,7 @@
       "ana_hash": "71acfc45619dba33210d7367a79916e26b6e65d1d9978e17f781b11c9741ae51",
       "varyant_hash": {},
       "klasor_hash": "c47a30fe5677ecb3a5091a628bea6dfe9b0d819e2c933ce8593da0337c496b6a",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -51745,10 +51677,7 @@
       "ana_hash": "fec5016f77727b7a0528d8f953f9a264c99372f3666d72cc624b0cef1537a3c1",
       "varyant_hash": {},
       "klasor_hash": "5085eb84ea4a4a5f0c2ffc292cc1c7a17e963df250516db30d2d565d19d65059",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -54721,10 +54650,7 @@
       "ana_hash": "db1b0729c253c140f36a009efcb65fc28b9e9497c00fc74bfe1eb1a4771e9e25",
       "varyant_hash": {},
       "klasor_hash": "558bf4a8be9e5bcc1360fa015be3d2b21a7b3c12ad1359620f8c227bee3de8f8",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -57324,10 +57250,7 @@
       "ana_hash": "bb6f10c4523e4303c432089b425695c443f9e86963cd294573d1485048df6964",
       "varyant_hash": {},
       "klasor_hash": "b608d0bc5db4c318f070ecaa8a73fc00a01dc89d1e8aace4da72df4f90e3a055",
-      "globalde": {
-        "claude": "ayni",
-        "agents": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -57934,10 +57857,7 @@
       "ana_hash": "352d898b816fd3c30a43da2159c5bb28a6a958ae2e361e43eaeef389de830237",
       "varyant_hash": {},
       "klasor_hash": "bcba4dc2edc0a4f372d2103d285b5b32474333d352059ec1cf6ac5facd152b61",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -59293,10 +59213,7 @@
       "ana_hash": "16c1efdb571f22eb3d713c899e8d966f73ff03bf9d308594b06cb340d6bc468d",
       "varyant_hash": {},
       "klasor_hash": "fe125a8fd98f34bb252c6378d856e4085cdb386f49e87d7b2f59dadc9141f621",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -60215,10 +60132,7 @@
       "ana_hash": "f1bcdae6939dfb5cbd326aab927d702e6a3680ba58f6aa10ac062c6895bbffdc",
       "varyant_hash": {},
       "klasor_hash": "ded7f8cd29c842e68e66ff1fa01bf6a34d03fafe2a3dba81a455c500479e47be",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -87125,10 +87039,7 @@
       "ana_hash": "025180b48586994009518f0333fd4d52e482ef2bcd293f45976d5bda0989f22d",
       "varyant_hash": {},
       "klasor_hash": "20ad20d060e0c28ce30c961684d298646a7cde26b00fe24c5880e9963262d03c",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -110928,10 +110839,7 @@
       "ana_hash": "70beb695dc50583c5d3f2273a2c189cceb17b2d764b40bcb71af960f94b76d05",
       "varyant_hash": {},
       "klasor_hash": "d86ce2a7ca2ec8127561305715826a2869d93fa5de94b8e33b5c46a2d54f8aaf",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -126755,10 +126663,7 @@
       "ana_hash": "178d8bbdbde56a2f3ff03c7a31ae47aeb45c2f64e66e590dccf3f517bd58c6e3",
       "varyant_hash": {},
       "klasor_hash": "e969a9de5f40f1dc5e1cac1d5e286f5fd1d5658e2bc8b4e6338373d96398b2b1",
-      "globalde": {
-        "claude": "ayni",
-        "agents": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "addyosmani",
         "sahip_tipi": "kisi",
@@ -131021,21 +130926,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 94,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "GitHub güveni 24/30 (güven 79 B, #23/124)",
-          "lisans 15/15 (MIT)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Çoğu komut girişsiz ve ücretsiz çalışır; `ctx7 setup` ve daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "`ctx7` CLI'siyle kütüphane dokümanı getirir ve Context7 MCP sunucusunu yapay zekâ kodlama aracına kurar (`ctx7 setup`). Giriş, API anahtarı ve istek sınırı kullanımını anlatır.",
       "kullanim_alani": "Context7'yi bir araca kurmak ya da ctx7 komutlarını doğrudan kullanmak.",
       "kullanma": "Yalnızca doküman getirmek için find-docs yeterli. `ctx7 setup` giriş ya da API anahtarı ister ve aracın yapılandırma dosyasını değiştirir.",
@@ -131060,7 +130950,23 @@
       "ortusme_grubu": "guncel-dokuman-getirme",
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 88,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (3 gün önce)",
+          "GitHub güveni 24/30 (güven 79 B, #23/124)",
+          "lisans 15/15 (MIT)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Çoğu komut girişsiz ve ücretsiz çalışır; `ctx7 setup` ve daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "context7-docs",
@@ -131144,21 +131050,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 94,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "GitHub güveni 24/30 (güven 79 B, #23/124)",
-          "lisans 15/15 (MIT)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "CONTEXT7_API_KEY ister (ücretsiz hesapla alınır); yoğun kullanım için ücretli plan.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Context7'nin pi aracı için paketlenmiş doküman getirme skili: kütüphane, SDK, CLI ya da bulut servisi için güncel doküman ve örnek getirir; CONTEXT7_API_KEY ile kimlik doğrular.",
       "kullanim_alani": "pi aracıyla ya da API anahtarlı doğrudan Context7 kullanımı.",
       "kullanma": "Claude Code ve Codex için find-docs ya da context7-mcp daha uygun. API anahtarı gerekir.",
@@ -131180,7 +131071,23 @@
       "ortusme_grubu": "guncel-dokuman-getirme",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 80,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (3 gün önce)",
+          "GitHub güveni 24/30 (güven 79 B, #23/124)",
+          "lisans 15/15 (MIT)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "CONTEXT7_API_KEY ister (ücretsiz hesapla alınır); yoğun kullanım için ücretli plan.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "context7-mcp",
@@ -131265,21 +131172,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 94,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "GitHub güveni 24/30 (güven 79 B, #23/124)",
-          "lisans 15/15 (MIT)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Kütüphane, framework ya da API sorulduğunda Context7 MCP sunucusu üzerinden güncel doküman ve kod örneği getirir: önce kütüphane kimliğini çözer, sonra ilgili dokümanı sorgular.",
       "kullanim_alani": "Context7 MCP sunucusu kurulu ortamlarda kütüphane dokümanı getirme.",
       "kullanma": "Context7 MCP sunucusu kurulu değilse çalışmaz; o durumda find-docs (CLI). Sorgu metni Context7'ye gider.",
@@ -131304,7 +131196,23 @@
       "ortusme_grubu": "guncel-dokuman-getirme",
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 88,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (3 gün önce)",
+          "GitHub güveni 24/30 (güven 79 B, #23/124)",
+          "lisans 15/15 (MIT)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "context7-mcp@upstash",
@@ -131389,21 +131297,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 94,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "GitHub güveni 24/30 (güven 79 B, #23/124)",
-          "lisans 15/15 (MIT)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "context7-mcp skilinin eklenti paketindeki (plugins/agent-plugins) sürümü: aynı işi yapar, açıklaması daha ayrıntılıdır ve tetikleyicileri daha geniştir.",
       "kullanim_alani": "Çıplak adlı context7-mcp yerine daha ayrıntılı tetikleme açıklaması isteniyorsa.",
       "kullanma": "İkisini birlikte kurma (aynı iş). Context7 MCP sunucusu gerekir.",
@@ -131427,7 +131320,23 @@
       "ortusme_grubu": "guncel-dokuman-getirme",
       "ortusme_rolu": "alternatif",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 88,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (3 gün önce)",
+          "GitHub güveni 24/30 (güven 79 B, #23/124)",
+          "lisans 15/15 (MIT)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "deep-research",
@@ -131738,21 +131647,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 94,
-        "not": "A",
-        "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "GitHub güveni 24/30 (güven 79 B, #23/124)",
-          "lisans 15/15 (MIT)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Kimlik doğrulamasız ve ücretsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Herhangi bir kütüphane, framework, SDK, CLI aracı ya da bulut servisi için güncel doküman, API referansı ve kod örneği getirir. `ctx7` CLI'sini kullanır (npx ctx7@latest); önce kütüphaneyi çözer, sonra konuya özel sorguyla ilgili bölümleri alır.",
       "kullanim_alani": "Modelin eğitim verisi eskimiş olabilecek her kütüphane sorusu: kurulum, yapılandırma, sürüm geçişi, API sözdizimi.",
       "kullanma": "Sorgu metni Context7 API'sine gider; gizli bilgi, anahtar ya da özel kod yazılmamalı. MCP sunucusu kuruluysa context7-mcp de aynı işi yapar.",
@@ -131778,7 +131672,23 @@
       "ortusme_grubu": "guncel-dokuman-getirme",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 96,
+        "not": "A",
+        "ayrinti": [
+          "bakım 25/25 (3 gün önce)",
+          "GitHub güveni 24/30 (güven 79 B, #23/124)",
+          "lisans 15/15 (MIT)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 5/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Kimlik doğrulamasız ve ücretsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "goal-plan",
@@ -343665,7 +343575,7 @@
       "varyant_hash": {},
       "klasor_hash": "ac5f04dea4b1d62237982ad23df66d1b86170e4d20ba39df7e6ff898a712c5cd",
       "globalde": {
-        "claude": "ayni",
+        "claude": "farkli",
         "agents": "ayni"
       },
       "gelistirici": {
@@ -343974,7 +343884,10 @@
       "ana_hash": "a801c0d6d60208eaaf48197fe744dceb6219bfa4b2ad57e0b9f4f888c3c44944",
       "varyant_hash": {},
       "klasor_hash": "3acf81713187ae85dc8c779166999875e6a3ce311b6b21a2d216be76ab02505d",
-      "globalde": {},
+      "globalde": {
+        "claude": "farkli",
+        "agents": "farkli"
+      },
       "gelistirici": {
         "sahip": "openai",
         "sahip_tipi": "kurum",
@@ -344225,7 +344138,10 @@
       "ana_hash": "7f8f847139f8eb85da892fc51b73777b50080c6aa750af9d162b3d9ebc3f87ed",
       "varyant_hash": {},
       "klasor_hash": "4a808c8cd9d43e4cb0b1daef9a7bce7ad8e38615aa4612ccec51ea7607159e46",
-      "globalde": {},
+      "globalde": {
+        "claude": "farkli",
+        "agents": "farkli"
+      },
       "gelistirici": {
         "sahip": "openai",
         "sahip_tipi": "kurum",
@@ -344325,7 +344241,10 @@
       "ana_hash": "8d608f15be50c80fcece1a39dc098816305d8805a67f8cc62a649f071bfff27e",
       "varyant_hash": {},
       "klasor_hash": "ddf1e4a9d4f237485b035bf8bea717172146044dd3094100a1ffe8646c06be47",
-      "globalde": {},
+      "globalde": {
+        "claude": "farkli",
+        "agents": "farkli"
+      },
       "gelistirici": {
         "sahip": "openai",
         "sahip_tipi": "kurum",
@@ -345493,9 +345412,7 @@
       "ana_hash": "694e9775c699e4c090d1000d14a7ddd5df70214f40b2bd88b2cfaa83a3d03fec",
       "varyant_hash": {},
       "klasor_hash": "555dbf55501df140b51515bc3da5af8d7acb155bfd8c93014dcfc0cb158bbd49",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "nexu-io",
         "sahip_tipi": "kurum",
@@ -346475,10 +346392,7 @@
       "ana_hash": "567c5bbd9dec25429325e5c4a82ddb8b54c82f5437c2b0c01490d78be8d275cf",
       "varyant_hash": {},
       "klasor_hash": "dfbd2ab2708b5577f6cb0b3ba39f5cc2792b835a9a3537fb01849f4ecd75b784",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "remotion-dev",
         "sahip_tipi": "kurum",
@@ -346657,10 +346571,7 @@
       "ana_hash": "c6394070aefd7d7252d8dbaa12b94d8fdd376cdbd80c5d66e8fb23fa40527bdf",
       "varyant_hash": {},
       "klasor_hash": "d6ccdbe377d6c783a24edca79dfae9664f6324eb6d81a348ce03d1faae8172db",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "OpenMontageInc",
         "sahip_tipi": "kurum",
@@ -358854,21 +358765,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 60,
-        "not": "C",
-        "ayrinti": [
-          "bakım 25/25 (82 gün önce)",
-          "GitHub güveni 4/30 (güven 12 D, #124/124)",
-          "lisans 3/15 (yok)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Higgsfield üzerinden görsel, video, 3D varlık ve ses üretir. İşe göre model seçer: görsel/tasarım/metin için GPT Image 2, video için Seedance 2.0, karakter ve referans görseller için Nano Banana, reklam için Marketing Studio. Model kataloğu, medya girdileri, reklam kipleri ve sorun giderme referansları içerir.",
       "kullanim_alani": "Higgsfield hesabıyla tek yerden görsel/video/ses üretimi; model seçimini skile bırakmak isteniyorsa.",
       "kullanma": "DİKKAT: Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok. Başka sağlayıcı (fal.ai, Atlas Cloud, yerel ComfyUI) kullanılacaksa o sağlayıcının skili.",
@@ -358893,7 +358789,23 @@
       "ortusme_grubu": "higgsfield-uretim",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 60,
+        "not": "C",
+        "ayrinti": [
+          "bakım 25/25 (82 gün önce)",
+          "GitHub güveni 4/30 (güven 12 D, #124/124)",
+          "lisans 3/15 (yok)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 8/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "higgsfield-marketplace-cards",
@@ -358972,21 +358884,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 62,
-        "not": "C",
-        "ayrinti": [
-          "bakım 25/25 (82 gün önce)",
-          "GitHub güveni 4/30 (güven 12 D, #124/124)",
-          "lisans 3/15 (yok)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Higgsfield ile pazaryeri ürün görsel kartları üretir: kurallara uygun ana görsel, ikincil ürün görselleri ve A+ tarzı içerik modülleri.",
       "kullanim_alani": "Pazaryeri ilan görselleri, ürün detay kartları ve A+ içerik modülleri.",
       "kullanma": "DİKKAT: Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok. Serbest ürün çekimi için higgsfield-product-photoshoot.",
@@ -359009,7 +358906,23 @@
       "ortusme_grubu": "higgsfield-uretim",
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 61,
+        "not": "C",
+        "ayrinti": [
+          "bakım 25/25 (82 gün önce)",
+          "GitHub güveni 4/30 (güven 12 D, #124/124)",
+          "lisans 3/15 (yok)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "higgsfield-product-photoshoot",
@@ -359088,21 +359001,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 60,
-        "not": "C",
-        "ayrinti": [
-          "bakım 25/25 (82 gün önce)",
-          "GitHub güveni 4/30 (güven 12 D, #124/124)",
-          "lisans 3/15 (yok)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Higgsfield'ın ürün çekimi istem geliştirmesiyle GPT Image 2 üzerinde marka kalitesinde ürün görselleri üretir: stüdyo çekimi, yaşam tarzı sahnesi, mevsimsel varyasyon, reklam paketi. Kullanım yerine göre (mağaza, sosyal medya, reklam, site) set kurar.",
       "kullanim_alani": "Ürün fotoğrafı, stüdyo/lifestyle çekim seti ve reklam görseli paketi.",
       "kullanma": "DİKKAT: Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok. Genel amaçlı üretim için higgsfield-generate.",
@@ -359125,7 +359023,23 @@
       "ortusme_grubu": "higgsfield-uretim",
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 60,
+        "not": "C",
+        "ayrinti": [
+          "bakım 25/25 (82 gün önce)",
+          "GitHub güveni 4/30 (güven 12 D, #124/124)",
+          "lisans 3/15 (yok)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 8/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "higgsfield-soul-id",
@@ -359204,21 +359118,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 62,
-        "not": "C",
-        "ayrinti": [
-          "bakım 25/25 (82 gün önce)",
-          "GitHub güveni 4/30 (güven 12 D, #124/124)",
-          "lisans 3/15 (yok)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 10/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "ucretli",
-      "ucret_notu": "Soul karakter eğitimi Higgsfield'ın ücretli planını (Basic ve üstü) ister; ücretsiz planda çalışmaz.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Bir kişinin yüzünden kişiselleştirilmiş model (Soul Character) eğitir; Higgsfield bu modeli sonraki görsel ve video üretimlerinde yüz tutarlılığı için kullanır. Fotoğraf seçimi rehberi ve sorun giderme içerir.",
       "kullanim_alani": "Aynı yüzü tüm üretimlerde korumak (dijital ikiz, avatar, karakter tutarlılığı).",
       "kullanma": "DİKKAT: ücretli plan (Basic ve üstü) ister; ücretsiz planda çalışmaz. Kişinin yüz fotoğrafları Higgsfield'a yüklenir; yalnızca izni olan kişiler için kullanılmalı. Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok.",
@@ -359241,7 +359140,23 @@
       "ortusme_grubu": "higgsfield-uretim",
       "ortusme_rolu": "tamamlayıcı",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 61,
+        "not": "C",
+        "ayrinti": [
+          "bakım 25/25 (82 gün önce)",
+          "GitHub güveni 4/30 (güven 12 D, #124/124)",
+          "lisans 3/15 (yok)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 10/10",
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "ucretli",
+      "ucret_notu": "Soul karakter eğitimi Higgsfield'ın ücretli planını (Basic ve üstü) ister; ücretsiz planda çalışmaz.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "kling-official",
@@ -360174,21 +360089,6 @@
         }
       },
       "inceleme": "incelendi",
-      "degerlendirme": {
-        "puan": 60,
-        "not": "C",
-        "ayrinti": [
-          "bakım 25/25 (82 gün önce)",
-          "GitHub güveni 4/30 (güven 12 D, #124/124)",
-          "lisans 3/15 (yok)",
-          "Codex uyumu 15/15",
-          "bağlam yükü 8/10",
-          "yapı 5/5"
-        ]
-      },
-      "ucret": "kismen",
-      "ucret_notu": "Video planı ve istem yazımı ücretsizdir; planın Seedance/Higgsfield'da üretilmesi kredi harcar.",
-      "ucret_kaynagi": "elle",
       "ozet_tr": "Seedance 2.0 için izlenme süresi odaklı yapay zekâ video planı kurar: brief'ten klip klip istemlere, birleştirme ve ses planına, isteğe bağlı Nano Banana varlık hattına kadar. Hedef kitle ön ayarları, anlatı omurgaları, karakter tutarlılığı, içerik filtresi ve kanıtlanmış istem referansları içerir.",
       "kullanim_alani": "Çok klipli AI video planlama ve storyboard; Seedance istemlerini sistemli yazmak.",
       "kullanma": "Plan ve istem üretir, videoyu kendisi üretmez (üretim için higgsfield-generate ya da başka bir Seedance sağlayıcısı). Varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir; proje içi yol verilmeli. Repoda lisans dosyası yok.",
@@ -360210,7 +360110,23 @@
       "ortusme_grubu": "seedance-video-plani",
       "ortusme_rolu": "birincil",
       "inceleyen": "claude",
-      "inceleme_tarihi": "2026-11-09"
+      "inceleme_tarihi": "2026-11-09",
+      "degerlendirme": {
+        "puan": 68,
+        "not": "B",
+        "ayrinti": [
+          "bakım 25/25 (82 gün önce)",
+          "GitHub güveni 4/30 (güven 12 D, #124/124)",
+          "lisans 3/15 (yok)",
+          "Codex uyumu 15/15",
+          "bağlam yükü 8/10",
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
+        ]
+      },
+      "ucret": "kismen",
+      "ucret_notu": "Video planı ve istem yazımı ücretsizdir; planın Seedance/Higgsfield'da üretilmesi kredi harcar.",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "canvas-procedural-animation",
@@ -360682,8 +360598,7 @@
       "varyant_hash": {},
       "klasor_hash": "5e74a1872f4ae3798e3101179951923f65cfa5a01d5efd87b38d9a41dc0d42ad",
       "globalde": {
-        "claude": "ayni",
-        "codex": "ayni",
+        "codex": "farkli",
         "agents": "farkli"
       },
       "gelistirici": {
@@ -361440,8 +361355,7 @@
       "varyant_hash": {},
       "klasor_hash": "ec1f81dba0161172950bc77739b8d5864b1362ee6fa6f3d6abc352279b831845",
       "globalde": {
-        "claude": "ayni",
-        "codex": "ayni",
+        "codex": "farkli",
         "agents": "farkli"
       },
       "gelistirici": {
@@ -361826,8 +361740,7 @@
       "varyant_hash": {},
       "klasor_hash": "462e507821e46af5c2ff8b70e427becdffaecc4647ffd98fb2e7b4e419230b8a",
       "globalde": {
-        "claude": "ayni",
-        "codex": "ayni",
+        "codex": "farkli",
         "agents": "farkli"
       },
       "gelistirici": {

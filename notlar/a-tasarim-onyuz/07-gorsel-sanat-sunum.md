@@ -254,7 +254,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 19 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. İçerik stratejisi ve yerleşim bilgisi iyi, MIT. Dikkat: referanslar `python ../design-system/scripts/search-slides.py` (kardeş design-system skill'ine ve onun veri tabanına) başvurur; design-system kurulu değilse bu komutlar kırık kalır, registry bunu bağımlılık olarak işaretlemiyor. Chart.js jsdelivr CDN'den yüklenir. SKILL.md yalnızca 1,7 KB. slideshow (video) ve design (claudekit) ile karıştırılmamalı.
 
-### sunum-sitesi  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 62 (C)
+### sunum-sitesi  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 61 (C)
 
 - **Ne yapar:** Bir video, konuşma ya da ders bölümü için koyu temalı, sinematik tek sayfalık sunum sitesi kurar: hareketli panoramalı giriş, bölüm rayı gezinmesi, resimli sözlük kartları ve canlı döngü videoları. Görseller GPT Image 2, döngüler Seedance ile Higgsfield üzerinden üretilir. Türkçe.
 - **Ne zaman:** Videoya ya da derse eşlik eden tek sayfalık sunum/özet sitesi. · **Ne zaman değil:** Slayt destesi (PowerPoint, HTML deck) isteniyorsa sunum skilleri. Görsel ve döngü üretimi Higgsfield kredisi harcar; kendi görsellerinle ücretsiz kurulabilir. Repoda lisans dosyası yok.

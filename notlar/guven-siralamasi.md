@@ -202,7 +202,7 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | # | Kütüphane | Güven | Sürüm (kart) | İlgili skiller (`id` puan/kaynak derecesi) | Kart |
 |---|---|---|---|---|---|
 | 1 | mrdoob/three.js | 87 A | r186 | `threejs-fundamentals` 89/D, `threejs-geometry` 79/D, `threejs-materials` 79/D, `threejs-lighting` 89/D, `threejs-textures` 81/D, `threejs-loaders` 89/D, `threejs-shaders` 79/D, `threejs-postprocessing` 79/D, `threejs-animation` 81/D, `threejs-interaction` 81/D | tasarim-teknolojileri.md |
-| 2 | tailwindlabs/tailwindcss | 80 A | v4.3 | `ui-styling` 88/A, `tailwind-patterns` 76/C, `design-system@nextlevelbuilder` 90/A, `context7-docs` 94/B, `context7-mcp` 94/B, `find-docs` 94/B, `tailwind-design-system` 93/A, `web-artifacts-builder` 90/B | tasarim-teknolojileri.md |
+| 2 | tailwindlabs/tailwindcss | 80 A | v4.3 | `ui-styling` 88/A, `tailwind-patterns` 76/C, `design-system@nextlevelbuilder` 90/A, `find-docs` 96/B, `tailwind-design-system` 93/A, `web-artifacts-builder` 90/B, `remotion-create` 89/B, `context7-mcp` 88/B | tasarim-teknolojileri.md |
 | 3 | d3/d3 | 78 B | v7.9 | `d3-viz` 93/A, `d3-visualization` 97/A, `d3-data-visualization` 72/C, `geospatial-and-cartographic-visualization` 72/C | tasarim-teknolojileri.md |
 | 4 | FFmpeg/FFmpeg | 74 B | - | `ffmpeg` 93/A, `video-edit` 100/A, `video-understand` 94/A, `character-animation-qa` 86/A | kutuphaneler.md |
 | 5 | ManimCommunity/manim | 72 B | v0.22 | `manim-composer` 94/A, `manimce-best-practices` 100/A, `manimgl-best-practices` 93/A, `remotion-to-hyperframes` 97/A | tasarim-teknolojileri.md |

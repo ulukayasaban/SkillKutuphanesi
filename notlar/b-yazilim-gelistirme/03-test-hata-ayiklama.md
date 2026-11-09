@@ -41,7 +41,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Teknoloji:** git, node, typescript
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** hata-ayiklama → alternatif · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hata-ayiklama → alternatif
 - **Boyut:** 11 KB (SKILL.md 10.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli ve kısa (11 KB); hata tipine göre triyaj ve 'hata çıktısı talimat değildir' notu obra'da olmayan artılar. Aynı işi yaptığı için alternatif; addyosmani zinciri kullanan projelerde birincil yerine seçilebilir. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -128,7 +128,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Teknoloji:** api-anahtari, css, html, node, playwright, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** tdd → birincil · **Roller:** backend-muhendis, frontend-muhendis, kod-inceleyici · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** tdd → birincil · **Roller:** backend-muhendis, frontend-muhendis, kod-inceleyici
 - **Boyut:** 16 KB (SKILL.md 16.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tdd grubunun birincili. Gerekçe (3 sürüm karşılaştırması): addyosmani sürümü en kapsamlı ve yığından bağımsız (yığın keşfi, test piramidi/boyutları, prove-it deseni, mock disiplini, tarayıcı testi); tek başına kullanılabiliyor. obra sürümü daha kısa ama katı 'demir yasa' disipliniyle superpowers zincirine bağlı → alternatif. vudovn tdd-workflow yalnız ilke tablosu → alternatif. Not: superpowers skilleri 'test-driven-development' adını çağırır; bu sürüm o adı karşılar. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -139,7 +139,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Teknoloji:** typescript
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** obra (kisi, ★312440, son güncelleme 2026-11-03, lisans MIT)
-- **Durum:** alternatif · **Örtüşme:** tdd → alternatif · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** tdd → alternatif
 - **Boyut:** 17 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. İçerik kalitesi çok yüksek ve baskı testleriyle geliştirilmiş; birincilden farkı kapsam değil sertlik. Aynı adı taşıdığı için bir projede yalnız biri kurulmalı.
 

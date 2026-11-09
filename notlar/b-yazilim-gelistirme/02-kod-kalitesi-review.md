@@ -62,7 +62,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Teknoloji:** node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** kod-inceleme → birincil · **Roller:** kod-inceleyici · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** kod-inceleme → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 21 KB (SKILL.md 20.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, kod-inceleme grubunun birincili. Gerekçe: en kapsamlı ve yığından bağımsız inceleme yöntemi; 'önce testleri oku' ve 'doğrulamayı doğrula' adımları agent incelemelerinin tipik açığını kapatıyor. obra requesting-code-review inceleme yapmaz, inceleyiciyi başlatır (ayrı grup); pragmatic-review ve code-review-checklist daha dar. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -115,7 +115,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Teknoloji:** typescript, javascript, python, react
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** kod-sadelestirme → birincil · **Roller:** kod-inceleyici · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** kod-sadelestirme → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 13 KB (SKILL.md 13.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, kod-sadelestirme grubunun birincili. Gerekçe: davranış koruma ve 'değişen kapsamla sınırla' kuralları varsayılan kullanım için en güvenli sürüm; dile özgü rehber somut. simplify-codebase depo geneli denetim için tamamlayıcı; simplify-code (vudovn) daha yüzeysel alternatif. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 

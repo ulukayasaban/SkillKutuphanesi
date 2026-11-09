@@ -131,7 +131,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** github-actions, node, playwright
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** ci-cd → birincil · **Roller:** devops-muhendis · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** ci-cd → birincil · **Roller:** devops-muhendis
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, ci-cd grubunun birincili. Pratik YAML örnekleri ve 'CI hatasını agent'a besle' bölümü agent iş akışına özgü bir artı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -363,7 +363,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** opentelemetry, node, typescript
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** gozlemlenebilirlik → birincil · **Roller:** backend-muhendis, devops-muhendis · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** gozlemlenebilirlik → birincil · **Roller:** backend-muhendis, devops-muhendis
 - **Boyut:** 14 KB (SKILL.md 13.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, gozlemlenebilirlik grubunun birincili. 'Telemetriyi de doğrula' ve runbook bölümleri pratik; satıcıdan bağımsız.
 
@@ -414,7 +414,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** node, react, css
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** performans → birincil · **Roller:** devops-muhendis, kod-inceleyici, qa-erisilebilirlik · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** performans → birincil · **Roller:** devops-muhendis, kod-inceleyici, qa-erisilebilirlik
 - **Boyut:** 26 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, performans grubunun birincili. Gerekçe: 'tut ya da geri al' ve 'geri alınan denemeyi de kaydet' disiplini ölçümsüz optimizasyonu engelliyor; tüm katmanları kapsıyor. performance-profiling Lighthouse/bundle betikleriyle tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -537,7 +537,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** node, html
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** guvenlik-sertlestirme → birincil · **Roller:** backend-muhendis, devops-muhendis, kod-inceleyici · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** guvenlik-sertlestirme → birincil · **Roller:** backend-muhendis, devops-muhendis, kod-inceleyici
 - **Boyut:** 30 KB (SKILL.md 17.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, guvenlik-sertlestirme grubunun birincili. Gerekçe: tehdit modeli öncelikli, SSRF ve 'türetilmiş yolda silme' gibi agent'a özgü riskleri ve AI/LLM özelliklerini kapsıyor; 'önce sor' katmanı insan onayı gereken işlemleri net ayırıyor. vulnerability-scanner betikli tarama ile tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -623,7 +623,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Teknoloji:** git, node, react, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** deploy-yayin → birincil · **Roller:** devops-muhendis · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** deploy-yayin → birincil · **Roller:** devops-muhendis
 - **Boyut:** 11 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 

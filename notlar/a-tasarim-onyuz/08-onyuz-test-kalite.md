@@ -21,7 +21,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Teknoloji:** chrome-devtools-mcp, chrome, javascript · **Paketler:** chrome-devtools-mcp (npx)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** canli-tarayici-denetimi → birincil · **Roller:** qa-erisilebilirlik, frontend-muhendis · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** canli-tarayici-denetimi → birincil · **Roller:** qa-erisilebilirlik, frontend-muhendis
 - **Boyut:** 14 KB (SKILL.md 14.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Hata ayıklama akışları somut ve güvenlik bölümü örnek niteliğinde (profil izolasyonu, DOM/konsol çıktısını talimat saymama, JS yürütmeyi salt-okunur tutma, kimlik bilgisi erişimi yasağı). Dikkat: `npx -y chrome-devtools-mcp@latest --isolated` sürümsüz uzak paket çalıştırır ve MCP kurulumu kullanıcıya bırakılmıştır; `--autoConnect` gerçek Chrome oturumlarını açar, skill bunu açıkça uyarıyor. Bu ortamda zaten playwright/Claude Browser MCP'leri olduğu için gerekirse işlev örtüşür. 14.2 KB. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 

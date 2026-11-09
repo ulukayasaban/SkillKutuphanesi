@@ -72,7 +72,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Teknoloji:** sql
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** kullanimdan-kaldirma → birincil · **Roller:** backend-muhendis · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** kullanimdan-kaldirma → birincil · **Roller:** backend-muhendis
 - **Boyut:** 13 KB (SKILL.md 12.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Bu konudaki tek skill; expand/contract ve strangler desenleri pratik. Git/PR değil yaşam döngüsü konusu olduğu için kategorisi tartışılabilir, ama 'sürüm' kapsamında 05'te bırakıldı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -124,7 +124,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** git-is-akisi → birincil · **Roller:** backend-muhendis, devops-muhendis · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** git-is-akisi → birincil · **Roller:** backend-muhendis, devops-muhendis
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 

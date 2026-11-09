@@ -106,7 +106,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** gsap 3.15, javascript, typescript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★17884, son güncelleme 2026-07-29, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** gsap-animasyon → birincil · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** gsap-animasyon → birincil · **Roller:** motion-gelistirici
 - **Boyut:** 14 KB (SKILL.md 14.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, kısa ve doğru (14 KB); matchMedia ile reduced-motion kuralı öğretiyor. OpenMontage kopyasıyla birebir aynı. Dikkat: yok.
 
@@ -116,7 +116,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** css, gsap, react, svelte, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 17 KB (SKILL.md 15.0 KB, yük orta)
 - **İnceleme:** otomatik
 
@@ -169,7 +169,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** gsap 3.15, css · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★17884, son güncelleme 2026-07-29, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, 4 KB, her animasyon işinde okunmaya değer. Dikkat: yok.
 
@@ -179,7 +179,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** css, gsap _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 6 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
@@ -190,7 +190,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** gsap 3.15 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★17884, son güncelleme 2026-07-29, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, scroll-deneyim · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici, scroll-deneyim
 - **Boyut:** 21 KB (SKILL.md 21.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî ve güncel; aşağıdaki OpenMontage kopyasında olmayan 'Licensing & Install' bölümü eski Club GSAP / .npmrc token yönlendirmesini engelliyor. 21 KB. Dikkat: büyük dosya, çekirdeğe koyma.
 
@@ -201,7 +201,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** gsap 3.15 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici · **Globalde:** claude:farkli
+- **Durum:** alternatif · **Örtüşme:** gsap-animasyon → alternatif · **Roller:** motion-gelistirici
 - **Boyut:** 20 KB (SKILL.md 20.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. diff: tek fark resmî sürümdeki lisans/kurulum bölümü (11 satır); eski kopya Club GSAP bilgisini güncellemiyor. AGPL-3.0 repo kopyası, OpenMontage kurulum bağımlılığı var.
 
@@ -211,7 +211,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** api-anahtari, canvas, css, gsap, html, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 23 KB (SKILL.md 21.6 KB, yük orta)
 - **İnceleme:** otomatik
 
@@ -243,7 +243,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** gsap 3.15, javascript · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★17884, son güncelleme 2026-07-29, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** gsap-animasyon → tamamlayıcı · **Roller:** motion-gelistirici
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, çok kısa (4 KB), net. Position parametresi tablosu pratik. Dikkat: yok.
 
@@ -253,7 +253,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Teknoloji:** gsap, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 7 KB (SKILL.md 4.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 

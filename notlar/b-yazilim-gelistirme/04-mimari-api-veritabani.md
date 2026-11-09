@@ -11,7 +11,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Teknoloji:** typescript, rest, graphql
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** api-tasarimi → birincil · **Roller:** backend-muhendis · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** api-tasarimi → birincil · **Roller:** backend-muhendis
 - **Boyut:** 15 KB (SKILL.md 14.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -117,7 +117,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Teknoloji:** react, typescript, css, tailwind
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** frontend-ui-uygulama → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** frontend-ui-uygulama → birincil · **Roller:** frontend-muhendis
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 

@@ -635,6 +635,10 @@ def main():
         shutil.rmtree(YENI, ignore_errors=True)
         sys.exit(f"DURDU (güvenlik kilidi): önceki {len(kayip_k)} skill yeni arşivde yok ({', '.join(kayip_k[:8])}…). "
                  "Arşive ve registry'ye DOKUNULMADI. Bilerek kaldırıyorsan --kayba-izin-ver ile çalıştır.")
+    # Global klasör bilgisi her çalıştırmada TÜM kayıtlar için yenilenir: bu çalıştırmada indirilmeyen kaynakların
+    # kaydı olduğu gibi taşındığından, globalden kaldırılan/eklenen skillerde eski değer kalırdı.
+    for s in skiller:
+        s["globalde"] = global_durum(s["ad"], s.get("ana_hash") or s["klasor_hash"])
     reg_yeni = KOK / ".registry-yeni.json"
     json_yaz(reg_yeni, {"_aciklama": "TEK GERÇEK KAYNAK. araclar/arsiv-yerlestir.py üretir; inceleme alanları elle doldurulur ve korunur.",
                         "guncelleme": bugun, "skiller": skiller, "bilesenler": bilesenler,

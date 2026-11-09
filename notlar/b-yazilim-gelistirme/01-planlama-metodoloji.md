@@ -125,7 +125,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** git, node, python
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** kalite-sozlesmesi → birincil · **Roller:** kod-inceleyici · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** kalite-sozlesmesi → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 34 KB (SKILL.md 21.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Agent'ların çıtayı düşürme davranışına özel tek skill; varsayılan eşik tablosu ve floor-guard referansı pratik. 2026-11: semgrep/axe'in bulguda 0 ile çıkması sorunu quality-gate.mjs ile çözüldü; kasıtlı ihlalle doğrulama adımı eklendi. SKILL.md ~21,7 KB.
 
@@ -186,7 +186,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** api-anahtari _(otomatik tespit)_ · **Paketler:** isteğe bağlı: codex CLI veya gemini CLI (çapraz model inceleme)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** karsit-dogrulama → birincil · **Roller:** planlayici · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** karsit-dogrulama → birincil · **Roller:** planlayici
 - **Boyut:** 16 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, opsiyonel. Sınırlı döngü ve 'iç içe çalışamaz' uyarısı iyi düşünülmüş. Maliyetli (her kararda ek agent); yalnız planlayıcı/orkestratör rolüne uygun, persona skill listesine konmamalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -338,7 +338,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** fikir-netlestirme → alternatif · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** fikir-netlestirme → alternatif
 - **Boyut:** 40 KB (SKILL.md 9.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, alternatif. Çerçeveler (frameworks.md) ve örnekler iyi; ürün/konsept aşamasında brainstorming'den daha yapılandırılmış. Betik yalnız docs/ideas klasörü açıyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -389,7 +389,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** plan-yurutme → tamamlayıcı · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** plan-yurutme → tamamlayıcı
 - **Boyut:** 9 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Kısa (9 KB), yığından bağımsız; 'Rule 0.5 kapsam disiplini' agent'ların taşmasını iyi engelliyor. ../../references/definition-of-done.md arşivde yok (yalnız 'ayrıca bkz').
 
@@ -400,7 +400,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** fikir-netlestirme → tamamlayıcı · **Roller:** planlayici · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** fikir-netlestirme → tamamlayıcı · **Roller:** planlayici
 - **Boyut:** 15 KB (SKILL.md 14.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Net durma kuralı ve 'istek vs. olması gereken' ayrımı brainstorming'den farklı bir boşluğu dolduruyor; kısa ve yan etkisiz.
 
@@ -452,7 +452,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** uygulama-plani → alternatif · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** uygulama-plani → alternatif
 - **Boyut:** 10 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İyi yapılandırılmış ve kısa; dikey dilim ve kontrol noktası anlatımı güçlü. writing-plans'tan daha az ayrıntılı (arayüz sözleşmesi, TDD adımları yok), bu yüzden alternatif. ../../references/ bağlantıları arşivde yok (yalnız 'ayrıca bkz').
 
@@ -663,7 +663,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** api-anahtari, css, html, next.js, node, python, react, svelte, tailwind, typescript, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** resmi-dokuman-dayanagi → birincil · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** resmi-dokuman-dayanagi → birincil
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -724,7 +724,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Teknoloji:** node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** spec-yazimi → birincil · **Roller:** planlayici · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** spec-yazimi → birincil · **Roller:** planlayici
 - **Boyut:** 13 KB (SKILL.md 12.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, birincil (spec yazımı). superpowers'ta brainstorming'in ürettiği tasarım belgesine karşılık gelir ama daha yapılandırılmış şablon ve 'spec'i canlı tut' kuralları sunar; writing-plans ile birlikte kullanılır. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 

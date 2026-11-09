@@ -247,7 +247,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node 22+, ffmpeg · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★78940, son güncelleme 2026-11-05, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → birincil · **Roller:** video-kompozisyon, video-kurgu-render, motion-graphics-sanatcisi · **Globalde:** claude:ayni, agents:ayni
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → birincil · **Roller:** video-kompozisyon, video-kurgu-render, motion-graphics-sanatcisi · **Globalde:** claude:farkli, agents:ayni
 - **Boyut:** 1117 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi (heygen-com/hyperframes 6882293): iş akışı skilleri emekliye ayrıldı, içerikleri bu skilin references/types ve references/*.md dosyalarına taşındı; SKILL.md 7 KB'a indi, sözleşme daha net. Önceki iş akışı skillerinin (general-video, faceless-explainer, product-launch-video…) yerine birincil seçim budur. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -268,7 +268,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** canvas, docker, ffmpeg, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
+- **Durum:** alternatif · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
@@ -289,7 +289,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** canvas, css, gsap, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
+- **Durum:** alternatif · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 18 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
@@ -299,7 +299,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** canvas, css, gsap, html, node, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
+- **Durum:** alternatif · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 157 KB (SKILL.md 21.0 KB, yük orta)
 - **İnceleme:** otomatik
 
@@ -404,7 +404,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** api-anahtari, canvas, css, gsap, html, node, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 35 KB (SKILL.md 26.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
@@ -479,7 +479,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** node, react, remotion _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** remotion-dev (kurum, resmî, ★70754, son güncelleme 2026-11-04, lisans NOASSERTION)
-- **Durum:** tercih · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 4.2 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
@@ -490,7 +490,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/cli
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** remotion-cercevesi → birincil · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** alternatif · **Örtüşme:** remotion-cercevesi → birincil · **Roller:** video-kompozisyon
 - **Boyut:** 112 KB (SKILL.md 4.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Remotion ekibinin resmi kural seti, kaliteli. Varsayılan çerçeve HyperFrames olduğu için alternatif; Remotion projelerinde birincil.
 

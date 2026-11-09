@@ -145,7 +145,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Teknoloji:** markdown, typescript
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → birincil · **Roller:** dokuman-yazari · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
