@@ -74,7 +74,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### api-review  ·  microsoft/playwright @ 3b3ac25  ·  puan 94 (A)
+### api-review  ·  microsoft/playwright @ 3b3ac25  ·  puan 100 (A)
 
 - **Ne yapar:** Produce the "Playwright 1.xx API Review" artifact for a range of commits - the public API additions and the breaking or behavior changes that affect existing users since the last API review or since the last release, ordered by impact, each with links, before/after snippets and a documentation check. Covers microsoft/playwright (Node.js) and the Python, Java and .NET ports. Use when asked for an A
 - **Teknoloji:** css, git, html, next.js, node, playwright, python, typescript _(otomatik tespit)_
@@ -149,7 +149,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### compiler-commit  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### compiler-commit  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** React Compiler değişikliklerini /compiler-verify ve /compiler-review'dan geçirip [compiler] veya [rust-compiler] önekiyle commit'ler; Rust portu için orkestratör günlüğünü günceller.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. compiler klasöründe commit atarken. · **Ne zaman değil:** Diğer tüm projeler.
@@ -160,7 +160,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. compiler-verify/compiler-review ve repo içi alt-agent'lara bağlı; tek başına çalışmaz.
 
-### compiler-orchestrator  ·  react/react @ 76baa3b  ·  puan 87 (A)
+### compiler-orchestrator  ·  react/react @ 76baa3b  ·  puan 90 (A)
 
 - **Ne yapar:** React Compiler'ın TypeScript→Rust portunu döngü halinde ilerletir: sınırdaki geçişi bulur, hataları düzeltir, yeni geçişleri port eder, inceler ve commit'ler. 50+ geçişin sıralı tablosunu içerir.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust portu üzerinde çalışırken. · **Ne zaman değil:** Diğer tüm projeler.
@@ -171,7 +171,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 13 KB (SKILL.md 13.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Uzun-süreli agent döngüsü örneği olarak ilginç; içerik tamamen porta özel (13 KB).
 
-### compiler-port  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### compiler-port  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** Tek bir React Compiler geçişini TypeScript'ten Rust'a port eder: geçiş adını doğrular, TS dosyalarını ve hedef crate'i eşler, plan çıkarır, port-pass alt-agent'ıyla test-düzelt döngüsü yürütür, inceleme döngüsüyle bitirir.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust portunda. · **Ne zaman değil:** Diğer tüm projeler.
@@ -182,7 +182,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Repo içindeki port-pass agent'ına bağımlı.
 
-### compiler-review  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### compiler-review  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** Rust port kodunu orijinal TypeScript ile karşılaştırarak port sadakati, konvansiyon ve hata işleme açısından inceletir; diff'i repo içindeki compiler-review agent'ına verir.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. Rust port değişikliklerini incelerken. · **Ne zaman değil:** Genel kod incelemesi (b-yazilim-gelistirme/02 altındaki review skilleri).
@@ -193,7 +193,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. İnce sarmalayıcı; asıl mantık arşivde olmayan agent tanımında. 'React compiler review' adı yanıltıcı: React Compiler kullanan uygulamaları değil, compiler'ın Rust portunu inceler.
 
-### compiler-verify  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### compiler-verify  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** React Compiler'da değişen kodu (TS mi Rust mı) tespit edip ilgili test, lint ve biçimlendirme komutlarını (yarn snap, test-rust-port.sh, prettier-all) sırayla çalıştırır.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. compiler commit'i öncesi. · **Ne zaman değil:** Diğer tüm projeler.
@@ -299,7 +299,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### extract-errors  ·  react/react @ 76baa3b  ·  puan 80 (A)
+### extract-errors  ·  react/react @ 76baa3b  ·  puan 84 (A)
 
 - **Ne yapar:** React'e yeni hata mesajı eklendiğinde yarn extract-errors çalıştırıp yeni hata kodlarını raporlar.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer tüm projeler.
@@ -310,7 +310,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Üç satırlık komut hatırlatıcısı.
 
-### feature-flags  ·  react/react @ 76baa3b  ·  puan 96 (A)
+### feature-flags  ·  react/react @ 76baa3b  ·  puan 100 (A)
 
 - **Ne yapar:** React'in özellik bayrağı dosyalarını, @gate pragması ve gate() satır içi kullanımını, yeni bayrak ekleme ve __VARIANT__ (www/RN) testlerini anlatır; kanal farklarından doğan test hatalarını ayıklama adımları.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz. bayrak/test işlerinde. · **Ne zaman değil:** Kendi projendeki feature-flag sistemi için değil.
@@ -331,7 +331,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 16 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### fix  ·  motiondivision/motion @ 7415b6c  ·  puan 97 (A)
+### fix  ·  motiondivision/motion @ 7415b6c  ·  puan 93 (A)
 
 - **Ne yapar:** Motion repo'sunda bir GitHub issue'yu, açık PR'ı ya da plans/ altındaki plan dosyasını birleşmeye hazır PR'a dönüştüren 'yürütücü' skill: önce başarısız test, sonra en küçük düzeltme, repo kapılarıyla doğrulama, PR açma. 'Plan spesifikasyondur' ve 'repro yoksa düzeltme yok' kuralları.
 - **Ne zaman:** Motion'a katkıda; ayrıca improve skill'inin ürettiği plans/ dosyalarını başka bir projede uygulatırken (improve ile çift). · **Ne zaman değil:** Plan/issue olmadan serbest geliştirme. Yarn/Cypress/React 18-19 komutları Motion'a özel, uyarlamak gerekir.
@@ -353,7 +353,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### fix@react  ·  react/react @ 76baa3b  ·  puan 80 (A)
+### fix@react  ·  react/react @ 76baa3b  ·  puan 84 (A)
 
 - **Ne yapar:** React'te yarn prettier ve yarn linc ile biçim/lint düzeltir, kalan elle düzeltmeleri raporlar.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -364,7 +364,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 0 KB (SKILL.md 0.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV (alternatif; aynı adlı fix'in tercihi Motion sürümü). Komut hatırlatıcısı.
 
-### flags  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### flags  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** React'te yarn flags ile özellik bayraklarının kanallar (www, canary, experimental, RN…) arası durumunu gösterir, --diff ile karşılaştırır ve çıktıyı açıklar.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -396,7 +396,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flow  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### flow  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** React'te Flow tip denetimini doğru renderer ile (dom-node, native, fabric…) çalıştırır ve hataları dosya konumlarıyla raporlar.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Flow kullanmayan projeler.
@@ -470,7 +470,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### improve  ·  motiondivision/motion @ 7415b6c  ·  puan 100 (A)
+### improve  ·  motiondivision/motion @ 7415b6c  ·  puan 99 (A)
 
 - **Ne yapar:** Bir kod tabanını kıdemli danışman gibi salt-okunur tarar (doğruluk, güvenlik, performans, test, teknik borç, bağımlılık, DX, doküman, yön) ve başka bir modelin/agent'ın sıfır bağlamla uygulayabileceği önceliklendirilmiş, kendi kendine yeterli planları plans/ altına yazar. Kaynak koda asla dokunmaz; isteğe bağlı execute varyantı ayrı worktree'deki yürütücüyü inceler.
 - **Ne zaman:** Herhangi bir projede denetim/iyileştirme fırsatı bulma, yol haritası, başka agent'a devredilecek uygulama planları üretme. · **Ne zaman değil:** Hemen kod değişikliği istiyorsan (skill bilerek uygulamaz); çok küçük repolar.
@@ -585,7 +585,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### plan-update  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### plan-update  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** React Compiler Rust portu için bir konunun tüm compiler geçişlerine etkisini 8 paralel alt-agent'la araştırıp plan dokümanını yerinde günceller.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler; paralel araştırma kalıbı için d-ai-otomasyon/02 orkestrasyon skilleri daha genel.
@@ -606,7 +606,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### playwright-cherry-pick  ·  microsoft/playwright @ 3b3ac25  ·  puan 80 (A)
+### playwright-cherry-pick  ·  microsoft/playwright @ 3b3ac25  ·  puan 90 (A)
 
 - **Ne yapar:** Playwright'ta bir commit/PR'ı release-<sürüm> dalına cherry-pick edip 'cherry-pick(#pr): başlık' olarak yeniden adlandırır; asla kendiliğinden push etmez.
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -617,7 +617,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Kısa ve güvenli.
 
-### playwright-dev  ·  microsoft/playwright @ 3b3ac25  ·  puan 88 (A)
+### playwright-dev  ·  microsoft/playwright @ 3b3ac25  ·  puan 98 (A)
 
 - **Ne yapar:** Playwright geliştirme rehberine giriş: kütüphane mimarisi, API ekleme, MCP araçları ve CLI komutları, vendored bağımlılıklar, WebKit/WebView, sürümler arası bisect ve dashboard için repo içi rehberlere bağlantı verir.
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Playwright ile test yazmak (a-tasarim-onyuz/08 ve b-yazilim-gelistirme/03 skilleri).
@@ -628,7 +628,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 95 KB (SKILL.md 1.3 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Hub + 9 ayrıntı dosyası (library, api, tools, vendor, bisect, webview…) arşivde mevcut; yalnızca AGENTS.md bağlantısı repo dışında kalıyor.
 
-### playwright-devops  ·  microsoft/playwright @ 3b3ac25  ·  puan 80 (A)
+### playwright-devops  ·  microsoft/playwright @ 3b3ac25  ·  puan 90 (A)
 
 - **Ne yapar:** Playwright CI başarısızlık analizi ve sürüm operasyonları için repo içi rehberlere (commit-failures.md, fetch-commit-logs.sh) yönlendirir.
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -639,7 +639,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 7 KB (SKILL.md 0.6 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. SKILL.md ince bir dizin; asıl içerik commit-failures.md ve fetch-commit-logs.sh dosyalarında (arşivde mevcut). · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### playwright-release-notes  ·  microsoft/playwright @ 3b3ac25  ·  puan 79 (B)
+### playwright-release-notes  ·  microsoft/playwright @ 3b3ac25  ·  puan 89 (A)
 
 - **Ne yapar:** Playwright sürüm notlarını yazar: Node.js notları + Python/Java/.NET çevirileri (dile özgü API adları, langs filtreleri), dokümantasyon link makroları ve her dil için GitHub release markdown'ı.
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Kendi projenin changelog'u (genel sürüm notu skilleri daha uygun).
@@ -650,7 +650,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta) · **Kırık bağlantı:** 4
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok dilli doküman çevirisinin titiz bir örneği; tamamen repoya özel (13 KB).
 
-### playwright-test-results  ·  microsoft/playwright @ 3b3ac25  ·  puan 88 (A)
+### playwright-test-results  ·  microsoft/playwright @ 3b3ac25  ·  puan 98 (A)
 
 - **Ne yapar:** Playwright CI test sonuçlarını toplanmış DuckDB veritabanından SQL ile sorgular: flaky testler, hata oranları, yavaş testler, run/SHA/PR bazında sonuçlar; GitHub API bütçesini korumak için veritabanını silmeme kuralı.
 - **Ne zaman:** Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Kendi CI'ın (şema ve CLI repoya özel). Fikir — CI sonuçlarını parquet/DuckDB'ye toplamak — uyarlanabilir.
@@ -661,7 +661,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Şema tablosu ve örnek sorgular iyi.
 
-### playwright-triage  ·  microsoft/playwright @ 3b3ac25  ·  puan 80 (A)
+### playwright-triage  ·  microsoft/playwright @ 3b3ac25  ·  puan 90 (A)
 
 - **Ne yapar:** Yalnızca microsoft/playwright deposunun 'Issue triage' GitHub Actions iş akışında gözetimsiz çalışmak için ek yönerge: yayınlanmış sürümü kurup bisect etme, port raporlarını yeniden üretme, tarayıcı kaynaklı hataları playwright-browsers'a rapor etme. Asıl triage yöntemi depodaki triage.md ve AGENTS.md dosyalarında; tek başına çalışmaz.
 - **Ne zaman:** Yalnızca microsoft/playwright deposunun kendi CI triage iş akışı; yöntem fikri (sınıflandır, tip-of-tree'de dene, sürümler arası bisect) referans olarak okunabilir. · **Ne zaman değil:** Kendi projendeki issue'lar için kullanma; başka repoda GitHub issue açma çağrıları tarif ettiği için hiçbir projeye kurma. Başvurduğu kılavuz dosyaları arşivde yok.
@@ -797,7 +797,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. webpack stats ile 'neden dahil edildi' kanıtı kendi Next.js uygulamanda bundle şişmesi araştırırken de fikir verebilir.
 
-### rust-port-status  ·  react/react @ 76baa3b  ·  puan 80 (A)
+### rust-port-status  ·  react/react @ 76baa3b  ·  puan 84 (A)
 
 - **Ne yapar:** React Compiler Rust port plan dokümanlarının durumunu ve ilgili son commit'leri tablo halinde gösterir.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -909,7 +909,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 1.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### test  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### test  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** React çekirdek testlerini kanal (source, experimental, www, stable, classic) ve __VARIANT__ seçenekleriyle doğru yarn komutuna çevirip çalıştırır; --silent ve --no-watchman zorunlu.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.
@@ -1105,7 +1105,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 9 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### verify  ·  react/react @ 76baa3b  ·  puan 88 (A)
+### verify  ·  react/react @ 76baa3b  ·  puan 92 (A)
 
 - **Ne yapar:** React katkı gereksinimlerinin tamamını doğrular: önce prettier ve linc, sonra alt-agent'larla paralel /flow, /test ve /test www; hata olursa durup öneriyle raporlar.
 - **Ne zaman:** Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. · **Ne zaman değil:** Diğer projeler.

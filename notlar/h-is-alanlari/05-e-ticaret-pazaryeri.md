@@ -1970,7 +1970,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-competitor-analyzer  ·  buluslan/ecommerce-competitor-analyzer @ 853c710  ·  puan 75 (B)
+### ecommerce-competitor-analyzer  ·  buluslan/ecommerce-competitor-analyzer @ 853c710  ·  puan 74 (B)
 
 - **Ne yapar:** ecommerce-competitor-analyzer是由buluslan（公众号：新西楼.AI）研发的电商竞品分析Skill，他会帮你拆解竞对的定价、评论、流量结构和差异化空间，把"对手到底强在哪"变成一份可执行的竞品分析报告。 更多跨境电商 AI 实战内容，请关注公众号「新西楼.AI」。 Multi-platform competitor analysis across Amazon / Temu / Shopee: scrapes product data and generates AI reports covering pricing, reviews, traffic structure and differentiation space. Use when you need to analyze competitor products, extract product i
 - **Teknoloji:** api-anahtari _(otomatik tespit)_

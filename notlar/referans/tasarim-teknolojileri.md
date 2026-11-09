@@ -223,6 +223,10 @@
 
 ---
 
+### ClaudeAnimationBase — `JohnHeibel/ClaudeAnimationBase`
+- **Ne işe yarar:** p5.js + p5.brush ile el boyaması çizgi film başlangıç kiti: hazır karakter, 31 oynanmış duygu, model için `ANIMATION_GUIDE.md` (35 KB) ve kare kare render betiği (`render.mjs`). SKILL.md içermez; repo klonlanıp içinde çalışılır. MIT. **Seç:** Fırça dokulu, elle çizilmiş görünümlü 2D karakter animasyonu.
+- **Skill:** `canvas-procedural-animation`, `algorithmic-art`, `svg-character-animation` · **Rol:** motion-gelistirici
+
 ## Hızlı seçim tablosu
 
 | İhtiyaç | Teknoloji | Skill |

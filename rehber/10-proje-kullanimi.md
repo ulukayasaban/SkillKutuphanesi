@@ -20,7 +20,9 @@ python3 araclar/proje-kullanimi.py --kontrol        # rapor güncel mi (yazmaz)
 
 ## Yapıya bağlandığı yerler
 - **`skill-ekle.py`**: projede değişiklik yapan her işlemden (kurulum, `--guncelle`, `--kaldir`, `--geri-al`, `--yenile`,
-  `--arac`) sonra raporu kendisi yeniler. `--kuru`, `--durum`, `--dogrula`, `--oner` raporu değiştirmez.
+  `--arac`) sonra raporu kendisi yeniler. `--kuru`, `--durum`, `--dogrula`, `--oner` raporu değiştirmez. Rapor değiştiyse ve
+  kütüphane `master` dalındaysa **yalnızca bu dosya** kendiliğinden commit edilir (kütüphane çalışma ağacı temiz kalsın diye;
+  aylık güncelleme ve `--birlestir` temiz ağaç ister). Push hiçbir zaman kendiliğinden yapılmaz.
 - **`dogrula.py`**: rapor güncel değilse ve kayıt dosyalarında proje adı geçiyorsa UYARI verir.
 - **`arsiv-guncelle.py`**: aylık raporda değişen kaynakları kullanan projeleri listeler.
 - **Silme, tercih değiştirme, ad devri öncesi**: `--skill` / `--repo` sorgusuyla etkilenen projelere bakılır.

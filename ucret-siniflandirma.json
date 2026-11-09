@@ -1,6 +1,6 @@
 {
   "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
-  "guncelleme": "2026-11-04",
+  "guncelleme": "2026-11-09",
   "siniflar": {
     "elevenlabs": [
       "kismen",
@@ -1517,6 +1517,74 @@
     "referans": [
       "ucretsiz",
       "Yerel araçlar (ffmpeg, Node, Python); ücretli servis yok."
+    ],
+    "design-motion-principles": [
+      "ucretsiz",
+      "Yalnızca yönerge, kontrol listesi ve HTML rapor şablonu; servis çağrısı yok."
+    ],
+    "cinecode": [
+      "kismen",
+      "Film kodla üretilir ve ücretsiz çalışır. Seslendirme için Gemini TTS anahtarı (ücretsiz katmanı var) ya da isteğe bağlı ElevenLabs; stok arama için ücretsiz Pixabay anahtarı. Skill ücretli servis, anahtar ve büyük indirmeyi kullanıcı onayı olmadan kullanmaz."
+    ],
+    "onetake": [
+      "ucretsiz",
+      "Yerel çalışır: Kokoro (çevrimdışı TTS), faster-whisper, ffmpeg, node. Ücretli servis yok. Lisans yalnızca ticari olmayan kullanıma izin verir (PolyForm Noncommercial 1.0.0)."
+    ],
+    "moneyprinterturbo-video": [
+      "kismen",
+      "LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla."
+    ],
+    "verification-quality": [
+      "kismen",
+      "Doğrulama akışı yerel ve ücretsiz çalışır; Datadog'a metrik gönderme (DD_API_KEY) yalnızca isteğe bağlı bir entegrasyon örneğidir."
+    ],
+    "deepseek-chat": [
+      "ucretli",
+      "Tek işi DeepSeek API'sini çağırmaktır (DEEPSEEK_API_KEY, kullandıkça öde); anahtar yoksa çalışmaz."
+    ],
+    "deepseek-reason": [
+      "ucretli",
+      "Tek işi DeepSeek API'sini (deepseek-reasoner) çağırmaktır (DEEPSEEK_API_KEY, kullandıkça öde); anahtar yoksa çalışmaz."
+    ],
+    "cost-benchmark": [
+      "kismen",
+      "Yerel ölçüm ücretsizdir; Gemini/Sonnet/Opus karşılaştırma tabanları isteğe bağlıdır ve ilgili API anahtarıyla ücretlenir."
+    ],
+    "cost-openrouter": [
+      "kismen",
+      "OpenRouter hesabı ve anahtarı gerekir (hesap ücretsiz); skill yalnızca harcamayı okur, kendisi ücret doğurmaz."
+    ],
+    "flow-nexus-platform": [
+      "kismen",
+      "Flow Nexus bulut hesabı gerekir; kredi sistemiyle çalışır, ücretsiz katman var, pro/enterprise ücretlidir."
+    ],
+    "flow-nexus-neural": [
+      "kismen",
+      "Flow Nexus bulut hesabı gerekir; eğitim için ücretsiz katman var, büyük işler ücretli katmanda kredi harcar."
+    ],
+    "flow-nexus-swarm": [
+      "kismen",
+      "Flow Nexus bulut hesabı gerekir; kredi sistemiyle çalışır, ücretsiz katman var."
+    ],
+    "gaia-submission": [
+      "ucretli",
+      "GAIA kıyaslamasını Anthropic API anahtarıyla çalıştırır (kullandıkça öde); anahtarsız yürütülemez."
+    ],
+    "intelligence-transfer": [
+      "kismen",
+      "Yerel projeler arası kalıp kopyalama ücretsizdir; IPFS pazarına yayımlama Pinata anahtarı ister (Pinata'nın ücretsiz planı var)."
+    ],
+    "managed-agent": [
+      "ucretli",
+      "Anthropic Claude Managed Agents bulut çalışma zamanını kullanır (ANTHROPIC_API_KEY, beta erişimi; kullandıkça öde)."
+    ],
+    "browser-intent": [
+      "kismen",
+      "OpenAI uyumlu bir LLM sağlayıcısı ister: OpenRouter ya da Ollama Cloud (ücretli/kotalı) veya kendi yerel uç noktan (ücretsiz). Sağlayıcı yoksa skill kısıtlı kipte çalışır."
+    ],
+    "trader-cloud-backtest": [
+      "ucretli",
+      "Ağır işleri Anthropic Managed Agents bulutunda çalıştırır (ANTHROPIC_API_KEY, kullandıkça öde). Ücretsiz yol: yerel `trader-backtest`."
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

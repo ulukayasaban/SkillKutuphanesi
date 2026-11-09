@@ -2,7 +2,27 @@
 
 _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/81**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/88**
+
+### agent-implementer-sparc-coder  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Agent skill for implementer-sparc-coder - invoke with $agent-implementer-sparc-coder
+- **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### agent-sparc-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Agent skill for sparc-coordinator - invoke with $agent-sparc-coordinator
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
 
 ### app-builder  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -98,7 +118,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 12 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### constraint-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### constraint-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Projenin kalite çıtasını CONSTRAINTS.md'de yazılı sözleşmeye çevirir: hangi boyutların önemli olduğunu sorar, sayı yoksa makul varsayılan eşikler önerir, gereken araçları kurdurur ve diff'te çıtanın sessizce düşürülmesini (yeni @ts-ignore/eslint-disable, atlanan/silinen test, kaldırılan assertion, eşik düşürme) yakalar. Semgrep/axe çıktısını eşiğe göre zorlayan yerel bir betik (quality-gate.mjs) ve 'her komut gerçekten başarısız oluyor mu' doğrulaması içerir.
 - **Ne zaman:** Yazılı kalite çıtası yoksa; agent testleri atlayıp/susturup yeşile ulaşmaya çalışıyorsa; erişilebilirlik, performans veya kapsama eşiği tanımlanacaksa. · **Ne zaman değil:** Kısa ömürlü prototip/spike; zaten CI'da zorlanan, belgelenmiş standartları olan ekip.
@@ -159,7 +179,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 8 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### doubt-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### doubt-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Önemsiz olmayan her kararı (iddia → en küçük incelenebilir birim → taze bağlamlı karşıt inceleme → uzlaştırma → dur) döngüsünden geçirir; gerekirse Codex veya Gemini CLI ile çapraz model incelemesi yaptırır. Ana oturum orkestratörü için tasarlanmıştır.
 - **Ne zaman:** Yüksek riskli işler (üretim kimlik doğrulama, güvenlik, geri alınamaz migrasyon), tanıdık olmayan kod, planın gizli hata modlarının sınanması. · **Ne zaman değil:** Alt-agent/persona içinde (iç içe agent çağıramaz); hızın önemli olduğu düşük riskli işler.
@@ -311,7 +331,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### idea-refine  ·  addyosmani/agent-skills @ 301b02b  ·  puan 95 (A)
+### idea-refine  ·  addyosmani/agent-skills @ 301b02b  ·  puan 91 (A)
 
 - **Ne yapar:** Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı, önerilen yön, doğrulanacak varsayımlar, MVP kapsamı ve 'yapmayacaklarımız' içeren bir belge (docs/ideas/) üretir.
 - **Ne zaman:** Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde. · **Ne zaman değil:** Ne yapılacağı belli, yalnız gereksinim ayrıntısı eksikse (brainstorming / interview-me); kod düzeyi planlama (writing-plans).
@@ -362,7 +382,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 6 KB (SKILL.md 5.5 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### incremental-implementation  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### incremental-implementation  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Değişiklikleri ince, doğrulanabilir dilimlerle teslim ettirir: dikey/sözleşme-önce/risk-önce dilimleme, 'önce sadelik' ve kapsam disiplini, her adımda derlenebilir kalma, yarım özellikleri feature flag arkasına alma, güvenli varsayılanlar ve geri alınabilirlik kuralları.
 - **Ne zaman:** Birden çok dosyaya dokunan her özellik/değişiklikte; plandan sıradaki görevi alırken; büyük kod bloğu yazma eğilimi olduğunda. · **Ne zaman değil:** Tek satırlık düzeltmeler; planın kendisini yazmak (writing-plans).
@@ -373,7 +393,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 9 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Kısa (9 KB), yığından bağımsız; 'Rule 0.5 kapsam disiplini' agent'ların taşmasını iyi engelliyor. ../../references/definition-of-done.md arşivde yok (yalnız 'ayrıca bkz').
 
-### interview-me  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### interview-me  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Kullanıcının gerçekte ne istediğini (yapması gerektiğini düşündüğü şeyi değil) bulmak için tek soruluk turlarla ~%95 güvene kadar görüşme yapar; her soruya bir tahmin ekler, niyeti kullanıcının kendi sözleriyle özetleyip açık onay ister ve durur.
 - **Ne zaman:** İstek 'kimin için / neden şimdi' bilgisi olmadan geldiğinde; kullanıcı 'beni sorgula', 'emin miyiz?' dediğinde; plan veya spec yazılmadan önce kısa niyet doğrulaması. · **Ne zaman değil:** Etkileşimsiz bağlamlar (CI, /loop); gereksinim zaten netse; tam tasarım belgesi gerekiyorsa (brainstorming).
@@ -384,7 +404,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 15 KB (SKILL.md 14.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Net durma kuralı ve 'istek vs. olması gereken' ayrımı brainstorming'den farklı bir boşluğu dolduruyor; kısa ve yan etkisiz.
 
-### karpathy-guidelines  ·  multica-ai/andrej-karpathy-skills @ 2c60614  ·  puan 73 (B)
+### karpathy-guidelines  ·  multica-ai/andrej-karpathy-skills @ 2c60614  ·  puan 69 (B)
 
 - **Ne yapar:** Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -425,7 +445,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısalık ilkesi iyi ama içerik writing-plans'ın sadeleştirilmiş türevi; plan dosyasını proje köküne yazma kuralı ve var olmayan ag-kit betiklerine atıf zayıflık.
 
-### planning-and-task-breakdown  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### planning-and-task-breakdown  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Spec'i bağımlılık grafiği çıkarıp dikey dilimlere bölerek sıralı, boyutlandırılmış görevlere çevirir; her görev için kabul ölçütü ve doğrulama, fazlar arası kontrol noktaları, riskler ve paralelleştirme fırsatları içeren plan şablonu verir.
 - **Ne zaman:** Spec hazır, iş büyük ve dilimlenmesi gerekiyorsa; tahmin/kapsam çıkarma veya paralel iş fırsatı aranırken; superpowers zinciri kullanılmayan projelerde. · **Ne zaman değil:** writing-plans kurulu bir rolde ikinci plan skilli olarak (aynı iş); tek adımlık işler.
@@ -636,7 +656,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### source-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### source-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Her uygulama kararını resmî dokümantasyona dayandırır: yığını ve sürümleri tespit eder, resmî belgeyi çeker (çekilen içeriği talimat değil veri sayar), belgelenmiş kalıpla uygular ve kaynakları kodda/yanıtta alıntılar.
 - **Ne zaman:** Framework/kütüphane sürümüne duyarlı işler; güncelliğini yitirmiş kalıp riski olan hızlı değişen API'ler (Next.js, React 19, Tailwind v4…). · **Ne zaman değil:** İnternet erişimi yoksa; saf algoritma/iş mantığı değişiklikleri.
@@ -647,7 +667,57 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### spec-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### sparc-implement  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Run the SPARC Pseudocode and Architecture phases (2 and 3) — write algorithm pseudocode, design module boundaries and API contracts, then implement
+- **Teknoloji:** typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### sparc-methodology  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) comprehensive development methodology with multi-agent orchestration
+- **Teknoloji:** api-anahtari, node, playwright, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: claude, codex -> kurulumda her araca kendi sürümü konur
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 24 KB (SKILL.md 24.4 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### sparc-methodology@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** SPARC development workflow (Specification, Pseudocode, Architecture, Refinement, Completion). Use when: new features, complex implementations, architectural changes. Skip when: simple fixes, documentation, configuration.
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** alternatif
+- **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### sparc-refine  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Run the SPARC Refinement and Completion phases — review code, improve test coverage, validate against specification, and generate documentation
+- **Teknoloji:** typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### sparc-spec  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Run the SPARC Specification phase — gather requirements, define acceptance criteria, identify constraints, and store the spec in memory
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 4 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### spec-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Kodlamadan önce spec yazdırır: kapsam kontrolü (gerekirse yetenek haritasına bölme), amaç/yığın/komutlar/yapı/test stratejisi/sınırlar/başarı ölçütü içeren spec, ardından plan, görevler ve uygulama aşamalarını kapılı bir akışla yürütür; spec'i canlı tutma kurallarını verir.
 - **Ne zaman:** Yeni proje/özellik başlarken spec veya PRD yoksa; tek bir isteğin birden çok bağımsız yeteneğe bölünmesi gerektiğinde. · **Ne zaman değil:** Küçük, net değişiklikler; gereksinim hâlâ belirsizse önce brainstorming/interview-me.

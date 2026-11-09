@@ -14,7 +14,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 8 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### browser-testing-with-devtools  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### browser-testing-with-devtools  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Chrome DevTools MCP ile ajana canlı tarayıcı gözü kazandırır: ekran görüntüsü, DOM, konsol, ağ istekleri, performans izi (LCP/CLS/INP), hesaplanmış stiller ve erişilebilirlik ağacı. UI/ağ/performans hata ayıklama akışları, test planı şablonu ve tarayıcı içeriğini güvenilmez veri sayan güvenlik sınırları içerir.
 - **Ne zaman:** Çalışan sayfada konsol hatası, ağ sorunu, performans veya erişilebilirlik ağacı doğrulaması gerektiğinde (özellikle gerçek tarayıcı verisiyle). · **Ne zaman değil:** chrome-devtools MCP sunucusu kurulu değilse çalışmaz; yalnız backend/CLI işlerinde değil. Betikli, yeniden çalıştırılabilir E2E testi için webapp-testing / Playwright.
@@ -45,7 +45,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### playwright-component-testing  ·  microsoft/playwright @ 3b3ac25  ·  puan 88 (A)
+### playwright-component-testing  ·  microsoft/playwright @ 3b3ac25  ·  puan 98 (A)
 
 - **Ne yapar:** Playwright ile React/Vue bileşenlerini 'hikâye galerisi' sayfası üzerinden, dahili `mount` fixture'ı ve düz Playwright testleriyle izole test etme kurulumu. Galeri sözleşmesi, tiplendirme, Vite entegrasyonu ve eski `@playwright/experimental-ct-react/-vue`'dan geçiş rehberi içerir.
 - **Ne zaman:** Bileşenleri tarayıcıda ayrı ayrı (props, olay, görsel regresyon) test etmek veya experimental-ct'den geçmek için. · **Ne zaman değil:** Salt E2E akışları için değil (webapp-testing / playwright-cli); Playwright'sız projelerde ve React/Vue dışı çatılarda hazır şablon yok.
@@ -56,7 +56,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 38 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Resmî Microsoft skill'i; kavram (hikâye + galeri + mount fixture) net ve geçiş yolu belgeli. Dikkat: galeri sayfasını (`references/gallery-spec.md`'ye göre) projede kendin yazman gerekir, hazır şablon yok; yeni bir Playwright sürümünü varsayar (mount fixture/`reuseContext`), eski sürümde çalışmayabilir. Next.js/webpack'te ayrı Vite sunucusu ekler (devDependency). 10.2 KB + 5 referans.
 
-### playwright-trace  ·  microsoft/playwright @ 3b3ac25  ·  puan 90 (A)
+### playwright-trace  ·  microsoft/playwright @ 3b3ac25  ·  puan 100 (A)
 
 - **Ne yapar:** Playwright trace (.zip) dosyalarını komut satırından inceler: eylem listesi, ağ istekleri, konsol, hatalar, DOM/erişilebilirlik anlık görüntüleri ve ekran görüntüleri; tarayıcı açmadan başarısız testi adım adım teşhis ettirir.
 - **Ne zaman:** Başarısız bir Playwright testinin trace.zip'ini ajanla çözümlerken. · **Ne zaman değil:** Trace üretmek veya test yazmak için değil; trace yoksa işe yaramaz.
@@ -67,7 +67,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa (4.7 KB), odaklı ve resmî; komutlar tutarlı ve tipik bir inceleme akışı veriyor. Dikkat: yalnızca `npx playwright trace` alt komutunu içeren yeni Playwright sürümlerinde çalışır; `allowed-tools: Bash(npx playwright trace:*)` ile kapsam sınırlı, ek kurulum/ağ yok.
 
-### react-doctor  ·  darkroomengineering/satus @ 5cb0547  ·  puan 76 (B)
+### react-doctor  ·  darkroomengineering/satus @ 5cb0547  ·  puan 75 (B)
 
 - **Ne yapar:** React kod tabanını güvenlik, performans, doğruluk, erişilebilirlik ve mimari açısından tarayıp 0-100 sağlık puanı veren `react-doctor` CLI'ının skill'i. Değişiklik sonrası `--diff` ile gerileme kontrolü, tam tarama ve `/doctor` ile uzaktan çekilen triyaj playbook'u akışı vardır.
 - **Ne zaman:** React kodu bitirirken/commit öncesi puan gerilemesini yakalamak, lint-erişilebilirlik-bundle sorunlarını önceliklendirmek için. · **Ne zaman değil:** React olmayan projelerde değil. Ağdan talimat çekmek istemeyen/izole ortamlarda `/doctor` akışı kullanılmamalı.
@@ -111,7 +111,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. SKILL.md, scripts/ ve examples/ resmî kopyayla aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te doldurulmamış şablon telif satırı.
 
-### webapp-testing@github  ·  github/awesome-copilot @ 7e40881  ·  puan 93 (A)
+### webapp-testing@github  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
 
 - **Ne yapar:** Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
 - **Teknoloji:** css, node, playwright, react _(otomatik tespit)_

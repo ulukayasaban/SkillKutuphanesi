@@ -1134,6 +1134,64 @@
         "^\\.claude/skills/"
       ],
       "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; 'ekle' dedi (2026-11-07). Kodla video: sahne başına motor seçimi (Paper.js/PixiJS/HyperFrames/Three.js/Manim/Levha) + referans videodan istem çıkarma. Skiller repo kökünden (motorlar/, kurulum.sh, projeler/) çalışır; tek başına projeye kurulunca betik yolları bozulur — klonlanıp içinde çalışılacak repo."
+    },
+    {
+      "repo": "kylezantos/design-motion-principles",
+      "tip": "T1",
+      "oncelik": 2,
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo (MIT): arayüz hareketi kurma ve denetleme, üç tasarımcının (Emil Kowalski, Jakub Krehel, Jhey Tompkins) yayımlanmış işlerinden damıtılmış bakışlar. Bağımlılık yok."
+    },
+    {
+      "repo": "sarpstar/cinecode",
+      "tip": "T1",
+      "oncelik": 2,
+      "dosya_haric": [
+        "^docs/",
+        "^tests/",
+        "^\\.github/",
+        "^README\\.(en|ja|zh-CN)\\.md$"
+      ],
+      "bagimlilik": "SKILL.md frontmatter'ında hook tanımlar (UserPromptSubmit, Stop, PreToolUse: her istemde ve her araç çağrısında scripts/guard.py yerel denetimi çalışır). Ev dizinine yazar: ~/.cinecode/ (python yolu önbelleği, anahtar deposu keys.env, yazı tipi önbelleği). Node, Python 3 ve ffmpeg ister. Varsayılan seslendirme Gemini TTS (GEMINI_API_KEY), ElevenLabs isteğe bağlı; stok arama için ücretsiz Pixabay anahtarı.",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo (MIT): kodla kısa film/reklam/müzik videosu (tek HTML ya da three.js, Web Audio, -14 LUFS master). SKILL.md repo kökünde; docs/ ve tests/ arşive alınmaz. Repo 2026-11-03'te oluşturuldu (çok yeni; sürüm kararlılığı izlenmeli)."
+    },
+    {
+      "repo": "feitangyuan/onetake",
+      "tip": "T1",
+      "oncelik": 2,
+      "dosya_haric": [
+        "^cases/",
+        "^gallery/",
+        "^assets/"
+      ],
+      "bagimlilik": "Lisans PolyForm Noncommercial 1.0.0: yalnızca ticari olmayan kullanım serbest. ffmpeg, node ve Python 3 ister; seslendirme için Kokoro (~/.cache/kokoro/venv altına kurulur) ve faster-whisper.",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo: tek kamerayla kesintisiz ürün/özellik tanıtım filmi (tek HTML kompozisyon, hareket kütüphanesi, süreklilik ölçümü). SKILL.md repo kökünde; cases/, gallery/ ve assets/ (örnek filmler, GIF'ler, logo) arşive alınmaz."
+    },
+    {
+      "repo": "harry0703/MoneyPrinterTurbo",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^docs/skill/"
+      ],
+      "bagimlilik": "Skill MoneyPrinterTurbo'yu kullanıcının ev dizinine kurar ve kurulum/üretim için onay sormaz; uv gerekir (yoksa ağdan kurar). LLM API anahtarı zorunlu, stok görüntü için Pexels anahtarı (ücretsiz) gerekir. Bazı video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; her biri ayrıca onay ister. Varsayılan çıktı Çince 9:16.",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT): konudan stok görüntülü, seslendirmeli, altyazılı kısa video. Skill docs/skill/ altında (SKILL.md + mpt_agent.py); reponun geri kalanı uygulamanın kendisidir, arşive alınmaz."
+    },
+    {
+      "repo": "ruvnet/ruflo",
+      "tip": "T1",
+      "oncelik": 1,
+      "kok_dosyalari": [
+        "SKILL.md"
+      ],
+      "haric": [
+        "^plugins/ruflo-ai-team/directory/"
+      ],
+      "bagimlilik": "Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT; eski adı claude-flow): çoklu ajan orkestrasyonu, bellek, eklentiler. Aynı skillerin .agents/skills (Codex), .claude/skills, v3/ ve plugins/ altında kopya ve sürümleri var; araç ayna/sürüm olarak ayırır. plugins/ruflo-ai-team/directory/ aynı altı skilin birebir kopyasıdır (hariç). Aynı adı başka işte kullanan mevcut kayıtlar (security-scan, tdd-workflow, trader-risk, agent-architecture) kimliğini ve tercihini korur (durum_elle); ruflo sürümleri ad@ruvnet kimliğiyle alternatiftir."
+    },
+    {
+      "repo": "JohnHeibel/ClaudeAnimationBase",
+      "tip": "T6"
     }
   ],
   "konum_haric": [

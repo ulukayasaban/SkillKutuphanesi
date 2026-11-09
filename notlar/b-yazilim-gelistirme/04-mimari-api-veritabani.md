@@ -2,7 +2,7 @@
 
 _Mimari, API/arayüz tasarımı, veritabanı, backend_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/10**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/15**
 
 ### api-and-interface-design  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
@@ -15,7 +15,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 15 KB (SKILL.md 14.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### api-breaking-change-detector  ·  github/awesome-copilot @ 7e40881  ·  puan 93 (A)
+### api-breaking-change-detector  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
 
 - **Ne yapar:** Cross-references C# Web API controllers/DTOs against their TypeScript/JavaScript consumers (React, Angular, Vue, Svelte, Node.js, or hand-written/auto-generated HTTP clients like Fetch, Axios, NSwag) to catch contract drift in both directions: backend changes that break client applications (renamed/removed JSON keys, new required parameters, status code shifts) and frontend code sending fields the
 - **Teknoloji:** node, react, svelte, typescript, vue _(otomatik tespit)_
@@ -36,7 +36,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 20 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Seçici okuma kuralı bağlamı küçük tutuyor (SKILL.md 2.5 KB), auth ve rate-limiting dosyaları yararlı. İçerik yer yer yüzeysel; @[skills/...] biçimindeki çapraz referanslar ag-kit sözdizimi.
 
-### architecture-blueprint-generator  ·  github/awesome-copilot @ 7e40881  ·  puan 91 (A)
+### architecture-blueprint-generator  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
 
 - **Ne yapar:** Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.
 - **Teknoloji:** node, python, react _(otomatik tespit)_
@@ -68,6 +68,36 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 13 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, veritabani-tasarimi grubunun tek üyesi. 'Her şeye PostgreSQL deme' ve seçim tabloları dengeli; içerik ilke düzeyinde, derin şema örnekleri az.
 
+### ddd-aggregate  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Scaffold an aggregate root with entity, value objects, repository interface, domain events, and test stubs. Use when adding a new aggregate to an existing bounded context, modeling a new business concept that owns invariants, or generating the boilerplate for an entity + repo + events triplet.
+- **Teknoloji:** node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### ddd-context  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Create and manage a DDD bounded context with standard directory structure. Use when starting a new subdomain, splitting a monolith into bounded contexts, or scaffolding the domain/application/infrastructure layout for a fresh module.
+- **Teknoloji:** typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### ddd-validate  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Validate domain boundaries -- detect cross-context import violations and aggregate invariant issues. Use when auditing a DDD codebase for leaks between bounded contexts, before merging cross-cutting changes, or as a CI gate to catch boundary erosion early.
+- **Teknoloji:** node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
 ### frontend-architecture  ·  vudovn/ag-kit @ 549ba3d  ·  puan 82 (A)
 
 - **Ne yapar:** Ön yüz kodunu ölçeklenir biçimde düzenleme kuralları: UI / mantık (hook, composable) / veri (servis dosyaları) / tip / doğrulama (şema) katmanlarına ayırma, dosya sorumluluğu ve boyutu, Next.js'te varsayılan Server Component, Vue Composition API, durumu yerelden başlatma, form şeması, prop ve isimlendirme kuralları, 'god component' önleme, Tailwind sınıf hijyeni ve minimum test/erişilebilirlik tabanı.
@@ -80,7 +110,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-mimarisi grubunun birincili. ag-kit'in en somut skillerinden; React ve Vue'yu birlikte kapsaması ve 'görsel tasarım değil yapı' sınırı net. ../app-builder ve ../frontend-design kardeş bağlantıları kurulumda o skiller yoksa boşa düşer (yalnız atıf).
 - **Not:** ../app-builder ve ../nextjs-react-expert kardeş bağlantıları yalnız 'ayrıca bkz' atfı; bu skiller kurulmasa da skill çalışır (kardes-eksik uyarısı göz ardı edilebilir).
 
-### frontend-ui-engineering  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### frontend-ui-engineering  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
 
 - **Ne yapar:** Üretim kalitesinde, erişilebilir ve responsive arayüz kurma: bileşen dosya yapısı ve desenleri, durum yönetimi, tasarım sistemine bağlılık ve 'AI estetiğinden' kaçınma, boşluk/tipografi/renk, WCAG 2.1 AA (klavye, ARIA, odak yönetimi, anlamlı boş/hata durumları), responsive tasarım, yükleme ve geçiş durumları.
 - **Ne zaman:** Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde. · **Ne zaman değil:** Sanat yönetimi/görsel yön belirleme (a-tasarim skilleri); salt backend işleri.
@@ -90,6 +120,26 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Durum:** tercih · **Örtüşme:** frontend-ui-uygulama → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
+
+### migrate-create  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Create a new sequentially numbered database migration with up/down SQL files
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
+- **İnceleme:** otomatik
+
+### migrate-validate  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Validate pending migrations for foreign key consistency, rollback safety, and best practices
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
 
 ### nodejs-best-practices  ·  vudovn/ag-kit @ 549ba3d  ·  puan 74 (B)
 

@@ -2,7 +2,7 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **27/94**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **30/97**
 
 ### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -86,13 +86,24 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1308 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### create-video  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 98 (A)
+### cinecode  ·  sarpstar/cinecode @ 67f9807  ·  puan 67 (B)
+
+- **Ne yapar:** Kullanıcıyla birlikte tamamen kodla kısa film, reklam ya da müzik videosu yapar. İki kip: Hızlı (tek HTML dosyası + Web Audio, düşük çözünürlüklü taslak, iki revizyon, yaklaşık 3 dakikaya kadar) ve Film (stil karesi, animatik, three.js render, katmanlı ses; altı kapılı adım). Kullanıcının şarkısına film, referans videoya benzer film ve kullanıcının çekimlerinden kurgu da yapar; -14 LUFS master'lı MP4 verir. Türkçe tetikleyicileri vardır.
+- **Ne zaman:** Koddan üretilen sinematik kısa film, reklam/ürün filmi, müzik videosu; senaryodan sese uçtan uca tek skill isteniyorsa. · **Ne zaman değil:** DİKKAT: SKILL.md hook tanımlar (her istemde ve her araç çağrısında scripts/guard.py yerel denetimi çalışır) ve ev dizinine yazar (~/.cinecode/: anahtar deposu, önbellek). Seslendirme için Gemini TTS anahtarı (ya da ElevenLabs) gerekir; anahtarsız yalnızca Web Audio'lu film. Mevcut görüntüyü kurgulamak için video-edit/ffmpeg; kare-hassas HTML kompozisyon için hyperframes. Repo çok yeni (2026-11-03).
+- **Teknoloji:** three.js, html, javascript, python, node, ffmpeg · **Paketler:** ffmpeg, node, python3
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: hooks (Codex bunları yok sayar)
+- **Geliştirici:** sarpstar (kisi, ★1614, son güncelleme 2026-11-03, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** kodla-film-stilleri → alternatif · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
+- **Boyut:** 2409 KB (SKILL.md 32.0 KB, yük buyuk) · **Bağımlılık:** SKILL.md frontmatter'ında hook tanımlar (UserPromptSubmit, Stop, PreToolUse: her istemde ve her araç çağrısında scripts/guard.py yerel denetimi çalışır). Ev dizinine yazar: ~/.cinecode/ (python yolu önbelleği, anahtar deposu keys.env, yazı tipi önbelleği). Node, Python 3 ve ffmpeg ister. Varsayılan seslendirme Gemini TTS (GEMINI_API_KEY), ElevenLabs isteğe bağlı; stok arama için ücretsiz Pixabay anahtarı.
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (kodla-film-stilleri grubunda; birincil lemo-opuscar). MIT, tek konulu uzman repo; 39 betik, 61 stil dosyası, kendi testleri var. Çalıştırma testi yapılmadı; repo 2026-11-03'te oluşturuldu, sürüm kararlılığı izlenmeli. DİKKAT: skill frontmatter'ında hook var (UserPromptSubmit, Stop, PreToolUse) ve ~/.cinecode/ altına yazar; hook ve denetim betiğinde ağ çağrısı görülmedi.
+
+### create-video  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 94 (A)
 
 - **Ne yapar:** HeyGen Video Agent ile tek bir metin isteminden komple video üretir; senaryo, avatar, görsel, seslendirme ve altyazıyı ajan kendisi seçer. Önce prompt-optimizer referansıyla sahne/zamanlama yapılandırılmış prompt yazılır, sonra iş gönderilip durum sorgulanır.
 - **Ne zaman:** Hızlı taslak, tanıtım veya açıklayıcı videoyu avatar/ses ayrıntısı belirtmeden tek adımda almak istendiğinde. · **Ne zaman değil:** Tam metin, belirli avatar/ses veya sahne bazlı kontrol gerekiyorsa (avatar-video); kendi kompozisyonunu kurmak istiyorsan (hyperframes).
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** heygen-video → birincil · **Roller:** video-kompozisyon, ai-medya-uretici · **Globalde:** claude:ayni
 - **Boyut:** 92 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı ve güncel HeyGen resmi skill'i; MCP varsa onu tercih ediyor. Ücretli API, sonuç kontrolü sınırlı.
@@ -127,13 +138,13 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 4 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### ffmpeg  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 97 (A)
+### ffmpeg  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 93 (A)
 
 - **Ne yapar:** FFmpeg ile format dönüştürme, yeniden boyutlandırma, sıkıştırma, ses çıkarma, kırpma ve Remotion'a uygun varlık hazırlama tariflerini toplar. Bayrakların neden kullanıldığını da açıklar.
 - **Ne zaman:** Remotion/HyperFrames projesine girecek GIF, video ve ses dosyalarını hazırlarken ya da derin FFmpeg tarifi gerektiğinde. · **Ne zaman değil:** Basit kırp/birleştir/boyutlandır işleri için video-edit daha kısa ve yeterli.
 - **Teknoloji:** ffmpeg · **Paketler:** ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ffmpeg-kurgu → tamamlayıcı · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 17 KB (SKILL.md 12.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kapsamlı ve doğru tarifler; Remotion odaklı örnekler ağırlıkta. video-edit ile birlikte kullanılır.
@@ -366,6 +377,17 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 5 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
+### moneyprinterturbo-video  ·  harry0703/MoneyPrinterTurbo @ c235354  ·  puan 98 (A)
+
+- **Ne yapar:** MoneyPrinterTurbo uygulamasını kurup çalıştırarak bir konu ya da metinden bitmiş kısa video üretir: LLM ile metin, Pexels stok görüntüsü, Edge TTS seslendirme, altyazı ve fon müziği. Kurulumu, yapılandırmayı, üretimi ve MP4 teslimini yardımcı betikle (mpt_agent.py) kendisi yürütür; eksik API anahtarlarını tek seferde ister.
+- **Ne zaman:** Konu ya da başlıktan stok görüntülü, seslendirmeli dikey/yatay kısa video; MoneyPrinterTurbo'nun kurulumu ve başarısız üretimin onarımı. · **Ne zaman değil:** DİKKAT: skill onay sormadan kurar ve çalıştırır (uygulamayı ev dizinine indirir, uv yoksa ağdan kurar). LLM API anahtarı zorunlu. Varsayılan çıktı Çince 9:16; dil ve biçim açıkça belirtilmeli. Üretilmiş (AI) video sağlayıcıları ücretli görev açar. Kare-hassas kompozisyon ya da özgün görsel için hyperframes/remotion.
+- **Teknoloji:** python, ffmpeg, api-anahtari · **Paketler:** uv, ffmpeg
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** harry0703 (kisi, ★141094, son güncelleme 2026-11-07, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** konudan-stok-video → birincil · **Roller:** ai-medya-uretici, video-kurgu-render
+- **Boyut:** 47 KB (SKILL.md 8.8 KB, yük orta) · **Bağımlılık:** Skill MoneyPrinterTurbo'yu kullanıcının ev dizinine kurar ve kurulum/üretim için onay sormaz; uv gerekir (yoksa ağdan kurar). LLM API anahtarı zorunlu, stok görüntü için Pexels anahtarı (ücretsiz) gerekir. Bazı video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; her biri ayrıca onay ister. Varsayılan çıktı Çince 9:16.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (konudan-stok-video grubunda birincil). Resmî ürün reposu (MIT), skill sürümü 1.3.2; yardımcı betik kurulum, anahtar doğrulama ve hata onarımını yürütür. Çalıştırma testi yapılmadı. DİKKAT: skill kurulum ve üretim için onay istemez, ev dizinine kurar; LLM anahtarı zorunlu; ücretli video sağlayıcıları ayrı onay ister.
+
 ### motion-design  ·  lottiefiles/motion-design-skill @ f9a8a04  ·  puan 72 (B)
 
 - **Ne yapar:** Applies motion design principles to create emotionally-driven, technically sound animations and transitions. Provides timing, easing, choreography, and Disney animation principles adapted for UI. Use when creating animations, transitions, micro-interactions, loading states, page transitions, scroll-triggered effects, or any motion work. Works with CSS, Framer Motion, GSAP, Lottie, Spring, or any a
@@ -386,6 +408,17 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 35 KB (SKILL.md 26.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
+### onetake  ·  feitangyuan/onetake @ abb6d17  ·  puan 73 (B)
+
+- **Ne yapar:** Ürün, sayfa, skill ya da özellik için 10–30 saniyelik (anlatımlı demolarda yaklaşık 60 saniye) kesintisiz tanıtım filmi yapar: tek HTML kompozisyon (her değer zamanın saf fonksiyonu), ölçülmüş hareket kütüphanesi (yay, giriş, taşıma, temas, kamera), gerçek arayüzden malzeme, ortak ses paleti ve ritim ile sürekliliği ölçen denetçi. Referans videoyu çözümleyip hissini yakalar; kare kare, hareket bulanıklığıyla render eder.
+- **Ne zaman:** Lansman/teaser klibi, anlatımlı özellik demosu; sahnelerin birbirinden doğduğu tek çekim hissi isteniyorsa. · **Ne zaman değil:** DİKKAT: lisans PolyForm Noncommercial 1.0.0, yalnızca ticari olmayan kullanım. Uzun video, konuşan kafa ve mevcut görüntü kurgusu için değil. HyperFrames ya da Remotion açıkça isteniyorsa onlar.
+- **Teknoloji:** html, javascript, python, ffmpeg, node · **Paketler:** ffmpeg, node, python3, kokoro-onnx, faster-whisper
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** feitangyuan (kisi, ★3959, son güncelleme 2026-11-05, lisans NOASSERTION)
+- **Durum:** tercih · **Örtüşme:** urun-tanitim-filmi → birincil · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
+- **Boyut:** 2715 KB (SKILL.md 23.7 KB, yük orta) · **Bağımlılık:** Lisans PolyForm Noncommercial 1.0.0: yalnızca ticari olmayan kullanım serbest. ffmpeg, node ve Python 3 ister; seslendirme için Kokoro (~/.cache/kokoro/venv altına kurulur) ve faster-whisper.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (urun-tanitim-filmi grubunda birincil). Tek konulu uzman repo; hareket kütüphanesi (lib/motion.js), 12 betik, ritim ve süreklilik ölçümü, 7 referans belgesi. Yerel ve ücretsiz çalışır. Çalıştırma testi yapılmadı. DİKKAT: lisans PolyForm Noncommercial 1.0.0 (yalnızca ticari olmayan kullanım); GitHub lisansı tanımadığı için kayıtta NOASSERTION görünür. Örnek filmler ve GIF'ler (cases/, gallery/, assets/) arşive alınmadı.
+
 ### oversized-cursor  ·  heygen-com/hyperframes @ f8309b3  ·  puan 100 (A)
 
 - **Ne yapar:** Lansman videolarında göz taşıyıcı olarak büyük macOS imleci tekniği: boyut/görünüm (marka motifli imleçler dahil), ekran dışından giriş yasası, uç hedefleme ve tıklama vuruşu, tıklamanın bir sonraki vuruşu ateşlemesi ve sahneler arası çıkış/devir.
@@ -397,23 +430,23 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa, kontrol listeli ve UI demo videolarında yüksek getirili.
 
-### playwright-recording  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 97 (A)
+### playwright-recording  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 93 (A)
 
 - **Ne yapar:** Playwright ile tarayıcı etkileşimlerini video olarak kaydeder; form doldurma, gezinti, yavaşlatma ve çözünürlük ayarlarıyla demo ve ürün turu görüntüsü üretir.
 - **Ne zaman:** Gerçek bir web uygulamasının demo/walkthrough görüntüsü video kompozisyonuna girecekse. · **Ne zaman değil:** Terminal/CLI demosu (synthetic-screen-recording); masaüstü uygulama kaydı.
 - **Teknoloji:** playwright, typescript, node · **Paketler:** playwright, @playwright/test
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ekran-kaydi-demo → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 20 KB (SKILL.md 12.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Genel ve bağımsız çalışan tarifler; Remotion odaklı örnekler.
 
-### provider-refresh-oct23  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 100 (A)
+### provider-refresh-oct23  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 98 (A)
 
 - **Ne yapar:** API contracts and production routing for the October 23, 2026 provider refresh.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** otomatik
@@ -429,13 +462,13 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (referans-videodan-istem grubunda birincil, tek üye). MIT. Ücretsiz, çevrimdışı; karelerdeki yazıyı veri sayar (prompt enjeksiyonuna karşı açık kural). DİKKAT: skill repo kökünden çalışır (kurulum.sh, motorlar/, birlestir.py, projeler/<ad>/). Kütüphaneden tek başına projeye kurulunca bu yollar bulunmaz; kullanmak için repoyu klonlayıp içinde `claude` açmak gerekir. Lisans: repoda MIT LICENSE var, GitHub otomatik tanımadığı için kayıtta NOASSERTION görünür.
 
-### remotion  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 82 (A)
+### remotion  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 78 (B)
 
 - **Ne yapar:** claude-code-video-toolkit'e özgü Remotion uzantıları: paylaşılan bileşenler (AnimatedBackground, SlideTransition…) ve özel geçişler (glitch, lightLeak, clockWipe). Temel Remotion bilgisi için 'remotion-official' skill'ine yönlendirir.
 - **Ne zaman:** Sadece o toolkit'in lib/components ve lib/transitions klasörleri bulunan bir projede. · **Ne zaman değil:** Genel Remotion işleri (remotion-best-practices); OpenMontage kurulumunda lib/ klasörleri yok.
 - **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/transitions
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** remotion-cercevesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 16 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu lib/components, lib/transitions ve remotion-official bu kurulumda/arşivde yok; tek başına çalışmaz.
@@ -456,7 +489,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Remotion kodu yazılan veya düzenlenen her projede. · **Ne zaman değil:** HyperFrames ile yazılan videolarda; Remotion'dan HyperFrames'e taşıma için remotion-to-hyperframes.
 - **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/cli
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** remotion-cercevesi → birincil · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
 - **Boyut:** 112 KB (SKILL.md 4.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Remotion ekibinin resmi kural seti, kaliteli. Varsayılan çerçeve HyperFrames olduğu için alternatif; Remotion projelerinde birincil.
@@ -773,13 +806,13 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 23 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### synthetic-screen-recording  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 89 (A)
+### synthetic-screen-recording  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 85 (A)
 
 - **Ne yapar:** Terminal/CLI demosunu gerçek ekran kaydı yerine Remotion'daki TerminalScene bileşeniyle sentetik olarak üretir; komut ve çıktıyı karakter karakter, kareye kadar kontrollü yazar. Ne zaman sentetik, ne zaman canlı kayıt seçileceğini açıklar.
 - **Ne zaman:** Kurulum/CLI eğitimi gibi komut ve çıktısı önceden bilinen terminal demolarında. · **Ne zaman değil:** Gerçek uygulama arayüzü veya tarayıcı akışı (playwright-recording); OpenMontage remotion-composer'ı yoksa.
 - **Teknoloji:** remotion, react, typescript · **Paketler:** OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ekran-kaydi-demo → alternatif · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Fikir iyi; ancak OpenMontage'ın remotion-composer/TerminalScene bileşenine bağımlı.
@@ -814,13 +847,13 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### video-download  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 98 (A)
+### video-download  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 94 (A)
 
 - **Ne yapar:** yt-dlp ile YouTube ve 1000+ siteden video, sadece ses, altyazı ve metadata indirme komutlarını verir; kalite ön ayarları ve çıktı şablonlarını içerir. API anahtarı gerekmez.
 - **Ne zaman:** Referans/kaynak video, ses veya altyazı indirmek ya da metadata almak gerektiğinde. · **Ne zaman değil:** YouTube'da arama/listeleme için; telif veya platform koşullarına aykırı kullanımda.
 - **Teknoloji:** yt-dlp, ffmpeg · **Paketler:** yt-dlp, ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** video-indirme → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 3 KB (SKILL.md 3.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa, doğru, bağımsız. Telif sorumluluğu kullanıcıda.
@@ -831,7 +864,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Hazır videolar üzerinde hızlı kurgu ve sosyal medya formatına uyarlama işlerinde. · **Ne zaman değil:** Sahne kompozisyonu/animasyon gerekiyorsa (hyperframes); karmaşık filtre zincirleri için ffmpeg skill'i.
 - **Teknoloji:** ffmpeg · **Paketler:** ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** ffmpeg-kurgu → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 12 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kısa, genel, platform ön ayarlı; bağımlılığı sadece ffmpeg.
@@ -857,7 +890,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 10 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### video-shotcraft  ·  Vincentwei1021/video-shotcraft @ 1266a3e  ·  puan 87 (A)
+### video-shotcraft  ·  Vincentwei1021/video-shotcraft @ 1266a3e  ·  puan 97 (A)
 
 - **Ne yapar:** Create cinematic product videos from frontend projects or webpages with Remotion, real page captures, shot cards, the Ink Press template, beat sync and sound design. Use for full product promos, reproducing Ink Press, single shot-card effects, or finding, adding, replacing and aligning sound effects in an existing product video or shot, including candidate-only SFX searches. 用真实页面、镜头卡与 Ink Press 模
 - **Teknoloji:** api-anahtari, ffmpeg, git, html, node, python, r3f, react, remotion, typescript _(otomatik tespit)_
@@ -867,35 +900,35 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 28250 KB (SKILL.md 21.2 KB, yük orta) · **Bağımlılık:** Remotion (Node.js; npx remotion). Ürün videoları için Remotion projesi gerekir.
 - **İnceleme:** otomatik
 
-### video-toolkit  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 81 (A)
+### video-toolkit  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 77 (B)
 
 - **Ne yapar:** claude-code-video-toolkit ile metin brifinden açıklayıcı video üretir: Modal/RunPod bulut GPU'larında seslendirme, görsel, müzik, konuşan kafa üretimi ve Remotion render. Kurulum ve uç nokta yapılandırmasını adım adım anlatır.
 - **Ne zaman:** Toolkit ~/.openclaw/workspace/claude-code-video-toolkit yolunda kuruluysa ve bulut GPU kullanılacaksa. · **Ne zaman değil:** OpenMontage veya HyperFrames ile çalışırken; toolkit kurulu değilse.
 - **Teknoloji:** remotion, python, node, modal, runpod · **Paketler:** claude-code-video-toolkit, modal, ffmpeg
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** remotion-cercevesi → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 15 KB (SKILL.md 14.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sabit ~/.openclaw yoluna ve ayrı toolkit kurulumuna bağımlı; bu ortamda yok. --break-system-packages önerisi riskli.
 
-### video-translate  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 97 (A)
+### video-translate  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 93 (A)
 
 - **Ne yapar:** HeyGen /v2/video_translate ile mevcut videoyu başka dillere çevirip dudak senkronlu dublaj yapar; sadece ses çevirisi, konuşmacı sayısı ve webhook seçenekleri vardır.
 - **Ne zaman:** Hazır bir videonun çok dilli (ör. Türkçe→İngilizce) dublajlı sürümleri gerektiğinde. · **Ne zaman değil:** Sadece altyazı çevirisi yeterliyse; HeyGen anahtarı yoksa.
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** video-ceviri-dublaj → birincil · **Roller:** video-kurgu-render, ai-medya-uretici · **Globalde:** claude:ayni
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı resmi HeyGen skill'i; ücretli.
 
-### video-understand  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 98 (A)
+### video-understand  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 94 (A)
 
 - **Ne yapar:** ffmpeg ile sahne/anahtar kare çıkarıp Whisper ile sesi yerelde yazıya döken betik; videonun içeriğini JSON olarak özetler. API anahtarı gerekmez, tamamen çevrimdışı çalışır.
 - **Ne zaman:** Bir videoyu kurgulamadan önce ne içerdiğini anlamak, kareleri incelemek veya yerel transkript almak gerektiğinde. · **Ne zaman değil:** Yüksek doğruluklu çok dilli transkript (speech-to-text) veya konuşmacı ayrımı gerekiyorsa.
 - **Teknoloji:** ffmpeg, python, whisper · **Paketler:** ffmpeg, openai-whisper
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** video-analiz → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:ayni
 - **Boyut:** 27 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Betiği skill klasöründe; yol skills/video-understand/... diye yazılmış, kurulumda skill yoluna göre çalıştırılmalı.

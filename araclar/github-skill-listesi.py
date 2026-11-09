@@ -64,16 +64,17 @@ def main():
     for l in tumu:
         for r in l["items"]["nodes"]:
             if r:
-                uyelik.setdefault(r["nameWithOwner"], []).append(l["name"])
-                idler[r["nameWithOwner"]] = r["id"]
+                # GitHub repo adları büyük/küçük harfe duyarsızdır: üyelik ve kimlik küçük harfli anahtarla tutulur
+                uyelik.setdefault(r["nameWithOwner"].lower(), []).append(l["name"])
+                idler[r["nameWithOwner"].lower()] = r["id"]
     hedeftekiler = [r["nameWithOwner"] for r in hedef["items"]["nodes"] if r]
 
-    yeni = [r for r in hedeftekiler if r not in {k["repo"] for k in ayar["repolar"]}]
+    yeni = [r for r in hedeftekiler if r.lower() not in {k["repo"].lower() for k in ayar["repolar"]}]
     # Kullanıcının kendi listeleri (kaynaklar.json -> korunan_listeler, ör. 'Yapay Zeka araçları'): üyelik korunur, kopya sayılmaz
     korunan = {l["name"] for l in tumu if l["slug"] in set(ayar.get("korunan_listeler", []))}
     korunan_id = {l["name"]: l["id"] for l in tumu if l["name"] in korunan}
-    eksik = [r for r in skill_repolari if hedef["name"] not in uyelik.get(r, [])]
-    kopya = [(r, uyelik[r]) for r in skill_repolari if len([x for x in uyelik.get(r, []) if x not in korunan]) > 1]
+    eksik = [r for r in skill_repolari if hedef["name"] not in uyelik.get(r.lower(), [])]
+    kopya = [(r, uyelik[r.lower()]) for r in skill_repolari if len([x for x in uyelik.get(r.lower(), []) if x not in korunan]) > 1]
     # Repo GitHub'da taşınmış/yeniden adlandırılmış olabilir: eski ad yönlendirir, liste yeni adı gösterir. Bu YENİ kaynak değildir.
     tasinan = {}
     if yeni and eksik:
@@ -105,15 +106,15 @@ def main():
     hata = 0
     for r in tasinacak:
         subprocess.run(["gh", "api", "-X", "PUT", f"user/starred/{r}"], capture_output=True)  # yıldızlı değilse yıldızla
-        rid = idler.get(r)
+        rid = idler.get(r.lower())
         if not rid:
             rid = json.loads(subprocess.run(["gh", "api", f"repos/{r}", "--jq", "{id:.node_id}"],
                                             capture_output=True, text=True).stdout)["id"]
         try:
-            listeler_ = [hedef["id"]] + [korunan_id[n] for n in uyelik.get(r, []) if n in korunan_id]
+            listeler_ = [hedef["id"]] + [korunan_id[n] for n in uyelik.get(r.lower(), []) if n in korunan_id]
             gql("mutation($item:ID!,$l:[ID!]!){updateUserListsForItem(input:{itemId:$item,listIds:$l}){lists{name}}}",
                 item=rid, l=listeler_)
-            print(f"  ✓ {r} -> '{hedef['name']}'" + (f" (+ korunan: {', '.join(n for n in uyelik.get(r, []) if n in korunan_id)})" if any(n in korunan_id for n in uyelik.get(r, [])) else ""))
+            print(f"  ✓ {r} -> '{hedef['name']}'" + (f" (+ korunan: {', '.join(n for n in uyelik.get(r.lower(), []) if n in korunan_id)})" if any(n in korunan_id for n in uyelik.get(r.lower(), [])) else ""))
         except RuntimeError as e:
             hata += 1
             if "INSUFFICIENT_SCOPES" in str(e):

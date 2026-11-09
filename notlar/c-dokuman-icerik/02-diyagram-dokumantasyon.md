@@ -2,7 +2,67 @@
 
 _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **5/11**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **5/18**
+
+### adr-create  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Create a new Architecture Decision Record with sequential numbering and AgentDB registration
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### adr-index  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Build or rebuild the ADR index + dependency graph by running scripts/import.mjs (handles v3-style and plugin-style ADR formats; one Bash call vs hundreds of MCP round-trips)
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### adr-reindex  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Reconcile the ADR index against a DELETED ADR file or relation line by dropping and rebuilding adr-patterns + adr-edges from scratch (scripts/reindex.mjs). Use when adr-index alone leaves stale rows behind.
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### adr-review  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Review code changes against accepted ADRs for compliance violations
+- **Teknoloji:** git _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### adr-verify  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Read back adr-patterns + adr-edges namespaces, surface dangling refs / supersede cycles / Unknown statuses; exit 1 on cycles
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### api-docs  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Generate API documentation from source code with JSDoc and OpenAPI support
+- **Teknoloji:** node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
 
 ### archify  ·  tt-a1i/archify @ a406594  ·  puan 95 (A)
 
@@ -16,13 +76,13 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; lisans 2026-11'de Apache-2.0'a geçti (eski MIT sürümleri LICENSE-MIT'te; üretilen HTML'lere lisans bildirimi gömülür). Klasör büyük (7.6 MB), SKILL.md 18 KB; referanslar ihtiyaç anında okunuyor.
 - **Not:** Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok.
 
-### beautiful-mermaid  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 98 (A)
+### beautiful-mermaid  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 94 (A)
 
 - **Ne yapar:** Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevirir. Flowchart, sequence, state, class ve ER diyagramlarını, 13 hazır temayı (Tokyo Night, Nord, GitHub…) destekler.
 - **Ne zaman:** Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde. · **Ne zaman değil:** Etkileşimli/keşfedilebilir diyagram ya da kod tabanından kanıtlı mimari gerekiyorsa (archify). PNG adımı 'agent-browser' skill'ini istiyor; kütüphanede yok — PNG için playwright/chromium ile ekran görüntüsü alınarak uyarlanmalı.
 - **Teknoloji:** typescript, bun, mermaid, svg · **Paketler:** bun veya tsx/deno, beautiful-mermaid (npm), agent-browser CLI (PNG için; yoksa playwright)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** calesthio (kisi, ★76517, son güncelleme 2026-11-03, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** diyagram-uretimi → alternatif · **Roller:** dokuman-yazari · **Globalde:** claude:ayni
 - **Boyut:** 19 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kısa, net, sözdizimi tuzakları belgelenmiş. AGPL-3.0 (OpenMontage). PNG adımı kütüphanede olmayan agent-browser'a bağlı. Statik görsel için iyi; birincil archify.
@@ -68,6 +128,16 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Anthropic resmi; okuyucu testi (taze bağlamlı alt-agent) diğer doküman skillerinde yok. Codex'te alt-agent yoksa yeni oturumla aynı test elle yapılabilir. Doküman ve format skilleriyle tamamlayıcı.
 
+### doc-gen  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Generate and maintain documentation with drift detection. Use when the user asks to write/update/refresh docs, detect doc drift against code, or schedule recurring documentation maintenance.
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
 ### documentation-and-adrs  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
 - **Ne yapar:** Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belgeleme, API dokümantasyonu (TSDoc, OpenAPI), README ve changelog. Gereksiz yorumdan kaçınmayı vurgular.
@@ -90,7 +160,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.
 
-### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 93 (A)
+### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
 
 - **Ne yapar:** Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.
 - **Teknoloji:** - _(otomatik tespit)_

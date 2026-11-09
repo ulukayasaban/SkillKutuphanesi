@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 38
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 43
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -10,6 +10,10 @@
 | `sandbox-migrate-to-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `sandbox-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `sandbox-stable` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
+| `deepseek-chat` | 01-claude-api-mcp | Tek işi DeepSeek API'sini çağırmaktır (DEEPSEEK_API_KEY, kullandıkça öde); anahtar yoksa çalışmaz. |
+| `deepseek-reason` | 01-claude-api-mcp | Tek işi DeepSeek API'sini (deepseek-reasoner) çağırmaktır (DEEPSEEK_API_KEY, kullandıkça öde); anahtar yoksa çalışmaz. |
+| `gaia-submission` | 02-agent-orkestrasyon | GAIA kıyaslamasını Anthropic API anahtarıyla çalıştırır (kullandıkça öde); anahtarsız yürütülemez. |
+| `managed-agent` | 02-agent-orkestrasyon | Anthropic Claude Managed Agents bulut çalışma zamanını kullanır (ANTHROPIC_API_KEY, beta erişimi; kullandıkça öde). |
 | `reverse-any-video` | 04-skill-plugin-yazimi | HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta |
 | `generate-image@github` | 01-uygulama-entegrasyonlari | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
 | `nano-banana-pro-openrouter` | 01-uygulama-entegrasyonlari | Tek işi OpenRouter üzerinden Gemini 3 Pro Image çağırmak; model ücretli, kredisiz anahtar çalışmaz |
@@ -35,6 +39,7 @@
 | `minimax-h3` | 03-ai-gorsel-video-modelleri | MiniMax / fal.ai API |
 | `seedance-2-0` | 03-ai-gorsel-video-modelleri | Seedance (Atlas Cloud / fal.ai / BytePlus) API |
 | `seedance-2-5` | 03-ai-gorsel-video-modelleri | Seedance API sağlayıcıları |
+| `trader-cloud-backtest` | 02-finans-hukuk-ik | Ağır işleri Anthropic Managed Agents bulutunda çalıştırır (ANTHROPIC_API_KEY, kullandıkça öde). Ücretsiz yol: yerel `trader-backtest`. |
 | `adaptyv` | 01-yasam-bilimleri-kimya | Adaptyv Bio protein deney hizmeti: ücretli |
 | `benchling-integration` | 01-yasam-bilimleri-kimya | Benchling kurumsal lisansı/hesabı gerekir |
 | `dnanexus-integration` | 01-yasam-bilimleri-kimya | DNAnexus hesabı/kurum lisansı gerekir |
@@ -45,7 +50,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 192
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 202
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -55,6 +60,7 @@
 | `spline-interactive` | 05-3d-webgl | Spline ücretsiz plan; bazı dışa aktarma/ekip özellikleri ücretli |
 | `hatch-pet` | 06-oyun-2d-grafik | Yerel yol ücretsiz; ikincil yedek yol OPENAI_API_KEY ister (ücretli) |
 | `frontend-slides` | 07-gorsel-sanat-sunum | Yerel HTML sunum ve PDF ücretsiz; isteğe bağlı Vercel yayını hesap gerektirir (ücretsiz Hobby katmanı var). |
+| `verification-quality` | 02-kod-kalitesi-review | Doğrulama akışı yerel ve ücretsiz çalışır; Datadog'a metrik gönderme (DD_API_KEY) yalnızca isteğe bağlı bir entegrasyon örneğidir. |
 | `basin` | 06-devops-guvenlik-performans | Cloudflare R2/Basin: ücretsiz kota, sonrası kullanım başına |
 | `cloudflare` | 06-devops-guvenlik-performans | Cloudflare ücretsiz plan ile çalışır; bazı ürünler ücretli |
 | `cloudflare-email-service` | 06-devops-guvenlik-performans | Cloudflare ücretsiz kota, sonrası ücretli |
@@ -83,6 +89,13 @@
 | `langsmith-fetch` | 01-claude-api-mcp | LangSmith hesabı (ücretsiz katman var) |
 | `langsmith-observability` | 01-claude-api-mcp | LangSmith ücretsiz geliştirici katmanı |
 | `caveman-setup` | 02-agent-orkestrasyon | Caveman Cloud gateway'e bağlar (CAVE_API_KEY); BYOK ile mevcut LLM anahtarı kullanılır, gateway'in ücretsiz katmanı var; diğer caveman skilleri anahtarsız |
+| `cost-benchmark` | 02-agent-orkestrasyon | Yerel ölçüm ücretsizdir; Gemini/Sonnet/Opus karşılaştırma tabanları isteğe bağlıdır ve ilgili API anahtarıyla ücretlenir. |
+| `cost-openrouter` | 02-agent-orkestrasyon | OpenRouter hesabı ve anahtarı gerekir (hesap ücretsiz); skill yalnızca harcamayı okur, kendisi ücret doğurmaz. |
+| `flow-nexus-neural` | 02-agent-orkestrasyon | Flow Nexus bulut hesabı gerekir; eğitim için ücretsiz katman var, büyük işler ücretli katmanda kredi harcar. |
+| `flow-nexus-platform` | 02-agent-orkestrasyon | Flow Nexus bulut hesabı gerekir; kredi sistemiyle çalışır, ücretsiz katman var, pro/enterprise ücretlidir. |
+| `flow-nexus-swarm` | 02-agent-orkestrasyon | Flow Nexus bulut hesabı gerekir; kredi sistemiyle çalışır, ücretsiz katman var. |
+| `intelligence-transfer` | 02-agent-orkestrasyon | Yerel projeler arası kalıp kopyalama ücretsizdir; IPFS pazarına yayımlama Pinata anahtarı ister (Pinata'nın ücretsiz planı var). |
+| `browser-intent` | 03-web-arastirma-veri | OpenAI uyumlu bir LLM sağlayıcısı ister: OpenRouter ya da Ollama Cloud (ücretli/kotalı) veya kendi yerel uç noktan (ücretsiz). Sağlayıcı yoksa skill kısıtlı kipte çalışır. |
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
 | `agents-sdk@openai` | 01-uygulama-entegrasyonlari | OpenAI Agents SDK rehberi; çalıştırmak için OpenAI API kredisi gerekir, bilgi/kod üretimi ücretsiz |
@@ -127,6 +140,7 @@
 | `v0-dev` | 01-uygulama-entegrasyonlari | v0 ücretsiz katman; API/SDK için kredi gerekir |
 | `vercel-connect` | 01-uygulama-entegrasyonlari | Vercel + Linear entegrasyonu; her ikisinin ücretsiz katmanı var |
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
+| `cinecode` | 01-video-uretim-montaj | Film kodla üretilir ve ücretsiz çalışır. Seslendirme için Gemini TTS anahtarı (ücretsiz katmanı var) ya da isteğe bağlı ElevenLabs; stok arama için ücretsiz Pixabay anahtarı. Skill ücretli servis, anahtar ve büyük indirmeyi kullanıcı onayı olmadan kullanmaz. |
 | `figma` | 01-video-uretim-montaj | FIGMA_TOKEN (ücretsiz planla çalışır); değişkenler (variables) Enterprise ister |
 | `hyperframes` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `hyperframes-cli` | 01-video-uretim-montaj | Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister |
@@ -134,6 +148,7 @@
 | `hyperframes-registry@openai` | 01-video-uretim-montaj | HeyGen anılıyor; HyperFrames kendisi açık kaynak (kütüphanede heygen-com/hyperframes ile aynı sınıf) |
 | `hyperframes@openai` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli |
+| `moneyprinterturbo-video` | 01-video-uretim-montaj | LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla. |
 | `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |

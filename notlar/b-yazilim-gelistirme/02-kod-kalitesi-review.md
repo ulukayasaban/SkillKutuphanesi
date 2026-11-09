@@ -2,7 +2,47 @@
 
 _Code review, sadeleştirme, temiz kod_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/23**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/29**
+
+### agent-analyze-code-quality  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Agent skill for analyze-code-quality - invoke with $agent-analyze-code-quality
+- **Teknoloji:** git, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 4.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### agent-code-analyzer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Agent skill for code-analyzer - invoke with $agent-code-analyzer
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 6 KB (SKILL.md 5.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
+### agent-code-review-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+
+- **Ne yapar:** Agent skill for code-review-swarm - invoke with $agent-code-review-swarm
+- **Teknoloji:** api-anahtari, node _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 12 KB (SKILL.md 11.9 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 3
+- **İnceleme:** otomatik
+
+### agent-reviewer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Agent skill for reviewer - invoke with $agent-reviewer
+- **Teknoloji:** node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
 
 ### clean-code  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -90,6 +130,16 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 16 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve uygulanabilir; betikler proje tipini algılıyor. 'FINAL AUDIT REPORT' bölümüne atıf betik çıktısıyla tam örtüşmüyor; npm audit her değişiklikte gereksiz yavaş olabilir.
 
+### pair-programming  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** AI-assisted pair programming with multiple modes (driver/navigator/switch), real-time verification, quality monitoring, and comprehensive testing. Supports TDD, debugging, refactoring, and learning sessions. Features automatic role switching, continuous code review, security scanning, and performance optimization with truth-score verification.
+- **Teknoloji:** api-anahtari, git, html, node, react _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 24 KB (SKILL.md 24.3 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
+- **İnceleme:** otomatik
+
 ### ponytail  ·  DietrichGebert/ponytail @ 96608e0  ·  puan 100 (A)
 
 - **Ne yapar:** Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. Use on any coding task (writing, fixing, refactoring, reviewing, choosing dependencies) and when the user says "ponytail", "be lazy", "simplest solution", "yagni", or complains about over-engineering or bloat. Levels: lite, full (default), ultra.
@@ -150,7 +200,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### postgresql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 93 (A)
+### postgresql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
 
 - **Ne yapar:** PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -235,7 +285,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 27 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlayıcı. Bu alanda gördüğüm en titiz sadeleştirme protokolü (kanıt kaydı, kör nokta bildirimi, ürün kararı ayrımı); dil bağımsız. metadata.internal işaretli ama Archify'a bağlı değil. mevcut-kod-iyilestirme profilinin ana skilli.
 
-### sql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 91 (A)
+### sql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
 
 - **Ne yapar:** Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -243,4 +293,14 @@ _Code review, sadeleştirme, temiz kod_
 - **Geliştirici:** github (kurum, ★40799, son güncelleme 2026-11-04, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
+- **İnceleme:** otomatik
+
+### verification-quality  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+
+- **Ne yapar:** Check code quality and change risk with ruflo's shipped analysis commands (analyze diff, analyze complexity, analyze code), and run or extend ruflo's own CI regression guards. Use when assessing a change's risk, finding complexity hot spots, or adding a regression guard to ruflo. The truth-scoring and auto-rollback commands described later in this file are design notes, not shipped CLI commands.
+- **Teknoloji:** api-anahtari, git, html, node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
+- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 20 KB (SKILL.md 20.1 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik

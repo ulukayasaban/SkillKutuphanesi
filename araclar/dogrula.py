@@ -230,7 +230,8 @@ def main():
                            capture_output=True, text=True)
         if r.returncode != 0 or not r.stdout.strip():
             uyarilar.append("GitHub yıldız listesi okunamadı (gh auth status?); yeni repo kontrolü YAPILMADI")
-        tanimli = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"]}
+        # GitHub repo adları büyük/küçük harfe duyarsızdır (ör. LottieFiles/… ↔ lottiefiles/…): karşılaştırma küçük harfle
+        tanimli = {k["repo"].lower() for k in json_oku(KAYNAKLAR)["repolar"]}
         # Skill listesindeki ('Yapay Zeka Skillleri') ama kütüphanede olmayan repolar: yeni eklenecek skill kaynakları
         hs = json_oku(KAYNAKLAR).get("github_skill_listesi", "yapay-zeka-skillleri")
         # Listedeki TÜM öğeler (GitHub sayfa başına 100 öğe verir; sayfalanmazsa yeni eklenen repolar kaçar)
@@ -244,10 +245,10 @@ def main():
             liste_repolari = []
             uyarilar.append("GitHub skill listesi okunamadı; YENİ SKILL REPOSU kontrolü YAPILMADI")
         for repo in liste_repolari:
-            if repo not in tanimli:
+            if repo.lower() not in tanimli:
                 uyarilar.append(f"YENİ SKILL REPOSU (skill listesinde, kütüphanede yok): {repo} -> rehber/03-yeni-skill-ekleme.md")
         for repo in r.stdout.split():
-            if repo not in tanimli:
+            if repo.lower() not in tanimli:
                 uyarilar.append(f"yıldızlı ama kaynaklar.json'da yok: {repo}")
     # Proje bilgisi tek yerde (notlar/proje-kullanimi.md): rapor güncel mi, kayıt dosyalarına proje adı sızmış mı?
     try:

@@ -1425,6 +1425,14 @@ def proje_raporunu_yenile():
         spec.loader.exec_module(pk)
         if pk.rapor_guncelle():
             print(f"Proje kullanım raporu yenilendi: {pk.RAPOR.relative_to(KOK)}")
+            # Kütüphane çalışma ağacı kirli kalmasın (aylık güncelleme ve --birlestir temiz ağaç ister): SADECE bu dosya kaydedilir.
+            # Güncelleme dalındayken ya da kilit varken kaydedilmez; push hiçbir zaman yapılmaz.
+            import subprocess
+            g = lambda *a: subprocess.run(["git", *a], cwd=KOK, capture_output=True, text=True)  # noqa: E731
+            if g("branch", "--show-current").stdout.strip() == "master" and not guncelleme_suruyor():
+                rel = str(pk.RAPOR.relative_to(KOK))
+                if g("commit", "-q", "-m", "Proje kullanım raporu yenilendi (skill-ekle.py)", "--", rel).returncode == 0:
+                    print("  (kütüphanede yalnızca bu dosya commit edildi; push yapılmadı)")
     except Exception as e:  # rapor yan üründür; kurulumu asla bozmaz
         print(f"UYARI: proje kullanım raporu yenilenemedi ({e}); elle: python3 araclar/proje-kullanimi.py")
 
