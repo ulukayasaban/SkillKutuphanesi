@@ -1192,6 +1192,25 @@
     {
       "repo": "JohnHeibel/ClaudeAnimationBase",
       "tip": "T6"
+    },
+    {
+      "repo": "avenoxai/higgsfield-studio",
+      "tip": "T1",
+      "oncelik": 4,
+      "bagimlilik": "Higgsfield hesabı ve Higgsfield CLI gerekir (CLI yoksa skill resmî kurulum betiğini ağdan indirip çalıştırır: curl … | sh; ilk kullanımda `higgsfield auth login`). Higgsfield MCP bağlayıcısı da kullanılabilir. Üretimler Higgsfield kredisi harcar; Soul eğitimi ücretli plan (Basic+) ister. video-prompt-builder üretilen varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir (proje dışı).",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Kişisel üretim hattından paylaşılan küçük koleksiyon (Higgsfield sponsorlu bir videonun eki): Higgsfield ile görsel/video üretimi, ürün çekimi, pazaryeri kartları, Seedance video planı ve Türkçe sunum sitesi skili. Repoda lisans dosyası YOK (GitHub: lisanssız; yeniden dağıtım hakkı belirtilmemiş)."
+    },
+    {
+      "repo": "upstash/context7",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^skills/",
+        "^plugins/",
+        "^packages/"
+      ],
+      "bagimlilik": "Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT): kütüphane/framework için güncel, sürüme özel doküman ve kod örneği getirir. context7-mcp skilinin birebir kopyaları plugins/ altında başka araçlar (Cursor, Copilot, Antigravity, Codex) için durur; araç ayna olarak ayırır."
     }
   ],
   "konum_haric": [

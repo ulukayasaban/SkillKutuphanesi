@@ -2,15 +2,15 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-09 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8488 · Arşivdeki skill kaydı: 5638 · Bileşen (komut/agent): 658
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8504 · Arşivdeki skill kaydı: 5649 · Bileşen (komut/agent): 661
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5596 | arşivde (ana sürüm) |
+| secildi | 5606 | arşivde (ana sürüm) |
 | haric | 2569 | bilinçli hariç (test/örnek/şablon) |
-| ayna-ayni | 173 | birebir kopya (tek kopya yeter) |
+| ayna-ayni | 178 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 71 | arşivde (Claude/Codex'e özel sürüm) |
-| ayri-surum | 41 | arşivde (aynı adlı farklı içerik, ayrı skill) |
+| ayri-surum | 42 | arşivde (aynı adlı farklı içerik, ayrı skill) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 
 ## Repo bazında
@@ -64,6 +64,7 @@
 | anthropics/knowledge-work-plugins | 252 | secildi 189, haric 57, ayri-surum 6 |
 | anthropics/skills | 20 | secildi 19, haric 1 |
 | arjitj2/swiftui-design-principles | 1 | secildi 1 |
+| avenoxai/higgsfield-studio | 6 | secildi 6 |
 | blader/humanizer | 1 | secildi 1 |
 | buluslan/ecommerce-competitor-analyzer | 1 | secildi 1 |
 | cathrynlavery/diagram-design | 1 | secildi 1 |
@@ -126,6 +127,7 @@
 | tt-a1i/archify | 5 | secildi 5 |
 | tuist/fuckingapproachableswiftconcurrency | 1 | secildi 1 |
 | twostraws/SwiftData-Agent-Skill | 1 | secildi 1 |
+| upstash/context7 | 10 | ayna-ayni 5, secildi 4, ayri-surum 1 |
 | vercel-labs/agent-skills | 9 | secildi 9 |
 | vercel/next.js | 27 | secildi 27 |
 | vudovn/ag-kit | 58 | secildi 58 |

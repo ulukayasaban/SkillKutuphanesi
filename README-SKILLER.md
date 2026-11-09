@@ -1,6 +1,6 @@
 # Skill Rehberi (Türkçe)
 
-Bu kütüphanedeki **5638 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
+Bu kütüphanedeki **5649 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
 `python3 araclar/skill-readme.py`. Test sonuçları: [TEST_RAPORU.md](TEST_RAPORU.md) · kurulum ve araçlar: [README.md](README.md).
 
 ## Skill nedir?
@@ -33,8 +33,8 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
   gizler (`.claude/settings.json` → `skillOverrides`), böylece kütüphane sürümü kullanılır. Ön kontrol `hesap-cakismasi` der.
 
 ## Tablolar nasıl okunur?
-- **Ne yapar / Ne zaman:** elle incelenmiş 1229 skill'de inceleme notu; 4026 skill'de açıklamanın
-  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 383 skill'de henüz İngilizce.
+- **Ne yapar / Ne zaman:** elle incelenmiş 1240 skill'de inceleme notu; 4409 skill'de açıklamanın
+  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`).
 - **Puan:** 0–100 otomatik değerlendirme ve derece (A–D): kaynağın bakımı, GitHub güveni, yapı, inceleme notu.
 - **Not:** alternatif sürüm, ücretli/kısmen ücretli (`notlar/ucretli-skiller.md`), Codex uyumu, 🔥trend.
 - **Gizli katalog:** entegrasyon kataloğu (tek bir uygulama için hazır otomasyon) ve repo-içi (bir projenin kendi
@@ -42,7 +42,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 
 ## Dizin
 
-### Tasarım ve Ön Yüz (280)
+### Tasarım ve Ön Yüz (281)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-ui-ux-tasarim-dili](skiller/a-tasarim-onyuz/01-ui-ux-tasarim-dili.md) | Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi | 39 |
@@ -51,7 +51,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [04-scroll-deneyimi](skiller/a-tasarim-onyuz/04-scroll-deneyimi.md) | Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri | 7 |
 | [05-3d-webgl](skiller/a-tasarim-onyuz/05-3d-webgl.md) | Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader | 35 |
 | [06-oyun-2d-grafik](skiller/a-tasarim-onyuz/06-oyun-2d-grafik.md) | Oyun geliştirme, PixiJS, 2D grafik | 113 |
-| [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 26 |
+| [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 27 |
 | [08-onyuz-test-kalite](skiller/a-tasarim-onyuz/08-onyuz-test-kalite.md) | Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı | 12 |
 
 ### Yazılım Geliştirme (467)
@@ -74,20 +74,20 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [03-yazi-iletisim-icerik](skiller/c-dokuman-icerik/03-yazi-iletisim-icerik.md) | Yazı, iletişim, pazarlama/içerik, kariyer | 55 |
 | [04-not-alma-bilgi-yonetimi](skiller/c-dokuman-icerik/04-not-alma-bilgi-yonetimi.md) | Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni | 35 |
 
-### AI ve Otomasyon (342)
+### AI ve Otomasyon (347)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-claude-api-mcp](skiller/d-ai-otomasyon/01-claude-api-mcp.md) | Claude API, MCP sunucusu, model geçişi | 20 |
 | [02-agent-orkestrasyon](skiller/d-ai-otomasyon/02-agent-orkestrasyon.md) | Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları | 269 |
-| [03-web-arastirma-veri](skiller/d-ai-otomasyon/03-web-arastirma-veri.md) | Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma | 19 |
+| [03-web-arastirma-veri](skiller/d-ai-otomasyon/03-web-arastirma-veri.md) | Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma | 24 |
 | [04-skill-plugin-yazimi](skiller/d-ai-otomasyon/04-skill-plugin-yazimi.md) | Skill yazma, plugin/hook/komut geliştirme | 34 |
 
-### Video, Ses ve AI Medya Üretimi (162)
+### Video, Ses ve AI Medya Üretimi (167)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-video-uretim-montaj](skiller/g-video-ses-medya/01-video-uretim-montaj.md) | Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg | 97 |
 | [02-ses-muzik-konusma](skiller/g-video-ses-medya/02-ses-muzik-konusma.md) | Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi | 30 |
-| [03-ai-gorsel-video-modelleri](skiller/g-video-ses-medya/03-ai-gorsel-video-modelleri.md) | AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu | 17 |
+| [03-ai-gorsel-video-modelleri](skiller/g-video-ses-medya/03-ai-gorsel-video-modelleri.md) | AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu | 22 |
 | [04-motion-graphics-karakter](skiller/g-video-ses-medya/04-motion-graphics-karakter.md) | Motion graphics, Manim, karakter animasyonu/rig, görsel stil | 18 |
 
 ### Entegrasyon Kataloğu (varsayılan listede gizli) (1781)

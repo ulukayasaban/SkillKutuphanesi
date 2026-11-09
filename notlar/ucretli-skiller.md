@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 43
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 44
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -35,6 +35,7 @@
 | `gemini-omni` | 03-ai-gorsel-video-modelleri | Gemini API / fal.ai (video üretimi ücretli kotada) |
 | `grok-media` | 03-ai-gorsel-video-modelleri | xAI API |
 | `heygen` | 03-ai-gorsel-video-modelleri | HeyGen API (kullanımdan kaldırıldı; create-video / avatar-video) |
+| `higgsfield-soul-id` | 03-ai-gorsel-video-modelleri | Soul karakter eğitimi Higgsfield'ın ücretli planını (Basic ve üstü) ister; ücretsiz planda çalışmaz. |
 | `kling-official` | 03-ai-gorsel-video-modelleri | Kling / fal.ai API |
 | `minimax-h3` | 03-ai-gorsel-video-modelleri | MiniMax / fal.ai API |
 | `seedance-2-0` | 03-ai-gorsel-video-modelleri | Seedance (Atlas Cloud / fal.ai / BytePlus) API |
@@ -50,7 +51,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 202
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 212
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -60,6 +61,7 @@
 | `spline-interactive` | 05-3d-webgl | Spline ücretsiz plan; bazı dışa aktarma/ekip özellikleri ücretli |
 | `hatch-pet` | 06-oyun-2d-grafik | Yerel yol ücretsiz; ikincil yedek yol OPENAI_API_KEY ister (ücretli) |
 | `frontend-slides` | 07-gorsel-sanat-sunum | Yerel HTML sunum ve PDF ücretsiz; isteğe bağlı Vercel yayını hesap gerektirir (ücretsiz Hobby katmanı var). |
+| `sunum-sitesi` | 07-gorsel-sanat-sunum | Site kodu ücretsiz yazılır; görseller ve döngü videoları Higgsfield üzerinden üretilir (kredi harcar). Kendi görsellerinle ücretsiz kullanılabilir. |
 | `verification-quality` | 02-kod-kalitesi-review | Doğrulama akışı yerel ve ücretsiz çalışır; Datadog'a metrik gönderme (DD_API_KEY) yalnızca isteğe bağlı bir entegrasyon örneğidir. |
 | `basin` | 06-devops-guvenlik-performans | Cloudflare R2/Basin: ücretsiz kota, sonrası kullanım başına |
 | `cloudflare` | 06-devops-guvenlik-performans | Cloudflare ücretsiz plan ile çalışır; bazı ürünler ücretli |
@@ -96,6 +98,11 @@
 | `flow-nexus-swarm` | 02-agent-orkestrasyon | Flow Nexus bulut hesabı gerekir; kredi sistemiyle çalışır, ücretsiz katman var. |
 | `intelligence-transfer` | 02-agent-orkestrasyon | Yerel projeler arası kalıp kopyalama ücretsizdir; IPFS pazarına yayımlama Pinata anahtarı ister (Pinata'nın ücretsiz planı var). |
 | `browser-intent` | 03-web-arastirma-veri | OpenAI uyumlu bir LLM sağlayıcısı ister: OpenRouter ya da Ollama Cloud (ücretli/kotalı) veya kendi yerel uç noktan (ücretsiz). Sağlayıcı yoksa skill kısıtlı kipte çalışır. |
+| `context7-cli` | 03-web-arastirma-veri | Çoğu komut girişsiz ve ücretsiz çalışır; `ctx7 setup` ve daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
+| `context7-docs` | 03-web-arastirma-veri | CONTEXT7_API_KEY ister (ücretsiz hesapla alınır); yoğun kullanım için ücretli plan. |
+| `context7-mcp` | 03-web-arastirma-veri | Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
+| `context7-mcp@upstash` | 03-web-arastirma-veri | Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
+| `find-docs` | 03-web-arastirma-veri | Kimlik doğrulamasız ve ücretsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
 | `agents-sdk@openai` | 01-uygulama-entegrasyonlari | OpenAI Agents SDK rehberi; çalıştırmak için OpenAI API kredisi gerekir, bilgi/kod üretimi ücretsiz |
@@ -166,8 +173,12 @@
 | `speech-to-text` | 02-ses-muzik-konusma | ElevenLabs Scribe ücretsiz kotası var; fazlası ücretli. Tamamen ücretsiz yol: media-use transcribe (Whisper/Parakeet) |
 | `3d-asset-generation` | 03-ai-gorsel-video-modelleri | Üretim Atlas Cloud / fal.ai ile ücretli; CC0 Kenney kataloğu ve Blender yolu ücretsiz |
 | `comfyui` | 03-ai-gorsel-video-modelleri | Yerel ComfyUI ücretsiz; 'Partner Nodes' Comfy hesabı ve ön ödemeli kredi ister |
+| `higgsfield-generate` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
+| `higgsfield-marketplace-cards` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
+| `higgsfield-product-photoshoot` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `ltx2` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
+| `video-prompt-builder` | 03-ai-gorsel-video-modelleri | Video planı ve istem yazımı ücretsizdir; planın Seedance/Higgsfield'da üretilmesi kredi harcar. |
 | `image` | 01-satis-pazarlama-musteri | Görsel üretimi için Gemini/Replicate/Ideogram/OpenAI API seçenekleri; Gemini API ücretsiz katmanı var, skill yönlendirme ve optimizasyon da yapar |
 | `video` | 01-satis-pazarlama-musteri | AI avatar (HeyGen/Synthesia) ücretli; Remotion gibi programatik yollar ücretsiz. Yöntem seçimi skill'de |
 | `trader-broker` | 02-finans-hukuk-ik | Alpaca: ücretsiz kâğıt (paper) hesapla denenir; gerçek hesapta komisyonsuz ama GERÇEK PARA riski — işlem öncesi kullanıcı onayı şart |

@@ -38,6 +38,7 @@
 | [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) | FFmpeg | kurum | ✅ | 66506 | 2807 | 2026-11-04 | NOASSERTION | 0 |
 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | cathrynlavery | kisi |  | 65003 | 66 | 2026-11-03 | MIT | 1 |
 | [blader/humanizer](https://github.com/blader/humanizer) | blader | kisi |  | 64838 | 24 | 2026-10-28 | MIT | 1 |
+| [upstash/context7](https://github.com/upstash/context7) | upstash | kurum |  | 64385 | 147 | 2026-11-06 | MIT | 5 |
 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | cloudflare | kurum | ✅ | 59355 | 4 | 2026-09-14 | MIT | 1 |
 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | coreyhaines31 | kisi |  | 58521 | 57 | 2026-11-04 | MIT | 53 |
 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | K-Dense-AI | kurum |  | 56104 | 58 | 2026-11-02 | MIT | 177 |
@@ -169,5 +170,6 @@
 | [mercadopago/mercadopago-claude-marketplace](https://github.com/mercadopago/mercadopago-claude-marketplace) | mercadopago | kurum | ✅ | 32 | 10 | 2026-11-02 | Apache-2.0 | 5 |
 | [Lonsdale201/wp-agent-skills](https://github.com/Lonsdale201/wp-agent-skills) | Lonsdale201 | kisi |  | 26 | 3 | 2026-10-20 | MIT | 31 |
 | [yohannescodes/apple-app-review-compliance](https://github.com/yohannescodes/apple-app-review-compliance) | yohannescodes | kisi |  | 20 | 1 | 2026-10-17 | MIT | 1 |
+| [avenoxai/higgsfield-studio](https://github.com/avenoxai/higgsfield-studio) | avenoxai | kisi |  | 14 | 1 | 2026-08-19 | yok | 6 |
 | [Trendyol/trendyol-integration-developer-tool](https://github.com/Trendyol/trendyol-integration-developer-tool) | Trendyol | kurum | ✅ | 11 | 3 | 2026-06-11 | yok | 1 |
 | [J-DTurner/etsy-api-skill](https://github.com/J-DTurner/etsy-api-skill) | J-DTurner | kisi |  | 6 | 1 | 2026-01-25 | MIT | 1 |

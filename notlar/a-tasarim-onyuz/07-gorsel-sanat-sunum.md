@@ -2,7 +2,7 @@
 
 _Poster/canvas tasarımı, generative art, slayt, GIF_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/26**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/27**
 
 ### algorithmic-art  ·  anthropics/skills @ ca45fc4  ·  puan 81 (A)
 
@@ -253,6 +253,17 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Durum:** tercih · **Örtüşme:** html-sunum → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 19 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. İçerik stratejisi ve yerleşim bilgisi iyi, MIT. Dikkat: referanslar `python ../design-system/scripts/search-slides.py` (kardeş design-system skill'ine ve onun veri tabanına) başvurur; design-system kurulu değilse bu komutlar kırık kalır, registry bunu bağımlılık olarak işaretlemiyor. Chart.js jsdelivr CDN'den yüklenir. SKILL.md yalnızca 1,7 KB. slideshow (video) ve design (claudekit) ile karıştırılmamalı.
+
+### sunum-sitesi  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 62 (C)
+
+- **Ne yapar:** Bir video, konuşma ya da ders bölümü için koyu temalı, sinematik tek sayfalık sunum sitesi kurar: hareketli panoramalı giriş, bölüm rayı gezinmesi, resimli sözlük kartları ve canlı döngü videoları. Görseller GPT Image 2, döngüler Seedance ile Higgsfield üzerinden üretilir. Türkçe.
+- **Ne zaman:** Videoya ya da derse eşlik eden tek sayfalık sunum/özet sitesi. · **Ne zaman değil:** Slayt destesi (PowerPoint, HTML deck) isteniyorsa sunum skilleri. Görsel ve döngü üretimi Higgsfield kredisi harcar; kendi görsellerinle ücretsiz kurulabilir. Repoda lisans dosyası yok.
+- **Teknoloji:** html, css, javascript, higgsfield
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
+- **Geliştirici:** avenoxai (kisi, ★14, son güncelleme 2026-08-19, lisans yok)
+- **Durum:** tercih · **Örtüşme:** video-eslikci-sunum-sitesi → birincil · **Roller:** ui-tasarimci
+- **Boyut:** 15 KB (SKILL.md 3.5 KB, yük kucuk) · **Bağımlılık:** Higgsfield hesabı ve Higgsfield CLI gerekir (CLI yoksa skill resmî kurulum betiğini ağdan indirip çalıştırır: curl … | sh; ilk kullanımda `higgsfield auth login`). Higgsfield MCP bağlayıcısı da kullanılabilir. Üretimler Higgsfield kredisi harcar; Soul eğitimi ücretli plan (Basic+) ister. video-prompt-builder üretilen varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir (proje dışı).
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (video-eslikci-sunum-sitesi grubunda birincil, tek üye; slayt destesi değil, tek sayfalık eşlikçi site). Türkçe yazılmış; 70 satır + 4 referans. Kişisel koleksiyon, lisans dosyası yok. Çalıştırma testi yapılmadı.
 
 ### swiss-creative-mode-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 

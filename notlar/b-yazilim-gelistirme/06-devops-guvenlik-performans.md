@@ -520,7 +520,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### security  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
+### security  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
 
 - **Ne yapar:** Use this skill when hardening a Google Play Billing integration against fraud. Covers server side receipt verification, replay attack protection, device fingerprinting, velocity checks, and the most common billing fraud patterns.
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_

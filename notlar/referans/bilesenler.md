@@ -662,3 +662,6 @@
 | komut | `setup-zoom-webhooks` | openai/plugins | `plugins/zoom/commands/setup-zoom-webhooks.md` |
 | komut | `setup-zoom-websockets` | openai/plugins | `plugins/zoom/commands/setup-zoom-websockets.md` |
 | komut | `zoom-integration-doctor` | openai/plugins | `plugins/zoom/commands/zoom-integration-doctor.md` |
+| agent | `docs-researcher.agent` | upstash/context7 | `plugins/copilot/context7/agents/docs-researcher.agent.md` |
+| komut | `docs` | upstash/context7 | `plugins/copilot/context7/commands/docs.md` |
+| agent | `docs-researcher` | upstash/context7 | `plugins/cursor/context7/agents/docs-researcher.md` |

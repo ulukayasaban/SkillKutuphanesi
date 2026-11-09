@@ -2,7 +2,7 @@
 
 _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **2/19**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **7/24**
 
 ### agent-reach  ·  Panniantong/Agent-Reach @ 7a38047  ·  puan 94 (A)
 
@@ -125,6 +125,50 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Boyut:** 4 KB (SKILL.md 3.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
+### context7-cli  ·  upstash/context7 @ 078c0c7  ·  puan 94 (A)
+
+- **Ne yapar:** `ctx7` CLI'siyle kütüphane dokümanı getirir ve Context7 MCP sunucusunu yapay zekâ kodlama aracına kurar (`ctx7 setup`). Giriş, API anahtarı ve istek sınırı kullanımını anlatır.
+- **Ne zaman:** Context7'yi bir araca kurmak ya da ctx7 komutlarını doğrudan kullanmak. · **Ne zaman değil:** Yalnızca doküman getirmek için find-docs yeterli. `ctx7 setup` giriş ya da API anahtarı ister ve aracın yapılandırma dosyasını değiştirir.
+- **Teknoloji:** context7, node, cli · **Paketler:** ctx7
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** upstash (kurum, ★64385, son güncelleme 2026-11-06, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → tamamlayıcı · **Roller:** frontend-muhendis, backend-muhendis
+- **Boyut:** 11 KB (SKILL.md 2.0 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (guncel-dokuman-getirme grubunda tamamlayıcı: kurulum ve CLI kullanımı). Resmî ürün reposu (MIT). Çalıştırma testi yapılmadı.
+
+### context7-docs  ·  upstash/context7 @ 078c0c7  ·  puan 94 (A)
+
+- **Ne yapar:** Context7'nin pi aracı için paketlenmiş doküman getirme skili: kütüphane, SDK, CLI ya da bulut servisi için güncel doküman ve örnek getirir; CONTEXT7_API_KEY ile kimlik doğrular.
+- **Ne zaman:** pi aracıyla ya da API anahtarlı doğrudan Context7 kullanımı. · **Ne zaman değil:** Claude Code ve Codex için find-docs ya da context7-mcp daha uygun. API anahtarı gerekir.
+- **Teknoloji:** context7, api-anahtari
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** upstash (kurum, ★64385, son güncelleme 2026-11-06, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → alternatif · **Roller:** frontend-muhendis, backend-muhendis
+- **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (başka bir araç için paketlenmiş sürüm; aynı iş). Resmî ürün reposu (MIT).
+
+### context7-mcp  ·  upstash/context7 @ 078c0c7  ·  puan 94 (A)
+
+- **Ne yapar:** Kütüphane, framework ya da API sorulduğunda Context7 MCP sunucusu üzerinden güncel doküman ve kod örneği getirir: önce kütüphane kimliğini çözer, sonra ilgili dokümanı sorgular.
+- **Ne zaman:** Context7 MCP sunucusu kurulu ortamlarda kütüphane dokümanı getirme. · **Ne zaman değil:** Context7 MCP sunucusu kurulu değilse çalışmaz; o durumda find-docs (CLI). Sorgu metni Context7'ye gider.
+- **Teknoloji:** context7, mcp · **Paketler:** context7-mcp
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** upstash (kurum, ★64385, son güncelleme 2026-11-06, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → tamamlayıcı · **Roller:** frontend-muhendis, backend-muhendis
+- **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (guncel-dokuman-getirme grubunda tamamlayıcı: MCP yolu). Resmî ürün reposu (MIT). Birebir kopyaları başka araç eklentilerinde durur. Çalıştırma testi yapılmadı.
+
+### context7-mcp@upstash  ·  upstash/context7 @ 078c0c7  ·  puan 94 (A)
+
+- **Ne yapar:** context7-mcp skilinin eklenti paketindeki (plugins/agent-plugins) sürümü: aynı işi yapar, açıklaması daha ayrıntılıdır ve tetikleyicileri daha geniştir.
+- **Ne zaman:** Çıplak adlı context7-mcp yerine daha ayrıntılı tetikleme açıklaması isteniyorsa. · **Ne zaman değil:** İkisini birlikte kurma (aynı iş). Context7 MCP sunucusu gerekir.
+- **Teknoloji:** context7, mcp · **Paketler:** context7-mcp
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** upstash (kurum, ★64385, son güncelleme 2026-11-06, lisans MIT)
+- **Durum:** alternatif · **Örtüşme:** guncel-dokuman-getirme → alternatif · **Roller:** frontend-muhendis, backend-muhendis
+- **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF (aynı repodaki ikinci sürüm; aynı iş). Resmî ürün reposu (MIT).
+
 ### deep-research  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
 
 - **Ne yapar:** Orchestrate multi-phase deep research with web search, memory retrieval, pattern matching, and synthesis into structured findings
@@ -144,6 +188,17 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
+
+### find-docs  ·  upstash/context7 @ 078c0c7  ·  puan 94 (A)
+
+- **Ne yapar:** Herhangi bir kütüphane, framework, SDK, CLI aracı ya da bulut servisi için güncel doküman, API referansı ve kod örneği getirir. `ctx7` CLI'sini kullanır (npx ctx7@latest); önce kütüphaneyi çözer, sonra konuya özel sorguyla ilgili bölümleri alır.
+- **Ne zaman:** Modelin eğitim verisi eskimiş olabilecek her kütüphane sorusu: kurulum, yapılandırma, sürüm geçişi, API sözdizimi. · **Ne zaman değil:** Sorgu metni Context7 API'sine gider; gizli bilgi, anahtar ya da özel kod yazılmamalı. MCP sunucusu kuruluysa context7-mcp de aynı işi yapar.
+- **Teknoloji:** context7, node, cli · **Paketler:** ctx7
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** upstash (kurum, ★64385, son güncelleme 2026-11-06, lisans MIT)
+- **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → birincil · **Roller:** frontend-muhendis, backend-muhendis
+- **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (guncel-dokuman-getirme grubunda birincil). Resmî ürün reposu (MIT, 64k★), etkin bakım. MCP kurulumu gerektirmez, girişsiz çalışır. Çalıştırma testi yapılmadı.
 
 ### goal-plan  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
 

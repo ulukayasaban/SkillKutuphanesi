@@ -997,7 +997,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 15 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### codex-radar  ·  lemomo-ai/codex-radar @ c388223  ·  puan 60 (C)
+### codex-radar  ·  lemomo-ai/codex-radar @ c388223  ·  puan 61 (C)
 
 - **Ne yapar:** Analyze local Codex session history and create an evidence-grounded HTML collaboration report. Use when the user asks to run Codex Radar, score how they work with Codex, analyze Codex collaboration, or generate a Codex Radar report. Do not use for Claude Code history, generic code review, or workspace usage analytics.
 - **Teknoloji:** html, node _(otomatik tespit)_

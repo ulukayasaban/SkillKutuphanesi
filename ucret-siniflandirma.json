@@ -1585,6 +1585,46 @@
     "trader-cloud-backtest": [
       "ucretli",
       "Ağır işleri Anthropic Managed Agents bulutunda çalıştırır (ANTHROPIC_API_KEY, kullandıkça öde). Ücretsiz yol: yerel `trader-backtest`."
+    ],
+    "higgsfield-generate": [
+      "kismen",
+      "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister."
+    ],
+    "higgsfield-marketplace-cards": [
+      "kismen",
+      "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister."
+    ],
+    "higgsfield-product-photoshoot": [
+      "kismen",
+      "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister."
+    ],
+    "higgsfield-soul-id": [
+      "ucretli",
+      "Soul karakter eğitimi Higgsfield'ın ücretli planını (Basic ve üstü) ister; ücretsiz planda çalışmaz."
+    ],
+    "sunum-sitesi": [
+      "kismen",
+      "Site kodu ücretsiz yazılır; görseller ve döngü videoları Higgsfield üzerinden üretilir (kredi harcar). Kendi görsellerinle ücretsiz kullanılabilir."
+    ],
+    "video-prompt-builder": [
+      "kismen",
+      "Video planı ve istem yazımı ücretsizdir; planın Seedance/Higgsfield'da üretilmesi kredi harcar."
+    ],
+    "context7-mcp": [
+      "kismen",
+      "Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan."
+    ],
+    "context7-cli": [
+      "kismen",
+      "Çoğu komut girişsiz ve ücretsiz çalışır; `ctx7 setup` ve daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan."
+    ],
+    "find-docs": [
+      "kismen",
+      "Kimlik doğrulamasız ve ücretsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan."
+    ],
+    "context7-docs": [
+      "kismen",
+      "CONTEXT7_API_KEY ister (ücretsiz hesapla alınır); yoğun kullanım için ücretli plan."
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

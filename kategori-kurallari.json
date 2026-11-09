@@ -2,6 +2,21 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "avenoxai/higgsfield-studio",
+      "desen": "^sunum-sitesi$",
+      "kategori": "a-tasarim-onyuz/07-gorsel-sanat-sunum"
+    },
+    {
+      "repo": "avenoxai/higgsfield-studio",
+      "desen": ".",
+      "kategori": "g-video-ses-medya/03-ai-gorsel-video-modelleri"
+    },
+    {
+      "repo": "upstash/context7",
+      "desen": ".",
+      "kategori": "d-ai-otomasyon/03-web-arastirma-veri"
+    },
+    {
       "repo": "kylezantos/design-motion-principles",
       "desen": ".",
       "kategori": "a-tasarim-onyuz/03-animasyon-motion"
