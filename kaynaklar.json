@@ -1215,7 +1215,8 @@
     {
       "repo": "wj-sidiss/etsy-otomasyon-full-full-surum",
       "tip": "T5",
-      "not": "2026-11-10 eklendi (kullanıcı isteği). Skill değil: yerelde çalışan Etsy mağaza yönetim programı (Python, MIT). Etsy Open API v3 + satıcının kendi Etsy uygulaması (OAuth); tasarımdan taslak ilan, SEO, sipariş, kâr-zarar, Pinterest."
+      "not": "2026-11-10 eklendi (kullanıcı isteği). Skill değil, PROGRAM (programlar.json -> etsyotomasyon; kaynak kopyası programlar/etsyotomasyon/kaynak, v0.5.0): yerelde çalışan Etsy mağaza yönetim programı (Python, MIT). Etsy Open API v3 + satıcının kendi Etsy uygulaması (OAuth); tasarımdan taslak ilan, SEO, sipariş, kâr-zarar, Pinterest.",
+      "program": "etsyotomasyon"
     }
   ],
   "konum_haric": [

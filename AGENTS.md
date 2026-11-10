@@ -48,6 +48,7 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 - Ad ve çakışma: çıplak ad kendiliğinden el değiştirmez (yeni gelen `ad@kaynak` olur); aynı ad farklı işse eski kayıt `durum_elle`
   ile tercih sabitlenir; bilerek devir `kaynaklar.json` → `ad_devral` ve kullanıcı onayıyla. Repo GitHub'da taşınırsa `repo`
   güncellenir, eski ad `eski_adlar`'a yazılır. Ayrıntı: `rehber/09-ad-kimlik-ve-cakisma.md`.
+- Programlar (skill olmayan yapılar, ör. etsyotomasyon): kullanıcı "dahil et" deyince `programlar.json` kartı + `programlar/<ad>/kaynak/` sabit sürüm kopyası; takip `python3 araclar/program-denetim.py` → `notlar/program-denetimi.md`; güncelleme onayla. Projeye `skill-ekle.py` ile kurulmaz. Ayrıntı: `rehber/11-program-yonetimi.md`.
 - Eski sürümler: bilerek çıkarılan skiller `kaynaklar.json` → `arsivden_cikarilanlar`.
 - Hazır promptlar: `promptlar/` (kullanıcıya proje başlangıcı, ekleme, güncelleme, bakım için).
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.

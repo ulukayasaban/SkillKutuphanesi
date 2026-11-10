@@ -465,6 +465,21 @@ def main():
     test("öneride trend bonusu: uygun skill öne çıkar, alakasız skill trend yüzünden öneriye girmez",
          p_trend > p_yok and p_alakasiz == 0, f"{p_yok} {p_trend} {p_alakasiz}")
 
+    # Programlar: her kartın kaynak kopyası ve KAYNAK.md'si yerinde, repo kaynaklar.json'da 'program' alanıyla kayıtlı
+    _prog = json_oku(KOK / "programlar.json", {"programlar": {}})["programlar"]
+    _kay = {r["repo"]: r for r in json_oku(KOK / "kaynaklar.json")["repolar"]}
+    for _ad, _p in _prog.items():
+        _k = KOK / _p["kaynak_kopyasi"]
+        test(f"program {_ad}: kaynak kopyası ve KAYNAK.md var, kaynaklar.json'da program kaydı eşleşiyor",
+             _k.is_dir() and any(_k.iterdir()) and (_k.parent / "KAYNAK.md").exists()
+             and _kay.get(_p["repo"], {}).get("program") == _ad)
+    spec = importlib.util.spec_from_file_location("progden", KOK / "araclar" / "program-denetim.py")
+    progden = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(progden)
+    test("program denetimi: sürüm karşılaştırma (eski/güncel/anlaşılmaz)",
+         progden.durum("0.5.0", "v0.6.0") == "YENİ SÜRÜM VAR" and progden.durum("0.5.0", "v0.5.0") == "güncel"
+         and progden.durum("0.5.0", None) == "öğrenilemedi")
+
     # Kapsam denetimi: GitHub'da silinmiş kaynak (404) denetimi çökertmez (aylık zincir geri alınmasın)
     import ortak as _ortak
     spec = importlib.util.spec_from_file_location("kapsam", KOK / "araclar" / "kapsam-denetimi.py")

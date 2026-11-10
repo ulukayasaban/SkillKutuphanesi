@@ -1,0 +1,37 @@
+{
+  "_aciklama": "Kütüphanenin takip ettiği PROGRAMLAR (skill olmayan, kendi sürümü ve kurulumu olan yapılar). Kurulum, sürüm takibi ve güncelleme bu oturumdan, kullanıcı onayıyla yapılır. Denetim: python3 araclar/program-denetim.py -> notlar/program-denetimi.md. Rehber: rehber/11-program-yonetimi.md",
+  "programlar": {
+    "etsyotomasyon": {
+      "ad": "etsyotomasyon",
+      "repo": "wj-sidiss/etsy-otomasyon-full-full-surum",
+      "tur": "yerel-uygulama (Python, tarayıcıda localhost:3000 panel + komut satırı)",
+      "lisans": "MIT",
+      "ucret": "ucretsiz",
+      "ne_yapar": "Etsy Open API v3 ile mağaza yönetimi: tasarımdan mockup + başlık + 13 etiketle TASLAK ilan, ilanlar/CSV, SEO puanı ve rakip araştırması, sipariş ve kargo takibi, kâr-zarar (TL), Pinterest, dijital ürün, filigran. İlan silmez; yayınlama/düzenleme/alıcıya giden her işte onay ister.",
+      "kutuphane_surumu": "0.5.0",
+      "kutuphane_commit": "950dc9498e46e2fdcd8a369512c26698de54e293",
+      "kaynak_kopyasi": "programlar/etsyotomasyon/kaynak",
+      "surum_kaynagi": "GitHub releases/latest (etiket vX.Y.Z)",
+      "kurulum": {
+        "windows": "Release'deki etsyotomasyon-<sürüm>-windows.exe (tek dosya, kurulum yok; imzasız: SmartScreen -> Ek bilgi -> Yine de çalıştır)",
+        "macos": "Release'deki etsyotomasyon-<sürüm>-macos.zip (Apple Silicon) / -macos-intel.zip; imzasız: Gizlilik ve Güvenlik -> Yine de Aç",
+        "kaynaktan": "python3 -m venv ~/.etsyotomasyon-uygulama && ~/.etsyotomasyon-uygulama/bin/pip install <kaynak_kopyasi> && ~/.etsyotomasyon-uygulama/bin/etsyotomasyon desktop  (Python 3.9-3.13; bağımlılıklar: httpx, typer, rich, python-dotenv, pillow)"
+      },
+      "veri_yeri": "~/.etsyotomasyon (anahtarlar .env, oturum token.json, ayarlar, kayıtlar); ürün klasörü Masaüstü/'Etsy Studio'",
+      "baglanti": "Satıcının kendi Etsy uygulaması (Keystring + Shared secret, OAuth). Callback: http://localhost:3003/oauth/redirect. Etsy hesap başına tek uygulama: varsa mevcut uygulama kullanılır.",
+      "ag": "Etsy API; isteğe bağlı Pinterest; TCMB kur dosyası (günde 1); GitHub sürüm kontrolü (ETSYOTOMASYON_NO_UPDATE_CHECK=1 kapatır)",
+      "kendini_gunceller": false,
+      "skilleri": [],
+      "guncelleme_adimlari": [
+        "program-denetim.py yeni sürümü gösterir",
+        "kullanıcıya CHANGELOG özeti + onay",
+        "kaynak kopyasını yeni sürüm etiketinden yenile (docs/ ve .github/ hariç), KAYNAK.md ve bu kartı güncelle, commit",
+        "programı kullanan makinelerde: release dosyasıyla değiştir ya da kaynaktan kurulumda pip install yeniden"
+      ],
+      "asla": [
+        "Etsy Keystring / Shared secret / token'ı agent girmez, okumaz, yazdırmaz (~/.etsyotomasyon/.env ve token.json açılmaz)",
+        "programın kopyası proje deposuna konmaz; ilan silme/yayınlama agent tarafından yapılmaz"
+      ]
+    }
+  }
+}
