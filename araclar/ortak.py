@@ -421,3 +421,693 @@ def repo_guncel(repo):
     if _TAKMA_ADLAR is None:
         _TAKMA_ADLAR = repo_takma_adlari()
     return _TAKMA_ADLAR.get((repo or "").lower(), repo)
+
+
+# ------------------------------------------------------------------ sabit yol taraması (salt okuma, ağ yok)
+# Bir skill'in metinlerinde "bilgisayar geneli klasör" / "eklenti kökü" / kardeş skill yolları var mı? Kurulum ön kontrolü
+# (skill-ekle.py) ve araclar/yol-tara.py bunu kullanır. Kurulan kopyada yol çevirisi (sonraki aşama) BU arayüzü tüketir:
+# yol_taramasi() (düşük seviye), skill_yol_taramasi() (kardeş çözümlü), istisna_uygula(), yol_degerlendir() (ön kontrol satırları).
+# Prensip: "dar çevir, geniş uyar" — yalnız `cevrilebilir` bulgular otomatik çevrilir; gerisi UYARI/BİLGİ olarak raporlanır.
+YOL_ISTISNA = KOK / "yol-istisnalari.json"
+YOL_METIN_UZANTI = (".md", ".mdx", ".txt", ".sh", ".bash", ".zsh", ".cmd", ".ps1", ".py", ".js", ".mjs", ".cjs", ".ts",
+                    ".json", ".yaml", ".yml", ".toml", "")  # "" = uzantısız dosya
+GENEL_KLASOR_ADLARI = {"skill", "skills", "src", "web", "ios", "android", "setup", "main", "app", "core", "docs", "lib", "scripts",
+                       "references", "assets", "templates", "bin", "tools", "utils", "common", "shared", "base", "default", "example",
+                       "examples", "test", "tests", "plugin", "plugins", "agent", "agents", "cli", "server", "client", "api", "backend",
+                       "frontend", "mobile", "desktop", "public", "dist", "build", "config", "data", "resources", "rules", "commands",
+                       "hooks", "prompts", "workflows", "general", "generic", "index", "template", "root", "skillset"}
+_YOL_KOD_UZANTI = {".py", ".js", ".mjs", ".cjs", ".ts", ".sh", ".bash", ".zsh", ".ps1", ".cmd"}
+_YOL_ENGEL_SIRASI = ("dokuman", "kurucu-dosya", "kurulum-komutu", "cok-kok", "kullanim-metni", "ornek-satir", "kalan-bos", "dosya-yok",
+                     "karisik-dosya", "betik-ici")
+YOL_TARAMA_SINIRLARI = {"dosya_bayt": 2_000_000, "satir_karakter": 20_000, "dosya_bulgu": 2000, "atif_bayt": 262_144}  # dayanıklılık: kötü niyetli/bozuk girdi taramayı kilitlemesin
+_YOL_GIZLI_AD = re.compile(r"^(?:id_(?:rsa|dsa|ecdsa|ed25519)\b.*|\.npmrc|\.netrc|\.pypirc|\.git-credentials|credentials(?:\.\w+)?|.*\.(?:p12|pfx|keystore)"
+                           r"|.*secrets?\.(?:json|ya?ml|toml|txt))$", re.I)
+_YOL_AILESI = {"genel-kendi", "genel-baska", "eklenti-kendi", "eklenti-kardes", "kardes-goreli", "skil-disi-yol"}
+_EV = (r"(?:(?:~|\$HOME|\$\{HOME\}|/Users/[\w.-]+|/home/[\w.-]+)/\.(?:claude|agents|codex)"
+       r"|\$\{(?:CODEX_HOME|CLAUDE_DIR|CLAUDE_CONFIG_DIR)(?::-[^}\s]*)?\}|\$(?:CODEX_HOME|CLAUDE_DIR)(?!\w))")
+_KALAN = r"(?:/[^\s`'\"<>)\]|,;(\\]*)?"
+_GENEL = re.compile(r"(?<![\w$./~-])(?P<on>" + _EV + r"/skills)/(?P<ad>[A-Za-z0-9_.@+*-]+)(?P<son>[<>$\[\]{}]?)(?P<k>" + _KALAN + ")")
+_EKLENTI = re.compile(r"(?:\$\{CLAUDE_PLUGIN_ROOT\}|\$CLAUDE_PLUGIN_ROOT(?!\w))(?P<k>" + _KALAN + ")")
+_EKLENTI_SKILL = re.compile(r"^/?(?:\.(?:claude|agents|codex)/)?skills/(?P<ad>[^/]+)(?P<k>/.*)?$")
+_SKIL_DIZIN = re.compile(r"(?:\$\{CLAUDE_SKILL_DIR\}|\$CLAUDE_SKILL_DIR(?!\w))(?P<n>(?:/\.\.(?![\w.-]))+)(?P<k>" + _KALAN + ")")
+_GORELI = re.compile(r"(?<![\w./~$}-])(?<!\]\()(?P<n>(?:\.\./)+)(?P<ad>[A-Za-z0-9_.@+-]+)/(?P<k>[^\s`'\"<>)\]|,;(\\]*)")
+_YAZAR = re.compile(r"npx\s+(?:-y\s+|--yes\s+)?skills(?:@[\w.-]+)?\s+(?:add|update)\b[^\n]{0,400}?(?:\s-g\b|--global\b)")
+_YAZAR_SKILL = re.compile(r"--skill[= ]+[\"']?([^\s\"']+)")
+_KOPYA = re.compile(r"(?P<v>\b(?:cp|mv|rsync)\s+\S|\bln\s+-\w*s|\bmkdir\s+-p\b|\bgit\s+clone\b|\binstall\s+-\w)[^\n]{0,300}?"
+                    r"(?P<t>" + _EV + r"/(?:skills|agents)\b)")
+# genel klasöre yazan öteki kalıplar: --dest/--target/--output <ev>/skills (--root OKUMA kökü olduğundan yok) ve "write|save|copy|create … to <ev>/skills"
+_KOPYA2 = re.compile(r"(?P<v>--(?:dest|target|output|out)(?:=|\s+)[\"'`]?)(?P<t>" + _EV + r"/(?:skills|agents)\b)"
+                     r"|(?P<v2>\b(?:write|save|copy|create)\b[^\n]{0,60}?\b(?:to|into)\s+[\"'`]?)(?P<t2>" + _EV + r"/(?:skills|agents)\b)", re.I)
+_ORNEK_SATIR = re.compile(r"\bin most installs\b|\bfor (?:example|instance)\b|\be\.g\.|\bsuch as\b|\bUnder\s+\S+\s+that is\b|\bor example\b|\börneğin\b|\bmesela\b", re.I)
+_KULLANIM_SATIR = re.compile(r"^\s*(?:@?echo|printf|print\(|console\.(?:log|error|warn)|puts|Write-Host|Write-Output|echo\.)\b")
+_ALTERNATIF = re.compile(r"\bor\b[^\n]{0,80}(?:~/|\$HOME|\$\{HOME\}|\bPATH\b|/usr/|\./|\.\./)|(?:when|if)\s+(?:it'?s\s+)?(?:installed|running)\s+as\s+(?:a\s+)?plugin", re.I)
+_ATAMA = re.compile(r"[A-Za-z_]\w*=[\"']?$")
+_KURULUM_KOMUTU = re.compile(r"\bgit\s+clone\b|\bln\s+-\w+|\bmkdir\s+-p\b|\bcp\s+-\w+|\bcurl\b[^\n]*?\s-o\b|\bwget\b[^\n]*?\s-O\b"
+                             r"|\brm\s+-\w*r\w*|\bnpx\s+(?:-y\s+|--yes\s+)?skills(?:@[\w.-]+)?\s+(?:add|update)\b")
+_KOK_YERLESIM = re.compile(r"\.(?P<a>[a-z][\w-]*)/skills\b|\.config/(?P<b>[a-z][\w-]*)/skills\b|\$\{?(?P<c>CODEX_HOME|CLAUDE_DIR)\}?/skills\b")
+_PROJE_ICI = re.compile(r"(?:(?<![\w$}~/])|(?<=\./))\.(?:claude|agents|codex)/skills/[\w@.+*-]")
+_KURULUM_BASLIK = re.compile(r"install|kurulum|setup|getting started|quick ?start", re.I)
+_DOKUMAN_AD = re.compile(r"^(?:README|NOTICE|CONTRIBUTING|CHANGELOG|LICENSE)|^(?:AGENTS|CLAUDE)\.md$", re.I)
+_DIL = ("ar bg bn ca cs da de el es fa fi fr he hi hu id it ja ko ms nl no pl pt ru sv th tr uk vi zh zh-cn zh-tw zh-hans zh-hant pt-br "
+        "es-es fr-fr de-de ja-jp ko-kr ru-ru en-us en-gb").split()
+_DIL_KLASOR = {d for d in _DIL} | {d.replace("-", "_") for d in _DIL} | {"i18n", "l10n", "locales", "translations", "lang", "languages"}
+_DIL_DOSYA = re.compile(r"[._-](?:" + "|".join(sorted((d.replace("-", "[-_]") for d in _DIL), key=len, reverse=True)) + r")\.[A-Za-z]+$", re.I)
+_ATIF_PARCA = re.compile(r"[\w@+./-]+")  # doğrusal: yol karakterlerinden oluşan parça (dosya/dizin ayrımı sonradan, regex geri izlemesiz)
+
+
+def _yol_kes(ham: str) -> str:
+    """Yakalanan yol parçasını temizler (baştaki '/' korunur): '…' ve '...' sonrası kesilir; '#bağ', '?sorgu', ':satır' ve sondaki
+    .,;:*)'\"`_ ile '/' atılır."""
+    k = ham.split("…")[0].split("...")[0]
+    k = re.split(r"[#?]", k)[0]
+    k = re.sub(r":\d+(?::\d+)?$", "", k)
+    return k.rstrip(".,;:*)'\"`_/")
+
+
+def _kalan_temizle(ham: str) -> str:
+    return _yol_kes(ham).strip("/")
+
+
+def _var_bak(klasor: Path, kalan: str):
+    """kalan klasor içinde var mı? True/False; joker ('*' '?') glob ile; değişken/'..' içeriyorsa None. Boş kalan = klasörün kendisi."""
+    if not kalan:
+        return klasor.is_dir()
+    if ".." in kalan.split("/") or any(c in kalan for c in "${}<>[]"):
+        return None
+    try:
+        if any(c in kalan for c in "*?"):
+            return any(klasor.glob(kalan))
+        return (klasor / kalan).exists()
+    except (OSError, ValueError):
+        return None
+
+
+def _satir_haritasi(metin: str):
+    return [m.start() for m in re.finditer("\n", metin)]
+
+
+def _satir_no(yeni_satir, pos):
+    import bisect
+    return bisect.bisect_left(yeni_satir, pos) + 1
+
+
+def _satir_metni(metin: str, yeni_satir, pos):
+    import bisect
+    i = bisect.bisect_left(yeni_satir, pos)
+    bas = yeni_satir[i - 1] + 1 if i else 0
+    son = yeni_satir[i] if i < len(yeni_satir) else len(metin)
+    return metin[bas:son], bas
+
+
+def _atif_kumesi(klasor: Path, dosyalar):
+    """SKILL.md'nin andığı göreli dosya yolları (ve 'dizin/' diye anılan dizinlerin altındakiler). Doğrusal zamanlı (regex geri izlemesi
+    yok); SKILL.md 256 KB'dan büyükse atıf çıkarılmaz (kök SKILL.md yine 'ajan' sayılır, öteki dosyalar atıfsız = 'dokuman')."""
+    sm = klasor / "SKILL.md"
+    try:
+        if not sm.is_file() or sm.stat().st_size > YOL_TARAMA_SINIRLARI["atif_bayt"]:
+            return set()
+        metin = sm.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return set()
+    belirteclar, dizinler = set(), set()
+    for tok in _ATIF_PARCA.findall(metin):
+        for parca in re.split(r"/{2,}", tok):
+            dizin_mi = parca.endswith("/") and len(parca.strip("/")) > 0
+            p = parca.strip("/")
+            if p.startswith("./"):
+                p = p[2:]
+            if not p:
+                continue
+            (dizinler if dizin_mi else belirteclar).add(p.rstrip(".") if not dizin_mi else p)
+    sonuc = set()
+    for rel in dosyalar:
+        parcalar = rel.split("/")
+        if rel in belirteclar or any("/".join(parcalar[:i]) in dizinler for i in range(1, len(parcalar))):
+            sonuc.add(rel)
+    return sonuc
+
+
+def _dosya_sinifi(rel: str, atiflar, betik: bool) -> str:
+    """'ajan' (ajanın okuyup çalıştırdığı), 'kurucu' (install/setup/bootstrap*), 'dokuman' (geri kalan)."""
+    parca = rel.split("/")
+    ad = parca[-1]
+    if ad.lower().startswith(("install", "setup", "bootstrap")):
+        return "kurucu"
+    if rel == "SKILL.md":
+        return "ajan"
+    # dil kuralı yalnız metin dosyalarına (.md .mdx .txt) uygulanır: dil kodu adlı (it, no, id …) kod dosyası ya da klasörü sessizleşmez
+    metin_dosyasi = ad.lower().endswith((".md", ".mdx", ".txt"))
+    if _DOKUMAN_AD.match(ad) or (metin_dosyasi and (any(p.lower() in _DIL_KLASOR for p in parca[:-1]) or _DIL_DOSYA.search(ad))):
+        return "dokuman"
+    if ad == "SKILL.md":
+        return "ajan"
+    if any(p.lower() in ("tests", "test", "__tests__", "fixtures") for p in parca[:-1]):
+        return "dokuman"  # ajan test dosyası çalıştırmaz
+    if len(parca) > 1 and parca[0] in ("scripts", "bin", "templates", "agents"):
+        return "ajan"
+    if len(parca) == 1 and betik:
+        return "ajan"
+    return "ajan" if rel in atiflar else "dokuman"
+
+
+def _ad_norm(ad):
+    return (ad or "").strip().lower()
+
+
+def _hedef_turu(ad: str, son: str, adlar, bilinen, aile):
+    """Yakalanan skill adının türü: genel-kalip / ortak-dizin / ornek-metin / '<aile>-kendi' / '<aile>-baska' (aile: genel|eklenti)."""
+    ad2 = ad.rstrip(".")
+    if not ad2:
+        return None, None
+    if "*" in ad2 or ad2.endswith("-") or son:
+        return "genel-kalip", ad2
+    if ad2.startswith("_"):
+        return "ortak-dizin", ad2
+    d = ad2.lower()
+    if d.startswith("."):  # gizli sistem klasörü (.system/…): kütüphanede olması beklenmez ama gerçek bir bağımlılık
+        return ("genel-baska" if aile == "genel" else "eklenti-kardes"), ad2
+    if d in adlar:
+        return f"{aile}-kendi", ad2
+    if bilinen is not None and d not in bilinen:
+        return "ornek-metin", ad2
+    return ("genel-baska" if aile == "genel" else "eklenti-kardes"), ad2
+
+
+def yol_taramasi(klasor, adlar, bilinen_adlar=None) -> list:
+    """Bir skill klasöründeki sabit yol bağımlılıkları (SAF: yalnız verilen klasörü okur; ağ yok; arşivde deterministik).
+    klasor: skill klasörü · adlar: skill'in KENDİ adları (skill_adlari) · bilinen_adlar: kütüphanedeki tüm skill adları
+    (verilirse kütüphanede hiç olmayan hedefler 'ornek-metin' sayılır, UYARI üretmez).
+
+    Taranan dosyalar: onemli_dosyalar(klasor) içinden ≤2 MB, uzantısı YOL_METIN_UZANTI'da, .env*/*.pem/*.key hariç.
+    Bulgu sözlüğü: tur, dosya (posix göreli), satir (1'den), ham (dosyadaki metin), hedef (skill adı ya da None), kalan (skill-içi yol,
+    '' olabilir), var (True/False/None), sinif ('ajan'|'dokuman'|'kurucu'), engel (otomatik çevrilmeme nedeni ya da None),
+    cevrilebilir (bool), engeller (uygulanabilir tüm nedenler, öncelik sırasıyla; ayrıntı için); genele-yazar bulgularında ayrıca
+    alt: 'kurulum-bandi' = markdown dosyada "Install/Kurulum…" başlığı altında ve --skill değerleri (varsa) skill'in kendi adlarından biri;
+    aksi hâlde (başka skill kuruluyor, betik dosyası, başka başlık) 'ajan-adimi'.
+    Türler: genel-kendi, genel-baska, ornek-metin, ortak-dizin, genel-kalip, eklenti-kendi, eklenti-kardes, eklenti-kok-yol,
+    eklenti-kok-anma, skil-disi-yol, kardes-goreli, genele-kopyalar, genele-yazar. Ev önekleri: ~ $HOME ${HOME} $CODEX_HOME
+    ${CODEX_HOME} $CLAUDE_DIR /Users/<ad> /home/<ad> (~, $HOME, /Users, /home için '.claude|.agents|.codex' klasörü zorunlu).
+    engel öncelik sırası: dokuman, kurucu-dosya, kurulum-komutu, cok-kok, kullanim-metni (betikte echo/printf/print satırı: kullanım ipucu),
+    ornek-satir ("in most installs", "for example", "e.g." … açıklama satırı), kalan-bos, dosya-yok, karisik-dosya (aynı dosyada proje içi
+    .claude/skills yolu VAR ya da dosya bir kurulum tarifi: genele-kopyalar / kurulum komutu içeriyor), betik-ici.
+    Ek bayraklar (engel dışı): 'atama' (kalan-bos kendi yolu bir değişkene atanıyor: SKILL_DIR="~/.claude/skills/<ad>"), 'alternatif'
+    (satırda "… or ~/…" / "when installed as a plugin" seçenekleri: eklenti-kok-yol ve kendi/başka yolları için).
+    Dayanıklılık (YOL_TARAMA_SINIRLARI): dosya başına en çok 2000 bulgu, 20 000 karakterden uzun satırların kuyruğu atılır, SKILL.md atıf
+    taraması için 256 KB'a kadar okunur; symlink'ler ve gizli adlı dosyalar (id_rsa*, .npmrc, .netrc, credentials*, *secret*.json …) okunmaz.
+    Kapsam dışı: kodda Path.home()/".agents"/"skills" gibi kurulan yollar, öneksiz göreli yollar (skills/<ad>/…) ve .copilot gibi başka kökler.
+    cevrilebilir = engel yok ve var True ve kalan boş değil (ve tür bir yol ailesinden). Kardeş türlerinde var burada None kalır:
+    skill_yol_taramasi kardeşin arşivine bakarak doldurur."""
+    klasor = Path(klasor)
+    adlar = {_ad_norm(a) for a in adlar if a}
+    bilinen = bilinen_adlar if bilinen_adlar is None or isinstance(bilinen_adlar, frozenset) else frozenset(_ad_norm(a) for a in bilinen_adlar)
+    dosyalar = []
+    for f in onemli_dosyalar(klasor):
+        if (f.suffix.lower() not in YOL_METIN_UZANTI or f.name.startswith(".env") or f.name.endswith((".pem", ".key"))
+                or _YOL_GIZLI_AD.match(f.name) or f.is_symlink()):
+            continue  # gizli/anahtar adlı dosyalar ve symlink'ler (klasör dışına işaret edebilir) okunmaz
+        try:
+            if f.stat().st_size <= YOL_TARAMA_SINIRLARI["dosya_bayt"]:
+                dosyalar.append(f)
+        except OSError:
+            continue
+    atiflar, bulgular = None, []
+    for f in dosyalar:
+        rel = f.relative_to(klasor).as_posix()
+        try:
+            ham_bayt = f.read_bytes()
+            if b"\0" in ham_bayt or not any(k in ham_bayt for k in (b"/skills", b"/agents", b"PLUGIN_ROOT", b"SKILL_DIR", b"../", b"npx")):
+                continue
+            metin = ham_bayt.decode("utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        sk = YOL_TARAMA_SINIRLARI["satir_karakter"]
+        if len(metin) > sk and any(len(x) > sk for x in metin.split("\n")):
+            metin = "\n".join(x[:sk] for x in metin.split("\n"))  # aşırı uzun satır (gömülü base64/minify): satır no korunur, kuyruk atılır
+        if atiflar is None:
+            atiflar = _atif_kumesi(klasor, [x.relative_to(klasor).as_posix() for x in dosyalar])
+        betik = f.suffix.lower() in _YOL_KOD_UZANTI or (f.suffix == "" and metin.startswith("#!"))
+        sinif = _dosya_sinifi(rel, atiflar, betik)
+        derinlik = rel.count("/")
+        yeni = _satir_haritasi(metin)
+        yerel = []
+        satir_onb = {}  # satır başı konumu -> (kurulum komutu başlangıçları, yerleşim kökleri, açıklama/kullanım/alternatif bayrakları)
+        kopya_satir = set()
+
+        class _Doldu(Exception):
+            pass
+
+        def ekle(pos, tur, ham, hedef=None, kalan="", var=None, alt=None):
+            if len(yerel) >= YOL_TARAMA_SINIRLARI["dosya_bulgu"]:
+                raise _Doldu
+            satir, bas = _satir_metni(metin, yeni, pos)
+            b = {"tur": tur, "dosya": rel, "satir": _satir_no(yeni, pos), "ham": ham, "hedef": hedef, "kalan": kalan, "var": var,
+                 "sinif": sinif, "engel": None, "cevrilebilir": False, "engeller": []}
+            if alt:
+                b["alt"] = alt
+            if tur in _YOL_AILESI or tur == "eklenti-kok-yol":
+                if bas not in satir_onb:
+                    satir_onb[bas] = ([m.start() for m in _KURULUM_KOMUTU.finditer(satir)],
+                                      len({(m.group("a") or m.group("b") or m.group("c")).lower().replace("codex_home", "codex").replace("claude_dir", "claude")
+                                           for m in _KOK_YERLESIM.finditer(satir)}),
+                                      bool(_ORNEK_SATIR.search(satir)), bool(betik and _KULLANIM_SATIR.match(satir)), bool(_ALTERNATIF.search(satir)))
+                komutlar, kok_say, ornek, kullanim, alternatif = satir_onb[bas]
+                if alternatif:
+                    b["alternatif"] = True  # "… or ~/x, or ${CLAUDE_PLUGIN_ROOT}/…" gibi: birçok seçenekten biri
+            if tur in _YOL_AILESI:
+                if any(k < pos - bas for k in komutlar):
+                    b["engeller"].append("kurulum-komutu")
+                if kok_say >= 2:
+                    b["engeller"].append("cok-kok")
+                if kullanim:
+                    b["engeller"].append("kullanim-metni")
+                if ornek:
+                    b["engeller"].append("ornek-satir")
+                if not kalan:
+                    b["engeller"].append("kalan-bos")
+                    if _ATAMA.search(satir[:pos - bas]):
+                        b["atama"] = True  # SKILL_DIR="~/.claude/skills/<ad>" gibi: sonraki satırlar bu değişkenle betik çalıştırabilir
+            yerel.append(b)
+
+        try:
+            for m in (_GENEL.finditer(metin) if "/skills/" in metin else ()):
+                tur, ad = _hedef_turu(m.group("ad"), m.group("son"), adlar, bilinen, "genel")
+                if not tur:
+                    continue
+                on = metin[m.start():m.start("ad")] + ad
+                kalan = "" if tur == "genel-kalip" else _kalan_temizle(m.group("k"))
+                ekle(m.start(), tur, on + ("/" + kalan if kalan else ""), ad, kalan, _var_bak(klasor, kalan) if tur == "genel-kendi" else None)
+            for m in (_EKLENTI.finditer(metin) if "PLUGIN_ROOT" in metin else ()):
+                tam = _yol_kes(m.group("k") or "")
+                on = metin[m.start():m.start("k")]
+                sm = _EKLENTI_SKILL.match(tam)
+                if sm and not sm.group("ad").startswith(".") and not (not sm.group("k") and re.search(r"\.[A-Za-z0-9]{1,5}$", sm.group("ad"))):
+                    ad_ham = sm.group("ad")
+                    if re.fullmatch(r"[A-Za-z0-9_.@+*-]+", ad_ham):
+                        tur, ad = _hedef_turu(ad_ham, "", adlar, bilinen, "eklenti")
+                    else:  # <ad> / ${ad} yer tutucusu
+                        tur, ad = "genel-kalip", ad_ham
+                    kalan = "" if tur == "genel-kalip" else _kalan_temizle(sm.group("k") or "")
+                    ekle(m.start(), tur, on + tam, ad, kalan, _var_bak(klasor, kalan) if tur == "eklenti-kendi" else None)
+                elif tam.strip("/") in ("skills", ".claude/skills") and metin[m.end("k"):m.end("k") + 1] in ("<", "{", "$", "[", "*"):
+                    ekle(m.start(), "genel-kalip", on + tam, None, "")  # skills/<ad>/… yer tutucusu
+                else:
+                    ekle(m.start(), "eklenti-kok-yol" if tam.strip("/") else "eklenti-kok-anma", on + tam, None, tam.strip("/"))
+            for m in (_SKIL_DIZIN.finditer(metin) if "SKILL_DIR" in metin else ()):
+                tam = _yol_kes(m.group("k") or "").strip("/")
+                hedef, kalan = (tam.partition("/")[0] or None, tam.partition("/")[2]) if m.group("n").count("/..") == 1 else (None, tam)
+                ekle(m.start(), "skil-disi-yol", metin[m.start():m.start("k")] + ("/" + tam if tam else ""), hedef, kalan)
+            for m in (_GORELI.finditer(metin) if "../" in metin else ()):
+                ad = m.group("ad").rstrip(".")
+                if m.group("n").count("../") != derinlik + 1 or not ad or _ad_norm(ad) in adlar:
+                    continue  # skill içinde kalıyor / daha yukarı çıkıyor / kendi klasörü: kardeş değil
+                if bilinen is not None and _ad_norm(ad) not in bilinen and not ad.startswith("_"):
+                    continue  # kütüphanede böyle skill yok: gösterge değil, sıradan göreli yol (../node_modules/…) — sayılmaz bile
+                kalan = _kalan_temizle("/" + m.group("k"))
+                ekle(m.start(), "ortak-dizin" if ad.startswith("_") else "kardes-goreli", metin[m.start():m.start("k")] + kalan, ad, kalan)
+            basliklar = None
+            for m in (_YAZAR.finditer(metin) if "npx" in metin else ()):
+                if basliklar is None:  # başlık konumları dosya başına BİR kez; son başlık bisect ile
+                    basliklar = [(x.start(), x.group(1)) for x in re.finditer(r"^#{1,6}[ \t]+(.*)$", metin, re.M)] if not betik else []
+                    baslik_pos = [x[0] for x in basliklar]
+                import bisect
+                i = bisect.bisect_left(baslik_pos, m.start())
+                satir_sonu = metin.find("\n", m.start())
+                skiller_ = _YAZAR_SKILL.findall(metin[m.start():satir_sonu if satir_sonu >= 0 else len(metin)])
+                # kurulum bandı: markdown dosyada, "Install/Kurulum…" başlığı altında ve yalnız kendi skill'ini kuruyorsa (--skill başka bir adı gösteriyorsa gerçek bağımlılık)
+                band = bool(i and _KURULUM_BASLIK.search(basliklar[i - 1][1]) and all(_ad_norm(x) in adlar for x in skiller_))
+                ekle(m.start(), "genele-yazar", m.group(0), alt="kurulum-bandi" if band else "ajan-adimi")
+            for m in (_KOPYA.finditer(metin) if "/skills" in metin or "/agents" in metin else ()):
+                kopya_satir.add(_satir_no(yeni, m.start()))
+                ekle(m.start(), "genele-kopyalar", metin[m.start("v"):m.end("t")])
+            for m in (_KOPYA2.finditer(metin) if "/skills" in metin or "/agents" in metin else ()):
+                bas_, son_ = (m.start("v"), m.end("t")) if m.group("v") else (m.start("v2"), m.end("t2"))
+                if _satir_no(yeni, bas_) in kopya_satir:
+                    continue
+                kopya_satir.add(_satir_no(yeni, bas_))
+                ekle(bas_, "genele-kopyalar", metin[bas_:son_])
+        except _Doldu:
+            pass  # bir dosyada en çok dosya_bulgu bulgu: sonrası atlanır (bkz. YOL_TARAMA_SINIRLARI)
+        proje_ici = bool(_PROJE_ICI.search(metin)) and any(x["tur"] in ("genel-kendi", "genel-baska") for x in yerel)
+        # kurulum anlatan dosya (ln -s / cp / mkdir -p / git clone … genel klasör): aynı dosyadaki sabit yollar kurulum tarifinin parçası, çevrilmez
+        kurulum_anlatimi = any(x["tur"] == "genele-kopyalar" or "kurulum-komutu" in x["engeller"] for x in yerel)
+        for b in yerel:
+            if b["tur"] in _YOL_AILESI:
+                b["engeller"] = (["dokuman"] if sinif == "dokuman" else ["kurucu-dosya"] if sinif == "kurucu" else []) + b["engeller"]
+                if proje_ici or kurulum_anlatimi:
+                    b["engeller"].append("karisik-dosya")
+                if betik:
+                    b["engeller"].append("betik-ici")
+            bulgular.append(b)
+    for b in bulgular:
+        _engel_hesapla(b)
+    bulgular.sort(key=lambda b: (b["dosya"], b["satir"], b["tur"], b["ham"]))
+    return bulgular
+
+
+def _engel_hesapla(b: dict):
+    """engel = uygulanabilir nedenlerin öncelik sırasındaki ilki (var False ise 'dosya-yok' da aday); cevrilebilir buna bağlı."""
+    nedenler = set(b.get("engeller", []))
+    if b["var"] is False and b["tur"] in _YOL_AILESI:
+        nedenler.add("dosya-yok")
+    b["engel"] = next((n for n in _YOL_ENGEL_SIRASI if n in nedenler), None)
+    b["cevrilebilir"] = bool(b["tur"] in _YOL_AILESI and b["engel"] is None and b["var"] is True and b["kalan"])
+
+
+_SKILLER_INDEKS = [None, 0, None]  # (skiller listesi, uzunluk, indeks): kardeş/bilinen ad aramaları için tek seferlik
+
+
+def _skill_ham_adlari(s: dict) -> set:
+    """Skill'in dışarıdan anılabilen adları (küçük harf): ad (@kaynak eksiz), klasor_adi ve kaynak_yol'un son klasörü (genel klasör adları hariç)."""
+    adlar = {_ad_norm(str(s.get("ad", "")).split("@")[0])}
+    for x in (s.get("klasor_adi"), Path(s.get("kaynak_yol") or "").name):
+        if x and _ad_norm(x) not in GENEL_KLASOR_ADLARI:
+            adlar.add(_ad_norm(x))
+    adlar.discard("")
+    return adlar
+
+
+def _skiller_indeksi(skiller):
+    if _SKILLER_INDEKS[0] is not skiller or _SKILLER_INDEKS[1] != len(skiller):
+        repolar, bilinen = {}, set()
+        for s in skiller:
+            ad = _skill_ham_adlari(s)
+            repolar.setdefault(s.get("repo"), []).append((s, ad))
+            bilinen |= ad
+        _SKILLER_INDEKS[:] = [skiller, len(skiller), (repolar, frozenset(bilinen))]
+    return _SKILLER_INDEKS[2]
+
+
+def skill_adlari(s: dict, skiller=None) -> set:
+    """Skill'in KENDİ adları (küçük harf): ad (@kaynak eksiz), klasor_adi ve kaynak_yol'un son klasörü (ikisi de genel klasör adı
+    değilse: skill, src, web, setup, main, app, core, docs, lib … GENEL_KLASOR_ADLARI) ve reponun son bileşeni — yalnız AYNI
+    repodaki başka hiçbir skill o adı taşımıyorsa (skiller verilmezse repo adı eklenmez)."""
+    adlar = _skill_ham_adlari(s)
+    if skiller is not None and s.get("repo"):
+        repo_ad = _ad_norm(s["repo"].split("/")[-1])
+        if repo_ad and repo_ad not in GENEL_KLASOR_ADLARI and not any(
+                x["id"] != s["id"] and repo_ad in ad for x, ad in _skiller_indeksi(skiller)[0].get(s["repo"], [])):
+            adlar.add(repo_ad)
+    return adlar
+
+
+def _eklenti_koku_yolu(kaynak_yol) -> str:
+    """kaynak_yol içindeki eklenti kökü: '.../skills/<ad>' kalıbında 'skills' öncesi (plugins/<p>/skills/x -> plugins/<p>); yoksa ''."""
+    p = (kaynak_yol or "").strip("/").split("/")
+    return "/".join(p[:p.index("skills")]) if "skills" in p[:-1] else ""
+
+
+def kardes_coz(s: dict, hedef_ad: str, skiller, ipucu=None):
+    """hedef_ad adlı başka skill'i YALNIZ aynı repoda arar (ad @kaynak eksiz, klasor_adi ya da kaynak_yol son klasörü eşleşmesi);
+    tam bir aday varsa kaydı döner, yoksa ya da birden çok aday varsa None (sessizce tahmin edilmez).
+    ipucu (isteğe bağlı): birden çok aday varsa daraltır — 'ust' (göreli ../<ad> yolu: aday, bu skill'le AYNI üst klasörde olmalı:
+    dirname(kaynak_yol) eşit) ya da 'kok' (${CLAUDE_PLUGIN_ROOT}/skills/<ad>: aynı eklenti kökü). Daralınca da tek aday kalmazsa None."""
+    h = _ad_norm(hedef_ad)
+    adaylar = [x for x, ad in _skiller_indeksi(skiller)[0].get(s.get("repo"), []) if x["id"] != s["id"] and h in ad]
+    if len(adaylar) > 1 and ipucu in ("ust", "kok"):
+        kay = (lambda x: "/".join((x.get("kaynak_yol") or "").strip("/").split("/")[:-1])) if ipucu == "ust" else (lambda x: _eklenti_koku_yolu(x.get("kaynak_yol")))
+        adaylar = [x for x in adaylar if kay(x) == kay(s)]
+    return adaylar[0] if len(adaylar) == 1 else None
+
+
+_YOL_ONBELLEK = {}
+
+
+def skill_yol_taramasi(s: dict, skiller) -> list:
+    """Üst seviye tarama: adlar = skill_adlari, bilinen adlar = tüm skiller. genel-baska / eklenti-kardes / kardes-goreli /
+    skil-disi-yol (tek '..') bulgularında kardeşi kardes_coz ile çözer: bulguya 'kardes_id' eklenir ve var = dosya KARDEŞİN ARŞİV
+    klasöründe var mı (boş kalan = kardeş klasörü). Sonuç (id, klasor_hash, yol) anahtarıyla ve AYNI skiller listesi (kimlik+uzunluk) için modül sözlüğünde önbelleklenir
+    (kardeşin dosyaları aynı süreçte değişirse önbellek bilmez); her çağrıda kopya döner. Çok adaylı adlarda göreli yol (kardes-goreli,
+    skil-disi-yol) için aynı üst klasördeki, eklenti-kardes için aynı eklenti kökündeki tek aday seçilir (kardes_coz ipucu)."""
+    anahtar = (s["id"], s.get("klasor_hash"), s.get("yol"))  # yol: geçici (taze çekilmiş) skiller birbirinin önbelleğini kullanmasın
+    onb = _YOL_ONBELLEK.get(anahtar)
+    if onb is None or onb[0] is not skiller or onb[1] != len(skiller):  # kardeş çözümü skiller listesine bağlı: başka/büyüyen liste = yeniden hesapla
+        bulgular = yol_taramasi(KOK / s["yol"], skill_adlari(s, skiller), _skiller_indeksi(skiller)[1])
+        for b in bulgular:
+            if b["tur"] in ("genel-baska", "eklenti-kardes", "kardes-goreli", "skil-disi-yol") and b["hedef"]:
+                k = kardes_coz(s, b["hedef"], skiller, {"kardes-goreli": "ust", "skil-disi-yol": "ust", "eklenti-kardes": "kok"}.get(b["tur"]))
+                if k:
+                    b["kardes_id"] = k["id"]
+                    b["var"] = _var_bak(KOK / k["yol"], b["kalan"])
+                    _engel_hesapla(b)
+        onb = _YOL_ONBELLEK[anahtar] = (skiller, len(skiller), bulgular)
+    return [dict(b, engeller=list(b["engeller"])) for b in onb[2]]
+
+
+# ------------------------------------------------------------------ yol istisnaları (yol-istisnalari.json)
+def istisna_anahtari(s: dict) -> str:
+    """İstisna kaydının anahtarı: 'repo::kaynak_yol' (skill id'si DEĞİL: id 'ad@kaynak'a dönse de istisna ölmesin)."""
+    return f"{s.get('repo')}::{s.get('kaynak_yol')}"
+
+
+def bulgu_hash(bulgular) -> str:
+    """Bulguların kimliği: sıralı (dosya, ham) çiftlerinin sha256'sı (satır numarası hariç: satır kayması istisnayı düşürmesin)."""
+    return hashlib.sha256("\n".join(f"{b['dosya']}\t{b['ham']}" for b in sorted(bulgular, key=lambda b: (b["dosya"], b["ham"]))).encode()).hexdigest()
+
+
+def yol_istisnalari() -> dict:
+    """YOL_ISTISNA dosyasındaki {'repo::kaynak_yol': {'ad', 'kayitlar': [...]}} sözlüğü ('istisnalar' alanı). Dosya yoksa ya da bozuksa {}
+    (bozukluğu dogrula.py HATA olarak bildirir; kurulum bu yüzden çökmez).
+    Kayıt şeması: {tur, hedefler:[…] | dosyalar:[…], karar: 'ornek-metin'|'kabul', neden, tarih, bulgu_hash}."""
+    try:
+        d = json_oku(YOL_ISTISNA, {}) or {}
+    except ValueError:
+        return {}
+    d = d.get("istisnalar", {}) if isinstance(d, dict) else {}
+    return d if isinstance(d, dict) else {}
+
+
+def _anahtar_norm(anahtar: str) -> str:
+    """'repo::kaynak_yol' -> repo güncel adıyla ve küçük harfle ('Owner/Repo' ya da taşınmış eski ad aynı kayda çıkar); kaynak_yol aynen."""
+    repo, _, yol = (anahtar or "").partition("::")
+    return f"{repo_guncel(repo).lower()}::{yol}"
+
+
+def istisna_kaydi_gecerli(k) -> bool:
+    """Kayıt geçerli mi: tur dolu, karar bilinen, hedefler/dosyalar (varsa) yalnız boş olmayan metinlerden oluşan listeler ve en az biri
+    dolu (tür bazlı kör istisna yok; [null] / iç içe liste geçersiz)."""
+    if not (isinstance(k, dict) and isinstance(k.get("tur"), str) and k.get("tur") and k.get("karar") in ("ornek-metin", "kabul")):
+        return False
+    dolu = False
+    for a in ("hedefler", "dosyalar"):
+        v = k.get(a)
+        if v is None or v == []:
+            continue
+        if not isinstance(v, list) or not all(isinstance(x, str) and x.strip() for x in v):
+            return False
+        dolu = True
+    return dolu
+
+
+def istisna_kapsami(k: dict, bulgular) -> list:
+    """Geçerli bir istisna kaydının kapsadığı bulgular: aynı tür ve hedefi 'hedefler'de ya da dosyası 'dosyalar'da olanlar."""
+    h, d = set(k.get("hedefler") or []), set(k.get("dosyalar") or [])
+    return [b for b in bulgular if b["tur"] == k["tur"] and (bool(h and b["hedef"] in h) or bool(d and b["dosya"] in d))]
+
+
+def istisna_uygula(s: dict, bulgular, istisnalar=None):
+    """(kalan, istisnali, eskiyen): kalan = istisnasız bulgular, istisnali = bir kayıtla kapsananlar, eskiyen = bulgu_hash'i artık
+    tutmayan kayıtlar (bunların bulguları kalan'da KALIR; kullanıcıya 'istisna-eskidi' gösterilir). Geçersiz/bozuk kayıtlar ve bozuk dosya
+    yapısı sessizce yok sayılır (çökmez; dogrula.py HATA bildirir). Anahtar eşlemesi yol_istisna_denetimi ile aynıdır."""
+    ist = yol_istisnalari() if istisnalar is None else (istisnalar.get("istisnalar", istisnalar) if isinstance(istisnalar, dict) else {})
+    ik = _anahtar_norm(istisna_anahtari(s))  # dogrula ile AYNI eşleme (repo güncel adı + küçük harf): doğrulamadan geçen kayıt uygulanmadan ölmesin
+    giris = next((v for a, v in ist.items() if isinstance(a, str) and _anahtar_norm(a) == ik), None) if isinstance(ist, dict) else None
+    kayitlar = giris.get("kayitlar") if isinstance(giris, dict) else None
+    kapsanan_idler, eskiyen = set(), []
+    for k in (kayitlar if isinstance(kayitlar, list) else []):
+        if not istisna_kaydi_gecerli(k):
+            continue
+        kap = istisna_kapsami(k, bulgular)
+        if k.get("bulgu_hash") and bulgu_hash(kap) == k["bulgu_hash"]:
+            kapsanan_idler |= {id(b) for b in kap}
+        else:
+            eskiyen.append(k)
+    return ([b for b in bulgular if id(b) not in kapsanan_idler], [b for b in bulgular if id(b) in kapsanan_idler], eskiyen)
+
+
+def _yol_ornekleri(bulgular, n=3) -> str:
+    gor, sonuc = set(), []
+    for b in bulgular:
+        x = f"{b['dosya']}:{b['satir']} {b['ham'][:70]}"
+        if x not in gor:
+            gor.add(x)
+            sonuc.append(x)
+    return "; ".join(sonuc[:n]) + (f" (+{len(sonuc) - n})" if len(sonuc) > n else "")
+
+
+def yol_degerlendir(s: dict, skiller, kurulacak_idler=None, istisnalar=None) -> dict:
+    """Bulguları ön kontrol satırlarına çeviren TEK yer (yol-tara.py ve sonraki aşamada skill-ekle.py kullanır).
+    kurulacak_idler: kurulan / hedef projede kurulu skill kimlikleri kümesi; None = bilinmiyor (rapor kipi).
+    Döner:
+      satirlar   [(seviye 'UYARI'|'BİLGİ', kod, gövde)]  gövde "ad: " öneki OLMADAN, kısa, en çok 3 örnek. Kodlar:
+                 yol-yerellestirme (BİLGİ) · genel-yol (UYARI: a kendi yolu ama dosya arşivde yok, b kendi yolu ama otomatik çevrilmiyor
+                 [betik/kurulum dosyası/karışık ya da kurulum anlatan dosya], c çözülemeyen kardeş: başka skill'in genel klasörü YA DA göreli ../<skill>/ yolu,
+                 d ortak dizin, e kalan boş kendi yolu bir değişkene atanıyor [SKILL_DIR=…]; echo/printf kullanım ipuçları ve "e.g." açıklama satırları
+                 yalnız sayılır) · eklenti-koku (UYARI; satırda "or ~/…" gibi seçenekler varsa BİLGİ) · skil-disi-yol (UYARI) ·
+                 kardes-eksik (UYARI: kardeş kurulmuyor ya da kardeşte dosya yok; kurulacak_idler None iken BİLGİ "kardeşle düzelir") ·
+                 kardes-yol (BİLGİ: kardeş kuruluyor, yol çevrilecek) · genele-yazabilir (UYARI: ajan dosyasında genele-kopyalar;
+                 BİLGİ: yalnız gerçek genele-yazar adımı) · yol-istisna (BİLGİ) · istisna-eskidi (UYARI). 'dokuman' sınıfı dosyalar satır üretmez.
+      sayim      {tur: adet} — sayım-yalnız türler dahil, istisnalılar dahil
+      cevrilecek istisnasız kendi-yol bulguları (genel-kendi/eklenti-kendi) cevrilebilir=True olanlar
+      kardesler  {hedef_ad: {"id", "kurulu" (bool | None), "bulgular"}} yalnız çözülen kardeşler
+      sutun      'temiz'|'yalniz-sayim'|'kurulumda-duzelir'|'kardesle-duzelir'|'paket-gerekli'|'cozulemez'|'istisna'
+                 (skil-disi-yol ve eklenti kökü = paket-gerekli: dosyalar arşive alınmamış; öncelik: cozulemez > paket-gerekli > kardesle-duzelir > kurulumda-duzelir > istisna > yalniz-sayim > temiz)"""
+    tum = skill_yol_taramasi(s, skiller)
+    sayim = {}
+    for b in tum:
+        sayim[b["tur"]] = sayim.get(b["tur"], 0) + 1
+    kalan, istisnali, eskiyen = istisna_uygula(s, tum, istisnalar)
+    satir, kardesler, bayrak = [], {}, set()
+    ek = lambda sv, kod, govde: satir.append((sv, kod, govde))  # noqa: E731
+    aktif = [b for b in kalan if b["sinif"] != "dokuman"]
+    satir_engel = ("kurulum-komutu", "cok-kok", "kullanim-metni", "ornek-satir")  # kurulum tarifi / betikteki kullanım ipucu (echo) / "e.g., in most installs" açıklama satırları: bağımlılık değil, yalnız sayılır
+    cevrilecek = [b for b in kalan if b["tur"] in ("genel-kendi", "eklenti-kendi") and b["cevrilebilir"]]
+    # kendi yolları
+    a_yok, b_cevrilmez, e_yok, atama = [], [], [], []
+    for b in aktif:
+        if b["tur"] not in ("genel-kendi", "eklenti-kendi") or b["engel"] in satir_engel or b["cevrilebilir"]:
+            continue
+        if b["engel"] == "dosya-yok":
+            (a_yok if b["tur"] == "genel-kendi" else e_yok).append(b)
+        elif b["engel"] == "kalan-bos" and b.get("atama"):
+            atama.append(b)
+        elif b["engel"] in ("betik-ici", "kurucu-dosya", "karisik-dosya"):
+            b_cevrilmez.append(b)
+    if cevrilecek:
+        ek("BİLGİ", "yol-yerellestirme", f"{len(cevrilecek)} sabit yol kurulan kopyada proje içi yola çevrilecek ({_yol_ornekleri(cevrilecek)})")
+        bayrak.add("kurulumda")
+    if a_yok:
+        ek("UYARI", "genel-yol", f"kendi genel klasöründen dosya bekliyor, bu dosyalar arşivde yok: {_yol_ornekleri(a_yok)}")
+        bayrak.add("paket")
+    if b_cevrilmez:
+        ek("UYARI", "genel-yol", f"kendi sabit yolu otomatik çevrilmiyor (betik içinde / kurulum dosyasında / karışık ya da kurulum anlatan dosyada): {_yol_ornekleri(b_cevrilmez)}")
+        bayrak.add("cozulemez")
+    if atama:
+        ek("UYARI", "genel-yol", f"kendi genel klasörünü bir değişkene atıyor (sonraki betik yolları buna dayanabilir), otomatik çevrilmiyor: {_yol_ornekleri(atama)}")
+        bayrak.add("cozulemez")
+    if e_yok:
+        ek("UYARI", "eklenti-koku", f"eklenti kökündeki kendi klasörüne işaret ediyor ama dosya arşivde yok: {_yol_ornekleri(e_yok)}")
+        bayrak.add("paket")
+    # kardeş / başka skill yolları
+    cozulmeyen, ortak, kok_yol, disi, goreli_cozulmeyen = [], [], [], [], []
+    cozulen = {}
+    for b in aktif:
+        t = b["tur"]
+        if t == "ortak-dizin":
+            ortak.append(b)
+        elif t == "eklenti-kok-yol" and b["sinif"] == "ajan":
+            kok_yol.append(b)
+        elif t == "skil-disi-yol" and not b.get("kardes_id"):
+            disi.append(b)
+        elif t in ("genel-baska", "eklenti-kardes", "kardes-goreli", "skil-disi-yol"):
+            if b.get("kardes_id"):
+                if b["engel"] in satir_engel or (b["engel"] == "kalan-bos" and t != "kardes-goreli"):
+                    continue
+                cozulen.setdefault(b["hedef"], []).append(b)
+            elif t in ("genel-baska",) and b["engel"] not in satir_engel:
+                cozulmeyen.append(b)
+            elif t == "kardes-goreli":
+                goreli_cozulmeyen.append(b)
+            elif t == "eklenti-kardes":
+                kok_yol.append(b)
+    if cozulmeyen:
+        adlar = sorted({b["hedef"] for b in cozulmeyen})
+        varsa = [a for a in adlar if _ad_norm(a) in _skiller_indeksi(skiller)[1]]
+        ek("UYARI", "genel-yol", f"başka skill'in genel klasörüne dayanıyor, aynı repoda tek aday olarak çözülemedi: {_yol_ornekleri(cozulmeyen)}"
+           + (f" (kütüphanede başka yerde var: {', '.join(varsa[:3])})" if varsa else " (kütüphanede yok)"))
+        bayrak.add("cozulemez")
+    if goreli_cozulmeyen:
+        adlar = sorted({b["hedef"] for b in goreli_cozulmeyen})
+        varsa = [a for a in adlar if _ad_norm(a) in _skiller_indeksi(skiller)[1]]
+        ek("UYARI", "genel-yol", f"göreli kardeş yolu (../<skill>/…) aynı repoda tek aday olarak çözülemedi, düz kurulumda kırılır: {_yol_ornekleri(goreli_cozulmeyen)}"
+           + (f" (kütüphanede başka yerde var: {', '.join(varsa[:3])})" if varsa else " (kütüphanede yok)"))
+        bayrak.add("cozulemez")
+    if ortak:
+        ek("UYARI", "genel-yol", f"ortak dizine (_shared gibi) dayanıyor: {_yol_ornekleri(ortak)}")
+        bayrak.add("cozulemez")
+    kok_alt = [b for b in kok_yol if b.get("alternatif")]
+    kok_yol = [b for b in kok_yol if not b.get("alternatif")]
+    if kok_yol:
+        ek("UYARI", "eklenti-koku", f"eklenti kökündeki dosyalara dayanıyor, arşive alınmamış; düz kurulumda bu adımlar çalışmaz: {_yol_ornekleri(kok_yol)}")
+        bayrak.add("paket")
+    if kok_alt:
+        ek("BİLGİ", "eklenti-koku", f"eklenti kökü yolu başka seçeneklerle birlikte geçiyor (…, or ~/…): düz kurulumda öteki seçenek kullanılabilir: {_yol_ornekleri(kok_alt)}")
+    if disi:
+        ek("UYARI", "skil-disi-yol", f"skill klasörünün dışına çıkan yol, hedef dosya arşive alınmamış: {_yol_ornekleri(disi)}")
+        bayrak.add("paket")
+    for hedef in sorted(cozulen):
+        bl = cozulen[hedef]
+        kid = bl[0]["kardes_id"]
+        kurulu = None if kurulacak_idler is None else kid in kurulacak_idler
+        kardesler[hedef] = {"id": kid, "kurulu": kurulu, "bulgular": bl}
+        eksik = [b for b in bl if b["var"] is False]
+        if eksik:
+            ek("UYARI", "kardes-eksik", f"{hedef}: dosya arşivde yok: {_yol_ornekleri(eksik)}")
+            bayrak.add("paket")
+        tamam = [b for b in bl if b["var"] is not False]
+        if not tamam:
+            continue
+        if kurulu is None:
+            ek("BİLGİ", "kardes-eksik", f"{hedef} ({kid}) kardeş skill gerekli; kurulursa kardeşle düzelir: {_yol_ornekleri(tamam)}")
+            bayrak.add("kardes")
+        elif not kurulu:
+            ek("UYARI", "kardes-eksik", f"{hedef} ({kid}) kardeş skill projeye kurulmuyor: {_yol_ornekleri(tamam)}")
+            bayrak.add("kardes")
+        else:
+            ek("BİLGİ", "kardes-yol", f"{hedef} ({kid}) kardeş kuruluyor, {len(tamam)} yol kardeşin proje içi yoluna çevrilecek")
+            cevrilmez = [b for b in tamam if b["engel"] in ("betik-ici", "kurucu-dosya", "karisik-dosya")
+                         and b["tur"] in ("genel-baska", "eklenti-kardes")]
+            if cevrilmez:
+                ek("UYARI", "genel-yol", f"{hedef} yolu otomatik çevrilmiyor (betik içinde / kurulum dosyasında / karışık dosyada): {_yol_ornekleri(cevrilmez)}")
+                bayrak.add("cozulemez")
+    # genele yazma
+    kopya = [b for b in aktif if b["tur"] == "genele-kopyalar" and b["sinif"] == "ajan"]
+    adim = [b for b in aktif if b["tur"] == "genele-yazar" and b["sinif"] == "ajan" and b.get("alt") == "ajan-adimi"]
+    if kopya:
+        ek("UYARI", "genele-yazabilir", f"bilgisayar geneli skill/agent klasörüne dosya kopyalıyor: {_yol_ornekleri(kopya + adim)}")
+    elif adim:
+        ek("BİLGİ", "genele-yazabilir", f"genel kuruluma yazan komut ajan adımı olarak geçiyor: {_yol_ornekleri(adim)}")
+    if istisnali:
+        ek("BİLGİ", "yol-istisna", f"{len(istisnali)} bulgu istisna kaydıyla kapsandı ({', '.join(sorted({b['tur'] for b in istisnali}))}; kayıt: yol-istisnalari.json)")
+    for k in eskiyen:
+        ek("UYARI", "istisna-eskidi", f"{k.get('tur')} istisnası artık tutmuyor (dosyalar değişmiş): kaydı yeniden doğrula ya da sil")
+    sira = (("cozulemez", "cozulemez"), ("paket", "paket-gerekli"), ("kardes", "kardesle-duzelir"), ("kurulumda", "kurulumda-duzelir"))
+    sutun = next((ad for b_, ad in sira if b_ in bayrak), None)
+    if not sutun:
+        sutun = "istisna" if istisnali else "yalniz-sayim" if tum else "temiz"
+    return {"satirlar": satir, "sayim": sayim, "cevrilecek": cevrilecek, "kardesler": kardesler, "sutun": sutun}
+
+
+def yol_istisna_denetimi(skiller):
+    """yol-istisnalari.json denetimi (dogrula.py ve testler aynı kuralı kullanır). Döner: (hatalar, uyarılar) — dosya yoksa ([], []).
+    HATA: bozuk JSON, 'istisnalar' sözlük değil, kayıt geçersiz (bilinmeyen karar, boş hedefler+dosyalar, tur yok), bulgu_hash yok.
+    UYARI: anahtar ('repo::kaynak_yol', repo eski_adlar ile güncellenerek) registry'de hiçbir skill'e uymuyor; bulgu_hash artık tutmuyor."""
+    if not YOL_ISTISNA.exists():
+        return [], []
+    hatalar, uyarilar = [], []
+    try:
+        veri = json.loads(YOL_ISTISNA.read_text(encoding="utf-8"))
+        ist = veri.get("istisnalar") if isinstance(veri, dict) else None
+        if not isinstance(ist, dict):
+            return [f"{YOL_ISTISNA.name}: 'istisnalar' sözlük olmalı"], []
+    except ValueError as e:
+        return [f"{YOL_ISTISNA.name}: geçerli JSON değil ({str(e)[:80]})"], []
+    skiller_k = {}
+    for s in skiller:
+        skiller_k.setdefault(_anahtar_norm(istisna_anahtari(s)), []).append(s)
+    for anahtar, giris in sorted(ist.items()):
+        uyan = skiller_k.get(_anahtar_norm(anahtar), [])
+        kayitlar = giris.get("kayitlar") if isinstance(giris, dict) else None
+        if not isinstance(kayitlar, list) or not kayitlar:
+            hatalar.append(f"{YOL_ISTISNA.name}: {anahtar}: 'kayitlar' boş ya da liste değil")
+            continue
+        if not uyan:
+            uyarilar.append(f"{YOL_ISTISNA.name}: {anahtar} registry'deki hiçbir skill'e uymuyor (skill kaldırılmış / repo taşınmış?): kaydı sil ya da güncelle")
+        for i, k in enumerate(kayitlar):
+            if not istisna_kaydi_gecerli(k):
+                hatalar.append(f"{YOL_ISTISNA.name}: {anahtar} kayıt {i + 1} geçersiz (tur, karar 'ornek-metin'|'kabul', boş olmayan hedefler ya da dosyalar gerekli)")
+            elif not k.get("bulgu_hash"):
+                hatalar.append(f"{YOL_ISTISNA.name}: {anahtar} kayıt {i + 1} ({k['tur']}): bulgu_hash yok")
+            elif uyan and not any(bulgu_hash(istisna_kapsami(k, skill_yol_taramasi(s, skiller))) == k["bulgu_hash"] for s in uyan):
+                uyarilar.append(f"{YOL_ISTISNA.name}: {anahtar} kayıt {i + 1} ({k['tur']}): bulgu_hash tutmuyor (skill dosyaları değişmiş): "
+                                f"python3 araclar/yol-tara.py --skill {uyan[0]['id']} ile yeniden doğrula")
+    return hatalar, uyarilar

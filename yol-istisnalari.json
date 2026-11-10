@@ -1,0 +1,179 @@
+{
+  "_aciklama": "Yol taraması istisnaları (ortak.istisna_uygula). Yalnız skill'in yolu ÖĞRETİM METNİ olarak anlattığı (kendisi kullanmadığı) bulgular için; her kayıt dosya/hedef listesiyle sınırlı ve bulgu_hash'e bağlı: kapsanan dosyalardaki ilgili yol satırları değişirse istisna düşer ve UYARI geri gelir. Anahtar 'repo::kaynak_yol'. karar: ornek-metin (öğretim örneği) | kabul (yalnız kullanıcı onayıyla). Kayıt taslağı: python3 araclar/yol-tara.py --skill <id>.",
+  "istisnalar": {
+    "anthropics/claude-code::plugins/plugin-dev/skills/command-development": {
+      "ad": "command-development@anthropics",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "examples/plugin-commands.md",
+            "references/plugin-features-reference.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Slash komutu yazmayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları örnek komut dosyası içeriği olarak geçiyor; skill bu yollardaki dosyalara kendisi dayanmıyor.",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "206cf44f1fa1067d7749aaa4b00d19f2261c4272f5f5a20eea040922c611d709"
+        }
+      ]
+    },
+    "anthropics/claude-code::plugins/plugin-dev/skills/hook-development": {
+      "ad": "hook-development@anthropics",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "references/advanced.md",
+            "references/migration.md",
+            "references/patterns.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Hook yazmayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları örnek hooks.json ve test komutu olarak geçiyor; skill bu yollardaki dosyalara kendisi dayanmıyor (kendi scripts/ klasöründeki dosyalarla eşleşen yol yok).",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "72a8eeca5c2ec29aab52c27351e14af81d435f7e1a569d5f835da284aa220b8a"
+        }
+      ]
+    },
+    "anthropics/claude-code::plugins/plugin-dev/skills/mcp-integration": {
+      "ad": "mcp-integration@anthropics",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "examples/stdio-server.json",
+            "references/authentication.md",
+            "references/server-types.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "MCP sunucusu bağlamayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları örnek .mcp.json ve yapılandırma olarak geçiyor; skill bu yollardaki dosyalara kendisi dayanmıyor.",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "3d4fe90eb8dbd8315d3295ad905f534bf907dff0d3e8bca716e06c27bfeab1b9"
+        }
+      ]
+    },
+    "anthropics/claude-code::plugins/plugin-dev/skills/plugin-structure": {
+      "ad": "plugin-structure@anthropics",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "examples/advanced-plugin.md",
+            "examples/standard-plugin.md",
+            "references/component-patterns.md",
+            "references/manifest-reference.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Eklenti yapısını öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yollarını okura örnek manifest, komut ve betik satırı olarak gösteriyor; skill bu yollardaki dosyalara kendisi dayanmıyor (hiçbiri kendi klasöründe yok, ajan çalışırken okumuyor).",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "c7d20e56c2ccb49ca3b9474e9db3e6611bf3b1bf3d7d2fd4a2b808473cf1d0c7"
+        }
+      ]
+    },
+    "anthropics/claude-plugins-official::plugins/plugin-dev/skills/command-development": {
+      "ad": "command-development",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "examples/plugin-commands.md",
+            "references/plugin-features-reference.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Slash komutu yazmayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları örnek komut dosyası içeriği olarak geçiyor; skill bu yollardaki dosyalara kendisi dayanmıyor.",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "206cf44f1fa1067d7749aaa4b00d19f2261c4272f5f5a20eea040922c611d709"
+        }
+      ]
+    },
+    "anthropics/claude-plugins-official::plugins/plugin-dev/skills/hook-development": {
+      "ad": "hook-development",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "references/advanced.md",
+            "references/migration.md",
+            "references/patterns.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Hook yazmayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları örnek hooks.json ve test komutu olarak geçiyor; skill bu yollardaki dosyalara kendisi dayanmıyor (kendi scripts/ klasöründeki dosyalarla eşleşen yol yok).",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "72a8eeca5c2ec29aab52c27351e14af81d435f7e1a569d5f835da284aa220b8a"
+        }
+      ]
+    },
+    "anthropics/claude-plugins-official::plugins/plugin-dev/skills/mcp-integration": {
+      "ad": "mcp-integration",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "examples/stdio-server.json",
+            "references/authentication.md",
+            "references/server-types.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "MCP sunucusu bağlamayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları örnek .mcp.json ve yapılandırma olarak geçiyor; skill bu yollardaki dosyalara kendisi dayanmıyor.",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "3d4fe90eb8dbd8315d3295ad905f534bf907dff0d3e8bca716e06c27bfeab1b9"
+        }
+      ]
+    },
+    "anthropics/claude-plugins-official::plugins/plugin-dev/skills/plugin-structure": {
+      "ad": "plugin-structure",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "SKILL.md",
+            "examples/advanced-plugin.md",
+            "examples/standard-plugin.md",
+            "references/component-patterns.md",
+            "references/manifest-reference.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Eklenti yapısını öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yollarını okura örnek manifest, komut ve betik satırı olarak gösteriyor; skill bu yollardaki dosyalara kendisi dayanmıyor (hiçbiri kendi klasöründe yok, ajan çalışırken okumuyor).",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "c7d20e56c2ccb49ca3b9474e9db3e6611bf3b1bf3d7d2fd4a2b808473cf1d0c7"
+        }
+      ]
+    },
+    "anthropics/knowledge-work-plugins::cowork-plugin-management/skills/create-cowork-plugin": {
+      "ad": "create-cowork-plugin",
+      "kayitlar": [
+        {
+          "tur": "eklenti-kok-yol",
+          "dosyalar": [
+            "references/component-schemas.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Eklenti oluşturmayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları references/component-schemas.md içinde örnek hook, bağlam ve MCP şeması olarak geçiyor; skill bu yollara kendisi dayanmıyor.",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "557cb067cb156edfa8328d497dcf0ed2e0878f4bd5228f65e36e804166d9ac16"
+        }
+      ]
+    },
+    "github/awesome-copilot::skills/cli-mastery": {
+      "ad": "cli-mastery",
+      "kayitlar": [
+        {
+          "tur": "genele-kopyalar",
+          "dosyalar": [
+            "references/module-5-skills.md"
+          ],
+          "karar": "ornek-metin",
+          "neden": "Copilot CLI eğitmeni: references/module-5-skills.md dersinde 'mkdir -p ~/.copilot/skills/my-skill/' komutu öğrenciye özel skill oluşturmayı anlatan örnek adım olarak geçiyor; skill bu klasöre kendisi yazmıyor (my-skill örnek addır).",
+          "tarih": "2026-11-11",
+          "bulgu_hash": "08761fb07b7d90e915e70efdfc4ae5ae48cf7205eb4d1b3266ca7880c0c663b3"
+        }
+      ]
+    }
+  }
+}

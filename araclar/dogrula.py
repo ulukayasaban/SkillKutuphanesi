@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, frontmatter, frontmatter_onar,  # noqa: E402
-                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, repo_guncel)
+                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, repo_guncel, yol_istisna_denetimi)
 
 
 def tetikleme_denetimi(skiller, hatalar, uyarilar):
@@ -87,6 +87,12 @@ def main():
             elif s.get("varyant_hash", {}).get(arac) and klasor_hash(KOK / v) != s["varyant_hash"][arac]:
                 hatalar.append(f"araç sürümü registry ile uyuşmuyor: {v}")
     tetikleme_denetimi(skiller, hatalar, uyarilar)
+    try:
+        h_y, u_y = yol_istisna_denetimi(skiller)  # yol-istisnalari.json (dosya yoksa sessiz)
+    except Exception as e:  # noqa: BLE001  bozuk istisna dosyası tüm doğrulamayı düşürmesin: HATA satırı olur
+        h_y, u_y = [f"yol-istisnalari.json denetlenemedi ({type(e).__name__}: {str(e)[:100]})"], []
+    hatalar += h_y
+    uyarilar += u_y
     for s in skiller:
         if s.get("ucret") == "belirsiz" and not s.get("gizli"):
             uyarilar.append(f"ücret sınıflandırılmadı: {s['id']} ({s.get('ucret_notu', '')[:90]})")

@@ -1,7 +1,8 @@
-# Rafta: eski plan (1. sürüm)
+# Rafta: eski planlar (1. ve 2. sürüm)
 
-Bu klasördeki dört dosya planın ilk sürümüdür. Yerini bir üst klasördeki `00-plan.md` (2. sürüm) aldı.
+Bu klasördeki dosyalar eski planlardır. Geçerli durum bir üst klasördeki `DURUM.md` içindedir.
 
-- İçlerinde bilinen yanlışlar var; düzeltmeleri `../ELESTIRI.md` içinde.
-- Buradaki hiçbir adım onaylı değildir ve uygulanmaz.
-- Ancak gerçek bir arıza çıkarsa ve kullanıcı ayrıca onay verirse açılır.
+- `*-v1.md`: ilk plan (skilleri taşıma). `ELESTIRI-v1.md` bu planın eleştirisidir.
+- `*-v2.md`: küçültülmüş plan ("skiller yerinden oynamaz"). 2026-11-10'da kullanıcı kararıyla geçersiz kaldı:
+  genel klasörler boşaltılacak, güncellemeler kütüphane oturumundan yapılacak.
+- İçlerinde bilinen yanlışlar ve artık geçmeyen kurallar var. Buradaki hiçbir adım onaylı değildir ve uygulanmaz.
