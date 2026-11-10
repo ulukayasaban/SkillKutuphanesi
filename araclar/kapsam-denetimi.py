@@ -6,6 +6,8 @@ yeniden çeker ve içindeki tüm SKILL.md (büyük/küçük harf fark etmez) dos
   1) registry.json'daki bir skill (ana yol, araç sürümü veya birebir kopya olarak), ya da
   2) gerekçeli bir hariç tutma kararı (ayna / başka AI aracı / test / örnek / şablon).
 Ayrıca kütüphane/araç (T5/T6) repolarında sonradan skill eklenmiş mi diye bakar.
+GitHub'da artık bulunamayan (silinmiş/private) repo denetimi çökertmez: raporda 'erişilemeyen' olarak yazılır. Çözüm:
+kaynaklar.json'da kaydın tipini 'KAYIP' yapmak (arşiv kopyası korunur); KAYIP kaynaklar GitHub'da hiç sorgulanmaz.
 
 Çıktı: notlar/kapsam-denetimi.md
 Kullanım: python3 araclar/kapsam-denetimi.py
@@ -17,7 +19,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, json_oku, klon_temizle, repo_agaci  # noqa: E402
+from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, json_oku, klon_temizle, repo_agaci  # noqa: E402
 
 ACIKLAMA = {
     "secildi": "arşivde (ana sürüm)",
@@ -30,12 +32,22 @@ ACIKLAMA = {
 }
 
 
+def agac_al(repo, sha=None):
+    """repo_agaci; repo GitHub'da yoksa (404/422: silinmiş, private ya da commit yeniden yazılmış) None döner, çökmez."""
+    try:
+        return repo_agaci(repo, sha)[1]
+    except GhBulunamadi:
+        return None
+
+
 def main():
     reg = json_oku(REGISTRY)
     denetim = reg.get("denetim", {})
     kayitlar = json_oku(KAYNAKLAR)["repolar"]
     arsiv_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] in ("T1", "T2", "T3", "T4")})
-    referans_repolari = sorted({k["repo"] for k in kayitlar} - set(arsiv_repolari))
+    kayip_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] == "KAYIP"})
+    referans_repolari = sorted({k["repo"] for k in kayitlar} - set(arsiv_repolari) - set(kayip_repolari))
+    erisilemeyen = []
     yol_index, varyant_index = set(), set()
     for s in reg["skiller"]:
         for arac, v in (s.get("varyantlar") or {}).items():
@@ -56,7 +68,10 @@ def main():
         if not d:
             sorunlar.append(f"{repo}: denetim kaydı yok (kaynak-cek çalışmamış)")
             continue
-        _, govde = repo_agaci(repo, d["commit"])  # API kapalıysa git ile (bağımsız sayım yine yapılır)
+        govde = agac_al(repo, d["commit"])  # API kapalıysa git ile (bağımsız sayım yine yapılır)
+        if govde is None:
+            erisilemeyen.append(repo)
+            continue
         klon_temizle(govde)
         if govde.get("truncated"):
             sorunlar.append(f"{repo}: GitHub ağacı kesik, bağımsız sayım yapılamadı")
@@ -90,7 +105,10 @@ def main():
 
     yeni_skill = []
     for repo in referans_repolari:
-        _, g = repo_agaci(repo)  # API kapalıysa git ile
+        g = agac_al(repo)  # API kapalıysa git ile
+        if g is None:
+            erisilemeyen.append(repo)
+            continue
         klon_temizle(g)
         n = sum(1 for e in g.get("tree", []) if e["type"] == "blob" and e["path"].split("/")[-1].lower() == "skill.md")
         if n:
@@ -100,7 +118,8 @@ def main():
     out = ["# Kapsam Denetimi", "",
            f"> `araclar/kapsam-denetimi.py` üretir · {date.today().isoformat()} · Bağımsız kontrol: her repo için "
            "GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.", "",
-           f"**Sonuç: {'✅ Açıklanamayan skill yok' if not sorunlar else f'❌ {len(sorunlar)} sorun'}** · "
+           f"**Sonuç: {'✅ Açıklanamayan skill yok' if not sorunlar else f'❌ {len(sorunlar)} sorun'}"
+           f"{f' · ⚠️ {len(erisilemeyen)} erişilemeyen kaynak' if erisilemeyen else ''}** · "
            f"Taranan SKILL.md: {sum(n for _, n, _ in satirlar)} · Arşivdeki skill kaydı: {len(reg['skiller'])} · "
            f"Bileşen (komut/agent): {len(reg.get('bilesenler', []))}", "",
            "| Karar | Sayı | Anlamı |", "|---|---|---|"]
@@ -112,6 +131,12 @@ def main():
     out += ["", "## Referans repoları (T5/T6)", "",
             f"{len(referans_repolari)} repo tarandı; " +
             ("içlerinde skill yok." if not yeni_skill else "skill bulunanlar: " + ", ".join(f"{r} ({n})" for r, n in yeni_skill))]
+    if kayip_repolari:
+        out += ["", "## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)", ""] + [f"- {x}" for x in kayip_repolari]
+    if erisilemeyen:
+        out += ["", f"## Erişilemeyen kaynaklar ({len(erisilemeyen)})", "",
+                "GitHub'da bulunamadı (silinmiş, private olmuş ya da commit geçmişi yeniden yazılmış). Denetlenemedi. Çözüm: "
+                "`kaynaklar.json`'da kaydın `tip`ini `KAYIP` yap (arşiv kopyası korunur); kaydı silme.", ""] + [f"- {x}" for x in erisilemeyen]
     hariclar = defaultdict(list)
     for repo, d in denetim.items():
         for p, k in d["skill_md"].items():
@@ -133,9 +158,12 @@ def main():
         hedef.write_text(yeni, encoding="utf-8")  # sadece içerik değişince yaz (gün değişti diye çalışma ağacı kirlenmesin)
     for x in bekleyen:
         print("KARAR BEKLİYOR:", x)
+    for x in erisilemeyen:
+        print("ERİŞİLEMEYEN KAYNAK (kaynaklar.json'da tip: KAYIP yap):", x)
     for x in sorunlar:
         print("SORUN:", x)
-    print(f"Taranan SKILL.md: {sum(n for _, n, _ in satirlar)} · sorun: {len(sorunlar)} · dağılım: {dict(toplam)}")
+    print(f"Taranan SKILL.md: {sum(n for _, n, _ in satirlar)} · sorun: {len(sorunlar)} · erişilemeyen: {len(erisilemeyen)} · "
+          f"dağılım: {dict(toplam)}")
     sys.exit(1 if sorunlar else 0)
 
 

@@ -125,7 +125,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 225 KB (SKILL.md 5.7 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Kaynak skill kendini deprecated ilan ediyor; ai-medya-uretici rolünden çıkarıldı.
 
-### higgsfield-generate  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 60 (C)
+### higgsfield-generate  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 59 (C)
 
 - **Ne yapar:** Higgsfield üzerinden görsel, video, 3D varlık ve ses üretir. İşe göre model seçer: görsel/tasarım/metin için GPT Image 2, video için Seedance 2.0, karakter ve referans görseller için Nano Banana, reklam için Marketing Studio. Model kataloğu, medya girdileri, reklam kipleri ve sorun giderme referansları içerir.
 - **Ne zaman:** Higgsfield hesabıyla tek yerden görsel/video/ses üretimi; model seçimini skile bırakmak isteniyorsa. · **Ne zaman değil:** DİKKAT: Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok. Başka sağlayıcı (fal.ai, Atlas Cloud, yerel ComfyUI) kullanılacaksa o sağlayıcının skili.
@@ -147,7 +147,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk) · **Bağımlılık:** Higgsfield hesabı ve Higgsfield CLI gerekir (CLI yoksa skill resmî kurulum betiğini ağdan indirip çalıştırır: curl … | sh; ilk kullanımda `higgsfield auth login`). Higgsfield MCP bağlayıcısı da kullanılabilir. Üretimler Higgsfield kredisi harcar; Soul eğitimi ücretli plan (Basic+) ister. video-prompt-builder üretilen varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir (proje dışı).
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (higgsfield-uretim grubunda tamamlayıcı). Kişisel koleksiyon, lisans dosyası yok; kısa (88 satır). Çalıştırma testi yapılmadı.
 
-### higgsfield-product-photoshoot  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 60 (C)
+### higgsfield-product-photoshoot  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 59 (C)
 
 - **Ne yapar:** Higgsfield'ın ürün çekimi istem geliştirmesiyle GPT Image 2 üzerinde marka kalitesinde ürün görselleri üretir: stüdyo çekimi, yaşam tarzı sahnesi, mevsimsel varyasyon, reklam paketi. Kullanım yerine göre (mağaza, sosyal medya, reklam, site) set kurar.
 - **Ne zaman:** Ürün fotoğrafı, stüdyo/lifestyle çekim seti ve reklam görseli paketi. · **Ne zaman değil:** DİKKAT: Higgsfield hesabı ve CLI (ya da MCP bağlayıcısı) gerekir; CLI yoksa skill kurulum betiğini ağdan indirip çalıştırır. Üretim kredi harcar. Repoda lisans dosyası yok. Genel amaçlı üretim için higgsfield-generate.
@@ -235,7 +235,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 23 KB (SKILL.md 12.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Prompt sözleşmesi çok güçlü; uzun/çok çekimli işlerde 2.0 yerine seçilir.
 
-### video-prompt-builder  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 68 (B)
+### video-prompt-builder  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 67 (B)
 
 - **Ne yapar:** Seedance 2.0 için izlenme süresi odaklı yapay zekâ video planı kurar: brief'ten klip klip istemlere, birleştirme ve ses planına, isteğe bağlı Nano Banana varlık hattına kadar. Hedef kitle ön ayarları, anlatı omurgaları, karakter tutarlılığı, içerik filtresi ve kanıtlanmış istem referansları içerir.
 - **Ne zaman:** Çok klipli AI video planlama ve storyboard; Seedance istemlerini sistemli yazmak. · **Ne zaman değil:** Plan ve istem üretir, videoyu kendisi üretmez (üretim için higgsfield-generate ya da başka bir Seedance sağlayıcısı). Varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir; proje içi yol verilmeli. Repoda lisans dosyası yok.

@@ -98,7 +98,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Reviews code changes using CodeRabbit AI. Use when user asks for code review, PR feedback, code quality checks, security issues, or requests fix-review cycles.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -232,7 +232,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.
 
-### receiving-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### receiving-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation
 - **Teknoloji:** - _(otomatik tespit)_
@@ -253,7 +253,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, inceleme-dongusu grubunun birincili. Kısa, superpowers zincirinin parçası; code-reviewer.md şablonu 'spec bir vizyon belgesidir' ilkesiyle güçlü. İnceleme yöntemi değil orkestrasyon olduğu için code-review-and-quality ile çakışmaz.
 
-### requesting-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### requesting-code-review@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Use when completing tasks, implementing major features, or before merging to verify work meets requirements
 - **Teknoloji:** git _(otomatik tespit)_

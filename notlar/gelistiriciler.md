@@ -165,6 +165,7 @@
 | [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins) | OrcaQubits | kurum |  | 40 | 3 | 2026-09-14 | MIT | 285 |
 | [Viniciuscarvalho/swift-code-reviewer-skill](https://github.com/Viniciuscarvalho/swift-code-reviewer-skill) | Viniciuscarvalho | kisi |  | 39 | 5 | 2026-05-13 | MIT | 6 |
 | [lemomo-ai/codex-radar](https://github.com/lemomo-ai/codex-radar) | lemomo-ai | kisi |  | 39 | 1 | 2026-09-20 | NOASSERTION | 1 |
+| [wj-sidiss/etsy-otomasyon-full-full-surum](https://github.com/wj-sidiss/etsy-otomasyon-full-full-surum) | wj-sidiss | kisi |  | 39 | 1 | 2026-11-10 | MIT | 0 |
 | [arjitj2/swiftui-design-principles](https://github.com/arjitj2/swiftui-design-principles) | arjitj2 | kisi |  | 34 | 1 | 2026-03-16 | MIT | 1 |
 | [YildizDikme/claude-video-edit](https://github.com/YildizDikme/claude-video-edit) | YildizDikme | kisi |  | 33 | 1 | 2026-11-03 | MIT | 1 |
 | [mercadopago/mercadopago-claude-marketplace](https://github.com/mercadopago/mercadopago-claude-marketplace) | mercadopago | kurum | ✅ | 32 | 10 | 2026-11-02 | Apache-2.0 | 5 |

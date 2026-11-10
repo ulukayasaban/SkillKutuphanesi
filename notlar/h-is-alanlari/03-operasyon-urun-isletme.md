@@ -184,7 +184,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 5 KB (SKILL.md 5.5 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### founder-board  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 77 (B)
+### founder-board  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 76 (B)
 
 - **Ne yapar:** Your board of directors. Puts a business idea in front of a three-member board, each a sub-agent reading the idea through one published framework: the Offers lens (from Alex Hormozi's $100M Offers), the Monopoly lens (from Peter Thiel's Zero to One) and the Product lens (from Walter Isaacson's biography of Steve Jobs). Each member scores the idea, names the risks that would kill it and votes fund,
 - **Teknoloji:** - _(otomatik tespit)_
@@ -194,7 +194,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 8 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-brand  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-brand  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Your brand designer. Names the business (with the trademark, domain and handle checks to run before falling in love with a name), writes the voice, a one-line promise and a tagline, and briefs the look: colours, type, logo and the first things a customer sees, so they match the positioning the marketing director chose. Use when the user says "name my business", "brand this", "logo", "brand identit
 - **Teknoloji:** - _(otomatik tespit)_
@@ -204,7 +204,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-cfo  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-cfo  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Your CFO. Builds the unit economics of a business before money is spent: what one unit earns after its direct costs, the real profit margin at the planned volume, the break-even point in units a day, year 1 month by month, the cash needed before it pays for itself, how long the startup spend takes to earn back, and what happens if the price drops, sales come in low or costs rise. Every number trac
 - **Teknoloji:** python _(otomatik tespit)_
@@ -214,7 +214,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 17 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-competitors  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-competitors  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Maps every competitor and the gap they leave. Finds the direct competitors, indirect ones and the substitutes a buyer would use instead, from public sources only, and records what each sells, at what price, how they position themselves and what their customers complain about in public reviews, every fact with a link. Ends with a positioning map and the gap the new business can own. Use when the us
 - **Teknoloji:** - _(otomatik tespit)_
@@ -224,7 +224,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-consumer  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 77 (B)
+### founder-consumer  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 76 (B)
 
 - **Ne yapar:** The consumer panel. Spins up a swarm of buyer sub-agents (default 100, --quick for 20) trained on the user's target customer, each with a different income, age, buying behaviour and objection, shows every one the same pitch, and runs the business through 100 buyer scenarios to see who buys, who doesn't, and why. Tallies the answers into buy rates by segment, the reasons people pass in their own wo
 - **Teknoloji:** python _(otomatik tespit)_
@@ -234,7 +234,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 26 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-launch  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-launch  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Your launch lead. Builds a dated, step-by-step launch plan: a cheap real-world test first (a waitlist, a pre-sale or a pop-up with a real price, so real buyers confirm what the simulated panel said), then the countdown to opening day with owners and deadlines, the launch-day run sheet, and the first 30 days of what to measure and what to change. Use when the user says "how do I launch", "launch pl
 - **Teknoloji:** - _(otomatik tespit)_
@@ -244,7 +244,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-marketing  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-marketing  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Your marketing director. Turns the buyer panel and the competitor map into positioning, the channels the target customer actually uses, a 30-day launch campaign with dated posts and ads, the first ten hooks, a budget split and the numbers to watch. Every message answers an objection real or simulated buyers raised. Use when the user says "how do I market this", "marketing plan", "launch campaign",
 - **Teknoloji:** - _(otomatik tespit)_
@@ -254,7 +254,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-offer  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-offer  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Builds an offer too good to refuse. Lists every problem the buyer hits on the way to the result they want, turns each into a solution, trims to what is cheap to deliver and valuable to the buyer, and stacks it with honest bonuses, a guarantee the CFO can afford, real urgency and a clear name. Scores it on the value equation (outcome, likelihood, time, effort) and re-tests it on a quick buyer panel
 - **Teknoloji:** - _(otomatik tespit)_
@@ -264,7 +264,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 3 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-ops  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-ops  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Your operations manager. Works out how the business actually runs on day one: suppliers and what they cost, who works when, the step-by-step routines for opening, serving or shipping and closing, the tools to run it, the licences and permits to check, and a risk register with what to do when each thing goes wrong. Feeds real costs back to the CFO. Use when the user says "how do I run this", "opera
 - **Teknoloji:** - _(otomatik tespit)_
@@ -274,7 +274,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-plan  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-plan  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Your business planner. Compiles everything the other founder skills wrote (the board's verdict, the competitors, the buyer panel, pricing, the offer, the CFO's numbers, marketing, brand, operations and the launch plan) into one business plan with a verdict at the top that is computed from the numbers, never written by hand: Profitable, Not yet (with the failing numbers) or Incomplete. Adds an exec
 - **Teknoloji:** python _(otomatik tespit)_
@@ -284,7 +284,7 @@ _Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama_
 - **Boyut:** 11 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### founder-pricing  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 82 (A)
+### founder-pricing  ·  Jakeschincariol/founder-skill @ fd9385b  ·  puan 81 (A)
 
 - **Ne yapar:** Finds the price buyers will actually pay. Reads the consumer panel's four price answers per buyer into a Van Westendorp price-sensitivity range (too cheap, a bargain, getting expensive, too expensive), sets it against what competitors really charge and against the CFO's margin, and recommends a price, a price ladder (good / better / best) and an opening offer to test. Use when the user says "how m
 - **Teknoloji:** python _(otomatik tespit)_

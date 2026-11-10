@@ -67,7 +67,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 13 KB (SKILL.md 12.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İçerik iyi ama obra'nın eski sürümünden türetilmiş kopya; upstream ile senkron değil.
 
-### systematic-debugging@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### systematic-debugging@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
 - **Teknoloji:** git _(otomatik tespit)_
@@ -143,7 +143,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 17 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. İçerik kalitesi çok yüksek ve baskı testleriyle geliştirilmiş; birincilden farkı kapsam değil sertlik. Aynı adı taşıdığı için bir projede yalnız biri kurulmalı.
 
-### test-driven-development@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### test-driven-development@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Use when implementing any feature or bugfix, before writing implementation code
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -196,7 +196,7 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlanma-dogrulama grubunun birincili. 4 KB ile en yüksek fayda/bağlam oranı; 'alt-agent başarılı dedi → bağımsız doğrula' maddesi orkestratör için kritik. verify-changes yürütme yöntemini, bu skill iddia disiplinini veriyor.
 
-### verification-before-completion@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### verification-before-completion@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
 - **Teknoloji:** - _(otomatik tespit)_

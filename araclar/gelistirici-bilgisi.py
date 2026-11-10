@@ -117,6 +117,7 @@ def guven_hesapla(sonuc, havuz, referans):
         g["referans_sira"], g["referans_toplam"] = i, len(ref)
     for v in sonuc.values():
         g = v["guven"]
+        g.setdefault("sira", None)  # KAYIP (silinmiş) kaynak ne havuzda ne referansta: sırasız kalır, çökmez
         g["derece"] = "A" if g["puan"] >= 80 else "B" if g["puan"] >= 65 else "C" if g["puan"] >= 50 else "D"
 
 

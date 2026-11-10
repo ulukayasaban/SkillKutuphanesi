@@ -232,7 +232,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 41 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).
 
-### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 61 (C)
+### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 60 (C)
 
 - **Ne yapar:** Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark ve açıklama optimizasyonu dahil); NOTICE.md ile lisans notu eklenmiş.
 - **Ne zaman:** claudesidian kasası içinde skill geliştirirken (kasa bu kopyayı bekler). · **Ne zaman değil:** Diğer projelerde; anthropics/skill-creator ile aynı içerik.
@@ -339,7 +339,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.
 
-### writing-skills@openai  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
+### writing-skills@openai  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
 
 - **Ne yapar:** Use when creating new skills, editing existing skills, or verifying skills work before deployment
 - **Teknoloji:** api-anahtari, git, python, react, typescript _(otomatik tespit)_

@@ -97,7 +97,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, dal-bitirme grubunun birincili. Gerekçe: kullanıcıya karar bırakan sabit menü, temel dal doğrulaması ve kökene dayalı worktree temizliği ile en güvenli kapanış; pull-request (heyitsnoah) onaysız push eğilimli tek komut → alternatif.
 
-### finishing-a-development-branch@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### finishing-a-development-branch@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Use when implementation is complete, all tests pass, and you need to decide how to integrate the work
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -128,7 +128,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, git-is-akisi grubunun birincili. Kapsamlı ama 14 KB; atomik commit ve 'kayıt noktası' kuralları agent'ların büyük, karışık commit'lerini önlüyor; semver ve changelog bölümü release skillerinin temelini de veriyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### git-worktrees  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
+### git-worktrees  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
 
 - **Ne yapar:** git worktree komut başvurusu: oluşturma (yeni/var olan dal), .worktrees/ dizin düzeni, kurulum sonrası adımlar (bağımlılık, env dosyası), commit edilmemiş değişiklik varken silmeme kuralı, kaldırma karar matrisi ve temizlik/prune.
 - **Ne zaman:** Elle worktree yönetimi, PR incelemesi için ayrı checkout veya birleşme sonrası temizlik komutları gerektiğinde. · **Ne zaman değil:** Agent iş akışında yalıtım kurulumu (using-git-worktrees daha güvenli ve harness farkında).
@@ -209,7 +209,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### pull-request  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
+### pull-request  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
 
 - **Ne yapar:** Tek komutla PR akışı: önkoşulları kontrol eder (git, gh), başlıktan dal adı üretir, değişiklikleri gösterip onay ister, conventional commit mesajıyla commit eder, push eder ve özet/değişiklikler/test listesi içeren gövdeyle gh pr create çalıştırır.
 - **Ne zaman:** Kullanıcı açıkça 'PR aç' dediğinde hızlı dal + commit + push + PR. · **Ne zaman değil:** Kullanıcı birleştirme yöntemini henüz seçmediyse (finishing-a-development-branch); push'un onay gerektirdiği ortamlar; değişiklikler zaten bir dalda düzenliyse.
@@ -230,7 +230,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 41 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### release@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
+### release@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
 
 - **Ne yapar:** Release akışını otomatikleştirir: son tag'den beri commit'leri analiz edip (BREAKING/feat/fix) sürüm artışını belirler, package.json sürümünü günceller, CHANGELOG.md'deki Unreleased bölümünü yeni sürüme taşır, commit + annotated tag atar, push eder ve gh release create ile GitHub sürümü yayınlar.
 - **Ne zaman:** package.json ve CHANGELOG.md (Keep a Changelog) kullanan Node projelerinde sürüm kesmek. · **Ne zaman değil:** package.json olmayan projeler (Python, Rust…); sürüm otomasyonu CI'da (release-please, changesets) yapılıyorsa; push/yayın onayı alınmadan.
@@ -252,7 +252,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, worktree grubunun birincili. Gerekçe: 'harness ile kavga etme' ilkesi, var olan yalıtımı algılama, alt modül koruması ve onay adımı; Claude Code/Codex worktree araçlarıyla uyumlu. heyitsnoah git-worktrees yalnız komut başvurusu → alternatif.
 
-### using-git-worktrees@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### using-git-worktrees@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
 - **Teknoloji:** git, node, python _(otomatik tespit)_

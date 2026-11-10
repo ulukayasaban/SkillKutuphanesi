@@ -262,7 +262,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 124 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-11: ses (audio_*) lint denetimleri ve yeni render bayrakları eklendi; bulut render ayrı HyperFrames OAuth'una (~/.hyperframes) taşındı, ücretli planda son render için cloud render öneriliyor (yerel render ücretsiz). Telemetri girişten sonra hesaba bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır. Node 22+ ve FFmpeg gerekir.
 
-### hyperframes-cli@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### hyperframes-cli@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** HyperFrames CLI tool — hyperframes init, lint, inspect, preview, render, transcribe, tts, doctor, browser, info, upgrade, compositions, docs, benchmark. Use when scaffolding a project, linting, validating, inspecting visual layout in compositions, previewing in the studio, rendering to video, transcribing audio, generating TTS, or troubleshooting the HyperFrames environment.
 - **Teknoloji:** canvas, docker, ffmpeg, html, node _(otomatik tespit)_
@@ -283,7 +283,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 83 KB (SKILL.md 4.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede ~400 → ~450 öğe; yerel arama katmanları (words / on-device) ve 'gap' raporlama eklendi. Arama İngilizce yapılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### hyperframes-registry@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### hyperframes-registry@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.
 - **Teknoloji:** canvas, css, gsap, html _(otomatik tespit)_
@@ -293,7 +293,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 18 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### hyperframes@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### hyperframes@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker swee
 - **Teknoloji:** canvas, css, gsap, html, node, webgl _(otomatik tespit)_
@@ -494,7 +494,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 112 KB (SKILL.md 4.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Remotion ekibinin resmi kural seti, kaliteli. Varsayılan çerçeve HyperFrames olduğu için alternatif; Remotion projelerinde birincil.
 
-### remotion-best-practices@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-best-practices@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Entry point and router for Remotion (React video framework) work: points to the right sub-guide for creating a video or project, React markup, animations, captions, maps, multimedia, interactivity, rendering, Studio preview, SaaS apps, docs search, licensing and upgrades. Use whenever the user works on a Remotion project or wants to make videos programmatically with React.
 - **Teknoloji:** node, react, remotion _(otomatik tespit)_
@@ -514,7 +514,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 16 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-captions@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### remotion-captions@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Transcribing, displaying and animating captions
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -534,7 +534,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 5 KB (SKILL.md 2.9 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-create@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-create@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Scaffold a new Remotion project and build a new video composition (create-video, layout, Tailwind). Use when the user asks to make, create or build a new video or composition with Remotion, or no Remotion project exists yet.
 - **Teknoloji:** git, node, react, remotion, tailwind _(otomatik tespit)_
@@ -554,7 +554,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 3 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-docs@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-docs@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Search and read current Remotion documentation via its docs search API. Use when you need up-to-date Remotion API details, props or examples instead of relying on memory.
 - **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
@@ -574,7 +574,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 23 KB (SKILL.md 13.5 KB, yük orta) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-interactivity@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### remotion-interactivity@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Structure Remotion markup for interactivity
 - **Teknoloji:** css, html, remotion _(otomatik tespit)_
@@ -604,7 +604,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 477 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-maps@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-maps@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Animated maps in Remotion videos: static satellite maps, Mapbox, MapLibre, MapTiler, GeoJSON routes and markers, and 3D geographic flyovers. Use when a Remotion video needs a map, animated route, location explainer or globe.
 - **Teknoloji:** api-anahtari, remotion _(otomatik tespit)_
@@ -624,7 +624,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 123 KB (SKILL.md 13.2 KB, yük orta) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-markup@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-markup@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Content, animation and effects best practices
 - **Teknoloji:** canvas, css, ffmpeg, html, lottie, node, react, remotion, tailwind, three.js, webgl _(otomatik tespit)_
@@ -644,7 +644,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 0.7 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-multimedia@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-multimedia@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Read and process audio/video files in the browser with Mediabunny for Remotion: get audio or video duration and dimensions, trim, crop and inspect metadata. Use when a Remotion composition needs media durations, sizes or browser-side media processing.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -664,7 +664,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 5 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-render@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-render@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Render and export Remotion videos and stills: npx remotion render/still, codecs, transparent videos and render flags. Use when the user wants to export, render or download an MP4/WebM/GIF/PNG from a Remotion project.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
@@ -684,7 +684,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-saas@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-saas@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Build an app on top of Remotion: SaaS templates and frameworks, embedding @remotion/player in React (or Vue, Angular, Svelte), and client- vs server-side rendering (Lambda, Vercel, Node.js, Cloudflare). Use when making a video-generation product, editor or form-to-video app with Remotion.
 - **Teknoloji:** node, react, remotion, svelte, vue _(otomatik tespit)_
@@ -704,7 +704,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 3 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-studio@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-studio@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Start and use Remotion Studio to preview a video while building it (npx remotion studio, --no-open with an in-app browser, useful flags). Use when creating or editing a Remotion video and the user should see a live preview.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
@@ -735,7 +735,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 3 KB (SKILL.md 1.9 KB, yük kucuk) · **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
 - **İnceleme:** otomatik
 
-### remotion-upgrade@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### remotion-upgrade@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Upgrade Remotion and all @remotion/* packages to the same latest version, align auxiliary dependencies and update installed Remotion skills. Use when the user asks to upgrade or update Remotion, or Remotion package versions are mismatched.
 - **Teknoloji:** node, remotion _(otomatik tespit)_

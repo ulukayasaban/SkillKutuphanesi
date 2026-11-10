@@ -14,7 +14,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### audit  ·  openai/plugins @ b767f8f  ·  puan 70 (B)
+### audit  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
 
 - **Ne yapar:** Audit or critique a product flow, journey, workflow, funnel, onboarding path, checkout path, settings path, screen, or multi-step product experience by capturing screenshots first, then reporting UX, design, and accessibility findings inline from that evidence. Use Figma only when the user explicitly asks for a board. Use when the user asks to audit, review, critique, inspect, assess, analyze, eva
 - **Teknoloji:** api-anahtari _(otomatik tespit)_

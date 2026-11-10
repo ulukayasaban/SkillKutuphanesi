@@ -1,12 +1,12 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-09 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-10 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8504 · Arşivdeki skill kaydı: 5649 · Bileşen (komut/agent): 661
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8503 · Arşivdeki skill kaydı: 5649 · Bileşen (komut/agent): 661
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5606 | arşivde (ana sürüm) |
+| secildi | 5605 | arşivde (ana sürüm) |
 | haric | 2569 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 178 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 71 | arşivde (Claude/Codex'e özel sürüm) |
@@ -29,7 +29,6 @@
 | GoogleChrome/lighthouse | 3 | secildi 3 |
 | Graphify-Labs/graphify | 1 | secildi 1 |
 | Harishwarrior/flutter-claude-skills | 3 | secildi 3 |
-| J-DTurner/etsy-api-skill | 1 | secildi 1 |
 | Jakeschincariol/day-trader-skill | 11 | secildi 11 |
 | Jakeschincariol/founder-skill | 11 | secildi 11 |
 | Jakeschincariol/instagram-agent-skill | 13 | secildi 13 |
@@ -144,7 +143,11 @@
 
 ## Referans repoları (T5/T6)
 
-45 repo tarandı; içlerinde skill yok.
+46 repo tarandı; içlerinde skill yok.
+
+## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
+
+- J-DTurner/etsy-api-skill
 
 ## Bilinçli hariç tutulanlar (gerekçeli)
 

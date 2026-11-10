@@ -216,7 +216,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Kısa (6 KB) platform karar tablosu yararlı; içerik genel ilkeler, shipping-and-launch ile kısmen örtüşüyor.
 
-### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
 - **Teknoloji:** api-anahtari, git, next.js, node, playwright _(otomatik tespit)_
@@ -346,7 +346,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### observability  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
+### observability  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
 
 - **Ne yapar:** Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.
 - **Teknoloji:** api-anahtari, html, next.js, node, react, typescript _(otomatik tespit)_
@@ -520,7 +520,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### security  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### security  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when hardening a Google Play Billing integration against fraud. Covers server side receipt verification, replay attack protection, device fingerprinting, velocity checks, and the most common billing fraud patterns.
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
@@ -563,7 +563,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **İnceleme:** otomatik
 - **Not:** Aynı adlı başka skill: `security-audit` (cloudflare/security-audit-skill) bağımsız, kapsamlı güvenlik denetimidir. Bu skill `npx @claude-flow/cli security` komutlarıyla tarar (Ruflo gerekir).
 
-### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
+### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
 
 - **Ne yapar:** Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities.
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -583,7 +583,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 36 KB (SKILL.md 8.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### security-scan  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
+### security-scan  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
 
 - **Ne yapar:** Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR, commit, branch, or working-tree diffs, or for deep, multi-pass scans.
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -698,7 +698,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.
 
-### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
+### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
 
 - **Ne yapar:** Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerability or a disclosure campaign; a Codex Security scan is optional.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_

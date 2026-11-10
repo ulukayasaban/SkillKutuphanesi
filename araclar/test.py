@@ -465,6 +465,20 @@ def main():
     test("öneride trend bonusu: uygun skill öne çıkar, alakasız skill trend yüzünden öneriye girmez",
          p_trend > p_yok and p_alakasiz == 0, f"{p_yok} {p_trend} {p_alakasiz}")
 
+    # Kapsam denetimi: GitHub'da silinmiş kaynak (404) denetimi çökertmez (aylık zincir geri alınmasın)
+    import ortak as _ortak
+    spec = importlib.util.spec_from_file_location("kapsam", KOK / "araclar" / "kapsam-denetimi.py")
+    kapsam = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(kapsam)
+    def _yok(repo, sha=None):
+        raise _ortak.GhBulunamadi(f"{repo}: HTTP 404")
+    def _var(repo, sha=None):
+        return "abc", {"tree": [], "truncated": False, "_kaynak": "api"}
+    kapsam.repo_agaci = _yok
+    test("kapsam denetimi: silinmiş repo (404) çökertmez, 'erişilemeyen' olarak döner", kapsam.agac_al("x/silinmis") is None)
+    kapsam.repo_agaci = _var
+    test("kapsam denetimi: var olan repo ağacı normal döner", kapsam.agac_al("x/var") == {"tree": [], "truncated": False, "_kaynak": "api"})
+
     for g in GLOBAL_KLASORLER.values():
         kod, out = calistir(g, "--skill", "gsap-core", "--evet")
         test(f"güvenlik: {g} reddedilir", kod != 0 and "Güvenlik" in out, out)

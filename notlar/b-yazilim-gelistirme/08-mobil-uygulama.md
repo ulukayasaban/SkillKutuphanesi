@@ -54,7 +54,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 74 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### alternative-billing  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### alternative-billing  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when implementing Google Play's alternative billing programs, external offers and billing choice (PBL 5.2 through 9.1). Covers user choice billing, alternative billing only, billing choice, external transaction reporting, and the regional program eligibility.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -206,7 +206,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### backend-architecture  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### backend-architecture  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when building a backend for Google Play Billing receipt verification. Covers receiving purchase tokens from the client, calling the Google Play Developer API to verify, storing subscription state, and exposing a production ready verification endpoint.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
@@ -216,7 +216,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### billing-response-codes  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### billing-response-codes  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill as a reference lookup for every Play Billing Library BillingResponseCode and sub response code, with description, category, and handling guidance. Grounded in PBL 9.x.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -246,7 +246,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 44 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cancellations-pauses-winback  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### cancellations-pauses-winback  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when implementing cancellations, developer initiated revocations, subscription pauses, and winback offers on Google Play. Covers user initiated cancellation, system cancellation, developer revoke/refund, pause resume flow, and winback API tools.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -256,7 +256,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### catalog-management  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### catalog-management  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when managing Google Play product and subscription catalogs programmatically with the Google Play Developer API. Covers create, update, activation, deactivation, and deletion for monetization.onetimeproducts, monetization.subscriptions, and legacy inappproducts endpoints, plus regional pricing automation.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -276,7 +276,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 22 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### codex-phone-lab  ·  Kappaemme-git/codex-phone-lab @ a0dc6ad  ·  puan 70 (B)
+### codex-phone-lab  ·  Kappaemme-git/codex-phone-lab @ a0dc6ad  ·  puan 69 (B)
 
 - **Ne yapar:** Build and iterate mobile apps that run on a real phone through Expo/React Native live preview. Use when Codex is asked to create a phone app, prototype an iPhone or Android app, run an app on a physical phone, show a QR code for Expo Go, set up a mobile dev workflow, or turn a prompt into a live mobile app without starting from Xcode/TestFlight/App Store distribution.
 - **Teknoloji:** react _(otomatik tespit)_
@@ -436,7 +436,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 934 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### error-handling  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### error-handling  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when designing error handling and retry strategy for the Play Billing Library. Classifies every BillingResponseCode into recoverable, non recoverable, and user driven categories and builds a retry plan with exponential backoff and circuit breaker patterns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -878,7 +878,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 19 KB (SKILL.md 18.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### flutter-tester  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 77 (B)
+### flutter-tester  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 76 (B)
 
 - **Ne yapar:** Use when creating, writing, fixing, or reviewing tests in a Flutter project. Covers unit tests, widget tests, integration tests, Riverpod provider testing, and Mockito mocking. Provides Given-When-Then patterns, layer isolation strategies, and test setup for GetIt, SharedPreferences, and FakeDatabase.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -990,7 +990,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 52 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### integrating-pbl  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### integrating-pbl  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when integrating the Google Play Billing Library client side (adding the dependency, wiring BillingClient, managing its connection lifecycle, and querying product details). Grounded in PBL 9.x.
 - **Teknoloji:** react _(otomatik tespit)_
@@ -1110,7 +1110,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 35 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-build-kmp-gradle-governance  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 57 (C)
+### kotlin-build-kmp-gradle-governance  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 56 (C)
 
 - **Ne yapar:** Use when reviewing or designing Gradle build structure for KMP projects — shared build logic, convention plugins, version catalogs, Android KMP plugin usage, source-set configuration, and module dependency hygiene.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1120,7 +1120,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-data-kmp-data-layer  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-data-kmp-data-layer  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when implementing or reviewing KMP data layers, including repositories, data sources, source-of-truth design, API exposure, conflict resolution, error handling, and main-safe data operations.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1130,7 +1130,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-kmp-code-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-kmp-code-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when reviewing implemented Kotlin Multiplatform / Compose Multiplatform code for architecture consistency, business-logic placement, state correctness, concurrency, Compose quality, design-system usage, security, performance, resilience, and maintainability.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1140,7 +1140,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 36 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-kmp-refactor-safety  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 64 (C)
+### kotlin-kmp-refactor-safety  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 63 (C)
 
 - **Ne yapar:** Use when the task is primarily a refactor, migration, reliability hardening, or architectural cleanup of existing Kotlin Multiplatform code — scope control, behavioral preservation, migration safety, compatibility, observability, and rollback planning.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1150,7 +1150,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### kotlin-navigation-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-navigation-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing navigation in Compose Multiplatform projects — route modeling, back stack ownership, argument passing, NavOptions, conditional flows, deep links, and adaptive navigation UI.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1160,7 +1160,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 16 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-platform-app-links-and-deep-links  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-platform-app-links-and-deep-links  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing Android deep links, web links, and App Links in KMP projects — intent-filter design, host verification, manifest scope, and assetlinks.json configuration.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1170,7 +1170,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 13 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-platform-kmp-bridges  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-platform-kmp-bridges  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing platform-specific integrations in KMP projects, including source-set placement, hierarchical sharing, expect/actual usage, platform API access, and shared-to-native abstraction boundaries.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1180,7 +1180,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 16 KB (SKILL.md 15.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-architecture-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-project-architecture-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when reviewing KMP architecture, feature proposals, PR structure, layer boundaries, state-holder design, Android entry-point discipline, source-set placement, modularization, and long-term maintainability in Kotlin Multiplatform / Compose Multiplatform projects.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1190,7 +1190,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 31 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-bugfix  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-project-bugfix  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when diagnosing and fixing bugs in a Kotlin Multiplatform project. Focus on root-cause analysis, minimal safe fixes, KMP correctness, UI/state/data/persistence/concurrency issues, and regression prevention.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1200,7 +1200,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-feature-implementation  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-project-feature-implementation  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when implementing or extending a feature in a Kotlin Multiplatform project. Provides pre-coding inspection, KMP source-set discipline, state pipeline design, architectural defaults, security/performance guardrails, and implementation rules. Forward-looking only — not a review skill.
 - **Teknoloji:** api-anahtari, html _(otomatik tespit)_
@@ -1210,7 +1210,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 31 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-modularization  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-project-modularization  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when designing, reviewing, or refactoring module boundaries in KMP or Android projects — feature, data, app, and common modules, dependency direction, visibility control, and granularity.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1220,7 +1220,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-state-management  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-project-state-management  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when choosing, implementing, or reviewing state-holder patterns in a KMP project — ViewModel, shared presenter, MVI, or StateFlow-in-common — including effect handling, UiState modeling, and testability.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1230,7 +1230,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 21 KB (SKILL.md 20.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-testing-kmp  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-testing-kmp  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing tests in KMP projects — unit tests, instrumented tests, Compose Multiplatform UI tests, test doubles, test strategy, stability, performance, and screenshot testing.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1240,7 +1240,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 19 KB (SKILL.md 18.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-ui-adaptive-resources  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-ui-adaptive-resources  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing adaptive Compose UI for KMP or Android projects — window-size layouts, adaptive navigation, canonical layouts, multi-window support, and resource strategy.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1250,7 +1250,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 18 KB (SKILL.md 18.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-ui-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 62 (C)
+### kotlin-ui-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing shared UI in Compose Multiplatform projects, including state-driven architecture, composable decomposition, layout/modifier discipline, adaptive behavior, and previewable shared UI in common source sets.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1350,7 +1350,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 29 KB (SKILL.md 13.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### mobile-toolchain-unifier  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 75 (B)
+### mobile-toolchain-unifier  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 74 (B)
 
 - **Ne yapar:** Audits, unifies, and optimizes mobile development environments and toolchains across a drive (Android, Flutter, iOS). Consolidates fragmented NDKs, SDK platforms, Gradle distributions, Flutter SDKs (FVM), and Java/JVM daemon versions to the latest stable releases, verifies project builds, reclaims tens of gigabytes of disk space, aggressively trims emulator bloatware using avdslim while preserving
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1400,7 +1400,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 29 KB (SKILL.md 12.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### one-time-products  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### one-time-products  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when implementing, acknowledging, or consuming Google Play one time products (consumables and non consumables) with the Play Billing Library. Covers launch, pending transactions, consume for consumables, acknowledge for non consumables.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1420,7 +1420,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### owasp-mobile-security-checker  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 77 (B)
+### owasp-mobile-security-checker  ·  Harishwarrior/flutter-claude-skills @ 1a97288  ·  puan 76 (B)
 
 - **Ne yapar:** Use when performing security audits, vulnerability assessments, or compliance checks on Flutter or mobile applications. Covers OWASP Mobile Top 10 (2024) — hardcoded secrets (M1), insecure storage (M9), weak cryptography (M10), network issues (M5), and 6 more categories with automated scanners and remediation guidance.
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
@@ -1440,7 +1440,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 6 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### payment-recovery  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### payment-recovery  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when handling failed subscription renewals on Google Play. Covers Grace Period (user keeps access), Account Hold (access revoked), the RTDN signals that move between stages, and the in app messaging required to drive recovery.
 - **Teknoloji:** api-anahtari, react _(otomatik tespit)_
@@ -1450,7 +1450,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 10 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### pbl-v7-to-v8-migration  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### pbl-v7-to-v8-migration  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when migrating an Android app from Play Billing Library 7.x to 8.x (latest 8.3.0). Covers the full breaking change list, the dependency bump, the required API replacements, the minSdk 23 floor from 8.1, and the step by step verification flow.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1460,7 +1460,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 16 KB (SKILL.md 15.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### pbl-v7-to-v9-migration  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### pbl-v7-to-v9-migration  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when migrating an Android app from Play Billing Library 7.x to 9.x (latest 9.1.0). Google documents the 7 to 9 upgrade as one hop; this skill still runs it as two compile checkpoints, the v8.0.0 removals first and then the v9 delta. Covers the full removal map, the dependency bumps, the SDK and Kotlin floors, the two stage plan, and the verification flow.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1470,7 +1470,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### pbl-v8-to-v9-migration  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### pbl-v8-to-v9-migration  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when migrating an Android app from Play Billing Library 8.x to 9.x (latest 9.1.0). Covers the v9 delta: the dependency bump, the removed Sku* and QueryPurchaseHistoryParams types, the compileSdk 35 and Kotlin 2.2 (billing-ktx) floors, the blocked Play Store error reclassification, the nullable getLinkUri change, the optional in app price increase messaging, and the verification flow
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1480,7 +1480,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 14 KB (SKILL.md 14.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### plan-changes  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### plan-changes  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when implementing Google Play subscription upgrades, downgrades, or plan switches with SubscriptionProductReplacementParams (PBL 8.1+) plus SubscriptionUpdateParams.setOldPurchaseToken. Covers the replacement modes (WITH_TIME_PRORATION, CHARGE_PRORATED_PRICE, WITHOUT_PRORATION, CHARGE_FULL_PRICE, DEFERRED, KEEP_EXISTING) and when each applies.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1500,7 +1500,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 92 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### play-developer-api-reference  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### play-developer-api-reference  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill as a quick reference for billing related Google Play Developer API REST endpoints, covering purchases.products, purchases.subscriptionsv2, purchases.voidedpurchases, and monetization endpoints. Lists paths, auth scopes, and typical request shapes.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1520,7 +1520,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 201 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### price-changes  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### price-changes  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when changing subscription prices on Google Play. Covers price decreases, opt in versus opt out price increases, the 30 to 37 day notification timeline, the OUTSTANDING price change state, and the API calls to manage price changes for existing subscribers.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1550,7 +1550,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### purchase-flow  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### purchase-flow  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when implementing the Play Billing purchase flow end to end. Covers building BillingFlowParams, launching launchBillingFlow(), receiving results in PurchasesUpdatedListener, handling every BillingResult outcome, and posting to your backend.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1630,7 +1630,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 7 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### rtdn  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### rtdn  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when setting up Real Time Developer Notifications (RTDN) for Google Play. Covers the full pipeline from Cloud Pub/Sub configuration through message parsing and processing all 18 subscription notification types (codes 1 to 13, 17 to 20, and 22).
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1640,7 +1640,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 13 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### rtdn-reference  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### rtdn-reference  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill as a quick lookup for all Google Play Real Time Developer Notification (RTDN) types with their integer codes, trigger conditions, and recommended handling. Covers subscription notifications, one time purchase notifications, voided purchase notifications, pending refund review notifications, and test notifications.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1660,7 +1660,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### setup@revenuecat  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### setup@revenuecat  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when configuring Play Console, creating products, enabling service account API access, or setting up RTDN before writing billing code. You stand up the full Google Play billing environment so app and backend code can authenticate, query products, and receive server side purchase events.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1680,7 +1680,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 65 KB (SKILL.md 8.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### subscription-state-diagram  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### subscription-state-diagram  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill as the pull out reference for the full Google Play subscription state machine, showing every state and every RTDN triggered transition in one diagram.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1690,7 +1690,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 9 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### subscription-states  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 80 (A)
+### subscription-states  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 79 (B)
 
 - **Ne yapar:** Use this skill when mapping a Google Play subscription to the eight states (PENDING, ACTIVE, IN_GRACE_PERIOD, ON_HOLD, PAUSED, CANCELED, EXPIRED, PENDING_PURCHASE_CANCELED) and deciding what access your app should grant in each state.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1700,7 +1700,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### subscriptions  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### subscriptions  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when modeling Google Play subscriptions (the three tier Subscription, Base Plan, Offer hierarchy), choosing a catalog shape, and deciding how to map your paywall to base plans and offers. Grounded in Play Billing Library 9.x.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1710,7 +1710,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### swift-code-reviewer  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 67 (B)
+### swift-code-reviewer  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 59 (C)
 
 - **Ne yapar:** Perform thorough code reviews for Swift/SwiftUI code, including spec adherence (PR description + linked issues), code quality, architecture, performance, security, Swift 6+ best practices, project standards from .claude/CLAUDE.md, and meta-feedback on recurring patterns that suggest gaps in the agent's instructions. Use when reviewing PRs/MRs (especially AI-generated ones), performing quality audi
 - **Teknoloji:** git _(otomatik tespit)_
@@ -1720,7 +1720,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 1813 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### swift-concurrency  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 67 (B)
+### swift-concurrency  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 59 (C)
 
 - **Ne yapar:** Expert guidance on Swift Concurrency best practices, patterns, and implementation. Use when developers mention: (1) Swift Concurrency, async/await, actors, or tasks, (2) "use Swift Concurrency" or "modern concurrency patterns", (3) migrating to Swift 6, (4) data races or thread safety issues, (5) refactoring closures to async/await, (6) @MainActor, Sendable, or actor isolation, (7) concurrent code
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1752,7 +1752,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### swift-expert  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 69 (B)
+### swift-expert  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 61 (C)
 
 - **Ne yapar:** Swift specialist for iOS/macOS development with Swift 6.0+, SwiftUI, async/await concurrency, and protocol-oriented design. Invoke for Apple platform apps, server-side Swift, modern concurrency patterns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1772,7 +1772,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 215 KB (SKILL.md 16.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### swift-testing  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 67 (B)
+### swift-testing  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 59 (C)
 
 - **Ne yapar:** Expert guidance on Swift Testing best practices, patterns, and implementation. Use when developers mention: (1) Swift Testing, @Test, #expect, #require, or @Suite, (2) "use Swift Testing" or "modern testing patterns", (3) test doubles, mocks, stubs, spies, or fixtures, (4) unit tests, integration tests, or snapshot tests, (5) migrating from XCTest to Swift Testing, (6) TDD, Arrange-Act-Assert, or 
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1802,7 +1802,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 25 KB (SKILL.md 21.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### swiftui-expert-skill  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 67 (B)
+### swiftui-expert-skill  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 59 (C)
 
 - **Ne yapar:** Write, review, or improve SwiftUI code following best practices for state management, view composition, performance, macOS-specific APIs, and iOS 26+ Liquid Glass adoption. Use when building new SwiftUI features, refactoring existing views, reviewing code quality, or adopting modern SwiftUI patterns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1822,7 +1822,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 156 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### swiftui-ui-patterns  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 69 (B)
+### swiftui-ui-patterns  ·  Viniciuscarvalho/swift-code-reviewer-skill @ 1d39ce3  ·  puan 61 (C)
 
 - **Ne yapar:** Best practices and example-driven guidance for building SwiftUI views and components, including navigation hierarchies, custom view modifiers, and responsive layouts with stacks and grids. Use when creating or refactoring SwiftUI UI, designing tab architecture with TabView, composing screens with VStack/HStack, managing @State or @Binding, building declarative iOS interfaces, or needing component-
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1853,7 +1853,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 59 KB (SKILL.md 10.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### testing@revenuecat  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 78 (B)
+### testing@revenuecat  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 77 (B)
 
 - **Ne yapar:** Use this skill when testing a Google Play Billing integration. Covers license test accounts, static test responses, Play Console sandbox purchases, and subscription lifecycle acceleration for renewals, grace period, and account hold.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1873,7 +1873,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 28 KB (SKILL.md 19.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### understanding-billing  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 80 (A)
+### understanding-billing  ·  RevenueCat/play-billing-skills @ 8fa2e4c  ·  puan 79 (B)
 
 - **Ne yapar:** Use this skill when a developer is new to Google Play Billing or needs to orient themselves before picking an implementation task. Maps their goal to the right pillar (Play Billing Library, Google Play Developer API, Play Console plus RTDNs) and routes them to the concrete skill to invoke next.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
