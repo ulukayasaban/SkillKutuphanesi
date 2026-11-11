@@ -11,6 +11,37 @@ Cursor, VS Code Copilot (`yapay-zeka-araclari.json`, [rehber/14](rehber/14-yapay
   Skiller yalnız projenin içine kurulur.
 - Hiçbir şey otomatik kurulmaz; her kurulumdan önce ön kontrol raporu çıkar.
 
+## Amaç
+Yapay zekâ kodlama araçları (Claude Code, Codex, Antigravity, Cursor, Copilot) "skill" denen yönerge paketleriyle genişler.
+GitHub'da yüzlerce repoda dağınık duran bu skilleri her projeye elle kopyalamak sürüm, çakışma ve güvenlik sorunu doğurur.
+Bu depo o sorunu çözer:
+
+- **Tek arşiv:** Yıldızlanan 127 repodaki 5.649 skill, sabit commit'le ve tekrarsız olarak `arsiv/` altında durur; 53 repo da
+  skill içermeyen referans (kütüphane/teknoloji) olarak kayıtlıdır.
+- **Seçerek kurulum:** Skiller projeye profil (23 proje tipi) ya da rol (31 agent rolü) seçilerek kurulur; her kurulumdan önce
+  ön kontrol raporu (çakışma, ücret, lisans, bağımlılık) çıkar ve onay beklenir.
+- **İzlenebilirlik:** Her kurulum projenin `.skill-kutuphanesi/kilit.json` dosyasına kaynağı ve commit'iyle yazılır; aylık
+  güncelleme ayrı git dalında hazırlanır, onaydan sonra birleştirilir. Hangi projenin hangi skili kullandığı tek raporda tutulur.
+
+## Nasıl çalışır
+```
+GitHub "Yapay Zeka Skillleri" listesi ─► kaynak-cek.py ─► arsiv-yerlestir.py ─► registry.json + KATALOG.md
+        (yıldızlanan repolar)             (sabit commit)    (tekilleştirme, kimlik,       (inceleme, ücret, puan)
+                                                             kategori, ücret)
+                                                                   │
+   proje ◄── skill-ekle.py --evet ◄── --kuru (ön kontrol raporu) ◄─┘  ◄── --oner "ihtiyaç" (tüm kütüphane taranır)
+```
+1. **Kaynak:** Yeni repo GitHub listesine eklenir; `github-skill-listesi.py` bunu bulur. Çakışma ve ücret kontrolünden sonra
+   `kaynaklar.json`'a kaydedilir (`rehber/03`).
+2. **Arşiv:** Repo klonlanmaz; yalnız skill klasörleri sabit commit'ten indirilir. Aynı içerik tek kopya olur, aynı adlı farklı
+   skiller `ad@kaynak` kimliği alır; çıplak ad kendiliğinden el değiştirmez (`rehber/09`).
+3. **Kayıt:** `registry.json` her skilin kaynağını, kategorisini, ücret sınıfını, lisansını ve elle inceleme notlarını tutar;
+   `KATALOG.md` ve Türkçe rehber (`README-SKILLER.md`, `skiller/`) bundan üretilir.
+4. **Kurulum:** `skill-ekle.py` önce öneri (`--oner`), sonra rapor (`--kuru`), onaydan sonra kurulum (`--evet`) yapar; her işlemden
+   önce yedek alır, hata olursa geri döner. Global skill klasörlerine hiçbir zaman yazmaz.
+5. **Bakım:** `arsiv-guncelle.py` aylık olarak kaynakların yeni commit'lerini ayrı dalda getirir; `dogrula.py`, `kapsam-denetimi.py`
+   ve `test.py` her değişiklikten sonra çalışır. HyperFrames ve OpenMontage gibi skill olmayan programlar `programlar.json` ile izlenir.
+
 ## Hızlı başlangıç
 ```bash
 cd ~/Documents/SkillKutuphanesi
