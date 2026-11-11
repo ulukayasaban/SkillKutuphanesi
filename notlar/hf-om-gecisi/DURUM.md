@@ -113,10 +113,14 @@ Tek istisna: kütüphanenin kendi rutin kontrolleri (`dogrula.py`, `test.py`, `p
 ## Düzen denetimi (2026-11-11 gece, sadece okuma; kullanıcının geniş isteği)
 İstek: bütün düzen, kullanılan tüm yapay zeka araçlarında çalışsın; skill ekleme/silme, güncelleme, proje takibi, git takibi,
 aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz ve sürdürülebilir olsun.
-- Sıra: boşluk denetimi (BİTTİ) → tasarım (sürüyor, salt okuma) → uygulama (kütüphane içinde) → inceleme → üç kontrol → commit.
+- Sıra: boşluk denetimi (BİTTİ) → tasarım (BİTTİ 2026-11-11 gece) → uygulama (kütüphane içinde; SIRADAKİ) → inceleme → üç kontrol → commit.
+- Tasarım: `notlar/duzen-denetimi-2026-11/04-tasarim-ozeti.md` (özet, ertelenen, onay isteyen, riskler) ve `tasarim/tasarim-p*.md` (8 paket).
+  Uygulama sırası: P3 → P1 → P2 + P5 + P6 → P7 → P4 → P8 (CLAUDE/AGENTS Yama A; kural 1 istisnası olan Yama B ayrı onayla) → boşaltma.
+  Uygulama makineye, projelere, ayar dosyalarına ve zamanlanmış göreve yazmaz; sadece kütüphane içi araç, rehber ve test ekler.
+  Uygulamadan önce kullanıcıya sorulacaklar: `.gitignore` eklemeleri, `CLAUDE.md`/`AGENTS.md` Yama A, eski belgeleri rafa kaldırma,
+  proje bloklarına kütüphane yolu cümlesi (P1 Q3), `projeler.json` ilk içeriği (P5).
 - Sonuçlar: `notlar/duzen-denetimi-2026-11/` (`01-arac-tablosu.md`, `02-bosluk-listesi.md`, `03-elestiri.md`, `arac-arastirmasi.json`).
   158 doğrulanmış boşluk; A1-A7 boşaltmadan önce kapanmalı, B1-B9 aylık sürdürülebilirlik, C isteğe bağlı; 8 iş paketi (P1-P8).
-- Tasarım kâğıtları oturumun geçici klasöründe (`plan/tasarim-p*.md`); tasarım bitince bu klasöre kopyalanır.
 - Kullanıcıya tek tek sorulacak altı soru `02-bosluk-listesi.md` sonunda. Onay isteyenler: `CLAUDE.md` kural 1 istisnası,
   zamanlanmış görev metni, `.gitignore`, eski belgeleri rafa kaldırma, artık dalı silme, taban dosyasını yazma, her push.
 - Yeniden başlatma: `settings.json` içindeki anahtar yeni Claude oturumunda geçerli olur. Kullanıcıya "şimdi yeniden başlat" demek
