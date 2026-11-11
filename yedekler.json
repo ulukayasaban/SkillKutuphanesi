@@ -1,0 +1,33 @@
+{
+  "_aciklama": "Kütüphane dışındaki yedeklerin envanteri. Tek kural: yedek ~/Documents/Claude/yedek altında durur, <ne>-<YYYY-AA-GG> diye adlanır, burada kayıtlıdır (rehber/13-yedek-ve-geri-alma.md). yedek-denetim.py bu dosyayı okur, hiçbir şeyi silmez. Silme her zaman kullanıcı onayıyla elle yapılır; sonra kayıt durum: silindi olur.",
+  "surum": 1,
+  "kok": "~/Documents/Claude/yedek",
+  "ikinci_kopya_iste": false,
+  "yedekler": [
+    {
+      "kimlik": "ayar-2026-11-11",
+      "yol": "~/Documents/Claude/yedek/ayar-2026-11-11",
+      "tur": "ayar-dosyasi",
+      "ne": "HYPERFRAMES_SKIP_SKILLS satırı eklenmeden önceki ~/.claude/settings.json, ~/.zshrc ve ~/.zshenv (notlar/hf-om-gecisi/DURUM.md, 2026-11-11)",
+      "tarih": "2026-11-11",
+      "geri_yukleme": "Her dosyayı yerine kopyala: claude-settings.json.yedek -> ~/.claude/settings.json, zshrc.yedek -> ~/.zshrc, zshenv.yedek -> ~/.zshenv. Önce mevcut dosyanın .onceki kopyasını al; settings.json'ın geçerli JSON olduğunu doğrula (içeriği ekrana basma). Her dosya ayrı onayla. Uyarı: yedekler düz metin anahtar satırı içerir; geri yüklemek onu da geri getirir. Ayrıntı: rehber/13, 'Ayar dosyası'.",
+      "gizli_icerir": "evet",
+      "beklenen": ["claude-settings.json.yedek", "zshrc.yedek", "zshenv.yedek"],
+      "silme_gun": 30,
+      "not": "Gizli içerikli olduğu için en çok 30 gün tutulur; süre dolunca aylık özet silinsin mi diye sorar."
+    },
+    {
+      "kimlik": "global-skills-2026-11-08",
+      "yol": "~/Documents/Claude/yedek/global-skills-2026-11-08",
+      "tur": "genel-skill-klasoru",
+      "ne": "Genel skill klasörlerinden yedeğe taşınan 27 eski skill (agents-skills), ~/.claude/skills bağ kopyaları (claude-skills-linkler) ve taşıma betikleri (notlar/hf-om-gecisi/DURUM.md, 2026-11-09)",
+      "tarih": "2026-11-08",
+      "geri_yukleme": "Yedekteki geri-al.sh bağları ve klasörleri ilk yerine koyar; çalıştırmadan önce dosyayı oku ve kullanıcıdan onay al (kütüphane dışında, sabit yollu). Elle yol: agents-skills/* -> ~/.agents/skills/, claude-skills-linkler/* (bağlar; hedeflerine ls -la ile bak) -> ~/.claude/skills/. Ayrıntı: rehber/13, 'Genel skill klasörü', ve rehber/12 (boşaltma).",
+      "gizli_icerir": "hayir",
+      "beklenen": ["agents-skills", "claude-skills-linkler", "LISTE.md", "geri-al.sh"],
+      "silme_olay": "Genel skill klasörleri boşaltıldı (DURUM.md adım 3) ve kullanıcı yedeğin gereksiz olduğunu söyledi",
+      "silme_olay_tamam": false,
+      "not": "Kullanıcı 'sil' diyene kadar durur (DURUM.md:21). Hatırlatma boşaltma günü başlar (DURUM.md:27): olay tamam olunca bu yedek 'silinebilir' listesine girer."
+    }
+  ]
+}

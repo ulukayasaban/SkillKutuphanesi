@@ -1,0 +1,61 @@
+# Kalıcı kararlar (kullanıcının verdikleri)
+
+Bu dosyayı her yapay zeka aracının oturumu okur. Kullanıcının kararı burada yazılıdır; konuşmalardaki hafıza kaybolur, bu dosya kalır.
+Ekleme: yalnız kullanıcı söyleyince, tarihle, en fazla 3 satır. Silme yok: yerine yenisi gelen karar "Değişen kararlar"a taşınır.
+Proje adları bu dosyada serbesttir (kayıt dosyalarında yasaktır, kural 6). Gizli değer (anahtar, parola, token) bu dosyaya hiçbir zaman yazılmaz.
+
+## Geçerli kararlar
+- K-01 (2026-10-31) GitHub'da yalnız `ulukayasaban/SkillKutuphanesi` ile işlem yapılır. Başka hiçbir repoda push, PR, birleştirme, dal, issue, yorum yok; proje repolarının (Etsy-Arif, Etsy-Yeni, Akil Disi...) git işlemini kullanıcı yapar. Kütüphanede de push ve PR yalnız kullanıcı isteyince. Depo private kalır (arşivde lisanssız üçüncü taraf kopyalar var).
+- K-02 (2026-11-09) Skill ve kaynak yalnız kendi niteliğiyle değerlendirilir (üretici, kapsam, bağımlılık, lisans, ücret, kalite, çakışma). Proje adı ya da "projeye uyar/uymaz" gerekçesi kayıtlara, nota, önceliğe yazılmaz.
+- K-03 Skiller projeye yalnız `skill-ekle.py` ile kurulur: önce `--kuru` raporu, kullanıcı onayı, sonra `--evet`. Elle kopyalama yok. `--zorla` yalnız kullanıcı açıkça isterse.
+- K-04 (2026-11-10) Bilgisayarın genelindeki skill klasörleri boşaltılacak; skiller yalnız kütüphaneden, yalnız proje klasörüne kurulur. HyperFrames ve OpenMontage programları yerinde kalır, yalnız skilleri taşınır. Her kaldırmadan önce yedek.
+- K-05 (2026-11-10) Skill, HyperFrames, OpenMontage ve benzeri yapıların takibi, kontrolü, güncellemesi kütüphane oturumunda yapılır; kullanıcı kendisi yapmaz. Her güncelleme önce yedek, sonra programdan skillere, bir projede deneme, rapor; her biri ayrı onayla. Yeni bir yapı (program) eklenince kullanıcı söyler, burada kayda alınır.
+- K-06 (2026-11-10) Diğer araçların genel talimat dosyalarına (`~/.claude/CLAUDE.md`, `~/.codex/AGENTS.md`, `~/.gemini/GEMINI.md`) kural yazılmaz, hazır metin verilmez. Yeni araç ya da proje açılınca kullanıcı araca bu kütüphane klasörünü verir; yönergeler buradan okunur.
+- K-07 (2026-11-10) Genelden kaldırılan skillerin yedeği kullanıcı "sil" diyene kadar durur. Silme zamanı gelince kullanıcıya hatırlatmak ŞARTTIR. Hatırlatma, genel klasörler gerçekten boşaltıldığı gün kurulur. Yedek yeri: `~/Documents/Claude/yedek/` (27 eski genel skill: `global-skills-2026-11-08`; ayar dosyaları: `ayar-2026-11-11`, düz metin anahtar içerebilir).
+- K-08 (2026-11-11) İki kapı da AÇIK (kullanıcı "işim bitti" ve "başla" dedi): HyperFrames, OpenMontage, genel klasörler, ayar dosyaları ve proje klasörleri. Bu toplu onay DEĞİL: her güncelleme, kaldırma, taşıma, ayar değişikliği önce yedek, sonra ayrı onay.
+- K-09 (2026-11-10) Akıl Dışı projesi Codex'ten Claude'a geçer; geçişi proje içinde kütüphane oturumu yapar. Etsy-Arif, IstatistikYoutube, Akıl Dışı proje düzenlemesi kütüphane oturumunda.
+- K-10 (2026-11-07) Etsy-Arif: Arif Windows'ta çalışır, skilleri yalnız kullanır; skiller "sadece Claude" gerçek klasör (`--arac claude`, symlink yok), `CLAUDE.md` kısa blok, `etsy-listings/` ortak kayıt (skili çalıştıran hemen commit/push eder). Arif'in elle kurduğu skiller ve ajan dosyaları Arif'in alanıdır; öneri yazılır, değiştirilmez. Bu iş "bende" kararıyla çelişebilir: sıra gelince kullanıcıya açıkça sor.
+- K-11 (2026-11-11) "Psikolojik Danışman Sosyal Medya" ve İstatistik "KIT" paketi önemli değil: işlem yapılmaz, boşaltma bunlar için beklemez, tekrar sorulmaz. Kayıtsız proje taramasında yoksay listesindedir (`projeler.json`).
+- K-12 (2026-11-11) `HYPERFRAMES_SKIP_SKILLS=1` üç yerde tanımlı: `~/.zshrc`, `~/.zshenv`, `~/.claude/settings.json` (env). HyperFrames'in genel klasöre skill yazmasını durdurur. Yedek `ayar-2026-11-11`. `launchctl setenv` ancak ayrı onayla.
+- K-13 (2026-11-10) Çalışma tarzı: kullanıcı isteğini söyler; tek konu, sade Türkçe, adım adım; plan belgesi ya da büyük tablo sunulmaz. Bağlam dolmasın diye durum dosyada tutulur, ağır iş alt ajanlara verilir, yanıtlar kısa.
+- K-14 Tek oturum sırayla çalışır; paralel oturumlar master'a yazmaz (çakışma yaşandı). Çalışma ağacı (worktree) yalnız kullanıcı isterse.
+- K-15 (2026-11-11) Desteklenen yapay zeka araçları bu bilgisayarda kurulu olanlardır: Claude Code, Codex, Antigravity, Cursor, VS Code Copilot. Gemini CLI ve Copilot CLI kurulu değil; `GEMINI.md` desteği isteğe bağlı, kapalı.
+- K-16 (2026-11-11) Düzen kararları: en küçük değişiklik, çalışan kod yeniden yazılmaz, mevcut bayraklar ve çıktılar geriye uyumlu; yeni araçlar yalnız Python standart kütüphanesi; rapor araçları salt okur ve `--ozet-json` verir; gizli değer yazdırılmaz (yalnız var/yok); makine geneli klasörlere, kabuk ayar dosyalarına, ayar dosyalarına, zamanlanmış göreve ve proje klasörlerine yazan her işlem ayrı onayla.
+- K-17 Ücret: ücretsiz yol önce; `ucretli` = ücret ödemeden hiç kullanılamayan skill; ücretli servis yalnız bir seçenekse `kismen`. Ücretli skill rol çekirdeğine ancak gerekçeyle.
+- K-18 Kaynaklar: GitHub "Yapay Zeka Skillleri" listesi tek kaynak listesidir (`yapay-zeka-skillleri`). Yeni kaynak eklemeden önce çakışma ve ücret kontrolü zorunlu, kullanıcı onayı şart. Trend'de olan ve konuya uyan skiller önce önerilir; trend tek başına sebep değildir.
+- K-19 Aylık güncelleme `guncelleme/YYYY-AA` dalında yapılır, master değişmez; kullanıcı onaylarsa yerelde `--birlestir`, sonra `git push origin master`. GitHub'daki Merge düğmesi kullanılmaz. Zamanlanmış görev hiçbir şey push etmez.
+- K-20 Kütüphane işi gerçek proje üretiminden ayrıdır; istenmedikçe uygulama iskeleti kurulmaz.
+- K-21 Kullanıcı Claude'u ne zaman yeniden başlatacağını ajanın söylemesini ister (ayarlar yeni oturumda geçerli olur). Doğru an: arka plan işleri bitip kütüphane commit edildikten sonra.
+- K-22 Kütüphane sürümleme: her değişiklikten sonra `kapsam-denetimi.py` (0 sorun) ve `dogrula.py` (0 hata), sonra commit. Commit ve büyük adım sonu push K-25 ile onaylı; başka depoya push yok.
+- K-23 Yedek ve git eşikleri, taslak değerler (kullanıcı onayı bekliyor; `git-durum.py`, `yedek-denetim.py` ve rehber/13'te yazılı): 5 commit ya da 7 gün push gecikmesi hatırlatılır, `.git` 300 MB, yeni dosya 5 MB, bekleyen dal 45 gün, rapor yaşı 45 gün; gizli içerikli yedek en çok 30 gün; yedek silme her zaman kullanıcı onayıyla, araç silmez.
+- K-24 (2026-11-12) Kural 1 istisnası onaylandı: yalnız `rehber/11` (program güncelleme, geri alma, kaldırma) ve `rehber/12` (genel klasör boşaltma) adımlarıyla, önce yedekle. Onay adı sayılan iş içindir; genel izin değildir.
+- K-25 (2026-11-12) Kullanıcının toplu onayı ("onay alman gereken işleri şimdi al, işlemler sırasında bekleme"). Aşağıdaki işler sırası gelince yeniden sorulmadan yapılır; her birinde önce yedek alınır, bir kontrol başarısız olursa ya da bulunan durum anlatılana uymazsa durulur ve sorulur:
+  - Kütüphane: işi kaydet, `CLAUDE.md`/`AGENTS.md` yönlendirme satırları, üç eski belgeyi `notlar/rafta/` altına taşı, birleşmiş eski dalı sil, her büyük adım bitince private GitHub deposuna push, aylık zamanlanmış görev metnini yenile (önce yedeği).
+  - Programlar: OpenMontage (yedek, ayrı deneme klasörü, deneme geçerse asıl kurulum; kullanıcının değişiklikleri korunur; çakışma ya da başarısız denemede dur ve sor), `origin` adresini yeni ada çevir; HyperFrames'i son sürüme güncelle; HyperFrames ek iki kilidi (`HYPERFRAMES_NO_AUTO_INSTALL`, `HYPERFRAMES_NO_UPDATE_CHECK`) kabuk ve Claude ayar dosyalarına ekle (yedekle).
+  - Projeler: IstatistikYoutube (skiller kütüphaneden proje içine, genel klasörü gösteren yerler düzeltilir); Akıl Dışı (Codex düzeninden Claude düzenine); Claude genel notu ve üç komut yeni düzene göre güncellenir, kullanıcının dört kendi skili yerinde kalır; Etsy-Arif'te yalnız kütüphanenin kurduğu skiller incelenip kütüphane düzenine göre ilerletilir (Arif'in elle kurdukları ve ajan dosyaları onun); AntigravityTest2 kullanılmıyor, Çöp Kutusu'na taşınır.
+  - Genel klasörler: tam yedek, sınıf sınıf boşaltma, her adımdan sonra kontrol, aynı gün yedek silme hatırlatması. Yedek kullanıcı "sil" demeden silinmez.
+- K-26 (2026-11-12) Kullanıcının sözü: bu bilgisayardaki bütün yapay zeka araçlarının skill işleri (ekleme, silme, güncelleme), genel skiller ve projelerin skill düzeni kütüphane oturumunun kontrolündedir. Sınırlar aynen geçerli: GitHub'da yalnız `ulukayasaban/SkillKutuphanesi`; kalıcı silme (yedekler dahil) her seferinde sorulur; yeni kaynak eklemek ayrı onay ister; gizli değerler okunmaz ve yazdırılmaz.
+- K-27 (2026-11-12) OpenMontage yalnız IstatistikYoutube projesinde kullanılıyor; OpenMontage ile ilgili skiller o projeye bakılarak kurulur.
+
+## Değişen kararlar (artık geçerli DEĞİL; yeniden uygulama)
+- "Global skill klasörleri değişmez; eski agent'lar onlarla çalışmaya devam eder" (README, rehber/01, eski notlar) → 2026-11-10 K-04 ile değişti.
+- "Skiller yerinden oynamaz" (2026-11-10 öncesi) → K-04.
+- "HyperFrames ve OpenMontage sabit sürüm kopyası olarak kütüphanede" (`CLAUDE.md` eski satır) → 2026-11-11: `kopya: yerinde` kartları (programlar.json).
+- "Akıl Dışı Codex'te çalışır" → K-09.
+- "Kullanıcı HyperFrames'i Terminal'den kendisi günceller" → K-05 (2026-11-10).
+- "Araç düzeni yalnız Claude + Codex (`ikisi` / `claude`)" → K-15 (beş araç; `--arac ortak` ve `--arac yalniz-claude`).
+- "Skill kurulumunda araç sorulmaz" → `--arac` seçimi sorulur (rehber/14).
+
+## Henüz sonuçlanmamış sorular
+- HyperFrames ve OpenMontage'ın Claude dışındaki araçlarda girişi (proje `AGENTS.md` notu mu, tek giriş skili mi): boşaltma gününde kullanıcıya sorulacak.
+- Windows'ta açılan projelerde varsayılan düzen (kopya mı, symlink mi).
+- Aylık görev yalnız Claude zamanlamasıyla mı, her oturum açılışında 35 gün kontrolüyle mi (oturum başı rutini ikincisini kısmen karşılar).
+- `git bundle` ikinci yedeği (push K-25 ile onaylandı).
+- Aylık özet/triyaj: ayda en çok kaç aday repo karara bağlansın (N)? Cevaplanana kadar özet yalnız ilk 5 adı gösterir, sınır koymaz (öneri: 5).
+- [onaylandı 2026-11-12, K-24/K-25] `CLAUDE.md` / `AGENTS.md` yamaları (işaretçi satırı ve kural 1 istisnası) ve rafa kaldırma: `notlar/duzen-denetimi-2026-11/onay-bekleyen/00-onay-listesi.md`.
+
+## Karar bekleyenler
+Aylık özet (`aylik-ozet.py`) bu kutuları toplar. Kutu biçimi: tire, `[ ]`, düz cümle. Karar verilince `[x]` yapılır, silinmez. Başlangıçta boş.
+
+## Kabul edilen bekleyenler (aylık özette susturulur)
+Satır biçimi: tire ve bir ifade, istenirse sonuna ` | AAAA-AA-GG` (tarihten sonra susturma biter). İfade en az 8 karakter olmalı. Aylık özet, bu ifadeyi içeren karar cümlelerini göstermez. Kullanıcı "bunu kabul ettim, bir daha sorma" deyince eklenir. Başlangıçta boş.

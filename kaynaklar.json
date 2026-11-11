@@ -537,6 +537,7 @@
     {
       "repo": "J-DTurner/etsy-api-skill",
       "tip": "KAYIP",
+      "kayip_tarihi": "2026-11-10",
       "oncelik": 2,
       "bagimlilik": "Etsy geliştirici uygulaması (API anahtarı + OAuth 2.0 PKCE) gerekir; ücretsiz, Etsy onayı ister.",
       "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Etsy Open API v3: ürün, stok, sipariş, mağaza, webhook. 2026-11-10: repo GitHub'da kaldırılmış (404); KAYIP işaretlendi, arşiv kopyası korunuyor (güncelleme almaz)."

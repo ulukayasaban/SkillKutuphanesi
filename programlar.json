@@ -1,5 +1,6 @@
 {
   "_aciklama": "Kütüphanenin takip ettiği PROGRAMLAR (skill olmayan, kendi sürümü ve kurulumu olan yapılar). Kurulum, sürüm takibi ve güncelleme bu oturumdan, kullanıcı onayıyla yapılır. Denetim: python3 araclar/program-denetim.py -> notlar/program-denetimi.md. Rehber: rehber/11-program-yonetimi.md",
+  "sema": 2,
   "programlar": {
     "etsyotomasyon": {
       "ad": "etsyotomasyon",
@@ -15,7 +16,13 @@
       "kurulum": {
         "windows": "Release'deki etsyotomasyon-<sürüm>-windows.exe (tek dosya, kurulum yok; imzasız: SmartScreen -> Ek bilgi -> Yine de çalıştır)",
         "macos": "Release'deki etsyotomasyon-<sürüm>-macos.zip (Apple Silicon) / -macos-intel.zip; imzasız: Gizlilik ve Güvenlik -> Yine de Aç",
-        "kaynaktan": "python3 -m venv ~/.etsyotomasyon-uygulama && ~/.etsyotomasyon-uygulama/bin/pip install <kaynak_kopyasi> && ~/.etsyotomasyon-uygulama/bin/etsyotomasyon desktop  (Python 3.9-3.13; bağımlılıklar: httpx, typer, rich, python-dotenv, pillow)"
+        "kaynaktan": "python3 -m venv ~/.etsyotomasyon-uygulama && ~/.etsyotomasyon-uygulama/bin/pip install <kaynak_kopyasi> && ~/.etsyotomasyon-uygulama/bin/etsyotomasyon desktop  (Python 3.9-3.13; bağımlılıklar: httpx, typer, rich, python-dotenv, pillow)",
+        "adimlar": [
+          "Kullanıcıdan ayrı onay",
+          "Önce kaynaktan kurulum (kaynak_kopyasi, sabit commit) tercih edilir; release exe/zip yalnız tedarik_dogrulama kuralıyla",
+          "Etsy Keystring/Shared secret ve OAuth bağlama adımlarını kullanıcı yapar"
+        ],
+        "dogrulama": ["python3 araclar/program-denetim.py: kaynak kopyası var, sürüm güncel"]
       },
       "veri_yeri": "~/.etsyotomasyon (anahtarlar .env, oturum token.json, ayarlar, kayıtlar); ürün klasörü Masaüstü/'Etsy Studio'",
       "baglanti": "Satıcının kendi Etsy uygulaması (Keystring + Shared secret, OAuth). Callback: http://localhost:3003/oauth/redirect. Etsy hesap başına tek uygulama: varsa mevcut uygulama kullanılır.",
@@ -24,14 +31,74 @@
       "skilleri": [],
       "guncelleme_adimlari": [
         "program-denetim.py yeni sürümü gösterir",
+        "ön kontrol: python3 araclar/program-denetim.py --oncesi etsyotomasyon",
+        "yedek: KAYIT.json (önceki sürüm); ~/.etsyotomasyon kopyalanmaz",
         "kullanıcıya CHANGELOG özeti + onay",
         "kaynak kopyasını yeni sürüm etiketinden yenile (docs/ ve .github/ hariç), KAYNAK.md ve bu kartı güncelle, commit",
         "programı kullanan makinelerde: release dosyasıyla değiştir ya da kaynaktan kurulumda pip install yeniden"
       ],
       "asla": [
         "Etsy Keystring / Shared secret / token'ı agent girmez, okumaz, yazdırmaz (~/.etsyotomasyon/.env ve token.json açılmaz)",
-        "programın kopyası proje deposuna konmaz; ilan silme/yayınlama agent tarafından yapılmaz"
-      ]
+        "programın kopyası proje deposuna konmaz; ilan silme/yayınlama agent tarafından yapılmaz",
+        "imzasız ikili, sha256 kayda geçmeden kurulmaz"
+      ],
+      "giris_yolu": {
+        "kural": "Etsyotomasyon araca bağlı değildir: komut satırı ve localhost paneli; skili yok.",
+        "kilavuz": "",
+        "calistirma": "~/.etsyotomasyon-uygulama/bin/etsyotomasyon <komut>   (kaynaktan kurulumda)",
+        "karar": "",
+        "hepsi": {"durum": "yok", "yol": "", "nasil": "Araç-özel giriş yok; kullanım notu projeye yazılır (kütüphane kuralı: kopya projeye konmaz)."}
+      },
+      "geri_alma": {
+        "ne_zaman": ["Yeni sürüm bozuk"],
+        "adimlar": [
+          "Önceki sürüm KAYIT.json → onceki.surum",
+          "Kaynak kopyası git geçmişinden geri alınır: git checkout <önceki commit> -- programlar/etsyotomasyon (kütüphane git'inde; kullanıcı onayıyla)",
+          "Programı kullanan makinede önceki release dosyası ya da kaynaktan pip install yeniden kurulur",
+          "Kart ve KAYNAK.md önceki değere döner; commit"
+        ],
+        "dogrulama": ["program-denetim.py: kaynak kopyası var, kütüphane sürümü = karttaki"],
+        "sinir": "Veri klasörü (~/.etsyotomasyon) hiç kopyalanmaz ve geri alınmaz."
+      },
+      "cikarma": {
+        "makineden": [
+          "Kullanıcıdan ayrı onay",
+          "Kaynaktan kurulumda ~/.etsyotomasyon-uygulama silinir; release dosyasıyla kurulumda uygulama kullanıcı tarafından kaldırılır"
+        ],
+        "dokunulmaz": ["~/.etsyotomasyon (anahtarlar ve oturum)", "~/Desktop/Etsy Studio"]
+      },
+      "yedek": {"kok": "~/Documents/Claude/yedek", "tazelik_gun": 3, "zorunlu": ["KAYIT.json"], "yasak_adlar": [".env", "token.json"]},
+      "ortam_anahtarlari": [
+        {"ad": "ETSYOTOMASYON_NO_UPDATE_CHECK", "beklenen": "1", "gerekli": false, "nerede": [], "not": "Sürüm kontrolünü kapatır (kartta ag alanı)."}
+      ],
+      "gizli_dosyalar": ["~/.etsyotomasyon/.env", "~/.etsyotomasyon/token.json"],
+      "disariya_yazar": [
+        {"yol": "~/.etsyotomasyon", "tur": "anahtar", "ne": "anahtarlar ve oturum (açılmaz, kopyalanmaz)", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/Desktop/Etsy Studio", "tur": "cikti", "ne": "ürün klasörü", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.etsyotomasyon-uygulama", "tur": "program", "ne": "kaynaktan kurulum venv'i", "yedeklenir": false, "dogrulandi": true}
+      ],
+      "kirici_surum": {
+        "kural": "Major sürüm değişimi kırıcı sayılır; ajan CHANGELOG'u okur.",
+        "surum_hatti": "major",
+        "deneme_klasoru": "~/Documents/Claude/deneme/etsyotomasyon-<hedef>",
+        "deneme_disk_gb": 1,
+        "rehber": "rehber/11-program-yonetimi.md → Kırıcı sürüm"
+      },
+      "tedarik_dogrulama": {
+        "yayinci": {
+          "hesap": "wj-sidiss",
+          "ucuncu_taraf": true,
+          "imza": "yok",
+          "not": "Release exe/zip imzasız (SmartScreen / Gizlilik ve Güvenlik uyarısı verir)."
+        },
+        "ozet": {
+          "tur": "git-commit",
+          "deger": "950dc9498e46e2fdcd8a369512c26698de54e293",
+          "ne_icin": "kaynak kopyasının commit'i (KAYNAK.md ile aynı)",
+          "kayit_tarihi": "2026-11-11"
+        },
+        "kural": "Kaynaktan kurulum (kütüphanedeki kaynak kopyası, sabit commit) ikili release dosyasına tercih edilir. Release exe/zip yalnız indirilen dosyanın sha256'sı `ozet`'e kaydedilip kullanıcı onayladıktan sonra kullanılır; kayıtsız ikili kurulmaz."
+      }
     },
     "hyperframes": {
       "ad": "hyperframes",
@@ -41,11 +108,7 @@
       "lisans": "Apache-2.0",
       "ucret": "kismen",
       "ne_yapar": "HTML ile yazılan kompozisyonları videoya çevirir: proje kurar (init), denetler (lint), önizler, yerelde ya da bulutta render eder, skill ve kayıt defteri blokları kurar. Yerel kullanım ücretsiz ve açık kaynaktır; HeyGen medya üretimi ve bulut render isteğe bağlıdır (ücretli olabilir).",
-      "yerinde": {
-        "tur": "npm-global",
-        "yol": "/usr/local/lib/node_modules/hyperframes",
-        "paket": "hyperframes"
-      },
+      "yerinde": {"tur": "npm-global", "yol": "/usr/local/lib/node_modules/hyperframes", "paket": "hyperframes"},
       "kutuphane_surumu": "0.9.23",
       "surum_kaynagi": "npm kayıt defteri (registry.npmjs.org/hyperframes/latest)",
       "veri_yeri": "~/.hyperframes (config.json, önbellek, kurulum ve güncelleme günlükleri; config'te telemetri açık). İçindeki kimlik ve rastgele tohum değerleri okunup yazdırılmaz.",
@@ -63,26 +126,157 @@
         "durduran": "HYPERFRAMES_SKIP_SKILLS=1 (yalnız '1' değeri geçerli; init'te --skip-skills ile eşdeğer). `skills`, `skills update` ve `update`'in skill kısmını, init'teki skill kurulumunu ve arka plandaki skill kontrolünü kapatır. CLI'nin kendini güncellemesini kapatmaz.",
         "simdi": "HYPERFRAMES_SKIP_SKILLS=1 2026-11-11'de üç yere yazıldı: ~/.zshenv (her zsh kabuğu; zsh -c ve zsh -lc doğrulandı), ~/.zshrc (etkileşimli terminal) ve ~/.claude/settings.json → env (Claude oturumları, yeniden başlayınca). Yedek: ~/Documents/Claude/yedek/ayar-2026-11-11/. Kapsamadığı yer: kabuk başlatmadan süreç çalıştıran masaüstü uygulamaları. Genel skill klasörleri henüz boşaltılmadı."
       },
-      "skilleri": [
-        "hyperframes",
-        "hyperframes-cli",
-        "media-use",
-        "hyperframes-registry"
-      ],
+      "skilleri": ["hyperframes", "hyperframes-cli", "media-use", "hyperframes-registry"],
       "guncelleme_adimlari": [
-        "program-denetim.py yeni sürümü ('YENİ SÜRÜM VAR') ya da kartın eskidiğini ('KART ESKİ') gösterir",
-        "kullanıcıya sürüm farkı + CHANGELOG özeti sunulur ve bu güncelleme için ayrıca onay istenir (her seferinde)",
-        "yedek: ~/.hyperframes klasörü (config.json hariç) ve mevcut paket klasörü ~/Documents/Claude/yedek/<program>-<YYYY-AA-GG>/ klasörüne (kütüphane klasörüne ve git'e asla) kopyalanır",
-        "onaydan sonra YALNIZ kütüphane oturumu: npm install -g hyperframes@<sürüm> (tek sürüm sabitlenir, 'latest' yazılmaz)",
-        "sonra yeniden denetim: program-denetim.py kurulu sürümü gösterir; kart sürümü onaylı sürüme çekilir, KAYNAK.md güncellenir, commit",
-        "skill güncellemesi ayrı onay ister; `hyperframes skills update` ancak genel klasörlerin son durumu bilinerek ve onayla çalıştırılır"
+        "program-denetim.py yeni sürümü ('YENİ SÜRÜM VAR') ya da kartın eskidiğini ('KART ESKİ') gösterir; 'KART ESKİ' ise önce sebebi bulunur, güncelleme yapılmaz",
+        "python3 araclar/program-denetim.py --oncesi hyperframes çalıştırılır; 'KIRICI ADAYI' çıkarsa önce rehber/11 → 'Kırıcı sürüm' deneme adımları ayrı klasörde uygulanır, geçmeden onay istenmez",
+        "kullanıcıya sürüm farkı + release notu özeti sunulur ve bu güncelleme için ayrıca onay istenir (her seferinde)",
+        "yedek: ~/Documents/Claude/yedek/hyperframes-<YYYY-AA-GG>/ altına hyperframes-veri (config.json hariç), paket klasörü ve KAYIT.json (rehber/11 → 'Yedek kaydı'); kütüphane klasörüne ve git'e asla",
+        "program-denetim.py --oncesi hyperframes tekrar çalıştırılır; 'HAZIR' demeden devam edilmez",
+        "onaydan sonra YALNIZ kütüphane oturumu, HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken: npm install -g hyperframes@<sürüm> (tek sürüm sabitlenir, 'latest' yazılmaz)",
+        "sonra yeniden denetim: program-denetim.py kurulu sürümü gösterir; genel skill klasörlerinde yeni girdi olmadığı kontrol edilir (genel-bekci.py varsa); kart sürümü onaylı sürüme çekilir, KAYNAK.md ve tedarik_dogrulama.ozet güncellenir, python3 araclar/program-denetim.py --sema --siki 0 hata, commit",
+        "skill güncellemesi ayrı onay ister; `hyperframes skills update` ancak genel klasörlerin son durumu bilinerek ve onayla çalıştırılır",
+        "yedek klasörü saklanır; silmek için kullanıcıya hatırlatılır ve sorulur"
       ],
       "asla": [
         "npx skills komutu çalıştırılmaz (HyperFrames'in skill kurulumu da bunu çağırır; elle de çağrılmaz)",
         "genel skill klasörleri boşaltıldıktan sonra program onları yeniden doldurmaz: HYPERFRAMES_SKIP_SKILLS=1 tanımlı değilken init, skills, skills update, update çalıştırılmaz",
         "kullanıcı onayı olmadan güncellenmez, sürüm değiştirilmez; npm install -g yalnız kütüphane oturumunda ve onayla",
-        "~/.hyperframes içindeki kimlik ve tohum değerleri okunup yazdırılmaz"
-      ]
+        "~/.hyperframes içindeki kimlik ve tohum değerleri okunup yazdırılmaz",
+        "ortam anahtarı olmadan kurulum/güncelleme yapılmaz; kullanıcı istemeden anahtar tanımlanmaz"
+      ],
+      "giris_yolu": {
+        "kural": "HyperFrames bir komut satırı programıdır: her araç onu kabuktan çalıştırır; skilleri genel klasörden değil, projeye skill-ekle.py ile kurulan kopyalardan okunur.",
+        "kilavuz": "",
+        "calistirma": "/usr/local/bin/hyperframes <komut>   (ortamda HYPERFRAMES_SKIP_SKILLS=1 tanımlı olmalı; init, skills, skills update, update çalıştırılmaz)",
+        "karar": "",
+        "hepsi": {
+          "durum": "proje-skili",
+          "yol": "/usr/local/bin/hyperframes",
+          "nasil": "Skiller (karttaki 'skilleri' listesi) projeye `python3 araclar/skill-ekle.py <proje> --skill <kimlik>` ile kurulur; her aracın proje skill klasörü yapay-zeka-araclari.json'da yazılıdır. CLI her araçta aynı komuttur."
+        }
+      },
+      "kurulum": {
+        "on_kosullar": [
+          "Node ve npm kurulu",
+          "~/.zshenv, ~/.zshrc ve ~/.claude/settings.json içinde HYPERFRAMES_SKIP_SKILLS=1 tanımlı (kullanıcı tanımlar ya da açıkça ajana yaptırır) — program kurulmadan ÖNCE"
+        ],
+        "adimlar": [
+          "Kullanıcıdan ayrı onay",
+          "HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken: npm install -g hyperframes@<kutuphane_surumu> (kartta yazan sürüm; 'latest' yazılmaz)",
+          "tedarik_dogrulama.ozet.deger doluysa kurulu paketin registry integrity'si karşılaştırılır",
+          "Skiller genel klasöre değil, projeye skill-ekle.py ile kurulur"
+        ],
+        "dogrulama": [
+          "python3 araclar/program-denetim.py: hyperframes satırı 'güncel' ya da 'YENİ SÜRÜM VAR', 'KART ESKİ' değil",
+          "python3 araclar/program-denetim.py --oncesi hyperframes: ortam anahtarı TAMAM"
+        ],
+        "yapma": ["hyperframes init / skills / skills update / update çalıştırma", "npx skills çalıştırma"]
+      },
+      "geri_alma": {
+        "ne_zaman": [
+          "Yeni sürümde render/lint bozuk",
+          "Güncelleme sonrası genel klasörlerde beklenmeyen skill girdisi çıktı",
+          "Kullanıcı eski sürümü istedi"
+        ],
+        "adimlar": [
+          "Önceki sürüm yedekteki KAYIT.json → onceki.surum alanındadır",
+          "Kullanıcıdan geri alma için ayrı onay al",
+          "HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken: npm install -g hyperframes@<onceki.surum> (tek sürüm; 'latest' yazılmaz)",
+          "Registry sürümü kaldırdıysa yedekteki 'paket' klasörü /usr/local/lib/node_modules/hyperframes yerine konur (kullanıcı onayıyla)",
+          "Veri bozulduysa yedekteki 'hyperframes-veri' dosyaları ~/.hyperframes içine geri kopyalanır (config.json hiç kopyalanmadığı için ezilmez)",
+          "Kart sürümü (kutuphane_surumu), KAYNAK.md ve tedarik_dogrulama.ozet önceki değere çevrilir; commit"
+        ],
+        "dogrulama": [
+          "program-denetim.py: kurulu = karttaki, durum güncel ya da YENİ SÜRÜM VAR (KART ESKİ değil)",
+          "program-denetim.py --oncesi hyperframes: ortam anahtarı satırı TAMAM"
+        ],
+        "sinir": "Yedek yoksa geri alma yalnız registry'deki sürümle yapılabilir; yedeği olmayan güncelleme yapılmaz."
+      },
+      "cikarma": {
+        "makineden": [
+          "Kullanıcıdan ayrı onay; önce yedek (KAYIT.json + hyperframes-veri + paket)",
+          "npm uninstall -g hyperframes (HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken)",
+          "Genel skill klasörlerinde HyperFrames'in kendi yazdığı skiller varsa bunları kaldırmak genel klasör boşaltma prosedürünün işidir (rehber/12), burada yapılmaz"
+        ],
+        "dokunulmaz": [
+          "~/.hyperframes (kullanıcı silmek isterse kendisi yapar: kimlik ve tohum değerleri içerir)",
+          "projelerdeki kompozisyonlar"
+        ]
+      },
+      "yedek": {"kok": "~/Documents/Claude/yedek", "tazelik_gun": 3, "zorunlu": ["KAYIT.json", "hyperframes-veri", "paket"], "yasak_adlar": ["config.json"]},
+      "ortam_anahtarlari": [
+        {
+          "ad": "HYPERFRAMES_SKIP_SKILLS",
+          "beklenen": "1",
+          "gerekli": true,
+          "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
+          "not": "Genel skill klasörlerine geri yazmayı durdurur."
+        },
+        {
+          "ad": "HYPERFRAMES_NO_AUTO_INSTALL",
+          "beklenen": "1",
+          "gerekli": false,
+          "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
+          "not": "Sürüm onaydan önce değişmesin; kullanıcı kararı (bugün tanımlı değil)."
+        },
+        {
+          "ad": "HYPERFRAMES_NO_UPDATE_CHECK",
+          "beklenen": "1",
+          "gerekli": false,
+          "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
+          "not": "Güncelleme kontrolünü kapatır; kullanıcı kararı."
+        }
+      ],
+      "gizli_dosyalar": ["~/.hyperframes/config.json"],
+      "disariya_yazar": [
+        {"yol": "~/.hyperframes", "tur": "veri", "ne": "kimlik, önbellek, günlükler", "yedeklenir": true, "dogrulandi": true},
+        {"yol": "/usr/local/lib/node_modules/hyperframes", "tur": "program", "ne": "npm genel paketi", "yedeklenir": true, "dogrulandi": true},
+        {"yol": "/usr/local/bin/hyperframes", "tur": "program", "ne": "komut bağı", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.claude/skills", "tur": "skill", "ne": "yalnız SKIP anahtarı yokken skill yazar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.agents/skills", "tur": "skill", "ne": "yalnız SKIP anahtarı yokken skill yazar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.agents/.skill-lock.json", "tur": "ayar", "ne": "skill kayıt dosyası", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.gemini/skills", "tur": "bag", "ne": "ayna adımı sembolik bağ koyar (üst klasörü varsa)", "yedeklenir": false, "dogrulandi": true},
+        {
+          "yol": "~/.gemini/antigravity/skills",
+          "tur": "bag",
+          "ne": "ayna adımı sembolik bağ koyar (üst klasörü varsa)",
+          "yedeklenir": false,
+          "dogrulandi": true
+        },
+        {
+          "yol": "~/.gemini/antigravity-cli/skills",
+          "tur": "bag",
+          "ne": "ayna adımı sembolik bağ koyar (üst klasörü varsa)",
+          "yedeklenir": false,
+          "dogrulandi": true
+        },
+        {"yol": "~/.cursor/skills", "tur": "bag", "ne": "ayna adımı sembolik bağ koyar (üst klasörü varsa)", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.copilot/skills", "tur": "bag", "ne": "ayna adımı sembolik bağ koyar (üst klasörü varsa)", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.npm", "tur": "onbellek", "ne": "npm önbelleği; ölçülmedi", "yedeklenir": false, "dogrulandi": false}
+      ],
+      "kirici_surum": {
+        "kural": "0.x sürümde minor değişimi (0.9 -> 0.10) ve major değişimi kırıcı sayılır; patch (0.9.23 -> 0.9.34) sayılmaz, ama release notunda 'breaking' geçerse kırıcı sayılır (ajan okur).",
+        "surum_hatti": "minor",
+        "deneme_klasoru": "~/Documents/Claude/deneme/hyperframes-<hedef>",
+        "deneme_disk_gb": 1,
+        "rehber": "rehber/11-program-yonetimi.md → Kırıcı sürüm"
+      },
+      "tedarik_dogrulama": {
+        "yayinci": {
+          "hesap": "heygen-com",
+          "ucuncu_taraf": false,
+          "imza": "npm-kayit",
+          "not": "npm kayıt defterindeki paket; imza yerine integrity değeri kaydedilir."
+        },
+        "ozet": {
+          "tur": "npm-integrity",
+          "deger": "sha512-Fyr1z5QnAEn//SZDlqXzT170h5eo67XapqaQyGuXzNsi+MAbO4aTp/Nf6C657UnEM8BM7NC5+VHcKlE3GObUsg==",
+          "ne_icin": "npm kayıt defteri hyperframes@0.9.23 dist.integrity (salt okuma GET)",
+          "kayit_tarihi": "2026-11-11"
+        },
+        "kural": "Kurulacak sürümün registry integrity değeri kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer registry'dekiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir)."
+      }
     },
     "openmontage": {
       "ad": "openmontage",
@@ -92,11 +286,7 @@
       "lisans": "AGPL-3.0",
       "ucret": "kismen",
       "ne_yapar": "Yapay zeka ajanıyla uçtan uca video üretir: fikir, betik, stok/üretilmiş görüntü, seslendirme, altyazı, montaj ve Remotion/HyperFrames ile render. Her medya türü için ücretsiz yerel yol vardır; ücretli sağlayıcılar (ses, görüntü, video API'leri) anahtarla isteğe bağlıdır.",
-      "yerinde": {
-        "tur": "git-checkout",
-        "yol": "~/.openmontage",
-        "dal": "main"
-      },
+      "yerinde": {"tur": "git-checkout", "yol": "~/.openmontage", "dal": "main"},
       "kutuphane_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
       "venv": ".venv",
       "sabit_surumler": {
@@ -123,20 +313,270 @@
       "skilleri": [],
       "guncelleme_adimlari": [
         "program-denetim.py yeni commit'i ('YENİ SÜRÜM VAR', N geride) ya da kartın eskidiğini ('KART ESKİ') gösterir",
+        "python3 araclar/program-denetim.py --oncesi openmontage çalıştırılır; 'KIRICI ADAYI' ya da 'kayıtsız yerel değişiklik' çıkarsa durulur: önce rehber/11 → 'Kırıcı sürüm' deneme adımları ayrı klasörde uygulanır, kayıtsız değişiklik yerel_yamalar.bilinen'e kullanıcıyla birlikte yazılır",
         "kullanıcıya değişiklik özeti + onay istenir (her güncelleme ayrı onay)",
-        "yedek: yerel değişen izlenen dosyalar ve izlenmeyen yollar (git status ile bulunur; gsap-plugins/SKILL.md ve .2026-10-15-oncesi yedeği dahil) ~/Documents/Claude/yedek/<program>-<YYYY-AA-GG>/ klasörüne (kütüphane klasörüne ve git'e asla) kopyalanır; ~/.config/openmontage anahtar klasörüne dokunulmaz; venv'in sabit sürüm listesi (pip freeze benzeri, dist-info'dan) kaydedilir; ~/.claude/skills içindeki openmontage bağlarının listesi (readlink) kaydedilir",
-        "onaydan sonra YALNIZ kütüphane oturumu: git pull (önce çakışma durumu gösterilir). `make setup` olduğu gibi çalıştırılmaz: pip install -r requirements.txt, remotion-composer'da npm install, pip install piper-tts ve `npx --yes hyperframes --version` (npx önbelleğine ayrı bir HyperFrames kopyası çeker) yapar. Önce requirements.txt farkı kullanıcıya gösterilir; setup ancak HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_AUTO_INSTALL=1 HYPERFRAMES_NO_UPDATE_CHECK=1 tanımlı çalıştırılır ya da yalnız gereken adımlar tek tek atılır; kurulum venv'i bozacaksa durulur",
+        "yedek: ~/Documents/Claude/yedek/openmontage-<YYYY-AA-GG>/ altına yerel-yamalar.patch (git diff --binary), izlenmeyen-yollar.txt (+ 'kopya' olan izlenmeyen yollar), pip-freeze.txt (`python3 araclar/program-denetim.py --pin-listesi openmontage` çıktısı), bag-listesi.txt (~/.claude/skills içindeki openmontage bağları, readlink) ve KAYIT.json (rehber/11 → 'Yedek kaydı'); ~/.config/openmontage anahtar klasörüne dokunulmaz; kütüphane klasörüne ve git'e asla",
+        "ön kontrol (program-denetim.py --oncesi openmontage) tekrar çalıştırılır; 'HAZIR' demeden devam edilmez",
+        "onaydan sonra YALNIZ kütüphane oturumu: git pull --ff-only (merge/rebase yok; çakışma halinde rehber/11 → 'Yerel yamalar (git klonu)' 2-3. adımlar; önce çakışma durumu gösterilir). `make setup` olduğu gibi çalıştırılmaz: pip install -r requirements.txt, remotion-composer'da npm install, pip install piper-tts ve `npx --yes hyperframes --version` (npx önbelleğine ayrı bir HyperFrames kopyası çeker) yapar. Önce requirements.txt farkı kullanıcıya gösterilir; setup ancak HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_AUTO_INSTALL=1 HYPERFRAMES_NO_UPDATE_CHECK=1 tanımlı çalıştırılır ya da yalnız gereken adımlar tek tek atılır; kurulum venv'i bozacaksa durulur",
         "sabit sürümler yükseltilmez: numpy 1.x, torch 2.2.2 vb. kartta yazan değerlerde kalmalı; program-denetim.py pin farkı gösterirse düzeltmeden devam edilmez",
         "yedeklenen yerel yamalar yeniden uygulanır (gsap-plugins/SKILL.md yaması dahil; skill notundaki basicsr içe aktarma yaması venv dosyasında okunarak doğrulanmadı) ve her biri yeniden denenir; ~/.claude/skills içindeki bağlarda kırık olan var mı denetlenir",
-        "sonra yeniden denetim; kart commit'i onaylı commit'e çekilir, KAYNAK.md güncellenir, commit"
+        "sonra yeniden denetim; kart commit'i onaylı commit'e çekilir, KAYNAK.md güncellenir, commit; python3 araclar/program-denetim.py --sema --siki 0 hata",
+        "yedek klasörü saklanır; silmek için kullanıcıya hatırlatılır ve sorulur"
       ],
       "asla": [
         "pip install -U / --upgrade çalıştırılmaz (manim'in 'yükselt' uyarısı dahil); sabit sürümler yükseltilmez",
         "onay olmadan git fetch / pull / checkout / stash yapılmaz; denetim yalnız GitHub API'siyle bakar",
         "API anahtarları açılmaz, sorulmaz, yazdırılmaz; .env dosyaları okunmaz",
         "yedeksiz güncelleme yapılmaz; origin adresi onaysız değiştirilmez",
-        "`make setup` onaysız ve ortam değişkenleri olmadan çalıştırılmaz (npx ve npm install çağırır); npx ile hyperframes çağrılmaz"
-      ]
+        "`make setup` onaysız ve ortam değişkenleri olmadan çalıştırılmaz (npx ve npm install çağırır); npx ile hyperframes çağrılmaz",
+        "kayıtsız yerel değişiklik varken güncellenmez; git reset --hard / git clean / git stash -u onaysız çalıştırılmaz"
+      ],
+      "giris_yolu": {
+        "kural": "OpenMontage skill değil, git klonudur: araç oturumu ~/.openmontage klasöründe açılır ya da istem kılavuz dosyasını okutur; program kendi AGENTS.md / CODEX.md / CLAUDE.md / AGENT_GUIDE.md dosyalarını taşır.",
+        "kilavuz": "~/.openmontage/AGENT_GUIDE.md",
+        "calistirma": "cd ~/.openmontage && .venv/bin/python <komut>   (her çağrıda önce cd; sistem python'u kullanılmaz)",
+        "karar": "karar-bekliyor: Boşaltma sonrası Claude Code girişinin yeri (komut + openmontage giriş skili) kullanıcı kararı bekliyor.",
+        "araclar": {
+          "claude-code": {
+            "durum": "karar-bekliyor",
+            "yol": "~/.claude/commands/openmontage.md",
+            "nasil": "Bugün: ~/.claude/CLAUDE.md satırı + /openmontage komutu + ~/.claude/skills/openmontage. Skill klasörü boşaltılınca skilin yeni yeri kararlaştırılmadı; komut ve CLAUDE.md satırı kalır."
+          },
+          "codex": {
+            "durum": "program-klasoru",
+            "yol": "~/.openmontage/AGENTS.md",
+            "nasil": "Oturumu ~/.openmontage klasöründe aç (AGENTS.md ve CODEX.md orada). Başka klasörden: istemde 'önce ~/.openmontage/AGENT_GUIDE.md oku' yaz."
+          },
+          "antigravity": {"durum": "program-klasoru", "yol": "~/.openmontage/AGENTS.md", "nasil": "Aynı: çalışma alanı ~/.openmontage ya da istemde kılavuz yolu."},
+          "cursor": {"durum": "program-klasoru", "yol": "~/.openmontage/AGENTS.md", "nasil": "Aynı: klasörü Cursor'da aç ya da istemde kılavuz yolu."},
+          "vscode-copilot": {"durum": "program-klasoru", "yol": "~/.openmontage/AGENTS.md", "nasil": "Aynı: klasörü VS Code'da aç ya da istemde kılavuz yolu."}
+        }
+      },
+      "kurulum": {
+        "on_kosullar": [
+          "git, Python 3.10 (ya da uv), Node/npm; yaklaşık 8 GB boş disk",
+          "HYPERFRAMES_SKIP_SKILLS=1 tanımlı",
+          "API anahtarları kullanıcı tarafından ~/.config/openmontage/.env içine konur (ajan açmaz, sormaz)"
+        ],
+        "adimlar": [
+          "Kullanıcıdan ayrı onay",
+          "git clone https://github.com/OpenMontageInc/OpenMontage ~/.openmontage ; git -C ~/.openmontage checkout --detach <kutuphane_commit>",
+          "Venv: uv venv --python 3.10 ~/.openmontage/.venv ; requirements.txt kurulur; sonra karttaki sabit_surumler tek tek paket==sürüm olarak yeniden uygulanır. 'make setup' olduğu gibi çalıştırılmaz (npx ve npm install çağırır).",
+          "remotion-composer içinde yalnız gereken npm adımı, kullanıcıya gösterilerek",
+          "Yerel yamalar: karttaki yerel_yamalar.bilinen listesi bu makinede YOKTUR; yedeğin yerel-yamalar.patch dosyası varsa git apply --3way ile uygulanır, yoksa kullanıcıya söylenir",
+          "Giriş: giris_yolu alanındaki araç satırları (kullanıcı kararlarıyla) uygulanır"
+        ],
+        "dogrulama": [
+          "python3 araclar/program-denetim.py: openmontage kurulu commit = karttaki, sabit sürümler N/N",
+          "openmontage skilindeki preflight komutu (ağ kullanmayan sağlayıcı menüsü) hatasız"
+        ],
+        "yapma": [
+          "pip install -U / --upgrade",
+          "make setup ortam anahtarsız ve onaysız",
+          "npx ile hyperframes çağırma",
+          ".env açma"
+        ]
+      },
+      "geri_alma": {
+        "ne_zaman": [
+          "Güncelleme sonrası preflight ya da bir pipeline bozuk",
+          "Sabit paket sürümlerinden biri değişti",
+          "Yama geri uygulanamadı"
+        ],
+        "adimlar": [
+          "Önceki commit yedekteki KAYIT.json → onceki.commit alanındadır",
+          "Kullanıcıdan geri alma için ayrı onay al; yerel yamalar önce yedekteki yerel-yamalar.patch ile güvence altındadır",
+          "Önceki commit'e dönmek için: git -C ~/.openmontage switch --detach <onceki.commit>. git reset --hard, git checkout -B ve git clean KULLANILMAZ (yerel yamaları ezer). Yerel değişikliklerle çakışan dosya varsa git hiçbir şeyi değiştirmeden durur; o zaman sonraki adım",
+          "Çakışırsa: yalnız o dosyada git checkout -- <yol> (yaması yedekte), switch, sonra git apply --3way --include=<yol> yerel-yamalar.patch",
+          "Venv bozulduysa: yedekteki pip-freeze.txt ile pip install --no-deps -r pip-freeze.txt (kullanıcı onayıyla; ağ ve torch için yer gerekir); sabit_surumler kartla karşılaştırılır",
+          "Çalışma ağacı geri dönünce dal main'e dönülür: git switch main yalnız kullanıcı isterse (main ileride kalır; commit'i kayda göre sabit tutan 'detached' durum ön kontrolde UYARI verir)",
+          "Kart kutuphane_commit, KAYNAK.md ve tedarik_dogrulama.ozet.deger önceki commit'e çevrilir; commit"
+        ],
+        "dogrulama": [
+          "program-denetim.py: kurulu commit = karttaki; sabit sürümler N/N tutuyor",
+          "~/.claude/skills içindeki openmontage bağları kırık değil (bag-listesi.txt ile karşılaştır)"
+        ],
+        "sinir": "Yedekte yerel-yamalar.patch yoksa geri alma ve güncelleme yapılmaz."
+      },
+      "cikarma": {
+        "makineden": [
+          "Kullanıcıdan ayrı onay; önce yedek (yerel yamalar + pip-freeze + bağ listesi)",
+          "Önce ~/.claude/skills içindeki ~74 openmontage bağı kullanıcının manifestiyle (~/.config/openmontage/global-skill-links.txt) kaldırılır; bu genel klasör işlemi rehber/12 kapsamındadır",
+          "Sonra ~/.openmontage klasörü kullanıcı kararıyla taşınır/silinir (4,6 GB; kalıcı silme için ayrıca onay)",
+          "~/.claude/commands/openmontage.md ve global CLAUDE.md satırı kullanıcının dosyalarıdır; kaldırmayı kullanıcı yapar"
+        ],
+        "dokunulmaz": ["~/.config/openmontage (anahtarlar)", "~/Movies/OpenMontage (üretilen videolar)"]
+      },
+      "yedek": {
+        "kok": "~/Documents/Claude/yedek",
+        "tazelik_gun": 3,
+        "zorunlu": ["KAYIT.json", "yerel-yamalar.patch", "izlenmeyen-yollar.txt", "pip-freeze.txt", "bag-listesi.txt"],
+        "yasak_adlar": [".env"]
+      },
+      "ortam_anahtarlari": [
+        {
+          "ad": "HYPERFRAMES_SKIP_SKILLS",
+          "beklenen": "1",
+          "gerekli": true,
+          "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
+          "not": "OpenMontage'in hyperframes hedefleri çağrıldığında genel skill klasörlerine skill yazmasın."
+        }
+      ],
+      "gizli_dosyalar": ["~/.config/openmontage/.env"],
+      "disariya_yazar": [
+        {"yol": "~/.openmontage", "tur": "program", "ne": "git klonu, venv ve node_modules", "yedeklenir": true, "dogrulandi": true},
+        {"yol": "~/Movies/OpenMontage", "tur": "cikti", "ne": "üretilen videolar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.config/openmontage", "tur": "anahtar", "ne": "API anahtarları (açılmaz, kopyalanmaz)", "yedeklenir": false, "dogrulandi": true},
+        {
+          "yol": "~/.claude/skills",
+          "tur": "bag",
+          "ne": "~74 skill bağı kullanıcının manifestiyle; program yazmaz",
+          "yedeklenir": true,
+          "dogrulandi": true
+        },
+        {"yol": "~/.claude/commands/openmontage.md", "tur": "ayar", "ne": "kullanıcının /openmontage komutu", "yedeklenir": true, "dogrulandi": true},
+        {"yol": "~/.npm", "tur": "onbellek", "ne": "make setup npm install/npx çağırır; ölçülmedi", "yedeklenir": false, "dogrulandi": false}
+      ],
+      "yerel_yamalar": {
+        "kural": "Klonda repoda olmayan her değişiklik bu listede kayıtlı olmalı; kayıtsız değişiklik varsa güncelleme ön kontrolü durur.",
+        "bilinen": [
+          {
+            "yol": ".agents/skills/gsap-plugins/SKILL.md",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "lib/clip_embedder.py",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "remotion-composer/package-lock.json",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "remotion-composer/package.json",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "remotion-composer/src/Explainer.tsx",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "remotion-composer/src/components/StatReveal.tsx",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "tools/analysis/video_understand.py",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "tools/capture/screen_recorder.py",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "tools/enhancement/face_restore.py",
+            "tur": "izlenen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": "remotion-composer/remotion.config.ts",
+            "tur": "izlenmeyen",
+            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "yedek": "kopya",
+            "yeniden_uygula": true
+          },
+          {
+            "yol": ".agents/skills/gsap-plugins/SKILL.md.2026-10-15-oncesi",
+            "tur": "izlenmeyen",
+            "amac": "elle yedek dosyası",
+            "yedek": "kopya",
+            "yeniden_uygula": false
+          },
+          {
+            "yol": "remotion-composer/src/Explainer.tsx.bak-2026-09-20",
+            "tur": "izlenmeyen",
+            "amac": "elle yedek dosyası",
+            "yedek": "kopya",
+            "yeniden_uygula": false
+          },
+          {
+            "yol": "remotion-composer/src/Explainer.tsx.bak-2026-09-30",
+            "tur": "izlenmeyen",
+            "amac": "elle yedek dosyası",
+            "yedek": "kopya",
+            "yeniden_uygula": false
+          },
+          {
+            "yol": "clips_cache/",
+            "tur": "izlenmeyen",
+            "amac": "ölçülmedi (önbellek ya da model dosyası olabilir; içeriği bilinmeden kopyalanmaz)",
+            "yedek": "liste",
+            "yeniden_uygula": false
+          },
+          {
+            "yol": "gfpgan/",
+            "tur": "izlenmeyen",
+            "amac": "ölçülmedi (önbellek ya da model dosyası olabilir; içeriği bilinmeden kopyalanmaz)",
+            "yedek": "liste",
+            "yeniden_uygula": false
+          },
+          {
+            "yol": ".venv/lib/python3.10/site-packages/basicsr/",
+            "tur": "venv",
+            "amac": "skill notunda geçen içe aktarma yaması; ölçülmedi",
+            "yedek": "liste",
+            "yeniden_uygula": true
+          }
+        ],
+        "yedekleme": {
+          "izlenen": "git diff --binary > yerel-yamalar.patch",
+          "izlenmeyen": "git ls-files --others --exclude-standard (boyutlarıyla) > izlenmeyen-yollar.txt; 'kopya' olanlar izlenmeyen/ altına kopyalanır"
+        },
+        "rehber": "rehber/11-program-yonetimi.md → Yerel yamalar (git klonu)"
+      },
+      "kirici_surum": {
+        "kural": "Aday sayılır: main dalı kurulu commit'ten 50'den fazla commit ileride, ya da yeni commit'ler izle_dosyalar'dan birini değiştiriyorsa, ya da yeni commit'ler karttaki bir yerel yama dosyasına dokunuyorsa.",
+        "esik_commit": 50,
+        "izle_dosyalar": ["requirements.txt", "Makefile", "remotion-composer/package.json", "pyproject.toml"],
+        "deneme_klasoru": "~/Documents/Claude/deneme/openmontage-<hedef-ilk-8-hane>",
+        "deneme_disk_gb": 8,
+        "rehber": "rehber/11-program-yonetimi.md → Kırıcı sürüm"
+      },
+      "tedarik_dogrulama": {
+        "yayinci": {"hesap": "OpenMontageInc", "ucuncu_taraf": false, "imza": "git-commit", "not": "git commit sha'sı kayıt değeridir."},
+        "ozet": {
+          "tur": "git-commit",
+          "deger": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
+          "ne_icin": "kurulu klonun kayıtlı commit'i (KAYNAK.md ile aynı)",
+          "kayit_tarihi": "2026-11-11"
+        },
+        "kural": "Onay commit'in tam sha'sıyla verilir; dal adıyla ('main') verilmez."
+      }
     }
   }
 }

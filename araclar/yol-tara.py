@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sabit yol taraması (salt okuma): skill metinlerinde bilgisayar geneli klasör yolu (~/.claude/skills/<ad>/…), eklenti kökü
 (${CLAUDE_PLUGIN_ROOT}/…), kardeş skill yolu (../<kardeş>/…) ve genel klasöre yazma (npx skills -g, cp … ~/.claude/skills) var mı?
-Hiçbir şey kurmaz, indirmez, arşive ve registry'ye dokunmaz. Çıkış kodu HER ZAMAN 0 (hata olursa 'UYARI: …' yazar; bayrak hatasında kullanım metni yazılır).
+Hiçbir şey kurmaz, indirmez, arşive ve registry'ye dokunmaz. Çıkış kodu HER ZAMAN 0 (--siki hariç; hata olursa 'UYARI: …' yazar; bayrak hatasında kullanım metni yazılır).
 Kapsam dışı: kodda `Path.home() / ".agents" / "skills" / …` gibi kurulan yollar ve öneksiz göreli yollar (skills/<ad>/…) taranmaz.
 
 Kullanım:
@@ -9,6 +9,8 @@ Kullanım:
   python3 araclar/yol-tara.py --skill <id>     tek skill'in ayrıntısı (stdout; dosya yazmaz): bulgular, ön kontrol satırları, istisna taslağı
   python3 araclar/yol-tara.py --repo owner/ad  repodaki tüm skiller (stdout). Repo registry'de yoksa taze çekilmiş .gecici/cekilen
                                                malzemesini tarar (kaynak-cek.py --repo sonrası, arsiv-yerlestir.py öncesi)
+  python3 araclar/yol-tara.py --repo owner/ad --siki   kapı gibi çalışır (yeni kaynak ekleme A5): çözülemez yol ya da
+                                               genele-yazabilir / istisna-eskidi UYARI'sı varsa çıkış 1 ('YOL KAPISI: TAKILDI'); --skill <id> --siki de olur
 Kural 6: raporda proje adı geçmez; skill'in yolu kendi niteliğidir.
 """
 import argparse
@@ -182,15 +184,93 @@ def repo_ayrinti(repo, skiller):
         print()
 
 
+KAPI_KODLARI = ("genele-yazabilir", "istisna-eskidi")
+
+
+def kapi_hedefleri(repo, skill_id, skiller):
+    """Kapının tarayacağı skiller ve değerlendirme havuzu: (secilen, tum). registry'de yoksa taze .gecici/cekilen malzemesi."""
+    if skill_id:
+        s = next((x for x in skiller if x["id"] == skill_id), None) or next(
+            (x for x in skiller if x.get("ad") == skill_id and x.get("durum") == "tercih"), None)
+        return ([s] if s else []), skiller
+    repo_k = ortak.repo_guncel(repo).lower()
+    secilen = [s for s in skiller if s["repo"].lower() == repo_k]
+    if secilen:
+        return secilen, skiller
+    manifest = json_oku(GECICI / "cekilen" / "manifest.json", {"kayitlar": []})
+    secilen = gecici_skiller(repo, [k for k in manifest.get("kayitlar", []) if k["repo"].lower() == repo.lower()])
+    return secilen, skiller + secilen
+
+
+def kapi_kontrol(repo=None, skill_id=None, skiller=None):
+    """Yol kapısı: -> (sorunlar: [str], taranan: int, hata: str|None). Sorun: sütun 'cozulemez' ya da genele-yazabilir /
+    istisna-eskidi UYARI'sı. yol-istisnalari.json ile kapsanan skill 'istisna' sütunundadır, geçer. Hiçbir şey bulunamazsa
+    ya da tarama çökerse hata doludur (taranan 0): hiçbir şey taranmadıysa 'geçti' sayılmaz."""
+    try:
+        if skiller is None:
+            skiller = skiller_yukle()
+        secilen, tum = kapi_hedefleri(repo, skill_id, skiller)
+        if not secilen:
+            return [], 0, "hedef registry'de ve .gecici/cekilen içinde bulunamadı"
+        sorunlar = []
+        for s in sorted(secilen, key=lambda x: x["id"]):
+            d = ortak.yol_degerlendir(s, tum)
+            if d["sutun"] == "cozulemez":
+                sorunlar.append(f"KAPI: {s['id']}: cozulemez: sütun 'Çözülemez'")
+            for sv, kod, g in d["satirlar"]:
+                if sv == "UYARI" and kod in KAPI_KODLARI:
+                    sorunlar.append(f"KAPI: {s['id']}: {kod}: {md(g, 110)}")
+        return sorunlar, len(secilen), None
+    except Exception as e:  # noqa: BLE001
+        return [], 0, f"{type(e).__name__}: {str(e)[:100]}"
+
+
+def siki_calistir(a):
+    """--siki: normal ayrıntı aynen yazılır, sonra kapı sonucu; çıkış 0 (geçti) / 1 (takıldı)."""
+    try:
+        skiller = skiller_yukle()
+        if a.skill:
+            s = next((x for x in skiller if x["id"] == a.skill), None) or next(
+                (x for x in skiller if x["ad"] == a.skill and x["durum"] == "tercih"), None)
+            if s:
+                skill_ayrinti(s, skiller)
+            else:
+                print(f"Skill bulunamadı: {a.skill}")
+        else:
+            repo_ayrinti(a.repo, skiller)
+    except Exception as e:  # noqa: BLE001
+        print(f"YOL KAPISI: TAKILDI (taranamadı: {type(e).__name__}: {str(e)[:100]})")
+        return 1
+    sorunlar, n, hata = kapi_kontrol(repo=a.repo, skill_id=a.skill, skiller=skiller)
+    if hata:
+        print(f"YOL KAPISI: TAKILDI (taranamadı: {hata})")
+        return 1
+    if sorunlar:
+        print(f"YOL KAPISI: TAKILDI ({len(sorunlar)} sorun / {n} skill)")
+        for x in sorunlar:
+            print(f"  {x}")
+        return 1
+    print(f"YOL KAPISI: GEÇTİ ({n} skill tarandı)")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description="Sabit yol taraması (salt okuma)")
     ap.add_argument("--skill")
     ap.add_argument("--repo")
+    ap.add_argument("--siki", action="store_true",
+                    help="--repo/--skill ile kapı gibi çalışır: çözülemez yol ya da genele-yazabilir/istisna-eskidi UYARI'sı varsa "
+                         "çıkış 1 ('YOL KAPISI: TAKILDI')")
     try:
         a = ap.parse_args()
     except SystemExit as e:  # argparse hatası (bilinmeyen bayrak, değersiz --skill): kullanım metni yazıldı, çıkış kodu yine 0
         return 0 if e.code in (0, 2, None) else e.code
     t0 = time.time()
+    if a.siki:
+        if not (a.repo or a.skill):
+            print("--siki için --repo ya da --skill ver.")
+            return 2
+        return siki_calistir(a)
     try:
         skiller = skiller_yukle()
         if a.skill:

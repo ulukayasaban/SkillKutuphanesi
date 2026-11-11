@@ -5,7 +5,7 @@
 
 ```kopyala
 Skill kütüphanemin sağlık kontrolünü yap. ~/Documents/SkillKutuphanesi'de:
-1. python3 araclar/duman-testi.py --araclar   (git, doğrulama, kapsam denetimi, katalog, 44 güvenlik testi, güncelleme raporu,
+1. python3 araclar/duman-testi.py --araclar   (git, doğrulama, kapsam denetimi, katalog, güvenlik testleri, güncelleme raporu,
    tüm profillerin ön kontrolü, kurulum yaşam döngüsü, gerçek Claude ve Codex, global klasörlerin korunması)
 2. python3 araclar/github-skill-listesi.py     (skill listesinde yeni repo var mı, adı değişen repo var mı, kopya/eksik liste üyeliği var mı)
    python3 araclar/proje-kullanimi.py --kontrol (hangi proje hangi skili kullanıyor raporu güncel mi)

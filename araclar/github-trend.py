@@ -155,6 +155,9 @@ def rapor(trend, aday_modu):
 
 
 def main():
+    if "-h" in sys.argv or "--help" in sys.argv:  # yardım istenince tarama başlatma
+        print(__doc__ or "github-trend.py: kullanım için dosyanın başındaki açıklamaya bakın (-h ağ işi yapmaz, dosya yazmaz).")
+        return 0
     trend = json_oku(TREND, {"_aciklama": "GitHub Trending geçmişi. araclar/github-trend.py üretir; elle düzenleme."})
     if "--rapor" not in sys.argv:
         anlik, hata = tara(trend)

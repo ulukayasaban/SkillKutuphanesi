@@ -8,7 +8,9 @@ Kütüphane: ~/Documents/SkillKutuphanesi. Önce teşhis koy, sonra onayımla d�
    - proje taşındı / Codex yolları geçersiz / AGENTS.md bloğu bozuk → --yenile
    - eksik/bozuk symlink ya da kopya → --guncelle --kuru, onaylarsam --guncelle --evet
    - yanlış işlem yapıldı → --yedekler, sonra onayla --geri-al <yedek>
+   - proje başka bilgisayara / Windows'a kopyalandı → rehber/14 bölüm 5; kütüphanenin olduğu Mac'te önce --dogrula, sonra --yenile; Windows'ta skill-ekle çalıştırma.
 3. Düzelttikten sonra --dogrula'yı tekrar çalıştır ve "oturumu yeniden aç" diye hatırlat.
+Aynı projede başka bir oturum skill-ekle çalıştırıyorsa onun bitmesini bekle (proje kilidi yok, bunu sen kontrol et).
 Skill dosyalarını elle düzenleme ya da kopyalama; global klasörlere dokunma.
 ```
 

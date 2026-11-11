@@ -7,6 +7,9 @@
 - Roller/profiller var olan skillere/rollere mi bakıyor
 - Bir rol aynı örtüşme grubundan en fazla 1 birincil + 1 tamamlayıcı alıyor mu
 - Kaynaklar.json yıldızlı repoların hepsini kapsıyor mu (--github ile)
+- CLAUDE.md == AGENTS.md (HATA); BASLA.md, notlar/kararlar.md, paket dosyaları, .gitignore korumaları, kayıt şemaları
+  (programlar/projeler/yedekler/yapay-zeka-araclari/kaynaklar), yeni kaynak kayıtlarının onay kapıları, belgelerdeki
+  araç/bayrak adları ve eski anlatım (hepsi UYARI; HATA yalnız ayrışmayan JSON kayıt dosyası ve CLAUDE/AGENTS farkı)
 """
 import json
 import re
@@ -67,6 +70,444 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
             if sorun:
                 (hatalar if not s.get("gizli") else uyarilar).append(
                     f"kurulunca tetiklenmez: {yol} -> {'; '.join(sorun)} (registry.json aciklama_duzeltme)")
+
+
+# --- P8: belge ve kayıt denetimleri -------------------------------------------------------------------------------
+# Birleştirme kuralı: buradaki HER yeni denetim yalnız UYARI'dır. HATA yalnız (a) var olan bir JSON kayıt dosyasının
+# ayrıştırılamaması ve (b) CLAUDE.md ile AGENTS.md'nin eşit olmamasıdır (arsiv-guncelle --birlestir HATA'da master'ı geri alır).
+# Hiçbiri başka bir aracı çalıştırmaz (tek istisna: program-denetim.py --sema --ozet-json, ağsız); bayraklar kaynak
+# metninden okunur, --help'e güvenilmez (birçok araçta argparse yok, --help aracı çalıştırır).
+KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "KAYIP", "EMEKLI")
+KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "kimlik", "dosya_haric",
+                      "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi")
+ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
+GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
+                       "/programlar/**/.env", "/yedek/", "/.skill-kutuphanesi/", "/*.bundle", "/*.yedek",
+                       "/notlar/son-aylik-calisma.json", "/notlar/aylik-ozet.md")
+REHBER13_DIZGILERI = ("git revert -m 1", "gh auth login", "git bundle create", "yedekler.json", "rehber/12")
+# Paket dosyası tablosu (yol -> paket). notlar/genel-klasor-tabani.json bilerek yok: yalnız boşaltma gününde yazılır,
+# o güne dek eksikliği kalıcı bir uyarı olurdu (sürümü varsa E5 denetler).
+PAKET_DOSYALARI = (
+    ("rehber/12-genel-klasor-bosaltma.md", "P2"), ("rehber/13-yedek-ve-geri-alma.md", "P3"),
+    ("rehber/14-yapay-zeka-araclari.md", "P1"), ("promptlar/13-program-kur-guncelle.md", "P6"),
+    ("promptlar/14-kaynak-cikar.md", "P7"), ("promptlar/15-yeni-yapay-zeka-araci.md", "P1"),
+    ("promptlar/16-genel-klasor-bosaltma.md", "P2"), ("yapay-zeka-araclari.json", "P1"), ("yedekler.json", "P3"),
+    ("araclar/genel-bekci.py", "P2"), ("araclar/git-durum.py", "P3"), ("araclar/yedek-denetim.py", "P3"),
+    ("araclar/aylik-ozet.py", "P4"), ("araclar/kaynak-cikar.py", "P7"),
+)
+BELGE_TARAMASI = ("CLAUDE.md", "AGENTS.md", "BASLA.md", "README.md")
+ESKI_ANLATIM = (re.compile(r"(?i)global skill klasörlerin[^\n]*değişmez"), re.compile(r"(?i)eski agent'ların[^\n]*devam eder"))
+
+
+def _metin(f):
+    try:
+        return Path(f).read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return ""
+
+
+def _json_kayit(kok, yol, h):
+    """Var olan JSON kayıt dosyası -> (nesne | None, dosya_var_mi). Ayrışmıyorsa HATA (kural a)."""
+    f = Path(kok) / yol
+    if not f.is_file():
+        return None, False
+    try:
+        return json.loads(f.read_text(encoding="utf-8")), True
+    except (ValueError, OSError) as e:
+        h.append(f"{yol} okunamadı: {str(e)[:100]}")
+        return None, True
+
+
+def esitlik_denetimi(kok=KOK):
+    """CLAUDE.md ile AGENTS.md birebir aynı olmalı (HATA). GEMINI.md varsa BASLA.md'ye işaret etmeli (UYARI)."""
+    kok = Path(kok)
+    h, u = [], []
+    a, b = kok / "CLAUDE.md", kok / "AGENTS.md"
+    if not a.is_file() or not b.is_file():
+        h.append("CLAUDE.md/AGENTS.md eksik")
+    elif a.read_bytes() != b.read_bytes():
+        h.append("CLAUDE.md ile AGENTS.md aynı değil (cp CLAUDE.md AGENTS.md)")
+    g = kok / "GEMINI.md"
+    if g.is_file() and "BASLA.md" not in _metin(g):
+        u.append("GEMINI.md BASLA.md'ye işaret etmiyor")
+    return h, u
+
+
+def giris_belgeleri_denetimi(kok=KOK):
+    kok = Path(kok)
+    h, u = [], []
+    basla, karar = kok / "BASLA.md", kok / "notlar" / "kararlar.md"
+    if not basla.is_file():
+        u.append("BASLA.md yok")
+    if not karar.is_file():
+        u.append("notlar/kararlar.md yok")
+    else:
+        satirlar = _metin(karar).splitlines()
+        for b in ("## Geçerli kararlar", "## Değişen kararlar", "## Karar bekleyenler", "## Kabul edilen bekleyenler"):
+            if not any(s.startswith(b) for s in satirlar):
+                u.append(f"notlar/kararlar.md'de '{b}' başlığı yok")
+    ilk = (_metin(kok / "CLAUDE.md").splitlines() or [""])[0]
+    if (kok / "CLAUDE.md").is_file() and "BASLA.md" not in ilk:
+        u.append("CLAUDE.md ilk satırı BASLA.md'ye işaret etmiyor")
+    if basla.is_file():
+        t = _metin(basla)
+        for yol in sorted(set(re.findall(r"`((?:araclar|rehber|promptlar|notlar)/[\w./-]+\.(?:py|md|json|txt))`", t))):
+            if not (kok / yol).exists():
+                u.append(f"BASLA.md olmayan dosyayı anıyor: {yol}")
+        for gerekli in ("notlar/kararlar.md", "DURUM.md"):
+            if gerekli not in t:
+                u.append(f"BASLA.md {gerekli} dosyasını anmıyor")
+    return h, u
+
+
+def paket_dosyalari_denetimi(kok=KOK):
+    kok = Path(kok)
+    h, u = [], []
+    for yol, paket in PAKET_DOSYALARI:
+        if not (kok / yol).exists():
+            u.append(f"{paket} dosyası yok: {yol}")
+    gi = kok / ".gitignore"
+    if ".gitignore değişikliği reddedildi" not in _metin(kok / "notlar" / "kararlar.md"):
+        satirlar = {s.strip() for s in _metin(gi).splitlines()}
+        eksik = [k for k in GITIGNORE_KALIPLARI if k not in satirlar]
+        if eksik:
+            u.append(f".gitignore'da yedek/gizli koruma satırı eksik: {', '.join(eksik[:6])}")
+    r13 = kok / "rehber" / "13-yedek-ve-geri-alma.md"
+    if r13.is_file():
+        t = _metin(r13)
+        eksik = [d for d in REHBER13_DIZGILERI if d not in t]
+        if eksik:
+            u.append(f"rehber/13-yedek-ve-geri-alma.md eksik içerik: {', '.join(eksik)}")
+    return h, u
+
+
+def arac_anahtarlari(kok=KOK):
+    """yapay-zeka-araclari.json -> anahtar kümesi (liste biçimi; sözlük biçimi de kabul). Yok ya da bozuksa boş küme."""
+    try:
+        d = json.loads((Path(kok) / "yapay-zeka-araclari.json").read_text(encoding="utf-8"))
+        a = d["araclar"]
+        if isinstance(a, dict):
+            return set(a)
+        return {r["anahtar"] for r in a if isinstance(r, dict) and isinstance(r.get("anahtar"), str)}
+    except (OSError, ValueError, KeyError, TypeError):
+        return set()
+
+
+def _yukle(dosya, ad):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(ad, dosya)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def _e1_programlar(kok, h, u):
+    d, var = _json_kayit(kok, "programlar.json", h)
+    if not var or d is None:
+        return
+    if not isinstance(d.get("programlar") if isinstance(d, dict) else None, dict):
+        u.append("programlar.json: 'programlar' sözlüğü yok")
+        return
+    arac = Path(kok) / "araclar" / "program-denetim.py"
+    if arac.is_file() and '"--sema"' in _metin(arac):
+        try:
+            r = subprocess.run([sys.executable, str(arac), "--sema", "--ozet-json"], cwd=kok, capture_output=True,
+                               text=True, timeout=60, stdin=subprocess.DEVNULL)
+            o = json.loads(r.stdout)
+            if r.returncode != 0 or not isinstance(o, dict) or not isinstance(o.get("satirlar"), list):
+                raise ValueError("çıkış")
+            for s in o["satirlar"]:
+                if isinstance(s, str) and s.startswith(("HATA:", "UYARI:")):
+                    u.append(f"programlar.json kart şeması: {s}")
+        except (ValueError, OSError, subprocess.SubprocessError):
+            u.append("program şema denetimi çalışmadı (python3 araclar/program-denetim.py --sema)")
+    anahtarlar = arac_anahtarlari(kok)
+    if anahtarlar:
+        for ad, kart in d["programlar"].items():
+            gy = kart.get("giris_yolu") if isinstance(kart, dict) else None
+            ar = gy.get("araclar") if isinstance(gy, dict) else None
+            for k in (ar if isinstance(ar, dict) else {}):
+                if k not in anahtarlar:
+                    u.append(f"program {ad}: giris_yolu araç anahtarı yok: {k}")
+
+
+def _e2_projeler(kok, h, u):
+    d, var = _json_kayit(kok, "projeler.json", h)
+    if not var or d is None:
+        return
+    if not isinstance(d, dict):
+        u.append("projeler.json: üst düzey sözlük değil")
+        return
+    for k in ("tarama_kokleri", "ek_projeler"):
+        if k in d and not (isinstance(d[k], list) and all(isinstance(x, str) for x in d[k])):
+            u.append(f"projeler.json: '{k}' metin listesi değil")
+    if "notlar" in d and not isinstance(d["notlar"], dict):
+        u.append("projeler.json: 'notlar' sözlük değil")
+    for k in ("bilinen_projeler", "program_kullanimi", "kendi_skilleri"):
+        if k in d and not isinstance(d[k], dict):
+            u.append(f"projeler.json: '{k}' sözlük değil")
+    if "yoksay" in d:
+        y = d["yoksay"]
+        if not (isinstance(y, list) and all(isinstance(x, dict) and x.get("yol") and x.get("neden") for x in y)):
+            u.append("projeler.json: 'yoksay' kayıtlarında yol ya da neden eksik")
+    if isinstance(d.get("tarama_kokleri"), list):
+        for yol in d["tarama_kokleri"]:
+            if isinstance(yol, str) and not Path(yol).expanduser().exists():
+                u.append(f"projeler.json: tarama kökü bu bilgisayarda yok: {yol}")
+
+
+def _e3_yedekler(kok, h, u):
+    d, var = _json_kayit(kok, "yedekler.json", h)
+    if not var or d is None:
+        return
+    if not isinstance(d, dict) or d.get("surum") != 1:
+        u.append("yedekler.json: surum 1 değil")
+    kayitlar = d.get("yedekler") if isinstance(d, dict) else None
+    if not isinstance(kayitlar, list):
+        u.append("yedekler.json: 'yedekler' listesi yok")
+        return
+    turler = None
+    ydosya = Path(kok) / "araclar" / "yedek-denetim.py"
+    if ydosya.is_file():
+        try:
+            turler = tuple(getattr(_yukle(ydosya, "yedek_denetim_p8"), "TURLER"))
+        except Exception:  # noqa: BLE001
+            turler = None
+    gorulen = set()
+    for i, k in enumerate(kayitlar):
+        if not isinstance(k, dict):
+            u.append(f"yedekler.json: kayıt {i + 1} sözlük değil")
+            continue
+        eksik = [a for a in ("kimlik", "yol", "tur", "ne", "tarih", "geri_yukleme", "gizli_icerir") if a not in k]
+        if eksik:
+            u.append(f"yedekler.json: {k.get('kimlik', i + 1)} kaydında eksik alan: {', '.join(eksik)}")
+        if k.get("gizli_icerir") not in ("evet", "hayir") and "gizli_icerir" in k:
+            u.append(f"yedekler.json: {k.get('kimlik')} gizli_icerir 'evet' ya da 'hayir' olmalı")
+        if k.get("kimlik") in gorulen:
+            u.append(f"yedekler.json: kimlik tekrarlanıyor: {k.get('kimlik')}")
+        gorulen.add(k.get("kimlik"))
+        if turler and "tur" in k and k["tur"] not in turler:
+            u.append(f"yedekler.json: {k.get('kimlik')} tür geçersiz: {k['tur']}")
+
+
+def _tarih_gecerli(s):
+    from datetime import date
+    try:
+        date.fromisoformat(s)
+        return bool(re.fullmatch(r"\d{4}-\d{2}-\d{2}", s))
+    except (ValueError, TypeError):
+        return False
+
+
+def _e4_araclar(kok, h, u):
+    d, var = _json_kayit(kok, "yapay-zeka-araclari.json", h)
+    if not var or d is None:
+        return
+    a = d.get("araclar") if isinstance(d, dict) else None
+    kayitlar = list(a.values()) if isinstance(a, dict) else a
+    if not isinstance(kayitlar, list):
+        u.append("yapay-zeka-araclari.json: 'araclar' listesi yok")
+        return
+    anahtarlar = arac_anahtarlari(kok)
+    for z in ZORUNLU_ARACLAR:
+        if z not in anahtarlar:
+            u.append(f"araç kaydı yok: {z}")
+    for r in kayitlar:
+        if not isinstance(r, dict):
+            u.append("yapay-zeka-araclari.json: kayıt sözlük değil")
+            continue
+        eksik = [x for x in ("anahtar", "ad", "kurulu", "proje_skill_okur", "dogrulama_tarihi", "surumler") if x not in r]
+        if eksik:
+            u.append(f"yapay-zeka-araclari.json: {r.get('anahtar', '?')} kaydında eksik alan: {', '.join(eksik)}")
+        if "dogrulama_tarihi" in r and not _tarih_gecerli(r["dogrulama_tarihi"]):
+            u.append(f"yapay-zeka-araclari.json: {r.get('anahtar', '?')} dogrulama_tarihi AAAA-AA-GG değil")
+
+
+def _e5_taban(kok, h, u):
+    d, var = _json_kayit(kok, "notlar/genel-klasor-tabani.json", h)
+    if var and d is not None and (not isinstance(d, dict) or d.get("surum") != 1):
+        u.append("notlar/genel-klasor-tabani.json: surum 1 değil")
+
+
+def _e6_kaynaklar(kok, h, u):
+    d, var = _json_kayit(kok, "kaynaklar.json", h)
+    if not var or d is None:
+        return
+    kayitlar = d.get("repolar") if isinstance(d, dict) else None
+    if not isinstance(kayitlar, list):
+        u.append("kaynaklar.json: 'repolar' listesi yok")
+        return
+    gorulen = set()
+    for k in kayitlar:
+        if not isinstance(k, dict):
+            u.append("kaynaklar.json: kayıt sözlük değil")
+            continue
+        repo = k.get("repo")
+        if not isinstance(repo, str) or not re.fullmatch(r"[\w.-]+/[\w.-]+", repo):
+            u.append(f"kaynaklar.json: repo adı 'sahip/ad' biçiminde değil: {repo!r}")
+            continue
+        anahtar = (repo.lower(), k.get("tip"), k.get("kimlik"))  # aynı repo farklı tip/kimlikle birkaç kez olabilir (T2 + T5 gibi)
+        if anahtar in gorulen:
+            u.append(f"kaynaklar.json: aynı repo, tip ve kimlikle tekrarlanıyor: {repo}")
+        gorulen.add(anahtar)
+        if k.get("tip") not in KAYNAK_TIPLERI:
+            u.append(f"kaynaklar.json: {repo} tip bilinmiyor: {k.get('tip')!r}")
+        if "oncelik" in k and (isinstance(k["oncelik"], bool) or not isinstance(k["oncelik"], int)):
+            u.append(f"kaynaklar.json: {repo} oncelik sayı değil")
+        yabanci = [x for x in k if x not in KAYNAK_ANAHTARLARI]
+        if yabanci:
+            u.append(f"kaynaklar.json: {repo} bilinmeyen anahtar: {', '.join(yabanci)}")
+
+
+def kayit_semalari_denetimi(kok=KOK):
+    h, u = [], []
+    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar):
+        f(kok, h, u)
+    return h, u
+
+
+def _git_head_kaynaklar(kok):
+    try:
+        r = subprocess.run(["git", "show", "HEAD:kaynaklar.json"], cwd=kok, capture_output=True, text=True, timeout=10)
+        if r.returncode != 0:
+            return None
+        return json.loads(r.stdout)
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+
+
+def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
+    """P7'nin yeni-kayıt kapıları. YENİ = HEAD'deki kaynaklar.json'da (repo ya da eski_adlar) karşılığı olmayan kayıt.
+    HEAD okunamazsa (git yok, dosya yok) kapılar sessizce atlanır. Hepsi UYARI."""
+    kok = Path(kok)
+    h, u = [], []
+    try:
+        simdi = json.loads((kok / "kaynaklar.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return h, u  # ayrışmama zaten E6'da HATA
+    for k in simdi.get("repolar", []):
+        if isinstance(k, dict) and k.get("tip") == "KAYIP" and not k.get("kayip_tarihi"):
+            u.append(f"kayıp kaynakta kayip_tarihi yok: {k.get('repo')}")
+    eski = _git_head_kaynaklar(kok)
+    if not isinstance(eski, dict):
+        return h, u
+    adlar = set()
+    for k in eski.get("repolar", []):
+        if isinstance(k, dict):
+            adlar.add(str(k.get("repo", "")).lower())
+            adlar.update(str(x).lower() for x in (k.get("eski_adlar") or []))
+    kk = None
+    lisans_riskli = kapi = None
+    try:
+        lisans_riskli = _yukle(kok / "araclar" / "kaynak-cek.py", "kaynak_cek_p8").lisans_riskli
+    except Exception:  # noqa: BLE001
+        lisans_riskli = None
+    try:
+        kapi = _yukle(kok / "araclar" / "yol-tara.py", "yol_tara_p8").kapi_kontrol
+    except Exception:  # noqa: BLE001
+        kapi = None
+    for k in simdi.get("repolar", []):
+        if not isinstance(k, dict) or not isinstance(k.get("repo"), str):
+            continue
+        adlari = {k["repo"].lower()} | {str(x).lower() for x in (k.get("eski_adlar") or [])}
+        if adlari & adlar:
+            continue  # yeni değil (yeniden adlandırma da yeni sayılmaz)
+        repo = k["repo"]
+        onay = k.get("onay") if isinstance(k.get("onay"), dict) else {}
+        if not (k.get("eklendi") and _tarih_gecerli(k.get("eklendi")) and onay.get("kim") and onay.get("tarih")
+                and re.fullmatch(r"[0-9a-f]{40}", str(onay.get("commit", "")))):
+            u.append(f"kaynak kaydında onay yok: {repo} (rehber/03 A4)")
+        if lisans_riskli and not onay.get("lisans_onay"):
+            for s in (skiller or []):
+                if s.get("repo") == repo and lisans_riskli(s.get("lisans")):
+                    u.append(f"lisans {s.get('lisans') or 'belirsiz'} için onay.lisans_onay yok: {repo}")
+                    break
+        if kapi and not onay.get("yol_onay"):
+            try:
+                sorunlar, _taranan, hata = kapi(repo, None, skiller)
+                if hata:
+                    u.append(f"yol kapısı çalışmadı: {repo}")
+                elif sorunlar:
+                    u.append(f"yol kapısı takıldı: {repo}: {sorunlar[0]}")
+            except Exception:  # noqa: BLE001
+                u.append(f"yol kapısı çalışmadı: {repo}")
+    for anahtar in ("arsivden_cikarilan_repolar", "arsivden_cikarilanlar"):
+        once = {json.dumps(x, sort_keys=True, ensure_ascii=False) for x in eski.get(anahtar, [])}
+        for x in simdi.get(anahtar, []):
+            if json.dumps(x, sort_keys=True, ensure_ascii=False) in once or not isinstance(x, dict):
+                continue
+            on = x.get("onay") if isinstance(x.get("onay"), dict) else {}
+            if not (on.get("kim") and on.get("tarih")) or "<NEDEN" in str(x.get("neden", "")) \
+                    or (anahtar == "arsivden_cikarilan_repolar" and not x.get("geri_alma")):
+                u.append(f"{anahtar} kaydında onay/neden/geri_alma eksik: {x.get('repo')} (rehber/03)")
+    return h, u
+
+
+def _arac_bayraklari(metin):
+    """Aracın bayrakları: tırnak içindeki '--x' dizgileri + dosya başı açıklamasındaki (docstring) kullanım satırları."""
+    bay = set(re.findall(r"""["'](--[a-z][a-z0-9-]*)(?=[=\s"'])""", metin))
+    m = re.match(r"""\s*(?:#[^\n]*\n)*\s*(?:[rR])?(\"\"\"|\'\'\')(.*?)\1""", metin, re.S)
+    if m:
+        bay |= set(re.findall(r"(?<![\w-])(--[a-z][a-z0-9-]*)", m.group(2)))
+    return bay | {"--help", "-h"}
+
+
+def bayrak_denetimi(kok=KOK):
+    """Belgelerde anılan araclar/<araç>.py ve bayrakları var mı? Bayraklar kaynak metninden okunur (--help çalıştırılmaz)."""
+    kok = Path(kok)
+    h, u = [], []
+    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md"))
+    onbellek = {}
+    for b in belgeler:
+        if not b.is_file():
+            continue
+        satirlar = _metin(b).splitlines()
+        i = 0
+        while i < len(satirlar):
+            no, satir = i + 1, satirlar[i]
+            while satir.endswith("\\") and i + 1 < len(satirlar):
+                i += 1
+                satir = satir[:-1] + " " + satirlar[i].strip()
+            i += 1
+            for m in re.finditer(r"araclar/([a-z][\w-]*)\.py([^`\n]*)", satir):
+                ad, kalan = m.group(1), m.group(2)
+                arac = kok / "araclar" / f"{ad}.py"
+                if not arac.is_file():
+                    u.append(f"{b.relative_to(kok)}:{no}: olmayan araç araclar/{ad}.py")
+                    continue
+                if ad not in onbellek:
+                    onbellek[ad] = _arac_bayraklari(_metin(arac))
+                for bayrak in re.findall(r"(?<![\w-])(--[a-z][a-z0-9-]*)", kalan):
+                    if bayrak not in onbellek[ad]:
+                        u.append(f"{b.relative_to(kok)}:{no}: araclar/{ad}.py '{bayrak}' bayrağını tanımıyor")
+    return h, u
+
+
+def eski_anlatim_denetimi(kok=KOK):
+    kok = Path(kok)
+    h, u = [], []
+    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md"))
+    for b in belgeler:
+        for no, satir in enumerate(_metin(b).splitlines(), 1):
+            if any(d.search(satir) for d in ESKI_ANLATIM):
+                u.append(f"{b.relative_to(kok)}:{no}: eski anlatım (genel klasörler boşaltılacak, notlar/kararlar.md K-04): {satir.strip()[:60]}")
+    return h, u
+
+
+def belge_ve_kayit_denetimleri(kok=KOK, skiller=None):
+    """Tüm P8 denetimleri -> (hatalar, uyarilar). Hiçbiri doğrulamayı düşüremez: beklenmedik hata UYARI olur."""
+    hatalar, uyarilar = [], []
+    for ad, f in (("eşitlik", esitlik_denetimi), ("giriş belgeleri", giris_belgeleri_denetimi),
+                  ("paket dosyaları", paket_dosyalari_denetimi), ("kayıt şemaları", kayit_semalari_denetimi),
+                  ("kaynak kapıları", lambda k: kaynak_kapilari_denetimi(k, skiller)),
+                  ("bayraklar", bayrak_denetimi), ("eski anlatım", eski_anlatim_denetimi)):
+        try:
+            h, u = f(kok)
+        except Exception as e:  # noqa: BLE001
+            h, u = [], [f"{ad} denetimi çalışmadı ({type(e).__name__}: {str(e)[:80]})"]
+        hatalar += h
+        uyarilar += u
+    return hatalar, uyarilar
 
 
 def main():
@@ -266,18 +707,27 @@ def main():
         if not ok:
             uyarilar.append("notlar/proje-kullanimi.md güncel değil (projelerde kurulu skiller değişmiş) -> python3 araclar/proje-kullanimi.py")
         ayar_p = json_oku(KOK / "projeler.json", {}) or {}
-        adlar_p = {p.name for p in pk.projeleri_bul(ayar_p)} | set(ayar_p.get("notlar", {}))
+        if hasattr(pk, "hizli_kontrol"):
+            for u in pk.hizli_kontrol(ayar_p):
+                uyarilar.append(u)
+        adlar_p = {p.name for p in pk.projeleri_bul(ayar_p)} | set(ayar_p.get("notlar", {})) \
+            | set(ayar_p.get("bilinen_projeler", {})) | set(ayar_p.get("program_kullanimi", {})) \
+            | set(ayar_p.get("kendi_skilleri", {})) \
+            | {Path(y["yol"]).name for y in ayar_p.get("yoksay", []) if isinstance(y, dict) and y.get("yol")}
         skill_adlari = {s["ad"].lower() for s in skiller} | {s["repo"].split("/")[1].lower() for s in skiller}
         adlar_p = sorted(a for a in adlar_p if len(a) >= 5 and a.lower() not in skill_adlari)
         if adlar_p:
             desen = re.compile(r"(?<![\w-])(" + "|".join(re.escape(a) for a in adlar_p) + r")(?![\w-])")
-            for dosya in ("kaynaklar.json", "registry.json", "ucret-siniflandirma.json", "kategori-kurallari.json"):
+            for dosya in ("kaynaklar.json", "registry.json", "ucret-siniflandirma.json", "kategori-kurallari.json", "programlar.json"):
                 bulunan = sorted(set(desen.findall((KOK / dosya).read_text(encoding="utf-8"))))
                 if bulunan:
                     uyarilar.append(f"{dosya}: kayıtta proje adı geçiyor ({', '.join(bulunan)}); değerlendirme projeden bağımsız "
                                     "yazılır, proje bilgisi projeler.json -> notlar'a taşınmalı (CLAUDE.md kural 6)")
     except Exception as e:  # noqa: BLE001
         uyarilar.append(f"proje kullanım denetimi çalışmadı: {e}")
+    h2, u2 = belge_ve_kayit_denetimleri(skiller=skiller)
+    hatalar += h2
+    uyarilar += u2
     for u in uyarilar:
         print("UYARI:", u)
     for h in hatalar:

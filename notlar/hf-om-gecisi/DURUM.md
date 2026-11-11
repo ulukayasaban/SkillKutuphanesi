@@ -113,7 +113,30 @@ Tek istisna: kütüphanenin kendi rutin kontrolleri (`dogrula.py`, `test.py`, `p
 ## Düzen denetimi (2026-11-11 gece, sadece okuma; kullanıcının geniş isteği)
 İstek: bütün düzen, kullanılan tüm yapay zeka araçlarında çalışsın; skill ekleme/silme, güncelleme, proje takibi, git takibi,
 aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz ve sürdürülebilir olsun.
-- Sıra: boşluk denetimi (BİTTİ) → tasarım (BİTTİ 2026-11-11 gece) → uygulama (kütüphane içinde; SIRADAKİ) → inceleme → üç kontrol → commit.
+- Sıra: boşluk denetimi (BİTTİ) → tasarım (BİTTİ 2026-11-11 gece) → uygulama (kütüphane içinde; 2026-11-11 21:45'te BAŞLADI,
+  kullanıcı "uygulamaya geç, başlat" dedi; Claude yeniden başlatıldı, anahtar oturumda görünüyor) → inceleme → üç kontrol → commit.
+  Uygulama yarıda kalırsa: çalışma ağacındaki commit edilmemiş dosyalar yarım iştir; `git status` ile bak, paket sırasına göre devam et.
+  ONAY (kullanıcı, 2026-11-11 gece, "evet ekle"): `CLAUDE.md` ve `AGENTS.md` sonuna yeni rehberleri gösteren yönlendirme satırları
+  (Yama A) eklenecek; mevcut kurallar değişmez. Uygulama bitince hazırlanan metinle eklenir. Kural 1 istisnası (Yama B) bu onaya dahil DEĞİL.
+  ONAY (kullanıcı, 2026-11-12 00:04, "openmontage güncelleme işlemlerini bu şekilde tamamlayalım"): OpenMontage güncellemesi
+  `rehber/11` yoluyla yapılacak: önce yedek (`~/Documents/Claude/yedek/openmontage-2026-11-12/`), sonra AYRI deneme klasörü
+  (`~/Documents/Claude/deneme/openmontage-<hedef>`; çalışan kuruluma dokunulmaz), yamalı dört dosya için kullanıcıya tek tek sorulur.
+  Asıl kurulumun güncellenmesi bu onaya dahil DEĞİL: deneme geçince kullanıcıya yeniden sorulur. Uygulama işi kaydedildikten sonra başlar.
+  UYGULAMA BİTTİ (2026-11-12 00:10): 8 paket yazıldı, incelendi; son test 312/312. Ardından onaylı işler yapıldı: `CLAUDE.md`/`AGENTS.md`
+  Yama A + Yama B (kural 1 istisnası), üç eski belge `notlar/rafta/` altına, birleşmiş `skill/lottiefiles-motion-design` dalı silindi.
+  TOPLU ONAY (2026-11-12, `notlar/kararlar.md` K-24..K-27): aşağıdaki işler sırası gelince yeniden sorulmadan yapılır (her birinde önce
+  yedek; kontrol başarısızsa ya da durum anlatılana uymuyorsa dur ve sor). SIRA:
+  1. Kütüphaneyi kaydet + push. 2. Gerçek veriye bağlı test iddiaları ve `test.py` izleme listesi düzeltmesi (aşağıda "Uygulamadan kalanlar").
+  3. OpenMontage: yedek → deneme klasörü → (geçerse) asıl güncelleme → origin adresi. 4. HyperFrames güncellemesi + ek iki kilit.
+  5. IstatistikYoutube. 6. Akıl Dışı (Codex → Claude). 7. Etsy-Arif: yalnız kütüphanenin kurduğu skiller. 8. Claude genel notu + üç komut.
+  9. AntigravityTest2 → Çöp Kutusu (önce `projeler.json` kaydından çıkar). 10. Bekçi taban dosyası → tam yedek → sınıf sınıf boşaltma →
+  yedek silme hatırlatması. 11. Aylık görev metni (Aşama 2) + canlı görev. 12. Son kontroller + push.
+  Uygulamadan kalanlar: (a) `ortak.py` izleme listesi / `test.py` parmak izi Cursor, Gemini, Copilot klasörlerini de sayıyor; aylık
+  birleştirmede sahte başarısızlık verebilir; (b) `test_p6`, `test_p1`, `test_p5` içinde gerçek veriye bağlı birkaç iddia var (program
+  güncellenince kırılır); (c) aylık Aşama 2 (damga, `--takip`, `--atla` kullanımı, `zamanlanmis/aylik-guncelleme.SKILL.md`);
+  (d) `--kayip-isaretle` yok, elle; (e) kayıtsız arşiv klasörleri için `--yoksay` (onay listesi 38).
+  Eski not (artık geçersiz): Bu turda YAPILMAYANLAR (onay bekler, metinleri `notlar/duzen-denetimi-2026-11/onay-bekleyen/` içine yazılır): `CLAUDE.md`/`AGENTS.md`
+  ekleri, eski belgeleri rafa kaldırma, gerçek makine için taban dosyası, canlı zamanlanmış görev metni, proje bloklarına kütüphane yolu.
 - Tasarım: `notlar/duzen-denetimi-2026-11/04-tasarim-ozeti.md` (özet, ertelenen, onay isteyen, riskler) ve `tasarim/tasarim-p*.md` (8 paket).
   Uygulama sırası: P3 → P1 → P2 + P5 + P6 → P7 → P4 → P8 (CLAUDE/AGENTS Yama A; kural 1 istisnası olan Yama B ayrı onayla) → boşaltma.
   Uygulama makineye, projelere, ayar dosyalarına ve zamanlanmış göreve yazmaz; sadece kütüphane içi araç, rehber ve test ekler.

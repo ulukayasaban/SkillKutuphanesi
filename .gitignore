@@ -4,3 +4,22 @@ __pycache__/
 .arsiv-yeni/
 .arsiv-eski/
 .guncelleme-kilidi
+# Gizli bilgi ve yedek korumaları. Hepsi kök düzeyine bağlı (başında /): arsiv/ içindeki üçüncü taraf
+# dosyalar (ör. .env.example) etkilenmez, dogrula.py'deki "git'e girmeyen arşiv dosyası" denetimi bozulmaz.
+/.env
+/.env.*
+!/.env.example
+/araclar/.env
+/*.pem
+/*.key
+/*.p12
+/*.pfx
+/programlar/**/.env
+# Yedekler kütüphanenin dışında tutulur (rehber/13). Yanlışlıkla kök ya da proje klasörüne düşerse git'e girmesin.
+/yedek/
+/.skill-kutuphanesi/
+/*.bundle
+/*.yedek
+# P4 yerel damga ve özet: makineye özgü, her koşuda değişir, git'e girmez (aylik-ozet 'yoksayılmıyorsa yazma' kontrolü yapar).
+/notlar/son-aylik-calisma.json
+/notlar/aylik-ozet.md

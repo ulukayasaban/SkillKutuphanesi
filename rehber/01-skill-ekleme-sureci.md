@@ -9,7 +9,7 @@
 - Bir projede `ui-tasarimci` agent'ına `impeccable` verirsen, sadece o projedeki `ui-tasarimci` onu önyükler.
 - Aynı projedeki diğer agent'lar için: Claude'da önyüklenmez (ama gerekirse Skill aracıyla çağırabilir);
   Codex'te ise o rolün `.toml` dosyasında açıkça **kapatılır**.
-- Eski projelerin ve eski agent'ların, global klasörlerdeki skilleri kullanmaya devam eder.
+- Genel klasörlerdeki (~/.claude/skills, ~/.agents/skills, ~/.codex/skills) skiller bu araçla yönetilmez. Genel klasörler boşaltıldıktan sonra (rehber/12-genel-klasor-bosaltma.md) eski projeler ve agent'lar yalnız kendi proje klasöründeki skilleri görür; skill gerekiyorsa o projeye bu araçla kurulur.
 
 ## Süreç (her seferinde aynı)
 
@@ -19,7 +19,7 @@
                      6. DOĞRULAMA ◄── 5. KURULUM (yedekli) ◄── 4. Raporu oku, onay ver
 ```
 
-1. **İhtiyaç:** proje tipi, kullanılacak teknoloji, agent'lar.
+1. **İhtiyaç:** proje tipi, kullanılacak teknoloji, agent'lar ve hangi AI araçlarıyla açılacağı (Claude Code, Codex, Antigravity, Cursor, VS Code Copilot; Windows'ta açılacak mı). Cevaba göre `--arac ortak` ya da `--arac yalniz-claude` (rehber/14).
 2. **Öneri:** `--oner "..."` kütüphanedeki tüm skilleri (gizliler dahil sayılır) puanlar; hangi rolün uygun olduğunu söyler.
 3. **Kuru çalıştırma:** `--kuru` ön kontrol raporunu ekrana yazar; projeye **hiçbir dosya yazmaz**. (Uygulanan kurulumun raporu `.skill-kutuphanesi/son-rapor.md`'ye kaydedilir.)
 4. **Onay:** HATA varsa işlem yapılmaz. UYARI varsa sen onaylarsın (`--evet`).
@@ -91,24 +91,34 @@ Bu profil OpenMontage skillerini kullanır. Raporda `bagimlilik` uyarısı çık
 > "~/Projeler/yeni-site için Next.js + GSAP landing page yapacağız; ui-tasarimci, motion ve qa agent'ları olacak. Skilleri kur."
 
 Agent `SkillKutuphanesi/CLAUDE.md` (Codex: `AGENTS.md`) talimatına göre:
-1. `--oner` çalıştırır, tabloyu gösterir.
-2. `--kuru` raporunu gösterir: HATA/UYARI/BİLGI satırları ve "kütüphanede şu ilgili skiller de var" listesi.
-3. **Senin onayınla** `--evet` ile kurar, `--dogrula` sonucunu bildirir.
+1. Hangi araçlarla açılacağını sorar ve `--arac` ile kaydeder.
+2. `--oner` çalıştırır, tabloyu gösterir.
+3. `--kuru` raporunu gösterir: HATA/UYARI/BİLGI satırları ve "kütüphanede şu ilgili skiller de var" listesi.
+4. **Senin onayınla** `--evet` ile kurar, `--dogrula` sonucunu bildirir.
 
-## Projeyi Codex Desktop'ta / Claude'da açtığında
-- **Claude Code:** proje skillerini `.claude/skills`'ten, agent'ları `.claude/agents`'tan otomatik görür.
-- **Codex:** skillleri `.agents/skills`'ten, agent'ları `.codex/agents`'tan görür.
-- 2026-10-21 testi: deneme projesinde iki araç da 10 skill'in hepsini listeledi.
+## Araç düzeni: hangi araç neyi görür
+Proje iki düzenden biriyle kurulur. Seçim `kilit.json` → `araclar` (+ `arac_secimi`) alanına yazılır; güncellemeler seçimi korur.
 
-### Sadece Claude kullanan proje (`--arac claude`)
-Proje Codex kullanmıyorsa (ya da Windows'ta açılıyorsa: git orada symlink'i açamaz) skiller `.claude/skills` altında
-**gerçek kopya** olur; `.agents/skills`, `.codex/agents` ve AGENTS.md bloğu kurulmaz. Seçim `kilit.json` → `araclar`'a
-yazılır; sonraki `--skill`/`--guncelle` bu düzene uyar. Geri dönüş: `--arac ikisi`.
+| | `ortak` (varsayılan) | `yalniz-claude` |
+|---|---|---|
+| Klasörler | `.agents/skills` (gerçek kopya) + `.claude/skills` (symlink) | `.claude/skills` (gerçek kopya) |
+| Rol dosyaları | `.claude/agents/*.md` + `.codex/agents/*.toml` | `.claude/agents/*.md` |
+| Talimat bloğu | `CLAUDE.md` + `AGENTS.md` | `CLAUDE.md` |
+| Skilleri görenler | Claude Code, Codex, Antigravity, Cursor, VS Code Copilot | Claude Code, Cursor, VS Code Copilot |
+| Görmeyenler | yok | Codex, Antigravity |
+
+- Komut: `--arac ortak` ya da `--arac yalniz-claude`. `ikisi` ve `claude` eski adlardır, hâlâ çalışır (`ikisi` = `ortak`, `claude` = `yalniz-claude`).
+- Rapordaki `arac-duzeni`, `arac-gormez` ve `arac-secimi-yok` satırlarını oku; hangi aracın skilleri göreceğini orada yazar. `arac-secimi-yok` çıkıyorsa kullanıcıya hangi araçlarla açılacağını sor ve `--arac` ile kaydet.
+- İstediğin zaman iki düzen arasında gidip gelebilirsin; skill içeriği değişmez, yalnız yerleşim değişir (önce yedek alınır):
 ```bash
-python3 araclar/skill-ekle.py <proje> --arac claude --kuru     # ne değişecek
-python3 araclar/skill-ekle.py <proje> --arac claude --evet     # uygula (önce yedek; içerik değişmez)
+python3 araclar/skill-ekle.py <proje> --arac yalniz-claude --kuru   # ne değişecek
+python3 araclar/skill-ekle.py <proje> --arac yalniz-claude --evet   # uygula
+python3 araclar/skill-ekle.py <proje> --arac ortak --evet           # ortak düzene dön
 ```
-Not: symlink'in aynı içerikli gerçek kopyaya dönmesi (klasör kopyalanınca/Windows) artık "elle değiştirilmiş" sayılmaz.
+- Kurulu skiller varken `--skill ... --arac <başka düzen>` birlikte verilirse `arac-karisik` HATA'sı çıkar: önce yalnız `--arac` ile düzeni değiştir, sonra skill ekle.
+- Windows'ta açılacak projelerde bugün `yalniz-claude` kullanılır (git orada symlink'i açamaz; Codex ve Antigravity göremez). Ayrıntı ve araç tablosu: `rehber/14-yapay-zeka-araclari.md`.
+- Test (2026-10-21): deneme projesinde Claude ve Codex 10 skill'in hepsini listeledi. Antigravity, Cursor ve Copilot için gerçek deneme henüz yok (`yapay-zeka-araclari.json` → `denendi` boş).
+- Symlink'in aynı içerikli gerçek kopyaya dönmesi (klasör kopyalanınca/commit edilince) "elle değiştirilmiş" sayılmaz.
 
 ## Kaldırma / geri alma
 ```bash
@@ -125,3 +135,10 @@ Codex agent dosyalarında mutlak yol vardır. Proje klasörünü taşıdıysan y
 ```bash
 python3 araclar/skill-ekle.py <yeni-yol> --yenile
 ```
+Başka bilgisayara ya da Windows'a kopyalandıysa rehber/14 bölüm 5. `skill-ekle.py` Windows'ta çalışmaz; skill ekleme/güncelleme kütüphanenin olduğu Mac'te yapılır.
+
+## Dikkat edilecekler
+- Silmeden önce başka skillerin ona bağlı (kardeş yol) olup olmadığına bak: `python3 araclar/proje-kullanimi.py --skill <kimlik>` ve projedeki `.skill-kutuphanesi/kilit.json` → `kardes` alanı. Tek elle değişmiş skill yüzünden güncelleme duruyorsa kullanıcıya göster; kararını al (`--zorla` ya da skili geri yükle).
+- Aynı projede iki oturumdan aynı anda skill-ekle çalıştırma (proje kilidi yok); ikinci oturumu açmadan önce ilkinin bittiğine bak.
+- Araç ilk yedekte `.skill-kutuphanesi/.gitignore` dosyasını kendisi yazar (`yedek/` satırı); yedekler git'e girmez.
+- `--kuru` her işlemde hiçbir dosya yazmaz (`--yenile`, `--blok` ve `--geri-al` dahil).

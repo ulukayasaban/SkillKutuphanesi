@@ -77,6 +77,9 @@ def skill_sayisi(repo, onbellek):
 
 
 def main():
+    if "-h" in sys.argv or "--help" in sys.argv:  # yardım istenince tarama başlatma
+        print(__doc__ or "populer-tarama.py: kullanım için dosyanın başındaki açıklamaya bakın (-h ağ işi yapmaz, dosya yazmaz).")
+        return 0
     ap = argparse.ArgumentParser(description="GitHub'da popüler skill repoları (salt okuma)")
     ap.add_argument("--min-yildiz", type=int, default=150)
     ap.add_argument("--gun", type=int, default=120, help="son N günde push almış repolar")

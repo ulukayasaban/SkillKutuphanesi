@@ -22,7 +22,7 @@ bildiklerini kullan. Kapsam TAMAMEN SkillKutuphanesi: skill ve referans kütüph
    çıktısını al; ikisi aynı olmalı. Farklıysa DUR ve bildir.
 2. Skill'i SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py . …` ile kur. Elle kopyalama, symlink,
    `npx skills add`, internetten skill indirme YOK. Bu araç skilleri BU projenin `.agents/skills/` klasörüne kopyalar,
-   `.claude/skills/` altına bağlar, `.skill-kutuphanesi/kilit.json`'a kaynağını (repo + commit) yazar, yedek alır.
+   `.claude/skills/` altına bağlar (düzene göre; yalniz-claude'da yalnız `.claude/skills/`), `.skill-kutuphanesi/kilit.json`'a kaynağını (repo + commit) yazar, yedek alır.
 3. Global klasörlere (~/.claude/skills, ~/.agents/skills, ~/.codex/skills, ~/.openmontage) dokunma.
 4. `--evet` sadece ben raporu görüp "onaylıyorum" dedikten sonra. `--zorla` sadece ben açıkça istersem.
 5. Benim dosyalarıma (mevcut `.claude/agents/*`, kendi `.claude/skills/*`, CLAUDE.md) onayım olmadan dokunma.
@@ -30,7 +30,7 @@ bildiklerini kullan. Kapsam TAMAMEN SkillKutuphanesi: skill ve referans kütüph
 ══ ADIM 1 — Bildiğini 6 satırda yaz (analiz değil, özet) ══
 Teknoloji ve ana sürümler · referans kütüphaneleri (three.js, React, Next.js, GSAP, Tailwind, Playwright, FFmpeg…) ve
 sürümleri · mevcut agent'lar ve görevleri · projede zaten kurulu skiller (`.skill-kutuphanesi/kilit.json` varsa oradan) ·
-bu turda güçlendirilecek işler · Codex de kullanılıyor mu. Emin olmadığın bir şey varsa SADECE onu kısa bir dosya okumasıyla
+bu turda güçlendirilecek işler · Codex de kullanılıyor mu · hangi araçlarla açılıyor (Claude Code / Codex / Antigravity / Cursor / VS Code Copilot / Windows). Emin olmadığın bir şey varsa SADECE onu kısa bir dosya okumasıyla
 doğrula (ör. package.json'da sürüm).
 
 ══ ADIM 2 — Kütüphanenin karar rehberini oku ══
@@ -93,12 +93,12 @@ kütüphanesi ve sürüm uyumu · lisans · ücret · trend. Ayrıca: seçmediğ
 OLMAYAN ihtiyaçlar (bunları kütüphaneye ekletmek için SkillKutuphanesi oturumunda prompt 07'yi öner).
 
 ══ ADIM 8 — Ön kontrol (hiçbir şey değişmez) ══
-`python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py . [--profil P] [--rol R …] [--skill S …] [--rol-adi X] --kuru`
+`python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py . [--profil P] [--rol R …] [--skill S …] [--rol-adi X] [--arac <ortak|yalniz-claude>] --kuru`
 Raporu OLDUĞU GİBİ göster (kurulacaklar, roller, tüm HATA/UYARI/BİLGİ, `ek-aday`). HATA varsa kurma, nedenini ve seçenekleri
 açıkla. UYARI'ları tek tek yorumla. DUR ve onayımı bekle.
 
 ══ ADIM 9 — Kurulum ve kanıt (sadece onayımdan sonra) ══
-1. Aynı komut `--evet` ile. 2. `… skill-ekle.py . --dogrula` → ✅. 3. `… skill-ekle.py . --durum` → hepsi güncel.
+1. Aynı komut `--evet` ile (düzen kararı `--arac` ile kayda geçer). 2. `… skill-ekle.py . --dogrula` → ✅. 3. `… skill-ekle.py . --durum` → hepsi güncel.
 4. `git -C ~/Documents/SkillKutuphanesi status --porcelain` başlangıçtakiyle aynı (kütüphane değişmedi).
 5. Projede oluşanları listele (`.agents/skills/`, `.claude/skills/`, `.claude/agents/`, `.codex/agents/`, `.skill-kutuphanesi/kilit.json`).
    Proje git'teyse `.skill-kutuphanesi/yedek/`'i `.gitignore`'a eklemeyi öner (onayla).

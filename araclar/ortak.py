@@ -1220,3 +1220,99 @@ def yol_istisna_denetimi(skiller):
                 uyarilar.append(f"{YOL_ISTISNA.name}: {anahtar} kayıt {i + 1} ({k['tur']}): bulgu_hash tutmuyor (skill dosyaları değişmiş): "
                                 f"python3 araclar/yol-tara.py --skill {uyan[0]['id']} ile yeniden doğrula")
     return hatalar, uyarilar
+
+
+# --- P8: genel klasör izi, rapor araçları, rapor yaşı ---------------------------------------
+GENEL_ATLA = ("synced", ".system", "skills-cursor")  # Claude hesap senkronu / Codex ve Cursor'ın kendi yerleşikleri
+GENEL_IZLEME_KLASORLERI = list(GLOBAL_KLASORLER.values()) + [
+    Path.home() / ".openmontage" / ".agents" / "skills",
+    Path.home() / ".cursor" / "skills",
+    Path.home() / ".gemini" / "skills",
+    Path.home() / ".gemini" / "antigravity" / "skills",
+    Path.home() / ".copilot" / "skills",
+]
+
+
+def genel_izleri(klasorler=None) -> dict:
+    """{'<klasör>/<ad>': mtime_ns}: kütüphane araçları bu klasörlere yazmamalı. Yalnız okur."""
+    iz = {}
+    for g in (GENEL_IZLEME_KLASORLERI if klasorler is None else klasorler):
+        g = Path(g)
+        if g.is_dir():
+            for p in sorted(g.iterdir()):
+                if p.name not in GENEL_ATLA:
+                    iz[f"{g}/{p.name}"] = p.lstat().st_mtime_ns
+    return iz
+
+
+def genel_parmak_izi(klasorler=None) -> str:
+    return hashlib.sha256(json.dumps(genel_izleri(klasorler), sort_keys=True).encode()).hexdigest()
+
+
+def genel_fark(once: dict, sonra: dict) -> list:
+    return sorted(set(once) ^ set(sonra) | {k for k in set(once) & set(sonra) if once[k] != sonra[k]})
+
+
+OZET_DURUMLAR = ("temiz", "dikkat", "sorun")
+OZET_ARACLARI = [  # (araç dosyası adı, ekstra bayraklar); her biri --ozet-json destekler; duman ve aylik-ozet (P4) aynı listeyi kullanır
+    ("git-durum", []), ("yedek-denetim", []), ("genel-bekci", []),
+    ("program-denetim", []), ("proje-kullanimi", ["--saglik"]),
+    ("skill-ekle", ["--araclar"]),
+    ("konu-takip", ["--bekleyenler"]),
+]
+
+
+def ozet_json_gecerli(metin: str):
+    """stdout tam olarak tek JSON nesnesi mi? -> (nesne ya da None, hata metni)."""
+    try:
+        o = json.loads(metin)
+    except ValueError as e:
+        return None, f"JSON değil: {str(e)[:80]}"
+    if not isinstance(o, dict) or not {"arac", "durum", "satirlar", "karar_bekleyen"} <= set(o):
+        return None, "arac/durum/satirlar/karar_bekleyen anahtarları eksik"
+    if o["durum"] not in OZET_DURUMLAR or not isinstance(o["arac"], str):
+        return None, f"durum geçersiz: {o['durum']!r}"
+    if not all(isinstance(o[k], list) and all(isinstance(x, str) for x in o[k]) for k in ("satirlar", "karar_bekleyen")):
+        return None, "satirlar/karar_bekleyen metin listesi değil"
+    return o, ""
+
+
+RAPOR_YASI = [  # (yol, eşik gün, yenileme komutu): aylik-ozet tam modda gösterebilir; dogrula.py KULLANMAZ
+    ("notlar/github-trend.md", 45, "python3 araclar/github-trend.py --aday"),
+    ("notlar/populer-skiller.md", 45, "python3 araclar/populer-tarama.py"),
+    ("notlar/konu-takip.md", 45, "python3 araclar/konu-takip.py"),
+    ("notlar/program-denetimi.md", 45, "python3 araclar/program-denetim.py"),
+    ("notlar/kapsam-denetimi.md", 45, "python3 araclar/kapsam-denetimi.py"),
+    ("TEST_RAPORU.md", 45, "aylık güncelleme yeniler (python3 araclar/skill-calistir.py)"),
+    ("notlar/proje-durumu.md", 45, "python3 araclar/proje-kullanimi.py --saglik --yaz"),
+    ("notlar/genel-bekci.md", 45, "python3 araclar/genel-bekci.py"),
+    ("notlar/hf-om-gecisi/DURUM.md", 45, "kütüphane oturumu 'Son güncelleme' satırını yeniler"),
+]
+
+
+def rapor_yasi_satirlari(kok=None, bugun=None, tablo=None) -> list:
+    """Bayat raporların düz cümleleri (yoksa []). Yalnız okur. Tarih: dosyanın ilk 8 satırındaki ilk YYYY-AA-GG;
+    yoksa 'git log -1 --format=%cs -- <dosya>' (klonda mtime sıfırlanır, kullanılmaz); ikisi de yoksa atlanır."""
+    from datetime import date
+    kok = Path(kok or KOK)
+    bugun = bugun or date.today()
+    cikti = []
+    for yol, esik, komut in (RAPOR_YASI if tablo is None else tablo):
+        f = kok / yol
+        if not f.is_file():
+            continue
+        m = re.search(r"\d{4}-\d{2}-\d{2}", "\n".join(f.read_text(encoding="utf-8", errors="replace").splitlines()[:8]))
+        gun = m.group(0) if m else ""
+        if not gun:
+            try:
+                gun = subprocess.run(["git", "log", "-1", "--format=%cs", "--", yol], cwd=kok, capture_output=True,
+                                     text=True, timeout=10).stdout.strip()
+            except (OSError, subprocess.SubprocessError):
+                gun = ""
+        try:
+            yas = (bugun - date.fromisoformat(gun)).days
+        except ValueError:
+            continue
+        if yas > esik:
+            cikti.append(f"{yol} {yas} gün önce üretilmiş (eşik {esik}); yenile: {komut}")
+    return cikti

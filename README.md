@@ -1,10 +1,14 @@
+> Yeni oturum mu? Önce [BASLA.md](BASLA.md) · kalıcı kararlar: [notlar/kararlar.md](notlar/kararlar.md)
+
 # SkillKutuphanesi
 
 GitHub'da yıldızladığın repolardaki agent skillerinin **yerel, tekrarsız, sürüm takipli arşivi** ve onları
-**sadece seçtiğin projeye, seçtiğin agent'a** Claude Code + Codex için güvenli şekilde kuran araç seti.
+**sadece seçtiğin projeye, seçtiğin agent'a** güvenli şekilde kuran araç seti. Desteklenen araçlar: Claude Code, Codex, Antigravity,
+Cursor, VS Code Copilot (`yapay-zeka-araclari.json`, [rehber/14](rehber/14-yapay-zeka-araclari.md)).
 
-- Global skill klasörlerin (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, `~/.openmontage`) **değişmez**;
-  eski agent'ların onlarla çalışmaya devam eder. Yeni projeler skillerini buradan alır.
+- Kütüphane araçları global skill klasörlerine (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, `~/.openmontage`) hiçbir zaman yazmaz.
+  Bu klasörler boşaltılacak (karar: `notlar/kararlar.md` K-04); yöntem ve yedek: [rehber/12](rehber/12-genel-klasor-bosaltma.md), [rehber/13](rehber/13-yedek-ve-geri-alma.md).
+  Skiller yalnız projenin içine kurulur.
 - Hiçbir şey otomatik kurulmaz; her kurulumdan önce ön kontrol raporu çıkar.
 
 ## Hızlı başlangıç
@@ -38,6 +42,10 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `notlar/roller-ve-profiller.md` | Tüm rol ve profillerin özeti (otomatik üretilir) |
 | `notlar/ucretli-skiller.md`, `ucret-siniflandirma.json` | Ücretli / kısmen ücretli skiller ve gerekçeleri (sınıflandırma elle, liste otomatik) |
 | `notlar/` | Kapsam denetimi, geliştiriciler, teknoloji rehberi, T5/T6 referans notları, kategori inceleme raporları |
+| `BASLA.md`, `notlar/kararlar.md` | Yeni oturumun giriş belgesi (okuma sırası, hangi isteğe hangi komut) ve kullanıcının kalıcı kararları |
+| `yapay-zeka-araclari.json` | Desteklenen yapay zeka araçları: hangi klasörü ve talimat dosyasını okur, doğrulama tarihi (`rehber/14`) |
+| `yedekler.json` | Makine geneli yedeklerin envanteri: ne, nerede, nasıl geri yüklenir (`rehber/13`; `araclar/yedek-denetim.py` okur) |
+| `programlar.json`, `programlar/` | Skill olmayan programlar (HyperFrames, OpenMontage, etsyotomasyon): kartlar ve kaynak kayıtları (`rehber/11`) |
 | `rehber/` | Süreç notları (aşağıda) |
 | `araclar/` | Python araçları (sadece standart kütüphane + `gh` CLI) |
 
@@ -49,13 +57,18 @@ varsayılan dal `master` (araçlar `ANA_DAL = "master"` kullanır).
   (`NOASSERTION`). Depo herkese açık yapılmaz, başkasıyla paylaşılmadan önce lisanslar ayrıca incelenir.
 - **Yerel kopya asıl kopyadır.** Tüm araçlar `~/Documents/SkillKutuphanesi` üzerinde çalışır; GitHub yedek ve inceleme (PR) kaydıdır.
   Push ve PR **sadece kullanıcı isteyince** yapılır; aylık zamanlanmış görev hiçbir şey push etmez.
-- **Gönderilmeyenler** (`.gitignore`): `.gecici/`, `.arsiv-yeni/`, `.arsiv-eski/`, `.guncelleme-kilidi`, `__pycache__/`, `.DS_Store`.
+- **Gönderilmeyenler** (`.gitignore`): `.gecici/`, `.arsiv-yeni/`, `.arsiv-eski/`, `.guncelleme-kilidi`, `__pycache__/`, `.DS_Store`,
+  `/.env*`, `/*.pem`, `/*.key`, `/*.p12`, `/*.pfx`, `/programlar/**/.env`, `/yedek/`, `/.skill-kutuphanesi/`, `/*.bundle`, `/*.yedek`
+  ve makineye özgü iki dosya (`notlar/son-aylik-calisma.json`, `notlar/aylik-ozet.md`).
 - **Başka bilgisayarda kurmak:** Python 3 (sadece standart kütüphane) + `gh` CLI (`gh auth login`) yeterli.
   ```bash
   gh repo clone ulukayasaban/SkillKutuphanesi ~/Documents/SkillKutuphanesi
   cd ~/Documents/SkillKutuphanesi && python3 araclar/dogrula.py && python3 araclar/kapsam-denetimi.py
   ```
   Projelerin `kilit.json` dosyaları kütüphane yolunu tutar; kütüphane farklı bir yola klonlanırsa `promptlar/09-proje-tasindi-veya-bozuldu.md`.
+  Tam geri kurma listesi, geri gelmeyenler ve makine durumu: [rehber/13-yedek-ve-geri-alma.md](rehber/13-yedek-ve-geri-alma.md).
+  **GitHub'a gönderilmemiş commit'ler klonda yoktur; önce `python3 araclar/git-durum.py` çalıştır.** Klondan sonra `python3 araclar/dogrula.py`
+  ve `python3 araclar/git-durum.py`; skill'lerin kendi `.gitignore` dosyaları yüzünden eksik gelen arşiv dosyası `dogrula.py` tarafından HATA olarak gösterilir.
 
 ### Değişiklik süreci (PR)
 | Değişiklik | Akış |
@@ -68,7 +81,7 @@ Aylık güncelleme PR'ı GitHub'daki **Merge düğmesiyle birleştirilmez**: `--
 PR açıklaması `.github/pull_request_template.md` kontrol listesiyle gelir.
 
 ## Hazır promptlar
-Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [promptlar/README.md](promptlar/README.md)
+Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 16 prompt: [promptlar/README.md](promptlar/README.md)
 
 ## Rehberler
 1. [Skill ekleme süreci ve örnekler](rehber/01-skill-ekleme-sureci.md)
@@ -81,6 +94,10 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [prompt
 8. [Test süreci](rehber/08-test-sureci.md): otomatik kontroller, gerçek agent testi, Claude hesabıyla ad çakışması
 9. [Ad, kimlik ve çakışma kuralları](rehber/09-ad-kimlik-ve-cakisma.md): çıplak ad el değiştirmez, aynı ad farklı iş, ad devri, repo adı değişirse
 10. [Proje kullanımı](rehber/10-proje-kullanimi.md): hangi proje hangi skili kullanıyor; proje bilgisinin tek yeri
+11. [Program yönetimi](rehber/11-program-yonetimi.md): HyperFrames, OpenMontage ve benzeri programların kurulumu, güncellemesi, geri alınması
+12. [Genel klasör boşaltma](rehber/12-genel-klasor-bosaltma.md): bilgisayarın genelindeki skill klasörlerini yedekleyip boşaltma
+13. [Yedek ve geri alma](rehber/13-yedek-ve-geri-alma.md): yedek envanteri, git geri alma, yeni bilgisayara geri kurma
+14. [Yapay zeka araçları](rehber/14-yapay-zeka-araclari.md): hangi araç hangi klasörü ve talimat dosyasını okur, yeni araç ekleme
 
 ## Alanlar
 `a-tasarim-onyuz` · `b-yazilim-gelistirme` · `c-dokuman-icerik` · `d-ai-otomasyon` · `g-video-ses-medya` · `h-is-alanlari` (e-ticaret/pazaryeri dahil) · `i-bilim-muhendislik`
@@ -91,14 +108,22 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 11 prompt: [prompt
 |---|---|
 | `skill-ekle.py` | Projeye ekle / öner / listele / durum / doğrula / güncelle / kaldır / geri al |
 | `arsiv-guncelle.py [--uygula --dal] [--birlestir <dal>]` | Aylık güncelleme: rapor → `guncelleme/YYYY-AA` dalında güncelleme → onayla master'a birleştirme |
-| `kaynak-cek.py` → `arsiv-yerlestir.py` | İndir → tekilleştir, kategorile, değerlendir |
+| `kaynak-cek.py [--atla owner/ad]` → `arsiv-yerlestir.py` | İndir → tekilleştir, kategorile, değerlendir |
 | `kapsam-denetimi.py` | Her SKILL.md'nin açıklandığını bağımsız doğrular |
 | `katalog-uret.py` | KATALOG ve notları üretir |
 | `dogrula.py [--github]` | Tutarlılık; yıldızlı ama tanımsız repo |
 | `gelistirici-bilgisi.py` | Geliştirici bilgileri + GitHub güven puanı/sıralaması → `notlar/guven-siralamasi.md` |
-| `konu-takip.py [--konu X] [--rapor] [--karar repo karar neden]` | Takip edilen alanlarda (e-ticaret/Etsy, mobil…) GitHub'da yeni skill repolarını arar → `notlar/konu-takip.md`; değerlendirilenler tekrar gösterilmez |
+| `konu-takip.py [--konu X] [--rapor] [--karar repo karar neden] [--bekleyenler]` | Takip edilen alanlarda (e-ticaret/Etsy, mobil…) GitHub'da yeni skill repolarını arar → `notlar/konu-takip.md`; değerlendirilenler tekrar gösterilmez |
 | `github-trend.py [--rapor] [--aday]` | GitHub Trending takibi: trend'e giren kaynaklar (değerlendirme +10/+6/+2, öneride öne alma), trend'deki aday skill repoları → `notlar/github-trend.md` |
-| `proje-kullanimi.py [--skill id] [--repo owner/ad]` | Projelerin `kilit.json` dosyalarını okur → `notlar/proje-kullanimi.md`; bir skili/kaynağı kullanan projeleri listeler (silmeden, tercih değiştirmeden önce) |
+| `proje-kullanimi.py [--skill id] [--repo owner/ad]` · `--saglik` / `--tara-kayitsiz` / `--ekle` / `--cikar` / `--tasindi` / `--yoksay` | Projelerin `kilit.json` dosyalarını okur → `notlar/proje-kullanimi.md`; bir skili/kaynağı kullanan projeleri listeler (silmeden, tercih değiştirmeden önce); proje sağlığı → `notlar/proje-durumu.md`; proje ekle/çıkar/taşındı/yoksay (yalnız `projeler.json`) |
 | `github-skill-listesi.py [--duzenle] [--ekle owner/ad …]` | GitHub 'Yapay Zeka Skillleri' listesi: kütüphanenin tüm kaynakları tek listede (başka skill listesi yok); yeni/kopya/eksik/adı değişen raporu, `--duzenle` yıldızlar ve taşır, `--ekle` kütüphanede olmayan repoyu yalnızca listeye koyar (kütüphaneye eklemez) |
 | `test.py` | Uçtan uca güvenlik testleri (geçici projede) |
-| `duman-testi.py [--araclar]` | Tüm sürecin hızlı uçtan uca duman testi (git, doğrulama, kapsam, testler, tüm profiller, kurulum yaşam döngüsü, isteğe bağlı gerçek Claude/Codex) |
+| `duman-testi.py [--araclar] [--kirli-ok]` | Tüm sürecin hızlı uçtan uca duman testi (git, doğrulama, kapsam, testler, tüm profiller, kurulum yaşam döngüsü, isteğe bağlı gerçek Claude/Codex) |
+| `aylik-ozet.py [--hizli]` | Oturum başı özeti: git, genel klasörler, yedek, program, proje, aday kararları; `--hizli` ağsız ve yazmasız (en çok 15 satır) |
+| `git-durum.py [--kisa] [--ozet-json]` | Git durumu (push gecikmesi, bekleyen dal, büyük dosya); salt okuma |
+| `yedek-denetim.py [--ozet-json]` | `yedekler.json` envanterini denetler (yaş, gizli içerik, silme hatırlatması); hiçbir şey silmez |
+| `genel-bekci.py [--ozet-json] [--taban-yaz]` | Genel skill klasörlerinde beklenmeyen girdi var mı; boşaltma planı (`--plan`); salt okuma |
+| `program-denetim.py [--oncesi ad] [--sema]` | Programların (HyperFrames, OpenMontage…) sürüm ve güncelleme öncesi kontrolü, kart şeması → `notlar/program-denetimi.md` |
+| `kaynak-cikar.py [--repo owner/ad] [--kuru]` | Bir kaynağı ya da skili çıkarmadan önce etki, adımlar ve geri alma planı (yalnız okur) |
+| `yol-tara.py [--repo owner/ad] [--siki]` | Skillerdeki sabit genel yol taraması; yeni kaynak için "yol kapısı" |
+| `listeye-ekle.py owner/ad` | Kütüphanede olmayan bir repoyu yıldızlar ve 'Yapay Zeka Skillleri' listesine koyar (kendi onay sorusunu sorar; kütüphaneye eklemez) |

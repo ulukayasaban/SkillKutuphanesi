@@ -8,7 +8,8 @@ Bu projedeki kütüphane skillerinin durumunu kontrol et ve gerekiyorsa güncell
 2. python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --dogrula
 3. Güncelleme varsa önce rapor: python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --guncelle --kuru
 4. Raporu göster: hangi skill güncellenecek, 'elle-degistirilmis' olan var mı (onlar EZİLMEZ), 'kaynak-yok' olan var mı,
-   'inceleme-eskidi' (yeniden incelenecek) olan var mı. Onayımı bekle.
+   'inceleme-eskidi' (yeniden incelenecek) olan var mı. Silmek istediğim skill'e başka bir skill bağlı mı (kardeş yol) bana göster;
+   elle değişmiş tek skill güncellemeyi durduruyorsa bana göster ve kararımı al. Onayımı bekle.
 5. Onaylarsam: --guncelle --evet, sonra --dogrula. Bittiğinde "oturumu yeniden aç" diye hatırlat.
    (Araç kütüphanedeki notlar/proje-kullanimi.md raporunu kendisi yeniler; raporda 'ayni-ad' satırı varsa kurulan kaynağı bana söyle.)
 ```
@@ -27,4 +28,13 @@ python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --kaldir [skil
 Son skill işlemini geri al. Önce yedekleri listele ve hangisine döneceğimizi bana sor:
 python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --yedekler
 Onaylarsam: python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --geri-al [yedek-adi]
+```
+
+## 5d — Araç düzenini değiştir
+
+```kopyala
+Bu projenin araç düzenini değiştir (ortak: Claude + Codex + Antigravity + Cursor + VS Code Copilot | yalniz-claude: yalnız Claude). Kütüphane: ~/Documents/SkillKutuphanesi
+1. Önce ne değişeceğini göster (içerik değişmez, yalnız yerleşim): python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --arac [ortak|yalniz-claude] --kuru
+2. Raporda arac-duzeni ve arac-gormez satırlarını bana göster. Onayımı bekle.
+3. Onaylarsam: aynı komutu --evet ile çalıştır, sonra --dogrula sonucunu göster.
 ```

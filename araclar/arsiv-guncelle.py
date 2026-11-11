@@ -8,6 +8,13 @@
   python3 araclar/arsiv-guncelle.py --birlestir <dal>    # kullanıcı onayından sonra: dalı master'a birleştirir (--no-ff),
                                                          # doğrulama + kapsam denetimi + testleri çalıştırır, dalı siler
   python3 araclar/arsiv-guncelle.py --uygula             # (eski yol) güncellemeyi doğrudan bulunulan dalda yapar
+  python3 araclar/arsiv-guncelle.py --aylik --kuru       # aylık zincirin yan etkisiz PLANI: ön kontrol + rapor + özet (dal, commit, damga YOK)
+  python3 araclar/arsiv-guncelle.py --siki               # rapor modu; GitHub'a ulaşılamadıysa ya da kaynak kontrol edilemediyse çıkış 2
+  python3 araclar/arsiv-guncelle.py --help               # bu metin (hiçbir şey çalıştırmaz)
+
+Çıkış kodu: 0 = sorun yok · 1 = erişilemeyen kaynak (rapor modu) ya da hata
+            2 = YALNIZ --siki ile: GitHub'a ulaşılamadı ya da bazı kaynaklar kontrol edilemedi (yalnız yerel kontroller yapıldı)
+Not: --aylik'in yazma adımları (dal açma, takip, damga) henüz yok; şimdilik yalnız --aylik --kuru çalışır.
 
 Sıra (--uygula): geliştirici bilgisi -> indir -> yerleştir -> kapsam denetimi -> katalog -> doğrula -> geçmiş kaydı -> commit
 Güvenceler:
@@ -19,16 +26,28 @@ Projeler otomatik güncellenmez; her proje için ayrıca:  skill-ekle.py <proje>
 import shutil
 import json
 import os
+import re
 import subprocess
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, gh_api, json_oku  # noqa: E402
+from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, gh_api, json_oku, repo_guncel  # noqa: E402
 
 GECMIS = KOK / "notlar" / "guncelleme-gecmisi.md"
 ANA_DAL = "master"
+DAMGA = KOK / "notlar" / "son-aylik-calisma.json"  # yerel, git'e girmez (.gitignore); bu aşamada yalnız OKUNUR
+ESIK_DAL_GUN = 45      # bekleyen dal bu günden eskiyse uyarı
+ESIK_KACAN_GUN = 35    # son aylık çalışma bu günden eskiyse "kaçan ay"
+IZINLI_RAPOR_YOLLARI = ("notlar/proje-durumu.md", "notlar/program-denetimi.md")
+URETILEN_NOTLAR = ("notlar/proje-kullanimi.md", "notlar/proje-durumu.md", "notlar/program-denetimi.md", "notlar/yol-denetimi.md")
+BEKLEYEN_DESENLER = ("guncelleme/*", "takip/*")
+# her rapor() başında sıfırlanan durum
+ATLANAN = []
+ADI_DEGISEN = {}
+ULASILAMAYAN = []
+CEVRIMDISI = False
 
 
 def calistir(*komut):
@@ -40,8 +59,88 @@ def git(*args):
     return subprocess.run(["git", *args], cwd=KOK, capture_output=True, text=True)
 
 
+def kirli_dosyalar():
+    """Kaydedilmemiş değişiklikler: [(XY, yol)]. Hiçbir yol ayıklanmaz (.gitignore'dakiler zaten çıkmaz)."""
+    parca = git("status", "--porcelain", "-z").stdout.split("\0")
+    sonuc, i = [], 0
+    while i < len(parca):
+        p = parca[i]
+        i += 1
+        if len(p) < 4:
+            continue
+        xy, yol = p[:2], p[3:]
+        if "R" in xy or "C" in xy:
+            i += 1  # bir sonraki NUL parçası eski yoldur
+        sonuc.append((xy, yol))
+    return sonuc
+
+
+def kirli_ozet(kirli, sinir=10):
+    yollar = [y for _, y in kirli]
+    return ", ".join(yollar[:sinir]) + (f" … +{len(yollar) - sinir}" if len(yollar) > sinir else "")
+
+
+def yoksayiliyor_mu(yol):
+    """git check-ignore: 0 (yoksayılıyor) ve 128 (git deposu değil) True; 1 False."""
+    return git("check-ignore", "-q", str(yol)).returncode in (0, 128)
+
+
+def bekleyen_dallar():
+    """Onay bekleyen dallar (guncelleme/* ve takip/*): [{'dal','gun','birlesmis'}]."""
+    adlar = git("branch", "--list", *BEKLEYEN_DESENLER, "--format=%(refname:short)").stdout.split()
+    sonuc = []
+    for dal in adlar:
+        ct = git("log", "-1", "--format=%ct", dal).stdout.strip()
+        gun = (date.today() - date.fromtimestamp(int(ct))).days if ct.isdigit() else 0
+        birlesmis = git("merge-base", "--is-ancestor", dal, ANA_DAL).returncode == 0
+        sonuc.append({"dal": dal, "gun": gun, "birlesmis": birlesmis})
+    return sonuc
+
+
+def gh_hazir():
+    """(ok, kalan, neden): gh kurulu ve oturum açık mı? Ağ hatasında beklemeden döner."""
+    try:
+        r = subprocess.run(["gh", "api", "rate_limit", "--jq", ".resources.core.remaining"],
+                           capture_output=True, text=True, timeout=30)
+    except FileNotFoundError:
+        return False, None, "gh kurulu değil"
+    except subprocess.TimeoutExpired:
+        return False, None, "zaman aşımı"
+    if r.returncode != 0 or not r.stdout.strip().isdigit():
+        return False, None, "gh oturumu yok ya da ağ yok"
+    return True, int(r.stdout.strip()), ""
+
+
+def kaynak_cek_atla_var():
+    """kaynak-cek.py --atla destekliyor mu? (--help çıktısına bakar; argparse olduğu için güvenli)"""
+    try:
+        r = subprocess.run([sys.executable, str(KOK / "araclar" / "kaynak-cek.py"), "--help"],
+                           cwd=KOK, capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    return "--atla" in r.stdout
+
+
+def damga_oku():
+    """notlar/son-aylik-calisma.json (yok ya da bozuksa {})."""
+    try:
+        d = json.loads(DAMGA.read_text(encoding="utf-8"))
+        return d if isinstance(d, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
 def rapor():
-    """Kaynakları kontrol eder. (degisen, sorunlu, ayrinti) döndürür."""
+    """Kaynakları kontrol eder. (degisen, sorunlu, ayrinti) döndürür.
+    GitHub'a ulaşılamıyorsa kaynak karşılaştırması atlanır (CEVRIMDISI); geçici ağ hatası alan kaynaklar ULASILAMAYAN'a girer."""
+    global ADI_DEGISEN, ULASILAMAYAN, CEVRIMDISI
+    ADI_DEGISEN, ULASILAMAYAN, CEVRIMDISI = {}, [], False
+    ok, _kalan, neden = gh_hazir()
+    if not ok:
+        print(f"UYARI: GitHub'a ulaşılamıyor ({neden}). Kaynak karşılaştırması ATLANDI; yalnız yerel kontroller yapıldı.")
+        CEVRIMDISI = True
+        subprocess.run([sys.executable, str(KOK / "araclar" / "dogrula.py")], cwd=KOK)
+        return [], [], {}
     skiller = json_oku(REGISTRY, {"skiller": []})["skiller"]
     mevcut = {}
     for s in skiller:  # kaynakta kaldırılmış kayıt eski commit'te kalır; her ay sahte "değişti" sinyali vermesin
@@ -50,13 +149,39 @@ def rapor():
     for s in skiller:
         mevcut.setdefault(s["repo"], s["commit"])  # repodaki tüm kayıtlar kaldırılmışsa eski commit'e düş
     degisen, sorunlu, ayrinti = [], [], {}
-    for repo in sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}):
+    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")})
+    art_arda = 0
+    for i, repo in enumerate(repolar):
         try:
-            yeni = gh_api(f"repos/{repo}/commits/HEAD")["sha"]
-        except GhBulunamadi as e:
+            yanit = gh_api(f"repos/{repo}/commits/HEAD")
+            yeni = yanit["sha"]
+        except GhBulunamadi:
+            art_arda = 0
             sorunlu.append(repo)
-            print(f"! {repo}: erişilemiyor (silinmiş/private?). Arşiv kopyası korunuyor. {e}")
+            print(f"! {repo}: erişilemiyor (silinmiş, private ya da adı değişmiş olabilir). Arşiv kopyası korunuyor. "
+                  "İpucu: B adımındaki github-skill-listesi.py \"AD DEĞİŞMİŞ\" satırına bak.")
             continue
+        except Exception as e:  # noqa: BLE001  geçici ağ / hız sınırı
+            art_arda += 1
+            ULASILAMAYAN.append(repo)
+            print(f"! {repo}: şimdilik kontrol edilemedi ({str(e).strip().splitlines()[-1][:120] if str(e).strip() else type(e).__name__})")
+            if art_arda >= 3:
+                kalan = repolar[i + 1:]
+                ULASILAMAYAN.extend(kalan)
+                print("UYARI: art arda 3 kaynak kontrol edilemedi; kalanlar atlandı (ağ/hız sınırı).")
+                break
+            continue
+        art_arda = 0
+        try:  # adı değişmiş repo: commit yanıtındaki html_url yeni adı verir (ek çağrı yok)
+            m = re.search(r"github\.com/([^/]+/[^/]+)/commit/", str(yanit.get("html_url", "")))
+            if m:
+                bilinen = {repo.lower(), str(repo_guncel(repo)).lower()}
+                if m.group(1).lower() not in bilinen:
+                    ADI_DEGISEN[repo] = m.group(1)
+                    print(f"~ AD DEĞİŞMİŞ: {repo} -> {m.group(1)} (yeni kaynak DEĞİL; kaynaklar.json'da 'repo'yu yeni adla değiştir, "
+                          "eski adı \"eski_adlar\"a yaz; rehber/09)")
+        except Exception:  # noqa: BLE001
+            pass
         eski = mevcut.get(repo)
         if eski == yeni:
             continue
@@ -69,12 +194,17 @@ def rapor():
                             if "SKILL" in f["filename"].upper() or "skills/" in f["filename"]]
             except GhBulunamadi:
                 not_ = " (eski commit bulunamadı: geçmiş yeniden yazılmış olabilir; değişiklikleri dikkatle incele)"
+            except Exception:  # noqa: BLE001
+                not_ = " (karşılaştırma şimdilik yapılamadı)"
         ayrinti[repo] = {"eski": eski, "yeni": yeni, "dosya": len(dosyalar), "not": not_}
         print(f"~ {repo}: {(eski or '-')[:7]} -> {yeni[:7]}  skill dosyası değişikliği: {len(dosyalar)}{not_}")
         for f in dosyalar[:10]:
             print(f"    {f}")
+    if ULASILAMAYAN:
+        print(f"Kontrol edilemeyen kaynak: {len(ULASILAMAYAN)} (geçici); sonra tekrar çalıştır.")
     if not degisen:
-        print("Tüm kaynaklar güncel.")
+        if not ULASILAMAYAN:
+            print("Tüm kaynaklar güncel.")
     else:
         etkilenen_projeler(degisen)
     subprocess.run([sys.executable, str(KOK / "araclar" / "dogrula.py"), "--github"], cwd=KOK)
@@ -154,9 +284,11 @@ def api_hakki_kontrol(gerekli=1500):
 
 
 def uygula(degisen, ayrinti, dal_modu):
-    if git("status", "--porcelain").stdout.strip():
-        sys.exit("DURDU: kütüphanede kaydedilmemiş değişiklik var. Önce `git -C ~/Documents/SkillKutuphanesi status` "
-                 "ile bak, kaydet (git commit) ya da geri al; sonra tekrar çalıştır.")
+    kirli = kirli_dosyalar()
+    if kirli:
+        sys.exit(f"DURDU: kütüphanede kaydedilmemiş değişiklik var ({len(kirli)} dosya): {kirli_ozet(kirli)}. "
+                 "Önce kaydet (git commit) ya da geri al. Aylık plan için: python3 araclar/arsiv-guncelle.py --aylik --kuru "
+                 "(kirli ağaçta salt okuma plan üretir).")
     api_hakki_kontrol()
     onceki = json_oku(REGISTRY)["skiller"]
     dal = git("branch", "--show-current").stdout.strip()
@@ -242,10 +374,12 @@ def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
 
 def birlestir(dal):
     if git("rev-parse", "--verify", "--quiet", f"refs/heads/{dal}").returncode != 0:
-        sys.exit(f"Dal yok: {dal}. Bekleyen güncelleme dalları: "
-                 + (", ".join(git("branch", "--list", "guncelleme/*", "--format=%(refname:short)").stdout.split()) or "-"))
-    if git("status", "--porcelain").stdout.strip():
-        sys.exit("DURDU: kütüphanede kaydedilmemiş değişiklik var; önce kaydet ya da geri al.")
+        sys.exit(f"Dal yok: {dal}. Bekleyen güncelleme dalları (guncelleme/* ve takip/*): "
+                 + (", ".join(git("branch", "--list", *BEKLEYEN_DESENLER, "--format=%(refname:short)").stdout.split()) or "-"))
+    kirli = kirli_dosyalar()
+    if kirli:
+        sys.exit(f"DURDU: kütüphanede kaydedilmemiş değişiklik var ({len(kirli)} dosya): {kirli_ozet(kirli)}; "
+                 "önce kaydet ya da geri al.")
     if git("branch", "--show-current").stdout.strip() != ANA_DAL:
         calistir("git", "switch", "-q", ANA_DAL)
     once = git("rev-parse", "HEAD").stdout.strip()
@@ -268,24 +402,138 @@ def birlestir(dal):
     return 0
 
 
+def _dal_adi_onizle(onek):
+    """Açılacak dalın adı (açmaz): <onek>/YYYY-AA, doluysa -2, -3…"""
+    dal = f"{onek}/{date.today():%Y-%m}"
+    n = 2
+    while git("rev-parse", "--verify", "--quiet", f"refs/heads/{dal}").returncode == 0:
+        dal = f"{onek}/{date.today():%Y-%m}-{n}"
+        n += 1
+    return dal
+
+
+def _kilit_canli_pid():
+    """Canlı bir güncelleme kilidi varsa pid'i, yoksa None (dosyaya yazmaz)."""
+    if not KILIT.exists():
+        return None
+    try:
+        k = json.loads(KILIT.read_text())
+        pid = int(k["pid"])
+        return pid if subprocess.run(["kill", "-0", str(pid)], capture_output=True).returncode == 0 else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def aylik(kuru):
+    """Aylık zincir. Bu aşamada YALNIZ --kuru: ön kontrol + rapor + liste raporu + PLAN + hızlı özet.
+    Dal açmaz, commit atmaz, damga ya da özet dosyası yazmaz; git'e yalnız okuma komutları gönderir."""
+    if not kuru:
+        sys.exit("--aylik şimdilik yalnız --kuru ile çalışır (yazma adımları: dal açma, takip dalı, damga henüz yapılmadı). "
+                 "Kaynak güncellemesi için: --uygula --dal.")
+    print(f"AYLIK ZİNCİR — {date.today().isoformat()} (kuru: hiçbir şey değişmez)")
+    pid = _kilit_canli_pid()
+    if pid:
+        sys.exit(f"DURDU: başka bir güncelleme sürüyor (pid {pid}).")
+    damga = damga_oku()
+    try:
+        gun = (date.today() - date.fromisoformat(str(damga.get("son_calisma", ""))[:10])).days
+    except ValueError:
+        gun = None
+    if gun is None:
+        print("Aylık çalışma damgası yok (ilk kurulum ya da yeni makine).")
+    elif gun > ESIK_KACAN_GUN:
+        print(f"KAÇAN AY: son çalışma {gun} gün önce ({str(damga['son_calisma'])[:10]}). Bu koşu kaçan ayı da kapsar.")
+    engeller = []
+    dal = git("branch", "--show-current").stdout.strip()
+    if dal != ANA_DAL:
+        engeller.append(f"dal '{dal}' (master değil)")
+    kirli = kirli_dosyalar()
+    if kirli:
+        neden = f"kirli ağaç ({len(kirli)} dosya): {kirli_ozet(kirli)}"
+        if all(y in URETILEN_NOTLAR for _, y in kirli):
+            adlar = " ".join(y for _, y in kirli)
+            neden += (f"; yalnız rapor dosyaları değişmiş ({', '.join(y for _, y in kirli)}); onayınla kaydet "
+                      f"(git add {adlar} && git commit) ya da geri al (git checkout -- {adlar})")
+        engeller.append(neden)
+    bekleyen = bekleyen_dallar()
+    for b in bekleyen:
+        engeller.append(f"bekleyen dal: {b['dal']} ({b['gun']} gün)")
+    ok, _kalan, gneden = gh_hazir()
+    if not ok:
+        engeller.append(f"GitHub'a ulaşılamıyor ({gneden})")
+    for e in engeller:
+        print(f"Ön kontrol: {e}")
+    degisen, sorunlu, _ayrinti = rapor()
+    if ok:
+        try:
+            r = subprocess.run([sys.executable, str(KOK / "araclar" / "github-skill-listesi.py")], cwd=KOK,
+                               capture_output=True, text=True, timeout=300)
+            if r.stdout.strip():
+                print(r.stdout.rstrip())
+            if r.returncode != 0:
+                print("UYARI: yıldız listesi kontrolü yapılamadı")
+        except (OSError, subprocess.TimeoutExpired):
+            print("UYARI: yıldız listesi kontrolü yapılamadı")
+    if engeller:
+        plan = "yalnız rapor (yazma adımı yapılmayacak; engeller: " + "; ".join(engeller) + ")"
+    elif ULASILAMAYAN:
+        plan = f"yalnız rapor ({len(ULASILAMAYAN)} kaynak şimdilik kontrol edilemedi; sonra tekrar çalıştır)"
+    elif degisen and sorunlu and not kaynak_cek_atla_var():
+        plan = "kısmi (erişilemeyen kaynak var; kaynak-cek.py --atla yok)"
+    elif degisen:
+        plan = f"güncelleme dalı {_dal_adi_onizle('guncelleme')} ({len(degisen)} kaynakta değişiklik)"
+    else:
+        plan = f"takip dalı {_dal_adi_onizle('takip')} (kaynaklarda değişiklik yok; yalnız trend/konu taraması)"
+    print(f"PLAN: {plan}")
+    ozet = KOK / "araclar" / "aylik-ozet.py"
+    if ozet.exists():
+        try:
+            r = subprocess.run([sys.executable, str(ozet), "--hizli"], cwd=KOK, capture_output=True, text=True, timeout=120)
+            print(r.stdout.rstrip() if r.stdout.strip() else "UYARI: aylık özet üretilemedi")
+        except (OSError, subprocess.TimeoutExpired):
+            print("UYARI: aylık özet üretilemedi")
+    else:
+        print("UYARI: aylık özet üretilemedi (araclar/aylik-ozet.py yok)")
+    return 0
+
+
 def main():
+    if "-h" in sys.argv[1:] or "--help" in sys.argv[1:]:
+        print(__doc__)
+        return 0
     if "--birlestir" in sys.argv:
         i = sys.argv.index("--birlestir")
         if i + 1 >= len(sys.argv):
-            sys.exit("Kullanım: --birlestir guncelleme/YYYY-AA")
+            sys.exit("Kullanım: --birlestir guncelleme/YYYY-AA  (ya da takip/YYYY-AA)")
         return birlestir(sys.argv[i + 1])
+    if "--aylik" in sys.argv:
+        return aylik("--kuru" in sys.argv)
+    siki = "--siki" in sys.argv
     degisen, sorunlu, ayrinti = rapor()
-    bekleyen = git("branch", "--list", "guncelleme/*", "--format=%(refname:short)").stdout.split()
+    bekleyen = bekleyen_dallar()
+    for b in bekleyen:
+        print(f"Onay bekleyen dal: {b['dal']} ({b['gun']} gün önce hazırlandı)")
+        if b["birlesmis"]:
+            print(f"{b['dal']} zaten master'a birleşmiş; silebilirsin: git branch -d {b['dal']}")
+        elif b["gun"] > ESIK_DAL_GUN:
+            print(f"UYARI: {b['dal']} {ESIK_DAL_GUN} günden eski: birleştir (--birlestir {b['dal']}) ya da sil (git branch -D {b['dal']}).")
     if bekleyen:
-        print(f"Onay bekleyen güncelleme dalı: {', '.join(bekleyen)} (--birlestir <dal> ya da git branch -D <dal>)")
+        print("(--birlestir <dal> ya da git branch -D <dal>)")
     if "--uygula" not in sys.argv or not degisen:
-        return 1 if sorunlu else 0
+        if "--uygula" in sys.argv and CEVRIMDISI:
+            sys.exit("DURDU: GitHub'a ulaşılamıyor; güncelleme yapılamaz. Hiçbir şey değişmedi.")
+        if sorunlu:
+            return 1
+        return 2 if siki and (CEVRIMDISI or ULASILAMAYAN) else 0
     if sorunlu:
         sys.exit(f"DURDU: erişilemeyen kaynaklar var ({', '.join(sorunlu)}). kaynaklar.json'da bu kayıtların 'tip' alanını "
                  "'KAYIP' yap (arşivdeki kopyaları korunur). Kaydı SİLME: güvenlik kilidi skillleri kayıp sayıp güncellemeyi durdurur; "
                  "bilerek çıkarmak istiyorsan skilleri kaynaklar.json -> arsivden_cikarilanlar'a da yaz.")
+    if ULASILAMAYAN:
+        sys.exit(f"DURDU: {len(ULASILAMAYAN)} kaynak şimdilik kontrol edilemedi (geçici ağ/hız sınırı: "
+                 f"{', '.join(ULASILAMAYAN[:5])}{' …' if len(ULASILAMAYAN) > 5 else ''}). Sonra tekrar çalıştır. Hiçbir şey değişmedi.")
     if bekleyen and "--dal" in sys.argv:
-        sys.exit(f"DURDU: önce bekleyen güncelleme dalını birleştir ya da sil: {', '.join(bekleyen)}")
+        sys.exit(f"DURDU: önce bekleyen güncelleme dalını birleştir ya da sil: {', '.join(b['dal'] for b in bekleyen)}")
     return uygula(degisen, ayrinti, "--dal" in sys.argv)
 
 

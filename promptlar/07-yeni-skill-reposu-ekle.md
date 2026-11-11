@@ -1,47 +1,32 @@
 # 07 — Yeni Skill Reposunu Kütüphaneye Ekle ("kontrol et")
 
 **Ne zaman:** GitHub'da yeni bir skill reposunu yıldızlayıp **"Yapay Zeka Skillleri"** listesine ekledin.
-**Nerede:** Claude Code ya da Codex, `~/Documents/SkillKutuphanesi` klasöründe. Ayrıntılı adımlar: `rehber/03-yeni-skill-ekleme.md`.
+**Nerede:** Claude Code, Codex, Antigravity ya da başka bir ajan, `~/Documents/SkillKutuphanesi` klasöründe. Tek adım sırası: `rehber/03-yeni-skill-ekleme.md` A1..A9.
 
 ```kopyala
 Yapay Zeka Skillleri listeme yeni repolar ekledim, kontrol et ve kütüphaneye dahil et.
-~/Documents/SkillKutuphanesi/AGENTS.md ve rehber/03-yeni-skill-ekleme.md'yi oku ve adımları ATLAMADAN uygula:
+~/Documents/SkillKutuphanesi/AGENTS.md ve rehber/03-yeni-skill-ekleme.md'yi oku. rehber/03'teki A1..A9 sırasını ATLAMADAN, aynı sırayla uygula:
 
-1. python3 araclar/github-skill-listesi.py  → "YENİ" bölümündeki repoları listele.
-   python3 araclar/github-trend.py --aday  → trend'deki aday skill repolarını da listele (eksik alanlarımıza uyanları işaretle).
-2. Her yeni repo için incele ve bana tablo halinde göster: ne yapıyor, kaç SKILL.md var ve nerede, lisans, son güncelleme,
-   ÜCRET (ücretli = ücret ödemeden HİÇ kullanılamıyor; ücretli servis sadece bir seçenekse ya da ücretsiz katman varsa kısmen),
-   GitHub trend durumu, çalışırken proje dışına yazıyor mu/ağdan kod indiriyor mu,
-   tip önerisi (T1–T6) ve kategori önerisi.
-3. ÇAKIŞMA KONTROLÜ (zorunlu): her SKILL.md için
-   - kütüphanede aynı ADLI skill var mı (registry.json 'ad'); varsa içerik aynı mı farklı mı, hangisi 'tercih' olmalı (oncelik),
-   - aynı İŞİ yapan skill var mı (ortusme_grubu); yeni skill birincil mi, tamamlayıcı mı, alternatif mi olmalı,
-   - repo içinde aynı adlı birden fazla SKILL.md var mı (araç sürümleri / farklı sürümler),
-   - global klasörlerde aynı adlı farklı skill var mı (kurulumda '--kutuphane' ekli ad alır).
-   Aynı adlı her çifti İÇERİK olarak karşılaştır (aynı iş mi, farklı iş mi). Kural: çıplak ad kendiliğinden el değiştirmez;
-   yeni gelen ad@kaynak olur. Ad aynı, iş farklıysa eski kaydı durum_elle ile tercih sabitle ve iki kayda fark notu yaz.
-   Çıplak adı bilerek devretmek gerekiyorsa (kaynaklar.json → ad_devral) önce python3 araclar/proje-kullanimi.py --skill <ad>
-   ve rolleri kontrol et, bana sor. 'AD DEĞİŞMİŞ' denen repo yeni kaynak değildir (rehber/09 → Repo adı değişirse).
-   Değerlendirmeyi yalnızca repo/skill'in kendi niteliğiyle yap (üretici, kapsam, bağımlılık, lisans, ücret, kalite); notlara ve
-   öncelik gerekçesine proje adı ya da "şu projeye uyar" yazma.
-   Bulgularını göster ve kararını gerekçeleriyle öner. Onayımı bekle.
-4. Onaylarsam: kaynaklar.json'a ekle (tip, oncelik, gerekirse dahil/haric/bagimlilik), gerekirse kategori-kurallari.json ve
-   ucret-siniflandirma.json'a ekle; sonra:
-   python3 araclar/gelistirici-bilgisi.py
-   python3 araclar/kaynak-cek.py --repo <owner/ad>      (her yeni repo için)
-   python3 araclar/yol-tara.py --repo <owner/ad>        (sabit yol taraması; UYARI satırları kullanıcıya gösterilir)
-   (İstisna yalnız öğretici metin için yol-istisnalari.json'a yazılır; "kabul" ancak kullanıcı raporu gördükten sonra.)
-   python3 araclar/arsiv-yerlestir.py                   (güvenlik kilidi: başka skill kaybolursa durur)
-   python3 araclar/kapsam-denetimi.py                   (0 sorun olmalı)
-   python3 araclar/katalog-uret.py
-   python3 araclar/dogrula.py                           (0 hata, 0 uyarı olmalı)
-   Eski kayıtların kategori/durum/ücret farkını git HEAD'deki registry ile karşılaştır; rollerde kullanılan bir adın tercihi
-   değiştiyse (aynı ad, farklı iş) durum_elle ile sabitle.
-   python3 araclar/github-skill-listesi.py --duzenle  (yeni repoları yıldızla, 'Yapay Zeka Skillleri' listesine koy)
-5. Yeni skilleri rehber/07-kategori-inceleme.md'ye göre incele (ozet_tr, kullanım, teknoloji, kalite, örtüşme rolü, ücret notu).
-6. Gerekirse rollere/profillere ekle (ücretli skill çekirdeğe ancak gerekçeyle). python3 araclar/test.py ve
-   python3 araclar/duman-testi.py çalıştır; hepsi geçerse git add -A && git add -f arsiv && git commit.
-7. Özet ver: eklenen skiller, kararlar (tercih/alternatif/örtüşme), ücret durumu, etkilenen roller.
+1. A1: git status temiz mi (değilse dur ve söyle); dogrula başlangıç sayısını not et; python3 araclar/github-skill-listesi.py (YENİ / AD DEĞİŞMİŞ) ve
+   python3 araclar/github-trend.py --aday. AD DEĞİŞMİŞ yeni kaynak değildir (rehber/09). Program mı skill mi karar kutusuna bak.
+2. A2: Her yeni repo için incele ve bana tablo halinde göster: ne yapıyor, kaç SKILL.md ve nerede, lisans, son güncelleme,
+   ÜCRET (ücretli = ücret ödemeden HİÇ kullanılamıyor; ücretli servis sadece bir seçenekse ya da ücretsiz katman varsa kısmen), GitHub trend durumu,
+   güvenlik okuması (proje dışına yazma, ağdan kod indirme), Claude'a özgü araç gereksinimi, tip (T1–T6) ve kategori önerisi, ve program mı skill mı.
+   ÇAKIŞMA KONTROLÜ (zorunlu): aynı ADLI skill (registry.json 'ad'; içerik aynı mı farklı mı), aynı İŞİ yapan skill (ortusme_grubu; birincil/tamamlayıcı/alternatif),
+   repo içinde aynı adlı birden fazla SKILL.md, aynı adlı kendi skill'in (global klasörler henüz boşaltılmadıysa onlar da).
+   Kural: çıplak ad kendiliğinden el değiştirmez; yeni gelen ad@kaynak olur. Ad aynı, iş farklıysa eski kaydı durum_elle ile tercih sabitle ve iki kayda fark notu yaz.
+   Çıplak adı bilerek devretmek (ad_devral) için önce python3 araclar/proje-kullanimi.py --skill <ad> ve rolleri kontrol et, bana sor.
+   Değerlendirmeyi yalnızca repo/skill'in kendi niteliğiyle yap; notlara ve öncelik gerekçesine proje adı ya da "şu projeye uyar" yazma.
+3. A3: Bulgularını ve kararını gerekçeleriyle göster. Onayımı bekle. Lisans belirtilmemiş / NOASSERTION / AGPL ise ayrıca sor.
+4. Onaylarsam A4-A8'i rehber/03'teki sırayla yap (kayıt + onay kaydı, gelistirici-bilgisi, kaynak-cek --repo, yol-tara --repo --siki, arsiv-yerlestir,
+   kapsam-denetimi, katalog-uret, skill-readme, skill-calistir --skill <yeni kimlikler>, dogrula --github, inceleme, test, duman-testi, tek commit).
+   Her adımda rehberdeki durma koşullarına uy. Eski kayıtların kategori/durum/ücret farkını git HEAD'deki registry ile karşılaştır; rollerde kullanılan
+   bir adın tercihi değiştiyse (aynı ad, farklı iş) durum_elle ile sabitle.
+5. A8: Yeni skilleri rehber/07-kategori-inceleme.md'ye göre incele (ozet_tr, kullanım, teknoloji, kalite, örtüşme rolü, ücret notu); gerekirse rollere/profillere ekle
+   (ücretli skill çekirdeğe ancak gerekçeyle).
+6. A9: GitHub'a yazma yalnız repo listede değilse ve bana sorduktan sonra: listeye-ekle.py. github-skill-listesi.py --ekle/--duzenle kullanma. Push yapma.
+7. Özet ver: eklenen skiller, kararlar (tercih/alternatif/örtüşme), ücret ve lisans durumu, etkilenen roller, commit, geri alma komutu (git revert <commit>).
 
-Kurallar: global skill klasörlerine dokunma, arsiv/ altındaki skill dosyalarını elle düzenleme, push yapma.
+Aday kararı verdiğim repoları hemen konu-takip.py --karar ile deftere yaz (eklendi / reddedildi / izle). Kurallar: global skill klasörlerine dokunma,
+arsiv/ altındaki skill dosyalarını elle düzenleme, push yapma, onaysız ekleme yapma.
 ```

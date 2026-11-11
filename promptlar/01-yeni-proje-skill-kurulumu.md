@@ -12,25 +12,30 @@ Proje: [projenin amacı, ör. "kahve dükkanı için tanıtım sitesi"]
 Teknoloji: [ör. Next.js + Tailwind + GSAP]
 İstediğim agent'lar: [ör. ui-tasarimci, motion-gelistirici, frontend-muhendis, qa-erisilebilirlik — bilmiyorsan "sen öner" yaz]
 
+0. ARAÇ SORUSU (bekle): "Bu proje hangi araçlarla açılacak? Claude Code, Codex, Antigravity, Cursor, VS Code Copilot; Windows'ta da açılacak mı?"
+   Cevabıma göre: Codex ya da Antigravity varsa --arac ortak; yalnız Claude (Cursor/Copilot olabilir) --arac yalniz-claude;
+   Windows'ta açılacaksa yalniz-claude (Codex/Antigravity görmez, nedeni rehber/14 bölüm 5); bilmiyorsam ortak.
+   Seçimi 2. ve 3. adımdaki komutlara --arac <düzen> olarak ekle ve raporda arac-duzeni, arac-gormez ve arac-secimi-yok satırlarını bana ayrıca göster.
 1. Öneri al ve bana uygun profil/rolleri öner:
    python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --oner "[proje amacı ve teknoloji]"
 2. Ön kontrol (hiçbir şey kurmaz):
-   python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --profil [profil] [--rol ...] [--skill ...] --kuru
+   python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --profil [profil] [--rol ...] [--skill ...] --arac [ortak|yalniz-claude] --kuru
 3. Raporu bana olduğu gibi göster ve özellikle şunları ayrı ayrı açıkla:
    - kurulacak skiller ve hangi agent'a gittikleri
    - HATA satırları (varsa kurulum YAPMA, nedenini ve seçenekleri söyle)
    - ÇAKIŞMA uyarıları: ortusme, ayni-skill-iki-surum, ekli-ad (globalde farklı sürüm), projede-kendi-skillin, kendi-agent-dosyan
    - ÜCRETLİ skiller (ucretli uyarısı) ve ücretsiz alternatifleri
    - ek-aday listesi (kütüphanede ilgili olup seçilmeyen skiller)
+   - arac-duzeni, arac-gormez, arac-secimi-yok satırları (hangi araç skilleri görür, hangisi görmez)
 4. Ben onay verene kadar BEKLE. Onaylarsam aynı komutu --evet ile çalıştır, sonra --dogrula sonucunu göster.
-5. Bittiğinde bana "Codex/Claude oturumunu yeniden aç" diye hatırlat.
+5. Bittiğinde bana "Claude/Codex/Antigravity/Cursor oturumunu yeniden aç" diye hatırlat.
 
 Kurallar: global skill klasörlerine (~/.claude/skills, ~/.agents/skills, ~/.codex/skills, ~/.openmontage) dokunma,
 skill dosyalarını elle kopyalama; sadece bu aracı kullan. --zorla'yı ben istemedikçe kullanma.
 ```
 
-**Beklenen sonuç:** Projede `.agents/skills/`, `.claude/skills/`, `.claude/agents/<rol>.md`, `.codex/agents/<rol>.toml`,
-`AGENTS.md`/`CLAUDE.md` içinde skill tablosu ve `.skill-kutuphanesi/kilit.json`. Oturumu yeniden açınca agent'lar ve skiller görünür.
+**Beklenen sonuç:** `ortak` düzende projede `.agents/skills/`, `.claude/skills/`, `.claude/agents/<rol>.md`, `.codex/agents/<rol>.toml`,
+`AGENTS.md`/`CLAUDE.md` içinde skill tablosu ve `.skill-kutuphanesi/kilit.json`; `yalniz-claude` düzende yalnız `.claude/skills/`, `.claude/agents/`, `CLAUDE.md` ve kilit. Oturumu yeniden açınca agent'lar ve skiller görünür.
 
 **Örnek doldurulmuş hâller:**
 - Tanıtım sitesi: `--profil landing-page`

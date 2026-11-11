@@ -2,6 +2,9 @@
 """Verilen repoları yıldızlar ve GitHub'daki skill listesine ('Yapay Zeka Skillleri', kaynaklar.json -> github_skill_listesi)
 ekler. Sadece GitHub hesabındaki yıldız/liste değişir; kütüphaneye (kaynaklar.json, arsiv) hiçbir şey eklenmez —
 ekleme ayrıca rehber/03-yeni-skill-ekleme.md adımlarıyla (çakışma + ücret kontrolü) yapılır.
+Bu araç, "kütüphanede olmayan bir repoyu yıldızla + skill listesine ekle" işinin TEK aracıdır (tek repo ya da --dosya ile toplu).
+Yazmadan önce kendi onay sorusunu sorar (e). Etkileşimsiz kabukta input() EOF verir ve hiçbir şey yazılmadan durur; kullanıcı sohbette
+"evet" dedikten sonra ajan: printf 'e\n' | python3 araclar/listeye-ekle.py owner/ad
 
   python3 araclar/listeye-ekle.py owner/ad [owner/ad …]
   python3 araclar/listeye-ekle.py --dosya notlar/populer-aday-2026-11.txt          # satır başına bir repo (# yorum)
@@ -70,7 +73,7 @@ def main():
     for l in listeler:
         for x in l["items"]["nodes"]:
             if x:
-                uyelik.setdefault(x["nameWithOwner"], set()).add(l["id"])
+                uyelik.setdefault(x["nameWithOwner"].lower(), set()).add(l["id"])
     hata = 0
     for r in repolar:
         y = subprocess.run(["gh", "api", "-X", "PUT", f"user/starred/{r}"], capture_output=True, text=True)
@@ -79,12 +82,12 @@ def main():
             print(f"  ✗ {r}: yıldızlanamadı: {y.stderr.strip()[:160]}")
             continue
         rid = json.loads(subprocess.run(["gh", "api", f"repos/{r}", "--jq", "{id:.node_id}"], capture_output=True, text=True).stdout)["id"]
-        if hedef["id"] in uyelik.get(r, set()):
+        if hedef["id"] in uyelik.get(r.lower(), set()):
             print(f"  = {r}: zaten '{hedef['name']}' listesinde (yıldız tazelendi)")
             continue
         try:
             gsl.gql("mutation($item:ID!,$l:[ID!]!){updateUserListsForItem(input:{itemId:$item,listIds:$l}){lists{name}}}",
-                    item=rid, l=sorted(uyelik.get(r, set()) | {hedef["id"]}))
+                    item=rid, l=sorted(uyelik.get(r.lower(), set()) | {hedef["id"]}))
             print(f"  ✓ {r} -> yıldızlandı, '{hedef['name']}' listesine eklendi")
         except RuntimeError as e:
             hata += 1

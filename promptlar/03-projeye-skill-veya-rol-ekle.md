@@ -8,6 +8,8 @@ Bu projeye kütüphanemden yeni bir [skill / agent rolü] ekleyeceğiz. Kütüph
 
 İhtiyaç: [ör. "sayfalara scroll animasyonu eklenecek" / "3D ürün görüntüleyici"]
 
+Projede araç düzeni kayıtlıysa (--durum satırı "düzen: ..."), ona uy; "arac-secimi-yok" çıkıyorsa bana hangi araçlarla açılacağını sor ve --arac ile kaydet.
+
 1. Projede şu an ne kurulu, bak:
    python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --durum
 2. İhtiyaca uygun skill/rol öner (zaten kurulu olanları ve aynı işi yapanları ayıkla):

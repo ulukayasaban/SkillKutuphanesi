@@ -8,6 +8,9 @@
 | Lisans | MIT (`kaynak/LICENSE`, `kaynak/NOTICE.md`) |
 | Arşiv tarihi | 2026-11-10 |
 | Alınmayan | `docs/` (demo video/gif, ekran görüntüsü, 8.7 MB), `.github/` (CI) |
+| Yedek klasörü | `~/Documents/Claude/yedek/etsyotomasyon-<YYYY-AA-GG>/` (yalnız `KAYIT.json`; `~/.etsyotomasyon` kopyalanmaz) |
+| Giriş yolu | `programlar.json` → `etsyotomasyon` → `giris_yolu` |
+| Doğrulama | commit `950dc9498e46e2fdcd8a369512c26698de54e293`; release ikilileri imzasız |
 
 Kaynak kopyası `kaynak/` altında, değiştirilmeden durur (elle düzenleme yok). Repo GitHub'dan kalkarsa program buradan
 kurulabilir. Kart ve güncelleme adımları: `programlar.json` → `etsyotomasyon`, rehber: `rehber/11-program-yonetimi.md`.

@@ -13,7 +13,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GLOBAL_KLASORLER, KOK, json_oku  # noqa: E402
+from ortak import GLOBAL_KLASORLER, KOK, genel_parmak_izi, json_oku  # noqa: E402
 
 ARAC = [sys.executable, str(KOK / "araclar" / "skill-ekle.py")]
 SONUC = []
@@ -30,15 +30,8 @@ def test(ad, kosul, ayrinti=""):
 
 
 def parmak_izi():
-    h = hashlib.sha256()
-    for g in list(GLOBAL_KLASORLER.values()) + [Path.home() / ".openmontage" / ".agents" / "skills"]:
-        if g.exists():
-            for p in sorted(g.iterdir()):
-                if p.name in ("synced", ".system"):  # Claude hesap senkronu / Codex'in kendi yerleşik skilleri
-                    continue
-                h.update(p.name.encode())
-                h.update(str(p.lstat().st_mtime_ns).encode())
-    return h.hexdigest()
+    """Genel skill klasörlerinin izi (ortak.GENEL_IZLEME_KLASORLERI: üç genel klasör + OpenMontage + Cursor/Gemini/Copilot)."""
+    return genel_parmak_izi()
 
 
 def agac(p: Path):
@@ -1069,6 +1062,30 @@ def kurulum_yol_testleri():
         shutil.rmtree(kok, ignore_errors=True)
 
 
+ALT_TEST_ZAMAN_ASIMI = 600  # sn, dosya başına
+
+
+def alt_testler():
+    """araclar/testler/test_*.py dosyalarını sırayla ayrı süreçte çalıştırır: çıkış 0 ve son satır 'N/N test geçti'."""
+    import re
+    klasor = KOK / "araclar" / "testler"
+    dosyalar = sorted(klasor.glob("test_*.py")) if klasor.is_dir() else []
+    if not dosyalar:
+        print("  BİLGİ: araclar/testler/ yok ya da boş; alt test dosyası çalıştırılmadı")
+        return
+    for f in dosyalar:
+        try:
+            r = subprocess.run([sys.executable, str(f)], cwd=KOK, capture_output=True, text=True,
+                               stdin=subprocess.DEVNULL, timeout=ALT_TEST_ZAMAN_ASIMI)
+        except subprocess.TimeoutExpired:
+            test(f"alt test {f.name}: {ALT_TEST_ZAMAN_ASIMI} sn içinde bitmedi", False)
+            continue
+        son = (r.stdout.strip().splitlines() or [""])[-1]
+        m = re.fullmatch(r"(\d+)/(\d+) test geçti", son)
+        test(f"alt test {f.name}: {son or 'çıktı yok'}", r.returncode == 0 and bool(m) and m.group(1) == m.group(2),
+             (r.stdout + r.stderr)[-600:])
+
+
 def main():
     once = parmak_izi()
     kok = Path(tempfile.mkdtemp(prefix="skill-test-"))
@@ -1507,6 +1524,20 @@ def main():
         _k = KOK / _p["kaynak_kopyasi"]
         test(f"program {_ad}: kaynak kopyası ve KAYNAK.md var, kaynaklar.json'da program kaydı eşleşiyor",
              _k.is_dir() and any(_k.iterdir()) and _kart_kaynak)
+    if '"--sema"' in (KOK / "araclar" / "program-denetim.py").read_text(encoding="utf-8"):
+        # P6: kart şeması bulguları UYARI'dır; tek başarısızlık, çıktının ayrışmaması ya da programlar.json'ın okunamamasıdır
+        _sr = subprocess.run([sys.executable, str(KOK / "araclar" / "program-denetim.py"), "--sema", "--ozet-json"],
+                             cwd=KOK, capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL)
+        try:
+            _so = json.loads(_sr.stdout)
+            _satirlar = [x for x in _so["satirlar"] if isinstance(x, str)]
+        except (ValueError, KeyError, TypeError):
+            _satirlar = None
+        test("programlar.json: kart şeması okunabilir (program-denetim --sema)",
+             _satirlar is not None and not any("programlar.json okunamadı" in x for x in _satirlar), _sr.stdout + _sr.stderr)
+        for _x in (_satirlar or []):
+            if _x.startswith(("HATA:", "UYARI:")):
+                print(f"  not: {_x}")
     spec = importlib.util.spec_from_file_location("progden", KOK / "araclar" / "program-denetim.py")
     progden = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(progden)
@@ -1686,6 +1717,7 @@ def main():
          pk.stdout + pk.stderr)
     yol_testleri()
     kurulum_yol_testleri()
+    alt_testler()
     test("global klasörler test boyunca DEĞİŞMEDİ", parmak_izi() == once)
     shutil.rmtree(kok, ignore_errors=True)
     basarisiz = [a for a, ok in SONUC if not ok]

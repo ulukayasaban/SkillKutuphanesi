@@ -17,6 +17,7 @@ Kararlar:
 Kullanım:
   python3 araclar/kaynak-cek.py                  # tümü
   python3 araclar/kaynak-cek.py --repo owner/ad  # tek repo
+  python3 araclar/kaynak-cek.py --atla owner/ad[,owner/ad]  # erişilemeyen kaynağı atla (arşiv kopyası korunur; çıkış 0)
 """
 import argparse
 import re
@@ -29,7 +30,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GECICI, KAYNAKLAR, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
-                   klon_temizle, repo_agaci, repo_lisansi)
+                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi)
 
 ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4")
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
@@ -37,6 +38,8 @@ YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\
 CLAUDE_YOL = r"^(.*/)?\.claude/skills/"
 CODEX_YOL = r"^(.*/)?\.(agents|codex)/skills/"
 BILESEN_DESEN = r"(^|/)(commands|agents)/[^/]+\.md$"
+RISKLI_LISANS = ("belirtilmemiş", "NOASSERTION", "yok", "AGPL-3.0", "AGPL-3.0-only", "AGPL-3.0-or-later")
+RISKLI_ONEKLER = ("CC-BY-NC", "PolyForm-Noncommercial", "BUSL", "SSPL")
 KARAR_GUCU = {"secildi": 5, "arac-varyanti": 5, "ayri-surum": 5, "ayna-ayni": 4, "ayna-baska-arac": 3, "haric": 2, "dahil-disi": 1}
 
 
@@ -208,9 +211,35 @@ def indir(url, hedef):
             time.sleep(1.5 * 2 ** i)  # 1.5, 3, 6, 12 sn
 
 
+def lisans_riskli(lisans):
+    """Saf işlev (yazdırmaz): lisans belirtilmemiş / doğrulanamamış / AGPL / ticari-olmayan-benzeri ise True.
+    rehber/03 A2-A3 ve dogrula.py bunu kullanır."""
+    l = (lisans or "").strip()
+    if not l:
+        return True
+    return l in RISKLI_LISANS or l.startswith(RISKLI_ONEKLER)
+
+
+def atla_kumesi(deger, kayitlar, cevir=repo_guncel):
+    """'owner/ad,owner/ad' -> (küçük harfli güncel ad kümesi, T1-T4 kaydı olmayan adlar). Boş değerde cevir çağrılmaz."""
+    adlar = [x.strip() for x in (deger or "").split(",") if x.strip()]
+    if not adlar:
+        return set(), []
+    bilinen = {cevir(k["repo"]).lower() for k in kayitlar if k.get("tip") in ARSIVLENEN_TIPLER}
+    kume, tanimsiz = set(), []
+    for ad in adlar:
+        g = cevir(ad).lower()
+        kume.add(g)
+        if g not in bilinen:
+            tanimsiz.append(ad)
+    return kume, tanimsiz
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo")
+    ap.add_argument("--atla", default="", help="owner/ad[,owner/ad]: bu kaynaklar için indirme ve repo ağacı okuması yapılmaz; "
+                    "arşiv kopyası korunur (erişilemeyen tek kaynak aylık güncellemeyi durdurmasın)")
     a = ap.parse_args()
     ayar = json_oku(KAYNAKLAR)
     cikis = GECICI / "cekilen"
@@ -225,9 +254,19 @@ def main():
     else:
         manifest = {"kayitlar": [], "denetim": {}, "bilesenler": []}
 
+    atla, tanimsiz = atla_kumesi(a.atla, ayar["repolar"])
+    for t in tanimsiz:
+        print(f"UYARI: --atla {t}: T1-T4 kaydı yok; yok sayıldı")
+    atlandi_yazildi = set()
+
     toplam_hata, repo_sha, agaclar = 0, {}, {}
     for kayit in kayitlar:
         repo = kayit["repo"]
+        if atla and repo_guncel(repo).lower() in atla:
+            if repo.lower() not in atlandi_yazildi:
+                atlandi_yazildi.add(repo.lower())
+                print(f"UYARI: {repo} atlandı (arşiv kopyası korunur)")
+            continue
         kimlik = kayit.get("kimlik") or repo.replace("/", "__")
         try:
             if repo not in repo_sha:  # aynı reponun tüm kayıtları AYNI commit'i kullanır

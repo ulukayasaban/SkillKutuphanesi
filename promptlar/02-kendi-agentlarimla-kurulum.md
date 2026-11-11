@@ -12,6 +12,8 @@ Kütüphane: ~/Documents/SkillKutuphanesi — önce ~/Documents/SkillKutuphanesi
 Benim agent'larım ve görevleri: [ör. "tasarimci: arayüz; kodcu: Next.js; testci: Playwright"]
 Proje: [amaç + teknoloji]
 
+Projede araç düzeni kayıtlıysa (--durum satırı "düzen: ..."), ona uy; "arac-secimi-yok" çıkıyorsa bana hangi araçlarla açılacağını sor ve --arac ile kaydet.
+
 1. Her agent'ım için uygun skilleri bul:
    python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" --oner "[agent'ın işi + teknoloji]"
    (her agent için ayrı çalıştır; ücretsiz ve 'tercih' olan skilleri seç, emekli/alternatif olanları seçme)

@@ -1,9 +1,65 @@
 {
-  "_aciklama": "Proje ↔ skill bilgisinin tek yeri. Skill ve kaynak kayıtlarına proje adı yazılmaz. tarama_kokleri altında bir seviye aranır (.skill-kutuphanesi/kilit.json olan klasörler); başka yerdeki projeler ek_projeler'e tam yolla yazılır. notlar: <proje klasör adı> -> <skill kimliği> -> elle not. Rapor: python3 araclar/proje-kullanimi.py -> notlar/proje-kullanimi.md",
+  "_aciklama": "Proje ↔ skill bilgisinin tek yeri. Skill ve kaynak kayıtlarına proje adı yazılmaz. tarama_kokleri altında bir seviye aranır (.skill-kutuphanesi/kilit.json olan klasörler); başka yerdeki projeler ek_projeler'e tam yolla yazılır. bilinen_projeler: bir kez izlenen projelerin hafızası (silinen/taşınan proje fark edilsin diye). yoksay: bilerek takipsiz klasörler (neden + tarih zorunlu). kayitsiz_tarama: kilitsiz skill'li klasör taraması ayarı. kendi_skilleri: projenin kendi yazdığı skiller (ad ya da * desenleri; kayıtsız skill uyarısı çıkmasın diye). notlar: <proje klasör adı> -> <skill kimliği> -> elle not. Değişiklik komutları: python3 araclar/proje-kullanimi.py --help. Rapor: python3 araclar/proje-kullanimi.py -> notlar/proje-kullanimi.md; sağlık: --saglik -> notlar/proje-durumu.md",
   "tarama_kokleri": [
     "~/Documents"
   ],
   "ek_projeler": [],
+  "kayitsiz_tarama": {
+    "kokler": [],
+    "derinlik": 4,
+    "en_cok_klasor": 30000
+  },
+  "yoksay": [
+    {
+      "yol": "~/Documents/Psikolojik Danışman Sosyal Medya",
+      "altini_da": true,
+      "neden": "Kullanıcı kararı: güncel kullanılmıyor, işlem yapılmaz.",
+      "tarih": "2026-11-11"
+    },
+    {
+      "yol": "~/Documents/Istatistik template/Arkadasa-Gonderilecek/KIT",
+      "altini_da": true,
+      "neden": "Kullanıcı kararı: başkasına gönderilecek dağıtım paketi, önemli değil, işlem yapılmaz.",
+      "tarih": "2026-11-11"
+    }
+  ],
+  "bilinen_projeler": {
+    "AntigravityTest2": {
+      "yol": "~/Documents/AntigravityTest2",
+      "tur": "kilitli",
+      "durum": "takipte",
+      "eklendi": "2026-11-11"
+    },
+    "Akil Disi Youtube Kanali": {
+      "yol": "~/Documents/Akil Disi Youtube Kanali",
+      "tur": "kilitli",
+      "durum": "takipte",
+      "eklendi": "2026-11-11"
+    },
+    "Etsy-Arif": {
+      "yol": "~/Documents/Etsy-Arif",
+      "tur": "kilitli",
+      "durum": "takipte",
+      "eklendi": "2026-11-11"
+    },
+    "Etsy-Yeni": {
+      "yol": "~/Documents/Etsy-Yeni",
+      "tur": "kilitli",
+      "durum": "takipte",
+      "eklendi": "2026-11-11"
+    },
+    "IstatistikYoutube": {
+      "yol": "~/Documents/IstatistikYoutube",
+      "tur": "kilitli",
+      "durum": "takipte",
+      "eklendi": "2026-11-11"
+    }
+  },
+  "kendi_skilleri": {
+    "Akil Disi Youtube Kanali": [
+      "akil-disi-*"
+    ]
+  },
   "notlar": {
     "IstatistikYoutube": {
       "motion-design": "2026-10-15'ten beri bu sürüm kullanılıyor (edit-026); 2026-11-07'de kütüphaneden kurulup güncellemesi izlenmeye başlandı."

@@ -1,0 +1,456 @@
+{
+  "_aciklama": "Yapay zeka araçları: her aracın proje içinde okuduğu skill klasörleri, talimat dosyaları ve rol dosyaları. skill-ekle.py (rapor satırları, korunan yollar, --araclar) bu dosyayı okur. Bu dosya tek kaynaktır; rehber/14'teki tablolar kopyadır, çelişirse bu dosya geçerlidir. Gizli bilgi yok: yalnız sürüm numarası ve herkese açık yol. 'denendi' boşsa araçta gerçek deneme yapılmamıştır.",
+  "surum": 1,
+  "dogrulama_siniri_gun": 45,
+  "araclar": [
+    {
+      "anahtar": "claude-code",
+      "ad": "Claude Code (CLI ve masaüstü Code sekmesi)",
+      "ad_kisa": "Claude Code",
+      "kurulu": true,
+      "destek": "tam",
+      "surumler": [
+        {
+          "ad": "Claude Code CLI",
+          "kayitli": "2.1.319",
+          "okuma": {
+            "komut": [
+              "claude",
+              "--version"
+            ]
+          }
+        }
+      ],
+      "proje_skill_okur": [
+        ".claude/skills"
+      ],
+      "proje_talimat_okur": [
+        "CLAUDE.md"
+      ],
+      "proje_talimat_kosullu": [
+        "AGENTS.md (yalnız çalışma klasöründe ve üstünde hiç CLAUDE.md yoksa, v2.1.277+)"
+      ],
+      "rol_dosyasi": {
+        "yol": ".claude/agents/*.md",
+        "bicim": "md-yaml",
+        "uretilir": true,
+        "neden": ""
+      },
+      "kullanici_koku": "~/.claude",
+      "genel_skill_okur": [
+        "~/.claude/skills"
+      ],
+      "symlink": "Evet: belge, kurumsal/kişisel/proje konumundaki skill girdisinin başka bir dizine symlink olabileceğini, SKILL.md'nin hedeften okunduğunu ve aynı hedefin bir kez yüklendiğini söyler. Göreli proje içi bağ için ayrı örnek yok. Plugin skill symlink'i farklı işlenir. .claude/rules symlink destekler (proje dışı hedef onay ister, ağ yolları yüklenmez).",
+      "ayni_ad_onceligi": "Kurumsal > kişisel (~/.claude/skills) > proje: kullanıcı düzeyi kopya proje kopyasını gölgeler. Proje kökü ve iç içe klasörde aynı ad: ikisi de yüklenir. Plugin skilleri ad alanlı olduğu için çakışmaz. --add-dir skilli çakışırsa önekle çalışır. Skill, aynı adlı commands dosyasından önce gelir.",
+      "alt_ajan_bicimi": "Proje: .claude/agents/*.md; kullanıcı: ~/.claude/agents/; plugin agents/; oturumluk --agents JSON bayrağı. Markdown + YAML frontmatter (zorunlu name, description; isteğe bağlı tools, disallowedTools, model, permissionMode, maxTurns, skills, mcpServers, hooks, memory, background, omitClaudeMd, effort, isolation vb.). Öncelik: yönetilen > --agents > proje > kullanıcı > plugin; kimlik name alanından gelir, klasörler özyinelemeli taranır. skills alanı skill içeriğini başlangıçta enjekte eder (ilk 32 ad); yalnız önyükleme, diğer skilller yine bulunabilir.",
+      "kaynaklar": [
+        "https://code.claude.com/docs/en/skills",
+        "https://code.claude.com/docs/en/memory",
+        "https://code.claude.com/docs/en/sub-agents"
+      ],
+      "dogrulama_tarihi": "2026-11-11",
+      "belirsizler": [
+        ".agents/skills, .codex/.gemini/.cursor/.github skills klasörlerinin okunup okunmadığı: skills belgesinin tamamında geçmiyor, doğrulanmadı",
+        "Göreli symlink'in proje içinde çalıştığı açıkça örneklenmemiş",
+        "Masaüstü Code sekmesinin CLI ile birebir aynı yükleme kurallarını izlediği belgede ayrıca belirtilmiyor",
+        "Ek skill klasörü yolu ayarı bulunamadı; belgelenen tek yol --add-dir",
+        "Kullanıcı düzeyi skilleri toplu kapatan tek ayar yok; skillOverrides ve Skill(ad) deny kuralı ad ad çalışır",
+        "Makine bilgisi (103 girdi, 81 symlink) bu kontrolde yeniden sayılmadı",
+        ".agents/skills okunmuyor (belgede yok)"
+      ],
+      "denendi": []
+    },
+    {
+      "anahtar": "codex",
+      "ad": "OpenAI Codex (CLI ve masaüstü)",
+      "ad_kisa": "Codex",
+      "kurulu": true,
+      "destek": "tam",
+      "surumler": [
+        {
+          "ad": "Codex CLI",
+          "kayitli": "0.167.0",
+          "okuma": {
+            "komut": [
+              "codex",
+              "--version"
+            ]
+          }
+        }
+      ],
+      "proje_skill_okur": [
+        ".agents/skills"
+      ],
+      "proje_talimat_okur": [
+        "AGENTS.md"
+      ],
+      "proje_talimat_kosullu": [
+        "AGENTS.override.md",
+        "CLAUDE.md (yalnız project_doc_fallback_filenames ile)"
+      ],
+      "rol_dosyasi": {
+        "yol": ".codex/agents/*.toml",
+        "bicim": "toml",
+        "uretilir": true,
+        "neden": ""
+      },
+      "kullanici_koku": "~/.codex",
+      "genel_skill_okur": [
+        "~/.agents/skills",
+        "~/.codex/skills"
+      ],
+      "symlink": "Resmi belge: Codex simgesel bağlı skill klasörlerini izler ve hedefi tarar (build-skills sayfası, 2026-11-11 yeniden okundu). Proje içi göreli link için ayrı sınırlama belgelenmemiş; makinede denenmedi.",
+      "ayni_ad_onceligi": "Belgelenmemiş. Resmi sayfa: aynı adlı skiller birleştirilmez, ikisi de seçicide görünür. Hangisinin kazandığı bilinmiyor. ([[skills.config]] içinde son eşleşen giriş kazanır ama bu yalnızca açma/kapama ayarı içindir.)",
+      "alt_ajan_bicimi": "Proje: .codex/agents/*.toml, kişisel: ~/.codex/agents/*.toml; her dosya bir ajan, ajan dosya adıyla değil name alanıyla tanınır. Zorunlu: name, description, developer_instructions. Opsiyonel: model, model_reasoning_effort, model_reasoning_summary, model_verbosity, features.*, skills.config, skills.bundled.enabled, skills.include_instructions. sandbox_mode, approval_policy, model_provider, mcp_servers üst oturumdan miras kalır, ezilemez. [agents] anahtarları: enabled, max_concurrent_threads_per_session (eski ad max_threads), default_subagent_model, default_subagent_reasoning_effort, interrupt_message; 'roles' ve 'max_depth' belgelenmemiş. Yerleşik: default, worker, explorer; aynı adlı özel ajan yerleşiği ezer.",
+      "kaynaklar": [
+        "https://learn.chatgpt.com/docs/build-skills",
+        "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+        "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+        "https://community.openai.com/t/local-skills-in-agents-skills-are-no-longer-discovered-in-new-codex-sessions/1379522",
+        "https://codex.danielvaughan.com"
+      ],
+      "dogrulama_tarihi": "2026-11-11",
+      "belirsizler": [
+        "~/.codex/skills ve proje .codex/skills'in hâlâ okunup okunmadığı ve kullanımdan kalkıp kalkmadığı (resmi sayfada yok, üçüncü taraf kaynaklar çelişkili)",
+        "Aynı ad önceliği (proje mi kullanıcı mı kazanır)",
+        "Kapsamlar arası keşif sırası (resmi sayfa sıra tanımlamıyor)",
+        "Proje içi göreli symlink davranışı",
+        "Ek skill klasörü gösteren ayar (belgede yok)",
+        "[agents] altında roles ve max_depth anahtarlarının varlığı (belgelenmemiş)",
+        "Masaüstü uygulamanın ChatGPT.app içinde olup olmadığı",
+        "Resmi sayfaların yayın tarihi/sürümü yok; bu makinedeki codex-cli 0.167.0 ile belgenin sürümü eşleşiyor mu bilinmiyor",
+        "Makine durumu (kurulum, ~/.codex içeriği) bu ikinci okumada yeniden doğrulanmadı, ilk rapordan aktarıldı",
+        "[[skills.config]] name = biçiminin (taşınabilir alternatif, mutlak path yerine) anlamı doğrulanmadı",
+        "Proje içinde göreli symlink denenmedi"
+      ],
+      "denendi": []
+    },
+    {
+      "anahtar": "antigravity",
+      "ad": "Google Antigravity (App, IDE ve CLI)",
+      "ad_kisa": "Antigravity",
+      "kurulu": true,
+      "destek": "tam",
+      "surumler": [
+        {
+          "ad": "Antigravity App",
+          "kayitli": "2.29.0",
+          "okuma": {
+            "plist": "/Applications/Antigravity.app/Contents/Info.plist"
+          }
+        },
+        {
+          "ad": "Antigravity IDE",
+          "kayitli": "2.6.0",
+          "okuma": {
+            "plist": "/Applications/Antigravity IDE.app/Contents/Info.plist"
+          }
+        }
+      ],
+      "proje_skill_okur": [
+        ".agents/skills"
+      ],
+      "proje_talimat_okur": [
+        "AGENTS.md",
+        "GEMINI.md"
+      ],
+      "proje_talimat_kosullu": [
+        "AGENTS.md ve GEMINI.md birlikte, birikimli okunur"
+      ],
+      "rol_dosyasi": {
+        "yol": ".agents/agents/*.md",
+        "bicim": "md-yaml",
+        "uretilir": false,
+        "neden": "alan adları ve önyükleme anlamı belgede tam değil, IDE'nin gerçek yolu doğrulanmadı; her ajan projedeki tüm skilleri görür"
+      },
+      "kullanici_koku": "~/.gemini",
+      "genel_skill_okur": [
+        "~/.gemini/config/skills",
+        "~/.gemini/antigravity/skills"
+      ],
+      "symlink": "bilinmiyor: Skills, rules, discovery ve subagents sayfalarinda symlink anilmiyor; bu Mac'te denenmedi",
+      "ayni_ad_onceligi": "Yalniz customization-discovery sayfasinda, aynı adli skill ve ajanlar icin: (1) depo ici kisisel klasor (config.json personal_customization_dir ile), (2) workspace (.agents ve manifestleri), (3) ~/.gemini/config, (4) yerlesik. Yani proje kullanici skilini gecer. Istisna: CLI'da ~/.gemini/antigravity-cli/skills ve ~/.gemini/skills hepsinden once gelir. Skills sayfasi oncelik belirtmiyor. Kurallar birbirini ezmez, hepsi yuklenir.",
+      "alt_ajan_bicimi": "\"Proje: .agents/agents/<ad>.md veya .agents/agents/<ad>/agent.md; kullanici: ~/.gemini/config/agents/<ad>.md veya <ad>/agent.md; eklenti: plugins/<ad>/agents/. YAML frontmatter: name ve description zorunlu; tools, mainAgent, subagent, model (inherit/flash/pro), commandExecutionPolicy (off/auto/eager/sandbox), mcpServers, skills/plugins. Govde sistem istemi. Uyari: tools'ta yanlis arac adi surecin takilmasina yol acabilir. [dogrulandi]\"",
+      "kaynaklar": [
+        "https://antigravity.google/docs/skills",
+        "https://antigravity.google/docs/rules",
+        "https://antigravity.google/docs/customization-discovery",
+        "https://antigravity.google/docs/subagents"
+      ],
+      "dogrulama_tarihi": "2026-11-11",
+      "belirsizler": [
+        "Symlinkli skill klasorunun izlenip izlenmedigi",
+        "CLAUDE.md okunup okunmadigi",
+        "Belgede olmayan .claude/skills, .codex/skills, .cursor/skills, .github/skills yollarinin okunup okunmadigi",
+        "Skills sayfasi oncelik vermiyor; sira yalniz discovery sayfasindan ve yalniz ayni ad icin",
+        "Discovery sayfasi IDE'yi anlatmiyor; IDE 2.6.0'in gercekte config/skills mi eski antigravity/skills yolunu mu kullandigi",
+        "Belge sayfalarinin tarihi/surumu",
+        "Global kapatma anahtari belgelenmemis; yalniz manifest exclude (CLI'nin ozel klasorleri haric)",
+        "App oturumunda define_subagent ile gecici ajan uretme ozelligi bu turda belgeden dogrulanmadi",
+        "Ucuncu taraf iddiasi (global kurulum ~/.agents/skills'e yazar) resmi kaynakla dogrulanmadi",
+        "Makinedeki surum numaralari (2.29.0 / 2.6.0) bu turda yeniden okunmadi",
+        "IDE 2.6.0'ın gerçek klasörü: ~/.gemini/antigravity/skills mi config/skills mi"
+      ],
+      "denendi": []
+    },
+    {
+      "anahtar": "cursor",
+      "ad": "Cursor (IDE ve cursor-agent CLI)",
+      "ad_kisa": "Cursor",
+      "kurulu": true,
+      "destek": "tam",
+      "surumler": [
+        {
+          "ad": "Cursor",
+          "kayitli": "3.25.6",
+          "okuma": {
+            "plist": "/Applications/Cursor.app/Contents/Info.plist"
+          }
+        }
+      ],
+      "proje_skill_okur": [
+        ".agents/skills",
+        ".cursor/skills",
+        ".claude/skills",
+        ".codex/skills"
+      ],
+      "proje_talimat_okur": [
+        "AGENTS.md"
+      ],
+      "proje_talimat_kosullu": [
+        ".cursor/rules/*.mdc"
+      ],
+      "rol_dosyasi": {
+        "yol": ".cursor/agents/*.md",
+        "bicim": "md-yaml",
+        "uretilir": false,
+        "neden": "Cursor .claude/agents ve .codex/agents dosyalarını da okur (belge); ayrı dosya gerekmez"
+      },
+      "kullanici_koku": "~/.cursor",
+      "genel_skill_okur": [
+        "~/.cursor/skills",
+        "~/.cursor/skills-cursor"
+      ],
+      "symlink": "bilinmiyor: resmi belgede symlink anılmıyor; topluluk kaynakları çelişkili. Gerçek klasör kopyası güvenli kabul edilmeli.",
+      "ayni_ad_onceligi": "Skiller için resmi belgede yok (belirsiz; sayfa yalnız name'in üst klasör adıyla eşleşmesi gerektiğini söylüyor). Yalnız alt ajanlarda: proje kullanıcıyı geçer, .cursor/ .claude/ ve .codex/'i geçer.",
+      "alt_ajan_bicimi": "Markdown + YAML frontmatter (name, description, model [varsayılan inherit], readonly [varsayılan false], is_background [varsayılan false]); gövde istem metni. Proje: .cursor/agents/, .claude/agents/, .codex/agents/. Kullanıcı: ~/.cursor/agents/, ~/.claude/agents/, ~/.codex/agents/. Ad çakışmasında proje önceliklidir; .cursor/ , .claude/ ve .codex/'in önüne geçer. Kullanıcı klasörleri arası sıra belirtilmemiş.",
+      "kaynaklar": [
+        "https://cursor.com/docs/skills",
+        "https://cursor.com/docs/context/rules",
+        "https://cursor.com/docs/context/subagents"
+      ],
+      "dogrulama_tarihi": "2026-11-11",
+      "belirsizler": [
+        "Skill klasörleri arası öncelik sırası",
+        "Aynı adlı proje ve kullanıcı skilli çakışması",
+        "Symlink'li skill klasörünün izlenmesi",
+        "Skilleri kapatma veya ek skill yolu ayarı",
+        "CLAUDE.md'nin Cursor tarafından okunup okunmadığı",
+        "AGENTS.md ile .cursor/rules arasındaki öncelik",
+        "Kullanıcı düzeyi alt ajan klasörleri arası sıra",
+        "cursor-agent CLI'nin skilleri yükleyip yüklemediği (skill sayfasında anılmıyor) ve bu Mac'te kurulu olup olmadığı",
+        "Skillerin hangi sürümle geldiği (önceki rapordaki '2.4' resmi sayfada yok; 2.4 yalnız /migrate-to-skills için geçiyor)",
+        ".gemini/skills ve .github/skills desteği (belgede yok)",
+        "Bu Mac'teki Cursor 3.25.6 ve ~/.cursor içeriği bu oturumda yeniden doğrulanmadı (önceki okumadan devralındı)",
+        "Cursor ve Copilot ortak düzende hem .agents/skills hem .claude/skills okuyor: aynı skill iki kez listelenebilir; yalnız Claude tek hedefi bir kez yüklediğini belgeliyor; denenmedi."
+      ],
+      "denendi": []
+    },
+    {
+      "anahtar": "vscode-copilot",
+      "ad": "GitHub Copilot (VS Code agent modu)",
+      "ad_kisa": "VS Code Copilot",
+      "kurulu": true,
+      "destek": "tam",
+      "surumler": [
+        {
+          "ad": "Visual Studio Code",
+          "kayitli": "1.146.0",
+          "okuma": {
+            "plist": "/Applications/Visual Studio Code.app/Contents/Info.plist"
+          }
+        }
+      ],
+      "proje_skill_okur": [
+        ".github/skills",
+        ".claude/skills",
+        ".agents/skills"
+      ],
+      "proje_talimat_okur": [
+        ".github/copilot-instructions.md"
+      ],
+      "proje_talimat_kosullu": [
+        "AGENTS.md (chat.useAgentsMdFile açıksa)",
+        "CLAUDE.md (chat.useClaudeMdFile açıksa)"
+      ],
+      "rol_dosyasi": {
+        "yol": ".github/agents/*.agent.md",
+        "bicim": "md-yaml",
+        "uretilir": false,
+        "neden": "format ayrı; .claude/agents okunuyor mu belgede yok"
+      },
+      "kullanici_koku": "~/.copilot",
+      "genel_skill_okur": [
+        "~/.copilot/skills"
+      ],
+      "symlink": "bilinmiyor: incelenen hiçbir resmi sayfa (VS Code skills, CLI add-skills) symlink'li skill klasörünü anlatmıyor; gerçek klasör kopyası güvenli yol",
+      "ayni_ad_onceligi": "CLI: proje skill'i kişisel skill'i ezer (resmi, cli-config-dir-reference; add-skills sayfası ise çakışma kuralını söylemiyor). VS Code: genel kural belgelenmemiş; farklı konumdaki aynı adlı skiller Skills sayfasında birlikte görünür. Ajanlarda CLI'de kişisel proje ajanını ezer.",
+      "alt_ajan_bicimi": "Proje: .github/agents/*.agent.md; kullanıcı: CLI ~/.copilot/agents/*.agent.md (resmi). YAML frontmatter + Markdown gövde. CLI'de aynı ID'de kişisel ajan proje ajanını ezer (resmi; name alanı tekilleştirmeyi etkilemez). .claude/agents okunuyor mu belgelenmemiş.",
+      "kaynaklar": [
+        "https://code.visualstudio.com/docs/copilot/customization/agent-skills",
+        "https://code.visualstudio.com/docs/copilot/customization/custom-instructions",
+        "https://code.visualstudio.com/docs/agents/reference/custom-instructions-reference",
+        "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills",
+        "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-custom-instructions",
+        "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference"
+      ],
+      "dogrulama_tarihi": "2026-11-11",
+      "belirsizler": [
+        "VS Code'da aynı adlı proje/kullanıcı skill önceliği",
+        "Proje içinde .github/.claude/.agents arası öncelik",
+        "Symlink'li skill klasörü davranışı",
+        "CLI'nin ~/.claude/skills'i okuyup okumadığı (v1.0.36 iddiası yalnızca üçüncü taraf)",
+        ".claude/agents okunuyor mu",
+        "VS Code kullanıcı ajan klasörünün yolu",
+        "VS Code'da @ import desteği",
+        "VS Code Local harness Şubat 2027'de kalkacak; yeni harness'ların okuduğu yollar değişebilir",
+        "CLI sayfalarının yayın tarihi yok; güncellik belirsiz",
+        "cli-config-dir-reference sayfasının son 143k karakteri okunmadı",
+        "VS Code'da hangi harness'ın varsayılan olduğu ve kullanıcı skill yollarının harness'a göre filtrelenip filtrelenmediği",
+        "Cursor ve Copilot ortak düzende hem .agents/skills hem .claude/skills okuyor: aynı skill iki kez listelenebilir; yalnız Claude tek hedefi bir kez yüklediğini belgeliyor; denenmedi."
+      ],
+      "denendi": []
+    },
+    {
+      "anahtar": "gemini-cli",
+      "ad": "Google Gemini CLI",
+      "ad_kisa": "Gemini CLI",
+      "kurulu": false,
+      "destek": "istege-bagli",
+      "surumler": [
+        {
+          "ad": "Gemini CLI",
+          "kayitli": null,
+          "okuma": {
+            "komut": [
+              "gemini",
+              "--version"
+            ]
+          }
+        }
+      ],
+      "proje_skill_okur": [
+        ".gemini/skills",
+        ".agents/skills"
+      ],
+      "proje_talimat_okur": [
+        "GEMINI.md"
+      ],
+      "proje_talimat_kosullu": [
+        "AGENTS.md (yalnız context.fileName ayarıyla)"
+      ],
+      "rol_dosyasi": {
+        "yol": ".gemini/agents/*.md",
+        "bicim": "md-yaml",
+        "uretilir": false,
+        "neden": "kurulu değil; format ayrı"
+      },
+      "kullanici_koku": "~/.gemini",
+      "genel_skill_okur": [
+        "~/.gemini/skills",
+        "~/.agents/skills"
+      ],
+      "symlink": "bilinmiyor: resmi belgelerde symlink'ten soz edilmiyor",
+      "ayni_ad_onceligi": "Yuksek oncelikli katman kazanir: yerlesik < eklenti < kullanici < calisma alani (proje); proje skili kullanici skilini gecer. Ayni katmanda .agents/skills alias'i .gemini/skills'e baskindir. (geminicli.com/docs/cli/skills ve GitHub ham skills.md'de yazili)",
+      "alt_ajan_bicimi": "Proje: <proje>/.gemini/agents/*.md; kullanici: ~/.gemini/agents/*.md. Markdown dosyasi, YAML on yazi (--- ile) zorunlu; name (kucuk harf, rakam, tire, alt cizgi) ve description zorunlu; kind (local/remote), tools, mcpServers, model, temperature, max_turns (varsayilan 30), timeout_mins (varsayilan 10) istege bagli; govde sistem istemi.",
+      "kaynaklar": [
+        "https://geminicli.com/docs/cli/skills/",
+        "https://geminicli.com/docs/cli/gemini-md/",
+        "https://geminicli.com/docs/core/subagents/",
+        "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/docs/cli/skills.md"
+      ],
+      "dogrulama_tarihi": "2026-11-11",
+      "belirsizler": [
+        "Symlink davranisi belgelenmemis",
+        "Surum numarasi sayfalarda yok",
+        "Ek skill klasoru icin yalnizca /skills link komutu var; settings.json karsiligi belgelenmemis; /skills link'in terminal komutu olarak da var olup olmadigi belirsiz",
+        "Gemini CLI sayfasinda 18 Haz 2026'da ucretsiz/Google One kullanicilari icin Antigravity CLI'ye gecis notu var: bu makinedeki gercek arac agy/Antigravity olabilir; bu belgeler Gemini CLI icindir",
+        "Devre disi birakma kullanici skilleri icin ozel degil, ad bazli /skills disable|enable (varsayilan kapsam user, --scope workspace)",
+        "JIT taramanin tam sinirlari ('trusted root') ayrintisi belgede kisa; kesin davranis dogrulanamadi",
+        "Makine durumu (~/.gemini icerigi, ~/.agents/skills 28 oge, agy kurulu) bu turda yeniden denetlenmedi, yalnizca gemini komutunun yoklugu dogrulandi"
+      ],
+      "denendi": []
+    },
+    {
+      "anahtar": "copilot-cli",
+      "ad": "GitHub Copilot CLI",
+      "ad_kisa": "Copilot CLI",
+      "kurulu": false,
+      "destek": "istege-bagli",
+      "surumler": [
+        {
+          "ad": "Copilot CLI",
+          "kayitli": null,
+          "okuma": {
+            "komut": [
+              "copilot",
+              "--version"
+            ]
+          }
+        }
+      ],
+      "proje_skill_okur": [
+        ".github/skills",
+        ".claude/skills",
+        ".agents/skills"
+      ],
+      "proje_talimat_okur": [
+        ".github/copilot-instructions.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "GEMINI.md"
+      ],
+      "proje_talimat_kosullu": [
+        "hepsi belgede okunuyor; @ ile göreli içe aktarma"
+      ],
+      "rol_dosyasi": {
+        "yol": ".github/agents/*.agent.md",
+        "bicim": "md-yaml",
+        "uretilir": false,
+        "neden": "kurulu değil; format ayrı"
+      },
+      "kullanici_koku": "~/.copilot",
+      "genel_skill_okur": [
+        "~/.copilot/skills"
+      ],
+      "symlink": "bilinmiyor: incelenen hiçbir resmi sayfa (VS Code skills, CLI add-skills) symlink'li skill klasörünü anlatmıyor; gerçek klasör kopyası güvenli yol",
+      "ayni_ad_onceligi": "CLI: proje skill'i kişisel skill'i ezer (resmi, cli-config-dir-reference; add-skills sayfası ise çakışma kuralını söylemiyor). VS Code: genel kural belgelenmemiş; farklı konumdaki aynı adlı skiller Skills sayfasında birlikte görünür. Ajanlarda CLI'de kişisel proje ajanını ezer.",
+      "alt_ajan_bicimi": "Proje: .github/agents/*.agent.md; kullanıcı: CLI ~/.copilot/agents/*.agent.md (resmi). YAML frontmatter + Markdown gövde. CLI'de aynı ID'de kişisel ajan proje ajanını ezer (resmi; name alanı tekilleştirmeyi etkilemez). .claude/agents okunuyor mu belgelenmemiş.",
+      "kaynaklar": [
+        "https://code.visualstudio.com/docs/copilot/customization/agent-skills",
+        "https://code.visualstudio.com/docs/copilot/customization/custom-instructions",
+        "https://code.visualstudio.com/docs/agents/reference/custom-instructions-reference",
+        "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills",
+        "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-custom-instructions",
+        "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference"
+      ],
+      "dogrulama_tarihi": "2026-11-11",
+      "belirsizler": [
+        "VS Code'da aynı adlı proje/kullanıcı skill önceliği",
+        "Proje içinde .github/.claude/.agents arası öncelik",
+        "Symlink'li skill klasörü davranışı",
+        "CLI'nin ~/.claude/skills'i okuyup okumadığı (v1.0.36 iddiası yalnızca üçüncü taraf)",
+        ".claude/agents okunuyor mu",
+        "VS Code kullanıcı ajan klasörünün yolu",
+        "VS Code'da @ import desteği",
+        "VS Code Local harness Şubat 2027'de kalkacak; yeni harness'ların okuduğu yollar değişebilir",
+        "CLI sayfalarının yayın tarihi yok; güncellik belirsiz",
+        "cli-config-dir-reference sayfasının son 143k karakteri okunmadı",
+        "VS Code'da hangi harness'ın varsayılan olduğu ve kullanıcı skill yollarının harness'a göre filtrelenip filtrelenmediği",
+        "Proje skill'i kişisel skill'i yener (belgede), kişisel ajan proje ajanını yener (ters kural)",
+        ".claude/settings.json kısmen okunuyor"
+      ],
+      "denendi": []
+    }
+  ]
+}

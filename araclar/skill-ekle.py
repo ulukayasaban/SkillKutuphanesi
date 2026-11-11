@@ -5,8 +5,9 @@ Projede oluşanlar:
   .agents/skills/<skill>/          Codex'in okuduğu kopya (varsa Codex'e özel sürüm)
   .claude/skills/<skill>           Claude Code: symlink -> ../../.agents/skills/<skill>
                                    (skill'in Claude'a özel sürümü varsa symlink yerine o sürümün kopyası)
-                                   --arac claude: proje sadece Claude kullanır; skill burada gerçek kopya olur,
+                                   --arac yalniz-claude (eski ad: claude): proje sadece Claude kullanır; skill burada gerçek kopya olur,
                                    .agents/skills, .codex/agents ve AGENTS.md bloğu kurulmaz (kilit.json -> "araclar")
+                                   --arac ortak (eski ad: ikisi): Claude + Codex + Antigravity + Cursor + VS Code Copilot (varsayılan)
   .claude/agents/<rol>.md          Claude alt-agent'ı (frontmatter 'skills:' = sadece o rolün skilleri)
   .codex/agents/<rol>.toml         Codex alt-agent'ı (rol dışı proje skilleri [[skills.config]] ile kapalı)
   AGENTS.md / CLAUDE.md            işaretli blok (sadece o blok yeniden yazılır)
@@ -32,7 +33,9 @@ Güvenlik kuralları:
   python3 araclar/skill-ekle.py ~/Projeler/site --oner "3d ürün tanıtım sitesi scroll animasyonlu"
   python3 araclar/skill-ekle.py ~/Projeler/site --durum | --dogrula | --guncelle | --yenile | --geri-al
   python3 araclar/skill-ekle.py ~/Projeler/site --kaldir gsap-core     (ya da --kaldir hepsi)
-  python3 araclar/skill-ekle.py ~/Projeler/site --arac claude --kuru  # sadece Claude'a geç (ikisi: Claude + Codex)
+  python3 araclar/skill-ekle.py ~/Projeler/site --arac yalniz-claude --kuru  # sadece Claude'a geç
+  python3 araclar/skill-ekle.py ~/Projeler/site --arac ortak --kuru          # ortak düzene geç (Claude + Codex + ...)
+  python3 araclar/skill-ekle.py --araclar [--ozet-json] [--siki]             # yapay zeka araçları belgesi/sürüm kontrolü (salt okunur)
   python3 araclar/skill-ekle.py --listele --kategori 03 --teknoloji react
 """
 import argparse
@@ -42,7 +45,7 @@ import re
 import shutil
 import subprocess
 import sys
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -56,7 +59,13 @@ BLOK_BAS, BLOK_SON = "<!-- skill-kutuphanesi:basla -->", "<!-- skill-kutuphanesi
 URETILDI = "skill-kutuphanesi tarafından üretildi"
 META = ".skill-kutuphanesi"
 KILIT_SURUM = 3
-ARACLAR = {"ikisi": ["claude", "codex"], "claude": ["claude"]}
+ARACLAR = {"ikisi": ["claude", "codex"], "claude": ["claude"],
+           "ortak": ["claude", "codex"], "yalniz-claude": ["claude"]}
+ARAC_TAKMA = {"ikisi": "ortak", "claude": "yalniz-claude"}  # eski ad -> ad
+DUZEN_KLASORLERI = {"ortak": [".agents/skills", ".claude/skills"], "yalniz-claude": [".claude/skills"]}
+DUZEN_TALIMAT = {"ortak": ["CLAUDE.md", "AGENTS.md"], "yalniz-claude": ["CLAUDE.md"]}
+ARAC_JSON = KOK / "yapay-zeka-araclari.json"
+ARAC_BELGE_GUN = 45  # araç belgesi bu kadar günden eskiyse --araclar "dikkat" der
 ROL_ADI = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 YEDEK_SAYISI = 10
 # --zorla ile bile GEÇİLEMEYEN hatalar (güvenlik / tutarlılık)
@@ -198,6 +207,7 @@ def kilit_oku(proje):
     k.setdefault("roller", [])
     k.setdefault("skiller", {})
     k.setdefault("profil", None)
+    k.setdefault("arac_secimi", "secildi" if "araclar" in k else "varsayilan")  # diske yalnız kilit_yaz yazar
     for v in k["skiller"].values():
         v.setdefault("roller", [])
     k["surum"] = KILIT_SURUM
@@ -207,6 +217,9 @@ def kilit_oku(proje):
 def kilit_yaz(proje, kilit):
     kilit["guncelleme"] = date.today().isoformat()
     kilit["proje_yolu"] = str(proje)
+    if "araclar" not in kilit:  # seçim hiç yapılmadıysa varsayılan kayda geçer ve "varsayılan" diye işaretlenir
+        kilit["araclar"] = list(ARACLAR["ikisi"])
+        kilit.setdefault("arac_secimi", "varsayilan")
     meta(proje).mkdir(exist_ok=True)
     json_yaz(meta(proje) / "kilit.json", kilit)
 
@@ -214,6 +227,96 @@ def kilit_yaz(proje, kilit):
 def codex_var(kilit):
     """Proje Codex'i de kullanıyor mu? (kilit 'araclar'; eski kilitlerde varsayılan: ikisi)"""
     return "codex" in kilit.get("araclar", ARACLAR["ikisi"])
+
+
+def duzen_adi(kilit):
+    """Projenin araç düzeni: 'ortak' (Claude + Codex + ...) ya da 'yalniz-claude'."""
+    return "ortak" if codex_var(kilit) else "yalniz-claude"
+
+
+def duzen_uygula(kilit, secim):
+    """--arac değerini (eski adlar dahil) kilide yazar. Kilitteki liste hep ['claude','codex'] ya da ['claude'] kalır."""
+    d = ARAC_TAKMA.get(secim, secim)
+    kilit["araclar"] = list(ARACLAR[d])
+    kilit["arac_secimi"] = "secildi"
+    return d
+
+
+def arac_kayitlari(yol=None):
+    """yapay-zeka-araclari.json -> kayıt listesi; yok/bozuksa None (çağıran satırları atlar, çökmez)."""
+    try:
+        d = json_oku(Path(yol) if yol else ARAC_JSON)
+    except (OSError, ValueError):
+        return None
+    if not isinstance(d, dict) or not isinstance(d.get("araclar"), list):
+        return None
+    return [k for k in d["araclar"] if isinstance(k, dict)]
+
+
+def arac_korunan_yollar(kayitlar=None):
+    """Araçların kullanıcı klasörleri (ör. ~/.gemini): proje olarak kabul edilmez. Veri yoksa []."""
+    kayitlar = arac_kayitlari() if kayitlar is None else kayitlar
+    out = []
+    for k in kayitlar or []:
+        kok = k.get("kullanici_koku")
+        if isinstance(kok, str) and kok.startswith("~"):
+            out.append(Path(kok).expanduser().resolve())
+    return out
+
+
+def _adlar(kayitlar):
+    return ", ".join(k["ad_kisa"] for k in kayitlar)
+
+
+def arac_satirlari(proje, kilit, rapor, secim=None, kayitlar=None):
+    """Araç düzeni bilgi satırları (hepsi BİLGİ): hangi araç bu projedeki skilleri görür/görmez."""
+    kayitlar = arac_kayitlari() if kayitlar is None else kayitlar
+    if not kayitlar:
+        rapor.ekle("BİLGİ", "arac-belge-yok", "yapay-zeka-araclari.json okunamadı; hangi aracın skilleri göreceği satırları atlandı "
+                   "(kurulum etkilenmez).")
+        return
+    duzen = duzen_adi(kilit)
+    klasorler = DUZEN_KLASORLERI[duzen]
+    kurulu = [k for k in kayitlar if k.get("kurulu")]
+    gorur = lambda k: bool(set(k.get("proje_skill_okur", [])) & set(klasorler))  # noqa: E731
+    gorenler = [k for k in kurulu if gorur(k)]
+    gormeyenler = [k for k in kurulu if not gorur(k)]
+    if duzen == "ortak":
+        klasor_metni = "Klasörler: .agents/skills (gerçek kopya) + .claude/skills (bağ)."
+    else:
+        klasor_metni = "Klasör: .claude/skills (gerçek kopya)."
+    metin = (f"Araç düzeni: {duzen} (seçim: {'seçildi' if kilit.get('arac_secimi') == 'secildi' else 'varsayılan'}). {klasor_metni} "
+             f"Skilleri görenler: {_adlar(gorenler) or 'yok'}. Görmeyenler: {_adlar(gormeyenler) or 'yok'}. "
+             f"Talimat bloğu: {', '.join(DUZEN_TALIMAT[duzen])}.")
+    yok = [k for k in kayitlar if k.get("destek") == "istege-bagli" and not k.get("kurulu")]
+    if duzen == "ortak" and yok:
+        metin += f" Kurulu olmayan: {_adlar(yok)} (.agents/skills'i okur; GEMINI.md yazılmıyor)."
+    rapor.ekle("BİLGİ", "arac-duzeni", metin)
+    if gormeyenler:
+        rapor.ekle("BİLGİ", "arac-gormez", f"Bu düzende {_adlar(gormeyenler)} bu projedeki skilleri GÖRMEZ "
+                   "(okudukları klasör: .agents/skills). Onları da kullanacaksan: --arac ortak.")
+    if kilit.get("arac_secimi") == "varsayilan" and secim is None:
+        rapor.ekle("BİLGİ", "arac-secimi-yok", "Bu proje için araç düzeni hiç seçilmedi; varsayılan 'ortak' uygulanıyor. Projenin hangi "
+                   "araçlarla açılacağını (Claude Code, Codex, Antigravity, Cursor, VS Code Copilot, Windows) kullanıcıya sor, sonra "
+                   "--arac ortak ya da --arac yalniz-claude ile kaydet (rehber/14).")
+    if duzen == "ortak":
+        cift = [k for k in kurulu if set(klasorler) <= set(k.get("proje_skill_okur", []))]
+        if cift:
+            rapor.ekle("BİLGİ", "arac-cift-okuma", f"{_adlar(cift)} hem .agents/skills hem .claude/skills klasörünü okur; aynı skill iki kez "
+                       "listelenebilir (belgede yok, denenmedi). Görürsen kullanıcıya bildir (rehber/14 bölüm 9).")
+        if (proje / ".git").exists():
+            rapor.ekle("BİLGİ", "arac-symlink", ".claude/skills altındaki bağlar symlink'tir; Windows'ta ve core.symlinks kapalı git'te düz "
+                       "metin dosyasına döner, Claude skilleri göremez. Proje Windows'ta açılacaksa --arac yalniz-claude kullan "
+                       "(Codex ve Antigravity görmez; rehber/14 bölüm 5).")
+    if kilit.get("roller"):
+        rolsuz = [k for k in kurulu if not (k.get("rol_dosyasi") or {}).get("uretilir", True) and k.get("anahtar") != "cursor"]
+        if rolsuz:
+            rapor.ekle("BİLGİ", "arac-rolsuz", "Rol dosyaları yalnız Claude (.claude/agents) ve Codex (.codex/agents) için üretilir. Cursor "
+                       f".claude/agents dosyalarını da okur (belge). {_adlar(rolsuz)} için rol dosyası üretilmez: orada her ajan projedeki "
+                       "tüm skilleri görür.")
+        if codex_var(kilit):
+            rapor.ekle("BİLGİ", "arac-mutlak-yol", ".codex/agents/*.toml içinde bu bilgisayarın mutlak yolları var; proje başka klasöre ya da "
+                       "bilgisayara taşınırsa Codex rol dışı skilleri kapatamaz. Kütüphanenin olduğu bilgisayarda --yenile çalıştır.")
 
 
 def kurulu_hash(proje, ad):
@@ -236,10 +339,24 @@ def elle_degismis(proje, ad, kayit):
 
 
 # ================================================================== yedek / geri alma
+def meta_gitignore(proje):
+    """.skill-kutuphanesi/.gitignore: yedek/ klasörü git'e girmesin. Var olan satırlar asla değiştirilmez, yalnız eksikse eklenir."""
+    g = meta(proje) / ".gitignore"
+    try:
+        mevcut = g.read_text(encoding="utf-8") if g.exists() else ""
+        if any(s.strip().rstrip("/") == "yedek" for s in mevcut.splitlines()):
+            return
+        with g.open("a", encoding="utf-8") as f:
+            f.write(("" if not mevcut or mevcut.endswith("\n") else "\n") + "yedek/\n")
+    except OSError:
+        pass  # yan ürün: yedeği asla engellemez
+
+
 def yedekle(proje, adlar, neden):
     zaman = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     y = meta(proje) / "yedek" / zaman
     y.mkdir(parents=True)
+    meta_gitignore(proje)
     hedefler = [".claude/agents", ".codex/agents", "AGENTS.md", "CLAUDE.md", str(AYAR), f"{META}/kilit.json"]
     hedefler += [f".agents/skills/{a}" for a in adlar] + [f".claude/skills/{a}" for a in adlar]
     var_olan = []
@@ -852,7 +969,7 @@ def kutuphane_taramasi(skiller, sorgu_metni, teknolojiler, haric_idler=(), n=12,
 # ================================================================== ön kontrol
 def proje_yapisi_kontrol(proje, roller, rapor: Rapor):
     """Projede skill/agent klasörleri güvenli mi? (symlink ile başka yere/globale gidiyor mu, rol adları geçerli mi)"""
-    korunan = [g.resolve() for g in GLOBAL_KLASORLER.values()] + [KOK.resolve(), (Path.home() / ".openmontage").resolve()]
+    korunan = [g.resolve() for g in GLOBAL_KLASORLER.values()] + [KOK.resolve(), (Path.home() / ".openmontage").resolve()] + arac_korunan_yollar()
     hedefler = {}
     for rel in (".agents/skills", ".claude/skills", ".claude/agents", ".codex/agents", ".agents", ".claude", ".codex"):
         p = proje / rel
@@ -1174,8 +1291,10 @@ def guvenli_islem(proje, yedek, islem):
 
 def ekle(a, proje, skiller):
     kilit = kilit_oku(proje)
+    onceki = list(kilit.get("araclar", ARACLAR["ikisi"]))
+    onceki_duzen = duzen_adi(kilit)
     if a.arac:
-        kilit["araclar"] = ARACLAR[a.arac]
+        duzen_uygula(kilit, a.arac)
     if a.blok:
         kilit["blok"] = a.blok
     plan, roller, profil, bulunamayan = istek_coz(a, skiller)
@@ -1183,6 +1302,12 @@ def ekle(a, proje, skiller):
     for b in bulunamayan:
         rapor.ekle("HATA", "bulunamadi", f"kütüphanede yok: {b} (ara: skill-ekle.py --ara {b})")
     kur_listesi, adlar = on_kontrol(proje, kilit, plan, roller, skiller, rapor)
+    arac_satirlari(proje, kilit, rapor, secim=a.arac)
+    eskiler = sorted(set(kilit["skiller"]) - set(adlar.values()))
+    if a.arac and kilit["araclar"] != onceki and eskiler:
+        rapor.ekle("HATA", "arac-karisik", f"--arac {ARAC_TAKMA.get(a.arac, a.arac)} verildi ama projede {len(eskiler)} skill {onceki_duzen} "
+                   f"düzeninde kurulu ({', '.join(eskiler)}). Önce yalnız --arac {ARAC_TAKMA.get(a.arac, a.arac)} --kuru, sonra "
+                   f"--arac {ARAC_TAKMA.get(a.arac, a.arac)} --evet çalıştır; ardından skill ekle.")
     kapsam_raporu(proje, roller, kur_listesi, skiller, rapor, a.oner or "")
     print(f"Proje: {proje}\nKurulacak: {len(kur_listesi)} skill · Roller: {', '.join(roller) or '-'}")
     for sid, (s, rk) in kur_listesi.items():
@@ -1255,6 +1380,7 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
     kilit = kilit or kilit_oku(proje)
     rapor, degisen = Rapor(), []
     proje_yapisi_kontrol(proje, kilit["roller"], rapor)
+    arac_satirlari(proje, kilit, rapor)
     for ad, k in kilit["skiller"].items():
         s = kaynak_bul(skiller, k)
         if not s:
@@ -1349,10 +1475,10 @@ def arac_degistir(a, proje, skiller):
     """Projenin araç düzenini değiştirir (ör. sadece Claude) ve kurulu skilleri yeni düzene göre yeniden kurar.
     Skill içerikleri değişmez; elle değiştirilmiş skill --zorla olmadan yeniden kurulmaz."""
     kilit = kilit_oku(proje)
-    yeni = ARACLAR[a.arac]
-    print(f"Proje: {proje}\nAraçlar: {'Claude + Codex' if codex_var(kilit) else 'sadece Claude'} -> "
-          f"{'Claude + Codex' if 'codex' in yeni else 'sadece Claude'}")
-    kilit["araclar"] = yeni
+    eski_duzen = duzen_adi(kilit)
+    yeni_duzen = duzen_uygula(kilit, a.arac)
+    print(f"Proje: {proje}\nAraçlar: {'Claude + Codex' if eski_duzen == 'ortak' else 'sadece Claude'} ({eski_duzen}) -> "
+          f"{'Claude + Codex' if yeni_duzen == 'ortak' else 'sadece Claude'} ({yeni_duzen})")
     return guncelle(a, proje, skiller, kilit=kilit, yapi_degisti=True)
 
 
@@ -1427,7 +1553,8 @@ def dogrula(proje, skiller, sessiz=False):
 def durum(proje, skiller):
     kilit = kilit_oku(proje)
     print(f"Proje: {proje}\nProfil: {kilit.get('profil')}  Roller: {', '.join(kilit['roller']) or '-'}  "
-          f"Araçlar: {'Claude + Codex' if codex_var(kilit) else 'sadece Claude'}")
+          f"Araçlar: {'Claude + Codex' if codex_var(kilit) else 'sadece Claude'}"
+          f" · düzen: {duzen_adi(kilit)} ({'seçildi' if kilit.get('arac_secimi') == 'secildi' else 'varsayılan: seçim yapılmadı'})")
     for ad, k in sorted(kilit["skiller"].items()):
         s = kaynak_bul(skiller, k)
         if not s:
@@ -1534,6 +1661,117 @@ def guncelleme_suruyor():
     return b if canli and yas < 6 * 3600 else None  # ölü süreç ya da 6 saatten eski kilit = bayat, yok say
 
 
+ARAC_ZORUNLU = ("anahtar", "ad", "kurulu", "proje_skill_okur", "dogrulama_tarihi", "surumler")
+
+
+SURUM_KOMUT_ADLARI = ("claude", "codex", "gemini", "copilot")
+SURUM_KOMUT_IZIN_KONTROLU = True  # yalnız testler kapatır (sahte komut için)
+
+
+def surum_oku(okuma):
+    """Bir aracın sürümünü okur: {'komut': [ad, '--version']} (yalnız sürüm komutu çalışır) ya da {'plist': yol}. Okunamazsa None (hata fırlatmaz)."""
+    try:
+        if isinstance(okuma, dict) and okuma.get("komut"):
+            k = okuma["komut"]
+            # izin listesi: yalnız ['<ad>', '--version'] ve bilinen dört araç adı; başka komut çalıştırılmaz
+            if SURUM_KOMUT_IZIN_KONTROLU and not (isinstance(k, list) and len(k) == 2 and k[0] in SURUM_KOMUT_ADLARI and k[1] == "--version"):
+                return None
+            r = subprocess.run(okuma["komut"], capture_output=True, text=True, timeout=10, stdin=subprocess.DEVNULL)
+            m = re.search(r"\d+(?:\.\d+)+", r.stdout) if r.returncode == 0 else None
+            return m.group(0) if m else None
+        if isinstance(okuma, dict) and okuma.get("plist"):
+            import plistlib
+            yol = Path(okuma["plist"])
+            if not yol.is_file():
+                return None
+            with yol.open("rb") as f:
+                v = plistlib.load(f).get("CFBundleShortVersionString")
+            return str(v) if v else None
+    except Exception:  # noqa: BLE001  (komut yok, süre doldu, bozuk plist ...)
+        return None
+    return None
+
+
+def araclar_raporu(a, kayitlar=None, simdi=None):
+    """Yapay zeka araçları belgesi: kayıtlı sürüm/tarih ile makinedeki gerçek durumu karşılaştırır. Hiçbir şey yazmaz.
+    --ozet-json: stdout'a TEK JSON nesnesi. Çıkış 0 (araç doğru çalıştıysa); --siki ile yalnız durum 'sorun' ise 1."""
+    simdi = simdi or date.today()
+    satirlar, karar, sorun = [], [], None
+    if kayitlar is None:
+        try:
+            d = json_oku(ARAC_JSON)
+        except (OSError, ValueError):
+            d = None
+        if d is None:
+            sorun = f"{ARAC_JSON.name} yok ya da geçerli JSON değil"
+        elif not isinstance(d, dict) or not isinstance(d.get("araclar"), list):
+            sorun = f"{ARAC_JSON.name} beklenen biçimde değil (araclar listesi yok)"
+        else:
+            kayitlar = d["araclar"]
+    if kayitlar is not None and sorun is None:
+        for k in kayitlar:
+            eksik = [z for z in ARAC_ZORUNLU if not isinstance(k, dict) or z not in k]
+            if eksik:
+                sorun = f"{k.get('anahtar', '?') if isinstance(k, dict) else '?'} kaydında eksik alan: {', '.join(eksik)}"
+                break
+    tablo = []
+    if sorun:
+        durum_ = "sorun"
+        satirlar.append(sorun)
+    else:
+        en_eski = None
+        for k in kayitlar:
+            ad = k.get("ad_kisa") or k["ad"]
+            try:
+                gun = (simdi - date.fromisoformat(k["dogrulama_tarihi"])).days
+            except (ValueError, TypeError):
+                sorun = f"{k['anahtar']} kaydında dogrulama_tarihi geçersiz"
+                break
+            en_eski = gun if en_eski is None else max(en_eski, gun)
+            if gun > ARAC_BELGE_GUN:
+                karar.append(f"{ad}: belge {gun} gün önce doğrulandı (sınır {ARAC_BELGE_GUN}); resmi sayfaları yeniden oku ve dogrulama_tarihi'ni güncelle (rehber/14 bölüm 8)")
+            bulunanlar = []
+            for e in k["surumler"]:
+                b = surum_oku(e.get("okuma"))
+                kay = e.get("kayitli")
+                bulunanlar.append(b)
+                if b is not None and kay is not None and b != kay:
+                    karar.append(f"{ad}: sürüm {kay} -> {b}; belgeleri yeniden doğrula (rehber/14 bölüm 8) ve kayıtlı sürümle dogrulama_tarihi'ni güncelle")
+                    satirlar.append(f"{ad}: kayıtlı sürüm {kay}, bulunan {b}")
+            if k["kurulu"] and not any(b is not None for b in bulunanlar):
+                karar.append(f"{ad}: kayıtta kurulu görünüyor ama sürüm okunamadı; kaldırıldı mı ya da komut/yol değişti mi bak")
+            if not k["kurulu"] and any(b is not None for b in bulunanlar):
+                karar.append(f"{ad}: kayıtta kurulu değil ama artık kurulu görünüyor ({', '.join(b for b in bulunanlar if b)}); "
+                             "kaydı güncelle (kurulu: true) ve belgelerini doğrula (rehber/14 bölüm 7)")
+            tablo.append((ad, "evet" if k["kurulu"] else "hayır", ", ".join(k["proje_skill_okur"]) or "-",
+                          ", ".join(str(e.get("kayitli") or "-") for e in k["surumler"]) or "-",
+                          ", ".join(str(b or "-") for b in bulunanlar) or "-", f"{gun} gün önce"))
+        if sorun:
+            durum_ = "sorun"
+            satirlar.append(sorun)
+        else:
+            durum_ = "dikkat" if karar else "temiz"
+            kurulu_n = sum(1 for k in kayitlar if k["kurulu"])
+            satirlar.insert(0, f"{len(kayitlar)} araç kayıtlı, {kurulu_n} kurulu; en eski doğrulama {en_eski} gün önce")
+    if getattr(a, "ozet_json", False):
+        print(json.dumps({"arac": "arac-belgeleri", "durum": durum_, "satirlar": satirlar, "karar_bekleyen": karar}, ensure_ascii=False))
+    else:
+        if tablo:
+            basliklar = ("Araç", "Kurulu", "Okuduğu proje skill klasörleri", "Kayıtlı sürüm", "Bulunan sürüm", "Doğrulama")
+            for sat in [basliklar] + tablo:
+                print(" | ".join(sat))
+        for s in satirlar:
+            print(s)
+        for s in karar:
+            print(f"  [KARAR] {s}")
+        print(f"Durum: {durum_}")
+    return 1 if (getattr(a, "siki", False) and durum_ == "sorun") else 0
+
+
+def windows_mu():
+    return os.name == "nt"
+
+
 def main():
     ap = argparse.ArgumentParser(description="SkillKutuphanesi: projeye skill ekle (güvenli)")
     ap.add_argument("proje", nargs="?")
@@ -1563,9 +1801,20 @@ def main():
     ap.add_argument("--kuru", action="store_true", help="sadece ön kontrol raporu; hiçbir şey değişmez")
     ap.add_argument("--evet", action="store_true", help="uyarıları onayla (agent/etkileşimsiz kullanım)")
     ap.add_argument("--zorla", action="store_true", help="hataları geç (önce yedek alınır)")
-    ap.add_argument("--arac", choices=sorted(ARACLAR), help="proje hangi araçları kullanıyor: claude (sadece Claude) | ikisi "
-                    "(Claude + Codex, varsayılan). Kurulu skiller yeni düzene göre yeniden kurulur")
+    ap.add_argument("--arac", choices=sorted(ARACLAR), help="proje hangi araçlarla açılacak: ortak (Claude + Codex + Antigravity + Cursor + "
+                    "VS Code Copilot; varsayılan) | yalniz-claude (yalnız Claude; Cursor ve VS Code Copilot da .claude/skills'i okur); "
+                    "eski adlar: ikisi = ortak, claude = yalniz-claude. Kurulu skiller yeni düzene göre yeniden kurulur")
+    ap.add_argument("--araclar", action="store_true", help="yapay zeka araçları belgesi/sürüm kontrolü (yapay-zeka-araclari.json); salt okunur")
+    ap.add_argument("--ozet-json", action="store_true", help="--araclar ile: stdout'a tek JSON nesnesi")
+    ap.add_argument("--siki", action="store_true", help="--araclar ile: durum 'sorun' ise çıkış kodu 1")
     a = ap.parse_args()
+    if (a.ozet_json or a.siki) and not a.araclar:
+        ap.error("--ozet-json ve --siki yalnız --araclar ile kullanılır")
+    if a.araclar:  # registry yüklenmeden (22 MB), proje gerekmeden
+        return araclar_raporu(a)
+    if a.proje and windows_mu():
+        sys.exit("skill-ekle.py Windows'ta çalıştırılmaz (symlink, kill -0 ve Mac yolları). Skill ekleme/güncelleme kütüphanenin olduğu "
+                 "Mac'te yapılır; Windows'ta açılan projeler için rehber/14 bölüm 5.")
     skiller = registry()
 
     if a.listele or (a.ara and not a.proje):
@@ -1576,7 +1825,7 @@ def main():
         ap.error("proje klasörü gerekli")
     proje = Path(a.proje).expanduser().resolve()
     korunan = [g.resolve() for g in GLOBAL_KLASORLER.values()] + [KOK.resolve(), (Path.home() / ".openmontage").resolve(),
-                                                                   (Path.home() / ".claude").resolve(), (Path.home() / ".codex").resolve()]
+                                                                   (Path.home() / ".claude").resolve(), (Path.home() / ".codex").resolve()] + arac_korunan_yollar()
     if proje == Path.home().resolve() or any(proje == k or k in proje.parents for k in korunan):
         sys.exit(f"Güvenlik: {proje} bir proje klasörü değil (global skill klasörü, kütüphane ya da ev dizini).")
     if META in proje.parts:  # .skill-kutuphanesi/yedek/<zaman>/ içindeki eski anlık görüntüler proje değildir
@@ -1596,6 +1845,9 @@ def main():
         for y in yedekler_listesi(proje):
             b = json_oku(y / "yedek.json", {})
             print(f"  {y.name}  {b.get('neden', '?')}")
+        return 0
+    if a.kuru and (a.yenile or a.geri_al or (a.blok and not (a.profil or a.rol or a.skill or a.planlayici or a.guncelle))):
+        print(f"[kuru] Hiçbir şey değiştirilmedi. (yapılacak: {'yenile' if a.yenile else 'geri-al' if a.geri_al else 'blok'})")
         return 0
     if a.geri_al:
         return geri_al(a, proje)
@@ -1625,7 +1877,7 @@ def main():
 def proje_raporunu_yenile():
     """Projede değişiklik yapan işlemden sonra notlar/proje-kullanimi.md'yi yeniler (proje bilgisinin tek yeri).
     Sadece projeler.json'daki tarama köklerinde/ek_projeler'de olan projeler rapora girer; geçici klasörler girmez."""
-    salt_okur = {"--kuru", "--durum", "--dogrula", "--oner", "--listele", "--ara", "--yedekler"}
+    salt_okur = {"--kuru", "--durum", "--dogrula", "--oner", "--listele", "--ara", "--yedekler", "--araclar"}
     if salt_okur & set(sys.argv):
         return
     try:

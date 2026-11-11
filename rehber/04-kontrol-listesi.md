@@ -9,7 +9,7 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 - [ ] **Rol başına skill sayısı:** çekirdek 3–6 skill ideal. 12'den fazlası ya da 150 KB'tan fazla SKILL.md → `baglam-yuku`.
 - [ ] **Aynı işi yapan iki skill aynı role verilmedi** → `ortusme`, `ayni-skill-iki-surum`.
 - [ ] **Teknoloji uyumu:** skill'in teknolojisi projenle aynı mı (React mı, vanilla mı, Three r17x mi)? KATALOG.md → Teknoloji sütunu.
-- [ ] **Codex'te de kullanacak mısın?** `codex-uyum` / `claude-ozel` uyarılarını oku.
+- [ ] **Hangi araçlar?** Claude Code / Codex / Antigravity / Cursor / VS Code Copilot / Windows? Cevaba göre `--arac ortak` ya da `--arac yalniz-claude`; raporda `arac-duzeni`, `arac-gormez` ve `arac-secimi-yok` satırlarını oku (rehber/14). `codex-uyum` / `claude-ozel` uyarılarını da oku.
 
 ## B. Ön kontrolün denetledikleri
 
@@ -63,6 +63,15 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `alt-skill` | BİLGİ | Başka bir skill'in alt klasörü | Üst skill'i de kurmak isteyebilirsin |
 | `gizli-katalog` | BİLGİ | Entegrasyon ya da repo-içi katalogdan | — |
 | `incelenmedi` | BİLGİ | Kategori incelemesi henüz yapılmadı | Kritik işte SKILL.md'yi oku |
+| `arac-duzeni` | BİLGİ | Projenin araç düzeni (`ortak` / `yalniz-claude`), seçimin yapılıp yapılmadığı, skilleri görenler ve görmeyenler | Doğru araçlar listelendi mi bak; değilse `--arac` ile düzeni değiştir |
+| `arac-gormez` | BİLGİ | Bu düzende bazı kurulu araçlar (ör. Codex, Antigravity) projedeki skilleri görmez | Onları da kullanacaksan `--arac ortak` |
+| `arac-secimi-yok` | BİLGİ | Araç düzeni hiç seçilmedi; varsayılan `ortak` uygulanıyor | Kullanıcıya hangi araçlarla açılacağını sor, `--arac` ile kaydet |
+| `arac-cift-okuma` | BİLGİ | Cursor ve VS Code Copilot hem `.agents/skills` hem `.claude/skills` okur; aynı skill iki kez listelenebilir (denenmedi) | Görürsen kullanıcıya bildir (rehber/14 bölüm 9) |
+| `arac-symlink` | BİLGİ | `.claude/skills` bağları symlink; Windows'ta ya da `core.symlinks` kapalı git'te düz metne döner | Windows'ta açılacaksa `--arac yalniz-claude` |
+| `arac-rolsuz` | BİLGİ | Rol dosyaları yalnız Claude ve Codex için üretilir; diğer araçlarda her ajan tüm proje skillerini görür | Bilgi |
+| `arac-mutlak-yol` | BİLGİ | `.codex/agents/*.toml` bu bilgisayarın mutlak yollarını içerir; proje taşınırsa Codex rol dışı skilleri kapatamaz | Kütüphanenin olduğu Mac'te `--yenile` |
+| `arac-belge-yok` | BİLGİ | `yapay-zeka-araclari.json` okunamadı; araç satırları atlandı | Dosyayı onar (kurulum etkilenmez) |
+| `arac-karisik` | HATA | `--arac` ile düzen değişiyor ama projede eski düzende kurulu skiller var | Önce yalnız `--arac <düzen> --kuru`, sonra `--evet`; ardından skill ekle |
 
 **HATA\*** = `--zorla` ile de geçilemez (güvenlik/tutarlılık). Diğer HATA'lar `--zorla` ile, önce yedek alınarak geçilebilir.
 
@@ -73,7 +82,9 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 - [ ] Claude'da: projeyi aç, alt-agent listesinde rol görünüyor mu (`/agents`)
 - [ ] Codex'te: `codex exec "list available skills"` proje skillerini gösteriyor mu
 - [ ] Proje git'teyse `.agents/`, `.claude/`, `.codex/`, `.skill-kutuphanesi/kilit.json` commit edilebilir;
-      `.skill-kutuphanesi/yedek/` için `.gitignore` önerilir.
+      araç ilk yedekte `.skill-kutuphanesi/.gitignore` dosyasını kendisi yazar (`yedek/`)
+- [ ] `arac-duzeni` satırı doğru araçları listeledi mi; `arac-secimi-yok` çıkıyorsa kullanıcıya soruldu ve `--arac` ile kaydedildi
+- [ ] Antigravity / Cursor / Copilot'ta gerçek deneme yapıldıysa `yapay-zeka-araclari.json` → `denendi`'ye yazıldı
 
 ## D. Agent'lar için kural (CLAUDE.md / AGENTS.md'de de yazılı)
 1. Önce `--oner`, sonra `--kuru`. Raporu **olduğu gibi** kullanıcıya göster.
@@ -81,3 +92,5 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 3. UYARI varsa kullanıcı açıkça onaylamadan `--evet` kullanma. `--zorla`'yı sadece kullanıcı isterse kullan.
 4. Kurulumdan sonra `--dogrula` sonucunu bildir.
 5. Global skill klasörlerine elle dosya kopyalama, symlink ya da silme yapma.
+6. Hangi araçlarla açılacağını sormadan ilk kurulum yapma (`arac-secimi-yok`).
+(Not: bu 6. kural henüz kütüphanenin CLAUDE.md / AGENTS.md dosyalarında yazılı değil; metni onay bekliyor, `notlar/duzen-denetimi-2026-11/onay-bekleyen/p1-claude-agents-md.md`.)

@@ -82,3 +82,8 @@ python3 araclar/skill-ekle.py <proje> --guncelle --evet
 python3 araclar/skill-ekle.py <proje> --dogrula
 ```
 `.claude/settings.json` projede git'e girer; ekip arkadaşların da aynı skill'i kullanır.
+
+## Alt test dosyaları (`araclar/testler/`)
+Her paket testlerini `araclar/testler/test_<paket-anahtarı>.py` dosyasında tutar. Dosya tek başına çalışır (`python3 araclar/testler/test_<anahtar>.py`),
+yalnız geçici klasör ve sahte veri kullanır, son satırı `N/N test geçti` olur, çıkış kodu 0 ya da 1'dir.
+`python3 araclar/test.py` bu dosyaların hepsini ayrı süreçte çalıştırır ve her biri için bir satır gösterir.
