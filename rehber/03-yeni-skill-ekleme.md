@@ -65,6 +65,9 @@ python3 araclar/dogrula.py --github       # "YENİ SKILL REPOSU" uyarısı da ay
    python3 araclar/gelistirici-bilgisi.py         # geliştirici bilgisi (yıldız, lisans, bakım)
    # (kısmi indirme güvenli: indirilmeyen kaynaklar korunur; bir skill kaybolursa güvenlik kilidi işlemi durdurur)
    python3 araclar/kaynak-cek.py --repo owner/ad   # sadece bu repo
+   python3 araclar/yol-tara.py --repo owner/ad     # sabit yol taraması (arsiv-yerlestir.py'den önce)
+   # UYARI satırları kullanıcıya gösterilir. İstisna (yol-istisnalari.json) yalnız öğretici metin için yazılır;
+   # "kabul" ancak kullanıcı raporu gördükten sonra verilir.
    python3 araclar/arsiv-yerlestir.py
    python3 araclar/kapsam-denetimi.py              # 0 sorun olmalı
    python3 araclar/katalog-uret.py

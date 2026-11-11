@@ -198,6 +198,12 @@ def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
             print("UYARI: konu takibi taraması yapılamadı; önceki konu-takip.json ile devam")
         calistir(sys.executable, "araclar/kaynak-cek.py")
         calistir(sys.executable, "araclar/arsiv-yerlestir.py")
+        # Sabit yol taraması (salt okuma, notlar/yol-denetimi.md): hata güncellemeyi durdurmaz
+        if subprocess.run([sys.executable, "araclar/yol-tara.py"], cwd=KOK).returncode:
+            print("UYARI: yol taraması yapılamadı; notlar/yol-denetimi.md eski kaldı")
+        # Programlar (skill olmayan yapılar) denetimi: hata güncellemeyi durdurmaz
+        if subprocess.run([sys.executable, "araclar/program-denetim.py"], cwd=KOK).returncode:
+            print("UYARI: program denetimi yapılamadı; notlar/program-denetimi.md eski kaldı")
         calistir(sys.executable, "araclar/kapsam-denetimi.py")
         calistir(sys.executable, "araclar/katalog-uret.py")
         # Türkçe skill rehberi (çevirisi eksik/eskimiş skiller İngilizce görünür; çeviri ücretli olduğu için elle: ceviri-tr.py)

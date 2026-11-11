@@ -30,7 +30,7 @@ Tek istisna: kütüphanenin kendi rutin kontrolleri (`dogrula.py`, `test.py`, `p
 ## Adım çizelgesi
 | Adım | İş | Kapı | Durum |
 |---|---|---|---|
-| 1 | Kütüphane içi hazırlık: skillerdeki sabit genel yol / eklenti kökü / kardeş yol taraması, kurulumda yol çevirisi, yeni ön kontrol kodları, aylık zincire yol ve program denetimi | yok (onaylı) | sürüyor: tarama tarafı bitti, kurulum tarafı kaldı (`1-adim-kalan-is.md`) |
+| 1 | Kütüphane içi hazırlık: skillerdeki sabit genel yol / eklenti kökü / kardeş yol taraması, kurulumda yol çevirisi, yeni ön kontrol kodları, aylık zincire yol ve program denetimi | yok (onaylı) | bitti (2026-11-11; özet `1-adim-kalan-is.md`) |
 | 2 | HyperFrames ve OpenMontage program kartları; güncelleme (önce yedek, her biri ayrı onay) | "işim bitti" | bekliyor |
 | 3 | Genel klasörleri boşaltma (yedek, her kaldırma ayrı onay); aynı gün yedek silme hatırlatması | "işim bitti" | bekliyor |
 | 4 | Proje taramaları, projelerde `--guncelle --kuru` önizlemesi, Akıl Dışı'nın Claude'a geçişi | "başla" | bekliyor |

@@ -29,6 +29,8 @@ Yapay Zeka Skillleri listeme yeni repolar ekledim, kontrol et ve kütüphaneye d
    ucret-siniflandirma.json'a ekle; sonra:
    python3 araclar/gelistirici-bilgisi.py
    python3 araclar/kaynak-cek.py --repo <owner/ad>      (her yeni repo için)
+   python3 araclar/yol-tara.py --repo <owner/ad>        (sabit yol taraması; UYARI satırları kullanıcıya gösterilir)
+   (İstisna yalnız öğretici metin için yol-istisnalari.json'a yazılır; "kabul" ancak kullanıcı raporu gördükten sonra.)
    python3 araclar/arsiv-yerlestir.py                   (güvenlik kilidi: başka skill kaybolursa durur)
    python3 araclar/kapsam-denetimi.py                   (0 sorun olmalı)
    python3 araclar/katalog-uret.py

@@ -524,6 +524,551 @@ def yol_testleri():
         shutil.rmtree(kok, ignore_errors=True)
 
 
+def kurulum_yol_testleri():
+    """Kurulum tarafındaki sabit yol çevirisi (skill-ekle.py hazirla/yollari_yerellestir/kur/ekle/guncelle, ortak.onarim_izi): YALNIZ tempfile projeleri.
+    Hassas durumlar için tempfile içinde küçük sentetik skill klasörleri, gerçek akışlar için arşivden code-tour kullanılır; arşiv klasörlerine dokunulmaz."""
+    import importlib.util
+    import re
+    import ortak as o
+    spec = importlib.util.spec_from_file_location("se_yol", KOK / "araclar" / "skill-ekle.py")
+    se = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(se)
+    kok = Path(tempfile.mkdtemp(prefix="kurulum-yol-test-"))
+    eski_istisna = o.YOL_ISTISNA
+    sayac = [0]
+
+    def sifirla():
+        o._YOL_ONBELLEK.clear()
+        o._SKILLER_INDEKS[:] = [None, 0, None]
+
+    def ozet(d: Path):
+        """{göreli yol: içerik özeti ya da 'symlink->hedef'}"""
+        sonuc = {}
+        for p in sorted(d.rglob("*")):
+            rel = str(p.relative_to(d))
+            if p.is_symlink():
+                sonuc[rel] = "symlink->" + str(p.readlink())
+            elif p.is_file():
+                sonuc[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
+        return sonuc
+
+    def fm(ad):
+        return f"---\nname: {ad}\ndescription: test skill\n---\n"
+
+    def kayit(ad, dosyalar, repo="o/r", varyant=None, **ek):
+        sayac[0] += 1
+        d = kok / "arsiv" / f"{sayac[0]}-{ad}"
+        for rel, m in {"SKILL.md": fm(ad) + "x\n", **dosyalar}.items():
+            (d / rel).parent.mkdir(parents=True, exist_ok=True)
+            (d / rel).write_text(m, encoding="utf-8")
+        s = {"id": ad, "ad": ad, "klasor_adi": ad, "kaynak_yol": f"skills/{ad}", "repo": repo, "yol": str(d), "klasor_hash": f"h{sayac[0]}",
+             "commit": "c1", **ek}
+        if varyant:
+            vd = kok / "arsiv" / f"{sayac[0]}-{ad}-claude"
+            for rel, m in {"SKILL.md": fm(ad) + "x\n", **varyant}.items():
+                (vd / rel).parent.mkdir(parents=True, exist_ok=True)
+                (vd / rel).write_text(m, encoding="utf-8")
+            s["varyantlar"] = {"claude": str(vd)}
+        return s
+
+    def yeni_proje():
+        return Path(tempfile.mkdtemp(dir=kok, prefix="p-"))
+
+    def okulines(p: Path):
+        return p.read_text(encoding="utf-8").split("\n")
+
+    def kur_dongusu(liste, secilen, proje, codex=True, adlar_ek=None, kilit=None):
+        """ekle()'nin kur döngüsünün aynısı: (kilit, {id: kardeş haritası}, {id: uyarılar})"""
+        kur_l = {x["id"]: (x, set()) for x in secilen}
+        adlar = {x["id"]: (adlar_ek or {}).get(x["id"], x["ad"]) for x in secilen}
+        kilit = kilit or {"surum": 3, "skiller": {}, "roller": []}
+        haritalar, uyarilar = {}, {}
+        for s in secilen:
+            ad = adlar[s["id"]]
+            kardes = se.kardes_haritasi(s, liste, kilit, kur_l, adlar)
+            uyarilar[s["id"]] = se.kur(s, proje, ad, kardes, codex, liste)
+            se.kayit_guncelle(kilit, proje, ad, s, kardes=kardes, skiller=liste)
+            haritalar[s["id"]] = kardes
+        return kilit, haritalar, uyarilar
+
+    def on(s, liste, secilen=None, kilitli=None, adlar_ek=None):
+        """on_kontrol'ün sabit yol satırları: [(seviye, kod, mesaj)]"""
+        secilen = secilen or [s]
+        kur_l = {x["id"]: (x, set()) for x in secilen}
+        adlar = {x["id"]: (adlar_ek or {}).get(x["id"], x["ad"]) for x in secilen}
+        kilit = {"surum": 3, "skiller": dict(kilitli or {}), "roller": []}
+        kidler = set(kur_l) | {x["id"] for k in kilit["skiller"].values() if (x := se.kaynak_bul(liste, k))}
+        r = se.Rapor()
+        se.sabit_yol_satirlari(r, s, adlar[s["id"]], liste, kilit, kur_l, adlar, kidler)
+        return r.satirlar
+
+    def sk_(rows):
+        return sorted({(a, b) for a, b, _ in rows})
+
+    try:
+        sk = json_oku(KOK / "registry.json")["skiller"]
+        ct = next(x for x in sk if x["id"] == "code-tour")
+        ct_arsiv = KOK / ct["yol"]
+        ct_once = ozet(ct_arsiv)
+
+        # ============ a. kur() dalları: kendi sabit yolu çevrilir, hedef kurulan kopyada VAR
+        ana_dosya = {"SKILL.md": fm("yt-ana") + "# yt-ana\nRun `~/.claude/skills/yt-ana/refs/a.md` first.\nAlso ${CLAUDE_PLUGIN_ROOT}/.claude/skills/yt-ana/refs/a.md here.\n",
+                     "refs/a.md": "-\n"}
+        ana = kayit("yt-ana", ana_dosya)
+        liste_a = [ana]
+        arsiv_ana_once = ozet(Path(ana["yol"]))
+        p = yeni_proje()
+        kur_dongusu(liste_a, [ana], p)
+        ana_md = p / ".agents" / "skills" / "yt-ana" / "SKILL.md"
+        satir = okulines(ana_md)
+        test("kur varsayılan: ana kopyada ~/ ve ${CLAUDE_PLUGIN_ROOT} yolları .agents/skills/<ad>/… olur (hedef kopyada var)",
+             "Run `.agents/skills/yt-ana/refs/a.md` first." in satir and "Also .agents/skills/yt-ana/refs/a.md here." in satir
+             and (p / ".agents" / "skills" / "yt-ana" / "refs" / "a.md").exists() and "~/.claude" not in ana_md.read_text(encoding="utf-8")
+             and "CLAUDE_PLUGIN_ROOT" not in ana_md.read_text(encoding="utf-8"), "\n".join(satir))
+        test("kur varsayılan: Claude tarafı symlink (aynı içerik), arşiv dosyası değişmedi",
+             (p / ".claude" / "skills" / "yt-ana").is_symlink() and "Run `.agents/skills/yt-ana/refs/a.md` first." in okulines(p / ".claude" / "skills" / "yt-ana" / "SKILL.md")
+             and (Path(ana["yol"]) / "SKILL.md").read_text(encoding="utf-8") == ana_dosya["SKILL.md"])
+        pc = yeni_proje()
+        kur_dongusu(liste_a, [ana], pc, codex=False)
+        c_md = pc / ".claude" / "skills" / "yt-ana" / "SKILL.md"
+        satir = okulines(c_md)
+        test("kur sadece-Claude: gerçek kopyada yollar .claude/skills/<ad>/… olur, .agents kopyası yok, hedef var",
+             not (pc / ".claude" / "skills" / "yt-ana").is_symlink() and not (pc / ".agents" / "skills" / "yt-ana").exists()
+             and "Run `.claude/skills/yt-ana/refs/a.md` first." in satir and "Also .claude/skills/yt-ana/refs/a.md here." in satir
+             and (pc / ".claude" / "skills" / "yt-ana" / "refs" / "a.md").exists() and ".agents/skills" not in c_md.read_text(encoding="utf-8"), "\n".join(satir))
+        vy = kayit("yt-var", {"SKILL.md": fm("yt-var") + "Run `~/.claude/skills/yt-var/refs/a.md` now.\n", "refs/a.md": "-\n"},
+                   varyant={"SKILL.md": fm("yt-var") + "Run `~/.claude/skills/yt-var/refs/a.md` now.\n", "refs/a.md": "-\n", "ek.md": "-\n"})
+        pv = yeni_proje()
+        kur_dongusu([vy], [vy], pv)
+        h_md, c_md = pv / ".agents" / "skills" / "yt-var" / "SKILL.md", pv / ".claude" / "skills" / "yt-var" / "SKILL.md"
+        test("kur claude varyantı: ana kopya .agents/skills, varyant kopyası .claude/skills yoluna çevrilir; her ikisinde hedef var",
+             "Run `.agents/skills/yt-var/refs/a.md` now." in okulines(h_md) and "Run `.claude/skills/yt-var/refs/a.md` now." in okulines(c_md)
+             and not (pv / ".claude" / "skills" / "yt-var").is_symlink() and (pv / ".agents" / "skills" / "yt-var" / "refs" / "a.md").exists()
+             and (pv / ".claude" / "skills" / "yt-var" / "refs" / "a.md").exists(), h_md.read_text(encoding="utf-8") + c_md.read_text(encoding="utf-8"))
+        pr = yeni_proje()
+        kur_dongusu(liste_a, [ana], pr, adlar_ek={"yt-ana": "yt-ana--kutuphane"})
+        r_md = pr / ".agents" / "skills" / "yt-ana--kutuphane" / "SKILL.md"
+        test("kur: yeniden adlandırılmış kurulumda (yt-ana--kutuphane) sabit yol kurulum adına çevrilir",
+             "Run `.agents/skills/yt-ana--kutuphane/refs/a.md` first." in okulines(r_md) and (pr / ".agents" / "skills" / "yt-ana--kutuphane" / "refs" / "a.md").exists(),
+             r_md.read_text(encoding="utf-8"))
+        # ============ b. kod dosyaları çevrilmez + UYARI genel-yol; doküman sessiz; install*/setup* çevrilmez + UYARI
+        yol_satiri = 'P = "~/.claude/skills/yt-kod/refs/a.md"\n'
+        kod_d = {"SKILL.md": fm("yt-kod") + "Plain text.\n", "refs/a.md": "-\n",
+                 "scripts/run.py": yol_satiri, "scripts/x.js": "const p = '~/.claude/skills/yt-kod/refs/a.md';\n", "scripts/y.sh": "cat ~/.claude/skills/yt-kod/refs/a.md\n",
+                 "scripts/z.ts": "const p = '~/.claude/skills/yt-kod/refs/a.md';\n", "scripts/runner": "#!/bin/sh\ncat ~/.claude/skills/yt-kod/refs/a.md\n",
+                 "README.md": "See ~/.claude/skills/yt-kod/refs/a.md\n", "scripts/install.sh": "cat ~/.claude/skills/yt-kod/refs/a.md\n",
+                 "setup.md": "Use ~/.claude/skills/yt-kod/refs/a.md\n"}
+        kod = kayit("yt-kod", kod_d)
+        pk = yeni_proje()
+        uy_kod = kur_dongusu([kod], [kod], pk)[2]
+        inst = pk / ".agents" / "skills" / "yt-kod"
+        degismeyen = {rel: (inst / rel).read_text(encoding="utf-8") == m for rel, m in kod_d.items() if rel not in ("SKILL.md",)}
+        test("kod dosyaları (.py .js .ts .sh, shebang'li), README, install*/setup* kurulumda çevrilmez (arşivle aynı)",
+             all(degismeyen.values()) and len(degismeyen) == 9, str(degismeyen))
+        rows = on(kod, [kod])
+        gy = [m for sv, kd, m in rows if kd == "genel-yol"]
+        test("ön kontrol: kod ve install/setup dosyaları UYARI genel-yol (betik/kurulum dosyası), çevrilecek satırı yok",
+             ("UYARI", "genel-yol") in sk_(rows) and gy and all("README.md" not in m for m in gy) and not any(kd == "yol-yerellestirme" for _, kd, _ in rows)
+             and "scripts/run.py" in " ".join(gy) and "(+4)" in " ".join(gy) and uy_kod["yt-kod"] == [], str(rows))  # 7 kod/kurucu bulgusu (3 örnek + 4); README sayılmaz
+        dok = kayit("yt-dok", {"SKILL.md": fm("yt-dok") + "Plain.\n", "README.md": "See ~/.claude/skills/yt-dok/refs/a.md\n", "docs/x.md": "~/.claude/skills/yt-dok/refs/a.md\n",
+                               "NOTICE": "~/.claude/skills/yt-dok/refs/a.md\n", "refs/a.md": "-\n"})
+        pd = yeni_proje()
+        kur_dongusu([dok], [dok], pd)
+        test("doküman sınıfı dosyalar (README, docs/, NOTICE) çevrilmez ve ön kontrolde hiçbir satır/uyarı üretmez",
+             on(dok, [dok]) == [] and (pd / ".agents" / "skills" / "yt-dok" / "README.md").read_text(encoding="utf-8") == "See ~/.claude/skills/yt-dok/refs/a.md\n", str(on(dok, [dok])))
+        # ============ c. satır kuralları
+        sat_d = {"SKILL.md": fm("yt-sat") + "Use ~/.claude/skills/yt-sat/refs/a.md here\nBoth ~/.claude/skills/yt-sat/refs/a.md and ~/.agents/skills/yt-sat/refs/a.md\n"
+                 "Dir ~/.claude/skills/yt-sat\nGone ~/.claude/skills/yt-sat/refs/yok.md\nSee references/inst.md\n",
+                 "references/inst.md": "cp -r a ~/.claude/skills/yt-sat/refs/a.md\nsee ~/.claude/skills/yt-sat/refs/a.md\n", "refs/a.md": "-\n"}
+        sat = kayit("yt-sat", sat_d)
+        ps = yeni_proje()
+        kur_dongusu([sat], [sat], ps)
+        sl = okulines(ps / ".agents" / "skills" / "yt-sat" / "SKILL.md")
+        test("satır kuralı: tek köklü ve hedefi olan satır çevrilir (olumlu)", "Use .agents/skills/yt-sat/refs/a.md here" in sl, "\n".join(sl))
+        test("satır kuralı: iki yerleşim kökü olan satır çevrilmez",
+             "Both ~/.claude/skills/yt-sat/refs/a.md and ~/.agents/skills/yt-sat/refs/a.md" in sl, "\n".join(sl))
+        test("satır kuralı: kalan boş yol çevrilmez", "Dir ~/.claude/skills/yt-sat" in sl, "\n".join(sl))
+        test("satır kuralı: arşivde hedef dosya yoksa çevrilmez", "Gone ~/.claude/skills/yt-sat/refs/yok.md" in sl, "\n".join(sl))
+        test("satır kuralı: kurulum komutu argümanı olan dosyada (cp -r …) hiçbir satır çevrilmez",
+             (ps / ".agents" / "skills" / "yt-sat" / "references" / "inst.md").read_text(encoding="utf-8") == sat_d["references/inst.md"])
+        # ============ d. kardeş çifti
+        ka_d = {"SKILL.md": fm("yt-ka") + "Read ~/.claude/skills/yt-kb/refs/x.md and\n~/.claude/skills/yt-kb/refs/y.md plus own ~/.claude/skills/yt-ka/refs/a.md\n",
+                "scripts/r.py": 'P = "~/.claude/skills/yt-kb/refs/x.md"\n', "refs/a.md": "-\n"}
+        ka = kayit("yt-ka", ka_d)
+        kb = kayit("yt-kb", {"SKILL.md": fm("yt-kb") + "b\n", "refs/x.md": "-\n", "refs/y.md": "-\n"})
+        liste_k = [ka, kb]
+        rows = on(ka, liste_k, [ka, kb])
+        ky = [(sv, m) for sv, kd, m in rows if kd == "kardes-yol"]
+        pk2 = yeni_proje()
+        kilit_k, harita_k, _ = kur_dongusu(liste_k, [ka, kb], pk2)
+        kmd = okulines(pk2 / ".agents" / "skills" / "yt-ka" / "SKILL.md")
+        test("kardeş birlikte: kardes-yol BİLGİ tek satır ve sayı gerçek (2 çevrilen yol; betikteki 3. yol sayılmaz)",
+             len(ky) == 1 and ky[0][0] == "BİLGİ" and "2 sabit yol" in ky[0][1] and not any(kd == "kardes-eksik" for _, kd, _ in rows), str(rows))
+        test("kardeş birlikte: sabit kardeş yolları kardeşin proje içi yoluna çevrilir (hedef var), betikteki yol çevrilmez",
+             "Read .agents/skills/yt-kb/refs/x.md and" in kmd and ".agents/skills/yt-kb/refs/y.md plus own .agents/skills/yt-ka/refs/a.md" in kmd
+             and (pk2 / ".agents" / "skills" / "yt-kb" / "refs" / "y.md").exists()
+             and (pk2 / ".agents" / "skills" / "yt-ka" / "scripts" / "r.py").read_text(encoding="utf-8") == ka_d["scripts/r.py"], "\n".join(kmd))
+        test("kardeş birlikte: kilitte genel:<kardeş> girdisi var ve kardeşin kurulum adını tutar",
+             kilit_k["skiller"]["yt-ka"]["kardes"] == {"genel:yt-kb": "yt-kb"} and harita_k["yt-ka"]["genel:yt-kb"] == ("yt-kb", True), str(kilit_k["skiller"]["yt-ka"]))
+        rows = on(ka, liste_k)
+        pe = yeni_proje()
+        kilit_e, harita_e, uy_e = kur_dongusu(liste_k, [ka], pe)
+        emd = okulines(pe / ".agents" / "skills" / "yt-ka" / "SKILL.md")
+        test("kardeş eksik: kardes-eksik UYARI (tek), kardes-yol yok",
+             [kd for _, kd, _ in rows].count("kardes-eksik") == 1 and ("UYARI", "kardes-eksik") in sk_(rows) and not any(kd == "kardes-yol" for _, kd, _ in rows), str(rows))
+        test("kardeş eksik: sabit kardeş yolları çevrilmez, kilitte genel:<kardeş> yok, kendi yolu yine çevrilir",
+             "Read ~/.claude/skills/yt-kb/refs/x.md and" in emd and "~/.claude/skills/yt-kb/refs/y.md plus own .agents/skills/yt-ka/refs/a.md" in emd
+             and "genel:yt-kb" not in kilit_e["skiller"]["yt-ka"]["kardes"], "\n".join(emd))
+        sifir = kayit("yt-sifir", {"SKILL.md": fm("yt-sifir") + "x\n", "scripts/r.py": 'P = "~/.claude/skills/yt-kb/refs/x.md"\n'})
+        rs = on(sifir, [sifir, kb], [sifir, kb])
+        test("çevrilebilir bulgu sıfırsa kardes-yol satırı yok (kardeş kurulu olsa bile)", not any(kd == "kardes-yol" for _, kd, _ in rs), str(rs))
+        # ============ e. aynı ad, farklı kimlik
+        kf = kayit("yt-kf", {"SKILL.md": fm("yt-kf") + "Read ~/.claude/skills/yt-kb/refs/x.md\n"})
+        baska_kb = {"id": "yt-kb@x", "ad": "yt-kb", "klasor_adi": "yt-kb", "kaynak_yol": "skills/yt-kb", "repo": "o/x", "yol": kb["yol"], "klasor_hash": "hx", "commit": "c2"}
+        liste_f = [kf, kb, baska_kb]
+        kilit_f = {"surum": 3, "skiller": {"yt-kb": {"id": "yt-kb@x", "repo": "o/x", "kaynak_yol": "skills/yt-kb", "roller": []}}, "roller": []}
+        rows = on(kf, liste_f, [kf], kilit_f["skiller"])
+        pf = yeni_proje()
+        kilit2, harita_f, _ = kur_dongusu(liste_f, [kf], pf, kilit=json.loads(json.dumps(kilit_f)))
+        fmd = okulines(pf / ".agents" / "skills" / "yt-kf" / "SKILL.md")
+        test("aynı ad farklı kimlik: kardes-farkli-kaynak UYARI, yol çevrilmez, harita kardeşi kurulu saymaz",
+             ("UYARI", "kardes-farkli-kaynak") in sk_(rows) and "Read ~/.claude/skills/yt-kb/refs/x.md" in fmd and "genel:yt-kb" not in harita_f["yt-kf"], str(rows) + "\n".join(fmd))
+        # ============ f. aynı kardeş kimliğe göre bir kez (kardes_bagimliliklari + sabit yol)
+        ke = kayit("yt-ke", {"SKILL.md": fm("yt-ke") + "Read ~/.claude/skills/yt-kb/refs/x.md and ../yt-kb/refs/y.md\n"},
+                   kardes_bagimliliklari={"yt-kb": {"id": "yt-kb", "dosya_sayisi": 1}})
+        liste_ke = [ke, kb]
+        rows = on(ke, liste_ke)
+        eks = [m for _, kd, m in rows if kd == "kardes-eksik"]
+        test("tekilleştirme: kardeş kurulmuyorsa hem ../ hem sabit yolla anılsa da TEK kardes-eksik", len(eks) == 1 and "yt-kb" in eks[0], str(rows))
+        rows = on(ke, liste_ke, [ke, kb], adlar_ek={"yt-kb": "yt-kb--kutuphane"})
+        ky = [m for _, kd, m in rows if kd == "kardes-yol"]
+        test("tekilleştirme: kardeş kuruluyorsa TEK kardes-yol satırı, iki parça birleşir (../ yeniden adlandırma + sabit yol sayısı)",
+             len(ky) == 1 and "../yt-kb--kutuphane/" in ky[0] and "1 sabit yol" in ky[0] and not any(kd == "kardes-eksik" for _, kd, _ in rows), str(rows))
+        # ============ n. tüm yeni ön kontrol kodları ve seviyeleri
+        n1 = kayit("yt-n1", {"SKILL.md": fm("yt-n1") + "Run ${CLAUDE_PLUGIN_ROOT}/scripts/x.sh\n"})
+        n2 = kayit("yt-n2", {"SKILL.md": fm("yt-n2") + "Run ${CLAUDE_SKILL_DIR}/../../hooks/h.sh\n"})
+        n3 = kayit("yt-n3", {"SKILL.md": fm("yt-n3") + "cp -r x ~/.claude/skills/baska-skill\n"})
+        n4 = kayit("yt-n4", {"SKILL.md": fm("yt-n4") + "## Kullanım\nnpx skills add o/r --skill x --global\n"})
+        n5 = kayit("yt-n5", {"SKILL.md": fm("yt-n5") + "Run ${CLAUDE_PLUGIN_ROOT}/scripts/a.sh\n"}, repo="o/n5", kaynak_yol="skills/yt-n5")
+        n6 = kayit("yt-n6", {"SKILL.md": fm("yt-n6") + "Run ${CLAUDE_PLUGIN_ROOT}/scripts/a.sh\n"}, repo="o/n6", kaynak_yol="skills/yt-n6")
+        liste_n = [n1, n2, n3, n4, n5, n6, ana, kod, ka, kb]
+        sifirla()
+        ist_dosya = kok / "istisna.json"
+        o.YOL_ISTISNA = ist_dosya
+        tum5 = o.skill_yol_taramasi(n5, liste_n)
+        kay5 = {"tur": "eklenti-kok-yol", "dosyalar": ["SKILL.md"], "karar": "ornek-metin", "neden": "t", "tarih": "2026-01-01", "bulgu_hash": o.bulgu_hash(tum5)}
+        ist_dosya.write_text(json.dumps({"_aciklama": "t", "istisnalar": {o.istisna_anahtari(n5): {"ad": "yt-n5", "kayitlar": [kay5]},
+                                                                           o.istisna_anahtari(n6): {"ad": "yt-n6", "kayitlar": [dict(kay5, bulgu_hash="0" * 64)]}}}), encoding="utf-8")
+        beklenen = {"yt-ana": ("BİLGİ", "yol-yerellestirme"), "yt-kod": ("UYARI", "genel-yol"), "yt-n1": ("UYARI", "eklenti-koku"), "yt-n2": ("UYARI", "skil-disi-yol"),
+                    "yt-n3": ("UYARI", "genele-yazabilir"), "yt-n4": ("BİLGİ", "genele-yazabilir"), "yt-n5": ("BİLGİ", "yol-istisna"), "yt-n6": ("UYARI", "istisna-eskidi")}
+        bulunan = {}
+        for s_ in (ana, kod, n1, n2, n3, n4, n5, n6):
+            bulunan[s_["id"]] = sk_(on(s_, liste_n))
+        test("ön kontrol seviyeleri: yol-yerellestirme BİLGİ, genel-yol/eklenti-koku/skil-disi-yol UYARI, genele-yazabilir UYARI ve BİLGİ, yol-istisna BİLGİ, istisna-eskidi UYARI",
+             all(v in bulunan[k_] for k_, v in beklenen.items()), str({k_: (v, bulunan[k_]) for k_, v in beklenen.items() if v not in bulunan[k_]}))
+        o.YOL_ISTISNA = eski_istisna
+        sifirla()
+        rk = on(ka, liste_k, [ka, kb]) + on(ka, liste_k)
+        test("ön kontrol seviyeleri: kardes-eksik UYARI, kardes-yol BİLGİ, kardes-farkli-kaynak UYARI",
+             {("UYARI", "kardes-eksik"), ("BİLGİ", "kardes-yol")} <= set(sk_(rk)) and ("UYARI", "kardes-farkli-kaynak") in sk_(on(kf, liste_f, [kf], kilit_f["skiller"])), str(rk))
+        kodlar = {"yol-yerellestirme", "genel-yol", "eklenti-koku", "skil-disi-yol", "kardes-eksik", "kardes-yol", "genele-yazabilir", "yol-istisna", "istisna-eskidi", "kardes-farkli-kaynak"}
+        test("YOL_KODLARI sabiti tam bu on kodu içerir", set(se.YOL_KODLARI) == kodlar, str(se.YOL_KODLARI))
+        # ============ j. yollari_yeniden_adlandir: ev önekli yola dokunmaz, proje içi biçimler adlandırılır
+        jd = kok / "ad-degis"
+        jd.mkdir()
+        (jd / "SKILL.md").write_text("A ~/.claude/skills/old/x.md\nB $HOME/.agents/skills/old/x.md\nC ${HOME}/.codex/skills/old/x.md\nD /Users/biri/.claude/skills/old/x.md\n"
+                                     "E /home/biri/.agents/skills/old/x.md\nF .claude/skills/old/x.md\nG ${CLAUDE_PROJECT_DIR}/.claude/skills/old/x.md\n", encoding="utf-8")
+        se.yollari_yeniden_adlandir(jd, {"old"}, "new")
+        jl = okulines(jd / "SKILL.md")
+        test("yollari_yeniden_adlandir: ~/, $HOME/, ${HOME}/, /Users/<ad>/, /home/<ad>/ önekli yollara dokunmaz",
+             jl[:5] == ["A ~/.claude/skills/old/x.md", "B $HOME/.agents/skills/old/x.md", "C ${HOME}/.codex/skills/old/x.md", "D /Users/biri/.claude/skills/old/x.md",
+                        "E /home/biri/.agents/skills/old/x.md"], str(jl))
+        test("yollari_yeniden_adlandir: proje içi biçim (.claude/skills/x ve ${CLAUDE_PROJECT_DIR}/.claude/skills/x) yine adlandırılır",
+             jl[5] == "F .claude/skills/new/x.md" and jl[6] == "G ${CLAUDE_PROJECT_DIR}/.claude/skills/new/x.md", str(jl))
+        # ============ k. dar geçiş (madde 8)
+        kd_ = {"SKILL.md": fm("yt-dar") + "Run python .agents/skills/yt-dar/scripts/go.py now\nMissing .agents/skills/yt-dar/scripts/yok.py\nBoth .agents/skills/yt-dar/scripts/go.py and .claude/skills/yt-dar/scripts/go.py\n",
+               "scripts/go.py": "print(1)\n", "README.md": "Run .agents/skills/yt-dar/scripts/go.py\n", "scripts/t.py": "P = '.agents/skills/yt-dar/scripts/go.py'\n"}
+        dar = kayit("yt-dar", kd_)
+        pdar = yeni_proje()
+        kur_dongusu([dar], [dar], pdar, codex=False, adlar_ek={"yt-dar": "yt-dar2"})
+        dd = pdar / ".claude" / "skills" / "yt-dar2"
+        dl = okulines(dd / "SKILL.md")
+        test("dar geçiş (sadece-Claude): proje içi .agents/skills/<kendi>/… -> .claude/skills/<kurulum adı>/… ve hedef var",
+             "Run python .claude/skills/yt-dar2/scripts/go.py now" in dl and (dd / "scripts" / "go.py").exists(), "\n".join(dl))
+        test("dar geçiş: hedefi olmayan yol, iki köklü satır, doküman ve kod dosyası çevrilmez",
+             "Missing .agents/skills/yt-dar2/scripts/yok.py" in dl and "Both .agents/skills/yt-dar2/scripts/go.py and .claude/skills/yt-dar2/scripts/go.py" in dl
+             and (dd / "README.md").read_text(encoding="utf-8") == "Run .agents/skills/yt-dar2/scripts/go.py\n"
+             and (dd / "scripts" / "t.py").read_text(encoding="utf-8") == "P = '.agents/skills/yt-dar2/scripts/go.py'\n", "\n".join(dl))
+        pdv = yeni_proje()
+        kur_dongusu([dar], [dar], pdv)
+        dvl = okulines(pdv / ".agents" / "skills" / "yt-dar" / "SKILL.md")
+        test("dar geçiş varsayılan kurulumda ÇALIŞMAZ: SKILL.md arşivdekiyle birebir aynı (.agents/skills/<ad>/… kalır)",
+             "\n".join(dvl) == kd_["SKILL.md"] and (pdv / ".claude" / "skills" / "yt-dar").is_symlink(), "\n".join(dvl))
+        # ============ m. onek=None: hazirla çıktısı eski yolla (kopya + onarımlar + adlandırma) aynı; skill-calistir onek geçirir
+        def eski_hazirla(kaynak, hedef, s, ad, kardes=None):
+            gecici = hedef.parent / f".{ad}.eski-tmp"
+            shutil.copytree(kaynak, gecici, ignore=shutil.ignore_patterns("KAYNAK.md"))
+            se.symlink_taslaklarini_coz(gecici)
+            se.yamalari_uygula(gecici, s)
+            se.aciklama_onar(gecici / "SKILL.md", s, ad)
+            se.isim_esitle(gecici / "SKILL.md", ad, s.get("aciklama"))
+            se.yollari_yeniden_adlandir(gecici, {s["ad"], s.get("klasor_adi")}, ad)
+            se.kardes_yollarini_yeniden_adlandir(gecici, {k: v[0] for k, v in (kardes or {}).items()})
+            gecici.rename(hedef)
+        ornek_idler = ["code-tour", "etsy-seller", "ui-ux-pro-max", "swift-code-reviewer", "gsap-core"]
+        ornekler = [x for x in sk if x["id"] in ornek_idler] + [x for x in sk if x.get("aciklama_duzeltme")][:6] + [x for x in sk if x.get("yama")][:2]
+        farklar = []
+        for i, x in enumerate(ornekler):
+            a_d, b_d = kok / "m-eski" / str(i) / "x", kok / "m-yeni" / str(i) / "x"
+            a_d.parent.mkdir(parents=True), b_d.parent.mkdir(parents=True)
+            ad_ = x["ad"] + ("--kutuphane" if x["id"] == "gsap-core" else "")
+            eski_hazirla(KOK / x["yol"], a_d, x, ad_)
+            uy_ = se.hazirla(KOK / x["yol"], b_d, x, ad_, onek=None, skiller=sk)
+            if ozet(a_d) != ozet(b_d) or uy_ != []:
+                farklar.append(x["id"])
+        test(f"hazirla(onek=None): {len(ornekler)} gerçek skill için eski yolla (kopya + onarım + adlandırma) bayt bayt aynı, uyarı yok, yol çevirisi çalışmaz", not farklar, str(farklar))
+        a_d, b_d = kok / "m-eski" / "ct" / "x", kok / "m-yeni" / "ct" / "x"
+        a_d.parent.mkdir(parents=True), b_d.parent.mkdir(parents=True)
+        se.hazirla(ct_arsiv, a_d, ct, "code-tour", onek=".agents/skills", skiller=sk)
+        se.hazirla(ct_arsiv, b_d, ct, "code-tour", onek=None, skiller=sk)
+        test("hazirla: onek verilince code-tour kopyası değişir, onek=None iken değişmez (olumlu ve olumsuz kontrol)",
+             ozet(a_d) != ozet(b_d) and ".agents/skills/code-tour/scripts/validate_tour.py" in (a_d / "SKILL.md").read_text(encoding="utf-8")
+             and "~/.agents/skills/code-tour/scripts/validate_tour.py" in (b_d / "SKILL.md").read_text(encoding="utf-8"))
+        sc_kaynak = (KOK / "araclar" / "skill-calistir.py").read_text(encoding="utf-8")
+        cagrilar = []
+        for m_ in re.finditer(r"se\.hazirla\(", sc_kaynak):  # dengeli parantezle çağrının tamamı
+            derin, j_ = 1, m_.end()
+            while derin and j_ < len(sc_kaynak):
+                derin += {"(": 1, ")": -1}.get(sc_kaynak[j_], 0)
+                j_ += 1
+            cagrilar.append(sc_kaynak[m_.start():j_])
+        test("skill-calistir.py: her se.hazirla çağrısı onek ve skiller geçirir (kaynakta)", len(cagrilar) == 2 and all("onek=" in c and "skiller=" in c for c in cagrilar), str(cagrilar))
+        spec_c = importlib.util.spec_from_file_location("sk_calistir_yol", KOK / "araclar" / "skill-calistir.py")
+        sc = importlib.util.module_from_spec(spec_c)
+        spec_c.loader.exec_module(sc)
+        kayitli = []
+        gercek_hazirla = sc.se.hazirla
+        sc.se.hazirla = lambda *a, **k: (kayitli.append((a[3], k.get("onek"), k.get("skiller") is sk)), gercek_hazirla(*a, **k))[1]
+        try:
+            sc.skill_test(ct, kok / "calistir-ct", sk)
+            vx = next(x for x in sk if (x.get("varyantlar") or {}).get("claude") and not x.get("gizli"))
+            sc.skill_test(vx, kok / "calistir-vx", sk)
+        finally:
+            sc.se.hazirla = gercek_hazirla
+        test("skill-calistir.skill_test: ana sürüm .agents/skills, claude varyantı .claude/skills öneki ve skiller listesiyle hazirla çağırır",
+             (ct["ad"], ".agents/skills", True) in kayitli and (vx["ad"], ".claude/skills", True) in kayitli and (vx["ad"], ".agents/skills", True) in kayitli, str(kayitli))
+        # ============ g. onarim_izi: çevrilecek yolu olmayanlarda eskiyle aynı, olanlarda değişir
+        def eski_iz(s):
+            d = (s.get("aciklama_duzeltme") or {}).get("description")
+            oto = [y for y in s.get("yapisal_sorunlar", []) if "dosya başında değil" in y or "tırnaksız" in y]
+            yama = [f"{rel}:{o.git_blob_hash((o.YAMALAR / s['id'] / rel).read_bytes()) if (o.YAMALAR / s['id'] / rel).exists() else '-'}"
+                    for rel in sorted(((s.get('yama') or {}).get('dosyalar') or {}))]
+            if not d and not oto and not yama:
+                return None
+            return hashlib.sha1(f"{o.ONARIM_SURUMU}|{d or ''}|{'|'.join(oto)}|{'|'.join(yama)}".encode()).hexdigest()[:12]
+        bilinen6 = {"ui-ux-pro-max", "siege", "swift-code-reviewer", "code-tour", "etsy-seller", "mp-integrate"}
+        orn = list({x["id"]: x for x in [x for x in sk if x.get("aciklama_duzeltme") or x.get("yama") or x["id"] in bilinen6] + sk[::12]}.values())
+        degisen, yanlis_ayni, yanlis_fark = [], [], []
+        for x in orn:
+            yeni_, eski_ = o.onarim_izi(x, sk), eski_iz(x)
+            cev = bool(o.yol_izi(x, sk))
+            if yeni_ != eski_:
+                degisen.append(x["id"])
+            if not cev and yeni_ != eski_:
+                yanlis_ayni.append(x["id"])
+            if cev and yeni_ == eski_:
+                yanlis_fark.append(x["id"])
+        test(f"onarim_izi: {len(orn)} skill örneğinde (aciklama_duzeltme ve yamalılar dahil) çevrilecek yolu olmayanlarda eski formülle birebir aynı",
+             len(orn) >= 300 and not yanlis_ayni and any(x.get("aciklama_duzeltme") for x in orn) and any(x.get("yama") for x in orn), str(yanlis_ayni[:5]))
+        test("onarim_izi: çevrilecek kendi yolu olan skill'lerde değişir (bilinen beş skill dahil; yamalı etsy-seller hariç), yalnız onlarda",
+             not yanlis_fark and (bilinen6 - {"etsy-seller"}) <= set(degisen) and "etsy-seller" not in degisen  # yamalı dosyadaki yol çevrilmez: iz değişmez
+             and set(degisen) <= bilinen6 | {x["id"] for x in orn if o.yol_izi(x, sk)},
+             str((sorted(set(degisen)), yanlis_fark[:5])))
+        # ============ h-i-l. gerçek akışlar (CLI, code-tour): ekle iz farkında kur çağırır, elle değişiklik korunur, guncelle mesajı, idempotans, kaldır
+        def kilit_yaz(proje, f):
+            kp = proje / ".skill-kutuphanesi" / "kilit.json"
+            k = json.loads(kp.read_text(encoding="utf-8"))
+            f(k)
+            kp.write_text(json.dumps(k, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        def eski_kurulum(proje):
+            """Eski sürümün kurduğu gibi: arşiv kopyası olduğu gibi (çevrilmemiş), kilitte iz yok, kurulu_hash kopyayla uyumlu."""
+            hedef = proje / ".agents" / "skills" / "code-tour"
+            shutil.rmtree(hedef)
+            shutil.copytree(ct_arsiv, hedef, ignore=shutil.ignore_patterns("KAYNAK.md"))
+            kilit_yaz(proje, lambda k: (k["skiller"]["code-tour"].update(kurulu_hash=se.kurulu_hash(proje, "code-tour")), k["skiller"]["code-tour"].pop("onarim", None)))
+
+        beklenen_iz = o.onarim_izi(ct, sk)
+        p1 = yeni_proje()
+        (p1 / "benim-notum.txt").write_text("dokunma\n", encoding="utf-8")
+        kod1, out1 = calistir(p1, "--skill", "code-tour", "--evet")
+        md1 = p1 / ".agents" / "skills" / "code-tour" / "SKILL.md"
+        yeni_yol = ".agents/skills/code-tour/scripts/validate_tour.py"
+        test("gerçek kurulum (code-tour): ~/.agents/skills/… yolları proje içine çevrilir, hedef var, doğrulama temiz, kilitte onarım izi yazılı",
+             kod1 == 0 and "doğrulama: ✅" in out1 and yeni_yol in md1.read_text(encoding="utf-8") and "~/.agents/skills/code-tour" not in md1.read_text(encoding="utf-8")
+             and (p1 / ".agents" / "skills" / "code-tour" / "scripts" / "validate_tour.py").exists()
+             and json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz and beklenen_iz, out1)
+        # l. idempotans
+        agac1, hash1 = ozet(p1 / ".agents" / "skills" / "code-tour"), json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["kurulu_hash"]
+        kod2, out2 = calistir(p1, "--skill", "code-tour", "--evet")
+        kil2 = json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]
+        test("idempotans: ikinci kurulum no-op (kopya aynı bayt, kurulu_hash aynı, yeniden kurulmadı)",
+             kod2 == 0 and "+ code-tour" not in out2 and ozet(p1 / ".agents" / "skills" / "code-tour") == agac1 and kil2["kurulu_hash"] == hash1 and kil2["onarim"] == beklenen_iz, out2)
+        kodd, outd = calistir(p1, "--dogrula")
+        test("idempotans: kurulumdan hemen sonra --dogrula temiz", kodd == 0, outd)
+        kodg, outg = calistir(p1, "--guncelle", "--kuru")
+        test("idempotans: kurulumdan sonra --guncelle yeni iş önermez", "yol-yerellestirme" not in outg and "sabit yol çevirisi" not in outg, outg)
+        kodk, outk = calistir(p1, "--kaldir", "code-tour", "--evet")
+        test("kaldır: kopya ve kilit kaydı temiz kalkar, kullanıcının dosyası durur",
+             kodk == 0 and not (p1 / ".agents" / "skills" / "code-tour").exists() and not (p1 / ".claude" / "skills" / "code-tour").exists()
+             and "code-tour" not in json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"] and (p1 / "benim-notum.txt").read_text(encoding="utf-8") == "dokunma\n", outk)
+        pcl = yeni_proje()
+        kodc, outc = calistir(pcl, "--skill", "code-tour", "--arac", "claude", "--evet")
+        cmd = pcl / ".claude" / "skills" / "code-tour" / "SKILL.md"
+        test("gerçek kurulum --arac claude: yollar .claude/skills/code-tour/… olur, hedef var, doğrulama temiz",
+             kodc == 0 and ".claude/skills/code-tour/scripts/validate_tour.py" in cmd.read_text(encoding="utf-8") and not (pcl / ".agents" / "skills" / "code-tour").exists()
+             and (pcl / ".claude" / "skills" / "code-tour" / "scripts" / "validate_tour.py").exists() and calistir(pcl, "--dogrula")[0] == 0, outc)
+        agac_cl = ozet(pcl / ".claude" / "skills" / "code-tour")
+        kodc2, outc2 = calistir(pcl, "--skill", "code-tour", "--evet")
+        test("idempotans (sadece-Claude): ikinci kurulum no-op", kodc2 == 0 and "+ code-tour" not in outc2 and ozet(pcl / ".claude" / "skills" / "code-tour") == agac_cl, outc2)
+        # h. ekle: eski izli kilit -> kur çağrılır ve kopya çevrilir
+        ph = yeni_proje()
+        calistir(ph, "--skill", "code-tour", "--evet")
+        eski_kurulum(ph)
+        ham_md = ph / ".agents" / "skills" / "code-tour" / "SKILL.md"
+        once_ham = "~/.agents/skills/code-tour/scripts/validate_tour.py" in ham_md.read_text(encoding="utf-8")
+        koh, outh = calistir(ph, "--skill", "code-tour", "--evet")
+        test("ekle(): eski izli (izsiz) kilitte kur çağrılır, kopya yeniden yazılır, yeni iz damgalanır",
+             once_ham and koh == 0 and "+ code-tour" in outh and yeni_yol in ham_md.read_text(encoding="utf-8")
+             and "~/.agents/skills/code-tour" not in ham_md.read_text(encoding="utf-8")
+             and json_oku(ph / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz, outh)
+        # h. elle değiştirilmiş kopya: --zorla olmadan yeniden kurulmaz ve iz damgalanmaz; --zorla ile kurulur
+        pe2 = yeni_proje()
+        calistir(pe2, "--skill", "code-tour", "--evet")
+        eski_kurulum(pe2)
+        elle = pe2 / ".agents" / "skills" / "code-tour" / "SKILL.md"
+        with elle.open("a", encoding="utf-8") as f_:
+            f_.write("\nelle eklendi\n")
+        kilit_yaz(pe2, lambda k: k["skiller"]["code-tour"].update(onarim="eski-iz-0001"))
+        koe, oute = calistir(pe2, "--skill", "code-tour", "--evet")
+        k_e = json_oku(pe2 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]
+        test("ekle(): elle değiştirilmiş kopya --zorla olmadan yeniden kurulmaz, yeni iz DAMGALANMAZ, değişiklik korunur",
+             koe == 2 and "elle-degistirilmis" in oute and k_e["onarim"] == "eski-iz-0001" and "elle eklendi" in elle.read_text(encoding="utf-8")
+             and "~/.agents/skills/code-tour/scripts" in elle.read_text(encoding="utf-8"), oute)
+        koz, outz = calistir(pe2, "--skill", "code-tour", "--zorla", "--evet")
+        test("ekle(): --zorla ile yeniden kurulur (elle ekleme gider, yollar çevrilir, iz yazılır)",
+             koz == 0 and "+ code-tour" in outz and "elle eklendi" not in elle.read_text(encoding="utf-8") and yeni_yol in elle.read_text(encoding="utf-8")
+             and json_oku(pe2 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz, outz)
+        # i. guncelle: aynı karma, yalnız iz farklı -> 'sabit yol çevirisi' (yol-yerellestirme)
+        pg = yeni_proje()
+        calistir(pg, "--skill", "code-tour", "--evet")
+        eski_kurulum(pg)
+        kog, outg2 = calistir(pg, "--guncelle", "--kuru")
+        test("guncelle(): aynı karma, yalnız iz farklıysa yol-yerellestirme koduyla 'sabit yol çevirisi' bildirilir",
+             "yol-yerellestirme" in outg2 and "sabit yol çevirisi" in outg2 and "code-tour: kurulan kopyaya uygulanacak" in outg2 and "elle-degistirilmis" not in outg2, outg2)
+        gm = pg / ".agents" / "skills" / "code-tour" / "SKILL.md"
+        test("guncelle --kuru: kopyaya dokunmaz", "~/.agents/skills/code-tour/scripts/validate_tour.py" in gm.read_text(encoding="utf-8"))
+        kog2, outg3 = calistir(pg, "--guncelle", "--evet")
+        test("guncelle --evet: kopya çevrilir, iz yazılır, --dogrula temiz",
+             kog2 == 0 and yeni_yol in gm.read_text(encoding="utf-8") and json_oku(pg / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz
+             and calistir(pg, "--dogrula")[0] == 0, outg3)
+        # ============ p. doğrulanmış bulgu düzeltmeleri
+        import argparse
+        import contextlib
+        import io
+        import time
+        # p1. claude varyantı kendi sabit yollarıyla taranır (ana arşive göre değil)
+        vr = kayit("yt-vr", {"SKILL.md": fm("yt-vr") + "Main: ~/.claude/skills/yt-vr/ref/a.md\n", "ref/a.md": "-\n"},
+                   varyant={"SKILL.md": fm("yt-vr") + "Variant differs ~/.claude/skills/yt-vr/ref/a.md ok\nVariant also ~/.claude/skills/yt-vr/ref/b.md\n",
+                            "ref/a.md": "-\n", "ref/b.md": "-\n"})
+        pvr = yeni_proje()
+        uy_vr = kur_dongusu([vr], [vr], pvr)[2]["yt-vr"]
+        vmd = okulines(pvr / ".claude" / "skills" / "yt-vr" / "SKILL.md")
+        test("varyant kopya: varyantın KENDİ sabit yolları çevrilir ve yanıltıcı 'çevrilemedi' uyarısı çıkmaz",
+             "Variant differs .claude/skills/yt-vr/ref/a.md ok" in vmd and "Variant also .claude/skills/yt-vr/ref/b.md" in vmd and uy_vr == [], str((vmd, uy_vr)))
+        pvr2 = yeni_proje()
+        kur_dongusu([vr], [vr], pvr2, codex=False)
+        test("varyant kopya (sadece-Claude): aynı sonuç",
+             "Variant also .claude/skills/yt-vr/ref/b.md" in okulines(pvr2 / ".claude" / "skills" / "yt-vr" / "SKILL.md"))
+        # p2. guncelle: aynı adlı farklı kimlikli kardeş çalışan bağlantıyı bozmaz, kardes-farkli-kaynak UYARI
+        sl = kayit("yt-sl", {"SKILL.md": fm("yt-sl") + "Read ../yt-kb/refs/x.md\n"}, kardes_bagimliliklari={"yt-kb": {"id": "yt-kb", "dosya_sayisi": 1}})
+        liste_sl = [sl, kb, baska_kb]
+        psl = yeni_proje()
+        kilit_sl, _, _ = kur_dongusu(liste_sl, [baska_kb, sl], psl, adlar_ek={"yt-kb@x": "yt-kb--x"})
+        kilit_sl["skiller"]["yt-sl"]["kardes"] = {"yt-kb": "yt-kb--x"}  # eski kodun yazdığı biçim (kardeş adla eşleniyordu)
+        cikti = io.StringIO()
+        with contextlib.redirect_stdout(cikti):
+            kg = se.guncelle(argparse.Namespace(zorla=False, evet=True, kuru=True), psl, liste_sl, kilit=kilit_sl)
+        test("guncelle: aynı adlı farklı kimlikli kardeş kardeş-yol yeniden yazımı BAŞLATMAZ; kardes-farkli-kaynak UYARI verir",
+             kg == 0 and "yeniden yazılacak" not in cikti.getvalue() and "kardes-farkli-kaynak" in cikti.getvalue()
+             and "Güncellenecek/onarılacak: 0" in cikti.getvalue(), cikti.getvalue())
+        # p3. kardes-farkli-kaynak aynı kardeş için tek kez (../ bağlantısı + sabit yol)
+        kilitli_x = {"yt-kb": {"id": "yt-kb@x", "repo": "o/x", "kaynak_yol": "skills/yt-kb", "roller": []}}
+        rows = on(ke, [ke, kb, baska_kb], [ke], kilitli_x)
+        test("tekilleştirme: kardes-farkli-kaynak, kardeş hem ../ hem sabit yolla anılsa da TEK satır",
+             [kd for _, kd, _ in rows].count("kardes-farkli-kaynak") == 1, str(rows))
+        # p4. dar geçiş: ${CLAUDE_PROJECT_DIR}/ ve $CLAUDE_PROJECT_DIR/ önekli .agents/skills/<kendi> da çevrilir, başka mutlak yol çevrilmez
+        ev = kayit("yt-ev", {"SKILL.md": fm("yt-ev") + "B: ./.agents/skills/yt-ev/ref/a.md and ${CLAUDE_PROJECT_DIR}/.agents/skills/yt-ev/ref/a.md\n"
+                             "C: $CLAUDE_PROJECT_DIR/.agents/skills/yt-ev/ref/a.md\nD: /opt/x/.agents/skills/yt-ev/ref/a.md\n", "ref/a.md": "-\n"})
+        pev = yeni_proje()
+        kur_dongusu([ev], [ev], pev, codex=False)
+        emd = okulines(pev / ".claude" / "skills" / "yt-ev" / "SKILL.md")
+        test("dar geçiş: ./, ${CLAUDE_PROJECT_DIR}/ ve $CLAUDE_PROJECT_DIR/ önekli .agents/skills/<kendi> sadece-Claude kopyada .claude/skills'e çevrilir; başka mutlak yol değişmez",
+             "B: ./.claude/skills/yt-ev/ref/a.md and ${CLAUDE_PROJECT_DIR}/.claude/skills/yt-ev/ref/a.md" in emd
+             and "C: $CLAUDE_PROJECT_DIR/.claude/skills/yt-ev/ref/a.md" in emd and "D: /opt/x/.agents/skills/yt-ev/ref/a.md" in emd, "\n".join(emd))
+        # p5. satır içi değiştirme uzun yolun önekini bozmaz
+        px = kayit("yt-px", {"SKILL.md": fm("yt-px") + "Two: ~/.claude/skills/yt-px/ref/a.md and ~/.claude/skills/yt-px/ref/a.mdx\n", "ref/a.md": "-\n"})
+        ppx = yeni_proje()
+        kur_dongusu([px], [px], ppx)
+        test("satır içi değiştirme: çevrilebilir yolun önekini taşıyan daha uzun (çevrilemeyen) yol değişmez",
+             "Two: .agents/skills/yt-px/ref/a.md and ~/.claude/skills/yt-px/ref/a.mdx" in okulines(ppx / ".agents" / "skills" / "yt-px" / "SKILL.md"),
+             "\n".join(okulines(ppx / ".agents" / "skills" / "yt-px" / "SKILL.md")))
+        # p6. dar geçiş aşırı uzun satırda ikinci dereceden yavaşlamaz
+        uz_klasor = kok / "uzun-arsiv"
+        (uz_klasor / "ref").mkdir(parents=True)
+        (uz_klasor / "ref" / "a.md").write_text("-\n", encoding="utf-8")
+        parca = "see .agents/skills/foo/ref/a.md and more text padding "
+        bas_t = time.time()
+        orta, n_orta = o.ev_ici_kendi_cevir(parca * 300, {"foo"}, "foo", ".claude/skills", uz_klasor)
+        uzun, n_uzun = o.ev_ici_kendi_cevir(parca * 3000, {"foo"}, "foo", ".claude/skills", uz_klasor)
+        test("dar geçiş: satır başına tek tarama (16 KB satırda 300 yol hızlı çevrilir), 20.000 karakterden uzun satır çevrilmez",
+             n_orta == 300 and orta.count(".claude/skills/foo/ref/a.md") == 300 and n_uzun == 0 and time.time() - bas_t < 5, f"{n_orta} {n_uzun} {time.time() - bas_t:.1f}s")
+        # p7. ön kontrol yamalı dosyadaki yolu çevrilecek saymaz (kurulum yamalı dosyada çeviri yapmaz)
+        ym_d = {"SKILL.md": fm("yt-ym") + "Run ~/.claude/skills/yt-ym/ref/a.md\n", "ref/a.md": "-\n"}
+        ym0, ym1 = kayit("yt-ym", ym_d), kayit("yt-ym2", {"SKILL.md": fm("yt-ym2") + "Run ~/.claude/skills/yt-ym2/ref/a.md\n", "ref/a.md": "-\n"}, yama={"dosyalar": {"SKILL.md": "x"}})
+        test("ön kontrol: yamalı dosyadaki sabit yol 'çevrilecek' sayılmaz, yamasız aynı dosya sayılır",
+             len(o.yol_degerlendir(ym0, [ym0])["cevrilecek"]) == 1 and o.yol_degerlendir(ym1, [ym1])["cevrilecek"] == []
+             and not any(kd == "yol-yerellestirme" for _, kd, _ in on(ym1, [ym1])), str(on(ym1, [ym1])))
+        # p8. ekle() savunma dalı: on_kontrol HATA'sı atlatılsa bile elle değiştirilmiş kopya yeniden kurulmaz, kilitteki iz/damga değişmez
+        ed = kayit("yt-ed", {"SKILL.md": fm("yt-ed") + "Run ~/.claude/skills/yt-ed/ref/a.md\n", "ref/a.md": "-\n"})
+        ped = yeni_proje()
+        kilit_ed, _, _ = kur_dongusu([ed], [ed], ped)
+        kilit_ed["skiller"]["yt-ed"]["onarim"] = "eski-iz-0001"
+        se.tumunu_yaz(ped, kilit_ed, [ed])
+        ed_md = ped / ".agents" / "skills" / "yt-ed" / "SKILL.md"
+        with ed_md.open("a", encoding="utf-8") as f_:
+            f_.write("elle eklendi\n")
+        asil = (se.istek_coz, se.on_kontrol, se.kapsam_raporu)
+        try:
+            se.istek_coz = lambda a_, sk_: ([(ed, None)], [], None, [])
+            se.on_kontrol = lambda proje_, kilit_, plan_, roller_, sk_, rapor_, zorla_=False: ({ed["id"]: (ed, set())}, {ed["id"]: "yt-ed"})  # HATA'sız ön kontrol
+            se.kapsam_raporu = lambda *a_, **k_: None
+            with contextlib.redirect_stdout(io.StringIO()) as cikti_ed:
+                se.ekle(argparse.Namespace(arac=None, blok=None, oner=None, zorla=False, evet=True, kuru=False, skill=["yt-ed"]), ped, [ed])
+        finally:
+            se.istek_coz, se.on_kontrol, se.kapsam_raporu = asil
+        test("ekle() savunma dalı: elle değiştirilmiş kopya yeniden kurulmaz, kilitteki onarım izi aynen kalır",
+             "elle eklendi" in ed_md.read_text(encoding="utf-8") and "yeniden kurulmadı" in cikti_ed.getvalue()
+             and json_oku(ped / ".skill-kutuphanesi" / "kilit.json")["skiller"]["yt-ed"]["onarim"] == "eski-iz-0001", cikti_ed.getvalue())
+        # o. arşivler ve sentetik kaynaklar dokunulmadı
+        test("arşiv klasörü (code-tour) tüm bu işlemlerden sonra bayt bayt aynı; sentetik arşivler değişmedi",
+             ozet(ct_arsiv) == ct_once and ozet(Path(ana["yol"])) == arsiv_ana_once and (Path(kod["yol"]) / "scripts" / "run.py").read_text(encoding="utf-8") == yol_satiri)
+    finally:
+        o.YOL_ISTISNA = eski_istisna
+        sifirla()
+        shutil.rmtree(kok, ignore_errors=True)
+
+
 def main():
     once = parmak_izi()
     kok = Path(tempfile.mkdtemp(prefix="skill-test-"))
@@ -831,7 +1376,8 @@ def main():
                   if h.startswith("../") and _os.path.normpath(f.parent / h).startswith(str(kok3.parent))
                   and not Path(_os.path.normpath(f.parent / h)).exists()]
         test(f"kardeşle birlikte kurulunca ../{kad}/ bağlantıları projede çözülür (kardeş adı: {kardes_ad})",
-             kod == 0 and "kardes-eksik" not in out and not kirik3 and kl3[ad3].get("kardes") == {kad: kardes_ad},
+             kod == 0 and not [l for l in out.splitlines() if "kardes-eksik" in l and (f"'{kad}'" in l or f"{kad} (" in l)]
+             and not kirik3 and kl3[ad3].get("kardes") == {kad: kardes_ad},
              out + str(kirik3))
 
     kod, out = calistir(p2, "--kaldir", "gsap-core", "--evet")
@@ -1008,6 +1554,7 @@ def main():
     test("proje-kullanimi: bilinmeyen skill için boş sonuç, rapor yazmaz", pk.returncode == 0 and "kullanılmıyor" in pk.stdout,
          pk.stdout + pk.stderr)
     yol_testleri()
+    kurulum_yol_testleri()
     test("global klasörler test boyunca DEĞİŞMEDİ", parmak_izi() == once)
     shutil.rmtree(kok, ignore_errors=True)
     basarisiz = [a for a, ok in SONUC if not ok]

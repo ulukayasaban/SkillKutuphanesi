@@ -142,7 +142,7 @@ def betik_kontrol(kopya: Path):
     return dict(say), hatalar
 
 
-def skill_test(s, kok: Path):
+def skill_test(s, kok: Path, skiller=None):
     ad = s["ad"]
     sonuc = {"id": s["id"], "ad": ad, "kategori": s["kategori"], "gizli": s["gizli"], "ornek_gorev": ornek_gorev(s),
              "hatalar": [], "uyarilar": [], "betik": {}}
@@ -151,7 +151,7 @@ def skill_test(s, kok: Path):
         hedef = kok / s["id"].replace("@", "_") / arac / ad
         etiket = "" if arac == "ana" else f"[{arac}] "
         try:
-            se.hazirla(KOK / yol, hedef, s, ad)
+            se.hazirla(KOK / yol, hedef, s, ad, onek=".claude/skills" if arac == "claude" else ".agents/skills", skiller=skiller)
         except Exception as e:  # kurulum yolu bozuksa diğer kontroller anlamsız
             sonuc["hatalar"].append(f"{etiket}kurulum başarısız: {type(e).__name__}: {e}")
             continue
@@ -172,12 +172,13 @@ def skill_test(s, kok: Path):
 
 
 # ------------------------------------------------------------------ gerçek agent ile örnek görev
-def ajan_test(s, gorev, model, zaman_asimi=240):
+def ajan_test(s, gorev, model, zaman_asimi=240, skiller=None):
     """Skill'i boş bir geçici projeye kurar, claude -p'ye örnek görevi verir; Skill aracıyla yüklendi mi?"""
     with tempfile.TemporaryDirectory(prefix="skill-ajan-") as t:
         proje = Path(t)
         subprocess.run(["git", "init", "-q"], cwd=proje)
-        se.hazirla(KOK / (s.get("varyantlar") or {}).get("claude", s["yol"]), proje / ".claude" / "skills" / s["ad"], s, s["ad"])
+        se.hazirla(KOK / (s.get("varyantlar") or {}).get("claude", s["yol"]), proje / ".claude" / "skills" / s["ad"], s, s["ad"],
+                   onek=".claude/skills", skiller=skiller)
         se.hesap_gizle(proje, {"skiller": {s["ad"]: {}}})  # gerçek kurulumdaki gibi: aynı adlı hesap skill'i gizlenir
         komut = ["claude", "-p", gorev, "--output-format", "stream-json", "--verbose", "--max-turns", "4",
                  "--allowedTools", "Skill,Read,Glob,Grep", "--disallowedTools", "Bash,Write,Edit,NotebookEdit,WebFetch,WebSearch"]
@@ -324,18 +325,17 @@ def main():
     ap.add_argument("--is-parcacigi", type=int, default=8)
     ap.add_argument("--ajan-paralel", type=int, default=4, help="aynı anda kaç claude -p oturumu")
     a = ap.parse_args()
-    skiller = json_oku(REGISTRY)["skiller"]
-    if a.skill:
-        skiller = [s for s in skiller if s["id"] in a.skill]
+    tum_skiller = json_oku(REGISTRY)["skiller"]  # sabit yol taraması kardeşleri TÜM kütüphanede çözer (--skill süzgeci yalnız çalıştırılacakları daraltır)
+    skiller = [s for s in tum_skiller if s["id"] in a.skill] if a.skill else tum_skiller
     GECICI.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="skill-test-", dir=GECICI) as t:
         with ThreadPoolExecutor(a.is_parcacigi) as ex:
-            sonuclar = list(ex.map(lambda s: skill_test(s, Path(t)), skiller))
+            sonuclar = list(ex.map(lambda s: skill_test(s, Path(t), tum_skiller), skiller))
     ajan = [] if a.ajan else (json_oku(SONUC, {}) or {}).get("ajan", [])  # --ajan yoksa son agent sonuçları raporda kalır
     if a.ajan:
-        ids = {s["id"]: s for s in json_oku(REGISTRY)["skiller"]}
+        ids = {s["id"]: s for s in tum_skiller}
         def tek(is_):
-            r = ajan_test(ids[is_[0]], is_[1], a.model)
+            r = ajan_test(ids[is_[0]], is_[1], a.model, skiller=tum_skiller)
             print(("  ✅ " if r["tetiklendi"] else "  ❌ ") + is_[0], r.get("yuklenen"), r.get("hata") or "", flush=True)
             return r
         with ThreadPoolExecutor(a.ajan_paralel) as ex:

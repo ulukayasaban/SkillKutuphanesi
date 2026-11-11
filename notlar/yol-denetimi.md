@@ -32,7 +32,7 @@ Yalnız sayılan türler (ön kontrolde satır üretmez): ornek-metin, genel-kal
 | BİLGİ | genele-yazabilir | 13 |
 | BİLGİ | kardes-eksik | 112 |
 | BİLGİ | yol-istisna | 10 |
-| BİLGİ | yol-yerellestirme | 6 |
+| BİLGİ | yol-yerellestirme | 5 |
 | UYARI | eklenti-koku | 42 |
 | UYARI | genel-yol | 9 |
 | UYARI | genele-yazabilir | 5 |
@@ -43,22 +43,21 @@ Yalnız sayılan türler (ön kontrolde satır üretmez): ornek-metin, genel-kal
 
 | Sütun | Skill |
 |---|---:|
-| Kurulumda düzelir | 4 |
+| Kurulumda düzelir | 3 |
 | Kardeşle düzelir | 103 |
 | Paket gerekli | 115 |
 | Çözülemez | 7 |
 | İstisna | 10 |
-| Yalnız sayım (satır yok) | 192 |
+| Yalnız sayım (satır yok) | 193 |
 | Temiz | 5218 |
 
-## Kurulumda düzelir (4)
+## Kurulumda düzelir (3)
 
 _kurulan kopyada yol proje içi yola çevrilecek._
 
 | Skill | Repo | Kodlar | İlk neden |
 |---|---|---|---|
 | code-tour | github/awesome-copilot | yol-yerellestirme | 3 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:23 ~/.agents/skills/code-tour/scripts/validate_tour.py; SKILL.md:24 ~/.agents/skills/… |
-| etsy-seller | moiz-za/etsy-seller-seo-system | yol-yerellestirme | 1 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:51 ~/.claude/skills/etsy-seller/scripts/bootstrap.py) |
 | siege | anthropics/claude-plugins-official | yol-yerellestirme | 3 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:7 ${CLAUDE_PLUGIN_ROOT}/skills/siege/scripts/ledger.py; SKILL.md:73 ${CLAUDE_PLUGIN_R… |
 | ui-ux-pro-max | nextlevelbuilder/ui-ux-pro-max-skill | yol-yerellestirme | 11 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:42 ${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/scripts/search.py; SKILL.md:78… |
 

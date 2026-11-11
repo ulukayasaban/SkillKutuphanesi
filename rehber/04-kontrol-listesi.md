@@ -40,8 +40,16 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `claude-ozel` | UYARI | Konu Claude Code'a özel (plugin/hook) | Codex agent'ına verme |
 | `bagimlilik` | UYARI | Başka bir kurulum gerekir (ör. OpenMontage) | Kurulumun hazır olduğundan emin ol |
 | `kirik-baglanti` | UYARI | SKILL.md'nin gösterdiği bir dosya yok (kardeş skilldeki hedefler sayılmaz) | Kaynak repoda da yoksa önemsiz; değilse kategoriyi incele |
-| `kardes-eksik` | UYARI | Skill `../<kardeş>/` bağlantılarıyla başka bir skill'e dayanıyor ama kardeş kurulmuyor | Önerilen `--skill <id>` ile kardeşi de ekle |
-| `kardes-yol` | BİLGİ | Kardeş projede farklı adla (ör. `--kutuphane`) kurulu; `../<kardeş>/` yolları o ada çevrilir | Bilgi; elle bir şey gerekmez |
+| `kardes-eksik` | UYARI/BİLGİ | Skill başka bir kardeş skill'e dayanıyor (`../<kardeş>/` ya da kardeşin genel yolu). UYARI: kardeş projeye kurulmuyor ya da istenen dosya arşivde yok. BİLGİ: kardeş de kuruluyor, sorun kendiliğinden çözülür | UYARI ise önerilen `--skill <id>` ile kardeşi de ekle |
+| `kardes-yol` | BİLGİ | Kardeş skill de kuruluyor; kurulan kopyada kardeşe giden yollar (`../<kardeş>/…` ya da sabit genel yol) projedeki adına çevrilir | Bilgi; elle bir şey gerekmez |
+| `yol-yerellestirme` | BİLGİ | Skill metninde bilgisayarın genel klasörüne giden sabit yollar var; kurulan kopyada proje içi yola çevrilecek (arşivdeki orijinal değişmez) | Bilgi; elle bir şey gerekmez |
+| `genel-yol` | UYARI | Skill kendi (ya da başka skill'in) genel klasör yoluna dayanıyor ama bu yol otomatik çevrilemiyor: betik içinde, kurulum anlatan dosyada, karışık dosyada ya da dosya arşivde yok | Satırı oku; skill projede çalışmayabilir. Gerekirse yama yaz ya da kurma |
+| `eklenti-koku` | UYARI/BİLGİ | Skill eklenti kökündeki dosyalara dayanıyor; bu dosyalar arşive alınmamış, düz kurulumda o adımlar çalışmaz. BİLGİ: başka bir seçenek de sunuluyor | UYARI ise o adımları elle hazırla ya da skill'i kurma |
+| `skil-disi-yol` | UYARI | Skill, kendi klasörünün dışına çıkan bir yola dayanıyor ve hedef dosya arşivde yok | Kaynak repoda dosyayı ara; yoksa skill eksik çalışır |
+| `genele-yazabilir` | UYARI/BİLGİ | Skill bilgisayarın genel skill/agent klasörüne dosya kopyalıyor (UYARI) ya da bunu ajan adımı olarak anlatıyor (BİLGİ). Kütüphane kuralı genel klasöre yazmayı yasaklar | O adımı ajanın çalıştırmasına izin verme |
+| `yol-istisna` | BİLGİ | Bazı yol bulguları `yol-istisnalari.json` kaydıyla kapsandı (öğretici metin) | Bilgi |
+| `istisna-eskidi` | UYARI | `yol-istisnalari.json` kaydı artık tutmuyor, dosyalar değişmiş | Kaydı yeniden doğrula ya da sil |
+| `kardes-farkli-kaynak` | UYARI | Skill'in beklediği kardeş, projede ya da kurulumda başka bir kaynaktan aynı adla duruyor | Doğru kardeşi kur ya da önce eskisini `--kaldir` ile çıkar |
 | `lisans` | UYARI | Lisans belirtilmemiş | Ticari projede dikkat |
 | `dusuk-puan` | UYARI | Değerlendirme < 50 (D) | Alternatife bak |
 | `yapi` | UYARI/BİLGİ | Frontmatter sorunları (uzun açıklama, standart dışı ad, otomatik çağrılamaz) | Ad kurulumda otomatik düzeltilir |

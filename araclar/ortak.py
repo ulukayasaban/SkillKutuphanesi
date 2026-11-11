@@ -1,4 +1,5 @@
 """SkillKutuphanesi araçlarının ortak yardımcıları (sadece Python stdlib)."""
+import bisect
 import hashlib
 import json
 import os
@@ -313,15 +314,40 @@ def frontmatter_onar(metin: str, ad: str, aciklama=None):
     return metin, yapilan
 
 
-def onarim_izi(s: dict):
-    """Kurulan kopyaya uygulanan onarımın izi (frontmatter + yamalar; kilitte saklanır). Onarım yoksa None."""
+_TUM_SKILLER = [None]
+
+
+def tum_skiller(skiller=None):
+    """skiller verilmişse onu döner; verilmemişse registry.json'u süreç başına BİR kez okur (kurulum yolu çağıranları listeyi kendi geçirir)."""
+    if skiller is not None:
+        return skiller
+    if _TUM_SKILLER[0] is None:
+        _TUM_SKILLER[0] = (json_oku(REGISTRY) or {}).get("skiller", [])
+    return _TUM_SKILLER[0]
+
+
+def yol_izi(s: dict, skiller=None) -> str:
+    """Kurulumda proje içi yola ÇEVRİLECEK kendi sabit yollarının parmak izi (yol_degerlendir(...)['cevrilecek']); çevrilecek yoksa ''.
+    Yalnız arşiv verisinden deterministiktir (onek, kardeş kurulu durumu burada YOK: kardeş durumu kilidin 'kardes' alanındadır)."""
+    if not s.get("yol") or not (KOK / s["yol"]).is_dir():
+        return ""
+    cevrilecek = yol_degerlendir(s, tum_skiller(skiller))["cevrilecek"]
+    if not cevrilecek:
+        return ""
+    return hashlib.sha1("\n".join(sorted(f"{b['dosya']}\t{b['ham']}" for b in cevrilecek)).encode()).hexdigest()[:8]
+
+
+def onarim_izi(s: dict, skiller=None):
+    """Kurulan kopyaya uygulanan onarımın izi (frontmatter + yamalar + kendi sabit yollarının çevirisi; kilitte saklanır). Onarım yoksa None.
+    Yol bileşeni YALNIZ çevrilecek kendi yolu olan skill'lerde eklenir: öteki skill'lerin izi eskisiyle birebir aynıdır (ONARIM_SURUMU değişmez)."""
     d = (s.get("aciklama_duzeltme") or {}).get("description")
     oto = [y for y in s.get("yapisal_sorunlar", []) if "dosya başında değil" in y or "tırnaksız" in y]
     yama = [f"{rel}:{git_blob_hash((YAMALAR / s['id'] / rel).read_bytes()) if (YAMALAR / s['id'] / rel).exists() else '-'}"
             for rel in sorted(((s.get("yama") or {}).get("dosyalar") or {}))]
-    if not d and not oto and not yama:
+    yol = yol_izi(s, skiller)
+    if not d and not oto and not yama and not yol:
         return None
-    return hashlib.sha1(f"{ONARIM_SURUMU}|{d or ''}|{'|'.join(oto)}|{'|'.join(yama)}".encode()).hexdigest()[:12]
+    return hashlib.sha1(f"{ONARIM_SURUMU}|{d or ''}|{'|'.join(oto)}|{'|'.join(yama)}{'|yol:' + yol if yol else ''}".encode()).hexdigest()[:12]
 
 
 def yamalari_uygula(klasor: Path, s: dict) -> list:
@@ -593,6 +619,41 @@ def _hedef_turu(ad: str, son: str, adlar, bilinen, aile):
     return ("genel-baska" if aile == "genel" else "eklenti-kardes"), ad2
 
 
+def _yol_dosyalari(klasor: Path) -> list:
+    """Yol taramasının okuduğu dosyalar: onemli_dosyalar içinden ≤2 MB, uzantısı YOL_METIN_UZANTI'da; .env*/*.pem/*.key, gizli adlı dosyalar
+    ve symlink'ler (klasör dışına işaret edebilir) okunmaz."""
+    dosyalar = []
+    for f in onemli_dosyalar(klasor):
+        if (f.suffix.lower() not in YOL_METIN_UZANTI or f.name.startswith(".env") or f.name.endswith((".pem", ".key"))
+                or _YOL_GIZLI_AD.match(f.name) or f.is_symlink()):
+            continue
+        try:
+            if f.stat().st_size <= YOL_TARAMA_SINIRLARI["dosya_bayt"]:
+                dosyalar.append(f)
+        except OSError:
+            continue
+    return dosyalar
+
+
+def yol_dosya_sinifi_haritasi(klasor) -> dict:
+    """{göreli dosya: (sınıf 'ajan'|'kurucu'|'dokuman', betik mi)} — yol_taramasi ile AYNI dosya seçimi ve sınıflama (kurulumdaki dar geçiş kullanır)."""
+    klasor = Path(klasor)
+    dosyalar = _yol_dosyalari(klasor)
+    atiflar = _atif_kumesi(klasor, [x.relative_to(klasor).as_posix() for x in dosyalar])
+    sonuc = {}
+    for f in dosyalar:
+        rel = f.relative_to(klasor).as_posix()
+        betik = f.suffix.lower() in _YOL_KOD_UZANTI
+        if not betik and f.suffix == "":
+            try:
+                with f.open("rb") as fh:
+                    betik = fh.read(2) == b"#!"
+            except OSError:
+                continue
+        sonuc[rel] = (_dosya_sinifi(rel, atiflar, betik), betik)
+    return sonuc
+
+
 def yol_taramasi(klasor, adlar, bilinen_adlar=None) -> list:
     """Bir skill klasöründeki sabit yol bağımlılıkları (SAF: yalnız verilen klasörü okur; ağ yok; arşivde deterministik).
     klasor: skill klasörü · adlar: skill'in KENDİ adları (skill_adlari) · bilinen_adlar: kütüphanedeki tüm skill adları
@@ -620,16 +681,7 @@ def yol_taramasi(klasor, adlar, bilinen_adlar=None) -> list:
     klasor = Path(klasor)
     adlar = {_ad_norm(a) for a in adlar if a}
     bilinen = bilinen_adlar if bilinen_adlar is None or isinstance(bilinen_adlar, frozenset) else frozenset(_ad_norm(a) for a in bilinen_adlar)
-    dosyalar = []
-    for f in onemli_dosyalar(klasor):
-        if (f.suffix.lower() not in YOL_METIN_UZANTI or f.name.startswith(".env") or f.name.endswith((".pem", ".key"))
-                or _YOL_GIZLI_AD.match(f.name) or f.is_symlink()):
-            continue  # gizli/anahtar adlı dosyalar ve symlink'ler (klasör dışına işaret edebilir) okunmaz
-        try:
-            if f.stat().st_size <= YOL_TARAMA_SINIRLARI["dosya_bayt"]:
-                dosyalar.append(f)
-        except OSError:
-            continue
+    dosyalar = _yol_dosyalari(klasor)
     atiflar, bulgular = None, []
     for f in dosyalar:
         rel = f.relative_to(klasor).as_posix()
@@ -949,6 +1001,8 @@ def yol_degerlendir(s: dict, skiller, kurulacak_idler=None, istisnalar=None) -> 
       sayim      {tur: adet} — sayım-yalnız türler dahil, istisnalılar dahil
       cevrilecek istisnasız kendi-yol bulguları (genel-kendi/eklenti-kendi) cevrilebilir=True olanlar
       kardesler  {hedef_ad: {"id", "kurulu" (bool | None), "bulgular"}} yalnız çözülen kardeşler
+      satir_kardes  (yalnız satırlardan biri bir kardeşe bağlıysa var) satirlar ile paralel liste: satırın ilgili olduğu kardeş skill kimliği (yoksa None) — kurulum ön kontrolü kardeşi kimliğe göre tekilleştirir
+      cevrilecek_kardes  (yalnız varsa) istisnasız kardeş-yol bulguları (genel-baska/eklenti-kardes/skil-disi-yol, kardes_id var) cevrilebilir=True olanlar
       sutun      'temiz'|'yalniz-sayim'|'kurulumda-duzelir'|'kardesle-duzelir'|'paket-gerekli'|'cozulemez'|'istisna'
                  (skil-disi-yol ve eklenti kökü = paket-gerekli: dosyalar arşive alınmamış; öncelik: cozulemez > paket-gerekli > kardesle-duzelir > kurulumda-duzelir > istisna > yalniz-sayim > temiz)"""
     tum = skill_yol_taramasi(s, skiller)
@@ -957,10 +1011,20 @@ def yol_degerlendir(s: dict, skiller, kurulacak_idler=None, istisnalar=None) -> 
         sayim[b["tur"]] = sayim.get(b["tur"], 0) + 1
     kalan, istisnali, eskiyen = istisna_uygula(s, tum, istisnalar)
     satir, kardesler, bayrak = [], {}, set()
-    ek = lambda sv, kod, govde: satir.append((sv, kod, govde))  # noqa: E731
+    satir_kid = []  # satir ile paralel: satırın ilgili olduğu kardeş skill kimliği (yoksa None)
+
+    def ek(sv, kod, govde, kid=None):
+        satir.append((sv, kod, govde))
+        satir_kid.append(kid)
     aktif = [b for b in kalan if b["sinif"] != "dokuman"]
     satir_engel = ("kurulum-komutu", "cok-kok", "kullanim-metni", "ornek-satir")  # kurulum tarifi / betikteki kullanım ipucu (echo) / "e.g., in most installs" açıklama satırları: bağımlılık değil, yalnız sayılır
     cevrilecek = [b for b in kalan if b["tur"] in ("genel-kendi", "eklenti-kendi") and b["cevrilebilir"]]
+    # kardeşin proje içi yoluna GERÇEKTEN çevrilebilecek bulgular (kurulum bunları ve yalnız bunları yazar; ../<kardeş>/ göreli yolları ayrı geçiştir)
+    cevrilecek_kardes = [b for b in kalan if b["tur"] in ("genel-baska", "eklenti-kardes", "skil-disi-yol") and b.get("kardes_id") and b["cevrilebilir"]]
+    yamali = set((s.get("yama") or {}).get("dosyalar") or {})  # yama dosyanın tamamını değiştirir: kurulumda o dosyada çeviri yapılmaz, ön kontrol de vaat etmesin
+    if yamali:
+        cevrilecek = [b for b in cevrilecek if b["dosya"] not in yamali]
+        cevrilecek_kardes = [b for b in cevrilecek_kardes if b["dosya"] not in yamali]
     # kendi yolları
     a_yok, b_cevrilmez, e_yok, atama = [], [], [], []
     for b in aktif:
@@ -1041,23 +1105,23 @@ def yol_degerlendir(s: dict, skiller, kurulacak_idler=None, istisnalar=None) -> 
         kardesler[hedef] = {"id": kid, "kurulu": kurulu, "bulgular": bl}
         eksik = [b for b in bl if b["var"] is False]
         if eksik:
-            ek("UYARI", "kardes-eksik", f"{hedef}: dosya arşivde yok: {_yol_ornekleri(eksik)}")
+            ek("UYARI", "kardes-eksik", f"{hedef}: dosya arşivde yok: {_yol_ornekleri(eksik)}", kid)
             bayrak.add("paket")
         tamam = [b for b in bl if b["var"] is not False]
         if not tamam:
             continue
         if kurulu is None:
-            ek("BİLGİ", "kardes-eksik", f"{hedef} ({kid}) kardeş skill gerekli; kurulursa kardeşle düzelir: {_yol_ornekleri(tamam)}")
+            ek("BİLGİ", "kardes-eksik", f"{hedef} ({kid}) kardeş skill gerekli; kurulursa kardeşle düzelir: {_yol_ornekleri(tamam)}", kid)
             bayrak.add("kardes")
         elif not kurulu:
-            ek("UYARI", "kardes-eksik", f"{hedef} ({kid}) kardeş skill projeye kurulmuyor: {_yol_ornekleri(tamam)}")
+            ek("UYARI", "kardes-eksik", f"{hedef} ({kid}) kardeş skill projeye kurulmuyor: {_yol_ornekleri(tamam)}", kid)
             bayrak.add("kardes")
         else:
-            ek("BİLGİ", "kardes-yol", f"{hedef} ({kid}) kardeş kuruluyor, {len(tamam)} yol kardeşin proje içi yoluna çevrilecek")
+            ek("BİLGİ", "kardes-yol", f"{hedef} ({kid}) kardeş kuruluyor, {len(tamam)} yol kardeşin proje içi yoluna çevrilecek", kid)
             cevrilmez = [b for b in tamam if b["engel"] in ("betik-ici", "kurucu-dosya", "karisik-dosya")
                          and b["tur"] in ("genel-baska", "eklenti-kardes")]
             if cevrilmez:
-                ek("UYARI", "genel-yol", f"{hedef} yolu otomatik çevrilmiyor (betik içinde / kurulum dosyasında / karışık dosyada): {_yol_ornekleri(cevrilmez)}")
+                ek("UYARI", "genel-yol", f"{hedef} yolu otomatik çevrilmiyor (betik içinde / kurulum dosyasında / karışık dosyada): {_yol_ornekleri(cevrilmez)}", kid)
                 bayrak.add("cozulemez")
     # genele yazma
     kopya = [b for b in aktif if b["tur"] == "genele-kopyalar" and b["sinif"] == "ajan"]
@@ -1074,7 +1138,52 @@ def yol_degerlendir(s: dict, skiller, kurulacak_idler=None, istisnalar=None) -> 
     sutun = next((ad for b_, ad in sira if b_ in bayrak), None)
     if not sutun:
         sutun = "istisna" if istisnali else "yalniz-sayim" if tum else "temiz"
-    return {"satirlar": satir, "sayim": sayim, "cevrilecek": cevrilecek, "kardesler": kardesler, "sutun": sutun}
+    sonuc = {"satirlar": satir, "sayim": sayim, "cevrilecek": cevrilecek, "kardesler": kardesler, "sutun": sutun}
+    if any(satir_kid):  # ek anahtarlar YALNIZ doluysa eklenir: kardeşi olmayan skill'in dönüşü eski biçimiyle birebir aynı kalır
+        sonuc["satir_kardes"] = satir_kid
+    if cevrilecek_kardes:
+        sonuc["cevrilecek_kardes"] = cevrilecek_kardes
+    return sonuc
+
+
+# ------------------------------------------------------------------ kurulumda dar geçiş: kendi klasörü .agents/skills/<ad>/… -> .claude/skills/<kurulum adı>/…
+_EV_ICI_AGENTS = re.compile(r"(?:(?<![\w$}~/])|(?<=\./)|(?<=\$\{CLAUDE_PROJECT_DIR\}/)|(?<=\$CLAUDE_PROJECT_DIR/))(?P<on>\.agents/skills)/(?P<ad>[A-Za-z0-9_.@+-]+)(?P<k>" + _KALAN + ")")
+
+
+def ev_ici_kendi_cevir(metin: str, adlar, yeni_ad: str, hedef_onek: str, arsiv, betik: bool = False):
+    """Proje içi (öneksiz) '.agents/skills/<kendi ad>/<kalan>' (ya da ./, ${CLAUDE_PROJECT_DIR}/, $CLAUDE_PROJECT_DIR/ önekli) yollarını '<hedef_onek>/<yeni_ad>/<kalan>' yapar. Satır kuralları yol_taramasi ile aynıdır:
+    kalan boş ya da arşivde (arsiv klasörü) yoksa, satırda kurulum komutu (yoldan önce) / iki ya da daha çok yerleşim kökü / açıklama (e.g., for example)
+    varsa çevrilmez. Döner: (yeni metin, çevrilen sayısı)."""
+    arsiv = Path(arsiv)
+    adlar = {_ad_norm(a) for a in adlar if a}
+    yeni_satir = _satir_haritasi(metin)
+    degisim, onbellek = [], {}  # onbellek: satır başı -> (kurulum komutu konumları, yerleşim kökü sayısı, örnek satırı mı); satır başına tek tarama
+    for m in _EV_ICI_AGENTS.finditer(metin):
+        ad = m.group("ad")
+        if ad.endswith(".") or _ad_norm(ad) not in adlar:
+            continue
+        kalan = _kalan_temizle(m.group("k") or "")
+        if not kalan or _var_bak(arsiv, kalan) is not True:
+            continue
+        i = bisect.bisect_left(yeni_satir, m.start())
+        bas = yeni_satir[i - 1] + 1 if i else 0
+        son = yeni_satir[i] if i < len(yeni_satir) else len(metin)
+        if son - bas > YOL_TARAMA_SINIRLARI["satir_karakter"]:
+            continue  # yol_taramasi ile aynı sınır: aşırı uzun (gömülü/minify) satırda çevirme yapılmaz
+        poz = m.start() - bas
+        bilgi = onbellek.get(bas)
+        if bilgi is None:
+            satir = metin[bas:son]
+            kokler = {(x.group("a") or x.group("b") or x.group("c")).lower().replace("codex_home", "codex").replace("claude_dir", "claude")
+                      for x in _KOK_YERLESIM.finditer(satir)}
+            bilgi = onbellek[bas] = ([k.start() for k in _KURULUM_KOMUTU.finditer(satir)], len(kokler),
+                                     bool(_ORNEK_SATIR.search(satir)), bool(betik and _KULLANIM_SATIR.match(satir)))
+        if any(k < poz for k in bilgi[0]) or bilgi[1] >= 2 or bilgi[2] or bilgi[3]:
+            continue
+        degisim.append((m.start("on"), m.end("ad"), f"{hedef_onek}/{yeni_ad}"))
+    for bas_, son_, yeni in reversed(degisim):
+        metin = metin[:bas_] + yeni + metin[son_:]
+    return metin, len(degisim)
 
 
 def yol_istisna_denetimi(skiller):
