@@ -1,6 +1,6 @@
 # Program Denetimi
 
-> `araclar/program-denetim.py` üretir · 2026-11-11 · salt okuma; güncelleme kullanıcı onayıyla `rehber/11-program-yonetimi.md` adımlarıyla yapılır.
+> `araclar/program-denetim.py` üretir · 2026-11-12 · salt okuma; güncelleme kullanıcı onayıyla `rehber/11-program-yonetimi.md` adımlarıyla yapılır.
 
 | Program | Repo | Kütüphanedeki sürüm | GitHub son sürüm | Durum | Kaynak kopyası |
 |---|---|---|---|---|---|
@@ -10,5 +10,16 @@
 
 | Program | Tür | Karttaki | Kurulu | Son | Durum | Yerel değişiklik | Sabit sürümler |
 |---|---|---|---|---|---|---|---|
-| hyperframes | npm-global | 0.9.23 | 0.9.23 | 0.9.33 | YENİ SÜRÜM VAR | - | - |
-| openmontage | git-checkout | c8066452 | c8066452 | fecb9a1e (244 geride) | YENİ SÜRÜM VAR | 9 değişen, 6 izlenmeyen | 11/11 |
+| hyperframes | npm-global | 0.9.23 | 0.9.23 | 0.9.35 | YENİ SÜRÜM VAR | - | - |
+| openmontage | git-checkout | fecb9a1e | fecb9a1e | fecb9a1e | güncel | 7 değişen, 5 izlenmeyen | 11/11 |
+
+## Kart şeması
+
+tüm kartlar geçerli
+
+## Ortam anahtarları
+
+- hyperframes · HYPERFRAMES_SKIP_SKILLS · 3/3
+- hyperframes · HYPERFRAMES_NO_AUTO_INSTALL · 0/3
+- hyperframes · HYPERFRAMES_NO_UPDATE_CHECK · 0/3
+- openmontage · HYPERFRAMES_SKIP_SKILLS · 3/3

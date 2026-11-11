@@ -287,7 +287,7 @@
       "ucret": "kismen",
       "ne_yapar": "Yapay zeka ajanıyla uçtan uca video üretir: fikir, betik, stok/üretilmiş görüntü, seslendirme, altyazı, montaj ve Remotion/HyperFrames ile render. Her medya türü için ücretsiz yerel yol vardır; ücretli sağlayıcılar (ses, görüntü, video API'leri) anahtarla isteğe bağlıdır.",
       "yerinde": {"tur": "git-checkout", "yol": "~/.openmontage", "dal": "main"},
-      "kutuphane_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
+      "kutuphane_commit": "fecb9a1e3cc23ef84de30b272059457a427f16f8",
       "venv": ".venv",
       "sabit_surumler": {
         "numpy": "1.26.4",
@@ -303,13 +303,14 @@
         "manim": "0.19.1"
       },
       "surum_kaynagi": "GitHub: OpenMontageInc/OpenMontage, dal main (commit karşılaştırması)",
-      "repo_notu": "Repo GitHub'da calesthio hesabından OpenMontageInc kuruluşuna taşındı. Yerel klonun origin adresi hâlâ eski adı (calesthio/OpenMontage) gösterir; GitHub yönlendirir. Adresi değiştirmek kullanıcı onayı ister.",
+      "repo_notu": "Repo GitHub'da calesthio hesabından OpenMontageInc kuruluşuna taşındı. Yerel klonun origin adresi 2026-11-12'de kullanıcı onayıyla yeni ada çevrildi (https://github.com/OpenMontageInc/OpenMontage.git).",
       "veri_yeri": "Program ve venv ~/.openmontage; çıktılar ~/Movies/OpenMontage; anahtarlar ~/.config/openmontage/.env (depodaki .env ona bağdır)",
       "anahtarlar": "API anahtarları makinede genel olarak ayarlıdır. Bir daha istenmez, açılmaz, yazdırılmaz; sağlayıcı 401 verirse yalnız hangi anahtarın yenileneceği söylenir.",
       "ag": "Seçilen sağlayıcı API'leri, stok görüntü/ses servisleri, GitHub, npm ve pip indirmeleri (kurulum/güncelleme sırasında)",
       "kendini_gunceller": false,
       "skill_yazimi": "Program skill bağı kurmaz ve güncelleme ya da `make setup` onları yeniden kurmaz (kurulum betiklerinde sembolik bağ yok). Ama ~/.claude/skills içindeki yaklaşık 74 bağ (~/.openmontage/.agents/skills/<ad>) kullanıcının kendi manifestiyle konmuştur (~/.config/openmontage/global-skill-links.txt). Güncelleme bir skill klasörünü silerse ya da taşırsa bağlar kırılır. Layer-3 skilleri program klasöründe (.agents/skills) durur.",
-      "yerel_degisiklik": "Çalışma ağacı temiz değil (2026-11-11 ölçümü: 9 değişen izlenen dosya, 6 izlenmeyen yol; güncellemede yeniden sayılır). Değişen dosyaların listesi `git status --porcelain` ile alınır: dört Python aracı, Remotion dosyaları ve .agents/skills/gsap-plugins/SKILL.md. Bir skill notu 'beş yama'dan söz eder; bu sayı ve venv içindeki basicsr yaması ölçümle doğrulanmadı. Yamalar repoda yoktur; güncelleme bunları ezebilir ya da çakıştırır.",
+      "yerel_degisiklik": "2026-11-12 güncellemesinden sonra: 7 değişen izlenen dosya, 5 izlenmeyen yol (gfpgan/ artık reponun .gitignore'unda). Önceki commit c8066452'den fecb9a1e'ye geçildi (244 commit, yalnız ileri sarma). Güncellemede Explainer.tsx ve face_restore.py kullanıcı kararıyla yeni sürüm haliyle bırakıldı; eski yerel halleri yedekte durur (openmontage-2026-11-12/yerel-yamalar.patch). Venv'de yalnız certifi yükseltildi, pythainlp ve importlib_resources eklendi; sabit sürümler değişmedi. Liste `git status --porcelain` ile alınır.",
+      "sabit_surum_notlari": ["manim 0.19.1 numpy>=2.0 ister, kart numpy 1.26.4 sabitler: çalışan venv'de ikisi birlikte durur ama sıfırdan kurulumda çözümleyici reddeder (2026-11-12 denemesi).", "Intel Mac'te sentencepiece 0.2.3 tekerleksizdir ve derlemede takılır; sıfırdan kurulumda sentencepiece==0.2.2 açıkça verilir.", "Reponun Makefile'ı pip>=26.2.2 ister; çalışan venv pip 23.0.1 ile bırakıldı, make setup çalıştırılmaz."],
       "skilleri": [],
       "guncelleme_adimlari": [
         "program-denetim.py yeni commit'i ('YENİ SÜRÜM VAR', N geride) ya da kartın eskidiğini ('KART ESKİ') gösterir",
@@ -443,70 +444,56 @@
           {
             "yol": ".agents/skills/gsap-plugins/SKILL.md",
             "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "GSAP eklentilerinin ücretsiz olduğunu ve npm'deki gsap paketinden kurulduğunu söyleyen 'Licensing & Install' bölümü",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
           {
             "yol": "lib/clip_embedder.py",
             "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "CLIP modelini safetensors ile yükler (torch 2.2.2 sabitiyle .bin ağırlık yüklenemediği için)",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
           {
             "yol": "remotion-composer/package-lock.json",
             "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "yerel npm install'ın yazdığı kilit girdileri",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
           {
             "yol": "remotion-composer/package.json",
             "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
-            "yedek": "kopya",
-            "yeniden_uygula": true
-          },
-          {
-            "yol": "remotion-composer/src/Explainer.tsx",
-            "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "esbuild kurulum betiğine izin veren allowScripts satırı",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
           {
             "yol": "remotion-composer/src/components/StatReveal.tsx",
             "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "mini rozet alanları (yazı boyutu, genişlik, zemin rengi); Explainer.tsx'teki eski yerel değişiklikle birlikte kullanılıyordu",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
           {
             "yol": "tools/analysis/video_understand.py",
             "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "sabit paket sürümleriyle çalışması için yerel düzeltme",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
           {
             "yol": "tools/capture/screen_recorder.py",
             "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
-            "yedek": "kopya",
-            "yeniden_uygula": true
-          },
-          {
-            "yol": "tools/enhancement/face_restore.py",
-            "tur": "izlenen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "yerel düzeltme (amacı kullanıcıya sorulacak)",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
           {
             "yol": "remotion-composer/remotion.config.ts",
             "tur": "izlenmeyen",
-            "amac": "yerel değişiklik; amacı kayıtlı değil (kullanıcıya sorulur)",
+            "amac": "Remotion ayar dosyası (eşzamanlılık ve şeffaf katman ortam değişkenleri); repoda yok",
             "yedek": "kopya",
             "yeniden_uygula": true
           },
@@ -534,30 +521,44 @@
           {
             "yol": "clips_cache/",
             "tur": "izlenmeyen",
-            "amac": "ölçülmedi (önbellek ya da model dosyası olabilir; içeriği bilinmeden kopyalanmaz)",
+            "amac": "klip önbelleği; kopyalanmaz, yalnız listelenir",
             "yedek": "liste",
             "yeniden_uygula": false
           },
           {
             "yol": "gfpgan/",
             "tur": "izlenmeyen",
-            "amac": "ölçülmedi (önbellek ya da model dosyası olabilir; içeriği bilinmeden kopyalanmaz)",
+            "amac": "yüz iyileştirme model ağırlıkları (GFPGAN); 2026-11-12'den beri reponun .gitignore'unda",
             "yedek": "liste",
             "yeniden_uygula": false
           },
           {
             "yol": ".venv/lib/python3.10/site-packages/basicsr/",
             "tur": "venv",
-            "amac": "skill notunda geçen içe aktarma yaması; ölçülmedi",
+            "amac": "venv içindeki içe aktarma yaması; yeni sürüm aynı sorunu tools/enhancement/_basicsr_compat.py ile çözüyor, yama zararsız olarak duruyor",
             "yedek": "liste",
-            "yeniden_uygula": true
+            "yeniden_uygula": false
           }
         ],
         "yedekleme": {
           "izlenen": "git diff --binary > yerel-yamalar.patch",
           "izlenmeyen": "git ls-files --others --exclude-standard (boyutlarıyla) > izlenmeyen-yollar.txt; 'kopya' olanlar izlenmeyen/ altına kopyalanır"
         },
-        "rehber": "rehber/11-program-yonetimi.md → Yerel yamalar (git klonu)"
+        "rehber": "rehber/11-program-yonetimi.md → Yerel yamalar (git klonu)",
+        "birakilan": [
+          {
+            "yol": "remotion-composer/src/Explainer.tsx",
+            "tarih": "2026-11-12",
+            "neden": "yeni sürümle üç yerde çakıştı; kullanıcı yeni sürüm halini seçti",
+            "eski_hali": "yedek openmontage-2026-11-12/yerel-yamalar.patch (altyazı yazı tipi ve boyutu, şeffaf grafik katmanı, mini rozet)"
+          },
+          {
+            "yol": "tools/enhancement/face_restore.py",
+            "tarih": "2026-11-12",
+            "neden": "yeni sürüm aynı sorunu kendi yoluyla çözdü; kullanıcı yeni sürüm halini seçti",
+            "eski_hali": "yedek openmontage-2026-11-12/yerel-yamalar.patch"
+          }
+        ]
       },
       "kirici_surum": {
         "kural": "Aday sayılır: main dalı kurulu commit'ten 50'den fazla commit ileride, ya da yeni commit'ler izle_dosyalar'dan birini değiştiriyorsa, ya da yeni commit'ler karttaki bir yerel yama dosyasına dokunuyorsa.",
@@ -571,9 +572,9 @@
         "yayinci": {"hesap": "OpenMontageInc", "ucuncu_taraf": false, "imza": "git-commit", "not": "git commit sha'sı kayıt değeridir."},
         "ozet": {
           "tur": "git-commit",
-          "deger": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
+          "deger": "fecb9a1e3cc23ef84de30b272059457a427f16f8",
           "ne_icin": "kurulu klonun kayıtlı commit'i (KAYNAK.md ile aynı)",
-          "kayit_tarihi": "2026-11-11"
+          "kayit_tarihi": "2026-11-12"
         },
         "kural": "Onay commit'in tam sha'sıyla verilir; dal adıyla ('main') verilmez."
       }

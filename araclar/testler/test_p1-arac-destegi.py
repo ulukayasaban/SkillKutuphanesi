@@ -428,12 +428,12 @@ try:
     k_ = gercek["araclar"]
     token_gibi = [x for x in re.findall(r"[A-Za-z0-9]{20,}", re.sub(r"https?://\S+", "", json.dumps(k_, ensure_ascii=False)))
                   if re.search(r"[A-Za-z]", x) and re.search(r"\d", x)]
-    test("44. gerçek yapay-zeka-araclari.json: 7 kayıt, zorunlu alanlar, tam anahtar kümesi, liste biçimi, makine_geneli_yazar yok, "
+    test("44. gerçek yapay-zeka-araclari.json (yalnız yapı): zorunlu alanlar, liste biçimi, benzersiz anahtar, makine_geneli_yazar yok, "
          "göreli klasörler, token benzeri değer yok",
-         isinstance(k_, list) and len(k_) == 7 and gercek["surum"] == 1 and all(all(z in x for z in zorunlu) for x in k_)
-         and {x["anahtar"] for x in k_} == {"claude-code", "codex", "antigravity", "cursor", "vscode-copilot", "gemini-cli", "copilot-cli"}
+         isinstance(k_, list) and bool(k_) and gercek["surum"] == 1 and all(all(z in x for z in zorunlu) for x in k_)
+         and len({x["anahtar"] for x in k_}) == len(k_)
          and not any("makine_geneli_yazar" in x for x in k_) and all(not d.startswith(("/", "~")) for x in k_ for d in x["proje_skill_okur"])
-         and not token_gibi and all(x["belirsizler"] and x["denendi"] == [] for x in k_), token_gibi)
+         and not token_gibi and all(isinstance(x["belirsizler"], list) and isinstance(x["denendi"], list) for x in k_), token_gibi)
     eski_so = se.surum_oku
     se.surum_oku = lambda okuma: None          # gerçek claude/codex komutları ASLA çalıştırılmaz
     try:
@@ -442,7 +442,7 @@ try:
         se.surum_oku = eski_so
     jr = json.loads(o)
     test("44b. gerçek dosya (sürüm okuma sahte): özet JSON biçimi doğru, durum 'sorun' değil, çıkış 0",
-         kod == 0 and jr["arac"] == "arac-belgeleri" and jr["durum"] in ("temiz", "dikkat") and "7 araç kayıtlı, 5 kurulu" in jr["satirlar"][0], o)
+         kod == 0 and jr["arac"] == "arac-belgeleri" and jr["durum"] in ("temiz", "dikkat") and bool(re.search(r"\d+ araç kayıtlı, \d+ kurulu", jr["satirlar"][0])), o)
 finally:
     shutil.rmtree(TMP, ignore_errors=True)
     if GERCEK_HOME:

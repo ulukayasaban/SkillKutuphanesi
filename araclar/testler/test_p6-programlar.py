@@ -724,8 +724,12 @@ with yama(git_okuma=lambda yol, *a: {"--show-toplevel": "/tmp/s\n", "HEAD": "s" 
 doc_gercek, hata_gercek = pd.kart_yukle(KOK / "programlar.json")
 b = pd.sema_denetle(doc_gercek, kok=KOK) if doc_gercek else [("HATA", "-", "-", hata_gercek)]
 test("30. gerçek programlar.json: kart şeması 0 hata", not hatalar(b), b[:3])
-test("30. gerçek kartlar: her kartın güncelleme adımlarında '--oncesi' var",
-     all(any("program-denetim.py --oncesi" in s for s in p["guncelleme_adimlari"]) for p in (doc_gercek or {"programlar": {}})["programlar"].values()))
+# (gerçek kartlarda '--oncesi' içerik kontrolü dogrula.py'de UYARI; testte gerçek değer yok)
+fk = {"sema": 2, "programlar": {}}
+test("30. sahte veride sema_denetle: boş sözlükte HATA yok, çekirdek alanı eksik kartta HATA var",
+     not hatalar(pd.sema_denetle(fk, kok=KOK, kaynaklar={}))
+     and bool(hatalar(pd.sema_denetle({"sema": 2, "programlar": {"x": {}}}, kok=KOK, kaynaklar={}))),
+     pd.sema_denetle({"sema": 2, "programlar": {"x": {}}}, kok=KOK, kaynaklar={}))
 yazan = [ln for ln in (ARACLAR / "program-denetim.py").read_text(encoding="utf-8").splitlines()
          if ("write_text" in ln or "json_yaz" in ln or '"fetch"' in ln or '"pip"' in ln or '["npm"' in ln or '"install"' in ln)
          and not ln.strip().startswith("#")]

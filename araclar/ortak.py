@@ -1224,8 +1224,11 @@ def yol_istisna_denetimi(skiller):
 
 # --- P8: genel klasör izi, rapor araçları, rapor yaşı ---------------------------------------
 GENEL_ATLA = ("synced", ".system", "skills-cursor")  # Claude hesap senkronu / Codex ve Cursor'ın kendi yerleşikleri
-GENEL_IZLEME_KLASORLERI = list(GLOBAL_KLASORLER.values()) + [
+GENEL_TEST_KLASORLERI = list(GLOBAL_KLASORLER.values()) + [  # testin önce/sonra izi: yalnız kütüphane araçlarının yazabileceği klasörler
     Path.home() / ".openmontage" / ".agents" / "skills",
+]
+GENEL_TEST_ATLA = GENEL_ATLA + (".DS_Store", ".git", ".cache", "__pycache__", "node_modules")  # kendiliğinden değişen üst düzey girdiler
+GENEL_IZLEME_KLASORLERI = GENEL_TEST_KLASORLERI + [  # bekçi: diğer yapay zeka araçlarının klasörleri de
     Path.home() / ".cursor" / "skills",
     Path.home() / ".gemini" / "skills",
     Path.home() / ".gemini" / "antigravity" / "skills",
@@ -1233,20 +1236,21 @@ GENEL_IZLEME_KLASORLERI = list(GLOBAL_KLASORLER.values()) + [
 ]
 
 
-def genel_izleri(klasorler=None) -> dict:
+def genel_izleri(klasorler=None, atla=None) -> dict:
     """{'<klasör>/<ad>': mtime_ns}: kütüphane araçları bu klasörlere yazmamalı. Yalnız okur."""
     iz = {}
+    atla = GENEL_ATLA if atla is None else atla
     for g in (GENEL_IZLEME_KLASORLERI if klasorler is None else klasorler):
         g = Path(g)
         if g.is_dir():
             for p in sorted(g.iterdir()):
-                if p.name not in GENEL_ATLA:
+                if p.name not in atla:
                     iz[f"{g}/{p.name}"] = p.lstat().st_mtime_ns
     return iz
 
 
-def genel_parmak_izi(klasorler=None) -> str:
-    return hashlib.sha256(json.dumps(genel_izleri(klasorler), sort_keys=True).encode()).hexdigest()
+def genel_parmak_izi(klasorler=None, atla=None) -> str:
+    return hashlib.sha256(json.dumps(genel_izleri(klasorler, atla), sort_keys=True).encode()).hexdigest()
 
 
 def genel_fark(once: dict, sonra: dict) -> list:

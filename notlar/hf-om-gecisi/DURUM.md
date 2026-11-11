@@ -131,7 +131,15 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
   5. IstatistikYoutube. 6. Akıl Dışı (Codex → Claude). 7. Etsy-Arif: yalnız kütüphanenin kurduğu skiller. 8. Claude genel notu + üç komut.
   9. AntigravityTest2 → Çöp Kutusu (önce `projeler.json` kaydından çıkar). 10. Bekçi taban dosyası → tam yedek → sınıf sınıf boşaltma →
   yedek silme hatırlatması. 11. Aylık görev metni (Aşama 2) + canlı görev. 12. Son kontroller + push.
-  Uygulamadan kalanlar: (a) `ortak.py` izleme listesi / `test.py` parmak izi Cursor, Gemini, Copilot klasörlerini de sayıyor; aylık
+  DURUM 2026-11-12 03:20: 1 ve 2 BİTTİ (push edildi; test açıkları kapandı). 3 BİTTİ: OpenMontage `c8066452` → `fecb9a1e`
+  (244 commit, yalnız ileri sarma); yedek `~/Documents/Claude/yedek/openmontage-2026-11-12/` (yedekten birebir geri dönüş sınandı);
+  deneme klasörü `~/Documents/Claude/deneme/openmontage-fecb9a1e` duruyor (silinmedi). Kullanıcı kararı: `Explainer.tsx` ve
+  `face_restore.py` yeni sürüm haliyle kaldı, eski yerel halleri yedekte; diğer 7 yerel değişiklik yerinde. Venv: yalnız certifi
+  yükseldi, pythainlp + importlib_resources eklendi; 11 sabit sürüm aynı. 75 skill bağı sağlam, derleme ve programın kendi kontrolü
+  hatasız; origin yeni adrese çevrildi. Kullanıcı kendi projesinde sınayacak ve sonucu söyleyecek; "yedekleri silme" dedi.
+  Geri dönüş gerekirse: `rehber/11` → "Geri alma" + yedekteki `KAYIT.json`, `yerel-yamalar.patch`, `pip-freeze.txt`.
+  SIRADAKİ: 4 (HyperFrames güncellemesi + ek iki kilit).
+  Uygulamadan kalanlar ((a) ve (b) 2026-11-12'de kapandı): (a) `ortak.py` izleme listesi / `test.py` parmak izi Cursor, Gemini, Copilot klasörlerini de sayıyor; aylık
   birleştirmede sahte başarısızlık verebilir; (b) `test_p6`, `test_p1`, `test_p5` içinde gerçek veriye bağlı birkaç iddia var (program
   güncellenince kırılır); (c) aylık Aşama 2 (damga, `--takip`, `--atla` kullanımı, `zamanlanmis/aylik-guncelleme.SKILL.md`);
   (d) `--kayip-isaretle` yok, elle; (e) kayıtsız arşiv klasörleri için `--yoksay` (onay listesi 38).

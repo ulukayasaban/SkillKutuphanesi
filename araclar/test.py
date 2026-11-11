@@ -13,7 +13,7 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GLOBAL_KLASORLER, KOK, genel_parmak_izi, json_oku  # noqa: E402
+from ortak import GENEL_TEST_ATLA, GENEL_TEST_KLASORLERI, GLOBAL_KLASORLER, KOK, genel_parmak_izi, json_oku  # noqa: E402
 
 ARAC = [sys.executable, str(KOK / "araclar" / "skill-ekle.py")]
 SONUC = []
@@ -30,8 +30,11 @@ def test(ad, kosul, ayrinti=""):
 
 
 def parmak_izi():
-    """Genel skill klasörlerinin izi (ortak.GENEL_IZLEME_KLASORLERI: üç genel klasör + OpenMontage + Cursor/Gemini/Copilot)."""
-    return genel_parmak_izi()
+    """Testin önce/sonra izi: yalnız kütüphane araçlarının yazabileceği klasörler (ortak.GENEL_TEST_KLASORLERI:
+    ~/.claude, ~/.agents, ~/.codex skills + ~/.openmontage/.agents/skills). Cursor/Gemini/Copilot'u kendi uygulamaları
+    her an değiştirir; bunlar yalnız bekçide (GENEL_IZLEME_KLASORLERI). Yalnız üst düzey girdi adı + mtime; alt yollara
+    (.git, önbellek) inilmez, .DS_Store/.git/.cache/__pycache__/node_modules üst düzey girdileri de atlanır."""
+    return genel_parmak_izi(GENEL_TEST_KLASORLERI, GENEL_TEST_ATLA)
 
 
 def agac(p: Path):

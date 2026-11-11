@@ -221,6 +221,10 @@ def _e1_programlar(kok, h, u):
                     u.append(f"programlar.json kart şeması: {s}")
         except (ValueError, OSError, subprocess.SubprocessError):
             u.append("program şema denetimi çalışmadı (python3 araclar/program-denetim.py --sema)")
+    for ad, kart in d["programlar"].items():  # gerçek kart içeriği kontrolü (testten buraya taşındı): güncelleme adımlarında '--oncesi'
+        ad_ = kart.get("guncelleme_adimlari") if isinstance(kart, dict) else None
+        if isinstance(ad_, list) and not any(isinstance(x, str) and "program-denetim.py --oncesi" in x for x in ad_):
+            u.append(f"program {ad}: guncelleme_adimlari'nda 'program-denetim.py --oncesi' yok")
     anahtarlar = arac_anahtarlari(kok)
     if anahtarlar:
         for ad, kart in d["programlar"].items():
