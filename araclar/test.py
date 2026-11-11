@@ -1489,20 +1489,151 @@ def main():
     test("öneride trend bonusu: uygun skill öne çıkar, alakasız skill trend yüzünden öneriye girmez",
          p_trend > p_yok and p_alakasiz == 0, f"{p_yok} {p_trend} {p_alakasiz}")
 
-    # Programlar: her kartın kaynak kopyası ve KAYNAK.md'si yerinde, repo kaynaklar.json'da 'program' alanıyla kayıtlı
+    # Programlar: kaynak kartında kopya ve KAYNAK.md yerinde; yerinde kartında alanlar tam (program bu bilgisayarda kurulu olmak ZORUNDA DEĞİL)
     _prog = json_oku(KOK / "programlar.json", {"programlar": {}})["programlar"]
     _kay = {r["repo"]: r for r in json_oku(KOK / "kaynaklar.json")["repolar"]}
     for _ad, _p in _prog.items():
+        _kart_kaynak = (KOK / "programlar" / _ad / "KAYNAK.md").exists() and _kay.get(_p["repo"], {}).get("program") == _ad
+        if _p.get("kopya", "kaynak") == "yerinde":
+            _y = _p.get("yerinde") or {}
+            _tur = _y.get("tur")
+            _alanlar = (_tur in ("npm-global", "git-checkout") and bool(str(_y.get("yol", "")).strip())
+                        and (bool(_y.get("paket")) if _tur == "npm-global" else bool(_y.get("dal")))
+                        and bool(_p.get("kutuphane_surumu") or _p.get("kutuphane_commit"))
+                        and "kaynak_kopyasi" not in _p)
+            test(f"program {_ad} (yerinde): tür/yol/paket-dal/sürüm alanları tam, KAYNAK.md ve kaynaklar.json program kaydı var",
+                 _alanlar and _kart_kaynak)
+            continue
         _k = KOK / _p["kaynak_kopyasi"]
         test(f"program {_ad}: kaynak kopyası ve KAYNAK.md var, kaynaklar.json'da program kaydı eşleşiyor",
-             _k.is_dir() and any(_k.iterdir()) and (_k.parent / "KAYNAK.md").exists()
-             and _kay.get(_p["repo"], {}).get("program") == _ad)
+             _k.is_dir() and any(_k.iterdir()) and _kart_kaynak)
     spec = importlib.util.spec_from_file_location("progden", KOK / "araclar" / "program-denetim.py")
     progden = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(progden)
     test("program denetimi: sürüm karşılaştırma (eski/güncel/anlaşılmaz)",
          progden.durum("0.5.0", "v0.6.0") == "YENİ SÜRÜM VAR" and progden.durum("0.5.0", "v0.5.0") == "güncel"
          and progden.durum("0.5.0", None) == "öğrenilemedi")
+    _sha1, _sha2 = "a" * 40, "b" * 40
+    _yd = progden.yerinde_durum
+    def _t(ad, kosul):
+        test(f"yerinde durum: {ad}", bool(kosul))
+    _t("npm güncel", _yd("npm-global", "1.2.0", "1.2.0", "1.2.0") == "güncel")
+    _t("npm yeni sürüm var", _yd("npm-global", "1.2.0", "1.2.0", "1.3.0") == "YENİ SÜRÜM VAR")
+    _t("npm kurulu > son: güncel", _yd("npm-global", "1.2.0", "1.2.0", "1.1.0") == "güncel")
+    _t("npm kart eski (son var)", _yd("npm-global", "1.2.0", "1.2.1", "1.2.1") == "KART ESKİ")
+    _t("npm kart eski (son yok)", _yd("npm-global", "1.2.0", "1.2.1", None) == "KART ESKİ")
+    _t("npm kart boş, kurulu dolu: kart eski", _yd("npm-global", None, "1.2.1", "1.2.1") == "KART ESKİ")
+    _t("npm kurulu değil", _yd("npm-global", "1.2.0", None, "1.3.0") == "bu bilgisayarda kurulu değil")
+    _t("npm son yok: öğrenilemedi", _yd("npm-global", "1.2.0", "1.2.0", None) == "öğrenilemedi")
+    _t("npm son bozuk: öğrenilemedi", _yd("npm-global", "1.2.0", "1.2.0", "bozuk") == "öğrenilemedi")
+    _t("npm 'v' öneki yok sayılır", _yd("npm-global", "v1.2.0", "1.2.0", "1.2.0") == "güncel")
+    _t("npm kısa sürüm 1.2 = 1.2.0", _yd("npm-global", "1.2", "1.2.0", "1.2.0") == "güncel")
+    _t("npm ön-sürüm eşit: öğrenilemedi (KART ESKİ değil)", _yd("npm-global", "1.2.0-beta.1", "1.2.0-beta.1", "1.2.0") == "öğrenilemedi")
+    _t("npm ön-sürüm kurulu, kart farklı: kart eski", _yd("npm-global", "1.1.0", "1.2.0-beta.1", "1.2.0") == "KART ESKİ")
+    _t("git güncel", _yd("git-checkout", _sha1, _sha1, _sha1) == "güncel")
+    _t("git yeni sürüm var", _yd("git-checkout", _sha1, _sha1, _sha2) == "YENİ SÜRÜM VAR")
+    _t("git sha farklı, geride 3: yeni sürüm var", _yd("git-checkout", _sha1, _sha1, _sha2, 3) == "YENİ SÜRÜM VAR")
+    _t("git sha farklı, geride bilinmiyor: yeni sürüm var", _yd("git-checkout", _sha1, _sha1, _sha2, None) == "YENİ SÜRÜM VAR")
+    _t("git yerel ileride (geride 0): güncel", _yd("git-checkout", _sha1, _sha1, _sha2, 0) == "güncel")
+    _t("git kart eski", _yd("git-checkout", _sha1, _sha2, _sha2) == "KART ESKİ")
+    _t("git kurulu değil", _yd("git-checkout", _sha1, None, _sha2) == "bu bilgisayarda kurulu değil")
+    _t("git son yok: öğrenilemedi", _yd("git-checkout", _sha1, _sha1, None) == "öğrenilemedi")
+    _t("git kısa önek eşleşir", _yd("git-checkout", _sha1[:8], _sha1, _sha1) == "güncel")
+    _t("git çok kısa önek eşleşmez", _yd("git-checkout", "abc", "abc", "abc") == "KART ESKİ")
+    test("sürüm ayıklama: sondaki sıfırlar atılır, ön-sürüm anlaşılmaz",
+         progden.surum_ayikla("1.2") == progden.surum_ayikla("1.2.0") == progden.surum_ayikla("v1.2.0.0")
+         and progden.surum_ayikla("1.2.1") > progden.surum_ayikla("1.2") and progden.surum_ayikla("1.0.0-rc1") is None)
+    # git_kurulu: git_okuma sahte (gerçek git ve gerçek yol yok)
+    _gok = progden.git_okuma
+    def _sahte(top, sha="s" * 40, st=" M a\n?? b\n"):
+        def f(yol, *args):
+            return {"--show-toplevel": top, "HEAD": sha, "--porcelain": st}[args[-1]]
+        return f
+    try:
+        _yol = "/tmp/sahte-yol"
+        progden.git_okuma = _sahte(_yol + "\n")
+        test("git_kurulu: yol deponun kökü, status okunur", progden.git_kurulu(_yol) == ("s" * 40, 1, 1))
+        progden.git_okuma = _sahte("/tmp/baska-ust-depo\n")
+        test("git_kurulu: yol deponun kökü değilse (üst klasördeki depo) kurulu sayılmaz", progden.git_kurulu(_yol) == (None, 0, 0))
+        progden.git_okuma = _sahte(None)
+        test("git_kurulu: depo değil/yol yok", progden.git_kurulu(_yol) == (None, 0, 0))
+        progden.git_okuma = _sahte(_yol, st=None)
+        test("git_kurulu: status başarısızsa değişen/izlenmeyen None (temiz sayılmaz)", progden.git_kurulu(_yol) == ("s" * 40, None, None))
+        test("yerel_metin: status okunamadı -> öğrenilemedi",
+             progden.yerel_metin({"tur": "git-checkout", "kurulu": "x", "degisen": None, "izlenmeyen": None}) == "öğrenilemedi"
+             and progden.yerel_metin({"tur": "git-checkout", "kurulu": "x", "degisen": 0, "izlenmeyen": 0}) == "temiz"
+             and progden.yerel_metin({"tur": "npm-global", "kurulu": "1", "degisen": 0, "izlenmeyen": 0}) == "-")
+    finally:
+        progden.git_okuma = _gok
+    test("git status --porcelain sayımı: değişen / izlenmeyen",
+         progden.porcelain_say(" M a.py\nM  b.py\n?? c.txt\n?? d/\n!! e.log\n") == (2, 2)
+         and progden.porcelain_say("") == (0, 0) and progden.porcelain_say(None) == (0, 0))
+    _ku = progden.kisit_uyar
+    test("sabit sürüm kısıtı: tam eşleşme ve ==", _ku("1.2.3", "1.2.3") is True and _ku("==1.2.3", "1.2.3") is True
+         and _ku("1.2.3", "1.2.4") is False and _ku("1.0", None) is False)
+    test("sabit sürüm kısıtı: aralık ve anlaşılmaz", _ku(">=1.0,<2", "1.9.1") is True and _ku(">=1.0,<2", "2.0") is False
+         and _ku("~=1.0", "1.0") is None)
+    test("sabit sürüm kısıtı: ön-sürüm metni eşitse True, farklıysa False (anlaşılmadı değil)",
+         _ku("1.0.0rc1", "1.0.0rc1") is True and _ku("==1.0.0rc1", "1.0.0rc1") is True and _ku("1.0.0rc1", "1.0.0rc2") is False)
+    test("sabit sürüm kısıtı: kısa/uzun sürüm eşit sayılır", _ku("2.0", "2.0.0") is True and _ku("<=1.0", "1.0.0") is True)
+    with tempfile.TemporaryDirectory() as _gt:
+        _gt = Path(_gt)
+        test("package.json okuma: sürüm var / dosya yok / bozuk dosya",
+             progden.npm_kurulu_surum(_gt / "yok") is None
+             and (_gt.joinpath("pkg").mkdir() or _gt.joinpath("pkg", "package.json").write_text('{"name":"x","version":"2.4.1"}') > 0)
+             and progden.npm_kurulu_surum(_gt / "pkg") == "2.4.1"
+             and (_gt.joinpath("kotu").mkdir() or _gt.joinpath("kotu", "package.json").write_text("{bozuk") > 0)
+             and progden.npm_kurulu_surum(_gt / "kotu") is None)
+        _site = _gt / "venv" / "lib" / "python3.11" / "site-packages"
+        for _dn, _ad, _sv in (("Foo_Bar-1.5.0.dist-info", "Foo_Bar", "1.5.0"), ("numpy-1.26.4.dist-info", "numpy", "1.26.4"),
+                              ("hasarli-0.1.dist-info", None, None)):
+            (_site / _dn).mkdir(parents=True)
+            if _ad:
+                (_site / _dn / "METADATA").write_text(f"Metadata-Version: 2.1\nName: {_ad}\nVersion: {_sv}\n\nVersion: sahte\n")
+        _okunan = progden.dist_info_oku(_gt / "venv")
+        test("dist-info okuma: ad normalleşir, gövdedeki 'Version:' sayılmaz, METADATA'sız klasör atlanır",
+             _okunan == {"foo-bar": "1.5.0", "numpy": "1.26.4"} and progden.dist_info_oku(_gt / "yok") == {}, str(_okunan))
+        for _dn, _sv in (("zeta-2.0.0.dist-info", "2.0.0"), ("zeta-1.0.0.dist-info", "1.0.0"), ("zeta-1.5.0.dist-info", "1.5.0")):
+            (_site / _dn).mkdir()
+            (_site / _dn / "METADATA").write_text(f"Name: zeta\nVersion: {_sv}\n")
+        test("dist-info okuma: aynı paketin birden çok kaydı varsa en yüksek sürüm (sıradan bağımsız)",
+             progden.dist_info_oku(_gt / "venv").get("zeta") == "2.0.0")
+        _uyan, _fark = progden.pin_karsilastir({"foo.bar": "1.5.0", "numpy": "1.26.0", "yok-paket": "1.0", "x": "~=1"},
+                                               dict(_okunan, x="1.0"))
+        test("sabit sürüm karşılaştırma: uyan sayısı ve farklar (farklı sürüm, kurulu değil, anlaşılmayan kısıt)",
+             _uyan == 1 and len(_fark) == 3 and any("numpy" in f and "1.26.4" in f for f in _fark)
+             and any("kurulu değil" in f for f in _fark) and any("anlaşılmadı" in f for f in _fark), str(_fark))
+        # yerinde kart: uçtan uca, geçici kart + geçici rapor (ağ yok: yol yoksa ağa gidilmez; gerçek program yolları kullanılmaz)
+        _kart = {"programlar": {"deneme": {"repo": "x/y", "kopya": "yerinde", "kutuphane_surumu": "1.0.0",
+                                           "yerinde": {"tur": "npm-global", "yol": str(_gt / "yok-program"), "paket": "yok-paket"}}}}
+        (_gt / "kart.json").write_text(json.dumps(_kart))
+        _pk = progden.main(["--kart", str(_gt / "kart.json"), "--cikti", str(_gt / "rapor.md")])
+        _rapor = (_gt / "rapor.md").read_text(encoding="utf-8") if (_gt / "rapor.md").exists() else ""
+        test("program denetimi: kurulu olmayan 'yerinde' kart hata değil, rapora 'bu bilgisayarda kurulu değil' yazılır, çıkış 0",
+             _pk == 0 and "bu bilgisayarda kurulu değil" in _rapor and "Yerinde izlenen" in _rapor, _rapor)
+
+    # bozuk 'yerinde' kartlar çıkış kodunu bozmaz; ağa gidilmez (npm_son_surum sahte)
+    with tempfile.TemporaryDirectory() as _gt2:
+        _gt2 = Path(_gt2)
+        (_gt2 / "pkg").mkdir()
+        (_gt2 / "pkg" / "package.json").write_text('{"version":"1.0.0"}')
+        _nson, _nku = progden.npm_son_surum, progden.npm_kurulu_surum
+        progden.npm_son_surum = lambda *a, **k: None
+        try:
+            _bozuk = {"programlar": {
+                "liste-pin": {"repo": "x/y", "kopya": "yerinde", "kutuphane_surumu": "1.0.0", "venv": ".venv", "sabit_surumler": ["numpy"],
+                              "yerinde": {"tur": "npm-global", "yol": str(_gt2 / "pkg"), "paket": "p"}},
+                "reposuz": {"kopya": "yerinde", "kutuphane_surumu": "1.0.0",
+                            "yerinde": {"tur": "npm-global", "yol": str(_gt2 / "pkg"), "paket": "p"}}}}
+            (_gt2 / "k.json").write_text(json.dumps(_bozuk))
+            _c1 = progden.main(["--kart", str(_gt2 / "k.json"), "--cikti", str(_gt2 / "r1.md")])
+            test("program denetimi: bozuk sabit_surumler ve repo'suz kart çökmez, çıkış 0", _c1 == 0 and (_gt2 / "r1.md").exists())
+            progden.npm_kurulu_surum = lambda *a, **k: 1 / 0
+            _c2 = progden.main(["--kart", str(_gt2 / "k.json"), "--cikti", str(_gt2 / "r2.md")])
+            _r2 = (_gt2 / "r2.md").read_text(encoding="utf-8")
+            test("program denetimi: denetim sırasında beklenmeyen hata -> 'öğrenilemedi', çıkış 0", _c2 == 0 and "öğrenilemedi" in _r2, _r2)
+        finally:
+            progden.npm_son_surum, progden.npm_kurulu_surum = _nson, _nku
 
     # Kapsam denetimi: GitHub'da silinmiş kaynak (404) denetimi çökertmez (aylık zincir geri alınmasın)
     import ortak as _ortak

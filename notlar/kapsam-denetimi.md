@@ -1,12 +1,12 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-10 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-11 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8503 · Arşivdeki skill kaydı: 5649 · Bileşen (komut/agent): 661
+**Sonuç: ✅ Açıklanamayan skill yok · ⚠️ 1 erişilemeyen kaynak** · Taranan SKILL.md: 8502 · Arşivdeki skill kaydı: 5649 · Bileşen (komut/agent): 661
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5605 | arşivde (ana sürüm) |
+| secildi | 5604 | arşivde (ana sürüm) |
 | haric | 2569 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 178 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 71 | arşivde (Claude/Codex'e özel sürüm) |
@@ -65,7 +65,6 @@
 | arjitj2/swiftui-design-principles | 1 | secildi 1 |
 | avenoxai/higgsfield-studio | 6 | secildi 6 |
 | blader/humanizer | 1 | secildi 1 |
-| buluslan/ecommerce-competitor-analyzer | 1 | secildi 1 |
 | cathrynlavery/diagram-design | 1 | secildi 1 |
 | cloudflare/security-audit-skill | 1 | secildi 1 |
 | cloudflare/skills | 19 | secildi 19 |
@@ -148,6 +147,12 @@
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 
 - J-DTurner/etsy-api-skill
+
+## Erişilemeyen kaynaklar (1)
+
+GitHub'da bulunamadı (silinmiş, private olmuş ya da commit geçmişi yeniden yazılmış). Denetlenemedi. Çözüm: `kaynaklar.json`'da kaydın `tip`ini `KAYIP` yap (arşiv kopyası korunur); kaydı silme.
+
+- buluslan/ecommerce-competitor-analyzer
 
 ## Bilinçli hariç tutulanlar (gerekçeli)
 

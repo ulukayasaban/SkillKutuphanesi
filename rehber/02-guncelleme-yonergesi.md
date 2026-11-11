@@ -134,8 +134,16 @@ Kütüphane kopyasını elle değiştirmek yerine:
 Birleştirmeden sonra o projelerde `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
 
 ## 4) Global skiller
-Global klasörlerdeki skiller (OpenMontage, addyosmani…) **bu sistemle güncellenmez**; onları kuran araç günceller
-(ör. OpenMontage için `/openmontage`). Kütüphane bunları sadece okur ve `globalde` alanında karşılaştırır.
+Makine genelindeki skiller (`~/.claude/skills`, `~/.agents/skills`) bu sistemle (`arsiv-guncelle.py`) güncellenmez; kütüphane bunları
+`globalde` alanında karşılaştırır. Ama **OpenMontage ve HyperFrames programlarının** ve skillerinin güncellemesi, programların kendi güncelleme komutuyla
+(`hyperframes update`, `/openmontage`) tek başına yapılmaz: kütüphane oturumu yapar, her seferinde kullanıcı onayıyla (`rehber/11-program-yonetimi.md`, "Yerinde program").
+Takip: `python3 araclar/program-denetim.py`.
+
+Kalıcı kural: `HYPERFRAMES_SKIP_SKILLS=1` tanımlı değilken HyperFrames'in `init`, `skills`, `skills update` ve `update`
+komutları çalıştırılmaz; bu komutlar genel skill klasörlerine yazabilir. Kartta hangi komutun neyi yazdığı listelidir
+(`programlar.json` → `hyperframes`). 2026-11-11 itibarıyla genel skill klasörleri boşaltılmadı; değişken aynı gün `~/.zshenv`, `~/.zshrc` ve `~/.claude/settings.json` → `env`
+içine yazıldı (kabuk başlatmadan süreç çalıştıran masaüstü uygulamalarını kapsamaz). Güncel durum için kartın `simdi` alanına bak.
+OpenMontage makine genelinde skill bağı kurmaz; güncellemesi bağları yeniden kurmaz.
 
 ## Güncelleme takvimi (öneri)
 | Ne zaman | Ne |

@@ -32,6 +32,111 @@
         "Etsy Keystring / Shared secret / token'ı agent girmez, okumaz, yazdırmaz (~/.etsyotomasyon/.env ve token.json açılmaz)",
         "programın kopyası proje deposuna konmaz; ilan silme/yayınlama agent tarafından yapılmaz"
       ]
+    },
+    "hyperframes": {
+      "ad": "hyperframes",
+      "repo": "heygen-com/hyperframes",
+      "kopya": "yerinde",
+      "tur": "komut satırı programı (Node, npm genel paketi `hyperframes`)",
+      "lisans": "Apache-2.0",
+      "ucret": "kismen",
+      "ne_yapar": "HTML ile yazılan kompozisyonları videoya çevirir: proje kurar (init), denetler (lint), önizler, yerelde ya da bulutta render eder, skill ve kayıt defteri blokları kurar. Yerel kullanım ücretsiz ve açık kaynaktır; HeyGen medya üretimi ve bulut render isteğe bağlıdır (ücretli olabilir).",
+      "yerinde": {
+        "tur": "npm-global",
+        "yol": "/usr/local/lib/node_modules/hyperframes",
+        "paket": "hyperframes"
+      },
+      "kutuphane_surumu": "0.9.23",
+      "surum_kaynagi": "npm kayıt defteri (registry.npmjs.org/hyperframes/latest)",
+      "veri_yeri": "~/.hyperframes (config.json, önbellek, kurulum ve güncelleme günlükleri; config'te telemetri açık). İçindeki kimlik ve rastgele tohum değerleri okunup yazdırılmaz.",
+      "ag": "npm kayıt defteri (güncelleme kontrolü), GitHub (skill kurulumu), isteğe bağlı HeyGen servisleri; telemetri config'te açık",
+      "kendini_gunceller": true,
+      "kendini_guncelleme": {
+        "nasil": "Komut çalışınca arka planda önbellekteki yeni sürümü aynı 0.x küçük hattındaysa (0.9.x -> 0.9.y) `npm install -g hyperframes@<sürüm>` ile kurabilir. Sürüm bizim onayımızdan önce değişebilir. Etkileşimsiz oturumda (Claude Code Bash gibi, ajan sürerken ya da terminal yokken) otomatik kurulum kapalıdır; yalnız kullanıcının kendi terminalinde açıktır. Her kurulum auto-update.log'a yazılmaz (0.9.23 günlükte yok), bu yüzden sürüm kayıt dışı da değişebilir; karttaki sürümle kurulu sürümü karşılaştırmak (KART ESKİ) asıl güvencedir.",
+        "durduran": "HYPERFRAMES_NO_AUTO_INSTALL=1 (kendi kurulumunu durdurur) ve HYPERFRAMES_NO_UPDATE_CHECK=1 (güncelleme kontrolünü kapatır; CI ve geliştirme kipinde de kapalıdır)",
+        "simdi": "İkisi de bu bilgisayarda hiçbir yerde tanımlı değil (kabuk dosyaları, Claude ayarları, süreç ortamı, launchctl bakıldı); 2026-11-11 ölçümü"
+      },
+      "skill_yazimi": {
+        "yazar": "`hyperframes init` (--skip-skills yoksa, eksik skilleri kurar), `hyperframes skills` (tam kurulum), `hyperframes skills update`, `hyperframes update`",
+        "yazmaz": "render, preview, lint, `hyperframes skills check` ve paketin kurulumu/güncellemesi (`npm install -g`) skill yazmaz; arka plandaki skill kontrolü yalnız sayar ve uyarı basar",
+        "klasorler": "~/.claude/skills (CLAUDE_CONFIG_DIR varsa onun altındaki skills) ve ~/.agents/skills; kayıt ~/.agents/.skill-lock.json. Ayna adımı: ~/.claude/skills içindeki skilleri, üst klasörü varsa, diğer ajanların genel klasörlerine sembolik bağla yansıtır. Bu bilgisayarda hedef olabilecekler (üst klasörü var; örnek): ~/.gemini/antigravity/skills, ~/.gemini/antigravity-cli/skills, ~/.gemini/skills, ~/.cursor/skills, ~/.copilot/skills. Hedefin skills klasörü yoksa ama üst klasörü varsa onu da oluşturup bağ koyar (listede çok daha fazla ajan var). Codex için ~/.codex/skills'e bağ koymaz, eski HF aynası bağlarını siler.",
+        "durduran": "HYPERFRAMES_SKIP_SKILLS=1 (yalnız '1' değeri geçerli; init'te --skip-skills ile eşdeğer). `skills`, `skills update` ve `update`'in skill kısmını, init'teki skill kurulumunu ve arka plandaki skill kontrolünü kapatır. CLI'nin kendini güncellemesini kapatmaz.",
+        "simdi": "HYPERFRAMES_SKIP_SKILLS=1 2026-11-11'de üç yere yazıldı: ~/.zshenv (her zsh kabuğu; zsh -c ve zsh -lc doğrulandı), ~/.zshrc (etkileşimli terminal) ve ~/.claude/settings.json → env (Claude oturumları, yeniden başlayınca). Yedek: ~/Documents/Claude/yedek/ayar-2026-11-11/. Kapsamadığı yer: kabuk başlatmadan süreç çalıştıran masaüstü uygulamaları. Genel skill klasörleri henüz boşaltılmadı."
+      },
+      "skilleri": [
+        "hyperframes",
+        "hyperframes-cli",
+        "media-use",
+        "hyperframes-registry"
+      ],
+      "guncelleme_adimlari": [
+        "program-denetim.py yeni sürümü ('YENİ SÜRÜM VAR') ya da kartın eskidiğini ('KART ESKİ') gösterir",
+        "kullanıcıya sürüm farkı + CHANGELOG özeti sunulur ve bu güncelleme için ayrıca onay istenir (her seferinde)",
+        "yedek: ~/.hyperframes klasörü (config.json hariç) ve mevcut paket klasörü ~/Documents/Claude/yedek/<program>-<YYYY-AA-GG>/ klasörüne (kütüphane klasörüne ve git'e asla) kopyalanır",
+        "onaydan sonra YALNIZ kütüphane oturumu: npm install -g hyperframes@<sürüm> (tek sürüm sabitlenir, 'latest' yazılmaz)",
+        "sonra yeniden denetim: program-denetim.py kurulu sürümü gösterir; kart sürümü onaylı sürüme çekilir, KAYNAK.md güncellenir, commit",
+        "skill güncellemesi ayrı onay ister; `hyperframes skills update` ancak genel klasörlerin son durumu bilinerek ve onayla çalıştırılır"
+      ],
+      "asla": [
+        "npx skills komutu çalıştırılmaz (HyperFrames'in skill kurulumu da bunu çağırır; elle de çağrılmaz)",
+        "genel skill klasörleri boşaltıldıktan sonra program onları yeniden doldurmaz: HYPERFRAMES_SKIP_SKILLS=1 tanımlı değilken init, skills, skills update, update çalıştırılmaz",
+        "kullanıcı onayı olmadan güncellenmez, sürüm değiştirilmez; npm install -g yalnız kütüphane oturumunda ve onayla",
+        "~/.hyperframes içindeki kimlik ve tohum değerleri okunup yazdırılmaz"
+      ]
+    },
+    "openmontage": {
+      "ad": "openmontage",
+      "repo": "OpenMontageInc/OpenMontage",
+      "kopya": "yerinde",
+      "tur": "video üretim stüdyosu (Python + Node/Remotion, git klonu ve kendi venv'i)",
+      "lisans": "AGPL-3.0",
+      "ucret": "kismen",
+      "ne_yapar": "Yapay zeka ajanıyla uçtan uca video üretir: fikir, betik, stok/üretilmiş görüntü, seslendirme, altyazı, montaj ve Remotion/HyperFrames ile render. Her medya türü için ücretsiz yerel yol vardır; ücretli sağlayıcılar (ses, görüntü, video API'leri) anahtarla isteğe bağlıdır.",
+      "yerinde": {
+        "tur": "git-checkout",
+        "yol": "~/.openmontage",
+        "dal": "main"
+      },
+      "kutuphane_commit": "c8066452325cb57c8fc1ba8c2a71b6e8842e6b65",
+      "venv": ".venv",
+      "sabit_surumler": {
+        "numpy": "1.26.4",
+        "opencv-python": "4.11.0.86",
+        "torch": "2.2.2",
+        "torchvision": "0.17.2",
+        "transformers": "<5",
+        "numba": "0.62.1",
+        "llvmlite": "0.45.1",
+        "jax": "0.4.38",
+        "jaxlib": "0.4.38",
+        "mediapipe": "0.10.21",
+        "manim": "0.19.1"
+      },
+      "surum_kaynagi": "GitHub: OpenMontageInc/OpenMontage, dal main (commit karşılaştırması)",
+      "repo_notu": "Repo GitHub'da calesthio hesabından OpenMontageInc kuruluşuna taşındı. Yerel klonun origin adresi hâlâ eski adı (calesthio/OpenMontage) gösterir; GitHub yönlendirir. Adresi değiştirmek kullanıcı onayı ister.",
+      "veri_yeri": "Program ve venv ~/.openmontage; çıktılar ~/Movies/OpenMontage; anahtarlar ~/.config/openmontage/.env (depodaki .env ona bağdır)",
+      "anahtarlar": "API anahtarları makinede genel olarak ayarlıdır. Bir daha istenmez, açılmaz, yazdırılmaz; sağlayıcı 401 verirse yalnız hangi anahtarın yenileneceği söylenir.",
+      "ag": "Seçilen sağlayıcı API'leri, stok görüntü/ses servisleri, GitHub, npm ve pip indirmeleri (kurulum/güncelleme sırasında)",
+      "kendini_gunceller": false,
+      "skill_yazimi": "Program skill bağı kurmaz ve güncelleme ya da `make setup` onları yeniden kurmaz (kurulum betiklerinde sembolik bağ yok). Ama ~/.claude/skills içindeki yaklaşık 74 bağ (~/.openmontage/.agents/skills/<ad>) kullanıcının kendi manifestiyle konmuştur (~/.config/openmontage/global-skill-links.txt). Güncelleme bir skill klasörünü silerse ya da taşırsa bağlar kırılır. Layer-3 skilleri program klasöründe (.agents/skills) durur.",
+      "yerel_degisiklik": "Çalışma ağacı temiz değil (2026-11-11 ölçümü: 9 değişen izlenen dosya, 6 izlenmeyen yol; güncellemede yeniden sayılır). Değişen dosyaların listesi `git status --porcelain` ile alınır: dört Python aracı, Remotion dosyaları ve .agents/skills/gsap-plugins/SKILL.md. Bir skill notu 'beş yama'dan söz eder; bu sayı ve venv içindeki basicsr yaması ölçümle doğrulanmadı. Yamalar repoda yoktur; güncelleme bunları ezebilir ya da çakıştırır.",
+      "skilleri": [],
+      "guncelleme_adimlari": [
+        "program-denetim.py yeni commit'i ('YENİ SÜRÜM VAR', N geride) ya da kartın eskidiğini ('KART ESKİ') gösterir",
+        "kullanıcıya değişiklik özeti + onay istenir (her güncelleme ayrı onay)",
+        "yedek: yerel değişen izlenen dosyalar ve izlenmeyen yollar (git status ile bulunur; gsap-plugins/SKILL.md ve .2026-10-15-oncesi yedeği dahil) ~/Documents/Claude/yedek/<program>-<YYYY-AA-GG>/ klasörüne (kütüphane klasörüne ve git'e asla) kopyalanır; ~/.config/openmontage anahtar klasörüne dokunulmaz; venv'in sabit sürüm listesi (pip freeze benzeri, dist-info'dan) kaydedilir; ~/.claude/skills içindeki openmontage bağlarının listesi (readlink) kaydedilir",
+        "onaydan sonra YALNIZ kütüphane oturumu: git pull (önce çakışma durumu gösterilir). `make setup` olduğu gibi çalıştırılmaz: pip install -r requirements.txt, remotion-composer'da npm install, pip install piper-tts ve `npx --yes hyperframes --version` (npx önbelleğine ayrı bir HyperFrames kopyası çeker) yapar. Önce requirements.txt farkı kullanıcıya gösterilir; setup ancak HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_AUTO_INSTALL=1 HYPERFRAMES_NO_UPDATE_CHECK=1 tanımlı çalıştırılır ya da yalnız gereken adımlar tek tek atılır; kurulum venv'i bozacaksa durulur",
+        "sabit sürümler yükseltilmez: numpy 1.x, torch 2.2.2 vb. kartta yazan değerlerde kalmalı; program-denetim.py pin farkı gösterirse düzeltmeden devam edilmez",
+        "yedeklenen yerel yamalar yeniden uygulanır (gsap-plugins/SKILL.md yaması dahil; skill notundaki basicsr içe aktarma yaması venv dosyasında okunarak doğrulanmadı) ve her biri yeniden denenir; ~/.claude/skills içindeki bağlarda kırık olan var mı denetlenir",
+        "sonra yeniden denetim; kart commit'i onaylı commit'e çekilir, KAYNAK.md güncellenir, commit"
+      ],
+      "asla": [
+        "pip install -U / --upgrade çalıştırılmaz (manim'in 'yükselt' uyarısı dahil); sabit sürümler yükseltilmez",
+        "onay olmadan git fetch / pull / checkout / stash yapılmaz; denetim yalnız GitHub API'siyle bakar",
+        "API anahtarları açılmaz, sorulmaz, yazdırılmaz; .env dosyaları okunmaz",
+        "yedeksiz güncelleme yapılmaz; origin adresi onaysız değiştirilmez",
+        "`make setup` onaysız ve ortam değişkenleri olmadan çalıştırılmaz (npx ve npm install çağırır); npx ile hyperframes çağrılmaz"
+      ]
     }
   }
 }

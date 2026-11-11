@@ -171,17 +171,19 @@
         "^registry/blocks/"
       ],
       "bagimlilik": "HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.",
-      "not": "Resmî HyperFrames reposu (yıldızlı değil; kullanıcı onayıyla 2026-10-21'de eklendi). registry/blocks/* SKILL.md'leri 'hyperframes add' ile kurulan kompozisyon şablonlarıdır, ayrı skill değildir."
+      "not": "Resmî HyperFrames reposu (yıldızlı değil; kullanıcı onayıyla 2026-10-21'de eklendi). registry/blocks/* SKILL.md'leri 'hyperframes add' ile kurulan kompozisyon şablonlarıdır, ayrı skill değildir.",
+      "program": "hyperframes"
     },
     {
       "repo": "OpenMontageInc/OpenMontage",
       "tip": "T1",
       "oncelik": 6,
       "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
-      "not": "Global klasörlerde zaten kurulu sürümü var; kütüphane kopyası sadece yeni projeler için. Repo 2026-11'de GitHub'da calesthio hesabından OpenMontageInc kuruluşuna taşındı (aynı repo; kimlikler `@calesthio` olarak kalır).",
+      "not": "Program olarak ayrıca izlenir (programlar.json -> openmontage); arşiv kopyası skill kaynağı içindir. Repo 2026-11'de GitHub'da calesthio hesabından OpenMontageInc kuruluşuna taşındı (aynı repo; kimlikler `@calesthio` olarak kalır).",
       "eski_adlar": [
         "calesthio/OpenMontage"
-      ]
+      ],
+      "program": "openmontage"
     },
     {
       "repo": "lemomo-ai/lemo-opuscar",
