@@ -168,7 +168,20 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
   - SÜRÜYOR: kütüphanedeki HyperFrames (ab66e5b) ve OpenMontage (fecb9a1) kaynak kopyaları `guncelleme/2026-11-hf-om` dalında
     güncellendi (kontroller geçti; commit atılmadı). Dalda yeniden inceleme (14 skill), `pika-h3-flex` ücret sınıfı ve dogrula'daki
     sıfıra bölme uyarısı düzeltiliyor. Bitince: dalda commit → master'a `--no-ff` birleştir → push.
-  - KULLANICIYA SORULDU (cevap bekleniyor, bildirim gönderildi): HyperFrames kullanım bildirimini bilgisayar genelinde kapatmak için
+  - GÜNCEL (2026-11-12 05:45): kaynak güncellemesi master'a birleşti ve push edildi (bf55a0fd1). Kullanım bildirimi kilidi üç ayar
+    dosyasına eklendi (K-36; aşağıdaki soru KAPANDI). Bekçi tabanı yazıldı (`notlar/genel-klasor-tabani.json`, 196 girdi).
+    IstatistikYoutube HF GEÇİŞİ YAPILDI: iki program bağı (`hyperframes`, `hyperframes-cli`), `motion-doctrine` güncellendi,
+    11 tarif notu `.claude/skills/hyperframes-shorts/tarifler/`, kural metinleri ve `skill_durum.py`/`skill-global.yaml` yeni düzene
+    göre; proje yedeği `~/Documents/Claude/yedek/istatistik-skill-gecisi-2026-11-12`. Genel klasörden yalnız `hyperframes` ve
+    `hyperframes-cli` taşındı (`genel-kaldirilan-2026-11-12`; bağımlısı yoktu; rehber/12 sırası dışı, gerekçe yedekler.json'da).
+    Kanalın `skill_durum.py` sonucu: TEMİZ, 0 FAIL. Kullanıcının yapacağı: yeni Claude oturumunda sınama; `skill_durum.py --onayla`
+    (iki bağ için taban; kanalın kendi onay adımı). AÇIK: `tools/kural_kopya_tara.py` bağlı `hyperframes/references/sound.md`
+    içindeki ses değerini bulgu sayıyor (tarama listesinden bağlı skilleri çıkarmak kanal kararı); proje `.claude/settings.json`'a
+    paket skill klasörü için okuma izni önerisi (izin dosyası: yalnız kullanıcı isterse).
+    KALAN, IstatistikYoutube: `design-dna`, `openmontage`, `nlm-skill` hâlâ genel klasörden okunuyor (K-32 işi).
+    Boşaltmanın geri kalanı Akıl Dışı geçişinden SONRA (Codex bağları `~/.claude/skills` ve `~/.agents/skills` içine bakıyor).
+    Not: bekçi `~/.palmier/skills` ve `~/.gemini/config/skills` klasörlerini buldu (başka uygulamaların kendi klasörleri; "kalacak").
+  - ESKİ SORU (kapandı): HyperFrames kullanım bildirimini bilgisayar genelinde kapatmak için
     üç ayar dosyasına `HYPERFRAMES_NO_TELEMETRY=1` eklensin mi. Cevap yoksa yalnız proje ayarında kapatılır.
   - SIRADAKİ: (1) IstatistikYoutube: plan `hf-gecis-ve-kendi-skiller-2026-11-12.json` → `istatistik` + `istatistik_inceleme.son_adimlar`
     (K-31: eski kuşak dondurulmaz; `hyperframes`, `hyperframes-cli` pakete BAĞ; karşılığı tam olmayan 11 tarif kanalın kendi tarif

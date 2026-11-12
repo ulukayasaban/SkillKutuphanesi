@@ -128,6 +128,40 @@
       ],
       "silme_gun": 30,
       "not": "Gizli içerikli olduğu için en çok 30 gün tutulur; süre dolunca aylık özet silinsin mi diye sorar."
+    },
+    {
+      "kimlik": "istatistik-skill-gecisi-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/istatistik-skill-gecisi-2026-11-12",
+      "tur": "proje",
+      "ne": "IstatistikYoutube'da HyperFrames skill geçişinden ÖNCEKİ hali (proje git deposu değil): .claude, docs, config, status, tools (medya hariç), CLAUDE.md, .skill-kutuphanesi, assets/brand/kapak-sablonu.",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Değişen dosyayı yedekten projedeki aynı yola kopyala (cp -p); yeni eklenen .claude/skills/hyperframes-shorts/tarifler/ klasörü ve iki bağ (hyperframes, hyperframes-cli) kütüphane aracıyla kaldırılır (skill-ekle.py --kaldir). Her geri yükleme kullanıcı onayıyla.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "CLAUDE.md",
+        "docs",
+        "config",
+        "status",
+        "tools"
+      ],
+      "silme_olay": "Kullanıcı yeni düzeni projede sınadı ve 'sil' dedi",
+      "silme_olay_tamam": false,
+      "not": "69 MB. Gizli adlı dosya yok (ad taraması)."
+    },
+    {
+      "kimlik": "genel-kaldirilan-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/genel-kaldirilan-2026-11-12",
+      "tur": "genel-skill-klasoru",
+      "ne": "Genel klasörden TAŞINARAK kaldırılan skiller (kopya değil, asıl klasörler). 2026-11-12: ~/.claude/skills/hyperframes ve hyperframes-cli (eski 0.9.20 kopyaları; bağımlısı yoktu; IstatistikYoutube'un skill kontrolü proje bağlarıyla çakışmasın diye rehber/12 sırası dışında önce bunlar taşındı).",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Klasörü eski yerine geri taşı: mv <yedek>/claude-skills/<ad> ~/.claude/skills/<ad> (kullanıcı onayıyla; genel-bekci.py ile kontrol).",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "claude-skills"
+      ],
+      "silme_olay": "Genel klasörler boşaltıldı, projeler kullanıcı tarafından sınandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "not": "Boşaltma ilerledikçe kaldırılan diğer girdiler de buraya taşınır."
     }
   ]
 }

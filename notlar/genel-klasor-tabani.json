@@ -1,0 +1,1727 @@
+{
+  "surum": 1,
+  "yazildi": "2026-11-12",
+  "izinli": [
+    {
+      "yol": "~/.claude/skills/synced",
+      "sahip": "uygulama",
+      "neden": "Claude uygulamasının hesap skili senkronu"
+    },
+    {
+      "yol": "~/.codex/skills/.system",
+      "sahip": "uygulama",
+      "neden": "Codex'in kendi yerleşik skilleri"
+    },
+    {
+      "yol": "~/.cursor/skills-cursor",
+      "sahip": "uygulama",
+      "neden": "Cursor'un kendi yerleşik skilleri"
+    }
+  ],
+  "ek_klasorler": [],
+  "klasorler": {
+    "agents": {
+      "yol": "~/.agents/skills",
+      "var": true
+    },
+    "ajanlar": {
+      "yol": "~/.claude/agents",
+      "var": true
+    },
+    "claude": {
+      "yol": "~/.claude/skills",
+      "var": true
+    },
+    "codex": {
+      "yol": "~/.codex/skills",
+      "var": true
+    },
+    "copilot": {
+      "yol": "~/.copilot/skills",
+      "var": true
+    },
+    "cursor": {
+      "yol": "~/.cursor/skills",
+      "var": true
+    },
+    "gemini": {
+      "yol": "~/.gemini/skills",
+      "var": true
+    },
+    "gemini-config": {
+      "yol": "~/.gemini/config/skills",
+      "var": true
+    },
+    "kesif-.palmier": {
+      "yol": "~/.palmier/skills",
+      "var": true
+    },
+    "komutlar": {
+      "yol": "~/.claude/commands",
+      "var": true
+    }
+  },
+  "girdiler": [
+    {
+      "yol": "~/.agents/.skill-lock.json",
+      "bolge": "kilit",
+      "tur": "dosya",
+      "bayt": 13404,
+      "mtime": 1794359239,
+      "sahip": "skills aracı",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/captions-overlay",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 6068,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/changelog-video",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 8,
+      "bayt": 45641,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/cut-the-curve",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 28902,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/embedded-captions",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 144,
+      "bayt": 3495708,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/faceless-explainer",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 29,
+      "bayt": 291092,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/figma",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 11217,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/general-video",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 6,
+      "bayt": 36941,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 77,
+      "bayt": 1143482,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-animation",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 122,
+      "bayt": 1243956,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-audio",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 8,
+      "bayt": 102618,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-cli",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 13,
+      "bayt": 124283,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-core",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 11,
+      "bayt": 100765,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-creative",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 79,
+      "bayt": 1207344,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-keyframes",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 3,
+      "bayt": 23175,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-registry",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 13,
+      "bayt": 84832,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/hyperframes-studio",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 11640,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/media-use",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 104,
+      "bayt": 1775986,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/microsoft-foundry",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 228,
+      "bayt": 1333547,
+      "sahip": "skills aracı",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/motion-doctrine",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 4,
+      "bayt": 44158,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/motion-graphics",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 23,
+      "bayt": 116068,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/music-to-video",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 169,
+      "bayt": 6226416,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/oversized-cursor",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 6598,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/pr-to-video",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 35,
+      "bayt": 366708,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/product-launch-video",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 37,
+      "bayt": 349499,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/remotion-to-hyperframes",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 78,
+      "bayt": 178093,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/seam-craft",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 4838,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/slideshow",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 49201,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.agents/skills/talking-head-recut",
+      "bolge": "agents",
+      "tur": "klasor",
+      "dosya": 28,
+      "bayt": 521853,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/CLAUDE.md",
+      "bolge": "talimat",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/agents/colab-izleme.md",
+      "bolge": "ajanlar",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/agents/kopru-izleme.md",
+      "bolge": "ajanlar",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/commands/animated-drawing.md",
+      "bolge": "komutlar",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/commands/backlot.md",
+      "bolge": "komutlar",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/commands/ink-art.md",
+      "bolge": "komutlar",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/commands/openmontage.md",
+      "bolge": "komutlar",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/skills/.trash",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 14,
+      "bayt": 181300,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/skills/3d-asset-generation",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/3d-asset-generation",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/acestep",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/acestep",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/agents",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/agents",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/ai-video-gen",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/ai-video-gen",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/atlas-cloud",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/atlas-cloud",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/avatar-video",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/avatar-video",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/azure-speech-to-text",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/azure-speech-to-text",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/azure-text-to-speech",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/azure-text-to-speech",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/beautiful-mermaid",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/beautiful-mermaid",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/bfl-api",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/bfl-api",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/canvas-procedural-animation",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/canvas-procedural-animation",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/captions-overlay",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 6095,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/changelog-video",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 15,
+      "bayt": 533611,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/character-animation-qa",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/character-animation-qa",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/character-rigging",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/character-rigging",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/comfyui",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/comfyui",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/create-video",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/create-video",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/d3-viz",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/d3-viz",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/dashscope",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/dashscope",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/design-dna",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 142,
+      "bayt": 19196950,
+      "sahip": "kullanıcı",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/doubao-tts",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/doubao-tts",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/elevenlabs",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/elevenlabs",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/embedded-captions",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 145,
+      "bayt": 3501487,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/faceless-explainer",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/faceless-explainer",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/faceswap",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/faceswap",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/ffmpeg",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/ffmpeg",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/figma",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 11217,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/fish-audio-tts",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/fish-audio-tts",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/flux-best-practices",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/flux-best-practices",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/framer-motion",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/framer-motion",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/gemini-omni",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/gemini-omni",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/general-video",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/general-video",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/grok-media",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/grok-media",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/gsap-frameworks",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/gsap-frameworks",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/gsap-react",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/gsap-react",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/gsap-scrolltrigger",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/gsap-scrolltrigger",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/gsap-utils",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/gsap-utils",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/heygen",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/heygen",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 78,
+      "bayt": 1151138,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-animation",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 122,
+      "bayt": 1243956,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-audio",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/hyperframes-audio",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-cli",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 13,
+      "bayt": 129503,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-core",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 11,
+      "bayt": 100765,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-creative",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 79,
+      "bayt": 1203424,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-media",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/hyperframes-media",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-registry",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 13,
+      "bayt": 84832,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/hyperframes-studio",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/hyperframes-studio",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/kling-official",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/kling-official",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/lottie-bodymovin",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/lottie-bodymovin",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/ltx2",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/ltx2",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/lyria",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/lyria",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/manim-composer",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/manim-composer",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/manimce-best-practices",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/manimce-best-practices",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/manimgl-best-practices",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/manimgl-best-practices",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/media-use",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 113,
+      "bayt": 1849370,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/minimax-h3",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/minimax-h3",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/motion-graphics",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 23,
+      "bayt": 116068,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/music",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/music",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/music-to-video",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 169,
+      "bayt": 6226688,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/nlm-skill",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 7,
+      "bayt": 186897,
+      "sahip": "kullanıcı",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/openmontage",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 8179,
+      "sahip": "kullanıcı",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/oversized-cursor",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 6625,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/playwright-recording",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/playwright-recording",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/pose-library-design",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/pose-library-design",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/pr-to-video",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/pr-to-video",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/product-launch-video",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/product-launch-video",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/remotion",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/remotion",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/remotion-to-hyperframes",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 78,
+      "bayt": 178093,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/seedance-2-0",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/seedance-2-0",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/seedance-2-5",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/seedance-2-5",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/setup-api-key",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/setup-api-key",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/slideshow",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 49201,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/sound-effects",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/sound-effects",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/speech-to-text",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/speech-to-text",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/svg-character-animation",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/svg-character-animation",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/synthetic-screen-recording",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/synthetic-screen-recording",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/tailwind-design-system",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/tailwind-design-system",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/talking-head-recut",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 28,
+      "bayt": 520874,
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/text-to-speech",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/text-to-speech",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-animation",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-animation",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-fundamentals",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-fundamentals",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-geometry",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-geometry",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-interaction",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-interaction",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-lighting",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-lighting",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-loaders",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-loaders",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-materials",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-materials",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-postprocessing",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-postprocessing",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-shaders",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-shaders",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-textures",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-textures",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/threejs-world-generation",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/threejs-world-generation",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/vercel-composition-patterns",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/vercel-composition-patterns",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/vercel-react-best-practices",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/vercel-react-best-practices",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/video-download",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/video-download",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/video-edit",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/video-edit",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/video-toolkit",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/video-toolkit",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/video-translate",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/video-translate",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/video-understand",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/video-understand",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/video_toolkit",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.claude/skills/video_toolkit",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/visual-style",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/visual-style",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/web-design-guidelines",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/web-design-guidelines",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/website-to-video",
+      "bolge": "claude",
+      "tur": "bag",
+      "hedef": "~/.openmontage/.agents/skills/website-to-video",
+      "sahip": "openmontage",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.claude/skills/youtube-arama",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 6963,
+      "sahip": "kullanıcı",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/AGENTS.md",
+      "bolge": "talimat",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.codex/skills/captions-overlay",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/captions-overlay",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/changelog-video",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/changelog-video",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/cut-the-curve",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/cut-the-curve",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/embedded-captions",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/embedded-captions",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/hyperframes-creative",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/hyperframes-creative",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/media-use",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/media-use",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/motion-doctrine",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/motion-doctrine",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/music-to-video",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/music-to-video",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/oversized-cursor",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/oversized-cursor",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/playwright",
+      "bolge": "codex",
+      "tur": "klasor",
+      "dosya": 9,
+      "bayt": 22850,
+      "sahip": "uygulama",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.codex/skills/seam-craft",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.agents/skills/seam-craft",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.codex/skills/talking-head-recut",
+      "bolge": "codex",
+      "tur": "bag",
+      "hedef": "~/.claude/skills/talking-head-recut",
+      "sahip": "hyperframes",
+      "durum": "boşaltılacak"
+    },
+    {
+      "yol": "~/.gemini/GEMINI.md",
+      "bolge": "talimat",
+      "tur": "dosya",
+      "sahip": "kullanıcı",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/.datacloud_skills_manifest",
+      "bolge": "gemini-config",
+      "tur": "dosya",
+      "bayt": 5167,
+      "mtime": 1789409355,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/accidental-data-loss-prevention",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 1316,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/bigquery-ai-ml",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 19,
+      "bayt": 60178,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/bigquery-bigframes",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 3384,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/bigquery-data-transfer-service",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 12123,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/bigquery-graph",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 8,
+      "bayt": 46258,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/bigquery-sql",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 1872,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/bigtable-basics",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 8,
+      "bayt": 29948,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/building-data-apps",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 8,
+      "bayt": 52523,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/data-autocleaning",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 19662,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/dataform-bigquery",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 12448,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/dbt-bigquery",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 11905,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/discovering-gcp-data-assets",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 9919,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/enforcing-resource-attribution",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 4239,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/federate-lakehouse-catalog",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 10330,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-composer-troubleshooting",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 9089,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-data-pipelines",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 9494,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-dataflow",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 10,
+      "bayt": 55152,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-managed-airflow-dag-authoring",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 5899,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-managed-airflow-migrations",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 4,
+      "bayt": 23740,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-managed-airflow-recommendations",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 11,
+      "bayt": 39744,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-pipeline-orchestration",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 3,
+      "bayt": 43787,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-pipeline-resource-provisioning",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 2,
+      "bayt": 9890,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcp-spark",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 6,
+      "bayt": 34550,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/gcs-security-assessment",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 19,
+      "bayt": 147629,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/google-cloud-auth-verification",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 3912,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/google-cloud-storage-basics",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 11,
+      "bayt": 136511,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/google-cloud-storage-bucket-architect",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 20,
+      "bayt": 241964,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/google-cloud-storage-fuse",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 4,
+      "bayt": 38906,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/managing-python-dependencies",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 3665,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/ml-best-practices",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 9805,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/notebook-guidance",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 15100,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/schema-mapping",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 11780,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/skill-repair",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 1777,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/.installed.json",
+      "bolge": "kesif-.palmier",
+      "tur": "dosya",
+      "bayt": 324,
+      "mtime": 1787528136,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/caption-templates",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 24297,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/color-grading",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 9352,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/create-skill-from-timeline",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 8793,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/multi-cam-editing",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 13919,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/timeless-love-story",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 31188,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/ugc-editing",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 10674,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/ugc-photo-prompts",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 14579,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.palmier/skills/ugc-video-prompts",
+      "bolge": "kesif-.palmier",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 9368,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    }
+  ],
+  "gecmis": [
+    {
+      "tarih": "2026-11-12",
+      "islem": "ilk-taban",
+      "girdi": 196
+    }
+  ]
+}
