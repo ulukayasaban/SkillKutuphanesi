@@ -237,7 +237,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Teknoloji:** python, cli · **Paketler:** nlm (notebooklm-mcp-cli, uv aracı), Google hesabı oturumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-12, lisans Kendi (özel))
-- **Durum:** tercih · **Örtüşme:** notebooklm-cli → birincil · **Roller:** icerik-pazarlama · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** notebooklm-cli → birincil · **Roller:** icerik-pazarlama
 - **Boyut:** 183 KB (SKILL.md 61.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. nlm programının paketinde gelen skilin anlık kopyası (notebooklm-mcp-cli 0.15.8, MIT; kaynak: paketin notebooklm_tools/data klasörü, AGENTS_SECTION.md hariç). Skil sürümü CLI sürümüne bağlıdır: nlm güncellenince klasör paketten yeniden kopyalanmalı. 'nlm skill install' ile aynı dosyalar makine geneline yazılabilir; kullanılmaz. Metin kimlik doğrulama yöntemlerini anlatır, değer içermez.
 
@@ -262,13 +262,13 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### youtube-arama  ·  yerel/kendi @ 92683f1  ·  puan 77 (B)
+### youtube-arama  ·  yerel/kendi @ e3196b0  ·  puan 77 (B)
 
 - **Ne yapar:** yt-dlp ile YouTube'da arama yapar; her sonuç için başlık, URL, kanal, izlenme sayısı, süre ve yayın tarihini döndürür. Sıralama (ilgi, izlenme, tarih) ve JSON çıktısı vardır; kanal ve oynatma listesi sonuçları elenir.
 - **Ne zaman:** YouTube'dan gerçek video listesi ve metadata gerektiğinde: konu araştırması, rakip kanal incelemesi, içerik fikri için izlenme karşılaştırması. · **Ne zaman değil:** Tek bir videonun altyazısı/transkripti ya da video indirmek için değil.
 - **Teknoloji:** python · **Paketler:** yt-dlp
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-12, lisans Kendi (özel))
-- **Durum:** tercih · **Örtüşme:** youtube-arastirma → birincil · **Roller:** icerik-pazarlama · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** youtube-arastirma → birincil · **Roller:** icerik-pazarlama
 - **Boyut:** 7 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Küçük, standart kütüphaneli tek betik; yt-dlp dışında bağımlılık yok. Betik yolu skilde sabit yazılı, kurulumda proje içine çevrilir. Claude hesabı eklentisinde aynı adlı başka bir sürüm var (farklı betik).

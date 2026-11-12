@@ -34,7 +34,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, json_oku, json_yaz, klasor_hash, repo_guncel  # noqa: E402
+from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, json_oku, json_yaz, klasor_hash, program_skill_klasoru, repo_guncel  # noqa: E402
 
 AYAR = KOK / "projeler.json"
 RAPOR = KOK / "notlar" / "proje-kullanimi.md"
@@ -1252,7 +1252,8 @@ def main(argv=None):
 
 
 def _program_hedefi(program, ad):
-    """Bağın şimdiki hedefi (kartın skill_koku/ad yolu); kart ya da skill_koku yoksa None. Kilitteki hedef kullanılmaz."""
+    """Bağın şimdiki hedefi (kartın skill_koku/<klasör> yolu; klasör skill_klasorleri eşlemesinden, yoksa skill adı); kart ya da skill_koku
+    yoksa None. Kilitteki hedef kullanılmaz."""
     try:
         kart = (json_oku(PROGRAMLAR, {}) or {}).get("programlar", {}).get(program)
     except (OSError, ValueError):
@@ -1260,7 +1261,7 @@ def _program_hedefi(program, ad):
     sk = kart.get("skill_koku") if isinstance(kart, dict) else None
     if not isinstance(sk, str) or not sk.strip() or not DIS_AD.fullmatch(ad):
         return None
-    return Path(sk).expanduser() / ad
+    return Path(sk).expanduser() / program_skill_klasoru(kart, ad)
 
 
 def _program_kipi(a):

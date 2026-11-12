@@ -136,7 +136,8 @@ Açıklama: `kendi/README.md`. Bu kaynak GitHub'a sorulmaz, ağ gerekmez; kaybol
   (daha önce kayıtlı olan kimliği korur, yeni gelen `ad@yerel` olur); bilerek devir `ad_devral`.
 - **Programla gelen skil** (ör. `nlm-skill`): bir programın kendi paketinde gelen skil kopya olarak buraya girerse kaynak notu ve sürüm
   kayda yazılır; program güncellenince klasör paketten yeniden kopyalanır. Tutarlı yol programın kartında `skill_koku` ile bağ vermektir
-  (rehber/11); klasör adı skil adından farklıysa (`data`) mevcut bağ yolu uymaz, o yüzden anlık kopya kullanıldı.
+  (rehber/11); klasör adı skil adından farklıysa (`nlm-skill` için `data`) kartta `skill_klasorleri` eşlemesi yazılır ve bağ
+  `skill-ekle.py <proje> --program-skill nlm:nlm-skill` ile verilir (`nlm` kartı artık vardır; `kendi/nlm-skill` anlık kopyasının yerini bu bağ alır).
 
 ## C) Kategori, rol, profil eklemek
 - **Kategori:** `kategoriler.json` → ilgili alan → `"NN-ad": "açıklama"`; kurallara desen ekle; `arsiv-yerlestir.py`.

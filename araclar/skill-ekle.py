@@ -56,7 +56,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KOK, REGISTRY, hesap_skilleri, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
                    klasor_hash, onemli_dosyalar, onarim_izi, repo_guncel, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula,
-                   skill_adlari, skill_yol_taramasi, tum_skiller, yol_degerlendir, yol_izi, yol_dosya_sinifi_haritasi, ev_ici_kendi_cevir, _var_bak)
+                   skill_adlari, skill_yol_taramasi, tum_skiller, yol_degerlendir, yol_izi, yol_dosya_sinifi_haritasi, ev_ici_kendi_cevir, _var_bak,
+                   program_klasor_skill_adi, program_skill_ham_klasoru_mu, program_skill_klasoru)
 
 ROLLER = KOK / "roller"
 PROFILLER = KOK / "profiller"
@@ -80,7 +81,7 @@ ZORLANAMAZ = {"gecersiz-rol-adi", "global-baglanti", "proje-disi-baglanti", "ayn
               "program-skill-bicim", "program-bilinmiyor", "program-skillsiz", "program-kurulu-degil", "program-skill-yok",
               "program-skill-ad", "dis-ad-cakismasi", "bag-farkli", "bag-degismis", "dondur-yol", "dondur-kaynak-yok",
               "dondur-program-skili", "dondur-kutuphane-adi", "dondur-gizli", "dondur-dis-baglanti", "dondur-kendisi",
-              "dondur-ad", "dondur-cok-buyuk", "dondur-ozel-dosya", "bag-gercek-klasor"}
+              "dondur-ad", "dondur-cok-buyuk", "dondur-ozel-dosya", "bag-gercek-klasor", "program-skill-ham-klasor"}
 PROGRAMLAR = KOK / "programlar.json"   # testler yeniden atar
 DIS_TURLER = ("program-bag", "donmus")
 DIS_AD = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,63}")   # fullmatch ile kullanılır ($ satır sonunu kabul ederdi); video_toolkit gibi '_' içeren adlar
@@ -818,9 +819,11 @@ def surum_metni(deger, tur):
 
 
 def dis_bag_hedefi(g):
-    """Bağın BEKLENEN hedefi: kilitten değil karttan türetilir (program + ad -> skill_koku/ad; abspath, realpath değil). Kart yoksa None."""
-    koku = program_skill_koku(program_karti(g.get("program")))
-    return Path(os.path.abspath(koku / g["ad"])) if koku else None
+    """Bağın BEKLENEN hedefi: kilitten değil karttan türetilir (program + ad -> skill_koku/<klasör>; klasör kartın skill_klasorleri eşlemesinden,
+    yoksa skill adı; abspath, realpath değil). Kart yoksa None."""
+    kart = program_karti(g.get("program"))
+    koku = program_skill_koku(kart)
+    return Path(os.path.abspath(koku / program_skill_klasoru(kart, g["ad"]))) if koku else None
 
 
 def gizli_ad_mi(ad):
@@ -901,9 +904,11 @@ def dis_istek_coz(a):
     return kalan, hatalar
 
 
-def _program_skilleri_adlari(koku):
+def _program_skilleri_adlari(koku, kart=None):
+    """Programdaki skill adları (klasörler; eşlenmiş klasör skill adıyla listelenir, ham klasör adıyla değil)."""
     try:
-        return sorted(e.name for e in os.scandir(koku) if e.is_dir() and os.path.isfile(os.path.join(e.path, "SKILL.md")))
+        return sorted(program_klasor_skill_adi(kart, e.name) for e in os.scandir(koku)
+                      if e.is_dir() and os.path.isfile(os.path.join(e.path, "SKILL.md")))
     except OSError:
         return []
 
@@ -1136,9 +1141,14 @@ def dis_on_kontrol(proje, kilit, liste, lib_adlar, rapor: Rapor):
             if not koku.is_dir():
                 rapor.ekle("HATA", "program-kurulu-degil", f"{it['program']}: skill klasörü bu bilgisayarda yok ({yol_goster(koku)}); program kurulu değil ya da taşınmış")
                 continue
-            hedef = Path(os.path.abspath(koku / ad))
+            if program_skill_ham_klasoru_mu(kart, ad):
+                dogru = next(a for a, k in kart["skill_klasorleri"].items() if k == ad)
+                rapor.ekle("HATA", "program-skill-ham-klasor", f"{it['program']}:{ad}: `{ad}` programın ham klasör adı, skill adı değil; "
+                           f"doğru ad: --program-skill {it['program']}:{dogru}")
+                continue
+            hedef = Path(os.path.abspath(koku / program_skill_klasoru(kart, ad)))
             if not (hedef / "SKILL.md").is_file():
-                adlar = _program_skilleri_adlari(koku)
+                adlar = _program_skilleri_adlari(koku, kart)
                 rapor.ekle("HATA", "program-skill-yok", f"{it['program']}:{ad}: {yol_goster(hedef)} klasörü ya da içinde SKILL.md yok. Programdaki skiller: "
                            + (", ".join(adlar[:8]) + (f" …+{len(adlar) - 8}" if len(adlar) > 8 else "") if adlar else "-"))
                 continue
@@ -1160,7 +1170,7 @@ def dis_on_kontrol(proje, kilit, liste, lib_adlar, rapor: Rapor):
                     kr = Path(os.path.realpath(koku))
                     if gercek == kr or kr in gercek.parents:
                         rapor.ekle("HATA", "dondur-program-skili", f"{ad}: bu skill {pa} programıyla geliyor ({yol_goster(gercek)}); dondurma, "
-                                   f"--program-skill {pa}:{gercek.name} kullan (kopya olmasın, program güncellenince kendiliğinden güncel kalsın)")
+                                   f"--program-skill {pa}:{program_klasor_skill_adi(kart, gercek.name)} kullan (kopya olmasın, program güncellenince kendiliğinden güncel kalsın)")
                         ok = False
                         break
             if not ok:

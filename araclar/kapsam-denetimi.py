@@ -109,7 +109,15 @@ def main():
         toplam.update(sayac)
         satirlar.append((repo, len(gercek), sayac))
 
-    yeni_skill = []
+    yeni_skill, bagli_skill = [], []
+    # Program kaydı olan ve kartında skill_koku dolu olan referans repo: skili program bağıyla verilir (K-28, K-46)
+    try:
+        _kartlar = json_oku(KOK / "programlar.json").get("programlar", {})
+    except Exception:  # noqa: BLE001
+        _kartlar = {}
+    bagli_program_repolari = {k["repo"] for k in kayitlar if isinstance(k.get("program"), str)
+                              and isinstance((_kartlar.get(k["program"]) or {}).get("skill_koku"), str)
+                              and (_kartlar.get(k["program"]) or {}).get("skill_koku").strip()}
     for repo in referans_repolari:
         g = agac_al(repo)  # API kapalıysa git ile
         if g is None:
@@ -117,7 +125,10 @@ def main():
             continue
         klon_temizle(g)
         n = sum(1 for e in g.get("tree", []) if e["type"] == "blob" and e["path"].split("/")[-1].lower() == "skill.md")
-        if n:
+        if n and repo in bagli_program_repolari:
+            # Programın kendi paketiyle gelen skil projelere BAĞ olarak verilir (kart: skill_koku), arşive alınmaz: sorun değil, bilgi
+            bagli_skill.append((repo, n))
+        elif n:
             yeni_skill.append((repo, n))
             sorunlar.append(f"{repo}: referans (T5/T6) reposunda {n} SKILL.md var -> kaynaklar.json'a skill kaydı ekle")
 
@@ -136,7 +147,8 @@ def main():
         out.append(f"| {repo} | {n} | " + ", ".join(f"{k} {v}" for k, v in s.most_common()) + " |")
     out += ["", "## Referans repoları (T5/T6)", "",
             f"{len(referans_repolari)} repo tarandı; " +
-            ("içlerinde skill yok." if not yeni_skill else "skill bulunanlar: " + ", ".join(f"{r} ({n})" for r, n in yeni_skill))]
+            ("içlerinde skill yok." if not yeni_skill else "skill bulunanlar: " + ", ".join(f"{r} ({n})" for r, n in yeni_skill))
+            + (" Program bağıyla verilen (arşive alınmayan) skiller: " + ", ".join(f"{r} ({n})" for r, n in bagli_skill) + "." if bagli_skill else "")]
     if kayip_repolari:
         out += ["", "## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)", ""] + [f"- {x}" for x in kayip_repolari]
     if erisilemeyen:

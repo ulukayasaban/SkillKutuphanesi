@@ -482,9 +482,7 @@
       "ana_hash": "9d41a5ca712744f90b9645cadfd93a5518b5a2cb8c817e83946ef5078f4c6792",
       "varyant_hash": {},
       "klasor_hash": "e384f311987df1c3275122567da59a43f8f25acabb536b9e0add87f3c7ff37cc",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "zanwei",
         "sahip_tipi": "kisi",
@@ -131995,9 +131993,7 @@
       "ana_hash": "e3449160ff093e3375cb5d1a2bdfe670c1a9ce79a8bf40fb8f4c73e8da618954",
       "varyant_hash": {},
       "klasor_hash": "cffec708d438fbd1a4a56e49c81d3a4957f29216b1e45a965889fff40f225e3d",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "kullanıcı",
         "sahip_tipi": "kisi",
@@ -132075,7 +132071,10 @@
       },
       "ucret": "kismen",
       "ucret_notu": "nlm komutu ücretsizdir ve Google hesabıyla çalışır; kullanım kotaları Gemini Notebook planına bağlıdır (ücretsiz planda sınırlı)",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "kaynak_durumu": "kaynakta-kaldirildi",
+      "kaldirilma_tarihi": "2026-11-12",
+      "kaldirildigi_commit": "e3196b0779de8bd0d1259aadb225ddae997e3b66"
     },
     {
       "id": "notebooklm",
@@ -132320,7 +132319,7 @@
       "varyantlar": {},
       "repo": "yerel/kendi",
       "kaynak_yol": "youtube-arama",
-      "commit": "92683f1b2379601f4233441d4ee5726637b95618",
+      "commit": "e3196b0779de8bd0d1259aadb225ddae997e3b66",
       "lisans": "Kendi (özel)",
       "tip": "T7",
       "gizli": false,
@@ -132350,9 +132349,7 @@
       "ana_hash": "2ec5489ece06d7f2ed477109d7753a552e2f7e9f6acb21dddfa4f2896f2de794",
       "varyant_hash": {},
       "klasor_hash": "2535a0d6b207b340f578d4345a8749c80088a9a9eb11b5bc90f63bbbc7f21103",
-      "globalde": {
-        "claude": "ayni"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "kullanıcı",
         "sahip_tipi": "kisi",
@@ -341879,11 +341876,7 @@
       "ana_hash": "f7b295f0ee9d4423004582c4c22cdf0845b7b69aca966c21d363f34bcc84ed03",
       "varyant_hash": {},
       "klasor_hash": "6f099d7ed8eb8d1e66d8762efaeab87a3180a7551242ae63fcef4bc59e60b7c6",
-      "globalde": {
-        "claude": "farkli",
-        "codex": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -342027,11 +342020,7 @@
       "ana_hash": "50bcf8b63c68e8fac2b5425bd46886670e20c306dfa3e5988a5fd3e08fc0a593",
       "varyant_hash": {},
       "klasor_hash": "fdfd19cd0ffa1b4a6573bfd7dfaa5231cd1510d663fe3505f01ee72b6cc45aba",
-      "globalde": {
-        "claude": "farkli",
-        "codex": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -343001,10 +342990,7 @@
       "ana_hash": "7a6e16bfa08e328036707dc8983e9a6c13606d41e5bc62b3748c9351ecec75f9",
       "varyant_hash": {},
       "klasor_hash": "55fbf59836c792b6eda5a63f4cd491308663ad922b2d45e6fca5eec6a50415a1",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -343927,9 +343913,7 @@
       "ana_hash": "abbc62b29d62e1f0902872ead8e42bb042d53d802d509a5b1862d6f695a6fa03",
       "varyant_hash": {},
       "klasor_hash": "a13eeae87be4b1b6280ca5a1685a24ab1f97ee02f05c5f959de4401ce3e6b747",
-      "globalde": {
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -344084,9 +344068,7 @@
       "ana_hash": "29108e0134e834b601376ef870c93498d04b8fcaff03f4ace41803ad39b58ae8",
       "varyant_hash": {},
       "klasor_hash": "0c29e5af1197e0e728ffbda268338983e6372082f334e8f59d8fe9173dc49928",
-      "globalde": {
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -344245,9 +344227,7 @@
       "ana_hash": "a801c0d6d60208eaaf48197fe744dceb6219bfa4b2ad57e0b9f4f888c3c44944",
       "varyant_hash": {},
       "klasor_hash": "3acf81713187ae85dc8c779166999875e6a3ce311b6b21a2d216be76ab02505d",
-      "globalde": {
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "openai",
         "sahip_tipi": "kurum",
@@ -344344,10 +344324,7 @@
       "ana_hash": "696b0a9e06db88b6f746985e242aafdb59862d27e61414608d00106e4f3b1efd",
       "varyant_hash": {},
       "klasor_hash": "2d8568e9a9117c91345d82f0b492152cd0f2f596a472eebe69d9ec4bdf45edd9",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -344503,10 +344480,7 @@
       "ana_hash": "7f8f847139f8eb85da892fc51b73777b50080c6aa750af9d162b3d9ebc3f87ed",
       "varyant_hash": {},
       "klasor_hash": "4a808c8cd9d43e4cb0b1daef9a7bce7ad8e38615aa4612ccec51ea7607159e46",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "openai",
         "sahip_tipi": "kurum",
@@ -344606,9 +344580,7 @@
       "ana_hash": "8d608f15be50c80fcece1a39dc098816305d8805a67f8cc62a649f071bfff27e",
       "varyant_hash": {},
       "klasor_hash": "ddf1e4a9d4f237485b035bf8bea717172146044dd3094100a1ffe8646c06be47",
-      "globalde": {
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "openai",
         "sahip_tipi": "kurum",
@@ -345283,11 +345255,7 @@
       "ana_hash": "d9cbd1dba9ab2d32a1764779176cc645e5566b86ce34a7875316df4d51d9bd64",
       "varyant_hash": {},
       "klasor_hash": "a2458e54af296f6f27f738179722acf18bcad3416afe29fbdbeb96f11a502f5b",
-      "globalde": {
-        "claude": "farkli",
-        "codex": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -346069,7 +346037,7 @@
       "varyantlar": {},
       "repo": "yerel/kendi",
       "kaynak_yol": "openmontage",
-      "commit": "92683f1b2379601f4233441d4ee5726637b95618",
+      "commit": "e3196b0779de8bd0d1259aadb225ddae997e3b66",
       "lisans": "Kendi (özel)",
       "tip": "T7",
       "gizli": false,
@@ -346106,9 +346074,7 @@
       "ana_hash": "d93f32410981ad4030576e2fe32d58827d07ed7eb469f1d8fc7b5eadd986c5ed",
       "varyant_hash": {},
       "klasor_hash": "b92f23874e5591cceea9e41f1378772d3140f6d25406ebec9fe6f6ea0c37b311",
-      "globalde": {
-        "claude": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "kullanıcı",
         "sahip_tipi": "kisi",
@@ -346233,11 +346199,7 @@
       "ana_hash": "7a964aa265be4bc0e56281f4abc47441f8dafde89456a403db40c91e0a4926a9",
       "varyant_hash": {},
       "klasor_hash": "578707e6b4ad82216aaafb0e9dc8ec869637f7838647e3c68bfc3f24cf0751f7",
-      "globalde": {
-        "claude": "ayni",
-        "codex": "ayni",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -350013,10 +349975,7 @@
       "ana_hash": "04b37a8060c01f60b144777f62817a2aaf60fc34d658898a32232194a50ab68d",
       "varyant_hash": {},
       "klasor_hash": "64a0aca0ceae17207ec340047f2d9359bcbd6d7062348d3a39b787b7673f08e3",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -350397,10 +350356,7 @@
       "ana_hash": "c9155ed891b25ad2948b92d51060754ec7e4a6cff553343fafeadcc8309b7a40",
       "varyant_hash": {},
       "klasor_hash": "e14af887362e60ef715cd2437aec4d51e7c9292c3f1761e27926b6d519acf034",
-      "globalde": {
-        "claude": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -361211,10 +361167,7 @@
       "ana_hash": "5e1cc329b87087c4dd3e0c0786ff84319995a17268c58b7c6f7a6cf2c1c7d640",
       "varyant_hash": {},
       "klasor_hash": "5e74a1872f4ae3798e3101179951923f65cfa5a01d5efd87b38d9a41dc0d42ad",
-      "globalde": {
-        "codex": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -361962,10 +361915,7 @@
       "ana_hash": "8eda870de8c0d91ce4132c1d97a1b05a416f703b13af2aa78db36becde8e7e74",
       "varyant_hash": {},
       "klasor_hash": "621d673623aec81f9efe6947facbba0667fedca4657fab84e79c61ad7b484f32",
-      "globalde": {
-        "codex": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -362351,10 +362301,7 @@
       "ana_hash": "13c6ea72fc240fa6554de1e093dc33f058ef0f0dd9914eeb60a18edc0b088c09",
       "varyant_hash": {},
       "klasor_hash": "462e507821e46af5c2ff8b70e427becdffaecc4647ffd98fb2e7b4e419230b8a",
-      "globalde": {
-        "codex": "farkli",
-        "agents": "farkli"
-      },
+      "globalde": {},
       "gelistirici": {
         "sahip": "heygen-com",
         "sahip_tipi": "kurum",
@@ -610629,9 +610576,8 @@
       }
     },
     "yerel/kendi": {
-      "commit": "92683f1b2379601f4233441d4ee5726637b95618",
+      "commit": "e3196b0779de8bd0d1259aadb225ddae997e3b66",
       "skill_md": {
-        "nlm-skill/SKILL.md": "secildi",
         "openmontage/SKILL.md": "secildi",
         "youtube-arama/SKILL.md": "secildi"
       }

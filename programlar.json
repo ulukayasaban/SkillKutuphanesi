@@ -590,6 +590,159 @@
         },
         "kural": "Onay commit'in tam sha'sıyla verilir; dal adıyla ('main') verilmez."
       }
+    },
+    "nlm": {
+      "ad": "nlm",
+      "repo": "jacob-bd/gemini-notebook-mcp-cli",
+      "kopya": "yerinde",
+      "tur": "komut satırı programı ve MCP sunucusu (Python, uv tool ile kurulu PyPI paketi `notebooklm-mcp-cli`; komutlar `nlm` ve `notebooklm-mcp`)",
+      "lisans": "MIT",
+      "ucret": "kismen",
+      "ne_yapar": "Google NotebookLM'e (Gemini Notebook) komut satırından ve MCP sunucusu olarak erişir: not defteri, kaynak, sohbet, araştırma ve stüdyo çıktıları (podcast, rapor, test, bilgi kartı, zihin haritası, slayt, video) yönetir; paketiyle `nlm-skill` skilini ve başvuru belgelerini getirir. Resmî Google ürünü değil, üçüncü taraf bir araçtır. Google hesabı gerekir; ücretsiz hesapla kullanılır, ücretli Google planları yalnız daha yüksek kota verir.",
+      "yerinde": {"tur": "uv-tool", "yol": "~/.local/share/uv/tools/notebooklm-mcp-cli", "paket": "notebooklm-mcp-cli"},
+      "kutuphane_surumu": "0.15.8",
+      "surum_kaynagi": "PyPI (pypi.org/pypi/notebooklm-mcp-cli/json -> info.version); kurulu sürüm site-packages/notebooklm_mcp_cli-*.dist-info/METADATA 'Version:' satırından okunur (uv, pip ve nlm çalıştırılmaz)",
+      "veri_yeri": "~/.notebooklm-mcp-cli (NOTEBOOKLM_MCP_CLI_PATH ile değişebilir): profiles/<ad> (oturum çerezleri ve kimlik), chrome-profiles (yönetilen tarayıcı profili), config.toml, installation.json, cache (update_check.json), locks, operations, backups. Kimlik koruma açılırsa şifreleme anahtarı macOS Anahtar Zinciri'nde durur. İçerikleri okunup yazdırılmaz; yalnız yol adı kayıtlıdır.",
+      "ag": "notebooklm.google.com ve accounts.google.com (oturum çerezlerini yenileyen RotateCookies isteği; NOTEBOOKLM_DISABLE_ROTATE_COOKIES=1 kapatır), pypi.org (güncelleme bildirimi, 2 sn zaman aşımı), yönetilen Chrome ile yerel CDP bağlantısı (giriş sırasında). Telemetri koduna rastlanmadı.",
+      "kendini_gunceller": false,
+      "kendini_guncelleme": {
+        "nasil": "Kendini kurmaz ve güncellemez. Komut bittikten sonra, çıktı bir terminaldeyse (TTY), PyPI'daki son sürümü 2 sn zaman aşımıyla sorar (sonuç ~/.notebooklm-mcp-cli/cache/update_check.json içinde 24 saat saklanır) ve yeni sürüm varsa yalnız 'uv tool upgrade notebooklm-mcp-cli' önerisi yazar. `nlm --version` ve MCP sunucusunun server_info aracı da aynı sorguyu yapar. Sürüm yalnız biz kurunca ya da kullanıcı kendi terminalinde yükseltince değişir; karttaki sürümle kurulu sürümü karşılaştırmak (KART ESKİ) asıl güvencedir.",
+        "durduran": "yok (güncelleme bildirimini kapatan ortam anahtarı ya da ayar yok; yalnız bildirimdir, kurulum yapmaz)",
+        "simdi": "Kodda kapatan anahtar bulunmadığı için hiçbir yerde tanımlı değil; 2026-11-12 kaynak okuması (0.15.8)"
+      },
+      "skill_yazimi": {
+        "yazar": "`nlm skill install <araç>` (varsayılan düzey user; --level project ise çalışılan klasörün altına), `nlm skill update` (yüklü ve eski skilleri günceller), `nlm skill uninstall <araç>` (kaldırır), aynı işleri yapan fiil biçimleri `nlm install skill`, `nlm update skill`, `nlm uninstall skill`, ve etkileşimli `nlm setup` sihirbazının skill adımları. `nlm skill install other` çalışılan klasöre ./nlm-skill-export açar. Yazılan skill klasörünün adı hep `nlm-skill`; önce var olanın yedeği ~/.notebooklm-mcp-cli/backups altına alınır.",
+        "yazmaz": "login, notebook, source, chat, studio, research, download, share, export ve diğer iş komutları, `nlm skill list` ve `nlm skill show`, MCP sunucusu (notebooklm-mcp), paketin kurulumu ya da güncellemesi (uv tool install) ve arka plandaki güncelleme bildirimi skill yazmaz. `nlm skill package` skill klasörüne değil ~/Downloads/nlm-skill.zip dosyasına yazar. `nlm setup add/remove` MCP ayar dosyalarına yazar (skill değil).",
+        "klasorler": "~/.claude/skills/nlm-skill, ~/.agents/skills/nlm-skill (agents, gemini-cli, codex, chatgpt-desktop araçları aynı yeri kullanır), ~/.cursor/skills/nlm-skill, ~/.config/opencode/skills/nlm-skill, ~/.gemini/antigravity/skills/nlm-skill, ~/.cline/skills/nlm-skill, ~/.openclaw/workspace/skills/nlm-skill, ~/.alef-agent/workspace/skills/nlm-skill, $HERMES_HOME ya da ~/.hermes altında skills/nlm-skill; --level project ile çalışılan klasörün altında .claude/skills, .agents/skills, .cursor/skills, .opencode/skills, .cline/skills, .openclaw/workspace/skills, .alef-agent/workspace/skills, .hermes/skills.",
+        "durduran": "yok (skill yazımını kapatan ortam anahtarı ya da ayar yok; skill yalnız yukarıdaki komutlar açıkça çalıştırılınca yazılır, başka komut yazmaz)",
+        "simdi": "Kapatan anahtar olmadığı için korunma bu komutların hiç çalıştırılmamasıyla sağlanır (asla listesi). Genel skill klasörleri 2026-11-12'de boşaltıldı (K-40); beklenmeyen girdi için genel-bekci.py."
+      },
+      "skilleri": ["nlm-skill"],
+      "skill_koku": "~/.local/share/uv/tools/notebooklm-mcp-cli/lib/python3.12/site-packages/notebooklm_tools",
+      "skill_klasorleri": {"nlm-skill": "data"},
+      "guncelleme_adimlari": [
+        "program-denetim.py yeni sürümü ('YENİ SÜRÜM VAR') ya da kartın eskidiğini ('KART ESKİ') gösterir; 'KART ESKİ' ise önce sebebi bulunur, güncelleme yapılmaz",
+        "python3 araclar/program-denetim.py --oncesi nlm çalıştırılır; 'KIRICI ADAYI' çıkarsa önce rehber/11 → 'Kırıcı sürüm' deneme adımları ayrı klasörde uygulanır, geçmeden onay istenmez",
+        "bağlar: program-denetim.py --oncesi çıktısındaki 'bağlar' satırlarını oku; kırık bağ uyarısı varsa kullanıcıya söyle (güncellemeden sonra aynı rapor kırık bağı HATA gösterir). Skill klasörü adı `data` bu pakete özgüdür (skill_klasorleri); yeni sürümde `notebooklm_tools/data/SKILL.md` yerinde mi bakılır",
+        "kullanıcıya sürüm farkı + release notu özeti (github.com/jacob-bd/gemini-notebook-mcp-cli) sunulur ve bu güncelleme için ayrıca onay istenir (her seferinde)",
+        "yedek: ~/Documents/Claude/yedek/nlm-<YYYY-AA-GG>/ altına paket (uv tool klasörü), config.toml ve KAYIT.json (rehber/11 → 'Yedek kaydı'); kimlik, profil, Chrome profili ve installation.json yedeğe konmaz; kütüphane klasörüne ve git'e asla",
+        "tedarik: hedef sürümün PyPI wheel sha256'sı doğrulanıp tedarik_dogrulama.ozet.deger'e (ve kayit_tarihi'ne) yazılır; sonra program-denetim.py --oncesi nlm --hedef <sürüm> --tedarik çalıştırılır: kayıt PyPI'dakiyle aynı olmalı (karttaki özet hedef sürüme ait olmadan --tedarik HATA verir, HAZIR'a ulaşmaz)",
+        "program-denetim.py --oncesi nlm --hedef <sürüm> --tedarik tekrar çalıştırılır; 'HAZIR' demeden devam edilmez",
+        "onaydan sonra YALNIZ kütüphane oturumu: uv tool install --force --python 3.12 notebooklm-mcp-cli==<sürüm> (tek sürüm sabitlenir, 'latest' ve 'upgrade' kullanılmaz); komutlar `nlm skill ...` ve `nlm setup ...` çalıştırılmaz",
+        "sonra yeniden denetim: program-denetim.py kurulu sürümü gösterir; genel skill klasörlerinde yeni girdi olmadığı kontrol edilir (genel-bekci.py); python sürümü değiştiyse skill_koku yolundaki python3.12 parçası kartta düzeltilir, bağlı projelerde skill-ekle.py <proje> --yenile; kart sürümü onaylı sürüme çekilir, KAYNAK.md ve tedarik_dogrulama.ozet (PyPI wheel sha256) güncellenir, python3 araclar/program-denetim.py --sema --siki 0 hata, commit",
+        "yedek klasörü saklanır; silmek için kullanıcıya hatırlatılır ve sorulur"
+      ],
+      "asla": [
+        "`nlm skill install`, `nlm skill update`, `nlm skill uninstall`, `nlm install skill`, `nlm update skill`, `nlm uninstall skill` ve etkileşimli `nlm setup` çalıştırılmaz: genel skill klasörlerine yazar (kapatan anahtar yok)",
+        "`nlm setup add` ve `nlm setup remove` kullanıcı onayı olmadan çalıştırılmaz: Claude, Gemini, Cursor, Codex, OpenCode ve benzeri araçların MCP ayar dosyalarına yazar",
+        "kullanıcı onayı olmadan güncellenmez, sürüm değiştirilmez; uv tool install yalnız kütüphane oturumunda ve onayla, tek sürüm sabitlenerek",
+        "~/.notebooklm-mcp-cli içindeki oturum, çerez, profil ve Chrome profili dosyaları okunup yazdırılmaz, yedeğe konmaz",
+        "`nlm login` ve diğer Google hesabına bağlanan komutlar kullanıcı istemeden çalıştırılmaz (hesap işlemleri kullanıcıya aittir)",
+        "paket kendi yolunda kullanılır: kurulum klasörü (site-packages) elle düzenlenmez"
+      ],
+      "giris_yolu": {
+        "kural": "nlm bir komut satırı programıdır: her araç onu kabuktan çalıştırır, MCP sunucusu `notebooklm-mcp` komutuyla açılır; skili genel klasörden değil, projeye skill-ekle.py ile verilen bağdan okunur.",
+        "kilavuz": "",
+        "calistirma": "~/.local/bin/nlm <komut>   (`nlm skill ...` ve `nlm setup` çalıştırılmaz; asla listesine bak)",
+        "karar": "",
+        "hepsi": {
+          "durum": "proje-skili",
+          "yol": "~/.local/bin/nlm",
+          "nasil": "Skil projeye KOPYA olarak değil, BAĞ ile verilir: python3 araclar/skill-ekle.py <proje> --program-skill nlm:nlm-skill (skill adı nlm-skill; klasörü `data`, kartta skill_klasorleri). CLI her araçta aynı komuttur."
+        }
+      },
+      "kurulum": {
+        "on_kosullar": [
+          "uv kurulu (uv tool kullanılabilir)",
+          "Python 3.12 (paket Python 3.11 ve üstünü ister; kart skill_koku yolu python3.12'ye göre yazılıdır)",
+          "Giriş (nlm login) kullanıcıya aittir; kurulumda yapılmaz"
+        ],
+        "adimlar": [
+          "Kullanıcıdan ayrı onay",
+          "uv tool install --python 3.12 notebooklm-mcp-cli==<kutuphane_surumu> (kartta yazan sürüm; 'latest' yazılmaz)",
+          "kurulacak sürümün PyPI wheel sha256'sı karta yazılır ve program-denetim.py --oncesi nlm --hedef <sürüm> --tedarik ile PyPI'dakiyle karşılaştırılır",
+          "Skil genel klasöre değil, projeye skill-ekle.py --program-skill nlm:nlm-skill ile verilir"
+        ],
+        "dogrulama": [
+          "python3 araclar/program-denetim.py: nlm satırı 'güncel' ya da 'YENİ SÜRÜM VAR', 'KART ESKİ' değil",
+          "python3 araclar/skill-ekle.py <proje> --dogrula: nlm-skill bağı çözülüyor"
+        ],
+        "yapma": ["nlm skill install / update / uninstall çalıştırma", "nlm setup çalıştırma", "uv tool upgrade kullanma (sürüm sabitlenmez)"]
+      },
+      "geri_alma": {
+        "ne_zaman": [
+          "Yeni sürümde nlm ya da MCP sunucusu bozuk",
+          "Güncelleme sonrası genel klasörlerde beklenmeyen skill girdisi çıktı",
+          "Kullanıcı eski sürümü istedi"
+        ],
+        "adimlar": [
+          "Önceki sürüm yedekteki KAYIT.json → onceki.surum alanındadır",
+          "Kullanıcıdan geri alma için ayrı onay al",
+          "uv tool install --force --python 3.12 notebooklm-mcp-cli==<onceki.surum> (tek sürüm; 'latest' yazılmaz)",
+          "PyPI sürümü kaldırdıysa yedekteki 'paket' klasörü ~/.local/share/uv/tools/notebooklm-mcp-cli yerine konur (kullanıcı onayıyla)",
+          "Kart sürümü (kutuphane_surumu), KAYNAK.md ve tedarik_dogrulama.ozet önceki değere çevrilir; bağlı projelerde skill-ekle.py <proje> --dogrula; commit"
+        ],
+        "dogrulama": [
+          "program-denetim.py: kurulu = karttaki, durum güncel ya da YENİ SÜRÜM VAR (KART ESKİ değil)",
+          "program-denetim.py --oncesi nlm: bağlar satırı TAMAM"
+        ],
+        "sinir": "Yedek yoksa geri alma yalnız PyPI'daki sürümle yapılabilir; yedeği olmayan güncelleme yapılmaz. Kimlik ve profil dosyaları yedekte olmadığı için geri alma onları değiştirmez."
+      },
+      "cikarma": {
+        "makineden": [
+          "Kullanıcıdan ayrı onay; önce yedek (KAYIT.json + paket + config.toml)",
+          "uv tool uninstall notebooklm-mcp-cli (nlm ve notebooklm-mcp komutları ~/.local/bin'den kalkar)",
+          "Bağlı projelerde nlm-skill bağı kırılır: skill-ekle.py <proje> --kaldir nlm-skill",
+          "Genel skill klasörlerinde nlm'in kendi yazdığı skiller varsa kaldırmak genel klasör boşaltma prosedürünün işidir (rehber/12), burada yapılmaz"
+        ],
+        "dokunulmaz": [
+          "~/.notebooklm-mcp-cli (kullanıcı silmek isterse kendisi yapar: oturum ve kimlik içerir; Anahtar Zinciri kaydı ayrıca kalır)",
+          "Google hesabındaki not defterleri"
+        ]
+      },
+      "yedek": {"kok": "~/Documents/Claude/yedek", "tazelik_gun": 3, "zorunlu": ["KAYIT.json", "paket", "config.toml"], "yasak_adlar": ["auth.json", "profiles", "chrome-profiles", "installation.json"]},
+      "ortam_anahtarlari": [],
+      "gizli_dosyalar": ["~/.notebooklm-mcp-cli/profiles", "~/.notebooklm-mcp-cli/chrome-profiles"],
+      "disariya_yazar": [
+        {"yol": "~/.notebooklm-mcp-cli", "tur": "veri", "ne": "oturum ve kimlik, Chrome profili, ayar, önbellek, yedekler", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.local/share/uv/tools/notebooklm-mcp-cli", "tur": "program", "ne": "uv tool ortamı (paket ve bağımlılıkları)", "yedeklenir": true, "dogrulandi": true},
+        {"yol": "~/.local/bin/nlm", "tur": "program", "ne": "komut bağı", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.local/bin/notebooklm-mcp", "tur": "program", "ne": "MCP sunucusu komut bağı", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.claude/skills", "tur": "skill", "ne": "yalnız `nlm skill install/update` ve `nlm setup` çalışınca nlm-skill yazar (kapatan anahtar yok)", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.agents/skills", "tur": "skill", "ne": "aynı komutlar; agents, gemini-cli, codex ve chatgpt-desktop aynı yeri kullanır", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.cursor/skills", "tur": "skill", "ne": "aynı komutlar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.config/opencode/skills", "tur": "skill", "ne": "aynı komutlar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.gemini/antigravity/skills", "tur": "skill", "ne": "aynı komutlar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.cline/skills", "tur": "skill", "ne": "aynı komutlar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.openclaw/workspace/skills", "tur": "skill", "ne": "aynı komutlar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.alef-agent/workspace/skills", "tur": "skill", "ne": "aynı komutlar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.hermes/skills", "tur": "skill", "ne": "aynı komutlar ($HERMES_HOME varsa onun altı)", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/.claude.json", "tur": "ayar", "ne": "yalnız `nlm setup add/remove` çalışınca MCP girdisi yazar", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/Library/Application Support/Claude/claude_desktop_config.json", "tur": "ayar", "ne": "yalnız `nlm setup add/remove` çalışınca MCP girdisi yazar (Gemini, Cursor, Codex, OpenCode, Cline, Antigravity ayarları da aynı komutla)", "yedeklenir": false, "dogrulandi": true},
+        {"yol": "~/Downloads/nlm-skill.zip", "tur": "cikti", "ne": "yalnız `nlm skill package` çalışınca yazar", "yedeklenir": false, "dogrulandi": true}
+      ],
+      "kirici_surum": {
+        "kural": "0.x sürümde minor değişimi (0.15 -> 0.16) ve major değişimi kırıcı sayılır; patch (0.15.8 -> 0.15.9) sayılmaz, ama release notunda 'breaking' geçerse kırıcı sayılır (ajan okur). Bağlı skilin yeri (notebooklm_tools/data) değişirse bağ kırılır; bunu program-denetim.py 'bağlar' satırı gösterir.",
+        "surum_hatti": "minor",
+        "deneme_klasoru": "~/Documents/Claude/deneme/nlm-<hedef>",
+        "deneme_disk_gb": 1,
+        "rehber": "rehber/11-program-yonetimi.md → Kırıcı sürüm"
+      },
+      "tedarik_dogrulama": {
+        "yayinci": {
+          "hesap": "jacob-bd",
+          "ucuncu_taraf": true,
+          "imza": "pypi-kayit",
+          "not": "Resmî Google ürünü değil, bağımsız geliştiricinin açık kaynak paketi (MIT). PyPI kayıt defterindeki paket; imza yerine wheel sha256 değeri kaydedilir."
+        },
+        "ozet": {
+          "tur": "pypi-sha256",
+          "deger": "098ac98061247db98dfbd6ef8c1ac01e88323af3a286bc4761b2d1bc64f5f25b",
+          "ne_icin": "PyPI notebooklm-mcp-cli 0.15.8 sürümünün tek wheel dosyası (notebooklm_mcp_cli-0.15.8-py3-none-any.whl) digests.sha256 değeri (salt okuma GET)",
+          "kayit_tarihi": "2026-11-12"
+        },
+        "kural": "Kurulacak sürümün PyPI wheel sha256'sı kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer PyPI'dakiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir). Sınır: kurulu dosyalardan wheel özeti yeniden üretilemez (uv wheel'i açıp kurar, wheel dosyası bırakmaz); bu yüzden denetim kurulu paketin bu dosyadan kurulduğunu kanıtlamaz, yalnız PyPI'ın o sürüm için verdiği özetin değişmediğini izler."
+      }
     }
   }
 }

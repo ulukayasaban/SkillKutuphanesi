@@ -51,7 +51,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Teknoloji:** html, css, node, webgl · **Paketler:** node (renk betiği)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** zanwei (kisi, ★2079, son güncelleme 2026-08-28, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** tasarim-referans-analizi → birincil · **Roller:** ui-tasarimci · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** tasarim-referans-analizi → birincil · **Roller:** ui-tasarimci
 - **Boyut:** 709 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Üç boyutlu şema ve fazlar net; efekt boyutu diğer skillerde yok. Çok dilli README'ler boyutu şişiriyor (709 KB).
 

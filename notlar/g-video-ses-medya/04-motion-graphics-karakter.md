@@ -44,7 +44,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** gsap, hyperframes · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 28 KB (SKILL.md 18.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Sayısal, uygulanabilir teknik kataloğu; GSAP örnekleri dahil. Ev stili kökenli olsa da genel geçer değerde.
 
@@ -108,7 +108,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** hyperframes, gsap, node · **Paketler:** hyperframes (npx), node
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → birincil · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 44 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut. · 2026-11-12 yeniden incelendi (ab66e5b): seam-gate betiği `__player.seek` artık asenkron beklendiği için await ile çalışıyor (eskiden t=0'ı ölçüp tüm dikişleri hatalı gösterebilirdi); referans notu eklendi. Değerlendirme aynı.
 
@@ -140,7 +140,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** hyperframes, html, css · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.
 

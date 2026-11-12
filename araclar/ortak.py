@@ -1363,3 +1363,62 @@ def rapor_yasi_satirlari(kok=None, bugun=None, tablo=None) -> list:
         if yas > esik:
             cikti.append(f"{yol} {yas} gün önce üretilmiş (eşik {esik}); yenile: {komut}")
     return cikti
+
+
+# ================================================================== programla gelen skiller: klasör adı eşlemesi (kart alanı skill_klasorleri)
+# Kart: "skill_klasorleri": {"<skill adı>": "<skill_koku altındaki klasör adı>"}. Alan yoksa ya da ad eşlemede yoksa klasör adı skill adıdır.
+# Üç araç (skill-ekle, program-denetim, proje-kullanimi) hedefi AYNI kuralla hesaplar: skill_koku / program_skill_klasoru(kart, ad).
+SKILL_AD_DESENI = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,63}")   # fullmatch ile kullanılır
+
+
+def klasor_adi_gecerli(v):
+    """skill_koku altındaki TEK parça klasör adı: boş, '.', '..', '/', '\\', mutlak yol, NUL ve geçersiz karakter olamaz."""
+    return isinstance(v, str) and bool(SKILL_AD_DESENI.fullmatch(v)) and v not in (".", "..")
+
+
+def skill_klasorleri_hatalari(kart):
+    """Kartın skill_klasorleri alanındaki hatalar: [(alan yolu, mesaj)]. Alan yoksa boş."""
+    if not isinstance(kart, dict) or "skill_klasorleri" not in kart:
+        return []
+    sk = kart["skill_klasorleri"]
+    if not isinstance(sk, dict):
+        return [("skill_klasorleri", "sözlük olmalı (skill adı -> klasör adı)")]
+    out = []
+    for a, k in sk.items():
+        if not (isinstance(a, str) and SKILL_AD_DESENI.fullmatch(a)):
+            out.append((f"skill_klasorleri.{a}", "anahtar geçerli bir skill adı olmalı"))
+        if not klasor_adi_gecerli(k):
+            out.append((f"skill_klasorleri.{a}", "değer tek parça klasör adı olmalı (boş, '..', '/' ve mutlak yol olamaz)"))
+    # iki skill aynı klasöre ya da bir skill adı başka bir skilin klasörüne denk gelirse belirsizlik doğar
+    gecerli = [(a, k) for a, k in sk.items() if isinstance(a, str) and klasor_adi_gecerli(k)]
+    klasorler = [k for _, k in gecerli]
+    for k in sorted({x for x in klasorler if klasorler.count(x) > 1}):
+        out.append(("skill_klasorleri", f"iki skill aynı klasöre eşlenmiş: {k}"))
+    return out
+
+
+def program_skill_klasorleri(kart):
+    """Geçerli eşlemeler: {skill adı: klasör adı}. Geçersiz girdi yok sayılır (şema denetimi bildirir)."""
+    sk = kart.get("skill_klasorleri") if isinstance(kart, dict) else None
+    if not isinstance(sk, dict):
+        return {}
+    return {a: k for a, k in sk.items() if isinstance(a, str) and SKILL_AD_DESENI.fullmatch(a) and klasor_adi_gecerli(k)}
+
+
+def program_skill_klasoru(kart, ad):
+    """Skill adının skill_koku altındaki klasör adı: eşlemede varsa eşlenen ad, yoksa skill adının kendisi."""
+    return program_skill_klasorleri(kart).get(ad, ad)
+
+
+def program_skill_ham_klasoru_mu(kart, ad):
+    """True: `ad` eşlenmiş bir klasörün HAM adı (skill adı değil). Örn. nlm: 'data' (skill adı 'nlm-skill')."""
+    m = program_skill_klasorleri(kart)
+    return ad not in m and ad in m.values()
+
+
+def program_klasor_skill_adi(kart, klasor):
+    """Klasör adının skill adı (ters eşleme); eşleme yoksa klasör adı."""
+    for a, k in program_skill_klasorleri(kart).items():
+        if k == klasor:
+            return a
+    return klasor

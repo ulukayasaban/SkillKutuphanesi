@@ -1521,8 +1521,8 @@ def main():
         if _p.get("kopya", "kaynak") == "yerinde":
             _y = _p.get("yerinde") or {}
             _tur = _y.get("tur")
-            _alanlar = (_tur in ("npm-global", "git-checkout") and bool(str(_y.get("yol", "")).strip())
-                        and (bool(_y.get("paket")) if _tur == "npm-global" else bool(_y.get("dal")))
+            _alanlar = (_tur in ("npm-global", "uv-tool", "git-checkout") and bool(str(_y.get("yol", "")).strip())
+                        and (bool(_y.get("paket")) if _tur in ("npm-global", "uv-tool") else bool(_y.get("dal")))
                         and bool(_p.get("kutuphane_surumu") or _p.get("kutuphane_commit"))
                         and "kaynak_kopyasi" not in _p)
             test(f"program {_ad} (yerinde): tür/yol/paket-dal/sürüm alanları tam, KAYNAK.md ve kaynaklar.json program kaydı var",

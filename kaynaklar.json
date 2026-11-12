@@ -1222,6 +1222,23 @@
       "program": "etsyotomasyon"
     },
     {
+      "repo": "jacob-bd/gemini-notebook-mcp-cli",
+      "tip": "T5",
+      "eklendi": "2026-11-12",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-12",
+        "commit": "7c685f0de62d2c1a959210bb71ad65cc2b235073",
+        "yol_onay": "Bu repodan arşive skill yolu alınmıyor (program kaydı; skill programın paketinden bağ olarak verilir), yol taraması gerekmez",
+        "not": "K-46: kullanıcı 'bunu kütüphaneye kaydet ve takiplerini oraya göre hazırla' dedi; program olarak izlenir"
+      },
+      "eski_adlar": [
+        "jacob-bd/notebooklm-mcp-cli"
+      ],
+      "not": "2026-11-12 eklendi (kullanıcı isteği: 'bunu kütüphaneye kaydet ve takiplerini oraya göre hazırla'). Skill değil, PROGRAM (programlar.json -> nlm; PyPI paketi notebooklm-mcp-cli, uv tool ile kurulu, MIT): Gemini Notebook (NotebookLM) için komut satırı aracı ve MCP sunucusu. Paketiyle gelen nlm-skill projelere kopya olarak değil program bağı olarak verilir (--program-skill nlm:nlm-skill); arşive skill alınmaz.",
+      "program": "nlm"
+    },
+    {
       "repo": "yerel/kendi",
       "tip": "T7",
       "oncelik": 1,
@@ -1236,7 +1253,7 @@
         "tarih": "2026-11-12",
         "not": "K-32/K-37: kullanıcının kendi skilleri kütüphaneye alınır; yerel kaynak, GitHub'sız"
       },
-      "not": "Yerel kaynak (T7): kütüphane içindeki kendi/ klasörü, her skill bir klasör. GitHub'a sorulmaz, ağ gerekmez. Skilleri kullanıcı yazdı ya da bir programın paketinden alınmış anlık kopyadır (nlm-skill: nlm programının 0.15.8 paketinden; kaynak: ~/.local/share/uv/tools/notebooklm-mcp-cli/.../notebooklm_tools/data). Düzenleme akışı: kendi/<ad>/ düzenlenir, sonra kaynak-cek.py --repo yerel/kendi ve arsiv-yerlestir.py (rehber/03 'Kendi skillerim')."
+      "not": "Yerel kaynak (T7): kütüphane içindeki kendi/ klasörü, her skill bir klasör. GitHub'a sorulmaz, ağ gerekmez. Skilleri kullanıcı yazdı. nlm-skill 2026-11-12'de buradan çıkarıldı (nlm programının paketiyle gelir; projelere program bağı olarak verilir: --program-skill nlm:nlm-skill, programlar.json -> nlm); arşivdeki 0.15.8 kopyası emekli olarak durur. Düzenleme akışı: kendi/<ad>/ düzenlenir, sonra kaynak-cek.py --repo yerel/kendi ve arsiv-yerlestir.py (rehber/03 'Kendi skillerim')."
     }
   ],
   "konum_haric": [

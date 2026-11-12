@@ -10,12 +10,13 @@
 
 | Program | Tür | Karttaki | Kurulu | Son | Durum | Yerel değişiklik | Sabit sürümler |
 |---|---|---|---|---|---|---|---|
-| hyperframes | npm-global | 0.9.37 | 0.9.37 | 0.9.37 | güncel | - | - |
+| hyperframes | npm-global | 0.9.37 | 0.9.37 | 0.9.38 | YENİ SÜRÜM VAR | - | - |
+| nlm | uv-tool | 0.15.8 | 0.15.8 | 0.16.2 | YENİ SÜRÜM VAR | - | - |
 | openmontage | git-checkout | fecb9a1e | fecb9a1e | fecb9a1e | güncel | 7 değişen, 5 izlenmeyen | 11/11 |
 
 ## Kart şeması
 
-tüm kartlar geçerli
+- HATA: nlm: repo: kaynaklar.json'da bu repo için program kaydı yok
 
 ## Ortam anahtarları
 
@@ -24,6 +25,10 @@ tüm kartlar geçerli
 - hyperframes · HYPERFRAMES_NO_UPDATE_CHECK · 3/3
 - hyperframes · HYPERFRAMES_NO_TELEMETRY · 3/3
 - openmontage · HYPERFRAMES_SKIP_SKILLS · 3/3
+
+## Dikkat
+
+- nlm · kırıcı adayı: minor/major sürüm değişiyor (0.15.8 -> 0.16.2)
 
 ## Programla gelen skiller (bağlar)
 

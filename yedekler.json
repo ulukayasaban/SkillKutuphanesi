@@ -212,6 +212,21 @@
       ],
       "silme_gun": 30,
       "not": "Gizli içerik yok."
+    },
+    {
+      "kimlik": "istatistik-nlm-bag-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/istatistik-nlm-bag-2026-11-12",
+      "tur": "proje",
+      "ne": "IstatistikYoutube'da nlm-skill kütüphane kopyasından program bağına çevrilmeden ÖNCEKİ hali: .claude/skills/nlm-skill kopyası (nlm-skill-kopya) ve değişen 12 dosya (dosyalar/).",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "skill-ekle.py <proje> --kaldir nlm-skill (bağı kaldırır), sonra yedekteki dosyaları projedeki aynı yollara kopyala (cp -p) ve nlm-skill-kopya klasörünü .claude/skills/nlm-skill olarak geri koy; ya da projede skill-ekle.py --geri-al ile kurulum öncesine dön. Her geri yükleme kullanıcı onayıyla.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "nlm-skill-kopya",
+        "dosyalar"
+      ],
+      "silme_gun": 30,
+      "not": "Gizli içerik yok."
     }
   ]
 }

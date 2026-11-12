@@ -86,7 +86,7 @@ python3 araclar/skill-ekle.py ~/Projeler/site --rol 3d-gelistirici --opsiyonel -
 python3 araclar/skill-ekle.py ~/Projeler/reklam-videosu --profil ai-video-uretimi --kuru
 ```
 Bu profil OpenMontage skillerini kullanır. Raporda `bagimlilik` uyarısı çıkar: komutlar `~/.openmontage` kurulumundan çalışır.
-OpenMontage ve HyperFrames'in kendi skilleri kopya olarak değil bağ olarak verilir: `--program-skill openmontage:<ad>` (aşağıda "Programla gelen skiller: bağ").
+OpenMontage, HyperFrames ve nlm'in kendi skilleri kopya olarak değil bağ olarak verilir: `--program-skill openmontage:<ad>`, `--program-skill nlm:nlm-skill` (aşağıda "Programla gelen skiller: bağ").
 
 ## Örnek 4 — Sohbetten (Claude veya Codex'e)
 
@@ -124,15 +124,16 @@ python3 araclar/skill-ekle.py <proje> --arac ortak --evet           # ortak düz
 
 ## Programla gelen skiller: bağ
 
-Karar K-28: OpenMontage ve HyperFrames gibi programların kendi skilleri projeye **kopyalanmaz** ve hep kurulu programın sürümü olur. Projeye programın kendi skill klasörüne **bağ** (symlink) verilir; tek kaynak kurulu programdır, program güncellenince bağ kendiliğinden güncel kalır.
+Karar K-28: OpenMontage, HyperFrames ve nlm gibi programların kendi skilleri projeye **kopyalanmaz** ve hep kurulu programın sürümü olur. Projeye programın kendi skill klasörüne **bağ** (symlink) verilir; tek kaynak kurulu programdır, program güncellenince bağ kendiliğinden güncel kalır.
 
 ```bash
 # proje yolunu ÖNCE yaz (--program-skill ve --dondur birden çok değer alır)
 python3 araclar/skill-ekle.py <proje> --program-skill openmontage:ffmpeg hyperframes:hyperframes --kuru
 python3 araclar/skill-ekle.py <proje> --program-skill openmontage:ffmpeg hyperframes:hyperframes --evet
+python3 araclar/skill-ekle.py <proje> --program-skill nlm:nlm-skill --kuru   # klasörü `data`; kartta skill_klasorleri eşler, bağın adı nlm-skill
 ```
 - Her skill adıyla yazılır: `PROGRAM:AD`. `PROGRAM:*` (programın hepsi) yoktur; proje durumu açık ve gözden geçirilebilir kalsın diye.
-- Kaynak, program kartındaki (`programlar.json`) `skill_koku` klasörünün altındaki `<AD>` klasörüdür ve içinde `SKILL.md` olmalıdır. Kartta `skill_koku` yoksa ya da boşsa programın skili yok sayılır (HATA `program-skillsiz`).
+- Kaynak, program kartındaki (`programlar.json`) `skill_koku` klasörünün altındaki `<AD>` klasörüdür (kartta `skill_klasorleri` eşlemesi varsa eşlenen klasör: `nlm:nlm-skill` → `.../notebooklm_tools/data`; ham klasör adı `nlm:data` reddedilir, `program-skill-ham-klasor`) ve içinde `SKILL.md` olmalıdır. Kartta `skill_koku` yoksa ya da boşsa programın skili yok sayılır (HATA `program-skillsiz`).
 - `--profil/--rol/--skill` ile aynı çalışmada kullanılabilir. Roller kütüphane skilleri içindir: bağlı skiller rol dosyalarına yazılmaz, projedeki tüm ajanlar görür.
 - Program klasörüne hiçbir şey yazılmaz; bağı kaldırmak yalnız bağı siler.
 

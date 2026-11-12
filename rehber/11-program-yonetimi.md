@@ -3,7 +3,7 @@
 Kütüphane yalnızca skilleri değil, kullanıcının kütüphaneye "dahil et" dediği **programları** da takip eder: kendi sürümü,
 kendi kurulumu olan yapılar. Program skill değildir; `skill-ekle.py` ile projeye kurulmaz. İki tür kart var:
 - **Kaynak kopyalı** (varsayılan, `kopya` alanı yok): kaynak `programlar/<ad>/kaynak/` altında durur. Örnek: `etsyotomasyon`.
-- **Yerinde** (`"kopya": "yerinde"`): kaynak kopyalanmaz; program bu bilgisayarda kurulu haliyle izlenir. Örnek: `hyperframes`, `openmontage`.
+- **Yerinde** (`"kopya": "yerinde"`): kaynak kopyalanmaz; program bu bilgisayarda kurulu haliyle izlenir. Örnek: `hyperframes` (npm), `openmontage` (git klonu), `nlm` (uv tool, PyPI paketi).
 
 ## Nerede ne var
 - `programlar.json` — her program için kart: repo, kütüphanedeki sürüm/commit, kurulum yolları (Windows/macOS/kaynaktan),
@@ -35,15 +35,15 @@ ya da yerel yamalarla karışırdı. Kütüphane yalnızca *neyin kurulu olduğu
 
 **Kart ne taşır** (`programlar.json`; şema v2 alanları aşağıdaki "Kart şeması (v2)" tablosundadır):
 - `"kopya": "yerinde"`, `repo`; `kaynak_kopyasi` OLMAZ.
-- `yerinde`: `tur` = `npm-global` (`yol`, `paket`) ya da `git-checkout` (`yol`, `dal`). `yol` içinde `~` olabilir.
-- `kutuphane_surumu` (npm) ya da `kutuphane_commit` (git, tam sha): kütüphane oturumunun en son kaydettiği ve onayladığı kurulu sürüm.
+- `yerinde`: `tur` = `npm-global` (`yol`, `paket`), `uv-tool` (`yol` = uv tool klasörü, `paket` = PyPI paket adı) ya da `git-checkout` (`yol`, `dal`). `yol` içinde `~` olabilir.
+- `kutuphane_surumu` (npm, uv-tool) ya da `kutuphane_commit` (git, tam sha): kütüphane oturumunun en son kaydettiği ve onayladığı kurulu sürüm.
 - İsteğe bağlı: `venv` (yol içinde göreli) ve `sabit_surumler` (venv'de yükseltilmemesi gereken paketler: tam sürüm ya da `<5` gibi kısıt).
 - Ayrıca: ne yapar, lisans, ücret sınıfı, veri yeri, kendini güncelleme ve skill yazma davranışı, güncelleme adımları, `asla` listesi.
 - `programlar/<ad>/KAYNAK.md` ve `kaynaklar.json`'da repo kaydında `"program": "<ad>"` gerekir (`araclar/test.py` bunu denetler).
   Test programın bu bilgisayarda kurulu olmasını istemez.
 
 **`program-denetim.py` ne bildirir:** üç değer: *karttaki*, *kurulu* (şimdi; `package.json`, salt okuma git, dist-info dosyalarından;
-program ya da venv çalıştırılmaz) ve *son* (npm kayıt defteri ya da GitHub API'si; `git fetch` yapılmaz). Durum sözcükleri:
+program, uv, pip ya da venv çalıştırılmaz; uv-tool'da `site-packages/<paket>-*.dist-info/METADATA` içindeki `Version:`) ve *son* (npm kayıt defteri, PyPI JSON API'si (`info.version`) ya da GitHub API'si; `git fetch` yapılmaz). Durum sözcükleri:
 
 | Durum | Anlamı | Ne yapılır |
 |---|---|---|
@@ -74,6 +74,7 @@ bunu durduran anahtarlar (ortam değişkenleri) kartta listelenir. Ortam değiş
 ## Programla gelen skiller ve projelerdeki bağlar
 Kural (K-28): programın kendi skilleri (OpenMontage `.agents/skills/*`, HyperFrames `dist/skills/*`) projeye KOPYALANMAZ ve her zaman kurulu programın sürümüdür.
 - Kart alanı `skill_koku`: skill klasörlerinin üst klasörü (`~/` ya da mutlak; boş metin = programın skili yok). Gerçek klasör `<skill_koku>/<ad>/SKILL.md` kaynaktır; kartın serbest `skilleri` listesi esas alınmaz.
+- İsteğe bağlı kart alanı `skill_klasorleri` (`{"<skill adı>": "<klasör adı>"}`): skilin klasör adı skill adından farklıysa. Örnek `nlm`: `{"nlm-skill": "data"}` (skill `nlm-skill`, klasör `<skill_koku>/data`). Klasör adı tek parça olmalı (`/`, `..`, boş, mutlak yol olamaz; şema HATA verir; geçersiz eşleme kurulumda yok sayılır, dışarı çıkılmaz). Alan yoksa ya da ad eşlemede yoksa klasör adı skill adıdır. Projedeki bağın adı hep skill adıdır (`.claude/skills/nlm-skill` → `.../notebooklm_tools/data`). Ham klasör adı (`nlm:data`) reddedilir (`program-skill-ham-klasor`, mesaj doğru adı söyler); `Programdaki skiller` listesi ve `dondur-program-skili` önerisi skill adını gösterir. Üç araç (`skill-ekle.py`, `program-denetim.py`, `proje-kullanimi.py`) hedefi `ortak.program_skill_klasoru` ile aynı kuralla hesaplar.
 - Proje bağı: `python3 araclar/skill-ekle.py <proje> --program-skill PROGRAM:AD --kuru`, onayla `--evet` (rehber/01). Kayıt projenin kilidinde (`dis_skiller`); kütüphane hangi projenin neye bağlı olduğunu `python3 araclar/proje-kullanimi.py --program <ad>` ile gösterir.
 - Güncellemeden önce: `program-denetim.py --oncesi <ad>` 'bağlar' satırları: `TAMAM bağlar` (bağlar çözülüyor), `UYARI bağ kırılacak: <proje>: <skill>` (git klonunda hedef commit yerel depodaysa o commit'te skill klasörü yok), `BİLGİ hedef commit yerel depoda yok` ya da `paket indirilmeden ... bilinemez`. Ağ ve `git fetch` yoktur; kırılacak bağ kullanıcıya söylenir.
 - Güncellemeden sonra: aynı komut ya da `program-denetim.py` kırık bağı gösterir. `GÜNCELLENECEK BİR ŞEY YOK` görünümünde ve normal raporda kırık bağ HATA'dır; program kurulu değilse ya da güncelleme bekleniyorsa UYARI'dır. 'bağlar' satırı hiçbir zaman `HAZIR DEĞİL` sebebi olmaz (program yeniden kurulacaksa bağlar zaten kırık görünür).
@@ -92,11 +93,12 @@ Kural (K-28): programın kendi skilleri (OpenMontage `.agents/skills/*`, HyperFr
 ## Kart şeması (v2)
 Kartlar iki katmanlıdır. `python3 araclar/program-denetim.py --sema` kartları denetler; `--sema --siki` HATA varsa çıkış 1 verir (yalnız
 güncelleme adımlarında kullanılır). Kütüphane kapıları (`dogrula.py`, `test.py`) kart bulgularını yalnız UYARI sayar: unutulmuş bir kart alanı
-aylık birleştirmeyi durdurmaz. Yeni program için boş iskelet: `python3 araclar/program-denetim.py --iskelet kaynak|npm-global|git-checkout`
+aylık birleştirmeyi durdurmaz. Yeni program için boş iskelet: `python3 araclar/program-denetim.py --iskelet kaynak|npm-global|uv-tool|git-checkout`
 (`<DOLDUR>` yazan her yeri doldur, sonra `--sema` temiz olsun).
 
 **Çekirdek alanlar** (eksikse HATA): `giris_yolu`, `kurulum`, `geri_alma`, `cikarma`, `yedek` (yerinde kartta zorunlu, kaynak kartta isteğe bağlı), `ortam_anahtarlari` (boş liste olabilir).
-**İsteğe bağlı alanlar** (yokluğu bildirilmez; var ama geçersizse UYARI): `disariya_yazar`, `tedarik_dogrulama`, `kirici_surum`, `gizli_dosyalar`, `yerel_yamalar`, `skill_koku`.
+**İsteğe bağlı alanlar** (yokluğu bildirilmez; var ama geçersizse UYARI): `disariya_yazar`, `tedarik_dogrulama`, `kirici_surum`, `gizli_dosyalar`, `yerel_yamalar`, `skill_koku`, `skill_klasorleri` (geçersiz değer HATA).
+**Tedarik özeti türleri** (`tedarik_dogrulama.ozet.tur`): `npm-integrity` (npm dist.integrity), `pypi-sha256` (PyPI'daki o sürümün wheel `digests.sha256` değeri; `--oncesi --tedarik` PyPI'dan aynı sürümün özetini okuyup karşılaştırır), `git-commit`, `sha256`, `yok`. PyPI özeti kurulu dosyalardan yeniden üretilemez (uv wheel'i açıp kurar): denetim kurulu paketin o dosyadan kurulduğunu kanıtlamaz, yalnız PyPI'ın özetinin değişmediğini izler; birden çok platform wheel'i varsa yalnız `py3-none-any` kabul edilir.
 
 | Alan | Şekil | Ne için |
 |---|---|---|
@@ -294,6 +296,16 @@ Kütüphane oturumunun önceki konuşma belleği yoktur: `CLAUDE.md`/`AGENTS.md`
 11. preflight (openmontage skilindeki komut).
 12. Kart: `kutuphane_commit`, `KAYNAK.md`, `tedarik_dogrulama.ozet.deger`, `yerel_yamalar.bilinen` (kaybolan/yeni yama); `--sema --siki`, testler, commit.
 13. Yedek silme hatırlatması.
+
+**"nlm'i güncelle"** (uv-tool; PyPI paketi `notebooklm-mcp-cli`, kullanıcının AYRI onayıyla, her seferinde)
+0-2. HyperFrames'teki gibi, `nlm` için.
+3. `python3 araclar/program-denetim.py --oncesi nlm` (+ `proje-kullanimi.py --program nlm` ve 'bağlar' satırları): minor sürüm değişimi (0.15 -> 0.16) kırıcı adayıdır, deneme klasörü adımları geçerli. 'Bağlar' satırı için yeni sürümde `notebooklm_tools/data/SKILL.md` yerinde mi bakılır.
+4. Kullanıcıya sun: kurulu → hedef sürüm, release notu (github.com/jacob-bd/gemini-notebook-mcp-cli), kırıcı adayı mı. Sor: "nlm'i <kurulu> sürümünden <hedef> sürümüne güncelleyeyim mi? Önce yedek alırım. Bu onay yalnız bu güncelleme için geçerli."
+5. Yedek: `~/Documents/Claude/yedek/nlm-<tarih>/` altına `paket` (uv tool klasörü), `config.toml`, `KAYIT.json` (`onceki.surum`); oturum, çerez, profil, Chrome profili ve `installation.json` yedeğe KONMAZ.
+6. Hedef sürümün PyPI wheel sha256'sı `tedarik_dogrulama.ozet.deger`'e yazılır; `--oncesi nlm --hedef <hedef> --tedarik` → HAZIR (karttaki özet hedef sürüme ait değilse `--tedarik` HATA verir; bu yüzden önce özet yazılır).
+7. `uv tool install --force --python 3.12 notebooklm-mcp-cli==<hedef>` (tek sürüm sabitlenir; `uv tool upgrade` ve `latest` yok). `nlm skill ...` ve `nlm setup` ASLA çalıştırılmaz (genel skill klasörlerine ve MCP ayarlarına yazar; kapatan anahtar yoktur).
+8. `program-denetim.py` → kurulu = hedef; genel klasörlerde yeni girdi var mı (`genel-bekci.py`); 'bağlar' HATA olmamalı. Python sürümü değiştiyse kartta `skill_koku` yolundaki `python3.12` parçası düzeltilir ve bağlı projelerde `skill-ekle.py <proje> --yenile`.
+9. Kart: `kutuphane_surumu`, `programlar/nlm/KAYNAK.md`, `tedarik_dogrulama.ozet.deger` (PyPI wheel sha256); `--sema --siki`, testler, commit; yedek silme hatırlatması.
 
 **"etsyotomasyon'u güncelle"** (kaynak kopyalı): `--sema --siki`, `program-denetim.py`, `--oncesi etsyotomasyon`, CHANGELOG özeti + ayrı onay, yedek (`KAYIT.json`), kaynak kopyasını yeni etiketten yenile, `KAYNAK.md` ve kartı güncelle, commit.
 **"Yeni program ekle"**: `--iskelet <tür>` ile iskeleti al, doldur, `--sema` temiz olsun; "Yeni program eklemek" bölümünün adımları (repoyu oku, kaynak kopyası ya da yerinde kart, `kaynaklar.json` kaydı, `listeye-ekle.py`); `--oncesi <ad>` ile kuru deneme; kontroller, commit.

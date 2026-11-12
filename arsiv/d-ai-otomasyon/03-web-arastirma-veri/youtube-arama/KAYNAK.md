@@ -4,7 +4,7 @@
 
 - **Kaynak:** yerel, kullanıcının kendi skili (kütüphane içindeki `kendi/` klasörü; GitHub'da yok)
 - **Klasör:** `kendi/youtube-arama`
-- **Yerel sürüm kimliği:** `92683f1b2379601f4233441d4ee5726637b95618` (kendi/ içeriğinden türetilir)
+- **Yerel sürüm kimliği:** `e3196b0779de8bd0d1259aadb225ddae997e3b66` (kendi/ içeriğinden türetilir)
 - **Lisans:** Kendi (özel)
 - **Geliştirici:** kullanıcı (kisi)
 - **Arşive alınma:** 2026-11-12

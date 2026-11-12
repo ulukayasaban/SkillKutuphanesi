@@ -61,7 +61,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** altyazi → tamamlayıcı · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** altyazi → tamamlayıcı · **Roller:** video-kompozisyon
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede hyperframes'in references/captions.md dosyasının üstüne uygulanan doktrin olarak konumlandı (metadata internal: true). Emekli embedded-captions iş akışına atıf içeriyor; artık hyperframes skiliyle birlikte kullanılır.
 
@@ -72,7 +72,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node, heygen · **Paketler:** hyperframes (npx), node>=22, ffmpeg, HeyGen hesabı (TTS)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → alternatif · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → alternatif
 - **Boyut:** 521 KB (SKILL.md 13.2 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. HeyGen iç skilli (internal:true): HeyGen marka kimliğine, sabit seslendirmene ve repo köküne bağlı; paketlenen TT Norms Pro / ABC Solar ticari fontlarının yeniden kullanım lisansı belirsiz. Rollere eklenmedi. · 2026-11-12 yeniden incelendi: yalnız __player.seek çağrısı artık await ile (asenkron); değerlendirme aynı. Telemetri işareti yok (bu skill'de eklenmedi).
 
@@ -156,7 +156,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, figma api, gsap · **Paketler:** hyperframes (npx), FIGMA_TOKEN
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-iceri-aktarma → tamamlayıcı · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-iceri-aktarma → tamamlayıcı · **Roller:** video-kompozisyon
 - **Boyut:** 12 KB (SKILL.md 6.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede komutlar sadeleşti, storyboard kuralları (frame = keyframe) ve motion doğrulama betiği netleşti. Token sohbete yapıştırılmaz; kullanıcı kendisi ayarlar. · 2026-11-12: yeniden incelendi; eklenen: Windows için exe arama yardımcısı, başlangıç telemetri işareti. Yeni (2026-11-12 güncellemesi): skill başlarken `npx hyperframes events --skill=<ad>` çalıştırıp skill adını CLI telemetrisiyle gönderiyor (giriş yapılmışsa hesaba bağlı; HYPERFRAMES_NO_TELEMETRY=1 / DO_NOT_TRACK ile kapanır). Değerlendirme aynı.
 
@@ -247,7 +247,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap, node 22+, ffmpeg · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → birincil · **Roller:** video-kompozisyon, video-kurgu-render, motion-graphics-sanatcisi · **Globalde:** agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → birincil · **Roller:** video-kompozisyon, video-kurgu-render, motion-graphics-sanatcisi
 - **Boyut:** 1135 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi (heygen-com/hyperframes 6882293): iş akışı skilleri emekliye ayrıldı, içerikleri bu skilin references/types ve references/*.md dosyalarına taşındı; SKILL.md 7 KB'a indi, sözleşme daha net. Önceki iş akışı skillerinin (general-video, faceless-explainer, product-launch-video…) yerine birincil seçim budur. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi. · 2026-11-12 yeniden incelendi (ab66e5b): `init` artık hep `--skip-skills --skill=hyperframes` ile çağrılıyor (agent skill kurmaz/güncellemez; kurulum kullanıcının adımı); yeni skill yönlendirmeleri: /reverse-any-video (bir videoyu kopyala) ve /style-sampling (hazır stilde bölüm); plugin kurulumunda npm ev klasöründen çalışır (projedeki node_modules/.npmrc CLI'yi seçemez); yol-yürütme betikleri Windows exe aramasını kısıtlıyor; 3D için path-tracing referansı eklendi. Yeni (2026-11-12 güncellemesi): skill başlarken `npx hyperframes events --skill=<ad>` çalıştırıp skill adını CLI telemetrisiyle gönderiyor (giriş yapılmışsa hesaba bağlı; HYPERFRAMES_NO_TELEMETRY=1 / DO_NOT_TRACK ile kapanır). Kalite aynı.
 
@@ -258,7 +258,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, node 22+, ffmpeg, chrome · **Paketler:** hyperframes (npx), node>=22, ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı · **Roller:** video-kurgu-render · **Globalde:** agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı · **Roller:** video-kurgu-render
 - **Boyut:** 129 KB (SKILL.md 7.4 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-11: ses (audio_*) lint denetimleri ve yeni render bayrakları eklendi; bulut render ayrı HyperFrames OAuth'una (~/.hyperframes) taşındı, ücretli planda son render için cloud render öneriliyor (yerel render ücretsiz). Telemetri girişten sonra hesaba bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır. Node 22+ ve FFmpeg gerekir. · 2026-11-12 yeniden incelendi (ab66e5b): `init` her zaman `--skip-skills`; `skills` komutu agent'ın değil kullanıcının adımı olarak kaldı; yeni `share` (inceleme paylaşımı: --public yalnızca açık istekle, ücretsiz katmanda 5 proje; legacy `publish` 60 günlük bildirim penceresiyle duruyor); 1440p ön ayarları, --chroma-subsampling 444, 1080p'de her en-boy oranı; `check` lint hatasında bile tarayıcı denetimlerini çalıştırıyor, `npm run` yerine doğrudan `npx hyperframes check`; FFmpeg/FFprobe'u proje klasöründen otomatik bulmuyor (güvenlik: PATH ya da ortam değişkeni). Bulut kimlik sırası: host token > `auth login` oturumu > API anahtarları. Yeni (2026-11-12 güncellemesi): skill başlarken `npx hyperframes events --skill=<ad>` çalıştırıp skill adını CLI telemetrisiyle gönderiyor (giriş yapılmışsa hesaba bağlı; HYPERFRAMES_NO_TELEMETRY=1 / DO_NOT_TRACK ile kapanır). Kalite aynı.
 
@@ -268,7 +268,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** canvas, docker, ffmpeg, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif · **Globalde:** agents:farkli
+- **Durum:** alternatif
 - **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
@@ -279,7 +279,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı · **Roller:** video-kompozisyon, motion-graphics-sanatcisi · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 83 KB (SKILL.md 4.4 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede ~400 → ~450 öğe; yerel arama katmanları (words / on-device) ve 'gap' raporlama eklendi. Arama İngilizce yapılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi. · 2026-11-12 yeniden incelendi; tek değişiklik başlangıç telemetri işareti. Yeni (2026-11-12 güncellemesi): skill başlarken `npx hyperframes events --skill=<ad>` çalıştırıp skill adını CLI telemetrisiyle gönderiyor (giriş yapılmışsa hesaba bağlı; HYPERFRAMES_NO_TELEMETRY=1 / DO_NOT_TRACK ile kapanır). Değerlendirme aynı.
 
@@ -289,7 +289,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** canvas, css, gsap, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** alternatif
 - **Boyut:** 18 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
@@ -299,7 +299,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** canvas, css, gsap, html, node, webgl _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif · **Globalde:** agents:farkli
+- **Durum:** alternatif
 - **Boyut:** 157 KB (SKILL.md 21.0 KB, yük orta)
 - **İnceleme:** otomatik
 
@@ -363,7 +363,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, heygen, ffmpeg, python 3.10+ (kokoro tts) · **Paketler:** node, hyperframes auth login (HyperFrames OAuth), heygen CLI (yardımcı tarifler için), ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-medya → birincil · **Roller:** video-kompozisyon, ses-tasarimci, video-kurgu-render · **Globalde:** claude:farkli, codex:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-medya → birincil · **Roller:** video-kompozisyon, ses-tasarimci, video-kurgu-render
 - **Boyut:** 1900 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — 2026-11: giriş 'npx hyperframes auth login' (HyperFrames OAuth); 'media-use generate' ile heygen CLI olmadan üretim eklendi. Kredi harcamada ücretsiz yola geçmeme ve fiyat söylememe yönergesi kullanıcının ücretsiz-önce tercihiyle çelişir. Telemetri girişten sonra HeyGen hesabına bağlanır; HYPERFRAMES_NO_TELEMETRY=1 ile kapatılır. · 2026-11-12 yeniden incelendi (ab66e5b): Voice Turbo artık Free planda ayda 3 dk (ücretli planda sınırsız değil kota), HeyGen giriş oturumu env API anahtarının önüne geçti; kredi sınırı artık `.hyperframes/credit-limit.json` dosyasına yazılıyor ve her ücretli çağrı onu aşmayı reddediyor (--max-credits yalnızca sıkılaştırır); yeni lipsync ve cutout (arka plan silme) türleri, kendi ses kaydını (audio) kullanma, nano-banana-2.1 / gpt-image-2.6 modelleri; Python yardımcıları çalışma klasörünü sys.path'ten çıkarıyor, proje .env yalnızca sağlayıcı anahtarlarını okuyor (HEYGEN_API_BASE vb. yok sayılır: güvenlik sıkılaştırması). Fiyat söylememe / ücretsize kendiliğinden geçmeme yönergesi sürüyor. Telemetri artık skill başlangıç işaretiyle de (`npx hyperframes events --skill=media-use`) gidiyor; kapatma ayarı HYPERFRAMES_CONFIG_DIR'a da uyuyor.
 
@@ -419,14 +419,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 2715 KB (SKILL.md 23.7 KB, yük orta) · **Bağımlılık:** Lisans PolyForm Noncommercial 1.0.0: yalnızca ticari olmayan kullanım serbest. ffmpeg, node ve Python 3 ister; seslendirme için Kokoro (~/.cache/kokoro/venv altına kurulur) ve faster-whisper.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (urun-tanitim-filmi grubunda birincil). Tek konulu uzman repo; hareket kütüphanesi (lib/motion.js), 12 betik, ritim ve süreklilik ölçümü, 7 referans belgesi. Yerel ve ücretsiz çalışır. Çalıştırma testi yapılmadı. DİKKAT: lisans PolyForm Noncommercial 1.0.0 (yalnızca ticari olmayan kullanım); GitHub lisansı tanımadığı için kayıtta NOASSERTION görünür. Örnek filmler ve GIF'ler (cases/, gallery/, assets/) arşive alınmadı.
 
-### openmontage  ·  yerel/kendi @ 92683f1  ·  puan 73 (B)
+### openmontage  ·  yerel/kendi @ e3196b0  ·  puan 73 (B)
 
 - **Ne yapar:** OpenMontage video stüdyosuna giriş skili: video isteğini bilgisayardaki OpenMontage kurulumuna yönlendirir. Önce program kılavuzunu (AGENT_GUIDE.md) okutur, venv python'u ve ffmpeg yolunu içeren komut kalıbını ve ön kontrolü verir, ücretsiz yerel yolu (stok görüntü, Piper Türkçe seslendirme, yerel araçlar) anlatır, bilinen tuzakları ve sabit paket sürümlerini yazar; /backlot, /ink-art, /animated-drawing, /reel isteklerini programın kendi komutlarına yönlendirir.
 - **Ne zaman:** Video üretimi, montaj, explainer, seslendirme, altyazı, YouTube indirme/transkript, arka plan silme, upscale gibi işler OpenMontage ile yapılacaksa. · **Ne zaman değil:** OpenMontage kurulu değilse ya da iş HyperFrames/Remotion ile tek başına kurulabilecek kısa bir kompozisyonsa (HyperFrames skilleri yeterli).
 - **Teknoloji:** python, ffmpeg, remotion, hyperframes · **Paketler:** OpenMontage kurulumu (~/.openmontage, kendi venv'i), ffmpeg-full (drawtext ve subtitles için), Piper Türkçe modeli (isteğe bağlı)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (commands); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
 - **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-12, lisans Kendi (özel))
-- **Durum:** tercih · **Örtüşme:** video-uretim-programi → birincil · **Roller:** video-kurgu-render · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** video-uretim-programi → birincil · **Roller:** video-kurgu-render
 - **Boyut:** 11 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kullanıcının kendi giriş skili; makineye özgü mutlak yollar içerir (taşınabilir değil, bilerek). Güncelliği OpenMontage kartına bağlıdır (sabit sürümler, yerel yamalar): kart değişince gözden geçirilir. Program lisansı AGPL-3.0; bu skil yalnız giriş notudur.
 
@@ -437,7 +437,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, gsap, css · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni, codex:ayni, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-ev-stili → tamamlayıcı · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa, kontrol listeli ve UI demo videolarında yüksek getirili.
 
@@ -744,7 +744,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, remotion, react, python · **Paketler:** hyperframes (npx), remotion
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** hyperframes-iceri-aktarma → tamamlayıcı · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** hyperframes-iceri-aktarma → tamamlayıcı · **Roller:** video-kompozisyon
 - **Boyut:** 164 KB (SKILL.md 5.1 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — 2026-11: SSIM karşılaştırması betikler yerine `npx hyperframes diff` komutuna taşındı (render_diff.sh/frame_strip.sh kaldırıldı); box-sizing kuralı ve lottie/timing notları eklendi. Üç seviyeli model (Native/Hosted/Media) korunuyor. · 2026-11-12 yeniden incelendi; tek değişiklik başlangıç telemetri işareti. Yeni (2026-11-12 güncellemesi): skill başlarken `npx hyperframes events --skill=<ad>` çalıştırıp skill adını CLI telemetrisiyle gönderiyor (giriş yapılmışsa hesaba bağlı; HYPERFRAMES_NO_TELEMETRY=1 / DO_NOT_TRACK ile kapanır). Değerlendirme aynı.
 
@@ -775,7 +775,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Teknoloji:** hyperframes, html, gsap · **Paketler:** hyperframes (npx)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
-- **Durum:** tercih · **Örtüşme:** sunum-desteleri → tamamlayıcı · **Roller:** video-kompozisyon · **Globalde:** claude:farkli, agents:farkli
+- **Durum:** tercih · **Örtüşme:** sunum-desteleri → tamamlayıcı · **Roller:** video-kompozisyon
 - **Boyut:** 48 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncellemede SKILL.md 497 satırdan ~45 satıra indi; kurallar özlü. ttsScript alanları henüz bağlı değil. · 2026-11-12: yeniden incelendi; tek değişiklik başlangıç telemetri işareti. Yeni (2026-11-12 güncellemesi): skill başlarken `npx hyperframes events --skill=<ad>` çalıştırıp skill adını CLI telemetrisiyle gönderiyor (giriş yapılmışsa hesaba bağlı; HYPERFRAMES_NO_TELEMETRY=1 / DO_NOT_TRACK ile kapanır). Değerlendirme aynı.
 

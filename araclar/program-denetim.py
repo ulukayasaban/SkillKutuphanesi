@@ -4,8 +4,9 @@ GitHub'daki en son sürümle karşılaştırır ve kopya klasörünün var oldu�
 karttaki, kurulu ve son değeri karşılaştırır.
 
 İki kart türü var: 'kaynak' (varsayılan; kaynak kopyası kütüphanede) ve 'yerinde' (kopya yok; program bu bilgisayarda kurulu:
-npm-global paket ya da git-checkout). 'yerinde' kartta üç değer bakılır: karttaki, kurulu (şimdi), son (GitHub/npm). Kurulu değer
-sadece dosya okuyarak (package.json, salt okuma git, dist-info/METADATA) bulunur; npm, pip, venv python, programın kendisi ÇALIŞMAZ.
+npm-global paket, uv-tool (uv tool ile kurulu PyPI paketi) ya da git-checkout). 'yerinde' kartta üç değer bakılır: karttaki, kurulu (şimdi),
+son (GitHub/npm/PyPI). Kurulu değer sadece dosya okuyarak (package.json, salt okuma git, dist-info/METADATA) bulunur; npm, uv, pip, venv python,
+programın kendisi ÇALIŞMAZ.
 Hiçbir şey kurmaz, indirmez, güncellemez; program komutlarını çalıştırmaz; anahtar/oturum dosyalarını açmaz (yalnız var/yok bakar).
 Ağ hatası denetimi düşürmez ("öğrenilemedi" yazar; 404 ile ağ hatası ayrı sınıflanır).
 
@@ -17,7 +18,7 @@ Kullanım:
   (bağlar) Bir ya da daha çok projede programla gelen skill bağı varsa (projelerin kilit.json 'dis_skiller'; skill-ekle.py --program-skill)
   rapor ve --oncesi 'bağlar' satırları ekler: hedef şimdi var mı; git-checkout'ta hedef commit yerel depodaysa güncellemeden sonra
   kırılacak bağlar (UYARI 'bağ kırılacak'). Bağ yoksa çıktı değişmez. Kırık bağ yalnız güncelleme dışı görünümde HATA; HAZIR DEĞİL sebebi olmaz.
-  python3 araclar/program-denetim.py --iskelet {kaynak|npm-global|git-checkout}   # boş kart iskeleti
+  python3 araclar/program-denetim.py --iskelet {kaynak|npm-global|uv-tool|git-checkout}   # boş kart iskeleti
   python3 araclar/program-denetim.py --pin-listesi AD         # venv'deki paket==sürüm listesi
   ortak: --kart PATH --cikti PATH --ev DIZIN --yedek-koku DIZIN --kok DIZIN
 Çıkış kodu: 0 araç doğru çalıştı (ne bulursa bulsun); 1 yalnız --siki ile ve sonuç 'sorun'/'HAZIR DEĞİL' ise; 2 kullanım hatası.
@@ -37,7 +38,8 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KOK, GhBulunamadi, api_kapali, gh_api, json_oku, repo_guncel, repo_takma_adlari  # noqa: E402
+from ortak import (KOK, GhBulunamadi, api_kapali, gh_api, json_oku, program_skill_klasoru, repo_guncel, repo_takma_adlari,  # noqa: E402
+                   skill_klasorleri_hatalari)
 
 
 def surum_ayikla(etiket):
@@ -59,11 +61,11 @@ def durum(kutuphane, son):
 
 
 
-YERINDE_TURLER = ("npm-global", "git-checkout")
+YERINDE_TURLER = ("npm-global", "uv-tool", "git-checkout")
 
 
 _EV = None  # --ev: '~' bu klasöre çevrilir (testler gerçek ev klasörüne bakmasın)
-_SON_HATA = {}  # ("npm", paket) / ("git", repo) -> "404" | "ag" | "kapali" (son çağrının nasıl başarısız olduğu)
+_SON_HATA = {}  # ("npm", paket) / ("pypi", paket) / ("git", repo) -> "404" | "ag" | "kapali" (son çağrının nasıl başarısız olduğu)
 
 
 def yol_ac(yol, ev=None):
@@ -118,6 +120,55 @@ def npm_integrity(paket, surum, zaman_asimi=8):
         _SON_HATA[("npm-integrity", paket)] = "ag"
         return None
     return v if isinstance(v, str) and v.strip() else None
+
+
+def uv_kurulu_surum(yol, paket):
+    """uv tool ortamının site-packages/<paket>-*.dist-info/METADATA 'Version:' değeri (yalnız dosya okur; uv/pip/python çalışmaz).
+    Klasör ya da paket yoksa None (program bu bilgisayarda yok)."""
+    try:
+        return dist_info_oku(yol).get(paket_adi(paket))
+    except OSError:
+        return None
+
+
+def _pypi_json(url, zaman_asimi, anahtar):
+    """PyPI JSON API'sinden bir GET (salt okuma); hata sınıfı _SON_HATA[anahtar]'a yazılır, hata olursa None."""
+    try:
+        with urllib.request.urlopen(url, timeout=zaman_asimi) as r:
+            d = json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        _SON_HATA[anahtar] = "404" if getattr(e, "code", None) == 404 else "ag"
+        return None
+    except Exception:  # noqa: BLE001  ağ/ayrıştırma: denetim düşmez
+        _SON_HATA[anahtar] = "ag"
+        return None
+    return d if isinstance(d, dict) else None
+
+
+def pypi_son_surum(paket, zaman_asimi=8):
+    """PyPI'daki son sürüm (https://pypi.org/pypi/<paket>/json -> info.version; pip/uv yok, sadece urllib); hata olursa None."""
+    d = _pypi_json(f"https://pypi.org/pypi/{paket}/json", zaman_asimi, ("pypi", paket))
+    v = (d.get("info") or {}).get("version") if d else None
+    if isinstance(v, str) and v.strip():
+        _SON_HATA.pop(("pypi", paket), None)
+        return v
+    _SON_HATA.setdefault(("pypi", paket), "ag")
+    return None
+
+
+def pypi_ozet(paket, surum, zaman_asimi=8):
+    """PyPI'daki bir sürümün wheel dosyasının digests.sha256 değeri (salt okuma GET); alınamazsa ya da wheel belirsizse None.
+    Birden çok wheel varsa yalnız 'py3-none-any' olan kabul edilir (tek, platformdan bağımsız); yoksa None."""
+    d = _pypi_json(f"https://pypi.org/pypi/{paket}/{surum}/json", zaman_asimi, ("pypi-ozet", paket))
+    if not d:
+        return None
+    wheeller = [u for u in (d.get("urls") or []) if isinstance(u, dict) and u.get("packagetype") == "bdist_wheel"]
+    if len(wheeller) > 1:
+        wheeller = [u for u in wheeller if str(u.get("filename", "")).endswith("-py3-none-any.whl")]
+    if len(wheeller) != 1:
+        return None
+    v = (wheeller[0].get("digests") or {}).get("sha256")
+    return v.strip().lower() if isinstance(v, str) and v.strip() else None
 
 
 def git_okuma(yol, *args):
@@ -193,7 +244,7 @@ def ham_surum(v):
 
 def yerinde_durum(tur, kart, kurulu, son, geride=None):
     """'yerinde' kartın durum sözcüğü. Sıra: kurulu yok -> kart eski -> son bilinmiyor -> yeni sürüm / güncel.
-    npm-global'de önce düz metinle kart eşitliği, sonra sürüm sayıyla; git-checkout'ta commit eşitliğiyle.
+    npm-global ve uv-tool'da önce düz metinle kart eşitliği, sonra sürüm sayıyla; git-checkout'ta commit eşitliğiyle.
     git'te geride == 0 ise (kurulu commit GitHub dalından geri değil) sha farklı olsa da 'güncel'."""
     if not kurulu:
         return "bu bilgisayarda kurulu değil"
@@ -307,6 +358,9 @@ def yerinde_denetle(ad, p):
     if tur == "npm-global":
         r["kurulu"] = npm_kurulu_surum(yol)
         r["son"] = npm_son_surum(y.get("paket", "")) if r["kurulu"] else None
+    elif tur == "uv-tool":
+        r["kurulu"] = uv_kurulu_surum(yol, y.get("paket", ""))
+        r["son"] = pypi_son_surum(y.get("paket", "")) if r["kurulu"] else None
     elif tur == "git-checkout":
         r["kurulu"], r["degisen"], r["izlenmeyen"] = git_kurulu(yol)
         if r["kurulu"]:
@@ -314,7 +368,8 @@ def yerinde_denetle(ad, p):
                 r["son"], r["geride"] = git_son(p["repo"], y.get("dal", "main"), r["kurulu"])
     r["durum"] = yerinde_durum(tur, r["kart"], r["kurulu"], r["son"], r["geride"])
     if r["kurulu"] and r["son"] is None:  # son sürüm alınamadı: 404 mü (repo/paket yok), ağ mı?
-        anahtar = ("npm", y.get("paket", "")) if tur == "npm-global" else ("git", p.get("repo"))
+        anahtar = (("npm", y.get("paket", "")) if tur == "npm-global" else ("pypi", y.get("paket", "")) if tur == "uv-tool"
+                   else ("git", p.get("repo")))
         r["son_hata"] = _SON_HATA.get(anahtar)
         if r["son_hata"] == "404" and tur == "git-checkout" and p.get("repo"):
             try:
@@ -418,7 +473,7 @@ YER_TUTUCU = "<DOLDUR>"
 UCRETLER = ("ucretsiz", "kismen", "ucretli")
 DISARIYA_TURLER = ("veri", "program", "skill", "bag", "ayar", "cikti", "onbellek", "anahtar")
 YAMA_TURLER = ("izlenen", "izlenmeyen", "venv")
-OZET_TURLER = ("sha256", "npm-integrity", "git-commit", "yok")
+OZET_TURLER = ("sha256", "npm-integrity", "pypi-sha256", "git-commit", "yok")
 CEKIRDEK_ALANLAR = ("giris_yolu", "kurulum", "geri_alma", "cikarma", "yedek", "ortam_anahtarlari")
 ISTEGE_BAGLI_ALANLAR = ("disariya_yazar", "tedarik_dogrulama", "kirici_surum", "gizli_dosyalar", "yerel_yamalar")
 _HEX40 = re.compile(r"[0-9a-f]{40}")
@@ -545,6 +600,8 @@ def _kart_sema(ad, p, kok, kaynaklar, projeler, ev=None):
                 H("skill_koku", "mutlak yol ya da ~/ ile başlamalı")
             elif p.get("kopya", "kaynak") == "yerinde" and not yol_ac(sk, ev).is_dir():
                 U("skill_koku", "bu bilgisayarda yok (program kurulu mu?)")
+    for alan, m in skill_klasorleri_hatalari(p):
+        H(alan, m)
     if liste_ok("asla", p.get("asla")):
         pass
     if liste_ok("guncelleme_adimlari", p.get("guncelleme_adimlari")):
@@ -564,14 +621,14 @@ def _kart_sema(ad, p, kok, kaynaklar, projeler, ev=None):
         else:
             enum_ok("yerinde.tur", tur, YERINDE_TURLER)
             metin_ok("yerinde.yol", y.get("yol"))
-            if tur == "npm-global":
+            if tur in ("npm-global", "uv-tool"):
                 metin_ok("yerinde.paket", y.get("paket"))
                 metin_ok("kutuphane_surumu", p.get("kutuphane_surumu"))
             elif tur == "git-checkout":
                 metin_ok("yerinde.dal", y.get("dal"))
         if "kaynak_kopyasi" in p:
             H("kaynak_kopyasi", "yerinde kartta kaynak_kopyasi olmamalı")
-        if tur == "npm-global":
+        if tur in ("npm-global", "uv-tool"):
             pass
         elif tur == "git-checkout" and not _dolu(p.get("kutuphane_commit")):
             if not _HEX40.fullmatch(str(p.get("kutuphane_commit", ""))):
@@ -764,6 +821,8 @@ def _kart_sema(ad, p, kok, kaynaklar, projeler, ev=None):
                         U("tedarik_dogrulama.ozet.deger", "git-commit için 40 haneli sha olmalı")
                     elif p.get("kutuphane_commit") and dg != p.get("kutuphane_commit"):
                         U("tedarik_dogrulama.ozet.deger", "kutuphane_commit ile aynı olmalı")
+            elif oz.get("tur") == "pypi-sha256" and not _dolu(oz.get("deger", "")) and not re.fullmatch(r"[0-9a-f]{64}", str(oz.get("deger", ""))):
+                U("tedarik_dogrulama.ozet.deger", "pypi-sha256 için 64 haneli küçük harfli sha256 olmalı")
     return s
 
 
@@ -794,6 +853,9 @@ def iskelet(tur):
         k.update({"kutuphane_surumu": D, "kutuphane_commit": D, "kaynak_kopyasi": D, "surum_kaynagi": D})
     elif tur == "npm-global":
         k.update({"kopya": "yerinde", "yerinde": {"tur": "npm-global", "yol": D, "paket": D},
+                  "kutuphane_surumu": D, "surum_kaynagi": D})
+    elif tur == "uv-tool":
+        k.update({"kopya": "yerinde", "yerinde": {"tur": "uv-tool", "yol": D, "paket": D},
                   "kutuphane_surumu": D, "surum_kaynagi": D})
     elif tur == "git-checkout":
         k.update({"kopya": "yerinde", "yerinde": {"tur": "git-checkout", "yol": D, "dal": "main"},
@@ -1167,11 +1229,12 @@ def proje_baglari(ctx):
 
 
 def bag_hedefi(p, ctx, skill):
-    """Bağın şimdiki hedefi: kartın skill_koku/ad yolu (kilitteki 'hedef' kullanılmaz); kartta skill_koku yoksa None."""
+    """Bağın şimdiki hedefi: kartın skill_koku/<klasör> yolu (klasör: skill_klasorleri eşlemesi, yoksa skill adı; kilitteki 'hedef'
+    kullanılmaz); kartta skill_koku yoksa None."""
     sk = p.get("skill_koku") if isinstance(p, dict) else None
     if not isinstance(sk, str) or not sk.strip() or _dolu(sk) or not _BAG_AD.fullmatch(skill):
         return None
-    return os.path.join(os.path.abspath(str(yol_ac(sk, ctx.ev))), skill)
+    return os.path.join(os.path.abspath(str(yol_ac(sk, ctx.ev))), program_skill_klasoru(p, skill))
 
 
 def bag_hedef_var(hedef):
@@ -1236,7 +1299,7 @@ def bag_kirilacak(ad, p, ctx, hedef_g, kurulu, git, y):
     goreli = goreli.replace(os.sep, "/")
     S, tamam = [], 0
     for b, _, _ in liste:
-        klasor = ("" if goreli == "." else goreli + "/") + b["skill"]
+        klasor = ("" if goreli == "." else goreli + "/") + program_skill_klasoru(p, b["skill"])
         if git_okuma(yol, "cat-file", "-e", f"{hedef_g}:{klasor}/SKILL.md") is None:
             S.append(("UYARI", "bağlar", f"bağ kırılacak: {b['proje']}: {b['skill']} ({hedef_g[:8]} sürümünde {klasor} yok)"))
         else:
@@ -1265,6 +1328,8 @@ def oncesi_denetle(ad, p, ctx):
     kurulu, git_say = None, (0, 0)
     if tur == "npm-global":
         kurulu = npm_kurulu_surum(y.get("yol", ""))
+    elif tur == "uv-tool":
+        kurulu = uv_kurulu_surum(y.get("yol", ""), y.get("paket", ""))
     elif git:
         kurulu, d_, i_ = git_kurulu(yol_ac(y.get("yol", ""), ctx.ev))
     else:
@@ -1277,6 +1342,9 @@ def oncesi_denetle(ad, p, ctx):
         if tur == "npm-global":
             son = npm_son_surum(y.get("paket", ""))
             son_hata = _SON_HATA.get(("npm", y.get("paket", "")))
+        elif tur == "uv-tool":
+            son = pypi_son_surum(y.get("paket", ""))
+            son_hata = _SON_HATA.get(("pypi", y.get("paket", "")))
         elif git:
             son, geride = git_son(p.get("repo", ""), y.get("dal", "main"), kurulu)
             son_hata = _SON_HATA.get(("git", p.get("repo")))
@@ -1446,6 +1514,20 @@ def tedarik_kontrol(p, ctx, kurulu, hedef):
                 S.append(("TAMAM", "tedarik", "registry integrity kayıtla aynı"))
             else:
                 S.append(("HATA", "tedarik", "registry integrity kayıttan farklı"))
+    elif oz.get("tur") == "pypi-sha256":
+        if not oz.get("deger"):
+            S.append(("BİLGİ", "tedarik", "PyPI sha256 kayıtsız"))
+        elif ctx.cevrimdisi:
+            S.append(("ATLANDI", "tedarik", "atlandı: çevrimdışı"))
+        else:
+            y = p.get("yerinde") if isinstance(p.get("yerinde"), dict) else {}
+            canli = pypi_ozet(y.get("paket", ""), hedef or kurulu)
+            if canli is None:
+                S.append(("UYARI", "tedarik", "PyPI wheel sha256 alınamadı"))
+            elif canli == oz["deger"]:
+                S.append(("TAMAM", "tedarik", "PyPI wheel sha256 kayıtla aynı"))
+            else:
+                S.append(("HATA", "tedarik", "PyPI wheel sha256 kayıttan farklı"))
     return S
 
 
@@ -1655,7 +1737,7 @@ def main(argv=None):
     g = ap.add_mutually_exclusive_group()
     g.add_argument("--sema", action="store_true", help="kart şeması denetimi")
     g.add_argument("--oncesi", metavar="AD", help="güncellemeden önce salt okuma ön kontrol")
-    g.add_argument("--iskelet", choices=("kaynak", "npm-global", "git-checkout"), help="yeni program için boş kart iskeleti")
+    g.add_argument("--iskelet", choices=("kaynak", "npm-global", "uv-tool", "git-checkout"), help="yeni program için boş kart iskeleti")
     g.add_argument("--pin-listesi", dest="pin_listesi", metavar="AD", help="venv'deki paket==sürüm listesi")
     ap.add_argument("--hedef", help="--oncesi: hedef sürüm ya da commit (sha en az 7 hane)")
     ap.add_argument("--cevrimdisi", action="store_true", help="ağa hiç gitme")
