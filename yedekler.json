@@ -112,6 +112,22 @@
       "silme_olay": "Genel klasörler boşaltıldı, projeler kullanıcı tarafından sınandı ve kullanıcı 'sil' dedi",
       "silme_olay_tamam": false,
       "not": "58 MB. Gizli adlı dosya yok (ad taraması). Genel klasörler boşaltılıp projeler doğrulandıktan sonra, kullanıcı 'sil' derse silinir."
+    },
+    {
+      "kimlik": "ayar-2026-11-12-2",
+      "yol": "~/Documents/Claude/yedek/ayar-2026-11-12-2",
+      "tur": "ayar-dosyasi",
+      "ne": "HYPERFRAMES_NO_TELEMETRY satırı eklenmeden önceki ~/.claude/settings.json, ~/.zshrc ve ~/.zshenv (2026-11-12, kullanıcı onayı K-36)",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Her dosyayı yerine kopyala: claude-settings.json.yedek -> ~/.claude/settings.json, zshrc.yedek -> ~/.zshrc, zshenv.yedek -> ~/.zshenv. Önce mevcut dosyanın .onceki kopyasını al; settings.json'ın geçerli JSON olduğunu doğrula (içeriği ekrana basma). Her dosya ayrı onayla. Uyarı: yedekler düz metin anahtar satırı içerir; geri yüklemek onu da geri getirir. Ayrıntı: rehber/13, 'Ayar dosyası'.",
+      "gizli_icerir": "evet",
+      "beklenen": [
+        "claude-settings.json.yedek",
+        "zshrc.yedek",
+        "zshenv.yedek"
+      ],
+      "silme_gun": 30,
+      "not": "Gizli içerikli olduğu için en çok 30 gün tutulur; süre dolunca aylık özet silinsin mi diye sorar."
     }
   ]
 }

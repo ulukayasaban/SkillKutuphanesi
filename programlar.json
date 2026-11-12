@@ -229,6 +229,13 @@
           "gerekli": false,
           "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
           "not": "Güncelleme kontrolünü kapatır; 2026-11-12'de kullanıcı onayıyla üç yere eklendi."
+        },
+        {
+          "ad": "HYPERFRAMES_NO_TELEMETRY",
+          "beklenen": "1",
+          "gerekli": false,
+          "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
+          "not": "Kullanım bildirimini kapatır (güncel skiller her başlangıçta 'hyperframes events' ile bildirim ister); 2026-11-12'de kullanıcı onayıyla üç yere eklendi."
         }
       ],
       "gizli_dosyalar": ["~/.hyperframes/config.json"],
