@@ -5,7 +5,7 @@
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
-| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 24 | — | tam | 2026-11-07 |
+| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 17 | claude, codex | tam | 2026-11-12 |
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
@@ -17,24 +17,17 @@
 |---|---|---|---|---|
 | `captions-overlay--kutuphane` (kimlik `captions-overlay`) | heygen-com/hyperframes | `f8309b3` | — |  |
 | `cut-the-curve--kutuphane` (kimlik `cut-the-curve`) | heygen-com/hyperframes | `f8309b3` | — |  |
-| `d3-viz` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `de-ai-ify` | heyitsnoah/claudesidian | `6c56f35` | — |  |
 | `design-taste-frontend` | Leonxlnx/taste-skill | `12af471` | — |  |
 | `high-end-visual-design` | nexu-io/open-design | `987b247` | — |  |
 | `huashu-art-motion` | nexu-io/open-design | `e03d5c2` | — |  |
-| `hyperframes` | heygen-com/hyperframes | `f8309b3` | — |  |
 | `hyperframes-registry--kutuphane` (kimlik `hyperframes-registry`) | heygen-com/hyperframes | `f8309b3` | — |  |
 | `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
-| `manim-composer` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
-| `manimce-best-practices` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `motion-design--kutuphane` (kimlik `motion-design`) | nexu-io/open-design | `12d970e` | — | kütüphanede şimdi `motion-design@nexu-io` |
 | `motion-doctrine--kutuphane` (kimlik `motion-doctrine`) | heygen-com/hyperframes | `f8309b3` | — |  |
-| `pose-library-design` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `seam-craft--kutuphane` (kimlik `seam-craft`) | heygen-com/hyperframes | `f8309b3` | — |  |
-| `svg-character-animation` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
-| `visual-style` | OpenMontageInc/OpenMontage | `195eab2` | — |  |
 | `yt-package` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-retention` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-script` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
