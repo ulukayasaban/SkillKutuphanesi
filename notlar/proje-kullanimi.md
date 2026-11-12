@@ -9,7 +9,7 @@
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
-| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 23 (+2 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
+| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 26 (+2 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
 
 ## Akil Disi Youtube Kanali
 
@@ -136,6 +136,7 @@ Profil: — · Roller: etsy-coordinator, etsy-research, etsy-product-rights, ets
 | `cut-the-curve` | heygen-com/hyperframes | `f8309b3` | — |  |
 | `data-visualization` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `design-critique` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
+| `design-dna` | zanwei/design-dna | `593e39b` | — |  |
 | `explore-data` | anthropics/knowledge-work-plugins | `2574e29` | — |  |
 | `gsap-core` | greensock/gsap-skills | `aed9cfd` | — |  |
 | `gsap-performance` | greensock/gsap-skills | `aed9cfd` | — |  |
@@ -145,6 +146,8 @@ Profil: — · Roller: etsy-coordinator, etsy-research, etsy-product-rights, ets
 | `humanizer` | blader/humanizer | `0ef9fe5` | — |  |
 | `motion-design` | lottiefiles/motion-design-skill | `f9a8a04` | — | 2026-10-15'ten beri bu sürüm kullanılıyor (edit-026); 2026-11-07'de kütüphaneden kurulup güncellemesi izlenmeye başlandı. |
 | `motion-doctrine` | heygen-com/hyperframes | `ab66e5b` | — |  |
+| `nlm-skill` | yerel/kendi | `92683f1` | — |  |
+| `openmontage` | yerel/kendi | `92683f1` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `5f2bc03` | — |  |
 | `seam-craft` | heygen-com/hyperframes | `f8309b3` | — |  |
 | `statistical-analysis` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
@@ -166,6 +169,7 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 | `context-engineering` | AntigravityTest2, Etsy-Yeni |
 | `cut-the-curve` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `design-critique` | Etsy-Arif, IstatistikYoutube |
+| `design-dna` | Etsy-Arif, IstatistikYoutube |
 | `design-taste-frontend` | Akil Disi Youtube Kanali, AntigravityTest2 |
 | `huashu-art-motion` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `impeccable` | AntigravityTest2, Etsy-Arif |
