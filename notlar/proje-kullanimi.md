@@ -21,11 +21,11 @@
 | `design-taste-frontend` | Leonxlnx/taste-skill | `12af471` | — |  |
 | `high-end-visual-design` | nexu-io/open-design | `987b247` | — |  |
 | `huashu-art-motion` | nexu-io/open-design | `e03d5c2` | — |  |
-| `hyperframes-registry--kutuphane` (kimlik `hyperframes-registry`) | heygen-com/hyperframes | `f8309b3` | — |  |
+| `hyperframes-registry--kutuphane` (kimlik `hyperframes-registry`) | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
 | `motion-design--kutuphane` (kimlik `motion-design`) | nexu-io/open-design | `12d970e` | — | kütüphanede şimdi `motion-design@nexu-io` |
-| `motion-doctrine--kutuphane` (kimlik `motion-doctrine`) | heygen-com/hyperframes | `f8309b3` | — |  |
+| `motion-doctrine--kutuphane` (kimlik `motion-doctrine`) | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `openmontage` | yerel/kendi | `92683f1` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `seam-craft--kutuphane` (kimlik `seam-craft`) | heygen-com/hyperframes | `f8309b3` | — |  |
