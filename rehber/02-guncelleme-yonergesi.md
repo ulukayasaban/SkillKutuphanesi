@@ -112,7 +112,7 @@ git push origin --delete guncelleme/2026-11                             # 5. uza
 ### Güncellemeden sonra kontrol et
 - `git -C ~/Documents/SkillKutuphanesi show --stat HEAD` → hangi skiller değişti.
 - Rollerde kullanılan bir skill **kaldırıldıysa** `dogrula.py` HATA verir → rol dosyasını düzelt.
-- Bir skill'in globaldeki durumu değiştiyse (ör. global sürüm güncellendi) kurulum adı değişebilir;
+- Bir skill'in globaldeki durumu değiştiyse (ör. global sürüm güncellendi; genel klasörler boş olduğundan bugün nadir) kurulum adı değişebilir;
   `skill-ekle.py --guncelle` bunu `ad-degisti` uyarısıyla bildirir.
 
 ### Güncellemeden sonra yeniden inceleme
@@ -171,15 +171,15 @@ Kütüphane kopyasını elle değiştirmek yerine:
 Birleştirmeden sonra o projelerde `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
 
 ## 4) Global skiller
-Makine genelindeki skiller (`~/.claude/skills`, `~/.agents/skills`) bu sistemle (`arsiv-guncelle.py`) güncellenmez; kütüphane bunları
-`globalde` alanında karşılaştırır. Ama **OpenMontage ve HyperFrames programlarının** ve skillerinin güncellemesi, programların kendi güncelleme komutuyla
+Makine genelindeki skill klasörleri (`~/.claude/skills`, `~/.agents/skills`) 2026-11-12'de boşaltıldı (K-40); orada skill yoktur ve `globalde` karşılaştırması boş kalır.
+Orada bir şey yeniden belirirse bu sistemle (`arsiv-guncelle.py`) güncellenmez. Ama **OpenMontage ve HyperFrames programlarının** ve skillerinin güncellemesi, programların kendi güncelleme komutuyla
 (`hyperframes update`, `/openmontage`) tek başına yapılmaz: kütüphane oturumu yapar, her seferinde kullanıcı onayıyla (`rehber/11-program-yonetimi.md`, "Yerinde program").
 Takip: `python3 araclar/program-denetim.py`.
 
 Kalıcı kural: `HYPERFRAMES_SKIP_SKILLS=1` tanımlı değilken HyperFrames'in `init`, `skills`, `skills update` ve `update`
 komutları çalıştırılmaz; bu komutlar genel skill klasörlerine yazabilir. Kartta hangi komutun neyi yazdığı listelidir
-(`programlar.json` → `hyperframes`). 2026-11-11 itibarıyla genel skill klasörleri boşaltılmadı; değişken aynı gün `~/.zshenv`, `~/.zshrc` ve `~/.claude/settings.json` → `env`
-içine yazıldı (kabuk başlatmadan süreç çalıştıran masaüstü uygulamalarını kapsamaz). Güncel durum için kartın `simdi` alanına bak.
+(`programlar.json` → `hyperframes`). Genel skill klasörleri 2026-11-12'de boşaltıldı; değişken `~/.zshenv`, `~/.zshrc` ve `~/.claude/settings.json` → `env`
+içine yazıldı (dört HyperFrames kilidi tanımlı: SKIP_SKILLS, NO_AUTO_INSTALL, NO_UPDATE_CHECK, NO_TELEMETRY) (kabuk başlatmadan süreç çalıştıran masaüstü uygulamalarını kapsamaz). Güncel durum için kartın `simdi` alanına bak.
 OpenMontage makine genelinde skill bağı kurmaz; güncellemesi bağları yeniden kurmaz.
 
 ## Güncelleme takvimi (öneri)

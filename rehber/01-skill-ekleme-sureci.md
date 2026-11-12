@@ -9,7 +9,7 @@
 - Bir projede `ui-tasarimci` agent'ına `impeccable` verirsen, sadece o projedeki `ui-tasarimci` onu önyükler.
 - Aynı projedeki diğer agent'lar için: Claude'da önyüklenmez (ama gerekirse Skill aracıyla çağırabilir);
   Codex'te ise o rolün `.toml` dosyasında açıkça **kapatılır**.
-- Genel klasörlerdeki (~/.claude/skills, ~/.agents/skills, ~/.codex/skills) skiller bu araçla yönetilmez. Genel klasörler boşaltıldıktan sonra (rehber/12-genel-klasor-bosaltma.md) eski projeler ve agent'lar yalnız kendi proje klasöründeki skilleri görür; skill gerekiyorsa o projeye bu araçla kurulur. Programla gelen skiller bağ ile, yalnız genel klasörde kalmış eski skiller dondurma ile projeye alınır (aşağıda).
+- Genel klasörlerdeki (~/.claude/skills, ~/.agents/skills, ~/.codex/skills) skiller bu araçla yönetilmez. Genel klasörler 2026-11-12'de boşaltıldı (rehber/12-genel-klasor-bosaltma.md): projeler ve agent'lar yalnız kendi proje klasöründeki skilleri görür; skill gerekiyorsa o projeye bu araçla kurulur. Programla gelen skiller bağ ile, kaynağı artık hiçbir yerde verilmeyen eski skiller dondurma ile projeye alınır (aşağıda); kendi skillerin `kendi/` klasöründen `--skill` ile kurulur.
 
 ## Süreç (her seferinde aynı)
 
@@ -161,15 +161,15 @@ Sonraki komutlar:
 Dikkat:
 - Bağ makineye özeldir (mutlak yol): başka bilgisayarda ve Windows'ta çalışmaz; paylaşılan bir git deposuna girmesin (`.gitignore`'a ekle ya da yalnız bu Mac'te kullan). Proje bir git deposuysa ve bağ yolları ignore edilmiyorsa UYARI `bag-git-izlenir`; araç proje `.gitignore`'una yazmaz.
 - Bağlı skillin Codex, Antigravity ve Cursor tarafından keşfedildiği sınanmadı; Claude Code'da çalışır. Program kurulu değilse bağ asılı kalır (`--dogrula` kırık sayar).
-- Program güncellenmeden önce `python3 araclar/program-denetim.py --oncesi <program>` hangi bağların kırılacağını göstermelidir (rehber/11). Bu kısım ayrı bir adımda eklenir; o zamana kadar program güncellemesinden sonra `--dogrula` ile bak.
+- Program güncellenmeden önce `python3 araclar/program-denetim.py --oncesi <program>` hangi bağların kırılacağını göstermelidir (rehber/11). Program güncellemesinden sonra da `--dogrula` ile bak.
 
 ## Dondurma
 
-Yalnız bir genel klasörde (ör. `~/.claude/skills`) kalmış ve hiçbir program ya da kütüphane kaynağının artık vermediği eski bir skill projenin kendi skili olarak **dondurulur**: araç içeriği bir kez kopyalar, kilide `tur: "donmus"` yazar, kütüphane onu bir daha güncellemez ve kaynağını izlemez.
+Bir klasörde (ör. bir yedekte) duran ve hiçbir program ya da kütüphane kaynağının artık vermediği eski bir skill projenin kendi skili olarak **dondurulur**: araç içeriği bir kez kopyalar, kilide `tur: "donmus"` yazar, kütüphane onu bir daha güncellemez ve kaynağını izlemez.
 
 ```bash
-python3 araclar/skill-ekle.py <proje> --dondur ~/.claude/skills/eski-skill --kuru
-python3 araclar/skill-ekle.py <proje> --dondur ~/.claude/skills/eski-skill --evet
+python3 araclar/skill-ekle.py <proje> --dondur <klasör>/eski-skill --kuru
+python3 araclar/skill-ekle.py <proje> --dondur <klasör>/eski-skill --evet
 ```
 - Yerleşim kütüphane skilleriyle aynıdır (`ortak`: gerçek klasör `.agents/skills/<ad>` + `.claude/skills/<ad>` göreli bağı; `yalniz-claude`: gerçek klasör `.claude/skills/<ad>`). Kaynaktaki dosya bağları çözülür; kopyada bağ kalmaz. İçerik hiç değiştirilmez.
 - Reddedilen durumlar (hepsi `--zorla` ile geçilemez): `dondur-yol` (mutlak yol değil), `dondur-ad` (geçersiz klasör adı), `dondur-kaynak-yok` (klasör ya da SKILL.md yok), `dondur-program-skili` (skill bir programla geliyor: `--program-skill` kullan), `dondur-kutuphane-adi` (projede aynı adlı kütüphane skili var), `dondur-kendisi` (kaynak projenin kendi klasöründe), `dondur-gizli` (`.env`, `.npmrc`, `id_rsa*`, `*.pem`, `*.key`, `credentials`, `.ssh`, `.git` gibi gizli değer taşıyabilecek dosya/klasör adı; dosyalar açılmaz, yalnız adlara bakılır), `dondur-dis-baglanti` (klasör bağı, klasör dışına giden ya da bozuk dosya bağı), `dondur-ozel-dosya` (FIFO/soket), `dondur-cok-buyuk` (200 MB, 5000 dosya ya da 2000 klasör üstü). Sınır bilerek sıkıdır: kaynak klasörün içinde tek bir dosya bağı bile klasör dışına gidiyorsa ya da bozuksa dondurma durur (klasör içinde kalan dosya bağları sorun değildir). Ayrıca `dondur-kendisi`, kaynak projeyi kendi içinde barındırıyorsa da verilir. Bağ kurarken: aynı `--program-skill` komutu yeniden çalışınca bağın yerinde elle konmuş gerçek klasör varsa `bag-gercek-klasor` ile durur (klasör silinmez).

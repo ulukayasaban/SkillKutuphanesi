@@ -16,7 +16,7 @@ A1  Başlangıç ve bul. `git status --short` BOŞ olmalı; değilse DUR ve kull
     Karar kutusu (yukarıda): skill mi, program mı, ikisi mi. Aday kararı: bölüm F.
 A2  İncele, tablo yap (kullanıcıya gösterilecek): ne yapıyor, kaç SKILL.md ve nerede (gh api ... git/trees), LİSANS (riskli sayılanlar:
     belirtilmemiş / NOASSERTION / AGPL / ticari-olmayan; tabloya kırmızı yaz, dogrula.py de uyarı verir), son güncelleme, ücret, trend, çakışma kontrolü (aynı ad / aynı iş / repo içi çoklu sürüm /
-    aynı adlı kendi skill; genel klasörler boşaltıldıktan sonra "global'de aynı ad" maddesi anlamsızdır, boşalmadan önce hâlâ bak), GÜVENLİK OKUMASI (en az bir SKILL.md ve her betik
+    aynı adlı kendi skill; genel klasörler 2026-11-12'de boşaltıldı: "global'de aynı ad" maddesi yalnız orada bir şey yeniden belirirse önemlidir), GÜVENLİK OKUMASI (en az bir SKILL.md ve her betik
     klasörünün örneği: ağdan kod indirip çalıştırma, proje dışına yazma, gizli bilgi okuma, `curl | sh`), UYUM (Claude'a özgü araç ister mi: TodoWrite, Task aracı...;
     Codex/Antigravity'de çalışmayacaksa tabloya yaz). Repo sabit commit'i: `gh api repos/OWNER/REPO/commits/HEAD --jq .sha` (A4'te onay.commit olacak).
     Çakışma/ücret/projeden bağımsız değerlendirme kuralları aşağıda "A2 ek" bölümünde.

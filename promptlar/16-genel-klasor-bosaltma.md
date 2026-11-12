@@ -1,6 +1,6 @@
 # 16 — Genel Skill Klasörlerini Boşaltma ya da Bekçi Raporuna Bakma
 
-**Ne zaman:** (A) Genel skill klasörlerini (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`) yedekleyip boşaltmaya karar verdiğinde.
+**Ne zaman:** (A) Genel skill klasörlerini (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`) yeniden yedekleyip boşaltman gerektiğinde (ilk boşaltma 2026-11-12'de yapıldı, K-40; `rehber/12` başındaki "Uygulandı" notuna bak).
 (B) Bekçi raporunda `YENİ`, `KAYIP`, `DEĞİŞTİ` ya da ortam anahtarı sorunu çıktığında / orada beklenmeyen bir girdi belirdiğinde.
 **Nerede:** `~/Documents/SkillKutuphanesi` klasöründe. Her adım ayrı onay ister (ONAY GEREKİR); bekçi hiçbir şeyi kendisi çalıştırmaz.
 

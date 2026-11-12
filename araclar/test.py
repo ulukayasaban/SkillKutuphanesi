@@ -1047,7 +1047,7 @@ def kurulum_yol_testleri():
         asil = (se.istek_coz, se.on_kontrol, se.kapsam_raporu)
         try:
             se.istek_coz = lambda a_, sk_: ([(ed, None)], [], None, [])
-            se.on_kontrol = lambda proje_, kilit_, plan_, roller_, sk_, rapor_, zorla_=False: ({ed["id"]: (ed, set())}, {ed["id"]: "yt-ed"})  # HATA'sız ön kontrol
+            se.on_kontrol = lambda proje_, kilit_, plan_, roller_, sk_, rapor_, zorla_=False, dis_liste=None: ({ed["id"]: (ed, set())}, {ed["id"]: "yt-ed"})  # HATA'sız ön kontrol
             se.kapsam_raporu = lambda *a_, **k_: None
             with contextlib.redirect_stdout(io.StringIO()) as cikti_ed:
                 se.ekle(argparse.Namespace(arac=None, blok=None, oner=None, zorla=False, evet=True, kuru=False, skill=["yt-ed"]), ped, [ed])

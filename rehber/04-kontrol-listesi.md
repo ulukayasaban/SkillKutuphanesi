@@ -19,7 +19,7 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `ayni-klasor` | HATA* | `.claude/skills` ve `.agents/skills` aynı klasör | İkisini ayrı klasör yap (araç kendisi bağlar) |
 | `gecersiz-rol-adi` | HATA* | Rol adı küçük harf/rakam/- dışında karakter içeriyor | Geçerli ad ver |
 | `kendi-agent-dosyan` | HATA* | `.claude/agents/<rol>.md` ya da `.codex/agents/<rol>.toml` senin dosyan | Rolü başka adla ekle |
-| `global-cakisma-yeni` | UYARI | Kurulumdan sonra globale aynı adlı farklı skill eklenmiş (Claude'da global kazanır) | `--kaldir` + yeniden ekle (ekli adla kurulur) |
+| `global-cakisma-yeni` | UYARI | Kurulumdan sonra globale aynı adlı farklı skill eklenmiş (Claude'da global kazanır; genel klasörler boş olduğundan yalnız orada bir şey yeniden belirirse) | `--kaldir` + yeniden ekle (ekli adla kurulur) |
 | `kaynak-yok` | UYARI | Kurulu skill'in kaynağı kütüphanede artık yok | Projede olduğu gibi kalır; başka repo'nunki otomatik konmaz |
 | `onarilacak` | BİLGİ | Eksik/bozuk kurulum (`--guncelle` onarır) | — |
 | `ucretli` | UYARI | Skill **ancak** ücretli bir API/abonelik/lisansla çalışır; ücretsiz kullanım yolu yok (`notlar/ucretli-skiller.md`) | Ücretsiz alternatifini seç; gerekiyorsa bilerek onayla |
@@ -58,7 +58,7 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `aciklama-onarim` | BİLGİ | Description kurulan kopyada düzeltilir (registry `aciklama_duzeltme`; yorum arkasındaki frontmatter başa alınır, YAML'ı bozan description tırnaklanır). `--guncelle` mevcut kurulumlara da uygular | Bilgi; arşivdeki orijinal değişmez |
 | `ekli-ad` | BİLGİ | Globalde farklı bir sürüm olduğu için `--kutuphane` ekli adla kurulur | Agent dosyaları bu adı kullanır |
 | `hesap-cakismasi` | BİLGİ | Claude hesabında (claude.ai, `~/.claude/skills/synced/`) aynı adlı skill var; agent onu (`anthropic-skills:<ad>`) seçerdi. Proje `.claude/settings.json` → `skillOverrides` ile hesaptaki o projede `off` yapılır; `--dogrula` denetler, `--guncelle` onarır | Hesaptakini istiyorsan değeri `"on"` yap (araç dokunmaz) |
-| `globalde-ayni` | BİLGİ | Globalde birebir aynısı var | Sorun değil |
+| `globalde-ayni` | BİLGİ | Globalde birebir aynısı var (genel klasörler boş; yalnız orada bir şey yeniden belirirse) | Sorun değil |
 | `arac-surumu` | BİLGİ | Claude ve Codex'e ayrı uyarlanmış sürümler kurulacak | — |
 | `alt-skill` | BİLGİ | Başka bir skill'in alt klasörü | Üst skill'i de kurmak isteyebilirsin |
 | `gizli-katalog` | BİLGİ | Entegrasyon ya da repo-içi katalogdan | — |
@@ -93,4 +93,4 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 4. Kurulumdan sonra `--dogrula` sonucunu bildir.
 5. Global skill klasörlerine elle dosya kopyalama, symlink ya da silme yapma.
 6. Hangi araçlarla açılacağını sormadan ilk kurulum yapma (`arac-secimi-yok`).
-(Not: bu 6. kural henüz kütüphanenin CLAUDE.md / AGENTS.md dosyalarında yazılı değil; metni onay bekliyor, `notlar/duzen-denetimi-2026-11/onay-bekleyen/p1-claude-agents-md.md`.)
+(Not: bu 6. kural kütüphanenin CLAUDE.md / AGENTS.md dosyalarında "Skill ekleme akışı" 1. adımında yazılıdır.)

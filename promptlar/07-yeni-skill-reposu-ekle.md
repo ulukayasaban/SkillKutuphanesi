@@ -13,7 +13,7 @@ Yapay Zeka Skillleri listeme yeni repolar ekledim, kontrol et ve kütüphaneye d
    ÜCRET (ücretli = ücret ödemeden HİÇ kullanılamıyor; ücretli servis sadece bir seçenekse ya da ücretsiz katman varsa kısmen), GitHub trend durumu,
    güvenlik okuması (proje dışına yazma, ağdan kod indirme), Claude'a özgü araç gereksinimi, tip (T1–T6) ve kategori önerisi, ve program mı skill mı.
    ÇAKIŞMA KONTROLÜ (zorunlu): aynı ADLI skill (registry.json 'ad'; içerik aynı mı farklı mı), aynı İŞİ yapan skill (ortusme_grubu; birincil/tamamlayıcı/alternatif),
-   repo içinde aynı adlı birden fazla SKILL.md, aynı adlı kendi skill'in (global klasörler henüz boşaltılmadıysa onlar da).
+   repo içinde aynı adlı birden fazla SKILL.md, aynı adlı kendi skill'in (global klasörler 2026-11-12'de boşaltıldı; orada bir şey yeniden belirdiyse onlar da).
    Kural: çıplak ad kendiliğinden el değiştirmez; yeni gelen ad@kaynak olur. Ad aynı, iş farklıysa eski kaydı durum_elle ile tercih sabitle ve iki kayda fark notu yaz.
    Çıplak adı bilerek devretmek (ad_devral) için önce python3 araclar/proje-kullanimi.py --skill <ad> ve rolleri kontrol et, bana sor.
    Değerlendirmeyi yalnızca repo/skill'in kendi niteliğiyle yap; notlara ve öncelik gerekçesine proje adı ya da "şu projeye uyar" yazma.

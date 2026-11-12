@@ -7,7 +7,7 @@ GitHub'da yıldızladığın repolardaki agent skillerinin **yerel, tekrarsız, 
 Cursor, VS Code Copilot (`yapay-zeka-araclari.json`, [rehber/14](rehber/14-yapay-zeka-araclari.md)).
 
 - Kütüphane araçları global skill klasörlerine (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, `~/.openmontage`) hiçbir zaman yazmaz.
-  Bu klasörler boşaltılacak (karar: `notlar/kararlar.md` K-04); yöntem ve yedek: [rehber/12](rehber/12-genel-klasor-bosaltma.md), [rehber/13](rehber/13-yedek-ve-geri-alma.md).
+  Bu klasörler 2026-11-12'de boşaltıldı (karar: `notlar/kararlar.md` K-04, K-40); yöntem ve yedek: [rehber/12](rehber/12-genel-klasor-bosaltma.md), [rehber/13](rehber/13-yedek-ve-geri-alma.md).
   Skiller yalnız projenin içine kurulur.
 - Hiçbir şey otomatik kurulmaz; her kurulumdan önce ön kontrol raporu çıkar.
 

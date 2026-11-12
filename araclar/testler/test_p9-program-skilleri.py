@@ -62,6 +62,9 @@ def kayit(ad, **ek):
     return s
 
 
+sahte_kayit_yap = kayit                       # 'kayit' adı sonraki bölümlerde başka değere bağlanır
+
+
 def uygula(alan, ad, icerik="x\n"):
     d = alan / ad
     d.mkdir(parents=True, exist_ok=True)
@@ -1139,6 +1142,48 @@ try:
     finally:
         se.DONDUR_TAVAN_KLASOR = eski_tavan
     test("B10. klasör sayısı tavanı aşılınca dondur-cok-buyuk", k != 0 and "dondur-cok-buyuk" in o, o)
+
+    # ================================================================== C. ön kontrol: ../<kardeş>/ kardeşi bağ ya da donmuş skill olarak projede
+    print("C. kardes-eksik ve dış skiller")
+
+    def kardesli(ad, kardes_ad):
+        k = sahte_kayit_yap(ad, kardes_bagimliliklari={kardes_ad: {"id": kardes_ad, "dosya_sayisi": 1}})
+        (Path(k["yol"]) / "SKILL.md").write_text(fm(ad) + f"Oku ../{kardes_ad}/ref.md\n", encoding="utf-8")
+        SAHTE_KAYIT.append(k)
+        return k
+
+    def kardes_uyari(o, kardes_ad):
+        return [l for l in o.splitlines() if "kardes-eksik" in l and f"../{kardes_ad}/" in l]
+    kardesli("kd-kullanan", "hyperframes-x")
+    kardesli("kd-donmus", "eski-skill")
+    kardesli("kd-yabanci", "yok-boyle-kardes")
+    p = yeni_proje()
+    k, o = calistir(p, "--skill", "kd-kullanan", "--kuru")
+    test("C1. kardeş projede yok: UYARI kardes-eksik (taban davranış korunur)", len(kardes_uyari(o, "hyperframes-x")) == 1, o)
+    pb = yeni_proje()
+    k, o = calistir(pb, "--program-skill", "fakeprog:hyperframes-x", "--evet")
+    k2, o2 = calistir(pb, "--skill", "kd-kullanan", "--kuru")
+    test("C2. kardeş projede program bağı olarak kayıtlı (kilit dis_skiller): kardes-eksik UYARI yok", k == 0 and not kardes_uyari(o2, "hyperframes-x"), o + o2)
+    p = yeni_proje()
+    k, o = calistir(p, "--skill", "kd-kullanan", "--program-skill", "fakeprog:hyperframes-x", "--kuru")
+    test("C3. kardeş aynı çalışmada --program-skill ile isteniyor: kardes-eksik UYARI yok", not kardes_uyari(o, "hyperframes-x"), o)
+    pd = yeni_proje()
+    k, o = calistir(pd, "--dondur", GENEL / "eski-skill", "--evet")
+    k2, o2 = calistir(pd, "--skill", "kd-donmus", "--kuru")
+    test("C4. kardeş projede donmuş skill olarak kayıtlı: kardes-eksik UYARI yok", k == 0 and not kardes_uyari(o2, "eski-skill"), o + o2)
+    p = yeni_proje()
+    k, o = calistir(p, "--skill", "kd-donmus", "--dondur", GENEL / "eski-skill", "--kuru")
+    test("C5. kardeş aynı çalışmada --dondur ile isteniyor: kardes-eksik UYARI yok", not kardes_uyari(o, "eski-skill"), o)
+    p = yeni_proje()
+    k, o = calistir(p, "--skill", "kd-yabanci", "--program-skill", "fakeprog:hyperframes-x", "--kuru")
+    test("C6. başka adlı kardeş için UYARI sürer (dış skill adı yalnız kendi adını karşılar)", len(kardes_uyari(o, "yok-boyle-kardes")) == 1, o)
+    pk = yeni_proje()
+    calistir(pk, "--program-skill", "fakeprog:hyperframes-x", "--evet")
+    k, o = calistir(pk, "--skill", "kd-kullanan", "--evet")
+    kl = kilit_oku(pk)
+    test("C7. kardeş bağ olarak varken kurulum geçer, kilitte skill ve bağ birlikte durur, --dogrula temiz",
+         k == 0 and "kd-kullanan" in kl["skiller"] and "hyperframes-x" in kl.get("dis_skiller", {}) and calistir(pk, "--dogrula")[0] == 0, o)
+
     test("B10. sahte program ve genel klasörler değişmedi (yeni sahte skiller dışında)", agac(TMP / "program") == KORUMA[0])
 
 finally:

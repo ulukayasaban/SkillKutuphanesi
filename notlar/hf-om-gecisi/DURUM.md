@@ -47,6 +47,8 @@ Tek istisna: kütüphanenin kendi rutin kontrolleri (`dogrula.py`, `test.py`, `p
   Çalışma sırası: boşluk denetimi (akışlar + araç uyumu) → tasarım → uygulama → inceleme. Çalışma kâğıtları scratchpad `plan/`.
 
 ## Adım çizelgesi
+**2026-11-12: 2., 3. ve 4. adımlar TAMAMLANDI** (program güncellemeleri; genel klasörlerin boşaltılması K-40; proje geçişleri K-38 IstatistikYoutube, K-41 Akıl Dışı). Aşağıdaki satırlar o günün öncesini anlatır; kalan işler "Düzen denetimi" bölümündeki "GÜNCEL (2026-11-12 08:40)" notundadır.
+
 | Adım | İş | Kapı | Durum |
 |---|---|---|---|
 | 1 | Kütüphane içi hazırlık: skillerdeki sabit genel yol / eklenti kökü / kardeş yol taraması, kurulumda yol çevirisi, yeni ön kontrol kodları, aylık zincire yol ve program denetimi | yok (onaylı) | bitti (2026-11-11; özet `1-adim-kalan-is.md`) |

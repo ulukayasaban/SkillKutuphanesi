@@ -116,7 +116,7 @@ aylık birleştirmeyi durdurmaz. Yeni program için boş iskelet: `python3 aracl
 Kartlara gizli değer, parola, anahtar ve proje adı yazılmaz; `--sema` bunları da denetler. Uzun anlatım kartta değil bu belgededir.
 
 ## Boşaltma sonrası program erişimi (giriş yolları)
-Genel skill klasörleri (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`) boşaltılınca bir ajan programlara bu klasörlerden ulaşamaz.
+Genel skill klasörleri (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`) 2026-11-12'de boşaltıldı; bir ajan programlara bu klasörlerden ulaşamaz.
 Her kartın `giris_yolu` alanı, hangi aracın programa nasıl ulaşacağını yazar. Beş durum sözcüğü:
 `yerinde` (yol bugün var ve boşaltmadan sonra da kalır), `program-klasoru` (programın kendi kılavuz dosyalarıyla; oturum program klasöründe açılır
 ya da istem kılavuzu okutur), `proje-skili` (projeye `skill-ekle.py` ile kurulan skill ya da komut satırı dosyası), `karar-bekliyor` (kullanıcı kararı
@@ -124,12 +124,12 @@ bekliyor), `yok` (desteklenmiyor).
 
 | Program | Araç | Durum | Yol / nasıl |
 |---|---|---|---|
-| hyperframes | hepsi | proje-skili | `/usr/local/bin/hyperframes`; skiller projeye `skill-ekle.py --skill <kimlik>` ile kurulur |
-| openmontage | claude-code | karar-bekliyor | bugün `~/.claude/commands/openmontage.md` komutu + `~/.claude/CLAUDE.md` satırı + `~/.claude/skills/openmontage` |
+| hyperframes | hepsi | proje-skili | `/usr/local/bin/hyperframes`; skiller projeye `skill-ekle.py <proje> --program-skill hyperframes:<ad>` ile bağlanır |
+| openmontage | claude-code | proje-skili | `.claude/skills/openmontage/SKILL.md` (kütüphaneden `skill-ekle.py <proje> --skill openmontage`); genel `~/.claude/CLAUDE.md` notu ve üç komut projedeki skili gösterir |
 | openmontage | codex, antigravity, cursor, vscode-copilot | program-klasoru | oturumu `~/.openmontage` klasöründe aç (`AGENTS.md`, `CODEX.md` orada) ya da istemde "önce `~/.openmontage/AGENT_GUIDE.md` oku" yaz |
 | etsyotomasyon | hepsi | yok | araç-özel giriş yok; komut satırı ve localhost paneli |
 
-Açık kullanıcı kararı: boşaltmadan sonra OpenMontage'in Claude Code girişinin (komut + giriş skili) yeri. Karar gelince kartta `giris_yolu.araclar.claude-code`
+OpenMontage'in Claude Code girişinin (komut + giriş skili) yeri karara bağlandı (2026-11-12, K-32): proje skili. Yol değişirse kartta `giris_yolu.araclar.claude-code`
 (`durum`, `yol`, `nasil`) kullanıcı onayıyla güncellenir. Her boşaltma adımından sonra `python3 araclar/program-denetim.py --oncesi hyperframes` ve
 `--oncesi openmontage` çalıştırılır: `giriş yolu` ve `ortam` satırları TAMAM/BİLGİ kalmalıdır; yol değişirse kart güncellenir (kullanıcı onayıyla).
 
@@ -172,7 +172,7 @@ git -C ~/.openmontage ls-files --others --exclude-standard --directory -z | (cd 
 # kartta yedek: "kopya" olan izlenmeyen yolları kopyala (örnek; liste karttaki yerel_yamalar.bilinen'den alınır)
 (cd ~/.openmontage && rsync -aR remotion-composer/remotion.config.ts remotion-composer/src/Explainer.tsx.bak-2026-09-20 remotion-composer/src/Explainer.tsx.bak-2026-09-30 .agents/skills/gsap-plugins/SKILL.md.2026-10-15-oncesi "$YEDEK/izlenmeyen/")
 python3 araclar/program-denetim.py --pin-listesi openmontage > "$YEDEK/pip-freeze.txt"
-for l in ~/.claude/skills/*; do [ -L "$l" ] && readlink "$l" | grep -q '/\.openmontage/' && echo "$(basename "$l") -> $(readlink "$l")"; done > "$YEDEK/bag-listesi.txt"
+python3 araclar/proje-kullanimi.py --program openmontage > "$YEDEK/bag-listesi.txt"   # projelerdeki bağlar; genel klasörde bağ yok
 python3 - "$YEDEK" <<'PY'
 import datetime, json, pathlib, subprocess, sys
 y = pathlib.Path(sys.argv[1])
@@ -290,7 +290,7 @@ Kütüphane oturumunun önceki konuşma belleği yoktur: `CLAUDE.md`/`AGENTS.md`
 7. `--oncesi openmontage` → HAZIR.
 8. `git -C ~/.openmontage fetch origin main` ve `git pull --ff-only` (onay 5. adımdaki cümleyle verildi; `origin` adresi değiştirilmez); çakışma olursa "Yerel yamalar" 2-3. adımlar.
 9. Bağımlılıklar: `requirements.txt` farkı varsa kullanıcıya göster; `make setup` olduğu gibi çalıştırılmaz; gereken adımlar tek tek, `HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_AUTO_INSTALL=1 HYPERFRAMES_NO_UPDATE_CHECK=1` tanımlıyken; `pip install -U` yok.
-10. `--oncesi`/denetim: sabit sürümler N/N, kurulu = hedef; yamalar yerinde ("kayıtlı ama değişmemiş" olmamalı); `~/.claude/skills` bağları kırık mı; `program-denetim.py --oncesi openmontage --cevrimdisi` 'bağlar' satırlarında HATA olmamalı (olursa projeye göre `--yenile`/`--kaldir` için kullanıcıya sor).
+10. `--oncesi`/denetim: sabit sürümler N/N, kurulu = hedef; yamalar yerinde ("kayıtlı ama değişmemiş" olmamalı); projelerdeki bağlar kırık mı; `program-denetim.py --oncesi openmontage --cevrimdisi` 'bağlar' satırlarında HATA olmamalı (olursa projeye göre `--yenile`/`--kaldir` için kullanıcıya sor).
 11. preflight (openmontage skilindeki komut).
 12. Kart: `kutuphane_commit`, `KAYNAK.md`, `tedarik_dogrulama.ozet.deger`, `yerel_yamalar.bilinen` (kaybolan/yeni yama); `--sema --siki`, testler, commit.
 13. Yedek silme hatırlatması.
@@ -301,4 +301,4 @@ Kütüphane oturumunun önceki konuşma belleği yoktur: `CLAUDE.md`/`AGENTS.md`
 
 ## Aylık takip
 Aylık özet `python3 araclar/program-denetim.py --ozet-json` komutunu çalıştırır (tek JSON nesnesi verir, dosya yazmaz, çıkış 0). `YENİ SÜRÜM VAR`, `KART ESKİ`, `kırıcı adayı` ve kart şeması bulguları kullanıcıya soru olur;
-hiçbir zaman kendiliğinden güncelleme yapılmaz. `karar_bekleyen` metinleri sürüm taşır (örnek `hyperframes 0.9.23 -> 0.9.34 güncellemesi: kullanıcı onayı bekliyor`): kapatılmış bir karar o sürüm için tekrar sorulmaz, yeni hedef sürüm yeni soru üretir.
+hiçbir zaman kendiliğinden güncelleme yapılmaz. `karar_bekleyen` metinleri sürüm taşır (örnek `hyperframes 0.9.37 -> <yeni sürüm> güncellemesi: kullanıcı onayı bekliyor`): kapatılmış bir karar o sürüm için tekrar sorulmaz, yeni hedef sürüm yeni soru üretir.

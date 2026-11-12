@@ -125,7 +125,7 @@
         "yazmaz": "render, preview, lint, `hyperframes skills check` ve paketin kurulumu/güncellemesi (`npm install -g`) skill yazmaz; arka plandaki skill kontrolü yalnız sayar ve uyarı basar",
         "klasorler": "~/.claude/skills (CLAUDE_CONFIG_DIR varsa onun altındaki skills) ve ~/.agents/skills; kayıt ~/.agents/.skill-lock.json. Ayna adımı: ~/.claude/skills içindeki skilleri, üst klasörü varsa, diğer ajanların genel klasörlerine sembolik bağla yansıtır. Bu bilgisayarda hedef olabilecekler (üst klasörü var; örnek): ~/.gemini/antigravity/skills, ~/.gemini/antigravity-cli/skills, ~/.gemini/skills, ~/.cursor/skills, ~/.copilot/skills. Hedefin skills klasörü yoksa ama üst klasörü varsa onu da oluşturup bağ koyar (listede çok daha fazla ajan var). Codex için ~/.codex/skills'e bağ koymaz, eski HF aynası bağlarını siler.",
         "durduran": "HYPERFRAMES_SKIP_SKILLS=1 (yalnız '1' değeri geçerli; init'te --skip-skills ile eşdeğer). `skills`, `skills update` ve `update`'in skill kısmını, init'teki skill kurulumunu ve arka plandaki skill kontrolünü kapatır. CLI'nin kendini güncellemesini kapatmaz.",
-        "simdi": "HYPERFRAMES_SKIP_SKILLS=1 2026-11-11'de üç yere yazıldı: ~/.zshenv (her zsh kabuğu; zsh -c ve zsh -lc doğrulandı), ~/.zshrc (etkileşimli terminal) ve ~/.claude/settings.json → env (Claude oturumları, yeniden başlayınca). Yedek: ~/Documents/Claude/yedek/ayar-2026-11-11/. Kapsamadığı yer: kabuk başlatmadan süreç çalıştıran masaüstü uygulamaları. Genel skill klasörleri henüz boşaltılmadı."
+        "simdi": "HYPERFRAMES_SKIP_SKILLS=1 2026-11-11'de üç yere yazıldı: ~/.zshenv (her zsh kabuğu; zsh -c ve zsh -lc doğrulandı), ~/.zshrc (etkileşimli terminal) ve ~/.claude/settings.json → env (Claude oturumları, yeniden başlayınca). Yedek: ~/Documents/Claude/yedek/ayar-2026-11-11/. Kapsamadığı yer: kabuk başlatmadan süreç çalıştıran masaüstü uygulamaları. Genel skill klasörleri 2026-11-12'de boşaltıldı (K-40); aynı üç yerde dört kilit tanımlı (ortam_anahtarlari)."
       },
       "skilleri": ["hyperframes", "hyperframes-cli", "media-use", "hyperframes-registry"],
       "skill_koku": "/usr/local/lib/node_modules/hyperframes/dist/skills",
@@ -318,7 +318,7 @@
       "anahtarlar": "API anahtarları makinede genel olarak ayarlıdır. Bir daha istenmez, açılmaz, yazdırılmaz; sağlayıcı 401 verirse yalnız hangi anahtarın yenileneceği söylenir.",
       "ag": "Seçilen sağlayıcı API'leri, stok görüntü/ses servisleri, GitHub, npm ve pip indirmeleri (kurulum/güncelleme sırasında)",
       "kendini_gunceller": false,
-      "skill_yazimi": "Program skill bağı kurmaz ve güncelleme ya da `make setup` onları yeniden kurmaz (kurulum betiklerinde sembolik bağ yok). Ama ~/.claude/skills içindeki yaklaşık 74 bağ (~/.openmontage/.agents/skills/<ad>) kullanıcının kendi manifestiyle konmuştur (~/.config/openmontage/global-skill-links.txt). Güncelleme bir skill klasörünü silerse ya da taşırsa bağlar kırılır. Layer-3 skilleri program klasöründe (.agents/skills) durur.",
+      "skill_yazimi": "Program skill bağı kurmaz ve güncelleme ya da `make setup` onları yeniden kurmaz (kurulum betiklerinde sembolik bağ yok). Genel klasörde skill ve bağ yoktur (2026-11-12, K-40; eski ~74 bağ yedekte). Layer-3 skilleri program klasöründe (.agents/skills) durur ve projelere `skill-ekle.py <proje> --program-skill openmontage:<ad>` ile BAĞ verilir (kilit: dis_skiller). Güncelleme bir skill klasörünü silerse ya da taşırsa projelerdeki bağlar kırılır (`program-denetim.py --oncesi openmontage` 'bağlar' satırları).",
       "yerel_degisiklik": "2026-11-12 güncellemesinden sonra: 7 değişen izlenen dosya, 5 izlenmeyen yol (gfpgan/ artık reponun .gitignore'unda). Önceki commit c8066452'den fecb9a1e'ye geçildi (244 commit, yalnız ileri sarma). Güncellemede Explainer.tsx ve face_restore.py kullanıcı kararıyla yeni sürüm haliyle bırakıldı; eski yerel halleri yedekte durur (openmontage-2026-11-12/yerel-yamalar.patch). Venv'de yalnız certifi yükseltildi, pythainlp ve importlib_resources eklendi; sabit sürümler değişmedi. Liste `git status --porcelain` ile alınır.",
       "sabit_surum_notlari": ["manim 0.19.1 numpy>=2.0 ister, kart numpy 1.26.4 sabitler: çalışan venv'de ikisi birlikte durur ama sıfırdan kurulumda çözümleyici reddeder (2026-11-12 denemesi).", "Intel Mac'te sentencepiece 0.2.3 tekerleksizdir ve derlemede takılır; sıfırdan kurulumda sentencepiece==0.2.2 açıkça verilir.", "Reponun Makefile'ı pip>=26.2.2 ister; çalışan venv pip 23.0.1 ile bırakıldı, make setup çalıştırılmaz."],
       "skilleri": [],
@@ -328,11 +328,11 @@
         "python3 araclar/program-denetim.py --oncesi openmontage çalıştırılır; 'KIRICI ADAYI' ya da 'kayıtsız yerel değişiklik' çıkarsa durulur: önce rehber/11 → 'Kırıcı sürüm' deneme adımları ayrı klasörde uygulanır, kayıtsız değişiklik yerel_yamalar.bilinen'e kullanıcıyla birlikte yazılır",
         "bağlar: program-denetim.py --oncesi çıktısındaki 'bağlar' satırlarını oku; 'bağ kırılacak' ya da kırık bağ uyarısı varsa kullanıcıya söyle (güncellemeden sonra aynı rapor kırık bağı HATA gösterir)",
         "kullanıcıya değişiklik özeti + onay istenir (her güncelleme ayrı onay)",
-        "yedek: ~/Documents/Claude/yedek/openmontage-<YYYY-AA-GG>/ altına yerel-yamalar.patch (git diff --binary), izlenmeyen-yollar.txt (+ 'kopya' olan izlenmeyen yollar), pip-freeze.txt (`python3 araclar/program-denetim.py --pin-listesi openmontage` çıktısı), bag-listesi.txt (~/.claude/skills içindeki openmontage bağları, readlink) ve KAYIT.json (rehber/11 → 'Yedek kaydı'); ~/.config/openmontage anahtar klasörüne dokunulmaz; kütüphane klasörüne ve git'e asla",
+        "yedek: ~/Documents/Claude/yedek/openmontage-<YYYY-AA-GG>/ altına yerel-yamalar.patch (git diff --binary), izlenmeyen-yollar.txt (+ 'kopya' olan izlenmeyen yollar), pip-freeze.txt (`python3 araclar/program-denetim.py --pin-listesi openmontage` çıktısı), bag-listesi.txt (projelerdeki openmontage bağları: `python3 araclar/proje-kullanimi.py --program openmontage` çıktısı) ve KAYIT.json (rehber/11 → 'Yedek kaydı'); ~/.config/openmontage anahtar klasörüne dokunulmaz; kütüphane klasörüne ve git'e asla",
         "ön kontrol (program-denetim.py --oncesi openmontage) tekrar çalıştırılır; 'HAZIR' demeden devam edilmez",
         "onaydan sonra YALNIZ kütüphane oturumu: git pull --ff-only (merge/rebase yok; çakışma halinde rehber/11 → 'Yerel yamalar (git klonu)' 2-3. adımlar; önce çakışma durumu gösterilir). `make setup` olduğu gibi çalıştırılmaz: pip install -r requirements.txt, remotion-composer'da npm install, pip install piper-tts ve `npx --yes hyperframes --version` (npx önbelleğine ayrı bir HyperFrames kopyası çeker) yapar. Önce requirements.txt farkı kullanıcıya gösterilir; setup ancak HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_AUTO_INSTALL=1 HYPERFRAMES_NO_UPDATE_CHECK=1 tanımlı çalıştırılır ya da yalnız gereken adımlar tek tek atılır; kurulum venv'i bozacaksa durulur",
         "sabit sürümler yükseltilmez: numpy 1.x, torch 2.2.2 vb. kartta yazan değerlerde kalmalı; program-denetim.py pin farkı gösterirse düzeltmeden devam edilmez",
-        "yedeklenen yerel yamalar yeniden uygulanır (gsap-plugins/SKILL.md yaması dahil; skill notundaki basicsr içe aktarma yaması venv dosyasında okunarak doğrulanmadı) ve her biri yeniden denenir; ~/.claude/skills içindeki bağlarda kırık olan var mı denetlenir",
+        "yedeklenen yerel yamalar yeniden uygulanır (gsap-plugins/SKILL.md yaması dahil; skill notundaki basicsr içe aktarma yaması venv dosyasında okunarak doğrulanmadı) ve her biri yeniden denenir; projelerdeki openmontage bağlarında kırık olan var mı denetlenir (`proje-kullanimi.py --program openmontage`)",
         "sonra yeniden denetim; kart commit'i onaylı commit'e çekilir, KAYNAK.md güncellenir, commit; python3 araclar/program-denetim.py --sema --siki 0 hata",
         "yedek klasörü saklanır; silmek için kullanıcıya hatırlatılır ve sorulur"
       ],
@@ -407,14 +407,14 @@
         ],
         "dogrulama": [
           "program-denetim.py: kurulu commit = karttaki; sabit sürümler N/N tutuyor",
-          "~/.claude/skills içindeki openmontage bağları kırık değil (bag-listesi.txt ile karşılaştır)"
+          "projelerdeki openmontage bağları kırık değil (`proje-kullanimi.py --program openmontage`; bag-listesi.txt ile karşılaştır)"
         ],
         "sinir": "Yedekte yerel-yamalar.patch yoksa geri alma ve güncelleme yapılmaz."
       },
       "cikarma": {
         "makineden": [
           "Kullanıcıdan ayrı onay; önce yedek (yerel yamalar + pip-freeze + bağ listesi)",
-          "Önce ~/.claude/skills içindeki ~74 openmontage bağı kullanıcının manifestiyle (~/.config/openmontage/global-skill-links.txt) kaldırılır; bu genel klasör işlemi rehber/12 kapsamındadır",
+          "Önce projelerdeki openmontage bağları (`proje-kullanimi.py --program openmontage`) projeye göre kaldırılır ya da kullanıcıya sorulur (`skill-ekle.py <proje> --kaldir <ad>`); genel klasörde bağ kalmadı (K-40)",
           "Sonra ~/.openmontage klasörü kullanıcı kararıyla taşınır/silinir (4,6 GB; kalıcı silme için ayrıca onay)",
           "~/.claude/commands/openmontage.md ve global CLAUDE.md satırı kullanıcının dosyalarıdır; kaldırmayı kullanıcı yapar"
         ],
@@ -443,7 +443,7 @@
         {
           "yol": "~/.claude/skills",
           "tur": "bag",
-          "ne": "~74 skill bağı kullanıcının manifestiyle; program yazmaz",
+          "ne": "eski ~74 skill bağı kullanıcının manifestiyle konmuştu; 2026-11-12'de kaldırıldı (yedekte); program yazmaz",
           "yedeklenir": true,
           "dogrulandi": true
         },

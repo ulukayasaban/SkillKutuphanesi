@@ -28,7 +28,7 @@ Codex Desktop'ta **proje klasöründe** (kütüphane bakımı için `~/Documents
 - Global skill klasörlerine (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, `~/.openmontage`) dokunulmaz (tek istisna: onaylı program güncellemesi ve onaylı boşaltma, promptlar/13 ve 16).
 - Skiller sadece `skill-ekle.py` ile kurulur; elle kopyalanmaz.
 - Önce `--kuru` (rapor), sonra senin onayın, sonra `--evet`.
-- **Çakışma:** aynı adlı skill, aynı işi yapan iki birincil skill, global'de farklı sürümü olan skill ve kendi dosyaların raporda
+- **Çakışma:** aynı adlı skill, aynı işi yapan iki birincil skill, global'de farklı sürümü olan skill (genel klasörler boş; yalnız orada bir şey belirirse) ve kendi dosyaların raporda
   HATA/UYARI olarak görünür; çözülmeden kurulum yapılmaz.
 - **Ad:** çıplak ad kendiliğinden el değiştirmez; aynı adlı başka skill varsa rapor `ayni-ad` satırıyla kurulan kaynağı gösterir
   (`rehber/09-ad-kimlik-ve-cakisma.md`). Kayıtlara proje adı yazılmaz; proje bilgisi `notlar/proje-kullanimi.md`'dedir.

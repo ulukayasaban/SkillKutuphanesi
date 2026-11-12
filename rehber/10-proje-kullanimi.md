@@ -69,7 +69,7 @@ Skiller elle kopyalanmış, kilidi olmayan proje: `proje-kullanimi.py --ekle <yo
 bağlantıları izlemez, `.env` gibi dosyalara bakmaz). Her klasör için üç karardan biri verilir ve kullanıcıya sorulur:
 (a) kütüphaneyle yönet: `skill-ekle.py` ile kur; (b) yalnız izle: `--ekle <yol> --neden …`; (c) bilerek takipsiz: `--yoksay <yol> --neden …`.
 Karar verilmeyen klasör her ay raporda "karar bekleyen" olarak kalır. "Yalnız talimat dosyası olan" klasörler sayılır, işlem gerektirmez.
-Bir skill klasörü genel klasöre (`~/.claude/skills` gibi) bağlıysa tarama "GENEL KLASÖRE BAĞLI" der: genel klasörleri boşaltmadan önce bunlara bakılır.
+Bir skill klasörü genel klasöre (`~/.claude/skills` gibi) bağlıysa tarama "GENEL KLASÖRE BAĞLI" der: genel klasörler 2026-11-12'de boşaltıldı, bugün böyle bir bağ görünürse kırıktır ya da yeniden yazılmıştır (bekçi de bildirir).
 
 ## Projeyi takipten çıkarma
 `proje-kullanimi.py --cikar <ad> --neden "…"` (onayla). Proje klasörüne ve kilidine dokunulmaz; yalnız rapordan, aylık listeden ve

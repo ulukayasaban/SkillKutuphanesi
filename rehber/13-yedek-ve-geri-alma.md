@@ -22,7 +22,7 @@ Git durumu: `python3 araclar/git-durum.py` (salt okuma, push etmez).
 | Kütüphanenin ikinci kopyası (isteğe bağlı) | `~/Documents/Claude/yedek/kutuphane-<tarih>.bundle` | kullanıcı isteyince oturum | tür `git-paketi` |
 | Program güncellemesi | `~/Documents/Claude/yedek/<program>-<tarih>/` | oturum, güncellemeden önce | tür `program` |
 | Ayar dosyası değişikliği | `~/Documents/Claude/yedek/ayar-<tarih>/` | oturum, değişiklikten önce | tür `ayar-dosyasi` |
-| Genel skill klasörü boşaltma | `~/Documents/Claude/yedek/genel-klasorler-<tarih>/` (rehber/12; eski taşıma: `global-skills-2026-11-08/`; geri yazılanlar: `geri-yazilan-<tarih>/`) | oturum, boşaltmadan önce | tür `genel-skill-klasoru` |
+| Genel skill klasörü boşaltma | `~/Documents/Claude/yedek/genel-klasorler-<tarih>/` (rehber/12; eski taşıma: `global-skills-2026-11-08/`; geri yazılanlar: `geri-yazilan-<tarih>/`; 2026-11-12: `genel-kaldirilan-2026-11-12/` + tam kopya `genel-skiller-tam-2026-11-12/`) | oturum, boşaltmadan önce | tür `genel-skill-klasoru` |
 
 ## 3. Geri yükleme (her gerçek geri yükleme için kullanıcıdan o anda onay al)
 
@@ -57,7 +57,7 @@ Uyarı: bu yedekler düz metin anahtar satırı içerebilir; geri yüklemek onu 
 ### Genel skill klasörü
 Yedek: `global-skills-<tarih>/` (`agents-skills/`, `claude-skills-linkler/`, `LISTE.md`, `geri-al.sh`). `geri-al.sh` kütüphane dışında ve sabit yollu;
 çalıştırmadan önce oku, kullanıcıdan onay al. Bağlar elle de döner: önce `ls -la` ile hedeflerini yaz, sonra aynı bağı kur. `~/.agents/.skill-lock.json`
-duruyorsa araç eski kayıtla skilli yeniden kurabilir: sıra ve kilit dosyası için rehber/12.
+duruyorsa araç eski kayıtla skilli yeniden kurabilir: sıra ve kilit dosyası için rehber/12. 2026-11-12 boşaltmasında girdiler olduğu gibi `genel-kaldirilan-2026-11-12/` içine taşındı (tam kopya: `genel-skiller-tam-2026-11-12/`).
 
 ## 4. Saklama süresi ve hatırlatma
 | Yedek türü | En çok ne kadar | Silme tetiği |

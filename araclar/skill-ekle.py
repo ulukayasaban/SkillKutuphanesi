@@ -1589,18 +1589,24 @@ def proje_yapisi_kontrol(proje, roller, rapor: Rapor):
                            "üzerine yazılmaz. Rolü farklı adla ekle ya da dosyayı yeniden adlandır")
 
 
-def sabit_yol_satirlari(rapor: Rapor, s, ad, skiller, kilit, kur_listesi, adlar, kurulacak_idler):
+def sabit_yol_satirlari(rapor: Rapor, s, ad, skiller, kilit, kur_listesi, adlar, kurulacak_idler, dis_adlari=frozenset()):
     """Bir skill'in kardeş ve sabit yol bağımlılıklarının ön kontrol satırları. ../<kardeş>/ bağlantıları (kardes_bagimliliklari) ile sabit yollar
     (ortak.yol_degerlendir) AYNI kardeşe işaret ederse kardeş KİMLİĞE göre tek satırda anılır: kurulmuyorsa tek 'kardes-eksik', kuruluyorsa tek
-    'kardes-yol' (parçalar birleşir; yalnız GERÇEKTEN çevrilecek yollar sayılır, sıfırsa satır yok). Aynı ad başka kimlik: 'kardes-farkli-kaynak'."""
+    'kardes-yol' (parçalar birleşir; yalnız GERÇEKTEN çevrilecek yollar sayılır, sıfırsa satır yok). Aynı ad başka kimlik: 'kardes-farkli-kaynak'.
+    dis_adlari: projede program bağı/donmuş olarak kayıtlı ya da bu işlemde isteneni dış skill adları (küçük harf); ../<ad>/ ile anılan kardeş
+    böyle bir adsa kurulu sayılır (bağ ya da donmuş klasör aynı adla projede durur)."""
     farkli = []
     harita = kardes_haritasi(s, skiller, kilit, kur_listesi, adlar, farkli)
     farkli_anahtar = {x[0] for x in farkli}
     eksik, yol = set(), {}  # kardeş kimliği -> bildirildi / satır parçaları
+    dis_kid = set()  # ../<kardeş>/ ile anılan ve projede dış skill (bağ/donmuş) olarak bulunan kardeşler
     for kad, (kurulum, kurulu) in harita.items():
         if kad.startswith(GENEL_KARDES) or kad in farkli_anahtar:
             continue
         bilgi = s["kardes_bagimliliklari"][kad]
+        if not kurulu and kad.casefold() in dis_adlari:
+            dis_kid.add(bilgi["id"])
+            continue
         if not kurulu:
             rapor.ekle("UYARI", "kardes-eksik", f"{ad}: {bilgi['dosya_sayisi']} dosyası ../{kad}/ bağlantısıyla kardeş "
                        f"skill'e dayanıyor ama '{kad}' projeye kurulmuyor; bağlantılar boşa düşer (ekle: --skill {bilgi['id']})")
@@ -1616,12 +1622,15 @@ def sabit_yol_satirlari(rapor: Rapor, s, ad, skiller, kilit, kur_listesi, adlar,
                    f"BAŞKA bir skill var ({baska}); yol çevrilmez, kardeş {kid} ayrıca eklenmeli (--skill {kid})")
         eksik.add(kid)
     d = yol_degerlendir(s, skiller, kurulacak_idler=kurulacak_idler)
+    for hedef, bilgi in d["kardesler"].items():
+        if hedef.casefold() in dis_adlari and all(b["tur"] == "kardes-goreli" for b in bilgi["bulgular"]):
+            dis_kid.add(bilgi["id"])  # yalnız göreli ../<kardeş>/ yolları: bağ/donmuş klasör aynı adla orada durur
     for (sv, kod, govde), kid in zip(d["satirlar"], d.get("satir_kardes") or [None] * len(d["satirlar"])):
         if kod == "kardes-yol":
             continue  # aşağıda yalnız gerçekten çevrilenleri sayarak yeniden üretilir
         yok_kardes = kod == "kardes-eksik" and "dosya arşivde yok" not in govde  # "kardeş projeye kurulmuyor" satırı (eksik dosya satırı ayrıdır)
-        if yok_kardes and kid in eksik:
-            continue  # bu kardeş zaten bildirildi
+        if yok_kardes and (kid in eksik or kid in dis_kid):
+            continue  # bu kardeş zaten bildirildi ya da projede dış skill olarak var
         if yok_kardes and kid is not None:
             eksik.add(kid)
         rapor.ekle(sv if kod in YOL_KODLARI else "UYARI", kod, f"{ad}: {govde}")
@@ -1635,7 +1644,7 @@ def sabit_yol_satirlari(rapor: Rapor, s, ad, skiller, kilit, kur_listesi, adlar,
         rapor.ekle("BİLGİ", "kardes-yol", f"{ad}: " + "; ".join(parcalar))
 
 
-def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
+def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False, dis_liste=None):
     """plan: [(skill kaydı, rol|None)] -> (kur_listesi {id: (s, roller)}, adlar {id: kurulum adı})"""
     proje_yapisi_kontrol(proje, roller, rapor)
     kur_listesi, adlar, hedef_adlar = {}, {}, {}
@@ -1649,6 +1658,7 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
 
     # sabit yol taraması için "kurulacak ya da projede kurulu" kimlikler (kardeş kuruluyor mu?)
     kurulacak_idler = set(kur_listesi) | {x["id"] for k in kilit["skiller"].values() if (x := kaynak_bul(skiller, k))}
+    dis_adlari = {k.casefold() for k in dis_kayitlari(kilit)} | {it["ad"].casefold() for it in (dis_liste or [])}  # bağ/donmuş kardeş: kilitte ya da bu işlemde
     for sid, (s, rol_kumesi) in kur_listesi.items():
         ad = adlar[sid]
         onceki = kilit["skiller"].get(ad)
@@ -1722,7 +1732,7 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
         if s.get("kirik_baglantilar"):
             rapor.ekle("UYARI", "kirik-baglanti", f"{ad}: SKILL.md'nin gösterdiği {len(s['kirik_baglantilar'])} dosya "
                        f"kaynakta da yok ya da arşive alınmadı: {', '.join(s['kirik_baglantilar'][:5])}")
-        sabit_yol_satirlari(rapor, s, ad, skiller, kilit, kur_listesi, adlar, kurulacak_idler)
+        sabit_yol_satirlari(rapor, s, ad, skiller, kilit, kur_listesi, adlar, kurulacak_idler, dis_adlari)
         if s.get("ucret") == "ucretli":
             rapor.ekle("UYARI", "ucretli", f"{ad}: ÜCRETLİ — ücret ödemeden kullanılamaz — {s.get('ucret_notu', '')}")
         elif s.get("ucret") == "kismen":
@@ -1904,7 +1914,7 @@ def ekle(a, proje, skiller):
     dis_liste, dis_hatalar = dis_istek_coz(a)
     for kod, m in dis_hatalar:
         rapor.ekle("HATA", kod, m)
-    kur_listesi, adlar = on_kontrol(proje, kilit, plan, roller, skiller, rapor)
+    kur_listesi, adlar = on_kontrol(proje, kilit, plan, roller, skiller, rapor, dis_liste=dis_liste)
     dis_liste = dis_on_kontrol(proje, kilit, dis_liste, set(adlar.values()), rapor)
     arac_satirlari(proje, kilit, rapor, secim=a.arac)
     dis_adlari = [it["ad"] for it in dis_liste]

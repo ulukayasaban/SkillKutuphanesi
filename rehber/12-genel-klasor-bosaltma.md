@@ -6,6 +6,11 @@ ister ("ONAY GEREKİR"); "başla" demek toplu onay değildir. Bekçi hiçbir şe
 Yedek ve geri alma ilkeleri: `rehber/13-yedek-ve-geri-alma.md`. Boşaltma kararlarının ve geçişin durumu: `notlar/hf-om-gecisi/DURUM.md`.
 Hazır komut: `promptlar/16-genel-klasor-bosaltma.md`.
 
+**Uygulandı (2026-11-12, K-40):** boşaltma bu rehberle yapıldı; aşağıdaki adımlar bir sonraki sefer için hâlâ geçerli yöntemdir. Pratikte fark: girdiler `rm` ile
+silinmedi, `~/Documents/Claude/yedek/genel-kaldirilan-2026-11-12` içine TAŞINDI (ayrıca tam kopya `genel-skiller-tam-2026-11-12`). İki HyperFrames klasörü
+(`hyperframes`, `hyperframes-cli`) ve üç skill (`design-dna`, `openmontage`, `nlm-skill`) adım sırasından önce taşındı, çünkü bir proje geçişi bunu gerektirdi; bağımlıları yoktu.
+Q1-Q9 kararları yanıtlandı (`notlar/kararlar.md` K-32..K-41). Bugün bekçi tabanı boş duruma göre yazılıdır; tablodaki "Boşaltma sonrası" sütunu artık gerçek durumdur.
+
 ## Neyi izliyoruz
 
 | Bölge | Yol | Normalde kim yazar | Boşaltma sonrası |
