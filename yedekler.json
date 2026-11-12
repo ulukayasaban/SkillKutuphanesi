@@ -198,6 +198,20 @@
       "silme_olay_tamam": false,
       "kayit": "KAYIT.json",
       "not": "~/.hyperframes/config.json (kimlik dosyası) yedeğe alınmadı. Paket klasörü yaklaşık 110 MB."
+    },
+    {
+      "kimlik": "zamanlanmis-gorev-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/zamanlanmis-gorev-2026-11-12",
+      "tur": "ayar-dosyasi",
+      "ne": "Aylık zamanlanmış görevin (skill-kutuphanesi-aylik-guncelleme) 2026-11-12'de yenilenmeden ÖNCEKİ metni.",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Yedekteki dosyayı ~/.claude/scheduled-tasks/skill-kutuphanesi-aylik-guncelleme/SKILL.md üzerine kopyala (kullanıcı onayıyla); kütüphanedeki zamanlanmis/aylik-guncelleme.SKILL.md ile farkı aylik-ozet gösterir.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "skill-kutuphanesi-aylik-guncelleme.SKILL.md.yedek"
+      ],
+      "silme_gun": 30,
+      "not": "Gizli içerik yok."
     }
   ]
 }
