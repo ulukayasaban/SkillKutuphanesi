@@ -11,7 +11,7 @@
 | Akil Disi Youtube Kanali | temiz | 18/35 | 0 | 0 | 0 | 0 | 8 | claude, codex | 2026-11-12 |
 | Etsy-Arif | temiz | 27/37 | 0 | 0 | 0 | 0 | 10 | claude | 2026-11-12 |
 | Etsy-Yeni | dikkat | 31/31 | 0 | 0 | 0 | 0 | 0 | claude, codex (kilitte yok: varsayılan) | 2026-11-05 |
-| IstatistikYoutube | dikkat | 26/50 | 0 | 0 | 0 | 22 | 0 | claude | 2026-11-12 |
+| IstatistikYoutube | temiz | 26/50 | 0 | 0 | 0 | 0 | 22 | claude | 2026-11-12 |
 
 ## Programla gelen ve donmuş skiller
 > Yukarıdaki 'Skill (kilit/klasör)' klasör sayısı bağları ve donmuşları da içerir.
@@ -25,29 +25,6 @@
 ### Etsy-Yeni — dikkat
 - [dikkat] EMEKLİ: etsy-api (kaynak kayıp; artık güncellenmez)
 - [bilgi] araç seçimi kilitte yok (varsayılan: claude, codex)
-### IstatistikYoutube — dikkat
-- [dikkat] KAYITSIZ SKILL: asset-licensing (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: audience-experimentation (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: audio-mixing (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: channel-strategy (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: editorial-governance (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: evidence-learning-loop (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: host-performance-direction (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: hyperframes-shorts (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: kurgu-hatti (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: music-library-supervision (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: notebooklm-competitor-intelligence (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: official-source-research (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: parallel-team-orchestration (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: performance-review (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: quota-governor (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: runtime-plan (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: shorts-script (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: statistical-verification (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: thumbnail-publishing (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: topic-scorecard (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: visual-identity (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
-- [dikkat] KAYITSIZ SKILL: visual-storytelling (kilitte, elle-kurulan.json'da ve kendi_skilleri'nde yok)
 
 ## Kayıp, taşınmış ya da hafızada olmayan
 Yok.
@@ -91,7 +68,6 @@ Yalnız talimat dosyası olan klasör sayısı: 15 (işlem gerekmez).
 - Kayıtsız proje: ~/Documents/IstatistikYoutube-Arsiv/status-arsiv/vault-tam-yedek-20261018-1124 (12 skill) -> --ekle ya da --yoksay
 - Kayıtsız proje: ~/Documents/IstatistikYoutube-Arsiv/status-arsiv/vault-tam-yedek-20261018-1242 (20 skill) -> --ekle ya da --yoksay
 - …ve 6 kayıtsız klasör daha (--tara-kayitsiz)
-- IstatistikYoutube: 22 kayıtsız skill -> elle-kurulan.json ya da kendi_skilleri'ne yazılsın mı?
 
 ## Ayar uyarıları
 Yok.
