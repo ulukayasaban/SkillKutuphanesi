@@ -32,10 +32,13 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 5. Onay gelirse aynı komutu `--evet` ile çalıştır. Sonra `--dogrula` sonucunu bildir.
 
 ## Bakım isteklerinde
-- Oturum başı: kütüphane oturumunun ilk işi `python3 araclar/aylik-ozet.py --hizli` (salt okuma, ağsız); çıktıyı kullanıcıya iki cümleyle söyle. Aylık çalışma 35 günü aştıysa "Aylık çalışmayı şimdi yapayım mı?" diye sor; evet derse önce `python3 araclar/arsiv-guncelle.py --aylik --kuru`, sonra `rehber/02-guncelleme-yonergesi.md` yolu (`--uygula --dal`). `dikkat`/`sorun` varsa kendiliğinden düzeltme, silme, push yok. Ayrıntı: `BASLA.md`.
-- "Skilleri güncelle" (aylık) → `python3 araclar/arsiv-guncelle.py` (rapor) → `--uygula --dal` (güncelleme `guncelleme/YYYY-AA`
-  dalında; master değişmez) → kullanıcıya dal özetini ve `notlar/guncelleme-gecmisi.md` kaydını göster → onay gelirse
+- Oturum başı: kütüphane oturumunun ilk işi `python3 araclar/aylik-ozet.py --hizli` (salt okuma, ağsız); çıktıyı kullanıcıya iki cümleyle söyle. Aylık çalışma 35 günü aştıysa "Aylık çalışmayı şimdi yapayım mı?" diye sor; evet derse aşağıdaki "Skilleri güncelle" maddesindeki tek komutu çalıştır. `dikkat`/`sorun` varsa kendiliğinden düzeltme, silme, push yok. Ayrıntı: `BASLA.md`.
+- "Skilleri güncelle" (aylık) → tek komut `python3 -u araclar/arsiv-guncelle.py --aylik` (önce istenirse `--aylik --kuru` planı): ön kontrol, kaynak
+  raporu, `guncelleme/YYYY-AA` (kaynak değişmişse) ya da `takip/YYYY-AA` dalı, tek sayfa özet, damga `notlar/son-aylik-calisma.json`
+  (`tamam`/`kismi`/`basarisiz`/`bekleyen-dal`). Birleştirmez, push etmez; erişilemeyen kaynağı atlar (KAYIP işaretlemek kullanıcı kararı); bekleyen
+  dal varken yeni dal açmaz. Özeti ve "karar bekleyenler" listesini kullanıcıya oku → dal özeti ve `notlar/guncelleme-gecmisi.md` kaydı → onay gelirse
   `--birlestir <dal>`. Sonra yeniden incelenecek skilleri incele, etkilenen projeler için `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
+  Ayrıntı: `rehber/02-guncelleme-yonergesi.md` bölüm 1b.
 - "Yeni skill ekledim, kontrol et" → kaynak: GitHub **"Yapay Zeka Skillleri"** listesi (tüm skill repoları tek listede).
   `python3 araclar/github-skill-listesi.py` ile YENİ repoları bul, `promptlar/07-yeni-skill-reposu-ekle.md` /
   `rehber/03-yeni-skill-ekleme.md` adımlarını uygula: **çakışma kontrolü** (aynı ad, aynı iş, aynı repoda birden fazla sürüm, aynı adlı kendi skill; genel klasörler 2026-11-12'de boşaltıldı, "global'de farklı sürüm" maddesi yalnız orada bir şey yeniden belirirse önemlidir) ve

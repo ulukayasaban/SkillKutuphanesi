@@ -29,8 +29,9 @@ python3 araclar/arsiv-guncelle.py --birlestir guncelleme/2026-11   # 4a. onay: m
 git branch -D guncelleme/2026-11                       # 4b. ret: dalı sil, hiçbir şey değişmez
 ```
 
-- **Otomatik aylık rapor:** "SkillKutuphanesi aylık güncelleme" zamanlanmış görevi her ayın 1'inde 10:00'da 1–2. adımları
-  çalıştırır, sonucu raporlar; **birleştirmez**. Birleştirme her zaman senin onayınla yapılır (4a).
+- **Aylık zincir tek komut:** `python3 -u araclar/arsiv-guncelle.py --aylik` ("SkillKutuphanesi aylık güncelleme" zamanlanmış görevi bunu
+  her ayın 1'inde 10:00'da çalıştırır; elle de çalıştırılır). Ön kontrol, kaynak raporu, güncelleme dalı, aylık özet ve damga sırayla yapılır;
+  sonunda tek sayfa özet basılır. **Birleştirmez, göndermez.** Birleştirme her zaman senin onayınla yapılır (4a). Ayrıntı: bölüm 1b.
 - **Aylık özet:** `python3 araclar/aylik-ozet.py` tüm rapor araçlarını tek sayfada toplar (karar bekleyenler + dikkat gerektirenler,
   `notlar/aylik-ozet.md`); her oturum başında `python3 araclar/aylik-ozet.py --hizli` (ağsız, yazmasız, en çok 15 satır). Ayrıntı: bölüm 1b.
 - **Takip:** her güncelleme `notlar/guncelleme-gecmisi.md`'ye kayıt düşer (kaynak commit'leri, içeriği değişen / yeni /
@@ -67,10 +68,47 @@ python3 araclar/arsiv-guncelle.py --siki       # rapor modu; GitHub'a ulaşılam
   karşılaştırmasını atlar ("ATLANDI"), yalnız yerel kontrolleri yapar.
 - **Çıkış kodları (rapor modu):** 0 = sorun yok, 1 = erişilemeyen kaynak, 2 = yalnız `--siki` ile: GitHub'a ulaşılamadı ya da bazı kaynaklar kontrol edilemedi.
 - **Rapor sırasında `AD DEĞİŞMİŞ` satırı** (commit yanıtındaki adresten, ek çağrı olmadan) çıkabilir; kesin kaynak `github-skill-listesi.py` raporudur.
-- **Henüz yok:** `--aylik`'in yazma adımları (otomatik dal açma, `takip/YYYY-AA` taraması, damga yazma). Şimdilik aylık güncelleme `--uygula --dal` ile yapılır.
-  `takip/*` dalları zamanlanmış görevin kendi adımlarıyla açılır; hepsi `--birlestir` ile birleştirilir. Tam zincir sonraki aşamadır (ayrı onay).
+### Tek komut: `--aylik`
+```bash
+python3 -u araclar/arsiv-guncelle.py --aylik          # zincirin tamamı (15–40 dk sürebilir); zamanlanmış görev yalnız bunu çalıştırır
+python3 araclar/arsiv-guncelle.py --aylik --kuru      # yan etkisiz plan (yukarıda)
+```
+Sırası, her adım düz Türkçe bildirilir: **1/5 ön kontrol** (master mı, ağaç temiz mi, bekleyen dal var mı, `gh` oturumu var mı) →
+**2/5 kaynak raporu** (+ yıldız listesi raporu) → **3/5 güncelleme** (kaynaklarda değişiklik varsa `guncelleme/YYYY-AA` dalı, `--uygula --dal`
+ile aynı kod; yoksa `takip/YYYY-AA` dalında trend + popüler + konu taraması) → **4/5 aylık özet** (tek sayfa; program denetimi, proje sağlığı,
+yedek, git durumu, bekçi) → **5/5 damga**. Hiçbir zaman birleştirmez, push etmez, başka dal silmez (yalnız kendi hata geri almasını yapar).
+`master` değişmez; sonunda master'dasın.
 
-`--uygula` önce iki şeyi şart koşar: kütüphanede **kaydedilmemiş değişiklik olmayacak** (elle düzenlemeni önce `git commit` et) ve tüm kaynaklara **erişilebilecek**. Sonra bu sırayla çalışır; herhangi bir adım hata verirse durur ve **git kaydı atmaz**:
+- **Erişilemeyen kaynak zinciri durdurmaz:** kaynak `kaynak-cek.py --atla` ile atlanır, arşiv kopyası korunur; "Bu ay erişilemedi: <repo>" diye
+  raporlanır, `guncelleme-gecmisi.md` kaydına ve damgaya yazılır. Hiçbir zaman kendiliğinden `KAYIP` işaretlenmez: işaretlemek senin onaylı,
+  elle yapacağın adımdır (`rehber/03` E3). Geçen ay da erişilemeyen kaynak "geçen ay da erişilemiyordu" notuyla gelir.
+- **Bekleyen dal kuralı:** `guncelleme/*` ya da `takip/*` dalı onay beklerken YENİ dal açılmaz. Zincir dalın adını ve yaşını yazar (45 günden
+  eskiyse uyarır), salt okuma adımlarını (rapor, özet) yine yapar ve sonucu `bekleyen-dal` damgalar. Çözüm: dalı incele ve birleştir
+  (`--birlestir <dal>`) ya da reddet (`git branch -D <dal>`), sonra `--aylik`'i yeniden çalıştır.
+- **Damga:** `notlar/son-aylik-calisma.json` bu makineye özgüdür, `.gitignore`'dadır, git geçmişinde yoktur. Zincir güncelleme düşse bile yazar.
+  Alanlar: `tarih`, `sonuc`, `dal`, `neden`, `atlanan_kaynaklar`, `ad_degisen`, `ozet_durumu`, `son_basarili`, `gecmis` (son 12 koşu).
+  `sonuc` değerleri: **`tamam`** (güncelleme ya da takip bitti; dal hazırsa onayını bekler), **`kismi`** (yazma adımı yapılmadı: kirli ağaç,
+  master dışındayız, GitHub'a ulaşılamıyor ya da kaynaklar geçici olarak kontrol edilemedi; salt okuma rapor ve özet çalıştı),
+  **`basarisiz`** (bir adım düştü; koşunun açtığı dal geri alındı), **`bekleyen-dal`** (eski dal onay beklediği için yeni dal açılmadı).
+  Fresh klonda damga yoktur: özet en yeni `guncelleme-gecmisi.md` tarihine bakar.
+- **`kismi` ne demek:** güncelleme yapılmadı ama kontroller yapıldı. Son satırdaki `NEDEN:` işini yap (kirli ağaç → kaydet ya da geri al, onayınla;
+  GitHub yok → aşağıdaki), sonra yeniden çalıştır. Çıkış kodu: `tamam`, `kismi`, `bekleyen-dal` = 0; `basarisiz` = 1; `--siki` ile `kismi` = 2.
+- **Çevrimdışı / `gh` oturumu yok:** zincir takılmadan yerel kontrolleri yapar (kaynak karşılaştırması atlanır), damgaya `kismi` yazar ve
+  seni uyarır: kendi terminalinde `gh auth login` çalıştır (tarayıcıda onayla), sonra `--aylik`'i yeniden çalıştır.
+- **Kirli ağaç:** master'da kaydedilmemiş değişiklik varsa (rapor dosyaları dahil) yazma adımı yapılmaz; otomatik commit yoktur. `NEDEN:` satırındaki
+  `git add … && git commit` (onayınla) ya da `git checkout -- …` komutunu sen çalıştırırsın.
+- **Son satırlar:** `SONUÇ:`, varsa `NEDEN:`, `DAL:`, `ATLANAN KAYNAKLAR:`, `AD DEĞİŞMİŞ:`.
+
+### Zamanlanmış görev metni
+Görevin metni kütüphanede `zamanlanmis/aylik-guncelleme.SKILL.md` olarak durur (kaynak doğru odur). Canlı dosya:
+`~/.claude/scheduled-tasks/skill-kutuphanesi-aylik-guncelleme/SKILL.md`. Tam `aylik-ozet.py` ikisini karşılaştırır (`zamanlanmis-gorev`):
+aynıysa `temiz`, farklıysa ya da canlı dosya yoksa `dikkat`. Canlıyı güncellemek senin onayınla yapılır: (1) `diff -u <canlı> zamanlanmis/aylik-guncelleme.SKILL.md`
+göster; (2) yedek: `cp <canlı> ~/Documents/Claude/yedek/zamanlanmis-gorev-<tarih>.SKILL.md`; (3) `cp zamanlanmis/aylik-guncelleme.SKILL.md <canlı>`;
+(4) `cmp` ile doğrula. Geri alma = yedeği geri kopyalamak. Zamanlayıcı Mac uykudayken ya da uygulama kapalıyken tetiklenmeyebilir; asıl tetik
+oturum başındaki `aylik-ozet.py --hizli`'dir (damga 35 günü aşınca sorar).
+
+
+`--uygula` önce iki şeyi şart koşar: kütüphanede **kaydedilmemiş değişiklik olmayacak** (elle düzenlemeni önce `git commit` et) ve tüm kaynaklara **erişilebilecek** (tek başına `--uygula --dal` için; `--aylik` erişilemeyeni atlar). Sonra bu sırayla çalışır; herhangi bir adım hata verirse durur ve **git kaydı atmaz**:
 0. `github-trend.py --aday` — GitHub Trending (günlük/haftalık/aylık; tüm diller + Python/TS/JS/Shell) taranır, `trend.json`
    geçmişine eklenir; kütüphanedeki kaynakların trend durumu ve trend'deki yeni skill repoları `notlar/github-trend.md`'ye yazılır.
    Trend'deki aday repolar otomatik EKLENMEZ: rapordaki eksik alanlara uyanlar `03-yeni-skill-ekleme.md` ile, onayla eklenir.
@@ -159,7 +197,7 @@ Kütüphane kopyasını elle değiştirmek yerine:
 2. Ya da kütüphanede `registry.json`'a not ekle ve iyileştirmeyi kaynağa (GitHub) öner.
 
 ## 3b) Bir kaynak repo silinirse / private olursa
-`arsiv-guncelle.py` bunu `! erişilemiyor` diye raporlar ve `--uygula` durur (`kaynak-cek.py --atla` bayrağı vardır; `--uygula`'nın bunu kullanması sonraki aşamadır). `kaynaklar.json`'da o kaydın `tip` alanını
+`arsiv-guncelle.py` bunu `! erişilemiyor` diye raporlar. Tek başına `--uygula` durur; `--aylik` ise kaynağı `kaynak-cek.py --atla` ile atlar, arşiv kopyasını korur ve "bu ay erişilemedi" diye raporlar (kendiliğinden işaretlemez). Kalıcıysa `kaynaklar.json`'da o kaydın `tip` alanını
 `"KAYIP"` yap: arşivdeki kopyalar ve registry kayıtları korunur (`kaynak_durumu: kayip`), projeler etkilenmez.
 
 ## 3c) Bir kaynak repo GitHub'da taşınırsa / adı değişirse
@@ -185,9 +223,9 @@ OpenMontage makine genelinde skill bağı kurmaz; güncellemesi bağları yenide
 ## Güncelleme takvimi (öneri)
 | Ne zaman | Ne |
 |---|---|
-| Ayda bir | `arsiv-guncelle.py` raporu → gerekirse `--uygula --dal` (GitHub trend taraması dahil); önce `--aylik --kuru` ile plan |
+| Ayda bir | `python3 -u araclar/arsiv-guncelle.py --aylik` (tek komut; zamanlanmış görev çalıştırır); önce istersen `--aylik --kuru` ile plan |
 | Her oturum başında | `aylik-ozet.py --hizli` (35 günü aşan aylık çalışma burada sorulur) |
-| Kaçan ay | aynı komutlar; tek koşu birikmiş hepsini kapsar |
+| Kaçan ay | aynı komut; tek koşu birikmiş hepsini kapsar |
 | İstediğin zaman | `konu-takip.py [--konu e-ticaret]` (aylık özette de görünür) → `notlar/konu-takip.md`: takip edilen alanlarda yeni skill repoları |
 | İstediğin zaman | `github-trend.py --aday` → `notlar/github-trend.md`: trend'e giren kaynaklar ve aday skill repoları |
 | Yeni repo yıldızladığında | `arsiv-guncelle.py` raporu "yıldızlı ama kaynaklar.json'da yok" der → `03-yeni-skill-ekleme.md` |

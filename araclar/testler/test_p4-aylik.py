@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""P4 testleri (aşama 1): aylik-ozet.py ve arsiv-guncelle.py'nin salt okuma/rapor tarafı.
+"""P4 testleri: aylik-ozet.py, arsiv-guncelle.py'nin salt okuma/rapor tarafı (aşama 1) ve --aylik zinciri (aşama 2).
 Yalnız geçici dizin ve sahte veri; gerçek ev, gerçek kütüphane, gerçek gh ve ağ KULLANILMAZ.
 Çalıştırma: python3 araclar/testler/test_p4-aylik.py   (son satır: N/N test geçti)"""
 import contextlib
@@ -772,9 +772,6 @@ def t39_aylik_kuru():
     m.gh_api = sahte_api({"a/b": {"sha": "c1"}})
     s, c = cikti(m.aylik, True)
     assert "KAÇAN AY: son çalışma 40 gün önce" in c
-    # kuru olmadan çalışmaz
-    s, c = cikti(m.aylik, False)
-    assert s[0] == "EXIT" and "--kuru" in s[1]
     # canlı kilit
     (k / ".guncelleme-kilidi").write_text(json.dumps({"pid": os.getpid()}))
     s, c = cikti(m.aylik, True)
@@ -802,7 +799,7 @@ def t41_karar_komutlari_var_olan_bayrak():
     d, _ = ozet(k, "--hizli")
     soru = [c for c in d["karar_bekleyen"] if "Aylık çalışmayı şimdi" in c]
     assert soru, d["karar_bekleyen"]
-    assert "--aylik --kuru" in soru[0] and "--uygula --dal" in soru[0]
+    assert "--aylik --kuru" in soru[0] and "arsiv-guncelle.py --aylik;" in soru[0]
     kaynak = GUNCELLE.read_text(encoding="utf-8")
     for bay in set(re.findall(r"--[a-z]+(?:-[a-z]+)*", soru[0])):
         assert bay in kaynak, bay
@@ -842,6 +839,258 @@ def t44_cikti_koruma_ve_hizli_yonlendirme():
     assert not yasak.exists() and "yazamaz" in r.stdout
     d, _ = ozet(k, "--hizli")
     assert not any("daha: notlar/aylik-ozet.md" in x for x in d["satirlar"])
+
+# ------------------------------------------------------------------ C: aşama 2 — --aylik zinciri
+ZINCIR_ARACLAR = ["gelistirici-bilgisi", "github-trend", "populer-tarama", "konu-takip", "kaynak-cek", "arsiv-yerlestir", "yol-tara",
+                  "program-denetim", "kapsam-denetimi", "katalog-uret", "skill-readme", "skill-calistir", "dogrula", "github-skill-listesi"]
+
+
+def zincir_kutuphane(repolar=("a/b", "c/d")):
+    """Sahte kütüphane: sahte araçlar, arşiv klasörü, kayıtlı kaynaklar (commit c1). Gerçek ağ/ev yok."""
+    k = kutuphane(ozet_kopya=True)
+    for ad in ZINCIR_ARACLAR + ARACLAR:
+        if ad != "aylik-ozet":
+            (k / "araclar" / f"{ad}.py").write_text(FAKE)
+    (k / "arsiv").mkdir()
+    (k / "arsiv" / "x.txt").write_text("1")
+    (k / "kaynaklar.json").write_text(json.dumps({"repolar": [{"repo": r, "tip": "T1"} for r in repolar]}))
+    (k / "registry.json").write_text(json.dumps({"skiller": [
+        {"repo": r, "commit": "c1", "kaynak_yol": "s", "id": r.replace("/", "-") + "-s", "klasor_hash": "h"} for r in repolar]}))
+    sh(k, "add", "-A")
+    sh(k, "commit", "-qm", "kaynak")
+    return k
+
+
+def zincir(k, davranis, siki=False):
+    """--aylik (kuru değil) zincirini sahte GitHub yanıtlarıyla koşturur. -> (donus, cikti, modül)"""
+    global _GB
+    m = yukle(k)
+    _GB = m.GhBulunamadi
+    m.gh_api = sahte_api(davranis)
+    s, c = cikti(m.aylik, False, siki)
+    return s, c, m
+
+
+def stamp(k):
+    return json.loads((k / "notlar" / "son-aylik-calisma.json").read_text(encoding="utf-8"))
+
+
+def t45_aylik_tam_zincir():
+    k = zincir_kutuphane()
+    once = sh(k, "rev-parse", "HEAD").stdout
+    s, c, _ = zincir(k, {"a/b": {"sha": "c2"}, "c/d": "404"})
+    assert s == 0, c
+    for adim in ("Adım 1/5", "Adım 2/5", "Adım 3/5", "Adım 4/5", "Adım 5/5"):
+        assert adim in c, adim
+    assert "Bu ay erişilemedi: c/d" in c and "SONUÇ: tamam" in c and "ATLANAN KAYNAKLAR: c/d" in c and "Aylık özet —" in c
+    dal = re.search(r"^DAL: (guncelleme/\S+)$", c, re.M).group(1)
+    assert sh(k, "branch", "--show-current").stdout.strip() == "master" and sh(k, "rev-parse", "HEAD").stdout == once
+    assert sh(k, "status", "--porcelain").stdout == "" and not (k / ".guncelleme-kilidi").exists()
+    assert dal in sh(k, "branch", "--list", "guncelleme/*").stdout
+    assert "--atla c/d" in (k / ".isaret" / "kaynak-cek.arg").read_text()
+    assert "c/d" in sh(k, "show", f"{dal}:notlar/guncelleme-gecmisi.md").stdout  # tarihçe kaydında atlanan kaynak
+    d = stamp(k)
+    assert d["sonuc"] == "tamam" and d["dal"] == dal and d["atlanan_kaynaklar"] == ["c/d"] and d["ozet_durumu"] in ("temiz", "dikkat", "sorun")
+    assert d["tarih"][:10] == date.today().isoformat() and d["son_basarili"] and d["gecmis"][0]["sonuc"] == "tamam"
+    # özet damgayı okur ve atlanan kaynağı karar olarak sorar (otomatik KAYIP işaretlenmez)
+    d2, _ = ozet(k, "--hizli")
+    assert any("c/d" in x and "KAYIP olarak işaretlensin mi" in x for x in d2["karar_bekleyen"])
+    assert json.loads((k / "kaynaklar.json").read_text())["repolar"][1]["tip"] == "T1"
+
+
+def t46_aylik_bekleyen_dal():
+    k = zincir_kutuphane()
+    once = sh(k, "rev-parse", "HEAD").stdout
+    env = dict(ENV, GIT_COMMITTER_DATE=(datetime.now() - timedelta(days=50)).isoformat(), GIT_AUTHOR_DATE=(datetime.now() - timedelta(days=50)).isoformat())
+    sh(k, "switch", "-q", "-c", "takip/2026-09")
+    subprocess.run(["git", "commit", "-q", "--allow-empty", "-m", "eski"], cwd=k, env=env, check=True)
+    sh(k, "switch", "-q", "master")
+    s, c, _ = zincir(k, {"a/b": {"sha": "c2"}, "c/d": {"sha": "c1"}})
+    assert s == 0 and "SONUÇ: bekleyen-dal" in c and "Onay bekleyen dal: takip/2026-09 (50 gün" in c and "45 günden eski" in c, c
+    assert "NEDEN: bekleyen dal: takip/2026-09" in c and "Yeni güncelleme dalı AÇILMAYACAK" in c
+    assert sh(k, "branch", "--list", "guncelleme/*", "takip/*", "--format=%(refname:short)").stdout.split() == ["takip/2026-09"]
+    assert sh(k, "rev-parse", "HEAD").stdout == once and sh(k, "branch", "--show-current").stdout.strip() == "master"
+    assert "~ a/b:" in c and "Aylık özet —" in c  # salt okuma adımları sürdü
+    assert not isaret(k, "kaynak-cek") and stamp(k)["sonuc"] == "bekleyen-dal" and stamp(k)["dal"] is None
+    d, _ = ozet(k, "--hizli")
+    assert d["durum"] == "dikkat" and any("takip/2026-09" in x for x in d["karar_bekleyen"]) and "bekleyen-dal" in "\n".join(d["satirlar"])
+
+
+def t47_aylik_kirli_agac():
+    k = zincir_kutuphane()
+    (k / "baska.txt").write_text("elle")
+    s, c, _ = zincir(k, {"a/b": {"sha": "c2"}, "c/d": {"sha": "c1"}})
+    assert s == 0 and "SONUÇ: kismi" in c and "kirli ağaç (1 dosya): baska.txt" in c and "Atlandı: ön kontrol engeli" in c
+    assert sh(k, "branch", "--list", "guncelleme/*", "takip/*").stdout.strip() == ""
+    assert (k / "baska.txt").read_text() == "elle" and not isaret(k, "kaynak-cek")
+    assert stamp(k)["sonuc"] == "kismi" and "baska.txt" in stamp(k)["neden"]
+    s, c, _ = zincir(k, {"a/b": {"sha": "c2"}, "c/d": {"sha": "c1"}}, siki=True)
+    assert s == 2
+    # yalnız rapor dosyası değişikse: kaydetme/geri alma yönergesi
+    (k / "baska.txt").unlink()
+    (k / "notlar" / "proje-durumu.md").write_text("x")
+    sh(k, "add", "-A")
+    sh(k, "commit", "-qm", "r")
+    (k / "notlar" / "proje-durumu.md").write_text("y")
+    s, c, _ = zincir(k, {"a/b": {"sha": "c1"}, "c/d": {"sha": "c1"}})
+    assert "yalnız rapor dosyaları değişmiş (notlar/proje-durumu.md)" in c and "SONUÇ: kismi" in c
+
+
+def t48_aylik_cevrimdisi():
+    k = zincir_kutuphane()
+    once = sh(k, "rev-parse", "HEAD").stdout
+    os.environ["GHMODE"] = "fail"
+    try:
+        s, c, _ = zincir(k, {})
+    finally:
+        os.environ["GHMODE"] = "ok"
+    assert s == 0 and "SONUÇ: kismi" in c and "gh auth login" in c and "GitHub'a ulaşılamıyor" in c and "Kaynak karşılaştırması ATLANDI" in c
+    assert "--github" not in (k / ".isaret" / "dogrula.arg").read_text()  # yerel kontrol yapıldı, ağ yok
+    assert sh(k, "rev-parse", "HEAD").stdout == once and sh(k, "branch", "--list", "guncelleme/*", "takip/*").stdout.strip() == ""
+    assert not isaret(k, "kaynak-cek") and "Aylık özet —" in c
+    d = stamp(k)
+    assert d["sonuc"] == "kismi" and "GitHub'a ulaşılamıyor" in d["neden"]
+    m = yukle(k)
+    import unittest.mock as um
+    with um.patch.object(m.subprocess, "run", side_effect=subprocess.TimeoutExpired("gh", 30)):
+        assert m.gh_hazir() == (False, None, "zaman aşımı")  # takılmaz
+
+
+def t49_aylik_hata_damgasi():
+    k = zincir_kutuphane()
+    once = sh(k, "rev-parse", "HEAD").stdout
+    cfg(k, "arsiv-yerlestir", kod=1)
+    s, c, _ = zincir(k, {"a/b": {"sha": "c2"}, "c/d": {"sha": "c1"}})
+    assert s == 1 and "SONUÇ: basarisiz" in c and "NEDEN:" in c, c
+    assert sh(k, "branch", "--list", "guncelleme/*").stdout.strip() == "" and sh(k, "rev-parse", "HEAD").stdout == once
+    assert sh(k, "branch", "--show-current").stdout.strip() == "master" and sh(k, "status", "--porcelain").stdout == ""
+    assert not (k / ".guncelleme-kilidi").exists()
+    d = stamp(k)
+    assert d["sonuc"] == "basarisiz" and d["neden"] and d["dal"] is None and d["son_basarili"] is None
+    assert "Aylık özet —" in c  # güncelleme düşse de özet ve damga çalıştı
+    # beklenmeyen istisna da damgalanır
+    k2 = zincir_kutuphane()
+    m = yukle(k2)
+    m.rapor = lambda: (_ for _ in ()).throw(RuntimeError("patladı"))
+    s, c = cikti(m.aylik, False)
+    assert s == 1 and "beklenmeyen hata: RuntimeError" in c and stamp(k2)["sonuc"] == "basarisiz"
+
+
+def t50_aylik_takip():
+    k = zincir_kutuphane()
+    once = sh(k, "rev-parse", "HEAD").stdout
+    # değişiklik yok, takip taraması yeni dosya üretir -> takip dalı
+    cfg(k, "konu-takip", yaz="notlar/konu-takip.md")
+    s, c, _ = zincir(k, {"a/b": {"sha": "c1"}, "c/d": {"sha": "c1"}})
+    assert s == 0 and "SONUÇ: tamam" in c and re.search(r"^DAL: takip/\S+$", c, re.M), c
+    dal = re.search(r"^DAL: (takip/\S+)$", c, re.M).group(1)
+    assert sh(k, "rev-parse", "HEAD").stdout == once and sh(k, "branch", "--show-current").stdout.strip() == "master"
+    assert "konu-takip.md" in sh(k, "show", "--stat", dal).stdout and stamp(k)["dal"] == dal
+    # takip dalı yeni bir koşuyu engeller
+    s, c, _ = zincir(k, {"a/b": {"sha": "c2"}, "c/d": {"sha": "c1"}})
+    assert "SONUÇ: bekleyen-dal" in c
+    # değişiklik hiç yok -> boş dal silinir
+    k = zincir_kutuphane()
+    s, c, _ = zincir(k, {"a/b": {"sha": "c1"}, "c/d": {"sha": "c1"}})
+    assert s == 0 and "SONUÇ: tamam" in c and "DAL:" not in c and sh(k, "branch", "--list", "takip/*").stdout.strip() == ""
+    assert stamp(k)["dal"] is None
+    # üç tarama da düşerse geri al, kısmi
+    k = zincir_kutuphane()
+    for ad in ("github-trend", "populer-tarama", "konu-takip"):
+        cfg(k, ad, kod=1)
+    s, c, _ = zincir(k, {"a/b": {"sha": "c1"}, "c/d": {"sha": "c1"}})
+    assert "SONUÇ: kismi" in c and "taramalar yapılamadı" in c and sh(k, "branch", "--list", "takip/*").stdout.strip() == ""
+    assert sh(k, "branch", "--show-current").stdout.strip() == "master"
+
+
+def t51_damga_yaz_ve_sinirlar():
+    k = zincir_kutuphane()
+    m = yukle(k)
+    try:
+        m.damga_yaz("durduruldu")
+        assert False
+    except ValueError:
+        pass
+    for i in range(14):
+        assert m.damga_yaz("kismi" if i % 2 else "tamam", dal=f"d{i}", neden="n", atlanan=["z/y", "a/b", "z/y"])
+    d = stamp(k)
+    assert len(d["gecmis"]) == 12 and d["gecmis"][0]["dal"] == "d13" and d["atlanan_kaynaklar"] == ["a/b", "z/y"]
+    assert d["sonuc"] == "kismi" and d["son_basarili"]  # kismi son_basarili'yi silmez
+    m.damga_ozet_durumu("dikkat")
+    assert stamp(k)["ozet_durumu"] == "dikkat" and len(stamp(k)["gecmis"]) == 12
+    # .gitignore'da değilse yazmaz
+    (k / "notlar" / "son-aylik-calisma.json").unlink()
+    (k / ".gitignore").write_text(".isaret/\n")
+    c, g = cikti(m.damga_yaz, "tamam")
+    assert c is False and "gitignore'da değil" in g and not (k / "notlar" / "son-aylik-calisma.json").exists()
+
+
+def t52_damga_ozeti_yeni_biciim():
+    k = kutuphane()
+    damga(k, tarih=gun_once(40) + "T10:00:00+03:00", sonuc="tamam", dal=None, neden="", atlanan_kaynaklar=[])
+    d, _ = ozet(k, "--hizli")
+    soru = [c for c in d["karar_bekleyen"] if "Aylık çalışmayı şimdi" in c]
+    assert soru and "40 gün önce" in "\n".join(d["satirlar"]) and "arsiv-guncelle.py --aylik" in soru[0]
+    damga(k, tarih=gun_once(3) + "T10:00:00+03:00", sonuc="bekleyen-dal", neden="bekleyen dal: takip/2026-10 (3 gün)")
+    d, _ = ozet(k, "--hizli")
+    assert d["durum"] == "dikkat" and "yarım kaldı: bekleyen-dal — bekleyen dal: takip/2026-10" in _tum_md(k)
+    damga(k, tarih=gun_once(3) + "T10:00:00+03:00", sonuc="tamam")
+    d, _ = ozet(k, "--hizli")
+    assert not any("şimdi yapayım" in c for c in d["karar_bekleyen"]) and "3 gün önce" in metin(d)
+    # 45 günü aşan bekleyen dal çağrılır
+    env = dict(ENV, GIT_COMMITTER_DATE=(datetime.now() - timedelta(days=60)).isoformat(), GIT_AUTHOR_DATE=(datetime.now() - timedelta(days=60)).isoformat())
+    sh(k, "switch", "-q", "-c", "guncelleme/2026-08")
+    subprocess.run(["git", "commit", "-q", "--allow-empty", "-m", "eski"], cwd=k, env=env, check=True)
+    sh(k, "switch", "-q", "master")
+    d, _ = ozet(k, "--hizli")
+    assert d["durum"] == "dikkat" and "guncelleme/2026-08 45 günden eski" in _tum_md(k)
+
+
+def t53_zamanlanmis_gorev_karsilastirma():
+    k = kutuphane()
+    (k / "zamanlanmis").mkdir()
+    (k / "zamanlanmis" / "aylik-guncelleme.SKILL.md").write_text("metin")
+    canli = TMP / "canli53.md"
+    canli.write_text("metin")
+    md = lambda: (k / "notlar" / "aylik-ozet.md").read_text(encoding="utf-8")
+    d, _ = ozet(k, "--gorev-yolu", str(canli))
+    assert "| zamanlanmis-gorev | temiz |" in md() and "Zamanlanmış görev metni güncellensin mi?" not in d["karar_bekleyen"]
+    canli.write_text("başka")
+    d, _ = ozet(k, "--gorev-yolu", str(canli))
+    assert "| zamanlanmis-gorev | dikkat |" in md() and "Zamanlanmış görev metni güncellensin mi?" in d["karar_bekleyen"]
+    d, _ = ozet(k, "--gorev-yolu", str(TMP / "yok53.md"))
+    assert "| zamanlanmis-gorev | dikkat |" in md() and "bulunamadı" in md()
+    # gerçek kütüphane kopyası var, düzgün biçimde
+    kopya = (GERCEK / "zamanlanmis" / "aylik-guncelleme.SKILL.md").read_text(encoding="utf-8")
+    assert kopya.startswith("---\nname: skill-kutuphanesi-aylik-guncelleme\ndescription:") and "arsiv-guncelle.py --aylik" in kopya
+    assert "--birlestir" in kopya and "push" in kopya and "--uygula" not in kopya.split("Adımlar:")[1]
+
+
+def t54_zincir_birlestirmez_gondermez():
+    import inspect
+    src = "".join(inspect.getsource(f) for f in (_oku_modul().aylik_calistir, _oku_modul().takip, _oku_modul()._dal_geri_al, _oku_modul()._ozet_sonrasi_temizlik))
+    for yasak in ('"push"', '"merge"', '"--birlestir"', "birlestir(", '"gh", "pr"'):
+        assert yasak not in src, yasak
+    assert src.count('"branch", "-D"') == 2  # yalnız takip()'in kendi açtığı dal: boş kalınca ve hata geri almasında
+
+
+def _oku_modul():
+    spec = importlib.util.spec_from_file_location("ag_inspect", GUNCELLE)
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def t55_belgeler_aylik():
+    r = (GERCEK / "rehber" / "02-guncelleme-yonergesi.md").read_text(encoding="utf-8")
+    p = (GERCEK / "promptlar" / "08-aylik-guncelleme-onayi.md").read_text(encoding="utf-8")
+    z = (GERCEK / "zamanlanmis" / "aylik-guncelleme.SKILL.md").read_text(encoding="utf-8")
+    for dosya, t in (("rehber/02", r), ("promptlar/08", p), ("zamanlanmis", z)):
+        for k in ("--aylik", "--birlestir", "bekleyen"):
+            assert k in t, (dosya, k)
+    for k in ("son-aylik-calisma.json", "kismi", "bekleyen-dal", "tamam", "basarisiz", "gh auth login"):
+        assert k in r, k
+    assert "--aylik --kuru" in r
 
 
 TESTLER = [(n, f) for n, f in sorted(globals().items()) if n.startswith("t") and n[1:3].isdigit() and callable(f)]

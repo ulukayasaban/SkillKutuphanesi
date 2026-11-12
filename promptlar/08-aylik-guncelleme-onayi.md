@@ -1,13 +1,18 @@
 # 08 — Aylık Güncelleme Dalını İnceleme ve Onay
 
-**Ne zaman:** Ayın 1'indeki otomatik görev "güncelleme `guncelleme/YYYY-AA` dalında hazır" ya da "takip `takip/YYYY-AA` dalında hazır" dedi;
-ya da oturum başındaki hızlı özet (`python3 araclar/aylik-ozet.py --hizli`) "aylık çalışma 35 günden fazladır yapılmadı" ya da bekleyen dal dedi.
+**Ne zaman:** Ayın 1'indeki otomatik görev (ya da elle `python3 -u araclar/arsiv-guncelle.py --aylik`) "güncelleme `guncelleme/YYYY-AA` dalında hazır",
+"takip `takip/YYYY-AA` dalında hazır", "kısmi" ya da "bekleyen dal" dedi; ya da oturum başındaki hızlı özet (`python3 araclar/aylik-ozet.py --hizli`)
+"aylık çalışma 35 günden fazladır yapılmadı" ya da bekleyen dal dedi.
 **Nerede:** `~/Documents/SkillKutuphanesi` klasöründe.
 
 ```kopyala
-Skill kütüphanemin aylık güncelleme sonucunu incele. ~/Documents/SkillKutuphanesi/AGENTS.md ve rehber/02-guncelleme-yonergesi.md'yi oku.
+Skill kütüphanemin aylık zincir sonucunu incele. ~/Documents/SkillKutuphanesi/AGENTS.md ve rehber/02-guncelleme-yonergesi.md'yi oku.
 1. Önce özeti çalıştır ve bana oku: python3 araclar/aylik-ozet.py ("Senin kararını bekleyen" listesi ve "Dikkat gerektirenler").
-   Aylık çalışma 35 günden eskiyse bana sor; evet derse güncellemeyi rehber/02'deki yolla yap (önce: python3 araclar/arsiv-guncelle.py --aylik --kuru ile planı göster).
+   Son çalışma 35 günden eskiyse bana sor: "Aylık çalışmayı şimdi yapayım mı?" Evet derse python3 -u araclar/arsiv-guncelle.py --aylik çalıştır
+   (önce istersem --kuru ile planı göster; tek koşu kaçan ayı da kapsar). Zincir birleştirmez, push etmez.
+   Damga notlar/son-aylik-calisma.json: sonuç tamam / kismi / basarisiz / bekleyen-dal. "kismi" ise NEDEN satırını açıkla ve çözümü söyle:
+   kirli ağaç → dosyaları kaydet ya da geri al (onayımla); GitHub yok → benim terminalimde gh auth login; sonra --aylik'i yeniden çalıştır.
+   "bekleyen-dal" ise önce o dalı incele (aşağıdaki 2-5); birleştirilene ya da silinene kadar yeni dal açılmaz.
    Özet "rapor dosyaları yenilendi, kaydedilsin mi?" derse bana sor; onaylarsam git add <o dosyalar> && git commit.
    Bir kararı bana sorduktan sonra "kabul ettim" dersem notlar/kararlar.md "Kabul edilen bekleyenler" bölümüne ifadeyi yaz (özette tekrar çıkmasın).
 2. Bekleyen dalları bul: git branch --list 'guncelleme/*' 'takip/*'

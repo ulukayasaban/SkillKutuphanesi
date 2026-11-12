@@ -21,7 +21,7 @@ Kütüphane oturumunun ilk işi (kütüphane klasöründe):
 python3 araclar/aylik-ozet.py --hizli
 ```
 Çıktıyı kullanıcıya iki cümleyle söyle. Aylık çalışma 35 günü aştıysa "Aylık çalışmayı şimdi yapayım mı?" diye sor; evet derse
-önce `python3 araclar/arsiv-guncelle.py --aylik --kuru` (plan, hiçbir şey değiştirmez), sonra `rehber/02-guncelleme-yonergesi.md` yolu: `--uygula --dal`, onay, `--birlestir <dal>`.
+önce `python3 araclar/arsiv-guncelle.py --aylik --kuru` (plan, hiçbir şey değiştirmez), sonra `python3 -u araclar/arsiv-guncelle.py --aylik` (tek komut: dal hazırlar, özet verir, damga yazar; birleştirmez), dal özeti, onay, `--birlestir <dal>` (`rehber/02-guncelleme-yonergesi.md`).
 Hızlıdır (yaklaşık 5 sn), ağ kullanmaz, hiçbir şey yazmaz, en çok 15 satır basar. Git durumunu, genel klasörlerde beklenmeyen girdi olup olmadığını,
 yedek yaşını, son aylık çalışmayı ve karar bekleyenleri toplar.
 - Sonuç `temiz`: kısa bir cümleyle söyle, başka bir şey yapma.
@@ -38,7 +38,7 @@ yedek yaşını, son aylık çalışmayı ve karar bekleyenleri toplar.
 | "Yeni skill ekledim, kontrol et" (yeni kaynak) | `rehber/03-yeni-skill-ekleme.md` A1..A9, `promptlar/07-yeni-skill-reposu-ekle.md` | `python3 araclar/github-skill-listesi.py`, çakışma ve ücret kontrolü, onaysız ekleme yok |
 | Kendi skilimi kütüphaneye al / kendi skilimi düzenledim | `rehber/03-yeni-skill-ekleme.md` B2, `kendi/README.md` | `python3 araclar/kaynak-cek.py --repo yerel/kendi` (ağ yok), sonra `python3 araclar/arsiv-yerlestir.py`; projede `skill-ekle.py <proje> --durum` |
 | Bir kaynağı ya da skili çıkar | `rehber/03-yeni-skill-ekleme.md` "D) Kaynak / skill KALDIRMAK" (etki raporu araçla, çıkarma D adımlarıyla elle), `promptlar/14-kaynak-cikar.md` | `python3 araclar/proje-kullanimi.py --skill <kimlik>` (etki), sonra `python3 araclar/kaynak-cikar.py --repo owner/ad --kuru` |
-| "Skilleri güncelle" (aylık) | `rehber/02-guncelleme-yonergesi.md`, `promptlar/08-aylik-guncelleme-onayi.md` | `python3 araclar/arsiv-guncelle.py --aylik --kuru`, sonra `--uygula --dal`, dal özeti, onay, `--birlestir <dal>` |
+| "Skilleri güncelle" (aylık) | `rehber/02-guncelleme-yonergesi.md`, `promptlar/08-aylik-guncelleme-onayi.md` | `python3 araclar/arsiv-guncelle.py --aylik --kuru`, sonra `python3 -u araclar/arsiv-guncelle.py --aylik` (tek komut), dal özeti, onay, `--birlestir <dal>` |
 | Projeleri kontrol et, proje ekle/çıkar/taşındı | `rehber/10-proje-kullanimi.md`, `promptlar/12-proje-kullanimi-ve-etki.md` | `python3 araclar/proje-kullanimi.py --saglik` (kayıtsız klasörleri de tarar; yazıcılar: `--ekle`, `--cikar`, `--tasindi`, `--yoksay`, önce plan, onayla `--evet`); bağ ve donmuş skiller `--saglik`te görünür |
 | Git durumu, push gecikmesi, geri alma | `rehber/02-guncelleme-yonergesi.md`, `rehber/13-yedek-ve-geri-alma.md` | `python3 araclar/git-durum.py --kisa` (push yalnız kullanıcı isteyince) |
 | HyperFrames / OpenMontage / başka program: kur, güncelle, geri al, çıkar | `rehber/11-program-yonetimi.md`, `promptlar/13-program-kur-guncelle.md` | `python3 araclar/program-denetim.py --oncesi <ad>` "HAZIR" demeden dokunma (gerçek yazma yalnız kural 1 istisnasıyla: bkz. madde 6) Güncellemeden önce ve sonra projelerdeki bağlar: `python3 araclar/proje-kullanimi.py --program <ad>`. |

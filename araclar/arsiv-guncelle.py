@@ -8,13 +8,17 @@
   python3 araclar/arsiv-guncelle.py --birlestir <dal>    # kullanıcı onayından sonra: dalı master'a birleştirir (--no-ff),
                                                          # doğrulama + kapsam denetimi + testleri çalıştırır, dalı siler
   python3 araclar/arsiv-guncelle.py --uygula             # (eski yol) güncellemeyi doğrudan bulunulan dalda yapar
+  python3 araclar/arsiv-guncelle.py --aylik              # AYLIK ZİNCİR (zamanlanmış görevin tek komutu): ön kontrol -> kaynak raporu ->
+                                                         # güncelleme (guncelleme/YYYY-AA) ya da takip (takip/YYYY-AA) dalı -> aylık özet ->
+                                                         # damga (notlar/son-aylik-calisma.json). Birleştirmez, göndermez; master değişmez.
   python3 araclar/arsiv-guncelle.py --aylik --kuru       # aylık zincirin yan etkisiz PLANI: ön kontrol + rapor + özet (dal, commit, damga YOK)
   python3 araclar/arsiv-guncelle.py --siki               # rapor modu; GitHub'a ulaşılamadıysa ya da kaynak kontrol edilemediyse çıkış 2
   python3 araclar/arsiv-guncelle.py --help               # bu metin (hiçbir şey çalıştırmaz)
 
 Çıkış kodu: 0 = sorun yok · 1 = erişilemeyen kaynak (rapor modu) ya da hata
             2 = YALNIZ --siki ile: GitHub'a ulaşılamadı ya da bazı kaynaklar kontrol edilemedi (yalnız yerel kontroller yapıldı)
-Not: --aylik'in yazma adımları (dal açma, takip, damga) henüz yok; şimdilik yalnız --aylik --kuru çalışır.
+--aylik çıkışı: 0 = tamam/kismi/bekleyen-dal · 1 = basarisiz · 2 = YALNIZ --siki ile kismi. Son satırlar: SONUÇ / NEDEN / DAL / ATLANAN KAYNAKLAR.
+Bekleyen guncelleme/* ya da takip/* dalı varken yeni dal açılmaz; salt okuma adımları (rapor, özet) yine çalışır.
 
 Sıra (--uygula): geliştirici bilgisi -> indir -> yerleştir -> kapsam denetimi -> katalog -> doğrula -> geçmiş kaydı -> commit
 Güvenceler:
@@ -33,11 +37,12 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, gh_api, json_oku, repo_guncel, yerel_agac, yerel_commit  # noqa: E402
+from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, gh_api, json_oku, json_yaz, repo_guncel, yerel_agac, yerel_commit  # noqa: E402
 
 GECMIS = KOK / "notlar" / "guncelleme-gecmisi.md"
 ANA_DAL = "master"
-DAMGA = KOK / "notlar" / "son-aylik-calisma.json"  # yerel, git'e girmez (.gitignore); bu aşamada yalnız OKUNUR
+DAMGA = KOK / "notlar" / "son-aylik-calisma.json"  # yerel, git'e girmez (.gitignore); yalnız --aylik yazar
+SONUCLAR = ("tamam", "kismi", "basarisiz", "bekleyen-dal")
 ESIK_DAL_GUN = 45      # bekleyen dal bu günden eskiyse uyarı
 ESIK_KACAN_GUN = 35    # son aylık çalışma bu günden eskiyse "kaçan ay"
 IZINLI_RAPOR_YOLLARI = ("notlar/proje-durumu.md", "notlar/program-denetimi.md")
@@ -48,6 +53,7 @@ ATLANAN = []
 ADI_DEGISEN = {}
 ULASILAMAYAN = []
 CEVRIMDISI = False
+SON_HATA = ""  # _uygula geri alırken hatanın kısa nedeni (--aylik damgası için)
 
 
 def calistir(*komut):
@@ -128,6 +134,51 @@ def damga_oku():
         return d if isinstance(d, dict) else {}
     except (OSError, ValueError):
         return {}
+
+
+def damga_tarihi(damga):
+    """Damgadaki son çalışma tarihi (yeni 'tarih' ya da eski 'son_calisma'); yoksa None."""
+    try:
+        return date.fromisoformat(str(damga.get("tarih") or damga.get("son_calisma") or "")[:10])
+    except ValueError:
+        return None
+
+
+def damga_yaz(sonuc, dal=None, neden="", atlanan=None, ad_degisen=None, ozet_durumu=None):
+    """notlar/son-aylik-calisma.json'u yazar (yerel, git'e girmez). .gitignore'da değilse yazmaz. -> yazıldı mı"""
+    if sonuc not in SONUCLAR:
+        raise ValueError(f"geçersiz sonuç: {sonuc}")
+    if not yoksayiliyor_mu(DAMGA):
+        print(f"UYARI: {DAMGA.relative_to(KOK)} .gitignore'da değil; ağacı kirletmemek için yazılmadı (.gitignore satırı eksik).")
+        return False
+    onceki = damga_oku()
+    simdi = datetime.now().astimezone().isoformat(timespec="seconds")
+    kayit = {"zaman": simdi, "sonuc": sonuc, "dal": dal, "neden": neden}
+    gecmis = [g for g in (onceki.get("gecmis") or []) if isinstance(g, dict)]
+    d = {"surum": 2, "tarih": simdi, "sonuc": sonuc, "dal": dal, "neden": neden,
+         "atlanan_kaynaklar": sorted(set(atlanan or [])), "ad_degisen": dict(ad_degisen or {}),
+         "ozet_durumu": ozet_durumu,
+         "son_basarili": simdi if sonuc == "tamam" else onceki.get("son_basarili"),
+         "gecmis": ([kayit] + gecmis)[:12]}
+    try:
+        DAMGA.parent.mkdir(parents=True, exist_ok=True)
+        json_yaz(DAMGA, d)
+    except OSError as e:
+        print(f"UYARI: damga yazılamadı ({type(e).__name__})")
+        return False
+    return True
+
+
+def damga_ozet_durumu(durum):
+    """Özet üretildikten sonra damgaya özetin durumunu ekler (yeni geçmiş kaydı açmaz)."""
+    d = damga_oku()
+    if not d or not yoksayiliyor_mu(DAMGA):
+        return
+    d["ozet_durumu"] = durum
+    try:
+        json_yaz(DAMGA, d)
+    except OSError:
+        pass
 
 
 def rapor():
@@ -268,7 +319,11 @@ def gecmis_yaz(dal, ayrinti, onceki):
               f"- Kaynakta kaldırılıp arşivde korunan (bu güncellemede) ({len(yeni_emekli)}): {', '.join(f'`{x}`' for x in yeni_emekli) or '-'}",
               f"- Registry'den düşen ({len(kalkan)}): {', '.join(f'`{x}`' for x in kalkan) or '-'}",
               f"- **Yeniden incelenecek** ({len(eskiyen)}): {', '.join(f'`{x}`' for x in eskiyen) or '-'} "
-              "(rehber/07-kategori-inceleme.md)", ""]
+              "(rehber/07-kategori-inceleme.md)"]
+    if ATLANAN:
+        satir.append(f"- **Bu ay erişilemeyen (atlanan) kaynaklar** ({len(ATLANAN)}): {', '.join(f'`{x}`' for x in ATLANAN)} "
+                     "(arşiv kopyaları korundu; kalıcıysa kaynaklar.json'da 'tip': 'KAYIP' yapmak senin kararın)")
+    satir.append("")
     bas = "# Güncelleme Geçmişi\n\n> `araclar/arsiv-guncelle.py --uygula --dal` her güncellemede buraya kayıt ekler (en yeni üstte). " \
           "Ayrıntı: `git log --oneline -- registry.json`.\n\n"
     eski_metin = GECMIS.read_text(encoding="utf-8") if GECMIS.exists() else bas
@@ -294,15 +349,8 @@ def api_hakki_kontrol(gerekli=1500):
     print(f"GitHub API hakkı: {kalan}")
 
 
-def uygula(degisen, ayrinti, dal_modu):
-    kirli = kirli_dosyalar()
-    if kirli:
-        sys.exit(f"DURDU: kütüphanede kaydedilmemiş değişiklik var ({len(kirli)} dosya): {kirli_ozet(kirli)}. "
-                 "Önce kaydet (git commit) ya da geri al. Aylık plan için: python3 araclar/arsiv-guncelle.py --aylik --kuru "
-                 "(kirli ağaçta salt okuma plan üretir).")
-    api_hakki_kontrol()
-    onceki = json_oku(REGISTRY)["skiller"]
-    dal = git("branch", "--show-current").stdout.strip()
+def kilit_al():
+    """Canlı bir güncelleme kilidi varsa durur; yoksa (ya da ölü pid ise) kilidi bu sürece yazar."""
     if KILIT.exists():
         try:
             k = json.loads(KILIT.read_text())
@@ -312,6 +360,18 @@ def uygula(degisen, ayrinti, dal_modu):
         if canli:
             sys.exit(f"DURDU: başka bir güncelleme sürüyor (pid {k['pid']}, {k.get('baslangic')}).")
     KILIT.write_text(json.dumps({"pid": os.getpid(), "baslangic": datetime.now().isoformat(timespec="seconds")}))
+
+
+def uygula(degisen, ayrinti, dal_modu):
+    kirli = kirli_dosyalar()
+    if kirli:
+        sys.exit(f"DURDU: kütüphanede kaydedilmemiş değişiklik var ({len(kirli)} dosya): {kirli_ozet(kirli)}. "
+                 "Önce kaydet (git commit) ya da geri al. Aylık plan için: python3 araclar/arsiv-guncelle.py --aylik --kuru "
+                 "(kirli ağaçta salt okuma plan üretir).")
+    api_hakki_kontrol()
+    onceki = json_oku(REGISTRY)["skiller"]
+    dal = git("branch", "--show-current").stdout.strip()
+    kilit_al()
     try:
         return _uygula(degisen, ayrinti, dal_modu, onceki, dal)
     finally:
@@ -339,7 +399,10 @@ def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
         # Konu takibi (e-ticaret, mobil…): yeni aday skill repoları raporlanır, eklenmez
         if subprocess.run([sys.executable, "araclar/konu-takip.py"], cwd=KOK).returncode:
             print("UYARI: konu takibi taraması yapılamadı; önceki konu-takip.json ile devam")
-        calistir(sys.executable, "araclar/kaynak-cek.py")
+        if ATLANAN:  # erişilemeyen kaynak zinciri durdurmaz: arşiv kopyası korunur (yalnız --aylik doldurur)
+            calistir(sys.executable, "araclar/kaynak-cek.py", "--atla", ",".join(ATLANAN))
+        else:
+            calistir(sys.executable, "araclar/kaynak-cek.py")
         calistir(sys.executable, "araclar/arsiv-yerlestir.py")
         # Sabit yol taraması (salt okuma, notlar/yol-denetimi.md): hata güncellemeyi durdurmaz
         if subprocess.run([sys.executable, "araclar/yol-tara.py"], cwd=KOK).returncode:
@@ -362,6 +425,8 @@ def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
         calistir("git", "add", "-f", "arsiv")  # skillerin kendi .gitignore dosyaları arşiv dosyalarını gizlemesin
         calistir("git", "commit", "-q", "-m", f"Arşiv güncellemesi ({date.today().isoformat()}): " + ", ".join(degisen))
     except (subprocess.CalledProcessError, SystemExit, Exception) as e:  # noqa: BLE001
+        global SON_HATA
+        SON_HATA = str(e).strip().splitlines()[-1][:200] if str(e).strip() else type(e).__name__
         print(f"HATA: güncelleme yarıda kaldı: {e}")
         if dal_modu:
             git("reset", "-q", "--hard")
@@ -435,25 +500,19 @@ def _kilit_canli_pid():
         return None
 
 
-def aylik(kuru):
-    """Aylık zincir. Bu aşamada YALNIZ --kuru: ön kontrol + rapor + liste raporu + PLAN + hızlı özet.
-    Dal açmaz, commit atmaz, damga ya da özet dosyası yazmaz; git'e yalnız okuma komutları gönderir."""
-    if not kuru:
-        sys.exit("--aylik şimdilik yalnız --kuru ile çalışır (yazma adımları: dal açma, takip dalı, damga henüz yapılmadı). "
-                 "Kaynak güncellemesi için: --uygula --dal.")
-    print(f"AYLIK ZİNCİR — {date.today().isoformat()} (kuru: hiçbir şey değişmez)")
-    pid = _kilit_canli_pid()
-    if pid:
-        sys.exit(f"DURDU: başka bir güncelleme sürüyor (pid {pid}).")
-    damga = damga_oku()
-    try:
-        gun = (date.today() - date.fromisoformat(str(damga.get("son_calisma", ""))[:10])).days
-    except ValueError:
-        gun = None
-    if gun is None:
-        print("Aylık çalışma damgası yok (ilk kurulum ya da yeni makine).")
-    elif gun > ESIK_KACAN_GUN:
-        print(f"KAÇAN AY: son çalışma {gun} gün önce ({str(damga['son_calisma'])[:10]}). Bu koşu kaçan ayı da kapsar.")
+def _kacan_ay_satiri(damga):
+    """Damga 35 günden eskiyse 'KAÇAN AY' satırı; damga yoksa bilgi satırı; yoksa None."""
+    t = damga_tarihi(damga)
+    if t is None:
+        return "Aylık çalışma damgası yok (ilk kurulum ya da yeni makine)."
+    gun = (date.today() - t).days
+    if gun > ESIK_KACAN_GUN:
+        return f"KAÇAN AY: son çalışma {gun} gün önce ({t.isoformat()}). Bu koşu kaçan ayı da kapsar."
+    return None
+
+
+def _engeller():
+    """Ön kontrol (yalnız okur). -> (engeller, bekleyen, gh_ok, gh_neden, kirli_var). Engel = yazma adımını kapatan durum."""
     engeller = []
     dal = git("branch", "--show-current").stdout.strip()
     if dal != ANA_DAL:
@@ -472,19 +531,234 @@ def aylik(kuru):
     ok, _kalan, gneden = gh_hazir()
     if not ok:
         engeller.append(f"GitHub'a ulaşılamıyor ({gneden})")
+    return engeller, bekleyen, ok, gneden, bool(kirli)
+
+
+def _liste_raporu():
+    """github-skill-listesi.py raporu (ağ ister; hata zinciri durdurmaz)."""
+    try:
+        r = subprocess.run([sys.executable, str(KOK / "araclar" / "github-skill-listesi.py")], cwd=KOK,
+                           capture_output=True, text=True, timeout=300)
+        if r.stdout.strip():
+            print(r.stdout.rstrip())
+        if r.returncode != 0:
+            print("UYARI: yıldız listesi kontrolü yapılamadı")
+    except (OSError, subprocess.TimeoutExpired):
+        print("UYARI: yıldız listesi kontrolü yapılamadı")
+
+
+def _dal_geri_al(dal):
+    """takip() hatasında: YALNIZ bu koşunun açtığı dalda ise değişiklikleri atar, master'a döner, o dalı siler."""
+    if git("branch", "--show-current").stdout.strip() != dal:
+        print("UYARI: geri alma yapılamadı (beklenmeyen dal); elle kontrol et")
+        return
+    git("reset", "-q", "--hard")
+    git("clean", "-fdq", "notlar")
+    git("switch", "-q", ANA_DAL)
+    git("branch", "-D", dal)
+    print(f"'{dal}' dalı geri alındı ve silindi; master değişmedi.")
+
+
+def takip():
+    """Kaynaklarda değişiklik yokken: takip/YYYY-AA dalında trend + popüler + konu taraması. -> (sonuc, dal|None, neden)
+    Değişiklik yoksa kendi açtığı dalı siler. Hata olursa yalnız kendi dalını geri alır."""
+    kilit_al()
+    dal = _dal_adi_onizle("takip")
+    try:
+        calistir("git", "switch", "-q", "-c", dal)
+        try:
+            basarisiz = 0
+            for ad, arg in (("github-trend.py", ["--aday"]), ("populer-tarama.py", []), ("konu-takip.py", [])):
+                if subprocess.run([sys.executable, f"araclar/{ad}", *arg], cwd=KOK).returncode:
+                    basarisiz += 1
+                    print(f"UYARI: {ad} taraması yapılamadı; önceki rapor eski kaldı")
+            if basarisiz == 3:
+                _dal_geri_al(dal)
+                return "kismi", None, "taramalar yapılamadı (ağ?)"
+            calistir(sys.executable, "araclar/katalog-uret.py")
+            calistir(sys.executable, "araclar/dogrula.py")
+            if not git("status", "--porcelain").stdout.strip():
+                git("switch", "-q", ANA_DAL)
+                git("branch", "-D", dal)
+                print("Takip: değişiklik yok (bu koşunun açtığı boş dal silindi).")
+                return "tamam", None, ""
+            calistir("git", "add", "-A")
+            calistir("git", "commit", "-q", "-m", f"Aylık trend + konu takibi ({date.today().isoformat()})")
+            calistir("git", "switch", "-q", ANA_DAL)
+        except (subprocess.CalledProcessError, SystemExit, Exception) as e:  # noqa: BLE001
+            print(f"HATA: takip yarıda kaldı: {e}")
+            _dal_geri_al(dal)
+            return "basarisiz", None, f"takip yarıda kaldı: {str(e).strip().splitlines()[-1][:150] if str(e).strip() else type(e).__name__}"
+    finally:
+        KILIT.unlink(missing_ok=True)
+    print(f"Takip '{dal}' dalında hazır; master değişmedi.")
+    print(f"Onayla:   python3 araclar/arsiv-guncelle.py --birlestir {dal}")
+    print(f"Reddet:   git -C ~/Documents/SkillKutuphanesi branch -D {dal}")
+    return "tamam", dal, ""
+
+
+def _ozet_calistir():
+    """aylik-ozet.py'yi tam kipte (proje-kullanimi'na --yaz vermeden) çalıştırıp metnini basar. -> özetin durumu ya da None"""
+    ozet = KOK / "araclar" / "aylik-ozet.py"
+    if not ozet.exists():
+        print("UYARI: aylık özet üretilemedi (araclar/aylik-ozet.py yok)")
+        return None
+    try:
+        r = subprocess.run([sys.executable, str(ozet), "--yazmadan", "--ozet-json"], cwd=KOK, capture_output=True, text=True, timeout=900)
+    except (OSError, subprocess.TimeoutExpired):
+        print("UYARI: aylık özet üretilemedi (zaman aşımı ya da çalışmadı)")
+        return None
+    try:
+        d = json.loads(r.stdout.strip().splitlines()[-1])
+        print("\n".join(d["satirlar"]))
+        return str(d.get("durum"))
+    except (ValueError, KeyError, IndexError, TypeError):
+        print(r.stdout.rstrip() or "UYARI: aylık özet üretilemedi")
+        return None
+
+
+def _ozet_sonrasi_temizlik(baslangic_temiz):
+    """Özet araçlarının yazdığı izinli rapor dosyalarını geri alır (dalda zaten üretilmiştir); başka kirli yol varsa yalnız uyarır."""
+    if not baslangic_temiz or git("branch", "--show-current").stdout.strip() != ANA_DAL:
+        return
+    kirli = [y for _, y in kirli_dosyalar()]
+    if not kirli:
+        return
+    if all(y in IZINLI_RAPOR_YOLLARI for y in kirli):
+        git("checkout", "--", *kirli)
+        print(f"Rapor dosyaları özet için üretilmişti; geri alındı: {', '.join(kirli)}")
+    else:
+        print(f"UYARI: ağaç kirli ({', '.join(kirli[:5])}); sonraki aylık koşu bunu engel sayar.")
+
+
+def aylik_calistir(siki=False):
+    """Aylık zincirin tek komutu. Sıra: ön kontrol, kaynak raporu, güncelleme/takip dalı, aylık özet, damga.
+    Birleştirmez, göndermez, dal silmez (yalnız kendi hata geri alması). Damga güncelleme hata verse de yazılır."""
+    global ATLANAN
+    print(f"AYLIK ZİNCİR — {date.today().isoformat()}")
+    pid = _kilit_canli_pid()
+    if pid:
+        sys.exit(f"DURDU: başka bir güncelleme sürüyor (pid {pid}). Damga yazılmadı.")
+    onceki = damga_oku()
+    satir = _kacan_ay_satiri(onceki)
+    if satir:
+        print(satir)
+    sonuc, dal_adi, neden, atlanan = "tamam", None, "", []
+    ozet_durumu, baslangic_temiz = None, False
+    print("\nAdım 1/5 — Ön kontrol")
+    engeller, bekleyen, gh_ok, gneden, kirli_var = _engeller()
+    baslangic_temiz = not engeller
+    for e in engeller:
+        print(f"  Engel: {e}")
+    if not engeller:
+        print("  Engel yok: master'dayız, ağaç temiz, bekleyen dal yok, GitHub'a ulaşılıyor.")
+    for b in bekleyen:
+        print(f"  Onay bekleyen dal: {b['dal']} ({b['gun']} gün önce hazırlandı)"
+              + (" — zaten master'a birleşmiş, silebilirsin" if b["birlesmis"] else ""))
+        if b["gun"] > ESIK_DAL_GUN and not b["birlesmis"]:
+            print(f"  UYARI: {b['dal']} {ESIK_DAL_GUN} günden eski: birleştir (--birlestir {b['dal']}) ya da sil (git branch -D {b['dal']}).")
+    if bekleyen:
+        print("  Yeni güncelleme dalı AÇILMAYACAK (önce eski dal: birleştir ya da sil); salt okuma adımları sürüyor.")
+    if not gh_ok:
+        print("  GitHub'a ulaşılamıyor: yalnız yerel kontroller yapılacak. Kendi terminalinde `gh auth login` çalıştırıp "
+              "tarayıcıda onayla; sonra bu komutu yeniden çalıştır.")
+    master_sha = git("rev-parse", ANA_DAL).stdout.strip()
+    dallar_once = {b["dal"] for b in bekleyen}
+    try:
+        print("\nAdım 2/5 — Kaynak raporu")
+        degisen, sorunlu, ayrinti = rapor()
+        if gh_ok:
+            _liste_raporu()
+        atlanan = list(sorunlu)
+        eski_atlanan = set(onceki.get("atlanan_kaynaklar") or [])
+        for r in atlanan:
+            print(f"  Bu ay erişilemedi: {r}" + (" (geçen ay da erişilemiyordu)" if r in eski_atlanan else "")
+                  + ". Arşiv kopyası korunuyor; 'KAYIP' işaretlemek senin kararın (otomatik işaretlenmez).")
+        print("\nAdım 3/5 — Güncelleme")
+        if bekleyen:
+            sonuc = "bekleyen-dal"
+            neden = "; ".join(e for e in engeller)
+            print("  Atlandı: bekleyen dal var.")
+        elif engeller:
+            sonuc = "kismi"
+            neden = "; ".join(engeller)
+            print("  Atlandı: ön kontrol engeli (yukarıda).")
+        elif ULASILAMAYAN:
+            sonuc = "kismi"
+            neden = f"{len(ULASILAMAYAN)} kaynak şimdilik kontrol edilemedi (geçici ağ/hız sınırı): {', '.join(ULASILAMAYAN[:5])}"
+            print(f"  Atlandı: {neden}. Sonra tekrar çalıştır.")
+        elif degisen and atlanan and not kaynak_cek_atla_var():
+            sonuc = "kismi"
+            neden = "erişilemeyen kaynak var; kaynak-cek.py --atla yok"
+            print(f"  Atlandı: {neden}.")
+        else:
+            ATLANAN = list(atlanan)
+            if degisen:
+                print(f"  Kaynaklarda değişiklik var ({len(degisen)}): güncelleme dalı hazırlanıyor.")
+                try:
+                    uygula(degisen, ayrinti, True)
+                except SystemExit as e:
+                    sonuc = "basarisiz"
+                    neden = (e.code if isinstance(e.code, str) else SON_HATA) or "güncelleme yarıda kaldı"
+                    print(f"  Güncelleme tamamlanamadı: {neden}")
+                else:
+                    yeni = [b["dal"] for b in bekleyen_dallar() if b["dal"] not in dallar_once]
+                    dal_adi = yeni[0] if yeni else None
+            else:
+                print("  Kaynaklarda değişiklik yok: yalnız takip taraması (trend, popüler, konu).")
+                try:
+                    sonuc, dal_adi, neden = takip()
+                except SystemExit as e:
+                    sonuc, neden = "basarisiz", str(e.code)
+    except Exception as e:  # noqa: BLE001  zincir hiçbir beklenmedik hatada damgasız kalmaz
+        sonuc = "basarisiz"
+        neden = f"beklenmeyen hata: {type(e).__name__}: {str(e).strip()[:150]}"
+        print(f"HATA: {neden}")
+    except SystemExit as e:  # rapor() içinden gelen çıkış
+        sonuc, neden = "basarisiz", str(e.code)
+    # master dışında kaldıysak (yarım hata) ve ağaç temizse geri dön
+    if baslangic_temiz and git("branch", "--show-current").stdout.strip() != ANA_DAL and not kirli_dosyalar():
+        git("switch", "-q", ANA_DAL)
+    if git("rev-parse", ANA_DAL).stdout.strip() != master_sha:
+        print("UYARI: master değişmiş görünüyor; kontrol et (bu komut master'a yazmaz).")
+    damga_yaz(sonuc, dal_adi, neden, atlanan, ADI_DEGISEN)
+    print("\nAdım 4/5 — Aylık özet (tek sayfa)")
+    ozet_durumu = _ozet_calistir()
+    _ozet_sonrasi_temizlik(baslangic_temiz)
+    print("\nAdım 5/5 — Damga")
+    if ozet_durumu:
+        damga_ozet_durumu(ozet_durumu)
+    print(f"  {DAMGA.relative_to(KOK)}: sonuç {sonuc}" if DAMGA.exists() else "  Damga yazılamadı (yukarıdaki uyarıya bak).")
+    print(f"\nSONUÇ: {sonuc}")
+    if neden:
+        print(f"NEDEN: {neden}")
+    if dal_adi:
+        print(f"DAL: {dal_adi}")
+    if atlanan:
+        print(f"ATLANAN KAYNAKLAR: {', '.join(atlanan)}")
+    for eski, yeni in ADI_DEGISEN.items():
+        print(f"AD DEĞİŞMİŞ: {eski} -> {yeni}")
+    return 1 if sonuc == "basarisiz" else 2 if (siki and sonuc == "kismi") else 0
+
+
+def aylik(kuru, siki=False):
+    """Aylık zincir. --kuru: yan etkisiz plan (ön kontrol + rapor + liste raporu + PLAN + hızlı özet; dal, commit, damga yok).
+    Kuru olmadan: aylik_calistir()."""
+    if not kuru:
+        return aylik_calistir(siki)
+    print(f"AYLIK ZİNCİR — {date.today().isoformat()} (kuru: hiçbir şey değişmez)")
+    pid = _kilit_canli_pid()
+    if pid:
+        sys.exit(f"DURDU: başka bir güncelleme sürüyor (pid {pid}).")
+    satir = _kacan_ay_satiri(damga_oku())
+    if satir:
+        print(satir)
+    engeller, _bekleyen, ok, _gneden, _kirli = _engeller()
     for e in engeller:
         print(f"Ön kontrol: {e}")
     degisen, sorunlu, _ayrinti = rapor()
     if ok:
-        try:
-            r = subprocess.run([sys.executable, str(KOK / "araclar" / "github-skill-listesi.py")], cwd=KOK,
-                               capture_output=True, text=True, timeout=300)
-            if r.stdout.strip():
-                print(r.stdout.rstrip())
-            if r.returncode != 0:
-                print("UYARI: yıldız listesi kontrolü yapılamadı")
-        except (OSError, subprocess.TimeoutExpired):
-            print("UYARI: yıldız listesi kontrolü yapılamadı")
+        _liste_raporu()
     if engeller:
         plan = "yalnız rapor (yazma adımı yapılmayacak; engeller: " + "; ".join(engeller) + ")"
     elif ULASILAMAYAN:
@@ -518,7 +792,7 @@ def main():
             sys.exit("Kullanım: --birlestir guncelleme/YYYY-AA  (ya da takip/YYYY-AA)")
         return birlestir(sys.argv[i + 1])
     if "--aylik" in sys.argv:
-        return aylik("--kuru" in sys.argv)
+        return aylik("--kuru" in sys.argv, "--siki" in sys.argv)
     siki = "--siki" in sys.argv
     degisen, sorunlu, ayrinti = rapor()
     bekleyen = bekleyen_dallar()

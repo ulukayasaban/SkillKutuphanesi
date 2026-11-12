@@ -223,8 +223,10 @@ def damga_kontrol(kok, bugun):
     if not isinstance(damga, dict):
         damga = {}
     satir, karar, durum, dikkat = [], [], "temiz", []
-    soru = "Aylık çalışmayı şimdi yapayım mı? (önce: python3 araclar/arsiv-guncelle.py --aylik --kuru; sonra rehber/02: --uygula --dal)"
-    son = tarih_oku(damga.get("son_calisma"))
+    soru = "Aylık çalışmayı şimdi yapayım mı? (python3 -u araclar/arsiv-guncelle.py --aylik; önce plan görmek istersen: --aylik --kuru)"
+    son = tarih_oku(damga.get("tarih") or damga.get("son_calisma"))  # 'tarih' yeni damga, 'son_calisma' eski biçim
+    sonuc = damga.get("sonuc") or damga.get("son_sonuc")
+    neden = damga.get("neden") or damga.get("son_neden")
     kayit_yedegi = False
     if son is None:
         t = metin_oku(Path(kok) / "notlar" / "guncelleme-gecmisi.md", 60) or ""
@@ -244,10 +246,10 @@ def damga_kontrol(kok, bugun):
             dikkat.append(satir[-1])
             karar.append(soru)
         elif not kayit_yedegi:
-            satir.append(f"Son aylık çalışma {son.isoformat()} ({gun} gün önce){sonuc_eki(damga.get('son_sonuc'))}")
-    if damga.get("son_sonuc") in ("kismi", "hata", "durduruldu"):
+            satir.append(f"Son aylık çalışma {son.isoformat()} ({gun} gün önce){sonuc_eki(sonuc)}")
+    if sonuc in ("kismi", "basarisiz", "bekleyen-dal", "hata", "durduruldu"):
         durum = max(durum, "dikkat", key=SIRA.get)
-        satir.append(f"Son çalışma yarım kaldı: {damga['son_sonuc']} — {damga.get('son_neden') or 'neden yazılmamış'}")
+        satir.append(f"Son çalışma yarım kaldı: {sonuc} — {neden or 'neden yazılmamış'}")
         dikkat.append(satir[-1])
         sb = tarih_oku(damga.get("son_basarili"))
         if sb and (bugun - sb).days > ESIK_CALISMA:
@@ -268,7 +270,7 @@ def damga_kontrol(kok, bugun):
         satir.append(f"Adı değişen kaynak: {eski} → {yeni}")
         karar.append(f"Adı değişen kaynak: {eski} → {yeni}; kaynaklar.json düzeltilsin mi?")
     k = kontrol("aylik-calisma", durum, satir, karar, dikkat)
-    k["son"], k["son_sonuc"] = son, damga.get("son_sonuc") if damga else None
+    k["son"], k["son_sonuc"] = son, sonuc if damga else None
     k["damga_var"] = bool(damga)
     return k
 
@@ -473,19 +475,24 @@ def bekleyen_notlar(kok, kontroller, calisan_adlar):
 
 
 def gorev_kopyasi_kontrol(kok, gorev_yolu):
+    """Canlı zamanlanmış görev metni ile kütüphane kopyası (zamanlanmis/aylik-guncelleme.SKILL.md): salt okuma karşılaştırma.
+    Aynı -> temiz; farklı ya da canlı dosya yok -> dikkat. Kütüphane kopyası yoksa (bu paket öncesi) sessiz geçer."""
     kopya = Path(kok) / "zamanlanmis" / "aylik-guncelleme.SKILL.md"
     canli = Path(gorev_yolu)
-    if not kopya.exists() or not canli.exists():
+    if not kopya.exists():
         return kontrol("zamanlanmis-gorev", "temiz", [], calisti=True)
+    if not canli.exists():
+        return kontrol("zamanlanmis-gorev", "dikkat", [f"Canlı zamanlanmış görev dosyası bulunamadı ({canli.name}); görev kurulu olmayabilir "
+                                                       "(kütüphane kopyası: zamanlanmis/aylik-guncelleme.SKILL.md)"])
     try:
         h1 = hashlib.sha256(kopya.read_bytes()).hexdigest()
         h2 = hashlib.sha256(canli.read_bytes()).hexdigest()
     except OSError:
-        return kontrol("zamanlanmis-gorev", "temiz", [])
+        return kontrol("zamanlanmis-gorev", "dikkat", ["Zamanlanmış görev dosyaları okunamadı"])
     if h1 == h2:
         return kontrol("zamanlanmis-gorev", "temiz", ["Zamanlanmış görev metni kütüphane kopyasıyla aynı"])
-    return kontrol("zamanlanmis-gorev", "temiz",
-                   ["Zamanlanmış görev metni kütüphane kopyasından farklı; güncellemek için onay gerekir (rehber/02 'Zamanlanmış görev')"],
+    return kontrol("zamanlanmis-gorev", "dikkat",
+                   ["Zamanlanmış görev metni kütüphane kopyasından farklı; güncellemek için onay gerekir (rehber/02 'Zamanlanmış görev metni')"],
                    ["Zamanlanmış görev metni güncellensin mi?"])
 
 
