@@ -214,8 +214,8 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
     AntigravityTest2 Çöp Kutusu'nda; Akıl Dışı izleme görevi Claude'da (Codex otomasyonunu kullanıcı durduracak).
     AÇIK KALANLAR: (1) kullanıcı iki kanalı yeni oturumda sınayacak; (2) yedekler 2026-11-19 hatırlatmasıyla sorulacak (12 kayıt,
     `yedekler.json`); (3) [kapandı 2026-11-12, K-46] `nlm-skill` program kartı + bağ oldu; (4) aday repolar
-    (trend/popüler) kullanıcı kararı bekliyor; (5) Etsy-Yeni'deki emekli `etsy-api`; (6) Etsy-Arif'teki 4 değişen dosyayı kullanıcı
-    Arif'e gönderecek; (7) proje izin ayarları (Akıl Dışı) kullanıcı isterse.
+    (trend/popüler) kullanıcı kararı bekliyor; (5) Etsy-Yeni'deki emekli `etsy-api`; (6) [kapandı 2026-11-12, K-52] Etsy-Arif'teki 4 değişen dosya
+    Arif'e ulaştı; (7) proje izin ayarları (Akıl Dışı) kullanıcı isterse.
   - ESKİ SORU (kapandı): HyperFrames kullanım bildirimini bilgisayar genelinde kapatmak için
     üç ayar dosyasına `HYPERFRAMES_NO_TELEMETRY=1` eklensin mi. Cevap yoksa yalnız proje ayarında kapatılır.
   - SIRADAKİ: (1) IstatistikYoutube: plan `hf-gecis-ve-kendi-skiller-2026-11-12.json` → `istatistik` + `istatistik_inceleme.son_adimlar`
