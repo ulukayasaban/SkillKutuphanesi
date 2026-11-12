@@ -7,7 +7,7 @@
 |---|---|---|---|---|---|
 | [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 24 | — | tam | 2026-11-07 |
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
-| [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-07 |
+| [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
 | [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 23 | claude | tam | 2026-11-08 |
 
