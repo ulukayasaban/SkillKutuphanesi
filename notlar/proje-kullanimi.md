@@ -9,7 +9,7 @@
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
-| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 23 | claude | tam | 2026-11-08 |
+| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 23 (+2 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
 
 ## Akil Disi Youtube Kanali
 
@@ -156,6 +156,8 @@ Profil: — · Roller: etsy-coordinator, etsy-research, etsy-product-rights, ets
 | `yt-script` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-seo` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 
+Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperframes)
+
 ## Skill → projeler (birden fazla projede kullanılanlar)
 
 | Skill | Projeler |
@@ -178,3 +180,10 @@ Profil: — · Roller: etsy-coordinator, etsy-research, etsy-product-rights, ets
 | `yt-package` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `yt-retention` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `yt-script` | Akil Disi Youtube Kanali, IstatistikYoutube |
+
+## Programla gelen skiller → projeler
+
+| Program | Skill | Projeler |
+|---|---|---|
+| hyperframes | `hyperframes` | IstatistikYoutube |
+| hyperframes | `hyperframes-cli` | IstatistikYoutube |
