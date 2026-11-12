@@ -33,7 +33,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, gh_api, json_oku, repo_guncel  # noqa: E402
+from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, gh_api, json_oku, repo_guncel, yerel_agac, yerel_commit  # noqa: E402
 
 GECMIS = KOK / "notlar" / "guncelleme-gecmisi.md"
 ANA_DAL = "master"
@@ -200,6 +200,17 @@ def rapor():
         print(f"~ {repo}: {(eski or '-')[:7]} -> {yeni[:7]}  skill dosyası değişikliği: {len(dosyalar)}{not_}")
         for f in dosyalar[:10]:
             print(f"    {f}")
+    # Yerel kaynak (T7, kendi/): GitHub'a sorulmaz; kayıtlı sürüm kimliği diskteki içerikten türetilene eşit değilse değişmiştir
+    ayar_k = json_oku(KAYNAKLAR)
+    for k in ayar_k["repolar"]:
+        if k["tip"] != "T7":
+            continue
+        yeni = yerel_commit(yerel_agac(KOK / k["yerel"], ayar_k["skill_ici_haric"] + k.get("dosya_haric", []))[0])
+        eski = mevcut.get(k["repo"])
+        if eski != yeni:
+            degisen.append(k["repo"])
+            ayrinti[k["repo"]] = {"eski": eski, "yeni": yeni, "dosya": 0, "not": " (yerel kaynak: kendi/ klasörü düzenlenmiş)"}
+            print(f"~ {k['repo']}: {(eski or '-')[:7]} -> {yeni[:7]}  (yerel kaynak, kendi/ düzenlenmiş)")
     if ULASILAMAYAN:
         print(f"Kontrol edilemeyen kaynak: {len(ULASILAMAYAN)} (geçici); sonra tekrar çalıştır.")
     if not degisen:

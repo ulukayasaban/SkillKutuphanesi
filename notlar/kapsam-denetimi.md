@@ -2,11 +2,11 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-12 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok · ⚠️ 1 erişilemeyen kaynak** · Taranan SKILL.md: 8504 · Arşivdeki skill kaydı: 5651 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok · ⚠️ 1 erişilemeyen kaynak** · Taranan SKILL.md: 8507 · Arşivdeki skill kaydı: 5654 · Bileşen (komut/agent): 662
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5606 | arşivde (ana sürüm) |
+| secildi | 5609 | arşivde (ana sürüm) |
 | haric | 2569 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 176 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 73 | arşivde (Claude/Codex'e özel sürüm) |
@@ -134,6 +134,7 @@
 | xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
+| yerel/kendi | 3 | secildi 3 |
 | yohannescodes/apple-app-review-compliance | 1 | secildi 1 |
 | ythx-101/live-panel-skill | 1 | secildi 1 |
 | zanwei/design-dna | 1 | secildi 1 |
@@ -175,7 +176,6 @@ GitHub'da bulunamadı (silinmiş, private olmuş ya da commit geçmişi yeniden 
 - **JuliusBrussee/caveman**: `plugins/caveman/skills/cavecrew/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-compress/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-stats/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman/SKILL.md` (^plugins/), `plugins/caveman/skills/megacave/SKILL.md` (^plugins/), `plugins/caveman/skills/ultracave/SKILL.md` (^plugins/)
 - **krillinai/OpenCreator**: `apps/daemon/runtime/opencreator-runtime/SKILL.md` (^apps/), `packages/writing-templates/templates/community/khazix-writer/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/research-paper-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/sun-style-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/insight/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/news-analysis/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/story/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/tutorial/skill/SKILL.md` (^packages/)
 - **openai/plugins**: `.agents/skills/plugin-creator/SKILL.md` (^\.agents/), `plugins/plugin-eval/fixtures/minimal-plugin/skills/minimal-plugin-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/minimal-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/alpha/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/beta/SKILL.md` (^plugins/plugin-eval/fixtures/)
-- **Egonex-AI/Understand-Anything**: `understand-anything-plugin/skills/understand-dashboard/SKILL.md` (^understand-anything-plugin/skills/understand-dashboard/), `understand-anything-plugin/skills/understand-figma/SKILL.md` (^understand-anything-plugin/skills/understand-figma/)
 - **zarazhangrui/frontend-slides**: `plugins/frontend-slides/skills/frontend-slides/SKILL.md` (^plugins/)
 - **xianyu110/ecommerce-image-skills**: `skills/taobao-detail-long-image/SKILL.md` (^skills/taobao-detail-long-image/), `skills/xiaohongshu-cover/SKILL.md` (^skills/xiaohongshu-cover/)
 - **RevenueCat/play-billing-skills**: `revenuecat/alternative-billing/SKILL.md` (^(?!google-play/)), `revenuecat/backend/SKILL.md` (^(?!google-play/)), `revenuecat/cancellations-pauses-winback/SKILL.md` (^(?!google-play/)), `revenuecat/catalog-management/SKILL.md` (^(?!google-play/)), `revenuecat/configuring-the-sdk/SKILL.md` (^(?!google-play/)), `revenuecat/error-handling/SKILL.md` (^(?!google-play/)), `revenuecat/one-time-products/SKILL.md` (^(?!google-play/)), `revenuecat/payment-recovery/SKILL.md` (^(?!google-play/)), `revenuecat/plan-changes/SKILL.md` (^(?!google-play/)), `revenuecat/price-changes/SKILL.md` (^(?!google-play/)), `revenuecat/purchase-flow/SKILL.md` (^(?!google-play/)), `revenuecat/revenuecat-api-quick-reference/SKILL.md` (^(?!google-play/)), `revenuecat/revenuecat-vs-raw-billing/SKILL.md` (^(?!google-play/)), `revenuecat/security/SKILL.md` (^(?!google-play/)), `revenuecat/setup/SKILL.md` (^(?!google-play/)), `revenuecat/subscription-states/SKILL.md` (^(?!google-play/)), `revenuecat/subscriptions/SKILL.md` (^(?!google-play/)), `revenuecat/testing/SKILL.md` (^(?!google-play/)), `revenuecat/understanding-revenuecat/SKILL.md` (^(?!google-play/)), `revenuecat/webhooks/SKILL.md` (^(?!google-play/))

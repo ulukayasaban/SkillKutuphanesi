@@ -83,7 +83,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Teknoloji:** typescript, bun, mermaid, svg · **Paketler:** bun veya tsx/deno, beautiful-mermaid (npm), agent-browser CLI (PNG için; yoksa playwright)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** diyagram-uretimi → alternatif · **Roller:** dokuman-yazari · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** diyagram-uretimi → alternatif · **Roller:** dokuman-yazari
 - **Boyut:** 19 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kısa, net, sözdizimi tuzakları belgelenmiş. AGPL-3.0 (OpenMontage). PNG adımı kütüphanede olmayan agent-browser'a bağlı. Statik görsel için iyi; birincil archify.
 

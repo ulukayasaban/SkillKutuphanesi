@@ -17,6 +17,7 @@ Kararlar:
 Kullanım:
   python3 araclar/kaynak-cek.py                  # tümü
   python3 araclar/kaynak-cek.py --repo owner/ad  # tek repo
+  python3 araclar/kaynak-cek.py --repo yerel/kendi  # yerel kaynak (T7, kendi/ klasörü): ağ kullanmaz
   python3 araclar/kaynak-cek.py --atla owner/ad[,owner/ad]  # erişilemeyen kaynağı atla (arşiv kopyası korunur; çıkış 0)
 """
 import argparse
@@ -29,10 +30,11 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (GECICI, KAYNAKLAR, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
-                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi)
+from ortak import (GECICI, KAYNAKLAR, KOK, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
+                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi, yerel_agac, yerel_commit)
 
-ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4")
+# T7 = yerel kaynak (kullanıcının kendi skilleri, kütüphane içindeki kendi/ klasörü): GitHub'a hiç sorulmaz, ağ kullanılmaz.
+ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4", "T7")
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
                 r"^\.agents/skills/", r"^\.codex/skills/"]
 CLAUDE_YOL = r"^(.*/)?\.claude/skills/"
@@ -269,7 +271,17 @@ def main():
             continue
         kimlik = kayit.get("kimlik") or repo.replace("/", "__")
         try:
-            if repo not in repo_sha:  # aynı reponun tüm kayıtları AYNI commit'i kullanır
+            if repo not in repo_sha and kayit["tip"] == "T7":  # yerel kaynak: dosya ağacı diskten, commit içerikten türetilir
+                yerel_kok = KOK / kayit["yerel"]
+                if not yerel_kok.is_dir():
+                    sys.exit(f"HATA: {repo} yerel klasörü yok: {kayit['yerel']}")
+                agac_l, gizli_l = yerel_agac(yerel_kok, ayar["skill_ici_haric"] + kayit.get("dosya_haric", []))
+                for g in gizli_l:
+                    print(f"  UYARI: {repo}: gizli görünen dosya adı alınmadı: {g}")
+                repo_sha[repo] = yerel_commit(agac_l)
+                agaclar[repo] = {"tree": agac_l, "truncated": False, "_yerel": yerel_kok,
+                                 "_lisans": kayit.get("lisans") or "belirtilmemiş"}
+            elif repo not in repo_sha:  # aynı reponun tüm kayıtları AYNI commit'i kullanır
                 repo_sha[repo], agaclar[repo] = repo_agaci(repo)
                 if agaclar[repo].get("_kaynak") == "git":
                     print(f"  {repo}: GitHub repo API'si kapalı, ağaç git ile okundu")
@@ -314,7 +326,16 @@ def main():
             git_isler.append((p, hedef_kok / "_bilesen" / p, None))
             manifest["bilesenler"].append({"repo": repo, "kimlik": kimlik, "commit": sha, "yol": p,
                                           "yerel": str((hedef_kok / "_bilesen" / p).relative_to(GECICI))})
-        if govde.get("_klon"):  # git modu: tek pack isteğiyle al, boyut sınırını yerelde uygula (ağaçta boyut yoktu)
+        if govde.get("_yerel"):  # yerel kaynak (T7): dosyalar kendi/ klasöründen kopyalanır; boyut sınırı listelemede uygulandı
+            sonuclar = []
+            for tam, hedef, alt in git_isler:
+                hedef.parent.mkdir(parents=True, exist_ok=True)
+                try:
+                    shutil.copy2(govde["_yerel"] / tam, hedef)
+                    sonuclar.append(True)
+                except OSError:
+                    sonuclar.append(False)
+        elif govde.get("_klon"):  # git modu: tek pack isteğiyle al, boyut sınırını yerelde uygula (ağaçta boyut yoktu)
             sinir = ayar["max_dosya_mb"] * 1024 * 1024
             yerel = klon_dosyalari_al(govde, [tam for tam, _, _ in git_isler])
             sonuclar, buyuk = [], []

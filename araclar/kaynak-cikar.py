@@ -301,7 +301,9 @@ def rapor_uret(kok, hedef_turu, hedef, neden=None, github=False, bugun=None, gh=
         dikkat.append("çıplak ad devri var (rapor bölüm 4)")
 
     # ---------------------------------------------------------------- 5. GitHub
-    if github:
+    if github and tip == "T7":
+        dikkat.append("yerel kaynak (T7, kendi/): GitHub'da yok, --github atlandı; çıkarmak kullanıcının kendi skillerini kütüphaneden düşürür, kendi/ klasörü ayrıca silinmez")
+    elif github:
         gh = gh or _gh_calistir
         if listeler is None:
             def listeler():

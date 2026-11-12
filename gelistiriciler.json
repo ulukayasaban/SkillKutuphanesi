@@ -6381,6 +6381,42 @@
         "toplam": 123,
         "derece": "A"
       }
+    },
+    "yerel/kendi": {
+      "sahip": "kullanıcı",
+      "sahip_tipi": "kisi",
+      "sahip_url": "",
+      "resmi_kaynak": true,
+      "yildiz": 0,
+      "fork": 0,
+      "acik_issue": 0,
+      "son_guncelleme": "2026-11-12",
+      "olusturulma": "2026-11-12",
+      "lisans": "Kendi (özel)",
+      "arsivlenmis": false,
+      "aciklama": "Kullanıcının kendi skilleri (yerel kaynak, GitHub'sız)",
+      "ana_sayfa": "",
+      "katkici": 1,
+      "izleyici": null,
+      "commit_90g": 0,
+      "son_surum": null,
+      "yildiz_hizi": 0.0,
+      "guven": {
+        "puan": 18,
+        "ayrinti": [
+          "yildiz 0 (%0) → 0.0/25",
+          "yildiz_hizi 0.0 (%0) → 0.0/15",
+          "katkici 1 (%29) → 4.4/15",
+          "commit_90g 0 (%20) → 2.9/15",
+          "fork 0 (%4) → 0.4/10",
+          "izleyici None (%0) → 0.0/5",
+          "son 180 günde sürüm 0/5",
+          "lisans 5/5",
+          "resmî/kurum 5/5"
+        ],
+        "sira": null,
+        "derece": "D"
+      }
     }
   }
 }

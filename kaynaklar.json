@@ -1220,6 +1220,23 @@
       "tip": "T5",
       "not": "2026-11-10 eklendi (kullanıcı isteği). Skill değil, PROGRAM (programlar.json -> etsyotomasyon; kaynak kopyası programlar/etsyotomasyon/kaynak, v0.5.0): yerelde çalışan Etsy mağaza yönetim programı (Python, MIT). Etsy Open API v3 + satıcının kendi Etsy uygulaması (OAuth); tasarımdan taslak ilan, SEO, sipariş, kâr-zarar, Pinterest.",
       "program": "etsyotomasyon"
+    },
+    {
+      "repo": "yerel/kendi",
+      "tip": "T7",
+      "oncelik": 1,
+      "yerel": "kendi",
+      "lisans": "Kendi (özel)",
+      "dosya_haric": [
+        "(^|/)package-lock\\.json$"
+      ],
+      "eklendi": "2026-11-12",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-12",
+        "not": "K-32/K-37: kullanıcının kendi skilleri kütüphaneye alınır; yerel kaynak, GitHub'sız"
+      },
+      "not": "Yerel kaynak (T7): kütüphane içindeki kendi/ klasörü, her skill bir klasör. GitHub'a sorulmaz, ağ gerekmez. Skilleri kullanıcı yazdı ya da bir programın paketinden alınmış anlık kopyadır (nlm-skill: nlm programının 0.15.8 paketinden; kaynak: ~/.local/share/uv/tools/notebooklm-mcp-cli/.../notebooklm_tools/data). Düzenleme akışı: kendi/<ad>/ düzenlenir, sonra kaynak-cek.py --repo yerel/kendi ve arsiv-yerlestir.py (rehber/03 'Kendi skillerim')."
     }
   ],
   "konum_haric": [

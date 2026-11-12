@@ -11,7 +11,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** p5js, canvas, javascript · **Paketler:** p5
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → alternatif · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → alternatif · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Çok kısa (ipucu düzeyi); kaynak bağlantıları doğru.
 
@@ -22,7 +22,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** playwright, ffmpeg · **Paketler:** playwright, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, qa-erisilebilirlik · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, qa-erisilebilirlik
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa kontrol listesi; OpenMontage karakter hattının şema adlarına atıf yapıyor.
 
@@ -33,7 +33,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** svg, gsap, remotion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ama doğru kalıplar; OpenMontage rig_plan artefaktına göre yazılmış.
 
@@ -75,7 +75,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** manim
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** manim-animasyon → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, planlayici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** manim-animasyon → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, planlayici
 - **Boyut:** 22 KB (SKILL.md 4.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İyi planlama şablonu ve 3b1b ilkeleri; references/ dosyaları faydalı.
 
@@ -86,7 +86,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** manim, python, latex · **Paketler:** manim, latex, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** manim-animasyon → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** manim-animasyon → birincil · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 206 KB (SKILL.md 5.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Kapsamlı kural seti, test edilmiş örnekler; CE topluluk sürümü daha yaygın olduğu için birincil.
 
@@ -97,7 +97,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** manim, python, opengl, latex · **Paketler:** manimgl, latex
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** manim-animasyon → alternatif · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** manim-animasyon → alternatif · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 729 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 5
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli; kurulumu ve sürüm uyumu CE'ye göre zahmetli.
 
@@ -129,7 +129,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** gsap, remotion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → tamamlayıcı · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve doğru; tek başına derinliği sınırlı.
 
@@ -151,7 +151,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** svg, gsap, remotion, hyperframes · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** karakter-animasyonu → birincil · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Remotion'da GSAP'ı kareye bağlama gibi kritik kuralları doğru veriyor.
 
@@ -162,7 +162,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** three.js, hyperframes, openmontage, python, blender · **Paketler:** OpenMontage (~/.openmontage), hyperframes
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** three-dunya-uretimi → birincil · **Roller:** video-kompozisyon · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** three-dunya-uretimi → birincil · **Roller:** video-kompozisyon
 - **Boyut:** 16 KB (SKILL.md 8.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir. Kategori düzeltildi (05-3d-webgl → g-video-ses-medya/04-motion-graphics-karakter): web 3D'si değil, OpenMontage video boru hattının parçası (tools.graphics.threejs_world).
 
@@ -183,7 +183,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Teknoloji:** markdown, html
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** gorsel-stil-sistemi → birincil · **Roller:** motion-graphics-sanatcisi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** gorsel-stil-sistemi → birincil · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 81 KB (SKILL.md 6.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Pratik mod tablosu ve galeri; a-tasarim/02 tasarım sistemi skilleriyle kısmen örtüşür.
 

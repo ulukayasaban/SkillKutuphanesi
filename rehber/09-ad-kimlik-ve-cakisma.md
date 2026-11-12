@@ -26,6 +26,7 @@ başka repo **asla** konmaz.
    | Globalde aynı adlı farklı skill | Projeye `ad--kutuphane` adıyla kurulur (kişisel skill proje skilini ezmesin diye) |
    | Projede kütüphaneden gelmeyen aynı adlı klasör | HATA `projede-kendi-skillin`; üzerine yazılmaz |
    | Claude hesabında aynı adlı skill | Projede `skillOverrides` ile gizlenir (`hesap-cakismasi`) |
+| Kendi skilin (`kendi/`, tip T7) halka açık bir skille aynı ad | Aynı kural: daha önce kayıtlı olan çıplak kimliği korur, yeni gelen `ad@yerel` olur; kendi skilin tercih olmasını istiyorsan `durum_elle` ile sabitle |
 
 3. **Bilerek devir** (ör. resmî üretici, topluluk kopyasının adını devralsın): yeni kaynağın `kaynaklar.json` kaydına
    `"ad_devral": ["<ad>"]` yazılır. Eski kayıt `ad@eski-kaynak` olur, çıplak ad yenisine geçer. Bu, kullanıcıya gösterilip onay

@@ -118,7 +118,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Teknoloji:** tailwindcss, react, typescript, radix-ui · **Paketler:** tailwindcss@4, class-variance-authority, clsx, tailwind-merge, @radix-ui/react-slot, react-hook-form, zod, lucide-react
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** shadcn-tailwind-uygulama → tamamlayıcı · **Roller:** tasarim-sistemi · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** shadcn-tailwind-uygulama → tamamlayıcı · **Roller:** tasarim-sistemi
 - **Boyut:** 22 KB (SKILL.md 21.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). tailwind-patterns ile ilişki: ikisi de v4 CSS-first, ama tailwind-patterns kısa ilke/karar özeti (6.8 KB, kod azdır), tailwind-design-system ise kod ağırlıklı uygulama tarifi (21.8 KB; CVA, bileşik bileşen, form, animasyon, koyu mod, geçiş listesi). Çatışmazlar, tamamlayıcıdır; bağlam tasarrufu için önce patterns, bileşen yazarken bu seçilir. Dikkat: büyük (21.8 KB). Registry'deki 'OpenMontage kurulumu gerekir' bağımlılığı yanlış pozitif: SKILL.md'de OpenMontage/python/tools/ referansı yok, düz Tailwind skill'i. Lisans AGPL-3.0 görünüyor ama bu OpenMontage deposunun lisansı; içeriğin kendi lisansı (muhtemelen farklı bir üst kaynaktan alınmış) doğrulanmadı. Örnekler `@/lib/utils` (cn), ThemeProvider gibi proje dosyalarını varsayar.
 

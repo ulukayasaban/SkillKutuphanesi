@@ -174,3 +174,4 @@
 | [avenoxai/higgsfield-studio](https://github.com/avenoxai/higgsfield-studio) | avenoxai | kisi |  | 14 | 1 | 2026-08-19 | yok | 6 |
 | [Trendyol/trendyol-integration-developer-tool](https://github.com/Trendyol/trendyol-integration-developer-tool) | Trendyol | kurum | ✅ | 11 | 3 | 2026-06-11 | yok | 1 |
 | [J-DTurner/etsy-api-skill](https://github.com/J-DTurner/etsy-api-skill) | J-DTurner | kisi |  | 6 | 1 | 2026-01-25 | MIT | 1 |
+| yerel/kendi | kullanıcı | kisi | ✅ | 0 | 1 | 2026-11-12 | Kendi (özel) | 3 |

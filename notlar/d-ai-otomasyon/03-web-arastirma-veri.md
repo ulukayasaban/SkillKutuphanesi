@@ -2,7 +2,7 @@
 
 _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **7/24**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **9/26**
 
 ### agent-reach  ·  Panniantong/Agent-Reach @ 7a38047  ·  puan 94 (A)
 
@@ -230,6 +230,17 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
+### nlm-skill  ·  yerel/kendi @ 92683f1  ·  puan 74 (B)
+
+- **Ne yapar:** Gemini Notebook (eski adıyla Google NotebookLM) için nlm komut satırı aracı ve MCP sunucusu rehberi: not defteri ve kaynak yönetimi, kaynak ekleme (URL, YouTube, metin, Drive), sohbet ve araştırma, podcast, rapor, test, bilgi kartı, zihin haritası, slayt, infografik, video ve veri tablosu üretimi, kota takibi, kimlik doğrulama ve sorun giderme.
+- **Ne zaman:** nlm ile Gemini Notebook'u komut satırından ya da MCP ile otomatikleştirmek, kaynaklara dayalı içerik üretmek. · **Ne zaman değil:** nlm programı kurulu değilse ya da Google oturumu açılmamışsa; genel Gemini API işleri için değil.
+- **Teknoloji:** python, cli · **Paketler:** nlm (notebooklm-mcp-cli, uv aracı), Google hesabı oturumu
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-12, lisans Kendi (özel))
+- **Durum:** tercih · **Örtüşme:** notebooklm-cli → birincil · **Roller:** icerik-pazarlama · **Globalde:** claude:farkli
+- **Boyut:** 183 KB (SKILL.md 61.4 KB, yük buyuk)
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. nlm programının paketinde gelen skilin anlık kopyası (notebooklm-mcp-cli 0.15.8, MIT; kaynak: paketin notebooklm_tools/data klasörü, AGENTS_SECTION.md hariç). Skil sürümü CLI sürümüne bağlıdır: nlm güncellenince klasör paketten yeniden kopyalanmalı. 'nlm skill install' ile aynı dosyalar makine geneline yazılabilir; kullanılmaz. Metin kimlik doğrulama yöntemlerini anlatır, değer içermez.
+
 ### notebooklm  ·  teng-lin/notebooklm-py @ 7db1000  ·  puan 85 (A)
 
 - **Ne yapar:** Google NotebookLM (Gemini Notebook) için notebooklm-py CLI ve async Python API'si: kurulum, kimlik doğrulama (master token, tarayıcı çerezi), not defteri/kaynak yönetimi, kaynaklara dayalı sohbet ve derin araştırma, sesli özet/podcast gibi artefakt üretimi ve indirme; yetki sınırları ve hata giderme kuralları.
@@ -250,3 +261,14 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
+
+### youtube-arama  ·  yerel/kendi @ 92683f1  ·  puan 77 (B)
+
+- **Ne yapar:** yt-dlp ile YouTube'da arama yapar; her sonuç için başlık, URL, kanal, izlenme sayısı, süre ve yayın tarihini döndürür. Sıralama (ilgi, izlenme, tarih) ve JSON çıktısı vardır; kanal ve oynatma listesi sonuçları elenir.
+- **Ne zaman:** YouTube'dan gerçek video listesi ve metadata gerektiğinde: konu araştırması, rakip kanal incelemesi, içerik fikri için izlenme karşılaştırması. · **Ne zaman değil:** Tek bir videonun altyazısı/transkripti ya da video indirmek için değil.
+- **Teknoloji:** python · **Paketler:** yt-dlp
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-12, lisans Kendi (özel))
+- **Durum:** tercih · **Örtüşme:** youtube-arastirma → birincil · **Roller:** icerik-pazarlama · **Globalde:** claude:ayni
+- **Boyut:** 7 KB (SKILL.md 2.5 KB, yük kucuk)
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Küçük, standart kütüphaneli tek betik; yt-dlp dışında bağımlılık yok. Betik yolu skilde sabit yazılı, kurulumda proje içine çevrilir. Claude hesabı eklentisinde aynı adlı başka bir sürüm var (farklı betik).

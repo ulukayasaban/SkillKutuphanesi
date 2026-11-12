@@ -11,7 +11,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** blender, three.js, atlas-cloud, fal-ai, api-anahtari · **Paketler:** ATLASCLOUD_API_KEY, FAL_KEY, blender, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** 3d-varlik-uretimi → birincil · **Roller:** ai-medya-uretici, 3d-gelistirici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** 3d-varlik-uretimi → birincil · **Roller:** ai-medya-uretici, 3d-gelistirici
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Maliyet ve kalite disiplini örnek düzeyde; OpenMontage araçlarına bağımlı.
 
@@ -22,7 +22,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** fal-ai, heygen, google-gemini, api-anahtari · **Paketler:** FAL_KEY|HEYGEN_API_KEY|GEMINI_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → birincil · **Roller:** ai-medya-uretici · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → birincil · **Roller:** ai-medya-uretici
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İyi yönlendirici; video_selector önerisi OpenMontage'a bağlı. Sıralama bilgileri tarihe duyarlı. · 2026-11-12 yeniden incelendi: içerik değişmedi (kaynak OpenMontageInc/OpenMontage fecb9a1'e taşındı), değerlendirme aynı.
 
@@ -33,7 +33,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** atlas-cloud, python, api-anahtari · **Paketler:** ATLASCLOUD_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** medya-saglayici-yonlendirme → alternatif · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** medya-saglayici-yonlendirme → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kesin rota/fiyat tabloları ve 'sessizce sınırlama' yasağı iyi.
 
@@ -44,7 +44,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** heygen-video → tamamlayıcı · **Roller:** ai-medya-uretici, video-kompozisyon · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** heygen-video → tamamlayıcı · **Roller:** ai-medya-uretici, video-kompozisyon
 - **Boyut:** 177 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmi ve iyi bölümlenmiş referanslar.
 
@@ -55,7 +55,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** bfl-flux, python, typescript, api-anahtari · **Paketler:** BFL_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-gorsel-uretimi → tamamlayıcı · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-gorsel-uretimi → tamamlayıcı · **Roller:** ai-medya-uretici
 - **Boyut:** 79 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi BFL skill'i; sonuç URL'lerinin 10 dk'da düştüğü gibi kritik uyarılar var.
 
@@ -66,7 +66,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** comfyui, python, gpu · **Paketler:** ComfyUI sunucusu, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** yerel-uretim-comfyui → birincil · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** yerel-uretim-comfyui → birincil · **Roller:** ai-medya-uretici
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. 'Partner Node yerel/ücretsiz değildir' gibi dürüst ayrımlar değerli; GPU/VRAM gerektirir.
 
@@ -77,7 +77,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** yuz-degistirme → birincil · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** yuz-degistirme → birincil
 - **Boyut:** 7 KB (SKILL.md 7.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Teknik olarak düzgün; rıza ve kötüye kullanım riski nedeniyle rollere eklenmedi, açık istekle --skill ile kurulur.
 
@@ -88,7 +88,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** bfl-flux
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-gorsel-uretimi → birincil · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-gorsel-uretimi → birincil · **Roller:** ai-medya-uretici
 - **Boyut:** 122 KB (SKILL.md 4.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi BFL rehberi, kural dosyalarına iyi bölünmüş.
 
@@ -99,7 +99,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** google-gemini, api-anahtari · **Paketler:** GEMINI_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Ne zaman seçilip seçilmeyeceği tablosu net; benzersiz düzenleme yeteneği. 2026-11: kararlı gemini-omni-1.1-flash modeline geçti; maliyet ~$0.10/sn, süre ipucu faturayı sınırlamıyor (en kötü ~$1.01/klip).
 
@@ -110,7 +110,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** xai-grok, api-anahtari · **Paketler:** XAI_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısa ve doğru; derinliği diğer model rehberlerinden az.
 
@@ -121,7 +121,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** heygen, api-anahtari · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** heygen-video → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** heygen-video → alternatif
 - **Boyut:** 225 KB (SKILL.md 5.7 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Kaynak skill kendini deprecated ilan ediyor; ai-medya-uretici rolünden çıkarıldı.
 
@@ -176,7 +176,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** kling, python, api-anahtari · **Paketler:** KLING_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Ayrıştırıcıların karıştırılmaması gibi titiz kurallar; ağırlıkla geliştirici/entegrasyon odaklı.
 
@@ -187,7 +187,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** ltx, modal, python · **Paketler:** MODAL_LTX2_ENDPOINT_URL, claude-code-video-toolkit
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif
 - **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu tools/ltx2.py OpenMontage c806645'te yok (claude-code-video-toolkit'ten); prompt rehberi yine de faydalı. LTX-2.5 için provider-model-refresh'e bak.
 
@@ -198,7 +198,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** minimax, comfyui, api-anahtari · **Paketler:** MINIMAX_API_KEY|FAL_KEY|RUNWAY_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kısa ama net; 'yalnız açık ağırlık rotası yereldir' uyarısı doğru.
 
@@ -220,7 +220,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** seedance, fal-ai, api-anahtari · **Paketler:** FAL_KEY|REPLICATE_API_TOKEN|HEYGEN_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → tamamlayıcı · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → tamamlayıcı · **Roller:** ai-medya-uretici
 - **Boyut:** 17 KB (SKILL.md 17.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. OpenMontage'ın premium varsayılan modeli; en ayrıntılı model rehberi. Elo/sıralama iddiaları tarihe duyarlı.
 
@@ -231,7 +231,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Teknoloji:** seedance, fal-ai, api-anahtari · **Paketler:** FAL_KEY|RUNWAY_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 23 KB (SKILL.md 12.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Prompt sözleşmesi çok güçlü; uzun/çok çekimli işlerde 2.0 yerine seçilir.
 

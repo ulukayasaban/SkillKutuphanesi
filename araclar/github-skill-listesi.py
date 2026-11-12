@@ -62,7 +62,7 @@ def main():
     hedef = next((l for l in tumu if l["slug"] == hedef_slug), None)
     if not hedef:
         sys.exit(f"Skill listesi bulunamadı: '{hedef_slug}'. Mevcut: {', '.join(l['slug'] for l in tumu)}")
-    skill_repolari = sorted({k["repo"] for k in ayar["repolar"] if k["tip"] != "KAYIP"})
+    skill_repolari = sorted({k["repo"] for k in ayar["repolar"] if k["tip"] not in ("KAYIP", "T7")})  # T7 yerel: GitHub listesinde olmaz
     uyelik, idler = {}, {}
     for l in tumu:
         for r in l["items"]["nodes"]:

@@ -53,7 +53,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 212
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 214
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -106,6 +106,7 @@
 | `context7-mcp@upstash` | 03-web-arastirma-veri | Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
 | `find-docs` | 03-web-arastirma-veri | Kimlik doğrulamasız ve ücretsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
+| `nlm-skill` | 03-web-arastirma-veri | nlm komutu ücretsizdir ve Google hesabıyla çalışır; kullanım kotaları Gemini Notebook planına bağlıdır (ücretsiz planda sınırlı) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
 | `agents-sdk@openai` | 01-uygulama-entegrasyonlari | OpenAI Agents SDK rehberi; çalıştırmak için OpenAI API kredisi gerekir, bilgi/kod üretimi ücretsiz |
 | `ai-gateway` | 01-uygulama-entegrasyonlari | Vercel AI Gateway rehberi; sağlayıcı anahtarı/kredisi gerekir, ücretsiz katman var |
@@ -158,6 +159,7 @@
 | `hyperframes@openai` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor (kredi sınırı dosyası var) ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli; Voice Turbo Free planda ayda 3 dk |
 | `moneyprinterturbo-video` | 01-video-uretim-montaj | LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla. |
+| `openmontage` | 01-video-uretim-montaj | Yerel araçlar ve stok kaynaklar ücretsiz; ElevenLabs, fal.ai gibi ücretli sağlayıcılar isteğe bağlı |
 | `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |

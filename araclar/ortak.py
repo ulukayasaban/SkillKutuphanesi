@@ -188,10 +188,53 @@ def git_blob_hash(veri: bytes) -> str:
 GURULTU = re.compile(r"(^|/)(\.DS_Store|__pycache__|\.git|Thumbs\.db|\.ipynb_checkpoints)(/|$)|\.pyc$")
 
 
+# İçerik karşılaştırmasında (klasor_hash, kilit) node_modules da sayılmaz: `npm install` skill'i "elle değişmiş" göstermesin.
+# GURULTU'ya DEĞİL buraya eklendi: GURULTU genel-bekci ve git-durum'da da kullanılır (onların sayımları değişmesin).
+# package-lock.json bilerek sayılmaya devam eder: arşivdeki 18 skill'in klasor_hash'i onu içerir, değişirse projeler "güncelleme var" görür.
+ICERIK_GURULTU = re.compile(GURULTU.pattern + r"|(^|/)node_modules(/|$)")
+
+
 def onemli_dosyalar(klasor: Path):
-    """İçerik karşılaştırmasına giren dosyalar: KAYNAK.md ve işletim sistemi/çalışma çöpleri hariç."""
+    """İçerik karşılaştırmasına giren dosyalar: KAYNAK.md ve işletim sistemi/çalışma çöpleri, node_modules hariç."""
     return sorted(p for p in klasor.rglob("*") if p.is_file() and p.name != "KAYNAK.md"
-                  and not GURULTU.search(str(p.relative_to(klasor))))
+                  and not ICERIK_GURULTU.search(str(p.relative_to(klasor))))
+
+
+# ------------------------------------------------------------------ yerel (GitHub'sız) kaynak: kendi/  (kaynak tipi T7)
+# Kullanıcının kendi skilleri kütüphanenin içinde düz bir klasörde durur (kendi/<skill>/). kaynak-cek.py bu klasörü GitHub
+# ağacı gibi okur: aynı biçimde [{path, type, sha, size}] listesi ve 40 haneli bir "commit" (dosya içeriklerinden türetilir).
+YEREL_GIZLI_AD = re.compile(r"(^|/)(\.env(\..*)?|auth\.json|token\.json|credentials\.json|[^/]*\.(pem|key|p12|pfx))$", re.I)
+
+
+def yerel_agac(kok: Path, haric=()):
+    """kok altındaki dosyalar: (liste, atlanan_gizli). Bağlar izlenmez; GURULTU/node_modules ve `haric` desenleri (SKILL.md hariç)
+    ile gizli görünen dosya adları (.env, *.pem, *.key, auth/token/credentials.json) atlanır. Ağ kullanmaz."""
+    sonuc, gizli = [], []
+    kok = Path(kok)
+    for yol, klasorler, dosyalar in os.walk(kok, followlinks=False):
+        klasorler[:] = sorted(d for d in klasorler
+                              if not os.path.islink(os.path.join(yol, d)) and not ICERIK_GURULTU.search(d))
+        for ad in sorted(dosyalar):
+            tam = Path(yol) / ad
+            rel = tam.relative_to(kok).as_posix()
+            if tam.is_symlink() or ICERIK_GURULTU.search(rel):
+                continue
+            if YEREL_GIZLI_AD.search(rel):
+                gizli.append(rel)
+                continue
+            if ad.lower() != "skill.md" and any(re.search(d, rel) for d in haric):
+                continue
+            veri = tam.read_bytes()
+            sonuc.append({"path": rel, "type": "blob", "sha": git_blob_hash(veri), "size": len(veri)})
+    return sorted(sonuc, key=lambda e: e["path"]), gizli
+
+
+def yerel_commit(agac) -> str:
+    """Yerel ağacın 40 haneli kimliği (dosya yolu + içerik özeti); herhangi bir düzenlemede değişir, git'e bağlı değildir."""
+    h = hashlib.sha1()
+    for e in sorted(agac, key=lambda e: e["path"]):
+        h.update(e["path"].encode() + b"\0" + e["sha"].encode() + b"\n")
+    return h.hexdigest()
 
 
 def klasor_hash(klasor: Path) -> str:

@@ -11,7 +11,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** python, runpod, ffmpeg · **Paketler:** RUNPOD_API_KEY, claude-code-video-toolkit
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** muzik-uretimi → alternatif · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** muzik-uretimi → alternatif
 - **Boyut:** 9 KB (SKILL.md 9.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu tools/music_gen.py OpenMontage c806645'te yok (claude-code-video-toolkit'ten taşınmış); --brand digital-samba gibi örnekler yabancı projeye ait.
 
@@ -22,7 +22,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js, @elevenlabs/cli
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** sesli-ajan → birincil · **Roller:** ai-entegrasyon · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** sesli-ajan → birincil · **Roller:** ai-entegrasyon
 - **Boyut:** 64 KB (SKILL.md 9.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Resmi ElevenLabs skill'i, güncel. Medya üretimi değil uygulama entegrasyonu; video rollerine eklenmedi.
 
@@ -33,7 +33,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** azure, python, api-anahtari · **Paketler:** AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** stt-transkripsiyon → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** stt-transkripsiyon → alternatif · **Roller:** ses-tasarimci
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Düzgün belgelenmiş; OpenMontage registry'sine bağlı kod örnekleri.
 
@@ -44,7 +44,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** azure, python, ssml, api-anahtari · **Paketler:** AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Güvenilir kurumsal TTS; STT ile aynı kaynak.
 
@@ -55,7 +55,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** dashscope, python, api-anahtari · **Paketler:** DASHSCOPE_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci, ai-medya-uretici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci, ai-medya-uretici
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Doğru ve pratik; çoklu yetenek (görsel+TTS+ASR) olduğu için kategori sınırında. Çin pazarına odaklı.
 
@@ -66,7 +66,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** volcengine, python, api-anahtari · **Paketler:** DOUBAO_SPEECH_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İş akışı (örnek → onay → tam üretim) örnek alınacak kadar iyi; kullanım alanı dar.
 
@@ -88,7 +88,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** elevenlabs, python, ffmpeg, api-anahtari · **Paketler:** elevenlabs, ELEVENLABS_API_KEY
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** tts-saglayici → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → birincil · **Roller:** ses-tasarimci
 - **Boyut:** 16 KB (SKILL.md 10.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Pratik üretim bilgisi (ayar tabloları, SSML sınırları, ellipsis uyarısı) çok değerli; Türkçe destekli multilingual_v2. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
@@ -99,7 +99,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** fish-audio, python, api-anahtari · **Paketler:** FISH_AUDIO_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Güncel ve dürüst (promosyon kısıtları açıkça yazılmış).
 
@@ -180,7 +180,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** google-gemini, api-anahtari · **Paketler:** GEMINI_API_KEY, OpenMontage kurulumu
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** muzik-uretimi → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** muzik-uretimi → alternatif · **Roller:** ses-tasarimci
 - **Boyut:** 18 KB (SKILL.md 8.6 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. Disiplinli iş akışı ve adaptör kısıtlarını açıkça söylüyor; kalite yüksek. · 2026-11-12 yeniden incelendi (fecb9a1): skill artık Lyria 3.5 (varsayılan `lyria-3.5`, ~$0.08/istek) ve Clip'i anlatıyor; `lyria-3-pro-preview` açıkça istenen eski seçenek; OpenMontage adaptörü artık iki modeli kabul ediyor, süre 5-184 sn doğrulanıyor (gerçek süre yine prob edilmeli), 3.5 maliyet tahmini güncel fiyat teklifi ister; GOOGLE_GENAI_USE_VERTEXAI=true ile Vertex yolu. Bağımlılık aynı (GEMINI_API_KEY, ücretli). Lisans notu: model/adaptör rehberi andromia3 katkısı, depo AGPL-3.0.
 
@@ -191,7 +191,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** muzik-uretimi → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** muzik-uretimi → birincil · **Roller:** ses-tasarimci
 - **Boyut:** 10 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi ElevenLabs skill'i; bağımsız SDK ile her yerde çalışır.
 
@@ -283,7 +283,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** elevenlabs, api-anahtari · **Paketler:** ELEVENLABS_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** api-anahtari-kurulumu → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** api-anahtari-kurulumu → birincil · **Roller:** ses-tasarimci
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Sadece ElevenLabs'a özel olduğu için 03'ten 02'ye taşındı. Anahtarı sohbete yapıştırtması güvenlik açısından dikkat ister.
 
@@ -294,7 +294,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ses-efekti → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ses-efekti → birincil · **Roller:** ses-tasarimci
 - **Boyut:** 5 KB (SKILL.md 3.9 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi, kısa ve eksiksiz.
 
@@ -305,7 +305,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** elevenlabs, python, typescript, api-anahtari · **Paketler:** elevenlabs, @elevenlabs/elevenlabs-js
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** stt-transkripsiyon → birincil · **Roller:** ses-tasarimci · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** stt-transkripsiyon → birincil · **Roller:** ses-tasarimci
 - **Boyut:** 40 KB (SKILL.md 7.8 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi skill, Türkçe dahil yüksek doğruluk.
 
@@ -316,6 +316,6 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Teknoloji:** heygen, api-anahtari, rest-api · **Paketler:** HEYGEN_API_KEY
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → alternatif · **Roller:** ses-tasarimci
 - **Boyut:** 10 KB (SKILL.md 9.5 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Adı genel olsa da HeyGen'e özel; önceki ses-tasarimci çekirdeğinden opsiyonele alındı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.

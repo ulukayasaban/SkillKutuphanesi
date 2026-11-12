@@ -84,7 +84,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** vercel-labs (kurum, resmî, ★33547, son güncelleme 2026-10-28, lisans yok)
-- **Durum:** tercih · **Örtüşme:** ui-denetim-iyilestirme → birincil · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** ui-denetim-iyilestirme → birincil
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 - **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).

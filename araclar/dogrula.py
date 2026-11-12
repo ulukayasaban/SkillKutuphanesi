@@ -77,9 +77,9 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
 # ayrıştırılamaması ve (b) CLAUDE.md ile AGENTS.md'nin eşit olmamasıdır (arsiv-guncelle --birlestir HATA'da master'ı geri alır).
 # Hiçbiri başka bir aracı çalıştırmaz (tek istisna: program-denetim.py --sema --ozet-json, ağsız); bayraklar kaynak
 # metninden okunur, --help'e güvenilmez (birçok araçta argparse yok, --help aracı çalıştırır).
-KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "KAYIP", "EMEKLI")
+KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "KAYIP", "EMEKLI")  # T7 = yerel kaynak (kendi/, GitHub'sız)
 KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "kimlik", "dosya_haric",
-                      "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi")
+                      "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans")
 ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
 GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
                        "/programlar/**/.env", "/yedek/", "/.skill-kutuphanesi/", "/*.bundle", "/*.yedek",
@@ -418,8 +418,9 @@ def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
             continue  # yeni değil (yeniden adlandırma da yeni sayılmaz)
         repo = k["repo"]
         onay = k.get("onay") if isinstance(k.get("onay"), dict) else {}
+        yerel = k.get("tip") == "T7"  # yerel kaynakta GitHub commit'i yoktur: eklendi + onay.kim + onay.tarih yeter
         if not (k.get("eklendi") and _tarih_gecerli(k.get("eklendi")) and onay.get("kim") and onay.get("tarih")
-                and re.fullmatch(r"[0-9a-f]{40}", str(onay.get("commit", "")))):
+                and (yerel or re.fullmatch(r"[0-9a-f]{40}", str(onay.get("commit", ""))))):
             u.append(f"kaynak kaydında onay yok: {repo} (rehber/03 A4)")
         if lisans_riskli and not onay.get("lisans_onay"):
             for s in (skiller or []):

@@ -697,6 +697,21 @@
     {
       "desen": "^(next-|playwright-cli)",
       "kategori": "b-yazilim-gelistirme/07-framework-ozel"
+    },
+    {
+      "repo": "yerel/kendi",
+      "desen": "^openmontage$",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
+      "repo": "yerel/kendi",
+      "desen": "^youtube-arama$",
+      "kategori": "d-ai-otomasyon/03-web-arastirma-veri"
+    },
+    {
+      "repo": "yerel/kendi",
+      "desen": "^nlm-skill$",
+      "kategori": "d-ai-otomasyon/03-web-arastirma-veri"
     }
   ],
   "yol_kurallari": [

@@ -63,6 +63,7 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 - Aday kararları: `python3 araclar/konu-takip.py --karar owner/ad eklendi|reddedildi|izle "neden"` (`populer-tarama.py --karar` kullanma); bekleyenler: `python3 araclar/konu-takip.py --bekleyenler` (üç kaynağı özetler).
 - Yeni AI aracı: `rehber/14-yapay-zeka-araclari.md` bölüm 7 ve `promptlar/15-yeni-yapay-zeka-araci.md`; aylık araç belgesi kontrolü: `python3 araclar/skill-ekle.py --araclar`.
 - `CLAUDE.md` ve `AGENTS.md` birebir aynı tutulur: birini değiştirince `cp CLAUDE.md AGENTS.md`; `dogrula.py` farkı HATA sayar.
+- Kendi skillerim (yerel kaynak T7, `kendi/` klasörü, `yerel/kendi` kaydı): GitHub'a sorulmaz. Düzenleme: `kendi/<ad>/` düzenle → `python3 araclar/kaynak-cek.py --repo yerel/kendi` (ağ yok) → `arsiv-yerlestir.py` → kontroller → projede `--durum`/`--guncelle`. Ayrıntı: `rehber/03` B2, `kendi/README.md`.
 - Eski sürümler: bilerek çıkarılan skiller `kaynaklar.json` → `arsivden_cikarilanlar`.
 - Hazır promptlar: `promptlar/` (kullanıcıya proje başlangıcı, ekleme, güncelleme, bakım için).
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.

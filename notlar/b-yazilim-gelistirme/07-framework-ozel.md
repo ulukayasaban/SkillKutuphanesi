@@ -191,7 +191,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** vercel-labs (kurum, resmî, ★33547, son güncelleme 2026-10-28, lisans yok)
-- **Durum:** tercih · **Örtüşme:** react-kompozisyon → birincil · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** react-kompozisyon → birincil
 - **Boyut:** 49 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 - **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).
@@ -203,7 +203,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Teknoloji:** react
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** react-kompozisyon → alternatif · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** react-kompozisyon → alternatif
 - **Boyut:** 49 KB (SKILL.md 3.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.
 - **Not:** Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React kompozisyon kuralları, OpenMontage araçlarını çağırmaz.
@@ -214,7 +214,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Teknoloji:** css, next.js, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** vercel-labs (kurum, resmî, ★33547, son güncelleme 2026-10-28, lisans yok)
-- **Durum:** tercih · **Örtüşme:** react-performans → birincil · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** react-performans → birincil
 - **Boyut:** 225 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 - **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).
@@ -226,7 +226,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Teknoloji:** react, next.js
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** alternatif · **Örtüşme:** react-performans → alternatif · **Roller:** frontend-muhendis · **Globalde:** claude:ayni
+- **Durum:** alternatif · **Örtüşme:** react-performans → alternatif · **Roller:** frontend-muhendis
 - **Boyut:** 207 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, react-performans grubunun birincili. Gerekçe: Vercel'in özgün kural seti, kural başına dosya ile seçici okuma (SKILL.md 7 KB, toplam 207 KB); nextjs-react-expert aynı kuralların ag-kit uyarlaması. Bu kopya OpenMontage'a gömülü (upstream vercel-labs/agent-skills arşivde yok); güncellemeler OpenMontage üzerinden gelir. Dil/framework rehberi olduğu için 07-framework-ozel'e taşındı.
 - **Not:** Ön kontroldeki 'OpenMontage kurulumu gerekir' uyarısı bu skill için geçersiz: kaynaklar.json'daki repo düzeyi bağımlılık notundan geliyor; içerik saf React/Next.js kuralları, OpenMontage araçlarını çağırmaz.

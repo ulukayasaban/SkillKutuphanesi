@@ -22,7 +22,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Teknoloji:** gsap 3.15, scrolltrigger, lenis 1.3 · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** greensock (kurum, resmî, ★17884, son güncelleme 2026-07-29, lisans MIT)
-- **Durum:** tercih · **Örtüşme:** scroll-animasyonu → birincil · **Roller:** scroll-deneyim, motion-gelistirici · **Globalde:** claude:ayni
+- **Durum:** tercih · **Örtüşme:** scroll-animasyonu → birincil · **Roller:** scroll-deneyim, motion-gelistirici
 - **Boyut:** 18 KB (SKILL.md 18.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmî, güncel (18 KB), pin/scrub/cleanup kuralları doğru; gsap-core ile birlikte kullanılmalı. Dikkat: yok.
 
@@ -33,7 +33,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Teknoloji:** gsap 3.15, scrolltrigger, three.js, react · **Paketler:** gsap
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** freshtechbro (kisi, ★1248, son güncelleme 2025-11-20, lisans MIT)
-- **Durum:** alternatif · **Örtüşme:** scroll-animasyonu → alternatif · **Roller:** scroll-deneyim · **Globalde:** claude:farkli
+- **Durum:** alternatif · **Örtüşme:** scroll-animasyonu → alternatif · **Roller:** scroll-deneyim
 - **Boyut:** 159 KB (SKILL.md 16.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Aynı ad, farklı içerik: resmî sürüm yalnız ScrollTrigger'a odaklı ve güncel; bu sürüm tween+timeline+ScrollTrigger'ı tek dosyada jenerik anlatıyor, 335 gün eski, resmî rehberlerde olan matchMedia/cleanup disiplininden yoksun. Betikler yerel kod üretici, risk yok.
 
@@ -43,7 +43,7 @@ _Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri_
 - **Teknoloji:** gsap, node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 20 KB (SKILL.md 18.6 KB, yük orta)
 - **İnceleme:** otomatik
 

@@ -19,7 +19,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, json_oku, klon_temizle, repo_agaci  # noqa: E402
+from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, json_oku, klon_temizle, repo_agaci, yerel_agac  # noqa: E402
 
 ACIKLAMA = {
     "secildi": "arşivde (ana sürüm)",
@@ -44,7 +44,8 @@ def main():
     reg = json_oku(REGISTRY)
     denetim = reg.get("denetim", {})
     kayitlar = json_oku(KAYNAKLAR)["repolar"]
-    arsiv_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] in ("T1", "T2", "T3", "T4")})
+    arsiv_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] in ("T1", "T2", "T3", "T4", "T7")})
+    yerel_kayit = {k["repo"]: k for k in kayitlar if k["tip"] == "T7"}  # T7: kendi/ klasörü, GitHub'a sorulmaz
     kayip_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] == "KAYIP"})
     referans_repolari = sorted({k["repo"] for k in kayitlar} - set(arsiv_repolari) - set(kayip_repolari))
     erisilemeyen = []
@@ -68,7 +69,12 @@ def main():
         if not d:
             sorunlar.append(f"{repo}: denetim kaydı yok (kaynak-cek çalışmamış)")
             continue
-        govde = agac_al(repo, d["commit"])  # API kapalıysa git ile (bağımsız sayım yine yapılır)
+        if repo in yerel_kayit:  # yerel kaynak: diskteki güncel kendi/ klasörü (düzenlenmiş ama işlenmemiş skill burada görünür)
+            ayar_k = json_oku(KAYNAKLAR)
+            govde = {"tree": yerel_agac(KOK / yerel_kayit[repo]["yerel"], ayar_k["skill_ici_haric"] + yerel_kayit[repo].get("dosya_haric", []))[0],
+                     "truncated": False}
+        else:
+            govde = agac_al(repo, d["commit"])  # API kapalıysa git ile (bağımsız sayım yine yapılır)
         if govde is None:
             erisilemeyen.append(repo)
             continue

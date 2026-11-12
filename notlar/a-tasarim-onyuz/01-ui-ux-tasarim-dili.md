@@ -381,7 +381,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Teknoloji:** api-anahtari, canvas, css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** ehmo (kisi, ★640, son güncelleme 2026-03-19, lisans MIT)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 55 KB (SKILL.md 38.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
@@ -391,7 +391,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
-- **Durum:** alternatif · **Globalde:** claude:farkli
+- **Durum:** alternatif
 - **Boyut:** 10 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
@@ -402,6 +402,6 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Teknoloji:** html, css, react · **Paketler:** WebFetch / ağ erişimi
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
 - **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
-- **Durum:** alternatif · **Örtüşme:** ui-denetim-iyilestirme → tamamlayıcı · **Roller:** qa-erisilebilirlik · **Globalde:** claude:farkli
+- **Durum:** alternatif · **Örtüşme:** ui-denetim-iyilestirme → tamamlayıcı · **Roller:** qa-erisilebilirlik
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Çok kısa ve etkili. Dikkat: talimatların asıl gövdesi çalışma anında uzak bir URL'den çekiliyor (sürüm sabitlenmemiş); kaynak güvenilir (vercel-labs) ama içerik değişebilir.

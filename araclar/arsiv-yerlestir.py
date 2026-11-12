@@ -227,9 +227,11 @@ def kaynak_md(k):
     satirlar = [
         f"# {k['ad']}", "",
         "> Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.", "",
-        f"- **Kaynak repo:** https://github.com/{k['repo']}",
-        f"- **Repo içindeki yol:** `{k['kaynak_yol'] or '(kök)'}`",
-        f"- **Commit:** `{k['commit']}`",
+        (f"- **Kaynak:** yerel, kullanıcının kendi skili (kütüphane içindeki `kendi/` klasörü; GitHub'da yok)"
+         if k.get("tip") == "T7" else f"- **Kaynak repo:** https://github.com/{k['repo']}"),
+        (f"- **Klasör:** `kendi/{k['kaynak_yol']}`" if k.get("tip") == "T7" else f"- **Repo içindeki yol:** `{k['kaynak_yol'] or '(kök)'}`"),
+        (f"- **Yerel sürüm kimliği:** `{k['commit']}` (kendi/ içeriğinden türetilir)" if k.get("tip") == "T7"
+         else f"- **Commit:** `{k['commit']}`"),
         f"- **Lisans:** {k['lisans']}",
         f"- **Geliştirici:** {k['gelistirici'].get('sahip', '?')} ({k['gelistirici'].get('sahip_tipi', '?')})"
         if k.get("gelistirici") else "- **Geliştirici:** ?",
@@ -309,6 +311,8 @@ def kimlik_ata(gruplar, eski_kaynak):
             k["durum"] = "tercih" if i == 0 else "alternatif"
             if "id" not in k:
                 kid = ad if i == 0 else f"{ad}@{kisa_kaynak(k['repo'])}"
+                if kid in kullanilan:  # çıplak ad eski kayıtta kaldı (ör. kendi skilim halka açık bir skille aynı ad): önce temiz 'ad@kaynak'
+                    kid = f"{ad}@{kisa_kaynak(k['repo'])}"
                 n = 2
                 while kid in kullanilan:
                     kid = f"{ad}@{kisa_kaynak(k['repo'])}-{n}"
@@ -456,7 +460,7 @@ def main():
     cekilen_repolar = {m["repo"] for m in manifest["kayitlar"]}
     yeni_kaynaklar = {(x["repo"], x["kaynak_yol"]) for x in skiller}
     kullanilan_id = {x["id"] for x in skiller}
-    arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}
+    arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4", "T7")}
     korunan_indirilmeyen = set()
     # Kullanıcı kararıyla arşivden çıkarılanlar (ör. emekli eski sürümler): korunmaz, kayıp kilidine takılmaz
     _ayar = json_oku(KOK / "kaynaklar.json")
@@ -472,7 +476,7 @@ def main():
             # Bu çalıştırmada İNDİRİLMEMİŞ kaynak (ör. `kaynak-cek.py --repo X` ile tek repo eklendi):
             # kayıt ve arşiv kopyası OLDUĞU GİBİ korunur; aksi hâlde kısmi çalıştırma tüm arşivi silerdi.
             korunan_indirilmeyen.add(s["id"])
-        elif s["repo"] in cekilen_repolar and s.get("tip") in ("T1", "T2", "T3", "T4"):
+        elif s["repo"] in cekilen_repolar and s.get("tip") in ("T1", "T2", "T3", "T4", "T7"):
             s["kaynak_durumu"] = "kaynakta-kaldirildi"
             s.setdefault("kaldirilma_tarihi", bugun)
             s.setdefault("kaldirildigi_commit", next(m["commit"] for m in manifest["kayitlar"] if m["repo"] == s["repo"]))

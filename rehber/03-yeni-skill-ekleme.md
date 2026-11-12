@@ -120,6 +120,24 @@ Kütüphane kaynakları **herkese açık GitHub repolarıdır** (sabit commit ve
   klasörüne koy. Bu senin skill'indir; `skill-ekle.py` ona **hiç dokunmaz** ve aynı adla kütüphaneden kurulum yapmaya
   çalışırsan `projede-kendi-skillin` hatasıyla durur.
 
+## B2) Kendi skillerim (yerel kaynak, `kendi/`)
+Kullanıcının kendi yazdığı skiller (ya da bir programın paketinden alınmış anlık kopyalar) GitHub'sız tutulur: kütüphane içindeki
+`kendi/<ad>/` klasörü, `kaynaklar.json` → `yerel/kendi` kaydı (tip **T7**, `yerel: "kendi"`). Depo private olduğu için dağıtım yoktur.
+Açıklama: `kendi/README.md`. Bu kaynak GitHub'a sorulmaz, ağ gerekmez; kaybolmuş ya da erişilemeyen sayılmaz.
+- **Yeni skill eklemek:** klasörü `kendi/<ad>/` altına koy (SKILL.md + yanındaki dosyalar; `node_modules`, `package-lock.json`, `.env`, `*.pem`,
+  `*.key` alınmaz). Kategori için `kategori-kurallari.json` → `ad_kurallari`'na `{"repo": "yerel/kendi", "desen": "^<ad>$", "kategori": ...}`,
+  ücret için `ucret-siniflandirma.json`'a satır (rehber/03 A2 ek). Proje adı yazma (kural 6). Sonra aşağıdaki iki komut.
+- **Düzenlenen skilin projelere ulaşması:** tek yer `kendi/<ad>/`. Düzenledikten sonra
+  `python3 araclar/kaynak-cek.py --repo yerel/kendi` (ağ yok) → `python3 araclar/arsiv-yerlestir.py` (klasor_hash değişir, inceleme
+  "yeniden-incelenecek" olur; arşiv elle düzenlenmez) → `kapsam-denetimi.py` (0 sorun) → `dogrula.py` (0 hata) → commit.
+  Projede `skill-ekle.py <proje> --durum` güncelleme gösterir; `--guncelle --kuru` → onay → `--evet` → `--dogrula`. Aylık zincir
+  (`arsiv-guncelle.py`) `kendi/` değişmişse bunu da değişen kaynak sayar. Düzenlenip işlenmemiş skili `kapsam-denetimi.py` yakalar.
+- **Ad çakışması:** kendi skilin halka açık bir skille aynı adı taşırsa rehber/09 geçerlidir: çıplak ad kendiliğinden el değiştirmez
+  (daha önce kayıtlı olan kimliği korur, yeni gelen `ad@yerel` olur); bilerek devir `ad_devral`.
+- **Programla gelen skil** (ör. `nlm-skill`): bir programın kendi paketinde gelen skil kopya olarak buraya girerse kaynak notu ve sürüm
+  kayda yazılır; program güncellenince klasör paketten yeniden kopyalanır. Tutarlı yol programın kartında `skill_koku` ile bağ vermektir
+  (rehber/11); klasör adı skil adından farklıysa (`data`) mevcut bağ yolu uymaz, o yüzden anlık kopya kullanıldı.
+
 ## C) Kategori, rol, profil eklemek
 - **Kategori:** `kategoriler.json` → ilgili alan → `"NN-ad": "açıklama"`; kurallara desen ekle; `arsiv-yerlestir.py`.
 - **Rol:** `roller/<rol>.json` (`ad`, `aciklama`, `gorev`, `cekirdek`, `opsiyonel`). Çekirdek ≤ 6 skill önerilir.

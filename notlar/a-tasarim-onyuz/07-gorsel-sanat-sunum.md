@@ -75,7 +75,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Teknoloji:** d3, svg, react, javascript · **Paketler:** d3
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** veri-gorsellestirme → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:farkli
+- **Durum:** tercih · **Örtüşme:** veri-gorsellestirme → birincil · **Roller:** frontend-muhendis
 - **Boyut:** 80 KB (SKILL.md 21.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Konu odaklı, başvuru dosyaları ve şablonlar kaliteli; kategoride tek veri görselleştirme skilli. Dikkat: registry'de bagimlilik uyarısı var ama d3-viz'in kendi içeriği OpenMontage komutu çağırmıyor, bağımsız çalışır. Repo lisansı AGPL-3.0 (skill dosyasında ayrı lisans yok); aynı skill ~/.claude/skills'te zaten global kurulu (globalde: ayni). d3 CDN'den yüklenebilir. · 2026-11-12 yeniden incelendi: içerik değişmedi (kaynak OpenMontageInc/OpenMontage fecb9a1'e taşındı), değerlendirme aynı.
 
