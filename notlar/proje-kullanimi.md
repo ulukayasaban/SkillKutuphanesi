@@ -6,7 +6,6 @@
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
 | [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
-| [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
 | [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 26 (+2 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
@@ -35,22 +34,6 @@
 | `yt-shorts` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 
 Programla gelen (bağ): `d3-viz` (openmontage), `hyperframes` (hyperframes), `hyperframes-cli` (hyperframes), `manim-composer` (openmontage), `manimce-best-practices` (openmontage), `media-use` (hyperframes), `pose-library-design` (openmontage), `svg-character-animation` (openmontage), `visual-style` (openmontage)
-
-## AntigravityTest2
-
-Profil: — · Roller: ui-tasarimci, agent-orkestra
-
-| Skill | Kaynak | Commit | Roller | Not |
-|---|---|---|---|---|
-| `context-engineering--kutuphane` (kimlik `context-engineering`) | addyosmani/agent-skills | `301b02b` | agent-orkestra |  |
-| `data-report` | nexu-io/open-design | `987b247` | — |  |
-| `design-taste-frontend` | Leonxlnx/taste-skill | `12af471` | ui-tasarimci |  |
-| `dispatching-parallel-agents` | obra/superpowers | `2ce8aa1` | agent-orkestra |  |
-| `exploratory-data-analysis` | K-Dense-AI/scientific-agent-skills | `5f2bc03` | — |  |
-| `impeccable` | pbakaus/impeccable | `e89e3ad` | ui-tasarimci |  |
-| `requesting-code-review` | obra/superpowers | `2ce8aa1` | — |  |
-| `subagent-driven-development` | obra/superpowers | `2ce8aa1` | agent-orkestra |  |
-| `ui-ux-pro-max` | nextlevelbuilder/ui-ux-pro-max-skill | `3a13158` | ui-tasarimci |  |
 
 ## Etsy-Arif
 
@@ -162,20 +145,16 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 | Skill | Projeler |
 |---|---|
 | `canvas-design` | Etsy-Arif, Etsy-Yeni |
-| `context-engineering` | AntigravityTest2, Etsy-Yeni |
 | `cut-the-curve` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `design-critique` | Etsy-Arif, IstatistikYoutube |
 | `design-dna` | Etsy-Arif, IstatistikYoutube |
-| `design-taste-frontend` | Akil Disi Youtube Kanali, AntigravityTest2 |
 | `huashu-art-motion` | Akil Disi Youtube Kanali, IstatistikYoutube |
-| `impeccable` | AntigravityTest2, Etsy-Arif |
 | `motion-doctrine` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `openmontage` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `planning-and-task-breakdown` | Etsy-Arif, Etsy-Yeni |
 | `scientific-critical-thinking` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `seam-craft` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `statistical-analysis` | Etsy-Arif, IstatistikYoutube |
-| `ui-ux-pro-max` | AntigravityTest2, Etsy-Arif |
 | `validate-data` | Etsy-Yeni, IstatistikYoutube |
 | `verification-before-completion` | Etsy-Yeni, IstatistikYoutube |
 | `yt-package` | Akil Disi Youtube Kanali, IstatistikYoutube |

@@ -27,8 +27,10 @@
     "AntigravityTest2": {
       "yol": "~/Documents/AntigravityTest2",
       "tur": "kilitli",
-      "durum": "takipte",
-      "eklendi": "2026-11-11"
+      "durum": "takipten-cikti",
+      "eklendi": "2026-11-11",
+      "cikis_tarihi": "2026-11-12",
+      "cikis_nedeni": "Kullanıcı kararı 2026-11-12: kullanılmıyor, Çöp Kutusu'na taşındı"
     },
     "Akil Disi Youtube Kanali": {
       "yol": "~/Documents/Akil Disi Youtube Kanali",

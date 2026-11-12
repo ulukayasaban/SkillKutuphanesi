@@ -110,7 +110,7 @@
       "ucret": "kismen",
       "ne_yapar": "HTML ile yazılan kompozisyonları videoya çevirir: proje kurar (init), denetler (lint), önizler, yerelde ya da bulutta render eder, skill ve kayıt defteri blokları kurar. Yerel kullanım ücretsiz ve açık kaynaktır; HeyGen medya üretimi ve bulut render isteğe bağlıdır (ücretli olabilir).",
       "yerinde": {"tur": "npm-global", "yol": "/usr/local/lib/node_modules/hyperframes", "paket": "hyperframes"},
-      "kutuphane_surumu": "0.9.35",
+      "kutuphane_surumu": "0.9.37",
       "surum_kaynagi": "npm kayıt defteri (registry.npmjs.org/hyperframes/latest)",
       "veri_yeri": "~/.hyperframes (config.json, önbellek, kurulum ve güncelleme günlükleri; config'te telemetri açık). İçindeki kimlik ve rastgele tohum değerleri okunup yazdırılmaz.",
       "ag": "npm kayıt defteri (güncelleme kontrolü), GitHub (skill kurulumu), isteğe bağlı HeyGen servisleri; telemetri config'te açık",
@@ -281,8 +281,8 @@
         },
         "ozet": {
           "tur": "npm-integrity",
-          "deger": "sha512-QwG6OpS7vCrnBHpB1JAYtCZMF2n6cB+jszVix5brT9m7RcVToTKBtgJAgsH52WmsQio1NpKYBaPfhIoEEqXrMQ==",
-          "ne_icin": "npm kayıt defteri hyperframes@0.9.35 dist.integrity (salt okuma GET)",
+          "deger": "sha512-PR5oJq1wY/0om/ciEZuZ0efSflWxl2ne4LalMSdbBS/DtQXyMTz5ZMlEmeivvhjVi+dhqAaQr+1ISKIi6bcm2g==",
+          "ne_icin": "npm kayıt defteri hyperframes@0.9.37 dist.integrity (salt okuma GET)",
           "kayit_tarihi": "2026-11-12"
         },
         "kural": "Kurulacak sürümün registry integrity değeri kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer registry'dekiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir)."

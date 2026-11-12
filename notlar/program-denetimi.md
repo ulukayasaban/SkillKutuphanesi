@@ -10,7 +10,7 @@
 
 | Program | Tür | Karttaki | Kurulu | Son | Durum | Yerel değişiklik | Sabit sürümler |
 |---|---|---|---|---|---|---|---|
-| hyperframes | npm-global | 0.9.35 | 0.9.35 | 0.9.37 | YENİ SÜRÜM VAR | - | - |
+| hyperframes | npm-global | 0.9.37 | 0.9.37 | 0.9.37 | güncel | - | - |
 | openmontage | git-checkout | fecb9a1e | fecb9a1e | fecb9a1e | güncel | 7 değişen, 5 izlenmeyen | 11/11 |
 
 ## Kart şeması
@@ -29,5 +29,14 @@ tüm kartlar geçerli
 
 | Program | Proje | Skill | Hedef var mı | Bağlandığı sürüm |
 |---|---|---|---|---|
+| hyperframes | Akil Disi Youtube Kanali | hyperframes | evet | 0.9.35 |
+| hyperframes | Akil Disi Youtube Kanali | hyperframes-cli | evet | 0.9.35 |
+| hyperframes | Akil Disi Youtube Kanali | media-use | evet | 0.9.35 |
 | hyperframes | IstatistikYoutube | hyperframes | evet | 0.9.35 |
 | hyperframes | IstatistikYoutube | hyperframes-cli | evet | 0.9.35 |
+| openmontage | Akil Disi Youtube Kanali | d3-viz | evet | fecb9a1e |
+| openmontage | Akil Disi Youtube Kanali | manim-composer | evet | fecb9a1e |
+| openmontage | Akil Disi Youtube Kanali | manimce-best-practices | evet | fecb9a1e |
+| openmontage | Akil Disi Youtube Kanali | pose-library-design | evet | fecb9a1e |
+| openmontage | Akil Disi Youtube Kanali | svg-character-animation | evet | fecb9a1e |
+| openmontage | Akil Disi Youtube Kanali | visual-style | evet | fecb9a1e |

@@ -180,6 +180,24 @@
       "silme_olay": "Akıl Dışı Claude üzerinde kullanıcı tarafından sınandı ve kullanıcı 'sil' dedi",
       "silme_olay_tamam": false,
       "not": "Aynı diskte klon (yer kaplamaz). Gizli adlı dosya yok (ad taraması)."
+    },
+    {
+      "kimlik": "hyperframes-2026-11-12-2",
+      "yol": "~/Documents/Claude/yedek/hyperframes-2026-11-12-2",
+      "tur": "program",
+      "ne": "HyperFrames 0.9.37 güncellemesi öncesi yedek (kurulu sürüm 0.9.35): npm genel paket klasörü (paket), ~/.hyperframes verisi (config.json hariç), KAYIT.json",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Kartın geri_alma adımları (rehber/11, Geri alma): HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken npm install -g hyperframes@0.9.35; kayıt defteri sürümü kaldırdıysa yedekteki paket klasörü onayla yerine konur; veri bozulduysa hyperframes-veri geri kopyalanır. Her adım için kullanıcıdan onay.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "KAYIT.json",
+        "hyperframes-veri",
+        "paket"
+      ],
+      "silme_olay": "Yeni sürüm kullanıcının projesinde doğrulandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "kayit": "KAYIT.json",
+      "not": "~/.hyperframes/config.json (kimlik dosyası) yedeğe alınmadı. Paket klasörü yaklaşık 110 MB."
     }
   ]
 }
