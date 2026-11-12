@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/34**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/35**
 
 ### agent-development  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 100 (A)
 
@@ -169,15 +169,16 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 73 KB (SKILL.md 13.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil, eklenti grubunda). plugin-dev ailesinin giriş noktası; diğer plugin-dev skilleri (komut, agent, hook, ayar, MCP) bunu tamamlar.
 
-### reverse-any-video  ·  heygen-com/hyperframes @ f8309b3  ·  puan 100 (A)
+### reverse-any-video  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 100 (A)
 
-- **Ne yapar:** Rebuild any video file as an editable HyperFrames project - motion graphics, talking heads, live action or AI-generated footage. Measure and watch it, rebuild every layer, then check the render against the original frame by frame. Use to reverse, recreate, replicate or copy a video.
-- **Teknoloji:** canvas, ffmpeg, html, node, python _(otomatik tespit)_
+- **Ne yapar:** Herhangi bir videoyu (motion graphics, konuşan kafa, canlı çekim, AI üretimi) birebir kare karşılaştırmasıyla düzenlenebilir bir HyperFrames projesine yeniden kurar: kesim noktalarını `measure cuts` ile bulur, bileşenleri HTML olarak yeniden yazar, görüntüdeki kişileri HeyGen ile yeniden çeker, bulutta render alıp `diff` ile özgün videoya karşı doğrular ve REVERSE.md yazar.
+- **Ne zaman:** Bir videoyu kopyalayıp/yeniden yapıp düzenlenebilir proje olarak elde etmek; elinde hakkı olan bir videonun kare kare eşi gerekiyorsa. · **Ne zaman değil:** Sıfırdan yeni video (hyperframes); yalnızca bir stilin yeni konuya uygulanması (style-sampling ya da hyperframes look.md); Pro plan yoksa (başlamaz).
+- **Teknoloji:** hyperframes, html, gsap, ffmpeg, node 22+ · **Paketler:** hyperframes (npx), node>=22, ffmpeg, HyperFrames Pro hesabı, HeyGen (kişi yeniden çekimi)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** heygen-com (kurum, resmî, ★78940, son güncelleme 2026-11-05, lisans Apache-2.0)
-- **Durum:** tercih
-- **Boyut:** 17 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
-- **İnceleme:** otomatik
+- **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı
+- **Boyut:** 23 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
+- **İnceleme:** incelendi · kalite 4/5 — HyperFrames Pro özelliği: plan yoksa `reverse start` reddeder, skill yükseltme bağlantısını verir ve billing komutunu kullanıcıya bıraktırır. Ekrandaki kişileri fiyat söylemeden HeyGen ile yeniden çeker (kredi harcar) ve son render bulutta. Disiplinli doğrulama döngüsü (cuts, frame-range, diff) kaliteli. Başlangıç telemetri işareti (skill adı, hesaba bağlı) var; yalnızca hakkı olunan videolar için. Not: kategori otomatik atamayla yazılım-skill-yazımı altında; içeriği video üretimi.
 
 ### skill-builder  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
 
@@ -285,6 +286,17 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → alternatif
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısa ve pratik 'iş akışından skill' tarifi; doğrulama yüzeysel.
+
+### style-sampling  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 100 (A)
+
+- **Ne yapar:** Hazır video stil şablonlarından (Collage Explainer, Finance Explainer, Animated Science Explainer, 3D Brand Explainer, 3D True Crime) birini seçip kullanıcının konusunda yeni bölüm üretir: `hyperframes templates pull <slug>` ile şablonu çeker, REMIX.md sürecini izler; storyboard ve taslak onayları kullanıcıya aittir.
+- **Ne zaman:** Kanıtlanmış bir seri stilinde (açıklayıcı, finans, bilim, marka, true-crime) bölüm yapmak; 'şu stilde bir bölüm' istekleri. · **Ne zaman değil:** Tek bir videoyu kopyalamak (reverse-any-video); beş şablon dışında bir stil (hyperframes look.md ile); Pro plan yoksa (şablon çekilmez).
+- **Teknoloji:** hyperframes, html, gsap, node 22+ · **Paketler:** hyperframes (npx), node>=22, HyperFrames Pro hesabı
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** heygen-com (kurum, resmî, ★82940, son güncelleme 2026-11-12, lisans Apache-2.0)
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı
+- **Boyut:** 16 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
+- **İnceleme:** incelendi · kalite 4/5 — Şablonlar HyperFrames Pro özelliği (Free planda çekilmez; skill kullanıcıdan billing komutunu kendisinin çalıştırmasını ister). Şablon çekimi kredi harcamaz; üretilen medya media-use kredi kuralına tabi. Yaratıcılara teşekkür notu var; kişi yüzü/sesi/logosu kullanılmaması kuralı net. Başlangıç telemetri işareti (hesaba bağlı) var.
 
 ### template-skill  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 54 (C)
 

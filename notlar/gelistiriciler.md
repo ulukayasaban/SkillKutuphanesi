@@ -30,10 +30,10 @@
 | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) | tailwindlabs | kurum | ✅ | 98065 | 388 | 2026-11-04 | MIT | 0 |
 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | tt-a1i | kisi |  | 93462 | 92 | 2026-11-03 | Apache-2.0 | 5 |
 | [666ghj/MiroFish](https://github.com/666ghj/MiroFish) | 666ghj | kisi |  | 84080 | 19 | 2026-10-16 | AGPL-3.0 | 0 |
+| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | heygen-com | kurum | ✅ | 82940 | 137 | 2026-11-12 | Apache-2.0 | 15 |
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | ruvnet | kisi |  | 81282 | 95 | 2026-11-09 | MIT | 317 |
-| [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | heygen-com | kurum | ✅ | 78940 | 126 | 2026-11-05 | Apache-2.0 | 14 |
+| [OpenMontageInc/OpenMontage](https://github.com/OpenMontageInc/OpenMontage) | OpenMontageInc | kurum |  | 79720 | 129 | 2026-11-09 | AGPL-3.0 | 73 |
 | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | ComposioHQ | kurum | ✅ | 78745 | 29 | 2026-09-18 | yok | 864 |
-| [OpenMontageInc/OpenMontage](https://github.com/OpenMontageInc/OpenMontage) | OpenMontageInc | kurum |  | 78702 | 129 | 2026-11-08 | AGPL-3.0 | 72 |
 | [remotion-dev/remotion](https://github.com/remotion-dev/remotion) | remotion-dev | kurum | ✅ | 70754 | 490 | 2026-11-04 | NOASSERTION | 78 |
 | [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) | FFmpeg | kurum | ✅ | 66506 | 2807 | 2026-11-04 | NOASSERTION | 0 |
 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | cathrynlavery | kisi |  | 65003 | 66 | 2026-11-03 | MIT | 1 |

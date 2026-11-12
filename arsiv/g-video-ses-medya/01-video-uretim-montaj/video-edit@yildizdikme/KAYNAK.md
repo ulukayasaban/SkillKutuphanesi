@@ -8,4 +8,4 @@
 - **Lisans:** MIT
 - **Geliştirici:** YildizDikme (kisi)
 - **Arşive alınma:** 2026-11-05
-- **Durum:** tercih
+- **Durum:** alternatif

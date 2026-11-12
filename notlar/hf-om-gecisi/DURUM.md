@@ -160,7 +160,24 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
   - Etsy-Arif: genel klasöre bağımlılık yok, 27 kütüphane skili arşivle birebir; yapılacak tek iş `ui-ux-pro-max` yol çevirisi
     (`--guncelle`) ve Arif'in 5 kayıtsız skilini yalnız kütüphane tarafında `kendi_skilleri` olarak yazmak. ffmpeg, video-edit,
     playwright-recording bu projede kopya kalır (proje Windows'la paylaşılıyor; bağ taşınmaz). Projede git işlemi yapılmaz.
-  SIRADAKİ: bağ/dondur yolu bitince kaydet → genel klasörlerin tam yedeği → IstatistikYoutube (kullanıcının sınama sözünden sonra).
+  DURUM 2026-11-12 sabah (kararlar K-28..K-35 `notlar/kararlar.md`'de; okumadan devam etme):
+  - BİTTİ: bağ/dondur kurulum yolu (commit 0f50e43e2, push edildi; `--program-skill`, `--dondur`). Tam yedek
+    `~/Documents/Claude/yedek/genel-skiller-tam-2026-11-12` (üç genel klasör, komutlar, genel not, 92 bağlık liste; yedekler.json'da).
+    Etsy-Arif: `ui-ux-pro-max` yol çevirisi kuruldu, doğrulama temiz; projede 4 dosya değişti (kullanıcı gönderecek); Arif'in 5 skili
+    kütüphanede `kendi_skilleri` olarak kayıtlı. Kullanıcı OpenMontage güncellemesini sınadı: sorun yok (K-30).
+  - SÜRÜYOR: kütüphanedeki HyperFrames (ab66e5b) ve OpenMontage (fecb9a1) kaynak kopyaları `guncelleme/2026-11-hf-om` dalında
+    güncellendi (kontroller geçti; commit atılmadı). Dalda yeniden inceleme (14 skill), `pika-h3-flex` ücret sınıfı ve dogrula'daki
+    sıfıra bölme uyarısı düzeltiliyor. Bitince: dalda commit → master'a `--no-ff` birleştir → push.
+  - KULLANICIYA SORULDU (cevap bekleniyor, bildirim gönderildi): HyperFrames kullanım bildirimini bilgisayar genelinde kapatmak için
+    üç ayar dosyasına `HYPERFRAMES_NO_TELEMETRY=1` eklensin mi. Cevap yoksa yalnız proje ayarında kapatılır.
+  - SIRADAKİ: (1) IstatistikYoutube: plan `hf-gecis-ve-kendi-skiller-2026-11-12.json` → `istatistik` + `istatistik_inceleme.son_adimlar`
+    (K-31: eski kuşak dondurulmaz; `hyperframes`, `hyperframes-cli` pakete BAĞ; karşılığı tam olmayan 11 tarif kanalın kendi tarif
+    notu olarak proje skiline alınır, ad listesi değişmez; 29 dosya düzeltmesi; proje git deposu değil, önce dosya yedeği).
+    (2) Kendi skiller (K-32): `design-dna` kütüphane kopyası + `npm install`; `openmontage` giriş skili ve `youtube-arama` kütüphaneye
+    yerel kaynak (T7, araç işi gerekir); `nlm-skill` program kartı + bağ; genel komutlar ve genel nottaki OpenMontage bloğu.
+    (3) Akıl Dışı (K-33): önce proje + Codex dosyaları yedeği; plan aynı json → `akildisi` + `akildisi_inceleme`.
+    (4) Boşaltma `rehber/12`: `~/.agents/skills` EN SON (Akıl Dışı'dan sonra); sonra bekçi tabanı, yedek silme hatırlatması.
+    (5) Aylık görev Aşama 2 + canlı görev metni. (6) AntigravityTest2 → Çöp Kutusu (önce `projeler.json` kaydı).
   Uygulamadan kalanlar ((a) ve (b) 2026-11-12'de kapandı): (a) `ortak.py` izleme listesi / `test.py` parmak izi Cursor, Gemini, Copilot klasörlerini de sayıyor; aylık
   birleştirmede sahte başarısızlık verebilir; (b) `test_p6`, `test_p1`, `test_p5` içinde gerçek veriye bağlı birkaç iddia var (program
   güncellenince kırılır); (c) aylık Aşama 2 (damga, `--takip`, `--atla` kullanımı, `zamanlanmis/aylik-guncelleme.SKILL.md`);

@@ -63,13 +63,6 @@
 | agent | `test-engineer` | addyosmani/agent-skills | `agents/test-engineer.md` |
 | agent | `web-performance-auditor` | addyosmani/agent-skills | `agents/web-performance-auditor.md` |
 | komut | `setup` | ComposioHQ/awesome-claude-skills | `connect-apps-plugin/commands/setup.md` |
-| agent | `SKILL` | OpenMontageInc/OpenMontage | `.agents/skills/agents/SKILL.md` |
-| agent | `builder` | OpenMontageInc/OpenMontage | `.agents/skills/motion-graphics/agents/builder.md` |
-| agent | `director` | OpenMontageInc/OpenMontage | `.agents/skills/motion-graphics/agents/director.md` |
-| agent | `finalize` | OpenMontageInc/OpenMontage | `.agents/skills/motion-graphics/agents/finalize.md` |
-| komut | `animated-drawing` | OpenMontageInc/OpenMontage | `.claude/commands/animated-drawing.md` |
-| komut | `backlot` | OpenMontageInc/OpenMontage | `.claude/commands/backlot.md` |
-| komut | `ink-art` | OpenMontageInc/OpenMontage | `.claude/commands/ink-art.md` |
 | agent | `analyze-pass-impact` | react/react | `compiler/.claude/agents/analyze-pass-impact.md` |
 | agent | `compiler-review` | react/react | `compiler/.claude/agents/compiler-review.md` |
 | agent | `investigate-error` | react/react | `compiler/.claude/agents/investigate-error.md` |
@@ -665,3 +658,11 @@
 | agent | `docs-researcher.agent` | upstash/context7 | `plugins/copilot/context7/agents/docs-researcher.agent.md` |
 | komut | `docs` | upstash/context7 | `plugins/copilot/context7/commands/docs.md` |
 | agent | `docs-researcher` | upstash/context7 | `plugins/cursor/context7/agents/docs-researcher.md` |
+| agent | `SKILL` | OpenMontageInc/OpenMontage | `.agents/skills/agents/SKILL.md` |
+| agent | `builder` | OpenMontageInc/OpenMontage | `.agents/skills/motion-graphics/agents/builder.md` |
+| agent | `director` | OpenMontageInc/OpenMontage | `.agents/skills/motion-graphics/agents/director.md` |
+| agent | `finalize` | OpenMontageInc/OpenMontage | `.agents/skills/motion-graphics/agents/finalize.md` |
+| komut | `animated-drawing` | OpenMontageInc/OpenMontage | `.claude/commands/animated-drawing.md` |
+| komut | `backlot` | OpenMontageInc/OpenMontage | `.claude/commands/backlot.md` |
+| komut | `ink-art` | OpenMontageInc/OpenMontage | `.claude/commands/ink-art.md` |
+| komut | `reel` | OpenMontageInc/OpenMontage | `.claude/commands/reel.md` |
