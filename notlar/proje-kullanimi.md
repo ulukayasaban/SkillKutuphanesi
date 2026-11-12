@@ -5,7 +5,7 @@
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
-| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 12 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
+| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
@@ -15,14 +15,20 @@
 
 | Skill | Kaynak | Commit | Roller | Not |
 |---|---|---|---|---|
+| `captions-overlay` | heygen-com/hyperframes | `ab66e5b` | — |  |
+| `cut-the-curve` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `de-ai-ify` | heyitsnoah/claudesidian | `6c56f35` | — |  |
 | `design-taste-frontend` | Leonxlnx/taste-skill | `12af471` | — |  |
 | `high-end-visual-design` | nexu-io/open-design | `987b247` | — |  |
 | `huashu-art-motion` | nexu-io/open-design | `e03d5c2` | — |  |
+| `hyperframes-registry` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
+| `motion-design` | lottiefiles/motion-design-skill | `f9a8a04` | — |  |
+| `motion-doctrine` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `openmontage` | yerel/kendi | `92683f1` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
+| `seam-craft` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `yt-package` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-retention` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-script` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
@@ -157,14 +163,18 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 |---|---|
 | `canvas-design` | Etsy-Arif, Etsy-Yeni |
 | `context-engineering` | AntigravityTest2, Etsy-Yeni |
+| `cut-the-curve` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `design-critique` | Etsy-Arif, IstatistikYoutube |
 | `design-dna` | Etsy-Arif, IstatistikYoutube |
 | `design-taste-frontend` | Akil Disi Youtube Kanali, AntigravityTest2 |
 | `huashu-art-motion` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `impeccable` | AntigravityTest2, Etsy-Arif |
+| `motion-design` | Akil Disi Youtube Kanali, IstatistikYoutube |
+| `motion-doctrine` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `openmontage` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `planning-and-task-breakdown` | Etsy-Arif, Etsy-Yeni |
 | `scientific-critical-thinking` | Akil Disi Youtube Kanali, IstatistikYoutube |
+| `seam-craft` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `statistical-analysis` | Etsy-Arif, IstatistikYoutube |
 | `ui-ux-pro-max` | AntigravityTest2, Etsy-Arif |
 | `validate-data` | Etsy-Yeni, IstatistikYoutube |
