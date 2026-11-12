@@ -189,6 +189,14 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
     Genel klasörde kalan (24): eski HyperFrames skilleri ve Akıl Dışı'nın Codex zincirinin kullandıkları, `youtube-arama`, `.trash`, `synced`.
     Boşaltmanın geri kalanı Akıl Dışı geçişinden SONRA (Codex bağları `~/.claude/skills` ve `~/.agents/skills` içine bakıyor).
     Not: bekçi `~/.palmier/skills` ve `~/.gemini/config/skills` klasörlerini buldu (başka uygulamaların kendi klasörleri; "kalacak").
+  - GÜNCEL (2026-11-12 08:40): BOŞALTMA TAMAM (K-40) ve AKIL DIŞI GEÇİŞİ TAMAM (K-41); IstatistikYoutube TAMAM (K-38). Bekçi TEMİZ,
+    taban boş duruma göre yenilendi. Yedek silme hatırlatması 2026-11-19 10:00 (K-39).
+    KALAN İŞLER: (1) HyperFrames 0.9.35 → 0.9.37 (yeni sürüm çıktı; rehber/11 adımlarıyla, yeni yedek gerekir). (2) AntigravityTest2 →
+    Çöp Kutusu (önce `proje-kullanimi.py --cikar`). (3) Aylık zincir Aşama 2 + canlı zamanlanmış görev metni. (4) `rehber/11`, `rehber/12`
+    ve kartlarda boşaltma öncesini anlatan eski cümleler; `giris_yolu` diğer araçlar. (5) Küçük araç eksikleri: `kardes-eksik` uyarısı
+    program bağını kardeş saymıyor; `nlm-skill` anlık kopya (program kartı + bağ istenirse `yerinde.tur` genişletilmeli).
+    (6) Kullanıcıya sorulacaklar: Akıl Dışı izleme otomasyonu, görsel aracı. (7) Etsy-Yeni'deki emekli `etsy-api`.
+    (8) Kullanıcı Akıl Dışı ve IstatistikYoutube'u yeni oturumda sınayacak; sorun olursa yedekten geri dönülür.
   - ESKİ SORU (kapandı): HyperFrames kullanım bildirimini bilgisayar genelinde kapatmak için
     üç ayar dosyasına `HYPERFRAMES_NO_TELEMETRY=1` eklensin mi. Cevap yoksa yalnız proje ayarında kapatılır.
   - SIRADAKİ: (1) IstatistikYoutube: plan `hf-gecis-ve-kendi-skiller-2026-11-12.json` → `istatistik` + `istatistik_inceleme.son_adimlar`
