@@ -199,6 +199,14 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
     program bağını kardeş saymıyor; `nlm-skill` anlık kopya (program kartı + bağ istenirse `yerinde.tur` genişletilmeli).
     (6) Kullanıcıya sorulacaklar: Akıl Dışı izleme otomasyonu, görsel aracı. (7) Etsy-Yeni'deki emekli `etsy-api`.
     (8) Kullanıcı Akıl Dışı ve IstatistikYoutube'u yeni oturumda sınayacak; sorun olursa yedekten geri dönülür.
+  - SON DURUM (2026-11-12 öğle; kararlar K-24..K-45): GEÇİŞ TAMAMLANDI. Genel skill klasörleri boş (bekçi TEMİZ); IstatistikYoutube,
+    Akıl Dışı ve Etsy-Arif yeni düzende ve doğrulandı; OpenMontage `fecb9a1e`, HyperFrames 0.9.37; kütüphanede program bağı
+    (`--program-skill`), dondurma (`--dondur`), kendi skiller (`kendi/`, T7), aylık zincir (`--aylik`) ve canlı görev metni yenilendi;
+    AntigravityTest2 Çöp Kutusu'nda; Akıl Dışı izleme görevi Claude'da (Codex otomasyonunu kullanıcı durduracak).
+    AÇIK KALANLAR: (1) kullanıcı iki kanalı yeni oturumda sınayacak; (2) yedekler 2026-11-19 hatırlatmasıyla sorulacak (12 kayıt,
+    `yedekler.json`); (3) `nlm-skill` anlık kopya: `nlm` güncellenince yeniden alınır (ya da program kartı + bağ); (4) aday repolar
+    (trend/popüler) kullanıcı kararı bekliyor; (5) Etsy-Yeni'deki emekli `etsy-api`; (6) Etsy-Arif'teki 4 değişen dosyayı kullanıcı
+    Arif'e gönderecek; (7) proje izin ayarları (Akıl Dışı) kullanıcı isterse.
   - ESKİ SORU (kapandı): HyperFrames kullanım bildirimini bilgisayar genelinde kapatmak için
     üç ayar dosyasına `HYPERFRAMES_NO_TELEMETRY=1` eklensin mi. Cevap yoksa yalnız proje ayarında kapatılır.
   - SIRADAKİ: (1) IstatistikYoutube: plan `hf-gecis-ve-kendi-skiller-2026-11-12.json` → `istatistik` + `istatistik_inceleme.son_adimlar`
