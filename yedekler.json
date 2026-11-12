@@ -152,16 +152,34 @@
       "kimlik": "genel-kaldirilan-2026-11-12",
       "yol": "~/Documents/Claude/yedek/genel-kaldirilan-2026-11-12",
       "tur": "genel-skill-klasoru",
-      "ne": "Genel klasörden TAŞINARAK kaldırılan skiller (kopya değil, asıl klasörler). 2026-11-12: ~/.claude/skills/hyperframes ve hyperframes-cli (eski 0.9.20 kopyaları; bağımlısı yoktu; IstatistikYoutube'un skill kontrolü proje bağlarıyla çakışmasın diye rehber/12 sırası dışında önce bunlar taşındı).",
+      "ne": "Genel skill klasörlerinden TAŞINARAK kaldırılan her şey (kopya değil, asıl girdiler): ~/.claude/skills (97 girdi: 75 OpenMontage bağı, 6 göreli bağ, HyperFrames eski kuşak ve diğer gerçek klasörler, design-dna, openmontage, nlm-skill, youtube-arama), ~/.codex/skills bağları (11), ~/.agents/skills (29) ve skill kilit dosyası. Bağların eski hedefleri tasima-kaydi-adim3-6.tsv ve genel-skiller-tam-2026-11-12/bag-listesi.txt içinde. Boşaltma 2026-11-12'de tamamlandı; yerinde kalanlar uygulamaların kendi klasörleri (synced, .system, playwright, .trash).",
       "tarih": "2026-11-12",
       "geri_yukleme": "Klasörü eski yerine geri taşı: mv <yedek>/claude-skills/<ad> ~/.claude/skills/<ad> (kullanıcı onayıyla; genel-bekci.py ile kontrol).",
       "gizli_icerir": "hayir",
       "beklenen": [
-        "claude-skills"
+        "claude-skills",
+        "agents-skills",
+        "codex-skills"
       ],
       "silme_olay": "Genel klasörler boşaltıldı, projeler kullanıcı tarafından sınandı ve kullanıcı 'sil' dedi",
       "silme_olay_tamam": false,
       "not": "Boşaltma ilerledikçe kaldırılan diğer girdiler de buraya taşınır."
+    },
+    {
+      "kimlik": "akil-disi-tam-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/akil-disi-tam-2026-11-12",
+      "tur": "proje",
+      "ne": "Akıl Dışı projesinin Claude'a geçişten ÖNCEKİ tam kopyası (proje/: 8787 dosya, birebir; proje git deposu değil) ve Codex tarafındaki otomasyon kayıtları, proje aynaları ve genel AGENTS.md (codex-genel/). Kullanıcı kararı K-33: proje süreciyle ilgili hiçbir veri kaybolmaz.",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Tek dosya: yedekteki dosyayı projedeki aynı yola kopyala. Tüm proje: proje klasörünü yeniden adlandırıp yedekteki proje/ klasörünü yerine kopyala (cp -Rc). Her geri yükleme kullanıcı onayıyla.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "proje",
+        "codex-genel"
+      ],
+      "silme_olay": "Akıl Dışı Claude üzerinde kullanıcı tarafından sınandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "not": "Aynı diskte klon (yer kaplamaz). Gizli adlı dosya yok (ad taraması)."
     }
   ]
 }
