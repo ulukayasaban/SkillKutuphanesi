@@ -199,6 +199,10 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
     program bağını kardeş saymıyor; `nlm-skill` anlık kopya (program kartı + bağ istenirse `yerinde.tur` genişletilmeli).
     (6) Kullanıcıya sorulacaklar: Akıl Dışı izleme otomasyonu, görsel aracı. (7) Etsy-Yeni'deki emekli `etsy-api`.
     (8) Kullanıcı Akıl Dışı ve IstatistikYoutube'u yeni oturumda sınayacak; sorun olursa yedekten geri dönülür.
+  - KAPANIŞ (2026-11-12 akşamüstü; K-48..K-51): Akıl Dışı geçişi bu oturumda TAMAMLANDI sayılır (kullanıcı projeyi Claude'da kendi oturumunda
+    sürdürüyor; kalan izin/otomasyon/model işleri orada). Projelerde onaysız işlem yok (K-50). Kayıp kaynak kuralı (K-49). HyperFrames 0.9.38 ve
+    nlm 0.16.2 güncellemeleri ile aday repolar kullanıcı isteyene kadar bekler (K-48). IstatistikYoutube'da kullanıcı geçiş sonrası sorun bildirdi;
+    yedeğe dönüp dönmeme kararı kullanıcıda (yedekler: `istatistik-skill-gecisi-2026-11-12` kökü + `genel-skiller-tam-2026-11-12`); kütüphane oturumu dokunmaz.
   - EK (2026-11-12 öğleden sonra; K-46, K-47): nlm üçüncü program olarak kartlı (`uv-tool`), `nlm-skill` IstatistikYoutube'da program bağı
     (kopya kaldırıldı; `kendi/` altında artık yalnız `openmontage` ve `youtube-arama`). Kendi skillerin güncelleme yolu ayrı bir kopyada
     uçtan uca sınandı (düzenle → işle → proje güncelleme görür → uygula → geri al; elle değişiklik ve kaynaktan kaldırma fark edilir): sorun yok.
