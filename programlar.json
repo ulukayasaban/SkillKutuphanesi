@@ -109,7 +109,7 @@
       "ucret": "kismen",
       "ne_yapar": "HTML ile yazılan kompozisyonları videoya çevirir: proje kurar (init), denetler (lint), önizler, yerelde ya da bulutta render eder, skill ve kayıt defteri blokları kurar. Yerel kullanım ücretsiz ve açık kaynaktır; HeyGen medya üretimi ve bulut render isteğe bağlıdır (ücretli olabilir).",
       "yerinde": {"tur": "npm-global", "yol": "/usr/local/lib/node_modules/hyperframes", "paket": "hyperframes"},
-      "kutuphane_surumu": "0.9.23",
+      "kutuphane_surumu": "0.9.35",
       "surum_kaynagi": "npm kayıt defteri (registry.npmjs.org/hyperframes/latest)",
       "veri_yeri": "~/.hyperframes (config.json, önbellek, kurulum ve güncelleme günlükleri; config'te telemetri açık). İçindeki kimlik ve rastgele tohum değerleri okunup yazdırılmaz.",
       "ag": "npm kayıt defteri (güncelleme kontrolü), GitHub (skill kurulumu), isteğe bağlı HeyGen servisleri; telemetri config'te açık",
@@ -218,14 +218,14 @@
           "beklenen": "1",
           "gerekli": false,
           "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
-          "not": "Sürüm onaydan önce değişmesin; kullanıcı kararı (bugün tanımlı değil)."
+          "not": "Sürüm onaydan önce değişmesin; 2026-11-12'de kullanıcı onayıyla üç yere eklendi."
         },
         {
           "ad": "HYPERFRAMES_NO_UPDATE_CHECK",
           "beklenen": "1",
           "gerekli": false,
           "nerede": ["~/.zshenv", "~/.zshrc", "~/.claude/settings.json"],
-          "not": "Güncelleme kontrolünü kapatır; kullanıcı kararı."
+          "not": "Güncelleme kontrolünü kapatır; 2026-11-12'de kullanıcı onayıyla üç yere eklendi."
         }
       ],
       "gizli_dosyalar": ["~/.hyperframes/config.json"],
@@ -271,9 +271,9 @@
         },
         "ozet": {
           "tur": "npm-integrity",
-          "deger": "sha512-Fyr1z5QnAEn//SZDlqXzT170h5eo67XapqaQyGuXzNsi+MAbO4aTp/Nf6C657UnEM8BM7NC5+VHcKlE3GObUsg==",
-          "ne_icin": "npm kayıt defteri hyperframes@0.9.23 dist.integrity (salt okuma GET)",
-          "kayit_tarihi": "2026-11-11"
+          "deger": "sha512-QwG6OpS7vCrnBHpB1JAYtCZMF2n6cB+jszVix5brT9m7RcVToTKBtgJAgsH52WmsQio1NpKYBaPfhIoEEqXrMQ==",
+          "ne_icin": "npm kayıt defteri hyperframes@0.9.35 dist.integrity (salt okuma GET)",
+          "kayit_tarihi": "2026-11-12"
         },
         "kural": "Kurulacak sürümün registry integrity değeri kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer registry'dekiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir)."
       }

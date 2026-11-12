@@ -138,7 +138,12 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
   yükseldi, pythainlp + importlib_resources eklendi; 11 sabit sürüm aynı. 75 skill bağı sağlam, derleme ve programın kendi kontrolü
   hatasız; origin yeni adrese çevrildi. Kullanıcı kendi projesinde sınayacak ve sonucu söyleyecek; "yedekleri silme" dedi.
   Geri dönüş gerekirse: `rehber/11` → "Geri alma" + yedekteki `KAYIT.json`, `yerel-yamalar.patch`, `pip-freeze.txt`.
-  SIRADAKİ: 4 (HyperFrames güncellemesi + ek iki kilit).
+  4 BİTTİ (2026-11-12 03:45): HyperFrames 0.9.23 → 0.9.35 (`npm install -g hyperframes@0.9.35`, üç kilit tanımlıyken); sürüm notlarında
+  kırıcı değişiklik yok; genel skill klasörleri güncelleme öncesi ve sonrası aynı. Yedek `~/Documents/Claude/yedek/hyperframes-2026-11-12/`.
+  Ek iki kilit (`HYPERFRAMES_NO_AUTO_INSTALL`, `HYPERFRAMES_NO_UPDATE_CHECK`) `~/.zshenv`, `~/.zshrc`, `~/.claude/settings.json` içine
+  eklendi; önceki halleri `~/Documents/Claude/yedek/ayar-2026-11-12/`. settings.json'daki yeni anahtarlar bir sonraki Claude oturumunda
+  geçerli olur (acil değil). HyperFrames komutu çalıştırılarak sınanmadı; kullanıcı kendi projesinde sınayacak.
+  SIRADAKİ: 5 (IstatistikYoutube: skiller kütüphaneden proje içine; OpenMontage skilleri de bu projeye bakılarak).
   Uygulamadan kalanlar ((a) ve (b) 2026-11-12'de kapandı): (a) `ortak.py` izleme listesi / `test.py` parmak izi Cursor, Gemini, Copilot klasörlerini de sayıyor; aylık
   birleştirmede sahte başarısızlık verebilir; (b) `test_p6`, `test_p1`, `test_p5` içinde gerçek veriye bağlı birkaç iddia var (program
   güncellenince kırılır); (c) aylık Aşama 2 (damga, `--takip`, `--atla` kullanımı, `zamanlanmis/aylik-guncelleme.SKILL.md`);

@@ -10,7 +10,7 @@
 
 | Program | Tür | Karttaki | Kurulu | Son | Durum | Yerel değişiklik | Sabit sürümler |
 |---|---|---|---|---|---|---|---|
-| hyperframes | npm-global | 0.9.23 | 0.9.23 | 0.9.35 | YENİ SÜRÜM VAR | - | - |
+| hyperframes | npm-global | 0.9.35 | 0.9.35 | 0.9.35 | güncel | - | - |
 | openmontage | git-checkout | fecb9a1e | fecb9a1e | fecb9a1e | güncel | 7 değişen, 5 izlenmeyen | 11/11 |
 
 ## Kart şeması
@@ -20,6 +20,6 @@ tüm kartlar geçerli
 ## Ortam anahtarları
 
 - hyperframes · HYPERFRAMES_SKIP_SKILLS · 3/3
-- hyperframes · HYPERFRAMES_NO_AUTO_INSTALL · 0/3
-- hyperframes · HYPERFRAMES_NO_UPDATE_CHECK · 0/3
+- hyperframes · HYPERFRAMES_NO_AUTO_INSTALL · 3/3
+- hyperframes · HYPERFRAMES_NO_UPDATE_CHECK · 3/3
 - openmontage · HYPERFRAMES_SKIP_SKILLS · 3/3

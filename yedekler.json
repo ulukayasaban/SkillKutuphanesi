@@ -12,7 +12,11 @@
       "tarih": "2026-11-11",
       "geri_yukleme": "Her dosyayı yerine kopyala: claude-settings.json.yedek -> ~/.claude/settings.json, zshrc.yedek -> ~/.zshrc, zshenv.yedek -> ~/.zshenv. Önce mevcut dosyanın .onceki kopyasını al; settings.json'ın geçerli JSON olduğunu doğrula (içeriği ekrana basma). Her dosya ayrı onayla. Uyarı: yedekler düz metin anahtar satırı içerir; geri yüklemek onu da geri getirir. Ayrıntı: rehber/13, 'Ayar dosyası'.",
       "gizli_icerir": "evet",
-      "beklenen": ["claude-settings.json.yedek", "zshrc.yedek", "zshenv.yedek"],
+      "beklenen": [
+        "claude-settings.json.yedek",
+        "zshrc.yedek",
+        "zshenv.yedek"
+      ],
       "silme_gun": 30,
       "not": "Gizli içerikli olduğu için en çok 30 gün tutulur; süre dolunca aylık özet silinsin mi diye sorar."
     },
@@ -24,7 +28,12 @@
       "tarih": "2026-11-08",
       "geri_yukleme": "Yedekteki geri-al.sh bağları ve klasörleri ilk yerine koyar; çalıştırmadan önce dosyayı oku ve kullanıcıdan onay al (kütüphane dışında, sabit yollu). Elle yol: agents-skills/* -> ~/.agents/skills/, claude-skills-linkler/* (bağlar; hedeflerine ls -la ile bak) -> ~/.claude/skills/. Ayrıntı: rehber/13, 'Genel skill klasörü', ve rehber/12 (boşaltma).",
       "gizli_icerir": "hayir",
-      "beklenen": ["agents-skills", "claude-skills-linkler", "LISTE.md", "geri-al.sh"],
+      "beklenen": [
+        "agents-skills",
+        "claude-skills-linkler",
+        "LISTE.md",
+        "geri-al.sh"
+      ],
       "silme_olay": "Genel skill klasörleri boşaltıldı (DURUM.md adım 3) ve kullanıcı yedeğin gereksiz olduğunu söyledi",
       "silme_olay_tamam": false,
       "not": "Kullanıcı 'sil' diyene kadar durur (DURUM.md:21). Hatırlatma boşaltma günü başlar (DURUM.md:27): olay tamam olunca bu yedek 'silinebilir' listesine girer."
@@ -37,11 +46,51 @@
       "tarih": "2026-11-12",
       "geri_yukleme": "Kartın geri_alma adımları (rehber/11, Geri alma): git -C ~/.openmontage switch --detach <KAYIT.json onceki.commit>; çakışan dosyada yalnız o dosyada git checkout -- <yol> ve git apply --3way --include=<yol> yerel-yamalar.patch; venv bozulduysa pip-freeze.txt ile pip install --no-deps -r (onayla); bag-listesi.txt ile bağlar karşılaştırılır. Her adım için kullanıcıdan onay. git reset --hard, git clean yok.",
       "gizli_icerir": "hayir",
-      "beklenen": ["KAYIT.json", "yerel-yamalar.patch", "izlenmeyen-yollar.txt", "pip-freeze.txt", "bag-listesi.txt"],
+      "beklenen": [
+        "KAYIT.json",
+        "yerel-yamalar.patch",
+        "izlenmeyen-yollar.txt",
+        "pip-freeze.txt",
+        "bag-listesi.txt"
+      ],
       "silme_olay": "Gerçek güncelleme doğrulandı ve kullanıcı 'sil' dedi",
       "silme_olay_tamam": false,
       "kayit": "KAYIT.json",
       "not": "clips_cache/ (24 MB) ve gfpgan/ (190 MB) kopyalanmadı, yalnız listelendi. Anahtar dosyası (.env) yedekte yok."
+    },
+    {
+      "kimlik": "hyperframes-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/hyperframes-2026-11-12",
+      "tur": "program",
+      "ne": "HyperFrames güncellemesi öncesi yedek (kurulu sürüm 0.9.23): npm genel paket klasörünün kopyası (paket), ~/.hyperframes verisi (config.json hariç), KAYIT.json",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Kartın geri_alma adımları (rehber/11, Geri alma): HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken npm install -g hyperframes@0.9.23; kayıt defteri sürümü kaldırdıysa yedekteki paket klasörü onayla yerine konur; veri bozulduysa hyperframes-veri geri kopyalanır. Her adım için kullanıcıdan onay.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "KAYIT.json",
+        "hyperframes-veri",
+        "paket"
+      ],
+      "silme_olay": "Yeni sürüm kullanıcının projesinde doğrulandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "kayit": "KAYIT.json",
+      "not": "~/.hyperframes/config.json (kimlik dosyası) yedeğe alınmadı. Paket klasörü yaklaşık 110 MB."
+    },
+    {
+      "kimlik": "ayar-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/ayar-2026-11-12",
+      "tur": "ayar-dosyasi",
+      "ne": "HYPERFRAMES_NO_AUTO_INSTALL ve HYPERFRAMES_NO_UPDATE_CHECK satırları eklenmeden önceki ~/.claude/settings.json, ~/.zshrc ve ~/.zshenv (2026-11-12, kullanıcı onayı K-25)",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Her dosyayı yerine kopyala: claude-settings.json.yedek -> ~/.claude/settings.json, zshrc.yedek -> ~/.zshrc, zshenv.yedek -> ~/.zshenv. Önce mevcut dosyanın .onceki kopyasını al; settings.json'ın geçerli JSON olduğunu doğrula (içeriği ekrana basma). Her dosya ayrı onayla. Uyarı: yedekler düz metin anahtar satırı içerir; geri yüklemek onu da geri getirir. Ayrıntı: rehber/13, 'Ayar dosyası'.",
+      "gizli_icerir": "evet",
+      "beklenen": [
+        "claude-settings.json.yedek",
+        "zshrc.yedek",
+        "zshenv.yedek"
+      ],
+      "silme_gun": 30,
+      "not": "Gizli içerikli olduğu için en çok 30 gün tutulur; süre dolunca aylık özet silinsin mi diye sorar."
     }
   ]
 }
