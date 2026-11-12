@@ -7,7 +7,7 @@
 |---|---|---|---|---|---|
 | [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 24 | — | tam | 2026-11-07 |
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
-| [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
+| [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-07 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
 | [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 23 (+2 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
 
@@ -144,7 +144,7 @@ Profil: — · Roller: etsy-coordinator, etsy-research, etsy-product-rights, ets
 | `huashu-art-motion` | nexu-io/open-design | `12d970e` | — |  |
 | `humanizer` | blader/humanizer | `0ef9fe5` | — |  |
 | `motion-design` | lottiefiles/motion-design-skill | `f9a8a04` | — | 2026-10-15'ten beri bu sürüm kullanılıyor (edit-026); 2026-11-07'de kütüphaneden kurulup güncellemesi izlenmeye başlandı. |
-| `motion-doctrine` | heygen-com/hyperframes | `f8309b3` | — |  |
+| `motion-doctrine` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `5f2bc03` | — |  |
 | `seam-craft` | heygen-com/hyperframes | `f8309b3` | — |  |
 | `statistical-analysis` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
