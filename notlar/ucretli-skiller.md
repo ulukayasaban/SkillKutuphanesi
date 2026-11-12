@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 44
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 46
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -15,9 +15,11 @@
 | `gaia-submission` | 02-agent-orkestrasyon | GAIA kıyaslamasını Anthropic API anahtarıyla çalıştırır (kullandıkça öde); anahtarsız yürütülemez. |
 | `managed-agent` | 02-agent-orkestrasyon | Anthropic Claude Managed Agents bulut çalışma zamanını kullanır (ANTHROPIC_API_KEY, beta erişimi; kullandıkça öde). |
 | `reverse-any-video` | 04-skill-plugin-yazimi | HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta |
+| `style-sampling` | 04-skill-plugin-yazimi | Şablonlar HyperFrames Pro (ücretli plan) özelliğidir; Free planda çekilmez, ücretsiz kullanım yolu yok |
 | `generate-image@github` | 01-uygulama-entegrasyonlari | OpenRouter görsel modelleri (OPENROUTER_API_KEY zorunlu), kullanım başına ücret |
 | `nano-banana-pro-openrouter` | 01-uygulama-entegrasyonlari | Tek işi OpenRouter üzerinden Gemini 3 Pro Image çağırmak; model ücretli, kredisiz anahtar çalışmaz |
 | `create-video` | 01-video-uretim-montaj | HeyGen Video Agent API |
+| `pika-h3-flex` | 01-video-uretim-montaj | Pika API anahtarı ve saniye başı ön ödemeli kredi gerekir (480p $0.01/sn'den); ücretsiz yol yok (yalnızca Pika'nın geçici tanıtım kotası) |
 | `video-toolkit` | 01-video-uretim-montaj | Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli |
 | `video-translate` | 01-video-uretim-montaj | HeyGen API |
 | `acestep` | 02-ses-muzik-konusma | RunPod uç noktası (RUNPOD_API_KEY) |
@@ -154,7 +156,7 @@
 | `hyperframes-cli@openai` | 01-video-uretim-montaj | Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister |
 | `hyperframes-registry@openai` | 01-video-uretim-montaj | HeyGen anılıyor; HyperFrames kendisi açık kaynak (kütüphanede heygen-com/hyperframes ile aynı sınıf) |
 | `hyperframes@openai` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
-| `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli |
+| `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor (kredi sınırı dosyası var) ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli; Voice Turbo Free planda ayda 3 dk |
 | `moneyprinterturbo-video` | 01-video-uretim-montaj | LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla. |
 | `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |

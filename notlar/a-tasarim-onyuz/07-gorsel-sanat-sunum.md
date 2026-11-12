@@ -68,16 +68,16 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 9 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### d3-viz  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 93 (A)
+### d3-viz  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 93 (A)
 
 - **Ne yapar:** d3.js ile özel, etkileşimli veri görselleştirmeleri (ağ/grafik, hiyerarşi, coğrafi harita, geçişli grafikler) kurmayı anlatır; React ve vanilla JS şablonları (chart-template.jsx, interactive-template.jsx), renk şeması ve ölçek başvuruları ile örnek veri içerir. Hazır grafik kütüphanesinin yetmediği özgün işler içindir.
 - **Ne zaman:** Standart grafik kütüphanesinde olmayan özel SVG görselleştirme, force-directed ağ, zoom/brush etkileşimi, haritalar. · **Ne zaman değil:** Hızlı standart grafik/dashboard (dataviz skilli veya grafik kütüphanesi); 3D görselleştirme (threejs-*).
 - **Teknoloji:** d3, svg, react, javascript · **Paketler:** d3
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** veri-gorsellestirme → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:ayni
+- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
+- **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
+- **Durum:** tercih · **Örtüşme:** veri-gorsellestirme → birincil · **Roller:** frontend-muhendis · **Globalde:** claude:farkli
 - **Boyut:** 80 KB (SKILL.md 21.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Konu odaklı, başvuru dosyaları ve şablonlar kaliteli; kategoride tek veri görselleştirme skilli. Dikkat: registry'de bagimlilik uyarısı var ama d3-viz'in kendi içeriği OpenMontage komutu çağırmıyor, bağımsız çalışır. Repo lisansı AGPL-3.0 (skill dosyasında ayrı lisans yok); aynı skill ~/.claude/skills'te zaten global kurulu (globalde: ayni). d3 CDN'den yüklenebilir.
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Konu odaklı, başvuru dosyaları ve şablonlar kaliteli; kategoride tek veri görselleştirme skilli. Dikkat: registry'de bagimlilik uyarısı var ama d3-viz'in kendi içeriği OpenMontage komutu çağırmıyor, bağımsız çalışır. Repo lisansı AGPL-3.0 (skill dosyasında ayrı lisans yok); aynı skill ~/.claude/skills'te zaten global kurulu (globalde: ayni). d3 CDN'den yüklenebilir. · 2026-11-12 yeniden incelendi: içerik değişmedi (kaynak OpenMontageInc/OpenMontage fecb9a1'e taşındı), değerlendirme aynı.
 
 ### deck-guizang-editorial  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 

@@ -196,13 +196,13 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **İnceleme:** otomatik
 - **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).
 
-### vercel-composition-patterns@calesthio  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 94 (A)
+### vercel-composition-patterns@calesthio  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 94 (A)
 
 - **Ne yapar:** Vercel'in ölçeklenen React kompozisyon desenleri: boolean prop çoğalmasını compound component, state lifting ve iç yapıyı birleştirme ile önleme; durum yönetimi (context arayüzü, implementasyonu ayırma), uygulama desenleri ve React 19 API değişiklikleri (forwardRef'siz ref vb.). Kurallar ayrı dosyalarda.
 - **Ne zaman:** Çok boolean prop'lu bileşenleri refactor ederken, yeniden kullanılabilir bileşen kütüphanesi veya esnek bileşen API'si tasarlarken. · **Ne zaman değil:** Performans optimizasyonu (vercel-react-best-practices); React dışı projeler.
 - **Teknoloji:** react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** react-kompozisyon → alternatif · **Globalde:** claude:ayni
 - **Boyut:** 49 KB (SKILL.md 3.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (opsiyonel). Kısa SKILL.md (3 KB) ve kural dosyaları ile bağlam dostu; React 19 notları güncel. OpenMontage'a gömülü Vercel kopyası. 07-framework-ozel'e taşındı.
@@ -219,13 +219,13 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **İnceleme:** otomatik
 - **Not:** Vercel'in resmî kaynağı (OpenMontage kopyalarının güncel aslı).
 
-### vercel-react-best-practices@calesthio  ·  OpenMontageInc/OpenMontage @ 195eab2  ·  puan 94 (A)
+### vercel-react-best-practices@calesthio  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 94 (A)
 
 - **Ne yapar:** Vercel Engineering'in React/Next.js performans kuralları: etkiye göre 8 kategoride 65 kural (şelaleleri kaldırma, bundle boyutu, sunucu tarafı performans, istemci veri çekme, yeniden render, render performansı, JS performansı, ileri desenler); her kural ayrı dosyada iyi/kötü örnekle, tam derlenmiş AGENTS.md ile.
 - **Ne zaman:** React bileşeni veya Next.js sayfası yazarken/incelerken; veri çekme, bundle ve render performansı sorunlarında. · **Ne zaman değil:** React dışı projeler; Next.js 16 Cache Components geçişi (next-cache-components-* skilleri); bileşen API tasarımı (vercel-composition-patterns).
 - **Teknoloji:** react, next.js
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** OpenMontageInc (kurum, ★78702, son güncelleme 2026-11-08, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
 - **Durum:** alternatif · **Örtüşme:** react-performans → alternatif · **Roller:** frontend-muhendis · **Globalde:** claude:ayni
 - **Boyut:** 207 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, react-performans grubunun birincili. Gerekçe: Vercel'in özgün kural seti, kural başına dosya ile seçici okuma (SKILL.md 7 KB, toplam 207 KB); nextjs-react-expert aynı kuralların ag-kit uyarlaması. Bu kopya OpenMontage'a gömülü (upstream vercel-labs/agent-skills arşivde yok); güncellemeler OpenMontage üzerinden gelir. Dil/framework rehberi olduğu için 07-framework-ozel'e taşındı.
