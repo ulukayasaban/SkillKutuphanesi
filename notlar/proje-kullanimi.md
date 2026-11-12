@@ -5,7 +5,7 @@
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
-| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
+| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 17 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
@@ -24,7 +24,6 @@
 | `hyperframes-registry` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
-| `motion-design` | lottiefiles/motion-design-skill | `f9a8a04` | — |  |
 | `motion-doctrine` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `openmontage` | yerel/kendi | `92683f1` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
@@ -169,7 +168,6 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 | `design-taste-frontend` | Akil Disi Youtube Kanali, AntigravityTest2 |
 | `huashu-art-motion` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `impeccable` | AntigravityTest2, Etsy-Arif |
-| `motion-design` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `motion-doctrine` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `openmontage` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `planning-and-task-breakdown` | Etsy-Arif, Etsy-Yeni |
