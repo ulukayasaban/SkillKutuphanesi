@@ -143,7 +143,24 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
   Ek iki kilit (`HYPERFRAMES_NO_AUTO_INSTALL`, `HYPERFRAMES_NO_UPDATE_CHECK`) `~/.zshenv`, `~/.zshrc`, `~/.claude/settings.json` içine
   eklendi; önceki halleri `~/Documents/Claude/yedek/ayar-2026-11-12/`. settings.json'daki yeni anahtarlar bir sonraki Claude oturumunda
   geçerli olur (acil değil). HyperFrames komutu çalıştırılarak sınanmadı; kullanıcı kendi projesinde sınayacak.
-  SIRADAKİ: 5 (IstatistikYoutube: skiller kütüphaneden proje içine; OpenMontage skilleri de bu projeye bakılarak).
+  YÖN DEĞİŞİKLİĞİ (K-28, 2026-11-12): programla gelen skiller projeye kopyalanmaz, programın kendi skill klasörüne BAĞLANIR
+  (`skill-ekle.py --program-skill PROGRAM:AD`); yalnız genel klasörde kalan eski kuşak skiller projeye DONDURULUR (`--dondur YOL`).
+  Bu iki yol kütüphaneye ekleniyor (tasarım `notlar/duzen-denetimi-2026-11/tasarim/tasarim-p9-program-skilleri.md`).
+  HAZIRLIK BİTTİ (salt okuma, 2026-11-12): `notlar/hf-om-gecisi/istatistik-hazirlik-2026-11-12.json` ve
+  `akildisi-etsyarif-harita-2026-11-12.json` (harita, sürüm karşılaştırması, adım listesi, karşı inceleme, kullanıcıya sorulacaklar).
+  - IstatistikYoutube (git deposu değil; 23 kütüphane + 22 kendi skili zaten proje içinde): `hyperframes`, `hyperframes-cli` →
+    HyperFrames paketine bağ; `hyperframes-core`, `-animation`, `-creative`, `motion-graphics` → dondur; `design-dna`, `openmontage`,
+    `nlm-skill` kullanıcının, yerinde kalır; OpenMontage'ın bağlı skillerini proje kullanmıyor (hepsi kapalı). Sabit yollar:
+    `hyperframes-shorts/SKILL.md` 22, `runtime-plan/SKILL.md` 25 ve kural metinleri (CLAUDE.md 106, docs, config/tools.yaml,
+    status/skill-global.yaml). Kullanıcı OpenMontage/HyperFrames'i bu projede sınıyor; sonucunu söylemeden projeye dokunulmaz.
+  - Akıl Dışı (git deposu değil; Codex düzeni + 24 kütüphane skili): `hyperframes-keyframes` ve `hyperframes-audio`nun TEK kopyası
+    `~/.agents/skills` içinde (hiçbir yedekte yok): dondurulmadan `~/.agents` boşaltılmaz. `-creative`, `-animation` de dondurulur;
+    `hyperframes` pakete bağlanır; altı OpenMontage skili bağlanabilir (bu proje de OpenMontage kullanıyor; K-27 tam doğru değil).
+    Kullanıcıya sorulacaklar var: Codex dosyaları kalsın mı, 10:00/20:00 izleme nereye, görsel üretim aracı, rol dosyaları.
+  - Etsy-Arif: genel klasöre bağımlılık yok, 27 kütüphane skili arşivle birebir; yapılacak tek iş `ui-ux-pro-max` yol çevirisi
+    (`--guncelle`) ve Arif'in 5 kayıtsız skilini yalnız kütüphane tarafında `kendi_skilleri` olarak yazmak. ffmpeg, video-edit,
+    playwright-recording bu projede kopya kalır (proje Windows'la paylaşılıyor; bağ taşınmaz). Projede git işlemi yapılmaz.
+  SIRADAKİ: bağ/dondur yolu bitince kaydet → genel klasörlerin tam yedeği → IstatistikYoutube (kullanıcının sınama sözünden sonra).
   Uygulamadan kalanlar ((a) ve (b) 2026-11-12'de kapandı): (a) `ortak.py` izleme listesi / `test.py` parmak izi Cursor, Gemini, Copilot klasörlerini de sayıyor; aylık
   birleştirmede sahte başarısızlık verebilir; (b) `test_p6`, `test_p1`, `test_p5` içinde gerçek veriye bağlı birkaç iddia var (program
   güncellenince kırılır); (c) aylık Aşama 2 (damga, `--takip`, `--atla` kullanımı, `zamanlanmis/aylik-guncelleme.SKILL.md`);

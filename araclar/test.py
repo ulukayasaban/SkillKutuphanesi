@@ -1242,12 +1242,16 @@ def main():
     test("--blok kisa: tablo yok, işaretler ve skill sayısı var, doğrulama temiz",
          kod == 0 and "skill-kutuphanesi:basla" in cm and "| Skill |" not in cm and "2 skill `.claude/skills/`" in cm, out)
     kod, out = calistir(p3, "--skill", "d3-viz", "--evet")
+    # Ad, bu bilgisayarın genel klasöründe farklı içerikli aynı adlı skill varsa '--kutuphane' ekiyle kurulur
+    # (çakışma kuralı); test iki adı da kabul eder ki sonuç makinenin genel klasör durumuna bağlı olmasın.
+    d3_ad = next((a for a in ("d3-viz", "d3-viz--kutuphane")
+                  if (p3 / ".claude" / "skills" / a / "SKILL.md").exists()), "d3-viz")
     test("sadece Claude projesine yeni skill .agents oluşturmadan kurulur",
-         kod == 0 and not (p3 / ".agents").exists() and (p3 / ".claude" / "skills" / "d3-viz" / "SKILL.md").exists(), out)
+         kod == 0 and not (p3 / ".agents").exists() and (p3 / ".claude" / "skills" / d3_ad / "SKILL.md").exists(), out)
     cm = (p3 / "CLAUDE.md").read_text(encoding="utf-8")
     test("kısa blok sonraki kurulumda korunur ve sayı güncellenir", "| Skill |" not in cm and "3 skill" in cm, cm)
     kod, out = calistir(p3, "--blok", "tam")
-    test("--blok tam: tablo geri gelir", kod == 0 and "| `d3-viz` |" in (p3 / "CLAUDE.md").read_text(encoding="utf-8"), out)
+    test("--blok tam: tablo geri gelir", kod == 0 and ("| `%s` |" % d3_ad) in (p3 / "CLAUDE.md").read_text(encoding="utf-8"), out)
     (p3 / ".claude" / "skills" / "gsap-core" / "SKILL.md").open("a", encoding="utf-8").write("\nelle\n")
     kod, out = calistir(p3, "--dogrula")
     test("sadece Claude projesinde elle değişiklik yakalanır", kod == 1 and "elle değiştirilmiş" in out, out)

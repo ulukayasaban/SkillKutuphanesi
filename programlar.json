@@ -29,6 +29,7 @@
       "ag": "Etsy API; isteğe bağlı Pinterest; TCMB kur dosyası (günde 1); GitHub sürüm kontrolü (ETSYOTOMASYON_NO_UPDATE_CHECK=1 kapatır)",
       "kendini_gunceller": false,
       "skilleri": [],
+      "skill_koku": "",
       "guncelleme_adimlari": [
         "program-denetim.py yeni sürümü gösterir",
         "ön kontrol: python3 araclar/program-denetim.py --oncesi etsyotomasyon",
@@ -127,9 +128,11 @@
         "simdi": "HYPERFRAMES_SKIP_SKILLS=1 2026-11-11'de üç yere yazıldı: ~/.zshenv (her zsh kabuğu; zsh -c ve zsh -lc doğrulandı), ~/.zshrc (etkileşimli terminal) ve ~/.claude/settings.json → env (Claude oturumları, yeniden başlayınca). Yedek: ~/Documents/Claude/yedek/ayar-2026-11-11/. Kapsamadığı yer: kabuk başlatmadan süreç çalıştıran masaüstü uygulamaları. Genel skill klasörleri henüz boşaltılmadı."
       },
       "skilleri": ["hyperframes", "hyperframes-cli", "media-use", "hyperframes-registry"],
+      "skill_koku": "/usr/local/lib/node_modules/hyperframes/dist/skills",
       "guncelleme_adimlari": [
         "program-denetim.py yeni sürümü ('YENİ SÜRÜM VAR') ya da kartın eskidiğini ('KART ESKİ') gösterir; 'KART ESKİ' ise önce sebebi bulunur, güncelleme yapılmaz",
         "python3 araclar/program-denetim.py --oncesi hyperframes çalıştırılır; 'KIRICI ADAYI' çıkarsa önce rehber/11 → 'Kırıcı sürüm' deneme adımları ayrı klasörde uygulanır, geçmeden onay istenmez",
+        "bağlar: program-denetim.py --oncesi çıktısındaki 'bağlar' satırlarını oku; 'bağ kırılacak' ya da kırık bağ uyarısı varsa kullanıcıya söyle (güncellemeden sonra aynı rapor kırık bağı HATA gösterir)",
         "kullanıcıya sürüm farkı + release notu özeti sunulur ve bu güncelleme için ayrıca onay istenir (her seferinde)",
         "yedek: ~/Documents/Claude/yedek/hyperframes-<YYYY-AA-GG>/ altına hyperframes-veri (config.json hariç), paket klasörü ve KAYIT.json (rehber/11 → 'Yedek kaydı'); kütüphane klasörüne ve git'e asla",
         "program-denetim.py --oncesi hyperframes tekrar çalıştırılır; 'HAZIR' demeden devam edilmez",
@@ -153,7 +156,7 @@
         "hepsi": {
           "durum": "proje-skili",
           "yol": "/usr/local/bin/hyperframes",
-          "nasil": "Skiller (karttaki 'skilleri' listesi) projeye `python3 araclar/skill-ekle.py <proje> --skill <kimlik>` ile kurulur; her aracın proje skill klasörü yapay-zeka-araclari.json'da yazılıdır. CLI her araçta aynı komuttur."
+          "nasil": "Skiller projeye KOPYA olarak değil, BAĞ ile verilir: python3 araclar/skill-ekle.py <proje> --program-skill hyperframes:<ad> (skill klasörü kartta skill_koku). CLI her araçta aynı komuttur."
         }
       },
       "kurulum": {
@@ -312,9 +315,11 @@
       "yerel_degisiklik": "2026-11-12 güncellemesinden sonra: 7 değişen izlenen dosya, 5 izlenmeyen yol (gfpgan/ artık reponun .gitignore'unda). Önceki commit c8066452'den fecb9a1e'ye geçildi (244 commit, yalnız ileri sarma). Güncellemede Explainer.tsx ve face_restore.py kullanıcı kararıyla yeni sürüm haliyle bırakıldı; eski yerel halleri yedekte durur (openmontage-2026-11-12/yerel-yamalar.patch). Venv'de yalnız certifi yükseltildi, pythainlp ve importlib_resources eklendi; sabit sürümler değişmedi. Liste `git status --porcelain` ile alınır.",
       "sabit_surum_notlari": ["manim 0.19.1 numpy>=2.0 ister, kart numpy 1.26.4 sabitler: çalışan venv'de ikisi birlikte durur ama sıfırdan kurulumda çözümleyici reddeder (2026-11-12 denemesi).", "Intel Mac'te sentencepiece 0.2.3 tekerleksizdir ve derlemede takılır; sıfırdan kurulumda sentencepiece==0.2.2 açıkça verilir.", "Reponun Makefile'ı pip>=26.2.2 ister; çalışan venv pip 23.0.1 ile bırakıldı, make setup çalıştırılmaz."],
       "skilleri": [],
+      "skill_koku": "~/.openmontage/.agents/skills",
       "guncelleme_adimlari": [
         "program-denetim.py yeni commit'i ('YENİ SÜRÜM VAR', N geride) ya da kartın eskidiğini ('KART ESKİ') gösterir",
         "python3 araclar/program-denetim.py --oncesi openmontage çalıştırılır; 'KIRICI ADAYI' ya da 'kayıtsız yerel değişiklik' çıkarsa durulur: önce rehber/11 → 'Kırıcı sürüm' deneme adımları ayrı klasörde uygulanır, kayıtsız değişiklik yerel_yamalar.bilinen'e kullanıcıyla birlikte yazılır",
+        "bağlar: program-denetim.py --oncesi çıktısındaki 'bağlar' satırlarını oku; 'bağ kırılacak' ya da kırık bağ uyarısı varsa kullanıcıya söyle (güncellemeden sonra aynı rapor kırık bağı HATA gösterir)",
         "kullanıcıya değişiklik özeti + onay istenir (her güncelleme ayrı onay)",
         "yedek: ~/Documents/Claude/yedek/openmontage-<YYYY-AA-GG>/ altına yerel-yamalar.patch (git diff --binary), izlenmeyen-yollar.txt (+ 'kopya' olan izlenmeyen yollar), pip-freeze.txt (`python3 araclar/program-denetim.py --pin-listesi openmontage` çıktısı), bag-listesi.txt (~/.claude/skills içindeki openmontage bağları, readlink) ve KAYIT.json (rehber/11 → 'Yedek kaydı'); ~/.config/openmontage anahtar klasörüne dokunulmaz; kütüphane klasörüne ve git'e asla",
         "ön kontrol (program-denetim.py --oncesi openmontage) tekrar çalıştırılır; 'HAZIR' demeden devam edilmez",

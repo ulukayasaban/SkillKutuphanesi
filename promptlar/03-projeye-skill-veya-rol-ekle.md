@@ -19,6 +19,7 @@ Projede araç düzeni kayıtlıysa (--durum satırı "düzen: ..."), ona uy; "ar
 4. Ön kontrol:
    python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py "$PWD" [--rol <rol> | --skill <skill...> --rol-adi <mevcut-rol>] --kuru
 5. Raporu göster (HATA, ÇAKIŞMA, ÜCRETLİ ayrı ayrı). Onayımı bekle; onaylarsam --evet, sonra --dogrula.
+   (OpenMontage/HyperFrames skili isteniyorsa kopya değil BAĞ: --program-skill PROGRAM:AD; yalnız genel klasörde kalmış skil için --dondur <yol>; rehber/01.)
 6. Bittiğinde "oturumu yeniden aç" diye hatırlat.
 
 Kurallar: global skill klasörlerine dokunma, skill kopyalama, --zorla kullanma (ben istemedikçe).

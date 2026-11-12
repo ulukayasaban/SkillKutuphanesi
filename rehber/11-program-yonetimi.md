@@ -15,6 +15,7 @@ kendi kurulumu olan yapılar. Program skill değildir; `skill-ekle.py` ile proje
   denetimi için). Tip repoya göre değişir: T5 ya da skill barındıran T1/T2.
 - `notlar/referans/kutuphaneler.md` — programın tek satırlık özeti (yalnız T5 kayıtta).
 - `notlar/program-denetimi.md` — `python3 araclar/program-denetim.py` çıktısı.
+- Kartta `skill_koku` — programın kendi skill klasörlerini taşıyan klasör (programla gelen skiller projeye bağ olarak verilir; aşağıda "Programla gelen skiller ve projelerdeki bağlar").
 
 ## Yeni program eklemek (kullanıcı "dahil et" deyince)
 Önce türü seç: program küçük ve repodan kurulabiliyorsa kaynak kopyalı; büyükse (venv, node_modules, kendi git klonu), kendini
@@ -70,8 +71,18 @@ bunu durduran anahtarlar (ortam değişkenleri) kartta listelenir. Ortam değiş
 - Yeni sürüm varsa, yerinde kart için: kopya yenilenmez. Güncelleme adımları bu belgede "Taze ajan: istek → adımlar" başlığındadır;
   güncellemeden sonra yeniden denetim yapılır, `kutuphane_surumu` ya da `kutuphane_commit` ile `KAYNAK.md` güncellenir, commit atılır.
 
+## Programla gelen skiller ve projelerdeki bağlar
+Kural (K-28): programın kendi skilleri (OpenMontage `.agents/skills/*`, HyperFrames `dist/skills/*`) projeye KOPYALANMAZ ve her zaman kurulu programın sürümüdür.
+- Kart alanı `skill_koku`: skill klasörlerinin üst klasörü (`~/` ya da mutlak; boş metin = programın skili yok). Gerçek klasör `<skill_koku>/<ad>/SKILL.md` kaynaktır; kartın serbest `skilleri` listesi esas alınmaz.
+- Proje bağı: `python3 araclar/skill-ekle.py <proje> --program-skill PROGRAM:AD --kuru`, onayla `--evet` (rehber/01). Kayıt projenin kilidinde (`dis_skiller`); kütüphane hangi projenin neye bağlı olduğunu `python3 araclar/proje-kullanimi.py --program <ad>` ile gösterir.
+- Güncellemeden önce: `program-denetim.py --oncesi <ad>` 'bağlar' satırları: `TAMAM bağlar` (bağlar çözülüyor), `UYARI bağ kırılacak: <proje>: <skill>` (git klonunda hedef commit yerel depodaysa o commit'te skill klasörü yok), `BİLGİ hedef commit yerel depoda yok` ya da `paket indirilmeden ... bilinemez`. Ağ ve `git fetch` yoktur; kırılacak bağ kullanıcıya söylenir.
+- Güncellemeden sonra: aynı komut ya da `program-denetim.py` kırık bağı gösterir. `GÜNCELLENECEK BİR ŞEY YOK` görünümünde ve normal raporda kırık bağ HATA'dır; program kurulu değilse ya da güncelleme bekleniyorsa UYARI'dır. 'bağlar' satırı hiçbir zaman `HAZIR DEĞİL` sebebi olmaz (program yeniden kurulacaksa bağlar zaten kırık görünür).
+- Kırık bağ: program kuruluysa projede `skill-ekle.py <proje> --yenile`; program o skili bıraktıysa `--kaldir <ad>`; hangisinin yapılacağı kullanıcıya sorulur.
+- Programı çıkarmadan önce tüm bağları `proje-kullanimi.py --program <ad>` ile listele: program kalkınca hepsi kırılır.
+- Bağın Codex/Antigravity/Cursor tarafından keşfedildiği gerçek araçla sınanmadı (Claude Code'da çalışır); program kurulu değilse bağ asılı kalır.
+
 ## Kurallar
-- Program kopyası proje deposuna konmaz; projeye yalnızca kullanım notu (hangi ekran/komut kullanılır, hangisi kullanılmaz) yazılır.
+- Program kopyası proje deposuna konmaz; projeye yalnızca kullanım notu (hangi ekran/komut kullanılır, hangisi kullanılmaz) yazılır. Programın skilleri de projeye kopyalanmaz, bağ verilir.
 - Yerinde programlarda yalnız kütüphane oturumu güncelleme yapar; `npx`, `pip install -U`, `git pull`, `make setup` gibi komutlar onaysız
   çalıştırılmaz. Bu, `CLAUDE.md` kural 1'in (genel klasörlere yazma yok) kartlı programlar için tek istisnasıdır: yalnız kullanıcının o
   güncelleme için verdiği ayrı onayla ve kartın adımlarıyla. Giriş yolları ve genel klasörleri boşaltma işlemleri `rehber/12`'dedir.
@@ -85,7 +96,7 @@ aylık birleştirmeyi durdurmaz. Yeni program için boş iskelet: `python3 aracl
 (`<DOLDUR>` yazan her yeri doldur, sonra `--sema` temiz olsun).
 
 **Çekirdek alanlar** (eksikse HATA): `giris_yolu`, `kurulum`, `geri_alma`, `cikarma`, `yedek` (yerinde kartta zorunlu, kaynak kartta isteğe bağlı), `ortam_anahtarlari` (boş liste olabilir).
-**İsteğe bağlı alanlar** (yokluğu bildirilmez; var ama geçersizse UYARI): `disariya_yazar`, `tedarik_dogrulama`, `kirici_surum`, `gizli_dosyalar`, `yerel_yamalar`.
+**İsteğe bağlı alanlar** (yokluğu bildirilmez; var ama geçersizse UYARI): `disariya_yazar`, `tedarik_dogrulama`, `kirici_surum`, `gizli_dosyalar`, `yerel_yamalar`, `skill_koku`.
 
 | Alan | Şekil | Ne için |
 |---|---|---|
@@ -100,6 +111,7 @@ aylık birleştirmeyi durdurmaz. Yeni program için boş iskelet: `python3 aracl
 | `yerel_yamalar` | `kural`, `bilinen` (yol/tur/amac/yedek/yeniden_uygula), `yedekleme`, `rehber` | Git klonundaki yerel değişikliklerin kaydı |
 | `kirici_surum` | `kural`, `surum_hatti` ya da `esik_commit`, `izle_dosyalar`, `deneme_klasoru`, `deneme_disk_gb` | Kırıcı sürüm adayını bulma kuralı |
 | `tedarik_dogrulama` | `yayinci`, `ozet` (tür/değer), `kural` | Üçüncü taraf ikili ya da paket için doğrulama kaydı |
+| `skill_koku` | metin: `~/` ya da mutlak yol; boş = programın skili yok | Programın skill klasörlerinin üst klasörü (projelere bağ kaynağı). Mutlak/`~/` değilse HATA; kurulu programda klasör yoksa UYARI |
 
 Kartlara gizli değer, parola, anahtar ve proje adı yazılmaz; `--sema` bunları da denetler. Uzun anlatım kartta değil bu belgededir.
 
@@ -177,7 +189,7 @@ saklanır; silmeden önce kullanıcıya sorulur.
 `python3 araclar/program-denetim.py --oncesi <ad> [--hedef <sürüm ya da sha>] [--cevrimdisi] [--tedarik]` salt okunur: hiçbir şey yazmaz, kurmaz, indirmez, `git fetch` yapmaz.
 Her satır `SEVİYE  kontrol  metin` biçimindedir (TAMAM, BİLGİ, UYARI, HATA, ATLANDI). Önce dört durum satırı sonucu belirler:
 `şema` (kart çekirdek alanları geçerli mi), `kurulu` (program bu bilgisayarda var mı), `kart` (kurulu sürüm karttakiyle aynı mı), `son` (daha yeni sürüm var mı).
-Sonra sekiz ana kontrol:
+Sonra sekiz ana kontrol (ve bağ varsa dokuzuncu, `bağlar`):
 1. `yedek`: bugünden en çok `tazelik_gun` gün eski yedek klasörü var mı, `KAYIT.json` geçerli ve kurulu sürümün yedeği mi, `zorunlu` dosyalar var mı, içinde yasak adlı (`.env`, `config.json`...) dosya yok mu.
 2. `sabit sürümler`: venv'deki paketler karttaki sabit sürümlerle aynı mı (fark varsa düzeltmeden devam edilmez).
 3. `ortam`: gerekli ortam anahtarı kaç yerde tanımlı (değer asla yazdırılmaz).
@@ -186,6 +198,7 @@ Sonra sekiz ana kontrol:
 6. `giriş yolu`: kartın giriş yolu dosyaları duruyor mu.
 7. `gizli`: anahtar/kimlik dosyası var mı (yalnız var/yok; açılmaz).
 8. `kırıcı`: kırıcı sürüm adayı mı, yeni commit'ler yamalı dosyaya dokunuyor mu, deneme için disk yeterli mi.
+9. `bağlar`: bu programın skillerine bağlı proje varsa (kilitlerde `dis_skiller`) hedefler şimdi var mı ve git klonunda hedef sürümde de olacak mı (`bağ kırılacak`). Kırık bağ yalnız güncelleme dışı görünümde HATA'dır, `HAZIR DEĞİL` sebebi olmaz. Hiç bağ yoksa satır görünmez.
 Sonuç sözcüğü: `HAZIR`, `HAZIR DEĞİL (n engel)`, `GÜNCELLENECEK BİR ŞEY YOK`, `KURULU DEĞİL`. UYARI engel değildir ama okunur. `--cevrimdisi` ağa hiç gitmez (ağ isteyen satırlar `atlandı: çevrimdışı`).
 Çıkış kodu: 0 araç çalıştı (ne bulursa bulsun); `--siki` ile `HAZIR DEĞİL` ise 1; program adı yoksa 2. `--ozet-json` aynı sonucu tek JSON nesnesi olarak verir ve dosya yazmaz.
 **"HAZIR" demeden güncelleme başlamaz.** `HAZIR` yine de kullanıcı onayı yerine geçmez.
@@ -243,7 +256,7 @@ Geri almadan sonra kart, `KAYNAK.md` ve (varsa) `tedarik_dogrulama.ozet` önceki
 ## Programı çıkarma
 İki ayrı iş vardır; her biri ayrı onay ister.
 **(A) Kütüphaneden çıkarma**
-1. Karttaki `skilleri` listesindeki her kimlik için `python3 araclar/proje-kullanimi.py --skill <kimlik>`: kullanan projeler. Kullanıcıya söylenir. (`--program` bayrağı proje-kullanimi.py'ye eklenirse tek komuta indirilir.)
+1. `python3 araclar/proje-kullanimi.py --program <ad>`: programın skillerine bağlı projeler (hedef var mı); karttaki `skilleri` kimlikleri için ayrıca `--skill <kimlik>`. Kullanıcıya söylenir; program kalkınca tüm bağlar kırılır.
 2. Kullanıcı onayı (neyin silineceği adı ve "geri dönüşü git geçmişindedir" notuyla).
 3. Kart `programlar.json`'dan çıkarılır.
 4. `programlar/<ad>/` silinir. `kaynak/` kopyası kalıcı bir silmedir (git geçmişi saklar); ne silineceği söylenir ve sorulur.
@@ -259,25 +272,25 @@ Kütüphane oturumunun önceki konuşma belleği yoktur: `CLAUDE.md`/`AGENTS.md`
 0. `cd ~/Documents/SkillKutuphanesi`; `CLAUDE.md`/`AGENTS.md` ve bu başlığı oku; `git status` (kirli ağaç varsa kullanıcıya söyle, kart değişikliğini başka işle karıştırma).
 1. `python3 araclar/program-denetim.py --sema --siki` → 0 hata, değilse dur.
 2. `python3 araclar/program-denetim.py` → hyperframes satırı. `KART ESKİ` ise dur, sebebi bul (program kendini güncellemiş olabilir), kullanıcıya söyle.
-3. `python3 araclar/program-denetim.py --oncesi hyperframes` → engelleri oku. `KIRICI ADAYI` varsa yukarıdaki "Kırıcı sürüm" deneme adımlarını ayrı klasörde uygula, sonucu raporla.
+3. `python3 araclar/program-denetim.py --oncesi hyperframes` → engelleri oku. `KIRICI ADAYI` varsa yukarıdaki "Kırıcı sürüm" deneme adımlarını ayrı klasörde uygula, sonucu raporla. `python3 araclar/proje-kullanimi.py --program hyperframes` ve 'bağlar' satırları kullanıcıya söylenir.
 4. Kullanıcıya sun: kurulu → hedef sürüm, release notu özeti, kırıcı adayı mı, yedek yeri. Sor: "HyperFrames'i <kurulu> sürümünden <hedef> sürümüne güncelleyeyim mi? Önce yedek alırım. Bu onay yalnız bu güncelleme için geçerli."
 5. Onaydan sonra yedeği al (yukarıdaki "Yedek kaydı" HyperFrames komutları).
 6. `--oncesi hyperframes` tekrar → `SONUÇ: HAZIR`.
 7. `HYPERFRAMES_SKIP_SKILLS=1 npm install -g hyperframes@<hedef>` (izin hatası olursa dur, kullanıcıya sor).
-8. `python3 araclar/program-denetim.py` → kurulu = hedef. Genel klasörlerde yeni girdi var mı bak (genel-bekci varsa çalıştır).
+8. `python3 araclar/program-denetim.py` → kurulu = hedef. Genel klasörlerde yeni girdi var mı bak (genel-bekci varsa çalıştır). `program-denetim.py --oncesi hyperframes --cevrimdisi` 'bağlar' satırlarında HATA olmamalı; olursa projeye göre `--yenile`/`--kaldir` için kullanıcıya sor.
 9. Kartı güncelle: `kutuphane_surumu`, `programlar/hyperframes/KAYNAK.md`, `tedarik_dogrulama.ozet` (`--oncesi hyperframes --tedarik` registry değerini karşılaştırır); `--sema --siki`, `kapsam-denetimi.py`, `dogrula.py`; commit.
 10. Özetle ve hatırlat: "Yedek `~/Documents/Claude/yedek/hyperframes-<tarih>/` klasöründe duruyor; güncellemeyi doğruladığında silmek istersen söyle."
 
 **"OpenMontage'i güncelle"** (git-checkout)
 0-2. Yukarıdaki gibi, `openmontage` için.
-3. `python3 araclar/program-denetim.py --oncesi openmontage`: engeller yedek, `kayıtsız yerel değişiklik` (kullanıcıyla `yerel_yamalar.bilinen`'e yaz), sabit sürüm farkı ya da `KIRICI ADAYI` olabilir (çok commit gerideyse deneme klasörü şart).
+3. `python3 araclar/program-denetim.py --oncesi openmontage` (+ `proje-kullanimi.py --program openmontage` ve 'bağlar'/'bağ kırılacak' satırları kullanıcıya söylenir): engeller yedek, `kayıtsız yerel değişiklik` (kullanıcıyla `yerel_yamalar.bilinen`'e yaz), sabit sürüm farkı ya da `KIRICI ADAYI` olabilir (çok commit gerideyse deneme klasörü şart).
 4. Kırıcı adayıysa "Kırıcı sürüm" deneme adımları; geçme ölçütü geçmeden devam yok.
 5. Kullanıcıya sun: kurulu → hedef commit (tam sha), kaç geride, `requirements.txt` farkı (GitHub compare çıktısı; `git fetch` için ayrı onay), yamalı dosyalarla çakışma listesi. Sor: "OpenMontage'i <kurulu 8 hane> -> <hedef 8 hane> güncelleyeyim mi? Önce yerel yamaları ve sabit paket listesini yedeklerim; paket sürümlerini yükseltmem. Bu onay yalnız bu güncelleme için geçerli."
 6. Yedek: "Yedek kaydı" OpenMontage komutları.
 7. `--oncesi openmontage` → HAZIR.
 8. `git -C ~/.openmontage fetch origin main` ve `git pull --ff-only` (onay 5. adımdaki cümleyle verildi; `origin` adresi değiştirilmez); çakışma olursa "Yerel yamalar" 2-3. adımlar.
 9. Bağımlılıklar: `requirements.txt` farkı varsa kullanıcıya göster; `make setup` olduğu gibi çalıştırılmaz; gereken adımlar tek tek, `HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_AUTO_INSTALL=1 HYPERFRAMES_NO_UPDATE_CHECK=1` tanımlıyken; `pip install -U` yok.
-10. `--oncesi`/denetim: sabit sürümler N/N, kurulu = hedef; yamalar yerinde ("kayıtlı ama değişmemiş" olmamalı); `~/.claude/skills` bağları kırık mı.
+10. `--oncesi`/denetim: sabit sürümler N/N, kurulu = hedef; yamalar yerinde ("kayıtlı ama değişmemiş" olmamalı); `~/.claude/skills` bağları kırık mı; `program-denetim.py --oncesi openmontage --cevrimdisi` 'bağlar' satırlarında HATA olmamalı (olursa projeye göre `--yenile`/`--kaldir` için kullanıcıya sor).
 11. preflight (openmontage skilindeki komut).
 12. Kart: `kutuphane_commit`, `KAYNAK.md`, `tedarik_dogrulama.ozet.deger`, `yerel_yamalar.bilinen` (kaybolan/yeni yama); `--sema --siki`, testler, commit.
 13. Yedek silme hatırlatması.

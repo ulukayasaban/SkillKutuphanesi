@@ -27,6 +27,7 @@ Teknoloji: [ör. Next.js + Tailwind + GSAP]
    - ÜCRETLİ skiller (ucretli uyarısı) ve ücretsiz alternatifleri
    - ek-aday listesi (kütüphanede ilgili olup seçilmeyen skiller)
    - arac-duzeni, arac-gormez, arac-secimi-yok satırları (hangi araç skilleri görür, hangisi görmez)
+   - OpenMontage/HyperFrames skilleri kopyalanmaz: --program-skill PROGRAM:AD ile BAĞ verilir; yalnız genel klasörde kalmış eski skil --dondur <yol> ile dondurulur (rehber/01)
 4. Ben onay verene kadar BEKLE. Onaylarsam aynı komutu --evet ile çalıştır, sonra --dogrula sonucunu göster.
 5. Bittiğinde bana "Claude/Codex/Antigravity/Cursor oturumunu yeniden aç" diye hatırlat.
 

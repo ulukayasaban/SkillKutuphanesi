@@ -8,6 +8,8 @@ Projede oluşanlar:
                                    --arac yalniz-claude (eski ad: claude): proje sadece Claude kullanır; skill burada gerçek kopya olur,
                                    .agents/skills, .codex/agents ve AGENTS.md bloğu kurulmaz (kilit.json -> "araclar")
                                    --arac ortak (eski ad: ikisi): Claude + Codex + Antigravity + Cursor + VS Code Copilot (varsayılan)
+  Programla gelen skiller    --program-skill: .claude/skills/<ad> (ortak düzende .agents/skills/<ad> de) programın kendi klasörüne SYMLINK; kilit: dis_skiller
+                             --dondur: projenin kendi gerçek kopyası (kütüphane güncellemez); kilit: dis_skiller (tur: donmus)
   .claude/agents/<rol>.md          Claude alt-agent'ı (frontmatter 'skills:' = sadece o rolün skilleri)
   .codex/agents/<rol>.toml         Codex alt-agent'ı (rol dışı proje skilleri [[skills.config]] ile kapalı)
   AGENTS.md / CLAUDE.md            işaretli blok (sadece o blok yeniden yazılır)
@@ -33,6 +35,8 @@ Güvenlik kuralları:
   python3 araclar/skill-ekle.py ~/Projeler/site --oner "3d ürün tanıtım sitesi scroll animasyonlu"
   python3 araclar/skill-ekle.py ~/Projeler/site --durum | --dogrula | --guncelle | --yenile | --geri-al
   python3 araclar/skill-ekle.py ~/Projeler/site --kaldir gsap-core     (ya da --kaldir hepsi)
+  python3 araclar/skill-ekle.py ~/Projeler/site --program-skill openmontage:ffmpeg hyperframes:hyperframes --kuru  # programla gelen skile BAĞ (kopya değil)
+  python3 araclar/skill-ekle.py ~/Projeler/site --dondur ~/.claude/skills/eski-skill --kuru              # genel klasördeki skili projenin kendi skili olarak dondur
   python3 araclar/skill-ekle.py ~/Projeler/site --arac yalniz-claude --kuru  # sadece Claude'a geç
   python3 araclar/skill-ekle.py ~/Projeler/site --arac ortak --kuru          # ortak düzene geç (Claude + Codex + ...)
   python3 araclar/skill-ekle.py --araclar [--ozet-json] [--siki]             # yapay zeka araçları belgesi/sürüm kontrolü (salt okunur)
@@ -43,6 +47,7 @@ import json
 import os
 import re
 import shutil
+import stat
 import subprocess
 import sys
 from datetime import date, datetime, timedelta
@@ -50,7 +55,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KOK, REGISTRY, hesap_skilleri, frontmatter_onar, global_durum, json_oku, json_yaz,  # noqa: E402
-                   klasor_hash, onarim_izi, repo_guncel, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula,
+                   klasor_hash, onemli_dosyalar, onarim_izi, repo_guncel, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula,
                    skill_adlari, skill_yol_taramasi, tum_skiller, yol_degerlendir, yol_izi, yol_dosya_sinifi_haritasi, ev_ici_kendi_cevir, _var_bak)
 
 ROLLER = KOK / "roller"
@@ -70,7 +75,25 @@ ROL_ADI = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 YEDEK_SAYISI = 10
 # --zorla ile bile GEÇİLEMEYEN hatalar (güvenlik / tutarlılık)
 ZORLANAMAZ = {"gecersiz-rol-adi", "global-baglanti", "proje-disi-baglanti", "ayni-klasor", "bulunamadi",
-              "isim-cakismasi", "onyukleme-siniri", "farkli-kaynak", "kendi-agent-dosyan"}
+              "isim-cakismasi", "onyukleme-siniri", "farkli-kaynak", "kendi-agent-dosyan",
+              # programla gelen skiller (bağ) ve dondurma (K-28)
+              "program-skill-bicim", "program-bilinmiyor", "program-skillsiz", "program-kurulu-degil", "program-skill-yok",
+              "program-skill-ad", "dis-ad-cakismasi", "bag-farkli", "bag-degismis", "dondur-yol", "dondur-kaynak-yok",
+              "dondur-program-skili", "dondur-kutuphane-adi", "dondur-gizli", "dondur-dis-baglanti", "dondur-kendisi",
+              "dondur-ad", "dondur-cok-buyuk", "dondur-ozel-dosya", "bag-gercek-klasor"}
+PROGRAMLAR = KOK / "programlar.json"   # testler yeniden atar
+DIS_TURLER = ("program-bag", "donmus")
+DIS_AD = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,63}")   # fullmatch ile kullanılır ($ satır sonunu kabul ederdi); video_toolkit gibi '_' içeren adlar
+DONDUR_GIZLI_TAM = {".env", ".envrc", ".npmrc", ".netrc", ".pypirc", "auth.json", "token.json", "credentials.json", "credentials",
+                    ".git-credentials", ".gitconfig", "apikey.txt", "api_key.txt", "api-key.txt", "apikey", "secret", "secrets"}
+DONDUR_GIZLI_ONEK = (".env.", "id_rsa", "id_ed25519", "secrets.", "secret.", "service-account", "service_account", "client_secret", "authkey_")
+DONDUR_GIZLI_SON = (".pem", ".key", ".p12", ".pfx", ".keystore", ".p8", ".jks", ".ppk", ".kdbx")
+DONDUR_GIZLI_DIZIN = {".aws", ".ssh", ".gnupg", ".git", ".kube", ".docker", ".gcloud"}
+DONDUR_TAVAN_KLASOR = 2000    # ZORLANAMAZ (dondur-cok-buyuk)
+DONDUR_ATLANAN_DIZIN = {"node_modules", "__pycache__", ".venv"}
+DONDUR_BUYUK_MB = 50          # UYARI
+DONDUR_TAVAN_MB = 200         # ZORLANAMAZ
+DONDUR_TAVAN_DOSYA = 5000     # ZORLANAMAZ
 SINIR_ROL_SKILL = 12          # bir role önerilen en fazla skill
 SINIR_ROL_KB = 150            # bir rolün önyüklenen SKILL.md toplamı (KB)
 SINIR_CLAUDE_ONYUKLEME = 32   # Claude alt-agent 'skills:' sınırı
@@ -217,6 +240,8 @@ def kilit_oku(proje):
 def kilit_yaz(proje, kilit):
     kilit["guncelleme"] = date.today().isoformat()
     kilit["proje_yolu"] = str(proje)
+    if isinstance(kilit.get("dis_skiller"), dict) and not kilit["dis_skiller"]:
+        del kilit["dis_skiller"]  # önceden olan anahtar boşaldı: kilit dış skili olmayan projelerle aynı biçime döner
     if "araclar" not in kilit:  # seçim hiç yapılmadıysa varsayılan kayda geçer ve "varsayılan" diye işaretlenir
         kilit["araclar"] = list(ARACLAR["ikisi"])
         kilit.setdefault("arac_secimi", "varsayilan")
@@ -705,6 +730,547 @@ def kur(s, proje: Path, ad: str, kardes=None, codex=True, skiller=None):
     return uyari
 
 
+# ================================================================== dış skiller: program bağı ve dondurma (K-28)
+# Kilitte ayrı üst anahtar: dis_skiller (eski kod yalnız kilit["skiller"]'e bakar). tur: "program-bag" (programın kendi klasörüne bağ)
+# ya da "donmus" (projenin kendi kopyası; kütüphane güncellemez). Program klasörüne ASLA yazılmaz; bağlar izlenmez (sil_yol unlink eder).
+def dis_ad_gecerli(ad):
+    """Dış skill klasör adı: tek yol bileşeni; ilk karakter harf/rakam; fullmatch (satır sonu kabul edilmez); '.kurulum-tmp' ile bitemez."""
+    return isinstance(ad, str) and bool(DIS_AD.fullmatch(ad)) and not ad.endswith(".kurulum-tmp")
+
+
+def dis_kayit_gecerli(anahtar, g):
+    return (dis_ad_gecerli(anahtar) and isinstance(g, dict) and g.get("ad") == anahtar and g.get("tur") in DIS_TURLER
+            and isinstance(g.get("hedef"), str) and os.path.isabs(g["hedef"])
+            and (g["tur"] != "program-bag" or isinstance(g.get("program"), str)))
+
+
+def dis_kayitlari(kilit):
+    """kilit['dis_skiller'] içindeki GEÇERLİ kayıtlar (anahtar, ad, tür, mutlak hedef doğrulanır; geçersizler yok sayılır). Yol bileşeni olarak
+    kilitten doğrulanmadan hiçbir ad kullanılmaz."""
+    ham = kilit.get("dis_skiller")
+    if not isinstance(ham, dict):
+        return {}
+    return {k: g for k, g in ham.items() if dis_kayit_gecerli(k, g)}
+
+
+def dis_gecersizleri(kilit):
+    """dogrula için: geçersiz dış skill kayıtlarının mesajları."""
+    ham = kilit.get("dis_skiller")
+    if ham is None:
+        return []
+    if not isinstance(ham, dict):
+        return ["dis_skiller kilitte sözlük değil; kayıtlar yok sayıldı"]
+    out = []
+    for k, g in ham.items():
+        if dis_kayit_gecerli(k, g):
+            continue
+        if dis_ad_gecerli(k) and isinstance(g, dict) and g.get("ad") == k and g.get("tur") not in DIS_TURLER:
+            out.append(f"{k}: bilinmeyen dış skill türü ({g.get('tur')})")
+        else:
+            out.append(f"{str(k)[:60]!r}: geçersiz dış skill kaydı (anahtar, ad, tür ya da hedef bozuk; kayıt yok sayıldı)")
+    return out
+
+
+def yol_goster(p):
+    """Mutlak yol; ev klasörü '~' ile kısaltılır (bloklar proje depolarına girer: kullanıcının ev adı yazılmaz)."""
+    s, ev = str(p), str(Path.home())
+    if s == ev:
+        return "~"
+    return "~" + s[len(ev):] if s.startswith(ev + os.sep) else s
+
+
+def program_kartlari():
+    try:
+        d = json_oku(PROGRAMLAR)
+    except (OSError, ValueError):
+        return {}
+    k = d.get("programlar") if isinstance(d, dict) else None
+    return {a: v for a, v in k.items() if isinstance(v, dict)} if isinstance(k, dict) else {}
+
+
+def program_karti(program):
+    return program_kartlari().get(program) if isinstance(program, str) else None
+
+
+def program_skill_koku(kart):
+    """Kartın skill_koku'nu mutlak Path olarak ('~' açılır); yok/boş/göreli ise None."""
+    v = (kart or {}).get("skill_koku")
+    if not isinstance(v, str) or not v.strip():
+        return None
+    p = Path(v.strip()).expanduser()
+    return p if p.is_absolute() else None
+
+
+def program_surumu(kart):
+    """Karttaki KAYITLI sürüm (program çalıştırılmaz): git-checkout -> kutuphane_commit ('commit'), diğerleri kutuphane_surumu ('surum')."""
+    kart = kart or {}
+    if (kart.get("yerinde") or {}).get("tur") == "git-checkout" and kart.get("kutuphane_commit"):
+        return kart["kutuphane_commit"], "commit"
+    if kart.get("kutuphane_surumu"):
+        return kart["kutuphane_surumu"], "surum"
+    return None, None
+
+
+def surum_metni(deger, tur):
+    if not deger:
+        return "sürüm kayıtsız"
+    return str(deger)[:8] if tur == "commit" else str(deger)
+
+
+def dis_bag_hedefi(g):
+    """Bağın BEKLENEN hedefi: kilitten değil karttan türetilir (program + ad -> skill_koku/ad; abspath, realpath değil). Kart yoksa None."""
+    koku = program_skill_koku(program_karti(g.get("program")))
+    return Path(os.path.abspath(koku / g["ad"])) if koku else None
+
+
+def gizli_ad_mi(ad):
+    a = ad.casefold()
+    return a in DONDUR_GIZLI_TAM or a.startswith(DONDUR_GIZLI_ONEK) or a.endswith(DONDUR_GIZLI_SON)
+
+
+def dondur_tara(kaynak):
+    """Dondurulacak kaynağı SALT OKUR (os.walk, lstat, readlink; dosya İÇERİĞİ açılmaz, hiçbir şey kopyalanmaz). Boyut kopyadan ÖNCE hesaplanır.
+    Döner: dosya, bayt, gizli, baglar, ozel, atlanan (göreli yollar), cok (tavan aşıldı; tarama erken bıraktı)."""
+    kok = os.path.realpath(kaynak)
+    r = {"dosya": 0, "bayt": 0, "gizli": [], "baglar": [], "ozel": [], "atlanan": [], "cok": False, "klasor": 0}
+    for yol, dizinler, dosyalar in os.walk(kok, followlinks=False):
+        g = os.path.relpath(yol, kok)
+        rel = (lambda n, g=g: n if g == "." else f"{g}/{n}")
+        r["klasor"] += 1
+        if r["klasor"] > DONDUR_TAVAN_KLASOR:
+            r["cok"] = True
+            return r
+        for d in list(dizinler):
+            if os.path.islink(os.path.join(yol, d)):
+                r["baglar"].append(rel(d) + " (klasör bağı)")
+                dizinler.remove(d)
+            elif d.casefold() in DONDUR_GIZLI_DIZIN:
+                r["gizli"].append(rel(d) + "/")
+                dizinler.remove(d)
+            elif d in DONDUR_ATLANAN_DIZIN:
+                r["atlanan"].append(rel(d) + "/")
+                dizinler.remove(d)
+        for f in dosyalar:
+            if f == ".DS_Store":
+                continue
+            p = os.path.join(yol, f)
+            if gizli_ad_mi(f):
+                r["gizli"].append(rel(f))
+            st = os.lstat(p)
+            if stat.S_ISLNK(st.st_mode):
+                hedef = os.path.realpath(p)
+                parcalar = set(Path(os.path.relpath(hedef, kok)).parts) if (hedef == kok or hedef.startswith(kok + os.sep)) else None
+                if parcalar is None or not os.path.isfile(hedef) or parcalar & (DONDUR_GIZLI_DIZIN | DONDUR_ATLANAN_DIZIN):
+                    r["baglar"].append(rel(f))
+                    continue
+                st = os.stat(hedef)
+            elif not stat.S_ISREG(st.st_mode):
+                r["ozel"].append(rel(f))
+                continue
+            r["dosya"] += 1
+            r["bayt"] += st.st_size
+            if r["dosya"] > DONDUR_TAVAN_DOSYA or r["bayt"] > DONDUR_TAVAN_MB * 1024 * 1024:
+                r["cok"] = True
+                return r
+    return r
+
+
+def dis_istek_coz(a):
+    """--program-skill ve --dondur isteklerini ayrıştırır (yalnız biçim). Döner: (liste, hatalar[(kod, mesaj)]). Doğrulama dis_on_kontrol'de."""
+    liste, hatalar, gorulen = [], [], {}
+    for x in (getattr(a, "program_skill", None) or []):
+        program, ayir, ad = x.partition(":")
+        if not ayir or not program.strip() or not ad.strip():  # ad kırpılmaz: 'ffmpeg\n' gibi adlar program-skill-ad ile reddedilir
+            hatalar.append(("program-skill-bicim", f"`{x}`: PROGRAM:AD biçiminde yaz, örn. openmontage:ffmpeg"))
+            continue
+        liste.append({"tur": "program-bag", "ad": ad, "program": program.strip(), "ham": x})
+    for x in (getattr(a, "dondur", None) or []):
+        yol = Path(x).expanduser()
+        if not yol.is_absolute():
+            hatalar.append(("dondur-yol", f"`{x}`: mutlak yol ver (~ kullanılabilir)"))
+            continue
+        liste.append({"tur": "donmus", "ad": yol.name, "kaynak": Path(os.path.abspath(yol)), "ham": x})
+    kalan = []
+    for it in liste:
+        k = it["ad"].casefold()
+        if k in gorulen:
+            hatalar.append(("dis-ad-cakismasi", f"{it['ad']}: bu çalışmada iki kez isteniyor ({gorulen[k]} ve {it['ham']}); iki tür aynı adı taşıyamaz"))
+            continue
+        gorulen[k] = it["ham"]
+        kalan.append(it)
+    return kalan, hatalar
+
+
+def _program_skilleri_adlari(koku):
+    try:
+        return sorted(e.name for e in os.scandir(koku) if e.is_dir() and os.path.isfile(os.path.join(e.path, "SKILL.md")))
+    except OSError:
+        return []
+
+
+def bag_git_izlenenler(proje, adlar, codex):
+    """Proje bir git deposuysa: bağ yolları .gitignore'da değil mi? (git check-ignore, salt okur; çıkış 1 = ignore edilmiyor)"""
+    if not (proje / ".git").exists():
+        return []
+    out = []
+    for ad in adlar:
+        for rel in ([f".agents/skills/{ad}"] if codex else []) + [f".claude/skills/{ad}"]:
+            try:
+                r = subprocess.run(["git", "-C", str(proje), "-c", "core.fsmonitor=false", "--no-optional-locks", "check-ignore", "-q", "--", rel], capture_output=True, timeout=20,
+                                   stdin=subprocess.DEVNULL)
+            except (OSError, subprocess.SubprocessError):
+                continue
+            if r.returncode == 1:
+                out.append(rel)
+    return out
+
+
+def dis_sorunlar(proje, kilit, ad, g):
+    """Bir dış skill'in sağlık satırları: [(kod, mesaj)]. Bağın hedefi kilitten değil karttan türetilir. Hiçbir şey yazmaz."""
+    out = []
+    codex = codex_var(kilit)
+    h, c = proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad
+    rel_h = os.path.relpath(h, c.parent)
+    if g["tur"] == "program-bag":
+        hedef = dis_bag_hedefi(g)
+        if hedef is None:
+            return [("kart-yok", f"{ad}: program kartı ya da skill_koku yok ({g.get('program')}); bağ doğrulanamaz (kart geri gelene kadar --kaldir {ad})")]
+        if not (hedef / "SKILL.md").is_file():
+            koku = hedef.parent
+            neden = (f"program klasörü yok: {yol_goster(koku)}; program kurulu değil ya da taşınmış" if not koku.is_dir()
+                     else f"skill klasörü yok ya da içinde SKILL.md yok: {yol_goster(hedef)}")
+            out.append(("kirik", f"{ad}: program bağı kırık ({g.get('program')}: {neden}); program kuruluysa --yenile, "
+                        f"program bu skili kaldırdıysa --kaldir {ad}"))
+        elif str(hedef) != g["hedef"]:
+            out.append(("hedef-farkli", f"{ad}: kilitteki hedef karttaki program yolundan farklı ({yol_goster(g['hedef'])} -> "
+                        f"{yol_goster(hedef)}); --yenile yeni hedefe bağlar"))
+        slotlar = [(c, str(hedef))] if not codex else [(h, str(hedef)), (c, rel_h)]
+        for slot, beklenen in slotlar:
+            rel = slot.relative_to(proje)
+            if slot.is_symlink():
+                if os.readlink(slot) != beklenen:
+                    out.append(("eksik", f"{ad}: bağ eksik ya da başka yere gidiyor ({rel}); --yenile onarır"))
+            elif slot.exists():
+                out.append(("gercek-klasor", f"{ad}: bağ yerine gerçek klasör var ({rel}); elle değiştirilmiş, --kaldir {ad} ile temizle"))
+            else:
+                out.append(("eksik", f"{ad}: bağ eksik ya da başka yere gidiyor ({rel}); --yenile onarır"))
+        if not codex and (h.exists() or h.is_symlink()):
+            out.append(("eksik", f"{ad}: proje sadece Claude kullanıyor ama .agents/skills/{ad} duruyor; --yenile onarır"))
+        return out
+    # donmuş
+    yerlesim = ("yerlesim", f"{ad}: donmuş skill yerleşimi araç düzenine uymuyor; --yenile onarır")
+    gercek_mi = lambda p: p.is_dir() and not p.is_symlink() and (p / "SKILL.md").is_file()  # noqa: E731
+    beklenen, diger = (h, c) if codex else (c, h)
+    if not gercek_mi(beklenen):
+        if gercek_mi(diger):
+            return [yerlesim]
+        return [("donmus-yok", f"{ad}: donmuş skill klasörü yok ya da içinde SKILL.md yok; --geri-al <yedek> ile geri getir ya da --kaldir {ad}")]
+    if codex:
+        if not (c.is_symlink() and os.readlink(c) == rel_h):
+            out.append(yerlesim)
+    elif h.exists() or h.is_symlink():
+        out.append(yerlesim)
+    return out
+
+
+def proje_ici(proje, p):
+    """p'nin (kendisi izlenmeden) proje içinde olduğunu doğrular: üst klasörü proje içinde çözülmeli."""
+    kok = os.path.realpath(proje)
+    ust = os.path.realpath(p.parent)
+    return ust == kok or ust.startswith(kok + os.sep)
+
+
+def dis_sil(proje, ad):
+    """İki slotu siler. Bağ ise yalnız bağ silinir (unlink; hedefe girilmez). Proje dışına asla dokunmaz."""
+    if not dis_ad_gecerli(ad):
+        raise RuntimeError(f"geçersiz dış skill adı: {ad!r}")
+    for p in (proje / ".claude" / "skills" / ad, proje / ".agents" / "skills" / ad):
+        if not proje_ici(proje, p):
+            raise RuntimeError(f"{p}: proje dışına gidiyor; silinmedi")
+        sil_yol(p)
+
+
+def dis_kur_bag(proje, kilit, ad, hedef):
+    """Bağı kurar (program klasörüne hiçbir şey yazılmaz). ortak: .agents/skills/<ad> -> mutlak hedef, .claude/skills/<ad> -> göreli bağ;
+    yalniz-claude: .claude/skills/<ad> -> mutlak hedef."""
+    h, c = proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad
+    for p in (h, c):
+        if not proje_ici(proje, p):
+            raise RuntimeError(f"{p}: proje dışına gidiyor")
+    c.parent.mkdir(parents=True, exist_ok=True)
+    if codex_var(kilit):
+        h.parent.mkdir(parents=True, exist_ok=True)
+        sil_yol(h)
+        os.symlink(str(hedef), h)
+        sil_yol(c)
+        os.symlink(os.path.relpath(h, c.parent), c)
+    else:
+        sil_yol(h)
+        sil_yol(c)
+        os.symlink(str(hedef), c)
+    if not (c / "SKILL.md").exists():
+        raise RuntimeError(f"{ad}: bağ kuruldu ama {yol_goster(hedef)}/SKILL.md görünmüyor")
+
+
+def dis_kur_donmus(proje, kilit, ad, kaynak):
+    """Kaynağı (bağlar çözülerek) projeye GERÇEK klasör olarak bir kez kopyalar; içerik hiç değiştirilmez. Döner: kilit girişi."""
+    codex = codex_var(kilit)
+    h, c = proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad
+    final = h if codex else c
+    gercek = Path(os.path.realpath(kaynak))
+    gecici = final.parent / f".{ad}.kurulum-tmp"
+    for p in (h, c, gecici):
+        if not proje_ici(proje, p):
+            raise RuntimeError(f"{p}: proje dışına gidiyor")
+    final.parent.mkdir(parents=True, exist_ok=True)
+    sil_yol(gecici)
+    try:
+        shutil.copytree(gercek, gecici, symlinks=False,
+                        ignore=shutil.ignore_patterns(".DS_Store", *sorted(DONDUR_ATLANAN_DIZIN)))
+        if any(x.is_symlink() for x in gecici.rglob("*")):
+            raise RuntimeError(f"{ad}: kopyada bağlantı kaldı; dondurma iptal")
+        sil_yol(final)
+        gecici.rename(final)
+    finally:
+        sil_yol(gecici)
+    if codex:
+        c.parent.mkdir(parents=True, exist_ok=True)
+        sil_yol(c)
+        os.symlink(os.path.relpath(final, c.parent), c)
+    else:
+        sil_yol(h)
+    return {"ad": ad, "tur": "donmus", "hedef": str(kaynak), "tarih": date.today().isoformat(),
+            "icerik_hash": klasor_hash(final), "dosya_sayisi": len(onemli_dosyalar(final))}
+
+
+def dis_yerlestir(proje, kilit):
+    """Her dış skill'in slotlarını güncel araç düzenine uydurur (--yenile ve düzen değişimi). Döner: mesajlar.
+    Bağ: yalnız kendi bağlarını yeniden kurar (gerçek klasöre dokunmaz; hedef yoksa kurmaz). Donmuş: gerçek klasör TAŞINIR (içerik okunmaz/kopyalanmaz)."""
+    mesaj = []
+    codex = codex_var(kilit)
+    for ad, g in sorted(dis_kayitlari(kilit).items()):
+        h, c = proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad
+        if g["tur"] == "program-bag":
+            hedef = dis_bag_hedefi(g)
+            if hedef is None:
+                mesaj.append(f"{ad}: program kartı ya da skill_koku yok ({g.get('program')}); bağ yeniden kurulmadı")
+                continue
+            if not (hedef / "SKILL.md").is_file():
+                mesaj.append(f"{ad}: hedef yok ({yol_goster(hedef)}); bağ yeniden kurulmadı (program kurulu mu?)")
+                continue
+            gercek = [p for p in (h, c) if p.exists() and not p.is_symlink() and (codex or p == c)]
+            if gercek:
+                mesaj.append(f"{ad}: {gercek[0].relative_to(proje)} gerçek klasör; dokunulmadı")
+                continue
+            if not codex and h.exists() and not h.is_symlink():
+                mesaj.append(f"{ad}: .agents/skills/{ad} gerçek klasör; dokunulmadı")
+                continue
+            if str(hedef) != g["hedef"]:
+                mesaj.append(f"{ad}: bağ karttaki yeni program yoluna alındı ({yol_goster(g['hedef'])} -> {yol_goster(hedef)})")
+                g["hedef"] = str(hedef)
+            dis_kur_bag(proje, kilit, ad, hedef)
+            continue
+        rel_h = os.path.relpath(h, c.parent)
+        h_gercek = h.is_dir() and not h.is_symlink()
+        c_gercek = c.is_dir() and not c.is_symlink()
+        if codex:
+            if not h_gercek and c_gercek:
+                h.parent.mkdir(parents=True, exist_ok=True)
+                sil_yol(h) if h.is_symlink() else None
+                os.replace(c, h)
+                h_gercek = True
+            elif h_gercek and c_gercek:
+                mesaj.append(f"{ad}: .agents/skills ve .claude/skills altında iki gerçek klasör var; dokunulmadı")
+                continue
+            if h_gercek:
+                if not (c.is_symlink() and os.readlink(c) == rel_h):
+                    sil_yol(c)
+                    c.parent.mkdir(parents=True, exist_ok=True)
+                    os.symlink(rel_h, c)
+            else:
+                mesaj.append(f"{ad}: donmuş klasör yok; --geri-al <yedek> ile geri getir ya da --kaldir {ad}")
+        else:
+            if not c_gercek and h_gercek:
+                sil_yol(c)
+                c.parent.mkdir(parents=True, exist_ok=True)
+                os.replace(h, c)
+                c_gercek = True
+            elif h_gercek and c_gercek:
+                mesaj.append(f"{ad}: .agents/skills ve .claude/skills altında iki gerçek klasör var; dokunulmadı")
+                continue
+            if c_gercek:
+                if h.is_symlink():
+                    sil_yol(h)
+            else:
+                mesaj.append(f"{ad}: donmuş klasör yok; --geri-al <yedek> ile geri getir ya da --kaldir {ad}")
+    return mesaj
+
+
+def dis_on_kontrol(proje, kilit, liste, lib_adlar, rapor: Rapor):
+    """--program-skill / --dondur ön kontrolü (A3). Döner: kurulabilecek (HATA'sız) istekler; her isteğe kaynak, kart, tarama gibi alanlar eklenir."""
+    codex = codex_var(kilit)
+    kurulu_lib = {x.casefold() for x in kilit["skiller"]}
+    lib_cf = {x.casefold() for x in lib_adlar}
+    dis = dis_kayitlari(kilit)
+    dis_cf = {k.casefold(): k for k in dis}
+    kartlar = program_kartlari()
+    gecerli = []
+    for it in liste:
+        ad, tur = it["ad"], it["tur"]
+        ok = True
+        if tur == "program-bag":
+            if not dis_ad_gecerli(ad):
+                rapor.ekle("HATA", "program-skill-ad", f"{ad!r}: geçersiz skill adı (ilk karakter harf ya da rakam olmalı; harf, rakam, . _ - "
+                           "içerebilir; / olamaz; en çok 64 karakter; '.kurulum-tmp' ile bitemez)")
+                continue
+            kart = kartlar.get(it["program"])
+            if kart is None:
+                rapor.ekle("HATA", "program-bilinmiyor", f"{it['program']}: programlar.json'da böyle bir program yok (kartlar: {', '.join(sorted(kartlar)) or '-'})")
+                continue
+            koku = program_skill_koku(kart)
+            if koku is None:
+                ham = kart.get("skill_koku")
+                rapor.ekle("HATA", "program-skillsiz", f"{it['program']}: " + ("skill_koku mutlak yol olmalı (~/ ya da /)" if isinstance(ham, str) and ham.strip()
+                                                                               else "bu programın skili yok (kartta skill_koku boş ya da yok)"))
+                continue
+            if not koku.is_dir():
+                rapor.ekle("HATA", "program-kurulu-degil", f"{it['program']}: skill klasörü bu bilgisayarda yok ({yol_goster(koku)}); program kurulu değil ya da taşınmış")
+                continue
+            hedef = Path(os.path.abspath(koku / ad))
+            if not (hedef / "SKILL.md").is_file():
+                adlar = _program_skilleri_adlari(koku)
+                rapor.ekle("HATA", "program-skill-yok", f"{it['program']}:{ad}: {yol_goster(hedef)} klasörü ya da içinde SKILL.md yok. Programdaki skiller: "
+                           + (", ".join(adlar[:8]) + (f" …+{len(adlar) - 8}" if len(adlar) > 8 else "") if adlar else "-"))
+                continue
+            it.update(hedef=hedef, kart=kart)
+            it["surum"], it["surum_turu"] = program_surumu(kart)
+        else:
+            if not dis_ad_gecerli(ad):
+                rapor.ekle("HATA", "dondur-ad", f"{ad!r}: geçersiz klasör adı (ilk karakter harf ya da rakam olmalı; harf, rakam, . _ - içerebilir; "
+                           "en çok 64 karakter; '.kurulum-tmp' ile bitemez)")
+                continue
+            gercek = Path(os.path.realpath(it["kaynak"]))
+            it["gercek"] = gercek
+            if not gercek.is_dir() or not (gercek / "SKILL.md").is_file():
+                rapor.ekle("HATA", "dondur-kaynak-yok", f"{yol_goster(it['kaynak'])}: klasör ya da içinde SKILL.md yok")
+                continue
+            for pa, kart in sorted(kartlar.items()):
+                koku = program_skill_koku(kart)
+                if koku:
+                    kr = Path(os.path.realpath(koku))
+                    if gercek == kr or kr in gercek.parents:
+                        rapor.ekle("HATA", "dondur-program-skili", f"{ad}: bu skill {pa} programıyla geliyor ({yol_goster(gercek)}); dondurma, "
+                                   f"--program-skill {pa}:{gercek.name} kullan (kopya olmasın, program güncellenince kendiliğinden güncel kalsın)")
+                        ok = False
+                        break
+            if not ok:
+                continue
+            if gercek in Path(os.path.realpath(proje)).parents:
+                rapor.ekle("HATA", "dondur-kendisi", f"{ad}: kaynak projeyi kendi içinde barındırıyor; dondurulmaz (kopya kendi içine inerdi)")
+                continue
+            for rel in (".agents/skills", ".claude/skills", META):
+                kr = Path(os.path.realpath(proje / rel))
+                if gercek == kr or kr in gercek.parents:
+                    rapor.ekle("HATA", "dondur-kendisi", f"{ad}: kaynak projenin kendi {rel} klasörünün içinde; dondurulmaz")
+                    ok = False
+                    break
+            if not ok:
+                continue
+            t = dondur_tara(gercek)
+            it["tarama"] = t
+            if t["cok"]:
+                rapor.ekle("HATA", "dondur-cok-buyuk", f"{ad}: {DONDUR_TAVAN_MB} MB ya da {DONDUR_TAVAN_DOSYA} dosya tavanı aşıldı; dondurulmaz "
+                           "(proje deposuna konacak bir skill bu kadar büyük olmamalı)")
+                continue
+            if t["gizli"]:
+                rapor.ekle("HATA", "dondur-gizli", f"{ad}: gizli değer taşıyabilecek dosya/klasör adı var: {', '.join(sorted(t['gizli'])[:5])}; dondurulmaz (dosya açılmadı)")
+                ok = False
+            if t["baglar"]:
+                rapor.ekle("HATA", "dondur-dis-baglanti", f"{ad}: kaynağın içinde klasör bağı, klasör dışına giden ya da bozuk bağlantı var: "
+                           f"{', '.join(sorted(t['baglar'])[:5])}; dondurulmaz")
+                ok = False
+            if t["ozel"]:
+                rapor.ekle("HATA", "dondur-ozel-dosya", f"{ad}: normal dosya olmayan öğe var (FIFO/soket/aygıt): {', '.join(sorted(t['ozel'])[:5])}; dondurulmaz")
+                ok = False
+            if not ok:
+                continue
+        # ad çakışmaları (iki tür aynı adı taşıyamaz; büyük/küçük harf duyarsız: macOS dosya sistemi)
+        cf = ad.casefold()
+        cak = None
+        if cf in lib_cf or cf in kurulu_lib:
+            cak = "kütüphaneden kurulacak" if cf in lib_cf else "kütüphaneden kurulu"
+            if tur == "donmus":
+                rapor.ekle("HATA", "dondur-kutuphane-adi", f"{ad}: projede bu adla {cak} bir skill var; iki tür aynı adı taşıyamaz")
+                continue
+        elif cf in dis_cf:
+            anahtar, g = dis_cf[cf], dis[dis_cf[cf]]
+            if anahtar != ad:
+                cak = f"{anahtar} adıyla kayıtlı; harf boyutu farkı"
+            elif g["tur"] != tur:
+                cak = "program bağı olarak kayıtlı" if g["tur"] == "program-bag" else "donmuş skill olarak kayıtlı"
+            elif tur == "program-bag":
+                if g["hedef"] != str(it["hedef"]):
+                    rapor.ekle("HATA", "bag-farkli", f"{ad}: zaten {yol_goster(g['hedef'])} yoluna bağlı; önce --kaldir {ad}")
+                    continue
+                it["mevcut"] = True
+                sor = dis_sorunlar(proje, kilit, ad, g)
+                it["var"] = not sor
+                if any(k == "gercek-klasor" for k, _ in sor):
+                    rapor.ekle("HATA", "bag-gercek-klasor", f"{ad}: bağ yerine elle konmuş gerçek klasör var; üzerine bağ kurulmaz (silinirdi). "
+                               f"Klasörü sen taşı ya da --kaldir {ad} ile temizle")
+                    continue
+            else:
+                it["mevcut"] = it["var"] = True
+                rapor.ekle("BİLGİ", "dondurma-var", f"{ad}: zaten donmuş; yeniden kopyalanmaz (yeniden dondurmak için önce --kaldir {ad})")
+        if cak:
+            rapor.ekle("HATA", "dis-ad-cakismasi", f"{ad}: projede başka bir skill bu adı kullanıyor ({cak}); iki tür aynı adı taşıyamaz")
+            continue
+        if cf not in dis_cf and cf not in kurulu_lib:
+            for yer in (proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad):
+                if yer.exists() or yer.is_symlink():
+                    rapor.ekle("HATA", "projede-kendi-skillin", f"{yer.relative_to(proje)} zaten var ve kütüphaneden gelmemiş; üzerine yazılmaz "
+                               "(--zorla ile yedeklenip değiştirilir)")
+        if tur == "donmus" and not it.get("mevcut"):
+            t = it["tarama"]
+            kb = max(1, round(t["bayt"] / 1024)) if t["bayt"] else 0
+            rapor.ekle("BİLGİ", "dondurma-guncellenmez", f"{ad}: donmuş kopya projenin kendi skilidir; kütüphane onu güncellemez, düzeltmez, kaynağı değişse de izlemez.")
+            rapor.ekle("BİLGİ", "dondurma-kopya", f"{ad}: {yol_goster(it['kaynak'])} içeriği gerçek klasör olarak kopyalanacak ({t['dosya']} dosya, {kb} KB); "
+                       "dosya bağlantıları gerçek dosyaya çevrilir; içerik taranmadı (yalnız dosya adları): proje deposuna koymadan önce dosyaları gözden geçir.")
+            if t["atlanan"]:
+                rapor.ekle("BİLGİ", "dondurma-atlanan", f"{ad}: kopyalanmayacak klasörler: {', '.join(sorted(t['atlanan'])[:5])}")
+            if t["bayt"] > DONDUR_BUYUK_MB * 1024 * 1024:
+                rapor.ekle("UYARI", "dondur-buyuk", f"{ad}: {t['bayt'] // (1024 * 1024)} MB; proje deposunu şişirir, gerçekten gerekli mi?")
+            try:
+                fad = frontmatter_adi(it["gercek"] / "SKILL.md")
+            except (UnicodeDecodeError, OSError):
+                fad = None
+            if fad and fad != ad:
+                rapor.ekle("UYARI", "dondur-ad-farkli", f"{ad}: SKILL.md içindeki ad ({fad}) klasör adından farklı; kopya olduğu gibi alınır, değiştirilmez")
+            it["kb"] = kb
+        gecerli.append(it)
+    baglar = [it for it in gecerli if it["tur"] == "program-bag"]
+    if baglar:
+        rapor.ekle("BİLGİ", "bag-makineye-ozel", "Bağlar bu bilgisayardaki program klasörünü gösterir (mutlak yol). Başka bilgisayarda ve Windows'ta çalışmaz. "
+                   "Bağları ve .claude/skills ile .agents/skills altındaki bağlı klasörleri paylaşılan bir git deposuna koyma (git'e girmesin: .gitignore'a ekle) "
+                   "ya da yalnız bu Mac'te kullan.")
+        yeni = [it for it in baglar if not it.get("var")]
+        for program in sorted({it["program"] for it in yeni}):
+            ads = sorted(it["ad"] for it in yeni if it["program"] == program)
+            ornek = next(it for it in yeni if it["program"] == program)
+            rapor.ekle("BİLGİ", "bag-programla-guncel",
+                       f"{program}: {len(ads)} bağ ({', '.join(ads[:6])}{f' …+{len(ads) - 6}' if len(ads) > 6 else ''}); program güncellenince kendiliğinden "
+                       f"güncel kalır, kütüphane kopyalamaz; bağlandığı sürüm {surum_metni(ornek['surum'], ornek['surum_turu'])} (karttaki kayıt; program "
+                       f"çalıştırılmadı); program bir skili kaldırırsa bağ kırılır (program-denetim.py --oncesi {program} önceden söyler).")
+        var = sorted(it["ad"] for it in baglar if it.get("var"))
+        if var:
+            rapor.ekle("BİLGİ", "bag-var", f"{', '.join(var)}: zaten bağlı; değişiklik yok")
+        izlenen = bag_git_izlenenler(proje, [it["ad"] for it in yeni], codex)
+        if izlenen:
+            rapor.ekle("UYARI", "bag-git-izlenir", f"git'e girecek (mutlak yollu bağ başka bilgisayarda/Windows'ta bozulur): {', '.join(izlenen[:6])}; "
+                       ".gitignore'a ekle ya da yalnız bu Mac'te kullan")
+    return gecerli
+
+
 # ================================================================== agent dosyaları
 def toml_str(x):
     return json.dumps(x, ensure_ascii=False)  # JSON dizgesi geçerli bir TOML temel dizgesidir
@@ -781,12 +1347,40 @@ def blok_sil(d: Path):
         d.unlink() if not t else d.write_text(t + "\n", encoding="utf-8")
 
 
+def dis_blok_satirlari(kilit):
+    """Talimat bloğuna eklenen dış skill satırları (bağlı / donmuş); dış skill yoksa []. Yollar '~' ile kısaltılır."""
+    dis = dis_kayitlari(kilit)
+    baglar = [(a, g) for a, g in sorted(dis.items()) if g["tur"] == "program-bag"]
+    donmus = [(a, g) for a, g in sorted(dis.items()) if g["tur"] == "donmus"]
+    out = []
+    if baglar:
+        out.append("Programla gelen skiller (bağ; kopya değil, programın kendi klasörü; program güncellenince kendiliğinden güncel kalır): "
+                   + ", ".join(f"`{a}` ({g['program']}, {yol_goster(g['hedef'])})" for a, g in baglar))
+    if donmus:
+        out.append("Donmuş skiller (projenin kendi kopyası, kütüphane güncellemez): "
+                   + ", ".join(f"`{a}` (kaynak: {yol_goster(g['hedef'])}, {g.get('tarih', '?')})" for a, g in donmus))
+    if baglar:
+        out.append("Bağlı skillerin dosyalarını düzenleme (programın dosyaları); donmuş skiller projenindir.")
+    return out
+
+
 def talimat_bloklari(proje: Path, kilit: dict):
-    if not kilit["skiller"]:
+    dis_satir = dis_blok_satirlari(kilit)
+    if not kilit["skiller"] and not dis_satir:
         for f in ("AGENTS.md", "CLAUDE.md"):
             blok_sil(proje / f)
         return
     codex = codex_var(kilit)
+    if not kilit["skiller"]:
+        # yalnız dış skiller: profil satırı, tablo ve sayı cümlesi yok
+        s = ["## Proje skilleri (SkillKutuphanesi)", ""] + [x for t in dis_satir for x in (t, "")]
+        s += [("Skiller `.agents/skills/` (Codex) ve `.claude/skills/` (Claude) altında." if codex else
+               "Skiller `.claude/skills/` altında (proje sadece Claude kullanır).")
+              + " Ekleme/güncelleme/kaldırma yalnızca kütüphaneyle, kütüphanenin olduğu bilgisayarda: "
+              "`python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py <proje> --guncelle`"]
+        blok_yaz(proje / "CLAUDE.md", "\n".join(s))
+        blok_yaz(proje / "AGENTS.md", "\n".join(s)) if codex else blok_sil(proje / "AGENTS.md")
+        return
     if kilit.get("blok") == "kisa":
         # Kısa blok (token tasarrufu): tablo yok; liste kilit.json'da. --blok kisa ile seçilir, kilitte kalır.
         n = len(kilit["skiller"])
@@ -799,6 +1393,7 @@ def talimat_bloklari(proje: Path, kilit: dict):
              "`python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py <proje> --durum` / `--guncelle`. "
              "Kütüphanesiz bilgisayarda (ör. Windows) skill ekleme/silme yapma; ihtiyacı not düş, kütüphane sahibi kurar. "
              "Kütüphane dışı, elle kurulan skiller (varsa): `.skill-kutuphanesi/elle-kurulan.json`."]
+        s += [x for t in dis_satir for x in ("", t)]
         blok_yaz(proje / "CLAUDE.md", "\n".join(s))
         blok_yaz(proje / "AGENTS.md", "\n".join(s)) if codex else blok_sil(proje / "AGENTS.md")
         return
@@ -812,6 +1407,7 @@ def talimat_bloklari(proje: Path, kilit: dict):
            "Skiller `.claude/skills/` altında (proje sadece Claude kullanır).")
           + " Bu skilleri elle düzenleme; "
           "değişiklik/güncelleme: `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py <proje> --guncelle`"]
+    s += [x for t in dis_satir for x in ("", t)]
     blok_yaz(proje / "CLAUDE.md", "\n".join(s))
     if codex:
         blok_yaz(proje / "AGENTS.md", "\n".join(s))
@@ -825,7 +1421,7 @@ AYAR = Path(".claude") / "settings.json"
 def hesap_gizleme_hedefi(kilit):
     """Kurulu skillerden Claude hesabında aynı adlısı olanlar için gizlenecek anahtarlar."""
     hesap = hesap_skilleri()
-    return sorted(f"{HESAP_ONEK}:{ad}" for ad in kilit["skiller"] if ad in hesap)
+    return sorted(f"{HESAP_ONEK}:{ad}" for ad in (set(kilit["skiller"]) | set(dis_kayitlari(kilit))) if ad in hesap)
 
 
 def hesap_gizle(proje, kilit):
@@ -1056,8 +1652,12 @@ def on_kontrol(proje, kilit, plan, roller, skiller, rapor: Rapor, zorla=False):
     for sid, (s, rol_kumesi) in kur_listesi.items():
         ad = adlar[sid]
         onceki = kilit["skiller"].get(ad)
+        dis_ayni = next((k for k in dis_kayitlari(kilit) if k.casefold() == ad.casefold()), None)
+        if dis_ayni:  # projede bağ/donmuş olarak kayıtlı slot: --zorla ile bile değiştirilmez
+            rapor.ekle("HATA", "dis-ad-cakismasi", f"{ad}: projede {dis_ayni} adıyla programdan bağlı ya da donmuş bir skill var; "
+                       "iki tür aynı adı taşıyamaz (önce --kaldir)")
         for yer in (proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad):
-            if (yer.exists() or yer.is_symlink()) and not onceki:
+            if (yer.exists() or yer.is_symlink()) and not onceki and not dis_ayni:
                 rapor.ekle("HATA", "projede-kendi-skillin",
                            f"{yer.relative_to(proje)} zaten var ve kütüphaneden gelmemiş; üzerine yazılmaz "
                            f"(--zorla ile yedeklenip değiştirilir)")
@@ -1301,22 +1901,41 @@ def ekle(a, proje, skiller):
     rapor = Rapor()
     for b in bulunamayan:
         rapor.ekle("HATA", "bulunamadi", f"kütüphanede yok: {b} (ara: skill-ekle.py --ara {b})")
+    dis_liste, dis_hatalar = dis_istek_coz(a)
+    for kod, m in dis_hatalar:
+        rapor.ekle("HATA", kod, m)
     kur_listesi, adlar = on_kontrol(proje, kilit, plan, roller, skiller, rapor)
+    dis_liste = dis_on_kontrol(proje, kilit, dis_liste, set(adlar.values()), rapor)
     arac_satirlari(proje, kilit, rapor, secim=a.arac)
+    dis_adlari = [it["ad"] for it in dis_liste]
     eskiler = sorted(set(kilit["skiller"]) - set(adlar.values()))
+    eskiler = sorted(set(eskiler) | (set(dis_kayitlari(kilit)) - set(dis_adlari)))
     if a.arac and kilit["araclar"] != onceki and eskiler:
         rapor.ekle("HATA", "arac-karisik", f"--arac {ARAC_TAKMA.get(a.arac, a.arac)} verildi ama projede {len(eskiler)} skill {onceki_duzen} "
                    f"düzeninde kurulu ({', '.join(eskiler)}). Önce yalnız --arac {ARAC_TAKMA.get(a.arac, a.arac)} --kuru, sonra "
                    f"--arac {ARAC_TAKMA.get(a.arac, a.arac)} --evet çalıştır; ardından skill ekle.")
-    kapsam_raporu(proje, roller, kur_listesi, skiller, rapor, a.oner or "")
+    if plan or not (getattr(a, "program_skill", None) or getattr(a, "dondur", None)):  # yalnız bağ/dondurma çalışmasında kütüphane adayı listelenmez
+        kapsam_raporu(proje, roller, kur_listesi, skiller, rapor, a.oner or "")
     print(f"Proje: {proje}\nKurulacak: {len(kur_listesi)} skill · Roller: {', '.join(roller) or '-'}")
     for sid, (s, rk) in kur_listesi.items():
         print(f"  {sid:42s} -> {adlar[sid]:42s} [{', '.join(sorted(r for r in rk if r)) or 'genel'}]")
+    yeni_baglar = [it for it in dis_liste if it["tur"] == "program-bag" and not it.get("var")]
+    yeni_donmus = [it for it in dis_liste if it["tur"] == "donmus" and not it.get("var")]
+    yer = ".agents/skills" if codex_var(kilit) else ".claude/skills"
+    if yeni_baglar:
+        print(f"Programla gelen (bağ): {len(yeni_baglar)}")
+        for it in yeni_baglar:
+            print(f"  {it['program']}:{it['ad']}  -> {yer}/{it['ad']} -> {yol_goster(it['hedef'])}  "
+                  f"({it['program']} {surum_metni(it['surum'], it['surum_turu'])})")
+    if yeni_donmus:
+        print(f"Dondurulacak (projenin kendi kopyası): {len(yeni_donmus)}")
+        for it in yeni_donmus:
+            print(f"  {yol_goster(it['kaynak'])} -> {yer}/{it['ad']}  ({it['tarama']['dosya']} dosya, {it['kb']} KB)")
     print("\nÖN KONTROL:")
     rapor.yazdir()
     if not onay(a, rapor):
         return 2
-    yedek = yedekle(proje, list(adlar.values()), "ekle")
+    yedek = yedekle(proje, list(adlar.values()) + dis_adlari, "ekle")
 
     def islem():
         for sid, (s, rk) in kur_listesi.items():
@@ -1334,13 +1953,34 @@ def ekle(a, proje, skiller):
                     print(f"  ! {u}")
                 print(f"  + {ad}")
             kayit_guncelle(kilit, proje, ad, s, rk, kardes, skiller)
+        for it in dis_liste:
+            ad = it["ad"]
+            if it.get("mevcut"):
+                if it["tur"] == "program-bag" and not it.get("var"):
+                    dis_kur_bag(proje, kilit, ad, it["hedef"])
+                    print(f"  + {ad} (bağ yeniden kuruldu)")
+                continue
+            if not isinstance(kilit.get("dis_skiller"), dict):
+                kilit["dis_skiller"] = {}
+            if it["tur"] == "program-bag":
+                dis_kur_bag(proje, kilit, ad, it["hedef"])
+                kilit["dis_skiller"][ad] = {"ad": ad, "tur": "program-bag", "program": it["program"], "hedef": str(it["hedef"]),
+                                            "tarih": date.today().isoformat(), "program_surum": it["surum"],
+                                            "program_surum_turu": it["surum_turu"]}
+                print(f"  + {ad} (bağ)")
+            else:
+                kilit["dis_skiller"][ad] = dis_kur_donmus(proje, kilit, ad, it["kaynak"])
+                print(f"  + {ad} (donmuş kopya)")
         kilit["roller"] = list(dict.fromkeys(kilit["roller"] + roller))
         kilit["profil"] = profil or kilit.get("profil")
         tumunu_yaz(proje, kilit, skiller)
         (meta(proje) / "son-rapor.md").write_text(rapor.markdown("Skill ekleme ön kontrol raporu"), encoding="utf-8")
     guvenli_islem(proje, yedek, islem)
     sonuc = dogrula(proje, skiller, sessiz=True)
-    print(f"\nTamam: {len(kilit['skiller'])} skill, {len(kilit['roller'])} rol · doğrulama: "
+    n_bag = sum(1 for it in dis_liste if it["tur"] == "program-bag")
+    n_don = sum(1 for it in dis_liste if it["tur"] == "donmus")
+    print(f"\nTamam: {len(kilit['skiller'])} skill, {len(kilit['roller'])} rol"
+          + (f" · {n_bag} program bağı, {n_don} donmuş skill" if n_bag + n_don else "") + " · doğrulama: "
           f"{'✅' if not sonuc else '❌ ' + '; '.join(sonuc)} · yedek: {yedek.name}")
     return 0 if not sonuc else 1
 
@@ -1350,17 +1990,47 @@ def kaldir(a, proje, skiller):
     hedefler = list(kilit["skiller"]) if a.kaldir == ["hepsi"] else a.kaldir
     rapor = Rapor()
     proje_yapisi_kontrol(proje, [], rapor)
+    dis = dis_kayitlari(kilit)
+    donmus_yedek = False
     for ad in hedefler:
-        if ad not in kilit["skiller"]:
-            rapor.ekle("HATA", "kutuphaneden-degil", f"{ad} bu projeye kütüphaneden eklenmemiş; dokunulmaz")
-        elif elle_degismis(proje, ad, kilit["skiller"][ad]):
-            rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş (--zorla: yedekle ve sil)")
+        if ad in kilit["skiller"]:
+            if elle_degismis(proje, ad, kilit["skiller"][ad]):
+                rapor.ekle("HATA", "elle-degistirilmis", f"{ad} elle değiştirilmiş (--zorla: yedekle ve sil)")
+            else:
+                rapor.ekle("BİLGİ", "silinecek", ad)
+        elif ad in dis and dis_ad_gecerli(ad):
+            g = dis[ad]
+            h, c = proje / ".agents" / "skills" / ad, proje / ".claude" / "skills" / ad
+            if g["tur"] == "program-bag":
+                kart_hedef = dis_bag_hedefi(g)
+                bizim = {g["hedef"]} | ({str(kart_hedef)} if kart_hedef else set())
+                bozuk = []
+                for slot in (h, c):
+                    if not (slot.exists() or slot.is_symlink()):
+                        continue
+                    ok = slot.is_symlink() and (os.readlink(slot) in bizim or os.readlink(slot) == os.path.relpath(h, c.parent) and slot == c)
+                    if not ok:
+                        bozuk.append(str(slot.relative_to(proje)))
+                if bozuk:
+                    rapor.ekle("HATA", "bag-degismis", f"{ad}: {', '.join(bozuk)} bağ değil ya da başka yere gidiyor; elle değiştirilmiş "
+                               "(kullanıcı verisi olabilir: elle sil; --zorla bunu geçmez)")
+                else:
+                    rapor.ekle("BİLGİ", "silinecek", f"{ad} (program bağı; programın kendi klasörüne DOKUNULMAZ)")
+            else:
+                gercek = h if codex_var(kilit) else c
+                rapor.ekle("BİLGİ", "silinecek", f"{ad} (donmuş skill; silmeden önce yedeğe kopyalanır: --geri-al ile dönülür)")
+                donmus_yedek = True
+                if gercek.is_dir() and not gercek.is_symlink() and g.get("icerik_hash") and klasor_hash(gercek) != g["icerik_hash"]:
+                    rapor.ekle("UYARI", "dondurma-degismis", f"{ad}: donmuş kopya sonradan değiştirilmiş; silinirse yalnız yedekte kalır")
         else:
-            rapor.ekle("BİLGİ", "silinecek", ad)
+            rapor.ekle("HATA", "kutuphaneden-degil", f"{ad} bu projeye kütüphaneden, programdan ya da dondurma ile eklenmemiş; dokunulmaz")
+    if donmus_yedek:
+        rapor.ekle("BİLGİ", "dondurma-yedek", f"Yedekler en son {YEDEK_SAYISI} işlemle sınırlıdır; donmuş kopyayı kalıcı saklamak istiyorsan yedek klasörünü "
+                   "başka yere kopyala.")
     rapor.yazdir()
     if not onay(a, rapor):
         return 2
-    yedek = yedekle(proje, hedefler, "kaldir")
+    yedek = yedekle(proje, [ad for ad in hedefler if ad in kilit["skiller"] or ad in dis or dis_ad_gecerli(ad)], "kaldir")
 
     def islem():
         for ad in hedefler:
@@ -1368,6 +2038,9 @@ def kaldir(a, proje, skiller):
                 sil_yol(proje / ".claude" / "skills" / ad)
                 sil_yol(proje / ".agents" / "skills" / ad)
                 del kilit["skiller"][ad]
+            elif ad in dis:
+                dis_sil(proje, ad)  # bağsa yalnız bağ silinir; program klasörüne girilmez
+                del kilit["dis_skiller"][ad]
         if a.kaldir == ["hepsi"]:
             kilit["roller"] = []
         tumunu_yaz(proje, kilit, skiller)
@@ -1439,6 +2112,17 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
         rapor.ekle("BİLGİ", "guncellenecek", f"{ad}: {k['commit'][:7]} -> {s['commit'][:7]}")
         for u in s.get("yapisal_sorunlar", []):
             rapor.ekle("BİLGİ", "yapi", f"{ad}: {u}")
+    dis = dis_kayitlari(kilit)
+    if dis:
+        n_bag = sum(1 for g in dis.values() if g["tur"] == "program-bag")
+        rapor.ekle("BİLGİ", "dis-skiller", f"{n_bag} skill programla güncel (bağ), {len(dis) - n_bag} donmuş (kütüphane güncellemez): bunlar güncellenmez")
+        for ad, g in sorted(dis.items()):
+            if g["tur"] == "program-bag":
+                for kod, _ in dis_sorunlar(proje, kilit, ad, g):
+                    if kod in ("kirik", "kart-yok"):
+                        hedef = dis_bag_hedefi(g)
+                        rapor.ekle("UYARI", "bag-kirik", f"{ad}: program bağı kırık ({yol_goster(hedef) if hedef else g.get('program')}); "
+                                   f"--yenile ya da --kaldir {ad}")
     hesap_eksik = hesap_gizleme_eksik(proje, kilit)
     for k in hesap_eksik:
         rapor.ekle("BİLGİ", "hesap-cakismasi", f"{AYAR} → skillOverrides \"{k}\" güncellenecek (Claude hesabındaki aynı adlı "
@@ -1449,7 +2133,7 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
         return 1 if rapor.say("HATA") else 0
     if not onay(a, rapor):
         return 2
-    yedek = yedekle(proje, list(kilit["skiller"]) if yapi_degisti else [d for d, _ in degisen],
+    yedek = yedekle(proje, (list(kilit["skiller"]) + list(dis_kayitlari(kilit))) if yapi_degisti else [d for d, _ in degisen],
                     "arac" if yapi_degisti else "guncelle")
 
     def islem():
@@ -1458,6 +2142,9 @@ def guncelle(a, proje, skiller, kilit=None, yapi_degisti=False):
             for u in kur(s, proje, ad, kardes, codex_var(kilit), skiller):
                 print(f"  ! {u}")
             kayit_guncelle(kilit, proje, ad, s, kardes=kardes, skiller=skiller)
+        if yapi_degisti:
+            for m in dis_yerlestir(proje, kilit):
+                print(f"  ! {m}")
         tumunu_yaz(proje, kilit, skiller)
         if not codex_var(kilit):  # boş kalan Codex klasörleri (içinde kullanıcının kendi dosyası varsa dokunulmaz)
             for d in (proje / ".agents" / "skills", proje / ".agents"):
@@ -1527,7 +2214,13 @@ def dogrula(proje, skiller, sessiz=False):
         acik_kalan = tum - rol_skilleri - kapali
         if acik_kalan:
             sorun.append(f"rol {rol}: Codex'te kapatılmamış rol dışı skiller: {', '.join(sorted(acik_kalan))} (--yenile)")
-    if kilit["skiller"]:
+    for m in dis_gecersizleri(kilit):
+        sorun.append(m)
+    dis = dis_kayitlari(kilit)
+    for ad, g in sorted(dis.items()):
+        for _, m in dis_sorunlar(proje, kilit, ad, g):
+            sorun.append(m)
+    if kilit["skiller"] or dis:
         for f in ("AGENTS.md", "CLAUDE.md") if codex else ("CLAUDE.md",):
             d = proje / f
             if not d.exists() or BLOK_BAS not in d.read_text(encoding="utf-8") or BLOK_SON not in d.read_text(encoding="utf-8"):
@@ -1572,6 +2265,32 @@ def durum(proje, skiller):
         else:
             isaret = "güncel"
         print(f"  {ad:42s} {', '.join(k['roller']) or 'genel':34s} {isaret}")
+    for ad, g in sorted(dis_kayitlari(kilit).items()):
+        sor = dict(dis_sorunlar(proje, kilit, ad, g))
+        if g["tur"] == "program-bag":
+            kolon2 = f"bağ: {g['program']}"
+            hedef = dis_bag_hedefi(g)
+            if "kirik" in sor or "kart-yok" in sor:
+                isaret = (f"BAĞ KIRIK (hedef yok: {yol_goster(hedef)}; --yenile ya da --kaldir {ad})" if hedef else
+                          f"BAĞ KIRIK (program kartı yok: {g['program']}; --kaldir {ad})")
+            elif "gercek-klasor" in sor:
+                isaret = f"KURULUM EKSİK/BOZUK (bağ yerine gerçek klasör var; --kaldir {ad})"
+            elif sor:
+                isaret = "KURULUM EKSİK/BOZUK (--yenile onarır)"
+            else:
+                isaret = "programla güncel (bağ)"
+                simdi = program_surumu(program_karti(g["program"]))[0]
+                if simdi != g.get("program_surum"):
+                    isaret += f" · bağlandığında {surum_metni(g.get('program_surum'), g.get('program_surum_turu'))}, kart şimdi {surum_metni(simdi, g.get('program_surum_turu'))}"
+        else:
+            kolon2 = "donmuş"
+            if "donmus-yok" in sor:
+                isaret = f"DONMUŞ KLASÖR YOK (--geri-al <yedek> ya da --kaldir {ad})"
+            elif sor:
+                isaret = "KURULUM EKSİK/BOZUK (--yenile onarır)"
+            else:
+                isaret = "donmuş (kütüphane güncellemez)"
+        print(f"  {ad:42s} {kolon2:34s} {isaret}")
 
 
 def yedekler_listesi(proje):
@@ -1591,7 +2310,7 @@ def geri_al(a, proje):
         sys.exit("Uygun yedek bulunamadı. Liste: --yedekler")
     kilit = kilit_oku(proje)
     bilgi = json_oku(hedef / "yedek.json")
-    adlar = set(kilit["skiller"]) | {r.split("/")[-1] for r in bilgi["hedefler"] if "/skills/" in r}
+    adlar = set(kilit["skiller"]) | set(dis_kayitlari(kilit)) | {r.split("/")[-1] for r in bilgi["hedefler"] if "/skills/" in r}
     once = yedekle(proje, sorted(adlar), "geri-al-oncesi")  # geri almanın kendisi de geri alınabilir
     geri_yukle(proje, hedef)
     shutil.rmtree(hedef)
@@ -1772,12 +2491,24 @@ def windows_mu():
     return os.name == "nt"
 
 
+def kurulum_istegi(a, planlayici=True):
+    """Komut skill/rol/bağ/dondurma kurmak istiyor mu? (main'deki ayrı koşulların tek yeri)"""
+    return bool(a.profil or a.rol or a.skill or getattr(a, "program_skill", None) or getattr(a, "dondur", None)
+                or (planlayici and a.planlayici))
+
+
 def main():
     ap = argparse.ArgumentParser(description="SkillKutuphanesi: projeye skill ekle (güvenli)")
     ap.add_argument("proje", nargs="?")
     ap.add_argument("--profil")
     ap.add_argument("--rol", nargs="+")
     ap.add_argument("--skill", nargs="+")
+    ap.add_argument("--program-skill", nargs="+", metavar="PROGRAM:AD", dest="program_skill",
+                    help="programla gelen skili projeye BAĞ ile ver (kopya değil; programın kendi klasörü, program güncellenince kendiliğinden güncel). "
+                    "Her skil adıyla yazılır (PROGRAM:* yok). --profil/--rol/--skill ile aynı çalışmada kullanılabilir. Proje yolunu ÖNCE yaz. "
+                    "Örn: --program-skill openmontage:ffmpeg hyperframes:hyperframes")
+    ap.add_argument("--dondur", nargs="+", metavar="YOL", help="genel klasördeki (ya da herhangi bir mutlak klasördeki) skili projenin KENDİ skili olarak "
+                    "dondur: araç gerçek içeriği bir kez kopyalar, kilide 'donmuş' yazar; kütüphane bir daha güncellemez. Proje yolunu ÖNCE yaz")
     ap.add_argument("--rol-adi", help="--skill ile eklenenleri bu role bağla (yeni rol adı da olabilir)")
     ap.add_argument("--planlayici", action="store_true")
     ap.add_argument("--opsiyonel", action="store_true", help="rollerin opsiyonel skillerini de ekle")
@@ -1813,13 +2544,16 @@ def main():
     if a.araclar:  # registry yüklenmeden (22 MB), proje gerekmeden
         return araclar_raporu(a)
     if a.proje and windows_mu():
+        if a.program_skill or a.dondur:
+            sys.exit("Programla gelen skiller Windows'a bağlanamaz: bağ bu Mac'teki program klasörünü gösterir. Windows'ta açılacak projeler için "
+                     "skill kütüphanenin olduğu Mac'te kurulur (rehber/14 bölüm 5).")
         sys.exit("skill-ekle.py Windows'ta çalıştırılmaz (symlink, kill -0 ve Mac yolları). Skill ekleme/güncelleme kütüphanenin olduğu "
                  "Mac'te yapılır; Windows'ta açılan projeler için rehber/14 bölüm 5.")
     skiller = registry()
 
     if a.listele or (a.ara and not a.proje):
         return listele(a, skiller)
-    if a.oner and not (a.profil or a.rol or a.skill):
+    if a.oner and not kurulum_istegi(a, planlayici=False):
         return oner(a, Path(a.proje).expanduser().resolve() if a.proje else None, skiller)
     if not a.proje:
         ap.error("proje klasörü gerekli")
@@ -1834,7 +2568,7 @@ def main():
     if not proje.is_dir():
         sys.exit(f"Klasör yok: {proje}")
     gk = guncelleme_suruyor()
-    if gk and (a.profil or a.rol or a.skill or a.planlayici or a.guncelle or a.yenile or a.arac or a.blok):
+    if gk and (kurulum_istegi(a) or a.guncelle or a.yenile or a.arac or a.blok):
         sys.exit(f"BEKLE: kütüphane şu an aylık güncelleniyor ({gk['baslangic']}); onaylanmamış içerik projeye kurulmasın diye "
                  "kurulum/güncelleme birkaç dakika bekletiliyor. Bitince tekrar dene (--durum/--dogrula/--oner çalışır).")
     if a.durum:
@@ -1846,12 +2580,12 @@ def main():
             b = json_oku(y / "yedek.json", {})
             print(f"  {y.name}  {b.get('neden', '?')}")
         return 0
-    if a.kuru and (a.yenile or a.geri_al or (a.blok and not (a.profil or a.rol or a.skill or a.planlayici or a.guncelle))):
+    if a.kuru and (a.yenile or a.geri_al or (a.blok and not (kurulum_istegi(a) or a.guncelle))):
         print(f"[kuru] Hiçbir şey değiştirilmedi. (yapılacak: {'yenile' if a.yenile else 'geri-al' if a.geri_al else 'blok'})")
         return 0
     if a.geri_al:
         return geri_al(a, proje)
-    if a.yenile or (a.blok and not (a.profil or a.rol or a.skill or a.planlayici or a.guncelle)):
+    if a.yenile or (a.blok and not (kurulum_istegi(a) or a.guncelle)):
         kilit = kilit_oku(proje)
         if a.blok:
             kilit["blok"] = a.blok
@@ -1860,17 +2594,22 @@ def main():
         if rapor.say("HATA"):
             rapor.yazdir()
             return 2
-        yedek = yedekle(proje, list(kilit["skiller"]), "yenile")
-        guvenli_islem(proje, yedek, lambda: tumunu_yaz(proje, kilit, skiller))
+        yedek = yedekle(proje, list(kilit["skiller"]) + list(dis_kayitlari(kilit)), "yenile")
+
+        def yenile_islem():
+            for m in dis_yerlestir(proje, kilit):
+                print(f"  ! {m}")
+            tumunu_yaz(proje, kilit, skiller)
+        guvenli_islem(proje, yedek, yenile_islem)
         return 1 if dogrula(proje, skiller) else 0
     if a.kaldir:
         return kaldir(a, proje, skiller)
-    if a.arac and not (a.profil or a.rol or a.skill or a.planlayici):
+    if a.arac and not kurulum_istegi(a):
         return arac_degistir(a, proje, skiller)
     if a.guncelle:
         return guncelle(a, proje, skiller)
-    if not (a.profil or a.rol or a.skill or a.planlayici):
-        ap.error("--profil, --rol veya --skill ver")
+    if not kurulum_istegi(a):
+        ap.error("--profil, --rol, --skill, --program-skill veya --dondur ver")
     return ekle(a, proje, skiller)
 
 

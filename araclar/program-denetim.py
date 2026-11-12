@@ -14,6 +14,9 @@ Kullanım:
   python3 araclar/program-denetim.py --ozet-json [--siki]     # aynı koşu, stdout'a tek JSON nesnesi; HİÇBİR dosya yazmaz
   python3 araclar/program-denetim.py --sema [--ozet-json] [--siki]   # kart şeması denetimi
   python3 araclar/program-denetim.py --oncesi AD [--hedef SÜRÜM_YA_DA_SHA] [--cevrimdisi] [--tedarik] [--ozet-json] [--siki]
+  (bağlar) Bir ya da daha çok projede programla gelen skill bağı varsa (projelerin kilit.json 'dis_skiller'; skill-ekle.py --program-skill)
+  rapor ve --oncesi 'bağlar' satırları ekler: hedef şimdi var mı; git-checkout'ta hedef commit yerel depodaysa güncellemeden sonra
+  kırılacak bağlar (UYARI 'bağ kırılacak'). Bağ yoksa çıktı değişmez. Kırık bağ yalnız güncelleme dışı görünümde HATA; HAZIR DEĞİL sebebi olmaz.
   python3 araclar/program-denetim.py --iskelet {kaynak|npm-global|git-checkout}   # boş kart iskeleti
   python3 araclar/program-denetim.py --pin-listesi AD         # venv'deki paket==sürüm listesi
   ortak: --kart PATH --cikti PATH --ev DIZIN --yedek-koku DIZIN --kok DIZIN
@@ -118,7 +121,8 @@ def npm_integrity(paket, surum, zaman_asimi=8):
 
 
 def git_okuma(yol, *args):
-    """Salt okuma git (rev-parse/status); çıktı ya da None. İndeksi bile yenilemez (--no-optional-locks)."""
+    """Salt okuma git (rev-parse/status/cat-file -e); çıktı ya da None. İndeksi bile yenilemez (--no-optional-locks).
+    cat-file -e başarıda boş çıktı verir (''), yokluğunda None döner."""
     try:
         r = subprocess.run(["git", "--no-optional-locks", "-C", str(yol_ac(yol)), *args],
                            capture_output=True, text=True, timeout=60, stdin=subprocess.DEVNULL)
@@ -472,13 +476,13 @@ def sema_denetle(kart, kok=KOK, kaynaklar=None, ev=None, sadece=None):
         if sadece is not None and ad != sadece:
             continue
         try:
-            sonuc += _kart_sema(ad, p, kok, kaynaklar, projeler)
+            sonuc += _kart_sema(ad, p, kok, kaynaklar, projeler, ev)
         except Exception as e:  # noqa: BLE001  bozuk kart denetimi düşürmez
             sonuc.append(("HATA", ad, "-", f"kart okunamadı ({type(e).__name__})"))
     return sonuc
 
 
-def _kart_sema(ad, p, kok, kaynaklar, projeler):
+def _kart_sema(ad, p, kok, kaynaklar, projeler, ev=None):
     s = []
     H = lambda alan, m: s.append(("HATA", ad, alan, m))  # noqa: E731
     U = lambda alan, m: s.append(("UYARI", ad, alan, m))  # noqa: E731
@@ -532,6 +536,15 @@ def _kart_sema(ad, p, kok, kaynaklar, projeler):
     if not isinstance(p.get("kendini_gunceller"), bool):
         H("kendini_gunceller", "doğru/yanlış (bool) olmalı")
     liste_ok("skilleri", p.get("skilleri"), bos_olur=True)
+    if "skill_koku" in p:
+        sk = p["skill_koku"]
+        if not isinstance(sk, str):
+            H("skill_koku", "metin olmalı (boş metin = programın skili yok)")
+        elif sk.strip() and not _dolu(sk):
+            if not (os.path.isabs(sk) or sk.startswith("~/")):
+                H("skill_koku", "mutlak yol ya da ~/ ile başlamalı")
+            elif p.get("kopya", "kaynak") == "yerinde" and not yol_ac(sk, ev).is_dir():
+                U("skill_koku", "bu bilgisayarda yok (program kurulu mu?)")
     if liste_ok("asla", p.get("asla")):
         pass
     if liste_ok("guncelleme_adimlari", p.get("guncelleme_adimlari")):
@@ -1092,6 +1105,147 @@ def _durum_baslik(ad, tur, kart, kurulu, son):
             f" · son {kisa(son, tur) if son else '?'}")
 
 
+# ============================================================ programla gelen skiller: projelerdeki bağlar (K-28)
+
+_BAG_AD = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,63}")
+_HEDEF_SHA = re.compile(r"[0-9a-fA-F]{7,40}")
+_PK = [None]  # proje-kullanimi.py modülü (tembel; yüklenemezse bağ bilgisi yok sayılır)
+
+
+def _proje_kullanimi():
+    if _PK[0] is None:
+        import importlib.util
+        yol = Path(__file__).with_name("proje-kullanimi.py")
+        spec = importlib.util.spec_from_file_location("_pd_proje_kullanimi", yol)
+        m = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(m)
+        _PK[0] = m
+    return _PK[0]
+
+
+def dis_bag_kayitlari(kilit):
+    """Kilitteki 'dis_skiller' içinden yalnız geçerli program bağları: {ad: kayıt}. Anahtar ad kuralına uymalı ve kaydın
+    'ad'ı anahtarla aynı olmalı; kilitten gelen hiçbir değer yol olarak kullanılmaz (hedef karttan türetilir)."""
+    d = kilit.get("dis_skiller") if isinstance(kilit, dict) else None
+    sonuc = {}
+    if not isinstance(d, dict):
+        return sonuc
+    for k, g in d.items():
+        if (isinstance(k, str) and _BAG_AD.fullmatch(k) and isinstance(g, dict) and g.get("ad") == k
+                and g.get("tur") == "program-bag" and isinstance(g.get("program"), str)):
+            sonuc[k] = g
+    return sonuc
+
+
+def proje_baglari(ctx):
+    """Kayıtlı projelerdeki program bağları: [{'proje','skill','program','surum','tur_surum'}]. Okuma yalnız: ctx.kok/projeler.json
+    ve her projenin .skill-kutuphanesi/kilit.json dosyası. Dosya yok/bozuksa boş (hata vermez). Çağrı başına bir kez hesaplanır."""
+    onbellek = getattr(ctx, "_baglar", None)
+    if onbellek is not None:
+        return onbellek
+    sonuc = []
+    try:
+        ayar = json_oku(Path(ctx.kok) / "projeler.json", None)
+        if isinstance(ayar, dict):
+            pk = _proje_kullanimi()
+            for yol in pk.projeleri_bul(ayar):
+                try:
+                    kilit = json_oku(Path(yol) / ".skill-kutuphanesi" / "kilit.json", {}) or {}
+                except (OSError, ValueError):
+                    continue
+                for ad, g in sorted(dis_bag_kayitlari(kilit).items()):
+                    sonuc.append({"proje": Path(yol).name, "skill": ad, "program": g["program"],
+                                  "surum": g.get("program_surum") if isinstance(g.get("program_surum"), str) else None,
+                                  "tur_surum": g.get("program_surum_turu") if isinstance(g.get("program_surum_turu"), str) else None})
+    except Exception:  # noqa: BLE001  bağ bilgisi okunamazsa denetim düşmez, satır eklenmez
+        sonuc = []
+    try:
+        ctx._baglar = sonuc
+    except AttributeError:
+        pass
+    return sonuc
+
+
+def bag_hedefi(p, ctx, skill):
+    """Bağın şimdiki hedefi: kartın skill_koku/ad yolu (kilitteki 'hedef' kullanılmaz); kartta skill_koku yoksa None."""
+    sk = p.get("skill_koku") if isinstance(p, dict) else None
+    if not isinstance(sk, str) or not sk.strip() or _dolu(sk) or not _BAG_AD.fullmatch(skill):
+        return None
+    return os.path.join(os.path.abspath(str(yol_ac(sk, ctx.ev))), skill)
+
+
+def bag_hedef_var(hedef):
+    return bool(hedef) and os.path.isfile(os.path.join(hedef, "SKILL.md"))
+
+
+def program_baglari(ad, p, ctx):
+    """Bu programın bağları: [(bağ kaydı, hedef yol, hedef var mı)]. Kartta skill_koku yoksa hedef None (var=False)."""
+    sonuc = []
+    for b in proje_baglari(ctx):
+        if b["program"] != ad:
+            continue
+        h = bag_hedefi(p, ctx, b["skill"])
+        sonuc.append((b, h, bag_hedef_var(h)))
+    return sonuc
+
+
+def _bag_ozet(liste):
+    projeler = sorted({b["proje"] for b, _, _ in liste})
+    skiller = sorted({b["skill"] for b, _, _ in liste})
+    ek = f" +{len(skiller) - 8}" if len(skiller) > 8 else ""
+    return f"projeler: {', '.join(projeler)}; skiller: {', '.join(skiller[:8])}{ek}"
+
+
+def bag_simdi(ad, p, ctx, seviye):
+    """'bağlar' satırları (şimdiki durum). Bağ yoksa boş. Kırık bağ yalnız 'seviye' ile bildirilir: güncelleme bekleyen ya da
+    program kurulu olmayan durumda UYARI, güncellenecek bir şey yokken (güncellemeden sonraki görünüm) HATA.
+    Bu satırlar yalnız güncelleme DIŞI durumda HATA olabilir; ana yolda hiçbir zaman HAZIR DEĞİL sebebi olmaz."""
+    liste = program_baglari(ad, p, ctx)
+    if not liste:
+        return []
+    kirik = [(b, h) for b, h, var in liste if not var]
+    if not kirik:
+        return [("TAMAM", "bağlar", f"{len(liste)} bağ, hepsi çözülüyor ({_bag_ozet(liste)})")]
+    ipucu = " (program kurulu değilse ya da güncelleme bekleniyorsa: kurulum/güncelleme sonrası bu raporu yeniden çalıştır; sonra skill-ekle.py <proje> --yenile ya da --kaldir <ad>)"
+    S = []
+    for b, h in kirik[:10]:
+        goster = _goster(h, ctx) if h else "kartta skill_koku yok"
+        S.append((seviye, "bağlar", f"{b['proje']}: {b['skill']} bağı kırık (hedef yok: {goster})"))
+    if len(kirik) > 10:
+        S.append((seviye, "bağlar", f"…+{len(kirik) - 10} kırık bağ daha"))
+    S.append(("BİLGİ", "bağlar", f"{len(liste)} bağın {len(kirik)} tanesi kırık{ipucu}"))
+    return S
+
+
+def bag_kirilacak(ad, p, ctx, hedef_g, kurulu, git, y):
+    """Güncelleme bekleyen ana yolda: hedef sürümde bağların hedefi var mı (salt okuma; ağ yok, fetch yok)."""
+    liste = program_baglari(ad, p, ctx)
+    if not liste or not hedef_g or hedef_g == kurulu:
+        return []
+    if not git:
+        return [("BİLGİ", "bağlar", "paket indirilmeden hedef sürümdeki skill klasörleri bilinemez; güncellemeden sonra bu raporu yeniden çalıştır: kırık bağ HATA görünür")]
+    if not _HEDEF_SHA.fullmatch(str(hedef_g)):
+        return [("BİLGİ", "bağlar", "hedef bir commit sha'sı değil; bağların kırılıp kırılmayacağı denetlenmedi")]
+    yol = yol_ac(y.get("yol", ""), ctx.ev)
+    if git_okuma(yol, "cat-file", "-e", f"{hedef_g}^{{commit}}") is None:
+        return [("BİLGİ", "bağlar", "hedef commit yerel depoda yok (git fetch yapılmaz); bağların kırılıp kırılmayacağı bilinmiyor")]
+    sk = p.get("skill_koku")
+    goreli = os.path.relpath(os.path.abspath(str(yol_ac(sk, ctx.ev))), os.path.abspath(str(yol))) if isinstance(sk, str) and sk.strip() else ".."
+    if goreli == ".." or goreli.startswith(".." + os.sep):
+        return [("BİLGİ", "bağlar", "skill_koku depo dışında; bağ kırılacak mı bilinmiyor")]
+    goreli = goreli.replace(os.sep, "/")
+    S, tamam = [], 0
+    for b, _, _ in liste:
+        klasor = ("" if goreli == "." else goreli + "/") + b["skill"]
+        if git_okuma(yol, "cat-file", "-e", f"{hedef_g}:{klasor}/SKILL.md") is None:
+            S.append(("UYARI", "bağlar", f"bağ kırılacak: {b['proje']}: {b['skill']} ({hedef_g[:8]} sürümünde {klasor} yok)"))
+        else:
+            tamam += 1
+    if tamam:
+        S.append(("TAMAM", "bağlar", f"{tamam} bağın hedefi {hedef_g[:8]} sürümünde de var"))
+    return S
+
+
 def oncesi_denetle(ad, p, ctx):
     """Güncellemeden önce salt okuma ön kontrol. Döner: (satırlar, sonuç); satır = (seviye, kontrol, metin);
     seviye TAMAM|BİLGİ|UYARI|HATA|ATLANDI|BAŞLIK. sonuç: HAZIR | HAZIR DEĞİL | GÜNCELLENECEK BİR ŞEY YOK | KURULU DEĞİL.
@@ -1144,6 +1298,7 @@ def oncesi_denetle(ad, p, ctx):
             S.append(("UYARI", "şema", f"isteğe bağlı alanlarda {ik} uyarı (program-denetim.py --sema)"))
     if not kurulu:
         S.append(("BİLGİ", "kurulu", "bu bilgisayarda kurulu değil; kurulum için kartın 'kurulum' alanına bakın"))
+        S += bag_simdi(ad, p, ctx, "UYARI")  # kurulu değilken bağlar zaten kırık görünür: HAZIR DEĞİL sebebi olmaz
         return S, "KURULU DEĞİL"
     S.append(("TAMAM", "kurulu", f"kurulu {kisa(kurulu, tur)}"))
     # --- S3 kart
@@ -1159,6 +1314,7 @@ def oncesi_denetle(ad, p, ctx):
         esit = sha_esit(hedef, kurulu) if git else ham_surum(hedef) == ham_surum(kurulu)
         if esit:
             S.append(("BİLGİ", "son", f"hedef {kisa(hedef, tur)} zaten kurulu"))
+            S += bag_simdi(ad, p, ctx, "HATA")
             return S, "GÜNCELLENECEK BİR ŞEY YOK"
         S.append(("BİLGİ", "son", f"{kisa(kurulu, tur)} -> {kisa(hedef, tur)} (hedef elle verildi)"))
     elif not son:
@@ -1171,9 +1327,11 @@ def oncesi_denetle(ad, p, ctx):
             guncel = bool(u and s_ and u >= s_)
         if guncel:
             S.append(("BİLGİ", "son", f"kurulu sürüm son sürüm ({kisa(son, tur)})"))
+            S += bag_simdi(ad, p, ctx, "HATA")
             return S, "GÜNCELLENECEK BİR ŞEY YOK"
         S.append(("BİLGİ", "son", f"{kisa(kurulu, tur)} -> {kisa(son, tur)}" + (f" ({geride} geride)" if geride else "") + " (YENİ SÜRÜM VAR)"))
     # --- 8 ana kontrol
+    S += bag_simdi(ad, p, ctx, "UYARI")  # güncelleme bekleniyor: kırık bağ UYARI (sonraki görünüm HATA)
     S += yedek_kontrol(ad, p, ctx, kurulu)
     # 2. sabit sürümler
     sabit = p.get("sabit_surumler")
@@ -1225,6 +1383,7 @@ def oncesi_denetle(ad, p, ctx):
             S.append(("UYARI", "repo", "origin adresi kartın reposundan farklı"))
     S += giris_kontrol(p, ctx)
     S += gizli_kontrol(p, ctx)
+    S += bag_kirilacak(ad, p, ctx, hedef_g, kurulu, git, y)
     # 8. kırıcı (+ çakışma)
     ks = p.get("kirici_surum") if isinstance(p.get("kirici_surum"), dict) else None
     dosyalar, kesik, g2 = None, False, geride
@@ -1416,6 +1575,25 @@ def rapor(a, ctx, doc):
             B["sorun"].append(f"{ad} {d if d.startswith('KAYIP') else 'kaynak kopyası YOK'}")
         elif d != "güncel":
             B["dikkat"].append(ad)
+    # --- programla gelen skillerin projelerdeki bağları (bağ yoksa hiçbir şey eklenmez)
+    bag_tablo = []
+    for ad, p in sorted(kart.items()):
+        try:
+            liste = program_baglari(ad, p, ctx)
+        except Exception:  # noqa: BLE001
+            liste = []
+        if not liste:
+            continue
+        k = sum(1 for _, _, var in liste if not var)
+        B["satirlar"].append(f"{ad}: {len(liste)} bağ, {k} kırık")
+        for b, h, var in liste:
+            bag_tablo.append(f"| {ad} | {b['proje']} | {b['skill']} | {'evet' if var else 'HAYIR'} | "
+                             f"{kisa(b['surum'], 'git-checkout' if b['tur_surum'] == 'commit' else 'npm-global') if b['surum'] else '—'} |")
+            if not var:
+                dikkat_bloku.append(f"- {ad} · bağ kırık: {b['proje']}/{b['skill']} (program kurulu değilse ya da güncelleme sonrasıysa: skill-ekle.py <proje> --yenile)")
+        if k:
+            B["sorun"].append(f"{ad} {k} kırık bağ")
+            B["karar"].append(f"{ad}: {k} kırık bağ -> skill-ekle.py <proje> --yenile ya da --kaldir <ad>")
     out = ["# Program Denetimi", "",
            f"> `araclar/program-denetim.py` üretir · {date.today().isoformat()} · salt okuma; güncelleme kullanıcı onayıyla "
            "`rehber/11-program-yonetimi.md` adımlarıyla yapılır.", "",
@@ -1459,6 +1637,9 @@ def rapor(a, ctx, doc):
         out += ["", "## Ortam anahtarları", ""] + [f"- {x}" for x in ortam_satirlari]
     if dikkat_bloku:
         out += ["", "## Dikkat", ""] + dikkat_bloku
+    if bag_tablo:
+        out += ["", "## Programla gelen skiller (bağlar)", "",
+                "| Program | Proje | Skill | Hedef var mı | Bağlandığı sürüm |", "|---|---|---|---|---|"] + bag_tablo
     return out, B, bulgu
 
 

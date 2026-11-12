@@ -6,16 +6,17 @@ Projeye uygunluk kurulum sırasında (`--oner`, `--kuru`) incelenir. Proje ↔ s
 
 | Dosya | İçerik | Kim yazar |
 |---|---|---|
-| `notlar/proje-kullanimi.md` | Proje özeti, proje → skiller (kaynak, commit, rol), birden fazla projede kullanılan skiller | `araclar/proje-kullanimi.py` |
+| `notlar/proje-kullanimi.md` | Proje özeti, proje → skiller (kaynak, commit, rol), birden fazla projede kullanılan skiller, programla gelen (bağ) ve donmuş skiller | `araclar/proje-kullanimi.py` |
 | `notlar/proje-durumu.md` | Her projenin sağlığı: güncelleme, elle değişiklik, kaynağı kalmamış ve kayıtsız skiller, kayıp projeler, kayıtsız klasörler | `araclar/proje-kullanimi.py --saglik` |
 | `projeler.json` | `tarama_kokleri`, `ek_projeler`, projeye özel elle notlar (`notlar` → proje → skill kimliği) + `bilinen_projeler`, `yoksay`, `kayitsiz_tarama`, `kendi_skilleri` | Elle ya da `--ekle/--cikar/--tasindi/--yoksay` (onayla) |
-| `<proje>/.skill-kutuphanesi/kilit.json` | Asıl kaynak: projede ne kurulu | `skill-ekle.py` |
+| `<proje>/.skill-kutuphanesi/kilit.json` | Asıl kaynak: projede ne kurulu (`skiller` + `dis_skiller`) | `skill-ekle.py` |
 
 ## Kullanım
 ```bash
 python3 araclar/proje-kullanimi.py                  # raporu yeniden üret (projelere dokunmaz)
 python3 araclar/proje-kullanimi.py --skill <kimlik> # bu skili kullanan projeler
 python3 araclar/proje-kullanimi.py --repo owner/ad  # bu kaynaktan skill kullanan projeler
+python3 araclar/proje-kullanimi.py --program <ad>   # bu programın skillerine bağlı projeler (hedef var mı); --siki: hedefi yok olan varsa çıkış 1
 python3 araclar/proje-kullanimi.py --kontrol        # rapor güncel mi (yazmaz; kabukta çıkış kodu hep 0, sıkı denetim için --siki)
 python3 araclar/proje-kullanimi.py --saglik         # proje sağlığı -> notlar/proje-durumu.md (projelere salt okuma, yazılan tek dosya bu; --siki: sorun varsa çıkış 1)
 python3 araclar/proje-kullanimi.py --saglik --ozet-json [--yaz]   # tek satır JSON özet (dosya yazmaz; --yaz raporu da yeniler)
@@ -87,10 +88,15 @@ Kilitte olmayan her skill klasörü `--saglik`te şu üçünden biri olarak gör
 "KİLİTSİZ KÜTÜPHANE KOPYASI" denir (elle kopyalanmış olabilir). Kayıtsızı sınıflamak için kütüphane oturumu kullanıcıya sorar ve onayıyla projenin
 `.skill-kutuphanesi/elle-kurulan.json` dosyasına elle ekler (araç projeye yazmaz). Projenin kendi yazdığı skiller için
 `projeler.json` → `kendi_skilleri` → `<proje>` listesine ad ya da `akil-disi-*` gibi desen yazılır.
+Donmuş skiller (`skill-ekle.py --dondur`) ve bağlar kilitte (`dis_skiller`) kayıtlıdır; bu yüzden hiçbir zaman "KAYITSIZ SKILL" sayılmaz.
 
-## Programlar hangi projede (ilk sürümde otomatik değil)
-HyperFrames / OpenMontage'ı hangi projenin kullandığı bu sürümde araçla izlenmez (ertelendi). Programı güncellemeden önce etkilenecek projeler
-`notlar/hf-om-gecisi/DURUM.md` "Proje taraması" bölümünden ve `--saglik` çıktısındaki genel klasöre bağlantı satırlarından okunur.
+## Programlar hangi projede
+Programla gelen skiller (HyperFrames, OpenMontage) projeye kopyalanmaz, programın kendi klasörüne BAĞ verilir (`skill-ekle.py --program-skill`, rehber/01).
+Bağ kaydı projenin kilidindedir (`dis_skiller`, `tur: program-bag`); kütüphane ayrı bir liste tutmaz, bu araç kilitlerden okur:
+- `proje-kullanimi.py --program <ad>`: o programın hangi skilline hangi proje bağlı, hedef klasör şimdi var mı. `--skill <ad>` aynı adı dış skiller arasında da arar.
+- `notlar/proje-kullanimi.md`: özet tablosunda `(+N bağ, M donmuş)`, proje bölümünde "Programla gelen (bağ)" ve "Donmuş" satırları, sonda "Programla gelen skiller → projeler".
+- `--saglik`: kırık bağ `program bağı kırık` sorun satırıdır (program kurulu değilse beklenir); donmuş skiller tek bilgi satırıdır; `notlar/proje-durumu.md` sonunda "Programla gelen ve donmuş skiller" tablosu.
+- `program-denetim.py` aynı bağları güncellemeden önce ve sonra gösterir (rehber/11). Programı kaldırmadan önce `--program <ad>` ile etkilenen projelere bakılır.
 Program kartlarına proje adı yazılmaz (kural 6).
 
 ## Bilerek takipsiz klasörler (yoksay)

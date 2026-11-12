@@ -1,0 +1,768 @@
+{
+ "akildisi_harita": {
+  "duzen": "Akıl Dışı bugün Codex düzeninde (AGENTS.md + .codex/config.toml + 7 akil_*.toml), git deposu DEĞİL; ChatGPT aynası ~/.codex/.chatgpt-projects/g-p-6ac89.../ projenin .codex ve .agents/skills klasörlerine sembolik bağlı. Claude tarafı eksik: proje CLAUDE.md yalnız kütüphane skill tablosu (kanal kuralları yok; Claude AGENTS.md okumaz); .claude/skills içinde 24 kütüphane skili var ama 8 akil-disi-* rol skili için bağ YOK; .claude/skills/hyperframes-creative ile .agents/skills/hyperframes-creative birbirine işaret eden döngü bağ (çözülmüyor). Skill düzeni: .agents/skills altında 8 akil-disi-* (kendi skilleri, kilitte yok, her birinde agents/openai.yaml = Codex'e özgü) + 24 kütüphane kopyası (kilit.json sürüm 3, 2026-11-07; 6'sı '--kutuphane' ekli ad); .claude/skills içinde 24 göreli bağ. Kütüphanenin kurduğu skiller kilitte, hepsi gerçek kopya; program bağı yok. Rol-skill haritası BECERI-KULLANIM-PLANI.json (schema 2, 7 rol, task_modes) ve BECERI-KULLANIM-REHBERI.md'de: plan 4 skili (hyperframes-creative, -animation, -keyframes, -audio) 'proje kopyası' diye yazıyor ama bugün projede YOK. Kaynak SHA eşleşmesi (planın observed_sha256 değerleriyle ölçüldü): creative = ~/.claude/skills (9da7b7ac, 6563 B; ~/.agents kopyası 4 dosyada farklı); animation = ~/.claude = ~/.agents (b35f1f8e, birebir aynı); keyframes = YALNIZ ~/.agents/skills (d6484e83, 3 dosya; 11-08 yedeğinde, kütüphane kaydında, OpenMontage'da, HyperFrames paketinde YOK); audio = ~/.agents/skills (daf32503, 8 dosya; ~/.claude'daki göreli bağ oraya gidiyor). Keyframes ve audio'nun tek gerçek kopyası ~/.agents/skills: dondurmadan ~/.agents boşaltılırsa kalıcı kaybolur; bu BOŞALTMAYI ENGELLER. CANLI kırık/risk: 7 tomlun aynı 8 sabit yol bloğu, akil-disi-gorsel ve akil-disi-kurgu SKILL.md satır 10, BECERI planı satır 667/700-701, 02_Operasyon/araclar/project-env.py ve README. PASİF: yayımlanmış video betikleri (S001-S007 build_video.py; 26 canlı dosyada 39 adet ~/.npm/_npx/110f701c48e68d66 başvurusu, bu önbellek bugün zaten yok), Gecmis_Kayitlar/onceki/before/yedek içindeki 162 eşleşen dosya. ARTHUR-URETIM-AKISI S001 build_video.py'nin Arthur finali için çalıştırılmamasını söylüyor. Bugünden zaten kırık: ~/.codex/skills/{hyperframes-animation,-audio,-keyframes,-registry,hyperframes}/SKILL.md yok (7 tomlun her birinde dört yol ölü; plan satır 667 entrypoint de ölü). Bugün çalışan zincirler: ~/.codex/skills/hyperframes-creative ve captions-overlay -> ~/.claude/skills (gerçek kopya); motion-doctrine, seam-craft, cut-the-curve -> ~/.agents/skills; ~/.agents/skills/hyperframes gerçek kopya (projedekiyle birebir aynı). Boşaltınca bunların tamamı kalkar.",
+  "kullanilan_skiller": [
+   {
+    "ad": "hyperframes-creative",
+    "nereden": "~/.claude/skills/hyperframes-creative (gerçek, 79 dosya); ~/.codex/skills bağı oraya; ~/.agents/skills'te farklı sürüm; OpenMontage'da farklı kuşak",
+    "kanit": [
+     "toml satır 26 (7 dosya): ~/.codex/skills/hyperframes-creative/SKILL.md, senaryo+kalite için enabled=true",
+     "BECERI planı satır 78: observed_sha256 9da7b7ac = ~/.claude kopyası",
+     "plan narrative_reference_policy: references/story-spine.md, narration.md, beat-direction.md okunuyor",
+     "OM kopyasında story-spine.md ve storyboard-recipe.md YOK; OM SKILL.md 5414 B, farklı",
+     "proje içi: .agents/skills/hyperframes-creative ve .claude/skills/hyperframes-creative birbirine döngü bağ"
+    ],
+    "nasil": "Projenin kendi dondurulmuş skili: ~/.claude/skills/hyperframes-creative birebir (--dondur). OpenMontage'a BAĞLAMA: story-spine.md eksik, plan onu okuyor. HyperFrames paketinde yok. Önce döngü bağ temizlenmeli (onayla). Boşaltmadan önce ayrı yedek (11-08 yedeğinde yok).",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "hyperframes-animation",
+    "nereden": "~/.claude/skills/hyperframes-animation = ~/.agents/skills/hyperframes-animation (birebir aynı); ~/.codex/skills'te YOK; OM'de farklı",
+    "kanit": [
+     "toml satır 30: ~/.codex/skills/hyperframes-animation/SKILL.md (gorsel, kalite enabled=true) bugün yok",
+     "BECERI planı satır 89: sha b35f1f8e = iki genel kopya; görsel/kalite 'motion' modunun ana becerisi",
+     "OM kopyası SKILL.md 7122 B, genel kopyadan 93 girdi farklı",
+     "kütüphane registry'sinde kayıt yok"
+    ],
+    "nasil": "Projenin kendi dondurulmuş skili (--dondur ~/.claude/skills/hyperframes-animation); OM kopyası eşdeğer değil. Tek yer iki genel klasör, ikisi de boşaltılacak.",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "hyperframes-keyframes",
+    "nereden": "YALNIZ ~/.agents/skills/hyperframes-keyframes (3 dosya)",
+    "kanit": [
+     "toml satır 34 (gorsel, kurgu, kalite enabled=true): ~/.codex/skills/hyperframes-keyframes bugün yok",
+     "BECERI planı satır 100: sha d6484e83 = ~/.agents kopyası",
+     "~/.claude, ~/.codex, OM, HyperFrames paketi, 11-08 yedeği ve registry.json'da yok"
+    ],
+    "nasil": "Projenin kendi dondurulmuş skili: ~/.agents/skills/hyperframes-keyframes birebir. ~/.agents boşaltılmadan ÖNCE yapılmazsa kalıcı kaybolur: boşaltmayı engeller. Geçici ek yedek önerilir.",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "hyperframes-audio",
+    "nereden": "~/.agents/skills/hyperframes-audio (8 dosya, gerçek); ~/.claude/skills/hyperframes-audio göreli bağ -> ~/.agents; ~/.codex'te YOK",
+    "kanit": [
+     "toml satır 38 (kurgu, kalite): ~/.codex/skills/hyperframes-audio bugün yok",
+     "BECERI planı satır 111: sha daf32503 = ~/.agents kopyası",
+     "OM'de ve HyperFrames paketinde yok; 11-08 yedeğinde yok; registry'de yok"
+    ],
+    "nasil": "Projenin kendi dondurulmuş skili: ~/.agents/skills/hyperframes-audio birebir (K-28 dondurma). ~/.agents boşaltmadan önce şart.",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "hyperframes",
+    "nereden": "Proje: kütüphane kopyası (heygen-com/hyperframes skills/hyperframes @ f8309b35); Program: /usr/local/lib/node_modules/hyperframes/dist/skills/hyperframes (0.9.35); AGENTS yolu ~/.agents/skills/hyperframes",
+    "kanit": [
+     "akil-disi-kurgu SKILL.md satır 10 ve akil_kurgu.toml satır 3: ~/.agents/skills/hyperframes/SKILL.md (projedekiyle diff -rq 0 fark)",
+     "proje kopyası dist kopyasından 10 dosya farklı (SKILL.md, format.md, motion.md, plugin-installation.md, runtimes.md, skill-lifecycle.md, storyboard.md, types/3d.md, bake-basemap.mjs; path-tracing.md pakette yeni)",
+     "~/.claude/skills/hyperframes başka kuşak (0.9.20, 10 dosya fark)",
+     "SKILL.md /hyperframes-cli, /media-use, /hyperframes-registry'ye yollama yapıyor; hyperframes-cli ve media-use projede kurulu DEĞİL"
+    ],
+    "nasil": "K-28: --program-skill hyperframes:hyperframes (kopya yerine bağ, kurulu 0.9.35). Aynı programdan hyperframes-cli ve media-use da bağlanabilir. Beacon satırı ve plugin-installation değişikliği telemetri çizgisiyle karşılaştırılmalı. Yeni sürümde 'video zamanlanır, sarmalayıcı zamansız' kuralı proje kopyasındaki 'video YA DA sarmalayıcı' ile çelişir; bağ yeni kuralı getirir.",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "hyperframes-registry--kutuphane",
+    "nereden": "Kütüphane kopyası (heygen-com/hyperframes skills/hyperframes-registry @ f8309b35); toml düz ad ~/.codex/skills/hyperframes-registry (YOK); OM'de ayrı sürüm",
+    "kanit": [
+     "toml satır 46: ~/.codex/skills/hyperframes-registry/SKILL.md yok; yalnız gorsel enabled=true",
+     "genel ~/.agents ve ~/.claude kopyaları projedekinden 2 dosya farklı (SKILL.md, contributing.md); OM kopyası da farklı",
+     "SKILL.md ../hyperframes/references/plugin-installation.md kardeş bağı kullanıyor"
+    ],
+    "nasil": "Kütüphane kopyası olarak kalır; düz ada çevrilebilir. HyperFrames paketinde yok, OM kopyası aynı değil, bağ verilmez. Kardeş 'hyperframes' dizini yerinde olmalı (bağ olsa da ../hyperframes yolu çözülür).",
+    "kesinlik": "orta"
+   },
+   {
+    "ad": "captions-overlay, motion-doctrine, seam-craft, cut-the-curve (--kutuphane kopyaları)",
+    "nereden": "Kütüphane (heygen-com/hyperframes .claude/skills/* @ f8309b35); toml ve betikler ~/.codex/skills ve ~/.agents/skills yolunu okuyor",
+    "kanit": [
+     "toml satır 42 captions-overlay (~/.claude kopyasına bağ), 50 motion-doctrine, 54 seam-craft (~/.agents'e bağ); cut-the-curve toml'da yok",
+     "diff: projedeki kopyalar genel kopyalardan yalnız SKILL.md'de (ad satırı, description, metadata) farklı; motion-doctrine scripts/seam-gate.mjs de farklı (kütüphane sürümünde repo-yerel CLI öncelikli blok var); scripts/seam-stamp.mjs birebir aynı",
+     "build_video.py S002-S007 ~/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs çağırıyor",
+     "HyperFrames paketinde ve OM'de bu dört skill yok"
+    ],
+    "nasil": "Kütüphane kopyası; program bağı yok. Betikler proje içi yola (.agents/skills/motion-doctrine--kutuphane/scripts/seam-stamp.mjs) çevrilmeli ya da pasif sayılmalı. seam-gate.mjs sürüm farkı gerçek (genel eski, kütüphane yeni).",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "d3-viz, manim-composer, manimce-best-practices, pose-library-design, svg-character-animation, visual-style (altısı OpenMontage kaynaklı)",
+    "nereden": "Kütüphane kopyaları (calesthio/OpenMontage @ 195eab24); program karşılığı ~/.openmontage/.agents/skills/<ad> (fecb9a1e)",
+    "kanit": [
+     "diff -rq proje vs OM: beşi birebir aynı; d3-viz yalnız SKILL.md'de (şablon uzantısı .js vs .jsx)",
+     "BECERI planı: görsel/kurgu/senaryo modlarında kullanılıyor (causal_scene, svg_rig_and_poses, scientific_data_viz, style_and_anti_slop)",
+     "kilit.json kaynak_yol .claude/skills veya .agents/skills"
+    ],
+    "nasil": "K-28 aday listesi: --program-skill openmontage:<ad> ile bağa çevrilebilir (içerik aynı). K-27 'OpenMontage yalnız IstatistikYoutube'da' dese de bu proje OM'yi project-env.py ile kullanıyor; karar kullanıcıda.",
+    "kesinlik": "orta"
+   },
+   {
+    "ad": "imagegen (Codex .system)",
+    "nereden": "~/.codex/skills/.system/imagegen/SKILL.md (Codex'in kendi sistem skili, boşaltmadan korunur)",
+    "kanit": [
+     "akil_gorsel.toml satır 3 ve akil-disi-gorsel SKILL.md satır 10: yeni raster görsel için imagegen/SKILL.md oku ve ChatGPT görsel aracını kullan",
+     "S012 headphones-hero.metadata.json satır 6: tool 'ChatGPT imagegen', çıktı ~/.codex/generated_images/<uuid>/",
+     "assets.csv eşleşmeleri: L003, S005, S012, S025, A-cihazın-içi-ANC"
+    ],
+    "nasil": "Claude karşılığı skill yok. Yol canlı ve boşaltmayla bozulmaz (.system kalır) ama Claude oturumunda çalışmaz. Seçenekler: Higgsfield MCP generate_image (ücretli, proje kuralı kredi onayı ister), OpenMontage resim araçları (flux/grok/atlas, anahtarlar global .env'de), ya da Codex'te görsel üretimini bırakmak. Karar kullanıcıda.",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "talking-head-recut (yalnız assets/vendor/gsap.min.js)",
+    "nereden": "~/.agents/skills/talking-head-recut (~/.claude'da da kopya)",
+    "kanit": [
+     "S001-dunya-dursa/build_video.py satır 31: shutil.copyfile('/Users/sabanulukaya/.agents/skills/talking-head-recut/assets/vendor/gsap.min.js', ...)",
+     "03_Uretim'de 70 gsap.min.js zaten her kompozisyonun assets/ klasöründe kopya"
+    ],
+    "nasil": "Skill olarak kullanılmıyor; pasif betik. S001 betiği Arthur finali için çalıştırılmıyor. Boşaltma yeni üretimi bozmaz.",
+    "kesinlik": "yüksek"
+   },
+   {
+    "ad": "general-video, faceless-explainer, remotion-to-hyperframes (yalnız --skill / authoringSkill etiketi)",
+    "nereden": "Yalnız global klasörlerde (~/.claude/skills, ~/.agents/skills) skill olarak var",
+    "kanit": [
+     "83 hyperframes.json: 53 faceless-explainer, 30 general-video",
+     "render betiklerinde --skill=faceless-explainer (27), --skill general-video, --skill remotion-to-hyperframes (3)",
+     "HyperFrames CLI chunk-HVW7ABXD.js normalizeSkillSlug yalnız regex doğruluyor (dosya varlığı aranmıyor)"
+    ],
+    "nasil": "Skill okunmuyor, yalnız etiket: boşaltma render'ı bozmamalı (CLI davranışı çalıştırılarak sınanmadı). Güncel pakette bu iki skill yok.",
+    "kesinlik": "orta"
+   },
+   {
+    "ad": "yt-package, yt-script, yt-retention, yt-shorts, ig-reel, de-ai-ify, hypothesis-generation, scientific-critical-thinking, huashu-art-motion, motion-design--kutuphane, design-taste-frontend, high-end-visual-design",
+    "nereden": "Kütüphane kopyaları (Jakeschincariol/*, heyitsnoah, K-Dense-AI, nexu-io/open-design, Leonxlnx)",
+    "kanit": [
+     "kilit.json, BECERI planı satır 19-319; toml satır 6-22 hepsi proje içi yol",
+     "yt-script SKILL.md satır 24, yt-package 22: ~/.claude/youtube/voice.md; ig-reel satır 27, 39, 96: ~/.claude/instagram/voice.md, swipe.md, log.md (isteğe bağlı, klasörler bugün yok)"
+    ],
+    "nasil": "Kütüphane kopyası olarak kalır, genel klasörlerle ilgisi yok. high-end-visual-design planın roller bölümünde geçmiyor (yalnız kilitte).",
+    "kesinlik": "yüksek"
+   }
+  ],
+  "sabit_yollar": [
+   {
+    "dosya": ".codex/agents/akil_{analitik,arastirma,gorsel,kalite,kurgu,senaryo,yayin}.toml",
+    "satir": "26, 30, 34, 38, 42, 46, 50, 54 (her dosyada aynı sıra)",
+    "yol": "/Users/sabanulukaya/.codex/skills/{hyperframes-creative,hyperframes-animation,hyperframes-keyframes,hyperframes-audio,captions-overlay,hyperframes-registry,motion-doctrine,seam-craft}/SKILL.md",
+    "ne_okuyor": "Her ajanın izin/enabled listesi (rol bazlı true/false). Codex ajanları bu yolları yükler.",
+    "bugun_var_mi": "Kısmen. creative ve captions-overlay: ~/.claude/skills gerçek kopyasına bağ (var); motion-doctrine, seam-craft: ~/.agents/skills'e bağ (var). animation, keyframes, audio, registry: YOK (zaten kırık). Boşaltmadan sonra hepsi yok."
+   },
+   {
+    "dosya": ".codex/agents/akil_*.toml",
+    "satir": "6, 10, 14, 18, 22",
+    "yol": "/Users/sabanulukaya/Documents/Akil Disi Youtube Kanali/.agents/skills/{de-ai-ify,motion-design--kutuphane,huashu-art-motion,hypothesis-generation,scientific-critical-thinking}/SKILL.md",
+    "ne_okuyor": "Proje içi kütüphane kopyaları (enabled rol bazlı)",
+    "bugun_var_mi": "Var (proje içi, boşaltmadan etkilenmez)"
+   },
+   {
+    "dosya": ".codex/agents/akil_gorsel.toml",
+    "satir": "3 (developer_instructions içinde)",
+    "yol": "/Users/sabanulukaya/.codex/skills/.system/imagegen/SKILL.md",
+    "ne_okuyor": "Yeni raster görsel için Codex ChatGPT görsel aracı yönergesi",
+    "bugun_var_mi": "Var (.system Codex'in; korunacak). Claude'da karşılığı yok."
+   },
+   {
+    "dosya": ".codex/agents/akil_kurgu.toml",
+    "satir": "3",
+    "yol": "/Users/sabanulukaya/.agents/skills/hyperframes/SKILL.md",
+    "ne_okuyor": "HyperFrames giriş skili (kurgu rolü)",
+    "bugun_var_mi": "Var; boşaltmadan sonra YOK (projede .agents/skills/hyperframes var)"
+   },
+   {
+    "dosya": ".agents/skills/akil-disi-kurgu/SKILL.md",
+    "satir": "10",
+    "yol": "/Users/sabanulukaya/.agents/skills/hyperframes/SKILL.md",
+    "ne_okuyor": "Kurgu rolü HyperFrames girişini okur",
+    "bugun_var_mi": "Var; boşaltmadan sonra YOK"
+   },
+   {
+    "dosya": ".agents/skills/akil-disi-gorsel/SKILL.md",
+    "satir": "10",
+    "yol": "/Users/sabanulukaya/.codex/skills/.system/imagegen/SKILL.md",
+    "ne_okuyor": "Görsel rolü imagegen yönergesi",
+    "bugun_var_mi": "Var (korunur)"
+   },
+   {
+    "dosya": "02_Operasyon/BECERI-KULLANIM-PLANI.json",
+    "satir": "667",
+    "yol": "/Users/sabanulukaya/.codex/skills/hyperframes/SKILL.md (host_skill_policy.entrypoint)",
+    "ne_okuyor": "HyperFrames giriş skili yolu",
+    "bugun_var_mi": "YOK (~/.codex/skills altında hyperframes dizini yok)"
+   },
+   {
+    "dosya": "02_Operasyon/BECERI-KULLANIM-PLANI.json",
+    "satir": "699-701 (gemini_compatibility)",
+    "yol": "/Users/sabanulukaya/.gemini/config/skills ; /Users/sabanulukaya/.codex/skills",
+    "ne_okuyor": "Bilgi alanı (host_global_skills_dirs), kod okumuyor",
+    "bugun_var_mi": "~/.gemini/config/skills var (başka skiller içeriyor); ~/.codex/skills var ama içerik boşaltılacak"
+   },
+   {
+    "dosya": "02_Operasyon/BECERI-KULLANIM-PLANI.json",
+    "satir": "78, 89, 100, 111",
+    "yol": ".agents/skills/{hyperframes-creative,hyperframes-animation,hyperframes-keyframes,hyperframes-audio}/SKILL.md (proje göreli)",
+    "ne_okuyor": "Plan bu dördünü proje kopyası sayıyor (observed_sha256 ile)",
+    "bugun_var_mi": "YOK: dördü de projede bulunmuyor (creative döngü bağ); kaynakları genel klasörlerde"
+   },
+   {
+    "dosya": "03_Uretim/S002-ayin-uzak-yuzu/build_video.py",
+    "satir": "82",
+    "yol": "/Users/sabanulukaya/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs",
+    "ne_okuyor": "seam-stamp ile ledger.json'dan index.html'e geçiş kodu üretir (yayımlanmış video betiği)",
+    "bugun_var_mi": "Var (~/.agents'e bağ), boşaltmayla YOK; pasif betik"
+   },
+   {
+    "dosya": "03_Uretim/S003-en-derin-nokta/build_video.py",
+    "satir": "68",
+    "yol": "/Users/sabanulukaya/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs",
+    "ne_okuyor": "aynı",
+    "bugun_var_mi": "Var, boşaltmayla YOK; pasif"
+   },
+   {
+    "dosya": "03_Uretim/S004-herkes-ziplasa/build_video.py",
+    "satir": "55",
+    "yol": "/Users/sabanulukaya/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs",
+    "ne_okuyor": "aynı",
+    "bugun_var_mi": "Var, boşaltmayla YOK; pasif"
+   },
+   {
+    "dosya": "03_Uretim/S005-uzayda-aglamak/build_video.py",
+    "satir": "107",
+    "yol": "/Users/sabanulukaya/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs",
+    "ne_okuyor": "aynı",
+    "bugun_var_mi": "Var, boşaltmayla YOK; pasif"
+   },
+   {
+    "dosya": "03_Uretim/S006-internetsiz-gps/build_video.py",
+    "satir": "103",
+    "yol": "/Users/sabanulukaya/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs",
+    "ne_okuyor": "aynı",
+    "bugun_var_mi": "Var, boşaltmayla YOK; pasif"
+   },
+   {
+    "dosya": "03_Uretim/S007-okyanus-kablolari/build_video.py",
+    "satir": "121",
+    "yol": "/Users/sabanulukaya/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs",
+    "ne_okuyor": "aynı",
+    "bugun_var_mi": "Var, boşaltmayla YOK; pasif"
+   },
+   {
+    "dosya": "03_Uretim/S001-dunya-dursa/build_video.py",
+    "satir": "31",
+    "yol": "/Users/sabanulukaya/.agents/skills/talking-head-recut/assets/vendor/gsap.min.js",
+    "ne_okuyor": "gsap.min.js'i kompozisyon assets'ine kopyalar (Yelda önizleme betiği, Arthur finali için çalıştırılmıyor)",
+    "bugun_var_mi": "Var, boşaltmayla YOK; pasif"
+   },
+   {
+    "dosya": "03_Uretim/S012-gurultu-engelleme/assets/headphones-hero.metadata.json",
+    "satir": "6",
+    "yol": "/Users/sabanulukaya/.codex/generated_images/01a11fb0-fe7a-7601-81ae-1b4f4ae11bba/exec-1a659255-ec6e-46a4-915b-18fbb309ac80.png",
+    "ne_okuyor": "Üretilmiş görselin özgün konumu (kanıt kaydı, okunmaz)",
+    "bugun_var_mi": "~/.codex/generated_images var; boşaltma kapsamında değil"
+   },
+   {
+    "dosya": "03_Uretim/S024-vantuz/production-v1/run-final.py",
+    "satir": "5",
+    "yol": "/Users/sabanulukaya/.npm/_npx/110f701c48e68d66/node_modules/hyperframes/bin/hyperframes.mjs",
+    "ne_okuyor": "HyperFrames CLI (render --skill general-video)",
+    "bugun_var_mi": "YOK: önbellek dizini diskte yok. Aynı yol 26 canlı dosyada 39 kez (S008 render_arthur.py satır 14 dist/cli.js dahil); güncel CLI /usr/local/bin/hyperframes"
+   },
+   {
+    "dosya": "02_Operasyon/araclar/project-env.py",
+    "satir": "14, 15, 16, 41",
+    "yol": "~/.openmontage ; ~/.openmontage/.venv/bin/python ; ~/.config/openmontage/.env ; /usr/local/opt/ffmpeg-full/bin",
+    "ne_okuyor": "OpenMontage kurulumu, venv python, anahtar dosyası (yalnız ad listeler), ffmpeg",
+    "bugun_var_mi": "Hepsi var (program kalır). Anahtar dosyasında değer okunmadı."
+   },
+   {
+    "dosya": "02_Operasyon/araclar/README.md",
+    "satir": "3, 17, 19, 21, 23",
+    "yol": "~/.openmontage/.venv/bin/python ; ~/.config/openmontage/.env",
+    "ne_okuyor": "Kullanım komutları",
+    "bugun_var_mi": "Var"
+   },
+   {
+    "dosya": "02_Operasyon/araclar/om-runtime/sitecustomize.py",
+    "satir": "1-70 (install_adapter)",
+    "yol": "shutil.which('hyperframes') -> /usr/local/bin/hyperframes; OM tools.video.hyperframes_compose",
+    "ne_okuyor": "OM HyperFramesCompose'un _resolve_npm_package/_probe_cli/_run_hf yöntemlerini kurulu HyperFrames ikilisine yönlendirir",
+    "bugun_var_mi": "Var; OM fecb9a1e'de üç yöntem de duruyor"
+   },
+   {
+    "dosya": ".agents/skills/ig-reel/SKILL.md ; yt-script/SKILL.md ; yt-package/SKILL.md",
+    "satir": "ig-reel 27,39,96 ; yt-script 24 ; yt-package 22",
+    "yol": "~/.claude/instagram/{voice,swipe,log}.md ; ~/.claude/youtube/voice.md",
+    "ne_okuyor": "İsteğe bağlı kullanıcı ses/stil profili ('if it exists')",
+    "bugun_var_mi": "YOK (klasörler yok); boşaltmadan etkilenmez, ~/.claude/skills dışı"
+   },
+   {
+    "dosya": "02_Operasyon/ajan-config-yukleme-kontrolu.json ; ajan-ekibi.json ; meta-yonetim-akisi-20261010.json",
+    "satir": "ajan-config 7-82, 94-175 ; ajan-ekibi 9-46 ; meta-yonetim 75",
+    "yol": "proje içi .codex/agents ve .agents/skills yolları; ~/.codex/.chatgpt-projects/g-p-6ac89.../.codex ; ~/.codex/memories/extensions/ad_hoc/notes/20261010T192735-akil-disi-meta-yonetimi.md",
+    "ne_okuyor": "Codex yükleme kontrol kaydı, ajan listesi, hafıza notu (tarihsel kayıt/dizin)",
+    "bugun_var_mi": "Proje içi yollar var; ChatGPT aynası var (bağ projeye); memories notu doğrulanmadı"
+   }
+  ],
+  "proje_ici_skiller": [
+   "akil-disi-koordinasyon (kök koordinatör; agents/openai.yaml)",
+   "akil-disi-analitik",
+   "akil-disi-arastirma",
+   "akil-disi-gorsel (imagegen yolu, hyperframes skillerine atıf)",
+   "akil-disi-kalite",
+   "akil-disi-kurgu (HyperFrames giriş yolu satır 10)",
+   "akil-disi-senaryo",
+   "akil-disi-yayin",
+   "Hepsi .agents/skills altında gerçek klasör, kilit.json'da değil ('kendi skili'), .claude/skills'te bağları YOK; göreli ../../../02_Operasyon/... bağları proje içi, SKILL.md satır 8'de proje mutlak yolu; agents/openai.yaml Codex'e özgü. Ek: 24 kütüphane skili kilitli; planın 4 'proje kopyası' skili (creative, animation, keyframes, audio) diskte yok. .skill-kutuphanesi/yedek içinde yalnız AGENTS/CLAUDE/.codex ayar yedekleri var, skill gövdesi yok."
+  ],
+  "program_kullanimi": "HyperFrames: kurulu 0.9.35, /usr/local/bin/hyperframes. Proje kompozisyonları 03_Uretim altında 'hyperframes*/' ve 'production-v*/composition' klasörlerinde (hyperframes.json: 53 faceless-explainer, 30 general-video authoringSkill). Akış: Arthur sesi (Higgsfield MCP elevenlabs_v4, KANAL-SESI.json) -> yerel Whisper base (02_Operasyon/yerel-modeller/ggml-base.bin) -> altyazı -> HyperFrames check/render (--fps 24 --quality delivery --workers 1, --skill etiketi). Güncel CLI yolu /usr/local/bin/hyperframes; eski betikler ~/.npm/_npx/110f701c48e68d66 önbelleğini kullanıyor (yok). Skill katmanı: motion-doctrine seam-stamp.mjs ve seam-gate.mjs, captions-overlay, cut-the-curve proje kopyasında. Eski kayıtlarda CLI 0.8.x-0.9.x geçmişi var; 0.9.35 uyumu çalıştırılarak sınanmadı. Ortam kilitleri (NO_UPDATE_CHECK, NO_AUTO_INSTALL) run-final.py içinde de tanımlı. OpenMontage: ~/.openmontage (fecb9a1e); proje yalnız 02_Operasyon/araclar/project-env.py ile kullanır: venv python, PYTHONPATH=om-runtime:~/.openmontage, OPENMONTAGE_PROJECTS_DIR=03_Uretim/openmontage-projects (klasör BOŞ, üretim orada yok), --profile free yalnız PEXELS/PIXABAY/UNSPLASH/HF anahtarlarını açar, tools.tool_registry preflight, sitecustomize ile HyperFramesCompose kurulu ikiliye bağlanır, BACKLOT_PORT 8791. OM skillerinden yalnız calesthio kaynaklı 6'sı projede (kütüphane kopyası); hyperframes-* skilleri OM'den DEĞİL ~/.claude/~/.agents'ten. Anahtarlar ~/.config/openmontage/.env'de (yalnız adlar görüldü; değer okunmadı). Görsel üretim: Codex yerleşik ChatGPT imagegen (~/.codex/skills/.system/imagegen; çıktı ~/.codex/generated_images), Claude'da skill karşılığı yok; Higgsfield MCP (ücretli, kredi onayı) ayrı. Diğer dış bağlılıklar: ffmpeg-full (/usr/local/opt), /usr/local/bin/node; ~/.codex/automations (9 görev; skill/yol içermiyor), ~/.codex/config.toml proje trust kaydı.",
+  "belirsizler": [
+   "authoringSkill/--skill etiketi: CLI yalnız regex doğruluyor (normalizeSkillSlug), skill dizini aranmıyor. general-video ve faceless-explainer boşalınca render davranışı çalıştırılarak sınanmadı.",
+   "motion-doctrine seam-gate.mjs genel ile kütüphane kopyası farklı (kütüphane yeni, repo-yerel CLI öncelikli). Projenin kontrol hattında hangisinin asıl sayıldığı belirsiz; fark satırları tam incelenmedi.",
+   "Proje CLAUDE.md'sine kanal kuralları (AGENTS.md) nasıl taşınacak, 8 akil-disi-* skili .claude/skills'e nasıl bağlanacak, Codex'te de çalışmaya devam edilecek mi: kullanıcı kararı gerekir.",
+   "imagegen için Claude karşılığı: Higgsfield MCP (ücretli, kredi onayı), OM ücretsiz görsel araçları ya da Codex'te bırakma. Projedeki 'ChatGPT görsel aracı' kuralı Claude'da çalışmaz.",
+   "K-27 (OM yalnız IstatistikYoutube) ile bu projenin project-env.py üzerinden OM'yi kullanması çelişiyor görünüyor; altı calesthio skilinin --program-skill openmontage:AD ile bağlanması bu karara bağlı.",
+   "creative/animation için dondurma kaynağı ~/.claude, keyframes/audio için ~/.agents; keyframes ve audio için boşaltmadan önce ek yedek yoksa kalıcı kayıp riski.",
+   "HyperFrames 0.9.35 hyperframes skilinin proje kopyasından farklı kuralları (video/sarmalayıcı zamanlaması, beacon) mevcut kompozisyonlarda lint farkı yaratabilir; çalıştırılarak sınanmadı.",
+   "Tarama sınırı: .hyperframes önbellekleri hariç tutuldu; node_modules/.venv derinlik 3'te bulunmadı; ikili dosyalar -I ile atlandı; çıktı klasörleri (03_Uretim/*/output, 05_Ciktilar) bazı aramalarda dışarıda bırakılmadı ama içleri metin değil; geçmiş klasörlerinde (Gecmis_Kayitlar, onceki, before, yedek, onceki-dosyalar) 162 eşleşen dosya var, ayrıntısına bakılmadı; kökte 99_Arsiv yok; canlı eşleşen dosya sayısı 65.",
+   "~/.codex/memories/extensions/ad_hoc/notes/... yolu meta-yonetim-akisi-20261010.json satır 75'te geçiyor; varlığı doğrulanmadı (tarihsel not)."
+  ]
+ },
+ "akildisi_codex": {
+  "codex_duzeni": "PROJE: /Users/sabanulukaya/Documents/Akil Disi Youtube Kanali (git deposu DEĞİL). Kökte AGENTS.md (10.702 bayt), CLAUDE.md (1.864 bayt, yalnız kütüphane bloğu), .codex/, .agents/skills, .claude/skills, .skill-kutuphanesi/, numaralı klasörler. Hook, settings.json, .mcp.json yok.\n\nAGENTS.md = tek kural gövdesi (başlangıç sırası, sınırlar, hesap/takvim, üretim ve yayın kapıları, ölçüm, koordinasyon: en çok 3 uzman, alt ekip ve model override yok, tarayıcı ve ortak kayıtlar tek yazıcı koordinatörde) + sonunda kütüphane skill bloğu (24 skill). CLAUDE.md yalnız o blok. Sonuç: Claude bugün bu projeyi açsa 10 KB kuralı GÖRMEZ (Claude AGENTS.md'yi yalnız hiç CLAUDE.md yoksa okur).\n\n.codex/config.toml (726 bayt): agents.enabled=true, max_concurrent_threads_per_session=3, yedi [agents.X] (kısa description + config_file). Model, sandbox, onay anahtarı yok.\n\n.codex/agents/*.toml, 7 dosya: akil_arastirma, akil_senaryo, akil_gorsel, akil_kurgu, akil_kalite, akil_yayin, akil_analitik. Her birinde yalnız name, uzun description, tek satırlık developer_instructions (2,5-3,3 KB) ve 13'er [[skills.config]] (path + enabled). Model ayarı yok. Talimat: önce .agents/skills/akil-disi-<rol>/SKILL.md oku, yalnız bu projede çalış, AGENTS.md ve AJAN-EKIBI.md oku, başka ajan başlatma, ortak kayıt ve tarayıcıyı değiştirme, görev kimliği+kanıt+değişen dosya+belirsizlik+sonuç bildir; sonra role özel paragraflar (kalite: salt okunur; senaryo: yalnız script.md ve shotlist.csv yazar; yayın: dış işlem yok; analitik: ana veriyi yazmaz).\n\nskills.config AÇIK (enabled=true) olanlar: analitik hypothesis-generation + scientific-critical-thinking; arastirma scientific-critical-thinking; gorsel huashu-art-motion + hyperframes-animation + hyperframes-keyframes + hyperframes-registry + motion-doctrine + seam-craft; kalite scientific-critical-thinking + hyperframes-creative + animation + keyframes + audio + captions-overlay + seam-craft; kurgu motion-design--kutuphane + keyframes + audio + captions-overlay + seam-craft; senaryo de-ai-ify + huashu-art-motion + hyperframes-creative; yayin hiçbiri. Listede olmayan skiller (yt-*, ig-reel, visual-style, d3-viz, manim-*, svg-*, pose-*, design-taste-frontend...) tüm rollere zaten görünür. Mantık 'kapat-bırak' (rol dışını kapat), 'önyükle' değil; plan dosyası da 'allowlist is not preload' diyor.\n\nskills.config yolları bugün: 5 proje-içi yol var; 8 yol ~/.codex/skills/... altında ve bunların 5'i ÖNCEDEN BİLE YOK (hyperframes-animation, -keyframes, -audio, -registry hiçbir rolde var olmayan yol; Codex'te bu anahtarlar bugün etkisiz). ~/.codex/skills/hyperframes-creative, captions-overlay, motion-doctrine, seam-craft var ama .claude/skills ve .agents/skills'e giden bağlar; genel klasörler boşalınca ölürler.\n\n.agents/skills (36 girdi): 8 projeye ÖZGÜ skill (akil-disi-koordinasyon, -arastirma, -senaryo, -gorsel, -kurgu, -kalite, -yayin, -analitik; her birinde SKILL.md + agents/openai.yaml, hiçbiri kütüphanede ya da kilitte yok) + 27 kütüphane/kopya skill + 1 BOZUK bağ. .claude/skills: 26 göreli bağ -> ../../.agents/skills/X. KİLİT: .skill-kutuphanesi/kilit.json sürüm 3, 24 skill, profil yok, roller [] ; düzen kaydı yok (arac-secimi yok).\n\nBOZUKLAR: (1) .agents/skills/hyperframes-creative -> ../../.claude/skills/hyperframes-creative ve .claude/skills/hyperframes-creative -> ../../.agents/skills/hyperframes-creative: DÖNGÜ, iki yönde çözülmüyor (ls: 'Too many levels of symbolic links'), 7 Kas 08:40 elle konmuş; kilitte ve CLAUDE.md tablosunda yok. (2) BECERI-KULLANIM-PLANI.json 'kurulu' diye hyperframes-creative, -animation, -keyframes, -audio'yu listeler (proje yerel kopya, 24 Ekim SHA kaydıyla) ama projede hiçbiri yok; 3 tanesi hiç kopya olarak durmuyor. (3) Plan 'motion-doctrine, seam-craft, captions-overlay, hyperframes-registry' ad bekler; projede '--kutuphane' ekli (çünkü genel kopya vardı). (4) Plan host_skill_policy.entrypoint = ~/.codex/skills/hyperframes/SKILL.md: o yol zaten yok, boşaltmada kesin ölü.\n\nKANIT: ~/.claude/skills/hyperframes-creative SHA 9da7b7ac... = planın 24 Ekim kaydı (9da7b7ac...); hyperframes-animation b35f1f8e... = plan; hyperframes-audio daf32503... = plan (iki kopya, .claude ve .agents); hyperframes-keyframes d6484e83... = plan, YALNIZ ~/.agents/skills'te (~/.claude/skills'te yok). Yani projenin dayandığı dört skilin birebir kopyası bugün genel klasörlerde duruyor; boşaltmadan ÖNCE dondurulmazsa yalnız Documents/Claude/yedek'e (global-skills-2026-11-08 yedeği bu dördünü içermiyor görünür; yedek listesinde 'hyperframes-*' için yalnız ~/.agents altındakiler anılıyor; boşaltma yedeği ayrı alınacak) bağlı kalınır. OpenMontage klonundaki hyperframes-creative (8b104a39, 5.414 bayt) FARKLI ve references/story-spine.md YOK; plan narrative_reference_policy tam bu dosyayı okuyor. Yani creative için program bağı (K-28) yetmez, DONDURMA gerekir. OM'deki hyperframes-animation da farklı (785cacfa).\n\nPROGRAM TARAFI: HyperFrames paketi (0.9.35) yalnız hyperframes, hyperframes-cli, media-use taşıyor. Projedeki hyperframes kopyası kütüphane f8309b35 kuşağı; pakete göre SKILL.md, format.md, motion.md, plugin-installation.md, runtimes.md, skill-lifecycle.md, storyboard.md, types/3d.md ve 4 betikte fark, pakette fazladan path-tracing.md ve windows-exe-search.mjs var. captions-overlay, cut-the-curve, motion-doctrine, seam-craft, hyperframes-registry pakette YOK: kütüphane kopyası olarak kalır. OpenMontage (~/.openmontage/.agents/skills) projedeki altı skili de taşıyor: d3-viz, manim-composer, manimce-best-practices, pose-library-design, svg-character-animation, visual-style (şimdi kütüphane kopyası, calesthio/OpenMontage 195eab24 kaynaklı). Projenin om-runtime ve openmontage-projects klasörü OM'yi kullanıyor (project-env.py ~/.openmontage ve ~/.config/openmontage/.env okur): K-27'deki 'OM yalnız IstatistikYoutube' notu bu proje için tam doğru değil.\n\nDiğer Codex'e bağlı parçalar: (a) ~/.codex/automations/ak-l-d-sosyal-medya-y-netimi: heartbeat, ACTIVE, her gün 10:00 ve 20:00 (İstanbul), tek bir Codex sohbetine (target_thread_id) bağlı, prompt 12,8 KB, AGENTS.md ve GUNCEL-DURUM.json okuyup canlı hesapları tarayıcıyla kontrol ediyor; yeni zamanlayıcı kurma yasağı AGENTS.md'de. Aynı klasörde ilgisiz iki otomasyon (Homebrew PAUSED, iş başvurusu e-postaları ACTIVE) ve altı PAUSED eski Instagram yayıncısı. (b) ~/.codex/config.toml (genel): model ve effort, approval_policy=never, sandbox_mode=danger-full-access; bu proje 'trusted'. Proje bu ayarlarla onaysız ve tam erişimle çalışıyordu. (c) Codex hafızası (features.memories açık): memory_summary içinde projeye 3 atıf; proje durumu zaten dosyalarda. (d) 02_Operasyon/ajan-config-yukleme-kontrolu.json, ajan-kurulum-dogrulama.json, ajan-ekibi.json: Codex yapılandırmasının kayıtları (mutlak .codex yolları). 'Rol seçici doğrudan çağrılmadı' notu: Codex'te roller gerçekte talimat metni yapıştırılarak çalıştırılmış.\n\nBAĞLANTILAR (taşırken kırılacaklar): AGENTS.md -> .agents/skills/akil-disi-koordinasyon/SKILL.md; AJAN-EKIBI.md -> ../.codex/agents ve ../.agents/skills; URETIM-HATTI.json 7 ve ajan-ekibi.json 14 akil_/yol atfı; BECERI-KULLANIM-PLANI.json (7 akil_). 02_Operasyon/araclar/project-env.py AGENTS.md DOSYASININ VARLIĞINI şart koşuyor (yoksa RuntimeError); structure_check.py AGENTS.md'yi denetliyor (16 KiB üst sınır, bağlantılar). Araçlarda 'codex' kelimesi geçmiyor; çalışan betik Codex'e bağlı değil.\n\n'Codex' geçen belgeler (arşiv dışı): ajan-gorevleri.json 35 (tarihçe kaydı, dokunma), ajan-ekibi.json 7, BECERI-KULLANIM-PLANI.json 3, GUNCEL-DURUM.json 2, BECERI-KULLANIM-REHBERI.md 2, CALISMA-DUZENI.md 2 (satır 19: '.agents ve .codex = yalnız Codex'), URETIM-HATTI-ISLEYIS.md 1 ('Bilgisayar/Codex/oturum kontrol için gerekli'), AGENTS.md 1 ('kontrol ... bilgisayar, Codex ve oturum gerektirir'). Geri kalan yüzlerce eşleşme ar şiv, yedek ve before/onceki klasörlerinde.",
+  "claude_karsiligi": [
+   "TALİMAT: CLAUDE.md'yi kural gövdesine bağla. En az riskli yol: CLAUDE.md başına tek satır '@AGENTS.md' (Claude içe aktarma) + kütüphane bloğu. AGENTS.md AYNEN kalır (project-env.py ve structure_check.py ona bağlı; Antigravity de okur). Dikkat: iki dosyada da aynı skill bloğu var; içe aktarmayla tablo iki kez yüklenir (~2 KB). Çözüm kütüphane aracının davranışına bağlı (aşağıdaki sorulara bak). Seçenek B: kural metnini CLAUDE.md'ye taşı, AGENTS.md'yi 'bkz CLAUDE.md' kısa dosyaya indir; ama project-env.py ile structure_check.py (16 KiB sınırı ve bağlantı denetimi) uyarlanmalı: daha riskli, öneri değil.",
+   "ROLLER: .claude/agents/ altına 7 dosya yaratılacak (kütüphane aracı rol dosyalarını yalnız --rol/--rol-adi ile üretiyor; bu roller kütüphane rolü değil, projenin kendisi: araç mı yazar, elle mi yazılır sorusu kullanıcıya/oturuma ait). Her dosya: frontmatter name, description (Codex'teki UZUN description; Claude otomatik yönlendirmeyi buna göre yapar, 'ne zaman kullan' diye yazılmalı), tools, isteğe bağlı skills; gövde = developer_instructions (tek satırdan okunur paragraflara bölünür; '.codex/agents' ve 'collaboration görev mesajı' gibi Codex dilini temizle). Örnek referans IstatistikYoutube/.claude/agents/competitor-intelligence-analyst.md ve long-video-edit-director.md: frontmatter name, description, tools (virgüllü liste), memory: project, skills (liste), model, effort, maxTurns; gövde Türkçe.",
+   "AD KURALI: Claude alt ajan adı küçük harf+tire biçimini belgeler ve IstatistikYoutube'da hep tire kullanılıyor; Codex adları akil_senaryo gibi altçizgili. Altçizgi Claude'da çalışır mı BELGEDE YOK, denenmedi. Ad değişirse akil-senaryo gibi olur ve BECERI-KULLANIM-PLANI.json, URETIM-HATTI.json, ajan-ekibi.json, ajan-gorevleri.json (26 atıf), AJAN-EKIBI.md içindeki rol kimlikleri çift isimli kalır: tarihçeyi yeniden yazma, yalnız 'Claude adı' eşlemesi ekle. Öneri: önce küçük bir sınama ajanıyla altçizgili adı dene, çalışırsa adı aynen koru (en az değişiklik).",
+   "SKILLS ALANI (Codex skills.config) -> BİRE BİR KARŞILIĞI YOK. Codex 'rol dışını kapat' diyor; Claude'da alt ajan başına skill kapatma ayarı yok (belirsiz: disallowedTools içinde Skill(ad) kuralının alt ajanda çalışıp çalışmadığı belgede açık değil, denenmedi). Claude'un 'skills:' alanı ise skill GÖVDESİNİ başlangıçta enjekte eder (motion-design 27 KB, keyframes 16 KB, audio 26 KB): Codex'in 'allowlist önyükleme değildir' kuralını bozar. Öneri: skills: alanına YALNIZ ajanın kendi rol skilini koy (akil-disi-senaryo vb., 2,5-4,5 KB; 'ilk olarak SKILL.md oku' kuralının karşılığı); açık yedi-sekiz skilin adlarını ajan gövdesinde 'gerektiğinde, görev modunda bir ana ve en çok bir destek' diye METİN olarak yaz (BECERI-KULLANIM-PLANI.json roller/task_modes zaten bunu tarif ediyor ve rol skiline atıfla çalışıyor). Rol dışı kapatma Claude'da talimatla yapılır, teknik olarak zorlanmaz.",
+   "ARAÇLAR (tools): Codex'te rol kısıtı yalnız metindi (global sandbox danger-full-access). Claude'da zorlanabilir: kalite ve yayın için Write/Edit çıkarmak ('salt okunur', 'dış işlem yok'), tüm uzmanlardan mcp__claude-in-chrome__* ve tarayıcı araçlarını çıkarmak (tarayıcı koordinatörde), Agent aracı vermemek (alt ekip yok; zaten Claude'da alt ajan alt ajan başlatamaz). Bunlar Codex'ten SIKI: kalite raporunu dosyaya yazması gerekiyorsa (qa.md vb.) Write'ı ona geri vermek gerekir; hangi rolün hangi dosyayı yazdığı ajan-gorevleri.json'dan okunmalı. Öneri tabloyu kullanıcıya göster.",
+   "MODEL ve EFFORT: Codex ajan dosyalarında model yok, 'model override yok' kuralı AGENTS.md'de. Claude ajan dosyalarında model/effort alanını boş bırak (oturum modelini miras alır). IstatistikYoutube ajanları model: claude-sonnet-5-5 ve effort: medium veriyor; bu bir kullanıcı kararıdır, burada otomatik kopyalanmaz.",
+   "KOORDİNATÖR: Codex'te koordinatör ayrı ajan değil, ana sohbet + akil-disi-koordinasyon skili. Claude'da aynı kalsın: 8. ajan açma, 'agent' ayarı koyma (IstatistikYoutube showrunner'ı ana ajan yapıyor; burada gerekmez). Dağıtım Agent aracıyla subagent_type=<rol adı>. Skilin 'Rol seçicisi yoksa TOML developer_instructions ve SKILL.md yolunu collaboration görev mesajına koy' ve '.codex/agents tanımlarına göre dağıt' cümleleri Claude'da '.claude/agents rollerini adlarıyla çağır' olarak güncellenir (skil proje özgü, kütüphane dışı: elle düzenlenebilir). 'En çok 3 uzman' için Claude'da ayar yok (max_concurrent_threads_per_session karşılığı yok): yalnız metin kuralı.",
+   "SKILL KURULUMU (K-28 ile): (1) 8 akil-disi-* skili .claude/skills'te hiç görünmüyor (yalnız .agents/skills'te). Bu projeye özgü, kütüphane dışı: araç ile '--dondur .agents/skills/akil-disi-X' (donmuş proje skili) ya da yeni düzende .claude/skills altında gerçek klasör. (2) Döngü bağı hyperframes-creative sökülür. (3) Dört eski kuşak skil (hyperframes-creative 9da7b7ac, -animation b35f1f8e, -keyframes d6484e83, -audio daf32503) kütüphanede YOK ve programda yok ya da farklı: '--dondur' ile projenin kendi skili olarak dondurulur, kaynaklar ~/.claude/skills (keyframes için ~/.agents/skills) ve yalnızca BOŞALTMADAN ÖNCE; SHA'lar plan kaydıyla birebir. (4) hyperframes: '--program-skill hyperframes:hyperframes' (paket 0.9.35, her zaman güncel) ya da kütüphane kopyası; pakette fark (format/timecode kuralları, path-tracing) var. Tercih ve sınama kullanıcıya. hyperframes-cli ve media-use pakette: projede yok; gerekirse bağ. (5) OpenMontage skilleri (d3-viz, manim-composer, manimce-best-practices, pose-library-design, svg-character-animation, visual-style): '--program-skill openmontage:AD' ile ~/.openmontage/.agents/skills/AD'e bağ ya da kütüphane kopyası. Bağ güncellemede kendiliğinden yeni sürüme geçer (OM'nin eski 0.7.x kuşağı içerik farkı riski). (6) captions-overlay, cut-the-curve, motion-doctrine, seam-craft, hyperframes-registry: pakette yok, kütüphane kopyası; genel kopya kalkınca ADLAR DÜZ OLUR (plan düz ad bekliyor); kilit, CLAUDE.md tablosu ve motion-design için ayrıca bakılmalı. (7) Diğer kütüphane skilleri (de-ai-ify, huashu-art-motion, hypothesis-generation, scientific-critical-thinking, ig-reel, yt-*, design-taste-frontend, high-end-visual-design): kütüphane aracıyla (zaten kilitte).",
+   "motion-design--kutuphane: projede nexu-io/open-design sürümü (27 KB) kurulu; kütüphanede şimdi TERCİH lottiefiles/motion-design, nexu-io alternatif. Yeniden kurulumda hangisinin geleceği belirsiz: kilidin kaynağını sabitle ya da kullanıcıya sor.",
+   "DÜZEN SEÇİMİ (araç): projeye 'hangi araçlarla açılacak' kaydı yok. Claude-Codex birlikte açılacaksa 'ortak' (.agents/skills gerçek + .claude/skills bağ + .claude/agents/*.md + .codex/agents/*.toml, CLAUDE.md ve AGENTS.md aynı blok), yalnız Claude ise 'yalniz-claude' (.claude/skills gerçek, .claude/agents, yalnız CLAUDE.md bloğu). 'yalniz-claude' seçilirse aracın .agents/skills ile AGENTS.md bloğuna ne yapacağı belgede yazmıyor; aracı çalıştırmadan söylenemez (bu oturumda araç çalıştırılmadı).",
+   "OTOMASYON (10:00/20:00 izleme): Claude Code karşılığı bire bir değil. Seçenekler: Claude masaüstü zamanlanmış görev (mcp scheduled-tasks) ya da /schedule bulut rutini ya da oturum içi Cron. Bulut rutini yerel dosyalara (GUNCEL-DURUM.json, 04_Analitik) ve kullanıcının oturum açık Chrome'una ERİŞEMEZ; yerel görev bilgisayarın açık ve Claude uygulamasının çalışır olmasını ister (Codex heartbeat'i de bilgisayar ve oturum istiyordu). Taşınırsa: 12,8 KB prompt AGENTS.md ile birlikte aynen taşınır, 'bu sohbette' ve 'Codex' kelimeleri çıkarılır; Codex tarafında otomasyon PAUSED yapılmadan çift kontrol riski var. Yeni zamanlayıcı kurma AGENTS.md yasağı ('mevcut 10/20 görevi kullan, yeni mükerrer otomasyon kurma') bu taşıma için açık kullanıcı onayı ister.",
+   "TARAYICI: Codex 'Browser/Chrome/computer-use' eklentileriyle Meta Business Suite, YouTube Studio, TikTok'u yönetiyordu. Claude'da karşılığı Claude in Chrome (kullanıcının gerçek Chrome'u) ya da uygulama içi tarayıcı; platform oturumlarının orada açık olup olmadığı BELİRSİZ. Yalnız ana oturum kullanır, alt ajanlara verilmez.",
+   "İZİN MODU: Codex genelde approval_policy=never ve danger-full-access. Claude varsayılanı onay sorar; her komutta sormaması için proje düzeyi .claude/settings.json izin listesi (okuma, python3 -B 02_Operasyon/..., sed/grep) yazılabilir. Genel ayar dosyaları değişmez; proje dosyası olarak kullanıcı onayıyla. AGENTS.md'deki sırları gösterme ve ödeme kapıları Claude izinleriyle (deny) ya da PreToolUse hook'u ile sertleştirilebilir (isteğe bağlı, IstatistikYoutube'daki gibi), ama bu çeviri değil yeni özellik.",
+   "PROJE METİNLERİ (güncelleme listesi, onayla): CALISMA-DUZENI.md satır 19 ('.agents ve .codex yalnız Codex'), AJAN-EKIBI.md ('Tanımlar .codex/agents'), BECERI-KULLANIM-PLANI.json (host_skill_policy.entrypoint ~/.codex/skills/hyperframes/SKILL.md ölür; gemini_compatibility notu; kurulu sayılan 4 skilin gerçek durumu), AGENTS.md ('Codex' bir cümle, skill bloğundaki '.agents/skills (Codex)' satırı), URETIM-HATTI-ISLEYIS.md bir cümle, BECERI-KULLANIM-REHBERI.md iki. ajan-gorevleri.json tarihçe, dokunulmaz.",
+   "ELLE YAZILMAYACAK: skill-ekle.py varken .claude/skills ve .agents/skills altına elle cp/ln yapılmaz (kütüphane kuralı 2); yalnız --dondur ve --program-skill (henüz yazılıyor, bu oturumda ÇALIŞTIRILMADI, bayrakların son hali doğrulanmadı) ve normal kurulum. Genel klasörlere yazılmaz."
+  ],
+  "korunacaklar": [
+   "AGENTS.md kural METNİ (10.702 bayt; hesap, takvim, kapılar, sınırlar). Dosya silinmez, taşınmaz: project-env.py varlığını şart koşuyor, structure_check.py denetliyor (16 KiB üst sınır). Yalnız bir-iki cümle ('Codex' geçen) ve skill bloğu satırı onayla değişir.",
+   "01_Kanal, 02_Operasyon, 03_Uretim, 04_Analitik, 05_Ciktilar, 00_Kaynaklar içeriği; 02_Operasyon/GUNCEL-DURUM.json, YAYIN-KAYIT-ENVANTERI.json, ajan-gorevleri.json (78 KB tarihçe, 35 'Codex' atfı tarihsel kanıt), URETIM-HATTI.json, IYILESTIRME-KURALLARI.json, yayin-takvimi.csv, Gecmis_Kayitlar, Arsiv klasörleri, before/onceki yedekleri ve S0xx kanıt dosyaları. Arşivdeki AGENTS/CLAUDE/skill metinleri komut değil veri (AGENTS.md kuralı).",
+   "02_Operasyon/araclar (project-env.py, pipeline-readiness.py, editorial-gate.py, om-runtime/sitecustomize.py, tools-map.json) ve ~/.config/openmontage/.env sırları (okunmadı, yazdırılmayacak). 03_Uretim/openmontage-projects ve 03_Uretim/*/hyperframes* proje klasörleri; içlerindeki HyperFrames iskelet AGENTS.md/CLAUDE.md dosyaları (3 adet, 8.626 bayt, 'USE THESE FIRST /hyperframes'): Claude bu klasörlerde çalışırken zaten okur, dokunma.",
+   "Sekiz projeye özgü skil: .agents/skills/akil-disi-* (31 KB toplam, kütüphane dışı; içeriği aynen). agents/openai.yaml dosyaları zararsız Codex arayüz üst verisi, Codex'in elinde kalacaksa silinmez.",
+   "BECERI-KULLANIM-PLANI.json ve -REHBERI.md içeriği: roller, task_modes, öncelik sırası (anlatı, nedensel hareket, ses, altyazı/geçiş), narrative_reference_policy (story-spine.md, narration.md, beat-direction.md), max_new_skill_bodies_per_task=2, 'allowlist önyükleme değildir'. Claude çevirisinde bu mantık metin olarak aynen yaşar.",
+   ".skill-kutuphanesi/kilit.json (sürüm 3, 24 skill), yedek/ (6 anlık görüntü), son-rapor.md: aracın alanı, elle düzenlenmez. .gitignore, .ignore (/99_Arsiv).",
+   "Ajan rol kimlikleri ve görev paylaşım kuralı: yedi rol, sahiplik (tarayıcı, takvim, ana analitik, ücretli iş, ortak notlar koordinatörde; kalite salt okunur; senaryo yalnız script.md+shotlist.csv; aynı dosyaya iki yazıcı yok; alt ekip yok; en çok 3).",
+   "Codex tarafında KORU: .codex/ (agents + config.toml, ~40 KB), ~/.codex/automations/ak-l-d-sosyal-medya-y-netimi (karar bekler, silinmez, yalnız PAUSED yapılabilir), Codex hafızası, ~/.codex/auth.json ve config.toml (açılmadı; kimlik bilgisi, dokunulmaz)."
+  ],
+  "riskler": [
+   "EN BÜYÜK: dört eski kuşak skil (hyperframes-creative, -animation, -keyframes, -audio) yalnız genel klasörlerde duruyor ve kütüphanede yok; genel klasörler boşaltılırsa projenin planı (BECERI-KULLANIM-PLANI) ve roller (gorsel, kurgu, kalite, senaryo) bu skillere ulaşamaz. Boşaltmadan ÖNCE dondurma şart; keyframes yalnız ~/.agents/skills'te (onu boşaltma 'kilit dosyasıyla' sonda yapılır). 24 Ekim SHA'ları bugünkü kopyalarla eşleşiyor, yani kayıpsız dondurulabilir.",
+   "Claude AGENTS.md'yi okumuyor: CLAUDE.md'ye bağ konmadan Claude oturumu üretim bekletmesini, ödeme/yayın kapılarını, sır kuralını, tek-yazıcı kuralını BİLMEZ. Geçişin ilk adımı bu; sonra rol dosyası.",
+   "Döngü symlink'i (.agents/skills/hyperframes-creative <-> .claude/skills/hyperframes-creative): hangi aracın hangi tarafı açtığına bağlı olarak skill yüklemesi sessiz başarısız olabilir; şimdiden kırık. Claude'da bu skil bugün görünmüyor olabilir.",
+   "Rol skili zinciri: 8 akil-disi-* skili .claude/skills'te görünmüyor; Claude ajanları 'ilk olarak SKILL.md oku' dese de skill adıyla bulunamaz. Yol atıfı (dosya yolu) çalışır, ama skills: önyüklemesi ve /skills listesi görmez.",
+   "Adlandırma: plan düz ad (motion-doctrine...) bekliyor, projede '--kutuphane' ekli; genel kopya kalkınca ad düzleşir, bu sırada skill_durum benzeri denetim, CLAUDE.md tablosu ve kilit güncellenmeli. Claude'da kişisel skill proje skilini ezer: genel kopya varken proje kopyası görünmez (IstatistikYoutube analizindeki aynı bulgu).",
+   "hyperframes sürümü: projedeki kopya kütüphane f8309b35 kuşağı, program 0.9.35 paketi farklı (özellikle video/sarmalayıcı zamanlama kuralı ve path-tracing). Bağ yoluyla güncel gelirse projenin serbest yazılan sahnelerinde kural farkı çıkabilir; kütüphane kopyasıyla kalırsa 0.9.35 lint'i eski kurala uyan sahneyi kırmızı gösterebilir. Hangi yol seçilirse bir üretimsiz deneme gerekir (üretim bekletmesi sürerken yapılabilir).",
+   "OM bağ riski: bağ yolunda ~/.openmontage güncellemesi projenin skilini sessizce değiştirir (OM'deki hyperframes-creative ve -animation zaten farklı kuşak); kütüphane 'güncellemeden önce kırılacak bağları göster' diyor ama proje-kullanimi kaydı bu proje için doğru işlenmeli.",
+   "Çift kontrolcü riski: Codex heartbeat'i (ACTIVE) ve Claude izleyicisi birlikte çalışırsa AGENTS.md'nin 'tek aktif native yayın sahibi', 'kör ikinci yükleme yok' kuralı ihlal edilebilir (aynı postta ikinci düzeltme, çift bildirim). Geçiş anında iki tarafın tek sahibi olmalı.",
+   "Güvenlik varsayılanı: Codex onaysız ve tam erişimle çalışıyordu; Claude varsayılanı her komutta sorar, proje izin dosyası olmadan 10/20 izleme gibi otomatik işlerde takılır. Tersi de olur: izinleri geniş açmak yeni risk.",
+   "Rol kısıtlarının sertleşmesi: tools ile Write çıkarılırsa kalite/yayın uzmanı ihtiyaç duyduğu raporu yazamayabilir (örn. qa.md); gevşek bırakılırsa Codex'teki gibi yalnız metin güvencesi kalır. Alt ajanda MCP/tarayıcı kısıtı da test edilmeli.",
+   "Claude alt ajan adı altçizgi: belgelenmemiş; ad değişirse rol kimlikleri çift isimli olur ve 40 kadar kayıt eşleme ister.",
+   "Codex dosyaları tutulur ve iki rol tanımı (toml + md) ayrı gelişirse çelişir (özellikle AGENTS.md tek kaynak olsa bile rol paragrafları iki yerde). Codex'te skills.config yolları ~/.codex/skills altında ve boşaltmayla ölür; 5'i bugün bile yok: Codex'in rol skill filtresi zaten çalışmıyor.",
+   "K-27'ye ters: OpenMontage bu projede de kullanılıyor (project-env.py, om-runtime, openmontage-projects); OM güncellemesi ve skill bağları planlanırken bu proje de etkilenir.",
+   "Kapsamadığım: ~/.codex/rules/default.rules (5 satır, okunmadı), Codex sohbet geçmişi (state/sessions), claude-mem kaydı, bu projedeki skill gövdelerinin Codex'e özgü ifadeleri (kütüphanenin 'codex-uyum' uyarısı hyperframes için var), 03_Uretim alt klasörlerinin içindeki skill/yol atıfları. Git yok: geri alma yalnız .skill-kutuphanesi/yedek ve elle yedekle."
+  ],
+  "kullaniciya_sorulacak": [
+   "Codex dosyaları yerinde mi kalsın, rafa mı kalksın? Evet-kalsın (öneri): .codex/ ve AGENTS.md aynen durur, Codex ve Antigravity projeyi hâlâ açabilir; Claude için .claude/agents ve CLAUDE.md eklenir ('ortak' düzen). Sonuçlar: iki rol tanımı seti eşgüdümlü tutulmalı (sapma riski); Codex'te skill yolları boşaltmadan sonra ölür (zaten 5/8 ölü); Codex otomasyonu ACTIVE kalır, PAUSED yapılmazsa çift kontrol; kütüphane aracı hem .agents hem .claude yazar; geri dönüş en kolay. Rafa kalksın: .codex/ (ve gerekirse .agents) 02_Operasyon altında tarihli arşive taşınır; Codex projeyi rolsüz ve skilsiz açar; AGENTS.md YİNE KALMALI (project-env.py, structure_check.py); AJAN-EKIBI.md, CALISMA-DUZENI.md, ajan-ekibi.json, URETIM-HATTI.json, ajan-config-yukleme-kontrolu.json, ajan-kurulum-dogrulama.json içindeki yollar bayatlar ve güncellenmeli; kütüphane düzeni 'yalniz-claude' olur (Antigravity .agents/skills'i okuyamaz hale gelir); Codex heartbeat'i bu proje için çalışmaz hale gelir ve önce PAUSED yapılmalı. Hangisi?",
+   "Bu proje hangi araçlarla açılacak (Claude Code, Codex, Antigravity, Cursor)? Kilitte düzen kaydı yok; cevap '--arac ortak' ya da 'yalniz-claude' seçimini belirler.",
+   "10:00 ve 20:00 izleme ne olsun: (a) Claude zamanlanmış göreve taşı, Codex otomasyonunu PAUSED yap; (b) bir süre ikisi çalışsın (öneri değil, çift kontrol riski); (c) şimdilik Codex'te kalsın, izleme taşınmadan Codex otomasyonu silinmesin. Taşınacaksa Chrome'da YouTube Studio, Meta Business Suite, TikTok oturumları açık mı?",
+   "Dört eski kuşak skil (hyperframes-creative, -animation, -keyframes, -audio) projenin kendi donmuş skili olarak konsun mu? Kaynak: bugünkü genel kopyalar (SHA'lar planla eşleşiyor), boşaltmadan önce. Ya da kütüphaneye geri alınsın mı (ayrı karar)? Bunlar olmadan roller (gorsel, kurgu, kalite, senaryo) planla tam çalışmaz.",
+   "hyperframes için: program paketinden bağ (güncel 0.9.35, farklı kurallar) mı, kütüphane kopyası mı, bugünkü kuşak mı? OpenMontage'ın altı skili (d3-viz, manim-composer, manimce-best-practices, pose-library-design, svg-character-animation, visual-style) OM klonundan bağla mı kopya mı kalsın?",
+   "CLAUDE.md yapısı: '@AGENTS.md' içe aktarma + blok (öneri) mı, kuralı CLAUDE.md'ye taşıma mı?",
+   "Claude rol dosyaları: ad altçizgili kalsın mı (önce sınanır) tire mi? Model ve effort boş (oturum modeli) mı, belirli bir model mi? Kalite ve yayın uzmanlarından Write alınsın mı? Uzmanlardan tarayıcı alınsın mı (öneri: evet)?",
+   "Proje düzeyi .claude/settings.json yazılsın mı (okuma ve python3 -B 02_Operasyon/... izinleri; isteğe bağlı sır/ödeme hook'u)? Codex'in 'sormadan çalış' davranışı Claude'da nasıl olsun?",
+   "Metin güncellemeleri (AGENTS.md bir cümle, CALISMA-DUZENI.md satır 19, AJAN-EKIBI.md, BECERI-KULLANIM-PLANI.json entrypoint ve kurulu-sayılan skiller) yapılsın mı? ajan-gorevleri.json tarihçesine dokunulmaz.",
+   "Akil-disi-* sekiz rol skili '--dondur' ile .claude/skills'e mi alınsın, yoksa .agents/skills'te kalıp Claude'a bağla mı (araç davranışına göre)?"
+  ]
+ },
+ "akildisi_karsilastirma": {
+  "skiller": [
+   {
+    "ad": "hyperframes-creative",
+    "bugunku_kopya": "Proje içinde YOK: .agents/skills/hyperframes-creative ile .claude/skills/hyperframes-creative birbirine işaret eden döngü bağ (iki yönde de çözülmüyor). Tek gerçek kopya ~/.claude/skills/hyperframes-creative (79 dosya, ~1,4 MB; story-spine.md, narration.md, beat-direction.md dahil). ~/.agents/skills'te aynı adla FARKLI kuşak var (SKILL.md, composition-patterns, story-spine, storyboard-recipe farklı). ~/.codex/skills/hyperframes-creative ~/.claude'a bağ. Toml satır 26 ve BECERI planı bu yolu/kopyayı adlandırıyor (plan sha 9da7b7ac; ölçüm haritayla uyumlu, ben yeniden hesaplamadım).",
+    "program_karsiligi": "OpenMontage ~/.openmontage/.agents/skills/hyperframes-creative (fecb9a1e) VAR ama FARKLI kuşak: ~/.claude kopyasından SKILL.md, composition-patterns, design-spec, house-style, motion-principles, prompt-expansion farklı; frame-presets/claude yalnız OM'de, code-editorial yalnız ~/.claude'da; references/story-spine.md ve storyboard-recipe.md OM'de YOK (BECERI planı story-spine.md'yi okuyor). HyperFrames paketinde (dist/skills: hyperframes, hyperframes-cli, media-use) YOK.",
+    "kutuphane_karsiligi": "registry.json'da kayıt yok. kaynaklar.json arsivden_cikarilanlar: heygen-com/hyperframes skills/hyperframes-creative (25126bca) ve OpenMontage .agents/skills/hyperframes-creative (c8066452), ikisi 2026-10-22'de 'eski kuşak, kullanıcı kararı kaldırılsın' diye çıkarılmış. arsiv/ altında klasörü yok.",
+    "fark": "OM ve ~/.agents kuşakları projenin dayandığı kopyadan farklı; ~/.claude kopyası planın kayıtlı sha'sıyla eşleşen tek kuşak. OM'ye bağlanırsa story-spine.md kaybolur ve planın narrative_reference_policy'si boşa düşer.",
+    "oneri": "dondur (K-28): '--dondur ~/.claude/skills/hyperframes-creative' (kaynak ~/.claude, ~/.agents DEĞİL). Önce döngü bağ sökülür (onayla). Boşaltmadan önce ayrı yedek şart: 11-08 yedeğinde yok. Kesinlik yüksek."
+   },
+   {
+    "ad": "hyperframes-animation",
+    "bugunku_kopya": "Proje içinde YOK. ~/.claude/skills/hyperframes-animation ve ~/.agents/skills/hyperframes-animation gerçek klasör, diff -rq ile birebir aynı (122 dosya, ~1,5 MB). ~/.codex/skills'te YOK: akil_gorsel ve akil_kalite toml satır 30'daki yol bugün zaten ölü. Plan sha b35f1f8e.",
+    "program_karsiligi": "OpenMontage ~/.openmontage/.agents/skills/hyperframes-animation VAR, genel kopyadan 93 girdi farklı (eski/başka kuşak). HyperFrames paketinde YOK.",
+    "kutuphane_karsiligi": "registry'de yok. arsivden_cikarilanlar: hem heygen-com/hyperframes (25126bca) hem OpenMontage (c8066452) kaynaklı, 2026-10-22'de çıkarılmış.",
+    "fark": "OM kopyası eşdeğer değil; paket yeni kuşakta bunu hyperframes/media-use içine dağıtmış (hyperframes-core ve animation yok). Frozen kopya ayrıca /hyperframes-core, /hyperframes-keyframes, /hyperframes-creative'e atıf yapıyor; hyperframes-core boşaltmayla kalkar (genel_not).",
+    "oneri": "dondur: '--dondur ~/.claude/skills/hyperframes-animation'. Tek yer iki genel klasör ve ikisi de boşaltılacak. Kesinlik yüksek."
+   },
+   {
+    "ad": "hyperframes-keyframes",
+    "bugunku_kopya": "Yalnız ~/.agents/skills/hyperframes-keyframes (3 dosya, 28 KB: SKILL.md, references/keyframe-patterns.md, agents/openai.yaml). ~/.claude, ~/.codex, OM, HyperFrames paketi, registry.json, 11-08 yedeği (LISTE.md 27 skill, hiçbiri hyperframes-*) ve arsiv/ altında YOK. Plan sha d6484e83. Toml satır 34 yolu ölü.",
+    "program_karsiligi": "YOK (ne OM ne paket).",
+    "kutuphane_karsiligi": "registry'de yok; arsivden_cikarilanlar: heygen-com/hyperframes skills/hyperframes-keyframes (25126bca), 2026-10-22.",
+    "fark": "Tek gerçek kopya; frozen kopya /hyperframes-core, /hyperframes-audio, /hyperframes-animation, /hyperframes-registry'ye atıf yapıyor.",
+    "oneri": "dondur: '--dondur ~/.agents/skills/hyperframes-keyframes'. Dondurulmadan ~/.agents boşaltılırsa kalıcı kayıp: BOŞALTMAYI ENGELLEYEN madde. Ek yedek (ayrı klasöre kopya) önerilir. Kesinlik yüksek."
+   },
+   {
+    "ad": "hyperframes-audio",
+    "bugunku_kopya": "Gerçek kopya ~/.agents/skills/hyperframes-audio (8 dosya, 112 KB, scripts/carve.mjs + references). ~/.claude/skills/hyperframes-audio göreli bağ -> ../../.agents/skills/hyperframes-audio; ~/.codex'ta YOK (toml satır 38 ölü). Plan sha daf32503.",
+    "program_karsiligi": "YOK (OM'de dizin yok; paket yalnız hyperframes, hyperframes-cli, media-use).",
+    "kutuphane_karsiligi": "registry'de yok; arsivden_cikarilanlar: heygen-com/hyperframes skills/hyperframes-audio (25126bca), 2026-10-22.",
+    "fark": "Paket ses mantığını media-use/hyperframes'e taşımış olabilir ama bu içerik karşılaştırılmadı; eşdeğer sayılmaz.",
+    "oneri": "dondur: '--dondur ~/.agents/skills/hyperframes-audio' (bağ değil gerçek klasör kaynak alınır). ~/.agents boşaltmadan önce şart. Kesinlik yüksek."
+   },
+   {
+    "ad": "hyperframes",
+    "bugunku_kopya": "Proje: .agents/skills/hyperframes gerçek kopya (kütüphane heygen-com/hyperframes skills/hyperframes @ f8309b35; arsiv kopyasıyla diff -rq: yalnız KAYNAK.md farkı). ~/.agents/skills/hyperframes projedekiyle birebir aynı (diff -rq 0 fark). ~/.claude/skills/hyperframes başka (eski) kuşak. ~/.codex'ta yok (BECERI plan satır 667 entrypoint ölü). akil_kurgu.toml satır 3 ve akil-disi-kurgu SKILL.md satır 10 ~/.agents/skills/hyperframes/SKILL.md yolunu okuyor: boşaltmayla ölür.",
+    "program_karsiligi": "VAR: /usr/local/lib/node_modules/hyperframes/dist/skills/hyperframes (0.9.35). Projeden FARKLI: SKILL.md, format.md, motion.md, plugin-installation.md, runtimes.md, skill-lifecycle.md, storyboard.md, types/3d.md, bake-basemap.mjs, locate.mjs, plugin-cli.mjs (+ test) farklı; pakette fazladan references/path-tracing.md ve scripts/lib/windows-exe-search.mjs(+test). Önemli SKILL.md farkları: (1) kural 8 projede 'video YA DA sarmalayıcıyı zamanla, ikisini değil', pakette 'video'yu zamanla, sarmalayıcıyı asla' (zamanlama kuralı DEĞİŞMİŞ); (2) pakette 'Usage beacon: npx hyperframes events --skill=hyperframes' satırı var (telemetri; hesaba bağlı olabilir; ortam kilitleri NO_UPDATE_CHECK/NO_AUTO_INSTALL bunu kapatmaz, ayrıca karar gerekir); (3) 'init ... --skip-skills --skill=hyperframes'; (4) yeni yönlendirmeler /reverse-any-video, /style-sampling (pakette bu skiller yok) ve /figma, /slideshow (yalnız genel klasörde var, boşalacak); (5) /hyperframes-cli ve /media-use'ye atıf: ikisi paketin içinde.",
+    "kutuphane_karsiligi": "registry: hyperframes (tercih, heygen-com/hyperframes, f8309b35, arsiv/g-video-ses-medya/01-video-uretim-montaj/hyperframes, kismen ücretli); hyperframes@openai alternatif. Çıkarılmış değil.",
+    "fark": "Aynı skill, bir kuşak ileri paket. Proje betikleri ve BECERI planı eski kuralı varsayıyor olabilir; 0.9.35 lint'iyle sınanmadı (okuma-only oturum).",
+    "oneri": "programa bağla (K-28): '--program-skill hyperframes:hyperframes' (kurulu 0.9.35; güncelleme kendiliğinden gelir). Ek olarak hyperframes-cli ve media-use da aynı programdan bağlanabilir (yeni skill atıf ediyor). Koşul: kullanıcı yeni zamanlama kuralı ve beacon satırını bilerek kabul eder; üretimsiz bir deneme (kuru render/lint) yapılır. Kabul edilmezse alternatif: kütüphane kopyası (f8309b35) kalır ve program değişimi sonra yapılır; o durumda yol atıfı proje içine çevrilir."
+   },
+   {
+    "ad": "hyperframes-registry--kutuphane",
+    "bugunku_kopya": "Proje: .agents/skills/hyperframes-registry--kutuphane (kütüphane @ f8309b35; arsivden yalnız SKILL.md ad satırı: name: hyperframes-registry--kutuphane). ~/.agents ve ~/.claude'daki düz adlı kopya projeden 2 dosya farklı (SKILL.md, references/contributing.md). ~/.codex'ta yok (toml satır 46 ölü; yalnız gorsel rolünde enabled=true).",
+    "program_karsiligi": "HyperFrames paketinde YOK; OM'de hyperframes-registry var ama farklı sürüm/kuşak (arsivden_cikarilanlar OM c8066452 için de kayıtlı).",
+    "kutuphane_karsiligi": "registry: hyperframes-registry (tercih, heygen-com/hyperframes, f8309b35, arsiv/g-video-ses-medya/01-video-uretim-montaj/hyperframes-registry, ucretsiz); hyperframes-registry@openai alternatif.",
+    "fark": "Genel kopya eski; projeninki kütüphane kuşağı. SKILL.md '../hyperframes/references/plugin-installation.md' kardeş yolunu kullanıyor: hyperframes dizini (bağ da olsa) yan yana kalmalı.",
+    "oneri": "kütüphaneden kur (yerinde kalır): genel kopya kalkınca ad '--kutuphane' ekinden düz 'hyperframes-registry'ye dönebilir (plan düz ad bekliyor); yeniden kurulumda/ad düzeltmede kilit ve CLAUDE.md tablosu güncellenir. Kesinlik orta (ad düzleşmesinde araç davranışı yazılmadı, çalıştırılmadı)."
+   },
+   {
+    "ad": "captions-overlay",
+    "bugunku_kopya": "Proje: captions-overlay--kutuphane (kütüphane heygen-com/hyperframes .claude/skills/captions-overlay @ f8309b35; arsivden yalnız ad satırı farkı). ~/.claude ve ~/.agents'te düz adlı gerçek kopya; ~/.codex/skills/captions-overlay ~/.claude'a bağ (toml satır 42). Projeden yalnız SKILL.md farklı (ad/description/metadata).",
+    "program_karsiligi": "Paket ve OM'de YOK.",
+    "kutuphane_karsiligi": "registry: captions-overlay (tercih, f8309b35, arsiv/g-video-ses-medya/01-video-uretim-montaj/captions-overlay, ucretsiz).",
+    "fark": "SKILL.md metin farkı küçük; içerik aynı kuşak.",
+    "oneri": "kütüphaneden kur (yerinde kalır). Program bağı yok. Genel kopya silinince ad düzleşmesi ve toml yol düzeltmesi gerekir. Kesinlik yüksek."
+   },
+   {
+    "ad": "motion-doctrine",
+    "bugunku_kopya": "Proje: motion-doctrine--kutuphane (@ f8309b35; arsivden yalnız SKILL.md ad satırı farklı). ~/.agents/skills/motion-doctrine gerçek, ~/.codex bağı oraya (toml satır 50); ~/.claude'da yok. Projeden SKILL.md ve scripts/seam-gate.mjs farklı: kütüphane/proje sürümünde (ben diff ile doğruladım) 'repo-yerel CLI öncelikli, yoksa npx hyperframes preview' bloğu var, genel kopyada yalnızca 'npx --yes hyperframes preview'. scripts/seam-stamp.mjs birebir aynı. S002-S007 build_video.py (~/.codex/skills/motion-doctrine/scripts/seam-stamp.mjs) bu yola bağlı.",
+    "program_karsiligi": "Paket ve OM'de YOK.",
+    "kutuphane_karsiligi": "registry: motion-doctrine (tercih, f8309b35, arsiv/g-video-ses-medya/04-motion-graphics-karakter/motion-doctrine, ucretsiz).",
+    "fark": "Genel kopya eski kuşak (seam-gate'te repo-yerel CLI önceliği yok); proje kopyası yeni. Proje kopyası kullanılmalı.",
+    "oneri": "kütüphaneden kur (yerinde kalır). Pasif betik S002-S007 yolu proje içi yola çevrilmez (yayımlanmış videolar); yeni üretimde proje yolu kullanılır. Kesinlik yüksek."
+   },
+   {
+    "ad": "seam-craft",
+    "bugunku_kopya": "Proje: seam-craft--kutuphane (@ f8309b35, arsivden yalnız ad satırı). ~/.agents/skills/seam-craft gerçek; ~/.codex bağı (toml satır 54). Projeden yalnız SKILL.md farklı.",
+    "program_karsiligi": "Paket ve OM'de YOK.",
+    "kutuphane_karsiligi": "registry: seam-craft (tercih, f8309b35, arsiv/g-video-ses-medya/04-motion-graphics-karakter/seam-craft, ucretsiz).",
+    "fark": "Yalnız SKILL.md ad/description düzeyi.",
+    "oneri": "kütüphaneden kur (yerinde kalır). Kesinlik yüksek."
+   },
+   {
+    "ad": "cut-the-curve",
+    "bugunku_kopya": "Proje: cut-the-curve--kutuphane (@ f8309b35). ~/.agents/skills/cut-the-curve gerçek, ~/.codex bağı; tomlda yok, planda ad geçmez/yardımcı. Projeden yalnız SKILL.md farklı.",
+    "program_karsiligi": "Paket ve OM'de YOK.",
+    "kutuphane_karsiligi": "registry: cut-the-curve (tercih, f8309b35, arsiv/g-video-ses-medya/04-motion-graphics-karakter/cut-the-curve, ucretsiz).",
+    "fark": "Yalnız SKILL.md.",
+    "oneri": "kütüphaneden kur (yerinde kalır). Kesinlik yüksek."
+   },
+   {
+    "ad": "d3-viz, manim-composer, manimce-best-practices, pose-library-design, svg-character-animation, visual-style (altı OpenMontage kaynaklı)",
+    "bugunku_kopya": "Projede kütüphane kopyası (kilit: calesthio/OpenMontage @ 195eab24; registry'de repo adı OpenMontageInc/OpenMontage, aynı commit). Kopyalar eski genel klasörlerde bu adlarla da var ama bu altısı için ~/.claude/~/.agents ayrıca gerekmiyor.",
+    "program_karsiligi": "VAR: ~/.openmontage/.agents/skills/<ad> (OM fecb9a1e, altısı da mevcut). diff -rq: manim-composer, manimce-best-practices, pose-library-design, svg-character-animation, visual-style BİREBİR AYNI; d3-viz yalnız SKILL.md'de 2 satır (chart-template/interactive-template .js mi .jsx mi) farklı.",
+    "kutuphane_karsiligi": "registry: hepsi tercih, OpenMontageInc/OpenMontage, 195eab24, arsiv/a-tasarim-onyuz/07-gorsel-sanat-sunum/d3-viz ve arsiv/g-video-ses-medya/04-motion-graphics-karakter/{manim-composer,manimce-best-practices,pose-library-design,svg-character-animation,visual-style}, ucretsiz.",
+    "fark": "İçerik aynı kuşak. Bağ yolunda OM güncellenince proje skili sessizce değişir (OM'nin diğer HyperFrames skillerinde kuşak farkı görüldü).",
+    "oneri": "programa bağla (K-28): '--program-skill openmontage:<ad>' altısı için. K-27 ('OM yalnız IstatistikYoutube') ile çelişki var: bu proje OM'yi project-env.py ve om-runtime ile kullanıyor, yani bağ gerekçeli; ama karar kullanıcıda. Kullanıcı kabul etmezse kütüphaneden kur (aynı içerik). Kesinlik orta-yüksek."
+   },
+   {
+    "ad": "imagegen (Codex .system)",
+    "bugunku_kopya": "~/.codex/skills/.system/imagegen/SKILL.md (Codex'in sistem skili, boşaltmada korunur). akil_gorsel.toml satır 3 ve akil-disi-gorsel/SKILL.md satır 10 mutlak yol veriyor; S012 vb. görseller ~/.codex/generated_images altında.",
+    "program_karsiligi": "Claude tarafında karşılığı yok; OpenMontage'da resim araçları var (tools/graphics: flux_image, google_imagen, atlas_image, bfl_image, dashscope_image vb.; anahtarlar global .env'de, değerler okunmadı).",
+    "kutuphane_karsiligi": "registry'de aynı iş yok (imagegen-frontend-web/-mobile farklı iş). arsivden_cikarilanlar'da nexu-io imagegen (e03d5c23) çıkarılmış; ChatGPT yerleşik aracına eşdeğer değil.",
+    "fark": "Yol canlı ve boşaltmayla bozulmaz ama Claude'da çalışmaz; 'ChatGPT görsel aracını kullan' kuralı Claude'da yürümez.",
+    "oneri": "gerekmez (skill olarak taşınmaz) + yerinde kalır (.system). Rol skilindeki cümle için KARAR kullanıcıda: Higgsfield generate_image (ücretli, kredi onayı), OM ücretsiz görsel araçları ya da Codex'te bırakma. Yolu sessizce silme."
+   },
+   {
+    "ad": "talking-head-recut (yalnız assets/vendor/gsap.min.js)",
+    "bugunku_kopya": "~/.claude/skills ve ~/.agents/skills'te gerçek, iki kopya birbirinden farklı (SKILL.md, media-contract.test.mjs, references/frames/hairline.html). Proje skili olarak kurulu değil; yalnız S001 build_video.py satır 31 ~/.agents altındaki gsap.min.js'i kopyalıyor.",
+    "program_karsiligi": "Paket ve OM'de YOK.",
+    "kutuphane_karsiligi": "registry'de kayıt yok; arsivden_cikarilanlar: heygen-com/hyperframes talking-head-recut (25126bca).",
+    "fark": "Pasif betik; 03_Uretim'de 70 gsap.min.js zaten her kompozisyonun assets klasöründe.",
+    "oneri": "gerekmez. S001 betiği Arthur finali için çalıştırılmıyor (BECERI/URETIM kaydı)."
+   },
+   {
+    "ad": "general-video, faceless-explainer, remotion-to-hyperframes (yalnız --skill / authoringSkill etiketi)",
+    "bugunku_kopya": "~/.claude/skills ve ~/.agents/skills'te skill olarak var (boşaltılacak). Projede skill olarak okunmuyor: 83 hyperframes.json'da 53 faceless-explainer, 30 general-video etiketi; render betiklerinde --skill=...",
+    "program_karsiligi": "Paket ve OM güncel kuşağında YOK (paket yalnız hyperframes, hyperframes-cli, media-use).",
+    "kutuphane_karsiligi": "general-video ve faceless-explainer: arsivden_cikarilanlar (heygen-com/hyperframes, 25126bca, 2026-10-22). remotion-to-hyperframes: OM kaydı çıkarılmış (c8066452), registry'de heygen-com/hyperframes tercih (f8309b35, ucretsiz) VAR.",
+    "fark": "Etiket yalnız etiket; CLI doğrulaması regex düzeyinde (haritaya göre; ben CLI'yı çalıştırmadım).",
+    "oneri": "gerekmez (etiket) ; remotion-to-hyperframes istenirse kütüphaneden kur. Boşaltmadan sonra bir deneme render/lint ile etiketin hata vermediği sınanmalı (bu oturumda sınanmadı)."
+   },
+   {
+    "ad": "akil-disi-* (8 rol skili: koordinasyon, analitik, arastirma, gorsel, kalite, kurgu, senaryo, yayin)",
+    "bugunku_kopya": "Yalnız projede .agents/skills altında gerçek klasör (SKILL.md + agents/openai.yaml, ~31 KB); .claude/skills'te bağları YOK; kilitte/kütüphanede yok.",
+    "program_karsiligi": "Yok (projeye özgü).",
+    "kutuphane_karsiligi": "registry'de yok; kullanıcının kendi skilleri.",
+    "fark": "Codex'e özgü agents/openai.yaml zararsız. SKILL.md içinde mutlak yollar: gorsel ve kurgu satır 10 (imagegen ve ~/.agents/skills/hyperframes).",
+    "oneri": "yerinde kalır (kullanıcının kendi skili). Claude'a görünür kılmak için '--dondur .agents/skills/akil-disi-X' (ya da .claude/skills'e bağ; araç davranışı belirsiz) ve iki satır 10 yolu proje içi/bağ yoluna çevrilir (onayla). İçerik aynen korunur."
+   },
+   {
+    "ad": "yt-package, yt-script, yt-retention, yt-shorts, ig-reel, de-ai-ify, hypothesis-generation, scientific-critical-thinking, huashu-art-motion, motion-design--kutuphane, design-taste-frontend, high-end-visual-design",
+    "bugunku_kopya": "Projede kütüphane kopyası (kilit sürüm 3, 2026-11-07). Genel klasörlerle ilgisi yok. motion-design--kutuphane: kilitte nexu-io/open-design 12d970ea; kütüphane tercihi bugün lottiefiles/motion-design, nexu-io alternatif (987b2475); proje kopyası nexu kuşağı (arsiv motion-design@nexu-io ile yalnız ad satırı farkı + SOURCES.md).",
+    "program_karsiligi": "Paket/OM'de yok.",
+    "kutuphane_karsiligi": "registry: hepsi var (yt-*: Jakeschincariol/youtube-agent-skill a2feb210; ig-reel d03c56bb; de-ai-ify 6c56f351; hypothesis/scientific K-Dense-AI 5f2bc034; huashu 987b2475; design-taste Leonxlnx 12af471f; high-end-visual-design nexu soft-skill 987b2475), ucretsiz.",
+    "fark": "Yok (yeniden kurulumda motion-design için kaynağı sabitle). yt-script/yt-package/ig-reel ~/.claude/youtube ve ~/.claude/instagram altındaki isteğe bağlı profil dosyalarını arıyor (bugün klasörler yok, boşaltmadan etkilenmez). high-end-visual-design planın roller bölümünde geçmiyor.",
+    "oneri": "kütüphaneden kur (kalır). Kesinlik yüksek."
+   }
+  ],
+  "gecis_adimlari": [
+   "0. ÖN KOŞUL (bayraksız): '--program-skill' ve '--dondur' araç tarafında yazılıyor; çalışır hale gelmeden dondurma ve bağ adımlarına geçme. Kütüphane aracı çalıştırılmadan hiçbir şey elle cp/ln yapılmaz (kural 2).",
+   "1. TAM YEDEK (bayraksız, EN ÖNCE): ~/.claude/skills (bağlar dahil), ~/.agents/skills, ~/.codex/skills ve projenin .claude, .agents, .codex, .skill-kutuphanesi, AGENTS.md, CLAUDE.md ve 02_Operasyon klasörlerini tarihli yedek klasörüne al; 11-08 yedeği bu dört skili (creative, animation, keyframes, audio) İÇERMİYOR. Proje git deposu değil: geri alma yalnız bu yedekle olur. keyframes ve audio için ayrıca ayrı kopya al.",
+   "2. Dondurma kaynak doğrulaması (bayraksız, okuma): planın observed_sha256 değerleriyle (9da7b7ac creative, b35f1f8e animation, d6484e83 keyframes, daf32503 audio) kaynak klasörleri yeniden karşılaştır; creative ve animation için ~/.claude, keyframes ve audio için ~/.agents kaynak.",
+   "3. Döngü bağları söküm planı (onayla): proje .agents/skills/hyperframes-creative ve .claude/skills/hyperframes-creative bağları kaldırılır (yalnız sembolik bağlar, içerik yok); sonra dondurma ile yerine gerçek kopya gelir.",
+   "4. DONDUR (yeni bayrak '--dondur YOL'): hyperframes-creative (~/.claude/skills), hyperframes-animation (~/.claude/skills), hyperframes-keyframes (~/.agents/skills), hyperframes-audio (~/.agents/skills, bağ değil gerçek klasör). Dondurma sonrası dosya sayısı ve sha'lar (creative 79 dosya, animation 122, keyframes 3, audio 8) kaynakla eşleşmeli. Frozen skillerin /hyperframes-core atfı boşta kalır (genel_not).",
+   "5. PROGRAM BAĞI (yeni bayrak '--program-skill PROGRAM:AD'): önce kullanıcıdan karar al (zamanlama kuralı değişimi, beacon satırı, K-27 çelişkisi). Evet ise: hyperframes:hyperframes (kurulu 0.9.35), isteğe bağlı hyperframes:hyperframes-cli ve hyperframes:media-use; openmontage:d3-viz, manim-composer, manimce-best-practices, pose-library-design, svg-character-animation, visual-style. Hayır ise bu skiller kütüphane kopyası olarak kalır. Eski kopyalar silinmeden önce bağın çözüldüğü doğrulanır.",
+   "6. Kütüphane kopyaları (bayraksız, normal kurulum): captions-overlay, motion-doctrine, seam-craft, cut-the-curve, hyperframes-registry, yt-*, ig-reel, de-ai-ify, hypothesis-generation, scientific-critical-thinking, huashu-art-motion, motion-design (kaynağı sabitle), design-taste-frontend, high-end-visual-design yerinde kalır; kilitteki '--kutuphane' ekli adlar için düz ada çevirme kararı (planın ve toml'ların düz adı) ayrıca alınır. Skill ekleme kuralı: kural 4: --evet yalnız kullanıcı raporu görüp onaylayınca.",
+   "7. 8 akil-disi-* skili: '--dondur .agents/skills/akil-disi-X' (veya Claude'a görünür bağ) ile .claude/skills altında görünür hale getir (bayrak: --dondur); içerik aynen korunur.",
+   "8. Sabit yol düzeltmeleri (onaylı, elle, arşiv dışı proje dosyaları; bayraksız): akil-disi-kurgu ve akil-disi-gorsel SKILL.md satır 10; BECERI-KULLANIM-PLANI.json satır 667 (entrypoint) ve gemini_compatibility notu 699-701, 78/89/100/111 gerçek durum; 7 akil_*.toml içindeki 8 ~/.codex/skills yolu (Codex tarafı korunacaksa proje içi yola çevir; zaten 5'i ölü); akil_kurgu.toml satır 3. Yeni üretim betiklerinde seam-stamp yolu proje içi olur; S001-S007 pasif betikler, tarihçe ve ajan-gorevleri.json değiştirilmez.",
+   "9. Claude düzeni (bayraksız, kullanıcı kararı bekler): CLAUDE.md'ye '@AGENTS.md' + skill bloğu, .claude/agents rol dosyaları, imagegen kararı (Higgsfield / OM görsel araçları / Codex), izin ayarı; AGENTS.md metni değişmez (project-env.py ve structure_check.py ona bağlı). Codex heartbeat (10:00/20:00) PAUSED yapılmadan çift kontrol riski.",
+   "10. DOĞRULAMA (bayraksız): kutuphane '--dogrula', kapsam-denetimi ve dogrula.py; projede her skill yolunun çözüldüğü (readlink, ls), sha eşleşmeleri, 8 akil-disi-* görünürlüğü; Claude oturumunda /skills listesi; üretimsiz hyperframes lint/render denemesi (kural değişimi ve --skill etiketi sınaması; kullanıcı yapar ya da onayla).",
+   "11. BOŞALTMA (rehber/12, sıra önemli): önce ~/.claude/skills (yalnız openmontage, youtube-arama, nlm-skill, design-dna ve synced kalır), sonra ~/.codex/skills (.system kalır), ~/.agents/skills EN SONA (keyframes ve audio'nun tek gerçek kopyası burada; adım 4 doğrulanmadan boşaltılmaz). Her sınıftan sonra adım 10 kontrolü; yedek kullanıcı 'sil' demeden silinmez, aynı gün hatırlatma.",
+   "12. GERİ ALMA: yedekten geri-al betiği/kopya; bağ ve dondurma adımları proje .skill-kutuphanesi yedeğiyle geri alınır. Boşaltma sonrası bozulan bir şey çıkarsa yedeği geri koy, nedeni raporla."
+  ],
+  "genel_not": "Doğruladıklarım (okuma): bağ zincirleri (proje .claude/.agents döngüsü, ~/.codex bağları, ~/.claude/hyperframes-audio -> ~/.agents), diff -rq sonuçları (creative claude vs agents farklı; animation birebir aynı; creative/animation OM'den farklı; keyframes ve audio yalnız ~/.agents; OM'deki 6 skill proje kopyasıyla aynı, d3-viz 2 satır fark; hyperframes proje = ~/.agents birebir, dist'ten 10+ dosya farklı), registry ve arsivden_cikarilanlar kayıtları, kilit commit'leri, planın okuduğu dosyaların (story-spine, narration, beat-direction) ~/.claude'da bulunması. Doğrulamadıklarım: planın sha değerlerini ben yeniden hesaplamadım (haritayla uyumlu kabul ettim); 39 adet ~/.npm/_npx başvurusu, S002-S007 satır numaraları, 83 hyperframes.json sayımı ve CLI etiketi regex davranışı haritadan geldi; araçlar ve hyperframes çalıştırılmadı; proje kopyası dört --kutuphane skili için SKILL.md farkını yalnız motion-doctrine ve registry'de satır düzeyinde baktım (diğerlerinde diff -rq yalnız SKILL.md farkı gösterdi). Ek bulgu: dondurulacak dört eski kuşak skili hyperframes-core'a atıf yapıyor (creative'de değil, animation/keyframes/audio'da); hyperframes-core hem ~/.claude'da hem OM'de var ama arsivden_cikarilanlar'da çıkarılmış sayılıyor ve bu boşaltmayla kalkar: yeni hyperframes skili işini üstlenir, bu atıflar boşta kalır (gerekirse dondurulan skillerin yanına hyperframes-core ayrıca dondurulur; karar kullanıcıda). Programdan bağlanan hyperframes skili /reverse-any-video ve /style-sampling'e yönlendiriyor: bunlar paketin dist/skills içinde yok; ayrıca beacon satırı telemetri çizgisiyle karşılaştırılmalı. 11-08 yedeği (27 addyosmani/remotion skili) bu projeyle ilgili değil; boşaltmadan önceki tam yedek bu dört skili kapsamak ZORUNDA. Üretim bekletmesi sürerken bağ/dondurma denemesi yapılabilir. Sonuç: dört dondurma (creative, animation, keyframes, audio) boşaltmanın ön koşulu; hyperframes ve OM altılısı program bağı adayı (kullanıcı kararlarıyla); geri kalan kütüphaneden; imagegen kararı kullanıcıda."
+ },
+ "etsy_arif": {
+  "duzen": "Etsy-Arif (Mac yolu /Users/sabanulukaya/Documents/Etsy-Arif; dal main, 6d905d0; git durumu temiz). Origin: arifbakii/tasarim-sitesi (GitHub). Ikinci kisi Arif (Windows), ayni depoda calisiyor; .claude/skills, .claude/agents, CLAUDE.md, .skill-kutuphanesi/kilit.json ve elle-kurulan.json git ile izleniyor (yalniz .skill-kutuphanesi/yedek/ gitignore'da). Kutuphanenin yazacagi her degisiklik projede izlenen dosya farki olarak gorunur; push/pull kullanicida, kutuphane oturumu yapmaz. Arac: yalniz Claude (kilit araclar=[claude], blok=kisa, surum 3, profil/roller bos, son guncelleme 2026-11-07). Skiller gercek klasor, symlink yok (.claude/skills altinda 0 baglanti). .claude/skills'te 37 klasor: 27 kutuphanenin kurdugu (kilitte), 10 Arif'in elle kurdugu (5'i elle-kurulan.json'da, 5'i hicbir kayitta yok). 34 ajan dosyasi (.claude/agents), hepsi 'skills:' satiriyla skil onyukluyor; tools/ajan_kontrol.py her skilin .claude/skills/<ad>/SKILL.md olarak var olmasini denetliyor. Ayri .claude/CLAUDE.md 0 bayt. .claude/settings.json: SessionStart'ta tools/kurulum.py kontrol ve tools/bekleyen.py, PreToolUse'ta tools/kanca_disari.py; eklentiler (superpowers acik). Ek: .claude/worktrees altinda 6 git worktree (kendi .claude kopyalariyla; ana klasordeki skil degisiklikleri onlara yansimaz, dokunulmamali). Yedek klasoru: .skill-kutuphanesi/yedek/ icinde 2 kayit (20261107-130620-175430 'ekle', 20261107-131858-330111 'guncelle'; her biri CLAUDE.md ve yedek.json; gitignore'da). son-rapor.md 2026-11-07 13:06 on kontrol raporu (etsy-seller yamasi, 3 BILGI, hata yok). Kutuphane kaydi: projeler.json 'bilinen_projeler' icinde Etsy-Arif takipte (2026-11-11); notlar/proje-kullanimi.md 27 skill/claude/kisa; notlar/proje-durumu.md 'dikkat': 27/37, 5 KAYITSIZ SKILL (design-principles, frontend-design, graphify, research-synthesis, ux-copy). Registry'de bu 27 skilin hepsi durum=tercih, ucretsiz, gizli degil.",
+  "kutuphanenin_kurduklari": [
+   {
+    "ad": "search-strategy",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins enterprise-search/skills/search-strategy @33d3dea4, klasor_hash 93740e31",
+    "bugun": "var; arsiv kopyasiyla birebir (diff -rq yalniz arsivdeki KAYNAK.md'yi gosteriyor)",
+    "kutuphanede_yeni_surum": "yok (registry klasor_hash ayni 93740e31; registry'deki repo commit'i 2574e293 daha yeni ama klasor icerigi degismemis)",
+    "kullanim": "evet: trend-avcisi (skills satiri)"
+   },
+   {
+    "ad": "knowledge-synthesis",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins enterprise-search/skills/knowledge-synthesis @33d3dea4, 793f14d0",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: trend-avcisi, referans-avcisi, sosyal-medya-gozcusu"
+   },
+   {
+    "ad": "seo-audit",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins marketing/skills/seo-audit @33d3dea4, b1c1ac83",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: etsy-pazar-analisti, seo-yazari"
+   },
+   {
+    "ad": "analyze",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins data/skills/analyze @33d3dea4, 4cf37cd2",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: performans-analisti, etsy-pazar-analisti"
+   },
+   {
+    "ad": "statistical-analysis",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins data/skills/statistical-analysis @33d3dea4, 76ee8ad8",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: performans-analisti, etsy-pazar-analisti"
+   },
+   {
+    "ad": "competitive-brief",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins marketing/skills/competitive-brief @33d3dea4, 89641c8a",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: rakip-takipcisi, etsy-stratejisti"
+   },
+   {
+    "ad": "competitive-pricing-strategy",
+    "kilit_kaydi": "nexscope-ai/eCommerce-Skills competitive-pricing-strategy @ee0fb294, d63afba7",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (ayni commit ve hash)",
+    "kullanim": "evet: fiyat-mimari, rakip-takipcisi"
+   },
+   {
+    "ad": "campaign-plan",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins marketing/skills/campaign-plan @33d3dea4, 29bb9a5c",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: fiyat-mimari, sezon-planlayici"
+   },
+   {
+    "ad": "design-dna--kutuphane (kimlik design-dna)",
+    "kilit_kaydi": "zanwei/design-dna @593e39bc, e384f311 (kurucu ad eki '--kutuphane': kullanicinin kendi genel design-dna'siyla cakismasin diye)",
+    "bugun": "var; arsivle birebir, tek fark SKILL.md 'name:' satiri (design-dna--kutuphane; kurulum donusumu, beklenen)",
+    "kutuphanede_yeni_surum": "yok (ayni commit ve hash). Registry: globalde.claude='farkli' (genel kopya kutuphaneden farkli, 134 dosya fazla); genel design-dna kullanicinin kendi 4 skilinden biri, bosaltmada yerinde kalir",
+    "kullanim": "evet: referans-analisti 'skills: design-dna--kutuphane, design-critique'"
+   },
+   {
+    "ad": "product-brainstorming",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins product-management/skills/product-brainstorming @33d3dea4, 8f6c440c",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: etsy-stratejisti"
+   },
+   {
+    "ad": "planning-and-task-breakdown",
+    "kilit_kaydi": "addyosmani/agent-skills skills/planning-and-task-breakdown @aeac41d4, 31c6aefa",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (registry commit 301b02b1 daha yeni ama klasor hash'i ayni)",
+    "kullanim": "evet: uretim-muduru, pazarlama-muduru, tasarim-muduru, arastirma-muduru, uretim-planlayici"
+   },
+   {
+    "ad": "performance-report",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins marketing/skills/performance-report @33d3dea4, 9d5b1769",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: performans-analisti"
+   },
+   {
+    "ad": "design-critique",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins design/skills/design-critique @33d3dea4, 7a5cad89",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet, en cok kullanilan: farklilik-denetcisi, referans-analisti, urun-denetcisi, ekip-patronu, kapak-yonetmeni"
+   },
+   {
+    "ad": "canvas-design",
+    "kilit_kaydi": "anthropics/skills skills/canvas-design @dbd4588f, 9ecd792f",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (registry commit ca45fc49 daha yeni, klasor hash'i ayni)",
+    "kullanim": "evet: sanat-yonetmeni, duzen-tasarimcisi, mockup-yonetmeni, kapak-yonetmeni"
+   },
+   {
+    "ad": "impeccable",
+    "kilit_kaydi": "pbakaus/impeccable plugin/skills/impeccable @e89e3ada, klasor_hash 7b71576a, varyantlar [claude, codex]",
+    "bugun": "var; arsiv/_varyantlar/impeccable/claude ile BIREBIR (ana arsivle fark yalniz Claude varyant donusumu: ${CLAUDE_SKILL_DIR} -> .claude/skills/impeccable yolu; elle degisiklik degil)",
+    "kutuphanede_yeni_surum": "yok (ayni commit)",
+    "kullanim": "evet: sanat-yonetmeni, duzen-tasarimcisi, tipografi-yonetmeni"
+   },
+   {
+    "ad": "ui-ux-pro-max",
+    "kilit_kaydi": "nextlevelbuilder/ui-ux-pro-max-skill .claude/skills/ui-ux-pro-max @3a13158f, 4871b5e3",
+    "bugun": "var; arsivle birebir. SORUN: SKILL.md 12 yerde ${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/scripts/search.py yolunu kullaniyor; projede bu degisken tanimli degil, komutlar calismaz (registry yol_bagimliligi=True; kurulum aracinin onerdigi yol cevirisi henuz uygulanmamis)",
+    "kutuphanede_yeni_surum": "yok (ayni commit); yalniz kurulumda yol cevirisi eksik",
+    "kullanim": "zayif: yalniz sanat-yonetmeni"
+   },
+   {
+    "ad": "content-creation",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins marketing/skills/content-creation @33d3dea4, 4cc7aef3",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: tema-metin-yazari, seo-yazari"
+   },
+   {
+    "ad": "etsy-seo",
+    "kilit_kaydi": "nexscope-ai/eCommerce-Skills etsy-seo @ee0fb294, 359a4663",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (ayni commit ve hash)",
+    "kullanim": "evet: seo-yazari, etsy-kural-denetcisi; docs/etsy-seller-kontrol.md"
+   },
+   {
+    "ad": "ffmpeg",
+    "kilit_kaydi": "calesthio/OpenMontage .claude/skills/ffmpeg @c8066452, 6d0d4e0d (repo GitHub'da OpenMontageInc/OpenMontage olarak tasinmis; registry yeni adi kullaniyor)",
+    "bugun": "var; arsivle birebir VE ~/.openmontage/.agents/skills/ffmpeg (fecb9a1e) ile de birebir (diff -rq bos). Yalniz SKILL.md + 1 dosya; OpenMontage'a ozgu komut yok denecek kadar az (1 eslesme, 'improve this skill' notu)",
+    "kutuphanede_yeni_surum": "yok; program kurulu surumu ayni. K-28'e gore program skili: ancak bu proje Arif'le Windows'ta da calisiyor, OpenMontage yalniz Mac'te ve yalniz IstatistikYoutube'da (K-27), bu yuzden bag tasinabilir degil",
+    "kullanim": "evet: video-yonetmeni; docs/calisma-duzeni.md; tools/ilan/video.py ffmpeg'i dogrudan cagiriyor (skile baglanmiyor)"
+   },
+   {
+    "ad": "video-edit",
+    "kilit_kaydi": "calesthio/OpenMontage .claude/skills/video-edit @c8066452, 626703fe",
+    "bugun": "var; arsivle ve ~/.openmontage/.agents/skills/video-edit ile birebir",
+    "kutuphanede_yeni_surum": "yok; program ayni surumde (fecb9a1e). Registry bagimlilik notu: OpenMontage kurulumu ister, ama projedeki metinde OpenMontage komutu 0",
+    "kullanim": "evet: video-yonetmeni"
+   },
+   {
+    "ad": "playwright-recording",
+    "kilit_kaydi": "calesthio/OpenMontage .claude/skills/playwright-recording @c8066452, d25f59c2",
+    "bugun": "var; arsivle ve ~/.openmontage/.agents/skills/playwright-recording ile birebir",
+    "kutuphanede_yeni_surum": "yok; program ayni surumde",
+    "kullanim": "evet: video-yonetmeni (ajan yontemi projedeki Python Playwright ile uyguluyor: 'record_video_dir')"
+   },
+   {
+    "ad": "webapp-testing",
+    "kilit_kaydi": "anthropics/skills skills/webapp-testing @dbd4588f, b2d9f72c",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: uygulama-test-uzmani"
+   },
+   {
+    "ad": "accessibility-review",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins design/skills/accessibility-review @33d3dea4, 9b074be5",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: uygulama-test-uzmani"
+   },
+   {
+    "ad": "brand-review",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins marketing/skills/brand-review @33d3dea4, 6f91a4cf",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: tema-metin-yazari, etsy-kural-denetcisi"
+   },
+   {
+    "ad": "draft-response",
+    "kilit_kaydi": "anthropics/knowledge-work-plugins customer-support/skills/draft-response @33d3dea4, 7cacfcd2",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (hash ayni)",
+    "kullanim": "evet: musteri-yanitlayici"
+   },
+   {
+    "ad": "session-report",
+    "kilit_kaydi": "anthropics/claude-plugins-official plugins/session-report/skills/session-report @af59ee3a, 22d4f3de",
+    "bugun": "var; arsivle birebir",
+    "kutuphanede_yeni_surum": "yok (registry commit a7ba5b93 daha yeni, klasor hash'i ayni)",
+    "kullanim": "HICBIR ajan ya da guncel talimat adlandirmiyor (yalniz eski belge docs/gecmis/CLAUDE-2026-11-06-tam.md'de 'arastirmadan sonra olcum' diye geciyor; guncel CLAUDE.md'de yok)"
+   },
+   {
+    "ad": "etsy-seller",
+    "kilit_kaydi": "moiz-za/etsy-seller-seo-system skill @0204bbc9, klasor_hash f149c924, onarim a4a61cd12c2b (kutuphane yamasi: 6 dosya)",
+    "bugun": "var; arsivle fark yalniz yamali 6 dosya (SKILL.md, references/playbooks/system-laws.md, listing-health-score.md, references/data-model/SCHEMA.md, scripts/README.md, scripts/bootstrap.py), registry'deki yama listesiyle ayni; baska fark yok. Durum klasoru proje icindeki etsy-listings/ (Arif ve kullanici ortak kaydi)",
+    "kutuphanede_yeni_surum": "yok (ayni commit)",
+    "kullanim": "evet: seo-yazari; docs/etsy-seller-kontrol.md, docs/pinterest-sureci.md, tools/ilan/pin.py (references/pinterest-guide.md okunuyor); bu yuzden tasinamaz/silinemez"
+   }
+  ],
+  "elle_kurulanlar": [
+   "humanizer (elle-kurulan.json'da; blader/humanizer; ajanlar tema-metin-yazari, seo-yazari)",
+   "model-aware-image-prompt-engineer (elle-kurulan.json'da; ajanlar istem-yazari, mockup-yonetmeni)",
+   "visual-qa (elle-kurulan.json'da; ajanlar urun-denetcisi, ekip-patronu, kit-denetcisi)",
+   "copywriting (elle-kurulan.json'da; ajanlar seo-yazari, kapak-yonetmeni)",
+   "marketing-psychology (elle-kurulan.json'da; ajanlar fiyat-mimari, kapak-yonetmeni)",
+   "design-principles (HICBIR kayitta yok; git: Arif 2026-10-31 'Tasarim skilleri: frontend-design ve design-principles'; ajanlar duzen-tasarimcisi, tipografi-yonetmeni)",
+   "frontend-design (kayitsiz; Arif 2026-10-31; ajanlar sanat-yonetmeni, duzen-tasarimcisi, tipografi-yonetmeni)",
+   "research-synthesis (kayitsiz; Arif 2026-10-31 'research-synthesis ve ux-copy (Anthropic)'; ajan etsy-stratejisti)",
+   "ux-copy (kayitsiz; Arif 2026-10-31; ajan tema-metin-yazari)",
+   "graphify (kayitsiz; Arif 2026-11-04 'Windows kurulumu: graphify skili ve kancalari'; CLAUDE.md ve tools/kurulum.py GRAPHIFY_SKILL yolu ona bagli)"
+  ],
+  "genel_klasor_bagimliligi": [
+   "Projede ~/.claude/skills, ~/.agents/skills, ~/.codex/skills, ~/.openmontage ya da ~/.claude/commands'i OKUYAN yer yok: CLAUDE.md, .claude/agents (34 dosya), .claude/settings.json, .mcp.json (bos), tools/, docs/, tests/, .githooks, .github tarandi. Bosaltma bu projeyi bozmaz.",
+   "Tek 'genel klasor' gecen yerler okuma degil: tools/kanca_disari.py ve tests/test_kanca_disari.py:18 ile docs/calisma-duzeni.md:31 yalnizca ~/.claude'u 'izinli dis yer' olarak sayiyor; .claude/skills/design-principles/README.md:24 (Arif'in) kurulum metni, calistirilan sey degil.",
+   "Skil icinde: ui-ux-pro-max/SKILL.md satir 42, 78, 85, 93, 116, 131, 137, 160, 180, 183, 186 ${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/scripts/search.py kullaniyor. Bu genel klasore degil eklenti kokune bagli; projede degisken yok, bosaltmadan bagimsiz zaten kirik (yalniz sanat-yonetmeni kullaniyor). impeccable/reference/* proje-gorece .claude/skills/impeccable/scripts yolunu kullaniyor, sorun yok.",
+   "ffmpeg, video-edit, playwright-recording: genel klasorde ~/.claude/skills altinda ~/.openmontage/.agents/skills'e bag olarak duruyorlar ('globalde: ayni') ama projedeki kopyalar gercek klasor; genel baglar silinse de proje etkilenmez.",
+   "design-dna--kutuphane: genel ~/.claude/skills/design-dna kullanicinin kendi skili, yerinde kalir; projedeki kopya baglanti degil, bagimsiz.",
+   "settings.json'daki eklentiler (superpowers@claude-plugins-official) eklenti onbellegini kullanir, genel skill klasorlerini degil.",
+   "Sonuc: Etsy-Arif genel klasorlere bagli degil; bosaltmadan once projede yapilmasi gereken zorunlu is yok."
+  ],
+  "talimat_blogu": "VAR ve saglam. CLAUDE.md satir 94-98: '<!-- skill-kutuphanesi:basla -->' ... '<!-- skill-kutuphanesi:bitir -->' (tek cift, 1 basla + 1 bitir). HEAD'de de var (git show HEAD:CLAUDE.md). Metin: '27 skill .claude/skills/ altinda ... guncelleme 2026-11-07 ... skill-ekle.py <proje> --durum / --guncelle; Windows'ta skill ekleme/silme yapma; elle kurulanlar .skill-kutuphanesi/elle-kurulan.json'. Onceki not ('sadelestirmede bilerek kaldirildi') bu haliyle DOGRU DEGIL, su sirayla: Arif 2026-11-06 1531440 'Sadelestirme: CLAUDE.md 36 KB -> ~8 KB' ile uzun skill bolumunu attı (eski tam hali docs/gecmis/CLAUDE-2026-11-06-tam.md); kutuphane ertesi gun 2026-11-07 ec11110 (ulukayasaban) 'CLAUDE.md kisa skill bloğu' ile kisa blogu yeniden ekledi (blok=kisa) ve o tarihten beri git gecmisinde duruyor, sonraki hicbir commit kaldirmadi (git log -S 'skill-kutuphanesi:basla' yalniz ec11110'u gosteriyor). Yani kaldirma 06.11'de, onceki uzun blok icindi; bugunku kisa blok bilincli sadelestirmeden sonra konan ve korunan blok. Dogrulama (dogrula.py/skill-ekle --dogrula) bu blok icin gecerdi: isaretler esli, sayi 27 = kilitteki skill sayisi, kilit yolu dogru. Not: blok 27 diyor, klasorde 37 skill var (10'u Arif'in); yanlis degil ama bilgi eksik, elle-kurulan.json yalniz 5'ini kapsiyor. Blogun metni yalniz kutuphane aracinin yazdigi sekilde (--evet) guncellenir, elle degil.",
+  "oneriler": [
+   "1) Hicbir sey acil degil ve bozuk degil: 27 skilin 27'si arsivle birebir (impeccable Claude varyantiyla, etsy-seller kayitli yamasiyla, design-dna yalniz ad satiriyla), kilitle uyumlu, kutuphanede yeni icerik yok (tum klasor hash'leri ayni). Sebep: bosaltmadan once projede yapilacak zorunlu is yok, genel klasorlere bagimlilik 0. Once kullaniciya bu durumu soyle.",
+   "2) KARAR GEREKLI (kullaniciya sor, kendin secme): ffmpeg, video-edit, playwright-recording. K-28 'program skilleri baglanir' diyor, ama burada bag uygun degil: proje git ile Arif'in Windows'una gidiyor (bag /Users/... yolunu gosterir ve git/Windows'ta kirilir), OpenMontage yalniz Mac'te ve K-27'ye gore yalniz IstatistikYoutube'a ait, projedeki kopyalar zaten kurulu OpenMontage (fecb9a1e) ile birebir ve OpenMontage'a ozgu komut icermiyor. Oneri: --program-skill KULLANMA; --dondur ile (ya da kilitte birakarak) bu uc skili projenin kendi gercek klasoru olarak sabitle ve kilit/kayitta 'program skili degil, dondurulmus kopya' diye isaretle; ya da kullanici istemezse video-yonetmeni'nin 'skills:' satirindan cikarip kaldir (ajan dosyasi Arif'in, o yuzden onun onayi olmadan degistirme). Her iki yolda da kutuphane aracinin kayit/yedek akisi kullanilir, elle cp/ln yok.",
+   "3) ui-ux-pro-max yol cevirisini uygula: once 'skill-ekle.py Etsy-Arif --guncelle --kuru' ile onizle, rapor onaydan sonra --evet; ${CLAUDE_PLUGIN_ROOT}/.claude/skills/... satirlari proje-gorece .claude/skills/ui-ux-pro-max/scripts/search.py olur (impeccable'da ayni yaklasim zaten var). Sebep: bugun SKILL.md'deki 12 komut projede calismiyor. Etkisi tek skil ve tek ajan (sanat-yonetmeni); izlenen dosya degisecegi icin Arif sonra pull'da gorur, kutuphane push etmez.",
+   "4) Ayni --guncelle --kuru raporunda kilit yenilemesine bak: kilit commit'leri (33d3dea4 vb.) registry'deki daha yeni repo commit'lerinden geride, ama icerik ayni; yeni commit degerleri yazilirsa yalniz kilit.json degisir. Ayrica OpenMontage kayitlari calesthio/OpenMontage -> OpenMontageInc/OpenMontage ad degisikligini yansitir. Dosya icerigi degismiyorsa bu zararsiz, onay raporunda 'yalniz kilit kaydi' diye goster.",
+   "5) CLAUDE.md blogunu elle DEGISTIRME. Kurulum --evet ile bloku aracin kendisi tazeler; kontrol: 'skill-ekle.py Etsy-Arif --dogrula' blogun varligini ve esli isaretleri dogrular. Bloga eklenecek tek bilgi (kullanici ister ve onaylarsa): sayinin yaninda Arif'in elle kurdugu skillerin de oldugu; yoksa degistirme.",
+   "6) Kayitsiz 5 skil (design-principles, frontend-design, graphify, research-synthesis, ux-copy): kutuphane tarafinda projeler.json -> kendi_skilleri -> 'Etsy-Arif' altina ad olarak yazilsin ki notlar/proje-durumu.md 'KAYITSIZ SKILL' uyarisi kapansin (kutuphane dosyasi, projeye dokunmaz). elle-kurulan.json proje icinde ve git'te izleniyor; Arif'in dosyasi gibi davranip ona 5 satir eklemek icin once kullaniciya sor, bence gerekli degil.",
+   "7) session-report: kimse adlandirmiyor. Silme, kullaniciya 'hala gerekli mi' diye sor; gerekli degilse kutuphane araciyla kaldir (kilit + blok sayisi guncellenir). Kendiliginden silme.",
+   "8) Her adimdan sonra kutuphane tarafinda: skill-ekle.py Etsy-Arif --dogrula, python3 araclar/proje-kullanimi.py (notlar/proje-kullanimi.md ve proje-durumu), kapsam-denetimi.py (0 sorun), dogrula.py (0 hata), sonra git commit (yalniz SkillKutuphanesi deposunda). Etsy-Arif'te git add, commit, push, pull YAPMA; degisiklik listesini ('git status' farki) kullaniciya ver, o Arif'e iletir.",
+   "9) Dokunma: .claude/agents/*, Arif'in 10 elle skili, .claude/worktrees/*, etsy-listings/, docs/*, tools/*. Skil klasorleri isim hizasinda kalmali: tools/ajan_kontrol.py bu adlarin .claude/skills/<ad>/SKILL.md olarak var olmasini zorunlu tutuyor (design-dna--kutuphane adi korunmali)."
+  ],
+  "kullaniciya_sorulacak": [
+   "ffmpeg, video-edit ve playwright-recording: proje Arif'le paylasildigi ve OpenMontage yalniz sende oldugu icin program baglantisi (K-28) bu projede tasinamiyor. Gercek klasor olarak dondurulsun mu (oneri), yoksa video-yonetmeni ajaninin bu uc skilden vazgecmesi icin Arif'e mi birakilsin?",
+   "ui-ux-pro-max'in kirik ${CLAUDE_PLUGIN_ROOT} yollarini proje-gorece yola cevirmeyi (tek skil, izlenen dosya degisir, Arif sonradan pull'da gorur) onayliyor musun?",
+   "session-report hicbir ajanda ya da talimatta gecmiyor. Projede kalsin mi, kaldirilsin mi?",
+   "Arif'in elle kurdugu 5 kayitsiz skil (design-principles, frontend-design, graphify, research-synthesis, ux-copy) kutuphane notlarinda 'projenin kendi skilleri' diye yalniz kutuphane tarafinda mi kaydedilsin (oneri), yoksa projedeki elle-kurulan.json'a da eklensin mi (git'te Arif'in goruceği bir degisiklik olur)?",
+   "Onceki 'CLAUDE.md blogu bilincli kaldirildi' notu yanlis cikti (kaldirilan 06.11'deki eski uzun bolumdu, kisa blok 07.11'de yeniden konup duruyor). Bu notu kayitlarda duzelteyim mi?"
+  ]
+ }
+}

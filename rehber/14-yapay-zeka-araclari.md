@@ -49,6 +49,10 @@ ortak                                      yalniz-claude
 ├─ .codex/agents/<rol>.toml
 ├─ CLAUDE.md + AGENTS.md  (aynı skill bloğu)
 └─ .skill-kutuphanesi/ (kilit.json, yedek/, .gitignore)
+
+Her iki düzende ayrıca (rehber/01 "Programla gelen skiller: bağ" ve "Dondurma"):
+  <program-skill>   (bağ -> program klasörü; ortak: .agents/skills'te mutlak bağ + .claude/skills'te göreli bağ; yalniz-claude: .claude/skills'te mutlak bağ)
+  <donmuş-skill>/   (gerçek klasör, projenin kendi skili; yerleşimi kütüphane skilleriyle aynı)
 ```
 
 ## 5. Başka bilgisayara ve Windows'a kopyalama
@@ -58,7 +62,8 @@ Taşınanlar: `.agents`, `.claude`, `.codex`, `CLAUDE.md`, `AGENTS.md`, `.skill-
 3. **Kilit yolu:** `kilit.json` → `proje_yolu` uymaz; `--dogrula` "proje taşınmış" der; `--yenile` düzeltir.
 4. **Satır sonları:** Windows'ta satır sonu çevirisi dosya parmak izlerini değiştirip Mac'te yanlış "elle değiştirilmiş" gösterebilir. Projeye şu `.gitattributes` satırları önerilir (araç yazmaz, yalnız öneridir): `.agents/skills/** -text` ve `.claude/skills/** -text`.
 5. **Kütüphane yok:** Windows'ta kütüphane yoktur; skill ekleme/güncelleme yalnız kütüphanenin olduğu Mac'te yapılır. Projedeki `CLAUDE.md` / `AGENTS.md` bloğu bugün bunu kısa blokta söyler; kütüphane yolunu ve "kütüphane oturumu iste" cümlesini bloğa eklemek onay bekliyor (`notlar/duzen-denetimi-2026-11/onay-bekleyen/p1-blok-kutuphane-cumlesi.md`).
-6. **Araç Windows'ta çalışmaz:** `skill-ekle.py` Windows'ta kendini reddeder (symlink, `kill -0` ve Mac yolları).
+6. **Program bağları:** Bağlı program skilleri başka bilgisayarda ya da Windows'ta çalışmaz (mutlak yol); git'e konursa Windows'ta düz metin dosyasına döner (bağ yolları `.gitignore`'a girmeli). Donmuş skiller gerçek klasördür, kopyalanabilir. Windows'ta `--program-skill` ve `--dondur` reddedilir.
+7. **Araç Windows'ta çalışmaz:** `skill-ekle.py` Windows'ta kendini reddeder (symlink, `kill -0` ve Mac yolları).
 
 **Projeyi başka Mac'e kopyaladım:** kütüphaneli Mac'te `--dogrula`; `proje taşınmış` çıkarsa `--yenile`; sonra tekrar `--dogrula`.
 **Projeyi Windows'ta açacağım:** önce `--arac yalniz-claude --kuru`, onaylarsa `--evet`; Windows'ta yalnız Claude Code (ve Cursor/VS Code Copilot) skilleri görür.
@@ -98,4 +103,5 @@ Sonucu `yapay-zeka-araclari.json` → `denendi`'ye (tarih + sonuç) yaz.
 - Rol dosyaları yalnız Claude ve Codex için üretilir (Cursor `.claude/agents` dosyalarını da okur). Antigravity, Cursor ve Copilot'ta her ajan projedeki tüm skilleri görür.
 - `ortak` düzende Cursor ve Copilot aynı skilli iki kez listeleyebilir (belgede yok, denenmedi).
 - Kütüphane makine genelinde hiçbir skill kurmaz.
+- Program skilleri bağdır: araç düzeni seçimi (ortak/yalniz-claude) bağın yerini değiştirir ama içeriği hiç kopyalamaz. Bağlı skillin Codex, Antigravity ve Cursor tarafından keşfedildiği sınanmadı (Claude Code'da çalışır); program kurulu değilse bağ asılı kalır (`--dogrula` kırık sayar). Gerçek araçla sınama ayrı adım.
 - `skill-ekle.py` Windows'ta çalışmaz; aynı projede iki oturumdan aynı anda çalıştırma (proje kilidi yok).

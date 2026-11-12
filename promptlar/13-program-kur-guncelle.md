@@ -12,6 +12,7 @@ eski sürüme döndürürken ya da kütüphaneden/bilgisayardan çıkarırken; y
 2. python3 araclar/program-denetim.py                 → durum (KART ESKİ ise dur, sebebini bul).
 3. GÜNCELLE için: python3 araclar/program-denetim.py --oncesi [PROGRAM]   → engelleri ve 'KIRICI ADAYI' satırını oku.
    KIRICI ADAYI ise rehber/11 → 'Kırıcı sürüm' deneme adımlarını AYRI klasörde uygula, sonucu raporla.
+3b. python3 araclar/proje-kullanimi.py --program [PROGRAM]  → bağlı projeler. Adım 3'ün çıktısındaki 'bağlar' satırlarına da bak ('bağ kırılacak' varsa bana söyle).
 4. Bana sun: sürüm farkı, değişiklik özeti, kırıcı adayı mı, yedeğin yeri. Bu işlem için AYRI onayımı sor (önceki onay geçerli değil).
 5. Onayımdan sonra rehber/11 → "Taze ajan: istek → adımlar" altındaki o programın adımlarını sırayla yürüt; önce yedek (KAYIT.json dahil),
    sonra --oncesi 'HAZIR' demeden değişiklik yapma.
@@ -19,6 +20,7 @@ eski sürüme döndürürken ya da kütüphaneden/bilgisayardan çıkarırken; y
 7. DAHİL ET için: python3 araclar/program-denetim.py --iskelet [kaynak|npm-global|git-checkout] > geçici dosya, doldur, --sema temiz olsun,
    sonra rehber/11 → "Yeni program eklemek".
 8. Bitince: program-denetim.py yeniden, --sema --siki, kapsam-denetimi.py, dogrula.py; commit. Yedek klasörünü silme, silmek için bana hatırlat ve sor.
+8b. Güncellemeden sonra program-denetim.py yeniden: 'bağlar' satırlarında HATA kalmamalı; kırık bağ için bana sor (--yenile ya da --kaldir).
 
 Kurallar: anahtar/.env/oturum dosyalarını açma. pip install -U, make setup (onaysız), npx, hyperframes init/skills/update çalıştırma.
 Ortam değişkeni (HYPERFRAMES_SKIP_SKILLS vb.) ben istemeden tanımlama. Genel skill klasörlerine ve kabuk dosyalarına dokunma

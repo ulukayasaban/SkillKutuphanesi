@@ -1,0 +1,692 @@
+{
+ "haritalar": [
+  {
+   "duzen": "IstatistikYoutube (git deposu DEĞİL: \"git status\" hata veriyor; geri alma git ile değil, kopya/yedek ile olur). Talimat: CLAUDE.md (153 satır, 50 KB; AGENTS.md yok; satır 120-153 arası skill-kutuphanesi:basla/bitir bloğu, 23 kütüphane skili tablosu). .claude/: settings.json (agent=showrunner, izin Read(~/.claude/skills/**), 3 hook yalnız proje içi tools/hooks), settings.local.json (skillOverrides: ~124 ad \"off\"; hyperframes, hyperframes-cli, hyperframes-animation, hyperframes-core, motion-graphics, design-dna, openmontage, nlm-skill off DEĞİL), agents/ (11 ajan, frontmatter skills: listelerinin hepsi proje .claude/skills içinde mevcut, hiçbiri global skili adlandırmıyor), agent-memory/, skills/ (45 gerçek klasör: 22 proje yazımı + 23 kütüphane kurulumu, symlink yok; araç düzeni yalniz-claude). Slash command yok (proje commands klasörü yok; global ~/.claude/commands: openmontage, backlot, ink-art, animated-drawing, projenin talimatlarında anılmıyor). .mcp.json boş. Kilit: .skill-kutuphanesi/kilit.json (23 skill, sürüm 3, son güncelleme 2026-11-08, yedek/ klasörü var). Kütüphane projeler.json: tur kilitli, durum takipte. Kütüphane `--durum`: 23 skilin hepsi güncel. İki önemli kural metni: CLAUDE.md tool-002 (satır 106: üç katman, global = yalnız HyperFrames paketi + design-dna + openmontage + nlm-skill) ve satır 22 (ajan \"global ~/.claude/skills/<ad>/SKILL.md\" okuyabilir). Kaynak kayıt: status/skill-global.yaml ('kullanilan' 8 skil + SKILL.md hash'leri), docs/skill-haritasi.md bölüm C, config/tools.yaml, docs/kural-ayrintilari.md.",
+   "kullanilan_skiller": [
+    {
+     "ad": "hyperframes",
+     "nereden": "~/.claude/skills/hyperframes (gerçek klasör, 118 dosya, 1,3 MB; içinde 'usage beacon' satırı var, yani kütüphanedeki f8309b3 kopyasından YENİ; kütüphanede path-tracing.md yok)",
+     "kanit": [
+      "status/skill-global.yaml:12",
+      "docs/skill-haritasi.md (bölüm C satır 1)",
+      "CLAUDE.md:106 (tool-002 global=8)",
+      ".claude/skills/hyperframes-shorts/SKILL.md:15",
+      "config/tools.yaml:224-225",
+      "docs/kural-ayrintilari.md:358"
+     ],
+     "nasil": "Projede ajanın adıyla yüklemesi yok; hyperframes-shorts ve kurgu-hatti skilleri kapsamında sahne yazarken Skill/Read ile okunur (global skill listesinde görünür). skill_durum.py kapısı status/skill-global.yaml 'kullanilan' listesinden dosyanın bilgisayarda varlığını ve hash'ini denetler.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "hyperframes-cli",
+     "nereden": "~/.claude/skills/hyperframes-cli (gerçek klasör, 152 KB, 13 dosya; kütüphane kopyasından farklı: 3 referans dosyası farklı)",
+     "kanit": [
+      "status/skill-global.yaml:13",
+      "docs/skill-haritasi.md bölüm C",
+      "CLAUDE.md:106 (hyperframes, -cli canlı)",
+      ".claude/skills/hyperframes-shorts/SKILL.md:15 ve okuma sırası madde 4"
+     ],
+     "nasil": "hyperframes-shorts okuma sırasında 'yalnız komut gerektiğinde' (madde 4); doctor/check/render komutları.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "hyperframes-animation",
+     "nereden": "~/.claude/skills/hyperframes-animation (gerçek klasör, 1,4 MB, 136 dosya, rules/ 48 dosya; 18.10 DONDURULMUŞ eski kuşak; kütüphanede YOK: kaynaklar.json arsivden_cikarilanlar'da 'kaynakta kaldırıldı, eski sürümler kaldırılsın' diye kayıtlı; --kuru: 'kütüphanede yok' HATA ve --zorla ile geçilemez)",
+     "kanit": [
+      "status/skill-global.yaml:14 (edit-026 (8) tarifleri)",
+      "docs/kural-ayrintilari.md:203 (izinli giriş tarifleri = hyperframes-animation rules/ adları: stat-bars-and-fills, counting-dynamic-scale, chart-scrub-readout, svg-path-draw, svg-icon-enrichment, css-marker-patterns, card-morph-anchor ...)",
+      "docs/kural-ayrintilari.md:196 (Three adaptörü)",
+      ".claude/skills/hyperframes-shorts/SKILL.md:27 okuma sırası madde 3 ve Three.js satırı",
+      "CLAUDE.md:106"
+     ],
+     "nasil": "hyperframes-shorts okuma sırası madde 3 (sahne bloğu türüne göre); izinli giriş tarifleri kural metnine ad olarak gömülü (rules/<ad>.md dosyaları gerçekten okunur). runtime-plan sözlüğü bu adlara dayanıyor.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "hyperframes-core",
+     "nereden": "~/.claude/skills/hyperframes-core (gerçek klasör, 116 KB, 11 dosya; 18.10 DONDURULMUŞ eski kuşak; kütüphanede YOK, aynı şekilde arsivden_cikarilanlar'da)",
+     "kanit": [
+      ".claude/skills/hyperframes-shorts/SKILL.md:22 (SABİT YOL ~/.claude/skills/hyperframes-core/SKILL.md)",
+      "status/skill-global.yaml:15",
+      "docs/skill-haritasi.md bölüm C"
+     ],
+     "nasil": "hyperframes-shorts okuma sırası madde 2: sahne yazmadan önce ajan bu yolu Read ile açar (kompozisyon sözleşmesi: data-start/duration, class=clip, tracks). Yol silinirse okuma başarısız olur.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "motion-graphics",
+     "nereden": "~/.claude/skills/motion-graphics (gerçek klasör, 156 KB, 23 dosya, agents/ categories/ phases/ references/ samples/; 18.10 DONDURULMUŞ eski kuşak; kütüphanede YOK, arsivden_cikarilanlar'da)",
+     "kanit": [
+      "status/skill-global.yaml:16 (pilot-06/08/09 kullanımı)",
+      ".claude/skills/hyperframes-shorts/SKILL.md:24-25 okuma sırası madde 3 (stat count-up, kinetik metin, harita)",
+      "docs/skill-haritasi.md bölüm C",
+      "CLAUDE.md:106"
+     ],
+     "nasil": "hyperframes-shorts okuma sırası madde 3 (adıyla, yolsuz): sayaç, grafik vuruşu, kinetik yazı için ajan Skill ile yükler.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "design-dna",
+     "nereden": "~/.claude/skills/design-dna (gerçek klasör, 19,1 MB, 196 dosya, scripts/node_modules içinde; kullanıcının KENDİ skili sayılıyor, YERİNDE KALACAK; kütüphanede de zanwei/design-dna 593e39b kopyası var ama aynı değil: kütüphane Etsy-Arif'e 'design-dna--kutuphane' olarak kurulmuş)",
+     "kanit": [
+      "tools/kurgu/video_dna.py:18",
+      "assets/brand/kapak-sablonu/kapak_dna_kontrol.py:14",
+      ".claude/agents/visual-asset-producer.md:19",
+      ".claude/agents/shorts-video-edit-director.md:28",
+      ".claude/skills/hyperframes-shorts/SKILL.md:29",
+      "docs/kural-ayrintilari.md:196 ve :478",
+      "productions/pilot-29-calisma-saati/parallel/edit/scripts/kimlik_olc.py:5 ve final_olc.py:6 (geçmiş üretim betikleri)"
+     ],
+     "nasil": "Dosya yoluyla çağrılan betik: scripts/measure-colors.mjs (node, node_modules bağımlılığı global klasörde); video_dna.py kontrol/referans, kapak_dna_kontrol.py (thumb-002, kapak PASS kapısı), TL kimlik ölçümü.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "openmontage",
+     "nereden": "~/.claude/skills/openmontage (gerçek klasör, 8 KB, tek SKILL.md; kullanıcının kendi skili, YERİNDE KALACAK)",
+     "kanit": [
+      "config/tools.yaml:193 ve :205 (policy: önce bu skili oku)",
+      ".claude/skills/kurgu-hatti/SKILL.md:8 ('global openmontage skill' öncelik sırasında)",
+      "status/skill-global.yaml:17"
+     ],
+     "nasil": "Yetenek envanteri okuması ve tools.yaml politikası; asıl kullanım OpenMontage'ın python venv'i (aşağıda). Kalacağı için etkilenmez.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "nlm-skill",
+     "nereden": "~/.claude/skills/nlm-skill (gerçek klasör, 196 KB, kullanıcının kendi skili, YERİNDE KALACAK)",
+     "kanit": [
+      "config/notebooklm.yaml:4",
+      "status/skill-global.yaml:18",
+      "CLAUDE.md:106"
+     ],
+     "nasil": "Rakip ajanı (competitor-intelligence-analyst) için NotebookLM CLI rehberi; yol config'te anılıyor, kalacağı için etkilenmez.",
+     "kesinlik": "muhtemel"
+    },
+    {
+     "ad": "threejs-* (9 skill) ve hyperframes-animation Three adaptörü",
+     "nereden": "OpenMontage layer-3 bağları (~/.claude/skills/threejs-*, bağ -> ~/.openmontage/.agents/skills); hepsi settings.local.json'da off",
+     "kanit": [
+      ".claude/skills/hyperframes-shorts/SKILL.md:31 (Three.js maddesi)",
+      "docs/kural-ayrintilari.md:196"
+     ],
+     "nasil": "Yalnız isteğe bağlı: 2B grafiğin anlatamadığı nadir sahnede, gerekçe runtime-plan.yaml'a yazılarak. Hiçbir ajan tanımında adı yok. Global bağlar silinince bu seçenek kendiliğinden kapanır.",
+     "kesinlik": "zayıf"
+    },
+    {
+     "ad": "ffmpeg, video-edit, elevenlabs, remotion, visual-style gibi OpenMontage layer-3 skilleri",
+     "nereden": "~/.claude/skills bağları (79 bağ), projede hepsi off",
+     "kanit": [
+      "config/tools.yaml:194 (yalnız bağ listesinin anılması)",
+      "docs/skill-haritasi.md satır F (124 off satırı kullanıcının global alanı)"
+     ],
+     "nasil": "Hiçbir ajan tanımı, skill ya da kural bunları 'yükle' diye adlandırmıyor; kanal hattı ffmpeg'i doğrudan /usr/local/opt/ffmpeg-full/bin üzerinden kullanıyor, Remotion/EDL/backlot kullanılmıyor (edit-011).",
+     "kesinlik": "zayıf"
+    },
+    {
+     "ad": "~/.claude/youtube/voice.md (skill değil, kullanıcı dosyası)",
+     "nereden": "~/.claude/youtube/voice.md (okuma yalnız dosya VARSA)",
+     "kanit": [
+      ".claude/skills/yt-audit/SKILL.md:15, yt-package:22, yt-seo:16, yt-script:24 (kütüphane kopyaları, elle düzenlenmez)",
+      ".claude/skills/shorts-script/kanca-havuzu.md:5 ve script-host-director.md:18 ('kullanılmaz')"
+     ],
+     "nasil": "Skiller 'if it exists' diye okur; proje kural olarak kullanmıyor. Skil klasörü boşalsa da bu dosya skill klasöründe değil, etkilenmez.",
+     "kesinlik": "zayıf"
+    }
+   ],
+   "sabit_yollar": [
+    {
+     "dosya": ".claude/skills/hyperframes-shorts/SKILL.md",
+     "satir": "22",
+     "yol": "~/.claude/skills/hyperframes-core/SKILL.md",
+     "ne_okuyor": "Okuma sırası madde 2: kompozisyon sözleşmesi (hyperframes-core SKILL.md). Dosya silinince sahne yazan ajan sözleşmeyi okuyamaz; kütüphanede kaynak YOK (hyperframes-core eski kuşak), yani install ile gelmez; karar gerekir."
+    },
+    {
+     "dosya": ".claude/skills/hyperframes-shorts/SKILL.md",
+     "satir": "3, 15, 24-27, 29",
+     "yol": "~/.claude/skills/hyperframes-* (açıklama), 'hyperframes-core, hyperframes-animation, motion-graphics' adları, ~/.claude/skills/design-dna/",
+     "ne_okuyor": "Satır 3 ve 15: kurulum yeri metni (global katman). Satır 24-27 hyperframes-animation, motion-graphics, hyperframes-cli ADLARI (Skill ile yüklenir; yolsuz). Satır 29: design-dna yolu (kalacak). Satır 15 metni 'global katman, hyperframes skilleri kullanıcı düzeyinde' düzeltilmeli. Not: bu dosya kütüphane kurulumu değil, projenin kendi yazdığı skil (kilit.json dışı), elle düzenlenebilir."
+    },
+    {
+     "dosya": "tools/skill_durum.py",
+     "satir": "29 (GLOBAL), 59-61, 98-103, 112-113",
+     "yol": "~/.claude/skills (os.path.expanduser)",
+     "ne_okuyor": "Her 'kullanilan' global skil için SKILL.md varlığı + hash (status/skill-global.yaml); yoksa FAIL ('global katmandaki X bilgisayarda yok'). Yol ile anılıp listede olmayan globali UYARI yapar. Ayrıca 'hem projede hem globalde' ad çakışmasını FAIL sayar. 8 skilin 5'i taşınınca (hyperframes, -cli, -animation, -core, motion-graphics) status/skill-global.yaml 'kullanilan' ve skiller listesi 3'e inmeli, aksi halde tools/denetim.sh kırmızı. Ayrıca satır 112-113 (BILINCLI_KAPALI yt-script) bilinen açık."
+    },
+    {
+     "dosya": "status/skill-global.yaml",
+     "satir": "10-26",
+     "yol": "kullanilan listesi + 'skiller' hash tablosu (8 skil)",
+     "ne_okuyor": "skill_durum.py ve skill_kullanim.py girdisi; taşınan 5 skilin kaydı projeye geçtikten sonra buradan çıkmalı (ya da proje skili olarak kilit/kendi katmanına işlenmeli)."
+    },
+    {
+     "dosya": "tools/kurgu/video_dna.py",
+     "satir": "18",
+     "yol": "~/.claude/skills/design-dna/scripts/measure-colors.mjs",
+     "ne_okuyor": "VIDEO_DNA kontrolü/referansı: node ile renk ölçümü. design-dna kullanıcının kendi skili olarak globalde KALACAĞI için bu satır değişmez (yalnız design-dna'nın node_modules'u sağlam kalmalı)."
+    },
+    {
+     "dosya": "assets/brand/kapak-sablonu/kapak_dna_kontrol.py",
+     "satir": "14",
+     "yol": "~/.claude/skills/design-dna/scripts/measure-colors.mjs",
+     "ne_okuyor": "Kapak DNA kontrolü (thumb-002 yayın kapısı). design-dna yerinde kalırsa değişmez. NOT: kütüphanedeki design-dna kopyası (zanwei 593e39b) globaldekiyle aynı değil; ayrıca kuruluma alınırsa 'design-dna--kutuphane' adı alır, yol tutmaz."
+    },
+    {
+     "dosya": "productions/pilot-29-calisma-saati/parallel/edit/scripts/kimlik_olc.py, final_olc.py",
+     "satir": "5 ve 6",
+     "yol": "~/.claude/skills/design-dna/scripts/measure-colors.mjs",
+     "ne_okuyor": "Geçmiş üretim betikleri (tarihçe); design-dna kalırsa sorun yok."
+    },
+    {
+     "dosya": ".claude/agents/visual-asset-producer.md",
+     "satir": "19",
+     "yol": "~/.claude/skills/design-dna/",
+     "ne_okuyor": "Referans görsel analizi + final kare renk ölçümü yönergesi; design-dna kalırsa değişmez."
+    },
+    {
+     "dosya": ".claude/agents/shorts-video-edit-director.md",
+     "satir": "28",
+     "yol": "~/.claude/skills/design-dna/scripts/measure-colors.mjs",
+     "ne_okuyor": "Kimlik ölçümü adımı; design-dna kalırsa değişmez."
+    },
+    {
+     "dosya": "CLAUDE.md",
+     "satir": "22 ve 106",
+     "yol": "global ~/.claude/skills/<ad>/SKILL.md (satır 22); 'global YALNIZ HyperFrames paketi ... + design-dna + openmontage + nlm-skill = 8' (satır 106, tool-002)",
+     "ne_okuyor": "Kural metni. Satır 106 ve 22 yeni düzene göre güncellenmeli (global = design-dna + openmontage + nlm-skill; HyperFrames paketi proje içi). Aynı metin docs/kural-ayrintilari.md:355-359 (## tool-002), docs/kural-dizini.md:137-138, docs/skill-haritasi.md bölüm C ve F, .claude/agent-memory/showrunner/reference_skill_katmanlari.md içinde tekrar ediyor; 'tek yer ilkesi' (orch-005) gereği kural değişikliği kullanıcı onayı ister."
+    },
+    {
+     "dosya": "config/tools.yaml",
+     "satir": "193, 194, 205, 214-225",
+     "yol": "~/.claude/skills/openmontage/SKILL.md, ~/.config/openmontage/global-skill-links.txt (79 bağ), ~/.claude/skills/ (HF skilleri yer/güncelleme yöntemi)",
+     "ne_okuyor": "Belge/kayıt metni (kod değil). openmontage SKILL.md kalacak; 79 bağ listesi ve HF skil güncelleme tarifi (etiketli sparse clone + ~/.claude/skills'e kopya) eskiyecek."
+    },
+    {
+     "dosya": "config/notebooklm.yaml",
+     "satir": "4",
+     "yol": "~/.claude/skills/nlm-skill",
+     "ne_okuyor": "Belge notu; nlm-skill kalacak, değişmez."
+    },
+    {
+     "dosya": ".claude/settings.json",
+     "satir": "izin bloğu",
+     "yol": "Read(~/.claude/skills/**)",
+     "ne_okuyor": "Ajanların global skil klasörünü izinsiz okuyabilmesi (design-dna, openmontage, nlm-skill hâlâ orada olduğu için gerekli kalır)."
+    },
+    {
+     "dosya": ".claude/settings.local.json",
+     "satir": "skillOverrides",
+     "yol": "~124 'off' adı (hyperframes-registry, -creative, -audio, -media, -studio, threejs-*, ffmpeg, video-edit, ...)",
+     "ne_okuyor": "Global OpenMontage/HyperFrames bağlarını kapatır. Klasörler boşalınca bu adlar anlamsızlaşır (zararsız). TUZAK: 'off' adı aynı adlı PROJE skilini de kapatır; kurulacak hyperframes, hyperframes-cli, motion-graphics, hyperframes-core, hyperframes-animation off listesinde DEĞİL (doğrulandı), ama başka bir ad kurulacaksa listeye bakılmalı."
+    },
+    {
+     "dosya": "tools/kurgu/sahneler/kur.py, tools/kurgu/render_sirali.sh",
+     "satir": "kur.py:491,498; render_sirali.sh:69",
+     "yol": "global 'hyperframes' ikilisi (PATH, /usr/local/bin/hyperframes), ~/.openmontage/.venv/bin/python",
+     "ne_okuyor": "Program, skill değil: kalır. Skill klasörü boşalmasından etkilenmez. (hyperframes skills check komutu tools/skill_durum akışında kullanılmıyor; yalnız belgede.)"
+    },
+    {
+     "dosya": "tools/ (30+ dosya), config/tools.yaml:186-191, .claude/skills/kurgu-hatti, shorts-script, thumbnail-publishing",
+     "satir": "çok sayıda (shebang, PY=, PATH=)",
+     "yol": "/Users/sabanulukaya/.openmontage/.venv/bin/python",
+     "ne_okuyor": "OpenMontage'ın Python venv'i (faster_whisper, numpy, PIL, yaml). Program tarafı, kalır; OpenMontage güncellemesinde venv pin'leri bozulmamalı."
+    },
+    {
+     "dosya": "tools/olcum/ice_aktar.py",
+     "satir": "53",
+     "yol": "~/.openmontage/.env",
+     "ne_okuyor": "Ölçüm kapısı anahtarı okunuyor (içerik okunmadı); program klasörü, skill değil, kalır."
+    }
+   ],
+   "proje_ici_skiller": [
+    "45 skil .claude/skills altında, gerçek klasör (symlink yok), düzen yalniz-claude; .agents/skills yok.",
+    "Kütüphanenin kurduğu 23 skil (.skill-kutuphanesi/kilit.json): caption-qa, cut-the-curve, data-visualization, design-critique, explore-data, gsap-core, gsap-performance, gsap-plugins, gsap-timeline, huashu-art-motion, humanizer, motion-design, motion-doctrine, scientific-critical-thinking, seam-craft, statistical-analysis, validate-data, verification-before-completion, yt-audit, yt-package, yt-retention, yt-script, yt-seo. Hepsi 'güncel'. (cut-the-curve, motion-doctrine, seam-craft kütüphanede heygen-com/hyperframes f8309b3 kaynaklı.)",
+    "Projenin kendi yazdığı 22 skil (kilitte yok, elle düzenlenir): asset-licensing, audience-experimentation, audio-mixing, channel-strategy, editorial-governance, evidence-learning-loop, host-performance-direction, hyperframes-shorts, kurgu-hatti, music-library-supervision, notebooklm-competitor-intelligence, official-source-research, parallel-team-orchestration, performance-review, quota-governor, runtime-plan, shorts-script, statistical-verification, thumbnail-publishing, topic-scorecard, visual-identity, visual-storytelling, channel-strategy ile birlikte (cut-the-curve vb. değil). Bunlardan hyperframes-shorts global yollara bağlı tek skil (satır 22).",
+    "Eksik ve ÖNEMLİ: hyperframes, hyperframes-cli, hyperframes-animation, hyperframes-core, motion-graphics şu an proje içinde YOK; globalden okunuyor. Kütüphane bunlardan yalnız ilk ikisini taşır."
+   ],
+   "openmontage_kullanimi": "OpenMontage'a yalnız iki yoldan erişiliyor, slash komutu ya da OpenMontage pipeline'ı yok. (1) Python venv: /Users/sabanulukaya/.openmontage/.venv/bin/python sabit yol, 30+ betik ve shebang'de (tools/kurgu/*, tools/olcum/*, tools/studio-haftalik/*, tools/denetim.sh, assets kapak betiği, kurgu-hatti/shorts-script/thumbnail-publishing skilleri, ajan tanımları long-video-edit-director:28,34) ve PATH önekinde /usr/local/opt/ffmpeg-full/bin; ~/.openmontage/.env'den ölçüm kapısı anahtarı okunuyor (tools/olcum/ice_aktar.py:53; içerik okunmadı). (2) Yetenek envanteri: config/tools.yaml:193 ve :205 politika 'önce ~/.claude/skills/openmontage/SKILL.md, sonra AGENT_GUIDE.md ve PROJECT_CONTEXT.md oku'; kurgu-hatti/SKILL.md:8 'global openmontage skill' öncelik sıralamasında. edit-011 ve tools.yaml kanal_rolu: 'OpenMontage = yalnız Python venv + skill envanteri; EDL/backlot/Remotion/pipeline_defs kullanılmaz'. Projenin talimatlarının ADLANDIRDIĞI OpenMontage layer-3 skili YOK: ffmpeg, video-edit, elevenlabs, remotion, visual-style, vb. hiçbir CLAUDE.md satırında, ajan frontmatter'ında, skillde ya da kuralda 'yükle' diye geçmiyor (yalnız config/tools.yaml:194 79 bağlık listeyi bilgi olarak anıyor, hepsi settings.local.json'da off). Tek istisna isteğe bağlı: threejs-* (9 skil, OpenMontage kaynaklı) hyperframes-shorts:31'de 'yalnız 2B grafiğin anlatamadığı nadir sahnede, gerekçe runtime-plan.yaml'a yazılarak' diye anılıyor, ad tek tek verilmiyor ve hiç kullanıldığına dair iz bulunmadı; kütüphanede threejs-* 'alternatif' durumda (OpenMontageInc kaynaklı). Sonuç: OpenMontage layer-3 skillerinin projeye kurulması GEREKMİYOR; K-27'ye uygun asgari karar: hiçbiri kurulmaz, yalnız Python venv ve openmontage skili (kalıyor) kullanılır. Programın güncellenmesinde (fecb9a1e) venv pin'lerine dokunulmamalı.",
+   "belirsizler": [
+    "EN BÜYÜK AÇIK: hyperframes-core, hyperframes-animation ve motion-graphics kütüphanede YOK (kaynaklar.json arsivden_cikarilanlar: 'Kaynakta kaldırıldı, eski sürümler kaldırılsın'). skill-ekle.py bunları kurmaz (--kuru HATA 'kütüphanede yok', --zorla ile de geçilemez). Projede donmuş 18.10 kopyaları yalnız ~/.claude/skills altında (hyperframes-core 116 KB; motion-graphics 156 KB; hyperframes-animation 1,4 MB, rules/ 48 dosya). Boşaltmadan önce yedeğin ayrıca alınması ve karar gerekir: (a) üçünü projeye elle donmuş kopya olarak koymak (skill-ekle.py ile değil; CLAUDE.md kural 1'in 'sadece skill-ekle.py' kuralına istisna olur, kilit.json dışı 'projenin kendi skili' sayılır) ya da (b) kütüphaneye geri almak. DURUM.md:89 bunu zaten 'kullanıcı kararı bekleyen' olarak işaretlemiş.",
+    "İzinli giriş tarifleri (docs/kural-ayrintilari.md:203, edit-026 (8)) ve runtime-plan sözlüğü hyperframes-animation/rules/ dosya adlarına bağlı; üstteki karar (a) alınmazsa bu tarifler kaynaksız kalır. Güncel HyperFrames kuşağında bu adların tam karşılığı doğrulanmadı.",
+    "Kütüphanedeki hyperframes ve hyperframes-cli kopyaları (heygen-com/hyperframes f8309b3, arşive 2026-11-02) globaldeki kopyalardan ESKİ: globaldeki hyperframes'te 'Usage beacon' (telemetri satırı, 'npx hyperframes events --skill=...') ve references/path-tracing.md var, kütüphanede yok; en az 9 hyperframes ve 3 hyperframes-cli dosyası farklı. Proje HF 0.9.20 etiketli kopyayı 'hyperframes skills check current' ile doğrulamıştı; program şimdi 0.9.35. Kütüphane kopyasının hangi program sürümüne denk geldiği doğrulanmadı. Projeye kütüphaneden kurulum eski içerik getirir; önce kütüphane kopyasının 0.9.35 etiketine güncellenmesi (K-05, ayrı onay) gerekebilir. Beacon satırı projenin 'telemetri/hyperframes auth yasak' çizgisiyle de karşılaştırılmalı.",
+    "Ad çakışması: global klasörde aynı adlı farklı skil durduğu sürece kurulum 'hyperframes--kutuphane' ve 'hyperframes-cli--kutuphane' adıyla gelir (--kuru bilgisi: ekli-ad). Proje metinleri (hyperframes-shorts, kurgu-hatti, ajan tanımları, skill_durum, skill-global.yaml) düz adı kullanıyor. Doğru sıra: önce global hyperframes ve hyperframes-cli kaldırılır, sonra kurulum (düz ad) ya da kurulumdan sonra adlar projede düzeltilir. Ayrıca hyperframes-cli kopyası ../hyperframes/ bağlantılarını ../hyperframes--kutuphane/ olarak çevirecek (kardes-yol), düz adda gerek kalmaz.",
+    "tools/skill_durum.py: 'proje ve global aynı ad' FAIL, 'kullanilan global yok' FAIL, 'kütüphane doğrulama' kapısı. Taşıma sırasında geçici kırmızı olacak; kapıyı güncellemek (status/skill-global.yaml 'kullanilan' = design-dna, openmontage, nlm-skill; hyperframes-core/-animation/motion-graphics proje skili olarak bilinmeli) kural tarafı olmayan koddur, ama tool-002 kural metnini değiştirmek kullanıcı onayı ister.",
+    "design-dna: kullanıcının kendi skili olarak globalde kalacağı varsayıldı (video_dna.py, kapak_dna_kontrol.py, iki ajan tanımı, pilot-29 betikleri çalışmaya devam eder). Kütüphanedeki design-dna (zanwei 593e39b) globaldeki 196 dosyalı kopyayla aynı değil: DURUM.md '142 dosyalı' diyor, ben 196 dosya saydım; sayım yöntemi farkı olabilir, node_modules içeriği bilinmiyor. design-dna proje içine alınırsa iki yol dosyası ve iki ajan metni değişir.",
+    "CLAUDE.md satır 22 ajana 'global ~/.claude/skills/<ad>/SKILL.md' okuma izni verir; tool-002 satır 106 'global = 8' der. İkisi taşıma sonrası güncellenmeli. CLAUDE.md'nin son bloğu (satır 120-153, skill-kutuphanesi:basla/bitir) skill-ekle.py --evet tarafından yeniden yazılacak (23 satırlı tablo 25'e çıkar).",
+    "Proje bir git deposu DEĞİL ('git status' hata verdi); 'önce yedek' için skill-ekle.py'nin kendi yedek mekanizması (.skill-kutuphanesi/yedek, --geri-al) ve elle düzenlenecek dosyalar (hyperframes-shorts/SKILL.md, skill_durum.py, status/skill-global.yaml, CLAUDE.md, docs/*) için kopya yedeği gerekir. Ajanın GİTSİZ olduğu için diff/geri alma kolaylığı yok.",
+    "Etkisiz ama izlenecek: 124 'off' satırı (settings.local.json) global bağlar gidince anlamsız kalır; bu ad listesindeki isimlerden biri ileride projeye kurulursa sessizce kapalı gelir (özellikle hyperframes-registry, hyperframes-creative, media-use, remotion-to-hyperframes, slideshow, figma, faceless-explainer, general-video, ffmpeg, video-edit). Hangi tarafta tutulacağı kararlaştırılmalı.",
+    "settings.json hook'larının tamamı proje içi betik (tools/hooks/*) ve perplexity/firecrawl onayına bağlı; skill klasörlerinden etkilenmez. productions/, learning/, synthesis/ altındaki eski belgelerde global yol/skil adları geçiyor (ör. pilot-06 hyperframes/01-plaza/index.html, surec-denetimi-2026-11-09 raporları); bunlar tarihçedir, çalıştırılmaz, düzeltilmesi gerekmez. Ek kontrol edilmedi: ~/Documents/IstatistikYoutube-Arsiv ve Documents/Istatistik template KIT (kullanıcı kararıyla işlem yok).",
+    "Yalnız talimat/ajan/dokümantasyon açısı okundu; kod tarafı (tools/ içindeki hf_render_safe.sh, render_sirali.sh) yalnız grep ile bakıldı, çalıştırılmadı. Üretim HANDOFF'larındaki 'okunan skill' kayıtları (status/handoff-defteri.md, productions/*/status/skill-kullanim.yaml) hacimli olduğu için hangi skilin gerçekte okunduğu ayrıca ölçülmedi; kullanım izi bilgisi docs/skill-haritasi.md B tablosunun 'Üretim' sütununa dayanıyor (08.11 verisi). Not: tools/skill_kullanim.py de status/skill-global.yaml 'kullanilan' listesini okur."
+   ]
+  },
+  {
+   "duzen": "Proje git deposu değil. .claude/skills 47 klasör (23 kütüphane kurulumu kilit.json'da, 24 projenin kendisi), .claude/agents 11 ajan, settings.json (izin Read(~/.claude/skills/**)), settings.local.json (122 off), CLAUDE.md, .skill-kutuphanesi. AGENTS.md, .agents, .codex, package.json yok. Atlanan: productions (4,9 GB), node_modules, .venv, __pycache__, tools/kurgu/_test çıktıları, .skill-kutuphanesi/yedek. Başlatıcı: LaunchAgent com.oylesaniyorduk.olcum-ice-aktar (skill okumaz), crontab yok, Claude hook betikleri tools/hooks/*.py (skill okumaz), tools/denetim.sh skill_durum.py'yi çalıştırır. Genel klasörde bugün: hyperframes ve hyperframes-cli (v0.9.20 etiketli gerçek klasör), hyperframes-core, hyperframes-animation, motion-graphics (18 Eki dondurulmuş gerçek kopyalar), design-dna (19 MB, node_modules var), nlm-skill, openmontage. Programlar: hyperframes 0.9.35, OpenMontage fecb9a1.",
+   "kullanilan_skiller": [
+    {
+     "ad": "hyperframes",
+     "nereden": "~/.claude/skills/hyperframes (gerçek klasör, v0.9.20 etiketli). Kütüphanede var (heygen-com/hyperframes@f8309b3, 2 Kas) ama genel kopyadan ESKİ ve farklı (path-tracing.md yok, SKILL.md ve 8 kadar dosya farklı).",
+     "kanit": [
+      "status/skill-global.yaml:10",
+      "hyperframes-shorts/SKILL.md:3,15",
+      "kurgu-hatti/SKILL.md",
+      "runtime-plan/SKILL.md",
+      "CLAUDE.md:106",
+      "tools/skill_durum.py:98-100"
+     ],
+     "nasil": "Skill aracıyla adıyla; skill_durum.py kullanilan listesinde SKILL.md varlığı ve hash denetler (yoksa FAIL).",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "hyperframes-cli",
+     "nereden": "~/.claude/skills/hyperframes-cli (gerçek, v0.9.20). Kütüphanede var (f8309b3), genel kopyayla farklı; @openai alternatifi kullanılmamalı.",
+     "kanit": [
+      "status/skill-global.yaml:11",
+      "hyperframes-shorts/SKILL.md okuma sırası 4",
+      "docs/skill-haritasi.md:71"
+     ],
+     "nasil": "Skill aracıyla, yalnız komut gerektiğinde; aynı skill_durum kapısı.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "hyperframes-core",
+     "nereden": "Yalnız ~/.claude/skills/hyperframes-core (dondurulmuş 18 Eki, 116 KB). KÜTÜPHANEDE YOK, 11-08 yedeğinde YOK. ~/.openmontage/.agents/skills/hyperframes-core (fecb9a1) 14 satır farklı, yerine geçmez.",
+     "kanit": [
+      "hyperframes-shorts/SKILL.md:22 (~/.claude/skills/hyperframes-core/SKILL.md)",
+      "status/skill-global.yaml:13",
+      "docs/skill-haritasi.md:73"
+     ],
+     "nasil": "hyperframes-shorts ajanın sahne yazmadan önce bu SKILL.md'yi Read ile açmasını ister. Boşalınca Read başarısız, kompozisyon sözleşmesi okunamaz, skill_durum FAIL.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "hyperframes-animation",
+     "nereden": "Yalnız ~/.claude/skills/hyperframes-animation (dondurulmuş 18 Eki, 1,4 MB, rules/ 48 dosya). KÜTÜPHANEDE YOK. OpenMontage kopyasında (fecb9a1) rules/ 36 dosya; projenin izinli 13 tarifinden 4'ü yok: waterfall-entry, nudge-curve, chart-scrub-readout, anchored-layout-expand.",
+     "kanit": [
+      "runtime-plan/SKILL.md:25",
+      "docs/kural-ayrintilari.md:203",
+      "hyperframes-shorts/SKILL.md:23",
+      "shorts-video-edit-director.md:21",
+      "status/skill-global.yaml:12"
+     ],
+     "nasil": "Ajan rules/<tarif>.md dosyalarını sahne planı için okur; izinli giriş adları bu dosya adlarına bağlı.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "motion-graphics",
+     "nereden": "Yalnız ~/.claude/skills/motion-graphics (dondurulmuş 18 Eki, 156 KB). Kütüphanede bağımsız kayıt yok (yalnız eski _bilesenler/calesthio__OpenMontage kopyası, farklı); OpenMontage kopyası da 16 satır farklı.",
+     "kanit": [
+      "hyperframes-shorts/SKILL.md:23",
+      "cut-the-curve/SKILL.md",
+      "docs/skill-haritasi.md:74",
+      "status/skill-global.yaml:14"
+     ],
+     "nasil": "Skill aracıyla ya da hyperframes-shorts üzerinden; sayaç, kinetik yazı, harita sahnelerinde.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "design-dna",
+     "nereden": "~/.claude/skills/design-dna (zanwei@593e39b, 19 MB, node_modules kurulu). Kullanıcının dört kendi skilinden biri: KALACAK. Kütüphane kopyasında node_modules yok; projeye kurulursa genel kopyayla ad çakışır.",
+     "kanit": [
+      "tools/kurgu/video_dna.py:18",
+      "assets/brand/kapak-sablonu/kapak_dna_kontrol.py:14",
+      "shorts-video-edit-director.md:28",
+      "visual-asset-producer.md:19,22",
+      "publisher-analyst.md:21",
+      "long-video-edit-director.md:18",
+      "hyperframes-shorts/SKILL.md:29"
+     ],
+     "nasil": "Script olarak: iki python betiği node ile scripts/measure-colors.mjs çalıştırır. Yoksa video_dna hata verir, kapak_dna_kontrol çıkış 2 verir, kapak yüklenemez. Kalacağı için sağlam.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "openmontage",
+     "nereden": "~/.claude/skills/openmontage (kullanıcının kendi skili, kalacak).",
+     "kanit": [
+      "config/tools.yaml:193,205",
+      "status/skill-global.yaml:16"
+     ],
+     "nasil": "Politika metni: ajan önce bunu, sonra ~/.openmontage/AGENT_GUIDE.md okur.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "nlm-skill",
+     "nereden": "~/.claude/skills/nlm-skill (kullanıcının kendi skili, kalacak).",
+     "kanit": [
+      "notebooklm-competitor-intelligence/SKILL.md:7",
+      "config/notebooklm.yaml:4",
+      "status/skill-global.yaml:17"
+     ],
+     "nasil": "Rakip ajanı NotebookLM işinde okur.",
+     "kesinlik": "kesin"
+    },
+    {
+     "ad": "OpenMontage katman-3 skilleri (93 klasör: ffmpeg, elevenlabs, video-edit, remotion, threejs-*...)",
+     "nereden": "~/.openmontage/.agents/skills ve ~/.claude/skills bağları; projede 122 off.",
+     "kanit": [
+      "config/tools.yaml:194 (yalnız betimleme)",
+      "kod ve talimat taraması: hiçbiri skill olarak çağrılmıyor"
+     ],
+     "nasil": "Okunmuyor; ffmpeg, elevenlabs, remotion sözcükleri program anlamında geçiyor.",
+     "kesinlik": "kesin (kullanılmıyor)"
+    }
+   ],
+   "sabit_yollar": [
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/tools/kurgu/video_dna.py",
+     "satir": "18 (kullanım 65)",
+     "yol": "~/.claude/skills/design-dna/scripts/measure-colors.mjs",
+     "ne_okuyor": "measure-colors.mjs, color-math.mjs ve node_modules/sharp. Yoksa measure-colors hatası; design-dna kalacağı için sağlam."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/assets/brand/kapak-sablonu/kapak_dna_kontrol.py",
+     "satir": "14 (kullanım 43)",
+     "yol": "~/.claude/skills/design-dna/scripts/measure-colors.mjs",
+     "ne_okuyor": "aynı betik. Yoksa çıkış 2; thumbnail-publishing PASS'sız kapak yüklemeyi yasakladığı için kapak hattı durur."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/tools/skill_durum.py",
+     "satir": "29, 61, 95-104, 134",
+     "yol": "~/.claude/skills ve ~/Documents/SkillKutuphanesi/araclar/skill-ekle.py",
+     "ne_okuyor": "Genelde */SKILL.md varlığı ve sha256, status/skill-global.yaml kullanilan listesi. Kullanilan 5 HF adı yoksa 5 FAIL; aynı ad hem projede hem genelde ise FAIL (geçiş sırasında); hash değişimi UYARI. denetim.sh bunu çalıştırır."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/.claude/skills/hyperframes-shorts/SKILL.md",
+     "satir": "3, 15, 22, 29",
+     "yol": "~/.claude/skills/hyperframes-core/SKILL.md (22), ~/.claude/skills/design-dna/ (29)",
+     "ne_okuyor": "Satır 22 hyperframes-core/SKILL.md'yi Read ile okutur; yoksa sözleşme okunamaz. Projenin kendi skili, düzeltme yeri."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/.claude/skills/runtime-plan/SKILL.md",
+     "satir": "25",
+     "yol": "hyperframes-animation/rules/",
+     "ne_okuyor": "rules adları; yoksa izinli giriş listesi içeriksiz."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/.claude/agents/shorts-video-edit-director.md, visual-asset-producer.md, publisher-analyst.md, long-video-edit-director.md",
+     "satir": "shorts:21,28; visual:19,22; publisher:21; long:18",
+     "yol": "~/.claude/skills/design-dna/scripts/measure-colors.mjs",
+     "ne_okuyor": "final kare ve kapak renk ölçümü; design-dna kaldığı için sağlam."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/CLAUDE.md",
+     "satir": "22, 106, 152",
+     "yol": "~/.claude/skills/<ad>/SKILL.md; tool-002 'global = HF paketi + design-dna + openmontage + nlm-skill'",
+     "ne_okuyor": "Talimat metni; boşalınca yanlış olur, güncellenmeli."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/status/skill-global.yaml",
+     "satir": "tüm dosya",
+     "yol": "~/.claude/skills/<ad>/SKILL.md",
+     "ne_okuyor": "skill_durum.py ve skill_kullanim.py okur; HF 5 skill listeden çıkmalı."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/config/tools.yaml",
+     "satir": "193, 194, 205, 214-225",
+     "yol": "~/.claude/skills/openmontage/SKILL.md vb.",
+     "ne_okuyor": "Betimleme. Tek işlevsel okuma: render_sirali.sh hyperframes version satırının ilk sayısını alır (221, 0.9.23; program 0.9.35, yalnız uyarı)."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/tools/kurgu ve tools altındaki 45+ betik",
+     "satir": "shebang, _ortak.py:8, zincir.sh:10, render_sirali.sh:29",
+     "yol": "/Users/sabanulukaya/.openmontage/.venv/bin/python",
+     "ne_okuyor": "OpenMontage venv'i (program); skill boşaltmasından etkilenmez."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/docs/kural-ayrintilari.md, skill-haritasi.md, kural-dizini.md, synthesis, agent-memory",
+     "satir": "kural-ayrintilari 196,203,358,359; skill-haritasi 66-113",
+     "yol": "~/.claude/skills/*, ~/.agents/skills",
+     "ne_okuyor": "Yalnız belge; kırılmaz, eskir."
+    },
+    {
+     "dosya": "/Users/sabanulukaya/Documents/IstatistikYoutube/.claude/settings.json ve settings.local.json",
+     "satir": "permissions.allow; skillOverrides",
+     "yol": "Read(~/.claude/skills/**); 122 off",
+     "ne_okuyor": "İzin kalmalı. Off kayıtları zararsız; ileride bu adlardan biri projeye kurulursa kapanır. Gerekli 5 HF adı off listesinde yok."
+    }
+   ],
+   "proje_ici_skiller": [
+    "23 kütüphane kurulumu (kilit.json, --durum hepsi güncel): statistical-analysis, verification-before-completion, yt-audit, yt-script, yt-package, data-visualization, design-critique, huashu-art-motion, motion-doctrine, cut-the-curve, seam-craft, gsap-plugins, motion-design, humanizer, yt-retention, gsap-core, gsap-timeline, scientific-critical-thinking, validate-data, yt-seo, gsap-performance, explore-data, caption-qa (caption-qa'da 1 kırık bağlantı uyarısı).",
+    "24 projenin kendi skili (kilitte değil): asset-licensing, audience-experimentation, audio-mixing, channel-strategy, editorial-governance, evidence-learning-loop, host-performance-direction, hyperframes-shorts (sabit yol içerir), kurgu-hatti, music-library-supervision, notebooklm-competitor-intelligence, official-source-research, parallel-team-orchestration, performance-review, quota-governor, runtime-plan, shorts-script, statistical-verification, thumbnail-publishing, topic-scorecard, visual-identity, visual-storytelling ve kalanlar.",
+    "yt-script bilinçli kapalı (settings.local.json off, skill_durum BILINCLI_KAPALI).",
+    "11 ajanın skills alanı hep proje içi adlar; genel boşalınca sorun çıkmaz."
+   ],
+   "openmontage_kullanimi": "OpenMontage bu projede program olarak kullanılıyor, skill olarak değil. Bütün tools betikleri sabit /Users/sabanulukaya/.openmontage/.venv/bin/python ve ffmpeg-full kullanır. config/tools.yaml:205 politikası: ajan önce ~/.claude/skills/openmontage/SKILL.md (kullanıcının kendi skili, kalacak) sonra ~/.openmontage/AGENT_GUIDE.md okur. ~/.openmontage/.agents/skills altındaki 93 katman-3 skilinden hiçbiri hiçbir ajan tanımında, CLAUDE.md maddesinde ya da proje skilinde adıyla çağrılmıyor; projeye kurulacak OpenMontage skili yok. OpenMontage'daki hyperframes-core, hyperframes-animation, motion-graphics (fecb9a1) dondurulmuş kopyalardan farklı ve 4 izinli giriş tarifinden yoksun; yerine geçmez. Skill boşaltmasının venv ve program üzerinde etkisi yok.",
+   "belirsizler": [
+    "KRİTİK: hyperframes-core, hyperframes-animation, motion-graphics kütüphanede ve 11-08 yedeğinde YOK; tek kaynak ~/.claude/skills'teki dondurulmuş kopyalar (~1,7 MB, 156 dosya). skill-ekle.py ile kurulamaz; boşaltmadan önce proje içine birebir kopyalanmalı (kilitte olmayan proje skili), kütüphane kararı DURUM.md:89'da açık.",
+    "Sıra: genel skill aynı adlı proje skilini ezer ve skill_durum denetim 2 FAIL verir. Sıra: tam yedek, projeye kopyala/kur, genelden boşalt, sonra skill_durum.py, status/skill-global.yaml, hyperframes-shorts 3/15/22, CLAUDE.md 22 ve 106, docs güncelle.",
+    "hyperframes ve hyperframes-cli: kütüphane kopyası (2 Kas) genel kopyadan (7 Kas) eski; program 0.9.35. Kütüphane güncellenmeli ya da genel kopya projeye alınmalı. 0.9.35 resmî skill setinde core/animation/motion-graphics var mı doğrulanamadı (hyperframes komutu çalıştırılmadı).",
+    "design-dna kalacağı için yollar geçerli; taşınırsa node_modules (19 MB) da taşınmalı, kütüphane kopyasında yok. Kütüphaneden projeye kurulmamalı (ad çakışması).",
+    "hyperframes skills check/update çalıştırılmadı; rutin doğrulama olarak anılıyor, genel boşalınca anlamsızlaşır. config/tools.yaml:221 sürümü 0.9.23, program 0.9.35.",
+    "productions/ yalnız ad taraması yapıldı; ~/.claude/commands ve ~/.claude/CLAUDE.md kapsam dışı. Hiçbir şey değiştirilmedi."
+   ]
+  }
+ ],
+ "karsilastirma": {
+  "skiller": [
+   {
+    "ad": "hyperframes",
+    "genel_kopya": "~/.claude/skills/hyperframes: gerçek klasör, 78 dosya, 7 Kas 2026 (HyperFrames ~0.9.20 etiketli kuşak; SKILL.md'de 'Usage beacon' satırı var). ~/.agents/skills/hyperframes ayrı bir kopya (kütüphane f8309b3 ile birebir aynı). OpenMontage'daki ~/.openmontage/.agents/skills/hyperframes 0.7.17 kuşağı, farklı ve eski.",
+    "kutuphane_karsiligi": "hyperframes (heygen-com/hyperframes, f8309b35, tercih), arsiv/g-video-ses-medya/01-video-uretim-montaj/hyperframes. Alternatif: hyperframes@openai (kullanılmaz). Ek: kurulu program paketinde 0.9.35 sürümü /usr/local/lib/node_modules/hyperframes/dist/skills/hyperframes (program klasörü, kütüphane dışı).",
+    "fark": "kütüphane daha ESKİ, aynı kuşak (uyumlu ama geride). diff -rq: aynı 78 dosya kümesi; 10 dosya farklı (SKILL.md, references/format.md, motion.md, plugin-installation.md, runtimes.md, skill-lifecycle.md, storyboard.md, types/3d.md, scripts/plugin-cli.mjs) ve genel kopyada fazladan references/path-tracing.md var. Fark içeriği: genel kopya beacon satırı, 'init --skip-skills --skill=hyperframes', '/reverse-any-video', 'Time the <video>, never its wrapper' ekliyor. Genel kopya da güncel değil: 0.9.35 paketiyle SKILL.md, motion.md, plugin-installation.md, skill-lifecycle.md ve 4 betikte fark var, pakette scripts/lib/windows-exe-search.mjs yeni. Kütüphane-paket farkı 15 dosya.",
+    "projenin_guvendigi_dosyalar_var_mi": "Kısmen. Projenin okuduğu SKILL.md ve references/* (captions, motion, format, storyboard vb.) kütüphanede de var; yalnız path-tracing.md yok. video_dna.py ve kapak_dna_kontrol.py HyperFrames dosyası AÇMIYOR (onlar design-dna'ya bakıyor), yani bu skilin kütüphane sürümü onları etkilemez. Kütüphane kopyasında beacon satırı yok (projenin telemetri çizgisine daha uygun); genel kopyada var (npx hyperframes events çağrısı). skill_durum.py kapısı status/skill-global.yaml'daki SKILL.md hash'ini denetliyor; yeni kopyada hash değişir, kayıt yenilenmeli.",
+    "oneri": "Kütüphaneden kur (düz adla). Ama iki ön koşul: (1) genel klasördeki aynı adlı kopya önce kaldırılmalı (aksi halde --kuru 'hyperframes--kutuphane' adıyla kurar ve proje metinleri/skill_durum düz adı bekliyor); (2) kütüphane kopyası program 0.9.35 paketine göre önce yenilenmeli (K-05, ayrı onay) ya da K-28'e göre program paketindeki dist/skills/hyperframes projeye bağ ile verilmeli. Bağ yoluyla gelen sürüm (0.9.35) beacon ve path-tracing içerir; beacon projenin telemetri çizgisiyle karşılaştırılmalı. Proje metinlerinin (hyperframes-shorts:15, kurgu-hatti) yeni sürümle çelişmediği bir projede denenmeli."
+   },
+   {
+    "ad": "hyperframes-cli",
+    "genel_kopya": "~/.claude/skills/hyperframes-cli: gerçek klasör, 13 dosya, 7 Kas 2026 (0.9.20 kuşağı). ~/.agents/skills/hyperframes-cli ayrı kopya (kütüphane ile farklı). OM klonundaki kopya 0.7.17 kuşağı, çok eksik.",
+    "kutuphane_karsiligi": "hyperframes-cli (heygen-com/hyperframes, f8309b35, tercih), arsiv/g-video-ses-medya/01-video-uretim-montaj/hyperframes-cli. Alternatif: hyperframes-cli@openai (kullanılmaz). Ek: program paketi dist/skills/hyperframes-cli (0.9.35).",
+    "fark": "kütüphane daha eski, aynı kuşak (uyumlu). Aynı 13 dosya kümesi; SKILL.md, references/cloud.md, init-and-scaffold.md, lint-validate-inspect.md farklı. Genel kopya: beacon satırı, '--skip-skills', 'captions is not a command' notu, _meta.updateNotice yönergesi var; kütüphanede 'skills' alt komutu hâlâ listeli. Genel kopya 0.9.35 paketinden de geride (SKILL.md, doctor-browser.md, init-and-scaffold.md, preview-render.md farklı).",
+    "projenin_guvendigi_dosyalar_var_mi": "Evet. Projenin kullandığı SKILL.md ve doctor/check/render referansları (doctor-browser, lint-validate-inspect, preview-render) kütüphanede var. --kuru uyarısı: 4 dosya ../hyperframes/ kardeş bağlantısı kullanıyor, hyperframes de kurulmazsa bağlantılar boşa düşer; ikisi birlikte kurulmalı. Ad çakışması hyperframes ile aynı (--kutuphane eki).",
+    "oneri": "Kütüphaneden kur, hyperframes ile birlikte, genel kopya kaldırıldıktan sonra (düz ad için). hyperframes için yazılan iki ön koşul (kütüphane kopyasını 0.9.35'e yenile ya da K-28 bağıyla program paketinden ver) aynen geçerli."
+   },
+   {
+    "ad": "hyperframes-core",
+    "genel_kopya": "~/.claude/skills/hyperframes-core: gerçek klasör, 11 dosya, 116 KB, 7 Kas 2026. ~/.agents/skills/hyperframes-core ile birebir aynı (ikinci kopya). OM klonundaki ~/.openmontage/.agents/skills/hyperframes-core 13 dosya, farklı (script-format.md var, creator-editing-recipes.md yok; SKILL.md ve 5 referans farklı).",
+    "kutuphane_karsiligi": "yok. kaynaklar.json arsivden_cikarilanlar: iki kayıt (heygen-com/hyperframes skills/hyperframes-core ve OpenMontageInc .agents/skills/hyperframes-core), 2026-10-22, 'Kaynakta kaldırıldı / eski sürümler kaldırılsın' kullanıcı kararı. skill-ekle.py --kuru: [HATA] bulunamadi, --zorla ile geçilemez. Program paketi 0.9.35'te de yok (dist/skills yalnız hyperframes, hyperframes-cli, media-use). ~/Documents/Claude/yedek/global-skills-2026-11-08 yedeğinde de YOK.",
+    "fark": "kütüphanede yok. Tek kopyalar ~/.claude/skills ve ~/.agents/skills (ikisi de boşaltılacak) ile OM klonundaki farklı kuşak. OM kopyası yerine geçmez.",
+    "projenin_guvendigi_dosyalar_var_mi": "Kütüphane versiyonu yok, bu yüzden karşılaştırılamaz. Proje hyperframes-shorts/SKILL.md:22'de ~/.claude/skills/hyperframes-core/SKILL.md yolunu Read ile açtırıyor (sözleşme: data-start/duration, class=clip, tracks); bu yol boşaltınca kırılır. OM kopyasında SKILL.md var ama içerik farklı.",
+    "oneri": "projenin kendi skili olarak dondur: bugünkü genel kopyanın birebir kopyası (~/.claude/skills/hyperframes-core, 11 dosya) projenin .claude/skills/hyperframes-core klasörüne konur (kilit.json dışı, 'kendi skili'), kütüphane kaydına 'kendi skili' diye yazılır (K-28 de bunu söylüyor). Boşaltmadan ÖNCE ayrı yedek alınmalı (11-08 yedeğinde yok). skill-ekle.py ile kurulamaz. Ardından hyperframes-shorts/SKILL.md:22 yolu proje içi .claude/skills/hyperframes-core/SKILL.md olarak düzeltilir."
+   },
+   {
+    "ad": "hyperframes-animation",
+    "genel_kopya": "~/.claude/skills/hyperframes-animation: gerçek klasör, 122 dosya, 1,4 MB, rules/ 48 dosya, 7 Kas 2026. ~/.agents/skills/hyperframes-animation ile birebir aynı. OM klonunda 115 dosya, rules/ 36 dosya, SKILL.md ve adapters farklı.",
+    "kutuphane_karsiligi": "yok. arsivden_cikarilanlar: heygen-com/hyperframes skills/hyperframes-animation ve OpenMontageInc .agents/skills/hyperframes-animation, 2026-10-22, eski sürümler kaldırılsın. --kuru: [HATA] bulunamadi (--zorla geçmez). 11-08 yedeğinde yok.",
+    "fark": "kütüphanede yok. OM kopyası yerine geçmez: projenin 13 izinli giriş tarifinden (docs/kural-ayrintilari.md:203, runtime-plan/SKILL.md:25) 4'ü OM kopyasında YOK: chart-scrub-readout, waterfall-entry, nudge-curve, anchored-layout-expand. Diğer 9 (stat-bars-and-fills, counting-dynamic-scale, svg-path-draw, svg-icon-enrichment, css-marker-patterns, card-morph-anchor vb.) her iki kopyada var; genel kopyada hepsi var.",
+    "projenin_guvendigi_dosyalar_var_mi": "Kütüphane versiyonu yok. Proje rules/<tarif>.md dosyalarını okuyor ve izinli giriş sözlüğü bu dosya adlarına bağlı; genel kopyada hepsi mevcut, OM kopyasında 4'ü eksik. Three.js adaptörü (adapters/) hyperframes-shorts:31'de anılıyor.",
+    "oneri": "projenin kendi skili olarak dondur: ~/.claude/skills/hyperframes-animation birebir (122 dosya) proje .claude/skills altına kopyalanır, kütüphane kaydına 'kendi skili' yazılır. Boşaltmadan önce yedek şart (tek kopya ~/.claude ve ~/.agents, ikisi de silinecek). OM kopyasına geçmek 4 izinli tarifi kaynaksız bırakır, önerilmez."
+   },
+   {
+    "ad": "motion-graphics",
+    "genel_kopya": "~/.claude/skills/motion-graphics: gerçek klasör, 23 dosya, 156 KB, 7 Kas 2026. ~/.agents/skills/motion-graphics ile birebir aynı. OM klonundaki kopya 23 dosya ama SKILL.md, agents/*, catalog-map.md ve categories/*/module.md farklı (yeni kuşak).",
+    "kutuphane_karsiligi": "yok (bağımsız kayıt yok). arsivden_cikarilanlar: heygen-com/hyperframes skills/motion-graphics ve OpenMontageInc .agents/skills/motion-graphics, 2026-10-22. Yalnız arsiv/_bilesenler/calesthio__OpenMontage/.agents/skills/motion-graphics adında eski bir bileşen kopyası var (kurulabilir skill kaydı değil). --kuru: [HATA] bulunamadi.",
+    "fark": "kütüphanede yok. Bileşen kopyasıyla 10 satır fark (agents/*.md, SKILL.md ve catalog-map.md farkları, genel kopya farklı kuşak). OM klonuyla 16 satır fark.",
+    "projenin_guvendigi_dosyalar_var_mi": "Kütüphane versiyonu yok. Proje hyperframes-shorts okuma sırasında adıyla yükletiyor (stat count-up, kinetik metin, harita, cut-the-curve ile birlikte); genel kopyadaki SKILL.md, categories/, phases/, references/ gerekir.",
+    "oneri": "projenin kendi skili olarak dondur: ~/.claude/skills/motion-graphics birebir kopya (23 dosya) proje .claude/skills altına, kütüphane kaydına 'kendi skili'. Boşaltmadan önce yedek (11-08 yedeğinde yok). OM kopyası farklı kuşak, yerine geçmez."
+   },
+   {
+    "ad": "design-dna",
+    "genel_kopya": "~/.claude/skills/design-dna: gerçek klasör, 10 dosya + scripts/node_modules (131 dosya, sharp ^0.33.5), 15 Eki 2026, KAYNAK.txt: zanwei/design-dna 593e39b. Kullanıcının dört kendi skilinden biri.",
+    "kutuphane_karsiligi": "design-dna (zanwei/design-dna, commit 593e39bc, tercih), arsiv/a-tasarim-onyuz/01-ui-ux-tasarim-dili/design-dna. Başka sürüm yok.",
+    "fark": "aynı (içerik aynı commit). diff -rq: SKILL.md, scripts/color-math.mjs, measure-colors.mjs, verify.mjs, package.json, references/ özdeş; kütüphanede ekstra README*, docs/, .gitignore, KAYNAK.md, scripts/test; genel kopyada ekstra KAYNAK.txt, scripts/node_modules (131 dosya), package-lock.json. node_modules kütüphanede yok, kurulan kopyada da gelmez (npm install gerekir). --kuru: 'design-dna--kutuphane' adıyla kurulur (global aynı adlı kopya durduğu için).",
+    "projenin_guvendigi_dosyalar_var_mi": "Evet, tam: video_dna.py:18, kapak_dna_kontrol.py:14, iki ajan metni ve pilot-29 betikleri ~/.claude/skills/design-dna/scripts/measure-colors.mjs yolunu kullanıyor; bu dosya ve color-math.mjs kütüphanede mevcut ve özdeş. Ek bağımlılık: sharp node_modules, yalnız genel kopyada kurulu.",
+    "oneri": "yerinde kalır (kullanıcının kendi skili). İki sabit yol (video_dna.py, kapak_dna_kontrol.py) değişmez. Kütüphaneden projeye kurulmaz (ad çakışması ve node_modules eksikliği). Bunu boşaltma listesinden hariç tutmak yeter."
+   },
+   {
+    "ad": "openmontage",
+    "genel_kopya": "~/.claude/skills/openmontage/SKILL.md: gerçek klasör, tek dosya, 8 KB, 8 Eyl (kullanıcının kendi skili).",
+    "kutuphane_karsiligi": "yok (registry'de 'openmontage' adlı skill yok).",
+    "fark": "kütüphanede yok. Kullanıcının kendi skili.",
+    "projenin_guvendigi_dosyalar_var_mi": "Kütüphane versiyonu yok. Proje config/tools.yaml:193,205 ve kurgu-hatti:8 'önce bu skili oku' diyor; dosya yerinde kalıyor, etkilenmez. OpenMontage programı (venv /Users/sabanulukaya/.openmontage/.venv/bin/python, ~/.openmontage/.env) skil değil, kalır.",
+    "oneri": "yerinde kalır (kullanıcının kendi skili)."
+   },
+   {
+    "ad": "nlm-skill",
+    "genel_kopya": "~/.claude/skills/nlm-skill: gerçek klasör, SKILL.md (63 KB) + references, 30 Eki 2026 (kullanıcının kendi skili).",
+    "kutuphane_karsiligi": "yok (registry'de nlm-skill kaydı yok).",
+    "fark": "kütüphanede yok. Kullanıcının kendi skili.",
+    "projenin_guvendigi_dosyalar_var_mi": "Kütüphane versiyonu yok. config/notebooklm.yaml:4 ve notebooklm-competitor-intelligence/SKILL.md:7 yolu anıyor; dosya yerinde kalıyor, etkilenmez.",
+    "oneri": "yerinde kalır (kullanıcının kendi skili)."
+   },
+   {
+    "ad": "threejs-* (animation, fundamentals, geometry, interaction, lighting, loaders, materials, postprocessing, shaders, textures, world-generation; hyperframes-animation Three adaptörü ile birlikte)",
+    "genel_kopya": "~/.claude/skills/threejs-*: 11 bağ -> ~/.openmontage/.agents/skills/threejs-* (OM klonunun GÜNCEL içeriğini gösterir). Projede hepsi settings.local.json'da off; yalnız hyperframes-shorts:31'de 'nadir sahnede, gerekçeyle' isteğe bağlı, hiçbir ajan adlandırmıyor.",
+    "kutuphane_karsiligi": "İki karşılık: threejs-<ad> (CloudAI-X/threejs-skills 0e181866, tercih) 10 skill; threejs-<ad>@calesthio (OpenMontageInc/OpenMontage 195eab24, alternatif) 10 skill; threejs-world-generation yalnız OpenMontageInc kaynaklı (195eab24, tercih, 04-motion-graphics-karakter).",
+    "fark": "farklı kuşak/kaynak. Güncel OM klonu ile threejs-animation@calesthio özdeş (yalnız KAYNAK.md eksik, birebir), yani OM tabanlı alternatif hazır; tercih edilen CloudAI-X kopyalarının SKILL.md'si OM'unkinden farklı.",
+    "projenin_guvendigi_dosyalar_var_mi": "Proje belirli dosya okumuyor; yalnız ad düzeyinde isteğe bağlı kullanım. Hiçbir betik bunlara bağlı değil.",
+    "oneri": "kütüphaneden kur gerekmez (K-27 asgari yol): kullanılmıyor, hiçbir ajan adlandırmıyor. Kullanıcı Three.js sahneyi isterse tek tek, OM kaynaklı ihtiyaç varsa @calesthio alternatifi (OM ile özdeş) ya da K-28'e göre program klasöründen bağ. Şimdilik kurulmaz."
+   },
+   {
+    "ad": "OpenMontage layer-3 skilleri (ffmpeg, video-edit, elevenlabs, remotion, visual-style, ve diğer ~60 bağ)",
+    "genel_kopya": "~/.claude/skills altında ~75 bağ -> ~/.openmontage/.agents/skills/* (güncel klon içeriği), 6 bağ ../../.agents/skills/*. Projede hepsi settings.local.json'da off; hiçbir CLAUDE.md satırı, ajan, skill ya da betik bunları 'yükle' diye adlandırmıyor (config/tools.yaml:194 yalnız bilgi). ffmpeg doğrudan /usr/local/opt/ffmpeg-full/bin üzerinden kullanılıyor.",
+    "kutuphane_karsiligi": "ffmpeg (OpenMontageInc/OpenMontage 195eab24, tercih), video-edit (OpenMontageInc tercih; video-edit@yildizdikme alternatif), elevenlabs (OpenMontageInc tercih), remotion (OpenMontageInc, durum_elle sabitlenmiş), visual-style (OpenMontageInc tercih). Kütüphane OM 195eab24 kuşağında, güncel klon fecb9a1e.",
+    "fark": "kütüphane daha eski (OM 195eab24 ile klon fecb9a1e farkı; threejs-animation@calesthio örneğinde özdeş, ama genel olarak doğrulanmadı), aynı kuşak. Projeyi etkilemiyor çünkü kullanılmıyor.",
+    "projenin_guvendigi_dosyalar_var_mi": "Proje hiçbir dosyasını okumuyor.",
+    "oneri": "kütüphaneden kur gerekmez: hiçbiri kurulmaz (K-27 asgari karar, K-28 kopya olmasın). Bu skiller genel klasörden silinince proje aynen çalışır; settings.local.json'daki ~124 'off' adı anlamsızlaşır ama zararsızdır (aynı adlı bir proje skili ileride kurulursa kapalı gelir, dikkat)."
+   }
+  ],
+  "genel_not": "Bulgular ve doğrulanan noktalar. (1) İki okuyucunun haritası büyük ölçüde doğru çıktı. Düzeltmeler: ~/.agents/skills klasörü de var ve içinde hyperframes-core, hyperframes-animation, motion-graphics ~/.claude/skills kopyalarıyla BİREBİR aynı; hyperframes ~/.agents'ta kütüphane f8309b3 ile özdeş, ~/.claude'daki ise 0.9.20 kuşağı. İki klasör de boşaltılacağı için tek bağımsız yedek bu iki yerin dışında yok: ~/Documents/Claude/yedek/global-skills-2026-11-08 yedeğinde core/animation/motion-graphics YOK. Boşaltmadan önce bu üçünün (core 11, animation 122, motion-graphics 23 dosya, toplam yaklaşık 1,7 MB) ayrı yedeği ve proje içine kopyası şart. (2) hyperframes ve hyperframes-cli: kütüphane kopyası f8309b3 (2 Kas), genel kopya 0.9.20, program paketi 0.9.35 (dist/skills yalnız hyperframes, hyperframes-cli, media-use içeriyor). Yani üçü de farklı; en güncel kaynak kurulu programın paketi (K-28 yönü). Kütüphane kopyasına kurulum geri sürüm (beacon ve path-tracing yok) getirir, kırıcı olduğuna dair iz yok. Ad çakışması: genel kopya durdukça kurulum '--kutuphane' adıyla gelir; düz ad için önce genel kopya kaldırılmalı. hyperframes-cli kurulurken hyperframes de kurulmalı (4 kardeş bağlantı). (3) video_dna.py:18 ve kapak_dna_kontrol.py:14 HyperFrames dosyası değil, design-dna/scripts/measure-colors.mjs açıyor; design-dna yerinde kalacağı için sağlam. Kütüphane kopyası aynı commit (593e39b), fakat node_modules (sharp) içermez; kütüphaneden proje içine kurulmamalı. (4) Taşıma planı: sıra yedek, proje içine core/animation/motion-graphics donmuş kopya, hyperframes ve -cli kurulumu (kütüphane yenilemesi ya da program paketi bağı), genelden boşaltma, sonra hyperframes-shorts/SKILL.md:3,15,22 düzeltmesi, tools/skill_durum.py kapısı ve status/skill-global.yaml (HF 5 skil çıkar), CLAUDE.md satır 22 ve 106 (tool-002, kullanıcı onayı ister) ve belgeler. Proje git deposu değil, bu yüzden elle düzenlenen dosyaların kopya yedeği gerekir. (5) Çözülmemiş: yeni 0.9.35 skillerinin projenin 13 izinli giriş tarifi ve core sözleşmesiyle uyumu doğrulanmadı; 4 izinli tarif (chart-scrub-readout, waterfall-entry, nudge-curve, anchored-layout-expand) yalnız donmuş hyperframes-animation kopyasında var. Kütüphaneye geri alma (karar DURUM.md:89 ve K-28 'projenin kendi skili olarak dondur' yönünde) kullanıcı onayı ister. design-dna dosya sayısı: DURUM.md '142' diyor, ben 10 dosya + 131 node_modules = 141 saydım. Hiçbir şey değiştirilmedi; yalnız okuma ve --kuru çalıştırıldı."
+ },
+ "plan": {
+  "oner_ciktisi": "Komut: skill-ekle.py /Users/sabanulukaya/Documents/IstatistikYoutube --oner \"HyperFrames ile istatistik YouTube videosu kurgusu: sahne yazimi, kompozisyon, animasyon, grafik sayac, komut satiri\"\nTaranan: 5649 skill · eşleşen: 507 · gizli katalogda 43 eşleşme daha.\nÖne çıkanlar (🔥trend ve puan): hyperframes (A, 100, kısmen ücretli, trend) · hyperframes-cli (--skill ile ayrıca kuruldu) · motion-doctrine (99), seam-craft (92) (ikisi projede zaten kurulu) · oversized-cursor, remotion-to-hyperframes, svg-character-animation, manim-composer, gsap-framer-scroll-animation (öneri listesinde, bu iş için gerekmez) · reverse-any-video (ÜCRETLİ, kurulmaz).\nÖnerilen roller: motion-graphics-sanatcisi (7), video-kompozisyon (2), video-kurgu-render (1) vb. Bu projede rol dosyası kurulmayacak (yalnız --skill ile iki skill), çünkü projenin 11 ajanı kendi tanımlarını taşıyor.\nSonuç: öneri taramasında hyperframes-core, hyperframes-animation, motion-graphics ve hyperframes-creative çıkmıyor; bunlar kütüphanede yok (arsivden_cikarilanlar).",
+  "kuru_komut": "cd /Users/sabanulukaya/Documents/SkillKutuphanesi && python3 araclar/skill-ekle.py /Users/sabanulukaya/Documents/IstatistikYoutube --skill hyperframes hyperframes-cli --kuru\n(--arac verilmez: projenin kilidinde araç düzeni zaten kayıtlı ve rapor \"yalniz-claude (seçim: seçildi)\" diyor. Proje yalnız Claude Code ile açılıyor; yalniz-claude = .claude/skills altında gerçek kopya, symlink yok, Codex/Antigravity görmez. Proje bunu istiyor: tek araç Claude Code, ortak düzen gereksiz symlink ve .agents/skills klasörü yaratırdı. Gerçek kurulumda aynı komut --kuru yerine --evet ile çalışır, ama ancak genel klasördeki aynı adlı hyperframes ve hyperframes-cli kaldırıldıktan sonra ve kuru yeniden çalıştırılıp ekli-ad satırlarının kaybolduğu görüldükten sonra.)",
+  "kuru_rapor": "KURULACAK (bugünkü genel klasör durumunda koşulan gerçek --kuru): 2 skill, rol yok.\n  hyperframes -> hyperframes--kutuphane [genel]\n  hyperframes-cli -> hyperframes-cli--kutuphane [genel]\nSatırlar:\n[UYARI] bagimlilik: HyperFrames CLI gerekir (npx hyperframes). Program kurulu (0.9.35), yeni bir şey gerekmiyor; uyarı kabul edilebilir.\n[BİLGİ] ekli-ad: hyperframes ve hyperframes-cli, genel klasörde aynı adlı FARKLI skill durduğu için ...--kutuphane adıyla kurulacak. Projenin metinleri, skill_durum.py ve status/skill-global.yaml düz adı kullanıyor; bu yüzden gerçek kurulum genel kopyalar kalkmadan YAPILMAMALI (aksi halde iki ad, ad sapması).\n[BİLGİ] globalde-ayni: hyperframes--kutuphane: bilgisayarda birebir aynısı genel olarak da var (ŞÜPHELİ: karşılaştırma sonucu birebir değil; kütüphane f8309b3, genel kopya 0.9.20 etiketli ve 10 dosya farklı; araç yalnız ~/.agents kopyasıyla eşleşmiş olabilir. Sorun değil ama \"aynı\" ifadesine güvenme).\n[BİLGİ] ayni-ad: hyperframes ve hyperframes-cli için kurulan heygen-com/hyperframes (tercih); diğeri openai/plugins kaynaklı @openai (kullanılmaz).\n[BİLGİ] kismen-ucretli: hyperframes (HeyGen medya, bulut render isteğe bağlı) ve hyperframes-cli (bulut render ücretli). Proje zaten bulut render, hyperframes auth, TTS, HeyGen kullanmayı yasaklıyor; ücretsiz yerel yol kullanılıyor.\n[BİLGİ] kardes-yol: hyperframes-cli: ../hyperframes/ bağlantıları ../hyperframes--kutuphane/ olarak çevrilecek. Genel kopyalar kalkınca ad düz olur ve çeviri gerekmez; ayrıca iki skill birlikte kurulduğu için bağlantılar boşa düşmez.\n[BİLGİ] arac-duzeni: yalniz-claude (seçim: seçildi), .claude/skills gerçek kopya, görenler Claude Code, Cursor, VS Code Copilot; talimat bloğu CLAUDE.md.\n[BİLGİ] arac-gormez: Codex ve Antigravity bu projedeki skilleri görmez. Proje Claude Code ile açılıyor, istenen bu.\n[BİLGİ] tarama: 5649 skill tarandı (görünür 4705, gizli 944); projede tespit edilen teknoloji yok.\n[kuru] Hiçbir şey değişmedi. HATA yok.\n\nKÜTÜPHANEDE OLMAYAN (ayrı kuru, hepsi: --zorla ile de GEÇİLEMEYEN HATA):\n[HATA] bulunamadi: hyperframes-core\n[HATA] bulunamadi: motion-graphics\n[HATA] bulunamadi: hyperframes-animation\n[HATA] bulunamadi: hyperframes-creative   (YENİ BULGU, aşağıda)\n\"DURDU: şu hatalar --zorla ile de geçilemez: bulunamadi\".\n\nEK-ADAY (kütüphanede ilgili olup seçilmeyen): remotion-to-hyperframes, oversized-cursor, svg-character-animation, manim-composer, gsap-framer-scroll-animation, animate, impeccable, threejs-fundamentals ve OpenMontage kaynaklı ffmpeg, video-edit, elevenlabs, remotion, visual-style, threejs-*. Hiçbiri kurulmaz: ajan tanımlarında, skillde, kuralda adıyla çağrılmıyor ve K-27/K-28 (OpenMontage skilleri kopyalanmaz) asgari kararı geçerli. Proje 23 kütüphane skilini zaten taşıyor (--durum: hepsi güncel).\n\nÜCRETLİ: yok. Kurulacak ikisi \"kismen ücretli\" (ücretsiz yol var). reverse-any-video ücretli ve alınmaz.\n\nSÜRÜM UYARISI (--kuru'nun söylemediği, karşılaştırmadan): kütüphane kopyası f8309b3 (2 Kas) projenin bugün okuduğu genel kopyadan (7 Kas, 0.9.20 etiketi) GERİDE: hyperframes'te 10 dosya, hyperframes-cli'de 4 dosya farklı; genel kopyada ek olarak references/path-tracing.md var. Kütüphane kopyasında telemetri (usage beacon, npx hyperframes events) satırı yok, bu projenin telemetri çizgisine daha uygun. Projede path-tracing ya da events --skill anılmıyor (grep boş). Program paketi 0.9.35 ise ikisinden de yeni.\n\nYENİ BULGU (önceki taramalarda yok): (a) motion-graphics, adı geçen genel kardeş hyperframes-creative/references/motion-principles.md ve data-in-motion.md dosyalarını okutuyor (SKILL.md:119, agents/builder.md:41; grafik ve sayaç kategorileri, yani kanalın ana kullanımı). hyperframes-creative genel klasörde 1,3 MB, 79 dosya, gerçek klasör, kütüphanede yok, 11-08 yedeğinde yok (yedek yalnız bağlar ve ~/.agents kopyaları; ~/.agents sürümü 4 dosyada farklı). Projede settings.local.json'da \"off\", ama Read ile dosya yolu okunabildiği için bugün çalışıyor. Boşaltılınca bu iki referans kaybolur. (b) .claude/skills/runtime-plan/SKILL.md:25 sabit yol ~/.claude/skills/hyperframes-animation/rules/<ad>.md içeriyor; önceki listede sabit yol olarak yoktu. (c) motion-graphics/SKILL.md:24 ../hyperframes/references/brief-contract.md zaten bugün de yok (hyperframes/references içinde brief-contract.md bulunmuyor): yeni bir bozulma değil. (d) hyperframes-core, -animation, motion-graphics SKILL.md satır 6/14: ../hyperframes/references/plugin-installation.md; düz adla kurulan hyperframes bunu karşılar (ekli adla karşılamazdı).",
+  "adimlar": [
+   "0. ZAMAN: Kullanıcı OpenMontage güncellemesini bu projede sınıyor; hiçbir şey ondan önce yapılmaz. Bu plan sınama bitince, kullanıcı 'başla' deyince uygulanır; her adım ayrı onay ister (BASLA kural 2). Tek oturumda, aralarında proje çalıştırılmadan ve genel klasör tek adımda boşaltılarak yapılmalı: genel klasörde aynı adlı hyperframes ile proje kopyası yan yana kalırsa skill_durum.py 'hem projede hem globalde' FAIL verir ve Claude'da genel sürüm proje sürümünü ezer.",
+   "1. YEDEK (proje git deposu DEĞİL; git status hata veriyor; geri alma git ile olmaz). Yedek klasörü: /Users/sabanulukaya/Documents/Claude/yedek/istatistik-skill-gecisi-2026-11-12/ (yeni, boş). İçine: (a) projeden değişecek dosyalar, yol yapısı korunarak: CLAUDE.md, .claude/skills/hyperframes-shorts/, .claude/skills/runtime-plan/, .claude/settings.local.json, status/skill-global.yaml, tools/skill_durum.py, config/tools.yaml, docs/kural-ayrintilari.md, docs/kural-dizini.md, docs/skill-haritasi.md, .claude/agent-memory/showrunner/reference_skill_katmanlari.md, .skill-kutuphanesi/ (kilit.json, son-rapor.md; yedek/ alt klasörü hariç), her biri cp -R ile; (b) genel klasörden altı skilin gerçek kopyası: ~/.claude/skills/hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, motion-graphics, hyperframes-creative (cp -R, hiçbiri symlink içermiyor, doğrulandı: 0 symlink; dosya sayıları 78, 13, 11, 122, 23, 79). Core, animation, motion-graphics ve creative'in 11-08 yedeğinde ve kütüphanede KOPYASI YOK; bu yedek tek bağımsız kopya olabilir (core, animation, motion-graphics ayrıca ~/.agents/skills'te birebir aynı, o da boşaltılacak). (c) Doğrulama: her kopya için diff -rq kaynak yedek (çıktı boş) ve find -type f | wc -l eşitliği.",
+   "2. KARAR ALINIP ONAY GELDİKTEN SONRA, DONMUŞ KOPYALAR (kütüphane dışı iş, ayrıntı 'kutuphane_disi_isler'): yedekteki hyperframes-core, hyperframes-animation, motion-graphics ve hyperframes-creative klasörlerini yedekten /Users/sabanulukaya/Documents/IstatistikYoutube/.claude/skills/ altına cp -R ile koy (kaynak genel klasör değil, yedek: genel klasör boşaltılsa da iş bozulmaz). İçerik değiştirilmez (donmuş, birebir). Sonra diff -rq yedek proje kopyası boş olmalı.",
+   "3. GENEL KLASÖRÜ BOŞALTMA bu planın işi değildir (rehber/12, ayrı onay, kural 1 istisnası onaylanana kadar yapılmaz). Bu proje için ön koşul: boşaltma listesinden design-dna, openmontage, nlm-skill, youtube-arama HARİÇ tutulur. Proje yalnız şu genel yollara bağlı kalır ve çalışmaya devam eder: ~/.claude/skills/design-dna/scripts/measure-colors.mjs (video_dna.py:18, kapak_dna_kontrol.py:14, iki ajan metni, pilot-29 betikleri), openmontage/SKILL.md (config/tools.yaml:193,205), nlm-skill (config/notebooklm.yaml:4). Boşaltmada kalkacak bu proje için yalnız hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, motion-graphics, hyperframes-creative ve 79 bağ.",
+   "4. KÜTÜPHANE KURULUMU (genel hyperframes ve hyperframes-cli kalktıktan sonra): önce kuruyu yeniden çalıştır: cd /Users/sabanulukaya/Documents/SkillKutuphanesi && python3 araclar/skill-ekle.py /Users/sabanulukaya/Documents/IstatistikYoutube --skill hyperframes hyperframes-cli --kuru. Beklenen: ekli-ad, kardes-yol ve globalde-ayni satırları YOK; adlar düz hyperframes ve hyperframes-cli; yalnız bagimlilik UYARI'sı. Böyle değilse DUR. Kullanıcı raporu görüp onaylarsa: aynı komut --kuru yerine --evet. Sonra --dogrula ve --durum sonucu bildirilir. Araç kilit.json, CLAUDE.md bloğunu (satır 120-153; tablo 23 -> 25 satır) ve notlar/proje-kullanimi.md'yi kendisi yazar, kendi yedeğini .skill-kutuphanesi/yedek'e alır.",
+   "5. HATA YOK ise sıra: yedekten dönülecek nokta olarak .skill-kutuphanesi/yedek içindeki son yedek adını not et (python3 araclar/skill-ekle.py <proje> --yedekler).",
+   "6. SABİT YOL DÜZELTMELERİ (proje içinde, kullanıcı onayı: kullanıcı 'yol düzeltmelerini onayladım' dedi; yalnız proje skili ve kod dosyaları. Her dosya düzenlenmeden önce yedekte var). Proje köküne göre göreli yollar, böylece proje taşınsa da çalışır; aynı sayfada .claude/skills/motion-doctrine/SKILL.md zaten bu biçimle yazılı.\n(6a) /Users/sabanulukaya/Documents/IstatistikYoutube/.claude/skills/hyperframes-shorts/SKILL.md satır 22. ESKİ: `2. `~/.claude/skills/hyperframes-core/SKILL.md` (kompozisyon sözleşmesi: `data-start/duration`, `class=\"clip\"`, tracks)` YENİ: `2. `.claude/skills/hyperframes-core/SKILL.md` (proje, donmuş kopya; kompozisyon sözleşmesi: `data-start/duration`, `class=\"clip\"`, tracks)`\n(6b) aynı dosya satır 3 (description içinde). ESKİ parça: `(global CLI, sürüm config/tools.yaml + ~/.claude/skills/hyperframes-*)` YENİ parça: `(global CLI, sürüm config/tools.yaml; skilleri proje içi .claude/skills/hyperframes*)`\n(6c) aynı dosya satır 15 (başlık 'Kurulum (global, 2026-09-08)' altındaki 'Skill seti' maddesi). ESKİ başlangıç: `- Skill seti **kullanıcı düzeyinde** `~/.claude/skills/` (global katman, tool-002). Bu projede açık olanlar yalnız `status/skill-global.yaml` 'kullanilan' listesi (HF 5: ...` YENİ metin: `- HyperFrames skilleri PROJEDE: `hyperframes` ve `hyperframes-cli` kütüphaneden kurulu (`.skill-kutuphanesi/kilit.json`, güncelleme `skill-ekle.py --durum`); `hyperframes-core`, `hyperframes-animation`, `motion-graphics`, `hyperframes-creative` projenin kendi DONMUŞ kopyaları (üst depoda yok, 18.10 içeriği; elle düzenlenmez, kütüphane kaydı yok); `-keyframes` 07.11 çıkarıldı. Global katmanda yalnız `design-dna`, `openmontage`, `nlm-skill` kalır (`status/skill-global.yaml` 'kullanilan'). `motion-doctrine`, `cut-the-curve`, `seam-craft`, `motion-design`, `gsap-plugins` 07.11'den beri PROJEDE (kütüphane kurulumu); `-creative` (donmuş, settings.local.json'da kapalı kalır, yalnız motion-graphics'in referansı olarak okunur), `-audio`, `-registry`, `media-use`, `faceless-explainer`, `general-video` … ve genel OpenMontage bağları artık kurulu değil; `.claude/settings.local.json` 'off' satırları zararsız eskidir. Genel skill değişikliği yalnız kullanıcı onayıyla, sonra `tools/skill_durum.py --onayla`.` (satırın '- Skill seti' sonrası mevcut metin tek paragrafta değiştirilir; alt maddeler dokunulmaz.)\n(6d) satır 29 (design-dna yolu `~/.claude/skills/design-dna/`) DEĞİŞMEZ: design-dna genelde kalır.\n(6e) /Users/sabanulukaya/Documents/IstatistikYoutube/.claude/skills/runtime-plan/SKILL.md satır 25 (EN ÖNEMLİ KAÇAN YOL). ESKİ parça: `sonra gerekli tarif `~/.claude/skills/hyperframes-animation/rules/<ad>.md`` YENİ parça: `sonra gerekli tarif `.claude/skills/hyperframes-animation/rules/<ad>.md``\n(6f) /Users/sabanulukaya/Documents/IstatistikYoutube/tools/skill_durum.py satır 112 (BILINCLI_KAPALI). ESKİ: `BILINCLI_KAPALI = {\"yt-script\"}  # kullanıcı 09.11: kütüphanede kalır, projede kapalı (süreç denetimi D29)` YENİ: `BILINCLI_KAPALI = {\"yt-script\", \"hyperframes-creative\"}  # yt-script: kullanıcı 09.11 (D29); hyperframes-creative: donmuş kopya, yalnız motion-graphics'in referansı, listede açılmaz` (Gerekçe: hyperframes-creative proje skili olunca settings.local.json 'off' kaydı skill_durum 'proje skili off' FAIL'ini tetiklerdi. Kapalı kalması bağlam yükü ekler değil; dosyalar yol ile okunabilir.) skill_durum.py'nin diğer satırları (GLOBAL=29, 59-61, 98-103) kod değişikliği istemez: boşalma sonrası 'kullanilan' listesi küçülünce kendiliğinden doğru çalışır.\n(6g) /Users/sabanulukaya/Documents/IstatistikYoutube/status/skill-global.yaml. 'kullanilan' altında şu 5 satır silinir: `- hyperframes`, `- hyperframes-cli`, `- hyperframes-animation`, `- hyperframes-core`, `- motion-graphics` (yorumlarıyla). Kalır: `- design-dna`, `- openmontage`, `- nlm-skill`. 'skiller' altında şu 5 özet satırı silinir: `hyperframes: 0136848be89c81d7`, `hyperframes-animation: b35f1f8eff68e9ff`, `hyperframes-cli: 341c509a4eac5ec3`, `hyperframes-core: a8d6fe52471be6bc`, `motion-graphics: 0024b21e05ca584b`; design-dna, nlm-skill, openmontage özetleri kalır. Başlık yorumu (aciklama:) 3 genel skili ve HF'nin proje içine alındığını söyleyecek biçimde kısaltılır. DİKKAT: yaml.safe_dump ile çalışan `skill_durum.py --onayla` bu dosyadaki yorumları siler; elle düzenle ve --onayla çalıştırma.\n(6h) /Users/sabanulukaya/Documents/IstatistikYoutube/CLAUDE.md satır 22: metin ('global `~/.claude/skills/<ad>/SKILL.md`') genelde kalan 3 skil için hâlâ doğru; DEĞİŞTİRME. Satır 106 (tool-002) KURAL METNİDİR: 'global (kullanıcı 07.11: YALNIZ HyperFrames paketi — hyperframes, -cli canlı; -animation, -core, motion-graphics dondurulmuş — + design-dna + openmontage + nlm-skill = 8; kayıt `status/skill-global.yaml`; dokunulmaz, sürümü izlenir; HF skili programla aynı etiketten)' YENİ: 'global (kullanıcı 07.11, 12.11 güncellendi: YALNIZ design-dna + openmontage + nlm-skill = 3; kayıt `status/skill-global.yaml`; dokunulmaz, sürümü izlenir). HyperFrames skilleri proje içindedir: `hyperframes`, `hyperframes-cli` kütüphane kurulumu (`kilit.json`); `hyperframes-core`, `-animation`, `motion-graphics`, `-creative` projenin kendi donmuş kopyaları.' Orch-005 (tek yer ilkesi) gereği kullanıcı bu cümleyi AYRICA onaylar; onay gelmeden satır değişmez ve skill_durum.py zaten buna bakmadığı için denetim etkilenmez. Aynı eski metin docs/kural-ayrintilari.md:355-359 (## tool-002) ve :196,:203, docs/kural-dizini.md:137-138, docs/skill-haritasi.md bölüm C (satır 66-80) ve F (82, 108, 110), config/tools.yaml:214-225, .claude/agent-memory/showrunner/reference_skill_katmanlari.md içinde tekrar ediyor: yalnız BELGEDİR, çalışmayı etkilemez; kural onayından sonra aynı cümleyle bir turda güncellenir (kural-ayrintilari 203: 'izinli giriş tarifleri' adları değişmez, rules/ klasörü artık proje içinde).\n(6i) /Users/sabanulukaya/Documents/IstatistikYoutube/.claude/settings.local.json: DEĞİŞMEZ. hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, motion-graphics 'off' listesinde değil (doğrulandı); hyperframes-creative 'off' kalır (bilinçli). Eski 'off' adları (hyperframes-registry, -audio, -media, -studio, media-use …) zararsız; ileride aynı adlı bir proje skili kurulursa o da kapanır, bu not skill-haritasında kalır.\n(6j) /Users/sabanulukaya/Documents/IstatistikYoutube/.claude/settings.json (Read(~/.claude/skills/**)) DEĞİŞMEZ: design-dna, openmontage, nlm-skill okuması için gerekli.",
+   "7. KAYIT (kütüphane tarafı, kullanıcı onayıyla): /Users/sabanulukaya/Documents/SkillKutuphanesi/projeler.json -> kendi_skilleri -> 'IstatistikYoutube' girdisi (şu an YOK; bu yüzden proje-durumu.md 22 skili 'KAYITSIZ SKILL' sayıyor) = [asset-licensing, audience-experimentation, audio-mixing, channel-strategy, editorial-governance, evidence-learning-loop, host-performance-direction, hyperframes-shorts, kurgu-hatti, music-library-supervision, notebooklm-competitor-intelligence, official-source-research, parallel-team-orchestration, performance-review, quota-governor, runtime-plan, shorts-script, statistical-verification, thumbnail-publishing, topic-scorecard, visual-identity, visual-storytelling] (22 kendi skil). Dört donmuş kopya (hyperframes-core, hyperframes-animation, motion-graphics, hyperframes-creative) için projenin /Users/sabanulukaya/Documents/IstatistikYoutube/.skill-kutuphanesi/elle-kurulan.json dosyası (araç projeye yazmaz; kütüphane oturumu kullanıcı onayıyla elle ekler; biçim araclar/proje-kullanimi.py:283-292 okuyucusuna uyar: ad -> bilgi sözlüğü, kaynak/tarih/neden alanı). projeler.json -> notlar -> IstatistikYoutube altına bir not eklenebilir ('hyperframes-core, -animation, motion-graphics, -creative 18.10 donmuş kopyadır; kütüphanede ve program paketinde yok'). Sonra python3 araclar/proje-kullanimi.py (rapor) ve python3 araclar/kapsam-denetimi.py (0 sorun), python3 araclar/dogrula.py (0 hata); commit önerisi kullanıcıya söylenir (onaysız commit yok, push yok).",
+   "8. DOĞRULAMA (video render yok, hiçbir betik üretim çalıştırmaz; ayrıntı 'riskler' sonrası ve aşağıdaki liste): cd /Users/sabanulukaya/Documents/IstatistikYoutube && python3 tools/skill_durum.py --ayrinti (beklenen: SKILL_DURUM: TEMİZ · 0 FAIL; 'kullanılan global: design-dna, nlm-skill, openmontage'); python3 /Users/sabanulukaya/Documents/SkillKutuphanesi/araclar/skill-ekle.py /Users/sabanulukaya/Documents/IstatistikYoutube --dogrula (✅) ve --durum (25 skill güncel); python3 -m py_compile tools/skill_durum.py; python3 -c \"import json;json.load(open('.claude/settings.local.json'));json.load(open('.skill-kutuphanesi/kilit.json'))\"; python3 -c \"import yaml;print(yaml.safe_load(open('status/skill-global.yaml'))['kullanilan'])\" (venv python: /Users/sabanulukaya/.openmontage/.venv/bin/python); grep -rnE '~/\\.claude/skills/(hyperframes|motion-graphics)' .claude/skills .claude/agents tools CLAUDE.md (beklenen: boş; docs/config satırları belge, kalabilir ama güncellenir); kapak_dna_kontrol.py ve video_dna.py için: yalnız dosyanın var olduğu node ile: test -f ~/.claude/skills/design-dna/scripts/measure-colors.mjs && test -d ~/.claude/skills/design-dna/scripts/node_modules/sharp. Bağlantı sağlığı: bağlantı çözümleme betiği (scratchpad): donmuş dört skil ve hyperframes, hyperframes-cli içindeki göreli .md bağlantılarının proje .claude/skills içinde var olup olmadığı. Bugünkü baseline: ../hyperframes/references/brief-contract.md zaten yok; ../registry/, ../news/ iç referanslar; geri kalan hepsi çözülmeli. Yeni kırık olmamalı.",
+   "9. KULLANICININ KENDİ SINAMASI: yeni bir Claude Code oturumu aç (skill listesi oturum başında okunur): /skills (veya Skill listesi) içinde hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, motion-graphics bir kez görünmeli (çift ya da --kutuphane eki olmamalı); 'hyperframes-shorts okuma sırasındaki 2. maddeyi Read ile aç' de: .claude/skills/hyperframes-core/SKILL.md açılmalı; bir izinli giriş tarifi iste (örn. stat-bars-and-fills): .claude/skills/hyperframes-animation/rules/stat-bars-and-fills.md okunmalı; bir 'sayaç' sahnesi iste ve motion-graphics'in charts/stat modülünün ../../hyperframes-creative referansını okuduğunu gör. Üretim için en küçük gerçek test: bir Shorts sahnesini kullanıcı hyperframes kurgu hattında tools/kurgu/sahneler/kur.py ile kurup render alır (bunu kullanıcı yapar; ben çalıştırmam). Beklenen: kapak_dna_kontrol.py PASS, tools/denetim.sh hızlı modda SKILL_DURUM TEMİZ (denetim.sh diğer kontrolleri de çalıştırdığı için sınamayı kullanıcı seçer).",
+   "10. YEDEK, GERİ ALMA VE GİT DURUMU. Proje git deposu DEĞİL: dal ya da commit ile izole edilemez; push zaten yasak (yalnız ulukayasaban/SkillKutuphanesi). Yalnız kopya yedeği ve kütüphane yedeği vardır. Geri alma: (i) kütüphane kurulumu: python3 /Users/sabanulukaya/Documents/SkillKutuphanesi/araclar/skill-ekle.py /Users/sabanulukaya/Documents/IstatistikYoutube --geri-al (son işlemi; tüm kurulum yarım kalırsa araç kendisi geri alır) ya da --kaldir hyperframes hyperframes-cli --evet; (ii) donmuş kopyalar: rm -r proje .claude/skills altındaki dört yeni klasör (yeni oldukları için güvenli; silmeden kullanıcıya söyle) ve genel klasöre dönülecekse yedekten cp -R (genel klasöre yazma kütüphane oturumunda kural 1 istisnası onaylanana kadar yapılmaz, geri alma komutunu kullanıcıya ver); (iii) düzenlenen dosyalar: yedek klasöründen cp ile geri; (iv) yedek klasörleri kullanıcı 'sil' demeden silinmez (K-29). Kütüphane tarafında skill-ekle.py yalnız notlar/proje-kullanimi.md değişirse tek dosya yerel commit eder; push yok. projeler.json ve elle-kurulan.json değişikliği için commit kullanıcı isterse yerelde yapılır; proje tarafında commit yok."
+  ],
+  "kutuphane_disi_isler": [
+   "hyperframes-core (11 dosya), hyperframes-animation (122 dosya, rules/ 48), motion-graphics (23 dosya): kütüphanede YOK (kaynaklar.json arsivden_cikarilanlar, 2026-10-22, 'eski sürümler kaldırılsın'); skill-ekle.py bunları kuramaz (HATA bulunamadi, --zorla geçmez). Kütüphane kuralları kütüphaneden gelen skilin elle kopyalanmasını yasaklar; bunlar kütüphane skili DEĞİL, projenin kendi donmuş malı olarak ele alınır (rehber/10: kilitte olmayan klasör = 'elle' ya da 'kendi'). Öneri: yedekten projenin .claude/skills altına cp -R ile birebir donmuş kopya + proje kaydı (elle-kurulan.json, projeler.json). Bu CLAUDE.md kural 1 ('sadece skill-ekle.py') için KÜTÜPHANE DIŞI bir iş olduğundan kullanıcı onayı şart: ayrıca onaylı olan yalnız 'kütüphaneden kurulum ve sabit yol düzeltmesi'. Alternatif (b): kütüphaneye geri alma (arsivden_cikarilanlar kaydını silmek, arşiv ekleme) kullanıcı kararı ve onayı ister, bu aşamada önerilmez (K-28 'projenin kendi skili olarak dondur' yönünde).",
+   "hyperframes-creative (79 dosya, 1,3 MB): kütüphanede YOK, 11-08 yedeğinde YOK, dört dosya farkıyla ~/.agents kopyası var. motion-graphics yalnız iki referansı için okutuyor (motion-principles.md, data-in-motion.md). Seçenekler: (A, önerilen) tamamını donmuş proje kopyası yap, settings.local.json 'off' kalsın, skill_durum BILINCLI_KAPALI'ya ekle (düzeltme 6f); (B) yalnız iki dosyayı motion-graphics altına kopyala ve linkleri düzelt: donmuş skili değiştirir, önerilmez; (C) hiçbir şey yapma: motion-graphics grafik/sayaç kategorilerinde bu iki dosyayı okuyamaz, davranış değişir. Ancak (A) ya da (B) 'aynı çalışma' şartını korur.",
+   "hyperframes ve hyperframes-cli: genel kopyalar (0.9.20) yerine kütüphane kopyası f8309b3 gelir (bkz. riskler). Kütüphane kopyasını önce program paketinin 0.9.35 etiketine yenilemek (K-05, ayrı onay: arsiv-guncelle.py --uygula --dal yolu, kaynak=program paketi dist/skills) ya da K-28'in henüz yazılmamış 'programın klasörüne bağ' yolu bu iş kapsamında YOKTUR. Üçüncü yol: şu anki genel 0.9.20 kopyalarını da donmuş proje malı yapmak (davranış birebir aynı kalır, ama kütüphane güncellemesi izlemez ve 'kütüphaneden kur' onayıyla çelişir); bu yalnız kullanıcı 'birebir aynı kalsın' derse.",
+   "Proje kaydı: projeler.json 'kendi_skilleri' içinde IstatistikYoutube için ENTRY YOK; proje-durumu.md 22 skili KAYITSIZ SKILL sayıyor. 22 kendi skili + dört donmuş kopya kaydedilir (adım 7). Kayıt dosyalarına (registry.json, kaynaklar.json, kartlar) proje adı yazılmaz; proje bilgisi yalnız projeler.json ve elle-kurulan.json'da.",
+   "design-dna (genel, 19 MB, node_modules/sharp ile), openmontage, nlm-skill, youtube-arama: kullanıcının kendi dört skili, genel klasörde KALIR. Dokunulmaz, kütüphaneden kurulmaz (design-dna kütüphane kopyası node_modules içermez ve --kutuphane adıyla gelirdi). Boşaltmada listeden hariç tutulmaları genel-klasör boşaltma adımının işidir.",
+   "OpenMontage katman-3 skilleri (ffmpeg, video-edit, elevenlabs, remotion, visual-style, threejs-*, 79 bağ): projeye kurulmaz. K-27 (yalnız bu projede kullanılıyor) ve K-28 (kopya olmasın) ile uyumlu asgari karar: kullanılmıyor, hiçbir ajan/skill/kural adıyla çağırmıyor; yalnız OpenMontage Python venv'i (/Users/sabanulukaya/.openmontage/.venv/bin/python, 30+ betikte sabit yol) ve program klasörü kalır. Venv pin'lerine dokunulmaz.",
+   "Belge ve kural güncellemeleri (CLAUDE.md:106, docs/kural-ayrintilari.md, skill-haritasi.md, kural-dizini.md, config/tools.yaml, agent-memory): projenin kendi kural dosyalarıdır; tool-002 'tek yer ilkesi' (orch-005) gereği kullanıcı onayı ister; kütüphane oturumunun proje kural dosyasına yazması için ayrı onay gerekir. CLAUDE.md'nin skill-kutuphanesi:basla/bitir bloğunu skill-ekle.py --evet yeniden yazar; bu bloğa elle dokunulmaz."
+  ],
+  "riskler": [
+   "SÜRÜM GERİLEMESİ: kütüphaneden gelecek hyperframes ve hyperframes-cli (f8309b3, 2 Kas) projenin bugün okuduğu genel kopyadan (0.9.20) eskidir: hyperframes'te 10, hyperframes-cli'de 4 dosya farklı; 'Time the <video>, never its wrapper', '/reverse-any-video', 'init --skip-skills' gibi sonraki eklemeler ve references/path-tracing.md yok. Proje metinleri (hyperframes-shorts, kurgu-hatti) bunlara dayanmıyor (grep boş) ama 'aynı çalışma' için kullanıcı kararı gerekir (A: kütüphane olduğu gibi; B: önce kütüphane 0.9.35'e yenilensin; C: mevcut 0.9.20 kopyalar donmuş proje malı). Program 0.9.35, bu iki skil ondan da geride; 'hyperframes skills check' 'outdated' diyebilir, bu proje için uyarıdır, hata değil.",
+   "Telemetri: genel hyperframes kopyasında 'Usage beacon' (npx hyperframes events --skill=...) satırı var, kütüphane kopyasında yok; geçişle bu satır gider. Proje 'telemetri ve hyperframes auth yasak' çizgisinde olduğu için olumlu. (0.9.35 paket kopyası beacon taşıyor; K-28 bağıyla paketten verilirse bu çizgi yeniden değerlendirilmeli.)",
+   "SIRALAMA TUZAĞI: genel klasörde aynı adlı hyperframes/-cli dururken kurulum ...--kutuphane adıyla gelir; proje metinleri, skill_durum.py ve skill-global.yaml düz adı bekler. Genel kopyalar kalktıktan SONRA kuru yeniden çalıştırılmalı (ekli-ad kaybolmalı). Kurulum ya da donmuş kopya yerleştirmesi genel kopyalardan ÖNCE yapılırsa skill_durum.py 'hem projede hem globalde' FAIL verir ve Claude'da genel skill proje skilini ezer. Üç adım (yedek, donmuş kopya + kurulum, genel boşaltma) tek oturumda ve arada üretim yapılmadan yürütülmeli.",
+   "motion-graphics bağımlılığı: hyperframes-creative iki referansı (motion-principles.md, data-in-motion.md) önceki taramada yoktu; boşaltılınca kaybolur ve sayaç/grafik üretimini sessizce etkiler. Çözüm: hyperframes-creative'i donmuş kopya olarak almak (plan A). hyperframes-creative projede 'off': skill_durum 'proje skili off' FAIL verir; 6f düzeltmesi ya da off kaydını silmek şart (off'u silmek skili listeye açar, bağlam yükü ve hyperframes-creative'in 'brief/design/spec' yönlendirmesini projeye açar; kapalı kalması istenen çizgi).",
+   "Sabit yol: runtime-plan/SKILL.md:25 önceki 'sabit yollar' listesinde yok, ben buldum; düzeltilmezse izinli giriş tarifi okunamaz (edit-026 (8)). Diğer 'kullanılan' sabit yollar (design-dna) genelde kalır. productions/, learning/, synthesis/ altındaki tarihçe belgelerinde eski yollar kalır (çalıştırılmaz).",
+   "Bir yanlış negatif: hyperframes-animation'ın ~/.agents kopyasıyla 'birebir aynı' olması boşaltılan iki yerin de silinmesi demektir; tek kopya yedektir. Yedek (adım 1) alınıp diff -rq ile doğrulanmadan genel boşaltma yapılmamalı. 11-08 yedeği core, animation, motion-graphics, creative'i içermiyor.",
+   "Proje git deposu değil; hata durumunda satır satır diff yok. Her düzenlenen dosya adım 1'de yedeklenir; yedek klasörü kullanıcı 'sil' demeden silinmez. skill_durum.py --onayla yaml yorumlarını siler (elle düzenle).",
+   "Sessiz kapanma: settings.local.json'daki ~124 'off' adı, ileride aynı adlı bir skilin projeye kurulmasında onu sessizce kapatır (hyperframes-registry, hyperframes-creative, media-use, remotion-to-hyperframes, slideshow, figma, faceless-explainer, general-video, ffmpeg, video-edit). Bugünkü hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, motion-graphics off DEĞİL (doğrulandı).",
+   "Yeni oturum şart: Claude Code proje skillerini oturum başında okur; mevcut açık oturumda skill listesi değişmez. Kullanıcının OpenMontage sınaması sürerken uygulanırsa o oturum bozulabilir.",
+   "hyperframes-cli 'bulut render ücretli' ve hyperframes 'HeyGen medya' içerir; proje bunları yasaklıyor, skill metni 'yapabilirim' dese de ajan projenin kuralıyla durur. Bugünkü genel kopyada da aynı durum var, yeni risk değil.",
+   "Beacon ya da kütüphane güncellemesinde yeni hash: hyperframes ve hyperframes-cli kilit.json'a girince skill_durum.py'nin 'global değişikliği' kapısı onları bir daha izlemez (güncellemeleri skill-ekle.py --durum/--guncelle izler); bunlar için eski 'global değişti' uyarısına güvenilemez.",
+   "Sayım farkı: design-dna dosya sayısı DURUM.md '142', ben 141 (10 + 131 node_modules); önemsiz. Önceki not doğru: kütüphanede ayrıca skill_durum '--dogrula' kapısı skill-ekle.py'yi çalıştırır; ağ ya da kütüphane yolu (~/Documents/SkillKutuphanesi) bozulursa skill_durum FAIL verir.",
+   "Bu analizde skill-ekle.py --dogrula çalıştırılmadı (izinli mod listesinde yok); adım 8'deki doğrulama sonuçları kurulumdan sonra görülecek. Üretim HANDOFF kayıtlarında hangi skilin gerçekte okunduğu ölçülmedi (kullanım izi bilgisi docs'a dayanıyor). hyperframes komutu çalıştırılmadı; 0.9.35 setinde core/animation/motion-graphics olmadığı paket içeriğiyle (dist/skills: yalnız hyperframes, hyperframes-cli, media-use) doğrulandı, projenin 13 izinli tarifinin yeni kuşakla uyumu doğrulanmadı."
+  ],
+  "kullaniciya_sorulacak": [
+   "ANA SORU (tek): Sınama bitince, hyperframes-core, hyperframes-animation, motion-graphics ve hyperframes-creative'i (kütüphanede yok) projenin kendi 'donmuş' skili olarak .claude/skills altına birebir kopyalayıp kayda alayım mı; ve hyperframes ile hyperframes-cli için hangisi: (A) kütüphanedeki f8309b3 olduğu gibi (bugünkü kopyadan biraz eski, telemetri satırı yok), (B) önce kütüphaneyi 0.9.35'e yenileyeyim (ayrı onay), (C) bugünkü 0.9.20 kopyaları da donmuş olarak alayım (hiçbir şey değişmez ama kütüphane izlemez)?",
+   "Sonra (ayrı onaylar): CLAUDE.md satır 106 (tool-002) cümlesini 'global = design-dna + openmontage + nlm-skill' olacak şekilde değiştirmem için onay; kural dosyalarını (docs, config/tools.yaml) aynı turda güncelleyeyim mi?",
+   "Genel klasör boşaltması ayrı bir iş: design-dna, openmontage, nlm-skill, youtube-arama listede kalacak; onaylıyor musun?"
+  ]
+ },
+ "inceleme": {
+  "hukum": "ÖNCE DÜZELT: plan büyük ölçüde doğru (design-dna yerinde kalıyor, venv ve program etkilenmiyor, hyperframes-creative ve runtime-plan:25 yakalanmış), ama genel klasörden altı skilin kaldırılması hiçbir adımın işi değil, oysa kurulum ve düzgün adlar buna bağlı; ayrıca üç kütüphane dışı donmuş kopya ile hyperframes sürüm geriliği için kullanıcı kararı gerekiyor.",
+  "itirazlar": [
+   {
+    "konu": "Sıra boşluğu: altı genel kopyanın kalkması kimsenin adımı değil",
+    "kanit": "Adım 3 'boşaltma bu planın işi değildir' diyor, adım 4 ise kuru raporda ekli-ad satırlarının kaybolmasını şart koşuyor. Gerçek --kuru bugün hyperframes -> hyperframes--kutuphane ve hyperframes-cli -> hyperframes-cli--kutuphane diyor (genel kopya durduğu için). Claude Code'da kişisel skill aynı adlı proje skilini ezer; tools/skill_durum.py:~87 aynı şeyi 'hem projede hem globalde' FAIL sayıyor.",
+    "onem": "engel",
+    "duzeltme": "Planda açık bir adım olsun: 'genel klasörden yalnız şu altı klasör kalkar: hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, motion-graphics, hyperframes-creative' (rehber/12'ye göre kütüphane oturumunda, kural 1 istisnası ve ayrı onayla, yedek doğrulandıktan sonra). Tam boşaltma ayrı ve sonra yapılabilir. Kurulum ve donmuş kopya yerleştirme bu adımdan SONRA, tek oturumda."
+   },
+   {
+    "konu": "Donmuş kopyaları elle yerleştirmek kütüphane kuralının dışında; peşin onay bunu kapsamıyor",
+    "kanit": "Kütüphane CLAUDE.md kural 2 elle cp ile skill kurmayı yasaklıyor, kural 1 'sadece skill-ekle.py'. Kullanıcının peşin onayı yalnız 'kütüphaneden kurulum' ve 'genel yollara işaret eden yerlerin düzeltilmesi'. core/animation/motion-graphics/creative kütüphanede YOK (arsivden_cikarilanlar, --kuru HATA, --zorla geçmez).",
+    "onem": "engel",
+    "duzeltme": "Adım 2'den önce kullanıcıya tek soru: 'bu dördünü projenin kendi donmuş skili olarak koyayım mı?'. Onaysız yapılmaz. Alternatif kütüphaneye geri alma ayrı karar. Kopya yedekten yapılır, genel klasörden değil."
+   },
+   {
+    "konu": "Gerçekten kaçan bağımlılık yok denecek kadar az; bir tek hyperframes-creative ve runtime-plan:25 yeni, plan bunları yakalamış. Benim bağımsız taramam (skill adı, rules/, ../ bağlantıları, tools/assets/config/status, .claude altı, sembolik bağ) başka sabit yol bulmadı",
+    "kanit": "grep: ~/.claude/skills yalnız tools/skill_durum.py:29,100,103, video_dna.py:18, kapak_dna_kontrol.py:14, config/*.yaml, status/skill-global.yaml, settings.json:12 (Read izni) ve runtime-plan:25, hyperframes-shorts:3,15,22,29, iki ajan metni. Projede .agents yok, .claude/skills içinde symlink yok. Dört adı geçen dosya daha var: cut-the-curve/SKILL.md ve huashu-art-motion/references (kütüphane kopyaları, yalnız ad anıyor, yol yok).",
+    "onem": "bilgi",
+    "duzeltme": "Plan listesine ek madde gerekmez. Yalnız adım 8 grep'ine .claude/skills/runtime-plan eklensin (ekli) ve '~/.claude/skills/(hyperframes|motion-graphics)' desenine 'hyperframes-animation/rules' de yakalansın (zaten kapsıyor)."
+   },
+   {
+    "konu": "Donmuş skillerin içindeki başka skillere atıflar boşaltınca ölür (bugün de 'off', yani yeni bozulma değil)",
+    "kanit": "motion-graphics: media-use 15 kez, /hyperframes-registry, /hyperframes-cli; hyperframes-core: /hyperframes-audio 3, /hyperframes-studio, media-use; hyperframes-animation: /hyperframes-creative/scripts/extract-audio-data.py ve audio-reactive.md (creative kopyalanırsa çözülür); hepsi settings.local.json'da off ya da projede yok.",
+    "onem": "bilgi",
+    "duzeltme": "Kabul edilebilir: proje bunları kullanmıyor (ses zinciri audio-mixing kendi skili). Adım 9'a 'motion-graphics sayaç sahnesi creative referansını okuyor mu' sınaması zaten var; bir de 'ajan media-use/registry'yi arayıp bulamayınca takılmıyor' gözlemi eklensin."
+   },
+   {
+    "konu": "hyperframes ve hyperframes-cli kütüphane kopyası bugünkünden eski; videoyu etkileyebilecek içerik farkları",
+    "kanit": "diff genel(0.9.20) ile kütüphane(f8309b3): (1) format.md ve SKILL.md kuralı 8: bugünkü 'Time the <video>, never its wrapper; lint video_nested_in_timed_element: video zamanlanır, sarmalayıcı zamansız', kütüphane 'video YA DA sarmalayıcı, ikisi birden değil' (program 0.9.35 linti yeni kuralı uygular, ajan eski kurala uyarsa check kırmızı); (2) format.md: local()-only @font-face uyarısı yok; (3) types/3d.md path-tracing.md yok; (4) hyperframes-cli lint-validate-inspect: 'check npm run ile çalıştırılmaz (SIGTERM)' notu yok, 'init --skip-skills', _meta.updateNotice, reverse-any-video yok; (5) usage beacon (npx hyperframes events) yok (olumlu, telemetri çizgisi). Proje şablonları (tools/kurgu/sahneler/*/index.html) <video> içermiyor; kur.py ve render_sirali.sh skill okumaz, CLI ikilisini çağırır.",
+    "onem": "dikkat",
+    "duzeltme": "Hazır şablonla üretilen videolarda fark YOK; yalnız ajanın serbest yazdığı yeni sahnelerde fark olur (özellikle <video> sarmalayıcı zamanlaması). Kullanıcıya seçenek: A kütüphane olduğu gibi, B önce kütüphane 0.9.35'e yenilensin (ayrı onay, önerilen), C bugünkü 0.9.20 kopyalar donmuş alınsın. B yapılmadan A seçilirse hyperframes-shorts'a bir not eklemeyi düşün."
+   },
+   {
+    "konu": "Önceliklendirme (Claude Code): kişisel skill proje skilini ezer; kurulum ile boşaltma arası davranış",
+    "kanit": "tools/skill_durum.py kendi mesajı: 'global sürüm proje skillini ezer (tool-002)'. Genel hyperframes bugün 0.9.20 ve kütüphane aracı bu yüzden --kutuphane ekli ad kullanıyor.",
+    "onem": "dikkat",
+    "duzeltme": "Ara dönemde: (a) donmuş üçü genel kopyalarla birebir aynı, ezilme fark ettirmez ama proje kopyası görünmez; (b) düz adlı hyperframes proje kopyası KURULAMAZ (ekli ad gelir), kurulursa skill listesinde hem hyperframes hem hyperframes--kutuphane görünür ve metinler düz adı bekler; (c) skill_durum FAIL verir; (d) açık oturumlar skill listesini başta okur, değişiklik yeni oturumda görünür. Çözüm: genel kopyaları önce kaldır, sonra kur; ara dönemde üretim yapma."
+   },
+   {
+    "konu": "Adım 6c/6g metin değişimleri kesin değil",
+    "kanit": "6c satır 15'in sonunu ('çöpe ...') tarif ediyor ama satırın tamamı 600 karakteri aşıyor; 6g yaml'daki 'skiller' ve yorum kısımlarını elle düzenle diyor. skill_durum.py --onayla yorumları siler.",
+    "onem": "dikkat",
+    "duzeltme": "6c: satırın TAMAMI okunup tek seferde yeniden yazılsın, önce yedek. 6g: elle düzenle, --onayla çalıştırma (plan bunu söylüyor, kalsın). Sonra skill_durum.py --ayrinti ile doğrula."
+   },
+   {
+    "konu": "Kütüphane kural uyumu: proje adı kayıtlara yazılmıyor mu",
+    "kanit": "Adım 7 yalnız projeler.json (kendi_skilleri, notlar) ve projenin .skill-kutuphanesi/elle-kurulan.json içine yazıyor; proje-kullanimi.py:103,283 bu dosyayı okuyor (var olan biçim). registry.json, kaynaklar.json, kartlar, arsiv/ dokunulmuyor. GitHub: proje git deposu değil, push yok.",
+    "onem": "bilgi",
+    "duzeltme": "Uyumlu. Not: elle-kurulan.json'u projeye yazmak kütüphane oturumunun proje klasörüne yazması demek, kullanıcı onayı adım 7'de zaten var; kapsam notu eklensin."
+   },
+   {
+    "konu": "Ortam: HYPERFRAMES_SKIP_SKILLS=1 korunmalı",
+    "kanit": "~/.claude/settings.json satır 6 env: HYPERFRAMES_SKIP_SKILLS=1 (ayrıca ~/.zshenv, ~/.zshrc). Kütüphane rehber/12: bekçi bu satırın eksikliğini 'sorun' sayıyor.",
+    "onem": "bilgi",
+    "duzeltme": "Boşaltmada bu satırlara dokunulmasın; yoksa HyperFrames komutları genel klasöre skill geri yazabilir. Plana 'dokunulmaz' maddesi olarak eklensin."
+   },
+   {
+    "konu": "Yedek tek bağımsız kopya olabilir ve başka projeler de kullanıyor olabilir",
+    "kanit": "core/animation/motion-graphics/creative 11-08 yedeğinde ve kütüphanede yok; ~/.agents kopyaları da boşaltılacak. Bu plan yalnız bu projeyi kapsıyor; başka projeler (ör. Akıl Dışı) aynı genel kopyaları okuyor olabilir (hafıza notu).",
+    "onem": "dikkat",
+    "duzeltme": "Yedek klasörü kullanıcı 'sil' demeden silinmesin (plan söylüyor). Genel klasörü boşaltmadan önce DİĞER projelerin taraması ayrıca yapılmalı; bu planın onayı onları kapsamaz."
+   }
+  ],
+  "atlanan_bagimliliklar": [
+   "~/.claude/skills/hyperframes-creative (79 dosya): motion-graphics bunun iki referansını okuyor (planda yakalanmış, doğrulandı); ayrıca hyperframes-animation scripts/extract-audio-data.py ve audio-reactive.md aynı skile bağlı",
+   "runtime-plan/SKILL.md:25 ~/.claude/skills/hyperframes-animation/rules/<ad>.md (planda yakalanmış, satır doğrulandı)",
+   "~/.claude/settings.json HYPERFRAMES_SKIP_SKILLS=1 (boşaltmada korunmalı; planda yok)",
+   "~/.claude/commands (openmontage, ink-art, animated-drawing, backlot): yalnız ~/.openmontage altındaki dosya yollarına ve openmontage skiline bağlı; layer-3 skili adıyla çağırmıyor, boşaltmadan etkilenmez",
+   "~/.openmontage/AGENT_GUIDE.md yalnız .agents/skills/ yollarını (synthetic-screen-recording, threejs-world-generation, 3d-asset-generation) yol olarak anıyor, ~/.openmontage kalacağı için çözülür",
+   "skill_durum.py:103 regex: metinde ~/.claude/skills/<ad>/ geçen her ad kullanilan listesinde ya da projede değilse UYARI; donmuş kopyalar projeye girince yeterli, ek iş yok",
+   "~/.config/openmontage/global-skill-links.txt ve ~/.claude/skills/openmontage/SKILL.md 'layer-3 skiller ~/.claude/skills içine bağlı' cümlesi boşaltma sonrası eskir (kullanıcının kendi dosyaları, işlevi bozmaz)",
+   "~/.claude/skills/.trash klasörü ve synced (dokunulmaz, açılmadı)"
+  ],
+  "bosaltinca_kirilacaklar": [
+   "Plan olmadan boşaltılırsa: hyperframes-shorts:22 Read hyperframes-core/SKILL.md başarısız; runtime-plan:25 rules/<ad>.md okunamaz (13 izinli giriş tarifinin 4'ü yalnız donmuş kopyada); skill_durum 5 FAIL (kullanilan 5 HF skili yok) ve denetim.sh kırmızı; motion-graphics ve hyperframes-core hiç yüklenemez",
+   "Yalnız bu plan uygulanırsa kalanlar (kabul edilebilir): threejs-* ve OpenMontage layer-3 79 bağ kalkar; hyperframes-shorts:31 Three.js seçeneği ad olarak yüklenemez (adapter hyperframes-animation içinde kalır); donmuş skillerdeki media-use, hyperframes-registry/-audio/-studio atıfları çözülmez (bugün de off); docs/config metinleri (tools.yaml:194,214-225, skill-haritasi, kural-ayrintilari, CLAUDE.md:106 'global=8') eskir; 'hyperframes skills check' ve olası 'doctor' skill uyarısı anlamsızlaşır",
+   "Çalışmaya devam edenler (doğrulandı): design-dna/scripts/measure-colors.mjs + node_modules/sharp (video_dna.py:18, kapak_dna_kontrol.py:14, iki ajan metni, pilot-29 betikleri); openmontage/SKILL.md ve nlm-skill okumaları; OpenMontage venv (30+ betik) ve ffmpeg-full; kur.py ve render_sirali.sh (CLI ikilisi, skill okumaz); 11 ajanın skills: alanı (hepsi proje içi); Read(~/.claude/skills/**) izni",
+   "Kullanıcı design-dna'yı yanlışlıkla boşaltma listesine alırsa kapak hattı (thumb-002 PASS kapısı) ve video_dna kontrolü durur; listeden hariç tutulması açıkça yazılmalı"
+  ],
+  "son_plan": [
+   "0. Zaman: kullanıcının OpenMontage sınaması bitmeden hiçbir şey yapılmaz; kullanıcı 'başla' deyince, açık Claude oturumu kapalıyken, tek oturumda ve arada proje çalıştırılmadan yürütülür. Her adım ayrı onay.",
+   "1. Kullanıcıya iki karar sor (tek tek): (a) hyperframes-core, hyperframes-animation, motion-graphics, hyperframes-creative projenin donmuş kendi skili olarak konsun mu; (b) hyperframes ve hyperframes-cli için A (kütüphane f8309b3 olduğu gibi) / B (önce kütüphane 0.9.35'e yenilensin, ayrı onay) / C (bugünkü 0.9.20 kopyalar donmuş alınsın). Cevaba göre devam.",
+   "2. Yedek (proje git deposu değil): /Users/sabanulukaya/Documents/Claude/yedek/istatistik-skill-gecisi-2026-11-12/ içine (a) değişecek proje dosyaları yol yapısıyla: CLAUDE.md, .claude/skills/hyperframes-shorts/, .claude/skills/runtime-plan/, .claude/settings.local.json, status/skill-global.yaml, tools/skill_durum.py, config/tools.yaml, docs/kural-ayrintilari.md, docs/kural-dizini.md, docs/skill-haritasi.md, .claude/agent-memory/showrunner/reference_skill_katmanlari.md, .skill-kutuphanesi/ (yedek/ alt klasörü hariç); (b) genel klasörden altı skil cp -R: hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, hyperframes-creative, motion-graphics; her biri için diff -rq boş ve dosya sayısı eşit. Bu yedek core/animation/motion-graphics/creative için tek bağımsız kopya olabilir, 'sil' denmeden silinmez.",
+   "3. Proje dışı ön kontrol: ~/.claude/settings.json HYPERFRAMES_SKIP_SKILLS=1 satırı yerinde olduğunu doğrula (değerini yazdırma); diğer projelerin bu altı genel skile bağımlılığı ayrıca soruldu mu, kontrol et (bu planın onayı onları kapsamaz).",
+   "4. (ONAY: kural 1 istisnası) Genel klasörden YALNIZ altı klasörü kaldır (kütüphane oturumu, rehber/12, taşıma ~/.Trash ya da yedekten sonra silme, kullanıcı onayıyla). design-dna, openmontage, nlm-skill, youtube-arama, synced, .trash ve 79 layer-3 bağa bu adımda dokunulmaz (bağlar tam boşaltma adımında kalkar). Hemen ardından python3 araclar/genel-bekci.py ile durum kontrol edilir.",
+   "5. Kütüphane kurulumu: cd /Users/sabanulukaya/Documents/SkillKutuphanesi && python3 araclar/skill-ekle.py /Users/sabanulukaya/Documents/IstatistikYoutube --skill hyperframes hyperframes-cli --kuru. Kapı: ekli-ad, kardes-yol ve globalde-ayni satırları YOK, adlar düz hyperframes ve hyperframes-cli, yalnız bagimlilik UYARI. Böyle değilse DUR. Raporu kullanıcıya göster (kısmen ücretli: bulut render ve HeyGen yasak çizgisi; sürüm farkları), onay gelirse aynı komut --evet, sonra --dogrula ve --durum. Seçenek B ise bu adımdan önce kütüphane güncellemesi ayrı onayla yapılır.",
+   "6. (ONAY: karar 1a) Dört donmuş klasörü yedekten projeye cp -R ile koy: .claude/skills/hyperframes-core, hyperframes-animation, motion-graphics, hyperframes-creative (içerik değişmez); diff -rq yedek proje boş. Kütüphane aracıyla kurulmuş sayılmaz, kilit.json dışıdır. (Seçenek C ise hyperframes ve hyperframes-cli de buradan, adım 5 yerine.)",
+   "7. Sabit yol düzeltmeleri (hepsi yedekli, kullanıcının peşin onayı kapsamında, tam satır okunup yazılır): (a) hyperframes-shorts/SKILL.md satır 22 -> .claude/skills/hyperframes-core/SKILL.md; (b) satır 3 açıklamadaki ~/.claude/skills/hyperframes-* parçası -> proje içi .claude/skills/hyperframes*; (c) satır 15 'Skill seti' maddesi tamamen yeniden yazılır (HF skilleri proje içi, global yalnız design-dna, openmontage, nlm-skill); (d) satır 29 design-dna yolu DEĞİŞMEZ; (e) runtime-plan/SKILL.md satır 25 ~/.claude/skills/hyperframes-animation/rules/<ad>.md -> .claude/skills/hyperframes-animation/rules/<ad>.md; (f) tools/skill_durum.py satır ~112 BILINCLI_KAPALI'ya 'hyperframes-creative' eklenir (settings.local.json'daki off kaydı kalır); (g) status/skill-global.yaml elle: kullanilan'dan 5 HF satırı, skiller'den 5 özet satırı silinir, aciklama kısaltılır (--onayla çalıştırma, yorumları siler); (h) settings.json ve settings.local.json DEĞİŞMEZ (Read(~/.claude/skills/**) kalmalı; 5 HF adı off listesinde değil, doğrulandı). CLAUDE.md'nin skill-kutuphanesi bloğunu araç yazar, elle dokunulmaz.",
+   "8. (AYRI ONAY: orch-005 tek yer ilkesi) CLAUDE.md satır 106 (tool-002) 'global = design-dna + openmontage + nlm-skill = 3; HF skilleri proje içi' ve aynı metnin geçtiği docs/kural-ayrintilari.md (196, 203, 355-359), docs/kural-dizini.md (137-138), docs/skill-haritasi.md (C, F), config/tools.yaml (193-194, 214-225), agent-memory/showrunner/reference_skill_katmanlari.md bir turda güncellenir. Satır 22 değişmez. Onay gelmeden bu satırlar eski kalır; denetim kodu buna bakmaz.",
+   "9. Kayıt (kütüphane tarafı, onayla): projeler.json -> kendi_skilleri -> IstatistikYoutube = 22 kendi skil; projenin .skill-kutuphanesi/elle-kurulan.json = dört donmuş kopya (kaynak, tarih, 'üst depoda ve program paketinde yok'); projeler.json notlar. Sonra python3 araclar/proje-kullanimi.py, kapsam-denetimi.py (0 sorun), dogrula.py (0 hata). Commit yalnız kütüphanede ve kullanıcı isterse; proje reposu yok, push yok.",
+   "10. Doğrulama (üretim çalıştırılmaz): cd proje && python3 tools/skill_durum.py --ayrinti (beklenen TEMİZ, 0 FAIL, kullanılan global = design-dna, nlm-skill, openmontage); skill-ekle.py <proje> --dogrula ve --durum (25 skil güncel); python3 -m py_compile tools/skill_durum.py; json ve yaml yükleme denemeleri (venv python); grep '~/.claude/skills/(hyperframes|motion-graphics)' .claude/skills .claude/agents tools CLAUDE.md boş; test -f ve test -d ~/.claude/skills/design-dna/scripts/measure-colors.mjs ve node_modules/sharp; donmuş dört skil ve hyperframes, hyperframes-cli içindeki göreli .md bağlantılarının çözümlenmesi (baseline: ../hyperframes/references/brief-contract.md zaten yok).",
+   "11. Kullanıcı sınaması YENİ Claude Code oturumunda: skill listesinde hyperframes, hyperframes-cli, hyperframes-core, hyperframes-animation, motion-graphics birer kez görünür (ekli ad ya da çift yok); hyperframes-shorts okuma sırası 2. madde .claude/skills/hyperframes-core/SKILL.md'yi açar; stat-bars-and-fills tarifi proje içinden okunur; sayaç sahnesinde motion-graphics creative referansını okur; kapak_dna_kontrol.py PASS; tools/denetim.sh hızlı mod SKILL_DURUM TEMİZ. Gerçek render sınamasını (kur.py + render_sirali.sh) kullanıcı yapar.",
+   "12. Geri alma: kurulumu skill-ekle.py --geri-al ya da --kaldir hyperframes hyperframes-cli --evet; donmuş dört klasörü sil (yeni oldukları için güvenli, kullanıcıya söyleyerek); düzenlenen dosyalar yedekten cp ile; genel klasöre geri yazma kütüphane oturumunda kural 1 istisnasıyla ya da komutu kullanıcıya vererek.",
+   "13. Tam genel boşaltma (79 bağ, ~/.agents, ~/.codex) bu planın dışı ve sonra: listeden design-dna, openmontage, nlm-skill, youtube-arama, synced hariç; diğer projelerin taraması bitmeden yapılmaz; sonra kullanıcının kendi openmontage skili ile ~/.config/openmontage/global-skill-links.txt ve ~/.claude/CLAUDE.md içindeki 'layer-3 bağlıdır' cümleleri kullanıcı onayıyla güncellenir."
+  ]
+ }
+}

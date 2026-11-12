@@ -5,6 +5,7 @@ kaynaklar.json notları, kategori/referans kartları) proje adı yazılmaz; proj
   python3 araclar/proje-kullanimi.py                 # projeleri tara -> notlar/proje-kullanimi.md (hiçbir projeyi değiştirmez)
   python3 araclar/proje-kullanimi.py --skill <id>    # bu skili/kaynağı kullanan projeler (ör. silmeden / tercih değiştirmeden önce)
   python3 araclar/proje-kullanimi.py --repo owner/ad
+  python3 araclar/proje-kullanimi.py --program AD [--siki]   # bu programın skillerine bağlı projeler ve hedefin şimdi var olup olmadığı (salt okuma)
   python3 araclar/proje-kullanimi.py --kontrol       # rapor güncel mi? (hiçbir şey yazmaz; kabukta çıkış kodu hep 0, sıkı denetim: --kontrol --siki)
   python3 araclar/proje-kullanimi.py --saglik [--siki] [--ozet-json [--yaz]]   # proje sağlığı -> notlar/proje-durumu.md (salt okuma)
   python3 araclar/proje-kullanimi.py --tara-kayitsiz [--siki]                  # kilitsiz ama skill klasörü olan klasörleri listele (yazmaz)
@@ -38,6 +39,7 @@ from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, json_oku, json_yaz, klasor_ha
 AYAR = KOK / "projeler.json"
 RAPOR = KOK / "notlar" / "proje-kullanimi.md"
 DURUM_RAPORU = KOK / "notlar" / "proje-durumu.md"
+PROGRAMLAR = KOK / "programlar.json"
 SKILL_KLASORLERI = (".claude/skills", ".agents/skills", ".cursor/skills", ".codex/skills", ".github/skills", ".gemini/skills")
 TALIMAT_ISARETLERI = ("AGENTS.md", "CLAUDE.md", "GEMINI.md", ".github/copilot-instructions.md", ".cursor/rules",
                       ".agents/rules", ".claude/agents", ".codex/agents", ".agents/agents", ".github/agents")
@@ -49,6 +51,8 @@ DOGRULA_TEKRAR = ("elle değiştirilmiş", "kaynağı kütüphanede artık yok",
 AYAR_ANAHTARLARI = ("tarama_kokleri", "ek_projeler", "kayitsiz_tarama", "yoksay", "bilinen_projeler", "kendi_skilleri", "notlar")
 GUVENLIK_SATIRI = "Bu araç hiçbir proje klasörüne ve genel skill klasörüne yazmaz."
 TARIH_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+DIS_AD = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,63}")          # kilitteki dis_skiller anahtarı (skill-ekle.py ile aynı kural)
+BAG_KIRIK_IPUCU = " (program kurulu değilse bu beklenir: program kurulunca skill-ekle.py <proje> --yenile onarır)"
 
 _CIKIS = 0                 # kabuk çıkış kodu: yalnız yeni kipler ve --kontrol --siki değiştirir (eski kipler hep 0)
 _SE_ONBELLEK = [None]      # skill-ekle.py modülü (tembel yüklenir; testler yerine sahte nesne koyar)
@@ -107,6 +111,20 @@ def oku(ayar):
     return projeler
 
 
+def dis_kayitlari(kilit):
+    """Kilitteki programla gelen (bağ) ve donmuş skiller: {ad: kayıt}. Geçersiz anahtar/tür atlanır (skill-ekle.py --dogrula bildirir)."""
+    d = kilit.get("dis_skiller") if isinstance(kilit, dict) else None
+    if not isinstance(d, dict):
+        return {}
+    return {k: g for k, g in d.items() if isinstance(k, str) and DIS_AD.fullmatch(k) and isinstance(g, dict)
+            and g.get("ad") == k and g.get("tur") in ("program-bag", "donmus")}
+
+
+def dis_sayilari(kilit):
+    d = dis_kayitlari(kilit)
+    return sum(1 for g in d.values() if g["tur"] == "program-bag"), sum(1 for g in d.values() if g["tur"] == "donmus")
+
+
 def kisa_yol(yol):
     try:
         return "~/" + str(yol.relative_to(Path.home()))
@@ -129,7 +147,9 @@ def rapor_metni(projeler, ayar, registry):
          "|---|---|---|---|---|---|"]
     for p in projeler:
         k = p["kilit"]
-        s.append(f"| [{p['ad']}](#{p['ad'].lower().replace(' ', '-')}) | `{kisa_yol(p['yol'])}` | {len(k.get('skiller', {}))} | "
+        nb, nd = dis_sayilari(k)
+        dis_ek = f" (+{nb} bağ, {nd} donmuş)" if nb + nd else ""
+        s.append(f"| [{p['ad']}](#{p['ad'].lower().replace(' ', '-')}) | `{kisa_yol(p['yol'])}` | {len(k.get('skiller', {}))}{dis_ek} | "
                  f"{', '.join(k.get('araclar', [])) or '—'} | {k.get('blok') or 'tam'} | {k.get('guncelleme') or '—'} |")
     kullanan = {}
     for p in projeler:
@@ -154,10 +174,26 @@ def rapor_metni(projeler, ayar, registry):
                      f"{', '.join(v.get('roller', [])) or '—'} | {ek} |")
         if p["elle"]:
             s += ["", "Kütüphane dışı, elle kurulan: " + ", ".join(f"`{a}`" for a in p["elle"])]
+        dis = dis_kayitlari(k)
+        baglar = [(a, g) for a, g in sorted(dis.items()) if g["tur"] == "program-bag"]
+        donmus = [a for a, g in sorted(dis.items()) if g["tur"] == "donmus"]
+        if baglar:
+            s += ["", "Programla gelen (bağ): " + ", ".join(f"`{a}` ({g.get('program', '?')})" for a, g in baglar)]
+        if donmus:
+            s += ["", "Donmuş (projenin kendi kopyası): " + ", ".join(f"`{a}`" for a in donmus)]
     s += ["", "## Skill → projeler (birden fazla projede kullanılanlar)", "", "| Skill | Projeler |", "|---|---|"]
     for sid, pl in sorted(kullanan.items(), key=lambda x: (-len(x[1]), x[0])):
         if len(pl) > 1:
             s.append(f"| `{sid}` | {', '.join(pl)} |")
+    bag_kullanan = {}
+    for p in projeler:
+        for a, g in dis_kayitlari(p["kilit"]).items():
+            if g["tur"] == "program-bag":
+                bag_kullanan.setdefault((str(g.get("program", "?")), a), []).append(p["ad"])
+    if bag_kullanan:
+        s += ["", "## Programla gelen skiller → projeler", "", "| Program | Skill | Projeler |", "|---|---|---|"]
+        for (prog, a), pl in sorted(bag_kullanan.items()):
+            s.append(f"| {prog} | `{a}` | {', '.join(sorted(pl))} |")
     s.append("")
     return "\n".join(s), kullanan
 
@@ -471,7 +507,8 @@ def proje_denetle(yol, ayar, skiller, hash_haritasi, se, bugun, tur="kilitli"):
     yol = Path(yol)
     ad = yol.name
     sayac = {"kilit_skill": 0, "diskte": 0, "guncelleme_var": 0, "elle_degismis": 0, "kaynak_yok": 0, "emekli": 0,
-             "kurulum_eksik": 0, "kayitsiz": 0, "kendi_elle": 0}
+             "kurulum_eksik": 0, "kayitsiz": 0, "kendi_elle": 0,
+             "program_bag": 0, "donmus": 0, "bag_kirik": 0}
     satirlar, araclar, son = [], "—", "—"
     P = {"ad": ad, "yol": kisa_yol(yol), "tur": tur, "satirlar": satirlar, "sayac": sayac, "araclar": araclar, "son_islem": son}
     try:
@@ -523,6 +560,11 @@ def proje_denetle(yol, ayar, skiller, hash_haritasi, se, bugun, tur="kilitli"):
             elif d == "kurulum-eksik":
                 sayac["kurulum_eksik"] += 1
                 satirlar.append(("sorun", f"KURULUM EKSİK/BOZUK: {sad} (--guncelle onarır)"))
+        dis = dis_kayitlari(kilit)
+        sayac["program_bag"], sayac["donmus"] = dis_sayilari(kilit)
+        donmus = sorted(a for a, g in dis.items() if g["tur"] == "donmus")
+        if donmus:
+            satirlar.append(("bilgi", "donmuş skill (kütüphane güncellemez): " + ", ".join(donmus)))
         try:
             dl = se.dogrula(yol, skiller, sessiz=True)
         except Exception as e:  # noqa: BLE001
@@ -534,8 +576,11 @@ def proje_denetle(yol, ayar, skiller, hash_haritasi, se, bugun, tur="kilitli"):
                 m = re.search(r"hesap skill'i `(.+?)`", x)
                 satirlar.append(("dikkat", f"{m.group(1) if m else '?'}: skillOverrides güncel değil (--guncelle)"))
             else:
+                if "program bağı kırık" in x:
+                    sayac["bag_kirik"] += 1
+                    x += BAG_KIRIK_IPUCU
                 satirlar.append(("sorun", x))
-        _siniflandir(yol, ad, disk, kskill, elle, ayar, hash_haritasi, satirlar, sayac)
+        _siniflandir(yol, ad, disk, set(kskill) | set(dis), elle, ayar, hash_haritasi, satirlar, sayac)
         g = kilit.get("guncelleme")
         if g:
             P["son_islem"] = g
@@ -789,6 +834,9 @@ def _karar_bekleyenler(s):
         g = p["sayac"].get("guncelleme_var", 0)
         if g:
             k.append(f"{p['ad']}: {g} güncelleme -> skill-ekle.py \"{p['ad']}\" --guncelle --kuru, sonra onay")
+        n = p["sayac"].get("bag_kirik", 0)
+        if n:
+            k.append(f"{p['ad']}: {n} kırık program bağı -> skill-ekle.py \"{p['ad']}\" --yenile (program kuruluysa) ya da --kaldir <ad>")
         n = p["sayac"].get("kayitsiz", 0)
         if n:
             k.append(f"{p['ad']}: {n} kayıtsız skill -> elle-kurulan.json ya da kendi_skilleri'ne yazılsın mı?")
@@ -812,6 +860,11 @@ def ozet_nesnesi(s):
                          ("KAYNAK KÜTÜPHANEDE YOK", "kaynak_yok"), ("KAYITSIZ SKILL", "kayitsiz")):
         n, adlar = topla(alan)
         sat.append(f"{etiket}: {n} skill" + (f" ({', '.join(adlar)})" if adlar else ""))
+    nb, _ = topla("program_bag")
+    nk, _ = topla("bag_kirik")
+    nd, _ = topla("donmus")
+    if nb + nd:
+        sat.append(f"PROGRAM BAĞI: {nb} bağ ({nk} kırık), {nd} donmuş skill")
     kd = s["kayitsiz"]
     sk = sum(1 for a in kd["adaylar"] if a["sinif"] == "skilli")
     sat.append(f"KAYITSIZ PROJE: {sk} skilli klasör, {kd['talimat_sayisi']} yalnız talimat dosyalı")
@@ -844,6 +897,14 @@ def durum_raporu_metni(s, ayar):
         m.append(f"| {ad} | {p['durum']} | {c.get('kilit_skill', 0)}/{c.get('diskte', 0)} | {c.get('guncelleme_var', 0)} | "
                  f"{c.get('elle_degismis', 0)} | {c.get('kaynak_yok', 0)} | {c.get('kayitsiz', 0)} | {c.get('kendi_elle', 0)} | "
                  f"{p['araclar']} | {p['son_islem']} |")
+    dis_p = [p for p in s["projeler"] if p["sayac"].get("program_bag", 0) + p["sayac"].get("donmus", 0) > 0]
+    if dis_p:
+        m += ["", "## Programla gelen ve donmuş skiller",
+              "> Yukarıdaki 'Skill (kilit/klasör)' klasör sayısı bağları ve donmuşları da içerir.", "",
+              "| Proje | Bağ | Donmuş | Kırık bağ |", "|---|---|---|---|"]
+        for p in dis_p:
+            c = p["sayac"]
+            m.append(f"| {p['ad']} | {c.get('program_bag', 0)} | {c.get('donmus', 0)} | {c.get('bag_kirik', 0)} |")
     m += ["", "## Ayrıntı"]
     var = False
     for p in s["projeler"]:
@@ -1144,6 +1205,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--skill", help="bu skill kimliğini kullanan projeleri yaz")
     ap.add_argument("--repo", help="bu kaynaktan (owner/ad) skill kullanan projeleri yaz")
+    ap.add_argument("--program", metavar="AD", help="bu programın skillerine bağlı projeleri ve hedefin şimdi var olup olmadığını yaz (salt okuma)")
     ap.add_argument("--kontrol", action="store_true", help="rapor güncel mi? (yazmaz; kabukta çıkış kodu 0, --siki ile güncel değilse 1)")
     ap.add_argument("--siki", action="store_true", help="--kontrol/--saglik/--tara-kayitsiz: sorun varsa çıkış kodu 1")
     ap.add_argument("--saglik", action="store_true", help="her projenin sağlığı -> notlar/proje-durumu.md (salt okuma)")
@@ -1162,14 +1224,19 @@ def main(argv=None):
     if len(yazicilar) > 1:
         print("HATA: aynı anda yalnız bir değişiklik bayrağı verilebilir (--ekle, --cikar, --tasindi, --yoksay)", file=sys.stderr)
         sys.exit(2)
-    if yazicilar and (a.saglik or a.ozet_json or a.tara_kayitsiz or a.kontrol or a.skill or a.repo):
+    if yazicilar and (a.saglik or a.ozet_json or a.tara_kayitsiz or a.kontrol or a.skill or a.repo or a.program):
         print("HATA: değişiklik bayrağı (--ekle, --cikar, --tasindi, --yoksay) okuma kipleriyle birlikte verilemez", file=sys.stderr)
         sys.exit(2)
     if yazicilar:
         return _yazici(a)
-    if a.evet and not (a.saglik or a.ozet_json or a.tara_kayitsiz or a.kontrol or a.skill or a.repo):
+    if a.program and (a.saglik or a.ozet_json or a.tara_kayitsiz or a.kontrol or a.skill or a.repo):
+        print("HATA: --program başka okuma kipleriyle birlikte verilemez", file=sys.stderr)
+        sys.exit(2)
+    if a.evet and not (a.saglik or a.ozet_json or a.tara_kayitsiz or a.kontrol or a.skill or a.repo or a.program):
         print("--evet tek başına bir şey yapmaz (yalnız --ekle/--cikar/--tasindi/--yoksay ile birlikte); yok sayıldı, hiçbir şey yazılmadı.")
         return 0
+    if a.program:
+        return _program_kipi(a)
     if a.saglik or a.ozet_json:
         return _saglik_kipi(a)
     if a.tara_kayitsiz:
@@ -1184,6 +1251,41 @@ def main(argv=None):
     return _eski_kipler(a)
 
 
+def _program_hedefi(program, ad):
+    """Bağın şimdiki hedefi (kartın skill_koku/ad yolu); kart ya da skill_koku yoksa None. Kilitteki hedef kullanılmaz."""
+    try:
+        kart = (json_oku(PROGRAMLAR, {}) or {}).get("programlar", {}).get(program)
+    except (OSError, ValueError):
+        return None
+    sk = kart.get("skill_koku") if isinstance(kart, dict) else None
+    if not isinstance(sk, str) or not sk.strip() or not DIS_AD.fullmatch(ad):
+        return None
+    return Path(sk).expanduser() / ad
+
+
+def _program_kipi(a):
+    """--program AD: bu programın skillerine bağlı projeler (salt okuma). --siki: hedefi YOK olan bağ varsa çıkış 1."""
+    global _CIKIS
+    ayar = json_oku(AYAR, {}) or {}
+    bulundu = kirik = False
+    for p in oku(ayar):
+        for ad, g in sorted(dis_kayitlari(p["kilit"]).items()):
+            if g["tur"] != "program-bag" or g.get("program") != a.program:
+                continue
+            h = _program_hedefi(a.program, ad)
+            var = bool(h) and (h / "SKILL.md").is_file()
+            surum = g.get("program_surum")
+            surum_m = (str(surum)[:8] if g.get("program_surum_turu") == "commit" else str(surum)) if surum else "sürüm kayıtsız"
+            print(f"{p['ad']}: {ad} — program bağı ({a.program} {surum_m}) · hedef {'var' if var else 'YOK'}")
+            bulundu = True
+            kirik = kirik or not var
+    if not bulundu:
+        print("Hiçbir projede bu programın bağı yok.")
+    if a.siki and kirik:
+        _CIKIS = 1
+    return 0
+
+
 def _eski_kipler(a):
     ayar, projeler, metin, kullanan = hesapla()
     if a.skill or a.repo:
@@ -1193,6 +1295,15 @@ def _eski_kipler(a):
                 if (a.skill and a.skill in (v.get("id", ad), ad)) or \
                         (a.repo and repo_guncel(v.get("repo", "")).lower() == repo_guncel(a.repo).lower()):
                     print(f"{p['ad']}: {ad} — kimlik {v.get('id', ad)} ({repo_guncel(v.get('repo'))}@{str(v.get('commit', ''))[:7]})")
+                    bulundu = True
+        if a.skill:
+            for p in projeler:
+                g = dis_kayitlari(p["kilit"]).get(a.skill)
+                if g and g["tur"] == "program-bag":
+                    print(f"{p['ad']}: {a.skill} — programla gelen (bağ: {g.get('program', '?')})")
+                    bulundu = True
+                elif g:
+                    print(f"{p['ad']}: {a.skill} — donmuş (projenin kendi kopyası)")
                     bulundu = True
         if not bulundu:
             print("Hiçbir projede kullanılmıyor.")

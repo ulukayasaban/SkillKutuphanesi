@@ -91,6 +91,27 @@
       ],
       "silme_gun": 30,
       "not": "Gizli içerikli olduğu için en çok 30 gün tutulur; süre dolunca aylık özet silinsin mi diye sorar."
+    },
+    {
+      "kimlik": "genel-skiller-tam-2026-11-12",
+      "yol": "~/Documents/Claude/yedek/genel-skiller-tam-2026-11-12",
+      "tur": "genel-skill-klasoru",
+      "ne": "Boşaltma öncesi TAM yedek: ~/.claude/skills (synced hariç; bağlar bağ olarak), ~/.agents/skills ve skill kilit dosyası, ~/.codex/skills (.system hariç), ~/.claude/commands, ~/.claude/CLAUDE.md, OpenMontage bağ listesi dosyası, bag-listesi.txt (92 bağ ve hedefi). Eski kuşak HyperFrames skillerinin ve tek kopyası ~/.agents/skills içinde olan hyperframes-keyframes ile hyperframes-audio'nun kopyası buradadır.",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "İlgili klasörü ya da bağı yedekten eski yerine kopyala (cp -RP; bağlar bağ olarak döner). Her geri yükleme için kullanıcıdan onay; önce genel-bekci.py ile durum bakılır.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "claude-skills",
+        "agents-skills",
+        "codex-skills",
+        "claude-commands",
+        "claude-CLAUDE.md",
+        "agents-skill-lock.json",
+        "bag-listesi.txt"
+      ],
+      "silme_olay": "Genel klasörler boşaltıldı, projeler kullanıcı tarafından sınandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "not": "58 MB. Gizli adlı dosya yok (ad taraması). Genel klasörler boşaltılıp projeler doğrulandıktan sonra, kullanıcı 'sil' derse silinir."
     }
   ]
 }
