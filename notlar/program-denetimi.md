@@ -16,7 +16,7 @@
 
 ## Kart şeması
 
-- HATA: nlm: repo: kaynaklar.json'da bu repo için program kaydı yok
+tüm kartlar geçerli
 
 ## Ortam anahtarları
 
@@ -39,6 +39,7 @@
 | hyperframes | Akil Disi Youtube Kanali | media-use | evet | 0.9.35 |
 | hyperframes | IstatistikYoutube | hyperframes | evet | 0.9.35 |
 | hyperframes | IstatistikYoutube | hyperframes-cli | evet | 0.9.35 |
+| nlm | IstatistikYoutube | nlm-skill | evet | 0.15.8 |
 | openmontage | Akil Disi Youtube Kanali | d3-viz | evet | fecb9a1e |
 | openmontage | Akil Disi Youtube Kanali | manim-composer | evet | fecb9a1e |
 | openmontage | Akil Disi Youtube Kanali | manimce-best-practices | evet | fecb9a1e |

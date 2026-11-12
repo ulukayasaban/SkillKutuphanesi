@@ -1,8 +1,8 @@
 # Yol Denetimi
 
-> `araclar/yol-tara.py` üretir · 2026-11-11 · salt okuma. Skill metinlerindeki sabit genel yol / eklenti kökü / kardeş yol bağımlılıkları. Ayrıntı: `python3 araclar/yol-tara.py --skill <id>`; istisna: `yol-istisnalari.json`.
+> `araclar/yol-tara.py` üretir · 2026-11-12 · salt okuma. Skill metinlerindeki sabit genel yol / eklenti kökü / kardeş yol bağımlılıkları. Ayrıntı: `python3 araclar/yol-tara.py --skill <id>`; istisna: `yol-istisnalari.json`.
 
-**5649 skill tarandı** · bulgusu olan: 431 · ön kontrolde UYARI alan: 125
+**5654 skill tarandı** · bulgusu olan: 433 · ön kontrolde UYARI alan: 125
 
 ## Bulgu türleri
 
@@ -14,10 +14,10 @@
 | eklenti-kok-yol | 459 | 53 | 6 |
 | genel-baska | 35 | 10 | 11 |
 | genel-kalip | 2 | 2 | 1 |
-| genel-kendi | 108 | 31 | 70 |
+| genel-kendi | 112 | 32 | 70 |
 | genele-kopyalar | 64 | 18 | 43 |
 | genele-yazar | 206 | 157 | 26 |
-| kardes-goreli | 406 | 111 | 50 |
+| kardes-goreli | 408 | 112 | 50 |
 | ornek-metin | 30 | 12 | 4 |
 | ortak-dizin | 3 | 2 | 0 |
 | skil-disi-yol | 75 | 69 | 0 |
@@ -30,9 +30,9 @@ Yalnız sayılan türler (ön kontrolde satır üretmez): ornek-metin, genel-kal
 |---|---|---:|
 | BİLGİ | eklenti-koku | 1 |
 | BİLGİ | genele-yazabilir | 13 |
-| BİLGİ | kardes-eksik | 112 |
+| BİLGİ | kardes-eksik | 113 |
 | BİLGİ | yol-istisna | 10 |
-| BİLGİ | yol-yerellestirme | 5 |
+| BİLGİ | yol-yerellestirme | 6 |
 | UYARI | eklenti-koku | 42 |
 | UYARI | genel-yol | 9 |
 | UYARI | genele-yazabilir | 5 |
@@ -43,15 +43,15 @@ Yalnız sayılan türler (ön kontrolde satır üretmez): ornek-metin, genel-kal
 
 | Sütun | Skill |
 |---|---:|
-| Kurulumda düzelir | 3 |
-| Kardeşle düzelir | 103 |
+| Kurulumda düzelir | 4 |
+| Kardeşle düzelir | 104 |
 | Paket gerekli | 115 |
 | Çözülemez | 7 |
 | İstisna | 10 |
 | Yalnız sayım (satır yok) | 193 |
-| Temiz | 5218 |
+| Temiz | 5221 |
 
-## Kurulumda düzelir (3)
+## Kurulumda düzelir (4)
 
 _kurulan kopyada yol proje içi yola çevrilecek._
 
@@ -60,8 +60,9 @@ _kurulan kopyada yol proje içi yola çevrilecek._
 | code-tour | github/awesome-copilot | yol-yerellestirme | 3 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:23 ~/.agents/skills/code-tour/scripts/validate_tour.py; SKILL.md:24 ~/.agents/skills/… |
 | siege | anthropics/claude-plugins-official | yol-yerellestirme | 3 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:7 ${CLAUDE_PLUGIN_ROOT}/skills/siege/scripts/ledger.py; SKILL.md:73 ${CLAUDE_PLUGIN_R… |
 | ui-ux-pro-max | nextlevelbuilder/ui-ux-pro-max-skill | yol-yerellestirme | 11 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:42 ${CLAUDE_PLUGIN_ROOT}/.claude/skills/ui-ux-pro-max/scripts/search.py; SKILL.md:78… |
+| youtube-arama | yerel/kendi | yol-yerellestirme | 4 sabit yol kurulan kopyada proje içi yola çevrilecek (SKILL.md:13 ~/.claude/skills/youtube-arama/scripts/youtube_search.py; SKILL.md:28 ~/.claude/sk… |
 
-## Kardeşle düzelir (103)
+## Kardeşle düzelir (104)
 
 _aynı repodaki kardeş skill de kurulursa yol tutar._
 
@@ -111,7 +112,7 @@ _aynı repodaki kardeş skill de kurulursa yol tutar._
 | geospatial-and-cartographic-visualization | openai/plugins | kardes-eksik | d3-data-visualization (d3-data-visualization) kardeş skill gerekli; kurulursa kardeşle düzelir: references/deckgl-d3-geo-stack-selection.md:30 ../../… |
 | grammar-of-graphics-and-declarative-visualization | openai/plugins | kardes-eksik | canvas2d-data-visualization (canvas2d-data-visualization) kardeş skill gerekli; kurulursa kardeşle düzelir: references/when-to-stay-declarative.md:27… |
 | growth-pulse | anthropics/knowledge-work-plugins | kardes-eksik | ad-manager (ad-manager) kardeş skill gerekli; kurulursa kardeşle düzelir: reference/data_sources.md:46 ../../ad-manager/SKILL.md |
-| hyperframes-cli | heygen-com/hyperframes | kardes-eksik | hyperframes (hyperframes) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:97 ../hyperframes/references/motion.md; references/preview-rende… |
+| hyperframes-cli | heygen-com/hyperframes | kardes-eksik | hyperframes (hyperframes) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:31 ../hyperframes/references/captions.md; SKILL.md:103 ../hyperf… |
 | hypogenic | K-Dense-AI/scientific-agent-skills | kardes-eksik | hypothesis-generation (hypothesis-generation) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:31 ../hypothesis-generation/SKILL.md |
 | idea-creator | wanshuiyin/Auto-claude-code-research-in-sleep | kardes-eksik | research-wiki (research-wiki) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:81 ../research-wiki/SKILL.md |
 | idea-generation | openai/plugins | kardes-eksik | public-equity-investing (public-equity-investing) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:12 ../public-equity-investing/SKILL.md |
@@ -136,7 +137,7 @@ _aynı repodaki kardeş skill de kurulursa yol tutar._
 | react-and-nextjs-data-visualization | openai/plugins | kardes-eksik | d3-data-visualization (d3-data-visualization) kardeş skill gerekli; kurulursa kardeşle düzelir: references/d3-canvas-and-grammar-in-react.md:27 ../..… |
 | react-scan | remotion-dev/remotion | kardes-eksik | studio-perf (studio-perf) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:63 ../studio-perf/SKILL.md |
 | react-three-fiber-game | openai/plugins | kardes-eksik | game-ui-frontend (game-ui-frontend) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:80 ../game-ui-frontend/SKILL.md |
-| remotion-to-hyperframes | heygen-com/hyperframes | kardes-eksik | hyperframes (hyperframes) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:43 ../hyperframes/references/runtimes.md |
+| remotion-to-hyperframes | heygen-com/hyperframes | kardes-eksik | hyperframes (hyperframes) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:45 ../hyperframes/references/runtimes.md |
 | replica-brand | Jakeschincariol/replica-skill | kardes-eksik | replica-design (replica-design) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:66 ../replica-design/contrast.py |
 | replica-deploy | Jakeschincariol/replica-skill | kardes-eksik | replica-brand (replica-brand) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:34 ../replica-brand/sweep.py |
 | reports-pdfs-and-slide-automation | openai/plugins | kardes-eksik | data-visualization (data-visualization@openai) kardeş skill gerekli; kurulursa kardeşle düzelir: references/document-embedding-and-regeneration.md:25… |
@@ -151,6 +152,7 @@ _aynı repodaki kardeş skill de kurulursa yol tutar._
 | smb-router | anthropics/knowledge-work-plugins | kardes-eksik | cash-flow-snapshot (cash-flow-snapshot) kardeş skill gerekli; kurulursa kardeşle düzelir: reference/connector-map.md:45 ../../cash-flow-snapshot/refe… |
 | sprite-pipeline | openai/plugins | kardes-eksik | game-studio (game-studio) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:12 ../game-studio/SKILL.md |
 | statistical-and-uncertainty-visualization | openai/plugins | kardes-eksik | accessibility-and-inclusive-visualization (accessibility-and-inclusive-visualization) kardeş skill gerekli; kurulursa kardeşle düzelir: references/mi… |
+| style-sampling | heygen-com/hyperframes | kardes-eksik | hyperframes (hyperframes) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:30 ../hyperframes/references/look.md |
 | subagent-driven-development@openai | openai/plugins | kardes-eksik | requesting-code-review (requesting-code-review@openai) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:88 ../requesting-code-review/code-r… |
 | testing-data-visualizations | openai/plugins | kardes-eksik | accessibility-and-inclusive-visualization (accessibility-and-inclusive-visualization) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:140 … |
 | thesis-tracker | openai/plugins | kardes-eksik | public-equity-investing (public-equity-investing) kardeş skill gerekli; kurulursa kardeşle düzelir: SKILL.md:12 ../public-equity-investing/SKILL.md |
