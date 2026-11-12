@@ -8,7 +8,7 @@
 | [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
-| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 25 (+2 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
+| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 25 (+3 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
 
 ## Akil Disi Youtube Kanali
 
@@ -137,7 +137,7 @@ Profil: — · Roller: etsy-coordinator, etsy-research, etsy-product-rights, ets
 | `yt-script` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-seo` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 
-Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperframes)
+Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperframes), `nlm-skill` (nlm)
 
 ## Skill → projeler (birden fazla projede kullanılanlar)
 
@@ -167,6 +167,7 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 | hyperframes | `hyperframes` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | hyperframes | `hyperframes-cli` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | hyperframes | `media-use` | Akil Disi Youtube Kanali |
+| nlm | `nlm-skill` | IstatistikYoutube |
 | openmontage | `d3-viz` | Akil Disi Youtube Kanali |
 | openmontage | `manim-composer` | Akil Disi Youtube Kanali |
 | openmontage | `manimce-best-practices` | Akil Disi Youtube Kanali |
