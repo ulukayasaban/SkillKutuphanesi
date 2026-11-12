@@ -178,7 +178,15 @@ aylık takip ve HF/OM gibi programların kurulum/güncelleme yönetimi eksiksiz 
     (iki bağ için taban; kanalın kendi onay adımı). AÇIK: `tools/kural_kopya_tara.py` bağlı `hyperframes/references/sound.md`
     içindeki ses değerini bulgu sayıyor (tarama listesinden bağlı skilleri çıkarmak kanal kararı); proje `.claude/settings.json`'a
     paket skill klasörü için okuma izni önerisi (izin dosyası: yalnız kullanıcı isterse).
-    KALAN, IstatistikYoutube: `design-dna`, `openmontage`, `nlm-skill` hâlâ genel klasörden okunuyor (K-32 işi).
+    GÜNCEL (06:55-07:10): yerel kaynak T7 (`kendi/`) kütüphanede (commit 501bb9fab, push edildi): `openmontage`, `youtube-arama`,
+    `nlm-skill` (anlık kopya, nlm 0.15.8). Genel klasörden taşınanlar (`genel-kaldirilan-2026-11-12`): 75 OpenMontage bağı,
+    `hyperframes`, `hyperframes-cli`, `design-dna`, `openmontage`, `nlm-skill`. IstatistikYoutube'a kütüphaneden `design-dna`,
+    `openmontage`, `nlm-skill` kuruldu (26 kütüphane skili + 2 program bağı); design-dna `node_modules` eski kopyadan konuldu, ölçüm
+    çıktısı eskiyle birebir aynı; `kapak_dna_kontrol.py` ve `video_dna.py` yolu proje içine çevrildi. Kalan metin düzeltmeleri
+    (kurallar, yaml, skill_durum) bir alt ajanda sürüyor. `~/.claude/CLAUDE.md` OpenMontage bölümü ve üç genel komut projedeki
+    skili gösterecek şekilde güncellendi; kart `giris_yolu.claude-code` = proje-skili. Bağ kurulum sınaması: 83 skill (80 OM + 3 HF)
+    geçici projede kuruldu, 83/83 sağlam, gerçek Claude oturumu gördü, boş klasörde görünmedi, kaldırma programı etkilemedi.
+    Genel klasörde kalan (24): eski HyperFrames skilleri ve Akıl Dışı'nın Codex zincirinin kullandıkları, `youtube-arama`, `.trash`, `synced`.
     Boşaltmanın geri kalanı Akıl Dışı geçişinden SONRA (Codex bağları `~/.claude/skills` ve `~/.agents/skills` içine bakıyor).
     Not: bekçi `~/.palmier/skills` ve `~/.gemini/config/skills` klasörlerini buldu (başka uygulamaların kendi klasörleri; "kalacak").
   - ESKİ SORU (kapandı): HyperFrames kullanım bildirimini bilgisayar genelinde kapatmak için

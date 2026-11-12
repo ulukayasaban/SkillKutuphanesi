@@ -348,12 +348,12 @@
         "kural": "OpenMontage skill değil, git klonudur: araç oturumu ~/.openmontage klasöründe açılır ya da istem kılavuz dosyasını okutur; program kendi AGENTS.md / CODEX.md / CLAUDE.md / AGENT_GUIDE.md dosyalarını taşır.",
         "kilavuz": "~/.openmontage/AGENT_GUIDE.md",
         "calistirma": "cd ~/.openmontage && .venv/bin/python <komut>   (her çağrıda önce cd; sistem python'u kullanılmaz)",
-        "karar": "karar-bekliyor: Boşaltma sonrası Claude Code girişinin yeri (komut + openmontage giriş skili) kullanıcı kararı bekliyor.",
+        "karar": "2026-11-12 (K-32): Claude Code girişi proje skilidir: openmontage giriş skili kütüphanede kendi/openmontage, projeye skill-ekle.py --skill openmontage ile kurulur; katman-3 skiller --program-skill openmontage:<ad> ile bağlanır. Genel klasörde skill yok.",
         "araclar": {
           "claude-code": {
-            "durum": "karar-bekliyor",
-            "yol": "~/.claude/commands/openmontage.md",
-            "nasil": "Bugün: ~/.claude/CLAUDE.md satırı + /openmontage komutu + ~/.claude/skills/openmontage. Skill klasörü boşaltılınca skilin yeni yeri kararlaştırılmadı; komut ve CLAUDE.md satırı kalır."
+            "durum": "proje-skili",
+            "yol": ".claude/skills/openmontage/SKILL.md",
+            "nasil": "Projeye kütüphaneden kurulan openmontage giriş skili (skill-ekle.py <proje> --skill openmontage). Genel ~/.claude/CLAUDE.md notu ve /openmontage, /ink-art, /animated-drawing komutları projedeki bu skili gösterir; skil kurulu olmayan projede 'kütüphane oturumundan kur' der."
           },
           "codex": {
             "durum": "program-klasoru",
