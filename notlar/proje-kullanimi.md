@@ -5,7 +5,7 @@
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
-| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 17 | claude, codex | tam | 2026-11-12 |
+| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
 | [AntigravityTest2](#antigravitytest2) | `~/Documents/AntigravityTest2` | 9 | — | tam | 2026-11-07 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
@@ -26,12 +26,15 @@
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
 | `motion-design--kutuphane` (kimlik `motion-design`) | nexu-io/open-design | `12d970e` | — | kütüphanede şimdi `motion-design@nexu-io` |
 | `motion-doctrine--kutuphane` (kimlik `motion-doctrine`) | heygen-com/hyperframes | `f8309b3` | — |  |
+| `openmontage` | yerel/kendi | `92683f1` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
 | `seam-craft--kutuphane` (kimlik `seam-craft`) | heygen-com/hyperframes | `f8309b3` | — |  |
 | `yt-package` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-retention` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-script` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-shorts` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
+
+Programla gelen (bağ): `d3-viz` (openmontage), `hyperframes` (hyperframes), `hyperframes-cli` (hyperframes), `manim-composer` (openmontage), `manimce-best-practices` (openmontage), `media-use` (hyperframes), `pose-library-design` (openmontage), `svg-character-animation` (openmontage), `visual-style` (openmontage)
 
 ## AntigravityTest2
 
@@ -167,6 +170,7 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 | `huashu-art-motion` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `impeccable` | AntigravityTest2, Etsy-Arif |
 | `motion-doctrine` | Akil Disi Youtube Kanali, IstatistikYoutube |
+| `openmontage` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `planning-and-task-breakdown` | Etsy-Arif, Etsy-Yeni |
 | `scientific-critical-thinking` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `seam-craft` | Akil Disi Youtube Kanali, IstatistikYoutube |
@@ -182,5 +186,12 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 
 | Program | Skill | Projeler |
 |---|---|---|
-| hyperframes | `hyperframes` | IstatistikYoutube |
-| hyperframes | `hyperframes-cli` | IstatistikYoutube |
+| hyperframes | `hyperframes` | Akil Disi Youtube Kanali, IstatistikYoutube |
+| hyperframes | `hyperframes-cli` | Akil Disi Youtube Kanali, IstatistikYoutube |
+| hyperframes | `media-use` | Akil Disi Youtube Kanali |
+| openmontage | `d3-viz` | Akil Disi Youtube Kanali |
+| openmontage | `manim-composer` | Akil Disi Youtube Kanali |
+| openmontage | `manimce-best-practices` | Akil Disi Youtube Kanali |
+| openmontage | `pose-library-design` | Akil Disi Youtube Kanali |
+| openmontage | `svg-character-animation` | Akil Disi Youtube Kanali |
+| openmontage | `visual-style` | Akil Disi Youtube Kanali |
