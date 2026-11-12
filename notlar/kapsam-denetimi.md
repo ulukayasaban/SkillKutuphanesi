@@ -2,7 +2,7 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-12 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok · ⚠️ 1 erişilemeyen kaynak** · Taranan SKILL.md: 8506 · Arşivdeki skill kaydı: 5654 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8506 · Arşivdeki skill kaydı: 5654 · Bileşen (komut/agent): 662
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
@@ -148,11 +148,6 @@
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 
 - J-DTurner/etsy-api-skill
-
-## Erişilemeyen kaynaklar (1)
-
-GitHub'da bulunamadı (silinmiş, private olmuş ya da commit geçmişi yeniden yazılmış). Denetlenemedi. Çözüm: `kaynaklar.json`'da kaydın `tip`ini `KAYIP` yap (arşiv kopyası korunur); kaydı silme.
-
 - buluslan/ecommerce-competitor-analyzer
 
 ## Bilinçli hariç tutulanlar (gerekçeli)

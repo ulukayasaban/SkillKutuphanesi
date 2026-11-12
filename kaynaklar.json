@@ -584,9 +584,10 @@
     },
     {
       "repo": "buluslan/ecommerce-competitor-analyzer",
-      "tip": "T1",
+      "tip": "KAYIP",
+      "kayip_tarihi": "2026-11-12",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Çok platformlu e-ticaret rakip analizi."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Çok platformlu e-ticaret rakip analizi. 2026-11-12: repo GitHub'da yok (404; sahibin hesabı duruyor, repo silinmiş ya da gizlenmiş, yeni ad dönmüyor); kullanıcı kararıyla KAYIP işaretlendi (eski tip T1), arşiv kopyası korunur, artık güncellenmez."
     },
     {
       "repo": "evanca/flutter-ai-rules",

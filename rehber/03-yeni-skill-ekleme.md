@@ -213,7 +213,8 @@ Program kaydı olan ("program" alanlı) kaynak bu yolla çıkarılmaz: rehber/11
 E1  Teyit: `python3 araclar/kaynak-cikar.py --repo owner/ad --kuru --github` ya da `gh api repos/owner/ad --jq .full_name`. `gh auth status` önce: oturum/ağ sorunu
     404 değildir. Yeni ad dönerse (full_name farklı) bu KAYIP değil taşınmadır: rehber/09 'Repo adı değişirse'.
 E2  Etki: aynı raporu oku (projeler, roller). Projelerdeki kopya çalışır ama `--durum` "EMEKLİ: KAYNAK KAYIP" der; yenilenmez.
-E3  Karar (kullanıcıya sor): (a) arşiv kopyası kalsın: kaynaklar.json'da kaydı SİLME; `"tip": "KAYIP"`, `"kayip_tarihi": "YYYY-AA-GG"` yaz ve `not`a
+E3  Karar: hiçbir projede kullanılmıyorsa SORMADAN (a) uygulanır ve rol/profillerden çıkarılır (K-49, kullanıcı 2026-11-12); bir projede kullanılıyorsa kullanıcıya sor.
+    (a) arşiv kopyası kalsın: kaynaklar.json'da kaydı SİLME; `"tip": "KAYIP"`, `"kayip_tarihi": "YYYY-AA-GG"` yaz ve `not`a
     "repo GitHub'da yok (404), <tarih>" ekle (bu işaretleme ELLE yapılır; otomatik `--kayip-isaretle` yoktur, kullanıcı kararıdır). Kaydı silmek güvenlik kilidini tetikler.
     (b) yerine geçeni var: rol/profilleri güncelle, sonra (a). (c) bilerek tamamen çıkar: bölüm D.
     Aylık güncelleme KAYIP olmayan ama o an erişilemeyen kaynağı `kaynak-cek.py --atla owner/ad` ile atlar ve raporlar (arşiv kopyası korunur); kalıcıysa bu bölümle KAYIP yap.

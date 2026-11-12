@@ -35,7 +35,7 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 - Oturum başı: kütüphane oturumunun ilk işi `python3 araclar/aylik-ozet.py --hizli` (salt okuma, ağsız); çıktıyı kullanıcıya iki cümleyle söyle. Aylık çalışma 35 günü aştıysa "Aylık çalışmayı şimdi yapayım mı?" diye sor; evet derse aşağıdaki "Skilleri güncelle" maddesindeki tek komutu çalıştır. `dikkat`/`sorun` varsa kendiliğinden düzeltme, silme, push yok. Ayrıntı: `BASLA.md`.
 - "Skilleri güncelle" (aylık) → tek komut `python3 -u araclar/arsiv-guncelle.py --aylik` (önce istenirse `--aylik --kuru` planı): ön kontrol, kaynak
   raporu, `guncelleme/YYYY-AA` (kaynak değişmişse) ya da `takip/YYYY-AA` dalı, tek sayfa özet, damga `notlar/son-aylik-calisma.json`
-  (`tamam`/`kismi`/`basarisiz`/`bekleyen-dal`). Birleştirmez, push etmez; erişilemeyen kaynağı atlar (KAYIP işaretlemek kullanıcı kararı); bekleyen
+  (`tamam`/`kismi`/`basarisiz`/`bekleyen-dal`). Birleştirmez, push etmez; erişilemeyen kaynağı atlar (zamanlanmış görev KAYIP işaretlemez; kütüphane oturumu K-49'a göre işaretler); bekleyen
   dal varken yeni dal açmaz. Özeti ve "karar bekleyenler" listesini kullanıcıya oku → dal özeti ve `notlar/guncelleme-gecmisi.md` kaydı → onay gelirse
   `--birlestir <dal>`. Sonra yeniden incelenecek skilleri incele, etkilenen projeler için `skill-ekle.py <proje> --durum` / `--guncelle --kuru`.
   Ayrıntı: `rehber/02-guncelleme-yonergesi.md` bölüm 1b.
@@ -67,6 +67,9 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
 - Yeni AI aracı: `rehber/14-yapay-zeka-araclari.md` bölüm 7 ve `promptlar/15-yeni-yapay-zeka-araci.md`; aylık araç belgesi kontrolü: `python3 araclar/skill-ekle.py --araclar`.
 - `CLAUDE.md` ve `AGENTS.md` birebir aynı tutulur: birini değiştirince `cp CLAUDE.md AGENTS.md`; `dogrula.py` farkı HATA sayar.
 - Kendi skillerim (yerel kaynak T7, `kendi/` klasörü, `yerel/kendi` kaydı): GitHub'a sorulmaz. Düzenleme: `kendi/<ad>/` düzenle → `python3 araclar/kaynak-cek.py --repo yerel/kendi` (ağ yok) → `arsiv-yerlestir.py` → kontroller → projede `--durum`/`--guncelle`. Ayrıntı: `rehber/03` B2, `kendi/README.md`.
+- Kayıp kaynak (K-49, kullanıcı 2026-11-12): GitHub'da gerçekten yok olan (404; `gh auth status` sağlam, yeni ada taşınmamış) ve hiçbir projede kullanılmayan
+  kaynak kullanıcıya SORULMADAN `tip: KAYIP` yapılır (`rehber/03` E; arşiv kopyası kalır, rol/profillerden çıkarılır, sonuç bir cümleyle bildirilir). Bir projede
+  kullanılıyorsa önce kullanıcıya sorulur. Kaynağı kayıp ya da kaynakta kaldırılmış skill yeni kurulumda kullanılmaz: `--oner` ve `ek-aday` göstermez, role/profile eklenmez.
 - Eski sürümler: bilerek çıkarılan skiller `kaynaklar.json` → `arsivden_cikarilanlar`.
 - Hazır promptlar: `promptlar/` (kullanıcıya proje başlangıcı, ekleme, güncelleme, bakım için).
 - Her değişiklikten sonra: `python3 araclar/kapsam-denetimi.py` (0 sorun) ve `python3 araclar/dogrula.py` (0 hata), sonra `git commit`.

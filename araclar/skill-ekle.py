@@ -1556,6 +1556,8 @@ def kutuphane_taramasi(skiller, sorgu_metni, teknolojiler, haric_idler=(), n=12,
         p, e, t = puanla(s, sorgu, teknolojiler)
         if p <= 0 or s["id"] in haric_idler:
             continue
+        if s.get("kaynak_durumu"):
+            continue  # K-49: kaynağı kayıp ya da kaynakta kaldırılmış skill yeni kurulumda önerilmez (--oner, ek-aday); açık --skill yine uyarıyla kurulur
         if s.get("gizli") and not gizli:
             gizli_esl += 1
             continue

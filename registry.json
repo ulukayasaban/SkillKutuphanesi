@@ -418387,7 +418387,8 @@
       },
       "ucret": "kismen",
       "ucret_notu": "Gemini API (ücretsiz kota) + Olostep kazıma API'si (ücretsiz deneme, sonrası ücretli)",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "kaynak_durumu": "kayip"
     },
     {
       "id": "ecommerce-content-marketing",
@@ -606784,12 +606785,6 @@
     },
     "oldred-byte/ec-visual-skill": {
       "commit": "fead6fa34679a920ed67c7119e2df526ed2d139c",
-      "skill_md": {
-        "SKILL.md": "secildi"
-      }
-    },
-    "buluslan/ecommerce-competitor-analyzer": {
-      "commit": "853c7102b76940be78422ac765fb98a22e76f206",
       "skill_md": {
         "SKILL.md": "secildi"
       }
