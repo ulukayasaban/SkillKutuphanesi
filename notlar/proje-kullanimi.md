@@ -67,7 +67,7 @@ Programla gelen (bağ): `d3-viz` (openmontage), `hyperframes` (hyperframes), `hy
 | `video-edit` | OpenMontageInc/OpenMontage | `c806645` | — |  |
 | `webapp-testing` | anthropics/skills | `dbd4588` | — |  |
 
-Kütüphane dışı, elle kurulan: `copywriting`, `humanizer`, `marketing-psychology`, `model-aware-image-prompt-engineer`, `visual-qa`
+Kütüphane dışı, elle kurulan: `copywriting`, `design-principles`, `frontend-design`, `graphify`, `humanizer`, `marketing-psychology`, `model-aware-image-prompt-engineer`, `research-synthesis`, `ux-copy`, `visual-qa`
 
 ## Etsy-Yeni
 
