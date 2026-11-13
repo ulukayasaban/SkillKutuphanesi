@@ -5,7 +5,7 @@
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
-| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude, codex | tam | 2026-11-12 |
+| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude | tam | 2026-11-13 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
 | [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 25 (+3 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
@@ -19,14 +19,14 @@
 | `de-ai-ify` | heyitsnoah/claudesidian | `6c56f35` | — |  |
 | `design-taste-frontend` | Leonxlnx/taste-skill | `12af471` | — |  |
 | `high-end-visual-design` | nexu-io/open-design | `987b247` | — |  |
-| `huashu-art-motion` | nexu-io/open-design | `e03d5c2` | — |  |
+| `huashu-art-motion` | nexu-io/open-design | `987b247` | — |  |
 | `hyperframes-registry` | heygen-com/hyperframes | `ab66e5b` | — |  |
-| `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
+| `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `5f2bc03` | — |  |
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
 | `motion-design--nexu-io` (kimlik `motion-design@nexu-io`) | nexu-io/open-design | `987b247` | — |  |
 | `motion-doctrine` | heygen-com/hyperframes | `ab66e5b` | — |  |
-| `openmontage` | yerel/kendi | `92683f1` | — |  |
-| `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `593377b` | — |  |
+| `openmontage` | yerel/kendi | `e3196b0` | — |  |
+| `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `5f2bc03` | — |  |
 | `seam-craft` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `yt-package` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 | `yt-retention` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
