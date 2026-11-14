@@ -6,6 +6,8 @@ Izlenenler: ~/.claude/skills, ~/.agents/skills, ~/.codex/skills, ~/.gemini/skill
 ve tabandaki 'ek_klasorler'. Bilinmeyen ~/.<ad>/skills klasörleri de bulunup bildirilir.
 Her girdi için sahip (uygulama, kullanıcı, hyperframes, openmontage, skills aracı, bilinmiyor) ve durum (kalacak, boşaltılacak)
 tabanda (notlar/genel-klasor-tabani.json) tutulur. Rapor: YENİ / KAYIP / DEĞİŞTİ / KIRIK BAĞ / YENİ KLASÖR.
+YENİ girdiyi yazdığı bilinen bir uygulama varsa (BILINEN_YAZICILAR) karar metni yazanı ve durdurma yolunu da söyler;
+--ayrinti uzantı kimliğini ve kanıtın nereden okunacağını ekler.
 
 Salt okuma: makinedeki genel klasörlere, ayar dosyalarına, kabuk dosyalarına YAZMAZ, hiçbir şeyi silmez ya da taşımaz ve
 hiçbir komutu çalıştırmaz (--plan yalnız komut metni yazdırır). Yazdığı tek yerler kütüphane içinde: notlar/genel-bekci.md
@@ -69,6 +71,30 @@ KARAR_KLASOR = ("Yeni bir yapay zeka aracı klasörü göründü (rehber/14): {y
                 "değilse izinli/yoksay mı?")
 KARAR_YENI = "Yeni girdi {y} (sahip: {s}): kalacak mı, boşaltılacak mı? Karar sonrası: --taban-yaz --yenile --evet (onay gerekir)."
 EK = {0: "0'ında", 1: "1'inde", 2: "2'sinde", 3: "3'ünde"}
+# Genel alana kendiliğinden yazdığı bilinen uygulamalar (rehber/12 "Genel alana kendiliğinden yazan uygulamalar"; tek kaynak bu tablo).
+# Yalnız YENİ girdinin karar metnine kısa ek ("yazan", "durdurmak") ve --ayrinti satırı (kimlik, kanıt) üretir; sahip sınıfı değişmez.
+# Eşleşme, sırayla ilk bulunan kazanır: (1) "adlar": girdi adı (bağda hedef adı) bu listede; kilit ve kaynak aranmaz.
+# (2) "kaynak": skill kilidinde o adın source alanında bu owner/ad geçer; ya da "manifest": ~/ altındaki bu JSON dosyasının
+# "skills" listesinde o ad var. Kaynak metni ve manifest içeriği yalnız sınanır; saklanmaz, yazdırılmaz.
+# Yeni yazıcı: bir satır ekle, test_p2-genel-bekci.py'ye sahte ev testi ekle, rehber/12 bölümüne bir satır yaz.
+BILINEN_YAZICILAR = [
+    {"ad": "foundry-toolkit", "adlar": ["microsoft-foundry"],
+     "yazan": "VS Code Foundry Toolkit uzantısı",
+     "durdur": "VS Code ayarı windowsaistudio.autoCheckFoundrySkill=false",
+     "kimlik": "ms-windows-ai-studio.windows-ai-studio; her etkinleşmede skill yoksa kurar",
+     "kanit": "~/Library/Application Support/Code/logs/<oturum>/window1/exthost/ms-windows-ai-studio.windows-ai-studio/"
+              "Foundry Toolkit.log ('[FoundrySkill] ... Installing' satırı)"},
+    {"ad": "copilot-for-azure", "kaynak": ["microsoft/azure-skills"],
+     "manifest": "~/.agents/.copilot-for-azure-skills-manifest.json",
+     "yazan": "VS Code GitHub Copilot for Azure uzantısı",
+     "durdur": "kurulum bildiriminde \"Don't Ask Again\" (ayarı yok)",
+     "kimlik": "ms-azuretools.vscode-azure-github-copilot; 30 günde bir sorar; ~/.github/hooks/azureSkills* de yazar",
+     "kanit": "~/.agents/.copilot-for-azure-skills-manifest.json; ~/Library/Application Support/Code/logs/<oturum>/window1/exthost/"
+              "ms-azuretools.vscode-azure-github-copilot/@azure.log; durduğu: ~/Library/Application Support/Code/User/globalStorage/"
+              "ms-azuretools.vscode-azure-github-copilot/skills-state.json içinde toastDismissedPermanently: true"},
+]
+KABUK_IPUCU = (" Olası neden: kabuk dosyasını yeniden yazan bir kurulum betiği silmiş olabilir; HYPERFRAMES_* satırları "
+               "dosyanın sonuna geri eklenir (onayla).")
 
 
 # ------------------------------------------------------------------ yol yardımcıları
@@ -219,6 +245,7 @@ class Bilgi:
         self.kilit = {}
         self.kilit_okunamadi = False
         self.hf_skilleri = set()
+        self.yazici_adlari = {}  # yazıcı anahtarı -> kilit kaynağı ya da manifest ile eşleşen adlar (kaynak metni tutulmaz)
         yol = ev.ac("~/.agents/.skill-lock.json")
         if os.path.lexists(yol):
             try:
@@ -227,12 +254,24 @@ class Bilgi:
                 sk = veri.get("skills") if isinstance(veri, dict) else None
                 if not isinstance(sk, dict):
                     raise ValueError
+                kilit, eslesen = {}, {}
                 for ad, v in sk.items():
                     if isinstance(v, dict):
-                        self.kilit[ad] = (self._hf(v.get("source"), v.get("sourceType")))
+                        kilit[ad] = (self._hf(v.get("source"), v.get("sourceType")))
+                        for y in BILINEN_YAZICILAR:
+                            if any(self._kaynak_eslesir(v.get("source"), k) for k in y.get("kaynak", [])):
+                                eslesen.setdefault(y["ad"], set()).add(ad)
+                self.kilit = kilit
+                for k, adlar in eslesen.items():
+                    self.yazici_adlari.setdefault(k, set()).update(adlar)
             except Exception:  # noqa: BLE001  sabit ifade: içerik/hata metni asla yansıtılmaz
                 self.kilit_okunamadi = True
                 self.kilit = {}
+        for y in BILINEN_YAZICILAR:
+            if y.get("manifest"):
+                adlar = self._manifest_adlari(ev.ac(y["manifest"]))
+                if adlar:
+                    self.yazici_adlari.setdefault(y["ad"], set()).update(adlar)
         try:
             kart = json_oku(Path(kart_yolu), {}) if kart_yolu else {}
             sk = kart["programlar"]["hyperframes"]["skilleri"]
@@ -249,6 +288,53 @@ class Bilgi:
             return "hf"
         return "diger"
 
+    @staticmethod
+    def _kaynak_eslesir(source, owner_ad):
+        """source içinde owner/ad tam parça olarak geçiyor mu (owner/ad, URL, .git sonekli). Metin saklanmaz."""
+        if not isinstance(source, str):
+            return False
+        return re.search(r"(?<![\w.-])" + re.escape(owner_ad.lower()) + r"(?![\w-])", source.lower()) is not None
+
+    @staticmethod
+    def _manifest_adlari(yol):
+        """Manifestteki "skills" listesinden yalnız metin adlar; dosya yoksa, büyükse ya da bozuksa boş küme."""
+        try:
+            if not os.path.isfile(yol) or os.path.getsize(yol) > 1_000_000:
+                return set()
+            with open(yol, encoding="utf-8") as f:
+                veri = json.load(f)
+            sk = veri.get("skills") if isinstance(veri, dict) else None
+            return {s for s in sk if isinstance(s, str)} if isinstance(sk, list) else set()
+        except Exception:  # noqa: BLE001  sabit ifade
+            return set()
+
+    @staticmethod
+    def aranan_ad(ad, tur, hedef):
+        """Bağ ~/.agents/skills/<ad> hedefliyse hedefin adı, değilse girdinin adı."""
+        if tur == "bag" and hedef:
+            m = re.search(r"(?:^|/)\.agents/skills/([^/]+)$", hedef)
+            if m:
+                return m.group(1)
+        return ad
+
+    def _yazici_ad(self, ad):
+        for y in BILINEN_YAZICILAR:
+            if ad in y.get("adlar", []):
+                return [y]
+        for y in BILINEN_YAZICILAR:
+            if ad in self.yazici_adlari.get(y["ad"], set()):
+                return [y]
+        return []
+
+    def yazici(self, ad, tur, hedef, bolge):
+        """Girdiyi yazdığı bilinen uygulamalar (BILINEN_YAZICILAR satırları; tablo sırasıyla). Eşleşme yoksa []."""
+        if bolge in ("komutlar", "ajanlar", "talimat"):
+            return []
+        if bolge == "kilit":
+            bulunan = {y["ad"] for n in self.kilit for y in self._yazici_ad(n)}
+            return [y for y in BILINEN_YAZICILAR if y["ad"] in bulunan]
+        return self._yazici_ad(self.aranan_ad(ad, tur, hedef)) or self._yazici_ad(ad)
+
     def sahip(self, ad, tur, hedef, bolge, yol, izinli_sahipleri):
         if yol in izinli_sahipleri:
             return izinli_sahipleri[yol]
@@ -258,11 +344,7 @@ class Bilgi:
             return "kullanıcı"
         if tur == "bag" and hedef and hedef.startswith("~/.openmontage/"):
             return "openmontage"
-        aranan = ad
-        if tur == "bag" and hedef:
-            m = re.search(r"(?:^|/)\.agents/skills/([^/]+)$", hedef)
-            if m:
-                aranan = m.group(1)
+        aranan = self.aranan_ad(ad, tur, hedef)
         if bolge in ("komutlar", "ajanlar", "talimat"):
             return "kullanıcı"
         if bolge == "kilit":
@@ -439,6 +521,8 @@ def ortam_kontrol(ev):
     satir = f"{ANAHTAR} satırı: {len(ORTAM_DOSYALARI)} dosyanın {EK[var]} var."
     if eksik:
         satir += " EKSİK: " + ", ".join(eksik)
+        if any(e.startswith(("~/.zshenv ", "~/.zshrc ")) and e.endswith("(satır yok)") for e in eksik):
+            satir += KABUK_IPUCU
     return var == len(ORTAM_DOSYALARI), satir, eksik
 
 
@@ -464,7 +548,7 @@ def fark(b, e):
 
 def karsilastir(ev, tarama, taban, hata, kotu, ortam):
     """-> dict(durum, satirlar [(siddet, metin)], karar, sayac)."""
-    satirlar, karar = [], []
+    satirlar, karar, yazicilar = [], [], []
 
     def ekle(sd, m):
         satirlar.append((SIDDET[sd], m))
@@ -506,7 +590,10 @@ def karsilastir(ev, tarama, taban, hata, kotu, ortam):
                 sahip = e.get("_sahip", "bilinmiyor")
                 sd = "dikkat" if e["bolge"] in ("komutlar", "ajanlar", "talimat") else "sorun"
                 ekle(sd, f"YENİ      {yol} ({'klasör' if e['tur'] == 'klasor' else 'bağ' if e['tur'] == 'bag' else 'dosya'}, sahip: {sahip})")
-                karar.append(KARAR_YENI.format(y=yol, s=sahip))
+                yz = e.get("_yazici") or []
+                if yz:
+                    yazicilar.append((yol, yz))
+                karar.append(KARAR_YENI.format(y=yol, s=sahip + yazici_eki(yz)))
                 if e.get("kirik"):
                     ekle("dikkat", f"KIRIK BAĞ {yol} -> {e.get('hedef')}")
                 continue
@@ -540,7 +627,17 @@ def karsilastir(ev, tarama, taban, hata, kotu, ortam):
                      "(ayar dosyası: onay gerekir; ajan kendi eklemez)")
     en = max([s for s, _ in satirlar] or [0])
     durum = {2: "sorun", 1: "dikkat", 0: "temiz"}[en]
-    return {"durum": durum, "satirlar": satirlar, "karar": list(dict.fromkeys(karar)), "sayac": sayac}
+    return {"durum": durum, "satirlar": satirlar, "karar": list(dict.fromkeys(karar)), "sayac": sayac, "yazicilar": yazicilar}
+
+
+def yazici_eki(yazicilar):
+    """Karar metnine kısa ek: '; yazan: ...; durdurmak: ...' (eşleşme yoksa boş). Birden çok yazıcıda (yalnız kilit dosyası)
+    satır aylık özetin 300 karakter sınırını aşmasın diye durdurma yolları --ayrinti satırlarına bırakılır."""
+    if not yazicilar:
+        return ""
+    if len(yazicilar) == 1:
+        return f"; yazan: {yazicilar[0]['yazan']}; durdurmak: {yazicilar[0]['durdur']}"
+    return "; yazan: " + " ya da ".join(y["yazan"] for y in yazicilar) + "; durdurmak: --ayrinti satırlarında"
 
 
 def ev_var(ev):
@@ -549,7 +646,9 @@ def ev_var(ev):
 
 def sahipleri_doldur(tarama, bilgi, izinli_d):
     for yol, g in tarama["girdiler"].items():
-        g["_sahip"] = bilgi.sahip(yol.rsplit("/", 1)[-1], g["tur"], g.get("hedef"), g["bolge"], yol, izinli_d)
+        ad = yol.rsplit("/", 1)[-1]
+        g["_sahip"] = bilgi.sahip(ad, g["tur"], g.get("hedef"), g["bolge"], yol, izinli_d)
+        g["_yazici"] = bilgi.yazici(ad, g["tur"], g.get("hedef"), g["bolge"])
 
 
 def calistir(ev, taban_yolu, kart):
@@ -585,6 +684,9 @@ def rapor_metni(sonuc, tarama, taban, ayrinti, tarih=None):
             for g in taban["girdiler"]:
                 if g.get("durum") == "boşaltılacak" and g["yol"] in tarama["girdiler"]:
                     out.append(f"  boşaltılacak: {g['yol']} ({g.get('tur')}, sahip: {g.get('sahip')})")
+        for yol, yz in sonuc.get("yazicilar", []):
+            for y in yz:
+                out.append(f"  yazan: {yol}: {y['yazan']} ({y['kimlik']}); durdurmak: {y['durdur']}; kanıt: {y['kanit']}")
     if sonuc["karar"]:
         out.append("Karar bekleyen:")
         out += [f"  - {k}" for k in sonuc["karar"]]

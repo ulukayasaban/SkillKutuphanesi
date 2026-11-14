@@ -47,6 +47,7 @@ Skill olmayan, kendi sürümü ve kurulumu olan programları izler. Kullanıcın
 | Program bağlarını kullanan projeler | `rehber/10-proje-kullanimi.md` | `python3 araclar/proje-kullanimi.py --program <ad>` |
 | Yedek kaydı | `rehber/13-yedek-ve-geri-alma.md` | `yedekler.json`, `python3 araclar/yedek-denetim.py` |
 | Genel skill klasörleri | `rehber/12-genel-klasor-bosaltma.md`, `promptlar/16-genel-klasor-bosaltma.md` | `python3 araclar/genel-bekci.py --ayrinti` |
+| Genel alana kendiliğinden yazan uygulama (YENİ girdide `yazan:`) | `rehber/12-genel-klasor-bosaltma.md` "Genel alana kendiliğinden yazan uygulamalar" | `python3 araclar/genel-bekci.py --ayrinti` |
 | Yeni program kartı | `rehber/11-program-yonetimi.md` | `python3 araclar/program-denetim.py --iskelet {kaynak\|npm-global\|git-checkout\|uv-tool}` |
 
 ## Onay isteyen adımlar (her biri ayrı, adı sayılarak)

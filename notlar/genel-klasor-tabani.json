@@ -1,6 +1,6 @@
 {
   "surum": 1,
-  "yazildi": "2026-11-12",
+  "yazildi": "2026-11-14",
   "izinli": [
     {
       "yol": "~/.claude/skills/synced",
@@ -65,20 +65,6 @@
     {
       "yol": "~/.claude/CLAUDE.md",
       "bolge": "talimat",
-      "tur": "dosya",
-      "sahip": "kullanıcı",
-      "durum": "kalacak"
-    },
-    {
-      "yol": "~/.claude/agents/colab-izleme.md",
-      "bolge": "ajanlar",
-      "tur": "dosya",
-      "sahip": "kullanıcı",
-      "durum": "kalacak"
-    },
-    {
-      "yol": "~/.claude/agents/kopru-izleme.md",
-      "bolge": "ajanlar",
       "tur": "dosya",
       "sahip": "kullanıcı",
       "durum": "kalacak"
@@ -541,6 +527,11 @@
       "tarih": "2026-11-12",
       "islem": "yenile",
       "girdi": 54
+    },
+    {
+      "tarih": "2026-11-14",
+      "islem": "yenile",
+      "girdi": 52
     }
   ]
 }

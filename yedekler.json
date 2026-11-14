@@ -227,6 +227,24 @@
       ],
       "silme_gun": 30,
       "not": "Gizli içerik yok."
+    },
+    {
+      "kimlik": "genel-yeni-girdi-2026-11-14",
+      "yol": "~/Documents/Claude/yedek/genel-yeni-girdi-2026-11-14",
+      "tur": "genel-skill-klasoru",
+      "ne": "Genel alandan TAŞINARAK kaldırılan iki girdi (VS Code Foundry Toolkit uzantısının 2026-11-13'te kendiliğinden kurduğu ~/.agents/skills/microsoft-foundry ve ~/.agents/.skill-lock.json) ile değiştirilmeden önceki ~/.zshrc ve VS Code kullanıcı ayarı (ayar/).",
+      "tarih": "2026-11-14",
+      "geri_yukleme": "tasima-kaydi.tsv satırlarına göre girdileri yerine taşı; ayar/zshrc.yedek ve ayar/vscode-settings.json.yedek dosyalarını eski yerlerine kopyala (cp -p). Her geri yükleme kullanıcı onayıyla.",
+      "gizli_icerir": "evet",
+      "beklenen": [
+        "agents-skills/microsoft-foundry",
+        "agents-skill-lock.json",
+        "ayar/zshrc.yedek",
+        "ayar/vscode-settings.json.yedek",
+        "tasima-kaydi.tsv"
+      ],
+      "silme_gun": 30,
+      "not": "ayar/zshrc.yedek kabuk dosyasının kopyasıdır ve gizli değer içerebilir; içi açılmaz, yazdırılmaz."
     }
   ]
 }

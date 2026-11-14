@@ -132,11 +132,29 @@ Her adımda: Amaç, Sıra nedeni, Yedek, Komut, Kontrol, Geri alma, Onay.
 | Elle ya da ajanla `cp`/`ln` | herhangi biri | kural 1 | YENİ |
 | Antigravity ve benzeri yeni araç klasörü | `~/.gemini/*/skills`, `~/.<ad>/skills` | - | YENİ KLASÖR |
 | Time Machine / başka Mac'ten geri yükleme | her yer | - | her yerde YENİ/KAYIP: önce tam raporu oku |
+| VS Code uzantıları, kabuk dosyasını yeniden yazan kurulum betikleri | aşağıdaki bölüm | aşağıdaki bölüm | YENİ (karar metninde `yazan`), anahtar satırında ipucu |
+
+## Genel alana kendiliğinden yazan uygulamalar
+
+Bekçi bunları tanır: YENİ girdinin karar metnine `yazan: ...; durdurmak: ...` eki gelir, `--ayrinti` uzantı kimliğini ve kanıtın yerini ekler.
+Tek kaynak `araclar/genel-bekci.py` içindeki `BILINEN_YAZICILAR` tablosudur; aşağısı onun açıklamasıdır. Durdurma her zaman kullanıcı onayıyla yapılır (ayar dosyası).
+
+| Uygulama | Ne yazar, ne zaman | Tanıma ölçütü | Kalıcı durdurma | Kanıt |
+|---|---|---|---|---|
+| VS Code **Foundry Toolkit** (`ms-windows-ai-studio.windows-ai-studio`) | `~/.agents/skills/microsoft-foundry` ve kilit (kaynak `microsoft/azure-skills`); her etkinleşmede skill yoksa kurar (2026-11-13 olayı) | ad `microsoft-foundry` (kilit olsa da olmasa da) | VS Code kullanıcı ayarı `"windowsaistudio.autoCheckFoundrySkill": false` (2026-11-14'te yazıldı) | `~/Library/Application Support/Code/logs/<oturum>/window1/exthost/ms-windows-ai-studio.windows-ai-studio/Foundry Toolkit.log` içinde `[FoundrySkill] ... Installing` |
+| VS Code **GitHub Copilot for Azure** (`ms-azuretools.vscode-azure-github-copilot`) | 30 günde bir "Azure skills kurayım mı?" diye sorar; "Install" denirse `microsoft/azure-skills` skillerini `~/.agents/skills` içine (adlar kurulum anında uzaktan listelenir), `~/.github/hooks/azureSkills*` ve `~/.agents/.copilot-for-azure-skills-manifest.json` yazar | kilitte kaynak `microsoft/azure-skills` (ad ne olursa olsun) ya da ad manifestin `skills` listesinde | bildirimde "Don't Ask Again" (uzantının ayarı yok); tuttuğu: `~/Library/Application Support/Code/User/globalStorage/ms-azuretools.vscode-azure-github-copilot/skills-state.json` içinde `toastDismissedPermanently: true` | manifest dosyası; `.../exthost/ms-azuretools.vscode-azure-github-copilot/@azure.log` |
+| Kabuk dosyasını yeniden yazan kurulum betiği (2026-11-14: başka bir programın `# >>> ... >>>` kurulum bloğu eklenirken `~/.zshrc` yeniden yazıldı) | `HYPERFRAMES_*` kilit bloğunu siler | anahtar satırı `EKSİK: ~/.zshrc (satır yok)` ya da `~/.zshenv`; satıra "kurulum betiği" ipucu eklenir | satırlar dosyanın sonuna geri eklenir (onayla); sonra bekçi "3 dosyanın 3'ünde var" demeli | dosyanın değişme saati ve yeni eklenen blok |
+
+Not: `microsoft-foundry` `microsoft/azure-skills` deposunda da var; Copilot for Azure kurulumu da onu yazabilir. Ad Foundry Toolkit'e bağlanır; manifest varsa iki uzantıya da bak.
+Manifest ve `~/.github/hooks` bekçinin izlediği yerler değildir (yalnız tanıma için okunur); Copilot for Azure skilleri geri gelirse bu dosyalar da onayla temizlenir.
+
+**Tabloya yeni yazıcı eklemek:** `BILINEN_YAZICILAR` içine bir satır (`adlar` ya da `kaynak`/`manifest`, `yazan`, `durdur`, `kimlik`, `kanit`; karar satırı 300 karakteri aşmasın)
+ve `araclar/testler/test_p2-genel-bekci.py` içine sahte ev testi; sonra bu tabloya bir satır. Kanıtsız yazıcı eklenmez: önce günlükte ya da uzantı kodunda yazan yeri bul.
 
 ## Bir şey yeniden belirirse
 
 1. Hiçbir şeyi silme. `python3 araclar/genel-bekci.py --ayrinti` çalıştır.
-2. Girdinin `sahip`ine ve rapordaki anahtar satırına bak (kilit kaynağı sahip sütunundan anlaşılır; geçmiş dosyaları okunmaz).
+2. Girdinin `sahip`ine ve rapordaki anahtar satırına bak (kilit kaynağı sahip sütunundan anlaşılır; geçmiş dosyaları okunmaz). Karar metninde `yazan:` eki varsa yazan ve durdurma yolu "Genel alana kendiliğinden yazan uygulamalar" bölümündedir; yoksa yazanı bul ve o tabloya ekle.
 3. Kullanıcıya seçenekleri sun: (a) istenmeyen yazıcı: önce nedeni durdur (anahtar, talimat metni), sonra onayla girdiyi `~/Documents/Claude/yedek/geri-yazilan-<YYYY-AA-GG>/` içine bağ listesiyle taşı (ONAY GEREKİR); (b) istenen skill: bir projeye aittir, `skill-ekle.py` ile kurulur, genel klasöre değil; (c) kalıcı satıcı girdisi: taban `izinli` listesine eklenir, sonra `--taban-yaz --yenile --evet` (onay gerekir).
 4. Raporu yeniden çalıştır: `temiz` olmalı.
 5. Aynı şey ikinci kez geri gelirse yazıcıyı açık sorun olarak kullanıcıya bildir; döngüye girme.

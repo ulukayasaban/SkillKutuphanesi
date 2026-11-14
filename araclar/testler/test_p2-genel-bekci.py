@@ -566,6 +566,132 @@ test("35 modül yüklenir, ortam regex'i tek sabit desen", mod.ANAHTAR_RE.match(
 # 37 plan: yedekte aynı ad varsa mv öncesi durdurma denetimi
 test("37 plan 5b: mv öncesi yedekte aynı ad denetimi", "mv -- " in r5b and "YEDEKTE AYNI AD VAR" in r5b)
 
+# 38-43 bilinen yazıcılar (BILINEN_YAZICILAR) ve kabuk ipucu
+def karar_satiri(j, yol):
+    return next((k for k in j["karar_bekleyen"] if k.startswith(f"Yeni girdi {yol} ")), "")
+
+
+FOUNDRY = "yazan: VS Code Foundry Toolkit uzantısı; durdurmak: VS Code ayarı windowsaistudio.autoCheckFoundrySkill=false"
+COPILOT = "yazan: VS Code GitHub Copilot for Azure uzantısı; durdurmak: kurulum bildiriminde \"Don't Ask Again\" (ayarı yok)"
+AZ = "microsoft/azure-skills"
+
+# 38 kilit kaynağı azure-skills: microsoft-foundry -> Foundry Toolkit, diğer adlar -> Copilot for Azure, tanınmayan -> eski metin
+ev, tb = ev_kur()
+shutil.rmtree(ev / ".agents/skills/microsoft-foundry")
+yaz(ev / ".agents/.skill-lock.json", json.dumps({"skills": {
+    "y": {"source": "heygen-com/hyperframes", "sourceType": "github"},
+    "localhf": {"source": "/Users/x/SECRETPROJ/hf-skills/localhf", "sourceType": "local"},
+    "localother": {"source": "/Users/x/SECRETPROJ/baska/localother", "sourceType": "local"},
+    "microsoft-foundry": {"source": AZ, "sourceType": "github"},
+    "azure-prepare": {"source": AZ, "sourceType": "github"},
+    "azure-deploy": {"source": "https://github.com/SECRETPROJ/../microsoft/azure-skills.git", "sourceType": "git"},
+    "azure-benzeri": {"source": "microsoft/azure-skills-extra", "sourceType": "github"}}}))
+taban_yaz(ev, tb)
+for n in ("microsoft-foundry", "azure-prepare", "azure-deploy", "azure-benzeri", "tanimsiz"):
+    yaz(ev / ".agents/skills" / n / "SKILL.md")
+os.symlink("../../.agents/skills/azure-prepare", ev / ".claude/skills/azure-prepare")
+r = calistir(ev, tb)
+j = json.loads(calistir(ev, tb, "--ozet-json").stdout)
+ra = calistir(ev, tb, "--ayrinti")
+kf = karar_satiri(j, "~/.agents/skills/microsoft-foundry")
+test("38 microsoft-foundry + azure-skills kilidi: Foundry ipucu, sahip aynı",
+     kf == mod.KARAR_YENI.format(y="~/.agents/skills/microsoft-foundry", s="skills aracı; " + FOUNDRY)
+     and satir_var(r, "YENİ      ~/.agents/skills/microsoft-foundry (klasör, sahip: skills aracı)") and "Copilot" not in kf, kf)
+kp = karar_satiri(j, "~/.agents/skills/azure-prepare")
+test("38b başka azure-skills adı: Copilot for Azure ipucu", kp == mod.KARAR_YENI.format(y="~/.agents/skills/azure-prepare", s="skills aracı; " + COPILOT), kp)
+test("38c URL biçimli kaynak da tanınır; benzer ad (azure-skills-extra) tanınmaz",
+     COPILOT in karar_satiri(j, "~/.agents/skills/azure-deploy")
+     and karar_satiri(j, "~/.agents/skills/azure-benzeri") == mod.KARAR_YENI.format(y="~/.agents/skills/azure-benzeri", s="skills aracı"), str(j["karar_bekleyen"]))
+test("38d ~/.claude/skills aynası (bağ) hedef adıyla tanınır", COPILOT in karar_satiri(j, "~/.claude/skills/azure-prepare"), str(j["karar_bekleyen"]))
+test("38e tanınmayan girdi: karar metni eskisiyle aynı", karar_satiri(j, "~/.agents/skills/tanimsiz") == mod.KARAR_YENI.format(y="~/.agents/skills/tanimsiz", s="bilinmiyor"))
+test("38f ozet-json biçimi aynı, karar satırları 300 karakteri aşmaz", set(j) == {"arac", "durum", "satirlar", "karar_bekleyen"} and j["durum"] == "sorun"
+     and all(len(k) <= 300 for k in j["karar_bekleyen"]), str(j))
+test("38g --ayrinti kimlik ve kanıt yerini verir; düz raporda kanıt yok",
+     "ms-windows-ai-studio.windows-ai-studio" in ra.stdout and "Foundry Toolkit.log" in ra.stdout and "@azure.log" in ra.stdout
+     and "kanıt:" not in r.stdout, ra.stdout)
+test("38h kaynak metni hiçbir çıktıda yok", "SECRETPROJ" not in r.stdout + ra.stdout + json.dumps(j, ensure_ascii=False) + r.stderr + ra.stderr)
+calistir(ev, tb, "--taban-yaz", "--yenile", "--evet", "--tarih", TARIH)
+ham = tb.read_text(encoding="utf-8")
+test("38i yazıcı bilgisi tabana yazılmaz", "yazan" not in ham and "_yazici" not in ham and "SECRETPROJ" not in ham and durum(calistir(ev, tb)) == "TEMİZ")
+
+# 39 kilit dosyası yok: klasör adı microsoft-foundry ise yine Foundry; başka ad eski metin
+ev, tb = ev_kur()
+shutil.rmtree(ev / ".agents/skills/microsoft-foundry")
+os.remove(ev / ".agents/.skill-lock.json")
+taban_yaz(ev, tb)
+yaz(ev / ".agents/skills/microsoft-foundry/SKILL.md")
+yaz(ev / ".agents/skills/azure-prepare/SKILL.md")
+j = json.loads(calistir(ev, tb, "--ozet-json").stdout)
+test("39 kilitsiz microsoft-foundry: Foundry ipucu", karar_satiri(j, "~/.agents/skills/microsoft-foundry")
+     == mod.KARAR_YENI.format(y="~/.agents/skills/microsoft-foundry", s="bilinmiyor; " + FOUNDRY), str(j["karar_bekleyen"]))
+test("39b kilitsiz ve manifestsiz azure adı: eski metin", karar_satiri(j, "~/.agents/skills/azure-prepare")
+     == mod.KARAR_YENI.format(y="~/.agents/skills/azure-prepare", s="bilinmiyor"))
+
+# 40 kilit okunamaz: çökme yok; ad eşleşmesi sürer, kaynak eşleşmesi yok
+for bozuk in ("{bozuk", "[1, 2]", None):
+    ev, tb = ev_kur()
+    shutil.rmtree(ev / ".agents/skills/microsoft-foundry")
+    taban_yaz(ev, tb)
+    os.remove(ev / ".agents/.skill-lock.json")
+    if bozuk is None:
+        (ev / ".agents/.skill-lock.json").mkdir()
+    else:
+        yaz(ev / ".agents/.skill-lock.json", bozuk)
+    yaz(ev / ".agents/skills/microsoft-foundry/SKILL.md")
+    yaz(ev / ".agents/skills/azure-prepare/SKILL.md")
+    r = calistir(ev, tb, "--ayrinti")
+    ro = calistir(ev, tb, "--ozet-json")
+    j = json.loads(ro.stdout)
+    test(f"40 kilit okunamaz ({bozuk or 'klasör'}): çökme yok, Foundry adı tanınır",
+         r.returncode == 0 and ro.returncode == 0 and "Traceback" not in r.stderr + ro.stderr
+         and "çalışırken hata verdi" not in ro.stdout and FOUNDRY in karar_satiri(j, "~/.agents/skills/microsoft-foundry")
+         and karar_satiri(j, "~/.agents/skills/azure-prepare") == mod.KARAR_YENI.format(y="~/.agents/skills/azure-prepare", s="bilinmiyor"),
+         r.stdout + r.stderr + ro.stdout)
+
+# 41 Copilot for Azure manifesti: listedeki ad tanınır; bozuk manifest çökme vermez
+ev, tb = ev_kur()
+taban_yaz(ev, tb)
+yaz(ev / ".agents/.copilot-for-azure-skills-manifest.json", json.dumps({"skills": ["azure-prepare", 3, None]}))
+yaz(ev / ".agents/skills/azure-prepare/SKILL.md")
+yaz(ev / ".agents/skills/azure-baska/SKILL.md")
+j = json.loads(calistir(ev, tb, "--ozet-json").stdout)
+test("41 manifestteki ad: Copilot for Azure ipucu; listede olmayan eski metin", COPILOT in karar_satiri(j, "~/.agents/skills/azure-prepare")
+     and karar_satiri(j, "~/.agents/skills/azure-baska") == mod.KARAR_YENI.format(y="~/.agents/skills/azure-baska", s="bilinmiyor"), str(j["karar_bekleyen"]))
+test("41b manifest izlenen girdi değildir", not any("copilot-for-azure-skills-manifest" in s for s in j["satirlar"]), str(j["satirlar"]))
+yaz(ev / ".agents/.copilot-for-azure-skills-manifest.json", "{bozuk")
+r = calistir(ev, tb)
+j = json.loads(calistir(ev, tb, "--ozet-json").stdout)
+test("41c bozuk manifest: çökme yok, eski metin", r.returncode == 0 and "Traceback" not in r.stderr
+     and karar_satiri(j, "~/.agents/skills/azure-prepare") == mod.KARAR_YENI.format(y="~/.agents/skills/azure-prepare", s="bilinmiyor"))
+
+# 42 kilit dosyasının kendisi YENİ: içindeki kayıtların yazıcıları birlikte
+ev, tb = ev_kur()
+os.remove(ev / ".agents/.skill-lock.json")
+taban_yaz(ev, tb)
+yaz(ev / ".agents/.skill-lock.json", json.dumps({"skills": {"microsoft-foundry": {"source": AZ}, "azure-prepare": {"source": AZ}}}))
+j = json.loads(calistir(ev, tb, "--ozet-json").stdout)
+kk = karar_satiri(j, "~/.agents/.skill-lock.json")
+ra = calistir(ev, tb, "--ayrinti").stdout
+test("42 yeni kilit dosyası: iki yazıcı, 300 karakter sınırı, durdurma yolları --ayrinti'de",
+     "yazan: VS Code Foundry Toolkit uzantısı ya da VS Code GitHub Copilot for Azure uzantısı; durdurmak: --ayrinti satırlarında" in kk
+     and len(kk) <= 300 and "yazan: ~/.agents/.skill-lock.json: VS Code Foundry Toolkit" in ra
+     and "autoCheckFoundrySkill=false" in ra and "Don't Ask Again" in ra, kk + ra)
+os.remove(ev / ".agents/.skill-lock.json")
+yaz(ev / ".agents/.skill-lock.json", json.dumps({"skills": {"baska": {"source": "owner/repo"}}}))
+j = json.loads(calistir(ev, tb, "--ozet-json").stdout)
+test("42b tanınmayan kilit: eski metin", karar_satiri(j, "~/.agents/.skill-lock.json") == mod.KARAR_YENI.format(y="~/.agents/.skill-lock.json", s="skills aracı"))
+
+# 43 kabuk dosyasında satır yok: kurulum betiği ipucu; başka nedenlerde ipucu yok
+r = ortam(lambda e: yaz(e / ".zshrc", "# >>> baska >>>\nexport FOO=1\n# <<< baska <<<\n"))
+test("43 ~/.zshrc satır yok: ipucu", "EKSİK: ~/.zshrc (satır yok)" in r.stdout and "kurulum betiği silmiş olabilir" in r.stdout
+     and "dosyanın sonuna geri eklenir (onayla)" in r.stdout and "SORUN" in r.stdout, r.stdout)
+r2 = ortam(lambda e: yaz(e / ".zshenv", "FOO=1\n"))
+r3 = ortam(lambda e: yaz(e / ".claude/settings.json", json.dumps({"env": {}})))
+r4 = ortam(lambda e: os.remove(e / ".zshenv"))
+r5 = ortam(lambda e: yaz(e / ".zshrc", "export HYPERFRAMES_SKIP_SKILLS=0\n"))
+test("43b ~/.zshenv satır yok: ipucu; settings.json, dosya yok ve geçersiz değerde yok",
+     "kurulum betiği" in r2.stdout and all("kurulum betiği" not in x.stdout for x in (r3, r4, r5)) and "kurulum betiği" not in ortam(lambda e: None).stdout)
+
 # 36 gerçek taban oluşmadı
 test("36 gerçek taban dosyası yazılmadı", GERCEK_TABAN.exists() == GERCEK_TABAN_VARDI)
 
