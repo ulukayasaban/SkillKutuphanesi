@@ -31,6 +31,23 @@ akışı **atlamadan** izle. Ayrıntı: `rehber/01-skill-ekleme-sureci.md`, `reh
    (kütüphanede ilgili olup seçilmeyen skiller). HATA varsa nedenini ve seçenekleri açıkla, kurma.
 5. Onay gelirse aynı komutu `--evet` ile çalıştır. Sonra `--dogrula` sonucunu bildir.
 
+## Ajanlar (kütüphanenin kendi ajanları, K-53)
+Ana oturum kullanıcıyla konuşur ve onay alır; iş aşağıdaki tabloya göre uygun ajana verilir. Tek kaynak `ajanlar/kutuphane-<ad>.md` ve
+`ajanlar/ORTAK.md`; Claude (`.claude/agents/`) ve Codex (`.codex/agents/`) dosyaları bundan üretilir: `python3 araclar/ajan-uret.py`
+(üretilen dosya elle düzenlenmez; `dogrula.py` farkı HATA sayar). Ajan dosyası okumayan araç (Antigravity, VS Code Copilot) işe uyan
+`ajanlar/` dosyasını ve `ajanlar/ORTAK.md`'yi okuyup o rolde çalışır. Ajanlar onay gerektiren adımı atmaz, commit ve push yapmaz;
+aynı anda yalnız bir ajan kütüphaneye yazar. Model ve çaba her ajanın kendi kaynak dosyasındadır. Ayrıntı: `rehber/15-ajanlar.md`.
+
+| İş | Ajan |
+|---|---|
+| Sağlık kontrolü, oturum başı ve iş sonu denetimi | `kutuphane-denetci` |
+| Yeni kaynak, kendi skiller, kaynak çıkarma, kayıp kaynak, ad çakışması, adaylar | `kutuphane-kaynak` |
+| Skill incelemesi (kategori, ücret, lisans, Türkçe özet, güvenlik) | `kutuphane-inceleme` |
+| Aylık güncelleme, dal özeti, zamanlanmış görev metni | `kutuphane-guncelleme` |
+| Programlar, program bağları, ortam kilitleri, genel skill klasörleri | `kutuphane-program` |
+| Projeye öneri ve kurulum, proje durumu ve kaydı, rol ve profiller, araç düzenleri | `kutuphane-proje` |
+| Araç kodu, testler, rehberler, hazır istemler, kararlar, ajan dosyaları | `kutuphane-gelistirici` |
+
 ## Bakım isteklerinde
 - Oturum başı: kütüphane oturumunun ilk işi `python3 araclar/aylik-ozet.py --hizli` (salt okuma, ağsız); çıktıyı kullanıcıya iki cümleyle söyle. Aylık çalışma 35 günü aştıysa "Aylık çalışmayı şimdi yapayım mı?" diye sor; evet derse aşağıdaki "Skilleri güncelle" maddesindeki tek komutu çalıştır. `dikkat`/`sorun` varsa kendiliğinden düzeltme, silme, push yok. Ayrıntı: `BASLA.md`.
 - "Skilleri güncelle" (aylık) → tek komut `python3 -u araclar/arsiv-guncelle.py --aylik` (önce istenirse `--aylik --kuru` planı): ön kontrol, kaynak

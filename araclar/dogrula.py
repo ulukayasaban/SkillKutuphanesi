@@ -7,7 +7,7 @@
 - Roller/profiller var olan skillere/rollere mi bakıyor
 - Bir rol aynı örtüşme grubundan en fazla 1 birincil + 1 tamamlayıcı alıyor mu
 - Kaynaklar.json yıldızlı repoların hepsini kapsıyor mu (--github ile)
-- CLAUDE.md == AGENTS.md (HATA); BASLA.md, notlar/kararlar.md, paket dosyaları, .gitignore korumaları, kayıt şemaları
+- CLAUDE.md == AGENTS.md (HATA); kütüphanenin kendi ajanları (ajanlar/ kaynağı ile üretilen dosyalar aynı, HATA); BASLA.md, notlar/kararlar.md, paket dosyaları, .gitignore korumaları, kayıt şemaları
   (programlar/projeler/yedekler/yapay-zeka-araclari/kaynaklar), yeni kaynak kayıtlarının onay kapıları, belgelerdeki
   araç/bayrak adları ve eski anlatım (hepsi UYARI; HATA yalnız ayrışmayan JSON kayıt dosyası ve CLAUDE/AGENTS farkı)
 """
@@ -461,7 +461,7 @@ def bayrak_denetimi(kok=KOK):
     """Belgelerde anılan araclar/<araç>.py ve bayrakları var mı? Bayraklar kaynak metninden okunur (--help çalıştırılmaz)."""
     kok = Path(kok)
     h, u = [], []
-    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md"))
+    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md")) + sorted((kok / "ajanlar").glob("*.md"))
     onbellek = {}
     for b in belgeler:
         if not b.is_file():
@@ -491,12 +491,22 @@ def bayrak_denetimi(kok=KOK):
 def eski_anlatim_denetimi(kok=KOK):
     kok = Path(kok)
     h, u = [], []
-    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md"))
+    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md")) + sorted((kok / "ajanlar").glob("*.md"))
     for b in belgeler:
         for no, satir in enumerate(_metin(b).splitlines(), 1):
             if any(d.search(satir) for d in ESKI_ANLATIM):
                 u.append(f"{b.relative_to(kok)}:{no}: eski anlatım (genel klasörler boşaltılacak, notlar/kararlar.md K-04): {satir.strip()[:60]}")
     return h, u
+
+
+def ajan_denetimi(kok=KOK):
+    """Kütüphanenin kendi ajanları: ajanlar/ kaynağı geçerli mi, .claude/agents ve .codex/agents dosyaları kaynakla aynı mı (HATA).
+    Mantık araclar/ajan-uret.py içindedir; ajanlar/ klasörü yoksa mesaj yok."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("ajan_uret", Path(__file__).resolve().parent / "ajan-uret.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m.ajan_denetimi(Path(kok))
 
 
 def belge_ve_kayit_denetimleri(kok=KOK, skiller=None):
@@ -505,7 +515,7 @@ def belge_ve_kayit_denetimleri(kok=KOK, skiller=None):
     for ad, f in (("eşitlik", esitlik_denetimi), ("giriş belgeleri", giris_belgeleri_denetimi),
                   ("paket dosyaları", paket_dosyalari_denetimi), ("kayıt şemaları", kayit_semalari_denetimi),
                   ("kaynak kapıları", lambda k: kaynak_kapilari_denetimi(k, skiller)),
-                  ("bayraklar", bayrak_denetimi), ("eski anlatım", eski_anlatim_denetimi)):
+                  ("bayraklar", bayrak_denetimi), ("eski anlatım", eski_anlatim_denetimi), ("ajanlar", ajan_denetimi)):
         try:
             h, u = f(kok)
         except Exception as e:  # noqa: BLE001

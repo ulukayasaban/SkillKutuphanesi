@@ -49,6 +49,8 @@ yedek yaşını, son aylık çalışmayı ve karar bekleyenleri toplar.
 | Ad çakışması, aynı ad farklı skill | `rehber/09-ad-kimlik-ve-cakisma.md` | `python3 araclar/proje-kullanimi.py --skill <kimlik>` |
 | Proje taşındı ya da bozuldu | `promptlar/09-proje-tasindi-veya-bozuldu.md` | `python3 araclar/skill-ekle.py <proje> --dogrula` |
 
+**Hangi iş hangi ajan:** kütüphanenin yedi ajanı vardır; iş-ajan tablosu `CLAUDE.md` "Ajanlar" bölümünde, çalışma biçimi `rehber/15-ajanlar.md` içindedir. Ajan kullanmayan araç da işe uyan `ajanlar/kutuphane-<ad>.md` dosyasını okuyup o kapsamla çalışır.
+
 ## 4. Her zaman geçerli kurallar
 1. Kullanıcıyla konu konu, sade Türkçe ile konuş; plan belgesi yığma; en fazla bir soru sor.
 2. Gerçek değişiklik (kurulum, kaldırma, taşıma, güncelleme, ayar dosyası, genel klasör, silme) önce rapor, sonra kullanıcının ayrı onayı. Önceki onay sonrakini kapsamaz.
