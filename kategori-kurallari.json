@@ -712,6 +712,11 @@
       "repo": "yerel/kendi",
       "desen": "^nlm-skill$",
       "kategori": "d-ai-otomasyon/03-web-arastirma-veri"
+    },
+    {
+      "repo": "yerel/kendi",
+      "desen": "^antigravity-gorsel$",
+      "kategori": "g-video-ses-medya/03-ai-gorsel-video-modelleri"
     }
   ],
   "yol_kurallari": [

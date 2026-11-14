@@ -1645,6 +1645,10 @@
     "nlm-skill": [
       "kismen",
       "nlm komutu ücretsizdir ve Google hesabıyla çalışır; kullanım kotaları Gemini Notebook planına bağlıdır (ücretsiz planda sınırlı)"
+    ],
+    "antigravity-gorsel": [
+      "kismen",
+      "Antigravity Google hesabıyla ücretsiz kullanılır; görsel üretim kotası hesabın Google planına bağlıdır"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."
