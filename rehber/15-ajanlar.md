@@ -59,6 +59,6 @@ Yeni ajan dosyaları yeni bir oturumda yüklenir; açık oturum eski listeyi gö
 ## 7. Ajan eklemek ya da değiştirmek
 1. `ajanlar/kutuphane-<ad>.md` dosyasını yaz ya da düzenle. Başlık bloğu: `name` (dosya adıyla aynı), `description` (tek satır; ne zaman kullanılacağını söyler), `model`, `effort`, isteğe bağlı `tools`.
 2. Kapsam başka bir ajanla çakışmasın; çakışıyorsa hangisinin sahibi olduğunu iki dosyada da yaz. Yeni ajan açmadan önce işin mevcut bir ajanın alanına girip girmediğine bak.
-3. `python3 araclar/ajan-uret.py`, sonra `python3 araclar/ajan-uret.py --kontrol` ve `python3 araclar/dogrula.py`.
+3. `python3 araclar/ajan-uret.py`, sonra `python3 araclar/ajan-uret.py --kontrol`, `python3 araclar/dogrula.py` ve `python3 araclar/test.py` (`araclar/testler/test_p12-ajanlar.py` her ajanın bu rehberde ve `CLAUDE.md` tablosunda anıldığını denetler).
 4. Bu dosyadaki tabloyu ve `CLAUDE.md` "Ajanlar" tablosunu güncelle (`cp CLAUDE.md AGENTS.md`).
 5. Bir ajanı kaldırmak: kaynak dosyasını sil, `python3 araclar/ajan-uret.py` üretilmiş dosyalarını da siler.

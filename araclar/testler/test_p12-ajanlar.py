@@ -174,14 +174,16 @@ if (KOK / "ajanlar").is_dir():
     h, _ = au.ajan_denetimi(KOK)
     t("9a gerçek kütüphane: ajan kaynağı ve üretilen dosyalar tutarlı", h == [], h)
     adlar = [ad for ad, *_ in au.kaynaklar(KOK)]
-    t("9b gerçek kütüphane: yedi ajan", adlar == ["kutuphane-denetci", "kutuphane-gelistirici", "kutuphane-guncelleme", "kutuphane-inceleme",
-                                              "kutuphane-kaynak", "kutuphane-program", "kutuphane-proje"], adlar)
+    # ajan sayısı sabit değil (rehber/15 bölüm 7 ile eklenip çıkarılabilir); temel ikisi ve ad biçimi şart
+    t("9b gerçek kütüphane: ajan adları biçime uyuyor, denetçi ve geliştirici var",
+      adlar and all(au.AD_DESENI.fullmatch(a) for a in adlar) and {"kutuphane-denetci", "kutuphane-gelistirici"} <= set(adlar), adlar)
     den = dict((ad, alan) for ad, alan, *_ in au.kaynaklar(KOK))["kutuphane-denetci"]
     t("9c denetçide dosya düzenleme aracı yok (Edit, Write)", "tools" in den and "Edit" not in den["tools"] and "Write" not in den["tools"], den)
     rehber = (KOK / "rehber" / "15-ajanlar.md").read_text(encoding="utf-8") if (KOK / "rehber" / "15-ajanlar.md").is_file() else ""
     t("9d rehber/15 her ajanı anıyor", all(f"`{a}`" in rehber for a in adlar))
     ana = (KOK / "CLAUDE.md").read_text(encoding="utf-8")
-    t("9e CLAUDE.md ajanlar maddesi rehbere ve kaynağa işaret ediyor", "rehber/15-ajanlar.md" in ana and "ajanlar/" in ana)
+    t("9e CLAUDE.md ajanlar maddesi rehbere ve kaynağa işaret ediyor, tabloda her ajan var",
+      "rehber/15-ajanlar.md" in ana and "ajanlar/" in ana and all(f"`{a}`" in ana for a in adlar), [a for a in adlar if f"`{a}`" not in ana])
 else:
     print("  BİLGİ: gerçek kütüphanede ajanlar/ yok; 9. grup atlandı")
 
