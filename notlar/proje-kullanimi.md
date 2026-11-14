@@ -5,8 +5,7 @@
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
-| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 18 (+9 bağ, 0 donmuş) | claude | tam | 2026-11-13 |
-| [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
+| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 19 (+9 bağ, 0 donmuş) | claude | tam | 2026-11-14 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
 | [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 25 (+3 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
 
@@ -14,6 +13,7 @@
 
 | Skill | Kaynak | Commit | Roller | Not |
 |---|---|---|---|---|
+| `antigravity-gorsel` | yerel/kendi | `01efd73` | — |  |
 | `captions-overlay` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `cut-the-curve` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `de-ai-ify` | heyitsnoah/claudesidian | `6c56f35` | — |  |
@@ -34,40 +34,6 @@
 | `yt-shorts` | Jakeschincariol/youtube-agent-skill | `a2feb21` | — |  |
 
 Programla gelen (bağ): `d3-viz` (openmontage), `hyperframes` (hyperframes), `hyperframes-cli` (hyperframes), `manim-composer` (openmontage), `manimce-best-practices` (openmontage), `media-use` (hyperframes), `pose-library-design` (openmontage), `svg-character-animation` (openmontage), `visual-style` (openmontage)
-
-## Etsy-Arif
-
-| Skill | Kaynak | Commit | Roller | Not |
-|---|---|---|---|---|
-| `accessibility-review` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `analyze` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `brand-review` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `campaign-plan` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `canvas-design` | anthropics/skills | `dbd4588` | — |  |
-| `competitive-brief` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `competitive-pricing-strategy` | nexscope-ai/eCommerce-Skills | `ee0fb29` | — |  |
-| `content-creation` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `design-critique` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `design-dna--kutuphane` (kimlik `design-dna`) | zanwei/design-dna | `593e39b` | — |  |
-| `draft-response` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `etsy-seller` | moiz-za/etsy-seller-seo-system | `0204bbc` | — |  |
-| `etsy-seo` | nexscope-ai/eCommerce-Skills | `ee0fb29` | — |  |
-| `ffmpeg` | OpenMontageInc/OpenMontage | `c806645` | — |  |
-| `impeccable` | pbakaus/impeccable | `e89e3ad` | — |  |
-| `knowledge-synthesis` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `performance-report` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `planning-and-task-breakdown` | addyosmani/agent-skills | `aeac41d` | — |  |
-| `playwright-recording` | OpenMontageInc/OpenMontage | `c806645` | — |  |
-| `product-brainstorming` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `search-strategy` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `seo-audit` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `session-report` | anthropics/claude-plugins-official | `af59ee3` | — |  |
-| `statistical-analysis` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
-| `ui-ux-pro-max` | nextlevelbuilder/ui-ux-pro-max-skill | `3a13158` | — |  |
-| `video-edit` | OpenMontageInc/OpenMontage | `c806645` | — |  |
-| `webapp-testing` | anthropics/skills | `dbd4588` | — |  |
-
-Kütüphane dışı, elle kurulan: `copywriting`, `design-principles`, `frontend-design`, `graphify`, `humanizer`, `marketing-psychology`, `model-aware-image-prompt-engineer`, `research-synthesis`, `ux-copy`, `visual-qa`
 
 ## Etsy-Yeni
 
@@ -143,17 +109,12 @@ Programla gelen (bağ): `hyperframes` (hyperframes), `hyperframes-cli` (hyperfra
 
 | Skill | Projeler |
 |---|---|
-| `canvas-design` | Etsy-Arif, Etsy-Yeni |
 | `cut-the-curve` | Akil Disi Youtube Kanali, IstatistikYoutube |
-| `design-critique` | Etsy-Arif, IstatistikYoutube |
-| `design-dna` | Etsy-Arif, IstatistikYoutube |
 | `huashu-art-motion` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `motion-doctrine` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `openmontage` | Akil Disi Youtube Kanali, IstatistikYoutube |
-| `planning-and-task-breakdown` | Etsy-Arif, Etsy-Yeni |
 | `scientific-critical-thinking` | Akil Disi Youtube Kanali, IstatistikYoutube |
 | `seam-craft` | Akil Disi Youtube Kanali, IstatistikYoutube |
-| `statistical-analysis` | Etsy-Arif, IstatistikYoutube |
 | `validate-data` | Etsy-Yeni, IstatistikYoutube |
 | `verification-before-completion` | Etsy-Yeni, IstatistikYoutube |
 | `yt-package` | Akil Disi Youtube Kanali, IstatistikYoutube |
