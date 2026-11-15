@@ -10,6 +10,7 @@
 
 | Program | Tür | Karttaki | Kurulu | Son | Durum | Yerel değişiklik | Sabit sürümler |
 |---|---|---|---|---|---|---|---|
+| claude-code-video-toolkit | git-checkout | 01e85f4b | - | ? | bu bilgisayarda kurulu değil | - | - |
 | hyperframes | npm-global | 0.9.37 | 0.9.37 | 0.9.52 | YENİ SÜRÜM VAR | - | - |
 | nlm | uv-tool | 0.16.5 | 0.16.5 | 0.16.5 | güncel | - | - |
 | openmontage | git-checkout | fecb9a1e | fecb9a1e | fecb9a1e | güncel | 7 değişen, 5 izlenmeyen | 11/11 |

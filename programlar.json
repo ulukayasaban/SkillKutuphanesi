@@ -744,6 +744,138 @@
         },
         "kural": "Kurulacak sürümün PyPI wheel sha256'sı kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer PyPI'dakiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir). Sınır: kurulu dosyalardan wheel özeti yeniden üretilemez (uv wheel'i açıp kurar, wheel dosyası bırakmaz); bu yüzden denetim kurulu paketin bu dosyadan kurulduğunu kanıtlamaz, yalnız PyPI'ın o sürüm için verdiği özetin değişmediğini izler."
       }
+    },
+    "claude-code-video-toolkit": {
+      "ad": "claude-code-video-toolkit",
+      "repo": "digitalsamba/claude-code-video-toolkit",
+      "kopya": "yerinde",
+      "tur": "video üretim çalışma alanı (Python betikleri + uv ortamı, Remotion şablonları; git klonu)",
+      "lisans": "MIT",
+      "ucret": "kismen",
+      "ne_yapar": "Yapay zeka ajanıyla video üretim çalışma alanı: Remotion şablonları ve bileşenleri, tools/*.py betikleriyle seslendirme (ElevenLabs, Qwen3-TTS, 60db), müzik (ACE-Step), görsel (FLUX.2, Ideogram, Qwen görsel düzenleme), video klip (LTX-2), konuşan kafa, büyütme, filigran silme, altyazı, ses efekti arama, kalite denetimi ve YouTube yükleme; Playwright ile tarayıcı demosu kaydı. Ağır modeller kullanıcının kendi Modal ya da RunPod hesabına kurulan uç noktalarda çalışır. Yerel araçlar (ffmpeg, moviepy, Remotion, Blender) ücretsizdir; bulut GPU, ElevenLabs, Ideogram ve 60db ücretlidir ya da hesap ister. Kullanıcının video projeleri klonun içinde (projects/, jobs/, kits/) durur.",
+      "yerinde": {"tur": "git-checkout", "yol": "~/claude-code-video-toolkit", "dal": "main"},
+      "kutuphane_commit": "01e85f4bbf5b3edffc7f8138406f3acc1dc43c66",
+      "surum_kaynagi": "GitHub: digitalsamba/claude-code-video-toolkit, dal main (commit karşılaştırması); sürüm etiketleri vX.Y.Z (2026-11-15: v0.29.1, kayıtlı commit etiketin 4 commit ilerisinde; pyproject.toml version 0.29.1)",
+      "kurulu_degil_notu": "2026-11-15: bu bilgisayarda klon yok (~/claude-code-video-toolkit, ~/.video-toolkit, ~/Documents altı ve ev klasöründeki git klonları bakıldı; VIDEO_TOOLKIT_ROOT tanımlı değil). Kart yalnız kayıt ve izleme içindir; kurulum kullanıcının ayrı onayıyla yapılır. kutuphane_commit kurulacak onaylı commit'tir (kaynak kaydının onay commit'i ile aynı).",
+      "veri_yeri": "Program, uv ortamı (.venv) ve kullanıcı işleri toolkit kökünde: ~/claude-code-video-toolkit (VIDEO_TOOLKIT_ROOT ile değişir). Kökte .env (API anahtarları ve uç nokta adresleri; kurulum betikleri uç nokta kimliklerini buraya yazar), _internal/.youtube (YouTube OAuth jetonları), projects/ (video projeleri), jobs/ (iş durumu ve çıktılar), kits/ (kişilerin foto ve sesleri), assets/voices (ses örnekleri), logs/ (harcama günlüğü media-spend.log). ProPainter (filigran silme) yalnız --install ya da y/N onayıyla ~/.video-toolkit/propainter altına kurulur (~2 GB model). Modal kurulumu ~/.modal.toml yazar. İçerikleri okunup yazdırılmaz.",
+      "ag": "Seçilen araca göre: Modal (modal.run uç noktaları, modal deploy), RunPod (api.runpod.io, api.runpod.ai), ElevenLabs, Ideogram (api.ideogram.ai), 60db (api.60db.ai), ACE-Step (api.acemusic.ai), Openverse (ses efekti arama), Hugging Face (Modal kurulumunda model), Cloudflare R2 (boto3, S3/AWS uyumlu API), YouTube Data API ve Google OAuth (yükleme, istatistik), GitHub (ProPainter klonu). R2 yapılandırılmamışsa bulut GPU işleri kullanıcının medyasını herkese açık geçici sunuculara yükler: litterbox.catbox.moe (24 saat) ve 0x0.st (30 gün). Kurulumda uv/PyPI ve npm indirmeleri; scripts/check_versions.py npm ve GitHub'a sorar. Telemetri koduna rastlanmadı.",
+      "kendini_gunceller": false,
+      "kendini_guncelleme": {
+        "nasil": "Kendini güncellemez. /versions komutu (Claude komutu) sürüm farkını raporlar ve yükseltme için git pull origin main ile npm install önerir; bunları ajan çalıştırır, program kendiliğinden yapmaz. dewatermark.py --install ProPainter klonu zaten varsa onun içinde git pull çalıştırır (toolkit'i değil, ~/.video-toolkit/propainter'i günceller).",
+        "durduran": "yok (otomatik güncelleme yok; korunma /versions ve dewatermark --install önerilerinin onaysız uygulanmamasıyla sağlanır)",
+        "simdi": "Kurulu değil; 2026-11-15 kaynak okuması (01e85f4b)"
+      },
+      "skill_yazimi": {
+        "yazar": "`uv run scripts/migrate_to_codex.py` (.claude/skills/* kopyalarını ve komut sarmalayıcı skilleri her zaman ~/.codex/skills altına yazar, --force üzerine yazar, --reset oradan siler; ayrıca kökteki AGENTS.md'de üretilmiş bölümü yeniler), `uv run scripts/migrate_to_kiro.py` (varsayılan ~/.kiro/skills; workspace seçeneğiyle kökteki .kiro/skills, ayrıca .kiro/steering). /skills komutu yeni skilleri toolkit kökünün .claude/skills klasörüne yazar (genel klasör değil).",
+        "yazmaz": "tools/*.py betikleri, uv sync, Remotion render, Modal/RunPod kurulum betikleri ve diğer Claude komutları genel skill klasörlerine yazmaz (kaynak okuması: Path.home kullanımı yalnız iki migrate betiğinde, ProPainter yolunda ve Blender aramasında).",
+        "klasorler": "~/.codex/skills (genel klasör, CLAUDE.md kural 1), ~/.kiro/skills (genel-bekci.py izlemiyor; bu bilgisayarda ~/.kiro yok)",
+        "durduran": "yok (kapatan ortam anahtarı ya da ayar yok; skill yalnız bu iki betik açıkça çalıştırılınca yazılır)",
+        "simdi": "Korunma iki betiğin hiç çalıştırılmamasıyla sağlanır (asla listesi). Skiller projeye kütüphane arşivinden (T2 kaynak kaydı) skill-ekle.py ile kopya olarak kurulur; kartta skill_koku yok (bağ verilmez)."
+      },
+      "skilleri": ["acestep", "blender", "elevenlabs", "ffmpeg", "ideogram4", "ltx2", "moviepy", "parody-short", "playwright-recording", "qwen-edit", "remotion", "runpod", "synthetic-ui-demo", "video-design", "video_toolkit", "youtube-stats"],
+      "guncelleme_adimlari": [
+        "program-denetim.py yeni commit'i ('YENİ SÜRÜM VAR', N geride) ya da kartın eskidiğini ('KART ESKİ') gösterir; program kurulu değilse 'bu bilgisayarda kurulu değil' yazar ve bir şey yapılmaz",
+        "python3 araclar/program-denetim.py --oncesi claude-code-video-toolkit çalıştırılır; 'KIRICI ADAYI' ya da 'kayıtsız yerel değişiklik' çıkarsa durulur: önce rehber/11 → 'Kırıcı sürüm' deneme adımları ayrı klasörde (yerel klon, ayrı uv ortamı, .env bağlanmaz) uygulanır",
+        "kullanıcıya kurulu → hedef commit (tam sha), sürüm etiketi farkı, _internal/CHANGELOG.md özeti, pyproject.toml/uv.lock farkı sunulur ve bu güncelleme için ayrıca onay istenir (her seferinde)",
+        "yedek: ~/Documents/Claude/yedek/claude-code-video-toolkit-<YYYY-AA-GG>/ altına yerel-yamalar.patch (git diff --binary), izlenmeyen-yollar.txt (git ls-files --others --exclude-standard, boyutlarıyla; projects/, jobs/, kits/ içeriği kopyalanmaz, yalnız listelenir) ve KAYIT.json; .env, _internal/.youtube ve ~/.modal.toml yedeğe konmaz; kütüphane klasörüne ve git'e asla",
+        "program-denetim.py --oncesi claude-code-video-toolkit tekrar çalıştırılır; 'HAZIR' demeden devam edilmez",
+        "onaydan sonra YALNIZ kütüphane oturumu: git -C ~/claude-code-video-toolkit fetch origin main, sonra git switch --detach <onaylı tam sha> (merge/rebase yok; yerel değişiklikle çakışırsa rehber/11 → 'Yerel yamalar (git klonu)' 2-3. adımlar). Ortam: uv sync --frozen (uv.lock'taki sürümler; --upgrade yok); extra gerekiyorsa adıyla (--extra modal vb.) kullanıcıya söylenerek. Şablonlarda npm install yalnız gereken klasörde, kullanıcıya gösterilerek",
+        "sonra yeniden denetim: program-denetim.py kurulu commit = hedef; genel skill klasörlerinde yeni girdi yok (genel-bekci.py); tools/verify_setup.py çıktısı kullanıcıya gösterilir; kart kutuphane_commit, KAYNAK.md ve tedarik_dogrulama.ozet.deger onaylı commit'e çekilir; arşivdeki skiller ayrıca kütüphanenin aylık güncellemesiyle izlenir; python3 araclar/program-denetim.py --sema --siki 0 hata, commit",
+        "yedek klasörü saklanır; silmek için kullanıcıya hatırlatılır ve sorulur"
+      ],
+      "asla": [
+        "scripts/migrate_to_codex.py ve scripts/migrate_to_kiro.py çalıştırılmaz (genel skill klasörlerine yazar, --reset siler; kapatan anahtar yok)",
+        ".env, _internal/.youtube ve ~/.modal.toml açılmaz, yazdırılmaz, yedeğe konmaz; anahtar ve uç nokta değerleri ajan tarafından girilmez",
+        "kullanıcı onayı olmadan kurulmaz, güncellenmez, sürüm değiştirilmez: git clone / fetch / pull / switch, uv sync, npm install, /versions yükseltme akışı ve --bump-toolkit yalnız kütüphane oturumunda ve ayrı onayla",
+        "uv sync --upgrade, pip install -U ve npx remotion upgrade onaysız çalıştırılmaz; uv'yi kurmak için önerilen curl | sh komutunu ajan çalıştırmaz (uv kurulumunu kullanıcı yapar)",
+        "modal setup, modal deploy, tools/modal_setup.py ve RunPod uç nokta kurulumu kullanıcının hesabında ücretli kaynak açar ve .env'e yazar: kullanıcı istemeden çalıştırılmaz",
+        "/contribute komutu (fork, git push, gh pr create) çalıştırılmaz: kütüphane kuralı 5 (yalnız ulukayasaban/SkillKutuphanesi); /publish ve tools/youtube_upload.py kullanıcının açık isteği ve onayı olmadan çalıştırılmaz (herkese açık içerik)",
+        "R2 yapılandırılmamışken bulut GPU araçlarına kullanıcının medyası kullanıcı bilmeden verilmez (litterbox ve 0x0.st'e herkese açık yüklenir); bu durum çalıştırmadan önce söylenir",
+        "dewatermark.py --install (ProPainter klonu, pip kurulumu, ~2 GB indirme) onaysız çalıştırılmaz; git reset --hard / git clean onaysız çalıştırılmaz"
+      ],
+      "giris_yolu": {
+        "kural": "Toolkit skill değil, git klonudur: skiller (kütüphane arşivinden projeye kurulan kopyalar) tools/*.py betiklerini toolkit kökünden uv run ile çalıştırır (VIDEO_TOOLKIT_ROOT, yoksa ~/claude-code-video-toolkit). Program kendi CLAUDE.md, AGENTS.md ve .claude/commands dosyalarını taşır.",
+        "kilavuz": "",
+        "calistirma": "cd ~/claude-code-video-toolkit && uv run tools/<araç>.py <seçenekler>   (her çağrıda önce cd; kurulu değilken çalışmaz)",
+        "karar": "Kurulu değil: kurulup kurulmayacağı, kök yolu (VIDEO_TOOLKIT_ROOT tanımlanacak mı) ve skillerin kopya mı bağ mı verileceği kullanıcı kararı bekliyor.",
+        "hepsi": {
+          "durum": "karar-bekliyor",
+          "yol": "",
+          "nasil": "Kurulursa: oturum toolkit kökünde açılır (CLAUDE.md, AGENTS.md orada) ya da projeye skill-ekle.py ile kurulan skiller kökü VIDEO_TOOLKIT_ROOT ile bulur. Kurulmadan bu skiller yalnız belge olarak okunur; tools/*.py adımları çalışmaz."
+        }
+      },
+      "kurulum": {
+        "on_kosullar": [
+          "git, uv (kullanıcı kurar), Python 3.12 (.python-version; uv kendisi indirir), Remotion şablonları için Node/npm, ffmpeg; blender skili için Blender",
+          "Diskte en az ~2 GB boş yer (repo ~60 MB; uv ortamı ve şablon node_modules ile büyür; --extra whisper torch çeker)",
+          "API anahtarları ve uç nokta adresleri toolkit kökündeki .env dosyasına kullanıcı tarafından konur (ajan açmaz, sormaz); Modal/RunPod hesapları kullanıcıya aittir"
+        ],
+        "adimlar": [
+          "Kullanıcıdan ayrı onay (kök yolu ve VIDEO_TOOLKIT_ROOT kararıyla birlikte)",
+          "git clone https://github.com/digitalsamba/claude-code-video-toolkit ~/claude-code-video-toolkit ; git -C ~/claude-code-video-toolkit switch --detach <kutuphane_commit>",
+          "cd ~/claude-code-video-toolkit && uv sync --frozen (yalnız çekirdek; extra'lar gerektiğinde adıyla ve onayla)",
+          "scripts/migrate_to_codex.py ve migrate_to_kiro.py çalıştırılmaz; skiller projeye kütüphaneden skill-ekle.py ile kurulur",
+          "Kök ~/claude-code-video-toolkit değilse VIDEO_TOOLKIT_ROOT gerekir: ajan kendiliğinden tanımlamaz, kullanıcı tanımlar ya da açıkça ister (kabuk dosyalarının yedeği önce)"
+        ],
+        "dogrulama": [
+          "python3 araclar/program-denetim.py: claude-code-video-toolkit kurulu commit = karttaki",
+          "cd ~/claude-code-video-toolkit && uv run tools/verify_setup.py (ağ ve anahtar gerektirmeyen denetim; çıktısı kullanıcıya gösterilir)",
+          "python3 araclar/genel-bekci.py: genel skill klasörlerinde yeni girdi yok"
+        ],
+        "yapma": ["scripts/migrate_to_codex.py / migrate_to_kiro.py", "uv sync --upgrade", "modal setup / modal deploy onaysız", ".env açma", "curl | sh ile uv kurulumu (kullanıcının işi)"]
+      },
+      "geri_alma": {
+        "ne_zaman": ["Güncelleme sonrası bir araç ya da şablon bozuk", "uv ortamı çözülemiyor", "Kullanıcı eski sürümü istedi"],
+        "adimlar": [
+          "Önceki commit yedekteki KAYIT.json → onceki.commit alanındadır",
+          "Kullanıcıdan geri alma için ayrı onay al",
+          "git -C ~/claude-code-video-toolkit switch --detach <onceki.commit>; git reset --hard ve git clean KULLANILMAZ (projects/, jobs/, kits/ ve yerel değişiklikler ezilmesin); çakışırsa yalnız o dosyada git checkout -- <yol>, switch, sonra git apply --3way --include=<yol> yerel-yamalar.patch",
+          "cd ~/claude-code-video-toolkit && uv sync --frozen (eski uv.lock'a göre)",
+          "Kart kutuphane_commit, KAYNAK.md ve tedarik_dogrulama.ozet.deger önceki commit'e çevrilir; commit"
+        ],
+        "dogrulama": ["program-denetim.py: kurulu commit = karttaki", "uv run tools/verify_setup.py hatasız"],
+        "sinir": "Yedekte yerel-yamalar.patch yoksa geri alma ve güncelleme yapılmaz. .env, OAuth jetonları, projects/, jobs/ ve kits/ yedeğe konmadığı için geri alma onları değiştirmez."
+      },
+      "cikarma": {
+        "makineden": [
+          "Kullanıcıdan ayrı onay; önce yedek (KAYIT.json + yerel-yamalar.patch + izlenmeyen-yollar.txt)",
+          "Projelere kurulu toolkit skilleri bozulmaz ama tools/*.py adımları çalışmaz olur: kullanıcıya söylenir (proje-kullanimi.py --skill <kimlik>)",
+          "~/claude-code-video-toolkit klasörü kullanıcı kararıyla taşınır ya da silinir (kalıcı silme için ayrıca onay; içinde kullanıcının projeleri olabilir)",
+          "~/.video-toolkit/propainter varsa ayrı sorulur"
+        ],
+        "dokunulmaz": ["toolkit kökündeki .env ve _internal/.youtube (anahtarlar ve jetonlar)", "projects/, jobs/, kits/, assets/voices (kullanıcının işleri ve kişisel medya)", "~/.modal.toml", "Modal ve RunPod hesabındaki uç noktalar (kullanıcı kendisi kaldırır)"]
+      },
+      "yedek": {"kok": "~/Documents/Claude/yedek", "tazelik_gun": 3, "zorunlu": ["KAYIT.json", "yerel-yamalar.patch", "izlenmeyen-yollar.txt"], "yasak_adlar": [".env", ".youtube", ".modal.toml"]},
+      "ortam_anahtarlari": [],
+      "gizli_dosyalar": ["~/claude-code-video-toolkit/.env", "~/claude-code-video-toolkit/_internal/.youtube", "~/.modal.toml"],
+      "disariya_yazar": [
+        {"yol": "~/claude-code-video-toolkit", "tur": "program", "ne": "git klonu, .venv, şablon node_modules; kullanıcı işleri projects/, jobs/, kits/, logs/", "yedeklenir": true, "dogrulandi": false},
+        {"yol": "~/claude-code-video-toolkit/.env", "tur": "anahtar", "ne": "API anahtarları ve uç nokta adresleri; kurulum betikleri yazar (açılmaz, kopyalanmaz)", "yedeklenir": false, "dogrulandi": false},
+        {"yol": "~/claude-code-video-toolkit/_internal/.youtube", "tur": "anahtar", "ne": "YouTube OAuth jeton önbelleği (açılmaz, kopyalanmaz)", "yedeklenir": false, "dogrulandi": false},
+        {"yol": "~/.video-toolkit/propainter", "tur": "program", "ne": "ProPainter klonu, venv ve ~2 GB model; yalnız --install ya da y/N onayıyla", "yedeklenir": false, "dogrulandi": false},
+        {"yol": "~/.modal.toml", "tur": "anahtar", "ne": "modal setup kimlik dosyası (açılmaz)", "yedeklenir": false, "dogrulandi": false},
+        {"yol": "~/.codex/skills", "tur": "skill", "ne": "yalnız scripts/migrate_to_codex.py çalışınca (asla listesi)", "yedeklenir": false, "dogrulandi": false},
+        {"yol": "~/.kiro/skills", "tur": "skill", "ne": "yalnız scripts/migrate_to_kiro.py çalışınca (asla listesi; genel-bekci izlemiyor)", "yedeklenir": false, "dogrulandi": false},
+        {"yol": "~/.cache/uv", "tur": "onbellek", "ne": "uv sync indirmeleri; ölçülmedi", "yedeklenir": false, "dogrulandi": false}
+      ],
+      "kirici_surum": {
+        "kural": "Aday sayılır: main dalı kurulu commit'ten 50'den fazla commit ileride, ya da yeni commit'ler izle_dosyalar'dan birini değiştiriyorsa, ya da yeni commit'ler kayıtlı bir yerel yama dosyasına dokunuyorsa. Sürüm etiketlerinde (0.x) minor değişimi de kırıcı sayılır; ajan _internal/CHANGELOG.md'yi okur.",
+        "esik_commit": 50,
+        "izle_dosyalar": ["pyproject.toml", "uv.lock", ".python-version", ".env.example", "_internal/toolkit-registry.json"],
+        "deneme_klasoru": "~/Documents/Claude/deneme/claude-code-video-toolkit-<hedef-ilk-8-hane>",
+        "deneme_disk_gb": 2,
+        "rehber": "rehber/11-program-yonetimi.md → Kırıcı sürüm"
+      },
+      "tedarik_dogrulama": {
+        "yayinci": {"hesap": "digitalsamba", "ucuncu_taraf": true, "imza": "git-commit", "not": "Digital Samba şirketinin açık kaynak reposu (MIT); git commit sha'sı kayıt değeridir."},
+        "ozet": {
+          "tur": "git-commit",
+          "deger": "01e85f4bbf5b3edffc7f8138406f3acc1dc43c66",
+          "ne_icin": "kurulacak onaylı commit (kaynaklar.json onay commit'i ve KAYNAK.md ile aynı)",
+          "kayit_tarihi": "2026-11-15"
+        },
+        "kural": "Onay commit'in tam sha'sıyla verilir; dal adıyla ('main') ya da yalnız etiketle verilmez."
+      }
     }
   }
 }
