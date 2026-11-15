@@ -1000,6 +1000,11 @@
       "karar": "eklendi",
       "neden": "Türkçe ajanla video kurgu metodolojisi (MIT); 2026-11-15 toplu video ekleme",
       "tarih": "2026-11-15"
+    },
+    "sirioberati/YouTube-AI-Video-Editing-System": {
+      "karar": "reddedildi",
+      "neden": "7 SKILL.md'nin tamamı boş placeholder şablonu (PLACEHOLDER - NOT CONFIGURED, tüm alanlar TODO); listede kalır",
+      "tarih": "2026-11-15"
     }
   },
   "konular": {
