@@ -136,7 +136,7 @@
     ],
     "ltx2": [
       "kismen",
-      "Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir"
+      "Açık model LTX-2.3 kullanıcının Modal hesabındaki uç noktada çalışır (aylık ücretsiz kota, fazlası ücretli); topluluk lisansı 10M$ altı gelirde ücretsiz"
     ],
     "comfyui": [
       "kismen",

@@ -189,7 +189,7 @@
 | `higgsfield-generate` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `higgsfield-marketplace-cards` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `higgsfield-product-photoshoot` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
-| `ltx2` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
+| `ltx2` | 03-ai-gorsel-video-modelleri | Açık model LTX-2.3 kullanıcının Modal hesabındaki uç noktada çalışır (aylık ücretsiz kota, fazlası ücretli); topluluk lisansı 10M$ altı gelirde ücretsiz |
 | `ltx2@openmontageinc` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
 | `qwen-edit` | 03-ai-gorsel-video-modelleri | Varsayılan Modal uç noktası (aylık ücretsiz kota), RunPod seçeneği ücretli; Qwen-Image-2.1 seçeneği ticari olmayan lisanslı |

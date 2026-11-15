@@ -2,7 +2,7 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **33/106**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **40/106**
 
 ### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -410,13 +410,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### moviepy  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
 
-- **Ne yapar:** Python video composition with moviepy 2.x — overlaying deterministic text on AI-generated video (LTX-2, SadTalker), compositing clips, single-file build.py video projects. Use when adding labels/captions/lower-thirds to LTX-2 or SadTalker outputs, building short ad-style spots in pure Python without Remotion, or doing programmatic video composition. Triggers include text overlay on video, label LT
-- **Teknoloji:** ffmpeg, node, python, react, remotion _(otomatik tespit)_
+- **Ne yapar:** moviepy 2.x ile Python'da video birleştirme: yapay zekanın ürettiği videonun (LTX-2, SadTalker) üstüne PIL ile çizilmiş, kesin okunur başlık, alt bant ve kaynak yazısı bindirme; 30 saniyenin altındaki reklam benzeri klipleri tek build.py'de kurma; matplotlib grafiklerini mp4'e çevirme. Metin doğruluğu şart olan türlerde (haber, fiyat, kaynak) yapay zekanın kare içi yazı üretmesi yerine bu yolu önerir.
+- **Ne zaman:** Videonun üstüne güvenilir (yazım hatası olmayan) metin, etiket, alt bant koymak; Node ve React olmadan kısa tek dosyalık video yapmak; veriyle çizilen grafik videosu. · **Ne zaman değil:** Uzun, çok sahneli, tasarım sistemi gerektiren işlerde Remotion ya da HyperFrames; tam altyazı (SRT) akışında ffmpeg subtitles filtresi. Örnek klasörler (examples/quick-spot, examples/data-viz-chart) toolkit'te olduğundan arşiv kopyasında bulunmaz; desenler kendi kendine yeter.
+- **Teknoloji:** python, ffmpeg · **Paketler:** moviepy, Pillow, matplotlib, ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ffmpeg-kurgu → tamamlayıcı · **Roller:** video-kurgu-render
 - **Boyut:** 13 KB (SKILL.md 12.8 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. 'Güvenilir metin' ilkesi (AI içi yazıyı değil PIL bindirmeyi kullan) pratik ve doğru; kod parçaları toolkit olmadan da çalışır (yalnız pip paketleri gerekir). Lisans MIT. Güvenlik: betik ya da ağdan indirme yok; yalnız uv sync/pip ile bağımlılık kurulumu. Sabit yol yok. Örtüşme: ffmpeg-kurgu grubuna tamamlayıcı; Remotion/HyperFrames ile aynı iş değil (kodla video motoru seçeneği).
 
 ### onetake  ·  feitangyuan/onetake @ abb6d17  ·  puan 72 (B)
 
@@ -453,13 +454,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### parody-short  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
 
-- **Ne yapar:** Comedy shorts about a group's own life - a team's launch, quarter end, office move or leaving do; a club's season; a class's year; a family's Christmas - or about a shared topic everyone recognises (video calls, the return to the office), told in a borrowed genre (80s action intro, creature feature, Dickens Christmas ad, heist, nature documentary) and starring the group's real, animated photos or 
-- **Teknoloji:** api-anahtari, git, python, remotion, typescript _(otomatik tespit)_
+- **Ne yapar:** Bir grubun kendi hayatından (ekip lansmanı, çeyrek sonu, taşınma, Noel) ya da herkesin bildiği bir konudan (görüntülü toplantı, ofise dönüş) hicivli kısa video yapma kılavuzu: gerçek yüzlerin canlandırılması, grubun kendi kanallarından iç şakaların toplanması, ödünç alınmış tür (80'ler aksiyon girişi, canavar filmi) eşlemesi, her tür için ayrı görünüm ve ses, kısa tutma kuralları. Yardımcı dosyalar: people.md, context.md, genres.md, formats.md.
+- **Ne zaman:** Toolkit kuruluysa bir ekip ya da topluluk için eğlenceli iç video (kişilerin fotoğrafları LTX ile canlandırılır, Remotion'da kurgulanır) ya da uydurma kadrolu halka açık hiciv. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Gerçek kişilerin fotoğrafı ve izni olmadan; halka açık yayında her kişinin yazılı izni olmadan; özel mesajlardan alıntı için. Ticari film/dizi karakterleri kullanılamaz (skill de uyarıyor). R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma
+- **Teknoloji:** remotion, typescript, node, modal, python, ffmpeg · **Paketler:** claude-code-video-toolkit, Modal hesabı, Hugging Face anahtarı (LTX), ACEMUSIC_API_KEY (ücretsiz)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** komedi-kisa-video → birincil · **Roller:** ai-medya-uretici, video-kompozisyon
 - **Boyut:** 32 KB (SKILL.md 9.9 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (niş, koşullu). Yaratıcı süreç ve güvenlik kuralları ('sevgi çizgidir', halka açıkta yazılı izin, telifli eser yok) düşünülmüş; ama tamamı toolkit bileşenlerine (LivingPhoto, ltx2, acestep, image_edit) bağlı ve ancak belirli bir kullanım durumunda gerekir. Lisans MIT. Güvenlik (dikkat): (1) gerçek kişilerin yüzleri bulut GPU'ya gider ve R2 yoksa halka açık geçici sunuculara yüklenir; (2) grubun kendi sohbet ve belgelerinden şaka toplamayı söyler: gizlilik riski, yalnız herkese açık kanallar (skill de DM'leri hariç tutar); (3) Modal kurulumu ve Hugging Face jetonu isteyen adımlar. Ücret: kismen. Örtüşme: remotion-cercevesi ya da diğer hiciv skillleriyle çakışmaz; kendi grubunun tek üyesi.
 
 ### pika-h3-flex  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 94 (A)
 
@@ -507,13 +509,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### remotion  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
 
-- **Ne yapar:** Toolkit-specific Remotion patterns — custom transitions, shared components, and project conventions. For core Remotion framework knowledge (hooks, animations, rendering, etc.), see the `remotion-official` skill.
-- **Teknoloji:** css, ffmpeg, node, remotion _(otomatik tespit)_
+- **Ne yapar:** Toolkit'e özgü Remotion desenleri: paylaşılan bileşenler (AnimatedBackground, SlideTransition, Label, Vignette, SplitScreen, NarratorPiP...), lib/transitions içindeki özel geçişler (glitch, rgbSplit, lightLeak, clockWipe...), proje kuralları ve ayrı bir hareket kılavuzu (motion-craft.md: süre, yavaşlama eğrisi, yay, okuma süresi, ritim ızgarası). Çekirdek Remotion bilgisi için remotion-official skiline gönderir.
+- **Ne zaman:** Toolkit şablonlarında (lib/components, lib/transitions) Remotion videosu yazarken; hareket sürelerini ve yavaşlama eğrisini seçerken (motion-craft.md bağımsız okunabilir). · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (bileşen ve geçiş içe aktarmaları ../../../../lib/ yollarına bağlı). Çekirdek Remotion API'si için remotion-best-practices; HyperFrames projesinde kullanma. Toolkit'siz Remotion projesinde yalnız motion-craft.md kısmı işe yarar.
+- **Teknoloji:** remotion, react, typescript · **Paketler:** remotion, @remotion/transitions, claude-code-video-toolkit (lib/)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** remotion-cercevesi → tamamlayıcı · **Roller:** video-kompozisyon
 - **Boyut:** 26 KB (SKILL.md 6.4 KB, yük kucuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (tamamlayıcı). Kısa (6 KB) ve odaklı; en değerli parçası motion-craft.md (bağımsız hareket ilkeleri, HyperFrames kılavuzlarından uyarlama). Bileşen ve geçiş yolları toolkit'e bağlı, skill çekirdek bilgiyi remotion-official skilline bırakıyor (o skill bu yan klasörde yok; kütüphanede karşılığı remotion-best-practices). yol_bagimliligi: true çünkü metin .claude/skills/remotion yollarına atıf yapıyor; yol-tara sabit kullanıcı yolu bulmadı (0 bulgu). Lisans MIT; Remotion'un kendisi şirketler için ticari lisans isteyebilir (ücret: kismen). Güvenlik: betik ya da ağ adımı yok, temiz. Örtüşme: remotion-cercevesi grubunda remotion-best-practices'in üstüne tamamlayıcı; OpenMontage remotion@openmontageinc alternatif.
 
 ### remotion-best-practices  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
 
@@ -872,13 +875,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### synthetic-ui-demo  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
 
-- **Ne yapar:** Product demo and release-notes videos with no screen recording. Rebuild the app's screens as static React from its source code, then drive them in Remotion with a scripted cursor and camera (lib/components Stage + Cursor). Use when making a product walkthrough, feature demo, release-notes or changelog video for an app whose source you can read, or when a Playwright recording would be flaky, need t
-- **Teknoloji:** canvas, css, ffmpeg, git, node, playwright, python, react, remotion, typescript _(otomatik tespit)_
+- **Ne yapar:** Ekran kaydı olmadan ürün tanıtım ve sürüm notu videosu: uygulamanın kaynak kodundan yalnızca sahnede görünen ekranlar statik React olarak yeniden kurulur, Remotion'da senaryolu imleç ve kamera (Stage + Cursor bileşenleri) bunları oynatır. Her tıklama bir kare numarasıdır, bu yüzden sahne her seferinde aynı çıkar ve ürün değişince kodu düzenleyerek güncellenir.
+- **Ne zaman:** Ürünün kaynağını okuyabildiğin, her sürümde yeniden yapılan sürüm notu / özellik turu videoları; canlı ortam ya da test verisi olmadan akış göstermek. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Yalnızca çalışan uygulaman varsa (kaynak yoksa) playwright-recording; tek seferlik gerçek veri yakalama; karmaşık uzun etkileşimler. Yapay zeka ile üretilen kişileri gösteren sahnelerde 'yapay zeka üretimi' notu koymayı unutma.
+- **Teknoloji:** remotion, react, typescript, node · **Paketler:** claude-code-video-toolkit (Stage, Cursor), Node, Remotion
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ekran-kaydi-demo → alternatif · **Roller:** video-kompozisyon
 - **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Tekrar edilebilir, deterministik demo fikri güçlü ve ayrıntılı anlatılmış (kare numaralı zaman çizelgesi, kamera, ses senkronu); ama toolkit'teki Stage/Cursor bileşenlerine ve örnek yapılara (examples/ds-*) dayanır, kendi başına çalışmaz. Lisans MIT; Remotion şirketler için ticari lisans isteyebilir; anlatıcı sesi ve konuşan kafa isteğe bağlı bulut GPU ya da ElevenLabs ister (ücret: kismen). Güvenlik: betik ya da veri gönderen adım yok; ürün deposunu okuduğu için gizli kod yapıştırmamaya dikkat. Sabit yol yok (yol-tara 0 bulgu, ../ yolları toolkit içi). Örtüşme: ekran-kaydi-demo grubunda playwright-recording birincil; synthetic-screen-recording (terminal odaklı) ile benzer fikir, bu daha geniş (tarayıcı arayüzü).
 
 ### tencent-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
@@ -912,13 +916,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### video-design  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
 
-- **Ne yapar:** Visual design for videos - colour by act, type scale, chart and layout rules for 16:9 and 9:16 scenes, a design.md handoff that any design skill can fill, and a contact-sheet critique of the render. Use when designing or refining how a video looks (title cards, data scenes, slides, a whole video's palette), when a scene looks generic or busy, when choosing colours for a video, or when /design or /
-- **Teknoloji:** ffmpeg, python, remotion, typescript _(otomatik tespit)_
+- **Ne yapar:** Videoya özgü görsel tasarım kuralları: renk perde (act) başına değişir, sahne başına değil; yazı ölçeği (5 boyut), tek veri vurgusu, 16:9 ve 9:16 yerleşimi, 'konudan çizilen zemin', design.md devir sözleşmesi ve çıktının temas şeridiyle (contact sheet) jüri gibi eleştirisi. Tasarım kaynağı (taste-skill, frontend-design) isteğe bağlıdır; varsayılan kendi paletleridir.
+- **Ne zaman:** Video sahnelerinin, başlık kartlarının, veri sahnelerinin ve paletin tasarlanması ya da 'yapay zeka yapmış gibi' görünen bir videonun düzeltilmesi; render sonrası eleştiri. · **Ne zaman değil:** Web sayfası tasarımı için (scroll, hover yok) ui-ux skilleri; HyperFrames için hyperframes ev stili kılavuzları (motion-doctrine). qc.py --layout ve contact_sheet.py gibi toolkit araçlarına atıf yapar, onlar yoksa eleştiri adımı elle yapılır.
+- **Teknoloji:** remotion, typescript · **Paketler:** (yalnız kural; ek paket yok), isteğe bağlı: taste-skill
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** video-tasarim-kurallari → birincil · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 25 KB (SKILL.md 8.7 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Videoyu izleme biçiminden çıkan somut, ölçülebilir kurallar (parlaklık farkı, iki satır başlık, tek vurgu) ve eleştiri ölçeği değerli; araçtan bağımsız okunabilir (5 dosya, 9 KB SKILL). Lisans MIT; palet ve eleştirinin bir kısmı taste-skill'den (Leonxlnx, MIT) uyarlanmış ve atıfı var. Güvenlik: betik ya da ağ adımı yok, temiz. Sabit yol yok. Ücret: ucretsiz. Örtüşme: yeni grup video-tasarim-kurallari; stil (gorsel-stil-sistemi) ve hyperframes ev stili skilleriyle konu komşusu ama farklı iş (tasarım kuralı, stil çıkarma değil).
 
 ### video-download  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 94 (A)
 
@@ -1008,13 +1013,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### video_toolkit  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
 
-- **Ne yapar:** Make short explainer videos from a brief with claude-code-video-toolkit — submit a scene spec, poll a job, get a QC-checked MP4. Also covers the individual tools (AI voiceover, images, clips, music, talking heads) for custom work.
-- **Teknoloji:** api-anahtari, canvas, ffmpeg, node, playwright, python, remotion, typescript _(otomatik tespit)_
+- **Ne yapar:** claude-code-video-toolkit'in giriş skili: kısa bir brifi sahne tanımına çevirir, video_job.py ile seslendirme, görsel, altyazı, derleme ve kalite denetimini sırayla yürütüp denetlenmiş bir MP4 üretir. Ayrıca tek tek araçları (yapay zeka sesi, görsel, klip, müzik, konuşan kafa, kesim, YouTube yükleme) hangi işte hangisinin seçileceğini gösteren bir yönlendirme tablosu sunar.
+- **Ne zaman:** Toolkit kuruluysa brifden tek istemle kısa açıklayıcı video (Shorts/Reels/16:9) üretmek; mevcut videoda ses, müzik, dikey kesim ya da altyazı değiştirmek; toolkit içindeki hangi şablon ve aracın uygun olduğuna karar vermek. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Aynı işi yapan OpenMontage (video-uretim-programi) ya da HyperFrames ile çalışırken kullanma. Proje kopyasında klasör adı video-toolkit olur: eski OpenMontage video-toolkit kopyasıyla aynı projeye birlikte kurma. R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma. Bulut GPU aracı yoksa (Modal/RunPod hesabı) iş akışı çalışmaz.
+- **Teknoloji:** remotion, python, node, ffmpeg, modal, runpod, api-anahtari, playwright · **Paketler:** claude-code-video-toolkit (uv sync), uv, ffmpeg, Node, Modal ya da RunPod hesabı
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** video-uretim-programi → alternatif · **Roller:** ai-medya-uretici, video-kurgu-render
 - **Boyut:** 35 KB (SKILL.md 34.7 KB, yük buyuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Toolkit'in tek giriş sayfası; iş akışı (tahmin → gönder → durum → sonuç, harcama defteri, kalite kapısı) iyi anlatılmış, 35 KB'lık büyük skill. Sınırı: toolkit kurulu olmadan hiçbir komutu çalışmaz; OpenMontage'a (birincil) yedek yoldur. Lisans MIT (toolkit); kullanılan modellerin ve çıktıların lisansı ayrıdır (LTX topluluk lisansı, Ideogram API ticari). Yol: skill yalnız göreli toolkit yollarını ve VIDEO_TOOLKIT_ROOT ortam değişkenini kullanır, sabit kullanıcı yolu yok (yol-tara 0 bulgu). Örtüşme: aynı işi yapan eski OpenMontage kopyası video-toolkit (kalite 2, SADECE ARŞİV, yine de durum tercih görünüyor, kaynak ajanına rapor) ile ve openmontage/hyperframes ile örtüşür; remotion-best-practices çekirdek Remotion bilgisidir, bu skill onun yerine geçmez. Güvenlik (dikkat): (1) klonlama ve uv sync, modal deploy, echo >> .env gibi kurulum ve anahtar yazma adımları; (2) R2 yoksa kullanıcının medyası litterbox.catbox.moe (24 saat) ve 0x0.st (30 gün) gibi halka açık geçici sunuculara yüklenir, linki bilen herkes görür; (3) dewatermark.py/locate_watermark.py ProPainter ile filigran siler (~2 GB model indirir): yalnız kendi içeriğinde kullan, başkasının filigranını kaldırmak telif ve LTX topluluk lisansındaki 'filigran ve köken özelliklerini kaldırma' yasağıyla çatışır; (4) youtube_upload.py Google OAuth ile video yükler (varsayılan gizli); (5) ses klonlama (--ref-audio) için kişinin izni gerekir. Ücret: kismen (Modal aylık ücretsiz kota, acemusic ve Openverse ücretsiz; ElevenLabs, Ideogram, RunPod ücretli).
 
 ### weibo-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
@@ -1069,13 +1075,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### youtube-stats  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
 
-- **Ne yapar:** How published videos are doing on YouTube, and what to learn from it. Views, likes, comments and subscribers per video, plus watch time, retention and traffic sources (Shorts feed, search, external) with the Analytics scope, saved as snapshots so trends show; GitHub traffic beside it to see whether YouTube sends people to the repo. Use when asked how a video or the channel is doing, which title, c
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Ne yapar:** Yayımlanmış YouTube videolarının performansını okur: izlenme, beğeni, yorum, abone; Analytics yetkisiyle izlenme süresi, tutma ve trafik kaynakları (Shorts akışı, arama, dış bağlantı). Her çalıştırmada anlık görüntü kaydeder, değişimi gösterir; GitHub trafiğini yan yana verir. Sonuçlardan bir sonraki Short için açılış kuralları çıkarır.
+- **Ne zaman:** Kanal ya da video performansını, başlık ve kapak kararlarını, Short'un akışta ne yaptığını ölçmek; toolkit ile YouTube'a yükleme yapıldıysa. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (youtube_stats.py ve youtube_upload.py ile önbelleğe alınmış OAuth jetonu gerekir). Başka kişinin kanalı için kullanılamaz (yalnız kendi hesabınla OAuth). Skill gövdesinde yazarın kendi kanalının bulguları ('ne işe yaradı' listesi) var; kendi verinle değiştir.
+- **Teknoloji:** python, api-anahtari · **Paketler:** uv (--extra youtube), Google Cloud OAuth istemcisi, YouTube Data + Analytics API
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** youtube-analitik → birincil · **Roller:** video-kurgu-render
 - **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (koşullu). Metrikleri yorumlama rehberi (Short'ta ortalama izlenme yüzdesi, trafik kaynağı okuması) yararlı; ama skill, toolkit'in araç ve jeton yapısına bağlı ve içinde yazarın kendi kanalına ait tarihli bulgular var (genel değil). Lisans MIT. Güvenlik (dikkat): hassas bir Google kapsamı (yt-analytics.readonly) ister, OAuth jetonu toolkit kökünde (_internal/.youtube) saklanır; --github seçeneği GitHub trafik verisini okur; veriyi dışarı göndermez. Ücret: ucretsiz (API kotası kullanıcının kendi Google projesinde, ücretsiz). Sabit yol yok. Örtüşme: yok (youtube-analitik grubunun tek üyesi).
 
 ### youtube-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 

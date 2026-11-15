@@ -33,8 +33,8 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
   gizler (`.claude/settings.json` → `skillOverrides`), böylece kütüphane sürümü kullanılır. Ön kontrol `hesap-cakismasi` der.
 
 ## Tablolar nasıl okunur?
-- **Ne yapar / Ne zaman:** elle incelenmiş 1248 skill'de inceleme notu; 4407 skill'de açıklamanın
-  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 15 skill'de henüz İngilizce.
+- **Ne yapar / Ne zaman:** elle incelenmiş 1262 skill'de inceleme notu; 4407 skill'de açıklamanın
+  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 1 skill'de henüz İngilizce.
 - **Puan:** 0–100 otomatik değerlendirme ve derece (A–D): kaynağın bakımı, GitHub güveni, yapı, inceleme notu.
 - **Not:** alternatif sürüm, ücretli/kısmen ücretli (`notlar/ucretli-skiller.md`), Codex uyumu, 🔥trend.
 - **Gizli katalog:** entegrasyon kataloğu (tek bir uygulama için hazır otomasyon) ve repo-içi (bir projenin kendi

@@ -2,17 +2,18 @@
 
 _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/20**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/20**
 
 ### blender  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
 
-- **Ne yapar:** 3D scenes, character acting and product shots from a shot spec, rendered in Blender, as a finished film, as clips for any other build (moviepy, a video job, an editor), or as elements of a Remotion video (transparent characters over a scene, a Remotion render on a 3D laptop, phone or floating card that the camera pulls back from, an imported 3D model on a studio stage). A rigged cartoon cast descr
-- **Teknoloji:** ffmpeg, node, python, remotion, typescript _(otomatik tespit)_
+- **Ne yapar:** Çekim tanımından (JSON shot spec) Blender'da 3D sahne, karakter oyunculuğu ve ürün çekimi üretir: tam film, başka yapılar için klipler (moviepy, video işi, kurgu programı) ya da Remotion içinde öğeler (şeffaf karakter, 3D dizüstü/telefon üzerinde ekran, kameranın geri çekildiği kart, içe aktarılan 3D model). JSON ile tarif edilen çizgi film kadrosu, sahneler, geometriyle doğrulanan kameralar ve harekete oturtulmuş ses olayları.
+- **Ne zaman:** Toolkit ve Blender 4.2+ kuruluysa 3D karakterli kısa film, ürün/arayüz 3D tanıtımı ve başka videoya gömülecek 3D klipler. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) ve Blender 4.2+. Basit 2D video için gereksiz ağır (karakterli film 2.2 sn/kare, 2-3 saatlik oturumlar). Kütüphanedeki 3d-asset-generation (varlık üretimi) ya da Three.js işleri için değil.
+- **Teknoloji:** blender, python, ffmpeg, remotion, node · **Paketler:** Blender 4.2+, claude-code-video-toolkit (tools/blender_render.py, lib/blender/), ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** 3d-sahne-render → birincil · **Roller:** 3d-gelistirici, motion-graphics-sanatcisi
 - **Boyut:** 48 KB (SKILL.md 47.5 KB, yük buyuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (koşullu). Çok ayrıntılı (47 KB): spec biçimi, kamera ve oyunculuk eylemleri, süre tahmini, çok oturumlu film süreci; çıktıların deterministik ve denetlenebilir olması güçlü. Boyut büyük (bağlam yükü büyük), Blender kurulu değilse kullanılamaz. Lisans MIT (toolkit); Blender GPL, içe aktarılan 3D modellerin lisansı ayrıca denetlenmeli. Açıklama 1068 karakterdi (Codex 1024 sınırı): aciklama_duzeltme ile 897'ye indirilmiş; skill dosyası değişmedi. Güvenlik: betik yok; Blender'ı ayrı sürece açan yerel render, dış ağ adımı yok. Ücret: ucretsiz (Blender ve toolkit kodu ücretsiz). Sabit yol yok. Örtüşme: yeni grup 3d-sahne-render (3d-varlik-uretimi ve Three.js grupları farklı iş).
 
 ### canvas-procedural-animation  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 85 (A)
 

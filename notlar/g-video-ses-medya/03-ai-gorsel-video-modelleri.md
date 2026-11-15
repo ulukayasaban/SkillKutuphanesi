@@ -2,7 +2,7 @@
 
 _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **22/27**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **26/27**
 
 ### 3d-asset-generation  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 94 (A)
 
@@ -181,13 +181,14 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 
 ### ideogram4  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
 
-- **Ne yapar:** Prompting patterns for Ideogram 4 text-to-image — best-in-class in-image text rendering and exact color/layout control via structured JSON captions. Use when generating images that need legible on-image text (title cards, thumbnails, logos, signage, CTAs), precise brand colors, or controlled spatial layout. Triggers include title slide image, thumbnail with text, on-image text, legible text in ima
-- **Teknoloji:** api-anahtari, python, remotion _(otomatik tespit)_
+- **Ne yapar:** Ideogram 4 metinden görsele üretiminde yapılandırılmış JSON başlıkla (json_prompt) en iyi sınıftan görsel içi yazı, tam renk paleti ve sınırlayıcı kutularla yerleşim denetimi. Kullanıcının gündelik isteğini modelin eğitildiği JSON başlığa genişleten 'sihirli istem' rehberi; örnekler ve istem desenleri ayrı dosyalarda.
+- **Ne zaman:** Okunur yazı gereken görseller: başlık kartı, küçük resim, logo, tabela, alıntı kartı; hex renk ve yerleşim denetimi; çok dilli yazı. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (tools/ideogram4.py) ve IDEOGRAM_API_KEY. Yazısız atmosferik arka plan ya da ticari lisanslı serbest ağırlık için FLUX; kendi barındırdığın ağırlıklar ticari olmayan lisanslıdır.
+- **Teknoloji:** api-anahtari, python · **Paketler:** IDEOGRAM_API_KEY, claude-code-video-toolkit (tools/ideogram4.py)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ai-gorsel-uretimi → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 22 KB (SKILL.md 7.4 KB, yük kucuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Yazılı görsel için güçlü ve somut kılavuz (JSON şeması, örnekler); istem deseni bölümü araçtan bağımsız yararlı. Ücretli: Ideogram barındırılan API'si görsel başına ücretli anahtar ister, ücretsiz yol yok (ucretli; rol çekirdeğine gerekçesiz alma). Lisans MIT (skill); ücretli API planı çıktıda ticari lisans verir, açık ağırlıklar ticari olmayan. Güvenlik: anahtar .env'de, istemler api.ideogram.ai'ye gider; betik indirmesi yok. ai-gorsel-uretimi grubunda flux-best-practices birincil; yazı gerektiren işte bu tercih edilir.
 
 ### kling-official  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 93 (A)
 
@@ -202,13 +203,14 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 
 ### ltx2  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
 
-- **Ne yapar:** AI video generation with LTX-2.3 22B — text-to-video, image-to-video clips for video production. Use when generating video clips, animating images, creating b-roll, animated backgrounds, or motion content. Triggers include video generation, animate image, b-roll, motion, video clip, text-to-video, image-to-video.
-- **Teknoloji:** api-anahtari, docker, ffmpeg, git, python, remotion _(otomatik tespit)_
+- **Ne yapar:** LTX-2.3 (22B) ile yaklaşık 5 saniyelik video klip üretimi: metinden videoya ve görselden videoya (fotoğrafı canlandırma); b-roll, hareketli arka plan. Kullanıcının Modal hesabındaki A100 uç noktasında çalışır (MODAL_LTX2_ENDPOINT_URL); çözünürlük, kare sayısı, hız modu ve tohum parametreleri; LTX-2.5 dağıtım sırasında isteğe bağlıdır.
+- **Ne zaman:** Toolkit kuruluysa ve Modal uç noktası dağıtıldıysa kısa AI b-roll, hareketli arka plan ya da bir fotoğrafı canlandırma. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) ve dağıtılmış Modal uç noktası. Okunur yazı gereken sahnede (model harfleri uydurur; yazıyı moviepy ile bindir). R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma (--input görseli bulut GPU'ya gider). Hazır servis tercih edilirse ai-video-gen.
+- **Teknoloji:** python, modal, api-anahtari · **Paketler:** claude-code-video-toolkit (tools/ltx2.py), Modal hesabı, Hugging Face anahtarı (LTX kapılı)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif · **Roller:** ai-medya-uretici
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Parametre tablosu, istem ve kötü istem örnekleri ve dağıtım adımları net; toolkit'e ve kendi Modal uç noktana bağlı. ai-video-uretimi grubunda ai-video-gen birincil; eski OpenMontage kopyası ltx2@openmontageinc alternatif. Ücret: kismen (Modal aylık ücretsiz kota, fazlası ücretli; klip başı ~0,10$). Lisans MIT (skill); LTX-2.x Topluluk Lisansı: 10M$ yıllık gelirin altında ücretsiz ticari kullanım, üstünde ticari lisans gerekir; filigran ve köken özelliklerini kaldırma. Güvenlik: modal deploy ve echo >> .env adımları, Hugging Face jetonu, R2 yoksa halka açık geçici sunucu (yukarıda); betik indirmesi yok.
 
 ### ltx2@openmontageinc  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 78 (B)
 
@@ -245,23 +247,25 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 
 ### qwen-edit  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
 
-- **Ne yapar:** AI image editing prompting patterns for Qwen-Image (Qwen-Image-Edit-2511 by default, Qwen-Image-2.1 as a non-commercial Modal opt-in). Use when editing photos while preserving identity, reframing cropped images, changing clothing or accessories, adjusting poses, applying style transfers, or character transformations. Provides prompt patterns, parameter tuning, and examples.
-- **Teknoloji:** canvas, docker, python _(otomatik tespit)_
+- **Ne yapar:** Qwen-Image ile yapay zeka görsel düzenleme istemi desenleri: kimliği koruyarak fotoğraf düzenleme, kırpılmış görseli yeniden çerçeveleme, kıyafet ve aksesuar değiştirme, poz ayarı, stil aktarımı, karakter dönüşümü. Varsayılan Qwen-Image-Edit-2511 (Apache-2.0, ticari kullanım serbest); Qwen-Image-2.1 ticari olmayan Modal seçeneğidir. Adımlar, kılavuz değeri, çoklu girdi ve RGBA ayrıntıları ayrı dosyalarda.
+- **Ne zaman:** Toolkit kuruluysa fotoğraf düzenleme ve karakter tutarlılığı (ör. aynı kişiyle farklı sahneler); parody-short için kadro hazırlama. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (tools/image_edit.py) ve Modal/RunPod uç noktası. R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma. Qwen-Image-2.1 seçeneğini ticari işte kullanma (Qwen Araştırma Lisansı).
+- **Teknoloji:** python, modal, runpod · **Paketler:** claude-code-video-toolkit (tools/image_edit.py), Modal ya da RunPod hesabı
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ai-gorsel-duzenleme → birincil · **Roller:** ai-medya-uretici
 - **Boyut:** 20 KB (SKILL.md 6.3 KB, yük kucuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (koşullu). Düzenleme istemleri, ölçülmüş parametreler (adım, kılavuz) ve örnekler değerli ve model sürümüne göre ayrılmış; ancak yazar 'öğrenmeler yazılmaya devam ediyor' diyor ve 2.1 için sayılar yeniden doğrulanmalı. Ücret: kismen (varsayılan Modal'da aylık ücretsiz kota; RunPod ücretli). Lisans MIT (skill); modeller: 2511 Apache-2.0, 2.1 ticari olmayan. Güvenlik: Modal deploy / RunPod kurulumu, anahtar .env'de; kişi fotoğrafları bulut GPU'ya gider ve R2 yoksa halka açık geçici sunucuya yüklenir (kimlik koruyan düzenleme gerçek kişi görüntüsüyle yapılıyorsa izin gerekir). Örtüşme: yeni grup ai-gorsel-duzenleme.
 
 ### runpod  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
 
-- **Ne yapar:** Cloud GPU processing via RunPod serverless. Use when setting up RunPod endpoints, deploying Docker images, managing GPU resources, troubleshooting endpoint issues, or understanding costs. Covers all 5 toolkit images (qwen-edit, realesrgan, propainter, sadtalker, qwen3-tts).
-- **Teknoloji:** api-anahtari, docker, python _(otomatik tespit)_
+- **Ne yapar:** RunPod sunucusuz bulut GPU kılavuzu: hesap ve API anahtarı, toolkit'in beş Docker imajını (qwen-edit, realesrgan, propainter, sadtalker, qwen3-tts) --setup ile şablon ve uç noktaya çevirme, uç nokta yönetimi, maliyet tabloları, sorun giderme ve Cloudflare R2 ile dosya aktarımı. Saniye başı ücretlendirme.
+- **Ne zaman:** Toolkit'in RunPod seçeneğini kurarken ya da uç nokta sorunlarını çözerken; maliyet tahmini. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Modal yolu kullanılıyorsa gerekmez (toolkit varsayılanı Modal). RunPod'un ücretsiz katmanı yoktur. R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma. Gizli ya da kişisel veriyi işleyen işlerde üçüncü taraf imajı kullanma.
+- **Teknoloji:** runpod, python, api-anahtari · **Paketler:** RUNPOD_API_KEY, claude-code-video-toolkit, isteğe bağlı: Cloudflare R2 + AWS CLI
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** bulut-gpu-calistirma → birincil
 - **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (yalnız toolkit ve RunPod kullanılacaksa; rol çekirdeğine alma). Ücretli: RunPod'da ücretsiz katman yok (ucretli). Lisans MIT. Güvenlik (dikkat): (1) uç noktalar üçüncü taraf Docker imajlarından kurulur (ghcr.io/conalmullan/video-toolkit-*:latest, 'latest' etiketi, sabit özet yok, sürüm sabitlenmemiş); imaj içeriği bu kütüphanede incelenmedi, GPU işçisi kullanıcının medyasını ve istemlerini işler; (2) R2 ayarlı değilse yüklemeler 'ücretsiz yükleme servislerine' (litterbox.catbox.moe 24 saat, 0x0.st 30 gün) gider, bağlantıyı bilen herkes görebilir; (3) RUNPOD_API_KEY ve uç nokta kimlikleri .env'e yazılır; (4) R2 için AWS gizli anahtarları ortam değişkeniyle geçilir. Sabit yol yok.
 
 ### seedance-2-0  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 100 (A)
 

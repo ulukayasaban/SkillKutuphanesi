@@ -2,17 +2,18 @@
 
 _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **16/32**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **18/32**
 
 ### acestep  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
 
-- **Ne yapar:** AI music generation with ACE-Step 1.5 — background music, vocal tracks, covers, stem extraction, audio repainting, and continuation for video production. Use when generating music, soundtracks, jingles, or working with audio stems. Triggers include background music, soundtrack, jingle, music generation, stem extraction, cover, style transfer, repaint, continuation, or musical composition tasks.
-- **Teknoloji:** api-anahtari, docker, ffmpeg, python, remotion _(otomatik tespit)_
+- **Ne yapar:** ACE-Step 1.5 ile yapay zeka müziği: arka plan müziği, sözlü parça, cover, enstrüman ayrıştırma (stem), ses onarma ve devam ettirme; tools/music_gen.py üstünden. Varsayılan acemusic bulut API'si (ücretsiz anahtar, GPU gerekmez); isteğe bağlı Modal ya da RunPod'da kendi barındırma. Sahne ön ayarları (corporate-bg, tension...), BPM ve tonalite denetimi, varyasyon üretip seçme.
+- **Ne zaman:** Video için telifsiz-benzeri üretilmiş arka plan müziği, jingle ya da şarkı; ücretsiz yol arandığında (acemusic anahtarı). · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Gerçek sanatçı ya da şarkı taklidi için; hazır stok müzik yeterliyse media-use; sorunsuz ticari lisans belgesi gerektiğinde acemusic ve model şartlarını ayrıca kontrol et.
+- **Teknoloji:** python, api-anahtari, modal, runpod · **Paketler:** claude-code-video-toolkit (tools/music_gen.py), ACEMUSIC_API_KEY (ücretsiz)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** muzik-uretimi → alternatif · **Roller:** ses-tasarimci
 - **Boyut:** 14 KB (SKILL.md 13.8 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Ücretsiz müzik yolu (acemusic anahtarı) ve ayrıntılı kullanım kılavuzu iyi; ancak toolkit'teki music_gen.py'ye bağlı. muzik-uretimi grubunda music (ElevenLabs, ücretli) birincil; bu ücretsiz seçenek. Eski OpenMontage kopyası acestep@openmontageinc yalnız RunPod yolunu kullanıyordu (ücretli), bu sürüm onun yerine geçer. Lisans MIT (toolkit); ACE-Step modeli ve acemusic bulut hizmetinin ticari kullanım şartlarını ayrıca doğrula. Güvenlik: echo >> .env ile anahtar yazma, modal deploy, istemler acemusic.ai'ya gider (üçüncü taraf bulut). Betik indirmesi yok. Ücret: kismen.
 
 ### acestep@openmontageinc  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 77 (B)
 
@@ -93,13 +94,14 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 
 ### elevenlabs  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
 
-- **Ne yapar:** Generate AI voiceovers, sound effects, and music using ElevenLabs APIs. Use when creating audio content for videos, podcasts, or games. Triggers include generating voiceovers, narration, dialogue, sound effects from descriptions, background music, soundtrack generation, voice cloning, or any audio synthesis task.
-- **Teknoloji:** api-anahtari, ffmpeg, python, react, remotion, typescript _(otomatik tespit)_
+- **Ne yapar:** ElevenLabs API'leriyle seslendirme, ses efekti ve müzik üretimi: model seçimi (multilingual_v2, v4, flash_v2_5), ses ayarları, SSML/duraklama ve telaffuz denetimi, ses klonlama, konuşmadan metne (scribe_v2), paylaşılan ses arama ve yinelemeli üretim akışı. Python SDK örnekleriyle doğrudan çalışır.
+- **Ne zaman:** Video, podcast ya da oyun için yapay zeka sesi, ses efekti, ses klonlama ve transkripsiyon; ELEVENLABS_API_KEY varsa. · **Ne zaman değil:** Tamamen ücretsiz yol için media-use (Kokoro) ya da Qwen3-TTS; sesli ajan için agents; kişinin izni olmadan ses klonlama. Toolkit araçlarına atıflar (voiceover.py, sfx.py) toolkit yoksa geçerli değil; SDK örnekleri toolkit'siz çalışır.
+- **Teknoloji:** elevenlabs, python, api-anahtari, ffmpeg · **Paketler:** elevenlabs, ELEVENLABS_API_KEY
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** tts-saglayici → birincil · **Roller:** ses-tasarimci
 - **Boyut:** 22 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. SDK tabanlı, toolkit olmadan da kullanılabilen tek toolkit skili; güncel model tablosu (v4, flash, kullanımdan kalkanlar), SSML sınırları ve kopyalanabilir örnekler iyi. Ücret: kismen (ücretsiz plan aylık sınırlı kota; fazlası ücretli). Lisans MIT; ses klonlamada kişi izni, üretilen sesin ticari kullanımı ElevenLabs plan şartlarına bağlı. Güvenlik: API anahtarı .env'de, istem ve ses verisi ElevenLabs'e gider; betik indirmesi yok. Örtüşme: tts-saglayici grubunda eski kopya elevenlabs@openmontageinc de birincil görünüyor ama durumu alternatif; çift birincil çözülmeli (kaynak ajanı/kullanıcı kararı), bu kayıt bare ad'ı devralan tercih sürümdür.
 
 ### elevenlabs@openmontageinc  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 100 (A)
 

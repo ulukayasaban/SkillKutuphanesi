@@ -346159,7 +346159,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -346174,7 +346174,35 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "Yerel MoviePy ve ffmpeg",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "moviepy 2.x ile Python'da video birleştirme: yapay zekanın ürettiği videonun (LTX-2, SadTalker) üstüne PIL ile çizilmiş, kesin okunur başlık, alt bant ve kaynak yazısı bindirme; 30 saniyenin altındaki reklam benzeri klipleri tek build.py'de kurma; matplotlib grafiklerini mp4'e çevirme. Metin doğruluğu şart olan türlerde (haber, fiyat, kaynak) yapay zekanın kare içi yazı üretmesi yerine bu yolu önerir.",
+      "kullanim_alani": "Videonun üstüne güvenilir (yazım hatası olmayan) metin, etiket, alt bant koymak; Node ve React olmadan kısa tek dosyalık video yapmak; veriyle çizilen grafik videosu.",
+      "kullanma": "Uzun, çok sahneli, tasarım sistemi gerektiren işlerde Remotion ya da HyperFrames; tam altyazı (SRT) akışında ffmpeg subtitles filtresi. Örnek klasörler (examples/quick-spot, examples/data-viz-chart) toolkit'te olduğundan arşiv kopyasında bulunmaz; desenler kendi kendine yeter.",
+      "teknoloji": [
+        "python",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "moviepy",
+        "Pillow",
+        "matplotlib",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. 'Güvenilir metin' ilkesi (AI içi yazıyı değil PIL bindirmeyi kullan) pratik ve doğru; kod parçaları toolkit olmadan da çalışır (yalnız pip paketleri gerekir). Lisans MIT. Güvenlik: betik ya da ağdan indirme yok; yalnız uv sync/pip ile bağımlılık kurulumu. Sabit yol yok. Örtüşme: ffmpeg-kurgu grubuna tamamlayıcı; Remotion/HyperFrames ile aynı iş değil (kodla video motoru seçeneği).",
+      "ortusme_grubu": "ffmpeg-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "onetake",
@@ -346750,7 +346778,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -346765,7 +346793,39 @@
       },
       "ucret": "kismen",
       "ucret_notu": "Görsel, klip ve ses kullanıcının Modal uç noktalarında (aylık ücretsiz kota, fazlası ücretli); müzik acemusic ücretsiz anahtarla",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Bir grubun kendi hayatından (ekip lansmanı, çeyrek sonu, taşınma, Noel) ya da herkesin bildiği bir konudan (görüntülü toplantı, ofise dönüş) hicivli kısa video yapma kılavuzu: gerçek yüzlerin canlandırılması, grubun kendi kanallarından iç şakaların toplanması, ödünç alınmış tür (80'ler aksiyon girişi, canavar filmi) eşlemesi, her tür için ayrı görünüm ve ses, kısa tutma kuralları. Yardımcı dosyalar: people.md, context.md, genres.md, formats.md.",
+      "kullanim_alani": "Toolkit kuruluysa bir ekip ya da topluluk için eğlenceli iç video (kişilerin fotoğrafları LTX ile canlandırılır, Remotion'da kurgulanır) ya da uydurma kadrolu halka açık hiciv.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Gerçek kişilerin fotoğrafı ve izni olmadan; halka açık yayında her kişinin yazılı izni olmadan; özel mesajlardan alıntı için. Ticari film/dizi karakterleri kullanılamaz (skill de uyarıyor). R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma",
+      "teknoloji": [
+        "remotion",
+        "typescript",
+        "node",
+        "modal",
+        "python",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "claude-code-video-toolkit",
+        "Modal hesabı",
+        "Hugging Face anahtarı (LTX)",
+        "ACEMUSIC_API_KEY (ücretsiz)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ai-medya-uretici",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (niş, koşullu). Yaratıcı süreç ve güvenlik kuralları ('sevgi çizgidir', halka açıkta yazılı izin, telifli eser yok) düşünülmüş; ama tamamı toolkit bileşenlerine (LivingPhoto, ltx2, acestep, image_edit) bağlı ve ancak belirli bir kullanım durumunda gerekir. Lisans MIT. Güvenlik (dikkat): (1) gerçek kişilerin yüzleri bulut GPU'ya gider ve R2 yoksa halka açık geçici sunuculara yüklenir; (2) grubun kendi sohbet ve belgelerinden şaka toplamayı söyler: gizlilik riski, yalnız herkese açık kanallar (skill de DM'leri hariç tutar); (3) Modal kurulumu ve Hugging Face jetonu isteyen adımlar. Ücret: kismen. Örtüşme: remotion-cercevesi ya da diğer hiciv skillleriyle çakışmaz; kendi grubunun tek üyesi.",
+      "ortusme_grubu": "komedi-kisa-video",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "pika-h3-flex",
@@ -347380,7 +347440,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -347395,7 +347455,34 @@
       },
       "ucret": "kismen",
       "ucret_notu": "Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Toolkit'e özgü Remotion desenleri: paylaşılan bileşenler (AnimatedBackground, SlideTransition, Label, Vignette, SplitScreen, NarratorPiP...), lib/transitions içindeki özel geçişler (glitch, rgbSplit, lightLeak, clockWipe...), proje kuralları ve ayrı bir hareket kılavuzu (motion-craft.md: süre, yavaşlama eğrisi, yay, okuma süresi, ritim ızgarası). Çekirdek Remotion bilgisi için remotion-official skiline gönderir.",
+      "kullanim_alani": "Toolkit şablonlarında (lib/components, lib/transitions) Remotion videosu yazarken; hareket sürelerini ve yavaşlama eğrisini seçerken (motion-craft.md bağımsız okunabilir).",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (bileşen ve geçiş içe aktarmaları ../../../../lib/ yollarına bağlı). Çekirdek Remotion API'si için remotion-best-practices; HyperFrames projesinde kullanma. Toolkit'siz Remotion projesinde yalnız motion-craft.md kısmı işe yarar.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "@remotion/transitions",
+        "claude-code-video-toolkit (lib/)"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Kısa (6 KB) ve odaklı; en değerli parçası motion-craft.md (bağımsız hareket ilkeleri, HyperFrames kılavuzlarından uyarlama). Bileşen ve geçiş yolları toolkit'e bağlı, skill çekirdek bilgiyi remotion-official skilline bırakıyor (o skill bu yan klasörde yok; kütüphanede karşılığı remotion-best-practices). yol_bagimliligi: true çünkü metin .claude/skills/remotion yollarına atıf yapıyor; yol-tara sabit kullanıcı yolu bulmadı (0 bulgu). Lisans MIT; Remotion'un kendisi şirketler için ticari lisans isteyebilir (ücret: kismen). Güvenlik: betik ya da ağ adımı yok, temiz. Örtüşme: remotion-cercevesi grubunda remotion-best-practices'in üstüne tamamlayıcı; OpenMontage remotion@openmontageinc alternatif.",
+      "ortusme_grubu": "remotion-cercevesi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "remotion-best-practices",
@@ -351748,7 +351835,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -351763,7 +351850,35 @@
       },
       "ucret": "kismen",
       "ucret_notu": "Remotion şablonu yerelde render edilir; anlatıcı sesi ve konuşan kafa isteğe bağlı bulut GPU ya da ElevenLabs ister; Remotion lisansı şirketler için ücretli olabilir",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Ekran kaydı olmadan ürün tanıtım ve sürüm notu videosu: uygulamanın kaynak kodundan yalnızca sahnede görünen ekranlar statik React olarak yeniden kurulur, Remotion'da senaryolu imleç ve kamera (Stage + Cursor bileşenleri) bunları oynatır. Her tıklama bir kare numarasıdır, bu yüzden sahne her seferinde aynı çıkar ve ürün değişince kodu düzenleyerek güncellenir.",
+      "kullanim_alani": "Ürünün kaynağını okuyabildiğin, her sürümde yeniden yapılan sürüm notu / özellik turu videoları; canlı ortam ya da test verisi olmadan akış göstermek.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Yalnızca çalışan uygulaman varsa (kaynak yoksa) playwright-recording; tek seferlik gerçek veri yakalama; karmaşık uzun etkileşimler. Yapay zeka ile üretilen kişileri gösteren sahnelerde 'yapay zeka üretimi' notu koymayı unutma.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "claude-code-video-toolkit (Stage, Cursor)",
+        "Node",
+        "Remotion"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Tekrar edilebilir, deterministik demo fikri güçlü ve ayrıntılı anlatılmış (kare numaralı zaman çizelgesi, kamera, ses senkronu); ama toolkit'teki Stage/Cursor bileşenlerine ve örnek yapılara (examples/ds-*) dayanır, kendi başına çalışmaz. Lisans MIT; Remotion şirketler için ticari lisans isteyebilir; anlatıcı sesi ve konuşan kafa isteğe bağlı bulut GPU ya da ElevenLabs ister (ücret: kismen). Güvenlik: betik ya da veri gönderen adım yok; ürün deposunu okuduğu için gizli kod yapıştırmamaya dikkat. Sabit yol yok (yol-tara 0 bulgu, ../ yolları toolkit içi). Örtüşme: ekran-kaydi-demo grubunda playwright-recording birincil; synthetic-screen-recording (terminal odaklı) ile benzer fikir, bu daha geniş (tarayıcı arayüzü).",
+      "ortusme_grubu": "ekran-kaydi-demo",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "tencent-upload",
@@ -352130,7 +352245,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -352145,7 +352260,34 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "Tasarım kuralları; ek servis gerekmez",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Videoya özgü görsel tasarım kuralları: renk perde (act) başına değişir, sahne başına değil; yazı ölçeği (5 boyut), tek veri vurgusu, 16:9 ve 9:16 yerleşimi, 'konudan çizilen zemin', design.md devir sözleşmesi ve çıktının temas şeridiyle (contact sheet) jüri gibi eleştirisi. Tasarım kaynağı (taste-skill, frontend-design) isteğe bağlıdır; varsayılan kendi paletleridir.",
+      "kullanim_alani": "Video sahnelerinin, başlık kartlarının, veri sahnelerinin ve paletin tasarlanması ya da 'yapay zeka yapmış gibi' görünen bir videonun düzeltilmesi; render sonrası eleştiri.",
+      "kullanma": "Web sayfası tasarımı için (scroll, hover yok) ui-ux skilleri; HyperFrames için hyperframes ev stili kılavuzları (motion-doctrine). qc.py --layout ve contact_sheet.py gibi toolkit araçlarına atıf yapar, onlar yoksa eleştiri adımı elle yapılır.",
+      "teknoloji": [
+        "remotion",
+        "typescript"
+      ],
+      "gerekli_paketler": [
+        "(yalnız kural; ek paket yok)",
+        "isteğe bağlı: taste-skill"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Videoyu izleme biçiminden çıkan somut, ölçülebilir kurallar (parlaklık farkı, iki satır başlık, tek vurgu) ve eleştiri ölçeği değerli; araçtan bağımsız okunabilir (5 dosya, 9 KB SKILL). Lisans MIT; palet ve eleştirinin bir kısmı taste-skill'den (Leonxlnx, MIT) uyarlanmış ve atıfı var. Güvenlik: betik ya da ağ adımı yok, temiz. Sabit yol yok. Ücret: ucretsiz. Örtüşme: yeni grup video-tasarim-kurallari; stil (gorsel-stil-sistemi) ve hyperframes ev stili skilleriyle konu komşusu ama farklı iş (tasarım kuralı, stil çıkarma değil).",
+      "ortusme_grubu": "video-tasarim-kurallari",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "video-download",
@@ -354216,7 +354358,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -354231,7 +354373,44 @@
       },
       "ucret": "kismen",
       "ucret_notu": "Açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası, müzik acemusic ücretsiz anahtarla, ses efekti Openverse ücretsiz; ElevenLabs, Ideogram ve RunPod seçenekleri ücretli",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "claude-code-video-toolkit'in giriş skili: kısa bir brifi sahne tanımına çevirir, video_job.py ile seslendirme, görsel, altyazı, derleme ve kalite denetimini sırayla yürütüp denetlenmiş bir MP4 üretir. Ayrıca tek tek araçları (yapay zeka sesi, görsel, klip, müzik, konuşan kafa, kesim, YouTube yükleme) hangi işte hangisinin seçileceğini gösteren bir yönlendirme tablosu sunar.",
+      "kullanim_alani": "Toolkit kuruluysa brifden tek istemle kısa açıklayıcı video (Shorts/Reels/16:9) üretmek; mevcut videoda ses, müzik, dikey kesim ya da altyazı değiştirmek; toolkit içindeki hangi şablon ve aracın uygun olduğuna karar vermek.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Aynı işi yapan OpenMontage (video-uretim-programi) ya da HyperFrames ile çalışırken kullanma. Proje kopyasında klasör adı video-toolkit olur: eski OpenMontage video-toolkit kopyasıyla aynı projeye birlikte kurma. R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma. Bulut GPU aracı yoksa (Modal/RunPod hesabı) iş akışı çalışmaz.",
+      "teknoloji": [
+        "remotion",
+        "python",
+        "node",
+        "ffmpeg",
+        "modal",
+        "runpod",
+        "api-anahtari",
+        "playwright"
+      ],
+      "gerekli_paketler": [
+        "claude-code-video-toolkit (uv sync)",
+        "uv",
+        "ffmpeg",
+        "Node",
+        "Modal ya da RunPod hesabı"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "egitim-explainer",
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "ai-medya-uretici",
+        "video-kurgu-render"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Toolkit'in tek giriş sayfası; iş akışı (tahmin → gönder → durum → sonuç, harcama defteri, kalite kapısı) iyi anlatılmış, 35 KB'lık büyük skill. Sınırı: toolkit kurulu olmadan hiçbir komutu çalışmaz; OpenMontage'a (birincil) yedek yoldur. Lisans MIT (toolkit); kullanılan modellerin ve çıktıların lisansı ayrıdır (LTX topluluk lisansı, Ideogram API ticari). Yol: skill yalnız göreli toolkit yollarını ve VIDEO_TOOLKIT_ROOT ortam değişkenini kullanır, sabit kullanıcı yolu yok (yol-tara 0 bulgu). Örtüşme: aynı işi yapan eski OpenMontage kopyası video-toolkit (kalite 2, SADECE ARŞİV, yine de durum tercih görünüyor, kaynak ajanına rapor) ile ve openmontage/hyperframes ile örtüşür; remotion-best-practices çekirdek Remotion bilgisidir, bu skill onun yerine geçmez. Güvenlik (dikkat): (1) klonlama ve uv sync, modal deploy, echo >> .env gibi kurulum ve anahtar yazma adımları; (2) R2 yoksa kullanıcının medyası litterbox.catbox.moe (24 saat) ve 0x0.st (30 gün) gibi halka açık geçici sunuculara yüklenir, linki bilen herkes görür; (3) dewatermark.py/locate_watermark.py ProPainter ile filigran siler (~2 GB model indirir): yalnız kendi içeriğinde kullan, başkasının filigranını kaldırmak telif ve LTX topluluk lisansındaki 'filigran ve köken özelliklerini kaldırma' yasağıyla çatışır; (4) youtube_upload.py Google OAuth ile video yükler (varsayılan gizli); (5) ses klonlama (--ref-audio) için kişinin izni gerekir. Ücret: kismen (Modal aylık ücretsiz kota, acemusic ve Openverse ücretsiz; ElevenLabs, Ideogram, RunPod ücretli).",
+      "ortusme_grubu": "video-uretim-programi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "weibo-upload",
@@ -354813,7 +354992,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -354828,7 +355007,32 @@
       },
       "ucret": "ucretsiz",
       "ucret_notu": "YouTube Data/Analytics API kullanıcının kendi Google OAuth istemcisiyle, ücretsiz",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Yayımlanmış YouTube videolarının performansını okur: izlenme, beğeni, yorum, abone; Analytics yetkisiyle izlenme süresi, tutma ve trafik kaynakları (Shorts akışı, arama, dış bağlantı). Her çalıştırmada anlık görüntü kaydeder, değişimi gösterir; GitHub trafiğini yan yana verir. Sonuçlardan bir sonraki Short için açılış kuralları çıkarır.",
+      "kullanim_alani": "Kanal ya da video performansını, başlık ve kapak kararlarını, Short'un akışta ne yaptığını ölçmek; toolkit ile YouTube'a yükleme yapıldıysa.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (youtube_stats.py ve youtube_upload.py ile önbelleğe alınmış OAuth jetonu gerekir). Başka kişinin kanalı için kullanılamaz (yalnız kendi hesabınla OAuth). Skill gövdesinde yazarın kendi kanalının bulguları ('ne işe yaradı' listesi) var; kendi verinle değiştir.",
+      "teknoloji": [
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "uv (--extra youtube)",
+        "Google Cloud OAuth istemcisi",
+        "YouTube Data + Analytics API"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (koşullu). Metrikleri yorumlama rehberi (Short'ta ortalama izlenme yüzdesi, trafik kaynağı okuması) yararlı; ama skill, toolkit'in araç ve jeton yapısına bağlı ve içinde yazarın kendi kanalına ait tarihli bulgular var (genel değil). Lisans MIT. Güvenlik (dikkat): hassas bir Google kapsamı (yt-analytics.readonly) ister, OAuth jetonu toolkit kökünde (_internal/.youtube) saklanır; --github seçeneği GitHub trafik verisini okur; veriyi dışarı göndermez. Ücret: ucretsiz (API kotası kullanıcının kendi Google projesinde, ücretsiz). Sabit yol yok. Örtüşme: yok (youtube-analitik grubunun tek üyesi).",
+      "ortusme_grubu": "youtube-analitik",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "youtube-upload",
@@ -355104,7 +355308,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -355119,7 +355323,35 @@
       },
       "ucret": "kismen",
       "ucret_notu": "Varsayılan yol acemusic bulut API'si, ücretsiz anahtarla çalışır; Modal'da kendi barındırma isteğe bağlı (aylık ücretsiz kota, fazlası ücretli)",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "ACE-Step 1.5 ile yapay zeka müziği: arka plan müziği, sözlü parça, cover, enstrüman ayrıştırma (stem), ses onarma ve devam ettirme; tools/music_gen.py üstünden. Varsayılan acemusic bulut API'si (ücretsiz anahtar, GPU gerekmez); isteğe bağlı Modal ya da RunPod'da kendi barındırma. Sahne ön ayarları (corporate-bg, tension...), BPM ve tonalite denetimi, varyasyon üretip seçme.",
+      "kullanim_alani": "Video için telifsiz-benzeri üretilmiş arka plan müziği, jingle ya da şarkı; ücretsiz yol arandığında (acemusic anahtarı).",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Gerçek sanatçı ya da şarkı taklidi için; hazır stok müzik yeterliyse media-use; sorunsuz ticari lisans belgesi gerektiğinde acemusic ve model şartlarını ayrıca kontrol et.",
+      "teknoloji": [
+        "python",
+        "api-anahtari",
+        "modal",
+        "runpod"
+      ],
+      "gerekli_paketler": [
+        "claude-code-video-toolkit (tools/music_gen.py)",
+        "ACEMUSIC_API_KEY (ücretsiz)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Ücretsiz müzik yolu (acemusic anahtarı) ve ayrıntılı kullanım kılavuzu iyi; ancak toolkit'teki music_gen.py'ye bağlı. muzik-uretimi grubunda music (ElevenLabs, ücretli) birincil; bu ücretsiz seçenek. Eski OpenMontage kopyası acestep@openmontageinc yalnız RunPod yolunu kullanıyordu (ücretli), bu sürüm onun yerine geçer. Lisans MIT (toolkit); ACE-Step modeli ve acemusic bulut hizmetinin ticari kullanım şartlarını ayrıca doğrula. Güvenlik: echo >> .env ile anahtar yazma, modal deploy, istemler acemusic.ai'ya gider (üçüncü taraf bulut). Betik indirmesi yok. Ücret: kismen.",
+      "ortusme_grubu": "muzik-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "acestep@openmontageinc",
@@ -356171,7 +356403,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -356186,7 +356418,36 @@
       },
       "ucret": "kismen",
       "ucret_notu": "ElevenLabs ücretsiz planı (aylık sınırlı kota) ile kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Kokoro)",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "ElevenLabs API'leriyle seslendirme, ses efekti ve müzik üretimi: model seçimi (multilingual_v2, v4, flash_v2_5), ses ayarları, SSML/duraklama ve telaffuz denetimi, ses klonlama, konuşmadan metne (scribe_v2), paylaşılan ses arama ve yinelemeli üretim akışı. Python SDK örnekleriyle doğrudan çalışır.",
+      "kullanim_alani": "Video, podcast ya da oyun için yapay zeka sesi, ses efekti, ses klonlama ve transkripsiyon; ELEVENLABS_API_KEY varsa.",
+      "kullanma": "Tamamen ücretsiz yol için media-use (Kokoro) ya da Qwen3-TTS; sesli ajan için agents; kişinin izni olmadan ses klonlama. Toolkit araçlarına atıflar (voiceover.py, sfx.py) toolkit yoksa geçerli değil; SDK örnekleri toolkit'siz çalışır.",
+      "teknoloji": [
+        "elevenlabs",
+        "python",
+        "api-anahtari",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "elevenlabs",
+        "ELEVENLABS_API_KEY"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "urun-tanitim-videosu",
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. SDK tabanlı, toolkit olmadan da kullanılabilen tek toolkit skili; güncel model tablosu (v4, flash, kullanımdan kalkanlar), SSML sınırları ve kopyalanabilir örnekler iyi. Ücret: kismen (ücretsiz plan aylık sınırlı kota; fazlası ücretli). Lisans MIT; ses klonlamada kişi izni, üretilen sesin ticari kullanımı ElevenLabs plan şartlarına bağlı. Güvenlik: API anahtarı .env'de, istem ve ses verisi ElevenLabs'e gider; betik indirmesi yok. Örtüşme: tts-saglayici grubunda eski kopya elevenlabs@openmontageinc de birincil görünüyor ama durumu alternatif; çift birincil çözülmeli (kaynak ajanı/kullanıcı kararı), bu kayıt bare ad'ı devralan tercih sürümdür.",
+      "ortusme_grubu": "tts-saglayici",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "elevenlabs@openmontageinc",
@@ -361082,7 +361343,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -361097,7 +361358,33 @@
       },
       "ucret": "ucretli",
       "ucret_notu": "Ideogram v4 barındırılan API: görsel başı ücretli API anahtarı gerekir",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Ideogram 4 metinden görsele üretiminde yapılandırılmış JSON başlıkla (json_prompt) en iyi sınıftan görsel içi yazı, tam renk paleti ve sınırlayıcı kutularla yerleşim denetimi. Kullanıcının gündelik isteğini modelin eğitildiği JSON başlığa genişleten 'sihirli istem' rehberi; örnekler ve istem desenleri ayrı dosyalarda.",
+      "kullanim_alani": "Okunur yazı gereken görseller: başlık kartı, küçük resim, logo, tabela, alıntı kartı; hex renk ve yerleşim denetimi; çok dilli yazı.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (tools/ideogram4.py) ve IDEOGRAM_API_KEY. Yazısız atmosferik arka plan ya da ticari lisanslı serbest ağırlık için FLUX; kendi barındırdığın ağırlıklar ticari olmayan lisanslıdır.",
+      "teknoloji": [
+        "api-anahtari",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "IDEOGRAM_API_KEY",
+        "claude-code-video-toolkit (tools/ideogram4.py)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "marka-sunum"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Yazılı görsel için güçlü ve somut kılavuz (JSON şeması, örnekler); istem deseni bölümü araçtan bağımsız yararlı. Ücretli: Ideogram barındırılan API'si görsel başına ücretli anahtar ister, ücretsiz yol yok (ucretli; rol çekirdeğine gerekçesiz alma). Lisans MIT (skill); ücretli API planı çıktıda ticari lisans verir, açık ağırlıklar ticari olmayan. Güvenlik: anahtar .env'de, istemler api.ideogram.ai'ye gider; betik indirmesi yok. ai-gorsel-uretimi grubunda flux-best-practices birincil; yazı gerektiren işte bu tercih edilir.",
+      "ortusme_grubu": "ai-gorsel-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "kling-official",
@@ -361322,7 +361609,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -361336,8 +361623,36 @@
         ]
       },
       "ucret": "kismen",
-      "ucret_notu": "Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir",
-      "ucret_kaynagi": "elle"
+      "ucret_notu": "Açık model LTX-2.3 kullanıcının Modal hesabındaki uç noktada çalışır (aylık ücretsiz kota, fazlası ücretli); topluluk lisansı 10M$ altı gelirde ücretsiz",
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "LTX-2.3 (22B) ile yaklaşık 5 saniyelik video klip üretimi: metinden videoya ve görselden videoya (fotoğrafı canlandırma); b-roll, hareketli arka plan. Kullanıcının Modal hesabındaki A100 uç noktasında çalışır (MODAL_LTX2_ENDPOINT_URL); çözünürlük, kare sayısı, hız modu ve tohum parametreleri; LTX-2.5 dağıtım sırasında isteğe bağlıdır.",
+      "kullanim_alani": "Toolkit kuruluysa ve Modal uç noktası dağıtıldıysa kısa AI b-roll, hareketli arka plan ya da bir fotoğrafı canlandırma.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) ve dağıtılmış Modal uç noktası. Okunur yazı gereken sahnede (model harfleri uydurur; yazıyı moviepy ile bindir). R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma (--input görseli bulut GPU'ya gider). Hazır servis tercih edilirse ai-video-gen.",
+      "teknoloji": [
+        "python",
+        "modal",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "claude-code-video-toolkit (tools/ltx2.py)",
+        "Modal hesabı",
+        "Hugging Face anahtarı (LTX kapılı)"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi",
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: ALTERNATİF. Parametre tablosu, istem ve kötü istem örnekleri ve dağıtım adımları net; toolkit'e ve kendi Modal uç noktana bağlı. ai-video-uretimi grubunda ai-video-gen birincil; eski OpenMontage kopyası ltx2@openmontageinc alternatif. Ücret: kismen (Modal aylık ücretsiz kota, fazlası ücretli; klip başı ~0,10$). Lisans MIT (skill); LTX-2.x Topluluk Lisansı: 10M$ yıllık gelirin altında ücretsiz ticari kullanım, üstünde ticari lisans gerekir; filigran ve köken özelliklerini kaldırma. Güvenlik: modal deploy ve echo >> .env adımları, Hugging Face jetonu, R2 yoksa halka açık geçici sunucu (yukarıda); betik indirmesi yok.",
+      "ortusme_grubu": "ai-video-uretimi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "ltx2@openmontageinc",
@@ -361844,7 +362159,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 87,
         "not": "A",
@@ -361859,7 +362174,34 @@
       },
       "ucret": "kismen",
       "ucret_notu": "Varsayılan Modal uç noktası (aylık ücretsiz kota), RunPod seçeneği ücretli; Qwen-Image-2.1 seçeneği ticari olmayan lisanslı",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Qwen-Image ile yapay zeka görsel düzenleme istemi desenleri: kimliği koruyarak fotoğraf düzenleme, kırpılmış görseli yeniden çerçeveleme, kıyafet ve aksesuar değiştirme, poz ayarı, stil aktarımı, karakter dönüşümü. Varsayılan Qwen-Image-Edit-2511 (Apache-2.0, ticari kullanım serbest); Qwen-Image-2.1 ticari olmayan Modal seçeneğidir. Adımlar, kılavuz değeri, çoklu girdi ve RGBA ayrıntıları ayrı dosyalarda.",
+      "kullanim_alani": "Toolkit kuruluysa fotoğraf düzenleme ve karakter tutarlılığı (ör. aynı kişiyle farklı sahneler); parody-short için kadro hazırlama.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (tools/image_edit.py) ve Modal/RunPod uç noktası. R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma. Qwen-Image-2.1 seçeneğini ticari işte kullanma (Qwen Araştırma Lisansı).",
+      "teknoloji": [
+        "python",
+        "modal",
+        "runpod"
+      ],
+      "gerekli_paketler": [
+        "claude-code-video-toolkit (tools/image_edit.py)",
+        "Modal ya da RunPod hesabı"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "ai-medya-uretici"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (koşullu). Düzenleme istemleri, ölçülmüş parametreler (adım, kılavuz) ve örnekler değerli ve model sürümüne göre ayrılmış; ancak yazar 'öğrenmeler yazılmaya devam ediyor' diyor ve 2.1 için sayılar yeniden doğrulanmalı. Ücret: kismen (varsayılan Modal'da aylık ücretsiz kota; RunPod ücretli). Lisans MIT (skill); modeller: 2511 Apache-2.0, 2.1 ticari olmayan. Güvenlik: Modal deploy / RunPod kurulumu, anahtar .env'de; kişi fotoğrafları bulut GPU'ya gider ve R2 yoksa halka açık geçici sunucuya yüklenir (kimlik koruyan düzenleme gerçek kişi görüntüsüyle yapılıyorsa izin gerekir). Örtüşme: yeni grup ai-gorsel-duzenleme.",
+      "ortusme_grubu": "ai-gorsel-duzenleme",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "runpod",
@@ -361941,7 +362283,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 85,
         "not": "A",
@@ -361956,7 +362298,31 @@
       },
       "ucret": "ucretli",
       "ucret_notu": "RunPod sunucusuz GPU: saniye başı ücretli, ücretsiz katman yok",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "RunPod sunucusuz bulut GPU kılavuzu: hesap ve API anahtarı, toolkit'in beş Docker imajını (qwen-edit, realesrgan, propainter, sadtalker, qwen3-tts) --setup ile şablon ve uç noktaya çevirme, uç nokta yönetimi, maliyet tabloları, sorun giderme ve Cloudflare R2 ile dosya aktarımı. Saniye başı ücretlendirme.",
+      "kullanim_alani": "Toolkit'in RunPod seçeneğini kurarken ya da uç nokta sorunlarını çözerken; maliyet tahmini.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Modal yolu kullanılıyorsa gerekmez (toolkit varsayılanı Modal). RunPod'un ücretsiz katmanı yoktur. R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma. Gizli ya da kişisel veriyi işleyen işlerde üçüncü taraf imajı kullanma.",
+      "teknoloji": [
+        "runpod",
+        "python",
+        "api-anahtari"
+      ],
+      "gerekli_paketler": [
+        "RUNPOD_API_KEY",
+        "claude-code-video-toolkit",
+        "isteğe bağlı: Cloudflare R2 + AWS CLI"
+      ],
+      "proje_tipleri": [
+        "ai-video-uretimi"
+      ],
+      "roller": [],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (yalnız toolkit ve RunPod kullanılacaksa; rol çekirdeğine alma). Ücretli: RunPod'da ücretsiz katman yok (ucretli). Lisans MIT. Güvenlik (dikkat): (1) uç noktalar üçüncü taraf Docker imajlarından kurulur (ghcr.io/conalmullan/video-toolkit-*:latest, 'latest' etiketi, sabit özet yok, sürüm sabitlenmemiş); imaj içeriği bu kütüphanede incelenmedi, GPU işçisi kullanıcının medyasını ve istemlerini işler; (2) R2 ayarlı değilse yüklemeler 'ücretsiz yükleme servislerine' (litterbox.catbox.moe 24 saat, 0x0.st 30 gün) gider, bağlantıyı bilen herkes görebilir; (3) RUNPOD_API_KEY ve uç nokta kimlikleri .env'e yazılır; (4) R2 için AWS gizli anahtarları ortam değişkeniyle geçilir. Sabit yol yok.",
+      "ortusme_grubu": "bulut-gpu-calistirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "seedance-2-0",
@@ -362442,7 +362808,7 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
         "puan": 80,
         "not": "A",
@@ -362463,7 +362829,38 @@
         "neden": "description çok uzun (1068 karakter > 1024, Codex yüklemez)",
         "skill_md_hash": "176ed3eae129304512ac47ea3589c99948467f02",
         "tarih": "2026-11-15"
-      }
+      },
+      "ozet_tr": "Çekim tanımından (JSON shot spec) Blender'da 3D sahne, karakter oyunculuğu ve ürün çekimi üretir: tam film, başka yapılar için klipler (moviepy, video işi, kurgu programı) ya da Remotion içinde öğeler (şeffaf karakter, 3D dizüstü/telefon üzerinde ekran, kameranın geri çekildiği kart, içe aktarılan 3D model). JSON ile tarif edilen çizgi film kadrosu, sahneler, geometriyle doğrulanan kameralar ve harekete oturtulmuş ses olayları.",
+      "kullanim_alani": "Toolkit ve Blender 4.2+ kuruluysa 3D karakterli kısa film, ürün/arayüz 3D tanıtımı ve başka videoya gömülecek 3D klipler.",
+      "kullanma": "toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) ve Blender 4.2+. Basit 2D video için gereksiz ağır (karakterli film 2.2 sn/kare, 2-3 saatlik oturumlar). Kütüphanedeki 3d-asset-generation (varlık üretimi) ya da Three.js işleri için değil.",
+      "teknoloji": [
+        "blender",
+        "python",
+        "ffmpeg",
+        "remotion",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "Blender 4.2+",
+        "claude-code-video-toolkit (tools/blender_render.py, lib/blender/)",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "3d-urun-sergisi",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "3d-gelistirici",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (koşullu). Çok ayrıntılı (47 KB): spec biçimi, kamera ve oyunculuk eylemleri, süre tahmini, çok oturumlu film süreci; çıktıların deterministik ve denetlenebilir olması güçlü. Boyut büyük (bağlam yükü büyük), Blender kurulu değilse kullanılamaz. Lisans MIT (toolkit); Blender GPL, içe aktarılan 3D modellerin lisansı ayrıca denetlenmeli. Açıklama 1068 karakterdi (Codex 1024 sınırı): aciklama_duzeltme ile 897'ye indirilmiş; skill dosyası değişmedi. Güvenlik: betik yok; Blender'ı ayrı sürece açan yerel render, dış ağ adımı yok. Ücret: ucretsiz (Blender ve toolkit kodu ücretsiz). Sabit yol yok. Örtüşme: yeni grup 3d-sahne-render (3d-varlik-uretimi ve Three.js grupları farklı iş).",
+      "ortusme_grubu": "3d-sahne-render",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "canvas-procedural-animation",
