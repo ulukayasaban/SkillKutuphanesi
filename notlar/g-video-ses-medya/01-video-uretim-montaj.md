@@ -2,7 +2,7 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **40/113**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **47/113**
 
 ### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -24,15 +24,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 16 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ajanla-video-kurgu  ·  avenoxai/avenox-video-kurgu-notlari @ dba60a2  ·  puan 76 (B)
+### ajanla-video-kurgu  ·  avenoxai/avenox-video-kurgu-notlari @ dba60a2  ·  puan 70 (B)
 
-- **Ne yapar:** Claude Code, Codex ya da başka bir kodlama ajanıyla slop çıkarmayan video kurgu hattı: ses ve Whisper transkripti, boşluk/tekrar kesimi, pano haritası, tek şef altında paralel ajanlar, dosya sözleşmesi ve teslim formu, kapılar (aynı hata iki kez olursa koda yaz), marka kilidi, dört parçalı prompt, görsel/video üretim maliyeti, render kuyruğu, kısa form kesit ve dikey motion. Tetikleyiciler: 'video
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** Kodlama ajanıyla (Claude Code, Codex vb.) 'slop' çıkarmayan video kurgu atölyesi düzeni: ses/transkript temizliği, boşluk ve tekrar kesimi, pano haritası, tek şef altında paralel ajanlar, dosya sözleşmesi ve teslim formu, 'aynı hata iki kez olursa koda yaz' kapıları, marka kilidi, dört parçalı prompt, görsel/video üretim maliyeti, render kuyruğu ve kısa form/dikey motion. Bir araç değil, yöntem; Türkçe.
+- **Ne zaman:** Ajanla çok adımlı video üretimi kurarken iş bölümü, kalite kapısı ve marka tutarlılığı için çerçeve; marka/atölye dosyalarını (atolye/atolye.md, marka.md) şablonlarla başlatmak. · **Ne zaman değil:** Doğrudan kesim/render komutları isteniyorsa araç skilleri (auto-editor, video-use, HyperFrames); küçük tek seferlik işte gereksiz ağır olur. Kaynak tek kişilik küçük bir repo (27 yıldız).
+- **Teknoloji:** metodoloji, whisper, hyperframes · **Paketler:** yok (yalnız .md; whisper/HyperFrames/görsel üretim araçları isteğe bağlı)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** avenoxai (kisi, ★27, son güncelleme 2026-11-06, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusmayla-kurgu → tamamlayıcı · **Roller:** video-kurgu-render, planlayici
 - **Boyut:** 38 KB (SKILL.md 7.1 KB, yük kucuk)
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (tamamlayıcı). Özgün ve uygulanabilir süreç fikirleri (tek şef, teslim formu, kapılar, sayı ver), ama kaynak küçük/yeni, kod ya da betik içermez ve bazı bölümler yazarın kendi araç/marka bağlamına özgü. Güvenlik: yalnız Markdown, betik/kurulum/ağ satırı, gizli anahtar istemi ya da genel klasöre yazma yok; ücretli görsel/video üretimini yalnız maliyet gerekçesiyle anlatır (isteğe bağlı). Örtüşme: video-use'un yöntem tarafını tamamlar.
 
 ### alipay-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
@@ -44,55 +45,60 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### auto-editor  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+### auto-editor  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 84 (A)
 
-- **Ne yapar:** Record a microphone or edit video/audio with the auto-editor CLI — cut out dead space (silence, motionlessness, black frames), set the pace, make manual cuts, and render the result. Use when someone wants to capture and trim a microphone, remove silence, shorten a recording, speed through quiet parts, or otherwise edit media with auto-editor.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** auto-editor komut satırı aracıyla video ve ses kurgusunun çekirdeği: sessizliği, hareketsizliği ya da siyah kareleri bulup keser; eşik, boşluk payı ve tempo ayarlar; el ile kesme ve hız aralıkları verir; mikrofondan kayıt alıp doğrudan düzenler. Önizleme (--preview) ve etiket (--edit:N / --when:N) sistemiyle birden çok kesim sınıfı tanımlanabilir.
+- **Ne zaman:** Konuşmalı videolardan, podcast ve ders kayıtlarından ölü anları otomatik atmak; kaydı kısaltmak; sesle ya da harekete göre kesim yapmak; mikrofonu kaydedip hemen kırpmak. · **Ne zaman değil:** Yaratıcı efekt, geçiş, editöre aktarma ya da konuşma metnine göre kesim için kardeş skiller (auto-editor-effects, -transitions, -export, -transcribe) gerekir; sahne/plan düzeyinde kurgu kararı için video-use gibi konuşmayla kurgu skilleri.
+- **Teknoloji:** auto-editor, ffmpeg · **Paketler:** auto-editor (CLI), ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** auto-editor-kurgu → birincil · **Roller:** video-kurgu-render
 - **Boyut:** 7 KB (SKILL.md 6.9 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (ailenin birincili). Ölçülü, doğru ve örneklerle dolu başvuru: yöntem tablosu, bool işleçleri, 'Bad kind' tuzağı, etiket sistemi. Lisans Unlicense. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.
 
-### auto-editor-effects  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+### auto-editor-effects  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 84 (A)
 
-- **Ne yapar:** Apply actions and animations to sections of a video/audio with auto-editor — change speed, duck or fade volume, de-ess, zoom/Ken Burns, rotate/spin, draw boxes, overlay logos or picture-in-picture, and animate any of these with ramps and easing. Use when someone wants creative effects or per-section behavior rather than plain silence-cutting.
-- **Teknoloji:** api-anahtari, canvas _(otomatik tespit)_
+- **Ne yapar:** auto-editor'da bölümlere eylem ve animasyon uygulama: hız (perde korunarak), ses kısma/çıkarma, de-esser, high/low-pass, hum temizleme, zoom/Ken Burns, döndürme, kutu çizme, logo ya da resim-içinde-resim bindirme; değerler 'a..b' rampası, easing ve zamanlı anahtar karelerle canlandırılır.
+- **Ne zaman:** Sessiz bölümleri hızlandırmak ya da kısmak, konuşmayı temizlemek (de-ess, rumble, hum), basit zoom ve fade animasyonları, logo ve PiP bindirmek; hepsini tek komutta, ayrı bir editör açmadan. · **Ne zaman değil:** Düz sessizlik kesimi için auto-editor; geçişler için auto-editor-transitions; çok katmanlı, tasarımlı kompozisyon için HyperFrames ya da Remotion.
+- **Teknoloji:** auto-editor, ffmpeg · **Paketler:** auto-editor (CLI), ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** auto-editor-kurgu → tamamlayıcı · **Roller:** video-kurgu-render
 - **Boyut:** 7 KB (SKILL.md 7.4 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Eylem tablosu ve rampa/easing sözdizimi eksiksiz. Not: otomatik etiket 'api-anahtari' yanlış pozitif; SKILL.md'deki `ease:` ('token' sözcüğü) API anahtarı istemez, API anahtarı gerekmiyor. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.
 
-### auto-editor-export  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+### auto-editor-export  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 84 (A)
 
-- **Ne yapar:** Export auto-editor's edit or microphone recording to a video editor (Premiere, DaVinci Resolve, Final Cut Pro, ShotCut, Kdenlive), to individual clips, or to auto-editor timeline files (.v1/.v2/.v3); and import timeline/XML files to render them. Use when someone wants an editor-ready project, a preserved microphone source, split clips, or timeline files instead of a finished video.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** auto-editor'ün kurgusunu bitmiş video yerine düzenleyici projesi olarak dışa aktarma: Premiere (XML), DaVinci Resolve, Final Cut Pro, ShotCut, Kdenlive, EDL, parça parça klipler ve .v1/.v2/.v3 zaman çizelgesi dosyaları; mikrofon kaydını kayıpsız (FLAC) yan dosyayla saklar; XML/EDL/FCPXML dosyalarını geri içe aktarıp render eder.
+- **Ne zaman:** Otomatik kesimi bir editörde elle inceleyip cilalamak; kesim noktalarından klip dizisi çıkarmak; bir zaman çizelgesini tekrar videoya çevirmek. · **Ne zaman değil:** Doğrudan bitmiş video isteniyorsa auto-editor yeterli; geçişlerin editöre taşınması için auto-editor-transitions ile birlikte okunmalı.
+- **Teknoloji:** auto-editor, ffmpeg · **Paketler:** auto-editor (CLI), ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** auto-editor-kurgu → tamamlayıcı · **Roller:** video-kurgu-render
 - **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Hedef biçim tablosu ve içe aktarma kapsamı net. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.
 
-### auto-editor-transcribe  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+### auto-editor-transcribe  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 84 (A)
 
-- **Ne yapar:** Transcribe a media file or live microphone to text or subtitles with auto-editor's whisper subcommand, then edit by spoken content — cut to keep (or drop) sections whose subtitles match a word or regex. Use when someone wants a transcript, captions, live speech transcription, or to cut a video based on what is said rather than on loudness.
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** auto-editor'ün whisper alt komutuyla ses/video ya da canlı mikrofonu metne ve altyazıya (SRT/JSON) çevirme; Whisper (ggml), Parakeet ve Apple Speech (macOS 26+) arka uçları. Çıkan altyazıya göre 'subtitle'/'word' yöntemiyle konuşulan söze bakarak kesme (ör. dolgu sözcüklerini atma) sağlar.
+- **Ne zaman:** Yerelde, API anahtarsız transkript ve altyazı üretmek; 'şu kelimenin geçtiği yeri tut/at' tarzı söze dayalı kesim. · **Ne zaman değil:** Kelime düzeyi hassas, çok konuşmacılı, ticari kalite transkript gerekirse bulut servisli skiller (ör. video-use + ElevenLabs Scribe); ggml model dosyası (HuggingFace'ten) önceden elle indirilmelidir.
+- **Teknoloji:** auto-editor, ffmpeg, whisper.cpp · **Paketler:** auto-editor (CLI), ffmpeg, ggml Whisper/Parakeet model dosyası (isteğe bağlı: Apple Speech)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** auto-editor-kurgu → tamamlayıcı · **Roller:** video-kurgu-render, ses-tasarimci
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Üç arka ucu ve sidecar .srt otomatik yüklemesini doğru anlatıyor. Ağ: yalnız model dosyası (kullanıcı HuggingFace'ten kendisi indirir) ve Apple modelinin ilk kullanımı; ses yerelde kalır. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.
 
-### auto-editor-transitions  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+### auto-editor-transitions  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 84 (A)
 
-- **Ne yapar:** Add transitions at auto-editor's cuts — cross-dissolves, Premiere Pro's transitions (push, clock-wipe, glitch, page-peel, iris-round, and the rest, including its Legacy folder), and audio crossfades — and carry them into Premiere, DaVinci Resolve, Final Cut Pro, Shotcut or Kdenlive. Use when someone wants smoother cuts, fades at the start and end, a particular transition, or transitions that survi
-- **Teknoloji:** - _(otomatik tespit)_
+- **Ne yapar:** auto-editor'ün kesim noktalarına geçiş ekleme: çapraz geçiş, Premiere Pro'nun bütün geçiş adları (push, clock-wipe, glitch, page-peel, iris-round vb.) ve ses çapraz solmaları; süre ve en kısa kesim eşiği ayarı; v3 zaman çizelgesinde kesim başına özel geçiş; geçişlerin hangi editör dışa aktarmalarında korunduğunu tablolar (premiere-otio'da hepsi).
+- **Ne zaman:** Konuşmalı videoda yumuşak kesimler, açılış/kapanış solması, belirli bir geçiş stili; geçişleri Premiere/Resolve/Final Cut'a taşımak. · **Ne zaman değil:** Yalnız sert kesim yeterliyse gerek yok; Premiere'in birebir görünümü için premiere-otio dışa aktarımı ve editörde render önerilir (auto-editor'ün kendi render'ı 'glitch' gibi etkilerde farklı olur).
+- **Teknoloji:** auto-editor, ffmpeg · **Paketler:** auto-editor (CLI), ffmpeg
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** auto-editor-kurgu → tamamlayıcı · **Roller:** video-kurgu-render
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Sınırları dürüstçe belirtiyor (hangi geçişin Premiere ile ölçüldüğü, editörde ne kaybolduğu). Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.
 
 ### baijiahao-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
@@ -1071,15 +1077,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 27 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Betiği skill klasöründe; yol skills/video-understand/... diye yazılmış, kurulumda skill yoluna göre çalıştırılmalı.
 
-### video-use  ·  browser-use/video-use @ 43cfc56  ·  puan 83 (A)
+### video-use  ·  browser-use/video-use @ 43cfc56  ·  puan 82 (A)
 
-- **Ne yapar:** Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles — for talking heads, montages, tutorials, travel, interviews. No presets, no menus. Ask questions, confirm the plan, execute, iterate, persist. Production-correctness rules are hard; everything else is artistic freedom.
-- **Teknoloji:** api-anahtari, css, ffmpeg, gsap, html, node, python, react, remotion _(otomatik tespit)_
+- **Ne yapar:** Konuşarak video kurgu: ElevenLabs Scribe ile kelime düzeyi transkript, kesim kararları (EDL), renk düzeltme, bindirme animasyonları (HyperFrames, Remotion, Manim ya da PIL), altyazı ve ses/müzik karışımı; render'dan sonra kendi çıktısını ölçüp doğrular. 12 maddelik 'sert kural' (altyazı en sonda, 30 ms ses solması, sözcüğün içinde kesmeme, transkript önbelleği) dışında yaratıcı özgürlük bırakır.
+- **Ne zaman:** Çok çekimli konuşmalı videolar, tanıtım ve eğitim klipleri, mülakat ve montajlar; planı önce düz Türkçe/İngilizce onaylatıp sonra uygulanacak iş akışı. · **Ne zaman değil:** Çevrimdışı ya da anahtarsız çalışılacaksa (transkript ElevenLabs'a gider); basit sessizlik kesimi için auto-editor; saf kodla video üretimi için HyperFrames/Remotion skilleri. Paralel animasyon alt-ajanları Claude Code'un Agent aracına dayanır (Codex'te o kısım çalışmaz).
+- **Teknoloji:** python, ffmpeg, elevenlabs, hyperframes, remotion, manim · **Paketler:** ffmpeg/ffprobe, requests, librosa, matplotlib, Pillow, numpy, ELEVENLABS_API_KEY, isteğe bağlı: yt-dlp, HyperFrames, Remotion, Manim
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** browser-use (kurum, ★31088, son güncelleme 2026-10-08, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusmayla-kurgu → birincil · **Roller:** video-kurgu-render, video-kompozisyon
 - **Boyut:** 205 KB (SKILL.md 25.5 KB, yük buyuk) · **Bağımlılık:** video-use skili ElevenLabs Scribe API'si ister (ELEVENLABS_API_KEY; ücretsiz kota var, yoğun kullanım ücretli) + ffmpeg/ffprobe + Python (requests, librosa, matplotlib, pillow, numpy). Animasyon için isteğe bağlı HyperFrames/Remotion/Manim/yt-dlp (ilk kullanımda npx --yes ile kurulur). Paralel animasyon alt-ajanları Claude Code'un Agent/alt-ajan aracına dayanır (Codex'te bu kısım çalışmaz; temel transkript/kesim/render çalışır). Kurulum kontrolleri SKILL.md 'Setup' bölümünde, bağımlılıklar pyproject.toml'da. install.md arşive alınmaz: global skill klasörüne (~/.claude/skills, ~/.codex/skills) symlink kurma talimatı verir (kural 1), oysa skill projeye skill-ekle.py ile kurulur.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Sert kurallar gerçek üretim hatalarından çıkmış, kendi çıktısını ölçme adımı güçlü; ama 25 KB'lık büyük bağlam, ücretli/kotalı ElevenLabs bağımlılığı ve ilk kullanımda npx --yes ile paket kurma var. Güvenlik (kendim doğruladım): dış bağlantı yalnız helpers/transcribe.py içinde api.elevenlabs.io/v1/speech-to-text'e (ses WAV'ı + ELEVENLABS_API_KEY) gönderim; başka requests/curl/socket yok, diğer yardımcılar yalnız ffmpeg/ffprobe alt süreci. SKILL.md ilk kullanımda npx --yes hyperframes / npx create-video (Remotion) / yt-dlp kurdurur, anahtarı yoksa kullanıcıdan isteyip repo kökündeki .env'e yazdırır (genel klasöre değil). Kısıtlama: install.md arşivde yok (global symlink talimatı). DİKKAT: ses verisi üçüncü tarafa gider; gizli içerikte bilinçli kullan. Ücret: kismen (Scribe ücretsiz kotası).
 
 ### video_toolkit  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
 

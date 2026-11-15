@@ -341898,22 +341898,50 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 76,
+        "puan": 70,
         "not": "B",
         "ayrinti": [
-          "bakım 25/25 (9 gün önce)",
+          "bakım 25/25 (10 gün önce)",
           "GitHub güveni 6/30 (güven 19 D, #119/126)",
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
       "ucret_notu": "Metodoloji skili (yalnız .md); Whisper yerelde ücretsiz. İsteğe bağlı görsel/video üretim istasyonları ücretli ama şart değil",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Kodlama ajanıyla (Claude Code, Codex vb.) 'slop' çıkarmayan video kurgu atölyesi düzeni: ses/transkript temizliği, boşluk ve tekrar kesimi, pano haritası, tek şef altında paralel ajanlar, dosya sözleşmesi ve teslim formu, 'aynı hata iki kez olursa koda yaz' kapıları, marka kilidi, dört parçalı prompt, görsel/video üretim maliyeti, render kuyruğu ve kısa form/dikey motion. Bir araç değil, yöntem; Türkçe.",
+      "kullanim_alani": "Ajanla çok adımlı video üretimi kurarken iş bölümü, kalite kapısı ve marka tutarlılığı için çerçeve; marka/atölye dosyalarını (atolye/atolye.md, marka.md) şablonlarla başlatmak.",
+      "kullanma": "Doğrudan kesim/render komutları isteniyorsa araç skilleri (auto-editor, video-use, HyperFrames); küçük tek seferlik işte gereksiz ağır olur. Kaynak tek kişilik küçük bir repo (27 yıldız).",
+      "teknoloji": [
+        "metodoloji",
+        "whisper",
+        "hyperframes"
+      ],
+      "gerekli_paketler": [
+        "yok (yalnız .md; whisper/HyperFrames/görsel üretim araçları isteğe bağlı)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "video-kurgu-render",
+        "planlayici"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Özgün ve uygulanabilir süreç fikirleri (tek şef, teslim formu, kapılar, sayı ver), ama kaynak küçük/yeni, kod ya da betik içermez ve bazı bölümler yazarın kendi araç/marka bağlamına özgü. Güvenlik: yalnız Markdown, betik/kurulum/ağ satırı, gizli anahtar istemi ya da genel klasöre yazma yok; ücretli görsel/video üretimini yalnız maliyet gerekçesiyle anlatır (isteğe bağlı). Örtüşme: video-use'un yöntem tarafını tamamlar.",
+      "ortusme_grubu": "konusmayla-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "alipay-upload",
@@ -342084,22 +342112,48 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
-          "bakım 25/25 (0 gün önce)",
+          "bakım 25/25 (1 gün önce)",
           "GitHub güveni 16/30 (güven 54 C, #61/126)",
           "lisans 15/15 (Unlicense)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
       "ucret_notu": "Açık kaynak auto-editor CLI + ffmpeg; yerel, ücretli API yok",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "auto-editor komut satırı aracıyla video ve ses kurgusunun çekirdeği: sessizliği, hareketsizliği ya da siyah kareleri bulup keser; eşik, boşluk payı ve tempo ayarlar; el ile kesme ve hız aralıkları verir; mikrofondan kayıt alıp doğrudan düzenler. Önizleme (--preview) ve etiket (--edit:N / --when:N) sistemiyle birden çok kesim sınıfı tanımlanabilir.",
+      "kullanim_alani": "Konuşmalı videolardan, podcast ve ders kayıtlarından ölü anları otomatik atmak; kaydı kısaltmak; sesle ya da harekete göre kesim yapmak; mikrofonu kaydedip hemen kırpmak.",
+      "kullanma": "Yaratıcı efekt, geçiş, editöre aktarma ya da konuşma metnine göre kesim için kardeş skiller (auto-editor-effects, -transitions, -export, -transcribe) gerekir; sahne/plan düzeyinde kurgu kararı için video-use gibi konuşmayla kurgu skilleri.",
+      "teknoloji": [
+        "auto-editor",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "auto-editor (CLI)",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (ailenin birincili). Ölçülü, doğru ve örneklerle dolu başvuru: yöntem tablosu, bool işleçleri, 'Bad kind' tuzağı, etiket sistemi. Lisans Unlicense. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.",
+      "ortusme_grubu": "auto-editor-kurgu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "auto-editor-effects",
@@ -342180,22 +342234,48 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
-          "bakım 25/25 (0 gün önce)",
+          "bakım 25/25 (1 gün önce)",
           "GitHub güveni 16/30 (güven 54 C, #61/126)",
           "lisans 15/15 (Unlicense)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
       "ucret_notu": "auto-editor CLI yerel; ücretli servis yok",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "auto-editor'da bölümlere eylem ve animasyon uygulama: hız (perde korunarak), ses kısma/çıkarma, de-esser, high/low-pass, hum temizleme, zoom/Ken Burns, döndürme, kutu çizme, logo ya da resim-içinde-resim bindirme; değerler 'a..b' rampası, easing ve zamanlı anahtar karelerle canlandırılır.",
+      "kullanim_alani": "Sessiz bölümleri hızlandırmak ya da kısmak, konuşmayı temizlemek (de-ess, rumble, hum), basit zoom ve fade animasyonları, logo ve PiP bindirmek; hepsini tek komutta, ayrı bir editör açmadan.",
+      "kullanma": "Düz sessizlik kesimi için auto-editor; geçişler için auto-editor-transitions; çok katmanlı, tasarımlı kompozisyon için HyperFrames ya da Remotion.",
+      "teknoloji": [
+        "auto-editor",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "auto-editor (CLI)",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Eylem tablosu ve rampa/easing sözdizimi eksiksiz. Not: otomatik etiket 'api-anahtari' yanlış pozitif; SKILL.md'deki `ease:` ('token' sözcüğü) API anahtarı istemez, API anahtarı gerekmiyor. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.",
+      "ortusme_grubu": "auto-editor-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "auto-editor-export",
@@ -342273,22 +342353,48 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
-          "bakım 25/25 (0 gün önce)",
+          "bakım 25/25 (1 gün önce)",
           "GitHub güveni 16/30 (güven 54 C, #61/126)",
           "lisans 15/15 (Unlicense)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
       "ucret_notu": "auto-editor CLI yerel; ücretli servis yok",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "auto-editor'ün kurgusunu bitmiş video yerine düzenleyici projesi olarak dışa aktarma: Premiere (XML), DaVinci Resolve, Final Cut Pro, ShotCut, Kdenlive, EDL, parça parça klipler ve .v1/.v2/.v3 zaman çizelgesi dosyaları; mikrofon kaydını kayıpsız (FLAC) yan dosyayla saklar; XML/EDL/FCPXML dosyalarını geri içe aktarıp render eder.",
+      "kullanim_alani": "Otomatik kesimi bir editörde elle inceleyip cilalamak; kesim noktalarından klip dizisi çıkarmak; bir zaman çizelgesini tekrar videoya çevirmek.",
+      "kullanma": "Doğrudan bitmiş video isteniyorsa auto-editor yeterli; geçişlerin editöre taşınması için auto-editor-transitions ile birlikte okunmalı.",
+      "teknoloji": [
+        "auto-editor",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "auto-editor (CLI)",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "kolay",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Hedef biçim tablosu ve içe aktarma kapsamı net. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.",
+      "ortusme_grubu": "auto-editor-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "auto-editor-transcribe",
@@ -342366,22 +342472,51 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
-          "bakım 25/25 (0 gün önce)",
+          "bakım 25/25 (1 gün önce)",
           "GitHub güveni 16/30 (güven 54 C, #61/126)",
           "lisans 15/15 (Unlicense)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
       "ucret_notu": "auto-editor whisper.cpp (yerel ggml model) ya da Apple Speech; ücretli API yok",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "auto-editor'ün whisper alt komutuyla ses/video ya da canlı mikrofonu metne ve altyazıya (SRT/JSON) çevirme; Whisper (ggml), Parakeet ve Apple Speech (macOS 26+) arka uçları. Çıkan altyazıya göre 'subtitle'/'word' yöntemiyle konuşulan söze bakarak kesme (ör. dolgu sözcüklerini atma) sağlar.",
+      "kullanim_alani": "Yerelde, API anahtarsız transkript ve altyazı üretmek; 'şu kelimenin geçtiği yeri tut/at' tarzı söze dayalı kesim.",
+      "kullanma": "Kelime düzeyi hassas, çok konuşmacılı, ticari kalite transkript gerekirse bulut servisli skiller (ör. video-use + ElevenLabs Scribe); ggml model dosyası (HuggingFace'ten) önceden elle indirilmelidir.",
+      "teknoloji": [
+        "auto-editor",
+        "ffmpeg",
+        "whisper.cpp"
+      ],
+      "gerekli_paketler": [
+        "auto-editor (CLI)",
+        "ffmpeg",
+        "ggml Whisper/Parakeet model dosyası (isteğe bağlı: Apple Speech)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render",
+        "ses-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Üç arka ucu ve sidecar .srt otomatik yüklemesini doğru anlatıyor. Ağ: yalnız model dosyası (kullanıcı HuggingFace'ten kendisi indirir) ve Apple modelinin ilk kullanımı; ses yerelde kalır. Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.",
+      "ortusme_grubu": "auto-editor-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "auto-editor-transitions",
@@ -342459,22 +342594,48 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
-          "bakım 25/25 (0 gün önce)",
+          "bakım 25/25 (1 gün önce)",
           "GitHub güveni 16/30 (güven 54 C, #61/126)",
           "lisans 15/15 (Unlicense)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
       "ucret_notu": "auto-editor CLI yerel; ücretli servis yok",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "auto-editor'ün kesim noktalarına geçiş ekleme: çapraz geçiş, Premiere Pro'nun bütün geçiş adları (push, clock-wipe, glitch, page-peel, iris-round vb.) ve ses çapraz solmaları; süre ve en kısa kesim eşiği ayarı; v3 zaman çizelgesinde kesim başına özel geçiş; geçişlerin hangi editör dışa aktarmalarında korunduğunu tablolar (premiere-otio'da hepsi).",
+      "kullanim_alani": "Konuşmalı videoda yumuşak kesimler, açılış/kapanış solması, belirli bir geçiş stili; geçişleri Premiere/Resolve/Final Cut'a taşımak.",
+      "kullanma": "Yalnız sert kesim yeterliyse gerek yok; Premiere'in birebir görünümü için premiere-otio dışa aktarımı ve editörde render önerilir (auto-editor'ün kendi render'ı 'glitch' gibi etkilerde farklı olur).",
+      "teknoloji": [
+        "auto-editor",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "auto-editor (CLI)",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Sınırları dürüstçe belirtiyor (hangi geçişin Premiere ile ölçüldüğü, editörde ne kaybolduğu). Güvenlik: betik ya da ağdan indirip çalıştıran satır yok, gizli anahtar istemiyor, genel klasöre yazmıyor; yalnız yerel auto-editor komutları. Sabit yol yok. Örtüşme: ffmpeg-kurgu ve video-edit ile aynı işi yerel CLI ile yapar; auto-editor ailesi kendi içinde birlikte kullanılır.",
+      "ortusme_grubu": "auto-editor-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "baijiahao-upload",
@@ -354931,22 +355092,60 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 83,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
-          "bakım 25/25 (38 gün önce)",
+          "bakım 25/25 (39 gün önce)",
           "GitHub güveni 18/30 (güven 60 C, #54/126)",
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 5/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
       "ucret_notu": "ElevenLabs Scribe ücretsiz kotasıyla kullanılabilir; yoğun transkript ücretli. ffmpeg/Manim/PIL yerel ve ücretsiz",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Konuşarak video kurgu: ElevenLabs Scribe ile kelime düzeyi transkript, kesim kararları (EDL), renk düzeltme, bindirme animasyonları (HyperFrames, Remotion, Manim ya da PIL), altyazı ve ses/müzik karışımı; render'dan sonra kendi çıktısını ölçüp doğrular. 12 maddelik 'sert kural' (altyazı en sonda, 30 ms ses solması, sözcüğün içinde kesmeme, transkript önbelleği) dışında yaratıcı özgürlük bırakır.",
+      "kullanim_alani": "Çok çekimli konuşmalı videolar, tanıtım ve eğitim klipleri, mülakat ve montajlar; planı önce düz Türkçe/İngilizce onaylatıp sonra uygulanacak iş akışı.",
+      "kullanma": "Çevrimdışı ya da anahtarsız çalışılacaksa (transkript ElevenLabs'a gider); basit sessizlik kesimi için auto-editor; saf kodla video üretimi için HyperFrames/Remotion skilleri. Paralel animasyon alt-ajanları Claude Code'un Agent aracına dayanır (Codex'te o kısım çalışmaz).",
+      "teknoloji": [
+        "python",
+        "ffmpeg",
+        "elevenlabs",
+        "hyperframes",
+        "remotion",
+        "manim"
+      ],
+      "gerekli_paketler": [
+        "ffmpeg/ffprobe",
+        "requests",
+        "librosa",
+        "matplotlib",
+        "Pillow",
+        "numpy",
+        "ELEVENLABS_API_KEY",
+        "isteğe bağlı: yt-dlp, HyperFrames, Remotion, Manim"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Sert kurallar gerçek üretim hatalarından çıkmış, kendi çıktısını ölçme adımı güçlü; ama 25 KB'lık büyük bağlam, ücretli/kotalı ElevenLabs bağımlılığı ve ilk kullanımda npx --yes ile paket kurma var. Güvenlik (kendim doğruladım): dış bağlantı yalnız helpers/transcribe.py içinde api.elevenlabs.io/v1/speech-to-text'e (ses WAV'ı + ELEVENLABS_API_KEY) gönderim; başka requests/curl/socket yok, diğer yardımcılar yalnız ffmpeg/ffprobe alt süreci. SKILL.md ilk kullanımda npx --yes hyperframes / npx create-video (Remotion) / yt-dlp kurdurur, anahtarı yoksa kullanıcıdan isteyip repo kökündeki .env'e yazdırır (genel klasöre değil). Kısıtlama: install.md arşivde yok (global symlink talimatı). DİKKAT: ses verisi üçüncü tarafa gider; gizli içerikte bilinçli kullan. Ücret: kismen (Scribe ücretsiz kotası).",
+      "ortusme_grubu": "konusmayla-kurgu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "video_toolkit",
@@ -364449,7 +364648,7 @@
       "gizli": false,
       "arsiv_tarihi": "2026-11-15",
       "ust_skill": "video-use",
-      "bagimlilik": "video-use skili ElevenLabs Scribe API'si ister (ELEVENLABS_API_KEY; ücretsiz kota var, yoğun kullanım ücretli) + ffmpeg/ffprobe + Python (requests, librosa, matplotlib, pillow, numpy). Animasyon için isteğe bağlı HyperFrames/Remotion/Manim/yt-dlp (ilk kullanımda npx --yes ile kurulur). Paralel animasyon alt-ajanları Claude Code'un Agent/alt-ajan aracına dayanır (Codex'te bu kısım çalışmaz; temel transkript/kesim/render çalışır). Kurulum kontrolleri SKILL.md 'Setup' bölümünde, bağımlılıklar pyproject.toml'da. install.md arşive alınmaz: global skill klasörüne (~/.claude/skills, ~/.codex/skills) symlink kurma talimatı verir (kural 1), oysa skill projeye skill-ekle.py ile kurulur.",
+      "bagimlilik": "Manim Community Edition (pip install manim; v0.20+), LaTeX (pdflatex; macOS: mactex), ffmpeg ve Python 3.10+. scripts/setup.sh bunları denetler (kurmaz). Anahtar, ağ ya da hesap gerekmez; isteğe bağlı sesli anlatım için manim-voiceover (ElevenLabs/gTTS/Azure/pyttsx3).",
       "kopya_kaynaklar": [],
       "ayna_sayisi": 0,
       "atlanan_dosyalar": [],
@@ -364513,22 +364712,54 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
       "degerlendirme": {
-        "puan": 86,
+        "puan": 84,
         "not": "A",
         "ayrinti": [
-          "bakım 25/25 (38 gün önce)",
+          "bakım 25/25 (39 gün önce)",
           "GitHub güveni 18/30 (güven 60 C, #54/126)",
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
       "ucret_notu": "Manim Community Edition açık kaynak; yerel render, ücretli servis yok",
-      "ucret_kaynagi": "elle"
+      "ucret_kaynagi": "elle",
+      "ozet_tr": "Manim Community Edition ile matematik ve teknik animasyon hattı: 3Blue1Brown tarzı kavram anlatımı, denklem türetme, algoritma görselleştirme, mimari diyagram, veri hikayesi, makale özeti ve 3B sahneler. PLAN (plan.md) → KOD (tek script.py, sahne başına sınıf) → RENDER → BİRLEŞTİR → isteğe bağlı SES → İNCELE akışı; geometri önce cebir sonra yaklaşımı ve referans belgeleri (denklemler, kamera/3B, grafikler, sorun giderme).",
+      "kullanim_alani": "Algoritma, matematik ve sistem mimarisi anlatan kısa eğitim videoları; sahne sahne planlı, kodla üretilen deterministik animasyonlar; arka plan ve tarayıcı gerektirmez.",
+      "kullanma": "Serbest biçimli tasarım/hareket grafiği için HyperFrames ya da Remotion; yalnız Manim API bilgisi isteniyorsa manimce-best-practices; fikri sahnelere dökmek için manim-composer. video-use içinde de aynı içerikli kopya vardır (ust_skill).",
+      "teknoloji": [
+        "manim",
+        "python",
+        "latex",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "manim (Community Edition 0.20+)",
+        "LaTeX (pdflatex; macOS: mactex)",
+        "ffmpeg",
+        "Python 3.10+",
+        "isteğe bağlı: manim-voiceover (ElevenLabs/gTTS/Azure/pyttsx3)"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı; manimce-best-practices API birincili, bu skill üretim hattı). Yaratıcı çıtası yüksek ve referansları geniş (13 belge). Güvenlik: betik tek dosya scripts/setup.sh ve yalnız komut varlığı kontrol eder (kurulum yapmaz); SKILL.md pip install manim / brew install mactex önerir (kullanıcı çalıştırır); ağdan indirip çalıştıran satır, gizli anahtar isteği ya da genel klasöre yazma yok. İsteğe bağlı TTS (ElevenLabs) metni üçüncü tarafa gönderir (yalnız o seçilirse). Ücret: ücretsiz; LaTeX kurulumu büyük (~GB).",
+      "ortusme_grubu": "manim-animasyon",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-15"
     },
     {
       "id": "manimce-best-practices",
