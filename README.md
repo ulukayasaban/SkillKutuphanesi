@@ -68,6 +68,8 @@ python3 araclar/skill-ekle.py ~/Projeler/site --dogrula                         
 | `notlar/proje-kullanimi.md` · `projeler.json` | Hangi proje hangi skili kullanıyor (proje bilgisinin tek yeri; `araclar/proje-kullanimi.py` üretir, elle notlar `projeler.json`) |
 | `notlar/populer-skiller.md` | GitHub'da popüler skill repoları (REST araması, adayda SKILL.md sayımı; `araclar/populer-tarama.py`) |
 | `konu-takip.json`, `notlar/konu-takip.md` | Konu takibi (aday repolar, değerlendirme kararları) |
+| `kendi/`, `site/` | Yerel kaynaklar: `kendi/` yalnız kullanıcının kendi yazdığı skiller (`yerel/kendi`, T7); `site/` web sitesinden alınan, GitHub'da olmayan skiller (`yerel/site`, T8; `site/README.md`, K-57) |
+| `site-takip.json`, `notlar/site-takip.md` | Site skillerinin zorunlu kaydı (sahip, lisans, site, izlenen adresler ve sha256) ve son site takibi raporu (rapor git dışı) |
 | `kategoriler.json`, `kategori-kurallari.json` | Alanlar/kategoriler ve otomatik atama kuralları |
 | `gelistiriciler.json`, `notlar/guven-siralamasi.md` | Agent için güven ve referans rehberi (karar kuralları, kategori → en güvenilir kaynak/skill, referans kütüphanesi → ilgili skiller); repo sahipleri ve GitHub güven puanı: yıldız, yıldız hızı, katkıcı, commit, fork, izleyici, sürüm; kaynaklar arası sıra ve derece (referans kütüphaneleri ayrı sıralı) |
 | `notlar/roller-ve-profiller.md` | Tüm rol ve profillerin özeti (otomatik üretilir) |
@@ -144,6 +146,7 @@ Yeni projelerde ve bakımda kopyala-yapıştır kullanılacak 16 prompt: [prompt
 | `katalog-uret.py` | KATALOG ve notları üretir |
 | `dogrula.py [--github]` | Tutarlılık; yıldızlı ama tanımsız repo |
 | `gelistirici-bilgisi.py` | Geliştirici bilgileri + GitHub güven puanı/sıralaması → `notlar/guven-siralamasi.md` |
+| `site-takip.py [--skill ad] [--yazmadan] [--indir] [--siki] [--kayit-denetle]` | Site skillerinin kaynak sitesi değişti mi (yalnız GET): AYNI / DEĞİŞTİ / YENİ İÇERİK / ERİŞİLEMEDİ → `notlar/site-takip.md`; `--indir` değişenleri kütüphane dışına indirir; skili güncellemez (rehber/03 B3) |
 | `konu-takip.py [--konu X] [--rapor] [--karar repo karar neden] [--bekleyenler]` | Takip edilen alanlarda (e-ticaret/Etsy, mobil…) GitHub'da yeni skill repolarını arar → `notlar/konu-takip.md`; değerlendirilenler tekrar gösterilmez |
 | `github-trend.py [--rapor] [--aday]` | GitHub Trending takibi: trend'e giren kaynaklar (değerlendirme +10/+6/+2, öneride öne alma), trend'deki aday skill repoları → `notlar/github-trend.md` |
 | `proje-kullanimi.py [--skill id] [--repo owner/ad]` · `--saglik` / `--tara-kayitsiz` / `--ekle` / `--cikar` / `--tasindi` / `--yoksay` | Projelerin `kilit.json` dosyalarını okur → `notlar/proje-kullanimi.md`; bir skili/kaynağı kullanan projeleri listeler (silmeden, tercih değiştirmeden önce); proje sağlığı → `notlar/proje-durumu.md`; proje ekle/çıkar/taşındı/yoksay (yalnız `projeler.json`) |

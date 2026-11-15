@@ -26,7 +26,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İyi yönlendirici; video_selector önerisi OpenMontage'a bağlı. Sıralama bilgileri tarihe duyarlı. · 2026-11-12 yeniden incelendi: içerik değişmedi (kaynak OpenMontageInc/OpenMontage fecb9a1'e taşındı), değerlendirme aynı.
 
-### antigravity-gorsel  ·  yerel/kendi @ 995183e  ·  puan 75 (B)
+### antigravity-gorsel  ·  yerel/kendi @ 3c8d08e  ·  puan 75 (B)
 
 - **Ne yapar:** Google Antigravity'nin komut satırı aracı (agy) üzerinden görsel üretir ve dosyayı istenen klasöre kaydeder. Kullanıcı "Antigravity ile resim üret", "antigravity'den görsel yap", "agy ile görsel", "Antigravity'ye bağlanıp ... resmi çiz" gibi bir şey dediğinde kullan. Antigravity adı geçmeyen genel görsel isteklerinde kullanma.
 - **Teknoloji:** - _(otomatik tespit)_

@@ -244,7 +244,7 @@ def main():
         say[s["repo"]] += 1
     gl = ["# Skill Geliştiricileri", "", "> `araclar/gelistirici-bilgisi.py` ile GitHub'dan alınır. Puanlama: `rehber/06-degerlendirme-ve-gelistirici.md`.", "",
           "| Repo | Sahip | Tip | Resmî | ★ | Katkıcı | Son güncelleme | Lisans | Arşivdeki skill |", "|---|---|---|---|---|---|---|---|---|"]
-    yerel_repolar = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] == "T7"}  # yerel kaynak: GitHub bağlantısı yok
+    yerel_repolar = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T7", "T8")}  # yerel kaynak (kendi/, site/): GitHub bağlantısı yok
     for r, g in sorted(gel.items(), key=lambda x: -x[1]["yildiz"]):
         gl.append(f"| {r if r in yerel_repolar else f'[{r}](https://github.com/{r})'} | {g['sahip']} | {g['sahip_tipi']} | {'✅' if g['resmi_kaynak'] else ''} | "
                   f"{g['yildiz']} | {g.get('katkici') or '-'} | {g['son_guncelleme']} | {g['lisans']} | {say.get(r, 0)} |")

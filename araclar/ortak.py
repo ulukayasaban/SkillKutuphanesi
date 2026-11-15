@@ -200,8 +200,8 @@ def onemli_dosyalar(klasor: Path):
                   and not ICERIK_GURULTU.search(str(p.relative_to(klasor))))
 
 
-# ------------------------------------------------------------------ yerel (GitHub'sız) kaynak: kendi/  (kaynak tipi T7)
-# Kullanıcının kendi skilleri kütüphanenin içinde düz bir klasörde durur (kendi/<skill>/). kaynak-cek.py bu klasörü GitHub
+# ------------------------------------------------------------------ yerel (GitHub'sız) kaynak: kendi/ (T7) ve site/ (T8)
+# Kullanıcının kendi skilleri kütüphanenin içinde düz bir klasörde durur (kendi/<skill>/; siteden alınanlar site/<skill>/). kaynak-cek.py bu klasörü GitHub
 # ağacı gibi okur: aynı biçimde [{path, type, sha, size}] listesi ve 40 haneli bir "commit" (dosya içeriklerinden türetilir).
 YEREL_GIZLI_AD = re.compile(r"(^|/)(\.env(\..*)?|auth\.json|token\.json|credentials\.json|[^/]*\.(pem|key|p12|pfx))$", re.I)
 
@@ -235,6 +235,71 @@ def yerel_commit(agac) -> str:
     for e in sorted(agac, key=lambda e: e["path"]):
         h.update(e["path"].encode() + b"\0" + e["sha"].encode() + b"\n")
     return h.hexdigest()
+
+
+# Yerel kaynak tipleri (K-57): T7 = kullanıcının KENDİ yazdığı skiller (kendi/), T8 = GitHub'da olmayan, bir web sitesinden alınmış
+# skiller (site/<ad>/). İkisi de GitHub'a sorulmaz, KAYIP sayılmaz, kaynak-cek.py ile ağsız çekilir. T8'in her skili için site-takip.json
+# kaydı zorunludur (sahip, lisans, site adresi, izlenen dosyaların sha256'sı); site değişikliğini araclar/site-takip.py bildirir.
+YEREL_TIPLER = ("T7", "T8")
+ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4", "T7", "T8")
+YEREL_KLASOR = {"T7": "kendi", "T8": "site"}
+SITE_TAKIP = "site-takip.json"
+LISANSSIZ = ("yok", "NOASSERTION", "belirtilmemiş", "")
+
+
+def yerel_gelistirici(kayit, bugun=None):
+    """Yerel kaynak (T7/T8) için GitHub'sız geliştirici kaydı; ağ kullanılmaz. T7: sahibi kullanıcı, resmî kaynak sayılır.
+    T8: kaynak düzeyinde sahip yoktur (skill başına sahip ve lisans site-takip.json'dan gelir: site_gelistirici)."""
+    from datetime import date as _d
+    bugun = bugun or _d.today().isoformat()
+    site = kayit.get("tip") == "T8"
+    return {"sahip": "site (skill başına)" if site else "kullanıcı", "sahip_tipi": "kisi", "sahip_url": "",
+            "resmi_kaynak": not site, "yildiz": 0, "fork": 0, "acik_issue": 0, "son_guncelleme": bugun,
+            "olusturulma": kayit.get("eklendi") or bugun,
+            "lisans": "belirtilmemiş" if site else (kayit.get("lisans") or "belirtilmemiş"), "arsivlenmis": False,
+            "aciklama": ("Web sitesinden alınan skiller (yerel kaynak site/, GitHub'sız)" if site
+                         else "Kullanıcının kendi skilleri (yerel kaynak, GitHub'sız)"), "ana_sayfa": "",
+            "katkici": 1, "izleyici": None, "commit_90g": 0, "son_surum": None}
+
+
+def site_kayitlari(kok) -> dict:
+    """site-takip.json -> {skill adı: kayıt}. Dosya yoksa ya da bozuksa boş sözlük (şemayı dogrula/site-takip denetler)."""
+    try:
+        d = json.loads((Path(kok) / SITE_TAKIP).read_text(encoding="utf-8"))
+        return {s["skill"]: s for s in d.get("skiller", []) if isinstance(s, dict) and isinstance(s.get("skill"), str)}
+    except (OSError, ValueError, AttributeError, TypeError):
+        return {}
+
+
+def _guven_lis(v):
+    return 0 if (v or {}).get("lisans") in LISANSSIZ else 5
+
+
+def _guven_res(v):
+    return 5 if (v or {}).get("resmi_kaynak") else 3 if (v or {}).get("sahip_tipi") == "kurum" else 0
+
+
+def site_gelistirici(gel, kayit):
+    """Site skilinin (T8) geliştirici kaydı: kaynak düzeyindeki kaydın KOPYASI, sahip/lisans/site skill başına site-takip.json'dan.
+    Güven puanının lisans ve resmî/kurum parçaları (gelistirici-bilgisi.guven_hesapla ile aynı kural) yeni değere göre düzeltilir.
+    `gel` değiştirilmez (aynı kaynağın başka skillerine sızmasın)."""
+    if not kayit:
+        return gel
+    yeni = dict(gel or {})
+    yeni.update({"sahip": kayit.get("sahip") or "belirtilmemiş", "sahip_tipi": kayit.get("sahip_tipi") or "kisi",
+                 "sahip_url": kayit.get("sahip_url") or "", "lisans": kayit.get("lisans") or "belirtilmemiş",
+                 "resmi_kaynak": bool(kayit.get("resmi_kaynak", False)), "ana_sayfa": kayit.get("site") or "",
+                 "aciklama": f"Web sitesinden alınan skill: {kayit.get('site') or '?'} (site-takip.json)"})
+    gv = (gel or {}).get("guven")
+    if gv:
+        puan = max(0, gv["puan"] + _guven_lis(yeni) - _guven_lis(gel) + _guven_res(yeni) - _guven_res(gel))
+        ayr = [x for x in gv.get("ayrinti", []) if not x.startswith(("lisans ", "resmî/kurum ", "skill başına sahip/lisans"))]
+        ayr += [f"lisans {_guven_lis(yeni)}/5", f"resmî/kurum {_guven_res(yeni)}/5"]
+        if kayit.get("site"):
+            ayr.append("skill başına sahip/lisans: site-takip.json")
+        yeni["guven"] = dict(gv, puan=puan, ayrinti=ayr,
+                             derece="A" if puan >= 80 else "B" if puan >= 65 else "C" if puan >= 50 else "D")
+    return yeni
 
 
 def klasor_hash(klasor: Path) -> str:

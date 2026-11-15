@@ -22,7 +22,8 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, api_kapali, gh_api, json_oku, json_yaz  # noqa: E402
+from ortak import KAYNAKLAR, KOK, YEREL_TIPLER, api_kapali, gh_api, json_oku, json_yaz  # noqa: E402
+from ortak import yerel_gelistirici as _yerel_gelistirici  # noqa: E402
 
 # Teknolojinin kendi üreticisi olan kurumlar (resmî kaynak)
 RESMI = {"anthropics", "greensock", "vercel", "microsoft", "pmndrs", "mrdoob", "motiondivision",
@@ -122,17 +123,13 @@ def guven_hesapla(sonuc, havuz, referans):
 
 
 def yerel_gelistirici(kayit):
-    """Yerel kaynak (T7, kendi/) için GitHub'sız geliştirici kaydı: sahibi kullanıcının kendisi, resmî kaynak sayılır; ağ kullanılmaz.
-    Bakım tarihi her çalıştırmada bugündür (kendi/ elle güncel tutulur); yıldız/katkı gibi GitHub alanları 0'dır."""
-    return {"sahip": "kullanıcı", "sahip_tipi": "kisi", "sahip_url": "", "resmi_kaynak": True,
-            "yildiz": 0, "fork": 0, "acik_issue": 0, "son_guncelleme": date.today().isoformat(),
-            "olusturulma": kayit.get("eklendi") or date.today().isoformat(), "lisans": kayit.get("lisans") or "belirtilmemiş",
-            "arsivlenmis": False, "aciklama": "Kullanıcının kendi skilleri (yerel kaynak, GitHub'sız)", "ana_sayfa": "",
-            "katkici": 1, "izleyici": None, "commit_90g": 0, "son_surum": None}
+    """Yerel kaynak (T7 kendi/, T8 site/) için GitHub'sız geliştirici kaydı (ortak.yerel_gelistirici); ağ kullanılmaz.
+    T8'de sahip ve lisans skill başına site-takip.json'dan gelir (arsiv-yerlestir.py uygular)."""
+    return _yerel_gelistirici(kayit, date.today().isoformat())
 
 
 def main():
-    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] != "T7"})  # T7 yerel: GitHub'da yok
+    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] not in YEREL_TIPLER})  # T7/T8 yerel: GitHub'da yok
     onceki = json_oku(KOK / "gelistiriciler.json", {"repolar": {}})["repolar"]
     secili = [a for a in sys.argv[1:] if "/" in a]  # --repo owner/ad …: sadece bunlar yenilenir, diğerleri önceki değerden
     sonuc = {r: onceki[r] for r in repolar if secili and r not in secili and r in onceki}
@@ -178,7 +175,7 @@ def main():
                 sonuc[repo][alan] = eski.get(alan) if sonuc[repo].get(alan) == "?" or eski.get(alan) is not None else None
         print(f"{repo:42s} ★{d['stargazers_count']:>7}  {sonuc[repo]['sahip_tipi']:5s}  {sonuc[repo]['son_guncelleme']}")
     for k in json_oku(KAYNAKLAR)["repolar"]:
-        if k["tip"] == "T7":
+        if k["tip"] in YEREL_TIPLER:
             sonuc[k["repo"]] = yerel_gelistirici(k)
     havuz = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}
     referans = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T5", "T6")}

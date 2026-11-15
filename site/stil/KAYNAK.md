@@ -1,7 +1,8 @@
 # stil: kaynak bilgisi
 
-> Bu dosya kütüphanenin kendi notudur, skill'in parçası değildir. Asıl kopya `kendi/stil/KAYNAK.md`'dir: `arsiv-yerlestir.py`
-> arşivdeki kopyanın yerine kendi ürettiği KAYNAK.md'yi yazar, `skill-ekle.py` KAYNAK.md'yi projeye kurmaz. Site takibi bu dosyayı okur.
+> Bu dosya kütüphanenin kendi notudur, skill'in parçası değildir. Asıl kopya `site/stil/KAYNAK.md`'dir: `arsiv-yerlestir.py`
+> arşivdeki kopyanın yerine kendi ürettiği KAYNAK.md'yi yazar, `skill-ekle.py` KAYNAK.md'yi projeye kurmaz.
+> Site takibinin makine okunur kaydı (izlenen adresler, sha256, sahip, lisans) kökteki `site-takip.json` → `stil`; takip `python3 araclar/site-takip.py`.
 
 - **Yazar:** Smokich (YouTube: https://www.youtube.com/@DevSmokich)
 - **Site:** https://smokich.gosem.dev/stil/ ("Video Stilleri")
@@ -9,7 +10,7 @@
   https://szach.kit.com, GitHub'da yok). Sitenin alt bilgisindeki atıf bağlantısı bir YouTube videosudur: https://youtu.be/6_MrVEXM06E
 - **Lisans:** belirtilmemiş. Kişisel kullanım; kütüphane private depoda tutar, dağıtılmaz.
 - **İndirme tarihi:** 2026-11-15
-- **Kütüphanedeki yeri:** yerel kaynak `yerel/kendi` (tip T7), klasör `kendi/stil/`
+- **Kütüphanedeki yeri:** yerel kaynak `yerel/site` (tip T8, siteden alınan skiller), klasör `site/stil/` (2026-11-15'e dek `kendi/stil/`; K-57)
 
 ## Kütüphanenin yaptığı değişiklikler
 - `SKILL.md`: `stil-skill.md` bayt bayt aynen; sonuna "Ready-made styles (added by the library)" bölümü eklendi (`---` ile ayrılmış).

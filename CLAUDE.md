@@ -41,7 +41,7 @@ aynı anda yalnız bir ajan kütüphaneye yazar. Model ve çaba her ajanın kend
 | İş | Ajan |
 |---|---|
 | Sağlık kontrolü, oturum başı ve iş sonu denetimi | `kutuphane-denetci` |
-| Yeni kaynak, kendi skiller, kaynak çıkarma, kayıp kaynak, ad çakışması, adaylar | `kutuphane-kaynak` |
+| Yeni kaynak, kendi skiller, siteden alınan skiller (`site/`), kaynak çıkarma, kayıp kaynak, ad çakışması, adaylar | `kutuphane-kaynak` |
 | Skill incelemesi (kategori, ücret, lisans, Türkçe özet, güvenlik) | `kutuphane-inceleme` |
 | Aylık güncelleme, dal özeti, zamanlanmış görev metni | `kutuphane-guncelleme` |
 | Programlar, program bağları, ortam kilitleri, genel skill klasörleri | `kutuphane-program` |
@@ -83,7 +83,8 @@ aynı anda yalnız bir ajan kütüphaneye yazar. Model ve çaba her ajanın kend
 - Aday kararları: `python3 araclar/konu-takip.py --karar owner/ad eklendi|reddedildi|izle "neden"` (`populer-tarama.py --karar` kullanma); bekleyenler: `python3 araclar/konu-takip.py --bekleyenler` (üç kaynağı özetler).
 - Yeni AI aracı: `rehber/14-yapay-zeka-araclari.md` bölüm 7 ve `promptlar/15-yeni-yapay-zeka-araci.md`; aylık araç belgesi kontrolü: `python3 araclar/skill-ekle.py --araclar`.
 - `CLAUDE.md` ve `AGENTS.md` birebir aynı tutulur: birini değiştirince `cp CLAUDE.md AGENTS.md`; `dogrula.py` farkı HATA sayar.
-- Kendi skillerim (yerel kaynak T7, `kendi/` klasörü, `yerel/kendi` kaydı): GitHub'a sorulmaz. Düzenleme: `kendi/<ad>/` düzenle → `python3 araclar/kaynak-cek.py --repo yerel/kendi` (ağ yok) → `arsiv-yerlestir.py` → kontroller → projede `--durum`/`--guncelle`. Ayrıntı: `rehber/03` B2, `kendi/README.md`.
+- Kendi skillerim (yerel kaynak T7, `kendi/` klasörü, `yerel/kendi` kaydı): GitHub'a sorulmaz. Düzenleme: `kendi/<ad>/` düzenle → `python3 araclar/kaynak-cek.py --repo yerel/kendi` (ağ yok) → `arsiv-yerlestir.py` → kontroller → projede `--durum`/`--guncelle`. Ayrıntı: `rehber/03` B2, `kendi/README.md`. `kendi/` yalnız kullanıcının kendi yazdığı skiller içindir.
+- Web sitesinden alınan (GitHub'da olmayan) skill (K-57) → `site/<ad>/`, kaynak `yerel/site` (T8), `site-takip.json` kaydı zorunlu (sahip, lisans, izlenen dosyaların sha256'sı; eksikse `dogrula.py` HATA), `kendi/`'ye konmaz. Site değişti mi: `python3 araclar/site-takip.py` (aylık zincir de çalıştırır; rapor `notlar/site-takip.md`, ERİŞİLEMEDİ KAYIP sayılmaz). Güncelleme her seferinde kullanıcı onayıyla, elle. Sitede GitHub reposu çıkarsa normal kaynağa (rehber/03 A1..A9) geçirilir ve `site/` kopyası emekli olur. Ayrıntı: `rehber/03` B3, `site/README.md`.
 - Kayıp kaynak (K-49, kullanıcı 2026-11-12): GitHub'da gerçekten yok olan (404; `gh auth status` sağlam, yeni ada taşınmamış) ve hiçbir projede kullanılmayan
   kaynak kullanıcıya SORULMADAN `tip: KAYIP` yapılır (`rehber/03` E; arşiv kopyası kalır, rol/profillerden çıkarılır, sonuç bir cümleyle bildirilir). Bir projede
   kullanılıyorsa önce kullanıcıya sorulur. Kaynağı kayıp ya da kaynakta kaldırılmış skill yeni kurulumda kullanılmaz: `--oner` ve `ek-aday` göstermez, role/profile eklenmez.

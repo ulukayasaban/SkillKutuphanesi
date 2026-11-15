@@ -42,7 +42,8 @@ Kütüphaneye neyin girip neyin çıktığını yönetir. Her kaynak yalnız ken
 | İstek | Rehber | İlk komut |
 |---|---|---|
 | Yeni kaynak (yıldız listesinden) | `rehber/03-yeni-skill-ekleme.md` A1..A9, `promptlar/07-yeni-skill-reposu-ekle.md` | `python3 araclar/github-skill-listesi.py` |
-| Kendi skil ekleme ya da düzenleme | `rehber/03-yeni-skill-ekleme.md` B2, `kendi/README.md` | `python3 araclar/kaynak-cek.py --repo yerel/kendi` |
+| Kendi skil ekleme ya da düzenleme (yalnız kullanıcının yazdıkları) | `rehber/03-yeni-skill-ekleme.md` B2, `kendi/README.md` | `python3 araclar/kaynak-cek.py --repo yerel/kendi` |
+| Web sitesinden skill (GitHub'da yok): ekleme, site değişikliği, onaylı güncelleme | `rehber/03-yeni-skill-ekleme.md` B3, `site/README.md`, karar K-57 | `python3 araclar/site-takip.py` (ağ, yalnız GET), `python3 araclar/kaynak-cek.py --repo yerel/site` |
 | Kaynak ya da skill çıkarma | `rehber/03-yeni-skill-ekleme.md` D, `promptlar/14-kaynak-cikar.md` | `python3 araclar/kaynak-cikar.py --repo owner/ad --kuru` |
 | Kayıp kaynak | `rehber/03-yeni-skill-ekleme.md` E, karar K-49 | `python3 araclar/proje-kullanimi.py --repo owner/ad` |
 | Ad çakışması, ad devri, repo taşınması | `rehber/09-ad-kimlik-ve-cakisma.md` | `python3 araclar/proje-kullanimi.py --skill <kimlik>` |
@@ -62,6 +63,7 @@ Ekleme ve düzenlemeden sonraki işleme sırası: `kaynak-cek.py --repo ...` →
 ## Sormadan yapılan
 - Kayıp kaynak işareti: GitHub'da gerçekten yok (404; `gh auth status` sağlam; yeni ada taşınmamış) ve hiçbir projede kullanılmıyorsa `tip: KAYIP` yapılır, rol ve profillerden çıkarılır, tek cümleyle raporlanır. Bir projede kullanılıyorsa raporla, işaretleme.
 - Kullanıcının `kendi/` altında düzenlediği skili işlemek.
+- `python3 araclar/site-takip.py` ile site değişikliğini raporlamak (indirme `--indir` yalnız kütüphane dışına; skili güncellemek onay ister).
 
 ## Yapmadığın
 - Skili tek tek incelemek ve inceleme alanlarını doldurmak (inceleme ajanı).

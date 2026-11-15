@@ -8,7 +8,8 @@
   python3 araclar/arsiv-guncelle.py --birlestir <dal>    # kullanıcı onayından sonra: dalı master'a birleştirir (--no-ff),
                                                          # doğrulama + kapsam denetimi + testleri çalıştırır, dalı siler
   python3 araclar/arsiv-guncelle.py --uygula             # (eski yol) güncellemeyi doğrudan bulunulan dalda yapar
-  python3 araclar/arsiv-guncelle.py --aylik              # AYLIK ZİNCİR (zamanlanmış görevin tek komutu): ön kontrol -> kaynak raporu ->
+  python3 araclar/arsiv-guncelle.py --aylik              # AYLIK ZİNCİR (zamanlanmış görevin tek komutu): ön kontrol -> kaynak raporu
+                                                         # (+ site takibi, site-takip.py; git dışı rapor) ->
                                                          # güncelleme (guncelleme/YYYY-AA) ya da takip (takip/YYYY-AA) dalı -> aylık özet ->
                                                          # damga (notlar/son-aylik-calisma.json). Birleştirmez, göndermez; master değişmez.
   python3 araclar/arsiv-guncelle.py --aylik --kuru       # aylık zincirin yan etkisiz PLANI: ön kontrol + rapor + özet (dal, commit, damga YOK)
@@ -251,17 +252,17 @@ def rapor():
         print(f"~ {repo}: {(eski or '-')[:7]} -> {yeni[:7]}  skill dosyası değişikliği: {len(dosyalar)}{not_}")
         for f in dosyalar[:10]:
             print(f"    {f}")
-    # Yerel kaynak (T7, kendi/): GitHub'a sorulmaz; kayıtlı sürüm kimliği diskteki içerikten türetilene eşit değilse değişmiştir
+    # Yerel kaynak (T7 kendi/, T8 site/): GitHub'a sorulmaz; kayıtlı sürüm kimliği diskteki içerikten türetilene eşit değilse değişmiştir
     ayar_k = json_oku(KAYNAKLAR)
     for k in ayar_k["repolar"]:
-        if k["tip"] != "T7":
+        if k["tip"] not in ("T7", "T8"):
             continue
         yeni = yerel_commit(yerel_agac(KOK / k["yerel"], ayar_k["skill_ici_haric"] + k.get("dosya_haric", []))[0])
         eski = mevcut.get(k["repo"])
         if eski != yeni:
             degisen.append(k["repo"])
-            ayrinti[k["repo"]] = {"eski": eski, "yeni": yeni, "dosya": 0, "not": " (yerel kaynak: kendi/ klasörü düzenlenmiş)"}
-            print(f"~ {k['repo']}: {(eski or '-')[:7]} -> {yeni[:7]}  (yerel kaynak, kendi/ düzenlenmiş)")
+            ayrinti[k["repo"]] = {"eski": eski, "yeni": yeni, "dosya": 0, "not": f" (yerel kaynak: {k['yerel']}/ klasörü düzenlenmiş)"}
+            print(f"~ {k['repo']}: {(eski or '-')[:7]} -> {yeni[:7]}  (yerel kaynak, {k['yerel']}/ düzenlenmiş)")
     if ULASILAMAYAN:
         print(f"Kontrol edilemeyen kaynak: {len(ULASILAMAYAN)} (geçici); sonra tekrar çalıştır.")
     if not degisen:
@@ -547,6 +548,28 @@ def _liste_raporu():
         print("UYARI: yıldız listesi kontrolü yapılamadı")
 
 
+def _site_takip_calistir(kuru=False):
+    """Site skillerinin (T8, site/) kaynak sitesi değişti mi (araclar/site-takip.py, K-57). Dal açmaz, git'e yazmaz: rapor
+    notlar/site-takip.md git dışıdır, aylık özet (4/5) ilk satırını okur. Kuru koşuda --yazmadan. Hata zinciri durdurmaz."""
+    arac = KOK / "araclar" / "site-takip.py"
+    if not arac.exists():
+        print("  BİLGİ: araclar/site-takip.py yok; site takibi atlandı")
+        return None
+    try:
+        r = subprocess.run([sys.executable, str(arac), *(["--yazmadan"] if kuru else [])], cwd=KOK, capture_output=True,
+                           text=True, timeout=600, stdin=subprocess.DEVNULL)
+    except (OSError, subprocess.TimeoutExpired):
+        print("  UYARI: site takibi yapılamadı (zaman aşımı ya da çalışmadı); kaynak KAYIP sayılmaz")
+        return None
+    satirlar = [s for s in r.stdout.splitlines() if s.startswith(("Site takibi:", "HATA:", "UYARI:", "Değişiklik var", "Site skili yok"))
+                or s.lstrip().startswith(("DEĞİŞTİ", "YENİ İÇERİK", "ERİŞİLEMEDİ"))]
+    for s in satirlar[:20]:
+        print(f"  {s.strip()}")
+    if r.returncode not in (0, 1):
+        print(f"  UYARI: site takibi çıkış {r.returncode} (kayıt hatası?): python3 araclar/site-takip.py --kayit-denetle")
+    return r.returncode
+
+
 def _dal_geri_al(dal):
     """takip() hatasında: YALNIZ bu koşunun açtığı dalda ise değişiklikleri atar, master'a döner, o dalı siler."""
     if git("branch", "--show-current").stdout.strip() != dal:
@@ -669,6 +692,8 @@ def aylik_calistir(siki=False):
         degisen, sorunlu, ayrinti = rapor()
         if gh_ok:
             _liste_raporu()
+        print("  Site takibi (siteden alınan skiller, site/):")
+        _site_takip_calistir()
         atlanan = list(sorunlu)
         eski_atlanan = set(onceki.get("atlanan_kaynaklar") or [])
         for r in atlanan:
@@ -759,6 +784,8 @@ def aylik(kuru, siki=False):
     degisen, sorunlu, _ayrinti = rapor()
     if ok:
         _liste_raporu()
+    print("Site takibi (yazmadan):")
+    _site_takip_calistir(kuru=True)
     if engeller:
         plan = "yalnız rapor (yazma adımı yapılmayacak; engeller: " + "; ".join(engeller) + ")"
     elif ULASILAMAYAN:

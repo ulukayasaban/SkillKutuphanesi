@@ -74,16 +74,18 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
 
 # --- P8: belge ve kayıt denetimleri -------------------------------------------------------------------------------
 # Birleştirme kuralı: buradaki HER yeni denetim yalnız UYARI'dır. HATA yalnız (a) var olan bir JSON kayıt dosyasının
-# ayrıştırılamaması ve (b) CLAUDE.md ile AGENTS.md'nin eşit olmamasıdır (arsiv-guncelle --birlestir HATA'da master'ı geri alır).
+# ayrıştırılamaması, (b) CLAUDE.md ile AGENTS.md'nin eşit olmaması ve (c) site skili kuralının bozulmasıdır (K-57: site/<ad>/ için
+# site-takip.json kaydı yok, kayıt kendi/'yi gösteriyor, kayıt yapısı bozuk) (arsiv-guncelle --birlestir HATA'da master'ı geri alır).
 # Hiçbiri başka bir aracı çalıştırmaz (tek istisna: program-denetim.py --sema --ozet-json, ağsız); bayraklar kaynak
 # metninden okunur, --help'e güvenilmez (birçok araçta argparse yok, --help aracı çalıştırır).
-KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "KAYIP", "EMEKLI")  # T7 = yerel kaynak (kendi/, GitHub'sız)
+KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "KAYIP", "EMEKLI")  # T7 = kendi/, T8 = site/ (yerel, GitHub'sız)
 KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "kimlik", "dosya_haric",
                       "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans")
+SITE_TAKIP_ARACI = "site-takip.py"
 ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
 GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
                        "/programlar/**/.env", "/yedek/", "/.skill-kutuphanesi/", "/*.bundle", "/*.yedek",
-                       "/notlar/son-aylik-calisma.json", "/notlar/aylik-ozet.md")
+                       "/notlar/son-aylik-calisma.json", "/notlar/aylik-ozet.md", "/notlar/site-takip.md")
 REHBER13_DIZGILERI = ("git revert -m 1", "gh auth login", "git bundle create", "yedekler.json", "rehber/12")
 # Paket dosyası tablosu (yol -> paket). notlar/genel-klasor-tabani.json bilerek yok: yalnız boşaltma gününde yazılır,
 # o güne dek eksikliği kalıcı bir uyarı olurdu (sürümü varsa E5 denetler).
@@ -363,9 +365,28 @@ def _e6_kaynaklar(kok, h, u):
             u.append(f"kaynaklar.json: {repo} bilinmeyen anahtar: {', '.join(yabanci)}")
 
 
+def _e7_site_takip(kok, h, u):
+    """K-57: site skilleri (T8, site/<ad>/) ve site-takip.json. Kural araclar/site-takip.py kayit_denetle'dedir (tek yer).
+    Kayıt hataları (zorunlu kayıt yok, kendi/ gösteren kayıt, bozuk yapı) HATA'dır; diğerleri UYARI."""
+    arac = Path(kok) / "araclar" / SITE_TAKIP_ARACI
+    if not arac.is_file():
+        return
+    d, var = _json_kayit(kok, "site-takip.json", h)
+    if var and d is None:
+        return  # ayrıştırma HATA'sı _json_kayit'ta yazıldı
+    kaynaklar, _ = _json_kayit(kok, "kaynaklar.json", [])
+    try:
+        hh, uu = _yukle(arac, "site_takip_dogrula").kayit_denetle(d, kok, kaynaklar or {})
+    except Exception as e:  # noqa: BLE001
+        u.append(f"site takibi denetimi çalışmadı ({type(e).__name__}: {str(e)[:80]})")
+        return
+    h += [f"site takibi: {x}" for x in hh]
+    u += [f"site takibi: {x}" for x in uu]
+
+
 def kayit_semalari_denetimi(kok=KOK):
     h, u = [], []
-    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar):
+    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar, _e7_site_takip):
         f(kok, h, u)
     return h, u
 
@@ -418,7 +439,7 @@ def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
             continue  # yeni değil (yeniden adlandırma da yeni sayılmaz)
         repo = k["repo"]
         onay = k.get("onay") if isinstance(k.get("onay"), dict) else {}
-        yerel = k.get("tip") == "T7"  # yerel kaynakta GitHub commit'i yoktur: eklendi + onay.kim + onay.tarih yeter
+        yerel = k.get("tip") in ("T7", "T8")  # yerel kaynakta GitHub commit'i yoktur: eklendi + onay.kim + onay.tarih yeter
         if not (k.get("eklendi") and _tarih_gecerli(k.get("eklendi")) and onay.get("kim") and onay.get("tarih")
                 and (yerel or re.fullmatch(r"[0-9a-f]{40}", str(onay.get("commit", ""))))):
             u.append(f"kaynak kaydında onay yok: {repo} (rehber/03 A4)")

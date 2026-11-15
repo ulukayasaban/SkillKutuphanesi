@@ -23,3 +23,5 @@ __pycache__/
 # P4 yerel damga ve özet: makineye özgü, her koşuda değişir, git'e girmez (aylik-ozet 'yoksayılmıyorsa yazma' kontrolü yapar).
 /notlar/son-aylik-calisma.json
 /notlar/aylik-ozet.md
+# Site takibi raporu (araclar/site-takip.py): her koşuda yenilenir, git'e girmez; aylık özet ilk satırını okur (K-57).
+/notlar/site-takip.md

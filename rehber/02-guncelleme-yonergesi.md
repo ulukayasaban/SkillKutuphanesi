@@ -117,6 +117,8 @@ oturum başındaki `aylik-ozet.py --hizli`'dir (damga 35 günü aşınca sorar).
 0b. `konu-takip.py` — `kaynaklar.json` → `takip_konulari` (e-ticaret/Etsy, mobil…) için GitHub'da yeni skill repoları aranır;
    adaylar `notlar/konu-takip.md`'ye yazılır (eklenmez). Değerlendirdiğin adayı `--karar owner/ad reddedildi "neden"` ile kapat.
 -1. `gelistirici-bilgisi.py` — geliştirici bilgileri (`gelistiriciler.json`).
+(`--aylik` ayrıca 2/5 adımında, dal açmadan önce `site-takip.py`'yi çalıştırır: siteden alınan skillerin adresleri; rapor git dışı
+`notlar/site-takip.md`, sonuç aylık özete girer; ayrıntı rehber/03 B3.)
 1. `kaynak-cek.py` — tüm kaynaklar sabit commit'ten yeniden iner (indirme hatası varsa durur).
 2. `arsiv-yerlestir.py` — tekilleştirme, kategori, değerlendirme. **Elle yaptığın inceleme alanları korunur**
    (`ozet_tr`, `kullanim_alani`, `teknoloji`, `roller`, `kalite`, `ortusme_grubu`, `kategori_elle`…).

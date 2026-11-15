@@ -132319,7 +132319,7 @@
       "varyantlar": {},
       "repo": "yerel/kendi",
       "kaynak_yol": "youtube-arama",
-      "commit": "995183e558a508bae0c52b7eddda25cd8d088bab",
+      "commit": "3c8d08e184e1df176c9c10ef5c3766c20563e74c",
       "lisans": "Kendi (özel)",
       "tip": "T7",
       "gizli": false,
@@ -346037,7 +346037,7 @@
       "varyantlar": {},
       "repo": "yerel/kendi",
       "kaynak_yol": "openmontage",
-      "commit": "995183e558a508bae0c52b7eddda25cd8d088bab",
+      "commit": "3c8d08e184e1df176c9c10ef5c3766c20563e74c",
       "lisans": "Kendi (özel)",
       "tip": "T7",
       "gizli": false,
@@ -358035,7 +358035,7 @@
       "varyantlar": {},
       "repo": "yerel/kendi",
       "kaynak_yol": "antigravity-gorsel",
-      "commit": "995183e558a508bae0c52b7eddda25cd8d088bab",
+      "commit": "3c8d08e184e1df176c9c10ef5c3766c20563e74c",
       "lisans": "Kendi (özel)",
       "tip": "T7",
       "gizli": false,
@@ -362498,11 +362498,11 @@
       "alan": "g-video-ses-medya",
       "yol": "arsiv/g-video-ses-medya/04-motion-graphics-karakter/stil",
       "varyantlar": {},
-      "repo": "yerel/kendi",
+      "repo": "yerel/site",
       "kaynak_yol": "stil",
-      "commit": "995183e558a508bae0c52b7eddda25cd8d088bab",
-      "lisans": "Kendi (özel)",
-      "tip": "T7",
+      "commit": "23cb314f66d44b985a57a5d201b137e31e80f59b",
+      "lisans": "belirtilmemiş",
+      "tip": "T8",
       "gizli": false,
       "arsiv_tarihi": "2026-11-15",
       "ust_skill": null,
@@ -362537,26 +362537,26 @@
       "klasor_hash": "22524890e9df3611a9e5b057e7ac9fa8e50dbf73bad91a30ad18845958af472f",
       "globalde": {},
       "gelistirici": {
-        "sahip": "kullanıcı",
+        "sahip": "Smokich",
         "sahip_tipi": "kisi",
-        "sahip_url": "",
-        "resmi_kaynak": true,
+        "sahip_url": "https://www.youtube.com/@DevSmokich",
+        "resmi_kaynak": false,
         "yildiz": 0,
         "fork": 0,
         "acik_issue": 0,
-        "son_guncelleme": "2026-11-12",
-        "olusturulma": "2026-11-12",
-        "lisans": "Kendi (özel)",
+        "son_guncelleme": "2026-11-15",
+        "olusturulma": "2026-11-15",
+        "lisans": "belirtilmemiş",
         "arsivlenmis": false,
-        "aciklama": "Kullanıcının kendi skilleri (yerel kaynak, GitHub'sız)",
-        "ana_sayfa": "",
+        "aciklama": "Web sitesinden alınan skill: https://smokich.gosem.dev/stil/ (site-takip.json)",
+        "ana_sayfa": "https://smokich.gosem.dev/stil/",
         "katkici": 1,
         "izleyici": null,
         "commit_90g": 0,
         "son_surum": null,
         "yildiz_hizi": 0.0,
         "guven": {
-          "puan": 18,
+          "puan": 8,
           "ayrinti": [
             "yildiz 0 (%0) → 0.0/25",
             "yildiz_hizi 0.0 (%0) → 0.0/15",
@@ -362565,8 +362565,9 @@
             "fork 0 (%4) → 0.4/10",
             "izleyici None (%0) → 0.0/5",
             "son 180 günde sürüm 0/5",
-            "lisans 5/5",
-            "resmî/kurum 5/5"
+            "lisans 0/5",
+            "resmî/kurum 0/5",
+            "skill başına sahip/lisans: site-takip.json"
           ],
           "sira": null,
           "derece": "D"
@@ -362600,7 +362601,7 @@
       ],
       "zorluk": "orta",
       "kalite": 4,
-      "kalite_notu": "Karar: TUT. Yazar Smokich (YouTube @DevSmokich, smokich.gosem.dev/stil); uzun prompt'lar Michael Szach'ın stil kütüphanesinden uyarlama; lisans belirtilmemiş, kişisel kullanım (kayıttaki 'Kendi (özel)' ve geliştirici 'kullanıcı' yerel kaynağın varsayılanıdır). Güvenlik: eksik araçları kendisi kurar (Puppeteer/Playwright Chromium indirir, Whisper, ffmpeg); ses efekti açıksa Openverse'ten anahtarsız CC0 ses indirir; stil testi taze oturum/alt ajanda 2-3 tur çalışır, jeton harcar; site genel ~/.claude/skills klasörüne kurmayı söyler, kütüphanede yalnız skill-ekle.py ile projeye kurulur. Gizli değer ya da sistem dosyasına yazan komut yok. Ayrıntı ve dosya özetleri: kendi/stil/KAYNAK.md.",
+      "kalite_notu": "Karar: TUT. Yazar Smokich (YouTube @DevSmokich, smokich.gosem.dev/stil); uzun prompt'lar Michael Szach'ın stil kütüphanesinden uyarlama; lisans belirtilmemiş, kişisel kullanım (2026-11-15'ten beri kaynak yerel/site; sahip ve lisans site-takip.json'dan gelir, K-57). Güvenlik: eksik araçları kendisi kurar (Puppeteer/Playwright Chromium indirir, Whisper, ffmpeg); ses efekti açıksa Openverse'ten anahtarsız CC0 ses indirir; stil testi taze oturum/alt ajanda 2-3 tur çalışır, jeton harcar; site genel ~/.claude/skills klasörüne kurmayı söyler, kütüphanede yalnız skill-ekle.py ile projeye kurulur. Gizli değer ya da sistem dosyasına yazan komut yok. Ayrıntı ve dosya özetleri: site/stil/KAYNAK.md.",
       "ortusme_grubu": "gorsel-stil-sistemi",
       "ortusme_rolu": "alternatif",
       "notlar": "visual-style ile aynı iş ailesi (görselden stil çıkarma); stil, explainer videosuna özel ve kendi render yolunu (window.seek + başsız Chrome + ffmpeg) tanımlar. Uzun prompt'u olmayan 4 stil: kagit-poster, konstruktivist, bilim, ascii. 2026-11-15: 11 kısa stil kartı references/stiller/kartlar/ altına eklendi (yalnız stil metni, komut yok); yeniden inceleme ana oturumda kapatıldı.",
@@ -362612,12 +362613,12 @@
         "commit": "995637efe8dbf8a8e4c02b478064d3a39a5709e1"
       },
       "degerlendirme": {
-        "puan": 76,
+        "puan": 67,
         "not": "B",
         "ayrinti": [
-          "bakım 25/25 (3 gün önce)",
-          "GitHub güveni 5/30 (güven 18 D)",
-          "lisans 15/15 (Kendi (özel))",
+          "bakım 25/25 (0 gün önce)",
+          "GitHub güveni 2/30 (güven 8 D)",
+          "lisans 3/15 (belirtilmemiş)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
           "yapı 5/5",
@@ -610801,12 +610802,17 @@
       }
     },
     "yerel/kendi": {
-      "commit": "995183e558a508bae0c52b7eddda25cd8d088bab",
+      "commit": "3c8d08e184e1df176c9c10ef5c3766c20563e74c",
       "skill_md": {
         "antigravity-gorsel/SKILL.md": "secildi",
         "openmontage/SKILL.md": "secildi",
-        "stil/SKILL.md": "secildi",
         "youtube-arama/SKILL.md": "secildi"
+      }
+    },
+    "yerel/site": {
+      "commit": "23cb314f66d44b985a57a5d201b137e31e80f59b",
+      "skill_md": {
+        "stil/SKILL.md": "secildi"
       }
     }
   }

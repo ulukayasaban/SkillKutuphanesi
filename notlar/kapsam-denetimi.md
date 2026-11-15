@@ -134,7 +134,8 @@
 | xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
-| yerel/kendi | 4 | secildi 4 |
+| yerel/kendi | 3 | secildi 3 |
+| yerel/site | 1 | secildi 1 |
 | yohannescodes/apple-app-review-compliance | 1 | secildi 1 |
 | ythx-101/live-panel-skill | 1 | secildi 1 |
 | zanwei/design-dna | 1 | secildi 1 |

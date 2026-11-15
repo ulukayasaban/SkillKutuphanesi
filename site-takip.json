@@ -1,0 +1,152 @@
+{
+  "_aciklama": "Web sitesinden alınan skillerin (yerel kaynak yerel/site, tip T8, klasör site/<ad>/) kayıtları. Her site/<ad>/ için bir kayıt ZORUNLU (dogrula HATA). sahip/lisans skill başına buradan alınır (arsiv-yerlestir). dosyalar: izlenen adresler; sha256 indirilen baytların özeti; karsilastirma 'tam' (yerel dosya = site dosyası) ya da 'onek' (yerel dosya site dosyasıyla başlar, ilk 'bayt' bayt karşılaştırılır); tur 'asil' (gerçek dosya) ya da 'yonlendirme' (sitenin yönlendirme sayfası, gerçek dosya değil). Takip: araclar/site-takip.py -> notlar/site-takip.md. Özetler yalnız kullanıcı onayıyla skill güncellendikten sonra elle yenilenir (rehber/03 B3). K-57.",
+  "surum": 1,
+  "zaman_asimi_sn": 30,
+  "skiller": [
+    {
+      "skill": "stil",
+      "kaynak": "yerel/site",
+      "yerel": "site/stil",
+      "site": "https://smokich.gosem.dev/stil/",
+      "sahip": "Smokich",
+      "sahip_tipi": "kisi",
+      "sahip_url": "https://www.youtube.com/@DevSmokich",
+      "lisans": "belirtilmemiş",
+      "resmi_kaynak": false,
+      "kayit_tarihi": "2026-11-15",
+      "not": "Video Stilleri sitesi; uzun prompt'lar Michael Szach'ın stil kütüphanesinden uyarlama. icerik.md (kısa şablonun kaynağı) adresi doğrulanmadığı için izlenmiyor. Ayrıntı: site/stil/KAYNAK.md",
+      "dosyalar": [
+        {
+          "ad": "skill",
+          "url": "https://smokich.gosem.dev/stil/stil-skill.md",
+          "tur": "asil",
+          "bayt": 7959,
+          "sha256": "d9dd7d43b76b6b0eb6b96c92c27744eee3cb15efc1d16b89d2f2f798ce9506a7",
+          "karsilastirma": "onek",
+          "yerel_dosya": "SKILL.md",
+          "not": "SKILL.md = bu dosya + sonuna kütüphanenin eklediği 'Ready-made styles' bölümü; karşılaştırma yalnız önekle"
+        },
+        {
+          "ad": "site-betigi",
+          "url": "https://smokich.gosem.dev/stil/site.js",
+          "tur": "asil",
+          "bayt": 13155,
+          "sha256": "8cda758f49aa4a73523aa1ebc3f99c2c186fe83e81c8289e85708cd2fdbfb0f6",
+          "karsilastirma": "tam",
+          "etkiler": [
+            "references/stiller/README.md (stil tablosu STILLER, kısa şablon promptParcalari)"
+          ],
+          "not": "kütüphanede tutulmaz; UZUN_IDLER listesi de burada"
+        },
+        {
+          "ad": "ana-sayfa",
+          "url": "https://smokich.gosem.dev/stil/",
+          "tur": "asil",
+          "bayt": 26718,
+          "sha256": "339c936768c673f3ecf4d4a5a4391db6e4ff9ba12617525254ef8c0511f54ce9",
+          "karsilastirma": "tam",
+          "etkiler": [
+            "references/stiller/kartlar/ (11 kısa stil kartı, <script id=\"stil-<id>\"> blokları)",
+            "SKILL.md (gömülü skill metni <script id=\"stil-skill\">)"
+          ],
+          "not": "kütüphanede tutulmaz; değişirse kartlar elle karşılaştırılır"
+        },
+        {
+          "ad": "cam",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/cam.txt",
+          "tur": "asil",
+          "bayt": 40722,
+          "sha256": "f90c1767f3d946565b033bbaee8ac2557f1d59f85c185a2980bda93fb09bc921",
+          "karsilastirma": "tam",
+          "yerel_dosya": "references/stiller/cam.txt"
+        },
+        {
+          "ad": "risograf",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/risograf.txt",
+          "tur": "asil",
+          "bayt": 44426,
+          "sha256": "c6f711de5d68f7a5127004d6dcee4dc3b722834bf5512dac1a934eeb63b790ce",
+          "karsilastirma": "tam",
+          "yerel_dosya": "references/stiller/risograf.txt"
+        },
+        {
+          "ad": "kesik-kagit",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/kesik-kagit.txt",
+          "tur": "asil",
+          "bayt": 27405,
+          "sha256": "814ab49559e0769a41a8bf7e0d62ca3b5727101eb61755745aab7da7a2d50d8e",
+          "karsilastirma": "tam",
+          "yerel_dosya": "references/stiller/kesik-kagit.txt"
+        },
+        {
+          "ad": "izometrik",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/izometrik.txt",
+          "tur": "asil",
+          "bayt": 45107,
+          "sha256": "0596f5a62963f500441b2e4ee97eb98edba11d1eeb5f0ca95d41e2d2b45897db",
+          "karsilastirma": "tam",
+          "yerel_dosya": "references/stiller/izometrik.txt"
+        },
+        {
+          "ad": "duz-vektor",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/duz-vektor.txt",
+          "tur": "asil",
+          "bayt": 44770,
+          "sha256": "864df8617ca6685c4e7148821741dcc944a03e4cfc03febab035cc2dfbbbd791",
+          "karsilastirma": "tam",
+          "yerel_dosya": "references/stiller/duz-vektor.txt"
+        },
+        {
+          "ad": "kinetik",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/kinetik.txt",
+          "tur": "asil",
+          "bayt": 37853,
+          "sha256": "9bfe000afc5ba2fe402d9f438bf8a7ef44ce3ee3d94c624c6e443f3cf3419987",
+          "karsilastirma": "tam",
+          "yerel_dosya": "references/stiller/kinetik.txt"
+        },
+        {
+          "ad": "parcacik",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/parcacik.txt",
+          "tur": "asil",
+          "bayt": 31334,
+          "sha256": "97863f207592c59c688c58425b1df4a013f67d5ae79d157bf493b611a65e8c4a",
+          "karsilastirma": "tam",
+          "yerel_dosya": "references/stiller/parcacik.txt"
+        },
+        {
+          "ad": "kagit-poster",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/kagit-poster.txt",
+          "tur": "yonlendirme",
+          "bayt": 156,
+          "sha256": "ab7e8078e04e24f97a9c5e223cdf7d53d1504ce06638dd2d743612cf200afa6b",
+          "not": "ana sayfaya yönlendiren 156 baytlık sayfa: bu stilin uzun prompt'u yok. Gerçek içerik gelirse YENİ İÇERİK"
+        },
+        {
+          "ad": "konstruktivist",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/konstruktivist.txt",
+          "tur": "yonlendirme",
+          "bayt": 156,
+          "sha256": "ab7e8078e04e24f97a9c5e223cdf7d53d1504ce06638dd2d743612cf200afa6b",
+          "not": "ana sayfaya yönlendiren 156 baytlık sayfa: bu stilin uzun prompt'u yok. Gerçek içerik gelirse YENİ İÇERİK"
+        },
+        {
+          "ad": "bilim",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/bilim.txt",
+          "tur": "yonlendirme",
+          "bayt": 156,
+          "sha256": "ab7e8078e04e24f97a9c5e223cdf7d53d1504ce06638dd2d743612cf200afa6b",
+          "not": "ana sayfaya yönlendiren 156 baytlık sayfa: bu stilin uzun prompt'u yok. Gerçek içerik gelirse YENİ İÇERİK"
+        },
+        {
+          "ad": "ascii",
+          "url": "https://smokich.gosem.dev/stil/stiller-uzun/ascii.txt",
+          "tur": "yonlendirme",
+          "bayt": 156,
+          "sha256": "ab7e8078e04e24f97a9c5e223cdf7d53d1504ce06638dd2d743612cf200afa6b",
+          "not": "ana sayfaya yönlendiren 156 baytlık sayfa: bu stilin uzun prompt'u yok. Gerçek içerik gelirse YENİ İÇERİK"
+        }
+      ]
+    }
+  ]
+}

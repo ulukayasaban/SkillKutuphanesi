@@ -1254,7 +1254,24 @@
         "tarih": "2026-11-12",
         "not": "K-32/K-37: kullanıcının kendi skilleri kütüphaneye alınır; yerel kaynak, GitHub'sız"
       },
-      "not": "Yerel kaynak (T7): kütüphane içindeki kendi/ klasörü, her skill bir klasör. GitHub'a sorulmaz, ağ gerekmez. Skilleri kullanıcı yazdı. nlm-skill 2026-11-12'de buradan çıkarıldı (nlm programının paketiyle gelir; projelere program bağı olarak verilir: --program-skill nlm:nlm-skill, programlar.json -> nlm); arşivdeki 0.15.8 kopyası emekli olarak durur. Düzenleme akışı: kendi/<ad>/ düzenlenir, sonra kaynak-cek.py --repo yerel/kendi ve arsiv-yerlestir.py (rehber/03 'Kendi skillerim')."
+      "not": "Yerel kaynak (T7): kütüphane içindeki kendi/ klasörü, her skill bir klasör. GitHub'a sorulmaz, ağ gerekmez. Skilleri kullanıcı yazdı. nlm-skill 2026-11-12'de buradan çıkarıldı (nlm programının paketiyle gelir; projelere program bağı olarak verilir: --program-skill nlm:nlm-skill, programlar.json -> nlm); arşivdeki 0.15.8 kopyası emekli olarak durur. Düzenleme akışı: kendi/<ad>/ düzenlenir, sonra kaynak-cek.py --repo yerel/kendi ve arsiv-yerlestir.py (rehber/03 'Kendi skillerim'). Yalnız kullanıcının kendi yazdığı skiller burada durur; web sitesinden alınan skiller yerel/site kaynağındadır (K-57)."
+    },
+    {
+      "repo": "yerel/site",
+      "tip": "T8",
+      "oncelik": 1,
+      "yerel": "site",
+      "dosya_haric": [
+        "(^|/)package-lock\\.json$"
+      ],
+      "eklendi": "2026-11-15",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-15",
+        "not": "K-57: GitHub'da olmayan, sitesi verilen skiller kendi/ yerine site/<ad>/ klasöründe ve kendi yerel kaynağında tutulur; takip kaydı zorunlu",
+        "lisans_onay": "stil (Smokich sitesi): lisans belirtilmemiş; kullanıcı 2026-11-15 açıkça onayladı: 'Evet, kişisel kullanım için tut' (depo private)"
+      },
+      "not": "Yerel kaynak (T8): kütüphane içindeki site/ klasörü, her skill bir klasör (site/<ad>/). Skiller bir web sitesinden alındı, kullanıcının yazdığı değildir. GitHub'a sorulmaz, ağ gerekmez, KAYIP sayılmaz. Sahip, lisans, site adresi ve izlenen dosyaların sha256'sı skill başına site-takip.json'da (zorunlu); site değişikliğini araclar/site-takip.py bildirir, aylık zincir çalıştırır. Güncelleme yalnız kullanıcı onayıyla (rehber/03 B3). Sitede GitHub reposu çıkarsa skill normal kaynağa (rehber/03 A1..A9) geçirilir ve site/ kopyası emekli olur."
     }
   ],
   "konum_haric": [

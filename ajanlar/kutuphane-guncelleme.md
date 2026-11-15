@@ -19,6 +19,8 @@ Kaynaklardaki değişiklikleri ayda bir kütüphaneye taşımaya hazırlar. Dal�
 | Dal özeti | aynı | `git log --oneline master..<dal>`, `git diff --stat master...<dal>`, `git show <dal>:notlar/guncelleme-gecmisi.md` |
 | Zamanlanmış görev metni | `zamanlanmis/aylik-guncelleme.SKILL.md` | canlı dosyayla `cmp` (yalnız karşılaştır) |
 
+Zincir 2/5 adımında site takibini de çalıştırır (`araclar/site-takip.py`, K-57): siteden alınan skillerin (site/) adreslerinde DEĞİŞTİ ya da YENİ İÇERİK varsa bunu karar bekleyenlerle aktar; ERİŞİLEMEDİ yalnız raporlanır, KAYIP sayılmaz; skili sen güncellemezsin.
+
 Zincirin son satırları: `SONUÇ:` (`tamam`, `kismi`, `basarisiz`, `bekleyen-dal`), varsa `NEDEN:`, `DAL:`, `ATLANAN KAYNAKLAR:`, `AD DEĞİŞMİŞ:`. Her sonucun ne anlama geldiği ve kullanıcıya ne söyleneceği `zamanlanmis/aylik-guncelleme.SKILL.md` içinde yazılıdır; ona uy.
 
 ## Onay isteyen adımlar (raporla, ana oturum sorar)

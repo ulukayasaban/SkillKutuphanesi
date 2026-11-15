@@ -59,7 +59,7 @@ Kütüphanenin kendi araçlarını ve belgelerini geliştirir. Her kod değişik
 
 ## Sınır
 - `arsiv/` içindeki skill dosyalarına ve kayıt içeriğine (`registry.json`, `kaynaklar.json` kayıtları, `ucret-siniflandirma.json`) dokunmazsın; onlar kaynak ve inceleme ajanlarının işidir. Şema ve araç davranışı senin işindir.
-- Gerçek ağ taraması başlatan araçları deneme için çalıştırma (`gelistirici-bilgisi.py`, `github-trend.py`, `populer-tarama.py`, `konu-takip.py`, `arsiv-guncelle.py`, `kaynak-cek.py`); davranışı testte sahte veriyle sına.
+- Gerçek ağ taraması başlatan araçları deneme için çalıştırma (`gelistirici-bilgisi.py`, `github-trend.py`, `populer-tarama.py`, `konu-takip.py`, `arsiv-guncelle.py`, `kaynak-cek.py`, `site-takip.py`); davranışı testte sahte veriyle sına.
 - `programlar.json` elle biçimlidir: yalnız hedefli metin düzenlemesi.
 - Kullanıcının projelerine, genel klasörlere, ayar ve izin dosyalarına dokunmazsın; testler geçici klasörde çalışır.
 - Araç bir güvenlik kilidini gevşetiyorsa (onaysız yazma, `--zorla` ile geçilebilen yeni hata, genel klasöre yazma) değişikliği yapma, raporla.

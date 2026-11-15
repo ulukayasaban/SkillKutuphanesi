@@ -303,6 +303,9 @@ def rapor_uret(kok, hedef_turu, hedef, neden=None, github=False, bugun=None, gh=
     # ---------------------------------------------------------------- 5. GitHub
     if github and tip == "T7":
         dikkat.append("yerel kaynak (T7, kendi/): GitHub'da yok, --github atlandı; çıkarmak kullanıcının kendi skillerini kütüphaneden düşürür, kendi/ klasörü ayrıca silinmez")
+    elif github and tip == "T8":
+        dikkat.append("yerel kaynak (T8, site/): GitHub'da yok, --github atlandı; çıkarmak siteden alınan skilleri kütüphaneden düşürür, "
+                      "site/ klasörü ve site-takip.json kaydı ayrıca silinmez (kayıt kalırsa dogrula uyarır)")
     elif github:
         gh = gh or _gh_calistir
         if listeler is None:

@@ -531,6 +531,39 @@ def tam_ozet_oku(cikti, bugun):
                    dikkat=[satir] if gun > ESIK_DAL else [])
 
 
+def site_takip_kontrol(kok, bugun):
+    """notlar/site-takip.md ilk satırındaki yorum JSON'u (araclar/site-takip.py yazar; ağsız okunur, K-57).
+    DEĞİŞTİ / YENİ İÇERİK varsa karar; ERİŞİLEMEDİ varsa dikkat (kaynak KAYIP sayılmaz); rapor 45 günden eskiyse dikkat."""
+    yol = Path(kok) / "notlar" / "site-takip.md"
+    if not (Path(kok) / "site-takip.json").exists() and not yol.exists():
+        return kontrol("site-takip", "temiz", ["Site skili yok"])
+    ilk = (metin_oku(yol, 1) or "").strip()
+    m = re.match(r"<!-- site-takip: (\{.*\}) -->$", ilk)
+    if not m:
+        return kontrol("site-takip", "temiz", ["Site takibi raporu henüz yok (python3 araclar/site-takip.py; aylık zincir de çalıştırır)"])
+    try:
+        d = json.loads(m.group(1))
+        z = datetime.fromisoformat(d["zaman"]).date()
+        say = d["sayilar"]
+        degisti, yeni, erisilemedi = int(say.get("DEĞİŞTİ", 0)), int(say.get("YENİ İÇERİK", 0)), int(say.get("ERİŞİLEMEDİ", 0))
+    except (ValueError, KeyError, TypeError):
+        return kontrol("site-takip", "temiz", ["Site takibi raporu okunamadı (notlar/site-takip.md)"])
+    gun = (bugun - z).days
+    satir = (f"Site takibi {z.isoformat()} ({gun} gün önce): DEĞİŞTİ {degisti} · YENİ İÇERİK {yeni} · "
+             f"ERİŞİLEMEDİ {erisilemedi} · AYNI {say.get('AYNI', 0)}")
+    karar, dikkat = [], []
+    if degisti or yeni:
+        adlar = ", ".join((d.get("degisen") or [])[:ADAY_GOSTER])
+        karar.append(f"Site takibi ({z.isoformat()}): {degisti} dosya değişti, {yeni} yeni içerik ({adlar}); siteden alınan skill "
+                     "güncellensin mi? (notlar/site-takip.md, rehber/03 B3; onaysız güncellenmez)")
+    if erisilemedi:
+        dikkat.append(f"site takibi: {erisilemedi} adrese ulaşılamadı ({', '.join((d.get('erisilemeyen') or [])[:3])}); "
+                      "geçici olabilir, sonraki ay yeniden denenir (kaynak KAYIP sayılmaz)")
+    if gun > ESIK_RAPOR:
+        dikkat.append(f"site takibi raporu {gun} gün eski (python3 araclar/site-takip.py)")
+    return kontrol("site-takip", "dikkat" if dikkat else "temiz", [satir] + dikkat, karar, dikkat)
+
+
 # ------------------------------------------------------------------ birleştirme ve çıktılar
 def birlestir(kontroller, bugun, kok, hizli):
     karar_ham, say_sustur = [], 0
@@ -667,7 +700,7 @@ def calis(a):
         ihlal_k.append(satir)
     extra = []
     dk = damga_kontrol(kok, bugun)
-    extra += [dk, dal_kontrol(kok, bugun)]
+    extra += [dk, dal_kontrol(kok, bugun), site_takip_kontrol(kok, bugun)]
     if hizli:
         if not any(k["ad"] == "git-durum" and k["calisti"] for k in kontroller):
             extra.append(yerel_git(kok))

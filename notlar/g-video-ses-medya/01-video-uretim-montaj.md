@@ -419,7 +419,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 2715 KB (SKILL.md 23.7 KB, yük orta) · **Bağımlılık:** Lisans PolyForm Noncommercial 1.0.0: yalnızca ticari olmayan kullanım serbest. ffmpeg, node ve Python 3 ister; seslendirme için Kokoro (~/.cache/kokoro/venv altına kurulur) ve faster-whisper.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (urun-tanitim-filmi grubunda birincil). Tek konulu uzman repo; hareket kütüphanesi (lib/motion.js), 12 betik, ritim ve süreklilik ölçümü, 7 referans belgesi. Yerel ve ücretsiz çalışır. Çalıştırma testi yapılmadı. DİKKAT: lisans PolyForm Noncommercial 1.0.0 (yalnızca ticari olmayan kullanım); GitHub lisansı tanımadığı için kayıtta NOASSERTION görünür. Örnek filmler ve GIF'ler (cases/, gallery/, assets/) arşive alınmadı.
 
-### openmontage  ·  yerel/kendi @ 995183e  ·  puan 73 (B)
+### openmontage  ·  yerel/kendi @ 3c8d08e  ·  puan 73 (B)
 
 - **Ne yapar:** OpenMontage video stüdyosuna giriş skili: video isteğini bilgisayardaki OpenMontage kurulumuna yönlendirir. Önce program kılavuzunu (AGENT_GUIDE.md) okutur, venv python'u ve ffmpeg yolunu içeren komut kalıbını ve ön kontrolü verir, ücretsiz yerel yolu (stok görüntü, Piper Türkçe seslendirme, yerel araçlar) anlatır, bilinen tuzakları ve sabit paket sürümlerini yazar; /backlot, /ink-art, /animated-drawing, /reel isteklerini programın kendi komutlarına yönlendirir.
 - **Ne zaman:** Video üretimi, montaj, explainer, seslendirme, altyazı, YouTube indirme/transkript, arka plan silme, upscale gibi işler OpenMontage ile yapılacaksa. · **Ne zaman değil:** OpenMontage kurulu değilse ya da iş HyperFrames/Remotion ile tek başına kurulabilecek kısa bir kompozisyonsa (HyperFrames skilleri yeterli).

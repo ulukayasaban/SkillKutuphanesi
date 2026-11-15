@@ -18,6 +18,7 @@ Kullanım:
   python3 araclar/kaynak-cek.py                  # tümü
   python3 araclar/kaynak-cek.py --repo owner/ad  # tek repo
   python3 araclar/kaynak-cek.py --repo yerel/kendi  # yerel kaynak (T7, kendi/ klasörü): ağ kullanmaz
+  python3 araclar/kaynak-cek.py --repo yerel/site   # siteden alınan skiller (T8, site/ klasörü): ağ kullanmaz
   python3 araclar/kaynak-cek.py --atla owner/ad[,owner/ad]  # erişilemeyen kaynağı atla (arşiv kopyası korunur; çıkış 0)
 """
 import argparse
@@ -31,10 +32,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GECICI, KAYNAKLAR, KOK, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
-                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi, yerel_agac, yerel_commit)
+                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi, yerel_agac, yerel_commit, ARSIVLENEN_TIPLER, YEREL_TIPLER)
 
-# T7 = yerel kaynak (kullanıcının kendi skilleri, kütüphane içindeki kendi/ klasörü): GitHub'a hiç sorulmaz, ağ kullanılmaz.
-ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4", "T7")
+# T7 = yerel kaynak (kullanıcının kendi skilleri, kendi/), T8 = siteden alınan skiller (site/): GitHub'a hiç sorulmaz, ağ kullanılmaz.
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
                 r"^\.agents/skills/", r"^\.codex/skills/"]
 CLAUDE_YOL = r"^(.*/)?\.claude/skills/"
@@ -271,7 +271,7 @@ def main():
             continue
         kimlik = kayit.get("kimlik") or repo.replace("/", "__")
         try:
-            if repo not in repo_sha and kayit["tip"] == "T7":  # yerel kaynak: dosya ağacı diskten, commit içerikten türetilir
+            if repo not in repo_sha and kayit["tip"] in YEREL_TIPLER:  # yerel kaynak: dosya ağacı diskten, commit içerikten türetilir
                 yerel_kok = KOK / kayit["yerel"]
                 if not yerel_kok.is_dir():
                     sys.exit(f"HATA: {repo} yerel klasörü yok: {kayit['yerel']}")
@@ -326,7 +326,7 @@ def main():
             git_isler.append((p, hedef_kok / "_bilesen" / p, None))
             manifest["bilesenler"].append({"repo": repo, "kimlik": kimlik, "commit": sha, "yol": p,
                                           "yerel": str((hedef_kok / "_bilesen" / p).relative_to(GECICI))})
-        if govde.get("_yerel"):  # yerel kaynak (T7): dosyalar kendi/ klasöründen kopyalanır; boyut sınırı listelemede uygulandı
+        if govde.get("_yerel"):  # yerel kaynak (T7/T8): dosyalar kendi/ ya da site/ klasöründen kopyalanır; boyut sınırı listelemede uygulandı
             sonuclar = []
             for tam, hedef, alt in git_isler:
                 hedef.parent.mkdir(parents=True, exist_ok=True)

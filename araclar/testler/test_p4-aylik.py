@@ -842,7 +842,8 @@ def t44_cikti_koruma_ve_hizli_yonlendirme():
 
 # ------------------------------------------------------------------ C: aşama 2 — --aylik zinciri
 ZINCIR_ARACLAR = ["gelistirici-bilgisi", "github-trend", "populer-tarama", "konu-takip", "kaynak-cek", "arsiv-yerlestir", "yol-tara",
-                  "program-denetim", "kapsam-denetimi", "katalog-uret", "skill-readme", "skill-calistir", "dogrula", "github-skill-listesi"]
+                  "program-denetim", "kapsam-denetimi", "katalog-uret", "skill-readme", "skill-calistir", "dogrula", "github-skill-listesi",
+                  "site-takip"]
 
 
 def zincir_kutuphane(repolar=("a/b", "c/d")):
@@ -888,6 +889,7 @@ def t45_aylik_tam_zincir():
     assert sh(k, "status", "--porcelain").stdout == "" and not (k / ".guncelleme-kilidi").exists()
     assert dal in sh(k, "branch", "--list", "guncelleme/*").stdout
     assert "--atla c/d" in (k / ".isaret" / "kaynak-cek.arg").read_text()
+    assert isaret(k, "site-takip") and (k / ".isaret" / "site-takip.arg").read_text() == ""  # K-57: zincir site takibini çalıştırır
     assert "c/d" in sh(k, "show", f"{dal}:notlar/guncelleme-gecmisi.md").stdout  # tarihçe kaydında atlanan kaynak
     d = stamp(k)
     assert d["sonuc"] == "tamam" and d["dal"] == dal and d["atlanan_kaynaklar"] == ["c/d"] and d["ozet_durumu"] in ("temiz", "dikkat", "sorun")

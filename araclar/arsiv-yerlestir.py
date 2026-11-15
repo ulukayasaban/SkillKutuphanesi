@@ -21,7 +21,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter,  # noqa: E402
                    frontmatter_onar, frontmatter_teshis, global_durum, symlink_taslaklari,
-                   taslak_baglantilarini_cevir, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu)
+                   taslak_baglantilarini_cevir, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu,
+                   ARSIVLENEN_TIPLER, YEREL_KLASOR, YEREL_TIPLER, site_gelistirici, site_kayitlari, yerel_gelistirici)
 
 KURALLAR = KOK / "kategori-kurallari.json"
 GELISTIRICILER = KOK / "gelistiriciler.json"
@@ -223,14 +224,36 @@ def ucret_belirle(s, tablo, kok_arsiv=None):
     return "ucretsiz", "", "otomatik"
 
 
+def gelistirici_sec(repo, tip, kaynak_yol, gelistiriciler, site, kaynak=None):
+    """Skill'in geliştirici kaydı. GitHub kaynağı: gelistiriciler.json. Yerel kaynak (T7/T8) kaydı henüz yoksa ağsız taban
+    (güven parçası başka bir yerel kaynağın GitHub'sız ölçümünden; lisans/resmî parçası düzeltilir). T8: sahip ve lisans skill
+    başına site-takip.json'dan (site_gelistirici; ortak kayıt değişmez)."""
+    gel = gelistiriciler.get(repo)
+    if gel is None and tip in YEREL_TIPLER:
+        gel = yerel_gelistirici(kaynak or {"tip": tip})
+        taban = next((v for r, v in sorted(gelistiriciler.items()) if r.startswith("yerel/") and v.get("guven")), None)
+        if taban:
+            gel = dict(site_gelistirici(taban, {"sahip": gel["sahip"], "lisans": gel["lisans"], "resmi_kaynak": gel["resmi_kaynak"]}),
+                       **{a: gel[a] for a in ("sahip", "aciklama", "ana_sayfa", "son_guncelleme", "olusturulma")})
+    if tip == "T8":
+        gel = site_gelistirici(gel, site.get(kaynak_yol))
+    return gel
+
+
 def kaynak_md(k):
+    yerel = k.get("tip") in YEREL_TIPLER
+    kl = YEREL_KLASOR.get(k.get("tip"), "kendi")
+    sk = k.get("_site") or {}
+    kaynak = (f"- **Kaynak:** web sitesi {sk.get('site') or '?'} (sahip {sk.get('sahip') or '?'}); kütüphanede yerel kaynak `site/`, "
+              "GitHub'da yok. Site değişikliğini `araclar/site-takip.py` bildirir (kayıt `site-takip.json`)" if k.get("tip") == "T8"
+              else "- **Kaynak:** yerel, kullanıcının kendi skili (kütüphane içindeki `kendi/` klasörü; GitHub'da yok)" if yerel
+              else f"- **Kaynak repo:** https://github.com/{k['repo']}")
     satirlar = [
         f"# {k['ad']}", "",
         "> Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.", "",
-        (f"- **Kaynak:** yerel, kullanıcının kendi skili (kütüphane içindeki `kendi/` klasörü; GitHub'da yok)"
-         if k.get("tip") == "T7" else f"- **Kaynak repo:** https://github.com/{k['repo']}"),
-        (f"- **Klasör:** `kendi/{k['kaynak_yol']}`" if k.get("tip") == "T7" else f"- **Repo içindeki yol:** `{k['kaynak_yol'] or '(kök)'}`"),
-        (f"- **Yerel sürüm kimliği:** `{k['commit']}` (kendi/ içeriğinden türetilir)" if k.get("tip") == "T7"
+        kaynak,
+        (f"- **Klasör:** `{kl}/{k['kaynak_yol']}`" if yerel else f"- **Repo içindeki yol:** `{k['kaynak_yol'] or '(kök)'}`"),
+        (f"- **Yerel sürüm kimliği:** `{k['commit']}` ({kl}/ içeriğinden türetilir)" if yerel
          else f"- **Commit:** `{k['commit']}`"),
         f"- **Lisans:** {k['lisans']}",
         f"- **Geliştirici:** {k['gelistirici'].get('sahip', '?')} ({k['gelistirici'].get('sahip_tipi', '?')})"
@@ -347,6 +370,8 @@ def main():
     kural = json_oku(KURALLAR, {})
     kategoriler = json_oku(KATEGORILER)
     gelistiriciler = json_oku(GELISTIRICILER, {"repolar": {}})["repolar"]
+    site = site_kayitlari(KOK)  # T8 skillerinin sahip/lisans/site bilgisi (site-takip.json)
+    kaynak_kayit = {k["repo"]: k for k in _ayar0["repolar"]}
     gecerli_kat = {f"{a}/{k}" for a, v in kategoriler["alanlar"].items() for k in v["kategoriler"]}
     eski_liste = json_oku(REGISTRY, {"skiller": []})["skiller"]
     # Elle inceleme alanları KAYNAĞA (repo + repo içi yol) bağlıdır; öncelik değişip id kaysa bile doğru skill'e gider
@@ -395,7 +420,10 @@ def main():
         # Araçların göreceği hali (yorum arkasındaki frontmatter başa alınmış) okunur; teşhis orijinal metinden yapılır
         fm = frontmatter(frontmatter_onar(metin, k["ad"])[0])
         tum_metin = metin  # teknoloji tespiti sadece SKILL.md'den (referans dosyaları gürültü yapıyor)
-        gel = gelistiriciler.get(k["repo"])
+        gel = gelistirici_sec(k["repo"], k["tip"], k["kaynak_yol"], gelistiriciler, site, kaynak_kayit.get(k["repo"]))
+        if k["tip"] == "T8":
+            k["_site"] = site.get(k["kaynak_yol"]) or {}
+            k["lisans"] = k["_site"].get("lisans") or "belirtilmemiş"
         adlar = "|".join(re.escape(x) for x in {k["klasor_adi"].split("~")[0], k["ad"]})
         yol_bag = sorted(set(re.findall(r"\.(?:claude|agents|codex)/skills/(?:" + adlar + r")\b", metin)))
         ana_hash = klasor_hash(hedef)
@@ -460,7 +488,7 @@ def main():
     cekilen_repolar = {m["repo"] for m in manifest["kayitlar"]}
     yeni_kaynaklar = {(x["repo"], x["kaynak_yol"]) for x in skiller}
     kullanilan_id = {x["id"] for x in skiller}
-    arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4", "T7")}
+    arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ARSIVLENEN_TIPLER}
     korunan_indirilmeyen = set()
     # Kullanıcı kararıyla arşivden çıkarılanlar (ör. emekli eski sürümler): korunmaz, kayıp kilidine takılmaz
     _ayar = json_oku(KOK / "kaynaklar.json")
@@ -476,7 +504,7 @@ def main():
             # Bu çalıştırmada İNDİRİLMEMİŞ kaynak (ör. `kaynak-cek.py --repo X` ile tek repo eklendi):
             # kayıt ve arşiv kopyası OLDUĞU GİBİ korunur; aksi hâlde kısmi çalıştırma tüm arşivi silerdi.
             korunan_indirilmeyen.add(s["id"])
-        elif s["repo"] in cekilen_repolar and s.get("tip") in ("T1", "T2", "T3", "T4", "T7"):
+        elif s["repo"] in cekilen_repolar and s.get("tip") in ARSIVLENEN_TIPLER:
             s["kaynak_durumu"] = "kaynakta-kaldirildi"
             s.setdefault("kaldirilma_tarihi", bugun)
             s.setdefault("kaldirildigi_commit", next(m["commit"] for m in manifest["kayitlar"] if m["repo"] == s["repo"]))
@@ -626,8 +654,11 @@ def main():
             s["trend"] = t
         else:
             s.pop("trend", None)
-        if gelistiriciler.get(s["repo"]):  # indirilmeyen (korunan) kayıtlar da güncel geliştirici bilgisini alsın
-            s["gelistirici"] = gelistiriciler[s["repo"]]
+        g = gelistirici_sec(s["repo"], s.get("tip"), s.get("kaynak_yol"), gelistiriciler, site, kaynak_kayit.get(s["repo"]))
+        if g:  # indirilmeyen (korunan) kayıtlar da güncel geliştirici bilgisini alsın
+            s["gelistirici"] = g
+        if s.get("tip") == "T8" and site.get(s.get("kaynak_yol")):
+            s["lisans"] = site[s["kaynak_yol"]].get("lisans") or "belirtilmemiş"
         s["degerlendirme"] = degerlendir(s, s.get("gelistirici"))  # trend ve korunan kayıtlar dahil hepsi güncel puanla
     skiller.sort(key=lambda s: (s["kategori"], s["id"]))
     # Güvenlik kilidi: önceki registry'deki kaynakların hepsi ya yeniden yerleşmiş ya da korunmuş olmalı.

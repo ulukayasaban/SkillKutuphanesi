@@ -4,7 +4,7 @@
 
 - **Kaynak:** yerel, kullanıcının kendi skili (kütüphane içindeki `kendi/` klasörü; GitHub'da yok)
 - **Klasör:** `kendi/antigravity-gorsel`
-- **Yerel sürüm kimliği:** `995183e558a508bae0c52b7eddda25cd8d088bab` (kendi/ içeriğinden türetilir)
+- **Yerel sürüm kimliği:** `3c8d08e184e1df176c9c10ef5c3766c20563e74c` (kendi/ içeriğinden türetilir)
 - **Lisans:** Kendi (özel)
 - **Geliştirici:** kullanıcı (kisi)
 - **Arşive alınma:** 2026-11-15

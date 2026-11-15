@@ -139,6 +139,40 @@ Açıklama: `kendi/README.md`. Bu kaynak GitHub'a sorulmaz, ağ gerekmez; kaybol
   (rehber/11); klasör adı skil adından farklıysa (`nlm-skill` için `data`) kartta `skill_klasorleri` eşlemesi yazılır ve bağ
   `skill-ekle.py <proje> --program-skill nlm:nlm-skill` ile verilir (`nlm` kartı artık vardır; `kendi/nlm-skill` anlık kopyasının yerini bu bağ alır).
 
+- **Yalnız kullanıcının kendi yazdığı skiller** `kendi/` altına girer. Bir web sitesinden alınan (kullanıcının yazmadığı, GitHub'da da
+  olmayan) skill buraya konmaz: B3.
+
+## B3) Web sitesinden alınan skiller (yerel kaynak `site/`, K-57)
+GitHub'da bulunmayan, kullanıcının sitesini verdiği skiller `site/<ad>/` klasöründe ve kendi yerel kaynağında durur: `kaynaklar.json` →
+`yerel/site` (tip **T8**, `yerel: "site"`). `kendi/`'ye konmaz (orası yalnız kullanıcının kendi yazdıkları; `site/README.md`, `kendi/README.md`).
+T7 gibi GitHub'a sorulmaz, ağ gerekmez, KAYIP sayılmaz; arşiv, kategori, ücret ve inceleme zinciri aynıdır.
+- **Takip kaydı ZORUNLU:** kökteki `site-takip.json` → `skiller` içinde skill başına bir kayıt: `skill`, `kaynak: "yerel/site"`,
+  `yerel: "site/<ad>"`, `site`, `sahip` (gerçek sahip; "Kendi (özel)" ya da "kullanıcı" yazılmaz), `sahip_tipi`, `sahip_url`, `lisans`
+  (yazmıyorsa `belirtilmemiş`), `resmi_kaynak`, `kayit_tarihi` ve `dosyalar`. Her dosya: `ad`, `url` (https), `tur` (`asil` gerçek dosya,
+  `yonlendirme` sitenin yönlendirme sayfası), `bayt`, `sha256` (indirilen baytların özeti), `karsilastirma` (`tam`: yerel dosya = site dosyası;
+  `onek`: yerel dosya site dosyasıyla başlar, kütüphanenin eklediği bölüm sonda), `yerel_dosya` (skill klasörüne göreli; kütüphanede
+  tutulmayan sayfalarda yok), istenirse `etkiler` (sayfa değişince bakılacak yerel dosyalar) ve `not`. Kaydı olmayan `site/<ad>/`, `kendi/`
+  altını gösteren kayıt ya da bozuk yapı `dogrula.py`'de **HATA** verir; yerel kopyanın kayıttaki özetle uyuşmaması UYARI'dır.
+  Sahip ve lisans kayda `arsiv-yerlestir.py` tarafından buradan alınır (değerlendirme puanı gerçek lisansla hesaplanır).
+- **Yeni site skili eklemek:** dosyaları indir (yalnız GET), `site/<ad>/` altına koy (SKILL.md + yanındakiler), `site/<ad>/KAYNAK.md`'ye
+  kaynak notunu yaz (site, yazar, lisans, indirme tarihi, kütüphanenin yaptığı değişiklikler, güvenlik notu), `site-takip.json`'a kaydı ekle
+  (`python3 araclar/site-takip.py --kayit-denetle` 0 hata), kategori kuralı `{"repo": "yerel/site", "desen": "^<ad>$", ...}`, ücret satırı (A2 ek).
+  Sonra `python3 araclar/kaynak-cek.py --repo yerel/site` (ağ yok) → `python3 araclar/arsiv-yerlestir.py` → `kapsam-denetimi.py` → `dogrula.py`.
+  Kullanıcı onayı olmadan eklenmez; lisansı belirtilmemişse onay kaydında `lisans_onay` gerekir (A4).
+- **Site değişti mi:** `python3 araclar/site-takip.py` (aylık zincir de çalıştırır) her adres için AYNI / DEĞİŞTİ / YENİ İÇERİK /
+  ERİŞİLEMEDİ der; rapor `notlar/site-takip.md` (git'e girmez), aylık özet tarih ve değişen sayısını gösterir, değişikliği "karar bekleyenler"e
+  koyar. Yönlendirme adresi gerçek dosyaya dönüşürse YENİ İÇERİK olur. Ağ yoksa ya da site düştüyse yalnız ERİŞİLEMEDİ; kaynak KAYIP sayılmaz.
+  Araç `site/`, `kendi/`, `arsiv/` ve `site-takip.json`'a hiç yazmaz.
+- **Güncelleme (her seferinde kullanıcı onayıyla, elle):** (1) `python3 araclar/site-takip.py --indir` değişen dosyaları kütüphane dışına,
+  `~/Documents/Claude/deneme/site-takip-<tarih>/<ad>/` altına indirir (yalnız oku, çalıştırma); (2) farkı oku, güvenlik taraması yap
+  (gizli değer, sistem dosyasına yazan komut, genel klasöre kurulum), kullanıcıya özetle; (3) onay gelirse `site/<ad>/` dosyalarını güncelle
+  (önekli dosyada kütüphanenin eklediği son bölümü koru), `KAYNAK.md` tablosunu ve `site-takip.json` özetlerini (`bayt`, `sha256`,
+  `kayit_tarihi`) yenile; (4) B2'deki işleme sırası (`kaynak-cek.py --repo yerel/site` → `arsiv-yerlestir.py` → kontroller), sonra
+  `site-takip.py` yeniden AYNI demeli; (5) projelerde `skill-ekle.py <proje> --durum`.
+- **Sitede GitHub reposu çıkarsa:** skill normal kaynak olarak A1..A9 ile eklenir; `site/<ad>/` kopyası emekli olur (H), takip kaydı kaldırılır.
+- **Taşıma (`kendi/` → `site/`):** klasör taşınır, registry kaydının `repo`/`tip` alanı yeni kaynağa çevrilir ve iki yerel kaynak yeniden
+  çekilip yerleştirilir; kimlik, kategori, ücret ve inceleme alanları korunur (2026-11-15 `stil`, K-57).
+
 ## C) Kategori, rol, profil eklemek
 - **Kategori:** `kategoriler.json` → ilgili alan → `"NN-ad": "açıklama"`; kurallara desen ekle; `arsiv-yerlestir.py`.
 - **Rol:** `roller/<rol>.json` (`ad`, `aciklama`, `gorev`, `cekirdek`, `opsiyonel`). Çekirdek ≤ 6 skill önerilir.
