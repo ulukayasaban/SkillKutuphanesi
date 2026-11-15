@@ -1,6 +1,6 @@
 # Program Denetimi
 
-> `araclar/program-denetim.py` üretir · 2026-11-12 · salt okuma; güncelleme kullanıcı onayıyla `rehber/11-program-yonetimi.md` adımlarıyla yapılır.
+> `araclar/program-denetim.py` üretir · 2026-11-15 · salt okuma; güncelleme kullanıcı onayıyla `rehber/11-program-yonetimi.md` adımlarıyla yapılır.
 
 | Program | Repo | Kütüphanedeki sürüm | GitHub son sürüm | Durum | Kaynak kopyası |
 |---|---|---|---|---|---|
@@ -10,8 +10,8 @@
 
 | Program | Tür | Karttaki | Kurulu | Son | Durum | Yerel değişiklik | Sabit sürümler |
 |---|---|---|---|---|---|---|---|
-| hyperframes | npm-global | 0.9.37 | 0.9.37 | 0.9.38 | YENİ SÜRÜM VAR | - | - |
-| nlm | uv-tool | 0.15.8 | 0.15.8 | 0.16.2 | YENİ SÜRÜM VAR | - | - |
+| hyperframes | npm-global | 0.9.37 | 0.9.37 | 0.9.52 | YENİ SÜRÜM VAR | - | - |
+| nlm | uv-tool | 0.16.5 | 0.16.5 | 0.16.5 | güncel | - | - |
 | openmontage | git-checkout | fecb9a1e | fecb9a1e | fecb9a1e | güncel | 7 değişen, 5 izlenmeyen | 11/11 |
 
 ## Kart şeması
@@ -25,10 +25,6 @@ tüm kartlar geçerli
 - hyperframes · HYPERFRAMES_NO_UPDATE_CHECK · 3/3
 - hyperframes · HYPERFRAMES_NO_TELEMETRY · 3/3
 - openmontage · HYPERFRAMES_SKIP_SKILLS · 3/3
-
-## Dikkat
-
-- nlm · kırıcı adayı: minor/major sürüm değişiyor (0.15.8 -> 0.16.2)
 
 ## Programla gelen skiller (bağlar)
 

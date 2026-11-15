@@ -245,6 +245,23 @@
       ],
       "silme_gun": 30,
       "not": "ayar/zshrc.yedek kabuk dosyasının kopyasıdır ve gizli değer içerebilir; içi açılmaz, yazdırılmaz."
+    },
+    {
+      "kimlik": "nlm-2026-11-15",
+      "yol": "~/Documents/Claude/yedek/nlm-2026-11-15",
+      "tur": "program",
+      "ne": "nlm 0.15.8 → 0.16.5 güncellemesinden önce: uv tool paketi (paket/), ~/.notebooklm-mcp-cli/config.toml, düzeltilmeden önceki ~/.local/share/nlm-koleksiyon/nlm_koleksiyon.py; KAYIT.json (onceki.surum 0.15.8).",
+      "tarih": "2026-11-15",
+      "geri_yukleme": "Kullanıcı onayıyla: uv tool install --force --python 3.12 notebooklm-mcp-cli==0.15.8 (PyPI kaldırdıysa paket/ klasörü ~/.local/share/uv/tools/notebooklm-mcp-cli yerine konur); nlm-koleksiyon/nlm_koleksiyon.py eski yerine cp -p ile (0.15.8'e dönülürse gerekmez, yeni kalıp eski adları da tanır).",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "KAYIT.json",
+        "paket",
+        "config.toml",
+        "nlm-koleksiyon/nlm_koleksiyon.py"
+      ],
+      "silme_gun": 30,
+      "not": "Kimlik, profil, Chrome profili ve installation.json yedekte yok."
     }
   ]
 }

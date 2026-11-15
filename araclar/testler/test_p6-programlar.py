@@ -562,7 +562,7 @@ test("20. deneme için disk az -> UYARI", any(x[0] == "UYARI" and "yer az" in x[
 
 # 21. uçtan uca npm kartı
 ev, kok, kart, yol = npm_ortam("e2e")
-yedek_yap(ev, "e2e", zorunlu=["veri"], onceki={"surum": "1.2.0"})
+yedek_yap(ev, "e2e", tarih=__import__("datetime").date.today().isoformat(), zorunlu=["veri"], onceki={"surum": "1.2.0"})   # taze yedek: bugünün tarihi (sabit tarih tazelik_gun sonra eskir)
 ARGS = ["--oncesi", "e2e", "--kart", str(yol), "--kok", str(kok), "--ev", str(ev)]
 with yama(npm_son_surum=lambda *a, **k: "1.3.0", gh_api=gh_taslak({"o/e2e": {"full_name": "o/e2e"}})):
     kod, o, e = calistir(ARGS)
