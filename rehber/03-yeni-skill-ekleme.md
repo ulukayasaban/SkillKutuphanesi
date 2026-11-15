@@ -14,6 +14,10 @@ A1  Başlangıç ve bul. `git status --short` BOŞ olmalı; değilse DUR ve kull
     `python3 araclar/dogrula.py --github | tail -3` -> "N skill · H hata · U uyarı" satırını not et (A7 ile karşılaştırılacak).
     `python3 araclar/github-skill-listesi.py` (YENİ / AD DEĞİŞMİŞ) ve `python3 araclar/github-trend.py --aday`. AD DEĞİŞMİŞ yeni kaynak DEĞİLDİR (rehber/09 'Repo adı değişirse').
     Karar kutusu (yukarıda): skill mi, program mı, ikisi mi. Aday kararı: bölüm F.
+    K-58 KAPISI (ilk bakış): repo saldırgan güvenlik / sızma testi (pentest, exploit, C2, saldırgan recon) ya da ikili kullanımlı, zararlı kullanım
+    riski taşıyan bir repo mu? Evetse bu akış BURADA DURUR: A2..A9 çalıştırılmaz, kaynak kaydı ve kategori açılmaz. Kullanıcıya bildir; onaylarsa
+    yalnız "Güvenlik ve Riskli Skiller" listesine yıldızlanır ve `konu-takip.py --karar <repo> reddedildi "K-58"` yazılır (notlar/guvenlik-riskli-skiller.md).
+    Savunma amaçlı güvenlik skilleri (sağlamlaştırma, denetim, açık/bağımlılık taraması) bu kapıya takılmaz.
 A2  İncele, tablo yap (kullanıcıya gösterilecek): ne yapıyor, kaç SKILL.md ve nerede (gh api ... git/trees), LİSANS (riskli sayılanlar:
     belirtilmemiş / NOASSERTION / AGPL / ticari-olmayan; tabloya kırmızı yaz, dogrula.py de uyarı verir), son güncelleme, ücret, trend, çakışma kontrolü (aynı ad / aynı iş / repo içi çoklu sürüm /
     aynı adlı kendi skill; genel klasörler 2026-11-12'de boşaltıldı: "global'de aynı ad" maddesi yalnız orada bir şey yeniden belirirse önemlidir), GÜVENLİK OKUMASI (en az bir SKILL.md ve her betik
@@ -101,7 +105,7 @@ Alanlar:
 **Kategori kuralı gerekiyorsa** `kategori-kurallari.json` → `ad_kurallari` başına ekle (ilk eşleşen kazanır).
 Yeni repoya ait kurala `"repo": "owner/ad"` yaz; başka repodaki aynı adlı skill etkilenmez. Repo geneli için `repo_varsayilan`.
 Ekledikten sonra eski kayıtların kategorisi/durumu değişmiş mi bak (git HEAD'deki registry ile karşılaştır).
-Yeni bir konu alanı gerekiyorsa `kategoriler.json`'a alan/kategori ekle.
+Yeni bir konu alanı ya da kategori gerekiyorsa kendiliğinden ekleme: bölüm C'deki "Yeni kategori kapısı"na uy.
 
 **Prompt 11 uyumu (zorunlu, her eklemede):** Başka projelerdeki agent'lar `promptlar/11` ile bu kütüphaneden seçim yapar; prompt
 sabit bilgi içermez, şu yapılardan okur: `registry.json` (puan, ücret, uyum, yol), `gelistiriciler.json` (`guven`),
@@ -178,7 +182,11 @@ T7 gibi GitHub'a sorulmaz, ağ gerekmez, KAYIP sayılmaz; arşiv, kategori, ücr
   çekilip yerleştirilir; kimlik, kategori, ücret ve inceleme alanları korunur (2026-11-15 `stil`, K-57).
 
 ## C) Kategori, rol, profil eklemek
-- **Kategori:** `kategoriler.json` → ilgili alan → `"NN-ad": "açıklama"`; kurallara desen ekle; `arsiv-yerlestir.py`.
+- **Yeni kategori kapısı (önce bu):** yeni üst alan ya da alt kategori YALNIZ kullanıcının açık onayıyla açılır. Önce var olan 40 kategoriye
+  sığıp sığmadığına bak (`kategoriler.json`); sığmıyorsa kullanıcıya önerilen ad, açıklama, hangi skillerin oraya gideceği ve neden mevcutlara
+  sığmadığıyla sor, onay gelmeden `kategoriler.json`/`kategori-kurallari.json`'a yazma. Saldırgan güvenlik / riskli repolar için kategori HİÇ
+  açılmaz (K-58). Ajanlar (özellikle düşük modelli olanlar) yeni kategoriyi kendi başına açmaz; öneriyi ana oturuma bırakır.
+- **Kategori (onaydan sonra):** `kategoriler.json` → ilgili alan → `"NN-ad": "açıklama"`; kurallara desen ekle; `arsiv-yerlestir.py`.
 - **Rol:** `roller/<rol>.json` (`ad`, `aciklama`, `gorev`, `cekirdek`, `opsiyonel`). Çekirdek ≤ 6 skill önerilir.
 - **Profil:** `profiller/<profil>.json` (`ad`, `baslik`, `roller`, `ek_skiller`).
 - Sonra `python3 araclar/dogrula.py` (var olmayan skill/rol adı HATA verir).

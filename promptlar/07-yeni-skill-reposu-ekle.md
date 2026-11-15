@@ -9,6 +9,8 @@ Yapay Zeka Skillleri listeme yeni repolar ekledim, kontrol et ve kütüphaneye d
 
 1. A1: git status temiz mi (değilse dur ve söyle); dogrula başlangıç sayısını not et; python3 araclar/github-skill-listesi.py (YENİ / AD DEĞİŞMİŞ) ve
    python3 araclar/github-trend.py --aday. AD DEĞİŞMİŞ yeni kaynak değildir (rehber/09). Program mı skill mi karar kutusuna bak.
+   K-58 kapısı: repo saldırgan güvenlik / sızma testi ya da ikili kullanımlı riskli bir repoysa DUR; kütüphaneye ekleme, kategori açma, bana bildir
+   (onaylarsam yalnız "Güvenlik ve Riskli Skiller" listesine yıldızlanır). Yeni kategori gerekirse kendin açma, bana sor.
 2. A2: Her yeni repo için incele ve bana tablo halinde göster: ne yapıyor, kaç SKILL.md ve nerede, lisans, son güncelleme,
    ÜCRET (ücretli = ücret ödemeden HİÇ kullanılamıyor; ücretli servis sadece bir seçenekse ya da ücretsiz katman varsa kısmen), GitHub trend durumu,
    güvenlik okuması (proje dışına yazma, ağdan kod indirme), Claude'a özgü araç gereksinimi, tip (T1–T6) ve kategori önerisi, ve program mı skill mı.

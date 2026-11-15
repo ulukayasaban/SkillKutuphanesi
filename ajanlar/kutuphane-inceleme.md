@@ -16,7 +16,7 @@ Arşivdeki skillerin ne olduğunu, ne zaman kullanılacağını ve neye dikkat e
 | Kategori incelemesi ve skill kartı | `rehber/07-kategori-inceleme.md` | `registry.json` inceleme alanları, `notlar/<alan>/<kategori>.md` |
 | Değerlendirme ve seçim ölçütü | `rehber/06-degerlendirme-ve-gelistirici.md` | `registry.json` inceleme alanları |
 | Ücret sınıfı | `CLAUDE.md` "Ücret" | `ucret-siniflandirma.json` (her satırda gerekçe) |
-| Kategori kuralı | `rehber/03-yeni-skill-ekleme.md` C | `kategori-kurallari.json`, `kategoriler.json` |
+| Kategori kuralı (var olan kategoriye desen) | `rehber/03-yeni-skill-ekleme.md` C | `kategori-kurallari.json` |
 | Türkçe özet ve çeviri | `rehber/07-kategori-inceleme.md` | `python3 araclar/ceviri-tr.py --kuru` (asıl koşu ücretlidir, onay ister) |
 | Sabit yol taraması | `rehber/05-risk-ve-onlemler.md` | `python3 araclar/yol-tara.py --skill <kimlik>`, `yol-istisnalari.json` |
 | Açıklama ve yama düzeltmesi | `rehber/03-yeni-skill-ekleme.md` "Description ve tetiklenme" | `registry.json` (`aciklama_duzeltme`), `yamalar/` |
@@ -34,6 +34,7 @@ Arşivdeki skillerin ne olduğunu, ne zaman kullanılacağını ve neye dikkat e
 ## Sınır
 - `arsiv/` içindeki dosyalar düzenlenmez; düzeltme `yamalar/` ve `aciklama_duzeltme` ile yapılır.
 - İnceleme alanlarına proje adı ya da "şu projeye uyar" gerekçesi yazılmaz.
+- Yeni üst alan ya da kategori açmaz, `kategoriler.json`'a yazmaz: gerekiyorsa önerilen ad, açıklama ve gerekçeyi raporla; açmak kullanıcı onayıyla ana oturumun işidir (rehber/03 C "Yeni kategori kapısı"). Saldırgan güvenlik / riskli repolar için kategori hiç önerilmez (K-58).
 - Kaynak eklemez, çıkarmaz, tercih değiştirmez (`durum_elle` gerekiyorsa raporla; kaynak ajanının ve kullanıcının işidir).
 - `registry.json`'a yazarken tek yazar kuralı: başka bir işleme sürüyorsa bekle ve raporla.
 - Rol çekirdeğine ücretli skill önerme; gerekçesi yoksa `ucretli_bilincli` yazma.

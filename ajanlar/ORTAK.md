@@ -13,7 +13,8 @@ Bu kurallar her kütüphane ajanı için geçerlidir. Kesin kurallar `CLAUDE.md`
 9. **Ortam:** macOS'ta `timeout` komutu yok. `grep` ugrep'tir (günlük dosyalarında `grep -a`). zsh eşleşmeyen glob'da hata verir (tırnak kullan). Tırnaksız heredoc içinde ters tırnak ya da `$(...)` kullanma. `araclar/kapsam-denetimi.py` yaklaşık 10 dakika sürer ve ağ kullanır; `araclar/test.py` yaklaşık 3 dakika sürer; test sürerken dosya düzenleme.
 10. **Kayıtlara proje adı yazılmaz** (`CLAUDE.md` kural 6). Proje bilgisi yalnız `projeler.json` ve `notlar/proje-kullanimi.md` içindedir.
 11. **Danışman (yalnız Claude):** bu projede danışman modeli Opus'tur (`.claude/settings.local.json` → `advisorModel`; K-54). Danışmana yalnız şu anlarda sor: onay gerektiren bir adımı rapora koymadan önce planın doğru olup olmadığını; aynı hata ikinci kez çıktığında; işi bitti demeden önce. Rutin denetim komutlarında ve çıktısı belli işlerde sorma; her danışma ek kullanım demektir. Danışmanın önerisi onay yerine geçmez. Codex'te danışman yoktur.
-12. **Rapor** (son mesajın; ana oturum okur, kullanıcı görmez; kısa ve ham veri):
+12. **Yeni kategori ve riskli repo:** hiçbir ajan yeni üst alan ya da kategori açmaz (`kategoriler.json`); gerekirse öneriyi raporla, açmak kullanıcı onayıyla ana oturumun işidir (`rehber/03` C "Yeni kategori kapısı"). Saldırgan güvenlik / ikili kullanımlı riskli bir repo görürsen işi durdur ve raporla: kütüphaneye alınmaz, kategori açılmaz (K-58, `notlar/guvenlik-riskli-skiller.md`).
+13. **Rapor** (son mesajın; ana oturum okur, kullanıcı görmez; kısa ve ham veri):
     - ne yaptın (bir iki cümle),
     - değişen dosyalar (`git status --short`),
     - kontrol sonuçları sayılarıyla (ör. "dogrula 0 hata 1 uyarı"),
