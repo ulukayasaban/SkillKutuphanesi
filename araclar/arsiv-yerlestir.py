@@ -41,8 +41,19 @@ TEKNOLOJI_DESENLERI = {
     "lenis": r"\blenis\b", "lottie": r"lottie", "webgl": r"webgl|glsl|shader", "css": r"\bcss\b",
     "python": r"\bpython\b|\.py\b|\bpip install", "node": r"\bnode(\.js)?\b|\bnpm\b|\bnpx\b", "playwright": r"playwright",
     "html": r"\bhtml\b", "canvas": r"\bcanvas\b", "obsidian": r"obsidian", "git": r"\bgit\b", "docker": r"docker",
-    "ffmpeg": r"ffmpeg", "remotion": r"remotion", "api-anahtari": r"api[_ -]?key|_API_KEY|token",
+    "ffmpeg": r"ffmpeg", "remotion": r"remotion", "api-anahtari": None,  # aşağıda API_ANAHTARI_DESENI
 }
+# Gerçek API anahtarı / erişim belirteci kullanımı. Çıplak "token" ARANMAZ: tasarım token'ı, LLM token sayısı, tokenizer, ödeme
+# token'ı, "`ease:` token" gibi metinler eşleşmesin. Büyük harf *_TOKEN ortam değişkeni harf duyarlıdır; ML özel token sabitleri
+# (DEFAULT_IMAGE_TOKEN, PAD_TOKEN...) dışarıda.
+API_ANAHTARI_DESENI = (
+    r"api[_ -]?key|_API_KEY"
+    r"|(?:access|bearer|auth|authentication|api|bot|service|sdk|privilege|scoped|github|gh|hf|hugging[_ -]?face|npm)[_\s-]?tokens?\b"
+    r"|(?-i:\b(?!\w*(?:IMAGE|PAD|EOS|BOS|UNK|MASK|SEP|CLS)_TOKEN\b)[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*_TOKEN\b)"
+    r"|--(?:with|expose)-token\b|\bbearer\b"
+    r"|\btokens?\b[^\n]{0,50}(?:environment variable|env var|环境变量)|(?:environment variable|env var|环境变量)[^\n]{0,50}\btokens?\b"
+)
+TEKNOLOJI_DESENLERI["api-anahtari"] = API_ANAHTARI_DESENI
 CLAUDE_OZEL_DESEN = (r"TodoWrite|AskUserQuestion|\bTask tool\b|subagent_type|\$\{CLAUDE_PLUGIN_ROOT\}|"
                      r"\bSkill tool\b|\.claude/(agents|commands|hooks|settings)|hooks\.json|/plugin\b|claude --")
 CLAUDE_FM_ALANLARI = {"when_to_use", "argument-hint", "arguments", "disable-model-invocation", "user-invocable",
@@ -64,6 +75,21 @@ def kurallari_uygula(kural, kayit):
         if re.search(k["desen"], ad, re.I):
             return k["kategori"]
     return kural.get("repo_varsayilan", {}).get(repo, "d-ai-otomasyon/04-skill-plugin-yazimi")
+
+
+def skill_bagimlilik_ozel(repolar):
+    """kaynaklar.json 'repolar' -> {(repo, kaynak_yol): metin}: kayıtlardaki 'skill_bagimlilik' {kaynak_yol: metin} alanları."""
+    return {(r["repo"], yol): metin for r in repolar for yol, metin in (r.get("skill_bagimlilik") or {}).items()}
+
+
+def skill_bagimliligi(k, ozel):
+    """Skill'in bağımlılık metni. Repo düzeyindeki 'bagimlilik' (manifestte) varsayılandır; kaynaklar.json kaydındaki
+    'skill_bagimlilik' {kaynak_yol: metin} o skill için onun yerine geçer (boş metin = bağımlılık yok). Registry ve KAYNAK.md
+    ikisi de bu değeri kullanır; registry'ye elle yazılan düzeltme bir sonraki çalışmada ezildiği için kalıcı yer burasıdır."""
+    anahtar = (k["repo"], k.get("kaynak_yol"))
+    if anahtar in ozel:
+        return ozel[anahtar] or None
+    return k.get("bagimlilik")
 
 
 def kisa_kaynak(repo):
@@ -372,6 +398,7 @@ def main():
     gelistiriciler = json_oku(GELISTIRICILER, {"repolar": {}})["repolar"]
     site = site_kayitlari(KOK)  # T8 skillerinin sahip/lisans/site bilgisi (site-takip.json)
     kaynak_kayit = {k["repo"]: k for k in _ayar0["repolar"]}
+    bag_ozel = skill_bagimlilik_ozel(_ayar0["repolar"])
     gecerli_kat = {f"{a}/{k}" for a, v in kategoriler["alanlar"].items() for k in v["kategoriler"]}
     eski_liste = json_oku(REGISTRY, {"skiller": []})["skiller"]
     # Elle inceleme alanları KAYNAĞA (repo + repo içi yol) bağlıdır; öncelik değişip id kaysa bile doğru skill'e gider
@@ -435,7 +462,7 @@ def main():
             "repo": k["repo"], "kaynak_yol": k["kaynak_yol"], "commit": k["commit"], "lisans": k["lisans"],
             "tip": k["tip"], "gizli": k["tip"] in GIZLI_TIPLER,
             "arsiv_tarihi": onceki.get("arsiv_tarihi") if onceki.get("commit") == k["commit"] else bugun,
-            "ust_skill": k.get("ust_skill"), "bagimlilik": k.get("bagimlilik"),
+            "ust_skill": k.get("ust_skill"), "bagimlilik": skill_bagimliligi(k, bag_ozel),
             "kopya_kaynaklar": k.get("kopya_kaynaklar", []), "ayna_sayisi": len(k["aynalar"]),
             "atlanan_dosyalar": k.get("atlanan_dosyalar", []),
             "aciklama": ((onceki.get("aciklama_duzeltme") or {}).get("description") or fm.get("description")

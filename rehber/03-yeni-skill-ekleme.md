@@ -88,7 +88,11 @@ Alanlar:
 - `kok_dosyalari`: SKILL.md repo kökündeyse sadece bu dosyaları al (ör. `["SKILL.md"]`). Repodaki diğer kodu indirmez.
 - `dosya_haric`: skill klasörü içindeki göreli yollar için hariç (regex). Kökte duran skilllerde önizleme/rapor/test
   klasörlerini indirmemek için (ör. `["^\\.previews/", "^reports/"]`). Skill'in kullandığı `scripts/`, `references/` alınır.
-- `bagimlilik`: skill çalışmak için başka bir kurulum istiyorsa açıklaması (ön kontrolde UYARI olur).
+- `bagimlilik`: skill çalışmak için başka bir kurulum istiyorsa açıklaması (ön kontrolde UYARI olur). Repodaki bütün skillere yazılır.
+- `skill_bagimlilik`: tek bir skilin bağımlılığı repo metninden farklıysa `{"<kaynak_yol>": "metin"}` (ör.
+  `{"skills/manim-video": "Manim CE, LaTeX, ffmpeg…"}`; boş metin = bağımlılık yok). `arsiv-yerlestir.py` registry'ye ve KAYNAK.md'ye
+  bunu yazar. Bağımlılığı registry'de elle düzeltme: bir sonraki çalışmada repo metniyle ezilir. Anahtar registry'de bir skile
+  karşılık gelmiyorsa ya da registry'ye işlenmemişse `dogrula.py` UYARI verir.
 - `ad_devral`: bu kaynağın, başka bir kaydın taşıdığı çıplak adı **bilerek** devralacağı adlar (ör. `["motion-design"]`).
   Yazılmazsa çıplak ad eski kayıtta kalır, yeni skill `ad@kaynak` olur. Kullanıcı onayı gerekir (`rehber/09`).
 - `eklendi`, `onay`: A4'teki onay kaydı (yeni kayıtta zorunlu; dogrula UYARI verir). Onay metninde proje adı yazılmaz.

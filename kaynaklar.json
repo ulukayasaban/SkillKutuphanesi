@@ -1302,6 +1302,9 @@
         "^install\\.md$"
       ],
       "bagimlilik": "video-use skili ElevenLabs Scribe API'si ister (ELEVENLABS_API_KEY; ücretsiz kota var, yoğun kullanım ücretli) + ffmpeg/ffprobe + Python (requests, librosa, matplotlib, pillow, numpy). Animasyon için isteğe bağlı HyperFrames/Remotion/Manim/yt-dlp (ilk kullanımda npx --yes ile kurulur). Paralel animasyon alt-ajanları Claude Code'un Agent/alt-ajan aracına dayanır (Codex'te bu kısım çalışmaz; temel transkript/kesim/render çalışır). Kurulum kontrolleri SKILL.md 'Setup' bölümünde, bağımlılıklar pyproject.toml'da. install.md arşive alınmaz: global skill klasörüne (~/.claude/skills, ~/.codex/skills) symlink kurma talimatı verir (kural 1), oysa skill projeye skill-ekle.py ile kurulur.",
+      "skill_bagimlilik": {
+        "skills/manim-video": "Manim Community Edition (pip install manim; v0.20+), LaTeX (pdflatex; macOS: mactex), ffmpeg ve Python 3.10+. scripts/setup.sh bunları denetler (kurmaz). Anahtar, ağ ya da hesap gerekmez; isteğe bağlı sesli anlatım için manim-voiceover (ElevenLabs/gTTS/Azure/pyttsx3)."
+      },
       "not": "'Yapay Zeka Skillleri' listesinden 2026-11-15'te eklendi. Tek konulu uzman repo (MIT, browser-use): konuşmayla video kurgu (transkript, kesim, renk, overlay animasyon, altyazı). Kök SKILL.md (video-use) helpers/*.py betiklerine bağımlıdır — helpers arşive alınır, bağ korunur. skills/manim-video ayrı bir skill (Manim CE, 3Blue1Brown tarzı); video-use onu vendor olarak içerir (iç içe skill, ust=video-use) ve ayrıca tek başına kurulabilir. static/ (511KB banner), tests/, poster.html ve install.md (global symlink talimatı, kural 1) arşive alınmaz.",
       "eklendi": "2026-11-15",
       "onay": {

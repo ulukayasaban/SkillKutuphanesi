@@ -79,8 +79,8 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
 # Hiçbiri başka bir aracı çalıştırmaz (tek istisna: program-denetim.py --sema --ozet-json, ağsız); bayraklar kaynak
 # metninden okunur, --help'e güvenilmez (birçok araçta argparse yok, --help aracı çalıştırır).
 KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "KAYIP", "EMEKLI")  # T7 = kendi/, T8 = site/ (yerel, GitHub'sız)
-KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "kimlik", "dosya_haric",
-                      "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans")
+KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "skill_bagimlilik", "kimlik",
+                      "dosya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans")
 SITE_TAKIP_ARACI = "site-takip.py"
 ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
 GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
@@ -363,6 +363,29 @@ def _e6_kaynaklar(kok, h, u):
         yabanci = [x for x in k if x not in KAYNAK_ANAHTARLARI]
         if yabanci:
             u.append(f"kaynaklar.json: {repo} bilinmeyen anahtar: {', '.join(yabanci)}")
+    _skill_bagimlilik(kok, kayitlar, u)
+
+
+def _skill_bagimlilik(kok, kayitlar, u):
+    """'skill_bagimlilik' {kaynak_yol: metin}: skil başına bağımlılık (arsiv-yerlestir.py repo düzeyindekinin yerine yazar).
+    Anahtar o reponun bir skiline karşılık gelmiyorsa (kaynakta klasör taşındı) geçersiz kılma sessizce ölür: UYARI."""
+    ozel = [(k["repo"], k["skill_bagimlilik"]) for k in kayitlar if isinstance(k, dict) and "skill_bagimlilik" in k]
+    if not ozel:
+        return
+    reg, _ = _json_kayit(kok, "registry.json", [])
+    skiller = {(s.get("repo"), s.get("kaynak_yol")): s for s in (reg or {}).get("skiller", []) if isinstance(s, dict)}
+    for repo, d in ozel:
+        if not isinstance(d, dict) or not all(isinstance(x, str) and isinstance(y, str) for x, y in d.items()):
+            u.append(f"kaynaklar.json: {repo} skill_bagimlilik {{kaynak_yol: metin}} biçiminde değil")
+            continue
+        if reg is None:
+            continue
+        for yol, metin in d.items():
+            s = skiller.get((repo, yol))
+            if s is None:
+                u.append(f"kaynaklar.json: {repo} skill_bagimlilik anahtarı registry'de yok: {yol!r}")
+            elif (s.get("bagimlilik") or None) != (metin or None):
+                u.append(f"kaynaklar.json: {repo} skill_bagimlilik registry'ye işlenmemiş: {yol!r} (arsiv-yerlestir.py)")
 
 
 def _e7_site_takip(kok, h, u):
