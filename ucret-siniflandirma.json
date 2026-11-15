@@ -2,6 +2,38 @@
   "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
   "guncelleme": "2026-11-15",
   "siniflar": {
+    "video-use": [
+      "kismen",
+      "ElevenLabs Scribe ücretsiz kotasıyla kullanılabilir; yoğun transkript ücretli. ffmpeg/Manim/PIL yerel ve ücretsiz"
+    ],
+    "manim-video": [
+      "ucretsiz",
+      "Manim Community Edition açık kaynak; yerel render, ücretli servis yok"
+    ],
+    "ajanla-video-kurgu": [
+      "ucretsiz",
+      "Metodoloji skili (yalnız .md); Whisper yerelde ücretsiz. İsteğe bağlı görsel/video üretim istasyonları ücretli ama şart değil"
+    ],
+    "auto-editor": [
+      "ucretsiz",
+      "Açık kaynak auto-editor CLI + ffmpeg; yerel, ücretli API yok"
+    ],
+    "auto-editor-effects": [
+      "ucretsiz",
+      "auto-editor CLI yerel; ücretli servis yok"
+    ],
+    "auto-editor-export": [
+      "ucretsiz",
+      "auto-editor CLI yerel; ücretli servis yok"
+    ],
+    "auto-editor-transcribe": [
+      "ucretsiz",
+      "auto-editor whisper.cpp (yerel ggml model) ya da Apple Speech; ücretli API yok"
+    ],
+    "auto-editor-transitions": [
+      "ucretsiz",
+      "auto-editor CLI yerel; ücretli servis yok"
+    ],
     "elevenlabs": [
       "kismen",
       "ElevenLabs ücretsiz planı (aylık sınırlı kota) ile kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Kokoro)"

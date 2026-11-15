@@ -985,6 +985,21 @@
       "karar": "reddedildi",
       "neden": "K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz",
       "tarih": "2026-11-15"
+    },
+    "WyattBlue/auto-editor": {
+      "karar": "eklendi",
+      "neden": "Video kurgu CLI skilleri (Unlicense); 2026-11-15 toplu video ekleme",
+      "tarih": "2026-11-15"
+    },
+    "browser-use/video-use": {
+      "karar": "eklendi",
+      "neden": "Konuşmayla video kurgu + manim (MIT); 2026-11-15 toplu video ekleme",
+      "tarih": "2026-11-15"
+    },
+    "avenoxai/avenox-video-kurgu-notlari": {
+      "karar": "eklendi",
+      "neden": "Türkçe ajanla video kurgu metodolojisi (MIT); 2026-11-15 toplu video ekleme",
+      "tarih": "2026-11-15"
     }
   },
   "konular": {

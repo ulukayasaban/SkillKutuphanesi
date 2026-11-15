@@ -46,12 +46,12 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve kullanışlı şablon; weekly-synthesis ile aynı ailede (gün/hafta).
 
-### defuddle  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 88 (A)
+### defuddle  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
 
 - **Ne yapar:** Extract clean Markdown from HTML pages with Defuddle CLI.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kepano (kisi, ★50753, son güncelleme 2026-09-15, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★52786, son güncelleme 2026-11-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -143,12 +143,12 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Spesifikasyonu eksiksiz ve örnekli anlatıyor; dar kapsamlı. Asıl yeri Obsidian not yönetimi olduğu için 04-not-alma-bilgi-yonetimi kategorisine taşındı.
 
-### knap  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 88 (A)
+### knap  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
 
 - **Ne yapar:** Render Markdown from templates and structured data using Knap CLI. Use when the user asks to apply a Knap template, turn JSON or CSV data into notes, batch-generate Markdown files, or format Defuddle output into a note.
 - **Teknoloji:** html, node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kepano (kisi, ★50753, son güncelleme 2026-09-15, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★52786, son güncelleme 2026-11-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -174,22 +174,22 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 16 KB (SKILL.md 16.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Şema ve fonksiyon başvurusu eksiksiz ve örnekli (kaynak obsidianmd/obsidian-skills içeriğiyle uyumlu); MIT.
 
-### obsidian-bases@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 86 (A)
+### obsidian-bases@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 90 (A)
 
 - **Ne yapar:** Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.
 - **Teknoloji:** obsidian _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kepano (kisi, ★50753, son güncelleme 2026-09-15, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★52786, son güncelleme 2026-11-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 20 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### obsidian-cli  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 88 (A)
+### obsidian-cli  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
 
 - **Ne yapar:** Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from 
 - **Teknoloji:** css, obsidian _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kepano (kisi, ★50753, son güncelleme 2026-09-15, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★52786, son güncelleme 2026-11-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -215,12 +215,12 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 11 KB (SKILL.md 10.6 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Obsidian sözdiziminin en eksiksiz başvurusu; diğer kasa skilleri buna yaslanır.
 
-### obsidian-markdown@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 86 (A)
+### obsidian-markdown@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 90 (A)
 
 - **Ne yapar:** Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.
 - **Teknoloji:** css, obsidian _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kepano (kisi, ★50753, son güncelleme 2026-09-15, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★52786, son güncelleme 2026-11-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 5.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik

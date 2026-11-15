@@ -160,7 +160,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.
 
-### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 98 (A)
+### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 99 (A)
 
 - **Ne yapar:** Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -170,12 +170,12 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### json-canvas@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 88 (A)
+### json-canvas@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
 
 - **Ne yapar:** Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.
 - **Teknoloji:** canvas, node, obsidian _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kepano (kisi, ★50753, son güncelleme 2026-09-15, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★52786, son güncelleme 2026-11-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 14 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** otomatik

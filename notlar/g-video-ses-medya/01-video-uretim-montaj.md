@@ -2,7 +2,7 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **40/106**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **40/113**
 
 ### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -24,6 +24,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 16 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
+### ajanla-video-kurgu  ·  avenoxai/avenox-video-kurgu-notlari @ dba60a2  ·  puan 76 (B)
+
+- **Ne yapar:** Claude Code, Codex ya da başka bir kodlama ajanıyla slop çıkarmayan video kurgu hattı: ses ve Whisper transkripti, boşluk/tekrar kesimi, pano haritası, tek şef altında paralel ajanlar, dosya sözleşmesi ve teslim formu, kapılar (aynı hata iki kez olursa koda yaz), marka kilidi, dört parçalı prompt, görsel/video üretim maliyeti, render kuyruğu, kısa form kesit ve dikey motion. Tetikleyiciler: 'video
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** avenoxai (kisi, ★27, son güncelleme 2026-11-06, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 38 KB (SKILL.md 7.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### alipay-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
 - **Ne yapar:** 使用 social-auto-upload 的 `sau alipay` 登录支付宝生活号并发布视频。Use when 用户要向支付宝生活号发布视频或检查创作账号状态。
@@ -32,6 +42,56 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Geliştirici:** dreammis (kisi, ★16118, son güncelleme 2026-10-22, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
+- **İnceleme:** otomatik
+
+### auto-editor  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+
+- **Ne yapar:** Record a microphone or edit video/audio with the auto-editor CLI — cut out dead space (silence, motionlessness, black frames), set the pace, make manual cuts, and render the result. Use when someone wants to capture and trim a microphone, remove silence, shorten a recording, speed through quiet parts, or otherwise edit media with auto-editor.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
+- **Durum:** tercih
+- **Boyut:** 7 KB (SKILL.md 6.9 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
+- **İnceleme:** otomatik
+
+### auto-editor-effects  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+
+- **Ne yapar:** Apply actions and animations to sections of a video/audio with auto-editor — change speed, duck or fade volume, de-ess, zoom/Ken Burns, rotate/spin, draw boxes, overlay logos or picture-in-picture, and animate any of these with ramps and easing. Use when someone wants creative effects or per-section behavior rather than plain silence-cutting.
+- **Teknoloji:** api-anahtari, canvas _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
+- **Durum:** tercih
+- **Boyut:** 7 KB (SKILL.md 7.4 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
+- **İnceleme:** otomatik
+
+### auto-editor-export  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+
+- **Ne yapar:** Export auto-editor's edit or microphone recording to a video editor (Premiere, DaVinci Resolve, Final Cut Pro, ShotCut, Kdenlive), to individual clips, or to auto-editor timeline files (.v1/.v2/.v3); and import timeline/XML files to render them. Use when someone wants an editor-ready project, a preserved microphone source, split clips, or timeline files instead of a finished video.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
+- **İnceleme:** otomatik
+
+### auto-editor-transcribe  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+
+- **Ne yapar:** Transcribe a media file or live microphone to text or subtitles with auto-editor's whisper subcommand, then edit by spoken content — cut to keep (or drop) sections whose subtitles match a word or regex. Use when someone wants a transcript, captions, live speech transcription, or to cut a video based on what is said rather than on loudness.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
+- **İnceleme:** otomatik
+
+### auto-editor-transitions  ·  WyattBlue/auto-editor @ 0f808d8  ·  puan 86 (A)
+
+- **Ne yapar:** Add transitions at auto-editor's cuts — cross-dissolves, Premiere Pro's transitions (push, clock-wipe, glitch, page-peel, iris-round, and the rest, including its Legacy folder), and audio crossfades — and carry them into Premiere, DaVinci Resolve, Final Cut Pro, Shotcut or Kdenlive. Use when someone wants smoother cuts, fades at the start and end, a particular transition, or transitions that survi
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** WyattBlue (kisi, ★5918, son güncelleme 2026-11-15, lisans Unlicense)
+- **Durum:** tercih
+- **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.
 - **İnceleme:** otomatik
 
 ### baijiahao-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
@@ -408,7 +468,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 35 KB (SKILL.md 26.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### moviepy  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
+### moviepy  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
 - **Ne yapar:** moviepy 2.x ile Python'da video birleştirme: yapay zekanın ürettiği videonun (LTX-2, SadTalker) üstüne PIL ile çizilmiş, kesin okunur başlık, alt bant ve kaynak yazısı bindirme; 30 saniyenin altındaki reklam benzeri klipleri tek build.py'de kurma; matplotlib grafiklerini mp4'e çevirme. Metin doğruluğu şart olan türlerde (haber, fiyat, kaynak) yapay zekanın kare içi yazı üretmesi yerine bu yolu önerir.
 - **Ne zaman:** Videonun üstüne güvenilir (yazım hatası olmayan) metin, etiket, alt bant koymak; Node ve React olmadan kısa tek dosyalık video yapmak; veriyle çizilen grafik videosu. · **Ne zaman değil:** Uzun, çok sahneli, tasarım sistemi gerektiren işlerde Remotion ya da HyperFrames; tam altyazı (SRT) akışında ffmpeg subtitles filtresi. Örnek klasörler (examples/quick-spot, examples/data-viz-chart) toolkit'te olduğundan arşiv kopyasında bulunmaz; desenler kendi kendine yeter.
@@ -452,7 +512,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa, kontrol listeli ve UI demo videolarında yüksek getirili.
 
-### parody-short  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
+### parody-short  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 75 (B)
 
 - **Ne yapar:** Bir grubun kendi hayatından (ekip lansmanı, çeyrek sonu, taşınma, Noel) ya da herkesin bildiği bir konudan (görüntülü toplantı, ofise dönüş) hicivli kısa video yapma kılavuzu: gerçek yüzlerin canlandırılması, grubun kendi kanallarından iç şakaların toplanması, ödünç alınmış tür (80'ler aksiyon girişi, canavar filmi) eşlemesi, her tür için ayrı görünüm ve ses, kısa tutma kuralları. Yardımcı dosyalar: people.md, context.md, genres.md, formats.md.
 - **Ne zaman:** Toolkit kuruluysa bir ekip ya da topluluk için eğlenceli iç video (kişilerin fotoğrafları LTX ile canlandırılır, Remotion'da kurgulanır) ya da uydurma kadrolu halka açık hiciv. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Gerçek kişilerin fotoğrafı ve izni olmadan; halka açık yayında her kişinin yazılı izni olmadan; özel mesajlardan alıntı için. Ticari film/dizi karakterleri kullanılamaz (skill de uyarıyor). R2 ayarlı değilse medya halka açık geçici sunuculara (litterbox, 0x0.st) yüklenir: kişisel ya da gizli medyayla R2 olmadan kullanma
@@ -507,7 +567,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (referans-videodan-istem grubunda birincil, tek üye). MIT. Ücretsiz, çevrimdışı; karelerdeki yazıyı veri sayar (prompt enjeksiyonuna karşı açık kural). DİKKAT: skill repo kökünden çalışır (kurulum.sh, motorlar/, birlestir.py, projeler/<ad>/). Kütüphaneden tek başına projeye kurulunca bu yollar bulunmaz; kullanmak için repoyu klonlayıp içinde `claude` açmak gerekir. Lisans: repoda MIT LICENSE var, GitHub otomatik tanımadığı için kayıtta NOASSERTION görünür.
 
-### remotion  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
+### remotion  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 76 (B)
 
 - **Ne yapar:** Toolkit'e özgü Remotion desenleri: paylaşılan bileşenler (AnimatedBackground, SlideTransition, Label, Vignette, SplitScreen, NarratorPiP...), lib/transitions içindeki özel geçişler (glitch, rgbSplit, lightLeak, clockWipe...), proje kuralları ve ayrı bir hareket kılavuzu (motion-craft.md: süre, yavaşlama eğrisi, yay, okuma süresi, ritim ızgarası). Çekirdek Remotion bilgisi için remotion-official skiline gönderir.
 - **Ne zaman:** Toolkit şablonlarında (lib/components, lib/transitions) Remotion videosu yazarken; hareket sürelerini ve yavaşlama eğrisini seçerken (motion-craft.md bağımsız okunabilir). · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (bileşen ve geçiş içe aktarmaları ../../../../lib/ yollarına bağlı). Çekirdek Remotion API'si için remotion-best-practices; HyperFrames projesinde kullanma. Toolkit'siz Remotion projesinde yalnız motion-craft.md kısmı işe yarar.
@@ -873,7 +933,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Fikir iyi; ancak OpenMontage'ın remotion-composer/TerminalScene bileşenine bağımlı.
 
-### synthetic-ui-demo  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
+### synthetic-ui-demo  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
 - **Ne yapar:** Ekran kaydı olmadan ürün tanıtım ve sürüm notu videosu: uygulamanın kaynak kodundan yalnızca sahnede görünen ekranlar statik React olarak yeniden kurulur, Remotion'da senaryolu imleç ve kamera (Stage + Cursor bileşenleri) bunları oynatır. Her tıklama bir kare numarasıdır, bu yüzden sahne her seferinde aynı çıkar ve ürün değişince kodu düzenleyerek güncellenir.
 - **Ne zaman:** Ürünün kaynağını okuyabildiğin, her sürümde yeniden yapılan sürüm notu / özellik turu videoları; canlı ortam ya da test verisi olmadan akış göstermek. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Yalnızca çalışan uygulaman varsa (kaynak yoksa) playwright-recording; tek seferlik gerçek veri yakalama; karmaşık uzun etkileşimler. Yapay zeka ile üretilen kişileri gösteren sahnelerde 'yapay zeka üretimi' notu koymayı unutma.
@@ -914,7 +974,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### video-design  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
+### video-design  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
 - **Ne yapar:** Videoya özgü görsel tasarım kuralları: renk perde (act) başına değişir, sahne başına değil; yazı ölçeği (5 boyut), tek veri vurgusu, 16:9 ve 9:16 yerleşimi, 'konudan çizilen zemin', design.md devir sözleşmesi ve çıktının temas şeridiyle (contact sheet) jüri gibi eleştirisi. Tasarım kaynağı (taste-skill, frontend-design) isteğe bağlıdır; varsayılan kendi paletleridir.
 - **Ne zaman:** Video sahnelerinin, başlık kartlarının, veri sahnelerinin ve paletin tasarlanması ya da 'yapay zeka yapmış gibi' görünen bir videonun düzeltilmesi; render sonrası eleştiri. · **Ne zaman değil:** Web sayfası tasarımı için (scroll, hover yok) ui-ux skilleri; HyperFrames için hyperframes ev stili kılavuzları (motion-doctrine). qc.py --layout ve contact_sheet.py gibi toolkit araçlarına atıf yapar, onlar yoksa eleştiri adımı elle yapılır.
@@ -1011,6 +1071,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 27 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Betiği skill klasöründe; yol skills/video-understand/... diye yazılmış, kurulumda skill yoluna göre çalıştırılmalı.
 
+### video-use  ·  browser-use/video-use @ 43cfc56  ·  puan 83 (A)
+
+- **Ne yapar:** Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles — for talking heads, montages, tutorials, travel, interviews. No presets, no menus. Ask questions, confirm the plan, execute, iterate, persist. Production-correctness rules are hard; everything else is artistic freedom.
+- **Teknoloji:** api-anahtari, css, ffmpeg, gsap, html, node, python, react, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** browser-use (kurum, ★31088, son güncelleme 2026-10-08, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 205 KB (SKILL.md 25.5 KB, yük buyuk) · **Bağımlılık:** video-use skili ElevenLabs Scribe API'si ister (ELEVENLABS_API_KEY; ücretsiz kota var, yoğun kullanım ücretli) + ffmpeg/ffprobe + Python (requests, librosa, matplotlib, pillow, numpy). Animasyon için isteğe bağlı HyperFrames/Remotion/Manim/yt-dlp (ilk kullanımda npx --yes ile kurulur). Paralel animasyon alt-ajanları Claude Code'un Agent/alt-ajan aracına dayanır (Codex'te bu kısım çalışmaz; temel transkript/kesim/render çalışır). Kurulum kontrolleri SKILL.md 'Setup' bölümünde, bağımlılıklar pyproject.toml'da. install.md arşive alınmaz: global skill klasörüne (~/.claude/skills, ~/.codex/skills) symlink kurma talimatı verir (kural 1), oysa skill projeye skill-ekle.py ile kurulur.
+- **İnceleme:** otomatik
+
 ### video_toolkit  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
 
 - **Ne yapar:** claude-code-video-toolkit'in giriş skili: kısa bir brifi sahne tanımına çevirir, video_job.py ile seslendirme, görsel, altyazı, derleme ve kalite denetimini sırayla yürütüp denetlenmiş bir MP4 üretir. Ayrıca tek tek araçları (yapay zeka sesi, görsel, klip, müzik, konuşan kafa, kesim, YouTube yükleme) hangi işte hangisinin seçileceğini gösteren bir yönlendirme tablosu sunar.
@@ -1073,7 +1143,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 7 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Basit ve çalışır betik; sandbox'a özgü varsayılan yol ve otomatik pip kurulumu eksi. Kategori: video indirme g-video-ses-medya/01 kapsamında, oraya taşındı ve video-indirme grubuna alternatif olarak eklendi.
 
-### youtube-stats  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
+### youtube-stats  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 76 (B)
 
 - **Ne yapar:** Yayımlanmış YouTube videolarının performansını okur: izlenme, beğeni, yorum, abone; Analytics yetkisiyle izlenme süresi, tutma ve trafik kaynakları (Shorts akışı, arama, dış bağlantı). Her çalıştırmada anlık görüntü kaydeder, değişimi gösterir; GitHub trafiğini yan yana verir. Sonuçlardan bir sonraki Short için açılış kuralları çıkarır.
 - **Ne zaman:** Kanal ya da video performansını, başlık ve kapak kararlarını, Short'un akışta ne yaptığını ölçmek; toolkit ile YouTube'a yükleme yapıldıysa. · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla) (youtube_stats.py ve youtube_upload.py ile önbelleğe alınmış OAuth jetonu gerekir). Başka kişinin kanalı için kullanılamaz (yalnız kendi hesabınla OAuth). Skill gövdesinde yazarın kendi kanalının bulguları ('ne işe yaradı' listesi) var; kendi verinle değiştir.

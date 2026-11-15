@@ -429,7 +429,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 13 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı (opsiyonel). Kısa ve betikli; içerik büyük ölçüde performance-optimization'ın ölçüm bölümünün tablo özeti.
 
-### performance-review-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 96 (A)
+### performance-review-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 97 (A)
 
 - **Ne yapar:** Draft performance reviews, self-assessments, peer reviews, and upward feedback in your own voice. Analyzes your contributions, emails, and meeting history via WorkIQ, then produces honest, impact-focused drafts using the STAR format. USE FOR: write my performance review, draft self-assessment, peer review, 360 feedback, annual review, mid-year review, upward feedback, write review for colleague, p
 - **Teknoloji:** - _(otomatik tespit)_
@@ -573,7 +573,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### security-review  ·  github/awesome-copilot @ 7e40881  ·  puan 96 (A)
+### security-review  ·  github/awesome-copilot @ 7e40881  ·  puan 97 (A)
 
 - **Ne yapar:** AI-powered codebase security scanner that reasons about code like a security researcher — tracing data flows, understanding component interactions, and catching vulnerabilities that pattern-matching tools miss. Use this skill when asked to scan code for security vulnerabilities, find bugs, check for SQL injection, XSS, command injection, exposed API keys, hardcoded secrets, insecure dependencies, 
 - **Teknoloji:** api-anahtari, docker, html, next.js, node, python, react, typescript _(otomatik tespit)_

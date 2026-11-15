@@ -2,11 +2,11 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-15 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8525 · Arşivdeki skill kaydı: 5670 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8533 · Arşivdeki skill kaydı: 5678 · Bileşen (komut/agent): 662
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5626 | arşivde (ana sürüm) |
+| secildi | 5634 | arşivde (ana sürüm) |
 | haric | 2570 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 176 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 73 | arşivde (Claude/Codex'e özel sürüm) |
@@ -55,6 +55,7 @@
 | Trendyol/trendyol-integration-developer-tool | 1 | secildi 1 |
 | Vincentwei1021/video-shotcraft | 1 | secildi 1 |
 | Viniciuscarvalho/swift-code-reviewer-skill | 6 | secildi 6 |
+| WyattBlue/auto-editor | 5 | secildi 5 |
 | YildizDikme/claude-video-edit | 1 | secildi 1 |
 | addyosmani/agent-skills | 25 | secildi 25 |
 | android/skills | 36 | secildi 36 |
@@ -63,8 +64,10 @@
 | anthropics/knowledge-work-plugins | 252 | secildi 189, haric 57, ayri-surum 6 |
 | anthropics/skills | 20 | secildi 19, haric 1 |
 | arjitj2/swiftui-design-principles | 1 | secildi 1 |
+| avenoxai/avenox-video-kurgu-notlari | 1 | secildi 1 |
 | avenoxai/higgsfield-studio | 6 | secildi 6 |
 | blader/humanizer | 1 | secildi 1 |
+| browser-use/video-use | 2 | secildi 2 |
 | cathrynlavery/diagram-design | 1 | secildi 1 |
 | cloudflare/security-audit-skill | 1 | secildi 1 |
 | cloudflare/skills | 19 | secildi 19 |

@@ -1274,6 +1274,59 @@
       "program": "claude-code-video-toolkit"
     },
     {
+      "repo": "WyattBlue/auto-editor",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^skills/"
+      ],
+      "bagimlilik": "auto-editor komut satırı aracı kurulu olmalı (kurulum yolu: https://auto-editor.com/installing; ya da repodaki ./auto-editor) ve ffmpeg. auto-editor-transcribe skili whisper.cpp (HuggingFace'ten ggml model indirir) ya da Apple Speech arka ucunu kullanır; hepsi yereldir, ücretli API yok.",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-15'te eklendi. Resmî ürün reposu (Unlicense = kamu malı): auto-editor CLI'siyle sessizlik/hareketsizlik/siyah kare kesme, efekt ve animasyon, video editörüne (Premiere/Resolve/FCP) dışa aktarma, konuşulana göre kesim, geçişler. 5 skill skills/ altında. Program kartı AÇILMADI: auto-editor bu bilgisayarda kurulu/izlenen bir program değil, pip bağımlılığıdır (kopya:yerinde olan HyperFrames/OpenMontage/nlm/etsyotomasyon'dan farklı).",
+      "eklendi": "2026-11-15",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-15",
+        "oturum": "İş 2 toplu video ekleme: kullanıcı 'Onları normal şekilde ekle' onayı (2026-11-15). 4 repodan biri.",
+        "commit": "0f808d8610bcfa08dbae9eca97360b60d9d779f4",
+        "guvenlik_notu": "skills/ altında yalnız SKILL.md var (çalıştırılabilir betik yok); skiller yerel auto-editor CLI'sini çağırır — ağdan kod indirip çalıştırma / proje dışına yazma / gizli okuma yok. Transcribe skili HuggingFace'ten ggml whisper modeli indirir (kullanıcı başlatır)."
+      }
+    },
+    {
+      "repo": "browser-use/video-use",
+      "tip": "T1",
+      "oncelik": 2,
+      "dosya_haric": [
+        "^tests/",
+        "^static/",
+        "^poster\\.html$",
+        "^install\\.md$"
+      ],
+      "bagimlilik": "video-use skili ElevenLabs Scribe API'si ister (ELEVENLABS_API_KEY; ücretsiz kota var, yoğun kullanım ücretli) + ffmpeg/ffprobe + Python (requests, librosa, matplotlib, pillow, numpy). Animasyon için isteğe bağlı HyperFrames/Remotion/Manim/yt-dlp (ilk kullanımda npx --yes ile kurulur). Paralel animasyon alt-ajanları Claude Code'un Agent/alt-ajan aracına dayanır (Codex'te bu kısım çalışmaz; temel transkript/kesim/render çalışır). Kurulum kontrolleri SKILL.md 'Setup' bölümünde, bağımlılıklar pyproject.toml'da. install.md arşive alınmaz: global skill klasörüne (~/.claude/skills, ~/.codex/skills) symlink kurma talimatı verir (kural 1), oysa skill projeye skill-ekle.py ile kurulur.",
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-15'te eklendi. Tek konulu uzman repo (MIT, browser-use): konuşmayla video kurgu (transkript, kesim, renk, overlay animasyon, altyazı). Kök SKILL.md (video-use) helpers/*.py betiklerine bağımlıdır — helpers arşive alınır, bağ korunur. skills/manim-video ayrı bir skill (Manim CE, 3Blue1Brown tarzı); video-use onu vendor olarak içerir (iç içe skill, ust=video-use) ve ayrıca tek başına kurulabilir. static/ (511KB banner), tests/, poster.html ve install.md (global symlink talimatı, kural 1) arşive alınmaz.",
+      "eklendi": "2026-11-15",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-15",
+        "oturum": "İş 2 toplu video ekleme: kullanıcı 'Onları normal şekilde ekle' onayı (2026-11-15). 4 repodan biri. install.md dışlaması ajan kararı (yol kapısı TAKILDI; dosya yalnız kural 1'in yasakladığı global kurulum talimatı içeriyor, helpers bağına dokunmaz) — ana oturum geri alabilir (install.md'yi tut + yol_onay).",
+        "commit": "43cfc566833548093455c9d4a46bd69913b7e552",
+        "guvenlik_notu": "helpers/transcribe.py kullanıcının ses dosyasını ElevenLabs Scribe'a (api.elevenlabs.io) yollar ve .env'den yalnız ELEVENLABS_API_KEY okur (Path(__file__).parent.parent/.env = proje kurulumunda skill klasörü); render.py/grade.py yerel ffmpeg çalıştırır, çıktıyı yalnız <videos_dir>/edit/ altına yazar (repo/proje köküne yazmaz). curl|sh yok. DİKKAT: SKILL.md Setup bölümü ELEVENLABS_API_KEY'i skill klasörünün yanındaki .env'e yazmayı söyler (proje kurulumunda projenin git ağacına düşer; commitlenmemeli)."
+      }
+    },
+    {
+      "repo": "avenoxai/avenox-video-kurgu-notlari",
+      "tip": "T1",
+      "oncelik": 3,
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-15'te eklendi. Tek skill, Türkçe metodoloji (MIT): kodlama ajanıyla 'slop'suz video kurgu atölyesi — ses/Whisper transkripti, kesim, pano haritası, tek şef altında paralel ajanlar, dosya sözleşmesi, kapılar, marka kilidi, dört parçalı prompt. Skill skill/ajanla-video-kurgu/ altında (10 references + 6 templates); reponun notlar/ klasörü (kaynak videonun transkripti) SKILL.md içermez, arşive alınmaz. Repo çok yeni (2026-11-06, 27★). Geliştirici avenoxai kütüphanede zaten var (higgsfield-studio).",
+      "eklendi": "2026-11-15",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-15",
+        "oturum": "İş 2 toplu video ekleme: kullanıcı 'Onları normal şekilde ekle' onayı (2026-11-15). 4 repodan biri.",
+        "commit": "dba60a2e50c8f05990502c52581ed1a13414a1be",
+        "guvenlik_notu": "Skill yalnız .md dosyalarından oluşur (references + templates); çalıştırılabilir betik, ağ çağrısı, gizli okuma yok. Dış araçlara (Whisper yerel/API, HyperFrames, görsel/video üretimi) metodoloji olarak atıfta bulunur, kendisi çağırmaz."
+      }
+    },
+    {
       "repo": "yerel/kendi",
       "tip": "T7",
       "oncelik": 1,

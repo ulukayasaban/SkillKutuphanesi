@@ -76,6 +76,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | Weaverse/shopify-hydrogen-skills | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
 | Wholiver/swiftui-design-skill | reddedildi | 2026-11-03 | mevcut skillerle çakışıyor |
 | Windscribe/Android-App | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| WyattBlue/auto-editor | eklendi | 2026-11-15 | Video kurgu CLI skilleri (Unlicense); 2026-11-15 toplu video ekleme |
 | abbesm0hamed/paydusa | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
 | abutun/claude-skill-aso-cosmicmeta-ss | reddedildi | 2026-11-07 | rshankras app-store/screenshot-planner aynı işi yapıyor |
 | abutun/etsy-seo-optimizer | reddedildi | 2026-11-07 | Lisans yok; Etsy API ile mağazaya yazıyor |
@@ -93,6 +94,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | apideck-libraries/api-skills | reddedildi | 2026-10-22 | Apideck ücretli Unified API'sine bağlı 543 bağlayıcı |
 | arjitj2/swiftui-design-principles | eklendi | 2026-10-31 | SwiftUI/WidgetKit tasarım ilkeleri. |
 | aronhy/tiktok-agent-skills | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
+| avenoxai/avenox-video-kurgu-notlari | eklendi | 2026-11-15 | Türkçe ajanla video kurgu metodolojisi (MIT); 2026-11-15 toplu video ekleme |
 | awesome-skills/mobile-app-design | reddedildi | 2026-11-03 | lisans yok |
 | aws-solutions-library-samples/guidance-for-advertising-agents-on-aws | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
 | ayush016/android-lead-agent-skills | reddedildi | 2026-11-03 | mevcut skillerle çakışıyor |
@@ -100,6 +102,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | bethel-mark/ecom-listing-pro | reddedildi | 2026-11-03 | lisans yok |
 | bigcommerce/catalyst | reddedildi | 2026-10-22 | Repo-içi sürüm/dal skilleri |
 | bigcommerce/stencil-cli | reddedildi | 2026-11-03 | skill değil: eklenti/CLI kodu |
+| browser-use/video-use | eklendi | 2026-11-15 | Konuşmayla video kurgu + manim (MIT); 2026-11-15 toplu video ekleme |
 | buluslan/amazon-listing-doctor | reddedildi | 2026-11-03 | ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy) |
 | buluslan/bulus-amazon-skill | reddedildi | 2026-11-03 | ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy) |
 | buluslan/ecommerce-competitor-analyzer | eklendi | 2026-10-22 | Çok platformlu e-ticaret rakip analizi. |

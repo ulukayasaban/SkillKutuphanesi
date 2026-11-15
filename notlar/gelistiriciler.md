@@ -56,6 +56,7 @@
 | [pmndrs/react-three-fiber](https://github.com/pmndrs/react-three-fiber) | pmndrs | kurum | ✅ | 33496 | 246 | 2026-10-21 | MIT | 0 |
 | [airbnb/lottie-web](https://github.com/airbnb/lottie-web) | airbnb | kurum | ✅ | 32358 | 109 | 2025-09-01 | MIT | 0 |
 | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) | zarazhangrui | kisi |  | 31888 | 9 | 2026-06-23 | MIT | 1 |
+| [browser-use/video-use](https://github.com/browser-use/video-use) | browser-use | kurum |  | 31088 | 8 | 2026-10-08 | MIT | 2 |
 | [GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse) | GoogleChrome | kurum | ✅ | 31017 | 397 | 2026-11-04 | Apache-2.0 | 3 |
 | [greensock/GSAP](https://github.com/greensock/GSAP) | greensock | kurum | ✅ | 30177 | 3 | 2026-11-04 | yok | 0 |
 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | AgriciDaniel | kisi |  | 26654 | 30 | 2026-11-01 | MIT | 26 |
@@ -97,6 +98,7 @@
 | [ai/size-limit](https://github.com/ai/size-limit) | ai | kisi |  | 7044 | 103 | 2026-11-02 | MIT | 0 |
 | [czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) | czlonkowski | kisi |  | 6589 | 7 | 2026-10-24 | MIT | 15 |
 | [fontsource/fontsource](https://github.com/fontsource/fontsource) | fontsource | kurum | ✅ | 6262 | 46 | 2026-11-03 | MIT | 0 |
+| [WyattBlue/auto-editor](https://github.com/WyattBlue/auto-editor) | WyattBlue | kisi |  | 5918 | 17 | 2026-11-15 | Unlicense | 5 |
 | [argyleink/open-props](https://github.com/argyleink/open-props) | argyleink | kisi |  | 5564 | 67 | 2026-10-11 | MIT | 0 |
 | [Jakeschincariol/day-trader-skill](https://github.com/Jakeschincariol/day-trader-skill) | Jakeschincariol | kisi |  | 5296 | 1 | 2026-10-20 | MIT | 11 |
 | [opentypejs/opentype.js](https://github.com/opentypejs/opentype.js) | opentypejs | kurum |  | 5044 | 90 | 2026-08-08 | MIT | 0 |
@@ -170,6 +172,7 @@
 | [arjitj2/swiftui-design-principles](https://github.com/arjitj2/swiftui-design-principles) | arjitj2 | kisi |  | 34 | 1 | 2026-03-16 | MIT | 1 |
 | [YildizDikme/claude-video-edit](https://github.com/YildizDikme/claude-video-edit) | YildizDikme | kisi |  | 33 | 1 | 2026-11-03 | MIT | 1 |
 | [mercadopago/mercadopago-claude-marketplace](https://github.com/mercadopago/mercadopago-claude-marketplace) | mercadopago | kurum | ✅ | 32 | 10 | 2026-11-02 | Apache-2.0 | 5 |
+| [avenoxai/avenox-video-kurgu-notlari](https://github.com/avenoxai/avenox-video-kurgu-notlari) | avenoxai | kisi |  | 27 | 1 | 2026-11-06 | MIT | 1 |
 | [Lonsdale201/wp-agent-skills](https://github.com/Lonsdale201/wp-agent-skills) | Lonsdale201 | kisi |  | 26 | 3 | 2026-10-20 | MIT | 31 |
 | [yohannescodes/apple-app-review-compliance](https://github.com/yohannescodes/apple-app-review-compliance) | yohannescodes | kisi |  | 20 | 1 | 2026-10-17 | MIT | 1 |
 | [avenoxai/higgsfield-studio](https://github.com/avenoxai/higgsfield-studio) | avenoxai | kisi |  | 14 | 1 | 2026-08-19 | yok | 6 |

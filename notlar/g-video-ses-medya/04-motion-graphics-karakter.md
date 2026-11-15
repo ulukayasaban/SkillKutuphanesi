@@ -2,7 +2,7 @@
 
 _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/20**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/21**
 
 ### blender  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
 
@@ -89,6 +89,16 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Durum:** tercih · **Örtüşme:** manim-animasyon → tamamlayıcı · **Roller:** motion-graphics-sanatcisi, planlayici
 - **Boyut:** 22 KB (SKILL.md 4.6 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. İyi planlama şablonu ve 3b1b ilkeleri; references/ dosyaları faydalı.
+
+### manim-video  ·  browser-use/video-use @ 43cfc56  ·  puan 86 (A)
+
+- **Ne yapar:** Production pipeline for mathematical and technical animations using Manim Community Edition. Creates 3Blue1Brown-style explainer videos, algorithm visualizations, equation derivations, architecture diagrams, and data stories. Use when users request: animated explanations, math animations, concept visualizations, algorithm walkthroughs, technical explainers, 3Blue1Brown style videos, or any program
+- **Teknoloji:** ffmpeg, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** browser-use (kurum, ★31088, son güncelleme 2026-10-08, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 98 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** video-use skili ElevenLabs Scribe API'si ister (ELEVENLABS_API_KEY; ücretsiz kota var, yoğun kullanım ücretli) + ffmpeg/ffprobe + Python (requests, librosa, matplotlib, pillow, numpy). Animasyon için isteğe bağlı HyperFrames/Remotion/Manim/yt-dlp (ilk kullanımda npx --yes ile kurulur). Paralel animasyon alt-ajanları Claude Code'un Agent/alt-ajan aracına dayanır (Codex'te bu kısım çalışmaz; temel transkript/kesim/render çalışır). Kurulum kontrolleri SKILL.md 'Setup' bölümünde, bağımlılıklar pyproject.toml'da. install.md arşive alınmaz: global skill klasörüne (~/.claude/skills, ~/.codex/skills) symlink kurma talimatı verir (kural 1), oysa skill projeye skill-ekle.py ile kurulur.
+- **İnceleme:** otomatik
 
 ### manimce-best-practices  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 100 (A)
 

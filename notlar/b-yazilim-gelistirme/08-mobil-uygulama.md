@@ -14,7 +14,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 17 KB (SKILL.md 8.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ad-attribution  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 80 (A)
+### ad-attribution  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 79 (B)
 
 - **Ne yapar:** Privacy-preserving ad measurement with AdAttributionKit (SKAdNetwork's successor) — install and re-engagement attribution, conversion-value strategy under crowd anonymity, and end-to-end postback testing. Use when running paid acquisition beyond Apple Ads, measuring re-engagement campaigns, designing conversion values, or migrating from SKAdNetwork.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -144,7 +144,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 22 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### app-description-writer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 75 (B)
+### app-description-writer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 74 (B)
 
 - **Ne yapar:** Generate compelling App Store descriptions that convert browsers into users. Use when writing initial descriptions, improving existing copy, or drafting promotional text and What's New for a major update.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -154,7 +154,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### app-store  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 75 (B)
+### app-store  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 74 (B)
 
 - **Ne yapar:** App Store optimization and marketing skills for descriptions, screenshots, keywords, review responses, and comprehensive promotional strategy. Use when user needs help with App Store presence, ASO, marketing, or customer communication.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -185,7 +185,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 39 KB (SKILL.md 14.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (app-store-uyum grubunda birincil). MIT, 20★, 2026-10-17. Ücretsiz; ağdan sadece developer.apple.com kural sayfasını okur, dışarı yazmaz. Kanıtı türüne göre etiketler, saklama/gizleme önermez.
 
-### apple-search-ads  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 73 (B)
+### apple-search-ads  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 72 (B)
 
 - **Ne yapar:** Apple Search Ads campaign strategy for indie developers — paid acquisition, keyword bidding, budget planning, and ROAS optimization. Use when user asks about running ads, paid user acquisition, or Apple Search Ads campaigns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -950,7 +950,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 354 KB (SKILL.md 23.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### iap-finalizer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 75 (B)
+### iap-finalizer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 74 (B)
 
 - **Ne yapar:** Take a one-time in-app purchase from MISSING_METADATA to READY_TO_SUBMIT in App Store Connect — set its price schedule and localized display name/description (and optional review screenshot) via the ASC REST API. Use at Phase 6 (Pre-Release), after the IAP is built in-app (Phase 4) and its ASC record exists. NOT for subscriptions, and NOT the same as promoted-iap (which displays IAPs in-app).
 - **Teknoloji:** python _(otomatik tespit)_
@@ -1100,7 +1100,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 149 KB (SKILL.md 20.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### keyword-optimizer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 73 (B)
+### keyword-optimizer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 72 (B)
 
 - **Ne yapar:** Optimize app title, subtitle, and keywords for maximum App Store discoverability. Use when launching a new app, improving search rankings, entering new markets/languages, or safely optimizing ASO for an app with existing traffic.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1300,7 +1300,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 47 KB (SKILL.md 36.8 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### marketing-strategy  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 73 (B)
+### marketing-strategy  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 72 (B)
 
 - **Ne yapar:** App Store marketing strategy advisor that analyzes your app and recommends the best promotional features. Orchestrates sub-skills for implementation. Use when planning app promotion, launch strategy, user acquisition, or re-engagement campaigns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1410,7 +1410,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 12 KB (SKILL.md 11.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### originality-check  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 75 (B)
+### originality-check  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 74 (B)
 
 - **Ne yapar:** Guideline-4.3 anti-spam / originality gate — score whether an app (and each portfolio addition) is meaningfully distinct in function, content, and metadata before you invest or submit. Use at validation/new-app time and again before submission. Protects the whole developer account from 4.3 (spam/duplicate) rejections. NOT rejection-handler (that works an existing rejection) and NOT competitive-ana
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1570,7 +1570,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 61 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ratings-mechanics  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 80 (A)
+### ratings-mechanics  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 79 (B)
 
 - **Ne yapar:** How App Store ratings actually behave — per-storefront isolation (your US stars show nowhere else), the never-reset rule, phased release + manual release as rating protection, and where prompting/replying fit. Use when planning ratings strategy for new markets, considering a ratings reset, setting release options, or diagnosing "why is my rating missing in country X.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1580,7 +1580,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### rejection-handler  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 73 (B)
+### rejection-handler  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 72 (B)
 
 - **Ne yapar:** Handle App Store rejections, prepare submissions to avoid common rejection reasons, write Resolution Center responses, and navigate the appeal process. Use when user's app was rejected, is preparing for submission, or needs help with App Review.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1610,7 +1610,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 13 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### review-response-writer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 75 (B)
+### review-response-writer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 74 (B)
 
 - **Ne yapar:** Write professional, empathetic responses to App Store reviews that build trust and turn critics into fans. Use when responding to negative reviews, drafting templates for common review types, or improving review management strategy.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1650,7 +1650,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### screenshot-planner  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 73 (B)
+### screenshot-planner  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 72 (B)
 
 - **Ne yapar:** Plan compelling App Store screenshot sequences that showcase your app's value. Use when preparing App Store assets, improving screenshot conversion, or drafting screenshot captions for a launch or major update.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1933,7 +1933,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 36 KB (SKILL.md 12.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### web-presence  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 80 (A)
+### web-presence  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 79 (B)
 
 - **Ne yapar:** The discovery surfaces outside the App Store app — your apps.apple.com product page ranking on Google, an owned landing page with a Smart App Banner, and the deal-site ecosystem that auto-amplifies price drops. Use when building a landing page, improving Google visibility for an app, planning a price-drop promotion, or auditing off-store discovery.
 - **Teknoloji:** api-anahtari, html _(otomatik tespit)_

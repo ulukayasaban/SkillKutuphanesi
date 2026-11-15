@@ -54,7 +54,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 224
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 225
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -172,6 +172,7 @@
 | `remotion@openmontageinc` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `synthetic-ui-demo` | 01-video-uretim-montaj | Remotion şablonu yerelde render edilir; anlatıcı sesi ve konuşan kafa isteğe bağlı bulut GPU ya da ElevenLabs ister; Remotion lisansı şirketler için ücretli olabilir |
 | `video-toolkit` | 01-video-uretim-montaj | Eski OpenMontage kopyası: açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası var, fazlası ve RunPod ücretli (2026-11-15 yeniden değerlendirildi, önceden ucretli) |
+| `video-use` | 01-video-uretim-montaj | ElevenLabs Scribe ücretsiz kotasıyla kullanılabilir; yoğun transkript ücretli. ffmpeg/Manim/PIL yerel ve ücretsiz |
 | `video_toolkit` | 01-video-uretim-montaj | Açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası, müzik acemusic ücretsiz anahtarla, ses efekti Openverse ücretsiz; ElevenLabs, Ideogram ve RunPod seçenekleri ücretli |
 | `acestep` | 02-ses-muzik-konusma | Varsayılan yol acemusic bulut API'si, ücretsiz anahtarla çalışır; Modal'da kendi barındırma isteğe bağlı (aylık ücretsiz kota, fazlası ücretli) |
 | `agents` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planındaki sesli agent dakikalarıyla denenebilir; üretim kullanımı ücretli |
@@ -190,7 +191,7 @@
 | `higgsfield-marketplace-cards` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `higgsfield-product-photoshoot` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `ltx2` | 03-ai-gorsel-video-modelleri | Açık model LTX-2.3 kullanıcının Modal hesabındaki uç noktada çalışır (aylık ücretsiz kota, fazlası ücretli); topluluk lisansı 10M$ altı gelirde ücretsiz |
-| `ltx2@openmontageinc` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
+| `ltx2@openmontageinc` | 03-ai-gorsel-video-modelleri | Açık model LTX-2.3 kullanıcının Modal hesabındaki uç noktada çalışır (aylık ücretsiz kota, fazlası ücretli); topluluk lisansı 10M$ altı gelirde ücretsiz |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
 | `qwen-edit` | 03-ai-gorsel-video-modelleri | Varsayılan Modal uç noktası (aylık ücretsiz kota), RunPod seçeneği ücretli; Qwen-Image-2.1 seçeneği ticari olmayan lisanslı |
 | `video-prompt-builder` | 03-ai-gorsel-video-modelleri | Video planı ve istem yazımı ücretsizdir; planın Seedance/Higgsfield'da üretilmesi kredi harcar. |

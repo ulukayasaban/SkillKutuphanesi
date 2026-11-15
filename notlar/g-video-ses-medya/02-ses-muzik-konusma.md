@@ -4,7 +4,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **18/32**
 
-### acestep  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
+### acestep  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
 - **Ne yapar:** ACE-Step 1.5 ile yapay zeka müziği: arka plan müziği, sözlü parça, cover, enstrüman ayrıştırma (stem), ses onarma ve devam ettirme; tools/music_gen.py üstünden. Varsayılan acemusic bulut API'si (ücretsiz anahtar, GPU gerekmez); isteğe bağlı Modal ya da RunPod'da kendi barındırma. Sahne ön ayarları (corporate-bg, tension...), BPM ve tonalite denetimi, varyasyon üretip seçme.
 - **Ne zaman:** Video için telifsiz-benzeri üretilmiş arka plan müziği, jingle ya da şarkı; ücretsiz yol arandığında (acemusic anahtarı). · **Ne zaman değil:** toolkit kökü gerekir (VIDEO_TOOLKIT_ROOT; bu bilgisayarda kurulu değil, kurulum programlar.json → claude-code-video-toolkit kartıyla ayrı onayla). Gerçek sanatçı ya da şarkı taklidi için; hazır stok müzik yeterliyse media-use; sorunsuz ticari lisans belgesi gerektiğinde acemusic ve model şartlarını ayrıca kontrol et.
@@ -92,7 +92,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 21 KB (SKILL.md 21.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (ses-analiz grubunda birincil). MIT, 3,9k★. Ücretsiz, yerel; rol çekirdeğine girmez (kurulum yükü).
 
-### elevenlabs  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
+### elevenlabs  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
 - **Ne yapar:** ElevenLabs API'leriyle seslendirme, ses efekti ve müzik üretimi: model seçimi (multilingual_v2, v4, flash_v2_5), ses ayarları, SSML/duraklama ve telaffuz denetimi, ses klonlama, konuşmadan metne (scribe_v2), paylaşılan ses arama ve yinelemeli üretim akışı. Python SDK örnekleriyle doğrudan çalışır.
 - **Ne zaman:** Video, podcast ya da oyun için yapay zeka sesi, ses efekti, ses klonlama ve transkripsiyon; ELEVENLABS_API_KEY varsa. · **Ne zaman değil:** Tamamen ücretsiz yol için media-use (Kokoro) ya da Qwen3-TTS; sesli ajan için agents; kişinin izni olmadan ses klonlama. Toolkit araçlarına atıflar (voiceover.py, sfx.py) toolkit yoksa geçerli değil; SDK örnekleri toolkit'siz çalışır.

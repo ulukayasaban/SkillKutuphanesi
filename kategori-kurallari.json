@@ -2,6 +2,16 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "WyattBlue/auto-editor",
+      "desen": ".",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
+      "repo": "avenoxai/avenox-video-kurgu-notlari",
+      "desen": ".",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
       "repo": "digitalsamba/claude-code-video-toolkit",
       "desen": "^(acestep|elevenlabs)$",
       "kategori": "g-video-ses-medya/02-ses-muzik-konusma"
