@@ -48,6 +48,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | JayGPTPro/amazon-pro-skills | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
 | Jonnycatx/apple-full-stack-genius-skill | reddedildi | 2026-11-07 | Ücretli fal.ai kullanıyor; 8 aydır güncellenmiyor |
 | Kappaemme-git/codex-phone-lab | eklendi | 2026-10-31 | Expo uygulamasını gerçek telefonda canlı geliştirme (Codex skill'i). |
+| KeygraphHQ/shannon | reddedildi | 2026-11-15 | K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz |
 | Kototoro-app/Kototoro | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | LeoYeAI/openclaw-master-skills | reddedildi | 2026-10-22 | OpenClaw toplama |
 | Livsy90/iOS-Performance-Agent-Skills | eklendi | 2026-10-22 | iOS/Swift/SwiftUI performans. |
@@ -67,6 +68,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | RevenueCat/play-billing-skills | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
 | SerendipityOneInc/ZooData-Skills | reddedildi | 2026-11-03 | ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy) |
 | ShadAdman/KSensor | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| SnailSploit/Claude-Red | reddedildi | 2026-11-15 | K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz |
 | SuTechs/abcd_architecture_flutter | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | Trendyol/stove | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
 | Viniciuscarvalho/swift-code-reviewer-skill | eklendi | 2026-10-31 | Swift/SwiftUI: eşzamanlılık, test, uzman rehberi, arayüz kalıpları. |
@@ -202,11 +204,13 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | twostraws/SwiftData-Agent-Skill | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
 | uni-infiniteai/clawec-agents | reddedildi | 2026-10-22 | Çince, clawEC API'sine bağlı |
 | unixzii/SimRun | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| usestrix/strix | reddedildi | 2026-11-15 | K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz |
 | vRallev/app-platform | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | vagabond911/aso-auditor | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: Lisans yok (GitHub API doğrulandı), ★33, SKILL.md 95 KB (agent bağlamını tek başına doldurur); hiçbir role/projeye bağlı değil. Kullanıcı onayıyla (silme-adaylari.md #2). |
 | vide/matedroid | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | vtex/skills | reddedildi | 2026-10-22 | VTEX'e özel, lisans yok; gerekirse yeniden değerlendir |
 | vulpy-io/vulpy-commerce-core | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
+| vxcontrol/pentagi | reddedildi | 2026-11-15 | K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz |
 | w9uk5ie8v/LinkFoxSkills | reddedildi | 2026-10-22 | Çince, lisans yok, düşük ilgi |
 | woocommerce/agent-skills | reddedildi | 2026-10-22 | Repo-içi katkı skilleri (abilities API, eski PR denetimi), mağaza işi değil |
 | woocommerce/qit-cli | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |

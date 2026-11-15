@@ -965,6 +965,26 @@
       "karar": "eklendi",
       "neden": "T2 kaynak olarak eklendi (16 skill, 2 birebir kopya); program olarak da izlenecek",
       "tarih": "2026-11-15"
+    },
+    "SnailSploit/Claude-Red": {
+      "karar": "reddedildi",
+      "neden": "K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz",
+      "tarih": "2026-11-15"
+    },
+    "usestrix/strix": {
+      "karar": "reddedildi",
+      "neden": "K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz",
+      "tarih": "2026-11-15"
+    },
+    "KeygraphHQ/shannon": {
+      "karar": "reddedildi",
+      "neden": "K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz",
+      "tarih": "2026-11-15"
+    },
+    "vxcontrol/pentagi": {
+      "karar": "reddedildi",
+      "neden": "K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz",
+      "tarih": "2026-11-15"
     }
   },
   "konular": {
