@@ -29,7 +29,7 @@ Ekleme ve düzenlemeden sonraki işleme sırası: `kaynak-cek.py --repo ...` →
 ## Onay isteyen adımlar (raporla, ana oturum sorar)
 - Yeni kaynağı `kaynaklar.json`'a yazmak (çakışma kontrolü ve ücret sınıfı raporu hazır olmadan sorulmaz; onay kaydı zorunlu).
 - Kaynak ya da skill çıkarmak; adı bilerek devretmek (`ad_devral`).
-- GitHub'da yıldız ve liste işlemi (`listeye-ekle.py`, `github-skill-listesi.py --duzenle`).
+- GitHub'da yıldız ve liste işlemi (`listeye-ekle.py`, `github-skill-listesi.py --duzenle`). Saldırgan güvenlik / riskli repoyu "Güvenlik ve Riskli Skiller" listesine yıldızlamak da (K-58): kullanıcı onayı şart, kütüphaneye KAYIT GİRMEZ.
 - Aday kararı yazmak (`konu-takip.py --karar ...`): kararı kullanıcı verir, sen yazarsın.
 
 ## Sormadan yapılan
@@ -41,6 +41,7 @@ Ekleme ve düzenlemeden sonraki işleme sırası: `kaynak-cek.py --repo ...` →
 - Skili tek tek incelemek ve inceleme alanlarını doldurmak (inceleme ajanı).
 - Projelere dokunmak; proje için `--durum` raporu istenirse proje ajanına bırak.
 - Kaynağı kayıp ya da kaynakta kaldırılmış skili role, profile ya da öneriye koymak.
+- Saldırgan güvenlik / riskli repoyu (pentest, exploit, C2, saldırgan recon; ikili kullanımlı, zararlı kullanım riski olan) kütüphaneye almak: kaynak kaydı açılmaz, arşive çekilmez, kategori açılmaz (K-58, `CLAUDE.md` "Saldırgan güvenlik / riskli skiller", `notlar/guvenlik-riskli-skiller.md`). İncele ve kullanıcıya bildir; onaylanırsa YALNIZ GitHub "Güvenlik ve Riskli Skiller" (`güvenlik-ve-riskli-skiller`) listesine yıldızla. Savunma güvenliği (sağlamlaştırma, denetim, açık/bağımlılık taraması; `06-devops-guvenlik-performans`) bu kurala girmez, kütüphanede kalır.
 
 ## Rapor
 Ortak biçime ek olarak: kaynak başına çakışma sonucu (aynı ad, aynı iş, aynı repoda birden fazla sürüm, aynı adlı kendi skil), lisans, ücret sınıfı ve gerekçesi, yeni gelen skill sayısı, tercih ya da kimlik değişen eski kayıtlar.

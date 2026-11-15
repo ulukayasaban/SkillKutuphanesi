@@ -2249,9 +2249,10 @@
   ],
   "_aciklama_takip": "takip_konulari: araclar/konu-takip.py bu alanlarda GitHub'da yeni skill repolarını arar (aylık güncellemede otomatik). Aday eklemek onaylıdır.",
   "korunan_listeler": [
-    "yapay-zeka-araçları"
+    "yapay-zeka-araçları",
+    "güvenlik-ve-riskli-skiller"
   ],
-  "_aciklama_korunan": "korunan_listeler: kullanıcının kendi GitHub listeleri (ör. 'Yapay Zeka araçları'). github-skill-listesi.py --duzenle bu listelerdeki üyeliği SİLMEZ; skill içeren repo ayrıca skill listesine girer.",
+  "_aciklama_korunan": "korunan_listeler: kullanıcının kendi GitHub listeleri (ör. 'Yapay Zeka araçları', 'Güvenlik ve Riskli Skiller'). github-skill-listesi.py --duzenle bu listelerdeki üyeliği SİLMEZ ve kopya saymaz; skill içeren repo ayrıca skill listesine girer. 'güvenlik-ve-riskli-skiller' saldırgan güvenlik/riskli repoların kütüphaneye ALINMADAN toplandığı listedir (K-58).",
   "arsivden_cikarilan_repolar": [
     {
       "repo": "aldefy/compose-skill",
