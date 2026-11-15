@@ -918,10 +918,13 @@
       "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian ikinci beyin iş akışı (16k★). obsidian-bases/obsidian-markdown adları kepano ve claudesidian'da da var: kepano (öncelik 1) tercih, bu alternatif."
     },
     {
-      "repo": "kepano/obsidian-skills",
+      "repo": "obsidianmd/obsidian-skills",
       "tip": "T1",
       "oncelik": 1,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian CEO'su kepano'nun resmî Agent Skills (51k★): obsidian-markdown, obsidian-bases, json-canvas vb. Aynı adlı claudesidian (öncelik 4) kopyaları artık alternatif olur."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian CEO'su kepano'nun resmî Agent Skills (51k★): obsidian-markdown, obsidian-bases, json-canvas vb. Aynı adlı claudesidian (öncelik 4) kopyaları artık alternatif olur. Repo 2026-11'de GitHub'da kepano kişisel hesabından obsidianmd kuruluşuna taşındı (aynı repo; kimlikler `@kepano` olarak kalır). Not: yeni repoda yollar skills/ -> plugins/obsidian/skills/ değişti ve obsidian-headless adlı yeni skill var; yol güncellemesi ve yeni skill ayrı bir ekleme kararıdır (bu ad değişikliğine dahil değil).",
+      "eski_adlar": [
+        "kepano/obsidian-skills"
+      ]
     },
     {
       "repo": "google/elephant-goldfish-model",

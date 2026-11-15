@@ -30,7 +30,7 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | `a-tasarim-onyuz/03-animasyon-motion` — GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim | nexu-io/open-design 90A (7) · OpenMontageInc/OpenMontage 80A (2) · github/awesome-copilot 75B (1) | `gsap-framer-scroll-animation` 98/B, `emilkowalski-motion` 97/A, `motion-lab` 97/A, `animate` 95/A |
 | `a-tasarim-onyuz/04-scroll-deneyimi` — Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişle | greensock/gsap-skills 52C (1) · nateherkai/scroll-craft 44D (1) · freshtechbro/claudedesignskills 30D (3) | `gsap-scrolltrigger` 86/C, `scroll-craft` 78/D, `barba-js` 61/D, `locomotive-scroll` 61/D |
 | `a-tasarim-onyuz/05-3d-webgl` — Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, We | openai/plugins 51C (2) · CloudAI-X/threejs-skills 41D (13) · freshtechbro/claudedesignskills 30D (10) | `threejs-asset-pipeline` 88/D, `threejs-fundamentals` 88/D, `threejs-lighting` 88/D, `threejs-loaders` 88/D |
-| `a-tasarim-onyuz/06-oyun-2d-grafik` — Oyun geliştirme, PixiJS, 2D grafik | nexu-io/open-design 90A (1) · pixijs/pixijs 76B (26) · Donchitos/Claude-Code-Game-Studios 60C (68) | `estimate` 98/C, `scope-check` 98/C, `asset-audit` 96/C, `help` 96/C |
+| `a-tasarim-onyuz/06-oyun-2d-grafik` — Oyun geliştirme, PixiJS, 2D grafik | nexu-io/open-design 90A (1) · pixijs/pixijs 76B (26) · Donchitos/Claude-Code-Game-Studios 59C (68) | `estimate` 98/C, `scope-check` 98/C, `asset-audit` 96/C, `help` 96/C |
 | `a-tasarim-onyuz/07-gorsel-sanat-sunum` — Poster/canvas tasarımı, generative art, slayt, GIF | nexu-io/open-design 90A (14) · nextlevelbuilder/ui-ux-pro-max-skill 87A (1) · OpenMontageInc/OpenMontage 80A (1) | `playground` 100/B, `card-twitter` 97/A, `card-xiaohongshu` 97/A, `deck-guizang-editorial` 97/A |
 | `a-tasarim-onyuz/08-onyuz-test-kalite` — Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığ | nexu-io/open-design 90A (3) · microsoft/playwright 85A (2) · addyosmani/agent-skills 85A (1) | `playwright-trace` 100/A, `browser-testing-with-devtools` 98/A, `playwright-component-testing` 98/A, `export-download-debugging` 97/A |
 | `b-yazilim-gelistirme/01-planlama-metodoloji` — Fikir geliştirme, spec, plan yazma, görev bölme, uygulama di | addyosmani/agent-skills 85A (8) · mattpocock/skills 83A (30) · ruvnet/ruflo 82A (6) | `ask-matt` 100/A, `codebase-design` 100/A, `diagnosing-bugs` 100/A, `domain-modeling` 100/A |
@@ -40,11 +40,11 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | `b-yazilim-gelistirme/05-git-pr-surum` — Git, worktree, PR, sürüm/release, changelog | nexu-io/open-design 90A (2) · addyosmani/agent-skills 85A (2) · ruvnet/ruflo 82A (13) | `git-workflow-and-versioning` 100/A, `agent-github-pr-manager` 100/A, `diff-analyze` 100/A, `git-workflow` 100/A |
 | `b-yazilim-gelistirme/06-devops-guvenlik-performans` — CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | morluto/rea 94A (1) · addyosmani/agent-skills 85A (5) · ruvnet/ruflo 82A (22) | `security-and-hardening` 100/A, `agent-performance-analyzer` 100/A, `agent-v3-security-architect` 100/A, `dependency-check` 100/A |
 | `b-yazilim-gelistirme/07-framework-ozel` — Belirli framework/araç rehberleri (Next.js, Playwright CLI,  | vercel/next.js 90A (6) · microsoft/playwright 85A (1) · anthropics/claude-plugins-official 76B (2) | `next-cache-components-adoption` 100/A, `next-cache-components-optimizer` 100/A, `next-dev-loop` 100/A, `next-partial-prefetching-adoption` 100/A |
-| `b-yazilim-gelistirme/08-mobil-uygulama` — Android (Jetpack Compose, Play), Expo / React Native, iOS; m | android/skills 60C (37) · expo/skills 53C (24) · evanca/flutter-ai-rules 32D (35) | `eas-app-stores` 96/C, `eas-observe` 96/C, `eas-workflows` 96/C, `expo-brownfield` 96/C |
+| `b-yazilim-gelistirme/08-mobil-uygulama` — Android (Jetpack Compose, Play), Expo / React Native, iOS; m | android/skills 60C (37) · expo/skills 53C (24) · hamen/compose_skill 32D (2) | `eas-app-stores` 96/C, `eas-observe` 96/C, `eas-workflows` 96/C, `expo-brownfield` 96/C |
 | `c-dokuman-icerik/01-ofis-dokumanlari` — Word, Excel, PowerPoint, PDF üretme/düzenleme | nexu-io/open-design 90A (3) · anthropics/skills 74B (4) · anthropics/knowledge-work-plugins 72B (1) | `view-pdf` 100/B, `docx` 98/B, `article-magazine` 97/A, `doc-kami-parchment` 97/A |
 | `c-dokuman-icerik/02-diyagram-dokumantasyon` — Diyagram, teknik dokümantasyon, ADR, ortak yazım | nexu-io/open-design 90A (2) · addyosmani/agent-skills 85A (1) · tt-a1i/archify 84A (1) | `documentation-and-adrs` 100/A, `adr-create` 100/A, `adr-index` 100/A, `adr-reindex` 100/A |
 | `c-dokuman-icerik/03-yazi-iletisim-icerik` — Yazı, iletişim, pazarlama/içerik, kariyer | nexu-io/open-design 90A (1) · anthropics/skills 74B (1) · blader/humanizer 73B (1) | `humanizer` 98/B, `research-decision-room` 97/A, `internal-comms` 90/B, `writing-guidelines` 84/B |
-| `c-dokuman-icerik/04-not-alma-bilgi-yonetimi` — Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni | ComposioHQ/awesome-claude-skills 64C (2) · AgriciDaniel/claude-obsidian 62C (11) · kepano/obsidian-skills 60C (5) | `canvas` 89/C, `think` 89/C, `wiki-cli` 89/C, `wiki-fold` 89/C |
+| `c-dokuman-icerik/04-not-alma-bilgi-yonetimi` — Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni | obsidianmd/obsidian-skills 73B (5) · ComposioHQ/awesome-claude-skills 64C (2) · AgriciDaniel/claude-obsidian 62C (11) | `canvas` 89/C, `think` 89/C, `wiki-cli` 89/C, `wiki-fold` 89/C |
 | `d-ai-otomasyon/01-claude-api-mcp` — Claude API, MCP sunucusu, model geçişi | ruvnet/ruflo 82A (5) · anthropics/claude-plugins-official 76B (4) · anthropics/skills 74B (3) | `chat-format` 100/A, `ruvllm-runtime` 100/A, `build-mcp-app` 100/B, `build-mcp-server` 100/B |
 | `d-ai-otomasyon/02-agent-orkestrasyon` — Alt-agent, paralel agent, bağlam mühendisliği, agent davranı | nexu-io/open-design 90A (2) · JuliusBrussee/caveman 86A (22) · addyosmani/agent-skills 85A (2) | `context-engineering` 100/A, `add-model-descriptions` 100/A, `agent-agentic-payments` 100/A, `agent-app-store` 100/A |
 | `d-ai-otomasyon/03-web-arastirma-veri` — Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma | Graphify-Labs/graphify 92A (1) · ruvnet/ruflo 82A (16) · Panniantong/Agent-Reach 80A (1) | `browser` 100/A, `browser-auth-flow` 100/A, `browser-extract` 100/A, `browser-form-fill` 100/A |
@@ -102,36 +102,36 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 30 | anthropics/skills | 74 B | 18 | 07-gorsel-sanat-sunum (4), 01-ofis-dokumanlari (4) | 17/1/0 | yok | ✓ | 187417 | 13597.8 | 17 | 15 | - | 🔥 |
 | 31 | blader/humanizer | 73 B | 1 | 03-yazi-iletisim-icerik (1) | 1/0/0 | MIT |  | 64838 | 6548.4 | 24 | 60 | 2026-09-28 | 🔥 |
 | 32 | cathrynlavery/diagram-design | 73 B | 1 | 02-diyagram-dokumantasyon (1) | 1/0/0 | MIT |  | 65003 | 9277.4 | 66 | 397 | - |  |
-| 33 | anthropics/knowledge-work-plugins | 72 B | 187 | 03-operasyon-urun-isletme (69), 01-satis-pazarlama-musteri (58) | 187/0/0 | Apache-2.0 | ✓ | 34734 | 3567.3 | 32 | 563 | - | 🔥 |
-| 34 | earthtojake/text-to-cad | 71 B | 12 | 05-cad-imalat-robotik (12) | 12/0/0 | MIT |  | 25423 | 3733.6 | 32 | 876 | 2026-11-03 | 🔥 |
-| 35 | motiondivision/motion | 70 B | 0 | - | 0/0/0 | MIT | ✓ | 34907 | 363.3 | 147 | 1009 | - |  |
-| 36 | AgriciDaniel/claude-seo | 69 B | 25 | 01-satis-pazarlama-musteri (25) | 25/0/0 | MIT |  | 26654 | 2883.6 | 30 | 209 | 2026-10-22 | 🔥 |
-| 37 | teng-lin/notebooklm-py | 69 B | 1 | 03-web-arastirma-veri (1) | 0/1/0 | MIT |  | 20096 | 1958.1 | 42 | 650 | 2026-10-29 |  |
-| 38 | wanshuiyin/Auto-claude-code-research-in-sleep | 68 B | 86 | 04-bilimsel-yazim-literatur (86) | 76/9/1 | MIT |  | 18651 | 2268.0 | 106 | 205 | 2026-09-28 |  |
-| 39 | google/elephant-goldfish-model | 67 B | 7 | 01-planlama-metodoloji (7) | 7/0/0 | Apache-2.0 |  | 11801 | 5694.5 | 29 | 149 | 2026-10-27 | 🔥 |
-| 40 | multica-ai/andrej-karpathy-skills | 67 B | 1 | 01-planlama-metodoloji (1) | 1/0/0 | yok |  | 229500 | 23893.2 | 7 | 0 | - | 🔥 |
-| 41 | cloudflare/security-audit-skill | 66 B | 1 | 06-devops-guvenlik-performans (1) | 1/0/0 | MIT | ✓ | 59355 | 12029.3 | 4 | 3 | - | 🔥 |
+| 33 | obsidianmd/obsidian-skills | 73 B | 6 | 04-not-alma-bilgi-yonetimi (5), 02-diyagram-dokumantasyon (1) | 6/0/0 | MIT |  | 52786 | 5062.1 | 28 | 43 | 2026-11-11 |  |
+| 34 | anthropics/knowledge-work-plugins | 72 B | 187 | 03-operasyon-urun-isletme (69), 01-satis-pazarlama-musteri (58) | 187/0/0 | Apache-2.0 | ✓ | 34734 | 3567.3 | 32 | 563 | - | 🔥 |
+| 35 | earthtojake/text-to-cad | 71 B | 12 | 05-cad-imalat-robotik (12) | 12/0/0 | MIT |  | 25423 | 3733.6 | 32 | 876 | 2026-11-03 | 🔥 |
+| 36 | motiondivision/motion | 70 B | 0 | - | 0/0/0 | MIT | ✓ | 34907 | 363.3 | 147 | 1009 | - |  |
+| 37 | AgriciDaniel/claude-seo | 69 B | 25 | 01-satis-pazarlama-musteri (25) | 25/0/0 | MIT |  | 26654 | 2883.6 | 30 | 209 | 2026-10-22 | 🔥 |
+| 38 | teng-lin/notebooklm-py | 69 B | 1 | 03-web-arastirma-veri (1) | 0/1/0 | MIT |  | 20096 | 1958.1 | 42 | 650 | 2026-10-29 |  |
+| 39 | wanshuiyin/Auto-claude-code-research-in-sleep | 68 B | 86 | 04-bilimsel-yazim-literatur (86) | 76/9/1 | MIT |  | 18651 | 2268.0 | 106 | 205 | 2026-09-28 |  |
+| 40 | google/elephant-goldfish-model | 67 B | 7 | 01-planlama-metodoloji (7) | 7/0/0 | Apache-2.0 |  | 11801 | 5694.5 | 29 | 149 | 2026-10-27 | 🔥 |
+| 41 | multica-ai/andrej-karpathy-skills | 67 B | 1 | 01-planlama-metodoloji (1) | 1/0/0 | yok |  | 229500 | 23893.2 | 7 | 0 | - | 🔥 |
 | 42 | Nutlope/hallmark | 65 B | 1 | 01-ui-ux-tasarim-dili (1) | 0/1/0 | MIT |  | 47913 | 7210.7 | 10 | 138 | - | 🔥 |
-| 43 | vercel-labs/agent-skills | 65 B | 9 | 07-framework-ozel (4), 06-devops-guvenlik-performans (3) | 6/3/0 | yok | ✓ | 33547 | 2982.0 | 28 | 23 | 2026-10-27 | 🔥 |
-| 44 | ComposioHQ/awesome-claude-skills | 64 C | 19 | 03-yazi-iletisim-icerik (9), 01-claude-api-mcp (3) | 16/3/0 | yok | ✓ | 78745 | 6075.8 | 29 | 0 | - |  |
-| 45 | Vincentwei1021/video-shotcraft | 63 C | 1 | 01-video-uretim-montaj (1) | 1/0/0 | Apache-2.0 |  | 16988 | 4339.8 | 14 | 44 | 2026-09-01 | 🔥 |
-| 46 | krillinai/OpenCreator | 63 C | 7 | 02-ses-muzik-konusma (7) | 6/1/0 | Apache-2.0 |  | 14157 | 616.6 | 36 | 458 | 2026-11-03 |  |
-| 47 | AgriciDaniel/claude-obsidian | 62 C | 11 | 04-not-alma-bilgi-yonetimi (11) | 11/0/0 | MIT |  | 16171 | 2214.4 | 11 | 108 | 2026-10-21 |  |
-| 48 | Fei-Away/Codex-Dream-Skin | 62 C | 0 | - | 0/0/0 | MIT |  | 15329 | 3788.6 | 23 | 44 | 2026-10-15 |  |
+| 43 | cloudflare/security-audit-skill | 65 B | 1 | 06-devops-guvenlik-performans (1) | 1/0/0 | MIT | ✓ | 59355 | 12029.3 | 4 | 3 | - | 🔥 |
+| 44 | vercel-labs/agent-skills | 65 B | 9 | 07-framework-ozel (4), 06-devops-guvenlik-performans (3) | 6/3/0 | yok | ✓ | 33547 | 2982.0 | 28 | 23 | 2026-10-27 | 🔥 |
+| 45 | ComposioHQ/awesome-claude-skills | 64 C | 19 | 03-yazi-iletisim-icerik (9), 01-claude-api-mcp (3) | 16/3/0 | yok | ✓ | 78745 | 6075.8 | 29 | 0 | - |  |
+| 46 | Vincentwei1021/video-shotcraft | 63 C | 1 | 01-video-uretim-montaj (1) | 1/0/0 | Apache-2.0 |  | 16988 | 4339.8 | 14 | 44 | 2026-09-01 | 🔥 |
+| 47 | krillinai/OpenCreator | 63 C | 7 | 02-ses-muzik-konusma (7) | 6/1/0 | Apache-2.0 |  | 14157 | 616.6 | 36 | 458 | 2026-11-03 |  |
+| 48 | AgriciDaniel/claude-obsidian | 62 C | 11 | 04-not-alma-bilgi-yonetimi (11) | 11/0/0 | MIT |  | 16171 | 2214.4 | 11 | 108 | 2026-10-21 |  |
 | 49 | dreammis/social-auto-upload | 62 C | 18 | 01-video-uretim-montaj (18) | 18/0/0 | MIT |  | 16118 | 455.0 | 42 | 46 | 2026-10-22 |  |
 | 50 | lemomo-ai/lemo-opuscar | 62 C | 1 | 01-video-uretim-montaj (1) | 1/0/0 | MIT |  | 12273 | 7462.0 | 4 | 80 | 2026-10-12 |  |
-| 51 | Donchitos/Claude-Code-Game-Studios | 60 C | 68 | 06-oyun-2d-grafik (68) | 68/0/0 | MIT |  | 35403 | 3899.5 | 1 | 5 | 2026-10-19 | 🔥 |
+| 51 | Fei-Away/Codex-Dream-Skin | 61 C | 0 | - | 0/0/0 | MIT |  | 15329 | 3788.6 | 23 | 44 | 2026-10-15 |  |
 | 52 | android/skills | 60 C | 37 | 08-mobil-uygulama (37) | 36/1/0 | Apache-2.0 | ✓ | 10337 | 1287.9 | 8 | 36 | 2026-11-04 | 🔥 |
-| 53 | kepano/obsidian-skills | 60 C | 6 | 04-not-alma-bilgi-yonetimi (5), 02-diyagram-dokumantasyon (1) | 6/0/0 | MIT |  | 50753 | 4867.2 | 17 | 3 | - |  |
+| 53 | Donchitos/Claude-Code-Game-Studios | 59 C | 68 | 06-oyun-2d-grafik (68) | 68/0/0 | MIT |  | 35403 | 3899.5 | 1 | 5 | 2026-10-19 | 🔥 |
 | 54 | zarazhangrui/frontend-slides | 58 C | 1 | 07-gorsel-sanat-sunum (1) | 0/1/0 | MIT |  | 31888 | 3331.3 | 9 | 0 | 2026-05-26 |  |
 | 55 | cloudflare/skills | 56 C | 19 | 06-devops-guvenlik-performans (19) | 9/7/3 | Apache-2.0 | ✓ | 3279 | 293.2 | 48 | 261 | - | 🔥 |
-| 56 | zubair-trabzada/geo-seo-claude | 56 C | 16 | 01-satis-pazarlama-musteri (16) | 16/0/0 | MIT |  | 11511 | 1296.1 | 25 | 77 | - |  |
-| 57 | digitalsamba/claude-code-video-toolkit | 56 C | 14 | 01-video-uretim-montaj (7), 03-ai-gorsel-video-modelleri (4) | 4/8/2 | MIT |  | 2579 | 229.9 | 17 | 422 | 2026-11-14 |  |
+| 56 | digitalsamba/claude-code-video-toolkit | 56 C | 14 | 01-video-uretim-montaj (7), 03-ai-gorsel-video-modelleri (4) | 4/8/2 | MIT |  | 2579 | 229.9 | 17 | 422 | 2026-11-14 |  |
+| 57 | zubair-trabzada/geo-seo-claude | 55 C | 16 | 01-satis-pazarlama-musteri (16) | 16/0/0 | MIT |  | 11511 | 1296.1 | 25 | 77 | - |  |
 | 58 | AgriciDaniel/claude-ads | 54 C | 34 | 01-satis-pazarlama-musteri (34) | 34/0/0 | MIT |  | 10746 | 1179.3 | 2 | 43 | 2026-10-16 |  |
 | 59 | Orchestra-Research/AI-Research-SKILLs | 54 C | 97 | 03-veri-bilimi-ml (95), 01-planlama-metodoloji (1) | 82/14/1 | MIT |  | 14269 | 1150.6 | 17 | 0 | 2026-06-16 |  |
-| 60 | vudovn/ag-kit | 54 C | 51 | 06-oyun-2d-grafik (11), 02-agent-orkestrasyon (7) | 51/0/0 | MIT |  | 8207 | 818.0 | 10 | 8 | 2026-08-31 |  |
-| 61 | czlonkowski/n8n-skills | 53 C | 15 | 02-agent-orkestrasyon (15) | 15/0/0 | MIT |  | 6589 | 512.3 | 7 | 33 | 2026-10-24 | 🔥 |
-| 62 | expo/skills | 53 C | 24 | 08-mobil-uygulama (24) | 15/9/0 | MIT | ✓ | 4050 | 351.8 | 31 | 45 | - | 🔥 |
+| 60 | czlonkowski/n8n-skills | 53 C | 15 | 02-agent-orkestrasyon (15) | 15/0/0 | MIT |  | 6589 | 512.3 | 7 | 33 | 2026-10-24 | 🔥 |
+| 61 | expo/skills | 53 C | 24 | 08-mobil-uygulama (24) | 15/9/0 | MIT | ✓ | 4050 | 351.8 | 31 | 45 | - | 🔥 |
+| 62 | vudovn/ag-kit | 53 C | 51 | 06-oyun-2d-grafik (11), 02-agent-orkestrasyon (7) | 51/0/0 | MIT |  | 8207 | 818.0 | 10 | 8 | 2026-08-31 |  |
 | 63 | greensock/gsap-skills | 52 C | 8 | 03-animasyon-motion (7), 04-scroll-deneyimi (1) | 8/0/0 | MIT | ✓ | 17884 | 2123.7 | 4 | 0 | - |  |
 | 64 | openai/plugins | 51 C | 463 | 01-uygulama-entegrasyonlari (449), 06-devops-guvenlik-performans (5) | 436/27/0 | yok | ✓ | 7752 | 920.6 | 62 | 10 | - |  |
 | 65 | Leonxlnx/earshot | 50 C | 2 | 02-ses-muzik-konusma (2) | 2/0/0 | MIT |  | 3898 | 3822.6 | 1 | 40 | 2026-10-22 |  |
@@ -157,31 +157,31 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 85 | nexscope-ai/Amazon-Skills | 36 D | 52 | 05-e-ticaret-pazaryeri (52) | 52/0/0 | MIT |  | 834 | 101.4 | 5 | 1 | - |  |
 | 86 | heyitsnoah/claudesidian | 35 D | 15 | 04-not-alma-bilgi-yonetimi (10), 05-git-pr-surum (3) | 14/1/0 | MIT |  | 2606 | 184.7 | 3 | 0 | 2026-04-11 |  |
 | 87 | zanwei/design-dna | 35 D | 1 | 01-ui-ux-tasarim-dili (1) | 1/0/0 | MIT |  | 2079 | 266.7 | 3 | 4 | - |  |
-| 88 | evanca/flutter-ai-rules | 32 D | 35 | 08-mobil-uygulama (35) | 35/0/0 | MIT |  | 669 | 35.6 | 1 | 13 | - |  |
-| 89 | hamen/compose_skill | 32 D | 2 | 08-mobil-uygulama (2) | 2/0/0 | MIT |  | 378 | 53.2 | 3 | 0 | 2026-07-07 |  |
-| 90 | rshankras/claude-code-apple-skills | 32 D | 13 | 08-mobil-uygulama (13) | 13/0/0 | MIT |  | 861 | 68.5 | 2 | 3 | - |  |
-| 91 | xjli360/sealeap-amazon-skills | 32 D | 602 | 05-e-ticaret-pazaryeri (602) | 602/0/0 | MIT |  | 369 | 130.4 | 1 | 15 | - |  |
-| 92 | RevenueCat/play-billing-skills | 31 D | 23 | 08-mobil-uygulama (22), 06-devops-guvenlik-performans (1) | 23/0/0 | Apache-2.0 |  | 60 | 11.0 | 1 | 15 | 2026-10-15 |  |
-| 93 | lemomo-ai/lemo-wake | 31 D | 3 | 04-motion-graphics-karakter (3) | 3/0/0 | NOASSERTION |  | 256 | 181.0 | 1 | 15 | 2026-10-05 |  |
+| 88 | hamen/compose_skill | 32 D | 2 | 08-mobil-uygulama (2) | 2/0/0 | MIT |  | 378 | 53.2 | 3 | 0 | 2026-07-07 |  |
+| 89 | xjli360/sealeap-amazon-skills | 32 D | 602 | 05-e-ticaret-pazaryeri (602) | 602/0/0 | MIT |  | 369 | 130.4 | 1 | 15 | - |  |
+| 90 | evanca/flutter-ai-rules | 31 D | 35 | 08-mobil-uygulama (35) | 35/0/0 | MIT |  | 669 | 35.6 | 1 | 13 | - |  |
+| 91 | lemomo-ai/lemo-wake | 31 D | 3 | 04-motion-graphics-karakter (3) | 3/0/0 | NOASSERTION |  | 256 | 181.0 | 1 | 15 | 2026-10-05 |  |
+| 92 | rshankras/claude-code-apple-skills | 31 D | 13 | 08-mobil-uygulama (13) | 13/0/0 | MIT |  | 861 | 68.5 | 2 | 3 | - |  |
+| 93 | RevenueCat/play-billing-skills | 30 D | 23 | 08-mobil-uygulama (22), 06-devops-guvenlik-performans (1) | 23/0/0 | Apache-2.0 |  | 60 | 11.0 | 1 | 15 | 2026-10-15 |  |
 | 94 | freshtechbro/claudedesignskills | 30 D | 21 | 05-3d-webgl (10), 03-animasyon-motion (6) | 18/2/1 | MIT |  | 1248 | 98.3 | 1 | 0 | - |  |
 | 95 | tuist/fuckingapproachableswiftconcurrency | 30 D | 0 | - | 0/0/0 | MIT |  | 158 | 14.6 | 15 | 0 | - |  |
 | 96 | mercadopago/mercadopago-claude-marketplace | 29 D | 5 | 05-e-ticaret-pazaryeri (5) | 0/5/0 | Apache-2.0 | ✓ | 32 | 3.7 | 10 | 7 | - |  |
-| 97 | moiz-za/etsy-seller-seo-system | 29 D | 1 | 05-e-ticaret-pazaryeri (1) | 1/0/0 | MIT |  | 47 | 7.9 | 2 | 13 | 2026-10-23 |  |
-| 98 | twostraws/SwiftData-Agent-Skill | 29 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 463 | 56.5 | 2 | 1 | 2026-03-11 |  |
+| 97 | twostraws/SwiftData-Agent-Skill | 29 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 463 | 56.5 | 2 | 1 | 2026-03-11 |  |
+| 98 | moiz-za/etsy-seller-seo-system | 28 D | 1 | 05-e-ticaret-pazaryeri (1) | 1/0/0 | MIT |  | 47 | 7.9 | 2 | 13 | 2026-10-23 |  |
 | 99 | xjli360/sealeap-ecommerce-skills | 28 D | 195 | 05-e-ticaret-pazaryeri (195) | 195/0/0 | MIT |  | 137 | 80.1 | 1 | 11 | - |  |
 | 100 | Livsy90/iOS-Performance-Agent-Skills | 27 D | 6 | 08-mobil-uygulama (6) | 6/0/0 | MIT |  | 120 | 21.0 | 2 | 0 | 2026-07-12 |  |
 | 101 | OrcaQubits/agentic-commerce-skills-plugins | 27 D | 272 | 05-e-ticaret-pazaryeri (272) | 265/7/0 | MIT |  | 40 | 4.8 | 3 | 11 | 2026-05-13 |  |
 | 102 | ehmo/platform-design-skills | 27 D | 7 | 08-mobil-uygulama (7) | 7/0/0 | MIT |  | 640 | 67.8 | 1 | 0 | - |  |
-| 103 | finsilabs/awesome-ecommerce-skills | 27 D | 178 | 05-e-ticaret-pazaryeri (178) | 160/18/0 | MIT |  | 63 | 7.7 | 4 | 3 | - |  |
-| 104 | xianyu110/ecommerce-image-skills | 27 D | 10 | 05-e-ticaret-pazaryeri (10) | 0/10/0 | MIT |  | 144 | 104.2 | 1 | 7 | - |  |
+| 103 | xianyu110/ecommerce-image-skills | 27 D | 10 | 05-e-ticaret-pazaryeri (10) | 0/10/0 | MIT |  | 144 | 104.2 | 1 | 7 | - |  |
+| 104 | finsilabs/awesome-ecommerce-skills | 26 D | 178 | 05-e-ticaret-pazaryeri (178) | 160/18/0 | MIT |  | 63 | 7.7 | 4 | 3 | - |  |
 | 105 | ParthJadhav/ios-marketing-capture | 25 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 265 | 36.8 | 1 | 1 | - |  |
 | 106 | dpconde/claude-android-skill | 25 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 352 | 31.2 | 1 | 0 | - |  |
 | 107 | Lonsdale201/wp-agent-skills | 22 D | 31 | 05-e-ticaret-pazaryeri (31) | 31/0/0 | MIT |  | 26 | 4.0 | 3 | 25 | - |  |
 | 108 | MADTeacher/mad-agents-skills | 22 D | 11 | 08-mobil-uygulama (11) | 11/0/0 | MIT |  | 111 | 11.0 | 2 | 0 | - |  |
 | 109 | dadederk/iOS-Accessibility-Agent-Skill | 22 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 176 | 18.2 | 1 | 0 | - |  |
-| 110 | leodavincs/kalem | 22 D | 2 | 01-video-uretim-montaj (2) | 2/0/0 | NOASSERTION |  | 106 | 106.0 | 1 | 7 | - |  |
-| 111 | Harishwarrior/flutter-claude-skills | 21 D | 3 | 08-mobil-uygulama (3) | 3/0/0 | MIT |  | 68 | 5.3 | 2 | 3 | - |  |
-| 112 | Shopify/agent-skills | 21 D | 15 | 05-e-ticaret-pazaryeri (15) | 15/0/0 | yok | ✓ | 101 | 13.5 | 1 | 0 | - |  |
+| 110 | Harishwarrior/flutter-claude-skills | 21 D | 3 | 08-mobil-uygulama (3) | 3/0/0 | MIT |  | 68 | 5.3 | 2 | 3 | - |  |
+| 111 | Shopify/agent-skills | 21 D | 15 | 05-e-ticaret-pazaryeri (15) | 15/0/0 | yok | ✓ | 101 | 13.5 | 1 | 0 | - |  |
+| 112 | leodavincs/kalem | 21 D | 2 | 01-video-uretim-montaj (2) | 2/0/0 | NOASSERTION |  | 106 | 106.0 | 1 | 7 | - |  |
 | 113 | Kappaemme-git/codex-phone-lab | 20 D | 1 | 08-mobil-uygulama (1) | 1/0/0 | MIT |  | 95 | 16.1 | 1 | 0 | - |  |
 | 114 | YildizDikme/claude-video-edit | 20 D | 0 | - | 0/0/0 | MIT |  | 33 | 33.0 | 1 | 3 | - |  |
 | 115 | oldred-byte/ec-visual-skill | 20 D | 1 | 05-e-ticaret-pazaryeri (1) | 1/0/0 | MIT |  | 104 | 16.3 | 1 | 0 | - |  |
@@ -209,8 +209,8 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 7 | openai/whisper | 71 B | - | `media-use` 100/A, `speech-to-text` 100/A, `video-understand` 94/A, `azure-speech-to-text` 94/A, `krillinai-subtitle` 89/C, `whisper` 86/C, `twilio-conference-calls` 71/C, `subtitles` 66/C | kutuphaneler.md |
 | 8 | pmndrs/react-three-fiber | 71 B | v9.8 | `threejs-react-three-fiber` 86/D, `react-three-fiber` 61/D, `react-three-fiber-game` 73/C, `blender-web-pipeline` 61/D, `web3d-integration-patterns` 61/D, `substance-3d-texturing` 53/D, `modern-web-design` 51/D | tasarim-teknolojileri.md |
 | 9 | KaTeX/KaTeX | 68 B | - | `latex-posters` 97/B, `scientific-writing` 97/B, `manim-composer` 94/A, `manimce-best-practices` 100/A, `sympy` 97/B, `scientific-slides` 97/B, `venue-templates` 97/B, `paper-compile` 88/B | kutuphaneler.md |
-| 10 | 666ghj/MiroFish | 67 B | - | — (skill eşlemesi yok) | kutuphaneler.md |
-| 11 | blender/blender | 67 B | - | `blender-web-pipeline` 61/D, `3d-asset-generation` 94/A, `threejs-loaders` 88/D, `remotion-to-hyperframes` 97/A, `blender` 80/C, `web-3d-asset-pipeline` 73/C | kutuphaneler.md |
+| 10 | blender/blender | 67 B | - | `blender-web-pipeline` 61/D, `3d-asset-generation` 94/A, `threejs-loaders` 88/D, `remotion-to-hyperframes` 97/A, `blender` 80/C, `web-3d-asset-pipeline` 73/C | kutuphaneler.md |
+| 11 | 666ghj/MiroFish | 66 B | - | — (skill eşlemesi yok) | kutuphaneler.md |
 | 12 | QwikDev/partytown | 64 C | v1.0 (T5) | `shopify-hydrogen` 48/D | tasarim-teknolojileri.md |
 | 13 | Tonejs/Tone.js | 63 C | 15.1 | `sound-effects` 100/A, `music` 100/A, `cinecode` 67/D | tasarim-teknolojileri.md |
 | 14 | dequelabs/axe-core | 63 C | v4.14 (MPL-2.0) | `accessibility-review` 100/B, `frontend-ui-engineering` 98/A, `salesforce-component-standards` 96/B, `scoutqa-test` 96/B, `replica-design` 84/D, `inclusive-design` 80/D, `accessibility` 78/D, `accessibility-commerce` 76/D | tasarim-teknolojileri.md |
@@ -218,13 +218,13 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 16 | DavidHDev/react-bits | 62 C | - | `animated-component-libraries` 61/D, `frontend-ui-engineering` 98/A | tasarim-teknolojileri.md |
 | 17 | paperjs/paper.js | 61 C | v0.16 | `algorithmic-art` 81/B, `canvas-procedural-animation` 85/A | tasarim-teknolojileri.md |
 | 18 | darkroomengineering/lenis | 60 C | v1.3 | `scroll-craft` 78/D, `gsap-scrolltrigger` 86/C, `locomotive-scroll` 61/D | tasarim-teknolojileri.md |
-| 19 | pmndrs/drei | 60 C | v10.7 | `threejs-react-three-fiber` 86/D | tasarim-teknolojileri.md |
-| 20 | airbnb/lottie-web | 59 C | v5.13 | `lottie-animations` 61/D, `remotion-to-hyperframes` 97/A, `lottie-bodymovin` 78/A, `flutter-pre-caching` 78/D, `motion-design` 64/D, `rive-interactive` 61/D | tasarim-teknolojileri.md |
+| 19 | airbnb/lottie-web | 59 C | v5.13 | `lottie-animations` 61/D, `remotion-to-hyperframes` 97/A, `lottie-bodymovin` 78/A, `flutter-pre-caching` 78/D, `motion-design` 64/D, `rive-interactive` 61/D | tasarim-teknolojileri.md |
+| 20 | pmndrs/drei | 59 C | v10.7 | `threejs-react-three-fiber` 86/D | tasarim-teknolojileri.md |
 | 21 | fontsource/fontsource | 58 C | - | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
 | 22 | ai/size-limit | 56 C | 14.2 (T5) | `react-doctor` 75/C, `nextjs-react-expert` 74/C | tasarim-teknolojileri.md |
 | 23 | motion-canvas/motion-canvas | 56 C | v3.17 | `remotion-to-hyperframes` 97/A, `hyperframes` 100/A, `manim-composer` 94/A | tasarim-teknolojileri.md |
 | 24 | liabru/matter-js | 53 C | 0.20 | `pixijs-2d` 69/D, `canvas-procedural-animation` 85/A | tasarim-teknolojileri.md |
-| 25 | pmndrs/postprocessing | 52 C | v6.39 | `threejs-postprocessing` 78/D, `threejs-shaders` 78/D, `frame-logo-outro` 97/A, `relion` 97/B | tasarim-teknolojileri.md |
+| 25 | pmndrs/postprocessing | 51 C | v6.39 | `threejs-postprocessing` 78/D, `threejs-shaders` 78/D, `frame-logo-outro` 97/A, `relion` 97/B | tasarim-teknolojileri.md |
 | 26 | rough-stuff/rough | 49 D | v3.1 | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
 | 27 | greensock/GSAP | 48 D | 3.15 | `gsap-core` 86/C, `gsap-timeline` 87/C, `gsap-plugins` 86/C, `gsap-utils` 78/C, `gsap-react` 87/C, `gsap-frameworks` 78/C, `gsap-performance` 87/C, `gsap-scrolltrigger` 86/C | tasarim-teknolojileri.md |
 | 28 | opentypejs/opentype.js | 46 D | 2.0 | `svg-character-animation` 94/A, `hyperframes` 100/A, `pixijs-scene-text` 91/B | tasarim-teknolojileri.md |
@@ -232,7 +232,7 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 30 | barvian/number-flow | 45 D | 0.6 | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
 | 31 | argyleink/open-props | 44 D | v1.6 | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
 | 32 | figma/code-connect | 44 D | v2.0 | `figma-code-connect` 68/C | tasarim-teknolojileri.md |
-| 33 | seek-oss/capsize | 44 D | metrics 4.4 | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
+| 33 | seek-oss/capsize | 43 D | metrics 4.4 | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
 | 34 | JohnHeibel/ClaudeAnimationBase | 41 D | - | `canvas-procedural-animation` 85/A, `algorithmic-art` 81/B, `svg-character-animation` 94/A | tasarim-teknolojileri.md |
 | 35 | pmndrs/cannon-es | 41 D | v0.20 | `threejs-world-generation` 93/A, `threejs-interaction` 80/D | tasarim-teknolojileri.md |
 | 36 | metafizzy/zdog | 38 D | v1.1 | `svg-character-animation` 94/A, `canvas-procedural-animation` 85/A, `lightweight-3d-effects` 60/D | tasarim-teknolojileri.md |
@@ -242,9 +242,9 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 40 | 14islands/r3f-scroll-rig | 34 D | v8.15 | `threejs-react-three-fiber` 86/D, `web3d-integration-patterns` 61/D, `gsap-framer-scroll-animation` 98/B, `gpt-taste` 95/A, `gsap-scrolltrigger` 86/C, `scrollytelling-and-parallax-data-visualization` 71/C, `lottie-animations` 61/D, `barba-js` 61/D | tasarim-teknolojileri.md |
 | 41 | linvi/tweetinvi | 33 D | - | — (skill eşlemesi yok) | kutuphaneler.md |
 | 42 | jwagner/simplex-noise.js | 32 D | 4.0 | `algorithmic-art` 81/B, `threejs-shaders` 78/D, `threejs-world-generation` 93/A, `google-docs` 66/C | tasarim-teknolojileri.md |
-| 43 | nevertoday/350-layout-compositions | 32 D | - | `design-taste-frontend` 100/B, `canvas-design` 89/B, `slides` 82/A | tasarim-teknolojileri.md |
+| 43 | nevertoday/350-layout-compositions | 31 D | - | `design-taste-frontend` 100/B, `canvas-design` 89/B, `slides` 82/A | tasarim-teknolojileri.md |
 | 44 | pmndrs/react-three-a11y | 29 D | v3.0 (2022, bakımı yavaş) | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
-| 45 | wj-sidiss/etsy-otomasyon-full-full-surum | 28 D | - | `etsy-seller` 76/D, `etsy-api` 59/D, `etsy-seo` 81/D | kutuphaneler.md |
+| 45 | wj-sidiss/etsy-otomasyon-full-full-surum | 27 D | - | `etsy-seller` 76/D, `etsy-api` 59/D, `etsy-seo` 81/D | kutuphaneler.md |
 | 46 | arturitu/the-delegation | 23 D | - | — (skill eşlemesi yok) | kutuphaneler.md |
 
 ## 4. Hesap ayrıntısı

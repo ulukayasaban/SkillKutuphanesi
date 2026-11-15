@@ -42,8 +42,8 @@
 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | cloudflare | kurum | ✅ | 59355 | 4 | 2026-09-14 | MIT | 1 |
 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | coreyhaines31 | kisi |  | 58521 | 57 | 2026-11-04 | MIT | 53 |
 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | K-Dense-AI | kurum |  | 56104 | 58 | 2026-11-02 | MIT | 177 |
+| [obsidianmd/obsidian-skills](https://github.com/obsidianmd/obsidian-skills) | obsidianmd | kurum |  | 52786 | 28 | 2026-11-11 | MIT | 6 |
 | [DavidHDev/react-bits](https://github.com/DavidHDev/react-bits) | DavidHDev | kisi |  | 51256 | 140 | 2026-10-31 | NOASSERTION | 0 |
-| [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) | kepano | kisi |  | 50753 | 17 | 2026-09-15 | MIT | 6 |
 | [pixijs/pixijs](https://github.com/pixijs/pixijs) | pixijs | kurum | ✅ | 48622 | 639 | 2026-11-04 | MIT | 26 |
 | [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | Nutlope | kisi |  | 47913 | 10 | 2026-11-04 | MIT | 1 |
 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | anthropics | kurum | ✅ | 46120 | 42 | 2026-11-04 | Apache-2.0 | 24 |

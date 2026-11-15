@@ -91,7 +91,6 @@
 | heygen-com/hyperframes | 28 | secildi 15, haric 7, ayna-ayni 6 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
 | jazzychad/ios-code-audit | 1 | secildi 1 |
-| kepano/obsidian-skills | 6 | secildi 6 |
 | krillinai/OpenCreator | 15 | haric 8, secildi 7 |
 | kylezantos/design-motion-principles | 1 | secildi 1 |
 | lemomo-ai/codex-radar | 1 | secildi 1 |
@@ -113,6 +112,7 @@
 | nextlevelbuilder/ui-ux-pro-max-skill | 13 | secildi 7, ayna-ayni 5, ayna-baska-arac 1 |
 | nexu-io/open-design | 562 | haric 475, secildi 87 |
 | obra/superpowers | 15 | secildi 15 |
+| obsidianmd/obsidian-skills | 6 | secildi 6 |
 | oldred-byte/ec-visual-skill | 1 | secildi 1 |
 | openai/plugins | 536 | secildi 513, ayri-surum 18, haric 5 |
 | pbakaus/impeccable | 26 | ayna-baska-arac 18, haric 4, arac-varyanti 2, ayri-surum 1, secildi 1 |

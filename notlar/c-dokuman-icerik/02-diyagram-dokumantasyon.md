@@ -170,7 +170,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### json-canvas@kepano  ·  kepano/obsidian-skills @ 3ccff53  ·  puan 88 (A)
+### json-canvas@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 88 (A)
 
 - **Ne yapar:** Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.
 - **Teknoloji:** canvas, node, obsidian _(otomatik tespit)_
