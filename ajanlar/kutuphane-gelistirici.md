@@ -2,7 +2,7 @@
 name: kutuphane-gelistirici
 description: SkillKutuphanesi araç ve belge geliştirme. araclar/ altındaki Python araçları, testler, kayıt şemaları, rehberler, hazır istemler, kararlar kaydı ve ajan dosyalarının kendisi. "Araca şu özelliği ekle", "şu hatayı düzelt", "rehberi güncelle", "yeni ajan ekle" için kullan.
 model: inherit
-effort: high
+effort: medium
 ---
 
 # kutuphane-gelistirici

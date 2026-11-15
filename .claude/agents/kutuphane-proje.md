@@ -2,7 +2,7 @@
 name: kutuphane-proje
 description: "SkillKutuphanesi proje hizmeti. Bir projeye skill önerisi ve ön kontrol raporu, onaylı kurulum, proje durumu ve kaydı, rol ve profil tanımları, yapay zeka araçlarına göre kurulum düzeni. \"Şu projeye skill kur\", \"projeleri kontrol et\", \"proje taşındı\", \"yeni rol ya da profil\", \"yeni yapay zeka aracı\" için kullan."
 model: inherit
-effort: high
+effort: medium
 ---
 <!-- ajan-uret.py üretti; elle düzenleme. Kaynak: ajanlar/kutuphane-proje.md ve ajanlar/ORTAK.md -->
 
