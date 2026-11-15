@@ -394,7 +394,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### affiliate-marketing-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### affiliate-marketing-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Build and scale an affiliate program for an e-commerce store: platform choice (ShareASale, Impact, Refersion), commission structures, affiliate recruitment, tracking/attribution and fraud control. Use when launching or optimizing an affiliate or referral partner program for Shopify, Amazon or an independent store.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -805,7 +805,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### amazon-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### amazon-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Amazon review authenticity analyzer. Detect fake reviews, suspicious patterns, and rating manipulation. Includes time clustering detection, content similarity analysis, rating distribution checks, and verified purchase validation. Progressive analysis with L1-L4 depth levels. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1377,7 +1377,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### brand-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### brand-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Brand monitoring tool for tracking mentions across social media platforms. Monitor Reddit, Google News, YouTube, and DuckDuckGo for brand mentions. Includes sentiment analysis, trend tracking, crisis detection, and competitor comparison. No API key required for basic monitoring.
 - **Teknoloji:** api-anahtari, html, node, python _(otomatik tespit)_
@@ -1387,7 +1387,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 34 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### brand-protection-amazon  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### brand-protection-amazon  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Amazon brand protection toolkit. Detect hijackers, counterfeits, and unauthorized sellers. Includes MAP violation monitoring, trademark abuse detection, complaint templates for Brand Registry, and test buy evidence collection guides. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1397,7 +1397,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 40 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### brand-protection-ebay  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### brand-protection-ebay  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** eBay brand protection toolkit. Detect unauthorized sellers, counterfeits, and VeRO violations. Includes price monitoring, trademark abuse detection, VeRO complaint templates, and enforcement guides. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1407,7 +1407,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 40 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### brand-protection-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### brand-protection-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Shopify/DTC brand protection toolkit. Detect counterfeit stores, unauthorized resellers, and trademark violations. Includes DMCA takedown templates, domain monitoring, and social media infringement detection. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1417,7 +1417,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 40 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### brand-protection-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### brand-protection-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop brand protection toolkit. Detect unauthorized sellers, counterfeit products, and affiliate abuse. Includes TikTok IP Protection reporting, influencer misuse detection, and complaint templates. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1427,7 +1427,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 40 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### brand-protection-walmart  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### brand-protection-walmart  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Walmart brand protection toolkit. Detect unauthorized sellers, counterfeits, and MAP violations. Includes Walmart Brand Portal reporting, WFS seller monitoring, and complaint templates. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1547,7 +1547,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 28 KB (SKILL.md 12.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### competitive-pricing-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### competitive-pricing-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Build an evidence-based competitive pricing strategy for ecommerce products. Use when a seller asks how to position a price against competitors, set regular and promotional prices, protect contribution margin, design bundles or price tiers, respond to competitor moves, or coordinate prices across Amazon, Shopify, TikTok Shop, Walmart, eBay, or other channels. Do not use for automated repricing imp
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1557,7 +1557,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### competitor-price-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### competitor-price-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Competitor pricing strategy analysis and market positioning. Price mapping, pricing gaps identification, elasticity signals evaluation, and strategic pricing optimization. Use when the user asks about competitor pricing, price analysis, pricing strategy, or competitive pricing research.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1567,7 +1567,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### competitor-price-tracker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### competitor-price-tracker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Set up competitor price tracking and monitoring workflows. Track price changes, detect promotions, analyze pricing patterns, and get alerts for competitive price movements.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1597,7 +1597,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 9.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### conversion-rate-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### conversion-rate-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Run conversion rate optimization (CRO) for an e-commerce store on any platform: funnel mapping, drop-off analysis, heuristic audits (LIFT, ResearchXL), product page, cart, checkout and mobile fixes, and a test roadmap. Use when traffic is fine but sales are low, or to audit a store's conversion funnel.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1637,7 +1637,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 11.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cross-border-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
+### cross-border-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 76 (B)
 
 - **Ne yapar:** Cross-border e-commerce expansion advisor. Scores target markets on 8 weighted dimensions (market size, ecommerce penetration, competition, regulatory complexity, logistics infrastructure, payment ecosystem, cultural distance, IP protection), compares 5 fulfillment models with cost and transit data, provides country-by-country tax/duty compliance guides (EU VAT/IOSS, UK VAT, US sales tax, CA GST, 
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1687,7 +1687,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 26 KB (SKILL.md 10.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### customer-feedback-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### customer-feedback-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Analyze customer reviews and feedback for e-commerce products: sentiment, recurring pain points, feature requests and improvement priorities across Amazon, Shopify, Etsy, Walmart and other marketplaces. Use when summarizing reviews, finding why ratings drop, or turning feedback into a product/listing action plan.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1797,7 +1797,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 26 KB (SKILL.md 11.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### dropshipping-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### dropshipping-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Product research for dropshipping businesses. Identify profitable products with reliable suppliers, healthy margins, and manageable competition. Evaluates shipping times, return risk, and marketing viability.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1817,7 +1817,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 27 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### dynamic-pricing-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### dynamic-pricing-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Design a controlled dynamic-pricing or repricing system for ecommerce products. Use when a seller asks for demand-based, inventory-based, competitor-responsive, or time-based price rules; SKU eligibility; price floors and ceilings; automation approvals; simulations; monitoring; or rollback plans across Amazon, Shopify, TikTok Shop, Walmart, eBay, or other channels. Do not use for a one-time optima
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1827,7 +1827,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 13 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ebay-advertising  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ebay-advertising  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Plan and optimize eBay advertising: Promoted Listings Standard and Advanced, Offsite Ads, ad rates and CPC bids, budget allocation and ROAS tracking. Use when an eBay seller sets up or tunes promoted listing campaigns.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1838,7 +1838,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### ebay-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ebay-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Research profitable products to sell on eBay: completed/sold listings, sell-through rates, average selling prices, competition density, seasonality, fees and sourcing (arbitrage, wholesale, thrift). Use when deciding what to sell or source for eBay.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1849,7 +1849,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### ebay-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ebay-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** eBay review and feedback authenticity analyzer. Detect fake reviews, suspicious seller feedback patterns, and buyer manipulation. Includes time clustering detection, content similarity analysis, and eBay-specific red flag identification. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1859,7 +1859,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 54 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ebay-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ebay-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Complete guide to selling on eBay: account and seller levels, auction vs Buy It Now vs Best Offer, listing and photo best practices, shipping and returns, Top Rated Seller and scaling. Use when starting or growing an eBay store.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1870,7 +1870,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### ebay-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ebay-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Choose tools and software for eBay sellers: listing and bulk-edit tools, repricers, profit analytics, inventory sync, shipping and research tools, free vs paid by seller level. Use when an eBay seller needs to automate or scale operations.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1880,7 +1880,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ebay-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ebay-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Optimize eBay listings for Cassini/Best Match search: titles, item specifics, category choice, listing quality and seller performance factors. Use when eBay listings get few views or impressions, or when writing eBay titles.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1900,7 +1900,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 138 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-ab-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ecommerce-ab-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Plan A/B tests for e-commerce on any platform: product pages, pricing, ads, emails and checkout with hypothesis prioritization (ICE, PIE, RICE), sample size and statistical significance. Use when designing, sizing or interpreting a store experiment, including Amazon Manage Your Experiments.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1910,7 +1910,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ecommerce-branding  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-branding  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Build and strengthen your e-commerce brand identity. Brand positioning, messaging, visual identity guidelines, and brand consistency across sales channels and marketing touchpoints.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1930,7 +1930,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 27 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-business-plan  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-business-plan  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Create a comprehensive e-commerce business plan. Market analysis, financial projections, marketing strategy, operations planning, and milestone roadmap for new or growing e-commerce businesses.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1950,7 +1950,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 28 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-checkout-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-checkout-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Optimize e-commerce checkout flow to reduce cart abandonment. Friction analysis, payment method optimization, trust signals, and checkout UX best practices.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1960,7 +1960,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ecommerce-competitor-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### ecommerce-competitor-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Cross-platform ecommerce competitor analysis and strategic intelligence. Multi-channel presence evaluation, strategy assessment, positioning analysis, and competitive benchmarking. Use when the user asks about competitor analysis, competitive research, market analysis, or competitive intelligence across platforms.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1980,7 +1980,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1067 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-content-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### ecommerce-content-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** E-commerce content marketing strategy planner. Generates content calendars, topic ideas, and platform-specific strategies by analyzing customer reviews, trends, competitor content, and SEO opportunities. Two modes: (A) Build — create a full content strategy from scratch, (B) Audit — analyze existing content and find gaps. Supports TikTok, Instagram, YouTube, Pinterest, blog/SEO, and Amazon A+. No 
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1990,7 +1990,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 21 KB (SKILL.md 20.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-customer-retention  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ecommerce-customer-retention  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Increase e-commerce customer retention and repeat purchases: post-purchase email/SMS flows, loyalty programs, RFM segmentation, subscriptions, win-back campaigns and LTV. Use when repeat purchase rate is low or planning retention marketing.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2010,7 +2010,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 27 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-email-marketing-builder  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
+### ecommerce-email-marketing-builder  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 76 (B)
 
 - **Ne yapar:** E-commerce email marketing system builder. Creates complete email automation flows with full copywriting, subject lines, ESP setup instructions, segmentation rules, and annual campaign calendars. Generates copy-paste-ready email sequences for Klaviyo, Omnisend, Mailchimp, or any ESP. Covers welcome series, cart abandonment, browse abandonment, post-purchase, review requests, cross-sell, win-back, 
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -2020,7 +2020,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 24.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### ecommerce-feed-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### ecommerce-feed-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Manage and monitor e-commerce product feeds: feed health checks, sync error diagnosis, missing SKU detection and attribute completeness for Google Shopping, Meta, Amazon and marketplace catalogs. Use when product feeds are rejected or disapproved, listings go missing, or a catalog sync needs validation.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -2030,7 +2030,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ecommerce-growth-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### ecommerce-growth-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** E-commerce growth strategy advisor. Diagnoses current business health using unit economics (CAC, LTV, AOV, contribution margin), identifies the highest-impact growth opportunities across 5 levers (traffic, conversion, AOV, retention, expansion), and builds a prioritized 90-day growth roadmap. Uses the Ansoff Matrix adapted for e-commerce to evaluate market penetration, channel expansion, product e
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -2050,7 +2050,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-keyword-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-keyword-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Cross-platform keyword research for e-commerce. Discover high-converting keywords across Amazon, Shopify, Etsy, Google Shopping, TikTok Shop, and Walmart. Analyzes search volume signals, competition indicators, commercial intent, and long-tail opportunities.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2060,7 +2060,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ecommerce-landing-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-landing-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Audit and optimize e-commerce landing pages for conversion. CTA placement, trust signals, page structure, copy optimization, and A/B testing strategy for product pages, collection pages, and campaign landing pages.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2081,7 +2081,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (kısmen ücretli). MIT, 137★. Ürün görseli istem şablonları iyi (ürün tanımı kilidi, galeri planı); açıklamalar Çince-İngilizce karışık. Taobao/Xiaohongshu skilleri kaynakta hariç tutuldu. DİKKAT: (b) yolu GPTIMAGE_BASE_URL olarak üçüncü taraf aracı https://tryallapi.com/v1 'öneriyor': API anahtarını oraya GÖNDERME; ayarlamazsan varsayılan api.openai.com'dur. (c) yolu istemi UTM etiketli gptimage2.asia tanıtım sitesine link olarak verir; kullanma, istemi kendin kopyala. Ücretsiz yol: agent'ın yerleşik görsel aracı (a) ya da istemi elle başka araçta çalıştırmak.
 
-### ecommerce-marketing-strategy-builder  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### ecommerce-marketing-strategy-builder  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Full-stack e-commerce marketing strategy builder. Analyzes your product, market, and competitors, then builds a complete omnichannel marketing plan covering paid ads, SEO, email/SMS, content marketing, social media, influencer partnerships, and referral programs. Includes target audience persona, competitive landscape, channel prioritization with budget allocation, content direction, and a 90-day 
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -2091,7 +2091,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 18 KB (SKILL.md 18.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-personalization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-personalization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Design personalization strategies for e-commerce stores. Product recommendations, dynamic content, customer segmentation, and personalized email/SMS based on browsing and purchase behavior.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2102,7 +2102,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### ecommerce-ppc-strategy-planner  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### ecommerce-ppc-strategy-planner  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Cross-platform PPC strategy planner for ecommerce businesses. Analyzes your product and margins, recommends the right advertising platforms (Google Ads, Meta Ads, TikTok Ads), calculates ROAS targets, allocates budget across channels, and generates platform-specific campaign briefs with ad copy and creative direction. Two modes: (A) Build — design a multi-platform ad strategy from scratch, (B) Opt
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -2112,7 +2112,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 22 KB (SKILL.md 21.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-returns-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-returns-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Optimize e-commerce returns process and reduce return rates. Returns policy design, reverse logistics, root cause analysis, and customer retention through better returns experience.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2132,7 +2132,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 27 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-shipping-rates  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### ecommerce-shipping-rates  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Compare and optimize shipping rates across carriers and fulfillment methods. UPS, FedEx, USPS, DHL rate comparison, zone optimization, and shipping strategy to maximize margins.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2142,7 +2142,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ecommerce-social-media-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### ecommerce-social-media-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Social media marketing strategy for ecommerce brands. Content calendar planning, platform-specific strategies, social commerce optimization, influencer collaboration, and community building. Use when the user asks about social media marketing, social commerce, content strategy, or social media for ecommerce.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2152,7 +2152,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 19 KB (SKILL.md 18.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ecommerce-subscription-model  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ecommerce-subscription-model  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Design and launch an e-commerce subscription: subscribe-and-save, replenishment or curation boxes, pricing tiers, platform setup (Shopify subscriptions, ReCharge, Amazon Subscribe & Save), churn reduction and MRR metrics. Use when adding subscriptions or memberships to a store.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2162,7 +2162,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ecommerce-video-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### ecommerce-video-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Plan video marketing for e-commerce brands: product demos, unboxing, tutorials, UGC, live streams and short-form (Reels, TikTok, Shorts), plus Amazon product video and video SEO. Use when creating a product video strategy or scripts for selling online.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2222,7 +2222,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### etsy-advertising  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-advertising  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Etsy Ads strategy — budget allocation, bid management, promoted listings, offsite ads opt-out analysis
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2242,7 +2242,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 48 KB (SKILL.md 3.6 KB, yük kucuk) · **Bağımlılık:** Etsy geliştirici uygulaması (API anahtarı + OAuth 2.0 PKCE) gerekir; ücretsiz, Etsy onayı ister.
 - **İnceleme:** otomatik
 
-### etsy-competitor-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-competitor-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Competitor research — pricing comparison, bestseller analysis, differentiation strategy
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2252,7 +2252,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-custom-orders  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-custom-orders  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Custom order management — communication templates, pricing, delivery timelines, return policies
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2262,7 +2262,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-digital-products  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-digital-products  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Digital product creation and selling — templates, printables, planners, digital art, delivery setup
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2272,7 +2272,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-keyword-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-keyword-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Etsy search optimization — long-tail keywords, tag research, competitor analysis, seasonal trends
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2282,7 +2282,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-listing-photography  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-listing-photography  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Product photography for Etsy — composition, lighting, backgrounds, editing, lifestyle shots, 360 views
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2292,7 +2292,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-multi-shop  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-multi-shop  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Multi-shop management — category separation, brand differentiation, efficiency optimization
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2302,7 +2302,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-offsite-ads  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-offsite-ads  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Offsite Ads analysis — when to opt out, ROI tracking, fee impact on margins, attribution
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2312,7 +2312,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-pricing-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-pricing-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Etsy pricing — cost calculation, competitor pricing, perceived value, shipping cost integration, sales and coupons
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2322,7 +2322,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-print-on-demand  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-print-on-demand  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** POD integration — Printful, Printify, mockups, niche selection, margin optimization
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2332,7 +2332,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-product-description  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-product-description  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Product description writing — keyword integration, benefit-focused copy, FAQ, formatting
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2343,7 +2343,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### etsy-review-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-review-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Etsy review generation — thank you cards, follow-up messages, photo review incentives
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2353,7 +2353,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-seasonal-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-seasonal-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Seasonal selling calendar — holiday prep, trending categories, listing refresh timing, inventory planning
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2374,7 +2374,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 233 KB (SKILL.md 28.9 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. MIT, 44★, son güncelleme 2026-10-23 (2026 Etsy politika revizyonu). Kütüphanedeki etsy-seo / sealeap-etsy-listing-seo ile örtüşür; canlı autocomplete + politika kapısı özgün. Ücretsiz.
 
-### etsy-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### etsy-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Complete guide to selling on Etsy: shop setup, Etsy SEO (tags, titles, categories), listing photos and descriptions, pricing with Etsy fees, Etsy Ads, Star Seller and shop analytics for handmade, vintage and digital products. Use when opening, optimizing or growing an Etsy shop.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2384,7 +2384,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Etsy SEO analyzer and optimizer. Improve search visibility with title optimization, tag analysis, description scoring, and keyword research. Includes SEO scoring (0-100), long-tail keyword suggestions, and prioritized action plans. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -2394,7 +2394,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 26 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-seo-tags  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-seo-tags  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Etsy tag optimization — 13-tag strategy, attribute optimization, search ranking factors
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2404,7 +2404,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-shipping-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-shipping-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Shipping strategy — free shipping vs markup, shipping profiles, international shipping, tracking
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2414,7 +2414,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-shop-analytics  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-shop-analytics  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Shop analytics — traffic sources, conversion rates, search terms, top listings performance
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2424,7 +2424,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-shop-branding  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-shop-branding  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Shop branding — banner design, logo, brand story, cohesive listing photography, packaging
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2434,7 +2434,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-shop-setup  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-shop-setup  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Etsy shop launch guide — policies, branding, first listings, SEO foundation, payment setup
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2444,7 +2444,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-social-media-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-social-media-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Social media marketing for Etsy — Pinterest, Instagram, TikTok strategies to drive shop traffic
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2454,7 +2454,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### etsy-star-seller  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### etsy-star-seller  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Star Seller achievement guide — response time, shipping tracking, 5-star ratings, maintaining status
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2614,7 +2614,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 28 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-shopping-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### google-shopping-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Optimize Google Shopping campaigns and product feeds for maximum visibility and ROAS. Feed optimization, bidding strategy, campaign structure, and Performance Max integration.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2674,7 +2674,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 26 KB (SKILL.md 9.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### influencer-outreach  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### influencer-outreach  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Find and manage influencer partnerships for e-commerce brands: discovery by niche and audience, cold/warm outreach templates, rate negotiation, campaign briefs, contracts with usage rights, and performance tracking on Instagram, TikTok and YouTube. Use when planning or running influencer campaigns.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2714,7 +2714,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 26 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### inventory-tracking-software  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### inventory-tracking-software  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Design inventory tracking for e-commerce businesses: stock monitoring, low-stock alerts, reorder points and multi-channel inventory sync, plus choosing inventory software. Use when preventing overselling or stockouts across Shopify, Amazon, Etsy, Walmart or other channels.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -3045,7 +3045,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### market-gap-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### market-gap-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Identify underserved market gaps and unmet customer needs in e-commerce. Analyzes competitor blind spots, review pain points, search demand without adequate supply, and emerging customer segments.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -3335,7 +3335,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 28 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### minimum-advertised-price  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### minimum-advertised-price  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Create and enforce a MAP (Minimum Advertised Price) policy: policy drafting, violation monitoring across marketplaces, dealer/reseller compliance and enforcement workflows. Use when a brand's resellers undercut prices or a MAP policy needs to be written or enforced.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -3577,7 +3577,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 26 KB (SKILL.md 12.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### multichannel-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### multichannel-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Run e-commerce operations across multiple marketplaces: inventory sync and oversell prevention, centralized order routing, listing syndication, cross-channel pricing and unified analytics for Amazon, Shopify, Walmart, eBay, Etsy and TikTok Shop; compares tools like ChannelAdvisor, Sellbrite, LitCommerce. Use when selling on more than one channel.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -3787,7 +3787,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### omnichannel-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### omnichannel-ecommerce  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Plan an omnichannel e-commerce strategy: channel selection by product and audience, consistent branding and content, inventory and order unification, cross-channel pricing and customer data/CRM across Amazon, Shopify, Walmart, TikTok Shop, eBay and Etsy. Use when deciding which channels to expand into and how to unify them.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -3797,7 +3797,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### online-reputation-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### online-reputation-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Manage an e-commerce brand's online reputation: review and mention monitoring, negative review responses, rating recovery plans and crisis communication templates. Use when ratings drop, a bad review or social post spreads, or a brand needs a reputation monitoring routine.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -3989,7 +3989,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### price-optimization-tool  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### price-optimization-tool  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Evaluate ecommerce price candidates using unit economics, historical observations, elasticity analysis, scenario modeling, and controlled experiments. Use when a seller asks what price to test, how price changes could affect contribution or revenue, how to estimate elasticity, how to optimize a bundle or tier, or how to design a price experiment across Amazon, Shopify, TikTok Shop, Walmart, eBay, 
 - **Teknoloji:** node _(otomatik tespit)_
@@ -4069,7 +4069,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 29 KB (SKILL.md 13.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### product-description-generator  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### product-description-generator  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** E-commerce product description generator for any platform. Generates optimized titles, bullet points, descriptions, and backend keywords using competitor research + keyword scoring + FABE copywriting. Two modes: (A) Create — generate listing from product specs with optional competitor analysis, (B) Optimize — improve existing listing with keyword gap analysis. Supports Amazon, eBay, Walmart, Shopi
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
@@ -4079,7 +4079,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### product-differentiation-amazon  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### product-differentiation-amazon  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Amazon product differentiation strategy tool. Analyze competitor weaknesses, extract pain points from negative reviews, identify unique selling points from positive reviews, and generate actionable differentiation strategies. Progressive L1-L4 analysis depth. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4089,7 +4089,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 34 KB (SKILL.md 4.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### product-differentiation-ebay  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### product-differentiation-ebay  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** eBay product differentiation strategy tool. Analyze competitor weaknesses, extract pain points from negative feedback, identify unique selling points, and generate actionable differentiation strategies. Includes eBay-specific seller feedback analysis. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4099,7 +4099,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 33 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### product-differentiation-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### product-differentiation-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Shopify/DTC product differentiation strategy tool. Analyze competitor stores, extract pain points from reviews, identify brand positioning opportunities, and generate actionable differentiation strategies. Includes DTC-specific metrics like CAC, LTV, and brand story analysis. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4109,7 +4109,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 34 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### product-differentiation-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### product-differentiation-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop product differentiation strategy tool. Analyze viral product trends, competitor affiliate strategies, content performance, and identify differentiation opportunities. Includes TikTok-specific metrics like engagement rate, viral potential, and creator collaboration insights. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4140,7 +4140,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### product-launch-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### product-launch-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Plan and execute e-commerce product launches. Pre-launch, launch day, and post-launch playbooks for Amazon, Shopify, and multi-channel sellers. Covers inventory, pricing, advertising, and review strategy.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -4161,7 +4161,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 27 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### product-page-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### product-page-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Optimize e-commerce product pages for search engine visibility. On-page SEO, structured data, page speed, mobile optimization, and content strategy for Google, Bing, and platform-specific search.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -4171,7 +4171,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### product-review-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### product-review-analysis  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Product review analysis and customer feedback intelligence. Pain point identification, praise pattern analysis, feature request extraction, sentiment analysis, and product improvement insights. Use when the user asks about review analysis, customer feedback, product reviews, or sentiment analysis.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -4191,7 +4191,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 28 KB (SKILL.md 13.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### product-title-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### product-title-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Optimize product titles for search visibility and click-through rate across e-commerce platforms. Platform-specific title rules for Amazon (200 chars), Etsy (140 chars), Walmart, Shopify SEO, and eBay.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -4211,7 +4211,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 39 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### profit-margin-calculator-amazon  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### profit-margin-calculator-amazon  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Amazon profit margin calculator for sellers. Calculate cost breakdowns, profit margins, break-even points, and get pricing recommendations. Supports single product analysis and batch calculations. Input product cost, shipping, FBA fees, and get instant profitability analysis. No API key required. Use when: (1) evaluating new product profitability before sourcing, (2) diagnosing existing product ma
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4221,7 +4221,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### profit-margin-calculator-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### profit-margin-calculator-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Shopify/DTC profit margin calculator for sellers. Calculate cost breakdowns including ad spend, CAC, payment processing fees, and 3PL costs. Includes LTV/CAC analysis and DTC-specific benchmarks. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4231,7 +4231,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 21 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### profit-margin-calculator-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### profit-margin-calculator-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop profit margin calculator for sellers. Calculate cost breakdowns including affiliate commissions, platform fees, and FBT costs. Includes return rate analysis for impulse buying patterns. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4241,7 +4241,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 21 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### profit-margin-calculator-walmart  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### profit-margin-calculator-walmart  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Walmart profit margin calculator for sellers. Calculate cost breakdowns including WFS fulfillment, storage fees, and referral fees. Includes comparison with Amazon FBA and lower competition advantage analysis. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -4381,7 +4381,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### restock-alert  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### restock-alert  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Plan restocking for e-commerce inventory: reorder points, safety stock, lead-time math, stockout risk scores and restock alerts. Use when deciding when and how much to reorder, or avoiding lost sales from out-of-stock products.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -4441,7 +4441,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### review-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### review-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Set up systematic review monitoring across e-commerce platforms. Track new reviews, detect negative review spikes, monitor competitor reviews, and automate review response workflows.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -4662,7 +4662,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 26 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### sales-tracking-tool  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### sales-tracking-tool  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Track and analyze e-commerce sales performance across platforms. Set up KPI dashboards, trend analysis, and performance alerts to catch issues and opportunities early.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -7532,7 +7532,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-ad-attribution  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-ad-attribution  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 广告归因与账单对账。用于General费用争议、Priority Direct/Halo和重复收入；交付订单级对账。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7542,7 +7542,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 推广广告与归因。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7553,7 +7553,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-ebay-brand-ip-triage  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-brand-ip-triage  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 品牌与 VeRO 证据初筛。用于疑似假货、图片抄用、商标问题和VeRO材料准备；交付权利与证据矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7563,7 +7563,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-category-keywords  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-category-keywords  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 类目与商品属性需求。用于工具类目建议、长尾词、兼容型号和搜索集合核验；交付查询与类目表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7573,7 +7573,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-combined-shipping-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-combined-shipping-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 合并运费与购物篮验收。用于追加件运费、跨刊登合并规则、付款前发票和付款后差额；不自动退款。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7583,7 +7583,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-condition-value  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-condition-value  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 成色分层与整备价值。用于二手、翻新、缺配件商品与维修采购判断；交付成色证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7593,7 +7593,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-general-ads  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-general-ads  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay General 费率与商品选择。用于General推广、按成交收费、费率上限与商品池；交付商品池。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7603,7 +7603,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-international-shipping-controls  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-international-shipping-controls  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 国际配送范围与政策变更。用于eIS参与、国家排除、账户/政策/刊登作用范围及批量变更验收；不替代一般运费定价。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7613,7 +7613,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-inventory-multichannel  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-inventory-multichannel  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 单件库存与多渠道同步。用于超卖、唯一二手品、SKU映射和跨渠道预留；交付库存身份表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7623,7 +7623,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-listing-attributes  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-listing-attributes  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 标题、属性与变体修正。用于刊登SEO、item specifics、分类和变体；交付刊登字段变更表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7633,7 +7633,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-listing-photos  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-listing-photos  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 实物照片与缺陷披露。用于二手照片、配件清单、尺寸和成色证据；交付拍摄清单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7643,7 +7643,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-margin-pricing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-margin-pricing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 费用、运费与价格底线。用于采购利润、拍卖起价、议价底线与广告费情景；交付订单利润表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7653,7 +7653,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-offer-promotions  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-offer-promotions  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 议价与促销贡献。用于Best Offer、优惠券、降价活动和组合折扣；交付促销/议价方案。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7663,7 +7663,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-price-monitoring  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-price-monitoring  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 竞品价格观察与响应。用于价格变化监控、跟价、成色分层与异常报价；交付价格变化表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7673,7 +7673,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-priority-ads  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-priority-ads  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay Priority CPC 与关键词。用于按点击广告、搜索词、匹配与出价边界；交付关键词诊断。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7683,7 +7683,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 成交数据选品。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7694,7 +7694,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-ebay-returns-diagnosis  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-returns-diagnosis  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 退货与描述不符诊断。用于退货上升、成色争议、配件缺失和逆向成本；交付退货根因表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7704,7 +7704,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-seller-performance  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-seller-performance  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 卖家绩效与缺陷复核。用于交易缺陷、延迟发货、未解决纠纷及申诉材料；交付绩效口径表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7715,7 +7715,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-ebay-shipping-policy  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-shipping-policy  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 配送模板与到货承诺。用于处理时间、运费、承运服务和国际运输比较；交付配送方案表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7725,7 +7725,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-sold-comps  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-sold-comps  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 已售样本与成交比价。用于成交价格、已售研究、售出率与样本清洗；交付同口径成交表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7735,7 +7735,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-store-analytics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-store-analytics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 商品队列与销售复盘。用于销量变化、成色组合、拍卖/定价绩效和库存周转；交付队列指标表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7745,7 +7745,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay 商品、履约与店铺运营。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7755,7 +7755,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ebay-time-away-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ebay-time-away-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** eBay Time Away 与休假履约准备。用于允许休假接单、暂停销售、拍卖例外、已有订单和自动回复安排；交付休假覆盖与恢复清单，不代替 Etsy 休店规则。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7765,7 +7765,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 站内与站外广告诊断。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7775,7 +7775,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-brand-content  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-brand-content  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 品牌表达与站外内容。用于店铺品牌一致性、社媒选题与商品页承接；交付品牌信息表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7785,7 +7785,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-capacity-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-capacity-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 材料库存与手作产能。用于手作排单、定制积压、物料采购和暂停接单条件；交付工序产能表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7795,7 +7795,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-competitor-gap  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-competitor-gap  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 竞品与可制作差异。用于竞争集合、设计差异、评论痛点与商品机会；交付竞品比较表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7805,7 +7805,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-custom-orders  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-custom-orders  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 定制订单与返工控制。用于个性化需求确认、报价、打样确认和变更管理；交付定制输入模板。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7815,7 +7815,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-digital-products  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-digital-products  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 数字商品与下载验收。用于模板、打印文件、数字定制和交付设置；交付数字交付清单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7825,7 +7825,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-etsy-ads-tests  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-etsy-ads-tests  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy站内广告商品测试。用于投放商品选择、逐Listing策略、预算资格及小样本止损；不设计手动逐关键词竞价。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7835,7 +7835,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-listing-seo  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-listing-seo  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 标题、标签与属性。用于Listing关键词布局、标签、分类和属性校正；交付字段改写表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7845,7 +7845,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-listing-visuals  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-listing-visuals  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 商品摄影与信息图 brief。用于主图、尺寸图、定制示例、实物/POD视觉规划；交付图片序列。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7855,7 +7855,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-market-keywords  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-market-keywords  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy搜索需求与关键词分层。用于Marketplace Insights取数、长尾词、礼赠需求与选品词库；搜索热度不代替真实订单。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7865,7 +7865,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-offsite-ads-profit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-offsite-ads-profit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy Offsite Ads 资格与费用。用于站外广告费、退出资格、费用情景与订单归因；交付资格判定。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7875,7 +7875,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-originality-pod  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-originality-pod  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 原创与 POD 上市检查。用于原创资格、生产伙伴、POD打样与可售判断；交付原创与许可清单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7885,7 +7885,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-pricing-capacity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-pricing-capacity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 工时定价与净贡献。用于原创商品、定制工时、免费运费和促销定价；交付成本与工时报价表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7895,7 +7895,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-product-copy  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-product-copy  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 商品描述与购买预期。用于用途卖点、定制说明、数字文件和交付限制文案；交付描述与FAQ草稿。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7906,7 +7906,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-etsy-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 原创选品与需求验证。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7916,7 +7916,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 13 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-reserve-cashflow  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-reserve-cashflow  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy储备金与可用现金诊断。用于新版Current、Pending、Ready for Deposit、储备释放及生产资金缺口；不把可用余额当银行到账。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7926,7 +7926,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-seasonal-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-seasonal-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 季节选品与交付倒排。用于节日礼品、季节新品、上架与生产排期；交付季节倒排表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7936,7 +7936,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-service-reviews  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-service-reviews  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 客服问题与评价改进。用于差评原因、客服流程、评价响应及返工预防；交付问题分类表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7946,7 +7946,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-share-save-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-share-save-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy Share & Save 资格与费用对账。用于外部引流链接、Share & Save 订单资格、Offsite Ads 重叠和费用返还差异；交付链接登记与订单账桥，不保证引流收益。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7956,7 +7956,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-shipping-promises  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-shipping-promises  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 运费、制作与交期承诺。用于包邮、运输模板、节日截止和跨境交付；交付地区运费/交期表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7966,7 +7966,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-shop-analytics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-shop-analytics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 流量、订单与经营复盘。用于店铺统计、商品表现、流量来源和转化异常；交付指标字典。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7976,7 +7976,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-shop-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-shop-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 搜索、商品与交付运营。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -7986,7 +7986,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-etsy-vacation-restart  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-etsy-vacation-restart  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Etsy 休店与恢复接单验收。用于主动休店、恢复接单、旧单责任与费用检查；不预测恢复排名或保证出单时间。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8856,7 +8856,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-ads-attribution-profit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-ads-attribution-profit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多广告归因与贡献对账。用于ROAS、ACOS、TACOS、直接/辅助成交及广告账单的核对；不把平台归因销售当已证明的增量。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8866,7 +8866,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-ads-impression-loss-diagnosis  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-ads-impression-loss-diagnosis  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多广告曝光损失诊断。用于曝光不足、预算损失、排名损失及点击/转化瓶颈的分支排查；不把所有低曝光都归因于预算不足。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8876,7 +8876,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-catalog-identity-corrections  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-catalog-identity-corrections  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多目录匹配与资料更正。用于关联目录前身份核对、错误目录绑定、共享字段更正和关联库存检查；不做目录套利或虚假改绑。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8886,7 +8886,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-category-demand-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-category-demand-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多类目需求与新品验证。用于筛候选品类、校验需求与新品机会；不把搜索结果数量、评论量或单条爆款内容当成销量。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8896,7 +8896,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-competitor-offer-benchmark  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-competitor-offer-benchmark  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多同款报价与目录竞争分析。用于比较竞品总价、交付条件与目录竞争位置；不执行自动跟价或为了赢价更换不匹配的目录。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8906,7 +8906,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-customer-questions-responses  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-customer-questions-responses  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多售前问答与事实回复。用于商品页Questions的分类、回复草稿与重复问题改进；不把公开问答、订单私信和投诉处理混为一项。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8916,7 +8916,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-fulfillment-dispatch-controls  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-fulfillment-dispatch-controls  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多订单履约与交接控制。用于直邮、本土配送或Full订单的待发、标签、交承运和延误诊断；不把本土物流入口外推到跨境店。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8926,7 +8926,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-full-inbound-precheck  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-full-inbound-precheck  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多 Full 入仓包装与计划预检。用于创建或复核Full入仓计划、可售单元包装、商品码、外箱和预约准备；不凭教程推断所有账户已开通Full。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8936,7 +8936,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-full-inventory-aging  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-full-inventory-aging  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多 Full 库存、仓龄与移出决策。用于Full补货、容量、不可售库存、仓龄费用和移出/弃置方案；不把固定库存天数套到所有商品。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8946,7 +8946,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-full-receiving-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-full-receiving-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多 Full 实收与可售对账。用于Full已发、已签收、实收和可售不一致的检查及支持材料准备；不把承运签收当成仓库完成收货。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8956,7 +8956,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-ip-policy-response  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-ip-policy-response  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多知识产权与刊登限制初筛。用于BPP通知、品牌/素材权利、错用目录和受限刊登的初步分析及回应材料；不代替正式法律意见。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8966,7 +8966,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-listing-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-listing-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多刊登事实与本地化文案。用于标题、属性、描述和当地语言表达的创建或修正；不把竞品内容直接搬入刊登。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8976,7 +8976,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-market-entry-route  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-market-entry-route  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多站点与经营模式评审。用于比较国家站、本土或跨境模式、直邮与Full的进入条件和投入；不代办主体注册或替用户填写身份资料。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8986,7 +8986,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-payment-fee-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-payment-fee-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多回款、费用与退货对账。用于订单收入、平台费用、退款、资金释放及银行到账差异；不自动转账或把可用余额直接算净利润。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -8996,7 +8996,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-product-ads-grouping  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-product-ads-grouping  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多广告组与商品映射。用于Product Ads活动结构、Catalog/Family/Item广告组、变体成员和迁移评审；不照搬每个SKU独立活动的旧结构。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9006,7 +9006,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-product-ads-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-product-ads-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多 Product Ads 投放准备。用于Product Ads开通条件、广告主/站点、商品资格和投放前准备；不把Brand Ads、Display或旧Mercado Shops教程当同一产品。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9016,7 +9016,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-product-visuals-clips  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-product-visuals-clips  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多商品图片与 Clips 验收。用于商品图、信息表达、短视频Clips脚本与发布验收；不保证流量倍增或用AI素材伪造产品效果。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9026,7 +9026,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-promotion-net-proceeds  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-promotion-net-proceeds  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多促销资格与净回款评审。用于日常折扣、平台共担、自动价格活动及B2B多件价迁移前核验；不默认所有跨境账号具有相同权限。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9036,7 +9036,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-reputation-incident-triage  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-reputation-incident-triage  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多信誉指标与异常处理。用于信誉颜色变化、取消/延迟/投诉率和保护期状态诊断；不承诺固定销量后变绿或通过操纵订单恢复。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9046,7 +9046,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-returns-case-evidence  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-returns-case-evidence  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多退货案件与证据处理。用于退货、投诉、仓库检验和卖家复核的状态诊断与材料准备；不诱导错误退货原因或保证申诉成功。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9056,7 +9056,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-roas-budget-experiment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-roas-budget-experiment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多目标 ROAS 与预算试验。用于目标ROAS、预算调整和扩量/保利润的受控试验；不把目标值视为实际收益或单日绝对限额。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9066,7 +9066,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-seasonal-stock-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-seasonal-stock-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多季节需求与备货倒排。用于墨西哥等站点的节庆、返校和季节需求规划；不把某年热点榜或北半球节奏直接复制到其他国家。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9076,7 +9076,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-supplier-sample-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-supplier-sample-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多供应报价与样品验证。用于候选商品的同规格询价、样品、包装和供货可行性检查；不自动采购或把供应商宣传当检验报告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9086,7 +9086,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多单位经济与现金测算。用于单品、首批备货或售价情景的贡献、广告承受力与现金测算；不预置国家税率或把平台净回款当净利润。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -9096,7 +9096,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 18 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-mercadolibre-variations-sizecharts  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-mercadolibre-variations-sizecharts  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 美客多变体与尺码表验收。用于颜色、尺码、容量等变体映射及尺码表验证；不为聚合评价而合并不同产品。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9106,7 +9106,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-ad-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-ad-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 为 OZON 广告选择有需求、供给和贡献基础的商品。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9116,7 +9116,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-assortment-extension  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-assortment-extension  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于利用 MPstats 为 OZON 现有店铺筛选相邻品类与扩展规格。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9126,7 +9126,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-attribution-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-attribution-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于用 MPstats 市场基线和 Ozon 明细核对广告收入、同模型订单及站内外重复归因。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9136,7 +9136,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-budget-pacing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-budget-pacing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于利用 MPstats 需求走势与商品贡献分配 OZON 广告预算。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9146,7 +9146,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-competitor-map  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-competitor-map  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于建立 OZON 竞品池，判断卖家集中程度和可突破的位置。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9156,7 +9156,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-fulfillment-choice  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-fulfillment-choice  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于依据 MPstats 需求和库存表现比较 OZON 可用履约模式。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9166,7 +9166,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-incrementality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-incrementality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于借 MPstats 市场走势辅助判断 OZON 推广是否带来新增贡献。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9176,7 +9176,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-keyword-map  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-keyword-map  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于用 MPstats 建立 OZON 俄语关键词库和商品信息对应关系。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9186,7 +9186,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-listing-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-listing-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 搜索意图改写 OZON 标题、描述和真实属性草稿。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9196,7 +9196,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-mpstats-data-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-mpstats-data-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于连接 MPstats、验收 OZON 导出、排查数据不一致或为经营分析准备可追溯数据。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9206,7 +9206,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 35 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-newcomer-cohort  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-newcomer-cohort  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于判断 OZON 细分是否给新商品机会并制定首批试销验证。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9216,7 +9216,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-niche-screening  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-niche-screening  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于筛选 OZON 类目、评估某个细分市场是否值得小额测试。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9226,7 +9226,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-pay-per-click-test  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-pay-per-click-test  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 竞争环境设计 OZON CPC 测试和亏损诊断。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9236,7 +9236,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-pay-per-order-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-pay-per-order-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 评估 OZON 按订单付费与 CPC 组合推广是否有净贡献。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9246,7 +9246,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-price-segment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-price-segment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于寻找 OZON 可进入价格带，避免拿不同规格商品直接比价。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9256,7 +9256,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-promotion-pricing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-promotion-pricing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于利用 MPstats 价格和库存变化评估 OZON 促销折扣及价格竞争。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9266,7 +9266,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 11 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-replenishment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-replenishment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 市场趋势与内部真实库存制定 OZON 补货或清仓方案。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9276,7 +9276,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-returns-quality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-returns-quality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 评论与内部订单状态诊断 OZON 退货、取消和产品问题。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9286,7 +9286,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-review-opportunity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-review-opportunity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 评论、评分和需求，形成 OZON 可验证产品改进方向。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9296,7 +9296,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-search-visibility  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-search-visibility  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于用 MPstats 判断 OZON 关键词排名消失、下滑和搜索流量异常。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9306,7 +9306,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-seasonality-entry  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-seasonality-entry  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于用 MPstats 验证 OZON 季节性，安排备货和上新时间。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9316,7 +9316,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-settlement-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-settlement-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于核对 MPstats 内部 OZON 报表与平台结算、折扣积分及广告收费。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9326,7 +9326,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于结合 MPstats 价格带与自家成本测算 OZON 单品贡献、保本价和广告上限。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9336,7 +9336,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 13 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-visual-brief  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-visual-brief  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于从 MPstats 可比商品和评论问题生成 OZON 主图、图文与富内容测试简报。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9346,7 +9346,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-warehouse-allocation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-warehouse-allocation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于用 MPstats 仓库与需求观察辅助 OZON 配仓方案。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -9356,7 +9356,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-ozon-weekly-diagnostics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-ozon-weekly-diagnostics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 用于以 MPstats 市场基线和内部经营数据解释 OZON 周度变化。以 MPstats 的 OZON 数据或可核验导出为必需输入，缺数据先补数；不自动发布、采购或修改广告。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10016,7 +10016,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 4.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 获客广告与实验。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10026,7 +10026,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-agentic-storefront-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-agentic-storefront-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 验收Shopify Agentic Storefronts的渠道资格、Catalog商品映射、购买路径与B2B排除。用于商品在AI渠道不可见、价格库存错误、渠道可售检查或隐藏批发商品；不保证AI排名、曝光或成交。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10036,7 +10036,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-bundle-fulfillment-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-bundle-fulfillment-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 组合商品库存与履约验收。用于固定组合、多件装的组件库存、渠道兼容、拆单与退货；不做组合优惠创意。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10046,7 +10046,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-checkout-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-checkout-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 结账排错与弃单恢复。用于支付失败、运费阻力、弃单恢复与重复邮件排查；交付结账问题分层。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10056,7 +10056,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-competitor-positioning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-competitor-positioning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 竞品定位与差异化。用于同类独立站比较、价值主张与产品差异化；交付竞品对照表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10066,7 +10066,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-content-plan  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-content-plan  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 搜索内容与购买指南。用于博客选题、购买指南、内容集群及商品内链规划；交付意图到页面映射。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10076,7 +10076,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-conversion-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-conversion-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 转化漏斗与页面实验。用于有流量无成交、移动转化异常与落地页测试；交付漏斗口径表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10087,7 +10087,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-shopify-email-lifecycle  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-email-lifecycle  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 生命周期邮件与留存。用于欢迎、购后教育、补货提醒、召回与邮件分群；交付流程矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10097,7 +10097,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-fulfillment-returns  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-fulfillment-returns  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 履约与退货成本诊断。用于3PL服务、配送异常、退货原因与逆向物流；交付履约异常矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10107,7 +10107,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-google-shopping  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-google-shopping  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify Google 商品广告优化。用于Shopping/PMax分组、商品盈利与广告诊断；交付商品分组表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10117,7 +10117,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-incrementality-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-incrementality-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 增量与营销实验。用于归因冲突、渠道蚕食、预算增量与A/B试验；交付实验设计单。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10127,7 +10127,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-international-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-international-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 多市场本地化验收。用于跨国站点、语言、币种、目录及交付一致性；交付市场差异表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10137,7 +10137,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-inventory-replenishment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-inventory-replenishment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 多仓库存与补货。用于缺货、积压、可售库存、跨仓调拨与补货量；交付SKU补货表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10147,7 +10147,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-marginal-budget-review  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-marginal-budget-review  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 边际收益与预算方案评审。用于已有营销模型的响应曲线、预算约束和可执行性复核；不替代模型训练或直接投放。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10157,7 +10157,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-meta-creative-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-meta-creative-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify Meta 素材假设与测试。用于Meta素材疲劳、受众与创意分离、广告brief；交付素材矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10167,7 +10167,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-mmm-data-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-mmm-data-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 营销组合建模数据准备。用于多渠道MMM建模前的数据适用性、口径和可识别性审计；不输出尚未拟合的渠道ROI。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10177,7 +10177,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-product-feed  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-product-feed  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 商品Feed映射与诊断。用于Merchant Center同步、变体身份、Content API退役及Merchant API迁移验收；区分自建和第三方连接器责任。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10187,7 +10187,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-product-page-copy  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-product-page-copy  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 商品页事实与文案。用于商品页标题、卖点、规格、FAQ与购买阻力改写；交付字段级文案草稿。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10197,7 +10197,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 选品与市场验证。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10207,7 +10207,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-retention-bundles  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-retention-bundles  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 复购、组合与优惠经济性。用于加购推荐、组合包、会员权益和复购试验；交付组合候选表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10217,7 +10217,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 店铺运营与转化。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10227,7 +10227,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 16 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-storefront-filter-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-storefront-filter-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 站内筛选与买家结果验收。用于 Search & Discovery 筛选不显示、重复属性、变体匹配、语言或币种下结果异常；交付数据映射和买家端验收，不修改主题代码。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10237,7 +10237,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-subscription-launch-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-subscription-launch-audit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 订阅上线与购买路径验收。用于订阅计划、一次性购买选项、顾客自助管理和上线前验收；不处理通用邮件营销。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10247,7 +10247,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-subscription-renewal-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-subscription-renewal-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 续费失败与合同状态诊断。用于续费失败、库存不足、重试耗尽、暂停/取消与重复通知；不代替支付争议处理。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10257,7 +10257,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-supplier-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-supplier-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 供应商与样品验证。用于代发、供应商比较、小批试产和履约模式选择；交付供应比较表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10267,7 +10267,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-technical-seo  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-technical-seo  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 技术 SEO 与页面性能。用于索引、规范网址、重复页、移动性能与主题应用影响；交付URL问题表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10278,7 +10278,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-shopify-theme-license-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-theme-license-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 主题许可与恢复准备。用于主题授权告警、跨店主题迁移、草稿副本与恢复验收；不编写主题代码或自动关闭商店。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10288,7 +10288,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-shopify-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-shopify-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Shopify 单位经济与获客上限。用于首单利润、CAC上限、LTV回收期及渠道费用核算；交付订单贡献桥接表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10808,7 +10808,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop GMV Max 广告诊断。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10818,7 +10818,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 11 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-affiliate-commissions  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-affiliate-commissions  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 联盟佣金设计。用于Open/Target协作、佣金梯度、激励和净贡献；交付佣金情景。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10828,7 +10828,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-analytics-attribution  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-analytics-attribution  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 全域指标与贡献对账。用于短视频/直播/达人/广告报表重叠和经营复盘；交付指标字典。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10838,7 +10838,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-commercial-audio-clearance  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-commercial-audio-clearance  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 商用音乐与跨平台素材验收。用于带货视频、品牌合作、广告音轨及跨平台再利用的许可核对；不提供侵权规避技巧。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10848,7 +10848,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-content-calendar  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-content-calendar  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 内容日历与素材资产。用于内容矩阵、生产排期、卖点复用和素材寿命；交付内容矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10858,7 +10858,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-content-product-fit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-content-product-fit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 商品与演示适配。用于短视频/达人/直播选品适配和可展示价值；交付演示适配矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10868,7 +10868,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-creator-brief-rights  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-creator-brief-rights  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 达人 brief 与素材许可。用于达人脚本要求、内容验收、广告许可和再利用范围；交付合作brief。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10878,7 +10878,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-creator-discovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-creator-discovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 达人筛选与匹配。用于达人候选、内容任务匹配、受众与历史表现核验；交付匿名候选矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10888,7 +10888,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-fulfillment-service  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-fulfillment-service  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 履约与客服时限。用于FBT、平台物流、自发货的SLA、有效追踪、VTR和物流SPS诊断；区分市场与订单模式。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10898,7 +10898,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-gmvmax-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-gmvmax-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop GMV Max 目标与预算实验。用于GMV Max低消耗、目标ROI、素材供给和有限放量；交付诊断表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10908,7 +10908,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-inventory-spikes  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-inventory-spikes  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 爆量与库存风险。用于达人发布峰值、断货、预售承诺和补货；交付SKU情景表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10918,7 +10918,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-listing-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-listing-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 商品卡、AI商品图片与本地表达验收。用于标题属性、图片实物一致性及欧盟制造商资料缺口；交付草稿和核验清单。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10928,7 +10928,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-live-assortment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-live-assortment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 直播排品与场次复盘。用于直播脚本、排品、演示、优惠和库存承接；交付场次runbook。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10938,7 +10938,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-product-link-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-product-link-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 视频挂链与失效商品验收。用于橱窗商品、发布前挂链、发布后补链及失效商品重新挂链；核对角色、资格、音轨与视频商品一致性，不承诺任意换品。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10948,7 +10948,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 内容适配选品。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10958,7 +10958,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-promotion-margin  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-promotion-margin  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 活动与优惠叠加。用于平台大促、券、闪购、包邮和联盟佣金叠加；交付优惠叠加表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10968,7 +10968,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-returns-feedback  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-returns-feedback  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 退货与内容预期诊断。用于退货原因、美国POD取消与FBT仓退责任、售后成本及商品承诺修正。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10978,7 +10978,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-sample-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-sample-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 寄样与内容交付。用于样品预算、寄送状态、未出片和素材验收；交付寄样状态表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10988,7 +10988,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-short-video-tests  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-short-video-tests  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 短视频脚本与测试。用于开头、卖点、演示、行动提示和内容效果实验；交付脚本矩阵。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -10998,7 +10998,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 内容、达人、履约与店铺评分诊断。用于多环节经营问题、美国SPS版本切换及地区规则核验；明确的单项任务优先使用专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11008,7 +11008,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 13 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-trend-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-trend-validation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** TikTok Shop 趋势与需求验证。用于爆款线索、趋势寿命、季节性和跟进判断；交付趋势证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11018,7 +11018,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-tiktokshop-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-tiktokshop-unit-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 计算TikTok Shop佣金、寄样、内容、广告、优惠和退款后的SKU贡献，使用离线Python脚本输出标准联盟与Shop Ads佣金经济上限、目标利润下的广告预算及联合费用约束。不自动修改店铺费率或投放。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -11028,7 +11028,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 48 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-ads-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-ads-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 广告与订单贡献对账。用于广告ROAS、归因窗口、SKU利润和销售差异；交付广告到账单桥接。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11038,7 +11038,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-advertising  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart Connect 广告与利润。用于综合广告诊断与预算、素材、归因的联合评审；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11049,7 +11049,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-walmart-assortment-gaps  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-assortment-gaps  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 商品组合与竞争空缺。用于规格缺口、价格带、包装数量和差异化组合；交付组合地图。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11059,7 +11059,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-catalog-identity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-catalog-identity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 商品身份与 Feed 回读。用于GTIN/SKU/item ID、变体、目录冲突和更新未生效；交付身份映射。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11069,7 +11069,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-fulfillment-comparison  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-fulfillment-comparison  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart WFS 与自发货比较。用于WFS、自发货或混合履约的成本与服务选择；交付履约总成本表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11079,7 +11079,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-inventory-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-inventory-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 库存健康与仓龄行动。用于WFS/自发货缺货、积压、仓龄和补货；交付库存风险表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11089,7 +11089,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-keyword-harvest  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-keyword-harvest  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 搜索词迁移与关键词验证。用于自动活动挖词、查询相关性、匹配和CPC；交付词证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11099,7 +11099,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-listing-quality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-listing-quality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart Listing Quality 与内容修正。用于属性缺失、质量分、图片文案和内容采纳；交付质量问题表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11109,7 +11109,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-market-demand  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-market-demand  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 搜索需求与候选验证。用于站内需求、查询意图、季节变化和跨平台迁移；交付需求证据表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11119,7 +11119,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-offer-buybox  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-offer-buybox  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart Offer 与 Buy Box 准备。用于价格配送、可售、库存稳定和Buy Box异常；交付Offer对照。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11129,7 +11129,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-placement-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-placement-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 广告位与加价测试。用于搜索/商品页等广告位差异、加价和组合风险；交付版位对比。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11139,7 +11139,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-price-monitoring  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-price-monitoring  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 价格监控与利润响应。用于竞品总价、报价波动、自动调价和价格竞争；交付可比价格快照。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11150,7 +11150,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-walmart-pricing-floors  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-pricing-floors  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 价格底线与优惠情景。用于商品定价、Buy Box报价、折扣和自动调价边界；交付SKU价格底线。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11160,7 +11160,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-product-selection  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 市场与商品选择。用于完整选品评审与多环节市场进入判断；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11170,7 +11170,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-returns-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-returns-recovery  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 退货、库存与结算对账。用于WFS退货、退款、库存回收和费用差异；交付退货状态桥接。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11180,7 +11180,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-review-program-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-review-program-planning  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 官方评价计划资格与预算。用于 Review Accelerator 子项目选择、商品资格、成本与退出后对账；交付候选和有限预算方案，不组织站外返现评价或保证好评。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11190,7 +11190,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-search-query-insights  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-search-query-insights  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 搜索排名与查询份额。用于Search Insights、Query Score、漏斗排名和查询机会；交付指标字典。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11200,7 +11200,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-seller-performance  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-seller-performance  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 卖家绩效与异常修复。用于取消、送达、追踪、响应、退货和负面反馈；交付绩效定义表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11211,7 +11211,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi. Gövdeler ölçüldü: bu skill 5-6 dosyalık somut iş akışı (adımlar, teslimat, playbook/evidence); İngilizce karşılığı tek dosyalık ~1 KB genel şablon. Açıklaması Çince.
 
-### sealeap-walmart-sponsored-products-structure  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-sponsored-products-structure  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart Sponsored Products 结构。用于自动/手动活动、商品分组、命名和预算边界；交付活动结构。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11221,7 +11221,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-store-operations  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart 目录、报价与履约运营。用于多环节店铺经营诊断与优先级安排；已有具体单项问题时优先选择对应专题入口。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11231,7 +11231,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-wfs-box-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-wfs-box-reconciliation  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart WFS 箱内明细与数量核对。用于装箱表、目的仓、唯一收货标签及计划数量对账；附离线JSON核对脚本。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -11241,7 +11241,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 16 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-wfs-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-wfs-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart WFS 费用与仓龄情景。用于WFS利润、尺寸重量、旺季/长期仓储和履约比较；交付WFS成本表。不替代跨环节经营总诊断。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11251,7 +11251,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-wfs-packaging-labels  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-wfs-packaging-labels  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart WFS 包装与标签预检。用于入仓可售单元包装、单品/收货/承运标签及交接准备；不创建或购买物流服务。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11261,7 +11261,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-walmart-wfs-receiving-resolution  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-walmart-wfs-receiving-resolution  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** Walmart WFS 收货差异与处理准备。用于Delivered后未可售、收货未完成、缺少数量和争议材料；不保证赔付。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11271,7 +11271,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-ad-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-ad-readiness  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 挑选Wayfair值得投入广告测试的商品并确认当前可用推广能力。用于广告投前资格与商品筛选相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11281,7 +11281,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-assortment-opportunity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-assortment-opportunity  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 结合Partner Home可用消费者洞察和产品能力，筛选Wayfair新品方向。用于品类机会与优势产品筛选相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11291,7 +11291,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-attributes-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-attributes-localization  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 校验Wayfair类目字段、尺寸单位、文案和合规材料。用于本地化及批量字段修改前后验收，先核当前Partner Home能力和父SKU/部件范围。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11301,7 +11301,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-attribution-incrementality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-attribution-incrementality  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 核对Wayfair广告报表的收入范围，并评估是否改善真实供货贡献。用于广告归因、供货回报与增量相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11311,7 +11311,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-budget-bid-controls  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-budget-bid-controls  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 按Wayfair商品供货贡献、库存和广告成熟数据分配预算与出价。用于预算、出价与供货贡献分配相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11321,7 +11321,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-castlegate-inbound  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-castlegate-inbound  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 准备Wayfair CastleGate入仓并核对送达、验收、数量和可售差异。用于CastleGate 入仓与实收对账相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11331,7 +11331,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-catalog-identifiers  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-catalog-identifiers  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 梳理Wayfair SKU、供应商零件号、变体和组合商品映射。用于SKU、组件与商品组建模相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11341,7 +11341,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-competitor-price-style  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-competitor-price-style  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 建立Wayfair同用途商品池，寻找可证明的规格、风格或服务差异。用于竞品价格、规格与风格对照相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11351,7 +11351,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-imagery-waymore  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-imagery-waymore  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 设计Wayfair场景图、尺寸图、功能图和WayMore内容的原创改进方案。用于家居图片与 WayMore 简报相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11361,7 +11361,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-inventory-feed  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-inventory-feed  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 校验Wayfair多仓可售库存、组件约束及API/EDI同步结果。用于多仓库存与同步验收相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11371,7 +11371,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-leadtime-scorecard  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-leadtime-scorecard  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 诊断Wayfair备货交期、取消、履约率和供应商评分卡异常。用于交期承诺与供应商绩效相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11381,7 +11381,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-order-multibox  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-order-multibox  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 校验Wayfair订单的料号、组件、箱数、仓库和追踪信息是否完整一致。用于订单、多箱与发货前校验相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -11391,7 +11391,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 27 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-packaging-damage  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-packaging-damage  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 从Wayfair破损、缺件和装配反馈定位包装或产品改进。用于包装、货损与装配改进相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11401,7 +11401,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-professional-assortment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-professional-assortment  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 评估产品进入Wayfair Professional商业采购场景的适配性。用于Wayfair Professional 商用品类相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11411,7 +11411,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-promotion-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-promotion-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 评估Wayfair活动、批发折扣或Closeout对供应商贡献与库存回收的影响。用于促销、Closeout 与折扣经济性相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11421,7 +11421,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-replenishment-aging  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-replenishment-aging  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 结合Wayfair真实动销和仓库约束制定补货、转仓或积压退出方案。用于补货、仓龄与退出计划相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11431,7 +11431,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-returns-parts  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-returns-parts  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 区分Wayfair无理由退货、货损缺陷与缺件，并准备补件或退货处理方案。用于退货、缺陷与补件决策相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11441,7 +11441,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-seasonal-launch  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-seasonal-launch  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 为Wayfair季节品和活动新品安排生产、到仓、上架与补货窗口。用于季节选品与到仓倒排相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11451,7 +11451,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-settlement-deductions  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-settlement-deductions  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 将Wayfair PO、发票、Payment Voucher和银行实收桥接到同一供货批次。用于供货发票与扣款回款对账相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11461,7 +11461,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-sponsored-products-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-sponsored-products-testing  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 设计Wayfair Sponsored Products的小规模测试和曝光点击转化诊断。用于Sponsored Products 测试与诊断相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11471,7 +11471,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-sponsored-shops-creative  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-sponsored-shops-creative  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 为Wayfair Sponsored Shops或当前等效品牌展示活动准备素材与目录落地页。用于Sponsored Shops 素材与落地页相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11481,7 +11481,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-supplier-market-fit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-supplier-market-fit  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 评估企业、产品和履约能力是否适合进入某个Wayfair市场。用于供应商模式与市场进入相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11491,7 +11491,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-weekly-diagnostics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-weekly-diagnostics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 综合Wayfair销售、内容、库存、绩效与费用，形成SKU级经营周报。用于SKU经营周报与行动复盘相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** - _(otomatik tespit)_
@@ -11501,7 +11501,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### sealeap-wayfair-wholesale-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 79 (B)
+### sealeap-wayfair-wholesale-economics  ·  xjli360/sealeap-ecommerce-skills @ 914f920  ·  puan 78 (B)
 
 - **Ne yapar:** 计算Wayfair供货收入扣除折扣、Allowance、履约及货损后的贡献与投流空间。用于供货贡献与广告预算测算相关请求；按当前市场、账户条款和可核数据作判断，缺关键依据时HOLD，不自动发布、投放、发货或采购。
 - **Teknoloji:** python _(otomatik tespit)_
@@ -12942,7 +12942,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 30 KB (SKILL.md 15.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### share-of-shelf  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### share-of-shelf  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Measure digital share of shelf: brand visibility and search position within product categories versus competitors on Amazon, Walmart and other marketplaces, and track shelf-position trends. Use when benchmarking category visibility or competitor search rankings.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -12972,7 +12972,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 23 KB (SKILL.md 11.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-ab-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### shopify-ab-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Run A/B tests on a Shopify store: tool selection, hypothesis prioritization (ICE/PIE), product page, price, image, copy and checkout tests, sample size, duration and significance. Use when testing changes on Shopify.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -12982,7 +12982,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 56 (C)
+### shopify-admin  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 55 (C)
 
 - **Ne yapar:** The Admin GraphQL API lets you build apps and integrations that extend and enhance the Shopify admin.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -12992,7 +12992,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 850 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-abandoned-cart-recovery  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-abandoned-cart-recovery  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Query checkouts abandoned in the last N days, generate unique discount codes per customer, and tag them for re-engagement.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13002,7 +13002,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-address-correction  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-address-correction  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Update the shipping address on an unfulfilled order before it ships.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -13012,7 +13012,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-crawler-access  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-crawler-access  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Edit the theme's robots.txt.liquid to explicitly allow AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, Amazonbot) so AI assistants are permitted to read the catalog.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -13022,7 +13022,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-description-enrichment  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-description-enrichment  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Rewrite thin product descriptions into structured, fact-rich copy (materials, fit, use-cases, the words shoppers actually type) so AI agents have something concrete to quote and match.
 - **Teknoloji:** html, node _(otomatik tespit)_
@@ -13032,7 +13032,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-image-alt-text  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-image-alt-text  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Generate and set descriptive alt text on product images so AI agents (which can't 'see' pixels) can understand and recommend what each product looks like.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13042,7 +13042,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-llms-txt  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-llms-txt  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Generate and publish an /llms.txt guide (brand summary, flagship products, key policies, contact) via a theme template so AI assistants get a curated, machine-readable map of the store.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13052,7 +13052,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-metafields-setup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-agentic-metafields-setup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Define and populate agentic-commerce metafields (material, attributes, key features, specs, sizing) so AI agents can filter and match products to specific shopper requirements.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13062,7 +13062,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-organization-schema  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-organization-schema  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Inject an Organization JSON-LD block (name, logo, sameAs social links, contactPoint) into the theme so AI agents can verify the store is a real, trusted brand and link it to its public identity.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -13072,7 +13072,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-policy-readability  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-policy-readability  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Ensure shipping, returns, refund, privacy, and terms policies exist as clean machine-readable text so AI agents can answer shopper questions and close the sale without escalating.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -13082,7 +13082,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-product-jsonld-backfill  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-product-jsonld-backfill  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Backfill the structured product/variant fields that power Product JSON-LD — barcode (GTIN), SKU, vendor, product type, weight — so AI agents can quote exact, in-stock items instead of guessing.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13092,7 +13092,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-product-taxonomy  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-agentic-product-taxonomy  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Assign every product a Shopify Standard Product Taxonomy category so AI agents can map a shopper's intent to the right category and surface the store's products.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13102,7 +13102,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-agentic-readiness-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-agentic-readiness-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Score how findable, readable, and recommendable the store's catalog is to AI shopping agents — then route each gap to the agentic skill that fixes it.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13122,7 +13122,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 11.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-automated-order-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-automated-order-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Mutation: applies tags to orders based on configurable rules (geography, value, product type, risk level, customer tier).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13132,7 +13132,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-average-order-value-trends  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-average-order-value-trends  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: tracks AOV over time buckets and segments by new vs. returning customers.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13142,7 +13142,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-b2b-company-overview  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-b2b-company-overview  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: lists B2B company accounts with locations, catalogs, and payment terms for wholesale management.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13152,7 +13152,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-bulk-customer-tag-update  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-bulk-customer-tag-update  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Adds and/or removes tags across a filtered set of customers — supports query-based selection, explicit ID lists, and union/replace tag modes.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13162,7 +13162,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-bulk-fulfillment-creation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-bulk-fulfillment-creation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Batch-fulfill open fulfillment orders with tracking numbers. Supports partial fulfillment and customer notification toggle.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13172,7 +13172,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-bulk-price-adjustment  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-bulk-price-adjustment  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Query products by collection or tag and update all variant prices by a percentage or fixed amount, with optional floor/ceiling constraints.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13182,7 +13182,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-bundle-availability-check  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-bundle-availability-check  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Read-only: for native bundle products and metafield-defined bundles, verifies every component variant has sufficient stock to fulfill the bundle's effective availability.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13192,7 +13192,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-cancel-and-restock  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-cancel-and-restock  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Cancel an unfulfilled order, optionally restock inventory, and optionally notify the customer — all in a single validated workflow.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13202,7 +13202,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-carrier-performance-comparison  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-carrier-performance-comparison  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: compares delivery times and shipping costs across carriers used in fulfillments to inform carrier mix and contract decisions.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13212,7 +13212,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-chargeback-watchlist-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-chargeback-watchlist-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Identifies customers with disputed or charged-back orders and tags their customer record for proactive review on future orders.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13222,7 +13222,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-checkout-abandonment-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-checkout-abandonment-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Aggregate abandoned checkout data for a time range, broken down by cart value bucket and hour of day (UTC).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13232,7 +13232,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-churn-risk-scorer  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-churn-risk-scorer  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: scores customers by churn probability based on purchase recency, frequency decay, and expected repurchase intervals.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13242,7 +13242,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-cogs-completeness-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-cogs-completeness-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: identifies products and variants that are missing inventoryItem.unitCost so margin and inventory valuation reports stay accurate.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13252,7 +13252,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-collection-membership-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-collection-membership-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: lists orphan products (in zero collections) and over-collected products for catalog hygiene.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13262,7 +13262,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-collection-reorganization  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-collection-reorganization  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Reorder products in a manual Shopify collection by inventory level, moving in-stock products to the top and out-of-stock to the bottom.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13272,7 +13272,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-compare-at-price-cleanup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-compare-at-price-cleanup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Removes stale compareAtPrice values where current price >= compareAtPrice (no real discount) or compareAtPrice has been set for over a configurable age threshold.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13282,7 +13282,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-cross-sell-opportunity-finder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-cross-sell-opportunity-finder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: identifies products with high single-purchase rates that could benefit from cross-sell pairing based on category and price affinity.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13292,7 +13292,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-customer-acquisition-cost-by-source  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-customer-acquisition-cost-by-source  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: estimates customer acquisition cost (CAC) per traffic source by joining order count per landing site / referrer with configurable ad spend.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13302,7 +13302,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-customer-cohort-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-customer-cohort-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: groups customers by first-purchase month and tracks repeat purchase rate and revenue per cohort.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13312,7 +13312,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-customer-merge  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-customer-merge  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Merges duplicate customer records: invokes Shopify's native customer merge API where supported, otherwise consolidates the loser record's tags and notes into the winner via customerUpdate.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -13322,7 +13322,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 9.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-customer-note-bulk-annotator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-customer-note-bulk-annotator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Adds internal notes to customer records in bulk — useful for post-campaign flags, import annotations, or support context.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13332,7 +13332,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-customer-spend-tier-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-customer-spend-tier-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Calculates lifetime spend per customer and applies tier tags (Bronze/Silver/Gold/Platinum) based on configurable thresholds.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13342,7 +13342,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-customer-timeline-export  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-customer-timeline-export  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Read-only: exports a complete chronological history for a single customer — orders, refunds, returns, addresses, notes, tags, marketing consent, and lifetime spend — as one consolidated CSV.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13352,7 +13352,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-customer-win-back  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-customer-win-back  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Identify customers who have not ordered in N days, export a re-engagement list, and tag them in Shopify.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13362,7 +13362,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-dead-stock-identifier  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-dead-stock-identifier  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: cross-references inventory levels with order velocity to flag items with positive stock but zero sales in N days.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13372,7 +13372,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-delivery-time-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-delivery-time-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates average time from fulfillment creation to delivery by carrier using fulfillment and order data.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13382,7 +13382,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-demand-forecast-reorder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-demand-forecast-reorder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: forecasts demand per SKU using sales velocity and seasonality, then calculates reorder points and suggested purchase order quantities.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13392,7 +13392,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-discount-ab-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-discount-ab-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Compare redemption rates and revenue performance across two or more discount codes over a specified date range.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13402,7 +13402,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-discount-cost-trend  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-discount-cost-trend  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Read-only: tracks total discount dollars given over configurable time buckets (week/month/quarter), broken down by discount type and code.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13412,7 +13412,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-discount-hygiene-cleanup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-discount-hygiene-cleanup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Finds expired, zero-usage, or duplicate discount codes and optionally deactivates or deletes them.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13422,7 +13422,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-discount-roi-calculator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-discount-roi-calculator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates the true ROI of each discount code and automatic discount by comparing incremental revenue against discount cost.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13432,7 +13432,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-draft-order-cleanup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-draft-order-cleanup  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Finds stale draft orders older than N days and optionally deletes them to reduce admin clutter.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13442,7 +13442,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-duplicate-customer-finder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-duplicate-customer-finder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: finds likely duplicate customer records by matching email, phone, or name combinations.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13452,7 +13452,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-duplicate-sku-barcode-detector  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-duplicate-sku-barcode-detector  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: finds duplicate SKUs or barcodes across all product variants.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13462,7 +13462,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-email-deliverability-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-email-deliverability-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: scans the customer database for malformed emails, role accounts, disposable domains, and bounce-suspect patterns to protect sender reputation.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13472,7 +13472,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-exchange-vs-refund-ratio  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-exchange-vs-refund-ratio  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: tracks what percentage of returns become exchanges vs. refunds vs. store credit — measures revenue recovery rate.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13482,7 +13482,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-file-storage-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-file-storage-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: lists every file in CDN storage, cross-references usage on products, pages, and articles, and flags orphaned/unreferenced assets.
 - **Teknoloji:** html, node _(otomatik tespit)_
@@ -13492,7 +13492,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-frequently-bought-together  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-frequently-bought-together  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: mines order history to find product pairs and triplets frequently purchased together, generating cross-sell and bundle recommendations.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13502,7 +13502,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-fulfillment-location-routing  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-fulfillment-location-routing  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Reassign fulfillment orders from one location to another for warehouse overflow or regional routing.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13512,7 +13512,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-fulfillment-status-digest  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-fulfillment-status-digest  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Generate a daily fulfillment triage digest: all open orders segmented by fulfillment age and flagged for holds or exceptions.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13522,7 +13522,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-gift-card-balance-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-gift-card-balance-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: lists all active gift cards with remaining balance, expiry, and last-used date for liability tracking.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13532,7 +13532,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-gift-card-issuance  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-gift-card-issuance  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Issue Shopify gift cards (store credit) to customers as a goodwill gesture, post-return incentive, or loyalty reward.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13542,7 +13542,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-gift-card-liability-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-gift-card-liability-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates total outstanding gift card balance as a financial liability, broken down by issue cohort and remaining balance band.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13552,7 +13552,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-gift-message-extraction  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-gift-message-extraction  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: extracts gift messages, gift recipients, and gift flags from order custom attributes and notes for fulfillment teams to print on packing slips.
 - **Teknoloji:** html, node _(otomatik tespit)_
@@ -13562,7 +13562,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-high-risk-order-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-high-risk-order-tagger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Tags orders flagged as high-risk for manual review and optionally places fulfillment holds to prevent shipping.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13572,7 +13572,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-inventory-adjustment  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-inventory-adjustment  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Apply inventory quantity adjustments to specific variants at specific locations — after a cycle count, 3PL return batch, or sync discrepancy correction.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13582,7 +13582,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-inventory-aging-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-inventory-aging-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: categorizes inventory into aging buckets (0-30, 31-60, 61-90, 90+ days) based on time since last sale or receipt.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13592,7 +13592,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-inventory-transfer-between-locations  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-inventory-transfer-between-locations  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Moves inventory units from one location to another by decrementing the source and incrementing the destination.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13602,7 +13602,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-inventory-valuation-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-inventory-valuation-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates total inventory value (quantity × cost) per location and per vendor for accounting and insurance.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13612,7 +13612,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-low-inventory-restock  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-low-inventory-restock  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Query all tracked product variants below a stock threshold and export a restock list grouped by vendor.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13622,7 +13622,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-loyalty-segment-export  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-loyalty-segment-export  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Identify high-LTV customers by order count and lifetime spend, tag them, and export a loyalty-ready contact list.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13632,7 +13632,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-marketing-consent-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-marketing-consent-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: audits email and SMS marketing consent status across the customer base for compliance and segmentation.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13642,7 +13642,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-metafield-bulk-update  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-metafield-bulk-update  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Bulk set or delete metafields on products, variants, or customers filtered by tag or collection.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13652,7 +13652,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-metafield-definition-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-metafield-definition-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: enumerates every metafield definition across all owner types and flags unused, undocumented, or duplicate-key definitions.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13662,7 +13662,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-multi-location-inventory-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-multi-location-inventory-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Audit inventory levels across all active locations, flagging variants where Available quantity is negative or Committed exceeds On Hand — a signal of inventory sync drift.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13672,7 +13672,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-order-attribution-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-order-attribution-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: parses UTM source/medium/campaign from order landing site URLs to attribute revenue, AOV, and conversion volume to marketing channels.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13682,7 +13682,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-order-cancellation-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-order-cancellation-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: tracks cancellation rate over time and breaks down cancelled orders by cancelReason to surface fraud, inventory, customer, and declined-payment patterns.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13692,7 +13692,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-order-hold-and-release  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-order-hold-and-release  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Place or release fulfillment holds on open orders in batch — with a stated reason and optional expiry date.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13702,7 +13702,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-order-lookup-and-summary  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-order-lookup-and-summary  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Retrieve and summarize full order details for a customer by email, order number, or phone number.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13712,7 +13712,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-order-notes-and-attributes-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-order-notes-and-attributes-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: extracts and tabulates order notes and custom attributes for ops review of gift messages and special instructions.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13722,7 +13722,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-order-risk-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-order-risk-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: lists orders by fraud risk level with indicator details for building a manual review queue.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13732,7 +13732,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-page-content-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-page-content-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: lists all pages and blog posts, flags empty or short content and missing SEO fields.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13742,7 +13742,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-partial-refund-pattern-detector  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-partial-refund-pattern-detector  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: surfaces orders with multiple partial refunds or unusually high partial-refund-to-total ratios that may indicate fraud, chronic complaints, or process gaps.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13752,7 +13752,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-payout-reconciliation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-payout-reconciliation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Read-only: reconciles Shopify Payments payouts against the order transactions that funded them and flags amount discrepancies.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13762,7 +13762,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-post-purchase-survey-trigger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-post-purchase-survey-trigger  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: identifies orders 7–14 days post-fulfillment that are eligible for a post-purchase survey campaign, excluding refunded or cancelled orders.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13772,7 +13772,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-price-elasticity-analyzer  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-price-elasticity-analyzer  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: analyzes the relationship between product pricing and sales velocity to identify optimal price points and price-sensitive products.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13782,7 +13782,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-product-affinity-cross-sell  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-product-affinity-cross-sell  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Mine order history to find which products are most frequently bought together, then rank pairs by support, confidence, and lift to power bundles and cross-sell recommendations.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13792,7 +13792,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-product-data-completeness-score  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-product-data-completeness-score  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: scores each product on data completeness across description, images, SEO, weight, barcode, cost, and metafields.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13802,7 +13802,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-product-image-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-product-image-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: flags products and variants with missing images or fewer than a minimum number of images.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13812,7 +13812,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-product-lifecycle-manager  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-product-lifecycle-manager  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Bulk transition products through DRAFT → ACTIVE → ARCHIVED status for seasonal launches and sunsetting.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13822,7 +13822,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-product-tag-bulk-update  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-product-tag-bulk-update  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Add or remove tags on all products matching a collection, existing tag, or search query — for campaign setup, teardown, or catalog organization.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13832,7 +13832,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-profit-margin-calculator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-profit-margin-calculator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Read-only: calculates true net profit per order and per product by factoring in COGS, shipping costs, transaction fees, discounts, refunds, and taxes.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13842,7 +13842,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-promo-code-bulk-generator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-promo-code-bulk-generator  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Bulk-creates a batch of unique discount codes for campaigns, giveaways, or partner distributions — each code is its own DiscountCodeBasic with single-use limit by default.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13852,7 +13852,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-publication-channel-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-publication-channel-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: shows which products are published to which sales channels and flags unpublished active products.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13862,7 +13862,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-referral-source-attribution  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-referral-source-attribution  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: parses each order's landing site and referrer URL to break down orders, revenue, and AOV by traffic source — direct, organic, paid, social, email, or referral domain.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13872,7 +13872,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-refund-and-reorder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-refund-and-reorder  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Process a full or partial refund on an order and optionally create a replacement draft order for the customer.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13882,7 +13882,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-refund-rate-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-refund-rate-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates refund rate by product, collection, or period — identifies quality and listing issues.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13892,7 +13892,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-repeat-purchase-rate  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-repeat-purchase-rate  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates what percentage of customers place 2+ orders within N days, segmented by product or collection.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13902,7 +13902,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-restock-on-return  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-restock-on-return  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** For approved/closed returns, restocks inventory at the return location by adjusting on-hand quantities for each returned line item.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13912,7 +13912,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 9.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-return-cost-attribution  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-return-cost-attribution  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates the true cost of returns by reason and product — refund dollars, restocking impact, shipping cost lost, and COGS impact for items written off.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13922,7 +13922,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-return-fraud-detector  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-return-fraud-detector  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Read-only: identifies customers with abnormal return behavior — high return rate, wardrobing patterns, or serial returner profiles — for manual review.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13932,7 +13932,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-return-initiation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-return-initiation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Create a formal Shopify Return record for an order, specifying line items, quantities, and return reason — the first step in the native returns workflow.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13942,7 +13942,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-return-processing-sla  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-return-processing-sla  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: measures average time from return request to refund completion, surfacing SLA breaches.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13952,7 +13952,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-return-reason-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-return-reason-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: aggregates return reasons across orders to identify product quality or listing issues.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13962,7 +13962,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-revenue-by-location-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-revenue-by-location-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: breaks down revenue by fulfillment location for multi-warehouse P&L and location performance.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13972,7 +13972,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-rfm-customer-segmentation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-rfm-customer-segmentation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: scores every customer on Recency, Frequency, and Monetary value to segment them into actionable groups (Champions, Loyal, At-Risk, Lost).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13982,7 +13982,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-sales-by-channel-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-sales-by-channel-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: breaks down revenue, units, and AOV by sales channel (Online Store, POS, Draft Orders, etc.).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -13992,7 +13992,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-seo-metadata-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-seo-metadata-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: scans products, collections, and pages for missing SEO titles or meta descriptions.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14002,7 +14002,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-shipping-cost-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-shipping-cost-analysis  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: aggregates shipping revenue charged to customers vs. actual shipping line costs by carrier and method.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14012,7 +14012,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-shipping-rate-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-shipping-rate-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: walks every delivery profile and zone to verify each has at least one valid shipping rate, surfacing zones with no rates or only manual rates.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14022,7 +14022,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-skills  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-skills  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Master skill collection for Shopify store operators. Provides access to all merchandising, marketing, support, and operations capabilities.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -14032,7 +14032,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1362 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-split-shipment-planner  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-split-shipment-planner  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Splits a multi-line fulfillment order into separate shipments for partial or location-specific shipping.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14042,7 +14042,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-staff-account-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-staff-account-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: reviews staff accounts for stale logins, inactive status, and overpermissioned roles to surface security and access hygiene issues.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14052,7 +14052,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-stock-velocity-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-stock-velocity-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: calculates days-of-supply and sell-through rate per SKU and location for replenishment planning.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14062,7 +14062,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-subscription-mrr-tracker  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-subscription-mrr-tracker  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Read-only: for stores with subscription products, calculates MRR, ARR, active subscriber count, and rolling churn rate from subscription contracts.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14072,7 +14072,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-tax-liability-summary  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-tax-liability-summary  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: aggregates tax collected by jurisdiction from order tax lines for filing prep.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14082,7 +14082,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-top-product-performance  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-top-product-performance  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Rank products by revenue, units sold, and refund rate over a date range by aggregating order line items.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14092,7 +14092,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-tracking-update-bulk  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-tracking-update-bulk  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Batch-update tracking numbers and URLs on existing fulfillments when a carrier reassigns tracking IDs.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -14102,7 +14102,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-traffic-by-page-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-traffic-by-page-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Report sessions, conversion rate, and bounce rate for every product and collection page using Shopify's analytics API — surfaces which pages earn eyeballs and which convert them.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -14112,7 +14112,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-url-redirect-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-url-redirect-audit  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: lists all URL redirects, flags redirect chains (A→B→C) and duplicate targets.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14122,7 +14122,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-variant-option-normalizer  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-variant-option-normalizer  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Detects inconsistent variant option naming (Sm vs Small vs S) and bulk-corrects to a standard set.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14132,7 +14132,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-variant-performance-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 80 (A)
+### shopify-admin-variant-performance-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 79 (B)
 
 - **Ne yapar:** Rank every product variant by revenue, units sold, and refund rate, then cross-reference against current inventory to identify dead weight vs. top performers.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14142,7 +14142,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 9 KB (SKILL.md 9.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-admin-vendor-consolidation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-vendor-consolidation  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Read-only: detects vendor field typos, casing variants, and trailing-whitespace duplicates across the catalog and proposes a canonical merge per cluster.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14152,7 +14152,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-vip-customer-identifier  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-vip-customer-identifier  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Identifies top-spending customers (top N% by lifetime value or order frequency) and exports a VIP candidate list; optionally tags qualified customers as VIPs.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14162,7 +14162,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-admin-wismo-bulk-status-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 82 (A)
+### shopify-admin-wismo-bulk-status-report  ·  40RTY-ai/shopify-admin-skills @ e3579f4  ·  puan 81 (A)
 
 - **Ne yapar:** Identify orders at risk of generating WISMO support tickets: shipped orders with stale tracking, and unfulfilled orders past their SLA window.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14172,7 +14172,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-analytics-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### shopify-analytics-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Understand Shopify analytics and reporting: sessions, conversion rate, AOV, product and channel reports, attribution, cohorts and LTV, custom reports and GA4/Triple Whale integration. Use when reading Shopify reports or deciding what to change based on store data.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14222,7 +14222,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 9.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-app-recommendations  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-app-recommendations  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** App stack advisor — essential apps by business stage, cost optimization, performance impact analysis
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14242,7 +14242,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 17 KB (SKILL.md 16.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-blog-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-blog-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Content marketing via Shopify blog — SEO content, product education, buying guides, internal linking
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14252,7 +14252,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-cart-abandonment  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-cart-abandonment  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Cart abandonment recovery — email sequences, SMS, retargeting, exit intent, checkout friction audit
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14272,7 +14272,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-checkout-customization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-checkout-customization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Checkout optimization — Checkout Extensibility, custom fields, express payments, trust elements
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14302,7 +14302,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-conversion-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### shopify-conversion-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Increase a Shopify store's conversion rate: funnel drop-off analysis, product page and checkout optimization, trust signals, mobile UX, page speed and testing. Use when a Shopify store gets traffic but not enough sales.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14313,7 +14313,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### shopify-custom-data  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
+### shopify-custom-data  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 53 (C)
 
 - **Ne yapar:** MUST be used first when prompts mention Metafields or Metaobjects. Use Metafields and Metaobjects to model and store custom data for your app. Metafields extend built-in Shopify data types like products or customers, Metaobjects are custom data types that can be used to store bespoke data structures. Metafield and Metaobject definitions provide a schema and configuration for values to follow.
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
@@ -14323,7 +14323,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 15 KB (SKILL.md 10.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-customer  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 56 (C)
+### shopify-customer  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 55 (C)
 
 - **Ne yapar:** The Customer Account API allows customers to access their own data including orders, payment methods, and addresses.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14343,7 +14343,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-dev  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 56 (C)
+### shopify-dev  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 55 (C)
 
 - **Ne yapar:** Search Shopify developer documentation across all APIs. Use only when no API-specific skill applies.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14353,7 +14353,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-dropshipping  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-dropshipping  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Dropshipping setup and scaling — supplier integration, automation, pricing strategy, customer experience
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14363,7 +14363,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-email-flows  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-email-flows  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Email automation flows — welcome series, abandoned cart, post-purchase, win-back, browse abandonment
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14373,7 +14373,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-facebook-instagram-shop  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-facebook-instagram-shop  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Social selling setup — Facebook Shop, Instagram Shopping, product tagging, social checkout
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14383,7 +14383,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-functions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 51 (C)
+### shopify-functions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 50 (C)
 
 - **Ne yapar:** Shopify Functions allow developers to customize the backend logic that powers parts of Shopify. Available APIs: Discount, Cart and Checkout Validation, Cart Transform, Pickup Point Delivery Option Generator, Delivery Customization, Fulfillment Constraints, Local Pickup Delivery Option Generator, Order Routing Location Rule, Payment Customization
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
@@ -14403,7 +14403,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-google-channel  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-google-channel  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Google integration — Shopping feed, Performance Max, free listings, Merchant Center optimization
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14413,7 +14413,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-hydrogen  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 49 (D)
+### shopify-hydrogen  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 48 (D)
 
 - **Ne yapar:** Hydrogen storefront implementation cookbooks. Some of the available recipes are: B2B Commerce, Bundles, Combined Listings, Custom Cart Method, Dynamic Content with Metaobjects, Express Server, Google Tag Manager Integration, Infinite Scroll, Legacy Customer Account Flow, Markets, Partytown + Google Tag Manager, Subscriptions, Third-party API Queries and Caching. MANDATORY: Use this API for ANY Hyd
 - **Teknoloji:** api-anahtari, html, node, react, typescript _(otomatik tespit)_
@@ -14443,7 +14443,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-international  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-international  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Shopify Markets — multi-currency, translation, duties/taxes, localized pricing, market-specific content
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14453,7 +14453,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-inventory-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-inventory-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Multi-location inventory — transfers, low stock alerts, demand forecasting, safety stock, ABC analysis
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14463,7 +14463,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-landing-page-builder  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-landing-page-builder  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** High-converting landing pages — campaign pages, collection pages, seasonal promos, A/B testing
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14473,7 +14473,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-liquid  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 49 (D)
+### shopify-liquid  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 48 (D)
 
 - **Ne yapar:** Liquid is an open-source templating language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts. Keywords: liquid, theme, shopify-theme, liquid-component, liquid-block, liquid-section, liquid-snippet, liquid-schemas, shopify-theme-schemas
 - **Teknoloji:** css, git, html, node _(otomatik tespit)_
@@ -14493,7 +14493,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-loyalty-program  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-loyalty-program  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Customer loyalty and rewards — points systems, VIP tiers, referral programs, app selection
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14503,7 +14503,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### shopify-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Comprehensive Shopify marketing strategy and execution. SEO optimization, email marketing automation, paid advertising management, conversion rate optimization, and customer retention strategies specifically for DTC Shopify brands. Use when the user asks about Shopify marketing, DTC marketing, Shopify SEO, or Shopify store growth.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14523,7 +14523,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 33 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-migration  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-migration  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Platform migration to Shopify — from WooCommerce, Magento, BigCommerce, data transfer, URL redirects
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14543,7 +14543,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-page-speed  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### shopify-page-speed  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Diagnose and improve Shopify store speed: Core Web Vitals (LCP, CLS, INP), theme and app bloat, image and script optimization. Use when a Shopify store is slow, fails PageSpeed/Lighthouse, or app scripts hurt load time and conversions.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -14553,7 +14553,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-partner  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 56 (C)
+### shopify-partner  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 55 (C)
 
 - **Ne yapar:** The Partner API lets you programmatically access data about your Partner Dashboard, including your apps, themes, and affiliate referrals.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14573,7 +14573,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-payments-apps  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 56 (C)
+### shopify-payments-apps  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 55 (C)
 
 - **Ne yapar:** The Payments Apps API enables payment providers to integrate their payment solutions with Shopify's checkout.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14603,7 +14603,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-polaris-admin-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
+### shopify-polaris-admin-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 53 (C)
 
 - **Ne yapar:** Add custom actions and blocks from your app at contextually relevant spots throughout the Shopify Admin. Admin UI Extensions also supports scaffolding new adminextensions using Shopify CLI commands.
 - **Teknoloji:** html, node _(otomatik tespit)_
@@ -14613,7 +14613,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 34 KB (SKILL.md 17.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-polaris-app-home  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
+### shopify-polaris-app-home  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 53 (C)
 
 - **Ne yapar:** Build your app's primary user interface embedded in the Shopify admin. If the prompt just mentions `Polaris` and you can't tell based off of the context what API they meant, assume they meant this API.
 - **Teknoloji:** api-anahtari, html, node, react _(otomatik tespit)_
@@ -14623,7 +14623,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 16 KB (SKILL.md 8.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-polaris-checkout-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
+### shopify-polaris-checkout-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 53 (C)
 
 - **Ne yapar:** Build custom functionality that merchants can install at defined points in the checkout flow, including product information, shipping, payment, order summary, and Shop Pay. Checkout UI Extensions also supports scaffolding new checkout extensions using Shopify CLI commands.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
@@ -14633,7 +14633,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 27 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-polaris-customer-account-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
+### shopify-polaris-customer-account-extensions  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 53 (C)
 
 - **Ne yapar:** Build custom functionality that merchants can install at defined points on the Order index, Order status, and Profile pages in customer accounts. Customer Account UI Extensions also supports scaffolding new customer account extensions using Shopify CLI commands.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
@@ -14643,7 +14643,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 28 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-pos-ui  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 54 (C)
+### shopify-pos-ui  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 53 (C)
 
 - **Ne yapar:** Build retail point-of-sale applications using Shopify's POS UI components. These components provide a consistent and familiar interface for POS applications. POS UI Extensions also supports scaffolding new POS extensions using Shopify CLI commands. Keywords: POS, Retail, smart grid
 - **Teknoloji:** html, node _(otomatik tespit)_
@@ -14653,7 +14653,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 38 KB (SKILL.md 21.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-product-photography-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-product-photography-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** DIY product photography — setup, lighting, backgrounds, editing, lifestyle shots, 360 views
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14673,7 +14673,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### shopify-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Optimize a Shopify store for search: technical SEO audit, product and collection page titles/meta, URL structure, duplicate content, schema markup, blog strategy, internal links and SEO apps. Use when improving organic Google traffic for Shopify.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14694,7 +14694,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-speed-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-speed-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Store speed audit — lazy loading, image compression, app bloat removal, theme code optimization
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14704,7 +14704,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-store-setup  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### shopify-store-setup  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Set up a new Shopify store from account creation to first sale: plan and theme choice, product catalog and variants, payments, shipping zones, taxes, domain and launch checklist. Use when building or launching a Shopify store.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14724,7 +14724,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-storefront-graphql  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 56 (C)
+### shopify-storefront-graphql  ·  Shopify/agent-skills @ 6b9ed05  ·  puan 55 (C)
 
 - **Ne yapar:** Use for custom storefronts requiring direct GraphQL queries/mutations for data fetching and cart operations. Choose this when you need full control over data fetching and rendering your own UI. NOT for Web Components - if the prompt mentions HTML tags like <shopify-store>, <shopify-cart>, use storefront-web-components instead.
 - **Teknoloji:** html, node _(otomatik tespit)_
@@ -14734,7 +14734,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 98 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-subscription-setup  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-subscription-setup  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Subscription program setup — recurring billing, frequency options, churn reduction, lifetime value
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14744,7 +14744,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shopify-tax-compliance  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-tax-compliance  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Tax setup and compliance — sales tax, VAT, duty collection, tax-exempt customers, reporting
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14774,7 +14774,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 30 KB (SKILL.md 17.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-theme-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-theme-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Theme speed and UX optimization — Core Web Vitals, Liquid code, image loading, mobile responsiveness
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14794,7 +14794,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-upsell-cross-sell  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-upsell-cross-sell  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Upsell and cross-sell strategy — product recommendations, cart upsells, post-purchase offers, bundles
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14824,7 +14824,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### shopify-wholesale-channel  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### shopify-wholesale-channel  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** B2B/wholesale setup — wholesale pricing, minimum orders, custom catalogs, net payment terms
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14834,7 +14834,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### shoppable-video  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### shoppable-video  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Create shoppable video for e-commerce: format choice for TikTok Shop, Instagram Reels, YouTube Shorts and Amazon Live, product tagging, hooks, scripts, CTAs, live shopping events and view-to-purchase analytics. Use when making videos that sell products directly.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -14875,7 +14875,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### social-media-monitor  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### social-media-monitor  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Monitor social media mentions, trends, and competitor activity for e-commerce brands. Set up listening workflows across Reddit, TikTok, Instagram, Twitter/X, and YouTube.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15145,7 +15145,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### supply-chain-optimization-amazon-lite  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### supply-chain-optimization-amazon-lite  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Supply Chain Optimization (Lite) - Diagnose bottlenecks and provide cost reduction strategies through conversation
 - **Teknoloji:** python _(otomatik tespit)_
@@ -15155,7 +15155,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 38 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### supply-chain-optimization-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### supply-chain-optimization-shopify  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Supply Chain Bottleneck Analyzer for Shopify/DTC stores. Diagnose cash flow, inventory, shipping costs, and customer acquisition efficiency. Includes CAC/LTV analysis, 3PL cost optimization, and ad spend benchmarks. No API key required for basic analysis.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -15165,7 +15165,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 39 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### supply-chain-optimization-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### supply-chain-optimization-tiktok  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Supply Chain Bottleneck Analyzer for TikTok Shop sellers. Diagnose cash flow, inventory turnover, affiliate commissions, and return rates. Includes FBT cost analysis, influencer payout optimization, and viral product lifecycle management. No API key required for basic analysis.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -15175,7 +15175,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 38 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### supply-chain-optimization-walmart  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### supply-chain-optimization-walmart  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Supply Chain Bottleneck Analyzer for Walmart Marketplace sellers. Diagnose cash flow, inventory, WFS costs, and referral fees. Includes comparison with Amazon FBA, lower storage fee optimization, and Walmart Connect ad spend analysis. No API key required for basic analysis.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -15225,7 +15225,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 9.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-creator-marketplace  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### tiktok-creator-marketplace  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** TikTok Creator Marketplace strategy and campaign management. Finding creators, negotiation tactics, campaign execution, performance tracking, and relationship building. Use when the user asks about TikTok Creator Marketplace, finding TikTok creators, creator partnerships, or influencer campaigns.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15235,7 +15235,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-influencer-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-influencer-marketing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok creator campaigns and influencer marketing strategy. Creator discovery, outreach, ROI tracking, UGC strategy, and campaign management. Use when the user asks about TikTok influencer marketing, creator campaigns, influencer outreach, UGC content, or TikTok marketing partnerships.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15245,7 +15245,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-live-selling  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### tiktok-live-selling  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Run TikTok Shop live selling: session planning, setup, audience engagement, product pinning, flash deals and bundles, GPM (GMV per mille) optimization and post-live analytics. Use when planning or improving TikTok LIVE sales streams.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15255,7 +15255,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-ads  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### tiktok-shop-ads  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** TikTok Shop advertising strategy and campaign management. Product Shopping Ads, Video Shopping Ads, Live Shopping Ads, bidding optimization, and performance tracking. Use when the user asks about TikTok Shop advertising, paid ads, campaign setup, or TikTok Shop marketing.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15265,7 +15265,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 8.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-shop-affiliate-program  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### tiktok-shop-affiliate-program  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** TikTok Shop affiliate program strategy and creator collaboration. Commission structures, creator recruitment, sample management, performance tracking, and partnership optimization. Use when the user asks about TikTok Shop affiliates, creator partnerships, or TikTok Shop Creator Fund.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15275,7 +15275,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-shop-analytics  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-analytics  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop analytics and performance tracking. Video metrics, live selling data, affiliate performance, advertising analytics, and business intelligence. Use when the user asks about TikTok Shop analytics, performance tracking, metrics analysis, or data-driven optimization.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15285,7 +15285,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 6 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-branding  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### tiktok-shop-branding  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Brand building and positioning on TikTok Shop. Brand identity development, content pillars, community engagement, brand storytelling, and authenticity strategies. Use when the user asks about TikTok branding, brand building, brand identity, or brand positioning on TikTok.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15295,7 +15295,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 15 KB (SKILL.md 14.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-shop-compliance  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-compliance  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop policies and compliance — restricted products, intellectual property, content guidelines
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15305,7 +15305,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-content-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### tiktok-shop-content-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** TikTok Shop content creation strategy and planning. Trending formats, viral hooks, product showcasing, hashtag strategy, and content calendar development. Use when the user asks about TikTok content strategy, viral content creation, TikTok marketing, or content planning.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15315,7 +15315,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 12 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-shop-conversion  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-conversion  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Conversion optimization — product detail pages, video hooks, urgency tactics, checkout flow
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15325,7 +15325,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-creator-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-creator-management  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Creator relationship management — recruitment, briefing, content approval, commission optimization
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15335,7 +15335,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-cross-border  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### tiktok-shop-cross-border  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Cross-border selling on TikTok Shop. Market selection, logistics setup, localization strategy, compliance requirements, and international expansion. Use when the user asks about TikTok Shop international selling, cross-border ecommerce, global expansion, or selling in multiple countries.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15345,7 +15345,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-shop-customer-service  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-customer-service  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Customer service on TikTok Shop — response time, dispute resolution, auto-replies, buyer satisfaction
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15355,7 +15355,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-fulfillment  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-fulfillment  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Fulfillment setup — Fulfilled by TikTok, self-fulfillment, shipping templates, return policies
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15375,7 +15375,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 10.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tiktok-shop-inventory  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-inventory  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Inventory management for TikTok Shop — demand forecasting, viral stock planning, FBT optimization
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15385,7 +15385,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-listing-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-listing-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop product listing optimization. Titles, descriptions, images, videos, attributes, and search optimization for maximum visibility and conversions. Use when the user asks about TikTok Shop listing optimization, product SEO, or improving product visibility on TikTok.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15395,7 +15395,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-pricing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-pricing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Pricing strategy for TikTok — competitive pricing, commission impact, bundling, discount psychology
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15405,7 +15405,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-product-research  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Product research for TikTok Shop — viral potential scoring, creator demand, category analysis
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15415,7 +15415,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-promotions  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-promotions  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop deals — Flash Deals, vouchers, free shipping, bundle deals, promotion planning
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15425,7 +15425,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-returns  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-returns  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Return policy and process — TikTok Shop policies, return rate reduction, customer communication
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15435,7 +15435,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-reviews  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-reviews  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Review strategy for TikTok Shop — encouraging reviews, responding, leveraging UGC, social proof
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15445,7 +15445,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Complete TikTok Shop selling guide. Setup, listing optimization, content strategy, live selling, creator affiliates, and scaling strategies. Use when the user asks about TikTok Shop setup, how to sell on TikTok, TikTok Shop guide, or getting started with TikTok Shop.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15455,7 +15455,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-shipping  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-shipping  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** TikTok Shop shipping setup — carrier selection, shipping templates, delivery expectations
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15465,7 +15465,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tiktok-shop-trending-products  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### tiktok-shop-trending-products  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Trending product discovery — viral product analysis, category trends, seasonal opportunities on TikTok
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15785,7 +15785,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 29 KB (SKILL.md 13.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### visual-regression-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### visual-regression-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Design visual regression testing for e-commerce websites: screenshot comparison workflows, mobile/desktop visual checks and change-detection alerts for product, cart and checkout pages. Use when theme updates, app installs or deploys might silently break the store's layout.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -15805,7 +15805,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 24 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### walmart-advertising-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### walmart-advertising-strategy  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Plan Walmart Connect advertising: Sponsored Products, Sponsored Brands and Videos, Display/DSP, keyword targeting, bidding, budgets and ROAS optimization. Use when a Walmart Marketplace seller launches or tunes ad campaigns.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15816,7 +15816,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### walmart-listing-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### walmart-listing-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Optimize Walmart Marketplace product listings for search visibility and conversion. Covers Walmart SEO, content quality scoring, rich media, and Walmart-specific listing requirements.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15826,7 +15826,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### walmart-price-tracker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### walmart-price-tracker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** Track Walmart Marketplace prices: competitor price positioning, price-trend analysis and repricing strategies for Walmart sellers (Buy Box aware). Use when monitoring Walmart competitor prices or setting repricing rules.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -15837,7 +15837,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### walmart-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 82 (A)
+### walmart-review-checker  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 81 (A)
 
 - **Ne yapar:** Walmart review authenticity analyzer. Detect fake reviews, suspicious patterns, and rating manipulation. Includes WFS verified badge analysis, incentivized review detection, and Walmart-specific red flag identification. No API key required.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -15847,7 +15847,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 54 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### walmart-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### walmart-seller-guide  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Complete guide to selling on Walmart Marketplace: seller application and approval, listing creation and Walmart SEO, Walmart Fulfillment Services (WFS), Buy Box and pricing, Pro Seller badge and advertising. Use when starting or scaling on Walmart.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15858,7 +15858,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### walmart-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### walmart-seller-tools  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Choose tools for Walmart Marketplace sellers: product research, listing quality, Walmart Connect ad management, inventory and order software, repricers, analytics and WFS planning. Use when a Walmart seller needs to automate or scale.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -15868,7 +15868,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### warehouse-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
+### warehouse-optimization  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
 - **Ne yapar:** E-commerce warehouse and inventory optimization advisor. Analyzes inventory health, calculates safety stock and reorder points, performs ABC analysis, evaluates fulfillment costs, and provides actionable recommendations for improving efficiency. Supports all major fulfillment models: Self-fulfillment, Amazon FBA/FBM, Walmart WFS, 3PL, Shopify Fulfillment, TikTok Shop, Dropshipping, and Hybrid setu
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -16568,7 +16568,7 @@ _E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Sho
 - **Boyut:** 25 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### woocommerce-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 78 (B)
+### woocommerce-seo  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 77 (B)
 
 - **Ne yapar:** Optimize a WooCommerce store for search: technical SEO audit, product titles/meta/URLs, schema markup (Product, Review, FAQ, Breadcrumb), site speed, category/tag taxonomy, internal links, XML sitemaps and content strategy. Use when improving organic traffic for a WooCommerce/WordPress shop.
 - **Teknoloji:** node _(otomatik tespit)_

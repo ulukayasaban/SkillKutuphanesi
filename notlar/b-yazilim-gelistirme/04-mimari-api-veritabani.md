@@ -15,7 +15,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 15 KB (SKILL.md 14.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, api-tasarimi grubunun birincili. Gerekçe: ilkeler (Hyrum, ekleme > değiştirme, idempotency) ve TS desenleri somut ve sürüm bağımsız; api-patterns ise stil seçimi, kimlik doğrulama ve rate limit dosyalarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### api-breaking-change-detector  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
+### api-breaking-change-detector  ·  github/awesome-copilot @ 7e40881  ·  puan 98 (A)
 
 - **Ne yapar:** Cross-references C# Web API controllers/DTOs against their TypeScript/JavaScript consumers (React, Angular, Vue, Svelte, Node.js, or hand-written/auto-generated HTTP clients like Fetch, Axios, NSwag) to catch contract drift in both directions: backend changes that break client applications (renamed/removed JSON keys, new required parameters, status code shifts) and frontend code sending fields the
 - **Teknoloji:** node, react, svelte, typescript, vue _(otomatik tespit)_
@@ -36,7 +36,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 20 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Seçici okuma kuralı bağlamı küçük tutuyor (SKILL.md 2.5 KB), auth ve rate-limiting dosyaları yararlı. İçerik yer yer yüzeysel; @[skills/...] biçimindeki çapraz referanslar ag-kit sözdizimi.
 
-### architecture-blueprint-generator  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
+### architecture-blueprint-generator  ·  github/awesome-copilot @ 7e40881  ·  puan 96 (A)
 
 - **Ne yapar:** Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. Automatically detects technology stacks and architectural patterns, generates visual diagrams, documents implementation patterns, and provides extensible blueprints for maintaining architectural consistency and guiding new development.
 - **Teknoloji:** node, python, react _(otomatik tespit)_
@@ -110,7 +110,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-mimarisi grubunun birincili. ag-kit'in en somut skillerinden; React ve Vue'yu birlikte kapsaması ve 'görsel tasarım değil yapı' sınırı net. ../app-builder ve ../frontend-design kardeş bağlantıları kurulumda o skiller yoksa boşa düşer (yalnız atıf).
 - **Not:** ../app-builder ve ../nextjs-react-expert kardeş bağlantıları yalnız 'ayrıca bkz' atfı; bu skiller kurulmasa da skill çalışır (kardes-eksik uyarısı göz ardı edilebilir).
 
-### frontend-ui-engineering  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### frontend-ui-engineering  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Üretim kalitesinde, erişilebilir ve responsive arayüz kurma: bileşen dosya yapısı ve desenleri, durum yönetimi, tasarım sistemine bağlılık ve 'AI estetiğinden' kaçınma, boşluk/tipografi/renk, WCAG 2.1 AA (klavye, ARIA, odak yönetimi, anlamlı boş/hata durumları), responsive tasarım, yükleme ve geçiş durumları.
 - **Ne zaman:** Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde. · **Ne zaman değil:** Sanat yönetimi/görsel yön belirleme (a-tasarim skilleri); salt backend işleri.
@@ -121,7 +121,7 @@ _Mimari, API/arayüz tasarımı, veritabanı, backend_
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, frontend-ui-uygulama grubunun birincili; frontend-muhendis çekirdeğinde kalır. Erişilebilirlik ve durum (boş/hata/yükleme) bölümleri güçlü; görsel yön için a-tasarim skilleriyle birlikte kullanılmalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### migrate-create  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### migrate-create  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Create a new sequentially numbered database migration with up/down SQL files
 - **Teknoloji:** node _(otomatik tespit)_

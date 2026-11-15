@@ -960,6 +960,11 @@
       "karar": "reddedildi",
       "neden": "Güvenlik odaklı ve dar (sızma testi)",
       "tarih": "2026-11-07"
+    },
+    "digitalsamba/claude-code-video-toolkit": {
+      "karar": "eklendi",
+      "neden": "T2 kaynak olarak eklendi (16 skill, 2 birebir kopya); program olarak da izlenecek",
+      "tarih": "2026-11-15"
     }
   },
   "konular": {
@@ -37178,6 +37183,10 @@
     "yusufkaran/swiftui-autotest-skill": {
       "neden": "Mobil teknoloji henüz seçilmedi; iOS/Swift seçilirse eklenir",
       "tarih": "2026-11-07"
+    },
+    "iart-ai/explainer-video-skills": {
+      "neden": "Tek katkıcı; içerik Haziran'dan beri değişmedi; yardımcı betikler skill klasörü dışında",
+      "tarih": "2026-11-15"
     }
   }
 }

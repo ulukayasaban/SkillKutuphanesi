@@ -99,7 +99,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF. Çok kısa bir kurulum tarifi; skill'den çok eklenti reklamı. Claude Code eklenti sistemine bağlı.
 
-### deepseek-chat  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### deepseek-chat  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** One-shot chat completion against DeepSeek's `deepseek-chat` model. Use for non-reasoning tasks such as summarization, extraction or quick classification. Reads DEEPSEEK_API_KEY; returns status:degraded when the key is missing or the API is unreachable.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -109,7 +109,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### deepseek-reason  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### deepseek-reason  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Reasoning completion against DeepSeek's `deepseek-reasoner` (R1), returning the chain of thought apart from the answer. Use when a task needs step-by-step reasoning from DeepSeek. Reads DEEPSEEK_API_KEY; returns status:degraded when unset or unreachable.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -140,7 +140,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 32 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### llm-config  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### llm-config  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Configure RuVLLM local inference helpers: generate a config, and create and adapt in-process MicroLoRA and SONA instances from quality signals. Use when you need local, air-gapped inference tooling, not for fine-tuning hosted models.
 - **Teknoloji:** node _(otomatik tespit)_

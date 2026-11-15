@@ -4,7 +4,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/25**
 
-### agent-github-modes  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-github-modes  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Agent skill for github-modes - invoke with $agent-github-modes
 - **Teknoloji:** git _(otomatik tespit)_
@@ -24,7 +24,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-release-manager  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### agent-release-manager  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Agent skill for release-manager - invoke with $agent-release-manager
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -34,7 +34,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 12 KB (SKILL.md 12.2 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-release-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+### agent-release-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 92 (A)
 
 - **Ne yapar:** Agent skill for release-swarm - invoke with $agent-release-swarm
 - **Teknoloji:** api-anahtari, docker, node _(otomatik tespit)_
@@ -44,7 +44,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 14 KB (SKILL.md 13.7 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### agentic-jujutsu  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agentic-jujutsu  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Quantum-resistant, self-learning version control for AI agents with ReasoningBank intelligence and multi-agent coordination
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -65,7 +65,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Kısa (3 KB) ve tek amaçlı; 'kullanıcı diline çevir' odağı diğer git skillerinde yok. İçerik çoğunlukla örnek; kategori kuralları yüzeysel.
 
-### deprecation-and-migration  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### deprecation-and-migration  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Eski sistem, API veya özellikleri kaldırma ve kullanıcıları yeni uygulamaya taşıma: 'kod bir yüktür' ve Hyrum yasası ilkeleri, kaldırma kararı, zorunlu/öneri niteliğinde kullanımdan kaldırma, yerini yap → duyur → kademeli taşı → kaldır süreci; strangler, adapter ve feature flag geçiş desenleri, üretimde kesintisiz şema migrasyonu (expand/contract) ve zombi kod.
 - **Ne zaman:** Bir API/özelliği emekliye ayırırken; kullanıcıları yeni sisteme taşırken; üretimde kolon yeniden adlandırma/silme gibi kesintisiz şema değişikliğinde; bakım mı emeklilik mi kararında. · **Ne zaman değil:** Yeni özellik geliştirme; sürüm/tag işlemleri (git-workflow-and-versioning).
@@ -149,7 +149,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### github-code-review  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### github-code-review  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Comprehensive GitHub code review with AI-powered swarm coordination
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -159,7 +159,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 25 KB (SKILL.md 25.1 KB, yük buyuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### github-multi-repo  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### github-multi-repo  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Multi-repository coordination, synchronization, and architecture management with AI swarm orchestration
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
@@ -169,7 +169,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 22 KB (SKILL.md 21.9 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### github-project-management  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### github-project-management  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automation, and sprint planning
 - **Teknoloji:** node _(otomatik tespit)_
@@ -179,7 +179,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 29 KB (SKILL.md 28.8 KB, yük buyuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### github-release-management  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### github-release-management  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management
 - **Teknoloji:** api-anahtari, docker, git, node _(otomatik tespit)_
@@ -189,7 +189,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 28 KB (SKILL.md 28.5 KB, yük buyuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### github-workflow-automation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### github-workflow-automation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Advanced GitHub Actions workflow automation with AI swarm coordination, intelligent CI/CD pipelines, and comprehensive repository management
 - **Teknoloji:** api-anahtari, git, node _(otomatik tespit)_

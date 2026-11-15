@@ -14,7 +14,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-adaptive-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-adaptive-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for adaptive-coordinator - invoke with $agent-adaptive-coordinator
 - **Teknoloji:** python _(otomatik tespit)_
@@ -24,7 +24,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 16 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-agent  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-agent  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Agent skill for agent - invoke with $agent-agent
 - **Teknoloji:** node _(otomatik tespit)_
@@ -64,7 +64,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-architecture@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-architecture@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for architecture - invoke with $agent-architecture
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
@@ -125,7 +125,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-code-goal-planner  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-code-goal-planner  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for code-goal-planner - invoke with $agent-code-goal-planner
 - **Teknoloji:** api-anahtari, git, node, typescript _(otomatik tespit)_
@@ -155,7 +155,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-consensus-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-consensus-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for consensus-coordinator - invoke with $agent-consensus-coordinator
 - **Teknoloji:** node _(otomatik tespit)_
@@ -185,7 +185,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-crdt-synchronizer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-crdt-synchronizer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Agent skill for crdt-synchronizer - invoke with $agent-crdt-synchronizer
 - **Teknoloji:** node _(otomatik tespit)_
@@ -205,7 +205,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-dev-backend-api  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-dev-backend-api  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for dev-backend-api - invoke with $agent-dev-backend-api
 - **Teknoloji:** api-anahtari, git, node, typescript _(otomatik tespit)_
@@ -245,7 +245,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-hierarchical-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-hierarchical-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for hierarchical-coordinator - invoke with $agent-hierarchical-coordinator
 - **Teknoloji:** python _(otomatik tespit)_
@@ -255,7 +255,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-issue-tracker  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### agent-issue-tracker  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Agent skill for issue-tracker - invoke with $agent-issue-tracker
 - **Teknoloji:** node _(otomatik tespit)_
@@ -265,7 +265,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 9 KB (SKILL.md 9.3 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-load-balancer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-load-balancer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for load-balancer - invoke with $agent-load-balancer
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -295,7 +295,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-mesh-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-mesh-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for mesh-coordinator - invoke with $agent-mesh-coordinator
 - **Teknoloji:** node, python _(otomatik tespit)_
@@ -305,7 +305,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 13 KB (SKILL.md 12.7 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-migration-plan  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### agent-migration-plan  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Agent skill for migration-plan - invoke with $agent-migration-plan
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -315,7 +315,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 18 KB (SKILL.md 18.0 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-multi-repo-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+### agent-multi-repo-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 92 (A)
 
 - **Ne yapar:** Agent skill for multi-repo-swarm - invoke with $agent-multi-repo-swarm
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
@@ -345,7 +345,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-orchestrator-task  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-orchestrator-task  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Agent skill for orchestrator-task - invoke with $agent-orchestrator-task
 - **Teknoloji:** - _(otomatik tespit)_
@@ -355,7 +355,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-pagerank-analyzer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-pagerank-analyzer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for pagerank-analyzer - invoke with $agent-pagerank-analyzer
 - **Teknoloji:** node, python _(otomatik tespit)_
@@ -385,7 +385,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 4.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-pr-manager  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-pr-manager  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Agent skill for pr-manager - invoke with $agent-pr-manager
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -395,7 +395,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-production-validator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-production-validator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for production-validator - invoke with $agent-production-validator
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
@@ -405,7 +405,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 12 KB (SKILL.md 11.6 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-project-board-sync  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+### agent-project-board-sync  ·  ruvnet/ruflo @ 98ddf41  ·  puan 92 (A)
 
 - **Ne yapar:** Agent skill for project-board-sync - invoke with $agent-project-board-sync
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -415,7 +415,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### agent-pseudocode  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-pseudocode  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for pseudocode - invoke with $agent-pseudocode
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -435,7 +435,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-quorum-manager  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-quorum-manager  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Agent skill for quorum-manager - invoke with $agent-quorum-manager
 - **Teknoloji:** node _(otomatik tespit)_
@@ -455,7 +455,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-refinement  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-refinement  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for refinement - invoke with $agent-refinement
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
@@ -465,7 +465,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 14 KB (SKILL.md 13.5 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-repo-architect  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### agent-repo-architect  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Agent skill for repo-architect - invoke with $agent-repo-architect
 - **Teknoloji:** node _(otomatik tespit)_
@@ -485,7 +485,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-resource-allocator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-resource-allocator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for resource-allocator - invoke with $agent-resource-allocator
 - **Teknoloji:** node _(otomatik tespit)_
@@ -565,7 +565,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 3.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-swarm-issue  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+### agent-swarm-issue  ·  ruvnet/ruflo @ 98ddf41  ·  puan 92 (A)
 
 - **Ne yapar:** Agent skill for swarm-issue - invoke with $agent-swarm-issue
 - **Teknoloji:** node _(otomatik tespit)_
@@ -585,7 +585,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-swarm-pr  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+### agent-swarm-pr  ·  ruvnet/ruflo @ 98ddf41  ·  puan 92 (A)
 
 - **Ne yapar:** Agent skill for swarm-pr - invoke with $agent-swarm-pr
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -595,7 +595,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 3
 - **İnceleme:** otomatik
 
-### agent-sync-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### agent-sync-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Agent skill for sync-coordinator - invoke with $agent-sync-coordinator
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -605,7 +605,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 16 KB (SKILL.md 15.9 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-teams-grok  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-teams-grok  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Run Ruflo-style named Agent Teams on Grok Build using the host-agnostic team bus (scripts/grok-team-bus.mjs). Use when coordinating multi-agent pipelines, feature development with architect→coder→tester→reviewer, or replacing Claude SendMessage.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -615,7 +615,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-topology-optimizer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-topology-optimizer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for topology-optimizer - invoke with $agent-topology-optimizer
 - **Teknoloji:** node _(otomatik tespit)_
@@ -625,7 +625,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 24 KB (SKILL.md 24.1 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-trading-predictor  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-trading-predictor  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for trading-predictor - invoke with $agent-trading-predictor
 - **Teknoloji:** python, react _(otomatik tespit)_
@@ -645,7 +645,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-v3-integration-architect  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-v3-integration-architect  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for v3-integration-architect - invoke with $agent-v3-integration-architect
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -655,7 +655,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-v3-memory-specialist  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agent-v3-memory-specialist  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Agent skill for v3-memory-specialist - invoke with $agent-v3-memory-specialist
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -695,7 +695,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-workflow-automation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+### agent-workflow-automation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 92 (A)
 
 - **Ne yapar:** Agent skill for workflow-automation - invoke with $agent-workflow-automation
 - **Teknoloji:** docker, node _(otomatik tespit)_
@@ -705,7 +705,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 16 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 3
 - **İnceleme:** otomatik
 
-### agentdb-advanced  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agentdb-advanced  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Master advanced AgentDB features including QUIC synchronization, multi-database management, custom distance metrics, hybrid search, and distributed systems integration. Use when building distributed AI systems, multi-agent coordination, or advanced vector search applications.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -715,7 +715,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 13 KB (SKILL.md 12.8 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agentdb-learning  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agentdb-learning  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Create and train AI learning plugins with AgentDB's 9 reinforcement learning algorithms. Includes Decision Transformer, Q-Learning, SARSA, Actor-Critic, and more. Use when building self-learning agents, implementing RL, or optimizing agent behavior through experience.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -725,7 +725,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 12 KB (SKILL.md 11.6 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agentdb-memory-patterns  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agentdb-memory-patterns  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Implement persistent memory patterns for AI agents using AgentDB. Includes session memory, long-term storage, pattern learning, and context management. Use when building stateful agents, chat systems, or intelligent assistants.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -735,7 +735,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 8 KB (SKILL.md 8.5 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agentdb-optimization  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agentdb-optimization  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Optimize AgentDB performance with quantization (4-32x memory reduction), HNSW indexing (150x faster search), caching, and batch operations. Use when optimizing memory usage, improving search speed, or scaling to millions of vectors.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -755,7 +755,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agentdb-vector-search  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### agentdb-vector-search  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Implement semantic vector search with AgentDB for intelligent document retrieval, similarity matching, and context-aware querying. Use when building RAG systems, semantic search engines, or intelligent knowledge bases.
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
@@ -1090,7 +1090,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İşçi istemi yazma rehberi ve eşzamanlılık kuralları güçlü; ama plan tabanlı inceleme döngüsü yok. Orkestrasyon grubunda birincil subagent-driven-development.
 
-### cost-advise  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-advise  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Optimisation findings from your own Claude Code and Codex logs — low cache hit ratio, 1-hour cache writes that did not pay back, sub-agents on a top-tier model, Codex reasoning share, bloated sessions — each with evidence and a what-if saving. Use when asked how to cut spend or why it is high.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1100,7 +1100,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### cost-anomaly  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-anomaly  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** MAD-based outlier detection on session spend: lists anomalous sessions with modified-z scores, with an optional --alert-on-outliers exit code for CI. Use when asked which individual session is the cost outlier; cost-burn covers the aggregate trend.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1150,7 +1150,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### cost-burn  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-burn  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Burn-rate trend over time with optional drift-alert exit code. Bins session spend into buckets, surfaces window-over-window delta, and can exit 1 when latest bucket exceeds prior mean by a configurable %. Distinct from `cost-trend` (benchmark drift); this tracks PRODUCTION spend trajectory.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1190,7 +1190,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### cost-diff  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-diff  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Snapshot delta between two cost-summary JSON outputs. PR-level cost regression detection — answers "what changed between these two specific snapshots?". Pairs with cost-summary's stable JSON contract.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1210,7 +1210,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### cost-federation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-federation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Consumer-side wiring for ADR-097 Phase 3 federation_spend events — per-peer rolling windows + suspension-threshold check
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1220,7 +1220,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### cost-health  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-health  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Composite CI gate — runs cost-budget-check + cost-burn + cost-anomaly + cost-projection in parallel and surfaces a single combined health status with max exit code. The operationally-useful entry point — one shell-out covers all four alert ladders.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1230,7 +1230,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### cost-ledger  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-ledger  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** One cost view across Claude Code, Codex and Grok on this machine — spend, tokens, cache hit ratio per provider and model, with unpriced models flagged. Use when asked "what did I spend", "how much did Codex cost", or to compare providers. Local logs only, nothing is sent.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1240,7 +1240,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### cost-local  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-local  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Cost per million tokens on hardware you own (Ollama, llama.cpp, vLLM, LM Studio) from watts, electricity price, hardware price and measured tokens/second, and the utilisation at which local beats a hosted model. Use for local-vs-API break-even questions.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1250,7 +1250,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### cost-openrouter  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### cost-openrouter  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** OpenRouter real spend — key limit and usage today/week/month, one request's billed cost by generation id, account credits. Use when asked what OpenRouter charged or whether a key is near its limit. Network and API key: asks first.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1280,7 +1280,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### cost-report  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-report  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Generate a cost report showing token usage and USD costs by agent and model
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1290,7 +1290,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### cost-session  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### cost-session  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Per-message cost breakdown within a single session. The drill-down companion to cost-anomaly — when an outlier session is flagged, this surfaces the specific expensive messages so operators can see whether the cost came from output tokens, cache writes, or model escalations.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1392,7 +1392,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 21 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi; ne zaman kullanılmayacağı ve çıktı biçimi çok net. Orkestrasyon değil 'cevap kalitesi' skill'i; rapor/tavsiye üreten rollere opsiyonel.
 
-### discover-plugins  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### discover-plugins  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Discover and recommend ruflo plugins based on your workflow, installed MCP tools, and current task
 - **Teknoloji:** api-anahtari, playwright _(otomatik tespit)_
@@ -1453,7 +1453,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### federation-audit@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### federation-audit@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Query federation audit logs with compliance filtering
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1473,7 +1473,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### federation-init@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### federation-init@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Initialize federation on this node — generate keypair and configure peers
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1493,7 +1493,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.2 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### federation-status@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### federation-status@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Show federation health — peers, sessions, trust levels, and message metrics. Use when the user asks "is federation healthy?", "show peers", "federation status", or wants to inspect cross-installation agent connectivity.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1503,7 +1503,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### flow-nexus-neural  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### flow-nexus-neural  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Train and deploy neural networks in distributed E2B sandboxes with Flow Nexus
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1513,7 +1513,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 16 KB (SKILL.md 15.7 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### flow-nexus-platform  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### flow-nexus-platform  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Comprehensive Flow Nexus platform management - authentication, sandboxes, app deployment, payments, and challenges
 - **Teknoloji:** api-anahtari, css, docker, git, html, next.js, node, python, react, typescript, vue _(otomatik tespit)_
@@ -1523,7 +1523,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 25 KB (SKILL.md 24.9 KB, yük buyuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### flow-nexus-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### flow-nexus-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Cloud-based AI swarm deployment and event-driven workflow automation with Flow Nexus platform
 - **Teknoloji:** node, react _(otomatik tespit)_
@@ -1593,7 +1593,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### harness-bench  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-bench  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Create (`bench create {repo}`) or verify (`bench verify {suite.json}`) a @metaharness/darwin bench suite, the fixed corpus `harness-evolve --bench` scores variants against. Use when preparing an evolution benchmark. Degrades gracefully without darwin.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1603,7 +1603,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-drift-from-history  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-drift-from-history  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** One-command drift detection: run a fresh metaharness audit, diff it against the latest stored audit by ADR-152 similarity, and alert when the distance crosses `--threshold`. Use when checking whether a harness has drifted since its last audit.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1613,7 +1613,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-evolve  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-evolve  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Run `@metaharness/darwin evolve {repo}`: mutate a harness's seven policy surfaces, sandbox-score each variant and promote only measured wins. Use when evolving a harness against its tests or a bench suite. Degrades gracefully without darwin (ADR-150/153).
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -1623,7 +1623,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-genome  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-genome  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** 7-section repo readiness report from `metaharness genome {path}`. Returns repo_type / agent_topology / risk_score / mcp_surface / test_confidence / publish_readiness. Pure-read; degrades gracefully (ADR-150).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1633,7 +1633,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-gepa  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-gepa  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Load, validate or render a GEPA genome, or classify failure modes in a run transcript, via @metaharness/darwin/gepa. Use when inspecting or auditing a genome; use harness-evolve for sandbox-scored evolution. Degrades gracefully without darwin.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1643,7 +1643,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-learn  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-learn  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Run a GEPA learning cycle via `metaharness learn`, optimizing a harness genome against a SWE-bench-style slice. Use when training a harness genome. $0 dry-run by default; `--run` opts into spend. Needs a metaharness checkout (--repo or $METAHARNESS_REPO).
 - **Teknoloji:** docker, git, node _(otomatik tespit)_
@@ -1653,7 +1653,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-mcp-scan  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-mcp-scan  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Static security scan of a harness's declared MCP surface via `harness mcp-scan {path}`. Reads `.mcp/servers.json` + `.harness/claims.json`. Pure-read, no dispatch. Exits 1 on findings at or above `--fail-on` severity.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1663,7 +1663,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-mint  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-mint  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Scaffold a custom AI agent harness via `metaharness new {name} --template {id} --host {id}`. Use when the user wants a new standalone harness. Dry-run unless --confirm is passed, and refuses to write inside the calling repo.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1673,7 +1673,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-oia-audit  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-oia-audit  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Composite Phase-2 audit worker (ADR-150). Bundles harness oia-manifest + threat-model + mcp-scan into one timestamped audit record stored in the `metaharness-audit` memory namespace. Designed for cron-scheduled drift detection.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1683,7 +1683,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-score  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-score  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** 5-dimension harness readiness scorecard from `metaharness score {path}` (harnessFit, compileConfidence, taskCoverage, toolSafety, memoryUsefulness, plus cost per run). Use when rating a repo as an agent harness. Pure-read; degrades gracefully without MetaHarness.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -1693,7 +1693,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-security-bench  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-security-bench  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Run `@metaharness/darwin security bench` (Darwin Shield): evolve a security-detection harness on a 10-vuln/9-decoy corpus and grade TPR/FPR/patch/repro against four baselines. Use when benchmarking security-harness detection. Degrades gracefully without darwin.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1703,7 +1703,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### harness-similarity  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-similarity  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Weighted similarity (ADR-152) between two harness fingerprints (genome + score JSON): an overall score in [0,1] plus per-component breakdown. Use when comparing two harnesses or detecting drift between them. Pure TypeScript; needs no @metaharness package.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -1713,7 +1713,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 3
 - **İnceleme:** otomatik
 
-### harness-threat-model  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### harness-threat-model  ·  ruvnet/ruflo @ 98ddf41  ·  puan 97 (A)
 
 - **Ne yapar:** Enterprise-review-grade threat model from `harness threat-model {path}`. Categorizes MCP-surface threats; emits `worst: 'clean'|'low'|'medium'|'high'` + per-threat findings. Pure-read.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1733,7 +1733,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### hive-mind-advanced  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### hive-mind-advanced  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Advanced Hive Mind collective intelligence system for queen-led multi-agent coordination with consensus mechanisms and persistent memory
 - **Teknoloji:** api-anahtari, node, react _(otomatik tespit)_
@@ -1743,7 +1743,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 16 KB (SKILL.md 16.2 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### hooks-automation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### hooks-automation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Automated coordination, formatting, and learning from Claude Code operations using intelligent hooks with MCP integration. Includes pre/post task hooks, session management, Git integration, memory coordination, and neural pattern training for enhanced development workflows.
 - **Teknoloji:** api-anahtari, docker, git, node, typescript _(otomatik tespit)_
@@ -1753,7 +1753,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 30 KB (SKILL.md 30.1 KB, yük buyuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### init-project  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### init-project  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Initialize a new Ruflo project with MCP tools, hooks, and agent configuration. Use when setting up Ruflo in a fresh repo, or when the user says "init ruflo", "set up ruflo", or asks how to bootstrap the MCP server, hooks, and agent configs from scratch.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1884,7 +1884,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### managed-agent  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### managed-agent  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Run an Anthropic Claude Managed Agent — a cloud agent harness (container + filesystem + tools), the cloud counterpart of the local wasm-agent runtime
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1976,7 +1976,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### monitor-stream  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### monitor-stream  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Stream live swarm events using the Monitor tool for real-time observability
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2126,7 +2126,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 101 KB (SKILL.md 21.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### nested-subagents  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### nested-subagents  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Spawn nested sub-agents (agents that spawn sub-agents, up to depth=5) via Claude Code's native Task tool — for context-managed deep delegation
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -2177,7 +2177,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güvenlik ve izolasyon bölümleri iyi; Antigravity odaklı olması diğer harness'lerde gürültü yaratıyor.
 
-### pod-sales  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### pod-sales  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Run one dry-run tick of the sales business-pod (ADR-164): validate templates/sales.json, reserve budget, post a summary envelope to the \"sales\" room and print a status line for /loop. Use when a person or a /loop asks for the next sales-pod tick.
 - **Teknoloji:** typescript _(otomatik tespit)_
@@ -2207,7 +2207,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### reasoningbank-agentdb  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### reasoningbank-agentdb  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Implement ReasoningBank adaptive learning with AgentDB's 150x faster vector database. Includes trajectory tracking, verdict judgment, memory distillation, and pattern recognition. Use when building self-learning agents, optimizing decision-making, or implementing experience replay systems.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -2287,7 +2287,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### ruos-host-run  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### ruos-host-run  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Run a ruflo swarm agent on the user's own ruOS cloud desktop through the fleet MCP, stream its output and record it in swarm state. Use when the user wants an agent to run on a ruOS desktop or places a swarm agent on a remote ruOS host.
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -2337,7 +2337,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 56 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### stream-chain  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### stream-chain  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Stream-JSON chaining for multi-agent pipelines, data transformation, and sequential workflows
 - **Teknoloji:** api-anahtari, git, vue _(otomatik tespit)_
@@ -2398,7 +2398,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 1 KB (SKILL.md 0.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### swarm-advanced  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### swarm-advanced  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Advanced swarm orchestration patterns for research, development, testing, and complex distributed workflows
 - **Teknoloji:** node, react _(otomatik tespit)_
@@ -2458,7 +2458,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### using-agent-skills  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### using-agent-skills  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** addyosmani/agent-skills ailesinin meta-skill'i: işin geliştirme aşamasına göre hangi skill'in uygulanacağını gösteren karar ağacı (interview-me, spec, plan, incremental-implementation, test, review, ship…) ve temel çalışma davranışları (varsayımları açığa çıkar, karışıklığı yönet, sadeliği koru, kapsamı koru, doğrula).
 - **Ne zaman:** agent-skills ailesinden birden çok skill kurulu projelerde oturum başında doğru skill'i seçmek. · **Ne zaman değil:** Ailenin skilleri kurulu değilse karar ağacındaki adlar boşa düşer; superpowers ailesi kullanılıyorsa using-superpowers ile birlikte kurma (iki meta-skill çakışır).
@@ -2500,7 +2500,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 17 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### v3-cli-modernization  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### v3-cli-modernization  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** CLI modernization and hooks system enhancement for claude-flow v3. Implements interactive prompts, command decomposition, enhanced hooks integration, and intelligent workflow automation.
 - **Teknoloji:** git, node, typescript _(otomatik tespit)_
@@ -2510,7 +2510,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 25 KB (SKILL.md 25.1 KB, yük buyuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### v3-core-implementation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### v3-core-implementation  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Core module implementation for claude-flow v3. Implements DDD domains, clean architecture patterns, dependency injection, and modular TypeScript codebase with comprehensive testing.
 - **Teknoloji:** typescript _(otomatik tespit)_
@@ -2520,7 +2520,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 22 KB (SKILL.md 21.5 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### v3-ddd-architecture  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### v3-ddd-architecture  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Domain-Driven Design architecture for claude-flow v3. Implements modular, bounded context architecture with clean separation of concerns and microkernel pattern.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -2540,7 +2540,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 7 KB (SKILL.md 7.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### v3-mcp-optimization  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### v3-mcp-optimization  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** MCP server optimization and transport layer enhancement for claude-flow v3. Implements connection pooling, load balancing, tool registry optimization, and performance monitoring for sub-100ms response times.
 - **Teknoloji:** typescript _(otomatik tespit)_
@@ -2560,7 +2560,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### v3-swarm-coordination  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### v3-swarm-coordination  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** 15-agent hierarchical mesh coordination for v3 implementation. Orchestrates parallel execution across security, core, and integration domains following 10 ADRs with 14-week timeline.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -2690,7 +2690,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### workflow-create  ·  ruvnet/ruflo @ 98ddf41  ·  puan 98 (A)
+### workflow-create  ·  ruvnet/ruflo @ 98ddf41  ·  puan 94 (A)
 
 - **Ne yapar:** Author a workflow — either an MCP workflow template (persisted, lifecycle) or a native .claude/workflows/*.js orchestration script (agent/parallel/pipeline fan-out)
 - **Teknoloji:** node _(otomatik tespit)_
@@ -2700,7 +2700,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### workflow-run  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### workflow-run  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Run a workflow — drive an MCP workflow lifecycle (execute/pause/resume/cancel) or invoke + resume a native .claude/workflows/*.js orchestration via the Workflow tool
 - **Teknoloji:** api-anahtari _(otomatik tespit)_

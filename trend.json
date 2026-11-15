@@ -14,7 +14,7 @@
     },
     "anthropics/knowledge-work-plugins": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 303,
@@ -25,7 +25,7 @@
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "DietrichGebert/ponytail": {
       "ilk": "2026-10-22",
@@ -48,7 +48,7 @@
     },
     "cloudflare/security-audit-skill": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 2979,
@@ -59,11 +59,11 @@
           "tarih": "2026-11-09"
         },
         "monthly": {
-          "artis": 40289,
-          "tarih": "2026-11-09"
+          "artis": 43171,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "Graphify-Labs/graphify": {
       "ilk": "2026-10-22",
@@ -97,7 +97,7 @@
     },
     "fastapi/fastapi": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 96,
@@ -108,11 +108,11 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "luongnv89/claude-howto": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 428,
@@ -123,11 +123,11 @@
           "tarih": "2026-10-22"
         },
         "monthly": {
-          "artis": 5167,
-          "tarih": "2026-11-09"
+          "artis": 5494,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "Meloong-Git/PCL": {
       "ilk": "2026-10-22",
@@ -142,7 +142,7 @@
     },
     "vllm-project/vllm": {
       "ilk": "2026-10-22",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 469,
@@ -151,9 +151,13 @@
         "weekly": {
           "artis": 1327,
           "tarih": "2026-10-22"
+        },
+        "monthly": {
+          "artis": 3371,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-10-22"
+      "son": "2026-11-15"
     },
     "headroomlabs-ai/headroom": {
       "ilk": "2026-10-22",
@@ -246,14 +250,14 @@
     },
     "HKUDS/Vibe-Trading": {
       "ilk": "2026-10-22",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 166,
           "tarih": "2026-10-22"
         }
       },
-      "son": "2026-10-22"
+      "son": "2026-11-15"
     },
     "Open-Dev-Society/OpenStock": {
       "ilk": "2026-10-22",
@@ -279,7 +283,7 @@
     },
     "tashfeenahmed/freellmapi": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 675,
@@ -294,7 +298,7 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "genspark-ai/genoffice": {
       "ilk": "2026-10-22",
@@ -320,7 +324,7 @@
     },
     "remotion-dev/remotion": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 380,
@@ -335,11 +339,11 @@
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "pingdotgg/t3code": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 3094,
@@ -350,11 +354,11 @@
           "tarih": "2026-11-09"
         },
         "monthly": {
-          "artis": 25840,
-          "tarih": "2026-11-09"
+          "artis": 32857,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "vitejs/vite": {
       "ilk": "2026-10-22",
@@ -410,7 +414,7 @@
     },
     "github/docs": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 12,
@@ -419,13 +423,17 @@
         "weekly": {
           "artis": 476,
           "tarih": "2026-11-09"
+        },
+        "monthly": {
+          "artis": 764,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "CopilotKit/OpenBot": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 175,
@@ -434,13 +442,17 @@
         "weekly": {
           "artis": 2286,
           "tarih": "2026-11-02"
+        },
+        "monthly": {
+          "artis": 5846,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "stablyai/orca": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 1694,
@@ -451,11 +463,11 @@
           "tarih": "2026-10-22"
         },
         "monthly": {
-          "artis": 32085,
-          "tarih": "2026-11-09"
+          "artis": 33348,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "nodejs/node": {
       "ilk": "2026-10-22",
@@ -474,7 +486,7 @@
     },
     "citrolabs/ego-lite": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 394,
@@ -485,11 +497,11 @@
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 5275,
-          "tarih": "2026-11-09"
+          "artis": 5583,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "adobe/skills": {
       "ilk": "2026-10-22",
@@ -504,7 +516,7 @@
     },
     "withmarbleapp/os-taxonomy": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 420,
@@ -515,11 +527,11 @@
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "Leonxlnx/taste-skill": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 757,
@@ -530,26 +542,26 @@
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 16333,
-          "tarih": "2026-11-02"
+          "artis": 20043,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "mrdoob/three.js": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 64,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 1876,
-          "tarih": "2026-11-09"
+          "artis": 2105,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "shaobeichen/dsh-pocket": {
       "ilk": "2026-10-22",
@@ -564,7 +576,7 @@
     },
     "msitarzewski/agency-agents": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 376,
@@ -579,11 +591,11 @@
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "mattpocock/skills": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 1266,
@@ -598,11 +610,11 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "233boy/sing-box": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 62,
@@ -613,15 +625,15 @@
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 569,
-          "tarih": "2026-11-09"
+          "artis": 683,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "omacom/omarchy": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 101,
@@ -632,11 +644,11 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "tw93/Mole": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 409,
@@ -647,15 +659,15 @@
           "tarih": "2026-10-22"
         },
         "monthly": {
-          "artis": 4886,
-          "tarih": "2026-11-09"
+          "artis": 4953,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "ohmyzsh/ohmyzsh": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 29,
@@ -664,9 +676,13 @@
         "monthly": {
           "artis": 896,
           "tarih": "2026-11-02"
+        },
+        "weekly": {
+          "artis": 330,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "armbian/build": {
       "ilk": "2026-10-22",
@@ -692,7 +708,7 @@
     },
     "obra/superpowers": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 637,
@@ -703,15 +719,15 @@
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 19448,
-          "tarih": "2026-11-09"
+          "artis": 19859,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "expo/skills": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "daily": {
           "artis": 20,
@@ -726,18 +742,18 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "hestiacp/hestiacp": {
       "ilk": "2026-10-22",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 6,
           "tarih": "2026-10-22"
         }
       },
-      "son": "2026-10-22"
+      "son": "2026-11-15"
     },
     "liandu2024/Open-Box": {
       "ilk": "2026-10-22",
@@ -804,18 +820,18 @@
     },
     "anthropics/claude-plugins-official": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 5703,
           "tarih": "2026-10-22"
         },
         "monthly": {
-          "artis": 9152,
-          "tarih": "2026-11-09"
+          "artis": 9575,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "ruvnet/ruflo": {
       "ilk": "2026-10-22",
@@ -860,18 +876,18 @@
     },
     "anomalyco/opencode": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 6545,
           "tarih": "2026-10-22"
         },
         "monthly": {
-          "artis": 14780,
-          "tarih": "2026-11-09"
+          "artis": 14930,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "HKUDS/CLI-Anything": {
       "ilk": "2026-10-22",
@@ -916,7 +932,7 @@
     },
     "debpalash/VoiceStudio": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 15125,
@@ -927,11 +943,11 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "heygen-com/hyperframes": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 5740,
@@ -942,7 +958,7 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "NationalSecurityAgency/ghidra": {
       "ilk": "2026-10-22",
@@ -1043,14 +1059,18 @@
     },
     "harry0703/MoneyPrinterTurbo": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 4048,
           "tarih": "2026-11-09"
+        },
+        "monthly": {
+          "artis": 13454,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "lightseekorg/tokenspeed": {
       "ilk": "2026-10-22",
@@ -1080,22 +1100,22 @@
     },
     "elie222/rakazo": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 1138,
           "tarih": "2026-10-22"
         },
         "monthly": {
-          "artis": 4094,
-          "tarih": "2026-11-09"
+          "artis": 4462,
+          "tarih": "2026-11-15"
         },
         "daily": {
           "artis": 107,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "LibreSpark/LibreTV": {
       "ilk": "2026-10-22",
@@ -1148,7 +1168,7 @@
     },
     "vercel-labs/skills": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 1091,
@@ -1159,30 +1179,30 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "ranxianglei/billion-context": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
-          "artis": 1001,
-          "tarih": "2026-10-22"
+          "artis": 2942,
+          "tarih": "2026-11-15"
         },
         "monthly": {
-          "artis": 3150,
-          "tarih": "2026-11-02"
+          "artis": 6203,
+          "tarih": "2026-11-15"
         },
         "daily": {
           "artis": 460,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "Renhuai123/ziwei-doushu": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 5566,
@@ -1193,11 +1213,11 @@
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 12700,
-          "tarih": "2026-11-09"
+          "artis": 13844,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "iptv-org/iptv": {
       "ilk": "2026-10-22",
@@ -1227,22 +1247,22 @@
     },
     "hmjz100/LinkSwift": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 9518,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 17899,
-          "tarih": "2026-11-09"
+          "artis": 18020,
+          "tarih": "2026-11-15"
         },
         "daily": {
           "artis": 334,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "react/react": {
       "ilk": "2026-10-22",
@@ -1287,7 +1307,7 @@
     },
     "EpicGames/unreal-engine-skills-for-claude-code-plugin": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 1011,
@@ -1296,47 +1316,51 @@
         "monthly": {
           "artis": 1599,
           "tarih": "2026-11-09"
+        },
+        "daily": {
+          "artis": 5,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "pi-hole/pi-hole": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
-          "artis": 192,
-          "tarih": "2026-11-02"
+          "artis": 308,
+          "tarih": "2026-11-15"
         },
         "daily": {
-          "artis": 26,
-          "tarih": "2026-11-02"
+          "artis": 48,
+          "tarih": "2026-11-15"
         },
         "monthly": {
-          "artis": 627,
-          "tarih": "2026-11-09"
+          "artis": 839,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "nvm-sh/nvm": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
-          "artis": 220,
-          "tarih": "2026-10-22"
+          "artis": 385,
+          "tarih": "2026-11-15"
         },
         "monthly": {
-          "artis": 688,
-          "tarih": "2026-11-02"
+          "artis": 832,
+          "tarih": "2026-11-15"
         },
         "daily": {
           "artis": 13,
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "rawfilejson/awesome-osint-arsenal": {
       "ilk": "2026-10-22",
@@ -1351,7 +1375,7 @@
     },
     "PaperMC/Folia": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 119,
@@ -1360,9 +1384,13 @@
         "monthly": {
           "artis": 342,
           "tarih": "2026-11-09"
+        },
+        "daily": {
+          "artis": 0,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "czlonkowski/n8n-skills": {
       "ilk": "2026-10-22",
@@ -1425,22 +1453,22 @@
     },
     "Donchitos/Claude-Code-Game-Studios": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "weekly": {
           "artis": 5235,
           "tarih": "2026-11-09"
         },
         "monthly": {
-          "artis": 11184,
-          "tarih": "2026-11-09"
+          "artis": 12965,
+          "tarih": "2026-11-15"
         },
         "daily": {
           "artis": 967,
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "pyenv/pyenv": {
       "ilk": "2026-10-22",
@@ -1548,18 +1576,18 @@
     },
     "pbakaus/impeccable": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "monthly": {
-          "artis": 28008,
-          "tarih": "2026-11-09"
+          "artis": 29487,
+          "tarih": "2026-11-15"
         },
         "weekly": {
           "artis": 12017,
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "VectifyAI/PageIndex": {
       "ilk": "2026-10-22",
@@ -1644,29 +1672,37 @@
     },
     "davila7/claude-code-templates": {
       "ilk": "2026-10-22",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "monthly": {
           "artis": 2078,
           "tarih": "2026-10-22"
+        },
+        "daily": {
+          "artis": 179,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 401,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-10-22"
+      "son": "2026-11-15"
     },
     "ahujasid/mcp-for-blender": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "monthly": {
-          "artis": 3522,
-          "tarih": "2026-11-09"
+          "artis": 3730,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "thedotmack/claude-mem": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "monthly": {
           "artis": 17296,
@@ -1681,7 +1717,7 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "Effect-TS/effect": {
       "ilk": "2026-10-22",
@@ -1707,14 +1743,18 @@
     },
     "dream-num/univer": {
       "ilk": "2026-10-22",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "monthly": {
           "artis": 8184,
           "tarih": "2026-10-22"
+        },
+        "daily": {
+          "artis": 1041,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-10-22"
+      "son": "2026-11-15"
     },
     "mobile-next/mobile-mcp": {
       "ilk": "2026-10-22",
@@ -1744,18 +1784,22 @@
     },
     "addyosmani/agent-skills": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "monthly": {
           "artis": 12709,
           "tarih": "2026-11-02"
+        },
+        "weekly": {
+          "artis": 3670,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "DuarteSantos8/openGym": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "monthly": {
           "artis": 17036,
@@ -1766,7 +1810,7 @@
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "mnfst/awesome-free-llm-apis": {
       "ilk": "2026-10-22",
@@ -1825,14 +1869,18 @@
     },
     "qist/tvbox": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "monthly": {
           "artis": 968,
           "tarih": "2026-11-02"
+        },
+        "daily": {
+          "artis": 45,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "spicetify/cli": {
       "ilk": "2026-10-22",
@@ -1873,25 +1921,29 @@
     },
     "ophub/amlogic-s9xxx-armbian": {
       "ilk": "2026-10-22",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "monthly": {
           "artis": 385,
           "tarih": "2026-10-22"
+        },
+        "weekly": {
+          "artis": 56,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-10-22"
+      "son": "2026-11-15"
     },
     "edoardottt/awesome-hacker-search-engines": {
       "ilk": "2026-10-22",
-      "gorulme": 3,
+      "gorulme": 4,
       "en_iyi": {
         "monthly": {
           "artis": 244,
           "tarih": "2026-11-02"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "nyldn/claude-octopus": {
       "ilk": "2026-10-22",
@@ -1906,18 +1958,22 @@
     },
     "cloudflare/skills": {
       "ilk": "2026-10-22",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "monthly": {
-          "artis": 299,
-          "tarih": "2026-11-02"
+          "artis": 319,
+          "tarih": "2026-11-15"
         },
         "daily": {
           "artis": 10,
           "tarih": "2026-11-02"
+        },
+        "weekly": {
+          "artis": 69,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "juewuy/ShellCrash": {
       "ilk": "2026-10-22",
@@ -1947,7 +2003,7 @@
     },
     "milind-soni/OpenMausBot": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 1439,
@@ -1956,9 +2012,13 @@
         "weekly": {
           "artis": 7621,
           "tarih": "2026-11-09"
+        },
+        "monthly": {
+          "artis": 17957,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "public-apis/public-apis": {
       "ilk": "2026-11-02",
@@ -2084,7 +2144,7 @@
     },
     "D4Vinci/Scrapling": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 892,
@@ -2095,11 +2155,11 @@
           "tarih": "2026-11-09"
         },
         "monthly": {
-          "artis": 13826,
-          "tarih": "2026-11-09"
+          "artis": 15754,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "paperless-ngx/paperless-ngx": {
       "ilk": "2026-11-02",
@@ -2173,22 +2233,22 @@
     },
     "anthropics/skills": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 792,
           "tarih": "2026-11-09"
         },
         "weekly": {
-          "artis": 3169,
-          "tarih": "2026-11-09"
+          "artis": 6220,
+          "tarih": "2026-11-15"
         },
         "monthly": {
-          "artis": 9990,
-          "tarih": "2026-11-09"
+          "artis": 13927,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "eriklindernoren/ML-From-Scratch": {
       "ilk": "2026-11-02",
@@ -2328,14 +2388,14 @@
     },
     "motiondivision/motion": {
       "ilk": "2026-11-02",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
-          "artis": 57,
-          "tarih": "2026-11-02"
+          "artis": 74,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "Orkas-AI/Orkas": {
       "ilk": "2026-11-02",
@@ -2391,7 +2451,7 @@
     },
     "coreyhaines31/marketingskills": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "daily": {
           "artis": 157,
@@ -2402,7 +2462,7 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "RROrg/rr": {
       "ilk": "2026-11-02",
@@ -2443,44 +2503,48 @@
     },
     "Nutlope/hallmark": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 11566,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 21146,
-          "tarih": "2026-11-09"
+          "artis": 25013,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "AgriciDaniel/claude-seo": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 5034,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 9004,
-          "tarih": "2026-11-09"
+          "artis": 10402,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "JetBrains/thinkrail": {
       "ilk": "2026-11-02",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 5760,
           "tarih": "2026-11-02"
+        },
+        "monthly": {
+          "artis": 7798,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "multica-ai/andrej-karpathy-skills": {
       "ilk": "2026-11-02",
@@ -2539,18 +2603,18 @@
     },
     "NVIDIA/SkillSpector": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 2301,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 5295,
-          "tarih": "2026-11-09"
+          "artis": 5926,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "higgsfield-ai/skills": {
       "ilk": "2026-11-02",
@@ -2565,18 +2629,18 @@
     },
     "AstrBotDevs/AstrBot": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 2169,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 5133,
-          "tarih": "2026-11-09"
+          "artis": 5296,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "github/spec-kit": {
       "ilk": "2026-11-02",
@@ -2613,33 +2677,33 @@
     },
     "HKUDS/DeepTutor": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 10982,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 16065,
-          "tarih": "2026-11-09"
+          "artis": 18077,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "gitroomhq/postiz-app": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 2824,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 4393,
-          "tarih": "2026-11-09"
+          "artis": 4562,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "makecindy/cindy": {
       "ilk": "2026-11-02",
@@ -2680,18 +2744,18 @@
     },
     "google-gemini/gemini-cli": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 387,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 2032,
-          "tarih": "2026-11-09"
+          "artis": 2039,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "google/brotli": {
       "ilk": "2026-11-02",
@@ -2706,14 +2770,18 @@
     },
     "juliangarnier/anime": {
       "ilk": "2026-11-02",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 375,
           "tarih": "2026-11-02"
+        },
+        "daily": {
+          "artis": 107,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "OpenWhispr/openwhispr": {
       "ilk": "2026-11-02",
@@ -2728,22 +2796,22 @@
     },
     "StressOzz/Zapret-Manager": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "weekly": {
           "artis": 75,
           "tarih": "2026-11-02"
         },
         "monthly": {
-          "artis": 247,
-          "tarih": "2026-11-02"
+          "artis": 273,
+          "tarih": "2026-11-15"
         },
         "daily": {
           "artis": 12,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "mack-a/v2ray-agent": {
       "ilk": "2026-11-02",
@@ -2784,14 +2852,18 @@
     },
     "fscarmen/sing-box": {
       "ilk": "2026-11-02",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 95,
           "tarih": "2026-11-02"
+        },
+        "daily": {
+          "artis": 5,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "flutter/flutter": {
       "ilk": "2026-11-02",
@@ -2839,14 +2911,14 @@
     },
     "anthropics/sandbox-runtime": {
       "ilk": "2026-11-02",
-      "gorulme": 2,
+      "gorulme": 3,
       "en_iyi": {
         "monthly": {
-          "artis": 1579,
-          "tarih": "2026-11-09"
+          "artis": 1603,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "tester-army/e2e": {
       "ilk": "2026-11-02",
@@ -2927,14 +2999,18 @@
     },
     "itsnotkubrick/3X-UI_KIT": {
       "ilk": "2026-11-02",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "monthly": {
           "artis": 431,
           "tarih": "2026-11-02"
+        },
+        "daily": {
+          "artis": 10,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-02"
+      "son": "2026-11-15"
     },
     "Mr-MIBonk/M.I.B._More-Incredible-Bash": {
       "ilk": "2026-11-02",
@@ -2949,14 +3025,22 @@
     },
     "sherlock-project/sherlock": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 2373,
           "tarih": "2026-11-09"
+        },
+        "weekly": {
+          "artis": 12401,
+          "tarih": "2026-11-15"
+        },
+        "monthly": {
+          "artis": 18365,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "dsx-ai-factory/nvke": {
       "ilk": "2026-11-09",
@@ -2971,51 +3055,67 @@
     },
     "anthropics/claude-quickstarts": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 32,
           "tarih": "2026-11-09"
+        },
+        "weekly": {
+          "artis": 1794,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "vercel-labs/agent-browser": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 815,
           "tarih": "2026-11-09"
         },
         "weekly": {
-          "artis": 2190,
-          "tarih": "2026-11-09"
+          "artis": 4601,
+          "tarih": "2026-11-15"
+        },
+        "monthly": {
+          "artis": 7152,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "meta/astryx": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 875,
           "tarih": "2026-11-09"
+        },
+        "weekly": {
+          "artis": 13660,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "google-deepmind/mujoco": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 41,
           "tarih": "2026-11-09"
+        },
+        "weekly": {
+          "artis": 1859,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "jamiepine/voicebox": {
       "ilk": "2026-11-09",
@@ -3052,18 +3152,18 @@
     },
     "bradautomates/claude-video": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 92,
           "tarih": "2026-11-09"
         },
         "weekly": {
-          "artis": 551,
-          "tarih": "2026-11-09"
+          "artis": 689,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "BigBodyCobain/Shadowbroker": {
       "ilk": "2026-11-09",
@@ -3177,18 +3277,18 @@
     },
     "lobehub/lobehub": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 95,
           "tarih": "2026-11-09"
         },
         "weekly": {
-          "artis": 798,
-          "tarih": "2026-11-09"
+          "artis": 1258,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "poco-ai/Agentero": {
       "ilk": "2026-11-09",
@@ -3225,14 +3325,18 @@
     },
     "Anil-matcha/Open-Generative-AI": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 373,
           "tarih": "2026-11-09"
+        },
+        "weekly": {
+          "artis": 1755,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "4ian/GDevelop": {
       "ilk": "2026-11-09",
@@ -3262,7 +3366,7 @@
     },
     "bivlked/amneziawg-installer": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "daily": {
           "artis": 11,
@@ -3273,7 +3377,7 @@
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "pystardust/ani-cli": {
       "ilk": "2026-11-09",
@@ -3310,14 +3414,14 @@
     },
     "NVIDIA/auto-ontology": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 9327,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "max-sixty/worktrunk": {
       "ilk": "2026-11-09",
@@ -3332,29 +3436,29 @@
     },
     "The-PR-Agent/pr-agent": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 1706,
           "tarih": "2026-11-09"
         },
         "monthly": {
-          "artis": 2327,
-          "tarih": "2026-11-09"
+          "artis": 2835,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "google/skills": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 1931,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "python-poetry/poetry": {
       "ilk": "2026-11-09",
@@ -3413,40 +3517,40 @@
     },
     "Vincentwei1021/video-shotcraft": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 2171,
           "tarih": "2026-11-09"
         },
         "monthly": {
-          "artis": 7146,
-          "tarih": "2026-11-09"
+          "artis": 7617,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "QwenLM/qwen-code": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
-          "artis": 271,
-          "tarih": "2026-11-09"
+          "artis": 1173,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "liguobao/ds-harness-remote": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 1091,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "Crosstalk-Solutions/project-nomad": {
       "ilk": "2026-11-09",
@@ -3494,14 +3598,18 @@
     },
     "ConardLi/garden-skills": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 1251,
           "tarih": "2026-11-09"
+        },
+        "monthly": {
+          "artis": 2361,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "ericrisco/rsc-harness": {
       "ilk": "2026-11-09",
@@ -3527,62 +3635,74 @@
     },
     "MichaelCade/90DaysOfDevOps": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 925,
           "tarih": "2026-11-09"
         },
         "monthly": {
-          "artis": 1069,
-          "tarih": "2026-11-09"
+          "artis": 1105,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "google/oss-fuzz": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 104,
           "tarih": "2026-11-09"
+        },
+        "monthly": {
+          "artis": 225,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "ublue-os/bazzite": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
-          "artis": 59,
-          "tarih": "2026-11-09"
+          "artis": 70,
+          "tarih": "2026-11-15"
+        },
+        "daily": {
+          "artis": 5,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "Dammyjay93/interface-design": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 48,
           "tarih": "2026-11-09"
+        },
+        "monthly": {
+          "artis": 199,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "wondelai/skills": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "weekly": {
           "artis": 83,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "storytold/artcraft": {
       "ilk": "2026-11-09",
@@ -3608,14 +3728,14 @@
     },
     "pandas-dev/pandas": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "monthly": {
           "artis": 1107,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "elayadesign/ai-design-skills": {
       "ilk": "2026-11-09",
@@ -3630,1271 +3750,1856 @@
     },
     "microsoft/playwright": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "monthly": {
-          "artis": 2479,
-          "tarih": "2026-11-09"
+          "artis": 2644,
+          "tarih": "2026-11-15"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
     },
     "rorygallagher2024/glasshouse": {
       "ilk": "2026-11-09",
-      "gorulme": 1,
+      "gorulme": 2,
       "en_iyi": {
         "monthly": {
           "artis": 1527,
           "tarih": "2026-11-09"
         }
       },
-      "son": "2026-11-09"
+      "son": "2026-11-15"
+    },
+    "ag-ui-protocol/ag-ui": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 393,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "google-labs-code/stitch-skills": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 248,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 356,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "backnotprop/plannotator": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 860,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 818,
+          "tarih": "2026-11-15"
+        },
+        "monthly": {
+          "artis": 2229,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "ChromeDevTools/chrome-devtools-mcp": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 718,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "alibaba/open-code-review": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 688,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "Tencent/LoopForge": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 484,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "ggml-org/ggml": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 154,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "elementalsouls/Claude-BugHunter": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 124,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 342,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "GoogleChrome/modern-web-guidance-src": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 1220,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 4363,
+          "tarih": "2026-11-15"
+        },
+        "monthly": {
+          "artis": 4463,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "tradermonty/claude-trading-skills": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 707,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 878,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "NVIDIA/SkillEvaluator": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 133,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "bojieli/ai-infra-book": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 151,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "kajisho5/ffmpeg-skill": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 285,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 1030,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "huytieu/COG-second-brain": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 37,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "SnailSploit/Claude-Red": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 135,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "HKUDS/AutoSwarm": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 56,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "PrefectHQ/fastmcp": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 76,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "fqscfqj/Y2A-Auto": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 99,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "andrewyng/openworker": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 100,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "ManimCommunity/manim": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 73,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "Canner/WrenAI": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 52,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "internetarchive/openlibrary": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 9,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "unslothai/unsloth": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 59,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "assistant-ui/assistant-ui": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 92,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "nolly-studio/cult-ui": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 120,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "elder-plinius/G0DM0D3": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 67,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "motion-canvas/motion-canvas": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 112,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "louislam/uptime-kuma": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 352,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 873,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "maillab/cloud-mail": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 412,
+          "tarih": "2026-11-15"
+        },
+        "weekly": {
+          "artis": 634,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "itsPLK/ps5-payload-manager": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 4,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "vernesong/OpenClash": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 26,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "termux/termux-packages": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 9,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "kinsamanka/OpenStick-Builder": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 5,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "jqssun/android-titanium-browser": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 18,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "gentoo/gentoo": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 0,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "233boy/Xray": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "daily": {
+          "artis": 4,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "ZhuLinsen/daily_stock_analysis": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 4526,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "we-promise/sure": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 4483,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "google/elephant-goldfish-model": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 5539,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "homeassistant-ai/ha-mcp": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 2348,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "soxoj/maigret": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 900,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "mvanhorn/last30days-skill": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 783,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "openai/codex-security": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 2176,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "a2ui-project/a2ui": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 408,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "garrytan/gbrain": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 1351,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "every-app/open-seo": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 992,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "expressjs/express": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 143,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "a2aproject/A2A": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 111,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "lxgw/LxgwWenKai": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 190,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "community-scripts/ProxmoxVE": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 84,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "kunchenguid/firstmate": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "weekly": {
+          "artis": 224,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "666ghj/MiroFish": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "monthly": {
+          "artis": 6766,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
+    },
+    "jquery/jquery": {
+      "ilk": "2026-11-15",
+      "gorulme": 1,
+      "en_iyi": {
+        "monthly": {
+          "artis": 412,
+          "tarih": "2026-11-15"
+        }
+      },
+      "son": "2026-11-15"
     }
   },
-  "son_tarama": "2026-11-09",
+  "son_tarama": "2026-11-15",
   "son_liste": {
-    "sherlock-project/sherlock": {
+    "dream-num/univer": {
       "daily": {
-        "artis": 2373,
+        "artis": 1041,
         "sira": 1,
         "dil": "tümü"
       }
     },
-    "dsx-ai-factory/nvke": {
+    "ag-ui-protocol/ag-ui": {
       "daily": {
-        "artis": 345,
+        "artis": 393,
         "sira": 2,
         "dil": "tümü"
       }
     },
-    "milind-soni/OpenMausBot": {
+    "google-labs-code/stitch-skills": {
       "daily": {
-        "artis": 1439,
+        "artis": 248,
         "sira": 3,
         "dil": "tümü"
       },
       "weekly": {
-        "artis": 7621,
-        "sira": 6,
-        "dil": "tümü"
+        "artis": 356,
+        "sira": 8,
+        "dil": "typescript"
       }
     },
-    "anthropics/claude-quickstarts": {
+    "backnotprop/plannotator": {
       "daily": {
-        "artis": 32,
+        "artis": 860,
         "sira": 4,
-        "dil": "tümü"
-      }
-    },
-    "vercel-labs/agent-browser": {
-      "daily": {
-        "artis": 815,
-        "sira": 5,
         "dil": "tümü"
       },
       "weekly": {
-        "artis": 2190,
-        "sira": 11,
+        "artis": 818,
+        "sira": 4,
+        "dil": "tümü"
+      },
+      "monthly": {
+        "artis": 2229,
+        "sira": 10,
+        "dil": "typescript"
+      }
+    },
+    "ChromeDevTools/chrome-devtools-mcp": {
+      "daily": {
+        "artis": 718,
+        "sira": 5,
         "dil": "tümü"
       }
     },
-    "meta/astryx": {
+    "alibaba/open-code-review": {
       "daily": {
-        "artis": 875,
+        "artis": 688,
         "sira": 6,
+        "dil": "tümü"
+      }
+    },
+    "Tencent/LoopForge": {
+      "daily": {
+        "artis": 484,
+        "sira": 7,
+        "dil": "tümü"
+      }
+    },
+    "ggml-org/ggml": {
+      "daily": {
+        "artis": 154,
+        "sira": 8,
+        "dil": "tümü"
+      }
+    },
+    "elementalsouls/Claude-BugHunter": {
+      "daily": {
+        "artis": 124,
+        "sira": 9,
+        "dil": "tümü"
+      },
+      "weekly": {
+        "artis": 342,
+        "sira": 11,
+        "dil": "python"
+      }
+    },
+    "GoogleChrome/modern-web-guidance-src": {
+      "daily": {
+        "artis": 1220,
+        "sira": 10,
+        "dil": "tümü"
+      },
+      "weekly": {
+        "artis": 4363,
+        "sira": 14,
+        "dil": "typescript"
+      },
+      "monthly": {
+        "artis": 4463,
+        "sira": 21,
+        "dil": "typescript"
+      }
+    },
+    "tradermonty/claude-trading-skills": {
+      "daily": {
+        "artis": 707,
+        "sira": 11,
+        "dil": "tümü"
+      },
+      "weekly": {
+        "artis": 878,
+        "sira": 12,
+        "dil": "python"
+      }
+    },
+    "NVIDIA/SkillEvaluator": {
+      "daily": {
+        "artis": 133,
+        "sira": 12,
+        "dil": "tümü"
+      }
+    },
+    "bojieli/ai-infra-book": {
+      "daily": {
+        "artis": 151,
+        "sira": 4,
+        "dil": "python"
+      }
+    },
+    "davila7/claude-code-templates": {
+      "daily": {
+        "artis": 179,
+        "sira": 5,
+        "dil": "python"
+      },
+      "weekly": {
+        "artis": 401,
+        "sira": 8,
+        "dil": "python"
+      }
+    },
+    "kajisho5/ffmpeg-skill": {
+      "daily": {
+        "artis": 285,
+        "sira": 6,
+        "dil": "python"
+      },
+      "weekly": {
+        "artis": 1030,
+        "sira": 17,
+        "dil": "python"
+      }
+    },
+    "huytieu/COG-second-brain": {
+      "daily": {
+        "artis": 37,
+        "sira": 7,
+        "dil": "python"
+      }
+    },
+    "SnailSploit/Claude-Red": {
+      "daily": {
+        "artis": 135,
+        "sira": 8,
+        "dil": "python"
+      }
+    },
+    "HKUDS/AutoSwarm": {
+      "daily": {
+        "artis": 56,
+        "sira": 9,
+        "dil": "python"
+      }
+    },
+    "PrefectHQ/fastmcp": {
+      "daily": {
+        "artis": 76,
+        "sira": 10,
+        "dil": "python"
+      }
+    },
+    "fqscfqj/Y2A-Auto": {
+      "daily": {
+        "artis": 99,
+        "sira": 11,
+        "dil": "python"
+      }
+    },
+    "andrewyng/openworker": {
+      "daily": {
+        "artis": 100,
+        "sira": 12,
+        "dil": "python"
+      }
+    },
+    "ManimCommunity/manim": {
+      "daily": {
+        "artis": 73,
+        "sira": 13,
+        "dil": "python"
+      }
+    },
+    "HKUDS/Vibe-Trading": {
+      "daily": {
+        "artis": 83,
+        "sira": 14,
+        "dil": "python"
+      }
+    },
+    "Canner/WrenAI": {
+      "daily": {
+        "artis": 52,
+        "sira": 15,
+        "dil": "python"
+      }
+    },
+    "internetarchive/openlibrary": {
+      "daily": {
+        "artis": 9,
+        "sira": 16,
+        "dil": "python"
+      }
+    },
+    "unslothai/unsloth": {
+      "daily": {
+        "artis": 59,
+        "sira": 17,
+        "dil": "python"
+      }
+    },
+    "motiondivision/motion": {
+      "daily": {
+        "artis": 74,
+        "sira": 7,
+        "dil": "typescript"
+      }
+    },
+    "assistant-ui/assistant-ui": {
+      "daily": {
+        "artis": 92,
+        "sira": 8,
+        "dil": "typescript"
+      }
+    },
+    "nolly-studio/cult-ui": {
+      "daily": {
+        "artis": 120,
+        "sira": 9,
+        "dil": "typescript"
+      }
+    },
+    "elder-plinius/G0DM0D3": {
+      "daily": {
+        "artis": 67,
+        "sira": 10,
+        "dil": "typescript"
+      }
+    },
+    "motion-canvas/motion-canvas": {
+      "daily": {
+        "artis": 112,
+        "sira": 11,
+        "dil": "typescript"
+      }
+    },
+    "tashfeenahmed/freellmapi": {
+      "daily": {
+        "artis": 579,
+        "sira": 12,
+        "dil": "typescript"
+      },
+      "monthly": {
+        "artis": 17449,
+        "sira": 11,
+        "dil": "typescript"
+      }
+    },
+    "louislam/uptime-kuma": {
+      "daily": {
+        "artis": 352,
+        "sira": 1,
+        "dil": "javascript"
+      },
+      "weekly": {
+        "artis": 873,
+        "sira": 4,
+        "dil": "javascript"
+      }
+    },
+    "maillab/cloud-mail": {
+      "daily": {
+        "artis": 412,
+        "sira": 2,
+        "dil": "javascript"
+      },
+      "weekly": {
+        "artis": 634,
+        "sira": 7,
+        "dil": "javascript"
+      }
+    },
+    "qist/tvbox": {
+      "daily": {
+        "artis": 45,
+        "sira": 3,
+        "dil": "javascript"
+      }
+    },
+    "juliangarnier/anime": {
+      "daily": {
+        "artis": 107,
+        "sira": 4,
+        "dil": "javascript"
+      }
+    },
+    "itsPLK/ps5-payload-manager": {
+      "daily": {
+        "artis": 4,
+        "sira": 5,
+        "dil": "javascript"
+      }
+    },
+    "vernesong/OpenClash": {
+      "daily": {
+        "artis": 26,
+        "sira": 6,
+        "dil": "javascript"
+      }
+    },
+    "termux/termux-packages": {
+      "daily": {
+        "artis": 9,
+        "sira": 1,
+        "dil": "shell"
+      }
+    },
+    "kinsamanka/OpenStick-Builder": {
+      "daily": {
+        "artis": 5,
+        "sira": 2,
+        "dil": "shell"
+      }
+    },
+    "itsnotkubrick/3X-UI_KIT": {
+      "daily": {
+        "artis": 10,
+        "sira": 3,
+        "dil": "shell"
+      }
+    },
+    "jqssun/android-titanium-browser": {
+      "daily": {
+        "artis": 18,
+        "sira": 4,
+        "dil": "shell"
+      }
+    },
+    "ublue-os/bazzite": {
+      "daily": {
+        "artis": 5,
+        "sira": 5,
+        "dil": "shell"
+      },
+      "weekly": {
+        "artis": 70,
+        "sira": 9,
+        "dil": "shell"
+      }
+    },
+    "gentoo/gentoo": {
+      "daily": {
+        "artis": 0,
+        "sira": 6,
+        "dil": "shell"
+      }
+    },
+    "hestiacp/hestiacp": {
+      "daily": {
+        "artis": 2,
+        "sira": 7,
+        "dil": "shell"
+      }
+    },
+    "EpicGames/unreal-engine-skills-for-claude-code-plugin": {
+      "daily": {
+        "artis": 5,
+        "sira": 8,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 1433,
+        "sira": 3,
+        "dil": "shell"
+      }
+    },
+    "233boy/Xray": {
+      "daily": {
+        "artis": 4,
+        "sira": 9,
+        "dil": "shell"
+      }
+    },
+    "pi-hole/pi-hole": {
+      "daily": {
+        "artis": 48,
+        "sira": 10,
+        "dil": "shell"
+      },
+      "weekly": {
+        "artis": 308,
+        "sira": 5,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 839,
+        "sira": 7,
+        "dil": "shell"
+      }
+    },
+    "PaperMC/Folia": {
+      "daily": {
+        "artis": 0,
+        "sira": 11,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 270,
+        "sira": 14,
+        "dil": "shell"
+      }
+    },
+    "expo/skills": {
+      "daily": {
+        "artis": 16,
+        "sira": 12,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 1323,
+        "sira": 4,
+        "dil": "shell"
+      }
+    },
+    "fscarmen/sing-box": {
+      "daily": {
+        "artis": 5,
+        "sira": 13,
+        "dil": "shell"
+      }
+    },
+    "meta/astryx": {
+      "weekly": {
+        "artis": 13660,
+        "sira": 1,
         "dil": "tümü"
       }
     },
     "anthropics/skills": {
-      "daily": {
-        "artis": 792,
-        "sira": 7,
-        "dil": "tümü"
-      },
       "weekly": {
-        "artis": 3169,
-        "sira": 4,
+        "artis": 6220,
+        "sira": 2,
         "dil": "tümü"
       },
       "monthly": {
-        "artis": 9990,
-        "sira": 18,
-        "dil": "python"
-      }
-    },
-    "google-deepmind/mujoco": {
-      "daily": {
-        "artis": 41,
-        "sira": 8,
+        "artis": 13927,
+        "sira": 6,
         "dil": "tümü"
       }
     },
-    "ranxianglei/billion-context": {
-      "daily": {
-        "artis": 460,
+    "sherlock-project/sherlock": {
+      "weekly": {
+        "artis": 12401,
+        "sira": 3,
+        "dil": "tümü"
+      },
+      "monthly": {
+        "artis": 18365,
         "sira": 9,
         "dil": "tümü"
       }
     },
-    "jamiepine/voicebox": {
-      "daily": {
-        "artis": 208,
-        "sira": 4,
-        "dil": "python"
-      }
-    },
-    "googlecolab/google-colab-cli": {
-      "daily": {
-        "artis": 104,
-        "sira": 5,
-        "dil": "python"
-      }
-    },
-    "rohitg00/ai-engineering-from-scratch": {
-      "daily": {
-        "artis": 449,
-        "sira": 6,
-        "dil": "python"
-      }
-    },
-    "neuml/txtai": {
-      "daily": {
-        "artis": 56,
-        "sira": 7,
-        "dil": "python"
-      }
-    },
-    "bradautomates/claude-video": {
-      "daily": {
-        "artis": 92,
-        "sira": 8,
-        "dil": "python"
-      },
+    "vercel-labs/agent-browser": {
       "weekly": {
-        "artis": 551,
-        "sira": 16,
-        "dil": "python"
-      }
-    },
-    "BigBodyCobain/Shadowbroker": {
-      "daily": {
-        "artis": 16,
-        "sira": 9,
-        "dil": "python"
-      }
-    },
-    "XiaoYouChR/Ghost-Downloader-3": {
-      "daily": {
-        "artis": 53,
-        "sira": 10,
-        "dil": "python"
-      }
-    },
-    "SWE-agent/mini-swe-agent": {
-      "daily": {
-        "artis": 86,
-        "sira": 11,
-        "dil": "python"
-      }
-    },
-    "Albert-Weasker/niubigeo": {
-      "daily": {
-        "artis": 228,
-        "sira": 4,
-        "dil": "typescript"
-      }
-    },
-    "kortix-ai/CompanyOS": {
-      "daily": {
-        "artis": 72,
+        "artis": 4601,
         "sira": 5,
-        "dil": "typescript"
-      }
-    },
-    "tailwindlabs/tailwindcss": {
-      "daily": {
-        "artis": 332,
-        "sira": 6,
-        "dil": "typescript"
-      }
-    },
-    "elie222/rakazo": {
-      "daily": {
-        "artis": 107,
-        "sira": 7,
-        "dil": "typescript"
+        "dil": "tümü"
       },
       "monthly": {
-        "artis": 4094,
+        "artis": 7152,
+        "sira": 14,
+        "dil": "tümü"
+      }
+    },
+    "ZhuLinsen/daily_stock_analysis": {
+      "weekly": {
+        "artis": 4526,
+        "sira": 6,
+        "dil": "tümü"
+      }
+    },
+    "we-promise/sure": {
+      "weekly": {
+        "artis": 4483,
+        "sira": 7,
+        "dil": "tümü"
+      }
+    },
+    "milind-soni/OpenMausBot": {
+      "weekly": {
+        "artis": 6413,
+        "sira": 8,
+        "dil": "tümü"
+      },
+      "monthly": {
+        "artis": 17957,
         "sira": 22,
         "dil": "typescript"
       }
     },
-    "ParadevAI/Paradev": {
-      "daily": {
-        "artis": 39,
-        "sira": 8,
-        "dil": "typescript"
-      }
-    },
-    "mantrakp04/ardia": {
-      "daily": {
-        "artis": 85,
+    "google/elephant-goldfish-model": {
+      "weekly": {
+        "artis": 5539,
         "sira": 9,
-        "dil": "typescript"
-      }
-    },
-    "snarktank/ralph": {
-      "daily": {
-        "artis": 18,
-        "sira": 10,
-        "dil": "typescript"
-      }
-    },
-    "vercel-labs/json-render": {
-      "daily": {
-        "artis": 149,
-        "sira": 11,
-        "dil": "typescript"
-      }
-    },
-    "lobehub/lobehub": {
-      "daily": {
-        "artis": 95,
-        "sira": 12,
-        "dil": "typescript"
-      },
-      "weekly": {
-        "artis": 798,
-        "sira": 6,
-        "dil": "typescript"
-      }
-    },
-    "poco-ai/Agentero": {
-      "daily": {
-        "artis": 145,
-        "sira": 13,
-        "dil": "typescript"
-      }
-    },
-    "Open-Dev-Society/OpenStock": {
-      "daily": {
-        "artis": 66,
-        "sira": 14,
-        "dil": "typescript"
-      }
-    },
-    "arcsin1/oh-my-ppt": {
-      "daily": {
-        "artis": 51,
-        "sira": 15,
-        "dil": "typescript"
-      }
-    },
-    "humanlayer/12-factor-agents": {
-      "daily": {
-        "artis": 19,
-        "sira": 16,
-        "dil": "typescript"
-      }
-    },
-    "Anil-matcha/Open-Generative-AI": {
-      "daily": {
-        "artis": 373,
-        "sira": 1,
-        "dil": "javascript"
-      }
-    },
-    "cloudflare/security-audit-skill": {
-      "daily": {
-        "artis": 1376,
-        "sira": 2,
-        "dil": "javascript"
-      },
-      "weekly": {
-        "artis": 10600,
-        "sira": 1,
-        "dil": "javascript"
-      },
-      "monthly": {
-        "artis": 40289,
-        "sira": 3,
         "dil": "tümü"
       }
     },
-    "4ian/GDevelop": {
-      "daily": {
-        "artis": 53,
-        "sira": 3,
-        "dil": "javascript"
-      }
-    },
-    "hmjz100/LinkSwift": {
-      "daily": {
-        "artis": 334,
-        "sira": 4,
-        "dil": "javascript"
-      },
-      "monthly": {
-        "artis": 17899,
-        "sira": 7,
-        "dil": "javascript"
-      }
-    },
-    "liandu2024/Open-Box": {
-      "daily": {
-        "artis": 39,
-        "sira": 1,
-        "dil": "shell"
-      }
-    },
-    "omacom/omarchy": {
-      "daily": {
-        "artis": 100,
-        "sira": 2,
-        "dil": "shell"
-      },
+    "google-deepmind/mujoco": {
       "weekly": {
-        "artis": 567,
+        "artis": 1859,
+        "sira": 10,
+        "dil": "tümü"
+      }
+    },
+    "addyosmani/agent-skills": {
+      "weekly": {
+        "artis": 3670,
         "sira": 11,
-        "dil": "shell"
+        "dil": "tümü"
       }
     },
-    "obra/superpowers": {
-      "daily": {
-        "artis": 518,
-        "sira": 3,
-        "dil": "shell"
-      },
+    "homeassistant-ai/ha-mcp": {
       "weekly": {
-        "artis": 4360,
-        "sira": 3,
-        "dil": "shell"
-      },
-      "monthly": {
-        "artis": 19448,
-        "sira": 3,
-        "dil": "shell"
-      }
-    },
-    "FFmpeg-Builds/FFmpeg-Builds": {
-      "daily": {
-        "artis": 8,
-        "sira": 4,
-        "dil": "shell"
-      },
-      "weekly": {
-        "artis": 50,
-        "sira": 9,
-        "dil": "shell"
-      }
-    },
-    "msitarzewski/agency-agents": {
-      "daily": {
-        "artis": 192,
+        "artis": 2348,
         "sira": 5,
-        "dil": "shell"
-      },
-      "monthly": {
-        "artis": 9551,
-        "sira": 2,
-        "dil": "shell"
+        "dil": "python"
       }
     },
-    "bivlked/amneziawg-installer": {
-      "daily": {
-        "artis": 11,
+    "anthropics/claude-quickstarts": {
+      "weekly": {
+        "artis": 1794,
         "sira": 6,
-        "dil": "shell"
-      },
-      "weekly": {
-        "artis": 64,
-        "sira": 7,
-        "dil": "shell"
-      }
-    },
-    "mack-a/v2ray-agent": {
-      "daily": {
-        "artis": 9,
-        "sira": 7,
-        "dil": "shell"
-      }
-    },
-    "juewuy/ShellCrash": {
-      "daily": {
-        "artis": 3,
-        "sira": 8,
-        "dil": "shell"
-      }
-    },
-    "StressOzz/Zapret-Manager": {
-      "daily": {
-        "artis": 12,
-        "sira": 9,
-        "dil": "shell"
-      }
-    },
-    "pystardust/ani-cli": {
-      "daily": {
-        "artis": 5,
-        "sira": 10,
-        "dil": "shell"
-      }
-    },
-    "0xNyk/council-of-high-intelligence": {
-      "daily": {
-        "artis": 14,
-        "sira": 11,
-        "dil": "shell"
-      }
-    },
-    "pwnerblu/surrealra1n": {
-      "daily": {
-        "artis": 4,
-        "sira": 12,
-        "dil": "shell"
-      }
-    },
-    "InfinityLoop1308/PipePipe": {
-      "daily": {
-        "artis": 10,
-        "sira": 13,
-        "dil": "shell"
-      }
-    },
-    "NVIDIA/auto-ontology": {
-      "weekly": {
-        "artis": 9327,
-        "sira": 1,
-        "dil": "tümü"
-      }
-    },
-    "thedotmack/claude-mem": {
-      "weekly": {
-        "artis": 6443,
-        "sira": 2,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 17296,
-        "sira": 8,
-        "dil": "tümü"
-      }
-    },
-    "max-sixty/worktrunk": {
-      "weekly": {
-        "artis": 2313,
-        "sira": 3,
-        "dil": "tümü"
-      }
-    },
-    "Donchitos/Claude-Code-Game-Studios": {
-      "weekly": {
-        "artis": 5235,
-        "sira": 5,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 11184,
-        "sira": 1,
-        "dil": "shell"
-      }
-    },
-    "pingdotgg/t3code": {
-      "weekly": {
-        "artis": 15379,
-        "sira": 7,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 25840,
-        "sira": 7,
-        "dil": "tümü"
-      }
-    },
-    "Nutlope/hallmark": {
-      "weekly": {
-        "artis": 6356,
-        "sira": 8,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 21146,
-        "sira": 2,
-        "dil": "tümü"
-      }
-    },
-    "Renhuai123/ziwei-doushu": {
-      "weekly": {
-        "artis": 4191,
-        "sira": 9,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 12700,
-        "sira": 19,
-        "dil": "typescript"
-      }
-    },
-    "D4Vinci/Scrapling": {
-      "weekly": {
-        "artis": 8342,
-        "sira": 10,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 13826,
-        "sira": 9,
         "dil": "python"
       }
     },
-    "mattpocock/skills": {
+    "soxoj/maigret": {
       "weekly": {
-        "artis": 9635,
-        "sira": 12,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 38864,
-        "sira": 10,
-        "dil": "shell"
-      }
-    },
-    "jakubkrehel/skills": {
-      "weekly": {
-        "artis": 1857,
-        "sira": 13,
-        "dil": "tümü"
-      }
-    },
-    "github/spec-kit": {
-      "weekly": {
-        "artis": 4045,
-        "sira": 14,
-        "dil": "tümü"
-      }
-    },
-    "The-PR-Agent/pr-agent": {
-      "weekly": {
-        "artis": 1706,
-        "sira": 15,
-        "dil": "tümü"
-      },
-      "monthly": {
-        "artis": 2327,
-        "sira": 17,
-        "dil": "python"
-      }
-    },
-    "hyprwm/Hyprland": {
-      "weekly": {
-        "artis": 1465,
-        "sira": 16,
-        "dil": "tümü"
-      }
-    },
-    "blader/humanizer": {
-      "weekly": {
-        "artis": 3118,
-        "sira": 17,
-        "dil": "tümü"
-      }
-    },
-    "google/skills": {
-      "weekly": {
-        "artis": 1931,
+        "artis": 900,
         "sira": 7,
-        "dil": "python"
-      }
-    },
-    "shiyu-coder/Kronos": {
-      "weekly": {
-        "artis": 2423,
-        "sira": 8,
         "dil": "python"
       }
     },
     "harry0703/MoneyPrinterTurbo": {
       "weekly": {
-        "artis": 4048,
+        "artis": 3061,
         "sira": 9,
         "dil": "python"
-      }
-    },
-    "guillaumemeyer/watermarks-remover": {
-      "weekly": {
-        "artis": 860,
-        "sira": 10,
-        "dil": "python"
-      }
-    },
-    "Graphify-Labs/graphify": {
-      "weekly": {
-        "artis": 4105,
+      },
+      "monthly": {
+        "artis": 13454,
         "sira": 11,
         "dil": "python"
       }
     },
-    "python-poetry/poetry": {
+    "google/skills": {
       "weekly": {
-        "artis": 238,
-        "sira": 12,
+        "artis": 697,
+        "sira": 10,
         "dil": "python"
       }
     },
-    "scenario-labs/skills": {
+    "NVIDIA/SkillSpector": {
       "weekly": {
-        "artis": 2118,
+        "artis": 1248,
         "sira": 13,
         "dil": "python"
+      },
+      "monthly": {
+        "artis": 5926,
+        "sira": 8,
+        "dil": "python"
       }
     },
-    "HKUDS/DeepTutor": {
+    "mvanhorn/last30days-skill": {
       "weekly": {
-        "artis": 3399,
+        "artis": 783,
         "sira": 14,
         "dil": "python"
-      },
-      "monthly": {
-        "artis": 16065,
-        "sira": 11,
-        "dil": "tümü"
       }
     },
-    "ethanplusai/sellbird": {
+    "bradautomates/claude-video": {
       "weekly": {
-        "artis": 1041,
+        "artis": 689,
         "sira": 15,
         "dil": "python"
       }
     },
-    "garrytan/gstack": {
+    "NVIDIA/auto-ontology": {
       "weekly": {
-        "artis": 2344,
-        "sira": 5,
-        "dil": "typescript"
+        "artis": 3178,
+        "sira": 16,
+        "dil": "python"
       }
     },
-    "nightly-labs/openbot": {
+    "openai/codex-security": {
       "weekly": {
-        "artis": 1937,
-        "sira": 7,
-        "dil": "typescript"
-      }
-    },
-    "tldraw/tldraw": {
-      "weekly": {
-        "artis": 365,
-        "sira": 8,
-        "dil": "typescript"
-      }
-    },
-    "can1357/oh-my-pi": {
-      "weekly": {
-        "artis": 870,
-        "sira": 9,
-        "dil": "typescript"
-      }
-    },
-    "Vincentwei1021/video-shotcraft": {
-      "weekly": {
-        "artis": 2171,
-        "sira": 10,
-        "dil": "typescript"
-      },
-      "monthly": {
-        "artis": 7146,
-        "sira": 6,
-        "dil": "typescript"
-      }
-    },
-    "CopilotKit/OpenBot": {
-      "weekly": {
-        "artis": 1215,
-        "sira": 11,
-        "dil": "typescript"
-      }
-    },
-    "vitejs/vite": {
-      "weekly": {
-        "artis": 401,
-        "sira": 12,
-        "dil": "typescript"
-      },
-      "monthly": {
-        "artis": 1067,
-        "sira": 15,
-        "dil": "typescript"
-      }
-    },
-    "tashfeenahmed/freellmapi": {
-      "weekly": {
-        "artis": 3761,
-        "sira": 13,
-        "dil": "typescript"
-      },
-      "monthly": {
-        "artis": 17520,
-        "sira": 5,
+        "artis": 2176,
+        "sira": 4,
         "dil": "typescript"
       }
     },
     "QwenLM/qwen-code": {
       "weekly": {
-        "artis": 271,
+        "artis": 1173,
+        "sira": 5,
+        "dil": "typescript"
+      }
+    },
+    "CopilotKit/OpenBot": {
+      "weekly": {
+        "artis": 1900,
+        "sira": 6,
+        "dil": "typescript"
+      },
+      "monthly": {
+        "artis": 5846,
+        "sira": 12,
+        "dil": "typescript"
+      }
+    },
+    "lobehub/lobehub": {
+      "weekly": {
+        "artis": 1258,
+        "sira": 7,
+        "dil": "typescript"
+      }
+    },
+    "a2ui-project/a2ui": {
+      "weekly": {
+        "artis": 408,
+        "sira": 9,
+        "dil": "typescript"
+      }
+    },
+    "garrytan/gbrain": {
+      "weekly": {
+        "artis": 1351,
+        "sira": 10,
+        "dil": "typescript"
+      }
+    },
+    "every-app/open-seo": {
+      "weekly": {
+        "artis": 992,
+        "sira": 11,
+        "dil": "typescript"
+      }
+    },
+    "ranxianglei/billion-context": {
+      "weekly": {
+        "artis": 2942,
+        "sira": 12,
+        "dil": "typescript"
+      },
+      "monthly": {
+        "artis": 6203,
         "sira": 14,
         "dil": "typescript"
       }
     },
     "liguobao/ds-harness-remote": {
       "weekly": {
-        "artis": 1091,
+        "artis": 719,
+        "sira": 13,
+        "dil": "typescript"
+      }
+    },
+    "elie222/rakazo": {
+      "weekly": {
+        "artis": 966,
+        "sira": 15,
+        "dil": "typescript"
+      },
+      "monthly": {
+        "artis": 4462,
         "sira": 15,
         "dil": "typescript"
       }
     },
-    "github/docs": {
+    "pingdotgg/t3code": {
       "weekly": {
-        "artis": 476,
+        "artis": 9668,
         "sira": 16,
         "dil": "typescript"
-      }
-    },
-    "vercel-labs/skills": {
-      "weekly": {
-        "artis": 1091,
-        "sira": 17,
-        "dil": "typescript"
       },
       "monthly": {
-        "artis": 5313,
-        "sira": 8,
-        "dil": "typescript"
-      }
-    },
-    "Crosstalk-Solutions/project-nomad": {
-      "weekly": {
-        "artis": 1235,
-        "sira": 18,
-        "dil": "typescript"
-      }
-    },
-    "affaan-m/ECC": {
-      "weekly": {
-        "artis": 5337,
-        "sira": 2,
-        "dil": "javascript"
-      },
-      "monthly": {
-        "artis": 25860,
-        "sira": 10,
-        "dil": "javascript"
-      }
-    },
-    "github/awesome-copilot": {
-      "weekly": {
-        "artis": 312,
+        "artis": 32857,
         "sira": 3,
-        "dil": "javascript"
-      }
-    },
-    "Orkas-AI/Orkas": {
-      "weekly": {
-        "artis": 2074,
-        "sira": 4,
-        "dil": "javascript"
-      }
-    },
-    "techjarves/Portable-Local-Studio": {
-      "weekly": {
-        "artis": 278,
-        "sira": 5,
-        "dil": "javascript"
-      }
-    },
-    "DeanChensj/jiangshan-map": {
-      "weekly": {
-        "artis": 2135,
-        "sira": 6,
-        "dil": "javascript"
+        "dil": "tümü"
       }
     },
     "coreyhaines31/marketingskills": {
       "weekly": {
-        "artis": 1446,
-        "sira": 7,
-        "dil": "javascript"
-      }
-    },
-    "Leaflet/Leaflet": {
-      "weekly": {
-        "artis": 93,
-        "sira": 8,
+        "artis": 1303,
+        "sira": 2,
         "dil": "javascript"
       }
     },
     "ConardLi/garden-skills": {
       "weekly": {
-        "artis": 1251,
-        "sira": 9,
+        "artis": 576,
+        "sira": 3,
         "dil": "javascript"
-      }
-    },
-    "ericrisco/rsc-harness": {
-      "weekly": {
-        "artis": 138,
+      },
+      "monthly": {
+        "artis": 2361,
         "sira": 10,
         "dil": "javascript"
       }
     },
-    "open-gsd/gsd-core": {
+    "Leonxlnx/taste-skill": {
       "weekly": {
-        "artis": 246,
+        "artis": 4108,
+        "sira": 5,
+        "dil": "javascript"
+      },
+      "monthly": {
+        "artis": 20043,
         "sira": 11,
+        "dil": "tümü"
+      }
+    },
+    "Anil-matcha/Open-Generative-AI": {
+      "weekly": {
+        "artis": 1755,
+        "sira": 6,
         "dil": "javascript"
       }
     },
-    "MichaelCade/90DaysOfDevOps": {
+    "expressjs/express": {
       "weekly": {
-        "artis": 925,
-        "sira": 4,
+        "artis": 143,
+        "sira": 8,
+        "dil": "javascript"
+      }
+    },
+    "Donchitos/Claude-Code-Game-Studios": {
+      "weekly": {
+        "artis": 2802,
+        "sira": 1,
         "dil": "shell"
       },
       "monthly": {
-        "artis": 1069,
-        "sira": 5,
+        "artis": 12965,
+        "sira": 2,
         "dil": "shell"
       }
     },
-    "google/oss-fuzz": {
+    "mattpocock/skills": {
       "weekly": {
-        "artis": 104,
-        "sira": 5,
+        "artis": 7308,
+        "sira": 2,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 34530,
+        "sira": 10,
         "dil": "shell"
       }
     },
-    "OthmanAdi/planning-with-files": {
+    "nvm-sh/nvm": {
       "weekly": {
-        "artis": 175,
+        "artis": 385,
+        "sira": 3,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 832,
         "sira": 6,
         "dil": "shell"
       }
     },
-    "ublue-os/bazzite": {
+    "obra/superpowers": {
       "weekly": {
-        "artis": 59,
-        "sira": 8,
-        "dil": "shell"
-      }
-    },
-    "dockur/windows": {
-      "weekly": {
-        "artis": 178,
-        "sira": 10,
-        "dil": "shell"
-      }
-    },
-    "tw93/Mole": {
-      "weekly": {
-        "artis": 813,
-        "sira": 12,
+        "artis": 3820,
+        "sira": 4,
         "dil": "shell"
       },
       "monthly": {
-        "artis": 4886,
-        "sira": 7,
+        "artis": 19859,
+        "sira": 1,
         "dil": "shell"
       }
     },
-    "Dammyjay93/interface-design": {
+    "ohmyzsh/ohmyzsh": {
       "weekly": {
-        "artis": 48,
-        "sira": 13,
+        "artis": 330,
+        "sira": 6,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 868,
+        "sira": 12,
         "dil": "shell"
       }
     },
     "wondelai/skills": {
       "weekly": {
-        "artis": 83,
+        "artis": 80,
+        "sira": 7,
+        "dil": "shell"
+      }
+    },
+    "omacom/omarchy": {
+      "weekly": {
+        "artis": 555,
+        "sira": 8,
+        "dil": "shell"
+      }
+    },
+    "ophub/amlogic-s9xxx-armbian": {
+      "weekly": {
+        "artis": 56,
+        "sira": 10,
+        "dil": "shell"
+      }
+    },
+    "a2aproject/A2A": {
+      "weekly": {
+        "artis": 111,
+        "sira": 11,
+        "dil": "shell"
+      }
+    },
+    "lxgw/LxgwWenKai": {
+      "weekly": {
+        "artis": 190,
+        "sira": 12,
+        "dil": "shell"
+      }
+    },
+    "233boy/sing-box": {
+      "weekly": {
+        "artis": 169,
+        "sira": 13,
+        "dil": "shell"
+      },
+      "monthly": {
+        "artis": 683,
+        "sira": 11,
+        "dil": "shell"
+      }
+    },
+    "community-scripts/ProxmoxVE": {
+      "weekly": {
+        "artis": 84,
         "sira": 14,
         "dil": "shell"
       }
     },
-    "morluto/rea": {
+    "kunchenguid/firstmate": {
+      "weekly": {
+        "artis": 224,
+        "sira": 15,
+        "dil": "shell"
+      }
+    },
+    "cloudflare/skills": {
+      "weekly": {
+        "artis": 69,
+        "sira": 16,
+        "dil": "shell"
+      },
       "monthly": {
-        "artis": 425123,
+        "artis": 319,
+        "sira": 18,
+        "dil": "shell"
+      }
+    },
+    "bivlked/amneziawg-installer": {
+      "weekly": {
+        "artis": 55,
+        "sira": 17,
+        "dil": "shell"
+      }
+    },
+    "Nutlope/hallmark": {
+      "monthly": {
+        "artis": 25013,
         "sira": 1,
         "dil": "tümü"
       }
     },
-    "storytold/artcraft": {
+    "cloudflare/security-audit-skill": {
       "monthly": {
-        "artis": 33780,
+        "artis": 43171,
+        "sira": 2,
+        "dil": "tümü"
+      }
+    },
+    "thedotmack/claude-mem": {
+      "monthly": {
+        "artis": 17051,
         "sira": 4,
-        "dil": "tümü"
-      }
-    },
-    "heygen-com/hyperframes": {
-      "monthly": {
-        "artis": 22360,
-        "sira": 5,
-        "dil": "tümü"
-      }
-    },
-    "debpalash/VoiceStudio": {
-      "monthly": {
-        "artis": 50169,
-        "sira": 6,
-        "dil": "tümü"
-      }
-    },
-    "boykopovar/AnyPS5": {
-      "monthly": {
-        "artis": 39354,
-        "sira": 9,
         "dil": "tümü"
       }
     },
     "pbakaus/impeccable": {
       "monthly": {
-        "artis": 28008,
-        "sira": 10,
+        "artis": 29487,
+        "sira": 5,
         "dil": "tümü"
       }
     },
-    "NationalSecurityAgency/ghidra": {
+    "HKUDS/DeepTutor": {
       "monthly": {
-        "artis": 17344,
-        "sira": 12,
+        "artis": 18077,
+        "sira": 7,
         "dil": "tümü"
       }
     },
-    "anthropics/claude-plugins-official": {
+    "heygen-com/hyperframes": {
       "monthly": {
-        "artis": 9152,
-        "sira": 3,
-        "dil": "python"
-      }
-    },
-    "anthropics/knowledge-work-plugins": {
-      "monthly": {
-        "artis": 7947,
-        "sira": 4,
-        "dil": "python"
+        "artis": 21361,
+        "sira": 8,
+        "dil": "tümü"
       }
     },
     "AgriciDaniel/claude-seo": {
       "monthly": {
-        "artis": 9004,
-        "sira": 5,
+        "artis": 10402,
+        "sira": 10,
+        "dil": "tümü"
+      }
+    },
+    "anthropics/knowledge-work-plugins": {
+      "monthly": {
+        "artis": 6228,
+        "sira": 12,
+        "dil": "tümü"
+      }
+    },
+    "Vincentwei1021/video-shotcraft": {
+      "monthly": {
+        "artis": 7617,
+        "sira": 13,
+        "dil": "tümü"
+      }
+    },
+    "debpalash/VoiceStudio": {
+      "monthly": {
+        "artis": 46324,
+        "sira": 6,
         "dil": "python"
       }
     },
     "AstrBotDevs/AstrBot": {
       "monthly": {
-        "artis": 5133,
-        "sira": 6,
-        "dil": "python"
-      }
-    },
-    "HKUDS/CLI-Anything": {
-      "monthly": {
-        "artis": 6942,
+        "artis": 5296,
         "sira": 7,
         "dil": "python"
       }
     },
-    "earthtojake/text-to-cad": {
+    "D4Vinci/Scrapling": {
       "monthly": {
-        "artis": 7543,
-        "sira": 8,
+        "artis": 15754,
+        "sira": 9,
         "dil": "python"
       }
     },
-    "Alishahryar1/free-claude-code": {
+    "The-PR-Agent/pr-agent": {
       "monthly": {
-        "artis": 10957,
+        "artis": 2835,
         "sira": 10,
-        "dil": "python"
-      }
-    },
-    "NVIDIA/SkillSpector": {
-      "monthly": {
-        "artis": 5295,
-        "sira": 11,
-        "dil": "python"
-      }
-    },
-    "wshobson/agents": {
-      "monthly": {
-        "artis": 2146,
-        "sira": 12,
-        "dil": "python"
-      }
-    },
-    "ahujasid/mcp-for-blender": {
-      "monthly": {
-        "artis": 3522,
-        "sira": 13,
         "dil": "python"
       }
     },
     "fastapi/fastapi": {
       "monthly": {
-        "artis": 2611,
+        "artis": 2599,
+        "sira": 12,
+        "dil": "python"
+      }
+    },
+    "666ghj/MiroFish": {
+      "monthly": {
+        "artis": 6766,
+        "sira": 13,
+        "dil": "python"
+      }
+    },
+    "anthropics/claude-plugins-official": {
+      "monthly": {
+        "artis": 9575,
         "sira": 14,
-        "dil": "python"
-      }
-    },
-    "pandas-dev/pandas": {
-      "monthly": {
-        "artis": 1107,
-        "sira": 15,
-        "dil": "python"
-      }
-    },
-    "Comfy-Org/ComfyUI": {
-      "monthly": {
-        "artis": 9843,
-        "sira": 16,
         "dil": "python"
       }
     },
     "luongnv89/claude-howto": {
       "monthly": {
-        "artis": 5167,
-        "sira": 19,
+        "artis": 5494,
+        "sira": 15,
         "dil": "python"
       }
     },
-    "elayadesign/ai-design-skills": {
+    "pandas-dev/pandas": {
       "monthly": {
-        "artis": 12699,
-        "sira": 20,
+        "artis": 1062,
+        "sira": 16,
         "dil": "python"
       }
     },
-    "remotion-dev/remotion": {
+    "vllm-project/vllm": {
       "monthly": {
-        "artis": 9422,
+        "artis": 3371,
+        "sira": 17,
+        "dil": "python"
+      }
+    },
+    "ahujasid/mcp-for-blender": {
+      "monthly": {
+        "artis": 3730,
+        "sira": 18,
+        "dil": "python"
+      }
+    },
+    "JetBrains/thinkrail": {
+      "monthly": {
+        "artis": 7798,
+        "sira": 5,
+        "dil": "typescript"
+      }
+    },
+    "anomalyco/opencode": {
+      "monthly": {
+        "artis": 14930,
+        "sira": 6,
+        "dil": "typescript"
+      }
+    },
+    "vercel-labs/skills": {
+      "monthly": {
+        "artis": 4598,
         "sira": 7,
         "dil": "typescript"
       }
     },
-    "anthropics/sandbox-runtime": {
+    "stablyai/orca": {
       "monthly": {
-        "artis": 1579,
+        "artis": 33348,
+        "sira": 8,
+        "dil": "typescript"
+      }
+    },
+    "remotion-dev/remotion": {
+      "monthly": {
+        "artis": 9305,
         "sira": 9,
         "dil": "typescript"
       }
     },
     "gitroomhq/postiz-app": {
       "monthly": {
-        "artis": 4393,
-        "sira": 10,
-        "dil": "typescript"
-      }
-    },
-    "stablyai/orca": {
-      "monthly": {
-        "artis": 32085,
-        "sira": 11,
-        "dil": "typescript"
-      }
-    },
-    "anomalyco/opencode": {
-      "monthly": {
-        "artis": 14780,
-        "sira": 12,
-        "dil": "typescript"
-      }
-    },
-    "chthollyphile/folia-major": {
-      "monthly": {
-        "artis": 8305,
+        "artis": 4562,
         "sira": 13,
         "dil": "typescript"
       }
     },
-    "cursor/plugins": {
+    "anthropics/sandbox-runtime": {
       "monthly": {
-        "artis": 5467,
-        "sira": 14,
+        "artis": 1603,
+        "sira": 16,
         "dil": "typescript"
       }
     },
-    "ruvnet/ruflo": {
+    "github/docs": {
       "monthly": {
-        "artis": 7545,
-        "sira": 16,
+        "artis": 764,
+        "sira": 17,
         "dil": "typescript"
       }
     },
     "microsoft/playwright": {
       "monthly": {
-        "artis": 2479,
-        "sira": 17,
+        "artis": 2644,
+        "sira": 18,
         "dil": "typescript"
       }
     },
     "google-gemini/gemini-cli": {
       "monthly": {
-        "artis": 2032,
-        "sira": 18,
+        "artis": 2039,
+        "sira": 19,
         "dil": "typescript"
       }
     },
-    "LibreSpark/LibreTV": {
+    "Renhuai123/ziwei-doushu": {
       "monthly": {
-        "artis": 10067,
+        "artis": 13844,
         "sira": 20,
         "dil": "typescript"
       }
     },
-    "makecindy/cindy": {
-      "monthly": {
-        "artis": 6655,
-        "sira": 21,
-        "dil": "typescript"
-      }
-    },
-    "mksglu/context-mode": {
-      "monthly": {
-        "artis": 8203,
-        "sira": 2,
-        "dil": "javascript"
-      }
-    },
     "rorygallagher2024/glasshouse": {
       "monthly": {
-        "artis": 1527,
+        "artis": 1487,
         "sira": 3,
-        "dil": "javascript"
-      }
-    },
-    "michael-denyer/pstack-claude": {
-      "monthly": {
-        "artis": 2527,
-        "sira": 4,
         "dil": "javascript"
       }
     },
     "citrolabs/ego-lite": {
       "monthly": {
-        "artis": 5275,
+        "artis": 5583,
+        "sira": 4,
+        "dil": "javascript"
+      }
+    },
+    "DuarteSantos8/openGym": {
+      "monthly": {
+        "artis": 9809,
         "sira": 5,
         "dil": "javascript"
       }
     },
     "mrdoob/three.js": {
       "monthly": {
-        "artis": 1876,
+        "artis": 2105,
         "sira": 6,
         "dil": "javascript"
       }
     },
-    "DuarteSantos8/openGym": {
+    "hmjz100/LinkSwift": {
       "monthly": {
-        "artis": 12537,
+        "artis": 18020,
+        "sira": 7,
+        "dil": "javascript"
+      }
+    },
+    "withmarbleapp/os-taxonomy": {
+      "monthly": {
+        "artis": 2914,
         "sira": 8,
         "dil": "javascript"
       }
     },
-    "Minglink/dsh-infinite-gen-5": {
+    "jquery/jquery": {
       "monthly": {
-        "artis": 1669,
+        "artis": 412,
         "sira": 9,
         "dil": "javascript"
       }
     },
-    "algorithm-visualizer/algorithm-visualizer": {
+    "MichaelCade/90DaysOfDevOps": {
       "monthly": {
-        "artis": 598,
-        "sira": 11,
-        "dil": "javascript"
+        "artis": 1105,
+        "sira": 5,
+        "dil": "shell"
       }
     },
-    "plugin87/ux-ui-agent-skills": {
+    "msitarzewski/agency-agents": {
       "monthly": {
-        "artis": 1612,
-        "sira": 12,
-        "dil": "javascript"
+        "artis": 8808,
+        "sira": 8,
+        "dil": "shell"
       }
     },
-    "react/react": {
+    "tw93/Mole": {
       "monthly": {
-        "artis": 3374,
+        "artis": 4953,
+        "sira": 9,
+        "dil": "shell"
+      }
+    },
+    "StressOzz/Zapret-Manager": {
+      "monthly": {
+        "artis": 273,
         "sira": 13,
-        "dil": "javascript"
-      }
-    },
-    "expo/skills": {
-      "monthly": {
-        "artis": 1432,
-        "sira": 4,
         "dil": "shell"
       }
     },
-    "nvm-sh/nvm": {
+    "google/oss-fuzz": {
       "monthly": {
-        "artis": 679,
-        "sira": 6,
+        "artis": 225,
+        "sira": 15,
         "dil": "shell"
       }
     },
-    "docker-mailserver/docker-mailserver": {
+    "Dammyjay93/interface-design": {
       "monthly": {
-        "artis": 857,
-        "sira": 8,
-        "dil": "shell"
-      }
-    },
-    "EpicGames/unreal-engine-skills-for-claude-code-plugin": {
-      "monthly": {
-        "artis": 1599,
-        "sira": 9,
-        "dil": "shell"
-      }
-    },
-    "PaperMC/Folia": {
-      "monthly": {
-        "artis": 342,
-        "sira": 11,
+        "artis": 199,
+        "sira": 16,
         "dil": "shell"
       }
     },
     "edoardottt/awesome-hacker-search-engines": {
       "monthly": {
-        "artis": 235,
-        "sira": 12,
-        "dil": "shell"
-      }
-    },
-    "pi-hole/pi-hole": {
-      "monthly": {
-        "artis": 627,
-        "sira": 13,
-        "dil": "shell"
-      }
-    },
-    "233boy/sing-box": {
-      "monthly": {
-        "artis": 569,
-        "sira": 14,
-        "dil": "shell"
-      }
-    },
-    "auscaster/frantic-board": {
-      "monthly": {
-        "artis": 401,
-        "sira": 15,
-        "dil": "shell"
-      }
-    },
-    "nyldn/claude-octopus": {
-      "monthly": {
-        "artis": 242,
-        "sira": 16,
+        "artis": 215,
+        "sira": 17,
         "dil": "shell"
       }
     }
@@ -4914,6 +5619,11 @@
       "tarih": "2026-11-09",
       "repo": 155,
       "okunamayan_sayfa": 0
+    },
+    {
+      "tarih": "2026-11-15",
+      "repo": 146,
+      "okunamayan_sayfa": 0
     }
   ],
   "skill_sayisi": {
@@ -4923,7 +5633,7 @@
     },
     "debpalash/VoiceStudio": {
       "skill": 4,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "mattpocock/skills": {
       "skill": 39,
@@ -4939,7 +5649,7 @@
     },
     "stablyai/orca": {
       "skill": 12,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "paperclipai/paperclip": {
       "skill": 83,
@@ -4963,27 +5673,27 @@
     },
     "DuarteSantos8/openGym": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "tashfeenahmed/freellmapi": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "msitarzewski/agency-agents": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "NVIDIA/OpenShell": {
       "skill": 28,
       "tarih": "2026-10-22"
     },
     "thedotmack/claude-mem": {
-      "skill": 45,
-      "tarih": "2026-11-09"
+      "skill": 47,
+      "tarih": "2026-11-15"
     },
     "dream-num/univer": {
       "skill": 0,
-      "tarih": "2026-10-22"
+      "tarih": "2026-11-15"
     },
     "mksglu/context-mode": {
       "skill": 13,
@@ -4995,7 +5705,7 @@
     },
     "anomalyco/opencode": {
       "skill": 24,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "HKUDS/CLI-Anything": {
       "skill": 151,
@@ -5003,7 +5713,7 @@
     },
     "hmjz100/LinkSwift": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "remotion-dev/remotion": {
       "skill": 87,
@@ -5023,7 +5733,7 @@
     },
     "pingdotgg/t3code": {
       "skill": 33,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "anthropics/knowledge-work-plugins": {
       "skill": 252,
@@ -5043,7 +5753,7 @@
     },
     "tw93/Mole": {
       "skill": 6,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "pablostanley/yoinks": {
       "skill": 0,
@@ -5055,7 +5765,7 @@
     },
     "vercel-labs/skills": {
       "skill": 5,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "VectifyAI/PageIndex": {
       "skill": 0,
@@ -5083,7 +5793,7 @@
     },
     "ahujasid/mcp-for-blender": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "akitaonrails/ai-memory": {
       "skill": 20,
@@ -5102,8 +5812,8 @@
       "tarih": "2026-11-09"
     },
     "withmarbleapp/os-taxonomy": {
-      "skill": 1,
-      "tarih": "2026-11-02"
+      "skill": 2,
+      "tarih": "2026-11-15"
     },
     "supabase/supabase": {
       "skill": 23,
@@ -5115,11 +5825,11 @@
     },
     "elie222/rakazo": {
       "skill": 7,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "davila7/claude-code-templates": {
-      "skill": 916,
-      "tarih": "2026-10-22"
+      "skill": 926,
+      "tarih": "2026-11-15"
     },
     "shiyu-coder/Kronos": {
       "skill": 0,
@@ -5163,7 +5873,7 @@
     },
     "vllm-project/vllm": {
       "skill": 9,
-      "tarih": "2026-10-22"
+      "tarih": "2026-11-15"
     },
     "tile-ai/tilelang": {
       "skill": 9,
@@ -5171,7 +5881,7 @@
     },
     "EpicGames/unreal-engine-skills-for-claude-code-plugin": {
       "skill": 3,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "Effect-TS/effect": {
       "skill": 13,
@@ -5179,7 +5889,7 @@
     },
     "citrolabs/ego-lite": {
       "skill": 4,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "hughhowey/neo": {
       "skill": 0,
@@ -5199,15 +5909,15 @@
     },
     "ranxianglei/billion-context": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "Renhuai123/ziwei-doushu": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "ohmyzsh/ohmyzsh": {
       "skill": 0,
-      "tarih": "2026-11-02"
+      "tarih": "2026-11-15"
     },
     "docker-mailserver/docker-mailserver": {
       "skill": 0,
@@ -5215,11 +5925,11 @@
     },
     "qist/tvbox": {
       "skill": 0,
-      "tarih": "2026-11-02"
+      "tarih": "2026-11-15"
     },
     "luongnv89/claude-howto": {
-      "skill": 37,
-      "tarih": "2026-11-09"
+      "skill": 43,
+      "tarih": "2026-11-15"
     },
     "twentyhq/twenty": {
       "skill": 13,
@@ -5231,7 +5941,7 @@
     },
     "nvm-sh/nvm": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "lightseekorg/tokenspeed": {
       "skill": 0,
@@ -5259,7 +5969,7 @@
     },
     "ophub/amlogic-s9xxx-armbian": {
       "skill": 0,
-      "tarih": "2026-10-22"
+      "tarih": "2026-11-15"
     },
     "datawhalechina/easy-vibe": {
       "skill": 2,
@@ -5291,7 +6001,7 @@
     },
     "edoardottt/awesome-hacker-search-engines": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "genspark-ai/genoffice": {
       "skill": 43,
@@ -5302,8 +6012,8 @@
       "tarih": "2026-11-09"
     },
     "HKUDS/Vibe-Trading": {
-      "skill": 91,
-      "tarih": "2026-10-22"
+      "skill": 90,
+      "tarih": "2026-11-15"
     },
     "koala73/worldmonitor": {
       "skill": 60,
@@ -5315,11 +6025,11 @@
     },
     "pi-hole/pi-hole": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "PaperMC/Folia": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "SimoneAvogadro/android-reverse-engineering-skill": {
       "skill": 1,
@@ -5343,7 +6053,7 @@
     },
     "omacom/omarchy": {
       "skill": 3,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "auscaster/frantic-board": {
       "skill": 0,
@@ -5351,11 +6061,11 @@
     },
     "fastapi/fastapi": {
       "skill": 1,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "CopilotKit/OpenBot": {
       "skill": 3,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "czlonkowski/n8n-skills": {
       "skill": 15,
@@ -5363,7 +6073,7 @@
     },
     "233boy/sing-box": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "Z4nzu/hackingtool": {
       "skill": 0,
@@ -5395,7 +6105,7 @@
     },
     "github/docs": {
       "skill": 1,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "233boy/v2ray": {
       "skill": 0,
@@ -5407,7 +6117,7 @@
     },
     "hestiacp/hestiacp": {
       "skill": 0,
-      "tarih": "2026-10-22"
+      "tarih": "2026-11-15"
     },
     "armbian/build": {
       "skill": 0,
@@ -5435,7 +6145,7 @@
     },
     "HKUDS/DeepTutor": {
       "skill": 8,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "tester-army/e2e": {
       "skill": 13,
@@ -5458,8 +6168,8 @@
       "tarih": "2026-11-09"
     },
     "JetBrains/thinkrail": {
-      "skill": 12,
-      "tarih": "2026-11-02"
+      "skill": 13,
+      "tarih": "2026-11-15"
     },
     "TauricResearch/TradingAgents": {
       "skill": 0,
@@ -5470,20 +6180,20 @@
       "tarih": "2026-11-02"
     },
     "NVIDIA/SkillSpector": {
-      "skill": 33,
-      "tarih": "2026-11-09"
+      "skill": 34,
+      "tarih": "2026-11-15"
     },
     "milind-soni/OpenMausBot": {
-      "skill": 6,
-      "tarih": "2026-11-09"
+      "skill": 8,
+      "tarih": "2026-11-15"
     },
     "AstrBotDevs/AstrBot": {
       "skill": 4,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "gitroomhq/postiz-app": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "danyuchn/asd-ste100-skill": {
       "skill": 1,
@@ -5519,7 +6229,7 @@
     },
     "anthropics/sandbox-runtime": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "coreyhaines31/marketingskills": {
       "skill": 53,
@@ -5547,7 +6257,7 @@
     },
     "D4Vinci/Scrapling": {
       "skill": 1,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "androoAGI/starnet": {
       "skill": 158,
@@ -5591,7 +6301,7 @@
     },
     "itsnotkubrick/3X-UI_KIT": {
       "skill": 0,
-      "tarih": "2026-11-02"
+      "tarih": "2026-11-15"
     },
     "higgsfield-ai/skills": {
       "skill": 9,
@@ -5599,11 +6309,11 @@
     },
     "google-gemini/gemini-cli": {
       "skill": 25,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "juliangarnier/anime": {
       "skill": 0,
-      "tarih": "2026-11-02"
+      "tarih": "2026-11-15"
     },
     "cjpais/Handy": {
       "skill": 0,
@@ -5623,7 +6333,7 @@
     },
     "StressOzz/Zapret-Manager": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "FlashML-org/FreeToken": {
       "skill": 0,
@@ -5671,7 +6381,7 @@
     },
     "fscarmen/sing-box": {
       "skill": 0,
-      "tarih": "2026-11-02"
+      "tarih": "2026-11-15"
     },
     "scenario-labs/skills": {
       "skill": 178,
@@ -5755,11 +6465,11 @@
     },
     "NVIDIA/auto-ontology": {
       "skill": 3,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "sherlock-project/sherlock": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "garrytan/gstack": {
       "skill": 72,
@@ -5767,55 +6477,55 @@
     },
     "The-PR-Agent/pr-agent": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "max-sixty/worktrunk": {
       "skill": 7,
       "tarih": "2026-11-09"
     },
     "vercel-labs/agent-browser": {
-      "skill": 11,
-      "tarih": "2026-11-09"
+      "skill": 12,
+      "tarih": "2026-11-15"
     },
     "DeanChensj/jiangshan-map": {
       "skill": 1,
       "tarih": "2026-11-09"
     },
     "google/skills": {
-      "skill": 192,
-      "tarih": "2026-11-09"
+      "skill": 203,
+      "tarih": "2026-11-15"
     },
     "rorygallagher2024/glasshouse": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "ConardLi/garden-skills": {
       "skill": 6,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "Crosstalk-Solutions/project-nomad": {
       "skill": 0,
       "tarih": "2026-11-09"
     },
     "pandas-dev/pandas": {
-      "skill": 0,
-      "tarih": "2026-11-09"
+      "skill": 1,
+      "tarih": "2026-11-15"
     },
     "liguobao/ds-harness-remote": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "MichaelCade/90DaysOfDevOps": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "ethanplusai/sellbird": {
       "skill": 0,
       "tarih": "2026-11-09"
     },
     "meta/astryx": {
-      "skill": 0,
-      "tarih": "2026-11-09"
+      "skill": 1,
+      "tarih": "2026-11-15"
     },
     "can1357/oh-my-pi": {
       "skill": 24,
@@ -5823,15 +6533,15 @@
     },
     "lobehub/lobehub": {
       "skill": 58,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "bradautomates/claude-video": {
       "skill": 1,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "Anil-matcha/Open-Generative-AI": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "tldraw/tldraw": {
       "skill": 29,
@@ -5842,8 +6552,8 @@
       "tarih": "2026-11-09"
     },
     "QwenLM/qwen-code": {
-      "skill": 46,
-      "tarih": "2026-11-09"
+      "skill": 45,
+      "tarih": "2026-11-15"
     },
     "open-gsd/gsd-core": {
       "skill": 144,
@@ -5879,7 +6589,7 @@
     },
     "google/oss-fuzz": {
       "skill": 6,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "Leaflet/Leaflet": {
       "skill": 0,
@@ -5895,7 +6605,7 @@
     },
     "wondelai/skills": {
       "skill": 196,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "kortix-ai/CompanyOS": {
       "skill": 144,
@@ -5903,11 +6613,11 @@
     },
     "bivlked/amneziawg-installer": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "ublue-os/bazzite": {
       "skill": 0,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "neuml/txtai": {
       "skill": 0,
@@ -5931,11 +6641,11 @@
     },
     "Dammyjay93/interface-design": {
       "skill": 1,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "google-deepmind/mujoco": {
-      "skill": 7,
-      "tarih": "2026-11-09"
+      "skill": 8,
+      "tarih": "2026-11-15"
     },
     "ParadevAI/Paradev": {
       "skill": 62,
@@ -5943,7 +6653,7 @@
     },
     "anthropics/claude-quickstarts": {
       "skill": 12,
-      "tarih": "2026-11-09"
+      "tarih": "2026-11-15"
     },
     "humanlayer/12-factor-agents": {
       "skill": 0,
@@ -5968,6 +6678,202 @@
     "pwnerblu/surrealra1n": {
       "skill": 0,
       "tarih": "2026-11-09"
+    },
+    "ZhuLinsen/daily_stock_analysis": {
+      "skill": 5,
+      "tarih": "2026-11-15"
+    },
+    "we-promise/sure": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "GoogleChrome/modern-web-guidance-src": {
+      "skill": 15,
+      "tarih": "2026-11-15"
+    },
+    "homeassistant-ai/ha-mcp": {
+      "skill": 8,
+      "tarih": "2026-11-15"
+    },
+    "backnotprop/plannotator": {
+      "skill": 23,
+      "tarih": "2026-11-15"
+    },
+    "openai/codex-security": {
+      "skill": 24,
+      "tarih": "2026-11-15"
+    },
+    "garrytan/gbrain": {
+      "skill": 256,
+      "tarih": "2026-11-15"
+    },
+    "kajisho5/ffmpeg-skill": {
+      "skill": 16,
+      "tarih": "2026-11-15"
+    },
+    "every-app/open-seo": {
+      "skill": 40,
+      "tarih": "2026-11-15"
+    },
+    "soxoj/maigret": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "tradermonty/claude-trading-skills": {
+      "skill": 94,
+      "tarih": "2026-11-15"
+    },
+    "louislam/uptime-kuma": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "mvanhorn/last30days-skill": {
+      "skill": 1,
+      "tarih": "2026-11-15"
+    },
+    "ChromeDevTools/chrome-devtools-mcp": {
+      "skill": 8,
+      "tarih": "2026-11-15"
+    },
+    "alibaba/open-code-review": {
+      "skill": 4,
+      "tarih": "2026-11-15"
+    },
+    "maillab/cloud-mail": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "Tencent/LoopForge": {
+      "skill": 21,
+      "tarih": "2026-11-15"
+    },
+    "jquery/jquery": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "a2ui-project/a2ui": {
+      "skill": 23,
+      "tarih": "2026-11-15"
+    },
+    "ag-ui-protocol/ag-ui": {
+      "skill": 23,
+      "tarih": "2026-11-15"
+    },
+    "google-labs-code/stitch-skills": {
+      "skill": 16,
+      "tarih": "2026-11-15"
+    },
+    "elementalsouls/Claude-BugHunter": {
+      "skill": 83,
+      "tarih": "2026-11-15"
+    },
+    "kunchenguid/firstmate": {
+      "skill": 30,
+      "tarih": "2026-11-15"
+    },
+    "lxgw/LxgwWenKai": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "ggml-org/ggml": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "bojieli/ai-infra-book": {
+      "skill": 12,
+      "tarih": "2026-11-15"
+    },
+    "expressjs/express": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "SnailSploit/Claude-Red": {
+      "skill": 79,
+      "tarih": "2026-11-15"
+    },
+    "NVIDIA/SkillEvaluator": {
+      "skill": 9,
+      "tarih": "2026-11-15"
+    },
+    "nolly-studio/cult-ui": {
+      "skill": 4,
+      "tarih": "2026-11-15"
+    },
+    "a2aproject/A2A": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "andrewyng/openworker": {
+      "skill": 16,
+      "tarih": "2026-11-15"
+    },
+    "fqscfqj/Y2A-Auto": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "assistant-ui/assistant-ui": {
+      "skill": 10,
+      "tarih": "2026-11-15"
+    },
+    "community-scripts/ProxmoxVE": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "PrefectHQ/fastmcp": {
+      "skill": 15,
+      "tarih": "2026-11-15"
+    },
+    "elder-plinius/G0DM0D3": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "unslothai/unsloth": {
+      "skill": 2,
+      "tarih": "2026-11-15"
+    },
+    "HKUDS/AutoSwarm": {
+      "skill": 10,
+      "tarih": "2026-11-15"
+    },
+    "Canner/WrenAI": {
+      "skill": 8,
+      "tarih": "2026-11-15"
+    },
+    "huytieu/COG-second-brain": {
+      "skill": 129,
+      "tarih": "2026-11-15"
+    },
+    "vernesong/OpenClash": {
+      "skill": 1,
+      "tarih": "2026-11-15"
+    },
+    "jqssun/android-titanium-browser": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "internetarchive/openlibrary": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "termux/termux-packages": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "kinsamanka/OpenStick-Builder": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "itsPLK/ps5-payload-manager": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "233boy/Xray": {
+      "skill": 0,
+      "tarih": "2026-11-15"
+    },
+    "gentoo/gentoo": {
+      "skill": 0,
+      "tarih": "2026-11-15"
     }
   }
 }

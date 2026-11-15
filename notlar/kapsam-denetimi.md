@@ -2,12 +2,12 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-15 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8508 · Arşivdeki skill kaydı: 5656 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8525 · Arşivdeki skill kaydı: 5670 · Bileşen (komut/agent): 662
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5610 | arşivde (ana sürüm) |
-| haric | 2569 | bilinçli hariç (test/örnek/şablon) |
+| secildi | 5626 | arşivde (ana sürüm) |
+| haric | 2570 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 176 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 73 | arşivde (Claude/Codex'e özel sürüm) |
 | ayri-surum | 42 | arşivde (aynı adlı farklı içerik, ayrı skill) |
@@ -72,6 +72,7 @@
 | czlonkowski/n8n-skills | 15 | secildi 15 |
 | dadederk/iOS-Accessibility-Agent-Skill | 1 | secildi 1 |
 | darkroomengineering/satus | 2 | secildi 2 |
+| digitalsamba/claude-code-video-toolkit | 17 | secildi 16, haric 1 |
 | dpconde/claude-android-skill | 1 | secildi 1 |
 | dreammis/social-auto-upload | 18 | secildi 18 |
 | earthtojake/text-to-cad | 12 | secildi 12 |
@@ -179,3 +180,4 @@
 - **ruvnet/ruflo**: `plugins/ruflo-ai-team/directory/skills/coordinate-team-work/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/launch-ai-team/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/manage-team-lifecycle/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/monitor-ai-team/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/remember-team-context/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/review-team-deliverables/SKILL.md` (^plugins/ruflo-ai-team/directory/)
 - **heygen-com/hyperframes**: `registry/blocks/canopy-part-title/SKILL.md` (^registry/blocks/), `registry/blocks/code-slice-hero/SKILL.md` (^registry/blocks/), `registry/blocks/cuboid-carousel/SKILL.md` (^registry/blocks/), `registry/blocks/frost-sequence-camera-orbit/SKILL.md` (^registry/blocks/), `registry/blocks/glass-shard-title/SKILL.md` (^registry/blocks/), `registry/blocks/orbit-card/SKILL.md` (^registry/blocks/), `registry/blocks/wireframe-portal-title/SKILL.md` (^registry/blocks/)
 - **OpenMontageInc/OpenMontage**: `.agents/skills/hyperframes-animation/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-cli/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-core/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-creative/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-media/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-registry/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/media-use/SKILL.md` (arsivden-cikarildi), `.agents/skills/motion-graphics/SKILL.md` (arsivden-cikarildi), `.agents/skills/music-to-video/SKILL.md` (arsivden-cikarildi), `.agents/skills/remotion-to-hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/website-to-video/SKILL.md` (arsivden-cikarildi), `.claude/skills/web-design-guidelines/SKILL.md` (arsivden-cikarildi)
+- **digitalsamba/claude-code-video-toolkit**: `.claude/skills/remotion-official/SKILL.md` (^\.claude/skills/remotion-official/)

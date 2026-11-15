@@ -99,7 +99,7 @@ _Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin
 - **Boyut:** 32 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### next-intl-add-language  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
+### next-intl-add-language  ·  github/awesome-copilot @ 7e40881  ·  puan 98 (A)
 
 - **Ne yapar:** Add new language to a Next.js + next-intl application
 - **Teknoloji:** next.js, typescript _(otomatik tespit)_

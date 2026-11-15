@@ -76,7 +76,7 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **İnceleme:** otomatik
 - **Not:** Aynı ad, farklı iş: tasarım sistemi denetimi/dokümantasyonu. Token mimarisi için tercih nextlevelbuilder design-system.
 
-### design-taste-frontend  ·  Leonxlnx/taste-skill @ 12af471  ·  puan 99 (A)
+### design-taste-frontend  ·  Leonxlnx/taste-skill @ 12af471  ·  puan 100 (A)
 
 - **Ne yapar:** tasteskill v2: 247 seçkin galeri sitesinden damıtılmış 'anti-slop' sanat yönetimi. Betik araştırılmış 20 yönden üçünü dağıtır, seçilen yöne göre tip sistemi, palet, hero ve bölüm kompozisyonlarını verir; katı ev kuralları, gerçek tarayıcı denetçisi (inspect.mjs) ve ekran görüntüsü üzerinden bak-düzelt döngüsü uygular. Uygulama ekranları (dashboard, ayarlar, gelen kutusu) için ayrı kurallar içerir.
 - **Ne zaman:** Landing page, pazarlama sitesi, portfolyo, ürün sayfası veya uygulama ekranı tasarlanır/yeniden tasarlanırken; sayfa 'şablon / AI yapımı' görünüyorsa. · **Ne zaman değil:** Mobil uygulama (mobile-design); var olan tasarım sistemine sıkı bağlı küçük bileşen işleri; Node 22 ve Chrome/Chromium yoksa betikler çalışmaz (yalnız lint.mjs).

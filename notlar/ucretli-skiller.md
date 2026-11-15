@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 46
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 47
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -20,9 +20,8 @@
 | `nano-banana-pro-openrouter` | 01-uygulama-entegrasyonlari | Tek işi OpenRouter üzerinden Gemini 3 Pro Image çağırmak; model ücretli, kredisiz anahtar çalışmaz |
 | `create-video` | 01-video-uretim-montaj | HeyGen Video Agent API |
 | `pika-h3-flex` | 01-video-uretim-montaj | Pika API anahtarı ve saniye başı ön ödemeli kredi gerekir (480p $0.01/sn'den); ücretsiz yol yok (yalnızca Pika'nın geçici tanıtım kotası) |
-| `video-toolkit` | 01-video-uretim-montaj | Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli |
 | `video-translate` | 01-video-uretim-montaj | HeyGen API |
-| `acestep` | 02-ses-muzik-konusma | RunPod uç noktası (RUNPOD_API_KEY) |
+| `acestep@openmontageinc` | 02-ses-muzik-konusma | Eski OpenMontage kopyası: yalnız RunPod uç noktası (RUNPOD_API_KEY) |
 | `dashscope` | 02-ses-muzik-konusma | Alibaba Cloud DashScope API |
 | `doubao-tts` | 02-ses-muzik-konusma | Volcengine Doubao API |
 | `fish-audio-tts` | 02-ses-muzik-konusma | fish.audio API |
@@ -38,8 +37,10 @@
 | `grok-media` | 03-ai-gorsel-video-modelleri | xAI API |
 | `heygen` | 03-ai-gorsel-video-modelleri | HeyGen API (kullanımdan kaldırıldı; create-video / avatar-video) |
 | `higgsfield-soul-id` | 03-ai-gorsel-video-modelleri | Soul karakter eğitimi Higgsfield'ın ücretli planını (Basic ve üstü) ister; ücretsiz planda çalışmaz. |
+| `ideogram4` | 03-ai-gorsel-video-modelleri | Ideogram v4 barındırılan API: görsel başı ücretli API anahtarı gerekir |
 | `kling-official` | 03-ai-gorsel-video-modelleri | Kling / fal.ai API |
 | `minimax-h3` | 03-ai-gorsel-video-modelleri | MiniMax / fal.ai API |
+| `runpod` | 03-ai-gorsel-video-modelleri | RunPod sunucusuz GPU: saniye başı ücretli, ücretsiz katman yok |
 | `seedance-2-0` | 03-ai-gorsel-video-modelleri | Seedance (Atlas Cloud / fal.ai / BytePlus) API |
 | `seedance-2-5` | 03-ai-gorsel-video-modelleri | Seedance API sağlayıcıları |
 | `trader-cloud-backtest` | 02-finans-hukuk-ik | Ağır işleri Anthropic Managed Agents bulutunda çalıştırır (ANTHROPIC_API_KEY, kullandıkça öde). Ücretsiz yol: yerel `trader-backtest`. |
@@ -53,7 +54,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 215
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 224
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -160,6 +161,7 @@
 | `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor (kredi sınırı dosyası var) ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli; Voice Turbo Free planda ayda 3 dk |
 | `moneyprinterturbo-video` | 01-video-uretim-montaj | LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla. |
 | `openmontage` | 01-video-uretim-montaj | Yerel araçlar ve stok kaynaklar ücretsiz; ElevenLabs, fal.ai gibi ücretli sağlayıcılar isteğe bağlı |
+| `parody-short` | 01-video-uretim-montaj | Görsel, klip ve ses kullanıcının Modal uç noktalarında (aylık ücretsiz kota, fazlası ücretli); müzik acemusic ücretsiz anahtarla |
 | `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
@@ -167,10 +169,16 @@
 | `remotion-best-practices@openai` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-maps` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
 | `remotion-maps@openai` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
+| `remotion@openmontageinc` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
+| `synthetic-ui-demo` | 01-video-uretim-montaj | Remotion şablonu yerelde render edilir; anlatıcı sesi ve konuşan kafa isteğe bağlı bulut GPU ya da ElevenLabs ister; Remotion lisansı şirketler için ücretli olabilir |
+| `video-toolkit` | 01-video-uretim-montaj | Eski OpenMontage kopyası: açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası var, fazlası ve RunPod ücretli (2026-11-15 yeniden değerlendirildi, önceden ucretli) |
+| `video_toolkit` | 01-video-uretim-montaj | Açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası, müzik acemusic ücretsiz anahtarla, ses efekti Openverse ücretsiz; ElevenLabs, Ideogram ve RunPod seçenekleri ücretli |
+| `acestep` | 02-ses-muzik-konusma | Varsayılan yol acemusic bulut API'si, ücretsiz anahtarla çalışır; Modal'da kendi barındırma isteğe bağlı (aylık ücretsiz kota, fazlası ücretli) |
 | `agents` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planındaki sesli agent dakikalarıyla denenebilir; üretim kullanımı ücretli |
 | `azure-speech-to-text` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: faster-whisper |
 | `azure-text-to-speech` | 02-ses-muzik-konusma | Azure Speech ücretsiz F0 katmanı (aylık sınırlı, kart ister); fazlası ücretli. Yerel ücretsiz yol: piper |
 | `elevenlabs` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planı (aylık sınırlı kota) ile kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Kokoro) |
+| `elevenlabs@openmontageinc` | 02-ses-muzik-konusma | ElevenLabs ücretsiz planı (aylık sınırlı kota) ile kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Kokoro) |
 | `krillinai-cli` | 02-ses-muzik-konusma | TTS/LLM için MiniMax gibi sağlayıcı anahtarı gerekebilir; yerel yollar (whisper) var |
 | `setup-api-key` | 02-ses-muzik-konusma | Sadece anahtar kurulum rehberi; ElevenLabs ücretsiz planıyla da çalışır |
 | `sound-effects` | 02-ses-muzik-konusma | ElevenLabs ücretsiz kotasıyla kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Openverse + yerleşik efektler) |
@@ -182,7 +190,9 @@
 | `higgsfield-marketplace-cards` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `higgsfield-product-photoshoot` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `ltx2` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
+| `ltx2@openmontageinc` | 03-ai-gorsel-video-modelleri | Açık model (topluluk lisansı: 10M$ altı gelirde ücretsiz); büyük GPU ya da bulut GPU gerekir |
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
+| `qwen-edit` | 03-ai-gorsel-video-modelleri | Varsayılan Modal uç noktası (aylık ücretsiz kota), RunPod seçeneği ücretli; Qwen-Image-2.1 seçeneği ticari olmayan lisanslı |
 | `video-prompt-builder` | 03-ai-gorsel-video-modelleri | Video planı ve istem yazımı ücretsizdir; planın Seedance/Higgsfield'da üretilmesi kredi harcar. |
 | `image` | 01-satis-pazarlama-musteri | Görsel üretimi için Gemini/Replicate/Ideogram/OpenAI API seçenekleri; Gemini API ücretsiz katmanı var, skill yönlendirme ve optimizasyon da yapar |
 | `video` | 01-satis-pazarlama-musteri | AI avatar (HeyGen/Synthesia) ücretli; Remotion gibi programatik yollar ücretsiz. Yöntem seçimi skill'de |

@@ -1,6 +1,6 @@
 {
   "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
-  "guncelleme": "2026-11-12",
+  "guncelleme": "2026-11-15",
   "siniflar": {
     "elevenlabs": [
       "kismen",
@@ -111,8 +111,8 @@
       "HeyGen / fal.ai / Kling / Gemini API ağ geçitleri"
     ],
     "acestep": [
-      "ucretli",
-      "RunPod uç noktası (RUNPOD_API_KEY)"
+      "kismen",
+      "Varsayılan yol acemusic bulut API'si, ücretsiz anahtarla çalışır; Modal'da kendi barındırma isteğe bağlı (aylık ücretsiz kota, fazlası ücretli)"
     ],
     "3d-asset-generation": [
       "kismen",
@@ -295,8 +295,8 @@
       "Eski OpenMontage kopyası; HeyGen isteğe bağlı"
     ],
     "video-toolkit": [
-      "ucretli",
-      "Açık modelleri bulut GPU'da (Modal/RunPod) çalıştırır; GPU kullanımı ücretli"
+      "kismen",
+      "Eski OpenMontage kopyası: açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası var, fazlası ve RunPod ücretli (2026-11-15 yeniden değerlendirildi, önceden ucretli)"
     ],
     "fal-3d": [
       "ucretli",
@@ -1653,6 +1653,50 @@
     "stil": [
       "ucretsiz",
       "Yalnız ücretsiz yerel araçlar (başsız Chrome, ffmpeg, Whisper) ve anahtarsız Openverse CC0 ses; ücretli servis yok"
+    ],
+    "video_toolkit": [
+      "kismen",
+      "Açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası, müzik acemusic ücretsiz anahtarla, ses efekti Openverse ücretsiz; ElevenLabs, Ideogram ve RunPod seçenekleri ücretli"
+    ],
+    "qwen-edit": [
+      "kismen",
+      "Varsayılan Modal uç noktası (aylık ücretsiz kota), RunPod seçeneği ücretli; Qwen-Image-2.1 seçeneği ticari olmayan lisanslı"
+    ],
+    "synthetic-ui-demo": [
+      "kismen",
+      "Remotion şablonu yerelde render edilir; anlatıcı sesi ve konuşan kafa isteğe bağlı bulut GPU ya da ElevenLabs ister; Remotion lisansı şirketler için ücretli olabilir"
+    ],
+    "parody-short": [
+      "kismen",
+      "Görsel, klip ve ses kullanıcının Modal uç noktalarında (aylık ücretsiz kota, fazlası ücretli); müzik acemusic ücretsiz anahtarla"
+    ],
+    "runpod": [
+      "ucretli",
+      "RunPod sunucusuz GPU: saniye başı ücretli, ücretsiz katman yok"
+    ],
+    "ideogram4": [
+      "ucretli",
+      "Ideogram v4 barındırılan API: görsel başı ücretli API anahtarı gerekir"
+    ],
+    "youtube-stats": [
+      "ucretsiz",
+      "YouTube Data/Analytics API kullanıcının kendi Google OAuth istemcisiyle, ücretsiz"
+    ],
+    "moviepy": [
+      "ucretsiz",
+      "Yerel MoviePy ve ffmpeg"
+    ],
+    "blender": [
+      "ucretsiz",
+      "Yerel Blender"
+    ],
+    "video-design": [
+      "ucretsiz",
+      "Tasarım kuralları; ek servis gerekmez"
+    ],
+    "acestep@openmontageinc": [
+      "ucretli",
+      "Eski OpenMontage kopyası: yalnız RunPod uç noktası (RUNPOD_API_KEY)"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

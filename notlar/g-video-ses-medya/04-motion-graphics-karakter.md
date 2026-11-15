@@ -2,7 +2,17 @@
 
 _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/19**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/20**
+
+### blender  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
+
+- **Ne yapar:** 3D scenes, character acting and product shots from a shot spec, rendered in Blender, as a finished film, as clips for any other build (moviepy, a video job, an editor), or as elements of a Remotion video (transparent characters over a scene, a Remotion render on a 3D laptop, phone or floating card that the camera pulls back from, an imported 3D model on a studio stage). A rigged cartoon cast descr
+- **Teknoloji:** ffmpeg, node, python, remotion, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 48 KB (SKILL.md 47.5 KB, yük buyuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
+- **İnceleme:** otomatik
 
 ### canvas-procedural-animation  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 85 (A)
 
@@ -58,7 +68,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 424 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### layers  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 66 (B)
+### layers  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 65 (B)
 
 - **Ne yapar:** Split one image into editable layers (PSD + PNG). 把一张图拆成图层（PSD + PNG）。
 - **Teknoloji:** api-anahtari, canvas, python _(otomatik tespit)_
@@ -144,7 +154,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.
 
-### stil  ·  yerel/site @ 23cb314  ·  puan 67 (B)
+### stil  ·  yerel/site @ 23cb314  ·  puan 68 (B)
 
 - **Ne yapar:** Referans görselden (poster, reklam, ekran görüntüsü) yeniden kullanılabilir bir animasyonlu anlatım videosu stili çıkarır ve bunu her konuda çalışan uzun, kendi başına yeten bir stil prompt'u (stil-prompt.md) olarak yazar; prompt'u taze oturumda test edip düzeltir. Yanında 11 hazır stilin tablosu ve 7'sinin uzun prompt'u gelir (cam, risograf, kesik kâğıt, izometrik, düz vektör, kinetik tipografi, parçacık).
 - **Ne zaman:** Bir görselin tarzında motion graphics / explainer video serisi yapılacaksa ya da hazır stillerden biriyle (HTML + window.seek + başsız Chrome + ffmpeg) konu anlatım videosu üretilecekse. · **Ne zaman değil:** Görseli birebir kopyalamak, logo ya da düzen almak için değil; HyperFrames/Remotion kompozisyonu ya da genel tasarım sistemi dosyası gerekiyorsa (visual-style) değil. Kurulu araç istemeyen hızlı tek görsel işi için ağır.
@@ -178,7 +188,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 16 KB (SKILL.md 8.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir. Kategori düzeltildi (05-3d-webgl → g-video-ses-medya/04-motion-graphics-karakter): web 3D'si değil, OpenMontage video boru hattının parçası (tools.graphics.threejs_world).
 
-### upload  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 68 (B)
+### upload  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 67 (B)
 
 - **Ne yapar:** Share a film to the lemo-wake gallery. 把动图投稿到作品墙。
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -199,7 +209,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 81 KB (SKILL.md 6.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Pratik mod tablosu ve galeri; a-tasarim/02 tasarım sistemi skilleriyle kısmen örtüşür.
 
-### wake  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 66 (B)
+### wake  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 65 (B)
 
 - **Ne yapar:** Turn one image into a ~5 s looping animation. 把一张图做成约 5 秒的循环动图。
 - **Teknoloji:** api-anahtari, canvas, ffmpeg, html, node, python, react, three.js _(otomatik tespit)_

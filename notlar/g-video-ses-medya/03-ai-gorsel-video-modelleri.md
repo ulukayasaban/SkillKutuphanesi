@@ -2,7 +2,7 @@
 
 _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **22/23**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **22/27**
 
 ### 3d-asset-generation  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 94 (A)
 
@@ -31,7 +31,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Ne yapar:** Google Antigravity'nin komut satırı aracı (agy) üzerinden görsel üretir ve dosyayı istenen klasöre kaydeder. Kullanıcı "Antigravity ile resim üret", "antigravity'den görsel yap", "agy ile görsel", "Antigravity'ye bağlanıp ... resmi çiz" gibi bir şey dediğinde kullan. Antigravity adı geçmeyen genel görsel isteklerinde kullanma.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-12, lisans Kendi (özel))
+- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-15, lisans Kendi (özel))
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -179,6 +179,16 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 5 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** Higgsfield hesabı ve Higgsfield CLI gerekir (CLI yoksa skill resmî kurulum betiğini ağdan indirip çalıştırır: curl … | sh; ilk kullanımda `higgsfield auth login`). Higgsfield MCP bağlayıcısı da kullanılabilir. Üretimler Higgsfield kredisi harcar; Soul eğitimi ücretli plan (Basic+) ister. video-prompt-builder üretilen varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir (proje dışı).
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (higgsfield-uretim grubunda tamamlayıcı). ÜCRETLİ: Soul eğitimi Basic+ plan ister. Kişisel koleksiyon, lisans dosyası yok. Çalıştırma testi yapılmadı.
 
+### ideogram4  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
+
+- **Ne yapar:** Prompting patterns for Ideogram 4 text-to-image — best-in-class in-image text rendering and exact color/layout control via structured JSON captions. Use when generating images that need legible on-image text (title cards, thumbnails, logos, signage, CTAs), precise brand colors, or controlled spatial layout. Triggers include title slide image, thumbnail with text, on-image text, legible text in ima
+- **Teknoloji:** api-anahtari, python, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 22 KB (SKILL.md 7.4 KB, yük kucuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
+- **İnceleme:** otomatik
+
 ### kling-official  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 93 (A)
 
 - **Ne yapar:** Kling resmi doğrudan API'si (KLING_API_KEY) için OpenMontage sağlayıcı kuralları: fal.ai Kling'den ayrımı, klasik/turbo görev protokolleri, Omni referans yapıları, TTS/avatar/lip-sync sınırları.
@@ -190,14 +200,24 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Ayrıştırıcıların karıştırılmaması gibi titiz kurallar; ağırlıkla geliştirici/entegrasyon odaklı.
 
-### ltx2  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 78 (B)
+### ltx2  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
+
+- **Ne yapar:** AI video generation with LTX-2.3 22B — text-to-video, image-to-video clips for video production. Use when generating video clips, animating images, creating b-roll, animated backgrounds, or motion content. Triggers include video generation, animate image, b-roll, motion, video clip, text-to-video, image-to-video.
+- **Teknoloji:** api-anahtari, docker, ffmpeg, git, python, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
+- **İnceleme:** otomatik
+
+### ltx2@openmontageinc  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 78 (B)
 
 - **Ne yapar:** LTX-2.3 22B modeliyle Modal (A100) üzerinde ~5 sn metinden/görselden video üretir; kare sayısı kuralı, çözünürlükler ve sinematik prompt rehberi içerir.
 - **Ne zaman:** Kendi Modal uç noktası kurulu, ucuz b-roll/arka plan klibi üretilecekse. · **Ne zaman değil:** OpenMontage kurulumunda (tools/ltx2.py yok); uç nokta yoksa.
 - **Teknoloji:** ltx, modal, python · **Paketler:** MODAL_LTX2_ENDPOINT_URL, claude-code-video-toolkit
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** OpenMontageInc (kurum, ★79720, son güncelleme 2026-11-09, lisans AGPL-3.0)
-- **Durum:** tercih · **Örtüşme:** ai-video-uretimi → alternatif
+- **Durum:** alternatif · **Örtüşme:** ai-video-uretimi → alternatif
 - **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu tools/ltx2.py OpenMontage c806645'te yok (claude-code-video-toolkit'ten); prompt rehberi yine de faydalı. LTX-2.5 için provider-model-refresh'e bak.
 
@@ -222,6 +242,26 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Durum:** tercih · **Örtüşme:** medya-saglayici-yonlendirme → birincil · **Roller:** ai-medya-uretici
 - **Boyut:** 7 KB (SKILL.md 6.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güncel model kataloğu ve katı yönlendirme kuralları; tamamen OpenMontage registry'sine bağlı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi. · 2026-11-12 yeniden incelendi (fecb9a1): Kling O3 (Standard/Pro/4K video, Kling Image O3) fal üzerinden eklendi (kling_o3_fal_video/image; FAL_KEY gerekir, resmi Kling kimlik bilgisi değil; 5 video modu, referans/V2V kuralları; eski Kling isteğinde O3 kendiliğinden seçilmez). Ücretli fal.ai yolu bir seçenek; değerlendirme aynı.
+
+### qwen-edit  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 87 (A)
+
+- **Ne yapar:** AI image editing prompting patterns for Qwen-Image (Qwen-Image-Edit-2511 by default, Qwen-Image-2.1 as a non-commercial Modal opt-in). Use when editing photos while preserving identity, reframing cropped images, changing clothing or accessories, adjusting poses, applying style transfers, or character transformations. Provides prompt patterns, parameter tuning, and examples.
+- **Teknoloji:** canvas, docker, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 20 KB (SKILL.md 6.3 KB, yük kucuk) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
+- **İnceleme:** otomatik
+
+### runpod  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 85 (A)
+
+- **Ne yapar:** Cloud GPU processing via RunPod serverless. Use when setting up RunPod endpoints, deploying Docker images, managing GPU resources, troubleshooting endpoint issues, or understanding costs. Covers all 5 toolkit images (qwen-edit, realesrgan, propainter, sadtalker, qwen3-tts).
+- **Teknoloji:** api-anahtari, docker, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** digitalsamba (kurum, ★2579, son güncelleme 2026-11-14, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta) · **Bağımlılık:** claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.
+- **İnceleme:** otomatik
 
 ### seedance-2-0  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 100 (A)
 

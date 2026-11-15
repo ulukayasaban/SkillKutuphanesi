@@ -34,12 +34,35 @@ save(audio, "voiceover.mp3")
 
 | Model | Quality | SSML Support | Notes |
 |-------|---------|--------------|-------|
-| `eleven_multilingual_v2` | Highest consistency | None | Stable, production-ready, 29 languages |
-| `eleven_flash_v2_5` | Good | `<break>`, `<phoneme>` | Fast, supports pause/pronunciation tags |
-| `eleven_turbo_v2_5` | Good | `<break>`, `<phoneme>` | Fastest latency |
-| `eleven_v3` | Most expressive | None | Alpha — unreliable, needs prompt engineering |
+| `eleven_multilingual_v2` | Highest consistency | None | Stable, production-ready, 29 languages. Toolkit default; supports style + speed |
+| `eleven_v4` | Most expressive | None (audio tags, IPA) | Newest (released 2026-09-28), 90+ languages, best clone accuracy. Stability + similarity only, no style/speed |
+| `eleven_flash_v2_5` | Good | `<break>`, `<phoneme>` | Fastest, cheapest; supports pause/pronunciation tags |
+| `eleven_v3` | Expressive | None | Previous generation — prefer v4 |
 
-**Choose:** multilingual_v2 for reliability, flash/turbo for SSML control, v3 for maximum expressiveness (expect retakes).
+**Choose:** multilingual_v2 for reliability and speed/style control, v4 for maximum expressiveness and cloned voices (test a few takes), flash for SSML control.
+
+**Deprecated:** `eleven_turbo_v2_5` → use `eleven_flash_v2_5` (same quality, lower latency; see [deprecated models](https://elevenlabs.io/docs/overview/models#deprecated-models)). The toolkit still accepts `--model eleven_turbo_v2_5`: it prints a one-line warning and sends `eleven_flash_v2_5`.
+
+### Eleven v4
+
+Released 2026-09-28 ([changelog](https://elevenlabs.io/docs/changelog/2026/9/28), [model page](https://elevenlabs.io/docs/overview/capabilities/text-to-speech/eleven-v4#model-variants)). The toolkit calls v4 through the **Text to Dialogue** API with one input (the narrator voice), as ElevenLabs recommends for content creation and long-form audio:
+
+```python
+from elevenlabs import DialogueInput
+
+audio = client.text_to_dialogue.convert(
+    inputs=[DialogueInput(text="[warm] Welcome to my video!", voice_id="JBFqnCBsd6RMkjVDRZzb")],
+    model_id="eleven_v4",
+    settings={"stability": 0.5, "similarity": 0.75},  # the only two settings v4 takes
+)
+save(audio, "voiceover.mp3")
+```
+
+- `uv run tools/voiceover.py --model eleven_v4 ...` (and `redub.py --model eleven_v4`) do this for you, warn once that `--style`/`--speed` are ignored, and split text over ~2,000 chars per request (the reliable dialogue limit) at sentence boundaries. Pace with `--max-wpm` instead of `--speed`.
+- `client.text_to_dialogue.convert_with_timestamps(...)` returns the same character alignment as TTS `convert_with_timestamps`, so `redub.py --sync` works with v4 and sends the same stability + similarity.
+- Pass `settings` as a dict: SDK versions before 2.69 type it with a stability-only model. The API reads `similarity` there since 2026-09-28 (it rejects an out-of-range value with a 422). Text to Dialogue needs `elevenlabs>=2.21`.
+- Direct delivery with audio tags (`[whispering]`, `[warm]`, `[sigh]`) and punctuation. Write tags that clearly describe the voice, because v4 can also read a tag as a sound effect.
+- `eleven_v4_turbo` is the real-time variant, available only over the Text to Dialogue WebSocket. The toolkit doesn't use it, since offline renders don't benefit from low latency.
 
 ### Voice Settings by Style
 
@@ -49,16 +72,22 @@ save(audio, "voiceover.mp3")
 | Conversational | 0.5-0.6 | 0.85 | 0.3-0.4 | 0.9-1.0 |
 | Energetic/YouTuber | 0.3-0.5 | 0.75 | 0.5-0.7 | 1.0-1.1 |
 
+`voiceover.py`'s own defaults (stability 0.85, style 0.0) sit at the top of the first row: steady but flat. A
+library voice picked for its preview usually sounds slower and duller at those defaults than in the preview.
+Lower the stability first (0.45 on v4 brought Marilyn back to her preview's pace and pitch range), then
+measure the takes with `voice_prosody.py measure` and listen.
+
 ### Pauses Between Sections
 
-**With flash/turbo models:** Use SSML break tags inline:
+**With flash models:** Use SSML break tags inline:
 ```
 ...end of section. <break time="1.5s" /> Start of next...
 ```
 Max 3 seconds per break. Excessive breaks can cause speed artifacts.
 
-**With multilingual_v2 / v3:** No SSML support. Options:
+**With multilingual_v2 / v3 / v4:** No SSML support. Options:
 - Paragraph breaks (blank lines) — creates ~0.3-0.5s natural pause
+- v3/v4: audio tags such as `[long pause]`
 - Post-process with ffmpeg: split audio and insert silence
 
 **WARNING:** `...` (ellipsis) is NOT a reliable pause — it can be vocalized as a word/sound. Do not use ellipsis as a pause mechanism.
@@ -70,9 +99,14 @@ Max 3 seconds per break. Excessive breaks can cause speed artifacts.
 - `nginx` → `engine-x`
 - Use dashes, capitals, apostrophes to guide pronunciation
 
-**SSML phoneme tags (flash/turbo only):**
+**SSML phoneme tags (flash only):**
 ```
 <phoneme alphabet="ipa" ph="ˈdʒeɪnəs">Janus</phoneme>
+```
+
+**IPA in v4:** no tags needed. Wrap the IPA in slashes and double quotes in place of the word:
+```
+The term "/ˌbaɪoʊˈkemɪstri/" refers to the study of chemical processes.
 ```
 
 ### Iterative Workflow
@@ -80,6 +114,16 @@ Max 3 seconds per break. Excessive breaks can cause speed artifacts.
 1. Generate → listen → identify pronunciation/pacing issues
 2. Adjust: phonetic spellings, break tags, voice settings
 3. Regenerate. If pauses aren't precise enough, add silence in post with ffmpeg rather than fighting the TTS engine.
+
+## Speech to Text (Scribe)
+
+```python
+with open("voiceover.mp3", "rb") as f:
+    result = client.speech_to_text.convert(file=f, model_id="scribe_v2", tag_audio_events=False)
+words = [w for w in result.words if w.type == "word"]  # .text, .start, .end (seconds)
+```
+
+`scribe_v2` is current and the toolkit default. `scribe_v1` is deprecated, with removal announced for 2026-07-09 ([changelog](https://elevenlabs.io/docs/changelog/2026/6/8)), but still answers, so `--stt-model scribe_v1` (redub) and `--model scribe_v1` (align_captions) still run it, with a warning. `scribe_v1_experimental`, a 2025 preview of scribe_v1, is accepted with a warning and sent as `scribe_v2`. The toolkit uses Scribe in `redub.py` (transcribe + `--sync` word timing) and `align_captions.py`.
 
 ## Voice Cloning
 
@@ -154,7 +198,7 @@ Use the toolkit's voiceover tool to generate audio for each scene:
 
 ```bash
 # Generate voiceover files for each scene
-python tools/voiceover.py --scene-dir public/audio/scenes --json
+uv run tools/voiceover.py --scene-dir public/audio/scenes --json
 
 # Output:
 # public/audio/scenes/
@@ -372,5 +416,31 @@ The `/generate-voiceover` command handles the full workflow:
 - Adam: `pNInz6obpgDQGcFmaJgB` (professional male)
 
 List all: `client.voices.get_all()`
+
+### Voice library (a particular accent or character)
+
+The premade voices are mostly American. For another accent, search the shared voice library: free to search
+and to hear, and every voice has a preview MP3.
+
+```bash
+curl -s -G https://api.elevenlabs.io/v1/shared-voices -H "xi-api-key: $ELEVENLABS_API_KEY" \
+  --data-urlencode "search=irish" -d gender=female -d page_size=30   # each voice has voice_id, accent, preview_url
+```
+
+- **Search with `search=`.** The `accent=` filter alone came back empty for `irish`, `scottish` and `british`.
+- **Using a library voice through the API needs a paid plan.** A free key gets 402 `paid_plan_required`.
+  The cheapest tier (Starter) is enough; the voice ID then works directly in `--voice-id` or a brand.
+- **Don't clone a preview into Qwen3 or another model.** The owner licensed the voice through ElevenLabs
+  (and is paid per use there), not for cloning elsewhere.
+- **Qwen3 VoiceDesign is not a substitute for an accent.** Irish, Scottish and Manchester briefs all came out
+  American. An accent has to come from a real recording.
+- Voices already picked by ear are in `assets/voices/library-shortlist.json`. Start there.
+
+### Brand voices
+
+A brand's `voice.json` can hold several narrators (`voices` map plus `default`), one per video:
+`voiceover.py --brand video-toolkit --voice bren`. The brand's `model`, `settings` (stability,
+similarityBoost, style, speed) and `maxWpm` apply wherever the command line left its default. See
+`docs/creating-brands.md`.
 
 For full API docs, see [reference.md](reference.md).

@@ -118,7 +118,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 12 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### constraint-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### constraint-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Projenin kalite çıtasını CONSTRAINTS.md'de yazılı sözleşmeye çevirir: hangi boyutların önemli olduğunu sorar, sayı yoksa makul varsayılan eşikler önerir, gereken araçları kurdurur ve diff'te çıtanın sessizce düşürülmesini (yeni @ts-ignore/eslint-disable, atlanan/silinen test, kaldırılan assertion, eşik düşürme) yakalar. Semgrep/axe çıktısını eşiğe göre zorlayan yerel bir betik (quality-gate.mjs) ve 'her komut gerçekten başarısız oluyor mu' doğrulaması içerir.
 - **Ne zaman:** Yazılı kalite çıtası yoksa; agent testleri atlayıp/susturup yeşile ulaşmaya çalışıyorsa; erişilebilirlik, performans veya kapsama eşiği tanımlanacaksa. · **Ne zaman değil:** Kısa ömürlü prototip/spike; zaten CI'da zorlanan, belgelenmiş standartları olan ekip.
@@ -179,7 +179,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 8 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### doubt-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### doubt-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Önemsiz olmayan her kararı (iddia → en küçük incelenebilir birim → taze bağlamlı karşıt inceleme → uzlaştırma → dur) döngüsünden geçirir; gerekirse Codex veya Gemini CLI ile çapraz model incelemesi yaptırır. Ana oturum orkestratörü için tasarlanmıştır.
 - **Ne zaman:** Yüksek riskli işler (üretim kimlik doğrulama, güvenlik, geri alınamaz migrasyon), tanıdık olmayan kod, planın gizli hata modlarının sınanması. · **Ne zaman değil:** Alt-agent/persona içinde (iç içe agent çağıramaz); hızın önemli olduğu düşük riskli işler.
@@ -190,7 +190,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 16 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, opsiyonel. Sınırlı döngü ve 'iç içe çalışamaz' uyarısı iyi düşünülmüş. Maliyetli (her kararda ek agent); yalnız planlayıcı/orkestratör rolüne uygun, persona skill listesine konmamalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### egm-bootstrap  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 81 (A)
+### egm-bootstrap  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
 
 - **Ne yapar:** Bootstrap directory README.md files across a repository subtree.
 - **Teknoloji:** css, git, node, python, typescript _(otomatik tespit)_
@@ -200,7 +200,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 31 KB (SKILL.md 23.2 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-brainstorm  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 81 (A)
+### egm-brainstorm  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
 
 - **Ne yapar:** Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). Helps turn half-baked concepts into structured hypotheses via clarifying questions, review, and iterative refinement. Produces an RFC summary for human review or more detailed design with egm-draft.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
@@ -210,7 +210,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 23 KB (SKILL.md 14.4 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-draft  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 81 (A)
+### egm-draft  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
 
 - **Ne yapar:** Drafts a design document section-by-section using the concepts brief from egm-brainstorm (or user notes). This is the second step in the Elephant-Goldfish (EGM) feature flow. Use when you are ready to write a design doc after aligning on requirements + solution.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -220,7 +220,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 32 KB (SKILL.md 17.1 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-drift-report  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 83 (A)
+### egm-drift-report  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 93 (A)
 
 - **Ne yapar:** Runs drift detection on all design documents to check for document and code consistency. Produces an actionable report with differences. Use when the user asks to detect drift or check for consistency across all design documents or READMEs in a directory.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -230,7 +230,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 5 KB (SKILL.md 3.1 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-resolve  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 81 (A)
+### egm-resolve  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
 
 - **Ne yapar:** The Elephant resolution skill. Ingests flat deficiency reports from concurrent Goldfish reviewers, applies automated fixes for PROPOSE FIX items via UI multiple-choice gates, and presents interactive negotiation/re-sync checkpoints.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -240,7 +240,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 12 KB (SKILL.md 8.3 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-review  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 81 (A)
+### egm-review  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
 
 - **Ne yapar:** Orchestrates the EGM Goldfish Review Protocol. Used as part of the EGM process to perform design document reviews. Executes five review phases: Initial Zoom Out Review, Comprehension Review, Design Critique, Intermediate Zoom Out Review, and Implementation Readiness.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -250,7 +250,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 35 KB (SKILL.md 23.5 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-review-loop  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 81 (A)
+### egm-review-loop  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
 
 - **Ne yapar:** Executes the Antagonistic-Review process from the Elephant-Goldfish Model (EGM) via an automated multi-agent review loop to audit documents against qualitative standards and structural templates, and automatically apply approved fixes. Use when reviewing design docs, READMEs, feature specifications, implementation plans, or verifying document completeness and tone.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -331,7 +331,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### idea-refine  ·  addyosmani/agent-skills @ 301b02b  ·  puan 91 (A)
+### idea-refine  ·  addyosmani/agent-skills @ 301b02b  ·  puan 95 (A)
 
 - **Ne yapar:** Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı, önerilen yön, doğrulanacak varsayımlar, MVP kapsamı ve 'yapmayacaklarımız' içeren bir belge (docs/ideas/) üretir.
 - **Ne zaman:** Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde. · **Ne zaman değil:** Ne yapılacağı belli, yalnız gereksinim ayrıntısı eksikse (brainstorming / interview-me); kod düzeyi planlama (writing-plans).
@@ -382,7 +382,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 6 KB (SKILL.md 5.5 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### incremental-implementation  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### incremental-implementation  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Değişiklikleri ince, doğrulanabilir dilimlerle teslim ettirir: dikey/sözleşme-önce/risk-önce dilimleme, 'önce sadelik' ve kapsam disiplini, her adımda derlenebilir kalma, yarım özellikleri feature flag arkasına alma, güvenli varsayılanlar ve geri alınabilirlik kuralları.
 - **Ne zaman:** Birden çok dosyaya dokunan her özellik/değişiklikte; plandan sıradaki görevi alırken; büyük kod bloğu yazma eğilimi olduğunda. · **Ne zaman değil:** Tek satırlık düzeltmeler; planın kendisini yazmak (writing-plans).
@@ -393,7 +393,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 9 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Kısa (9 KB), yığından bağımsız; 'Rule 0.5 kapsam disiplini' agent'ların taşmasını iyi engelliyor. ../../references/definition-of-done.md arşivde yok (yalnız 'ayrıca bkz').
 
-### interview-me  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### interview-me  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Kullanıcının gerçekte ne istediğini (yapması gerektiğini düşündüğü şeyi değil) bulmak için tek soruluk turlarla ~%95 güvene kadar görüşme yapar; her soruya bir tahmin ekler, niyeti kullanıcının kendi sözleriyle özetleyip açık onay ister ve durur.
 - **Ne zaman:** İstek 'kimin için / neden şimdi' bilgisi olmadan geldiğinde; kullanıcı 'beni sorgula', 'emin miyiz?' dediğinde; plan veya spec yazılmadan önce kısa niyet doğrulaması. · **Ne zaman değil:** Etkileşimsiz bağlamlar (CI, /loop); gereksinim zaten netse; tam tasarım belgesi gerekiyorsa (brainstorming).
@@ -445,7 +445,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısalık ilkesi iyi ama içerik writing-plans'ın sadeleştirilmiş türevi; plan dosyasını proje köküne yazma kuralı ve var olmayan ag-kit betiklerine atıf zayıflık.
 
-### planning-and-task-breakdown  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### planning-and-task-breakdown  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Spec'i bağımlılık grafiği çıkarıp dikey dilimlere bölerek sıralı, boyutlandırılmış görevlere çevirir; her görev için kabul ölçütü ve doğrulama, fazlar arası kontrol noktaları, riskler ve paralelleştirme fırsatları içeren plan şablonu verir.
 - **Ne zaman:** Spec hazır, iş büyük ve dilimlenmesi gerekiyorsa; tahmin/kapsam çıkarma veya paralel iş fırsatı aranırken; superpowers zinciri kullanılmayan projelerde. · **Ne zaman değil:** writing-plans kurulu bir rolde ikinci plan skilli olarak (aynı iş); tek adımlık işler.
@@ -656,7 +656,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### source-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### source-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Her uygulama kararını resmî dokümantasyona dayandırır: yığını ve sürümleri tespit eder, resmî belgeyi çeker (çekilen içeriği talimat değil veri sayar), belgelenmiş kalıpla uygular ve kaynakları kodda/yanıtta alıntılar.
 - **Ne zaman:** Framework/kütüphane sürümüne duyarlı işler; güncelliğini yitirmiş kalıp riski olan hızlı değişen API'ler (Next.js, React 19, Tailwind v4…). · **Ne zaman değil:** İnternet erişimi yoksa; saf algoritma/iş mantığı değişiklikleri.
@@ -677,7 +677,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### sparc-methodology  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### sparc-methodology  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) comprehensive development methodology with multi-agent orchestration
 - **Teknoloji:** api-anahtari, node, playwright, typescript _(otomatik tespit)_
@@ -697,7 +697,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### sparc-refine  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### sparc-refine  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Run the SPARC Refinement and Completion phases — review code, improve test coverage, validate against specification, and generate documentation
 - **Teknoloji:** typescript _(otomatik tespit)_
@@ -717,7 +717,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 4 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### spec-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 94 (A)
+### spec-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Kodlamadan önce spec yazdırır: kapsam kontrolü (gerekirse yetenek haritasına bölme), amaç/yığın/komutlar/yapı/test stratejisi/sınırlar/başarı ölçütü içeren spec, ardından plan, görevler ve uygulama aşamalarını kapılı bir akışla yürütür; spec'i canlı tutma kurallarını verir.
 - **Ne zaman:** Yeni proje/özellik başlarken spec veya PRD yoksa; tek bir isteğin birden çok bağımsız yeteneğe bölünmesi gerektiğinde. · **Ne zaman değil:** Küçük, net değişiklikler; gereksinim hâlâ belirsizse önce brainstorming/interview-me.

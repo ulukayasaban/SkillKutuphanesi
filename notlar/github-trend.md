@@ -1,6 +1,6 @@
 # GitHub Trend Takibi
 
-> `araclar/github-trend.py` üretir · son tarama 2026-11-09 · taranan dönemler: bugün, bu hafta, bu ay · diller: tümü, python, typescript, javascript, shell
+> `araclar/github-trend.py` üretir · son tarama 2026-11-15 · taranan dönemler: bugün, bu hafta, bu ay · diller: tümü, python, typescript, javascript, shell
 
 Trend'e giren kaynakların skilleri değerlendirmede bonus alır (trendde +10, son 90 gün +6, daha eski +2) ve
 `skill-ekle.py --oner` sıralamasında konuya uygun skiller arasında öne çıkar. Trend tek başına öneri sebebi değildir.
@@ -9,43 +9,49 @@ Trend'e giren kaynakların skilleri değerlendirmede bonus alır (trendde +10, s
 
 | Repo | Durum | Skill | Son görülme | İlk | Görülme | Şu an |
 |---|---|---|---|---|---|---|
-| AgriciDaniel/claude-seo | trendde | 26 | 2026-11-09 | 2026-11-02 | 2 | bu ay +9004 (#5 python) |
+| 666ghj/MiroFish | trendde | 0 | 2026-11-15 | 2026-11-15 | 1 | bu ay +6766 (#13 python) |
+| AgriciDaniel/claude-seo | trendde | 26 | 2026-11-15 | 2026-11-02 | 3 | bu ay +10402 (#10 tümü) |
 | DietrichGebert/ponytail | yakinda | 6 | 2026-10-22 | 2026-10-22 | 1 |  |
-| Donchitos/Claude-Code-Game-Studios | trendde | 74 | 2026-11-09 | 2026-10-22 | 3 | bu hafta +5235 (#5 tümü), bu ay +11184 (#1 shell) |
-| Graphify-Labs/graphify | trendde | 1 | 2026-11-09 | 2026-10-22 | 3 | bu hafta +4105 (#11 python) |
+| Donchitos/Claude-Code-Game-Studios | trendde | 74 | 2026-11-15 | 2026-10-22 | 4 | bu hafta +2802 (#1 shell), bu ay +12965 (#2 shell) |
+| Graphify-Labs/graphify | yakinda | 1 | 2026-11-09 | 2026-10-22 | 3 |  |
 | K-Dense-AI/scientific-agent-skills | yakinda | 177 | 2026-10-22 | 2026-10-22 | 1 |  |
-| Leonxlnx/taste-skill | yakinda | 1 | 2026-11-02 | 2026-10-22 | 2 |  |
-| Nutlope/hallmark | trendde | 1 | 2026-11-09 | 2026-11-02 | 2 | bu hafta +6356 (#8 tümü), bu ay +21146 (#2 tümü) |
+| Leonxlnx/taste-skill | trendde | 1 | 2026-11-15 | 2026-10-22 | 3 | bu hafta +4108 (#5 javascript), bu ay +20043 (#11 tümü) |
+| ManimCommunity/manim | trendde | 0 | 2026-11-15 | 2026-11-15 | 1 | bugün +73 (#13 python) |
+| Nutlope/hallmark | trendde | 1 | 2026-11-15 | 2026-11-02 | 3 | bu ay +25013 (#1 tümü) |
+| OpenMontageInc/OpenMontage | yakinda | 73 | 2026-11-02 | 2026-10-22 | 2 |  |
 | Panniantong/Agent-Reach | yakinda | 1 | 2026-11-02 | 2026-10-22 | 2 |  |
-| Vincentwei1021/video-shotcraft | trendde | 1 | 2026-11-09 | 2026-11-09 | 1 | bu hafta +2171 (#10 typescript), bu ay +7146 (#6 typescript) |
-| addyosmani/agent-skills | yakinda | 25 | 2026-11-02 | 2026-10-22 | 2 |  |
+| Vincentwei1021/video-shotcraft | trendde | 1 | 2026-11-15 | 2026-11-09 | 2 | bu ay +7617 (#13 tümü) |
+| addyosmani/agent-skills | trendde | 25 | 2026-11-15 | 2026-10-22 | 3 | bu hafta +3670 (#11 tümü) |
 | android/skills | yakinda | 37 | 2026-11-02 | 2026-10-22 | 2 |  |
 | anthropics/claude-code | yakinda | 10 | 2026-11-02 | 2026-10-22 | 2 |  |
-| anthropics/claude-plugins-official | trendde | 24 | 2026-11-09 | 2026-10-22 | 3 | bu ay +9152 (#3 python) |
-| anthropics/knowledge-work-plugins | trendde | 195 | 2026-11-09 | 2026-10-22 | 3 | bu ay +7947 (#4 python) |
-| anthropics/skills | trendde | 19 | 2026-11-09 | 2026-11-02 | 2 | bugün +792 (#7 tümü), bu hafta +3169 (#4 tümü), bu ay +9990 (#18 python) |
-| blader/humanizer | trendde | 1 | 2026-11-09 | 2026-11-02 | 2 | bu hafta +3118 (#17 tümü) |
-| OpenMontageInc/OpenMontage | yakinda | 72 | 2026-11-02 | 2026-10-22 | 2 |  |
-| cloudflare/security-audit-skill | trendde | 1 | 2026-11-09 | 2026-10-22 | 3 | bugün +1376 (#2 javascript), bu hafta +10600 (#1 javascript), bu ay +40289 (#3 tümü) |
-| cloudflare/skills | yakinda | 19 | 2026-11-02 | 2026-10-22 | 2 |  |
-| coreyhaines31/marketingskills | trendde | 53 | 2026-11-09 | 2026-11-02 | 2 | bu hafta +1446 (#7 javascript) |
+| anthropics/claude-plugins-official | trendde | 24 | 2026-11-15 | 2026-10-22 | 4 | bu ay +9575 (#14 python) |
+| anthropics/knowledge-work-plugins | trendde | 195 | 2026-11-15 | 2026-10-22 | 4 | bu ay +6228 (#12 tümü) |
+| anthropics/skills | trendde | 19 | 2026-11-15 | 2026-11-02 | 3 | bu hafta +6220 (#2 tümü), bu ay +13927 (#6 tümü) |
+| blader/humanizer | yakinda | 1 | 2026-11-09 | 2026-11-02 | 2 |  |
+| cloudflare/security-audit-skill | trendde | 1 | 2026-11-15 | 2026-10-22 | 4 | bu ay +43171 (#2 tümü) |
+| cloudflare/skills | trendde | 19 | 2026-11-15 | 2026-10-22 | 3 | bu hafta +69 (#16 shell), bu ay +319 (#18 shell) |
+| coreyhaines31/marketingskills | trendde | 53 | 2026-11-15 | 2026-11-02 | 3 | bu hafta +1303 (#2 javascript) |
 | czlonkowski/n8n-skills | yakinda | 15 | 2026-10-22 | 2026-10-22 | 1 |  |
-| earthtojake/text-to-cad | trendde | 12 | 2026-11-09 | 2026-10-22 | 3 | bu ay +7543 (#8 python) |
-| expo/skills | trendde | 24 | 2026-11-09 | 2026-10-22 | 3 | bu ay +1432 (#4 shell) |
-| github/awesome-copilot | trendde | 472 | 2026-11-09 | 2026-11-09 | 1 | bu hafta +312 (#3 javascript) |
+| earthtojake/text-to-cad | yakinda | 12 | 2026-11-09 | 2026-10-22 | 3 |  |
+| expo/skills | trendde | 24 | 2026-11-15 | 2026-10-22 | 4 | bugün +16 (#12 shell), bu ay +1323 (#4 shell) |
+| github/awesome-copilot | yakinda | 472 | 2026-11-09 | 2026-11-09 | 1 |  |
+| google/elephant-goldfish-model | trendde | 7 | 2026-11-15 | 2026-11-15 | 1 | bu hafta +5539 (#9 tümü) |
 | greensock/GSAP | yakinda | 0 | 2026-11-02 | 2026-11-02 | 1 |  |
-| heygen-com/hyperframes | trendde | 14 | 2026-11-09 | 2026-10-22 | 3 | bu ay +22360 (#5 tümü) |
-| mattpocock/skills | trendde | 31 | 2026-11-09 | 2026-10-22 | 3 | bu hafta +9635 (#12 tümü), bu ay +38864 (#10 shell) |
-| microsoft/playwright | trendde | 10 | 2026-11-09 | 2026-11-09 | 1 | bu ay +2479 (#17 typescript) |
-| morluto/rea | trendde | 1 | 2026-11-09 | 2026-10-22 | 2 | bu ay +425123 (#1 tümü) |
-| motiondivision/motion | yakinda | 2 | 2026-11-02 | 2026-11-02 | 1 |  |
-| mrdoob/three.js | trendde | 0 | 2026-11-09 | 2026-10-22 | 3 | bu ay +1876 (#6 javascript) |
+| harry0703/MoneyPrinterTurbo | trendde | 1 | 2026-11-15 | 2026-10-22 | 3 | bu hafta +3061 (#9 python), bu ay +13454 (#11 python) |
+| heygen-com/hyperframes | trendde | 15 | 2026-11-15 | 2026-10-22 | 4 | bu ay +21361 (#8 tümü) |
+| mattpocock/skills | trendde | 31 | 2026-11-15 | 2026-10-22 | 4 | bu hafta +7308 (#2 shell), bu ay +34530 (#10 shell) |
+| microsoft/playwright | trendde | 10 | 2026-11-15 | 2026-11-09 | 2 | bu ay +2644 (#18 typescript) |
+| morluto/rea | yakinda | 1 | 2026-11-09 | 2026-10-22 | 2 |  |
+| motion-canvas/motion-canvas | trendde | 0 | 2026-11-15 | 2026-11-15 | 1 | bugün +112 (#11 typescript) |
+| motiondivision/motion | trendde | 2 | 2026-11-15 | 2026-11-02 | 2 | bugün +74 (#7 typescript) |
+| mrdoob/three.js | trendde | 0 | 2026-11-15 | 2026-10-22 | 4 | bu ay +2105 (#6 javascript) |
 | multica-ai/andrej-karpathy-skills | yakinda | 1 | 2026-11-02 | 2026-11-02 | 1 |  |
-| obra/superpowers | trendde | 15 | 2026-11-09 | 2026-10-22 | 3 | bugün +518 (#3 shell), bu hafta +4360 (#3 shell), bu ay +19448 (#3 shell) |
-| pbakaus/impeccable | trendde | 2 | 2026-11-09 | 2026-10-22 | 3 | bu ay +28008 (#10 tümü) |
-| react/react | trendde | 14 | 2026-11-09 | 2026-10-22 | 2 | bu ay +3374 (#13 javascript) |
-| remotion-dev/remotion | trendde | 78 | 2026-11-09 | 2026-10-22 | 3 | bu ay +9422 (#7 typescript) |
-| tailwindlabs/tailwindcss | trendde | 0 | 2026-11-09 | 2026-11-09 | 1 | bugün +332 (#6 typescript) |
+| obra/superpowers | trendde | 15 | 2026-11-15 | 2026-10-22 | 4 | bu hafta +3820 (#4 shell), bu ay +19859 (#1 shell) |
+| pbakaus/impeccable | trendde | 2 | 2026-11-15 | 2026-10-22 | 4 | bu ay +29487 (#5 tümü) |
+| react/react | yakinda | 14 | 2026-11-09 | 2026-10-22 | 2 |  |
+| remotion-dev/remotion | trendde | 78 | 2026-11-15 | 2026-10-22 | 4 | bu ay +9305 (#9 typescript) |
+| ruvnet/ruflo | yakinda | 317 | 2026-11-09 | 2026-10-22 | 3 |  |
+| tailwindlabs/tailwindcss | yakinda | 0 | 2026-11-09 | 2026-11-09 | 1 |  |
 | vercel-labs/agent-skills | yakinda | 9 | 2026-10-22 | 2026-10-22 | 1 |  |
 | vercel/next.js | yakinda | 27 | 2026-10-22 | 2026-10-22 | 1 |  |
 
@@ -55,77 +61,73 @@ Skill içerenler (SKILL.md > 0) aday kaynaktır: `rehber/03-yeni-skill-ekleme.md
 
 | Repo | SKILL.md | Şu an |
 |---|---|---|
-| debpalash/VoiceStudio | 4 | bu ay +50169 (#6 tümü) |
-| stablyai/orca | 12 | bu ay +32085 (#11 typescript) |
-| affaan-m/ECC | 1068 | bu hafta +5337 (#2 javascript), bu ay +25860 (#10 javascript) |
-| pingdotgg/t3code | 33 | bu hafta +15379 (#7 tümü), bu ay +25840 (#7 tümü) |
-| thedotmack/claude-mem | 45 | bu hafta +6443 (#2 tümü), bu ay +17296 (#8 tümü) |
-| HKUDS/DeepTutor | 8 | bu hafta +3399 (#14 python), bu ay +16065 (#11 tümü) |
-| anomalyco/opencode | 24 | bu ay +14780 (#12 typescript) |
-| D4Vinci/Scrapling | 1 | bu hafta +8342 (#10 tümü), bu ay +13826 (#9 python) |
-| elayadesign/ai-design-skills | 2 | bu ay +12699 (#20 python) |
-| NVIDIA/auto-ontology | 3 | bu hafta +9327 (#1 tümü) |
-| chthollyphile/folia-major | 14 | bu ay +8305 (#13 typescript) |
-| mksglu/context-mode | 13 | bu ay +8203 (#2 javascript) |
-| milind-soni/OpenMausBot | 6 | bugün +1439 (#3 tümü), bu hafta +7621 (#6 tümü) |
-| ruvnet/ruflo | 403 | bu ay +7545 (#16 typescript) |
-| HKUDS/CLI-Anything | 151 | bu ay +6942 (#7 python) |
-| makecindy/cindy | 33 | bu ay +6655 (#21 typescript) |
-| cursor/plugins | 173 | bu ay +5467 (#14 typescript) |
-| vercel-labs/skills | 5 | bu hafta +1091 (#17 typescript), bu ay +5313 (#8 typescript) |
-| NVIDIA/SkillSpector | 33 | bu ay +5295 (#11 python) |
-| citrolabs/ego-lite | 4 | bu ay +5275 (#5 javascript) |
-| luongnv89/claude-howto | 37 | bu ay +5167 (#19 python) |
-| AstrBotDevs/AstrBot | 4 | bu ay +5133 (#6 python) |
-| tw93/Mole | 6 | bu hafta +813 (#12 shell), bu ay +4886 (#7 shell) |
-| elie222/rakazo | 7 | bugün +107 (#7 typescript), bu ay +4094 (#22 typescript) |
-| harry0703/MoneyPrinterTurbo | 1 | bu hafta +4048 (#9 python) |
-| github/spec-kit | 2 | bu hafta +4045 (#14 tümü) |
-| fastapi/fastapi | 1 | bu ay +2611 (#14 python) |
-| michael-denyer/pstack-claude | 68 | bu ay +2527 (#4 javascript) |
-| garrytan/gstack | 72 | bu hafta +2344 (#5 typescript) |
-| max-sixty/worktrunk | 7 | bu hafta +2313 (#3 tümü) |
-| vercel-labs/agent-browser | 11 | bugün +815 (#5 tümü), bu hafta +2190 (#11 tümü) |
-| wshobson/agents | 185 | bu ay +2146 (#12 python) |
-| DeanChensj/jiangshan-map | 1 | bu hafta +2135 (#6 javascript) |
-| scenario-labs/skills | 178 | bu hafta +2118 (#13 python) |
-| Orkas-AI/Orkas | 82 | bu hafta +2074 (#4 javascript) |
-| google-gemini/gemini-cli | 25 | bu ay +2032 (#18 typescript) |
-| nightly-labs/openbot | 110 | bu hafta +1937 (#7 typescript) |
-| google/skills | 192 | bu hafta +1931 (#7 python) |
-| jakubkrehel/skills | 15 | bu hafta +1857 (#13 tümü) |
-| Minglink/dsh-infinite-gen-5 | 8 | bu ay +1669 (#9 javascript) |
-| plugin87/ux-ui-agent-skills | 27 | bu ay +1612 (#12 javascript) |
-| EpicGames/unreal-engine-skills-for-claude-code-plugin | 3 | bu ay +1599 (#9 shell) |
-| ConardLi/garden-skills | 6 | bu hafta +1251 (#9 javascript) |
-| CopilotKit/OpenBot | 3 | bu hafta +1215 (#11 typescript) |
-| can1357/oh-my-pi | 24 | bu hafta +870 (#9 typescript) |
-| guillaumemeyer/watermarks-remover | 2 | bu hafta +860 (#10 python) |
-| lobehub/lobehub | 58 | bugün +95 (#12 typescript), bu hafta +798 (#6 typescript) |
-| omacom/omarchy | 3 | bugün +100 (#2 shell), bu hafta +567 (#11 shell) |
-| bradautomates/claude-video | 1 | bugün +92 (#8 python), bu hafta +551 (#16 python) |
-| github/docs | 1 | bu hafta +476 (#16 typescript) |
-| rohitg00/ai-engineering-from-scratch | 48 | bugün +449 (#6 python) |
-| tldraw/tldraw | 29 | bu hafta +365 (#8 typescript) |
-| dsx-ai-factory/nvke | 3 | bugün +345 (#2 tümü) |
-| QwenLM/qwen-code | 46 | bu hafta +271 (#14 typescript) |
-| open-gsd/gsd-core | 144 | bu hafta +246 (#11 javascript) |
-| nyldn/claude-octopus | 122 | bu ay +242 (#16 shell) |
-| jamiepine/voicebox | 4 | bugün +208 (#4 python) |
-| OthmanAdi/planning-with-files | 18 | bu hafta +175 (#6 shell) |
-| vercel-labs/json-render | 33 | bugün +149 (#11 typescript) |
-| poco-ai/Agentero | 13 | bugün +145 (#13 typescript) |
-| ericrisco/rsc-harness | 274 | bu hafta +138 (#10 javascript) |
-| googlecolab/google-colab-cli | 1 | bugün +104 (#5 python) |
-| google/oss-fuzz | 6 | bu hafta +104 (#5 shell) |
-| mantrakp04/ardia | 14 | bugün +85 (#9 typescript) |
-| wondelai/skills | 196 | bu hafta +83 (#14 shell) |
-| kortix-ai/CompanyOS | 144 | bugün +72 (#5 typescript) |
-| arcsin1/oh-my-ppt | 93 | bugün +51 (#15 typescript) |
-| Dammyjay93/interface-design | 1 | bu hafta +48 (#13 shell) |
-| google-deepmind/mujoco | 7 | bugün +41 (#8 tümü) |
-| ParadevAI/Paradev | 62 | bugün +39 (#8 typescript) |
-| anthropics/claude-quickstarts | 12 | bugün +32 (#4 tümü) |
-| snarktank/ralph | 2 | bugün +18 (#10 typescript) |
-| BigBodyCobain/Shadowbroker | 1 | bugün +16 (#9 python) |
-| 0xNyk/council-of-high-intelligence | 2 | bugün +14 (#11 shell) |
+| debpalash/VoiceStudio | 4 | bu ay +46324 (#6 python) |
+| stablyai/orca | 12 | bu ay +33348 (#8 typescript) |
+| pingdotgg/t3code | 33 | bu hafta +9668 (#16 typescript), bu ay +32857 (#3 tümü) |
+| HKUDS/DeepTutor | 8 | bu ay +18077 (#7 tümü) |
+| milind-soni/OpenMausBot | 8 | bu hafta +6413 (#8 tümü), bu ay +17957 (#22 typescript) |
+| thedotmack/claude-mem | 47 | bu ay +17051 (#4 tümü) |
+| D4Vinci/Scrapling | 1 | bu ay +15754 (#9 python) |
+| anomalyco/opencode | 24 | bu ay +14930 (#6 typescript) |
+| meta/astryx | 1 | bu hafta +13660 (#1 tümü) |
+| JetBrains/thinkrail | 13 | bu ay +7798 (#5 typescript) |
+| vercel-labs/agent-browser | 12 | bu hafta +4601 (#5 tümü), bu ay +7152 (#14 tümü) |
+| NVIDIA/SkillSpector | 34 | bu hafta +1248 (#13 python), bu ay +5926 (#8 python) |
+| CopilotKit/OpenBot | 3 | bu hafta +1900 (#6 typescript), bu ay +5846 (#12 typescript) |
+| citrolabs/ego-lite | 4 | bu ay +5583 (#4 javascript) |
+| luongnv89/claude-howto | 43 | bu ay +5494 (#15 python) |
+| AstrBotDevs/AstrBot | 4 | bu ay +5296 (#7 python) |
+| tw93/Mole | 6 | bu ay +4953 (#9 shell) |
+| vercel-labs/skills | 5 | bu ay +4598 (#7 typescript) |
+| ZhuLinsen/daily_stock_analysis | 5 | bu hafta +4526 (#6 tümü) |
+| GoogleChrome/modern-web-guidance-src | 15 | bugün +1220 (#10 tümü), bu hafta +4363 (#14 typescript), bu ay +4463 (#21 typescript) |
+| elie222/rakazo | 7 | bu hafta +966 (#15 typescript), bu ay +4462 (#15 typescript) |
+| vllm-project/vllm | 9 | bu ay +3371 (#17 python) |
+| NVIDIA/auto-ontology | 3 | bu hafta +3178 (#16 python) |
+| withmarbleapp/os-taxonomy | 2 | bu ay +2914 (#8 javascript) |
+| fastapi/fastapi | 1 | bu ay +2599 (#12 python) |
+| ConardLi/garden-skills | 6 | bu hafta +576 (#3 javascript), bu ay +2361 (#10 javascript) |
+| homeassistant-ai/ha-mcp | 8 | bu hafta +2348 (#5 python) |
+| backnotprop/plannotator | 23 | bugün +860 (#4 tümü), bu hafta +818 (#4 tümü), bu ay +2229 (#10 typescript) |
+| openai/codex-security | 24 | bu hafta +2176 (#4 typescript) |
+| google-gemini/gemini-cli | 25 | bu ay +2039 (#19 typescript) |
+| google-deepmind/mujoco | 8 | bu hafta +1859 (#10 tümü) |
+| anthropics/claude-quickstarts | 12 | bu hafta +1794 (#6 python) |
+| EpicGames/unreal-engine-skills-for-claude-code-plugin | 3 | bugün +5 (#8 shell), bu ay +1433 (#3 shell) |
+| garrytan/gbrain | 256 | bu hafta +1351 (#10 typescript) |
+| lobehub/lobehub | 58 | bu hafta +1258 (#7 typescript) |
+| QwenLM/qwen-code | 45 | bu hafta +1173 (#5 typescript) |
+| pandas-dev/pandas | 1 | bu ay +1062 (#16 python) |
+| kajisho5/ffmpeg-skill | 16 | bugün +285 (#6 python), bu hafta +1030 (#17 python) |
+| every-app/open-seo | 40 | bu hafta +992 (#11 typescript) |
+| tradermonty/claude-trading-skills | 94 | bugün +707 (#11 tümü), bu hafta +878 (#12 python) |
+| mvanhorn/last30days-skill | 1 | bu hafta +783 (#14 python) |
+| github/docs | 1 | bu ay +764 (#17 typescript) |
+| ChromeDevTools/chrome-devtools-mcp | 8 | bugün +718 (#5 tümü) |
+| google/skills | 203 | bu hafta +697 (#10 python) |
+| bradautomates/claude-video | 1 | bu hafta +689 (#15 python) |
+| alibaba/open-code-review | 4 | bugün +688 (#6 tümü) |
+| omacom/omarchy | 3 | bu hafta +555 (#8 shell) |
+| Tencent/LoopForge | 21 | bugün +484 (#7 tümü) |
+| a2ui-project/a2ui | 23 | bu hafta +408 (#9 typescript) |
+| davila7/claude-code-templates | 926 | bugün +179 (#5 python), bu hafta +401 (#8 python) |
+| ag-ui-protocol/ag-ui | 23 | bugün +393 (#2 tümü) |
+| google-labs-code/stitch-skills | 16 | bugün +248 (#3 tümü), bu hafta +356 (#8 typescript) |
+| elementalsouls/Claude-BugHunter | 83 | bugün +124 (#9 tümü), bu hafta +342 (#11 python) |
+| google/oss-fuzz | 6 | bu ay +225 (#15 shell) |
+| kunchenguid/firstmate | 30 | bu hafta +224 (#15 shell) |
+| Dammyjay93/interface-design | 1 | bu ay +199 (#16 shell) |
+| bojieli/ai-infra-book | 12 | bugün +151 (#4 python) |
+| SnailSploit/Claude-Red | 79 | bugün +135 (#8 python) |
+| NVIDIA/SkillEvaluator | 9 | bugün +133 (#12 tümü) |
+| nolly-studio/cult-ui | 4 | bugün +120 (#9 typescript) |
+| andrewyng/openworker | 16 | bugün +100 (#12 python) |
+| assistant-ui/assistant-ui | 10 | bugün +92 (#8 typescript) |
+| HKUDS/Vibe-Trading | 90 | bugün +83 (#14 python) |
+| wondelai/skills | 196 | bu hafta +80 (#7 shell) |
+| PrefectHQ/fastmcp | 15 | bugün +76 (#10 python) |
+| unslothai/unsloth | 2 | bugün +59 (#17 python) |
+| HKUDS/AutoSwarm | 10 | bugün +56 (#9 python) |
+| Canner/WrenAI | 8 | bugün +52 (#15 python) |
+| huytieu/COG-second-brain | 129 | bugün +37 (#7 python) |
+| vernesong/OpenClash | 1 | bugün +26 (#6 javascript) |

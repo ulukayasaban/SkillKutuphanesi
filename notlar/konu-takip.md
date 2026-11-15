@@ -1,24 +1,29 @@
 # Konu Takibi — yeni skill repoları
 
-> `araclar/konu-takip.py` üretir. Konular/sorgular: `kaynaklar.json` → `takip_konulari`. Adaylar otomatik EKLENMEZ; uygun olanlar `rehber/03-yeni-skill-ekleme.md` (çakışma + ücret kontrolü, kullanıcı onayı) ile eklenir. Değerlendirilen repo bir daha aday olarak gösterilmez: `konu-takip.py --karar owner/ad reddedildi "neden"`.
+> `araclar/konu-takip.py` üretir. Konular/sorgular: `kaynaklar.json` → `takip_konulari`. Adaylar otomatik EKLENMEZ; uygun olanlar `rehber/03-yeni-skill-ekleme.md` (çakışma + ücret kontrolü, kullanıcı onayı) ile eklenir. Reddedilen/eklenen repo bir daha aday olarak gösterilmez; izlenen repo ayrı bölümde durur: `konu-takip.py --karar owner/ad reddedildi|eklendi|izle "neden"`.
 
 ## e-ticaret → `h-is-alanlari/05-e-ticaret-pazaryeri`
 
-Son tarama: 2026-11-04 · eşleşen repo: 1374 · kütüphanede: 18 · değerlendirilmiş: 102 · **odaklı aday: 1** · dolaylı eşleşme: 504 (★10 altı 754 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-04 · eşleşen repo: 1374 · kütüphanede: 18 · değerlendirilmiş: 102 · **odaklı aday: 0** · dolaylı eşleşme: 504 (★10 altı 754 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
-| Purple-Horizons/printful-mcp | 32 | MIT | 2026-11-04 | 1 | printful | - | Model Context Protocol (MCP) server for Printful's print-on-demand API. Automate product browsing, order management, mockup generation & shi |
 
 ## mobil → `b-yazilim-gelistirme/08-mobil-uygulama`
 
-Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 20 · değerlendirilmiş: 94 · **odaklı aday: 3** · dolaylı eşleşme: 218 (★20 altı 580 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlendirilmiş: 94 · **odaklı aday: 0** · dolaylı eşleşme: 218 (★20 altı 580 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
-| VeryGoodOpenSource/vgv-ai-flutter-plugin | 175 | MIT | 2026-11-04 | 2 | flutter | - | AI plugin to enhance and accelerate Flutter & Dart development, built by Very Good Ventures |
-| yusufkaran/swiftui-autotest-skill | 23 | MIT | 2026-11-04 | 1 | swiftui | - | iOS/SwiftUI test automation & accessibility skill for Claude Code. Visual testing using computer use, memory leak analysis, and adding acces |
-| yohannescodes/apple-app-review-compliance | 20 | MIT | 2026-11-04 | 1 | app store connect | - | A reusable agent skill for reviewing Apple-platform apps against the App Store Review Guidelines.  |
+
+## İzlenenler (şimdilik değil; durum değişirse bak)
+
+| Repo | Tarih | Tekrar bak | Neden |
+|---|---|---|---|
+| Purple-Horizons/printful-mcp | 2026-11-07 | 2027-02-05 | Kullanıcı şu an Printful kullanmıyor ama ileride kullanabilir; kullanmaya başlarsa eklenir (MCP sunucusu gerektirir) |
+| VeryGoodOpenSource/vgv-ai-flutter-plugin | 2026-11-07 | 2027-02-05 | Mobil teknoloji henüz seçilmedi; Flutter seçilirse eklenir |
+| iart-ai/explainer-video-skills | 2026-11-15 | 2027-02-13 | Tek katkıcı; içerik Haziran'dan beri değişmedi; yardımcı betikler skill klasörü dışında |
+| yusufkaran/swiftui-autotest-skill | 2026-11-07 | 2027-02-05 | Mobil teknoloji henüz seçilmedi; iOS/Swift seçilirse eklenir |
 
 ## Değerlendirilen repolar (aday olarak gösterilmez)
 
@@ -111,6 +116,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 20 · değerlend
 | davepoon/buildwithclaude | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
 | diegosouzapw/awesome-omni-skill | reddedildi | 2026-10-22 | Toplama/ayna |
 | diegosouzapw/awesome-omni-skills | reddedildi | 2026-10-22 | Toplama/ayna |
+| digitalsamba/claude-code-video-toolkit | eklendi | 2026-11-15 | T2 kaynak olarak eklendi (16 skill, 2 birebir kopya); program olarak da izlenecek |
 | dpearson2699/swift-ios-skills | reddedildi | 2026-11-03 | lisans sorunlu (PolyForm Perimeter rakip ürün kısıtı) |
 | duyet/pricetrack | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
 | ehmo/platform-design-skills | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |

@@ -2,6 +2,26 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "digitalsamba/claude-code-video-toolkit",
+      "desen": "^(acestep|elevenlabs)$",
+      "kategori": "g-video-ses-medya/02-ses-muzik-konusma"
+    },
+    {
+      "repo": "digitalsamba/claude-code-video-toolkit",
+      "desen": "^(ltx2|qwen-edit|ideogram4|runpod)$",
+      "kategori": "g-video-ses-medya/03-ai-gorsel-video-modelleri"
+    },
+    {
+      "repo": "digitalsamba/claude-code-video-toolkit",
+      "desen": "^blender$",
+      "kategori": "g-video-ses-medya/04-motion-graphics-karakter"
+    },
+    {
+      "repo": "digitalsamba/claude-code-video-toolkit",
+      "desen": ".",
+      "kategori": "g-video-ses-medya/01-video-uretim-montaj"
+    },
+    {
       "repo": "avenoxai/higgsfield-studio",
       "desen": "^sunum-sitesi$",
       "kategori": "a-tasarim-onyuz/07-gorsel-sanat-sunum"
@@ -884,6 +904,7 @@
     "Leonxlnx/earshot": "g-video-ses-medya/02-ses-muzik-konusma",
     "YildizDikme/claude-video-edit": "g-video-ses-medya/01-video-uretim-montaj",
     "yohannescodes/apple-app-review-compliance": "b-yazilim-gelistirme/08-mobil-uygulama",
-    "leodavincs/kalem": "g-video-ses-medya/01-video-uretim-montaj"
+    "leodavincs/kalem": "g-video-ses-medya/01-video-uretim-montaj",
+    "digitalsamba/claude-code-video-toolkit": "g-video-ses-medya/01-video-uretim-montaj"
   }
 }

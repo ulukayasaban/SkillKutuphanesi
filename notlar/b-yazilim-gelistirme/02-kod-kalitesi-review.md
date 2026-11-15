@@ -24,7 +24,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 6 KB (SKILL.md 5.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### agent-code-review-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
+### agent-code-review-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 92 (A)
 
 - **Ne yapar:** Agent skill for code-review-swarm - invoke with $agent-code-review-swarm
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -130,7 +130,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 16 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve uygulanabilir; betikler proje tipini algılıyor. 'FINAL AUDIT REPORT' bölümüne atıf betik çıktısıyla tam örtüşmüyor; npm audit her değişiklikte gereksiz yavaş olabilir.
 
-### pair-programming  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### pair-programming  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** AI-assisted pair programming with multiple modes (driver/navigator/switch), real-time verification, quality monitoring, and comprehensive testing. Supports TDD, debugging, refactoring, and learning sessions. Features automatic role switching, continuous code review, security scanning, and performance optimization with truth-score verification.
 - **Teknoloji:** api-anahtari, git, html, node, react _(otomatik tespit)_
@@ -200,7 +200,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### postgresql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
+### postgresql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 98 (A)
 
 - **Ne yapar:** PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. Covers JSONB operations, array usage, custom types, schema design, function optimization, and PostgreSQL-exclusive security features like Row Level Security (RLS).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -285,7 +285,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 27 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlayıcı. Bu alanda gördüğüm en titiz sadeleştirme protokolü (kanıt kaydı, kör nokta bildirimi, ürün kararı ayrımı); dil bağımsız. metadata.internal işaretli ama Archify'a bağlı değil. mevcut-kod-iyilestirme profilinin ana skilli.
 
-### sql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
+### sql-code-review  ·  github/awesome-copilot @ 7e40881  ·  puan 96 (A)
 
 - **Ne yapar:** Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL, SQL Server, Oracle). Focuses on SQL injection prevention, access control, code standards, and anti-pattern detection. Complements SQL optimization prompt for complete development coverage.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -295,7 +295,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### verification-quality  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### verification-quality  ·  ruvnet/ruflo @ 98ddf41  ·  puan 97 (A)
 
 - **Ne yapar:** Check code quality and change risk with ruflo's shipped analysis commands (analyze diff, analyze complexity, analyze code), and run or extend ruflo's own CI regression guards. Use when assessing a change's risk, finding complexity hot spots, or adding a regression guard to ruflo. The truth-scoring and auto-rollback commands described later in this file are design notes, not shipped CLI commands.
 - **Teknoloji:** api-anahtari, git, html, node, typescript _(otomatik tespit)_

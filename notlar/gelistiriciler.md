@@ -115,6 +115,7 @@
 | [JohnHeibel/ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase) | JohnHeibel | kisi |  | 2766 | 2 | 2026-09-24 | MIT | 0 |
 | [yaojingang/yao-meta-skill](https://github.com/yaojingang/yao-meta-skill) | yaojingang | kisi |  | 2719 | 3 | 2026-08-17 | MIT | 1 |
 | [heyitsnoah/claudesidian](https://github.com/heyitsnoah/claudesidian) | heyitsnoah | kisi |  | 2606 | 3 | 2026-04-11 | MIT | 20 |
+| [digitalsamba/claude-code-video-toolkit](https://github.com/digitalsamba/claude-code-video-toolkit) | digitalsamba | kurum |  | 2579 | 17 | 2026-11-14 | MIT | 14 |
 | [Jakeschincariol/founder-skill](https://github.com/Jakeschincariol/founder-skill) | Jakeschincariol | kisi |  | 2452 | 1 | 2026-10-07 | MIT | 11 |
 | [zanwei/design-dna](https://github.com/zanwei/design-dna) | zanwei | kisi |  | 2079 | 3 | 2026-08-28 | MIT | 1 |
 | [pmndrs/cannon-es](https://github.com/pmndrs/cannon-es) | pmndrs | kurum | ✅ | 2069 | 41 | 2024-01-06 | MIT | 0 |
@@ -174,4 +175,5 @@
 | [avenoxai/higgsfield-studio](https://github.com/avenoxai/higgsfield-studio) | avenoxai | kisi |  | 14 | 1 | 2026-08-19 | yok | 6 |
 | [Trendyol/trendyol-integration-developer-tool](https://github.com/Trendyol/trendyol-integration-developer-tool) | Trendyol | kurum | ✅ | 11 | 3 | 2026-06-11 | yok | 1 |
 | [J-DTurner/etsy-api-skill](https://github.com/J-DTurner/etsy-api-skill) | J-DTurner | kisi |  | 6 | 1 | 2026-01-25 | MIT | 1 |
-| yerel/kendi | kullanıcı | kisi | ✅ | 0 | 1 | 2026-11-12 | Kendi (özel) | 4 |
+| yerel/kendi | kullanıcı | kisi | ✅ | 0 | 1 | 2026-11-15 | Kendi (özel) | 4 |
+| yerel/site | site (skill başına) | kisi |  | 0 | 1 | 2026-11-15 | belirtilmemiş | 1 |

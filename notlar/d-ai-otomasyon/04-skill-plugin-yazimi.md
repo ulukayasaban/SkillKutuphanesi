@@ -66,7 +66,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 33 KB (SKILL.md 13.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### create-mod  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### create-mod  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Scaffold a Claude Code mod (a plugin with a function-hooks module) from ruflo's governed template, then validate and test it. Use when the user asks for a mod, a function hook, or wants Claude Code to modify itself.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
@@ -180,7 +180,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 23 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — HyperFrames Pro özelliği: plan yoksa `reverse start` reddeder, skill yükseltme bağlantısını verir ve billing komutunu kullanıcıya bıraktırır. Ekrandaki kişileri fiyat söylemeden HeyGen ile yeniden çeker (kredi harcar) ve son render bulutta. Disiplinli doğrulama döngüsü (cuts, frame-range, diff) kaliteli. Başlangıç telemetri işareti (skill adı, hesaba bağlı) var; yalnızca hakkı olunan videolar için. Not: kategori otomatik atamayla yazılım-skill-yazımı altında; içeriği video üretimi.
 
-### skill-builder  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### skill-builder  ·  ruvnet/ruflo @ 98ddf41  ·  puan 97 (A)
 
 - **Ne yapar:** Create new Claude Code Skills with proper YAML frontmatter, progressive disclosure structure, and complete directory organization. Use when you need to build custom skills for specific workflows, generate skill templates, or understand the Claude Skills specification.
 - **Teknoloji:** api-anahtari, git, node, python, react, typescript _(otomatik tespit)_
@@ -309,7 +309,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 0 KB (SKILL.md 0.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 1/5 — Karar: SADECE ARŞİV. 140 baytlık boş şablon.
 
-### validate-plugin  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### validate-plugin  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
 
 - **Ne yapar:** Validate a Claude Code plugin structure, frontmatter, and MCP tool references
 - **Teknoloji:** node _(otomatik tespit)_

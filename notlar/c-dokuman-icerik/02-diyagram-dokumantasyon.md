@@ -160,7 +160,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.
 
-### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
+### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 98 (A)
 
 - **Ne yapar:** Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.
 - **Teknoloji:** - _(otomatik tespit)_

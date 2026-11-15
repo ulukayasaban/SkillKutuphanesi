@@ -70,7 +70,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 14 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (tamamlayıcı). Kısa ve tablolu; ağırlık yüzdeleri gibi bazı rakamlar kaynaksız tahmin. seo-fundamentals ile birlikte kullanılır.
 
-### humanizer  ·  blader/humanizer @ 0ef9fe5  ·  puan 100 (A)
+### humanizer  ·  blader/humanizer @ 0ef9fe5  ·  puan 98 (A)
 
 - **Ne yapar:** Yapay zekâ kokan metni, söylediğini değiştirmeden yazarın sesine çevirir. Wikipedia'nın 'Signs of AI writing' listesine dayanan 29 kalıbı (X değil Y karşıtlıkları, zorlama üçlüler, tire bolluğu, şişirilmiş iddialar, kalıp kapanışlar) işaretler, yeniden yazar ve olgu eklenip çıkmadığını kontrol eder.
 - **Ne zaman:** Blog, ürün açıklaması, e-posta, README gibi düzyazıyı yayına hazırlarken yapay zekâ izlerini temizlemek; Etsy listing metinleri dahil. · **Ne zaman değil:** Kod, teknik şartname ya da kısa UI metni için değil (ux-copy). Hızlı kısa kural listesi yeterliyse stop-slop.

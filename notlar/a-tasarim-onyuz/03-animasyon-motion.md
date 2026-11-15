@@ -120,7 +120,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 17 KB (SKILL.md 15.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gsap-framer-scroll-animation  ·  github/awesome-copilot @ 7e40881  ·  puan 100 (A)
+### gsap-framer-scroll-animation  ·  github/awesome-copilot @ 7e40881  ·  puan 98 (A)
 
 - **Ne yapar:** Use this skill whenever the user wants to build scroll animations, scroll effects, parallax, scroll-triggered reveals, pinned sections, horizontal scroll, text animations, or any motion tied to scroll position — in vanilla JS, React, or Next.js. Covers GSAP ScrollTrigger (pinning, scrubbing, snapping, timelines, horizontal scroll, ScrollSmoother, matchMedia) and Framer Motion / Motion v12 (useScro
 - **Teknoloji:** gsap, lenis, motion, next.js, node, react, vue _(otomatik tespit)_

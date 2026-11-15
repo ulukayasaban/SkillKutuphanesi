@@ -334,7 +334,7 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 37 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-explain  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
+### trader-explain  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
 
 - **Ne yapar:** Regulator-grade feature attribution for any LSTM/Transformer signal — single-entry PageRank ranks the top-K features that drove the prediction (ADR-126 Phase 6, ADR-123 single-entry PR)
 - **Teknoloji:** node, typescript _(otomatik tespit)_

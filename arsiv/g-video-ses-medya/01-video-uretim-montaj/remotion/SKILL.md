@@ -28,6 +28,13 @@ import { AnimatedBackground, SlideTransition, Label } from '../../../../lib/comp
 | `PointingHand` | Animated hand emoji with slide-in and pulse |
 | `MazeDecoration` | Animated isometric grid decoration for corners |
 
+## Motion Craft
+
+Before animating a scene, read [motion-craft.md](motion-craft.md). It covers durations and staggers in frames,
+choosing an ease by what the move does, springs by damping ratio, read time for on-screen text, a beat grid that
+doesn't drift, transitions with a cause, and the defaults that make a video look generated (several of which
+toolkit components produce unless you choose otherwise).
+
 ## Custom Transitions
 
 The toolkit includes a transitions library at `lib/transitions/` for scene-to-scene effects beyond the official `@remotion/transitions` package.
@@ -114,16 +121,13 @@ Run the showcase gallery to see all transitions:
 cd showcase/transitions && npm run studio
 ```
 
-## Toolkit Best Practices
+## Toolkit Conventions
 
-1. **Frame-based animations only** — Avoid CSS transitions/animations; they cause flickering during render
-2. **Use fps from useVideoConfig()** — Make animations frame-rate independent
-3. **Clamp interpolations** — Use `extrapolateRight: 'clamp'` to prevent runaway values
-4. **Use OffthreadVideo** — Better performance than `<Video>` for complex compositions
-5. **delayRender for async** — Always block rendering until data is ready
-6. **staticFile for assets** — Reference files from `public/` folder correctly
-7. **All projects use 30fps** — Timing: frames = seconds × 30
-8. **playbackRate must be constant** — For variable/extreme speeds, pre-process with FFmpeg
+These are choices specific to this toolkit. For general Remotion best practices (interpolation clamping, `useVideoConfig`, `delayRender`, `staticFile`, no CSS animations), see the `remotion-official` skill.
+
+1. **All projects use 30fps** — Timing: frames = seconds × 30
+2. **playbackRate must be constant** — For variable/extreme speeds, pre-process with FFmpeg
+3. **Video/audio components** — Templates use `<OffthreadVideo>` and `<Audio>` from `remotion`. Upstream now also documents `<Video>`/`<Audio>` from `@remotion/media` (newer, has trim props + pitch shifting). Both render correctly; prefer the toolkit's choice when extending existing templates for consistency.
 
 ## Project Timing Conventions
 

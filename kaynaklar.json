@@ -1240,6 +1240,36 @@
       "program": "nlm"
     },
     {
+      "repo": "digitalsamba/claude-code-video-toolkit",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^\\.claude/skills/",
+        "^skills/"
+      ],
+      "haric": [
+        "^\\.claude/skills/remotion-official/"
+      ],
+      "ad_devral": [
+        "ffmpeg",
+        "remotion",
+        "elevenlabs",
+        "acestep",
+        "ltx2",
+        "playwright-recording"
+      ],
+      "bagimlilik": "claude-code-video-toolkit kökü gerekir: repo klonlanır ve `uv sync` çalıştırılır; skiller `tools/*.py` betiklerini toolkit kökünden `uv run` ile çalıştırır (`VIDEO_TOOLKIT_ROOT`, yoksa `~/claude-code-video-toolkit`). Bulut GPU araçları (seslendirme, görsel, video klip, konuşan kafa) kullanıcının Modal ya da RunPod hesabına kurulan uç noktalarını ve toolkit kökündeki `.env` anahtarlarını ister; Remotion şablonları için Node, `blender` skili için Blender gerekir.",
+      "not": "Ürün reposu (T2): `.claude/skills/` altındaki 16 skill ile `skills/video-toolkit` (SKILL.md adı `video_toolkit`). `.claude/skills/remotion-official/` bilinçli hariç: remotion-dev/remotion'ın `remotion-best-practices` skilinin kopyası, kütüphanede resmî kaynaktan var. OpenMontage'daki ffmpeg, remotion, elevenlabs, acestep, ltx2, playwright-recording ve video-toolkit bu reponun eski kopyalarıdır; ilk altı çıplak ad `ad_devral` ile bu kaynağa geçti, OpenMontage kopyaları `@openmontageinc` kimliğiyle alternatif kalır (birebir aynı olan ffmpeg ve playwright-recording tek kayıt: OpenMontage kaydında `kopya_kaynaklar`). Program olarak da izlenir (programlar.json kartı ayrıca açılır).",
+      "eklendi": "2026-11-15",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-15",
+        "oturum": "Kütüphane oturumu: 'Program olarak ekle' (kaynak kaydı ve program olarak izleme; bilgisayara kurulum yok). Ad devri: 'Evet, asıl kaynak devralsın' (ffmpeg, remotion, elevenlabs, acestep, ltx2, playwright-recording; hiçbiri projede kullanılmıyordu, 2026-11-15 doğrulandı).",
+        "commit": "01e85f4bbf5b3edffc7f8138406f3acc1dc43c66",
+        "guvenlik_notu": "tools/ ve lib/ kodu gh api ile salt okundu: shell=True, eval ya da curl|sh yok; anahtarlar toolkit kökündeki .env'den okunup yalnız ilgili servise gider, kurulum komutları uç nokta kimliklerini bu .env'e yazar; ProPainter git clone ve pip kurulumu yalnız --install ya da etkileşimli y/N onayıyla ~/.video-toolkit altına yapılır; bulut GPU işlerinde R2 yoksa kullanıcının medyası herkese açık geçici sitelere (litterbox 24 saat, 0x0.st 30 gün) yüklenir, R2 varsa R2 gizli anahtarı kullanıcının kendi GPU uç noktasına iş yüküyle gönderilir."
+      }
+    },
+    {
       "repo": "yerel/kendi",
       "tip": "T7",
       "oncelik": 1,
