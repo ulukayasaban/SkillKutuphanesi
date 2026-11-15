@@ -1,12 +1,12 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-14 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-15 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8507 · Arşivdeki skill kaydı: 5655 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8508 · Arşivdeki skill kaydı: 5656 · Bileşen (komut/agent): 662
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5609 | arşivde (ana sürüm) |
+| secildi | 5610 | arşivde (ana sürüm) |
 | haric | 2569 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 176 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 73 | arşivde (Claude/Codex'e özel sürüm) |
@@ -134,7 +134,7 @@
 | xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
-| yerel/kendi | 3 | secildi 3 |
+| yerel/kendi | 4 | secildi 4 |
 | yohannescodes/apple-app-review-compliance | 1 | secildi 1 |
 | ythx-101/live-panel-skill | 1 | secildi 1 |
 | zanwei/design-dna | 1 | secildi 1 |

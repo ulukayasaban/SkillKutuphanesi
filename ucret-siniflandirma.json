@@ -1649,6 +1649,10 @@
     "antigravity-gorsel": [
       "kismen",
       "Antigravity Google hesabıyla ücretsiz kullanılır; görsel üretim kotası hesabın Google planına bağlıdır"
+    ],
+    "stil": [
+      "ucretsiz",
+      "Yalnız ücretsiz yerel araçlar (başsız Chrome, ffmpeg, Whisper) ve anahtarsız Openverse CC0 ses; ücretli servis yok"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

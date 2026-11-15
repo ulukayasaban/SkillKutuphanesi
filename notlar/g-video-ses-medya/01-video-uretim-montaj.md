@@ -388,7 +388,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 47 KB (SKILL.md 8.8 KB, yük orta) · **Bağımlılık:** Skill MoneyPrinterTurbo'yu kullanıcının ev dizinine kurar ve kurulum/üretim için onay sormaz; uv gerekir (yoksa ağdan kurar). LLM API anahtarı zorunlu, stok görüntü için Pexels anahtarı (ücretsiz) gerekir. Bazı video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; her biri ayrıca onay ister. Varsayılan çıktı Çince 9:16.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (konudan-stok-video grubunda birincil). Resmî ürün reposu (MIT), skill sürümü 1.3.2; yardımcı betik kurulum, anahtar doğrulama ve hata onarımını yürütür. Çalıştırma testi yapılmadı. DİKKAT: skill kurulum ve üretim için onay istemez, ev dizinine kurar; LLM anahtarı zorunlu; ücretli video sağlayıcıları ayrı onay ister.
 
-### motion-design  ·  lottiefiles/motion-design-skill @ f9a8a04  ·  puan 72 (B)
+### motion-design  ·  lottiefiles/motion-design-skill @ f9a8a04  ·  puan 64 (C)
 
 - **Ne yapar:** Applies motion design principles to create emotionally-driven, technically sound animations and transitions. Provides timing, easing, choreography, and Disney animation principles adapted for UI. Use when creating animations, transitions, micro-interactions, loading states, page transitions, scroll-triggered effects, or any motion work. Works with CSS, Framer Motion, GSAP, Lottie, Spring, or any a
 - **Teknoloji:** css, gsap, lottie _(otomatik tespit)_
@@ -419,7 +419,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 2715 KB (SKILL.md 23.7 KB, yük orta) · **Bağımlılık:** Lisans PolyForm Noncommercial 1.0.0: yalnızca ticari olmayan kullanım serbest. ffmpeg, node ve Python 3 ister; seslendirme için Kokoro (~/.cache/kokoro/venv altına kurulur) ve faster-whisper.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (urun-tanitim-filmi grubunda birincil). Tek konulu uzman repo; hareket kütüphanesi (lib/motion.js), 12 betik, ritim ve süreklilik ölçümü, 7 referans belgesi. Yerel ve ücretsiz çalışır. Çalıştırma testi yapılmadı. DİKKAT: lisans PolyForm Noncommercial 1.0.0 (yalnızca ticari olmayan kullanım); GitHub lisansı tanımadığı için kayıtta NOASSERTION görünür. Örnek filmler ve GIF'ler (cases/, gallery/, assets/) arşive alınmadı.
 
-### openmontage  ·  yerel/kendi @ e3196b0  ·  puan 73 (B)
+### openmontage  ·  yerel/kendi @ 995183e  ·  puan 73 (B)
 
 - **Ne yapar:** OpenMontage video stüdyosuna giriş skili: video isteğini bilgisayardaki OpenMontage kurulumuna yönlendirir. Önce program kılavuzunu (AGENT_GUIDE.md) okutur, venv python'u ve ffmpeg yolunu içeren komut kalıbını ve ön kontrolü verir, ücretsiz yerel yolu (stok görüntü, Piper Türkçe seslendirme, yerel araçlar) anlatır, bilinen tuzakları ve sabit paket sürümlerini yazar; /backlot, /ink-art, /animated-drawing, /reel isteklerini programın kendi komutlarına yönlendirir.
 - **Ne zaman:** Video üretimi, montaj, explainer, seslendirme, altyazı, YouTube indirme/transkript, arka plan silme, upscale gibi işler OpenMontage ile yapılacaksa. · **Ne zaman değil:** OpenMontage kurulu değilse ya da iş HyperFrames/Remotion ile tek başına kurulabilecek kısa bir kompozisyonsa (HyperFrames skilleri yeterli).

@@ -53,7 +53,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 214
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 215
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -176,6 +176,7 @@
 | `sound-effects` | 02-ses-muzik-konusma | ElevenLabs ücretsiz kotasıyla kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Openverse + yerleşik efektler) |
 | `speech-to-text` | 02-ses-muzik-konusma | ElevenLabs Scribe ücretsiz kotası var; fazlası ücretli. Tamamen ücretsiz yol: media-use transcribe (Whisper/Parakeet) |
 | `3d-asset-generation` | 03-ai-gorsel-video-modelleri | Üretim Atlas Cloud / fal.ai ile ücretli; CC0 Kenney kataloğu ve Blender yolu ücretsiz |
+| `antigravity-gorsel` | 03-ai-gorsel-video-modelleri | Antigravity Google hesabıyla ücretsiz kullanılır; görsel üretim kotası hesabın Google planına bağlıdır |
 | `comfyui` | 03-ai-gorsel-video-modelleri | Yerel ComfyUI ücretsiz; 'Partner Nodes' Comfy hesabı ve ön ödemeli kredi ister |
 | `higgsfield-generate` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |
 | `higgsfield-marketplace-cards` | 03-ai-gorsel-video-modelleri | Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister. |

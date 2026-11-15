@@ -1110,7 +1110,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 35 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-build-kmp-gradle-governance  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 56 (C)
+### kotlin-build-kmp-gradle-governance  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 49 (D)
 
 - **Ne yapar:** Use when reviewing or designing Gradle build structure for KMP projects — shared build logic, convention plugins, version catalogs, Android KMP plugin usage, source-set configuration, and module dependency hygiene.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1120,7 +1120,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-data-kmp-data-layer  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-data-kmp-data-layer  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when implementing or reviewing KMP data layers, including repositories, data sources, source-of-truth design, API exposure, conflict resolution, error handling, and main-safe data operations.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1130,7 +1130,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-kmp-code-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-kmp-code-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when reviewing implemented Kotlin Multiplatform / Compose Multiplatform code for architecture consistency, business-logic placement, state correctness, concurrency, Compose quality, design-system usage, security, performance, resilience, and maintainability.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1140,7 +1140,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 36 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-kmp-refactor-safety  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 63 (C)
+### kotlin-kmp-refactor-safety  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 56 (C)
 
 - **Ne yapar:** Use when the task is primarily a refactor, migration, reliability hardening, or architectural cleanup of existing Kotlin Multiplatform code — scope control, behavioral preservation, migration safety, compatibility, observability, and rollback planning.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1150,7 +1150,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### kotlin-navigation-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-navigation-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing navigation in Compose Multiplatform projects — route modeling, back stack ownership, argument passing, NavOptions, conditional flows, deep links, and adaptive navigation UI.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1160,7 +1160,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 16 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-platform-app-links-and-deep-links  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-platform-app-links-and-deep-links  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing Android deep links, web links, and App Links in KMP projects — intent-filter design, host verification, manifest scope, and assetlinks.json configuration.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1170,7 +1170,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 13 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-platform-kmp-bridges  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-platform-kmp-bridges  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing platform-specific integrations in KMP projects, including source-set placement, hierarchical sharing, expect/actual usage, platform API access, and shared-to-native abstraction boundaries.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1180,7 +1180,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 16 KB (SKILL.md 15.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-architecture-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-project-architecture-review  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when reviewing KMP architecture, feature proposals, PR structure, layer boundaries, state-holder design, Android entry-point discipline, source-set placement, modularization, and long-term maintainability in Kotlin Multiplatform / Compose Multiplatform projects.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1190,7 +1190,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 31 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-bugfix  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-project-bugfix  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when diagnosing and fixing bugs in a Kotlin Multiplatform project. Focus on root-cause analysis, minimal safe fixes, KMP correctness, UI/state/data/persistence/concurrency issues, and regression prevention.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1200,7 +1200,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-feature-implementation  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-project-feature-implementation  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when implementing or extending a feature in a Kotlin Multiplatform project. Provides pre-coding inspection, KMP source-set discipline, state pipeline design, architectural defaults, security/performance guardrails, and implementation rules. Forward-looking only — not a review skill.
 - **Teknoloji:** api-anahtari, html _(otomatik tespit)_
@@ -1210,7 +1210,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 31 KB (SKILL.md 12.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-modularization  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-project-modularization  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when designing, reviewing, or refactoring module boundaries in KMP or Android projects — feature, data, app, and common modules, dependency direction, visibility control, and granularity.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1220,7 +1220,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-project-state-management  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-project-state-management  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when choosing, implementing, or reviewing state-holder patterns in a KMP project — ViewModel, shared presenter, MVI, or StateFlow-in-common — including effect handling, UiState modeling, and testability.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1230,7 +1230,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 21 KB (SKILL.md 20.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-testing-kmp  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-testing-kmp  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing tests in KMP projects — unit tests, instrumented tests, Compose Multiplatform UI tests, test doubles, test strategy, stability, performance, and screenshot testing.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1240,7 +1240,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 19 KB (SKILL.md 18.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-ui-adaptive-resources  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-ui-adaptive-resources  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing adaptive Compose UI for KMP or Android projects — window-size layouts, adaptive navigation, canonical layouts, multi-window support, and resource strategy.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1250,7 +1250,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 18 KB (SKILL.md 18.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### kotlin-ui-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 61 (C)
+### kotlin-ui-compose-multiplatform  ·  mmiani/kotlin-kmp-claude-agent-skills @ 939786c  ·  puan 54 (C)
 
 - **Ne yapar:** Use when designing, implementing, or reviewing shared UI in Compose Multiplatform projects, including state-driven architecture, composable decomposition, layout/modifier discipline, adaptive behavior, and previewable shared UI in common source sets.
 - **Teknoloji:** html _(otomatik tespit)_

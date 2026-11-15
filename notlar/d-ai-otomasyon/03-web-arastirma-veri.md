@@ -262,7 +262,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### youtube-arama  ·  yerel/kendi @ e3196b0  ·  puan 77 (B)
+### youtube-arama  ·  yerel/kendi @ 995183e  ·  puan 77 (B)
 
 - **Ne yapar:** yt-dlp ile YouTube'da arama yapar; her sonuç için başlık, URL, kanal, izlenme sayısı, süre ve yayın tarihini döndürür. Sıralama (ilgi, izlenme, tarih) ve JSON çıktısı vardır; kanal ve oynatma listesi sonuçları elenir.
 - **Ne zaman:** YouTube'dan gerçek video listesi ve metadata gerektiğinde: konu araştırması, rakip kanal incelemesi, içerik fikri için izlenme karşılaştırması. · **Ne zaman değil:** Tek bir videonun altyazısı/transkripti ya da video indirmek için değil.

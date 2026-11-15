@@ -6,7 +6,8 @@ dosyalar). Depo private'tır. `node_modules/` ve `package-lock.json` alınmaz (`
 görünen dosya adları kaynak-cek.py tarafından atlanır ve uyarı verir.
 
 Şu an: `openmontage` (OpenMontage giriş skili; `/openmontage`, `/backlot`, `/ink-art`, `/animated-drawing`, `/reel` isteklerini de yönlendirir),
-`youtube-arama`. (`nlm-skill` 2026-11-12'de buradan çıkarıldı: nlm programının paketiyle gelir, projelere kopya değil program bağı olarak verilir: `skill-ekle.py <proje> --program-skill nlm:nlm-skill`; kart `programlar.json` → `nlm`. Arşivdeki eski kopyası emekli olarak durur, yeni kurulumda kullanılmaz.)
+`youtube-arama`, `antigravity-gorsel`, `stil` (Smokich'in "Video Stilleri" sitesinden alınan stil skili ve 7 hazır uzun stil prompt'u;
+kaynak, dosya özetleri ve güvenlik notu `stil/KAYNAK.md`'de). (`nlm-skill` 2026-11-12'de buradan çıkarıldı: nlm programının paketiyle gelir, projelere kopya değil program bağı olarak verilir: `skill-ekle.py <proje> --program-skill nlm:nlm-skill`; kart `programlar.json` → `nlm`. Arşivdeki eski kopyası emekli olarak durur, yeni kurulumda kullanılmaz.)
 
 Bu klasör asıl kaynaktır; `arsiv/` altındaki kopyası ondan üretilir (arşive elle dokunulmaz). Düzenleme ve yeni skill ekleme:
 `rehber/03-yeni-skill-ekleme.md` → "Kendi skillerim (yerel kaynak)".
