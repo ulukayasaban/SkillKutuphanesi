@@ -262,6 +262,32 @@
       ],
       "silme_gun": 30,
       "not": "Kimlik, profil, Chrome profili ve installation.json yedekte yok."
+    },
+    {
+      "kimlik": "deneme-nlm-0.16.5",
+      "yol": "~/Documents/Claude/deneme/nlm-0.16.5",
+      "tur": "diger",
+      "ne": "nlm 0.16.5 kırıcı sürüm denemesi (ayrı .venv; asıl kuruluma bağlı değil). Yedek değil, deneme klasörü; geri yükleme gerektirmez.",
+      "tarih": "2026-11-15",
+      "geri_yukleme": "Gerekmez (deneme). Silmek yalnız kullanıcı 'sil' deyince.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        ".venv"
+      ],
+      "silme_gun": 30,
+      "not": "Kullanıcı 2026-11-15: not al, zaman geçince silelim, şimdilik silme."
+    },
+    {
+      "kimlik": "deneme-openmontage-fecb9a1e",
+      "yol": "~/Documents/Claude/deneme/openmontage-fecb9a1e",
+      "tur": "diger",
+      "ne": "OpenMontage kırıcı sürüm denemesi klonu (2026-11-12, yaklaşık 2.9 GB). Yedek değil, deneme klasörü; ~/.openmontage'a bağlı değil.",
+      "tarih": "2026-11-12",
+      "geri_yukleme": "Gerekmez (deneme). Silmek yalnız kullanıcı 'sil' deyince.",
+      "gizli_icerir": "hayir",
+      "beklenen": [],
+      "silme_gun": 30,
+      "not": "2026-11-15'te kayda eklendi (önce kayıtsızdı). Kullanıcı: şimdilik silme."
     }
   ]
 }
