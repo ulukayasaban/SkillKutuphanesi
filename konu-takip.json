@@ -1005,6 +1005,11 @@
       "karar": "reddedildi",
       "neden": "7 SKILL.md'nin tamamı boş placeholder şablonu (PLACEHOLDER - NOT CONFIGURED, tüm alanlar TODO); listede kalır",
       "tarih": "2026-11-15"
+    },
+    "google/skills": {
+      "karar": "eklendi",
+      "neden": "kütüphaneye eklendi 2026-11-16 (197 skil, filtreli; kullanıcı onayı)",
+      "tarih": "2026-11-16"
     }
   },
   "konular": {

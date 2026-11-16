@@ -134,6 +134,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | gabrielmoreira/agent-skills-mirror | reddedildi | 2026-10-22 | Ayna kopya |
 | gchahal1982/pixeljury | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: ★6, güven 21 D, skill eşlemesi yok; Playwright+axe-core+Lighthouse zaten kartlarda |
 | getsentry/sentry-react-native | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| google/skills | eklendi | 2026-11-16 | kütüphaneye eklendi 2026-11-16 (197 skil, filtreli; kullanıcı onayı) |
 | haidrrrry/compose-kotlin-agent-skills | reddedildi | 2026-11-03 | mevcut skillerle çakışıyor |
 | hamen/compose_skill | eklendi | 2026-10-22 | Jetpack Compose denetimi ve agent. |
 | hashgraph-online/awesome-codex-plugins | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
