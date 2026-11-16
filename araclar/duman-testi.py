@@ -40,6 +40,12 @@ def kos(*args, cwd=KOK, timeout=900):
     return r.returncode, r.stdout + r.stderr
 
 
+def kos_stdout(*args, cwd=KOK, timeout=900):
+    """Yalnız stdout (--ozet-json sözleşmesi: stdout'a tek JSON; insan okunur metin stderr'e gidebilir)."""
+    r = subprocess.run(list(args), cwd=cwd, capture_output=True, text=True, timeout=timeout, stdin=subprocess.DEVNULL)
+    return r.returncode, r.stdout
+
+
 def adim(ad, kosul, ayrinti=""):
     SONUC.append((ad, bool(kosul)))
     print(("  ✅ " if kosul else "  ❌ ") + ad + ("" if kosul else f"\n     {ayrinti.strip()[-500:]}"))
@@ -159,7 +165,7 @@ def main():
               "git-durum": ["--gh-yok"]}
     for ad, ek in OZET_ARACLARI + [("aylik-ozet", ["--hizli"])]:
         arg = AG_YOK.get(ad, ek)
-        k, o = kos(PY, f"araclar/{ad}.py", *arg, "--ozet-json")
+        k, o = kos_stdout(PY, f"araclar/{ad}.py", *arg, "--ozet-json")
         obj, neden = ozet_json_gecerli(o) if k == 0 else (None, f"çıkış kodu {k}")
         adim(f"{ad} --ozet-json: tek JSON nesnesi, çıkış 0", obj is not None, neden + " " + o[-200:])
     k, o = kos(PY, "araclar/aylik-ozet.py", "--hizli")

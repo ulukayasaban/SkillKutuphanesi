@@ -23,6 +23,16 @@ from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, f
                    frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, repo_guncel, yol_istisna_denetimi)
 
 
+def github_muaf_repolar(tum_listeler, korunan_slug, konu_durum):
+    """Yıldız/liste uyarılarından muaf repolar (küçük harf): K-58 korunan listelerdeki repolar (kütüphaneye alınmaz) ve
+    konu-takip.json'da 'reddedildi' kararı olanlar. Karar olmayan yıldızlı repo muaf DEĞİL (gerçek eksik)."""
+    korunan = {x["nameWithOwner"].lower() for l in tum_listeler if l["slug"] in set(korunan_slug)
+               for x in l["items"]["nodes"] if x}
+    reddedilen = {r.lower() for r, v in ((konu_durum or {}).get("degerlendirilen") or {}).items()
+                  if isinstance(v, dict) and v.get("karar") == "reddedildi"}
+    return korunan | reddedilen
+
+
 def tetikleme_denetimi(skiller, hatalar, uyarilar):
     """Kurulumda projeye konacak SKILL.md'yi (onarım uygulanmış haliyle) araçların göreceği gibi okur: frontmatter
     dosya başında mı, YAML ayrışıyor mu, description var mı ve 40..1024 karakter mi? Arşivdeki orijinallere dokunmaz."""
@@ -746,15 +756,18 @@ def main():
         gsl = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(gsl)
         try:
-            liste_repolari = [x["nameWithOwner"] for l in gsl.listeler() if l["slug"] == hs for x in l["items"]["nodes"] if x]
+            tum_listeler = gsl.listeler()
+            liste_repolari = [x["nameWithOwner"] for l in tum_listeler if l["slug"] == hs for x in l["items"]["nodes"] if x]
         except RuntimeError:
-            liste_repolari = []
+            tum_listeler, liste_repolari = [], []
             uyarilar.append("GitHub skill listesi okunamadı; YENİ SKILL REPOSU kontrolü YAPILMADI")
+        muaf = github_muaf_repolar(tum_listeler, json_oku(KAYNAKLAR).get("korunan_listeler", []),
+                                   json_oku(KOK / "konu-takip.json", {}))
         for repo in liste_repolari:
-            if repo.lower() not in tanimli:
+            if repo.lower() not in tanimli and repo.lower() not in muaf:
                 uyarilar.append(f"YENİ SKILL REPOSU (skill listesinde, kütüphanede yok): {repo} -> rehber/03-yeni-skill-ekleme.md")
         for repo in r.stdout.split():
-            if repo.lower() not in tanimli:
+            if repo.lower() not in tanimli and repo.lower() not in muaf:
                 uyarilar.append(f"yıldızlı ama kaynaklar.json'da yok: {repo}")
     # Proje bilgisi tek yerde (notlar/proje-kullanimi.md): rapor güncel mi, kayıt dosyalarına proje adı sızmış mı?
     try:

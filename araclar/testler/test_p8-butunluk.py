@@ -510,6 +510,19 @@ t("26a duman: Yama A uyarısı tarih sınırlı kabul (sağlık kapısı kırmı
 t("26b duman adım 11 OZET_ARACLARI döngüsü ve aylik-ozet satır sınırı kodda var (statik)",
    "OZET_ARACLARI" in duman_py and "aylik-ozet" in duman_py and "15" in duman_py)
 
+# dogrula --github: korunan liste ve reddedilen kararı yıldız/liste uyarısından muaf, gerçek yeni repo değil
+_ls = [{"slug": "guvenlik", "items": {"nodes": [{"nameWithOwner": "Vx/Riskli"}, None]}},
+       {"slug": "yapay-zeka-skillleri", "items": {"nodes": [{"nameWithOwner": "Yeni/Aday"}]}}]
+_muaf = dg.github_muaf_repolar(_ls, ["guvenlik"], {"degerlendirilen": {"Sir/Red": {"karar": "reddedildi"}, "A/Eklendi": {"karar": "eklendi"}}})
+t("27a korunan listedeki repo uyarıdan muaf (büyük/küçük harfsiz)", "vx/riskli" in _muaf)
+t("27b reddedildi kararlı repo muaf", "sir/red" in _muaf)
+t("27c karar yok ya da 'eklendi' olan ve korunan olmayan repo muaf DEĞİL (gerçek eksik uyarı verir)",
+  "yeni/aday" not in _muaf and "a/eklendi" not in _muaf and "storytold/pdfcraft" not in _muaf)
+t("27d konu durumu boş/None ve liste yok -> hata vermez", dg.github_muaf_repolar([], [], None) == set())
+_dsrc = (ARACLAR / "dogrula.py").read_text(encoding="utf-8")
+t("27e dogrula iki uyarıda da muaf kümesini kullanıyor", _dsrc.count("not in muaf") == 2)
+t("27f duman adım 11 yalnız stdout okur (kos_stdout)", "def kos_stdout" in duman_py and 'kos_stdout(PY, f"araclar/{ad}.py"' in duman_py)
+
 for g in GECICI:
     shutil.rmtree(g, ignore_errors=True)
 basarisiz = [a for a, ok in SONUC if not ok]
