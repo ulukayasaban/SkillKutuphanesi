@@ -1,6 +1,6 @@
 # Skill Rehberi (Türkçe)
 
-Bu kütüphanedeki **5678 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
+Bu kütüphanedeki **5875 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
 `python3 araclar/skill-readme.py`. Test sonuçları: [TEST_RAPORU.md](TEST_RAPORU.md) · kurulum ve araçlar: [README.md](README.md).
 
 ## Skill nedir?
@@ -34,7 +34,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 
 ## Tablolar nasıl okunur?
 - **Ne yapar / Ne zaman:** elle incelenmiş 1270 skill'de inceleme notu; 4407 skill'de açıklamanın
-  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 1 skill'de henüz İngilizce.
+  otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 198 skill'de henüz İngilizce.
 - **Puan:** 0–100 otomatik değerlendirme ve derece (A–D): kaynağın bakımı, GitHub güveni, yapı, inceleme notu.
 - **Not:** alternatif sürüm, ücretli/kısmen ücretli (`notlar/ucretli-skiller.md`), Codex uyumu, 🔥trend.
 - **Gizli katalog:** entegrasyon kataloğu (tek bir uygulama için hazır otomasyon) ve repo-içi (bir projenin kendi
@@ -54,17 +54,17 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 27 |
 | [08-onyuz-test-kalite](skiller/a-tasarim-onyuz/08-onyuz-test-kalite.md) | Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı | 12 |
 
-### Yazılım Geliştirme (467)
+### Yazılım Geliştirme (631)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-planlama-metodoloji](skiller/b-yazilim-gelistirme/01-planlama-metodoloji.md) | Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini | 88 |
 | [02-kod-kalitesi-review](skiller/b-yazilim-gelistirme/02-kod-kalitesi-review.md) | Code review, sadeleştirme, temiz kod | 29 |
 | [03-test-hata-ayiklama](skiller/b-yazilim-gelistirme/03-test-hata-ayiklama.md) | TDD, hata ayıklama, doğrulama | 20 |
-| [04-mimari-api-veritabani](skiller/b-yazilim-gelistirme/04-mimari-api-veritabani.md) | Mimari, API/arayüz tasarımı, veritabanı, backend | 15 |
+| [04-mimari-api-veritabani](skiller/b-yazilim-gelistirme/04-mimari-api-veritabani.md) | Mimari, API/arayüz tasarımı, veritabanı, backend | 63 |
 | [05-git-pr-surum](skiller/b-yazilim-gelistirme/05-git-pr-surum.md) | Git, worktree, PR, sürüm/release, changelog | 25 |
-| [06-devops-guvenlik-performans](skiller/b-yazilim-gelistirme/06-devops-guvenlik-performans.md) | CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | 74 |
+| [06-devops-guvenlik-performans](skiller/b-yazilim-gelistirme/06-devops-guvenlik-performans.md) | CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | 179 |
 | [07-framework-ozel](skiller/b-yazilim-gelistirme/07-framework-ozel.md) | Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme) | 23 |
-| [08-mobil-uygulama](skiller/b-yazilim-gelistirme/08-mobil-uygulama.md) | Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans | 193 |
+| [08-mobil-uygulama](skiller/b-yazilim-gelistirme/08-mobil-uygulama.md) | Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans | 204 |
 
 ### Doküman ve İçerik (120)
 | Kategori | Kapsam | Skill |
@@ -74,10 +74,10 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 | [03-yazi-iletisim-icerik](skiller/c-dokuman-icerik/03-yazi-iletisim-icerik.md) | Yazı, iletişim, pazarlama/içerik, kariyer | 55 |
 | [04-not-alma-bilgi-yonetimi](skiller/c-dokuman-icerik/04-not-alma-bilgi-yonetimi.md) | Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni | 35 |
 
-### AI ve Otomasyon (350)
+### AI ve Otomasyon (375)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-claude-api-mcp](skiller/d-ai-otomasyon/01-claude-api-mcp.md) | Claude API, MCP sunucusu, model geçişi | 20 |
+| [01-claude-api-mcp](skiller/d-ai-otomasyon/01-claude-api-mcp.md) | Claude API, MCP sunucusu, model geçişi | 45 |
 | [02-agent-orkestrasyon](skiller/d-ai-otomasyon/02-agent-orkestrasyon.md) | Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları | 269 |
 | [03-web-arastirma-veri](skiller/d-ai-otomasyon/03-web-arastirma-veri.md) | Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma | 26 |
 | [04-skill-plugin-yazimi](skiller/d-ai-otomasyon/04-skill-plugin-yazimi.md) | Skill yazma, plugin/hook/komut geliştirme | 35 |
@@ -100,13 +100,13 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 |---|---|---|
 | [01-repo-gelistirici-skilleri](skiller/f-repo-ici/01-repo-gelistirici-skilleri.md) | Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için iç süreç skilleri; kendi projelerinde nad… | 114 |
 
-### İş Alanları (Bilgi Çalışanı) (1994)
+### İş Alanları (Bilgi Çalışanı) (2002)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-satis-pazarlama-musteri](skiller/h-is-alanlari/01-satis-pazarlama-musteri.md) | Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları | 198 |
+| [01-satis-pazarlama-musteri](skiller/h-is-alanlari/01-satis-pazarlama-musteri.md) | Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları | 204 |
 | [02-finans-hukuk-ik](skiller/h-is-alanlari/02-finans-hukuk-ik.md) | Finans/muhasebe, hukuk/sözleşme, insan kaynakları | 48 |
 | [03-operasyon-urun-isletme](skiller/h-is-alanlari/03-operasyon-urun-isletme.md) | Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama | 83 |
-| [04-veri-analizi-raporlama](skiller/h-is-alanlari/04-veri-analizi-raporlama.md) | İş verisi analizi, SQL, pano/rapor, öngörü | 10 |
+| [04-veri-analizi-raporlama](skiller/h-is-alanlari/04-veri-analizi-raporlama.md) | İş verisi analizi, SQL, pano/rapor, öngörü | 12 |
 | 05-e-ticaret-pazaryeri: [1](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-1.md) · [2](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-2.md) · [3](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-3.md) · [4](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-4.md) · [5](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-5.md) | E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listele… | 1655 |
 
 ### Bilim, Araştırma ve Mühendislik (378)

@@ -1,13 +1,13 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-15 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-16 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8533 · Arşivdeki skill kaydı: 5678 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8736 · Arşivdeki skill kaydı: 5875 · Bileşen (komut/agent): 662
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5634 | arşivde (ana sürüm) |
-| haric | 2570 | bilinçli hariç (test/örnek/şablon) |
+| secildi | 5831 | arşivde (ana sürüm) |
+| haric | 2576 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 176 | birebir kopya (tek kopya yeter) |
 | arac-varyanti | 73 | arşivde (Claude/Codex'e özel sürüm) |
 | ayri-surum | 42 | arşivde (aynı adlı farklı içerik, ayrı skill) |
@@ -87,6 +87,7 @@
 | freshtechbro/claudedesignskills | 90 | ayna-ayni 66, secildi 23, ayna-baska-arac 1 |
 | github/awesome-copilot | 475 | secildi 472, haric 3 |
 | google/elephant-goldfish-model | 14 | haric 7, secildi 7 |
+| google/skills | 203 | secildi 197, haric 6 |
 | greensock/gsap-skills | 8 | secildi 8 |
 | hamen/compose_skill | 2 | secildi 2 |
 | hardikpandya/stop-slop | 1 | secildi 1 |
@@ -184,3 +185,4 @@
 - **heygen-com/hyperframes**: `registry/blocks/canopy-part-title/SKILL.md` (^registry/blocks/), `registry/blocks/code-slice-hero/SKILL.md` (^registry/blocks/), `registry/blocks/cuboid-carousel/SKILL.md` (^registry/blocks/), `registry/blocks/frost-sequence-camera-orbit/SKILL.md` (^registry/blocks/), `registry/blocks/glass-shard-title/SKILL.md` (^registry/blocks/), `registry/blocks/orbit-card/SKILL.md` (^registry/blocks/), `registry/blocks/wireframe-portal-title/SKILL.md` (^registry/blocks/)
 - **OpenMontageInc/OpenMontage**: `.agents/skills/hyperframes-animation/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-cli/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-core/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-creative/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-media/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-registry/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/media-use/SKILL.md` (arsivden-cikarildi), `.agents/skills/motion-graphics/SKILL.md` (arsivden-cikarildi), `.agents/skills/music-to-video/SKILL.md` (arsivden-cikarildi), `.agents/skills/remotion-to-hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/website-to-video/SKILL.md` (arsivden-cikarildi), `.claude/skills/web-design-guidelines/SKILL.md` (arsivden-cikarildi)
 - **digitalsamba/claude-code-video-toolkit**: `.claude/skills/remotion-official/SKILL.md` (^\.claude/skills/remotion-official/)
+- **google/skills**: `plugins/cloud/google-cloud-developer/skills/finding-google-skills/SKILL.md` (/finding-google-skills/), `plugins/cloud/google-cloud-developer/skills/gcloud/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-auth/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-onboarding/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/retrieving-developer-knowledge/SKILL.md` (^plugins/), `skills/developers/finding-google-skills/SKILL.md` (/finding-google-skills/)

@@ -61,6 +61,7 @@
 | [greensock/GSAP](https://github.com/greensock/GSAP) | greensock | kurum | ✅ | 30177 | 3 | 2026-11-04 | yok | 0 |
 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | AgriciDaniel | kisi |  | 26654 | 30 | 2026-11-01 | MIT | 26 |
 | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | earthtojake | kisi |  | 25423 | 32 | 2026-11-04 | MIT | 12 |
+| [google/skills](https://github.com/google/skills) | google | kurum |  | 24352 | 9 | 2026-11-16 | Apache-2.0 | 197 |
 | [blender/blender](https://github.com/blender/blender) | blender | kurum | ✅ | 21645 | 1600 | 2026-11-05 | NOASSERTION | 0 |
 | [rough-stuff/rough](https://github.com/rough-stuff/rough) | rough-stuff | kurum |  | 21345 | 13 | 2024-07-28 | MIT | 0 |
 | [KaTeX/KaTeX](https://github.com/KaTeX/KaTeX) | KaTeX | kurum | ✅ | 20499 | 198 | 2026-11-03 | MIT | 0 |
@@ -178,5 +179,5 @@
 | [avenoxai/higgsfield-studio](https://github.com/avenoxai/higgsfield-studio) | avenoxai | kisi |  | 14 | 1 | 2026-08-19 | yok | 6 |
 | [Trendyol/trendyol-integration-developer-tool](https://github.com/Trendyol/trendyol-integration-developer-tool) | Trendyol | kurum | ✅ | 11 | 3 | 2026-06-11 | yok | 1 |
 | [J-DTurner/etsy-api-skill](https://github.com/J-DTurner/etsy-api-skill) | J-DTurner | kisi |  | 6 | 1 | 2026-01-25 | MIT | 1 |
-| yerel/kendi | kullanıcı | kisi | ✅ | 0 | 1 | 2026-11-15 | Kendi (özel) | 4 |
-| yerel/site | site (skill başına) | kisi |  | 0 | 1 | 2026-11-15 | belirtilmemiş | 1 |
+| yerel/kendi | kullanıcı | kisi | ✅ | 0 | 1 | 2026-11-16 | Kendi (özel) | 4 |
+| yerel/site | site (skill başına) | kisi |  | 0 | 1 | 2026-11-16 | belirtilmemiş | 1 |

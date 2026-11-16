@@ -2,7 +2,7 @@
 
 _İş verisi analizi, SQL, pano/rapor, öngörü_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/10**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/12**
 
 ### analyze  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
 
@@ -62,6 +62,26 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta) · **Kırık bağlantı:** 1
+- **İnceleme:** otomatik
+
+### google-analytics-admin-api-basics  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Manages Google Analytics account and property settings, enables the Analytics Admin API via the Cloud CLI, lists accounts and properties, and manages data streams, custom dimensions, conversion events, and integrations. Use when you need to programmatically configure Google Analytics accounts, provision properties, manage data retention, configure Measurement Protocol secrets, or manage Firebase a
+- **Teknoloji:** node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### google-analytics-data-api-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Manages Google Analytics reporting data, enables the Analytics Data API via the Cloud CLI, and creates reports using the Google Analytics Data API (v1beta). Use when you need to interact with Google Analytics properties, run customized analytics reports, query metrics (like activeUsers, screenPageViews) and dimensions (like city, date), check metrics and dimensions compatibility, or verify API ena
+- **Teknoloji:** node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 23 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### sql-queries  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)

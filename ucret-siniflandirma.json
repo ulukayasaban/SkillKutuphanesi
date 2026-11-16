@@ -1,7 +1,39 @@
 {
   "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
-  "guncelleme": "2026-11-15",
+  "guncelleme": "2026-11-16",
   "siniflar": {
+    "gemini-api": [
+      "kismen",
+      "Gemini API; Google AI Studio ücretsiz katmanı var, üretim/yüksek kota ücretli (GOOGLE_API_KEY)"
+    ],
+    "gemini-interactions-api": [
+      "kismen",
+      "Gemini API etkileşim uçları; AI Studio ücretsiz katmanı var, üretim ücretli (API anahtarı gerekir)"
+    ],
+    "developing-genkit-python": [
+      "kismen",
+      "Genkit + Gemini API; Gemini ücretsiz katmanı var (AI Studio), üretim ücretli (GEMINI_API_KEY). Genkit kendisi açık kaynak"
+    ],
+    "agent-platform-inference": [
+      "kismen",
+      "Vertex AI Agent/Model platformu çıkarımı; GCP ücretli ama ücretsiz deneme/kredi var; OPENAI_API_KEY/MiniMax örnek üçüncü taraf model uçları"
+    ],
+    "api-gateway-backend-security-and-rate-limiting": [
+      "kismen",
+      "GCP API Gateway; 'API key' ağ geçidinin kendi kimlik doğrulaması; GCP ücretsiz katman/kota var"
+    ],
+    "api-gateway-mcp-server": [
+      "kismen",
+      "GCP API Gateway MCP sunucusu; API anahtarı ağ geçidi kimlik doğrulaması; GCP ücretsiz katman var"
+    ],
+    "api-gateway-openapi-spec-authoring": [
+      "kismen",
+      "GCP API Gateway OpenAPI tanımı; 'API key' ağ geçidi kimlik doğrulaması; GCP ücretsiz katman var"
+    ],
+    "retrieving-developer-knowledge": [
+      "kismen",
+      "Google geliştirici bilgi API'si; API anahtarı gerekir (DEVELOPERKNOWLEDGE_API_KEY); Google hesabı/kota"
+    ],
     "video-use": [
       "kismen",
       "ElevenLabs Scribe ücretsiz kotasıyla kullanılabilir; yoğun transkript ücretli. ffmpeg/Manim/PIL yerel ve ücretsiz"
@@ -1729,6 +1761,682 @@
     "acestep@openmontageinc": [
       "ucretli",
       "Eski OpenMontage kopyası: yalnız RunPod uç noktası (RUNPOD_API_KEY)"
+    ],
+    "alloydb-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "api-gateway-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "apigee-agent-gateway-governance": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "application-design-center-design-deploy": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "application-integration-authoring": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "application-integration-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "application-integration-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-ai-ml": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-bigframes": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-migration-data-loader": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-migration-metadata-extractor": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-migration-sql-translator": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-migration-validator": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-observability": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-optimization": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigquery-udfs": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "bigtable-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-databases-onboarding": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-sql-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "datalineage-bigquery-asset-impact-analysis": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "datalineage-summary": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "dbt-sf-to-bq-translator": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "firebase-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-agentic-ai-bidirectional-streaming": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-agentic-ai-borderless-data-lakehouse": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-agentic-ai-data-science-workflow": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-agentic-analytics-spark-knowledge-catalog": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-architecture": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-build-deploy-agents": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-guided-gke-ai-migration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-hybrid-search-alloydb": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-multi-agent-security": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-n-tier-serverless-web-app": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-solution-rag-enterprise-search-gke-sqldb": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-storage-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-storage-bucket-architect": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-storage-diagnostic": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-storage-fuse": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "managed-airflow-dag-authoring": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "managed-airflow-dag-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "managed-airflow-migrations": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "managed-airflow-recommendations": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "spanner-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "assured-workloads-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "assuredworkloads-environment-assessor": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "assuredworkloads-frameworks-author": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "assuredworkloads-frameworks-navigator": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-armor-crs-rule-upgrader": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-build-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-logging-configuration-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-logging-cross-project-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-logging-finops": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-logging-query-generation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-monitoring-alert-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-monitoring-chart-generation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-monitoring-list-time-series-request": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-monitoring-metric-selection": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-monitoring-notification-channels-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-monitoring-promql-query": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-network-insights": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-operator": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-operator-setup": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-operator-share-context": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-run-alert-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-run-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cloud-trace-querying": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "compute-future-reservations": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "compute-on-demand-reservations": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "compute-spot-capacity-advice": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "compute-vm-creation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "detection-engineering-coverage-evaluation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gcloud": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-handle-disruption-gpu-tpu": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-jobset-interruption": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-node-unresponsive-timeout": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-dynamic-slices-monitoring": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-metrics-monitoring": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-mxla-hang": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-partition-overlap": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-performance-degradation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-reservation-stockout": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-slice-mig-stuck-updating": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-vbar-oom": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-ai-troubleshooting-tpu-vm-repair-stuck": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-alert-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-app-onboarding": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-backup-dr": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-batch-hpc": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-cluster-autoscaler": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-cluster-creation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-compute-classes": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-cost-analysis": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-cost-optimization": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-custom-golden-image-discovery": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-golden-path": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-inference": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-manifest-generation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-multitenancy": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-networking": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-node-notready": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-observability": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-platform-security": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-productionize": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-reliability": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-service-networking": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-storage": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-storage-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-upgrades": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-workload-identity": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-workload-scaling": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-workload-scaling-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-workload-security": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gke-workload-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-filestore-auditing": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-filestore-autoscale": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-filestore-log-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-filestore-nfs-browser": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-global-frontend-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-networking-observability": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-recipe-auth": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-recipe-foundation-builder": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-recipe-onboarding": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-scc-query": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-scc-remediation": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-slo-alert-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-waf-cost-optimization": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-waf-operational-excellence": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-waf-performance-optimization": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-waf-reliability": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-waf-security": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-cloud-waf-sustainability": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "iam-helper-for-policy-management": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "iam-helper-for-policy-simulator": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "iam-helper-for-privileged-access-management": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "iam-helper-for-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "iap-agent-platform-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "pathways-workload": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "secops-cases": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "secops-detection-engineering": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "secops-hunt": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "secops-investigate": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "secops-triage": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "workload-manager-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "developer-device-platform-basics": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "developer-device-platform-device-run": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-access-audit": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-alert-configuration": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-architecture": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-autorater-customization": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-deploy": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-endpoint-management": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-eval-flywheel": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-migrate-from-ai-studio": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-model-registry": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-prompt-management": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-rag-engine-management": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-skill-registry": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-troubleshooting": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-tuning": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "agent-platform-tuning-management": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "developing-genkit-dart@google": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "developing-genkit-go": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "developing-genkit-js": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gemini-agents-api": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "gemini-live-api": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "google-agents-cli-onboarding": [
+      "kismen",
+      "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

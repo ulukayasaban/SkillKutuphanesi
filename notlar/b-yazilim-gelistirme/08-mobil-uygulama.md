@@ -2,9 +2,9 @@
 
 _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **1/193**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **1/204**
 
-### accessibility  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### accessibility  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when working on accessibility, a11y, WCAG, ARIA, screen readers, keyboard nav, focus order, contrast, alt text, captions, reduced motion, or target sizes; not language/culture/device (see inclusive-design).
 - **Teknoloji:** css _(otomatik tespit)_
@@ -195,7 +195,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 18 KB (SKILL.md 18.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### architecture-feature-first  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### architecture-feature-first  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when creating a feature, designing folder structure, adding repositories/services/view models, wiring dependency injection, or deciding which layer owns logic.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -226,7 +226,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 10 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### bloc  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### bloc  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when creating a Cubit or Bloc, modeling state with sealed classes or status enums, wiring BlocBuilder/BlocListener/BlocProvider, writing bloc tests, or choosing between Cubit and Bloc.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -266,7 +266,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 10 KB (SKILL.md 9.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### code-review@evanca  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### code-review@evanca  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when asked to review a PR, MR, branch, or diff, audit changed files, or check code quality.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -296,7 +296,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 203 KB (SKILL.md 15.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### dart-3-updates  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### dart-3-updates  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when writing switch statements, refactoring if-else chains, creating data classes, choosing records vs classes, destructuring values, or modernizing pre-Dart-3 code.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -316,7 +316,27 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 40 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### developing-genkit-dart  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### developer-device-platform-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Provides guidance and instructions on managing remote devices on Developer Device Platform (DDP). Use when reserving remote Android devices, establishing connection tunnels, checking session status, or extending/cancelling leases. Don't use for iOS or local device/hardware inquiries.
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 29 KB (SKILL.md 10.3 KB, yük orta)
+- **İnceleme:** otomatik
+
+### developer-device-platform-device-run  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Runs automated, non-interactive jobs on remote Android devices with Developer Device Platform (DDP) Device Run using `gcloud beta device-run sessions`: native Android executables or shell scripts (for example CLI tools, custom runners, test harnesses or benchmarks) and Android instrumentation tests, on one or many devices, then waits for completion and collects per-device outputs and logs. Use whe
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 37 KB (SKILL.md 11.2 KB, yük orta)
+- **İnceleme:** otomatik
+
+### developing-genkit-dart  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when building AI agents in Dart, implementing Genkit flows or tools, integrating LLMs into Dart or Flutter applications, or using Genkit Dart plugins.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -325,6 +345,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Durum:** tercih
 - **Boyut:** 29 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
+- **Not:** Aynı ad, iki kaynak: bu kayıt evanca/flutter-ai-rules (Flutter/Dart AI kuralları içinde Genkit Dart geliştirme). google/skills resmî Google kaynağıdır (developing-genkit-dart@google). Çıplak ad bu eski kayıtta kaldı; tercih durum_elle ile buna sabitlendi (devir yapılmadı). Aynı iş olabilir; ad_devral kararı (resmî kaynağa devir) ana oturumun.
 
 ### display-glasses-with-jetpack-compose-glimmer  ·  android/skills @ 6daa53e  ·  puan 89 (A)
 
@@ -416,7 +437,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 14 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### effective-dart  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### effective-dart  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when writing Dart code, reviewing for style, refactoring naming, adding doc comments, structuring imports, or enforcing type annotations.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -616,7 +637,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 32 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### firebase-ai  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-ai  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when setting up firebase_ai, generating text/chat with Gemini, streaming AI output, building multimodal prompts, or handling AI errors.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -626,7 +647,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-analytics  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-analytics  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when logging analytics events, setting user properties, configuring default event parameters, building funnels, or adding screen-view tracking.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -636,7 +657,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-app-check  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-app-check  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when implementing app attestation, configuring App Check providers, setting up debug tokens, enabling backend enforcement, or managing token refresh.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
@@ -646,7 +667,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-auth  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### firebase-auth  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when setting up auth, managing auth state, implementing email/password or social sign-in, handling auth errors, or managing users.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -656,7 +677,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 12 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### firebase-cloud-firestore  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### firebase-cloud-firestore  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when setting up Firestore, designing schemas, doing CRUD, creating listeners, paginating queries, configuring indexes, enabling offline persistence, or writing security rules.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -666,7 +687,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### firebase-cloud-functions  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-cloud-functions  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when calling callable functions (httpsCallable), passing data to server-side logic, handling function errors/timeouts, configuring regions, or testing with the Emulator Suite.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -676,7 +697,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-crashlytics  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-crashlytics  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when implementing crash reporting, capturing fatal/non-fatal errors, recording isolate/async exceptions, customizing reports, or uploading obfuscated symbols.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -686,7 +707,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-data-connect  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-data-connect  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when setting up Data Connect, writing GraphQL queries/mutations, configuring generated SDKs, handling offline, or applying security rules.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -696,7 +717,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-database  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### firebase-database  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when syncing real-time data, structuring JSON trees, reading/writing, creating listeners, enabling offline persistence, managing presence, sharding, or writing security rules.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -706,7 +727,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### firebase-in-app-messaging  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-in-app-messaging  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when running in-app message campaigns, triggering/suppressing messages, configuring opt-in data collection, testing on specific devices, or handling message callbacks.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -716,7 +737,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-messaging  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### firebase-messaging  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when setting up Firebase Cloud Messaging, managing permissions and tokens, handling background/foreground notification taps, or dispatching messages server-side (HTTP v1).
 - **Teknoloji:** api-anahtari, git, html, node _(otomatik tespit)_
@@ -726,7 +747,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 13 KB (SKILL.md 12.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### firebase-remote-config  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-remote-config  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when implementing feature flags, running A/B tests, setting parameter defaults, fetching/activating config, or enabling real-time config updates.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -736,7 +757,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### firebase-storage  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### firebase-storage  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when setting up Storage, uploading/downloading files, managing metadata, handling errors, or applying security rules.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -766,7 +787,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 107 KB (SKILL.md 7.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-app-architecture  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### flutter-app-architecture  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when scaffolding a project, refactoring into layers, creating view models/repositories, configuring dependency injection, or implementing unidirectional data flow (MVVM).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -788,7 +809,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-best-practices  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### flutter-best-practices  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when writing, reviewing, refactoring, or planning Flutter/Dart code — screens, features, project structure, state management, folders, widgets, cubits/blocs, repositories, services, or tests.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -798,7 +819,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 33 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-change-notifier  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### flutter-change-notifier  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when setting up ChangeNotifier models, providing them to the widget tree, consuming state with Consumer or Provider.of, or optimizing rebuilds.
 - **Teknoloji:** react _(otomatik tespit)_
@@ -828,7 +849,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 15 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-errors  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### flutter-errors  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when hitting layout errors (RenderFlex overflow, unbounded constraints, RenderBox not laid out), scroll errors, or setState-during-build errors.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -868,7 +889,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 75 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-pre-caching  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### flutter-pre-caching  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when preloading fonts, asset/network images, Lottie/Rive animations, local JSON/config, warming initial API data, or optimizing Flutter Web startup.
 - **Teknoloji:** canvas, html, lottie, webgl _(otomatik tespit)_
@@ -900,7 +921,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-use-column-row-first  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### flutter-use-column-row-first  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when building any Flutter screen or component to choose responsive Row, Column, Expanded, Flexible, and Spacer layouts before fixed-size or coordinate-based alternatives.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -910,7 +931,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 581 KB (SKILL.md 5.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutterfire-configure  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### flutterfire-configure  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when adding Firebase to a Flutter project, running flutterfire configure, initializing Firebase in main.dart, or configuring multiple flavors.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -920,7 +941,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### generate-images-with-firebase-ai  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 78 (B)
+### generate-images-with-firebase-ai  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 77 (B)
 
 - **Ne yapar:** Use when generating or editing images from Flutter/Dart with Firebase AI Logic and a Gemini image model (Nano Banana), making the first call work, choosing Gemini Developer API vs Vertex AI, hitting quota, billing or App Check failures, getting empty or image-only responses, sending a user photo as input, controlling aspect ratio or size, writing the image prompt, or deciding what to test.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -950,6 +971,66 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 354 KB (SKILL.md 23.9 KB, yük orta)
 - **İnceleme:** otomatik
 
+### google-mobile-ads-android-migrate-to-next-gen  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+
+- **Ne yapar:** Migrates Android applications from the old, legacy Google Mobile Ads (GMA) SDK (com.google.android.gms:play-services-ads) to the new GMA Next-Gen SDK (com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk). Provides comprehensive mapping tables for imports, classes, and method signatures to help determine migration steps. Use when migrating an existing Android codebase from the old, legacy GM
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 39 KB (SKILL.md 38.7 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### google-mobile-ads-banner  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Provides instructions to implement, integrate, or configure Google Mobile Ads (GMA) banner ads in Android, iOS, or Unity mobile applications. Use when the task involves setting up banner ads in a mobile application. Don't use for other ad formats like interstitial or rewarded ads.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 10 KB (SKILL.md 1.8 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### google-mobile-ads-get-started  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Provides instructions for integrating the Google Mobile Ads (GMA) SDK. Use this skill when the user wants to get started with, install, integrate, set up, or configure the SDK for AdMob or Ad Manager, GMA Next-Gen SDK or mobile ads framework in an Android, iOS, or Unity application.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 16 KB (SKILL.md 1.0 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### google-mobile-ads-interstitial  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Provides instructions for implementing, integrating, or configuring Google Mobile Ads (GMA) SDK interstitial ads in Android, iOS, or Unity mobile applications. Use when the task involves setting up interstitial ads. Don't use for "rewarded interstitial" ads.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 1.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### google-mobile-ads-rewarded  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Provides instructions for implementing, integrating, or configuring Google Mobile Ads (GMA) SDK rewarded ads in Android, iOS, or Unity mobile applications. Use when the task involves setting up rewarded ads. Don't use for "rewarded interstitial" ads.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 9 KB (SKILL.md 1.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### google-mobile-ads-validate  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Validates a project's Google Mobile Ads (GMA) SDK integration for iOS, Android, or Unity projects. Use when conducting a full pre-launch audit of an app that integrates GMA SDK or when validating any individual GMA SDK integration checks, such as when validating ad unit IDs and ad formats, SKAdNetwork IDs, mediation adapter SDK version compatibility, or ad preloading.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 14 KB (SKILL.md 2.4 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### iap-finalizer  ·  rshankras/claude-code-apple-skills @ eb2ddbc  ·  puan 74 (B)
 
 - **Ne yapar:** Take a one-time in-app purchase from MISSING_METADATA to READY_TO_SUBMIT in App Store Connect — set its price schedule and localized display name/description (and optional review screenshot) via the ASC REST API. Use at Phase 6 (Pre-Release), after the IAP is built in-app (Phase 4) and its ASC record exists. NOT for subscriptions, and NOT the same as promoted-iap (which displays IAPs in-app).
@@ -960,7 +1041,27 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### inclusive-design  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### ima-dai-sdk  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Integrates the Google Interactive Media Ads (IMA) Dynamic Ad Insertion (DAI) SDK into websites, web apps, mobile apps, or TV apps. Use when: - A video player needs to load and play HLS or DASH streams in web apps, Android apps, iOS apps, tvOS apps, Cast (CAF) receivers, or Roku channels. - The app needs to make use of a Google DAI livestream event asset key, or content source CMS ID, video ID for 
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 35 KB (SKILL.md 1.9 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### ima-sdk-client-side  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Supports Interactive Media Ads (IMA) SDK. Use this skill for client-side ad insertion when you are requesting video ads for websites, apps, TVs or other platforms using VAST or VMAP. Do not use for Dynamic Ad Insertion (DAI), SSAI, or SGAI.
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 34 KB (SKILL.md 2.1 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### inclusive-design  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when working on inclusion, i18n/localization, global name/address forms, low-end devices, slow/metered networks, affordability, or first-time/low-confidence users; not WCAG/screen readers (see accessibility).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1270,6 +1371,16 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 68 KB (SKILL.md 34.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
+### litert-google-tensor  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+
+- **Ne yapar:** Compiles LiteRT (.tflite) models ahead-of-time for Google Tensor TPUs (Tensor G5 on Pixel 10, Tensor G6 on Pixel 11) locally on Linux x86_64 or on Google Colab (--colab on macOS, Windows, or ARM hosts), benchmarks them on a USB-attached Pixel with LiteRT's benchmark_model (NPU latency, peak memory, TPU tile time, TPU energy, optional CPU baseline), and packages compiled models for an Android Gradl
+- **Teknoloji:** next.js, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 554 KB (SKILL.md 34.9 KB, yük buyuk)
+- **İnceleme:** otomatik
+
 ### litert-lm  ·  android/skills @ 6daa53e  ·  puan 92 (A)
 
 - **Ne yapar:** Builds an Android app that runs an open text LLM on the device, on the CPU or the GPU, with the LiteRT-LM Kotlin API (com.google.ai.edge.litertlm:litertlm-android). Use this skill when creating a chat, summarization, or extraction feature with a .litertlm model from Hugging Face litert-community (Gemma, Qwen, Llama, Phi), including the Gradle dependency, the GPU manifest entries, getting the model
@@ -1360,7 +1471,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 18 KB (SKILL.md 8.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### mockito  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### mockito  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when generating mocks, stubbing methods, verifying interactions, capturing arguments, or choosing between mocks, fakes, and real objects (Mockito).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1370,7 +1481,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### mocktail  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### mocktail  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when creating mocks, stubbing methods, verifying interactions, registering fallback values, or choosing between mocks, fakes, and real objects (Mocktail).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1430,7 +1541,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 57 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### patrol-e2e-testing  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### patrol-e2e-testing  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when writing E2E/integration tests, testing native interactions like permissions or system dialogs, capturing UI regressions, or validating cross-platform behavior (Patrol 4.x).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1540,7 +1651,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 43 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### provider  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### provider  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when setting up providers, consuming state, optimizing rebuilds, using ProxyProvider, or migrating from deprecated providers (Provider package).
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1600,7 +1711,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 97 KB (SKILL.md 24.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### revenuecat-testing  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### revenuecat-testing  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when testing RevenueCat purchases/subscriptions, setting up sandbox testing, debugging a purchase/restore/trial, verifying entitlements or events, checking an app is ready for a RevenueCat experiment, or writing an IAP QA plan.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1620,7 +1731,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 7.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### riverpod  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### riverpod  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when setting up providers, combining requests, managing state disposal, passing arguments, performing side effects, or testing providers (Riverpod).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1832,7 +1943,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 83 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### testing  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 80 (A)
+### testing  ·  evanca/flutter-ai-rules @ f170aab  ·  puan 79 (B)
 
 - **Ne yapar:** Use when writing or reviewing Flutter/Dart tests (unit, widget, golden), fixing flaky tests, adding coverage, or choosing between unit and widget tests.
 - **Teknoloji:** - _(otomatik tespit)_

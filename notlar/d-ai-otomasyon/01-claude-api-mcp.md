@@ -2,7 +2,7 @@
 
 _Claude API, MCP sunucusu, model geçişi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/20**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/45**
 
 ### academy-guide  ·  anthropics/skills @ ca45fc4  ·  puan 89 (A)
 
@@ -14,6 +14,166 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Durum:** tercih
 - **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (projelere gerek yok). Anthropic resmi, uydurmayı engelleyen tazelik kuralları iyi; ama proje agent'ları için kullanım alanı yok.
+
+### agent-platform-access-audit  ·  google/skills @ 3c4dda4  ·  puan 95 (A)
+
+- **Ne yapar:** Audits AI agent data access, blast radius, and blocked policy operations in Google Cloud by querying Cloud Audit Logs via BigQuery. Use when investigating what resources or services an agent accessed, identifying top originating principals the agent is acting as, or triaging PERMISSION_DENIED errors to distinguish VPC Service Controls perimeter violations from IAM permission denials. Don't use for
+- **Teknoloji:** - _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 32 KB (SKILL.md 11.9 KB, yük orta) · **Kırık bağlantı:** 1
+- **İnceleme:** otomatik
+
+### agent-platform-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Configures best-practice alerting policies for AI agents using OpenTelemetry (OTel) metrics, generating output as Terraform (.tf) configuration files. Use when analyzing, writing, or deploying alerting policies to monitor agent latency, error rates, token usage, and quality metrics. Don't use for standard infrastructure monitoring unrelated to AI agents, or when the agent is not instrumented with 
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 306 KB (SKILL.md 16.8 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-architecture  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Designs, engineers, and validates enterprise Gemini platform architectures. Use when designing multi-project hierarchies (Host, Central Governance Hub, Runtime Spoke, Tool/MCP Spoke), configuring Agent Gateway, authoring Agent Connectivity Templates (ALL_TRAFFIC vs PRIVATE_RANGES_ONLY), deploying Secure Web Proxy (SWP) with Policy-Based Routing (PBR) or Cross-Cloud mTLS Egress Hubs, configuring Pr
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 188 KB (SKILL.md 14.4 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-autorater-customization  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Customizes an autorater (evaluation metric) for an AI agent so its grades match the user's own judgment, starting from the agent's real trajectories. Use when a user wants a metric tailored to their agent, wants to turn failing trajectories into rubrics, says an existing autorater grades their agent wrong, or wants an autorater to agree with human labels (autorater hillclimbing, judge calibration)
+- **Teknoloji:** html, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 76 KB (SKILL.md 14.1 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-deploy  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Deploy open models or custom weights from Model Garden to Agent Platform endpoints, check the status of an in-progress deployment operation, or clean up resources by undeploying models and deleting endpoints. Use when asked to actively deploy a model, list the Model Garden CATALOG of available models, check if a specific model is deployable (`gcloud ai model-garden models list-deployment-config`),
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 48 KB (SKILL.md 20.3 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-endpoint-management  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Manages Agent Platform serving endpoints. Use when you need to create, list, describe, update, or delete serving endpoints for model deployment on Agent Platform. Also use when troubleshooting endpoint permission, quota, or resource busy errors. Don't use for deploying models to endpoints or for running model evaluations.
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 9 KB (SKILL.md 6.9 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### agent-platform-eval-flywheel  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+
+- **Ne yapar:** Measures and improves the quality of AI models and agents on Google Cloud using the Eval Quality Flywheel methodology. Use when generating synthetic user scenarios, evaluating an agent or model, building an eval dataset, picking or writing evaluation metrics, analyzing failures, comparing results before and after a fix, or when guidance is needed on Agent Platform eval methodology — including data
+- **Teknoloji:** html, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 127 KB (SKILL.md 30.2 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### agent-platform-inference  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+
+- **Ne yapar:** Connects to and performs inference with Google Cloud Agent Platform GenAI models, including First-Party Gemini models and Third-Party OpenMaaS models (Llama, DeepSeek, Qwen, etc.). Use when asked to perform inference, ask a model a question, run a test prompt, execute chat completions, or generate code for calling Gemini or OpenMaaS models, authenticate with GenAI SDK, OpenAI SDK, or legacy Agent 
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 44 KB (SKILL.md 37.6 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### agent-platform-migrate-from-ai-studio  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Guides agents and users through migrating from Gemini API in Google AI Studio to Gemini Enterprise Agent Platform (formerly Vertex AI). Use this skill when moving applications to Google Cloud, to leverage Cloud credits, or to unify inferencing with other Cloud infrastructure (IAM, billing, telemetry).
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 16 KB (SKILL.md 14.2 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-model-registry  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Agent Platform Model Registry Management. Use when you need to upload, list, describe, update, or delete machine learning models (and their versions) in the Agent Platform Model Registry. Don't use for model training, model deployment to endpoints, or managing non-Agent Platform models.
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 13 KB (SKILL.md 10.7 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-prompt-management  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Manages and orchestrates prompts in Agent Platform. Use when you need to create, list, retrieve, version, or delete managed prompts in Agent Platform. Don't use for model training, model deployment to endpoints, or managing non-Agent Platform prompts.
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 14 KB (SKILL.md 10.0 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-rag-engine-management  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Manage and query Agent Platform RAG Engine Corpora and retrieve grounded contexts using the Google GenAI SDK. Use when listing RAG corpora or files, inspecting a corpus, retrieving contexts, or generating content grounded in a RAG corpus. Do not use for standard database queries (use SQL/Spanner skills), Google Workspace RAG, or other RAG products like gRAG.
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 12 KB (SKILL.md 10.0 KB, yük orta)
+- **İnceleme:** otomatik
+
+### agent-platform-skill-registry  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Interact with the Gemini Enterprise Agent Platform Skill Registry to create and search for available skills. Use this skill to enable agents to register functionality or discover new capabilities.
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 23 KB (SKILL.md 2.7 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### agent-platform-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+
+- **Ne yapar:** Troubleshoots Google Cloud Gemini Enterprise Agent Platform issues across Agent Gateway, Agent Connectivity Templates (ACT), Agent Registry, Agent Identity, Identity-Aware Proxy (IAP), Unified Access Policies (UAP), Model Armor, Semantic Governance Policies (SGP), Cloud DNS peering, Private CA TrustConfig, Next-Hop Secure Web Proxy (SWP), Explicit HTTPS Proxy (L4 AuthzPolicy), and Cloud Trace. Use
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 398 KB (SKILL.md 26.2 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### agent-platform-tuning  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+
+- **Ne yapar:** Agent Platform Model Tuning. Use when you need to fine-tune open models or Gemini models using Agent Platform infrastructure. Don't use for model training outside Agent Platform, model deployment to endpoints (use `agent-platform-deploy`), or managing serving endpoints (use `agent-platform-endpoint-management`).
+- **Teknoloji:** node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 98 KB (SKILL.md 41.0 KB, yük buyuk)
+- **İnceleme:** otomatik
+
+### agent-platform-tuning-management  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Manages GenAI tuning jobs in Agent Platform. Use this to list, get, or cancel ongoing model tuning jobs. Don't use for fine-tuning models (use `agent-platform-tuning`), deploying models to endpoints (use `agent-platform-deploy`), or managing serving endpoints (use `agent-platform-endpoint-management`).
+- **Teknoloji:** python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 11 KB (SKILL.md 9.3 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### build-mcp-app  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 100 (A)
 
@@ -119,6 +279,97 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
+### developing-genkit-dart@google  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Provides guidance on developing AI-powered applications using the Genkit Dart SDK. Use when the user asks to build AI agents in Dart, use Genkit flows, or integrate LLMs into Dart/Flutter applications. Don't use for Genkit in JavaScript/TypeScript, Go, or Python.
+- **Teknoloji:** node, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** alternatif
+- **Boyut:** 155 KB (SKILL.md 13.5 KB, yük orta)
+- **İnceleme:** otomatik
+- **Not:** Aynı ad, iki kaynak: bu kayıt google/skills resmî Google Genkit Dart geliştirme skili (alternatif). Çıplak adı ve tercihi evanca/flutter-ai-rules kaydı taşıyor (durum_elle ile sabit); bu kaynağın önceliği (1) daha yüksek olsa da çıplak ad kendiliğinden el değiştirmez. ad_devral kararı ana oturumun.
+
+### developing-genkit-go  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Provides guidance on developing AI-powered applications using Genkit in Go. Use when the user asks to build AI features, agents, flows, or tools in Go using Genkit, or when working with Genkit Go code involving generation, prompts, streaming, tool calling, or model providers. Don't use for Genkit in JavaScript/TypeScript, Python, or Dart.
+- **Teknoloji:** python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 156 KB (SKILL.md 11.2 KB, yük orta)
+- **İnceleme:** otomatik
+
+### developing-genkit-js  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Provides guidance on developing AI-powered applications using Genkit in Node.js/TypeScript. Use when the user asks about Genkit, AI agents, flows, or tools in JavaScript/TypeScript, or when encountering Genkit errors, validation issues, type errors, or API problems. Don't use for Genkit in Python, Go, or Dart.
+- **Teknoloji:** next.js, node, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 130 KB (SKILL.md 13.1 KB, yük orta)
+- **İnceleme:** otomatik
+
+### developing-genkit-python  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Provides guidance on developing AI-powered applications using Genkit Python (0.13) and migrating Genkit Python 0.12 projects to 0.13. Use when building AI agents, flows, tools, structured outputs, or FastAPI routes in Python, upgrading from Genkit 0.12, or debugging Genkit imports, config errors, or traces. Don't use for Genkit in JavaScript/TypeScript, Go, or Dart.
+- **Teknoloji:** api-anahtari, node, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 156 KB (SKILL.md 10.1 KB, yük orta)
+- **İnceleme:** otomatik
+
+### gemini-agents-api  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Manages custom Agent resources on Gemini Enterprise Agent Platform. Use when the user wants to programmatically create, configure, list, update, or delete stateful, server-managed Agent resources (including mounting files, skills, and tools) before executing conversations.
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 15 KB (SKILL.md 12.9 KB, yük orta)
+- **İnceleme:** otomatik
+
+### gemini-api  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Use when the user asks about using Gemini in an enterprise environment or explicitly mentions Vertex AI, Google Cloud, or Agent Platform. Guides the usage of the Gemini API on Agent Platform with the Google Gen AI SDK. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like multimodal inputs, tools, media generation, caching, batch prediction, and Live API.
+- **Teknoloji:** api-anahtari, node, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 40 KB (SKILL.md 10.6 KB, yük orta)
+- **İnceleme:** otomatik
+
+### gemini-interactions-api  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Guides the usage of Gemini Interactions API on Gemini Enterprise Agent Platform. Use when the user wants to use the stateful, server-managed Interactions API for multi-turn conversations, background execution, streaming, structured output, and function calling on the Agent Platform.
+- **Teknoloji:** api-anahtari, python, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 28 KB (SKILL.md 16.7 KB, yük orta)
+- **İnceleme:** otomatik
+
+### gemini-live-api  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+
+- **Ne yapar:** Generates a Gemini LiveAPI client service class in the user's chosen programming language. Use when the user wants to build, scaffold, or integrate a client that connects to the Gemini Enterprise LiveAPI websocket endpoint, handles session setup/resumption, bearer token refresh, and sending/receiving `ClientMessage`/`ServerMessage` protos. Don't use for general (non-live, non-bidirectional) Gemini
+- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 56 KB (SKILL.md 10.1 KB, yük orta)
+- **İnceleme:** otomatik
+
+### google-agents-cli-onboarding  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+
+- **Ne yapar:** Onboarding entrypoint for agents-cli in Agent Platform. It should be used when the user wants to "create a new agent", "develop an agent", "build an agent using ADK", "run the agent locally", "debug agent code", "test an agent", "evaluate an agent", "deploy an agent", "publish an agent", "monitor an agent", or needs the ADK (Agent Development Kit) development lifecycle.
+- **Teknoloji:** node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 6 KB (SKILL.md 4.4 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### langsmith-fetch  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
 
 - **Ne yapar:** LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, belirli iz derin incelemesi, hata tespiti, bellek işlemleri, araç çağrıları, süre ve token kullanımını raporlar.
@@ -193,7 +444,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 45 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### mcp-integration@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 79 (B)
+### mcp-integration@anthropics  ·  anthropics/claude-code @ 5ed799e  ·  puan 80 (A)
 
 - **Ne yapar:** Claude Code eklentilerine MCP sunucusu paketleme rehberi: .mcp.json ya da plugin.json içinde mcpServers, stdio/SSE/HTTP/WebSocket sunucu tipleri, ${CLAUDE_PLUGIN_ROOT} ve ortam değişkeni genişletme, MCP araç adlandırması (mcp__eklenti__sunucu__araç), yaşam döngüsü ve OAuth/token kimlik doğrulama kalıpları.
 - **Ne zaman:** Bir Claude Code eklentisine hazır MCP sunucusu eklemek/yapılandırmak. · **Ne zaman değil:** MCP sunucusunun kendisini yazmak için (mcp-builder). Codex'te eklenti paketleme yok: MCP sunucusu `~/.codex/config.toml` dosyasında `[mcp_servers.<ad>]` tablosuyla (command, args, env ya da url) tanımlanır; .mcp.json ve ${CLAUDE_PLUGIN_ROOT} kullanılmaz. Sunucu tipleri, kimlik doğrulama ve güvenlik bölümleri Codex'te de geçerli, plugin.json kısımlarını atla.

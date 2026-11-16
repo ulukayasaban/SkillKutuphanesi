@@ -2,6 +2,31 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "google/skills",
+      "desen": "^(google-mobile-ads|ima-(sdk|dai)|litert|developer-device-platform)",
+      "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
+    },
+    {
+      "repo": "google/skills",
+      "desen": "^(google-ads-api|data-manager-api)",
+      "kategori": "h-is-alanlari/01-satis-pazarlama-musteri"
+    },
+    {
+      "repo": "google/skills",
+      "desen": "^google-analytics",
+      "kategori": "h-is-alanlari/04-veri-analizi-raporlama"
+    },
+    {
+      "repo": "google/skills",
+      "desen": "^(gemini-|developing-genkit-|agent-platform-|google-agents-cli)",
+      "kategori": "d-ai-otomasyon/01-claude-api-mcp"
+    },
+    {
+      "repo": "google/skills",
+      "desen": "^(bigquery|bigtable|alloydb|spanner|cloud-sql|cloud-databases|datalineage|dbt-|managed-airflow|api-gateway|apigee|application-integration|application-design-center|google-cloud-storage|firebase-basics|google-cloud-solution)",
+      "kategori": "b-yazilim-gelistirme/04-mimari-api-veritabani"
+    },
+    {
       "repo": "WyattBlue/auto-editor",
       "desen": ".",
       "kategori": "g-video-ses-medya/01-video-uretim-montaj"
@@ -862,6 +887,7 @@
     }
   ],
   "repo_varsayilan": {
+    "google/skills": "b-yazilim-gelistirme/06-devops-guvenlik-performans",
     "anthropics/claude-code": "d-ai-otomasyon/04-skill-plugin-yazimi",
     "vercel/next.js": "b-yazilim-gelistirme/07-framework-ozel",
     "microsoft/playwright": "a-tasarim-onyuz/08-onyuz-test-kalite",
