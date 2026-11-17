@@ -9,7 +9,8 @@ Git durumu: `python3 araclar/git-durum.py` (salt okuma, push etmez).
 1. Kütüphane dışına alınan her yedek `~/Documents/Claude/yedek/` altında durur. Kütüphane klasörüne, git'e, skill klasörlerine
    (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`) ve `~/.openmontage` içine konmaz (araçlar yedekteki SKILL.md'yi skill sanar).
 2. Ad: `<ne>-<YYYY-AA-GG>` (ör. `ayar-2026-11-11`, `global-skills-2026-11-08`, `hyperframes-2026-12-03`). Aynı gün ikinci yedek: sonuna `-2`.
-3. Gizli bilgi olabilecek yedek (ayar dosyaları, `.env`, anahtar içeren her şey): klasör `chmod 700`, dosyalar `chmod 600`; kayıtta
+3. Her yedek klasörü ve `~/Documents/Claude/yedek` kökü `chmod 700` olur (gizli bayrağından bağımsız; `yedek-denetim.py` gevşek izni DİKKAT sayar, kayıtsız yedeği de). Yedek alan oturum klasörü hemen `chmod -R go-rwx` yapar.
+   Gizli bilgi olabilecek yedek (ayar dosyaları, `.env`, anahtar içeren her şey): klasör `chmod 700`, dosyalar `chmod 600`; kayıtta
    `gizli_icerir: "evet"`, `silme_gun` en çok 30. Anahtar klasörleri (`~/.config/openmontage`) ve `~/.hyperframes/config.json` hiç yedeğe alınmaz.
 4. Yedek alan oturum, aynı adımda `yedekler.json`'a kayıt ekler (şablon 8. bölümde). Kayıtsız yedek, aylık özette "kayıtsız yedek" diye çıkar.
 5. Yedek almak ve silmek kullanıcı onayıyla yapılır. `yedek-denetim.py` silmez; "silinebilir" der, kullanıcı onaylarsa oturum siler ve kaydı `durum: "silindi"` yapar.

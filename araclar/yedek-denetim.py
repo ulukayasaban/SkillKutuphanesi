@@ -115,6 +115,24 @@ def _gevsek_izin_var(yol):
     return False
 
 
+def acik_izinli_yedekler(kok):
+    """Yedek kökü ve doğrudan çocukları: grup/diğer erişebiliyorsa [(ad, mod)] (POSIX; gizli bayrağından bağımsız).
+
+    Yalnız üst klasör modu okunur (içerik açılmaz); 700 kök/klasör içindeki dosyaları da korur."""
+    sonuc = []
+    try:
+        adaylar = [Path(kok)] + [Path(kok) / a for a in sorted(os.listdir(kok)) if not a.startswith(".")]
+        for p in adaylar:
+            if p.is_symlink() or not p.is_dir():
+                continue
+            mod = os.lstat(p).st_mode & 0o777
+            if mod & 0o077:
+                sonuc.append((p.name if p != Path(kok) else "(yedek klasörünün kendisi)", mod))
+    except (OSError, AttributeError):
+        pass
+    return sonuc
+
+
 def _tarih(s):
     try:
         return datetime.strptime(s, "%Y-%m-%d").date()
@@ -266,6 +284,10 @@ def degerlendir(veri, hata, kok_arg, kutuphane, bugun):
         for ad, b, tur in kayitsizlar(kok, [k for k in kayitlar if isinstance(k, dict)]):
             t = f"{tur}; " if tur else "tanınmayan ad; "
             f.append({"seviye": "dikkat", "metin": f"kayıtsız yedek: {ad} ({t}{mb(b)} MB)", "karar": f"{ad} yedeği kayda alınsın mı?"})
+    if kok_var:
+        for ad, mod in acik_izinli_yedekler(kok):
+            f.append({"seviye": "dikkat", "metin": f"yedek izni gevşek: {ad} ({oct(mod)[2:]}); yalnız sahip okumalı olmalı (chmod 700; yedekler yanlışlıkla ayar/anahtar içerebilir)",
+                      "karar": None})
     if veri.get("ikinci_kopya_iste") is True:
         paketler = [k for k in kayitlar if isinstance(k, dict) and k.get("tur") == "git-paketi" and _tarih(k.get("tarih"))]
         en_yeni = max((_tarih(k["tarih"]) for k in paketler), default=None)

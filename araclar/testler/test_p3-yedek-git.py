@@ -409,6 +409,10 @@ def yedek_ortam(ad, kayitlar, dosyalar=None, ekstra=None, ust=None):
         veri.update(ust)
     kf = TMP / ad / "yedekler.json"
     kf.write_text(json.dumps(veri))
+    kok.chmod(0o700)  # gerçek yedek klasörü gibi: yalnız sahip (gevşek izin denetimi bunu bekler)
+    for c in kok.iterdir():
+        if c.is_dir() and not c.is_symlink():
+            c.chmod(0o700)
     return kf, kok, kutup
 
 
@@ -596,6 +600,21 @@ yd(kf, kok, kut)
 yj(kf, kok, kut)
 yd(kf, kok, kut, "--kisa")
 test("43 yedek-denetim hicbir dosya degistirmez", agac_anlik(kok.parent) == once)
+
+# 44c-44d gevşek izin: gizli bayrağından bağımsız, kök ve her yedek klasörü; kayıtsız yedek de
+kf, kok, kut = yedek_ortam("y44a", [kayit(kimlik="n-2026-11-10", tarih="2026-11-10", gizli_icerir="hayir", silme_gun=30)],
+                           dosyalar=["s.txt"], ekstra=["kayitsiz-2026-11-10"])
+j, _ = yj(kf, kok, kut)
+test("44c 700 yedekler: izin uyarisi yok", "izni gevşek" not in " ".join(j["satirlar"]))
+(kok / "n-2026-11-10").chmod(0o755)
+(kok / "kayitsiz-2026-11-10").chmod(0o755)
+kok.chmod(0o755)
+r = yd(kf, kok, kut)
+j, _ = yj(kf, kok, kut)
+t = " ".join(j["satirlar"])
+test("44d gizli=hayir ve kayitsiz yedek ile kok gevsekse dikkat (mod degismez)",
+     j["durum"] == "dikkat" and "izni gevşek: n-2026-11-10" in t and "izni gevşek: kayitsiz-2026-11-10" in t
+     and "yedek klasörünün kendisi" in t and stat.S_IMODE(kok.stat().st_mode) == 0o755)
 
 # 44 --cikti koruması: araç klasörlerine yazılmaz
 yasak_hedef = Path.home() / ".claude" / "p3-test-yazilmamali.md"
