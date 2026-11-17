@@ -23,6 +23,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | Purple-Horizons/printful-mcp | 2026-11-07 | 2027-02-05 | Kullanıcı şu an Printful kullanmıyor ama ileride kullanabilir; kullanmaya başlarsa eklenir (MCP sunucusu gerektirir) |
 | VeryGoodOpenSource/vgv-ai-flutter-plugin | 2026-11-07 | 2027-02-05 | Mobil teknoloji henüz seçilmedi; Flutter seçilirse eklenir |
 | iart-ai/explainer-video-skills | 2026-11-15 | 2027-02-13 | Tek katkıcı; içerik Haziran'dan beri değişmedi; yardımcı betikler skill klasörü dışında |
+| storytold/pdfcraft | 2026-11-17 | 2027-02-15 | Kullanıcı kararı 2026-11-17: şimdilik değil, durum değişirse bak |
 | yusufkaran/swiftui-autotest-skill | 2026-11-07 | 2027-02-05 | Mobil teknoloji henüz seçilmedi; iOS/Swift seçilirse eklenir |
 
 ## Değerlendirilen repolar (aday olarak gösterilmez)

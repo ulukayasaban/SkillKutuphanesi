@@ -37232,6 +37232,10 @@
     "iart-ai/explainer-video-skills": {
       "neden": "Tek katkıcı; içerik Haziran'dan beri değişmedi; yardımcı betikler skill klasörü dışında",
       "tarih": "2026-11-15"
+    },
+    "storytold/pdfcraft": {
+      "neden": "Kullanıcı kararı 2026-11-17: şimdilik değil, durum değişirse bak",
+      "tarih": "2026-11-17"
     }
   }
 }
