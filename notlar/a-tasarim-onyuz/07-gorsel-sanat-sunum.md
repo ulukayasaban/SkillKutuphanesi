@@ -15,7 +15,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 58 KB (SKILL.md 19.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Niş ama iyi kurgulanmış; felsefe -> kod iki adımı ve seed'li parametre paneli tutarlı çıktı verir. Dikkat: viewer.html p5.js (cdnjs) ve Google Fonts'u CDN'den çeker, çevrimdışı çalışmaz; lisans alanı 'LICENSE.txt' (Anthropic) ve açık kaynak değil; sanat odaklı olduğundan çoğu ürün projesinde gerekmez.
 
-### artifacts-builder  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### artifacts-builder  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** React 18 + TypeScript + Vite + Tailwind + shadcn/ui ile karmaşık claude.ai HTML artifact'ı kurar (init-artifact.sh) ve Parcel + html-inline ile tek bir bundle.html'e paketler. web-artifacts-builder'ın eski adıyla yayımlanmış kopyasıdır; SKILL.md yalnızca ad/başlık satırlarında farklıdır.
 - **Ne zaman:** Durum yönetimi, yönlendirme veya shadcn bileşeni gerektiren tek dosyalık paylaşılabilir HTML çıktısı. · **Ne zaman değil:** web-artifacts-builder ile birebir aynı içerik; ikisini birden kurmayın. Basit tek dosya HTML/JSX için gereksiz ağır.
@@ -37,7 +37,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Marka-sunum profilinin ek skilli; özgünlük ve 'zanaat' vurgusu ile şablon görünümünü engeller, fontlar yerel ve OFL. Dikkat: skill klasörü ~5,4 MB (ağırlıkla ttf); SKILL.md 11,7 KB. Yalnızca SKILL.md bağlama girer. Betik yok, ağ/anahtar yok. LICENSE.txt Anthropic'e ait, repo lisans alanı boş.
 
-### canvas-design@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 61 (C)
+### canvas-design@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
 
 - **Ne yapar:** Anthropic canvas-design'ın ComposioHQ kopyası; SKILL.md ve font klasörü birebir aynıdır, yalnızca LICENSE.txt farklı (şablon Apache metni, telif sahibi boş).
 - **Ne zaman:** Yalnızca upstream sürümü erişilemezse; aynı işi yapar. · **Ne zaman değil:** Anthropic sürümü varken kurmayın (yinelenen, lisans metni eksik).
@@ -139,7 +139,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 23 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### frontend-slides  ·  zarazhangrui/frontend-slides @ 9906a34  ·  puan 77 (B)
+### frontend-slides  ·  zarazhangrui/frontend-slides @ 9906a34  ·  puan 78 (B)
 
 - **Ne yapar:** Sıfırdan ya da PPTX'ten dönüştürerek, bağımlılıksız tek dosyalık animasyonlu HTML sunum üretir. Sabit 16:9 sahne, stil ön ayarları ve 'bold template' paketiyle önce görsel önizleme gösterip seçtirir; isteğe bağlı PDF dışa aktarma ve Vercel'e yayınlama betikleri var.
 - **Ne zaman:** Konuşma/pitch için tarayıcıda çalışan, tasarımı özgün HTML sunum; elindeki .pptx'i web sunumuna çevirmek. · **Ne zaman değil:** Chart.js veri grafikli pazarlama destesi için slides; .pptx çıktısı gerekiyorsa pptx; video slayt gösterisi için slideshow.
@@ -160,7 +160,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 29 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### image-enhancer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### image-enhancer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** Ekran görüntüsü ve görsellerin çözünürlüğünü, keskinliğini ve sıkıştırma artefaktlarını iyileştirmeyi anlatan, betiği olmayan yalnızca yönerge niteliğinde kısa bir skill. Örnek çıktı biçimi verir ama gerçek bir araç/kütüphane belirtmez.
 - **Ne zaman:** Dokümantasyon veya sunum öncesi ekran görüntüsü iyileştirme isteğinde başvuru metni olarak. · **Ne zaman değil:** Gerçek yapay zekâ upscale için: ai-medya-uretici akışındaki upscale araçları, ffmpeg veya ImageMagick doğrudan kullanılmalı.
@@ -232,7 +232,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 43 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Küçük, bağımsız, Python modülleri düzenli; Slack sınırlarını doğrulaması işe yarar. Dikkat: 'pip install pillow imageio numpy' ister (--break-system-packages yok; venv önerilir). Composio sürümü eski ve farklı bir kod tabanı (ayrı alternatif).
 
-### slack-gif-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### slack-gif-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Aynı skill'in ComposioHQ'daki daha eski/geniş sürümü: SKILL.md 16,7 KB, ek color_palettes.py, typography.py, visual_effects.py ve templates/ klasörü içerir; Slack sınırları (emoji 64 KB, mesaj ~2 MB) ayrıntılıdır.
 - **Ne zaman:** Anthropic sürümündeki yardımcılar yetmezse; hazır şablon, tipografi ve görsel efekt modülleri gerektiğinde. · **Ne zaman değil:** Varsayılan olarak Anthropic sürümünü kullanın; ikisini birden kurmayın (aynı ad/iş).
@@ -254,7 +254,7 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 19 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. İçerik stratejisi ve yerleşim bilgisi iyi, MIT. Dikkat: referanslar `python ../design-system/scripts/search-slides.py` (kardeş design-system skill'ine ve onun veri tabanına) başvurur; design-system kurulu değilse bu komutlar kırık kalır, registry bunu bağımlılık olarak işaretlemiyor. Chart.js jsdelivr CDN'den yüklenir. SKILL.md yalnızca 1,7 KB. slideshow (video) ve design (claudekit) ile karıştırılmamalı.
 
-### sunum-sitesi  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 61 (C)
+### sunum-sitesi  ·  avenoxai/higgsfield-studio @ 6b5fe34  ·  puan 56 (C)
 
 - **Ne yapar:** Bir video, konuşma ya da ders bölümü için koyu temalı, sinematik tek sayfalık sunum sitesi kurar: hareketli panoramalı giriş, bölüm rayı gezinmesi, resimli sözlük kartları ve canlı döngü videoları. Görseller GPT Image 2, döngüler Seedance ile Higgsfield üzerinden üretilir. Türkçe.
 - **Ne zaman:** Videoya ya da derse eşlik eden tek sayfalık sunum/özet sitesi. · **Ne zaman değil:** Slayt destesi (PowerPoint, HTML deck) isteniyorsa sunum skilleri. Görsel ve döngü üretimi Higgsfield kredisi harcar; kendi görsellerinle ücretsiz kurulabilir. Repoda lisans dosyası yok.

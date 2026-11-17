@@ -67,7 +67,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 76 KB (SKILL.md 13.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: zorunlu sıra (yaklaşımlar → tasarım dokümanı → onay → writing-plans) açık hâle geldi; soru sormadan önce projeyi/bağlamı okuma kuralı eklendi; spike ve 'soruları atla' istisnaları netleşti.
 
-### brainstorming-research-ideas  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 84 (A)
+### brainstorming-research-ideas  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 85 (A)
 
 - **Ne yapar:** Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -77,7 +77,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 19 KB (SKILL.md 18.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### brainstorming@openai  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
+### brainstorming@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
 - **Ne yapar:** You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
@@ -190,7 +190,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 16 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, opsiyonel. Sınırlı döngü ve 'iç içe çalışamaz' uyarısı iyi düşünülmüş. Maliyetli (her kararda ek agent); yalnız planlayıcı/orkestratör rolüne uygun, persona skill listesine konmamalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### egm-bootstrap  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
+### egm-bootstrap  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
 
 - **Ne yapar:** Bootstrap directory README.md files across a repository subtree.
 - **Teknoloji:** css, git, node, python, typescript _(otomatik tespit)_
@@ -200,7 +200,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 31 KB (SKILL.md 23.2 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-brainstorm  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
+### egm-brainstorm  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
 
 - **Ne yapar:** Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). Helps turn half-baked concepts into structured hypotheses via clarifying questions, review, and iterative refinement. Produces an RFC summary for human review or more detailed design with egm-draft.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
@@ -210,7 +210,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 23 KB (SKILL.md 14.4 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-draft  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
+### egm-draft  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
 
 - **Ne yapar:** Drafts a design document section-by-section using the concepts brief from egm-brainstorm (or user notes). This is the second step in the Elephant-Goldfish (EGM) feature flow. Use when you are ready to write a design doc after aligning on requirements + solution.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -220,7 +220,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 32 KB (SKILL.md 17.1 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-drift-report  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 93 (A)
+### egm-drift-report  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 94 (A)
 
 - **Ne yapar:** Runs drift detection on all design documents to check for document and code consistency. Produces an actionable report with differences. Use when the user asks to detect drift or check for consistency across all design documents or READMEs in a directory.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -230,7 +230,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 5 KB (SKILL.md 3.1 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-resolve  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
+### egm-resolve  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
 
 - **Ne yapar:** The Elephant resolution skill. Ingests flat deficiency reports from concurrent Goldfish reviewers, applies automated fixes for PROPOSE FIX items via UI multiple-choice gates, and presents interactive negotiation/re-sync checkpoints.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -240,7 +240,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 12 KB (SKILL.md 8.3 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-review  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
+### egm-review  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
 
 - **Ne yapar:** Orchestrates the EGM Goldfish Review Protocol. Used as part of the EGM process to perform design document reviews. Executes five review phases: Initial Zoom Out Review, Comprehension Review, Design Critique, Intermediate Zoom Out Review, and Implementation Readiness.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -250,7 +250,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 35 KB (SKILL.md 23.5 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-review-loop  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 91 (A)
+### egm-review-loop  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
 
 - **Ne yapar:** Executes the Antagonistic-Review process from the Elephant-Goldfish Model (EGM) via an automated multi-agent review loop to audit documents against qualitative standards and structural templates, and automatically apply approved fixes. Use when reviewing design docs, READMEs, feature specifications, implementation plans, or verifying document completeness and tone.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -271,7 +271,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 20 KB (SKILL.md 17.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — 2026-10 güncellemesi: uzun örnek iş akışı çıkarıldı, kurallar aynı; SKILL.md kısaldı. Alt-agent kullanmadan aynı oturumda plan yürütme için hâlâ geçerli.
 
-### executing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### executing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when you have a written implementation plan to execute in a separate session with review checkpoints
 - **Teknoloji:** git _(otomatik tespit)_
@@ -890,7 +890,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, uygulama-plani grubunun birincili. Gerekçe: arayüz sözleşmeleri, görev boyutlandırma ve 'inceleme odağı' bölümüyle en uygulanabilir plan biçimi; superpowers yürütme zinciriyle (subagent-driven-development, executing-plans, TDD, verification) uçtan uca bağlı. addyosmani planning-and-task-breakdown daha hafif ve yığından bağımsız; vudovn plan-writing kısa ama ag-kit betiklerine atıf yapıyor.
 
-### writing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### writing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when you have a spec or requirements for a multi-step task, before touching code
 - **Teknoloji:** git, python _(otomatik tespit)_

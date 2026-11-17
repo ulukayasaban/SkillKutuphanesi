@@ -1017,7 +1017,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### connect-chatcut-desktop  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### connect-chatcut-desktop  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Install, open, connect, or repair ChatCut Desktop when the chatcut_desktop MCP tools are missing or unavailable. Do not use from a managed agent already running inside ChatCut Desktop, or when chatcut_desktop tools are already available.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1027,7 +1027,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 4 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### connect-recommend  ·  openai/plugins @ b767f8f  ·  puan 66 (B)
+### connect-recommend  ·  openai/plugins @ b767f8f  ·  puan 67 (B)
 
 - **Ne yapar:** Use this skill when the user asks about Stripe Connect configuration, charge patterns, Dashboard access, or how to get started with Connect, is building a marketplace, platform, multi-vendor store, gig platform, or subscription platform, needs to pay out sellers, vendors, or providers, mentions split payments, revenue sharing, multi-party payments, or similar payment distribution concepts, provide
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1413,7 +1413,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 6 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (tamamlayıcı). superpowers; kısa (6 KB), karar ağacı ve istem yapısı net. subagent-driven-development ile birlikte kullanılır.
 
-### dispatching-parallel-agents@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### dispatching-parallel-agents@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
 - **Teknoloji:** typescript _(otomatik tespit)_
@@ -2358,7 +2358,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 56 KB (SKILL.md 19.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: düzeltme döngüsü ve final inceleme ayrıntıları references/fix-loop.md ve references/final-review.md dosyalarına taşındı; SKILL.md 260 satır kısaldı, akış diyagramı sadeleşti. Davranış aynı, bağlam yükü azaldı.
 
-### subagent-driven-development@openai  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
+### subagent-driven-development@openai  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
 
 - **Ne yapar:** Use when executing implementation plans with independent tasks in the current session
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
@@ -2490,7 +2490,7 @@ _Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları_
 - **Boyut:** 20 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF (meta grubunda). Çok harness'li araç eşlemesi en güçlü yanı; aile dışında kullanılmaz. superpowers ailesi seçilen projede birincil olur.
 
-### using-superpowers@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### using-superpowers@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
 - **Teknoloji:** git _(otomatik tespit)_

@@ -2,7 +2,7 @@
 
 _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **16/21**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **16/36**
 
 ### blender  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 80 (A)
 
@@ -59,6 +59,36 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 28 KB (SKILL.md 18.4 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Sayısal, uygulanabilir teknik kataloğu; GSAP örnekleri dahil. Ev stili kökenli olsa da genel geçer değerde.
 
+### explainer-default  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 66 (B)
+
+- **Ne yapar:** Make a clean 45–90 second product demo video for any software product, rendered from code to MP4 with music. Airy light canvas, short centred lines the camera pushes into, the product's own UI rebuilt and shown up close as it is used (typing, results, tables, clicks), integrations, and a logo close. Use when someone wants a product demo, launch video, feature walkthrough or "how it works" video fo
+- **Teknoloji:** canvas, css, ffmpeg, html, node, playwright _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** Barty-Bart (kisi, ★1347, son güncelleme 2026-10-13, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 23 KB (SKILL.md 21.2 KB, yük orta) · **Bağımlılık:** Videolar HyperFrames/Remotion/GSAP, Node ve ffmpeg ile yerelde render edilir.
+- **İnceleme:** otomatik
+
+### explainer-engaging  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 66 (B)
+
+- **Ne yapar:** Make a 10–30 second continuous-shot explainer for any product, rendered from code to MP4 with sound. One hero element (a ball, a cursor, a file, a message) travels through the product's workflow laid out as stations on one big canvas; the camera follows it, each station reacts as it passes, then the camera pulls out to reveal the whole journey. Use when someone wants an engaging, story-driven, one
+- **Teknoloji:** canvas, css, ffmpeg, html, node, playwright, react _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** Barty-Bart (kisi, ★1347, son güncelleme 2026-10-13, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 25 KB (SKILL.md 23.2 KB, yük orta) · **Bağımlılık:** Videolar HyperFrames/Remotion/GSAP, Node ve ffmpeg ile yerelde render edilir.
+- **İnceleme:** otomatik
+
+### explainer-high-energy  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 66 (B)
+
+- **Ne yapar:** Make a 12–20 second high-energy motion-graphics promo for any product, rendered from code to MP4 with synthesised music. Fast beat-locked scene changes, kinetic typography, a shape that carries across every transition, a HUD frame. Use when someone wants a hype reel, teaser, launch sting or showreel-style promo for a product, app or brand.
+- **Teknoloji:** canvas, css, ffmpeg, html, node, playwright _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** Barty-Bart (kisi, ★1347, son güncelleme 2026-10-13, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 22 KB (SKILL.md 20.3 KB, yük orta) · **Bağımlılık:** Videolar HyperFrames/Remotion/GSAP, Node ve ffmpeg ile yerelde render edilir.
+- **İnceleme:** otomatik
+
 ### huashu-art-motion  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** 辅助艺术动画与解说任务：35 种艺术风格配方、9 种解说语法、分镜与确定性 Canvas 绘制工具。按宿主时间轴实现，素材与导出使用宿主能力。
@@ -67,6 +97,16 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 424 KB (SKILL.md 5.5 KB, yük kucuk)
+- **İnceleme:** otomatik
+
+### kinetic-reel  ·  tuzhechen2005/opus-video-skills @ dafed5b  ·  puan 66 (B)
+
+- **Ne yapar:** Make kinetic-typography motion reels (MP4) in code: showreels, portfolio or work reels, product promos, intro films, "motion design"-style videos with bold condensed type, HUD micro-type, black/cream/lime palette, three.js generative layers (particle terrain, liquid marble, chrome knot, particle clouds), shape-continuity transitions and a synthesized, beat-locked score. Canvas 2D + WebGL rendered 
+- **Teknoloji:** canvas, css, ffmpeg, html, node, three.js, webgl _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** tuzhechen2005 (kisi, ★525, son güncelleme 2026-11-16, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 3637 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** Node, headless Chrome ve ffmpeg gerekir (p5.js + p5.brush / three.js ile kare kare çizim); ilk kullanımda npm paketleri kurulur.
 - **İnceleme:** otomatik
 
 ### layers  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 65 (B)
@@ -123,6 +163,16 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 729 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır. · **Kırık bağlantı:** 5
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kaliteli; kurulumu ve sürüm uyumu CE'ye göre zahmetli.
 
+### motion-broll  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 61 (C)
+
+- **Ne yapar:** Turn a talking-head video and its transcript into motion-graphic B-roll timed to the speaker's words, in a continuous one-shape style (one element that morphs and never cuts, driven by a cursor, spring motion). Use when someone gives a video (and ideally a transcript) and asks for motion graphics, B-roll, animated cutaways or overlays.
+- **Teknoloji:** canvas, css, ffmpeg, html, node, playwright, python _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** Barty-Bart (kisi, ★1347, son güncelleme 2026-10-13, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 209 KB (SKILL.md 8.7 KB, yük orta) · **Bağımlılık:** Videolar HyperFrames/Remotion/GSAP, Node ve ffmpeg ile yerelde render edilir.
+- **İnceleme:** otomatik
+
 ### motion-doctrine  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 99 (A)
 
 - **Ne yapar:** Çok sahneli videonun bağımsız slaytlar yığını değil tek kesintisiz kamera hareketi gibi hissettirmesi için üst düzey hareket yasası: vektör yasası (çıkış girişi belirler, Z ölçek işareti), filmin akıntısı, taşıyıcı öğeler, nedensel hareket, Seam Gate doğrulayıcısı, boşta sallanma yasağı ve doruk öncesi durgunluk. Alt teknik skillere (cut-the-curve, seam-craft, oversized-cursor) yönlendirir.
@@ -134,6 +184,16 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 44 KB (SKILL.md 11.7 KB, yük orta) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kendini genel/üst akış hareket rehberlerinin ÜSTÜNDE ilan ediyor — bu bir ev stili tercihi, evrensel kural değil. seam-gate doğrulayıcı betiği somut. · 2026-11-12 yeniden incelendi (ab66e5b): seam-gate betiği `__player.seek` artık asenkron beklendiği için await ile çalışıyor (eskiden t=0'ı ölçüp tüm dikişleri hatalı gösterebilirdi); referans notu eklendi. Değerlendirme aynı.
 
+### object-separation  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 66 (B)
+
+- **Ne yapar:** Separate a person, product or hand from the background in a video, on the user's own computer with SAM 2. Scans the machine first to pick the right model size, then outputs the same video with the separated subject highlighted in green, plus frame-by-frame masks. Use when someone wants to separate, isolate, cut out or rotoscope something in a video.
+- **Teknoloji:** ffmpeg, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** Barty-Bart (kisi, ★1347, son güncelleme 2026-10-13, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 11 KB (SKILL.md 9.2 KB, yük orta) · **Bağımlılık:** SAM 2 modelini yerelde çalıştırır: pip install ile Python bağımlılıkları kurulur, model dosyaları indirilir (disk, RAM; GPU önerilir). Hiçbir şey yüklenmez.
+- **İnceleme:** otomatik
+
 ### oil-motion  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
 - **Ne yapar:** 处理视频和序列帧，编译滚动、指针、拖动与状态驱动的网页动效；内含本地媒体处理脚本和运行时。新素材生成使用宿主工具。
@@ -142,6 +202,16 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 318 KB (SKILL.md 12.1 KB, yük orta)
+- **İnceleme:** otomatik
+
+### painted-animation  ·  tuzhechen2005/opus-video-skills @ dafed5b  ·  puan 66 (B)
+
+- **Ne yapar:** Make hand-painted watercolour-and-ink cartoon videos (MP4) with code — p5.js + p5.brush rendered frame by frame in headless Chrome, encoded with ffmpeg — starring Clawd or any character. Use when the user asks to make an animation, animated short, cartoon, music video, lyric video, animated GIF/loop or "a video of Clawd…", or mentions the PDoomVideo / ClaudeAnimationBase approach. Covers storyboar
+- **Teknoloji:** ffmpeg, html, node, python, react _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** tuzhechen2005 (kisi, ★525, son güncelleme 2026-11-16, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 6169 KB (SKILL.md 7.4 KB, yük kucuk) · **Bağımlılık:** Node, headless Chrome ve ffmpeg gerekir (p5.js + p5.brush / three.js ile kare kare çizim); ilk kullanımda npm paketleri kurulur.
 - **İnceleme:** otomatik
 
 ### pose-library-design  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 86 (A)
@@ -155,6 +225,76 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve doğru; tek başına derinliği sınırlı.
 
+### product-launch-motion  ·  AbubakrChan/product-launch-motion @ edbfb10  ·  puan 80 (A)
+
+- **Ne yapar:** Use when asked to make a launch video, product film, motion design piece, UI motion reel, Dribbble-style UI animation or animated brand/logo sting — anything rendered to MP4 from HTML with a cursor, morphing UI, springs, beat-synced music and SFX. Carries Chan's full creative direction (one shape never cut, blur content swaps, springs, real data, logo slams, no creative limits) and the proven buil
+- **Teknoloji:** canvas, css, ffmpeg, html, playwright, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** AbubakrChan (kisi, ★487, son güncelleme 2026-10-21, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 51 KB (SKILL.md 8.9 KB, yük orta) · **Bağımlılık:** Node, ffmpeg ve HyperFrames benzeri HTML'den MP4 render hattı gerekir; müzik/SFX için yerel araçlar.
+- **İnceleme:** otomatik
+
+### remotion-explainer-video  ·  shadcn-labs/snapcn @ 18b973d  ·  puan 83 (A)
+
+- **Ne yapar:** Make an explainer video in Remotion: a narrated 30–90s video that explains a product, feature, idea or process, with a voiceover and burned-in captions. Script → voiceover → word timings → one snapcn scene per beat → captions → render. Uses snapcn's Remotion components (@snapcn/punch-lines, status-cycle, count-grid, laptop-frame, word-captions, karaoke-captions and more) for every beat instead of 
+- **Teknoloji:** api-anahtari, node, react, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** shadcn-labs (kurum, ★652, son güncelleme 2026-11-12, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 7.2 KB, yük kucuk) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
+- **İnceleme:** otomatik
+
+### remotion-kinetic-typography  ·  shadcn-labs/snapcn @ 18b973d  ·  puan 83 (A)
+
+- **Ne yapar:** Make kinetic typography in Remotion: animated text, title cards, a headline reveal, rotating words, a highlighted phrase, a line that morphs into its payoff, or a run of bold statements. Uses snapcn's text components (@snapcn/text-reveal, type-morph, text-highlight, word-flip, punch-lines, text-swell and more), which pivot scale on the measured baseline so type doesn't judder or shake the way hand
+- **Teknoloji:** api-anahtari, node, react, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** shadcn-labs (kurum, ★652, son güncelleme 2026-11-12, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 6.9 KB, yük kucuk) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
+- **İnceleme:** otomatik
+
+### remotion-launch-video  ·  shadcn-labs/snapcn @ 18b973d  ·  puan 81 (A)
+
+- **Ne yapar:** Build a product launch video in Remotion from a brief: a launch film, feature announcement, version release, Product Hunt / X / LinkedIn promo or landing-page hero video. Composes snapcn's hand-tuned Remotion scenes (@snapcn/announce-title, hero-launch, type-morph, count-grid, wordmark-cut and more) instead of hand-animating every shot, so the result does not look like every other AI video. Brief 
+- **Teknoloji:** api-anahtari, canvas, css, ffmpeg, node, react, remotion, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** shadcn-labs (kurum, ★652, son güncelleme 2026-11-12, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 14 KB (SKILL.md 12.1 KB, yük orta) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
+- **İnceleme:** otomatik
+
+### remotion-logo-animation  ·  shadcn-labs/snapcn @ 18b973d  ·  puan 83 (A)
+
+- **Ne yapar:** Make a logo animation in Remotion: a logo reveal, logo sting, intro or outro bumper, brand reveal or end card for a video, launch or YouTube channel. Uses snapcn's hand-tuned Remotion logo scenes (@snapcn/logo-flicker, logo-assemble, logo-collapse, block-wordmark, wordmark-cut) with your real logo, instead of a logo that fades in and scales up. Triggers: logo animation, logo reveal, logo sting, an
+- **Teknoloji:** api-anahtari, node, react, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** shadcn-labs (kurum, ★652, son güncelleme 2026-11-12, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 8 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
+- **İnceleme:** otomatik
+
+### remotion-motion-graphics  ·  shadcn-labs/snapcn @ 18b973d  ·  puan 81 (A)
+
+- **Ne yapar:** Make a short, design-led motion graphic in Remotion, where the motion is the message: kinetic typography, a title card, a stat count-up, a logo sting or brand reveal, a social-proof overlay, an image-gallery opener or burned-in captions. Usually under 10s, up to about 30s. Built from snapcn's hand-tuned Remotion components (@snapcn/text-reveal, type-morph, punch-lines, logo-flicker, count-grid, or
+- **Teknoloji:** api-anahtari, css, node, react, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** shadcn-labs (kurum, ★652, son güncelleme 2026-11-12, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 10 KB (SKILL.md 8.5 KB, yük orta) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
+- **İnceleme:** otomatik
+
+### remotion-product-demo  ·  shadcn-labs/snapcn @ 18b973d  ·  puan 81 (A)
+
+- **Ne yapar:** Build a product demo video in Remotion from a real screen recording or screenshots: a SaaS walkthrough, feature demo, onboarding clip, CLI or developer-tool demo, AI app demo or App Store preview. Uses snapcn's Remotion components (@snapcn/screen-recording, cursor-track, laptop-frame, phone-frame, terminal-simulator, prompt-send, answer-stream, status-cycle) so the camera push, clicks, device fram
+- **Teknoloji:** api-anahtari, canvas, node, react, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** shadcn-labs (kurum, ★652, son güncelleme 2026-11-12, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 12 KB (SKILL.md 10.3 KB, yük orta) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
+- **İnceleme:** otomatik
+
 ### seam-craft  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 92 (A)
 
 - **Ne yapar:** Sahneden sahneye geçişlerin ana zaman çizelgesinde doğru birleşmesi için render önkoşulları: koyu filmlerde kesmede beyaz parlamayı önleyen opak sahne zemini, enjektörün sarmalayıcıları nasıl örtüştürdüğü, son kareyi tuttuğu ve şablon kodunu nasıl yerleştirdiği.
@@ -166,13 +306,23 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. HeyGen iç ev stili (metadata internal:true); kısa ve tek bir hata sınıfına odaklı, HeyGen launch-video enjektörüne özgü ayrıntılar içeriyor.
 
+### snapcn  ·  shadcn-labs/snapcn @ 18b973d  ·  puan 81 (A)
+
+- **Ne yapar:** Build Remotion videos with snapcn — a shadcn registry of copy-paste animation components and timeline-driven UI primitives. Use when composing video scenes, adding text animations, transitions, backgrounds, UI blocks, brand/social cards, or full compositions in a Remotion project. Triggers include "snapcn", "video component", "add animation", "text reveal", "product demo video", "remotion componen
+- **Teknoloji:** api-anahtari, canvas, node, react, remotion, typescript, webgl _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** shadcn-labs (kurum, ★652, son güncelleme 2026-11-12, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 176 KB (SKILL.md 12.1 KB, yük orta) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
+- **İnceleme:** otomatik
+
 ### stil  ·  yerel/site @ 23cb314  ·  puan 68 (B)
 
 - **Ne yapar:** Referans görselden (poster, reklam, ekran görüntüsü) yeniden kullanılabilir bir animasyonlu anlatım videosu stili çıkarır ve bunu her konuda çalışan uzun, kendi başına yeten bir stil prompt'u (stil-prompt.md) olarak yazar; prompt'u taze oturumda test edip düzeltir. Yanında 11 hazır stilin tablosu ve 7'sinin uzun prompt'u gelir (cam, risograf, kesik kâğıt, izometrik, düz vektör, kinetik tipografi, parçacık).
 - **Ne zaman:** Bir görselin tarzında motion graphics / explainer video serisi yapılacaksa ya da hazır stillerden biriyle (HTML + window.seek + başsız Chrome + ffmpeg) konu anlatım videosu üretilecekse. · **Ne zaman değil:** Görseli birebir kopyalamak, logo ya da düzen almak için değil; HyperFrames/Remotion kompozisyonu ya da genel tasarım sistemi dosyası gerekiyorsa (visual-style) değil. Kurulu araç istemeyen hızlı tek görsel işi için ağır.
 - **Teknoloji:** html, canvas, webgl, ffmpeg, playwright · **Paketler:** puppeteer ya da playwright (başsız Chrome), ffmpeg, mlx-whisper ya da openai-whisper (ses açıksa)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Smokich (kisi, ★0, son güncelleme 2026-11-16, lisans belirtilmemiş)
+- **Geliştirici:** Smokich (kisi, ★0, son güncelleme 2026-11-17, lisans belirtilmemiş)
 - **Durum:** tercih · **Örtüşme:** gorsel-stil-sistemi → alternatif · **Roller:** motion-graphics-sanatcisi, video-kompozisyon
 - **Boyut:** 295 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Yazar Smokich (YouTube @DevSmokich, smokich.gosem.dev/stil); uzun prompt'lar Michael Szach'ın stil kütüphanesinden uyarlama; lisans belirtilmemiş, kişisel kullanım (2026-11-15'ten beri kaynak yerel/site; sahip ve lisans site-takip.json'dan gelir, K-57). Güvenlik: eksik araçları kendisi kurar (Puppeteer/Playwright Chromium indirir, Whisper, ffmpeg); ses efekti açıksa Openverse'ten anahtarsız CC0 ses indirir; stil testi taze oturum/alt ajanda 2-3 tur çalışır, jeton harcar; site genel ~/.claude/skills klasörüne kurmayı söyler, kütüphanede yalnız skill-ekle.py ile projeye kurulur. Gizli değer ya da sistem dosyasına yazan komut yok. Ayrıntı ve dosya özetleri: site/stil/KAYNAK.md.

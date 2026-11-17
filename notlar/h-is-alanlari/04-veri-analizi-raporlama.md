@@ -64,7 +64,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### google-analytics-admin-api-basics  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-analytics-admin-api-basics  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Manages Google Analytics account and property settings, enables the Analytics Admin API via the Cloud CLI, lists accounts and properties, and manages data streams, custom dimensions, conversion events, and integrations. Use when you need to programmatically configure Google Analytics accounts, provision properties, manage data retention, configure Measurement Protocol secrets, or manage Firebase a
 - **Teknoloji:** node, python _(otomatik tespit)_
@@ -74,7 +74,7 @@ _İş verisi analizi, SQL, pano/rapor, öngörü_
 - **Boyut:** 19 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-analytics-data-api-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-analytics-data-api-basics  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Manages Google Analytics reporting data, enables the Analytics Data API via the Cloud CLI, and creates reports using the Google Analytics Data API (v1beta). Use when you need to interact with Google Analytics properties, run customized analytics reports, query metrics (like activeUsers, screenPageViews) and dimensions (like city, date), check metrics and dimensions compatibility, or verify API ena
 - **Teknoloji:** node, python _(otomatik tespit)_

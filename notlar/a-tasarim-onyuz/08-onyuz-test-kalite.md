@@ -100,7 +100,7 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Küçük (3.8 KB), net karar ağacı; betikleri 'kara kutu' kullandırarak bağlamı koruyor. Dikkat: python `playwright` paketi ve tarayıcıların (`pip install playwright && playwright install chromium`) kurulu olduğunu varsayıyor ama bunu belirtmiyor. `with_server.py` verilen komutları `shell=True` ile çalıştırıyor (cd/&& desteği için; komutu kullanıcı/ajan verir, dış girdi değil). Registry 'lisans yok' diyor ama LICENSE.txt (Apache-2.0) mevcut.
 
-### webapp-testing@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 78 (B)
+### webapp-testing@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 79 (B)
 
 - **Ne yapar:** anthropics/skills webapp-testing'in kopyası: Python Playwright ile yerel web uygulaması testi, with_server.py ve örnek betikler.
 - **Ne zaman:** Yalnızca resmî kopya alınamazsa. · **Ne zaman değil:** Resmî kopya varken kullanma.

@@ -62,6 +62,7 @@
 | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | AgriciDaniel | kisi |  | 26654 | 30 | 2026-11-01 | MIT | 26 |
 | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | earthtojake | kisi |  | 25423 | 32 | 2026-11-04 | MIT | 12 |
 | [google/skills](https://github.com/google/skills) | google | kurum |  | 24352 | 9 | 2026-11-16 | Apache-2.0 | 197 |
+| [latent-spaces/brag](https://github.com/latent-spaces/brag) | latent-spaces | kurum |  | 21811 | 20 | 2026-11-15 | MIT | 2 |
 | [blender/blender](https://github.com/blender/blender) | blender | kurum | ✅ | 21645 | 1600 | 2026-11-05 | NOASSERTION | 0 |
 | [rough-stuff/rough](https://github.com/rough-stuff/rough) | rough-stuff | kurum |  | 21345 | 13 | 2024-07-28 | MIT | 0 |
 | [KaTeX/KaTeX](https://github.com/KaTeX/KaTeX) | KaTeX | kurum | ✅ | 20499 | 198 | 2026-11-03 | MIT | 0 |
@@ -88,6 +89,7 @@
 | [AgriciDaniel/claude-ads](https://github.com/AgriciDaniel/claude-ads) | AgriciDaniel | kisi |  | 10746 | 2 | 2026-11-01 | MIT | 34 |
 | [metafizzy/zdog](https://github.com/metafizzy/zdog) | metafizzy | kurum |  | 10683 | 5 | 2023-07-18 | yok | 0 |
 | [android/skills](https://github.com/android/skills) | android | kurum | ✅ | 10337 | 8 | 2026-11-04 | Apache-2.0 | 37 |
+| [JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video) | JuneYaooo | kisi |  | 10200 | 17 | 2026-11-17 | Apache-2.0 | 1 |
 | [pmndrs/drei](https://github.com/pmndrs/drei) | pmndrs | kurum | ✅ | 10117 | 252 | 2026-10-21 | MIT | 0 |
 | [Ryze-AI-Adgent/open-seo-mcp-skills](https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills) | Ryze-AI-Adgent | kurum |  | 8815 | 1 | 2026-10-27 | MIT | 8 |
 | [librosa/librosa](https://github.com/librosa/librosa) | librosa | kurum | ✅ | 8799 | 144 | 2026-10-06 | ISC | 0 |
@@ -95,6 +97,7 @@
 | [barvian/number-flow](https://github.com/barvian/number-flow) | barvian | kisi |  | 7772 | 7 | 2026-09-20 | MIT | 0 |
 | [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | dequelabs | kurum | ✅ | 7755 | 272 | 2026-11-04 | MPL-2.0 | 0 |
 | [openai/plugins](https://github.com/openai/plugins) | openai | kurum | ✅ | 7752 | 62 | 2026-11-03 | yok | 531 |
+| [kajisho5/ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill) | kajisho5 | kisi |  | 7677 | 11 | 2026-11-16 | MIT | 1 |
 | [Jakeschincariol/replica-skill](https://github.com/Jakeschincariol/replica-skill) | Jakeschincariol | kisi |  | 7640 | 1 | 2026-10-03 | MIT | 11 |
 | [ai/size-limit](https://github.com/ai/size-limit) | ai | kisi |  | 7044 | 103 | 2026-11-02 | MIT | 0 |
 | [czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) | czlonkowski | kisi |  | 6589 | 7 | 2026-10-24 | MIT | 15 |
@@ -114,6 +117,7 @@
 | [cloudflare/skills](https://github.com/cloudflare/skills) | cloudflare | kurum | ✅ | 3279 | 48 | 2026-11-03 | Apache-2.0 | 19 |
 | [Jakeschincariol/linkedin-agent-skill](https://github.com/Jakeschincariol/linkedin-agent-skill) | Jakeschincariol | kisi |  | 3205 | 1 | 2026-09-17 | MIT | 11 |
 | [pmndrs/postprocessing](https://github.com/pmndrs/postprocessing) | pmndrs | kurum | ✅ | 2951 | 22 | 2026-11-01 | Zlib | 0 |
+| [nateherkai/herk-edit-kit](https://github.com/nateherkai/herk-edit-kit) | nateherkai | kisi |  | 2929 | 1 | 2026-10-14 | NOASSERTION | 10 |
 | [lottiefiles/motion-design-skill](https://github.com/lottiefiles/motion-design-skill) | LottieFiles | kurum |  | 2853 | 1 | 2026-05-18 | MIT | 1 |
 | [JohnHeibel/ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase) | JohnHeibel | kisi |  | 2766 | 2 | 2026-09-24 | MIT | 0 |
 | [yaojingang/yao-meta-skill](https://github.com/yaojingang/yao-meta-skill) | yaojingang | kisi |  | 2719 | 3 | 2026-08-17 | MIT | 1 |
@@ -123,12 +127,14 @@
 | [zanwei/design-dna](https://github.com/zanwei/design-dna) | zanwei | kisi |  | 2079 | 3 | 2026-08-28 | MIT | 1 |
 | [pmndrs/cannon-es](https://github.com/pmndrs/cannon-es) | pmndrs | kurum | ✅ | 2069 | 41 | 2024-01-06 | MIT | 0 |
 | [jwagner/simplex-noise.js](https://github.com/jwagner/simplex-noise.js) | jwagner | kisi |  | 1852 | 10 | 2024-07-26 | MIT | 0 |
+| [veedstudio/open-edit](https://github.com/veedstudio/open-edit) | veedstudio | kurum |  | 1838 | 3 | 2026-11-11 | Apache-2.0 | 1 |
 | [seek-oss/capsize](https://github.com/seek-oss/capsize) | seek-oss | kurum |  | 1734 | 23 | 2026-10-15 | MIT | 0 |
 | [meyda/meyda](https://github.com/meyda/meyda) | meyda | kurum | ✅ | 1672 | 24 | 2024-07-15 | MIT | 0 |
 | [sarpstar/cinecode](https://github.com/sarpstar/cinecode) | sarpstar | kisi |  | 1614 | 3 | 2026-11-03 | MIT | 1 |
 | [figma/code-connect](https://github.com/figma/code-connect) | figma | kurum | ✅ | 1596 | 3 | 2026-10-26 | MIT | 0 |
 | [zhuyansen/awesome-claude-video-skills](https://github.com/zhuyansen/awesome-claude-video-skills) | zhuyansen | kisi |  | 1578 | 3 | 2026-11-04 | NOASSERTION | 0 |
 | [kylezantos/design-motion-principles](https://github.com/kylezantos/design-motion-principles) | kylezantos | kisi |  | 1528 | 1 | 2026-05-30 | MIT | 1 |
+| [Barty-Bart/motion-graphics](https://github.com/Barty-Bart/motion-graphics) | Barty-Bart | kisi |  | 1347 | 4 | 2026-10-13 | NOASSERTION | 6 |
 | [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills) | nexscope-ai | kurum |  | 1332 | 7 | 2026-08-26 | MIT | 162 |
 | [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills) | freshtechbro | kisi |  | 1248 | 1 | 2025-11-20 | MIT | 23 |
 | [darkroomengineering/satus](https://github.com/darkroomengineering/satus) | darkroomengineering | kurum | ✅ | 1012 | 19 | 2026-11-04 | MIT | 1 |
@@ -140,12 +146,16 @@
 | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) | nexscope-ai | kurum |  | 834 | 5 | 2026-08-26 | MIT | 52 |
 | [arturitu/the-delegation](https://github.com/arturitu/the-delegation) | arturitu | kisi |  | 723 | 1 | 2026-04-16 | NOASSERTION | 0 |
 | [evanca/flutter-ai-rules](https://github.com/evanca/flutter-ai-rules) | evanca | kisi |  | 669 | 1 | 2026-10-30 | MIT | 36 |
+| [shadcn-labs/snapcn](https://github.com/shadcn-labs/snapcn) | shadcn-labs | kurum |  | 652 | 3 | 2026-11-12 | MIT | 7 |
 | [ehmo/platform-design-skills](https://github.com/ehmo/platform-design-skills) | ehmo | kisi |  | 640 | 1 | 2026-03-19 | MIT | 8 |
 | [pmndrs/react-three-a11y](https://github.com/pmndrs/react-three-a11y) | pmndrs | kurum | ✅ | 631 | 10 | 2026-08-20 | NOASSERTION | 0 |
+| [tuzhechen2005/opus-video-skills](https://github.com/tuzhechen2005/opus-video-skills) | tuzhechen2005 | kisi |  | 525 | 3 | 2026-11-16 | NOASSERTION | 2 |
+| [AbubakrChan/product-launch-motion](https://github.com/AbubakrChan/product-launch-motion) | AbubakrChan | kisi |  | 487 | 2 | 2026-10-21 | MIT | 1 |
 | [twostraws/SwiftData-Agent-Skill](https://github.com/twostraws/SwiftData-Agent-Skill) | twostraws | kisi |  | 463 | 2 | 2026-10-19 | MIT | 1 |
 | [hamen/compose_skill](https://github.com/hamen/compose_skill) | hamen | kisi |  | 378 | 3 | 2026-07-15 | MIT | 2 |
 | [xjli360/sealeap-amazon-skills](https://github.com/xjli360/sealeap-amazon-skills) | xjli360 | kisi |  | 369 | 1 | 2026-10-16 | MIT | 602 |
 | [dpconde/claude-android-skill](https://github.com/dpconde/claude-android-skill) | dpconde | kisi |  | 352 | 1 | 2025-12-07 | MIT | 1 |
+| [heygen-com/hyperframes-community-skills](https://github.com/heygen-com/hyperframes-community-skills) | heygen-com | kurum | ✅ | 280 | 3 | 2026-11-17 | Apache-2.0 | 7 |
 | [ParthJadhav/ios-marketing-capture](https://github.com/ParthJadhav/ios-marketing-capture) | ParthJadhav | kisi |  | 265 | 1 | 2026-09-05 | MIT | 1 |
 | [lemomo-ai/lemo-wake](https://github.com/lemomo-ai/lemo-wake) | lemomo-ai | kisi |  | 256 | 1 | 2026-10-17 | NOASSERTION | 3 |
 | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills) | 40RTY-ai | kurum |  | 201 | 3 | 2026-10-26 | MIT | 117 |
@@ -179,5 +189,5 @@
 | [avenoxai/higgsfield-studio](https://github.com/avenoxai/higgsfield-studio) | avenoxai | kisi |  | 14 | 1 | 2026-08-19 | yok | 6 |
 | [Trendyol/trendyol-integration-developer-tool](https://github.com/Trendyol/trendyol-integration-developer-tool) | Trendyol | kurum | ✅ | 11 | 3 | 2026-06-11 | yok | 1 |
 | [J-DTurner/etsy-api-skill](https://github.com/J-DTurner/etsy-api-skill) | J-DTurner | kisi |  | 6 | 1 | 2026-01-25 | MIT | 1 |
-| yerel/kendi | kullanıcı | kisi | ✅ | 0 | 1 | 2026-11-16 | Kendi (özel) | 4 |
-| yerel/site | site (skill başına) | kisi |  | 0 | 1 | 2026-11-16 | belirtilmemiş | 1 |
+| yerel/kendi | kullanıcı | kisi | ✅ | 0 | 1 | 2026-11-17 | Kendi (özel) | 4 |
+| yerel/site | site (skill başına) | kisi |  | 0 | 1 | 2026-11-17 | belirtilmemiş | 1 |

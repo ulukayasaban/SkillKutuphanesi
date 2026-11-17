@@ -1,6 +1,6 @@
 {
   "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
-  "guncelleme": "2026-11-16",
+  "guncelleme": "2026-11-17",
   "siniflar": {
     "gemini-api": [
       "kismen",
@@ -2437,6 +2437,62 @@
     "google-agents-cli-onboarding": [
       "kismen",
       "Google Cloud skili; çoğu işlem faturalı bir GCP projesi ister (ücretsiz katman, sandbox ve deneme kredisi ücretsiz başlangıç sağlar, ağır kullanım ücretli)"
+    ],
+    "cut-silences": [
+      "kismen",
+      "Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var"
+    ],
+    "edit-video": [
+      "kismen",
+      "Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var"
+    ],
+    "short-form-video": [
+      "kismen",
+      "Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var"
+    ],
+    "short-form-edit": [
+      "kismen",
+      "Transkript için ElevenLabs Scribe (varsayılan, alternatifleri var) ve üretilmiş ek görüntüler için isteğe bağlı Kie.ai; ikisi de ücretli servis, ücretsiz yol (yerel transkript, kendi görüntüleri) var"
+    ],
+    "session-story": [
+      "kismen",
+      "İsteğe bağlı Gemini (GEMINI_API_KEY) ile kare özeti; anahtar yoksa yerel çalışır. Not: yerel konuşma geçmişini okur (kullanıcı onayından sonra)"
+    ],
+    "vox-explainer": [
+      "ucretsiz",
+      "HeyGen yalnızca HyperFrames'in kurulum kaynağı olarak anılır; ücretli servis gerekmez"
+    ],
+    "open-edit": [
+      "kismen",
+      "VEED barındırılan servisleri (transkript, arka plan silme, AI sunucu, lipsync) ve fal modelleri VEED/fal kredisi ister; render ve yerel araç takımı ücretsiz"
+    ],
+    "snapcn": [
+      "kismen",
+      "Açık bileşenler ücretsiz (MIT); Pro bileşenler snapcn MCP/SNAPCN_API_KEY (abonelik) ister"
+    ],
+    "remotion-explainer-video": [
+      "kismen",
+      "Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf"
+    ],
+    "remotion-kinetic-typography": [
+      "kismen",
+      "Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf"
+    ],
+    "remotion-launch-video": [
+      "kismen",
+      "Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf"
+    ],
+    "remotion-logo-animation": [
+      "kismen",
+      "Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf"
+    ],
+    "remotion-motion-graphics": [
+      "kismen",
+      "Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf"
+    ],
+    "remotion-product-demo": [
+      "kismen",
+      "Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

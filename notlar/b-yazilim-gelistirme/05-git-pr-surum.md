@@ -54,7 +54,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 18 KB (SKILL.md 18.4 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
-### changelog-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
+### changelog-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 71 (B)
 
 - **Ne yapar:** Git commit geçmişini tarayıp değişiklikleri kategorilere (yeni özellik, iyileştirme, düzeltme, kırıcı değişiklik, güvenlik) ayırır, iç commit'leri eler ve teknik mesajları son kullanıcının anlayacağı sürüm notlarına çevirir; isteğe bağlı stil rehberi dosyası okur.
 - **Ne zaman:** Sürüm notları, haftalık/aylık ürün güncellemesi, app store değişiklik metni veya herkese açık changelog sayfası hazırlarken. · **Ne zaman değil:** Geliştirici odaklı Keep a Changelog bakımı (release / git-workflow-and-versioning); commit mesajları anlamsızsa sonuç zayıf.
@@ -97,7 +97,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, dal-bitirme grubunun birincili. Gerekçe: kullanıcıya karar bırakan sabit menü, temel dal doğrulaması ve kökene dayalı worktree temizliği ile en güvenli kapanış; pull-request (heyitsnoah) onaysız push eğilimli tek komut → alternatif.
 
-### finishing-a-development-branch@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### finishing-a-development-branch@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when implementation is complete, all tests pass, and you need to decide how to integrate the work
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -252,7 +252,7 @@ _Git, worktree, PR, sürüm/release, changelog_
 - **Boyut:** 7 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, worktree grubunun birincili. Gerekçe: 'harness ile kavga etme' ilkesi, var olan yalıtımı algılama, alt modül koruması ve onay adımı; Claude Code/Codex worktree araçlarıyla uyumlu. heyitsnoah git-worktrees yalnız komut başvurusu → alternatif.
 
-### using-git-worktrees@openai  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### using-git-worktrees@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
 - **Teknoloji:** git, node, python _(otomatik tespit)_

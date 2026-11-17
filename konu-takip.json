@@ -1010,6 +1010,56 @@
       "karar": "eklendi",
       "neden": "kütüphaneye eklendi 2026-11-16 (197 skil, filtreli; kullanıcı onayı)",
       "tarih": "2026-11-16"
+    },
+    "latent-spaces/brag": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "tuzhechen2005/opus-video-skills": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "Barty-Bart/motion-graphics": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "AbubakrChan/product-launch-motion": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "JuneYaooo/rea-video": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "veedstudio/open-edit": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "heygen-com/hyperframes-community-skills": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "shadcn-labs/snapcn": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "kajisho5/ffmpeg-skill": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
+    },
+    "nateherkai/herk-edit-kit": {
+      "karar": "eklendi",
+      "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
+      "tarih": "2026-11-17"
     }
   },
   "konular": {
@@ -37235,6 +37285,18 @@
     },
     "storytold/pdfcraft": {
       "neden": "Kullanıcı kararı 2026-11-17: şimdilik değil, durum değişirse bak",
+      "tarih": "2026-11-17"
+    },
+    "howseen-ai/claude-motion-design": {
+      "neden": "Kullanıcı kararı 2026-11-17: kişisel iş klasörü yolu ve motion-design ad çakışması; durum değişirse bak",
+      "tarih": "2026-11-17"
+    },
+    "tugrawork-creator/saas-motion-kit": {
+      "neden": "asıl içerik skill dizini dışında; dosya kapsamı kararı gerekir",
+      "tarih": "2026-11-17"
+    },
+    "echris6/motion-video-kit": {
+      "neden": "düşük öncelik; benzer motion skilleri çok",
       "tarih": "2026-11-17"
     }
   }

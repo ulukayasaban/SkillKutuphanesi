@@ -77,7 +77,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (dar). URL doğrulama ve yol temizleme gibi güvenlik adımları iyi; claudesidian'a özgü klasör adları ve komutlara bağımlı.
 
-### file-organizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### file-organizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Bilgisayardaki klasörleri (İndirilenler, Belgeler, projeler) analiz eder; kopya dosyaları bulur, mantıklı klasör yapısı önerir ve kullanıcı onayıyla taşıma/yeniden adlandırma yapar.
 - **Ne zaman:** Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik. · **Ne zaman değil:** Onay almadan toplu taşıma/silme gerektiğinde (geri alınamaz işler); Obsidian kasası için inbox-processor daha uygun.
@@ -121,7 +121,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 10 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. İşini iyi tarif ediyor (fish desteği, özel karakter kaçışı) ama tek amaçlı ve Claude CLI'a bağlı.
 
-### invoice-organizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### invoice-organizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Fatura ve fişleri (PDF, taranmış görsel, e-posta eki) okuyup satıcı, tarih, tutar, fatura no gibi bilgileri çıkarır; `YYYY-AA-GG Satıcı - Fatura - Ürün.pdf` biçiminde yeniden adlandırıp satıcıya/kategoriye/döneme göre klasörler, CSV özet üretir; orijinalleri korur.
 - **Ne zaman:** Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama. · **Ne zaman değil:** Muhasebe kaydı/vergi beyanı yerine geçmez; OCR doğruluğu kontrol edilmeden finansal karar için kullanma.

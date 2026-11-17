@@ -1,0 +1,12 @@
+# object-separation
+
+> Bu dosya SkillKutuphanesi tarafından eklendi; skill'in kendi dosyaları değiştirilmedi.
+
+- **Kaynak repo:** https://github.com/Barty-Bart/motion-graphics
+- **Repo içindeki yol:** `skills/object-separation`
+- **Commit:** `3d83d987d658601d8a1269eb691622bdcd427335`
+- **Lisans:** NOASSERTION
+- **Geliştirici:** Barty-Bart (kisi)
+- **Arşive alınma:** 2026-11-17
+- **Durum:** tercih
+- **Bağımlılık:** SAM 2 modelini yerelde çalıştırır: pip install ile Python bağımlılıkları kurulur, model dosyaları indirilir (disk, RAM; GPU önerilir). Hiçbir şey yüklenmez.

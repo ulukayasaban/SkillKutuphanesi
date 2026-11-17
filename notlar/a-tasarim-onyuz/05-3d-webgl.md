@@ -70,7 +70,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 105 KB (SKILL.md 22.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İçerik makul ve başlangıç şablonu işe yarar, ancak CloudAI-X sürümü daha güncel (WebGPU/TSL, Common Mistakes). Dikkat: starter package.json R3F ^8.18 / three ^0.172 sabitler; React 19 için R3F v9 gerekir. npm install adımları şablon README'sinde.
 
-### react-three-fiber-game  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### react-three-fiber-game  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Build React-hosted 3D browser games with React Three Fiber. Use when the user wants pmndrs-based scene composition, shared React state, and 3D HUD integration inside a React app.
 - **Teknoloji:** canvas, r3f, react, three.js, webgl _(otomatik tespit)_
@@ -135,7 +135,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 18 KB (SKILL.md 17.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Konuyu başka skill kapsamıyor; komutlar net. Dikkat: komutlar npx ile paket indirir (@gltf-transform/cli, gltfjsx); mutlak yol, anahtar veya telemetri yok.
 
-### threejs-data-visualization  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
+### threejs-data-visualization  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
 - **Ne yapar:** Render WebGL-accelerated data visualizations with Three.js, raw WebGL, deck.gl, luma.gl, PixiJS, Sigma.js, Plotly WebGL traces, ECharts GL, CesiumJS, Babylon.js, or related GPU libraries. Use when the visualization needs true spatial structure, dense 2D or 3D GPU rendering, particle or flow animation, volumetric views, or interactive exploration that adds real analytical value.
 - **Teknoloji:** canvas, node, three.js, webgl _(otomatik tespit)_

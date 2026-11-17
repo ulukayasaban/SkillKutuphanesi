@@ -34,7 +34,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 126 KB (SKILL.md 21.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### agents-md-generator  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### agents-md-generator  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Create, generate, update, repair, trim, or split minimal AGENTS.md files for repository roots and confirmed nested modules using progressive disclosure. Use for missing, bloated, contradictory, or outdated agent instructions, monorepos, services, packages, module context, and portable agent guidance without assuming any fixed agent folder structure.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -84,7 +84,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 49 KB (SKILL.md 38.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### android-development  ·  dpconde/claude-android-skill @ edfca5e  ·  puan 63 (C)
+### android-development  ·  dpconde/claude-android-skill @ edfca5e  ·  puan 62 (C)
 
 - **Ne yapar:** Create production-quality Android applications following Google's official architecture guidance and NowInAndroid best practices. Use when building Android apps with Kotlin, Jetpack Compose, MVVM architecture, Hilt dependency injection, Room database, or multi-module projects. Triggers on requests to create Android projects, screens, ViewModels, repositories, feature modules, or when asked about A
 - **Teknoloji:** - _(otomatik tespit)_
@@ -276,7 +276,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 22 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### codex-phone-lab  ·  Kappaemme-git/codex-phone-lab @ a0dc6ad  ·  puan 69 (B)
+### codex-phone-lab  ·  Kappaemme-git/codex-phone-lab @ a0dc6ad  ·  puan 61 (C)
 
 - **Ne yapar:** Build and iterate mobile apps that run on a real phone through Expo/React Native live preview. Use when Codex is asked to create a phone app, prototype an iPhone or Android app, run an app on a physical phone, show a QR code for Expo Go, set up a mobile dev workflow, or turn a prompt into a live mobile app without starting from Xcode/TestFlight/App Store distribution.
 - **Teknoloji:** react _(otomatik tespit)_
@@ -286,7 +286,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 7 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### compose-agent  ·  hamen/compose_skill @ f815c31  ·  puan 71 (B)
+### compose-agent  ·  hamen/compose_skill @ f815c31  ·  puan 70 (B)
 
 - **Ne yapar:** Helps AI coding assistants write modern Jetpack Compose: correct state, side effects, performance-aware modifiers, Navigation 3, Paging 3 in Compose, coroutines on lifecycle, animations, UI tests, focus/keyboard navigation, Compose Multiplatform boundaries, idiomatic Kotlin, and well-shaped composable APIs. Targets the mistakes LLMs actually make in Compose code. Use when reading, writing, or revi
 - **Teknoloji:** api-anahtari, html, node, react _(otomatik tespit)_
@@ -306,7 +306,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### dart-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### dart-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Build, fix, audit, and migrate Drift persistence in Dart CLI, server-side, and non-Flutter desktop apps. Use when adding SQLite with package:drift/native.dart, configuring PostgreSQL with drift_postgres and package:postgres, writing type-safe tables, queries, writes, streams, and migrations, resolving build_runner or drift_dev failures, or validating Dart database code with code generation, analys
 - **Teknoloji:** - _(otomatik tespit)_
@@ -316,7 +316,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 40 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### developer-device-platform-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### developer-device-platform-basics  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Provides guidance and instructions on managing remote devices on Developer Device Platform (DDP). Use when reserving remote Android devices, establishing connection tunnels, checking session status, or extending/cancelling leases. Don't use for iOS or local device/hardware inquiries.
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
@@ -326,7 +326,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 29 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### developer-device-platform-device-run  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### developer-device-platform-device-run  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Runs automated, non-interactive jobs on remote Android devices with Developer Device Platform (DDP) Device Run using `gcloud beta device-run sessions`: native Android executables or shell scripts (for example CLI tools, custom runners, test harnesses or benchmarks) and Android instrumentation tests, on one or many devices, then waits for completion and collects per-device outputs and logs. Use whe
 - **Teknoloji:** - _(otomatik tespit)_
@@ -767,7 +767,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-adaptive-ui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### flutter-adaptive-ui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Build, fix, review, and validate adaptive or responsive Flutter UIs for mobile, tablet, desktop, web, large screens, foldables, and mixed input devices. Use when creating breakpoint-driven layouts, responsive navigation, adaptive dialogs/lists/grids, keyboard/mouse/touch behavior, window-size decisions with MediaQuery or LayoutBuilder, or Capability and Policy patterns for platform-specific behavi
 - **Teknoloji:** - _(otomatik tespit)_
@@ -777,7 +777,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 53 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-animations  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### flutter-animations  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Add, fix, refactor, debug, test, or explain Flutter animations and motion effects. Use when working with implicit animations such as AnimatedContainer, AnimatedOpacity, AnimatedSwitcher, and TweenAnimationBuilder; explicit animations using AnimationController, Tween, CurvedAnimation, AnimatedWidget, AnimatedBuilder, and built-in transitions; Hero/shared-element route transitions; staggered or sequ
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -798,7 +798,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-architecture  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### flutter-architecture  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Design, refactor, review, or implement Flutter app architecture using MVVM, layered UI/Data/optional Domain boundaries, feature-first or layer-first project structure, repositories, services, dependency injection, Result and Command patterns, offline-first or optimistic UI flows. Use when asked to add a Flutter feature, audit layer dependencies, fix cross-feature imports, migrate to feature-first,
 - **Teknoloji:** - _(otomatik tespit)_
@@ -829,7 +829,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### flutter-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Implement, fix, review, migrate, test, or debug Drift persistence in Flutter apps using SQLite, drift_flutter, type-safe Dart queries, generated tables, StreamBuilder or Riverpod StreamProvider UI, write operations, transactions, schema migrations, web assets, isolate sharing, and local database testing. Use when a Flutter task mentions drift, local database storage, SQLite, reactive database stre
 - **Teknoloji:** - _(otomatik tespit)_
@@ -839,7 +839,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 48 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-duit-bdui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### flutter-duit-bdui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Integrate, fix, review, migrate, test, or debug Duit / flutter_duit backend-driven UI in Flutter applications. Use when a task mentions DUIT, flutter_duit, backend-driven UI, BDUI, server-driven UI, XDriver, DuitViewHost, DuitRegistry, HTTP or WebSocket transports, custom Duit widgets, components, capability delegates, compile-time DUIT flags, or rendering JSON layouts from a backend.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -859,7 +859,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-internationalization  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### flutter-internationalization  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Add, fix, audit, and maintain Flutter internationalization with gen-l10n, ARB files, AppLocalizations, flutter_localizations, intl formatting, plural/select messages, RTL support, locale-specific number/date formatting, and localization build errors. Use when asked to add l10n or i18n, translate Flutter UI text, configure l10n.yaml, manage ARB translations, migrate away from package:flutter_gen im
 - **Teknoloji:** - _(otomatik tespit)_
@@ -869,7 +869,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 23 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-navigation  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 60 (C)
+### flutter-navigation  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 59 (C)
 
 - **Ne yapar:** Implement, fix, refactor, review, migrate, or validate Flutter navigation and routing. Use when working with Navigator, MaterialPageRoute, Router API, go_router, route guards, redirects, ShellRoute or StatefulShellRoute, nested Navigators, passing and returning route data, deep links, Android App Links, iOS Universal Links, custom URI schemes, Flutter web URL strategy, browser history, 404 routing
 - **Teknoloji:** html _(otomatik tespit)_
@@ -879,7 +879,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 33 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### flutter-networking  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
+### flutter-networking  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
 
 - **Ne yapar:** Implement, fix, debug, review, or refactor Flutter networking code for HTTP/REST APIs, WebSocket realtime flows, authentication and token refresh, request headers, timeouts, retries, JSON parsing, caching, background isolates, repositories, services, and adaptation to existing http, Dio, Retrofit, Chopper, or custom API clients. Use when asked to add network requests, investigate network errors, h
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -910,7 +910,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-testing  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 57 (C)
+### flutter-testing  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 56 (C)
 
 - **Ne yapar:** Write, fix, review, debug, and validate Flutter tests for apps, packages, and plugins. Use when adding unit tests, widget tests, integration tests, MethodChannel or plugin mocks, Mockito or mocktail test doubles, golden or accessibility checks, CI test commands, test failures, MissingPluginException, pump or pumpAndSettle problems, finder errors, build_runner mock generation, device integration te
 - **Teknoloji:** - _(otomatik tespit)_
@@ -971,7 +971,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 354 KB (SKILL.md 23.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-mobile-ads-android-migrate-to-next-gen  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+### google-mobile-ads-android-migrate-to-next-gen  ·  google/skills @ 3c4dda4  ·  puan 95 (A)
 
 - **Ne yapar:** Migrates Android applications from the old, legacy Google Mobile Ads (GMA) SDK (com.google.android.gms:play-services-ads) to the new GMA Next-Gen SDK (com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk). Provides comprehensive mapping tables for imports, classes, and method signatures to help determine migration steps. Use when migrating an existing Android codebase from the old, legacy GM
 - **Teknoloji:** - _(otomatik tespit)_
@@ -981,7 +981,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 39 KB (SKILL.md 38.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### google-mobile-ads-banner  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-mobile-ads-banner  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Provides instructions to implement, integrate, or configure Google Mobile Ads (GMA) banner ads in Android, iOS, or Unity mobile applications. Use when the task involves setting up banner ads in a mobile application. Don't use for other ad formats like interstitial or rewarded ads.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -991,7 +991,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 10 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-mobile-ads-get-started  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-mobile-ads-get-started  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Provides instructions for integrating the Google Mobile Ads (GMA) SDK. Use this skill when the user wants to get started with, install, integrate, set up, or configure the SDK for AdMob or Ad Manager, GMA Next-Gen SDK or mobile ads framework in an Android, iOS, or Unity application.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1001,7 +1001,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 16 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-mobile-ads-interstitial  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-mobile-ads-interstitial  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Provides instructions for implementing, integrating, or configuring Google Mobile Ads (GMA) SDK interstitial ads in Android, iOS, or Unity mobile applications. Use when the task involves setting up interstitial ads. Don't use for "rewarded interstitial" ads.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1011,7 +1011,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-mobile-ads-rewarded  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-mobile-ads-rewarded  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Provides instructions for implementing, integrating, or configuring Google Mobile Ads (GMA) SDK rewarded ads in Android, iOS, or Unity mobile applications. Use when the task involves setting up rewarded ads. Don't use for "rewarded interstitial" ads.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1021,7 +1021,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 9 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-mobile-ads-validate  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-mobile-ads-validate  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Validates a project's Google Mobile Ads (GMA) SDK integration for iOS, Android, or Unity projects. Use when conducting a full pre-launch audit of an app that integrates GMA SDK or when validating any individual GMA SDK integration checks, such as when validating ad unit IDs and ad formats, SKAdNetwork IDs, mediation adapter SDK version compatibility, or ad preloading.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1041,7 +1041,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ima-dai-sdk  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### ima-dai-sdk  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Integrates the Google Interactive Media Ads (IMA) Dynamic Ad Insertion (DAI) SDK into websites, web apps, mobile apps, or TV apps. Use when: - A video player needs to load and play HLS or DASH streams in web apps, Android apps, iOS apps, tvOS apps, Cast (CAF) receivers, or Roku channels. - The app needs to make use of a Google DAI livestream event asset key, or content source CMS ID, video ID for 
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1051,7 +1051,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 35 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ima-sdk-client-side  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### ima-sdk-client-side  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Supports Interactive Media Ads (IMA) SDK. Use this skill for client-side ad insertion when you are requesting video ads for websites, apps, TVs or other platforms using VAST or VMAP. Do not use for Dynamic Ad Insertion (DAI), SSAI, or SGAI.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1101,7 +1101,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ios-accessibility  ·  dadederk/iOS-Accessibility-Agent-Skill @ dcc3a36  ·  puan 60 (C)
+### ios-accessibility  ·  dadederk/iOS-Accessibility-Agent-Skill @ dcc3a36  ·  puan 59 (C)
 
 - **Ne yapar:** Expert guidance on iOS accessibility best practices, patterns, and implementation. Use when developers mention: (1) iOS accessibility, VoiceOver, Dynamic Type, or assistive technologies, (2) accessibility labels, traits, hints, or values, (3) automated accessibility testing, auditing, or manual testing, (4) Switch Control, Voice Control, or Full Keyboard Access, (5) inclusive design or accessibili
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1111,7 +1111,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 175 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ios-code-audit  ·  jazzychad/ios-code-audit @ 34edb29  ·  puan 66 (B)
+### ios-code-audit  ·  jazzychad/ios-code-audit @ 34edb29  ·  puan 58 (C)
 
 - **Ne yapar:** Run a thorough audit of an iOS / macOS Swift codebase — bugs, dead code, duplication, Swift concurrency issues, deprecated APIs, security, performance, and SwiftUI quality — and produce a single navigable CODE_AUDIT.md report with file:line-cited findings. Use when the user asks for a "code audit", "comprehensive review", "find tech debt", "what should I clean up", or similar broad-scope assessmen
 - **Teknoloji:** git _(otomatik tespit)_
@@ -1141,7 +1141,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 230 KB (SKILL.md 15.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ios-marketing-capture  ·  ParthJadhav/ios-marketing-capture @ 5d78311  ·  puan 76 (B)
+### ios-marketing-capture  ·  ParthJadhav/ios-marketing-capture @ 5d78311  ·  puan 75 (B)
 
 - **Ne yapar:** Use when the user wants to automate capture of marketing screenshots for a SwiftUI iOS app across multiple locales, devices, or appearances. Covers full-screen shots, isolated element renders (carousel cards, widgets), and reproducible output naming. Triggers on marketing screenshots, locale screenshots, widget renders, App Store assets, fastlane-alternative, simctl screenshots.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1181,7 +1181,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 31 KB (SKILL.md 25.2 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### jetpack-compose-audit  ·  hamen/compose_skill @ f815c31  ·  puan 71 (B)
+### jetpack-compose-audit  ·  hamen/compose_skill @ f815c31  ·  puan 70 (B)
 
 - **Ne yapar:** Audit Android Jetpack Compose repositories for performance, animation phase correctness, state management, side effects, composable API quality, and adjacent Android launch UX resource risks such as blurry Android 12+ splash icons. Scans source code, scores each category from 0-10, writes a strict markdown report, and summarizes the most important fixes. Use when reviewing a Compose codebase, rati
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1371,7 +1371,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 68 KB (SKILL.md 34.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### litert-google-tensor  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+### litert-google-tensor  ·  google/skills @ 3c4dda4  ·  puan 95 (A)
 
 - **Ne yapar:** Compiles LiteRT (.tflite) models ahead-of-time for Google Tensor TPUs (Tensor G5 on Pixel 10, Tensor G6 on Pixel 11) locally on Linux x86_64 or on Google Colab (--colab on macOS, Windows, or ARM hosts), benchmarks them on a USB-attached Pixel with LiteRT's benchmark_model (NPU latency, peak memory, TPU tile time, TPU energy, optional CPU baseline), and packages compiled models for an Android Gradl
 - **Teknoloji:** next.js, python _(otomatik tespit)_
@@ -1893,7 +1893,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 54 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### swiftdata-pro  ·  twostraws/SwiftData-Agent-Skill @ 8051f17  ·  puan 79 (B)
+### swiftdata-pro  ·  twostraws/SwiftData-Agent-Skill @ 8051f17  ·  puan 78 (B)
 
 - **Ne yapar:** Writes, reviews, and improves SwiftData code using modern APIs and best practices. Use when reading, writing, or reviewing projects that use SwiftData.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1903,7 +1903,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 20 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### swiftui-design-principles  ·  arjitj2/swiftui-design-principles @ 791d22d  ·  puan 58 (C)
+### swiftui-design-principles  ·  arjitj2/swiftui-design-principles @ 791d22d  ·  puan 57 (C)
 
 - **Ne yapar:** Design principles for building polished, native-feeling SwiftUI apps and widgets. Use this skill when creating or modifying SwiftUI views, iOS widgets (WidgetKit), or any native Apple UI. Ensures proper spacing, typography, colors, and widget implementations that look and feel like quality apps rather than AI-generated slop.
 - **Teknoloji:** canvas _(otomatik tespit)_

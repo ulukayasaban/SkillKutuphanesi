@@ -104,7 +104,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### assured-workloads-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### assured-workloads-basics  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Provisions, inspects, updates, and deletes Google Cloud Assured Workloads V1 compliant folders, CMEK settings, Sovereign Controls by Partners, and service usage restrictions. Use when creating, listing, describing, updating, or deleting an Assured Workloads workload for any compliance regime or data boundary (FedRAMP, DoD IL2/IL4/IL5, ITAR, CJIS, Healthcare, Sovereign Controls by Partners, or Regi
 - **Teknoloji:** python _(otomatik tespit)_
@@ -114,7 +114,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 147 KB (SKILL.md 19.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### assuredworkloads-environment-assessor  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+### assuredworkloads-environment-assessor  ·  google/skills @ 3c4dda4  ·  puan 95 (A)
 
 - **Ne yapar:** Discover Google Cloud resource telemetry and effective Org Policies, evaluate brownfield workloads against sovereign data boundary and compliance standards (EU Data Boundary with Support, FedRAMP Moderate/High, DoD IL4/IL5, ITAR, CJIS, US/EU Regional Data Boundaries), and recommend the optimal Assured Workloads Framework. Use when asked to: "assess my environment for compliance", "which Assured Wo
 - **Teknoloji:** python _(otomatik tespit)_
@@ -124,7 +124,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 64 KB (SKILL.md 28.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### assuredworkloads-frameworks-author  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### assuredworkloads-frameworks-author  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Authors custom cloud controls and customized frameworks for Assured Workloads when built-in resources cannot satisfy core requirements. Use when creating or synthesizing custom data boundary resources. Don't use for browsing or mapping existing built-in frameworks (use assuredworkloads-frameworks-navigator instead).
 - **Teknoloji:** python _(otomatik tespit)_
@@ -134,7 +134,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 20 KB (SKILL.md 12.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### assuredworkloads-frameworks-navigator  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### assuredworkloads-frameworks-navigator  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Acts as a Data Boundary Compliance Analyst that maps user compliance queries against Data Boundary Frameworks and cloud controls, validates matched resources, and recommends appropriate Frameworks or cloud controls. Use when mapping direct natural language workload requirements to Assured Workloads / Data Boundary Frameworks and cloud controls, browsing built-in Data Boundary frameworks, or identi
 - **Teknoloji:** python _(otomatik tespit)_
@@ -185,7 +185,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 133 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloud-armor-crs-rule-upgrader  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-armor-crs-rule-upgrader  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Upgrades Google Cloud Armor security policies from OWASP CRS 3.0 and 3.3 to OWASP CRS 4.22. Preserves signature opt-in and opt-out lists, translates evaluatePreconfiguredExpr to native evaluatePreconfiguredWaf dictionary parameters, remaps signature IDs to v042200, drops retired signature IDs, and updates structured preconfiguredWafConfig fine-tuning exclusions. Evaluates operational risk (High Br
 - **Teknoloji:** python, react _(otomatik tespit)_
@@ -195,7 +195,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 87 KB (SKILL.md 19.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-build-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-build-basics  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Teaches the fundamentals of Cloud Build on Google Cloud. Covers core concepts, API enablement, console navigation to the Build History page, and the end-to-end workflow for creating and manually running a basic build trigger. Do not use for managing private pools or complex pipeline architectures.
 - **Teknoloji:** docker, git _(otomatik tespit)_
@@ -205,7 +205,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-logging-configuration-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-logging-configuration-basics  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configure single-project Cloud Logging on Google Cloud: regional log buckets, log sinks, log views, restricting or hiding sensitive logs in the default view (_Default) filter, IAM permissions for views (Logs View Accessor, IAM conditions), logs-based metrics, log exclusions, and sampling. Don't use for cross-project logging or multi-project setups.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -215,7 +215,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 16 KB (SKILL.md 14.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-logging-cross-project-configuration  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-logging-cross-project-configuration  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configure and troubleshoot Google Cloud cross-project centralized logging and read-time aggregation. Use when: - Setting up log routing from multiple projects/folders/organizations to a central log bucket. - Creating cross-project log sinks and configuring central log buckets. - Troubleshooting cross-project routing. Don't use for single-project basic configurations.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -225,7 +225,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 21 KB (SKILL.md 19.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-logging-finops  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-logging-finops  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Audits Cloud Logging costs for a Google Cloud project: the charges for log entries written to log buckets, the services, log streams and severities that drive them, and the log sinks that route them. Reconciles Cloud Billing export costs with Cloud Monitoring volume metrics, and generates a FinOps report with charts and copy-paste exclusion filters. Use when auditing Cloud Logging spend, finding l
 - **Teknoloji:** html, python _(otomatik tespit)_
@@ -235,7 +235,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 450 KB (SKILL.md 19.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-logging-query-generation  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-logging-query-generation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Generates Logging Query Language (LQL) queries for Cloud Logging on Google Cloud from natural language. Use this skill when you need to query log data or when you are debugging issues. You can filter log data by Google Cloud service. Don't use this skill to query other databases, such as SQL or Cloud Spanner.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -245,7 +245,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 102 KB (SKILL.md 8.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-monitoring-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-monitoring-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configures Cloud Monitoring alerting policies using Terraform and PromQL across Cloud Run, Google Kubernetes Engine (GKE), Compute Engine, AI Hypercomputer reservations, Vertex AI Agent Engine, and generic Google Cloud resources. Use when creating, reviewing, migrating, or deduplicating Terraform alerting policies for latency, traffic, error rates, saturation, host or reservation maintenance, GPU 
 - **Teknoloji:** python _(otomatik tespit)_
@@ -255,7 +255,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 518 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-monitoring-chart-generation  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-monitoring-chart-generation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Generates Cloud Monitoring Server-Driven UI (SDUI) Widget and XyChart Protocol Buffer textprotos on Google Cloud from resolved PromQL or ListTimeSeries queries. Use when: - Generating valid google.monitoring.dashboard.v1.Widget textprotos, containing PrometheusQuery or TimeSeriesFilter datasets, for use with the Cloud Monitoring Dashboards API, gcloud CLI, or declarative dashboard definitions. - S
 - **Teknoloji:** python _(otomatik tespit)_
@@ -265,7 +265,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 71 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-monitoring-list-time-series-request  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-monitoring-list-time-series-request  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Generates valid Cloud Monitoring ListTimeSeries requests and aggregation specifications from metric descriptors and resource parameters. Use when asked to create, generate, format, or build ListTimeSeries requests, JSON payloads, filter expressions, or aligner/reducer aggregations for Cloud Monitoring metrics and charts. Don't use for metric discovery or metric selection.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -275,7 +275,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 24 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-monitoring-metric-selection  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-monitoring-metric-selection  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Retrieve, query, and identify relevant Cloud Monitoring metric descriptors on Google Cloud for a service or resource (such as Compute Engine, Spanner, BigQuery, Cloud Run, Cloud SQL, Pub/Sub, Cloud Storage, etc.). Use when asked to find, list, search, or discover GCP metric types, names, kind/value schemas, or descriptors.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -285,7 +285,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-monitoring-notification-channels-configuration  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-monitoring-notification-channels-configuration  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Generates Terraform HCL configurations for Cloud Monitoring notification channels (`google_monitoring_notification_channel`) and adds notification channels to alerting policies (`google_monitoring_alert_policy`) in Google Cloud projects. Use when creating or configuring email, SMS, Slack, PagerDuty, Pub/Sub, or webhook notification channels, verifying Pub/Sub topic compatibility (including cross-p
 - **Teknoloji:** - _(otomatik tespit)_
@@ -295,7 +295,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 42 KB (SKILL.md 15.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-monitoring-promql-query  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-monitoring-promql-query  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Generates valid PromQL queries from Cloud Monitoring metric descriptors and resource parameters. Use when asked to create, generate, write, or format PromQL queries, PromQL strings, or PromQL aggregations for Cloud Monitoring metrics and resources. Don't use for raw metric discovery or metric selection.
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
@@ -305,7 +305,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 47 KB (SKILL.md 10.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-network-insights  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-network-insights  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Guides and automates setup, onboarding, and synthetic monitoring operations for Cloud Network Insights in Google Cloud and Broadcom AppNeta. Use when enabling Cloud Network Insights, deploying or troubleshooting Monitoring Points across cloud and on-premises environments, configuring Network or Web monitoring policies and AppNeta alarm rules, configuring alert policies, querying path alarms and pe
 - **Teknoloji:** api-anahtari, html _(otomatik tespit)_
@@ -315,7 +315,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 33 KB (SKILL.md 13.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-operator  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-operator  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Google Cloud (GCP) assistant and operator via the autocloud MCP server. Use for any GCP request: how-to, resources, Terraform/Kubernetes/Helm, rollouts, incidents, costs. Invoke it before answering a GCP question from your own knowledge or documentation search, and before proposing an architecture or backend, even when no cloud is named. Invoke it before reading or editing local *.tf or Kubernetes
 - **Teknoloji:** api-anahtari, git, node _(otomatik tespit)_
@@ -325,7 +325,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 17 KB (SKILL.md 15.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-operator-setup  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### cloud-operator-setup  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Sets up the operator agent in a Google Cloud project via the autocloud MCP server: picks the operator project, creates or checks the user's operator agent, saves the project, and offers to share the user's existing Google Cloud operating context with the operator agent's memory. Use when the user runs this skill, asks to set up the operator or create their operator agent, or chooses setup when the
 - **Teknoloji:** - _(otomatik tespit)_
@@ -335,7 +335,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 5 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloud-operator-share-context  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### cloud-operator-share-context  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Shares Google Cloud operating context the user or their team already have — environments, projects, services and regions, product preferences, best practices, architecture guidance, runbooks — found in agent instruction files, local memory, skills and workflows, and the repository's GCP docs, with the operator agent's memory after the user reviews the list. Use when the user runs this skill, accep
 - **Teknoloji:** - _(otomatik tespit)_
@@ -345,7 +345,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 8 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloud-run-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### cloud-run-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Configures best-practice, high-signal alerting policies for Cloud Run resources on Google Cloud (services, jobs, and worker pools) based on seasoned SRE practices. Use when analyzing, recommending, writing, or deploying Terraform PromQL alerting policies to monitor Cloud Run error rates (4xx/5xx), request latency, container instance saturation (warning/critical), container CPU/memory utilization a
 - **Teknoloji:** - _(otomatik tespit)_
@@ -355,7 +355,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 52 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### cloud-run-basics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### cloud-run-basics  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Manages Cloud Run services, jobs, and worker pools. Use when you need to deploy applications responding to HTTP requests (services), run event-triggered or scheduled tasks (jobs), or handle always-on pull-based background processing (worker pools).
 - **Teknoloji:** docker, node, python _(otomatik tespit)_
@@ -365,7 +365,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 45 KB (SKILL.md 15.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### cloud-trace-querying  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### cloud-trace-querying  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Query Cloud Trace spans, filter by latency thresholds or error status, correlate distributed traces with Cloud Logging, and diagnose latency bottlenecks across Google Cloud services. Use when investigating slow requests, analyzing trace hierarchies, or resolving latency regressions. Do NOT use for querying non-GCP telemetry or database query optimization outside Cloud Trace.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -415,7 +415,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 15 KB (SKILL.md 12.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### compute-future-reservations  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### compute-future-reservations  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Evaluates future GPU and TPU reservation feasibility and calendar-mode booking options in Google Compute Engine (GCE). Use when planning future AI/ML training runs, checking reservation availability windows, verifying accelerator cluster topologies, or assessing future capacity lead times. Don't use for active on-demand reservations (use compute-on-demand-reservations), immediate Spot capacity que
 - **Teknoloji:** - _(otomatik tespit)_
@@ -425,7 +425,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 20 KB (SKILL.md 18.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### compute-on-demand-reservations  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### compute-on-demand-reservations  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Inspects, verifies, and manages Google Compute Engine (GCE) On-Demand reservations and analyzes consumed versus available reserved capacity. Use when checking active reservation capacity, determining whether reserved VMs are available or exhausted, verifying reservation targeting (automatic versus specific reservation), or sharing reservations across projects. Don't use for Spot capacity advice (u
 - **Teknoloji:** - _(otomatik tespit)_
@@ -435,7 +435,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 17 KB (SKILL.md 15.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### compute-spot-capacity-advice  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### compute-spot-capacity-advice  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Evaluates Google Compute Engine (GCE) Spot VM capacity obtainability, placement likelihood, and machine family or regional flexibility. Use when planning batch workloads, finding available Spot CPU or GPU capacity, assessing stockout risks, or optimizing instance distribution across zones. Don't use for TPU availability, on-demand reservation capacity (use compute-on-demand-reservations), or futur
 - **Teknoloji:** - _(otomatik tespit)_
@@ -445,7 +445,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 13 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### compute-vm-creation  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+### compute-vm-creation  ·  google/skills @ 3c4dda4  ·  puan 95 (A)
 
 - **Ne yapar:** Guides the planning, configuration, and provisioning of standalone Google Compute Engine virtual machines (VMs) and bare metal (-metal) instances using gcloud CLI commands or direct MCP tool execution. Use ONLY when the user wants to create, configure, or provision a new standalone Compute Engine VM or bare metal instance from conversational intents (hardware sizing, region selection, OS image, ne
 - **Teknoloji:** node _(otomatik tespit)_
@@ -486,7 +486,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Kısa (6 KB) platform karar tablosu yararlı; içerik genel ilkeler, shipping-and-launch ile kısmen örtüşüyor.
 
-### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
+### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
 - **Ne yapar:** Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
 - **Teknoloji:** api-anahtari, git, next.js, node, playwright _(otomatik tespit)_
@@ -496,7 +496,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### detection-engineering-coverage-evaluation  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### detection-engineering-coverage-evaluation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Automates the end-to-end detection engineering workflow in Google SecOps using MCP tools. Use when fetching threat intelligence from blogs, generating Threat Detection Opportunities (TDOs), simulating attacker behavior with synthetic UDM events, evaluating rule coverage, and deploying gap-closing rules. Don't use for standalone YARA-L 2.0 rule authoring/tuning (use secops-detection-engineering), t
 - **Teknoloji:** html _(otomatik tespit)_
@@ -516,7 +516,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### dpop-adoption  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### dpop-adoption  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Implement and debug OAuth 2.0 DPoP (RFC 9449) refresh token sender-constraining for WebCrypto, Node.js ES6, and browser runtimes integrating with Google's OAuth platform. Use when configuring non-extractable asymmetric key pairs (P-256), generating DPoP Proof JWTs for authorization code exchange and token refresh, or handling 400 use_dpop_nonce challenge retry loops at oauth2.googleapis.com/token.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
@@ -556,7 +556,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 7 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gcloud  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gcloud  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Provides safety-critical validation, guardrails, and data reduction for gcloud CLI operations across Google Cloud Platform (GCP) services and infrastructure. Use when planning, generating, constructing, proposing, describing, or executing any gcloud CLI commands - including when answering questions about gcloud syntax, or formatting flags. Don't use when writing Google Cloud client library code or
 - **Teknoloji:** - _(otomatik tespit)_
@@ -566,7 +566,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 30 KB (SKILL.md 15.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-handle-disruption-gpu-tpu  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-ai-troubleshooting-handle-disruption-gpu-tpu  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Diagnoses, predicts, and mitigates node disruptions during Compute Engine host maintenance and hardware or software maintenance events for GPU and TPU workloads on GKE. Use when diagnosing node disruptions, predicting host maintenance events on GPU/TPU nodepools, inspecting node interruption PromQL metrics, auditing node taints, or configuring workload protection strategies (graceful termination, 
 - **Teknoloji:** node _(otomatik tespit)_
@@ -576,7 +576,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 9 KB (SKILL.md 6.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-jobset-interruption  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-jobset-interruption  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses GKE JobSet interruptions, restarts, and preemptions for AI/ML training workloads autonomously. Use when troubleshooting JobSet restart loops, spot VM preemptions, node readiness failures, host VM issues, or coordinator worker crashes. Don't use for general GKE cluster creation, basic workload deployment, or non-JobSet application issues.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -586,7 +586,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 19 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-node-unresponsive-timeout  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-node-unresponsive-timeout  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnose and mitigate GKE TPU or GPU nodes stuck in NotReady / NodeStatusUnknown ("Kubelet stopped posting node status") due to host kernel panics, hardware lockups, or disabled node auto-repair. Use when nodes stop heartbeating beyond the node auto-repair threshold and pods remain stuck in Terminating. Don't use for healthy nodes, pod-only application crashes, or routine GKE upgrades.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -596,7 +596,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 15 KB (SKILL.md 12.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-dynamic-slices-monitoring  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-tpu-dynamic-slices-monitoring  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Monitors, troubleshoots, and manages GKE TPU Dynamic Slices custom resources. Use when checking TPU slice lifecycle states, troubleshooting slice provisioning failures, validating single-slice or multi-slice (JobSet) workload manifests, or safely patching stuck finalizers and disabling the slice controller. Don't use for generic GKE cluster node pool creation or standard non-TPU workload managemen
 - **Teknoloji:** node _(otomatik tespit)_
@@ -606,7 +606,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 8.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-metrics-monitoring  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-ai-troubleshooting-tpu-metrics-monitoring  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Monitors and troubleshoots GKE TPU workloads, nodes, and node pools using GKE system metrics and PromQL. Use when monitoring TensorCore duty cycle, TPU memory, node readiness, multi-host TPU node pool availability, host maintenance or preemption interruptions, and calculating MTTR or MTBI metrics for GKE TPUs. Don't use for general non-TPU GKE workload monitoring or non-metric TPU debugging.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -616,7 +616,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-mxla-hang  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-tpu-mxla-hang  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnose GKE Cloud TPU multi-slice training hangs (Megascale `HANG_DETECTED` logs and hang monitored events) using the ML Diagnostics `Megascale XLA (MXLA) Hang Analyzer` (`gcloud alpha mldiagnostics monitored-events`) and 1-minute Cloud Monitoring multi-slice latency metrics (`kubernetes.io/container/multislice/*`). Distinguishes XLA compiler/HLO launch divergence and host data-input stalls from 
 - **Teknoloji:** node _(otomatik tespit)_
@@ -626,7 +626,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 23 KB (SKILL.md 14.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-partition-overlap  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-tpu-partition-overlap  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnose and resolve GKE TPU slice creation failures (SliceCreationFailed) caused by partition overlap conflicts where requested TPU partitions or their nodes are already used by another slice or JobSet. Use when diagnosing GKE TPU slice creation failures with SliceCreationFailed partition or node conflicts. Don't use for general slice lifecycle states or slice provisioning failures without node o
 - **Teknoloji:** node _(otomatik tespit)_
@@ -636,7 +636,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 21 KB (SKILL.md 19.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-performance-degradation  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-tpu-performance-degradation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnose GKE Cloud TPU training throughput drops and step-time regressions (15%+ TPU duty-cycle drop) using ML Diagnostics Workload Monitoring (`gcloud alpha mldiagnostics monitored-events` / `hypercomputecluster.googleapis.com/v1alpha`) and 1-minute Cloud Monitoring system metrics (`kubernetes.io/node/accelerator/*`). Distinguishes hardware and network fabric throttling from workload resource bot
 - **Teknoloji:** node _(otomatik tespit)_
@@ -646,7 +646,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 22 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-reservation-stockout  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-tpu-reservation-stockout  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnose and resolve cluster-wide GKE TPU node pool creation or scale-up failures caused by Compute Engine reservation stockouts (GCE_STOCKOUT, ZONE_RESOURCE_POOL_EXHAUSTED) when existing unhealthy or NotReady TPU node pools in the cluster have node auto-repair disabled and hold reserved TPU capacity. Use when TPU node pool creation or scale-up fails with GCE_STOCKOUT, ZONE_RESOURCE_POOL_EXHAUSTED
 - **Teknoloji:** node _(otomatik tespit)_
@@ -656,7 +656,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 19 KB (SKILL.md 17.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-slice-mig-stuck-updating  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-tpu-slice-mig-stuck-updating  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnose and resolve GKE TPU Dynamic Slice creation and JobSet scheduling failures blocked by underlying Compute Engine managed instance groups (MIGs) stuck in an updating or unstable state (isStable=False). Use when TPU slice creation fails with a SliceCreationFailed status reason, when JobSets remain stuck in pending, or when MIG status reflects isStable=False or versionTarget.isReached=False du
 - **Teknoloji:** node _(otomatik tespit)_
@@ -666,7 +666,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 17 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-vbar-oom  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-ai-troubleshooting-tpu-vbar-oom  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Diagnoses and prevents vbar_control_agent segfaults, out-of-memory (OOM) errors, and TPU device initialization failures on TPU v6e nodes in GKE caused by race conditions during TPU device resets or high-frequency metrics polling. Use when troubleshooting vbar_control_agent crashes, memory cgroup OOMs in serial console logs, tpu-device-plugin metrics checksum corruption errors, or custom TPU metric
 - **Teknoloji:** node _(otomatik tespit)_
@@ -676,7 +676,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-ai-troubleshooting-tpu-vm-repair-stuck  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-ai-troubleshooting-tpu-vm-repair-stuck  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnose GKE TPU VM instances stuck in Compute Engine repair (REPAIRING state) after host errors, maintenance events, or faulty host reports in single-host, multi-host, dynamic slicing, and TPU All Capacity mode node pools. Use when TPU instances in a slice node pool remain in REPAIRING, host error events appear in audit logs, or TPU slices are unschedulable due to a VM in repair. Don't use for no
 - **Teknoloji:** node _(otomatik tespit)_
@@ -686,7 +686,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 26 KB (SKILL.md 23.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configures alerting policies in Terraform for Google Kubernetes Engine (GKE) clusters, workloads, and services using PromQL and Google Cloud Managed Service for Prometheus. Use when writing, analyzing, validating, or deploying Terraform alerting policies to monitor GKE service latency, traffic, error rates using Multi-Window Multi-Burn-Rate SLO alerts, memory saturation, and cluster health such as
 - **Teknoloji:** node, python _(otomatik tespit)_
@@ -696,7 +696,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 83 KB (SKILL.md 21.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-app-onboarding  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-app-onboarding  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Manages GKE application onboarding, covering containerization, deployment manifests, and migration. Use when onboarding or deploying an application to GKE for the first time, or containerizing an app for GKE. Don't use for general GKE cluster administration or upgrades (use gke-basics or gke-upgrades instead).
 - **Teknoloji:** docker, node _(otomatik tespit)_
@@ -706,7 +706,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 13 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-backup-dr  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-backup-dr  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configures Backup for GKE: the BackupRestore cluster addon, BackupPlan and RestorePlan resources, restore workflows, and CMEK-encrypted backups. Use for backup policies, disaster recovery, or GKE cluster restores. Don't use for database backups.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -716,7 +716,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 10 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-basics  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-basics  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Manages core GKE cluster provisioning, credentials, Autopilot vs Standard selection, and workload deployment. Use when creating GKE clusters, fetching kubectl credentials, or deciding between Autopilot and Standard modes. Don't use for Workload Identity (use gke-workload-identity), GKE networking (use gke-networking), security hardening (use gke-platform-security or gke-workload-security), or clus
 - **Teknoloji:** node, python _(otomatik tespit)_
@@ -726,7 +726,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-batch-hpc  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-batch-hpc  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Runs batch and HPC workloads on GKE, utilizing job queues and parallel processing. Use when running GKE batch jobs, configuring GKE HPC, or setting up GKE job queues. Don't use for standard web application deployments (use gke-app-onboarding instead).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -736,7 +736,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 8 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-cluster-autoscaler  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-cluster-autoscaler  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Trigger on mention of GKE cluster autoscaler, node autoscaling, node pool auto-creation / node auto-provisioning. Provides guidance on enabling and optimizing cluster autoscaler, best practices, and troubleshooting issues such as nodes not scaling up or down, zonal stockouts, or capacity buffers. Do not use for ComputeClass-specific YAML generation or priority configuration (defer to gke-compute-c
 - **Teknoloji:** node _(otomatik tespit)_
@@ -746,7 +746,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 49 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-cluster-creation  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-cluster-creation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Plans and executes GKE cluster creation, provisioning, and production readiness audits using pre-defined templates (Autopilot, Standard Regional, GPU/AI Inference, AI Hypercompute). Use when creating GKE clusters, provisioning GKE environments, selecting cluster modes, or auditing GKE clusters. Don't use for application onboarding or deployment configuration (use gke-app-onboarding instead).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -756,7 +756,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 14 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-compute-classes  ·  google/skills @ 3c4dda4  ·  puan 94 (A)
+### gke-compute-classes  ·  google/skills @ 3c4dda4  ·  puan 95 (A)
 
 - **Ne yapar:** Configures, optimizes, and troubleshoots GKE ComputeClasses. Use when configuring Spot VMs with on-demand fallback, targeting specific accelerators (GPUs/TPUs) or machine families, restricting ComputeClass access, or debugging pending pods related to node pool auto-creation. Do not use for cluster-level Node Auto Provisioning configuration or general GKE cluster creation.
 - **Teknoloji:** git, node _(otomatik tespit)_
@@ -766,7 +766,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 138 KB (SKILL.md 29.1 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### gke-cost-analysis  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-cost-analysis  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Answer natural language questions and perform analysis on GKE cluster and workload costs using BigQuery billing exports, cost allocation data, and live cluster monitoring metrics. Use when querying GKE costs across projects, namespaces, or workloads, analyzing billing reports in BigQuery (`bq`), checking cluster cost budgets (`gcloud billing`), or diagnosing cost drivers like pod requests vs. actu
 - **Teknoloji:** node _(otomatik tespit)_
@@ -776,7 +776,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-cost-optimization  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-cost-optimization  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Optimizes GKE costs, rightsizes workloads, and configures Spot VMs, CUDs, cost allocation, and resource quotas. Use when optimizing GKE cluster or workload costs, configuring GKE cost allocation or quotas, rightsizing CPU/memory requests, or selecting Spot VMs and machine types. Don't use for general compute class provisioning or GPU Selection (use gke-compute-classes instead).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -786,7 +786,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 8.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-custom-golden-image-discovery  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-custom-golden-image-discovery  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Discovers golden base images for creating GKE custom node images based on technical specifications or context clues. Use when finding the golden base image for custom GKE node creation, mapping cluster configuration parameters (GKE version, OS, architecture, accelerators, gVisor, cgroups) to image names, or querying GKE base image maps. Don't use for general GKE cluster creation (use gke-cluster-c
 - **Teknoloji:** node _(otomatik tespit)_
@@ -796,7 +796,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-golden-path  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-golden-path  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Provides GKE golden path configuration defaults, production readiness checklists, and cluster default patterns. Use when designing GKE clusters, verifying GKE production readiness, or checking configurations against GKE defaults. Don't use for setting up workload autoscaling specifically (use gke-workload-scaling instead).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -806,7 +806,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 15 KB (SKILL.md 8.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-inference  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-inference  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Deploys and optimizes AI/ML inference workloads on GKE, using GPUs, TPUs, and model servers. Use when deploying GKE inference servers, configuring GKE GPU resources for inference, or deploying LLMs on GKE. Don't use for migrating existing AI workloads to GKE (use google-cloud-solution-guided-gke-ai-migration), GKE RAG with Cloud SQL/AlloyDB (use google-cloud-solution-rag-enterprise-search-gke-sqld
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -816,7 +816,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 10 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-manifest-generation  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-manifest-generation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Generates and updates secure, production-ready Kubernetes YAML manifests optimized for GKE Autopilot and GKE Standard clusters. Use when creating or modifying GKE deployment manifests, configuring container security contexts, setting CPU/memory resource limits, defining readiness/liveness/startup probes, mounting secrets and volumes, configuring GKE Gateway API routes, targeting Spot VMs, or deplo
 - **Teknoloji:** node, python _(otomatik tespit)_
@@ -826,7 +826,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 23 KB (SKILL.md 12.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-multitenancy  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-multitenancy  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Plans and configures multi-tenancy on GKE. Covers namespace isolation, RBAC planning for teams, resource quotas, LimitRanges, network isolation, and cost allocation. Use when designing GKE multi-tenancy, configuring GKE namespaces, setting up resource quotas, or isolating GKE teams. Don't use for single-tenant cluster configuration or general deployment instructions (use gke-basics or gke-app-onbo
 - **Teknoloji:** node _(otomatik tespit)_
@@ -836,7 +836,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 8 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-networking  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-networking  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Plans, configures, and manages core GKE cluster networking. Covers private clusters, VPC-native configurations, DNS, node egress, Dataplane V2, and IP planning. Use when designing GKE networking layouts, configuring private clusters, setting up Dataplane V2, planning GKE IP ranges, or managing VPC- native cluster modes. Don't use for application ingress, load balancing, or service networking (use 
 - **Teknoloji:** node _(otomatik tespit)_
@@ -846,7 +846,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 8 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-node-notready  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-node-notready  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses GKE nodes reporting NotReady or Unknown status by inspecting node conditions, events, kubelet/containerd logs, and node metrics, then proposing safe remediations. Use when nodes show NotReady, when the kubelet stops posting node status, or when workloads are evicted or stuck Pending due to node health. Don't use for pod-level application failures (use gke-workload-troubleshooting), autos
 - **Teknoloji:** node _(otomatik tespit)_
@@ -856,7 +856,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 14 KB (SKILL.md 12.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-observability  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-observability  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configures GKE observability, including Cloud Logging, Cloud Monitoring, and managed Prometheus. Use when configuring GKE monitoring, setting up GKE logging, or configuring Prometheus metrics collection, to diagnose GKE control plane, API server, admission webhook, etcd storage, node registration or label, and pod eviction, preemption, or scheduling issues using GKE metrics, Kubernetes events, and
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -866,7 +866,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 56 KB (SKILL.md 13.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-platform-security  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-platform-security  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Plans, configures, and hardens platform-level Google Kubernetes Engine (GKE) cluster security. Covers cluster add-ons (Secret Manager enablement), RBAC hardening (disabling insecure bindings, audit tools), Binary Authorization, Secrets Encryption (--database-encryption-key), Security Posture (--security-posture), enabling Shielded Nodes, GKE Sandbox cluster enablement, GKE IAM roles, and cross-ser
 - **Teknoloji:** node _(otomatik tespit)_
@@ -876,7 +876,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 10.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-productionize  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-productionize  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Orchestrates comprehensive production readiness reviews and assessments for GKE clusters and workloads across scalability, security, reliability, observability, backup/DR, and cost optimization. Use when asked to productionize, prepare, assess, audit, or review a GKE cluster or workload before going live to production. Don't use for deep-dive single-domain implementation (use specific domain skill
 - **Teknoloji:** node _(otomatik tespit)_
@@ -886,7 +886,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 10 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-reliability  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-reliability  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Improves GKE workload reliability, using PDBs, health probes, and topology spread constraints. Use when configuring GKE workload reliability, setting up PDBs, or configuring GKE health probes (liveness, readiness, startup). Don't use for generating K8s YAML manifests (use gke-manifest-generation) or disaster recovery and cluster backups (use gke-backup-dr).
 - **Teknoloji:** node _(otomatik tespit)_
@@ -896,7 +896,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 9 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-service-networking  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-service-networking  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configures GKE edge networking, traffic routing, load balancing, and private service endpoints. Use when configuring Gateway API manifests, standard Ingress, Cloud Armor WAF security policies, Container-Native Load Balancing (NEGs), Private Service Connect (PSC), or Google-managed SSL certificates on GKE, and to troubleshoot Ingress and load-balancer 502/5xx errors, backend health-check failures, 
 - **Teknoloji:** node _(otomatik tespit)_
@@ -906,7 +906,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 17 KB (SKILL.md 11.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-storage  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-storage  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Manages GKE storage, including PVCs, PersistentVolumes, and Filestore. Use when configuring GKE storage or creating PVCs. For GCS FUSE mounts, use google-cloud-storage-fuse. For diagnosing storage failures (volume attach/mount errors, disk performance/node storage pressure, or Cloud Storage FUSE OOM), use gke-storage-troubleshooting. Don't use for database administration or replication strategies 
 - **Teknoloji:** node _(otomatik tespit)_
@@ -916,7 +916,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 9 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-storage-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-storage-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses GKE persistent-storage failures — volume attach/mount errors (Regional PD on optimized VMs, fsGroup mount timeouts), disk-performance and node storage-pressure issues, slow-disk Pod-creation failures, volume-expansion problems, Local SSD / Hyperdisk Storage Pool creation errors, and Cloud Storage FUSE OOM. Use when Pods are stuck in ContainerCreating, volumes fail to attach or mount, or 
 - **Teknoloji:** docker, node _(otomatik tespit)_
@@ -926,7 +926,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 16 KB (SKILL.md 14.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-upgrades  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-upgrades  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Plans, executes, and validates Google Kubernetes Engine (GKE) cluster upgrades and maintenance operations for both Standard and Autopilot clusters. Produces upgrade plans, pre/post-upgrade checklists, maintenance runbooks with gcloud commands, release channel strategy, and troubleshooting guides. Handles node pool upgrade strategies (surge, blue-green), version compatibility, PDB management, and w
 - **Teknoloji:** node _(otomatik tespit)_
@@ -936,7 +936,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 44 KB (SKILL.md 20.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-workload-identity  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-workload-identity  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configures and diagnoses Workload Identity Federation for GKE authentication failures for Pods (403 "iam.serviceAccounts.getAccessToken" / permission denied, "could not find default credentials", or GKE metadata server unreachable) by verifying cluster and node-pool Workload Identity configuration, the Kubernetes ServiceAccount (KSA) to IAM binding (direct principal binding and legacy Google Servi
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -946,7 +946,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 20 KB (SKILL.md 17.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-workload-scaling  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### gke-workload-scaling  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Manages scaling for GKE workloads using HPA and VPA. Use when configuring Horizontal Pod Autoscaler (HPA), configuring Vertical Pod Autoscaler (VPA), or applying best practices for GKE workload autoscaling. Do not use for cluster-level autoscaling (Cluster Autoscaler), static cluster sizing, or configuring node-level machine styles directly.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -956,7 +956,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 8 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### gke-workload-scaling-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-workload-scaling-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses GKE HorizontalPodAutoscaler (HPA) failures — metrics showing as <unknown>, FailedGetResourceMetric / FailedGetScale / FailedComputeMetricsReplicas events, missing Pod resource requests, custom/external metrics-pipeline breakage (FailedGetExternalMetric / FailedGetCustomMetric, unavailable metrics adapter, control-plane firewall blocking the adapter), HPA that won't scale up or down (tole
 - **Teknoloji:** node, react _(otomatik tespit)_
@@ -966,7 +966,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 19 KB (SKILL.md 17.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-workload-security  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-workload-security  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Audits, configures, and hardens workload-level security controls for Google Kubernetes Engine (GKE) applications and namespaces. Covers running security audits (`audit_cluster.sh`), enforcing Network Policies (default-deny and Dataplane V2 logging), isolating high-risk pods inside GKE Sandbox (`gVisor`), enforcing Pod Security Standards (`restricted` labeling) and pod securityContext, and mounting
 - **Teknoloji:** node _(otomatik tespit)_
@@ -976,7 +976,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 14 KB (SKILL.md 8.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gke-workload-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### gke-workload-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses GKE workload failures (CrashLoopBackOff, OOMKilled, ImagePullBackOff, Pending, etc.) via logs and events. Use when pods fail to start or crash repeatedly. Don't use for GKE cluster infrastructure provisioning, node pool creation, or non-Kubernetes Google Cloud services.
 - **Teknoloji:** git, node, python _(otomatik tespit)_
@@ -986,7 +986,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 20 KB (SKILL.md 18.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-filestore-auditing  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-filestore-auditing  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Audits Filestore instances on Google Cloud across projects for disaster recovery readiness (missing or stale backups), security access governance (overly permissive NFS export rules, 0.0.0.0/0 exposure, missing ROOT_SQUASH), and reliability compliance (Physical Zone Isolation PZI and Physical Zone Separation PZS). Use when assessing storage health posture, auditing NFS export permissions, identify
 - **Teknoloji:** python _(otomatik tespit)_
@@ -996,7 +996,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 70 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-filestore-autoscale  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-filestore-autoscale  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Inspects Filestore capacity and utilization on Google Cloud, evaluates storage scaling rules, and performs capacity autoscaling (scale UP for low free space or scale DOWN for cost optimization). Use when monitoring Filestore instance headroom, resizing instance shares, configuring automated growth/shrink thresholds (custom thresholds apply globally across projects in session memory), or preventing
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1006,7 +1006,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 23 KB (SKILL.md 13.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-filestore-log-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-filestore-log-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses and resolves Filestore client mount failures on Google Cloud, permission errors (EACCES), and network timeouts (ETIMEDOUT). Use when an NFS mount hangs or fails from a Compute Engine VM, GKE pod, Cloud Run service, or Vertex AI workload, when `mount.nfs` reports "Connection timed out" or "access denied by server", when checking whether VPC ingress firewall rules or `nfsExportOptions` all
 - **Teknoloji:** node, python _(otomatik tespit)_
@@ -1016,7 +1016,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 71 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-filestore-nfs-browser  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-filestore-nfs-browser  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Inspects, searches, and reads files and POSIX metadata on Filestore (NFS) instances on Google Cloud without local NFS client packages or root privileges. Use when browsing Filestore shares, searching files, reading remote logs, or inspecting file attributes; don't use for Cloud Storage buckets, Cloud NetApp Volumes, Persistent Disks, or modifying/deleting files.
 - **Teknoloji:** docker, python _(otomatik tespit)_
@@ -1026,7 +1026,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 65 KB (SKILL.md 12.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-global-frontend-configuration  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-global-frontend-configuration  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Guides agents through a 6-step discovery process to design and deploy Google Cloud global external Application Load Balancers with Cloud CDN, Cloud Armor, and Service Extensions, mapping workload requirements to best-practice configurations. Use when: - Designing, configuring, or deploying a Google Cloud global external Application Load Balancer, Cloud CDN, Cloud Armor WAF, or Service Extensions. 
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1036,7 +1036,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 41 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-networking-observability  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-cloud-networking-observability  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Investigates Google Cloud networking issues by analyzing GCP logs, metrics, and diagnostics. Use when investigating dropped network traffic, packet drops, drop reasons, VPC Flow Logs (including Private Service Connect / PSC, serverless / App Engine Direct VPC, and cost estimation), Cloud NAT, firewall or threat logs, VPN metrics/tunnels, or Connectivity Tests for path diagnostics. Don't use for ge
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1046,7 +1046,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 47 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-cloud-recipe-auth  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-recipe-auth  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Provides expert guidance on Identity and Access Management (IAM) and authenticating and authorizing to Google Cloud services and APIs, covering human users, service identities, Application Default Credentials (ADC), and best practices for secure access.
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1056,7 +1056,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 14 KB (SKILL.md 12.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-recipe-foundation-builder  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-recipe-foundation-builder  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Deploys a baseline landing zone foundation for a Google Cloud Organization, establishing security guardrails using Organization Policies, resource hierarchy folders and projects, billing association, and centralized logging and monitoring. Deploys Google Cloud's recommended security controls and architecture. Use when setting up a new Google Cloud Organization or establishing a secure, enterprise-
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1066,7 +1066,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 40 KB (SKILL.md 19.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-recipe-onboarding  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-recipe-onboarding  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Guides a developer's first steps on Google Cloud, covering account creation, billing setup, project management, and deploying a first resource. Use when a new developer wants to initialize their first Google Cloud project, configure billing, and verify deployment. Don't use for enterprise organization setup (use Google Cloud Setup guided flow for that instead). Don't use for complex multi-project 
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1076,7 +1076,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 15 KB (SKILL.md 12.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-scc-query  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-scc-query  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Queries and retrieves active security findings, external exposures, toxic combinations, vulnerabilities, threats, and sensitive data risks from Security Command Center on Google Cloud. Use when retrieving details for a security finding by its name, validating finding scope (e.g., verifying findingClass is TOXIC_COMBINATION, VULNERABILITY, EXTERNAL_EXPOSURE, or THREAT), or fetching finding details 
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1086,7 +1086,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 18 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-scc-remediation  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-scc-remediation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Remediates Google Cloud Security Command Center findings, including IAM permission fixes, cloud resource misconfigurations, vulnerabilities, and Toxic Combinations. Use when asked to fix, remediate, or mitigate a Security Command Center finding or address attack paths. Don't use for general IAM policy querying without a Security Command Center finding. For runtime threat detections, this skill pro
 - **Teknoloji:** api-anahtari, node _(otomatik tespit)_
@@ -1096,7 +1096,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 34 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-slo-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-slo-alert-configuration  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Configures Cloud Monitoring PromQL-based Service Level Objective (SLO) alerting policies on Google Cloud for resources registered in App Hub or individually specified. Generates Terraform output. Use when the user asks to configure an SLO or Service Level Objective. Don't use for standard alerting policies.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1106,7 +1106,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 29 KB (SKILL.md 12.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-waf-cost-optimization  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-waf-cost-optimization  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Evaluates Google Cloud workloads for cost efficiency and FinOps alignment using the Google Cloud Well-Architected Framework Cost Optimization pillar. Use when the user asks to analyze Google Cloud spend, reduce cloud bills, rightsize resources (for example, Compute, GKE, Storage, Databases), evaluate discount options (for example, CUDs, SUDs, Spot VMs), or eliminate idle capacity. Do not use for s
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1116,7 +1116,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-waf-operational-excellence  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-waf-operational-excellence  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Generates operational guidance for CI/CD deployment pipelines, observability, monitoring, logging, and incident management on Google Cloud based on the design principles and recommendations in the Operational Excellence pillar of the Google Cloud Well-Architected Framework (WAF). Use when the user asks about operations-related topics like capacity management, change management, incident and proble
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1126,7 +1126,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-waf-performance-optimization  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### google-cloud-waf-performance-optimization  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Generates performance-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Performance Optimization pillar of the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify performance requirements, and provide actionable recommendations for resource allocation, modular design, and elasticity.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1136,7 +1136,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 9 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-cloud-waf-reliability  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-waf-reliability  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Evaluates, designs, and improves the reliability, resilience, availability, fault tolerance, and disaster recovery (DR) of Google Cloud workloads based on the design principles and recommendations in the Reliability pillar of the Google Cloud Well-Architected Framework. Use when the user asks about reliability-related topics like workload uptime, designing for high availability (HA) or DR, setting
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1146,7 +1146,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-waf-security  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-waf-security  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Evaluates Google Cloud workloads and provides actionable recommendations for identity management, access control, permissions and roles, network and perimeter security, data security and encryption, security logging and threat detection, software supply chain hardening, AI security, data privacy, regulatory compliance, and cloud sovereignty. The recommendations are aligned with the Security, Priva
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1156,7 +1156,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 20 KB (SKILL.md 18.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-cloud-waf-sustainability  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-cloud-waf-sustainability  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Provides recommendations for environmental sustainability, carbon footprint reduction, and energy efficiency based on the Sustainability pillar of the Google Cloud Well-Architected Framework (WAF). Use when the user asks to assess, design, or optimize Google Cloud workloads for sustainability—including the shared responsibility model, selecting low-carbon regions (CFE%), reducing resource and AI/M
 - **Teknoloji:** css, html _(otomatik tespit)_
@@ -1166,7 +1166,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 15 KB (SKILL.md 13.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### iam-helper-for-policy-management  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### iam-helper-for-policy-management  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Streamlines the creation, modification, and management of IAM allow policies (v1) and deny policies (v2). Manages access control across Resource Manager resources (Organization, Folder, Project) and individual resources. Use when creating, updating, listing, or deleting IAM allow policies or deny policies. Don't use for access denial troubleshooting (use iam-helper-for-troubleshooting), temporary 
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1176,7 +1176,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 21 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### iam-helper-for-policy-simulator  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### iam-helper-for-policy-simulator  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Safely simulates and applies Identity and Access Management (IAM) v1 (Allow) policy changes on Google Cloud. Uses the Policy Simulator to replay historical access logs against proposed policies to prevent breaking active workloads before applying the changes. Use when simulating or applying IAM v1 allow policies across Projects, Folders, or Organizations. Don't use for analyzing IAM v2 deny polici
 - **Teknoloji:** python _(otomatik tespit)_
@@ -1186,7 +1186,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 9 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### iam-helper-for-privileged-access-management  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### iam-helper-for-privileged-access-management  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Manages the end-to-end lifecycle of on-demand, temporary access using Privileged Access Manager (PAM). Use when a user asks to create, read, update, or delete PAM entitlements, request temporary access, or approve/deny pending PAM grants. Do NOT use for permanent IAM policy bindings, troubleshooting IAM permission errors, or general Google Cloud resource provisioning.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1196,7 +1196,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 30 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### iam-helper-for-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### iam-helper-for-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Diagnoses, remediates, and manages Identity and Access Management (IAM) access issues on Google Cloud. Supports two distinct operational modes: (1) Requester Flow for developers encountering access denials (capturing error context, self-service PAM JIT activations, elevated developer self-remediation, or logging structured tickets), and (2) Resolver Flow for privileged administrators (authoritativ
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1206,7 +1206,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 44 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### iap-agent-platform-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### iap-agent-platform-troubleshooting  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses Identity-Aware Proxy (IAP) denials of outbound requests from Gemini Enterprise Agent Platform agents that run on Agent Runtime and send traffic through Agent Gateway. Use when an agent request fails with "Egress request is not authorized", when Cloud Audit Logs show an IAP egressViaIAP decision with granted false, when IAP audit entries are missing while debugging agent egress, or when A
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1286,7 +1286,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### migrate-to-rust  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### migrate-to-rust  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or local directory to a modern, high-performance, deterministic, 100% Safe Rust architecture, tracking live telemetry across every task bucket, test failure/fix cycle, and Profile-Guided Optimization (PGO) stage, and producing a first-person AI storytelling report and interactive HTML in
 - **Teknoloji:** git, html, python _(otomatik tespit)_
@@ -1306,7 +1306,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### observability  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
+### observability  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
 
 - **Ne yapar:** Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.
 - **Teknoloji:** api-anahtari, html, next.js, node, react, typescript _(otomatik tespit)_
@@ -1347,7 +1347,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### pathways-workload  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### pathways-workload  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Debugs failed, crashing or hung Pathways on Cloud workloads (JAX training or inference on Cloud TPU in GKE, run as a JobSet, PathwaysJob or LeaderWorkerSet). Reads Cloud Logging for every Pathways container (user workload, IFRT proxy, pathways-rm, pathways-worker, colocated Python sidecar), node kernel logs and GKE events, then reports the earliest real error, the root cause and a fix. Use when a 
 - **Teknoloji:** docker, node, python _(otomatik tespit)_
@@ -1440,7 +1440,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Çift kullanımlı (tespitten kaçınma bölümü var) ve yüzeysel; web uygulaması projelerinde savunmaya katkısı düşük. Hiçbir role eklenmedi.
 
-### retrieving-developer-knowledge  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### retrieving-developer-knowledge  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Searches, retrieves, and synthesizes official Google developer documentation across Google Cloud, AI/Gemini, Android, Chrome, Web, Flutter, Go, Firebase, and other Google developer platforms. Integrates with the Developer Knowledge MCP server (search_documents, get_documents, answer_query) or the Developer Knowledge REST API fallback. Use when searching for gcloud CLI commands, API syntax, IAM per
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1500,7 +1500,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 12 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### secops-cases  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### secops-cases  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Manage Google Security Operations (SecOps) SOAR cases throughout their lifecycle. Use when listing, creating, inspecting, updating, or closing SOAR cases; adding investigative comments and notes; updating case priority or description; or linking and grouping security alerts within cases. Supports both remote Google SecOps MCP tools and local fallback tools. Don't use for SIEM UDM searches or detec
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_
@@ -1510,7 +1510,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 14 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### secops-detection-engineering  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### secops-detection-engineering  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Author, validate, test, and deploy YARA-L 2.0 detection rules and evaluate end-to-end detection coverage gaps in Google SecOps. Use when writing new detection rules, tuning existing rules, validating syntax, testing logic against historical telemetry, or evaluating detection coverage against threat intelligence blogs, CVE disclosures, and Threat Detection Opportunities (TDOs) using synthetic UDM e
 - **Teknoloji:** html, python _(otomatik tespit)_
@@ -1520,7 +1520,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 62 KB (SKILL.md 20.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### secops-hunt  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### secops-hunt  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Expert guidance for proactive threat hunting in Google SecOps. Use when proactively hunting for threats, retroactively analyzing indicators of compromise (IoCs), performing prevalence searches across enterprise events, hunting for MITRE ATT&CK techniques, or detecting behavioral and statistical outliers using UDM queries. Don't use for incoming alert triage (use secops-triage), active incident res
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1530,7 +1530,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 113 KB (SKILL.md 14.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### secops-investigate  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### secops-investigate  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Expert guidance for deep security incident and entity investigations in Google SecOps. Use when investigating cases, analyzing entities (hosts, IPs, domains, hashes, users), extracting and searching UDM events, performing asset and user timeline analysis, and detecting lateral movement across enterprise networks. Don't use for detection rule authoring or YARA-L tuning (use secops-detection-enginee
 - **Teknoloji:** node _(otomatik tespit)_
@@ -1540,7 +1540,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 20 KB (SKILL.md 18.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### secops-triage  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### secops-triage  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Expert guidance for security alert triage in Google SecOps. Use when investigating and triaging security alerts, determining false positives vs. true positives, assessing entity risk, adjusting alert severity or priority, and closing or escalating alerts and cases. Don't use for deep multi-hop incident investigations across host timelines (use secops-investigate), proactive threat hunting or retro
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1593,7 +1593,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **İnceleme:** otomatik
 - **Not:** Aynı adlı başka skill: `security-audit` (cloudflare/security-audit-skill) bağımsız, kapsamlı güvenlik denetimidir. Bu skill `npx @claude-flow/cli security` komutlarıyla tarar (Ruflo gerekir).
 
-### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities.
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -1613,7 +1613,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 36 KB (SKILL.md 8.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### security-scan  ·  openai/plugins @ b767f8f  ·  puan 71 (B)
+### security-scan  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
 - **Ne yapar:** Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR, commit, branch, or working-tree diffs, or for deep, multi-pass scans.
 - **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
@@ -1657,7 +1657,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 11 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, deploy-yayin grubunun birincili. Gerekçe: somut eşikli kademeli yayın ve hata bütçesi kapısı; deployment-procedures (vudovn) platform seçimi ve deploy fazlarıyla tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### sign-in-with-google-web  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### sign-in-with-google-web  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Implement, configure, and secure Sign In With Google (SiwG) using Google Identity Services (GIS / `https://accounts.google.com/gsi/client`) across web architectures. Use when creating Google sign-in buttons, implementing Google One Tap with FedCM, integrating GIS in React/Next.js/Angular/HTML, verifying ID tokens on backend runtimes (Python/Node.js/Go/Java), enforcing Google Workspace domain restr
 - **Teknoloji:** api-anahtari, html, next.js, node, python, react, vue _(otomatik tespit)_
@@ -1738,7 +1738,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.
 
-### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
+### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
 
 - **Ne yapar:** Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerability or a disclosure campaign; a Codex Security scan is optional.
 - **Teknoloji:** api-anahtari, git _(otomatik tespit)_
@@ -1788,7 +1788,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 5 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### workload-manager-basics  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### workload-manager-basics  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Use this skill to manage Google Cloud Workload Manager evaluations, rules, scanned resources, and validation results by using public client libraries and the REST API. Use when you need to inspect workload best-practice rules, create and run evaluations for Google Cloud general best practices, SAP, SQL Server, or custom organizational rules, review violations, export results to BigQuery, or automa
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_

@@ -211,7 +211,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### skill-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### skill-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** skill-creator'ın eski sürümü (ComposioHQ): skill anatomisi, aşamalı açılım ilkesi ve 6 adımlı süreç (örnekle anlama, içerik planlama, init_skill.py ile iskelet, düzenleme, package_skill.py ile paketleme, yineleme).
 - **Ne zaman:** Ölçüm/eval istemeden, basit iskelet + paketleme akışı yeterliyse. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/skill-creator güncel ve eval destekli.
@@ -265,7 +265,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 34 KB (SKILL.md 22.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İçeriğin çoğu eski skill-creator metninden türetilmiş (22 KB); eklentiye özgü kısım ince. writing-skills ve skill-creator varken ek değeri düşük.
 
-### skill-share  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### skill-share  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** Yeni skill iskeleti oluşturur, doğrular, zip paketler ve Rube (Composio) MCP üzerinden Slack kanalına paylaşır.
 - **Ne zaman:** Ekipte skill paylaşımını Slack bildirimiyle otomatikleştirmek (Composio Rube bağlıysa). · **Ne zaman değil:** Rube/Composio bağlantısı yoksa; skill yazım kalitesi için skill-creator. Betik içermiyor — paketleme adımları agent'ın yorumuna kalıyor.
@@ -298,7 +298,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 16 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Şablonlar HyperFrames Pro özelliği (Free planda çekilmez; skill kullanıcıdan billing komutunu kendisinin çalıştırmasını ister). Şablon çekimi kredi harcamaz; üretilen medya media-use kredi kuralına tabi. Yaratıcılara teşekkür notu var; kişi yüzü/sesi/logosu kullanılmaması kuralı net. Başlangıç telemetri işareti (hesaba bağlı) var.
 
-### template-skill  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 54 (C)
+### template-skill  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 55 (C)
 
 - **Ne yapar:** Boş skill şablonu: yalnızca name/description yer tutucuları ve 'talimatları buraya yaz' satırı.
 - **Ne zaman:** Yok — yeni skill için skill-creator'ın init/şablonları daha iyi. · **Ne zaman değil:** Hiçbir projeye kurma; içerik yok.
@@ -351,7 +351,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.
 
-### writing-skills@openai  ·  openai/plugins @ b767f8f  ·  puan 68 (B)
+### writing-skills@openai  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
 
 - **Ne yapar:** Use when creating new skills, editing existing skills, or verifying skills work before deployment
 - **Teknoloji:** api-anahtari, git, python, react, typescript _(otomatik tespit)_

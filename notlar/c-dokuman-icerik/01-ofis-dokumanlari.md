@@ -35,7 +35,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 1102 KB (SKILL.md 6.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic'in güncel sürümü: kısa SKILL.md (6.7 KB), net görev tablosu, docx-js tuzakları, merge_runs/validate/comment betikleri ve render ile doğrulama. ComposioHQ kopyası bunun eski anlık görüntüsü; bu yüzden birincil bu.
 
-### docx@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### docx@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Anthropic docx skill'inin ComposioHQ deposundaki eski sürümü. docx-js ile yeni belge, Python 'Document' kütüphanesi (ooxml) ile düzenleme ve markdown planlı redline (izlenen değişiklik) akışı sunar; okumadan önce 500-600 satırlık docx-js.md/ooxml.md dosyalarının tamamını okumayı zorunlu tutar.
 - **Ne zaman:** Sadece ooxml Python Document kütüphanesiyle toplu redline yapılması gerekiyorsa (eski API'ye bağlı iş akışları). · **Ne zaman değil:** Varsayılan olarak kullanma; güncel ve daha az bağlam tüketen anthropics/docx birincil.
@@ -57,7 +57,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 57 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Kapsamlı ve pratik kod örnekleri; form doldurma betikleri iyi. Diğer ofis skillerine göre daha az 'doğrula' disiplini var. ComposioHQ sürümü neredeyse aynı (39 satır fark) ama eski; birincil bu.
 
-### pdf@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
+### pdf@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 71 (B)
 
 - **Ne yapar:** Anthropic pdf skill'inin ComposioHQ'daki eski kopyası: pypdf/pdfplumber/reportlab ile PDF okuma, çıkarma, birleştirme/bölme ve form doldurma. İçerik güncel sürümle neredeyse aynı.
 - **Ne zaman:** Güncel sürüm erişilemezse yedek olarak. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/pdf aynı içeriğin güncel hâli.
@@ -79,7 +79,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 1112 KB (SKILL.md 20.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Güncel Anthropic sürümü; betik tablosu, pptxgenjs tuzakları, tasarım rehberi ve zorunlu render QA'sı tek dosyada. ComposioHQ sürümü html2pptx tabanlı eski akış; birincil bu.
 
-### pptx@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 67 (B)
+### pptx@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 68 (B)
 
 - **Ne yapar:** Anthropic pptx skill'inin eski sürümü (ComposioHQ). HTML slaytları playwright ile html2pptx dönüştürerek sunum üretir; şablonlu üretimde slayt envanteri, değiştirme JSON'u ve küçük resim ızgarası kullanan uzun bir iş akışı tarif eder.
 - **Ne zaman:** HTML/CSS ile tasarlanıp PowerPoint'e çevrilecek sunumlar (html2pptx akışı özellikle isteniyorsa). · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/pptx daha kısa ve günceldir. Playwright/Chromium kurulumu olmayan ortamlarda.
@@ -121,7 +121,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Boyut:** 1077 KB (SKILL.md 8.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). 'Yeşil recalc doğru demek değil' gibi doğrulama disiplini ve mevcut dosya kurallarına uyma talimatı çok iyi. ComposioHQ sürümünden güncel ve daha net; birincil bu.
 
-### xlsx@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### xlsx@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Anthropic xlsx skill'inin eski kopyası (ComposioHQ): formül zorunluluğu, finansal model renk/sayı biçimi kuralları, pandas/openpyxl örnekleri ve LibreOffice ile recalc.py yeniden hesaplama.
 - **Ne zaman:** Güncel sürüm yoksa yedek; içerik büyük ölçüde aynı. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/xlsx daha güncel doğrulama kuralları içerir.

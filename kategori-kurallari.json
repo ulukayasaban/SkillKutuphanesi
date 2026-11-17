@@ -2,6 +2,11 @@
   "_aciklama": "İlk kategori ataması. Sırayla denenir: ad_kurallari (ilk eşleşen kazanır) > yol_kurallari > repo_varsayilan. İnceleme sonrası elle düzeltilen kategori registry'de 'kategori_elle': true ile korunur. ad_kurallari kaydında 'repo' varsa kural sadece o repodaki skillere uygulanır.",
   "ad_kurallari": [
     {
+      "repo": "shadcn-labs/snapcn",
+      "desen": "^(remotion-|snapcn$)",
+      "kategori": "g-video-ses-medya/04-motion-graphics-karakter"
+    },
+    {
       "repo": "google/skills",
       "desen": "^(google-mobile-ads|ima-(sdk|dai)|litert|developer-device-platform)",
       "kategori": "b-yazilim-gelistirme/08-mobil-uygulama"
@@ -941,6 +946,16 @@
     "YildizDikme/claude-video-edit": "g-video-ses-medya/01-video-uretim-montaj",
     "yohannescodes/apple-app-review-compliance": "b-yazilim-gelistirme/08-mobil-uygulama",
     "leodavincs/kalem": "g-video-ses-medya/01-video-uretim-montaj",
-    "digitalsamba/claude-code-video-toolkit": "g-video-ses-medya/01-video-uretim-montaj"
+    "digitalsamba/claude-code-video-toolkit": "g-video-ses-medya/01-video-uretim-montaj",
+    "latent-spaces/brag": "g-video-ses-medya/01-video-uretim-montaj",
+    "nateherkai/herk-edit-kit": "g-video-ses-medya/01-video-uretim-montaj",
+    "veedstudio/open-edit": "g-video-ses-medya/01-video-uretim-montaj",
+    "JuneYaooo/rea-video": "g-video-ses-medya/01-video-uretim-montaj",
+    "kajisho5/ffmpeg-skill": "g-video-ses-medya/01-video-uretim-montaj",
+    "heygen-com/hyperframes-community-skills": "g-video-ses-medya/01-video-uretim-montaj",
+    "tuzhechen2005/opus-video-skills": "g-video-ses-medya/04-motion-graphics-karakter",
+    "Barty-Bart/motion-graphics": "g-video-ses-medya/04-motion-graphics-karakter",
+    "AbubakrChan/product-launch-motion": "g-video-ses-medya/04-motion-graphics-karakter",
+    "shadcn-labs/snapcn": "g-video-ses-medya/04-motion-graphics-karakter"
   }
 }

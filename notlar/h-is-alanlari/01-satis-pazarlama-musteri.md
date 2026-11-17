@@ -814,7 +814,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 9 KB (SKILL.md 8.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### data-manager-api-audience-ingestion  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### data-manager-api-audience-ingestion  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Guides developers through managing (adding, removing, and clearing) audience members for Google products using the Data Manager API and its associated client libraries. Use this skill when the user wants to upload audience members, remove specific users, or clear/replace an entire audience for Customer Match, mobile device ID audiences, or any other audience use case supported by the Data Manager 
 - **Teknoloji:** node, python, typescript _(otomatik tespit)_
@@ -824,7 +824,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 14 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### data-manager-api-event-ingestion  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### data-manager-api-event-ingestion  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Guides developers through implementing event and conversion ingestion to Google products using the Data Manager API /v1/events/ingest endpoint and its associated client libraries. Use this skill when the user wants to upload offline conversions, enhanced conversions for leads, click conversions, Google Analytics web or app events, or any other event ingestion use case supported by the Data Manager
 - **Teknoloji:** node, python, typescript _(otomatik tespit)_
@@ -834,7 +834,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### data-manager-api-setup  ·  google/skills @ 3c4dda4  ·  puan 99 (A)
+### data-manager-api-setup  ·  google/skills @ 3c4dda4  ·  puan 100 (A)
 
 - **Ne yapar:** Guides developers through client library installation and authentication setup steps for the Data Manager API. Use this skill when a user is getting started with the Data Manager API and needs to setup their local environment, install the client library, or setup access to the API. Don't use for implementing audience or event ingestion logic (use the data-manager-api-audience-ingestion or data-man
 - **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
@@ -1014,7 +1014,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 23 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### geo  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** GEO-first SEO analysis tool. Optimizes websites for AI-powered search engines (ChatGPT, Claude, Perplexity, Gemini, Google AI Overviews) while maintaining traditional SEO foundations. Performs full GEO audits, citability scoring, AI crawler analysis, llms.txt generation, brand mention scanning, platform-specific optimization, schema markup, technical SEO, content quality (E-E-A-T), and client-read
 - **Teknoloji:** css, html, python _(otomatik tespit)_
@@ -1024,7 +1024,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-audit  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-audit  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Full website GEO+SEO audit with parallel subagent delegation. Orchestrates a comprehensive Generative Engine Optimization audit across AI citability, platform analysis, technical infrastructure, content quality, and schema markup. Produces a composite GEO Score (0-100) with prioritized action plan.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1034,7 +1034,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 12 KB (SKILL.md 12.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-brand-mentions  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-brand-mentions  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Brand mention and authority scanner for AI visibility. Analyzes brand presence across platforms that AI models rely on for entity recognition and citation decisions. Produces a Brand Authority Score (0-100) with platform-specific recommendations.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -1044,7 +1044,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 23 KB (SKILL.md 22.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-citability  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-citability  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** AI citability scoring and optimization. Analyzes web page content to determine how likely AI systems (ChatGPT, Claude, Perplexity, Gemini) are to cite or quote passages from the page. Provides a citability score (0-100) with specific rewrite suggestions.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1054,7 +1054,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 14 KB (SKILL.md 14.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-compare  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-compare  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Monthly delta tracking and progress reporting for GEO clients. Compares two GEO audits (baseline vs. current), calculates score improvements across all categories, tracks action item completion, and generates a "here's your progress" client report. Use when user says "compare", "delta", "monthly report", "progress", "confronta", "progressi", "report mensile", or when running a monthly client check
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1064,7 +1064,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 10 KB (SKILL.md 9.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-content  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-content  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Content quality and E-E-A-T assessment for AI citability — evaluate experience, expertise, authoritativeness, trustworthiness, and content structure
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1074,7 +1074,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 16 KB (SKILL.md 15.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-crawlers  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-crawlers  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** AI crawler access analysis. Checks robots.txt, meta tags, and HTTP headers to determine which AI crawlers can access the site. Provides a complete access map and recommendations for maximizing AI visibility while maintaining appropriate control.
 - **Teknoloji:** html, python _(otomatik tespit)_
@@ -1084,7 +1084,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 18 KB (SKILL.md 18.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-llmstxt  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 82 (A)
+### geo-llmstxt  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 83 (A)
 
 - **Ne yapar:** Analyzes and generates llms.txt files -- the emerging standard for helping AI systems understand website structure and content. Can validate existing llms.txt files or generate new ones from scratch by crawling the site.
 - **Teknoloji:** react _(otomatik tespit)_
@@ -1094,7 +1094,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### geo-platform-optimizer  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-platform-optimizer  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Platform-specific AI search optimization — audit and optimize for Google AI Overviews, ChatGPT, Perplexity, Gemini, and Bing Copilot individually
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1104,7 +1104,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 19 KB (SKILL.md 18.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-proposal  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-proposal  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Auto-generate a professional, client-ready GEO service proposal from audit data. Creates a full proposal in markdown and PDF including executive summary, findings, recommended service packages (Basic/Standard/Premium), pricing, timeline, and terms. Use when user says "proposal", "proposta", "offerta", "preventivo", "generate proposal", or after completing a GEO audit for a prospect.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1114,7 +1114,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-prospect  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 86 (A)
+### geo-prospect  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 87 (A)
 
 - **Ne yapar:** CRM-lite for managing GEO agency prospects and clients. Track leads through the full sales pipeline: Lead → Qualified → Proposal Sent → Won → Lost. Store audit history, notes, deal values, and generate pipeline summaries. Use when user says "prospect", "lead", "client", "pipeline", "crm", "nuovo prospect", "aggiungi cliente", or when managing the business side of GEO services.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1124,7 +1124,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 7 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### geo-report  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-report  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Generate a professional, client-facing GEO report combining all audit results into a single deliverable with scores, findings, and prioritized actions
 - **Teknoloji:** html _(otomatik tespit)_
@@ -1134,7 +1134,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 18 KB (SKILL.md 17.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-report-pdf  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 86 (A)
+### geo-report-pdf  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 87 (A)
 
 - **Ne yapar:** Generate a professional PDF report from a GEO audit using pandoc + Chrome headless. Converts GEO-AUDIT-REPORT.md into a styled, client-ready PDF with a cover page, color-coded score tables, severity-tagged findings, and a 90-day roadmap.
 - **Teknoloji:** css, html, python _(otomatik tespit)_
@@ -1144,7 +1144,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### geo-schema  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-schema  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Schema.org structured data audit and generation optimized for AI discoverability — detect, validate, and generate JSON-LD markup
 - **Teknoloji:** css, html, python _(otomatik tespit)_
@@ -1154,7 +1154,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 14 KB (SKILL.md 14.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-technical  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 84 (A)
+### geo-technical  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 85 (A)
 
 - **Ne yapar:** Technical SEO audit with GEO-specific checks — crawlability, indexability, security, performance, SSR, and AI crawler access
 - **Teknoloji:** css, html, next.js, react, svelte, vue _(otomatik tespit)_
@@ -1164,7 +1164,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 22 KB (SKILL.md 22.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### geo-update  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 81 (A)
+### geo-update  ·  zubair-trabzada/geo-seo-claude @ 989cae0  ·  puan 82 (A)
 
 - **Ne yapar:** Pull the latest GEO-SEO skill updates from the upstream repository. Compares installed files against the latest release, shows what changed, and updates all skills, agents, scripts, and schema templates in place.
 - **Teknoloji:** git, python _(otomatik tespit)_
@@ -1174,7 +1174,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### google-ads-api-account-diagnostics  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-ads-api-account-diagnostics  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Diagnoses Google Ads account performance issues such as conversion loss (value or volume), low lead flow/volume, and lost impression share (opportunities) due to ad rank, bids, or budgets. Use when troubleshooting sudden performance drops, analyzing campaign impression share metrics, investigating low lead flow, or searching for bidding and budget constraints. Don't use for setting up new campaign
 - **Teknoloji:** python _(otomatik tespit)_
@@ -1184,7 +1184,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 13 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-ads-api-mcp-setup  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-ads-api-mcp-setup  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Guides developers through downloading, configuring, and installing the official open-source Google Ads MCP Server. Use this skill when a user wants to connect their AI assistant (such as Gemini, Claude Code, or Cursor) to their Google Ads account to query campaigns or retrieve reporting metrics using natural language.
 - **Teknoloji:** api-anahtari, docker, git, node, python _(otomatik tespit)_
@@ -1194,7 +1194,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 30 KB (SKILL.md 23.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### google-ads-api-quickstart  ·  google/skills @ 3c4dda4  ·  puan 97 (A)
+### google-ads-api-quickstart  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Guides developers through Google Ads API quickstart: credential setup, choosing from 6 client libraries/REST, configuring environments, and running a "retrieve campaigns" script. Troubleshoots common setup errors: USER_PERMISSION_DENIED, login_customer_id issues, and CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION (a Google Cloud project with Test access calling a production account). Use this skill whe
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_

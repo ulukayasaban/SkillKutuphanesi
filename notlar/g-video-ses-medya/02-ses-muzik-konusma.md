@@ -2,7 +2,7 @@
 
 _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **18/32**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **18/33**
 
 ### acestep  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
@@ -125,7 +125,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Güncel ve dürüst (promosyon kısıtları açıkça yazılmış).
 
-### krillinai-cli  ·  krillinai/OpenCreator @ b5b9235  ·  puan 89 (A)
+### krillinai-cli  ·  krillinai/OpenCreator @ b5b9235  ·  puan 90 (A)
 
 - **Ne yapar:** Use when an agent needs to build or operate the embedded KrillinAI CLI, choose a supported command, or interpret its JSON, manifest, subtitle, dubbing, render, cover, speech, and voice outputs.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -135,7 +135,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 9 KB (SKILL.md 3.4 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-cover  ·  krillinai/OpenCreator @ b5b9235  ·  puan 89 (A)
+### krillinai-cover  ·  krillinai/OpenCreator @ b5b9235  ·  puan 90 (A)
 
 - **Ne yapar:** Use when generating a cover image with the KrillinAI CLI from a complete image prompt, including validating image-provider configuration and inspecting the generated image and saved prompt.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -145,7 +145,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-pipeline  ·  krillinai/OpenCreator @ b5b9235  ·  puan 89 (A)
+### krillinai-pipeline  ·  krillinai/OpenCreator @ b5b9235  ·  puan 90 (A)
 
 - **Ne yapar:** Use when validating or documenting a multi-stage KrillinAI CLI output plan; the current pipeline command supports dry-run planning only, not end-to-end execution.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -155,7 +155,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-render-horizontal  ·  krillinai/OpenCreator @ b5b9235  ·  puan 89 (A)
+### krillinai-render-horizontal  ·  krillinai/OpenCreator @ b5b9235  ·  puan 90 (A)
 
 - **Ne yapar:** Use when rendering landscape videos with KrillinAI CLI, including original video plus bilingual subtitles or dubbed video plus target-language subtitles.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -165,7 +165,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-render-vertical  ·  krillinai/OpenCreator @ b5b9235  ·  puan 89 (A)
+### krillinai-render-vertical  ·  krillinai/OpenCreator @ b5b9235  ·  puan 90 (A)
 
 - **Ne yapar:** Use when rendering portrait videos with KrillinAI CLI, including converting source video to vertical format, adding short bilingual subtitles, rendering dubbed vertical videos, and checking vertical subtitle readability.
 - **Teknoloji:** ffmpeg, python _(otomatik tespit)_
@@ -175,7 +175,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-subtitle  ·  krillinai/OpenCreator @ b5b9235  ·  puan 89 (A)
+### krillinai-subtitle  ·  krillinai/OpenCreator @ b5b9235  ·  puan 90 (A)
 
 - **Ne yapar:** Use when generating subtitles with KrillinAI CLI from a YouTube link, Bilibili/local video, or existing media, including platform caption download, Whisper fallback, translation, bilingual SRT, and short vertical subtitle output.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -185,7 +185,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-tts  ·  krillinai/OpenCreator @ b5b9235  ·  puan 89 (A)
+### krillinai-tts  ·  krillinai/OpenCreator @ b5b9235  ·  puan 90 (A)
 
 - **Ne yapar:** Use when generating target-language dubbing with KrillinAI CLI from SRT subtitles, including TTS audio creation and optional dubbed video generation.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -319,6 +319,18 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Durum:** tercih · **Örtüşme:** ses-efekti → birincil · **Roller:** ses-tasarimci
 - **Boyut:** 5 KB (SKILL.md 3.9 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi, kısa ve eksiksiz.
+- **Not:** Aynı ad farklı iş: bu kayıt (OpenMontage) çıplak adın tercihi olarak sabit; Barty-Bart/motion-graphics sürümü sound-effects@barty-bart (HyperFrames/Remotion/GSAP videolarına ölçülü ses geçişi).
+
+### sound-effects@barty-bart  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 66 (B)
+
+- **Ne yapar:** Add a measured sound pass to a motion-graphics video made with Claude Code (HyperFrames, Remotion, GSAP, Claude Motion or the motion-broll skill). Builds a cue list, checks the music's beat grid against the kick drums, lands cuts on the beat, places one real sound effect per cue from a bundled CC0 library, mixes to -16 LUFS with true peaks below -4 dBFS measured on the exported MP4, and proves it 
+- **Teknoloji:** api-anahtari, ffmpeg, gsap, html, python, remotion _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** Barty-Bart (kisi, ★1347, son güncelleme 2026-10-13, lisans NOASSERTION)
+- **Durum:** alternatif
+- **Boyut:** 2455 KB (SKILL.md 13.5 KB, yük orta) · **Bağımlılık:** pip install ile Python bağımlılıkları (ses analizi) ve ses efekti kütüphanesi indirmesi gerekir; ElevenLabs isteğe bağlı.
+- **İnceleme:** otomatik
+- **Not:** Aynı ad farklı iş: OpenMontage'daki sound-effects çıplak adın tercihi; bu kayıt motion-graphics videolarına ölçülü ses geçişi ekler.
 
 ### speech-to-text  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 100 (A)
 

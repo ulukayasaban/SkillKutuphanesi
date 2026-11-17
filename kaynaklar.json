@@ -1384,6 +1384,275 @@
         "guvenlik_notu": "firebase-basics bir referans dosyasında ~/.agents/skills'e 'npx skills add' ile kurulum öneriyor (not düşüldü, uygulanmaz); developing-genkit-go/-dart 'curl -sL cli.genkit.dev | bash' içeriyor; çok sayıda skil sürümü sabitlenmemiş 'npx ...@latest' çağırıyor; 174 skil gcloud telemetri etiketi (CLOUDSDK_METRICS_REQUEST_ATTRIBUTION) kullanıyor; SecOps/SCC skilleri savunma amaçlı (K-58 uygulanmaz)."
       },
       "not": "Resmî Google skill koleksiyonu (Apache-2.0). Filtre: yalnız ^skills/ altındaki SKILL.md'ler; plugins/ altındaki kopyalar, .mcp.json ve 16 submodule haric. finding-google-skills skili haric tutuldu: çalışırken raw.githubusercontent.com/google/skills/main/index.json'u sabitlenmemiş main dalından çekip sürüm sabitlemesini atlıyor. Ad çakışması: developing-genkit-dart kütüphanede evanca/flutter-ai-rules kaydında var (tercih); çıplak ad el değiştirmez, bu kaynağınki developing-genkit-dart@google-skills olur, eski kayıt durum_elle ile tercih sabitlendi (devir yapılmadı; aynı iş olabilir, ad_devral kararı ana oturumun). Güvenlik: firebase-basics referans dosyasında global ~/.agents/skills'e kurulum talimatı var (kural 1 ihlali, kurulan kopyaya uygulanmaz); genkit-go/dart 'curl | bash'; birçok skil 'npx ...@latest' (sürümsüz); gcloud telemetri etiketi yaygın. SecOps/Security Command Center skilleri savunma amaçlı -> b-yazilim-gelistirme/06-devops-guvenlik-performans (K-58 kapsamı dışı)."
+    },
+    {
+      "repo": "latent-spaces/brag",
+      "tip": "T1",
+      "oncelik": 4,
+      "eklendi": "2026-11-17",
+      "bagimlilik": "brag HyperFrames (npx hyperframes) ile çalışır; brag-slim ek kurulum istemez, makinedeki araçları kullanır.",
+      "not": "2026-11-17'de eklendi. Proje klasöründen ya da web sitesinden kısa tanıtım videosu üreten iki skil (brag, brag-slim). MIT.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "06379432a9243c951dfcc051153be18d2d261044",
+        "guvenlik_notu": "SKILL.md ve betikler okundu: ağdan kod indirip çalıştırma ya da gizli bilgi okuma yok; proje kodunu okuyup video üretir."
+      }
+    },
+    {
+      "repo": "tuzhechen2005/opus-video-skills",
+      "tip": "T1",
+      "oncelik": 4,
+      "eklendi": "2026-11-17",
+      "bagimlilik": "Node, headless Chrome ve ffmpeg gerekir (p5.js + p5.brush / three.js ile kare kare çizim); ilk kullanımda npm paketleri kurulur.",
+      "not": "2026-11-17'de eklendi. İki skil: painted-animation (suluboya-mürekkep çizgi film), kinetic-reel (kinetik tipografi showreel). SKILL.md ~/.claude/skills/<ad>/scripts sabit yolunu öğretici örnek komut olarak yazar; projeye kurulumda yol-tara sonucuna göre işlenir.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "dafed5bd55eb8bca01baeff2b059cab2446cf042",
+        "lisans_onay": "Kullanıcı 2026-11-17: GitHub NOASSERTION; LICENSE dosyası MIT, ek notlar (MIT + Heibel payı (ClaudeAnimationBase, MIT) ve üçüncü taraf notları) kabul edildi.",
+        "guvenlik_notu": "Betikler yerel kare üretimi ve ffmpeg kodlaması; ağdan kod çalıştırma yok. SKILL.md'deki ~/.claude/skills/<ad>/scripts yolu sabit kurulum yolu örneğidir (yol-tara kapısı)."
+      }
+    },
+    {
+      "repo": "Barty-Bart/motion-graphics",
+      "tip": "T1",
+      "oncelik": 4,
+      "eklendi": "2026-11-17",
+      "bagimlilik": "Videolar HyperFrames/Remotion/GSAP, Node ve ffmpeg ile yerelde render edilir.",
+      "not": "2026-11-17'de eklendi. Altı skil: üç explainer biçimi, motion-broll, object-separation, sound-effects. sound-effects adı OpenMontage'daki skille çakışır: kullanıcı kabul etti, bu kaynağın kimliği sound-effects@Barty-Bart/motion-graphics olur, mevcut skil değişmez, ad devri yok. Yazı tipi lisansı: Geist (OFL).",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
+        "lisans_onay": "Kullanıcı 2026-11-17: GitHub NOASSERTION; LICENSE dosyası MIT, ek notlar (MIT + yazı tipi Geist OFL, marka varlıkları) kabul edildi.",
+        "guvenlik_notu": "Yerel render ve ses/maske betikleri; ağdan kod çalıştırma yok; object-separation yalnız yerel dosyalarla çalışır, yükleme yapmaz."
+      },
+      "skill_bagimlilik": {
+        "skills/object-separation": "SAM 2 modelini yerelde çalıştırır: pip install ile Python bağımlılıkları kurulur, model dosyaları indirilir (disk, RAM; GPU önerilir). Hiçbir şey yüklenmez.",
+        "skills/sound-effects": "pip install ile Python bağımlılıkları (ses analizi) ve ses efekti kütüphanesi indirmesi gerekir; ElevenLabs isteğe bağlı."
+      }
+    },
+    {
+      "repo": "AbubakrChan/product-launch-motion",
+      "tip": "T1",
+      "oncelik": 3,
+      "eklendi": "2026-11-17",
+      "haric": [
+        "^legacy/",
+        "^examples/"
+      ],
+      "dosya_haric": [
+        "^examples/",
+        "^legacy/"
+      ],
+      "bagimlilik": "Node, ffmpeg ve HyperFrames benzeri HTML'den MP4 render hattı gerekir; müzik/SFX için yerel araçlar.",
+      "not": "2026-11-17'de eklendi. Tek skil (kök); legacy v1 (^legacy/) ve ^examples/ bilerek alınmadı.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "edbfb105382f21507bad895d8b5f6e0faa67487c",
+        "guvenlik_notu": "Kök SKILL.md ve references okundu; ağdan kod çalıştırma ya da gizli bilgi okuma yok."
+      }
+    },
+    {
+      "repo": "JuneYaooo/rea-video",
+      "tip": "T2",
+      "oncelik": 2,
+      "dahil": [
+        "^skills/"
+      ],
+      "eklendi": "2026-11-17",
+      "bagimlilik": "Repo kökündeki rea_video Python paketi gerekir (pip install); ilk çalışmada model indirir (ağ, disk).",
+      "not": "2026-11-17'de eklendi. Videonun nasıl üretildiğini (gerçek çekim, AI, 3D, şablon render vb.) plan plan tersine çözen tek skil. SKILL.md Çince.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "64615718086337e8f9a4566e286d72b28ec13172",
+        "guvenlik_notu": "Skill kökü pip paketini kurmayı ister; ilk çalışmada model indirir. Gizli bilgi okuma yok."
+      }
+    },
+    {
+      "repo": "veedstudio/open-edit",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^\\.claude/skills/"
+      ],
+      "eklendi": "2026-11-17",
+      "bagimlilik": "VEED barındırılan servisleri (transkript, arka plan silme, AI sunucu, lipsync) ve fal modelleri için VEED/fal kredisi gerekir; CLI araç takımı npx ile indirilir. Chrome render.",
+      "not": "2026-11-17'de eklendi. VEED'in resmî açık kaynak video araç takımı skili. Ücret kismen: kurulum ücretsiz, barındırılan servisler kredi ister.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "e4dc93892268eaf04b64386935ba6e53098a5c79",
+        "guvenlik_notu": "npx ile CLI indirir (resmî VEED paketi); gizli bilgi okuma yok, anahtarlar ortam değişkeniyle."
+      }
+    },
+    {
+      "repo": "heygen-com/hyperframes-community-skills",
+      "tip": "T1",
+      "oncelik": 2,
+      "dahil": [
+        "^skills/"
+      ],
+      "haric": [
+        "^skills/x-posting-license/"
+      ],
+      "eklendi": "2026-11-17",
+      "bagimlilik": "HyperFrames CLI (npx hyperframes) gerekir.",
+      "not": "2026-11-17'de eklendi. 7 topluluk skili. x-posting-license (marka taklidi riski) bilerek alınmadı. GİZLİLİK: session-story ve day-in-my-life yerel Claude geçmişini okur; kullanıcı onayı olmadan kurulum/çalıştırma önerilmez.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
+        "guvenlik_notu": "session-story ve day-in-my-life yerel konuşma geçmişini okur (kullanıcı onayından sonra); diğerleri yerel render. Marka taklidi içeren x-posting-license hariç."
+      },
+      "skill_bagimlilik": {
+        "skills/session-story": "GİZLİLİK: Yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, memory dosyaları) okur; skill yalnız kullanıcı 'evet' dedikten sonra okuduğunu söyler. HyperFrames CLI (npx hyperframes) gerekir.",
+        "skills/day-in-my-life": "GİZLİLİK: Yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, memory dosyaları) okur; skill yalnız kullanıcı 'evet' dedikten sonra okuduğunu söyler. HyperFrames CLI (npx hyperframes) gerekir."
+      }
+    },
+    {
+      "repo": "shadcn-labs/snapcn",
+      "tip": "T2",
+      "oncelik": 1,
+      "dahil": [
+        "^skills/"
+      ],
+      "eklendi": "2026-11-17",
+      "bagimlilik": "Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).",
+      "not": "2026-11-17'de eklendi. Yalnız ^skills/ altındaki 7 skil (6 Remotion video skili + snapcn); .claude/skills altındaki repo-içi tasarım skilleri alınmadı.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
+        "guvenlik_notu": "Remotion şablon skilleri; ağdan kod çalıştırma yok; Pro bileşenler için API anahtarı ortam değişkeni."
+      },
+      "haric": [
+        "^\\.claude/"
+      ]
+    },
+    {
+      "repo": "kajisho5/ffmpeg-skill",
+      "tip": "T1",
+      "oncelik": 2,
+      "kok_dosyalari": [
+        "SKILL.md",
+        "references/ci-platform-pitfalls.md",
+        "references/devices.md",
+        "references/flags.md",
+        "references/gotchas.md",
+        "references/process-pitfalls.md",
+        "references/report.md",
+        "references/requests.md",
+        "references/scripts.md",
+        "references/timestamps.md",
+        "references/workflow.md",
+        "scripts/_ass_overlay.py",
+        "scripts/_common/__init__.py",
+        "scripts/_common/alpha.py",
+        "scripts/_common/asr.py",
+        "scripts/_common/color.py",
+        "scripts/_common/decision.py",
+        "scripts/_common/drawtext.py",
+        "scripts/_common/emit.py",
+        "scripts/_common/emoji.py",
+        "scripts/_common/fonts.py",
+        "scripts/_common/probe.py",
+        "scripts/_common/runner.py",
+        "scripts/_common/text.py",
+        "scripts/_common/timeline.py",
+        "scripts/_common/wrap.py",
+        "scripts/_contract.py",
+        "scripts/_platforms.py",
+        "scripts/_smartcut.py",
+        "scripts/audio.py",
+        "scripts/background.py",
+        "scripts/batch.py",
+        "scripts/broll.py",
+        "scripts/caption.py",
+        "scripts/check.py",
+        "scripts/color.py",
+        "scripts/crop.py",
+        "scripts/cropdetect.py",
+        "scripts/cut.py",
+        "scripts/deinterlace.py",
+        "scripts/denoise.py",
+        "scripts/export.py",
+        "scripts/fit.py",
+        "scripts/freeze.py",
+        "scripts/graphics.py",
+        "scripts/grid.py",
+        "scripts/insert.py",
+        "scripts/join.py",
+        "scripts/look.py",
+        "scripts/loop.py",
+        "scripts/loudness.py",
+        "scripts/metadata.py",
+        "scripts/multicam.py",
+        "scripts/overlay.py",
+        "scripts/pad.py",
+        "scripts/probe.py",
+        "scripts/proxy.py",
+        "scripts/redact.py",
+        "scripts/render.py",
+        "scripts/report.py",
+        "scripts/reverse.py",
+        "scripts/scenes.py",
+        "scripts/sequence.py",
+        "scripts/silence.py",
+        "scripts/speedramp.py",
+        "scripts/sphere.py",
+        "scripts/stabilize.py",
+        "scripts/straighten.py",
+        "scripts/sync.py",
+        "scripts/verify.py",
+        "scripts/waveform.py",
+        "mcp/server.py"
+      ],
+      "haric": [
+        "^skills/ffmpeg-skill/",
+        "^\\.claude/"
+      ],
+      "eklendi": "2026-11-17",
+      "bagimlilik": "ffmpeg/ffprobe ve Python 3 gerekir (scripts/ altındaki betikler); bazı betikler isteğe bağlı olarak ASR/yazı tipi araçları ister.",
+      "not": "2026-11-17'de eklendi. Yalnız KÖK varyantı (SKILL.md + scripts/ + references/); skills/ffmpeg-skill kopyası ve .claude/skills altındaki 14 repo-içi geliştirme skili alınmadı.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "f1c97cbffeac71b8fdfca2f790ceb00db3bcce65",
+        "guvenlik_notu": "Betikler yerel ffmpeg çağırır; ağdan kod çalıştırma yok. Repo-içi geliştirme skilleri hariç."
+      }
+    },
+    {
+      "repo": "nateherkai/herk-edit-kit",
+      "tip": "T1",
+      "oncelik": 4,
+      "eklendi": "2026-11-17",
+      "haric": [
+        "^(\\.claude|\\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/"
+      ],
+      "bagimlilik": "Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.",
+      "not": "2026-11-17'de eklendi. 10 özgün skil alındı; 5 upstream kopya (hyperframes, hyperframes-cli, hyperframes-registry, gsap, website-to-hyperframes) bilerek hariç. .agents ve .claude aynaları tek sürüm tutulur.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-17",
+        "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
+        "commit": "10511e5af86fc47756ea89803b397422e2d89284",
+        "lisans_onay": "Kullanıcı 2026-11-17: GitHub NOASSERTION; LICENSE dosyası MIT, ek notlar (MIT + THIRD_PARTY_NOTICES) kabul edildi.",
+        "guvenlik_notu": "Betikler yerel kesme/render; ElevenLabs/Kie.ai anahtarları ortam değişkeniyle isteğe bağlı; ağdan kod çalıştırma yok.",
+        "yol_onay": "YOL KAPISI: edit-video/SKILL.md:28 '../hyperframes/SKILL.md' kardeş skile gidiyor; bu kopya bilerek hariç (upstream kopya), hyperframes kütüphanede heygen-com/hyperframes kaynağından var ve projeye birlikte kurulur. Kullanıcı 2026-11-18'de onayladı ('Evet, onay yaz')."
+      }
     }
   ],
   "konum_haric": [

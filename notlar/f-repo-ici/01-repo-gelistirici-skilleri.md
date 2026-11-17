@@ -4,7 +4,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **48/114**
 
-### add-bug  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### add-bug  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Add a new Remotion bug entry to packages/bugs/api/[v].ts. Use when the user describes a bug and affected Remotion versions that should be surfaced through the bugs API.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
@@ -14,7 +14,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### add-cli-option  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### add-cli-option  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Add a new Remotion CLI or config option by creating an AnyRemotionOption, registering CLI parsing, wiring config setters, and updating documentation. Use when adding or converting command-line flags or Remotion options.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
@@ -24,7 +24,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### add-effect  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 87 (A)
+### add-effect  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 88 (A)
 
 - **Ne yapar:** Add a new effect to @remotion/effects, including implementation, package exports, docs, demos, preview images, Remotion skill updates, formatting, and builds.
 - **Teknoloji:** canvas, git, react, remotion, typescript, webgl _(otomatik tespit)_
@@ -34,7 +34,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### add-expert  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### add-expert  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Add a new expert to the Remotion experts page
 - **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
@@ -44,7 +44,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### add-new-package  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### add-new-package  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Add a new package to the Remotion monorepo, including package scaffolding, monorepo registration, documentation, build scripts, and release checklist updates. Use when creating a new @remotion package.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
@@ -54,7 +54,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### add-sfx  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 87 (A)
+### add-sfx  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 88 (A)
 
 - **Ne yapar:** Add a new sound effect to the @remotion/sfx package in the Remotion monorepo (WAV, CC0, normalized; first added to remotion.media). Use when contributing a new sound effect to Remotion's SFX library.
 - **Teknoloji:** ffmpeg, remotion, typescript _(otomatik tespit)_
@@ -64,7 +64,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### add-webcodecs-bug  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### add-webcodecs-bug  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Add a browser WebCodecs bug to the Remotion Mediabunny WebCodecs bugs docs page. Use when given a Chromium, WebKit, or Firefox issue URL that should be tracked in packages/docs/docs/mediabunny/webcodecs-bugs.mdx, especially when needing to look up the issue title, filing date, reporter, and resolution state before editing the MDX table.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -129,7 +129,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Güvenli adımlar (kullanıcı değişikliklerini koru, boş cherry-pick kontrolü) iyi; genel backport için şablon olarak okunabilir. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### canvas-capture-extension  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### canvas-capture-extension  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Rebuild, install, and reload the private Remotion Canvas Capture unpacked Chrome extension. Use when the extension needs to be restored after a Codex worktree was deleted, rebuilt after source changes, moved to its durable install directory, or reloaded in Chrome or Chrome Canary.
 - **Teknoloji:** canvas, html, react, remotion _(otomatik tespit)_
@@ -139,7 +139,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 7 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### checkout  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### checkout  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Checkout a requested branch or ref in the Remotion repo, rename the current task to the associated PR title when running in Codex, then install dependencies and build. Use when the user asks to checkout a ref and prepare the workspace.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -204,7 +204,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Net ve doğru, ama komutların hepsi repoya özel.
 
-### convert  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### convert  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Start the local @remotion/convert app and open it in the Codex browser. Use when the user invokes /convert or $convert, asks to launch convert.remotion.dev locally, or wants to inspect the Convert package UI.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -247,7 +247,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 5 KB (SKILL.md 4.8 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Yarış durumlarına karşı dikkatli yazılmış; gizli anahtarlı workflow tetiklediği için başka yerde kullanılmamalı.
 
-### deprecate-api  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### deprecate-api  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Reference for how deprecation of public Remotion APIs is represented in TypeScript source and documentation. Use when adding, reviewing, or discussing a deprecation of a function, component, hook, type, prop, option, or other public API that remains available.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
@@ -257,7 +257,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### docs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### docs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Start the Remotion docs site and open it in the Codex browser. Use when the user invokes /docs or $docs, asks to launch the local documentation site, or wants to preview docs changes in Docusaurus.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -267,7 +267,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### docs-demo  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### docs-demo  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Add an interactive demo to the Remotion documentation. Use when creating a new <Demo> component for docs pages.
 - **Teknoloji:** canvas, react, remotion, typescript _(otomatik tespit)_
@@ -289,7 +289,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (uyarlanabilir). disable-model-invocation: true (sadece elle çağrılır). Betikli, ölçülebilir kalite kontrollü nadir bir docs-diyagram skili. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 - **Not:** Kendi projende de işe yarar: SVG primitif + Chrome render + ölçüm yaklaşımı kendi docs diyagramlarına uyarlanabilir (tokenları değiştir).
 
-### experts  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### experts  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Maintain Remotion's experts directory and its generated assets. Use when adding, removing, or editing experts; changing experts data or portraits; rendering expert cards; or regenerating the homepage experts animation for Chrome and Safari.
 - **Teknoloji:** ffmpeg, remotion, typescript _(otomatik tespit)_
@@ -321,7 +321,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Açık tablo ve 'sık hatalar' bölümü iyi; flags ve test skilleriyle birlikte çalışır.
 
-### find-unplanned-issues  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### find-unplanned-issues  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Audit and clean the Remotion GitHub masterplan hierarchy. Use when finding open issues that lack a masterplan ancestor, identifying orphaned issues that need a parent, or recursively removing closed issues from the masterplan rooted at issue #9081.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
@@ -343,7 +343,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (improve ile birlikte). Sağlam yürütücü disiplini (TDD, sadık raporlama, main'e commit yok). Doğrulama adımları Motion'a göre yazılmış.
 - **Not:** Kendi projende de işe yarar: improve'un planlarını uygulatan yürütücü olarak; doğrulama komutlarını kendi projene göre değiştir.
 
-### fix-dependabot  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### fix-dependabot  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Fix a Dependabot PR by updating all monorepo instances of the dependency, running bun install, and pushing
 - **Teknoloji:** git _(otomatik tespit)_
@@ -386,7 +386,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV (alternatif; 'flags' adının tercihi React sürümü).
 
-### flake  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### flake  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Track Remotion CI flakes in issue #8375, increment repeated signatures, discover failed PR checks when no PR is given, and rerun flaky GitHub Actions jobs.
 - **Teknoloji:** html, remotion _(otomatik tespit)_
@@ -407,7 +407,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV.
 
-### formatting  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### formatting  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Run Remotion formatting and style checks until they pass. Use when the user asks to fix formatting or run the formatting command.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -440,7 +440,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (genel kullanım). Kaynağı GitHub (metadata author: github); Next.js repo'suna kopyalanmış. Agent'ların TUI'de takılmasını önleyen bayrak tablosu çok değerli.
 - **Not:** Kendi projende de işe yarar: repo-bağımsız, herhangi bir GitHub projesinde stacked PR için.
 
-### gh-stack@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### gh-stack@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Manages stacked PRs and splits multi-part work into reviewable branches with gh-stack. Use for stack creation, viewing, edits, push, submit, sync, rebase, merge, or checkout; when asked to split or isolate work for review; whenever a user mentions a stack, branch layers, dependent PRs, or gh stack; or when a stack is checked out.
 - **Teknoloji:** git, three.js _(otomatik tespit)_
@@ -450,7 +450,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 29 KB (SKILL.md 9.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### homepage-video-assets  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### homepage-video-assets  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Use when rendering or replacing Remotion homepage creator strip videos, especially transparent Chrome WebM and Safari MP4 assets hosted on remotion.media.
 - **Teknoloji:** ffmpeg, git, remotion _(otomatik tespit)_
@@ -460,7 +460,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### import-canvas-capture  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### import-canvas-capture  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Import a recorded Remotion Canvas Capture into a project without Studio interactions using the internal experimental-codemod command. Use when adding a capture file as an editable composition with cursor keyframes.
 - **Teknoloji:** canvas, node, remotion, typescript _(otomatik tespit)_
@@ -493,7 +493,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 22 KB (SKILL.md 21.6 KB, yük orta) · **Kırık bağlantı:** 5
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok ayrıntılı ve kaynak-zinciri disiplini iyi, ama tamamen Next.js'e özel ve büyük.
 
-### interactivity-best-practices  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### interactivity-best-practices  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Best practices for writing Remotion animations that stay intuitive for agents and editable in Remotion Studio Visual Mode.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -503,7 +503,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### issue  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### issue  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Create, edit, or comment on Remotion GitHub issues.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -513,7 +513,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### issue-management  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### issue-management  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Manage GitHub Issues 2.0 relationships with gh CLI: parent issues, sub-issues, blocked-by, and blocking links.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -534,7 +534,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Kısa komut listesi.
 
-### merge  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### merge  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Wait for a Remotion pull request to become mergeable, handle merge conflicts, distinguish genuine CI failures from flakes, rerun flaky checks through the flake skill, and merge the PR. Use when asked to run /merge, merge a current PR after checks pass, or shepherd a Remotion PR through CI to merge.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -555,7 +555,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Kapsam sınırı (kök rust-toolchain Turbopack'e ait) açıkça belirtilmiş.
 
-### no-pointer  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### no-pointer  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Apply Remotion Studio's pointerless interaction styling to clickable controls. Use when adding or revising Studio buttons or links that should use the default cursor, brighten on hover, and show focus decoration only for keyboard navigation.
 - **Teknoloji:** css, react, remotion, typescript _(otomatik tespit)_
@@ -565,7 +565,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### nullable-new-params  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### nullable-new-params  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Fix newly added optional parameters, optional React props, and optional type/interface members in Remotion monorepo diffs by converting internal APIs to required nullable values and updating call sites. Use when a PR, review, or user asks to forbid new `foo?: T` / `param?: T` additions except for exported or documented public APIs where requiring the value would be breaking.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
@@ -575,7 +575,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 7 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### offload-r2  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### offload-r2  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Upload Remotion repository media assets to the Cloudflare R2 bucket behind remotion.media, switch source code to hosted URLs, verify the public objects, and remove repository-local copies.
 - **Teknoloji:** git, remotion _(otomatik tespit)_
@@ -596,7 +596,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 5 KB (SKILL.md 4.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Paralel alt-agent fan-out örneği; analyze-pass-impact agent'ına bağımlı.
 
-### player-example  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### player-example  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Start the @remotion/player example app and open it in the Codex browser. Use when the user invokes /player-example or $player-example, asks to launch the player testbed, or wants to inspect @remotion/player locally.
 - **Teknoloji:** next.js, remotion _(otomatik tespit)_
@@ -672,7 +672,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Kırık bağlantı:** 3
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. 2026-11'de genel triage rehberi kaldırıldı; kalan metin yalnızca playwright CI iş akışına özgü ve dış dosyalara (triage.md, AGENTS.md) bağımlı.
 
-### pr-name  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### pr-name  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Review or correct a Remotion pull request title
 - **Teknoloji:** css, remotion _(otomatik tespit)_
@@ -682,7 +682,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### pr-ready  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### pr-ready  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Resolve CI failures, merge conflicts, or local branch changes to get a PR ready
 - **Teknoloji:** git _(otomatik tespit)_
@@ -703,7 +703,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 6 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Öncelik sırası genel olarak iyi bir pratik; workflow.md ve local-repro.md arşivde mevcut, pr-status.js betiği repoda.
 
-### pr@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### pr@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Open a pull request for the current feature
 - **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
@@ -713,7 +713,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### product-recording  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### product-recording  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Prepare Remotion Studio for a user-recorded product demo with Canvas Capture, then import the downloaded take into packages/brand as an editable composition. Use for recording Studio interactions, timeline demos, and product shots.
 - **Teknoloji:** canvas, css, node, remotion, typescript _(otomatik tespit)_
@@ -723,7 +723,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### react-scan  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### react-scan  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Capture and analyze Remotion Studio React render profiles through development-only WebMCP tools. Use when diagnosing unnecessary re-renders, slow commits, frame-reactive component trees, or when comparing render performance before and after a change.
 - **Teknoloji:** react, remotion _(otomatik tespit)_
@@ -755,7 +755,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. İç mimariyi anlamak için değerli not.
 
-### release@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 87 (A)
+### release@remotion-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 88 (A)
 
 - **Ne yapar:** Publish a new Remotion release from the Remotion monorepo: auth checks (gcloud, npm, 1Password), npm token, build and publish steps. Use only when a Remotion maintainer asks to release a new Remotion version.
 - **Teknoloji:** api-anahtari, git, node, remotion, typescript _(otomatik tespit)_
@@ -765,7 +765,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 10 KB (SKILL.md 10.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### remotion-new-markup  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### remotion-new-markup  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Write or refactor editable Remotion markup with appropriate tracks, shared timing boundaries, and connected compositions.
 - **Teknoloji:** react, remotion _(otomatik tespit)_
@@ -819,7 +819,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 160 KB (SKILL.md 16.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. İstatistik yaklaşımı (boot = replikasyon birimi) örnek niteliğinde; 16 KB, betikli.
 
-### scaffold-element  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### scaffold-element  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Scaffold a new Remotion Element for development in the docs Remotion Studio.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -829,7 +829,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### skill-locations  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### skill-locations  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Document Remotion skill placement. Use when adding, moving, or editing Remotion skills to decide whether a skill belongs in .agents/skills as an internal skill or packages/skills as a public skill.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -839,7 +839,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### studio  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### studio  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Start Remotion Studio from packages/example and open it in the Codex browser. Use when the user invokes /studio or $studio, asks to launch the example Studio, or wants the Remotion Studio dev UI available locally.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
@@ -849,7 +849,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### studio-config-option-lifecycle  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### studio-config-option-lifecycle  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Classify and wire Remotion Studio config options as either startup-fixed or reloadable while preventing mixed lifecycle behavior across consumers. Use when adding, changing, or reviewing a Config setter or CLI option consumed by Studio, its preview server, compiler, HTML bootstrap, public-folder watcher, or render queue.
 - **Teknoloji:** html, remotion, typescript _(otomatik tespit)_
@@ -859,7 +859,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 5 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### studio-css-reset  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### studio-css-reset  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Style Remotion Studio UI inside `.css-reset` containers without relying on inherited reset properties.
 - **Teknoloji:** css, remotion, typescript _(otomatik tespit)_
@@ -869,7 +869,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### studio-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 87 (A)
+### studio-dev  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 88 (A)
 
 - **Ne yapar:** Develop or review Remotion Studio features and UI. Apply Studio principles for optimistic updates, agent access through code or WebMCP, iframe-safe hover behavior, design consistency, mode availability, and performance verification.
 - **Teknoloji:** api-anahtari, css, react, remotion, typescript _(otomatik tespit)_
@@ -879,7 +879,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 9 KB (SKILL.md 9.5 KB, yük orta) · **Kırık bağlantı:** 10
 - **İnceleme:** otomatik
 
-### studio-loop  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### studio-loop  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Continuously improve Remotion Studio by making a video, reproducing real UX and performance issues, fixing them, and verifying the result. Use for ongoing Studio dogfooding and maintenance, including checkpoints that hand one PR over for review while work continues in a stacked PR.
 - **Teknoloji:** css, git, playwright, react, remotion _(otomatik tespit)_
@@ -889,7 +889,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### studio-mode  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### studio-mode  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Understand the capabilities and restrictions of each Remotion Studio mode. Use when implementing or reviewing Studio actions, permissions, availability, or UI across interactive, detached, deployed, and browser-based Studios.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
@@ -899,7 +899,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### studio-perf  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### studio-perf  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Optimize Remotion Studio render performance by minimizing frame-reactive component surfaces, preferring imperative timeline state reads, and memoizing stable render boundaries. Use when code reads the current frame with `useTimelinePosition()` or components unnecessarily render on every frame.
 - **Teknoloji:** react, remotion _(otomatik tespit)_
@@ -920,7 +920,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV.
 
-### timeline-layout-reveal  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### timeline-layout-reveal  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Capture matching 2x Remotion Studio timeline screenshots and make a before/after crop reveal in packages/brand. Use for timeline layout comparison videos, including recapturing a historical layout.
 - **Teknoloji:** css, git, remotion, typescript _(otomatik tespit)_
@@ -941,7 +941,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 9 KB (SKILL.md 8.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. Vendored kodu upstream'le senkron tutmanın iyi belgelenmiş örneği. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### update-chrome-binaries-test-region  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### update-chrome-binaries-test-region  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Publish Remotion Lambda Chrome binaries to the eu-central-1 test region and update hosted layer and Chrome version references. Use when updating Chrome binaries before full regional rollout.
 - **Teknoloji:** canvas, docker, html, playwright, remotion, three.js, typescript, webgl _(otomatik tespit)_
@@ -951,7 +951,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### update-codex-plugin  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### update-codex-plugin  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Update Remotion's published Codex and ChatGPT directory plugin to a released Remotion version. Prepare the ZIP from the official Codex plugin repository, preserve its listing metadata, and upload and publish through OpenAI Platform.
 - **Teknoloji:** python, remotion, typescript _(otomatik tespit)_
@@ -972,7 +972,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 21 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: SADECE ARŞİV. references/ klasörüyle birlikte eksiksiz.
 
-### update-ffmpeg  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### update-ffmpeg  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Update the monorepo FFmpeg archives, regenerate bindings, rebuild compositor binaries, and validate a single Remotion pull request. Use after the seven-platform FFmpeg build completes.
 - **Teknoloji:** ffmpeg, git, node, remotion, typescript _(otomatik tespit)_
@@ -982,7 +982,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### update-from-upstream-main  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### update-from-upstream-main  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Update the current Remotion branch with the latest canonical main branch. Use when asked to update or sync from upstream main, merge the latest main into a feature branch, fast-forward local main, or bring a pull request branch up to date without rewriting published history.
 - **Teknoloji:** git, remotion _(otomatik tespit)_
@@ -992,7 +992,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### update-legal-pdfs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### update-legal-pdfs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Regenerate the downloadable PDF copies of Remotion's Terms, Privacy Policy, DPA Statement, and DPIA Statement after editing their docs pages.
 - **Teknoloji:** python, remotion, typescript _(otomatik tespit)_
@@ -1002,7 +1002,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 8 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### update-stars  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### update-stars  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Update Remotion homepage GitHub star counts. Use when asked to refresh the displayed GitHub star count and push the change to main.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
@@ -1023,7 +1023,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. Çok kişiye özel (Paul Irish'in fork'u, yerel yollar).
 
-### update-version  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### update-version  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Update `AvailableFrom` in a PR to the next Remotion patch version (`main` + `0.0.1`).
 - **Teknoloji:** git, remotion, typescript _(otomatik tespit)_
@@ -1033,7 +1033,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### upgrade-caniuse  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### upgrade-caniuse  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Upgrade the caniuse-lite override in the Remotion repo. Use when asked to update caniuse-lite to the latest npm version.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
@@ -1043,7 +1043,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 0 KB (SKILL.md 0.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### upgrade-mediabunny  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### upgrade-mediabunny  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Upgrade Mediabunny and related @mediabunny packages across the Remotion repo. Use when asked to update Mediabunny to the latest version.
 - **Teknoloji:** node, remotion, typescript _(otomatik tespit)_
@@ -1053,7 +1053,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### upload-element-previews  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### upload-element-previews  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Upload a Remotion Element's preview assets to remotion.media and replace local preview URLs. Use when given an Element slug, or when exactly one Element's preview assets are present in the current worktree.
 - **Teknoloji:** remotion _(otomatik tespit)_
@@ -1063,7 +1063,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### upload-r2  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### upload-r2  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Upload large Remotion repository assets to the Cloudflare R2 bucket behind remotion.media and replace local public/ assets with hosted URLs. Use when a file is too large for Git or when a PR should avoid committing media binaries by hosting them on remotion.media.
 - **Teknoloji:** git, remotion _(otomatik tespit)_
@@ -1073,7 +1073,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### v5-breaking-changes  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### v5-breaking-changes  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Implement or review a Remotion 5 breaking change while the v4 and v5 release lines still share code. Use when v4 behavior and public types must remain compatible on main, but flipping the central v5 flag should activate a new runtime behavior, default, or TypeScript API.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
@@ -1095,7 +1095,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (genel kullanım). İçerik %90 genel V8 bilgisi; yalnızca örnek bağlamı Next.js. 14 KB, bağlam yükü orta.
 - **Not:** Kendi projende de işe yarar: Node/JS sıcak yol performans incelemesi için genel V8 rehberi.
 
-### vercel  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### vercel  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Set up a Codex monitor for Vercel deployments and preview URLs. Use when the user invokes /vercel or $vercel, asks Codex to watch or monitor a Vercel deployment, waits for a Vercel preview or PR preview to become ready, or wants to be notified with both the deployment URL and preview URL once Vercel is READY.
 - **Teknoloji:** python, remotion _(otomatik tespit)_
@@ -1116,7 +1116,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. flow ve test skillerine bağlı.
 
-### version  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### version  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** The version of Remotion we are working on.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
@@ -1126,7 +1126,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### video-report  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### video-report  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Reproduce a user-reported broken video in the Remotion monorepo by putting its URL in packages/example NewVideo.tsx and rendering with verbose logs. Use when someone reports that a video does not work in Remotion.
 - **Teknoloji:** remotion, typescript _(otomatik tespit)_
@@ -1136,7 +1136,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 0 KB (SKILL.md 0.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### visual-mode  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### visual-mode  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Guidance for working on Remotion Studio Visual Mode, sequence identity, node paths, symbolicated stacks, override IDs, and hot reload behavior. Use when implementing or debugging visual editing of Sequences.
 - **Teknoloji:** node, remotion _(otomatik tespit)_
@@ -1146,7 +1146,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### web-renderer-test  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 91 (A)
+### web-renderer-test  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 92 (A)
 
 - **Ne yapar:** Add explicitly requested web renderer tests or update existing ones for implementation changes.
 - **Teknoloji:** react, remotion, typescript _(otomatik tespit)_
@@ -1180,7 +1180,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (genel kullanım). Next.js docs ekibinin yazım ilkeleri; 'sürtünme anında kavramı adlandır' döngüsü her teknik rehbere uygulanabilir.
 - **Not:** Kendi projende de işe yarar: teknik rehber/tutorial yazımı (Next.js docs tarzı). Docs yazarı rolüne aday.
 
-### writing-docs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### writing-docs  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Guides for writing and editing Remotion documentation. Use when adding docs pages, editing MDX files in packages/docs, or writing documentation content.
 - **Teknoloji:** node, remotion, typescript _(otomatik tespit)_
@@ -1190,7 +1190,7 @@ _Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için
 - **Boyut:** 8 KB (SKILL.md 7.6 KB, yük kucuk) · **Kırık bağlantı:** 4
 - **İnceleme:** otomatik
 
-### writing-tests  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 89 (A)
+### writing-tests  ·  remotion-dev/remotion @ 1e55bdc  ·  puan 90 (A)
 
 - **Ne yapar:** Guidance for explicitly requested new tests and for updating or reviewing existing tests in the Remotion repository.
 - **Teknoloji:** css, playwright, remotion, typescript _(otomatik tespit)_

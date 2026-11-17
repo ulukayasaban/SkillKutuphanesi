@@ -1,15 +1,15 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-16 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-18 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8736 · Arşivdeki skill kaydı: 5875 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8821 · Arşivdeki skill kaydı: 5913 · Bileşen (komut/agent): 662
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5831 | arşivde (ana sürüm) |
-| haric | 2576 | bilinçli hariç (test/örnek/şablon) |
-| ayna-ayni | 176 | birebir kopya (tek kopya yeter) |
-| arac-varyanti | 73 | arşivde (Claude/Codex'e özel sürüm) |
+| secildi | 5869 | arşivde (ana sürüm) |
+| haric | 2613 | bilinçli hariç (test/örnek/şablon) |
+| ayna-ayni | 182 | birebir kopya (tek kopya yeter) |
+| arac-varyanti | 77 | arşivde (Claude/Codex'e özel sürüm) |
 | ayri-surum | 42 | arşivde (aynı adlı farklı içerik, ayrı skill) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 
@@ -18,9 +18,11 @@
 | Repo | SKILL.md | Dağılım |
 |---|---|---|
 | 40RTY-ai/shopify-admin-skills | 117 | secildi 117 |
+| AbubakrChan/product-launch-motion | 2 | secildi 1, haric 1 |
 | AgriciDaniel/claude-ads | 34 | secildi 34 |
 | AgriciDaniel/claude-obsidian | 16 | secildi 15, haric 1 |
 | AgriciDaniel/claude-seo | 35 | secildi 26, haric 9 |
+| Barty-Bart/motion-graphics | 6 | secildi 6 |
 | CloudAI-X/threejs-skills | 13 | secildi 13 |
 | ComposioHQ/awesome-claude-skills | 864 | secildi 864 |
 | DietrichGebert/ponytail | 12 | ayna-baska-arac 6, secildi 6 |
@@ -36,6 +38,7 @@
 | Jakeschincariol/replica-skill | 11 | secildi 11 |
 | Jakeschincariol/youtube-agent-skill | 11 | secildi 11 |
 | JuliusBrussee/caveman | 28 | secildi 22, haric 6 |
+| JuneYaooo/rea-video | 1 | secildi 1 |
 | K-Dense-AI/scientific-agent-skills | 177 | secildi 177 |
 | Kappaemme-git/codex-phone-lab | 1 | secildi 1 |
 | Leonxlnx/earshot | 2 | secildi 2 |
@@ -93,10 +96,13 @@
 | hardikpandya/stop-slop | 1 | secildi 1 |
 | harry0703/MoneyPrinterTurbo | 1 | secildi 1 |
 | heygen-com/hyperframes | 28 | secildi 15, haric 7, ayna-ayni 6 |
+| heygen-com/hyperframes-community-skills | 8 | secildi 7, haric 1 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
 | jazzychad/ios-code-audit | 1 | secildi 1 |
+| kajisho5/ffmpeg-skill | 16 | haric 15, secildi 1 |
 | krillinai/OpenCreator | 15 | haric 8, secildi 7 |
 | kylezantos/design-motion-principles | 1 | secildi 1 |
+| latent-spaces/brag | 2 | secildi 2 |
 | lemomo-ai/codex-radar | 1 | secildi 1 |
 | lemomo-ai/lemo-opuscar | 2 | secildi 2 |
 | lemomo-ai/lemo-wake | 3 | secildi 3 |
@@ -110,6 +116,7 @@
 | morluto/rea | 5 | haric 4, secildi 1 |
 | motiondivision/motion | 2 | secildi 2 |
 | multica-ai/andrej-karpathy-skills | 1 | secildi 1 |
+| nateherkai/herk-edit-kit | 30 | haric 10, secildi 10, ayna-ayni 6, arac-varyanti 4 |
 | nateherkai/scroll-craft | 1 | secildi 1 |
 | nexscope-ai/Amazon-Skills | 52 | secildi 52 |
 | nexscope-ai/eCommerce-Skills | 162 | secildi 162 |
@@ -126,11 +133,14 @@
 | rshankras/claude-code-apple-skills | 184 | haric 171, secildi 13 |
 | ruvnet/ruflo | 403 | secildi 311, arac-varyanti 51, ayna-ayni 29, ayri-surum 6, haric 6 |
 | sarpstar/cinecode | 1 | secildi 1 |
+| shadcn-labs/snapcn | 17 | haric 10, secildi 7 |
 | teng-lin/notebooklm-py | 1 | secildi 1 |
 | tt-a1i/archify | 5 | secildi 5 |
 | tuist/fuckingapproachableswiftconcurrency | 1 | secildi 1 |
+| tuzhechen2005/opus-video-skills | 2 | secildi 2 |
 | twostraws/SwiftData-Agent-Skill | 1 | secildi 1 |
 | upstash/context7 | 10 | ayna-ayni 5, secildi 4, ayri-surum 1 |
+| veedstudio/open-edit | 1 | secildi 1 |
 | vercel-labs/agent-skills | 9 | secildi 9 |
 | vercel/next.js | 27 | secildi 27 |
 | vudovn/ag-kit | 58 | secildi 58 |
@@ -186,3 +196,8 @@
 - **OpenMontageInc/OpenMontage**: `.agents/skills/hyperframes-animation/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-cli/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-core/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-creative/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-media/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-registry/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/media-use/SKILL.md` (arsivden-cikarildi), `.agents/skills/motion-graphics/SKILL.md` (arsivden-cikarildi), `.agents/skills/music-to-video/SKILL.md` (arsivden-cikarildi), `.agents/skills/remotion-to-hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/website-to-video/SKILL.md` (arsivden-cikarildi), `.claude/skills/web-design-guidelines/SKILL.md` (arsivden-cikarildi)
 - **digitalsamba/claude-code-video-toolkit**: `.claude/skills/remotion-official/SKILL.md` (^\.claude/skills/remotion-official/)
 - **google/skills**: `plugins/cloud/google-cloud-developer/skills/finding-google-skills/SKILL.md` (/finding-google-skills/), `plugins/cloud/google-cloud-developer/skills/gcloud/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-auth/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-onboarding/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/retrieving-developer-knowledge/SKILL.md` (^plugins/), `skills/developers/finding-google-skills/SKILL.md` (/finding-google-skills/)
+- **AbubakrChan/product-launch-motion**: `legacy/SKILL.md` (^legacy/)
+- **nateherkai/herk-edit-kit**: `.agents/skills/gsap/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/hyperframes-cli/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/hyperframes-registry/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/website-to-hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/gsap/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/hyperframes-cli/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/hyperframes-registry/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/website-to-hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/)
+- **heygen-com/hyperframes-community-skills**: `skills/x-posting-license/SKILL.md` (^skills/x-posting-license/)
+- **shadcn-labs/snapcn**: `.claude/skills/animation-vocabulary/SKILL.md` (^\.claude/), `.claude/skills/apple-design/SKILL.md` (^\.claude/), `.claude/skills/design-system/SKILL.md` (^\.claude/), `.claude/skills/emil-design-eng/SKILL.md` (^\.claude/), `.claude/skills/find-animation-opportunities/SKILL.md` (^\.claude/), `.claude/skills/improve-animations/SKILL.md` (^\.claude/), `.claude/skills/interactivity-best-practices/SKILL.md` (^\.claude/), `.claude/skills/motion-quality/SKILL.md` (^\.claude/), `.claude/skills/review-animations/SKILL.md` (^\.claude/), `.claude/skills/ux-ui-maxpro/SKILL.md` (^\.claude/)
+- **kajisho5/ffmpeg-skill**: `.claude/skills/build-artifacts/SKILL.md` (^\.claude/), `.claude/skills/ci-pipeline-synthesizer/SKILL.md` (^\.claude/), `.claude/skills/code-review/SKILL.md` (^\.claude/), `.claude/skills/concurrent-branches/SKILL.md` (^\.claude/), `.claude/skills/cross-surface-changes/SKILL.md` (^\.claude/), `.claude/skills/defect-reports/SKILL.md` (^\.claude/), `.claude/skills/destructive-operations/SKILL.md` (^\.claude/), `.claude/skills/git-hygiene/SKILL.md` (^\.claude/), `.claude/skills/github-actions/SKILL.md` (^\.claude/), `.claude/skills/mcp-server-design/SKILL.md` (^\.claude/), `.claude/skills/release-management/SKILL.md` (^\.claude/), `.claude/skills/reproducing-ci-locally/SKILL.md` (^\.claude/), `.claude/skills/sibling-sweep/SKILL.md` (^\.claude/), `.claude/skills/verifying-external-behavior/SKILL.md` (^\.claude/), `skills/ffmpeg-skill/SKILL.md` (^skills/ffmpeg-skill/)

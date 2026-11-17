@@ -47,7 +47,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 13 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İçerik tek bir kuruma (Anthropic) bağlı ve dar; kullanıcı projelerinde yanlış marka renkleri uygulama riski taşır, rol önyüklemesine girmemeli. Dikkat: registry 'lisans yok' diyor ama klasörde Apache-2.0 LICENSE.txt var (telif satırı Anthropic). Yapı olarak temiz, hiçbir şey kurmaz/indirmez.
 
-### brand-guidelines@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### brand-guidelines@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** anthropics/skills'teki brand-guidelines'ın birebir kopyası: Anthropic renk ve tipografi kurallarını sunum/belgelere uygular.
 - **Ne zaman:** Yalnızca birincil kopya (anthropics/skills) alınamazsa; aynı Anthropic marka içeriği. · **Ne zaman değil:** Birincil kopya varken kullanma. Kullanıcının kendi markası için değil.
@@ -144,7 +144,7 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Boyut:** 141 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel). 10 tema hazır ve tutarlı, bağımlılığı yok. Dikkat: temalar genel amaçlı/jenerik; 'yapay zeka şablonu' görünümünden kaçınmak isteyen projede tasarım yönü için yeterli değildir (design-taste-frontend). Akış 'PDF'i göster, seçim bekle' diye kullanıcı etkileşimi varsayar; otomatik/tek atışta zorlaşır. Resmî kopya (anthropics/skills) tercih; composiohq kopyası birebir aynı.
 
-### theme-factory@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
+### theme-factory@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 71 (B)
 
 - **Ne yapar:** anthropics/skills'teki theme-factory'nin birebir kopyası: 10 hazır tema ile slayt/belge/HTML stillendirme.
 - **Ne zaman:** Yalnızca resmî kopya alınamazsa. · **Ne zaman değil:** Resmî kopya varken kullanma.

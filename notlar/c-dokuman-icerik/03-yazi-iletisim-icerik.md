@@ -4,7 +4,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/55**
 
-### competitive-ads-extractor  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### competitive-ads-extractor  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** Rakiplerin Facebook Ad Library, LinkedIn gibi reklam kütüphanelerindeki reklamlarını toplayıp mesaj, vurgulanan problem, hedef kitle ve kreatif kalıplarını analiz etmeyi tarif eder. Betik yok; tarayıcı/kazıma yeteneği agent'ın kendi araçlarına bırakılmış.
 - **Ne zaman:** Reklam kampanyası öncesi rakip mesajlarını ve kreatif kalıplarını çıkarmak. · **Ne zaman değil:** Tarayıcı otomasyonu ya da web kazıma aracı yoksa (skill kendi aracını getirmiyor); platform kullanım şartlarının kazımaya izin vermediği durumlarda.
@@ -15,7 +15,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.
 
-### content-research-writer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### content-research-writer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Blog, makale, bülten gibi içerikleri kullanıcıyla birlikte yazar: taslak/ana hat oluşturma, araştırma ve kaynak gösterme, giriş (hook) iyileştirme, bölüm bölüm geri bildirim ve kullanıcının üslubunu koruma adımlarını tarif eder.
 - **Ne zaman:** Kaynaklı blog yazısı, makale, vaka çalışması, düşünce liderliği içeriği. · **Ne zaman değil:** Kurumsal teknik/karar dokümanı (doc-coauthoring); kısa sosyal medya metni; dosya formatı üretimi.
@@ -37,7 +37,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Çok küçük (2 KB), net kalıp listesi ve somut önce/sonra örneği; MIT. Her yazı skilline tamamlayıcı son rötuş.
 
-### developer-growth-analysis  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 61 (C)
+### developer-growth-analysis  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
 
 - **Ne yapar:** Son 24-48 saatlik Claude Code sohbet geçmişini (~/.claude/history.jsonl) okuyup kodlama kalıplarını, eksik alanları ve gelişim önerilerini çıkarır; HackerNews'ten ilgili kaynak toplar ve raporu Rube MCP üzerinden kullanıcının Slack DM'ine gönderir.
 - **Ne zaman:** Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi. · **Ne zaman değil:** Codex'te doğrudan çalışmaz: geçmiş ~/.codex/sessions altında farklı biçimde tutulur; Codex'te kullanılacaksa okunacak dosya yolu ve JSONL alanları elle uyarlanmalı. Rube/Composio Slack bağlantısı yoksa son adımı atla, raporu dosyaya yaz. Gizli veri içeren geçmişi dışarı göndermek istenmiyorsa kullanma.
@@ -48,7 +48,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Claude Code geçmiş dosyasına ve Composio Rube MCP'ye sıkı bağlı; sohbet geçmişini dış servise gönderiyor. Kategorisi de içerikten çok kişisel geliştirici analizi.
 
-### domain-name-brainstormer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### domain-name-brainstormer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** Proje için yaratıcı alan adı fikirleri üretir ve .com/.io/.dev/.ai gibi uzantılarda müsaitlik kontrolü yapılmasını tarif eder; marka açısından neden iyi olduklarını açıklar ve TLD rehberi verir.
 - **Ne zaman:** Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası. · **Ne zaman değil:** Müsaitlik kontrolü için gerçek whois/DNS aracı yoksa sonuçlar tahmin olur — kayıt kararını buna dayandırma.
@@ -233,7 +233,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Anthropic resmi; küçük SKILL.md, türe göre ayrı örnek dosyalar. ComposioHQ kopyası birebir aynı içerik; birincil resmi kaynak.
 
-### internal-comms@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
+### internal-comms@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 71 (B)
 
 - **Ne yapar:** Anthropic internal-comms skill'inin ComposioHQ'daki birebir kopyası: 3P güncellemesi, bülten, SSS ve genel iç iletişim yönergeleri.
 - **Ne zaman:** Resmi sürüm kullanılamıyorsa yedek. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/internal-comms ile aynı içerik.
@@ -244,7 +244,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Dosyalar resmi sürümle aynı; ek değer yok.
 
-### lead-research-assistant  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### lead-research-assistant  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** Ürünü/kod tabanını analiz edip ideal müşteri profiline uyan şirketleri bulmayı, uygunluk puanıyla sıralamayı ve kişiselleştirilmiş iletişim stratejisi önermeyi tarif eder.
 - **Ne zaman:** B2B satış/iş geliştirme için potansiyel müşteri listesi ve yaklaşım önerisi. · **Ne zaman değil:** Web araması yoksa (şirket listesi uydurulabilir); kişisel veri toplama/zenginleştirme hukuki açıdan sorunluysa.
@@ -255,7 +255,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.
 
-### li-audit  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 76 (B)
+### li-audit  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 77 (B)
 
 - **Ne yapar:** Post-mortem on what the user has already published - which posts actually worked, why, and what to stop doing. Use when the user pastes their LinkedIn analytics or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know what to double down on.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -265,7 +265,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-carousel  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 81 (A)
+### li-carousel  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 82 (A)
 
 - **Ne yapar:** Build a LinkedIn document post (carousel) - slide-by-slide copy, the cover that earns the swipe, and the PDF to upload. Use when the user says "carousel", "document post", "slides for LinkedIn", "turn this into a carousel", or has a list-shaped idea that would die as a text post.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -275,7 +275,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-comment  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 81 (A)
+### li-comment  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 82 (A)
 
 - **Ne yapar:** Write comments on other people's LinkedIn posts that read as a person with an opinion, not a bot. Use when the user pastes a post and wants a comment, says "comment on this", "engage with this", "what do I say here", or wants a batch of comments for their engagement round.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -285,7 +285,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-dm  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 81 (A)
+### li-dm  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 82 (A)
 
 - **Ne yapar:** Write connection notes and DM follow-ups that get replies - the 200-character invite, the first message, and the two follow-ups. Use when the user says "write a connection request", "DM this person", "outreach message", "how do I follow up", or is reaching out to someone specific on LinkedIn.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -295,7 +295,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-human  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 81 (A)
+### li-human  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 82 (A)
 
 - **Ne yapar:** Strip the machine fingerprint out of any draft - em dashes, AI slop words, invisible watermark characters - and score it against a five-check detection panel before it goes out. Use whenever text needs to sound human, when the user says humanize, "does this sound like AI", "remove the em dashes", "de-slop this", "will this get flagged", or before any LinkedIn post, comment, reply or DM is shown to
 - **Teknoloji:** python _(otomatik tespit)_
@@ -305,7 +305,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 37 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-inbox  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 81 (A)
+### li-inbox  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 82 (A)
 
 - **Ne yapar:** Triage the LinkedIn inbox - sort connection requests and DMs into leads, recruiters, peers and spam, and draft the replies worth sending. Use when the user says "my inbox is a mess", "triage my DMs", "should I reply to this", pastes a batch of LinkedIn messages, or is drowning in connection requests.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -315,7 +315,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-plan  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 76 (B)
+### li-plan  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 77 (B)
 
 - **Ne yapar:** Build the week on LinkedIn - what to post, when to post it, and who to engage with. Use when the user says "plan my week", "what should I post", "content calendar", "I have nothing to post about", or wants a posting schedule and an engagement list.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -325,7 +325,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-post  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 76 (B)
+### li-post  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 77 (B)
 
 - **Ne yapar:** Write a LinkedIn post from a raw idea using 21 proven hook formulas, in the user's own voice, humanized so it does not read as AI. Use whenever the user wants a LinkedIn post, a hook, a draft for the feed, "post about X", "turn this into a LinkedIn post", or asks for hook options. Produces three hook options, one full draft, and a copy-ready block that is never published without an explicit yes.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -335,7 +335,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 13 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-profile  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 81 (A)
+### li-profile  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 82 (A)
 
 - **Ne yapar:** Score a LinkedIn profile out of 100 against a 12-part rubric and rewrite the parts that lose points - headline, about, experience, featured, banner. Use when the user says "optimize my profile", "score my LinkedIn", "rewrite my headline", "fix my about section", or pastes their profile and asks how it reads.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -345,7 +345,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 6 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-reply  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 81 (A)
+### li-reply  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 82 (A)
 
 - **Ne yapar:** Handle the replies under the user's own LinkedIn posts - draft answers to every comment, sorted by which ones are worth answering. Use when the user pastes the comments on their post, says "reply to these", "handle my comments", "someone said X on my post", or is dealing with a critic or a lead in the comments.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -355,7 +355,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### li-repurpose  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 76 (B)
+### li-repurpose  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 77 (B)
 
 - **Ne yapar:** Turn one long asset - a YouTube video, podcast, newsletter, blog post, transcript or client call - into a week of LinkedIn posts. Use when the user says "repurpose this", "turn this into posts", "I have a video/newsletter/ transcript", or pastes a long piece of content and wants it on LinkedIn.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -365,7 +365,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### meeting-insights-analyzer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### meeting-insights-analyzer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Toplantı transkriptlerinden iletişim kalıplarını çıkarır: çatışmadan kaçınma, konuşma oranı, dolgu kelimeler, dinleme ve kolaylaştırma; zaman damgalı örneklerle eyleme dönük geri bildirim ve zaman içinde trend karşılaştırması verir.
 - **Ne zaman:** Liderlik/iletişim koçluğu, performans değerlendirmesine hazırlık, ekip toplantı analizi (transkript mevcutsa). · **Ne zaman değil:** Ses kaydı tek başına varsa önce STT gerekir (speech-to-text); toplantı özeti/aksiyon listesi çıkarmak tek amaçsa gereğinden ağır.
@@ -376,7 +376,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Analiz boyutları ve geri bildirim formatı iyi tanımlı; dar kullanım alanı.
 
-### raffle-winner-picker  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
+### raffle-winner-picker  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
 
 - **Ne yapar:** Liste, CSV/Excel ya da Google Sheets'ten çekiliş/yarışma kazananını rastgele seçer; çoklu kazanan, tekrar engelleme, ağırlıklı seçim ve yedek kazanan seçeneklerini tarif eder.
 - **Ne zaman:** Sosyal medya çekilişi, etkinlik çekilişi, rastgele katılımcı seçimi. · **Ne zaman değil:** Yasal denetim gerektiren çekilişlerde (noter vb.) tek kanıt olarak; Google Sheets erişimi yoksa.
@@ -419,7 +419,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 16 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF (humanizer'a). MIT, 18,5k★, son güncelleme 2026-03. Ağ/dış yazma yok. Kuralları humanizer'dan daha mutlak.
 
-### tailored-resume-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### tailored-resume-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** İş ilanını analiz edip anahtar gereksinimleri çıkarır ve adayın deneyimini buna göre yeniden düzenleyen, ATS uyumlu, ilana özel özgeçmiş üretir; kariyer geçişi senaryosu ve eksik/iyileştirme önerileri içerir.
 - **Ne zaman:** Belirli bir iş başvurusu için CV uyarlama. · **Ne zaman değil:** Özgeçmişte olmayan deneyimi uydurmak için asla; tasarımlı PDF/Word çıktısı gerekiyorsa docx/pdf ile birlikte kullan.
@@ -430,7 +430,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 12 KB (SKILL.md 12.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Adımlar ve örnek çıktı makul; kişisel kullanım için uygun, proje rollerine eklenmez.
 
-### twitter-algorithm-optimizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 69 (B)
+### twitter-algorithm-optimizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
 - **Ne yapar:** Twitter/X'in açık kaynak öneri algoritması bileşenlerine (Real-graph, SimClusters, TwHIN, Tweepcred) dayanarak tweet taslaklarını analiz edip etkileşim ve erişim için yeniden yazar; olumsuz sinyallerden kaçınma taktikleri verir.
 - **Ne zaman:** X/Twitter gönderisi optimizasyonu, içerik stratejisi. · **Ne zaman değil:** Diğer platformlar (LinkedIn, Instagram) için; algoritma 2023 açık kaynak sürümüne dayanıyor, güncel davranış farklı olabilir.

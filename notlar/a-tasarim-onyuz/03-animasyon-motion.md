@@ -89,7 +89,7 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 9 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gsap  ·  openai/plugins @ b767f8f  ·  puan 73 (B)
+### gsap  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
 
 - **Ne yapar:** GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.
 - **Teknoloji:** css, gsap _(otomatik tespit)_

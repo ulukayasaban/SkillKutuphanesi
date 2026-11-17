@@ -54,7 +54,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 402
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 416
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -329,6 +329,8 @@
 | `vercel-connect` | 01-uygulama-entegrasyonlari | Vercel + Linear entegrasyonu; her ikisinin ücretsiz katmanı var |
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
 | `cinecode` | 01-video-uretim-montaj | Film kodla üretilir ve ücretsiz çalışır. Seslendirme için Gemini TTS anahtarı (ücretsiz katmanı var) ya da isteğe bağlı ElevenLabs; stok arama için ücretsiz Pixabay anahtarı. Skill ücretli servis, anahtar ve büyük indirmeyi kullanıcı onayı olmadan kullanmaz. |
+| `cut-silences` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var |
+| `edit-video` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var |
 | `figma` | 01-video-uretim-montaj | FIGMA_TOKEN (ücretsiz planla çalışır); değişkenler (variables) Enterprise ister |
 | `hyperframes` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `hyperframes-cli` | 01-video-uretim-montaj | Yerel render ücretsiz; bulut render (HyperFrames OAuth) ücretli plan/kredi ister |
@@ -337,6 +339,7 @@
 | `hyperframes@openai` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor (kredi sınırı dosyası var) ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli; Voice Turbo Free planda ayda 3 dk |
 | `moneyprinterturbo-video` | 01-video-uretim-montaj | LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla. |
+| `open-edit` | 01-video-uretim-montaj | VEED barındırılan servisleri (transkript, arka plan silme, AI sunucu, lipsync) ve fal modelleri VEED/fal kredisi ister; render ve yerel araç takımı ücretsiz |
 | `openmontage` | 01-video-uretim-montaj | Yerel araçlar ve stok kaynaklar ücretsiz; ElevenLabs, fal.ai gibi ücretli sağlayıcılar isteğe bağlı |
 | `parody-short` | 01-video-uretim-montaj | Görsel, klip ve ses kullanıcının Modal uç noktalarında (aylık ücretsiz kota, fazlası ücretli); müzik acemusic ücretsiz anahtarla |
 | `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
@@ -347,6 +350,9 @@
 | `remotion-maps` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
 | `remotion-maps@openai` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
 | `remotion@openmontageinc` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
+| `session-story` | 01-video-uretim-montaj | İsteğe bağlı Gemini (GEMINI_API_KEY) ile kare özeti; anahtar yoksa yerel çalışır. Not: yerel konuşma geçmişini okur (kullanıcı onayından sonra) |
+| `short-form-edit` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe (varsayılan, alternatifleri var) ve üretilmiş ek görüntüler için isteğe bağlı Kie.ai; ikisi de ücretli servis, ücretsiz yol (yerel transkript, kendi görüntüleri) var |
+| `short-form-video` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var |
 | `synthetic-ui-demo` | 01-video-uretim-montaj | Remotion şablonu yerelde render edilir; anlatıcı sesi ve konuşan kafa isteğe bağlı bulut GPU ya da ElevenLabs ister; Remotion lisansı şirketler için ücretli olabilir |
 | `video-toolkit` | 01-video-uretim-montaj | Eski OpenMontage kopyası: açık modelleri kullanıcının Modal/RunPod hesabında çalıştırır; Modal Starter planında aylık ücretsiz işlem kotası var, fazlası ve RunPod ücretli (2026-11-15 yeniden değerlendirildi, önceden ucretli) |
 | `video-use` | 01-video-uretim-montaj | ElevenLabs Scribe ücretsiz kotasıyla kullanılabilir; yoğun transkript ücretli. ffmpeg/Manim/PIL yerel ve ücretsiz |
@@ -360,6 +366,7 @@
 | `krillinai-cli` | 02-ses-muzik-konusma | TTS/LLM için MiniMax gibi sağlayıcı anahtarı gerekebilir; yerel yollar (whisper) var |
 | `setup-api-key` | 02-ses-muzik-konusma | Sadece anahtar kurulum rehberi; ElevenLabs ücretsiz planıyla da çalışır |
 | `sound-effects` | 02-ses-muzik-konusma | ElevenLabs ücretsiz kotasıyla kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Openverse + yerleşik efektler) |
+| `sound-effects@barty-bart` | 02-ses-muzik-konusma | ElevenLabs ücretsiz kotasıyla kullanılabilir; fazlası ücretli. Tamamen ücretsiz yol: media-use (Openverse + yerleşik efektler) |
 | `speech-to-text` | 02-ses-muzik-konusma | ElevenLabs Scribe ücretsiz kotası var; fazlası ücretli. Tamamen ücretsiz yol: media-use transcribe (Whisper/Parakeet) |
 | `3d-asset-generation` | 03-ai-gorsel-video-modelleri | Üretim Atlas Cloud / fal.ai ile ücretli; CC0 Kenney kataloğu ve Blender yolu ücretsiz |
 | `antigravity-gorsel` | 03-ai-gorsel-video-modelleri | Antigravity Google hesabıyla ücretsiz kullanılır; görsel üretim kotası hesabın Google planına bağlıdır |
@@ -372,6 +379,13 @@
 | `provider-model-refresh` | 03-ai-gorsel-video-modelleri | Ücretli sağlayıcı adaptörleri; bazı modeller yerel (Qwen Image yerel) |
 | `qwen-edit` | 03-ai-gorsel-video-modelleri | Varsayılan Modal uç noktası (aylık ücretsiz kota), RunPod seçeneği ücretli; Qwen-Image-2.1 seçeneği ticari olmayan lisanslı |
 | `video-prompt-builder` | 03-ai-gorsel-video-modelleri | Video planı ve istem yazımı ücretsizdir; planın Seedance/Higgsfield'da üretilmesi kredi harcar. |
+| `remotion-explainer-video` | 04-motion-graphics-karakter | Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf |
+| `remotion-kinetic-typography` | 04-motion-graphics-karakter | Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf |
+| `remotion-launch-video` | 04-motion-graphics-karakter | Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf |
+| `remotion-logo-animation` | 04-motion-graphics-karakter | Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf |
+| `remotion-motion-graphics` | 04-motion-graphics-karakter | Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf |
+| `remotion-product-demo` | 04-motion-graphics-karakter | Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf |
+| `snapcn` | 04-motion-graphics-karakter | Açık bileşenler ücretsiz (MIT); Pro bileşenler snapcn MCP/SNAPCN_API_KEY (abonelik) ister |
 | `image` | 01-satis-pazarlama-musteri | Görsel üretimi için Gemini/Replicate/Ideogram/OpenAI API seçenekleri; Gemini API ücretsiz katmanı var, skill yönlendirme ve optimizasyon da yapar |
 | `video` | 01-satis-pazarlama-musteri | AI avatar (HeyGen/Synthesia) ücretli; Remotion gibi programatik yollar ücretsiz. Yöntem seçimi skill'de |
 | `trader-broker` | 02-finans-hukuk-ik | Alpaca: ücretsiz kâğıt (paper) hesapla denenir; gerçek hesapta komisyonsuz ama GERÇEK PARA riski — işlem öncesi kullanıcı onayı şart |
