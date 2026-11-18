@@ -1,7 +1,7 @@
 ---
 name: kutuphane-kaynak
 description: SkillKutuphanesi kaynak yönetimi. Yeni skill kaynağı ekleme, kullanıcının kendi skilleri, kaynak ya da skill çıkarma, kayıp kaynak, ad çakışması, geliştirici güven bilgisi, trend, popüler ve konu takibi adayları, GitHub yıldız listesi. "Yeni skill ekledim kontrol et", "şu repoyu ekle", "kendi skilimi düzenledim", "şu kaynağı çıkar", "adaylara bak" için kullan.
-model: inherit
+model: sonnet
 effort: medium
 ---
 

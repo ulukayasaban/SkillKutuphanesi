@@ -1,7 +1,7 @@
 ---
 name: kutuphane-program
 description: SkillKutuphanesi program yönetimi. HyperFrames, OpenMontage, nlm ve etsyotomasyon için sürüm takibi, güncelleme öncesi kontrol, yedek, onaylı güncelleme ve geri alma, program bağlarının sağlamlığı, ortam kilitleri ve genel skill klasörleri. "HyperFrames'i güncelle", "program sürümlerine bak", "genel klasörde yeni girdi var" için kullan.
-model: inherit
+model: sonnet
 effort: medium
 ---
 

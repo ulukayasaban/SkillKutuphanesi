@@ -1,7 +1,7 @@
 ---
 name: kutuphane-guncelleme
 description: SkillKutuphanesi aylık güncelleme. Aylık zinciri çalıştırır, güncelleme ya da takip dalını hazırlar, dalın özetini çıkarır, birleştirmeden sonra yapılacakları listeler ve zamanlanmış görev metnini kütüphane kopyasıyla karşılaştırır. "Skilleri güncelle", "aylık çalışmayı yap", "güncelleme dalını özetle" için kullan.
-model: inherit
+model: sonnet
 effort: medium
 ---
 

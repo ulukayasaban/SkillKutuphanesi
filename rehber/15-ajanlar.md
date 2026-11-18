@@ -6,14 +6,14 @@ Kütüphane işleri yedi ajana bölünmüştür (karar K-53, 2026-11-14). Ana ot
 | Ajan | İşi | Model · çaba |
 |---|---|---|
 | `kutuphane-denetci` | Sağlık denetimi: doğrulama, kapsam, testler, git, yedekler, genel klasör bekçisi, proje sağlığı, program sürümleri. Yalnız raporlar | sonnet · medium |
-| `kutuphane-kaynak` | Yeni kaynak, kendi skiller, siteden alınan skiller ve site takibi, çıkarma, kayıp kaynak, ad çakışması, güven bilgisi, adaylar, yıldız listesi | inherit · medium |
+| `kutuphane-kaynak` | Yeni kaynak, kendi skiller, siteden alınan skiller ve site takibi, çıkarma, kayıp kaynak, ad çakışması, güven bilgisi, adaylar, yıldız listesi | sonnet · medium |
 | `kutuphane-inceleme` | Skill incelemesi: kategori, ücret, lisans, Türkçe özet, sabit yol, güvenlik | sonnet · medium |
-| `kutuphane-guncelleme` | Aylık zincir, dal özeti, birleştirme sonrası liste, zamanlanmış görev metni | inherit · medium |
-| `kutuphane-program` | HyperFrames, OpenMontage, nlm, etsyotomasyon; program bağları; ortam kilitleri; genel klasörler | inherit · medium |
-| `kutuphane-proje` | Projeye öneri, ön kontrol, onaylı kurulum, proje durumu ve kaydı, rol ve profiller, araç düzenleri | inherit · medium |
-| `kutuphane-gelistirici` | Araç kodu, testler, şemalar, rehberler, istemler, kararlar, ajan dosyaları | inherit · medium |
+| `kutuphane-guncelleme` | Aylık zincir, dal özeti, birleştirme sonrası liste, zamanlanmış görev metni | sonnet · medium |
+| `kutuphane-program` | HyperFrames, OpenMontage, nlm, etsyotomasyon; program bağları; ortam kilitleri; genel klasörler | sonnet · medium |
+| `kutuphane-proje` | Projeye öneri, ön kontrol, onaylı kurulum, proje durumu ve kaydı, rol ve profiller, araç düzenleri | sonnet · medium |
+| `kutuphane-gelistirici` | Araç kodu, testler, şemalar, rehberler, istemler, kararlar, ajan dosyaları | sonnet · medium |
 
-`inherit`: ajan o anki oturumun modeliyle çalışır. Model ve çaba her ajanın kendi kaynak dosyasında yazılır; genel bir ayarla sabitlenmez.
+Yedi ajanın hepsi sonnet ile çalışır (K-60); ana oturum (takım lideri) kullanıcının o an seçtiği modelle çalışır. `inherit` yazılırsa ajan o anki oturumun modeliyle çalışır. Model ve çaba her ajanın kendi kaynak dosyasında yazılır; genel bir ayarla sabitlenmez.
 
 ## 2. Dosyalar
 - **Tek kaynak:** `ajanlar/ORTAK.md` (her ajanın ortak kuralları) ve `ajanlar/kutuphane-<ad>.md` (başlık bloğu + görev tanımı). Görev tanımı kuralı kopyalamaz; ilgili rehbere ve komuta işaret eder.
