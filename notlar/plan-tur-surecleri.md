@@ -51,7 +51,7 @@ Bu bölüm 2026-11-18 ölçümüdür.
 | `konu-takip.json`, `trend.json` | Aday repolar ve kararları |
 | `yedekler.json` | Kayıtlı yedekler (yedekler `~/Documents/Claude/yedek` altında, izin 700) |
 | `site-takip.json` | Web sitesinden alınan skillerin kaydı |
-| `notlar/kararlar.md` | Kalıcı kararlar (son: K-61) |
+| `notlar/kararlar.md` | Kalıcı kararlar (son: K-62) |
 
 ### 2.2 Boyut
 | Ne | Boyut |
@@ -481,10 +481,10 @@ Git geçmişi (195 MB) temizlenmez: geri alınamaz ve GitHub'daki depoyu yeniden
 
 ## 13. Ajanlar
 
-Yeni ajan açılmaz. Bugünkü yedi ajan ve onları yöneten ana oturum, yeni görevlerle sürer.
+Yeni ajan açılmaz. Bugünkü yedi ajan yeni görevlerle sürer.
 
-### 13.1 Takım lideri (ana oturum)
-Kullanıcıyla konuşan tek taraftır. Onay alır, işi ajanlara dağıtır, ajan raporlarını doğrular, commit eder, kullanıcı isterse push eder. Ajanlar birbirine iş vermez; her devir takım liderinden geçer.
+### 13.1 Ana oturum
+Kullanıcıyla konuşan tek taraftır. Onay alır, işi ajanlara dağıtır, ajan raporlarını doğrular, commit eder, kullanıcı isterse push eder. Ajanlar birbirine iş vermez; her devir ana oturumdan geçer.
 
 ### 13.2 Ajanlar
 Yedi ajanın hepsi **sonnet** modeliyle çalışır (K-60). Çaba her ajanın kendi dosyasında yazılıdır.
@@ -500,14 +500,14 @@ Yedi ajanın hepsi **sonnet** modeliyle çalışır (K-60). Çaba her ajanın ke
 | `kutuphane-gelistirici` | Araç kodu, testler, rehberler, ajan dosyaları | Bu planın araçlarını ve testlerini yazar; `surecler/` dosyalarını ve rehber güncellemelerini yazar. |
 
 ### 13.3 İş akışları
-**Yeni repo:** takım lideri → kaynak (tür, boyut, çakışma, ücret) → kullanıcıya tek soru → kaynak (kayıt) → inceleme (arşivli türde) → denetçi → takım lideri (commit).
+**Yeni repo:** ana oturum → kaynak (tür, boyut, çakışma, ücret) → kullanıcıya tek soru → kaynak (kayıt) → inceleme (arşivli türde) → denetçi → ana oturum (commit).
 
-**Proje:** takım lideri → proje (adaylar) → kaynak (fihrist ve katalog kalemlerinin güncelliği) → inceleme (geçici klasöre alınanlar) → proje (rapor) → kullanıcı onayı → proje (kurulum) → denetçi (doğrulama).
+**Proje:** ana oturum → proje (adaylar) → kaynak (fihrist ve katalog kalemlerinin güncelliği) → inceleme (geçici klasöre alınanlar) → proje (rapor) → kullanıcı onayı → proje (kurulum) → denetçi (doğrulama).
 
-**Aylık:** takım lideri → güncelleme (zincir, özet) → kullanıcı onayı → güncelleme (birleştirme) → inceleme (yeniden incelenecekler) → proje (etkilenen projelerde yalnız durum raporu).
+**Aylık:** ana oturum → güncelleme (zincir, özet) → kullanıcı onayı → güncelleme (birleştirme) → inceleme (yeniden incelenecekler) → proje (etkilenen projelerde yalnız durum raporu).
 
 ### 13.4 Değişmeyen ajan kuralları
-Ajanlar kullanıcıyla konuşmaz; onay isteyen adımı atmaz; commit ve push yapmaz; aynı anda yalnız bir ajan kütüphaneye yazar; kayıtlara proje adı yazmaz (`ajanlar/ORTAK.md`). Sonnet ajanlarının danışmanı Opus'tur (K-54).
+Ajanlar kullanıcıyla konuşmaz; onay isteyen adımı atmaz; commit ve push yapmaz; aynı anda yalnız bir ajan kütüphaneye yazar; kayıtlara proje adı yazmaz (`ajanlar/ORTAK.md`).
 
 ### 13.5 Süreç dosyaları
 Her türün ve her senaryonun adımları `surecler/` klasöründe düz metin dosyası olarak yazılır (ör. `surecler/tur-kit.md`, `surecler/senaryo-yeni-proje.md`). Dosyalar belirli bir yapay zeka aracının komutunu içermez; yalnız `python3 araclar/...` komutlarını ve karar kurallarını içerir. Ajan dosyaları bu dosyalara işaret eder; aynı kural iki yerde yazılmaz. Her süreç dosyasının yanında kullanıcının kopyalayıp kullanabileceği örnek istem bulunur (`promptlar/`).
@@ -518,7 +518,7 @@ Her türün ve her senaryonun adımları `surecler/` klasöründe düz metin dos
 
 | Araç | Skilleri okuduğu yer | Ajanlar | Not |
 |---|---|---|---|
-| Claude Code | `.claude/skills` | `.claude/agents/` (üretilir) | Danışman yalnız burada |
+| Claude Code | `.claude/skills` | `.claude/agents/` (üretilir) | Danışman kullanılmaz (K-62) |
 | Codex | `.agents/skills` | `.codex/agents/` (üretilir; model yazılmaz) | Ajan başına yetki kısıtı yok |
 | Antigravity | `.agents/skills` | Ajan dosyası üretilmez; `AGENTS.md` tablosu, `ajanlar/` ve `surecler/` okunur | Codex ile aynı klasörü okuduğu kabul edilir; farklı davranırsa kural düzeltilir |
 
@@ -547,7 +547,7 @@ Her türün ve her senaryonun adımları `surecler/` klasöründe düz metin dos
 | 11 | Geçici klasör temizlenmezse disk yine dolar. | Otomatik silme; denetçi kalan dosyayı raporlar. |
 | 12 | Git geçmişi büyümeye devam eder. | Medya kuralı ve fihrist büyümeyi yavaşlatır; aylık raporda izlenir. Geçmiş temizlenmez. |
 | 13 | Tür yanlış belirlenebilir. | Gerekçe kayıtta; kullanıcı düzeltebilir; senaryo H. |
-| 14 | Bütün ajanlar sonnet olunca karmaşık işlerde (araç kodu, program güncelleme) hata olasılığı artabilir. | Takım lideri her ajan raporunu doğrular; riskli adımlarda danışman (Opus) kullanılır; testler zorunludur. |
+| 14 | Bütün ajanlar sonnet olunca karmaşık işlerde (araç kodu, program güncelleme) hata olasılığı artabilir. | Her ajan raporu commit'ten önce kontrol komutlarıyla doğrulanır; testler zorunludur; ajan emin olmadığı yerde durur ve raporlar. Danışman model kullanılmaz (K-62). |
 
 ---
 
@@ -573,7 +573,8 @@ Her türün ve her senaryonun adımları `surecler/` klasöründe düz metin dos
 | R18 | Mevcut dev koleksiyonlar fihriste çevrilir; projede kurulu skiller arşivde kalır. |
 | R19 | Kurulum için indirilen geçici dosyalar kurulumdan sonra kendiliğinden silinir. |
 | R20 | Plan `notlar/` altında dosya olarak tutulur. |
-| R21 | Takım lideri dışındaki bütün ajanlar sonnet kullanır (K-60). |
+| R21 | Yedi ajanın hepsi sonnet kullanır (K-60). |
+| R22 | Ajanlar danışman model (Opus) kullanmaz; token tasarrufu önceliklidir (K-62). |
 
 ---
 
