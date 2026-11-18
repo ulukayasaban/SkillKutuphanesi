@@ -42,7 +42,9 @@ Kütüphaneye neyin girip neyin çıktığını yönetir. Her kaynak yalnız ken
 ## Kapsam
 | İstek | Rehber | İlk komut |
 |---|---|---|
-| Yeni kaynak (yıldız listesinden) | `rehber/03-yeni-skill-ekleme.md` A1..A9, `promptlar/07-yeni-skill-reposu-ekle.md` | `python3 araclar/github-skill-listesi.py` |
+| Yeni kaynak (yıldız listesinden): önce repo türü, sonra türün dosyası | `surecler/yeni-repo.md` (türün dosyası `surecler/tur-*.md`; arşivli türlerde `rehber/03-yeni-skill-ekleme.md` A1..A9), `promptlar/17-repo-turune-gore-ekle.md` | `python3 araclar/github-skill-listesi.py`, sonra `python3 araclar/tur-belirle.py owner/ad` |
+| Repo türü ve boyut (kayda yazılacak; kullanıcıya tek mesajın verisi) | `surecler/yeni-repo.md` adım 2-4 | `python3 araclar/tur-belirle.py owner/ad`, `python3 araclar/boyut-hesapla.py owner/ad` |
+| Dev koleksiyon fihristi (200 ve üstü skil; arşive çekilmez) | `surecler/tur-dev-koleksiyon.md`, `fihrist/README.md` | `python3 araclar/fihrist-uret.py owner/ad --kuru` |
 | Kendi skil ekleme ya da düzenleme (yalnız kullanıcının yazdıkları) | `rehber/03-yeni-skill-ekleme.md` B2, `kendi/README.md` | `python3 araclar/kaynak-cek.py --repo yerel/kendi` |
 | Web sitesinden skill (GitHub'da yok): ekleme, site değişikliği, onaylı güncelleme | `rehber/03-yeni-skill-ekleme.md` B3, `site/README.md`, karar K-57 | `python3 araclar/site-takip.py` (ağ, yalnız GET), `python3 araclar/kaynak-cek.py --repo yerel/site` |
 | Kaynak ya da skill çıkarma | `rehber/03-yeni-skill-ekleme.md` D, `promptlar/14-kaynak-cikar.md` | `python3 araclar/kaynak-cikar.py --repo owner/ad --kuru` |
@@ -53,7 +55,7 @@ Kütüphaneye neyin girip neyin çıktığını yönetir. Her kaynak yalnız ken
 | Trend ve popüler raporu | `CLAUDE.md` "Trend", "Popüler skiller" | `python3 araclar/github-trend.py --aday`, `python3 araclar/populer-tarama.py` |
 | Konu takibi | `CLAUDE.md` "Konu takibi" | `python3 araclar/konu-takip.py` |
 
-Ekleme ve düzenlemeden sonraki işleme sırası: `kaynak-cek.py --repo ...` → `yol-tara.py --repo ...` → `gelistirici-bilgisi.py owner/ad` → `arsiv-yerlestir.py` → `katalog-uret.py` → `skill-readme.py` → `dogrula.py` → `kapsam-denetimi.py` → `test.py`.
+Ekleme ve düzenlemeden sonraki işleme sırası (yalnız arşivli türlerde; fihrist ve katalog türlerinde `kaynak-cek.py` ve `arsiv-yerlestir.py` çalıştırılmaz, adımlar türün dosyasındadır): `kaynak-cek.py --repo ...` → `yol-tara.py --repo ...` → `gelistirici-bilgisi.py owner/ad` → `arsiv-yerlestir.py` → `katalog-uret.py` → `skill-readme.py` → `dogrula.py` → `kapsam-denetimi.py` → `test.py`.
 
 ## Onay isteyen adımlar (raporla, ana oturum sorar)
 - Yeni kaynağı `kaynaklar.json`'a yazmak (çakışma kontrolü ve ücret sınıfı raporu hazır olmadan sorulmaz; onay kaydı zorunlu).
@@ -73,4 +75,4 @@ Ekleme ve düzenlemeden sonraki işleme sırası: `kaynak-cek.py --repo ...` →
 - Saldırgan güvenlik / riskli repoyu (pentest, exploit, C2, saldırgan recon; ikili kullanımlı, zararlı kullanım riski olan) kütüphaneye almak: kaynak kaydı açılmaz, arşive çekilmez, kategori açılmaz (K-58, `CLAUDE.md` "Saldırgan güvenlik / riskli skiller", `notlar/guvenlik-riskli-skiller.md`). İncele ve kullanıcıya bildir; onaylanırsa YALNIZ GitHub "Güvenlik ve Riskli Skiller" (`güvenlik-ve-riskli-skiller`) listesine yıldızla. Savunma güvenliği (sağlamlaştırma, denetim, açık/bağımlılık taraması; `06-devops-guvenlik-performans`) bu kurala girmez, kütüphanede kalır.
 
 ## Rapor
-Ortak biçime ek olarak: kaynak başına çakışma sonucu (aynı ad, aynı iş, aynı repoda birden fazla sürüm, aynı adlı kendi skil), lisans, ücret sınıfı ve gerekçesi, yeni gelen skill sayısı, tercih ya da kimlik değişen eski kayıtlar.
+Ortak biçime ek olarak: kaynak başına tür ve gerekçesi, hesaplanan boyut (hesaplanamayan kalemlerle), çakışma sonucu (aynı ad, aynı iş, aynı repoda birden fazla sürüm, aynı adlı kendi skil), lisans, ücret sınıfı ve gerekçesi, yeni gelen skill sayısı, tercih ya da kimlik değişen eski kayıtlar.

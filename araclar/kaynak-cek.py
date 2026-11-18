@@ -32,7 +32,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GECICI, KAYNAKLAR, KOK, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
-                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi, yerel_agac, yerel_commit, ARSIVLENEN_TIPLER, YEREL_TIPLER)
+                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi, yerel_agac, yerel_commit, ARSIVLENEN_TIPLER, YEREL_TIPLER, arsive_cekilir)
 
 # T7 = yerel kaynak (kullanıcının kendi skilleri, kendi/), T8 = siteden alınan skiller (site/): GitHub'a hiç sorulmaz, ağ kullanılmaz.
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
@@ -227,7 +227,7 @@ def atla_kumesi(deger, kayitlar, cevir=repo_guncel):
     adlar = [x.strip() for x in (deger or "").split(",") if x.strip()]
     if not adlar:
         return set(), []
-    bilinen = {cevir(k["repo"]).lower() for k in kayitlar if k.get("tip") in ARSIVLENEN_TIPLER}
+    bilinen = {cevir(k["repo"]).lower() for k in kayitlar if arsive_cekilir(k)}
     kume, tanimsiz = set(), []
     for ad in adlar:
         g = cevir(ad).lower()
@@ -247,7 +247,7 @@ def main():
     cikis = GECICI / "cekilen"
     cikis.mkdir(parents=True, exist_ok=True)
     manifest = json_oku(cikis / "manifest.json", {"kayitlar": [], "denetim": {}, "bilesenler": []})
-    kayitlar = [k for k in ayar["repolar"] if k["tip"] in ARSIVLENEN_TIPLER]
+    kayitlar = [k for k in ayar["repolar"] if arsive_cekilir(k)]  # bolum fihrist/katalog arşive çekilmez
     if a.repo:
         kayitlar = [k for k in kayitlar if k["repo"] == a.repo]
         manifest["kayitlar"] = [m for m in manifest["kayitlar"] if m["repo"] != a.repo]

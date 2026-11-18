@@ -6,7 +6,7 @@ Kütüphane işleri yedi ajana bölünmüştür (karar K-53, 2026-11-14). Ana ot
 | Ajan | İşi | Model · çaba |
 |---|---|---|
 | `kutuphane-denetci` | Sağlık denetimi: doğrulama, kapsam, testler, git, yedekler, genel klasör bekçisi, proje sağlığı, program sürümleri. Yalnız raporlar | sonnet · medium |
-| `kutuphane-kaynak` | Yeni kaynak, kendi skiller, siteden alınan skiller ve site takibi, çıkarma, kayıp kaynak, ad çakışması, güven bilgisi, adaylar, yıldız listesi | sonnet · medium |
+| `kutuphane-kaynak` | Yeni kaynak (önce repo türü ve boyut: `surecler/yeni-repo.md`), kendi skiller, siteden alınan skiller ve site takibi, çıkarma, kayıp kaynak, ad çakışması, güven bilgisi, adaylar, yıldız listesi | sonnet · medium |
 | `kutuphane-inceleme` | Skill incelemesi: kategori, ücret, lisans, Türkçe özet, sabit yol, güvenlik | sonnet · medium |
 | `kutuphane-guncelleme` | Aylık zincir, dal özeti, birleştirme sonrası liste, zamanlanmış görev metni | sonnet · medium |
 | `kutuphane-program` | HyperFrames, OpenMontage, nlm, etsyotomasyon; program bağları; ortam kilitleri; genel klasörler | sonnet · medium |

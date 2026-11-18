@@ -19,8 +19,8 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (ARSIVLENEN_TIPLER, KAYNAKLAR, KOK, REGISTRY, YEREL_TIPLER, GhBulunamadi, json_oku, klon_temizle,  # noqa: E402
-                   repo_agaci, yerel_agac)
+from ortak import (ARSIV_DISI_BOLUMLER, KAYNAKLAR, KOK, REGISTRY, YEREL_TIPLER, GhBulunamadi, json_oku, klon_temizle,  # noqa: E402
+                   arsive_cekilir, repo_agaci, yerel_agac)
 
 ACIKLAMA = {
     "secildi": "arşivde (ana sürüm)",
@@ -45,10 +45,12 @@ def main():
     reg = json_oku(REGISTRY)
     denetim = reg.get("denetim", {})
     kayitlar = json_oku(KAYNAKLAR)["repolar"]
-    arsiv_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] in ARSIVLENEN_TIPLER})
+    arsiv_repolari = sorted({k["repo"] for k in kayitlar if arsive_cekilir(k)})
     yerel_kayit = {k["repo"]: k for k in kayitlar if k["tip"] in YEREL_TIPLER}  # T7 kendi/, T8 site/: GitHub'a sorulmaz
     kayip_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] == "KAYIP"})
-    referans_repolari = sorted({k["repo"] for k in kayitlar} - set(arsiv_repolari) - set(kayip_repolari))
+    # bolum fihrist/katalog (dev koleksiyon, kit): skil dosyaları BİLEREK arşiv dışıdır; içlerindeki SKILL.md sorun sayılmaz (fihrist/ ve kitler.json tutar)
+    arsiv_disi_repolari = sorted({k["repo"] for k in kayitlar if k.get("bolum") in ARSIV_DISI_BOLUMLER} - set(arsiv_repolari) - set(kayip_repolari))
+    referans_repolari = sorted({k["repo"] for k in kayitlar} - set(arsiv_repolari) - set(kayip_repolari) - set(arsiv_disi_repolari))
     erisilemeyen = []
     yol_index, varyant_index = set(), set()
     for s in reg["skiller"]:
@@ -150,6 +152,9 @@ def main():
             f"{len(referans_repolari)} repo tarandı; " +
             ("içlerinde skill yok." if not yeni_skill else "skill bulunanlar: " + ", ".join(f"{r} ({n})" for r, n in yeni_skill))
             + (" Program bağıyla verilen (arşive alınmayan) skiller: " + ", ".join(f"{r} ({n})" for r, n in bagli_skill) + "." if bagli_skill else "")]
+    if arsiv_disi_repolari:
+        out += ["", "## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)", "",
+                f"{len(arsiv_disi_repolari)} repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: " + ", ".join(arsiv_disi_repolari)]
     if kayip_repolari:
         out += ["", "## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)", ""] + [f"- {x}" for x in kayip_repolari]
     if erisilemeyen:

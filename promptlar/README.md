@@ -23,6 +23,7 @@ Codex Desktop'ta **proje klasöründe** (kütüphane bakımı için `~/Documents
 | 14 | [14-kaynak-cikar.md](14-kaynak-cikar.md) | Kütüphaneden bir kaynak repoyu ya da skili çıkarmak (etki, yedek, geri alma ile) |
 | 15 | [15-yeni-yapay-zeka-araci.md](15-yeni-yapay-zeka-araci.md) | Yeni bir yapay zeka aracı kullanmaya başlayınca kütüphaneye tanıtmak, ya da aracın okuma düzeni değişince kontrol etmek |
 | 16 | [16-genel-klasor-bosaltma.md](16-genel-klasor-bosaltma.md) | Genel skill klasörlerini yedekleyip boşaltmak ya da orada beklenmeyen bir girdi belirince bakmak |
+| 17 | [17-repo-turune-gore-ekle.md](17-repo-turune-gore-ekle.md) | Yeni bir repoyu türüne göre (koleksiyon, tek skil, dev koleksiyon, kit, program, referans) tek soruyla kütüphaneye eklemek; adımlar `surecler/` klasöründe |
 
 **Değişmeyen kurallar (her promptta geçerli):**
 - Global skill klasörlerine (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, `~/.openmontage`) dokunulmaz (tek istisna: onaylı program güncellemesi ve onaylı boşaltma, promptlar/13 ve 16).

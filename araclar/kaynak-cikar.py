@@ -378,6 +378,16 @@ def rapor_uret(kok, hedef_turu, hedef, neden=None, github=False, bugun=None, gh=
     if kart:
         a.append("5. " + " ; ".join(f"{k['dosya']}: satır {k['satirlar'][0]} (kart/satır)" for k in rapor["kayitlar"] if k.get("satirlar"))
                  + " sil.")
+    if hedef_turu == "repo":
+        fihrist_dosya = kok / "fihrist" / (canon.replace("/", "__") + ".json")
+        try:
+            kit_var = any(str(x.get("repo", "")).lower() == canon.lower() for x in ((json_oku(kok / "kitler.json", {}) or {}).get("kitler") or []))
+        except (AttributeError, TypeError):
+            kit_var = False
+        if fihrist_dosya.is_file():
+            a.append(f"5b. fihrist/{fihrist_dosya.name} dosyasını sil (bolum fihrist kaynağın skil listesi; arşivde dosya yok, dogrula kaynağı olmayan fihristi UYARI sayar).")
+        if kit_var:
+            a.append(f"5c. kitler.json -> kitler listesinden \"{canon}\" kaydını sil (dogrula kaynağı olmayan kit kaydını UYARI sayar).")
     if hedef_turu == "skill":
         a.append(f"6. python3 araclar/kaynak-cek.py --repo {canon}   Sonra: python3 araclar/arsiv-yerlestir.py   "
                  "(--kayba-izin-ver KULLANMA: defter kaydı güvenlik kilidini zaten geçirir)")

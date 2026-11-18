@@ -10,6 +10,9 @@ Tüm skill repoları GitHub'da tek listede durur: **"Yapay Zeka Skillleri"** (`k
 Hazır prompt: `promptlar/07-yeni-skill-reposu-ekle.md`. Her adımda durma koşuluna uy.
 
 ```
+A0  Tür (A1'den önce). Her yeni repo önce türüne göre sınıflanır: `python3 araclar/tur-belirle.py owner/ad` ve `python3 araclar/boyut-hesapla.py owner/ad`, kullanıcıya TEK mesaj, "evet"ten sonra türün dosyası.
+    Sıra, mesaj şablonu ve her türün adımları: `surecler/yeni-repo.md` (türün dosyası `surecler/tur-*.md`). Bu bölümün A1..A9 sırası arşivli türlerin (koleksiyon, tek skil, ürün + skil, repo-içi) ekleme adımıdır;
+    dev koleksiyon (fihrist), kit ve program arşive çekilmez ve kendi dosyalarındaki adımları izler.
 A1  Başlangıç ve bul. `git status --short` BOŞ olmalı; değilse DUR ve kullanıcıya söyle (başka işin değişiklikleri yeni kaynak commitine karışır).
     `python3 araclar/dogrula.py --github | tail -3` -> "N skill · H hata · U uyarı" satırını not et (A7 ile karşılaştırılacak).
     `python3 araclar/github-skill-listesi.py` (YENİ / AD DEĞİŞMİŞ) ve `python3 araclar/github-trend.py --aday`. AD DEĞİŞMİŞ yeni kaynak DEĞİLDİR (rehber/09 'Repo adı değişirse').

@@ -242,6 +242,14 @@ def yerel_commit(agac) -> str:
 # kaydı zorunludur (sahip, lisans, site adresi, izlenen dosyaların sha256'sı); site değişikliğini araclar/site-takip.py bildirir.
 YEREL_TIPLER = ("T7", "T8")
 ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4", "T7", "T8")
+ARSIV_DISI_BOLUMLER = ("fihrist", "katalog")  # kaynak kaydında bolum: skil dosyaları arşive ÇEKİLMEZ (notlar/plan-tur-surecleri.md bölüm 3)
+
+
+def arsive_cekilir(kayit) -> bool:
+    """Kaynak kaydı arşive çekilir mi? tip arşivlenen tiplerden VE bolum fihrist/katalog DEĞİL. Tip içeriğin cinsini söyler (T1 skil reposu...),
+    bolum nerede tutulacağını; dev koleksiyon ve kit kaydı tip T1 + bolum fihrist/katalog olarak yazılır ve kaynak-cek.py, arsiv-guncelle.py,
+    kapsam-denetimi.py ona dokunmaz (surecler/ klasöründeki tür dosyaları)."""
+    return kayit.get("tip") in ARSIVLENEN_TIPLER and kayit.get("bolum") not in ARSIV_DISI_BOLUMLER
 YEREL_KLASOR = {"T7": "kendi", "T8": "site"}
 SITE_TAKIP = "site-takip.json"
 LISANSSIZ = ("yok", "NOASSERTION", "belirtilmemiş", "")

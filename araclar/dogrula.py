@@ -473,9 +473,140 @@ def _e7_site_takip(kok, h, u):
     u += [f"site takibi: {x}" for x in uu]
 
 
+def fihrist_dosya_adi(repo):
+    """owner/ad -> owner__ad.json (fihrist/ klasöründe)."""
+    return repo.replace("/", "__") + ".json"
+
+
+def fihrist_hatalari(d, repo=None):
+    """Bir fihrist dosyasının içeriği için HATA metinleri (fihrist/<owner>__<ad>.json; notlar/plan-tur-surecleri.md bölüm 3, fihrist/README.md)."""
+    h = []
+    if not isinstance(d, dict):
+        return ["fihrist dosyası sözlük değil"]
+    if not (isinstance(d.get("repo"), str) and re.fullmatch(r"[\w.-]+/[\w.-]+", d["repo"])):
+        h.append("repo 'sahip/ad' biçiminde değil")
+    elif repo and d["repo"].lower() != repo.lower():
+        h.append(f"repo {d['repo']!r} dosya adındaki repo ile ({repo}) uyuşmuyor")
+    if not (isinstance(d.get("commit"), str) and d["commit"]):
+        h.append("commit yok")
+    if not _tarih_gecerli(d.get("tarih")):
+        h.append("tarih AAAA-AA-GG değil")
+    sk = d.get("skiller")
+    if not isinstance(sk, list):
+        return h + ["skiller liste değil"]
+    n = d.get("skil_sayisi")
+    if isinstance(n, bool) or not isinstance(n, int) or n < 0:
+        h.append("skil_sayisi sayı değil")
+    elif n != len(sk):
+        h.append(f"skil_sayisi {n} ama skiller listesinde {len(sk)} kayıt var")
+    gorulen = set()
+    for i, x in enumerate(sk):
+        if not isinstance(x, dict):
+            h.append(f"skiller[{i}] sözlük değil")
+            continue
+        for a in ("ad", "yol"):
+            if not (isinstance(x.get(a), str) and (x[a] or a == "yol")):
+                h.append(f"skiller[{i}].{a} metin değil ya da boş")
+        if not isinstance(x.get("aciklama"), str):
+            h.append(f"skiller[{i}].aciklama metin değil")
+        if "arsivde" in x and not isinstance(x["arsivde"], bool):
+            h.append(f"skiller[{i}].arsivde bool değil")
+        if "inceleme" in x:
+            ic = x["inceleme"]
+            if not (isinstance(ic, dict) and isinstance(ic.get("commit"), str) and _tarih_gecerli(ic.get("tarih")) and isinstance(ic.get("sonuc"), str)
+                    and isinstance(ic.get("not", ""), str)):
+                h.append(f"skiller[{i}].inceleme {{commit, tarih: AAAA-AA-GG, sonuc, not?}} biçiminde değil")
+        if isinstance(x.get("yol"), str):
+            if x["yol"] in gorulen:
+                h.append(f"skiller: yol tekrarlanıyor: {x['yol']!r}")
+            gorulen.add(x["yol"])
+    return h
+
+
+def kit_hatalari(k):
+    """kitler.json içindeki tek bir kit kaydı için HATA metinleri."""
+    if not isinstance(k, dict):
+        return ["kit kaydı sözlük değil"]
+    h = []
+    if not (isinstance(k.get("repo"), str) and re.fullmatch(r"[\w.-]+/[\w.-]+", k["repo"])):
+        h.append("repo 'sahip/ad' biçiminde değil")
+    for a in ("ad", "ne_yapar", "baslamis_projede"):
+        if not (isinstance(k.get(a), str) and k[a].strip()):
+            h.append(f"{a} metin değil ya da boş")
+    if "not" in k and not isinstance(k["not"], str):
+        h.append("not metin değil")
+    for a in ("yapi_ozeti", "skiller"):
+        if not (isinstance(k.get(a), list) and all(isinstance(x, str) for x in k[a])):
+            h.append(f"{a} metin listesi değil")
+    if not isinstance(k.get("genel_klasore_yazar"), bool):
+        h.append("genel_klasore_yazar bool değil")
+    kb = k.get("kurulum_betigi")
+    if not (isinstance(kb, dict) and isinstance(kb.get("var"), bool)):
+        h.append("kurulum_betigi {var: bool, yol, ne_yapar} biçiminde değil")
+    else:
+        for a in ("yol", "ne_yapar"):
+            if a in kb and not isinstance(kb[a], str):
+                h.append(f"kurulum_betigi.{a} metin değil")
+        if kb["var"] and not (isinstance(kb.get("yol"), str) and kb["yol"].strip() and isinstance(kb.get("ne_yapar"), str) and kb["ne_yapar"].strip()):
+            h.append("kurulum_betigi.var true iken yol ve ne_yapar yazılmalı")
+    return h
+
+
+def _e8_fihrist_kit(kok, h, u):
+    """Fihrist (bolum: fihrist) ve kit kataloğu (tur: kit) kayıtları: kaynak kaydıyla karşılıklı denetim. HATA: gereken dosya/kayıt yok ya da şema bozuk;
+    UYARI: kaynağı olmayan fihrist dosyası ya da kit kaydı."""
+    kok = Path(kok)
+    kay, _ = _json_kayit(kok, "kaynaklar.json", [])
+    kayitlar = [k for k in ((kay or {}).get("repolar") or []) if isinstance(k, dict) and isinstance(k.get("repo"), str)]
+    fihristli = {k["repo"] for k in kayitlar if k.get("bolum") == "fihrist"}
+    kitli = {k["repo"] for k in kayitlar if k.get("tur") == "kit"}
+    klasor = kok / "fihrist"
+    dosyalar = {f.name: f for f in sorted(klasor.glob("*.json"))} if klasor.is_dir() else {}
+    for repo in sorted(fihristli):
+        ad = fihrist_dosya_adi(repo)
+        if ad not in dosyalar:
+            h.append(f"kaynaklar.json: {repo} bolum fihrist ama fihrist/{ad} yok (python3 araclar/fihrist-uret.py {repo})")
+    beklenen = {fihrist_dosya_adi(r).lower() for r in fihristli}
+    for ad, f in dosyalar.items():
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except (ValueError, OSError) as e:
+            h.append(f"fihrist/{ad}: ayrıştırılamadı: {type(e).__name__}")
+            continue
+        repo = ad[:-5].replace("__", "/", 1)
+        h += [f"fihrist/{ad}: {x}" for x in fihrist_hatalari(d, repo)]
+        if kay is not None and ad.lower() not in beklenen:
+            u.append(f"fihrist/{ad}: kaynaklar.json'da bolum fihrist olan bir kaynak karşılığı yok")
+    kd, var = _json_kayit(kok, "kitler.json", h)
+    if var and kd is None:
+        return
+    if not var:
+        for repo in sorted(kitli):
+            h.append(f"kaynaklar.json: {repo} tur kit ama kitler.json yok")
+        return
+    liste = kd.get("kitler") if isinstance(kd, dict) else None
+    if not isinstance(liste, list):
+        h.append("kitler.json: 'kitler' listesi yok")
+        return
+    gorulen = set()
+    for i, k in enumerate(liste):
+        hh = kit_hatalari(k)
+        ad = k.get("repo", f"[{i}]") if isinstance(k, dict) else f"[{i}]"
+        h += [f"kitler.json: {ad}: {x}" for x in hh]
+        if isinstance(k, dict) and isinstance(k.get("repo"), str):
+            if k["repo"].lower() in gorulen:
+                h.append(f"kitler.json: {k['repo']} tekrarlanıyor")
+            gorulen.add(k["repo"].lower())
+            if kay is not None and k["repo"] not in kitli:
+                u.append(f"kitler.json: {k['repo']} için kaynaklar.json'da tur kit olan bir kaynak yok")
+    for repo in sorted(kitli):
+        if repo.lower() not in gorulen:
+            h.append(f"kaynaklar.json: {repo} tur kit ama kitler.json'da kaydı yok")
+
+
 def kayit_semalari_denetimi(kok=KOK):
     h, u = [], []
-    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar, _e7_site_takip):
+    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar, _e7_site_takip, _e8_fihrist_kit):
         f(kok, h, u)
     return h, u
 
@@ -558,6 +689,13 @@ def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
     return h, u
 
 
+def _belge_listesi(kok):
+    """Bayrak ve eski anlatım denetiminin taradığı belgeler (süreç dosyaları dahil: surecler/)."""
+    kok = Path(kok)
+    return ([kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md"))
+            + sorted((kok / "ajanlar").glob("*.md")) + sorted((kok / "surecler").glob("*.md")))
+
+
 def _arac_bayraklari(metin):
     """Aracın bayrakları: tırnak içindeki '--x' dizgileri + dosya başı açıklamasındaki (docstring) kullanım satırları."""
     bay = set(re.findall(r"""["'](--[a-z][a-z0-9-]*)(?=[=\s"'])""", metin))
@@ -571,7 +709,7 @@ def bayrak_denetimi(kok=KOK):
     """Belgelerde anılan araclar/<araç>.py ve bayrakları var mı? Bayraklar kaynak metninden okunur (--help çalıştırılmaz)."""
     kok = Path(kok)
     h, u = [], []
-    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md")) + sorted((kok / "ajanlar").glob("*.md"))
+    belgeler = _belge_listesi(kok)
     onbellek = {}
     for b in belgeler:
         if not b.is_file():
@@ -601,7 +739,7 @@ def bayrak_denetimi(kok=KOK):
 def eski_anlatim_denetimi(kok=KOK):
     kok = Path(kok)
     h, u = [], []
-    belgeler = [kok / b for b in BELGE_TARAMASI] + sorted((kok / "rehber").glob("*.md")) + sorted((kok / "promptlar").glob("*.md")) + sorted((kok / "ajanlar").glob("*.md"))
+    belgeler = _belge_listesi(kok)
     for b in belgeler:
         for no, satir in enumerate(_metin(b).splitlines(), 1):
             if any(d.search(satir) for d in ESKI_ANLATIM):

@@ -51,7 +51,7 @@ Bu bölüm 2026-11-18 ölçümüdür.
 | `konu-takip.json`, `trend.json` | Aday repolar ve kararları |
 | `yedekler.json` | Kayıtlı yedekler (yedekler `~/Documents/Claude/yedek` altında, izin 700) |
 | `site-takip.json` | Web sitesinden alınan skillerin kaydı |
-| `notlar/kararlar.md` | Kalıcı kararlar (son: K-62) |
+| `notlar/kararlar.md` | Kalıcı kararlar (son: K-63) |
 
 ### 2.2 Boyut
 | Ne | Boyut |
@@ -633,6 +633,6 @@ Uygulanan her adımda: yeni kararlar `notlar/kararlar.md` dosyasına yazılır, 
 | claude-code-video-toolkit kit mi, program mı | 3. adımda karar |
 | Antigravity'nin `.agents/skills` klasörünü Codex gibi okuduğu | Kabul; ilk gerçek kullanımda doğrulanacak |
 | Model hafızası yükünün sayısal hesabı | 4. adımda belirlenecek |
-| Fihristin dosya biçimi ve yeri | 2. adımda belirlenecek |
+| Fihristin dosya biçimi ve yeri | belirlendi: `fihrist/<owner>__<ad>.json` (biçim `fihrist/README.md`), kit kataloğu `kitler.json`; fihrist ve katalog kaynağı `tip` T1 + `bolum` fihrist/katalog yazılır, araçlar `ortak.arsive_cekilir` ile arşive çekmez |
 | Yeni yıldızlı `sirioberati/YouTube-AI-Video-Editing-System` | Yeni süreç hazır olunca onunla eklenecek |
 | Daha eski açık işler: `google/skills` 197 skilin incelemesi, bekleyen aday kararları, aylık güncelleme (son: 2026-11-02) | Bu plandan bağımsız; sıraları kullanıcıyla belirlenecek |

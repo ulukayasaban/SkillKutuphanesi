@@ -1,0 +1,4 @@
+{
+  "_aciklama": "Kit kataloğu (bolum katalog, tur kit): hazır proje iskeletleri; dosyaları arşive çekilmez, kayıt burada tutulur. Tür, boyut, araç uyumu, ne_ister ve son_kontrol kaynaklar.json kaydındadır (iki yerde aynı bilgi tutulmaz). Şema: dogrula.py kit_hatalari; ayrıntı surecler/tur-kit.md.",
+  "kitler": []
+}

@@ -38,7 +38,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, gh_api, json_oku, json_yaz, repo_guncel, yerel_agac, yerel_commit  # noqa: E402
+from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, arsive_cekilir, gh_api, json_oku, json_yaz, repo_guncel, yerel_agac, yerel_commit  # noqa: E402
 
 GECMIS = KOK / "notlar" / "guncelleme-gecmisi.md"
 ANA_DAL = "master"
@@ -201,7 +201,7 @@ def rapor():
     for s in skiller:
         mevcut.setdefault(s["repo"], s["commit"])  # repodaki tüm kayıtlar kaldırılmışsa eski commit'e düş
     degisen, sorunlu, ayrinti = [], [], {}
-    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")})
+    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4") and arsive_cekilir(k)})
     art_arda = 0
     for i, repo in enumerate(repolar):
         try:
