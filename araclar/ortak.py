@@ -1487,3 +1487,30 @@ def program_klasor_skill_adi(kart, klasor):
         if k == klasor:
             return a
     return klasor
+
+
+# --- tür ve boyut araçları için ortak yardımcılar (tur-belirle.py, boyut-hesapla.py) ---
+MEDYA_UZANTILARI = frozenset(
+    # video, ses, görsel, yazı tipi
+    ".mp4 .mov .webm .mkv .avi .m4v .mp3 .wav .ogg .flac .m4a .aac .png .jpg .jpeg .gif .webp .bmp .tif .tiff .ico .psd .svgz "
+    ".heic .avif .ttf .otf .woff .woff2 .eot "
+    # model ağırlığı, arşiv ve ikili
+    ".safetensors .ckpt .pt .pth .onnx .gguf .bin .h5 .npz .npy .pkl .zip .tar .gz .tgz .bz2 .xz .7z .rar .whl .jar "
+    ".so .dylib .dll .exe .a .o .wasm .pdf .glb .gltf .fbx .blend .obj .db .sqlite".split())
+
+
+def medya_mi(yol: str) -> bool:
+    """Medya ya da ikili dosya mı (uzantıya göre)? Kütüphane boyutu hesabında ayrı toplanır."""
+    return Path(yol).suffix.lower() in MEDYA_UZANTILARI
+
+
+def ham_metin(repo: str, yol: str, ref: str = "HEAD", azami: int = 200_000):
+    """Reponun bir dosyasını raw.githubusercontent.com'dan okur (en çok `azami` bayt, zaman aşımı 15 sn). Okunamazsa None."""
+    import urllib.parse
+    import urllib.request
+    url = f"https://raw.githubusercontent.com/{repo}/{ref}/{urllib.parse.quote(yol)}"
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "skill-kutuphanesi"}), timeout=15) as r:
+            return r.read(azami).decode("utf-8", "replace")
+    except (OSError, ValueError):
+        return None

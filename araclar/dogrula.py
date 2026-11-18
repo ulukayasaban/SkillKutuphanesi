@@ -90,7 +90,9 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
 # metninden okunur, --help'e güvenilmez (birçok araçta argparse yok, --help aracı çalıştırır).
 KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "KAYIP", "EMEKLI")  # T7 = kendi/, T8 = site/ (yerel, GitHub'sız)
 KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "skill_bagimlilik", "kimlik",
-                      "dosya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans")
+                      "dosya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans",
+                      "tur", "bolum", "tur_gerekce", "ne_ister", "ne_indirir", "tek_basina", "kurulmayan_parcalar", "son_kontrol",
+                      "arac_uyumu", "boyut")
 SITE_TAKIP_ARACI = "site-takip.py"
 ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
 GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
@@ -345,6 +347,59 @@ def _e5_taban(kok, h, u):
         u.append("notlar/genel-klasor-tabani.json: surum 1 değil")
 
 
+# Tür/bölüm alanları (notlar/plan-tur-surecleri.md bölüm 4 ve 7): alan VARSA denetlenir, yoksa sessiz (kayıtlara 3. adımda yazılır).
+KAYNAK_TURLERI = {"koleksiyon": "arsiv", "tek-skil": "arsiv", "urun-skil": "arsiv", "repo-ici": "arsiv", "dev-koleksiyon": "fihrist",
+                  "kit": "katalog", "program": "katalog", "referans": "not", "kendi": "arsiv", "site": "arsiv"}
+KAYNAK_BOLUMLERI = ("arsiv", "fihrist", "katalog", "not")
+
+
+def kaynak_tur_hatalari(k):
+    """Bir kaynak kaydının tur/bolum/boyut vb. alanları için HATA metinleri (alan yoksa boş liste)."""
+    repo = k.get("repo")
+    h = []
+    tur, bolum = k.get("tur"), k.get("bolum")
+    if "tur" in k and tur not in KAYNAK_TURLERI:
+        h.append(f"kaynaklar.json: {repo} tur geçersiz: {tur!r} ({', '.join(KAYNAK_TURLERI)})")
+    if "bolum" in k and bolum not in KAYNAK_BOLUMLERI:
+        h.append(f"kaynaklar.json: {repo} bolum geçersiz: {bolum!r} ({', '.join(KAYNAK_BOLUMLERI)})")
+    if tur in KAYNAK_TURLERI and bolum in KAYNAK_BOLUMLERI and KAYNAK_TURLERI[tur] != bolum:
+        h.append(f"kaynaklar.json: {repo} tur {tur!r} bolum {bolum!r} ile uyuşmuyor (olması gereken: {KAYNAK_TURLERI[tur]!r})")
+    for a in ("tur_gerekce", "ne_ister", "ne_indirir"):
+        if a in k and not isinstance(k[a], str):
+            h.append(f"kaynaklar.json: {repo} {a} metin değil")
+    if "tek_basina" in k and not isinstance(k["tek_basina"], bool):
+        h.append(f"kaynaklar.json: {repo} tek_basina bool değil")
+    if "kurulmayan_parcalar" in k and not (isinstance(k["kurulmayan_parcalar"], list) and all(isinstance(x, str) for x in k["kurulmayan_parcalar"])):
+        h.append(f"kaynaklar.json: {repo} kurulmayan_parcalar metin listesi değil")
+    if "son_kontrol" in k:
+        sk = k["son_kontrol"]
+        if not (isinstance(sk, dict) and isinstance(sk.get("tarih"), str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", sk["tarih"])
+                and isinstance(sk.get("commit"), str)):
+            h.append(f"kaynaklar.json: {repo} son_kontrol {{tarih: YYYY-AA-GG, commit: metin}} biçiminde değil")
+    if "arac_uyumu" in k:
+        au = k["arac_uyumu"]
+        if not (isinstance(au, dict) and set(au) <= {"claude", "codex", "antigravity", "windows"} and all(isinstance(v, bool) for v in au.values())):
+            h.append(f"kaynaklar.json: {repo} arac_uyumu {{claude, codex, antigravity, windows: bool}} biçiminde değil")
+    if "boyut" in k:
+        b = k["boyut"]
+        sayi = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool) and v >= 0  # noqa: E731
+        if not isinstance(b, dict):
+            h.append(f"kaynaklar.json: {repo} boyut sözlük değil")
+        else:
+            for a in ("kutuphane_kb", "kurulum_mb"):
+                if a not in b or not sayi(b[a]):
+                    h.append(f"kaynaklar.json: {repo} boyut.{a} sayı değil ya da yok")
+            if not (isinstance(b.get("hesaplanamayan"), list) and all(isinstance(x, str) for x in b["hesaplanamayan"])):
+                h.append(f"kaynaklar.json: {repo} boyut.hesaplanamayan metin listesi değil")
+            if not isinstance(b.get("tarih"), str):
+                h.append(f"kaynaklar.json: {repo} boyut.tarih yok")
+            if "gercek_mb" in b and not sayi(b["gercek_mb"]):
+                h.append(f"kaynaklar.json: {repo} boyut.gercek_mb sayı değil")
+            if "kurulum_mb_devdahil" in b and not sayi(b["kurulum_mb_devdahil"]):
+                h.append(f"kaynaklar.json: {repo} boyut.kurulum_mb_devdahil sayı değil")
+    return h
+
+
 def _e6_kaynaklar(kok, h, u):
     d, var = _json_kayit(kok, "kaynaklar.json", h)
     if not var or d is None:
@@ -373,6 +428,7 @@ def _e6_kaynaklar(kok, h, u):
         yabanci = [x for x in k if x not in KAYNAK_ANAHTARLARI]
         if yabanci:
             u.append(f"kaynaklar.json: {repo} bilinmeyen anahtar: {', '.join(yabanci)}")
+        h.extend(kaynak_tur_hatalari(k))
     _skill_bagimlilik(kok, kayitlar, u)
 
 
