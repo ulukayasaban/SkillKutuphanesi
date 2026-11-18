@@ -1656,6 +1656,49 @@
         "guvenlik_notu": "Betikler yerel kesme/render; ElevenLabs/Kie.ai anahtarları ortam değişkeniyle isteğe bağlı; ağdan kod çalıştırma yok.",
         "yol_onay": "YOL KAPISI: edit-video/SKILL.md:28 '../hyperframes/SKILL.md' kardeş skile gidiyor; bu kopya bilerek hariç (upstream kopya), hyperframes kütüphanede heygen-com/hyperframes kaynağından var ve projeye birlikte kurulur. Kullanıcı 2026-11-18'de onayladı ('Evet, onay yaz')."
       }
+    },
+    {
+      "repo": "sirioberati/YouTube-AI-Video-Editing-System",
+      "tip": "T1",
+      "lisans": "MIT",
+      "oncelik": 4,
+      "tur": "kit",
+      "bolum": "katalog",
+      "tur_gerekce": "Repo bütün olarak kullanılan bir video çalışma düzeni (iki uygulama, şablonlar, ajan talimatları, klasör düzeni); 7 skil doldurulmak üzere bırakılmış boş şablon, tek başına işe yaramaz",
+      "ne_ister": "Python 3.10+, uv; Chrome ya da Edge (tarayıcı konuşma tanıma). API anahtarı gerekmez.",
+      "ne_indirir": "Python paketleri `uv run` ile betik içi bağımlılıklardan iner (hesaplanamadı); konuşma tanıma (whisper) modeli seçilen modele göre iner (hesaplanamadı)",
+      "tek_basina": false,
+      "kurulmayan_parcalar": [
+        "Uygulama kayıtları varsayılan olarak ~/Eyeline/Projects altına yazılır (proje dışı); EYELINE_DATA ile proje içine yönlendirilir"
+      ],
+      "son_kontrol": {
+        "tarih": "2026-11-18",
+        "commit": "616028dcae05dc0a9fc9c9661e7e2b1e7d480ba1"
+      },
+      "arac_uyumu": {
+        "claude": true,
+        "codex": true,
+        "antigravity": true,
+        "windows": true
+      },
+      "boyut": {
+        "kutuphane_kb": 0,
+        "kurulum_mb": 18.4,
+        "kurulum_mb_devdahil": 18.4,
+        "hesaplanamayan": [
+          "whisper modeli (boyut seçilen modele bağlı)",
+          "uv run ile inen Python paketleri (bağımlılık dosyası yok)"
+        ],
+        "tarih": "2026-11-18"
+      },
+      "eklendi": "2026-11-18",
+      "not": "2026-11-18'de yeni tür süreciyle (surecler/yeni-repo.md) eklenen ilk kit. Dosya arşive alınmadı; ayrıntı kitler.json.",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-18",
+        "oturum": "Tek mesajlık özet (tür kit, yalnız katalog kaydı, ~18 MB tahmini, MIT, ücretsiz) görüldü; kullanıcı: 'Evet, ekle'",
+        "commit": "616028dcae05dc0a9fc9c9661e7e2b1e7d480ba1"
+      }
     }
   ],
   "konum_haric": [

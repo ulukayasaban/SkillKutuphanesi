@@ -207,7 +207,7 @@ Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlend
 | shadcn-labs/snapcn | eklendi | 2026-11-17 | Kullanıcı onayıyla eklendi 2026-11-17 (A3) |
 | shen169/amazon-product-research-skill | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | sickn33/agentic-awesome-skills | reddedildi | 2026-10-22 | Toplama |
-| sirioberati/YouTube-AI-Video-Editing-System | reddedildi | 2026-11-15 | 7 SKILL.md'nin tamamı boş placeholder şablonu (PLACEHOLDER - NOT CONFIGURED, tüm alanlar TODO); listede kalır |
+| sirioberati/YouTube-AI-Video-Editing-System | eklendi | 2026-11-18 | kit; yalnız katalog kaydı (yeni tür süreci) |
 | spree/agent-skills | reddedildi | 2026-11-03 | ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy) |
 | superagents-lab/xcode27-skills | reddedildi | 2026-11-03 | lisans yok |
 | swiftwasm/Swift-Wasm-Agent-Skill | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |

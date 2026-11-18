@@ -616,7 +616,7 @@ Her adım kontrolle biter; sıradaki adıma kullanıcı onayıyla geçilir.
 | Adım | İş | Bitti sayılması için |
 |---|---|---|
 | 1 | Bekleyen değişikliklerin commit'i (38 skilin incelemesi, lisans alanı) | `dogrula.py` 0 hata, commit |
-| 2 | **Yeni kayıt süreci:** tür ve bölüm alanları, tür belirleme adımı, boyut hesaplayıcı ve kurulu programlarla sınaması, fihrist ve kit kataloğu kayıt biçimi, `surecler/` dosyaları ve örnek istemler, ajan dosyaları ve `rehber/03` güncellemesi | Testler geçer; bir örnek repo yeni süreçle baştan sona eklenir |
+| 2 (uygulandı 2026-11-18) | **Yeni kayıt süreci:** tür ve bölüm alanları, tür belirleme adımı, boyut hesaplayıcı ve kurulu programlarla sınaması, fihrist ve kit kataloğu kayıt biçimi, `surecler/` dosyaları ve örnek istemler, ajan dosyaları ve `rehber/03` güncellemesi | Testler geçer; bir örnek repo yeni süreçle baştan sona eklenir |
 | 3 | **Mevcut yapılar** (bölüm 12) | Her kaynakta tür var; `dogrula.py` tür eksikliğini HATA sayar |
 | 4 | **Kurulum aracı ve proje raporu:** fihristten ve kitten kurulum, geçici klasör, kilit, rapor | Testler; boş bir deneme projesinde baştan sona kurulum |
 | 5 | **Aylık çalışma:** fihrist ve katalog yenileme, boyut özeti | `--aylik --kuru` yeni adımları gösterir |
@@ -634,5 +634,5 @@ Uygulanan her adımda: yeni kararlar `notlar/kararlar.md` dosyasına yazılır, 
 | Antigravity'nin `.agents/skills` klasörünü Codex gibi okuduğu | Kabul; ilk gerçek kullanımda doğrulanacak |
 | Model hafızası yükünün sayısal hesabı | 4. adımda belirlenecek |
 | Fihristin dosya biçimi ve yeri | belirlendi: `fihrist/<owner>__<ad>.json` (biçim `fihrist/README.md`), kit kataloğu `kitler.json`; fihrist ve katalog kaynağı `tip` T1 + `bolum` fihrist/katalog yazılır, araçlar `ortak.arsive_cekilir` ile arşive çekmez |
-| Yeni yıldızlı `sirioberati/YouTube-AI-Video-Editing-System` | Yeni süreç hazır olunca onunla eklenecek |
+| Yeni yıldızlı `sirioberati/YouTube-AI-Video-Editing-System` | Eklendi (2026-11-18): yeni süreçle eklenen ilk kit; yalnız katalog kaydı |
 | Daha eski açık işler: `google/skills` 197 skilin incelemesi, bekleyen aday kararları, aylık güncelleme (son: 2026-11-02) | Bu plandan bağımsız; sıraları kullanıcıyla belirlenecek |

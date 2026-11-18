@@ -434,6 +434,9 @@ ay = (ARACLAR / "arsiv-yerlestir.py").read_text(encoding="utf-8")
 test("arsiv-yerlestir: arşive yerleştirilecek kayıtlar kaynak-cek manifestinden gelir (kaynaklar.json'u doğrudan taramaz)",
      'json_oku(GECICI / "cekilen" / "manifest.json")' in ay and "manifest.get(\"kayitlar\")" in ay)
 
+test("dogrula: yol kapısı arşive çekilmeyen (fihrist/katalog) kaynakta çalıştırılmaz",
+     'not onay.get("yol_onay") and k.get("bolum") not in ("fihrist", "katalog")' in (ARACLAR / "dogrula.py").read_text(encoding="utf-8"))
+
 gecen = sum(1 for _, k in SONUC if k)
 print(f"{gecen}/{len(SONUC)} test geçti")
 sys.exit(0 if gecen == len(SONUC) else 1)

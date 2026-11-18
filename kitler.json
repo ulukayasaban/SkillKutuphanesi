@@ -1,4 +1,34 @@
 {
   "_aciklama": "Kit kataloğu (bolum katalog, tur kit): hazır proje iskeletleri; dosyaları arşive çekilmez, kayıt burada tutulur. Tür, boyut, araç uyumu, ne_ister ve son_kontrol kaynaklar.json kaydındadır (iki yerde aynı bilgi tutulmaz). Şema: dogrula.py kit_hatalari; ayrıntı surecler/tur-kit.md.",
-  "kitler": []
+  "kitler": [
+    {
+      "repo": "sirioberati/YouTube-AI-Video-Editing-System",
+      "ad": "YouTube AI Video Editing System (Eyeline)",
+      "ne_yapar": "Metin okuma ve kayıt (prompter), yapay zeka destekli kurgu, tasarım panoları, animasyon ve kurgu programına teslim için açık kaynak YouTube video çalışma düzeni",
+      "yapi_ozeti": [
+        "apps/teleprompter/: prompter ve ses kaydı (yerel sunucu, port 5317)",
+        "apps/eyeline-edit/: kurgu inceleme aracı ve kesim araçları (yerel sunucu, port 5320)",
+        "agents/: kayıt, kesim, inceleme, tasarım, animasyon, kurgu ajan talimatları",
+        "skills/: 7 boş skil şablonu",
+        "templates/: tasarım panoları (267 HTML pano, 246'sı animasyonlu), tasarım brifleri",
+        "config/, schemas/, examples/: iş akışı ayarı ve JSON biçimleri",
+        "docs/: kurulum, iş akışı, özelleştirme belgeleri"
+      ],
+      "skiller": [
+        "animation",
+        "cutting",
+        "design",
+        "editor",
+        "recording",
+        "review",
+        "writing"
+      ],
+      "kurulum_betigi": {
+        "var": false
+      },
+      "genel_klasore_yazar": false,
+      "baslamis_projede": "Bütün olarak kurulmaz. templates/ (tasarım panoları) ve apps/ klasörleri çakışmıyorsa ayrı klasör olarak alınabilir; skiller boş şablon olduğu için tek başına önerilmez; CLAUDE.md ve AGENTS.md üzerine yazılmaz",
+      "not": "Kayıtlar varsayılan olarak ev klasörüne (~/Eyeline/Projects) yazılır; kurulum raporunda EYELINE_DATA ile proje içine yönlendirme belirtilir. Yazarı erken sürüm olduğunu ve kesim kararlarının insan incelemesi gerektirdiğini söylüyor."
+    }
+  ]
 }

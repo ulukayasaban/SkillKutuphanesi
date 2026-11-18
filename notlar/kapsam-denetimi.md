@@ -161,6 +161,10 @@
 
 47 repo tarandı; içlerinde skill yok. Program bağıyla verilen (arşive alınmayan) skiller: jacob-bd/gemini-notebook-mcp-cli (1).
 
+## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)
+
+1 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: sirioberati/YouTube-AI-Video-Editing-System
+
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 
 - J-DTurner/etsy-api-skill

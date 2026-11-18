@@ -668,7 +668,7 @@ def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
                 if s.get("repo") == repo and lisans_riskli(s.get("lisans")):
                     u.append(f"lisans {s.get('lisans') or 'belirsiz'} için onay.lisans_onay yok: {repo}")
                     break
-        if kapi and not onay.get("yol_onay"):
+        if kapi and not onay.get("yol_onay") and k.get("bolum") not in ("fihrist", "katalog"):  # arşive çekilmeyen kaynakta taranacak skil yok
             try:
                 sorunlar, _taranan, hata = kapi(repo, None, skiller)
                 if hata:
