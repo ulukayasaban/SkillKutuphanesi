@@ -5,7 +5,7 @@
 - **Kaynak repo:** https://github.com/tuzhechen2005/opus-video-skills
 - **Repo içindeki yol:** `skills/painted-animation`
 - **Commit:** `dafed5bd55eb8bca01baeff2b059cab2446cf042`
-- **Lisans:** NOASSERTION
+- **Lisans:** MIT
 - **Geliştirici:** tuzhechen2005 (kisi)
 - **Arşive alınma:** 2026-11-17
 - **Durum:** tercih

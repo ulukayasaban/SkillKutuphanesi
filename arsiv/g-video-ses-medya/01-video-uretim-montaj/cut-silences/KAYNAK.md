@@ -5,7 +5,7 @@
 - **Kaynak repo:** https://github.com/nateherkai/herk-edit-kit
 - **Repo içindeki yol:** `.claude/skills/cut-silences`
 - **Commit:** `10511e5af86fc47756ea89803b397422e2d89284`
-- **Lisans:** NOASSERTION
+- **Lisans:** MIT
 - **Geliştirici:** nateherkai (kisi)
 - **Arşive alınma:** 2026-11-17
 - **Durum:** tercih

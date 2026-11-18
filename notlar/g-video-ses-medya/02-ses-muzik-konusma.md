@@ -2,7 +2,7 @@
 
 _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **18/33**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **19/33**
 
 ### acestep  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
@@ -321,15 +321,16 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi, kısa ve eksiksiz.
 - **Not:** Aynı ad farklı iş: bu kayıt (OpenMontage) çıplak adın tercihi olarak sabit; Barty-Bart/motion-graphics sürümü sound-effects@barty-bart (HyperFrames/Remotion/GSAP videolarına ölçülü ses geçişi).
 
-### sound-effects@barty-bart  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 66 (B)
+### sound-effects@barty-bart  ·  Barty-Bart/motion-graphics @ 3d83d98  ·  puan 72 (B)
 
-- **Ne yapar:** Add a measured sound pass to a motion-graphics video made with Claude Code (HyperFrames, Remotion, GSAP, Claude Motion or the motion-broll skill). Builds a cue list, checks the music's beat grid against the kick drums, lands cuts on the beat, places one real sound effect per cue from a bundled CC0 library, mixes to -16 LUFS with true peaks below -4 dBFS measured on the exported MP4, and proves it 
-- **Teknoloji:** api-anahtari, ffmpeg, gsap, html, python, remotion _(otomatik tespit)_
+- **Ne yapar:** Claude Code ile yapılmış hareket grafiği videosuna (HyperFrames, Remotion, GSAP, motion-broll) ölçülmüş bir ses geçişi ekler: ipucu listesi çıkarır, müziğin vuruş ızgarasını kick davullarıyla karşılaştırır, ses efektlerini kesim/vuruşlara oturtur, dışa aktarılan MP4'ü ölçer ve kullanıcıya kulaklıkla kontrol için 5 zaman damgası verir. 109 CC0 ses dosyalı paketli kütüphane, varsayılan kit ve CREDITS.txt üretimi var.
+- **Ne zaman:** Bir hareket grafiği videosuna 'whoosh/click/pop/riser/impact' ses efektleri ve müzik oturtmak, lisansı kayıt altına alarak. · **Ne zaman değil:** ElevenLabs ile metinden ses efekti üretmek için değil (sound-effects: üretim); sesi dinlemeden 'iyi geliyor' demez. Müzik lisansı kullanıcıdan teyit edilmeden belirsiz işaretlenir.
+- **Teknoloji:** python, ffmpeg, hyperframes, remotion · **Paketler:** python bağımlılıkları (pip, ses analizi), ffmpeg, isteğe bağlı: ElevenLabs anahtarı
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** Barty-Bart (kisi, ★1347, son güncelleme 2026-10-13, lisans NOASSERTION)
-- **Durum:** alternatif
+- **Durum:** alternatif · **Örtüşme:** video-ses-gecisi → birincil · **Roller:** ses-tasarimci, motion-graphics-sanatcisi
 - **Boyut:** 2455 KB (SKILL.md 13.5 KB, yük orta) · **Bağımlılık:** pip install ile Python bağımlılıkları (ses analizi) ve ses efekti kütüphanesi indirmesi gerekir; ElevenLabs isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (bu işte birincil; ad çakışması yüzünden durum şimdilik alternatif). Ölçüm odaklı ('Claude duyamaz, bu yüzden her adımı ölçer'), lisans denetimi (CC0 ve Mixkit Free), CREDITS.txt, ses efektlerini kütüphane içi paketli dosyalardan alma; atıf yazılı (Voxyz). Kategori kararı: 02-ses-muzik-konusma'da kalır; iş ses (ses efekti yerleştirme, miks, ölçüm) ve ses-efekti grubuyla aynı kategoride durması keşfi kolaylaştırır; 04-motion-graphics'e taşımak bu işi motion kategorisinde ses işinden koparır. Ad çakışması: sound-effects (OpenMontage, ElevenLabs ile üretim) ile aynı ad, FARKLI iş: biri ses ÜRETİR, bu video üzerinde ölçülü ses GEÇİŞİ yapar. Çıplak ad el değiştirmesin diye mevcut tercih korunuyor; durumu tercih yapmak kullanıcı kararı (durum_elle). Ücret: kismen (ElevenLabs isteğe bağlı; ücretsiz yol paketli CC0 kütüphane). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION); ses dosyaları CC0, Mixkit dosyaları çalışma anında indirilir ve repoya konmaz. Güvenlik: DİKKAT (orta) — pip install, çalışma anında Mixkit indirmesi (yalnız proje klasörüne). Örtüşme: video-ses-gecisi grubunda birincil (farklı iş), ses-efekti grubuyla (sound-effects birincil) ilişkili.
 - **Not:** Aynı ad farklı iş: OpenMontage'daki sound-effects çıplak adın tercihi; bu kayıt motion-graphics videolarına ölçülü ses geçişi ekler.
 
 ### speech-to-text  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 100 (A)

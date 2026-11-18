@@ -99,6 +99,7 @@ Alanlar:
   karşılık gelmiyorsa ya da registry'ye işlenmemişse `dogrula.py` UYARI verir.
 - `ad_devral`: bu kaynağın, başka bir kaydın taşıdığı çıplak adı **bilerek** devralacağı adlar (ör. `["motion-design"]`).
   Yazılmazsa çıplak ad eski kayıtta kalır, yeni skill `ad@kaynak` olur. Kullanıcı onayı gerekir (`rehber/09`).
+- `lisans`: GitHub lisansı NOASSERTION döndürüyor ama LICENSE dosyası okunup doğrulandıysa (ör. `"MIT"`) registry'ye bu değer yazılır; kullanıcı onayı `onay.lisans_onay`'da kayıtlı olmalı. Yerel kaynaklarda (T7/T8) sahip bilgisinden gelir.
 - `eklendi`, `onay`: A4'teki onay kaydı (yeni kayıtta zorunlu; dogrula UYARI verir). Onay metninde proje adı yazılmaz.
 - `kayip_tarihi`: `tip` KAYIP iken kaybın doğrulandığı gün (`YYYY-AA-GG`; bölüm E).
 - `eski_adlar`: repo GitHub'da taşındıysa önceki adları (ör. `["eski-sahip/ad"]`); kurulu projelerin kilidi bununla eşlenir.

@@ -2493,6 +2493,14 @@
     "remotion-product-demo": [
       "kismen",
       "Remotion şablonları ücretsiz (MIT); isteğe bağlı snapcn Pro bileşenleri SNAPCN_API_KEY (abonelik) ister. HeyGen yalnız atıf"
+    ],
+    "motion-showreel": [
+      "kismen",
+      "Çekirdek (kod, kendi müziği) ücretsiz; scripts/kie.mjs (Kie.ai müzik/görsel/video, KIE_API_KEY) ve sfx.mjs (ElevenLabs, ELEVENLABS_API_KEY) ücretli üretim çağrıları yapar, skil onay ister"
+    ],
+    "rea-video": [
+      "kismen",
+      "Çözümleme CLI'ı ücretsiz (yerel); isteğe bağlı görsel model (VLM, REA_VLM_API_KEY) ve önerilen ChatCut yeniden yapım aracı üyelik/kredi ister (ücretli kısım isteğe bağlı)"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

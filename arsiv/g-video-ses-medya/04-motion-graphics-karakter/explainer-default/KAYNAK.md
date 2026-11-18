@@ -5,7 +5,7 @@
 - **Kaynak repo:** https://github.com/Barty-Bart/motion-graphics
 - **Repo içindeki yol:** `skills/explainer-default`
 - **Commit:** `3d83d987d658601d8a1269eb691622bdcd427335`
-- **Lisans:** NOASSERTION
+- **Lisans:** MIT
 - **Geliştirici:** Barty-Bart (kisi)
 - **Arşive alınma:** 2026-11-17
 - **Durum:** tercih

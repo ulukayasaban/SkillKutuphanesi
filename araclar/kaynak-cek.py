@@ -285,7 +285,8 @@ def main():
                 repo_sha[repo], agaclar[repo] = repo_agaci(repo)
                 if agaclar[repo].get("_kaynak") == "git":
                     print(f"  {repo}: GitHub repo API'si kapalı, ağaç git ile okundu")
-                agaclar[repo]["_lisans"] = repo_lisansi(repo, agaclar[repo]["tree"])
+                # kayit["lisans"]: GitHub NOASSERTION dönen ama LICENSE dosyası okunup doğrulanmış repo için elle geçersiz kılma (onay.lisans_onay ile)
+                agaclar[repo]["_lisans"] = kayit.get("lisans") or repo_lisansi(repo, agaclar[repo]["tree"])
         except GhBulunamadi as e:
             sys.exit(f"HATA: {repo} erişilemiyor (silinmiş/private olmuş olabilir): {e}\n"
                      f"Arşivdeki kopya korunur. kaynaklar.json'da bu kaydı 'tip': 'KAYIP' yap ya da kaldır.")

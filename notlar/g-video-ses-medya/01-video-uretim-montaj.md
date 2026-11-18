@@ -2,7 +2,7 @@
 
 _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **47/135**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **69/135**
 
 ### 8-bit-orbit-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -120,35 +120,38 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 9 KB (SKILL.md 2.1 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### brag  ·  latent-spaces/brag @ 0637943  ·  puan 89 (A)
+### brag  ·  latent-spaces/brag @ 0637943  ·  puan 85 (A)
 
-- **Ne yapar:** Turn the current project website into a short, polished, shareable launch video using Hyperframes. Use when someone says "/brag", "let's brag about this", "make a launch video", "turn this into a video", or wants to share what they built. Reads the project code directly — no live URL or screenshots needed.
-- **Teknoloji:** node _(otomatik tespit)_
+- **Ne yapar:** Çalışılan projenin kodunu okuyup 15-25 saniyelik, paylaşılabilir bir tanıtım videosu üretir (HyperFrames ile): konsept, senaryo, storyboard, kompozisyon, doğrulama, render ve paylaşım metni. Hazır müzik (CC BY 4.0) ve 228 ses efektiyle gelir; ton ön ayarları (chaotic, polished, yc-parody, cinematic...), dikey/yatay/kare biçim ve isteğe bağlı yerel Kokoro anlatım (--voice) var.
+- **Ne zaman:** Yeni yapılan bir uygulama ya da site için hızlı, esprili ya da cilalı tanıtım/paylaşım videosu ("/brag", "make a launch video") istendiğinde. · **Ne zaman değil:** Çok kareli ayrıntılı ürün filmi, anlatımlı eğitim videosu ya da proje kodu olmayan işler için değil. Yeni modellerde (Opus/Sonnet 5.5, Fable) otomatik olarak brag-slim'e yönlendirir; tam akış için --full gerekir.
+- **Teknoloji:** hyperframes, gsap, node, ffmpeg, python · **Paketler:** hyperframes (npx), ffmpeg, python3 (müzik ipucu betiği)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** latent-spaces (kurum, ★21811, son güncelleme 2026-11-15, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** urun-tanitim-filmi → alternatif · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 16211 KB (SKILL.md 9.9 KB, yük orta) · **Bağımlılık:** brag HyperFrames (npx hyperframes) ile çalışır; brag-slim ek kurulum istemez, makinedeki araçları kullanır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (alternatif). Dar ve kararlı bir iş akışı; proje kodundan başlayıp kapı kapı ilerliyor, ton ve süre kuralları net, GitHub'da çok ilgi görmüş (21 bin yıldız). Yukarı akım notu: SKILL.md'deki references/format.md, look.md, motion.md ve story.md brag'a ait değil, kütüphanedeki hyperframes skilinin referanslarıdır (hyperframes'te bulundu); skill-calistir'in 'eksik' uyarısı yanlış alarmdır, brag yalnız hyperframes ile birlikte kurulursa tam çalışır. Lisans: kod MIT; paketli müzik (Sascha Ende, CC BY 4.0) repo lisansının dışında, kullanımda atıf gerekir. 291 dosya (228 ogg, 32 wav, 5 mp3) boyutu şişirir. Ücret: ucretsiz (Kokoro anlatım yerel). Güvenlik: DİKKAT (orta) — npx hyperframes ve bir Python analiz betiği; ağdan çalıştırılan satır yok, gizli anahtar istemiyor. Sabit yol: references/audio.md:36'daki ~/.claude/skills/brag örnek metindir (yol yalnız sayım sütununda, uyarı değil). Örtüşme: urun-tanitim-filmi grubunda onetake birincil kalır; projenin kendi kodundan hızlı tanıtım teaseri için brag/brag-slim ilk tercihtir.
 
-### brag-slim  ·  latent-spaces/brag @ 0637943  ·  puan 89 (A)
+### brag-slim  ·  latent-spaces/brag @ 0637943  ·  puan 85 (A)
 
-- **Ne yapar:** Turn a project directory or a website URL into a short, shareable launch video with music, motion, and share copy. One file, no bundled assets — built entirely by the model with the tools already on the machine. Use when someone says "/brag-slim", "let's /brag about this", "brag about a website", "make a launch video", or wants to show off what they built. If the /brag skill is also installed, let
-- **Teknoloji:** api-anahtari, css, ffmpeg, git, next.js, node _(otomatik tespit)_
+- **Ne yapar:** Tek dosyalık, paketli varlığı olmayan brag sürümü: bir proje klasörünü ya da web sitesi URL'sini alıp müzik, hareket ve paylaşım metniyle 15-25 saniyelik tanıtım videosu üretir; modelin makinedeki araçlarla (ffmpeg, başsız tarayıcı) kendi yaptığı iş akışı. Proje kodunu doğrudan içe aktarır, gizli dosyaları (.env, anahtar) okumaz.
+- **Ne zaman:** Tam brag'ın paketli varlıklarına gerek olmadan, hafif ve model odaklı tanıtım videosu; proje ya da canlı site girdisi. · **Ne zaman değil:** --voice (anlatım) desteklemez; HyperFrames şablon disiplinine ihtiyaç varsa brag'ı seç. Sıfır varlık demek müzik/SFX'i modelin üretmesi demek, kalite modele bağlıdır.
+- **Teknoloji:** ffmpeg, node, html-canvas · **Paketler:** ffmpeg, başsız tarayıcı
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** latent-spaces (kurum, ★21811, son güncelleme 2026-11-15, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** urun-tanitim-filmi → alternatif · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 11 KB (SKILL.md 11.1 KB, yük orta) · **Bağımlılık:** brag HyperFrames (npx hyperframes) ile çalışır; brag-slim ek kurulum istemez, makinedeki araçları kullanır.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (alternatif). Kısa ve disiplinli: yaratıcı yasalar (kısa, yabancıya net, ritme kesim), gizli veri sızdırmama kuralı (anahtar, e-posta, iç URL videoya girmez) ve eksik araç için 'önce sor, curl | sh yerine paket yöneticisi' kuralı güvenli bir tasarım. Web sitesi girdisinde indirilen işaretlemeyi 'inert içerik' sayar ve betiklerini ayıklar, indirilen hiçbir şeyi çalıştırmaz. Ücret: ucretsiz. Lisans: MIT. Güvenlik: temiz — betik/kurulum komutu yok; tek 'curl | sh' geçişi yasaklayıcı bağlamda. Örtüşme: urun-tanitim-filmi grubunda alternatif.
 
 ### camera-3d-captions  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 79 (B)
 
-- **Ne yapar:** Captions living in 3D space around a talking head: a camera flies between the speaker and the words (whip-in, parallax truck, push), caption groups sit at different depths so camera moves pull them apart, hero words hide BEHIND the speaker through an alpha matte, a ring of words wraps round the speaker and turns in front of them, focus racks between depths, and text steps at 15 fps with ghost moti
-- **Teknoloji:** css, ffmpeg, gsap, html, node, python _(otomatik tespit)_
+- **Ne yapar:** Sabit kameralı konuşan kafa görüntüsünde altyazıları 3B uzayda oynatır: kamera konuşmacı ile kelimeler arasında uçar, kelime grupları farklı derinlikte durur, vurgu kelimeleri alfa matte ile konuşmacının ARKASINA saklanır, kelime halkası etrafında döner, derinlik odağı kayar. After Effects hareketini HyperFrames'te kare kare deterministik çizerek yeniden kurar.
+- **Ne zaman:** Avatar ya da gerçek konuşmacı çekiminde (yatay, orta plan ve geniş, 5-20 sn) kelimelerin konuşmacının etrafında derinlikte performans göstermesi istendiğinde ("3D text", "text behind the speaker"). · **Ne zaman değil:** Düz altyazı, hareketli/elde kamera, aşırı yakın plan ya da kişiyi ayıramayan modeller için değil.
+- **Teknoloji:** hyperframes, gsap, ffmpeg, python · **Paketler:** hyperframes@0.8.62 (npx), ffmpeg, fonttools, numpy, pillow, p5-paint-animation (elle çizim stili için)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★280, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** altyazi → tamamlayıcı · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 90 KB (SKILL.md 8.9 KB, yük orta) · **Bağımlılık:** HyperFrames CLI (npx hyperframes) gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (koşullu, niş). Gereksinimler ve yan etkiler 'tam liste' olarak yazılmış (sürüm sabitli HyperFrames, 170 MB kişi segmentasyon modeli indirir, GSAP CDN'den yüklenir), sınırlar dürüstçe anlatılmış, QC adımları var. Çok özelleşmiş ve ileri düzey. Ücret: ucretsiz (yerel; hiçbir şey yüklenmez). Lisans: Apache-2.0. Güvenlik: DİKKAT (orta) — npx ile CLI indirir, model indirir, yerel Python/shell betikleri (prep-take.sh, build-sprites.py); anahtar yok. Örtüşme: altyazi grubunda captions-overlay ile tamamlayıcı (3B stil).
 
 ### captions-overlay  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 100 (A)
 
@@ -204,35 +207,38 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 92 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Odaklı ve güncel HeyGen resmi skill'i; MCP varsa onu tercih ediyor. Ücretli API, sonuç kontrolü sınırlı.
 
-### cut-mistakes  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 68 (B)
+### cut-mistakes  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 65 (B)
 
-- **Ne yapar:** Agent 2 of the video editing pipeline. Finds and removes spoken mistakes — stutters, repeated words, false starts, and retakes (re-recorded lines) — from a talking-head recording. Use after cut-silences, when asked to cut mistakes, remove stutters / repeats / filler restarts, clean up flubs, or keep the best take. Works review-gated: it proposes every cut with context and a reason for approval, th
-- **Teknoloji:** ffmpeg, html, node _(otomatik tespit)_
+- **Ne yapar:** Konuşan kafa kaydındaki konuşma hatalarını (kekeleme, tekrarlanan kelime, yarım bırakılıp baştan alınan cümle, yeniden çekilen satırlar) bulur ve keser. Mekanik aday bulucu (find-cut-candidates) önerir, ajan her adayı bağlamda okur, kullanıcı onaylar, apply-cuts onaylı kesimleri ffmpeg ile uygular. Vurgu amaçlı tekrarı hata saymamak için inceleme kapısı zorunludur.
+- **Ne zaman:** Video kurgu hattının 2. adımı: sessizlik kırpıldıktan sonra "cut the mistakes", "remove stutters", "keep the best take". · **Ne zaman değil:** Sessizlik kırpma (cut-silences), ham transkript yokken ya da bir doğal konuşmayı kota için kesmek için değil.
+- **Teknoloji:** node, ffmpeg · **Paketler:** node, ffmpeg, kelime düzeyi transkript JSON
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusmayla-kurgu → tamamlayıcı · **Roller:** video-kurgu-render
 - **Boyut:** 21 KB (SKILL.md 4.1 KB, yük kucuk) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Karar-kapılı ve dürüst (mekanik dedektör vurgu ile kekelemeyi ayıramaz, bu yüzden inceleme zorunlu). Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Bu skil için eksik olan scripts/build-edl-review.mjs (inceleme sayfası). Girdisi cut-silences'ın transkriptidir. Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: ucretsiz (skilin kendi betikleri yerel; transkript üretimi başka skilde). Lisans: MIT (repodaki LICENSE okundu; GitHub NOASSERTION gösteriyor). Güvenlik: DİKKAT (düşük) — yerel node betikleri ve ffmpeg. Örtüşme: konusmayla-kurgu grubunda cut-silences'ın ikinci adımı (tamamlayıcı); asıl birincil video-use.
 
-### cut-silences  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 68 (B)
+### cut-silences  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 65 (B)
 
-- **Ne yapar:** Agent 1 of the video editing pipeline. Removes silences and dead air from a talking-head recording. Use when asked to cut silences, trim pauses, remove dead air / gaps, or tighten the pacing of a raw video, given a word-level transcript. Produces an edit list (EDL), a re-timed transcript for downstream agents, and optionally the cut video via ffmpeg. Does NOT cut mistakes, repeats, or false starts
-- **Teknoloji:** ffmpeg, node _(otomatik tespit)_
+- **Ne yapar:** Konuşan kafa kaydından yalnız sessizliği ve boş havayı kırpar: ilk kelimeden önceki ve son kelimeden sonraki boşluk ile eşik üstü (varsayılan 0,55 sn) kelime arası duraklar, doğal nefes payı bırakılarak kısaltılır. Kelime düzeyi transkripti girdi alır; EDL, yeniden zamanlanmış transkript ve (--apply ile) ffmpeg trim+concat çıktısı üretir.
+- **Ne zaman:** Kurgu hattının 1. adımı: "cut the silences", "remove dead air", "tighten the pacing" (transkript hazırsa). · **Ne zaman değil:** Kelime düzeyi transkript yoksa (önce transkripsiyon gerekir) ya da yalnız ses seviyesinden sessizlik kırpmak isteniyorsa (auto-editor ya da ffmpeg-skill silence.py daha uygun).
+- **Teknoloji:** node, ffmpeg · **Paketler:** node, ffmpeg, kelime düzeyi transkript JSON
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusmayla-kurgu → alternatif · **Roller:** video-kurgu-render
 - **Boyut:** 16 KB (SKILL.md 4.7 KB, yük kucuk) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Deterministik, kurallar açık (eşikler, nefes payı kuralları, çıktı dosyaları tabloda). Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Doğrulandı: skill-calistir'in işaret ettiği scripts/validate-beat-sync.mjs ve önkoşuldaki scripts/transcribe-elevenlabs.mjs repo kökündedir, skill klasöründe yok. Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: kismen (varsayılan transkriptör ücretli kotalı, ücretsiz yol var; kayıt zaten ucret-siniflandirma.json'da). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — yerel node betiği + ffmpeg. Örtüşme: konusmayla-kurgu grubunda alternatif; yalnız sessizlik için auto-editor-kurgu (auto-editor birincil) ya da ffmpeg-kurgu (ffmpeg-skill silence.py) daha bağımsız.
 
-### day-in-my-life  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 81 (A)
+### day-in-my-life  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 73 (B)
 
-- **Ne yapar:** A 60 to 75 s hand-drawn ink film of the agent's day with its own user ("a day in my life as <name>'s agent"): one average session from the user's local Claude Code history, beginning to end. The story follows what they actually do (coding, tests, docs, shipping, videos, whatever the history shows), told with their real words (first message, check-ins, corrections, praise, memory titles). It is dra
-- **Teknoloji:** ffmpeg, html, node, python, webgl _(otomatik tespit)_
+- **Ne yapar:** Ajanın kullanıcısıyla geçirdiği tipik bir oturumu, yerel Claude Code konuşma geçmişinden toplayıp 60-75 saniyelik elle çizilmiş mürekkep filmine çevirir (p5.brush, 8 fps kaynayan çizgi, nota nota bestelenmiş yaylı çalgı müziği). Ekrandaki her satır kullanıcının gerçek sözüdür; render öncesi her satır kullanıcı onayından geçer.
+- **Ne zaman:** Claude Code kullanıcısı kendi çalışmasından kişisel bir film istediğinde (en az 10 oturum, 5 gün yerel geçmiş). · **Ne zaman değil:** Başkasının geçmişi, ekip günlükleri, ürün pazarlaması ya da kullanıcının gözden geçirmeyeceği içerik için değil; yerel kayıt yoksa (yalnız claude.ai) durur, söz uydurmaz.
+- **Teknoloji:** p5-brush, hyperframes, node, python, ffmpeg · **Paketler:** hyperframes@0.8.70 (npx), p5 2.3.2, p5.brush, puppeteer, numpy, scipy
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★280, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ajan-oturum-filmi → alternatif · **Roller:** video-kompozisyon
 - **Boyut:** 196 KB (SKILL.md 6.6 KB, yük kucuk) · **Bağımlılık:** GİZLİLİK: Yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, memory dosyaları) okur; skill yalnız kullanıcı 'evet' dedikten sonra okuduğunu söyler. HyperFrames CLI (npx hyperframes) gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (niş, dikkatle). Eğlenceli ve özenli (gizlilik kapısı, 'her satır bir makbuz' ilkesi), ama kullanım alanı çok dar ve iş akışı ağır. Güvenlik: DİKKAT (yüksek) — yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, hafıza dosyaları, ilgili projelerin CLAUDE.md'si) okur; 'evet' denmeden okumaz ve hiçbir şey yüklemez diyor, ama çıktı dosyaları (receipts.json, story.json) kullanıcının gerçek sözlerini taşır, paylaşılmamalı. Ayrıca npm ci / pip install ile bağımlılık indirir (setup.sh elle). Bu skilin kurulumu için kullanıcı onayı şart; ana oturum karar verir. Ücret: ucretsiz (anahtar ve ücretli çağrı yok; Gochi Hand yazı tipi Google Fonts'tan yüklenir). Lisans: Apache-2.0 (p5 LGPL-2.1 bağımlılığı). Örtüşme: ajan-oturum-filmi grubunda session-story ile aynı iş.
 
 ### dayu-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
@@ -254,25 +260,27 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 11 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).
 - **İnceleme:** otomatik
 
-### duo  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 79 (B)
+### duo  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 71 (B)
 
-- **Ne yapar:** Composite any two HTML screens into a locked photo plate of hands holding an open foldable phone — a 1448×1086 still with two blank 495×849 / 498×849 screen slots (left and right) — to make side-by-side meme and comparison videos: TikTok vs Reels, ChatGPT vs Claude, "me vs my friend", before/after, two apps racing. Trigger on: "foldable phone meme", "put X on the left screen and Y on the right", "
-- **Teknoloji:** css, gsap, html, node _(otomatik tespit)_
+- **Ne yapar:** İki HTML ekranını, açık katlanabilir telefonu tutan ellerin sabit fotoğraf plakasına (1448x1086, iki boş ekran yuvası) yerleştirir; TikTok vs Reels, ChatGPT vs Claude, önce/sonra gibi yan yana meme ve karşılaştırma videoları için. Telefon ve eller bir fotoğraftır, yeniden çizilmez; ajan yalnız iki ekranın içinde oynayanı yazar ve render eder.
+- **Ne zaman:** "Foldable phone meme", "X sol ekranda Y sağ ekranda" gibi iki uygulamayı/akışı/sohbeti aynı anda gösteren kısa video. · **Ne zaman değil:** Tek telefon, dizüstü, kullanıcının getirdiği cihaz çerçevesi ya da başka plaka için değil (geometri yeniden ölçülmeli).
+- **Teknoloji:** hyperframes, gsap, node · **Paketler:** hyperframes (npx), node 18+
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★280, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** cift-ekran-karsilastirma-videosu → birincil · **Roller:** video-kompozisyon
 - **Boyut:** 449 KB (SKILL.md 7.9 KB, yük orta) · **Bağımlılık:** HyperFrames CLI (npx hyperframes) gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (niş). İyi tanımlı, tek amaçlı rig; plaka ve geometri piksel ölçülmüş, 'rig'e dokunma' kuralı net. Gereksinimler arasında npx hyperframes@latest (sürüm sabit değil; yeniden üretilebilirlik için sürüm sabitle) ve GSAP'ın jsdelivr'den yüklenmesi var. Ücret: ucretsiz. Lisans: Apache-2.0. Güvenlik: DİKKAT (düşük) — yerel build.mjs, ağ yalnız npm kaydı ve CDN (tam liste yazılmış). Sabit yol: SKILL.md:68'deki ~/.claude/skills/duo örnek metin. Örtüşme: grup yok (tek başına).
 
-### edit-video  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 68 (B)
+### edit-video  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 65 (B)
 
-- **Ne yapar:** Edit a raw talking-head video through transcription, silence trimming, mistake review, visual storytelling, motion graphics, and verified HyperFrames rendering. Use for a complete edit; route a single requested operation directly to its specialist skill.
-- **Teknoloji:** api-anahtari, gsap, node _(otomatik tespit)_
+- **Ne yapar:** Ham konuşan kafa videosunu uçtan uca kurgulayan orkestratör: transkript, sessizlik kırpma, hata incelemesi, görsel hikâye (video-storytelling), hareketli grafik katmanları (hyperframes-video-beats, style-library) ve doğrulanmış HyperFrames render. Proje çıktıları video-projects/<slug>/ altına gider; son teslim: MP4, kurgu kararları, yeniden zamanlanmış transkript ve VERIFY.md.
+- **Ne zaman:** "Bu videoyu baştan sona kurgula": tam kurgu hattı istendiğinde (tek bir işlem isteniyorsa doğrudan ilgili skile yönlendirir). · **Ne zaman değil:** Tek bir adım (yalnız sessizlik, yalnız altyazı) ya da konuşan kafa olmayan videolar için; repo kökündeki yönergeler olmadan bu skil tek başına çalışmaz.
+- **Teknoloji:** hyperframes, node, ffmpeg, gsap · **Paketler:** hyperframes, ffmpeg, node, kardeş skiller (cut-silences, cut-mistakes, video-storytelling...)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusmayla-kurgu → alternatif · **Roller:** video-kurgu-render, video-kompozisyon
 - **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısa ve iyi sıralı kontrol listesi; asıl iş kardeş skillere bağlı. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Ayrıca ../hyperframes/SKILL.md, ../cut-silences ve diğer kardeş yollara göreli başvuru yapıyor; yol-tara 'göreli kardeş yolu' UYARISI veriyor (hyperframes kütüphanede başka yerde var; kardeşler aynı projeye birlikte kurulmalı). docs/TOOLS-AND-API-KEYS.md ve MOTION_PHILOSOPHY.md repo kökündedir (arşivde yok). Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: kismen (kayıt var). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — betik yok, yönlendirir. Örtüşme: konusmayla-kurgu grubunda alternatif (video-use birincil).
 
 ### facebook-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 
@@ -295,15 +303,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 17 KB (SKILL.md 12.9 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kapsamlı ve doğru tarifler; Remotion odaklı örnekler ağırlıkta. video-edit ile birlikte kullanılır.
 
-### ffmpeg-skill  ·  kajisho5/ffmpeg-skill @ f1c97cb  ·  puan 97 (A)
+### ffmpeg-skill  ·  kajisho5/ffmpeg-skill @ f1c97cb  ·  puan 94 (A)
 
-- **Ne yapar:** Edit video and audio with local FFmpeg: cut, join, reframe, speed, captions, overlays, silence removal, sync, loudness, HDR to SDR, platform exports and checks. Use whenever the user mentions a video or audio file (mp4, mov, wav, m4a), footage, captions, a reel or short, YouTube/TikTok delivery, LUFS or ffmpeg, even without saying "edit". Needs FFmpeg 6.1+ and Python 3.10+; stdlib only, no cloud.
-- **Teknoloji:** canvas, ffmpeg, html, python _(otomatik tespit)_
+- **Ne yapar:** Yerel FFmpeg ile video ve ses düzenleme: kesme, birleştirme, yeniden çerçeveleme, hız, altyazı, bindirme, sessizlik kırpma, senkron, ses yüksekliği, HDR→SDR, platform dışa aktarımı ve denetim. 42 araçlı Python betik seti (probe, check, verify, look, render...), isteğe bağlı MCP sunucusu, '--dry-run --json' ile plan-sonra-çalıştır, lossless-önce ve orijinali koruma kuralları.
+- **Ne zaman:** Bir video/ses dosyası (mp4, mov, mp3...) üzerinde ffmpeg işi: kes, birleştir, formatla, altyazı yak, sessizlik/ses düzeyi, platforma hazırla. · **Ne zaman değil:** Yaratıcı kompozisyon/hareket grafiği için değil (HyperFrames/Remotion). Çok ağır bir skil: yalnız ffmpeg işi gerekirse yükle.
+- **Teknoloji:** ffmpeg, python · **Paketler:** ffmpeg, ffprobe, python3, isteğe bağlı: ASR/yazı tipi araçları
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** kajisho5 (kisi, ★7677, son güncelleme 2026-11-16, lisans MIT)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ffmpeg-kurgu → alternatif · **Roller:** video-kurgu-render, ses-tasarimci
 - **Boyut:** 2733 KB (SKILL.md 16.9 KB, yük orta) · **Bağımlılık:** ffmpeg/ffprobe ve Python 3 gerekir (scripts/ altındaki betikler); bazı betikler isteğe bağlı olarak ASR/yazı tipi araçları ister.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (alternatif, ffmpeg işlerinde birincil adayı). Çok kapsamlı ve disiplinli: önce probe, lossless-önce, --dry-run ile plan, çıktıyı check/verify ile sayılarla doğrulama, orijinali ezmeme, ne sorulur/ne varsayılır kuralları. SKILL.md 16,9 KB (referanslar kademeli yüklenir) ve 61 Python dosyası: bağlam ve inceleme maliyeti yüksek. Yerel çalışır, ağ yok; sudo/apt satırları yalnız eksik ffmpeg için kullanıcıya gösterilen öneri metni. Sabit yol: references/scripts.md:1597'deki ~/.claude/skills/ffmpeg-skill/mcp/server.py kurulumda proje içi yola çevrilir (yol onayı verilmişti). Ücret: ucretsiz. Lisans: MIT. Güvenlik: DİKKAT (orta) — 42 yerel betik ffmpeg alt süreçleri çalıştırır, --overwrite ve 'redact' gibi yazan araçlar var; anahtar/ağ yok. Örtüşme: ffmpeg-kurgu grubunda alternatif (video-edit birincil kalır); sessizlik için silence.py (ses ölçümü tabanlı, transkript gerekmez) cut-silences'ten bağımsızdır.
 
 ### figma  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 97 (A)
 
@@ -449,15 +458,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 18 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### hyperframes-video-beats  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 66 (B)
+### hyperframes-video-beats  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 64 (C)
 
-- **Ne yapar:** Plan, write, time, style, and validate motion-graphic beats for long-form talking-head HyperFrames videos. Use when Codex is asked to add or improve visual beats, glassmorphism lower thirds, crumpled-paper full-screen takeovers, transcript-synced callouts, pacing coverage, YouTube retention graphics, or render-ready overlays in an existing HyperFrames video project.
-- **Teknoloji:** css, gsap, html, node _(otomatik tespit)_
+- **Ne yapar:** Uzun konuşan kafa HyperFrames videoları için hareketli grafik 'vuruşlarını' planlar, yazar, zamanlar ve doğrular: büyük tez/liste/istatistik anları için tam ekran buruşuk kâğıt kapanışları, destekleyici bilgi için cam efektli alt üçlük kartları. Transkripte dayalı kapsama haritası, vuruş türü karar kuralları ve kısa süre/seyrek renk kuralları içerir.
+- **Ne zaman:** Konuşan kafa videosuna görsel vuruş eklerken ya da mevcut vuruş programını iyileştirirken ("lower third", "paper takeover", "add beats"). · **Ne zaman değil:** Videonun kendisinin görsel dünyasını tasarlamak için değil (video-storytelling); boşluk dolduran gereksiz grafikler için değil.
+- **Teknoloji:** hyperframes, gsap, css · **Paketler:** hyperframes
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusan-kafa-gorsel-katman → alternatif · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 8 KB (SKILL.md 8.2 KB, yük orta) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İlkeler iyi (her vuruş bir soruya cevap vermeli, boşluk için grafik eklenmez), kurallar somut. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Windows PowerShell/Codex komut ipuçları içerir (Select-String); Claude'a özgü araç varsayımı yok. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: temiz — betik yok. Örtüşme: konusan-kafa-gorsel-katman grubunda alternatif (motion-broll birincil).
 
 ### hyperframes@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
 
@@ -524,13 +534,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### make-a-video  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 61 (C)
 
-- **Ne yapar:** Beginner-friendly end-to-end video creator for HyperFrames. Use when the user says "make a video", "create a video", "new video", "build a video", "video from scratch", "I want to make a video", "help me create a video", or when someone who's never used HyperFrames before arrives with a concept, script, or rough idea and wants a finished MP4. Interviews the user in one pass, then builds the full v
-- **Teknoloji:** canvas, css, ffmpeg, gsap, html, node, python, webgl _(otomatik tespit)_
+- **Ne yapar:** HyperFrames için yeni başlayana uygun uçtan uca video üretici: iki aşama, sekiz sıralı kapı. 1-4 kapıda amaç, biçim, senaryo/ses, stil ve varlıklar görüşmeyle toplanıp BRIEF.md'ye bağlanır ve onay beklenir; 5-8 kapıda iskele, storyboard, kompozisyon, lint, Studio önizleme, taslak render, görsel doğrulama ve final MP4 gelir.
+- **Ne zaman:** "Make a video", "video from scratch": HyperFrames'e yeni olan, konsept/senaryo/ana hatla başlayan kullanıcı. · **Ne zaman değil:** URL'den video (website-to-hyperframes), 9:16 yüz kameralı kısa video (short-form-edit) ya da yalnız çerçeve kuralı (hyperframes) için devretmeli.
+- **Teknoloji:** hyperframes, gsap, node, ffmpeg · **Paketler:** hyperframes (npx), ffmpeg
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı · **Roller:** video-kompozisyon
 - **Boyut:** 44 KB (SKILL.md 12.3 KB, yük orta) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kapılı, görüşmeli akış iyi (her kapı bir çıktı üretir, onaysız kod yazılmaz), ama bu işi hyperframes + diğer skiller zaten karşılıyor. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Ücret: ucretsiz (TTS yerel hyperframes tts). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — npx hyperframes komutları; betik yok. Örtüşme: hyperframes-cekirdek grubunda tamamlayıcı.
 
 ### media-use  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 100 (A)
 
@@ -584,15 +595,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 35 KB (SKILL.md 26.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### motion-showreel  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 64 (C)
+### motion-showreel  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 62 (C)
 
-- **Ne yapar:** Design and build a 10-30 second motion-design showreel or brand reel in the style of Nate's Opus 5.5 \"CLAUDE / MOTION REEL\": one brand motif transformed through labeled craft chapters, a persistent HUD, cuts locked to a 120-130 BPM grid, a sub-second flurry, and a held logo lockup that answers the opening. Use when asked for a showreel, sizzle reel, brand reel, motion reel, \"a reel like the Opu
-- **Teknoloji:** api-anahtari, canvas, ffmpeg, gsap, html, node _(otomatik tespit)_
+- **Ne yapar:** 10-30 saniyelik hareket tasarımı showreel'i ya da marka reeli kurar: tek bir marka motifi etiketli zanaat bölümlerinde dönüşür, kalıcı HUD, 120-130 BPM ızgarasına kilitli kesimler, saniyenin altındaki 'flurry' ve açılışa cevap veren logo kilidi. Referans reel'in saniye saniye analizi, bölüm kütüphanesi ve HUD şablonu ile gelir; sfx/müzik/ritim betikleri vardır.
+- **Ne zaman:** "Showreel", "sizzle reel", "brand reel", "15 saniyelik markalı film" ya da bir reel'in neden çalıştığını inceleyip başka marka için yeniden kurmak. · **Ne zaman değil:** Düz ürün demosu, anlatımlı video ya da kendi görsel kimliği olmayan işler için değil; ücretli üretim çağrıları (müzik, görsel, video) kullanıcı onayı olmadan yapılmamalı.
+- **Teknoloji:** hyperframes, gsap, node, ffmpeg · **Paketler:** hyperframes, ffmpeg, node, isteğe bağlı: KIE_API_KEY, ELEVENLABS_API_KEY
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** kodla-showreel → alternatif · **Roller:** motion-graphics-sanatcisi, video-kompozisyon
 - **Boyut:** 58 KB (SKILL.md 10.8 KB, yük orta) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Tasarım dilbilgisi güçlü (tek motif, ritme kesim, kalıcı HUD), ama yöntem belirli bir referans reel'e bağlı ve ağır. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Frontmatter sorunu: description tırnaksız ve ': ' içeriyor, YAML bozuluyor; kurulumda frontmatter_onar otomatik olarak JSON tırnağına çeviriyor (elle iş yok). Ücret: kismen — sfx.mjs (ElevenLabs) ve kie.mjs (Kie.ai: müzik, görsel, video) ücretli çağrılar yapar, anahtarı ortamdan ya da çalışma alanı .env dosyasından okur; skil 'önce onay iste' diyor, çekirdek iş (kod ve kendi müziğinle) ücretsiz. Güvenlik: DİKKAT (orta) — ücretli API anahtarı okuyan yerel betikler ve dış servise veri gönderen üretim komutları; kullanıcı onayı şart. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Örtüşme: kodla-showreel grubunda alternatif (kinetic-reel birincil).
 
 ### moviepy  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 83 (A)
 
@@ -616,15 +628,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 2715 KB (SKILL.md 23.7 KB, yük orta) · **Bağımlılık:** Lisans PolyForm Noncommercial 1.0.0: yalnızca ticari olmayan kullanım serbest. ffmpeg, node ve Python 3 ister; seslendirme için Kokoro (~/.cache/kokoro/venv altına kurulur) ve faster-whisper.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (urun-tanitim-filmi grubunda birincil). Tek konulu uzman repo; hareket kütüphanesi (lib/motion.js), 12 betik, ritim ve süreklilik ölçümü, 7 referans belgesi. Yerel ve ücretsiz çalışır. Çalıştırma testi yapılmadı. DİKKAT: lisans PolyForm Noncommercial 1.0.0 (yalnızca ticari olmayan kullanım); GitHub lisansı tanımadığı için kayıtta NOASSERTION görünür. Örnek filmler ve GIF'ler (cases/, gallery/, assets/) arşive alınmadı.
 
-### open-edit  ·  veedstudio/open-edit @ e4dc938  ·  puan 82 (A)
+### open-edit  ·  veedstudio/open-edit @ e4dc938  ·  puan 73 (B)
 
-- **Ne yapar:** Video work with VEED's hosted services and a CLI toolkit — word-timed transcription, cutting, background removal, AI presenters, lipsync, any fal model, sound mixing, and a Chrome renderer for HTML compositions that re-renders only what changed. Captions, edits, motion graphics, or pieces with no footage at all; hands a finished piece to VEED's editor as an editable project, and takes projects bac
-- **Teknoloji:** canvas, css, ffmpeg, gsap, html, node, three.js _(otomatik tespit)_
+- **Ne yapar:** VEED'in barındırılan servisleri ve bir CLI araç takımıyla video işi: kelime zamanlı transkripsiyon, kesme, arka plan silme, AI sunucu, dudak senkronu, herhangi bir fal modeli, ses karışımı ve HTML kompozisyonlarını yalnız değişen kısmı yeniden render eden Chrome render'ı. Ajan parçayı HTML sayfası olarak yazar ve render eder; her parça runs/<anahtar>/ klasöründe durur.
+- **Ne zaman:** VEED hesabı/kredisiyle barındırılan transkript, arka plan silme, AI sunucu ya da lipsync gereken video işlerinde; HTML'den artımlı render istendiğinde. · **Ne zaman değil:** Tamamen yerel/ücretsiz hat isteniyorsa (hyperframes, video-use, ffmpeg-skill, auto-editor kullan); VEED/fal hesabı ve kredisi yoksa.
+- **Teknoloji:** veed, html-render, chrome, node, fal · **Paketler:** @veedstudio/openedit-cli (npx), VEED girişi ve fal/VEED kredisi, Chrome
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** veedstudio (kurum, ★1838, son güncelleme 2026-11-11, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusmayla-kurgu → alternatif · **Roller:** video-kurgu-render, ai-medya-uretici
 - **Boyut:** 46 KB (SKILL.md 24.1 KB, yük orta) · **Bağımlılık:** VEED barındırılan servisleri (transkript, arka plan silme, AI sunucu, lipsync) ve fal modelleri için VEED/fal kredisi gerekir; CLI araç takımı npx ile indirilir. Chrome render.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (dikkatle). Kurulum akışı temkinli tasarlanmış (init --dry önce, makineyi etkileyen her adım kullanıcıya açık yazılır ve onay beklenir), araç sınırları belgeli. Güvenlik: DİKKAT (yüksek) — npx --yes @veedstudio/openedit-cli çalıştırır (ağdan indirip çalıştırır), 'init --auto-approve' ile kurulum adımlarını uygular (skilin kendisi 'kullanıcı açık evet demeden makineyi etkileyen kurulum yapma' diyor), 'update available' çıkınca 'init --update' önerir; VEED girişi (kimlik) ve barındırılan servislere video/ses yüklenir. Ücret: kismen (kayıt var: VEED/fal kredisi). Lisans: Apache-2.0. Bağlama bağımlı: gövde 24 KB. Örtüşme: konusmayla-kurgu grubunda alternatif (barındırılan-servis tabanlı).
 
 ### openmontage  ·  yerel/kendi @ 3c8d08e  ·  puan 73 (B)
 
@@ -650,13 +663,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### p5-paint-animation  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 81 (A)
 
-- **Ne yapar:** Turn a text prompt, a photo, or a live video clip into hand-made-looking p5.js animation — pencil handwriting that writes itself, photos repainted as brushstroke art with paint-on animation and camera moves, and short videos (iPhone Live Photos included) repainted frame-by-frame as a living painting. Trigger on: "handwritten text animation", "paint this photo", "painted video", "sketch effect", "t
-- **Teknoloji:** canvas, ffmpeg, node _(otomatik tespit)_
+- **Ne yapar:** Metin istemini, fotoğrafı ya da kısa video klibi (Live Photo dahil) elle yapılmış gibi görünen p5.js animasyonuna çevirir: kendi kendine yazılan kurşun kalem el yazısı, fırça darbeleriyle yeniden boyanmış fotoğraf (kendini boyayan film, kamera hareketi) ve kare kare yeniden boyanmış canlı resim. %100 kod, p5.brush başsız render, görüntü modeli yok.
+- **Ne zaman:** El yapımı görünümlü hareket gerektiğinde: kendini yazan el yazısı, fotoğrafı fırça sanatına çevirme, kısa klibi yaşayan resme çevirme ("painted video", "write-on effect"). · **Ne zaman değil:** Net tipografi/marka yazısı, fotogerçekçi çıktı, ~10 saniyeden uzun görüntü (kare başı 5-20 sn render) ya da canlı/etkileşimli sayfa için değil.
+- **Teknoloji:** p5-brush, p5js, node, ffmpeg, puppeteer · **Paketler:** node 22.12+, ffmpeg, puppeteer 25.9.0, p5 2.3.2, p5.brush 2.2.1
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★280, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** p5-boyali-animasyon → birincil · **Roller:** motion-graphics-sanatcisi, video-kompozisyon
 - **Boyut:** 82 KB (SKILL.md 6.9 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI (npx hyperframes) gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Üç akış (yazı, fotoğraf, video) tek motorla, girdi tablosuyla seçiliyor; 'ne zaman değil' listesi ve başarı doğrulama adımı var, bağımlılıklar kilit dosyasıyla sabit, sketch'lerde ağ ve yerel dosya erişimi engelli. Ücret: ucretsiz. Lisans: Apache-2.0 (p5 LGPL-2.1). Güvenlik: DİKKAT (orta) — setup.sh elle çalıştırılır (npm kaydından sabit sürümler + Google'ın Chrome for Testing'i, ~500 MB), anahtar/ücretli çağrı yok; isteğe bağlı npx hyperframes remove-background. Örtüşme: p5-boyali-animasyon grubunda birincil (genel amaçlı yardımcı), painted-animation hikâye/karakter çizgi filmi için alternatif.
 
 ### parody-short  ·  digitalsamba/claude-code-video-toolkit @ 01e85f4  ·  puan 75 (B)
 
@@ -691,15 +705,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 20 KB (SKILL.md 12.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Genel ve bağımsız çalışan tarifler; Remotion odaklı örnekler.
 
-### prod-by-claude  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 81 (A)
+### prod-by-claude  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 73 (B)
 
-- **Ne yapar:** Use when an agent needs to make a HyperFrames video of a Strudel live-coding track, where the code itself is the picture and every token lights up on the note it plays. Trigger on: "strudel video", "live coding video", "show my code playing", "make a video of this track with the code", "prod by claude". Covers composing the track, recording it offline from pinned Strudel, and building the 1080x108
-- **Teknoloji:** gsap, html, node _(otomatik tespit)_
+- **Ne yapar:** Bir Strudel (canlı kodlama) parçasının videosunu yapar: kod resmin kendisidir ve her sembol çaldığı notada yanar. Parçayı bestelemek, çevrimdışı kaydetmek ve 1080x1080 videoyu kurmak (yazılan açılış, açılan bölümler, gerçek Strudel tema geçişleri, graffiti ASCII düşüşleri, yazılan imza) akışı içindedir.
+- **Ne zaman:** "Strudel video", "live coding video", "prod by claude": Strudel kodunun çalışmasını gösteren video ya da ajanın bestelediği parçanın videosu. · **Ne zaman değil:** Başka ses/DAW projeleri, konuşan kafa videoları ve Strudel kodu olmayan ses görselleştirmeleri için değil (HyperFrames müzik akışı kullanılır).
+- **Teknoloji:** strudel, hyperframes, node, puppeteer, ffmpeg · **Paketler:** hyperframes@0.8.70 (npx), @strudel/web 1.3.0, puppeteer-core, Chrome for Testing 149
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★280, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** strudel-canli-kod-videosu → birincil · **Roller:** video-kompozisyon, ses-tasarimci
 - **Boyut:** 90 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI (npx hyperframes) gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (niş). Tek amaçlı, iyi belgelenmiş (sürümler sabit, kayıt süresi ve sorun giderme yazılı). Yukarı akım notu: skill-calistir'in 'assets/bgm.wav yok' uyarısı yanlış alarm: dosya skilin kendi record.mjs betiğinin ürettiği çıktıdır, paketli olması beklenmez. Ücret: ucretsiz. Lisans: Apache-2.0; Strudel AGPL-3.0 (npm'den kurulur, pakete gömülü değil). Güvenlik: DİKKAT (orta) — npm install, Chrome for Testing indirme (npx @puppeteer/browsers), 5-7 dk'lık yerel kayıt; anahtar yok. Örtüşme: grup yok.
 
 ### provider-refresh-oct23  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 93 (A)
 
@@ -712,15 +727,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Güncel ve katı sözleşme listesi; yeni fiyatların çoğu taze hesap teklifi ister, süresi dolmuş promosyonlar kalıcı fiyat sayılmaz. HeyGen ücretsiz Turbo erişimi 30 Kasım 2026'da bitiyor ve hata durumunda ücretliye geçilmiyor. Tamamen OpenMontage araç kayıtlarına bağlı; çoğu yol ücretli API.
 
-### rea-video  ·  JuneYaooo/rea-video @ 6461571  ·  puan 88 (A)
+### rea-video  ·  JuneYaooo/rea-video @ 6461571  ·  puan 77 (B)
 
-- **Ne yapar:** 逆向拆解一条视频是怎么做出来的——逐镜头判断实拍 / 影视片段 / AI 生成 / 3D 渲染 / 2D 动画 / 定格动画 / 代码模板渲染 / 录屏截图 / 静态图推拉 / 静帧，以及实拍是否经过 AI 加工（换脸、对口型、风格化），标出后期叠加层（逐句字幕时间轴、花字、标题、贴纸 / GIF / 表情包、画中画）和用户真实素材，拆解人声、背景音乐、音效（卡在哪个画面事件上）与剪辑节奏，并给出可执行的复刻方案（可用 capsule-cinema、ChatCut 等复刻）。当用户给出参考视频、问"这条视频怎么做的 / 是不是 AI / 用了什么素材 / 怎么复刻 / 想二创或做一条同款"时使用。
-- **Teknoloji:** ffmpeg, html, python _(otomatik tespit)_
+- **Ne yapar:** Bir videonun nasıl yapıldığını tersine mühendislikle çözer: her çekimin altındaki görüntünün kaynağı (gerçek çekim, film klibi, AI video, dijital insan, 3B render, 2D/stop-motion animasyon, kod şablonu, ekran kaydı...), üstündeki kurgu paketi (altyazı, çıkartma, şablon), kullanıcının gerçek malzemesi, ses kaynağı (TTS/BGM/efekt) ve gerçek çekimde ışık/kamera. rea-video CLI'ı VIDEO.md, rapor, storyboard ve çekim kırpıntıları üretir; yeniden yapım (remake) rotası verir.
+- **Ne zaman:** Bir referans videonun nasıl çekildiğini/üretildiğini çözmek, aynısını ya da benzerini yeniden yapmak için çekim çekim plan almak. · **Ne zaman değil:** Sıfırdan video üretimi için değil; rea_video Python paketi (pip) kurulu değilse çalışmaz. Gövde Çince yazılmış (araçlar ve çıktılar İngilizce/Çince seçilebilir).
+- **Teknoloji:** python, ffmpeg, vlm, ocr · **Paketler:** rea-video[ocr] (pip, git+https), ffmpeg, Python 3.10+, isteğe bağlı: görsel model (VLM) anahtarı
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** JuneYaooo (kisi, ★10200, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** video-analiz → alternatif · **Roller:** ai-medya-uretici, planlayici
 - **Boyut:** 81 KB (SKILL.md 19.7 KB, yük orta) · **Bağımlılık:** Repo kökündeki rea_video Python paketi gerekir (pip install); ilk çalışmada model indirir (ağ, disk).
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (dikkatle). Yöntem güçlü ve dürüst ('her sonuç kanıtlı, emin değilsen 'onay bekliyor' yaz', VLM işlemiyorsa raporda açıkça yaz), kademeli token okuma. Gövde ve çoğu referans Çince; Türkçe özet bu yüzden gereklidir. Yukarı akım eksiği: skil klasörü yalnız SKILL.md ve 12 kadar referanstır; çalışması için gereken rea_video Python paketi repo kökündedir (pip install ile kurulur), arşivde yok. Güvenlik: DİKKAT (yüksek) — references/setup.md `pip install "rea-video[ocr] @ git+https://github.com/JuneYaooo/rea-video"` ile ağdan paket kurdurur ve 'bash scripts/install_skill.sh' önerir (CLI kurar ve skili 'her ajan klasörüne bağlar', yani genel skill klasörlerine yazar; bu kütüphanede asla kullanılmamalı); references/chatcut.md macOS için `curl -fsSL https://chatcut.io/install.sh | sh` ve Windows için `irm ... | iex` ile üçüncü taraf masaüstü uygulaması kurdurur ve hesap girişi ister; VLM için REA_VLM_API_KEY/BASE_URL ortam değişkenleri. Ücret: kismen — çekirdek ücretsiz; ChatCut üyeliği/kredisi ve VLM API'si isteğe bağlı ücretli (kayıt güncellendi). Lisans: Apache-2.0. Örtüşme: video-analiz grubunda alternatif (video-understand birincil, kalan: üretim yöntemi çözme).
 
 ### referans  ·  leodavincs/kalem @ ba19c9f  ·  puan 70 (B)
 
@@ -1027,35 +1043,38 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 16 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Başvurduğu lib/components, lib/transitions ve remotion-official bu kurulumda/arşivde yok; tek başına çalışmaz.
 
-### session-story  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 81 (A)
+### session-story  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 73 (B)
 
-- **Ne yapar:** An agent makes an animated film of an average session with its own user, beginning to end, told with that user's real messages: whatever their routine is (code, writing, data, design, video). The agent sits at a desk in a room decorated from what it knows about the user, and the monitor shows their kind of work. Requests glide in as paper planes and unfold. Corrections are a 3D cartoon mallet that
-- **Teknoloji:** api-anahtari, ffmpeg, node, python, webgl _(otomatik tespit)_
+- **Ne yapar:** Ajanın kullanıcısıyla geçirdiği tipik bir oturumu, kullanıcının gerçek mesajlarıyla 40-70 saniyelik animasyon filmine çevirir: ajan bir masada oturur, oda kullanıcıya göre döşenir, istekler kâğıt uçak olarak gelir, düzeltmeler 3B çekiç olur, övgü kelebek olur; ajan kendi orkestra müziğini film saatine göre besteler. p5.brush suluboya, HyperFrames ile render.
+- **Ne zaman:** Kullanıcı ajanından birlikte çalışmalarının filmini istediğinde ("a video of our session", "session story") ve ajanın gerçek geçmişi varsa (yerel kayıt ya da yapıştırılan mesajlar). · **Ne zaman değil:** Başkasının geçmişi, ekip günlükleri, uydurma alıntılı pazarlama ya da kullanıcının gözden geçirmeyeceği içerik için; geçmiş yoksa kullanıcıdan mesaj ister, alıntı uydurmaz.
+- **Teknoloji:** p5-brush, hyperframes, node, python, ffmpeg, swift · **Paketler:** hyperframes@0.8.71 (npx), p5 2.3.3, p5.brush 2.2.3, swift (macOS) ya da fluidsynth
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★280, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** ajan-oturum-filmi → birincil · **Roller:** video-kompozisyon
 - **Boyut:** 294 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** GİZLİLİK: Yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, memory dosyaları) okur; skill yalnız kullanıcı 'evet' dedikten sonra okuduğunu söyler. HyperFrames CLI (npx hyperframes) gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (niş, dikkatle). Yaratıcı ve titiz (her satır alıntı, kullanıcı her satırı onaylar), ama ağır ve dar. Güvenlik: DİKKAT (yüksek) — ajanın kendi konuşma kayıtlarını okur (~/.claude/projects/<proje>/*.jsonl, ~/.codex/sessions, hafıza ve talimat dosyaları); skill 'kullanıcı evet dedikten sonra' diyor, --all-projects ile tüm projeler taranabilir. GEMINI_API_KEY ortamda varsa 'snapshot' komutu kareleri (kullanıcının sözlerini) Gemini'ye gönderir: her snapshot'a --describe false verilmeli. Çıktılar (session-story-candidates.json) kullanıcının sözlerini taşır, paylaşılmamalı. setup.sh npm ci çalıştırır. Ücret: kismen (Gemini isteğe bağlı; yerel çalışır). Lisans: Apache-2.0. Örtüşme: ajan-oturum-filmi grubunda birincil (Codex geçmişini de kapsar, her rutin türü), day-in-my-life alternatif.
 
-### short-form-edit  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 66 (B)
+### short-form-edit  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 64 (C)
 
-- **Ne yapar:** Turn talking-head footage into a finished reel, YouTube Short, or short advertisement with curiosity-led openings, earned payoffs, story-driven cuts, transcript-synced motion graphics, moving B-roll, captions, subtle music, and synchronized sound effects. Use for short-form editing; use edit-video for long-form videos and cut-silences for pause removal alone.
-- **Teknoloji:** api-anahtari, canvas, css, ffmpeg, html, node _(otomatik tespit)_
+- **Ne yapar:** Konuşan kafa görüntüsünü bitmiş bir reel, YouTube Short ya da kısa reklama dönüştürür: merak uyandıran açılış, hak edilmiş sonuç, hikâyeye dayalı kesim, transkripte kilitli hareketli grafik, hareketli B-roll, altyazı ve ince müzik. Varsayılan 1080x1920, istenirse ayrı çerçeveli 1920x1080; kayıtlı kurgu planı ve doğrulama betikleriyle.
+- **Ne zaman:** Konuşan kafa kaydından dikey kısa video ya da reklam; referans reel verildiyse onun ritmi. · **Ne zaman değil:** Uzun biçimli videolar (video-storytelling), 'viral olur' garantisi isteyen işler (düzenleme bunu garanti edemez) ya da bu hattın bağımlılıkları olmayan ortamlar için değil.
+- **Teknoloji:** hyperframes, node, ffmpeg, gsap · **Paketler:** hyperframes, ffmpeg, node
 - **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** dikey-kisa-video → birincil · **Roller:** video-kurgu-render, video-kompozisyon
 - **Boyut:** 45 KB (SKILL.md 21.2 KB, yük orta) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İlk 3 saniye ilkesi ve doğrulama kapıları iyi; ama büyük (21 KB) ve yazarın kişisel kurgu rehberine (docs/EDITING-PLAYBOOK.md) bağlı. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. skill-calistir'in 'assets/*.json yok' uyarısı yanlış alarm: plan.json, transcript.json, edit-decisions.json ve footage-ledger.json çalışma anında video-projects/<slug>/ altında üretilen proje dosyalarıdır (references/plan-schema.md bunları tarif eder); eksik olan gerçek yukarı akım dosyalar docs/EDITING-PLAYBOOK.md ve docs/TOOLS-AND-API-KEYS.md'dir. Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Üretilmiş ek görüntü için ücretli servis (Kie vb.) ayrıca belirtilmiş. Ücret: kismen (kayıt var). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — yerel doğrulama betikleri (validate-plan, validate-footage). Örtüşme: dikey-kisa-video grubunda birincil.
 
-### short-form-video  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 66 (B)
+### short-form-video  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 56 (C)
 
-- **Ne yapar:** Maintain the existing May Shorts teaching compositions using their legacy face-mode, scene-overlay, and karaoke-caption patterns. Use only when working on those examples or explicitly requesting this legacy scaffold. For new reels, Shorts, or short advertisements, use short-form-edit.
-- **Teknoloji:** api-anahtari, canvas, css, ffmpeg, gsap, html, node, webgl _(otomatik tespit)_
+- **Ne yapar:** Eski 'May Shorts' öğretim kompozisyonlarının bakımı için eski kalıp: yüz modu, sahne bindirmeleri ve karaoke altyazı (1080x1920, 10-30 sn); ses önce kesilir, kompozisyon iskelesi dört katmanlıdır (arka plan, dikiş, altyazı, yüz). Yeni reeller için değil, short-form-edit kullanılmalı.
+- **Ne zaman:** Yalnız o örneklerin bakımı ya da bu eski dört katmanlı iskeleyi bilerek istemek. · **Ne zaman değil:** Yeni reel/Short kurgusu için (short-form-edit kullan). Önce /hyperframes çağrılmalı.
+- **Teknoloji:** hyperframes, gsap · **Paketler:** hyperframes
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** dikey-kisa-video → alternatif · **Roller:** video-kompozisyon
 - **Boyut:** 20 KB (SKILL.md 19.8 KB, yük orta) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Kendini 'legacy' ilan ediyor (yeni işler için short-form-edit). Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Doğrulandı: SKILL.md'nin işaret ettiği scripts/transcribe-elevenlabs.mjs repo kökünde, references/captions.md ise skil klasöründe değil kütüphanedeki hyperframes skilinin references/captions.md dosyasıdır (orada var). Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: kismen (kayıt var). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — transkript için kök betik ses dosyasını ElevenLabs'e yükler (kullanıcı seçimine bağlı); skilin kendisinde betik yok. Örtüşme: dikey-kisa-video grubunda alternatif (eski).
 
 ### slideshow  ·  heygen-com/hyperframes @ ab66e5b  ·  puan 97 (A)
 
@@ -1108,15 +1127,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 8 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### style-library  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 68 (B)
+### style-library  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 57 (C)
 
-- **Ne yapar:** Select, customize, or extend the project's reusable motion-graphics card library and style templates. Use for choosing a visual style, adding a card, building a new style pack, or reusing a template in a HyperFrames video.
-- **Teknoloji:** css, gsap, node _(otomatik tespit)_
+- **Ne yapar:** Projenin yeniden kullanılabilir hareket grafiği kart kütüphanesini ve stil şablonlarını seçmek, özelleştirmek ya da genişletmek için kısa bir yönlendirme: GUIDE.md ve registry.json'u okuyup stile/seviyeye/amaca göre süzer, seçilen kartı kompozisyona kopyalar ve yerelleştirir, slot değerlerini doldurur. Yeni stil için new-style.mjs ve build-registry.mjs betiklerini işaret eder.
+- **Ne zaman:** Bir videoya hazır kart/stil seçerken ya da yeni stil paketi eklerken (yalnız stil kütüphanesi de yanında kuruluysa). · **Ne zaman değil:** Kütüphane içeriği olmadan: bu kopyada kartlar, GUIDE.md ve registry.json yok, skil tek başına işe yaramaz.
+- **Teknoloji:** hyperframes, gsap, css · **Paketler:** herk-edit-kit repo kökündeki style-library/ ve style-templates/ dizinleri
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusan-kafa-gorsel-katman → alternatif · **Roller:** motion-graphics-sanatcisi
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. 1,6 KB'lık yönlendirme dosyası; asıl değer repo kökündeki style-library/ (kartlar, registry.json, GUIDE.md) ve style-templates/ dizinlerinde, bunlar arşive alınmadığı için skil boş bir kabuk. Doğrulandı: skill-calistir'in işaret ettiği assets/source.mp4 kullanıcının kendi videosudur (şablon README'sinde isteniyor), eksik paket dosyası değil; gerçek yukarı akım eksiği kart kütüphanesinin kendisi. Katalog taslak içerik olduğunu (her kartın render kalite denetiminden geçmediğini) kendisi söylüyor. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: temiz — betik yok. Örtüşme: konusan-kafa-gorsel-katman grubunda alternatif (kütüphane içeriği ayrıca alınırsa değerlendirilir).
 
 ### swiss-user-research-video-template  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -1244,15 +1264,16 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Boyut:** 28250 KB (SKILL.md 21.2 KB, yük orta) · **Bağımlılık:** Remotion (Node.js; npx remotion). Ürün videoları için Remotion projesi gerekir.
 - **İnceleme:** otomatik
 
-### video-storytelling  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 66 (B)
+### video-storytelling  ·  nateherkai/herk-edit-kit @ 10511e5  ·  puan 72 (B)
 
-- **Ne yapar:** Design and build the visual layer of a long-form talking-head video as one persistent world the camera moves through, instead of a sequence of separate graphics. Use when asked to edit a video, add motion graphics, design the visuals for a script, plan an edit, or fix an edit judged confusing, text-heavy, hard to follow, or "clearly made by an AI". Covers the persistent world, camera grammar, the 
-- **Teknoloji:** ffmpeg, html, node, python _(otomatik tespit)_
+- **Ne yapar:** Uzun biçimli konuşan kafa videosunun görsel katmanını ayrı grafiklerin dizisi olarak değil, kameranın içinde gezdiği tek kalıcı dünya olarak tasarlar ve kurar. Dört ilke (kalıcı dünya, uzamsal dilbilgisi, açık döngüler, kamera/spot ışığı), tasarım sistemi referansı ve 'wall-of-slots' örnek geometrisi içerir; seyirci dokuzuncu dakikada hâlâ yönünü bilir.
+- **Ne zaman:** Haber, tek konulu derin analiz, karşılaştırma, eğitim ya da liste videosunun görsellerini tasarlarken, 'kafa karıştırıcı' geri bildirimi aldıktan sonra. · **Ne zaman değil:** Kart/alt üçlük yerleştirmek için değil (hyperframes-video-beats); kısa dikey videolar için değil.
+- **Teknoloji:** hyperframes, gsap, python · **Paketler:** hyperframes
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** nateherkai (kisi, ★2929, son güncelleme 2026-10-14, lisans NOASSERTION)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konusan-kafa-gorsel-katman → tamamlayıcı · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 47 KB (SKILL.md 19.0 KB, yük orta) · **Bağımlılık:** Skiller repo kökündeki scripts/, style-library/, docs/ ve video-projects/ dizinlerine bağlıdır (skil klasörü dışında; yalnız skil klasörleri alınır); Node, ffmpeg, HyperFrames gerekir. ElevenLabs/Kie.ai isteğe bağlı.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Konsept güçlü ('sahne düşüncesi' hatasına karşı kalıcı dünya), uzamsal dil ve açık döngü fikirleri uygulanabilir ve örnek geometri betikleri var. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — yalnız örnek geometri Python'ı. Örtüşme: konusan-kafa-gorsel-katman grubunda tamamlayıcı (tasarım ilkeleri).
 
 ### video-toolkit  ·  OpenMontageInc/OpenMontage @ fecb9a1  ·  puan 77 (B)
 
@@ -1311,13 +1332,14 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 
 ### vox-explainer  ·  heygen-com/hyperframes-community-skills @ ba7a0bb  ·  puan 79 (B)
 
-- **Ne yapar:** Create a 60–90 second, collage-style HyperFrames explainer from a hiding-in-plain-sight topic or supplied documents and links. Use for requests such as 'make a plain-sight explainer', 'Vox-style history of X', 'why is X everywhere?', or 'turn this document into an explainer'. Covers topic or source routing, research, script, static design approval, voiceover timing, motion continuity, build, and n
-- **Teknoloji:** gsap, html, node, python _(otomatik tespit)_
+- **Ne yapar:** Günlük gördüğümüz ama hiç üzerinde durmadığımız bir konu ya da verilen belge/bağlantılardan 60-90 saniyelik kolaj stilinde HyperFrames açıklayıcı video yapar: önce tanıma duygusu yaratır, sonra nedensel tarihle karşılığını verir. Vox'un Cooper Black filminden ölçülmüş dilbilgisi ve hareket; bağlantı/atıf kuralları açık.
+- **Ne zaman:** "Why is X everywhere?", "plain-sight explainer", "Vox-style history of X" gibi konu belgeseli tarzı kısa açıklayıcı. · **Ne zaman değil:** Ürün tanıtımı/demo için değil (urun-tanitim-filmi ve explainer-* kullan). Vox'la bağlantı ya da onay ima edilmez, logosu kullanılmaz.
+- **Teknoloji:** hyperframes, gsap, node, chrome · **Paketler:** hyperframes (seam-gate betiğinde sabitlenmiş sürüm, npx), node 22+
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** heygen-com (kurum, resmî, ★280, son güncelleme 2026-11-17, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** tercih · **Örtüşme:** konu-aciklayici-video → birincil · **Roller:** video-kompozisyon, motion-graphics-sanatcisi
 - **Boyut:** 110 KB (SKILL.md 13.9 KB, yük orta) · **Bağımlılık:** HyperFrames CLI (npx hyperframes) gerekir.
-- **İnceleme:** otomatik
+- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Güven sınırı açıkça yazılmış (yalnız verilen dosya/URL okunur, TTS/transkript API'si kullanmadan önce sağlayıcı, gönderilen veri ve maliyet sorulur, hiçbir şey otomatik yüklenmez), seam doğrulayıcı betikleri yerel; çok sayıda referans dosyasıyla kademeli yükleme. Ücret: ucretsiz (HeyGen yalnız HyperFrames'in kurulum kaynağı olarak anılır). Lisans: Apache-2.0. Güvenlik: DİKKAT (düşük) — yerel önizleme sunucusu yalnız localhost, izole Chrome profili, npx ile sürüm sabitli CLI. Örtüşme: grup yok (konu belgeseli tarzı farklı iş).
 
 ### weibo-upload  ·  dreammis/social-auto-upload @ 3847fff  ·  puan 89 (A)
 

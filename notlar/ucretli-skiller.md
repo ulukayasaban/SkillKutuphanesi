@@ -54,7 +54,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 416
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 418
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -339,10 +339,12 @@
 | `hyperframes@openai` | 01-video-uretim-montaj | HyperFrames ücretsiz/açık kaynak; HeyGen medya ve bulut render isteğe bağlı |
 | `media-use` | 01-video-uretim-montaj | Ücretsiz yerel yol her medya türü için var (Kokoro, MusicGen, Openverse, yerel FLUX/LTX, Whisper); HyperFrames kredisi/HeyGen isteğe bağlı. 2026-11: skill ücretli çağrıdan önce onay istemiyor (kredi sınırı dosyası var) ve ucuz seçeneğe kendiliğinden geçmiyor; ücretsiz yol açıkça istenmeli; Voice Turbo Free planda ayda 3 dk |
 | `moneyprinterturbo-video` | 01-video-uretim-montaj | LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla. |
+| `motion-showreel` | 01-video-uretim-montaj | Çekirdek (kod, kendi müziği) ücretsiz; scripts/kie.mjs (Kie.ai müzik/görsel/video, KIE_API_KEY) ve sfx.mjs (ElevenLabs, ELEVENLABS_API_KEY) ücretli üretim çağrıları yapar, skil onay ister |
 | `open-edit` | 01-video-uretim-montaj | VEED barındırılan servisleri (transkript, arka plan silme, AI sunucu, lipsync) ve fal modelleri VEED/fal kredisi ister; render ve yerel araç takımı ücretsiz |
 | `openmontage` | 01-video-uretim-montaj | Yerel araçlar ve stok kaynaklar ücretsiz; ElevenLabs, fal.ai gibi ücretli sağlayıcılar isteğe bağlı |
 | `parody-short` | 01-video-uretim-montaj | Görsel, klip ve ses kullanıcının Modal uç noktalarında (aylık ücretsiz kota, fazlası ücretli); müzik acemusic ücretsiz anahtarla |
 | `provider-refresh-oct23` | 01-video-uretim-montaj | Ücretli sağlayıcı adaptörlerinin (Gemini Omni, Veo, ElevenLabs v4, HeyGen…) güncel API sözleşmeleri; ücretsiz yerel yollar ayrı skillerde |
+| `rea-video` | 01-video-uretim-montaj | Çözümleme CLI'ı ücretsiz (yerel); isteğe bağlı görsel model (VLM, REA_VLM_API_KEY) ve önerilen ChatCut yeniden yapım aracı üyelik/kredi ister (ücretli kısım isteğe bağlı) |
 | `remotion` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices@calesthio` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |

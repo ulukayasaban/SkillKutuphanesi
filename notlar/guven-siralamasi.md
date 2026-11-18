@@ -116,7 +116,7 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 44 | Nutlope/hallmark | 66 B | 1 | 01-ui-ux-tasarim-dili (1) | 0/1/0 | MIT |  | 47913 | 7140.0 | 10 | 138 | - | 🔥 |
 | 45 | cloudflare/security-audit-skill | 66 B | 1 | 06-devops-guvenlik-performans (1) | 1/0/0 | MIT | ✓ | 59355 | 11871.0 | 4 | 3 | - | 🔥 |
 | 46 | google/skills | 66 B | 196 | 06-devops-guvenlik-performans (105), 04-mimari-api-veritabani (48) | 20/176/0 | Apache-2.0 |  | 24352 | 3204.8 | 9 | 351 | - | 🔥 |
-| 47 | JuneYaooo/rea-video | 66 B | 1 | 01-video-uretim-montaj (1) | 1/0/0 | Apache-2.0 |  | 10200 | 10200.0 | 17 | 155 | 2026-11-11 |  |
+| 47 | JuneYaooo/rea-video | 66 B | 1 | 01-video-uretim-montaj (1) | 0/1/0 | Apache-2.0 |  | 10200 | 10200.0 | 17 | 155 | 2026-11-11 |  |
 | 48 | ComposioHQ/awesome-claude-skills | 65 B | 19 | 03-yazi-iletisim-icerik (9), 01-claude-api-mcp (3) | 16/3/0 | yok | ✓ | 78745 | 6045.1 | 29 | 0 | - |  |
 | 49 | krillinai/OpenCreator | 65 B | 7 | 02-ses-muzik-konusma (7) | 6/1/0 | Apache-2.0 |  | 14157 | 614.8 | 36 | 458 | 2026-11-03 |  |
 | 50 | Vincentwei1021/video-shotcraft | 64 C | 1 | 01-video-uretim-montaj (1) | 1/0/0 | Apache-2.0 |  | 16988 | 4268.1 | 14 | 44 | 2026-09-01 | 🔥 |
@@ -168,7 +168,7 @@ Skill kurulumu SADECE `python3 ~/Documents/SkillKutuphanesi/araclar/skill-ekle.p
 | 96 | heyitsnoah/claudesidian | 35 D | 15 | 04-not-alma-bilgi-yonetimi (10), 05-git-pr-surum (3) | 14/1/0 | MIT |  | 2606 | 183.8 | 3 | 0 | 2026-04-11 |  |
 | 97 | kylezantos/design-motion-principles | 35 D | 1 | 03-animasyon-motion (1) | 1/0/0 | MIT |  | 1528 | 151.3 | 1 | 0 | 2026-05-21 |  |
 | 98 | Barty-Bart/motion-graphics | 35 D | 5 | 04-motion-graphics-karakter (5) | 5/0/0 | NOASSERTION |  | 1347 | 772.6 | 4 | 10 | - |  |
-| 99 | nateherkai/herk-edit-kit | 35 D | 10 | 01-video-uretim-montaj (10) | 6/4/0 | NOASSERTION |  | 2929 | 418.0 | 1 | 13 | - |  |
+| 99 | nateherkai/herk-edit-kit | 35 D | 10 | 01-video-uretim-montaj (10) | 5/5/0 | NOASSERTION |  | 2929 | 418.0 | 1 | 13 | - |  |
 | 100 | evanca/flutter-ai-rules | 31 D | 35 | 08-mobil-uygulama (35) | 35/0/0 | MIT |  | 669 | 35.4 | 1 | 13 | - |  |
 | 101 | hamen/compose_skill | 31 D | 2 | 08-mobil-uygulama (2) | 2/0/0 | MIT |  | 378 | 52.7 | 3 | 0 | 2026-07-07 |  |
 | 102 | rshankras/claude-code-apple-skills | 31 D | 13 | 08-mobil-uygulama (13) | 13/0/0 | MIT |  | 861 | 68.2 | 2 | 3 | - |  |
@@ -217,7 +217,7 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 1 | mrdoob/three.js | 88 A | r186 | `threejs-fundamentals` 88/D, `threejs-geometry` 78/D, `threejs-materials` 78/D, `threejs-lighting` 88/D, `threejs-textures` 80/D, `threejs-loaders` 88/D, `threejs-shaders` 78/D, `threejs-postprocessing` 78/D, `threejs-animation` 80/D, `threejs-interaction` 80/D | tasarim-teknolojileri.md |
 | 2 | tailwindlabs/tailwindcss | 80 A | v4.3 | `ui-styling` 88/A, `tailwind-patterns` 76/C, `design-system@nextlevelbuilder` 90/A, `find-docs` 96/A, `tailwind-design-system` 93/A, `remotion-create` 90/B, `web-artifacts-builder` 90/B, `context7-mcp` 88/A | tasarim-teknolojileri.md |
 | 3 | d3/d3 | 77 B | v7.9 | `d3-viz` 93/A, `d3-visualization` 97/A, `d3-data-visualization` 72/C, `geospatial-and-cartographic-visualization` 72/C | tasarim-teknolojileri.md |
-| 4 | FFmpeg/FFmpeg | 75 B | - | `ffmpeg` 93/A, `video-edit` 100/A, `ffmpeg-skill` 97/C, `video-understand` 94/A, `character-animation-qa` 86/A, `product-launch-motion` 80/D, `cut-mistakes` 68/D, `cut-silences` 68/D | kutuphaneler.md |
+| 4 | FFmpeg/FFmpeg | 75 B | - | `ffmpeg` 93/A, `video-edit` 100/A, `video-understand` 94/A, `ffmpeg-skill` 94/C, `character-animation-qa` 86/A, `product-launch-motion` 72/D, `kinetic-reel` 72/D, `cut-mistakes` 65/D | kutuphaneler.md |
 | 5 | ManimCommunity/manim | 73 B | v0.22 | `manim-composer` 94/A, `manimce-best-practices` 100/A, `manimgl-best-practices` 93/A, `remotion-to-hyperframes` 97/A, `manim-video` 84/C | tasarim-teknolojileri.md |
 | 6 | VoltAgent/awesome-design-md | 72 B | - | `design-dna` 79/D, `design-system@nextlevelbuilder` 90/A, `design-taste-frontend` 100/A | tasarim-teknolojileri.md |
 | 7 | openai/whisper | 72 B | - | `media-use` 100/A, `speech-to-text` 100/A, `video-understand` 94/A, `azure-speech-to-text` 94/A, `krillinai-subtitle` 90/B, `whisper` 87/C, `auto-editor-transcribe` 84/C, `twilio-conference-calls` 72/C | kutuphaneler.md |
@@ -240,7 +240,7 @@ Projede bu kütüphaneyi kullanıyorsan buradaki skiller öncelikli adaydır. **
 | 24 | liabru/matter-js | 54 C | 0.20 | `pixijs-2d` 69/D, `canvas-procedural-animation` 85/A | tasarim-teknolojileri.md |
 | 25 | pmndrs/postprocessing | 52 C | v6.39 | `threejs-postprocessing` 78/D, `threejs-shaders` 78/D, `frame-logo-outro` 97/A, `relion` 97/B | tasarim-teknolojileri.md |
 | 26 | greensock/GSAP | 49 D | 3.15 | `gsap-core` 86/C, `gsap-timeline` 87/C, `gsap-plugins` 86/C, `gsap-utils` 78/C, `gsap-react` 87/C, `gsap-frameworks` 78/C, `gsap-performance` 87/C, `gsap-scrolltrigger` 86/C | tasarim-teknolojileri.md |
-| 27 | rough-stuff/rough | 49 D | v3.1 | `day-in-my-life` 81/D, `camera-3d-captions` 79/D | tasarim-teknolojileri.md |
+| 27 | rough-stuff/rough | 49 D | v3.1 | `camera-3d-captions` 79/D, `day-in-my-life` 73/D | tasarim-teknolojileri.md |
 | 28 | theatre-js/theatre | 47 D | 0.4 (r3f) | `threejs-animation` 80/D, `gsap-timeline` 87/C | tasarim-teknolojileri.md |
 | 29 | barvian/number-flow | 46 D | 0.6 | — (skill eşlemesi yok) | tasarim-teknolojileri.md |
 | 30 | opentypejs/opentype.js | 46 D | 2.0 | `svg-character-animation` 94/A, `hyperframes` 100/A, `pixijs-scene-text` 91/B | tasarim-teknolojileri.md |

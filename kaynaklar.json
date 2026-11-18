@@ -1403,6 +1403,7 @@
     {
       "repo": "tuzhechen2005/opus-video-skills",
       "tip": "T1",
+      "lisans": "MIT",
       "oncelik": 4,
       "eklendi": "2026-11-17",
       "bagimlilik": "Node, headless Chrome ve ffmpeg gerekir (p5.js + p5.brush / three.js ile kare kare çizim); ilk kullanımda npm paketleri kurulur.",
@@ -1419,6 +1420,7 @@
     {
       "repo": "Barty-Bart/motion-graphics",
       "tip": "T1",
+      "lisans": "MIT",
       "oncelik": 4,
       "eklendi": "2026-11-17",
       "bagimlilik": "Videolar HyperFrames/Remotion/GSAP, Node ve ffmpeg ile yerelde render edilir.",
@@ -1637,6 +1639,7 @@
     {
       "repo": "nateherkai/herk-edit-kit",
       "tip": "T1",
+      "lisans": "MIT",
       "oncelik": 4,
       "eklendi": "2026-11-17",
       "haric": [

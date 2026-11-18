@@ -363344,9 +363344,40 @@
           "derece": "B"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Çalışılan projenin kodunu okuyup 15-25 saniyelik, paylaşılabilir bir tanıtım videosu üretir (HyperFrames ile): konsept, senaryo, storyboard, kompozisyon, doğrulama, render ve paylaşım metni. Hazır müzik (CC BY 4.0) ve 228 ses efektiyle gelir; ton ön ayarları (chaotic, polished, yc-parody, cinematic...), dikey/yatay/kare biçim ve isteğe bağlı yerel Kokoro anlatım (--voice) var.",
+      "kullanim_alani": "Yeni yapılan bir uygulama ya da site için hızlı, esprili ya da cilalı tanıtım/paylaşım videosu (\"/brag\", \"make a launch video\") istendiğinde.",
+      "kullanma": "Çok kareli ayrıntılı ürün filmi, anlatımlı eğitim videosu ya da proje kodu olmayan işler için değil. Yeni modellerde (Opus/Sonnet 5.5, Fable) otomatik olarak brag-slim'e yönlendirir; tam akış için --full gerekir.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "node",
+        "ffmpeg",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "ffmpeg",
+        "python3 (müzik ipucu betiği)"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif). Dar ve kararlı bir iş akışı; proje kodundan başlayıp kapı kapı ilerliyor, ton ve süre kuralları net, GitHub'da çok ilgi görmüş (21 bin yıldız). Yukarı akım notu: SKILL.md'deki references/format.md, look.md, motion.md ve story.md brag'a ait değil, kütüphanedeki hyperframes skilinin referanslarıdır (hyperframes'te bulundu); skill-calistir'in 'eksik' uyarısı yanlış alarmdır, brag yalnız hyperframes ile birlikte kurulursa tam çalışır. Lisans: kod MIT; paketli müzik (Sascha Ende, CC BY 4.0) repo lisansının dışında, kullanımda atıf gerekir. 291 dosya (228 ogg, 32 wav, 5 mp3) boyutu şişirir. Ücret: ucretsiz (Kokoro anlatım yerel). Güvenlik: DİKKAT (orta) — npx hyperframes ve bir Python analiz betiği; ağdan çalıştırılan satır yok, gizli anahtar istemiyor. Sabit yol: references/audio.md:36'daki ~/.claude/skills/brag örnek metindir (yol yalnız sayım sütununda, uyarı değil). Örtüşme: urun-tanitim-filmi grubunda onetake birincil kalır; projenin kendi kodundan hızlı tanıtım teaseri için brag/brag-slim ilk tercihtir.",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "06379432a9243c951dfcc051153be18d2d261044",
       "degerlendirme": {
-        "puan": 89,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
@@ -363354,7 +363385,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -363444,9 +363476,37 @@
           "derece": "B"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Tek dosyalık, paketli varlığı olmayan brag sürümü: bir proje klasörünü ya da web sitesi URL'sini alıp müzik, hareket ve paylaşım metniyle 15-25 saniyelik tanıtım videosu üretir; modelin makinedeki araçlarla (ffmpeg, başsız tarayıcı) kendi yaptığı iş akışı. Proje kodunu doğrudan içe aktarır, gizli dosyaları (.env, anahtar) okumaz.",
+      "kullanim_alani": "Tam brag'ın paketli varlıklarına gerek olmadan, hafif ve model odaklı tanıtım videosu; proje ya da canlı site girdisi.",
+      "kullanma": "--voice (anlatım) desteklemez; HyperFrames şablon disiplinine ihtiyaç varsa brag'ı seç. Sıfır varlık demek müzik/SFX'i modelin üretmesi demek, kalite modele bağlıdır.",
+      "teknoloji": [
+        "ffmpeg",
+        "node",
+        "html-canvas"
+      ],
+      "gerekli_paketler": [
+        "ffmpeg",
+        "başsız tarayıcı"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif). Kısa ve disiplinli: yaratıcı yasalar (kısa, yabancıya net, ritme kesim), gizli veri sızdırmama kuralı (anahtar, e-posta, iç URL videoya girmez) ve eksik araç için 'önce sor, curl | sh yerine paket yöneticisi' kuralı güvenli bir tasarım. Web sitesi girdisinde indirilen işaretlemeyi 'inert içerik' sayar ve betiklerini ayıklar, indirilen hiçbir şeyi çalıştırmaz. Ücret: ucretsiz. Lisans: MIT. Güvenlik: temiz — betik/kurulum komutu yok; tek 'curl | sh' geçişi yasaklayıcı bağlamda. Örtüşme: urun-tanitim-filmi grubunda alternatif.",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "06379432a9243c951dfcc051153be18d2d261044",
       "degerlendirme": {
-        "puan": 89,
+        "puan": 85,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (3 gün önce)",
@@ -363454,7 +363514,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -363544,7 +363605,40 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Sabit kameralı konuşan kafa görüntüsünde altyazıları 3B uzayda oynatır: kamera konuşmacı ile kelimeler arasında uçar, kelime grupları farklı derinlikte durur, vurgu kelimeleri alfa matte ile konuşmacının ARKASINA saklanır, kelime halkası etrafında döner, derinlik odağı kayar. After Effects hareketini HyperFrames'te kare kare deterministik çizerek yeniden kurar.",
+      "kullanim_alani": "Avatar ya da gerçek konuşmacı çekiminde (yatay, orta plan ve geniş, 5-20 sn) kelimelerin konuşmacının etrafında derinlikte performans göstermesi istendiğinde (\"3D text\", \"text behind the speaker\").",
+      "kullanma": "Düz altyazı, hareketli/elde kamera, aşırı yakın plan ya da kişiyi ayıramayan modeller için değil.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "ffmpeg",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "hyperframes@0.8.62 (npx)",
+        "ffmpeg",
+        "fonttools",
+        "numpy",
+        "pillow",
+        "p5-paint-animation (elle çizim stili için)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (koşullu, niş). Gereksinimler ve yan etkiler 'tam liste' olarak yazılmış (sürüm sabitli HyperFrames, 170 MB kişi segmentasyon modeli indirir, GSAP CDN'den yüklenir), sınırlar dürüstçe anlatılmış, QC adımları var. Çok özelleşmiş ve ileri düzey. Ücret: ucretsiz (yerel; hiçbir şey yüklenmez). Lisans: Apache-2.0. Güvenlik: DİKKAT (orta) — npx ile CLI indirir, model indirir, yerel Python/shell betikleri (prep-take.sh, build-sprites.py); anahtar yok. Örtüşme: altyazi grubunda captions-overlay ile tamamlayıcı (3B stil).",
+      "ortusme_grubu": "altyazi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -363554,7 +363648,8 @@
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -364258,7 +364353,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/cut-mistakes",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -364329,9 +364424,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Konuşan kafa kaydındaki konuşma hatalarını (kekeleme, tekrarlanan kelime, yarım bırakılıp baştan alınan cümle, yeniden çekilen satırlar) bulur ve keser. Mekanik aday bulucu (find-cut-candidates) önerir, ajan her adayı bağlamda okur, kullanıcı onaylar, apply-cuts onaylı kesimleri ffmpeg ile uygular. Vurgu amaçlı tekrarı hata saymamak için inceleme kapısı zorunludur.",
+      "kullanim_alani": "Video kurgu hattının 2. adımı: sessizlik kırpıldıktan sonra \"cut the mistakes\", \"remove stutters\", \"keep the best take\".",
+      "kullanma": "Sessizlik kırpma (cut-silences), ham transkript yokken ya da bir doğal konuşmayı kota için kesmek için değil.",
+      "teknoloji": [
+        "node",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "ffmpeg",
+        "kelime düzeyi transkript JSON"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Karar-kapılı ve dürüst (mekanik dedektör vurgu ile kekelemeyi ayıramaz, bu yüzden inceleme zorunlu). Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Bu skil için eksik olan scripts/build-edl-review.mjs (inceleme sayfası). Girdisi cut-silences'ın transkriptidir. Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: ucretsiz (skilin kendi betikleri yerel; transkript üretimi başka skilde). Lisans: MIT (repodaki LICENSE okundu; GitHub NOASSERTION gösteriyor). Güvenlik: DİKKAT (düşük) — yerel node betikleri ve ffmpeg. Örtüşme: konusmayla-kurgu grubunda cut-silences'ın ikinci adımı (tamamlayıcı); asıl birincil video-use.",
+      "ortusme_grubu": "konusmayla-kurgu",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
@@ -364339,7 +364461,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -364359,7 +364482,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/cut-silences",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -364429,9 +364552,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Konuşan kafa kaydından yalnız sessizliği ve boş havayı kırpar: ilk kelimeden önceki ve son kelimeden sonraki boşluk ile eşik üstü (varsayılan 0,55 sn) kelime arası duraklar, doğal nefes payı bırakılarak kısaltılır. Kelime düzeyi transkripti girdi alır; EDL, yeniden zamanlanmış transkript ve (--apply ile) ffmpeg trim+concat çıktısı üretir.",
+      "kullanim_alani": "Kurgu hattının 1. adımı: \"cut the silences\", \"remove dead air\", \"tighten the pacing\" (transkript hazırsa).",
+      "kullanma": "Kelime düzeyi transkript yoksa (önce transkripsiyon gerekir) ya da yalnız ses seviyesinden sessizlik kırpmak isteniyorsa (auto-editor ya da ffmpeg-skill silence.py daha uygun).",
+      "teknoloji": [
+        "node",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "ffmpeg",
+        "kelime düzeyi transkript JSON"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Deterministik, kurallar açık (eşikler, nefes payı kuralları, çıktı dosyaları tabloda). Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Doğrulandı: skill-calistir'in işaret ettiği scripts/validate-beat-sync.mjs ve önkoşuldaki scripts/transcribe-elevenlabs.mjs repo kökündedir, skill klasöründe yok. Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: kismen (varsayılan transkriptör ücretli kotalı, ücretsiz yol var; kayıt zaten ucret-siniflandirma.json'da). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — yerel node betiği + ffmpeg. Örtüşme: konusmayla-kurgu grubunda alternatif; yalnız sessizlik için auto-editor-kurgu (auto-editor birincil) ya da ffmpeg-kurgu (ffmpeg-skill silence.py) daha bağımsız.",
+      "ortusme_grubu": "konusmayla-kurgu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
@@ -364439,7 +364589,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -364528,17 +364679,50 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ajanın kullanıcısıyla geçirdiği tipik bir oturumu, yerel Claude Code konuşma geçmişinden toplayıp 60-75 saniyelik elle çizilmiş mürekkep filmine çevirir (p5.brush, 8 fps kaynayan çizgi, nota nota bestelenmiş yaylı çalgı müziği). Ekrandaki her satır kullanıcının gerçek sözüdür; render öncesi her satır kullanıcı onayından geçer.",
+      "kullanim_alani": "Claude Code kullanıcısı kendi çalışmasından kişisel bir film istediğinde (en az 10 oturum, 5 gün yerel geçmiş).",
+      "kullanma": "Başkasının geçmişi, ekip günlükleri, ürün pazarlaması ya da kullanıcının gözden geçirmeyeceği içerik için değil; yerel kayıt yoksa (yalnız claude.ai) durur, söz uydurmaz.",
+      "teknoloji": [
+        "p5-brush",
+        "hyperframes",
+        "node",
+        "python",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "hyperframes@0.8.70 (npx)",
+        "p5 2.3.2",
+        "p5.brush",
+        "puppeteer",
+        "numpy",
+        "scipy"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (niş, dikkatle). Eğlenceli ve özenli (gizlilik kapısı, 'her satır bir makbuz' ilkesi), ama kullanım alanı çok dar ve iş akışı ağır. Güvenlik: DİKKAT (yüksek) — yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, hafıza dosyaları, ilgili projelerin CLAUDE.md'si) okur; 'evet' denmeden okumaz ve hiçbir şey yüklemez diyor, ama çıktı dosyaları (receipts.json, story.json) kullanıcının gerçek sözlerini taşır, paylaşılmamalı. Ayrıca npm ci / pip install ile bağımlılık indirir (setup.sh elle). Bu skilin kurulumu için kullanıcı onayı şart; ana oturum karar verir. Ücret: ucretsiz (anahtar ve ücretli çağrı yok; Gochi Hand yazı tipi Google Fonts'tan yüklenir). Lisans: Apache-2.0 (p5 LGPL-2.1 bağımlılığı). Örtüşme: ajan-oturum-filmi grubunda session-story ile aynı iş.",
+      "ortusme_grubu": "ajan-oturum-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
       "degerlendirme": {
-        "puan": 81,
-        "not": "A",
+        "puan": 73,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
           "GitHub güveni 11/30 (güven 36 D, #95/137)",
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -364816,9 +365000,35 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "İki HTML ekranını, açık katlanabilir telefonu tutan ellerin sabit fotoğraf plakasına (1448x1086, iki boş ekran yuvası) yerleştirir; TikTok vs Reels, ChatGPT vs Claude, önce/sonra gibi yan yana meme ve karşılaştırma videoları için. Telefon ve eller bir fotoğraftır, yeniden çizilmez; ajan yalnız iki ekranın içinde oynayanı yazar ve render eder.",
+      "kullanim_alani": "\"Foldable phone meme\", \"X sol ekranda Y sağ ekranda\" gibi iki uygulamayı/akışı/sohbeti aynı anda gösteren kısa video.",
+      "kullanma": "Tek telefon, dizüstü, kullanıcının getirdiği cihaz çerçevesi ya da başka plaka için değil (geometri yeniden ölçülmeli).",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "node"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "node 18+"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (niş). İyi tanımlı, tek amaçlı rig; plaka ve geometri piksel ölçülmüş, 'rig'e dokunma' kuralı net. Gereksinimler arasında npx hyperframes@latest (sürüm sabit değil; yeniden üretilebilirlik için sürüm sabitle) ve GSAP'ın jsdelivr'den yüklenmesi var. Ücret: ucretsiz. Lisans: Apache-2.0. Güvenlik: DİKKAT (düşük) — yerel build.mjs, ağ yalnız npm kaydı ve CDN (tam liste yazılmış). Sabit yol: SKILL.md:68'deki ~/.claude/skills/duo örnek metin. Örtüşme: grup yok (tek başına).",
+      "ortusme_grubu": "cift-ekran-karsilastirma-videosu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
       "degerlendirme": {
-        "puan": 79,
+        "puan": 71,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
@@ -364826,7 +365036,8 @@
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -364844,7 +365055,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/edit-video",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -364913,9 +365124,40 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ham konuşan kafa videosunu uçtan uca kurgulayan orkestratör: transkript, sessizlik kırpma, hata incelemesi, görsel hikâye (video-storytelling), hareketli grafik katmanları (hyperframes-video-beats, style-library) ve doğrulanmış HyperFrames render. Proje çıktıları video-projects/<slug>/ altına gider; son teslim: MP4, kurgu kararları, yeniden zamanlanmış transkript ve VERIFY.md.",
+      "kullanim_alani": "\"Bu videoyu baştan sona kurgula\": tam kurgu hattı istendiğinde (tek bir işlem isteniyorsa doğrudan ilgili skile yönlendirir).",
+      "kullanma": "Tek bir adım (yalnız sessizlik, yalnız altyazı) ya da konuşan kafa olmayan videolar için; repo kökündeki yönergeler olmadan bu skil tek başına çalışmaz.",
+      "teknoloji": [
+        "hyperframes",
+        "node",
+        "ffmpeg",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes",
+        "ffmpeg",
+        "node",
+        "kardeş skiller (cut-silences, cut-mistakes, video-storytelling...)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kurgu-render",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kısa ve iyi sıralı kontrol listesi; asıl iş kardeş skillere bağlı. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Ayrıca ../hyperframes/SKILL.md, ../cut-silences ve diğer kardeş yollara göreli başvuru yapıyor; yol-tara 'göreli kardeş yolu' UYARISI veriyor (hyperframes kütüphanede başka yerde var; kardeşler aynı projeye birlikte kurulmalı). docs/TOOLS-AND-API-KEYS.md ve MOTION_PHILOSOPHY.md repo kökündedir (arşivde yok). Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: kismen (kayıt var). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — betik yok, yönlendirir. Örtüşme: konusmayla-kurgu grubunda alternatif (video-use birincil).",
+      "ortusme_grubu": "konusmayla-kurgu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 68,
+        "puan": 65,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
@@ -364923,7 +365165,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -365247,9 +365490,38 @@
           "derece": "C"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Yerel FFmpeg ile video ve ses düzenleme: kesme, birleştirme, yeniden çerçeveleme, hız, altyazı, bindirme, sessizlik kırpma, senkron, ses yüksekliği, HDR→SDR, platform dışa aktarımı ve denetim. 42 araçlı Python betik seti (probe, check, verify, look, render...), isteğe bağlı MCP sunucusu, '--dry-run --json' ile plan-sonra-çalıştır, lossless-önce ve orijinali koruma kuralları.",
+      "kullanim_alani": "Bir video/ses dosyası (mp4, mov, mp3...) üzerinde ffmpeg işi: kes, birleştir, formatla, altyazı yak, sessizlik/ses düzeyi, platforma hazırla.",
+      "kullanma": "Yaratıcı kompozisyon/hareket grafiği için değil (HyperFrames/Remotion). Çok ağır bir skil: yalnız ffmpeg işi gerekirse yükle.",
+      "teknoloji": [
+        "ffmpeg",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "ffmpeg",
+        "ffprobe",
+        "python3",
+        "isteğe bağlı: ASR/yazı tipi araçları"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "video-kurgu-render",
+        "ses-tasarimci"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif, ffmpeg işlerinde birincil adayı). Çok kapsamlı ve disiplinli: önce probe, lossless-önce, --dry-run ile plan, çıktıyı check/verify ile sayılarla doğrulama, orijinali ezmeme, ne sorulur/ne varsayılır kuralları. SKILL.md 16,9 KB (referanslar kademeli yüklenir) ve 61 Python dosyası: bağlam ve inceleme maliyeti yüksek. Yerel çalışır, ağ yok; sudo/apt satırları yalnız eksik ffmpeg için kullanıcıya gösterilen öneri metni. Sabit yol: references/scripts.md:1597'deki ~/.claude/skills/ffmpeg-skill/mcp/server.py kurulumda proje içi yola çevrilir (yol onayı verilmişti). Ücret: ucretsiz. Lisans: MIT. Güvenlik: DİKKAT (orta) — 42 yerel betik ffmpeg alt süreçleri çalıştırır, --overwrite ve 'redact' gibi yazan araçlar var; anahtar/ağ yok. Örtüşme: ffmpeg-kurgu grubunda alternatif (video-edit birincil kalır); sessizlik için silence.py (ses ölçümü tabanlı, transkript gerekmez) cut-silences'ten bağımsızdır.",
+      "ortusme_grubu": "ffmpeg-kurgu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "f1c97cbffeac71b8fdfca2f790ceb00db3bcce65",
       "degerlendirme": {
-        "puan": 97,
+        "puan": 94,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -365258,6 +365530,7 @@
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
           "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)",
           "GitHub trend +10 (trendde, son 2026-11-15)"
         ]
       },
@@ -366883,7 +367156,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/hyperframes-video-beats",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -366953,17 +367226,45 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Uzun konuşan kafa HyperFrames videoları için hareketli grafik 'vuruşlarını' planlar, yazar, zamanlar ve doğrular: büyük tez/liste/istatistik anları için tam ekran buruşuk kâğıt kapanışları, destekleyici bilgi için cam efektli alt üçlük kartları. Transkripte dayalı kapsama haritası, vuruş türü karar kuralları ve kısa süre/seyrek renk kuralları içerir.",
+      "kullanim_alani": "Konuşan kafa videosuna görsel vuruş eklerken ya da mevcut vuruş programını iyileştirirken (\"lower third\", \"paper takeover\", \"add beats\").",
+      "kullanma": "Videonun kendisinin görsel dünyasını tasarlamak için değil (video-storytelling); boşluk dolduran gereksiz grafikler için değil.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "hyperframes"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İlkeler iyi (her vuruş bir soruya cevap vermeli, boşluk için grafik eklenmez), kurallar somut. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Windows PowerShell/Codex komut ipuçları içerir (Select-String); Claude'a özgü araç varsayımı yok. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: temiz — betik yok. Örtüşme: konusan-kafa-gorsel-katman grubunda alternatif (motion-broll birincil).",
+      "ortusme_grubu": "konusan-kafa-gorsel-katman",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 66,
-        "not": "B",
+        "puan": 64,
+        "not": "C",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
           "GitHub güveni 10/30 (güven 35 D, #99/137)",
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -367660,7 +367961,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/make-a-video",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -367734,7 +368035,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "HyperFrames için yeni başlayana uygun uçtan uca video üretici: iki aşama, sekiz sıralı kapı. 1-4 kapıda amaç, biçim, senaryo/ses, stil ve varlıklar görüşmeyle toplanıp BRIEF.md'ye bağlanır ve onay beklenir; 5-8 kapıda iskele, storyboard, kompozisyon, lint, Studio önizleme, taslak render, görsel doğrulama ve final MP4 gelir.",
+      "kullanim_alani": "\"Make a video\", \"video from scratch\": HyperFrames'e yeni olan, konsept/senaryo/ana hatla başlayan kullanıcı.",
+      "kullanma": "URL'den video (website-to-hyperframes), 9:16 yüz kameralı kısa video (short-form-edit) ya da yalnız çerçeve kuralı (hyperframes) için devretmeli.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "node",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (npx)",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Kapılı, görüşmeli akış iyi (her kapı bir çıktı üretir, onaysız kod yazılmaz), ama bu işi hyperframes + diğer skiller zaten karşılıyor. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Ücret: ucretsiz (TTS yerel hyperframes tts). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — npx hyperframes komutları; betik yok. Örtüşme: hyperframes-cekirdek grubunda tamamlayıcı.",
+      "ortusme_grubu": "hyperframes-cekirdek",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
         "puan": 61,
         "not": "C",
@@ -367744,7 +368074,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -368358,7 +368689,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/motion-showreel",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -368434,9 +368765,40 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "10-30 saniyelik hareket tasarımı showreel'i ya da marka reeli kurar: tek bir marka motifi etiketli zanaat bölümlerinde dönüşür, kalıcı HUD, 120-130 BPM ızgarasına kilitli kesimler, saniyenin altındaki 'flurry' ve açılışa cevap veren logo kilidi. Referans reel'in saniye saniye analizi, bölüm kütüphanesi ve HUD şablonu ile gelir; sfx/müzik/ritim betikleri vardır.",
+      "kullanim_alani": "\"Showreel\", \"sizzle reel\", \"brand reel\", \"15 saniyelik markalı film\" ya da bir reel'in neden çalıştığını inceleyip başka marka için yeniden kurmak.",
+      "kullanma": "Düz ürün demosu, anlatımlı video ya da kendi görsel kimliği olmayan işler için değil; ücretli üretim çağrıları (müzik, görsel, video) kullanıcı onayı olmadan yapılmamalı.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "node",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "hyperframes",
+        "ffmpeg",
+        "node",
+        "isteğe bağlı: KIE_API_KEY, ELEVENLABS_API_KEY"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Tasarım dilbilgisi güçlü (tek motif, ritme kesim, kalıcı HUD), ama yöntem belirli bir referans reel'e bağlı ve ağır. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Frontmatter sorunu: description tırnaksız ve ': ' içeriyor, YAML bozuluyor; kurulumda frontmatter_onar otomatik olarak JSON tırnağına çeviriyor (elle iş yok). Ücret: kismen — sfx.mjs (ElevenLabs) ve kie.mjs (Kie.ai: müzik, görsel, video) ücretli çağrılar yapar, anahtarı ortamdan ya da çalışma alanı .env dosyasından okur; skil 'önce onay iste' diyor, çekirdek iş (kod ve kendi müziğinle) ücretsiz. Güvenlik: DİKKAT (orta) — ücretli API anahtarı okuyan yerel betikler ve dış servise veri gönderen üretim komutları; kullanıcı onayı şart. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Örtüşme: kodla-showreel grubunda alternatif (kinetic-reel birincil).",
+      "ortusme_grubu": "kodla-showreel",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 64,
+        "puan": 62,
         "not": "C",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
@@ -368444,12 +368806,13 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 3/5"
+          "yapı 3/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
-      "ucret": "ucretsiz",
-      "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret": "kismen",
+      "ucret_notu": "Çekirdek (kod, kendi müziği) ücretsiz; scripts/kie.mjs (Kie.ai müzik/görsel/video, KIE_API_KEY) ve sfx.mjs (ElevenLabs, ELEVENLABS_API_KEY) ücretli üretim çağrıları yapar, skil onay ister",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "moviepy",
@@ -368886,17 +369249,49 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "VEED'in barındırılan servisleri ve bir CLI araç takımıyla video işi: kelime zamanlı transkripsiyon, kesme, arka plan silme, AI sunucu, dudak senkronu, herhangi bir fal modeli, ses karışımı ve HTML kompozisyonlarını yalnız değişen kısmı yeniden render eden Chrome render'ı. Ajan parçayı HTML sayfası olarak yazar ve render eder; her parça runs/<anahtar>/ klasöründe durur.",
+      "kullanim_alani": "VEED hesabı/kredisiyle barındırılan transkript, arka plan silme, AI sunucu ya da lipsync gereken video işlerinde; HTML'den artımlı render istendiğinde.",
+      "kullanma": "Tamamen yerel/ücretsiz hat isteniyorsa (hyperframes, video-use, ffmpeg-skill, auto-editor kullan); VEED/fal hesabı ve kredisi yoksa.",
+      "teknoloji": [
+        "veed",
+        "html-render",
+        "chrome",
+        "node",
+        "fal"
+      ],
+      "gerekli_paketler": [
+        "@veedstudio/openedit-cli (npx)",
+        "VEED girişi ve fal/VEED kredisi",
+        "Chrome"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "video-kurgu-render",
+        "ai-medya-uretici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (dikkatle). Kurulum akışı temkinli tasarlanmış (init --dry önce, makineyi etkileyen her adım kullanıcıya açık yazılır ve onay beklenir), araç sınırları belgeli. Güvenlik: DİKKAT (yüksek) — npx --yes @veedstudio/openedit-cli çalıştırır (ağdan indirip çalıştırır), 'init --auto-approve' ile kurulum adımlarını uygular (skilin kendisi 'kullanıcı açık evet demeden makineyi etkileyen kurulum yapma' diyor), 'update available' çıkınca 'init --update' önerir; VEED girişi (kimlik) ve barındırılan servislere video/ses yüklenir. Ücret: kismen (kayıt var: VEED/fal kredisi). Lisans: Apache-2.0. Bağlama bağımlı: gövde 24 KB. Örtüşme: konusmayla-kurgu grubunda alternatif (barındırılan-servis tabanlı).",
+      "ortusme_grubu": "konusmayla-kurgu",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "e4dc93892268eaf04b64386935ba6e53098a5c79",
       "degerlendirme": {
-        "puan": 82,
-        "not": "A",
+        "puan": 73,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (7 gün önce)",
           "GitHub güveni 14/30 (güven 48 D, #74/137)",
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -369252,7 +369647,40 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Metin istemini, fotoğrafı ya da kısa video klibi (Live Photo dahil) elle yapılmış gibi görünen p5.js animasyonuna çevirir: kendi kendine yazılan kurşun kalem el yazısı, fırça darbeleriyle yeniden boyanmış fotoğraf (kendini boyayan film, kamera hareketi) ve kare kare yeniden boyanmış canlı resim. %100 kod, p5.brush başsız render, görüntü modeli yok.",
+      "kullanim_alani": "El yapımı görünümlü hareket gerektiğinde: kendini yazan el yazısı, fotoğrafı fırça sanatına çevirme, kısa klibi yaşayan resme çevirme (\"painted video\", \"write-on effect\").",
+      "kullanma": "Net tipografi/marka yazısı, fotogerçekçi çıktı, ~10 saniyeden uzun görüntü (kare başı 5-20 sn render) ya da canlı/etkileşimli sayfa için değil.",
+      "teknoloji": [
+        "p5-brush",
+        "p5js",
+        "node",
+        "ffmpeg",
+        "puppeteer"
+      ],
+      "gerekli_paketler": [
+        "node 22.12+",
+        "ffmpeg",
+        "puppeteer 25.9.0",
+        "p5 2.3.2",
+        "p5.brush 2.2.1"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Üç akış (yazı, fotoğraf, video) tek motorla, girdi tablosuyla seçiliyor; 'ne zaman değil' listesi ve başarı doğrulama adımı var, bağımlılıklar kilit dosyasıyla sabit, sketch'lerde ağ ve yerel dosya erişimi engelli. Ücret: ucretsiz. Lisans: Apache-2.0 (p5 LGPL-2.1). Güvenlik: DİKKAT (orta) — setup.sh elle çalıştırılır (npm kaydından sabit sürümler + Google'ın Chrome for Testing'i, ~500 MB), anahtar/ücretli çağrı yok; isteğe bağlı npx hyperframes remove-background. Örtüşme: p5-boyali-animasyon grubunda birincil (genel amaçlı yardımcı), painted-animation hikâye/karakter çizgi filmi için alternatif.",
+      "ortusme_grubu": "p5-boyali-animasyon",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -369262,7 +369690,8 @@
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -369763,17 +370192,49 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Bir Strudel (canlı kodlama) parçasının videosunu yapar: kod resmin kendisidir ve her sembol çaldığı notada yanar. Parçayı bestelemek, çevrimdışı kaydetmek ve 1080x1080 videoyu kurmak (yazılan açılış, açılan bölümler, gerçek Strudel tema geçişleri, graffiti ASCII düşüşleri, yazılan imza) akışı içindedir.",
+      "kullanim_alani": "\"Strudel video\", \"live coding video\", \"prod by claude\": Strudel kodunun çalışmasını gösteren video ya da ajanın bestelediği parçanın videosu.",
+      "kullanma": "Başka ses/DAW projeleri, konuşan kafa videoları ve Strudel kodu olmayan ses görselleştirmeleri için değil (HyperFrames müzik akışı kullanılır).",
+      "teknoloji": [
+        "strudel",
+        "hyperframes",
+        "node",
+        "puppeteer",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "hyperframes@0.8.70 (npx)",
+        "@strudel/web 1.3.0",
+        "puppeteer-core",
+        "Chrome for Testing 149"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "ses-tasarimci"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (niş). Tek amaçlı, iyi belgelenmiş (sürümler sabit, kayıt süresi ve sorun giderme yazılı). Yukarı akım notu: skill-calistir'in 'assets/bgm.wav yok' uyarısı yanlış alarm: dosya skilin kendi record.mjs betiğinin ürettiği çıktıdır, paketli olması beklenmez. Ücret: ucretsiz. Lisans: Apache-2.0; Strudel AGPL-3.0 (npm'den kurulur, pakete gömülü değil). Güvenlik: DİKKAT (orta) — npm install, Chrome for Testing indirme (npx @puppeteer/browsers), 5-7 dk'lık yerel kayıt; anahtar yok. Örtüşme: grup yok.",
+      "ortusme_grubu": "strudel-canli-kod-videosu",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
       "degerlendirme": {
-        "puan": 81,
-        "not": "A",
+        "puan": 73,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
           "GitHub güveni 11/30 (güven 36 D, #95/137)",
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -369993,22 +370454,54 @@
           "derece": "B"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Bir videonun nasıl yapıldığını tersine mühendislikle çözer: her çekimin altındaki görüntünün kaynağı (gerçek çekim, film klibi, AI video, dijital insan, 3B render, 2D/stop-motion animasyon, kod şablonu, ekran kaydı...), üstündeki kurgu paketi (altyazı, çıkartma, şablon), kullanıcının gerçek malzemesi, ses kaynağı (TTS/BGM/efekt) ve gerçek çekimde ışık/kamera. rea-video CLI'ı VIDEO.md, rapor, storyboard ve çekim kırpıntıları üretir; yeniden yapım (remake) rotası verir.",
+      "kullanim_alani": "Bir referans videonun nasıl çekildiğini/üretildiğini çözmek, aynısını ya da benzerini yeniden yapmak için çekim çekim plan almak.",
+      "kullanma": "Sıfırdan video üretimi için değil; rea_video Python paketi (pip) kurulu değilse çalışmaz. Gövde Çince yazılmış (araçlar ve çıktılar İngilizce/Çince seçilebilir).",
+      "teknoloji": [
+        "python",
+        "ffmpeg",
+        "vlm",
+        "ocr"
+      ],
+      "gerekli_paketler": [
+        "rea-video[ocr] (pip, git+https)",
+        "ffmpeg",
+        "Python 3.10+",
+        "isteğe bağlı: görsel model (VLM) anahtarı"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ai-medya-uretici",
+        "planlayici"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (dikkatle). Yöntem güçlü ve dürüst ('her sonuç kanıtlı, emin değilsen 'onay bekliyor' yaz', VLM işlemiyorsa raporda açıkça yaz), kademeli token okuma. Gövde ve çoğu referans Çince; Türkçe özet bu yüzden gereklidir. Yukarı akım eksiği: skil klasörü yalnız SKILL.md ve 12 kadar referanstır; çalışması için gereken rea_video Python paketi repo kökündedir (pip install ile kurulur), arşivde yok. Güvenlik: DİKKAT (yüksek) — references/setup.md `pip install \"rea-video[ocr] @ git+https://github.com/JuneYaooo/rea-video\"` ile ağdan paket kurdurur ve 'bash scripts/install_skill.sh' önerir (CLI kurar ve skili 'her ajan klasörüne bağlar', yani genel skill klasörlerine yazar; bu kütüphanede asla kullanılmamalı); references/chatcut.md macOS için `curl -fsSL https://chatcut.io/install.sh | sh` ve Windows için `irm ... | iex` ile üçüncü taraf masaüstü uygulaması kurdurur ve hesap girişi ister; VLM için REA_VLM_API_KEY/BASE_URL ortam değişkenleri. Ücret: kismen — çekirdek ücretsiz; ChatCut üyeliği/kredisi ve VLM API'si isteğe bağlı ücretli (kayıt güncellendi). Lisans: Apache-2.0. Örtüşme: video-analiz grubunda alternatif (video-understand birincil, kalan: üretim yöntemi çözme).",
+      "ortusme_grubu": "video-analiz",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "64615718086337e8f9a4566e286d72b28ec13172",
       "degerlendirme": {
-        "puan": 88,
-        "not": "A",
+        "puan": 77,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
           "GitHub güveni 20/30 (güven 66 B, #47/137)",
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
-      "ucret": "ucretsiz",
-      "ucret_notu": "",
-      "ucret_kaynagi": "otomatik"
+      "ucret": "kismen",
+      "ucret_notu": "Çözümleme CLI'ı ücretsiz (yerel); isteğe bağlı görsel model (VLM, REA_VLM_API_KEY) ve önerilen ChatCut yeniden yapım aracı üyelik/kredi ister (ücretli kısım isteğe bağlı)",
+      "ucret_kaynagi": "elle"
     },
     {
       "id": "referans",
@@ -373823,17 +374316,49 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Ajanın kullanıcısıyla geçirdiği tipik bir oturumu, kullanıcının gerçek mesajlarıyla 40-70 saniyelik animasyon filmine çevirir: ajan bir masada oturur, oda kullanıcıya göre döşenir, istekler kâğıt uçak olarak gelir, düzeltmeler 3B çekiç olur, övgü kelebek olur; ajan kendi orkestra müziğini film saatine göre besteler. p5.brush suluboya, HyperFrames ile render.",
+      "kullanim_alani": "Kullanıcı ajanından birlikte çalışmalarının filmini istediğinde (\"a video of our session\", \"session story\") ve ajanın gerçek geçmişi varsa (yerel kayıt ya da yapıştırılan mesajlar).",
+      "kullanma": "Başkasının geçmişi, ekip günlükleri, uydurma alıntılı pazarlama ya da kullanıcının gözden geçirmeyeceği içerik için; geçmiş yoksa kullanıcıdan mesaj ister, alıntı uydurmaz.",
+      "teknoloji": [
+        "p5-brush",
+        "hyperframes",
+        "node",
+        "python",
+        "ffmpeg",
+        "swift"
+      ],
+      "gerekli_paketler": [
+        "hyperframes@0.8.71 (npx)",
+        "p5 2.3.3",
+        "p5.brush 2.2.3",
+        "swift (macOS) ya da fluidsynth"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (niş, dikkatle). Yaratıcı ve titiz (her satır alıntı, kullanıcı her satırı onaylar), ama ağır ve dar. Güvenlik: DİKKAT (yüksek) — ajanın kendi konuşma kayıtlarını okur (~/.claude/projects/<proje>/*.jsonl, ~/.codex/sessions, hafıza ve talimat dosyaları); skill 'kullanıcı evet dedikten sonra' diyor, --all-projects ile tüm projeler taranabilir. GEMINI_API_KEY ortamda varsa 'snapshot' komutu kareleri (kullanıcının sözlerini) Gemini'ye gönderir: her snapshot'a --describe false verilmeli. Çıktılar (session-story-candidates.json) kullanıcının sözlerini taşır, paylaşılmamalı. setup.sh npm ci çalıştırır. Ücret: kismen (Gemini isteğe bağlı; yerel çalışır). Lisans: Apache-2.0. Örtüşme: ajan-oturum-filmi grubunda birincil (Codex geçmişini de kapsar, her rutin türü), day-in-my-life alternatif.",
+      "ortusme_grubu": "ajan-oturum-filmi",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
       "degerlendirme": {
-        "puan": 81,
-        "not": "A",
+        "puan": 73,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (1 gün önce)",
           "GitHub güveni 11/30 (güven 36 D, #95/137)",
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -373853,7 +374378,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/short-form-edit",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -373927,17 +374452,47 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Konuşan kafa görüntüsünü bitmiş bir reel, YouTube Short ya da kısa reklama dönüştürür: merak uyandıran açılış, hak edilmiş sonuç, hikâyeye dayalı kesim, transkripte kilitli hareketli grafik, hareketli B-roll, altyazı ve ince müzik. Varsayılan 1080x1920, istenirse ayrı çerçeveli 1920x1080; kayıtlı kurgu planı ve doğrulama betikleriyle.",
+      "kullanim_alani": "Konuşan kafa kaydından dikey kısa video ya da reklam; referans reel verildiyse onun ritmi.",
+      "kullanma": "Uzun biçimli videolar (video-storytelling), 'viral olur' garantisi isteyen işler (düzenleme bunu garanti edemez) ya da bu hattın bağımlılıkları olmayan ortamlar için değil.",
+      "teknoloji": [
+        "hyperframes",
+        "node",
+        "ffmpeg",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes",
+        "ffmpeg",
+        "node"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kurgu-render",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. İlk 3 saniye ilkesi ve doğrulama kapıları iyi; ama büyük (21 KB) ve yazarın kişisel kurgu rehberine (docs/EDITING-PLAYBOOK.md) bağlı. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. skill-calistir'in 'assets/*.json yok' uyarısı yanlış alarm: plan.json, transcript.json, edit-decisions.json ve footage-ledger.json çalışma anında video-projects/<slug>/ altında üretilen proje dosyalarıdır (references/plan-schema.md bunları tarif eder); eksik olan gerçek yukarı akım dosyalar docs/EDITING-PLAYBOOK.md ve docs/TOOLS-AND-API-KEYS.md'dir. Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Üretilmiş ek görüntü için ücretli servis (Kie vb.) ayrıca belirtilmiş. Ücret: kismen (kayıt var). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — yerel doğrulama betikleri (validate-plan, validate-footage). Örtüşme: dikey-kisa-video grubunda birincil.",
+      "ortusme_grubu": "dikey-kisa-video",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 66,
-        "not": "B",
+        "puan": 64,
+        "not": "C",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
           "GitHub güveni 10/30 (güven 35 D, #99/137)",
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -373955,7 +374510,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/short-form-video",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -374029,17 +374584,42 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Eski 'May Shorts' öğretim kompozisyonlarının bakımı için eski kalıp: yüz modu, sahne bindirmeleri ve karaoke altyazı (1080x1920, 10-30 sn); ses önce kesilir, kompozisyon iskelesi dört katmanlıdır (arka plan, dikiş, altyazı, yüz). Yeni reeller için değil, short-form-edit kullanılmalı.",
+      "kullanim_alani": "Yalnız o örneklerin bakımı ya da bu eski dört katmanlı iskeleyi bilerek istemek.",
+      "kullanma": "Yeni reel/Short kurgusu için (short-form-edit kullan). Önce /hyperframes çağrılmalı.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "hyperframes"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. Kendini 'legacy' ilan ediyor (yeni işler için short-form-edit). Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Doğrulandı: SKILL.md'nin işaret ettiği scripts/transcribe-elevenlabs.mjs repo kökünde, references/captions.md ise skil klasöründe değil kütüphanedeki hyperframes skilinin references/captions.md dosyasıdır (orada var). Transkript için varsayılan sağlayıcı ElevenLabs Scribe: ses dosyası dış servise yüklenir (anahtar ve kota gerekir); yerel Whisper alternatifi anlatılıyor. Ücret: kismen (kayıt var). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — transkript için kök betik ses dosyasını ElevenLabs'e yükler (kullanıcı seçimine bağlı); skilin kendisinde betik yok. Örtüşme: dikey-kisa-video grubunda alternatif (eski).",
+      "ortusme_grubu": "dikey-kisa-video",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 66,
-        "not": "B",
+        "puan": 56,
+        "not": "C",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
           "GitHub güveni 10/30 (güven 35 D, #99/137)",
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -374591,7 +375171,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/style-library",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -374660,17 +375240,43 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Projenin yeniden kullanılabilir hareket grafiği kart kütüphanesini ve stil şablonlarını seçmek, özelleştirmek ya da genişletmek için kısa bir yönlendirme: GUIDE.md ve registry.json'u okuyup stile/seviyeye/amaca göre süzer, seçilen kartı kompozisyona kopyalar ve yerelleştirir, slot değerlerini doldurur. Yeni stil için new-style.mjs ve build-registry.mjs betiklerini işaret eder.",
+      "kullanim_alani": "Bir videoya hazır kart/stil seçerken ya da yeni stil paketi eklerken (yalnız stil kütüphanesi de yanında kuruluysa).",
+      "kullanma": "Kütüphane içeriği olmadan: bu kopyada kartlar, GUIDE.md ve registry.json yok, skil tek başına işe yaramaz.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "css"
+      ],
+      "gerekli_paketler": [
+        "herk-edit-kit repo kökündeki style-library/ ve style-templates/ dizinleri"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 2,
+      "kalite_notu": "Karar: SADECE ARŞİV. 1,6 KB'lık yönlendirme dosyası; asıl değer repo kökündeki style-library/ (kartlar, registry.json, GUIDE.md) ve style-templates/ dizinlerinde, bunlar arşive alınmadığı için skil boş bir kabuk. Doğrulandı: skill-calistir'in işaret ettiği assets/source.mp4 kullanıcının kendi videosudur (şablon README'sinde isteniyor), eksik paket dosyası değil; gerçek yukarı akım eksiği kart kütüphanesinin kendisi. Katalog taslak içerik olduğunu (her kartın render kalite denetiminden geçmediğini) kendisi söylüyor. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: temiz — betik yok. Örtüşme: konusan-kafa-gorsel-katman grubunda alternatif (kütüphane içeriği ayrıca alınırsa değerlendirilir).",
+      "ortusme_grubu": "konusan-kafa-gorsel-katman",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 68,
-        "not": "B",
+        "puan": 57,
+        "not": "C",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
           "GitHub güveni 10/30 (güven 35 D, #99/137)",
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 2/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -377024,7 +377630,7 @@
       "repo": "nateherkai/herk-edit-kit",
       "kaynak_yol": ".claude/skills/video-storytelling",
       "commit": "10511e5af86fc47756ea89803b397422e2d89284",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -377094,9 +377700,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Uzun biçimli konuşan kafa videosunun görsel katmanını ayrı grafiklerin dizisi olarak değil, kameranın içinde gezdiği tek kalıcı dünya olarak tasarlar ve kurar. Dört ilke (kalıcı dünya, uzamsal dilbilgisi, açık döngüler, kamera/spot ışığı), tasarım sistemi referansı ve 'wall-of-slots' örnek geometrisi içerir; seyirci dokuzuncu dakikada hâlâ yönünü bilir.",
+      "kullanim_alani": "Haber, tek konulu derin analiz, karşılaştırma, eğitim ya da liste videosunun görsellerini tasarlarken, 'kafa karıştırıcı' geri bildirimi aldıktan sonra.",
+      "kullanma": "Kart/alt üçlük yerleştirmek için değil (hyperframes-video-beats); kısa dikey videolar için değil.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "python"
+      ],
+      "gerekli_paketler": [
+        "hyperframes"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Konsept güçlü ('sahne düşüncesi' hatasına karşı kalıcı dünya), uzamsal dil ve açık döngü fikirleri uygulanabilir ve örnek geometri betikleri var. Yukarı akım eksiği: skill klasörü dışındaki repo kökü dosyalarına (scripts/, docs/, style-library/, MOTION_PHILOSOPHY.md) bağlıdır; arşive yalnız skill klasörleri alındığı için bunlar yoktur, kurulan kopyada ilgili adımlar çalışmaz. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: DİKKAT (düşük) — yalnız örnek geometri Python'ı. Örtüşme: konusan-kafa-gorsel-katman grubunda tamamlayıcı (tasarım ilkeleri).",
+      "ortusme_grubu": "konusan-kafa-gorsel-katman",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "10511e5af86fc47756ea89803b397422e2d89284",
       "degerlendirme": {
-        "puan": 66,
+        "puan": 72,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (35 gün önce)",
@@ -377104,7 +377737,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -377914,7 +378548,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Günlük gördüğümüz ama hiç üzerinde durmadığımız bir konu ya da verilen belge/bağlantılardan 60-90 saniyelik kolaj stilinde HyperFrames açıklayıcı video yapar: önce tanıma duygusu yaratır, sonra nedensel tarihle karşılığını verir. Vox'un Cooper Black filminden ölçülmüş dilbilgisi ve hareket; bağlantı/atıf kuralları açık.",
+      "kullanim_alani": "\"Why is X everywhere?\", \"plain-sight explainer\", \"Vox-style history of X\" gibi konu belgeseli tarzı kısa açıklayıcı.",
+      "kullanma": "Ürün tanıtımı/demo için değil (urun-tanitim-filmi ve explainer-* kullan). Vox'la bağlantı ya da onay ima edilmez, logosu kullanılmaz.",
+      "teknoloji": [
+        "hyperframes",
+        "gsap",
+        "node",
+        "chrome"
+      ],
+      "gerekli_paketler": [
+        "hyperframes (seam-gate betiğinde sabitlenmiş sürüm, npx)",
+        "node 22+"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Güven sınırı açıkça yazılmış (yalnız verilen dosya/URL okunur, TTS/transkript API'si kullanmadan önce sağlayıcı, gönderilen veri ve maliyet sorulur, hiçbir şey otomatik yüklenmez), seam doğrulayıcı betikleri yerel; çok sayıda referans dosyasıyla kademeli yükleme. Ücret: ucretsiz (HeyGen yalnız HyperFrames'in kurulum kaynağı olarak anılır). Lisans: Apache-2.0. Güvenlik: DİKKAT (düşük) — yerel önizleme sunucusu yalnız localhost, izole Chrome profili, npx ile sürüm sabitli CLI. Örtüşme: grup yok (konu belgeseli tarzı farklı iş).",
+      "ortusme_grubu": "konu-aciklayici-video",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "ba7a0bb6d3567d124c51f6074625043bfe0b32eb",
       "degerlendirme": {
         "puan": 79,
         "not": "B",
@@ -377924,7 +378587,8 @@
           "lisans 15/15 (Apache-2.0)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -382405,7 +383069,7 @@
       "repo": "Barty-Bart/motion-graphics",
       "kaynak_yol": "skills/sound-effects",
       "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -382477,11 +383141,41 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Claude Code ile yapılmış hareket grafiği videosuna (HyperFrames, Remotion, GSAP, motion-broll) ölçülmüş bir ses geçişi ekler: ipucu listesi çıkarır, müziğin vuruş ızgarasını kick davullarıyla karşılaştırır, ses efektlerini kesim/vuruşlara oturtur, dışa aktarılan MP4'ü ölçer ve kullanıcıya kulaklıkla kontrol için 5 zaman damgası verir. 109 CC0 ses dosyalı paketli kütüphane, varsayılan kit ve CREDITS.txt üretimi var.",
+      "kullanim_alani": "Bir hareket grafiği videosuna 'whoosh/click/pop/riser/impact' ses efektleri ve müzik oturtmak, lisansı kayıt altına alarak.",
+      "kullanma": "ElevenLabs ile metinden ses efekti üretmek için değil (sound-effects: üretim); sesi dinlemeden 'iyi geliyor' demez. Müzik lisansı kullanıcıdan teyit edilmeden belirsiz işaretlenir.",
+      "teknoloji": [
+        "python",
+        "ffmpeg",
+        "hyperframes",
+        "remotion"
+      ],
+      "gerekli_paketler": [
+        "python bağımlılıkları (pip, ses analizi)",
+        "ffmpeg",
+        "isteğe bağlı: ElevenLabs anahtarı"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "ses-tasarimci",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (bu işte birincil; ad çakışması yüzünden durum şimdilik alternatif). Ölçüm odaklı ('Claude duyamaz, bu yüzden her adımı ölçer'), lisans denetimi (CC0 ve Mixkit Free), CREDITS.txt, ses efektlerini kütüphane içi paketli dosyalardan alma; atıf yazılı (Voxyz). Kategori kararı: 02-ses-muzik-konusma'da kalır; iş ses (ses efekti yerleştirme, miks, ölçüm) ve ses-efekti grubuyla aynı kategoride durması keşfi kolaylaştırır; 04-motion-graphics'e taşımak bu işi motion kategorisinde ses işinden koparır. Ad çakışması: sound-effects (OpenMontage, ElevenLabs ile üretim) ile aynı ad, FARKLI iş: biri ses ÜRETİR, bu video üzerinde ölçülü ses GEÇİŞİ yapar. Çıplak ad el değiştirmesin diye mevcut tercih korunuyor; durumu tercih yapmak kullanıcı kararı (durum_elle). Ücret: kismen (ElevenLabs isteğe bağlı; ücretsiz yol paketli CC0 kütüphane). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION); ses dosyaları CC0, Mixkit dosyaları çalışma anında indirilir ve repoya konmaz. Güvenlik: DİKKAT (orta) — pip install, çalışma anında Mixkit indirmesi (yalnız proje klasörüne). Örtüşme: video-ses-gecisi grubunda birincil (farklı iş), ses-efekti grubuyla (sound-effects birincil) ilişkili.",
+      "ortusme_grubu": "video-ses-gecisi",
+      "ortusme_rolu": "birincil",
       "notlar": "Aynı ad farklı iş: OpenMontage'daki sound-effects çıplak adın tercihi; bu kayıt motion-graphics videolarına ölçülü ses geçişi ekler.",
       "durum_elle": true,
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "3d83d987d658601d8a1269eb691622bdcd427335",
       "degerlendirme": {
-        "puan": 66,
+        "puan": 72,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (36 gün önce)",
@@ -382489,7 +383183,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -387065,7 +387760,7 @@
       "repo": "Barty-Bart/motion-graphics",
       "kaynak_yol": "skills/explainer-default",
       "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -387137,7 +387832,37 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Herhangi bir yazılım ürünü için temiz, 45-90 saniyelik ürün demo videosu (varsayılan 60 sn) üretir, koddan MP4'e, müzikle: ferah açık tuval, kısa ortalanmış satırlar, kamera ürünün kendi arayüzüne yaklaşır. Tek mesajlık bir brif ister (ürün, akılda kalacak tek şey, marka, biçim, süre, müzik, yönlendirme), sonra tek HTML sayfası (kare = zamanın saf fonksiyonu) ve hareket bulanıklığı + ses ile render eder.",
+      "kullanim_alani": "Bir yazılım ürününün ana sayfasına konacak sakin, premium ürün demosu (60 sn); sahte sayı/logo/alıntı uydurmadan, gerçek arayüz metniyle.",
+      "kullanma": "10-20 sn'lik hype/promo (explainer-high-energy), 10-30 sn'lik tek çekim iş akışı filmi (explainer-engaging) ya da anlatımlı/seslendirmeli video için değil.",
+      "teknoloji": [
+        "html-canvas",
+        "node",
+        "ffmpeg",
+        "hyperframes"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "ffmpeg",
+        "başsız tarayıcı"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif). 21 KB tek dosyada brif, senaryo ve yapım kuralları; 'asla gerçek olmayan olgu uydurma', logo yalnız verilmişse, sayı yalnız kaynaktan kuralları iyi. Ücret: ucretsiz (müzik koddan sentezlenir). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: temiz — kullanıcı URL verirse sayfayı okur (web fetch); betik/anahtar yok. Örtüşme: urun-tanitim-filmi grubunda alternatif (onetake birincil); üç explainer-* stil kardeşidir.",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "3d83d987d658601d8a1269eb691622bdcd427335",
       "kardes_bagimliliklari": {
         "explainer-engaging": {
           "id": "explainer-engaging",
@@ -387149,7 +387874,7 @@
         }
       },
       "degerlendirme": {
-        "puan": 66,
+        "puan": 72,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (36 gün önce)",
@@ -387157,7 +387882,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -387175,7 +387901,7 @@
       "repo": "Barty-Bart/motion-graphics",
       "kaynak_yol": "skills/explainer-engaging",
       "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -387248,7 +387974,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Herhangi bir ürün için 10-30 saniyelik kesintisiz tek çekim açıklayıcı (varsayılan 12 sn, sorunsuz döngü) üretir: tek bir kahraman öğe (top, imleç, dosya, mesaj) ürünün iş akışını büyük bir tuval üzerinde istasyonlar olarak gezer, her istasyon ona tepki verir; sonda 'şimdi nasıl çalıştığını anladın' geri çekilmesi vardır. Koddan MP4'e, sesle.",
+      "kullanim_alani": "Ürünün iş akışını (3-6 adım) tek kesintisiz çekimde anlatan kısa film.",
+      "kullanma": "Uzun anlatımlı demolar (explainer-default), hype promo (explainer-high-energy) ya da çok adımlı detaylı eğitim için değil.",
+      "teknoloji": [
+        "html-canvas",
+        "node",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "ffmpeg",
+        "başsız tarayıcı"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif). Kahraman öğe ve istasyon fikri güçlü; kurallar (hiçbir şey kesilmez, kahraman yok olmaz) net. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: temiz — betik yok. Örtüşme: urun-tanitim-filmi grubunda alternatif; fikren onetake ('kesintisiz tanıtım filmi') ile en çok örtüşen bu skil.",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "3d83d987d658601d8a1269eb691622bdcd427335",
       "kardes_bagimliliklari": {
         "explainer-default": {
           "id": "explainer-default",
@@ -387260,7 +388015,7 @@
         }
       },
       "degerlendirme": {
-        "puan": 66,
+        "puan": 72,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (36 gün önce)",
@@ -387268,7 +388023,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -387286,7 +388042,7 @@
       "repo": "Barty-Bart/motion-graphics",
       "kaynak_yol": "skills/explainer-high-energy",
       "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -387358,7 +388114,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Herhangi bir ürün için 12-20 saniyelik yüksek enerjili hareket grafiği promosu (varsayılan 15 sn, 128 BPM, 8 ölçü) üretir: vuruşa kilitli sahne değişimleri, kinetik tipografi, her geçişte göz taşıyan şekil (kıvılcım → çizgi → ...), HUD mikro yazısı ve sentezlenmiş müzik. 6-8 sahne planı ve 'spark open', 'brand slam', 'kinetic triplet' gibi sahne türleri anlatılır.",
+      "kullanim_alani": "Ürün lansmanı için kısa, sosyal paylaşıma uygun vuruşlu tanıtım.",
+      "kullanma": "Sakin ürün demosu (explainer-default), kesintisiz iş akışı filmi (explainer-engaging), anlatımlı video için değil.",
+      "teknoloji": [
+        "html-canvas",
+        "node",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "ffmpeg",
+        "başsız tarayıcı"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif). Vuruş ızgarası ve 'taşıyıcı şekil' disiplini iyi, sahne türleri somut. Ücret: ucretsiz (sentezlenmiş müzik). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION). Güvenlik: temiz — betik yok. Örtüşme: urun-tanitim-filmi grubunda alternatif; kinetic-reel/motion-showreel ile üslup benzerliği var.",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "3d83d987d658601d8a1269eb691622bdcd427335",
       "kardes_bagimliliklari": {
         "explainer-default": {
           "id": "explainer-default",
@@ -387370,7 +388155,7 @@
         }
       },
       "degerlendirme": {
-        "puan": 66,
+        "puan": 72,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (36 gün önce)",
@@ -387378,7 +388163,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -387491,7 +388277,7 @@
       "repo": "tuzhechen2005/opus-video-skills",
       "kaynak_yol": "skills/kinetic-reel",
       "commit": "dafed5bd55eb8bca01baeff2b059cab2446cf042",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -387566,9 +388352,43 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kinetik tipografi hareket reelleri (MP4) kodla yapar: showreel, portföy/iş reel'i, ürün promosu, giriş filmi; kalın daraltılmış yazı, HUD mikro yazısı, siyah/krem/limon paleti, three.js üretken katmanları, WebGL son işlem. Her kare t'nin saf fonksiyonudur; çalıştırılabilir bir template/ (17 sn demo) ve 84 sn'lik tam örnek (work-reel-26) ile gelir, müzik Node'da aynı ipucu dosyasından sentezlenir.",
+      "kullanim_alani": "Editoryal, yüksek enerjili kinetik tipografi reel/portföy filmi; gerçek veri/rakam kaynağı net olan işler.",
+      "kullanma": "Ürün arayüzü demosu, anlatımlı açıklayıcı ya da gerçek çekim kurgusu için değil. Veri yoksa şematik olarak etiketler, uydurmaz.",
+      "teknoloji": [
+        "three.js",
+        "webgl",
+        "html-canvas",
+        "node",
+        "ffmpeg",
+        "chrome"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "headless Chrome",
+        "ffmpeg",
+        "three.js (npm)"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. 'Gerçekler kutsaldır' ilkesi (yalnız kaynaktaki rakamlar, şematik olanlar HUD'da SCHEMATIC etiketli, tıbbi işte etkililik iddiası yok), sağlam çalışma akışı ve çalıştırılabilir şablon. Sabit yol: SKILL.md:22'deki bash ~/.claude/skills/kinetic-reel/scripts/new_project.sh kurulumda proje içi yola çevrilir. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION; render.mjs kısmı John Heibel MIT notuyla). Güvenlik: DİKKAT (orta) — new_project.sh npm paketleri kurar (ilk kullanımda), başsız Chrome ve ffmpeg çalıştırır; anahtar yok. Örtüşme: kodla-showreel grubunda birincil (self-contained şablonlu); motion-showreel alternatif.",
+      "ortusme_grubu": "kodla-showreel",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "dafed5bd55eb8bca01baeff2b059cab2446cf042",
       "degerlendirme": {
-        "puan": 66,
+        "puan": 72,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
@@ -387576,7 +388396,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -388237,7 +389058,7 @@
       "repo": "Barty-Bart/motion-graphics",
       "kaynak_yol": "skills/motion-broll",
       "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -388310,17 +389131,51 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Konuşan kafa videosu ve transkriptinden, konuşmacının sözlerine zamanlanmış hareket grafiği B-roll klipleri üretir: tek bir şekil hiç kesilmeden boyut, köşe ve renk değiştirir, içerik kısa bulanıklıkla değişir, imleç gerçek tıklamalarla yönlendirir, yay hareketi kullanır. Çıktı: editöre bırakılacak klip seti, B-roll'lü önizleme render'ı ve iki HTML sayfası (klipleri gez, önce/sonra karşılaştır). Motor (engine/), referans ve 6 bitmiş örnek paketli.",
+      "kullanim_alani": "Konuşan kafa videosuna (transkript ya da SRT ile) tek şekilli, imleç güdümlü hareket grafiği B-roll eklemek; hafif/orta/yoğun yoğunluk seçilir.",
+      "kullanma": "Tam kompozisyon motoru istenen ürün filmleri ya da transkript/sözler olmayan videolar için değil.",
+      "teknoloji": [
+        "playwright",
+        "gsap",
+        "node",
+        "python",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "python3",
+        "ffmpeg",
+        "playwright + chromium (setup.sh)",
+        "faster-whisper (transkript yoksa)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kendi kendine yeten (engine, build/render betikleri, yazı tipleri, referans, 6 bitmiş örnek), tek turluk görüşme, kalite çıtası olarak örnekler. Motor API'si referansta. Codex uyumu 'uyarlanabilir' (AskUserQuestion varsayımı). Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION), yazı tipi Geist OFL. Güvenlik: DİKKAT (orta) — setup.sh Playwright + Chromium'u motion/node_modules altına kurar, yerel Python/JS betikleri; anahtar yok. Örtüşme: konusan-kafa-gorsel-katman grubunda birincil (kendi kendine yeten, transkript güdümlü).",
+      "ortusme_grubu": "konusan-kafa-gorsel-katman",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "3d83d987d658601d8a1269eb691622bdcd427335",
       "degerlendirme": {
-        "puan": 61,
-        "not": "C",
+        "puan": 69,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (36 gün önce)",
           "GitHub güveni 10/30 (güven 35 D, #98/137)",
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 10/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -388484,7 +389339,7 @@
       "repo": "Barty-Bart/motion-graphics",
       "kaynak_yol": "skills/object-separation",
       "commit": "3d83d987d658601d8a1269eb691622bdcd427335",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -388552,9 +389407,44 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Videodaki bir kişiyi, ürünü ya da eli arka plandan kullanıcının kendi bilgisayarında SAM 2 ile ayırır: önce makineyi tarar (GPU/Apple Silicon/CPU) ve uygun model boyutunu seçer (large 898 MB, base-plus 323 MB, tiny 156 MB), çıktı olarak ayrılan özneyi yeşille vurgulanmış aynı videoyu verir. Hiçbir şey yüklenmez; silinebilir tek klasörde sanal ortam kurar.",
+      "kullanim_alani": "Videoda öznenin (kişi/ürün/el) arka plandan ayrılması, maske üretmek (ör. konuşmacının arkasına metin koymak).",
+      "kullanma": "Uzun klipler CPU'da (kare başı ~5 sn) için; öznesi belirsiz sahneler için; sabit kare hızı olmayan videolar için.",
+      "teknoloji": [
+        "python",
+        "pytorch",
+        "sam2",
+        "opencv",
+        "ffmpeg"
+      ],
+      "gerekli_paketler": [
+        "python 3.10+",
+        "torch",
+        "transformers",
+        "opencv-python-headless",
+        "pillow",
+        "numpy",
+        "ffmpeg"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "ai-video-uretimi"
+      ],
+      "roller": [
+        "ai-medya-uretici",
+        "video-kurgu-render"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Hazır, test edilmiş kod blokları, model seçimi tablosu ve süre beklentileri, silinebilir sanal ortam, açık 'hiçbir şey yüklenmez'. Kategori: 04-motion-graphics-karakter'de bırakıldı (taşımak arşiv yolunu değiştirir; keşif açısından 01-video-uretim-montaj daha uygun olabilir, karar kullanıcıda). Ücret: ucretsiz (yerel). Lisans: MIT (LICENSE okundu; GitHub NOASSERTION); SAM 2 modeli Meta'nın Apache-2.0 lisanslı. Güvenlik: DİKKAT (orta) — pip install (torch, transformers) ve Hugging Face'ten model indirir (898 MB'a kadar). Örtüşme: video-nesne-ayirma grubunda birincil (HyperFrames remove-background daha hafif alternatiftir).",
+      "ortusme_grubu": "video-nesne-ayirma",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "3d83d987d658601d8a1269eb691622bdcd427335",
       "degerlendirme": {
-        "puan": 66,
+        "puan": 72,
         "not": "B",
         "ayrinti": [
           "bakım 25/25 (36 gün önce)",
@@ -388562,7 +389452,8 @@
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -388680,7 +389571,7 @@
       "repo": "tuzhechen2005/opus-video-skills",
       "kaynak_yol": "skills/painted-animation",
       "commit": "dafed5bd55eb8bca01baeff2b059cab2446cf042",
-      "lisans": "NOASSERTION",
+      "lisans": "MIT",
       "tip": "T1",
       "gizli": false,
       "arsiv_tarihi": "2026-11-17",
@@ -388751,17 +389642,51 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Kodla suluboya ve mürekkep görünümlü el boyaması çizgi film videoları (MP4) yapar: p5.js + p5.brush, başsız Chrome'da kare kare render, ffmpeg ile kodlama; Clawd ya da herhangi bir karakter başrolde. Önce hikâye panosu (STORYBOARD.md), sahne sahne inşa, hareketi çıplak gözle kontrol; 156 sn'lik müzik klibinden damıtılmış yöntem, şablon, örnek ve ritim ızgarası (beat_grid.py).",
+      "kullanim_alani": "Karakterli, boyalı görünümlü kısa çizgi film ya da şarkı/lirik klibi (LRC ile) istendiğinde.",
+      "kullanma": "Fotoğraf/metin/video'yu boyalı görünüme çevirmek için (p5-paint-animation); marka/net tipografi gereken işler; hızlı üretim için değil (kare başı render pahalı).",
+      "teknoloji": [
+        "p5-brush",
+        "p5js",
+        "node",
+        "ffmpeg",
+        "chrome"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "headless Chrome",
+        "ffmpeg",
+        "p5 + p5.brush (npm)",
+        "python3 (beat_grid.py)"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF (niş). Yöntem sağlam (storyboard önce, her kare t'nin saf fonksiyonu, hareketi kare kare izleme), ama belirli bir karaktere (Clawd) ve görsel dile bağlı örneklerle yüklü. Sabit yol: SKILL.md:17'deki bash ~/.claude/skills/painted-animation/scripts/new_project.sh kurulumda proje içi yola çevrilir. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION; şablon kısmı John Heibel MIT). Güvenlik: DİKKAT (orta) — new_project.sh npm install çalıştırır, Chrome/ffmpeg denetler. Örtüşme: p5-boyali-animasyon grubunda alternatif (hikâye/karakter çizgi film); p5-paint-animation birincil.",
+      "ortusme_grubu": "p5-boyali-animasyon",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "dafed5bd55eb8bca01baeff2b059cab2446cf042",
       "degerlendirme": {
-        "puan": 66,
-        "not": "B",
+        "puan": 64,
+        "not": "C",
         "ayrinti": [
           "bakım 25/25 (2 gün önce)",
           "GitHub güveni 8/30 (güven 28 D, #111/137)",
           "lisans 3/15 (NOASSERTION)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -389021,17 +389946,48 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Lansman videosu, ürün filmi, hareket tasarımı parçası, UI hareket reel'i ya da animasyonlu marka damgası üretir (HTML'den MP4): imleç, şekil dönüştüren arayüz, yaylar, vuruşa oturan kesimler. 'Tek şekil, hiç kesme', içerik kısa bulanıklıkla değişir, yaylar (hafif aşım), öndeki/arkadaki kenar farklı yaylarla gibi katı hareket kuralları; yazarın verbatim istemleri (references/prompts.md) şartname olarak verilir.",
+      "kullanim_alani": "Dribbble tarzı UI hareketi / lansman filmi; yönetmen duruşuyla (yaratıcı karar günlüğü: DECISION) özgün bir kompozisyon.",
+      "kullanma": "Şablon ya da ürün sitesini kopyalama işleri için değil (kendi kuralı da bunu yasaklıyor); hızlı, ölçülmüş şablon istenirse onetake/explainer-* kullan.",
+      "teknoloji": [
+        "html-canvas",
+        "node",
+        "ffmpeg",
+        "gsap"
+      ],
+      "gerekli_paketler": [
+        "node",
+        "ffmpeg",
+        "HTML'den MP4 render hattı (HyperFrames benzeri)"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "ileri",
+      "kalite": 3,
+      "kalite_notu": "Karar: ALTERNATİF. Hareket kuralları değerli ve somut; ama metin yazarın kişisel tercih belgesi gibi yazılmış (kişi adıyla, belirli bir müşteri filmine atıflarla), 'yaratıcılıkta kısıt yok, izin isteme' duruşu bazı kullanıcılar için uygunsuz olabilir. Kurulum, betik yok. Ücret: ucretsiz. Lisans: MIT. Güvenlik: temiz — yalnız belge. Örtüşme: urun-tanitim-filmi grubunda alternatif (aynı 'tek şekil hiç kesme' ilkesi onetake'te de var; onetake birincil).",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "edbfb105382f21507bad895d8b5f6e0faa67487c",
       "degerlendirme": {
-        "puan": 80,
-        "not": "A",
+        "puan": 72,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (28 gün önce)",
           "GitHub güveni 12/30 (güven 39 D, #88/137)",
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "ucretsiz",
@@ -389119,9 +390075,39 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Remotion'da seslendirmeli 30-90 saniyelik açıklayıcı video: senaryo → seslendirme → kelime zamanlamaları → her vuruş için bir snapcn sahnesi → yakılmış altyazılar → render. Her vuruşta elle yazılmış slayt yerine snapcn bileşenleri (punch-lines, status-cycle, count-grid, laptop-frame, word-captions, karaoke-captions...) kullanılır; 'bileşen adı uydurma, her metin prop'unu doldur' kuralları.",
+      "kullanim_alani": "Ürün/özellik/süreç açıklayan anlatımlı Remotion videosu (\"explainer video\", \"how it works video\").",
+      "kullanma": "Remotion kullanılmıyorsa; sade tek şekilli ürün filmi için (explainer-*, onetake); Pro bileşen lazımsa abonelik gerekir.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "shadcn"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "shadcn CLI",
+        "TTS sağlayıcısı (kullanıcının seçimi)"
+      ],
+      "proje_tipleri": [
+        "egitim-explainer",
+        "urun-tanitim-videosu"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif). Akış net, kural listesi (her vuruş bir bileşen, ad uydurmama) iyi. Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: urun-tanitim-filmi grubunda alternatif (Remotion + snapcn yolu, seslendirmeli açıklayıcıya uygun).",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
       "degerlendirme": {
-        "puan": 83,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (6 gün önce)",
@@ -389129,7 +390115,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -389217,9 +390204,38 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Remotion'da kinetik tipografi: animasyonlu metin, başlık kartları, başlık reveal'ı, dönen kelimeler, vurgulu ifade, ödeme cümlesine dönüşen satır. snapcn metin bileşenleri (text-reveal, type-morph, text-highlight, word-flip, punch-lines, text-swell...) ölçülmüş taban çizgisinde ölçeklendirir ve geometricPrecision kullanır; tarayıcıda elle yazılan metnin 'takılma' ve 'titreme' hatalarından kaçınır, 30 fps için ayarlı yavaşlamalar.",
+      "kullanim_alani": "Remotion projesinde yazının taşıdığı kısa video: başlık animasyonu, metin reveal, 'kelimeleri patlat'.",
+      "kullanma": "Remotion dışında; showreel/portföy reel'i için kinetic-reel; uzun anlatım için değil.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "shadcn"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "shadcn CLI"
+      ],
+      "proje_tipleri": [
+        "sosyal-medya-icerik",
+        "marka-sunum"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Teknik gerekçe ölçüme dayalı (piksel titreşimi 0,284→0,014 px, şekil kayması %3,41→%0,22 iddiası). Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: remotion-kisa-grafik grubunda tamamlayıcı (remotion-motion-graphics birincil); showreel işi için kodla-showreel grubuna da yakın.",
+      "ortusme_grubu": "remotion-kisa-grafik",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
       "degerlendirme": {
-        "puan": 83,
+        "puan": 82,
         "not": "A",
         "ayrinti": [
           "bakım 25/25 (6 gün önce)",
@@ -389227,7 +390243,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -389319,7 +390336,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Remotion'da brife dayalı 15-30 saniyelik ürün lansman filmi: lansman, özellik duyurusu, sürüm çıkışı, Product Hunt/X/LinkedIn tanıtımı ya da landing hero videosu. snapcn'in el ayarlı sahneleri (announce-title, hero-launch, type-morph, count-grid, wordmark-cut...) ile brif → storyboard → bileşen kurulumu → kompozisyon → render denetimi → yayın akışı; 'AI video gibi görünmeme' hedefi.",
+      "kullanim_alani": "Remotion projesinde lansman/duyuru videosu (\"launch video\", \"release video\", \"Product Hunt video\").",
+      "kullanma": "Remotion yoksa; kodundan hızlı proje tanıtımı için brag; ayrı ve özgün hareket kuralları için product-launch-motion/onetake.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "shadcn"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "shadcn CLI"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (alternatif). Net iş akışı ve 'önce katalog, sonra interpolate/spring' kuralı. Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: urun-tanitim-filmi grubunda alternatif (Remotion yolu); aynı işi brag/product-launch-motion/onetake yapar. saas-motion-kit bu kütüphanede kayıtlı değil (izle kararı), bu karşılaştırmaya girmedi.",
+      "ortusme_grubu": "urun-tanitim-filmi",
+      "ortusme_rolu": "alternatif",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -389329,7 +390375,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -389417,17 +390464,46 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Remotion'da 2-6 saniyelik logo animasyonu: logo reveal, damga, giriş/çıkış kartı, marka açılışı. snapcn logo sahneleri (logo-flicker, logo-assemble, logo-collapse, block-wordmark, wordmark-cut) kullanıcının gerçek logosu ve adıyla; 'solarak girip ölçeklenen' sıradan logo yerine gerçek marka filmlerinden çıkarılmış kalıplar.",
+      "kullanim_alani": "Remotion'da logo açılışı, intro/outro bumper'ı ya da bitiş kartı.",
+      "kullanma": "Remotion dışı işler; gerçek logo/ad verilmeyen işler (sahneler snapcn markasıyla gelir, mutlaka prop değiştirilmeli).",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "shadcn"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "shadcn CLI"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "kolay",
+      "kalite": 3,
+      "kalite_notu": "Karar: TUT (tamamlayıcı, dar). Kısa ve odaklı, ama kapsamı tek bir iş. Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: remotion-kisa-grafik grubunda tamamlayıcı.",
+      "ortusme_grubu": "remotion-kisa-grafik",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
       "degerlendirme": {
-        "puan": 83,
-        "not": "A",
+        "puan": 74,
+        "not": "B",
         "ayrinti": [
           "bakım 25/25 (6 gün önce)",
           "GitHub güveni 13/30 (güven 43 D, #83/137)",
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 10/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 3/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -389516,7 +390592,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Remotion'da hareketin mesaj olduğu kısa, tasarım odaklı hareket grafiği (genellikle <10 sn, en çok ~30 sn): kinetik tipografi, başlık kartı, istatistik sayacı, logo damgası, sosyal kanıt bindirmesi, görsel galeri açılışı, yakılmış altyazı. snapcn bileşenleri (text-reveal, type-morph, punch-lines, logo-flicker, count-grid, orbit-gallery...) ile 'üretilmiş değil tasarlanmış' görünüm.",
+      "kullanim_alani": "Remotion'da tek satır/tek sayı/tek logo odaklı kısa hareket grafiği.",
+      "kullanma": "Remotion yoksa; uzun anlatımlı videolar için değil.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "shadcn"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "shadcn CLI"
+      ],
+      "proje_tipleri": [
+        "marka-sunum",
+        "sosyal-medya-icerik"
+      ],
+      "roller": [
+        "motion-graphics-sanatcisi",
+        "video-kompozisyon"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Remotion hareket grafiği için genel giriş noktası, diğer remotion-* skillerinin üst kümesi gibi. Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: remotion-kisa-grafik grubunda birincil; kinetic-typography ve logo-animation bunun özelleşmiş dilimleridir.",
+      "ortusme_grubu": "remotion-kisa-grafik",
+      "ortusme_rolu": "birincil",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -389526,7 +390631,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -389615,7 +390721,36 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Gerçek bir ekran kaydı ya da ekran görüntülerinden Remotion'da 20-45 saniyelik ürün demosu: SaaS yürüyüşü, özellik demosu, onboarding, CLI/geliştirici aracı demosu, AI uygulaması demosu, App Store önizlemesi. snapcn bileşenleriyle (screen-recording, cursor-track, laptop-frame, phone-frame, terminal-simulator, prompt-send, answer-stream, status-cycle) kamera yaklaşması, tıklamalar, cihaz çerçeveleri ve yazılan komutlar hazır gelir.",
+      "kullanim_alani": "Elde ekran kaydı olan bir ürünün cilalı demo videosunu Remotion'da yapmak.",
+      "kullanma": "Ekran kaydı üretmek için değil (playwright-recording gibi); Remotion kullanılmıyorsa; sahte arayüz üretimi için synthetic-ui-demo.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "shadcn"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "shadcn CLI"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT (tamamlayıcı). Elle animasyonda ele veren kısımları (sabit hızlı imleç, sonsuz ease'li zoom, bir anda dolan terminal) bileşenlere bırakıyor. Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: ekran-kaydi-demo grubunda tamamlayıcı (kayıt alınır, bu skil ile cilalanır; playwright-recording birincil).",
+      "ortusme_grubu": "ekran-kaydi-demo",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -389625,7 +390760,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
@@ -389858,7 +390994,38 @@
           "derece": "D"
         }
       },
-      "inceleme": "otomatik",
+      "inceleme": "incelendi",
+      "ozet_tr": "Remotion videoları için snapcn: kopyala-yapıştır animasyon bileşenleri ve zaman çizelgesi güdümlü arayüz ilkellerinin shadcn kayıt defteri (shadcn add @snapcn/text-reveal). Metin animasyonları, geçişler, arka planlar, UI blokları, marka/sosyal kartlar, terminal simülatörü, cihaz çerçeveleri, karaoke altyazılar ve tam kompozisyonlar; kod proje içinde components/snap-cn/ altında sana aittir. 50'den fazla referans dosyası (anatomi, anti-desenler, arketipler, bileşen sayfaları) paketli.",
+      "kullanim_alani": "Remotion projesinde cilalı video sahneleri, metin reveal'ları, cihaz çerçeveleri, altyazı bileşenleri gerektiğinde (\"remotion component\", \"text reveal\", \"terminal simulator\").",
+      "kullanma": "Remotion olmayan projelerde (HyperFrames vb.) için değil; Pro bileşen gerektiren işler abonelik ister.",
+      "teknoloji": [
+        "remotion",
+        "react",
+        "typescript",
+        "shadcn"
+      ],
+      "gerekli_paketler": [
+        "remotion",
+        "shadcn CLI",
+        "isteğe bağlı: @snapcn/mcp ve SNAPCN_API_KEY"
+      ],
+      "proje_tipleri": [
+        "urun-tanitim-videosu",
+        "sosyal-medya-icerik",
+        "egitim-explainer"
+      ],
+      "roller": [
+        "video-kompozisyon",
+        "motion-graphics-sanatcisi"
+      ],
+      "zorluk": "orta",
+      "kalite": 4,
+      "kalite_notu": "Karar: TUT. Kapsamlı ve düzenli (bileşen kataloğu, anatomi, tasarım ve hareket ilkeleri, anti-desen listesi); kod sende kalır. Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: remotion-cercevesi grubunda tamamlayıcı (bileşen kayıt defteri, çerçeve skili değil); remotion-* kardeşleri bu skilin üstüne kurulu iş akışlarıdır.",
+      "ortusme_grubu": "remotion-cercevesi",
+      "ortusme_rolu": "tamamlayıcı",
+      "inceleyen": "claude",
+      "inceleme_tarihi": "2026-11-18",
+      "inceleme_commit": "18b973d7592adf2099a4d5cc2d8970862a4e1172",
       "degerlendirme": {
         "puan": 81,
         "not": "A",
@@ -389868,7 +391035,8 @@
           "lisans 15/15 (MIT)",
           "Codex uyumu 15/15",
           "bağlam yükü 8/10",
-          "yapı 5/5"
+          "yapı 5/5",
+          "elle kalite 4/5 (%40 ağırlık)"
         ]
       },
       "ucret": "kismen",
