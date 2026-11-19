@@ -29,6 +29,7 @@ ACIKLAMA = {
     "ayna-ayni": "birebir kopya (tek kopya yeter)",
     "ayna-baska-arac": "başka AI aracı (Cursor/Gemini/Kiro…) için kopya",
     "haric": "bilinçli hariç (test/örnek/şablon)",
+    "fihristte": "fihristte (arşive alınmadı; kurulumda kaynaktan alınır)",
     "KARAR_BEKLIYOR": "yeni/kapsam dışı skill: arşive alınmadı, karar bekliyor (kaynaklar.json: dahil'e ekle ya da haric'e yaz)",
 }
 
@@ -46,6 +47,11 @@ def main():
     denetim = reg.get("denetim", {})
     kayitlar = json_oku(KAYNAKLAR)["repolar"]
     arsiv_repolari = sorted({k["repo"] for k in kayitlar if arsive_cekilir(k)})
+    fihrist_tutulan = {}
+    for repo in arsiv_repolari:
+        rk = [k for k in kayitlar if k["repo"] == repo and arsive_cekilir(k)]
+        if rk and all(k.get("bolum") == "fihrist" for k in rk):
+            fihrist_tutulan[repo] = {y for k in rk for y in (k.get("arsivde_tut") or []) if isinstance(y, str)}
     yerel_kayit = {k["repo"]: k for k in kayitlar if k["tip"] in YEREL_TIPLER}  # T7 kendi/, T8 site/: GitHub'a sorulmaz
     kayip_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] == "KAYIP"})
     # bolum fihrist/katalog (dev koleksiyon, kit): skil dosyaları BİLEREK arşiv dışıdır; içlerindeki SKILL.md sorun sayılmaz (fihrist/ ve kitler.json tutar)
@@ -87,6 +93,10 @@ def main():
         gercek = [e["path"] for e in govde["tree"] if e["type"] == "blob" and e["path"].split("/")[-1].lower() == "skill.md"]
         sayac = Counter()
         for p in gercek:
+            klasor = p.rsplit("/", 1)[0] if "/" in p else ""
+            if repo in fihrist_tutulan and klasor not in fihrist_tutulan[repo]:
+                sayac["fihristte"] += 1
+                continue
             karar = d["skill_md"].get(p)
             if karar == "dahil-disi":
                 # Hiçbir kaydın kapsamına girmeyen skill (genelde upstream'in sonradan eklediği yeni skill): arşive ALINMAZ,
@@ -100,12 +110,17 @@ def main():
                 continue
             tur = karar.split(":")[0]
             sayac[tur] += 1
+            if tur == "fihristte":
+                sorunlar.append(f"{repo}: arşiv/arsivde_tut kapsamında ama denetim kararı 'fihristte' -> {p}")
             if tur == "arac-varyanti" and (repo, karar.split(":")[1]) not in varyant_index:
                 sorunlar.append(f"{repo}: araç sürümü kararı var ama arşivde sürüm yok -> {p}")
             if tur in ("secildi", "ayri-surum"):
-                klasor = p.rsplit("/", 1)[0] if "/" in p else ""
                 if (repo, klasor) not in yol_index:
                     sorunlar.append(f"{repo}: arşive seçildi ama registry'de yok -> {p}")
+        if repo in fihrist_tutulan:
+            for y in sorted(fihrist_tutulan[repo]):
+                if (repo, y) not in yol_index:
+                    sorunlar.append(f"{repo}: arsivde_tut yolu registry'de yok -> {y or '.'}")
         for p in d["skill_md"]:
             if p not in gercek:
                 sorunlar.append(f"{repo}: denetimde var ama ağaçta yok -> {p}")

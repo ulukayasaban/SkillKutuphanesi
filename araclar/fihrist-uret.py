@@ -45,6 +45,25 @@ def aciklama_kisalt(metin, sinir=ACIKLAMA_SINIRI):
     return m if len(m) <= sinir else m[:sinir - 1].rstrip() + "…"
 
 
+def _ilk_paragraf(metin):
+    """Frontmatter sonrası ilk gövde paragrafı (başlık satırları atlanır)."""
+    m = ortak.FM_BASTA.match(metin)
+    govde = metin[m.end():] if m else metin
+    satirlar = []
+    for s in govde.splitlines():
+        t = s.strip()
+        if not t:
+            if satirlar:
+                break
+            continue
+        if t.startswith("#"):
+            if satirlar:
+                break
+            continue
+        satirlar.append(t)
+    return " ".join(satirlar)
+
+
 def skil_girdisi(yol, metin, repo):
     """(klasör yolu, SKILL.md metni | None) -> {ad, aciklama, yol}. Metin yoksa ad klasör adından gelir, açıklama boş kalır."""
     fm = ortak.frontmatter(metin) if metin else {}
@@ -52,13 +71,25 @@ def skil_girdisi(yol, metin, repo):
     return {"ad": ad, "aciklama": aciklama_kisalt(fm.get("description", "")), "yol": yol}
 
 
+def bilesen_girdisi(yol, metin):
+    """(dosya yolu, .md metni | None) -> {tur: 'ajan'|'komut', ad, aciklama, yol}.
+    Ad frontmatter `name` ya da dosya adı (stem); açıklama frontmatter `description` yoksa ilk gövde paragrafı."""
+    tur = "komut" if "/commands/" in "/" + yol else "ajan"
+    fm = ortak.frontmatter(metin) if metin else {}
+    ad = (fm.get("name") or "").strip() or Path(yol).stem
+    aciklama = aciklama_kisalt(fm.get("description", ""))
+    if not aciklama and metin:
+        aciklama = aciklama_kisalt(_ilk_paragraf(metin))
+    return {"tur": tur, "ad": ad, "aciklama": aciklama, "yol": yol}
+
+
 def skil_klasorleri_sec(kayitlar, agac, ayar, repo):
     """Kaynak kaydındaki (birden çok olabilir) dahil/haric kurallarıyla seçilen skil klasörleri: {yol: SKILL.md yolu}.
-    Kayıt yoksa kuralsız bir kayıt varsayılır."""
+    Kayıt yoksa kuralsız bir kayıt varsayılır; arsivde_tut fihrist üretiminde süzmez."""
     kc = _kaynak_cek()
     sec = {}
     for k in (kayitlar or [{"repo": repo}]):
-        secilen, _ = kc.skill_klasorlerini_sec(k, agac, ayar)
+        secilen, _ = kc.skill_klasorlerini_sec(k, agac, ayar, tutulan_uygula=False)
         for b in secilen.values():
             sec[b["yol"]] = None
     md = {}
@@ -68,9 +99,26 @@ def skil_klasorleri_sec(kayitlar, agac, ayar, repo):
     return {y: md[y] for y in sorted(sec) if y in md}
 
 
-def fihrist_kur(repo, sha, tarih, girdiler, eski=None, arsivde=()):
+def bilesen_yollari_sec(kayitlar, agac, ayar, repo):
+    """Kaynak kaydındaki kurallarla seçilen bileşen (ajan/komut) dosya yolları (sıralı, tekil).
+    kaynak-cek.py bilesenleri_bul ile aynı kuralı kullanır."""
+    kc = _kaynak_cek()
+    tum_secilen = {}
+    kayit_liste = kayitlar or [{"repo": repo}]
+    for k in kayit_liste:
+        secilen, _ = kc.skill_klasorlerini_sec(k, agac, ayar, tutulan_uygula=False)
+        for ad, b in secilen.items():
+            tum_secilen[f"{len(tum_secilen)}:{ad}"] = b
+    yollar = set()
+    for k in kayit_liste:
+        for p in kc.bilesenleri_bul(k, agac, tum_secilen, ayar, fihrist_atla=False):
+            yollar.add(p)
+    return sorted(yollar)
+
+
+def fihrist_kur(repo, sha, tarih, girdiler, eski=None, arsivde=(), bilesenler=None):
     """Saf işlev. girdiler: [{ad, aciklama, yol}]; eski: var olan fihrist sözlüğü (inceleme notları aynı yol için korunur);
-    arsivde: arşivde de bulunan skil yolları kümesi. Döner: yeni fihrist sözlüğü."""
+    arsivde: arşivde de bulunan skil yolları kümesi; bilesenler: [{tur, ad, aciklama, yol}]. Döner: yeni fihrist sözlüğü."""
     eski_inceleme = {x["yol"]: x["inceleme"] for x in (eski or {}).get("skiller", []) if isinstance(x, dict) and "inceleme" in x}
     skiller = []
     for g in sorted(girdiler, key=lambda x: x["yol"]):
@@ -80,7 +128,9 @@ def fihrist_kur(repo, sha, tarih, girdiler, eski=None, arsivde=()):
         if g["yol"] in eski_inceleme:
             x["inceleme"] = eski_inceleme[g["yol"]]
         skiller.append(x)
-    return {"repo": repo, "commit": sha, "tarih": tarih, "skil_sayisi": len(skiller), "skiller": skiller}
+    bil = [{"tur": b["tur"], "ad": b["ad"], "aciklama": b["aciklama"], "yol": b["yol"]}
+           for b in sorted(bilesenler or [], key=lambda x: x["yol"])]
+    return {"repo": repo, "commit": sha, "tarih": tarih, "skil_sayisi": len(skiller), "skiller": skiller, "bilesenler": bil}
 
 
 def fark_hesapla(eski, yeni):
@@ -96,7 +146,8 @@ def fark_hesapla(eski, yeni):
 
 
 def ozet_satirlari(repo, yeni, eski, fark, okunamayan=0, kuru=False):
-    s = [f"{repo}: {yeni['skil_sayisi']} skil · commit {yeni['commit'][:9]}" + ("  (--kuru: dosya yazılmadı)" if kuru else "")]
+    bil_ek = f" · {len(yeni['bilesenler'])} bileşen" if yeni.get("bilesenler") else ""
+    s = [f"{repo}: {yeni['skil_sayisi']} skil{bil_ek} · commit {yeni['commit'][:9]}" + ("  (--kuru: dosya yazılmadı)" if kuru else "")]
     if okunamayan:
         s.append(f"  UYARI: {okunamayan} SKILL.md okunamadı (ad klasör adından, açıklama boş)")
     if eski is None:
@@ -136,9 +187,17 @@ def icerik_oku(repo, sha, govde, yollar):
     return sonuc
 
 
-def arsivde_yollari(repo):
+def arsivde_yollari(repo, kayitlar=None):
+    """Arşivde bulunan skil yolları: registry.json'daki skiller VE kaynak kaydındaki arsivde_tut listesi."""
     reg = ortak.json_oku(ortak.REGISTRY, {"skiller": []}) or {}
-    return {s.get("kaynak_yol", "") for s in reg.get("skiller", []) if str(s.get("repo", "")).lower() == repo.lower()}
+    sonuc = {s.get("kaynak_yol", "") for s in reg.get("skiller", []) if str(s.get("repo", "")).lower() == repo.lower()}
+    if kayitlar is None:
+        kay = ortak.json_oku(ortak.KAYNAKLAR, {"repolar": []}) or {}
+        kayitlar = [k for k in kay.get("repolar", []) if str(k.get("repo", "")).lower() == repo.lower()]
+    for k in kayitlar:
+        if k.get("bolum") == "fihrist" and isinstance(k.get("arsivde_tut"), list):
+            sonuc.update(x for x in k["arsivde_tut"] if isinstance(x, str))
+    return sonuc
 
 
 def main(argv=None):
@@ -160,16 +219,23 @@ def main(argv=None):
         if not yollar:
             print(f"HATA: {a.repo}: seçilen SKILL.md yok (kaynak kaydındaki dahil/haric kurallarını kontrol et)", file=sys.stderr)
             return 2
-        metinler = icerik_oku(a.repo, sha, govde, yollar)
+        bil_yollar = bilesen_yollari_sec(kayitlar, govde["tree"], ayar, a.repo)
+        hepsi = {("s", k): v for k, v in yollar.items()}
+        for p in bil_yollar:
+            hepsi[("b", p)] = p
+        okunan = icerik_oku(a.repo, sha, govde, hepsi)
+        metinler = {k: okunan[("s", k)] for k in yollar if ("s", k) in okunan}
+        bil_metinler = {p: okunan[("b", p)] for p in bil_yollar if ("b", p) in okunan}
     except (RuntimeError, OSError) as e:
         print(f"HATA: {a.repo} okunamadı: {e}", file=sys.stderr)
         return 2
     finally:
         ortak.klon_temizle(govde)
     girdiler = [skil_girdisi(y, metinler.get(y), a.repo) for y in yollar]
+    bil_girdiler = [bilesen_girdisi(p, bil_metinler.get(p)) for p in bil_yollar]
     hedef = FIHRIST / dosya_adi(a.repo)
     eski = ortak.json_oku(hedef)
-    yeni = fihrist_kur(a.repo, sha, date.today().isoformat(), girdiler, eski, arsivde_yollari(a.repo) & set(yollar))
+    yeni = fihrist_kur(a.repo, sha, date.today().isoformat(), girdiler, eski, arsivde_yollari(a.repo, kayitlar) & set(yollar), bil_girdiler)
     for satir in ozet_satirlari(a.repo, yeni, eski, fark_hesapla(eski, yeni), len(yollar) - len(metinler), a.kuru):
         print(satir)
     if not a.kuru:

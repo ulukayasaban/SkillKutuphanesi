@@ -42,7 +42,7 @@ CODEX_YOL = r"^(.*/)?\.(agents|codex)/skills/"
 BILESEN_DESEN = r"(^|/)(commands|agents)/[^/]+\.md$"
 RISKLI_LISANS = ("belirtilmemiş", "NOASSERTION", "yok", "AGPL-3.0", "AGPL-3.0-only", "AGPL-3.0-or-later")
 RISKLI_ONEKLER = ("CC-BY-NC", "PolyForm-Noncommercial", "BUSL", "SSPL")
-KARAR_GUCU = {"secildi": 5, "arac-varyanti": 5, "ayri-surum": 5, "ayna-ayni": 4, "ayna-baska-arac": 3, "haric": 2, "dahil-disi": 1}
+KARAR_GUCU = {"secildi": 5, "arac-varyanti": 5, "ayri-surum": 5, "ayna-ayni": 4, "ayna-baska-arac": 3, "haric": 2, "fihristte": 1, "dahil-disi": 1}
 
 
 def yol_puani(d):
@@ -74,10 +74,11 @@ def agac_klasor_hash(agac, d, ayar):
     return h.hexdigest()
 
 
-def skill_klasorlerini_sec(kayit, agac, ayar):
+def skill_klasorlerini_sec(kayit, agac, ayar, tutulan_uygula=True):
     """(secilenler, denetim) döndürür. denetim: her SKILL.md yolu -> karar."""
     konum_haric, repo_haric = ayar["konum_haric"], kayit.get("haric", [])
     cikarilan = {(c["repo"], c["kaynak_yol"]) for c in ayar.get("arsivden_cikarilanlar", [])}
+    tutulan = set(kayit.get("arsivde_tut") or []) if (tutulan_uygula and kayit.get("bolum") == "fihrist") else None
     blob_sha = {e["path"]: e["sha"] for e in agac if e["type"] == "blob"}
     denetim, adaylar = {}, []
     for e in agac:
@@ -85,6 +86,9 @@ def skill_klasorlerini_sec(kayit, agac, ayar):
             continue
         d = e["path"].rsplit("/", 1)[0] if "/" in e["path"] else ""
         kontrol = (d + "/") if d else e["path"]
+        if tutulan is not None and d not in tutulan:
+            denetim[e["path"]] = "fihristte"
+            continue
         if kayit.get("dahil") and not ilk_eslesen(kayit["dahil"], kontrol):
             # dahil dışı ama repo 'haric'inde: kullanıcı reddetti, karar bekleyen sayılmaz
             h = ilk_eslesen(repo_haric, kontrol)
@@ -181,8 +185,11 @@ def dosyalari_listele(kayit, agac, d, ayar):
     return sonuc, atlanan
 
 
-def bilesenleri_bul(kayit, agac, secilen, ayar):
-    """Skill klasörü dışındaki komut/agent tanımları (.claude/commands, plugins/*/agents …)."""
+def bilesenleri_bul(kayit, agac, secilen, ayar, fihrist_atla=True):
+    """Skill klasörü dışındaki komut/agent tanımları (.claude/commands, plugins/*/agents …).
+    bolum: fihrist kaydında bileşenler arşive çekilmez (fihrist-uret.py fihrist_atla=False ile okur)."""
+    if fihrist_atla and kayit.get("bolum") == "fihrist":
+        return []
     skill_yollari = [b["yol"] for b in secilen.values()]
     sonuc = []
     for e in agac:

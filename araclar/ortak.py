@@ -246,10 +246,15 @@ ARSIV_DISI_BOLUMLER = ("fihrist", "katalog")  # kaynak kaydında bolum: skil dos
 
 
 def arsive_cekilir(kayit) -> bool:
-    """Kaynak kaydı arşive çekilir mi? tip arşivlenen tiplerden VE bolum fihrist/katalog DEĞİL. Tip içeriğin cinsini söyler (T1 skil reposu...),
-    bolum nerede tutulacağını; dev koleksiyon ve kit kaydı tip T1 + bolum fihrist/katalog olarak yazılır ve kaynak-cek.py, arsiv-guncelle.py,
-    kapsam-denetimi.py ona dokunmaz (surecler/ klasöründeki tür dosyaları)."""
-    return kayit.get("tip") in ARSIVLENEN_TIPLER and kayit.get("bolum") not in ARSIV_DISI_BOLUMLER
+    """Kaynak kaydı arşive çekilir mi? tip arşivlenen tiplerden VE (bolum fihrist/katalog DEĞİL ya da
+    bolum fihrist ile boş olmayan arsivde_tut listesi var). Tip içeriğin cinsini söyler (T1 skil reposu...),
+    bolum nerede tutulacağını; dev koleksiyon ve kit kaydı tip T1 + bolum fihrist/katalog olarak yazılır.
+    bolum fihrist + arsivde_tut doluysa yalnız o yollar arşive çekilir ve aylık güncellenir."""
+    if kayit.get("tip") not in ARSIVLENEN_TIPLER:
+        return False
+    if kayit.get("bolum") == "fihrist" and isinstance(kayit.get("arsivde_tut"), list) and len(kayit["arsivde_tut"]) > 0:
+        return True
+    return kayit.get("bolum") not in ARSIV_DISI_BOLUMLER
 YEREL_KLASOR = {"T7": "kendi", "T8": "site"}
 SITE_TAKIP = "site-takip.json"
 LISANSSIZ = ("yok", "NOASSERTION", "belirtilmemiş", "")
