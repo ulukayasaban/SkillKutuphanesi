@@ -1369,7 +1369,9 @@
         "^plugins/plugin-eval/fixtures/"
       ],
       "kimlik": "openai-plugins",
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. openai/skills kullanımdan kaldırıldı; resmî Codex plugin örnekleri artık burada (7.7k★, 536 SKILL.md, çoğu sağlayıcı plugin'i: Twilio, Vercel, Zoom…). LİSANS DOSYASI YOK → belirtilmemiş, ön kontrol uyarır. 60 ad kütüphanede var (çoğu vercel/cloudflare/superpowers kopyası) → toplama olduğu için öncelik 6, kopyalar ayna olarak notlanır. .agents/skills/plugin-creator (repo-içi) ve plugins/plugin-eval/fixtures (test örnekleri) bilinçli hariç."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. openai/skills kullanımdan kaldırıldı; resmî Codex plugin örnekleri artık burada (7.7k★, 536 SKILL.md, çoğu sağlayıcı plugin'i: Twilio, Vercel, Zoom…). LİSANS DOSYASI YOK → belirtilmemiş, ön kontrol uyarır. 60 ad kütüphanede var (çoğu vercel/cloudflare/superpowers kopyası) → toplama olduğu için öncelik 6, kopyalar ayna olarak notlanır. .agents/skills/plugin-creator (repo-içi) ve plugins/plugin-eval/fixtures (test örnekleri) bilinçli hariç.",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist"
     },
     {
       "repo": "github/awesome-copilot",
