@@ -1,0 +1,2011 @@
+{
+  "repo": "OrcaQubits/agentic-commerce-skills-plugins",
+  "commit": "e7a890ae7b8eb87e6dab972a46ff85752ed077ff",
+  "tarih": "2026-11-19",
+  "skil_sayisi": 300,
+  "skiller": [
+    {
+      "ad": "a2a-agent-card",
+      "aciklama": "Create and configure A2A Agent Cards — the discovery document describing an agent's capabilities, skills, authentication, and endpoint. Use when defining what your agent exposes to other agents.",
+      "yol": "a2a-multi-agent/skills/a2a-agent-card",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-authentication",
+      "aciklama": "Implement A2A authentication — API keys, Bearer tokens, OAuth 2.0, OpenID Connect, and mutual TLS. Use when securing agent-to-agent communication and configuring Agent Card security schemes.",
+      "yol": "a2a-multi-agent/skills/a2a-authentication",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-client",
+      "aciklama": "Build an A2A client — the agent-side code that discovers other agents, sends tasks, handles responses, and manages multi-turn conversations. Use when implementing the client side that delegates work to A2A agents.",
+      "yol": "a2a-multi-agent/skills/a2a-client",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-dev-patterns",
+      "aciklama": "Apply A2A cross-cutting development patterns — orchestration topologies, idempotency, observability, agent registries, versioning, and production deployment. Use when architecting multi-agent systems or solving cross-cutting concerns.",
+      "yol": "a2a-multi-agent/skills/a2a-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-error-handling",
+      "aciklama": "Implement A2A error handling — JSON-RPC errors, A2A-specific error codes, task failure states, retry strategies, and graceful degradation. Use when building robust error handling in A2A agents.",
+      "yol": "a2a-multi-agent/skills/a2a-error-handling",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-framework-integration",
+      "aciklama": "Integrate A2A with agent frameworks — Google ADK, LangGraph, CrewAI, AutoGen, AWS Bedrock AgentCore, and Microsoft Azure AI Foundry. Use when connecting framework-built agents to the A2A protocol for inter-agent communication.",
+      "yol": "a2a-multi-agent/skills/a2a-framework-integration",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-jsonrpc-transport",
+      "aciklama": "Implement the A2A JSON-RPC 2.0 transport layer — request/response format, method routing, batch requests, and HTTP details. Use when building custom A2A transport handling or debugging protocol-level issues.",
+      "yol": "a2a-multi-agent/skills/a2a-jsonrpc-transport",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-mcp-bridge",
+      "aciklama": "Build bridges between A2A and MCP — wrap A2A agents as MCP tools, use MCP tools from A2A agents, and architect hybrid multi-agent systems. Use when integrating A2A agent-to-agent communication with MCP tool access.",
+      "yol": "a2a-multi-agent/skills/a2a-mcp-bridge",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-messages-parts",
+      "aciklama": "Implement A2A messages and parts — TextPart, FilePart, DataPart, message roles, metadata, and content negotiation. Use when building message construction, parsing, or content type handling in A2A agents.",
+      "yol": "a2a-multi-agent/skills/a2a-messages-parts",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-multi-turn",
+      "aciklama": "Implement A2A multi-turn conversations — input-required state handling, context preservation, iterative refinement, and human-in-the-loop patterns. Use when building agents that need back-and-forth interaction.",
+      "yol": "a2a-multi-agent/skills/a2a-multi-turn",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-push-notifications",
+      "aciklama": "Implement A2A push notifications — callback URL registration, notification delivery, and management methods. Use when building async notification delivery for long-running A2A tasks.",
+      "yol": "a2a-multi-agent/skills/a2a-push-notifications",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-server",
+      "aciklama": "Build an A2A server — the agent-side endpoint that receives JSON-RPC requests, processes tasks, manages state, and returns results. Use when implementing the server side of an A2A agent.",
+      "yol": "a2a-multi-agent/skills/a2a-server",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-setup",
+      "aciklama": "Scaffold a new A2A project — install the SDK, create directory structure, configure the Agent Card, and set up a basic server/client. Use when starting a new A2A multi-agent project from scratch.",
+      "yol": "a2a-multi-agent/skills/a2a-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-streaming",
+      "aciklama": "Implement A2A SSE streaming — message/stream method, Server-Sent Events, TaskStatusUpdateEvent, TaskArtifactUpdateEvent, and re-subscription. Use when building real-time streaming responses in A2A agents.",
+      "yol": "a2a-multi-agent/skills/a2a-streaming",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-task-lifecycle",
+      "aciklama": "Implement A2A task lifecycle management — task creation, state transitions, terminal states, history, and artifacts. Use when building task state machines, handling state transitions, or managing task persistence.",
+      "yol": "a2a-multi-agent/skills/a2a-task-lifecycle",
+      "arsivde": true
+    },
+    {
+      "ad": "a2a-testing",
+      "aciklama": "Test A2A implementations — unit tests, integration tests, mock agents, protocol conformance, and end-to-end multi-agent testing. Use when building test suites for A2A servers, clients, or multi-agent systems.",
+      "yol": "a2a-multi-agent/skills/a2a-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-affiliate-attribution",
+      "aciklama": "Implement ACP affiliate attribution — privacy-preserving affiliate tracking without cookies using token-based first-touch and last-touch attribution. Use when building affiliate programs, referral tracking, or partnership attribution.",
+      "yol": "acp-agentic-commerce/skills/acp-affiliate-attribution",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-capability-negotiation",
+      "aciklama": "Implement ACP capability negotiation — dynamic discovery of mutually supported capabilities, extensions, payment handlers, and interventions. Use when building multi-feature merchant servers or agents that adapt to merchant capabilities.",
+      "yol": "acp-agentic-commerce/skills/acp-capability-negotiation",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-cart",
+      "aciklama": "Implement the ACP Cart API — the pre-checkout REST surface for collecting line items without payment configuration, covering create, retrieve, full-replacement update, and cancel, plus estimated totals, `continue_url`, and expiry. Use when building ACP cart sessions ahead of an agentic checkout.",
+      "yol": "acp-agentic-commerce/skills/acp-cart",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-checkout-mcp",
+      "aciklama": "Implement ACP checkout as an MCP server, exposing checkout operations as MCP tools. Use when building an MCP-based commerce server for AI agents that use tool-calling to complete purchases.",
+      "yol": "acp-agentic-commerce/skills/acp-checkout-mcp",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-checkout-rest",
+      "aciklama": "Implement the ACP REST checkout API — create, update, retrieve, complete, and cancel checkout sessions. Use when building merchant-side checkout endpoints, handling the checkout session state machine, or integrating with AI agent checkout flows.",
+      "yol": "acp-agentic-commerce/skills/acp-checkout-rest",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-conformance",
+      "aciklama": "Validate an ACP implementation against the protocol specification — schema validation, flow testing, error handling, idempotency, security checks, and production readiness. Use when preparing for launch or certifying compliance.",
+      "yol": "acp-agentic-commerce/skills/acp-conformance",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-delegate-authentication",
+      "aciklama": "Implement the ACP Delegate Authentication API — delegating 3D Secure (3DS2) consumer authentication to merchant-specified providers, covering session creation, fingerprint and challenge actions, the authenticate call, and status handling. Use when adding strong customer authentication or 3DS to an…",
+      "yol": "acp-agentic-commerce/skills/acp-delegate-authentication",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-delegated-payment",
+      "aciklama": "Implement the ACP delegated payment flow and SharedPaymentToken (SPT) provisioning. Use when integrating with Stripe for payment tokenization, handling SPT lifecycle, or building the payment completion flow.",
+      "yol": "acp-agentic-commerce/skills/acp-delegated-payment",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-dev-patterns",
+      "aciklama": "Cross-cutting ACP development patterns — idempotency, error handling, 3D Secure flows, request signing, rate limiting, monitoring, and security best practices. Use when designing architecture or solving production concerns.",
+      "yol": "acp-agentic-commerce/skills/acp-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-discount-extension",
+      "aciklama": "Implement the ACP discount extension — discount codes, applied discounts, rejected codes, and line-item allocations. Use when adding coupon/promo code support to checkout flows.",
+      "yol": "acp-agentic-commerce/skills/acp-discount-extension",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-extensions-authoring",
+      "aciklama": "Author custom ACP extensions — composable protocol add-ons with JSONPath targeting, schema composition, and independent versioning. Use when building proprietary or domain-specific extensions beyond the built-in ones.",
+      "yol": "acp-agentic-commerce/skills/acp-extensions-authoring",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-fulfillment",
+      "aciklama": "Implement ACP fulfillment options — shipping, digital delivery, in-store pickup, and local delivery. Use when building fulfillment selection, rate calculation, delivery window management, or tracking integration.",
+      "yol": "acp-agentic-commerce/skills/acp-fulfillment",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-intent-traces",
+      "aciklama": "Implement ACP intent traces — structured cart abandonment signals with reason codes for analytics and automated recovery workflows. Use when building abandonment tracking, recovery automation, or conversion optimization.",
+      "yol": "acp-agentic-commerce/skills/acp-intent-traces",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-orders-webhooks",
+      "aciklama": "Implement ACP order lifecycle management and webhook event delivery. Use when building order creation, status tracking, fulfillment updates, post-purchase adjustments, and HMAC-signed webhook emission.",
+      "yol": "acp-agentic-commerce/skills/acp-orders-webhooks",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-payment-handlers",
+      "aciklama": "Implement ACP payment handlers — pluggable payment method specifications including tokenized cards, seller-backed methods (gift cards, points, store credit), and handler negotiation. Use when adding payment methods or building custom payment handler support.",
+      "yol": "acp-agentic-commerce/skills/acp-payment-handlers",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-product-feed",
+      "aciklama": "Build product feed generation and submission for ACP. Use when implementing product catalog export, feed formatting (CSV/JSON/XML/TSV), feed validation, and push-based catalog sync to the agent platform.",
+      "yol": "acp-agentic-commerce/skills/acp-product-feed",
+      "arsivde": true
+    },
+    {
+      "ad": "acp-setup",
+      "aciklama": "Scaffold an ACP merchant server project — install dependencies, import OpenAPI specs and JSON schemas, configure environment, and create initial endpoint stubs. Use when starting a new ACP implementation from scratch.",
+      "yol": "acp-agentic-commerce/skills/acp-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-a2a-extension",
+      "aciklama": "Implement AP2 as an A2A extension — mandate DataParts in A2A messages, Agent Card AP2 capabilities, payment-specific task flows, and inter-agent payment communication. Use when integrating AP2 payment capabilities into A2A multi-agent systems.",
+      "yol": "ap2-agentic-payments/skills/ap2-a2a-extension",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-agent-authorization",
+      "aciklama": "Implement the AP2 Agent Authorization Framework — open vs closed mandates, the two-phase delegation/authorization process, the cryptographic authorization chain, Key Binding JWTs, and human-present vs human-not-present signing. Use when designing how a user authorizes an agent to act, before touchi…",
+      "yol": "ap2-agentic-payments/skills/ap2-agent-authorization",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-challenge-stepup",
+      "aciklama": "Implement AP2 challenge and step-up flows — 3DS2, OTP verification, redirect challenges, and trusted surface interactions. Use when building additional authentication steps during agentic payment processing.",
+      "yol": "ap2-agentic-payments/skills/ap2-challenge-stepup",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-checkout-mandate",
+      "aciklama": "Implement the AP2 Checkout Mandate — the credential authorizing completion of a checkout, in its open (constrained) and closed (merchant-verified) forms, with merchant-signed checkout payloads, checkout hashes, and user confirmation on a trusted surface. Formerly called the Cart Mandate. Use when b…",
+      "yol": "ap2-agentic-payments/skills/ap2-checkout-mandate",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-credentials-provider",
+      "aciklama": "Build an AP2 Credentials Provider — the agent that manages payment credentials, provides payment methods to users, handles tokenization (DPAN), and facilitates secure payment between Shopping Agent and Payment Processor. Use when implementing the Credentials Provider role.",
+      "yol": "ap2-agentic-payments/skills/ap2-credentials-provider",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-cryptographic-signing",
+      "aciklama": "Implement AP2 cryptographic signing — hardware-backed user signatures, merchant entity signatures, VDC integrity, key management, and attestation flows. Use when building the signing, verification, and key management components of AP2 mandates.",
+      "yol": "ap2-agentic-payments/skills/ap2-cryptographic-signing",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-dev-patterns",
+      "aciklama": "Apply AP2 cross-cutting development patterns — multi-agent payment architecture, UCP integration, x402 crypto payments, testing with mock providers, and production deployment. Use when architecting agentic payment systems or solving cross-cutting payment concerns.",
+      "yol": "ap2-agentic-payments/skills/ap2-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-dispute-accountability",
+      "aciklama": "Implement AP2 dispute resolution and accountability — cryptographic evidence, liability allocation, chargeback handling, and audit trail construction. Use when building dispute handling, fraud investigation, or compliance systems for agentic payments.",
+      "yol": "ap2-agentic-payments/skills/ap2-dispute-accountability",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-human-not-present-flow",
+      "aciklama": "Implement the AP2 human-not-present transaction flow — autonomous agent shopping with Intent Mandate authorization, constraint enforcement, and merchant escalation. Use when building autonomous agent purchasing that works after the user has left.",
+      "yol": "ap2-agentic-payments/skills/ap2-human-not-present-flow",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-human-present-flow",
+      "aciklama": "Implement the AP2 human-present transaction flow — the checkout process where the user is actively present to confirm cart details and payment method selection. The primary VDC in this flow is the Checkout Mandate. Use when building interactive agentic checkout with user in the loop.",
+      "yol": "ap2-agentic-payments/skills/ap2-human-present-flow",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-intent-mandate",
+      "aciklama": "Pre-authorize agent purchases within user-defined constraints for human-not-present flows — the AP2 Intent Mandate concept, now expressed as an open Checkout Mandate carrying allowed-merchant and line-item constraints. Use when building autonomous agent shopping with user-signed intent, expiry, and…",
+      "yol": "ap2-agentic-payments/skills/ap2-intent-mandate",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-mcp-server",
+      "aciklama": "Implement AP2 MCP servers — payment tools exposed via Model Context Protocol for agent access to payment capabilities. Use when building MCP-based payment tool integrations for AP2.",
+      "yol": "ap2-agentic-payments/skills/ap2-mcp-server",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-merchant-agent",
+      "aciklama": "Build an AP2 Merchant Agent — the seller-side agent that receives intent mandates, searches product catalogs, creates signed cart mandates, and represents the merchant in agentic transactions. Use when implementing the Merchant Endpoint role.",
+      "yol": "ap2-agentic-payments/skills/ap2-merchant-agent",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-payment-mandate",
+      "aciklama": "Implement the AP2 Payment Mandate — the VDC shared with payment networks and issuers to signal AI involvement and user authorization. Use when building payment authorization flows, tokenization, and network integration.",
+      "yol": "ap2-agentic-payments/skills/ap2-payment-mandate",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-payment-processor",
+      "aciklama": "Build an AP2 Merchant Payment Processor — the agent that constructs payment authorization messages, requests credentials from the Credentials Provider, processes payments, and returns receipts. Use when implementing the MPP role.",
+      "yol": "ap2-agentic-payments/skills/ap2-payment-processor",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-risk-signals",
+      "aciklama": "Implement the AP2 risk signals framework — novel risk considerations for agentic payments, risk payload construction, trust establishment, and fraud assessment. Use when building risk evaluation, fraud detection, or trust scoring for AP2 transactions.",
+      "yol": "ap2-agentic-payments/skills/ap2-risk-signals",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-setup",
+      "aciklama": "Scaffold a new AP2 project — install the SDK, set up agent roles, configure credentials, and create a basic multi-agent payment system. Use when starting a new AP2 agentic payments project from scratch.",
+      "yol": "ap2-agentic-payments/skills/ap2-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-shopping-agent",
+      "aciklama": "Build an AP2 Shopping Agent — the main orchestrator that handles user requests, creates mandates, coordinates with merchants and credentials providers, and manages the transaction flow. Use when implementing the Shopping Agent role.",
+      "yol": "ap2-agentic-payments/skills/ap2-shopping-agent",
+      "arsivde": true
+    },
+    {
+      "ad": "ap2-vdc-framework",
+      "aciklama": "Implement the AP2 Verifiable Digital Credentials (VDC) framework — tamper-evident, cryptographically signed credentials that form the trust foundation for agentic payments. Use when working with the overall VDC architecture, credential issuance, verification, and holder binding.",
+      "yol": "ap2-agentic-payments/skills/ap2-vdc-framework",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-api-graphql",
+      "aciklama": "Use the BigCommerce GraphQL Storefront API — queries, mutations, authentication tokens, customer impersonation, cart operations, and schema exploration. Use when building storefront features that need client-side data fetching.",
+      "yol": "bigcommerce-commerce/skills/bc-api-graphql",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-api-rest",
+      "aciklama": "Use BigCommerce REST APIs — V2 and V3 endpoints, authentication, rate limiting, pagination, filtering, batch operations, and error handling. Use when integrating with BigCommerce data via REST API.",
+      "yol": "bigcommerce-commerce/skills/bc-api-rest",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-app-dev",
+      "aciklama": "Build BigCommerce apps — single-click apps, OAuth flow, app callbacks, connector apps, control panel integration, and App Marketplace submission. Use when creating integrations that install via the BigCommerce App Marketplace.",
+      "yol": "bigcommerce-commerce/skills/bc-app-dev",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-catalog",
+      "aciklama": "Work with BigCommerce catalog — products, variants, options, modifiers, categories, brands, metafields, images, and bulk operations. Use when managing product data programmatically or building catalog integrations.",
+      "yol": "bigcommerce-commerce/skills/bc-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-channels",
+      "aciklama": "Work with BigCommerce multi-channel — channels, multi-storefront, channel-specific catalog, site routing, and channel management API. Use when building multi-storefront solutions or managing channel-specific content.",
+      "yol": "bigcommerce-commerce/skills/bc-channels",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-checkout",
+      "aciklama": "Customize BigCommerce checkout — Checkout SDK, embedded checkout, server-side checkout API, custom checkout UI, and checkout extensions. Use when modifying the checkout experience or building headless checkout flows.",
+      "yol": "bigcommerce-commerce/skills/bc-checkout",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-customers",
+      "aciklama": "Work with BigCommerce customers — Customer API, customer groups, addresses, stored instruments, attributes, Customer Login API (SSO), and customer segmentation. Use when building customer-facing features or integrating customer data.",
+      "yol": "bigcommerce-commerce/skills/bc-customers",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-headless",
+      "aciklama": "Build headless commerce with BigCommerce — Catalyst (Next.js reference storefront), GraphQL Storefront API, server-side APIs, embedded checkout, and headless architecture patterns. Use when building decoupled storefronts or integrating BigCommerce as a headless backend.",
+      "yol": "bigcommerce-commerce/skills/bc-headless",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-orders",
+      "aciklama": "Work with BigCommerce orders — order lifecycle, statuses, line items, shipments, refunds, order metafields, and fulfillment. Use when building order management integrations or processing orders programmatically.",
+      "yol": "bigcommerce-commerce/skills/bc-orders",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-payments",
+      "aciklama": "Integrate BigCommerce payments — Payment Processing API, stored payment instruments, payment methods, server-side payment processing for headless, and PCI considerations. Use when building custom payment flows or processing payments programmatically.",
+      "yol": "bigcommerce-commerce/skills/bc-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-performance",
+      "aciklama": "Optimize BigCommerce storefront performance — CDN, image optimization, lazy loading, Stencil theme optimization, API response caching, GraphQL query efficiency, and Core Web Vitals. Use when improving store speed or diagnosing performance issues.",
+      "yol": "bigcommerce-commerce/skills/bc-performance",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-security",
+      "aciklama": "Implement BigCommerce security — OAuth token management, API authentication, webhook verification, CSP, input validation, PCI compliance, and app security best practices. Use when hardening integrations or reviewing security posture.",
+      "yol": "bigcommerce-commerce/skills/bc-security",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-setup",
+      "aciklama": "Set up a BigCommerce development environment — Stencil CLI, API credentials, sandbox stores, Catalyst, and developer tools. Use when starting a new BigCommerce project or configuring development tools.",
+      "yol": "bigcommerce-commerce/skills/bc-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-stencil",
+      "aciklama": "Build BigCommerce Stencil themes — Handlebars templates, front matter, theme objects, SCSS, JavaScript modules, config.json, schema.json, and Stencil CLI. Use when creating or customizing BigCommerce storefront themes.",
+      "yol": "bigcommerce-commerce/skills/bc-stencil",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-testing",
+      "aciklama": "Test BigCommerce integrations — API testing, Stencil theme testing, Cypress/Playwright E2E tests, webhook testing, and sandbox stores. Use when writing tests for BigCommerce apps, themes, or integrations.",
+      "yol": "bigcommerce-commerce/skills/bc-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-webhooks",
+      "aciklama": "Implement BigCommerce webhooks — event topics, webhook management, payload handling, verification, retry logic, and event-driven architecture. Use when building real-time integrations that react to store events.",
+      "yol": "bigcommerce-commerce/skills/bc-webhooks",
+      "arsivde": true
+    },
+    {
+      "ad": "bc-widgets",
+      "aciklama": "Build BigCommerce widgets and use Script Manager — widget templates, widget placements, Page Builder integration, Script Manager API for injecting JavaScript/CSS, and storefront content customization. Use when adding custom content blocks or injecting scripts into the storefront.",
+      "yol": "bigcommerce-commerce/skills/bc-widgets",
+      "arsivde": true
+    },
+    {
+      "ad": "js-modern",
+      "aciklama": "Write modern JavaScript and TypeScript — ES6+ features, async/await, modules, destructuring, optional chaining, TypeScript types, and modern tooling. Use when writing JavaScript/TypeScript for BigCommerce themes, apps, or headless storefronts.",
+      "yol": "bigcommerce-commerce/skills/js-modern",
+      "arsivde": true
+    },
+    {
+      "ad": "nextjs-patterns",
+      "aciklama": "Build with Next.js for BigCommerce — App Router, Server/Client Components, data fetching, ISR, middleware, API routes, and Catalyst patterns. Use when building headless BigCommerce storefronts with Next.js.",
+      "yol": "bigcommerce-commerce/skills/nextjs-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "node-backend",
+      "aciklama": "Build Node.js backends for BigCommerce apps — Express/Fastify servers, OAuth handling, JWT verification, API proxy, webhook processing, session management, and deployment. Use when building the server-side component of BigCommerce apps.",
+      "yol": "bigcommerce-commerce/skills/node-backend",
+      "arsivde": true
+    },
+    {
+      "ad": "readiness-audit",
+      "aciklama": "Run the full agentic commerce readiness audit against a live site — six probe modules (Reachable, Discoverable, Comprehensible, Transactable, Payable, Trustworthy), weighted scoring, and a report that maps every gap to the marketplace skill that closes it. Use when a user asks \"is my store agent-re…",
+      "yol": "commerce-readiness/skills/readiness-audit",
+      "arsivde": true
+    },
+    {
+      "ad": "readiness-fix-plan",
+      "aciklama": "Turn an existing readiness audit (report/score.json) into a sequenced, stack-aware fix plan — each gap mapped to the marketplace skill that closes it, ordered by dependency and priority, with effort estimates. Use after readiness-audit when the user says \"make me a plan\", \"what do we fix first\", or…",
+      "yol": "commerce-readiness/skills/readiness-fix-plan",
+      "arsivde": true
+    },
+    {
+      "ad": "readiness-quick-check",
+      "aciklama": "Sixty-second agentic commerce triage — probe just agent access (r1) and protocol discovery (r2) to answer \"can agents reach us, and can they tell we do commerce?\". Use for a first look, a sales call, or checking a competitor before committing to the full readiness-audit.",
+      "yol": "commerce-readiness/skills/readiness-quick-check",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-admin-ui",
+      "aciklama": "Build Magento 2 admin interfaces — UI component grids, forms, system configuration, ACL, and admin controllers. Use when creating admin panels, data grids, edit forms, or system settings.",
+      "yol": "magento2-commerce/skills/magento-admin-ui",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-api",
+      "aciklama": "Build Magento 2 REST and GraphQL APIs — webapi.xml, schema.graphqls, resolvers, authentication, and ACL. Use when creating custom API endpoints, extending the GraphQL schema, or integrating external systems.",
+      "yol": "magento2-commerce/skills/magento-api",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-catalog",
+      "aciklama": "Work with Magento 2 catalog — product types, categories, attributes, indexing, and search integration. Use when building catalog features, customizing product types, or working with the catalog architecture.",
+      "yol": "magento2-commerce/skills/magento-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-checkout",
+      "aciklama": "Customize Magento 2 checkout — payment methods, shipping carriers, totals collectors, and checkout UI. Use when building custom payment/shipping integrations or modifying the checkout flow.",
+      "yol": "magento2-commerce/skills/magento-checkout",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-deploy",
+      "aciklama": "Deploy Magento 2 — deployment modes, static content deployment, DI compilation, CLI commands, zero-downtime strategies, and CI/CD pipeline setup. Use when preparing for production deployment or building deployment automation.",
+      "yol": "magento2-commerce/skills/magento-deploy",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-di",
+      "aciklama": "Configure Magento 2 dependency injection — di.xml, types, virtual types, preferences, argument replacement, and Object Manager. Use when wiring dependencies, creating class variations, or configuring module integrations.",
+      "yol": "magento2-commerce/skills/magento-di",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-eav-attributes",
+      "aciklama": "Work with Magento 2 EAV (Entity-Attribute-Value) system — create custom attributes, attribute sets, manage EAV tables, and understand the EAV data model. Use when adding product/category/customer attributes or working with the attribute system.",
+      "yol": "magento2-commerce/skills/magento-eav-attributes",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-events-cron",
+      "aciklama": "Implement Magento 2 events, observers, cron jobs, and message queues. Use when building event-driven logic, scheduled tasks, or asynchronous processing.",
+      "yol": "magento2-commerce/skills/magento-events-cron",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-frontend",
+      "aciklama": "Build Magento 2 frontend — layout XML, blocks, PHTML templates, ViewModels, themes, JavaScript (RequireJS/KnockoutJS), and LESS/CSS. Use when customizing the storefront, building themes, or working with frontend components.",
+      "yol": "magento2-commerce/skills/magento-frontend",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-module-dev",
+      "aciklama": "Create Magento 2 custom modules — registration, directory structure, models, resource models, collections, declarative schema, and data/schema patches. Use when building new modules or understanding module architecture.",
+      "yol": "magento2-commerce/skills/magento-module-dev",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-performance",
+      "aciklama": "Optimize Magento 2 performance — full page cache (Varnish), Redis, indexer tuning, JavaScript/CSS optimization, database optimization, and profiling. Use when diagnosing slow pages, optimizing load times, or configuring caching.",
+      "yol": "magento2-commerce/skills/magento-performance",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-plugins-interceptors",
+      "aciklama": "Implement Magento 2 plugins (interceptors) — before, after, and around methods for modifying class behavior without inheritance. Use when extending core or third-party module functionality.",
+      "yol": "magento2-commerce/skills/magento-plugins-interceptors",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-security",
+      "aciklama": "Implement Magento 2 security — CSP, 2FA, CSRF protection, ACL, admin security configuration, input validation, and security best practices. Use when hardening a Magento installation or reviewing security posture.",
+      "yol": "magento2-commerce/skills/magento-security",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-service-contracts",
+      "aciklama": "Implement Magento 2 service contracts — repository interfaces, data interfaces, SearchCriteria, and the repository pattern. Use when building module APIs, data access layers, or integrating with Magento's Web API.",
+      "yol": "magento2-commerce/skills/magento-service-contracts",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-setup",
+      "aciklama": "Set up a Magento 2 Open Source project — installation, Composer setup, system requirements verification, and initial configuration. Use when starting a new Magento project or setting up a development environment.",
+      "yol": "magento2-commerce/skills/magento-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "magento-testing",
+      "aciklama": "Write tests for Magento 2 — PHPUnit unit tests, integration tests, MFTF functional tests, and API tests. Use when implementing test coverage for modules, debugging, or setting up CI/CD test pipelines.",
+      "yol": "magento2-commerce/skills/magento-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "php-modern",
+      "aciklama": "Write modern PHP 8.x code — typed properties, enums, readonly classes, match expressions, named arguments, union/intersection types, fibers, attributes, and constructor promotion. Use when writing PHP for Magento or any PHP 8.x project.",
+      "yol": "magento2-commerce/skills/php-modern",
+      "arsivde": true
+    },
+    {
+      "ad": "php-patterns",
+      "aciklama": "Apply PHP design patterns — Repository, Factory, Strategy, Decorator, Observer, Singleton, Builder, and Dependency Injection patterns in PHP. Use when architecting PHP applications or understanding patterns used in Magento and other frameworks.",
+      "yol": "magento2-commerce/skills/php-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "php-testing",
+      "aciklama": "Write PHP tests with PHPUnit — unit tests, mocking, data providers, test doubles, assertions, and TDD practices. Use when writing tests for PHP code, whether in Magento or standalone PHP applications.",
+      "yol": "magento2-commerce/skills/php-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-admin",
+      "aciklama": "Extend the Medusa v2 admin dashboard — widgets injected at zones, custom UI routes, Medusa UI components, and Admin API integration. Use when customizing the admin interface.",
+      "yol": "medusa-commerce/skills/medusa-admin",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-api-routes",
+      "aciklama": "Create custom Medusa v2 API routes — file-based routing, HTTP method exports, middleware configuration, Zod validators, authentication middleware, and additional-data pattern. Use when adding REST endpoints.",
+      "yol": "medusa-commerce/skills/medusa-api-routes",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-cart-checkout",
+      "aciklama": "Implement Medusa v2 cart and checkout — cart lifecycle, line items, shipping and payment selection, sales channels, and checkout completion flow. Use when building cart and checkout features.",
+      "yol": "medusa-commerce/skills/medusa-cart-checkout",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-catalog",
+      "aciklama": "Manage the Medusa v2 catalog — products, variants, options, collections, categories, tags, and product metadata. Use when working with Medusa product data.",
+      "yol": "medusa-commerce/skills/medusa-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-customers",
+      "aciklama": "Manage Medusa v2 customers — customer profiles, email and social authentication, customer groups, addresses, and account management. Use when working with customer data and auth.",
+      "yol": "medusa-commerce/skills/medusa-customers",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-deploy",
+      "aciklama": "Deploy Medusa v2 to production — build process, server vs worker mode, environment variables, hosting options, Redis caching, database configuration, and production checklist. Use when deploying Medusa applications.",
+      "yol": "medusa-commerce/skills/medusa-deploy",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-fulfillment",
+      "aciklama": "Implement Medusa v2 fulfillment — fulfillment module, provider interface, shipping options, fulfillment sets, shipping profiles, and multi-warehouse support. Use when adding fulfillment providers.",
+      "yol": "medusa-commerce/skills/medusa-fulfillment",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-modules",
+      "aciklama": "Build custom Medusa v2 modules — DML data models, services extending MedusaService, loaders, module links, and container registration. Use when creating custom modules.",
+      "yol": "medusa-commerce/skills/medusa-modules",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-orders",
+      "aciklama": "Manage Medusa v2 orders — order lifecycle and state machine, fulfillment workflows, returns, exchanges, claims, draft orders, and order editing. Use when working with order processing.",
+      "yol": "medusa-commerce/skills/medusa-orders",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-payments",
+      "aciklama": "Implement Medusa v2 payment processing — payment module, provider abstraction, payment sessions, authorization/capture/refund lifecycle, and Stripe/PayPal integration. Use when adding payment providers.",
+      "yol": "medusa-commerce/skills/medusa-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-plugins",
+      "aciklama": "Develop and publish Medusa v2 plugins — plugin structure, plugin vs module comparison, npm packaging, and reusable plugin template. Use when building distributable Medusa extensions.",
+      "yol": "medusa-commerce/skills/medusa-plugins",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-pricing",
+      "aciklama": "Configure Medusa v2 pricing — pricing module, price lists with rules, currencies, tax calculation, regions, and promotion campaigns. Use when setting up pricing and discounts.",
+      "yol": "medusa-commerce/skills/medusa-pricing",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-security",
+      "aciklama": "Secure Medusa v2 applications — authentication strategies, API key types (publishable vs secret), CORS configuration, JWT and cookie secrets, admin vs store auth, and session management. Use when configuring security.",
+      "yol": "medusa-commerce/skills/medusa-security",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-setup",
+      "aciklama": "Set up a Medusa v2 development environment — CLI, PostgreSQL/Redis prerequisites, project creation, medusa-config.ts, directory structure, environment variables. Use when starting a new Medusa project.",
+      "yol": "medusa-commerce/skills/medusa-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-storefront",
+      "aciklama": "Build Medusa v2 storefronts with Next.js 15 — App Router, JS SDK client setup, Tanstack Query, server components, product pages, cart, and checkout flow. Use when developing headless storefronts.",
+      "yol": "medusa-commerce/skills/medusa-storefront",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-subscribers",
+      "aciklama": "Implement Medusa v2 event subscribers — pub/sub event handling, subscriber handler functions, scheduled jobs with cron, and the event module (Redis or in-memory). Use when reacting to commerce events.",
+      "yol": "medusa-commerce/skills/medusa-subscribers",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-testing",
+      "aciklama": "Test Medusa v2 applications — Jest setup, module unit tests, workflow integration tests, API route tests, medusaIntegrationTestRunner, and mock patterns. Use when writing tests for Medusa projects.",
+      "yol": "medusa-commerce/skills/medusa-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "medusa-workflows",
+      "aciklama": "Build Medusa v2 workflows — steps with createStep, compensation/rollback, parallel execution, hooks for extending built-in workflows, and when conditions. Use when orchestrating multi-step operations.",
+      "yol": "medusa-commerce/skills/medusa-workflows",
+      "arsivde": true
+    },
+    {
+      "ad": "nextjs-patterns",
+      "aciklama": "Build Next.js 15 storefronts for Medusa v2 — App Router conventions, server vs client components, Medusa JS SDK integration, data fetching, caching, and server actions. Use when building Medusa storefronts with Next.js.",
+      "yol": "medusa-commerce/skills/nextjs-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "node-backend",
+      "aciklama": "Build Node.js backends for Medusa v2 — Express middleware chain, MikroORM entity patterns, PostgreSQL connection pooling, async patterns, error handling, and logging. Use when working with Medusa's Node.js runtime.",
+      "yol": "medusa-commerce/skills/node-backend",
+      "arsivde": true
+    },
+    {
+      "ad": "ts-modern",
+      "aciklama": "Write modern TypeScript for Medusa v2 — DML type inference, service generics, container typing, strict mode constraints, utility types, and module interface patterns. Use when writing TypeScript in Medusa projects.",
+      "yol": "medusa-commerce/skills/ts-modern",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-ask-endpoint",
+      "aciklama": "Implement and consume the NLWeb /ask REST endpoint — request shape (GET/POST, query-string and v0.55 structured body), SSE streaming response, modes (list/summarize/generate), in-stream \"message_type\" headers, error envelopes, and client-side parsing. Use when building an NLWeb server route, callin…",
+      "yol": "nlweb-protocol/skills/nlweb-ask-endpoint",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-auth-multitenancy",
+      "aciklama": "Configure NLWeb authentication and multi-tenant deployments — OAuth providers (GitHub, Google, Microsoft, Facebook), session storage, the `sites:` allowlist in `config_nlweb.yaml`, conversation persistence per authenticated user, and per-tenant data isolation. Use when adding login to an NLWeb inst…",
+      "yol": "nlweb-protocol/skills/nlweb-auth-multitenancy",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-chatgpt-appsdk",
+      "aciklama": "Integrate NLWeb with ChatGPT's Apps SDK — the Node.js MCP server in `openai-apps-sdk-integration/`, the `nlweb-list` tool, the React widget at `ui://widget/nlweb-list.html`, and the port-8100 AppSDK adapter that translates NLWeb's message list to OpenAI Apps SDK envelopes. Use when publishing an NL…",
+      "yol": "nlweb-protocol/skills/nlweb-chatgpt-appsdk",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-data-loading",
+      "aciklama": "Ingest site content into NLWeb's vector store using `db_load.py` — supports RSS/Atom feeds, Schema.org JSON-LD, sitemap-driven URL lists, and CSV. Covers chunking, embedding computation, site partitioning, batch sizing, delete-and-reload, and per-backend write_endpoint targeting. Use when bootstrap…",
+      "yol": "nlweb-protocol/skills/nlweb-data-loading",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-deployment",
+      "aciklama": "Deploy NLWeb to production — Azure App Service (`deploy_azure_webapp.sh` + AI Search + Azure OpenAI), Snowflake Container Services, Cloudflare Worker + AutoRAG, Docker, and self-hosted. Covers env-var conventions, `mode: production` lockdown, scaling, TLS, OAuth, and CI for data reloads. Use when g…",
+      "yol": "nlweb-protocol/skills/nlweb-deployment",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-dev-patterns",
+      "aciklama": "NLWeb development patterns — the mixed-mode programming philosophy, FastTrack vs Analysis parallel paths, config file precedence and the `mode: development` override trap, in-stream NLWS headers vs HTTP headers, embedding/ingest determinism, debugging the LLM-call chain, neural scorer selection (NL…",
+      "yol": "nlweb-protocol/skills/nlweb-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-llm-providers",
+      "aciklama": "Configure NLWeb LLM and embedding providers — OpenAI, Azure OpenAI (default), Anthropic, Google Gemini, DeepSeek on Azure, Llama on Azure, HuggingFace, Inception Labs, Snowflake Cortex, Ollama, Pi Labs. Covers `config_llm.yaml` high/low tier model selection, the ModelRouter cost/quality routing log…",
+      "yol": "nlweb-protocol/skills/nlweb-llm-providers",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-mcp-server",
+      "aciklama": "Expose NLWeb as an MCP (Model Context Protocol) server — JSON-RPC 2.0 endpoint at /mcp, the `ask` / `list_sites` / `who` tools, protocol revision negotiation, and integration with ChatGPT, Claude, Gemini, and other agent clients. Use when wiring NLWeb to an AI agent via MCP or building an MCP clien…",
+      "yol": "nlweb-protocol/skills/nlweb-mcp-server",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-prompts-customization",
+      "aciklama": "Customize NLWeb's LLM prompts and per-Schema.org-type behavior via `prompts.xml` and `tools.xml` — covers the `<promptString>` template format, `<returnStruc>` JSON schemas, prompt inheritance, decontextualization/ranking/generate templates, per-site overrides, and pitfalls of editing prompts in pl…",
+      "yol": "nlweb-protocol/skills/nlweb-prompts-customization",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-retrieval-backends",
+      "aciklama": "Choose and configure NLWeb retrieval backends — Qdrant (local + remote), Azure AI Search, Elasticsearch, OpenSearch (with/without k-NN), Postgres pgvector, Milvus, Snowflake Cortex Search, Cloudflare AutoRAG, Shopify MCP, and Bing Web Search. Covers `config_retrieval.yaml`, the single `write_endpoi…",
+      "yol": "nlweb-protocol/skills/nlweb-retrieval-backends",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-schema-org-grounding",
+      "aciklama": "Prepare and structure site content as Schema.org JSON-LD for NLWeb ingestion — covers the supported types (Recipe, Product, Movie, Event, Article, RealEstate, Course, etc.), per-type behavior in NLWeb's tool routing, JSON-LD embedding patterns in HTML, sites.xml registration, and how the `schema_ob…",
+      "yol": "nlweb-protocol/skills/nlweb-schema-org-grounding",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-setup",
+      "aciklama": "Bootstrap a local NLWeb development environment from scratch — clone the repo, configure .env, install Python deps via `nlweb init-python`, run `nlweb init` for interactive LLM/retrieval selection, load sample Schema.org data, and verify with `nlweb check`. Use when starting a new NLWeb deployment…",
+      "yol": "nlweb-protocol/skills/nlweb-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "nlweb-tools-framework",
+      "aciklama": "Design and implement NLWeb tools — the per-Schema.org-type handlers that turn a query into a specialized response (search, item_details, compare_items, ensemble, recipe_substitution, accompaniment, conversation_search, etc.). Covers `tools.xml`, the ToolSelector router, builtin handlers in `methods…",
+      "yol": "nlweb-protocol/skills/nlweb-tools-framework",
+      "arsivde": true
+    },
+    {
+      "ad": "graphql-dev",
+      "aciklama": "Write GraphQL queries, mutations, and subscriptions — fragments, code generation, TypedDocumentNode, variables, error handling, and client setup. Use when writing GraphQL code for Saleor.",
+      "yol": "saleor-commerce/skills/graphql-dev",
+      "arsivde": true
+    },
+    {
+      "ad": "nextjs-react",
+      "aciklama": "Build Next.js and React applications for Saleor — App Router, server and client components, GraphQL client integration, MacawUI in Apps, and Tailwind CSS. Use when building Saleor storefronts or Apps with Next.js.",
+      "yol": "saleor-commerce/skills/nextjs-react",
+      "arsivde": true
+    },
+    {
+      "ad": "python-django",
+      "aciklama": "Write Python and Django code for Saleor — Django ORM patterns, signals, Celery tasks, type hints, migrations, management commands, and async views. Use when writing Python/Django in Saleor projects.",
+      "yol": "saleor-commerce/skills/python-django",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-apps",
+      "aciklama": "Develop Saleor Apps — App manifest, saleor-app-sdk, Next.js template, permissions, token exchange, APL, App Bridge, and lifecycle management. Use when building Saleor App extensions.",
+      "yol": "saleor-commerce/skills/saleor-apps",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-attributes",
+      "aciklama": "Work with Saleor's typed attribute system — attribute types, product types, page types, variant selection attributes, and attribute-based filtering. Use when defining product schemas.",
+      "yol": "saleor-commerce/skills/saleor-attributes",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-catalog",
+      "aciklama": "Manage the Saleor catalog — products, variants, product types, categories, collections, media, and warehouse stock. Use when working with Saleor product data.",
+      "yol": "saleor-commerce/skills/saleor-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-channels",
+      "aciklama": "Configure Saleor channels — multi-currency, multi-region, per-channel pricing, warehouse allocation, and multi-brand setups. Use when managing multi-channel commerce.",
+      "yol": "saleor-commerce/skills/saleor-channels",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-checkout",
+      "aciklama": "Implement the Saleor checkout flow — checkout creation, line items, shipping/billing addresses, delivery methods, payment, and completion. Use when building checkout experiences.",
+      "yol": "saleor-commerce/skills/saleor-checkout",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-customers",
+      "aciklama": "Manage Saleor customers and staff — customer accounts, registration, addresses, staff users, permission groups, and authentication. Use when working with user management.",
+      "yol": "saleor-commerce/skills/saleor-customers",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-dashboard",
+      "aciklama": "Extend the Saleor Dashboard — mounting points, App Bridge actions, MacawUI components, iframe extensions, and custom views. Use when building Dashboard extensions.",
+      "yol": "saleor-commerce/skills/saleor-dashboard",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-deploy",
+      "aciklama": "Deploy Saleor to production — Docker setup, Saleor Cloud, environment variables, Celery workers, S3 media storage, database management, and scaling. Use when deploying Saleor applications.",
+      "yol": "saleor-commerce/skills/saleor-deploy",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-graphql",
+      "aciklama": "Work with the Saleor GraphQL API — queries, mutations, subscriptions, cursor pagination, filters, error handling, GraphQL Playground, and code generation. Use when building against the Saleor API.",
+      "yol": "saleor-commerce/skills/saleor-graphql",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-orders",
+      "aciklama": "Manage the Saleor order lifecycle — order creation, fulfillments, returns, refunds, draft orders, and order events. Use when working with Saleor orders.",
+      "yol": "saleor-commerce/skills/saleor-orders",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-payments",
+      "aciklama": "Implement Saleor payment processing — transaction-based payment flow, payment Apps, sync webhook events, Stripe/Adyen patterns, and refunds. Use when building payment integrations.",
+      "yol": "saleor-commerce/skills/saleor-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-promotions",
+      "aciklama": "Configure Saleor promotions — catalog promotions, order promotions, vouchers, manual discounts, gift cards, and discount stacking. Use when setting up pricing rules.",
+      "yol": "saleor-commerce/skills/saleor-promotions",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-security",
+      "aciklama": "Secure Saleor applications — JWT authentication, OIDC integration, App tokens, permission model, rate limiting, CORS, and security headers. Use when configuring Saleor security.",
+      "yol": "saleor-commerce/skills/saleor-security",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-setup",
+      "aciklama": "Set up a Saleor development environment — saleor-platform Docker Compose, CLI, PostgreSQL/Redis prerequisites, manage.py commands, environment variables, project structure. Use when starting a new Saleor project.",
+      "yol": "saleor-commerce/skills/saleor-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-shipping",
+      "aciklama": "Configure Saleor shipping — shipping zones, methods (price/weight-based), custom shipping Apps, warehouse-based allocation, and click-and-collect. Use when setting up delivery options.",
+      "yol": "saleor-commerce/skills/saleor-shipping",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-storefront",
+      "aciklama": "Build Next.js storefronts for Saleor — GraphQL client setup, channel routing, Tailwind CSS, server components, checkout flow, and SEO. Use when developing Saleor storefronts.",
+      "yol": "saleor-commerce/skills/saleor-storefront",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-testing",
+      "aciklama": "Test Saleor applications — pytest setup, Django test client, GraphQL test patterns, App testing, factory_boy fixtures, and webhook testing. Use when writing tests for Saleor projects.",
+      "yol": "saleor-commerce/skills/saleor-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "saleor-webhooks",
+      "aciklama": "Configure Saleor webhooks — async and sync events, subscription payloads, JWS/HMAC signature verification, retry policy, and event types. Use when building webhook-driven integrations.",
+      "yol": "saleor-commerce/skills/saleor-webhooks",
+      "arsivde": true
+    },
+    {
+      "ad": "js-modern",
+      "aciklama": "Write modern JavaScript and TypeScript — ES6+ features, async/await, modules, destructuring, optional chaining, TypeScript types. Covers SFCC server-side JS (CommonJS, limited ES6), PWA Kit (full modern JS/TS), and LWC JavaScript (Lightning Locker constraints). Use when writing JavaScript for Sales…",
+      "yol": "salesforce-commerce/skills/js-modern",
+      "arsivde": true
+    },
+    {
+      "ad": "node-backend",
+      "aciklama": "Build Node.js backends for Salesforce Commerce — SFCC server-side JavaScript (not actual Node.js runtime), PWA Kit backend (Express-like SSR server), Commerce SDK for server-side SCAPI access, and async patterns for external service integration. Use when building server-side commerce logic.",
+      "yol": "salesforce-commerce/skills/node-backend",
+      "arsivde": true
+    },
+    {
+      "ad": "react-patterns",
+      "aciklama": "Build React applications for PWA Kit — hooks, composition, SSR, Commerce SDK integration, Chakra UI components, getProps data fetching, and client-side state management. PWA Kit uses React (NOT Remix/Next.js). Use when building PWA Kit storefronts.",
+      "yol": "salesforce-commerce/skills/react-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2b-apex",
+      "aciklama": "Build B2B Commerce Apex extensions using the CartExtension namespace — PricingCartCalculator, ShippingCartCalculator, TaxCartCalculator, InventoryCartCalculator implementations, governor limits, bulkification, test coverage (75% minimum), and checkout flow customization. Use when implementing serve…",
+      "yol": "salesforce-commerce/skills/sf-b2b-apex",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2b-experience",
+      "aciklama": "Build B2B Commerce storefronts with Experience Builder — LWR templates, page types (Home, Product, Category, Cart, Checkout), standard and custom components, theme layouts, navigation, SEO configuration, and site publishing. Use when assembling B2B/D2C storefronts.",
+      "yol": "salesforce-commerce/skills/sf-b2b-experience",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2b-lwc",
+      "aciklama": "Build B2B Commerce LWC components — Lightning Web Components with @api/@track/@wire decorators, commerce-specific wire adapters, custom events, Lightning Web Security, Jest unit testing, and component lifecycle. Use when building B2B storefront UI components.",
+      "yol": "salesforce-commerce/skills/sf-b2b-lwc",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-cartridges",
+      "aciklama": "Build B2C Commerce cartridges — cartridge directory structure (controllers/, models/, scripts/, templates/, static/), cartridge stacking, naming conventions (app_custom_*, plugin_*, int_*), cartridge path configuration, and certification requirements. Use when creating or modifying SFCC cartridges.",
+      "yol": "salesforce-commerce/skills/sf-b2c-cartridges",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-controllers",
+      "aciklama": "Build SFRA controllers — server.get/post/use route handlers, middleware chain with server.append/prepend/replace, CSRF protection, form validation, response rendering, and route-level caching. Use when implementing request handling in B2C Commerce.",
+      "yol": "salesforce-commerce/skills/sf-b2c-controllers",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-isml",
+      "aciklama": "Write ISML templates for B2C Commerce — <isprint>, <isif>, <isloop>, <isset>, <isinclude>, <isdecorate>, expression syntax ${pdict.*}, Resource.msg() localization, content slots, and template inheritance. Use when building B2C storefront templates.",
+      "yol": "salesforce-commerce/skills/sf-b2c-isml",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-jobs",
+      "aciklama": "Build and manage B2C Commerce jobs — job framework, job steps (script modules, pipelines, custom), scheduling with cron expressions, job context and parameters, import/export jobs, reindex jobs, and Business Manager monitoring. Use when implementing background processing in B2C Commerce.",
+      "yol": "salesforce-commerce/skills/sf-b2c-jobs",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-ocapi",
+      "aciklama": "MIGRATION SKILL: OCAPI (Open Commerce API) — Shop API and Data API endpoints, authentication, pagination, and OCAPI-to-SCAPI migration guide. OCAPI is in maintenance-only mode with no new features. Use this skill only for maintaining legacy integrations or planning migration to SCAPI.",
+      "yol": "salesforce-commerce/skills/sf-b2c-ocapi",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-pwa-kit",
+      "aciklama": "Build headless B2C storefronts with PWA Kit — React-based framework (NOT Remix/Next.js), Managed Runtime deployment, Commerce SDK integration, server-side rendering, Chakra UI components, and extensible application shell. Use when building headless Salesforce Commerce storefronts.",
+      "yol": "salesforce-commerce/skills/sf-b2c-pwa-kit",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-scapi",
+      "aciklama": "",
+      "yol": "salesforce-commerce/skills/sf-b2c-scapi",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-b2c-sfra",
+      "aciklama": "Build B2C Commerce storefronts with SFRA (Storefront Reference Architecture) — cartridge overlay system, MVC pattern, app_storefront_base, module.superModule inheritance, middleware chain, and site-specific customizations. Use when developing SFRA-based storefronts.",
+      "yol": "salesforce-commerce/skills/sf-b2c-sfra",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-catalog",
+      "aciklama": "",
+      "yol": "salesforce-commerce/skills/sf-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-customers",
+      "aciklama": "Manage Salesforce Commerce customers — B2C (customer objects, customer groups, segmentation, SLAS authentication, wishlists) and B2B (Account/Contact, buyer groups, buyer permissions, self-registration). Both platforms share Data Cloud for unified customer profiles and consent management.",
+      "yol": "salesforce-commerce/skills/sf-customers",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-einstein",
+      "aciklama": "Implement Einstein AI for Salesforce Commerce — Einstein Recommendations (product-to-product, user-to-product, trending), predictive sort, search ranking, Einstein Search Dictionaries, and Data Cloud personalization. Use when adding AI-powered features to commerce storefronts.",
+      "yol": "salesforce-commerce/skills/sf-einstein",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-integrations",
+      "aciklama": "Build Salesforce Commerce integrations — B2C (SCAPI hooks, webhooks, custom script callouts) and B2B (Platform Events, Change Data Capture, outbound messages). Both platforms use event-driven patterns, HMAC verification, idempotency, and retry handling for reliable integration.",
+      "yol": "salesforce-commerce/skills/sf-integrations",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-orders",
+      "aciklama": "Manage Salesforce Commerce orders — B2C (SCAPI order objects, status lifecycle, order confirmation, returns) and B2B (Order object, OrderItem, splits, approval workflows, fulfillment). Use when implementing order management across either platform.",
+      "yol": "salesforce-commerce/skills/sf-orders",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-payments",
+      "aciklama": "Implement Salesforce Commerce payments — Salesforce Payments (supports multiple processors including Stripe and Adyen), B2C payment adapters (JavaScript cartridge-based), B2B payment adapters (Apex-based), PCI compliance via tokenization, 3D Secure/SCA support, and payment method management. Use wh…",
+      "yol": "salesforce-commerce/skills/sf-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-performance",
+      "aciklama": "Optimize Salesforce Commerce performance — B2C (cartridge caching, CDN configuration, ISML rendering optimization, lazy loading) and B2B (SOQL optimization, LWC lazy loading, Apex bulkification). Both platforms target Core Web Vitals and image optimization.",
+      "yol": "salesforce-commerce/skills/sf-performance",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-security",
+      "aciklama": "Implement Salesforce Commerce security — SLAS OAuth 2.1, session management, CSRF tokens, XSS prevention (isprint encoding in ISML), PCI compliance, RBAC in Business Manager, OWASP Top 10 protections, and Salesforce Shield for B2B. Use when implementing authentication or security controls.",
+      "yol": "salesforce-commerce/skills/sf-security",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-setup",
+      "aciklama": "Set up a Salesforce Commerce development environment — sfcc-ci CLI for B2C, sf CLI for B2B, Business Manager access, sandbox management, dw.json configuration, .sfdx project setup, and project structures for SFRA, PWA Kit, and Lightning. Use when starting a new Salesforce Commerce project.",
+      "yol": "salesforce-commerce/skills/sf-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "sf-testing",
+      "aciklama": "Test Salesforce Commerce code — B2C (Node.js unit testing, sfcc-ci CI/CD, sandbox management, linting) and B2B (Apex test classes with 75% coverage minimum, Jest for LWC, sf CLI deployment and validation). Use when writing tests or setting up CI/CD.",
+      "yol": "salesforce-commerce/skills/sf-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "js-modern",
+      "aciklama": "Write modern JavaScript and TypeScript — ES6+ features, async/await, modules, destructuring, optional chaining, TypeScript types, and modern tooling. Use when writing JavaScript/TypeScript for Shopify themes, apps, Functions, or Hydrogen storefronts.",
+      "yol": "shopify-commerce/skills/js-modern",
+      "arsivde": true
+    },
+    {
+      "ad": "node-backend",
+      "aciklama": "Build Node.js backends for Shopify apps — Remix server, @shopify/shopify-app-remix, session storage, OAuth handling, API proxy, webhook processing, and deployment. Use when building the server-side component of Shopify apps.",
+      "yol": "shopify-commerce/skills/node-backend",
+      "arsivde": true
+    },
+    {
+      "ad": "react-patterns",
+      "aciklama": "Build React applications with Remix — loaders, actions, hooks, Server/Client Components, nested routes, error boundaries, form handling, and streaming SSR. Use when building Shopify Hydrogen storefronts or Remix-based apps.",
+      "yol": "shopify-commerce/skills/react-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-agentic-ucp",
+      "aciklama": "Integrate Shopify UCP discovery, agent profiles, catalog/cart tools, and checkout handoff using the merchant's current schemas and trust tier.",
+      "yol": "shopify-commerce/skills/shopify-agentic-ucp"
+    },
+    {
+      "ad": "shopify-api-graphql",
+      "aciklama": "Use Shopify GraphQL APIs — Admin API for server-side CRUD, Storefront API for client-side queries, versioning, cost-based rate limiting, bulk operations, pagination. Use when integrating with Shopify data.",
+      "yol": "shopify-commerce/skills/shopify-api-graphql",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-api-rest",
+      "aciklama": "MIGRATION SKILL: Shopify REST Admin API — endpoint patterns, authentication, rate limits, and REST-to-GraphQL migration guide. The REST Admin API is deprecated (October 2024). Use this skill only for maintaining legacy integrations or planning migration to GraphQL.",
+      "yol": "shopify-commerce/skills/shopify-api-rest",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-app-dev",
+      "aciklama": "Build Shopify apps — app types, Remix template, App Bridge, session tokens, OAuth flow, app extensions, embedded admin apps. Use when developing Shopify apps or integrations.",
+      "yol": "shopify-commerce/skills/shopify-app-dev",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-catalog",
+      "aciklama": "Manage Shopify catalog — Product, Variant, and Option models, collections, metafields and metaobjects, inventory management, product taxonomy, bulk operations, and media. Use when working with Shopify product data.",
+      "yol": "shopify-commerce/skills/shopify-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-checkout-ui",
+      "aciklama": "Build Shopify checkout UI extensions — extension targets, UI primitives, Preact/Remote DOM rendering, checkout APIs, metafield access, post-purchase extensions, and thank-you page customization. Use when customizing Shopify checkout.",
+      "yol": "shopify-commerce/skills/shopify-checkout-ui",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-customers",
+      "aciklama": "Manage Shopify customers — Customer Account API, new vs classic accounts, Multipass SSO, customer segmentation, B2B company accounts, metafields, and marketing consent. Use when working with Shopify customer data.",
+      "yol": "shopify-commerce/skills/shopify-customers",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-functions",
+      "aciklama": "Build Shopify Functions — serverless WebAssembly extensions for discounts, delivery customization, payment customization, cart validation, cart transforms, and order routing. Use when extending Shopify's backend logic.",
+      "yol": "shopify-commerce/skills/shopify-functions",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-hydrogen",
+      "aciklama": "Build headless Shopify storefronts with Hydrogen — Remix-based framework, Oxygen deployment, storefront.query(), caching strategies, cart, customer accounts, SEO, and analytics. Use when building custom Shopify storefronts.",
+      "yol": "shopify-commerce/skills/shopify-hydrogen",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-liquid",
+      "aciklama": "Write Shopify Liquid templates — objects, tags, filters, global objects, section schema, Online Store 2.0 JSON templates, and Liquid best practices. Use when customizing Shopify theme templates.",
+      "yol": "shopify-commerce/skills/shopify-liquid",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-orders",
+      "aciklama": "Manage Shopify orders — order lifecycle, FulfillmentOrder model, returns and refunds, draft orders, order editing, transactions, metafields, and risk analysis. Use when working with Shopify order processing.",
+      "yol": "shopify-commerce/skills/shopify-orders",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-payments",
+      "aciklama": "Integrate Shopify payments — Shopify Payments (Stripe-powered), Payment Apps API, payment session flow, Billing API for app charges, refund processing, and PCI compliance. Use when working with Shopify payment processing.",
+      "yol": "shopify-commerce/skills/shopify-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-performance",
+      "aciklama": "Optimize Shopify performance — Liquid rendering, asset optimization, CDN strategies, Core Web Vitals, Hydrogen caching, image optimization, preloading, and lazy loading. Use when improving Shopify store speed.",
+      "yol": "shopify-commerce/skills/shopify-performance",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-polaris",
+      "aciklama": "Build Shopify app UIs with Polaris — component categories, Web Components transition, React legacy components, App Design Guidelines, accessibility, @shopify/draggable, and design tokens. Use when building Shopify admin app interfaces.",
+      "yol": "shopify-commerce/skills/shopify-polaris",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-security",
+      "aciklama": "Secure Shopify applications — HMAC webhook verification, session token validation, OAuth scope management, Content Security Policy, GDPR mandatory webhooks, input validation, and secure coding practices. Use when implementing Shopify security features.",
+      "yol": "shopify-commerce/skills/shopify-security",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-setup",
+      "aciklama": "Set up a Shopify development environment — Shopify CLI installation, Partner account, development stores, environment variables, project structures for themes, apps, and Hydrogen. Use when starting a new Shopify project.",
+      "yol": "shopify-commerce/skills/shopify-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-storefront-mcp-migration",
+      "aciklama": "Migrate removed Shopify Storefront MCP catalog/cart tools to UCP, including renamed tools, agent profiles, full-cart replacement semantics, and checkout handoff.",
+      "yol": "shopify-commerce/skills/shopify-storefront-mcp-migration"
+    },
+    {
+      "ad": "shopify-testing",
+      "aciklama": "Test Shopify applications — app testing with Vitest and Playwright, theme testing with Theme Check, Function testing, webhook testing, extension testing, and CI/CD pipelines. Use when writing tests for Shopify projects.",
+      "yol": "shopify-commerce/skills/shopify-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-themes",
+      "aciklama": "Develop Shopify themes — file structure, Online Store 2.0, sections and blocks, settings schema, Dawn reference theme, Theme Check linting, asset pipeline, and theme deployment. Use when building or customizing Shopify themes.",
+      "yol": "shopify-commerce/skills/shopify-themes",
+      "arsivde": true
+    },
+    {
+      "ad": "shopify-webhooks",
+      "aciklama": "Implement Shopify webhooks — subscription methods (HTTP, EventBridge, Pub/Sub, SQS), HMAC verification, mandatory GDPR webhooks, delivery methods, retry policy, and idempotency. Use when building event-driven Shopify integrations.",
+      "yol": "shopify-commerce/skills/shopify-webhooks",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-ap2-mandates",
+      "aciklama": "Implement UCP AP2 Mandates extension — cryptographic payment mandates for fully autonomous agent commerce using SD-JWT credentials, merchant authorization signatures, and the Agent Payments Protocol. Use when building autonomous agent payment flows without human-in-the-loop.",
+      "yol": "skills/ucp-ap2-mandates",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-buyer-consent",
+      "aciklama": "Implement the UCP Buyer Consent extension — GDPR/CCPA consent collection, consent fields in checkout sessions, and privacy-compliant consent management. Use when adding consent flows, privacy compliance, or data processing agreements to UCP checkout.",
+      "yol": "skills/ucp-buyer-consent",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-cart",
+      "aciklama": "Implement the UCP Cart capability (`dev.ucp.shopping.cart`) — a lightweight CRUD surface for collecting line items before purchase intent exists, and its conversion into a Checkout session. Use when building pre-checkout item collection, shareable carts, or cart-recovery flows over REST, MCP, or Em…",
+      "yol": "skills/ucp-cart",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-catalog",
+      "aciklama": "Implement the UCP Catalog capability (`dev.ucp.shopping.catalog`) — free-text product Search and identifier-based Lookup, the Product/Variant data model, media, ratings, and quantity units. Use when exposing product discovery to agents or consuming a business catalog before cart and checkout.",
+      "yol": "skills/ucp-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-checkout-a2a",
+      "aciklama": "Implement UCP Checkout over the A2A (Agent-to-Agent) binding — enable autonomous agent-to-agent commerce using Agent Cards and structured message parts. Use when building agent-to-agent commerce flows.",
+      "yol": "skills/ucp-checkout-a2a",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-checkout-mcp",
+      "aciklama": "Implement UCP Checkout over the MCP (Model Context Protocol) binding — expose checkout operations as MCP tools for AI agents. Use when building an MCP server that AI agents like Claude or Gemini can call for commerce, or when integrating with Shopify's MCP endpoint.",
+      "yol": "skills/ucp-checkout-mcp",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-checkout-rest",
+      "aciklama": "Implement UCP Checkout over the REST binding — create, get, update, complete, and cancel checkout sessions with proper headers, idempotency, status transitions, and error handling. Use when building REST-based UCP checkout endpoints or clients.",
+      "yol": "skills/ucp-checkout-rest",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-conformance",
+      "aciklama": "Run and write UCP conformance tests — validate a UCP implementation against the official test suite covering checkout lifecycle, orders, fulfillment, payments, idempotency, webhooks, and security. Use when testing or validating a UCP implementation.",
+      "yol": "skills/ucp-conformance",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-dev-patterns",
+      "aciklama": "UCP development patterns — capability negotiation algorithms, idempotency implementation, error resolution loops, multi-binding servers, and production architecture. Use when designing the internal architecture of a UCP implementation or solving cross-cutting concerns.",
+      "yol": "skills/ucp-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-discount",
+      "aciklama": "Implement the UCP Discount extension — discount code application, validation, allocation tracking, and error handling. Use when adding promo code or discount logic to a UCP checkout.",
+      "yol": "skills/ucp-discount",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-embedded-checkout",
+      "aciklama": "Implement UCP Embedded Checkout Protocol — iframe/webview-based checkout UI for human escalation using JSON-RPC 2.0 over postMessage. Use when the checkout status is requires_escalation and the buyer needs a merchant-hosted UI.",
+      "yol": "skills/ucp-embedded-checkout",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-fulfillment",
+      "aciklama": "Implement the UCP Fulfillment extension — shipping and pickup methods, destinations, fulfillment groups, selectable options, and estimated delivery. Use when adding shipping/pickup logic to a UCP checkout.",
+      "yol": "skills/ucp-fulfillment",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-identity-linking",
+      "aciklama": "Implement UCP Identity Linking — OAuth 2.0 authorization code flow for linking buyer accounts between platforms and merchants, enabling personalized checkout experiences. Use when implementing account linking or SSO for UCP.",
+      "yol": "skills/ucp-identity-linking",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-location",
+      "aciklama": "Implement the UCP Location capability (`dev.ucp.common.location`) — Search and Lookup for physical locations (stores, restaurants, lockers) with spatial relations, operating hours, amenities, and item availability. Use when building local pickup discovery, store finders, or fulfillment-area verific…",
+      "yol": "skills/ucp-location",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-loyalty",
+      "aciklama": "Implement the UCP Loyalty extension — memberships, tiers, benefits, and rewards surfaced across catalog, cart, and checkout, with reverse-DNS program namespaces, `context.eligibility` claims, and provisional vs verified membership. Use when adding member pricing, tier recognition, or rewards foreca…",
+      "yol": "skills/ucp-loyalty",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-orders-webhooks",
+      "aciklama": "Implement UCP Order capability and webhook delivery — post-purchase order management with fulfillment tracking, adjustments (refunds/returns), and cryptographically signed webhook notifications. Use when building order management or webhook infrastructure.",
+      "yol": "skills/ucp-orders-webhooks",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-payment-authentication",
+      "aciklama": "Implement the UCP Payment Authentication extension (`dev.ucp.common.payment.authentication`) — browser-surface actions for device data collection and 3DS challenge during a payment attempt, including the ready/done handshake and origin validation. Use when adding 3-D Secure or strong customer authe…",
+      "yol": "skills/ucp-payment-authentication",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-payment-handlers",
+      "aciklama": "Implement UCP payment handlers — configure Google Pay, Shop Pay, or custom payment methods with tokenization, credential flow, and instrument schemas. Use when integrating payment processing into a UCP checkout.",
+      "yol": "skills/ucp-payment-handlers",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-payment-terms",
+      "aciklama": "Implement the UCP Payment Terms extension (`dev.ucp.common.payment.terms`) — offering the buyer a choice of when payment is due via payment terms and schedules (pay now, deposit plus balance, deferred). Use when building split-timing payment options into a UCP checkout.",
+      "yol": "skills/ucp-payment-terms",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-permalink",
+      "aciklama": "Implement the UCP Permalink capability — browser-addressable shopping intent URLs that initialize cart/checkout state via a compact item path and UCP field-path query parameters, then redirect the buyer. Use when building campaign links, QR/social buy links, buyer prefill, or store-pickup deep link…",
+      "yol": "skills/ucp-permalink",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-schema-authoring",
+      "aciklama": "Author custom UCP schemas and extensions — create capability schemas, extension schemas, and type definitions using JSON Schema 2020-12 composition. Use when extending UCP with custom capabilities or building domain-specific extensions.",
+      "yol": "skills/ucp-schema-authoring",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-setup",
+      "aciklama": "Set up a UCP project — scaffold a merchant server or platform client with discovery profile, SDK installation, and project structure. Use when starting a new UCP implementation.",
+      "yol": "skills/ucp-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "ucp-split-payments",
+      "aciklama": "Implement the UCP Split Payments extension (`dev.ucp.common.payment.split_payments`) — paying a single checkout with multiple instruments, specified vs open amounts, allocation order, `allowed_combinations` config, and atomic completion. Use when supporting gift cards plus a card, or any multi-inst…",
+      "yol": "skills/ucp-split-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-admin-customization",
+      "aciklama": "Customize the Spree v5 Admin Dashboard — Tailwind 4 + Hotwire/Turbo/Stimulus stack, the `Spree.admin.navigation` declarative API (v5.2+) for menu items, partial injection slots (`store_nav_partials`, `store_products_nav_partials`, `store_orders_nav_partials`, `settings_nav_partials`), the Admin SDK…",
+      "yol": "spree-commerce/skills/spree-admin-customization",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-api-v3",
+      "aciklama": "Build with Spree's v3 APIs (v5.4+) — Store API at `/api/v3/store/*` (publishable key + per-user JWT, customer-facing) and Admin API at `/api/v3/admin/*` (per-user API keys + OAuth2 Doorkeeper, admin/operations). Covers the flat-JSON Stripe-like envelope, `?expand=` / `?include=` parameters, prefixe…",
+      "yol": "spree-commerce/skills/spree-api-v3",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-catalog",
+      "aciklama": "Build and customize Spree's catalog — Products with Variants and OptionTypes/OptionValues, Taxonomies and Taxons (nested set), Properties, Images via ActiveStorage, multi-currency Prices, the v5.3+ PriceList feature for customer/segment overrides, MeiliSearch faceted search (v5.4+), product archivi…",
+      "yol": "spree-commerce/skills/spree-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-checkout",
+      "aciklama": "Implement Spree's checkout — the Order state machine (cart → address → delivery → payment → confirm → complete), the Payment and Shipment sub-state machines, the return flow (ReturnAuthorization → CustomerReturn → Reimbursement → Refund), guest checkout, payment-step skipping for credit-covered ord…",
+      "yol": "spree-commerce/skills/spree-checkout",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-data-model",
+      "aciklama": "Navigate Spree's canonical data model — the Catalog (Product/Variant/OptionType/Taxon/Property/Metafield), Pricing (Price/PriceList), Order graph (Order/LineItem/Adjustment/Shipment/Payment/PaymentSession/Refund/Reimbursement), Inventory (StockLocation/StockItem/StockMovement), Shipping (ShippingMe…",
+      "yol": "spree-commerce/skills/spree-data-model",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-deployment",
+      "aciklama": "Deploy Spree to production — PostgreSQL + Redis + Sidekiq stack, Docker multi-arch images on GHCR, the `spree-starter` Dockerfile + Compose, Heroku/Render/Fly.io/AWS targets, env-var conventions, RAILS_MASTER_KEY, asset precompilation (Tailwind 4 + Propshaft), Action Cable, MeiliSearch indexing, S3…",
+      "yol": "spree-commerce/skills/spree-deployment",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-dev-patterns",
+      "aciklama": "Cross-cutting Spree development patterns — the customization preference hierarchy (Events > Webhooks > Dependencies > Decorators), `Spree::Dependencies` service-object swapping, the `_decorator.rb` + `prepend` + `self.prepended` idiom, idempotent subscribers and webhook receivers, multi-store scopi…",
+      "yol": "spree-commerce/skills/spree-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-events-webhooks",
+      "aciklama": "Build with Spree's event bus and Webhooks 2.0 — `Spree::Events` publication, `Spree::Subscriber` DSL with `subscribes_to` and `on`, wildcard matching, lifecycle events (`{model}.created/.updated/.deleted` via `publishes_lifecycle_events`), the canonical event catalog (order.*, payment.*, shipment.*…",
+      "yol": "spree-commerce/skills/spree-events-webhooks",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-extensions",
+      "aciklama": "Build Spree extensions as Rails engines — gem scaffolding, `bin/rails g spree:extension`, mounting routes/migrations/assets, the modern `prepend` decorator pattern (`*_decorator.rb` with `self.prepended(base)`), generators (`spree:model_decorator`, `spree:controller_decorator`), the four customizat…",
+      "yol": "spree-commerce/skills/spree-extensions",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-headless-storefront",
+      "aciklama": "Build with Spree's headless Next.js storefront — the official `spree/storefront` repo (Next.js 16 App Router with Server Actions and Turbopack, React 19 Server Components, Tailwind CSS 4, TypeScript 5, `@spree/sdk`, Sentry), server-only auth (httpOnly JWT cookies + publishable key), MeiliSearch fac…",
+      "yol": "spree-commerce/skills/spree-headless-storefront",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-i18n",
+      "aciklama": "Localize a Spree application — the `spree_i18n` gem with 60+ locale packs, the v5.4+ Translations Center for product/CMS content (CSV import/export), Rails i18n basics applied to Spree (translation files, locale switching, pluralization, interpolation), per-Market locale routing in the headless sto…",
+      "yol": "spree-commerce/skills/spree-i18n",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-legacy-api-v2",
+      "aciklama": "Work with Spree's legacy v2 APIs — JSON:API-style Storefront API at `/api/v2/storefront/*` and Platform API at `/api/v2/platform/*`, Doorkeeper OAuth2 (password grant for storefront, client_credentials + admin scope for platform), the `spree_legacy_api_v2` gem (required in v5+ for backward compatib…",
+      "yol": "spree-commerce/skills/spree-legacy-api-v2",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-multi-store",
+      "aciklama": "Configure Spree for multi-store and multi-region commerce — one Rails install running many `Store` records, the v5.4+ `Market` model (currency + locale + payment methods + shipping per region), what's shared vs per-store (products+inventory+customers shared; orders+payments+themes per-store), the M…",
+      "yol": "spree-commerce/skills/spree-multi-store",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-payments",
+      "aciklama": "Integrate payment gateways with Spree — PaymentMethod model, the v5.4+ PaymentSession provider-agnostic checkout flow, Stripe via `spree_stripe` (Apple/Google Pay, Link, Connect for marketplaces), Adyen via `spree_adyen`, PayPal via `spree_paypal_checkout`, StoreCredit / GiftCard as payment methods…",
+      "yol": "spree-commerce/skills/spree-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-performance",
+      "aciklama": "Profile and optimize a Spree application — N+1 queries with bullet/scout, database indexing strategy for Spree's polymorphic associations, Rails fragment + Russian doll caching, ActiveStorage variant pre-generation, Sidekiq queue tuning, MeiliSearch vs Postgres FTS tradeoffs, Puma worker/thread siz…",
+      "yol": "spree-commerce/skills/spree-performance",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-promotions",
+      "aciklama": "Build and customize Spree's promotions engine — Promotion + PromotionRule + PromotionAction + CouponCode + Adjustment, the bundled rules (FirstOrder/ItemTotal/Product/Taxon/User/OneUsePerUser/Country/CustomerGroup/etc.), bundled actions (CreateAdjustment/CreateItemAdjustments/FreeShipping/CreateLin…",
+      "yol": "spree-commerce/skills/spree-promotions",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-security",
+      "aciklama": "Secure a Spree deployment — Rails credentials and env-var hygiene, Devise auth (Spree v5 ships it in-core; `spree_auth_devise` is archived), CanCanCan authorization rules, Doorkeeper OAuth2 scopes, Storefront publishable key vs admin API key, webhook HMAC verification, OWASP Top 10 for Rails (mass…",
+      "yol": "spree-commerce/skills/spree-security",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-setup",
+      "aciklama": "Bootstrap a new Spree project — `create-spree-app` CLI (v5.2+), `spree-starter` Rails backend, the Next.js storefront repo, `bin/rails g spree:install`, sample data, Docker Compose, and the PostgreSQL + Redis + Sidekiq prerequisites. Use when starting a new Spree project from scratch or onboarding…",
+      "yol": "spree-commerce/skills/spree-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-shipping-fulfillment",
+      "aciklama": "Build and customize Spree's shipping and fulfillment — ShippingMethod, ShippingCategory, Zone/ZoneMember, ShippingRate, the Stock::Estimator service, StockLocation/StockItem/StockMovement, multi-shipment orders, ShippingCalculator classes (FlatRate, FlatPercentItemTotal, PerItem, FlexiRate), shipme…",
+      "yol": "spree-commerce/skills/spree-shipping-fulfillment",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-testing",
+      "aciklama": "Test Spree applications and extensions with RSpec — `spree_dev_tools` gem (v5.2+) for factories and helpers, FactoryBot patterns (prefer `build` over `create`), Capybara feature specs, controller/request specs, testing decorators and subscribers, dummy app for extension testing, system specs for th…",
+      "yol": "spree-commerce/skills/spree-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-typescript-sdk",
+      "aciklama": "Build storefronts and integrations using `@spree/sdk` — the official TypeScript SDK for Spree's API v3 (v5.4+). Covers installation, the resource-builder pattern (`spree.products.list`, `spree.checkout.create`, etc.), Zod schema validation, server-only auth (httpOnly JWTs, never exposing API keys),…",
+      "yol": "spree-commerce/skills/spree-typescript-sdk",
+      "arsivde": true
+    },
+    {
+      "ad": "spree-upgrades",
+      "aciklama": "Upgrade a Spree application — version-to-version migration paths (v4 → v5 is a major rewrite; v5.x → v5.y are simpler), Gemfile pinning strategy, decorator brittleness across versions, deprecated gems to remove (`spree_auth_devise`, `deface`, `spree_backend`), API v2 → v3 migration via `spree_legac…",
+      "yol": "spree-commerce/skills/spree-upgrades",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-charge-flow",
+      "aciklama": "Implement MPP one-time charge payment flows — per-request payment gates for API monetization, data access, and file downloads. Use when building pay-per-call APIs or protecting individual resources with HTTP 402 charges.",
+      "yol": "stripe-mpp/skills/mpp-charge-flow",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-client-fetch",
+      "aciklama": "Implement MPP client-side payment handling with mppx.fetch(). Use when building AI agents or automated clients that consume 402-protected APIs, handling the transparent challenge-response payment flow.",
+      "yol": "stripe-mpp/skills/mpp-client-fetch",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-conformance",
+      "aciklama": "Validate MPP implementations against the specification — verify HTTP 402 challenge-response compliance, header formats, payment method correctness, service discovery, and production readiness. Use when auditing an MPP integration or preparing for production launch.",
+      "yol": "stripe-mpp/skills/mpp-conformance",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-dev-patterns",
+      "aciklama": "Cross-cutting MPP development patterns — security, replay protection, HMAC challenge binding, receipt validation, error handling, retry logic, TLS requirements, and monitoring. Use when designing architecture or solving production concerns.",
+      "yol": "stripe-mpp/skills/mpp-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-proxy",
+      "aciklama": "Implement MPP payment proxies — wrap existing APIs with HTTP 402 payment gates without modifying the upstream service. Use when monetizing third-party APIs, adding payment layers to existing services, or building API marketplaces.",
+      "yol": "stripe-mpp/skills/mpp-proxy",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-server-middleware",
+      "aciklama": "Implement MPP server-side middleware for Hono, Express, Next.js, and Elysia. Use when protecting API routes with HTTP 402 payment gates, configuring payment methods, or setting up the Mppx server instance.",
+      "yol": "stripe-mpp/skills/mpp-server-middleware",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-service-discovery",
+      "aciklama": "Implement MPP service discovery — OpenAPI documents with x-payment-info extensions, x-service-info metadata, and llms.txt for autonomous agent discovery. Use when publishing paid API metadata for AI agents to find and pay for your services.",
+      "yol": "stripe-mpp/skills/mpp-service-discovery",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-session-flow",
+      "aciklama": "Implement MPP session-based streaming payment flows — authorize-once pay-as-you-go patterns for continuous data feeds, per-token billing, and micropayment aggregation. Use when building streaming APIs or services that charge incrementally.",
+      "yol": "stripe-mpp/skills/mpp-session-flow",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-setup",
+      "aciklama": "Scaffold an MPP project — install mppx SDK, configure payment methods, set up server middleware, and create a basic paid API endpoint. Use when starting a new MPP machine payments project from scratch.",
+      "yol": "stripe-mpp/skills/mpp-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-spt-lifecycle",
+      "aciklama": "Implement Shared Payment Token (SPT) lifecycle management for MPP — creation, usage, deactivation, webhook events, and reconciliation. Use when building the fiat/card payment flow within MPP using Stripe SPTs.",
+      "yol": "stripe-mpp/skills/mpp-spt-lifecycle",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-stripe-method",
+      "aciklama": "Configure Stripe as an MPP payment method — card and wallet payments via Shared Payment Tokens (SPTs), integrating MPP's HTTP 402 flow with Stripe's payment infrastructure. Use when enabling fiat/card payments for machine-to-machine transactions.",
+      "yol": "stripe-mpp/skills/mpp-stripe-method",
+      "arsivde": true
+    },
+    {
+      "ad": "mpp-tempo-method",
+      "aciklama": "Configure Tempo blockchain as an MPP payment method — USDC stablecoin payments with sub-second finality, 100,000+ TPS, and no gas volatility. Use when setting up crypto-native payment rails for machine payments.",
+      "yol": "stripe-mpp/skills/mpp-tempo-method",
+      "arsivde": true
+    },
+    {
+      "ad": "tap-conformance",
+      "aciklama": "Run local TAP cryptographic and replay fixtures and explain supported profile coverage.",
+      "yol": "trusted-agent-protocol/skills/tap-conformance"
+    },
+    {
+      "ad": "tap-consumer-payment-binding",
+      "aciklama": "Verify TAP consumer and payment-container signatures and their request bindings.",
+      "yol": "trusted-agent-protocol/skills/tap-consumer-payment-binding"
+    },
+    {
+      "ad": "tap-key-management",
+      "aciklama": "Design trusted TAP key lookup, rotation, revocation, and caching.",
+      "yol": "trusted-agent-protocol/skills/tap-key-management"
+    },
+    {
+      "ad": "tap-merchant-verification",
+      "aciklama": "Integrate TAP verification and replay protection into a merchant request path.",
+      "yol": "trusted-agent-protocol/skills/tap-merchant-verification"
+    },
+    {
+      "ad": "tap-request-signatures",
+      "aciklama": "Implement and test TAP HTTP signatures with explicit covered-component policy.",
+      "yol": "trusted-agent-protocol/skills/tap-request-signatures"
+    },
+    {
+      "ad": "tap-setup",
+      "aciklama": "Choose a TAP merchant integration profile and establish explicit trust configuration.",
+      "yol": "trusted-agent-protocol/skills/tap-setup"
+    },
+    {
+      "ad": "webmcp-authentication",
+      "aciklama": "Implement WebMCP authentication patterns — browser session inheritance, cookie-based auth, role-gated tool registration, and conditional tool exposure. Use when managing which tools are available based on user authentication state.",
+      "yol": "webmcp-browser-agents/skills/webmcp-authentication",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-commerce-tools",
+      "aciklama": "Implement commerce-specific WebMCP tools — product search, cart management, checkout, returns, subscriptions, and support. Use when building agentic shopping experiences on e-commerce websites.",
+      "yol": "webmcp-browser-agents/skills/webmcp-commerce-tools",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-context-provider",
+      "aciklama": "Implement the WebMCP provideContext API — bulk tool registration, contextual metadata, page state sharing, and dynamic context updates. Use when providing rich context and multiple tools to agents simultaneously.",
+      "yol": "webmcp-browser-agents/skills/webmcp-context-provider",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-declarative-forms",
+      "aciklama": "Implement the WebMCP Declarative API — annotate HTML forms with toolname and tooldescription attributes for automatic tool extraction. Use when making existing forms agent-ready with minimal code changes.",
+      "yol": "webmcp-browser-agents/skills/webmcp-declarative-forms",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-dev-patterns",
+      "aciklama": "Apply WebMCP cross-cutting development patterns — SPA routing, error handling, performance optimization, multi-site agents, accessibility, SEO, and production deployment. Use when architecting WebMCP-enabled sites or solving cross-cutting concerns.",
+      "yol": "webmcp-browser-agents/skills/webmcp-dev-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-mcp-bridge",
+      "aciklama": "Integrate WebMCP client-side tools with backend MCP servers and UCP endpoints — bridge browser-based agent interactions with server-to-server protocols. Use when connecting front-end WebMCP to existing backend API infrastructure.",
+      "yol": "webmcp-browser-agents/skills/webmcp-mcp-bridge",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-polyfill",
+      "aciklama": "Set up and use the MCP-B polyfill — vanilla JS and React packages that implement navigator.modelContext for browsers without native WebMCP. Use when developing for browsers that don't yet support WebMCP natively.",
+      "yol": "webmcp-browser-agents/skills/webmcp-polyfill",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-register-tool",
+      "aciklama": "Implement the WebMCP Imperative API — register tools via navigator.modelContext.registerTool() with proper schemas, execute callbacks, and lifecycle management. Use when building dynamic tool registration in JavaScript.",
+      "yol": "webmcp-browser-agents/skills/webmcp-register-tool",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-security",
+      "aciklama": "Implement WebMCP security best practices — permission model, data minimization, honest descriptions, input validation, fingerprinting prevention, and fraud mitigation. Use when auditing or hardening WebMCP tool implementations.",
+      "yol": "webmcp-browser-agents/skills/webmcp-security",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-setup",
+      "aciklama": "Set up a WebMCP project — enable Chrome flags, install MCP-B polyfill, scaffold tool registration, and configure development environment. Use when starting a new WebMCP-enabled website from scratch.",
+      "yol": "webmcp-browser-agents/skills/webmcp-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-testing",
+      "aciklama": "Test WebMCP tools with AI agents — Chrome DevTools integration, agent testing workflows, tool discovery verification, and end-to-end commerce flow testing. Use when validating that tools work correctly with real AI agents.",
+      "yol": "webmcp-browser-agents/skills/webmcp-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-tool-annotations",
+      "aciklama": "Implement WebMCP tool annotations — readOnlyHint, destructiveHint, idempotentHint safety hints that inform browser permission prompts and agent behavior. Use when marking tools with appropriate safety metadata.",
+      "yol": "webmcp-browser-agents/skills/webmcp-tool-annotations",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-tool-schemas",
+      "aciklama": "Design JSON Schemas for WebMCP tool inputs and outputs — proper types, constraints, nested objects, and agent-friendly documentation. Use when defining or refining tool schemas for agent consumption.",
+      "yol": "webmcp-browser-agents/skills/webmcp-tool-schemas",
+      "arsivde": true
+    },
+    {
+      "ad": "webmcp-user-interaction",
+      "aciklama": "Implement human-in-the-loop flows with requestUserInteraction() — confirmation dialogs, approval workflows, and user prompts during tool execution. Use when building tools that require user consent before performing actions.",
+      "yol": "webmcp-browser-agents/skills/webmcp-user-interaction",
+      "arsivde": true
+    },
+    {
+      "ad": "php-modern",
+      "aciklama": "Write modern PHP 8.x code — typed properties, enums, readonly classes, match expressions, named arguments, union/intersection types, fibers, attributes, and constructor promotion. Use when writing PHP for WooCommerce or any PHP 8.x project.",
+      "yol": "woocommerce-commerce/skills/php-modern",
+      "arsivde": true
+    },
+    {
+      "ad": "php-patterns",
+      "aciklama": "Apply PHP design patterns — Singleton, Factory, Strategy, Observer, Repository, Decorator, and Dependency Injection in PHP. Use when structuring WooCommerce extension code or implementing complex business logic.",
+      "yol": "woocommerce-commerce/skills/php-patterns",
+      "arsivde": true
+    },
+    {
+      "ad": "php-testing",
+      "aciklama": "Write PHP tests with PHPUnit — unit tests, mocking, data providers, assertions, test doubles, and TDD workflow. Use when writing tests for WooCommerce extensions or PHP projects.",
+      "yol": "woocommerce-commerce/skills/php-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-admin",
+      "aciklama": "Build WooCommerce admin interfaces — settings pages, admin menus, product data tabs/panels, order meta boxes, WooCommerce Admin (React analytics), and reports. Use when creating admin-facing configuration or display pages.",
+      "yol": "woocommerce-commerce/skills/woo-admin",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-api",
+      "aciklama": "Build and consume WooCommerce REST API v3 endpoints — authentication, custom endpoints, extending existing resources, webhooks, and batch operations. Use when creating custom API endpoints or integrating external systems with WooCommerce.",
+      "yol": "woocommerce-commerce/skills/woo-api",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-blocks",
+      "aciklama": "Build WooCommerce Blocks — Gutenberg block integration, block-based cart/checkout extensions, Store API, and the @woocommerce/blocks-checkout package. Use when extending the block editor for WooCommerce or customizing block-based checkout/cart.",
+      "yol": "woocommerce-commerce/skills/woo-blocks",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-catalog",
+      "aciklama": "Work with WooCommerce catalog — product types, categories, tags, attributes, product queries, search, related products, and product visibility. Use when managing products programmatically or customizing the catalog display.",
+      "yol": "woocommerce-commerce/skills/woo-catalog",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-checkout",
+      "aciklama": "Customize WooCommerce checkout — classic and block-based checkout, custom fields, validation, order processing, and checkout extensibility. Use when modifying the checkout flow, adding custom checkout fields, or integrating checkout extensions.",
+      "yol": "woocommerce-commerce/skills/woo-checkout",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-custom-fields",
+      "aciklama": "Work with WooCommerce product attributes, custom meta fields, taxonomies, custom product tabs, and variation data. Use when adding custom data to products, orders, or customers.",
+      "yol": "woocommerce-commerce/skills/woo-custom-fields",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-data-stores",
+      "aciklama": "Work with WooCommerce CRUD data stores — WC_Product, WC_Order, WC_Customer, WC_Coupon data objects, custom data stores, HPOS migration, and getters/setters. Use when creating or modifying WooCommerce data objects or implementing custom data stores.",
+      "yol": "woocommerce-commerce/skills/woo-data-stores",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-deploy",
+      "aciklama": "Deploy WooCommerce — WP-CLI automation, database migrations, zero-downtime updates, staging workflows, environment configuration, and CI/CD patterns. Use when deploying WooCommerce stores or setting up deployment pipelines.",
+      "yol": "woocommerce-commerce/skills/woo-deploy",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-frontend",
+      "aciklama": "Customize WooCommerce frontend — template overrides, theme integration, shortcodes, hooks for product/cart/checkout display, and WooCommerce block themes. Use when modifying the storefront appearance or building WooCommerce themes.",
+      "yol": "woocommerce-commerce/skills/woo-frontend",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-hooks-filters",
+      "aciklama": "Master the WordPress hook system for WooCommerce — actions, filters, hook priorities, WooCommerce-specific hooks, and extensibility patterns. Use when adding functionality via hooks or understanding the WooCommerce execution flow.",
+      "yol": "woocommerce-commerce/skills/woo-hooks-filters",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-payments",
+      "aciklama": "Build WooCommerce payment gateways — WC_Payment_Gateway, direct/redirect/hosted integrations, tokenization, subscriptions support, refunds, and PCI compliance. Use when creating custom payment method integrations.",
+      "yol": "woocommerce-commerce/skills/woo-payments",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-performance",
+      "aciklama": "Optimize WooCommerce performance — object caching, transients, HPOS, database optimization, Action Scheduler, lazy loading, and query optimization. Use when improving store performance or diagnosing slowness.",
+      "yol": "woocommerce-commerce/skills/woo-performance",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-plugin-dev",
+      "aciklama": "Create WooCommerce extensions/plugins — file structure, main plugin file, activation/deactivation hooks, custom database tables, autoloading, and WordPress plugin API. Use when building new WooCommerce extensions or structuring plugin code.",
+      "yol": "woocommerce-commerce/skills/woo-plugin-dev",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-security",
+      "aciklama": "Implement WooCommerce security — nonces, capabilities, input sanitization, output escaping, data validation, PCI compliance considerations, and WordPress security best practices. Use when hardening a WooCommerce store or reviewing security posture.",
+      "yol": "woocommerce-commerce/skills/woo-security",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-setup",
+      "aciklama": "Install WooCommerce, configure the development stack, and set up a local dev environment with WP-CLI, Docker, or wp-env. Use when setting up a new WooCommerce project or development environment.",
+      "yol": "woocommerce-commerce/skills/woo-setup",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-shipping",
+      "aciklama": "Build WooCommerce shipping methods — WC_Shipping_Method, shipping zones, shipping classes, rate calculation, tracking, and integration with carriers. Use when creating custom shipping integrations or configuring shipping logic.",
+      "yol": "woocommerce-commerce/skills/woo-shipping",
+      "arsivde": true
+    },
+    {
+      "ad": "woo-testing",
+      "aciklama": "Test WooCommerce extensions — PHPUnit unit/integration tests, WP test suite, WooCommerce test helpers, E2E with Playwright, and WP-CLI test scaffolding. Use when writing tests for WooCommerce plugins or setting up a test environment.",
+      "yol": "woocommerce-commerce/skills/woo-testing",
+      "arsivde": true
+    },
+    {
+      "ad": "x402-conformance",
+      "aciklama": "Run x402 wire, MCP, policy, and mocked SDK interoperability fixtures.",
+      "yol": "x402-agentic-payments/skills/x402-conformance"
+    },
+    {
+      "ad": "x402-facilitators",
+      "aciklama": "Integrate facilitator capabilities, verification, settlement, and reconciliation.",
+      "yol": "x402-agentic-payments/skills/x402-facilitators"
+    },
+    {
+      "ad": "x402-http-payments",
+      "aciklama": "Implement x402 HTTP payment challenges and paid-resource handling.",
+      "yol": "x402-agentic-payments/skills/x402-http-payments"
+    },
+    {
+      "ad": "x402-mcp-integration",
+      "aciklama": "Add x402 payment negotiation to MCP tools using the current MCP transport.",
+      "yol": "x402-agentic-payments/skills/x402-mcp-integration"
+    },
+    {
+      "ad": "x402-migration",
+      "aciklama": "Migrate legacy x402 v1 integrations to the supported v2 core and transports.",
+      "yol": "x402-agentic-payments/skills/x402-migration"
+    },
+    {
+      "ad": "x402-setup",
+      "aciklama": "Set up an x402 client, resource server, or facilitator integration.",
+      "yol": "x402-agentic-payments/skills/x402-setup"
+    },
+    {
+      "ad": "x402-spend-policy",
+      "aciklama": "Enforce explicit payment limits before constructing an x402 payment payload.",
+      "yol": "x402-agentic-payments/skills/x402-spend-policy"
+    }
+  ],
+  "bilesenler": [
+    {
+      "tur": "ajan",
+      "ad": "a2a-expert",
+      "aciklama": "Expert in the A2A (Agent-to-Agent) protocol — the open standard initiated by Google (now Linux Foundation) for inter-agent communication. Deep conceptual knowledge of Agent Cards, task lifecycle, messages and parts, JSON-RPC transport, streaming, push notifications, authentication, multi-turn conve…",
+      "yol": "a2a-multi-agent/agents/a2a-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "acp-expert",
+      "aciklama": "Expert in the Agentic Commerce Protocol (ACP) — the open standard co-developed by OpenAI and Stripe for AI-agent-mediated commerce. Deep conceptual knowledge of the protocol architecture, checkout sessions, delegated payments, product feeds, order lifecycle, extensions, capability negotiation, and…",
+      "yol": "acp-agentic-commerce/agents/acp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "ap2-expert",
+      "aciklama": "Expert in the AP2 (Agent Payments Protocol) — an open protocol for secure, verifiable agentic commerce payments, originally created by Google and contributed to the FIDO Alliance in April 2026. Deep conceptual knowledge of Verifiable Digital Credentials (VDCs), Cart/Intent/Payment Mandates, cryptog…",
+      "yol": "ap2-agentic-payments/agents/ap2-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "bigcommerce-expert",
+      "aciklama": "Expert in BigCommerce development — Stencil theme framework, REST V2/V3 and GraphQL Storefront APIs, single-click app development, checkout SDK, payment integrations, headless commerce with Catalyst/Next.js, multi-channel architecture, webhooks, widgets/Page Builder, and Node.js/JavaScript patterns…",
+      "yol": "bigcommerce-commerce/agents/bigcommerce-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "readiness-expert",
+      "aciklama": "Agentic commerce readiness auditor — probes a live site for agent access, protocol discovery (UCP/ACP/A2A), catalog structured data, checkout transactability, payment surfaces, and trust primitives, then maps every gap to the marketplace skill that closes it. Use PROACTIVELY when a user asks whethe…",
+      "yol": "commerce-readiness/agents/readiness-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "a2a-expert",
+      "aciklama": "Expert in the A2A (Agent-to-Agent) protocol — the open standard initiated by Google (now Linux Foundation) for inter-agent communication. Deep conceptual knowledge of Agent Cards, task lifecycle, messages and parts, JSON-RPC transport, streaming, push notifications, authentication, multi-turn conve…",
+      "yol": "dist/cursor/a2a-multi-agent/agents/a2a-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "acp-expert",
+      "aciklama": "Expert in the Agentic Commerce Protocol (ACP) — the open standard co-developed by OpenAI and Stripe for AI-agent-mediated commerce. Deep conceptual knowledge of the protocol architecture, checkout sessions, delegated payments, product feeds, order lifecycle, extensions, capability negotiation, and…",
+      "yol": "dist/cursor/acp-agentic-commerce/agents/acp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "ap2-expert",
+      "aciklama": "Expert in the AP2 (Agent Payments Protocol) — an open protocol for secure, verifiable agentic commerce payments, originally created by Google and contributed to the FIDO Alliance in April 2026. Deep conceptual knowledge of Verifiable Digital Credentials (VDCs), Cart/Intent/Payment Mandates, cryptog…",
+      "yol": "dist/cursor/ap2-agentic-payments/agents/ap2-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "bigcommerce-expert",
+      "aciklama": "Expert in BigCommerce development — Stencil theme framework, REST V2/V3 and GraphQL Storefront APIs, single-click app development, checkout SDK, payment integrations, headless commerce with Catalyst/Next.js, multi-channel architecture, webhooks, widgets/Page Builder, and Node.js/JavaScript patterns…",
+      "yol": "dist/cursor/bigcommerce-commerce/agents/bigcommerce-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "readiness-expert",
+      "aciklama": "Agentic commerce readiness auditor — probes a live site for agent access, protocol discovery (UCP/ACP/A2A), catalog structured data, checkout transactability, payment surfaces, and trust primitives, then maps every gap to the marketplace skill that closes it. Use PROACTIVELY when a user asks whethe…",
+      "yol": "dist/cursor/commerce-readiness/agents/readiness-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "magento-expert",
+      "aciklama": "Expert in Magento 2 Open Source development and PHP 8.x. Deep conceptual knowledge of module architecture, dependency injection, plugins/interceptors, EAV, service contracts, REST/GraphQL APIs, checkout, catalog, admin UI components, testing, performance, deployment, and security. Always fetches th…",
+      "yol": "dist/cursor/magento2-commerce/agents/magento-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "medusa-expert",
+      "aciklama": "Expert in Medusa v2 development — custom modules with DML data models, services, and loaders, workflow engine with steps and compensation, API routes with middleware, subscribers and scheduled jobs, admin dashboard extensions (widgets and UI routes), Next.js 15 storefronts with JS SDK, payment and…",
+      "yol": "dist/cursor/medusa-commerce/agents/medusa-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "nlweb-expert",
+      "aciklama": "Expert in NLWeb (Natural Language Web) — the Microsoft-originated open framework for making any website into an agent-ready AI application via Schema.org + MCP. Deep conceptual knowledge of the /ask endpoint, MCP server interface, mixed-mode programming model, pluggable LLM providers (OpenAI, Azure…",
+      "yol": "dist/cursor/nlweb-protocol/agents/nlweb-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "saleor-expert",
+      "aciklama": "Expert in Saleor commerce development — GraphQL-only API with Graphene-Django, custom Apps with Next.js SDK and App Bridge, async/sync webhooks with subscription payloads, Dashboard extensions with MacawUI, Next.js storefronts, multi-channel commerce (currencies, regions, warehouses), typed attribu…",
+      "yol": "dist/cursor/saleor-commerce/agents/saleor-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "salesforce-expert",
+      "aciklama": "Expert in Salesforce Commerce development — B2C Commerce Cloud (SFCC/Demandware) with SFRA cartridges, ISML templating, SCAPI and OCAPI APIs, PWA Kit headless storefronts, and B2B/D2C Commerce on Lightning with Apex hooks, LWC components, Experience Builder storefronts, Einstein AI recommendations,…",
+      "yol": "dist/cursor/salesforce-commerce/agents/salesforce-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "shopify-expert",
+      "aciklama": "Expert in Shopify development — GraphQL Admin and Storefront APIs, Liquid templating, Online Store 2.0 themes, Hydrogen/Remix headless storefronts, Shopify Functions (Wasm), checkout UI extensions, Polaris components, App Bridge, app development, webhooks, metafields/metaobjects, and JavaScript/Typ…",
+      "yol": "dist/cursor/shopify-commerce/agents/shopify-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "spree-expert",
+      "aciklama": "Expert in Spree Commerce — the open-source Rails e-commerce platform (BSD-3, since 2007, latest v5.4+). Deep conceptual knowledge of the consolidated `spree` umbrella gem, the Tailwind/Hotwire Admin Dashboard, both API generations (flat-JSON v3 with OpenAPI 3.0 + legacy JSON:API v2 via `spree_legac…",
+      "yol": "dist/cursor/spree-commerce/agents/spree-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "mpp-expert",
+      "aciklama": "Expert in the Machine Payments Protocol (MPP) — the open standard co-authored by Stripe and Tempo Labs for HTTP 402-based machine-to-machine payments. Deep conceptual knowledge of the HTTP 402 challenge-response flow, charge and session payment intents, Tempo blockchain settlement, Stripe SPT integ…",
+      "yol": "dist/cursor/stripe-mpp/agents/mpp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "tap-expert",
+      "aciklama": "Implement TAP merchant recognition, HTTP request signatures, trusted key management, consumer/payment binding checks, and offline cryptographic fixtures. Fetches official documentation before implementation.",
+      "yol": "dist/cursor/trusted-agent-protocol/agents/tap-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "ucp-expert",
+      "aciklama": "Universal Commerce Protocol (UCP) expert for building agentic commerce implementations. Use PROACTIVELY when the user is implementing UCP checkout flows, merchant servers, platform integrations, payment handlers, order management, discovery profiles, or any agentic commerce feature using UCP across…",
+      "yol": "dist/cursor/ucp-agentic-commerce/agents/ucp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "webmcp-expert",
+      "aciklama": "Expert in WebMCP (Web Model Context Protocol) — the browser-native API for agent-ready websites. Deep conceptual knowledge of navigator.modelContext, registerTool, declarative form annotations, tool schemas, human-in-the-loop interactions, requestUserInteraction, tool annotations, commerce tool pat…",
+      "yol": "dist/cursor/webmcp-browser-agents/agents/webmcp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "woocommerce-expert",
+      "aciklama": "Expert in WooCommerce and WordPress plugin development with PHP 8.x. Deep conceptual knowledge of plugin architecture, hooks/filters, CRUD data stores, HPOS, REST API, checkout blocks, payment gateways, shipping methods, catalog, admin UI, Gutenberg blocks, testing, performance, deployment, and sec…",
+      "yol": "dist/cursor/woocommerce-commerce/agents/woocommerce-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "x402-expert",
+      "aciklama": "Implement and test x402 payment negotiation, facilitator integration, paid MCP tools, spending controls, and v1-to-v2 migration. Fetches official documentation before implementation.",
+      "yol": "dist/cursor/x402-agentic-payments/agents/x402-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "magento-expert",
+      "aciklama": "Expert in Magento 2 Open Source development and PHP 8.x. Deep conceptual knowledge of module architecture, dependency injection, plugins/interceptors, EAV, service contracts, REST/GraphQL APIs, checkout, catalog, admin UI components, testing, performance, deployment, and security. Always fetches th…",
+      "yol": "magento2-commerce/agents/magento-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "medusa-expert",
+      "aciklama": "Expert in Medusa v2 development — custom modules with DML data models, services, and loaders, workflow engine with steps and compensation, API routes with middleware, subscribers and scheduled jobs, admin dashboard extensions (widgets and UI routes), Next.js 15 storefronts with JS SDK, payment and…",
+      "yol": "medusa-commerce/agents/medusa-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "nlweb-expert",
+      "aciklama": "Expert in NLWeb (Natural Language Web) — the Microsoft-originated open framework for making any website into an agent-ready AI application via Schema.org + MCP. Deep conceptual knowledge of the /ask endpoint, MCP server interface, mixed-mode programming model, pluggable LLM providers (OpenAI, Azure…",
+      "yol": "nlweb-protocol/agents/nlweb-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "saleor-expert",
+      "aciklama": "Expert in Saleor commerce development — GraphQL-only API with Graphene-Django, custom Apps with Next.js SDK and App Bridge, async/sync webhooks with subscription payloads, Dashboard extensions with MacawUI, Next.js storefronts, multi-channel commerce (currencies, regions, warehouses), typed attribu…",
+      "yol": "saleor-commerce/agents/saleor-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "salesforce-expert",
+      "aciklama": "Expert in Salesforce Commerce development — B2C Commerce Cloud (SFCC/Demandware) with SFRA cartridges, ISML templating, SCAPI and OCAPI APIs, PWA Kit headless storefronts, and B2B/D2C Commerce on Lightning with Apex hooks, LWC components, Experience Builder storefronts, Einstein AI recommendations,…",
+      "yol": "salesforce-commerce/agents/salesforce-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "shopify-expert",
+      "aciklama": "Expert in Shopify development — GraphQL Admin and Storefront APIs, Liquid templating, Online Store 2.0 themes, Hydrogen/Remix headless storefronts, Shopify Functions (Wasm), checkout UI extensions, Polaris components, App Bridge, app development, webhooks, metafields/metaobjects, and JavaScript/Typ…",
+      "yol": "shopify-commerce/agents/shopify-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "spree-expert",
+      "aciklama": "Expert in Spree Commerce — the open-source Rails e-commerce platform (BSD-3, since 2007, latest v5.4+). Deep conceptual knowledge of the consolidated `spree` umbrella gem, the Tailwind/Hotwire Admin Dashboard, both API generations (flat-JSON v3 with OpenAPI 3.0 + legacy JSON:API v2 via `spree_legac…",
+      "yol": "spree-commerce/agents/spree-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "mpp-expert",
+      "aciklama": "Expert in the Machine Payments Protocol (MPP) — the open standard co-authored by Stripe and Tempo Labs for HTTP 402-based machine-to-machine payments. Deep conceptual knowledge of the HTTP 402 challenge-response flow, charge and session payment intents, Tempo blockchain settlement, Stripe SPT integ…",
+      "yol": "stripe-mpp/agents/mpp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "tap-expert",
+      "aciklama": "Implement TAP merchant recognition, HTTP request signatures, trusted key management, consumer/payment binding checks, and offline cryptographic fixtures. Fetches official documentation before implementation.",
+      "yol": "trusted-agent-protocol/agents/tap-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "ucp-expert",
+      "aciklama": "Universal Commerce Protocol (UCP) expert for building agentic commerce implementations. Use PROACTIVELY when the user is implementing UCP checkout flows, merchant servers, platform integrations, payment handlers, order management, discovery profiles, or any agentic commerce feature using UCP across…",
+      "yol": "ucp-agentic-commerce/agents/ucp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "webmcp-expert",
+      "aciklama": "Expert in WebMCP (Web Model Context Protocol) — the browser-native API for agent-ready websites. Deep conceptual knowledge of navigator.modelContext, registerTool, declarative form annotations, tool schemas, human-in-the-loop interactions, requestUserInteraction, tool annotations, commerce tool pat…",
+      "yol": "webmcp-browser-agents/agents/webmcp-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "woocommerce-expert",
+      "aciklama": "Expert in WooCommerce and WordPress plugin development with PHP 8.x. Deep conceptual knowledge of plugin architecture, hooks/filters, CRUD data stores, HPOS, REST API, checkout blocks, payment gateways, shipping methods, catalog, admin UI, Gutenberg blocks, testing, performance, deployment, and sec…",
+      "yol": "woocommerce-commerce/agents/woocommerce-expert.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "x402-expert",
+      "aciklama": "Implement and test x402 payment negotiation, facilitator integration, paid MCP tools, spending controls, and v1-to-v2 migration. Fetches official documentation before implementation.",
+      "yol": "x402-agentic-payments/agents/x402-expert.md"
+    }
+  ]
+}
