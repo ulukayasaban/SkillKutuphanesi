@@ -2,27 +2,7 @@
 
 _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/88**
-
-### agent-implementer-sparc-coder  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Agent skill for implementer-sparc-coder - invoke with $agent-implementer-sparc-coder
-- **Teknoloji:** api-anahtari, node, python _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 6 KB (SKILL.md 6.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-sparc-coordinator  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Agent skill for sparc-coordinator - invoke with $agent-sparc-coordinator
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/78**
 
 ### app-builder  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -75,16 +55,6 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Geliştirici:** Orchestra-Research (kurum, ★14269, son güncelleme 2026-10-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 19 KB (SKILL.md 18.7 KB, yük orta)
-- **İnceleme:** otomatik
-
-### brainstorming@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
-
-- **Ne yapar:** You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
-- **Teknoloji:** api-anahtari, git _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
-- **Boyut:** 78 KB (SKILL.md 15.1 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### brainstorming@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
@@ -270,16 +240,6 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Durum:** tercih · **Örtüşme:** plan-yurutme → birincil · **Roller:** planlayici
 - **Boyut:** 20 KB (SKILL.md 17.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — 2026-10 güncellemesi: uzun örnek iş akışı çıkarıldı, kurallar aynı; SKILL.md kısaldı. Alt-agent kullanmadan aynı oturumda plan yürütme için hâlâ geçerli.
-
-### executing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
-
-- **Ne yapar:** Use when you have a written implementation plan to execute in a separate session with review checkpoints
-- **Teknoloji:** git _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
-- **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
-- **İnceleme:** otomatik
 
 ### git-guardrails-claude-code  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
 
@@ -667,56 +627,6 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### sparc-implement  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Run the SPARC Pseudocode and Architecture phases (2 and 3) — write algorithm pseudocode, design module boundaries and API contracts, then implement
-- **Teknoloji:** typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 5 KB (SKILL.md 5.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### sparc-methodology  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) comprehensive development methodology with multi-agent orchestration
-- **Teknoloji:** api-anahtari, node, playwright, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: claude, codex -> kurulumda her araca kendi sürümü konur
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 24 KB (SKILL.md 24.4 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### sparc-methodology@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** SPARC development workflow (Specification, Pseudocode, Architecture, Refinement, Completion). Use when: new features, complex implementations, architectural changes. Skip when: simple fixes, documentation, configuration.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### sparc-refine  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Run the SPARC Refinement and Completion phases — review code, improve test coverage, validate against specification, and generate documentation
-- **Teknoloji:** typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### sparc-spec  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Run the SPARC Specification phase — gather requirements, define acceptance criteria, identify constraints, and store the spec in memory
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 4 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### spec-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Kodlamadan önce spec yazdırır: kapsam kontrolü (gerekirse yetenek haritasına bölme), amaç/yığın/komutlar/yapı/test stratejisi/sınırlar/başarı ölçütü içeren spec, ardından plan, görevler ve uygulama aşamalarını kapılı bir akışla yürütür; spec'i canlı tutma kurallarını verir.
@@ -889,13 +799,3 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Durum:** tercih · **Örtüşme:** uygulama-plani → birincil · **Roller:** planlayici
 - **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, uygulama-plani grubunun birincili. Gerekçe: arayüz sözleşmeleri, görev boyutlandırma ve 'inceleme odağı' bölümüyle en uygulanabilir plan biçimi; superpowers yürütme zinciriyle (subagent-driven-development, executing-plans, TDD, verification) uçtan uca bağlı. addyosmani planning-and-task-breakdown daha hafif ve yığından bağımsız; vudovn plan-writing kısa ama ag-kit betiklerine atıf yapıyor.
-
-### writing-plans@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
-
-- **Ne yapar:** Use when you have a spec or requirements for a multi-step task, before touching code
-- **Teknoloji:** git, python _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
-- **Boyut:** 9 KB (SKILL.md 6.9 KB, yük kucuk)
-- **İnceleme:** otomatik

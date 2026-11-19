@@ -2,87 +2,7 @@
 
 _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/179**
-
-### agent-benchmark-suite  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Agent skill for benchmark-suite - invoke with $agent-benchmark-suite
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 19 KB (SKILL.md 19.3 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-performance-analyzer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Agent skill for performance-analyzer - invoke with $agent-performance-analyzer
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-performance-benchmarker  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Agent skill for performance-benchmarker - invoke with $agent-performance-benchmarker
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 27 KB (SKILL.md 26.7 KB, yük buyuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-performance-monitor  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Agent skill for performance-monitor - invoke with $agent-performance-monitor
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 19 KB (SKILL.md 19.2 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-performance-optimizer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Agent skill for performance-optimizer - invoke with $agent-performance-optimizer
-- **Teknoloji:** python, react _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-security-manager  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Agent skill for security-manager - invoke with $agent-security-manager
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 19 KB (SKILL.md 19.3 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-v3-performance-engineer  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Agent skill for v3-performance-engineer - invoke with $agent-v3-performance-engineer
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-v3-security-architect  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Agent skill for v3-security-architect - invoke with $agent-v3-security-architect
-- **Teknoloji:** api-anahtari, git, node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/147**
 
 ### agents-sdk  ·  cloudflare/skills @ 1a33048  ·  puan 95 (A)
 
@@ -455,16 +375,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 49 KB (SKILL.md 31.6 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### dependency-check  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Scan project dependencies for known vulnerabilities and CVEs. Use when auditing third-party packages, before releases, after `npm install`/lockfile changes, or when investigating reported CVE advisories.
-- **Teknoloji:** git, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### deploy-to-vercel  ·  vercel-labs/agent-skills @ 1a2c79d  ·  puan 82 (A)
 
 - **Ne yapar:** Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
@@ -485,16 +395,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Durum:** tercih · **Örtüşme:** deploy-yayin → tamamlayıcı · **Roller:** devops-muhendis
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. Kısa (6 KB) platform karar tablosu yararlı; içerik genel ilkeler, shipping-and-launch ile kısmen örtüşüyor.
-
-### deployments-cicd  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
-
-- **Ne yapar:** Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
-- **Teknoloji:** api-anahtari, git, next.js, node, playwright _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
-- **İnceleme:** otomatik
 
 ### detection-engineering-coverage-evaluation  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
@@ -1216,56 +1116,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 82 KB (SKILL.md 14.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### iot-anomalies  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Detect and classify telemetry anomalies on Cognitum Seed devices. Use when investigating a device that's reporting odd metrics, before approving a firmware canary advancement, or when triaging fleet-wide health alerts.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### iot-firmware  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Orchestrate firmware rollouts with canary deployment and anomaly-gated advancement
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### iot-fleet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Create and manage Cognitum Seed device fleets with firmware policies
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### iot-register  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Register a Cognitum Seed device by endpoint and establish agent bridge
-- **Teknoloji:** api-anahtari, node _(otomatik tespit)_
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 1.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### iot-witness-verify  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Verify witness chain integrity and detect provenance gaps
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 0.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### k2  ·  cloudflare/skills @ 1a33048  ·  puan 97 (A)
 
 - **Ne yapar:** Build and troubleshoot Cloudflare K2 or K2 Streams durable logs. Use for stream setup, producing from Workers or HTTP, configuring retention and inputs, and consuming through subscriptions.
@@ -1306,16 +1156,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 6 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### observability  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
-
-- **Ne yapar:** Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.
-- **Teknoloji:** api-anahtari, html, next.js, node, react, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 26 KB (SKILL.md 25.9 KB, yük buyuk)
-- **İnceleme:** otomatik
-
 ### observability-and-instrumentation  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
 - **Ne yapar:** Kodu üretimde görünür ve teşhis edilebilir kılar: önce 'çalışıyor'un tanımı, her soru için doğru sinyal (log, metrik, iz), yapılandırılmış loglama, metrikler, dağıtık izleme, uyarılar ve runbook yazımı, son olarak telemetrinin kendisini doğrulama.
@@ -1327,26 +1167,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 14 KB (SKILL.md 13.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, gozlemlenebilirlik grubunun birincili. 'Telemetriyi de doğrula' ve runbook bölümleri pratik; satıcıdan bağımsız.
 
-### observe-metrics  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Aggregate and display system metrics with anomaly detection for a time period
-- **Teknoloji:** api-anahtari, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### observe-trace  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Trace agent execution by collecting spans and building a trace tree for a task
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
-- **İnceleme:** otomatik
-
 ### pathways-workload  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
 - **Ne yapar:** Debugs failed, crashing or hung Pathways on Cloud workloads (JAX training or inference on Cloud TPU in GKE, run as a JobSet, PathwaysJob or LeaderWorkerSet). Reads Cloud Logging for every Pathways container (user workload, IFRT proxy, pathways-rm, pathways-worker, colocated Python sidecar), node kernel logs and GKE events, then reports the earliest real error, the root cause and a fix. Use when a 
@@ -1355,26 +1175,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** google (kurum, ★24352, son güncelleme 2026-11-16, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 97 KB (SKILL.md 23.5 KB, yük orta)
-- **İnceleme:** otomatik
-
-### performance-analysis  ·  ruvnet/ruflo @ 98ddf41  ·  puan 97 (A)
-
-- **Ne yapar:** Comprehensive performance analysis, bottleneck detection, and optimization recommendations for Claude Flow swarms
-- **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 14 KB (SKILL.md 14.2 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 3
-- **İnceleme:** otomatik
-
-### performance-analysis@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Performance profiling, benchmarking, and optimization. Use when: slow operations, regressions, memory pressure, release validation. Skip when: early prototyping, documentation, configuration-only changes.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 1 KB (SKILL.md 0.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### performance-optimization  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
@@ -1398,26 +1198,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Durum:** tercih · **Örtüşme:** performans → tamamlayıcı
 - **Boyut:** 13 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı (opsiyonel). Kısa ve betikli; içerik büyük ölçüde performance-optimization'ın ölçüm bölümünün tablo özeti.
-
-### performance-review-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 97 (A)
-
-- **Ne yapar:** Draft performance reviews, self-assessments, peer reviews, and upward feedback in your own voice. Analyzes your contributions, emails, and meeting history via WorkIQ, then produces honest, impact-focused drafts using the STAR format. USE FOR: write my performance review, draft self-assessment, peer review, 360 feedback, annual review, mid-year review, upward feedback, write review for colleague, p
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** github (kurum, ★40799, son güncelleme 2026-11-04, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 9 KB (SKILL.md 8.6 KB, yük orta)
-- **İnceleme:** otomatik
-
-### pii-detect  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Detect and flag personally identifiable information (PII) in text, code, and configurations. Use before committing code, writing logs, storing data, or sending model responses that might contain emails, phone numbers, SSNs, API keys, or passwords.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
 
 ### public-status-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
 
@@ -1458,16 +1238,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** morluto (kisi, ★430844, son güncelleme 2026-11-04, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 159 KB (SKILL.md 35.9 KB, yük buyuk) · **Bağımlılık:** REA aracı (repo) kurulu olmalı.
-- **İnceleme:** otomatik
-
-### safety-scan  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Scan inputs for prompt injection, unsafe content, and adversarial attacks using AIDefence. Use when processing untrusted input (user submissions, API payloads, webhook data, tool outputs) before passing it to a model or executing it.
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### sandbox-migrate-to-next  ·  cloudflare/skills @ 1a33048  ·  puan 95 (A)
@@ -1582,59 +1352,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **İnceleme:** otomatik
 - **Not:** Aynı adlı başka skill: `security-audit@ruvnet` (ruvnet/ruflo) `npx @claude-flow/cli security` komutlarıyla tarama yapar (Ruflo gerekir). Bu skill bağımsız çalışan kapsamlı kod tabanı güvenlik denetimidir.
 
-### security-audit@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Comprehensive security scanning and vulnerability detection. Includes input validation, path traversal prevention, CVE detection, and secure coding pattern enforcement. Use when: authentication implementation, authorization logic, payment processing, user data handling, API endpoint creation, file upload handling, database queries, external API integration. Skip when: read-only operations on publi
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 4 KB (SKILL.md 3.2 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-- **Not:** Aynı adlı başka skill: `security-audit` (cloudflare/security-audit-skill) bağımsız, kapsamlı güvenlik denetimidir. Bu skill `npx @claude-flow/cli security` komutlarıyla tarar (Ruflo gerekir).
-
-### security-diff-scan  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
-
-- **Ne yapar:** Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities.
-- **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### security-review  ·  github/awesome-copilot @ 7e40881  ·  puan 97 (A)
-
-- **Ne yapar:** AI-powered codebase security scanner that reasons about code like a security researcher — tracing data flows, understanding component interactions, and catching vulnerabilities that pattern-matching tools miss. Use this skill when asked to scan code for security vulnerabilities, find bugs, check for SQL injection, XSS, command injection, exposed API keys, hardcoded secrets, insecure dependencies, 
-- **Teknoloji:** api-anahtari, docker, html, next.js, node, python, react, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** github (kurum, ★40799, son güncelleme 2026-11-04, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 36 KB (SKILL.md 8.9 KB, yük orta)
-- **İnceleme:** otomatik
-
-### security-scan  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
-
-- **Ne yapar:** Use for a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review. This is the default repository scan. Do not use for PR, commit, branch, or working-tree diffs, or for deep, multi-pass scans.
-- **Teknoloji:** api-anahtari, git, python _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 28 KB (SKILL.md 8.8 KB, yük orta)
-- **İnceleme:** otomatik
-- **Not:** Aynı adlı başka skill: `security-scan@ruvnet` (ruvnet/ruflo) Ruflo güvenlik araçlarını (MCP) çağırır. Bu skill bağımsız, tek geçişli depo güvenlik taramasıdır; tercih elle sabitlendi (aynı ad, farklı araç).
-
-### security-scan@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Run full security scans on the codebase using Ruflo security tools. Use when reviewing PRs for security regressions, auditing auth/input-handling code, before production deploys, or when the user asks for a security check at quick/standard/deep depth.
-- **Teknoloji:** node, playwright, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-- **Not:** Aynı adlı başka skill: `security-scan` (openai/plugins) bağımsız depo taramasıdır. Bu skill Ruflo güvenlik araçlarını (MCP) çağırır; Ruflo kurulu değilse çalışmaz.
-
 ### server-management  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
 - **Ne yapar:** Sunucu işletim ilkeleri: süreç yöneticisi seçimi (PM2, systemd, Docker, Kubernetes), izleme metrikleri ve uyarı seviyeleri, izleme aracı seçimi, log yönetimi (rotasyon, yapılandırılmış log), ölçekleme kararları ve sağlık kontrolü ilkeleri.
@@ -1687,26 +1404,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 95 KB (SKILL.md 28.2 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### v3-performance-optimization  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Achieve aggressive v3 performance targets: 2.49x-7.47x Flash Attention speedup, 150x-12,500x search improvements, 50-75% memory reduction. Comprehensive benchmarking and optimization suite.
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### v3-security-overhaul  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Complete security architecture overhaul for claude-flow v3. Addresses critical CVEs (CVE-1, CVE-2, CVE-3) and implements secure-by-default patterns. Use for security-first v3 implementation.
-- **Teknoloji:** api-anahtari, git, node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### vercel-cli-with-tokens  ·  vercel-labs/agent-skills @ 1a2c79d  ·  puan 82 (A)
 
 - **Ne yapar:** Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. "deploy to vercel", "set up vercel", "add environment variables to vercel".
@@ -1738,16 +1435,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 35 KB (SKILL.md 7.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı. OWASP 2025 güncel ve kontrol listeleri iş görüyor; betikler hafif desen taraması, gerçek tarayıcıların (npm audit, semgrep, osv-scanner) yerini tutmaz.
 
-### vulnerability-writeup  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
-
-- **Ne yapar:** Turn vulnerability notes, disclosure reports, PoCs, source code, or Codex Security findings into self-contained, sceptically validated, natural-sounding vulnerability reports. Use for one vulnerability or a disclosure campaign; a Codex Security scan is optional.
-- **Teknoloji:** api-anahtari, git _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 42 KB (SKILL.md 27.0 KB, yük buyuk)
-- **İnceleme:** otomatik
-
 ### web-perf  ·  cloudflare/skills @ 1a33048  ·  puan 95 (A)
 
 - **Ne yapar:** Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores.
@@ -1756,16 +1443,6 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Geliştirici:** cloudflare (kurum, resmî, ★3279, son güncelleme 2026-11-03, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 8.2 KB, yük orta)
-- **İnceleme:** otomatik
-
-### worker-benchmarks  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Run comprehensive worker system benchmarks and performance analysis
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: user-invocable (Codex bunları yok sayar) · Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### workers-best-practices  ·  cloudflare/skills @ 1a33048  ·  puan 97 (A)

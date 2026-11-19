@@ -2,7 +2,7 @@
 
 _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/48**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **0/37**
 
 ### audit-support  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
 
@@ -122,26 +122,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
-- **İnceleme:** otomatik
-
-### market-ingest  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Ingest and normalize market data into OHLCV vectors stored by symbol and date for later pattern detection. Use when you need to load price and volume history for a symbol before running pattern detection or comparison. Read-only analysis; it never places orders.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### market-pattern  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Detect and classify candlestick patterns from ingested OHLCV data
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### meeting-briefing  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
@@ -274,16 +254,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 32 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-backtest  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Run a historical backtest using npx neural-trader with Rust/NAPI engine (8-19x faster) and walk-forward validation; Ed25519-sign the result for paper→live tamper evidence (ADR-126 Phase 4)
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 6 KB (SKILL.md 5.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### trader-broker  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 77 (B)
 
 - **Ne yapar:** Order Executor. Sends approved orders to your broker, paper trading by default, never without your yes. Shows each order as a plain ticket (a bracket shows its stop-loss, take-profit and the max loss at the stop) plus the exact JSON for Alpaca's place_stock_order, records your yes word for word, then Claude's own Allow once / Deny card asks again. Builds the sell ticket that closes a day trade by 
@@ -302,16 +272,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Geliştirici:** Jakeschincariol (kisi, ★5296, son güncelleme 2026-10-20, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 48 KB (SKILL.md 8.4 KB, yük orta)
-- **İnceleme:** otomatik
-
-### trader-cloud-backtest  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Run a heavy neural-trader job (long walk-forward, big Monte-Carlo, parameter sweep, model training) on the Anthropic Managed Agent cloud runtime instead of locally
-- **Teknoloji:** api-anahtari, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 7 KB (SKILL.md 7.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### trader-entry  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 84 (A)
@@ -334,16 +294,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 37 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-explain  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Regulator-grade feature attribution for any LSTM/Transformer signal — single-entry PageRank ranks the top-K features that drove the prediction (ADR-126 Phase 6, ADR-123 single-entry PR)
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### trader-news  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 84 (A)
 
 - **Ne yapar:** News Monitor. Tracks breaking news on every stock you watch and flags what moves it: Yahoo Finance headlines per ticker, each company's 8-K filings on SEC EDGAR (earnings, CEO changes, deals, restatements, bankruptcy) and how far each stock is from yesterday's close. Shows only what is new since the last check, newest first, in New York time, tags each item (earnings, analyst, deal, halt, regulato
@@ -364,36 +314,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 30 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### trader-portfolio  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Optimize portfolio allocation using npx neural-trader mean-variance engine with risk constraints and rebalancing plan
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### trader-portfolio-cg  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Mean-variance portfolio optimization via Conjugate Gradient — 40-60× faster than the legacy Neumann path (ADR-126 Phase 3, ADR-123 Wedge 8)
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### trader-regime  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Detect current market regime using npx neural-trader — bull/bear/ranging/volatile classification with recommended strategy. Use when the user asks about market conditions, wants to pick a strategy for current conditions, or before running a backtest/signal that should be regime-aware.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### trader-risk  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Risk Manager. Checks every trade against your limits and stops anything over them, before it can reach the broker. For a day trade: a stop is required, the loss at the stop must fit your max loss per trade (measured from the higher of the plan's entry and a fresh price), reward:risk must meet your minimum, the day's total risk must fit your daily loss limit, no more than your trades per day, and n
@@ -405,17 +325,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **İnceleme:** otomatik
 - **Not:** Aynı adlı başka skill: `trader-risk@ruvnet` (ruvnet/ruflo) portföy riski hesaplar (VaR, CVaR; `npx neural-trader`). Bu skill işlem başına limit kontrolü yapar (kendi check.py betiğiyle); işler farklı, tercih elle sabitlendi.
 
-### trader-risk@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Assess portfolio risk using npx neural-trader — VaR, CVaR, Sharpe, position sizing, circuit breaker status
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-- **Not:** Aynı adlı başka skill: `trader-risk` (Jakeschincariol/day-trader-skill) işlem başına limit kontrolü yapar. Bu skill portföy riski hesaplar (VaR, CVaR; `npx neural-trader` ister); işler farklı.
-
 ### trader-scanner  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Chart Scanner. Scans thousands of charts for setups: opening-range breakouts, flags, oversold bounces. Builds the list of US-listed common stocks, ordinary shares and ADRs from Nasdaq Trader's symbol directories, runs a pre-market scan of daily closes (20-day closing-high breakout, bull flag, reclaimed the 20-day average, oversold, oversold bounce) and an intraday opening-range breakout scan on 5-
@@ -426,16 +335,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Boyut:** 57 KB (SKILL.md 10.7 KB, yük orta)
 - **İnceleme:** otomatik
 
-### trader-signal  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Generate trading signals using npx neural-trader anomaly detection engine with Z-score scoring and neural prediction
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### trader-timemachine  ·  Jakeschincariol/day-trader-skill @ 3d0f4ef  ·  puan 82 (A)
 
 - **Ne yapar:** Time Machine. Replays every possible outcome of a trade before you risk a dollar: 10,000 simulated sessions plus every past time the setup fired. Takes the plan from trader-exit (entry, stop, target), rebuilds the rest of the day 10,000 times from the stock's own 5-minute bars over the last 60 days, and re-runs the same rule on every past session. Prints the odds of target first, stop first, or ne
@@ -444,16 +343,6 @@ _Finans/muhasebe, hukuk/sözleşme, insan kaynakları_
 - **Geliştirici:** Jakeschincariol (kisi, ★5296, son güncelleme 2026-10-20, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 51 KB (SKILL.md 9.4 KB, yük orta)
-- **İnceleme:** otomatik
-
-### trader-train  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Train neural models (LSTM, Transformer, N-BEATS) on market data using npx neural-trader with confidence intervals
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### triage-nda  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 98 (A)

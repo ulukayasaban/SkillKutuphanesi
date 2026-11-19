@@ -1,17 +1,18 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-19 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-20 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8821 · Arşivdeki skill kaydı: 5913 · Bileşen (komut/agent): 662
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7280 · Arşivdeki skill kaydı: 2849 · Bileşen (komut/agent): 354
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
-| secildi | 5869 | arşivde (ana sürüm) |
-| haric | 2613 | bilinçli hariç (test/örnek/şablon) |
-| ayna-ayni | 182 | birebir kopya (tek kopya yeter) |
-| arac-varyanti | 77 | arşivde (Claude/Codex'e özel sürüm) |
-| ayri-surum | 42 | arşivde (aynı adlı farklı içerik, ayrı skill) |
+| fihristte | 3065 | fihristte (arşive alınmadı; kurulumda kaynaktan alınır) |
+| secildi | 2839 | arşivde (ana sürüm) |
+| haric | 1174 | bilinçli hariç (test/örnek/şablon) |
+| ayna-ayni | 130 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
+| arac-varyanti | 26 | arşivde (Claude/Codex'e özel sürüm) |
+| ayri-surum | 8 | arşivde (aynı adlı farklı içerik, ayrı skill) |
 
 ## Repo bazında
 
@@ -24,7 +25,7 @@
 | AgriciDaniel/claude-seo | 35 | secildi 26, haric 9 |
 | Barty-Bart/motion-graphics | 6 | secildi 6 |
 | CloudAI-X/threejs-skills | 13 | secildi 13 |
-| ComposioHQ/awesome-claude-skills | 864 | secildi 864 |
+| ComposioHQ/awesome-claude-skills | 864 | fihristte 860, secildi 4 |
 | DietrichGebert/ponytail | 12 | ayna-baska-arac 6, secildi 6 |
 | Donchitos/Claude-Code-Game-Studios | 74 | secildi 74 |
 | Fei-Away/Codex-Dream-Skin | 2 | haric 2 |
@@ -48,7 +49,7 @@
 | MADTeacher/mad-agents-skills | 11 | secildi 11 |
 | Nutlope/hallmark | 1 | secildi 1 |
 | OpenMontageInc/OpenMontage | 141 | secildi 81, ayna-ayni 42, haric 13, arac-varyanti 5 |
-| OrcaQubits/agentic-commerce-skills-plugins | 1733 | haric 1425, secildi 275, ayna-ayni 23, ayri-surum 10 |
+| OrcaQubits/agentic-commerce-skills-plugins | 1733 | fihristte 1731, secildi 2 |
 | Orchestra-Research/AI-Research-SKILLs | 98 | secildi 98 |
 | Panniantong/Agent-Reach | 1 | secildi 1 |
 | ParthJadhav/ios-marketing-capture | 1 | secildi 1 |
@@ -88,7 +89,7 @@
 | feitangyuan/onetake | 1 | secildi 1 |
 | finsilabs/awesome-ecommerce-skills | 181 | secildi 181 |
 | freshtechbro/claudedesignskills | 90 | ayna-ayni 66, secildi 23, ayna-baska-arac 1 |
-| github/awesome-copilot | 475 | secildi 472, haric 3 |
+| github/awesome-copilot | 475 | fihristte 474, secildi 1 |
 | google/elephant-goldfish-model | 14 | haric 7, secildi 7 |
 | google/skills | 203 | secildi 197, haric 6 |
 | greensock/gsap-skills | 8 | secildi 8 |
@@ -125,13 +126,11 @@
 | obra/superpowers | 15 | secildi 15 |
 | obsidianmd/obsidian-skills | 6 | secildi 6 |
 | oldred-byte/ec-visual-skill | 1 | secildi 1 |
-| openai/plugins | 536 | secildi 513, ayri-surum 18, haric 5 |
 | pbakaus/impeccable | 26 | ayna-baska-arac 18, haric 4, arac-varyanti 2, ayri-surum 1, secildi 1 |
 | pixijs/pixijs | 26 | secildi 26 |
 | react/react | 14 | secildi 14 |
 | remotion-dev/remotion | 90 | secildi 78, ayna-baska-arac 12 |
 | rshankras/claude-code-apple-skills | 184 | haric 171, secildi 13 |
-| ruvnet/ruflo | 403 | secildi 311, arac-varyanti 51, ayna-ayni 29, ayri-surum 6, haric 6 |
 | sarpstar/cinecode | 1 | secildi 1 |
 | shadcn-labs/snapcn | 17 | haric 10, secildi 7 |
 | teng-lin/notebooklm-py | 1 | secildi 1 |
@@ -146,7 +145,6 @@
 | vudovn/ag-kit | 58 | secildi 58 |
 | wanshuiyin/Auto-claude-code-research-in-sleep | 197 | haric 110, secildi 87 |
 | xianyu110/ecommerce-image-skills | 12 | secildi 10, haric 2 |
-| xjli360/sealeap-amazon-skills | 602 | secildi 602 |
 | xjli360/sealeap-ecommerce-skills | 195 | secildi 195 |
 | yaojingang/yao-meta-skill | 1 | secildi 1 |
 | yerel/kendi | 3 | secildi 3 |
@@ -163,7 +161,7 @@
 
 ## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)
 
-3 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: jacob-bd/gemini-notebook-mcp-cli, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum
+6 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: jacob-bd/gemini-notebook-mcp-cli, openai/plugins, ruvnet/ruflo, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum, xjli360/sealeap-amazon-skills
 
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 
@@ -180,22 +178,18 @@
 - **expo/skills**: `.claude/skills/expo-skill-eval/SKILL.md` (^\.claude/)
 - **anthropics/knowledge-work-plugins**: `partner-built/zoom-plugin/skills/build-zoom-bot/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/build-zoom-meeting-app/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/choose-zoom-approach/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/cobrowse-sdk/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/contact-center/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/contact-center/android/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/contact-center/ios/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/contact-center/web/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/debug-zoom-integration/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/debug-zoom/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/design-mcp-workflow/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/general/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/android/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/electron/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/ios/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/linux/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/macos/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/react-native/SKILL.md` (^partner-built/zoom-plugin/), `partner-built/zoom-plugin/skills/meeting-sdk/unreal/SKILL.md` (^partner-built/zoom-plugin/) … (+37)
 - **Lonsdale201/wp-agent-skills**: `acf/acf-custom-field-type/SKILL.md` (^(?!woocommerce/)), `acf/acf-field-group-development/SKILL.md` (^(?!woocommerce/)), `acf/acf-pro-complex-fields/SKILL.md` (^(?!woocommerce/)), `acf/acf-pro-options-pages/SKILL.md` (^(?!woocommerce/)), `acf/acf-relational-fields/SKILL.md` (^(?!woocommerce/)), `acf/acf-value-storage-frontend/SKILL.md` (^(?!woocommerce/)), `better-data/bd-attribute/SKILL.md` (^(?!woocommerce/)), `better-data/bd-better-route-bridge/SKILL.md` (^(?!woocommerce/)), `better-data/bd-companion-plugin/SKILL.md` (^(?!woocommerce/)), `better-data/bd-data-object/SKILL.md` (^(?!woocommerce/)), `better-data/bd-hydration-coercion/SKILL.md` (^(?!woocommerce/)), `better-data/bd-presenter/SKILL.md` (^(?!woocommerce/)), `better-data/bd-security/SKILL.md` (^(?!woocommerce/)), `better-data/bd-sink/SKILL.md` (^(?!woocommerce/)), `better-data/bd-source-adapter/SKILL.md` (^(?!woocommerce/)), `better-data/bd-validation-rule/SKILL.md` (^(?!woocommerce/)), `better-route/br-atomic-idempotency/SKILL.md` (^(?!woocommerce/)), `better-route/br-audit-enrichment/SKILL.md` (^(?!woocommerce/)), `better-route/br-auth-middleware/SKILL.md` (^(?!woocommerce/)), `better-route/br-cors-public-client/SKILL.md` (^(?!woocommerce/)) … (+195)
-- **OrcaQubits/agentic-commerce-skills-plugins**: `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-agent-card/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-authentication/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-client/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-dev-patterns/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-error-handling/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-framework-integration/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-jsonrpc-transport/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-mcp-bridge/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-messages-parts/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-multi-turn/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-push-notifications/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-server/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-setup/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-streaming/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-task-lifecycle/SKILL.md` (^dist/), `dist/antigravity/a2a-multi-agent/.agent/skills/a2a-testing/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-affiliate-attribution/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-capability-negotiation/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-cart/SKILL.md` (^dist/), `dist/antigravity/acp-agentic-commerce/.agent/skills/acp-checkout-mcp/SKILL.md` (^dist/) … (+1405)
 - **morluto/rea**: `.agents/skills/rea-analysis-optimization/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-changelog-update/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-ci-tests-audit/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-tool-design/SKILL.md` (^\.agents/skills/rea-)
 - **mattpocock/skills**: `skills/in-progress/chief-of-staff/SKILL.md` (^skills/in-progress/), `skills/in-progress/claude-handoff/SKILL.md` (^skills/in-progress/), `skills/in-progress/loop-me/SKILL.md` (^skills/in-progress/), `skills/in-progress/setup-ts-deep-modules/SKILL.md` (^skills/in-progress/), `skills/in-progress/software-factory/SKILL.md` (^skills/in-progress/), `skills/in-progress/writing-beats/SKILL.md` (^skills/in-progress/), `skills/in-progress/writing-fragments/SKILL.md` (^skills/in-progress/), `skills/in-progress/writing-shape/SKILL.md` (^skills/in-progress/)
 - **AgriciDaniel/claude-seo**: `extensions/ahrefs/skills/seo-ahrefs/SKILL.md` (^extensions/), `extensions/banana/skills/seo-image-gen/SKILL.md` (^extensions/), `extensions/bing-webmaster/skills/seo-bing/SKILL.md` (^extensions/), `extensions/dataforseo/skills/seo-dataforseo/SKILL.md` (^extensions/), `extensions/firecrawl/skills/seo-firecrawl/SKILL.md` (^extensions/), `extensions/matomo/skills/seo-matomo/SKILL.md` (^extensions/), `extensions/profound/skills/seo-profound/SKILL.md` (^extensions/), `extensions/seranking/skills/seo-seranking/SKILL.md` (^extensions/), `extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md` (^extensions/)
 - **AgriciDaniel/claude-obsidian**: `tests/fixtures/contracts/valid/skills/example/SKILL.md` ((^|/)tests?/)
 - **google/elephant-goldfish-model**: `distributions/claude/skills/egm-bootstrap/SKILL.md` (^distributions/), `distributions/claude/skills/egm-brainstorm/SKILL.md` (^distributions/), `distributions/claude/skills/egm-draft/SKILL.md` (^distributions/), `distributions/claude/skills/egm-drift-report/SKILL.md` (^distributions/), `distributions/claude/skills/egm-resolve/SKILL.md` (^distributions/), `distributions/claude/skills/egm-review-loop/SKILL.md` (^distributions/), `distributions/claude/skills/egm-review/SKILL.md` (^distributions/)
-- **github/awesome-copilot**: `.github/skills/agentic-workflows/SKILL.md` (^\.github/), `.github/skills/code-review/SKILL.md` (^\.github/), `.github/skills/create-canvas-extension/SKILL.md` (^\.github/)
 - **wanshuiyin/Auto-claude-code-research-in-sleep**: `skills/skills-codex-claude-review/auto-paper-improvement-loop/SKILL.md` (^skills/skills-codex), `skills/skills-codex-claude-review/auto-review-loop/SKILL.md` (^skills/skills-codex), `skills/skills-codex-claude-review/novelty-check/SKILL.md` (^skills/skills-codex), `skills/skills-codex-claude-review/paper-figure/SKILL.md` (^skills/skills-codex), `skills/skills-codex-claude-review/paper-plan/SKILL.md` (^skills/skills-codex), `skills/skills-codex-claude-review/paper-write/SKILL.md` (^skills/skills-codex), `skills/skills-codex-claude-review/research-refine/SKILL.md` (^skills/skills-codex), `skills/skills-codex-claude-review/research-review/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/auto-paper-improvement-loop/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/auto-review-loop/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/grant-proposal/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/idea-creator/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/idea-discovery-robot/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/idea-discovery/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/novelty-check/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/paper-figure/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/paper-plan/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/paper-poster-html/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/paper-slides/SKILL.md` (^skills/skills-codex), `skills/skills-codex-gemini-review/paper-write/SKILL.md` (^skills/skills-codex) … (+90)
 - **JuliusBrussee/caveman**: `plugins/caveman/skills/cavecrew/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-compress/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman-stats/SKILL.md` (^plugins/), `plugins/caveman/skills/caveman/SKILL.md` (^plugins/), `plugins/caveman/skills/megacave/SKILL.md` (^plugins/), `plugins/caveman/skills/ultracave/SKILL.md` (^plugins/)
 - **krillinai/OpenCreator**: `apps/daemon/runtime/opencreator-runtime/SKILL.md` (^apps/), `packages/writing-templates/templates/community/khazix-writer/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/research-paper-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/community/sun-style-writing/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/insight/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/news-analysis/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/story/skill/SKILL.md` (^packages/), `packages/writing-templates/templates/official/tutorial/skill/SKILL.md` (^packages/)
-- **openai/plugins**: `.agents/skills/plugin-creator/SKILL.md` (^\.agents/), `plugins/plugin-eval/fixtures/minimal-plugin/skills/minimal-plugin-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/minimal-skill/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/alpha/SKILL.md` (^plugins/plugin-eval/fixtures/), `plugins/plugin-eval/fixtures/multi-skill-plugin/skills/beta/SKILL.md` (^plugins/plugin-eval/fixtures/)
 - **zarazhangrui/frontend-slides**: `plugins/frontend-slides/skills/frontend-slides/SKILL.md` (^plugins/)
 - **xianyu110/ecommerce-image-skills**: `skills/taobao-detail-long-image/SKILL.md` (^skills/taobao-detail-long-image/), `skills/xiaohongshu-cover/SKILL.md` (^skills/xiaohongshu-cover/)
 - **RevenueCat/play-billing-skills**: `revenuecat/alternative-billing/SKILL.md` (^(?!google-play/)), `revenuecat/backend/SKILL.md` (^(?!google-play/)), `revenuecat/cancellations-pauses-winback/SKILL.md` (^(?!google-play/)), `revenuecat/catalog-management/SKILL.md` (^(?!google-play/)), `revenuecat/configuring-the-sdk/SKILL.md` (^(?!google-play/)), `revenuecat/error-handling/SKILL.md` (^(?!google-play/)), `revenuecat/one-time-products/SKILL.md` (^(?!google-play/)), `revenuecat/payment-recovery/SKILL.md` (^(?!google-play/)), `revenuecat/plan-changes/SKILL.md` (^(?!google-play/)), `revenuecat/price-changes/SKILL.md` (^(?!google-play/)), `revenuecat/purchase-flow/SKILL.md` (^(?!google-play/)), `revenuecat/revenuecat-api-quick-reference/SKILL.md` (^(?!google-play/)), `revenuecat/revenuecat-vs-raw-billing/SKILL.md` (^(?!google-play/)), `revenuecat/security/SKILL.md` (^(?!google-play/)), `revenuecat/setup/SKILL.md` (^(?!google-play/)), `revenuecat/subscription-states/SKILL.md` (^(?!google-play/)), `revenuecat/subscriptions/SKILL.md` (^(?!google-play/)), `revenuecat/testing/SKILL.md` (^(?!google-play/)), `revenuecat/understanding-revenuecat/SKILL.md` (^(?!google-play/)), `revenuecat/webhooks/SKILL.md` (^(?!google-play/))
 - **rshankras/claude-code-apple-skills**: `skills/apple-intelligence/SKILL.md` (^(?!skills/app-store/)), `skills/apple-intelligence/app-intents/SKILL.md` (^(?!skills/app-store/)), `skills/apple-intelligence/foundation-models/SKILL.md` (^(?!skills/app-store/)), `skills/apple-intelligence/visual-intelligence/SKILL.md` (^(?!skills/app-store/)), `skills/core-ml/SKILL.md` (^(?!skills/app-store/)), `skills/design/SKILL.md` (^(?!skills/app-store/)), `skills/design/animation-patterns/SKILL.md` (^(?!skills/app-store/)), `skills/design/design-system/SKILL.md` (^(?!skills/app-store/)), `skills/design/game-feel/SKILL.md` (^(?!skills/app-store/)), `skills/design/liquid-glass/SKILL.md` (^(?!skills/app-store/)), `skills/design/sf-symbols/SKILL.md` (^(?!skills/app-store/)), `skills/design/typography/SKILL.md` (^(?!skills/app-store/)), `skills/design/ui-prototyping/SKILL.md` (^(?!skills/app-store/)), `skills/design/ux-writing/SKILL.md` (^(?!skills/app-store/)), `skills/foundation/SKILL.md` (^(?!skills/app-store/)), `skills/foundation/attributed-string/SKILL.md` (^(?!skills/app-store/)), `skills/generators/SKILL.md` (^(?!skills/app-store/)), `skills/generators/accessibility-generator/SKILL.md` (^(?!skills/app-store/)), `skills/generators/account-deletion/SKILL.md` (^(?!skills/app-store/)), `skills/generators/analytics-setup/SKILL.md` (^(?!skills/app-store/)) … (+151)
-- **ruvnet/ruflo**: `plugins/ruflo-ai-team/directory/skills/coordinate-team-work/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/launch-ai-team/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/manage-team-lifecycle/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/monitor-ai-team/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/remember-team-context/SKILL.md` (^plugins/ruflo-ai-team/directory/), `plugins/ruflo-ai-team/directory/skills/review-team-deliverables/SKILL.md` (^plugins/ruflo-ai-team/directory/)
 - **heygen-com/hyperframes**: `registry/blocks/canopy-part-title/SKILL.md` (^registry/blocks/), `registry/blocks/code-slice-hero/SKILL.md` (^registry/blocks/), `registry/blocks/cuboid-carousel/SKILL.md` (^registry/blocks/), `registry/blocks/frost-sequence-camera-orbit/SKILL.md` (^registry/blocks/), `registry/blocks/glass-shard-title/SKILL.md` (^registry/blocks/), `registry/blocks/orbit-card/SKILL.md` (^registry/blocks/), `registry/blocks/wireframe-portal-title/SKILL.md` (^registry/blocks/)
 - **OpenMontageInc/OpenMontage**: `.agents/skills/hyperframes-animation/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-cli/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-core/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-creative/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-media/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-registry/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/media-use/SKILL.md` (arsivden-cikarildi), `.agents/skills/motion-graphics/SKILL.md` (arsivden-cikarildi), `.agents/skills/music-to-video/SKILL.md` (arsivden-cikarildi), `.agents/skills/remotion-to-hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/website-to-video/SKILL.md` (arsivden-cikarildi), `.claude/skills/web-design-guidelines/SKILL.md` (arsivden-cikarildi)
 - **digitalsamba/claude-code-video-toolkit**: `.claude/skills/remotion-official/SKILL.md` (^\.claude/skills/remotion-official/)

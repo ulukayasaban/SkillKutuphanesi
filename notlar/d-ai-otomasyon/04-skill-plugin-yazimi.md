@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/35**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/27**
 
 ### agent-development  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 100 (A)
 
@@ -64,26 +64,6 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 33 KB (SKILL.md 13.0 KB, yük orta)
-- **İnceleme:** otomatik
-
-### create-mod  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Scaffold a Claude Code mod (a plugin with a function-hooks module) from ruflo's governed template, then validate and test it. Use when the user asks for a mod, a function hook, or wants Claude Code to modify itself.
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### create-plugin  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Scaffold a new Claude Code plugin with proper directory structure, plugin.json, skills, commands, and agents
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 6 KB (SKILL.md 6.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### hook-development  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 96 (A)
@@ -180,16 +160,6 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 23 KB (SKILL.md 5.2 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — HyperFrames Pro özelliği: plan yoksa `reverse start` reddeder, skill yükseltme bağlantısını verir ve billing komutunu kullanıcıya bıraktırır. Ekrandaki kişileri fiyat söylemeden HeyGen ile yeniden çeker (kredi harcar) ve son render bulutta. Disiplinli doğrulama döngüsü (cuts, frame-range, diff) kaliteli. Başlangıç telemetri işareti (skill adı, hesaba bağlı) var; yalnızca hakkı olunan videolar için. Not: kategori otomatik atamayla yazılım-skill-yazımı altında; içeriği video üretimi.
 
-### skill-builder  ·  ruvnet/ruflo @ 98ddf41  ·  puan 97 (A)
-
-- **Ne yapar:** Create new Claude Code Skills with proper YAML frontmatter, progressive disclosure structure, and complete directory organization. Use when you need to build custom skills for specific workflows, generate skill templates, or understand the Claude Skills specification.
-- **Teknoloji:** api-anahtari, git, node, python, react, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Araca özel sürümler mevcut: codex -> kurulumda her araca kendi sürümü konur
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 21 KB (SKILL.md 21.4 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 8
-- **İnceleme:** otomatik
-
 ### skill-creator  ·  anthropics/skills @ ca45fc4  ·  puan 95 (A)
 
 - **Ne yapar:** Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istemleriyle skill'li/skill'siz çalıştırma, değerlendirici/karşılaştırıcı/analizci agent'lar, eval görüntüleyici, benchmark ve varyans analizi, açıklama (tetikleme) optimizasyonu ve paketleme betikleri.
@@ -210,17 +180,6 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Durum:** alternatif
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
-
-### skill-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
-
-- **Ne yapar:** skill-creator'ın eski sürümü (ComposioHQ): skill anatomisi, aşamalı açılım ilkesi ve 6 adımlı süreç (örnekle anlama, içerik planlama, init_skill.py ile iskelet, düzenleme, package_skill.py ile paketleme, yineleme).
-- **Ne zaman:** Ölçüm/eval istemeden, basit iskelet + paketleme akışı yeterliyse. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/skill-creator güncel ve eval destekli.
-- **Teknoloji:** python, markdown · **Paketler:** python3
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
-- **Boyut:** 38 KB (SKILL.md 11.3 KB, yük orta)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Eski sürüm; freshtechbro kopyasıyla neredeyse aynı (yalnızca package_skill.py farkı).
 
 ### skill-creator@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 53 (C)
 
@@ -265,17 +224,6 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 34 KB (SKILL.md 22.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İçeriğin çoğu eski skill-creator metninden türetilmiş (22 KB); eklentiye özgü kısım ince. writing-skills ve skill-creator varken ek değeri düşük.
 
-### skill-share  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** Yeni skill iskeleti oluşturur, doğrular, zip paketler ve Rube (Composio) MCP üzerinden Slack kanalına paylaşır.
-- **Ne zaman:** Ekipte skill paylaşımını Slack bildirimiyle otomatikleştirmek (Composio Rube bağlıysa). · **Ne zaman değil:** Rube/Composio bağlantısı yoksa; skill yazım kalitesi için skill-creator. Betik içermiyor — paketleme adımları agent'ın yorumuna kalıyor.
-- **Teknoloji:** mcp, slack, composio · **Paketler:** Rube MCP (Composio)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** skill-yazimi → alternatif
-- **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Asıl değer Slack paylaşımı; skill oluşturma kısmı skill-creator'ın zayıf özeti.
-
 ### skillify  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
 - **Ne yapar:** Tekrar eden çok adımlı iş akışlarını yeniden kullanılabilir SKILL.md'ye dönüştürür: kalıbı tanımla, şablondan SKILL.md üret, yerleştir, doğrula; adlandırma kuralları ve kalite kontrol listesi.
@@ -297,27 +245,6 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Durum:** tercih · **Örtüşme:** hyperframes-cekirdek → tamamlayıcı
 - **Boyut:** 16 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.
 - **İnceleme:** incelendi · kalite 4/5 — Şablonlar HyperFrames Pro özelliği (Free planda çekilmez; skill kullanıcıdan billing komutunu kendisinin çalıştırmasını ister). Şablon çekimi kredi harcamaz; üretilen medya media-use kredi kuralına tabi. Yaratıcılara teşekkür notu var; kişi yüzü/sesi/logosu kullanılmaması kuralı net. Başlangıç telemetri işareti (hesaba bağlı) var.
-
-### template-skill  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 55 (C)
-
-- **Ne yapar:** Boş skill şablonu: yalnızca name/description yer tutucuları ve 'talimatları buraya yaz' satırı.
-- **Ne zaman:** Yok — yeni skill için skill-creator'ın init/şablonları daha iyi. · **Ne zaman değil:** Hiçbir projeye kurma; içerik yok.
-- **Teknoloji:** markdown
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** skill-yazimi → alternatif
-- **Boyut:** 0 KB (SKILL.md 0.1 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 1/5 — Karar: SADECE ARŞİV. 140 baytlık boş şablon.
-
-### validate-plugin  ·  ruvnet/ruflo @ 98ddf41  ·  puan 96 (A)
-
-- **Ne yapar:** Validate a Claude Code plugin structure, frontmatter, and MCP tool references
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
 
 ### writing-hookify-rules  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 96 (A)
 
@@ -350,16 +277,6 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Durum:** tercih · **Örtüşme:** skill-yazimi → tamamlayıcı · **Roller:** skill-gelistirici
 - **Boyut:** 107 KB (SKILL.md 16.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: referanslar references/ altına taşındı; description kuralı (sadece 'ne zaman', iş akışını özetleme) daha net anlatılıyor; SKILL.md 300 satır kısaldı. Agent Skills standardıyla uyumlu.
-
-### writing-skills@openai  ·  openai/plugins @ b767f8f  ·  puan 69 (B)
-
-- **Ne yapar:** Use when creating new skills, editing existing skills, or verifying skills work before deployment
-- **Teknoloji:** api-anahtari, git, python, react, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
-- **Boyut:** 105 KB (SKILL.md 25.7 KB, yük buyuk)
-- **İnceleme:** otomatik
 
 ### yao-meta-skill  ·  yaojingang/yao-meta-skill @ f5d8f68  ·  puan 76 (B)
 

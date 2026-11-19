@@ -31,9 +31,9 @@
 | [tt-a1i/archify](https://github.com/tt-a1i/archify) | tt-a1i | kisi |  | 93462 | 92 | 2026-11-03 | Apache-2.0 | 5 |
 | [666ghj/MiroFish](https://github.com/666ghj/MiroFish) | 666ghj | kisi |  | 84080 | 19 | 2026-10-16 | AGPL-3.0 | 0 |
 | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | heygen-com | kurum | ✅ | 82940 | 137 | 2026-11-12 | Apache-2.0 | 15 |
-| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | ruvnet | kisi |  | 81282 | 95 | 2026-11-09 | MIT | 317 |
+| [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | ruvnet | kisi |  | 81282 | 95 | 2026-11-09 | MIT | 0 |
 | [OpenMontageInc/OpenMontage](https://github.com/OpenMontageInc/OpenMontage) | OpenMontageInc | kurum |  | 79720 | 129 | 2026-11-09 | AGPL-3.0 | 73 |
-| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | ComposioHQ | kurum | ✅ | 78745 | 29 | 2026-09-18 | yok | 864 |
+| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | ComposioHQ | kurum | ✅ | 78745 | 29 | 2026-09-18 | yok | 4 |
 | [remotion-dev/remotion](https://github.com/remotion-dev/remotion) | remotion-dev | kurum | ✅ | 70754 | 490 | 2026-11-04 | NOASSERTION | 78 |
 | [FFmpeg/FFmpeg](https://github.com/FFmpeg/FFmpeg) | FFmpeg | kurum | ✅ | 66506 | 2807 | 2026-11-04 | NOASSERTION | 0 |
 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | cathrynlavery | kisi |  | 65003 | 66 | 2026-11-03 | MIT | 1 |
@@ -48,7 +48,7 @@
 | [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | Nutlope | kisi |  | 47913 | 10 | 2026-11-04 | MIT | 1 |
 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | anthropics | kurum | ✅ | 46120 | 42 | 2026-11-04 | Apache-2.0 | 24 |
 | [ManimCommunity/manim](https://github.com/ManimCommunity/manim) | ManimCommunity | kurum |  | 42255 | 538 | 2026-11-04 | MIT | 0 |
-| [github/awesome-copilot](https://github.com/github/awesome-copilot) | github | kurum |  | 40799 | 578 | 2026-11-04 | MIT | 472 |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | github | kurum |  | 40799 | 578 | 2026-11-04 | MIT | 1 |
 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) | Donchitos | kisi |  | 35403 | 1 | 2026-10-19 | MIT | 74 |
 | [motiondivision/motion](https://github.com/motiondivision/motion) | motiondivision | kurum | ✅ | 34907 | 147 | 2026-11-04 | MIT | 2 |
 | [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | anthropics | kurum | ✅ | 34734 | 32 | 2026-11-04 | Apache-2.0 | 195 |
@@ -96,7 +96,7 @@
 | [vudovn/ag-kit](https://github.com/vudovn/ag-kit) | vudovn | kisi |  | 8207 | 10 | 2026-10-18 | MIT | 58 |
 | [barvian/number-flow](https://github.com/barvian/number-flow) | barvian | kisi |  | 7772 | 7 | 2026-09-20 | MIT | 0 |
 | [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | dequelabs | kurum | ✅ | 7755 | 272 | 2026-11-04 | MPL-2.0 | 0 |
-| [openai/plugins](https://github.com/openai/plugins) | openai | kurum | ✅ | 7752 | 62 | 2026-11-03 | yok | 531 |
+| [openai/plugins](https://github.com/openai/plugins) | openai | kurum | ✅ | 7752 | 62 | 2026-11-03 | yok | 0 |
 | [kajisho5/ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill) | kajisho5 | kisi |  | 7677 | 11 | 2026-11-16 | MIT | 1 |
 | [Jakeschincariol/replica-skill](https://github.com/Jakeschincariol/replica-skill) | Jakeschincariol | kisi |  | 7640 | 1 | 2026-10-03 | MIT | 11 |
 | [ai/size-limit](https://github.com/ai/size-limit) | ai | kisi |  | 7044 | 103 | 2026-11-02 | MIT | 0 |
@@ -153,7 +153,7 @@
 | [AbubakrChan/product-launch-motion](https://github.com/AbubakrChan/product-launch-motion) | AbubakrChan | kisi |  | 487 | 2 | 2026-10-21 | MIT | 1 |
 | [twostraws/SwiftData-Agent-Skill](https://github.com/twostraws/SwiftData-Agent-Skill) | twostraws | kisi |  | 463 | 2 | 2026-10-19 | MIT | 1 |
 | [hamen/compose_skill](https://github.com/hamen/compose_skill) | hamen | kisi |  | 378 | 3 | 2026-07-15 | MIT | 2 |
-| [xjli360/sealeap-amazon-skills](https://github.com/xjli360/sealeap-amazon-skills) | xjli360 | kisi |  | 369 | 1 | 2026-10-16 | MIT | 602 |
+| [xjli360/sealeap-amazon-skills](https://github.com/xjli360/sealeap-amazon-skills) | xjli360 | kisi |  | 369 | 1 | 2026-10-16 | MIT | 0 |
 | [dpconde/claude-android-skill](https://github.com/dpconde/claude-android-skill) | dpconde | kisi |  | 352 | 1 | 2025-12-07 | MIT | 1 |
 | [heygen-com/hyperframes-community-skills](https://github.com/heygen-com/hyperframes-community-skills) | heygen-com | kurum | ✅ | 280 | 3 | 2026-11-17 | Apache-2.0 | 7 |
 | [ParthJadhav/ios-marketing-capture](https://github.com/ParthJadhav/ios-marketing-capture) | ParthJadhav | kisi |  | 265 | 1 | 2026-09-05 | MIT | 1 |
@@ -176,7 +176,7 @@
 | [RevenueCat/play-billing-skills](https://github.com/RevenueCat/play-billing-skills) | RevenueCat | kurum |  | 60 | 1 | 2026-11-04 | Apache-2.0 | 25 |
 | [moiz-za/etsy-seller-seo-system](https://github.com/moiz-za/etsy-seller-seo-system) | moiz-za | kisi |  | 47 | 2 | 2026-10-23 | MIT | 1 |
 | [jazzychad/ios-code-audit](https://github.com/jazzychad/ios-code-audit) | jazzychad | kisi |  | 41 | 1 | 2026-05-21 | MIT | 1 |
-| [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins) | OrcaQubits | kurum |  | 40 | 3 | 2026-09-14 | MIT | 285 |
+| [OrcaQubits/agentic-commerce-skills-plugins](https://github.com/OrcaQubits/agentic-commerce-skills-plugins) | OrcaQubits | kurum |  | 40 | 3 | 2026-09-14 | MIT | 2 |
 | [Viniciuscarvalho/swift-code-reviewer-skill](https://github.com/Viniciuscarvalho/swift-code-reviewer-skill) | Viniciuscarvalho | kisi |  | 39 | 5 | 2026-05-13 | MIT | 6 |
 | [lemomo-ai/codex-radar](https://github.com/lemomo-ai/codex-radar) | lemomo-ai | kisi |  | 39 | 1 | 2026-09-20 | NOASSERTION | 1 |
 | [wj-sidiss/etsy-otomasyon-full-full-surum](https://github.com/wj-sidiss/etsy-otomasyon-full-full-surum) | wj-sidiss | kisi |  | 39 | 1 | 2026-11-10 | MIT | 0 |

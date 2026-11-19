@@ -2,7 +2,7 @@
 
 _Claude API, MCP sunucusu, model geçişi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/45**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **7/37**
 
 ### academy-guide  ·  anthropics/skills @ ca45fc4  ·  puan 89 (A)
 
@@ -205,16 +205,6 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 18 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### chat-format  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Format chat messages in a local model's template (llama3, mistral, chatml, phi, gemma, or a model id) and route queries over a small WASM HNSW pattern index (about 11 patterns). Use when preparing prompts for local runtimes.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### claude-api  ·  anthropics/skills @ ca45fc4  ·  puan 91 (A)
 
 - **Ne yapar:** Claude API / Anthropic SDK için kapsamlı ve güncel başvuru: model kimlikleri ve fiyatlar, adaptive thinking, streaming, araç kullanımı, prompt caching, compaction, MCP, Managed Agents, Files/Skills API. Dil algılayıp (Python, TS, Go, Java, C#, PHP, Ruby, cURL) ilgili klasörü okutur; migrate, prompt-audit, upgrade, cost-optimize, build-eval, hillclimb alt komutları içerir.
@@ -247,37 +237,6 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Durum:** tercih · **Örtüşme:** composio-baglanti → birincil · **Roller:** ai-entegrasyon
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil, Composio grubunda). Kurulum ve kod örnekleri kısa ve çalışır; pazarlama dili yoğun. Araçtan bağımsız (SDK) olduğu için connect-apps'e tercih edildi.
-
-### connect-apps  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 60 (C)
-
-- **Ne yapar:** Claude Code'a `/plugin install composio-toolrouter` ile Composio Tool Router eklentisini kurup 1000+ uygulamada (Gmail, Slack, GitHub, Notion) eylem yaptırmayı anlatan hızlı başlangıç.
-- **Ne zaman:** Claude Code kullanıcısının kendi oturumundan harici uygulamalara eylem yaptırması. · **Ne zaman değil:** Codex'te plugin komutları yok: Composio'nun MCP sunucusunu `~/.codex/config.toml` içine `[mcp_servers.composio]` olarak ekle ya da SDK tabanlı connect skill'ini kullan. Uygulama koduna entegrasyon için connect.
-- **Teknoloji:** composio, claude-code, mcp · **Paketler:** composio-toolrouter Claude Code eklentisi, Composio API anahtarı
-- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** composio-baglanti → alternatif
-- **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF. Çok kısa bir kurulum tarifi; skill'den çok eklenti reklamı. Claude Code eklenti sistemine bağlı.
-
-### deepseek-chat  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** One-shot chat completion against DeepSeek's `deepseek-chat` model. Use for non-reasoning tasks such as summarization, extraction or quick classification. Reads DEEPSEEK_API_KEY; returns status:degraded when the key is missing or the API is unreachable.
-- **Teknoloji:** api-anahtari, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
-- **İnceleme:** otomatik
-
-### deepseek-reason  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Reasoning completion against DeepSeek's `deepseek-reasoner` (R1), returning the chain of thought apart from the answer. Use when a task needs step-by-step reasoning from DeepSeek. Reads DEEPSEEK_API_KEY; returns status:degraded when unset or unreachable.
-- **Teknoloji:** api-anahtari, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
-- **İnceleme:** otomatik
 
 ### developing-genkit-dart@google  ·  google/skills @ 3c4dda4  ·  puan 98 (A)
 
@@ -370,17 +329,6 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 6 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### langsmith-fetch  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
-
-- **Ne yapar:** LangChain/LangGraph agent'larını hata ayıklamak için langsmith-fetch CLI ile LangSmith'ten çalışma izlerini (trace) çeker; son etkinlik, belirli iz derin incelemesi, hata tespiti, bellek işlemleri, araç çağrıları, süre ve token kullanımını raporlar.
-- **Ne zaman:** LangSmith izlemesi açık LangChain/LangGraph agent projelerinde hata ayıklama ve performans analizi. · **Ne zaman değil:** LangChain kullanmayan projelerde (Claude Agent SDK, ham API); LangSmith hesabı/API anahtarı yoksa.
-- **Teknoloji:** langchain, langgraph, langsmith, python · **Paketler:** langsmith-fetch (pip), LANGSMITH_API_KEY, LANGSMITH_PROJECT
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 11 KB (SKILL.md 10.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (dar). İş akışları ve komutlar somut; yalnızca LangSmith ekosistemine yarar. Lisans belirtilmemiş.
-
 ### langsmith-observability  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 85 (A)
 
 - **Ne yapar:** LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.
@@ -389,16 +337,6 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Geliştirici:** Orchestra-Research (kurum, ★14269, son güncelleme 2026-10-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 32 KB (SKILL.md 9.5 KB, yük orta)
-- **İnceleme:** otomatik
-
-### llm-config  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Configure RuVLLM local inference helpers: generate a config, and create and adapt in-process MicroLoRA and SONA instances from quality signals. Use when you need local, air-gapped inference tooling, not for fine-tuning hosted models.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
 - **İnceleme:** otomatik
 
 ### mcp-builder  ·  anthropics/skills @ ca45fc4  ·  puan 97 (A)
@@ -411,17 +349,6 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Durum:** tercih · **Örtüşme:** mcp-sunucu-gelistirme → birincil · **Roller:** ai-entegrasyon
 - **Boyut:** 155 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Anthropic resmi, ComposioHQ kopyasından daha güncel ve kısa; dil rehberleri ve eval betiği tek pakette. vudovn sürümü spec/güvenlik tarafını tamamlıyor; birincil bu çünkü uçtan uca iş akışı ve değerlendirme aracı içeriyor.
-
-### mcp-builder@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
-
-- **Ne yapar:** Anthropic mcp-builder'ın ComposioHQ'daki eski sürümü: 'iş akışı odaklı araç tasarımı' ilkeleri, ayrıntılı uygulama planı, dil rehberleri ve değerlendirme adımları.
-- **Ne zaman:** Eski sürümdeki daha ayrıntılı 'ajan merkezli tasarım ilkeleri' bölümü özellikle istenirse. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/mcp-builder güncel ve daha az bağlam tüketir.
-- **Teknoloji:** mcp, python, typescript · **Paketler:** mcp / fastmcp (pip) veya @modelcontextprotocol/sdk (npm)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** mcp-sunucu-gelistirme → alternatif
-- **Boyut:** 144 KB (SKILL.md 13.2 KB, yük orta)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Güncel sürümün eski kopyası (350 satır fark); tasarım ilkeleri bölümü daha uzun ama 'iş akışı araçları' önerisi güncelde dengelenmiş.
 
 ### mcp-builder@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 82 (A)
 
@@ -454,13 +381,3 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Durum:** alternatif · **Örtüşme:** claude-plugin-mcp → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 46 KB (SKILL.md 12.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Anthropic resmi plugin-dev setinin parçası; örnek ve referans dosyaları zengin. Claude Code eklentisine özgü; Codex için yukarıdaki uyarlama gerekir.
-
-### ruvllm-runtime  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Tell apart and check the RuVLLM packages — the WASM add-on behind ruvllm_* tools, the @ruvector/ruvllm 4.1 native runtime and the GPU-loop harness. Use when ruvllm_status shows a backend unavailable or an install resolved the broken 4.0.x.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
