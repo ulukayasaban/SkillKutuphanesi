@@ -159,21 +159,6 @@
           "bulgu_hash": "557cb067cb156edfa8328d497dcf0ed2e0878f4bd5228f65e36e804166d9ac16"
         }
       ]
-    },
-    "github/awesome-copilot::skills/cli-mastery": {
-      "ad": "cli-mastery",
-      "kayitlar": [
-        {
-          "tur": "genele-kopyalar",
-          "dosyalar": [
-            "references/module-5-skills.md"
-          ],
-          "karar": "ornek-metin",
-          "neden": "Copilot CLI eğitmeni: references/module-5-skills.md dersinde 'mkdir -p ~/.copilot/skills/my-skill/' komutu öğrenciye özel skill oluşturmayı anlatan örnek adım olarak geçiyor; skill bu klasöre kendisi yazmıyor (my-skill örnek addır).",
-          "tarih": "2026-11-11",
-          "bulgu_hash": "08761fb07b7d90e915e70efdfc4ae5ae48cf7205eb4d1b3266ca7880c0c663b3"
-        }
-      ]
     }
   }
 }

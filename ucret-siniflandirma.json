@@ -1142,66 +1142,6 @@
       "kismen",
       "Caveman Cloud gateway'e bağlar (CAVE_API_KEY); BYOK ile mevcut LLM anahtarı kullanılır, gateway'in ücretsiz katmanı var; diğer caveman skilleri anahtarsız"
     ],
-    "arize-ai-provider-integration": [
-      "kismen",
-      "Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli"
-    ],
-    "arize-annotation": [
-      "kismen",
-      "Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli"
-    ],
-    "arize-evaluator": [
-      "kismen",
-      "Değerlendirme için LLM API anahtarı (OpenAI/Anthropic) gerekir; Phoenix kendisi ücretsiz"
-    ],
-    "arize-experiment": [
-      "kismen",
-      "Deney için LLM API anahtarı gerekir; Phoenix kendisi ücretsiz"
-    ],
-    "arize-instrumentation": [
-      "kismen",
-      "Phoenix yerel (ücretsiz) ya da Arize AX (ücretsiz katman)"
-    ],
-    "arize-prompt-optimization": [
-      "kismen",
-      "LLM API anahtarı gerekir; Phoenix kendisi ücretsiz"
-    ],
-    "phoenix-cli": [
-      "ucretsiz",
-      "Phoenix açık kaynak, yerelde çalışır; API anahtarı sadece kimlik doğrulama açıksa"
-    ],
-    "gtm-product-led-growth": [
-      "ucretsiz",
-      "'paid tier' pazarlama kavramı; skill'in kendisi hiçbir servis istemez"
-    ],
-    "latchshot-page-capture": [
-      "kismen",
-      "Latchshot üçüncü taraf servisi; anahtarsız JPEG demo yolu var, tam kullanım API anahtarı/kota ister"
-    ],
-    "make-blog-post": [
-      "ucretsiz",
-      "'API key' sadece 'sır yazma' kuralında geçiyor; servis gerekmez"
-    ],
-    "mcp-security-audit": [
-      "ucretsiz",
-      "'MY_API_KEY' örnek yer tutucu; servis gerekmez"
-    ],
-    "namecheap": [
-      "kismen",
-      "Namecheap hesabı ve API erişimi gerekir (hesap ücretsiz, API için bakiye/alan adı şartı); alan adları ücretli"
-    ],
-    "nano-banana-pro-openrouter": [
-      "ucretli",
-      "Tek işi OpenRouter üzerinden Gemini 3 Pro Image çağırmak; model ücretli, kredisiz anahtar çalışmaz"
-    ],
-    "pinecone-rag": [
-      "kismen",
-      "Pinecone ücretsiz (starter) katmanı var"
-    ],
-    "resemble-detect": [
-      "kismen",
-      "Resemble AI API anahtarı gerekir; ücretsiz plan sınırlı kota ile var"
-    ],
     "krillinai-cli": [
       "kismen",
       "TTS/LLM için MiniMax gibi sağlayıcı anahtarı gerekebilir; yerel yollar (whisper) var"

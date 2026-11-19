@@ -1386,7 +1386,12 @@
       "haric": [
         "^\\.github/"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GitHub'ın resmî Copilot topluluk kataloğu (41k★, 475 skill; kalite karışık) → öncelik 6. .github/skills repo-içi 3 skill hariç."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GitHub'ın resmî Copilot topluluk kataloğu (41k★, 475 skill; kalite karışık) → öncelik 6. .github/skills repo-içi 3 skill hariç.",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "arsivde_tut": [
+        "skills/caption-qa"
+      ]
     },
     {
       "repo": "Vincentwei1021/video-shotcraft",
