@@ -1263,7 +1263,9 @@
       "repo": "xjli360/sealeap-amazon-skills",
       "tip": "T1",
       "oncelik": 4,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Amazon araştırma, listeleme, reklam, stok. DİL: 602 skillin 485'inin açıklaması Çince (Amazon/sınır ötesi satıcı bilgisi, Çin platformlarındaki videolardan derlenmiş); 117'si İngilizce. Klasör adları (douyin/bilibili/weixin…) bilginin KAYNAĞINI gösterir, konusunu değil."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Amazon araştırma, listeleme, reklam, stok. DİL: 602 skillin 485'inin açıklaması Çince (Amazon/sınır ötesi satıcı bilgisi, Çin platformlarındaki videolardan derlenmiş); 117'si İngilizce. Klasör adları (douyin/bilibili/weixin…) bilginin KAYNAĞINI gösterir, konusunu değil.",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist"
     },
     {
       "repo": "40RTY-ai/shopify-admin-skills",
