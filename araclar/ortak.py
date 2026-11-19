@@ -194,10 +194,12 @@ GURULTU = re.compile(r"(^|/)(\.DS_Store|__pycache__|\.git|Thumbs\.db|\.ipynb_che
 ICERIK_GURULTU = re.compile(GURULTU.pattern + r"|(^|/)node_modules(/|$)")
 
 
-def onemli_dosyalar(klasor: Path):
-    """İçerik karşılaştırmasına giren dosyalar: KAYNAK.md ve işletim sistemi/çalışma çöpleri, node_modules hariç."""
+def onemli_dosyalar(klasor: Path, haric_yollar=()):
+    """İçerik karşılaştırmasına giren dosyalar: KAYNAK.md ve işletim sistemi/çalışma çöpleri, node_modules ve `haric_yollar` hariç."""
+    haric_set = set(haric_yollar or ())
     return sorted(p for p in klasor.rglob("*") if p.is_file() and p.name != "KAYNAK.md"
-                  and not ICERIK_GURULTU.search(str(p.relative_to(klasor))))
+                  and not ICERIK_GURULTU.search(str(p.relative_to(klasor)))
+                  and (not haric_set or p.relative_to(klasor).as_posix() not in haric_set))
 
 
 # ------------------------------------------------------------------ yerel (GitHub'sız) kaynak: kendi/ (T7) ve site/ (T8)
@@ -206,11 +208,13 @@ def onemli_dosyalar(klasor: Path):
 YEREL_GIZLI_AD = re.compile(r"(^|/)(\.env(\..*)?|auth\.json|token\.json|credentials\.json|[^/]*\.(pem|key|p12|pfx))$", re.I)
 
 
-def yerel_agac(kok: Path, haric=()):
-    """kok altındaki dosyalar: (liste, atlanan_gizli). Bağlar izlenmez; GURULTU/node_modules ve `haric` desenleri (SKILL.md hariç)
-    ile gizli görünen dosya adları (.env, *.pem, *.key, auth/token/credentials.json) atlanır. Ağ kullanmaz."""
+def yerel_agac(kok: Path, haric=(), tam_haric=()):
+    """kok altındaki dosyalar: (liste, atlanan_gizli). Bağlar izlenmez; GURULTU/node_modules ve `haric` desenleri (SKILL.md hariç),
+    `tam_haric` tam göreli yol kümesi (SKILL.md hariç) ile gizli görünen dosya adları (.env, *.pem, *.key, auth/token/credentials.json)
+    atlanır. Ağ kullanmaz."""
     sonuc, gizli = [], []
     kok = Path(kok)
+    tam_set = set(tam_haric or ())
     for yol, klasorler, dosyalar in os.walk(kok, followlinks=False):
         klasorler[:] = sorted(d for d in klasorler
                               if not os.path.islink(os.path.join(yol, d)) and not ICERIK_GURULTU.search(d))
@@ -222,11 +226,56 @@ def yerel_agac(kok: Path, haric=()):
             if YEREL_GIZLI_AD.search(rel):
                 gizli.append(rel)
                 continue
-            if ad.lower() != "skill.md" and any(re.search(d, rel) for d in haric):
+            if ad.lower() != "skill.md" and (rel in tam_set or any(re.search(d, rel) for d in haric)):
                 continue
             veri = tam.read_bytes()
             sonuc.append({"path": rel, "type": "blob", "sha": git_blob_hash(veri), "size": len(veri)})
     return sorted(sonuc, key=lambda e: e["path"]), gizli
+
+
+def medya_haric_yol_gecerli(yol) -> bool:
+    """medya_haric listesindeki tek bir dosya yolu geçerli mi?
+    Boş olmayan metin olmalı; mutlak yol ('/' ya da '\\' ile başlayan, Windows sürücüsü), ters bölü ('\\'),
+    NUL, boş parça ('//', sonda '/') veya '.' / '..' yol geçişi içeremez."""
+    if not isinstance(yol, str) or not yol or yol != yol.strip():
+        return False
+    if "\0" in yol or "\\" in yol or yol.startswith(("/", "~")) or re.match(r"^[A-Za-z]:", yol):
+        return False
+    parcalar = yol.split("/")
+    return all(p and p not in (".", "..") for p in parcalar)
+
+
+def medya_haric_kumesi(kayit) -> set:
+    """Kaynak kaydındaki `medya_haric` alanından (düz liste ya da {yol: neden} sözlüğü) geçerli göreli yolların kümesi."""
+    mh = (kayit or {}).get("medya_haric")
+    if isinstance(mh, dict):
+        adaylar = mh.keys()
+    elif isinstance(mh, list):
+        adaylar = mh
+    else:
+        return set()
+    return {y for y in adaylar if medya_haric_yol_gecerli(y)}
+
+
+def medya_haric_skill_kumesi(kayit, kaynak_yol: str) -> set:
+    """Bir skill klasörü (`kaynak_yol`, kök skill için '') içindeki `medya_haric` göreli dosya yolları kümesi.
+    Hem repo köküne göre (`<kaynak_yol>/<dosya>`) hem doğrudan skill klasörüne göre (`<dosya>`) yazılmış yolları eşler."""
+    tum = medya_haric_kumesi(kayit)
+    if not tum:
+        return set()
+    d = (kaynak_yol or "").strip("/")
+    if not d:
+        return set(tum)
+    onek = d + "/"
+    sonuc = set()
+    for y in tum:
+        if y.startswith(onek):
+            alt = y[len(onek):]
+            if alt:
+                sonuc.add(alt)
+        else:
+            sonuc.add(y)
+    return sonuc
 
 
 def yerel_commit(agac) -> str:
@@ -315,10 +364,10 @@ def site_gelistirici(gel, kayit):
     return yeni
 
 
-def klasor_hash(klasor: Path) -> str:
+def klasor_hash(klasor: Path, haric_yollar=()) -> str:
     """Klasör içeriğinin kimliği: (göreli yol, git blob hash) listesinin sha256'sı."""
     h = hashlib.sha256()
-    for f in onemli_dosyalar(klasor):
+    for f in onemli_dosyalar(klasor, haric_yollar):
         h.update(str(f.relative_to(klasor)).encode())
         h.update(git_blob_hash(f.read_bytes()).encode())
     return h.hexdigest()

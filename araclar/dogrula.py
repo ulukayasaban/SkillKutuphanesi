@@ -20,7 +20,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, frontmatter, frontmatter_onar,  # noqa: E402
-                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, repo_guncel, yol_istisna_denetimi)
+                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, medya_haric_skill_kumesi,
+                   medya_haric_yol_gecerli, repo_guncel, yol_istisna_denetimi)
 
 
 def github_muaf_repolar(tum_listeler, korunan_slug, konu_durum):
@@ -90,9 +91,9 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
 # metninden okunur, --help'e güvenilmez (birçok araçta argparse yok, --help aracı çalıştırır).
 KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "KAYIP", "EMEKLI")  # T7 = kendi/, T8 = site/ (yerel, GitHub'sız)
 KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "skill_bagimlilik", "kimlik",
-                      "dosya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans",
-                      "tur", "bolum", "tur_gerekce", "ne_ister", "ne_indirir", "tek_basina", "kurulmayan_parcalar", "son_kontrol",
-                      "arac_uyumu", "boyut", "arsivde_tut")
+                      "dosya_haric", "medya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay",
+                      "kayip_tarihi", "yerel", "lisans", "tur", "bolum", "tur_gerekce", "ne_ister", "ne_indirir", "tek_basina",
+                      "kurulmayan_parcalar", "son_kontrol", "arac_uyumu", "boyut", "arsivde_tut")
 SITE_TAKIP_ARACI = "site-takip.py"
 ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
 GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
@@ -403,6 +404,24 @@ def kaynak_tur_hatalari(k):
             h.append(f"kaynaklar.json: {repo} arsivde_tut metin listesi değil")
         if bolum != "fihrist":
             h.append(f"kaynaklar.json: {repo} arsivde_tut yalnız bolum 'fihrist' ile geçerli (bolum: {bolum!r})")
+    if "medya_haric" in k:
+        mh = k["medya_haric"]
+        if isinstance(mh, dict):
+            yollar = list(mh.keys())
+            if not all(isinstance(x, str) and isinstance(y, str) for x, y in mh.items()):
+                h.append(f"kaynaklar.json: {repo} medya_haric {{yol: neden}} ya da metin listesi biçiminde değil")
+                yollar = [x for x in yollar if isinstance(x, str)]
+        elif isinstance(mh, list):
+            yollar = list(mh)
+            if not all(isinstance(x, str) for x in mh):
+                h.append(f"kaynaklar.json: {repo} medya_haric {{yol: neden}} ya da metin listesi biçiminde değil")
+                yollar = [x for x in yollar if isinstance(x, str)]
+        else:
+            h.append(f"kaynaklar.json: {repo} medya_haric {{yol: neden}} ya da metin listesi biçiminde değil")
+            yollar = []
+        for y in yollar:
+            if not medya_haric_yol_gecerli(y):
+                h.append(f"kaynaklar.json: {repo} medya_haric geçersiz yol (yol geçişi '..' ya da mutlak yol yasak): {y!r}")
     return h
 
 
@@ -436,6 +455,55 @@ def _e6_kaynaklar(kok, h, u):
             u.append(f"kaynaklar.json: {repo} bilinmeyen anahtar: {', '.join(yabanci)}")
         h.extend(kaynak_tur_hatalari(k))
     _skill_bagimlilik(kok, kayitlar, u)
+    _medya_haric(kok, kayitlar, u)
+
+
+def _medya_haric(kok, kayitlar, u):
+    """'medya_haric': arşive geri gelmeyecek medya dışlama listesi.
+    Yol o kaynağın bilinen bir skil klasörüne karşılık gelmiyorsa (eğer repo kökünde olmayan birden çok skil varsa) ya da
+    listede olup arşivde hâlâ duran dosya varsa UYARI verir."""
+    ozel = [k for k in kayitlar if isinstance(k, dict) and isinstance(k.get("repo"), str) and "medya_haric" in k]
+    if not ozel:
+        return
+    kok = Path(kok)
+    reg, _ = _json_kayit(kok, "registry.json", [])
+    if reg is None or not isinstance(reg, dict):
+        return
+    repo_skiller = {}
+    for s in reg.get("skiller", []):
+        if isinstance(s, dict) and isinstance(s.get("repo"), str):
+            repo_skiller.setdefault(s["repo"], []).append(s)
+    for k in ozel:
+        repo = k["repo"]
+        mh = k["medya_haric"]
+        if isinstance(mh, dict):
+            yollar = [x for x in mh if medya_haric_yol_gecerli(x)]
+        elif isinstance(mh, list):
+            yollar = [x for x in mh if medya_haric_yol_gecerli(x)]
+        else:
+            continue
+        sk_list = repo_skiller.get(repo, [])
+        if not sk_list:
+            continue
+        kaynak_yollari = [str(s.get("kaynak_yol") or "").strip("/") for s in sk_list]
+        for y in yollar:
+            # Birden çok skil varsa ve hiçbir skil kökte ('') değilse, yol ya bir skilin kaynak_yol'u ile başlamalı ya da doğrudan göreli olarak en az bir skilin klasör düzenine uymalı
+            if any(ky for ky in kaynak_yollari) and "" not in kaynak_yollari:
+                if not any(y.startswith(ky + "/") for ky in kaynak_yollari if ky):
+                    # repo köküne göre yazılmış ama bilinen hiçbir skil klasörüyle eşleşmiyor
+                    if len(kaynak_yollari) > 1 or "/" in y and y.split("/", 1)[0] in ("skills", "plugins", "tools", ".claude", ".agents", ".codex"):
+                        u.append(f"kaynaklar.json: {repo} medya_haric yolu hiçbir skil klasöründe görünmüyor: {y!r}")
+        for s in sk_list:
+            ky = s.get("kaynak_yol") or ""
+            sk_mh = medya_haric_skill_kumesi(k, ky)
+            if not sk_mh:
+                continue
+            arsiv_yol = s.get("yol")
+            if isinstance(arsiv_yol, str) and arsiv_yol:
+                sk_klasor = kok / arsiv_yol
+                for rel in sorted(sk_mh):
+                    if (sk_klasor / rel).exists():
+                        u.append(f"kaynaklar.json: {repo} medya_haric dosyası arşivde hâlâ duruyor: {arsiv_yol}/{rel}")
 
 
 def _skill_bagimlilik(kok, kayitlar, u):

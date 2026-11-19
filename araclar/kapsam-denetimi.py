@@ -20,7 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ARSIV_DISI_BOLUMLER, KAYNAKLAR, KOK, REGISTRY, YEREL_TIPLER, GhBulunamadi, json_oku, klon_temizle,  # noqa: E402
-                   arsive_cekilir, repo_agaci, yerel_agac)
+                   arsive_cekilir, medya_haric_kumesi, repo_agaci, yerel_agac)
 
 ACIKLAMA = {
     "secildi": "arşivde (ana sürüm)",
@@ -80,7 +80,9 @@ def main():
             continue
         if repo in yerel_kayit:  # yerel kaynak: diskteki güncel kendi/ ya da site/ klasörü (düzenlenmiş ama işlenmemiş skill burada görünür)
             ayar_k = json_oku(KAYNAKLAR)
-            govde = {"tree": yerel_agac(KOK / yerel_kayit[repo]["yerel"], ayar_k["skill_ici_haric"] + yerel_kayit[repo].get("dosya_haric", []))[0],
+            govde = {"tree": yerel_agac(KOK / yerel_kayit[repo]["yerel"],
+                                        ayar_k["skill_ici_haric"] + yerel_kayit[repo].get("dosya_haric", []),
+                                        tam_haric=medya_haric_kumesi(yerel_kayit[repo]))[0],
                      "truncated": False}
         else:
             govde = agac_al(repo, d["commit"])  # API kapalıysa git ile (bağımsız sayım yine yapılır)

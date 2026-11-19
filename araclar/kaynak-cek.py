@@ -32,7 +32,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GECICI, KAYNAKLAR, KOK, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
-                   klon_temizle, repo_agaci, repo_guncel, repo_lisansi, yerel_agac, yerel_commit, ARSIVLENEN_TIPLER, YEREL_TIPLER, arsive_cekilir)
+                   klon_temizle, medya_haric_kumesi, medya_haric_skill_kumesi, repo_agaci, repo_guncel, repo_lisansi, yerel_agac,
+                   yerel_commit, ARSIVLENEN_TIPLER, YEREL_TIPLER, arsive_cekilir)
 
 # T7 = yerel kaynak (kullanıcının kendi skilleri, kendi/), T8 = siteden alınan skiller (site/): GitHub'a hiç sorulmaz, ağ kullanılmaz.
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
@@ -60,14 +61,16 @@ def is_skill_md(yol):
     return yol.split("/")[-1].lower() == "skill.md"
 
 
-def agac_klasor_hash(agac, d, ayar):
+def agac_klasor_hash(agac, d, ayar, kayit=None):
     """Ağaçtaki bir klasörün tüm dosyalarının (göreli yol, blob sha) özeti; kopya tespiti SKILL.md'ye değil buna bakar."""
     import hashlib
     h = hashlib.sha256()
     on = (d + "/") if d else ""
+    haric = ayar["skill_ici_haric"] + (kayit or {}).get("dosya_haric", [])
+    medya_haric = medya_haric_skill_kumesi(kayit, d)
     for e in sorted((e for e in agac if e["type"] == "blob" and e["path"].startswith(on)), key=lambda e: e["path"]):
         rel = e["path"][len(on):]
-        if ilk_eslesen(ayar["skill_ici_haric"], rel):
+        if not is_skill_md(rel) and (rel in medya_haric or ilk_eslesen(haric, rel)):
             continue
         h.update(rel.encode())
         h.update(e["sha"].encode())
@@ -121,7 +124,7 @@ def skill_klasorlerini_sec(kayit, agac, ayar, tutulan_uygula=True):
             if re.match(CODEX_YOL, d + "/"):
                 return "codex"
             return "genel"
-        siniflanmis = [(d, tam, tur(d), agac_klasor_hash(agac, d, ayar) if d else blob_sha[tam]) for d, tam in yollar]
+        siniflanmis = [(d, tam, tur(d), agac_klasor_hash(agac, d, ayar, kayit) if d else blob_sha[tam]) for d, tam in yollar]
         ana_havuz = [x for x in siniflanmis if x[2] != "baska-arac"] or siniflanmis
         ana_havuz.sort(key=lambda x: (yol_puani(x[0]), x[0].count("/"), x[0]))
         ana = ana_havuz[0]
@@ -164,7 +167,9 @@ def skill_klasorlerini_sec(kayit, agac, ayar, tutulan_uygula=True):
 
 def dosyalari_listele(kayit, agac, d, ayar):
     # dosya_haric: repo kaydına özel, skill klasörü içindeki göreli yollara uygulanır (ör. kökteki skill'in .previews/ klasörü)
+    # medya_haric: arşive geri gelmeyecek medya dışlama listesi (tam göreli yol; atlanan_dosyalar'a girmez, KAYNAK.md'de fark yaratmaz)
     haric = ayar["skill_ici_haric"] + kayit.get("dosya_haric", [])
+    medya_haric = medya_haric_skill_kumesi(kayit, d)
     sinir = ayar["max_dosya_mb"] * 1024 * 1024
     sonuc, atlanan = [], []
     for e in agac:
@@ -178,6 +183,8 @@ def dosyalari_listele(kayit, agac, d, ayar):
             rel = e["path"]
             if kayit.get("kok_dosyalari") and rel not in kayit["kok_dosyalari"]:
                 continue
+        if not is_skill_md(rel) and rel in medya_haric:
+            continue
         if not is_skill_md(rel) and (ilk_eslesen(haric, rel) or (e.get("size") or 0) > sinir):  # size None: sonra yerelde
             atlanan.append(rel)
             continue
@@ -282,7 +289,8 @@ def main():
                 yerel_kok = KOK / kayit["yerel"]
                 if not yerel_kok.is_dir():
                     sys.exit(f"HATA: {repo} yerel klasörü yok: {kayit['yerel']}")
-                agac_l, gizli_l = yerel_agac(yerel_kok, ayar["skill_ici_haric"] + kayit.get("dosya_haric", []))
+                agac_l, gizli_l = yerel_agac(yerel_kok, ayar["skill_ici_haric"] + kayit.get("dosya_haric", []),
+                                             tam_haric=medya_haric_kumesi(kayit))
                 for g in gizli_l:
                     print(f"  UYARI: {repo}: gizli görünen dosya adı alınmadı: {g}")
                 repo_sha[repo] = yerel_commit(agac_l)

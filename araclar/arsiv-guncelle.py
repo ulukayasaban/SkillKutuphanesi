@@ -38,7 +38,8 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, arsive_cekilir, gh_api, json_oku, json_yaz, repo_guncel, yerel_agac, yerel_commit  # noqa: E402
+from ortak import (KAYNAKLAR, KOK, REGISTRY, GhBulunamadi, arsive_cekilir, gh_api, json_oku, json_yaz,  # noqa: E402
+                   medya_haric_kumesi, repo_guncel, yerel_agac, yerel_commit)
 
 GECMIS = KOK / "notlar" / "guncelleme-gecmisi.md"
 ANA_DAL = "master"
@@ -257,7 +258,8 @@ def rapor():
     for k in ayar_k["repolar"]:
         if k["tip"] not in ("T7", "T8"):
             continue
-        yeni = yerel_commit(yerel_agac(KOK / k["yerel"], ayar_k["skill_ici_haric"] + k.get("dosya_haric", []))[0])
+        yeni = yerel_commit(yerel_agac(KOK / k["yerel"], ayar_k["skill_ici_haric"] + k.get("dosya_haric", []),
+                                       tam_haric=medya_haric_kumesi(k))[0])
         eski = mevcut.get(k["repo"])
         if eski != yeni:
             degisen.append(k["repo"])

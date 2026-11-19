@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter,  # noqa: E402
                    frontmatter_onar, frontmatter_teshis, global_durum, symlink_taslaklari,
                    taslak_baglantilarini_cevir, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu,
-                   ARSIVLENEN_TIPLER, YEREL_KLASOR, YEREL_TIPLER, site_gelistirici, site_kayitlari, yerel_gelistirici)
+                   ARSIVLENEN_TIPLER, YEREL_KLASOR, YEREL_TIPLER, medya_haric_skill_kumesi, site_gelistirici, site_kayitlari, yerel_gelistirici)
 
 KURALLAR = KOK / "kategori-kurallari.json"
 GELISTIRICILER = KOK / "gelistiriciler.json"
@@ -80,6 +80,34 @@ def kurallari_uygula(kural, kayit):
 def skill_bagimlilik_ozel(repolar):
     """kaynaklar.json 'repolar' -> {(repo, kaynak_yol): metin}: kayıtlardaki 'skill_bagimlilik' {kaynak_yol: metin} alanları."""
     return {(r["repo"], yol): metin for r in repolar for yol, metin in (r.get("skill_bagimlilik") or {}).items()}
+
+
+def kaynak_medya_haric_birlesik(repolar, repo):
+    """Aynı repoya ait tüm kaynak kayıtlarındaki medya_haric girdilerini tek bir sahte kayıt sözlüğünde birleştirir."""
+    birlesik = []
+    for r in repolar:
+        if isinstance(r, dict) and r.get("repo") == repo and "medya_haric" in r:
+            mh = r["medya_haric"]
+            if isinstance(mh, dict):
+                birlesik.extend(mh.keys())
+            elif isinstance(mh, list):
+                birlesik.extend(mh)
+    return {"medya_haric": birlesik} if birlesik else {}
+
+
+def _kopyala_medya_haric(kaynak: Path, hedef: Path, haric_yollar):
+    """shutil.copytree benzeri: `haric_yollar` (kaynak köküne göre posix yolları kümesi) içindeki dosyaları hedefe KOYMAZ."""
+    haric_set = set(haric_yollar or ())
+    if not haric_set:
+        shutil.copytree(kaynak, hedef)
+        return
+
+    def _ignore(dizin, adlar):
+        rel_dizin = Path(dizin).relative_to(kaynak).as_posix()
+        onek = "" if rel_dizin == "." else (rel_dizin + "/")
+        return {a for a in adlar if a.lower() != "skill.md" and (onek + a) in haric_set}
+
+    shutil.copytree(kaynak, hedef, ignore=_ignore)
 
 
 def skill_bagimliligi(k, ozel):
@@ -398,6 +426,7 @@ def main():
     gelistiriciler = json_oku(GELISTIRICILER, {"repolar": {}})["repolar"]
     site = site_kayitlari(KOK)  # T8 skillerinin sahip/lisans/site bilgisi (site-takip.json)
     kaynak_kayit = {k["repo"]: k for k in _ayar0["repolar"]}
+    medya_haric_repo = {r: kaynak_medya_haric_birlesik(_ayar0["repolar"], r) for r in {k["repo"] for k in _ayar0["repolar"]}}
     bag_ozel = skill_bagimlilik_ozel(_ayar0["repolar"])
     gecerli_kat = {f"{a}/{k}" for a, v in kategoriler["alanlar"].items() for k in v["kategoriler"]}
     eski_liste = json_oku(REGISTRY, {"skiller": []})["skiller"]
@@ -411,8 +440,11 @@ def main():
         if not (k["_yerel"] / "SKILL.md").exists():
             print(f"UYARI: SKILL.md inmemiş -> {k['repo']}:{k['kaynak_yol']}")
             continue
+        k["_mh"] = medya_haric_skill_kumesi(medya_haric_repo.get(k["repo"]), k.get("kaynak_yol", ""))
+        if k.get("atlanan_dosyalar") and k["_mh"]:
+            k["atlanan_dosyalar"] = [x for x in k["atlanan_dosyalar"] if x not in k["_mh"]]
         k["_smh"] = skill_md_hash(k["_yerel"])
-        k["_kh"] = klasor_hash(k["_yerel"])
+        k["_kh"] = klasor_hash(k["_yerel"], k["_mh"])
         gruplar.setdefault(k["ad"], []).append(k)
 
     yeni = kimlik_ata(gruplar, eski_kaynak)
@@ -435,12 +467,14 @@ def main():
             print(f"UYARI geçersiz kategori {kat} -> {k['id']}")
             kat = "d-ai-otomasyon/04-skill-plugin-yazimi"
         hedef = YENI / kat / k["id"]
-        shutil.copytree(k["_yerel"], hedef)
+        _kopyala_medya_haric(k["_yerel"], hedef, k.get("_mh"))
         varyantlar = {}
+        varyant_yollari = k.get("varyant_yollari") or {}
         for arac, yerel in (k.get("varyantlar") or {}).items():
             if yerel:
                 vh = YENI / "_varyantlar" / k["id"] / arac
-                shutil.copytree(GECICI / yerel, vh)
+                v_mh = medya_haric_skill_kumesi(medya_haric_repo.get(k["repo"]), varyant_yollari.get(arac, k.get("kaynak_yol", "")))
+                _kopyala_medya_haric(GECICI / yerel, vh, v_mh)
                 varyantlar[arac] = goreli(vh)
         k["varyantlar"] = varyantlar
         metin = (hedef / "SKILL.md").read_text(encoding="utf-8", errors="replace")

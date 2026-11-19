@@ -95,6 +95,10 @@ Alanlar:
 - `kok_dosyalari`: SKILL.md repo kökündeyse sadece bu dosyaları al (ör. `["SKILL.md"]`). Repodaki diğer kodu indirmez.
 - `dosya_haric`: skill klasörü içindeki göreli yollar için hariç (regex). Kökte duran skilllerde önizleme/rapor/test
   klasörlerini indirmemek için (ör. `["^\\.previews/", "^reports/"]`). Skill'in kullandığı `scripts/`, `references/` alınır.
+- `medya_haric`: arşive alınmayacak ve aylık güncellemede geri gelmeyecek medya/ikili dosyaların göreli yolları (düz liste
+  `["skills/foo/docs/a.gif"]` ya da gerekçeli sözlük `{"skills/foo/docs/a.gif": "belge-gorseli"}`; mutlak yol ve `..` geçişi
+  yasaktır). `kaynak-cek.py` ve `arsiv-yerlestir.py` bu dosyaları arşive koymaz, `klasor_hash` ve `atlanan_dosyalar` hesabında
+  saymaz; listede olup arşivde hâlâ duran dosya `dogrula.py`'de UYARI verir.
 - `bagimlilik`: skill çalışmak için başka bir kurulum istiyorsa açıklaması (ön kontrolde UYARI olur). Repodaki bütün skillere yazılır.
 - `skill_bagimlilik`: tek bir skilin bağımlılığı repo metninden farklıysa `{"<kaynak_yol>": "metin"}` (ör.
   `{"skills/manim-video": "Manim CE, LaTeX, ffmpeg…"}`; boş metin = bağımlılık yok). `arsiv-yerlestir.py` registry'ye ve KAYNAK.md'ye
