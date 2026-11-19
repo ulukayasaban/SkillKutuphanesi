@@ -92,7 +92,7 @@ KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "KAYIP", "EMEK
 KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "skill_bagimlilik", "kimlik",
                       "dosya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay", "kayip_tarihi", "yerel", "lisans",
                       "tur", "bolum", "tur_gerekce", "ne_ister", "ne_indirir", "tek_basina", "kurulmayan_parcalar", "son_kontrol",
-                      "arac_uyumu", "boyut")
+                      "arac_uyumu", "boyut", "arsivde_tut")
 SITE_TAKIP_ARACI = "site-takip.py"
 ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
 GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
@@ -397,6 +397,12 @@ def kaynak_tur_hatalari(k):
                 h.append(f"kaynaklar.json: {repo} boyut.gercek_mb sayı değil")
             if "kurulum_mb_devdahil" in b and not sayi(b["kurulum_mb_devdahil"]):
                 h.append(f"kaynaklar.json: {repo} boyut.kurulum_mb_devdahil sayı değil")
+    if "arsivde_tut" in k:
+        at = k["arsivde_tut"]
+        if not (isinstance(at, list) and all(isinstance(x, str) for x in at)):
+            h.append(f"kaynaklar.json: {repo} arsivde_tut metin listesi değil")
+        if bolum != "fihrist":
+            h.append(f"kaynaklar.json: {repo} arsivde_tut yalnız bolum 'fihrist' ile geçerli (bolum: {bolum!r})")
     return h
 
 
@@ -478,6 +484,12 @@ def fihrist_dosya_adi(repo):
     return repo.replace("/", "__") + ".json"
 
 
+FIHRIST_INCELEME_METIN = ("ozet_tr", "kalite_notu", "kullanim_alani", "kullanma", "ortusme_grubu", "ortusme_rolu",
+                          "zorluk", "uygulama_grubu", "inceleyen")
+FIHRIST_INCELEME_LISTE = ("teknoloji", "gerekli_paketler", "proje_tipleri")
+FIHRIST_BILESEN_TURLERI = ("ajan", "komut")
+
+
 def fihrist_hatalari(d, repo=None):
     """Bir fihrist dosyasının içeriği için HATA metinleri (fihrist/<owner>__<ad>.json; notlar/plan-tur-surecleri.md bölüm 3, fihrist/README.md)."""
     h = []
@@ -516,10 +528,44 @@ def fihrist_hatalari(d, repo=None):
             if not (isinstance(ic, dict) and isinstance(ic.get("commit"), str) and _tarih_gecerli(ic.get("tarih")) and isinstance(ic.get("sonuc"), str)
                     and isinstance(ic.get("not", ""), str)):
                 h.append(f"skiller[{i}].inceleme {{commit, tarih: AAAA-AA-GG, sonuc, not?}} biçiminde değil")
+            else:
+                for a in FIHRIST_INCELEME_METIN:
+                    if a in ic and not isinstance(ic[a], str):
+                        h.append(f"skiller[{i}].inceleme.{a} metin değil")
+                if "kalite" in ic and (isinstance(ic["kalite"], bool) or not isinstance(ic["kalite"], int) or not 1 <= ic["kalite"] <= 5):
+                    h.append(f"skiller[{i}].inceleme.kalite 1-5 arası tam sayı değil")
+                for a in FIHRIST_INCELEME_LISTE:
+                    if a in ic and not (isinstance(ic[a], list) and all(isinstance(v, str) for v in ic[a])):
+                        h.append(f"skiller[{i}].inceleme.{a} metin listesi değil")
+                if "aciklama_tr" in ic:
+                    atr = ic["aciklama_tr"]
+                    if not (isinstance(atr, dict) and isinstance(atr.get("ne"), str) and isinstance(atr.get("ne_zaman", ""), str)):
+                        h.append(f"skiller[{i}].inceleme.aciklama_tr {{ne, ne_zaman?}} biçiminde değil")
         if isinstance(x.get("yol"), str):
             if x["yol"] in gorulen:
                 h.append(f"skiller: yol tekrarlanıyor: {x['yol']!r}")
             gorulen.add(x["yol"])
+    if "bilesenler" in d:
+        bil = d["bilesenler"]
+        if not isinstance(bil, list):
+            h.append("bilesenler liste değil")
+        else:
+            bil_gorulen = set()
+            for i, b in enumerate(bil):
+                if not isinstance(b, dict):
+                    h.append(f"bilesenler[{i}] sözlük değil")
+                    continue
+                if b.get("tur") not in FIHRIST_BILESEN_TURLERI:
+                    h.append(f"bilesenler[{i}].tur geçersiz: {b.get('tur')!r} ({', '.join(FIHRIST_BILESEN_TURLERI)})")
+                for a in ("ad", "yol"):
+                    if not (isinstance(b.get(a), str) and b[a]):
+                        h.append(f"bilesenler[{i}].{a} metin değil ya da boş")
+                if not isinstance(b.get("aciklama"), str):
+                    h.append(f"bilesenler[{i}].aciklama metin değil")
+                if isinstance(b.get("yol"), str):
+                    if b["yol"] in bil_gorulen:
+                        h.append(f"bilesenler: yol tekrarlanıyor: {b['yol']!r}")
+                    bil_gorulen.add(b["yol"])
     return h
 
 

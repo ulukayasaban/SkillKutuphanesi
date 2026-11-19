@@ -19,9 +19,11 @@ ve rol/profil dosyalarını düzenlemek yedek, kuru çalıştırma ve onay işi 
 Kural 6: proje adları yalnız ekrana yazılır; bu araç hiçbir şey kaydetmez.
 """
 import argparse
+import copy
 import importlib.util
 import json
 import re
+import shutil
 import subprocess
 import sys
 from datetime import date
@@ -483,6 +485,268 @@ def metin_uret(r):
     o += [f"  {x}" for x in r["adimlar"]]
     o += ["GERİ ALMA"] + [f" - {x}" for x in r["geri_alma"]]
     return "\n".join(o)
+
+
+# ------------------------------------------------------------------ yeniden kullanılabilir skil/bileşen çıkarma yardımcıları
+def _yasak_arsiv_kokleri(kok):
+    """Asla silinemeyecek ortak arşiv kökleri: arsiv/, arsiv/_varyantlar, arsiv/_bilesenler."""
+    arsiv = (Path(kok) / "arsiv").resolve()
+    return {
+        arsiv,
+        (arsiv / "_varyantlar").resolve(),
+        (arsiv / "_bilesenler").resolve(),
+    }
+
+
+def _arsiv_ici_yol(kok, goreli):
+    """goreli yol (kok / 'arsiv') altındaysa ve ortak köklerden (arsiv/, _varyantlar, _bilesenler)
+    biri değilse çözülmüş Path döner; dışındaysa ya da ortak kökse None (güvenlik)."""
+    if not goreli or not isinstance(goreli, str):
+        return None
+    arsiv = (Path(kok) / "arsiv").resolve()
+    hedef = (Path(kok) / goreli).resolve()
+    if hedef in _yasak_arsiv_kokleri(kok) or arsiv not in hedef.parents:
+        return None
+    return hedef
+
+
+def _klasor_bayt(yol):
+    if not yol.exists():
+        return 0
+    if yol.is_file():
+        return yol.stat().st_size
+    return sum(p.stat().st_size for p in yol.rglob("*") if p.is_file())
+
+
+def registryden_cikar(registry, cikarilacak_idler, bilesen_repolar=(), oncelikler=None, fihrist_tutulan=None):
+    """Saf işlev (verilen sözlüğü değiştirmez): seçilen skill kimliklerini ve verilen repoların bileşenlerini
+    registry'den çıkarır. Çıkarılan skill 'tercih' idiyse aynı adlı kalan skillerden en uygunu 'tercih' olur
+    (kimlikler rehber/09 gereği değişmez). fihrist_tutulan: {repo: set(kaynak_yol)} verilirse denetim kaydını günceller.
+    Döner: (yeni_registry, {cikarilan_skiller, cikarilan_bilesenler, tercih_degisenler})."""
+    cikar_set = set(cikarilacak_idler)
+    bil_repolar = {r.lower() for r in bilesen_repolar}
+    oncelik_map = {k.lower(): v for k, v in (oncelikler or {}).items()}
+    cikarilan_skiller, kalan_skiller = [], []
+    for s in registry.get("skiller", []):
+        if s.get("id") in cikar_set:
+            cikarilan_skiller.append(copy.deepcopy(s))
+        else:
+            kalan_skiller.append(copy.deepcopy(s))
+    cikarilan_bilesenler, kalan_bilesenler = [], []
+    for b in registry.get("bilesenler", []):
+        if str(b.get("repo", "")).lower() in bil_repolar:
+            cikarilan_bilesenler.append(copy.deepcopy(b))
+        else:
+            kalan_bilesenler.append(copy.deepcopy(b))
+    tercih_degisenler = []
+    etkilenen_adlar = sorted({s["ad"] for s in cikarilan_skiller
+                              if s.get("ad") and (s.get("durum") == "tercih" or s.get("id") == s.get("ad"))})
+    for ad in etkilenen_adlar:
+        kardesler = [k for k in kalan_skiller if k.get("ad") == ad]
+        if not kardesler:
+            continue
+        eski = next((s for s in cikarilan_skiller if s.get("ad") == ad and (s.get("id") == ad or s.get("durum") == "tercih")), None)
+        kazanan = next((k for k in kardesler if k.get("durum") == "tercih"), None)
+        if kazanan is None:
+            kazanan = min(
+                kardesler,
+                key=lambda k: (
+                    bool(k.get("gizli")),
+                    0 if (k.get("durum_elle") and k.get("durum") == "tercih")
+                    else 2 if (k.get("durum_elle") and k.get("durum") == "alternatif") else 1,
+                    oncelik_map.get(str(k.get("repo", "")).lower(), 5),
+                    str(k.get("repo", "")),
+                    str(k.get("kaynak_yol", "")),
+                ),
+            )
+            kazanan["durum"] = "tercih"
+        if eski is not None:
+            tercih_degisenler.append({
+                "ad": ad,
+                "eski_id": eski["id"],
+                "eski_repo": eski.get("repo", ""),
+                "yeni_id": kazanan["id"],
+                "yeni_repo": kazanan.get("repo", ""),
+                "ciplak_ad_bosaldi": eski["id"] == ad,
+            })
+    yeni_reg = copy.deepcopy(registry)
+    yeni_reg["skiller"] = kalan_skiller
+    if "bilesenler" in yeni_reg or kalan_bilesenler:
+        yeni_reg["bilesenler"] = kalan_bilesenler
+    if fihrist_tutulan and isinstance(yeni_reg.get("denetim"), dict):
+        denetim = yeni_reg["denetim"]
+        for repo, tutulan in fihrist_tutulan.items():
+            rk = next((k for k in denetim if k.lower() == repo.lower()), None)
+            if rk is None:
+                continue
+            if not tutulan:
+                denetim.pop(rk, None)
+            elif isinstance(denetim[rk], dict) and isinstance(denetim[rk].get("skill_md"), dict):
+                tutulan_set = set(tutulan)
+                for p in list(denetim[rk]["skill_md"]):
+                    klasor = p.rsplit("/", 1)[0] if "/" in p else ""
+                    if klasor not in tutulan_set:
+                        denetim[rk]["skill_md"][p] = "fihristte"
+    return yeni_reg, {
+        "cikarilan_skiller": cikarilan_skiller,
+        "cikarilan_bilesenler": cikarilan_bilesenler,
+        "tercih_degisenler": tercih_degisenler,
+    }
+
+
+def acilan_bayt_hesapla(kok, cikarilan_skiller, cikarilan_bilesenler):
+    """Salt okuma: arşivden çıkarılacak skill klasörleri, araç sürümleri ve bileşen dosyalarının toplam baytı."""
+    kok = Path(kok)
+    gorulen, toplam = set(), 0
+    for s in cikarilan_skiller:
+        for yol in [s.get("yol")] + list((s.get("varyantlar") or {}).values()):
+            p = _arsiv_ici_yol(kok, yol)
+            if p and p not in gorulen and p.exists():
+                gorulen.add(p)
+                toplam += _klasor_bayt(p)
+    for b in cikarilan_bilesenler:
+        p = _arsiv_ici_yol(kok, b.get("yol"))
+        if p and p not in gorulen and p.exists():
+            gorulen.add(p)
+            toplam += _klasor_bayt(p)
+    return toplam
+
+
+def _korunan_yollar(kok, kalan_skiller=(), kalan_bilesenler=()):
+    """Kalan tüm skillerin (yol + varyantlar) ve kalan bileşenlerin çözülmüş arşiv yolları kümesi."""
+    korunan = set()
+    for s in (kalan_skiller or ()):
+        if not isinstance(s, dict):
+            continue
+        for yol in [s.get("yol")] + list((s.get("varyantlar") or {}).values()):
+            p = _arsiv_ici_yol(kok, yol)
+            if p is not None:
+                korunan.add(p)
+    for b in (kalan_bilesenler or ()):
+        if not isinstance(b, dict):
+            continue
+        p = _arsiv_ici_yol(kok, b.get("yol"))
+        if p is not None:
+            korunan.add(p)
+    return korunan
+
+
+def _yol_cakisma_nedeni(kok, ham_yol, korunan):
+    """Silme hedefi yasak ortak kökse, arsiv/ dışındaysa ya da korunan bir yolla çakışıyorsa neden metni döner; güvenliyse None."""
+    p = _arsiv_ici_yol(kok, ham_yol)
+    if p is None:
+        return f"yasak ortak kök ya da arsiv/ dışı yol silinemez: {ham_yol!r}"
+    for k in korunan:
+        if p == k:
+            return f"kalan bir skil/bileşenle paylaşılan yol silinemez: {ham_yol!r}"
+        if p in k.parents:
+            return f"kalan bir skil/bileşenin üst klasörü silinemez: {ham_yol!r}"
+        if k in p.parents:
+            return f"kalan bir klasörün içindeki yol silinemez: {ham_yol!r}"
+    return None
+
+
+def arsiv_silme_hatalari(kok, cikarilan_skiller, cikarilan_bilesenler, kalan_skiller=(), kalan_bilesenler=()):
+    """Salt okuma: arsivden_cikar öncesi tüm silme hedeflerini ortak kökler ve kalan skiller/bileşenlere karşı doğrular."""
+    kok = Path(kok)
+    korunan = _korunan_yollar(kok, kalan_skiller, kalan_bilesenler)
+    hatalar = []
+    for s in (cikarilan_skiller or ()):
+        yol = s.get("yol")
+        if yol is not None and yol != "":
+            n = _yol_cakisma_nedeni(kok, yol, korunan)
+            if n:
+                hatalar.append(f"skil {s.get('id', '?')}: {n}")
+        for arac, vy in (s.get("varyantlar") or {}).items():
+            if vy is not None and vy != "":
+                n = _yol_cakisma_nedeni(kok, vy, korunan)
+                if n:
+                    hatalar.append(f"skil {s.get('id', '?')} varyant({arac}): {n}")
+    for b in (cikarilan_bilesenler or ()):
+        by = b.get("yol")
+        if by is not None and by != "":
+            n = _yol_cakisma_nedeni(kok, by, korunan)
+            if n:
+                hatalar.append(f"bileşen {b.get('ad', '?')}: {n}")
+    return hatalar
+
+
+def _bos_ustleri_sil(baslangic, sinir, korunan=()):
+    """baslangic'tan yukarı doğru boş klasörleri siler; sinir (dahil değil) ya da korunan klasörde durur."""
+    cur = baslangic.resolve()
+    sinir = sinir.resolve()
+    korunan_set = set(korunan or ())
+    while cur != sinir and sinir in cur.parents and cur not in korunan_set:
+        try:
+            if cur.is_dir() and not any(cur.iterdir()):
+                cur.rmdir()
+                cur = cur.parent
+            else:
+                break
+        except OSError:
+            break
+
+
+def arsivden_cikar(kok, cikarilan_skiller, cikarilan_bilesenler, kalan_skiller=(), kalan_bilesenler=()):
+    """Seçilen skillerin klasörlerini, araç sürümlerini ve bileşen dosyalarını arsiv/ içinden siler.
+    Yalnız (kok / 'arsiv') altındaki güvenli hedeflere dokunur: arsiv/, arsiv/_varyantlar, arsiv/_bilesenler
+    ortak kökleri ve kalan skiller/varyantlar/bileşenlerle paylaşılan ya da onları kapsayan yollar hiçbir şey
+    silinmeden ValueError ile reddedilir. shutil.rmtree öncesi is_dir() ve symlink kontrolü yapılır."""
+    kok = Path(kok)
+    arsiv = (kok / "arsiv").resolve()
+    hatalar = arsiv_silme_hatalari(kok, cikarilan_skiller, cikarilan_bilesenler, kalan_skiller, kalan_bilesenler)
+    if hatalar:
+        raise ValueError("Arşiv silme güvenlik engeli: " + "; ".join(hatalar))
+
+    korunan = _korunan_yollar(kok, kalan_skiller, kalan_bilesenler)
+    n_skil = n_var = n_bil = bayt = 0
+    silinen_yollar = set()
+    atlanan = []
+    for s in (cikarilan_skiller or ()):
+        yol = s.get("yol")
+        p = _arsiv_ici_yol(kok, yol)
+        ham = (kok / yol) if isinstance(yol, str) and yol else None
+        if p and p not in silinen_yollar:
+            if ham is not None and ham.is_symlink():
+                atlanan.append(str(yol))
+            elif p.is_dir():
+                bayt += _klasor_bayt(p)
+                shutil.rmtree(p)
+                silinen_yollar.add(p)
+                n_skil += 1
+            elif p.exists():
+                atlanan.append(str(yol))
+        for vy in (s.get("varyantlar") or {}).values():
+            vp = _arsiv_ici_yol(kok, vy)
+            vham = (kok / vy) if isinstance(vy, str) and vy else None
+            if vp and vp not in silinen_yollar:
+                if vham is not None and vham.is_symlink():
+                    atlanan.append(str(vy))
+                elif vp.is_dir():
+                    bayt += _klasor_bayt(vp)
+                    shutil.rmtree(vp)
+                    silinen_yollar.add(vp)
+                    n_var += 1
+                    _bos_ustleri_sil(vp.parent, arsiv / "_varyantlar", korunan)
+                elif vp.exists():
+                    atlanan.append(str(vy))
+    for b in (cikarilan_bilesenler or ()):
+        by = b.get("yol")
+        bp = _arsiv_ici_yol(kok, by)
+        bham = (kok / by) if isinstance(by, str) and by else None
+        if bp and bp not in silinen_yollar:
+            if bham is not None and bham.is_symlink():
+                atlanan.append(str(by))
+            elif bp.is_file():
+                bayt += bp.stat().st_size
+                bp.unlink()
+                silinen_yollar.add(bp)
+                n_bil += 1
+                _bos_ustleri_sil(bp.parent, arsiv / "_bilesenler", korunan)
+            elif bp.exists():
+                atlanan.append(str(by))
+    return {"silinen_skil_klasoru": n_skil, "silinen_varyant_klasoru": n_var,
+            "silinen_bilesen_dosyasi": n_bil, "acilan_bayt": bayt, "atlanan": atlanan}
 
 
 def main(argv=None):
