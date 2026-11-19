@@ -19,12 +19,18 @@
       "oncelik": 1,
       "haric": [
         "^template/"
-      ]
+      ],
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 19 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
     },
     {
       "repo": "greensock/gsap-skills",
       "tip": "T1",
-      "oncelik": 1
+      "oncelik": 1,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 8 bağımsız skil; kök bağımlılığı yok, ayrı yazılım değil doğrudan skill koleksiyonu."
     },
     {
       "repo": "vercel/next.js",
@@ -32,7 +38,10 @@
       "oncelik": 1,
       "dahil": [
         "^skills/"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan kaynak, kullanıcıları için 6 skil içeriyor ve programlar listesinde yok."
     },
     {
       "repo": "microsoft/playwright",
@@ -40,7 +49,10 @@
       "oncelik": 1,
       "dahil": [
         "^packages/playwright-core/src/tools/skills/"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan kaynak, kullanıcıları için 3 skil içeriyor ve programlar listesinde yok."
     },
     {
       "repo": "anthropics/claude-code",
@@ -49,7 +61,10 @@
       "dahil": [
         "^plugins/"
       ],
-      "not": "plugin-dev skillleri claude-plugins-official'da daha güncel (2026-02 > 2025-11); o yüzden öncelik 2."
+      "not": "plugin-dev skillleri claude-plugins-official'da daha güncel (2026-02 > 2025-11); o yüzden öncelik 2.",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan kaynak, kullanıcıları için 10 skil içeriyor ve programlar listesinde yok."
     },
     {
       "repo": "darkroomengineering/satus",
@@ -59,53 +74,83 @@
         "^\\.agents/skills/react-doctor/",
         "^\\.agents/skills/next-bundle-optimizer/"
       ],
-      "not": "next-bundle-optimizer kaynakta sonradan eklendi; kullanıcı onayıyla 2026-11-04'te alındı (kapsam denetimi 'karar bekliyor')."
+      "not": "next-bundle-optimizer kaynakta sonradan eklendi; kullanıcı onayıyla 2026-11-04'te alındı (kapsam denetimi 'karar bekliyor').",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan kaynak, kullanıcıları için 1 skil içeriyor ve programlar listesinde yok."
     },
     {
       "repo": "pbakaus/impeccable",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1; arşivde 2 kayıt olsa da ikisi de aynı adlı ve aynı açıklamalı tek bağımsız skil."
     },
     {
       "repo": "Leonxlnx/taste-skill",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve arşivde 1 bağımsız skil bulunuyor; kök bağımlılığı yok."
     },
     {
       "repo": "nateherkai/scroll-craft",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve arşivde 1 bağımsız skil bulunuyor; kök bağımlılığı yok."
     },
     {
       "repo": "lottiefiles/motion-design-skill",
       "tip": "T1",
       "oncelik": 1,
-      "not": "Resmî LottieFiles motion-design skili (MIT). 2026-11-07'de kütüphaneye alındı (kütüphaneden kurulup güncellemesi izlensin diye). nexu-io/open-design'daki aynı adlı skill kopya (öncelik 5 → alternatif)."
+      "not": "Resmî LottieFiles motion-design skili (MIT). 2026-11-07'de kütüphaneye alındı (kütüphaneden kurulup güncellemesi izlensin diye). nexu-io/open-design'daki aynı adlı skill kopya (öncelik 5 → alternatif).",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve arşivde 1 bağımsız skil bulunuyor; ayrı yazılım değil, doğrudan tek skil."
     },
     {
       "repo": "zanwei/design-dna",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve arşivde 1 bağımsız skil bulunuyor; kök bağımlılığı yok."
     },
     {
       "repo": "tt-a1i/archify",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve arşivde 5 skil bulunuyor; kök bağımlılığı azınlıkta (1/5), bağımsız skill koleksiyonu."
     },
     {
       "repo": "CloudAI-X/threejs-skills",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 13 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
     },
     {
       "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 7 bağımsız skil; kök bağımlılığı azınlıkta (1/7), asıl iş skillerin kendisi."
     },
     {
       "repo": "Panniantong/Agent-Reach",
       "tip": "T1",
-      "oncelik": 2
+      "oncelik": 2,
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve arşivde 1 bağımsız skil bulunuyor; kök bağımlılığı veya ayrı yazılım kaydı yok."
     },
     {
       "repo": "teng-lin/notebooklm-py",
@@ -113,32 +158,50 @@
       "oncelik": 2,
       "kok_dosyalari": [
         "SKILL.md"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ama asıl iş bir CLI ve Python API yazılımı; tek skil bu yazılımın kurulumu ve kullanımı için."
     },
     {
       "repo": "obra/superpowers",
       "tip": "T1",
-      "oncelik": 3
+      "oncelik": 3,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 15 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
     },
     {
       "repo": "addyosmani/agent-skills",
       "tip": "T1",
-      "oncelik": 3
+      "oncelik": 3,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 25 bağımsız skil; kök bağımlılığı azınlıkta (1/25), asıl iş skillerin kendisi."
     },
     {
       "repo": "freshtechbro/claudedesignskills",
       "tip": "T1",
-      "oncelik": 4
+      "oncelik": 4,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 23 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
     },
     {
       "repo": "vudovn/ag-kit",
       "tip": "T1",
-      "oncelik": 4
+      "oncelik": 4,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 58 bağımsız skil; kitler listesinde yok ve kök bağımlılığı azınlıkta (1/58)."
     },
     {
       "repo": "heyitsnoah/claudesidian",
       "tip": "T1",
-      "oncelik": 4
+      "oncelik": 4,
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 20 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
     },
     {
       "repo": "ComposioHQ/awesome-claude-skills",
@@ -146,7 +209,10 @@
       "oncelik": 5,
       "dahil_degil": [
         "^composio-skills/"
-      ]
+      ],
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 ve 32 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
     },
     {
       "repo": "ComposioHQ/awesome-claude-skills",
@@ -190,7 +256,10 @@
       "tip": "T1",
       "oncelik": 3,
       "bagimlilik": "Çalışınca kendi kütüphanesini ev dizinine indirir/kopyalar (~/lemo-opuscar veya ~/.lemo-opuscar), Node + ffmpeg (+ seslendirme için Python/Kokoro) ister. Ücretsiz: varsayılan TTS çevrimdışı Kokoro; edge-tts metni Microsoft'a gönderir (sadece kullanıcı onaylarsa).",
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-10-22'de eklendi. plugin/skills ve tools/directory altında aynı adlı iki farklı SKILL.md var (çakışma kuralı: biri tercih, diğeri alternatif)."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-10-22'de eklendi. plugin/skills ve tools/directory altında aynı adlı iki farklı SKILL.md var (çakışma kuralı: biri tercih, diğeri alternatif).",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1; arşivdeki 2 SKILL.md aynı skilin tercih/alternatif kopyası, bağımsız birden çok skil değil."
     },
     {
       "repo": "vercel/next.js",
@@ -199,7 +268,10 @@
       "dahil": [
         "^\\.agents/"
       ],
-      "kimlik": "vercel__next.js__repo-ici"
+      "kimlik": "vercel__next.js__repo-ici",
+      "tur": "repo-ici",
+      "bolum": "arsiv",
+      "tur_gerekce": "T3: yazılım ekibinin kendi geliştiricileri için 21 repo-içi skil."
     },
     {
       "repo": "microsoft/playwright",
@@ -208,153 +280,258 @@
       "dahil": [
         "^\\.claude/"
       ],
-      "kimlik": "microsoft__playwright__repo-ici"
+      "kimlik": "microsoft__playwright__repo-ici",
+      "tur": "repo-ici",
+      "bolum": "arsiv",
+      "tur_gerekce": "T3: yazılım ekibinin kendi geliştiricileri için 7 repo-içi skil."
     },
     {
       "repo": "react/react",
       "tip": "T3",
-      "oncelik": 8
+      "oncelik": 8,
+      "tur": "repo-ici",
+      "bolum": "arsiv",
+      "tur_gerekce": "T3: yazılım ekibinin kendi geliştiricileri için 14 repo-içi skil."
     },
     {
       "repo": "GoogleChrome/lighthouse",
       "tip": "T3",
-      "oncelik": 8
+      "oncelik": 8,
+      "tur": "repo-ici",
+      "bolum": "arsiv",
+      "tur_gerekce": "T3: yazılım ekibinin kendi geliştiricileri için 3 repo-içi skil."
     },
     {
       "repo": "motiondivision/motion",
       "tip": "T3",
-      "oncelik": 8
+      "oncelik": 8,
+      "tur": "repo-ici",
+      "bolum": "arsiv",
+      "tur_gerekce": "T3: yazılım ekibinin kendi geliştiricileri için 2 repo-içi skil."
     },
     {
       "repo": "mrdoob/three.js",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "pmndrs/react-three-fiber",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "pmndrs/drei",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "pmndrs/react-three-a11y",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "14islands/r3f-scroll-rig",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "oframe/ogl",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "greensock/GSAP",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "motiondivision/motion",
       "tip": "T6",
-      "kimlik": "motion-kutuphane"
+      "kimlik": "motion-kutuphane",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "darkroomengineering/lenis",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "airbnb/lottie-web",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "barvian/number-flow",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "tailwindlabs/tailwindcss",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "argyleink/open-props",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "seek-oss/capsize",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "fontsource/fontsource",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "figma/code-connect",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "darkroomengineering/satus",
       "tip": "T6",
-      "kimlik": "satus-starter"
+      "kimlik": "satus-starter",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "dequelabs/axe-core",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "GoogleChrome/lighthouse",
       "tip": "T5",
-      "kimlik": "lighthouse-arac"
+      "kimlik": "lighthouse-arac",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane/araç kaynağı (arşivde 0 skil)."
     },
     {
       "repo": "microsoft/playwright",
       "tip": "T5",
-      "kimlik": "playwright-arac"
+      "kimlik": "playwright-arac",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz yazılım aracı, arşivde skil bulunmuyor."
     },
     {
       "repo": "vercel/next.js",
       "tip": "T5",
-      "kimlik": "nextjs-framework"
+      "kimlik": "nextjs-framework",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz yazılım çerçevesi, arşivde skil bulunmuyor."
     },
     {
       "repo": "react/react",
       "tip": "T5",
-      "kimlik": "react-kutuphane"
+      "kimlik": "react-kutuphane",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz yazılım kütüphanesi, arşivde skil bulunmuyor."
     },
     {
       "repo": "QwikDev/partytown",
-      "tip": "T5"
+      "tip": "T5",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
     },
     {
       "repo": "ai/size-limit",
-      "tip": "T5"
+      "tip": "T5",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
     },
     {
       "repo": "FFmpeg/FFmpeg",
-      "tip": "T5"
+      "tip": "T5",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
     },
     {
       "repo": "arturitu/the-delegation",
-      "tip": "T5"
+      "tip": "T5",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
     },
     {
       "repo": "linvi/tweetinvi",
-      "tip": "T5"
+      "tip": "T5",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
     },
     {
       "repo": "anthropics/claude-code",
       "tip": "T5",
-      "kimlik": "claude-code-arac"
+      "kimlik": "claude-code-arac",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz yazılım aracı, arşivde skil bulunmuyor."
     },
     {
       "repo": "VoltAgent/awesome-design-md",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı, arşivde skil bulunmuyor."
     },
     {
       "repo": "nevertoday/350-layout-compositions",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı, arşivde skil bulunmuyor."
     },
     {
       "repo": "zhuyansen/awesome-claude-video-skills",
-      "tip": "T5"
+      "tip": "T5",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kaynak, arşivde skil bulunmuyor."
     },
     {
       "repo": "anthropics/claude-plugins-official",
@@ -364,7 +541,10 @@
         "^external_plugins/",
         "^plugins/example-plugin/"
       ],
-      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Resmî Claude Code plugin pazarı. external_plugins/ (Discord/Telegram/iMessage kanal bot ayarları, token ister; proje skilli değil) ve example-plugin (şablon) bilinçli hariç."
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Resmî Claude Code plugin pazarı. external_plugins/ (Discord/Telegram/iMessage kanal bot ayarları, token ister; proje skilli değil) ve example-plugin (şablon) bilinçli hariç.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: 24 bağımsız skil içeren eklenti/skil deposu; yalnızca 1 skil köke bağlı."
     },
     {
       "repo": "nexu-io/open-design",
@@ -373,13 +553,19 @@
       "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Sadece skills/ alınır; diğerleri gerekçeli hariç (plugins/_official, design-templates, spec: uygulamanın kendi şablon/eklentileri, 100+ MB). Birçok skill anthropics/gsap/Composio kopyası; toplama koleksiyon olduğu için öncelik 5.",
       "haric": [
         "^(plugins|design-templates|tools|docs|apps|\\.claude)/"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan ürünün yanında kullanıcılar için 87 skil içeriyor."
     },
     {
       "repo": "multica-ai/andrej-karpathy-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Lisans belirtilmemiş."
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Lisans belirtilmemiş.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor."
     },
     {
       "repo": "yaojingang/yao-meta-skill",
@@ -391,7 +577,10 @@
         "^tests/",
         "^\\.github/"
       ],
-      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kökte tek skill; önizleme görselleri, rapor çıktıları ve testler alınmaz (~8 MB tasarruf)."
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kökte tek skill; önizleme görselleri, rapor çıktıları ve testler alınmaz (~8 MB tasarruf).",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor."
     },
     {
       "repo": "ythx-101/live-panel-skill",
@@ -402,19 +591,28 @@
         "^tests/"
       ],
       "bagimlilik": "Python 3 + tarayıcı (Playwright/Chromium) ile kare yakalayıp ffmpeg ile mp4 üretir.",
-      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kökte tek skill; örneklerin JSON ayarları alınır, önizleme görselleri/videoları alınmaz."
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kökte tek skill; örneklerin JSON ayarları alınır, önizleme görselleri/videoları alınmaz.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor."
     },
     {
       "repo": "lemomo-ai/lemo-wake",
       "tip": "T1",
       "oncelik": 3,
-      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. upload skill'i çıktıyı kullanıcı onayıyla herkese açık GitHub galerisine yükler."
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. upload skill'i çıktıyı kullanıcı onayıyla herkese açık GitHub galerisine yükler.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 3 bağımsız skil bulunuyor."
     },
     {
       "repo": "lemomo-ai/codex-radar",
       "tip": "T1",
       "oncelik": 3,
-      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Codex'e özel."
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Codex'e özel.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor."
     },
     {
       "repo": "Fei-Away/Codex-Dream-Skin",
@@ -423,13 +621,19 @@
       "haric": [
         "^(macos|windows)/"
       ],
-      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kullanıcı kararı: sadece referans. Codex Desktop tema/duvar kağıdı uygulaması; macos/ ve windows/ SKILL.md'leri uygulamanın kurulum girişi (proje skilli değil, CDP ile arayüze CSS enjekte eder, paketler imzasız). Arşive alınmaz; notlar/referans/kutuphaneler.md."
+      "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kullanıcı kararı: sadece referans. Codex Desktop tema/duvar kağıdı uygulaması; macos/ ve windows/ SKILL.md'leri uygulamanın kurulum girişi (proje skilli değil, CDP ile arayüze CSS enjekte eder, paketler imzasız). Arşive alınmaz; notlar/referans/kutuphaneler.md.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T1: arşivde skil sayısı 0, yalnızca referans olarak tutuluyor."
     },
     {
       "repo": "android/skills",
       "tip": "T1",
       "oncelik": 1,
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil / Android)."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil / Android).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 37 bağımsız skil bulunuyor; asıl iş skillerin kendisi."
     },
     {
       "repo": "expo/skills",
@@ -438,13 +642,19 @@
       "haric": [
         "^\\.claude/"
       ],
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil / Expo-React Native). .claude/skills/expo-skill-eval reponun kendi değerlendirme aracı (hariç)."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil / Expo-React Native). .claude/skills/expo-skill-eval reponun kendi değerlendirme aracı (hariç).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 24 bağımsız skil bulunuyor; asıl iş skillerin kendisi."
     },
     {
       "repo": "vercel-labs/agent-skills",
       "tip": "T1",
       "oncelik": 1,
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil React Native + resmî Vercel skilleri). Lisans belirtilmemiş."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: mobil React Native + resmî Vercel skilleri). Lisans belirtilmemiş.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 9 bağımsız skil bulunuyor; asıl iş skillerin kendisi."
     },
     {
       "repo": "anthropics/knowledge-work-plugins",
@@ -453,13 +663,19 @@
       "haric": [
         "^partner-built/zoom-plugin/"
       ],
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: iş alanları: satış, finans, hukuk, İK, operasyon). partner-built/zoom-plugin (57 skill, Zoom geliştirici hesabı/API kataloğu) bilinçli hariç."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: iş alanları: satış, finans, hukuk, İK, operasyon). partner-built/zoom-plugin (57 skill, Zoom geliştirici hesabı/API kataloğu) bilinçli hariç.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: 195 bağımsız skil bulunuyor (200 sınırının altında)."
     },
     {
       "repo": "K-Dense-AI/scientific-agent-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: bilim/araştırma)."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: bilim/araştırma).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: 177 bağımsız skil bulunuyor (200 sınırının altında)."
     },
     {
       "repo": "earthtojake/text-to-cad",
@@ -468,25 +684,37 @@
       "haric": [
         "^apps/"
       ],
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: CAD/imalat). apps/web/skills (uygulamanın kendi arayüz skili) hariç."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: CAD/imalat). apps/web/skills (uygulamanın kendi arayüz skili) hariç.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 12 bağımsız skil bulunuyor; köke bağlı skil yok."
     },
     {
       "repo": "cloudflare/skills",
       "tip": "T1",
       "oncelik": 1,
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: bulut/edge deploy)."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: bulut/edge deploy).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 19 bağımsız skil bulunuyor; yalnızca 1 skil köke bağlı."
     },
     {
       "repo": "cloudflare/security-audit-skill",
       "tip": "T1",
       "oncelik": 1,
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: güvenlik denetimi)."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: güvenlik denetimi).",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor."
     },
     {
       "repo": "czlonkowski/n8n-skills",
       "tip": "T1",
       "oncelik": 2,
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: iş akışı otomasyonu / n8n)."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: iş akışı otomasyonu / n8n).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 15 bağımsız skil bulunuyor."
     },
     {
       "repo": "Donchitos/Claude-Code-Game-Studios",
@@ -499,31 +727,46 @@
       "tip": "T1",
       "oncelik": 2,
       "bagimlilik": "graphify Python paketi (pip install graphifyy) kurulu olmalı.",
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: kod tabanı bilgi grafiği)."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: kod tabanı bilgi grafiği).",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: asıl işi kurulu bir Python paketi olan yazılım ve tek skili onun kullanıcıları için."
     },
     {
       "repo": "DietrichGebert/ponytail",
       "tip": "T1",
       "oncelik": 3,
-      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: sade/az kod yazma disiplini). .openclaw/ ayna."
+      "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: sade/az kod yazma disiplini). .openclaw/ ayna.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 6 bağımsız skil bulunuyor."
     },
     {
       "repo": "nexscope-ai/eCommerce-Skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Etsy, Shopify, eBay, TikTok Shop, Walmart; çoğu yerel betikli, API anahtarı istemez."
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Etsy, Shopify, eBay, TikTok Shop, Walmart; çoğu yerel betikli, API anahtarı istemez.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: 162 bağımsız skil bulunuyor (200 sınırının altında)."
     },
     {
       "repo": "nexscope-ai/Amazon-Skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Amazon satıcı skilleri."
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Amazon satıcı skilleri.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 52 bağımsız skil bulunuyor."
     },
     {
       "repo": "Shopify/agent-skills",
       "tip": "T1",
       "oncelik": 1,
-      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Resmî Shopify geliştirme skilleri. Lisans belirtilmemiş."
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Resmî Shopify geliştirme skilleri. Lisans belirtilmemiş.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 15 bağımsız skil bulunuyor; asıl iş skillerin kendisi."
     },
     {
       "repo": "Lonsdale201/wp-agent-skills",
@@ -532,7 +775,10 @@
       "haric": [
         "^(?!woocommerce/)"
       ],
-      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Sadece woocommerce/ alınır; diğer klasörler belirli WordPress eklentilerine (ACF, Elementor, Fluent, Macar kargo…) özel, bilinçli hariç."
+      "not": "E-ticaret/Etsy araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği). Sadece woocommerce/ alınır; diğer klasörler belirli WordPress eklentilerine (ACF, Elementor, Fluent, Macar kargo…) özel, bilinçli hariç.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 31 bağımsız skil bulunuyor."
     },
     {
       "repo": "J-DTurner/etsy-api-skill",
@@ -555,32 +801,47 @@
       "repo": "xjli360/sealeap-ecommerce-skills",
       "tip": "T1",
       "oncelik": 4,
-      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Pazaryeri bazlı: Etsy, eBay, Mercado Libre, OZON, Shopify, TikTok Shop, Walmart, Wayfair."
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Pazaryeri bazlı: Etsy, eBay, Mercado Libre, OZON, Shopify, TikTok Shop, Walmart, Wayfair.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: 195 bağımsız skil bulunuyor (200 sınırının altında)."
     },
     {
       "repo": "finsilabs/awesome-ecommerce-skills",
       "tip": "T1",
       "oncelik": 4,
-      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Platformdan bağımsız e-ticaret operasyonları (katalog, sipariş, B2B, iade, talep tahmini)."
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Platformdan bağımsız e-ticaret operasyonları (katalog, sipariş, B2B, iade, talep tahmini).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: 181 bağımsız skil bulunuyor (200 sınırının altında)."
     },
     {
       "repo": "Trendyol/trendyol-integration-developer-tool",
       "tip": "T1",
       "oncelik": 2,
       "bagimlilik": "Trendyol satıcı hesabı ve entegrasyon API bilgileri gerekir.",
-      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Trendyol'un resmî entegrasyon geliştirici skili. Lisans belirtilmemiş."
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Trendyol'un resmî entegrasyon geliştirici skili. Lisans belirtilmemiş.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor; asıl iş skilin kendisi."
     },
     {
       "repo": "mercadopago/mercadopago-claude-marketplace",
       "tip": "T1",
       "oncelik": 1,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Mercado Pago resmî ödeme entegrasyonu (checkout, webhook, test)."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Mercado Pago resmî ödeme entegrasyonu (checkout, webhook, test).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 5 bağımsız skil bulunuyor; eklenti pazarı ayrı tür değil."
     },
     {
       "repo": "oldred-byte/ec-visual-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). E-ticaret ürün görselleri (ürün + referans görsellerden)."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). E-ticaret ürün görselleri (ürün + referans görsellerden).",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor."
     },
     {
       "repo": "buluslan/ecommerce-competitor-analyzer",
@@ -593,31 +854,46 @@
       "repo": "evanca/flutter-ai-rules",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Flutter/Dart skilleri (mimari, Bloc, Firebase, erişilebilirlik)."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Flutter/Dart skilleri (mimari, Bloc, Firebase, erişilebilirlik).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 36 bağımsız skil bulunuyor."
     },
     {
       "repo": "hamen/compose_skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Jetpack Compose denetimi ve agent."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Jetpack Compose denetimi ve agent.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 2 bağımsız skil bulunuyor; köke bağlı skil sayısı yarısını geçmiyor."
     },
     {
       "repo": "mmiani/kotlin-kmp-claude-agent-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Kotlin Multiplatform. Lisans belirsiz."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Kotlin Multiplatform. Lisans belirsiz.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 15 bağımsız skil bulunuyor."
     },
     {
       "repo": "Livsy90/iOS-Performance-Agent-Skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). iOS/Swift/SwiftUI performans."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). iOS/Swift/SwiftUI performans.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde 6 bağımsız skil bulunuyor."
     },
     {
       "repo": "dadederk/iOS-Accessibility-Agent-Skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). iOS erişilebilirlik."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). iOS erişilebilirlik.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1: arşivde tek bağımsız skil bulunuyor."
     },
     {
       "repo": "pixijs/pixijs",
@@ -626,43 +902,64 @@
       "dahil": [
         "^skills/"
       ],
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Resmî PixiJS v8 skilleri."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Resmî PixiJS v8 skilleri.",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan kütüphanenin kullanıcıları için 26 skil içeriyor."
     },
     {
       "repo": "Jakeschincariol/youtube-agent-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. YouTube kanal yönetimi (senaryo, SEO, shorts, retention)."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. YouTube kanal yönetimi (senaryo, SEO, shorts, retention).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "11 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "Jakeschincariol/instagram-agent-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Instagram hesap yönetimi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Instagram hesap yönetimi.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "13 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "Jakeschincariol/linkedin-agent-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. LinkedIn hesap yönetimi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. LinkedIn hesap yönetimi.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "11 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "Jakeschincariol/founder-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. İş fikrini lansmandan önce test eden kurucu skilleri."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. İş fikrini lansmandan önce test eden kurucu skilleri.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "11 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "Jakeschincariol/replica-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Uygulamayı inceleyip yeniden kurma (keşif, mimari, test, deploy)."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Uygulamayı inceleyip yeniden kurma (keşif, mimari, test, deploy).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "11 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "Jakeschincariol/day-trader-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Gün içi alım-satım analizi. Yatırım tavsiyesi değildir; broker/veri servisleri ayrı."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Gün içi alım-satım analizi. Yatırım tavsiyesi değildir; broker/veri servisleri ayrı.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "11 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "morluto/rea",
@@ -675,7 +972,10 @@
         "^\\.agents/skills/rea-"
       ],
       "bagimlilik": "REA aracı (repo) kurulu olmalı.",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. 'Yapay Zeka araçları' listesinde. reverse-engineer-anything kullanıcıya yönelik; rea-* skilleri repo katkı süreci (hariç)."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. 'Yapay Zeka araçları' listesinde. reverse-engineer-anything kullanıcıya yönelik; rea-* skilleri repo katkı süreci (hariç).",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan kaynağın kullanıcıları için 1 skil içeriyor."
     },
     {
       "repo": "remotion-dev/remotion",
@@ -685,107 +985,170 @@
         "^\\.agents/skills/"
       ],
       "kimlik": "remotion__repo-ici",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Remotion monoreposunun katkı süreci skilleri (repo-içi, gizli). Kullanıcıya yönelik Remotion skilleri: remotion-best-practices (OpenMontage) / remotion-dev/skills."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi. Remotion monoreposunun katkı süreci skilleri (repo-içi, gizli). Kullanıcıya yönelik Remotion skilleri: remotion-best-practices (OpenMontage) / remotion-dev/skills.",
+      "tur": "repo-ici",
+      "bolum": "arsiv",
+      "tur_gerekce": "T3: yazılım ekibinin kendi geliştiricileri ve katkı süreci için 65 repo-içi skil."
     },
     {
       "repo": "motion-canvas/motion-canvas",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "d3/d3",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "Tonejs/Tone.js",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "ManimCommunity/manim",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "liabru/matter-js",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "paperjs/paper.js",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "rough-stuff/rough",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "theatre-js/theatre",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "pmndrs/postprocessing",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "pmndrs/cannon-es",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "opentypejs/opentype.js",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "metafizzy/zdog",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "jwagner/simplex-noise.js",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "DavidHDev/react-bits",
       "tip": "T6",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
     },
     {
       "repo": "KaTeX/KaTeX",
       "tip": "T5",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
     },
     {
       "repo": "openai/whisper",
       "tip": "T5",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
     },
     {
       "repo": "librosa/librosa",
       "tip": "T5",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
     },
     {
       "repo": "meyda/meyda",
       "tip": "T5",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
     },
     {
       "repo": "blender/blender",
       "tip": "T5",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
     },
     {
       "repo": "666ghj/MiroFish",
       "tip": "T5",
-      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi."
+      "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
     },
     {
       "repo": "remotion-dev/remotion",
@@ -797,25 +1160,37 @@
       ],
       "kimlik": "remotion__resmi-skiller",
       "bagimlilik": "Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.",
-      "not": "Remotion'ın resmî kullanıcı skilleri (packages/skills/skills). Repo-içi katkı skilleri ayrı T3 kaydında. packages/codex-plugin/skills = aynı skillerin Codex eklentisi kopyası (ayna)."
+      "not": "Remotion'ın resmî kullanıcı skilleri (packages/skills/skills). Repo-içi katkı skilleri ayrı T3 kaydında. packages/codex-plugin/skills = aynı skillerin Codex eklentisi kopyası (ayna).",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2: asıl işi yazılım olan kaynağın kullanıcıları için 13 resmî skil içeriyor."
     },
     {
       "repo": "MADTeacher/mad-agents-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Flutter/Dart: mimari, navigasyon, ağ, test, animasyon, uyarlanabilir arayüz, i18n, Drift veritabanı."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Flutter/Dart: mimari, navigasyon, ağ, test, animasyon, uyarlanabilir arayüz, i18n, Drift veritabanı.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "11 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "Harishwarrior/flutter-claude-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Flutter test ve OWASP mobil güvenlik denetimi."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Flutter test ve OWASP mobil güvenlik denetimi.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "3 skil içeren koleksiyon; yalnızca 1 skil köke bağlı, proje iskeleti değil."
     },
     {
       "repo": "Viniciuscarvalho/swift-code-reviewer-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Swift/SwiftUI: eşzamanlılık, test, uzman rehberi, arayüz kalıpları."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Swift/SwiftUI: eşzamanlılık, test, uzman rehberi, arayüz kalıpları.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "6 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "tuist/fuckingapproachableswiftconcurrency",
@@ -824,7 +1199,10 @@
       "dahil": [
         "^src/"
       ],
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Swift eşzamanlılığı (Tuist ekibi); skill src/ içinde."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Swift eşzamanlılığı (Tuist ekibi); skill src/ içinde.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Tek bağımsız skil; köke bağlı değil ve asıl iş skilin kendisi."
     },
     {
       "repo": "ParthJadhav/ios-marketing-capture",
@@ -834,7 +1212,10 @@
         "^\\.github/",
         "^CONTRIBUTING"
       ],
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. iOS uygulama mağazası görsellerini çok dilli otomatik üretir."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. iOS uygulama mağazası görsellerini çok dilli otomatik üretir.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Tek bağımsız skil; köke bağlı değil ve asıl iş skilin kendisi."
     },
     {
       "repo": "jazzychad/ios-code-audit",
@@ -843,7 +1224,10 @@
       "dosya_haric": [
         "^\\.github/"
       ],
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. iOS kod tabanı denetimi."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. iOS kod tabanı denetimi.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Tek bağımsız skil; köke bağlı değil ve asıl iş skilin kendisi."
     },
     {
       "repo": "arjitj2/swiftui-design-principles",
@@ -852,7 +1236,10 @@
       "dosya_haric": [
         "^\\.github/"
       ],
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. SwiftUI/WidgetKit tasarım ilkeleri."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. SwiftUI/WidgetKit tasarım ilkeleri.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Tek bağımsız skil; köke bağlı değil ve asıl iş skilin kendisi."
     },
     {
       "repo": "Kappaemme-git/codex-phone-lab",
@@ -861,7 +1248,10 @@
       "dahil": [
         "^skill/"
       ],
-      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Expo uygulamasını gerçek telefonda canlı geliştirme (Codex skill'i)."
+      "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Expo uygulamasını gerçek telefonda canlı geliştirme (Codex skill'i).",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Tek bağımsız skil; köke bağlı değil ve asıl iş skilin kendisi."
     },
     {
       "repo": "xjli360/sealeap-amazon-skills",
@@ -873,13 +1263,19 @@
       "repo": "40RTY-ai/shopify-admin-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Shopify mağaza yönetimi iş akışları."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Shopify mağaza yönetimi iş akışları.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "117 bağımsız skil; 200 eşiğinin altında ve köke bağlı değil."
     },
     {
       "repo": "dpconde/claude-android-skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Modern Android uygulama geliştirme en iyi uygulamaları. Genel Android mimari rehberi (NowInAndroid: modüller, katmanlar, Gradle, test); resmî android/skills'te bu genel rehberin karşılığı yok."
+      "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Modern Android uygulama geliştirme en iyi uygulamaları. Genel Android mimari rehberi (NowInAndroid: modüller, katmanlar, Gradle, test); resmî android/skills'te bu genel rehberin karşılığı yok.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Tek bağımsız skil; köke bağlı değil ve asıl iş skilin kendisi."
     },
     {
       "repo": "mattpocock/skills",
@@ -888,13 +1284,19 @@
       "haric": [
         "^skills/in-progress/"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Matt Pocock'un mühendislik disiplin skilleri (313k★). skills/in-progress yazarın tamamlanmamış dediği 8 skill: bilinçli hariç. code-review/pr/prototype adları kütüphanede var: öncelik 3 ile anthropics (1) kazanır, remotion T3 (8) ve Donchitos'a göre bu kazanır."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Matt Pocock'un mühendislik disiplin skilleri (313k★). skills/in-progress yazarın tamamlanmamış dediği 8 skill: bilinçli hariç. code-review/pr/prototype adları kütüphanede var: öncelik 3 ile anthropics (1) kazanır, remotion T3 (8) ve Donchitos'a göre bu kazanır.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "31 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "coreyhaines31/marketingskills",
       "tip": "T1",
       "oncelik": 2,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Corey Haines pazarlama skilleri: CRO, copywriting, SEO, analitik (58k★). content-strategy/customer-research/onboarding/seo-audit adları anthropics/knowledge-work-plugins'te de var (öncelik 1 kazanır, bunlar alternatif)."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Corey Haines pazarlama skilleri: CRO, copywriting, SEO, analitik (58k★). content-strategy/customer-research/onboarding/seo-audit adları anthropics/knowledge-work-plugins'te de var (öncelik 1 kazanır, bunlar alternatif).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "53 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "AgriciDaniel/claude-seo",
@@ -903,19 +1305,28 @@
       "haric": [
         "^extensions/"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 26 SEO alt skill'i + 19 agent (27k★). extensions/: ücretli/hesaplı üçüncü taraf bağlayıcıları (Ahrefs, DataForSEO, SE Ranking, Profound, Firecrawl…) ve seo-image-gen kopyası — bilinçli hariç; gerekirse ayrı T2 kaydıyla alınır."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 26 SEO alt skill'i + 19 agent (27k★). extensions/: ücretli/hesaplı üçüncü taraf bağlayıcıları (Ahrefs, DataForSEO, SE Ranking, Profound, Firecrawl…) ve seo-image-gen kopyası — bilinçli hariç; gerekirse ayrı T2 kaydıyla alınır.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "26 skil içeren koleksiyon; yalnızca 1 skil köke bağlı, asıl iş skillerin kendisi."
     },
     {
       "repo": "AgriciDaniel/claude-ads",
       "tip": "T1",
       "oncelik": 2,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 12 reklam platformu için ücretli medya operasyonu skilleri (11k★). Skiller ücretsiz (hiçbir ücretli servis/API gerekmez); reklam bütçesi işin kendisidir, ücret sınıfını etkilemez."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 12 reklam platformu için ücretli medya operasyonu skilleri (11k★). Skiller ücretsiz (hiçbir ücretli servis/API gerekmez); reklam bütçesi işin kendisidir, ücret sınıfını etkilemez.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "34 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "AgriciDaniel/claude-obsidian",
       "tip": "T1",
       "oncelik": 4,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian ikinci beyin iş akışı (16k★). obsidian-bases/obsidian-markdown adları kepano ve claudesidian'da da var: kepano (öncelik 1) tercih, bu alternatif."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian ikinci beyin iş akışı (16k★). obsidian-bases/obsidian-markdown adları kepano ve claudesidian'da da var: kepano (öncelik 1) tercih, bu alternatif.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "15 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "obsidianmd/obsidian-skills",
@@ -924,7 +1335,10 @@
       "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Obsidian CEO'su kepano'nun resmî Agent Skills (51k★): obsidian-markdown, obsidian-bases, json-canvas vb. Aynı adlı claudesidian (öncelik 4) kopyaları artık alternatif olur. Repo 2026-11'de GitHub'da kepano kişisel hesabından obsidianmd kuruluşuna taşındı (aynı repo; kimlikler `@kepano` olarak kalır). Not: yeni repoda yollar skills/ -> plugins/obsidian/skills/ değişti ve obsidian-headless adlı yeni skill var; yol güncellemesi ve yeni skill ayrı bir ekleme kararıdır (bu ad değişikliğine dahil değil).",
       "eski_adlar": [
         "kepano/obsidian-skills"
-      ]
+      ],
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "6 bağımsız skil içeren ayrı skill reposu; köke bağlı değil ve yazılım kod tabanı değil."
     },
     {
       "repo": "google/elephant-goldfish-model",
@@ -933,7 +1347,10 @@
       "haric": [
         "^distributions/"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Google EGM: deep-context agent ile spec yazıp zero-context alt-agent'la sınama (12k★). distributions/claude: aynı 7 skill'in Claude dağıtım kopyası (openai.yaml'sız) — bilinçli hariç; skills/ kaynak sürüm."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Google EGM: deep-context agent ile spec yazıp zero-context alt-agent'la sınama (12k★). distributions/claude: aynı 7 skill'in Claude dağıtım kopyası (openai.yaml'sız) — bilinçli hariç; skills/ kaynak sürüm.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "7 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
     },
     {
       "repo": "openai/plugins",
@@ -964,14 +1381,20 @@
         "\\.(mp4|webm|mov|gif)$"
       ],
       "bagimlilik": "Remotion (Node.js; npx remotion). Ürün videoları için Remotion projesi gerekir.",
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Remotion ile 150 hazır 'shot' içeren ürün tanıtım videosu skill'i (17k★). Kökte tek skill; references/, template/, assets/ alınır; demo/galeri/polish çıktıları (≈1000 dosya) alınmaz."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Remotion ile 150 hazır 'shot' içeren ürün tanıtım videosu skill'i (17k★). Kökte tek skill; references/, template/, assets/ alınır; demo/galeri/polish çıktıları (≈1000 dosya) alınmaz.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Kökte tek bağımsız skil; köke bağlı ek skil yok ve kendi destek dosyalarıyla tekil."
     },
     {
       "repo": "dreammis/social-auto-upload",
       "tip": "T1",
       "oncelik": 2,
       "bagimlilik": "sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).",
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Douyin/TikTok/YouTube/Bilibili/Xiaohongshu'ya video-yazı yayınlama CLI'sinin 18 skill'i (16k★, Çince). YouTube kanalı işi için eklendi."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Douyin/TikTok/YouTube/Bilibili/Xiaohongshu'ya video-yazı yayınlama CLI'sinin 18 skill'i (16k★, Çince). YouTube kanalı işi için eklendi.",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Asıl işi video-yazı yayınlama CLI yazılımı; 18 skil bu CLI'nin kullanıcıları için."
     },
     {
       "repo": "krillinai/OpenCreator",
@@ -982,7 +1405,10 @@
       "haric": [
         "^apps/",
         "^packages/"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Asıl işi video çeviri-dublaj uygulaması ve CLI'si; arşivdeki 7 skil bu aracın kullanıcıları için."
     },
     {
       "repo": "blader/humanizer",
@@ -992,19 +1418,28 @@
         "^\\.github/",
         "^\\.claude-plugin/"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Metindeki AI yazım izlerini temizleyen tek skill (65k★). Kökte tek skill."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Metindeki AI yazım izlerini temizleyen tek skill (65k★). Kökte tek skill.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız skil var ve asıl iş skilin kendisi."
     },
     {
       "repo": "cathrynlavery/diagram-design",
       "tip": "T1",
       "oncelik": 2,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Editoryal diyagram tasarımı; skills/diagram-design (65k★). Kök scripts/ ve docs/ skill klasörü dışında, alınmaz."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Editoryal diyagram tasarımı; skills/diagram-design (65k★). Kök scripts/ ve docs/ skill klasörü dışında, alınmaz.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız diyagram tasarımı skili bulunuyor."
     },
     {
       "repo": "Nutlope/hallmark",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 'Anti-AI-slop' tasarım skill'i (48k★). impeccable (öncelik 2), taste-skill ile aynı iş: örtüşme grubunda alternatif olarak değerlendirilecek."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. 'Anti-AI-slop' tasarım skill'i (48k★). impeccable (öncelik 2), taste-skill ile aynı iş: örtüşme grubunda alternatif olarak değerlendirilecek.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız web tasarım skili bulunuyor."
     },
     {
       "repo": "JuliusBrussee/caveman",
@@ -1013,13 +1448,19 @@
       "haric": [
         "^plugins/"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Kısa çıktı / token tasarrufu skilleri (117k★): caveman, ultracave, megacave, cavecrew + inceleme/refactor skilleri. plugins/caveman/skills aynı 6 skill'in plugin kopyası: bilinçli hariç (T1; dahil kullanılmaz çünkü dahil dışı kalanlar 'karar bekliyor' sayılır). proxy/, engine/, packages/ içinde SKILL.md yok."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Kısa çıktı / token tasarrufu skilleri (117k★): caveman, ultracave, megacave, cavecrew + inceleme/refactor skilleri. plugins/caveman/skills aynı 6 skill'in plugin kopyası: bilinçli hariç (T1; dahil kullanılmaz çünkü dahil dışı kalanlar 'karar bekliyor' sayılır). proxy/, engine/, packages/ içinde SKILL.md yok.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 22 bağımsız skil var ve asıl iş skillerin kendisi."
     },
     {
       "repo": "Orchestra-Research/AI-Research-SKILLs",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. ML araştırma/mühendislik skilleri, 98 skill numaralı konu klasörlerinde (14k★). pytorch-lightning adı K-Dense'te de var."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. ML araştırma/mühendislik skilleri, 98 skill numaralı konu klasörlerinde (14k★). pytorch-lightning adı K-Dense'te de var.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 98 bağımsız ML araştırma ve mühendislik skili bulunuyor."
     },
     {
       "repo": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -1028,25 +1469,37 @@
       "haric": [
         "^skills/skills-codex"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. ARIS: otonom ML araştırma skilleri, 87 skill (19k★). skills/skills-codex* (Codex ve Gemini/Claude inceleme kopyaları, 110 dosya) bilinçli hariç; ana sürüm alınır."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. ARIS: otonom ML araştırma skilleri, 87 skill (19k★). skills/skills-codex* (Codex ve Gemini/Claude inceleme kopyaları, 110 dosya) bilinçli hariç; ana sürüm alınır.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 87 bağımsız otonom ML araştırma skili bulunuyor."
     },
     {
       "repo": "zubair-trabzada/geo-seo-claude",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GEO (AI arama) odaklı SEO skilleri (12k★); claude-seo'nun alternatifi."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GEO (AI arama) odaklı SEO skilleri (12k★); claude-seo'nun alternatifi.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 16 SEO ve GEO odaklı bağımsız skil bulunuyor."
     },
     {
       "repo": "Ryze-AI-Adgent/open-seo-mcp-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Ücretsiz SEO MCP sunucusu + 8 SEO/GEO skill'i (9k★). seo-audit adı anthropics'te var (o kazanır)."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Ücretsiz SEO MCP sunucusu + 8 SEO/GEO skill'i (9k★). seo-audit adı anthropics'te var (o kazanır).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 8 SEO/GEO skili var; ayrı bir yazılım ürünü bağımlılığı kesin değil."
     },
     {
       "repo": "hardikpandya/stop-slop",
       "tip": "T1",
       "oncelik": 4,
-      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-02). humanizer'ın kısa/hafif alternatifi."
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-02). humanizer'ın kısa/hafif alternatifi.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız yazı düzenleme skili bulunuyor."
     },
     {
       "repo": "zarazhangrui/frontend-slides",
@@ -1058,13 +1511,19 @@
       "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-02). Kökteki SKILL.md ile plugins/ kopyası birebir aynı; sadece kök alınır.",
       "dosya_haric": [
         "^plugins/"
-      ]
+      ],
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız HTML sunum oluşturma skili bulunuyor."
     },
     {
       "repo": "moiz-za/etsy-seller-seo-system",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Etsy başlık/13 etiket/açıklama; canlı Etsy autocomplete ve rakip SERP. DİKKAT: ~/etsy-listings/ altına yazar."
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Etsy başlık/13 etiket/açıklama; canlı Etsy autocomplete ve rakip SERP. DİKKAT: ~/etsy-listings/ altına yazar.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 skil var; notta repo kök klasörlerine bağlı bir proje iskeleti belirtilmemiş."
     },
     {
       "repo": "xianyu110/ecommerce-image-skills",
@@ -1074,19 +1533,28 @@
         "^skills/taobao-detail-long-image/",
         "^skills/xiaohongshu-cover/"
       ],
-      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Ürün görseli skilleri (GPT Image API ya da prompt paketi). Taobao/Xiaohongshu (Çin platformu) skilleri hariç. Açıklamalar Çince-İngilizce karışık."
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Ürün görseli skilleri (GPT Image API ya da prompt paketi). Taobao/Xiaohongshu (Çin platformu) skilleri hariç. Açıklamalar Çince-İngilizce karışık.",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 10 bağımsız e-ticaret ürün görseli skili bulunuyor."
     },
     {
       "repo": "ehmo/platform-design-skills",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Apple HIG, Material 3, WCAG 2.2 platform kuralları (ios/android/web/macos…)."
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Apple HIG, Material 3, WCAG 2.2 platform kuralları (ios/android/web/macos…).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 8 bağımsız platform tasarım kuralı skili bulunuyor."
     },
     {
       "repo": "twostraws/SwiftData-Agent-Skill",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). SwiftData kodu yazma/inceleme (Paul Hudson); kütüphanede karşılığı yoktu."
+      "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). SwiftData kodu yazma/inceleme (Paul Hudson); kütüphanede karşılığı yoktu.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız SwiftData geliştirme ve inceleme skili bulunuyor."
     },
     {
       "repo": "RevenueCat/play-billing-skills",
@@ -1098,7 +1566,10 @@
       "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Sadece google-play/ (Play Billing, ücretsiz). revenuecat/ alt ağacı ücretli RevenueCat servisine bağlı olduğu için alınmadı.",
       "haric": [
         "^(?!google-play/)"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 kaynak ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "rshankras/claude-code-apple-skills",
@@ -1110,7 +1581,10 @@
       "not": "Konu takibi adayıydı; kullanıcı önerilenleri onayladı (2026-11-02). Sadece skills/app-store/ (ASO, red yönetimi, yorum yanıtı, IAP, ekran görüntüsü planı); repo geneli 184 skill.",
       "haric": [
         "^(?!skills/app-store/)"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 kaynak ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "Leonxlnx/earshot",
@@ -1119,19 +1593,28 @@
       "dahil": [
         "^skills/"
       ],
-      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). earshot: ses analizi (CLAP+AST, Python/torch kurulumu, ilk çalışmada HF model indirir; MCP kaydını user scope'a önerir). real-sound: lisanslı gerçek SFX seçimi/miks, sound-effects alternatifi. Rol çekirdeğine girmez."
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). earshot: ses analizi (CLAP+AST, Python/torch kurulumu, ilk çalışmada HF model indirir; MCP kaydını user scope'a önerir). real-sound: lisanslı gerçek SFX seçimi/miks, sound-effects alternatifi. Rol çekirdeğine girmez.",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 kaynak ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "YildizDikme/claude-video-edit",
       "tip": "T1",
       "oncelik": 6,
-      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). Kullanıcı: alternatif olarak al. Skill adı 'video-edit' OpenMontage ile aynı; OpenMontage tercih kalır. Betik yollarını ~/.claude/skills/video-edit varsayar, ~/.claude/video-edit/ altına profil yazar."
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). Kullanıcı: alternatif olarak al. Skill adı 'video-edit' OpenMontage ile aynı; OpenMontage tercih kalır. Betik yollarını ~/.claude/skills/video-edit varsayar, ~/.claude/video-edit/ altına profil yazar.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 skil var; repo kök iskeleti değil, sabit kullanıcı dizini yollarını kullanan tek skil."
     },
     {
       "repo": "yohannescodes/apple-app-review-compliance",
       "tip": "T1",
       "oncelik": 3,
-      "not": "Konu takibi adayıydı; kullanıcı önerileni onayladı (2026-11-07). App Store Review Guidelines (16 Eki 2026) uyum denetimi; rshankras app-store/rejection-handler'ı tamamlar."
+      "not": "Konu takibi adayıydı; kullanıcı önerileni onayladı (2026-11-07). App Store Review Guidelines (16 Eki 2026) uyum denetimi; rshankras app-store/rejection-handler'ı tamamlar.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız App Store inceleme uyumluluk skili bulunuyor."
     },
     {
       "repo": "leodavincs/kalem",
@@ -1140,13 +1623,19 @@
       "dahil": [
         "^\\.claude/skills/"
       ],
-      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; 'ekle' dedi (2026-11-07). Kodla video: sahne başına motor seçimi (Paper.js/PixiJS/HyperFrames/Three.js/Manim/Levha) + referans videodan istem çıkarma. Skiller repo kökünden (motorlar/, kurulum.sh, projeler/) çalışır; tek başına projeye kurulunca betik yolları bozulur — klonlanıp içinde çalışılacak repo."
+      "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; 'ekle' dedi (2026-11-07). Kodla video: sahne başına motor seçimi (Paper.js/PixiJS/HyperFrames/Three.js/Manim/Levha) + referans videodan istem çıkarma. Skiller repo kökünden (motorlar/, kurulum.sh, projeler/) çalışır; tek başına projeye kurulunca betik yolları bozulur — klonlanıp içinde çalışılacak repo.",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 kaynak (programlar.json ve kitler.json'da değil); kesin kural gereği urun-skil olur."
     },
     {
       "repo": "kylezantos/design-motion-principles",
       "tip": "T1",
       "oncelik": 2,
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo (MIT): arayüz hareketi kurma ve denetleme, üç tasarımcının (Emil Kowalski, Jakub Krehel, Jhey Tompkins) yayımlanmış işlerinden damıtılmış bakışlar. Bağımlılık yok."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo (MIT): arayüz hareketi kurma ve denetleme, üç tasarımcının (Emil Kowalski, Jakub Krehel, Jhey Tompkins) yayımlanmış işlerinden damıtılmış bakışlar. Bağımlılık yok.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde bağımlılığı olmayan 1 bağımsız hareket tasarımı skili bulunuyor."
     },
     {
       "repo": "sarpstar/cinecode",
@@ -1159,7 +1648,10 @@
         "^README\\.(en|ja|zh-CN)\\.md$"
       ],
       "bagimlilik": "SKILL.md frontmatter'ında hook tanımlar (UserPromptSubmit, Stop, PreToolUse: her istemde ve her araç çağrısında scripts/guard.py yerel denetimi çalışır). Ev dizinine yazar: ~/.cinecode/ (python yolu önbelleği, anahtar deposu keys.env, yazı tipi önbelleği). Node, Python 3 ve ffmpeg ister. Varsayılan seslendirme Gemini TTS (GEMINI_API_KEY), ElevenLabs isteğe bağlı; stok arama için ücretsiz Pixabay anahtarı.",
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo (MIT): kodla kısa film/reklam/müzik videosu (tek HTML ya da three.js, Web Audio, -14 LUFS master). SKILL.md repo kökünde; docs/ ve tests/ arşive alınmaz. Repo 2026-11-03'te oluşturuldu (çok yeni; sürüm kararlılığı izlenmeli)."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo (MIT): kodla kısa film/reklam/müzik videosu (tek HTML ya da three.js, Web Audio, -14 LUFS master). SKILL.md repo kökünde; docs/ ve tests/ arşive alınmaz. Repo 2026-11-03'te oluşturuldu (çok yeni; sürüm kararlılığı izlenmeli).",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde kodla video üretimine odaklı 1 bağımsız skil bulunuyor."
     },
     {
       "repo": "feitangyuan/onetake",
@@ -1171,7 +1663,10 @@
         "^assets/"
       ],
       "bagimlilik": "Lisans PolyForm Noncommercial 1.0.0: yalnızca ticari olmayan kullanım serbest. ffmpeg, node ve Python 3 ister; seslendirme için Kokoro (~/.cache/kokoro/venv altına kurulur) ve faster-whisper.",
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo: tek kamerayla kesintisiz ürün/özellik tanıtım filmi (tek HTML kompozisyon, hareket kütüphanesi, süreklilik ölçümü). SKILL.md repo kökünde; cases/, gallery/ ve assets/ (örnek filmler, GIF'ler, logo) arşive alınmaz."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Tek konulu uzman repo: tek kamerayla kesintisiz ürün/özellik tanıtım filmi (tek HTML kompozisyon, hareket kütüphanesi, süreklilik ölçümü). SKILL.md repo kökünde; cases/, gallery/ ve assets/ (örnek filmler, GIF'ler, logo) arşive alınmaz.",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde tek çekim tanıtım filmi üretimine odaklı 1 bağımsız skil bulunuyor."
     },
     {
       "repo": "harry0703/MoneyPrinterTurbo",
@@ -1181,7 +1676,10 @@
         "^docs/skill/"
       ],
       "bagimlilik": "Skill MoneyPrinterTurbo'yu kullanıcının ev dizinine kurar ve kurulum/üretim için onay sormaz; uv gerekir (yoksa ağdan kurar). LLM API anahtarı zorunlu, stok görüntü için Pexels anahtarı (ücretsiz) gerekir. Bazı video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; her biri ayrıca onay ister. Varsayılan çıktı Çince 9:16.",
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT): konudan stok görüntülü, seslendirmeli, altyazılı kısa video. Skill docs/skill/ altında (SKILL.md + mpt_agent.py); reponun geri kalanı uygulamanın kendisidir, arşive alınmaz."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT): konudan stok görüntülü, seslendirmeli, altyazılı kısa video. Skill docs/skill/ altında (SKILL.md + mpt_agent.py); reponun geri kalanı uygulamanın kendisidir, arşive alınmaz.",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 resmî ürün reposu ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "ruvnet/ruflo",
@@ -1198,14 +1696,20 @@
     },
     {
       "repo": "JohnHeibel/ClaudeAnimationBase",
-      "tip": "T6"
+      "tip": "T6",
+      "tur": "referans",
+      "bolum": "not",
+      "tur_gerekce": "T6 skilsiz tasarım teknolojisi kaynağı ve programlar.json'da değil; kesin kural gereği referans olur."
     },
     {
       "repo": "avenoxai/higgsfield-studio",
       "tip": "T1",
       "oncelik": 4,
       "bagimlilik": "Higgsfield hesabı ve Higgsfield CLI gerekir (CLI yoksa skill resmî kurulum betiğini ağdan indirip çalıştırır: curl … | sh; ilk kullanımda `higgsfield auth login`). Higgsfield MCP bağlayıcısı da kullanılabilir. Üretimler Higgsfield kredisi harcar; Soul eğitimi ücretli plan (Basic+) ister. video-prompt-builder üretilen varlıkları ~/Desktop/claudedump/ altına kaydetmeyi önerir (proje dışı).",
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Kişisel üretim hattından paylaşılan küçük koleksiyon (Higgsfield sponsorlu bir videonun eki): Higgsfield ile görsel/video üretimi, ürün çekimi, pazaryeri kartları, Seedance video planı ve Türkçe sunum sitesi skili. Repoda lisans dosyası YOK (GitHub: lisanssız; yeniden dağıtım hakkı belirtilmemiş)."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Kişisel üretim hattından paylaşılan küçük koleksiyon (Higgsfield sponsorlu bir videonun eki): Higgsfield ile görsel/video üretimi, ürün çekimi, pazaryeri kartları, Seedance video planı ve Türkçe sunum sitesi skili. Repoda lisans dosyası YOK (GitHub: lisanssız; yeniden dağıtım hakkı belirtilmemiş).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 6 bağımsız skil var ve repo bir yazılım ürünü değil kişisel skill koleksiyonu."
     },
     {
       "repo": "upstash/context7",
@@ -1217,13 +1721,19 @@
         "^packages/"
       ],
       "bagimlilik": "Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).",
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT): kütüphane/framework için güncel, sürüme özel doküman ve kod örneği getirir. context7-mcp skilinin birebir kopyaları plugins/ altında başka araçlar (Cursor, Copilot, Antigravity, Codex) için durur; araç ayna olarak ayırır."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT): kütüphane/framework için güncel, sürüme özel doküman ve kod örneği getirir. context7-mcp skilinin birebir kopyaları plugins/ altında başka araçlar (Cursor, Copilot, Antigravity, Codex) için durur; araç ayna olarak ayırır.",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 resmî ürün reposu ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "wj-sidiss/etsy-otomasyon-full-full-surum",
       "tip": "T5",
       "not": "2026-11-10 eklendi (kullanıcı isteği). Skill değil, PROGRAM (programlar.json -> etsyotomasyon; kaynak kopyası programlar/etsyotomasyon/kaynak, v0.5.0): yerelde çalışan Etsy mağaza yönetim programı (Python, MIT). Etsy Open API v3 + satıcının kendi Etsy uygulaması (OAuth); tasarımdan taslak ilan, SEO, sipariş, kâr-zarar, Pinterest.",
-      "program": "etsyotomasyon"
+      "program": "etsyotomasyon",
+      "tur": "program",
+      "bolum": "katalog",
+      "tur_gerekce": "programlar.json'da kayıtlı ve bilgisayara kurulan yerel bir yazılım (T5); kesin kural gereği program olur."
     },
     {
       "repo": "jacob-bd/gemini-notebook-mcp-cli",
@@ -1240,7 +1750,10 @@
         "jacob-bd/notebooklm-mcp-cli"
       ],
       "not": "2026-11-12 eklendi (kullanıcı isteği: 'bunu kütüphaneye kaydet ve takiplerini oraya göre hazırla'). Skill değil, PROGRAM (programlar.json -> nlm; PyPI paketi notebooklm-mcp-cli, uv tool ile kurulu, MIT): Gemini Notebook (NotebookLM) için komut satırı aracı ve MCP sunucusu. Paketiyle gelen nlm-skill projelere kopya olarak değil program bağı olarak verilir (--program-skill nlm:nlm-skill); arşive skill alınmaz.",
-      "program": "nlm"
+      "program": "nlm",
+      "tur": "program",
+      "bolum": "katalog",
+      "tur_gerekce": "programlar.json'da kayıtlı, bilgisayara kurulu CLI ve MCP sunucusu (T5); kesin kural gereği program olur."
     },
     {
       "repo": "digitalsamba/claude-code-video-toolkit",
@@ -1289,7 +1802,10 @@
         "oturum": "İş 2 toplu video ekleme: kullanıcı 'Onları normal şekilde ekle' onayı (2026-11-15). 4 repodan biri.",
         "commit": "0f808d8610bcfa08dbae9eca97360b60d9d779f4",
         "guvenlik_notu": "skills/ altında yalnız SKILL.md var (çalıştırılabilir betik yok); skiller yerel auto-editor CLI'sini çağırır — ağdan kod indirip çalıştırma / proje dışına yazma / gizli okuma yok. Transcribe skili HuggingFace'ten ggml whisper modeli indirir (kullanıcı başlatır)."
-      }
+      },
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 resmî ürün reposu ve programlar.json'da yer almıyor; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "browser-use/video-use",
@@ -1313,7 +1829,10 @@
         "oturum": "İş 2 toplu video ekleme: kullanıcı 'Onları normal şekilde ekle' onayı (2026-11-15). 4 repodan biri. install.md dışlaması ajan kararı (yol kapısı TAKILDI; dosya yalnız kural 1'in yasakladığı global kurulum talimatı içeriyor, helpers bağına dokunmaz) — ana oturum geri alabilir (install.md'yi tut + yol_onay).",
         "commit": "43cfc566833548093455c9d4a46bd69913b7e552",
         "guvenlik_notu": "helpers/transcribe.py kullanıcının ses dosyasını ElevenLabs Scribe'a (api.elevenlabs.io) yollar ve .env'den yalnız ELEVENLABS_API_KEY okur (Path(__file__).parent.parent/.env = proje kurulumunda skill klasörü); render.py/grade.py yerel ffmpeg çalıştırır, çıktıyı yalnız <videos_dir>/edit/ altına yazar (repo/proje köküne yazmaz). curl|sh yok. DİKKAT: SKILL.md Setup bölümü ELEVENLABS_API_KEY'i skill klasörünün yanındaki .env'e yazmayı söyler (proje kurulumunda projenin git ağacına düşer; commitlenmemeli)."
-      }
+      },
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 2 skil var (helpers arşive alınarak korunuyor); proje iskeleti ya da ayrı ürün değil."
     },
     {
       "repo": "avenoxai/avenox-video-kurgu-notlari",
@@ -1327,7 +1846,10 @@
         "oturum": "İş 2 toplu video ekleme: kullanıcı 'Onları normal şekilde ekle' onayı (2026-11-15). 4 repodan biri.",
         "commit": "dba60a2e50c8f05990502c52581ed1a13414a1be",
         "guvenlik_notu": "Skill yalnız .md dosyalarından oluşur (references + templates); çalıştırılabilir betik, ağ çağrısı, gizli okuma yok. Dış araçlara (Whisper yerel/API, HyperFrames, görsel/video üretimi) metodoloji olarak atıfta bulunur, kendisi çağırmaz."
-      }
+      },
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız video kurgu metodolojisi skili bulunuyor."
     },
     {
       "repo": "yerel/kendi",
@@ -1344,7 +1866,10 @@
         "tarih": "2026-11-12",
         "not": "K-32/K-37: kullanıcının kendi skilleri kütüphaneye alınır; yerel kaynak, GitHub'sız"
       },
-      "not": "Yerel kaynak (T7): kütüphane içindeki kendi/ klasörü, her skill bir klasör. GitHub'a sorulmaz, ağ gerekmez. Skilleri kullanıcı yazdı. nlm-skill 2026-11-12'de buradan çıkarıldı (nlm programının paketiyle gelir; projelere program bağı olarak verilir: --program-skill nlm:nlm-skill, programlar.json -> nlm); arşivdeki 0.15.8 kopyası emekli olarak durur. Düzenleme akışı: kendi/<ad>/ düzenlenir, sonra kaynak-cek.py --repo yerel/kendi ve arsiv-yerlestir.py (rehber/03 'Kendi skillerim'). Yalnız kullanıcının kendi yazdığı skiller burada durur; web sitesinden alınan skiller yerel/site kaynağındadır (K-57)."
+      "not": "Yerel kaynak (T7): kütüphane içindeki kendi/ klasörü, her skill bir klasör. GitHub'a sorulmaz, ağ gerekmez. Skilleri kullanıcı yazdı. nlm-skill 2026-11-12'de buradan çıkarıldı (nlm programının paketiyle gelir; projelere program bağı olarak verilir: --program-skill nlm:nlm-skill, programlar.json -> nlm); arşivdeki 0.15.8 kopyası emekli olarak durur. Düzenleme akışı: kendi/<ad>/ düzenlenir, sonra kaynak-cek.py --repo yerel/kendi ve arsiv-yerlestir.py (rehber/03 'Kendi skillerim'). Yalnız kullanıcının kendi yazdığı skiller burada durur; web sitesinden alınan skiller yerel/site kaynağındadır (K-57).",
+      "tur": "kendi",
+      "bolum": "arsiv",
+      "tur_gerekce": "T7 yerel kaynak, kullanıcının kendi yazdığı skiller; kesin kural gereği kendi olur."
     },
     {
       "repo": "yerel/site",
@@ -1361,7 +1886,10 @@
         "not": "K-57: GitHub'da olmayan, sitesi verilen skiller kendi/ yerine site/<ad>/ klasöründe ve kendi yerel kaynağında tutulur; takip kaydı zorunlu",
         "lisans_onay": "stil (Smokich sitesi): lisans belirtilmemiş; kullanıcı 2026-11-15 açıkça onayladı: 'Evet, kişisel kullanım için tut' (depo private)"
       },
-      "not": "Yerel kaynak (T8): kütüphane içindeki site/ klasörü, her skill bir klasör (site/<ad>/). Skiller bir web sitesinden alındı, kullanıcının yazdığı değildir. GitHub'a sorulmaz, ağ gerekmez, KAYIP sayılmaz. Sahip, lisans, site adresi ve izlenen dosyaların sha256'sı skill başına site-takip.json'da (zorunlu); site değişikliğini araclar/site-takip.py bildirir, aylık zincir çalıştırır. Güncelleme yalnız kullanıcı onayıyla (rehber/03 B3). Sitede GitHub reposu çıkarsa skill normal kaynağa (rehber/03 A1..A9) geçirilir ve site/ kopyası emekli olur."
+      "not": "Yerel kaynak (T8): kütüphane içindeki site/ klasörü, her skill bir klasör (site/<ad>/). Skiller bir web sitesinden alındı, kullanıcının yazdığı değildir. GitHub'a sorulmaz, ağ gerekmez, KAYIP sayılmaz. Sahip, lisans, site adresi ve izlenen dosyaların sha256'sı skill başına site-takip.json'da (zorunlu); site değişikliğini araclar/site-takip.py bildirir, aylık zincir çalıştırır. Güncelleme yalnız kullanıcı onayıyla (rehber/03 B3). Sitede GitHub reposu çıkarsa skill normal kaynağa (rehber/03 A1..A9) geçirilir ve site/ kopyası emekli olur.",
+      "tur": "site",
+      "bolum": "arsiv",
+      "tur_gerekce": "T8 yerel kaynak, web sitesinden alınan skil; kesin kural gereği site olur."
     },
     {
       "repo": "google/skills",
@@ -1383,7 +1911,10 @@
         "yol_onay": "YOL KAPISI: firebase-basics/references/refresh/android_studio.md kullanıcıya (insana) yönelik bir 'yenileme' talimatında güncel dosyaları ~/.agents/skills'e kopyalamayı söylüyor; skilin çalışırken yazdığı kod değil, referans metnidir. Kütüphaneye skil olarak alınır (A2), projelere yalnız skill-ekle.py ile kurulur (global klasörlere hiç dokunmaz); güvenlik_notu'na işlendi. Kullanıcıya satır (references/refresh/android_studio.md:40, ~/.agents/skills'e kopyalama notu) gösterildi; kullanıcı 2026-11-16'da onayladı ('önerdigin işlemi yapabilirsin'). Kaynak da A2 bulguları açıklanarak onaylandı ('Evet, filtreli ekle').",
         "guvenlik_notu": "firebase-basics bir referans dosyasında ~/.agents/skills'e 'npx skills add' ile kurulum öneriyor (not düşüldü, uygulanmaz); developing-genkit-go/-dart 'curl -sL cli.genkit.dev | bash' içeriyor; çok sayıda skil sürümü sabitlenmemiş 'npx ...@latest' çağırıyor; 174 skil gcloud telemetri etiketi (CLOUDSDK_METRICS_REQUEST_ATTRIBUTION) kullanıyor; SecOps/SCC skilleri savunma amaçlı (K-58 uygulanmaz)."
       },
-      "not": "Resmî Google skill koleksiyonu (Apache-2.0). Filtre: yalnız ^skills/ altındaki SKILL.md'ler; plugins/ altındaki kopyalar, .mcp.json ve 16 submodule haric. finding-google-skills skili haric tutuldu: çalışırken raw.githubusercontent.com/google/skills/main/index.json'u sabitlenmemiş main dalından çekip sürüm sabitlemesini atlıyor. Ad çakışması: developing-genkit-dart kütüphanede evanca/flutter-ai-rules kaydında var (tercih); çıplak ad el değiştirmez, bu kaynağınki developing-genkit-dart@google-skills olur, eski kayıt durum_elle ile tercih sabitlendi (devir yapılmadı; aynı iş olabilir, ad_devral kararı ana oturumun). Güvenlik: firebase-basics referans dosyasında global ~/.agents/skills'e kurulum talimatı var (kural 1 ihlali, kurulan kopyaya uygulanmaz); genkit-go/dart 'curl | bash'; birçok skil 'npx ...@latest' (sürümsüz); gcloud telemetri etiketi yaygın. SecOps/Security Command Center skilleri savunma amaçlı -> b-yazilim-gelistirme/06-devops-guvenlik-performans (K-58 kapsamı dışı)."
+      "not": "Resmî Google skill koleksiyonu (Apache-2.0). Filtre: yalnız ^skills/ altındaki SKILL.md'ler; plugins/ altındaki kopyalar, .mcp.json ve 16 submodule haric. finding-google-skills skili haric tutuldu: çalışırken raw.githubusercontent.com/google/skills/main/index.json'u sabitlenmemiş main dalından çekip sürüm sabitlemesini atlıyor. Ad çakışması: developing-genkit-dart kütüphanede evanca/flutter-ai-rules kaydında var (tercih); çıplak ad el değiştirmez, bu kaynağınki developing-genkit-dart@google-skills olur, eski kayıt durum_elle ile tercih sabitlendi (devir yapılmadı; aynı iş olabilir, ad_devral kararı ana oturumun). Güvenlik: firebase-basics referans dosyasında global ~/.agents/skills'e kurulum talimatı var (kural 1 ihlali, kurulan kopyaya uygulanmaz); genkit-go/dart 'curl | bash'; birçok skil 'npx ...@latest' (sürümsüz); gcloud telemetri etiketi yaygın. SecOps/Security Command Center skilleri savunma amaçlı -> b-yazilim-gelistirme/06-devops-guvenlik-performans (K-58 kapsamı dışı).",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 197 (200 altı) bağımsız skil var ve asıl iş skill koleksiyonunun kendisi."
     },
     {
       "repo": "latent-spaces/brag",
@@ -1398,7 +1929,10 @@
         "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
         "commit": "06379432a9243c951dfcc051153be18d2d261044",
         "guvenlik_notu": "SKILL.md ve betikler okundu: ağdan kod indirip çalıştırma ya da gizli bilgi okuma yok; proje kodunu okuyup video üretir."
-      }
+      },
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde tanıtım videosu üreten 2 bağımsız skil bulunuyor."
     },
     {
       "repo": "tuzhechen2005/opus-video-skills",
@@ -1415,7 +1949,10 @@
         "commit": "dafed5bd55eb8bca01baeff2b059cab2446cf042",
         "lisans_onay": "Kullanıcı 2026-11-17: GitHub NOASSERTION; LICENSE dosyası MIT, ek notlar (MIT + Heibel payı (ClaudeAnimationBase, MIT) ve üçüncü taraf notları) kabul edildi.",
         "guvenlik_notu": "Betikler yerel kare üretimi ve ffmpeg kodlaması; ağdan kod çalıştırma yok. SKILL.md'deki ~/.claude/skills/<ad>/scripts yolu sabit kurulum yolu örneğidir (yol-tara kapısı)."
-      }
+      },
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 2 skil var; repo kök klasörlerine bağlı bir proje iskeleti değil."
     },
     {
       "repo": "Barty-Bart/motion-graphics",
@@ -1436,7 +1973,10 @@
       "skill_bagimlilik": {
         "skills/object-separation": "SAM 2 modelini yerelde çalıştırır: pip install ile Python bağımlılıkları kurulur, model dosyaları indirilir (disk, RAM; GPU önerilir). Hiçbir şey yüklenmez.",
         "skills/sound-effects": "pip install ile Python bağımlılıkları (ses analizi) ve ses efekti kütüphanesi indirmesi gerekir; ElevenLabs isteğe bağlı."
-      }
+      },
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 6 bağımsız hareketli grafik ve ses efekti skili bulunuyor."
     },
     {
       "repo": "AbubakrChan/product-launch-motion",
@@ -1459,7 +1999,10 @@
         "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
         "commit": "edbfb105382f21507bad895d8b5f6e0faa67487c",
         "guvenlik_notu": "Kök SKILL.md ve references okundu; ağdan kod çalıştırma ya da gizli bilgi okuma yok."
-      }
+      },
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız ürün lansmanı hareket tasarımı skili bulunuyor."
     },
     {
       "repo": "JuneYaooo/rea-video",
@@ -1477,7 +2020,10 @@
         "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
         "commit": "64615718086337e8f9a4566e286d72b28ec13172",
         "guvenlik_notu": "Skill kökü pip paketini kurmayı ister; ilk çalışmada model indirir. Gizli bilgi okuma yok."
-      }
+      },
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 kaynak ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "veedstudio/open-edit",
@@ -1495,7 +2041,10 @@
         "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
         "commit": "e4dc93892268eaf04b64386935ba6e53098a5c79",
         "guvenlik_notu": "npx ile CLI indirir (resmî VEED paketi); gizli bilgi okuma yok, anahtarlar ortam değişkeniyle."
-      }
+      },
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 resmî ürün reposu ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "heygen-com/hyperframes-community-skills",
@@ -1520,7 +2069,10 @@
       "skill_bagimlilik": {
         "skills/session-story": "GİZLİLİK: Yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, memory dosyaları) okur; skill yalnız kullanıcı 'evet' dedikten sonra okuduğunu söyler. HyperFrames CLI (npx hyperframes) gerekir.",
         "skills/day-in-my-life": "GİZLİLİK: Yerel Claude konuşma geçmişini (~/.claude/projects/*/*.jsonl, memory dosyaları) okur; skill yalnız kullanıcı 'evet' dedikten sonra okuduğunu söyler. HyperFrames CLI (npx hyperframes) gerekir."
-      }
+      },
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 7 topluluk skili var; yazılım ürünü reposu değil, skill koleksiyonu."
     },
     {
       "repo": "shadcn-labs/snapcn",
@@ -1541,7 +2093,10 @@
       },
       "haric": [
         "^\\.claude/"
-      ]
+      ],
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T2 kaynak ve programlar.json'da değil; kesin kural gereği urun-skil olur."
     },
     {
       "repo": "kajisho5/ffmpeg-skill",
@@ -1634,7 +2189,10 @@
         "oturum": "İnceleme raporu görüldü, 10 repo onaylandı (2026-11-17)",
         "commit": "f1c97cbffeac71b8fdfca2f790ceb00db3bcce65",
         "guvenlik_notu": "Betikler yerel ffmpeg çağırır; ağdan kod çalıştırma yok. Repo-içi geliştirme skilleri hariç."
-      }
+      },
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "T1 kaynak, arşivde 1 bağımsız FFmpeg video-ses düzenleme skili bulunuyor."
     },
     {
       "repo": "nateherkai/herk-edit-kit",

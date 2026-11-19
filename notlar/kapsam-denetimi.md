@@ -1,6 +1,6 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-18 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-19 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
 **Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 8821 · Arşivdeki skill kaydı: 5913 · Bileşen (komut/agent): 662
 
@@ -159,11 +159,11 @@
 
 ## Referans repoları (T5/T6)
 
-47 repo tarandı; içlerinde skill yok. Program bağıyla verilen (arşive alınmayan) skiller: jacob-bd/gemini-notebook-mcp-cli (1).
+45 repo tarandı; içlerinde skill yok.
 
 ## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)
 
-1 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: sirioberati/YouTube-AI-Video-Editing-System
+3 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: jacob-bd/gemini-notebook-mcp-cli, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum
 
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 
