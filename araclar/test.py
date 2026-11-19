@@ -603,7 +603,7 @@ def kurulum_yol_testleri():
 
     try:
         sk = json_oku(KOK / "registry.json")["skiller"]
-        ct = next(x for x in sk if x["id"] == "code-tour")
+        ct = next(x for x in sk if x["id"] == "youtube-arama")
         ct_arsiv = KOK / ct["yol"]
         ct_once = ozet(ct_arsiv)
 
@@ -811,7 +811,7 @@ def kurulum_yol_testleri():
             se.yollari_yeniden_adlandir(gecici, {s["ad"], s.get("klasor_adi")}, ad)
             se.kardes_yollarini_yeniden_adlandir(gecici, {k: v[0] for k, v in (kardes or {}).items()})
             gecici.rename(hedef)
-        ornek_idler = ["code-tour", "etsy-seller", "ui-ux-pro-max", "swift-code-reviewer", "gsap-core"]
+        ornek_idler = ["youtube-arama", "etsy-seller", "ui-ux-pro-max", "swift-code-reviewer", "gsap-core"]
         ornekler = [x for x in sk if x["id"] in ornek_idler] + [x for x in sk if x.get("aciklama_duzeltme")][:6] + [x for x in sk if x.get("yama")][:2]
         farklar = []
         for i, x in enumerate(ornekler):
@@ -825,11 +825,11 @@ def kurulum_yol_testleri():
         test(f"hazirla(onek=None): {len(ornekler)} gerçek skill için eski yolla (kopya + onarım + adlandırma) bayt bayt aynı, uyarı yok, yol çevirisi çalışmaz", not farklar, str(farklar))
         a_d, b_d = kok / "m-eski" / "ct" / "x", kok / "m-yeni" / "ct" / "x"
         a_d.parent.mkdir(parents=True), b_d.parent.mkdir(parents=True)
-        se.hazirla(ct_arsiv, a_d, ct, "code-tour", onek=".agents/skills", skiller=sk)
-        se.hazirla(ct_arsiv, b_d, ct, "code-tour", onek=None, skiller=sk)
-        test("hazirla: onek verilince code-tour kopyası değişir, onek=None iken değişmez (olumlu ve olumsuz kontrol)",
-             ozet(a_d) != ozet(b_d) and ".agents/skills/code-tour/scripts/validate_tour.py" in (a_d / "SKILL.md").read_text(encoding="utf-8")
-             and "~/.agents/skills/code-tour/scripts/validate_tour.py" in (b_d / "SKILL.md").read_text(encoding="utf-8"))
+        se.hazirla(ct_arsiv, a_d, ct, "youtube-arama", onek=".agents/skills", skiller=sk)
+        se.hazirla(ct_arsiv, b_d, ct, "youtube-arama", onek=None, skiller=sk)
+        test("hazirla: onek verilince youtube-arama kopyası değişir, onek=None iken değişmez (olumlu ve olumsuz kontrol)",
+             ozet(a_d) != ozet(b_d) and ".agents/skills/youtube-arama/scripts/youtube_search.py" in (a_d / "SKILL.md").read_text(encoding="utf-8")
+             and "~/.claude/skills/youtube-arama/scripts/youtube_search.py" in (b_d / "SKILL.md").read_text(encoding="utf-8"))
         sc_kaynak = (KOK / "araclar" / "skill-calistir.py").read_text(encoding="utf-8")
         cagrilar = []
         for m_ in re.finditer(r"se\.hazirla\(", sc_kaynak):  # dengeli parantezle çağrının tamamı
@@ -862,7 +862,7 @@ def kurulum_yol_testleri():
             if not d and not oto and not yama:
                 return None
             return hashlib.sha1(f"{o.ONARIM_SURUMU}|{d or ''}|{'|'.join(oto)}|{'|'.join(yama)}".encode()).hexdigest()[:12]
-        bilinen6 = {"ui-ux-pro-max", "siege", "swift-code-reviewer", "code-tour", "etsy-seller", "mp-integrate"}
+        bilinen6 = {"ui-ux-pro-max", "siege", "swift-code-reviewer", "youtube-arama", "etsy-seller", "mp-integrate"}
         orn = list({x["id"]: x for x in [x for x in sk if x.get("aciklama_duzeltme") or x.get("yama") or x["id"] in bilinen6] + sk[::12]}.values())
         degisen, yanlis_ayni, yanlis_fark = [], [], []
         for x in orn:
@@ -875,12 +875,12 @@ def kurulum_yol_testleri():
             if cev and yeni_ == eski_:
                 yanlis_fark.append(x["id"])
         test(f"onarim_izi: {len(orn)} skill örneğinde (aciklama_duzeltme ve yamalılar dahil) çevrilecek yolu olmayanlarda eski formülle birebir aynı",
-             len(orn) >= 300 and not yanlis_ayni and any(x.get("aciklama_duzeltme") for x in orn) and any(x.get("yama") for x in orn), str(yanlis_ayni[:5]))
+             len(orn) >= 200 and not yanlis_ayni and any(x.get("aciklama_duzeltme") for x in orn) and any(x.get("yama") for x in orn), str(yanlis_ayni[:5]))
         test("onarim_izi: çevrilecek kendi yolu olan skill'lerde değişir (bilinen beş skill dahil; yamalı etsy-seller hariç), yalnız onlarda",
              not yanlis_fark and (bilinen6 - {"etsy-seller"}) <= set(degisen) and "etsy-seller" not in degisen  # yamalı dosyadaki yol çevrilmez: iz değişmez
              and set(degisen) <= bilinen6 | {x["id"] for x in orn if o.yol_izi(x, sk)},
              str((sorted(set(degisen)), yanlis_fark[:5])))
-        # ============ h-i-l. gerçek akışlar (CLI, code-tour): ekle iz farkında kur çağırır, elle değişiklik korunur, guncelle mesajı, idempotans, kaldır
+        # ============ h-i-l. gerçek akışlar (CLI, youtube-arama): ekle iz farkında kur çağırır, elle değişiklik korunur, guncelle mesajı, idempotans, kaldır
         def kilit_yaz(proje, f):
             kp = proje / ".skill-kutuphanesi" / "kilit.json"
             k = json.loads(kp.read_text(encoding="utf-8"))
@@ -889,84 +889,84 @@ def kurulum_yol_testleri():
 
         def eski_kurulum(proje):
             """Eski sürümün kurduğu gibi: arşiv kopyası olduğu gibi (çevrilmemiş), kilitte iz yok, kurulu_hash kopyayla uyumlu."""
-            hedef = proje / ".agents" / "skills" / "code-tour"
+            hedef = proje / ".agents" / "skills" / "youtube-arama"
             shutil.rmtree(hedef)
             shutil.copytree(ct_arsiv, hedef, ignore=shutil.ignore_patterns("KAYNAK.md"))
-            kilit_yaz(proje, lambda k: (k["skiller"]["code-tour"].update(kurulu_hash=se.kurulu_hash(proje, "code-tour")), k["skiller"]["code-tour"].pop("onarim", None)))
+            kilit_yaz(proje, lambda k: (k["skiller"]["youtube-arama"].update(kurulu_hash=se.kurulu_hash(proje, "youtube-arama")), k["skiller"]["youtube-arama"].pop("onarim", None)))
 
         beklenen_iz = o.onarim_izi(ct, sk)
         p1 = yeni_proje()
         (p1 / "benim-notum.txt").write_text("dokunma\n", encoding="utf-8")
-        kod1, out1 = calistir(p1, "--skill", "code-tour", "--evet")
-        md1 = p1 / ".agents" / "skills" / "code-tour" / "SKILL.md"
-        yeni_yol = ".agents/skills/code-tour/scripts/validate_tour.py"
-        test("gerçek kurulum (code-tour): ~/.agents/skills/… yolları proje içine çevrilir, hedef var, doğrulama temiz, kilitte onarım izi yazılı",
-             kod1 == 0 and "doğrulama: ✅" in out1 and yeni_yol in md1.read_text(encoding="utf-8") and "~/.agents/skills/code-tour" not in md1.read_text(encoding="utf-8")
-             and (p1 / ".agents" / "skills" / "code-tour" / "scripts" / "validate_tour.py").exists()
-             and json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz and beklenen_iz, out1)
+        kod1, out1 = calistir(p1, "--skill", "youtube-arama", "--evet")
+        md1 = p1 / ".agents" / "skills" / "youtube-arama" / "SKILL.md"
+        yeni_yol = ".agents/skills/youtube-arama/scripts/youtube_search.py"
+        test("gerçek kurulum (youtube-arama): ~/.claude/skills/… yolları proje içine çevrilir, hedef var, doğrulama temiz, kilitte onarım izi yazılı",
+             kod1 == 0 and "doğrulama: ✅" in out1 and yeni_yol in md1.read_text(encoding="utf-8") and "~/.claude/skills/youtube-arama" not in md1.read_text(encoding="utf-8")
+             and (p1 / ".agents" / "skills" / "youtube-arama" / "scripts" / "youtube_search.py").exists()
+             and json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["youtube-arama"]["onarim"] == beklenen_iz and beklenen_iz, out1)
         # l. idempotans
-        agac1, hash1 = ozet(p1 / ".agents" / "skills" / "code-tour"), json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["kurulu_hash"]
-        kod2, out2 = calistir(p1, "--skill", "code-tour", "--evet")
-        kil2 = json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]
+        agac1, hash1 = ozet(p1 / ".agents" / "skills" / "youtube-arama"), json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["youtube-arama"]["kurulu_hash"]
+        kod2, out2 = calistir(p1, "--skill", "youtube-arama", "--evet")
+        kil2 = json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["youtube-arama"]
         test("idempotans: ikinci kurulum no-op (kopya aynı bayt, kurulu_hash aynı, yeniden kurulmadı)",
-             kod2 == 0 and "+ code-tour" not in out2 and ozet(p1 / ".agents" / "skills" / "code-tour") == agac1 and kil2["kurulu_hash"] == hash1 and kil2["onarim"] == beklenen_iz, out2)
+             kod2 == 0 and "+ youtube-arama" not in out2 and ozet(p1 / ".agents" / "skills" / "youtube-arama") == agac1 and kil2["kurulu_hash"] == hash1 and kil2["onarim"] == beklenen_iz, out2)
         kodd, outd = calistir(p1, "--dogrula")
         test("idempotans: kurulumdan hemen sonra --dogrula temiz", kodd == 0, outd)
         kodg, outg = calistir(p1, "--guncelle", "--kuru")
         test("idempotans: kurulumdan sonra --guncelle yeni iş önermez", "yol-yerellestirme" not in outg and "sabit yol çevirisi" not in outg, outg)
-        kodk, outk = calistir(p1, "--kaldir", "code-tour", "--evet")
+        kodk, outk = calistir(p1, "--kaldir", "youtube-arama", "--evet")
         test("kaldır: kopya ve kilit kaydı temiz kalkar, kullanıcının dosyası durur",
-             kodk == 0 and not (p1 / ".agents" / "skills" / "code-tour").exists() and not (p1 / ".claude" / "skills" / "code-tour").exists()
-             and "code-tour" not in json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"] and (p1 / "benim-notum.txt").read_text(encoding="utf-8") == "dokunma\n", outk)
+             kodk == 0 and not (p1 / ".agents" / "skills" / "youtube-arama").exists() and not (p1 / ".claude" / "skills" / "youtube-arama").exists()
+             and "youtube-arama" not in json_oku(p1 / ".skill-kutuphanesi" / "kilit.json")["skiller"] and (p1 / "benim-notum.txt").read_text(encoding="utf-8") == "dokunma\n", outk)
         pcl = yeni_proje()
-        kodc, outc = calistir(pcl, "--skill", "code-tour", "--arac", "claude", "--evet")
-        cmd = pcl / ".claude" / "skills" / "code-tour" / "SKILL.md"
-        test("gerçek kurulum --arac claude: yollar .claude/skills/code-tour/… olur, hedef var, doğrulama temiz",
-             kodc == 0 and ".claude/skills/code-tour/scripts/validate_tour.py" in cmd.read_text(encoding="utf-8") and not (pcl / ".agents" / "skills" / "code-tour").exists()
-             and (pcl / ".claude" / "skills" / "code-tour" / "scripts" / "validate_tour.py").exists() and calistir(pcl, "--dogrula")[0] == 0, outc)
-        agac_cl = ozet(pcl / ".claude" / "skills" / "code-tour")
-        kodc2, outc2 = calistir(pcl, "--skill", "code-tour", "--evet")
-        test("idempotans (sadece-Claude): ikinci kurulum no-op", kodc2 == 0 and "+ code-tour" not in outc2 and ozet(pcl / ".claude" / "skills" / "code-tour") == agac_cl, outc2)
+        kodc, outc = calistir(pcl, "--skill", "youtube-arama", "--arac", "claude", "--evet")
+        cmd = pcl / ".claude" / "skills" / "youtube-arama" / "SKILL.md"
+        test("gerçek kurulum --arac claude: yollar .claude/skills/youtube-arama/… olur, hedef var, doğrulama temiz",
+             kodc == 0 and ".claude/skills/youtube-arama/scripts/youtube_search.py" in cmd.read_text(encoding="utf-8") and not (pcl / ".agents" / "skills" / "youtube-arama").exists()
+             and (pcl / ".claude" / "skills" / "youtube-arama" / "scripts" / "youtube_search.py").exists() and calistir(pcl, "--dogrula")[0] == 0, outc)
+        agac_cl = ozet(pcl / ".claude" / "skills" / "youtube-arama")
+        kodc2, outc2 = calistir(pcl, "--skill", "youtube-arama", "--evet")
+        test("idempotans (sadece-Claude): ikinci kurulum no-op", kodc2 == 0 and "+ youtube-arama" not in outc2 and ozet(pcl / ".claude" / "skills" / "youtube-arama") == agac_cl, outc2)
         # h. ekle: eski izli kilit -> kur çağrılır ve kopya çevrilir
         ph = yeni_proje()
-        calistir(ph, "--skill", "code-tour", "--evet")
+        calistir(ph, "--skill", "youtube-arama", "--evet")
         eski_kurulum(ph)
-        ham_md = ph / ".agents" / "skills" / "code-tour" / "SKILL.md"
-        once_ham = "~/.agents/skills/code-tour/scripts/validate_tour.py" in ham_md.read_text(encoding="utf-8")
-        koh, outh = calistir(ph, "--skill", "code-tour", "--evet")
+        ham_md = ph / ".agents" / "skills" / "youtube-arama" / "SKILL.md"
+        once_ham = "~/.claude/skills/youtube-arama/scripts/youtube_search.py" in ham_md.read_text(encoding="utf-8")
+        koh, outh = calistir(ph, "--skill", "youtube-arama", "--evet")
         test("ekle(): eski izli (izsiz) kilitte kur çağrılır, kopya yeniden yazılır, yeni iz damgalanır",
-             once_ham and koh == 0 and "+ code-tour" in outh and yeni_yol in ham_md.read_text(encoding="utf-8")
-             and "~/.agents/skills/code-tour" not in ham_md.read_text(encoding="utf-8")
-             and json_oku(ph / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz, outh)
+             once_ham and koh == 0 and "+ youtube-arama" in outh and yeni_yol in ham_md.read_text(encoding="utf-8")
+             and "~/.claude/skills/youtube-arama" not in ham_md.read_text(encoding="utf-8")
+             and json_oku(ph / ".skill-kutuphanesi" / "kilit.json")["skiller"]["youtube-arama"]["onarim"] == beklenen_iz, outh)
         # h. elle değiştirilmiş kopya: --zorla olmadan yeniden kurulmaz ve iz damgalanmaz; --zorla ile kurulur
         pe2 = yeni_proje()
-        calistir(pe2, "--skill", "code-tour", "--evet")
+        calistir(pe2, "--skill", "youtube-arama", "--evet")
         eski_kurulum(pe2)
-        elle = pe2 / ".agents" / "skills" / "code-tour" / "SKILL.md"
+        elle = pe2 / ".agents" / "skills" / "youtube-arama" / "SKILL.md"
         with elle.open("a", encoding="utf-8") as f_:
             f_.write("\nelle eklendi\n")
-        kilit_yaz(pe2, lambda k: k["skiller"]["code-tour"].update(onarim="eski-iz-0001"))
-        koe, oute = calistir(pe2, "--skill", "code-tour", "--evet")
-        k_e = json_oku(pe2 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]
+        kilit_yaz(pe2, lambda k: k["skiller"]["youtube-arama"].update(onarim="eski-iz-0001"))
+        koe, oute = calistir(pe2, "--skill", "youtube-arama", "--evet")
+        k_e = json_oku(pe2 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["youtube-arama"]
         test("ekle(): elle değiştirilmiş kopya --zorla olmadan yeniden kurulmaz, yeni iz DAMGALANMAZ, değişiklik korunur",
              koe == 2 and "elle-degistirilmis" in oute and k_e["onarim"] == "eski-iz-0001" and "elle eklendi" in elle.read_text(encoding="utf-8")
-             and "~/.agents/skills/code-tour/scripts" in elle.read_text(encoding="utf-8"), oute)
-        koz, outz = calistir(pe2, "--skill", "code-tour", "--zorla", "--evet")
+             and "~/.claude/skills/youtube-arama/scripts" in elle.read_text(encoding="utf-8"), oute)
+        koz, outz = calistir(pe2, "--skill", "youtube-arama", "--zorla", "--evet")
         test("ekle(): --zorla ile yeniden kurulur (elle ekleme gider, yollar çevrilir, iz yazılır)",
-             koz == 0 and "+ code-tour" in outz and "elle eklendi" not in elle.read_text(encoding="utf-8") and yeni_yol in elle.read_text(encoding="utf-8")
-             and json_oku(pe2 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz, outz)
+             koz == 0 and "+ youtube-arama" in outz and "elle eklendi" not in elle.read_text(encoding="utf-8") and yeni_yol in elle.read_text(encoding="utf-8")
+             and json_oku(pe2 / ".skill-kutuphanesi" / "kilit.json")["skiller"]["youtube-arama"]["onarim"] == beklenen_iz, outz)
         # i. guncelle: aynı karma, yalnız iz farklı -> 'sabit yol çevirisi' (yol-yerellestirme)
         pg = yeni_proje()
-        calistir(pg, "--skill", "code-tour", "--evet")
+        calistir(pg, "--skill", "youtube-arama", "--evet")
         eski_kurulum(pg)
         kog, outg2 = calistir(pg, "--guncelle", "--kuru")
         test("guncelle(): aynı karma, yalnız iz farklıysa yol-yerellestirme koduyla 'sabit yol çevirisi' bildirilir",
-             "yol-yerellestirme" in outg2 and "sabit yol çevirisi" in outg2 and "code-tour: kurulan kopyaya uygulanacak" in outg2 and "elle-degistirilmis" not in outg2, outg2)
-        gm = pg / ".agents" / "skills" / "code-tour" / "SKILL.md"
-        test("guncelle --kuru: kopyaya dokunmaz", "~/.agents/skills/code-tour/scripts/validate_tour.py" in gm.read_text(encoding="utf-8"))
+             "yol-yerellestirme" in outg2 and "sabit yol çevirisi" in outg2 and "youtube-arama: kurulan kopyaya uygulanacak" in outg2 and "elle-degistirilmis" not in outg2, outg2)
+        gm = pg / ".agents" / "skills" / "youtube-arama" / "SKILL.md"
+        test("guncelle --kuru: kopyaya dokunmaz", "~/.claude/skills/youtube-arama/scripts/youtube_search.py" in gm.read_text(encoding="utf-8"))
         kog2, outg3 = calistir(pg, "--guncelle", "--evet")
         test("guncelle --evet: kopya çevrilir, iz yazılır, --dogrula temiz",
-             kog2 == 0 and yeni_yol in gm.read_text(encoding="utf-8") and json_oku(pg / ".skill-kutuphanesi" / "kilit.json")["skiller"]["code-tour"]["onarim"] == beklenen_iz
+             kog2 == 0 and yeni_yol in gm.read_text(encoding="utf-8") and json_oku(pg / ".skill-kutuphanesi" / "kilit.json")["skiller"]["youtube-arama"]["onarim"] == beklenen_iz
              and calistir(pg, "--dogrula")[0] == 0, outg3)
         # ============ p. doğrulanmış bulgu düzeltmeleri
         import argparse

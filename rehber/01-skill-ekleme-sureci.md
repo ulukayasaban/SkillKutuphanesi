@@ -3,8 +3,10 @@
 ## Temel kural: skill sadece verdiğin projeye eklenir
 
 `skill-ekle.py` **yalnızca komutta verdiğin proje klasörüne** yazar. Başka projeler, global klasörler
-(`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`), `~/.openmontage` ve bu kütüphanenin kendisi
-**hiçbir zaman** değişmez (araç bu klasörlere yazmayı reddeder).
+(`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`), `~/.openmontage` ve kütüphanenin arşiv/kayıt dosyaları
+**hiçbir zaman** değişmez (araç bu klasörlere proje hedefi olarak yazmayı reddeder). Tek otomatik yan ürün: başarılı bir işlemden
+sonra `notlar/proje-kullanimi.md` ile (fihrist kurulduysa) ilgili `fihrist/*.json` inceleme damgası güncellenir ve `master` dalındaysa
+yalnızca bu dosyalar yerelde commit edilir (push yapılmaz; işlem geri alınırsa kütüphaneye dokunulmaz).
 
 - Bir projede `ui-tasarimci` agent'ına `impeccable` verirsen, sadece o projedeki `ui-tasarimci` onu önyükler.
 - Aynı projedeki diğer agent'lar için: Claude'da önyüklenmez (ama gerekirse Skill aracıyla çağırabilir);
