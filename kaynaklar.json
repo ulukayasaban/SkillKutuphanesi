@@ -210,9 +210,15 @@
       "dahil_degil": [
         "^composio-skills/"
       ],
-      "tur": "koleksiyon",
-      "bolum": "arsiv",
-      "tur_gerekce": "T1 ve 32 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "T1 ve 32 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi.",
+      "arsivde_tut": [
+        "connect",
+        "content-research-writer",
+        "file-organizer",
+        "twitter-algorithm-optimizer"
+      ]
     },
     {
       "repo": "ComposioHQ/awesome-claude-skills",
@@ -221,7 +227,9 @@
       "dahil": [
         "^composio-skills/"
       ],
-      "kimlik": "composio-entegrasyon"
+      "kimlik": "composio-entegrasyon",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist"
     },
     {
       "repo": "heygen-com/hyperframes",
