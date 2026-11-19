@@ -292,7 +292,7 @@
     {
       "kimlik": "ayar-2026-11-19",
       "yol": "~/Documents/Claude/yedek/ayar-2026-11-19",
-      "tur": "ayar",
+      "tur": "ayar-dosyasi",
       "ne": "~/.claude/settings.json (advisorModel projeye taşınmadan önceki hali)",
       "tarih": "2026-11-19",
       "geri_yukleme": "cp ~/Documents/Claude/yedek/ayar-2026-11-19/settings.json ~/.claude/settings.json (danışman satırını geri getirir; gerekmez)",
