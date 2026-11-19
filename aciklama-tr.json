@@ -9,86 +9,6 @@
     "ne_zaman": "Yüksek kaliteli, çok sahneli HTML-video kompozisyonu ve retro piksel görünümü istendiğinde.",
     "kaynak": "1c8ecc874dd6"
   },
-  "a2a-agent-card": {
-    "ne": "A2A Agent Card'ları oluşturup yapılandırır; bir ajanın yeteneklerini, becerilerini, kimlik doğrulamasını ve endpoint'ini tanımlayan keşif dokümanını hazırlar.",
-    "ne_zaman": "Ajanın diğer ajanlara neyi sunduğunu tanımlarken.",
-    "kaynak": "59bcabc6f373"
-  },
-  "a2a-authentication": {
-    "ne": "A2A için API anahtarı, Bearer token, OAuth 2.0, OpenID Connect ve mutual TLS kimlik doğrulamasını uygular; Agent Card güvenlik şemalarını yapılandırır.",
-    "ne_zaman": "Ajanlar arası iletişimi güvenli hale getirirken veya Agent Card security scheme ayarlarını yaparken.",
-    "kaynak": "ffe74cf530ef"
-  },
-  "a2a-client": {
-    "ne": "Diğer A2A ajanlarını keşfeden, görev gönderen, yanıtları işleyen ve çok turlu konuşmaları yöneten istemci tarafı kodunu yazar.",
-    "ne_zaman": "İş devrini A2A ajanlarına yapan istemci tarafını uygularken.",
-    "kaynak": "61e0bafea880"
-  },
-  "a2a-dev-patterns": {
-    "ne": "A2A geliştirme örüntülerini uygular: orkestrasyon topolojileri, idempotency, gözlemlenebilirlik, ajan kayıtları, sürümleme ve üretim dağıtımı.",
-    "ne_zaman": "Çoklu ajan sistemi mimarisi tasarlanırken veya kesişen altyapı sorunları çözülürken.",
-    "kaynak": "31c551f3824a"
-  },
-  "a2a-error-handling": {
-    "ne": "JSON-RPC hatalarını, A2A'ya özgü hata kodlarını, görev başarısızlık durumlarını, yeniden deneme stratejilerini ve zarif bozulmayı uygular.",
-    "ne_zaman": "A2A ajanlarında sağlam hata yönetimi kurulurken.",
-    "kaynak": "0cefbf65975a"
-  },
-  "a2a-framework-integration": {
-    "ne": "A2A'yı Google ADK, LangGraph, CrewAI, AutoGen, AWS Bedrock AgentCore ve Microsoft Azure AI Foundry gibi ajan framework'leriyle entegre eder.",
-    "ne_zaman": "Bu framework'lerle yazılmış ajanları A2A protokolüne bağlarken.",
-    "kaynak": "dd645d2bb719"
-  },
-  "a2a-jsonrpc-transport": {
-    "ne": "A2A JSON-RPC 2.0 taşıma katmanını uygular: istek-yanıt biçimi, metod yönlendirme, batch istekler ve HTTP ayrıntıları.",
-    "ne_zaman": "Özel A2A taşıma işlemesi yazılırken veya protokol düzeyindeki sorunlar ayıklanırken.",
-    "kaynak": "bb5fbbdabacd"
-  },
-  "a2a-mcp-bridge": {
-    "ne": "A2A ile MCP arasında köprüler kurar; A2A ajanlarını MCP araçları olarak sarmalar, MCP araçlarını A2A ajanlarında kullanır ve hibrit sistemler tasarlar.",
-    "ne_zaman": "Ajanlar arası A2A iletişimini MCP araç erişimiyle birleştirmek gerektiğinde.",
-    "kaynak": "9c70fb01de1e"
-  },
-  "a2a-messages-parts": {
-    "ne": "A2A mesajlarını ve parçalarını uygular: TextPart, FilePart, DataPart, mesaj rolleri, metadata ve içerik müzakeresi.",
-    "ne_zaman": "A2A ajanlarında mesaj oluşturma, ayrıştırma ya da içerik türü işlemesi yazılırken.",
-    "kaynak": "2f65c6c1b5ce"
-  },
-  "a2a-multi-turn": {
-    "ne": "A2A çok turlu konuşmalarını uygular: input-required durumu, bağlam koruma, yinelemeli iyileştirme ve insan-döngüde (human-in-the-loop) akışları.",
-    "ne_zaman": "Ajanın kullanıcıyla karşılıklı etkileşim kurması gerektiğinde.",
-    "kaynak": "f7d2fbcaedcc"
-  },
-  "a2a-push-notifications": {
-    "ne": "A2A push bildirimlerini uygular: callback URL kaydı, bildirim iletimi ve yönetim metodları.",
-    "ne_zaman": "Uzun süren A2A görevleri için asenkron bildirim iletimi kurulurken.",
-    "kaynak": "47d8b5eac30a"
-  },
-  "a2a-server": {
-    "ne": "JSON-RPC isteklerini alan, görevleri işleyen, durumu yöneten ve sonuç döndüren A2A sunucu tarafı endpoint'ini oluşturur.",
-    "ne_zaman": "Bir A2A ajanının sunucu tarafını uygularken.",
-    "kaynak": "3b2a32028c50"
-  },
-  "a2a-setup": {
-    "ne": "Yeni bir A2A projesini iskeletler: SDK'yı kurar, dizin yapısını oluşturur, Agent Card'ı yapılandırır ve temel sunucu ile istemciyi hazırlar.",
-    "ne_zaman": "Sıfırdan yeni bir A2A çoklu ajan projesine başlanırken.",
-    "kaynak": "75758d3cad1f"
-  },
-  "a2a-streaming": {
-    "ne": "A2A SSE akışını uygular: message/stream metodu, Server-Sent Events, TaskStatusUpdateEvent, TaskArtifactUpdateEvent ve yeniden abonelik.",
-    "ne_zaman": "A2A ajanlarında gerçek zamanlı akışlı yanıtlar geliştirilirken.",
-    "kaynak": "1a5a73236b70"
-  },
-  "a2a-task-lifecycle": {
-    "ne": "A2A görev yaşam döngüsünü yönetir: görev oluşturma, durum geçişleri, terminal durumlar, geçmiş ve artifact'ler.",
-    "ne_zaman": "Görev durum makineleri kurulurken, durum geçişleri işlenirken ya da görev kalıcılığı yönetilirken.",
-    "kaynak": "cee893cba871"
-  },
-  "a2a-testing": {
-    "ne": "A2A uygulamalarını test eder: birim ve entegrasyon testleri, mock ajanlar, protokol uygunluğu ve uçtan uca çoklu ajan testleri.",
-    "ne_zaman": "A2A sunucu, istemci ya da çoklu ajan sistemleri için test paketi hazırlanırken.",
-    "kaynak": "7fcd4996c3de"
-  },
   "ab-testing": {
     "ne": "A/B testi ve deney programlarını planlar, tasarlar veya uygular; hipotez, varyant, çok değişkenli test, istatistiksel anlamlılık ve ICE önceliklendirmesini kapsar.",
     "ne_zaman": "İki yaklaşımı karşılaştırıp ölçmek, A/B veya split test kurmak ya da deney programı oluşturmak istendiğinde.",
@@ -168,91 +88,6 @@
     "ne": "B2B alacak hesaplarını otomatikleştirir: fatura oluşturma, ödeme takibi, vadesi geçmiş faturalar için hatırlatma (dunning) dizileri ve yaşlandırma (aging) analiz panoları.",
     "ne_zaman": "Vadesi geçmiş B2B faturaları takip etmek, tahsilat sürecini otomatiğe bağlamak veya alacak yaşlandırma raporu hazırlamak istendiğinde.",
     "kaynak": "3e7e9e00bc03"
-  },
-  "acp-affiliate-attribution": {
-    "ne": "ACP için çerez kullanmadan, token tabanlı first-touch ve last-touch atıflandırmasıyla gizliliği koruyan affiliate takibini uygular.",
-    "ne_zaman": "Affiliate programları, yönlendirme takibi ya da ortaklık atıflandırması kurulurken.",
-    "kaynak": "07caaf053bad"
-  },
-  "acp-capability-negotiation": {
-    "ne": "ACP yeteneklerini dinamik olarak keşfeder ve müzakere eder: ortak desteklenen yetenekler, extension'lar, ödeme handler'ları ve müdahaleler.",
-    "ne_zaman": "Birden fazla özellik sunan merchant sunucuları ya da satıcı yeteneklerine uyum sağlayan ajanlar geliştirilirken.",
-    "kaynak": "8f440d18fbdb"
-  },
-  "acp-cart": {
-    "ne": "ACP Cart API'sini uygular: ödeme yapılandırması olmadan kalem toplayan ön-checkout REST yüzeyi; oluşturma, okuma, tam değiştirme, iptal, tahmini toplamlar ve süre sonu.",
-    "ne_zaman": "Agentic checkout öncesinde ACP sepet oturumları oluşturulurken.",
-    "kaynak": "248397a833fc"
-  },
-  "acp-checkout-mcp": {
-    "ne": "ACP checkout işlemlerini MCP araçları olarak sunan bir MCP sunucusu uygular.",
-    "ne_zaman": "Satın alma işlemlerini araç çağrısıyla tamamlayan AI ajanları için MCP tabanlı bir commerce sunucusu kurulurken.",
-    "kaynak": "1e0ac6eaad12"
-  },
-  "acp-checkout-rest": {
-    "ne": "ACP REST checkout API'sini uygular: checkout oturumlarını oluşturma, güncelleme, okuma, tamamlama ve iptal; oturum durum makinesini yönetir.",
-    "ne_zaman": "Merchant tarafı checkout endpoint'leri yazılırken veya AI ajan checkout akışlarına entegrasyon yapılırken.",
-    "kaynak": "3e4b4a4d7a80"
-  },
-  "acp-conformance": {
-    "ne": "ACP uygulamasını protokol spesifikasyonuna karşı doğrular: şema, akış, hata yönetimi, idempotency, güvenlik ve üretim hazırlığı kontrolleri yapar.",
-    "ne_zaman": "Lansman öncesinde hazırlık yapılırken veya uyumluluk sertifikasyonu gerektiğinde.",
-    "kaynak": "98704cfab802"
-  },
-  "acp-delegate-authentication": {
-    "ne": "ACP Delegate Authentication API'sini uygular: 3D Secure (3DS2) doğrulamasını merchant'ın belirlediği sağlayıcılara devreder; fingerprint, challenge ve authenticate adımlarını kapsar.",
-    "ne_zaman": "ACP checkout'a güçlü müşteri doğrulaması (SCA) ya da 3DS eklenirken.",
-    "kaynak": "2d87863d8979"
-  },
-  "acp-delegated-payment": {
-    "ne": "ACP delegated payment akışını ve SharedPaymentToken (SPT) provisioning'ini uygular; Stripe ile token üretimi, SPT yaşam döngüsü ve ödeme tamamlama adımlarını kapsar.",
-    "ne_zaman": "Stripe ile ödeme tokenizasyonu entegre edilirken, SPT yaşam döngüsü yönetilirken ya da ödeme tamamlama akışı kurulurken.",
-    "kaynak": "49b53f32e22f"
-  },
-  "acp-dev-patterns": {
-    "ne": "ACP için kesişen geliştirme örüntülerini sunar: idempotency, hata yönetimi, 3D Secure akışları, istek imzalama, rate limiting, izleme ve güvenlik.",
-    "ne_zaman": "ACP mimarisi tasarlanırken veya üretim sorunlarına (imzalama, hız sınırı, izleme) çözüm aranırken.",
-    "kaynak": "ecdac899cde6"
-  },
-  "acp-discount-extension": {
-    "ne": "ACP discount extension'ını uygular: indirim kodları, uygulanan ve reddedilen kodlar, kalem bazında indirim dağılımı.",
-    "ne_zaman": "Checkout akışlarına kupon ya da promosyon kodu desteği eklenirken.",
-    "kaynak": "346fc7cb87e6"
-  },
-  "acp-extensions-authoring": {
-    "ne": "JSONPath hedefleme, şema birleştirme ve bağımsız sürümleme içeren özel ACP extension'ları yazar; yerleşik olanların ötesinde kendi protokol eklentilerini tasarlar.",
-    "ne_zaman": "Projeye özgü ya da tescilli bir ACP extension'ı geliştirilirken.",
-    "kaynak": "668b9a282571"
-  },
-  "acp-fulfillment": {
-    "ne": "ACP fulfillment seçeneklerini uygular: kargo, dijital teslimat, mağazadan teslim alma ve yerel teslimat; oran hesaplama, teslimat pencereleri ve takip entegrasyonu.",
-    "ne_zaman": "Fulfillment seçimi, ücret hesaplama ya da kargo takibi entegrasyonu kurulurken.",
-    "kaynak": "bfd7ec4f062e"
-  },
-  "acp-intent-traces": {
-    "ne": "Sebep kodlarıyla yapılandırılmış sepet terk sinyalleri (ACP intent traces) üretir; analitik ve otomatik geri kazanım iş akışları için kullanılır.",
-    "ne_zaman": "Sepet terk takibi, geri kazanım otomasyonu ya da dönüşüm optimizasyonu geliştirilirken.",
-    "kaynak": "af93abd9708d"
-  },
-  "acp-orders-webhooks": {
-    "ne": "ACP sipariş yaşam döngüsünü ve webhook olay iletimini uygular: sipariş oluşturma, durum takibi, fulfillment güncellemeleri, satış sonrası düzenlemeler ve HMAC imzalı webhook'lar.",
-    "ne_zaman": "Sipariş işleme, durum güncellemeleri ya da HMAC imzalı webhook yayını kurulurken.",
-    "kaynak": "674a6aa421ac"
-  },
-  "acp-payment-handlers": {
-    "ne": "ACP ödeme handler'larını uygular: tokenize kartlar, satıcı tarafından yönetilen yöntemler (hediye kartı, puan, mağaza kredisi) ve handler müzakeresi.",
-    "ne_zaman": "Yeni bir ödeme yöntemi eklenirken ya da özel ödeme handler desteği geliştirilirken.",
-    "kaynak": "e396079b0fc0"
-  },
-  "acp-product-feed": {
-    "ne": "ACP için ürün feed'i üretir ve gönderir: katalog dışa aktarımı, CSV/JSON/XML/TSV biçimlendirme, feed doğrulama ve push tabanlı katalog senkronizasyonu.",
-    "ne_zaman": "Ürün kataloğunu agent platformuna aktarmak, feed biçimini ayarlamak ya da feed doğrulamak gerektiğinde.",
-    "kaynak": "3c8ad12bd29f"
-  },
-  "acp-setup": {
-    "ne": "Yeni bir ACP merchant sunucu projesini iskeletler: bağımlılıkları kurar, OpenAPI spec'lerini ve JSON şemalarını içe aktarır, ortamı yapılandırır ve endpoint taslakları oluşturur.",
-    "ne_zaman": "Sıfırdan yeni bir ACP uygulamasına başlanırken.",
-    "kaynak": "bad9b5a9f4c7"
   },
   "acquire-codebase-knowledge": {
     "ne": "Mevcut bir kod tabanını haritalar, belgeler ve yeni ekip üyesi için onboarding dokümanı üretir.",
@@ -1009,101 +844,6 @@
     "ne_zaman": "Faturalar, tedarikçi ekstreleri veya ödemeler konuşulduğunda; “ne borçluyum” ya da “faturalar birikti” gibi isteklerde.",
     "kaynak": "39e97127e608"
   },
-  "ap2-a2a-extension": {
-    "ne": "AP2'yi A2A extension olarak uygular: A2A mesajlarında mandate DataParts, Agent Card AP2 yetenekleri ve ödemeye özel task akışlarını kurar.",
-    "ne_zaman": "AP2 ödeme yeteneklerini A2A çoklu ajan sistemlerine entegre ederken.",
-    "kaynak": "396f4da1cf44"
-  },
-  "ap2-agent-authorization": {
-    "ne": "AP2 Agent Authorization Framework'ü uygular: open/closed mandate, iki aşamalı yetkilendirme, kriptografik yetki zinciri, Key Binding JWT ve imzalama modelleri.",
-    "ne_zaman": "Kullanıcının bir ajana eylem yetkisi verdiği yetkilendirme akışını tasarlarken, mandate tiplerine geçmeden önce.",
-    "kaynak": "4c038a397dd9"
-  },
-  "ap2-challenge-stepup": {
-    "ne": "AP2 challenge ve step-up akışlarını uygular: 3DS2, OTP doğrulama, yönlendirmeli challenge ve güvenilir yüzey etkileşimleri.",
-    "ne_zaman": "Agentic ödeme sırasında ek kimlik doğrulama adımları eklenirken.",
-    "kaynak": "a2137f4cf077"
-  },
-  "ap2-checkout-mandate": {
-    "ne": "AP2 Checkout Mandate'i (eski adıyla Cart Mandate) open ve closed biçimleriyle uygular; satıcı imzalı checkout payload, checkout hash ve kullanıcı onayını yönetir.",
-    "ne_zaman": "Sepet ve ödeme onayı için yetkilendirme, imzalama veya doğrulama geliştirilirken.",
-    "kaynak": "ae845517e73e"
-  },
-  "ap2-credentials-provider": {
-    "ne": "AP2 Credentials Provider ajanını kurar: ödeme kimlik bilgilerini yönetir, ödeme yöntemlerini sunar, tokenizasyon (DPAN) yapar ve güvenli ödeme aktarımını sağlar.",
-    "ne_zaman": "AP2'de Credentials Provider rolü uygulanırken.",
-    "kaynak": "8fa91aaccb57"
-  },
-  "ap2-cryptographic-signing": {
-    "ne": "AP2 kriptografik imzalamayı uygular: donanım destekli kullanıcı imzaları, satıcı imzaları, VDC bütünlüğü, anahtar yönetimi ve attestation akışları.",
-    "ne_zaman": "AP2 mandate'lerinin imzalama, doğrulama ve anahtar yönetimi bileşenleri geliştirilirken.",
-    "kaynak": "188d2bb403df"
-  },
-  "ap2-dev-patterns": {
-    "ne": "AP2 geliştirme kalıplarını uygular: çoklu ajan ödeme mimarisi, UCP entegrasyonu, x402 kripto ödemeleri, mock sağlayıcılarla test ve üretim dağıtımı.",
-    "ne_zaman": "Agentic ödeme sistemi mimarisi kurulurken veya ortak ödeme konuları çözülürken.",
-    "kaynak": "b9f41ba96b4d"
-  },
-  "ap2-dispute-accountability": {
-    "ne": "AP2 uyuşmazlık çözümünü ve hesap verebilirliği uygular: kriptografik kanıt, sorumluluk dağılımı, chargeback yönetimi ve denetim izi oluşturma.",
-    "ne_zaman": "Agentic ödemelerde itiraz, dolandırıcılık incelemesi veya uyumluluk sistemleri geliştirilirken.",
-    "kaynak": "10ce44ea4bf1"
-  },
-  "ap2-human-not-present-flow": {
-    "ne": "AP2 kullanıcı yokken işlem akışını uygular: Intent Mandate ile yetkilendirilmiş otonom ajan alışverişi, kısıt zorlaması ve satıcıya devir.",
-    "ne_zaman": "Kullanıcı ayrıldıktan sonra çalışan otonom ajan satın alımı geliştirilirken.",
-    "kaynak": "e0fb5c3140bf"
-  },
-  "ap2-human-present-flow": {
-    "ne": "AP2 kullanıcı mevcutken işlem akışını uygular: sepet ve ödeme yöntemi seçiminin kullanıcı tarafından onaylandığı, Checkout Mandate merkezli checkout süreci.",
-    "ne_zaman": "Kullanıcının döngüde olduğu, etkileşimli agentic checkout geliştirilirken.",
-    "kaynak": "d178757d9152"
-  },
-  "ap2-intent-mandate": {
-    "ne": "Kullanıcı tanımlı kısıtlar dahilinde ajan alımlarını önceden yetkilendirir; allowed-merchant ve satır kalemi kısıtlı açık Checkout Mandate, son kullanma ve kısıt zorlaması içerir.",
-    "ne_zaman": "Kullanıcı imzalı niyet, süre sonu ve kısıt zorlaması olan otonom ajan alışverişi kurulurken.",
-    "kaynak": "604facc41eb9"
-  },
-  "ap2-mcp-server": {
-    "ne": "AP2 ödeme araçlarını Model Context Protocol üzerinden ajanlara sunan MCP sunucuları uygular.",
-    "ne_zaman": "AP2 ödeme yeteneklerini MCP tabanlı araç entegrasyonu olarak sunmak istendiğinde.",
-    "kaynak": "ee2facd330b6"
-  },
-  "ap2-merchant-agent": {
-    "ne": "Satıcı tarafı AP2 Merchant Agent'ı kurar: niyet mandate'lerini alır, ürün kataloğunda arama yapar, imzalı cart mandate oluşturur ve satıcıyı temsil eder.",
-    "ne_zaman": "AP2 Merchant Endpoint rolü uygulanırken.",
-    "kaynak": "b10fae590990"
-  },
-  "ap2-payment-mandate": {
-    "ne": "AP2 Payment Mandate'i uygular; ağlar ve issuer'larla paylaşılan, AI katılımını ve kullanıcı yetkisini bildiren VDC'yi üretir.",
-    "ne_zaman": "Ödeme yetkilendirme akışları, tokenizasyon veya ödeme ağı entegrasyonu kurulurken.",
-    "kaynak": "da02d0ae4fb8"
-  },
-  "ap2-payment-processor": {
-    "ne": "AP2 Merchant Payment Processor ajanını kurar: ödeme yetkilendirme mesajlarını oluşturur, Credentials Provider'dan kimlik bilgisi ister, ödemeyi işler ve makbuz döner.",
-    "ne_zaman": "AP2 MPP rolü uygulanırken.",
-    "kaynak": "d351e298ddb7"
-  },
-  "ap2-risk-signals": {
-    "ne": "AP2 risk sinyalleri çerçevesini uygular: agentic ödemelere özgü risk payload'ları, güven tesisi ve dolandırıcılık değerlendirmesi.",
-    "ne_zaman": "AP2 işlemleri için risk değerlendirmesi, dolandırıcılık tespiti veya güven skorlaması yapılırken.",
-    "kaynak": "5abbd43195f0"
-  },
-  "ap2-setup": {
-    "ne": "Sıfırdan yeni bir AP2 projesi iskeletini kurar: SDK kurulumu, ajan rolleri, kimlik bilgisi yapılandırması ve temel çoklu ajan ödeme sistemi.",
-    "ne_zaman": "Sıfırdan yeni bir AP2 agentic ödeme projesi başlatılırken.",
-    "kaynak": "9033f746e666"
-  },
-  "ap2-shopping-agent": {
-    "ne": "AP2 Shopping Agent'ı kurar: kullanıcı isteklerini yöneten orkestratör, mandate oluşturma, satıcı ve kimlik sağlayıcılarla koordinasyon ve işlem akışı.",
-    "ne_zaman": "Shopping Agent rolü uygulanırken.",
-    "kaynak": "31d4e5a40c2b"
-  },
-  "ap2-vdc-framework": {
-    "ne": "AP2 Verifiable Digital Credentials çerçevesini uygular: kurcalamaya karşı korumalı, kriptografik imzalı kimlik bilgileri, düzenleme, doğrulama ve holder binding.",
-    "ne_zaman": "VDC mimarisi, kimlik bilgisi düzenleme veya doğrulama üzerinde çalışılırken.",
-    "kaynak": "391a27feebe4"
-  },
   "api-breaking-change-detector": {
     "ne": "C# Web API controller ve DTO'larını TypeScript/JavaScript istemcileriyle karşılaştırıp kırılan JSON alanlarını, zorunlu parametreleri ve durum kodlarını kaynak koddan bulur.",
     "ne_zaman": "Breaking API değişikliklerinin kontrol edilmesi veya frontend ile backend kontrat uyumunun doğrulanması istendiğinde.",
@@ -1543,91 +1283,6 @@
     "ne": "Python, PowerShell veya Node.js betiklerinde çok sayıda dosya, kayıt veya API isteği işlenirken çalışma zamanı çıktısını; ilerleme, öğe bazlı hatalar, sayımlar ve çıkış kodlarını tasarlar.",
     "ne_zaman": "Toplu işlem, uzun süren döngü veya bulk API betiği yazılırken ya da değiştirilirken; UI ilerleme çubukları için kullanılmaz.",
     "kaynak": "71af848f0df9"
-  },
-  "bc-api-graphql": {
-    "ne": "BigCommerce GraphQL Storefront API'sini kullanır: sorgular, mutation'lar, authentication token'ları, müşteri impersonation, sepet işlemleri ve şema keşfi.",
-    "ne_zaman": "İstemci tarafı veri çekmesi gereken storefront özellikleri geliştirilirken.",
-    "kaynak": "423c1c98d03f"
-  },
-  "bc-api-rest": {
-    "ne": "BigCommerce REST API'lerini (V2 ve V3) kullanır: endpoint'ler, kimlik doğrulama, rate limit, sayfalama, filtreleme, toplu işlemler ve hata yönetimi.",
-    "ne_zaman": "BigCommerce verilerini REST API ile entegre ederken.",
-    "kaynak": "557e23276df4"
-  },
-  "bc-app-dev": {
-    "ne": "BigCommerce uygulamaları geliştirir: tek tıkla kurulum uygulamaları, OAuth akışı, app callback'leri, connector uygulamaları, control panel entegrasyonu ve App Marketplace gönderimi.",
-    "ne_zaman": "App Marketplace üzerinden kurulacak entegrasyonlar oluşturulurken.",
-    "kaynak": "da8364f62217"
-  },
-  "bc-catalog": {
-    "ne": "BigCommerce kataloğunu yönetir: ürünler, varyantlar, opsiyonlar, modifier'lar, kategoriler, markalar, metafield'lar, görseller ve toplu işlemler.",
-    "ne_zaman": "Ürün verilerini programatik yönetirken veya katalog entegrasyonları kurulurken.",
-    "kaynak": "3afb0200a419"
-  },
-  "bc-channels": {
-    "ne": "BigCommerce multi-channel yapısını yönetir: kanallar, çoklu storefront, kanala özel katalog, site yönlendirme ve channel management API.",
-    "ne_zaman": "Çoklu storefront çözümleri kurulurken veya kanala özel içerik yönetilirken.",
-    "kaynak": "0f8cb62f5410"
-  },
-  "bc-checkout": {
-    "ne": "BigCommerce checkout'unu özelleştirir: Checkout SDK, gömülü checkout, sunucu tarafı checkout API, özel checkout arayüzü ve checkout extension'ları.",
-    "ne_zaman": "Checkout deneyimi değiştirilirken veya headless checkout akışı kurulurken.",
-    "kaynak": "8b8de2323a42"
-  },
-  "bc-customers": {
-    "ne": "BigCommerce müşterilerini yönetir: Customer API, müşteri grupları, adresler, kayıtlı ödeme araçları, öznitelikler, Customer Login API (SSO) ve segmentasyon.",
-    "ne_zaman": "Müşteriye dönük özellikler geliştirilirken veya müşteri verisi entegre edilirken.",
-    "kaynak": "7da90e7d5201"
-  },
-  "bc-headless": {
-    "ne": "BigCommerce ile headless ticaret kurar: Catalyst (Next.js referans storefront), GraphQL Storefront API, sunucu tarafı API'ler, gömülü checkout ve headless mimari kalıpları.",
-    "ne_zaman": "Ayrık (decoupled) bir storefront geliştirilirken veya BigCommerce headless backend olarak kullanılırken.",
-    "kaynak": "c001372842ad"
-  },
-  "bc-orders": {
-    "ne": "BigCommerce siparişlerini yönetir: sipariş yaşam döngüsü, durumlar, satır kalemleri, kargolar, iadeler, sipariş metafield'ları ve karşılama (fulfillment).",
-    "ne_zaman": "Sipariş yönetimi entegrasyonları kurulurken veya siparişler programatik işlenirken.",
-    "kaynak": "1dd19cf3fb5d"
-  },
-  "bc-payments": {
-    "ne": "BigCommerce ödemelerini entegre eder: Payment Processing API, kayıtlı ödeme araçları, ödeme yöntemleri, headless için sunucu tarafı ödeme işleme ve PCI değerlendirmeleri.",
-    "ne_zaman": "Özel ödeme akışları kurulurken veya ödemeler programatik işlenirken.",
-    "kaynak": "1e4c3d0ff3cd"
-  },
-  "bc-performance": {
-    "ne": "BigCommerce storefront performansını optimize eder: CDN, görsel optimizasyonu, lazy loading, Stencil tema optimizasyonu, API önbellekleme, GraphQL verimliliği ve Core Web Vitals.",
-    "ne_zaman": "Mağaza hızını artırırken veya storefront performans sorunları teşhis edilirken.",
-    "kaynak": "d89ddc1e7183"
-  },
-  "bc-security": {
-    "ne": "BigCommerce güvenliğini uygular: OAuth token yönetimi, API kimlik doğrulama, webhook doğrulama, CSP, girdi doğrulama, PCI uyumluluğu ve uygulama güvenlik pratikleri.",
-    "ne_zaman": "Entegrasyonlar sertleştirilirken veya güvenlik durumu gözden geçirilirken.",
-    "kaynak": "b135fea91e6c"
-  },
-  "bc-setup": {
-    "ne": "BigCommerce geliştirme ortamını kurar: Stencil CLI, API kimlik bilgileri, sandbox mağazaları, Catalyst ve geliştirici araçları.",
-    "ne_zaman": "Yeni bir BigCommerce projesi başlatılırken veya geliştirme araçları yapılandırılırken.",
-    "kaynak": "d5a3a71c9576"
-  },
-  "bc-stencil": {
-    "ne": "BigCommerce Stencil temaları geliştirir: Handlebars şablonları, front matter, tema nesneleri, SCSS, JavaScript modülleri, config.json, schema.json ve Stencil CLI.",
-    "ne_zaman": "BigCommerce storefront teması oluşturulurken veya özelleştirilirken.",
-    "kaynak": "be95a2d9fcf4"
-  },
-  "bc-testing": {
-    "ne": "BigCommerce entegrasyonlarını test eder: API testleri, Stencil tema testleri, Cypress/Playwright E2E testleri, webhook testleri ve sandbox mağazaları.",
-    "ne_zaman": "BigCommerce uygulamaları, temaları veya entegrasyonları için test yazılırken.",
-    "kaynak": "2c2dcd24af7e"
-  },
-  "bc-webhooks": {
-    "ne": "BigCommerce webhook'larını uygular: event topic'leri, webhook yönetimi, payload işleme, doğrulama, yeniden deneme mantığı ve olay güdümlü mimari.",
-    "ne_zaman": "Mağaza olaylarına tepki veren gerçek zamanlı entegrasyonlar kurulurken.",
-    "kaynak": "52e830a2c38f"
-  },
-  "bc-widgets": {
-    "ne": "BigCommerce widget'ları oluşturur ve Script Manager'ı kullanır: widget şablonları, yerleşimler, Page Builder entegrasyonu, JavaScript/CSS enjeksiyonu ve içerik özelleştirme.",
-    "ne_zaman": "Storefront'a özel içerik blokları eklenirken veya script enjekte edilirken.",
-    "kaynak": "2171f42548ba"
   },
   "bench-read": {
     "ne": "Ortak bench'teki artifact'leri okur; masaların bıraktığı bulgu, karar ve çalışma çıktılarını ve operatörün paylaştığı verileri getirir.",
@@ -4944,11 +4599,6 @@
     "ne_zaman": "Kod tabanı, proje içeriği veya dosya ilişkileri sorulduğunda; graphify-out/ klasörü varsa soruyu önce graphify sorgusu olarak ele al.",
     "kaynak": "539efc3eb43c"
   },
-  "graphql-dev": {
-    "ne": "GraphQL query, mutation ve subscription yazar; fragment, kod üretimi, TypedDocumentNode, değişkenler, hata yönetimi ve client kurulumunu kapsar.",
-    "ne_zaman": "Saleor için GraphQL kodu yazılırken.",
-    "kaynak": "da3071bc67c4"
-  },
   "grill-me": {
     "ne": "Bir plan veya tasarımı keskinleştirmek için kesintisiz bir sorgulama (röportaj) yapar.",
     "ne_zaman": "Bir plan ya da tasarım üzerinde sıkı bir sorgulama yapılması istendiğinde.",
@@ -5704,21 +5354,6 @@
     "ne_zaman": "Tahakkuk, peşin gider itfası, sabit kıymet amortismanı, bordro, gelir tanıma veya herhangi bir manuel yevmiye kaydı yapılırken.",
     "kaynak": "490358de277e"
   },
-  "js-modern": {
-    "ne": "ES6+ özellikleri, async/await, modüller, TypeScript tipleri ve modern araçlarla JavaScript/TypeScript yazar.",
-    "ne_zaman": "BigCommerce temaları, uygulamaları veya headless storefront'ları için JavaScript/TypeScript yazılırken.",
-    "kaynak": "05ddd0945b4d"
-  },
-  "js-modern@orcaqubits": {
-    "ne": "ES6+ özellikleri, async/await, modüller ve TypeScript tipleriyle JavaScript yazar; SFCC sunucu tarafı JS, PWA Kit ve LWC kısıtlarını kapsar.",
-    "ne_zaman": "Salesforce Commerce için JavaScript yazılırken.",
-    "kaynak": "5d4eef4bdec8"
-  },
-  "js-modern@orcaqubits-2": {
-    "ne": "ES6+ özellikleri, async/await, modüller, TypeScript tipleri ve modern araçlarla JavaScript/TypeScript yazar; Shopify Functions ve Hydrogen'ı kapsar.",
-    "ne_zaman": "Shopify temaları, uygulamaları, Functions veya Hydrogen storefront'ları için JavaScript/TypeScript yazılırken.",
-    "kaynak": "cbb972a1893a"
-  },
   "json-canvas@kepano": {
     "ne": "JSON Canvas (.canvas) dosyalarında node, edge, group ve bağlantılarla düzenleme ve oluşturma yapar; mind map ve akış şemaları için kullanılır.",
     "ne_zaman": ".canvas dosyaları üzerinde çalışılırken, görsel canvas, mind map veya akış şeması istendiğinde ya da Obsidian Canvas anılırsa.",
@@ -6234,51 +5869,6 @@
     "ne_zaman": "Yeni knockout, CRISPRi veya CRISPRa taramalarında, enrichment/depletion karşılaştırmalarında ve MAGeCK count/test akışlarında.",
     "kaynak": "e3158b1f2019"
   },
-  "magento-admin-ui": {
-    "ne": "Magento 2 admin arayüzleri oluşturur: UI component grid'leri, formlar, sistem konfigürasyonu, ACL ve admin controller'ları.",
-    "ne_zaman": "Admin paneli, veri grid'i, düzenleme formu veya sistem ayarları oluşturulurken.",
-    "kaynak": "b4177e40753f"
-  },
-  "magento-api@orcaqubits": {
-    "ne": "Magento 2 REST ve GraphQL API'leri kurar: webapi.xml, schema.graphqls, resolver'lar, kimlik doğrulama ve ACL.",
-    "ne_zaman": "Özel API endpoint'i oluşturulurken, GraphQL şeması genişletilirken veya dış sistemler entegre edilirken.",
-    "kaynak": "7810aec1132e"
-  },
-  "magento-catalog": {
-    "ne": "Magento 2 katalog yapısını yönetir: ürün tipleri, kategoriler, attribute'lar, indexleme ve arama entegrasyonu.",
-    "ne_zaman": "Katalog özellikleri geliştirilirken, ürün tipleri özelleştirilirken veya katalog mimarisiyle çalışılırken.",
-    "kaynak": "4a8645e208c4"
-  },
-  "magento-checkout": {
-    "ne": "Magento 2 checkout'unu özelleştirir: ödeme yöntemleri, kargo taşıyıcıları, totals collector'lar ve checkout arayüzü.",
-    "ne_zaman": "Özel ödeme veya kargo entegrasyonu yazılırken ya da checkout akışı değiştirilirken.",
-    "kaynak": "7668750929a4"
-  },
-  "magento-deploy": {
-    "ne": "Magento 2 deployment'ı: deployment modları, statik içerik dağıtımı, DI derleme, CLI komutları, kesintisiz deployment ve CI/CD kurulumu.",
-    "ne_zaman": "Production deployment'a hazırlanırken veya deployment otomasyonu kurulurken.",
-    "kaynak": "d4949b78f354"
-  },
-  "magento-di": {
-    "ne": "Magento 2 bağımlılık enjeksiyonunu yapılandırır: di.xml, type'lar, virtual type'lar, preference'lar, argüman değiştirme ve Object Manager.",
-    "ne_zaman": "Bağımlılıklar bağlanırken, sınıf varyasyonları oluşturulurken veya modül entegrasyonları yapılandırılırken.",
-    "kaynak": "e73363269adc"
-  },
-  "magento-eav-attributes": {
-    "ne": "Magento 2 EAV sistemiyle çalışır: özel attribute'lar, attribute set'ler, EAV tabloları ve veri modeli.",
-    "ne_zaman": "Ürün, kategori veya müşteri attribute'u eklenirken ya da attribute sistemiyle çalışılırken.",
-    "kaynak": "9cbc49ef053d"
-  },
-  "magento-events-cron": {
-    "ne": "Magento 2 event'leri, observer'ları, cron işlerini ve message queue'ları uygular.",
-    "ne_zaman": "Event tabanlı mantık, zamanlanmış görevler veya asenkron işleme geliştirilirken.",
-    "kaynak": "330b25a6cce8"
-  },
-  "magento-frontend": {
-    "ne": "Magento 2 frontend'ini geliştirir: layout XML, blok'lar, PHTML şablonları, ViewModel'ler, temalar, RequireJS/KnockoutJS ve LESS/CSS.",
-    "ne_zaman": "Storefront özelleştirilirken, tema geliştirilirken veya frontend bileşenleriyle çalışılırken.",
-    "kaynak": "faf573b44e8c"
-  },
   "magento-graphql": {
     "ne": "Magento'nun GraphQL API'sini sorgular; ürün, sepet, checkout ve müşteri işlemleri için veri alır.",
     "ne_zaman": "Headless storefront veya PWA Studio frontend'i geliştirilirken Magento GraphQL verisi gerektiğinde.",
@@ -6289,11 +5879,6 @@
     "ne_zaman": "Magento mağazası yavaş çalıştığında, indexer sorunlarında veya Varnish ya da Redis cache yapılandırması gerektiğinde.",
     "kaynak": "31fc2b2af8f7"
   },
-  "magento-module-dev": {
-    "ne": "Magento 2 özel modülleri oluşturur: kayıt, dizin yapısı, model, resource model, collection, declarative schema ve data/schema patch'leri.",
-    "ne_zaman": "Yeni modül geliştirilirken veya modül mimarisi anlaşılmaya çalışılırken.",
-    "kaynak": "7cb684077018"
-  },
   "magento-module-development": {
     "ne": "Dependency injection, plugin, observer ve service contract kullanarak Magento 2 için özel modüller geliştirir ve çekirdek işlevselliği temiz biçimde genişletir.",
     "ne_zaman": "Magento 2'de çekirdek davranışı özelleştirmek veya yeni işlevsellik eklemek için özel modül yazılması gerektiğinde.",
@@ -6303,36 +5888,6 @@
     "ne": "Magento'da birden fazla web sitesi ve mağaza görünümünü; paylaşımlı veya kapsamlı katalog, ayrı URL yapısı ve mağazaya özel ayarlarla yapılandırır.",
     "ne_zaman": "Tek Magento kurulumunda birden fazla web sitesi ya da mağaza görünümü yönetilmesi gerektiğinde kullanılır.",
     "kaynak": "7ad5a0dd9dfe"
-  },
-  "magento-performance": {
-    "ne": "Magento 2 performansını optimize eder: Full Page Cache (Varnish), Redis, indexer ayarları, JS/CSS optimizasyonu, veritabanı iyileştirmeleri ve profilleme.",
-    "ne_zaman": "Sayfalar yavaş açıldığında, yükleme sürelerini iyileştirirken veya önbellekleme yapılandırırken.",
-    "kaynak": "567c577297ca"
-  },
-  "magento-plugins-interceptors": {
-    "ne": "Magento 2 plugin (interceptor) yazar: sınıf davranışını kalıtım olmadan değiştirmek için before, after ve around metotları.",
-    "ne_zaman": "Çekirdek veya üçüncü parti modül işlevselliğini genişletmek gerektiğinde.",
-    "kaynak": "bd0f74ad36e8"
-  },
-  "magento-security": {
-    "ne": "Magento 2 güvenliğini sağlar: CSP, 2FA, CSRF koruması, ACL, admin güvenlik yapılandırması, girdi doğrulama ve güvenlik en iyi uygulamaları.",
-    "ne_zaman": "Bir Magento kurulumunu sertleştirirken veya güvenlik durumunu incelerken.",
-    "kaynak": "f946a983f6cb"
-  },
-  "magento-service-contracts": {
-    "ne": "Magento 2 service contract'larını uygular: repository ve data interface'leri, SearchCriteria ve repository deseni.",
-    "ne_zaman": "Modül API'leri, veri erişim katmanları veya Magento Web API entegrasyonu geliştirirken.",
-    "kaynak": "79449ba187fb"
-  },
-  "magento-setup": {
-    "ne": "Magento 2 Open Source projesini kurar: kurulum, Composer yapılandırması, sistem gereksinimi kontrolü ve ilk ayarlar.",
-    "ne_zaman": "Yeni bir Magento projesi başlatırken veya geliştirme ortamı kurarken.",
-    "kaynak": "64f7d733c9ca"
-  },
-  "magento-testing": {
-    "ne": "Magento 2 için testler yazar: PHPUnit birim testleri, entegrasyon testleri, MFTF fonksiyonel testleri ve API testleri.",
-    "ne_zaman": "Modüller için test kapsamı oluştururken, hata ayıklarken veya CI/CD test hattı kurarken.",
-    "kaynak": "540ba2552f56"
   },
   "make-blog-post": {
     "ne": "Mevcut oturumdaki kodu yazarın sesiyle bir blog yazısına dönüştürür; tek bir fonksiyon, script, sınıf veya aracı örnek ve kullanım üzerinden anlatır. Taslak onaylanmadan dosya kaydetmez.",
@@ -6539,100 +6094,15 @@
     "ne_zaman": "Android uygulamasına Cast özelliği eklenirken veya eski Cast SDK'dan Media3 Cast'e geçilirken.",
     "kaynak": "a34b74a01f4e"
   },
-  "medusa-admin": {
-    "ne": "Medusa v2 admin panelini genişletir: zone'lara eklenen widget'lar, özel UI route'ları, Medusa UI bileşenleri ve Admin API entegrasyonu.",
-    "ne_zaman": "Admin arayüzünü özelleştirirken.",
-    "kaynak": "2328c13af09c"
-  },
-  "medusa-api-routes": {
-    "ne": "Medusa v2 için özel API route'ları oluşturur: file-based routing, HTTP metot export'ları, middleware, Zod validator'ları ve additional-data deseni.",
-    "ne_zaman": "Projeye REST endpoint eklenirken.",
-    "kaynak": "552afd314def"
-  },
-  "medusa-cart-checkout": {
-    "ne": "Medusa v2 sepet ve ödeme akışını uygular: sepet yaşam döngüsü, line item'lar, kargo ve ödeme seçimi, satış kanalları ve checkout tamamlama.",
-    "ne_zaman": "Sepet ve ödeme özellikleri geliştirirken.",
-    "kaynak": "7a81128647de"
-  },
-  "medusa-catalog": {
-    "ne": "Medusa v2 kataloğunu yönetir: ürünler, varyantlar, opsiyonlar, koleksiyonlar, kategoriler, etiketler ve ürün metadata'sı.",
-    "ne_zaman": "Medusa ürün verileriyle çalışırken.",
-    "kaynak": "8a6f6166d998"
-  },
-  "medusa-customers": {
-    "ne": "Medusa v2 müşterilerini yönetir: müşteri profilleri, e-posta ve sosyal kimlik doğrulama, müşteri grupları, adresler ve hesap yönetimi.",
-    "ne_zaman": "Müşteri verileri veya kimlik doğrulama ile çalışırken.",
-    "kaynak": "6de5b3c672df"
-  },
-  "medusa-deploy": {
-    "ne": "Medusa v2'yi production'a alır: build süreci, server ve worker modu, ortam değişkenleri, barındırma seçenekleri, Redis önbellek ve veritabanı yapılandırması.",
-    "ne_zaman": "Medusa uygulamalarını deploy ederken.",
-    "kaynak": "5311e26bd112"
-  },
   "medusa-development": {
     "ne": "Açık kaynaklı Medusa ticaret platformunu özel servisler, event subscriber'lar ve API uç noktalarıyla genişletir.",
     "ne_zaman": "Medusa'da benzersiz iş gereksinimleri için özel mantık ya da API eklemek gerektiğinde kullanılır.",
     "kaynak": "967718d7fd5e"
   },
-  "medusa-fulfillment": {
-    "ne": "Medusa v2 fulfillment'ı uygular: fulfillment modülü, provider arayüzü, kargo seçenekleri, fulfillment set'leri, shipping profile'lar ve çoklu depo desteği.",
-    "ne_zaman": "Yeni bir fulfillment provider'ı eklerken.",
-    "kaynak": "0064ca30875d"
-  },
-  "medusa-modules": {
-    "ne": "Özel Medusa v2 modülleri oluşturur: DML veri modelleri, MedusaService'i genişleten servisler, loader'lar, module link'leri ve container kaydı.",
-    "ne_zaman": "Özel bir modül oluştururken.",
-    "kaynak": "69b53c564e2d"
-  },
-  "medusa-orders": {
-    "ne": "Medusa v2 siparişlerini yönetir: sipariş yaşam döngüsü ve state machine, fulfillment akışları, iadeler, değişimler, claim'ler, taslak siparişler ve sipariş düzenleme.",
-    "ne_zaman": "Sipariş işleme akışlarıyla çalışırken.",
-    "kaynak": "be301952d50a"
-  },
-  "medusa-payments": {
-    "ne": "Medusa v2 ödeme işlemlerini uygular: payment modülü, provider soyutlaması, ödeme oturumları, authorization/capture/refund döngüsü ve Stripe/PayPal entegrasyonu.",
-    "ne_zaman": "Yeni bir ödeme provider'ı eklerken.",
-    "kaynak": "ed939617b19c"
-  },
-  "medusa-plugins": {
-    "ne": "Medusa v2 plugin'leri geliştirir ve yayınlar: plugin yapısı, plugin ile modül karşılaştırması, npm paketleme ve yeniden kullanılabilir plugin şablonu.",
-    "ne_zaman": "Dağıtılabilir bir Medusa eklentisi oluştururken.",
-    "kaynak": "269e665114a9"
-  },
-  "medusa-pricing": {
-    "ne": "Medusa v2 fiyatlandırmasını yapılandırır: pricing modülü, kurallı price list'ler, para birimleri, vergi hesaplama, bölgeler ve promosyon kampanyaları.",
-    "ne_zaman": "Fiyatlandırma ve indirimleri kurarken.",
-    "kaynak": "25ac9dd4e9a6"
-  },
-  "medusa-security": {
-    "ne": "Medusa v2 uygulama güvenliğini yapılandırır: kimlik doğrulama stratejileri, API anahtar türleri (publishable/secret), CORS, JWT/cookie secret'ları, admin/store auth ve oturum yönetimi.",
-    "ne_zaman": "Güvenlik yapılandırması yaparken.",
-    "kaynak": "03a1185a55ef"
-  },
   "medusa-setup": {
     "ne": "Medusa v2 geliştirme ortamını kurar: CLI, PostgreSQL ve Redis gereksinimleri, proje oluşturma, medusa-config.ts, dizin yapısı ve ortam değişkenleri.",
     "ne_zaman": "Yeni bir Medusa projesi başlatırken.",
     "kaynak": "3e65bf943200"
-  },
-  "medusa-storefront": {
-    "ne": "Next.js 15 ile Medusa v2 storefront'ları geliştirir: App Router, JS SDK istemcisi, TanStack Query, server component'ler, ürün sayfaları, sepet ve ödeme akışı.",
-    "ne_zaman": "Headless storefront geliştirirken.",
-    "kaynak": "910d921e66da"
-  },
-  "medusa-subscribers": {
-    "ne": "Medusa v2 event subscriber'larını uygular: pub/sub olay yönetimi, subscriber handler'ları, cron ile zamanlanmış işler ve event modülü (Redis veya bellek içi).",
-    "ne_zaman": "Ticaret olaylarına tepki vermek gerektiğinde.",
-    "kaynak": "f4a2a931a395"
-  },
-  "medusa-testing": {
-    "ne": "Medusa v2 uygulamalarını test eder: Jest kurulumu, modül birim testleri, workflow entegrasyon testleri, API route testleri, medusaIntegrationTestRunner ve mock desenleri.",
-    "ne_zaman": "Medusa projeleri için test yazarken.",
-    "kaynak": "8ad30f20db73"
-  },
-  "medusa-workflows": {
-    "ne": "Medusa v2 workflow'ları oluşturur: createStep ile adımlar, compensation/rollback, paralel çalıştırma, yerleşik workflow'ları genişleten hook'lar ve when koşulları.",
-    "ne_zaman": "Çok adımlı işlemleri orkestre ederken.",
-    "kaynak": "51dcbebfb83c"
   },
   "meeting-briefing": {
     "ne": "Hukuki açıdan ilgili toplantılar için yapılandırılmış brifing hazırlar ve çıkan aksiyon maddelerini takip eder.",
@@ -6939,66 +6409,6 @@
     "ne_zaman": "Bildirim işlemesi eklerken, hata ayıklarken veya güçlendirirken.",
     "kaynak": "e71514fb5cad"
   },
-  "mpp-charge-flow": {
-    "ne": "MPP tek seferlik ücretlendirme akışlarını uygular: API monetizasyonu, veri erişimi ve dosya indirmeleri için istek bazlı ödeme kapıları.",
-    "ne_zaman": "Çağrı başına ücretli API'ler veya tek tek kaynakları HTTP 402 ile korurken.",
-    "kaynak": "4b38be9cb8ca"
-  },
-  "mpp-client-fetch": {
-    "ne": "mppx.fetch() ile MPP istemci tarafı ödeme işlemini uygular; 402 korumalı API'leri tüketen, challenge-response ödeme akışını yöneten.",
-    "ne_zaman": "402 korumalı API'leri kullanan AI agent'ları veya otomatik istemciler geliştirirken.",
-    "kaynak": "4de890cd1eab"
-  },
-  "mpp-conformance": {
-    "ne": "MPP uygulamalarını spesifikasyona göre doğrular: HTTP 402 challenge-response uyumu, header formatları, ödeme yöntemi doğruluğu, servis keşfi ve production hazırlığı.",
-    "ne_zaman": "Bir MPP entegrasyonunu denetlerken veya production lansmanına hazırlanırken.",
-    "kaynak": "f2efe83f40d2"
-  },
-  "mpp-dev-patterns": {
-    "ne": "MPP için çapraz kesen geliştirme desenleri: güvenlik, replay koruması, HMAC challenge bağlama, makbuz doğrulama, hata yönetimi, retry, TLS ve izleme.",
-    "ne_zaman": "Mimari tasarlarken veya production sorunlarını çözerken.",
-    "kaynak": "75ef6c096735"
-  },
-  "mpp-proxy": {
-    "ne": "Mevcut API'leri upstream servisi değiştirmeden HTTP 402 ödeme kapılarıyla saran MPP ödeme proxy'leri uygular.",
-    "ne_zaman": "Üçüncü parti API'leri monetize ederken, mevcut servislere ödeme katmanı eklerken veya API marketplace'leri kurarken.",
-    "kaynak": "df834797d192"
-  },
-  "mpp-server-middleware": {
-    "ne": "Hono, Express, Next.js ve Elysia için MPP sunucu tarafı middleware'i uygular: HTTP 402 ödeme kapılı route'lar, ödeme yöntemleri ve Mppx sunucu kurulumu.",
-    "ne_zaman": "API route'larını 402 ödeme kapısıyla korurken veya Mppx sunucu örneğini yapılandırırken.",
-    "kaynak": "50da601f946f"
-  },
-  "mpp-service-discovery": {
-    "ne": "MPP servisleri için x-payment-info uzantılı OpenAPI belgeleri, x-service-info metadatası ve llms.txt ile otonom agent keşfini uygular.",
-    "ne_zaman": "AI agent'ların ücretli API'lerinizi bulup ödeyebilmesi için ücretli API metadatasını yayınlarken kullanılır.",
-    "kaynak": "fe179ba5db93"
-  },
-  "mpp-session-flow": {
-    "ne": "Oturum tabanlı MPP akış ödemelerini uygular: tek yetkilendirmeyle kullandıkça öde modeli, token başına faturalama ve mikro ödeme toplama.",
-    "ne_zaman": "Sürekli veri akışı sunan veya değeri kademeli tahsil eden streaming API ve servisleri geliştirirken kullanılır.",
-    "kaynak": "9683fac69599"
-  },
-  "mpp-setup": {
-    "ne": "Yeni bir MPP projesini kurar: mppx SDK'sını yükler, ödeme yöntemlerini yapılandırır, sunucu middleware'ini ve ücretli bir API endpoint'ini ekler.",
-    "ne_zaman": "Sıfırdan yeni bir MPP machine payments projesi başlatılırken kullanılır.",
-    "kaynak": "a569951af144"
-  },
-  "mpp-spt-lifecycle": {
-    "ne": "MPP için Stripe Shared Payment Token (SPT) yaşam döngüsünü yönetir: oluşturma, kullanım, devre dışı bırakma, webhook olayları ve mutabakat.",
-    "ne_zaman": "MPP içinde Stripe SPT'leri ile fiat/kart ödeme akışını kurarken kullanılır.",
-    "kaynak": "a8b575b5dfe6"
-  },
-  "mpp-stripe-method": {
-    "ne": "Stripe'ı MPP ödeme yöntemi olarak yapılandırır: SPT'ler üzerinden kart ve cüzdan ödemeleri ve HTTP 402 akışının Stripe altyapısına bağlanması.",
-    "ne_zaman": "Makineler arası işlemlerde fiat/kart ödemelerini etkinleştirmek istendiğinde kullanılır.",
-    "kaynak": "a6b0448f55d7"
-  },
-  "mpp-tempo-method": {
-    "ne": "Tempo blockchain'ini MPP ödeme yöntemi olarak yapılandırır: saniyenin altında finalite ile USDC stablecoin ödemeleri ve gas dalgalanmasız işlemler.",
-    "ne_zaman": "Makine ödemeleri için kripto-yerel ödeme altyapısı kurulurken kullanılır.",
-    "kaynak": "53c507c77e5b"
-  },
   "msgraph-sdk": {
     "ne": "Microsoft Graph SDK'yı .NET, TypeScript/JavaScript veya Python projelerine entegre eder; kimlik doğrulama, batching, delta sorgular, change notification ve throttling'i kapsar.",
     "ne_zaman": "Microsoft 365 verilerine (kullanıcılar, mail, takvim, Teams, dosyalar, SharePoint) herhangi bir uygulamadan erişilirken.",
@@ -7209,86 +6619,6 @@
     "ne_zaman": "Cloudflare'de yeni Next.js projesi başlatılırken, mevcut bir uygulama Workers'a taşınırken ya da vinext kurulumu yapılırken kullanılır.",
     "kaynak": "1a68dd57ed66"
   },
-  "nextjs-patterns": {
-    "ne": "BigCommerce için Next.js ile headless storefront geliştirir: App Router, Server/Client Component'ler, veri çekme, ISR, middleware, API route'ları ve Catalyst kalıpları.",
-    "ne_zaman": "Next.js ile headless BigCommerce vitrini geliştirirken kullanılır.",
-    "kaynak": "6c527a2742a1"
-  },
-  "nextjs-patterns@orcaqubits": {
-    "ne": "Medusa v2 için Next.js 15 storefront geliştirir: App Router kuralları, Server/Client Component ayrımı, Medusa JS SDK entegrasyonu, veri çekme, önbellekleme ve server action'lar.",
-    "ne_zaman": "Next.js ile Medusa storefront'ı geliştirirken kullanılır.",
-    "kaynak": "ed9dbe73c3ae"
-  },
-  "nextjs-react": {
-    "ne": "Saleor için Next.js ve React uygulamaları geliştirir: App Router, server/client component'ler, GraphQL istemci entegrasyonu, Apps içinde MacawUI ve Tailwind CSS.",
-    "ne_zaman": "Saleor storefront'ı veya App'i Next.js ile geliştirirken kullanılır.",
-    "kaynak": "4d3ac0f08e9c"
-  },
-  "nlweb-ask-endpoint": {
-    "ne": "NLWeb /ask REST endpoint'ini uygular ve tüketir: GET/POST istek biçimi, v0.55 yapılandırılmış gövde, SSE akışı, list/summarize/generate modları ve hata zarfları.",
-    "ne_zaman": "NLWeb server route'u kurarken, /ask'ı özel bir agent'tan çağırırken ya da /ask yanıtlarında hata ayıklarken kullanılır.",
-    "kaynak": "962186d5c5bc"
-  },
-  "nlweb-auth-multitenancy": {
-    "ne": "NLWeb için OAuth girişi, oturum saklama, config_nlweb.yaml'daki sites: izin listesi, konuşma kalıcılığı ve kiracılar arası veri izolasyonunu yapılandırır.",
-    "ne_zaman": "NLWeb'e giriş eklenirken, tek kurulumda birden çok müşteri barındırılırken ya da konuşma geçmişi saklanırken kullanılır.",
-    "kaynak": "3b9635a16a7a"
-  },
-  "nlweb-chatgpt-appsdk": {
-    "ne": "NLWeb'i ChatGPT Apps SDK'ya bağlar: Node.js MCP sunucusu, nlweb-list aracı, React widget'ı ve 8100 portlu AppSDK adaptörü.",
-    "ne_zaman": "Bir NLWeb sitesini ChatGPT uygulaması olarak yayınlarken ya da NLWeb sonuçlarını Apps SDK widget'ına bağlarken kullanılır.",
-    "kaynak": "2ef3fa8763a7"
-  },
-  "nlweb-data-loading": {
-    "ne": "db_load.py ile site içeriğini NLWeb vektör deposuna alır: RSS/Atom, Schema.org JSON-LD, sitemap URL listeleri ve CSV; chunking, embedding ve yeniden yükleme.",
-    "ne_zaman": "Sitenin indeksini ilk kez oluştururken, içeriği yenilerken ya da retrieval backend'leri arasında geçiş yaparken kullanılır.",
-    "kaynak": "fbd4c2c879e0"
-  },
-  "nlweb-deployment": {
-    "ne": "NLWeb'i Azure App Service, Snowflake, Cloudflare Worker + AutoRAG, Docker veya self-hosted ortama dağıtır; env değişkenleri, mode: production, TLS, OAuth ve ölçekleme.",
-    "ne_zaman": "Yerel geliştirmeden internete açık, barındırılan bir NLWeb örneğine geçilirken kullanılır.",
-    "kaynak": "911670283acc"
-  },
-  "nlweb-dev-patterns": {
-    "ne": "NLWeb iç mimarisi: karma mod felsefesi, FastTrack/Analysis yolları, config önceliği, NLWS başlıkları, LLM çağrı zinciri hata ayıklama, scorer seçimi ve A2A/ModelRouter alt sistemleri.",
-    "ne_zaman": "Bir NLWeb kurulumunun iç mimarisini tasarlarken ya da kesişen konuları çözerken kullanılır.",
-    "kaynak": "e5d7ef8e92cb"
-  },
-  "nlweb-llm-providers": {
-    "ne": "NLWeb LLM ve embedding sağlayıcılarını (OpenAI, Azure OpenAI, Anthropic, Gemini, Ollama vb.) yapılandırır; config_llm.yaml katmanları, ModelRouter yönlendirmesi ve özel sağlayıcı ekleme.",
-    "ne_zaman": "Model seçerken, maliyeti ayarlarken ya da yeni bir LLM backend'i bağlarken kullanılır.",
-    "kaynak": "188507b65c17"
-  },
-  "nlweb-mcp-server": {
-    "ne": "NLWeb'i MCP sunucusu olarak açar: /mcp adresinde JSON-RPC 2.0 endpoint'i, ask/list_sites/who araçları, protokol sürüm müzakeresi ve ChatGPT, Claude, Gemini ile entegrasyon.",
-    "ne_zaman": "NLWeb'i bir AI agent'a MCP ile bağlarken ya da NLWeb sitesini tüketen bir MCP istemcisi yazarken kullanılır.",
-    "kaynak": "096079816c9c"
-  },
-  "nlweb-prompts-customization": {
-    "ne": "NLWeb LLM prompt'larını ve Schema.org tipi bazlı davranışı prompts.xml ve tools.xml ile özelleştirir: promptString şablonları, returnStruc şemaları ve site bazlı geçersiz kılmalar.",
-    "ne_zaman": "Yanıt kalitesini ayarlarken, yeni bir alan desteklerken ya da prompt'ları yerelleştirirken kullanılır.",
-    "kaynak": "55b816174e83"
-  },
-  "nlweb-retrieval-backends": {
-    "ne": "NLWeb retrieval backend'lerini (Qdrant, Azure AI Search, Elasticsearch, OpenSearch, pgvector, Milvus vb.) seçer ve yapılandırır; config_retrieval.yaml ve write_endpoint kuralı.",
-    "ne_zaman": "Retrieval deposu seçerken, backend geçişi yaparken ya da \"results are empty\" sorununu ayıklarken kullanılır.",
-    "kaynak": "2be143a79d0f"
-  },
-  "nlweb-schema-org-grounding": {
-    "ne": "Sitedeki içeriği NLWeb ingest'i için Schema.org JSON-LD olarak hazırlar ve denetler: desteklenen tipler, HTML'e gömme, sites.xml kaydı ve schema_object'in sonuçlara akışı.",
-    "ne_zaman": "NLWeb ile sunulacak bir sitenin yapılandırılmış verisini yazarken ya da denetlerken kullanılır.",
-    "kaynak": "ea4afbd17fd3"
-  },
-  "nlweb-setup": {
-    "ne": "Sıfırdan yerel NLWeb ortamı kurar: repo klonlama, .env, nlweb init-python ve nlweb init ile bağımlılık ve sağlayıcı seçimi, örnek veri yükleme ve nlweb check doğrulaması.",
-    "ne_zaman": "Sıfırdan yeni bir NLWeb kurulumuna başlanırken kullanılır.",
-    "kaynak": "62e939e7d79f"
-  },
-  "nlweb-tools-framework": {
-    "ne": "NLWeb araçlarını (search, item_details, compare_items, ensemble vb. Schema.org tipi işleyicileri) tasarlar ve uygular: tools.xml, ToolSelector, methods/ işleyicileri ve returnStruc sözleşmesi.",
-    "ne_zaman": "NLWeb'i varsayılan sorgu-sonuç akışının ötesine taşırken ya da özel araç yazarken kullanılır.",
-    "kaynak": "6559b92f5079"
-  },
   "nmrglue": {
     "ne": "Kalibre edilmiş tek boyutlu kompleks NMR FID'lerini nmrglue ile faz düzeltilmiş spektrumlara, pik adaylarına ve işaretli integrasyon bölgelerine dönüştürür; apodizasyon, FFT, baz çizgisi düzeltmesi yapar.",
     "ne_zaman": "Ham 1D NMR işleme, ppm eksen doğrulama, manuel faz düzeltme veya tekrarlanabilir spektral integrasyon gerektiğinde.",
@@ -7303,26 +6633,6 @@
     "ne": "Tıklanabilir Studio kontrollerine pointerless etkileşim stilini uygular: imleç default kalır, hover'da parlaklaşır, focus çerçevesi yalnızca klavye gezinmesinde görünür.",
     "ne_zaman": "Studio'ya buton veya link eklenirken ya da mevcut kontroller bu stile göre düzenlenirken.",
     "kaynak": "0340b769aeca"
-  },
-  "node-backend": {
-    "ne": "BigCommerce uygulamalarının Node.js sunucu tarafını kurar: Express/Fastify, OAuth, JWT doğrulama, API proxy, webhook işleme, oturum yönetimi ve dağıtım.",
-    "ne_zaman": "BigCommerce uygulamasının sunucu tarafı bileşenini geliştirirken kullanılır.",
-    "kaynak": "945136b6fed2"
-  },
-  "node-backend@orcaqubits": {
-    "ne": "Medusa v2 için Node.js backend kurar: Express middleware zinciri, MikroORM entity kalıpları, PostgreSQL bağlantı havuzu, asenkron kalıplar, hata yönetimi ve loglama.",
-    "ne_zaman": "Medusa'nın Node.js çalışma zamanıyla çalışılırken kullanılır.",
-    "kaynak": "793c911ab9c3"
-  },
-  "node-backend@orcaqubits-2": {
-    "ne": "Salesforce Commerce için sunucu tarafı mantık kurar: SFCC server-side JavaScript (gerçek Node.js çalışma zamanı değil), PWA Kit backend, Commerce SDK ile SCAPI erişimi ve harici servis entegrasyonu.",
-    "ne_zaman": "Sunucu tarafı ticaret mantığı yazılırken kullanılır.",
-    "kaynak": "bbb55e038d5a"
-  },
-  "node-backend@orcaqubits-3": {
-    "ne": "Shopify uygulamalarının sunucu tarafını kurar: Remix sunucusu, @shopify/shopify-app-remix, oturum saklama, OAuth, API proxy, webhook işleme ve dağıtım.",
-    "ne_zaman": "Shopify uygulamasının sunucu tarafı bileşenini geliştirirken kullanılır.",
-    "kaynak": "602e090c693f"
   },
   "noob-mode": {
     "ne": "Teknik olmayan Copilot CLI kullanıcıları için her onay istemini, hata mesajını ve teknik çıktıyı jargonsuz sade İngilizceye çeviren, renk kodlu risk göstergeleri ekleyen bir katman.",
@@ -7828,36 +7138,6 @@
     "ne": "Resmi PHP SDK ile araçlar, kaynaklar, promptlar ve testler içeren, eksiksiz bir PHP Model Context Protocol sunucu projesi üretir.",
     "ne_zaman": "Sıfırdan bir PHP MCP sunucu projesi oluşturulmak istendiğinde.",
     "kaynak": "602deee38651"
-  },
-  "php-modern": {
-    "ne": "Modern PHP 8.x kodu yazar: typed property'ler, enum'lar, readonly class'lar, match, named argument'ler, union/intersection tipler, fiber'lar, attribute'lar ve constructor promotion.",
-    "ne_zaman": "Magento veya herhangi bir PHP 8.x projesinde PHP kodu yazılırken kullanılır.",
-    "kaynak": "1c020c425e43"
-  },
-  "php-modern@orcaqubits": {
-    "ne": "Modern PHP 8.x kodu yazar: typed property'ler, enum'lar, readonly class'lar, match, named argument'ler, union/intersection tipler, fiber'lar, attribute'lar ve constructor promotion.",
-    "ne_zaman": "WooCommerce veya herhangi bir PHP 8.x projesinde PHP kodu yazılırken kullanılır.",
-    "kaynak": "9cf163e06d58"
-  },
-  "php-patterns": {
-    "ne": "PHP tasarım kalıplarını uygular: Repository, Factory, Strategy, Decorator, Observer, Singleton, Builder ve Dependency Injection.",
-    "ne_zaman": "PHP uygulamaları tasarlanırken ya da Magento gibi framework'lerin kullandığı kalıpları anlamak istendiğinde kullanılır.",
-    "kaynak": "2523dcbd8bce"
-  },
-  "php-patterns@orcaqubits": {
-    "ne": "PHP tasarım kalıplarını uygular: Singleton, Factory, Strategy, Observer, Repository, Decorator ve Dependency Injection.",
-    "ne_zaman": "WooCommerce eklentisi kodu yapılandırılırken ya da karmaşık iş mantığı uygulanırken kullanılır.",
-    "kaynak": "6b99c034fbc9"
-  },
-  "php-testing": {
-    "ne": "PHPUnit ile PHP testleri yazar: birim testler, mock'lar, data provider'lar, test double'ları, assertion'lar ve TDD uygulamaları.",
-    "ne_zaman": "PHP kodu için test yazılırken, Magento'da ya da bağımsız PHP uygulamalarında kullanılır.",
-    "kaynak": "227490d222f6"
-  },
-  "php-testing@orcaqubits": {
-    "ne": "PHPUnit ile PHP testleri yazar: birim testler, mock'lar, data provider'lar, assertion'lar, test double'ları ve TDD akışı.",
-    "ne_zaman": "WooCommerce eklentileri veya PHP projeleri için test yazılırken kullanılır.",
-    "kaynak": "d98b28689eff"
   },
   "phylogenetics": {
     "ne": "MAFFT hizalaması, IQ-TREE maksimum olabilirlik ağaçları ve FastTree ile filogenetik ağaçlar kurar ve analiz eder; ETE3 ile ağaç özetleri ve görselleştirme yapar.",
@@ -8699,11 +7979,6 @@
     "ne_zaman": "Python ile Azure IoT Edge modülü yazılacağında, dağıtım manifesti hazırlanacağında veya üretim hazırlığı kontrol edileceğinde.",
     "kaynak": "32758a3196fe"
   },
-  "python-django": {
-    "ne": "Saleor projelerinde Django ORM kalıpları, sinyaller, Celery görevleri, tip ipuçları, migration'lar, yönetim komutları ve async view'lar için Python/Django kodu yazar.",
-    "ne_zaman": "Saleor projesinde Python veya Django kodu yazılırken.",
-    "kaynak": "15aef6d665c3"
-  },
   "python-mcp-server-generator": {
     "ne": "Python ile yeni bir Model Context Protocol (MCP) sunucusu oluşturur; uv projesi, MCP Python SDK v2 (MCPServer), tipli tool'lar, bellek içi testler ve istemci yapılandırması hazırlar.",
     "ne_zaman": "Python fonksiyonlarını, API'yi veya veritabanını AI istemcilerine MCP tool'u olarak açmak istendiğinde. MCP istemcisi ya da başka dilde sunucu için kullanılmaz.",
@@ -8964,16 +8239,6 @@
     "ne_zaman": "Kullanıcı açıkça Container/Presentation desenli bir bileşen istediğinde veya /react-container-presentation-component komutunu çalıştırdığında.",
     "kaynak": "2723c17fe800"
   },
-  "react-patterns": {
-    "ne": "PWA Kit için React uygulamaları geliştirir: hook'lar, SSR, Commerce SDK entegrasyonu, Chakra UI bileşenleri, getProps veri çekme ve istemci durum yönetimi. Remix/Next.js değil React kullanır.",
-    "ne_zaman": "PWA Kit ile mağaza (storefront) geliştirilirken.",
-    "kaynak": "779aa72eface"
-  },
-  "react-patterns@orcaqubits": {
-    "ne": "Remix ile React uygulamaları geliştirir: loader, action, hook, Server/Client Component, iç içe route, hata sınırları, form yönetimi ve streaming SSR.",
-    "ne_zaman": "Shopify Hydrogen mağazası veya Remix tabanlı uygulama geliştirilirken.",
-    "kaynak": "d25666eb7864"
-  },
   "react-scan": {
     "ne": "Remotion Studio'nun React render profillerini yalnızca geliştirme ortamındaki WebMCP araçlarıyla yakalar ve analiz eder.",
     "ne_zaman": "Gereksiz yeniden render, yavaş commit veya frame'e bağlı component ağacı sorunları teşhis edilirken ya da performans karşılaştırılırken.",
@@ -9028,21 +8293,6 @@
     "ne": "Bir süredir alışveriş yapmayan müşterileri bulur, boşluğu değerleriyle sıralar, sahibinin sesiyle geri kazanma mesajı taslağı yazar; yalnızca onaylananları gönderir ve kaydeder.",
     "ne_zaman": "Müşterilerin yavaş yavaş uzaklaştığı endişesi olduğunda, 'kim uzun zamandır sipariş vermedi' ya da eski müşterileri geri kazanma istendiğinde.",
     "kaynak": "0d9bab51f431"
-  },
-  "readiness-audit": {
-    "ne": "Canlı bir siteye karşı tam agentic commerce hazırlık denetimi yapar: altı probe modülü, ağırlıklı puanlama ve her açığı kapatacak marketplace skill'ine bağlayan rapor üretir.",
-    "ne_zaman": "Sitenin agent'lara hazır olup olmadığı veya ACP/UCP ile agent'ların satın alabilmesi için neyin gerektiği sorulduğunda.",
-    "kaynak": "f7fc6f61bf72"
-  },
-  "readiness-fix-plan": {
-    "ne": "Mevcut readiness denetim raporunu (report/score.json) sıralı, stack'e uygun bir düzeltme planına çevirir; her açığı bağımlılık ve önceliğe göre sıralar, efor tahmini ekler.",
-    "ne_zaman": "readiness-audit sonrası kullanıcı plan, öncelik sırası veya takip sistemi için issue listesi istediğinde.",
-    "kaynak": "0e7f0f539d8f"
-  },
-  "readiness-quick-check": {
-    "ne": "Altmış saniyelik agentic commerce ön taraması: agent erişimini (r1) ve protokol keşfini (r2) yoklar; sitenin agent'lara ulaşılabilir olup ticari amaç taşıdığını gösterir.",
-    "ne_zaman": "İlk değerlendirme, satış görüşmesi veya tam readiness-audit öncesinde rakip sitesi kontrol edilirken.",
-    "kaynak": "8bcecbd84c56"
   },
   "readme-blueprint-generator": {
     "ne": "Proje dokümantasyonunu ve .github/copilot dosyalarını tarayıp yapılandırılmış bir README.md üretir.",
@@ -9629,100 +8879,15 @@
     "ne_zaman": "双11, 618, 9.9, 12.12, Black Friday gibi büyük kampanyalar için 海报, banner, 首焦图, 大促图 veya mağaza üst görseli istendiğinde.",
     "kaynak": "64a49b07aabf"
   },
-  "saleor-apps": {
-    "ne": "Saleor App geliştirir: app manifest, saleor-app-sdk, Next.js şablonu, izinler, token exchange, APL, App Bridge ve yaşam döngüsü yönetimi.",
-    "ne_zaman": "Saleor App uzantısı geliştirilirken.",
-    "kaynak": "0662e83b92b9"
-  },
-  "saleor-attributes": {
-    "ne": "Saleor'ın tipli attribute sistemiyle çalışır: attribute tipleri, ürün tipleri, sayfa tipleri, varyant seçim attribute'ları ve attribute bazlı filtreleme.",
-    "ne_zaman": "Ürün şemaları tanımlanırken.",
-    "kaynak": "e6e28b716d16"
-  },
-  "saleor-catalog": {
-    "ne": "Saleor kataloğunu yönetir: ürünler, varyantlar, ürün tipleri, kategoriler, koleksiyonlar, medya ve depo stoku.",
-    "ne_zaman": "Saleor ürün verileriyle çalışılırken.",
-    "kaynak": "b81c4117a824"
-  },
-  "saleor-channels": {
-    "ne": "Saleor channel'larını yapılandırır: çoklu para birimi, çoklu bölge, kanal bazlı fiyatlandırma, depo tahsisi ve çoklu marka kurulumları.",
-    "ne_zaman": "Çok kanallı ticaret yönetilirken.",
-    "kaynak": "bffd6c8bd2f9"
-  },
-  "saleor-checkout": {
-    "ne": "Saleor checkout akışını uygular: checkout oluşturma, satır kalemleri, teslimat ve fatura adresleri, teslimat yöntemleri, ödeme ve checkout tamamlama.",
-    "ne_zaman": "Checkout deneyimi geliştirirken kullanılır.",
-    "kaynak": "75b079f80b79"
-  },
-  "saleor-customers": {
-    "ne": "Saleor müşteri ve personel yönetimini kapsar: müşteri hesapları, kayıt, adresler, staff kullanıcıları, izin grupları ve kimlik doğrulama.",
-    "ne_zaman": "Kullanıcı yönetimi ile çalışırken kullanılır.",
-    "kaynak": "df4698350fa5"
-  },
-  "saleor-dashboard": {
-    "ne": "Saleor Dashboard'u genişletir: mounting point'ler, App Bridge aksiyonları, MacawUI bileşenleri, iframe uzantıları ve özel görünümler.",
-    "ne_zaman": "Dashboard uzantısı geliştirirken kullanılır.",
-    "kaynak": "036dae011615"
-  },
-  "saleor-deploy": {
-    "ne": "Saleor'u üretime alır: Docker kurulumu, Saleor Cloud, ortam değişkenleri, Celery worker'ları, S3 medya depolama, veritabanı yönetimi ve ölçekleme.",
-    "ne_zaman": "Saleor uygulamalarını deploy ederken kullanılır.",
-    "kaynak": "c099cb855894"
-  },
   "saleor-development": {
     "ne": "Saleor'un GraphQL tabanlı headless ticaret platformunu özel uygulamalar, webhook işleyicileri ve dashboard arayüz özelleştirmeleriyle geliştirir ve genişletir.",
     "ne_zaman": "Saleor üzerinde özel uygulama, webhook veya dashboard UI geliştirmesi yapılırken.",
     "kaynak": "1d9a0c945e2b"
   },
-  "saleor-graphql": {
-    "ne": "Saleor GraphQL API ile çalışır: query, mutation, subscription, cursor pagination, filtreler, hata yönetimi, GraphQL Playground ve kod üretimi.",
-    "ne_zaman": "Saleor API'sine karşı geliştirme yaparken kullanılır.",
-    "kaynak": "865dc4c81d77"
-  },
-  "saleor-orders": {
-    "ne": "Saleor sipariş yaşam döngüsünü yönetir: sipariş oluşturma, fulfillment, iadeler, refund, taslak siparişler ve sipariş olayları.",
-    "ne_zaman": "Saleor siparişleriyle çalışırken kullanılır.",
-    "kaynak": "73d7ed7e0c17"
-  },
-  "saleor-payments": {
-    "ne": "Saleor ödeme işlemlerini uygular: transaction tabanlı ödeme akışı, payment App'leri, sync webhook olayları, Stripe/Adyen desenleri ve refund.",
-    "ne_zaman": "Ödeme entegrasyonu geliştirirken kullanılır.",
-    "kaynak": "f5c84a60a00f"
-  },
-  "saleor-promotions": {
-    "ne": "Saleor promosyonlarını yapılandırır: katalog ve sipariş promosyonları, voucher'lar, manuel indirimler, gift card'lar ve indirim birleştirme.",
-    "ne_zaman": "Fiyatlandırma kuralları kurarken kullanılır.",
-    "kaynak": "77b821a1105d"
-  },
-  "saleor-security": {
-    "ne": "Saleor uygulamalarını güvenli hale getirir: JWT kimlik doğrulama, OIDC entegrasyonu, App token'ları, izin modeli, rate limiting, CORS ve güvenlik header'ları.",
-    "ne_zaman": "Saleor güvenlik ayarlarını yapılandırırken kullanılır.",
-    "kaynak": "42caa8d55431"
-  },
   "saleor-setup": {
     "ne": "Saleor geliştirme ortamını kurar: saleor-platform Docker Compose, CLI, PostgreSQL/Redis ön koşulları, manage.py komutları, ortam değişkenleri ve proje yapısı.",
     "ne_zaman": "Yeni bir Saleor projesi başlatırken kullanılır.",
     "kaynak": "a32f88ec7a6a"
-  },
-  "saleor-shipping": {
-    "ne": "Saleor kargo ayarlarını yapılandırır: kargo bölgeleri, fiyat/ağırlık bazlı yöntemler, özel shipping App'leri, depo bazlı tahsis ve click-and-collect.",
-    "ne_zaman": "Teslimat seçeneklerini kurarken kullanılır.",
-    "kaynak": "c7ce9dd7e3d9"
-  },
-  "saleor-storefront": {
-    "ne": "Saleor için Next.js storefront'ları geliştirir: GraphQL istemci kurulumu, channel yönlendirme, Tailwind CSS, server component'ler, checkout akışı ve SEO.",
-    "ne_zaman": "Saleor storefront geliştirirken kullanılır.",
-    "kaynak": "48152bec10c7"
-  },
-  "saleor-testing": {
-    "ne": "Saleor uygulamalarını test eder: pytest kurulumu, Django test client, GraphQL test desenleri, App testleri, factory_boy fixture'ları ve webhook testleri.",
-    "ne_zaman": "Saleor projeleri için test yazarken kullanılır.",
-    "kaynak": "11f8b68c64e1"
-  },
-  "saleor-webhooks": {
-    "ne": "Saleor webhook'larını yapılandırır: async ve sync olaylar, abonelik payload'ları, JWS/HMAC imza doğrulama, yeniden deneme politikası ve olay tipleri.",
-    "ne_zaman": "Webhook odaklı entegrasyonlar geliştirirken kullanılır.",
-    "kaynak": "04ef707ebf21"
   },
   "sales-enablement": {
     "ne": "Satış materyalleri üretir: pitch deck, one-pager, itiraz yönetimi dokümanı, demo senaryosu ve battle card.",
@@ -11189,111 +10354,6 @@
     "ne_zaman": "Play Console ayarlanırken, ürünler oluşturulurken ya da billing kodu yazılmadan önce ortam kurulurken.",
     "kaynak": "d15f9b5be138"
   },
-  "sf-b2b-apex": {
-    "ne": "CartExtension ad alanında B2B Commerce Apex eklentileri yazar: fiyatlandırma, kargo, vergi ve envanter hesaplayıcıları, governor limitleri, toplu işleme ve en az %75 test kapsamı.",
-    "ne_zaman": "Sunucu tarafı B2B Commerce iş mantığı yazılırken ya da checkout akışı özelleştirilirken kullanılır.",
-    "kaynak": "b23b26b10f44"
-  },
-  "sf-b2b-experience": {
-    "ne": "Experience Builder ile B2B Commerce vitrinleri kurar: LWR şablonları, sayfa türleri (Ana, Ürün, Kategori, Sepet, Ödeme), bileşenler, tema düzenleri, gezinme, SEO ve yayınlama.",
-    "ne_zaman": "B2B ya da D2C vitrini oluşturulurken veya sayfa bileşenleri ve tema düzeni düzenlenirken kullanılır.",
-    "kaynak": "1fbec21b7180"
-  },
-  "sf-b2b-lwc": {
-    "ne": "B2B Commerce için Lightning Web Components bileşenleri yazar: @api/@track/@wire dekoratörleri, ticari wire adaptörleri, özel olaylar, Lightning Web Security ve Jest testleri.",
-    "ne_zaman": "B2B vitrininin arayüz bileşeni geliştirilirken kullanılır.",
-    "kaynak": "5498622649d8"
-  },
-  "sf-b2c-cartridges": {
-    "ne": "B2C Commerce cartridge'larının dizin yapısını, cartridge yığınlamayı, adlandırma kurallarını, cartridge yolu yapılandırmasını ve sertifikasyon gereksinimlerini ele alır.",
-    "ne_zaman": "Yeni bir SFCC cartridge'ı oluşturulurken ya da mevcut bir cartridge değiştirilirken kullanılır.",
-    "kaynak": "61c61be79ac8"
-  },
-  "sf-b2c-controllers": {
-    "ne": "SFRA controller'ları yazar: server.get/post/use rota işleyicileri, append/prepend/replace ara katmanları, CSRF koruması, form doğrulama, yanıt oluşturma ve rota önbellekleme.",
-    "ne_zaman": "B2C Commerce'de istek işleme kodu yazılırken ya da mevcut bir rota ara katmanı değiştirilirken kullanılır.",
-    "kaynak": "1fde9d3d3d14"
-  },
-  "sf-b2c-isml": {
-    "ne": "B2C Commerce ISML şablonları yazar: isprint, isif, isloop gibi etiketler, ${pdict.*} ifadeleri, Resource.msg() yerelleştirmesi, içerik slotları ve şablon kalıtımı.",
-    "ne_zaman": "B2C vitrin şablonu geliştirilirken ya da ISML'de yerelleştirme ve çıktı kodlaması gerektiğinde kullanılır.",
-    "kaynak": "4e9333f4edd7"
-  },
-  "sf-b2c-jobs": {
-    "ne": "B2C Commerce işlerini oluşturur ve yönetir: iş çerçevesi, script ve pipeline adımları, cron ile zamanlama, içe/dışa aktarma, yeniden indeksleme ve Business Manager izleme.",
-    "ne_zaman": "Arka plan işlemi gerektiğinde, zamanlanmış görev kurulurken ya da içe/dışa aktarma işi izlenirken kullanılır.",
-    "kaynak": "8c4c8631cb6f"
-  },
-  "sf-b2c-ocapi": {
-    "ne": "OCAPI (Open Commerce API) için Shop API ve Data API uç noktalarını, kimlik doğrulamayı, sayfalamayı ve SCAPI'ye geçiş rehberini açıklar. OCAPI yalnızca bakım modunda.",
-    "ne_zaman": "Mevcut OCAPI entegrasyonu bakımı yapılırken ya da SCAPI'ye geçiş planlanırken kullanılır; yeni geliştirme için kullanılmaz.",
-    "kaynak": "10e48724a94c"
-  },
-  "sf-b2c-pwa-kit": {
-    "ne": "PWA Kit ile başsız B2C vitrinleri geliştirir: React tabanlı çerçeve (Remix/Next.js değil), Managed Runtime dağıtımı, Commerce SDK, sunucu tarafı render ve Chakra UI.",
-    "ne_zaman": "Salesforce Commerce için başsız (headless) bir vitrin kurulurken kullanılır.",
-    "kaynak": "6015bb875725"
-  },
-  "sf-b2c-scapi": {
-    "ne": "Salesforce Commerce API (SCAPI) ile Shopper API'lerini (ürün, arama, sepet, sipariş, müşteri) kullanır; SLAS kimlik doğrulaması, Commerce SDK for Node.js ve hız sınırlaması.",
-    "ne_zaman": "Başsız vitrin ya da API entegrasyonu geliştirilirken kullanılır; birincil B2C API budur.",
-    "kaynak": "ec0bb0676737"
-  },
-  "sf-b2c-sfra": {
-    "ne": "SFRA ile B2C vitrini geliştirir: cartridge overlay sistemi, MVC modeli, module.superModule kalıtımı, ara katman zinciri ve siteye özel değişiklikler.",
-    "ne_zaman": "SFRA tabanlı bir vitrin geliştirilirken ya da mevcut SFRA modülüne özelleştirme eklenirken kullanılır.",
-    "kaynak": "c8a16a40c953"
-  },
-  "sf-catalog": {
-    "ne": "Salesforce Commerce kataloglarını yönetir: B2C'de kategori, ürün, fiyat defteri, promosyon ve arama indeksi; B2B'de Product2, Pricebook2, hacim indirimi ve yetkiler.",
-    "ne_zaman": "B2C ya da B2B platformunda ürün verisiyle çalışılırken kullanılır.",
-    "kaynak": "c2c7e7b5a7c6"
-  },
-  "sf-customers": {
-    "ne": "Salesforce Commerce müşterilerini yönetir: B2C'de müşteri nesneleri, gruplar, segmentasyon ve favoriler; B2B'de Account/Contact, alıcı grupları ve izinler; Data Cloud profilleri.",
-    "ne_zaman": "Müşteri verisi, segmentasyon, alıcı grupları ya da rıza yönetimi ile ilgili iş yapılırken kullanılır.",
-    "kaynak": "76a01d557de0"
-  },
-  "sf-einstein": {
-    "ne": "Salesforce Commerce'e Einstein yapay zekâ özellikleri ekler: ürün önerileri, tahmine dayalı sıralama, arama sıralaması, arama sözlükleri ve Data Cloud kişiselleştirmesi.",
-    "ne_zaman": "Vitrine yapay zekâ destekli öneri ya da sıralama özelliği eklenirken kullanılır.",
-    "kaynak": "64abc3dab030"
-  },
-  "sf-integrations": {
-    "ne": "Salesforce Commerce entegrasyonları kurar: B2C'de SCAPI hook'ları, webhook'lar ve script çağrıları; B2B'de Platform Events ve Change Data Capture; HMAC doğrulama ve yeniden deneme.",
-    "ne_zaman": "Commerce sistemi dış bir servise bağlanırken ya da olay tabanlı entegrasyon kurulurken kullanılır.",
-    "kaynak": "fc770566e96f"
-  },
-  "sf-orders": {
-    "ne": "Salesforce Commerce siparişlerini yönetir: B2C'de SCAPI sipariş nesneleri, durum yaşam döngüsü ve iade; B2B'de Order, OrderItem, bölme, onay akışları ve karşılama.",
-    "ne_zaman": "Sipariş yönetimi, sipariş durumu geçişleri, iade ya da onay akışı uygulanırken kullanılır.",
-    "kaynak": "23ef663a6ddc"
-  },
-  "sf-payments": {
-    "ne": "Salesforce Commerce ödemelerini uygular: Salesforce Payments (Stripe, Adyen), B2C ödeme adaptörleri, B2B Apex adaptörleri, tokenizasyonla PCI uyumu ve 3D Secure.",
-    "ne_zaman": "Ödeme işleme eklenirken, ödeme yöntemleri yönetilirken ya da 3D Secure/SCA desteği gerektiğinde kullanılır.",
-    "kaynak": "70c43fa09945"
-  },
-  "sf-performance": {
-    "ne": "Salesforce Commerce performansını optimize eder: B2C'de cartridge önbellekleme, CDN, ISML render iyileştirme; B2B'de SOQL optimizasyonu, LWC tembel yükleme ve Apex toplu işleme.",
-    "ne_zaman": "Vitrin ya da B2B uygulaması yavaş çalıştığında veya Core Web Vitals hedefleri için kullanılır.",
-    "kaynak": "0b2d9ff6e7d8"
-  },
-  "sf-security": {
-    "ne": "Salesforce Commerce güvenliğini uygular: SLAS OAuth 2.1, oturum yönetimi, CSRF belirteçleri, ISML ile XSS önleme, PCI uyumu, Business Manager RBAC ve OWASP Top 10 korumaları.",
-    "ne_zaman": "Kimlik doğrulama ya da güvenlik kontrolleri uygulanırken kullanılır.",
-    "kaynak": "ea66628546b3"
-  },
-  "sf-setup": {
-    "ne": "Salesforce Commerce geliştirme ortamını kurar: B2C için sfcc-ci, B2B için sf CLI, Business Manager erişimi, sandbox yönetimi, dw.json ve SFRA, PWA Kit, Lightning proje yapıları.",
-    "ne_zaman": "Yeni bir Salesforce Commerce projesi başlatılırken kullanılır.",
-    "kaynak": "bcbd585e27b9"
-  },
-  "sf-testing": {
-    "ne": "Salesforce Commerce kodunu test eder: B2C'de Node.js birim testleri, sfcc-ci CI/CD ve lint; B2B'de Apex test sınıfları (en az %75 kapsam), LWC için Jest ve sf CLI dağıtımı.",
-    "ne_zaman": "Test yazılırken ya da CI/CD kurulumu yapılırken kullanılır.",
-    "kaynak": "687f81e36442"
-  },
   "sfcc-business-manager": {
     "ne": "Business Manager üzerinden Salesforce Commerce Cloud'u yapılandırır: katalog, promosyon ve site tercihlerini yönetir; XML içe ve dışa aktarma işlerini çalıştırır.",
     "ne_zaman": "Katalog, promosyon ya da site ayarı değiştirilirken veya XML aktarım işi çalıştırılırken kullanılır.",
@@ -11939,21 +10999,6 @@
     "ne_zaman": "Shopify raporlarını okurken veya mağaza verisine dayanarak neyi değiştireceğine karar verirken kullanılır.",
     "kaynak": "212cbbabb12b"
   },
-  "shopify-api-graphql": {
-    "ne": "Shopify GraphQL API'lerini (sunucu tarafı CRUD için Admin API, istemci tarafı sorgular için Storefront API) sürüm, hız sınırı, toplu işlem ve sayfalama ile anlatır.",
-    "ne_zaman": "Shopify verisiyle entegrasyon yapılırken kullanılır.",
-    "kaynak": "73a96d169bc5"
-  },
-  "shopify-api-rest": {
-    "ne": "Shopify REST Admin API'nin endpoint kalıpları, kimlik doğrulama, hız sınırları ve GraphQL'e geçiş rehberini içerir. REST Admin API kullanımdan kaldırılmıştır (Ekim 2024).",
-    "ne_zaman": "Eski REST entegrasyonlarını sürdürürken veya GraphQL'e geçiş planlanırken kullanılır.",
-    "kaynak": "93643d97ccb4"
-  },
-  "shopify-app-dev": {
-    "ne": "Shopify uygulaması geliştirme: uygulama türleri, Remix şablonu, App Bridge, oturum belirteçleri, OAuth akışı ve app extension'lar.",
-    "ne_zaman": "Shopify uygulaması veya entegrasyonu geliştirilirken kullanılır.",
-    "kaynak": "1a727f1764a5"
-  },
   "shopify-app-development": {
     "ne": "Remix framework, App Bridge, Polaris bileşenleri ve OAuth kimlik doğrulama akışıyla gömülü (embedded) Shopify uygulamaları geliştirir.",
     "ne_zaman": "Gömülü bir Shopify uygulaması geliştirirken veya uygulamaya OAuth kimlik doğrulaması eklerken.",
@@ -11979,11 +11024,6 @@
     "ne_zaman": "Sepet terk oranı yüksek olduğunda veya terk edilen sepetleri geri kazanacak bir kampanya kurmak istediğinizde.",
     "kaynak": "3ed9adef7bb1"
   },
-  "shopify-catalog": {
-    "ne": "Ürün, varyant ve seçenek modelleri, koleksiyonlar, metafield/metaobject, envanter, ürün taksonomisi, toplu işlemler ve medya dahil Shopify kataloğunu yönetir.",
-    "ne_zaman": "Shopify ürün verisiyle çalışılırken kullanılır.",
-    "kaynak": "1a408a180d1e"
-  },
   "shopify-checkout-customization": {
     "ne": "Checkout Extensibility, özel alanlar, ekspres ödeme yöntemleri ve güven öğeleriyle Shopify ödeme sayfasını optimize eder.",
     "ne_zaman": "Ödeme sayfasında dönüşümü artırmak, özel alan eklemek veya ekspres ödeme ve güven öğeleri yerleştirmek istediğinizde.",
@@ -11993,11 +11033,6 @@
     "ne": "Ödeme sayfasına upsell ve özel alanlar için UI extension'ları, indirim ve kargo mantığı için ise Shopify Functions ekler.",
     "ne_zaman": "Shopify checkout'una upsell, özel alan veya sunucusuz indirim ya da kargo kuralı eklemek istediğinizde.",
     "kaynak": "239cd8eda98a"
-  },
-  "shopify-checkout-ui": {
-    "ne": "Shopify checkout UI extension'ları: hedefler, UI bileşenleri, Preact/Remote DOM, checkout API'leri, metafield erişimi ve sipariş sonrası ile teşekkür sayfası özelleştirmesi.",
-    "ne_zaman": "Shopify checkout'u özelleştirilirken kullanılır.",
-    "kaynak": "da454d578259"
   },
   "shopify-conversion-optimization": {
     "ne": "Shopify mağazasının dönüşüm oranını artırır: huni kaybı analizi, ürün sayfası ve checkout optimizasyonu, güven sinyalleri, mobil deneyim, sayfa hızı ve testler.",
@@ -12013,11 +11048,6 @@
     "ne": "Customer Account API ile müşterilerin kendi verilerine (siparişler, ödeme yöntemleri, adresler) erişimini sağlar.",
     "ne_zaman": "Müşteri hesabı özelliklerini, sipariş geçmişini veya adres/ödeme yönetimini Shopify'da geliştirirken kullanılır.",
     "kaynak": "a8c19a1c62ee"
-  },
-  "shopify-customers": {
-    "ne": "Shopify müşterilerini yönetir: Customer Account API, yeni ve klasik hesaplar, Multipass SSO, segmentasyon, B2B şirket hesapları, metafield'lar ve pazarlama onayı.",
-    "ne_zaman": "Shopify müşteri verisiyle çalışılırken kullanılır.",
-    "kaynak": "7d119b08b13b"
   },
   "shopify-dev": {
     "ne": "Tüm API'lerdeki Shopify geliştirici dokümantasyonunda arama yapar.",
@@ -12044,11 +11074,6 @@
     "ne_zaman": "İndirim, sepet doğrulama, kargo seçeneği veya ödeme kurallarını özel mantıkla değiştirmek istendiğinde.",
     "kaynak": "d528ac8a18ae"
   },
-  "shopify-functions@orcaqubits": {
-    "ne": "Shopify Functions yazar: indirim, teslimat ve ödeme özelleştirme, sepet doğrulama, sepet dönüşümü ve sipariş yönlendirme için WebAssembly tabanlı sunucusuz eklentiler.",
-    "ne_zaman": "Shopify'ın arka uç mantığını genişletmek gerektiğinde kullanılır.",
-    "kaynak": "1710f7102253"
-  },
   "shopify-google-channel": {
     "ne": "Google Shopping feed, Performance Max, ücretsiz listeleme ve Merchant Center optimizasyonunu içeren Google entegrasyonunu anlatır.",
     "ne_zaman": "Mağaza ürünlerini Google'da listelemek, Shopping feed kurmak veya Merchant Center performansını iyileştirmek istendiğinde.",
@@ -12063,11 +11088,6 @@
     "ne": "Hydrogen React framework ve Remix yönlendirmesiyle özel Shopify vitrini geliştirmeyi ve Oxygen edge hosting'e dağıtmayı anlatır.",
     "ne_zaman": "Standart tema yerine özel bir Shopify vitrini yazılacağında veya Oxygen üzerinde yayına alınacağında.",
     "kaynak": "800666862329"
-  },
-  "shopify-hydrogen@orcaqubits": {
-    "ne": "Remix tabanlı Hydrogen ile headless Shopify storefront'ları kurar: Oxygen dağıtımı, storefront.query(), önbellek, sepet, müşteri hesapları, SEO ve analitik.",
-    "ne_zaman": "Özel bir Shopify storefront'u geliştirilirken kullanılır.",
-    "kaynak": "5bd7ae885fff"
   },
   "shopify-international": {
     "ne": "Shopify Markets kapsamında çoklu para birimi, çeviri, gümrük ve vergi, yerel fiyatlandırma ve pazara özel içeriği ele alır.",
@@ -12089,11 +11109,6 @@
     "ne_zaman": "Shopify teması içinde Liquid kodu yazılırken veya section, snippet, block ya da schema düzenlenirken.",
     "kaynak": "64d878a11954"
   },
-  "shopify-liquid@orcaqubits": {
-    "ne": "Shopify Liquid şablonları yazar: nesneler, etiketler, filtreler, global nesneler, section şeması, Online Store 2.0 JSON şablonları ve en iyi uygulamalar.",
-    "ne_zaman": "Shopify tema şablonları özelleştirilirken kullanılır.",
-    "kaynak": "6f4fb22a7049"
-  },
   "shopify-loyalty-program": {
     "ne": "Puan sistemleri, VIP kademeleri, yönlendirme programları ve uygun uygulama seçimini kapsayan müşteri sadakat ve ödül programlarını anlatır.",
     "ne_zaman": "Müşteri sadakat programı, puanlama veya referans sistemi kurulmak istendiğinde.",
@@ -12114,11 +11129,6 @@
     "ne_zaman": "Mevcut bir mağazayı WooCommerce, Magento veya BigCommerce'ten Shopify'a taşırken.",
     "kaynak": "95ca9c588019"
   },
-  "shopify-orders": {
-    "ne": "Sipariş yaşam döngüsü, FulfillmentOrder modeli, iade ve geri ödemeler, taslak siparişler, sipariş düzenleme, işlemler, metafield'lar ve risk analizi.",
-    "ne_zaman": "Shopify sipariş işleme ile ilgili bir iş yapılırken.",
-    "kaynak": "2d38e33b341a"
-  },
   "shopify-page-speed": {
     "ne": "Shopify mağaza hızını teşhis eder ve iyileştirir: Core Web Vitals (LCP, CLS, INP), tema ve uygulama şişkinliği, görsel ve script optimizasyonu.",
     "ne_zaman": "Shopify mağazası yavaşsa, PageSpeed/Lighthouse testini geçemiyorsa veya uygulama scriptleri yükleme süresini bozuyorsa.",
@@ -12129,25 +11139,10 @@
     "ne_zaman": "Partner Dashboard verilerini API üzerinden okumak veya otomatikleştirmek istendiğinde.",
     "kaynak": "5b95fffd77bb"
   },
-  "shopify-payments": {
-    "ne": "Shopify Payments (Stripe altyapılı), Payment Apps API, ödeme oturumu akışı, uygulama ücretleri için Billing API, geri ödeme işleme ve PCI uyumluluğu.",
-    "ne_zaman": "Shopify ödeme işlemleriyle ilgili bir entegrasyon yapılırken.",
-    "kaynak": "97c742c20bf8"
-  },
   "shopify-payments-apps": {
     "ne": "Ödeme sağlayıcılarının çözümlerini Shopify checkout'a entegre etmesini sağlayan Payments Apps API'yi anlatır.",
     "ne_zaman": "Ödeme sağlayıcısı olarak Shopify checkout'a ödeme entegrasyonu geliştirilirken.",
     "kaynak": "6d4ef1ae6f3a"
-  },
-  "shopify-performance": {
-    "ne": "Liquid render, asset optimizasyonu, CDN stratejileri, Core Web Vitals, Hydrogen önbellekleme, görsel optimizasyonu, preload ve lazy loading.",
-    "ne_zaman": "Shopify mağazasının hızını artırmak istendiğinde.",
-    "kaynak": "abdc55af2f9a"
-  },
-  "shopify-polaris": {
-    "ne": "Polaris ile Shopify admin uygulama arayüzleri: bileşen kategorileri, Web Components geçişi, React eski bileşenleri, erişilebilirlik ve tasarım tokenları.",
-    "ne_zaman": "Shopify admin uygulama arayüzü geliştirilirken.",
-    "kaynak": "e2ab1b8a28a9"
   },
   "shopify-polaris-admin-extensions": {
     "ne": "Shopify Admin'in ilgili noktalarına uygulamanızdan özel aksiyon ve bloklar ekler. Shopify CLI ile Admin UI Extensions iskeleti oluşturmayı da destekler.",
@@ -12184,20 +11179,10 @@
     "ne_zaman": "Halka açık App Store yorumları, düşük puanlı yorumlar veya tüccar geri bildirimleri triage edilip raporlanmak istendiğinde.",
     "kaynak": "715d6c2710a2"
   },
-  "shopify-security": {
-    "ne": "HMAC webhook doğrulama, oturum token doğrulama, OAuth scope yönetimi, Content Security Policy, GDPR zorunlu webhook'ları ve girdi doğrulama.",
-    "ne_zaman": "Shopify uygulamasında güvenlik özellikleri uygulanırken.",
-    "kaynak": "bb06f37da2f2"
-  },
   "shopify-seo": {
     "ne": "Teknik SEO denetimi, ürün ve koleksiyon sayfası başlık/meta etiketleri, URL yapısı, yinelenen içerik, schema işaretlemesi ve blog stratejisi.",
     "ne_zaman": "Shopify mağazasının Google'dan organik trafiğini artırmak istendiğinde.",
     "kaynak": "bd97a2a17bfc"
-  },
-  "shopify-setup": {
-    "ne": "Shopify CLI kurulumu, Partner hesabı, geliştirme mağazaları, ortam değişkenleri ve tema, uygulama, Hydrogen proje yapıları.",
-    "ne_zaman": "Yeni bir Shopify projesi başlatılırken.",
-    "kaynak": "b99823df2cb4"
   },
   "shopify-speed-optimization": {
     "ne": "Mağaza hız denetimi: lazy loading, görsel sıkıştırma, gereksiz uygulama temizliği ve tema kodu optimizasyonu.",
@@ -12229,11 +11214,6 @@
     "ne_zaman": "Shopify'da vergi ayarları yapılırken, KDV/satış vergisi kurallarını uygularken veya vergi raporlaması gerektiğinde kullanılır.",
     "kaynak": "2bf99ccbe2da"
   },
-  "shopify-testing": {
-    "ne": "Vitest ve Playwright ile uygulama testi, Theme Check ile tema testi, Function, webhook ve extension testleri ile CI/CD hatları.",
-    "ne_zaman": "Shopify projeleri için test yazılırken.",
-    "kaynak": "df8486685f86"
-  },
   "shopify-theme-development": {
     "ne": "Liquid şablonları, JSON section'lar, dinamik bloklar ve tema uygulama extension'ları ile Shopify temalarını geliştirir ve özelleştirir.",
     "ne_zaman": "Shopify teması oluşturmak, mevcut temayı değiştirmek veya tema uygulama extension'ı ile işlev eklemek istediğinizde.",
@@ -12244,20 +11224,10 @@
     "ne_zaman": "Shopify temasının Core Web Vitals skorlarını iyileştirmek, Liquid kodunu düzeltmek veya mobil deneyimi geliştirmek istendiğinde kullanılır.",
     "kaynak": "026fcd89cbaa"
   },
-  "shopify-themes": {
-    "ne": "Tema dosya yapısı, Online Store 2.0, section ve blok'lar, settings schema, Dawn referans teması, Theme Check lint, asset hattı ve tema dağıtımı.",
-    "ne_zaman": "Shopify teması geliştirilirken veya özelleştirilirken.",
-    "kaynak": "fbba97793589"
-  },
   "shopify-upsell-cross-sell": {
     "ne": "Shopify mağazası için upsell ve cross-sell stratejisi; ürün önerileri, sepet upsell'leri, satın alma sonrası teklifler ve paketleri kapsar.",
     "ne_zaman": "Ortalama sipariş değerini artırmak, sepet veya satın alma sonrası teklif tasarlamak istendiğinde.",
     "kaynak": "615e84091c72"
-  },
-  "shopify-webhooks": {
-    "ne": "HTTP, EventBridge, Pub/Sub, SQS ile webhook abonelikleri, HMAC doğrulama, zorunlu GDPR webhook'ları, yeniden deneme politikası ve idempotency.",
-    "ne_zaman": "Olay tabanlı Shopify entegrasyonları kurulurken.",
-    "kaynak": "f32ce8c75487"
   },
   "shopify-webhooks@finsilabs": {
     "ne": "Sipariş, envanter ve müşteri olaylarına ait Shopify webhook'larını kaydeder, HMAC doğrulaması ve idempotency ile güvenilir biçimde işler.",
@@ -12503,116 +11473,6 @@
     "ne": "GitHub deposunun bağımlılıklarından hangilerine GitHub Sponsors ile destek verilebileceğini bulur ve bağlantıları doğrular.",
     "ne_zaman": "Kullanıcı /sponsor owner/repo komutunu çalıştırdığında veya bir deponun sponsorlanabilir bağımlılıklarını sorduğunda.",
     "kaynak": "b12efbd7a870"
-  },
-  "spree-admin-customization": {
-    "ne": "Spree v5 Admin paneli: Tailwind 4 + Hotwire/Stimulus yığını, Spree.admin.navigation menü API'si, kısmi enjeksiyon slotları, Admin SDK bileşenleri, özel raporlar ve Page Builder.",
-    "ne_zaman": "Spree admin paneline yeni sayfa eklenirken, mevcut ekranlara arayüz enjekte edilirken veya admin extension yazılırken.",
-    "kaynak": "2170dc38c342"
-  },
-  "spree-api-v3": {
-    "ne": "Spree v3 API'leri (v5.4+): mağaza tarafı /api/v3/store/* ve yönetim tarafı /api/v3/admin/* uç noktaları, düz JSON zarfı, expand/include parametreleri, önek'li ID'ler, sınırlama ve idempotency.",
-    "ne_zaman": "API istemcisi, SDK geliştirilirken veya Spree v5.4+ dağıtımında API uç noktası eklenirken.",
-    "kaynak": "61a6ac03f5a4"
-  },
-  "spree-catalog": {
-    "ne": "Ürünler, varyantlar, seçenek tipleri, taksonomi ve taksonlar, özellikler, ActiveStorage görselleri, çoklu para birimi fiyatları, PriceList, MeiliSearch arama, CSV içe/dışa aktarım ve SEO.",
-    "ne_zaman": "Ürün modellenirken, katalog arayüzü özelleştirilirken, arama indekslenirken veya stok içe aktarılırken.",
-    "kaynak": "967ed6b078e4"
-  },
-  "spree-checkout": {
-    "ne": "Sipariş durum makinesi (sepet, adres, teslimat, ödeme, onay, tamamlama), ödeme ve kargo alt durum makineleri, iade akışı, misafir ödemesi ve özel checkout adımları.",
-    "ne_zaman": "Checkout akışı kurulurken veya özelleştirilirken, durum geçişleri hata ayıklanırken ya da özel adım eklenirken.",
-    "kaynak": "ddb574e2ab0b"
-  },
-  "spree-data-model": {
-    "ne": "Spree veri modelini açıklar: katalog, fiyatlandırma, sipariş grafiği, envanter, kargo, promosyonlar, kimlik, vergiler ve Markets + Store çoklu bölge modeli.",
-    "ne_zaman": "Spree modellerine dokunan bir özellik tasarlanırken, decorator yazılırken veya admin/storefront arayüzü kurulurken.",
-    "kaynak": "b07d5b8207c5"
-  },
-  "spree-deployment": {
-    "ne": "Spree'yi üretime almak: PostgreSQL, Redis, Sidekiq, Docker imajları, Heroku/Render/Fly.io/AWS hedefleri, ortam değişkenleri, asset derleme, S3 ve kesintisiz dağıtım.",
-    "ne_zaman": "Yerel geliştirmeden üretime geçilirken, Spree ölçeklenirken veya dağıtım sorunları giderilirken.",
-    "kaynak": "540f0e7245d1"
-  },
-  "spree-dev-patterns": {
-    "ne": "Spree geliştirme desenleri: özelleştirme önceliği (Events > Webhooks > Dependencies > Decorators), _decorator.rb + prepend, idempotent aboneler, çoklu mağaza kapsamı ve Rails entegrasyonları.",
-    "ne_zaman": "Spree projesinde özelleştirme, eklenti yazma veya webhook ve abone mimarisi kurarken bu kuralların uygulanması gerektiğinde.",
-    "kaynak": "0d48fa4d2c99"
-  },
-  "spree-events-webhooks": {
-    "ne": "Spree olay yolu: Spree::Events yayını, Subscriber DSL, yaşam döngüsü olayları, Webhooks 2.0 uç noktaları, HMAC-SHA256 imzalama, üstel geri çekilmeli yeniden deneme ve Sidekiq işleri.",
-    "ne_zaman": "Olay tabanlı iş mantığı kurulurken, webhook tüketicisi yazılırken veya ActiveSupport callback zinciri değiştirilirken.",
-    "kaynak": "1fa04ccc4745"
-  },
-  "spree-extensions": {
-    "ne": "Spree eklentilerini Rails engine olarak geliştirme: gem iskeleti, prepend tabanlı decorator'lar, generator'lar, Spree::Dependencies ile servis değiştirme, sürümleme ve Deface'in kullanımdan kaldırılması.",
-    "ne_zaman": "Yeniden kullanılabilir bir Spree eklentisi yazılırken veya uygulamaya ciddi özelleştirme eklenirken.",
-    "kaynak": "62aac599ad9b"
-  },
-  "spree-headless-storefront": {
-    "ne": "Spree'nin Next.js headless storefront'u (spree/storefront): sunucu tarafı kimlik doğrulama, MeiliSearch kataloğu, tek sayfa checkout, çoklu market yönlendirme, SEO ve Vercel/Docker dağıtımı.",
-    "ne_zaman": "Hazır storefront'u fork'lamak veya özelleştirmek ya da headless geçişi değerlendirilirken.",
-    "kaynak": "e978910a4506"
-  },
-  "spree-i18n": {
-    "ne": "Spree uygulamasını yerelleştirme: spree_i18n gem'i ve 60'tan fazla dil paketi, Translations Center ile ürün/CMS çevirileri, Rails i18n, Market bazlı dil yönlendirme, RTL diller.",
-    "ne_zaman": "Spree mağazası yerelleştirilirken, yeni bir dil eklenirken veya dile duyarlı eklentiler yazılırken.",
-    "kaynak": "259564b36910"
-  },
-  "spree-legacy-api-v2": {
-    "ne": "Spree v2 API'leri: /api/v2/storefront/* ve /api/v2/platform/* uç noktaları, Doorkeeper OAuth2, spree_legacy_api_v2 gem'i ve v3'e geçiş desenleri.",
-    "ne_zaman": "Geçiş döneminde v2 istemcisi bakılırken, eski bir partner sistemi entegre edilirken veya v3'e geçiş zamanı belirlenirken.",
-    "kaynak": "c93f2212971f"
-  },
-  "spree-multi-store": {
-    "ne": "Tek Rails kurulumunda birden çok Store, v5.4+ Market modeli, mağazalar arası paylaşım, Marketplace modülü (satıcılar, komisyon, Stripe Connect) ve çok kiracılı SaaS modeli.",
-    "ne_zaman": "Çok markalı veya çok bölgeli bir Spree dağıtımı planlanırken.",
-    "kaynak": "88fed7b43f25"
-  },
-  "spree-payments": {
-    "ne": "Spree'de ödeme entegrasyonu: PaymentMethod, v5.4+ PaymentSession akışı, Stripe (spree_stripe), Adyen, PayPal, StoreCredit/GiftCard ödemeleri, geri ödemeler ve özel ödeme ağ geçidi yazımı.",
-    "ne_zaman": "Ödeme entegrasyonu kurulurken, ağ geçidi webhook'ları işlenirken veya ödeme durumu sorunları giderilirken.",
-    "kaynak": "4de82a6a4f5e"
-  },
-  "spree-performance": {
-    "ne": "Spree uygulamasının performansını profilleyip optimize eder: N+1 sorguları, veritabanı indeksleme, fragment/Russian doll önbellekleme, Sidekiq kuyruk ayarı, Puma ve yük testi.",
-    "ne_zaman": "Spree yavaşladığında, veritabanı yoğunlaştığında veya Black Friday/lansman gibi trafik artışına hazırlanırken kullanılır.",
-    "kaynak": "79351fff7434"
-  },
-  "spree-promotions": {
-    "ne": "Spree promosyon motorunu kurar ve özelleştirir: Promotion, kural ve aksiyonlar, kupon toplu üretimi, Calculator sınıfları ve özel kural/aksiyon yazımı.",
-    "ne_zaman": "Promosyon modellenirken, indirim arayüzleri geliştirilirken veya promosyon motoru genişletilirken kullanılır.",
-    "kaynak": "77dff8f0186d"
-  },
-  "spree-security": {
-    "ne": "Spree dağıtımını güvenli hale getirir: Rails credentials, Devise ve CanCanCan yetkilendirme, OAuth2 scope'ları, webhook HMAC doğrulaması, OWASP Top 10 ve multi-store veri izolasyonu.",
-    "ne_zaman": "Spree uygulamasını denetlerken, dağıtımı sertleştirirken veya bir güvenlik olayına müdahale ederken kullanılır.",
-    "kaynak": "de29a9d5d45c"
-  },
-  "spree-setup": {
-    "ne": "Yeni bir Spree projesini sıfırdan kurar: create-spree-app CLI, spree-starter backend, Next.js storefront, spree:install, örnek veri, Docker Compose ve PostgreSQL, Redis, Sidekiq kurulumu.",
-    "ne_zaman": "Sıfırdan yeni bir Spree projesi başlatılırken veya mevcut bir repoya dahil olunurken kullanılır.",
-    "kaynak": "9c89b84106f4"
-  },
-  "spree-shipping-fulfillment": {
-    "ne": "Spree kargo ve sipariş karşılama akışını kurar: ShippingMethod, Zone, Stock::Estimator, stok lokasyonları, kargo hesaplayıcıları, iade akışı ve UPS/FedEx/ShipStation entegrasyonları.",
-    "ne_zaman": "Kargo kuralları yapılandırılırken, karşılama entegrasyonları geliştirilirken veya kargo ücreti hesaplamasındaki hatalar ayıklanırken kullanılır.",
-    "kaynak": "12a2adc5f48c"
-  },
-  "spree-testing": {
-    "ne": "Spree uygulamaları ve eklentileri için RSpec testleri yazar: spree_dev_tools, FactoryBot, Capybara feature spec'leri, request/system spec'leri ve CI yapılandırması.",
-    "ne_zaman": "Spree testleri yazılırken, CI kurulurken veya yavaş spec'ler yeniden düzenlenirken kullanılır.",
-    "kaynak": "f365ecccb4f4"
-  },
-  "spree-typescript-sdk": {
-    "ne": "@spree/sdk ile Spree API v3 için storefront ve entegrasyonlar kurar: resource builder kalıbı, Zod doğrulama, sunucu tarafı kimlik doğrulama ve sürüm sabitleme.",
-    "ne_zaman": "Spree'yi Next.js, Node.js veya TypeScript projesine entegre ederken kullanılır.",
-    "kaynak": "a810d39d0582"
-  },
-  "spree-upgrades": {
-    "ne": "Spree uygulamasını sürümler arası yükseltir: v4→v5 geçişi, Gemfile sabitleme, decorator uyumluluğu, kullanımdan kalkan gem'ler, API v2→v3 geçişi ve geri alma planı.",
-    "ne_zaman": "Spree yükseltmesi planlanırken veya yükseltmeyi engelleyen teknik borç denetlenirken kullanılır.",
-    "kaynak": "1cd151e3faeb"
   },
   "spring-boot-4-migration": {
     "ne": "Spring Boot 3.x uygulamasını 4.0'a geçirir (Spring Framework 7, Jackson 3, modüler starter'lar, JSpecify); Maven ve Gradle destekler.",
@@ -13509,11 +12369,6 @@
     "ne_zaman": "Satış veya iş geliştirme ekibinden yeni bir NDA geldiğinde ya da standart yetkiyle imzalanıp imzalanamayacağına karar verilecekken.",
     "kaynak": "0a01eb8fb18f"
   },
-  "ts-modern": {
-    "ne": "Medusa v2 projeleri için modern TypeScript: DML tip çıkarımı, servis generic'leri, container tipleri, strict mod kısıtları, yardımcı tipler ve modül arayüzü kalıpları.",
-    "ne_zaman": "Medusa projelerinde TypeScript kodu yazılırken kullanılır.",
-    "kaynak": "6a46e4ad78fa"
-  },
   "tugboat": {
     "ne": "Belirsizlik, tekrarlayan aksilikler veya görünür ilerleme eksikliği kaygıya yol açtığında, kanıta dayalı ve kaygıya duyarlı bir yaklaşımla hedefi koruyup sınırlı problem çözme yürütür.",
     "ne_zaman": "Kullanıcı açıkça çağırdığında hemen; kaygı durumu yalnızca kullanıcının anlatımından çıkarılıyorsa uygulamadan önce izin istenir.",
@@ -13548,121 +12403,6 @@
     "ne": "Microsoft 365 Copilot için REST operasyonları, kimlik doğrulama ve Adaptive Cards içeren bir TypeSpec API plugin'i üretir.",
     "ne_zaman": "Copilot'a REST API tabanlı plugin ekleneceğinde, TypeSpec ile operasyon ve kimlik doğrulama tanımı gerektiğinde.",
     "kaynak": "270c76d0f5b5"
-  },
-  "ucp-ap2-mandates": {
-    "ne": "UCP AP2 Mandates eklentisini uygular: SD-JWT kimlik bilgileriyle kriptografik ödeme yetkileri, satıcı imzaları ve Agent Payments Protocol akışı.",
-    "ne_zaman": "İnsan onayı olmadan çalışan otonom agent ödeme akışları kurulurken kullanılır.",
-    "kaynak": "a98f22d6fbb4"
-  },
-  "ucp-buyer-consent": {
-    "ne": "UCP Buyer Consent eklentisini uygular: GDPR/CCPA onay toplama, checkout oturumlarında onay alanları ve gizlilik uyumlu onay yönetimi.",
-    "ne_zaman": "UCP checkout'a onay akışları, gizlilik uyumluluğu veya veri işleme sözleşmeleri eklenirken kullanılır.",
-    "kaynak": "1c90d8aa1387"
-  },
-  "ucp-cart": {
-    "ne": "UCP Cart yeteneğini (dev.ucp.shopping.cart) uygular: satın alma niyeti oluşmadan önce ürün toplama, paylaşılabilir sepetler ve Checkout oturumuna dönüşüm.",
-    "ne_zaman": "Ödeme öncesi ürün toplama, paylaşılabilir sepet veya sepet kurtarma akışları REST, MCP ya da Embedded üzerinden kurulurken kullanılır.",
-    "kaynak": "b7430fe7bbfd"
-  },
-  "ucp-catalog": {
-    "ne": "UCP Catalog yeteneğini (dev.ucp.shopping.catalog) uygular: serbest metin arama, tanımlayıcıyla lookup, Product/Variant veri modeli, medya ve puanlar.",
-    "ne_zaman": "Ürün keşfini agent'lara açarken veya sepet ve checkout öncesi işletme kataloğunu tüketirken kullanılır.",
-    "kaynak": "f94cf2d8f2de"
-  },
-  "ucp-checkout-a2a": {
-    "ne": "UCP Checkout'u A2A (Agent-to-Agent) bağlaması üzerinden uygular; Agent Card'lar ve yapılandırılmış mesaj parçalarıyla agentlar arası otonom ticaret akışı sağlar.",
-    "ne_zaman": "Agentlar arası ticaret akışları kurulurken kullanılır.",
-    "kaynak": "cdc91a27683b"
-  },
-  "ucp-checkout-mcp": {
-    "ne": "UCP Checkout işlemlerini MCP (Model Context Protocol) bağlaması üzerinden MCP tool'ları olarak sunar.",
-    "ne_zaman": "Claude veya Gemini gibi AI agentlarının çağırabileceği bir MCP sunucusu kurulurken ya da Shopify MCP endpoint'i entegre edilirken.",
-    "kaynak": "d0c00e46f691"
-  },
-  "ucp-checkout-rest": {
-    "ne": "UCP Checkout'u REST bağlamasında uygular: checkout oturumlarını oluşturma, okuma, güncelleme, tamamlama ve iptal; header, idempotency, durum geçişleri ve hata yönetimi dahil.",
-    "ne_zaman": "REST tabanlı UCP checkout endpoint'leri ya da istemcileri yazılırken.",
-    "kaynak": "86b87614be49"
-  },
-  "ucp-conformance": {
-    "ne": "Bir UCP uygulamasını resmi test paketiyle doğrular; checkout yaşam döngüsü, sipariş, fulfillment, ödeme, idempotency, webhook ve güvenlik testleri dahil. Conformance testleri de yazar.",
-    "ne_zaman": "Bir UCP uygulaması test edilirken veya doğrulanırken.",
-    "kaynak": "814a49db08d7"
-  },
-  "ucp-dev-patterns": {
-    "ne": "UCP geliştirme desenlerini içerir: capability müzakere algoritmaları, idempotency uygulaması, hata çözme döngüleri, çoklu bağlama sunucuları ve üretim mimarisi.",
-    "ne_zaman": "Bir UCP uygulamasının iç mimarisi tasarlanırken veya kesişen sorunlar çözülürken.",
-    "kaynak": "eb864b5d8e5b"
-  },
-  "ucp-discount": {
-    "ne": "UCP Discount extension'ını uygular: indirim kodu uygulama, doğrulama, tutar dağıtımı (allocation) takibi ve hata yönetimi.",
-    "ne_zaman": "Bir UCP checkout'una promosyon kodu ya da indirim mantığı eklenirken.",
-    "kaynak": "f6c8a80919bf"
-  },
-  "ucp-embedded-checkout": {
-    "ne": "UCP Embedded Checkout Protocol'ü uygular: JSON-RPC 2.0 üzerinden postMessage ile iframe/webview tabanlı checkout arayüzü sağlar.",
-    "ne_zaman": "Checkout durumu requires_escalation olduğunda ve alıcının satıcı tarafından barındırılan bir arayüze ihtiyacı olduğunda.",
-    "kaynak": "ba122fb08fdf"
-  },
-  "ucp-fulfillment": {
-    "ne": "UCP Fulfillment extension'ını uygular: kargo ve mağazadan teslim yöntemleri, hedefler, fulfillment grupları, seçilebilir seçenekler ve tahmini teslimat süresi.",
-    "ne_zaman": "Bir UCP checkout'una kargo veya mağazadan teslim mantığı eklenirken.",
-    "kaynak": "63e08d03d331"
-  },
-  "ucp-identity-linking": {
-    "ne": "UCP Identity Linking'i uygular: platformlar ve satıcılar arasında alıcı hesaplarını bağlamak için OAuth 2.0 authorization code akışı.",
-    "ne_zaman": "Hesap bağlama ya da UCP için SSO uygulanırken.",
-    "kaynak": "93d2e8e2d417"
-  },
-  "ucp-location": {
-    "ne": "UCP Location capability'sini (dev.ucp.common.location) uygular: mağaza, restoran ve dolap gibi lokasyonlarda arama ve sorgulama; çalışma saatleri, olanaklar ve stok bilgisi dahil.",
-    "ne_zaman": "Yerel teslim alma noktası keşfi, mağaza bulucu ya da teslimat bölgesi doğrulaması kurulurken.",
-    "kaynak": "97cfd1ec7023"
-  },
-  "ucp-loyalty": {
-    "ne": "UCP Loyalty extension'ını uygular: üyelik, seviyeler, avantajlar ve ödüller; program namespace'leri, uygunluk claim'leri ve geçici/doğrulanmış üyelik.",
-    "ne_zaman": "Bir UCP akışına üye fiyatlandırması, seviye tanıma ya da ödül tahmini eklenirken.",
-    "kaynak": "46d4f1ab159b"
-  },
-  "ucp-orders-webhooks": {
-    "ne": "UCP Order capability'sini ve webhook teslimini uygular: fulfillment takibi, iade ve değişiklikler (adjustments) ile kriptografik imzalı webhook bildirimleri.",
-    "ne_zaman": "Sipariş yönetimi ya da webhook altyapısı kurulurken.",
-    "kaynak": "79b9529fc3d4"
-  },
-  "ucp-payment-authentication": {
-    "ne": "UCP Payment Authentication extension'ını (dev.ucp.common.payment.authentication) uygular: cihaz verisi toplama, 3DS challenge, ready/done el sıkışması ve origin doğrulama.",
-    "ne_zaman": "Bir UCP checkout'una 3-D Secure ya da güçlü müşteri kimlik doğrulaması eklenirken.",
-    "kaynak": "7860dcab112d"
-  },
-  "ucp-payment-handlers": {
-    "ne": "UCP ödeme handler'larını yapılandırır: Google Pay, Shop Pay veya özel ödeme yöntemleri; tokenizasyon, kimlik bilgisi akışı ve instrument şemaları.",
-    "ne_zaman": "Bir UCP checkout'una ödeme işleme entegrasyonu yapılırken.",
-    "kaynak": "517167f69688"
-  },
-  "ucp-payment-terms": {
-    "ne": "UCP Payment Terms extension'ını (dev.ucp.common.payment.terms) uygular: ödeme terimleri ve planlarıyla alıcıya ödeme zamanı seçeneği sunar (hemen öde, kapora artı bakiye, ertelenmiş).",
-    "ne_zaman": "Bir UCP checkout'una ödeme zamanlaması seçenekleri eklenirken.",
-    "kaynak": "18c962acf234"
-  },
-  "ucp-permalink": {
-    "ne": "UCP Permalink capability'sini uygular: sepet ve checkout durumunu kompakt ürün yolu ve UCP alan yolu query parametreleriyle başlatan, ardından alıcıyı yönlendiren tarayıcı adresleri.",
-    "ne_zaman": "Kampanya linkleri, QR/sosyal medya satın alma linkleri, alıcı ön doldurma ya da mağaza teslim alma derin linkleri oluşturulurken.",
-    "kaynak": "9662eaadb5cd"
-  },
-  "ucp-schema-authoring": {
-    "ne": "Özel UCP şemaları ve extension'ları yazar: capability şemaları, extension şemaları ve tip tanımları; JSON Schema 2020-12 kompozisyonu kullanılır.",
-    "ne_zaman": "UCP'yi özel capability'lerle genişletirken ya da alana özgü extension'lar yazılırken.",
-    "kaynak": "008f86d7b893"
-  },
-  "ucp-setup": {
-    "ne": "Yeni bir UCP projesini kurar: keşif (discovery) profili, SDK kurulumu ve proje yapısıyla bir satıcı sunucusu ya da platform istemcisi iskeleti oluşturur.",
-    "ne_zaman": "Sıfırdan bir UCP uygulamasına başlanırken.",
-    "kaynak": "47304b10bba4"
-  },
-  "ucp-split-payments": {
-    "ne": "UCP Split Payments extension'ını (dev.ucp.common.payment.split_payments) uygular: tek checkout'u birden fazla ödeme aracıyla öder; belirtilmiş ve açık tutarlar, tahsis sırası, allowed_combinations ve atomik tamamlama.",
-    "ne_zaman": "Hediye kartı artı kart gibi çoklu ödeme araçlı checkout desteklenirken.",
-    "kaynak": "c481dbce7f18"
   },
   "ugc-campaign-management": {
     "ne": "Kullanıcı tarafından üretilen içerikleri ölçekli olarak toplar, düzenler ve hak yönetimi, marka güvenliği moderasyonu ve güven oluşturan sosyal kanıt galerileriyle gösterir.",
@@ -14334,76 +13074,6 @@
     "ne_zaman": "Webhook gönderimi veya alımı kurulurken olayların kaybolmaması, yeniden denemeler ve imza doğrulaması gerektiğinde.",
     "kaynak": "55ad865cdd8c"
   },
-  "webmcp-authentication": {
-    "ne": "WebMCP kimlik doğrulama kalıplarını uygular: tarayıcı oturumu devralma, cookie tabanlı kimlik, rol kapılı araç kaydı ve koşullu araç erişimi.",
-    "ne_zaman": "Kullanıcının oturum durumuna göre hangi araçların kullanılabilir olacağı yönetilirken.",
-    "kaynak": "e35339ddd7e3"
-  },
-  "webmcp-commerce-tools": {
-    "ne": "Ürün arama, sepet, ödeme, iade, abonelik ve destek için e-ticarete özel WebMCP araçları uygular.",
-    "ne_zaman": "E-ticaret sitelerinde agent destekli alışveriş deneyimi kurulurken.",
-    "kaynak": "f9c3b9f904d5"
-  },
-  "webmcp-context-provider": {
-    "ne": "WebMCP provideContext API'sini uygular: toplu araç kaydı, bağlamsal metadata, sayfa durumu paylaşımı ve dinamik bağlam güncellemeleri.",
-    "ne_zaman": "Agent'a aynı anda birden fazla araç ve zengin bağlam sağlanacağında.",
-    "kaynak": "95d3c97c695f"
-  },
-  "webmcp-declarative-forms": {
-    "ne": "Mevcut HTML formlarını toolname ve tooldescription öznitelikleriyle WebMCP Declarative API'ye bağlayarak araçları otomatik çıkarır.",
-    "ne_zaman": "Mevcut formları minimum kod değişikliğiyle agent'a hazır hale getirmek istendiğinde.",
-    "kaynak": "7a6f393d8070"
-  },
-  "webmcp-dev-patterns": {
-    "ne": "WebMCP çapraz kesen geliştirme kalıpları: SPA yönlendirme, hata yönetimi, performans, çoklu site agent'ları, erişilebilirlik, SEO ve üretim dağıtımı.",
-    "ne_zaman": "WebMCP destekli siteler mimarlanırken veya bu genel konulardan biri çözülürken.",
-    "kaynak": "ae78f901b4de"
-  },
-  "webmcp-mcp-bridge": {
-    "ne": "İstemci tarafı WebMCP araçlarını backend MCP sunucuları ve UCP endpoint'lerine bağlar; tarayıcı agent etkileşimlerini sunucu-sunucu protokollerle köprüler.",
-    "ne_zaman": "Ön yüz WebMCP'yi mevcut backend API altyapısına bağlamak gerektiğinde.",
-    "kaynak": "9290545abcb0"
-  },
-  "webmcp-polyfill": {
-    "ne": "navigator.modelContext sağlayan MCP-B polyfill'ini vanilla JS ve React paketleriyle kurar ve kullanır.",
-    "ne_zaman": "WebMCP'yi yerel desteklemeyen tarayıcılar için geliştirme yapılırken.",
-    "kaynak": "4a80d5d033cd"
-  },
-  "webmcp-register-tool": {
-    "ne": "navigator.modelContext.registerTool() ile WebMCP Imperative API üzerinden şemalı, execute callback'li ve yaşam döngüsü yönetimli araçlar kaydeder.",
-    "ne_zaman": "JavaScript'te dinamik araç kaydı oluşturulurken.",
-    "kaynak": "9c4dd5635ce6"
-  },
-  "webmcp-security": {
-    "ne": "WebMCP güvenlik en iyi uygulamalarını uygular: izin modeli, veri minimizasyonu, dürüst açıklamalar, girdi doğrulama, parmak izi önleme ve dolandırıcılık azaltma.",
-    "ne_zaman": "WebMCP araç uygulamaları denetlenirken veya sertleştirilirken.",
-    "kaynak": "84fb08eac415"
-  },
-  "webmcp-setup": {
-    "ne": "Sıfırdan WebMCP projesi kurar: Chrome bayrakları, MCP-B polyfill, araç kayıt iskeleti ve geliştirme ortamı yapılandırması.",
-    "ne_zaman": "WebMCP destekli yeni bir siteye sıfırdan başlanırken.",
-    "kaynak": "af3878c6eac2"
-  },
-  "webmcp-testing": {
-    "ne": "WebMCP araçlarını AI agent'larla test eder: Chrome DevTools entegrasyonu, agent test akışları, araç keşif doğrulaması ve uçtan uca e-ticaret akışı testleri.",
-    "ne_zaman": "Araçların gerçek AI agent'larla doğru çalıştığı doğrulanırken.",
-    "kaynak": "afd499b890e7"
-  },
-  "webmcp-tool-annotations": {
-    "ne": "readOnlyHint, destructiveHint, idempotentHint gibi güvenlik ipuçlarıyla araçları işaretler; tarayıcı izin istemlerini ve agent davranışını etkiler.",
-    "ne_zaman": "Araçlara uygun güvenlik metadata'sı eklenirken.",
-    "kaynak": "6aaf67a964ea"
-  },
-  "webmcp-tool-schemas": {
-    "ne": "WebMCP araç girdi ve çıktıları için JSON Schema tasarlar: doğru tipler, kısıtlar, iç içe nesneler ve agent'a uygun belgeleme.",
-    "ne_zaman": "Agent tüketimi için araç şemaları tanımlanırken veya iyileştirilirken.",
-    "kaynak": "449172e7a6b0"
-  },
-  "webmcp-user-interaction": {
-    "ne": "requestUserInteraction() ile insan onaylı akışlar kurar: onay pencereleri, onay iş akışları ve araç çalışması sırasında kullanıcı istemleri.",
-    "ne_zaman": "Bir eylemden önce kullanıcı onayı gerektiren araçlar oluşturulurken.",
-    "kaynak": "6ad6e16a86e1"
-  },
   "webmcpify": {
     "ne": "Mevcut bir web uygulamasını envanterler, onaylı araçları entegre eder, ardından gerçek tarayıcıda test edip onarır; uygulama eylemlerini yapay zekâ agent'larına WebMCP ile açar.",
     "ne_zaman": "Kullanıcı 'webmcpify', 'WebMCP ekle' ya da 'uygulama eylemlerini AI agent'lara aç' dediğinde.",
@@ -14523,91 +13193,6 @@
     "ne": "İnsanın yalnızca kendisinin yapabileceği adımlarda ilerleyen, etkileşimli bir bash sihirbazı üretir: altyapı, kimlik bilgisi, CI secret ve tek seferlik geçişler için.",
     "ne_zaman": "Altyapı, CI secret'ı veya yabancı bir panelde yalnızca insanın yapabileceği adımlar ya da tek seferlik geçiş olduğunda; agent kendisi yapabiliyorsa kullanılmaz.",
     "kaynak": "2835652862d3"
-  },
-  "woo-admin": {
-    "ne": "WooCommerce yönetici arayüzleri kurar: ayar sayfaları, yönetim menüleri, ürün veri sekmeleri, sipariş meta kutuları, WooCommerce Admin React analizleri ve raporlar.",
-    "ne_zaman": "Yönetici tarafında yapılandırma veya görüntüleme sayfası oluşturulurken.",
-    "kaynak": "0191e0d9c544"
-  },
-  "woo-api": {
-    "ne": "WooCommerce REST API v3 uç noktalarını oluşturur ve tüketir: kimlik doğrulama, özel endpoint'ler, kaynak genişletme, webhook'lar ve toplu işlemler.",
-    "ne_zaman": "Özel API endpoint'i yazılırken veya harici sistemler WooCommerce'e bağlanırken.",
-    "kaynak": "e6c720a6f325"
-  },
-  "woo-blocks": {
-    "ne": "WooCommerce Blocks'u kurar: Gutenberg blok entegrasyonu, blok tabanlı sepet/ödeme eklentileri, Store API ve @woocommerce/blocks-checkout paketi.",
-    "ne_zaman": "Blok editörü WooCommerce için genişletilirken veya blok tabanlı ödeme/sepet özelleştirilirken.",
-    "kaynak": "aabd1c8484fa"
-  },
-  "woo-catalog": {
-    "ne": "WooCommerce kataloğunu yönetir: ürün türleri, kategoriler, etiketler, öznitelikler, ürün sorguları, arama, ilgili ürünler ve görünürlük.",
-    "ne_zaman": "Ürünler programatik yönetilirken veya katalog görünümü özelleştirilirken.",
-    "kaynak": "67bc1bc40f5a"
-  },
-  "woo-checkout": {
-    "ne": "WooCommerce ödeme akışını özelleştirir: klasik ve blok tabanlı checkout, özel alanlar, doğrulama, sipariş işleme ve checkout genişletmeleri.",
-    "ne_zaman": "Ödeme akışı değiştirilirken, özel checkout alanı eklenirken veya checkout eklentisi entegre edilirken.",
-    "kaynak": "a9fad553ec99"
-  },
-  "woo-custom-fields": {
-    "ne": "Ürün öznitelikleri, özel meta alanları, taksonomiler, özel ürün sekmeleri ve varyasyon verisini yönetir; ürün, sipariş veya müşteriye özel veri ekler.",
-    "ne_zaman": "Ürün, sipariş veya müşteri verisine özel alan eklenirken.",
-    "kaynak": "442907e68928"
-  },
-  "woo-data-stores": {
-    "ne": "WC_Product, WC_Order, WC_Customer ve WC_Coupon CRUD veri nesneleri ile özel veri depoları, HPOS geçişi ve getter/setter kullanımını kapsar.",
-    "ne_zaman": "WooCommerce veri nesneleri oluşturulurken, değiştirilirken veya özel veri deposu yazılırken.",
-    "kaynak": "03eb09b080ba"
-  },
-  "woo-deploy": {
-    "ne": "WP-CLI otomasyonu, veritabanı geçişleri, kesintisiz güncellemeler, staging akışları, ortam yapılandırması ve CI/CD kalıplarıyla WooCommerce dağıtımını kapsar.",
-    "ne_zaman": "WooCommerce mağazası yayına alınırken veya dağıtım hattı kurulurken.",
-    "kaynak": "ebd5714d6dc7"
-  },
-  "woo-frontend": {
-    "ne": "WooCommerce vitrinini özelleştirir: şablon geçersiz kılma, tema entegrasyonu, shortcode'lar, ürün/sepet/ödeme kancaları ve blok temaları.",
-    "ne_zaman": "Mağaza görünümü değiştirilirken veya WooCommerce teması geliştirilirken.",
-    "kaynak": "571a0d2bce1c"
-  },
-  "woo-hooks-filters": {
-    "ne": "WooCommerce için WordPress kanca sistemini açıklar: action ve filter'lar, öncelikler, WooCommerce'e özgü kancalar ve genişletme kalıpları, çalışma akışı.",
-    "ne_zaman": "Kancalarla işlev eklenirken veya WooCommerce çalışma akışı anlaşılmak istendiğinde.",
-    "kaynak": "11e14772e455"
-  },
-  "woo-payments": {
-    "ne": "WooCommerce ödeme geçitleri oluşturur: WC_Payment_Gateway, doğrudan/yönlendirmeli/barındırılan entegrasyonlar, tokenizasyon, abonelik desteği, iadeler ve PCI uyumu.",
-    "ne_zaman": "Özel bir ödeme yöntemi entegrasyonu yazılırken.",
-    "kaynak": "fda1ffba31c1"
-  },
-  "woo-performance": {
-    "ne": "Nesne önbelleği, transient'lar, HPOS, veritabanı optimizasyonu, Action Scheduler, lazy loading ve sorgu optimizasyonu ile WooCommerce performansını iyileştirir.",
-    "ne_zaman": "Mağaza performansı artırılırken veya yavaşlık teşhis edilirken.",
-    "kaynak": "5cd7ad1a33be"
-  },
-  "woo-plugin-dev": {
-    "ne": "WooCommerce eklentisi oluşturur: dosya yapısı, ana eklenti dosyası, etkinleştirme/devre dışı kancaları, özel veritabanı tabloları, autoloading ve WordPress Plugin API.",
-    "ne_zaman": "Yeni bir WooCommerce eklentisi yazılırken veya eklenti kodu yapılandırılırken.",
-    "kaynak": "d98644bed891"
-  },
-  "woo-security": {
-    "ne": "WooCommerce güvenliğini uygular: nonce, yetenekler, girdi temizleme, çıktı kaçışlama, veri doğrulama, PCI değerlendirmeleri ve WordPress güvenlik kalıpları.",
-    "ne_zaman": "Bir WooCommerce mağazası sertleştirilirken veya güvenlik duruşu incelenirken.",
-    "kaynak": "a9b09b16cfb5"
-  },
-  "woo-setup": {
-    "ne": "WooCommerce kurar ve geliştirme ortamını hazırlar: WP-CLI, Docker veya wp-env ile yerel kurulum.",
-    "ne_zaman": "Yeni bir WooCommerce projesi veya geliştirme ortamı kurulurken.",
-    "kaynak": "328f153d520f"
-  },
-  "woo-shipping": {
-    "ne": "WooCommerce kargo yöntemleri oluşturur: WC_Shipping_Method, bölgeler, gönderim sınıfları, tarife hesaplama, takip ve kargo firması entegrasyonu.",
-    "ne_zaman": "Özel kargo entegrasyonu veya kargo mantığı yapılandırılırken.",
-    "kaynak": "76d87a9676e4"
-  },
-  "woo-testing": {
-    "ne": "WooCommerce eklentilerini test eder: PHPUnit birim ve entegrasyon testleri, WP test paketi, WooCommerce test yardımcıları, Playwright ile E2E ve WP-CLI iskeleti.",
-    "ne_zaman": "WooCommerce eklentileri için test yazılırken veya test ortamı kurulurken.",
-    "kaynak": "d62c07fe576d"
   },
   "woocommerce-blocks": {
     "ne": "WooCommerce sepet ve ödeme sayfalarını Gutenberg bloklarıyla özelleştirir; sunucu tarafı render, slot-fill ve genişletme kancalarını kullanır.",

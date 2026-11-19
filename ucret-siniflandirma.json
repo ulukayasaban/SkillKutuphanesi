@@ -978,14 +978,6 @@
       "ucretsiz",
       "Açıkça API anahtarı gerektirmez"
     ],
-    "acp-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz), ACP/Stripe (işlem başı)"
-    ],
-    "ap2-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Google API (ücretsiz kota)"
-    ],
     "b2b-commerce": [
       "kismen",
       "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
@@ -1018,29 +1010,9 @@
       "kismen",
       "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
     ],
-    "mpp-service-discovery": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
-    ],
-    "mpp-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
-    ],
     "multi-currency": [
       "kismen",
       "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Open Exchange Rates (ücretsiz kota)"
-    ],
-    "nlweb-llm-providers": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: LLM API'leri (ücretli; yerel model seçeneği)"
-    ],
-    "nlweb-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Qdrant (yerel ücretsiz / bulut ücretli), LLM API'leri (ücretli; yerel model seçeneği)"
-    ],
-    "node-backend@orcaqubits-3": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
     ],
     "order-fulfillment-workflow": [
       "kismen",
@@ -1071,30 +1043,6 @@
       "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
     ],
     "shopify-app-development": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "shopify-setup": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-api-v3": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-deployment": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-payments": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz)"
-    ],
-    "spree-setup": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-testing": [
       "ucretsiz",
       "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
     ],

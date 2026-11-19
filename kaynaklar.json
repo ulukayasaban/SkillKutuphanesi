@@ -801,7 +801,13 @@
       "haric": [
         "^dist/"
       ],
-      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Magento, BigCommerce, Medusa, Saleor, Salesforce Commerce, Shopify, WooCommerce, agentic commerce protokolleri (UCP/ACP/AP2/A2A/NLWeb). dist/ = diğer AI araçları için derlenmiş kopyalar (hariç)."
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Magento, BigCommerce, Medusa, Saleor, Salesforce Commerce, Shopify, WooCommerce, agentic commerce protokolleri (UCP/ACP/AP2/A2A/NLWeb). dist/ = diğer AI araçları için derlenmiş kopyalar (hariç).",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "arsivde_tut": [
+        "medusa-commerce/skills/medusa-setup",
+        "saleor-commerce/skills/saleor-setup"
+      ]
     },
     {
       "repo": "xjli360/sealeap-ecommerce-skills",
