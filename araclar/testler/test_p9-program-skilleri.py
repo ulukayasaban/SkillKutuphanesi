@@ -710,13 +710,15 @@ try:
             k = kilit_oku(d)
             k.pop("guncelleme", None)
             k.pop("proje_yolu", None)
+            for v in k.get("skiller", {}).values():
+                v.pop("bolum", None)  # plan 4. adım: kilide kaynak bölümü yazılır (kural 9); P9 sürümünde yoktu
             return k
 
         def metin_agaci(d):
             out = {}
             for f in sorted(d.rglob("*")):
                 rel = str(f.relative_to(d))
-                if ".skill-kutuphanesi/yedek" in rel or rel.endswith("son-rapor.md"):
+                if ".skill-kutuphanesi/yedek" in rel or rel.endswith("son-rapor.md") or rel.endswith("skill-kutuphanesi/kilit.json"):  # kilit kilit_norm ile karşılaştırılır
                     continue
                 out[rel] = ("L:" + str(f.readlink())) if f.is_symlink() else (f.read_text(encoding="utf-8").replace(str(d.resolve()), "<P>").replace(str(d), "<P>")
                                                                            if f.is_file() else "dir")
