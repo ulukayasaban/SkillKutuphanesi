@@ -10,6 +10,7 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 - [ ] **Aynı işi yapan iki skill aynı role verilmedi** → `ortusme`, `ayni-skill-iki-surum`.
 - [ ] **Teknoloji uyumu:** skill'in teknolojisi projenle aynı mı (React mı, vanilla mı, Three r17x mi)? KATALOG.md → Teknoloji sütunu.
 - [ ] **Hangi araçlar?** Claude Code / Codex / Antigravity / Cursor / VS Code Copilot / Windows? Cevaba göre `--arac ortak` ya da `--arac yalniz-claude`; raporda `arac-duzeni`, `arac-gormez` ve `arac-secimi-yok` satırlarını oku (rehber/14). `codex-uyum` / `claude-ozel` uyarılarını da oku.
+- [ ] **Fihrist / Kit / Proje raporu:** fihristten (`--fihrist-skill`) veya kit kataloğundan (`--kit`) kurulum yapılacaksa önce ağsız `--kuru` / `--rapor` ile Plan Bölüm 10'daki 10 başlığı (Boyut, Kurulamayanlar, Güvenlik, Model hafızası ve başlamış projede Dokunulacak dosyalar) gözden geçir. Kurulum betikleri araç tarafından kendiliğinden çalıştırılmaz; genel klasöre yazan adımlar atlanır.
 
 ## B. Ön kontrolün denetledikleri
 
@@ -72,6 +73,17 @@ Bu listenin büyük kısmı `skill-ekle.py`'nin **ön kontrolü** tarafından ot
 | `arac-mutlak-yol` | BİLGİ | `.codex/agents/*.toml` bu bilgisayarın mutlak yollarını içerir; proje taşınırsa Codex rol dışı skilleri kapatamaz | Kütüphanenin olduğu Mac'te `--yenile` |
 | `arac-belge-yok` | BİLGİ | `yapay-zeka-araclari.json` okunamadı; araç satırları atlandı | Dosyayı onar (kurulum etkilenmez) |
 | `arac-karisik` | HATA | `--arac` ile düzen değişiyor ama projede eski düzende kurulu skiller var | Önce yalnız `--arac <düzen> --kuru`, sonra `--evet`; ardından skill ekle |
+| `fihrist-skill-bicim` / `fihrist-yok` / `fihrist-kaynak-kayip` / `fihrist-skill-yok` / `fihrist-skill-belirsiz` | HATA* | `--fihrist-skill` biçimi bozuk, fihrist dosyası/skil yok, kaynak KAYIP ya da aynı adda birden çok yol var | `REPO:AD` ya da `REPO:YOL` yaz; KAYIP kaynak yeni kurulumda kullanılmaz |
+| `fihrist-gizli` | HATA* | Fihristten geçici klasöre alınan skil gizli dosya/klasör (`.env`, `*.pem`, `.ssh` vb.) içeriyor | Kurulmaz (projeye hiçbir şey yazılmaz) |
+| `fihrist-ilk-inceleme` | UYARI | Fihrist skili bu sürümde ilk kez incelenecek (`--evet` ile geçici klasörde taranır) | Raporu okuyup onay ver (`--evet`); sonuç fihriste not edilir |
+| `fihrist-onceden-incelendi` / `fihrist-arsivde` / `fihrist-internet` | BİLGİ | Bu sürüm daha önce incelendi; arşivde zaten varsa arşiv sürümü geçerlidir; fihrist kurulumunda internet gerekir | Bilgi (`--kuru` ağ kullanmaz) |
+| `kit-bulunamadi` / `kit-kaynak-kayip` / `kit-parca-gecersiz` | HATA* | Kit `kitler.json`'da yok, kaynağı KAYIP ya da `--kit-parca` yolu geçersiz | Geçerli kit reposu ve proje içi göreli parça yolu ver |
+| `kit-baslamis-proje` | HATA* | Proje başlamış; kit bütün olarak kurulmaz | Yalnız çakışmayan parçaları `--kit-parca <yol>` ile seç (`kitler.json` → `baslamis_projede`) |
+| `kit-korunan-dosya` / `kit-dosya-cakismasi` | HATA* | Kit `CLAUDE.md`/`AGENTS.md`/ayar dosyalarına ya da projede var olan bir dosyaya yazacaktı | Üzerine yazılmaz; çakışmayan parça seç |
+| `kit-kurulum-betigi` / `kit-genel-klasor` / `kit-zaten-kurulu` | UYARI | Kitte kurulum betiği var (çalıştırılmaz), genel klasöre yazan adım var (atlanır) ya da kit zaten kurulu | Raporu incele; genel klasöre yazan adımı elle de çalıştırma |
+| `kit-dosya-degismis` | UYARI | `--kaldir <kit>` sırasında kullanıcının sonradan değiştirdiği kit dosyaları bulundu | Bu dosyalar SİLİNMEZ, korunur; listeyi gözden geçir |
+| `kaynak-erisim` | HATA* | Fihrist/kit kaynağına erişilemedi (internet yok, 404 veya yol kaynakta kaldırılmış) | Projeye hiçbir şey yazılmaz; bağlantıyı/kaynağı kontrol et |
+| `guvenlik-ag` / `guvenlik-veri` / `guvenlik-talimat` | UYARI | Geçici klasör taramasında `curl\|sh`, hassas dosya+ağ komutu ya da onay atlama/enjeksiyon metni bulundu | İçerik veri olarak işlendi, uygulanmadı; dosyayı elle incele |
 
 **HATA\*** = `--zorla` ile de geçilemez (güvenlik/tutarlılık). Diğer HATA'lar `--zorla` ile, önce yedek alınarak geçilebilir.
 

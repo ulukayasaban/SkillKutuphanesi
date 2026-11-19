@@ -20,8 +20,8 @@
 ```
 
 1. **İhtiyaç:** proje tipi, kullanılacak teknoloji, agent'lar ve hangi AI araçlarıyla açılacağı (Claude Code, Codex, Antigravity, Cursor, VS Code Copilot; Windows'ta açılacak mı). Cevaba göre `--arac ortak` ya da `--arac yalniz-claude` (rehber/14).
-2. **Öneri:** `--oner "..."` kütüphanedeki tüm skilleri (gizliler dahil sayılır) puanlar; hangi rolün uygun olduğunu söyler.
-3. **Kuru çalıştırma:** `--kuru` ön kontrol raporunu ekrana yazar; projeye **hiçbir dosya yazmaz**. (Uygulanan kurulumun raporu `.skill-kutuphanesi/son-rapor.md`'ye kaydedilir.)
+2. **Öneri:** `--oner "..."` kütüphanedeki tüm kaynakları tarar (arşiv skilleri, fihristten en çok 3 aday, kit kataloğu, programlar ve referans araçlar); hangi rolün uygun olduğunu söyler.
+3. **Kuru çalıştırma ve Proje raporu:** `--kuru` her zaman **ağsız** ön kontrol raporu üretir, projeye **hiçbir dosya yazmaz** (fihrist/kit kalemleri varsa Plan Bölüm 10 proje raporunu da basar). Tüm 10 bölümlü proje raporunu (Öneriler, Güncellik, Boyut, Kurulamayanlar, Araç uyumu, Çakışmalar, Gereksinimler, Güvenlik, Olası hatalar, Model hafızası; başlamış projede ek 3 bölüm + tek net öneri) ayrıca `python3 araclar/skill-ekle.py <proje> --rapor` ile alabilirsin. (Uygulanan kurulumun raporu `.skill-kutuphanesi/son-rapor.md`'ye kaydedilir.)
 4. **Onay:** HATA varsa işlem yapılmaz. UYARI varsa sen onaylarsın (`--evet`).
 5. **Kurulum:** Önce otomatik yedek alınır. Bir adım hata verirse her şey yedekten geri alınır.
 6. **Doğrulama:** Her kopyanın, bağlantının, agent dosyasının ve Codex yolunun çalıştığı kontrol edilir.
@@ -177,6 +177,50 @@ python3 araclar/skill-ekle.py <proje> --dondur <klasör>/eski-skill --evet
 - UYARI (`--evet` ister): `dondur-buyuk` (50 MB üstü), `dondur-ad-farkli` (SKILL.md içindeki ad klasör adından farklı). `node_modules`, `__pycache__`, `.venv` kopyalanmaz (BİLGİ). Kopyanın içeriği taranmaz: proje deposuna koymadan önce dosyalara bak.
 - `--kaldir <ad>` donmuş kopyayı önce yedeğe alır (`--geri-al` ile dönülür); yedekler yalnız son 10 işlemde tutulur, kalıcı saklamak için yedek klasörünü başka yere kopyala. Donmuş kopya sonradan düzenlenmişse `--kaldir` UYARI `dondurma-degismis` verir.
 - Donmuş skill düzenlenebilir; `--dogrula` içeriği karşılaştırmaz, `--guncelle` dokunmaz. Yeniden dondurmak için önce `--kaldir`, sonra `--dondur`.
+
+## Fihristten kurulum (dev koleksiyonlar)
+
+200 ve üstü skilli depolar (`bolum: fihrist`, `fihrist/<owner>__<ad>.json`) arşive çekilmez. Seçilen skil kurulum anında kaynaktan geçici klasöre alınır, incelenir ve kurulur:
+
+```bash
+# 1) Ağsız ön kontrol + 10 bölümlü proje raporu (hiçbir şey indirmez, yazmaz)
+python3 araclar/skill-ekle.py <proje> --fihrist-skill github/awesome-copilot:agent-governance --kuru
+# 2) Onaylı kurulum (ağ + geçici klasör incelemesi + atomik kurulum + geçici klasör temizliği)
+python3 araclar/skill-ekle.py <proje> --fihrist-skill github/awesome-copilot:agent-governance --evet
+```
+- **Aynı skil arşivde varsa:** arşivdeki kayıt geçerlidir; araç ağa çıkmadan arşivdeki sürümü kurar (`fihrist-arsivde`).
+- **Aynı adda birden çok yol varsa:** `fihrist-skill-belirsiz` ile tam yolu ister (`REPO:YOL`, ör. `owner/repo:skills/ad`).
+- **Geçici klasör ve atomiklik:** kaynak kütüphane dışındaki geçici bir klasöre sığ klonlanır, güvenlik (onay atlama / `curl|sh` / genel klasöre yazma / gizli dosya), sabit yol ve araç uyumu incelenir. Herhangi bir kalem başarısız olursa projeye **hiçbir şey yazılmaz**; geçici klasör işlem bitince ya da hata verince kendiliğinden silinir.
+- **Kilit ve inceleme notu:** kurulan gerçek `commit`, `bolum: "fihrist"`, dosya listesi ve ölçülen gerçek boyut `kilit.json`'a yazılır; inceleme sonucu fihrist kaydına not düşülür (aynı sürüm bir sonraki `--kuru`'da "önceden incelendi" olarak görünür).
+- `--durum` fihristteki commit ile karşılaştırır (`güncel (fihrist)` / `GÜNCELLEME VAR` / `KAYNAKTA KALDIRILDI`); kaynak silinse de projedeki kopya çalışmaya devam eder.
+
+## Kit kataloğundan kurulum (hazır proje iskeleti)
+
+`kitler.json` içindeki hazır proje iskeletleri (`bolum: katalog`, `tur: kit`) arşive alınmaz; seçilince geçici klasöre indirilip incelenerek kurulur:
+
+```bash
+# Boş / yeni projede iskelet kurulumu (önce ağsız --kuru raporu, sonra --evet)
+python3 araclar/skill-ekle.py <yeni-proje> --kit sirioberati/YouTube-AI-Video-Editing-System --kuru
+python3 araclar/skill-ekle.py <yeni-proje> --kit sirioberati/YouTube-AI-Video-Editing-System --evet
+
+# Başlamış projede yalnız çakışmayan, korunan olmayan parça
+python3 araclar/skill-ekle.py <baslamis-proje> --kit sirioberati/YouTube-AI-Video-Editing-System --kit-parca templates --kuru
+python3 araclar/skill-ekle.py <baslamis-proje> --kit sirioberati/YouTube-AI-Video-Editing-System --kit-parca templates --evet
+```
+- **Başlamış proje koruması:** başlamış projeye bütün kit kurulmaz (`kit-baslamis-proje`, `--zorla` ile geçilmez). `CLAUDE.md`, `AGENTS.md`, `.claude/settings.json`, `package.json`, `pyproject.toml`, `.gitignore` ve var olan dosyaların üzerine asla yazılmaz.
+- **Güvenlik:** kitin kurulum betiği (`kurulum_betigi`) araç tarafından kendiliğinden çalıştırılmaz; genel klasöre yazan adımlar atlanır ve kilide (`atlanan_adimlar`) yazılır. Kitin skilleri seçilen araç düzenine (`ortak` / `yalniz-claude`) göre yerleştirilir.
+- **Kilit, güncelleme ve kaldırma:** `kilit.json` → `kitler` altında `bolum: "katalog"`, `commit`, dosya listesi ve içerik hash'leri tutulur. `--guncelle` yeni kit sürümünü projeye kendiliğinden uygulamaz (yalnız bildirir). `--kaldir <owner/repo> --evet` değişmemiş kit dosyalarını yedekleyerek siler; **kullanıcının sonradan değiştirdiği dosyalar silinmez**, korunur ve listelenir.
+
+## Proje raporu (`--rapor`)
+
+Kurulumdan önce Plan Bölüm 10'daki 10 başlığı (`1. Öneriler` .. `10. Model hafızası`, başlamış projede ek olarak `Projede olanlar`, `Güncellenebilecekler`, `Dokunulacak dosyalar` ve sonda tek net öneri) ağsız olarak görmek için:
+
+```bash
+python3 araclar/skill-ekle.py <proje> --rapor --oner "video kurgu düzeni"
+python3 araclar/skill-ekle.py <proje> --rapor --profil landing-page --arac ortak
+```
+- Model hafızası yükü `SKILL.md` bayt toplamından `~bayt/4 token` olarak hesaplanır; indirilmemiş fihrist/kit skilleri ayrıca belirtilir.
+- Program kurulu değilse `--program-skill` ön kontrolü ve rapor `kaynaklar.json`'dan tahmini kurulum boyutunu (`~X MB`) gösterir.
 
 ## Kaldırma / geri alma
 ```bash
