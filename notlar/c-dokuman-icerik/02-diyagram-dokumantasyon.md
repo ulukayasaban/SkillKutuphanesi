@@ -2,67 +2,7 @@
 
 _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **5/18**
-
-### adr-create  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Create a new Architecture Decision Record with sequential numbering and AgentDB registration
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### adr-index  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Build or rebuild the ADR index + dependency graph by running scripts/import.mjs (handles v3-style and plugin-style ADR formats; one Bash call vs hundreds of MCP round-trips)
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### adr-reindex  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Reconcile the ADR index against a DELETED ADR file or relation line by dropping and rebuilding adr-patterns + adr-edges from scratch (scripts/reindex.mjs). Use when adr-index alone leaves stale rows behind.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### adr-review  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Review code changes against accepted ADRs for compliance violations
-- **Teknoloji:** git _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.6 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### adr-verify  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Read back adr-patterns + adr-edges namespaces, surface dangling refs / supersede cycles / Unknown statuses; exit 1 on cycles
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### api-docs  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Generate API documentation from source code with JSDoc and OpenAPI support
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **5/10**
 
 ### archify  ·  tt-a1i/archify @ a406594  ·  puan 95 (A)
 
@@ -128,16 +68,6 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Anthropic resmi; okuyucu testi (taze bağlamlı alt-agent) diğer doküman skillerinde yok. Codex'te alt-agent yoksa yeni oturumla aynı test elle yapılabilir. Doküman ve format skilleriyle tamamlayıcı.
 
-### doc-gen  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Generate and maintain documentation with drift detection. Use when the user asks to write/update/refresh docs, detect doc drift against code, or schedule recurring documentation maintenance.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
 ### documentation-and-adrs  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
 - **Ne yapar:** Kararları ve 'neden'i belgelemeyi öğretir: projedeki mevcut ADR düzenine uyarak ADR yazma, satır içi yorum kuralları, bilinen tuzakları belgeleme, API dokümantasyonu (TSDoc, OpenAPI), README ve changelog. Gereksiz yorumdan kaçınmayı vurgular.
@@ -159,16 +89,6 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → alternatif
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.
-
-### documentation-writer  ·  github/awesome-copilot @ 7e40881  ·  puan 99 (A)
-
-- **Ne yapar:** Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** github (kurum, ★40799, son güncelleme 2026-11-04, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
-- **İnceleme:** otomatik
 
 ### json-canvas@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
 

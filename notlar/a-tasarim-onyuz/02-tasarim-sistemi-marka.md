@@ -2,7 +2,7 @@
 
 _Design token, tema, marka kimliği, banner/logo_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/14**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **9/12**
 
 ### banner-design  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3a13158  ·  puan 79 (B)
 
@@ -46,17 +46,6 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Durum:** tercih · **Örtüşme:** hazir-tema-marka-stili → tamamlayıcı
 - **Boyut:** 13 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İçerik tek bir kuruma (Anthropic) bağlı ve dar; kullanıcı projelerinde yanlış marka renkleri uygulama riski taşır, rol önyüklemesine girmemeli. Dikkat: registry 'lisans yok' diyor ama klasörde Apache-2.0 LICENSE.txt var (telif satırı Anthropic). Yapı olarak temiz, hiçbir şey kurmaz/indirmez.
-
-### brand-guidelines@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** anthropics/skills'teki brand-guidelines'ın birebir kopyası: Anthropic renk ve tipografi kurallarını sunum/belgelere uygular.
-- **Ne zaman:** Yalnızca birincil kopya (anthropics/skills) alınamazsa; aynı Anthropic marka içeriği. · **Ne zaman değil:** Birincil kopya varken kullanma. Kullanıcının kendi markası için değil.
-- **Teknoloji:** python-pptx · **Paketler:** python-pptx
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** hazir-tema-marka-stili → alternatif
-- **Boyut:** 13 KB (SKILL.md 2.2 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. SKILL.md anthropics/skills sürümüyle birebir aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: bu kopyanın LICENSE.txt'inde telif satırı doldurulmamış şablon ('Copyright [yyyy] [name of copyright owner]'), yani lisans sahipliği net değil; resmî kopya tercih edilmeli.
 
 ### brandkit  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
@@ -143,14 +132,3 @@ _Design token, tema, marka kimliği, banner/logo_
 - **Durum:** tercih · **Örtüşme:** hazir-tema-marka-stili → birincil · **Roller:** tasarim-sistemi
 - **Boyut:** 141 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel). 10 tema hazır ve tutarlı, bağımlılığı yok. Dikkat: temalar genel amaçlı/jenerik; 'yapay zeka şablonu' görünümünden kaçınmak isteyen projede tasarım yönü için yeterli değildir (design-taste-frontend). Akış 'PDF'i göster, seçim bekle' diye kullanıcı etkileşimi varsayar; otomatik/tek atışta zorlaşır. Resmî kopya (anthropics/skills) tercih; composiohq kopyası birebir aynı.
-
-### theme-factory@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 71 (B)
-
-- **Ne yapar:** anthropics/skills'teki theme-factory'nin birebir kopyası: 10 hazır tema ile slayt/belge/HTML stillendirme.
-- **Ne zaman:** Yalnızca resmî kopya alınamazsa. · **Ne zaman değil:** Resmî kopya varken kullanma.
-- **Teknoloji:** html, css, pptx
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** hazir-tema-marka-stili → alternatif
-- **Boyut:** 141 KB (SKILL.md 3.1 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. SKILL.md, themes/ ve PDF resmî sürümle aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te telif satırı doldurulmamış şablon.

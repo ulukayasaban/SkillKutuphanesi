@@ -210,9 +210,15 @@
       "dahil_degil": [
         "^composio-skills/"
       ],
-      "tur": "koleksiyon",
-      "bolum": "arsiv",
-      "tur_gerekce": "T1 ve 32 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "T1 ve 32 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi.",
+      "arsivde_tut": [
+        "connect",
+        "content-research-writer",
+        "file-organizer",
+        "twitter-algorithm-optimizer"
+      ]
     },
     {
       "repo": "ComposioHQ/awesome-claude-skills",
@@ -221,7 +227,9 @@
       "dahil": [
         "^composio-skills/"
       ],
-      "kimlik": "composio-entegrasyon"
+      "kimlik": "composio-entegrasyon",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist"
     },
     {
       "repo": "heygen-com/hyperframes",
@@ -801,7 +809,13 @@
       "haric": [
         "^dist/"
       ],
-      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Magento, BigCommerce, Medusa, Saleor, Salesforce Commerce, Shopify, WooCommerce, agentic commerce protokolleri (UCP/ACP/AP2/A2A/NLWeb). dist/ = diğer AI araçları için derlenmiş kopyalar (hariç)."
+      "not": "E-ticaret (çok platformlu) araştırmasıyla 2026-10-22'de eklendi (kullanıcı isteği: sadece Etsy'ye odaklanma). Magento, BigCommerce, Medusa, Saleor, Salesforce Commerce, Shopify, WooCommerce, agentic commerce protokolleri (UCP/ACP/AP2/A2A/NLWeb). dist/ = diğer AI araçları için derlenmiş kopyalar (hariç).",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "arsivde_tut": [
+        "medusa-commerce/skills/medusa-setup",
+        "saleor-commerce/skills/saleor-setup"
+      ]
     },
     {
       "repo": "xjli360/sealeap-ecommerce-skills",
@@ -1369,7 +1383,9 @@
         "^plugins/plugin-eval/fixtures/"
       ],
       "kimlik": "openai-plugins",
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. openai/skills kullanımdan kaldırıldı; resmî Codex plugin örnekleri artık burada (7.7k★, 536 SKILL.md, çoğu sağlayıcı plugin'i: Twilio, Vercel, Zoom…). LİSANS DOSYASI YOK → belirtilmemiş, ön kontrol uyarır. 60 ad kütüphanede var (çoğu vercel/cloudflare/superpowers kopyası) → toplama olduğu için öncelik 6, kopyalar ayna olarak notlanır. .agents/skills/plugin-creator (repo-içi) ve plugins/plugin-eval/fixtures (test örnekleri) bilinçli hariç."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. openai/skills kullanımdan kaldırıldı; resmî Codex plugin örnekleri artık burada (7.7k★, 536 SKILL.md, çoğu sağlayıcı plugin'i: Twilio, Vercel, Zoom…). LİSANS DOSYASI YOK → belirtilmemiş, ön kontrol uyarır. 60 ad kütüphanede var (çoğu vercel/cloudflare/superpowers kopyası) → toplama olduğu için öncelik 6, kopyalar ayna olarak notlanır. .agents/skills/plugin-creator (repo-içi) ve plugins/plugin-eval/fixtures (test örnekleri) bilinçli hariç.",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist"
     },
     {
       "repo": "github/awesome-copilot",
@@ -1378,7 +1394,12 @@
       "haric": [
         "^\\.github/"
       ],
-      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GitHub'ın resmî Copilot topluluk kataloğu (41k★, 475 skill; kalite karışık) → öncelik 6. .github/skills repo-içi 3 skill hariç."
+      "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. GitHub'ın resmî Copilot topluluk kataloğu (41k★, 475 skill; kalite karışık) → öncelik 6. .github/skills repo-içi 3 skill hariç.",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "arsivde_tut": [
+        "skills/caption-qa"
+      ]
     },
     {
       "repo": "Vincentwei1021/video-shotcraft",

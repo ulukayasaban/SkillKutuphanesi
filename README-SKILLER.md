@@ -1,6 +1,6 @@
 # Skill Rehberi (Türkçe)
 
-Bu kütüphanedeki **5913 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
+Bu kütüphanedeki **2849 skill'in** ne işe yaradığı ve nasıl çağrıldığı. Kategori sayfaları otomatik üretilir:
 `python3 araclar/skill-readme.py`. Test sonuçları: [TEST_RAPORU.md](TEST_RAPORU.md) · kurulum ve araçlar: [README.md](README.md).
 
 ## Skill nedir?
@@ -33,7 +33,7 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
   gizler (`.claude/settings.json` → `skillOverrides`), böylece kütüphane sürümü kullanılır. Ön kontrol `hesap-cakismasi` der.
 
 ## Tablolar nasıl okunur?
-- **Ne yapar / Ne zaman:** elle incelenmiş 1308 skill'de inceleme notu; 4407 skill'de açıklamanın
+- **Ne yapar / Ne zaman:** elle incelenmiş 448 skill'de inceleme notu; 2203 skill'de açıklamanın
   otomatik Türkçe çevirisi (`aciklama-tr.json`, `araclar/ceviri-tr.py`); 198 skill'de henüz İngilizce.
 - **Puan:** 0–100 otomatik değerlendirme ve derece (A–D): kaynağın bakımı, GitHub güveni, yapı, inceleme notu.
 - **Not:** alternatif sürüm, ücretli/kısmen ücretli (`notlar/ucretli-skiller.md`), Codex uyumu, 🔥trend.
@@ -42,72 +42,72 @@ Claude Code `.claude/skills/<ad>/`, Codex `.agents/skills/<ad>/` klasöründen o
 
 ## Dizin
 
-### Tasarım ve Ön Yüz (281)
+### Tasarım ve Ön Yüz (268)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-ui-ux-tasarim-dili](skiller/a-tasarim-onyuz/01-ui-ux-tasarim-dili.md) | Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi | 39 |
-| [02-tasarim-sistemi-marka](skiller/a-tasarim-onyuz/02-tasarim-sistemi-marka.md) | Design token, tema, marka kimliği, banner/logo | 14 |
-| [03-animasyon-motion](skiller/a-tasarim-onyuz/03-animasyon-motion.md) | GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim | 34 |
+| [01-ui-ux-tasarim-dili](skiller/a-tasarim-onyuz/01-ui-ux-tasarim-dili.md) | Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi | 38 |
+| [02-tasarim-sistemi-marka](skiller/a-tasarim-onyuz/02-tasarim-sistemi-marka.md) | Design token, tema, marka kimliği, banner/logo | 12 |
+| [03-animasyon-motion](skiller/a-tasarim-onyuz/03-animasyon-motion.md) | GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim | 32 |
 | [04-scroll-deneyimi](skiller/a-tasarim-onyuz/04-scroll-deneyimi.md) | Scroll hikâyesi, smooth scroll, ScrollTrigger, sayfa geçişleri | 7 |
-| [05-3d-webgl](skiller/a-tasarim-onyuz/05-3d-webgl.md) | Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader | 35 |
+| [05-3d-webgl](skiller/a-tasarim-onyuz/05-3d-webgl.md) | Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader | 33 |
 | [06-oyun-2d-grafik](skiller/a-tasarim-onyuz/06-oyun-2d-grafik.md) | Oyun geliştirme, PixiJS, 2D grafik | 113 |
-| [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 27 |
-| [08-onyuz-test-kalite](skiller/a-tasarim-onyuz/08-onyuz-test-kalite.md) | Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı | 12 |
+| [07-gorsel-sanat-sunum](skiller/a-tasarim-onyuz/07-gorsel-sanat-sunum.md) | Poster/canvas tasarımı, generative art, slayt, GIF | 23 |
+| [08-onyuz-test-kalite](skiller/a-tasarim-onyuz/08-onyuz-test-kalite.md) | Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı | 10 |
 
-### Yazılım Geliştirme (631)
+### Yazılım Geliştirme (542)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-planlama-metodoloji](skiller/b-yazilim-gelistirme/01-planlama-metodoloji.md) | Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini | 88 |
-| [02-kod-kalitesi-review](skiller/b-yazilim-gelistirme/02-kod-kalitesi-review.md) | Code review, sadeleştirme, temiz kod | 29 |
-| [03-test-hata-ayiklama](skiller/b-yazilim-gelistirme/03-test-hata-ayiklama.md) | TDD, hata ayıklama, doğrulama | 20 |
-| [04-mimari-api-veritabani](skiller/b-yazilim-gelistirme/04-mimari-api-veritabani.md) | Mimari, API/arayüz tasarımı, veritabanı, backend | 63 |
-| [05-git-pr-surum](skiller/b-yazilim-gelistirme/05-git-pr-surum.md) | Git, worktree, PR, sürüm/release, changelog | 25 |
-| [06-devops-guvenlik-performans](skiller/b-yazilim-gelistirme/06-devops-guvenlik-performans.md) | CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | 179 |
-| [07-framework-ozel](skiller/b-yazilim-gelistirme/07-framework-ozel.md) | Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme) | 23 |
+| [01-planlama-metodoloji](skiller/b-yazilim-gelistirme/01-planlama-metodoloji.md) | Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini | 78 |
+| [02-kod-kalitesi-review](skiller/b-yazilim-gelistirme/02-kod-kalitesi-review.md) | Code review, sadeleştirme, temiz kod | 18 |
+| [03-test-hata-ayiklama](skiller/b-yazilim-gelistirme/03-test-hata-ayiklama.md) | TDD, hata ayıklama, doğrulama | 11 |
+| [04-mimari-api-veritabani](skiller/b-yazilim-gelistirme/04-mimari-api-veritabani.md) | Mimari, API/arayüz tasarımı, veritabanı, backend | 56 |
+| [05-git-pr-surum](skiller/b-yazilim-gelistirme/05-git-pr-surum.md) | Git, worktree, PR, sürüm/release, changelog | 9 |
+| [06-devops-guvenlik-performans](skiller/b-yazilim-gelistirme/06-devops-guvenlik-performans.md) | CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans | 147 |
+| [07-framework-ozel](skiller/b-yazilim-gelistirme/07-framework-ozel.md) | Belirli framework/araç rehberleri (Next.js, Playwright CLI, Claude Code plugin geliştirme) | 19 |
 | [08-mobil-uygulama](skiller/b-yazilim-gelistirme/08-mobil-uygulama.md) | Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mobil performans | 204 |
 
-### Doküman ve İçerik (120)
+### Doküman ve İçerik (99)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-ofis-dokumanlari](skiller/c-dokuman-icerik/01-ofis-dokumanlari.md) | Word, Excel, PowerPoint, PDF üretme/düzenleme | 12 |
-| [02-diyagram-dokumantasyon](skiller/c-dokuman-icerik/02-diyagram-dokumantasyon.md) | Diyagram, teknik dokümantasyon, ADR, ortak yazım | 18 |
-| [03-yazi-iletisim-icerik](skiller/c-dokuman-icerik/03-yazi-iletisim-icerik.md) | Yazı, iletişim, pazarlama/içerik, kariyer | 55 |
-| [04-not-alma-bilgi-yonetimi](skiller/c-dokuman-icerik/04-not-alma-bilgi-yonetimi.md) | Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni | 35 |
+| [01-ofis-dokumanlari](skiller/c-dokuman-icerik/01-ofis-dokumanlari.md) | Word, Excel, PowerPoint, PDF üretme/düzenleme | 8 |
+| [02-diyagram-dokumantasyon](skiller/c-dokuman-icerik/02-diyagram-dokumantasyon.md) | Diyagram, teknik dokümantasyon, ADR, ortak yazım | 10 |
+| [03-yazi-iletisim-icerik](skiller/c-dokuman-icerik/03-yazi-iletisim-icerik.md) | Yazı, iletişim, pazarlama/içerik, kariyer | 47 |
+| [04-not-alma-bilgi-yonetimi](skiller/c-dokuman-icerik/04-not-alma-bilgi-yonetimi.md) | Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni | 34 |
 
-### AI ve Otomasyon (375)
+### AI ve Otomasyon (133)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-claude-api-mcp](skiller/d-ai-otomasyon/01-claude-api-mcp.md) | Claude API, MCP sunucusu, model geçişi | 45 |
-| [02-agent-orkestrasyon](skiller/d-ai-otomasyon/02-agent-orkestrasyon.md) | Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları | 269 |
-| [03-web-arastirma-veri](skiller/d-ai-otomasyon/03-web-arastirma-veri.md) | Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma | 26 |
-| [04-skill-plugin-yazimi](skiller/d-ai-otomasyon/04-skill-plugin-yazimi.md) | Skill yazma, plugin/hook/komut geliştirme | 35 |
+| [01-claude-api-mcp](skiller/d-ai-otomasyon/01-claude-api-mcp.md) | Claude API, MCP sunucusu, model geçişi | 37 |
+| [02-agent-orkestrasyon](skiller/d-ai-otomasyon/02-agent-orkestrasyon.md) | Alt-agent, paralel agent, bağlam mühendisliği, agent davranış modları | 59 |
+| [03-web-arastirma-veri](skiller/d-ai-otomasyon/03-web-arastirma-veri.md) | Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma | 10 |
+| [04-skill-plugin-yazimi](skiller/d-ai-otomasyon/04-skill-plugin-yazimi.md) | Skill yazma, plugin/hook/komut geliştirme | 27 |
 
-### Video, Ses ve AI Medya Üretimi (231)
+### Video, Ses ve AI Medya Üretimi (208)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| [01-video-uretim-montaj](skiller/g-video-ses-medya/01-video-uretim-montaj.md) | Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg | 135 |
-| [02-ses-muzik-konusma](skiller/g-video-ses-medya/02-ses-muzik-konusma.md) | Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi | 33 |
+| [01-video-uretim-montaj](skiller/g-video-ses-medya/01-video-uretim-montaj.md) | Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çeviri/analiz, FFmpeg | 119 |
+| [02-ses-muzik-konusma](skiller/g-video-ses-medya/02-ses-muzik-konusma.md) | Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi | 26 |
 | [03-ai-gorsel-video-modelleri](skiller/g-video-ses-medya/03-ai-gorsel-video-modelleri.md) | AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyUI…), API anahtarı kurulumu | 27 |
 | [04-motion-graphics-karakter](skiller/g-video-ses-medya/04-motion-graphics-karakter.md) | Motion graphics, Manim, karakter animasyonu/rig, görsel stil | 36 |
 
-### Entegrasyon Kataloğu (varsayılan listede gizli) (1781)
+### Entegrasyon Kataloğu (varsayılan listede gizli) (1)
 | Kategori | Kapsam | Skill |
 |---|---|---|
-| 01-uygulama-entegrasyonlari: [1](skiller/e-entegrasyon-katalogu/01-uygulama-entegrasyonlari-1.md) · [2](skiller/e-entegrasyon-katalogu/01-uygulama-entegrasyonlari-2.md) · [3](skiller/e-entegrasyon-katalogu/01-uygulama-entegrasyonlari-3.md) · [4](skiller/e-entegrasyon-katalogu/01-uygulama-entegrasyonlari-4.md) · [5](skiller/e-entegrasyon-katalogu/01-uygulama-entegrasyonlari-5.md) | Composio üzerinden 800+ uygulama (Gmail, Slack, Notion…); Composio API anahtarı gerekir | 1781 |
+| [01-uygulama-entegrasyonlari](skiller/e-entegrasyon-katalogu/01-uygulama-entegrasyonlari.md) | Composio üzerinden 800+ uygulama (Gmail, Slack, Notion…); Composio API anahtarı gerekir | 1 |
 
 ### Repo-İçi Geliştirici Skilleri (varsayılan listede gizli) (114)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-repo-gelistirici-skilleri](skiller/f-repo-ici/01-repo-gelistirici-skilleri.md) | Next.js, React, Playwright, Lighthouse, Motion repolarına KATKI yapanlar için iç süreç skilleri; kendi projelerinde nad… | 114 |
 
-### İş Alanları (Bilgi Çalışanı) (2002)
+### İş Alanları (Bilgi Çalışanı) (1106)
 | Kategori | Kapsam | Skill |
 |---|---|---|
 | [01-satis-pazarlama-musteri](skiller/h-is-alanlari/01-satis-pazarlama-musteri.md) | Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları | 204 |
-| [02-finans-hukuk-ik](skiller/h-is-alanlari/02-finans-hukuk-ik.md) | Finans/muhasebe, hukuk/sözleşme, insan kaynakları | 48 |
+| [02-finans-hukuk-ik](skiller/h-is-alanlari/02-finans-hukuk-ik.md) | Finans/muhasebe, hukuk/sözleşme, insan kaynakları | 37 |
 | [03-operasyon-urun-isletme](skiller/h-is-alanlari/03-operasyon-urun-isletme.md) | Operasyon, ürün yönetimi, küçük işletme, verimlilik, kurumsal arama | 83 |
 | [04-veri-analizi-raporlama](skiller/h-is-alanlari/04-veri-analizi-raporlama.md) | İş verisi analizi, SQL, pano/rapor, öngörü | 12 |
-| 05-e-ticaret-pazaryeri: [1](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-1.md) · [2](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-2.md) · [3](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-3.md) · [4](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-4.md) · [5](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-5.md) | E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listele… | 1655 |
+| 05-e-ticaret-pazaryeri: [1](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-1.md) · [2](skiller/h-is-alanlari/05-e-ticaret-pazaryeri-2.md) | E-ticaret ve pazaryerleri: Etsy, Amazon, Shopify, WooCommerce, eBay, TikTok Shop, Walmart — ürün/niş araştırma, listele… | 770 |
 
 ### Bilim, Araştırma ve Mühendislik (378)
 | Kategori | Kapsam | Skill |

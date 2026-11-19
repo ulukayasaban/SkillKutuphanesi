@@ -2,7 +2,7 @@
 
 _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/35**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/34**
 
 ### add-frontmatter  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 71 (B)
 
@@ -120,17 +120,6 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Durum:** tercih · **Örtüşme:** claudesidian-kurulum → tamamlayıcı
 - **Boyut:** 10 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV. İşini iyi tarif ediyor (fish desteği, özel karakter kaçışı) ama tek amaçlı ve Claude CLI'a bağlı.
-
-### invoice-organizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
-
-- **Ne yapar:** Fatura ve fişleri (PDF, taranmış görsel, e-posta eki) okuyup satıcı, tarih, tutar, fatura no gibi bilgileri çıkarır; `YYYY-AA-GG Satıcı - Fatura - Ürün.pdf` biçiminde yeniden adlandırıp satıcıya/kategoriye/döneme göre klasörler, CSV özet üretir; orijinalleri korur.
-- **Ne zaman:** Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama. · **Ne zaman değil:** Muhasebe kaydı/vergi beyanı yerine geçmez; OCR doğruluğu kontrol edilmeden finansal karar için kullanma.
-- **Teknoloji:** python, pdf · **Paketler:** pdftotext veya pdfplumber, OCR aracı (taranmış fişler için)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** dosya-duzenleme → tamamlayıcı
-- **Boyut:** 12 KB (SKILL.md 11.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Adlandırma standardı ve klasör stratejileri iyi; çıkarma için pdf skilliyle birlikte kullanılır. Lisans belirtilmemiş.
 
 ### json-canvas@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 70 (B)
 

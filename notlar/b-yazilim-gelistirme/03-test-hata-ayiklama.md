@@ -2,37 +2,7 @@
 
 _TDD, hata ayıklama, doğrulama_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/20**
-
-### agent-tdd-london-swarm  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Agent skill for tdd-london-swarm - invoke with $agent-tdd-london-swarm
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 7 KB (SKILL.md 7.0 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-test-long-runner  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Agent skill for test-long-runner - invoke with $agent-test-long-runner
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-
-### agent-tester  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Agent skill for tester - invoke with $agent-tester
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 8 KB (SKILL.md 8.4 KB, yük orta) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/11**
 
 ### debugging-and-error-recovery  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
 
@@ -67,16 +37,6 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 13 KB (SKILL.md 12.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İçerik iyi ama obra'nın eski sürümünden türetilmiş kopya; upstream ile senkron değil.
 
-### systematic-debugging@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
-
-- **Ne yapar:** Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
-- **Teknoloji:** git _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
-- **Boyut:** 40 KB (SKILL.md 9.2 KB, yük orta)
-- **İnceleme:** otomatik
-
 ### systematic-debugging@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
 - **Ne yapar:** ag-kit'in kısaltılmış hata ayıklama şablonu (obra/superpowers'tan uyarlanmış): yeniden üret, izole et, anla (5 Neden), düzelt ve doğrula fazları; kontrol listeleri ve temel git/grep/pm2 komutları.
@@ -87,16 +47,6 @@ _TDD, hata ayıklama, doğrulama_
 - **Durum:** alternatif · **Örtüşme:** hata-ayiklama → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF / SADECE ARŞİV. 2.5 KB şablon; demir yasa, çok bileşenli tanı ve 'üç düzeltmede dur' gibi asıl değerli kısımlar çıkarılmış.
-
-### tdd-repair  ·  ruvnet/ruflo @ 98ddf41  ·  puan 99 (A)
-
-- **Ne yapar:** Test-Driven Repair: given a failing test, spawn a bounded headless `claude -p` (Read/Edit/Bash only, --max-budget-usd capped) that makes the test pass without modifying it. Use when a failing test should drive the fix to the code under test.
-- **Teknoloji:** git, node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar. · **Kırık bağlantı:** 1
-- **İnceleme:** otomatik
 
 ### tdd-workflow  ·  vudovn/ag-kit @ 549ba3d  ·  puan 68 (B)
 
@@ -109,17 +59,6 @@ _TDD, hata ayıklama, doğrulama_
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: ALTERNATİF / SADECE ARŞİV. 3 KB tablo özeti; 'testi çalıştırıp başarısızlığı gör' gibi uygulama adımları yok, iki birincil sürümün kapsadığı her şeyi daha zayıf veriyor.
 - **Not:** Aynı adlı başka skill: `tdd-workflow@ruvnet` (ruvnet/ruflo) London School (mock-first) TDD'yi Ruflo araçlarıyla yürütür. Bu skill araçtan bağımsız genel TDD ilkeleridir (RED-GREEN-REFACTOR); tercih elle sabitlendi.
-
-### tdd-workflow@ruvnet  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** TDD London School workflow -- mock-first, outside-in test development
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
-- **Not:** Aynı adlı başka skill: `tdd-workflow` (vudovn/ag-kit) araçtan bağımsız genel TDD ilkeleridir. Bu skill London School (mock-first) TDD'yi Ruflo araçlarıyla yürütür.
 
 ### test-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
 
@@ -142,26 +81,6 @@ _TDD, hata ayıklama, doğrulama_
 - **Durum:** alternatif · **Örtüşme:** tdd → alternatif
 - **Boyut:** 17 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: ALTERNATİF. İçerik kalitesi çok yüksek ve baskı testleriyle geliştirilmiş; birincilden farkı kapsam değil sertlik. Aynı adı taşıdığı için bir projede yalnız biri kurulmalı.
-
-### test-driven-development@openai  ·  openai/plugins @ b767f8f  ·  puan 72 (B)
-
-- **Ne yapar:** Use when implementing any feature or bugfix, before writing implementation code
-- **Teknoloji:** node, typescript _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
-- **Boyut:** 17 KB (SKILL.md 8.8 KB, yük orta)
-- **İnceleme:** otomatik
-
-### test-gaps  ·  ruvnet/ruflo @ 98ddf41  ·  puan 100 (A)
-
-- **Ne yapar:** Detect missing test coverage and generate test suggestions. Use when the user asks about coverage gaps, untested code, or what tests to write next; also after adding a feature to find what still needs tests.
-- **Teknoloji:** node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** ruvnet (kisi, ★81282, son güncelleme 2026-11-09, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk) · **Bağımlılık:** Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.
-- **İnceleme:** otomatik
 
 ### test-value  ·  tt-a1i/archify @ a406594  ·  puan 96 (A)
 
@@ -195,16 +114,6 @@ _TDD, hata ayıklama, doğrulama_
 - **Durum:** tercih · **Örtüşme:** tamamlanma-dogrulama → birincil · **Roller:** backend-muhendis, frontend-muhendis, planlayici
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlanma-dogrulama grubunun birincili. 4 KB ile en yüksek fayda/bağlam oranı; 'alt-agent başarılı dedi → bağımsız doğrula' maddesi orkestratör için kritik. verify-changes yürütme yöntemini, bu skill iddia disiplinini veriyor.
-
-### verification-before-completion@openai  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
-
-- **Ne yapar:** Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always
-- **Teknoloji:** - _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** alternatif
-- **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
-- **İnceleme:** otomatik
 
 ### verify-changes  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 

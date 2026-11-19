@@ -278,15 +278,7 @@
       "kismen",
       "Google hesabı; NotebookLM kullanım kotaları/planları"
     ],
-    "langsmith-fetch": [
-      "kismen",
-      "LangSmith hesabı (ücretsiz katman var)"
-    ],
     "connect": [
-      "kismen",
-      "Composio hesabı (ücretsiz katman var)"
-    ],
-    "connect-apps": [
       "kismen",
       "Composio hesabı (ücretsiz katman var)"
     ],
@@ -978,14 +970,6 @@
       "ucretsiz",
       "Açıkça API anahtarı gerektirmez"
     ],
-    "acp-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz), ACP/Stripe (işlem başı)"
-    ],
-    "ap2-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Google API (ücretsiz kota)"
-    ],
     "b2b-commerce": [
       "kismen",
       "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
@@ -1018,29 +1002,9 @@
       "kismen",
       "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
     ],
-    "mpp-service-discovery": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
-    ],
-    "mpp-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: ücretli plan/servis seçeneği (ücretsiz plan ya da alternatif var)"
-    ],
     "multi-currency": [
       "kismen",
       "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Open Exchange Rates (ücretsiz kota)"
-    ],
-    "nlweb-llm-providers": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: LLM API'leri (ücretli; yerel model seçeneği)"
-    ],
-    "nlweb-setup": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Qdrant (yerel ücretsiz / bulut ücretli), LLM API'leri (ücretli; yerel model seçeneği)"
-    ],
-    "node-backend@orcaqubits-3": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
     ],
     "order-fulfillment-workflow": [
       "kismen",
@@ -1071,30 +1035,6 @@
       "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
     ],
     "shopify-app-development": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "shopify-setup": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-api-v3": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-deployment": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-payments": [
-      "kismen",
-      "Entegrasyon kodu ücretsiz yazılır; bağlanan servis: Stripe (işlem başı ücret, test modu ücretsiz)"
-    ],
-    "spree-setup": [
-      "ucretsiz",
-      "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
-    ],
-    "spree-testing": [
       "ucretsiz",
       "Kendi mağazanın/platformun anahtarı (Shopify geliştirme mağazası, Spree, Meilisearch yerel) ücretsiz"
     ],
@@ -1193,182 +1133,6 @@
     "caveman-setup": [
       "kismen",
       "Caveman Cloud gateway'e bağlar (CAVE_API_KEY); BYOK ile mevcut LLM anahtarı kullanılır, gateway'in ücretsiz katmanı var; diğer caveman skilleri anahtarsız"
-    ],
-    "arize-ai-provider-integration": [
-      "kismen",
-      "Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli"
-    ],
-    "arize-annotation": [
-      "kismen",
-      "Arize/Phoenix: Phoenix açık kaynak ve yerel çalışır; Arize AX bulutu ücretsiz katman + ücretli"
-    ],
-    "arize-evaluator": [
-      "kismen",
-      "Değerlendirme için LLM API anahtarı (OpenAI/Anthropic) gerekir; Phoenix kendisi ücretsiz"
-    ],
-    "arize-experiment": [
-      "kismen",
-      "Deney için LLM API anahtarı gerekir; Phoenix kendisi ücretsiz"
-    ],
-    "arize-instrumentation": [
-      "kismen",
-      "Phoenix yerel (ücretsiz) ya da Arize AX (ücretsiz katman)"
-    ],
-    "arize-prompt-optimization": [
-      "kismen",
-      "LLM API anahtarı gerekir; Phoenix kendisi ücretsiz"
-    ],
-    "phoenix-cli": [
-      "ucretsiz",
-      "Phoenix açık kaynak, yerelde çalışır; API anahtarı sadece kimlik doğrulama açıksa"
-    ],
-    "gtm-product-led-growth": [
-      "ucretsiz",
-      "'paid tier' pazarlama kavramı; skill'in kendisi hiçbir servis istemez"
-    ],
-    "latchshot-page-capture": [
-      "kismen",
-      "Latchshot üçüncü taraf servisi; anahtarsız JPEG demo yolu var, tam kullanım API anahtarı/kota ister"
-    ],
-    "make-blog-post": [
-      "ucretsiz",
-      "'API key' sadece 'sır yazma' kuralında geçiyor; servis gerekmez"
-    ],
-    "mcp-security-audit": [
-      "ucretsiz",
-      "'MY_API_KEY' örnek yer tutucu; servis gerekmez"
-    ],
-    "namecheap": [
-      "kismen",
-      "Namecheap hesabı ve API erişimi gerekir (hesap ücretsiz, API için bakiye/alan adı şartı); alan adları ücretli"
-    ],
-    "nano-banana-pro-openrouter": [
-      "ucretli",
-      "Tek işi OpenRouter üzerinden Gemini 3 Pro Image çağırmak; model ücretli, kredisiz anahtar çalışmaz"
-    ],
-    "pinecone-rag": [
-      "kismen",
-      "Pinecone ücretsiz (starter) katmanı var"
-    ],
-    "resemble-detect": [
-      "kismen",
-      "Resemble AI API anahtarı gerekir; ücretsiz plan sınırlı kota ile var"
-    ],
-    "agents-sdk@openai": [
-      "kismen",
-      "OpenAI Agents SDK rehberi; çalıştırmak için OpenAI API kredisi gerekir, bilgi/kod üretimi ücretsiz"
-    ],
-    "ai-gateway": [
-      "kismen",
-      "Vercel AI Gateway rehberi; sağlayıcı anahtarı/kredisi gerekir, ücretsiz katman var"
-    ],
-    "aiq-deploy": [
-      "kismen",
-      "NVIDIA AIQ dağıtımı; arama sağlayıcıları (Exa/Serper/Tavily) ücretsiz katman + ücretli"
-    ],
-    "boltz-cli-setup": [
-      "kismen",
-      "Boltz CLI kurulum rehberi; API anahtarı isteğe bağlı bulut yolu için"
-    ],
-    "email": [
-      "kismen",
-      "Resend: aylık ücretsiz kota, fazlası ücretli"
-    ],
-    "expo-api-routes": [
-      "kismen",
-      "Örneklerde OpenAI/Weather API anahtarı; Expo API route rehberi anahtarsız kullanılır"
-    ],
-    "nemoclaw-user-get-started": [
-      "kismen",
-      "NVIDIA NemoClaw; NGC kaydı ücretsiz, bulut kullanımı ücretli olabilir"
-    ],
-    "omniverse-cad-to-simready": [
-      "kismen",
-      "NVIDIA NGC/NVCF anahtarı: kayıt ücretsiz, bulut işlevleri kotalı"
-    ],
-    "openai-api-troubleshooting": [
-      "kismen",
-      "OpenAI API hata ayıklama rehberi; API kullanımı ücretli ama rehber bilgi skill'i"
-    ],
-    "openai-platform-api-key": [
-      "kismen",
-      "OpenAI API anahtarı yönetimi rehberi; API kullanımı ücretli"
-    ],
-    "physical-ai-neural-reconstruction": [
-      "kismen",
-      "NVIDIA NGC anahtarı: kayıt ücretsiz"
-    ],
-    "subtitles": [
-      "kismen",
-      "OpenAI Whisper API ile altyazı; API ücretli, ücretsiz yol: yerel whisper (kütüphanede media-use)"
-    ],
-    "temporal-cloud-setup": [
-      "kismen",
-      "Temporal Cloud ücretli (deneme kredisi); Temporal kendi sunucunda ücretsiz"
-    ],
-    "temporal-ops": [
-      "kismen",
-      "Temporal Cloud ücretli; açık kaynak Temporal ücretsiz"
-    ],
-    "twilio-agent-connect": [
-      "kismen",
-      "Twilio hesabı: deneme kredisi, sonrası kullanım başı ücret"
-    ],
-    "twilio-ai-agent-architect": [
-      "kismen",
-      "Twilio + isteğe bağlı ElevenLabs; deneme kredisi/ücretsiz katman"
-    ],
-    "twilio-cli-reference": [
-      "kismen",
-      "Twilio/SendGrid hesabı; ücretsiz katman/deneme"
-    ],
-    "twilio-conversation-orchestrator": [
-      "kismen",
-      "Twilio + isteğe bağlı ElevenLabs"
-    ],
-    "twilio-iam-auth-setup": [
-      "kismen",
-      "Twilio hesabı (deneme kredisi)"
-    ],
-    "twilio-security-api-auth": [
-      "kismen",
-      "Twilio hesabı (deneme kredisi)"
-    ],
-    "twilio-sendgrid-account-setup": [
-      "kismen",
-      "SendGrid ücretsiz katman (günlük sınırlı e-posta)"
-    ],
-    "twilio-sendgrid-email-send": [
-      "kismen",
-      "SendGrid ücretsiz katman"
-    ],
-    "twilio-sendgrid-engagement-quality": [
-      "kismen",
-      "SendGrid ücretsiz katman"
-    ],
-    "twilio-sendgrid-inbound-parse": [
-      "kismen",
-      "SendGrid ücretsiz katman"
-    ],
-    "twilio-sendgrid-suppressions": [
-      "kismen",
-      "SendGrid ücretsiz katman"
-    ],
-    "twilio-voice-conversation-relay": [
-      "kismen",
-      "Twilio + isteğe bağlı ElevenLabs"
-    ],
-    "v0-dev": [
-      "kismen",
-      "v0 ücretsiz katman; API/SDK için kredi gerekir"
-    ],
-    "vercel-connect": [
-      "kismen",
-      "Vercel + Linear entegrasyonu; her ikisinin ücretsiz katmanı var"
-    ],
-    "hyperframes-registry@openai": [
-      "kismen",
-      "HeyGen anılıyor; HyperFrames kendisi açık kaynak (kütüphanede heygen-com/hyperframes ile aynı sınıf)"
     ],
     "krillinai-cli": [
       "kismen",

@@ -2,18 +2,7 @@
 
 _Yazı, iletişim, pazarlama/içerik, kariyer_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **17/55**
-
-### competitive-ads-extractor  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** Rakiplerin Facebook Ad Library, LinkedIn gibi reklam kütüphanelerindeki reklamlarını toplayıp mesaj, vurgulanan problem, hedef kitle ve kreatif kalıplarını analiz etmeyi tarif eder. Betik yok; tarayıcı/kazıma yeteneği agent'ın kendi araçlarına bırakılmış.
-- **Ne zaman:** Reklam kampanyası öncesi rakip mesajlarını ve kreatif kalıplarını çıkarmak. · **Ne zaman değil:** Tarayıcı otomasyonu ya da web kazıma aracı yoksa (skill kendi aracını getirmiyor); platform kullanım şartlarının kazımaya izin vermediği durumlarda.
-- **Teknoloji:** web-arama, tarayici-otomasyonu · **Paketler:** tarayıcı aracı (playwright/MCP)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → alternatif
-- **Boyut:** 8 KB (SKILL.md 7.7 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Sadece istem şablonu; örnek çıktı uydurma ilerleme çubukları içeriyor, kazıma yöntemi tanımsız. Lisans belirtilmemiş.
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **9/47**
 
 ### content-research-writer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 
@@ -36,28 +25,6 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Durum:** tercih · **Örtüşme:** icerik-yazimi → tamamlayıcı · **Roller:** icerik-pazarlama, dokuman-yazari
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Çok küçük (2 KB), net kalıp listesi ve somut önce/sonra örneği; MIT. Her yazı skilline tamamlayıcı son rötuş.
-
-### developer-growth-analysis  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
-
-- **Ne yapar:** Son 24-48 saatlik Claude Code sohbet geçmişini (~/.claude/history.jsonl) okuyup kodlama kalıplarını, eksik alanları ve gelişim önerilerini çıkarır; HackerNews'ten ilgili kaynak toplar ve raporu Rube MCP üzerinden kullanıcının Slack DM'ine gönderir.
-- **Ne zaman:** Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi. · **Ne zaman değil:** Codex'te doğrudan çalışmaz: geçmiş ~/.codex/sessions altında farklı biçimde tutulur; Codex'te kullanılacaksa okunacak dosya yolu ve JSONL alanları elle uyarlanmalı. Rube/Composio Slack bağlantısı yoksa son adımı atla, raporu dosyaya yaz. Gizli veri içeren geçmişi dışarı göndermek istenmiyorsa kullanma.
-- **Teknoloji:** claude-code, mcp, slack · **Paketler:** Rube MCP (Composio) — Slack gönderimi için
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Claude Code geçmiş dosyasına ve Composio Rube MCP'ye sıkı bağlı; sohbet geçmişini dış servise gönderiyor. Kategorisi de içerikten çok kişisel geliştirici analizi.
-
-### domain-name-brainstormer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** Proje için yaratıcı alan adı fikirleri üretir ve .com/.io/.dev/.ai gibi uzantılarda müsaitlik kontrolü yapılmasını tarif eder; marka açısından neden iyi olduklarını açıklar ve TLD rehberi verir.
-- **Ne zaman:** Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası. · **Ne zaman değil:** Müsaitlik kontrolü için gerçek whois/DNS aracı yoksa sonuçlar tahmin olur — kayıt kararını buna dayandırma.
-- **Teknoloji:** web-arama · **Paketler:** whois/DNS sorgu aracı (önerilir)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 6 KB (SKILL.md 5.6 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İsim önerisi kısmı makul ama müsaitlik kontrolünün nasıl yapılacağı tanımsız; örnek çıktı uydurma 'available' işaretleri içeriyor.
 
 ### geo-fundamentals  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -233,28 +200,6 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Anthropic resmi; küçük SKILL.md, türe göre ayrı örnek dosyalar. ComposioHQ kopyası birebir aynı içerik; birincil resmi kaynak.
 
-### internal-comms@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 71 (B)
-
-- **Ne yapar:** Anthropic internal-comms skill'inin ComposioHQ'daki birebir kopyası: 3P güncellemesi, bülten, SSS ve genel iç iletişim yönergeleri.
-- **Ne zaman:** Resmi sürüm kullanılamıyorsa yedek. · **Ne zaman değil:** Varsayılan olarak kullanma; anthropics/internal-comms ile aynı içerik.
-- **Teknoloji:** markdown
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** ic-iletisim → alternatif
-- **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Dosyalar resmi sürümle aynı; ek değer yok.
-
-### lead-research-assistant  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** Ürünü/kod tabanını analiz edip ideal müşteri profiline uyan şirketleri bulmayı, uygunluk puanıyla sıralamayı ve kişiselleştirilmiş iletişim stratejisi önermeyi tarif eder.
-- **Ne zaman:** B2B satış/iş geliştirme için potansiyel müşteri listesi ve yaklaşım önerisi. · **Ne zaman değil:** Web araması yoksa (şirket listesi uydurulabilir); kişisel veri toplama/zenginleştirme hukuki açıdan sorunluysa.
-- **Teknoloji:** web-arama
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** pazarlama-arastirma → birincil
-- **Boyut:** 6 KB (SKILL.md 6.4 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. İstem şablonu düzeyinde; doğrulama ve veri kaynağı tanımı yok. Lisans belirtilmemiş.
-
 ### li-audit  ·  Jakeschincariol/linkedin-agent-skill @ add2c23  ·  puan 77 (B)
 
 - **Ne yapar:** Post-mortem on what the user has already published - which posts actually worked, why, and what to stop doing. Use when the user pastes their LinkedIn analytics or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know what to double down on.
@@ -365,28 +310,6 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### meeting-insights-analyzer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
-
-- **Ne yapar:** Toplantı transkriptlerinden iletişim kalıplarını çıkarır: çatışmadan kaçınma, konuşma oranı, dolgu kelimeler, dinleme ve kolaylaştırma; zaman damgalı örneklerle eyleme dönük geri bildirim ve zaman içinde trend karşılaştırması verir.
-- **Ne zaman:** Liderlik/iletişim koçluğu, performans değerlendirmesine hazırlık, ekip toplantı analizi (transkript mevcutsa). · **Ne zaman değil:** Ses kaydı tek başına varsa önce STT gerekir (speech-to-text); toplantı özeti/aksiyon listesi çıkarmak tek amaçsa gereğinden ağır.
-- **Teknoloji:** markdown
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Analiz boyutları ve geri bildirim formatı iyi tanımlı; dar kullanım alanı.
-
-### raffle-winner-picker  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** Liste, CSV/Excel ya da Google Sheets'ten çekiliş/yarışma kazananını rastgele seçer; çoklu kazanan, tekrar engelleme, ağırlıklı seçim ve yedek kazanan seçeneklerini tarif eder.
-- **Ne zaman:** Sosyal medya çekilişi, etkinlik çekilişi, rastgele katılımcı seçimi. · **Ne zaman değil:** Yasal denetim gerektiren çekilişlerde (noter vb.) tek kanıt olarak; Google Sheets erişimi yoksa.
-- **Teknoloji:** python · **Paketler:** python secrets modülü (önerilir)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Betik yok; 'kriptografik rastgele' iddiası agent'ın yazacağı koda bağlı. Kategoriye de tam uymuyor (araç).
-
 ### research-decision-room  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Turn messy user research notes, interviews, support tickets, surveys, and product context into an evidence-backed decision room: a single HTML artifact with an evidence ledger, theme map, confidence heatmap, opportunity matrix, decision memo, and experiment queue. Use when teams need to move from qualitative signals to product or design decisions without fabricating certainty.
@@ -418,17 +341,6 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Durum:** tercih · **Örtüşme:** ai-yazi-temizleme → alternatif
 - **Boyut:** 16 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF (humanizer'a). MIT, 18,5k★, son güncelleme 2026-03. Ağ/dış yazma yok. Kuralları humanizer'dan daha mutlak.
-
-### tailored-resume-generator  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
-
-- **Ne yapar:** İş ilanını analiz edip anahtar gereksinimleri çıkarır ve adayın deneyimini buna göre yeniden düzenleyen, ATS uyumlu, ilana özel özgeçmiş üretir; kariyer geçişi senaryosu ve eksik/iyileştirme önerileri içerir.
-- **Ne zaman:** Belirli bir iş başvurusu için CV uyarlama. · **Ne zaman değil:** Özgeçmişte olmayan deneyimi uydurmak için asla; tasarımlı PDF/Word çıktısı gerekiyorsa docx/pdf ile birlikte kullan.
-- **Teknoloji:** markdown
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 12 KB (SKILL.md 12.1 KB, yük orta)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Adımlar ve örnek çıktı makul; kişisel kullanım için uygun, proje rollerine eklenmez.
 
 ### twitter-algorithm-optimizer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
 

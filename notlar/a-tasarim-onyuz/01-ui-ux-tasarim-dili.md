@@ -2,7 +2,7 @@
 
 _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/39**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/38**
 
 ### accessibility-review  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
 
@@ -12,16 +12,6 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk) · **Kırık bağlantı:** 1
-- **İnceleme:** otomatik
-
-### audit  ·  openai/plugins @ b767f8f  ·  puan 70 (B)
-
-- **Ne yapar:** Audit or critique a product flow, journey, workflow, funnel, onboarding path, checkout path, settings path, screen, or multi-step product experience by capturing screenshots first, then reporting UX, design, and accessibility findings inline from that evidence. Use Figma only when the user explicitly asks for a board. Use when the user asks to audit, review, critique, inspect, assess, analyze, eva
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 11 KB (SKILL.md 8.3 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
 ### design-brief  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)

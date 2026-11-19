@@ -2,7 +2,7 @@
 
 _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **7/12**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/10**
 
 ### agent-browser  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
@@ -99,27 +99,6 @@ _Tarayıcı testi, görsel QA, erişilebilirlik, React kod sağlığı_
 - **Durum:** tercih · **Örtüşme:** tarayici-otomasyon-testi → birincil · **Roller:** qa-erisilebilirlik
 - **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Küçük (3.8 KB), net karar ağacı; betikleri 'kara kutu' kullandırarak bağlamı koruyor. Dikkat: python `playwright` paketi ve tarayıcıların (`pip install playwright && playwright install chromium`) kurulu olduğunu varsayıyor ama bunu belirtmiyor. `with_server.py` verilen komutları `shell=True` ile çalıştırıyor (cd/&& desteği için; komutu kullanıcı/ajan verir, dış girdi değil). Registry 'lisans yok' diyor ama LICENSE.txt (Apache-2.0) mevcut.
-
-### webapp-testing@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 79 (B)
-
-- **Ne yapar:** anthropics/skills webapp-testing'in kopyası: Python Playwright ile yerel web uygulaması testi, with_server.py ve örnek betikler.
-- **Ne zaman:** Yalnızca resmî kopya alınamazsa. · **Ne zaman değil:** Resmî kopya varken kullanma.
-- **Teknoloji:** playwright, python · **Paketler:** playwright (pip)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** tarayici-otomasyon-testi → alternatif
-- **Boyut:** 22 KB (SKILL.md 3.8 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. SKILL.md, scripts/ ve examples/ resmî kopyayla aynı (diff: yalnız KAYNAK.md ve LICENSE.txt). Dikkat: LICENSE.txt'te doldurulmamış şablon telif satırı.
-
-### webapp-testing@github  ·  github/awesome-copilot @ 7e40881  ·  puan 99 (A)
-
-- **Ne yapar:** Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.
-- **Teknoloji:** css, node, playwright, react _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** github (kurum, ★40799, son güncelleme 2026-11-04, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 5 KB (SKILL.md 3.7 KB, yük kucuk)
-- **İnceleme:** otomatik
 
 ### webapp-testing@vudovn  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 

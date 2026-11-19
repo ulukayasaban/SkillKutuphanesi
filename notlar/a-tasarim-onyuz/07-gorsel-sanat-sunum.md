@@ -2,7 +2,7 @@
 
 _Poster/canvas tasarımı, generative art, slayt, GIF_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/27**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **8/23**
 
 ### algorithmic-art  ·  anthropics/skills @ ca45fc4  ·  puan 81 (A)
 
@@ -15,17 +15,6 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 58 KB (SKILL.md 19.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Niş ama iyi kurgulanmış; felsefe -> kod iki adımı ve seed'li parametre paneli tutarlı çıktı verir. Dikkat: viewer.html p5.js (cdnjs) ve Google Fonts'u CDN'den çeker, çevrimdışı çalışmaz; lisans alanı 'LICENSE.txt' (Anthropic) ve açık kaynak değil; sanat odaklı olduğundan çoğu ürün projesinde gerekmez.
 
-### artifacts-builder  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** React 18 + TypeScript + Vite + Tailwind + shadcn/ui ile karmaşık claude.ai HTML artifact'ı kurar (init-artifact.sh) ve Parcel + html-inline ile tek bir bundle.html'e paketler. web-artifacts-builder'ın eski adıyla yayımlanmış kopyasıdır; SKILL.md yalnızca ad/başlık satırlarında farklıdır.
-- **Ne zaman:** Durum yönetimi, yönlendirme veya shadcn bileşeni gerektiren tek dosyalık paylaşılabilir HTML çıktısı. · **Ne zaman değil:** web-artifacts-builder ile birebir aynı içerik; ikisini birden kurmayın. Basit tek dosya HTML/JSX için gereksiz ağır.
-- **Teknoloji:** react, typescript, vite, tailwind, shadcn-ui, parcel · **Paketler:** node>=18, pnpm, parcel, html-inline
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** artifact-uygulama-paketleme → alternatif
-- **Boyut:** 45 KB (SKILL.md 3.0 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. web-artifacts-builder (Anthropic) ile aynı betikler ve metin, yalnızca ad farkı var; yinelenen kopya. Dikkat: init-artifact.sh 'npm install -g pnpm' ile global kurulum yapar ve ~40 Radix/shadcn paketi indirir; bundle betiği paket kurar.
-
 ### canvas-design  ·  anthropics/skills @ ca45fc4  ·  puan 89 (A)
 
 - **Ne yapar:** Bir 'tasarım felsefesi' (hareket adı + 4-6 paragraf manifesto) yazdırıp ardından bunu %90 görsel / %10 metin olan özgün PNG veya PDF posterine, sanat parçasına dönüştürür. Yaklaşık 5 MB'lık OFL lisanslı font klasörü (canvas-fonts) ile gelir ve iki geçişli iyileştirme ister.
@@ -36,17 +25,6 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Durum:** tercih · **Örtüşme:** statik-gorsel-poster → birincil · **Roller:** ui-tasarimci
 - **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Marka-sunum profilinin ek skilli; özgünlük ve 'zanaat' vurgusu ile şablon görünümünü engeller, fontlar yerel ve OFL. Dikkat: skill klasörü ~5,4 MB (ağırlıkla ttf); SKILL.md 11,7 KB. Yalnızca SKILL.md bağlama girer. Betik yok, ağ/anahtar yok. LICENSE.txt Anthropic'e ait, repo lisans alanı boş.
-
-### canvas-design@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 62 (C)
-
-- **Ne yapar:** Anthropic canvas-design'ın ComposioHQ kopyası; SKILL.md ve font klasörü birebir aynıdır, yalnızca LICENSE.txt farklı (şablon Apache metni, telif sahibi boş).
-- **Ne zaman:** Yalnızca upstream sürümü erişilemezse; aynı işi yapar. · **Ne zaman değil:** Anthropic sürümü varken kurmayın (yinelenen, lisans metni eksik).
-- **Teknoloji:** canvas, png, pdf
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** statik-gorsel-poster → alternatif
-- **Boyut:** 5424 KB (SKILL.md 11.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. diff -rq: tek fark LICENSE.txt ve KAYNAK.md; içerik birebir upstream ile aynı. Dikkat: ~5,4 MB font tekrar eder; lisans başlığı '[yyyy] [name of copyright owner]' doldurulmamış.
 
 ### card-twitter  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -160,17 +138,6 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Boyut:** 29 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### image-enhancer  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 63 (C)
-
-- **Ne yapar:** Ekran görüntüsü ve görsellerin çözünürlüğünü, keskinliğini ve sıkıştırma artefaktlarını iyileştirmeyi anlatan, betiği olmayan yalnızca yönerge niteliğinde kısa bir skill. Örnek çıktı biçimi verir ama gerçek bir araç/kütüphane belirtmez.
-- **Ne zaman:** Dokümantasyon veya sunum öncesi ekran görüntüsü iyileştirme isteğinde başvuru metni olarak. · **Ne zaman değil:** Gerçek yapay zekâ upscale için: ai-medya-uretici akışındaki upscale araçları, ffmpeg veya ImageMagick doğrudan kullanılmalı.
-- **Teknoloji:** imagemagick
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** tercih · **Örtüşme:** gorsel-iyilestirme → birincil
-- **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk)
-- **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Hangi aracı çalıştıracağını söylemiyor; örnek çıktı uydurma gibi ("Enhancements applied") ve agent'ı yanlış beklentiye sokabilir. Dikkat: 2,5 KB, ek dosya yok, kurulum yok; değer katmıyor. Gerçek işi görsel upscale/arka plan araçları yapar.
-
 ### mockup-device-3d  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
 - **Ne yapar:** Static iPhone and MacBook 3D-style showcase with real HTML embedded on screens, glass-lens refraction, and 360-degree turntable composition.
@@ -231,17 +198,6 @@ _Poster/canvas tasarımı, generative art, slayt, GIF_
 - **Durum:** tercih · **Örtüşme:** slack-gif → birincil
 - **Boyut:** 43 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Küçük, bağımsız, Python modülleri düzenli; Slack sınırlarını doğrulaması işe yarar. Dikkat: 'pip install pillow imageio numpy' ister (--break-system-packages yok; venv önerilir). Composio sürümü eski ve farklı bir kod tabanı (ayrı alternatif).
-
-### slack-gif-creator@composiohq  ·  ComposioHQ/awesome-claude-skills @ be2a406  ·  puan 70 (B)
-
-- **Ne yapar:** Aynı skill'in ComposioHQ'daki daha eski/geniş sürümü: SKILL.md 16,7 KB, ek color_palettes.py, typography.py, visual_effects.py ve templates/ klasörü içerir; Slack sınırları (emoji 64 KB, mesaj ~2 MB) ayrıntılıdır.
-- **Ne zaman:** Anthropic sürümündeki yardımcılar yetmezse; hazır şablon, tipografi ve görsel efekt modülleri gerektiğinde. · **Ne zaman değil:** Varsayılan olarak Anthropic sürümünü kullanın; ikisini birden kurmayın (aynı ad/iş).
-- **Teknoloji:** python, pillow, imageio, numpy, gif · **Paketler:** pillow, imageio, numpy
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★78745, son güncelleme 2026-09-18, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** slack-gif → alternatif
-- **Boyut:** 208 KB (SKILL.md 16.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Daha zengin ama ağır (16,7 KB SKILL.md, 208 KB) ve güncel upstream ile ayrışmış; core/*.py dosyaları farklı. Dikkat: pip install pillow imageio numpy; aynı ad nedeniyle iki sürüm birlikte kurulursa çakışır.
 
 ### slides  ·  nextlevelbuilder/ui-ux-pro-max-skill @ 3a13158  ·  puan 82 (A)
 

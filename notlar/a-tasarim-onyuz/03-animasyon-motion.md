@@ -2,7 +2,7 @@
 
 _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **18/34**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **18/32**
 
 ### animate  ·  nexu-io/open-design @ 987b247  ·  puan 95 (A)
 
@@ -89,16 +89,6 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Boyut:** 9 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### gsap  ·  openai/plugins @ b767f8f  ·  puan 74 (B)
-
-- **Ne yapar:** GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions.
-- **Teknoloji:** css, gsap _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** openai (kurum, resmî, ★7752, son güncelleme 2026-11-03, lisans yok)
-- **Durum:** tercih
-- **Boyut:** 21 KB (SKILL.md 6.2 KB, yük kucuk)
-- **İnceleme:** otomatik
-
 ### gsap-core  ·  greensock/gsap-skills @ aed9cfd  ·  puan 86 (A)
 
 - **Ne yapar:** GSAP çekirdek API'si: gsap.to/from/fromTo, ease, stagger, varsayılanlar ve gsap.matchMedia() ile responsive / prefers-reduced-motion animasyonu. GSAP'ın resmî ekibi yazmıştır; ne zaman GSAP seçileceğini ve CSS animasyonuna göre farkını da anlatır.
@@ -118,16 +108,6 @@ _GSAP, Motion/Framer, anime.js, Lottie, Rive, mikro-etkileşim_
 - **Geliştirici:** nexu-io (kurum, ★105947, son güncelleme 2026-11-04, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 17 KB (SKILL.md 15.0 KB, yük orta)
-- **İnceleme:** otomatik
-
-### gsap-framer-scroll-animation  ·  github/awesome-copilot @ 7e40881  ·  puan 99 (A)
-
-- **Ne yapar:** Use this skill whenever the user wants to build scroll animations, scroll effects, parallax, scroll-triggered reveals, pinned sections, horizontal scroll, text animations, or any motion tied to scroll position — in vanilla JS, React, or Next.js. Covers GSAP ScrollTrigger (pinning, scrubbing, snapping, timelines, horizontal scroll, ScrollSmoother, matchMedia) and Framer Motion / Motion v12 (useScro
-- **Teknoloji:** gsap, lenis, motion, next.js, node, react, vue _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** github (kurum, ★40799, son güncelleme 2026-11-04, lisans MIT)
-- **Durum:** tercih
-- **Boyut:** 42 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### gsap-frameworks  ·  greensock/gsap-skills @ aed9cfd  ·  puan 78 (B)
