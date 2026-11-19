@@ -50,3 +50,19 @@ Bu projede danışman kullanılmaz (K-62, token tasarrufu). `.claude/settings.lo
 3. `python3 araclar/ajan-uret.py`, sonra `python3 araclar/ajan-uret.py --kontrol`, `python3 araclar/dogrula.py` ve `python3 araclar/test.py` (`araclar/testler/test_p12-ajanlar.py` her ajanın bu rehberde ve `CLAUDE.md` tablosunda anıldığını denetler).
 4. Bu dosyadaki tabloyu ve `CLAUDE.md` "Ajanlar" tablosunu güncelle (`cp CLAUDE.md AGENTS.md`).
 5. Bir ajanı kaldırmak: kaynak dosyasını sil, `python3 araclar/ajan-uret.py` üretilmiş dosyalarını da siler.
+
+## 8. Neon (Antigravity) ile çalışma düzeni ve kota
+Kütüphane geliştirme ve bakım görevleri Gemini 4 Neon / Argon (Antigravity CLI `agy`) ile yalnız **Medium** eforda yürütülür (K-65):
+
+- **Worktree ve görev dosyası:** Dosya değiştiren her iş ayrı bir git worktree'de açılır (`git worktree add ../SK-neon-<iş> -b neon/<iş>`). Görev talimatı (`NEON-GOREV.md` vb.) worktree klasörünün içine yazılır (sandbox klasör dışını okuyamaz) ve commit'e dahil edilmez.
+- **Sandbox ve komut kalıbı:** Sandbox yalnız saf rapor işlerinde kullanılır; komut çalıştırması gereken işler sandbox'sız ama yalnız kendi worktree'si içinde çalışır. Canlı izleme kalıbı:
+  ```bash
+  agy ... --output-format stream-json | python3 araclar/neon-izle.py --sonuc <dosya>
+  ```
+- **Doğrulama ve inceleme:** Çıktıdaki `"SUCCESS"` ifadesi tek başına kanıt sayılmaz; iş bitince `git diff --stat`, test/doğrulama çıktısı ve genel skill klasörlerinin (`~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`) değişmediği kontrol edilir. Silme veya yazma yapan her kod bağımsız ikinci bir Neon incelemesinden geçmeden kullanılmaz; ağ gerektiren yollar birleştirmeden önce gerçek ağla uçtan uca denenir.
+- **Kota ve devir:** Kota verisi `~/.cache/kotalar/usage.json` dosyasından okunur. Havuzlar: **Gemini** (Neon / Hydrogen / Flash), **Argon** ve **Claude / GPT**. Bir modelin kalan kotası, 5 saatlik ve haftalık pencerenin küçük olanıdır:
+  - **≥ %30:** Normal çalışma.
+  - **%15 – %30:** Yeni büyük adım başlatılmaz.
+  - **< %15:** Mevcut adım güvenle bitirilir ve durulur.
+  - **< %5:** Hemen durulur.
+  Başka havuzda kota bolsa o havuza geçilir; oturum devir notu depo dışında `~/Documents/Claude/SkillKutuphanesi-DEVAM.md` dosyasında tutulur.
