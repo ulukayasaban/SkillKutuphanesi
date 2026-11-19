@@ -334,11 +334,6 @@
     "ne_zaman": "Remotion expert sayfasına yeni bir kişi veya uzman kaydı eklenmek istendiğinde.",
     "kaynak": "1bf1cdd7ee24"
   },
-  "add-model-descriptions": {
-    "ne": "HuggingFace router'daki yeni modeller için chat-ui yapılandırmasına (prod.yaml ve dev.yaml) açıklama ekler.",
-    "ne_zaman": "Router'da yeni modeller çıktığında ve açıklamalarının eklenmesi gerektiğinde; 'sync models' gibi isteklerde ya da /add-model-descriptions çağrıldığında.",
-    "kaynak": "2b3a73fcf77e"
-  },
   "add-new-package": {
     "ne": "Remotion monorepo'suna yeni paket ekler: iskelet, monorepo kaydı, dokümantasyon, build scriptleri ve release checklist güncellemelerini yapar.",
     "ne_zaman": "Yeni bir @remotion paketi oluşturulacağında.",
@@ -398,31 +393,6 @@
     "ne": "Mevcut proje artefaktlarının gerçekten çalışıp çalışmadığını denetler ve numaralı bir geçiş planı üretir; varlığa değil uyumluluğa bakar.",
     "ne_zaman": "Mevcut (brownfield) bir projenin artefaktları denetlenip geçiş planı istendiğinde.",
     "kaynak": "05e7a19a7059"
-  },
-  "adr-create": {
-    "ne": "Sıralı numaralandırmayla yeni bir Architecture Decision Record (ADR) oluşturur ve AgentDB'ye kaydeder.",
-    "ne_zaman": "Önemli bir mimari karar alındığında ve bu kararın ADR olarak belgelenmesi istendiğinde.",
-    "kaynak": "d34cdf32f168"
-  },
-  "adr-index": {
-    "ne": "scripts/import.mjs ile ADR indeksini ve bağımlılık grafiğini oluşturur ya da yeniden kurar; v3 ve plugin ADR biçimlerini destekler.",
-    "ne_zaman": "ADR dosyaları eklendiğinde ya da değiştiğinde indeksin ve bağımlılık grafiğinin güncellenmesi gerektiğinde.",
-    "kaynak": "db2dcd27019e"
-  },
-  "adr-reindex": {
-    "ne": "Silinen bir ADR dosyası ya da ilişki satırı sonrası adr-patterns ve adr-edges tablolarını sıfırdan silip yeniden kurarak eski kayıtları temizler (scripts/reindex.mjs).",
-    "ne_zaman": "adr-index tek başına eski satırları bırakıyorsa.",
-    "kaynak": "f40a1ef5ec01"
-  },
-  "adr-review": {
-    "ne": "Kod değişikliklerini kabul edilmiş ADR'lere göre inceler ve uyumsuzlukları tespit eder.",
-    "ne_zaman": "Bir kod değişikliğinin mevcut mimari kararlara uygunluğunu kontrol etmek gerektiğinde.",
-    "kaynak": "cd92a9b16610"
-  },
-  "adr-verify": {
-    "ne": "adr-patterns ve adr-edges ad alanlarını okuyup kopuk referansları, supersede döngülerini ve bilinmeyen durumları raporlar; döngüde çıkış kodu 1 döner.",
-    "ne_zaman": "ADR kayıtlarında bağlantı bütünlüğünü ya da döngüsel supersede ilişkilerini doğrulamak gerektiğinde.",
-    "kaynak": "56c0325bfe9b"
   },
   "ads": {
     "ne": "Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat ve X'te denetim, strateji, bütçe, ölçüm, kreatif, raporlama ve onaylı değişiklikleri yönetir.",
@@ -639,360 +609,35 @@
     "ne_zaman": "Web sitesiyle etkileşim, web uygulaması testi, form doldurma veya dev sunucu çıktısını görsel doğrulama istendiğinde.",
     "kaynak": "349e7f637cfb"
   },
-  "agent-code-goal-planner": {
-    "ne": "Kod hedeflerini planlamak için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "990cd80dcacb"
-  },
-  "agent-coder": {
-    "ne": "Kod yazmak için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "30e41d6ca6f6"
-  },
-  "agent-collective-intelligence-coordinator": {
-    "ne": "Kolektif zeka koordinasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "0ec040201f1b"
-  },
-  "agent-consensus-coordinator": {
-    "ne": "Konsensüs koordinasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "e6c0598b709a"
-  },
-  "agent-coordination": {
-    "ne": "Agent oluşturma, yaşam döngüsü yönetimi ve koordinasyon desenleri; 60'tan fazla agent tipini özel yeteneklerle yönetir.",
-    "ne_zaman": "Agent başlatma, çok agentli görevleri koordine etme ya da agent havuzlarını yönetme gerektiğinde; tek agentli işlerde kullanma.",
-    "kaynak": "b52fc4e733a6"
-  },
-  "agent-coordinator-swarm-init": {
-    "ne": "Swarm başlatma ve koordinatör kurulumu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "6594ac00c1c4"
-  },
-  "agent-crdt-synchronizer": {
-    "ne": "CRDT tabanlı senkronizasyon için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "6be44d81c064"
-  },
-  "agent-data-ml-model": {
-    "ne": "Veri ve ML model işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "ac8113434cf9"
-  },
-  "agent-dev-backend-api": {
-    "ne": "Backend API geliştirme için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "b7ed3402090e"
-  },
   "agent-development": {
     "ne": "Claude Code plugin'leri için agent (subagent) yapısı, frontmatter, system prompt, tetikleme koşulları, araçlar ve renkleri hakkında geliştirme rehberi.",
     "ne_zaman": "Kullanıcı agent veya subagent oluşturmak, agent frontmatter'ı, description yazımını ya da autonomous agent yapısını sorduğunda.",
     "kaynak": "380e4fd9dd35"
-  },
-  "agent-docs-api-openapi": {
-    "ne": "OpenAPI tabanlı API dokümantasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "badf86441675"
-  },
-  "agent-goal-planner": {
-    "ne": "Hedef planlama için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "1278da9df33a"
-  },
-  "agent-gossip-coordinator": {
-    "ne": "Gossip koordinasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "5f180ac07505"
   },
   "agent-governance": {
     "ne": "AI agent sistemlerine yönetişim, güvenlik ve güven kontrolleri ekler: politika tabanlı erişim, niyet sınıflandırma, denetim izleri ve hız sınırları.",
     "ne_zaman": "Dış araçları (API, veritabanı, dosya sistemi) çağıran agent geliştirirken veya agent araç kullanımına kısıtlama koyarken.",
     "kaynak": "70f42ce31f8c"
   },
-  "agent-hierarchical-coordinator": {
-    "ne": "Hiyerarşik koordinasyon için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "211b1d73993c"
-  },
-  "agent-issue-tracker": {
-    "ne": "Issue takibi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "d28703c55029"
-  },
-  "agent-load-balancer": {
-    "ne": "Yük dengeleme için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "788caace3f92"
-  },
-  "agent-matrix-optimizer": {
-    "ne": "Matris optimizasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "84c2efd93005"
-  },
-  "agent-memory-coordinator": {
-    "ne": "Bellek koordinasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "930c3126e18c"
-  },
-  "agent-mesh-coordinator": {
-    "ne": "Mesh koordinasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "549efeaf7b81"
-  },
-  "agent-migration-plan": {
-    "ne": "Geçiş (migration) planı hazırlamak için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "7849da1f7c2b"
-  },
-  "agent-multi-repo-swarm": {
-    "ne": "Birden çok repo üzerinde swarm çalışması için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "0bfdf1945f21"
-  },
-  "agent-neural-network": {
-    "ne": "Sinir ağı işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "2214d1cba35b"
-  },
-  "agent-ops-cicd-github": {
-    "ne": "GitHub CI/CD işlemleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "2552d888af0e"
-  },
-  "agent-orchestrator-task": {
-    "ne": "Görev orkestrasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "5e61c5d48c20"
-  },
   "agent-owasp-compliance": {
     "ne": "AI agent kod tabanını OWASP Agentic Security Initiative (ASI) Top 10 risklerine göre denetler ve uyum raporu üretir.",
     "ne_zaman": "Agent üretime alınmadan önce güvenlik duruşu değerlendirilirken veya 'ASI uyumlu mu?' gibi bir denetim istendiğinde.",
     "kaynak": "2f68c970cb1e"
-  },
-  "agent-pagerank-analyzer": {
-    "ne": "PageRank analizi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "a3e780e2e66d"
-  },
-  "agent-payments": {
-    "ne": "Ödeme işlemleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "c2aebe730eff"
-  },
-  "agent-planner": {
-    "ne": "Planlama için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "b770d4c95994"
-  },
-  "agent-pr-manager": {
-    "ne": "Pull request yönetimi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "6d70a546760d"
-  },
-  "agent-production-validator": {
-    "ne": "Üretim ortamı doğrulaması için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "40e1d20dc285"
-  },
-  "agent-project-board-sync": {
-    "ne": "Proje panosu senkronizasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "aa98e1f22f59"
-  },
-  "agent-pseudocode": {
-    "ne": "Sözde kod yazmak için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "3f6339655f79"
-  },
-  "agent-queen-coordinator": {
-    "ne": "Queen koordinatörü için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "490e0e91427e"
-  },
-  "agent-quorum-manager": {
-    "ne": "Quorum yönetimi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "213dba61d2d1"
-  },
-  "agent-raft-manager": {
-    "ne": "Raft konsensüs yönetimi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "9ef0fa0d2ccb"
-  },
-  "agent-refinement": {
-    "ne": "İyileştirme (refinement) işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "0e33bdbb4e45"
-  },
-  "agent-repo-architect": {
-    "ne": "Repo mimarisi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "2d09842b915f"
-  },
-  "agent-researcher": {
-    "ne": "Araştırma işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "432483ae08a1"
-  },
-  "agent-resource-allocator": {
-    "ne": "Kaynak tahsisi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "bbbe290e4ff3"
-  },
-  "agent-safla-neural": {
-    "ne": "SAFLA sinir ağı işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "2e1d2f67c94e"
-  },
-  "agent-sandbox": {
-    "ne": "Sandbox ortamı için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "f295c39475f2"
-  },
-  "agent-scout-explorer": {
-    "ne": "Keşif (scout) işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "184118d92560"
   },
   "agent-skill-stack": {
     "ne": "Uçtan uca bir hedef için en küçük uyumlu AI Agent Skill setini bulur, değerlendirir ve birleştirir; yerel, kayıt ve GitHub kaynaklarını tarar.",
     "ne_zaman": "Çok adımlı bir iş akışı için skill seti gerektiğinde, kurulu skill'lerde çakışma kontrolü istendiğinde veya Skill Stack oluşturulurken.",
     "kaynak": "d8164071effe"
   },
-  "agent-sona-learning-optimizer": {
-    "ne": "SONA öğrenme optimizasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "6f3e91339bb4"
-  },
-  "agent-spec-mobile-react-native": {
-    "ne": "React Native mobil spesifikasyon işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "d105886304c3"
-  },
-  "agent-specification": {
-    "ne": "Spesifikasyon yazmak için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "a005c9160606"
-  },
   "agent-supply-chain": {
     "ne": "AI agent eklentileri ve araç paketleri için SHA-256 bütünlük manifestleri üretir, doğrular ve tedarik zinciri kökenini izler.",
     "ne_zaman": "Eklenti bütünlüğü doğrulanırken, manifest üretilirken, bağımlılık sabitleme denetlenirken veya eklenti imzalanırken.",
     "kaynak": "5ed56e940d3c"
   },
-  "agent-swarm": {
-    "ne": "Swarm çalışması için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "ed6d5644fb83"
-  },
-  "agent-swarm-issue": {
-    "ne": "Swarm tabanlı issue işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "9ca46ee42d65"
-  },
-  "agent-swarm-memory-manager": {
-    "ne": "Swarm bellek yönetimi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "13901e25e1e7"
-  },
-  "agent-swarm-pr": {
-    "ne": "Swarm tabanlı pull request işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "8a660e3f6711"
-  },
-  "agent-sync-coordinator": {
-    "ne": "Senkronizasyon koordinasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "ae14e73fd819"
-  },
-  "agent-teams-grok": {
-    "ne": "Grok Build üzerinde, host'tan bağımsız takım veri yolu (scripts/grok-team-bus.mjs) ile adlandırılmış Agent Teams çalıştırır.",
-    "ne_zaman": "Çok ajanlı boru hatlarını koordine ederken, architect→coder→tester→reviewer akışıyla özellik geliştirirken veya Claude SendMessage yerine geçirmek istediğinde.",
-    "kaynak": "3e20dd8c5b7c"
-  },
-  "agent-topology-optimizer": {
-    "ne": "Topoloji optimizasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "4e97f87376eb"
-  },
-  "agent-trading-predictor": {
-    "ne": "Trading tahmini için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "4f21914c96a8"
-  },
-  "agent-user-tools": {
-    "ne": "Kullanıcı araçları için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "6770dd333df0"
-  },
-  "agent-v3-integration-architect": {
-    "ne": "v3 entegrasyon mimarisi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "3137d26afa8e"
-  },
-  "agent-v3-memory-specialist": {
-    "ne": "v3 bellek yönetimi için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "4cb0e52c57d8"
-  },
-  "agent-v3-queen-coordinator": {
-    "ne": "v3 queen koordinatörü için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "fba2372180cf"
-  },
-  "agent-worker-specialist": {
-    "ne": "Worker uzmanlık işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "a13eb4cd7f79"
-  },
-  "agent-workflow": {
-    "ne": "İş akışı işleri için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "c3a41edee09b"
-  },
-  "agent-workflow-automation": {
-    "ne": "İş akışı otomasyonu için kullanılan agent skill'i.",
-    "ne_zaman": "",
-    "kaynak": "cc9c7ac0b592"
-  },
-  "agentdb-advanced": {
-    "ne": "AgentDB'nin QUIC senkronizasyonu, çoklu veritabanı yönetimi, özel mesafe metrikleri, hibrit arama ve dağıtık sistem entegrasyonunu kapsar.",
-    "ne_zaman": "Dağıtık yapay zekâ sistemleri, çok ajanlı koordinasyon veya gelişmiş vektör arama uygulamaları kurarken.",
-    "kaynak": "7d57091ac943"
-  },
-  "agentdb-learning": {
-    "ne": "AgentDB'nin 9 pekiştirmeli öğrenme algoritmasıyla (Decision Transformer, Q-Learning, SARSA, Actor-Critic vb.) öğrenen eklentiler oluşturur ve eğitir.",
-    "ne_zaman": "Deneyimle kendini geliştiren ajanlar kurarken, RL uygulamak veya ajan davranışını optimize ederken.",
-    "kaynak": "5334336e7c9b"
-  },
-  "agentdb-memory-patterns": {
-    "ne": "AgentDB ile yapay zekâ ajanları için kalıcı bellek desenleri uygular: oturum belleği, uzun süreli depolama, örüntü öğrenme ve bağlam yönetimi.",
-    "ne_zaman": "Durumlu ajanlar, sohbet sistemleri veya akıllı asistanlar geliştirirken.",
-    "kaynak": "357c47560d91"
-  },
-  "agentdb-optimization": {
-    "ne": "AgentDB performansını nicemleme (4-32x bellek azaltma), HNSW indeksleme (150x daha hızlı arama), önbellekleme ve toplu işlemlerle optimize eder.",
-    "ne_zaman": "Bellek kullanımını azaltmak, arama hızını artırmak veya milyonlarca vektöre ölçeklemek istediğinde.",
-    "kaynak": "224cef77d4f1"
-  },
-  "agentdb-query": {
-    "ne": "AgentDB'yi controller köprüsü üzerinden sorgular: semantik yönlendirme, hiyerarşik geri çağırma, nedensel graf, bağlam sentezi, pattern kaydetme ve arama.",
-    "ne_zaman": "",
-    "kaynak": "a1507cb9de75"
-  },
-  "agentdb-vector-search": {
-    "ne": "AgentDB ile anlamsal vektör araması uygular: belge getirme, benzerlik eşleştirme ve bağlam farkındalıklı sorgulama.",
-    "ne_zaman": "RAG sistemleri, anlamsal arama motorları veya akıllı bilgi tabanları kurarken.",
-    "kaynak": "6808eefb50cc"
-  },
   "agentic-eval": {
     "ne": "AI agent çıktılarını öz eleştiri, yansıtma döngüleri, rubrik ve LLM-as-judge ile değerlendirip iyileştiren kalıpları sağlar.",
     "ne_zaman": "Agent çıktı kalitesini ölçmek, değerlendirici-optimize edici hattı kurmak veya test odaklı kod iyileştirmesi eklemek istendiğinde.",
     "kaynak": "2d1325fda7a1"
-  },
-  "agentic-jujutsu": {
-    "ne": "AI agent'lar için sürüm kontrolü aracı; ReasoningBank tabanlı öğrenme ve çoklu agent koordinasyonu içerir.",
-    "ne_zaman": "Birden fazla agent'ın aynı depo üzerinde sürüm kontrolü yaparken koordinasyon ve geçmiş öğrenimi gerektiğinde.",
-    "kaynak": "d6731c618752"
   },
   "agents-md-generator": {
     "ne": "Depo kökleri ve onaylı iç modüller için kısa, kademeli bilgi veren AGENTS.md dosyaları oluşturur, günceller, küçültür veya böler.",
@@ -1013,11 +658,6 @@
     "ne": "Cloudflare Workers üzerinde Agents SDK ile stateful agent, kalıcı iş akışı, WebSocket, zamanlanmış görev, MCP sunucusu ve sohbet uygulamaları oluşturur.",
     "ne_zaman": "Cloudflare Workers üzerinde stateful agent, durable workflow, gerçek zamanlı WebSocket, MCP sunucusu veya React hook'larıyla sohbet uygulaması yapılırken.",
     "kaynak": "1d2c222ad0ad"
-  },
-  "agntcy-status": {
-    "ne": "AGNTCY/SLIM/CASA entegrasyon durumunu gösterir: SLIM çalışma zamanının kurulu olup olmadığı, uç nokta, varsayılan taşıma ve oturum bilgisi. Salt okunur, ağ çağrısı yapmaz.",
-    "ne_zaman": "Kullanıcı AGNTCY'nin yapılandırılıp yapılandırılmadığını sorduğunda.",
-    "kaynak": "cb8270e9ac60"
   },
   "agp-9-upgrade": {
     "ne": "Android projesini Android Gradle Plugin (AGP) 9 sürümüne yükseltir veya taşır; Kotlin Multiplatform projelerinde kullanılmaz.",
@@ -1409,11 +1049,6 @@
     "ne_zaman": "Tek bir metriğe bakılacağında, bir trendin ya da düşüşün nedeni araştırılacağında, segmentler zaman içinde karşılaştırılacağında veya resmi bir veri raporu hazırlanacağında.",
     "kaynak": "e7dc4e84fd2d"
   },
-  "analyze-app": {
-    "ne": "Kaynak kodu yetkili olduğunuz yerel bir JavaScript veya Electron uygulamasını statik olarak inceler; özellikleri dosya ve satır kanıtlarıyla açıklar. Hedefi çalıştırmaz.",
-    "ne_zaman": "Kaynağı elinizdeki bir uygulamadaki bir özelliği anlamak veya yeniden uygulamak istediğinizde.",
-    "kaynak": "a6e323dd091f"
-  },
   "analyze-data-quality": {
     "ne": "Yapılandırılmış veri, sorgu sonuçları, dashboard'lar ve analitik kanıtların güvenilirliğini değerlendirir; kaynakları ve metrik tanımlarını karşılaştırır.",
     "ne_zaman": "Veri kalitesini kontrol etmek, çelişen kaynakları uzlaştırmak ya da bir kanıtın alıntılanmaya uygun olup olmadığına karar vermek gerektiğinde.",
@@ -1593,11 +1228,6 @@
     "ne": "C# Web API controller ve DTO'larını TypeScript/JavaScript istemcileriyle karşılaştırıp kırılan JSON alanlarını, zorunlu parametreleri ve durum kodlarını kaynak koddan bulur.",
     "ne_zaman": "Breaking API değişikliklerinin kontrol edilmesi veya frontend ile backend kontrat uyumunun doğrulanması istendiğinde.",
     "kaynak": "2dd07347387e"
-  },
-  "api-docs": {
-    "ne": "Kaynak koddan JSDoc ve OpenAPI desteğiyle API dokümantasyonu üretir.",
-    "ne_zaman": "Kod tabanından API referans dokümanı çıkarılması ya da mevcut API belgelerinin güncellenmesi istendiğinde.",
-    "kaynak": "ccd6f21268df"
   },
   "api-monitoring": {
     "ne": "E-ticaret entegrasyonları için API ve webhook izleme tasarlar: sağlık kontrolleri, uyarı kuralları, SLA raporları ve entegrasyon doğrulaması (Shopify, Amazon, Walmart, WooCommerce, Etsy, TikTok Shop).",
@@ -1878,16 +1508,6 @@
     "ne": "Ekran kaydındaki manuel bir süreci çıkarıp adım adım iş akışını yeniden kurar ve kullanıcının makinesindeki araçlarla çalışan otomasyon betikleri önerir.",
     "ne_zaman": "Kullanıcı manuel bir işin ekran kaydını veya videosunu verip bunu otomatikleştirmek istediğinde.",
     "kaynak": "cc8db5787428"
-  },
-  "autopilot-loop": {
-    "ne": "Otonom /loop turunu çalıştırır: ilerlemeyi kontrol eder, sıradaki görevi yapar ve bir sonraki uyanışı planlar.",
-    "ne_zaman": "",
-    "kaynak": "d69ce249929a"
-  },
-  "autopilot-predict": {
-    "ne": "Öğrenilmiş kalıpları ve mevcut durumu kullanarak en uygun sonraki eylemi tahmin eder.",
-    "ne_zaman": "",
-    "kaynak": "9482b6b00197"
   },
   "autoresearch": {
     "ne": "Uçtan uca otonom AI araştırma projelerini iki döngülü mimariyle yönetir: iç döngüde hızlı deney, dış döngüde sonuç sentezi ve yön belirleme; makale ve sunum üretimi dahil.",
@@ -2399,61 +2019,6 @@
     "ne_zaman": "Güne başlarken hukuki açıdan ilgili maddeler taranmak, belirli bir hukuki soru araştırılmak ya da veri ihlali gibi durumda hızlı bağlam gerektiğinde.",
     "kaynak": "2abe1d81a088"
   },
-  "browser": {
-    "ne": "claude-flow ajanları için AI'a uygun anlık görüntülerle web tarayıcı otomasyonu.",
-    "ne_zaman": "",
-    "kaynak": "c25bb439141e"
-  },
-  "browser-auth-flow": {
-    "ne": "Bir sitenin kimlik doğrulama akışını yönlendirme sızıntıları, eksik CSRF, zayıf oturum çerezleri ve OAuth yanlış yapılandırması açısından inceler; findings.md üretir.",
-    "ne_zaman": "",
-    "kaynak": "d262956982a7"
-  },
-  "browser-extract": {
-    "ne": "Kayıtlı browser-templates veya tek seferlik DOM sorgularıyla yapılandırılmış veri çıkarır; içerik modele ulaşmadan önce AIDefence PII ve prompt-injection kapılarından geçirir.",
-    "ne_zaman": "",
-    "kaynak": "e3567f983a52"
-  },
-  "browser-form-fill": {
-    "ne": "Alan adı → değer eşlemesiyle web formunu doldurur; bilinen formlar için browser-templates'ten şablon arayabilir.",
-    "ne_zaman": "",
-    "kaynak": "af139a4b5aaa"
-  },
-  "browser-intent": {
-    "ne": "Hedefi seçmekten çok tarif etmenin kolay olduğu durumlarda doğal dil tarayıcı niyetini page-agent (browser_act) ile çalıştırır; page-agent veya LLM sağlayıcısı yoksa zarifçe geri çekilir.",
-    "ne_zaman": "Hedef elemanı CSS seçicilerle belirtmek yerine anlatmak daha kolaysa.",
-    "kaynak": "b1ef79370c0f"
-  },
-  "browser-login": {
-    "ne": "Kimlik doğrulama akışını bir kez sürer, çerezleri AIDefence'ten geçirir ve sonraki oturumlar için browser-cookies içinde yeniden kullanılabilir bir çerez tutamağı saklar.",
-    "ne_zaman": "",
-    "kaynak": "30dbe189fdb7"
-  },
-  "browser-record": {
-    "ne": "Adlandırılmış, izlenen bir tarayıcı oturumunu her eylemi ruvector yörüngesiyle kaydeden bir RVF bilişsel konteynerine aktarır.",
-    "ne_zaman": "",
-    "kaynak": "adca5d43d578"
-  },
-  "browser-replay": {
-    "ne": "Kaydedilmiş oturum yörüngesini aynı URL'de veya değiştirilmiş bir varyantta yeniden oynatır; DOM kaymasında browser-selectors gömme benzerliğiyle kurtarır.",
-    "ne_zaman": "",
-    "kaynak": "5a1c7a375328"
-  },
-  "browser-scrape": {
-    "ne": "v0.2.0'da kullanımdan kaldırıldı; browser-extract'e geriye dönük uyumluluk için ince sarmalayıcı, bir sonraki küçük sürümde kaldırılacak.",
-    "ne_zaman": "Eski kodda hâlâ kullanılıyorsa; yeni işlerde browser-extract kullanılmalı.",
-    "kaynak": "b50cf45f9741"
-  },
-  "browser-screenshot-diff": {
-    "ne": "Eşleşen yörünge adımlarında iki kayıtlı oturum arasında görsel ve DOM farkını çıkarır.",
-    "ne_zaman": "Görsel regresyon testi veya replay doğrulaması yapılırken.",
-    "kaynak": "3e154bc57ed8"
-  },
-  "browser-test": {
-    "ne": "UI test tarifi: browser-record (kayıt) ve browser-replay (doğrulama) birleştirilir; her test kalıcı, tekrar oynatılabilir bir RVF çıktısı üretir.",
-    "ne_zaman": "",
-    "kaynak": "1c80841a2918"
-  },
   "bug-receipt": {
     "ne": "Tanı, onarım veya kurtarma sonrasında hata ve olayları BUG RECEIPT ile kapatır; durumu VERIFIED, PARTIAL veya BLOCKED olarak belirler.",
     "ne_zaman": "Bir hata veya olay teşhis edilip düzeltildikten ya da geri döndürüldükten sonra kapatılırken.",
@@ -2894,11 +2459,6 @@
     "ne_zaman": "Chargeback sayısı arttığında, itiraz kazanma oranını yükseltmek veya dolandırıcılık riskini azaltmak istendiğinde.",
     "kaynak": "96a879ffd110"
   },
-  "chat-format": {
-    "ne": "Sohbet mesajlarını yerel model şablonunda biçimlendirir (llama3, mistral, chatml, phi, gemma ya da model kimliği) ve sorguları küçük bir WASM HNSW desen indeksine yönlendirir (yaklaşık 11 desen).",
-    "ne_zaman": "Yerel çalışma zamanları için prompt hazırlanırken.",
-    "kaynak": "601ccbbe7aad"
-  },
   "chat-motion-overlay": {
     "ne": "Transkript ya da ekran görüntüsünden yapılandırılabilir sohbet hareketli overlay'leri üretir; alfa kanallı, Remotion ve Hyperframe için uygun paketler verir.",
     "ne_zaman": "Kısa video için sohbet klipleri, demo videoları, mesaj kanıtı sahneleri veya şeffaf video overlay'i gerektiğinde.",
@@ -2998,11 +2558,6 @@
     "ne": "CIViC GraphQL API'sine kompakt sorgular gönderir; kanser varyant yorumlaması için şema incelemesi ve hedefli kanıt getirme yapar.",
     "ne_zaman": "Kullanıcı CIViC'den kısa özet veya hedefli varyant kanıtı istediğinde.",
     "kaynak": "ba6526f93078"
-  },
-  "claims": {
-    "ne": "Ajanlar ve işlemler için yetki tabanlı erişim kontrolü: izinleri verir, iptal eder ve doğrular. Çok ajanlı koordinasyonda güvenli işlemler için.",
-    "ne_zaman": "İzin yönetimi, erişim kontrolü veya yetki denetimi gerektiğinde. Açık erişimli veya tek ajanlı yerel işte gerekmez.",
-    "kaynak": "60e8a4482718"
   },
   "claims-drafting": {
     "ne": "Bir buluş için patent istemlerini (claims) taslak olarak yazar; patent hattının temel becerisidir.",
@@ -3183,11 +2738,6 @@
     "ne": "Yerel Codex oturum geçmişini analiz eder ve kanıta dayalı bir HTML iş birliği raporu üretir; Codex ile nasıl çalışıldığını puanlar. Claude Code geçmişi için kullanılmaz.",
     "ne_zaman": "Codex Radar çalıştırılmak, Codex ile iş birliği puanlanmak ya da Codex Radar raporu istendiğinde kullanılır; genel kod incelemesi için değil.",
     "kaynak": "897c8d09db44"
-  },
-  "cognitive-pattern": {
-    "ne": "Agent'ın akıl yürütme ve karar verme süreçleri için bilişsel kalıpları tanımlar ve yönetir.",
-    "ne_zaman": "",
-    "kaynak": "8630a542ce00"
   },
   "cogs-tracking-allocation": {
     "ne": "Satılan malın maliyetini (COGS) ve iniş maliyetlerini (landed cost) platform araçları veya muhasebe entegrasyonlarıyla izleyerek sipariş başına doğru brüt marjı hesaplar.",
@@ -3469,16 +3019,6 @@
     "ne_zaman": "Kullanıcı bir .docx dosyası paylaştığında veya özgeçmiş, rapor, sözleşme ya da teklif gibi bir Word belgesini okumak istediğinde.",
     "kaynak": "be9f734db2ce"
   },
-  "coordinate-ruflo-swarm": {
-    "ne": "RuFlo ajan sürüsündeki işi koordine eder: kanalları bulur, imzalı güncellemeleri okur, iş sahipliği taleplerini kontrol eder ve güvenli sonraki adımları seçer.",
-    "ne_zaman": "Çok ajanlı durum takibi, devirler, sahiplik çakışmaları veya ortak iş planlaması gerektiğinde.",
-    "kaynak": "3d1532e29f3b"
-  },
-  "coordinate-team-work": {
-    "ne": "AI takım çalışmasında görevleri oluşturur, atar ve günceller; her görevin tek sahibi ve tek çıktısı olur. Yalnızca kayıtlı görev durumunu değiştirir.",
-    "ne_zaman": "Bir çalışmadaki görevleri parçalamak, atamak, üstlenmek, engellemek veya tamamlamak istendiğinde.",
-    "kaynak": "d70938592f2f"
-  },
   "copilot-cli-quickstart": {
     "ne": "GitHub Copilot CLI'yi sıfırdan öğretmek için Developer ve Non-Developer yollarında adım adım etkileşimli eğitim ve soru-cevap sunar.",
     "ne_zaman": "Kullanıcı Copilot CLI öğrenmek istediğinde, \"start tutorial\" dediğinde veya CLI hakkında soru sorduğunda.",
@@ -3524,130 +3064,10 @@
     "ne_zaman": "Azure Cosmos DB ile yeni bir NoSQL uygulaması için veri modelini tasarlamadan önce gereksinimleri netleştirmeniz gerektiğinde.",
     "kaynak": "45b98e1cc108"
   },
-  "cost-advise": {
-    "ne": "Claude Code ve Codex kayıtlarında düşük önbellek isabeti, boşa giden 1 saatlik önbellek yazımı, üst modelli alt ajanlar ve şişmiş oturumları bulur; kanıt ve tahmini tasarruf verir.",
-    "ne_zaman": "Harcamayı nasıl düşürebileceğinizi veya maliyetin neden yüksek olduğunu sorduğunuzda.",
-    "kaynak": "5c8cdd849505"
-  },
   "cost-allocation-analysis": {
     "ne": "COGS, kargo, pazarlama ve genel gider maliyetlerini ürünler, kanallar ve siparişler arasında dağıtarak birim ve sipariş bazında gerçek kârlılığı hesaplar.",
     "ne_zaman": "Ürün, kanal veya sipariş bazında gerçek kârlılığı görmek için ortak maliyetlerin paylaştırılması gerektiğinde.",
     "kaynak": "1941dd742627"
-  },
-  "cost-anomaly": {
-    "ne": "Oturum harcamaları için MAD tabanlı aykırı değer tespiti yapar; değiştirilmiş z skoruyla anormal oturumları listeler, CI için çıkış kodu üretebilir.",
-    "ne_zaman": "Hangi tek oturumun maliyet aykırı değeri olduğu sorulduğunda. Toplam eğilim için cost-burn kullanılır.",
-    "kaynak": "61471ba98bf3"
-  },
-  "cost-benchmark": {
-    "ne": "Corpus benchmark'ını çalıştırır: booster yerelde, isteğe bağlı Gemini/Sonnet/Opus taban çizgileriyle. Ölçülmüş ve iddia edilen değerleri doğrulanabilir tabloya kaydeder.",
-    "ne_zaman": "Maliyet ve performans iddialarını ölçülmüş verilerle karşılaştırıp sonuçları kalıcı olarak kaydetmek istendiğinde.",
-    "kaynak": "e3b87be32f57"
-  },
-  "cost-booster-edit": {
-    "ne": "Basit kod dönüşümlerini agent-booster'ın WASM motoruyla uygular: milisaniyenin altında, deterministik, LLM çağrısı olmadan $0. cost-booster-route'un tamamlayıcısıdır.",
-    "ne_zaman": "Kodda basit, kalıp tabanlı bir dönüşüm gerektiğinde ve bunun için model çağrısı maliyetinden kaçınılmak istendiğinde.",
-    "kaynak": "fc19002fc570"
-  },
-  "cost-booster-route": {
-    "ne": "Görevleri hooks_route üzerinden yönlendirir, Agent Booster uygunluğuna göre ayırır ve Tier 1 bypass kullanımını $0 maliyetle raporlar.",
-    "ne_zaman": "Hangi görevlerin Agent Booster ile $0'a işlenebileceğini ve bypass oranını görmek istendiğinde.",
-    "kaynak": "3dc509b6219c"
-  },
-  "cost-budget-check": {
-    "ne": "Biriken harcama ve bütçe yapılandırmasını okur, kullanım oranını hesaplar ve %50/75/90/100 uyarı basamaklarını üretir.",
-    "ne_zaman": "Mevcut harcamanın bütçeye oranını ve hangi uyarı eşiğinin aşıldığını kontrol etmek istendiğinde.",
-    "kaynak": "68813301d0e0"
-  },
-  "cost-burn": {
-    "ne": "Harcamayı zaman kovalarına böler, pencereler arası farkı gösterir; son kova önceki ortalamayı eşikten fazla aşarsa exit code 1 verir. Üretim harcama hızını izler.",
-    "ne_zaman": "Üretimdeki harcama hızının artıp artmadığını izlemek veya harcama sapmasına karşı CI'da uyarı kurmak istendiğinde.",
-    "kaynak": "ad9e1fc110be"
-  },
-  "cost-compact-context": {
-    "ne": "getTokenOptimizer().getCompactContext() çağrısını sarar; maliyet analizi sorguları için sıkıştırılmış ReasoningBank bağlamını getirir ve tokensSaved değerini raporlar.",
-    "ne_zaman": "Maliyet analizi sorgularında sıkıştırılmış ReasoningBank bağlamı gerektiğinde.",
-    "kaynak": "648f0140442e"
-  },
-  "cost-conversation": {
-    "ne": "cost-tracking'deki her oturumu başlangıç zamanı, mesaj sayısı, baskın model ve toplam maliyetle listeler.",
-    "ne_zaman": "Hangi konuşmaların ne kadar harcadığını oturum bazında incelemek istendiğinde.",
-    "kaynak": "5bd9f7c4c2a7"
-  },
-  "cost-counterfactual": {
-    "ne": "Gerçek oturum harcamasını her zaman haiku, sonnet veya opus kullanılsaydı oluşacak varsayımsal maliyetlerle karşılaştırır. Negatif tasarruf aşırı yükseltmeyi gösterir.",
-    "ne_zaman": "Model yönlendirmesinin maliyete değip değmediğini sorduğunuzda.",
-    "kaynak": "c3d9ff501577"
-  },
-  "cost-diff": {
-    "ne": "İki cost-summary JSON çıktısı arasındaki farkı gösterir. PR düzeyinde maliyet gerilemesini tespit eder ve hangi anlık görüntülerin değiştiğini raporlar.",
-    "ne_zaman": "İki belirli maliyet anlık görüntüsü arasında neyin değiştiğini veya PR'da maliyet gerilemesi olup olmadığını kontrol ederken.",
-    "kaynak": "96986bd9632b"
-  },
-  "cost-export": {
-    "ne": "Maliyet telemetrisini Prometheus textfile veya webhook JSON biçiminde dışa aktarır; Grafana, Datadog ve özel panolar gibi harici izleme araçları için.",
-    "ne_zaman": "Maliyet verilerini harici izleme veya gösterge panolarına aktarmak istediğinizde.",
-    "kaynak": "416adbfedb7b"
-  },
-  "cost-federation": {
-    "ne": "ADR-097 Phase 3 federation_spend olayları için tüketici tarafı bağlantısını kurar: eş (peer) bazlı kayan pencereler ve askıya alma eşiği kontrolü.",
-    "ne_zaman": "Federasyondaki eşlerin harcamasını izlemek ve bir eşin eşik aşımında askıya alınıp alınmayacağını kontrol etmek istendiğinde.",
-    "kaynak": "818a56f8f548"
-  },
-  "cost-health": {
-    "ne": "Tek CI kapısı: cost-budget-check, cost-burn, cost-anomaly ve cost-projection'ı paralel çalıştırır, birleşik sağlık durumu ve en yüksek çıkış kodunu verir.",
-    "ne_zaman": "CI'da dört maliyet uyarı kontrolünü tek komutla birlikte çalıştırmak istediğinizde.",
-    "kaynak": "d3d426f1fbfe"
-  },
-  "cost-ledger": {
-    "ne": "Claude Code, Codex ve Grok'un yerel harcamasını tek görünümde toplar: sağlayıcı ve model bazında harcama, token ve önbellek isabeti; fiyatı bilinmeyen modelleri işaretler. Veriyi dışarı göndermez.",
-    "ne_zaman": "Ne kadar harcadığınızı, Codex'in maliyetini veya sağlayıcıları karşılaştırmak istediğinizde.",
-    "kaynak": "57b34821bbaa"
-  },
-  "cost-local": {
-    "ne": "Kendi donanımınızdaki (Ollama, llama.cpp, vLLM, LM Studio) milyon token başına maliyeti hesaplar ve yerel modelin barındırılan modelden ucuz kaldığı kullanım oranını gösterir.",
-    "ne_zaman": "Yerel ile API maliyetinin başa baş noktasını sorduğunuzda.",
-    "kaynak": "8721ae55bf12"
-  },
-  "cost-openrouter": {
-    "ne": "OpenRouter'daki gerçek harcamayı gösterir: anahtar limiti, bugün/hafta/ay kullanımı, tek isteğin faturalanan maliyeti ve hesap kredisi. Ağ erişimi ve API anahtarı gerektirir; önce sorar.",
-    "ne_zaman": "OpenRouter'ın ne kadar ücretlendirdiğini veya bir anahtarın limitine yaklaşılıp yaklaşılmadığını sorduğunuzda.",
-    "kaynak": "56e93e6bbfa4"
-  },
-  "cost-optimize": {
-    "ne": "Token kullanım desenlerini analiz eder ve tahmini tasarruflarla birlikte maliyet optimizasyonu önerileri sunar.",
-    "ne_zaman": "Token harcamasını azaltmanın yollarını ve kazanılabilecek tasarruf miktarını öğrenmek istendiğinde.",
-    "kaynak": "286bb2c4daa3"
-  },
-  "cost-projection": {
-    "ne": "Son ölçüm penceresinden günlük USD hızı hesaplar; 7/30/90/365 günlük projeksiyon çıkarır, bütçe tanımlıysa tükenmeye kalan gün sayısını gösterir. cost-budget-check'in öngörücü karşılığıdır.",
-    "ne_zaman": "Mevcut harcama hızıyla bütçenin ne zaman biteceğini veya gelecek dönem maliyetini tahmin etmek istendiğinde.",
-    "kaynak": "65948f3bf394"
-  },
-  "cost-report": {
-    "ne": "Token kullanımını ve USD maliyetlerini agent ve model bazında gösteren maliyet raporu üretir.",
-    "ne_zaman": "Maliyetin hangi agent ve modelden kaynaklandığını gösteren bir rapor istendiğinde.",
-    "kaynak": "a6c9a5273396"
-  },
-  "cost-session": {
-    "ne": "Tek bir oturum içinde mesaj bazında maliyet dökümü verir; çıktı token'ları, önbellek yazımları ve model yükseltmelerinden hangisinin maliyete yol açtığını gösterir.",
-    "ne_zaman": "cost-anomaly bir aykırı oturum işaretlediğinde, pahalı mesajları ayrıntılı incelemek için.",
-    "kaynak": "87224d3eec41"
-  },
-  "cost-summary": {
-    "ne": "Tüm maliyet verisini tek seferde programatik olarak döker: toplam harcama, tier dağılımı, en pahalı oturum, bütçe durumu ve federasyon toplamı. JSON veya markdown.",
-    "ne_zaman": "Maliyet verisini başka bir araca aktarmak veya tüm maliyet durumunu tek çıktıda almak istendiğinde.",
-    "kaynak": "222a3481ae48"
-  },
-  "cost-track": {
-    "ne": "Her oturumun token kullanımını Claude Code oturum jsonl dosyasından otomatik toplar ve cost-tracking ad alanına kaydeder.",
-    "ne_zaman": "Oturum bazlı token kullanımının kalıcı olarak kaydedilmesi ve sonraki maliyet analizleri için veri toplanması istendiğinde.",
-    "kaynak": "be139ccd3637"
-  },
-  "cost-trend": {
-    "ne": "docs/benchmarks/runs/*.json dosyalarının tamamını okur; kazanma oranı, gecikme, eskalasyon oranı ve LLM taban çizgisi maliyetindeki zamansal sapmaları gösterir.",
-    "ne_zaman": "Benchmark sonuçlarında zaman içinde performans veya maliyet gerilemesi olup olmadığını kontrol etmek istendiğinde.",
-    "kaynak": "39f65676ef83"
   },
   "coupon-management": {
     "ne": "Yüzde ve sabit tutarlı indirimler, müşteri başına kullanım limitleri, son kullanma tarihleri ve toplu benzersiz kod üretimiyle bir kupon sistemi kurar.",
@@ -3728,16 +3148,6 @@
     "ne": "Depo yapısına göre llms.txt specification'ına (llmstxt.org) uygun, sıfırdan bir llms.txt dosyası oluşturur.",
     "ne_zaman": "Bir depo için LLM'lerin proje yapısını anlamasını sağlayacak llms.txt dosyası yoksa veya yeniden yazılacaksa.",
     "kaynak": "c57ab6ee84c4"
-  },
-  "create-mod": {
-    "ne": "ruflo'nun yönetilen şablonundan Claude Code modu (fonksiyon hook modülü içeren eklenti) iskeleti oluşturur, ardından doğrular ve test eder.",
-    "ne_zaman": "Kullanıcı mod, fonksiyon hook'u isterse veya Claude Code'un kendini değiştirmesi istenirse.",
-    "kaynak": "76761324c397"
-  },
-  "create-plugin": {
-    "ne": "Doğru dizin yapısı, plugin.json, skill, komut ve ajanlarla yeni bir Claude Code eklentisi iskeleti oluşturur.",
-    "ne_zaman": "",
-    "kaynak": "57b55fa5158f"
   },
   "create-quarkus-project": {
     "ne": "Quarkus CLI, code.quarkus.io API veya Maven plugin ile Maven/Gradle Quarkus projesi oluşturur, extension seçer ve dev modda çalıştırır.",
@@ -3834,20 +3244,10 @@
     "ne_zaman": "vercel.json'daki zamanlanmış görevler eklenirken, düzenlenirken veya hata ayıklanırken.",
     "kaynak": "7e1e84b46245"
   },
-  "cron-schedule": {
-    "ne": "CronCreate ile kalıcı arka plan worker'larını zamanlar.",
-    "ne_zaman": "Bir işin belirli aralıklarla arka planda ve kalıcı olarak çalışması gerektiğinde.",
-    "kaynak": "0144573aee71"
-  },
   "cross-border-ecommerce": {
     "ne": "Hedef pazarları 8 kritere göre puanlar, 5 karşılama modelini maliyet ve transit verisiyle karşılaştırır, ülke bazlı vergi ve gümrük uyum rehberleri ile yurt dışı yol haritası hazırlar.",
     "ne_zaman": "Sınır ötesi e-ticarete açılmak, yeni bir ülkeye satış yapmak ve vergi, gümrük uyumu ile pazar seçimini planlamak gerektiğinde.",
     "kaynak": "54324cce776f"
-  },
-  "cross-host-federation": {
-    "ne": "İmzalı agentbbs federasyonuna katılır ve birden çok makinedeki ajanlar arasında iş taleplerini ve sonuçları koordine eder; federasyon merkezi kurabilir.",
-    "ne_zaman": "ruflo ajanlarını makineler arasında bağlarken, görev veya sonuç paylaşırken. Tek makinede gerekmez.",
-    "kaynak": "4183e6ff9848"
   },
   "cross-sell-upsell-engine": {
     "ne": "Satın alma örüntüleri, gezinme geçmişi ve marj optimizasyonuna dayanarak ödeme, sepet ve satın alma sonrasında tamamlayıcı ve üst segment ürünler önerir.",
@@ -3973,11 +3373,6 @@
     "ne": "Dynamics 365 Finance ve Supply Chain Management için kapsam, mimari, entegrasyon, geçiş, güvenlik, ALM ve test bölümlerinden oluşan Solution Blueprint'i bölüm bölüm hazırlar.",
     "ne_zaman": "Bir D365 implementasyonu için mimari dokümantasyon, Solution Blueprint veya mimari tasarım istendiğinde.",
     "kaynak": "b12ab284945a"
-  },
-  "daa-agent": {
-    "ne": "Öğrenen ve evrilen Dynamic Agentic Architecture (DAA) agent'larını oluşturur ve uyarlar.",
-    "ne_zaman": "Zamanla öğrenip kendini uyarlayabilen bir DAA agent'ı tasarlanmak veya mevcut bir agent'ı güncellemek istendiğinde.",
-    "kaynak": "ebeb7262defb"
   },
   "daily-briefing": {
     "ne": "Sabah özeti: bugünkü toplantılar ve hesap bağlamı, yakında kapanacak fırsatlar, bekleyen müşteri e-postaları ve günün öncelikli işleri.",
@@ -4109,21 +3504,6 @@
     "ne_zaman": "Halka açık bir şirketin DCF değerlemesi için çalışma kitabı kurulmak istendiğinde; mevcut model denetimi için değil.",
     "kaynak": "2f89f29d74ed"
   },
-  "ddd-aggregate": {
-    "ne": "Aggregate root için entity, value object, repository arayüzü, domain event ve test iskeletlerini oluşturur.",
-    "ne_zaman": "Mevcut bounded context'e yeni aggregate eklerken veya invariant taşıyan yeni bir iş kavramını modellerken.",
-    "kaynak": "d39e2b31ceb8"
-  },
-  "ddd-context": {
-    "ne": "Standart dizin yapısıyla DDD bounded context oluşturur ve yönetir.",
-    "ne_zaman": "Yeni bir subdomain başlatırken, monolit'i bounded context'lere bölerken veya yeni modül için katman yapısı kurarken.",
-    "kaynak": "28cc63b26341"
-  },
-  "ddd-validate": {
-    "ne": "Bounded context'ler arası import ihlallerini ve aggregate invariant sorunlarını tespit ederek domain sınırlarını doğrular.",
-    "ne_zaman": "DDD kod tabanında context sızıntılarını denetlerken, büyük değişiklikleri birleştirmeden önce veya CI kapısı olarak.",
-    "kaynak": "34baeb614c51"
-  },
   "deal-advance-gap": {
     "ne": "Tek bir fırsatı bir sonraki aşamaya ve kapanışa taşımak için eksikleri, kimin neyi ne zamana kadar yapacağıyla birlikte kontrol eder.",
     "ne_zaman": "'X fırsatını ilerletmek için ne eksik', 'anlaşma neden takıldı' veya 'hesapla kapanış arasında ne var' diye sorulduğunda.",
@@ -4189,11 +3569,6 @@
     "ne_zaman": "Microsoft 365 Copilot için deklaratif ajan oluşturulurken, TypeSpec ile tanımlanırken veya ajan manifestinin doğrulanması istendiğinde.",
     "kaynak": "e0cd0718de47"
   },
-  "deep-research": {
-    "ne": "Web araması, bellek geri çağırma, desen eşleştirme ve sentezle çok aşamalı derin araştırma yürütür ve yapılandırılmış bulgular üretir.",
-    "ne_zaman": "",
-    "kaynak": "7fa07741eb2e"
-  },
   "deep-security-scan": {
     "ne": "Depo genelinde veya belirli bir yol kapsamında, tekrarlanan bağımsız Standard taramalarla derin Codex Security taraması yapar; doğrulanmış bulguları birleştirir.",
     "ne_zaman": "Kullanıcı derin, kapsamlı veya çok geçişli bir repo/yol taraması istediğinde kullanılır; PR, commit veya diff taramalarında kullanılmaz.",
@@ -4203,16 +3578,6 @@
     "ne": "SMILES özellik çıkarımı, scaffold veya gruplu ayırma, maskelenmiş etiketler, graf modelleri ve önceden eğitilmiş kodlayıcı transferiyle MoleculeNet tabanlı molekül özelliği tahmini yapar.",
     "ne_zaman": "ADMET, toksisite, çözünürlük gibi kimya ML görevlerinde DeepChem veri ve model sözleşmeleri ile bilimsel doğrulama gerektiğinde kullanılır.",
     "kaynak": "097a4ac046cf"
-  },
-  "deepseek-chat": {
-    "ne": "DeepSeek'in deepseek-chat modeliyle tek seferlik sohbet tamamlaması; DEEPSEEK_API_KEY okur, anahtar yoksa ya da API'ye ulaşılamazsa status:degraded döner.",
-    "ne_zaman": "Özetleme, çıkarım veya hızlı sınıflandırma gibi akıl yürütme gerektirmeyen işlerde.",
-    "kaynak": "3eeb85c65ac5"
-  },
-  "deepseek-reason": {
-    "ne": "DeepSeek'in deepseek-reasoner (R1) modeliyle akıl yürütme tamamlaması; düşünce zincirini cevaptan ayrı döner. DEEPSEEK_API_KEY okur, yoksa status:degraded.",
-    "ne_zaman": "Bir görev DeepSeek'ten adım adım akıl yürütme gerektirdiğinde.",
-    "kaynak": "b71c2af8eea1"
   },
   "deepspeed": {
     "ne": "DeepSpeed ile dağıtık eğitim için ZeRO optimizasyon aşamaları, pipeline paralelliği, FP16/BF16/FP8, 1-bit Adam ve sparse attention konusunda rehberlik eder.",
@@ -4258,11 +3623,6 @@
     "ne": "GitHub Dependabot için rehber: dependabot.yml dosyaları, Dependabot pull request yönetimi, gruplu güncellemeler, monorepo ve güvenlik güncellemeleri.",
     "ne_zaman": "dependabot.yml oluşturulurken veya optimize edilirken, Dependabot PR'ları yönetilirken ya da GHAS tedarik zinciri güvenliği sorulduğunda kullanılır.",
     "kaynak": "e7f7504863e0"
-  },
-  "dependency-check": {
-    "ne": "Proje bağımlılıklarını bilinen güvenlik açıkları ve CVE kayıtlarına karşı tarar.",
-    "ne_zaman": "Üçüncü taraf paketleri denetlerken, sürüm öncesi, npm install veya lockfile değişikliğinden sonra ya da CVE uyarılarını incelerken.",
-    "kaynak": "07ce1e54229c"
   },
   "deploy-checklist": {
     "ne": "Yayın öncesi doğrulama listesi: CI durumu, onaylar, veritabanı migration'ları, feature flag'ler ve geri alma tetikleyicilerini kontrol eder.",
@@ -4399,11 +3759,6 @@
     "ne_zaman": "Mimari, akış, veri modeli, zaman çizelgesi, grafik veya diyagram türünde görsel bir çıktı istendiğinde.",
     "kaynak": "27d75356f9cf"
   },
-  "diff-analyze": {
-    "ne": "Git diff'leri için risk puanlaması, reviewer önerisi ve değişiklik sınıflandırması yapar.",
-    "ne_zaman": "PR hazırlarken, büyük veya modüller arası değişiklikleri incelerken ya da birleştirmeden önce risk ve reviewer seçerken.",
-    "kaynak": "bebe188eb934"
-  },
   "diffdock": {
     "ne": "PDB veya dizi ile SMILES/SDF/MOL2 girdisinden DiffDock ve DiffDock-L ile protein–küçük molekül bağlanma pozları tahmin eder; toplu docking, poz eleme ve güven yorumu içerir.",
     "ne_zaman": "Moleküler docking veya sanal tarama için bağlanma pozu üretilecekse kullanılır; bağlanma afinitesi tahmini için değildir.",
@@ -4439,11 +3794,6 @@
     "ne_zaman": "Marka rehberi, stil kılavuzu veya marka dokümanlarının yeri sorulduğunda ya da marka içerik denetimi istendiğinde.",
     "kaynak": "ebdc5be89c8a"
   },
-  "discover-plugins": {
-    "ne": "İş akışınıza, kurulu MCP araçlarınıza ve mevcut göreve göre ruflo plugin'lerini keşfeder ve önerir.",
-    "ne_zaman": "Mevcut iş için uygun bir ruflo plugin'i bulmak istendiğinde.",
-    "kaynak": "a0bc8993a4dc"
-  },
   "dispatching-parallel-agents@openai": {
     "ne": "Birbirinden bağımsız işleri paralel agent'lara dağıtır.",
     "ne_zaman": "Paylaşılan duruma veya sıralı bağımlılığa ihtiyaç duymayan 2 veya daha fazla bağımsız iş olduğunda.",
@@ -4468,11 +3818,6 @@
     "ne": "Yerel bir kod tabanı için iki iş akışı sunar: mimari dokümantasyon üretme ve eski sistemleri modernize etme ya da göç planı hazırlama.",
     "ne_zaman": "Bir kod tabanını anlamak, belgelemek veya onboarding dokümanı çıkarmak ya da legacy bir sistemi modernize, migrate veya yeniden yazmak istendiğinde kullanılır.",
     "kaynak": "716903292bc6"
-  },
-  "doc-gen": {
-    "ne": "Dokümantasyon üretir ve sürdürür; kod ile dokümanlar arasındaki sapmayı (drift) tespit eder ve periyodik dokümantasyon bakımını zamanlayabilir.",
-    "ne_zaman": "Doküman yazma/güncelleme/yenileme, kodla doküman sapması kontrolü ya da tekrarlayan doküman bakımı istendiğinde.",
-    "kaynak": "da54044d3e79"
   },
   "doc-kami-parchment": {
     "ne": "Sıcak parşömen zemin (#f5f4ed), tek renkli mürekkep mavisi vurgu (#1B365D) ve tek serif aile ile editoryal tipografili belge tasarlar.",
@@ -4513,11 +3858,6 @@
     "ne": "E-ticaret siteleri için domain ve SSL süre dolumu uyarıları, DNS anomali tespiti ve güvenlik puanı kontrolleri içeren izleme planı tasarlar.",
     "ne_zaman": "Mağazaya sertifika veya domain yenileme uyarısı, DNS değişiklik izleme ya da site güvenlik sağlığı kontrolü gerektiğinde kullanılır.",
     "kaynak": "ff0b91e7d16a"
-  },
-  "dossier-collect": {
-    "ne": "Bir tohum varlık için grafik yapısında dosya oluşturur; web, bellek, bilgi grafiği, kod tabanı, ADR indeksi ve git verilerinden paralel ve özyinelemeli toplama yapar.",
-    "ne_zaman": "",
-    "kaynak": "dae1d03b0ff7"
   },
   "dotnet-best-practices": {
     "ne": ".NET/C# kodunun solution veya proje genelinde en iyi uygulamalara uygunluğunu sağlar.",
@@ -4973,11 +4313,6 @@
     "ne": "Embedding veya transformer gizli durumları üzerinde hesaplanan kosinüs benzerliklerini, anizotropi için merkezleyip rastgele permütasyon tabanıyla karşılaştırarak doğrular.",
     "ne_zaman": "Kosinüs benzerliği raporlanmadan önce; benzerlik yüksek, fark anlamlı veya model/katman karşılaştırması sunulacaksa kullanılır.",
     "kaynak": "48a6c1198630"
-  },
-  "embeddings": {
-    "ne": "HNSW indeksleme, sql.js kalıcılığı ve hiperbolik destekle vektör gömmeleri üretir; agentic-flow ile 75 kat hızlı. Anlamsal arama ve örüntü eşleştirme için.",
-    "ne_zaman": "Anlamsal arama, örüntü eşleştirme, benzerlik sorguları veya bilgi getirme gerektiğinde. Tam metin eşleşmesinde gerekmez.",
-    "kaynak": "5714f698ba34"
   },
   "embodiment-description": {
     "ne": "Patent belirtimleri için ayrıntılı uygulama örneği (embodiment) açıklamaları yazar; buluşun nasıl uygulanacağını anlatır.",
@@ -5489,41 +4824,6 @@
     "ne_zaman": "Brifte “FAQ”, “help center”, “questions” veya “support page” istendiğinde.",
     "kaynak": "31b41264cd87"
   },
-  "fast-code-edits": {
-    "ne": "Kod düzenlemelerini model çağrısı olmadan milisaniyede yerel uygular: hooks_codemod ile deterministik dönüşümler, hooks_fast-apply ile büyük dosyalarda fonksiyon birleştirme.",
-    "ne_zaman": "Birçok dosyada mekanik dönüşüm yaparken veya büyük dosyada tek fonksiyonun yeni kodu elinizdeyse. Akıl yürütme gerektiren işte kullanmayın.",
-    "kaynak": "6bdf386735d9"
-  },
-  "federation-audit": {
-    "ne": "RuFlo Federasyonu'nun imzalı koordinasyon kayıtlarını inceler: son mesajları, kanal etkinliğini ve iş talebi geçmişini tutarsızlık açısından denetler. Paylaşılan durumu değiştirmez.",
-    "ne_zaman": "Son mesajları, kanal etkinliğini veya iş talebi geçmişindeki tutarsızlıkları incelemek istediğinizde.",
-    "kaynak": "c3793986df25"
-  },
-  "federation-audit@ruvnet": {
-    "ne": "Federasyon denetim (audit) günlüklerini uyumluluk filtreleriyle sorgular.",
-    "ne_zaman": "Federasyon olaylarını uyumluluk gereksinimlerine göre incelemek veya denetim kaydı aramak istendiğinde.",
-    "kaynak": "c87b2237d6c6"
-  },
-  "federation-init": {
-    "ne": "Kullanıcıyı x.ruv.io MCP servisi üzerinden RuFlo Federasyonu'na bağlanmada yönlendirir: bağlantı ayrıntıları, kanallar ve isteğe bağlı geçit duyurusu.",
-    "ne_zaman": "Federasyona ilk kez katılırken veya bağlantı bilgisi ya da kullanılabilir kanalları sorulduğunda.",
-    "kaynak": "07895c56d80e"
-  },
-  "federation-init@ruvnet": {
-    "ne": "Bu düğümde federasyonu başlatır: anahtar çifti üretir ve eşleri (peer) yapılandırır.",
-    "ne_zaman": "Bu makinede federasyon ilk kez kurulacağında veya yeni bir düğüm eklenecektiğinde.",
-    "kaynak": "202f8eae0893"
-  },
-  "federation-status": {
-    "ne": "Genel RuFlo Federasyonu geçidinin sağlığını ve etkinliğini özetler: aktiflik, kanallar, iş talepleri ve koordinasyon yapan ajanlar.",
-    "ne_zaman": "Federasyonun aktif olup olmadığını veya hangi kanal ve taleplerin bulunduğunu sorduğunuzda.",
-    "kaynak": "31616e22a1c5"
-  },
-  "federation-status@ruvnet": {
-    "ne": "Federation sağlığını gösterir: peer'lar, oturumlar, güven seviyeleri ve mesaj metrikleri.",
-    "ne_zaman": "Kullanıcı federation sağlığını, peer'ları veya agent'lar arası bağlantıyı kontrol etmek istediğinde.",
-    "kaynak": "57dd1de14c37"
-  },
   "fedora-linux-triage": {
     "ne": "Fedora sorunlarını dnf, systemd ve SELinux'a duyarlı yönlendirmelerle teşhis edip çözer.",
     "ne_zaman": "Fedora sisteminde dnf, systemd veya SELinux kaynaklı bir sorun çıktığında kullanılır.",
@@ -5803,21 +5103,6 @@
     "ne": "Black Friday ve flash satışlara hazırlık: otomatik ölçekleme, kuyruk tabanlı sipariş işleme ve site kesintisini önlemek için circuit breaker kurulumu.",
     "ne_zaman": "Black Friday veya flash satış öncesinde mağazanın yüksek trafiğe dayanıklı olması gerektiğinde.",
     "kaynak": "a8b68f63bc4d"
-  },
-  "flow-nexus-neural": {
-    "ne": "Flow Nexus ile dağıtık E2B sandbox'larında sinir ağı eğitir ve dağıtır.",
-    "ne_zaman": "Bir sinir ağını uzak E2B sandbox'ında eğitmek veya yayınlamak istendiğinde.",
-    "kaynak": "84788c0c5438"
-  },
-  "flow-nexus-platform": {
-    "ne": "Flow Nexus platformunu yönetir: kimlik doğrulama, sandbox'lar, uygulama dağıtımı, ödemeler ve challenge'lar.",
-    "ne_zaman": "Flow Nexus hesabı, sandbox veya uygulama dağıtımı gibi platform işlemleri gerektiğinde.",
-    "kaynak": "37bfa40fb6d6"
-  },
-  "flow-nexus-swarm": {
-    "ne": "Flow Nexus platformunda bulut tabanlı AI swarm dağıtımı ve olay güdümlü iş akışı otomasyonu sağlar.",
-    "ne_zaman": "Bulutta bir swarm kurmak veya olaylara tepki veren bir iş akışını otomatikleştirmek istendiğinde.",
-    "kaynak": "81aaf9c5dae7"
   },
   "flowio": {
     "ne": "Flow Cytometry Standard (FCS) 2.0, 3.0 ve 3.1 dosyalarını okur, inceler ve yazar; FCS metaverisi, kanal bilgisi, NumPy ekspresyon çıkarımı ve tablo dışa aktarımı sağlar.",
@@ -6139,21 +5424,6 @@
     "ne_zaman": "Kısaltılmamış, eksiksiz çıktı gerektiren her görevde uygulanır.",
     "kaynak": "71430d3bf490"
   },
-  "gaia-architecture-comparison": {
-    "ne": "ruflo, HAL ve diğer GAIA harness'larını yan yana karşılaştırır: yetenek açıkları, tasarım kararları ve iyileştirme yol haritası.",
-    "ne_zaman": "ruflo'nun diğer GAIA harness'larına göre eksiklerini ve gelişim önceliklerini görmek istendiğinde.",
-    "kaynak": "355c56343da6"
-  },
-  "gaia-debugging": {
-    "ne": "Başarısız bir GAIA sorusunun nedenini teşhis eder: trace'i çıkarır, hata modunu sınıflandırır ve düzeltme önerir.",
-    "ne_zaman": "GAIA benchmark çalıştırmasında bir task_id başarısız veya hatalı raporlandığında, yeniden göndermeden önce kök nedeni bulmak için.",
-    "kaynak": "446190657883"
-  },
-  "gaia-submission": {
-    "ne": "Tam bir GAIA benchmark akışını yürütür: anahtar çözümlemeden HAL uyumlu paket üretimine ve gönderime kadar.",
-    "ne_zaman": "GAIA benchmark sonuçlarını HAL formatında hazırlayıp göndermek istendiğinde.",
-    "kaynak": "cb3fad91b064"
-  },
   "game-engine": {
     "ne": "HTML5, Canvas, WebGL ve JavaScript ile tarayıcı tabanlı oyun motorları ve oyunlar geliştirir: fizik, çarpışma, oyun döngüsü, sprite, tilemap, ses, WebRTC çoklu oyuncu ve yayınlama.",
     "ne_zaman": "Oyun yapma, oyun motoru kurma, fizik veya çarpışma algılama ekleme ya da 2D/3D render işi istendiğinde.",
@@ -6238,11 +5508,6 @@
     "ne": "Tek bir Ensembl gen ID'si ve tek bir burden seti için kısa Genebass gene burden isteği gönderir; Genebass PheWAS özetlerini derler.",
     "ne_zaman": "Kullanıcı tek bir gen için kısa Genebass PheWAS özetleri istediğinde.",
     "kaynak": "c47033d80d35"
-  },
-  "generate-console-theme": {
-    "ne": "Ruflo Console Theme Studio için yalnızca veri içeren, animasyonlu bir tema ön ayarı üretir.",
-    "ne_zaman": "Kullanıcı yeni bir konsol renk paleti, cyberpunk teması ya da Orbital globe, yıldız ve swarm animasyonu varyasyonu istediğinde.",
-    "kaynak": "e475d62802c5"
   },
   "generate-custom-instructions-from-codebase": {
     "ne": "İki proje sürümü (branch, commit veya release) arasındaki farkı analiz ederek GitHub Copilot için geçiş ve kod evrimi talimatları üretir; tutarlılığı korumaya yardımcı olur.",
@@ -6434,11 +5699,6 @@
     "ne_zaman": "Yıkıcı git işlemlerini önlemek, git güvenlik hook'ları eklemek ya da Claude Code'da git push/reset'i engellemek istendiğinde.",
     "kaynak": "cd7351497e34"
   },
-  "git-workflow": {
-    "ne": "Dal yönetimi, çakışma çözümü ve PR yaşam döngüsü dahil gelişmiş git iş akışlarını yürütür.",
-    "ne_zaman": "Dal oluşturma, birleştirme çakışmalarını çözme ya da pull request süreçlerini yönetmek gerektiğinde.",
-    "kaynak": "dfedcf573789"
-  },
   "github-actions-efficiency": {
     "ne": "GitHub Actions iş akışlarını denetleyip CI dakikalarını ve maliyetini azaltmak için düzeltme önerileri sunar.",
     "ne_zaman": "CI süreleri ya da GitHub Actions maliyeti yüksek olduğunda ve workflow verimliliği incelenmek istendiğinde.",
@@ -6453,16 +5713,6 @@
     "ne": "GitHub Actions'ı desteklenen runtime sürümlerine yükseltir; güvenli action sürümlerini seçer, iş akışı davranışını korur ve sonrasında doğrular.",
     "ne_zaman": "Workflow'lardaki action'ların runtime'ı desteklenmez hale geldiğinde ya da action'ların güncellenmesi istendiğinde.",
     "kaynak": "be593bfa7bb6"
-  },
-  "github-automation": {
-    "ne": "GitHub iş akışı otomasyonu: PR yönetimi, issue takibi ve kod incelemesi koordinasyonu; GitHub Actions ile entegre çalışır.",
-    "ne_zaman": "PR oluşturma, kod incelemesi, issue yönetimi, release otomasyonu veya workflow kurulumunda; yerel değişikliklerde atlanır.",
-    "kaynak": "1bda58fd4dd4"
-  },
-  "github-code-review": {
-    "ne": "AI destekli swarm koordinasyonuyla kapsamlı GitHub kod incelemesi yapar.",
-    "ne_zaman": "Bir pull request ya da değişiklik setinin GitHub üzerinde kapsamlı biçimde incelenmesi istendiğinde.",
-    "kaynak": "8da1bb96dbda"
   },
   "github-codespaces-efficiency": {
     "ne": "Codespaces başlangıç süresini, maliyetini ve devcontainer boyutunu iyileştirir; makine boyutunu, idle timeout ve prebuild ayarlarını optimize eder.",
@@ -6479,30 +5729,10 @@
     "ne_zaman": "Bug raporu, özellik isteği veya görev issue'su açmak, issue güncellemek ya da öncelik, bağımlılık veya blocked-by ilişkisi ayarlamak istendiğinde.",
     "kaynak": "c92e4c0fffa2"
   },
-  "github-multi-repo": {
-    "ne": "Birden fazla depo arasında koordinasyon, senkronizasyon ve mimari yönetimi yapar; AI swarm orkestrasyonu kullanır.",
-    "ne_zaman": "Birden çok GitHub deposunun eşzamanlı güncellenmesi ya da depolar arası yapının yönetilmesi gerektiğinde.",
-    "kaynak": "dcc37a94ec67"
-  },
-  "github-project-management": {
-    "ne": "Swarm koordinasyonlu issue takibi, proje panosu otomasyonu ve sprint planlaması yapar.",
-    "ne_zaman": "GitHub issue'ları, proje panoları ya da sprint planlarının düzenlenmesi veya otomatikleştirilmesi istendiğinde.",
-    "kaynak": "7dcbdf0d4c5a"
-  },
   "github-release": {
     "ne": "GitHub kütüphanesinin yeni sürümünü baştan sona yayınlamaya rehberlik eder; SemVer sürümlemesi ve Keep a Changelog biçimini otomatik uygular.",
     "ne_zaman": "Bir GitHub kütüphanesinin yeni sürümü yayınlanırken, sürüm numarası belirlenirken veya changelog güncellenirken.",
     "kaynak": "ef108ca09aee"
-  },
-  "github-release-management": {
-    "ne": "Otomatik sürümleme, test, dağıtım ve geri alma (rollback) süreçlerini AI swarm koordinasyonuyla yönetir.",
-    "ne_zaman": "Bir GitHub sürümünün hazırlanması, yayımlanması ya da geri alınması gerektiğinde.",
-    "kaynak": "52c253ea9cea"
-  },
-  "github-workflow-automation": {
-    "ne": "GitHub Actions iş akışlarını AI swarm koordinasyonuyla otomatikleştirir; CI/CD boru hatlarını ve depo yönetimini kapsar.",
-    "ne_zaman": "GitHub Actions tabanlı CI/CD boru hatları kurulmak ya da mevcut iş akışları iyileştirilmek istendiğinde.",
-    "kaynak": "4d521451f18e"
   },
   "gitmoji": {
     "ne": "Değişikliğin amacına uygun gitmoji seçerek commit mesajı üretir; yalnızca mesajı yazar, git komutu çalıştırmaz.",
@@ -6538,11 +5768,6 @@
     "ne": "Resmi github.com/modelcontextprotocol/go-sdk ile tam bir Go MCP sunucu projesini; yapı, bağımlılıklar ve uygulamasıyla birlikte üretir.",
     "ne_zaman": "Go dilinde yeni bir MCP sunucu projesi sıfırdan oluşturulmak istendiğinde.",
     "kaynak": "f9a8a5181098"
-  },
-  "goal-plan": {
-    "ne": "Ön koşul analizi, maliyet optimizasyonu ve uyarlanabilir yeniden planlama ile Hedef Odaklı Eylem Planları (GOAP) oluşturur ve yürütür.",
-    "ne_zaman": "",
-    "kaynak": "49f11c550a38"
   },
   "google-ads-ecommerce": {
     "ne": "E-ticaret için Performance Max, Shopping feed'leri, dönüşüm takibi ve ROAS odaklı Smart Bidding ile Google Ads kampanyaları kurar ve optimize eder.",
@@ -6608,11 +5833,6 @@
     "ne": "Uygun hibe ve ihale fırsatlarını bulur, yazmadan önce go/no-go kararı verir, geçmiş başvurulardan taslak hazırlar ve kazanılırsa son tarih ve raporlama yükümlülüklerini takip eder.",
     "ne_zaman": "Bir hibe veya ihale fırsatı değerlendirilirken, başvuru yazılacakken ya da SAM.gov gibi günlük akışlar süzülmek istendiğinde.",
     "kaynak": "8c0971ed9231"
-  },
-  "graph-mincut": {
-    "ne": "Bağımlılık veya bilgi grafında ruvector üzerinden tam minimum kesim (@ruvector/mincut-wasm) ile en zayıf sınırı bulur.",
-    "ne_zaman": "Modülün nereden bölüneceğini, gevşek bağlı dosyaları veya işin agent'lar arasında nasıl bölüneceğini sorulduğunda. En kısa yol için kullanma.",
-    "kaynak": "3314a60efa5a"
   },
   "graphify": {
     "ne": "Kod, mimari ve dosya ilişkileri hakkındaki soruları; kod, doküman, makale, görsel ve videolardan kalıcı bilgi grafiği üretip sorgulayarak yanıtlar.",
@@ -6804,75 +6024,10 @@
     "ne_zaman": "Çalışmayı başka bir agent'a devretmek gerektiğinde.",
     "kaynak": "34746f8be5fe"
   },
-  "harness-bench": {
-    "ne": "@metaharness/darwin bench suite'i oluşturur (bench create) veya doğrular (bench verify); harness-evolve'un skor aldığı sabit veri kümesidir.",
-    "ne_zaman": "Evrim benchmark'ı hazırlanırken. darwin yoksa da zarifçe çalışır.",
-    "kaynak": "d71673f9a44e"
-  },
-  "harness-drift-from-history": {
-    "ne": "Yeni bir metaharness audit'i çalıştırır, son kayıtlı audit ile ADR-152 benzerliğine göre karşılaştırır ve --threshold aşılırsa uyarır.",
-    "ne_zaman": "Bir harness'in son audit'inden beri sapma (drift) olup olmadığını kontrol ederken.",
-    "kaynak": "0a5ef4efe499"
-  },
   "harness-engineering": {
     "ne": "Depo düzeyinde harness mühendisliği uygular; tekrarlayan kodlama ajanı hatalarını kalıcı talimatlara, sapma kontrollerine ve regresyon testlerine dönüştürür.",
     "ne_zaman": "AI kodlama ajanının aynı hataları tekrarlamasını önlemek, hataları kalıcı kurallara çevirmek veya depoya uyarlı benimseme raporu istendiğinde.",
     "kaynak": "043509dd235f"
-  },
-  "harness-evolve": {
-    "ne": "@metaharness/darwin evolve çalıştırır: harness'in yedi politika yüzeyini değiştirir, her varyantı sandbox'ta skorlar ve yalnızca ölçülmüş kazanımları uygular.",
-    "ne_zaman": "Bir harness'i testlerine veya bench suite'ine karşı evrimleştirmek istediğinde. darwin yoksa da zarifçe çalışır.",
-    "kaynak": "7a0d7db84fa5"
-  },
-  "harness-genome": {
-    "ne": "metaharness genome {path} ile 7 bölümlük repo hazırlık raporu üretir: repo_type, risk_score, mcp_surface, test_confidence, publish_readiness vb. Salt okuma.",
-    "ne_zaman": "Bir reponun yayınlanmaya veya harness kullanımına hazır olup olmadığını değerlendirmek istendiğinde.",
-    "kaynak": "c360cf25157c"
-  },
-  "harness-gepa": {
-    "ne": "GEPA genome'unu yükler, doğrular veya işler; ya da bir çalıştırma transkriptindeki hata modlarını sınıflandırır (@metaharness/darwin/gepa).",
-    "ne_zaman": "Bir genome'u incelemek veya denetlemek istediğinde. Sandbox skorlu evrim için harness-evolve kullan.",
-    "kaynak": "8bf94e386d80"
-  },
-  "harness-learn": {
-    "ne": "metaharness learn ile GEPA öğrenme döngüsü çalıştırır; harness genome'unu SWE-bench tarzı bir dilimde optimize eder. Varsayılan olarak ücretsiz dry-run yapar.",
-    "ne_zaman": "Bir harness genome'unu eğitmek istendiğinde. Harcama için --run gerekir ve metaharness checkout'u gerekir.",
-    "kaynak": "21d9b88eb5e0"
-  },
-  "harness-mcp-scan": {
-    "ne": "harness mcp-scan {path} ile harness'ın bildirdiği MCP yüzeyini statik tarar; .mcp/servers.json ve .harness/claims.json okur. --fail-on seviyesinde bulgu varsa exit 1.",
-    "ne_zaman": "Bir harness'ın MCP sunucu yapılandırmasında güvenlik açığı olup olmadığını CI'da veya yayın öncesi kontrol etmek istendiğinde.",
-    "kaynak": "9abe83066bdb"
-  },
-  "harness-mint": {
-    "ne": "metaharness new ile yeni bir bağımsız AI agent harness'i iskeletler. --confirm verilmedikçe dry-run yapar ve çağıran repo'nun içine yazmayı reddeder.",
-    "ne_zaman": "Kullanıcı yeni bir bağımsız harness oluşturmak istediğinde.",
-    "kaynak": "b25544d42126"
-  },
-  "harness-oia-audit": {
-    "ne": "Harness oia-manifest, threat-model ve mcp-scan çıktılarını tek bir zaman damgalı audit kaydında birleştirir ve metaharness-audit bellek ad alanına yazar.",
-    "ne_zaman": "Cron ile zamanlanmış sapma (drift) tespiti için, harness'in periyodik denetimi gerektiğinde.",
-    "kaynak": "3cd985ab031a"
-  },
-  "harness-score": {
-    "ne": "metaharness score ile harness hazırlığını beş boyutta (harnessFit, compileConfidence, taskCoverage, toolSafety, memoryUsefulness) ve çalıştırma başına maliyetle puanlar.",
-    "ne_zaman": "Bir repo'yu agent harness olarak değerlendirirken. Salt okuma yapar.",
-    "kaynak": "300cef31aef0"
-  },
-  "harness-security-bench": {
-    "ne": "Darwin Shield güvenlik benchmark'ını çalıştırır: tespit harness'ını 10 açık ve 9 yanıltıcı korpusta evrimleştirir, TPR/FPR değerlerini dört taban çizgisiyle karşılaştırır.",
-    "ne_zaman": "Güvenlik tespit harness'ının başarısını ölçmek ve benchmark yapmak istendiğinde.",
-    "kaynak": "c6a271b0f860"
-  },
-  "harness-similarity": {
-    "ne": "İki harness parmak izi (genome ve skor JSON) arasında ADR-152 ağırlıklı benzerliği hesaplar: 0-1 arası genel skor ve bileşen dökümü.",
-    "ne_zaman": "İki harness'i karşılaştırırken veya aralarındaki sapmayı tespit ederken. @metaharness paketi gerekmez.",
-    "kaynak": "a23ade16e8ab"
-  },
-  "harness-threat-model": {
-    "ne": "harness threat-model {path} ile kurumsal inceleme düzeyinde tehdit modeli çıkarır; MCP yüzeyi tehditlerini kategorize eder ve worst: clean/low/medium/high değeri verir. Salt okuma.",
-    "ne_zaman": "Bir harness'ın MCP yüzeyi için kurumsal güvenlik incelemesi veya tehdit değerlendirmesi gerektiğinde.",
-    "kaynak": "79b5e527c37d"
   },
   "hatch-pet": {
     "ne": "Codex uyumlu animasyonlu pet spritesheet'lerini oluşturur, onarır, doğrular, önizler ve paketler; 8x9 atlas ve pet.json içerir.",
@@ -6899,16 +6054,6 @@
     "ne_zaman": "WSI incelemesi, doku maskesi, H&E normalizasyonu veya kare veri kümesi hazırlanacağında kullanılır; çoklu görüntüleme veya derin öğrenme için pathml tercih edilir.",
     "kaynak": "ab95fd808bf5"
   },
-  "hive-mind": {
-    "ne": "Bizans hata toleranslı konsensüs ve dağıtık koordinasyon sağlar; queen liderliğinde hiyerarşik swarm yönetimi ve birden çok konsensüs stratejisi sunar.",
-    "ne_zaman": "Dağıtık koordinasyon, hataya dayanıklı işlemler veya çok agent'lı ortak karar gerektiğinde. Tek agent'lık ya da yerel işlerde kullanma.",
-    "kaynak": "fd2e1ea12afd"
-  },
-  "hive-mind-advanced": {
-    "ne": "Kuyruk (queen) liderliğinde çoklu agent koordinasyonu yapan, konsensüs mekanizmaları ve kalıcı bellek içeren gelişmiş Hive Mind sistemi.",
-    "ne_zaman": "Birden çok agent'ın konsensüsle ortak karar vermesi ve bellekte kalıcı durum tutması gerektiğinde.",
-    "kaynak": "695b555214af"
-  },
   "hmdb-skill": {
     "ne": "HMDB'de metabolit, protein, hastalık ve yolak araması için kısa istekler gönderir.",
     "ne_zaman": "Kullanıcı HMDB'den metabolit, protein, hastalık veya yolak bilgisini kısa özet olarak istediğinde.",
@@ -6923,16 +6068,6 @@
     "ne": "Claude Code plugin hook'larını (PreToolUse, PostToolUse, Stop vb.) oluşturma rehberi; prompt tabanlı hook API'si ve ${CLAUDE_PLUGIN_ROOT} kullanımını kapsar.",
     "ne_zaman": "Hook eklenmek, araç kullanımı doğrulanmak, tehlikeli komutlar engellenmek veya olay tabanlı otomasyon kurulmak istendiğinde.",
     "kaynak": "86e6d476d43f"
-  },
-  "hooks-automation": {
-    "ne": "Claude Code işlemlerini hook'larla otomatikleştirir: görev öncesi/sonrası hook'lar, oturum yönetimi, Git entegrasyonu, bellek koordinasyonu ve MCP ile sinir deseni eğitimi.",
-    "ne_zaman": "Biçimlendirme, Git işlemleri veya görev yaşam döngüsü için hook tabanlı otomasyon kurulmak istendiğinde.",
-    "kaynak": "6af9273e99b0"
-  },
-  "horizon-track": {
-    "ne": "Uzun vadeli hedefleri birden çok oturumda; kilometre taşı kontrol noktaları, ilerleme kalıcılığı ve sapma tespitiyle izler.",
-    "ne_zaman": "",
-    "kaynak": "6304c58078c2"
   },
   "hotfix": {
     "ne": "Normal sprint sürecini atlayan acil düzeltme: hotfix dalı, onay takibi, backport doğrulaması ve tam denetim izi.",
@@ -7269,20 +6404,10 @@
     "ne_zaman": "Verilen veriyle veya isteğe bağlı Sonar araştırmasıyla istatistik özeti, zaman çizelgesi, karşılaştırma ya da süreç görseli istendiğinde.",
     "kaynak": "875fac248a9d"
   },
-  "init-project": {
-    "ne": "Yeni bir Ruflo projesini MCP araçları, hook'lar ve agent yapılandırmasıyla başlatır.",
-    "ne_zaman": "Taze bir repo'da Ruflo kurulurken, 'init ruflo' ya da 'set up ruflo' istendiğinde veya MCP sunucusu ve hook'lar sıfırdan nasıl kurulur sorulduğunda.",
-    "kaynak": "437e5479199b"
-  },
   "initiating-coverage": {
     "ne": "Halka açık hisse senetleri için başlangıç kapsam (initiating coverage) raporu hazırlar.",
     "ne_zaman": "Initiating coverage raporu istendiğinde; trade pitch, memo, kazanç notu, model veya tearsheet için kullanılmaz.",
     "kaynak": "cf1413d3cbeb"
-  },
-  "injection-defense": {
-    "ne": "Web sayfaları, issue metinleri, araç çıktısı ve diğer agent mesajlarını prompt injection, jailbreak ve PII açısından ruflo AIDefence ile tarar.",
-    "ne_zaman": "Dış metni agent'a vermeden, bellekte saklamadan önce veya bir mesaj talimatları yok saymanı istediğinde. Kendi yazdığın metinde gerekmez.",
-    "kaynak": "79292496005a"
   },
   "ink-app-builder": {
     "ne": "Jetpack Ink (androidx.ink) ve Compose ile Android uygulamasına kalem ve serbest çizim ekler: ıslak/kuru mürekkep, stok fırçalar, silgi, undo/redo ve Room ile kalıcılık.",
@@ -7333,16 +6458,6 @@
     "ne": "Makale üzerinde Anti-Autoresearch bütünlük adli taramasını çalıştırır; bulguları BLOCK/WARN/NO_NEW_BLOCKER politika kapısı ve yükümlülük defterine dönüştürür.",
     "ne_zaman": "'integrity forensics', 'forensic audit this paper', '投稿前自查诚信' dediğinde ya da teslim öncesi makalenin bütünlüğünü incelemek istediğinde.",
     "kaynak": "9344b926b95f"
-  },
-  "intelligence-route": {
-    "ne": "Görevleri 3 katmanlı model seçici ve öğrenilmiş desenlerle yönlendirir; yönlendirme gerekçesini hooks_explain ile üretir.",
-    "ne_zaman": "Bir görevin hangi model katmanına ve neden yönlendirildiğini görmek istendiğinde.",
-    "kaynak": "02efa7f769a3"
-  },
-  "intelligence-transfer": {
-    "ne": "Başka bir yerel projeden öğrenilmiş pattern'leri kopyalar; IPFS pattern pazarında pattern'leri listeler, indirir ve yayınlar.",
-    "ne_zaman": "Yeni bir proje eski projenin öğrendiği pattern'lerle başlayacaksa ya da pattern'leri bir eşle paylaşırken.",
-    "kaynak": "d4ea84d84000"
   },
   "interactivity-best-practices": {
     "ne": "Remotion animasyonlarını hem AI agent'lar için sezgisel hem de Remotion Studio Visual Mode'da düzenlenebilir yazmanın en iyi uygulamalarını anlatır.",
@@ -7463,31 +6578,6 @@
     "ne": "iOS Simulator'ü Codex tarayıcısına yansıtır ve içe aktarılabilir Swift paketlerinden SwiftUI önizlemelerini hot reload ile simülatörde render eder.",
     "ne_zaman": "iOS uygulamasını tarayıcıda izlemek veya etkileşimle kullanmak, SwiftUI önizlemesini Xcode dışında görmek ya da canlı iterasyon yapmak istendiğinde.",
     "kaynak": "d1b2be4fb944"
-  },
-  "iot-anomalies": {
-    "ne": "Cognitum Seed cihazlarında telemetri anomalilerini tespit eder ve sınıflandırır.",
-    "ne_zaman": "Garip metrik bildiren bir cihazı incelerken, firmware canary ilerlemesini onaylamadan önce veya filo sağlık uyarılarını ayıklarken.",
-    "kaynak": "c00feed94e8c"
-  },
-  "iot-firmware": {
-    "ne": "Cognitum Seed cihazlarında canary dağıtımı ve anomali kontrollü ilerlemeyle firmware yayınlarını yönetir.",
-    "ne_zaman": "Bir cihaz filosuna firmware güncellemesi aşamalı olarak dağıtılacağında.",
-    "kaynak": "a1518ff2fc49"
-  },
-  "iot-fleet": {
-    "ne": "Cognitum Seed cihaz filolarını oluşturur ve firmware politikalarıyla yönetir.",
-    "ne_zaman": "Yeni bir cihaz filosu kurulacağında ya da mevcut filonun firmware politikaları değiştirileceğinde.",
-    "kaynak": "6d8167429322"
-  },
-  "iot-register": {
-    "ne": "Bir Cognitum Seed cihazını endpoint üzerinden kaydeder ve agent köprüsünü kurar.",
-    "ne_zaman": "Yeni bir Cognitum Seed cihazını sisteme eklemek ve agent bağlantısını başlatmak gerektiğinde.",
-    "kaynak": "9ff073ea27ae"
-  },
-  "iot-witness-verify": {
-    "ne": "Witness zincirinin bütünlüğünü doğrular ve köken (provenance) boşluklarını tespit eder.",
-    "ne_zaman": "Witness zincirinin sağlamlığından şüphelenildiğinde ya da köken kayıtlarının eksiksiz olduğunun kontrol edilmesi istendiğinde.",
-    "kaynak": "e5d940761eff"
   },
   "ipados-design-guidelines": {
     "ne": "iPad için Apple Human Interface Guidelines: çoklu görev, imleç desteği, klavye kısayolları, Split View, Stage Manager ve duyarlı düzenler.",
@@ -7693,16 +6783,6 @@
     "ne": "Tohum konudan anahtar kelime araştırması yapar: fikirler, Google hacim ve CPC, niyet, zorluk ve kümelenmiş bir plan.",
     "ne_zaman": "„Find keywords“, „X için keyword research“, „neyi sıralamalıyım“ veya „keyword planı oluştur“ istendiğinde.",
     "kaynak": "a1a56f19c713"
-  },
-  "kg-extract": {
-    "ne": "Kaynak dosyalardan varlık ve ilişkileri çıkarıp bir bilgi grafiği (knowledge graph) oluşturur.",
-    "ne_zaman": "Kod tabanı veya dokümanlardan bilgi grafiği çıkarılmak istendiğinde.",
-    "kaynak": "bcd096402fa3"
-  },
-  "kg-traverse": {
-    "ne": "Verilen başlangıç varlığından bilgi grafiğinde pathfinder gezintisi yapar.",
-    "ne_zaman": "Bilgi grafiğinde bir varlıktan diğer varlıklara giden yolları bulmak istendiğinde.",
-    "kaynak": "aa2342de31ea"
   },
   "kill-argument": {
     "ne": "İki iş parçacıklı çekişmeli inceleme yapar: bir hakem 200 kelimelik en güçlü red gerekçesini yazar, ikinci hakem makaleyi madde madde savunur ve çözülmemiş kritik sorunları çıkarır.",
@@ -7914,11 +6994,6 @@
     "ne_zaman": "Bir şey halka açık yayınlanmadan önce: „launch“, „Product Hunt“, „go live“, „launch checklist“, „release notes“ veya „bu hafta ne yayınladık“ istendiğinde.",
     "kaynak": "9e6991ac5134"
   },
-  "launch-ai-team": {
-    "ne": "Bir hedef için rolleri, birim bütçeli bir çalıştırmayı ve sınırlı görevleri içeren AI ekibi planlar ve oluşturur. Yalnızca koordinasyon durumu kaydeder.",
-    "ne_zaman": "Kullanıcı bir ekibi başlatmak, kurmak veya büyük bir hedefi roller arasında bölmek istediğinde.",
-    "kaynak": "ad83a81eda13"
-  },
   "launch-checklist": {
     "ne": "Kod, içerik, mağaza, pazarlama, topluluk, altyapı ve hukuk dahil tüm birimler için lansman hazırlığını kontrol eder; go/no-go onayları ister.",
     "ne_zaman": "Bir üründe lansmandan önce tüm birimlerin hazır olup olmadığı değerlendirileceğinde.",
@@ -8129,11 +7204,6 @@
     "ne_zaman": "Görsel-dil sohbet botları veya görüntü anlama görevleri gerektiğinde; konuşma tarzı görüntü analizi için.",
     "kaynak": "62d647f0fe04"
   },
-  "llm-config": {
-    "ne": "RuVLLM yerel çıkarım yardımcılarını yapılandırır: config üretir, kalite sinyallerinden in-process MicroLoRA ve SONA örnekleri oluşturup uyarlar.",
-    "ne_zaman": "Yerel, hava boşluklu çıkarım araçları gerektiğinde; barındırılan modellere ince ayar için değil.",
-    "kaynak": "441edba69990"
-  },
   "load-testing-commerce": {
     "ne": "k6 veya Artillery ile gerçekçi alışveriş trafiği simüle ederek ödeme ve katalog sayfalarındaki performans darboğazlarını bulur.",
     "ne_zaman": "Mağaza lansmanından önce, ödeme ve katalog sayfalarının yoğun trafikte nasıl davranacağını test etmek istendiğinde kullanılır.",
@@ -8173,16 +7243,6 @@
     "ne": "PM'lere yönelik Public Equity Investing işlem pitch'leri hazırlar; eksik bağlamlı veya kısmi bölüm isteklerinde de çalışır. Resmi memo için memo-builder kullanılır.",
     "ne_zaman": "PM'e yönelik long/short hisse işlem pitch'i hazırlanırken, bağlam eksik ya da yalnızca bazı bölümler istendiğinde.",
     "kaynak": "6412f922bf48"
-  },
-  "loop-worker": {
-    "ne": "Ruflo arka plan worker'larını Claude Code'un yerel /loop zamanlamasıyla çalıştırır.",
-    "ne_zaman": "Ruflo worker'larını periyodik olarak /loop üzerinden çalıştırmak istendiğinde.",
-    "kaynak": "1793585bfd11"
-  },
-  "lora-learning": {
-    "ne": "Ruflo'nun cihaz üzerinde öğrenmesini (MicroLoRA adaptörleri, @ruvector/learning-wasm, trajectory kaydı) eğitir ve kullanır.",
-    "ne_zaman": "Ruflo'nun başarılı görevlerden öğrenmesi, yönlendirmeyi projeye uyarlaması veya WASM öğrenmesinin aktif olup olmadığını kontrol etmek istendiğinde. Geri bildirim sinyali olmayan işlerde kullanma.",
-    "kaynak": "0320985d20ae"
   },
   "low-stock-alerts": {
     "ne": "Ürün stokları özel eşiklerin altına düştüğünde otomatik uyarılar kurar, böylece stok tükenmeden yeniden sipariş verilebilir.",
@@ -8344,21 +7404,6 @@
     "ne_zaman": "Uzun dizi işleme için Transformer yerine Mamba tabanlı bir mimari kullanmayı veya bu mimariyi uygulamayı düşündüğünde.",
     "kaynak": "fac18233b236"
   },
-  "manage-team-lifecycle": {
-    "ne": "AI ekibini duraklatır, sürdürür veya tamamlar; bir çalıştırmayı tamamlandı olarak işaretler. Kanıtları saklar, hiçbir şeyi silmez.",
-    "ne_zaman": "Kullanıcı bir ekibi veya çalıştırmayı durdurmak, sürdürmek, toparlamak ya da kapatmak istediğinde.",
-    "kaynak": "6d0bc39cd872"
-  },
-  "managed-agent": {
-    "ne": "Anthropic Claude Managed Agent çalıştırır: konteyner, dosya sistemi ve araçlardan oluşan bulut agent harness'i; yerel wasm-agent runtime'ının bulut karşılığıdır.",
-    "ne_zaman": "Bir görevin yerel makine yerine Anthropic'in bulut agent ortamında çalışması istendiğinde.",
-    "kaynak": "19d75a49a08b"
-  },
-  "managed-workflow": {
-    "ne": "Sınırlı uzak dinamik iş akışlarını ruflo mod politikasıyla keşfeder ve çalıştırır; worker incelemesi ve bağımsız kabul kapıları içerir.",
-    "ne_zaman": "Uzak bir iş akışını denetimli politika ve bağımsız onay kontrolleriyle çalıştırmak istendiğinde.",
-    "kaynak": "d0d46702d551"
-  },
   "map-systems": {
     "ne": "Bir konsepti bireysel sistemlere ayırır, bağımlılıkları eşler, tasarım sırasını önceliklendirir ve sistem indeksi oluşturur.",
     "ne_zaman": "Bir oyun veya ürün konseptini sistemlere bölmek, bağımlılıkları çıkarmak ya da tasarım önceliklerini belirlemek istendiğinde.",
@@ -8388,16 +7433,6 @@
     "ne": "Rakip kör noktalarını, yorumlardaki şikayetleri, yeterli arzı olmayan arama talebini ve yeni müşteri segmentlerini analiz ederek e-ticarette karşılanmamış pazar boşluklarını belirler.",
     "ne_zaman": "Yeni bir e-ticaret ürün veya kategorisi için fırsat aranırken ya da karşılanmamış müşteri ihtiyaçlarının tespit edilmesi istendiğinde.",
     "kaynak": "57380d716762"
-  },
-  "market-ingest": {
-    "ne": "Ham fiyat ve hacim verisini sembol ve tarihe göre OHLCV vektörleri olarak normalize edip saklar. Yalnızca okuma amaçlıdır, emir vermez.",
-    "ne_zaman": "Örüntü tespiti veya karşılaştırma öncesinde bir sembolün fiyat ve hacim geçmişini yüklemeniz gerektiğinde.",
-    "kaynak": "a8856b3792b6"
-  },
-  "market-pattern": {
-    "ne": "OHLCV verisinden mum (candlestick) formasyonlarını tespit eder ve sınıflandırır.",
-    "ne_zaman": "Alınmış fiyat verisinde mum formasyonlarını bulmak istendiğinde.",
-    "kaynak": "2daf24557e7c"
   },
   "market-research-reports": {
     "ne": "Kanıta izlenebilir pazar araştırma raporları ve varsayım temelli pazar büyüklüğü veya tahmin senaryoları hazırlar; TAM/SAM/SOM uzlaştırması, rekabet ve duyarlılık analizi içerir.",
@@ -8694,30 +7729,15 @@
     "ne_zaman": "Resmi public-equity yatırım memo'su taslaklanırken ya da mevcut bir memo gözden geçirilirken.",
     "kaynak": "dfc59b98cc92"
   },
-  "memory-bridge": {
-    "ne": "Claude Code otomatik belleğini ONNX embedding'lerle AgentDB'ye aktarır, tekrarları temizler ve projeler arası birleşik arama sağlar.",
-    "ne_zaman": "Claude Code bellek notlarını AgentDB'de projeler arasında aranabilir hale getirmek istendiğinde.",
-    "kaynak": "cacc68e2168c"
-  },
   "memory-management": {
     "ne": "Claude'un çalışma belleğini (CLAUDE.md) ve bilgi tabanını (memory/ dizini) yöneten iki katmanlı bellek sistemi; kısaltma, takma ad ve şirket içi dili çözer.",
     "ne_zaman": "İstekte kısaltma, akronim, takma ad ya da şirket içi terim geçtiğinde veya oturumlar arası bilginin hatırlanması gerektiğinde.",
     "kaynak": "148d090e1bd6"
   },
-  "memory-management@ruvnet": {
-    "ne": "AgentDB bellek sistemi: HNSW vektör araması, kalıcı depolama ve anlamsal arama ile pattern'leri hızlıca geri çağırır.",
-    "ne_zaman": "Başarılı pattern'leri kaydetmek, benzer çözümleri aramak, geçmiş işleri anlamsal olarak bulmak veya agent'lar arası bilgi paylaşmak gerektiğinde. Tek seferlik işlerde kullanma.",
-    "kaynak": "8706f8fa1266"
-  },
   "memory-merger": {
     "ne": "Bir domain bellek dosyasındaki olgunlaşmış dersleri talimat dosyasına aktarır. Kullanım: /memory-merger >domain [scope]; scope: global (varsayılan), user, workspace veya ws.",
     "ne_zaman": "Bir domain için birikmiş olgunlaşmış dersleri kalıcı talimat dosyasına taşımak istendiğinde.",
     "kaynak": "0e8ebbc9a212"
-  },
-  "memory-search": {
-    "ne": "Ruflo belleğinde anlamsal arama, anahtar kelime/anlamsal birleşim veya isteğe bağlı SmartRetrieval yeniden sıralamasıyla arama yapar.",
-    "ne_zaman": "Ruflo belleğinde daha önce kaydedilmiş bir bilgiyi bulmak istendiğinde.",
-    "kaynak": "35f26423334b"
   },
   "mentoring-juniors": {
     "ne": "Junior geliştiriciler ve yapay zekâ yeni başlayanları için Sokratik mentorluk yapar; soru sorarak yönlendirir, cevabı doğrudan vermez.",
@@ -8819,20 +7839,10 @@
     "ne_zaman": "MSIX paketleme, Store listeleme, WACK testi, Partner Center otomasyonu veya Windows uygulamasını Store'da yayımlama işlerinde.",
     "kaynak": "2083b51d320c"
   },
-  "migrate-create": {
-    "ne": "Sıralı numaralandırılmış yeni bir veritabanı migration'ı oluşturur; up ve down SQL dosyalarını üretir.",
-    "ne_zaman": "Veritabanı şemasında değişiklik gerektiğinde ve yeni bir migration dosyası eklenmesi istendiğinde.",
-    "kaynak": "0675476db68a"
-  },
   "migrate-to-shoehorn": {
     "ne": "Test dosyalarındaki `as` tip iddialarını @total-typescript/shoehorn ile değiştirir; kısmi test verisi için de kullanılır.",
     "ne_zaman": "Kullanıcı shoehorn'dan bahsettiğinde ya da testlerdeki `as` ifadelerini değiştirmek veya kısmi test verisi gerektiğinde.",
     "kaynak": "842ddf38e69e"
-  },
-  "migrate-validate": {
-    "ne": "Bekleyen migration'ları yabancı anahtar (foreign key) tutarlılığı, geri alma (rollback) güvenliği ve en iyi uygulamalar açısından doğrular.",
-    "ne_zaman": "Migration uygulanmadan önce şema değişikliklerinin güvenli ve tutarlı olduğunu kontrol etmek gerektiğinde.",
-    "kaynak": "8df83894bd5e"
   },
   "migrate-xml-views-to-jetpack-compose": {
     "ne": "Android XML View'ını Jetpack Compose'a taşımak için adım adım iş akışı sunar: planlama, bağımlılık kurulumu, tema ve düzen geçişi, doğrulama ve XML temizliği; birlikte çalışabilirliği korur.",
@@ -8999,20 +8009,10 @@
     "ne_zaman": "Sahip pazartesi sabahı haftalık brifing istediğinde; bağlı kaynaklar eksikse mevcut verilerle çalışır.",
     "kaynak": "76c1917faa3f"
   },
-  "monitor-ai-team": {
-    "ne": "AI ekibinin ilerlemesini, engellerini, görev sahipliğini ve kaydedilen bütçe kullanımını raporlar. Salt okunurdur.",
-    "ne_zaman": "Kullanıcı durumu, neyin engellendiğini, kimin neyin sahibi olduğunu ya da bütçenin ne kadarının kullanıldığını sorduğunda.",
-    "kaynak": "4e198be8aa64"
-  },
   "monitor-experiment": {
     "ne": "Çalışan deneylerin ilerlemesini kontrol eder ve sonuçları toplar.",
     "ne_zaman": "'check results', 'is it done', 'monitor' dediğinde ya da deney çıktısını görmek istediğinde.",
     "kaynak": "f1d18298ee2a"
-  },
-  "monitor-stream": {
-    "ne": "Monitor aracıyla canlı swarm olaylarını akış olarak izler.",
-    "ne_zaman": "Bir swarm çalışırken ne yaptığını gerçek zamanlı izlemek istendiğinde.",
-    "kaynak": "94fc0dff8ee5"
   },
   "monitoring-alerting-commerce": {
     "ne": "Ödeme başarısı, ödeme hataları, sepet hataları ve özel SLO uyarıları için gerçek zamanlı panolarla mağaza sağlığını izler.",
@@ -9163,41 +8163,6 @@
     "ne": "Birden fazla pazaryerinde stok senkronizasyonu, sipariş yönlendirme, listeleme, fiyatlama ve birleşik analitik yönetir; ChannelAdvisor, Sellbrite, LitCommerce'i karşılaştırır.",
     "ne_zaman": "Birden fazla kanalda satış yapılırken kullanılır.",
     "kaynak": "aa5489c3e7ef"
-  },
-  "music-connect": {
-    "ne": "Tek seferlik kurulum: Cognitum Music kişisel erişim belirteci üretir ve cogmusic MCP sunucusunu Claude Code'a kaydeder.",
-    "ne_zaman": "Cognitum Music ilk kez kurulurken.",
-    "kaynak": "3cfdfcfe3dc7"
-  },
-  "music-generate": {
-    "ne": "Tür, ruh hali, dil, BPM ve tema gibi yaratıcı bir brief'ten cogmusic MCP create_production aracıyla yeni şarkı üretir.",
-    "ne_zaman": "",
-    "kaynak": "e9c36cefcf64"
-  },
-  "music-get": {
-    "ne": "Tek bir prodüksiyonun id'sine göre metadata ve audio_url bilgisini getirir.",
-    "ne_zaman": "",
-    "kaynak": "e28903057233"
-  },
-  "music-list": {
-    "ne": "Hesapta kayıtlı müzik prodüksiyonlarını metadata ve audio_url ile listeler.",
-    "ne_zaman": "",
-    "kaynak": "4f9707b850ab"
-  },
-  "music-master": {
-    "ne": "Mevcut bir prodüksiyona mastering uygular: LUFS ses seviyesi normalizasyonu ve peak limitleme.",
-    "ne_zaman": "",
-    "kaynak": "9cd0c823db5f"
-  },
-  "music-midi": {
-    "ne": "Mevcut bir prodüksiyondan MIDI/nota çıkarır.",
-    "ne_zaman": "",
-    "kaynak": "c1d135e287de"
-  },
-  "music-stems": {
-    "ne": "Mevcut bir prodüksiyonda 4 parçalı ayrıştırma yapar (vokal, davul, bas, diğer).",
-    "ne_zaman": "",
-    "kaynak": "96d0cd815939"
   },
   "mvvm-toolkit": {
     "ne": "CommunityToolkit.Mvvm çekirdeğini kapsar: source generator'lar, ObservableObject/ObservableValidator/ObservableRecipient tabanları, RelayCommand/AsyncRelayCommand komutları ve doğrulama.",
@@ -9379,25 +8344,10 @@
     "ne_zaman": "NemoClaw veya OpenClaw/Hermes sandbox'ını ilk kez kurarken, başlatırken ya da ilk kullanıma hazırlanırken.",
     "kaynak": "a4161336e0e2"
   },
-  "nested-subagents": {
-    "ne": "Claude Code'un yerel Task aracıyla iç içe alt agent'lar başlatır (derinlik 5'e kadar); her alt agent kendi alt agent'larını çağırabilir.",
-    "ne_zaman": "Bağlamı yöneterek derin, katmanlı bir görevin alt agent'lara bölünmesi gerektiğinde.",
-    "kaynak": "33ccf8c48c86"
-  },
   "networkx": {
     "ne": "NetworkX ile Python'da karmaşık ağları ve grafları oluşturur, analiz eder ve çizer; en kısa yol, merkezilik, topluluk tespiti, sentetik ağlar ve dosya biçimlerini kapsar.",
     "ne_zaman": "Ağ veya graf veri yapılarıyla çalışırken, graf algoritmaları hesaplarken, topluluk tespiti veya sentetik ağ üretimi yaparken ya da ağ topolojisi çizerken.",
     "kaynak": "9fd9742c2657"
-  },
-  "neural-train": {
-    "ne": "Başarılı görev tamamlamalarından SONA ve MicroLoRA sinir desenleri eğitir; 4 adımlı hattın DISTILL ve CONSOLIDATE aşamalarını çalıştırır.",
-    "ne_zaman": "Başarılı görevlerden öğrenilen desenlerin damıtılıp kalıcılaştırılması istendiğinde.",
-    "kaynak": "47a2810639d6"
-  },
-  "neural-training": {
-    "ne": "SONA, MoE ve EWC++ ile nöral pattern eğitimi yapar; bilgiyi pekiştirir ve uyarlanabilir yönlendirme sağlar.",
-    "ne_zaman": "Pattern öğrenme, model optimizasyonu, bilgi aktarımı veya uyarlanabilir yönlendirme gerektiğinde. Basit ya da tek seferlik işlerde kullanma.",
-    "kaynak": "ee8fb09b4eba"
   },
   "neurokit2": {
     "ne": "NeuroKit2 ile fizyolojik zaman serisi ön işleme, olay ve aralık analizi, çok modlu hizalama, değişkenlik ve karmaşıklık ölçümlerinden yeniden üretilebilir iş akışları kurar ve denetler.",
@@ -9714,16 +8664,6 @@
     "ne_zaman": "Vercel üzerinde uygulama performansı veya kullanıcı deneyimini izlerken, hata ayıklarken ya da optimize ederken.",
     "kaynak": "4b3b589bf47b"
   },
-  "observe-metrics": {
-    "ne": "Belirli bir zaman aralığı için sistem metriklerini toplar, gösterir ve anomalileri tespit eder.",
-    "ne_zaman": "Bir dönemdeki sistem metriklerini incelemek ya da olağandışı değerleri bulmak gerektiğinde.",
-    "kaynak": "fdef6f9a1a60"
-  },
-  "observe-trace": {
-    "ne": "Bir görev için span'leri toplayarak agent yürütmesini izler ve trace ağacı oluşturur.",
-    "ne_zaman": "Bir görevin agent'lar arasındaki adımlarını izlemek ya da hata ayıklamak gerektiğinde.",
-    "kaynak": "323a47e2ee67"
-  },
   "obsidian-bases@agricidaniel": {
     "ne": "Obsidian Bases .base dosyalarını açıklar, taslağını hazırlar ve doğrular; filtre, formül, özet ve tablo, kart, liste, kanban görünümlerini içerir.",
     "ne_zaman": "Obsidian Bases, veritabanı benzeri vault görünümleri, filtre veya formül düzenlemesi ya da .base dosyası değişikliği istendiğinde.",
@@ -9838,11 +8778,6 @@
     "ne": "Ortak bir şablon ve moda özel rehberlerle, yeni ve mevcut dokümanlar için standart nesne yönelimli bileşen dokümantasyonu oluşturur veya günceller.",
     "ne_zaman": "Nesne yönelimli bileşenler için doküman yazılacağında veya mevcut bileşen dokümanı güncellenecek olduğunda.",
     "kaynak": "5b2d2dd64fe6"
-  },
-  "open-federation": {
-    "ne": "x.ruv.io'daki açık ruflo swarm federasyonuyla (imzalı Nostr, üyelik kontrollü) koordinasyon kurar ve koordinatör Seraphina'dan yönlendirme ister.",
-    "ne_zaman": "Internette çevrimiçi node'ları görmek, federasyon işlerini okumak veya atamak, yeni node eklemek ya da swarm'ın sonraki adımını belirlemek istendiğinde. Yalnızca yerel işlerde kullanma.",
-    "kaynak": "28065e5bbc72"
   },
   "open-notebook": {
     "ne": "Kendi sunucunda çalışan Open Notebook ile kaynakları (PDF, web, ses, video, Office) yönetir; alıntılı belge sohbeti, arama, notlar ve çok konuşmacılı podcast üretimi sunar.",
@@ -9978,11 +8913,6 @@
     "ne": "nf-core/pacsomatic eşleşmiş tümör-normal PacBio HiFi iş akışını hazırlar ve başlatır: samplesheet üretimi, Nextflow başlatma, yerel kontroller ve LSF/Slurm/PBS Pro/SGE gönderimi.",
     "ne_zaman": "Unaligned BAM girdili pacsomatic çalıştırmalarında ve başlangıç sorunlarında. Genel kısa okuma somatik analizi veya tıbbi PACS görüntüleme için değil.",
     "kaynak": "0ea739519fdb"
-  },
-  "pair-programming": {
-    "ne": "Çoklu modlu (driver/navigator/switch) yapay zekâ destekli eşli programlama; gerçek zamanlı doğrulama, kalite izleme ve test desteği sağlar.",
-    "ne_zaman": "TDD, hata ayıklama, yeniden düzenleme veya öğrenme oturumlarında birlikte kod yazarken.",
-    "kaynak": "a2d218646f5e"
   },
   "paper-claim-audit": {
     "ne": "Makaledeki her sayı, karşılaştırma ve kapsam iddiasının ham sonuç dosyalarıyla eşleştiğini, bağlamsız bir çapraz model incelemecisiyle doğrular.",
@@ -10204,16 +9134,6 @@
     "ne_zaman": "Uygulama yavaşladığında, performans bütçesi aşıldığında ya da darboğazları ölçüp optimizasyon önceliklerini çıkarmak istendiğinde.",
     "kaynak": "96aef878d0c2"
   },
-  "performance-analysis": {
-    "ne": "Claude Flow swarm'ları için kapsamlı performans analizi, darboğaz tespiti ve optimizasyon önerileri üretir.",
-    "ne_zaman": "Swarm çalışmalarında yavaşlık ya da darboğaz şüphesi olduğunda veya performans iyileştirme önerisi istendiğinde.",
-    "kaynak": "1c2ed36c0374"
-  },
-  "performance-analysis@ruvnet": {
-    "ne": "Profilleme, kıyaslama ve optimizasyon yapar: yavaş işlemler, regresyonlar, bellek baskısı ve sürüm doğrulaması için performans analizi.",
-    "ne_zaman": "İşlemler yavaşladığında, regresyon veya bellek baskısı görüldüğünde ya da sürüm öncesi doğrulamada; erken prototipte değil.",
-    "kaynak": "6fcb9e8e0ab3"
-  },
   "performance-report": {
     "ne": "Temel metrikler, trend analizi, kazanılanlar ve kaçırılanlar ile öncelikli optimizasyon önerileri içeren pazarlama performans raporu hazırlar.",
     "ne_zaman": "Kampanya kapanırken veya paydaşlara haftalık, aylık ya da çeyreklik kanal özeti hazırlanırken; veriden yönetici özeti istendiğinde.",
@@ -10328,11 +9248,6 @@
     "ne": "Minimal terminal kodlama aracı Pi ile çalışır: kurulum, sağlayıcı ve model yapılandırması, Pi skill ve eklenti geliştirme, SDK, RPC ile pi-subagents, pi-mcp-adapter gibi paketler.",
     "ne_zaman": "Pi kurulurken, yapılandırılırken, eklenti yazılırken, SDK/RPC ile entegre edilirken ya da llama.cpp ile yerel model çalıştırılırken.",
     "kaynak": "fb1b4b3fb950"
-  },
-  "pii-detect": {
-    "ne": "Metin, kod ve yapılandırmalarda kişisel veri (PII) ve gizli bilgileri (e-posta, telefon, SSN, API anahtarı, parola) tespit eder.",
-    "ne_zaman": "Kod commit etmeden, log yazmadan, veri saklamadan veya model yanıtı göndermeden önce.",
-    "kaynak": "7eaad8c12ab2"
   },
   "pinecone": {
     "ne": "Yönetilen, otomatik ölçeklenen vektör veritabanı; hibrit arama (dense + sparse), metadata filtreleme ve namespace destekler.",
@@ -10578,11 +9493,6 @@
     "ne": "Claude Code plugin dizin düzenini, plugin.json manifestini ve commands, agents, skills, hooks bileşenlerinin organizasyonunu anlatır.",
     "ne_zaman": "Plugin oluşturulduğunda, iskelet kurulduğunda, plugin.json ayarlandığında veya plugin'e bileşen eklendiğinde.",
     "kaynak": "d1bd4fdb75e1"
-  },
-  "pod-sales": {
-    "ne": "Satış iş podu (ADR-164) için tek bir kuru çalıştırma turu yapar: şablonu doğrular, bütçe ayırır, 'sales' odasına özet gönderir ve /loop için durum satırı yazar.",
-    "ne_zaman": "Bir kişi ya da /loop sonraki satış pod turunu istediğinde.",
-    "kaynak": "db299e1e8715"
   },
   "poka-yoke": {
     "ne": "Kodu yanlış kullanımın ifade edilemeyeceği biçimde tasarlar; arayüz, şema ve durum makinelerindeki veya mevcut koddaki hata noktalarını tespit eder.",
@@ -11144,11 +10054,6 @@
     "ne_zaman": "Work Mode'da kalıcı bir artifact oluştuğunda otomatik, ya da ChatGPT Desktop'ta açıkça Sites istendiğinde veya paylaşım teklifi kabul edildiğinde.",
     "kaynak": "46cf00dcd6c4"
   },
-  "publish-ruflo-update": {
-    "ne": "Kullanıcı açıkça duyuru istediğinde, gateway atıflı kısa bir RuFlo federasyon güncellemesi hazırlar ve yayınlar.",
-    "ne_zaman": "Durum, görev veya sonuçları genel kanalda ya da federasyon genelinde paylaşmak istendiğinde. Özel kanal düz metni için değil.",
-    "kaynak": "055dc8def582"
-  },
   "publish-to-pages": {
     "ne": "Sunumları ve web içeriğini GitHub Pages'e yayımlar; PPTX, PDF, HTML veya Google Slides'ı canlı bir Pages URL'sine dönüştürür, repo oluşturur ve Pages'i etkinleştirir.",
     "ne_zaman": "Kullanıcı bir sunumu veya HTML dosyasını GitHub Pages ile yayımlamak, dağıtmak veya paylaşmak istediğinde.",
@@ -11629,16 +10534,6 @@
     "ne_zaman": "Depo için kapsamlı bir README oluşturulmak veya mevcut README'nin yeniden yazılması istendiğinde.",
     "kaynak": "925de1438057"
   },
-  "reasoningbank-agentdb": {
-    "ne": "AgentDB vektör veritabanıyla ReasoningBank uyarlanabilir öğrenmesini uygular: trajectory takibi, karar değerlendirme, bellek damıtma ve pattern tanıma.",
-    "ne_zaman": "Kendini öğrenen agent'lar kurarken, karar almayı iyileştirirken veya deneyim tekrarı (experience replay) sistemleri yaparken.",
-    "kaynak": "78e9ecfbc0d9"
-  },
-  "reasoningbank-intelligence": {
-    "ne": "ReasoningBank ile pattern tanıma, strateji optimizasyonu ve sürekli iyileştirme için uyarlanabilir öğrenme uygular.",
-    "ne_zaman": "Kendini öğrenen agent'lar, iş akışı optimizasyonu veya meta-bilişsel sistemler kurulurken.",
-    "kaynak": "12f396b12844"
-  },
   "rebase-current-branch": {
     "ne": "Mevcut feature dalını en güncel upstream varsayılan dala (main veya master) rebase eder ve çakışmaları güvenli şekilde yönetmeye yardımcı olur.",
     "ne_zaman": "Bir dalı main/master ile güncellemek, varsayılan dal üzerine rebase yapmak veya incelemeden önce feature dalını senkronize etmek istendiğinde.",
@@ -11758,11 +10653,6 @@
     "ne": "Agent'a etkileşimli programcı olduğunu hatırlatan kısa bir mikro prompt; canlı REPL erişimi olan sistemlerde, özellikle Clojure'da, çalışma akışını yönlendirir.",
     "ne_zaman": "Copilot'un REPL'e erişebildiği (ör. Backseat Driver ile) Clojure gibi canlı REPL'li bir ortamda çalışılırken.",
     "kaynak": "2542118b8833"
-  },
-  "remember-team-context": {
-    "ne": "Bir AI ekibi için onaylı bağlamı (karar, kısıt, gerçek) kaynağıyla saklar ve sonra arar. Bellek ekip ve kiracı başına ayrıdır.",
-    "ne_zaman": "Kullanıcı bir kararı, kısıtı veya bilgiyi ekip için hatırlamamı ya da ekibin bildiklerini geri çağırmamı istediğinde.",
-    "kaynak": "2482b63a96fe"
   },
   "remotion-best-practices": {
     "ne": "Remotion projelerinde doğru alt rehbere yönlendiren giriş noktası; oluşturma, animasyon, altyazı, render, Studio, docs arama ve lisanslamayı kapsar.",
@@ -12069,11 +10959,6 @@
     "ne_zaman": "Elde ham kullanıcı araştırması verisi olduğunda ve bunların örüntü, segment ve sonraki adımlara dönüştürülmesi gerektiğinde.",
     "kaynak": "021c87ab7801"
   },
-  "research-synthesize": {
-    "ne": "Bellekteki araştırma bulgularını kanıt derecelendirme, çelişki çözümü ve uygulanabilir önerilerle yapılandırılmış raporlara sentezler.",
-    "ne_zaman": "",
-    "kaynak": "9e614d35e469"
-  },
   "research-wiki": {
     "ne": "Makale, fikir, deney, iddia ve aralarındaki ilişkileri araştırma yaşam döngüsü boyunca biriktiren kalıcı bilgi tabanıdır; Karpathy LLM Wiki desenine dayanır.",
     "ne_zaman": "Bilgi tabanına makale eklenecekse, sorgulanacaksa veya alan haritası oluşturulacaksa; 'research wiki' veya 'add paper' talebinde.",
@@ -12224,11 +11109,6 @@
     "ne_zaman": "Olumsuz yorumlara yanıt verilirken, şablon hazırlanırken ya da yorum yönetimi iyileştirilirken.",
     "kaynak": "2bcaa14ada21"
   },
-  "review-team-deliverables": {
-    "ne": "AI ekibi çalıştırmasını kanıt paketiyle kabul kriterlerine karşı kontrol eder; doğrulanmış kanıtı agent iddialarından ayırır.",
-    "ne_zaman": "İşin bitip bitmediğini veya doğru olup olmadığı sorulduğunda ya da bir çalıştırmayı tamamlamadan önce.",
-    "kaynak": "3d0c9bdcec8f"
-  },
   "reviewing-oracle-to-postgres-migration": {
     "ne": "Kodu bilinen Oracle–PostgreSQL davranış farklarına (boş string, refcursor, tip dönüşümü, collation, materialized view yenileme vb.) göre tarayarak migrasyon risklerini belirler.",
     "ne_zaman": "Veritabanı migrasyonu planlanırken, migrasyon artefaktları gözden geçirilirken ya da testlerin Oracle/PostgreSQL farklarını kapsadığı doğrulanmak istendiğinde.",
@@ -12324,21 +11204,6 @@
     "ne_zaman": "Python kodunda Ruff bulgularını toplu ve kontrollü biçimde düzeltmek, otomatik düzeltmeleri gözden geçirerek uygulamak istendiğinde.",
     "kaynak": "c8ad6c2e7f10"
   },
-  "ruflo": {
-    "ne": "Claude Code, Cursor, Codex ve diğerleri için çok agent'lı orkestrasyon platformu: kurulum, swarm çalıştırma, 314+ MCP aracı ve durum kontrolü.",
-    "ne_zaman": "Ruflo'yu bir projede kurmak veya başlatmak, swarm çalıştırmak, bellek, yönlendirme ya da hook araçlarını kullanmak, sağlık kontrolü yapmak ya da uygun eklentiyi bulmak istendiğinde.",
-    "kaynak": "080462391ba4"
-  },
-  "ruflo-doctor": {
-    "ne": "Ruflo kurulumunda sağlık kontrolleri yapar ve yaygın sorunları düzeltir.",
-    "ne_zaman": "Ruflo çalışmadığında veya kurulumda bir sorun olduğunda.",
-    "kaynak": "13d4bb755a8c"
-  },
-  "ruflo-status": {
-    "ne": "Ruflo sağlığını teşhis eder; sistem, MCP sunucusu ve aktif agent durumunu kurulumu değiştirmeden raporlar.",
-    "ne_zaman": "Ruflo'nun mevcut durumunu değiştirmeden kontrol etmek istendiğinde.",
-    "kaynak": "800c320df39d"
-  },
   "run-experiment": {
     "ne": "ML deneylerini yerel, uzak, Vast.ai veya Modal serverless GPU üzerinde dağıtır ve çalıştırır; eğitim işlerini başlatır.",
     "ne_zaman": "Bir deneyi çalıştırmak, sunucuya dağıtmak veya eğitim işi başlatmak istendiğinde; 'run experiment' talebinde.",
@@ -12354,25 +11219,10 @@
     "ne_zaman": "Framework düzeyindeki önbellekleme yetmediğinde, özel önbellekleme stratejileri uygularken.",
     "kaynak": "b97b1464fdcc"
   },
-  "ruos-host-run": {
-    "ne": "Ruflo swarm agent'ını kullanıcının ruOS bulut masaüstünde fleet MCP üzerinden çalıştırır, çıktısını akıtır ve swarm durumuna kaydeder.",
-    "ne_zaman": "Kullanıcı bir agent'ın ruOS masaüstünde çalışmasını istediğinde ya da swarm agent'ını uzak bir ruOS host'una yerleştirmek istediğinde.",
-    "kaynak": "e5e0910240f9"
-  },
   "rust-mcp-server-generator": {
     "ne": "Resmi rmcp SDK kullanarak araçlar, prompt'lar, kaynaklar ve testler içeren eksiksiz bir Rust Model Context Protocol sunucu projesi üretir.",
     "ne_zaman": "Rust ile MCP sunucusu oluşturulması veya araç, prompt ve kaynak içeren bir Rust MCP projesinin baştan kurulması istendiğinde.",
     "kaynak": "a956b57184f2"
-  },
-  "ruvllm-runtime": {
-    "ne": "RuVLLM paketlerini ayırt eder ve kontrol eder: ruvllm_* araçlarının arkasındaki WASM eklentisi, @ruvector/ruvllm 4.1 yerel çalışma zamanı ve GPU döngü harness'i.",
-    "ne_zaman": "ruvllm_status bir backend'in kullanılamadığını gösterdiğinde ya da kurulum bozuk 4.0.x sürümünü çözdüğünde kullan.",
-    "kaynak": "e1d8c9ede624"
-  },
-  "rvf-manage": {
-    "ne": "Taşınabilir agent belleği ve platformlar arası aktarım için RVF (Ruflo Vector Format) dosyalarını yönetir.",
-    "ne_zaman": "Agent belleğini bir RVF dosyasına aktarmak veya RVF dosyalarını yönetmek istendiğinde.",
-    "kaynak": "2d31c7887a60"
   },
   "rwkv-architecture": {
     "ne": "RNN ve Transformer karışımı bir mimari; çıkarımda O(n) doğrusal zaman, sınırsız bağlam ve KV cache olmadan çalışır. Eğitimde GPT gibi paralel, çıkarımda RNN gibi sıralı işler.",
@@ -12383,11 +11233,6 @@
     "ne": "Davranışı koruyarak kodu yeniden yapılandırır; çıkarma, birleştirme, sahiplik taşıma ve temizlik işlerinde yapısal düzenlemeleri doğrulamayla çevreler.",
     "ne_zaman": "Kod çıkarma, birleştirme, sahiplik taşıma veya temizlik yapılırken davranışın korunması gerektiğinde.",
     "kaynak": "cde21440621d"
-  },
-  "safety-scan": {
-    "ne": "AIDefence ile girdilerde prompt injection, güvensiz içerik ve adversarial saldırıları tarar.",
-    "ne_zaman": "Güvenilmeyen girdileri (kullanıcı gönderileri, API yükleri, webhook verisi, araç çıktıları) modele vermeden veya çalıştırmadan önce.",
-    "kaynak": "3f9e5d68193d"
   },
   "sale-banner": {
     "ne": "Pazar yerleri ve DTC siteleri için (Taobao/Tmall, Shopee/Lazada, TikTok Shop, Amazon, DTC) kampanya bannerı ve mağaza başlığı tasarlar; gerçek ürünü ve birebir metni doğru boyutta yerleştirir.",
@@ -16734,11 +15579,6 @@
     "ne_zaman": "Oyun herkese açık veya çok oyunculu olarak yayınlanmadan önce güvenlik kontrolü gerektiğinde.",
     "kaynak": "ee2c780af5f3"
   },
-  "security-audit@ruvnet": {
-    "ne": "Kapsamlı güvenlik taraması: girdi doğrulama, path traversal önleme, CVE tespiti ve güvenli kodlama kalıplarının denetimi.",
-    "ne_zaman": "Kimlik doğrulama, yetkilendirme, ödeme, kullanıcı verisi, API uç noktası, dosya yükleme veya DB sorgularında; salt okunur içerikte değil.",
-    "kaynak": "fe60c2ec074a"
-  },
   "security-diff-scan": {
     "ne": "Bir pull request, commit, branch diff'i veya çalışma ağacındaki yamayı güvenlik açıkları açısından inceler.",
     "ne_zaman": "Bir PR, commit, branch diff'i ya da çalışma ağacı değişikliği güvenlik açısından incelenmek istendiğinde.",
@@ -16753,11 +15593,6 @@
     "ne": "Bir repo veya belirli bir yol, paket, klasör ya da submodule için tek geçişlik standart güvenlik denetimi yapar; varsayılan repo taramasıdır.",
     "ne_zaman": "Diff yoksa, tüm repo veya kapsamlı tek geçişlik bir güvenlik taraması istendiğinde. PR/diff veya derin tarama için kullanılmaz.",
     "kaynak": "8be40966b48e"
-  },
-  "security-scan@ruvnet": {
-    "ne": "Ruflo güvenlik araçlarıyla kod tabanında tam güvenlik taraması yapar.",
-    "ne_zaman": "PR'larda güvenlik gerilemesi, auth/girdi işleme denetimi, production deploy öncesi ya da quick/standard/deep derinlikte güvenlik kontrolü istendiğinde.",
-    "kaynak": "783f92b475df"
   },
   "segment-anything-model": {
     "ne": "Sıfır atış (zero-shot) görüntü segmentasyonu yapan temel model; nokta, kutu veya maske istemleriyle ya da tüm nesne maskelerini otomatik üreterek çalışır.",
@@ -16973,11 +15808,6 @@
     "ne": "vLLM ile LLM'leri PagedAttention ve sürekli toplu işleme kullanarak yüksek verimle sunar; OpenAI uyumlu uç noktalar, GPTQ/AWQ/FP8 ve tensor paralelliği destekler.",
     "ne_zaman": "Üretim LLM API'leri yayınlanırken, çıkarım gecikmesi/verimi optimize edilirken veya GPU belleği kısıtlıyken.",
     "kaynak": "029994092bde"
-  },
-  "session-persist": {
-    "ne": "Agent oturumlarını durum anlık görüntüleriyle konuşmalar arasında kaydeder ve geri yükler.",
-    "ne_zaman": "Bir agent oturumunun durumunun sonraki konuşmalarda devam etmesi istendiğinde.",
-    "kaynak": "a0a40aae13b9"
   },
   "session-report": {
     "ne": "~/.claude/projects transkriptlerinden Claude Code oturum kullanımını (token, cache, subagent, skill, pahalı promptlar) gösteren HTML rapor üretir.",
@@ -18294,11 +17124,6 @@
     "ne_zaman": "尺寸图, 规格图, size chart, boyut görseli veya spec sheet istendiğinde; ölçek için insan eli veya nesne referansı gerektiğinde.",
     "kaynak": "36a4427b01e0"
   },
-  "skill-builder": {
-    "ne": "Doğru YAML frontmatter, kademeli açılım yapısı ve tam dizin düzeniyle yeni Claude Code Skill'leri oluşturur; skill şablonu üretir ve Skill spesifikasyonunu açıklar.",
-    "ne_zaman": "Belirli iş akışları için özel skill yazılırken, skill şablonu gerektiğinde veya spesifikasyon sorulduğunda.",
-    "kaynak": "da7db903e46e"
-  },
   "skill-creator@anthropics": {
     "ne": "Yeni skill oluşturma, mevcut skill'leri düzenleme ve iyileştirme, eval çalıştırma, performans ölçme ve description'ı tetiklenme doğruluğu için optimize etme.",
     "ne_zaman": "Sıfırdan skill yazılmak, mevcut bir skill'in optimize edilmek veya test ve benchmark edilmek istendiğinde.",
@@ -18448,31 +17273,6 @@
     "ne": "SOX örneklem seçimi, test çalışma kağıdı ve kontrol değerlendirmesi üretir; kontrol eksikliklerini sınıflandırır.",
     "ne_zaman": "SOX 404 testi planlanırken, bir kontrol (gelir, P2P, ITGC, kapanış) için örneklem çekilirken ya da kontrol eksikliği değerlendirilirken.",
     "kaynak": "5a36afe85c15"
-  },
-  "sparc-implement": {
-    "ne": "SPARC'ın Pseudocode ve Architecture fazlarını (2 ve 3) çalıştırır: algoritma sözde kodunu yazar, modül sınırlarını ve API sözleşmelerini tasarlar, ardından uygular.",
-    "ne_zaman": "Gereksinimler belli olduğunda ve kodlamaya geçmeden önce sözde kod ile mimari tasarımın yapılması gerektiğinde.",
-    "kaynak": "46d734b45980"
-  },
-  "sparc-methodology": {
-    "ne": "SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) geliştirme metodolojisini, çoklu agent orkestrasyonuyla birlikte uygular.",
-    "ne_zaman": "Bir özelliği ya da projeyi SPARC'ın tüm fazlarından geçirerek yapılandırılmış biçimde geliştirmek istendiğinde.",
-    "kaynak": "df6ba27e459e"
-  },
-  "sparc-methodology@ruvnet": {
-    "ne": "SPARC geliştirme iş akışı: Specification, Pseudocode, Architecture, Refinement ve Completion aşamalarıyla yapılandırılmış geliştirme.",
-    "ne_zaman": "Yeni özellikler, karmaşık uygulamalar ve mimari değişikliklerde; basit düzeltme, dokümantasyon veya yapılandırmada değil.",
-    "kaynak": "9a1e14616366"
-  },
-  "sparc-refine": {
-    "ne": "SPARC'ın Refinement ve Completion fazlarını çalıştırır: kodu gözden geçirir, test kapsamını artırır, spesifikasyona karşı doğrular ve dokümantasyon üretir.",
-    "ne_zaman": "Kod yazıldıktan sonra iyileştirme, test kapsamı artırma, spesifikasyon doğrulaması ya da dokümantasyon tamamlama gerektiğinde.",
-    "kaynak": "5c4d38a4162b"
-  },
-  "sparc-spec": {
-    "ne": "SPARC'ın Specification fazını çalıştırır: gereksinimleri toplar, kabul kriterlerini tanımlar, kısıtları belirler ve spesifikasyonu belleğe kaydeder.",
-    "ne_zaman": "Yeni bir özellik ya da proje için kodlamadan önce gereksinim ve kabul kriterlerini netleştirmek gerektiğinde.",
-    "kaynak": "37f2312ee7e2"
   },
   "sparse-autoencoder-training": {
     "ne": "SAELens ile Sparse Autoencoder (SAE) eğitimi ve analizi; sinir ağı aktivasyonlarını yorumlanabilir özelliklere ayırır.",
@@ -18794,11 +17594,6 @@
     "ne_zaman": "Bir hikaye ya da sprintteki hikayeler geliştirmeye başlanabilir durumda mı diye sorulduğunda.",
     "kaynak": "d836a30b7c60"
   },
-  "stream-chain": {
-    "ne": "Çoklu agent hatları, veri dönüşümü ve sıralı iş akışları için stream-JSON zincirleme yapar.",
-    "ne_zaman": "Birbirine bağlı agent adımlarının JSON akışıyla sırayla çalıştırılması gerektiğinde.",
-    "kaynak": "32f3ca6d98ae"
-  },
   "string-skill": {
     "ne": "STRING API'ye kompakt istekler gönderir; ağ, etkileşim ortağı ve zenginleştirme uç noktalarını kullanır.",
     "ne_zaman": "Kullanıcı STRING verilerinden kısa özetler istediğinde.",
@@ -18899,16 +17694,6 @@
     "ne_zaman": "Uygulama planında birbirinden bağımsız görevler varsa ve bunlar aynı oturumda yürütülecekse.",
     "kaynak": "ff632f622229"
   },
-  "sublinear-core": {
-    "ne": "@ruvnet/sublinear-core ile büyük bir grafta birkaç düğüm çevresinde kişiselleştirilmiş PageRank, yerel push ve seyrek çözümler yapar.",
-    "ne_zaman": "Büyük grafta birkaç düğüme göre ilgililik ya da A⁻¹b'nin birkaç girdisi gerektiğinde. Ruflo'nun kendi bilgi grafı için agentdb_graph-pathfinder kullan.",
-    "kaynak": "b75f6bb3004f"
-  },
-  "sublinear-solver": {
-    "ne": "sublinear-time-solver ile büyük seyrek köşegen baskın doğrusal sistemleri (Mx = b) çözer ve tam çözüm almadan tek bir çözüm girdisini tahmin eder.",
-    "ne_zaman": "Laplacian/graf sistemlerinde, etki tahmininde ya da çözümün birkaç girdisi lazımsa. Küçük graf ve düz PageRank için power iteration daha hızlı.",
-    "kaynak": "b907f23c989b"
-  },
   "subscription-billing": {
     "ne": "Otomatik faturalandırmayla tekrarlayan abonelik satışı yapar; başarısız ödemeler için dunning e-postaları, plan yükseltme/düşürme proration'ı ve self-serve iptal sunar.",
     "ne_zaman": "Abonelik planı sunulacağında, başarısız ödemelerin yeniden denenmesi veya plan değişikliği ve iptal akışları kurulmak istendiğinde.",
@@ -18988,26 +17773,6 @@
     "ne": "Hataları ve küçük davranış değişikliklerini, sorumlu olan en dar katmanda düzeltir.",
     "ne_zaman": "Regresyon kanıtı, çevre davranışın korunması ve göreve özel testlerin önemli olduğu hata düzeltmelerinde.",
     "kaynak": "46784a950337"
-  },
-  "swarm-advanced": {
-    "ne": "Araştırma, geliştirme, test ve karmaşık dağıtık iş akışları için gelişmiş swarm orkestrasyon kalıpları sunar.",
-    "ne_zaman": "",
-    "kaynak": "a21387ef0c02"
-  },
-  "swarm-init": {
-    "ne": "Anti-drift yapılandırmasıyla çok ajanlı bir swarm başlatır.",
-    "ne_zaman": "3+ ajanın koordine çalışması gereken çok dosyalı görevlerde (özellik, modüller arası refactor, güvenlik denetimi). Tek dosya veya hızlı sorularda atlanır.",
-    "kaynak": "0ccdacb8c182"
-  },
-  "swarm-orchestration": {
-    "ne": "agentic-flow ile paralel görev yürütme, dinamik topoloji ve akıllı koordinasyon için çok ajanlı swarm'ları orkestre eder.",
-    "ne_zaman": "Tek ajanın ötesine geçildiğinde, karmaşık iş akışları kurulduğunda veya dağıtık AI sistemleri geliştirildiğinde.",
-    "kaynak": "1798e5fbc8c0"
-  },
-  "swarm-orchestration@ruvnet": {
-    "ne": "Karmaşık görevler için çok ajanlı swarm koordinasyonu sağlar.",
-    "ne_zaman": "3+ dosyada değişiklik, yeni özellik ya da refactor gerektiğinde. Tek dosya düzenlemelerinde, basit düzeltmelerde ve dokümantasyonda atlanır.",
-    "kaynak": "fb6d8c3b9dbb"
   },
   "swift-code-reviewer": {
     "ne": "Swift/SwiftUI kodunu spesifikasyon uyumu, kalite, mimari, performans, güvenlik, Swift 6+ pratikleri ve .claude/CLAUDE.md standartlarına göre inceler; şiddet seviyeli geri bildirim verir.",
@@ -19199,16 +17964,6 @@
     "ne_zaman": "Özellik geliştirirken veya hata düzeltirken önce test yazmak, kırmızı-yeşil-refactor istemek ya da entegrasyon testi gerektiğinde.",
     "kaynak": "8bf52ccdd8a1"
   },
-  "tdd-repair": {
-    "ne": "Başarısız bir testi, testi değiştirmeden geçirecek düzeltmeyi yazması için sınırlı bütçeli headless claude -p alt sürecini çalıştırır.",
-    "ne_zaman": "Başarısız bir testin düzeltmeyi test edilen koda yönlendirmesi gerektiğinde.",
-    "kaynak": "edd6ed7e05bc"
-  },
-  "tdd-workflow@ruvnet": {
-    "ne": "TDD London School iş akışını uygular: önce mock'larla, dıştan içe (outside-in) test geliştirme.",
-    "ne_zaman": "Kod yazmadan önce mock tabanlı, dıştan içe test yazarak geliştirme yapılmak istendiğinde.",
-    "kaynak": "88e5407f2080"
-  },
   "teach": {
     "ne": "Bu çalışma alanı içinde kullanıcıya yeni bir skill'i veya kavramı öğretir.",
     "ne_zaman": "Kullanıcı yeni bir skill ya da kavram öğrenmek istediğinde.",
@@ -19353,11 +18108,6 @@
     "ne": "Eksik, zayıf, eski veya yanlış kapsamlı test kapsamını salt okunur denetler; kritik yolları ve regresyon testi önerilerini çıkarır.",
     "ne_zaman": "Hangi testlerin eksik olduğu, kapsamın yeterli olup olmadığı veya bir değişikliğin güvenli olduğunun kanıtlanmak istendiğinde.",
     "kaynak": "344ce2a90e7c"
-  },
-  "test-gaps": {
-    "ne": "Eksik test kapsamını tespit eder ve test önerileri üretir.",
-    "ne_zaman": "Kapsam boşlukları, test edilmemiş kod veya sıradaki testler sorulduğunda; özellik eklendikten sonra da.",
-    "kaynak": "1f70aa21de8d"
   },
   "test-helpers": {
     "ne": "Motor-özel test yardımcı kütüphaneleri üretir: assertion yardımcıları, factory fonksiyonları ve mock'lar, motorun test klasöründe. Tekrarlayan test kodunu azaltır.",
@@ -19659,11 +18409,6 @@
     "ne_zaman": "“kazanç nasıl”, “10-Q'yu kontrol et”, “marjları karşılaştır” gibi isteklerde ya da bilanço sonrası değişim sorulduğunda.",
     "kaynak": "88bedd4ec664"
   },
-  "trader-backtest": {
-    "ne": "neural-trader ile Rust/NAPI motorunda (8-19 kat hızlı) tarihsel backtest ve walk-forward doğrulaması yapar; sonucu paper→live için Ed25519 ile imzalar.",
-    "ne_zaman": "Bir ticaret stratejisini geçmiş veriyle test edip sonucu değiştirilemez biçimde kaydetmek istendiğinde.",
-    "kaynak": "3df480267301"
-  },
   "trader-broker": {
     "ne": "Onaylanan emirleri varsayılan olarak kağıt (paper) hesapta brokere gönderir; her emri açık bilet ve Alpaca JSON'uyla gösterir, kullanıcının onayını kaydeder.",
     "ne_zaman": "Kullanıcı açıkça onayladığı bir emrin brokere iletilmesini veya gün sonu kapanış emrinin hazırlanmasını istediğinde.",
@@ -19673,11 +18418,6 @@
     "ne": "Her pozisyonu bütçe ve işlem başı maksimum zarara göre boyutlandırır; tek bir bracket emri hazırlar ve hiçbir emir göndermez.",
     "ne_zaman": "Kullanıcı kaç lot alabileceğini, işlem büyüklüğünü ya da ne kadar pozisyon açabileceğini sorduğunda.",
     "kaynak": "f67ff18250a2"
-  },
-  "trader-cloud-backtest": {
-    "ne": "Uzun walk-forward, büyük Monte Carlo, parametre taraması veya model eğitimi gibi ağır neural-trader işlerini yerel yerine Anthropic Managed Agent bulut ortamında çalıştırır.",
-    "ne_zaman": "İş yerelde çalıştırılamayacak kadar ağır olduğunda, yani uzun walk-forward, büyük Monte Carlo veya model eğitimi gerektiğinde.",
-    "kaynak": "c12b187f448c"
   },
   "trader-entry": {
     "ne": "Kurulumu bar bar izler; açılış aralığının üstünde kapanış olduğunda giriş anını bildirir. Yalnızca long çalışır, emir vermez.",
@@ -19689,11 +18429,6 @@
     "ne_zaman": "“nerede çıkmalıyım” gibi isteklerde, girişten önce stop ve hedef gerektiğinde.",
     "kaynak": "8bfcab9cd70d"
   },
-  "trader-explain": {
-    "ne": "Herhangi bir LSTM/Transformer sinyali için düzenleyici düzeyde özellik atfı verir; tek girişli PageRank ile tahmini yönlendiren en önemli K özelliği sıralar.",
-    "ne_zaman": "Bir model sinyalinin hangi özelliklerden kaynaklandığını açıklamak gerektiğinde.",
-    "kaynak": "58337aa97d88"
-  },
   "trader-news": {
     "ne": "İzlenen hisseler için Yahoo Finance başlıklarını ve SEC 8-K bildirimlerini tarar; yalnızca yeni haberleri en yeniden eskiye, New York saatiyle gösterir.",
     "ne_zaman": "“TSLA'da haber var mı”, “bu neden hareket ediyor”, “sabah özeti” gibi isteklerde ya da haber takibi istendiğinde.",
@@ -19704,50 +18439,20 @@
     "ne_zaman": "“Pelosi ne alıyor”, “Kongre işlemleri” gibi isteklerde ya da bir politikacının hisse işlemi bildirdiği sorulduğunda.",
     "kaynak": "a40283757bc7"
   },
-  "trader-portfolio": {
-    "ne": "neural-trader ortalama-varyans motoruyla risk kısıtları ve yeniden dengeleme planı içeren portföy dağılımı optimizasyonu yapar.",
-    "ne_zaman": "Bir portföyün varlık dağılımını risk kısıtlarıyla optimize etmek istendiğinde.",
-    "kaynak": "1984727c7d07"
-  },
-  "trader-portfolio-cg": {
-    "ne": "Eşlenik gradyan (Conjugate Gradient) ile ortalama-varyans portföy optimizasyonu yapar; eski Neumann yolundan 40-60 kat hızlıdır.",
-    "ne_zaman": "Büyük portföylerde ortalama-varyans optimizasyonunun hızlı çalışması gerektiğinde.",
-    "kaynak": "7b5db751662f"
-  },
-  "trader-regime": {
-    "ne": "npx neural-trader ile mevcut piyasa rejimini (yükseliş, düşüş, yatay, oynak) sınıflandırır ve önerilen stratejiyi verir.",
-    "ne_zaman": "Piyasa koşulları sorulduğunda, duruma uygun strateji seçilmek istendiğinde ya da backtest veya sinyalden önce rejime duyarlılık gerektiğinde.",
-    "kaynak": "0ad062095ea3"
-  },
   "trader-risk": {
     "ne": "Her işlemi risk limitlerine göre denetler; aşan işlemleri brokere ulaşmadan durdurur: stop, zarar, risk/ödül, günlük limit ve diğer kurallar.",
     "ne_zaman": "Bir işlem emri brokere gönderilmeden önce limitlere uygunluğunun kontrol edilmesi gerektiğinde.",
     "kaynak": "8e6cda000f32"
-  },
-  "trader-risk@ruvnet": {
-    "ne": "neural-trader ile portföy riskini değerlendirir: VaR, CVaR, Sharpe, pozisyon boyutlandırma ve devre kesici durumu.",
-    "ne_zaman": "Bir portföyün risk metriklerini ve devre kesici durumunu kontrol etmek istendiğinde.",
-    "kaynak": "e92ac9b04e97"
   },
   "trader-scanner": {
     "ne": "Binlerce grafikte kurulum tarar: 20 günlük zirve kırılımı, bayrak, aşırı satım ve açılış aralığı kırılımı. Sonucu izleme listesi olarak yazar.",
     "ne_zaman": "“piyasayı tara”, “kurulum bul”, “neler kırılıyor” gibi isteklerde ya da izleme listesi gerektiğinde.",
     "kaynak": "d07536ebcde3"
   },
-  "trader-signal": {
-    "ne": "neural-trader anomali tespit motoruyla Z-skor puanlaması ve sinir tahmini kullanarak alım-satım sinyali üretir.",
-    "ne_zaman": "Piyasa verisinden anomali tabanlı alım-satım sinyali üretmek istendiğinde.",
-    "kaynak": "0b6b464fbf85"
-  },
   "trader-timemachine": {
     "ne": "Bir işlemin olası sonuçlarını riske atmadan önce 10.000 simülasyon ve geçmiş benzer kurulumlarla test eder; hedefe mi stop'a mı önce ulaşılacağının olasılıklarını verir.",
     "ne_zaman": "“time machine'i çalıştır” gibi isteklerde ya da giriş, stop ve hedef belirlendikten sonra pozisyon büyüklüğüne geçmeden önce.",
     "kaynak": "cc37ce2ec947"
-  },
-  "trader-train": {
-    "ne": "neural-trader ile piyasa verisi üzerinde LSTM, Transformer ve N-BEATS modellerini güven aralıklarıyla eğitir.",
-    "ne_zaman": "Piyasa verisi üzerinde tahmin modeli eğitmek ve tahmin belirsizliğini görmek istendiğinde.",
-    "kaynak": "5a9fa5f92740"
   },
   "training-check": {
     "ne": "Eğitim sırasında WandB metriklerini periyodik olarak kontrol eder; NaN, kayıp ıraksaması ve boşta kalan GPU'ları erken yakalar.",
@@ -19798,11 +18503,6 @@
     "ne": "Gelen bir NDA'yı GREEN (standart onay), YELLOW (hukuk incelemesi) veya RED (tam hukuk incelemesi) olarak sınıflandırır; gizli non-solicit ve eksik istisnaları tarar.",
     "ne_zaman": "Satış veya iş geliştirme ekibinden yeni bir NDA geldiğinde ya da standart yetkiyle imzalanıp imzalanamayacağına karar verilecekken.",
     "kaynak": "0a01eb8fb18f"
-  },
-  "triage-ruflo-work": {
-    "ne": "Koordinasyon durumunu değiştirmeden kanalları, imzalı güncellemeleri ve iş sahiplenmelerini inceleyerek RuFlo swarm'ını teşhis eder.",
-    "ne_zaman": "Kimse iş yayınlamadan ya da sahiplenmeden önce engelleri, çakışmaları, bayat işleri veya sıradaki en iyi görevi belirlemek için.",
-    "kaynak": "cc47db699cf2"
   },
   "ts-modern": {
     "ne": "Medusa v2 projeleri için modern TypeScript: DML tip çıkarımı, servis generic'leri, container tipleri, strict mod kısıtları, yardımcı tipler ve modül arayüzü kalıpları.",
@@ -20514,51 +19214,6 @@
     "ne_zaman": "Yapay zekâ kod üretimi, v0 CLI/SDK kullanımı veya v0'ın GitHub ve Vercel dağıtım iş akışlarına entegrasyonu konuşulduğunda.",
     "kaynak": "daddc77735ee"
   },
-  "v3-cli-modernization": {
-    "ne": "claude-flow v3 için CLI modernizasyonu ve hook sistemi geliştirmesi; interaktif istemler, komut ayrıştırma ve akıllı iş akışı otomasyonu.",
-    "ne_zaman": "",
-    "kaynak": "92ec72b186b9"
-  },
-  "v3-core-implementation": {
-    "ne": "claude-flow v3 çekirdek modüllerini uygular: DDD alanları, temiz mimari kalıpları, bağımlılık enjeksiyonu ve kapsamlı testli modüler TypeScript kodu.",
-    "ne_zaman": "",
-    "kaynak": "1eca42c010d1"
-  },
-  "v3-ddd-architecture": {
-    "ne": "claude-flow v3 için Domain-Driven Design mimarisi; sınırlı bağlamlar, sorumlulukların net ayrımı ve mikro çekirdek kalıbı.",
-    "ne_zaman": "",
-    "kaynak": "3f65d528065d"
-  },
-  "v3-integration-deep": {
-    "ne": "ADR-001'i uygulayan derin agentic-flow@alpha entegrasyonu; claude-flow'u paralel uygulama yerine özel bir eklenti olarak kurarak 10.000+ tekrar eden satırı kaldırır.",
-    "ne_zaman": "",
-    "kaynak": "667146798b8e"
-  },
-  "v3-mcp-optimization": {
-    "ne": "claude-flow v3 için MCP sunucu optimizasyonu ve taşıma katmanı iyileştirmesi: bağlantı havuzu, yük dengeleme, araç kaydı optimizasyonu ve performans izleme.",
-    "ne_zaman": "",
-    "kaynak": "7bf9f498fe9e"
-  },
-  "v3-memory-unification": {
-    "ne": "6+ bellek sistemini HNSW indeksli AgentDB'de birleştirir; 150x-12.500x arama iyileştirmesi hedefler. ADR-006 ve ADR-009'u uygular.",
-    "ne_zaman": "",
-    "kaynak": "faf6e527ecaf"
-  },
-  "v3-performance-optimization": {
-    "ne": "v3 performans hedeflerine yönelik benchmark ve optimizasyon paketi: 2.49x-7.47x Flash Attention hızlanması, 150x-12,500x arama iyileştirmesi, %50-75 bellek azaltımı.",
-    "ne_zaman": "v3 hedeflerine göre performans ölçümü yapılacağında ya da Flash Attention, arama ve bellek optimizasyonu gerektiğinde.",
-    "kaynak": "1315d351d4d1"
-  },
-  "v3-security-overhaul": {
-    "ne": "claude-flow v3 için güvenlik mimarisini baştan ele alır; CVE-1, CVE-2, CVE-3 açıklarını giderir ve varsayılan olarak güvenli desenler uygular.",
-    "ne_zaman": "Güvenlik öncelikli v3 uygulaması yapılırken.",
-    "kaynak": "b91056b17f36"
-  },
-  "v3-swarm-coordination": {
-    "ne": "v3 uygulaması için 15 ajanlı hiyerarşik mesh koordinasyonu; güvenlik, çekirdek ve entegrasyon alanlarında 10 ADR'yi 14 haftalık planla paralel yürütür.",
-    "ne_zaman": "",
-    "kaynak": "df3f8029da36"
-  },
   "v5-breaking-changes": {
     "ne": "Remotion 5 kırıcı değişikliğini, v4 ve v5 sürüm hatları kod paylaşırken uygular ya da inceler; merkezi v5 bayrağı yeni davranış veya API'yi etkinleştirir.",
     "ne_zaman": "v4 davranışı ve public tipler main'de uyumlu kalmalıyken bir v5 kırıcı değişikliği uygulanırken ya da incelenirken.",
@@ -20578,11 +19233,6 @@
     "ne": "Bir analizin doğru, yeterince desteklenmiş ve paylaşılmaya ya da karar almada kullanılmaya hazır olup olmadığını doğrular: yöntem, hesaplamalar, karşılaştırmalar, görseller, çekinceler ve sonuçlar.",
     "ne_zaman": "Bir analizi paylaşmadan ya da bir karar için kullanmadan önce yöntem, hesaplama, karşılaştırma veya sonuçlarını gözden geçirmek istendiğinde.",
     "kaynak": "25e6e676b5b1"
-  },
-  "validate-plugin": {
-    "ne": "Claude Code eklentisinin yapısını, frontmatter'ını ve MCP araç referanslarını doğrular.",
-    "ne_zaman": "",
-    "kaynak": "6c695ab73ec8"
   },
   "validation": {
     "ne": "Güvenlik taramasının doğrulama aşamasında aday bulguların geçerli olup olmadığını belirler. Tam PR, commit, dal veya depo taraması için birincil tetikleyici değildir.",
@@ -20613,36 +19263,6 @@
     "ne": "C++ projelerinde vcpkg kurulumu, bağımlılık sürümlerini yönetme ve çapraz derleme için rehberlik eder: manifest, CMake/Visual Studio entegrasyonu, sürüm sabitleme, baseline, override ve triplet.",
     "ne_zaman": "Kullanıcı vcpkg proje kurulumu, sürüm yönetimi veya platformlar arası derleme üzerinde çalıştığında; özel registry, CI ve sorun giderme için de kullanılır.",
     "kaynak": "420765119eaa"
-  },
-  "vector-cluster": {
-    "ne": "npx ruvector@0.3.13 hooks graph-cluster (spektral / Louvain) ile kodu graf topluluk tespitiyle kümeler.",
-    "ne_zaman": "",
-    "kaynak": "c03b84c442b2"
-  },
-  "vector-embed": {
-    "ne": "npx ruvector@0.3.13 embed text ile metin gömmeleri üretir (ONNX all-MiniLM-L6-v2, 384 boyut), normalize eder ve HNSW indeksine kaydeder.",
-    "ne_zaman": "",
-    "kaynak": "71530cd8f002"
-  },
-  "vector-hyperbolic": {
-    "ne": "Hiyerarşik veriyi Poincaré topunda yerleştirir: yarıçap için derinliği, yön için npx ruvector@0.3.13 embed text gömmesini kullanır (birim normlu metin gömmesi tek başına derinlik taşımaz).",
-    "ne_zaman": "",
-    "kaynak": "17a985070b74"
-  },
-  "vector-quantization": {
-    "ne": "ruflo belleği üzerinde anlamsal vektör araması ve 1-bit RaBitQ kuantizasyonu sağlar; büyük gömme deposunu ~32 kat küçültür.",
-    "ne_zaman": "Saklanan desenlerde benzerlik araması gerektiğinde, depo küçültülmek istendiğinde veya geri çağırma düşükse. Tam anahtar aramada ve 1k altı depolarda atlanır.",
-    "kaynak": "404d4d108ae9"
-  },
-  "vector-search": {
-    "ne": "embeddings_* (büyük ölçekli HNSW) ve ruvllm_hnsw_* (≤11 sıcak desen için WASM yönlendirici) üzerinden vektör araması yapar; RaBitQ 1-bit kuantizasyonla bellekte 32 kat tasarruf sağlar.",
-    "ne_zaman": "",
-    "kaynak": "f25ce0c3052b"
-  },
-  "vector-setup": {
-    "ne": "ruvector@0.3.13 için ilk kurulum: ONNX/Brain/SONA eklentilerini kurar, MCP sunucusunu kaydeder ve doctor ile doğrular.",
-    "ne_zaman": "ruvector ilk kez kurulurken veya kurulum sorunluysa.",
-    "kaynak": "4011a05a2e0d"
   },
   "vendor-check": {
     "ne": "Bir tedarikçiyle mevcut sözleşmelerin durumunu CLM, CRM, e-posta ve belge depolamadan kontrol eder; eksikleri (MSA, DPA, SOW) ve yaklaşan son tarihleri çıkarır.",
@@ -20763,11 +19383,6 @@
     "ne": "İşin tamamlandığını, düzeltildiğini veya testlerin geçtiğini iddia etmeden önce doğrulama komutlarını çalıştırıp çıktıyı kontrol etmeyi zorunlu kılar.",
     "ne_zaman": "Commit veya PR oluşturmadan ya da bir işin bittiğini belirtmeden önce.",
     "kaynak": "a098ff4f8012"
-  },
-  "verification-quality": {
-    "ne": "ruflo'nun analiz komutlarıyla (diff, complexity, code) değişiklik riskini ölçer; ruflo için CI regresyon korumaları ekler.",
-    "ne_zaman": "Bir değişikliğin riskini değerlendirirken, karmaşıklık sıcak noktalarını bulurken veya regresyon koruması eklerken.",
-    "kaynak": "b14f4c16ea21"
   },
   "verified-email": {
     "ne": "Android Credential Manager API ile doğrulanmış e-posta alma akışını uygular; Google gibi güvenilir sağlayıcıların kriptografik olarak doğrulanmış kimlik bilgileriyle OTP'siz doğrulama sağlar.",
@@ -20933,16 +19548,6 @@
     "ne": "E-ticaret depo ve envanter danışmanı: envanter sağlığını analiz eder, emniyet stoku ve yeniden sipariş noktalarını hesaplar, ABC analizi ve karşılama maliyeti değerlendirmesi yapar.",
     "ne_zaman": "Stok tükenmesi ya da fazla stok azaltılırken, emniyet stoku hesaplanırken, depo maliyetleri veya Amazon IPI skoru iyileştirilirken.",
     "kaynak": "16296a292c6d"
-  },
-  "wasm-agent": {
-    "ne": "Yalıtılmış kod çalıştırma için sandbox'lı WASM ajanları oluşturur ve yönetir.",
-    "ne_zaman": "",
-    "kaynak": "34b8f121f6dd"
-  },
-  "wasm-gallery": {
-    "ne": "Topluluk galerisinden WASM ajanlarını göz atma, yayınlama ve kurma.",
-    "ne_zaman": "",
-    "kaynak": "85f4510fe896"
   },
   "watchos-design-guidelines": {
     "ne": "Apple Watch için Apple Human Interface Guidelines: watchOS uygulamaları, komplikasyonlar, Digital Crown, bakılabilir arayüzler ve antrenman özellikleri.",
@@ -21389,11 +19994,6 @@
     "ne_zaman": "Mağazada ürün kaydetme, sonra almak için saklama veya stok ve fiyat bildirimi özelliği eklenmek istendiğinde.",
     "kaynak": "2dde4d801a9a"
   },
-  "witness": {
-    "ne": "Ed25519 tanık manifestiyle düzeltme işaretçilerini imzalar, doğrular ve zaman içinde gerileme olup olmadığını izler.",
-    "ne_zaman": "Düzeltmeler kaydedilirken veya bir sürümde geriye giden düzeltmeler kontrol edilirken. Yazarlık için RUFLO_WITNESS_SEED ayarlanmalı.",
-    "kaynak": "dd9a61d01f82"
-  },
   "wizard": {
     "ne": "İnsanın yalnızca kendisinin yapabileceği adımlarda ilerleyen, etkileşimli bir bash sihirbazı üretir: altyapı, kimlik bilgisi, CI secret ve tek seferlik geçişler için.",
     "ne_zaman": "Altyapı, CI secret'ı veya yabancı bir panelde yalnızca insanın yapabileceği adımlar ya da tek seferlik geçiş olduğunda; agent kendisi yapabiliyorsa kullanılmaz.",
@@ -21514,16 +20114,6 @@
     "ne_zaman": "Mağazaya periyodik ödemeli abonelik ürünleri eklenecek veya mevcut abonelik akışı yönetilecekse kullanılır.",
     "kaynak": "0855d4a9c52e"
   },
-  "worker-benchmarks": {
-    "ne": "Worker sistemi için kapsamlı benchmark ve performans analizi çalıştırır.",
-    "ne_zaman": "Worker sisteminin performansını ölçmek ya da darboğazlarını incelemek gerektiğinde.",
-    "kaynak": "a1cbdb9f2462"
-  },
-  "worker-integration": {
-    "ne": "Görev dağıtımı ve performans takibi için Worker-Agent entegrasyonu.",
-    "ne_zaman": "",
-    "kaynak": "2ff24e0499a1"
-  },
   "workers-best-practices": {
     "ne": "Üretim uygulamaları için Cloudflare Workers en iyi uygulamalarını uygular; Workers kodu yazarken, incelerken ve yapılandırırken rehberlik eder.",
     "ne_zaman": "Workers kodu yazılırken, gözden geçirilirken ya da yapılandırılırken kullanılır.",
@@ -21543,21 +20133,6 @@
     "ne": "Vercel Workflow DevKit (WDK) rehberi: duraklatma/devam ettirme, yeniden deneme, adım tabanlı yürütme ve çökmeye dayanıklı orkestrasyon gerektiren uzun süren görevler için.",
     "ne_zaman": "Duraklatma/devam, yeniden deneme ya da çökme güvenli orkestrasyon gerektiren dayanıklı iş akışları veya agent'lar kurulurken.",
     "kaynak": "ad702bc38703"
-  },
-  "workflow-automation": {
-    "ne": "Çok adımlı süreçler için iş akışı oluşturma, çalıştırma ve şablon yönetimi; ajan koordinasyonuyla süreçleri otomatikleştirir.",
-    "ne_zaman": "Tekrar kullanılabilir iş akışı kurulacağında veya çok adımlı görevler orkestre edileceğinde. Tek adımlı ve ad hoc işlerde atlanır.",
-    "kaynak": "f606633135fd"
-  },
-  "workflow-create": {
-    "ne": "MCP iş akışı şablonu (kalıcı, yaşam döngülü) ya da yerel .claude/workflows/*.js orkestrasyon betiği (agent/parallel/pipeline dağıtımı) yazar.",
-    "ne_zaman": "",
-    "kaynak": "b1065bc311f5"
-  },
-  "workflow-run": {
-    "ne": "MCP iş akışı yaşam döngüsünü (çalıştır/duraklat/devam/iptal) yönetir ya da yerel .claude/workflows/*.js orkestrasyonunu Workflow aracıyla çağırıp devam ettirir.",
-    "ne_zaman": "",
-    "kaynak": "d755c91310f9"
   },
   "workiq-copilot": {
     "ne": "Copilot CLI'ın WorkIQ CLI/MCP sunucusuyla Microsoft 365 Copilot verilerini (e-posta, toplantı, belge, Teams, kişiler) sorgulamasını ve canlı bağlam, özet ve öneriler üretmesini sağlar.",
@@ -21888,166 +20463,6 @@
     "ne": "Zotero Desktop'ı yerel API üzerinden kullanır: kütüphanede arama, öğe/koleksiyon/etiket listeleme, BibTeX dışa aktarma, LaTeX/Markdown'a atıf anahtarı ekleme ve BibTeX/RIS içe aktarma.",
     "ne_zaman": "Zotero, atıf, references.bib veya yerel Zotero kütüphanesinden kaynak eklemek istendiğinde.",
     "kaynak": "ef26e47808db"
-  },
-  "agent-implementer-sparc-coder": {
-    "ne": "Belirtimleri TDD uygulamalarıyla çalışan koda dönüştüren SPARC uygulayıcı ajanı.",
-    "ne_zaman": "Bir belirtimin test güdümlü biçimde koda dökülmesi istendiğinde.",
-    "kaynak": "001e5d116cbb"
-  },
-  "agent-sparc-coordinator": {
-    "ne": "SPARC yöntemindeki geliştirme aşamalarını sistemli biçimde eşgüdümleyen orkestratör ajan.",
-    "ne_zaman": "Bir işin SPARC aşamalarıyla (belirtim, taslak, mimari, iyileştirme, tamamlama) yürütülmesi istendiğinde.",
-    "kaynak": "2c85c0878f3d"
-  },
-  "agent-analyze-code-quality": {
-    "ne": "Kapsamlı kod incelemesi ve iyileştirme için ileri düzey kod kalitesi çözümleme ajanı.",
-    "ne_zaman": "Kod kalitesinin ayrıntılı çözümlenmesi ve iyileştirme önerisi istendiğinde.",
-    "kaynak": "b5dce910ab7a"
-  },
-  "agent-code-analyzer": {
-    "ne": "Kapsamlı kod incelemesi ve iyileştirme için ileri düzey kod kalitesi çözümleme ajanı.",
-    "ne_zaman": "Bir kod tabanının kalite açısından çözümlenmesi istendiğinde.",
-    "kaynak": "198842011deb"
-  },
-  "agent-code-review-swarm": {
-    "ne": "Klasik statik çözümlemenin ötesine geçen kapsamlı kod incelemesi için uzmanlaşmış ajanlardan oluşan sürü kurar.",
-    "ne_zaman": "Bir değişikliğin birden çok uzman ajanla incelenmesi istendiğinde.",
-    "kaynak": "315448a6b7f9"
-  },
-  "agent-reviewer": {
-    "ne": "Kod incelemesi ve kalite güvencesi uzmanı ajan.",
-    "ne_zaman": "Yazılan kodun gözden geçirilmesi ve kalite denetimi istendiğinde.",
-    "kaynak": "3799eff84d36"
-  },
-  "agent-tdd-london-swarm": {
-    "ne": "Sürü eşgüdümü içinde mock güdümlü geliştirme yapan TDD London School uzmanı ajan.",
-    "ne_zaman": "Dıştan içe, mock öncelikli TDD ile çalışılacağında.",
-    "kaynak": "c17c33c95426"
-  },
-  "agent-test-long-runner": {
-    "ne": "Karmaşık görevlerde 30 dakikadan uzun çalışabilen test ajanı.",
-    "ne_zaman": "Uzun süren bir ajan çalıştırmasının sınanması gerektiğinde.",
-    "kaynak": "19d4833f5b66"
-  },
-  "agent-tester": {
-    "ne": "Kapsamlı test ve kalite güvencesi uzmanı ajan.",
-    "ne_zaman": "Bir özelliğin testlerinin yazılması ve doğrulanması istendiğinde.",
-    "kaynak": "397b2f3ce25d"
-  },
-  "agent-github-modes": {
-    "ne": "İş akışı orkestrasyonu, PR yönetimi ve depo eşgüdümü için toplu işlem iyileştirmeli GitHub bütünleşme kipleri.",
-    "ne_zaman": "GitHub üzerinde PR, issue ve depo işlerinin ajanlarla yürütülmesi istendiğinde.",
-    "kaynak": "af9c52f038f0"
-  },
-  "agent-github-pr-manager": {
-    "ne": "Pull request yaşam döngüsünün tamamını ve GitHub iş akışı eşgüdümünü yönetir.",
-    "ne_zaman": "Bir PR'ın açılmasından birleştirilmesine kadar yönetilmesi istendiğinde.",
-    "kaynak": "b4fdd7cb38e3"
-  },
-  "agent-release-manager": {
-    "ne": "Birden çok pakette sürüm yönetimi, test ve dağıtım için ruv-swarm orkestrasyonuyla otomatik sürüm eşgüdümü yapar.",
-    "ne_zaman": "Çok paketli bir sürümün hazırlanıp yayımlanması istendiğinde.",
-    "kaynak": "da7b2d0756a1"
-  },
-  "agent-release-swarm": {
-    "ne": "Değişiklik günlüğü üretiminden çok platformlu dağıtıma kadar karmaşık yazılım sürümlerini ajan sürüleriyle yürütür.",
-    "ne_zaman": "Karmaşık bir sürüm sürecinin uçtan uca otomatikleştirilmesi istendiğinde.",
-    "kaynak": "ce76bdb5e275"
-  },
-  "agent-benchmark-suite": {
-    "ne": "Kapsamlı performans kıyaslaması, gerileme tespiti ve performans doğrulaması yapar.",
-    "ne_zaman": "Performans ölçümü ya da gerileme denetimi gerektiğinde.",
-    "kaynak": "fdbd53f03c4c"
-  },
-  "agent-performance-analyzer": {
-    "ne": "İş akışı verimsizliklerini bulup gidermek için performans darboğazlarını çözümler.",
-    "ne_zaman": "Bir iş akışının neden yavaş olduğunun bulunması istendiğinde.",
-    "kaynak": "19570eec3697"
-  },
-  "agent-performance-benchmarker": {
-    "ne": "Dağıtık mutabakat protokolleri için kapsamlı performans kıyaslaması uygular.",
-    "ne_zaman": "Mutabakat protokolü performansının ölçülmesi gerektiğinde.",
-    "kaynak": "ea811002c347"
-  },
-  "agent-performance-monitor": {
-    "ne": "Gerçek zamanlı metrik toplama, darboğaz çözümleme, SLA izleme ve anomali tespiti yapar.",
-    "ne_zaman": "Çalışan bir sistemin performansının sürekli izlenmesi istendiğinde.",
-    "kaynak": "b01104e8f341"
-  },
-  "agent-performance-optimizer": {
-    "ne": "Darboğazları bulan ve alt doğrusal algoritmalarla kaynak dağıtımını iyileştiren sistem performansı ajanı.",
-    "ne_zaman": "Hesaplama performansı ya da kaynak kullanımı iyileştirilecekken.",
-    "kaynak": "fd7cd88337e6"
-  },
-  "agent-security-manager": {
-    "ne": "Dağıtık mutabakat protokolleri için kapsamlı güvenlik mekanizmaları uygular.",
-    "ne_zaman": "Mutabakat katmanının güvenliğinin kurulması ya da denetlenmesi gerektiğinde.",
-    "kaynak": "c10520440c3f"
-  },
-  "agent-v3-performance-engineer": {
-    "ne": "Ruflo v3'ün performans hedeflerinden (Flash Attention hızlanması, arama iyileştirmeleri, kıyaslama paketi) sorumlu mühendis ajan.",
-    "ne_zaman": "Ruflo v3 performans çalışmaları yürütülürken.",
-    "kaynak": "045bf81813cb"
-  },
-  "agent-v3-security-architect": {
-    "ne": "Ruflo v3'ün güvenlik yenilemesinden, tehdit modellemesinden ve CVE giderme planından sorumlu mimar ajan.",
-    "ne_zaman": "Ruflo v3 güvenlik çalışmaları yürütülürken.",
-    "kaynak": "d2a55edc6a83"
-  },
-  "agent-adaptive-coordinator": {
-    "ne": "Kendi kendini düzenleyen sürü kalıpları ve gerçek zamanlı iyileştirmeyle topolojiyi dinamik değiştiren eşgüdüm ajanı.",
-    "ne_zaman": "Sürü topolojisinin iş yüküne göre uyarlanması gerektiğinde.",
-    "kaynak": "4dc0380480cc"
-  },
-  "agent-agent": {
-    "ne": "Karmaşık hedeflere ulaşmak için dinamik planlar kuran hedef odaklı eylem planlama (GOAP) uzmanı ajan.",
-    "ne_zaman": "Çok adımlı bir hedef için eylem planı çıkarılması istendiğinde.",
-    "kaynak": "6dd344cf824d"
-  },
-  "agent-agentic-payments": {
-    "ne": "Otonom yapay zekâ ticareti için kriptografik doğrulama ve Bizans mutabakatıyla çok ajanlı ödeme yetkilendirmesi yapar.",
-    "ne_zaman": "Ajanların ödeme yetkilendirmesi akışı kurulacakken.",
-    "kaynak": "57669f29c816"
-  },
-  "agent-app-store": {
-    "ne": "Flow Nexus içinde uygulama yayımlama, keşif, dağıtım ve pazaryeri işlemlerini yöneten uzman ajan.",
-    "ne_zaman": "Flow Nexus uygulama pazaryeriyle çalışılırken.",
-    "kaynak": "1fad3a3b2563"
-  },
-  "agent-arch-system-design": {
-    "ne": "Sistem mimarisi tasarımı, kalıplar ve üst düzey teknik kararlar için uzman ajan.",
-    "ne_zaman": "Bir sistemin mimarisi tasarlanırken ya da mimari karar verilirken.",
-    "kaynak": "93c33e3898bb"
-  },
-  "agent-architecture@ruvnet": {
-    "ne": "Sistem tasarımı için SPARC mimari aşaması uzmanı ajan.",
-    "ne_zaman": "SPARC akışının mimari aşamasında sistem tasarımı yapılırken.",
-    "kaynak": "df39b7eb1e4b"
-  },
-  "agent-authentication": {
-    "ne": "Flow Nexus MCP araçlarıyla giriş, kayıt, oturum ve kullanıcı hesabı işlemlerini yürüten uzman ajan.",
-    "ne_zaman": "Flow Nexus kimlik doğrulama ve kullanıcı yönetimi gerektiğinde.",
-    "kaynak": "1f1079cab387"
-  },
-  "agent-automation-smart-agent": {
-    "ne": "Akıllı ajan eşgüdümü ve dinamik ajan başlatma uzmanı.",
-    "ne_zaman": "İşe göre ajanların otomatik başlatılıp eşgüdümlenmesi istendiğinde.",
-    "kaynak": "a199c37dbe59"
-  },
-  "agent-base-template-generator": {
-    "ne": "Yeni proje, bileşen ya da özellik için temel şablon, başlangıç kodu ve yapılandırma üretir.",
-    "ne_zaman": "Temiz bir başlangıç şablonu ya da iskelet kod gerektiğinde.",
-    "kaynak": "849311d16cfd"
-  },
-  "agent-byzantine-coordinator": {
-    "ne": "Kötü niyetli aktör tespitiyle Bizans hata toleranslı mutabakat protokollerini eşgüdümler.",
-    "ne_zaman": "Hata toleranslı mutabakat gereken çok ajanlı kurulumlarda.",
-    "kaynak": "1413980ed912"
-  },
-  "agent-challenges": {
-    "ne": "Flow Nexus içinde kodlama görevleri, çözüm doğrulama, sıralama tabloları ve başarı sistemlerini yöneten uzman ajan.",
-    "ne_zaman": "Flow Nexus kodlama görevleri ve oyunlaştırma özellikleriyle çalışılırken.",
-    "kaynak": "77407e4417db"
   },
   "ecommerce-growth-strategy": {
     "ne": "Birim ekonomisiyle (CAC, LTV, AOV, katkı marjı) işletmenin durumunu teşhis eder, beş kaldıraçta (trafik, dönüşüm, AOV, elde tutma, genişleme) en etkili büyüme fırsatlarını bulur ve 90 günlük yol haritası çıkarır.",

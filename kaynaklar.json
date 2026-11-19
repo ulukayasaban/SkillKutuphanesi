@@ -1698,7 +1698,9 @@
         "^plugins/ruflo-ai-team/directory/"
       ],
       "bagimlilik": "Skillerin çoğu Ruflo (eski adıyla claude-flow) komut satırını ve MCP sunucusunu ister (npx ruflo / npx @claude-flow/cli, mcp__plugin_ruflo-* araçları); eklenti skilleri kendi eklentisinin araçlarını çağırır. Ruflo kurulu değilse yalnızca kavram referansı olarak işe yarar.",
-      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT; eski adı claude-flow): çoklu ajan orkestrasyonu, bellek, eklentiler. Aynı skillerin .agents/skills (Codex), .claude/skills, v3/ ve plugins/ altında kopya ve sürümleri var; araç ayna/sürüm olarak ayırır. plugins/ruflo-ai-team/directory/ aynı altı skilin birebir kopyasıdır (hariç). Aynı adı başka işte kullanan mevcut kayıtlar (security-scan, tdd-workflow, trader-risk, agent-architecture) kimliğini ve tercihini korur (durum_elle); ruflo sürümleri ad@ruvnet kimliğiyle alternatiftir."
+      "not": "'Yapay Zeka Skillleri' listesinden 2026-11-09'da eklendi. Resmî ürün reposu (MIT; eski adı claude-flow): çoklu ajan orkestrasyonu, bellek, eklentiler. Aynı skillerin .agents/skills (Codex), .claude/skills, v3/ ve plugins/ altında kopya ve sürümleri var; araç ayna/sürüm olarak ayırır. plugins/ruflo-ai-team/directory/ aynı altı skilin birebir kopyasıdır (hariç). Aynı adı başka işte kullanan mevcut kayıtlar (security-scan, tdd-workflow, trader-risk, agent-architecture) kimliğini ve tercihini korur (durum_elle); ruflo sürümleri ad@ruvnet kimliğiyle alternatiftir.",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist"
     },
     {
       "repo": "JohnHeibel/ClaudeAnimationBase",

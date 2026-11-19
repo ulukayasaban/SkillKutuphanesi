@@ -1598,58 +1598,6 @@
       "kismen",
       "LLM API anahtarı zorunlu (ücretsiz katmanı olan sağlayıcılar kullanılabilir), Pexels anahtarı ücretsiz, Edge TTS ücretsiz. Üretilmiş video sağlayıcıları (Seedance/Ark, OFox, MiniMax, MuAPI, Infistar, Jalapeno) ücretli görev açar; yalnızca açık onayla."
     ],
-    "verification-quality": [
-      "kismen",
-      "Doğrulama akışı yerel ve ücretsiz çalışır; Datadog'a metrik gönderme (DD_API_KEY) yalnızca isteğe bağlı bir entegrasyon örneğidir."
-    ],
-    "deepseek-chat": [
-      "ucretli",
-      "Tek işi DeepSeek API'sini çağırmaktır (DEEPSEEK_API_KEY, kullandıkça öde); anahtar yoksa çalışmaz."
-    ],
-    "deepseek-reason": [
-      "ucretli",
-      "Tek işi DeepSeek API'sini (deepseek-reasoner) çağırmaktır (DEEPSEEK_API_KEY, kullandıkça öde); anahtar yoksa çalışmaz."
-    ],
-    "cost-benchmark": [
-      "kismen",
-      "Yerel ölçüm ücretsizdir; Gemini/Sonnet/Opus karşılaştırma tabanları isteğe bağlıdır ve ilgili API anahtarıyla ücretlenir."
-    ],
-    "cost-openrouter": [
-      "kismen",
-      "OpenRouter hesabı ve anahtarı gerekir (hesap ücretsiz); skill yalnızca harcamayı okur, kendisi ücret doğurmaz."
-    ],
-    "flow-nexus-platform": [
-      "kismen",
-      "Flow Nexus bulut hesabı gerekir; kredi sistemiyle çalışır, ücretsiz katman var, pro/enterprise ücretlidir."
-    ],
-    "flow-nexus-neural": [
-      "kismen",
-      "Flow Nexus bulut hesabı gerekir; eğitim için ücretsiz katman var, büyük işler ücretli katmanda kredi harcar."
-    ],
-    "flow-nexus-swarm": [
-      "kismen",
-      "Flow Nexus bulut hesabı gerekir; kredi sistemiyle çalışır, ücretsiz katman var."
-    ],
-    "gaia-submission": [
-      "ucretli",
-      "GAIA kıyaslamasını Anthropic API anahtarıyla çalıştırır (kullandıkça öde); anahtarsız yürütülemez."
-    ],
-    "intelligence-transfer": [
-      "kismen",
-      "Yerel projeler arası kalıp kopyalama ücretsizdir; IPFS pazarına yayımlama Pinata anahtarı ister (Pinata'nın ücretsiz planı var)."
-    ],
-    "managed-agent": [
-      "ucretli",
-      "Anthropic Claude Managed Agents bulut çalışma zamanını kullanır (ANTHROPIC_API_KEY, beta erişimi; kullandıkça öde)."
-    ],
-    "browser-intent": [
-      "kismen",
-      "OpenAI uyumlu bir LLM sağlayıcısı ister: OpenRouter ya da Ollama Cloud (ücretli/kotalı) veya kendi yerel uç noktan (ücretsiz). Sağlayıcı yoksa skill kısıtlı kipte çalışır."
-    ],
-    "trader-cloud-backtest": [
-      "ucretli",
-      "Ağır işleri Anthropic Managed Agents bulutunda çalıştırır (ANTHROPIC_API_KEY, kullandıkça öde). Ücretsiz yol: yerel `trader-backtest`."
-    ],
     "higgsfield-generate": [
       "kismen",
       "Higgsfield hesabı gerekir; ücretsiz planın sınırlı kredisi var, çoğu model ve yoğun kullanım ücretli plan ya da kredi ister."
