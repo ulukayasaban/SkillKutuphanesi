@@ -238,7 +238,10 @@
       ],
       "bagimlilik": "HyperFrames CLI gerekir (npx hyperframes). Video iş akışı skilleri (/general-video, /faceless-explainer, /product-launch-video, /pr-to-video, /embedded-captions, /talking-head-recut) hyperframes çekirdek skillerine dayanır.",
       "not": "Resmî HyperFrames reposu (yıldızlı değil; kullanıcı onayıyla 2026-10-21'de eklendi). registry/blocks/* SKILL.md'leri 'hyperframes add' ile kurulan kompozisyon şablonlarıdır, ayrı skill değildir.",
-      "program": "hyperframes"
+      "program": "hyperframes",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Asıl işi kurulan bir HTML-video yazılımı, skiller kullanıcıları için; program tarafı programlar.json kartında izlenir"
     },
     {
       "repo": "OpenMontageInc/OpenMontage",
@@ -249,7 +252,10 @@
       "eski_adlar": [
         "calesthio/OpenMontage"
       ],
-      "program": "openmontage"
+      "program": "openmontage",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Asıl işi kurulan bir video üretim yazılımı, skiller kullanıcıları için; program tarafı programlar.json kartında izlenir"
     },
     {
       "repo": "lemomo-ai/lemo-opuscar",
@@ -1784,7 +1790,10 @@
         "commit": "01e85f4bbf5b3edffc7f8138406f3acc1dc43c66",
         "guvenlik_notu": "tools/ ve lib/ kodu gh api ile salt okundu: shell=True, eval ya da curl|sh yok; anahtarlar toolkit kökündeki .env'den okunup yalnız ilgili servise gider, kurulum komutları uç nokta kimliklerini bu .env'e yazar; ProPainter git clone ve pip kurulumu yalnız --install ya da etkileşimli y/N onayıyla ~/.video-toolkit altına yapılır; bulut GPU işlerinde R2 yoksa kullanıcının medyası herkese açık geçici sitelere (litterbox 24 saat, 0x0.st 30 gün) yüklenir, R2 varsa R2 gizli anahtarı kullanıcının kendi GPU uç noktasına iş yüküyle gönderilir."
       },
-      "program": "claude-code-video-toolkit"
+      "program": "claude-code-video-toolkit",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "Asıl işi bir video araç takımı, skiller kullanıcıları için; program tarafı programlar.json kartında izlenir"
     },
     {
       "repo": "WyattBlue/auto-editor",
