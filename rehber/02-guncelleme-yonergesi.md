@@ -121,7 +121,9 @@ oturum başındaki `aylik-ozet.py --hizli`'dir (damga 35 günü aşınca sorar).
 `notlar/site-takip.md`, sonuç aylık özete girer; ayrıntı rehber/03 B3.)
 1. `kaynak-cek.py` — tüm kaynaklar sabit commit'ten yeniden iner (indirme hatası varsa durur).
 2. `arsiv-yerlestir.py` — tekilleştirme, kategori, değerlendirme. **Elle yaptığın inceleme alanları korunur**
-   (`ozet_tr`, `kullanim_alani`, `teknoloji`, `roller`, `kalite`, `ortusme_grubu`, `kategori_elle`…).
+   (`ozet_tr`, `kullanim_alani`, `teknoloji`, `roller`, `kalite`, `ortusme_grubu`, `kategori_elle`…). Kaynak kaydında `medya_haric`
+   varsa listedeki tam repo-göreli tek dosya yolları (NFC, harf duyarlı; klasör/joker yok) arşive konmaz ve güncellemede geri gelmez
+   (`klasor_hash`/`atlanan_dosyalar` farkı üretmez; `SKILL.md`'den bu dosyalara giden bağlantı kırık sayılmaz, `KAYNAK.md`'de "dışlandı" yazar).
 2b. `yol-tara.py` — skill metinlerinde sabit genel yol taraması → `notlar/yol-denetimi.md` (hata zinciri durdurmaz).
 2c. `program-denetim.py` — programların sürüm denetimi → `notlar/program-denetimi.md` (hata zinciri durdurmaz).
 3. `kapsam-denetimi.py` — her SKILL.md'nin açıklandığını bağımsız olarak doğrular.
