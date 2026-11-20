@@ -3,21 +3,23 @@
 > Kullanıcıyla adım adım birlikte yazılıyor (başlangıç 2026-11-21). Taslaktır; uygulanana kadar geçerli kurallar `CLAUDE.md`, `rehber/` ve `notlar/kararlar.md` içindedir.
 > Önceki plan: `notlar/plan-tur-surecleri.md` (çekirdek bitti, K-65). Dünkü Opus incelemesi özeti aşağıda "Girdi 3".
 
-## Yol haritası
-1. Amaç ve acı noktaları — **TAMAM (2026-11-21)**
-2. Temizlik düzeyi — **TAMAM (2026-11-21): ortadaki yol seçildi**
-3. Veri düzeni: kaynak, skill, kit, program, proje kayıtları
+## Yol haritası (2026-11-21'de token adımı eklendi)
+1. Amaç ve acı noktaları — **TAMAM**
+2. Temizlik düzeyi — **TAMAM (ortadaki yol)**
+3. Veri düzeni: kaynak, skill, kit, program, proje kayıtları — **bulgular toplandı, karar bekliyor**
 4. Giriş süreçleri: yeni repo/skill (tür bazlı)
 5. Projelerdeki skiller: kurulum, güncelleme, izleme
 6. Kalite, güvenlik, ücret ve onay kuralları (kullanıcıya bağımlılık merdiveni)
-7. Araçlar, ajanlar, kota ve maliyet
-8. Geçiş planı ve kabul senaryoları
+7. **Token ve maliyet süreçleri (YENİ):** oturum disiplini, model seçimi, bakım modu, açılış belge yükü, claude-mem gözlemcisi, haftalık maliyet raporu
+8. Araçlar, ajanlar ve kota
+9. Geçiş planı ve kabul senaryoları
 
 ## Adım 1 sonucu: hedefler ve şartlar
 Kullanıcı dört hedefin hepsini seçti: **sadelik, güvenilirlik, hız ve az onay, projelerdeki skiller**. Üç ek şart koydu; bunlar bütün adımları kesen kurallardır:
 
 - **K1 Hafıza:** Süreçler tasarlanırken kullanıcının bilgisayarındaki hafıza işlemleri de değerlendirmeye girer (neyin nerede tutulduğu, çakışma, token yükü).
 - **K2 Maliyet:** Kütüphane süreçleri ilerledikçe her sürecin maliyeti (token, kota, süre, disk, onay sayısı) hesaplanır; her şey net görünür.
+- **K4 Token bütçesi (2026-11-21):** Her adımın ve sürecin tahmini token maliyeti yazılır; planlama konuşmaları kısa oturumlarda yapılır, kalıcı hafıza bu dosyadır (oturum ≈ 288 bin token bağlam taşıyıp her turda yeniden okunuyor); rutin işler ucuz modelle ve LLM'siz betikle; yeni geliştirme yerine bakım modu.
 - **K3 Bağımsızlık:** Bundan sonra eklenen repolarda süreçler kullanıcıya bağımlı olmaz: iş uçtan uca yürür, kullanıcıya yalnız kırmızı çizgi kararları gelir.
 
 ## Girdi 1: kütüphanenin bugünkü durumu (2026-11-21, sayılan)
@@ -97,6 +99,20 @@ Kullanım: Claude haftalık ≈ %74 (beklenen %45), Fable haftalık %64, Antigra
 - **Baştan, sade yazılır:** `CLAUDE.md`/`AGENTS.md`, `BASLA.md`, rehberler, hazır istemler, `surecler/` dosyaları, hafıza düzeni (neyin nerede tutulacağı), maliyet kaydı.
 - **Plana iş olarak girer:** yukarıdaki 9 doğrulanmış eksik.
 - Tam sıfırlama yapılmaz (4 projenin bağlarını ve inceleme kayıtlarını riske atar, eksiklerin hiçbirini çözmek için gerekli değil).
+
+## Adım 3 bulguları: veri düzeni (2026-11-21, sayılan)
+- 16 kök JSON var. Büyükler: `registry.json` 11,5 MB (2.849 skill, her kayıtta 41 alan), `konu-takip.json` 1,2 MB, `aciklama-tr.json` 0,8 MB, `gelistiriciler.json` 0,2 MB, `kaynaklar.json` 154 KB.
+- **İki sınıflandırma yan yana:** `tip` (T1..T8) ve `tur`/`bolum`. 18 araç `kaynaklar.json` okuyor, `tip`'e bağlı. Skill kayıtlarındaki `tip` kopyası kaynağınkinden **138 skilde farklı** (kopya senkron değil).
+- **Elle/LLM düzenlenen ama aracı olmayan dosyalar** (yazan araç çıkmadı): `kategori-kurallari.json`, `kategoriler.json`, `kitler.json`, `programlar.json`, `ucret-siniflandirma.json` (553 anahtar), `yedekler.json`, `yapay-zeka-araclari.json`. Her değişiklik oturumda elle JSON düzenlemesi = token ve hata riski.
+- **Bölünmüş saklama:** Türkçe açıklamalar ayrı `aciklama-tr.json`'da (2.208 kayıt; **643 skilin açıklaması yok**, 2 yetim kimlik); ücret `ucret-siniflandirma.json` + registry'de `ucret` ve `ucret_kaynagi`, `ucret_notu` alanlarında.
+- **Karışık kayıt:** `registry.json` skill kaydında karar alanları (kategori, inceleme, ücret, değerlendirme) ile araçla ölçülen alanlar (hash'ler, boyut, bağımlılık, kırık bağlantı, yol bağımlılığı) aynı yerde.
+- Üretilen çıktılar git'te: `KATALOG.md` 732 KB, `skiller/` 1,4 MB, `notlar/*.md` raporları; depoda 21.625 izlenen dosya.
+
+### Önerilen veri düzeni (taslak, karar bekliyor): üç katman
+1. **Kararlar (küçük, onaylı, elle):** `kaynaklar.json`, `projeler.json`, `programlar.json`, `kitler.json`, `yedekler.json`, kural dosyaları. Değişiklik bir araç komutuyla (elle JSON düzenlemesi azalır).
+2. **İncelemeler (bir kez üretilir):** kategori, ücret, Türkçe özet, risk: skill başına tek yer.
+3. **Ölçülenler ve görünümler (araç üretir, elle düzenlenmez):** hash, boyut, bağımlılık, fihrist, `KATALOG.md`, `skiller/`, `notlar/*.md`; `dogrula.py` elle düzenlemeyi ve senkron bozukluğunu yakalar.
+Hafif yol (önerilen): dosyaları bölmeden, hangi alanın hangi katmana ait olduğunu yazılı kural + `dogrula.py` denetimi yapmak; `tip` kopyasını `tur`'dan otomatik türetmek. Tam ayrım (registry'yi iki dosyaya bölmek) 14 aracı etkiler, bu yüzden önerilmez.
 
 ## Açık soru (adım 3)
 Veri düzeni: kaynak, skill, kit, program ve proje kayıtlarının hangisi tek doğru kaynak olacak, hangileri üretilmiş görünüm olacak?
