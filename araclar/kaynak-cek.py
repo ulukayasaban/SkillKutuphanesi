@@ -32,7 +32,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GECICI, KAYNAKLAR, KOK, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
-                   klon_temizle, medya_haric_kumesi, medya_haric_skill_kumesi, repo_agaci, repo_guncel, repo_lisansi, yerel_agac,
+                   klon_temizle, medya_haric_kumesi, medya_haric_mi, repo_agaci, repo_guncel, repo_lisansi, yerel_agac,
                    yerel_commit, ARSIVLENEN_TIPLER, YEREL_TIPLER, arsive_cekilir)
 
 # T7 = yerel kaynak (kullanıcının kendi skilleri, kendi/), T8 = siteden alınan skiller (site/): GitHub'a hiç sorulmaz, ağ kullanılmaz.
@@ -67,10 +67,10 @@ def agac_klasor_hash(agac, d, ayar, kayit=None):
     h = hashlib.sha256()
     on = (d + "/") if d else ""
     haric = ayar["skill_ici_haric"] + (kayit or {}).get("dosya_haric", [])
-    medya_haric = medya_haric_skill_kumesi(kayit, d)
+    medya_haric = medya_haric_kumesi(kayit)
     for e in sorted((e for e in agac if e["type"] == "blob" and e["path"].startswith(on)), key=lambda e: e["path"]):
         rel = e["path"][len(on):]
-        if not is_skill_md(rel) and (rel in medya_haric or ilk_eslesen(haric, rel)):
+        if medya_haric_mi(e["path"], medya_haric) or (not is_skill_md(rel) and ilk_eslesen(haric, rel)):
             continue
         h.update(rel.encode())
         h.update(e["sha"].encode())
@@ -167,9 +167,9 @@ def skill_klasorlerini_sec(kayit, agac, ayar, tutulan_uygula=True):
 
 def dosyalari_listele(kayit, agac, d, ayar):
     # dosya_haric: repo kaydına özel, skill klasörü içindeki göreli yollara uygulanır (ör. kökteki skill'in .previews/ klasörü)
-    # medya_haric: arşive geri gelmeyecek medya dışlama listesi (tam göreli yol; atlanan_dosyalar'a girmez, KAYNAK.md'de fark yaratmaz)
+    # medya_haric: arşive geri gelmeyecek medya dışlama listesi (tam repo-göreli tek dosya yolu; atlanan_dosyalar'a girmez)
     haric = ayar["skill_ici_haric"] + kayit.get("dosya_haric", [])
-    medya_haric = medya_haric_skill_kumesi(kayit, d)
+    medya_haric = medya_haric_kumesi(kayit)
     sinir = ayar["max_dosya_mb"] * 1024 * 1024
     sonuc, atlanan = [], []
     for e in agac:
@@ -183,7 +183,7 @@ def dosyalari_listele(kayit, agac, d, ayar):
             rel = e["path"]
             if kayit.get("kok_dosyalari") and rel not in kayit["kok_dosyalari"]:
                 continue
-        if not is_skill_md(rel) and rel in medya_haric:
+        if medya_haric_mi(e["path"], medya_haric):
             continue
         if not is_skill_md(rel) and (ilk_eslesen(haric, rel) or (e.get("size") or 0) > sinir):  # size None: sonra yerelde
             atlanan.append(rel)

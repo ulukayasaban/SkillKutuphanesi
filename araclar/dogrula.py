@@ -12,6 +12,7 @@
   araç/bayrak adları ve eski anlatım (hepsi UYARI; HATA yalnız ayrışmayan JSON kayıt dosyası ve CLAUDE/AGENTS farkı)
 """
 import json
+import os
 import re
 import subprocess
 import sys
@@ -19,9 +20,10 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, frontmatter, frontmatter_onar,  # noqa: E402
-                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, medya_haric_skill_kumesi,
-                   medya_haric_yol_gecerli, repo_guncel, yol_istisna_denetimi)
+from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, YEREL_TIPLER, frontmatter, frontmatter_onar,  # noqa: E402
+                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, medya_haric_korunur_mu,
+                   medya_haric_kumesi, medya_haric_mi, medya_haric_normal, medya_haric_yol_gecerli, repo_guncel,
+                   yol_istisna_denetimi)
 
 
 def github_muaf_repolar(tum_listeler, korunan_slug, konu_durum):
@@ -421,7 +423,9 @@ def kaynak_tur_hatalari(k):
             yollar = []
         for y in yollar:
             if not medya_haric_yol_gecerli(y):
-                h.append(f"kaynaklar.json: {repo} medya_haric geçersiz yol (yol geçişi '..' ya da mutlak yol yasak): {y!r}")
+                h.append(f"kaynaklar.json: {repo} medya_haric geçersiz yol (yalnız tam repo-göreli tek dosya yolu; mutlak yol, '..', joker yasak): {y!r}")
+            elif medya_haric_korunur_mu(y):
+                h.append(f"kaynaklar.json: {repo} medya_haric içinde SKILL.md veya KAYNAK.md dışlanamaz: {y!r}")
     return h
 
 
@@ -455,55 +459,119 @@ def _e6_kaynaklar(kok, h, u):
             u.append(f"kaynaklar.json: {repo} bilinmeyen anahtar: {', '.join(yabanci)}")
         h.extend(kaynak_tur_hatalari(k))
     _skill_bagimlilik(kok, kayitlar, u)
-    _medya_haric(kok, kayitlar, u)
+    _medya_haric(kok, kayitlar, h, u)
 
 
-def _medya_haric(kok, kayitlar, u):
-    """'medya_haric': arşive geri gelmeyecek medya dışlama listesi.
-    Yol o kaynağın bilinen bir skil klasörüne karşılık gelmiyorsa (eğer repo kökünde olmayan birden çok skil varsa) ya da
-    listede olup arşivde hâlâ duran dosya varsa UYARI verir."""
+def _agac_tara(klasor: Path):
+    """Bir klasör altındaki gerçek dosya ve klasör yollarını NFC normalleştirilmiş ve harf-duyarlı olarak toplar."""
+    dosyalar_nfc, dosyalar_kucuk = set(), {}
+    klasorler_nfc, klasorler_kucuk = set(), {}
+    if not klasor.is_dir():
+        return dosyalar_nfc, dosyalar_kucuk, klasorler_nfc, klasorler_kucuk
+    for yol, klasorler, dosyalar in os.walk(klasor, followlinks=False):
+        rel_d = Path(yol).relative_to(klasor).as_posix()
+        onek = "" if rel_d == "." else (rel_d + "/")
+        for d in klasorler:
+            p = medya_haric_normal(onek + d)
+            klasorler_nfc.add(p)
+            klasorler_kucuk.setdefault(p.lower(), p)
+        for f in dosyalar:
+            p = medya_haric_normal(onek + f)
+            dosyalar_nfc.add(p)
+            dosyalar_kucuk.setdefault(p.lower(), p)
+    return dosyalar_nfc, dosyalar_kucuk, klasorler_nfc, klasorler_kucuk
+
+
+def _medya_haric(kok, kayitlar, h, u):
+    """'medya_haric': arşive geri gelmeyecek medya dışlama listesi (yalnız tam repo-göreli tek dosya yolları, NFC, harf duyarlı).
+    - Kaynak/arşiv ağacında klasör gösteren yol -> HATA
+    - Hiçbir skil/varyant klasörüne karşılık gelmeyen yol -> UYARI
+    - Arşivde (_varyantlar dahil) hâlâ duran dosya -> UYARI
+    - Harf büyüklüğü farkıyla eşleşen girdi -> UYARI"""
     ozel = [k for k in kayitlar if isinstance(k, dict) and isinstance(k.get("repo"), str) and "medya_haric" in k]
     if not ozel:
         return
     kok = Path(kok)
     reg, _ = _json_kayit(kok, "registry.json", [])
-    if reg is None or not isinstance(reg, dict):
-        return
     repo_skiller = {}
-    for s in reg.get("skiller", []):
-        if isinstance(s, dict) and isinstance(s.get("repo"), str):
-            repo_skiller.setdefault(s["repo"], []).append(s)
+    if isinstance(reg, dict):
+        for s in reg.get("skiller", []):
+            if isinstance(s, dict) and isinstance(s.get("repo"), str):
+                repo_skiller.setdefault(s["repo"], []).append(s)
+    # Eski registry kayıtlarında varyant_yollari yoksa .gecici/cekilen/manifest.json'dan yedek oku
+    manifest_vy = {}
+    mf_yol = kok / ".gecici" / "cekilen" / "manifest.json"
+    if mf_yol.is_file():
+        mf = json_oku(mf_yol, {}) or {}
+        for m in mf.get("kayitlar", []):
+            if isinstance(m, dict) and isinstance(m.get("varyant_yollari"), dict):
+                manifest_vy[(m.get("repo"), m.get("kaynak_yol") or "")] = m["varyant_yollari"]
+
     for k in ozel:
         repo = k["repo"]
-        mh = k["medya_haric"]
-        if isinstance(mh, dict):
-            yollar = [x for x in mh if medya_haric_yol_gecerli(x)]
-        elif isinstance(mh, list):
-            yollar = [x for x in mh if medya_haric_yol_gecerli(x)]
-        else:
+        mh_kume = medya_haric_kumesi(k)
+        if not mh_kume:
             continue
+        yollar = sorted(mh_kume)
+
+        # 1) Yerel kaynak ağacı (T7/T8): klasör yolu HATA, harf büyüklüğü farkı UYARI
+        if k.get("tip") in YEREL_TIPLER and isinstance(k.get("yerel"), str) and k["yerel"]:
+            yk = kok / k["yerel"]
+            if yk.is_dir():
+                d_nfc, d_kucuk, k_nfc, k_kucuk = _agac_tara(yk)
+                for y in yollar:
+                    if y in k_nfc:
+                        h.append(f"kaynaklar.json: {repo} medya_haric yolu klasör gösteriyor (yalnız tek dosya yolu yazılabilir): {y!r}")
+                    elif y not in d_nfc and y.lower() in d_kucuk:
+                        u.append(f"kaynaklar.json: {repo} medya_haric yolu harf büyüklüğü farkıyla eşleşiyor (harf duyarlıdır): {y!r} != {d_kucuk[y.lower()]!r}")
+                    elif y not in k_nfc and y.lower() in k_kucuk:
+                        u.append(f"kaynaklar.json: {repo} medya_haric yolu harf büyüklüğü farkıyla klasöre denk geliyor: {y!r} != {k_kucuk[y.lower()]!r}")
+
         sk_list = repo_skiller.get(repo, [])
         if not sk_list:
             continue
-        kaynak_yollari = [str(s.get("kaynak_yol") or "").strip("/") for s in sk_list]
-        for y in yollar:
-            # Birden çok skil varsa ve hiçbir skil kökte ('') değilse, yol ya bir skilin kaynak_yol'u ile başlamalı ya da doğrudan göreli olarak en az bir skilin klasör düzenine uymalı
-            if any(ky for ky in kaynak_yollari) and "" not in kaynak_yollari:
-                if not any(y.startswith(ky + "/") for ky in kaynak_yollari if ky):
-                    # repo köküne göre yazılmış ama bilinen hiçbir skil klasörüyle eşleşmiyor
-                    if len(kaynak_yollari) > 1 or "/" in y and y.split("/", 1)[0] in ("skills", "plugins", "tools", ".claude", ".agents", ".codex"):
-                        u.append(f"kaynaklar.json: {repo} medya_haric yolu hiçbir skil klasöründe görünmüyor: {y!r}")
+
+        # 2) Ana skiller ve _varyantlar klasörlerinin (kaynak_yol, arsiv_yol) çiftleri
+        hedefler = []
         for s in sk_list:
-            ky = s.get("kaynak_yol") or ""
-            sk_mh = medya_haric_skill_kumesi(k, ky)
-            if not sk_mh:
-                continue
+            ky = medya_haric_normal(str(s.get("kaynak_yol") or "").strip("/"))
             arsiv_yol = s.get("yol")
             if isinstance(arsiv_yol, str) and arsiv_yol:
-                sk_klasor = kok / arsiv_yol
-                for rel in sorted(sk_mh):
-                    if (sk_klasor / rel).exists():
-                        u.append(f"kaynaklar.json: {repo} medya_haric dosyası arşivde hâlâ duruyor: {arsiv_yol}/{rel}")
+                hedefler.append((ky, arsiv_yol))
+            s_vy = s.get("varyant_yollari") if isinstance(s.get("varyant_yollari"), dict) else {}
+            m_vy = manifest_vy.get((repo, s.get("kaynak_yol") or ""), {})
+            for arac, v_yol in (s.get("varyantlar") or {}).items():
+                if isinstance(v_yol, str) and v_yol:
+                    v_ky = medya_haric_normal(str(s_vy.get(arac) or m_vy.get(arac) or ky).strip("/"))
+                    hedefler.append((v_ky, v_yol))
+
+        kaynak_yollari = {ky for ky, _ in hedefler}
+        kok_skil_var = "" in kaynak_yollari
+        dolu_ky = {ky for ky in kaynak_yollari if ky}
+        for y in yollar:
+            if y in dolu_ky:
+                h.append(f"kaynaklar.json: {repo} medya_haric yolu skil klasörünü gösteriyor (yalnız tek dosya yolu yazılabilir): {y!r}")
+                continue
+            if not kok_skil_var and not any(y.startswith(ky + "/") for ky in dolu_ky):
+                u.append(f"kaynaklar.json: {repo} medya_haric yolu hiçbir skil klasöründe görünmüyor: {y!r}")
+
+        # 3) Arşiv ve _varyantlar ağaçlarında dosya/klasör/harf-büyüklüğü kontrolü
+        for ky, arsiv_yol in hedefler:
+            sk_klasor = kok / arsiv_yol
+            if not sk_klasor.is_dir():
+                continue
+            d_nfc, d_kucuk, k_nfc, k_kucuk = _agac_tara(sk_klasor)
+            onek = (ky + "/") if ky else ""
+            sk_yollar = [y[len(onek):] for y in yollar if y.startswith(onek) and len(y) > len(onek)] if onek else list(yollar)
+            for rel in sorted(set(sk_yollar)):
+                if rel in k_nfc and medya_haric_mi(rel, mh_kume, ky):
+                    h.append(f"kaynaklar.json: {repo} medya_haric yolu arşivde klasör gösteriyor (yalnız tek dosya yolu yazılabilir): {arsiv_yol}/{rel}")
+                elif rel in d_nfc and medya_haric_mi(rel, mh_kume, ky):
+                    u.append(f"kaynaklar.json: {repo} medya_haric dosyası arşivde hâlâ duruyor: {arsiv_yol}/{rel}")
+                elif rel.lower() in d_kucuk:
+                    u.append(f"kaynaklar.json: {repo} medya_haric yolu harf büyüklüğü farkıyla eşleşiyor (harf duyarlıdır): {arsiv_yol}/{rel} != {d_kucuk[rel.lower()]!r}")
+                elif rel.lower() in k_kucuk:
+                    u.append(f"kaynaklar.json: {repo} medya_haric yolu arşivde harf büyüklüğü farkıyla klasöre denk geliyor: {arsiv_yol}/{rel} != {k_kucuk[rel.lower()]!r}")
 
 
 def _skill_bagimlilik(kok, kayitlar, u):

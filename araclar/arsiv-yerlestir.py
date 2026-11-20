@@ -12,6 +12,7 @@ Kullanım: python3 araclar/arsiv-yerlestir.py
 import hashlib
 import math
 import os
+import posixpath
 import re
 import shutil
 import sys
@@ -22,7 +23,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter,  # noqa: E402
                    frontmatter_onar, frontmatter_teshis, global_durum, symlink_taslaklari,
                    taslak_baglantilarini_cevir, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu,
-                   ARSIVLENEN_TIPLER, YEREL_KLASOR, YEREL_TIPLER, medya_haric_skill_kumesi, site_gelistirici, site_kayitlari, yerel_gelistirici)
+                   ARSIVLENEN_TIPLER, YEREL_KLASOR, YEREL_TIPLER, medya_haric_kumesi, medya_haric_mi, medya_haric_normal,
+                   site_gelistirici, site_kayitlari, yerel_gelistirici)
 
 KURALLAR = KOK / "kategori-kurallari.json"
 GELISTIRICILER = KOK / "gelistiriciler.json"
@@ -95,17 +97,26 @@ def kaynak_medya_haric_birlesik(repolar, repo):
     return {"medya_haric": birlesik} if birlesik else {}
 
 
-def _kopyala_medya_haric(kaynak: Path, hedef: Path, haric_yollar):
-    """shutil.copytree benzeri: `haric_yollar` (kaynak köküne göre posix yolları kümesi) içindeki dosyaları hedefe KOYMAZ."""
-    haric_set = set(haric_yollar or ())
+def _kopyala_medya_haric(kaynak: Path, hedef: Path, haric_kumesi, kaynak_yol: str = ""):
+    """shutil.copytree benzeri: `haric_kumesi` (tam repo-göreli NFC dosya yolları) içindeki DOSYALARI hedefe KOYMAZ.
+    Klasörler asla atlanmaz; SKILL.md ve KAYNAK.md asla atlanmaz."""
+    haric_set = {medya_haric_normal(x) for x in (haric_kumesi or ())}
     if not haric_set:
         shutil.copytree(kaynak, hedef)
         return
 
     def _ignore(dizin, adlar):
-        rel_dizin = Path(dizin).relative_to(kaynak).as_posix()
+        dizin_p = Path(dizin)
+        rel_dizin = dizin_p.relative_to(kaynak).as_posix()
         onek = "" if rel_dizin == "." else (rel_dizin + "/")
-        return {a for a in adlar if a.lower() != "skill.md" and (onek + a) in haric_set}
+        atla = set()
+        for a in adlar:
+            tam = dizin_p / a
+            if tam.is_dir() and not tam.is_symlink():
+                continue  # YALNIZ tek DOSYA yolları dışlanır; klasör yolu asla atlanmaz
+            if medya_haric_mi(onek + a, haric_set, kaynak_yol):
+                atla.add(a)
+        return atla
 
     shutil.copytree(kaynak, hedef, ignore=_ignore)
 
@@ -169,17 +180,28 @@ def yapisal_sorunlar(fm, metin, ad):
     return s
 
 
-def kirik_baglantilar(klasor: Path):
-    """SKILL.md'deki göreli markdown bağlantıları arşivde var mı? (http, #, mailto, şablon değişkenleri hariç)"""
+def _baglanti_ayir(klasor: Path, medya_haric=(), kaynak_yol: str = ""):
+    """SKILL.md'deki göreli markdown bağlantıları: (kirik_liste, dislanan_medya_liste).
+    medya_haric ile dışlanmış dosyalara giden bağlantılar kırık sayılmaz (puanı düşürmez); KAYNAK.md'de 'dışlandı' olarak yazılır."""
     metin = (klasor / "SKILL.md").read_text(encoding="utf-8", errors="replace")
-    kirik = []
+    kirik, dislanan = [], []
     for hedef in re.findall(r"\]\(([^)\s]+)\)", metin):
         if re.match(r"^(https?:|#|mailto:|<|\$|\{)", hedef) or "*" in hedef:
             continue
         yol = hedef.split("#")[0]
-        if yol and not (klasor / yol).exists():
+        if not yol or (klasor / yol).exists():
+            continue
+        norm = posixpath.normpath(yol)
+        if medya_haric and not norm.startswith("../") and norm != "." and medya_haric_mi(norm, medya_haric, kaynak_yol):
+            dislanan.append(yol)
+        else:
             kirik.append(yol)
-    return sorted(set(kirik))
+    return sorted(set(kirik)), sorted(set(dislanan))
+
+
+def kirik_baglantilar(klasor: Path, medya_haric=(), kaynak_yol: str = ""):
+    """SKILL.md'deki göreli markdown bağlantıları arşivde var mı? (http, #, mailto, şablon değişkenleri ve medya_haric hariç)"""
+    return _baglanti_ayir(klasor, medya_haric, kaynak_yol)[0]
 
 
 METIN_UZANTILARI = (".md", ".mdx", ".txt")
@@ -326,6 +348,9 @@ def kaynak_md(k):
                         + ", ".join(f"`{a}`" for a in k["kardes_bagimliliklari"]))
     if k.get("kirik_baglantilar"):
         satirlar.append("- **SKILL.md'de olup bulunamayan dosyalar:** " + ", ".join(f"`{x}`" for x in k["kirik_baglantilar"][:15]))
+    if k.get("_dislanan_medya"):
+        satirlar.append("- **SKILL.md'deki medya bağlantıları (`medya_haric`, dışlandı):** "
+                        + ", ".join(f"`{x}`" for x in k["_dislanan_medya"][:15]))
     if k.get("kopya_kaynaklar"):
         satirlar.append("- **Birebir aynısı şuralarda da var:** " + ", ".join(k["kopya_kaynaklar"]))
     if k.get("atlanan_dosyalar"):
@@ -426,7 +451,8 @@ def main():
     gelistiriciler = json_oku(GELISTIRICILER, {"repolar": {}})["repolar"]
     site = site_kayitlari(KOK)  # T8 skillerinin sahip/lisans/site bilgisi (site-takip.json)
     kaynak_kayit = {k["repo"]: k for k in _ayar0["repolar"]}
-    medya_haric_repo = {r: kaynak_medya_haric_birlesik(_ayar0["repolar"], r) for r in {k["repo"] for k in _ayar0["repolar"]}}
+    medya_haric_repo = {r: medya_haric_kumesi(kaynak_medya_haric_birlesik(_ayar0["repolar"], r))
+                        for r in {k["repo"] for k in _ayar0["repolar"]}}
     bag_ozel = skill_bagimlilik_ozel(_ayar0["repolar"])
     gecerli_kat = {f"{a}/{k}" for a, v in kategoriler["alanlar"].items() for k in v["kategoriler"]}
     eski_liste = json_oku(REGISTRY, {"skiller": []})["skiller"]
@@ -440,11 +466,13 @@ def main():
         if not (k["_yerel"] / "SKILL.md").exists():
             print(f"UYARI: SKILL.md inmemiş -> {k['repo']}:{k['kaynak_yol']}")
             continue
-        k["_mh"] = medya_haric_skill_kumesi(medya_haric_repo.get(k["repo"]), k.get("kaynak_yol", ""))
-        if k.get("atlanan_dosyalar") and k["_mh"]:
-            k["atlanan_dosyalar"] = [x for x in k["atlanan_dosyalar"] if x not in k["_mh"]]
+        mh_repo = medya_haric_repo.get(k["repo"], set())
+        ky = k.get("kaynak_yol", "")
+        k["_mh"] = mh_repo
+        if k.get("atlanan_dosyalar") and mh_repo:
+            k["atlanan_dosyalar"] = [x for x in k["atlanan_dosyalar"] if not medya_haric_mi(x, mh_repo, ky)]
         k["_smh"] = skill_md_hash(k["_yerel"])
-        k["_kh"] = klasor_hash(k["_yerel"], k["_mh"])
+        k["_kh"] = klasor_hash(k["_yerel"], mh_repo, kaynak_yol=ky)
         gruplar.setdefault(k["ad"], []).append(k)
 
     yeni = kimlik_ata(gruplar, eski_kaynak)
@@ -467,14 +495,15 @@ def main():
             print(f"UYARI geçersiz kategori {kat} -> {k['id']}")
             kat = "d-ai-otomasyon/04-skill-plugin-yazimi"
         hedef = YENI / kat / k["id"]
-        _kopyala_medya_haric(k["_yerel"], hedef, k.get("_mh"))
+        ky = k.get("kaynak_yol", "")
+        mh_repo = k.get("_mh") or set()
+        _kopyala_medya_haric(k["_yerel"], hedef, mh_repo, kaynak_yol=ky)
         varyantlar = {}
         varyant_yollari = k.get("varyant_yollari") or {}
         for arac, yerel in (k.get("varyantlar") or {}).items():
             if yerel:
                 vh = YENI / "_varyantlar" / k["id"] / arac
-                v_mh = medya_haric_skill_kumesi(medya_haric_repo.get(k["repo"]), varyant_yollari.get(arac, k.get("kaynak_yol", "")))
-                _kopyala_medya_haric(GECICI / yerel, vh, v_mh)
+                _kopyala_medya_haric(GECICI / yerel, vh, mh_repo, kaynak_yol=varyant_yollari.get(arac, ky))
                 varyantlar[arac] = goreli(vh)
         k["varyantlar"] = varyantlar
         metin = (hedef / "SKILL.md").read_text(encoding="utf-8", errors="replace")
@@ -490,6 +519,8 @@ def main():
         ana_hash = klasor_hash(hedef)
         varyant_hash = {a: klasor_hash(YENI / Path(v).relative_to("arsiv")) for a, v in varyantlar.items()}
         kurulum_hash = hashlib.sha256((ana_hash + "".join(f"|{a}:{h}" for a, h in sorted(varyant_hash.items()))).encode()).hexdigest()
+        kirik_liste, dislanan_liste = _baglanti_ayir(hedef, mh_repo, ky)
+        k["_dislanan_medya"] = dislanan_liste
         kayit = {
             "id": k["id"], "ad": k["ad"], "durum": k["durum"], "kategori": kat, "alan": kat.split("/")[0],
             "yol": goreli(hedef), "varyantlar": varyantlar,
@@ -505,7 +536,7 @@ def main():
             "uyum": onceki.get("uyum_elle") or uyum_tespit(metin, k, fm),
             "yapisal_sorunlar": yapisal_sorunlar(fm, metin, k["ad"]),
             "yol_bagimliligi": bool(yol_bag),
-            "kirik_baglantilar": kirik_baglantilar(hedef),
+            "kirik_baglantilar": kirik_liste,
             "baglam_yuku": baglam_yuku(hedef), "boyut_kb": round(boyut(hedef) / 1024),
             "skill_md_kb": round((hedef / "SKILL.md").stat().st_size / 1024, 1),
             "klasor_adi": k["klasor_adi"].split("~")[0],
@@ -514,6 +545,8 @@ def main():
             "globalde": global_durum(k["ad"], ana_hash),
             "gelistirici": gel or {}, "inceleme": "otomatik",
         }
+        if varyantlar and varyant_yollari:
+            kayit["varyant_yollari"] = {a: varyant_yollari[a] for a in varyantlar if a in varyant_yollari}
         for alan in ELLE_ALANLAR:
             if alan in onceki:
                 kayit[alan] = onceki[alan]
