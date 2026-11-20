@@ -350,17 +350,19 @@ def _e5_taban(kok, h, u):
         u.append("notlar/genel-klasor-tabani.json: surum 1 değil")
 
 
-# Tür/bölüm alanları (notlar/plan-tur-surecleri.md bölüm 4 ve 7): alan VARSA denetlenir, yoksa sessiz (kayıtlara 3. adımda yazılır).
+# Tür/bölüm alanları (notlar/plan-tur-surecleri.md bölüm 4 ve 7): tur ve bolum ZORUNLU (K-65, plan adım 3 bitti); öbür alanlar varsa denetlenir.
 KAYNAK_TURLERI = {"koleksiyon": "arsiv", "tek-skil": "arsiv", "urun-skil": "arsiv", "repo-ici": "arsiv", "dev-koleksiyon": "fihrist",
                   "kit": "katalog", "program": "katalog", "referans": "not", "kendi": "arsiv", "site": "arsiv"}
 KAYNAK_BOLUMLERI = ("arsiv", "fihrist", "katalog", "not")
 
 
 def kaynak_tur_hatalari(k):
-    """Bir kaynak kaydının tur/bolum/boyut vb. alanları için HATA metinleri (alan yoksa boş liste)."""
+    """Bir kaynak kaydının tur/bolum/boyut vb. alanları için HATA metinleri (tur ve bolum yoksa HATA)."""
     repo = k.get("repo")
     h = []
     tur, bolum = k.get("tur"), k.get("bolum")
+    if not tur or not bolum:  # K-65: her kaynak kaydında tür ve bölüm ZORUNLUDUR (plan adım 3 bitiş koşulu)
+        h.append(f"kaynaklar.json: {repo} tür/bölüm alanı eksik (tur={tur!r}, bolum={bolum!r}); tür belirleme: araclar/tur-belirle.py")
     if "tur" in k and tur not in KAYNAK_TURLERI:
         h.append(f"kaynaklar.json: {repo} tur geçersiz: {tur!r} ({', '.join(KAYNAK_TURLERI)})")
     if "bolum" in k and bolum not in KAYNAK_BOLUMLERI:

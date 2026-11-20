@@ -118,7 +118,11 @@
       "oncelik": 2,
       "tur": "tek-skil",
       "bolum": "arsiv",
-      "tur_gerekce": "T1 ve arşivde 1 bağımsız skil bulunuyor; kök bağımlılığı yok."
+      "tur_gerekce": "T1 ve arşivde 1 bağımsız skil bulunuyor; kök bağımlılığı yok.",
+      "medya_haric": {
+        "docs/example-deterministic-measurement.png": "belge-gorseli",
+        "docs/example-style-transfer.png": "belge-gorseli"
+      }
     },
     {
       "repo": "tt-a1i/archify",
@@ -185,7 +189,10 @@
       "oncelik": 4,
       "tur": "koleksiyon",
       "bolum": "arsiv",
-      "tur_gerekce": "T1 ve 23 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi."
+      "tur_gerekce": "T1 ve 23 bağımsız skil; kök bağımlılığı yok, asıl iş skillerin kendisi.",
+      "medya_haric": {
+        ".claude/skills/skill-creator/scripts/__pycache__/quick_validate.cpython-313.pyc": "kullanilmiyor"
+      }
     },
     {
       "repo": "vudovn/ag-kit",
@@ -273,7 +280,10 @@
       "not": "'Yapay Zeka Skillleri' listesinden 2026-10-22'de eklendi. plugin/skills ve tools/directory altında aynı adlı iki farklı SKILL.md var (çakışma kuralı: biri tercih, diğeri alternatif).",
       "tur": "tek-skil",
       "bolum": "arsiv",
-      "tur_gerekce": "T1; arşivdeki 2 SKILL.md aynı skilin tercih/alternatif kopyası, bağımsız birden çok skil değil."
+      "tur_gerekce": "T1; arşivdeki 2 SKILL.md aynı skilin tercih/alternatif kopyası, bağımsız birden çok skil değil.",
+      "medya_haric": {
+        "tools/directory/opuscar-trophy.png": "kullanilmiyor"
+      }
     },
     {
       "repo": "vercel/next.js",
@@ -877,7 +887,10 @@
       "not": "Konu takibi adayıydı; kullanıcı 'uygun olanları seç yükle' dedi (2026-10-22). Çok platformlu e-ticaret rakip analizi. 2026-11-12: repo GitHub'da yok (404; sahibin hesabı duruyor, repo silinmiş ya da gizlenmiş, yeni ad dönmüyor); kullanıcı kararıyla KAYIP işaretlendi (eski tip T1), arşiv kopyası korunur, artık güncellenmez.",
       "tur": "tek-skil",
       "bolum": "arsiv",
-      "tur_gerekce": "KAYIP; tek skil, arşiv kopyası korunuyor"
+      "tur_gerekce": "KAYIP; tek skil, arşiv kopyası korunuyor",
+      "medya_haric": {
+        "assets/banner.png": "belge-gorseli"
+      }
     },
     {
       "repo": "evanca/flutter-ai-rules",
@@ -1219,7 +1232,10 @@
       "not": "Konu takibi adayıydı; kullanıcı 'kendi uygulayacaklarını uygula' dedi (2026-10-31): Flutter ve iOS boşluğu. Swift/SwiftUI: eşzamanlılık, test, uzman rehberi, arayüz kalıpları.",
       "tur": "koleksiyon",
       "bolum": "arsiv",
-      "tur_gerekce": "6 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi."
+      "tur_gerekce": "6 bağımsız skil; köke bağlı değil ve asıl iş skillerin kendisi.",
+      "medya_haric": {
+        "assets/demo.png": "belge-gorseli"
+      }
     },
     {
       "repo": "tuist/fuckingapproachableswiftconcurrency",
@@ -1422,7 +1438,20 @@
       "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Remotion ile 150 hazır 'shot' içeren ürün tanıtım videosu skill'i (17k★). Kökte tek skill; references/, template/, assets/ alınır; demo/galeri/polish çıktıları (≈1000 dosya) alınmaz.",
       "tur": "tek-skil",
       "bolum": "arsiv",
-      "tur_gerekce": "Kökte tek bağımsız skil; köke bağlı ek skil yok ve kendi destek dosyalarıyla tekil."
+      "tur_gerekce": "Kökte tek bağımsız skil; köke bağlı ek skil yok ve kendi destek dosyalarıyla tekil.",
+      "medya_haric": {
+        "assets/readme/cover.webp": "belge-gorseli",
+        "assets/readme/examples/camera.webp": "belge-gorseli",
+        "assets/readme/examples/data.webp": "belge-gorseli",
+        "assets/readme/examples/effects.webp": "belge-gorseli",
+        "assets/readme/examples/interaction.webp": "belge-gorseli",
+        "assets/readme/examples/opening.webp": "belge-gorseli",
+        "assets/readme/examples/outro.webp": "belge-gorseli",
+        "assets/readme/examples/rhythm.webp": "belge-gorseli",
+        "assets/readme/examples/transition.webp": "belge-gorseli",
+        "assets/readme/examples/typography.webp": "belge-gorseli",
+        "assets/readme/examples/ui-entrance.webp": "belge-gorseli"
+      }
     },
     {
       "repo": "dreammis/social-auto-upload",
@@ -1643,7 +1672,16 @@
       "not": "Kullanıcı 'Yapay Zeka Skillleri' listesinde yıldızladı; çakışma raporu onaylandı (2026-11-05). Kullanıcı: alternatif olarak al. Skill adı 'video-edit' OpenMontage ile aynı; OpenMontage tercih kalır. Betik yollarını ~/.claude/skills/video-edit varsayar, ~/.claude/video-edit/ altına profil yazar.",
       "tur": "tek-skil",
       "bolum": "arsiv",
-      "tur_gerekce": "T1 kaynak, arşivde 1 skil var; repo kök iskeleti değil, sabit kullanıcı dizini yollarını kullanan tek skil."
+      "tur_gerekce": "T1 kaynak, arşivde 1 skil var; repo kök iskeleti değil, sabit kullanıcı dizini yollarını kullanan tek skil.",
+      "medya_haric": {
+        "docs/images/data.jpg": "belge-gorseli",
+        "docs/images/hero.jpg": "belge-gorseli",
+        "docs/images/math.jpg": "belge-gorseli",
+        "docs/images/mistakes.jpg": "belge-gorseli",
+        "docs/images/profile.jpg": "belge-gorseli",
+        "docs/images/proof.jpg": "belge-gorseli",
+        "docs/images/rings.jpg": "belge-gorseli"
+      }
     },
     {
       "repo": "yohannescodes/apple-app-review-compliance",
@@ -1995,7 +2033,13 @@
       },
       "tur": "koleksiyon",
       "bolum": "arsiv",
-      "tur_gerekce": "T1 kaynak, arşivde 2 skil var; repo kök klasörlerine bağlı bir proje iskeleti değil."
+      "tur_gerekce": "T1 kaynak, arşivde 2 skil var; repo kök klasörlerine bağlı bir proje iskeleti değil.",
+      "medya_haric": {
+        "skills/kinetic-reel/docs/work-reel-sheet.jpg": "belge-gorseli",
+        "skills/kinetic-reel/docs/work-reel.gif": "belge-gorseli",
+        "skills/painted-animation/docs/koi-gag.gif": "belge-gorseli",
+        "skills/painted-animation/docs/xiaozhen-sheet.jpg": "belge-gorseli"
+      }
     },
     {
       "repo": "Barty-Bart/motion-graphics",
