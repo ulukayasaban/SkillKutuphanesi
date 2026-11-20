@@ -1,6 +1,6 @@
 {
   "surum": 1,
-  "yazildi": "2026-11-14",
+  "yazildi": "2026-11-20",
   "izinli": [
     {
       "yol": "~/.claude/skills/synced",
@@ -101,8 +101,26 @@
       "yol": "~/.claude/skills/.trash",
       "bolge": "claude",
       "tur": "klasor",
-      "dosya": 14,
-      "bayt": 181300,
+      "dosya": 15,
+      "bayt": 181928,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/skills/checkpoint-kapanis",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 3548,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.claude/skills/oturum-acilis",
+      "bolge": "claude",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 2530,
       "sahip": "bilinmiyor",
       "durum": "kalacak"
     },
@@ -532,6 +550,11 @@
       "tarih": "2026-11-14",
       "islem": "yenile",
       "girdi": 52
+    },
+    {
+      "tarih": "2026-11-20",
+      "islem": "yenile",
+      "girdi": 54
     }
   ]
 }
