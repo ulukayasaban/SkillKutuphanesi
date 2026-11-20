@@ -1,6 +1,6 @@
 # Plan: repo türlerine göre kütüphane süreçleri
 
-> **Durum:** UYGULANIYOR (çekirdek kapsam). Kullanıcı 2026-11-18'de onayladı. Uygulama bölüm 17'deki sırayla, K-65 uyarınca kullanıcıya sormadan yürür.
+> **Durum:** ÇEKİRDEK KAPSAM TAMAMLANDI (2026-11-20); adım 5, adım 6 ve bölüm 12'nin kalanı ihtiyaç olunca (K-65). Kullanıcı 2026-11-18'de onayladı. Uygulama bölüm 17'deki sırayla, K-65 uyarınca kullanıcıya sormadan yürür.
 > Bu dosya planın tek kaynağıdır. Bir kural uygulanınca ilgili rehbere taşınır ve burada "uygulandı" diye işaretlenir.
 > Bugün geçerli kurallar hâlâ `CLAUDE.md`, `rehber/` ve `notlar/kararlar.md` içindedir. Bu plan onlarla çelişirse, uygulanana kadar onlar geçerlidir.
 
@@ -493,7 +493,7 @@ Her satır ayrı commit olur; K-65 uyarınca çekirdek kapsam adımları kullan�
 | Ne | Bugün | Yapılacak |
 |---|---|---|
 | 199 kaynak kaydı | Tür bilgisi yok (yalnız T1..T8) | Her kayda tür ve bölüm yazılır. Dosya değişmez. T1..T8 alanı kalır. *(Uygulandı, K-65: iki KAYIP kayıt dahil 199 kayda tür yazıldı, tür zorunluluğu eklendi.)* |
-| Medya dosyaları | 465 dosya, 83 MB | Önce liste: hangi skil hangi dosyaya gerçekten ihtiyaç duyuyor. Sonra ortak kural 1'e göre arşivden çıkarılır. Git geçmişindeki kopyalara dokunulmaz. *(Uygulandı, K-65: medya filtresi ve `medya_haric` eklendi; 200 KB altı gerekli dosyalar korundu, 200 KB üstü gerekli medya kurulum aracı doğrulanana kadar çıkarılmaz.)* |
+| Medya dosyaları | 465 dosya, 83 MB | Önce liste: hangi skil hangi dosyaya gerçekten ihtiyaç duyuyor. Sonra ortak kural 1'e göre arşivden çıkarılır. Git geçmişindeki kopyalara dokunulmaz. *(Uygulandı, K-65: `medya_haric` (tek dosya yolu) eklendi; belge görselleri ve kullanılmayan 28 dosya (12,8 MB) çıkarıldı; gerekli medya (200 KB üstü dahil) arşivde kalır, kurulum aracının kaynaktan alması ihtiyaç olunca bir sonraki iş.)* |
 | 6 dev koleksiyon | 3.039 skil, 73 MB arşivde | Fihriste çevrilir. Bir projede kurulu olan skiller arşivde kalır (bugün: `github/awesome-copilot` içinden 1 skil). Tek tek incelenmiş skillerin inceleme notları fihriste taşınır. *(Uygulandı, K-65: 6 dev koleksiyon fihriste taşındı.)* |
 | herk-edit-kit | 10 skil arşivde, yarım çalışır | Katalog kaydına çevrilir; skiller arşivden çıkarılır. *(Arşivde kalır, K-65: kit taşıma aracı yazılmaz.)* |
 | Diğer kitler | `Donchitos/Claude-Code-Game-Studios` 74 skil arşivde; iki kit "izle" kararında; claude-code-video-toolkit program kartında | Önce projelerde kullanım kontrolü. Kullanılmayanlar kataloğa çevrilir. claude-code-video-toolkit için kit mi program mı kararı verilir. *(Arşivde kalır, K-65: `Donchitos/Claude-Code-Game-Studios` arşivde kalır, kit taşıma aracı yazılmaz; `claude-code-video-toolkit` `urun-skil/arsiv` olarak karara bağlandı, K-64.)* |
@@ -618,7 +618,7 @@ Her adım kontrolle biter; sıradaki adım K-65 uyarınca kullanıcıya sormadan
 | 1 | Bekleyen değişikliklerin commit'i (38 skilin incelemesi, lisans alanı) | `dogrula.py` 0 hata, commit |
 | 2 (uygulandı 2026-11-18) | **Yeni kayıt süreci:** tür ve bölüm alanları, tür belirleme adımı, boyut hesaplayıcı ve kurulu programlarla sınaması, fihrist ve kit kataloğu kayıt biçimi, `surecler/` dosyaları ve örnek istemler, ajan dosyaları ve `rehber/03` güncellemesi | Testler geçer; bir örnek repo yeni süreçle baştan sona eklenir |
 | 3 (uygulandı, kapsam daraltıldı, K-65: 199 kayda tür yazıldı, 6 dev koleksiyon fihriste taşındı, kitler arşivde kalır, medya filtresi, tür zorunluluğu) | **Mevcut yapılar** (bölüm 12) | Her kaynakta tür var; `dogrula.py` tür eksikliğini HATA sayar |
-| 4 (araç yazıldı ve birleşti; gerçek ağ denemesi klon düzeltmesine bağlı (işaretleme ana oturumda)) | **Kurulum aracı ve proje raporu:** fihristten ve kitten kurulum, geçici klasör, kilit, rapor | Testler; boş bir deneme projesinde baştan sona kurulum |
+| 4 (uygulandı 2026-11-20, K-65: fihrist ve kit kurulumu, `--kaldir`, `--rapor`; seyrek/kısmi klon; iki bağımsız inceleme; gerçek ağ denemesi geçti: boş projeye `awesome-copilot` içinden tek skil 7 sn'de kuruldu, kilit, `--dogrula` ve `--kaldir` temiz) | **Kurulum aracı ve proje raporu:** fihristten ve kitten kurulum, geçici klasör, kilit, rapor | Testler; boş bir deneme projesinde baştan sona kurulum |
 | 5 (ihtiyaç olunca (K-65)) | **Aylık çalışma:** fihrist ve katalog yenileme, boyut özeti | `--aylik --kuru` yeni adımları gösterir |
 | 6 (ihtiyaç olunca (K-65)) | **Windows paketi** | Bir proje için paket üretilir ve içeriği doğrulanır |
 
