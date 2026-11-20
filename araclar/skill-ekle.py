@@ -48,6 +48,7 @@ Güvenlik kuralları:
 import argparse
 import json
 import os
+import posixpath
 import re
 import shutil
 import stat
@@ -63,7 +64,7 @@ from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KAYNAKLAR, KOK, REGISTRY, hesap
                    onarim_izi, repo_guncel, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula, skill_adlari,
                    skill_yol_taramasi, tum_skiller, yol_degerlendir, yol_izi, yol_dosya_sinifi_haritasi, yol_taramasi,
                    ev_ici_kendi_cevir, _var_bak, program_klasor_skill_adi, program_skill_ham_klasoru_mu, program_skill_klasoru,
-                   yerel_agac, yerel_commit)
+                   yerel_agac, yerel_commit, _ATIF_PARCA, _eklenti_koku_yolu, _yol_kes)
 
 ROLLER = KOK / "roller"
 PROFILLER = KOK / "profiller"
@@ -72,6 +73,8 @@ FIHRIST_KLASOR = KOK / "fihrist"       # testler yeniden atar
 KITLER_DOSYA = KOK / "kitler.json"     # testler yeniden atar
 KAYNAK_URL_CEVIRICI = None             # testler yerel git deposuna yönlendirir: fn(repo) -> url|Path
 FIHRIST_INCELEME_YAZ = True            # fihrist kurulumunda inceleme sonucunu fihrist dosyasına kaydet
+FIHRIST_KLON_ZAMAN_ASIMI = 300         # fihrist yolu için git klon/checkout zaman aşımı (sn)
+KIT_KLON_ZAMAN_ASIMI = 600             # kit için git klon zaman aşımı (sn)
 BLOK_BAS, BLOK_SON = "<!-- skill-kutuphanesi:basla -->", "<!-- skill-kutuphanesi:bitir -->"
 URETILDI = "skill-kutuphanesi tarafından üretildi"
 META = ".skill-kutuphanesi"
@@ -1645,57 +1648,233 @@ def guvenlik_tara(klasor):
     return r
 
 
-def kaynak_indir(repo, hedef_dir, alt_yol=None):
-    """Kaynağı geçici klasöre (hedef_dir) sığ klonla indirir. Döner: (commit_sha, kaynak_klasor).
+_GIT_SUNUCU_ERISIM_HATASI = re.compile(
+    r"(?:could not resolve host(?:name)?|unable to access\b.*?(?:could not resolve|failed to connect|couldn't connect|"
+    r"connection refused|network is unreachable|no route to host|connection reset|recv failure|ssl_connect)|"
+    r"failed to connect to\b|couldn't connect to server|connection refused|network is unreachable|no route to host|"
+    r"temporary failure in name resolution|name or service not known|nodename nor servname provided|"
+    r"no address associated with hostname|erişilemiyor:\s*failed to connect)",
+    re.I | re.S,
+)
+_GIT_ZAMAN_ASIMI_HATASI = re.compile(
+    r"(?:operation timed out|connection timed out|timed out after|zaman aşımı)",
+    re.I,
+)
+
+
+def _git_hata_iletisi(repo, adim, zaman_asimi, exc=None, stderr=""):
+    """Git hata iletisini zaman aşımı, erişilemeyen sunucu (internet gerekli) ve diğer git hatası olarak ayırır."""
+    metin = (stderr or str(exc or "")).strip()
+    detay = metin[-200:]
+    if isinstance(exc, subprocess.TimeoutExpired) or _GIT_ZAMAN_ASIMI_HATASI.search(metin):
+        return f"{repo}: kaynak indirme zaman aşımına uğradı ({zaman_asimi} sn sınırı aşıldı; {adim})" + (f": {detay}" if detay else "")
+    if _GIT_SUNUCU_ERISIM_HATASI.search(metin):
+        return f"{repo}: sunucuya erişilemedi (internet gerekli): {detay}"
+    return f"{repo}: git hatası ({adim}): {detay or 'işlem başarısız'}"
+
+
+def _git_calistir(komut, repo, adim, zaman_asimi, env):
+    try:
+        res = subprocess.run(komut, capture_output=True, text=True, timeout=zaman_asimi, env=env, stdin=subprocess.DEVNULL)
+    except subprocess.TimeoutExpired as e:
+        stderr = (e.stderr.decode("utf-8", "replace") if isinstance(e.stderr, bytes) else (e.stderr or "")).strip()
+        raise KaynakErisimHatasi(_git_hata_iletisi(repo, adim, zaman_asimi, exc=e, stderr=stderr)) from e
+    except (OSError, subprocess.SubprocessError) as e:
+        raise KaynakErisimHatasi(_git_hata_iletisi(repo, adim, zaman_asimi, exc=e)) from e
+    if res.returncode != 0:
+        raise KaynakErisimHatasi(_git_hata_iletisi(repo, adim, zaman_asimi, stderr=res.stderr))
+    return res
+
+
+def _fihrist_referans_adaylari(skil_klasoru, alt_yol, repo):
+    """İndirilen fihrist skilinin SKILL.md (ve yardımcı dosyalarının) başvurduğu kardeş/kök yolları mevcut yol taramasıyla çıkarır."""
+    skil_klasoru = Path(skil_klasoru)
+    if not skil_klasoru.is_dir() or skil_klasoru.is_symlink():
+        return []
+    adaylar = []
+    ust_dizin = posixpath.dirname(alt_yol) if alt_yol else ""
+    ek_kok = _eklenti_koku_yolu(alt_yol)
+
+    def _ekle(p):
+        if not isinstance(p, str):
+            return
+        temiz = posixpath.normpath(p.strip("/")) if p.strip("/") else ""
+        if not goreli_proje_yolu_gecerli(temiz):
+            return
+        if alt_yol and (temiz == alt_yol or temiz.startswith(alt_yol + "/")):
+            return
+        if temiz not in adaylar:
+            adaylar.append(temiz)
+
+    for kardes_ad in symlink_taslaklari(skil_klasoru).values():
+        if alt_yol:
+            _ekle(posixpath.join(alt_yol, "..", kardes_ad))
+
+    kendi_ad = Path(alt_yol).name if alt_yol else repo.split("/")[-1]
+    for b in yol_taramasi(skil_klasoru, {kendi_ad}):
+        tur = b.get("tur")
+        hedef = b.get("hedef")
+        kalan = b.get("kalan") or ""
+        ham = b.get("ham") or ""
+        dosya = b.get("dosya") or "SKILL.md"
+        dosya_dizin = posixpath.dirname(posixpath.join(alt_yol, dosya)) if alt_yol else posixpath.dirname(dosya)
+        if tur in ("kardes-goreli", "ortak-dizin"):
+            if ham.startswith("../"):
+                _ekle(posixpath.join(dosya_dizin, ham))
+            if hedef:
+                if kalan:
+                    _ekle(posixpath.join(ust_dizin, hedef, kalan))
+                _ekle(posixpath.join(ust_dizin, hedef))
+        elif tur == "genel-baska" and hedef:
+            if kalan:
+                _ekle(posixpath.join(ust_dizin, hedef, kalan))
+            _ekle(posixpath.join(ust_dizin, hedef))
+        elif tur == "skil-disi-yol":
+            m_sd = re.match(r"^(?:\$\{CLAUDE_SKILL_DIR\}|\$CLAUDE_SKILL_DIR)/?(.*)$", ham)
+            if m_sd and m_sd.group(1):
+                _ekle(posixpath.join(alt_yol, m_sd.group(1)))
+            if hedef:
+                if kalan:
+                    _ekle(posixpath.join(ust_dizin, hedef, kalan))
+                _ekle(posixpath.join(ust_dizin, hedef))
+        elif tur == "eklenti-kok-yol" and kalan:
+            _ekle(kalan)
+            if ek_kok:
+                _ekle(posixpath.join(ek_kok, kalan))
+        elif tur == "eklenti-kardes" and hedef:
+            tabanlar = [posixpath.join(ek_kok, "skills"), ust_dizin, "skills"] if ek_kok else [ust_dizin, "skills"]
+            for taban in tabanlar:
+                if kalan:
+                    _ekle(posixpath.join(taban, hedef, kalan))
+                _ekle(posixpath.join(taban, hedef))
+
+    sm = next((p for p in skil_klasoru.iterdir() if p.is_file() and not p.is_symlink() and p.name.lower() == "skill.md"), None)
+    if sm:
+        try:
+            metin = sm.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            metin = ""
+        for hedef in re.findall(r"\]\(([^)\s]+)\)", metin):
+            if re.match(r"^(?:https?:|#|mailto:|<|\$|\{)", hedef) or "*" in hedef:
+                continue
+            yol_h = hedef.split("#")[0].split("?")[0].strip()
+            if yol_h:
+                _ekle(posixpath.join(alt_yol, yol_h) if alt_yol else yol_h.lstrip("./"))
+        for tok in _ATIF_PARCA.findall(metin):
+            tok_temiz = _yol_kes(tok).strip("/")
+            if not tok_temiz or tok_temiz.startswith(("http", "www.")):
+                continue
+            if tok_temiz.startswith("../") and alt_yol:
+                _ekle(posixpath.join(alt_yol, tok_temiz))
+            elif "/" in tok_temiz and not tok_temiz.startswith("."):
+                ilk = tok_temiz.split("/", 1)[0]
+                if not alt_yol or not (skil_klasoru / ilk).exists():
+                    _ekle(tok_temiz)
+    return adaylar
+
+
+def _fihrist_ek_yollar(klon_dir, skil_klasoru, alt_yol, repo, mevcut_sparse, env):
+    """SKILL.md'nin başvurduğu kardeş/kök yollardan repo HEAD ağacında gerçekten bulunanları döner."""
+    adaylar = [p for p in _fihrist_referans_adaylari(skil_klasoru, alt_yol, repo) if p not in mevcut_sparse]
+    if not adaylar:
+        return []
+    try:
+        r = subprocess.run(["git", "-C", str(klon_dir), "ls-tree", "-r", "-t", "--name-only", "HEAD"],
+                           capture_output=True, text=True, timeout=30, env=env, stdin=subprocess.DEVNULL)
+    except (OSError, subprocess.SubprocessError):
+        return []
+    if r.returncode != 0:
+        return []
+    agac_yollari = set(r.stdout.splitlines())
+    return [p for p in adaylar if p in agac_yollari]
+
+
+def kaynak_indir(repo, hedef_dir, alt_yol=None, zaman_asimi=None):
+    """Kaynağı geçici klasöre (hedef_dir) indirir. Döner: (commit_sha, kaynak_klasor).
+    Fihrist skili (alt_yol verilmişse): seyrek kısmi klon (--depth 1 --filter=blob:none --sparse --no-checkout +
+    sparse-checkout set --no-cone <skil yolu> + kardeş/kök yollar + checkout; zaman aşımı 300 sn).
+    Kit (alt_yol None): kısmi klon (--depth 1 --filter=blob:none; zaman aşımı 600 sn). LFS kapalıdır.
     KAYNAK_URL_CEVIRICI ayarlıysa (testlerde yerel git deposu / klasör) oradan alır; ağ kullanmaz.
-    alt_yol verildiyse (fihrist skili) yalnız o klasörü doğrular ve döner; yoksa KaynakYolYokHatasi."""
+    Hata olursa hedef_dir temizlenir."""
     hedef_dir = Path(hedef_dir)
     klon_dir = hedef_dir / "repo"
-    url = KAYNAK_URL_CEVIRICI(repo) if callable(KAYNAK_URL_CEVIRICI) else f"https://github.com/{repo}.git"
-    url_str = str(url)
-    yerel_yol = Path(url_str) if not url_str.startswith(("http://", "https://", "git@", "file://")) else None
-    if yerel_yol is not None and yerel_yol.is_dir() and not (yerel_yol / ".git").exists():
-        # Düz yerel dizin (test kolaylığı)
-        shutil.copytree(yerel_yol, klon_dir, ignore=shutil.ignore_patterns(".git", ".DS_Store"))
-        agac, _ = yerel_agac(klon_dir)
-        commit = yerel_commit(agac)
-    else:
-        klon_url = yerel_yol.resolve().as_uri() if (yerel_yol is not None and yerel_yol.exists()) else url_str
-        env = {**os.environ, "GIT_TERMINAL_PROMPT": "0", "GIT_LFS_SKIP_SMUDGE": "1"}
-        komut = ["git", "clone", "-q", "--depth", "1", "-c", "filter.lfs.smudge=", "-c", "filter.lfs.required=false",
-                 klon_url, str(klon_dir)]
-        try:
-            res = subprocess.run(komut, capture_output=True, text=True, timeout=120, env=env, stdin=subprocess.DEVNULL)
-        except (OSError, subprocess.SubprocessError) as e:
-            raise KaynakErisimHatasi(f"{repo}: kaynağa erişilemedi (internet gerekli): {e}") from e
-        if res.returncode != 0:
-            raise KaynakErisimHatasi(f"{repo}: kaynağa erişilemedi (internet gerekli ya da repo yok): {res.stderr.strip()[-200:]}")
-        rev = subprocess.run(["git", "-C", str(klon_dir), "rev-parse", "HEAD"], capture_output=True, text=True, timeout=15, env=env)
-        commit = rev.stdout.strip() if rev.returncode == 0 else ""
-        if not commit:
-            raise KaynakErisimHatasi(f"{repo}: commit okunamadı")
-    if alt_yol is None:
-        return commit, klon_dir
-    if alt_yol:
-        if not goreli_proje_yolu_gecerli(alt_yol):
+    if zaman_asimi is None:
+        zaman_asimi = FIHRIST_KLON_ZAMAN_ASIMI if alt_yol is not None else KIT_KLON_ZAMAN_ASIMI
+    try:
+        if alt_yol and not goreli_proje_yolu_gecerli(alt_yol):
             raise KaynakYolYokHatasi(f"{repo}: geçersiz skil yolu ({alt_yol!r}); geçici klon dışına çıkamaz")
-        skil_klasoru = klon_dir / alt_yol
-        if skil_klasoru.is_symlink():
-            raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' symlink; güvenlik nedeniyle reddedildi")
-        klon_kok = os.path.realpath(klon_dir)
-        hedef_gercek = os.path.realpath(skil_klasoru)
-        if hedef_gercek != klon_kok and not hedef_gercek.startswith(klon_kok + os.sep):
-            raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' yolu geçici klon dışına çıkıyor; reddedildi")
-    else:
-        skil_klasoru = klon_dir
-    if not skil_klasoru.is_dir():
-        raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' yolu kaynakta artık yok (kaldırılmış olabilir)")
-    sm = next((p for p in skil_klasoru.iterdir() if p.is_file() and not p.is_symlink() and p.name.lower() == "skill.md"), None)
-    if not sm:
-        raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' içinde SKILL.md yok")
-    if sm.name != "SKILL.md":
-        sm.rename(skil_klasoru / "SKILL.md")
-    return commit, skil_klasoru
+        url = KAYNAK_URL_CEVIRICI(repo) if callable(KAYNAK_URL_CEVIRICI) else f"https://github.com/{repo}.git"
+        url_str = str(url)
+        yerel_yol = Path(url_str) if not url_str.startswith(("http://", "https://", "git@", "file://")) else None
+        if yerel_yol is not None and yerel_yol.is_dir() and not (yerel_yol / ".git").exists():
+            # Düz yerel dizin (test kolaylığı)
+            shutil.copytree(yerel_yol, klon_dir, ignore=shutil.ignore_patterns(".git", ".DS_Store"))
+            agac, _ = yerel_agac(klon_dir)
+            commit = yerel_commit(agac)
+        else:
+            klon_url = yerel_yol.resolve().as_uri() if (yerel_yol is not None and yerel_yol.exists()) else url_str
+            env = {**os.environ, "GIT_TERMINAL_PROMPT": "0", "GIT_LFS_SKIP_SMUDGE": "1"}
+            lfs_ayar = ["-c", "filter.lfs.smudge=", "-c", "filter.lfs.required=false"]
+            yerel_filter = []
+            if klon_url.startswith("file://"):
+                up = "git -c uploadpack.allowFilter=true -c uploadpack.allowAnySHA1InWant=true upload-pack"
+                yerel_filter = ["-c", f"remote.origin.uploadpack={up}", f"--upload-pack={up}"]
+            if alt_yol is not None:
+                komut = ["git", "clone", "-q", "--depth", "1", "--filter=blob:none", "--sparse", "--no-checkout",
+                         *lfs_ayar, *yerel_filter, klon_url, str(klon_dir)]
+                _git_calistir(komut, repo, "git clone", zaman_asimi, env)
+                sparse_yollar = [alt_yol] if alt_yol else ["/SKILL.md", "/skill.md"]
+                kay = kaynak_kaydi(repo)
+                for kd in (kay.get("kok_dosyalari") or []) if isinstance(kay, dict) else ():
+                    if isinstance(kd, str) and goreli_proje_yolu_gecerli(kd.strip("/")):
+                        temiz_kd = kd.strip("/")
+                        if temiz_kd not in sparse_yollar:
+                            sparse_yollar.append(temiz_kd)
+                _git_calistir(["git", "-C", str(klon_dir), "sparse-checkout", "set", "--no-cone", *sparse_yollar],
+                              repo, "git sparse-checkout", zaman_asimi, env)
+                _git_calistir(["git", "-C", str(klon_dir), "checkout", "-q"],
+                              repo, "git checkout", zaman_asimi, env)
+                skil_aday = (klon_dir / alt_yol) if alt_yol else klon_dir
+                ek_yollar = _fihrist_ek_yollar(klon_dir, skil_aday, alt_yol, repo, sparse_yollar, env)
+                if ek_yollar:
+                    tum_sparse = list(dict.fromkeys([*sparse_yollar, *ek_yollar]))
+                    _git_calistir(["git", "-C", str(klon_dir), "sparse-checkout", "set", "--no-cone", *tum_sparse],
+                                  repo, "git sparse-checkout", zaman_asimi, env)
+                    _git_calistir(["git", "-C", str(klon_dir), "checkout", "-q"],
+                                  repo, "git checkout", zaman_asimi, env)
+            else:
+                komut = ["git", "clone", "-q", "--depth", "1", "--filter=blob:none",
+                         *lfs_ayar, *yerel_filter, klon_url, str(klon_dir)]
+                _git_calistir(komut, repo, "git clone", zaman_asimi, env)
+            rev = _git_calistir(["git", "-C", str(klon_dir), "rev-parse", "HEAD"],
+                                repo, "git rev-parse", min(30, max(1, zaman_asimi)), env)
+            commit = rev.stdout.strip()
+            if not commit:
+                raise KaynakErisimHatasi(f"{repo}: commit okunamadı")
+        if alt_yol is None:
+            return commit, klon_dir
+        if alt_yol:
+            skil_klasoru = klon_dir / alt_yol
+            if skil_klasoru.is_symlink():
+                raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' symlink; güvenlik nedeniyle reddedildi")
+            klon_kok = os.path.realpath(klon_dir)
+            hedef_gercek = os.path.realpath(skil_klasoru)
+            if hedef_gercek != klon_kok and not hedef_gercek.startswith(klon_kok + os.sep):
+                raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' yolu geçici klon dışına çıkıyor; reddedildi")
+        else:
+            skil_klasoru = klon_dir
+        if not skil_klasoru.is_dir():
+            raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' yolu kaynakta artık yok (kaldırılmış olabilir)")
+        sm = next((p for p in skil_klasoru.iterdir() if p.is_file() and not p.is_symlink() and p.name.lower() == "skill.md"), None)
+        if not sm:
+            raise KaynakYolYokHatasi(f"{repo}: '{alt_yol}' içinde SKILL.md yok")
+        if sm.name != "SKILL.md":
+            sm.rename(skil_klasoru / "SKILL.md")
+        return commit, skil_klasoru
+    except Exception:
+        if hedef_dir.exists() and hedef_dir != KOK and KOK not in hedef_dir.parents:
+            shutil.rmtree(hedef_dir, ignore_errors=True)
+        raise
 
 
 def gecici_skil_incele(klasor, repo, yol, commit, ad, onceki_inceleme=None):

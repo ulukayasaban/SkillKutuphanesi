@@ -93,6 +93,8 @@ def agac(p: Path):
 def main():
     genel_once = ortak.genel_parmak_izi(ortak.GENEL_TEST_KLASORLERI, ortak.GENEL_TEST_ATLA)
     kok = Path(tempfile.mkdtemp(prefix="p18-test-"))
+    eski_tempdir = tempfile.tempdir
+    tempfile.tempdir = str(kok)
     gecici_once = set(Path(tempfile.gettempdir()).glob("skill-kutuphanesi-kurulum-*"))
     eski_sabitler = {k: getattr(se, k) for k in (
         "REGISTRY", "KAYNAKLAR_DOSYA", "FIHRIST_KLASOR", "KITLER_DOSYA", "PROGRAMLAR",
@@ -803,11 +805,125 @@ def main():
              k9 == 0 and "genel-yol" in o9
              and kilit_oku(p_b9)["skiller"]["yol-uyarili-skil"]["inceleme"]["sonuc"] == "uyarili", (k9, o9))
 
+        # ================================================================ 6. SEYREK / KISMİ KLON, BÜYÜK DEPO, ZAMAN AŞIMI VE HATA AYRIMI
+        print("E. seyrek/kısmi klon (file://), büyük sahte depo, kardeş/kök yollar, zaman aşımı ve erişim hatası ayrımı")
+        buyuk_veri = os.urandom(1500 * 1024)  # 1.5 MB sıkıştırılamaz veri (diğer klasör blob'u inmemeli)
+        buyuk_blob_sha = se.git_blob_hash(buyuk_veri)
+        dev_depo = depolar / "dev-sparse-repo"
+        dev_sha = git_repo_olustur(dev_depo, {
+            "skills/istenen-skil/SKILL.md": (
+                "---\nname: istenen-skil\ndescription: Seyrek klon sınama skili\n---\n"
+                "# İstenen Skil\nKardeş belge: [yardım](../ortak-kardes/yardim.md)\n"
+                "Kök betik: `${CLAUDE_PLUGIN_ROOT}/scripts/kok-yardim.py`\n"
+            ),
+            "skills/istenen-skil/ek.txt": "istenen ek\n",
+            "skills/ortak-kardes/yardim.md": "kardeş yardım içeriği\n",
+            "scripts/kok-yardim.py": "print('kök yardımcı')\n",
+            "skills/baska-skil/SKILL.md": "---\nname: baska-skil\ndescription: İstenmeyen skil\n---\n",
+            "agir-klasor/dev.bin": buyuk_veri,
+        })
+        dev_file_url = dev_depo.resolve().as_uri()
+        repo_harita["dev/sparse-test"] = dev_file_url
+
+        sparse_hedef = kok / "sparse-klon-test"
+        c_sp, skil_sp = se.kaynak_indir("dev/sparse-test", sparse_hedef, alt_yol="skills/istenen-skil")
+        klon_sp = sparse_hedef / "repo"
+        calisma_dosyalari = sorted(
+            str(p.relative_to(klon_sp)) for p in klon_sp.rglob("*")
+            if ".git" not in p.parts and p.is_file()
+        )
+        eksik_nesneler = subprocess.run(
+            ["git", "-C", str(klon_sp), "rev-list", "--objects", "--all", "--missing=print"],
+            capture_output=True, text=True, check=True
+        ).stdout.splitlines()
+        klon_toplam_bayt = sum(p.stat().st_size for p in klon_sp.rglob("*") if p.is_file())
+        shutil.rmtree(sparse_hedef, ignore_errors=True)
+        test("30. seyrek klon (file://): yalnız istenen skil yolu (+ SKILL.md kardeş/kök dosyaları) iner; büyük diğer klasörler çalışma ağacına ve .git/objects'e inmez",
+             c_sp == dev_sha
+             and (skil_sp.name == "istenen-skil")
+             and "skills/istenen-skil/SKILL.md" in calisma_dosyalari
+             and "skills/istenen-skil/ek.txt" in calisma_dosyalari
+             and "skills/ortak-kardes/yardim.md" in calisma_dosyalari
+             and "scripts/kok-yardim.py" in calisma_dosyalari
+             and "skills/baska-skil/SKILL.md" not in calisma_dosyalari
+             and "agir-klasor/dev.bin" not in calisma_dosyalari
+             and f"?{buyuk_blob_sha}" in eksik_nesneler
+             and klon_toplam_bayt < len(buyuk_veri) // 2,
+             (c_sp, dev_sha, calisma_dosyalari, klon_toplam_bayt, [x for x in eksik_nesneler if x.startswith("?")]))
+
+        # Zaman aşımı (fihrist: 300 sn, kit: 600 sn), erişilemeyen sunucu ve diğer git hatası ayrımı + geçici klasör temizliği
+        gorulen_timeoutlar = []
+        gercek_run_31 = se.subprocess.run
+
+        def timeout_izleyici_run(*args, **kwargs):
+            cmd = args[0] if args else kwargs.get("args", [])
+            if isinstance(cmd, (list, tuple)) and len(cmd) >= 2 and cmd[0] == "git" and cmd[1] == "clone":
+                gorulen_timeoutlar.append(kwargs.get("timeout"))
+                raise subprocess.TimeoutExpired(cmd, kwargs.get("timeout") or 300, stderr="klon zaman asimi")
+            return gercek_run_31(*args, **kwargs)
+
+        se.subprocess.run = timeout_izleyici_run
+        try:
+            tmp_to_fh = kok / "tmp-timeout-fh"
+            tmp_to_fh.mkdir()
+            to_fh_msg = ""
+            try:
+                se.kaynak_indir("dev/sparse-test", tmp_to_fh, alt_yol="skills/istenen-skil")
+            except se.KaynakErisimHatasi as e:
+                to_fh_msg = str(e)
+            tmp_to_kit = kok / "tmp-timeout-kit"
+            tmp_to_kit.mkdir()
+            to_kit_msg = ""
+            try:
+                se.kaynak_indir("ornek/video-kit", tmp_to_kit, alt_yol=None)
+            except se.KaynakErisimHatasi as e:
+                to_kit_msg = str(e)
+        finally:
+            se.subprocess.run = gercek_run_31
+
+        # Erişilemeyen sunucu (Could not resolve host / Failed to connect) vs diğer git hatası (olmayan yerel file:// depo)
+        def sunucu_yok_run(*args, **kwargs):
+            cmd = args[0] if args else kwargs.get("args", [])
+            if isinstance(cmd, (list, tuple)) and len(cmd) >= 2 and cmd[0] == "git" and cmd[1] == "clone":
+                return subprocess.CompletedProcess(cmd, 128, stdout="", stderr="fatal: unable to access 'https://github.com/x/y.git/': Could not resolve host: github.com\n")
+            return gercek_run_31(*args, **kwargs)
+
+        se.subprocess.run = sunucu_yok_run
+        try:
+            tmp_erisim = kok / "tmp-erisim-hata"
+            tmp_erisim.mkdir()
+            erisim_msg = ""
+            try:
+                se.kaynak_indir("dev/sparse-test", tmp_erisim, alt_yol="skills/istenen-skil")
+            except se.KaynakErisimHatasi as e:
+                erisim_msg = str(e)
+        finally:
+            se.subprocess.run = gercek_run_31
+
+        repo_harita["dev/olmayan-git"] = (depolar / "olmayan-git-deposu").resolve().as_uri()
+        tmp_diger = kok / "tmp-diger-git-hata"
+        tmp_diger.mkdir()
+        diger_msg = ""
+        try:
+            se.kaynak_indir("dev/olmayan-git", tmp_diger, alt_yol="skills/istenen-skil")
+        except se.KaynakErisimHatasi as e:
+            diger_msg = str(e)
+
+        test("31. zaman aşımı (fihrist 300 sn, kit 600 sn), erişilemeyen sunucu ve diğer git hatası farklı ileti verir; hata olursa geçici klasör silinir",
+             gorulen_timeoutlar == [300, 600]
+             and "zaman aşımı" in to_fh_msg and "300 sn" in to_fh_msg and "internet gerekli" not in to_fh_msg
+             and "zaman aşımı" in to_kit_msg and "600 sn" in to_kit_msg and "internet gerekli" not in to_kit_msg
+             and "sunucuya erişilemedi" in erisim_msg and "internet gerekli" in erisim_msg and "zaman aşımı" not in erisim_msg
+             and "git hatası" in diger_msg and "internet gerekli" not in diger_msg and "zaman aşımı" not in diger_msg
+             and not tmp_to_fh.exists() and not tmp_to_kit.exists() and not tmp_erisim.exists() and not tmp_diger.exists(),
+             (gorulen_timeoutlar, to_fh_msg, to_kit_msg, erisim_msg, diger_msg))
+
         # 20. Genel klasörler değişmedi
         test("20. global klasörler test boyunca DEĞİŞMEDİ",
              ortak.genel_parmak_izi(ortak.GENEL_TEST_KLASORLERI, ortak.GENEL_TEST_ATLA) == genel_once)
 
     finally:
+        tempfile.tempdir = eski_tempdir
         for k, v in eski_sabitler.items():
             setattr(se, k, v)
         for k, v in eski_ortak.items():
