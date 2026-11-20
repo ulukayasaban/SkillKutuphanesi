@@ -200,6 +200,56 @@
       "not": "~/.hyperframes/config.json (kimlik dosyası) yedeğe alınmadı. Paket klasörü yaklaşık 110 MB."
     },
     {
+      "kimlik": "hyperframes-2026-11-20",
+      "yol": "~/Documents/Claude/yedek/hyperframes-2026-11-20",
+      "tur": "program",
+      "ne": "HyperFrames 0.9.71 güncellemesi öncesi yedek (kurulu sürüm 0.9.37): npm genel paket klasörü (paket), ~/.hyperframes verisi (config.json hariç), KAYIT.json",
+      "tarih": "2026-11-20",
+      "geri_yukleme": "Kartın geri_alma adımları (rehber/11, Geri alma): HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken npm install -g hyperframes@0.9.37; kayıt defteri sürümü kaldırdıysa yedekteki paket klasörü onayla yerine konur; veri bozulduysa hyperframes-veri geri kopyalanır. Her adım için kullanıcıdan onay.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "KAYIT.json",
+        "hyperframes-veri",
+        "paket"
+      ],
+      "silme_olay": "Yeni sürüm kullanıcının projesinde doğrulandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "kayit": "KAYIT.json",
+      "not": "~/.hyperframes/config.json (kimlik dosyası) yedeğe alınmadı. Paket klasörü yaklaşık 110 MB."
+    },
+    {
+      "kimlik": "openmontage-2026-11-20",
+      "yol": "~/Documents/Claude/yedek/openmontage-2026-11-20",
+      "tur": "program",
+      "ne": "OpenMontage güncellemesi öncesi yedek (kurulu commit fecb9a1e; hedef 2e003e65, yalnız README bağlantısı): yerel yamalar (git diff --binary), izlenmeyen yollar listesi ve 'kopya' olan dosyalar, venv pip-freeze, proje bağ listesi, KAYIT.json",
+      "tarih": "2026-11-20",
+      "geri_yukleme": "Kartın geri_alma adımları (rehber/11, Geri alma): git -C ~/.openmontage switch --detach <KAYIT.json onceki.commit>; çakışan dosyada yalnız o dosyada git checkout -- <yol> ve git apply --3way --include=<yol> yerel-yamalar.patch; venv bozulduysa pip-freeze.txt ile pip install --no-deps -r (onayla). Her adım için kullanıcıdan onay. git reset --hard, git clean yok.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "KAYIT.json",
+        "yerel-yamalar.patch",
+        "izlenmeyen-yollar.txt",
+        "pip-freeze.txt",
+        "bag-listesi.txt"
+      ],
+      "silme_olay": "Gerçek güncelleme doğrulandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "kayit": "KAYIT.json",
+      "not": "~/.config/openmontage anahtar klasörüne dokunulmadı."
+    },
+    {
+      "kimlik": "istatistik-test-temizlik-2026-11-20",
+      "yol": "~/Documents/Claude/yedek/istatistik-test-temizlik-2026-11-20",
+      "tur": "diger",
+      "ne": "IstatistikYoutube geçici klasör temizliği ve HyperFrames sürüm kaydı değişikliklerinden önceki dosyalar: 11 test betiği (tools/ ve tools/kurgu/_test/), kurgu/cakisma_tara.py, kurgu/ekran_yazi_kontrol.py, config/tools.yaml. Proje git kullanmadığı için tek geri dönüş yolu.",
+      "tarih": "2026-11-20",
+      "geri_yukleme": "Yedekteki dosyayı projedeki aynı yola kopyala (kullanıcı onayıyla); değişiklik yalnız `import tempfile` satırından sonra eklenen 5 satırlık atexit temizliğidir.",
+      "gizli_icerir": "hayir",
+      "beklenen": [],
+      "silme_gun": 30,
+      "not": "Kullanıcı 2026-11-20: testlere temizlik ekle. Silmek yalnız kullanıcı 'sil' deyince."
+    },
+    {
       "kimlik": "zamanlanmis-gorev-2026-11-12",
       "yol": "~/Documents/Claude/yedek/zamanlanmis-gorev-2026-11-12",
       "tur": "ayar-dosyasi",

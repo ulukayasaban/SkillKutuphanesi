@@ -110,7 +110,7 @@
       "ucret": "kismen",
       "ne_yapar": "HTML ile yazılan kompozisyonları videoya çevirir: proje kurar (init), denetler (lint), önizler, yerelde ya da bulutta render eder, skill ve kayıt defteri blokları kurar. Yerel kullanım ücretsiz ve açık kaynaktır; HeyGen medya üretimi ve bulut render isteğe bağlıdır (ücretli olabilir).",
       "yerinde": {"tur": "npm-global", "yol": "/usr/local/lib/node_modules/hyperframes", "paket": "hyperframes"},
-      "kutuphane_surumu": "0.9.37",
+      "kutuphane_surumu": "0.9.71",
       "surum_kaynagi": "npm kayıt defteri (registry.npmjs.org/hyperframes/latest)",
       "veri_yeri": "~/.hyperframes (config.json, önbellek, kurulum ve güncelleme günlükleri; config'te telemetri açık). İçindeki kimlik ve rastgele tohum değerleri okunup yazdırılmaz.",
       "ag": "npm kayıt defteri (güncelleme kontrolü), GitHub (skill kurulumu), isteğe bağlı HeyGen servisleri; telemetri config'te açık",
@@ -281,9 +281,9 @@
         },
         "ozet": {
           "tur": "npm-integrity",
-          "deger": "sha512-PR5oJq1wY/0om/ciEZuZ0efSflWxl2ne4LalMSdbBS/DtQXyMTz5ZMlEmeivvhjVi+dhqAaQr+1ISKIi6bcm2g==",
-          "ne_icin": "npm kayıt defteri hyperframes@0.9.37 dist.integrity (salt okuma GET)",
-          "kayit_tarihi": "2026-11-12"
+          "deger": "sha512-xO7N4fV0TLkjLuY0J55T4+WUpFjdT+AGAUJCBbheDFVU1A0qLLhYWX4pxJJqZcMXyUSQnL2Ts3WpoJgGAR02lg==",
+          "ne_icin": "npm kayıt defteri hyperframes@0.9.71 dist.integrity (salt okuma GET)",
+          "kayit_tarihi": "2026-11-20"
         },
         "kural": "Kurulacak sürümün registry integrity değeri kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer registry'dekiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir)."
       }
@@ -297,7 +297,7 @@
       "ucret": "kismen",
       "ne_yapar": "Yapay zeka ajanıyla uçtan uca video üretir: fikir, betik, stok/üretilmiş görüntü, seslendirme, altyazı, montaj ve Remotion/HyperFrames ile render. Her medya türü için ücretsiz yerel yol vardır; ücretli sağlayıcılar (ses, görüntü, video API'leri) anahtarla isteğe bağlıdır.",
       "yerinde": {"tur": "git-checkout", "yol": "~/.openmontage", "dal": "main"},
-      "kutuphane_commit": "fecb9a1e3cc23ef84de30b272059457a427f16f8",
+      "kutuphane_commit": "2e003e65fa99a0f329478a2c1cdcf26bc481933a",
       "venv": ".venv",
       "sabit_surumler": {
         "numpy": "1.26.4",
@@ -584,9 +584,9 @@
         "yayinci": {"hesap": "OpenMontageInc", "ucuncu_taraf": false, "imza": "git-commit", "not": "git commit sha'sı kayıt değeridir."},
         "ozet": {
           "tur": "git-commit",
-          "deger": "fecb9a1e3cc23ef84de30b272059457a427f16f8",
+          "deger": "2e003e65fa99a0f329478a2c1cdcf26bc481933a",
           "ne_icin": "kurulu klonun kayıtlı commit'i (KAYNAK.md ile aynı)",
-          "kayit_tarihi": "2026-11-12"
+          "kayit_tarihi": "2026-11-20"
         },
         "kural": "Onay commit'in tam sha'sıyla verilir; dal adıyla ('main') verilmez."
       }

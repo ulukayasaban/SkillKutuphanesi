@@ -4,7 +4,7 @@
 |---|---|
 | Repo | https://github.com/heygen-com/hyperframes (paket yolu `packages/cli`) |
 | Paket | npm `hyperframes` |
-| Kayıtlı sürüm | 0.9.37 (bu bilgisayarda kurulu; 2026-11-12'de 0.9.23 → 0.9.35 → 0.9.37 güncellendi, `package.json`'dan okundu; yedekler `~/Documents/Claude/yedek/hyperframes-2026-11-12/` (0.9.23) ve `hyperframes-2026-11-12-2/` (0.9.35)) |
+| Kayıtlı sürüm | 0.9.71 (bu bilgisayarda kurulu; 2026-11-20'de 0.9.37 → 0.9.71 güncellendi, `package.json`'dan okundu; yedekler `~/Documents/Claude/yedek/hyperframes-2026-11-12/` (0.9.23), `hyperframes-2026-11-12-2/` (0.9.35) ve `hyperframes-2026-11-20/` (0.9.37)) |
 | Lisans | Apache-2.0 |
 | Kayıt tarihi | 2026-11-11 |
 | Kurulu yer | `/usr/local/lib/node_modules/hyperframes` (npm genel paketi; komut `/usr/local/bin/hyperframes`) |
