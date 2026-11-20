@@ -5,7 +5,7 @@
 
 ## Yol haritası
 1. Amaç ve acı noktaları — **TAMAM (2026-11-21)**
-2. Temizlik düzeyi: yerinde / temiz dal / sıfırdan; ne kalır, ne gider
+2. Temizlik düzeyi: yerinde / temiz dal / sıfırdan; ne kalır, ne gider — **bulgular toplandı (2026-11-21), karar bekliyor**
 3. Veri düzeni: kaynak, skill, kit, program, proje kayıtları
 4. Giriş süreçleri: yeni repo/skill (tür bazlı)
 5. Projelerdeki skiller: kurulum, güncelleme, izleme
@@ -43,5 +43,39 @@ Henüz yapılmadı: bu hafızaların içeriklerini çakışma açısından okuma
 ## Girdi 3: dünkü Opus incelemesi (özet)
 Öneri: yerinde devam; yalnız süreç katmanı temiz bir dalda baştan yazılsın. Kanıtlı bulgular: aylık zincir fihristi bilmiyor, `surecler/` eskimiş, senaryo dosyası yok, `.gecici/` 52 MB kalıntı, 6 kaydın `tur_gerekce`si boş, ComposioHQ gerekçesi eski, K-60..K-66 yanlış bölümde. Opus haftalık kotası yüzünden (133 saat) devam edemedi.
 
+
+## Adım 2: geçmiş planların ve bugünkü süreçlerin doğrulanması (2026-11-21, kanıtlı)
+
+### Geçmiş planlar ne durumda
+| Plan | Durum | Kanıt |
+|---|---|---|
+| Eski `notlar/rafta/PLAN.md` (451 satır) ve yerel yapılacaklar | Rafta, kullanılmıyor | `notlar/rafta/OKU.md` |
+| HF/OM geçişi (`notlar/hf-om-gecisi/`) | Tamamlandı (genel klasörler 2026-11-12'de boşaltıldı; bugün HF 0.9.71 / OM 2e003e65) | `DURUM.md`, K-40..K-66, `genel-bekci` TEMİZ |
+| Düzen denetimi (A1–A7, B1–B9, paketler P1–P8) | Uygulandı ve testli | 324/324 test (p1..p19), `BASLA.md`, `genel-bekci.py`, `aylik-ozet.py`, `rehber/12`, `kaynak-cikar.py` vb. var. **C (isteğe bağlı, 5 grup) tek tek doğrulanmadı** |
+| Tür planı (`plan-tur-surecleri.md`) | Adım 1–4 uygulandı; **5 (aylık zincir) ve 6 (Windows) yapılmadı** | plan §17, 200/200 kayıtta tür |
+
+### Doğrulanan eksikler (önem sırasıyla)
+1. **Aylık zincir fihristi ve kiti bilmiyor.** `arsiv-guncelle.py`/`aylik-ozet.py` içinde "fihrist" 0 kez geçiyor; `--aylik --kuru` 70 kaynakta güncelleme dalı planlıyor, fihristteki 6 dev koleksiyon ve kit çıktıda yok. İlk gerçek aylık vade 2026-12-07.
+2. **Aylık damga dosyası yok** (`notlar/son-aylik-calisma.json`, yerel/gitignore): zincir "ilk kurulum ya da yeni makine" sanıyor.
+3. **Belgeler eski:** `surecler/` içinde 21 "HENÜZ YOK": 12'si artık uygulanmış adım 4'e ait (belge eskimiş), 7'si gerçekten yapılmamış adım 5'e ait, 2 başka. Plan §13.5'in öngördüğü senaryo dosyası yok.
+4. **Bazı araçlar `--help`'e cevap vermiyor, doğrudan çalışıyor:** `arsiv-yerlestir.py`, `duman-testi.py`, `gelistirici-bilgisi.py`, `kapsam-denetimi.py` (zaman aşımı), `listeye-ekle.py` ("geçersiz repo adı: --help"). Yanlışlıkla çalıştırma riski.
+5. **Testsiz araç:** `ceviri-tr.py`, `neon-izle.py`.
+6. **Proje bağlarında kayıtlı sürüm eski:** `skill-ekle --durum` "güncel" diyor ama "bağlandığında 0.9.35 / fecb9a1e / 0.15.8, kart şimdi 0.9.71 / 2e003e65 / 0.16.5". Hangi proje hangi program sürümünü gerçekte kullanıyor, ölçülmüyor.
+7. **Bekçi gürültüsü:** `~/.claude/skills/.trash` (uygulamanın çöp klasörü) dosya sayısı değiştikçe (14 → 15 → 1) alarm veriyor.
+8. **Bekleyen girdiler:** 4 yıldızlı repo kütüphanede yok (`echris6/motion-video-kit`, `howseen-ai/claude-motion-design`, `tugrawork-creator/saas-motion-kit`, `storytold/pdfcraft`); 10 trend/popüler aday kararı.
+9. **Kayıt temizliği (Opus bulgusu, kısmen doğrulandı):** `kararlar.md`'de K-60..K-66 "Kabul edilen bekleyenler" başlığı altında (aylık özet bu bölümü susturma listesi okuyor); 6 kayıtta `tur_gerekce` yok; ComposioHQ dev-koleksiyon gerekçesi eski; `.gecici/` 52 MB kalıntı.
+
+### Hafıza (K1) ölçümü
+- Açılışta her oturumda yüklenen: `CLAUDE.md` 16,5 KB + ev `CLAUDE.md` 3 KB + `MEMORY.md` 3,5 KB ≈ 23 KB; oturum başı okunan `BASLA.md` 9,5 KB + `CHECKPOINT.md` 4 KB. Bayt/3 ile kabaca ≈ 12 bin token (tahmin), üstüne claude-mem enjeksiyonu (bu oturumda ≈ 10 bin "okunan" token gözlendi).
+- Hafıza dosyaları (20 dosya, 50 KB): kontrol edilen 8 kuralın 8'i hem hafızada hem repo belgelerinde yazılı (GitHub yalnız kütüphane, kayıp kaynak, konu konu, Neon düzeni, projelerde onaysız işlem yok, plan adımları sormadan, kaynak değerlendirme, yedek silme). Çift kayıt = biri eskirse çelişir.
+- İçerik çakışması taraması (hafızaların birbiriyle çelişmesi) henüz tam yapılmadı.
+
+### Maliyet (K2) ölçümü
+- Araçlar token/maliyet ölçmüyor; yalnız `neon-izle.py` agy toplam token yazıyor, kota için `~/.cache/kotalar/usage.json` var. Gerçek örnek: Opus high iki koşu ≈ 330 bin token ≈ haftalık Claude/GPT havuzunun ≈ %38'i.
+- Kullanılabilir veri kaynakları: Claude oturum kayıtları (46 dosya, 1,1 GB; `claude-mem:agent-cost-report` becerisi), agy `result` olayı, kota dosyası.
+
+### Karar için sonuç
+Süreç katmanının çekirdeği (araçlar, kayıtlar, testler, bağlar) çalışıyor; sorunlar belge eskimesi, aylık zincirin eksik adımı, ölçüm eksikliği ve çift hafıza. Tam sıfırlama bu sorunların hiçbirini çözmek için gerekli değil; 4 projenin kilit bağlarını ve 2.849 inceleme kaydını riske atar. Öneri: **veri ve araçlar yerinde, süreç/belge/hafıza katmanı baştan yazılır** (planda "ortadaki yol"). Karar kullanıcıda.
+
 ## Açık soru (adım 2)
-Temizlik düzeyi: yerinde devam / temiz dalda süreç katmanını baştan yaz / tüm kütüphaneyi sıfırlayıp baştan kur. Önerim: ortadaki (veri ve projeler yerinde, süreç ve belge katmanı baştan).
+Temizlik düzeyi kararı: yerinde devam / veri ve araçlar yerinde, süreç-belge-hafıza katmanı baştan (önerim) / tüm kütüphaneyi sıfırla.
