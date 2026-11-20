@@ -5,7 +5,7 @@
 
 ## Yol haritası
 1. Amaç ve acı noktaları — **TAMAM (2026-11-21)**
-2. Temizlik düzeyi: yerinde / temiz dal / sıfırdan; ne kalır, ne gider — **bulgular toplandı (2026-11-21), karar bekliyor**
+2. Temizlik düzeyi — **TAMAM (2026-11-21): ortadaki yol seçildi**
 3. Veri düzeni: kaynak, skill, kit, program, proje kayıtları
 4. Giriş süreçleri: yeni repo/skill (tür bazlı)
 5. Projelerdeki skiller: kurulum, güncelleme, izleme
@@ -77,5 +77,11 @@ Henüz yapılmadı: bu hafızaların içeriklerini çakışma açısından okuma
 ### Karar için sonuç
 Süreç katmanının çekirdeği (araçlar, kayıtlar, testler, bağlar) çalışıyor; sorunlar belge eskimesi, aylık zincirin eksik adımı, ölçüm eksikliği ve çift hafıza. Tam sıfırlama bu sorunların hiçbirini çözmek için gerekli değil; 4 projenin kilit bağlarını ve 2.849 inceleme kaydını riske atar. Öneri: **veri ve araçlar yerinde, süreç/belge/hafıza katmanı baştan yazılır** (planda "ortadaki yol"). Karar kullanıcıda.
 
-## Açık soru (adım 2)
-Temizlik düzeyi kararı: yerinde devam / veri ve araçlar yerinde, süreç-belge-hafıza katmanı baştan (önerim) / tüm kütüphaneyi sıfırla.
+## Karar (adım 2, kullanıcı 2026-11-21): ORTADAKİ YOL
+- **Yerinde kalır:** 2.849 incelenmiş skill (`registry.json`), `kaynaklar.json`, `arsiv/`, `fihrist/`, `kitler.json`, `programlar.json`, `projeler.json`, araçlar ve 324 test, 4 projenin `kilit.json` bağları, git geçmişi, `yedekler.json`.
+- **Baştan, sade yazılır:** `CLAUDE.md`/`AGENTS.md`, `BASLA.md`, rehberler, hazır istemler, `surecler/` dosyaları, hafıza düzeni (neyin nerede tutulacağı), maliyet kaydı.
+- **Plana iş olarak girer:** yukarıdaki 9 doğrulanmış eksik.
+- Tam sıfırlama yapılmaz (4 projenin bağlarını ve inceleme kayıtlarını riske atar, eksiklerin hiçbirini çözmek için gerekli değil).
+
+## Açık soru (adım 3)
+Veri düzeni: kaynak, skill, kit, program ve proje kayıtlarının hangisi tek doğru kaynak olacak, hangileri üretilmiş görünüm olacak?
