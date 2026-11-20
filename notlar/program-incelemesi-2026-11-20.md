@@ -9,7 +9,7 @@
 | HyperFrames (npm genel paket) | 0.9.37 | 0.9.71 | `~/Documents/Claude/yedek/hyperframes-2026-11-20/` (0.9.37) | 34 sürüm; sürüm notlarında kırıcı değişiklik yok; `HYPERFRAMES_SKIP_SKILLS=1` ile kuruldu; 5 skill bağı çözülüyor |
 | OpenMontage (git klonu) | `fecb9a1e` | `2e003e65` | `~/Documents/Claude/yedek/openmontage-2026-11-20/` | tek commit, yalnız dört README'ye bağlantı; `git pull --ff-only`; venv'e dokunulmadı; 11/11 sabit sürüm tutuyor; 12 yerel değişiklik yerinde |
 
-Kartlar (`programlar.json`, iki `KAYNAK.md`) güncellendi; npm integrity değeri yeni sürüme çevrildi. Yedekler `yedekler.json`'a kaydedildi, silmek yalnız kullanıcı "sil" deyince.
+Kartlar (`programlar.json`, iki `KAYNAK.md`) güncellendi; npm integrity değeri yeni sürüme çevrildi. Yedekler `yedekler.json`'a kaydedildi. Sonradan (2026-11-20, kullanıcı "yedekleri sil" deyip seçti) bu güncellemelerin ve eski program yedeklerinin, gizli içerikli `ayar-*` ile öteki 30 günlük yedeklerin tamamı silindi (15 klasör, 623 MB; kayıtlar `durum: silindi`). Geri alma artık yedekten değil, programların kendi sürümünden (`npm install -g hyperframes@0.9.37`, `git switch --detach fecb9a1e`) yapılır. Silinmeyenler: boşaltma ve geçiş yedekleri (akil-disi-tam, istatistik-skill-gecisi, genel-skiller-tam, genel-kaldirilan, global-skills-2026-11-08) ve `deneme/openmontage-fecb9a1e`.
 
 ## 2. Bulgular
 ### Büyüme ve disk
@@ -54,4 +54,4 @@ Kartlar (`programlar.json`, iki `KAYNAK.md`) güncellendi; npm integrity değeri
 - Çöp Sepeti'ne taşınanlar (HF geçmişi 1,29 GB, TMPDIR artıkları ~0,4 GB) kullanıcı sepeti boşaltana kadar disk yer kaplar.
 - IstatistikYoutube `config/tools.yaml` HyperFrames kaydı güncellendi (yedek `istatistik-test-temizlik-2026-11-20/config`). Projenin `status/handoff-defteri.md` satırı bu oturumda yazılmadı; proje oturumu kendi kaydını tutar.
 - Yeni sürümde Chrome seçimi değişti: karmaşık bir sahnede (GSAP eklentileri, video kaynakları) görüntü farkı çıkarsa `HYPERFRAMES_BROWSER_PATH` ile eski headless-shell'e dönülebilir.
-- Yedekler (`hyperframes-2026-11-20`, `openmontage-2026-11-20`) güncelleme kullanıcının projesinde doğrulanana kadar durur; silmek için kullanıcıya sorulur.
+- Güncelleme yedekleri silindi; HyperFrames'i 0.9.37'ye döndürmek gerekirse `HYPERFRAMES_SKIP_SKILLS=1 npm install -g hyperframes@0.9.37`, OpenMontage için `git -C ~/.openmontage switch --detach fecb9a1e3cc23ef84de30b272059457a427f16f8`. Yerel yamalar çalışma ağacında durur (git switch bunları ezmez; yine de önce `git status` bak).
