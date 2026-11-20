@@ -77,6 +77,21 @@ Henüz yapılmadı: bu hafızaların içeriklerini çakışma açısından okuma
 ### Karar için sonuç
 Süreç katmanının çekirdeği (araçlar, kayıtlar, testler, bağlar) çalışıyor; sorunlar belge eskimesi, aylık zincirin eksik adımı, ölçüm eksikliği ve çift hafıza. Tam sıfırlama bu sorunların hiçbirini çözmek için gerekli değil; 4 projenin kilit bağlarını ve 2.849 inceleme kaydını riske atar. Öneri: **veri ve araçlar yerinde, süreç/belge/hafıza katmanı baştan yazılır** (planda "ortadaki yol"). Karar kullanıcıda.
 
+## Girdi 4: token ölçümü (2026-11-21, Claude oturum kayıtlarından sayıldı; faturalama değil, plan limitinin nasıl saydığı bilinmiyor)
+Son 7 gün, yeni girdi (girdi + önbellek yazma) + çıktı, milyon token:
+| Proje | Yeni girdi + çıktı | Pay |
+|---|---|---|
+| Akil Disi Youtube Kanali | 181 | %34 |
+| IstatistikYoutube | 172 | %32 |
+| claude-mem gözlemci oturumları (arka plan, çoğu Haiku) | 81 | %15 |
+| **SkillKutuphanesi** | **74** | **%14** |
+| diğerleri (Claude uygulaması, Etsy-Arif, ...) | 30 | %5 |
+Toplam ≈ 538 M.
+
+Kütüphane projesi 2026-10-21'den bugüne (22 etkin gün, 716 kayıt dosyası, 50.748 model turu): 460 M yeni girdi, 65 M çıktı, 14,6 G önbellek okuma. En ağır günler: 10 Kasım (82 M), 21 Ekim (69 M), 31 Ekim (58 M), 11 Kasım (49 M). Model dağılımı (çıktı): Opus 5.5 25 M, Sonnet 5.5 24 M, Fable 5.2 10 M, Fable 5.1 4 M.
+**Ortalama bağlam ≈ 288 bin token/tur**: konuşma uzadıkça her mesajda tüm geçmiş yeniden okunuyor; yapısal maliyet budur.
+Kullanım: Claude haftalık ≈ %74 (beklenen %45), Fable haftalık %64, Antigravity Claude/GPT haftalık ≈ %88 (kullanım dosyası 2026-11-20/21).
+
 ## Karar (adım 2, kullanıcı 2026-11-21): ORTADAKİ YOL
 - **Yerinde kalır:** 2.849 incelenmiş skill (`registry.json`), `kaynaklar.json`, `arsiv/`, `fihrist/`, `kitler.json`, `programlar.json`, `projeler.json`, araçlar ve 324 test, 4 projenin `kilit.json` bağları, git geçmişi, `yedekler.json`.
 - **Baştan, sade yazılır:** `CLAUDE.md`/`AGENTS.md`, `BASLA.md`, rehberler, hazır istemler, `surecler/` dosyaları, hafıza düzeni (neyin nerede tutulacağı), maliyet kaydı.
