@@ -9,13 +9,13 @@
       "aciklama": "Use this skill when the user explicitly asks to map, document, or onboard into an existing codebase. Trigger for prompts like \"map this codebase\", \"document this architecture\", \"onboard me to this repo\", or \"create codebase docs\". Do not trigger for routine feature implementation, bug fixes, or nar…",
       "yol": "skills/acquire-codebase-knowledge",
       "inceleme": {
-        "commit": "7e408815ddcb64889a3683799a85399331cfd4ef",
-        "tarih": "2026-11-04",
-        "sonuc": "otomatik",
         "aciklama_tr": {
           "ne": "Mevcut bir kod tabanını haritalar, belgeler ve yeni ekip üyesi için onboarding dokümanı üretir.",
           "ne_zaman": "Kullanıcı açıkça kod tabanını haritalamak, mimariyi belgelemek veya repoya onboarding yapmak istediğinde; rutin geliştirmede tetiklenmez."
-        }
+        },
+        "commit": "29da520bb62faa47dc8cbfe7de8d2c7ed0c882dc",
+        "tarih": "2026-11-20",
+        "sonuc": "temiz"
       }
     },
     {
