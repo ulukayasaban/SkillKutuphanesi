@@ -102,7 +102,7 @@ ARSIV = LIB / "arsiv"
 REPO = "ornek/coklu"
 REPO_BAG = "Ana skill X servisinin API anahtarını ister (X_API_KEY)."
 ALT_BAG = "Yalnız yerel araç: ffmpeg ve Python; anahtar gerekmez."
-KAYIT = {"repo": REPO, "tip": "T1", "oncelik": 2, "bagimlilik": REPO_BAG,
+KAYIT = {"repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "bagimlilik": REPO_BAG,
          "skill_bagimlilik": {"skills/alt": ALT_BAG}}
 
 
@@ -129,7 +129,7 @@ yaz(kok_dizin / "alt" / "SKILL.md", fm("alt") + "Animate with `ease:` token sets
 
 
 def manifest_kaydi(ad, yol, ust=None):
-    return {"repo": REPO, "tip": "T1", "oncelik": 2, "kimlik": "ornek__coklu", "commit": "b" * 40, "lisans": "MIT",
+    return {"repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "kimlik": "ornek__coklu", "commit": "b" * 40, "lisans": "MIT",
             "klasor_adi": ad, "kaynak_yol": yol, "asil_ad": None, "ust_skill": ust, "aynalar": [], "atlanan_dosyalar": [],
             "varyantlar": {}, "varyant_yollari": {}, "ad": ad, "aciklama": ad, "bagimlilik": REPO_BAG,  # kaynak-cek repo metnini yazar
             "beklenen_dosya": 1, "inen_dosya": 1, "varyant_eksik": [], "yerel": f"cekilen/ornek__coklu/{ad}"}

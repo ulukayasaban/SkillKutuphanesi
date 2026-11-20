@@ -23,6 +23,20 @@
       "not": "Gizli içerikli olduğu için en çok 30 gün tutulur; süre dolunca aylık özet silinsin mi diye sorar."
     },
     {
+      "kimlik": "ayar-2026-11-20",
+      "yol": "~/Documents/Claude/yedek/ayar-2026-11-20",
+      "tur": "ayar-dosyasi",
+      "ne": "~/.claude/settings.json'ın advisorModel satırı kaldırılmadan önceki hali (kullanıcı: kaldır; danışman yalnız proje .claude/settings.local.json'da olur).",
+      "tarih": "2026-11-20",
+      "geri_yukleme": "Yedekteki settings.json ~/.claude/settings.json üzerine kopyalanır (kullanıcı onayıyla); yalnız 'advisorModel': 'opus' satırı farklıdır.",
+      "gizli_icerir": "evet",
+      "beklenen": [
+        "settings.json"
+      ],
+      "silme_gun": 30,
+      "not": "Dosya ortam değişkenleri/izin ayarları içerebilir; klasör 700, dosya 600."
+    },
+    {
       "kimlik": "global-skills-2026-11-08",
       "yol": "~/Documents/Claude/yedek/global-skills-2026-11-08",
       "tur": "genel-skill-klasoru",

@@ -243,7 +243,7 @@ t("11b 60+ günlük taban -> mesaj yok", dg.kayit_semalari_denetimi(k) == ([], [
 
 # 12 E6 kaynaklar.json
 def kaynak(repo="a/b", tip="T1", **ek):
-    r = {"repo": repo, "tip": tip}
+    r = {"repo": repo, "tip": tip, "tur": "koleksiyon", "bolum": "arsiv"}
     r.update(ek)
     return r
 

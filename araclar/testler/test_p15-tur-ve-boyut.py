@@ -372,17 +372,25 @@ finally:
 
 # ---------------------------------------------------------------- dogrula şema denetimi
 def hatalar(**k):
+    """tur ve bolum ZORUNLU (K-65): varsayılan geçerli çift (kit + katalog); denenen alan k ile ezilir."""
+    return dg.kaynak_tur_hatalari({"repo": "a/b", "tur": "kit", "bolum": "katalog", **k})
+
+
+def ham(**k):
+    """Varsayılansız: yalnız verilen alanlar (zorunluluk testleri için)."""
     return dg.kaynak_tur_hatalari({"repo": "a/b", **k})
 
 
-test("alan yoksa hata yok", hatalar() == [])
+test("tur ve bolum yoksa HATA (K-65 zorunlu)", any("tür/bölüm alanı eksik" in x for x in ham()))
+test("yalnız tur verilirse (bolum yok) HATA", any("tür/bölüm alanı eksik" in x for x in ham(tur="kit")))
+test("yalnız bolum verilirse (tur yok) HATA", any("tür/bölüm alanı eksik" in x for x in ham(bolum="katalog")))
+test("tam kayıt (tur + bolum) boş liste", hatalar() == [])
 test("geçerli tur+bolum çiftleri hata vermez", all(hatalar(tur=t, bolum=b) == [] for t, b in dg.KAYNAK_TURLERI.items()))
 test("geçersiz tur HATA", any("tur geçersiz" in x for x in hatalar(tur="dev")))
 test("geçersiz bolum HATA", any("bolum geçersiz" in x for x in hatalar(bolum="depo")))
 test("tur-bolum uyumsuzluğu HATA (dev-koleksiyon + arsiv)", any("uyuşmuyor" in x for x in hatalar(tur="dev-koleksiyon", bolum="arsiv")))
 test("uyumsuz: kit + arsiv, referans + katalog, koleksiyon + fihrist",
      all(any("uyuşmuyor" in x for x in hatalar(tur=t, bolum=b)) for t, b in (("kit", "arsiv"), ("referans", "katalog"), ("koleksiyon", "fihrist"))))
-test("yalnız tur verilirse (bolum yok) hata yok", hatalar(tur="kit") == [])
 test("tek_basina bool olmalı", any("tek_basina" in x for x in hatalar(tek_basina="evet")) and hatalar(tek_basina=False) == [])
 test("kurulmayan_parcalar metin listesi olmalı", any("kurulmayan" in x for x in hatalar(kurulmayan_parcalar="hooks")) and hatalar(kurulmayan_parcalar=["hooks"]) == [])
 test("son_kontrol {tarih, commit} biçimi", hatalar(son_kontrol={"tarih": "2026-11-18", "commit": "abc"}) == []
@@ -397,15 +405,17 @@ test("boyut: eksik/yanlış alanlar HATA", len(hatalar(boyut={"kutuphane_kb": "x
 test("yeni alanlar KAYNAK_ANAHTARLARI'nda", all(a in dg.KAYNAK_ANAHTARLARI for a in
      ("tur", "bolum", "tur_gerekce", "ne_ister", "ne_indirir", "tek_basina", "kurulmayan_parcalar", "son_kontrol", "arac_uyumu", "boyut")))
 
-# _e6_kaynaklar: tür hatası gerçekten HATA listesine düşer, alan yoksa sessiz kalır
+# _e6_kaynaklar: tür hatası gerçekten HATA listesine düşer; tür/bölüm eksik kayıt da HATA (K-65), tam kayıt sessiz
 tmp = Path(tempfile.mkdtemp(prefix="p15test-"))
 try:
     (tmp / "kaynaklar.json").write_text(json.dumps({"repolar": [
-        {"repo": "a/iyi", "tip": "T2"},
+        {"repo": "a/iyi", "tip": "T2", "tur": "kit", "bolum": "katalog"},
+        {"repo": "a/eksik", "tip": "T2"},
         {"repo": "a/kotu", "tip": "T2", "tur": "kit", "bolum": "arsiv"}]}), encoding="utf-8")
     h, u = [], []
     dg._e6_kaynaklar(tmp, h, u)
-    test("_e6_kaynaklar: uyumsuz tur-bolum HATA listesine düşer, tür alanı olmayan kayıt sessiz", len(h) == 1 and "a/kotu" in h[0] and not u, (h, u))
+    test("_e6_kaynaklar: uyumsuz tur-bolum ve eksik tür/bölüm HATA listesine düşer, tam kayıt sessiz",
+         len(h) == 2 and any("a/kotu" in x for x in h) and any("a/eksik" in x for x in h) and not any("a/iyi" in x for x in h) and not u, (h, u))
 finally:
     shutil.rmtree(tmp, ignore_errors=True)
 

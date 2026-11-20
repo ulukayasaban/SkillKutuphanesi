@@ -1,30 +1,28 @@
 # CHECKPOINT — SkillKutuphanesi
-Son güncelleme: 2026-11-20 03:40
+Son güncelleme: 2026-11-20 06:45
 
 ## Şimdi
-- Plan `notlar/plan-tur-surecleri.md`: ÇEKİRDEK KAPSAM kodlandı ve birleşti (K-65). Kullanıcı süreci kapanış için durdurdu; arka planda süreç, Neon ya da worktree yok.
-- Biten: tür/boyut/fihrist araçları; 199+ kaynakta tür (iki kit arşivde kalır: `urun-skil`; iki KAYIP: `tek-skil`); 6 dev koleksiyon fihriste taşındı; adım 4 (fihrist/kit kurulumu, `--kaldir`, `--rapor`, seyrek+kısmi klon) birleşti ve gerçek ağ denemesi geçti (boş projeye `awesome-copilot` içinden tek skil 7 sn); `medya_haric` (tek dosya yolu) birleşti ve 28 gereksiz medya dosyası (12,8 MB) arşivden çıktı (silinen liste: `~/Documents/Claude/SkillKutuphanesi-saklanan/silinen-medya-listesi.txt`); `dogrula.py` tür ve bölüm eksikliğini HATA sayıyor.
-- Commit'siz iki dosya: `notlar/plan-tur-surecleri.md` (adım 4 "uygulandı", durum satırı) ve `status/HATALAR.md` (2 satır): bu kapanışla commit edilir.
-- Son tam `test.py` 324/324 idi (tür zorunluluğu eklenmeden önce); ondan sonraki koşu yarıda kesildi. `dogrula.py` 0 hata, 1 eski uyarı (etsy-api rol).
+- Plan `notlar/plan-tur-surecleri.md`: ÇEKİRDEK KAPSAM bitti ve kapanış adımları tamamlandı (2026-11-20 06:45). Arka planda süreç, Neon ya da worktree yok.
+- Bu oturumda: tür/boyut/fihrist/medya çekirdeği (K-65) kapandı; `test.py` 324/324, `dogrula.py` 0 hata 1 eski uyarı (etsy-api rol), `kapsam-denetimi` 0 sorun, `genel-bekci` TEMİZ (taban yenilendi, `checkpoint-kapanis` ve `oturum-acilis` kalacak). Tür zorunluluğu testleri `test_p15` (+3) ve eski sahte kayıtlar `test_p8/p14/p19` düzeltildi.
+- Programlar güncellendi (K-66): HyperFrames 0.9.37 → 0.9.71, OpenMontage `fecb9a1e` → `2e003e65`; duman testi 142 geçti / 1 FAIL (projenin eski HF sürüm kaydı, düzeltildi). Bulgular `notlar/program-incelemesi-2026-11-20.md`. Güncelleme yedekleri kullanıcı kararıyla silindi.
+- Arşiv 419 MB → 283 MB. `~/.claude/settings.json`dan `advisorModel` kaldırıldı (yedek `ayar-2026-11-20`; danışman yalnız `.claude/settings.local.json`'da).
+- IstatistikYoutube (kullanıcı onayıyla): 13 test/araç dosyasına geçici klasör temizliği, `config/tools.yaml` HF kaydı 0.9.71; yedek `istatistik-test-temizlik` silindi (geri dönüş yok, proje git kullanmıyor).
 
 ## Sıradaki
-1. `python3 araclar/test.py` tam koşu (~10 dk, arka planda; yarıda kesme) → hepsi geçmeli. Tür zorunluluğu için `dogrula.py`'ye ait bir test yoksa `araclar/testler/` altına ekle (eksik `tur`/`bolum` → HATA; tam kayıt → boş liste).
-2. `python3 araclar/katalog-uret.py && python3 araclar/skill-readme.py`; `git status`te KATALOG*.md, README-SKILLER.md, notlar/ değişmişse commit (medya çıkarımından sonra yenilenmediyse).
-3. `python3 araclar/kapsam-denetimi.py` (0 sorun), `python3 araclar/dogrula.py` (0 hata).
-4. Genel klasör taban kaydı (kullanıcı kararı "checkpoint-kapanis ve oturum-acilis KALACAK"): git temizken ve commit'ten hemen önce `python3 araclar/genel-bekci.py --taban-yaz --yenile --evet`, sonra commit.
-5. Kayıt: `notlar/kararlar.md` K-65 mevcut; medya politikası satırı "gerekli medya arşivde kalır, kurulum aracının kaynaktan alması ihtiyaç olunca" ile uyumlu mu kontrol et; plan dosyasındaki "Uygulandı" ifadeleri gerçekle tutuyor mu (adım 3 satırı). Commit.
-6. Temizlik: `$TMPDIR` altında yarıda kalan testten kalmış olabilecek `tmp*` klasörleri (hangisi teste ait emin değilsen silme); `git worktree list` yalnız ana klasör; `~/.claude/settings.json`'da advisorModel yok (danışman `.claude/settings.local.json`'da).
-7. Sonra kullanıcıya TEK özet: yapılanlar, kontrol sayıları, arşiv boyutu önce/sonra (419 MB → ölç: `du -sh arsiv`), kullanılan modeller, kalan kararlar.
+1. Kullanıcı isteyince: ertelenen işler (aşağıda), trend adayları, aylık çalışma.
+2. Bu oturumun son commit'i push edilmedi (varsa `git log origin/master..master`).
 
 ## Karar bekleyen
-- [ ] Push: yerelde 36 commit var, push edilmedi — kullanıcı isteyince `git push origin master`.
-- [ ] Ertelenen işler "ihtiyaç olunca" (K-65): adım 5 (aylık çalışma türlere göre), adım 6 (Windows taşınabilir paketi), 12 eklenti paketinin kök dosyaları, köke bağlı 104 skil, repo-içi 112 skil önerisi, gerekli medyayı (özellikle 200 KB üstü) kurulum aracının kaynaktan alması.
-- [ ] Kullanıcı "süreçte bir problem var" dedi ve durdurdu; problemin ne olduğunu söylemedi — söylerse düzelt.
-- [ ] Trend/aday kararları (10 aday), `.claude/settings.json` ile danışmanın depoya taşınması (şu an yalnız yerel).
+- [ ] Ertelenen işler "ihtiyaç olunca" (K-65): plan adım 5 (aylık çalışma türlere göre), adım 6 (Windows taşınabilir paketi), 12 eklenti paketinin kök dosyaları, köke bağlı 104 skil, repo-içi 112 skil önerisi, gerekli medyayı (200 KB üstü) kurulum aracının kaynaktan alması.
+- [ ] Trend/aday kararları (10 aday: `python3 araclar/konu-takip.py --bekleyenler`).
+- [ ] `.claude/settings.json` ile danışmanın depoya taşınması (şu an yalnız yerel).
+- [ ] Önceki "süreçte problem var" bildirimi: problemin ne olduğu söylenmedi.
+- [ ] Kalan yedekler (boşaltma/geçiş: akil-disi-tam 3,4 GB, istatistik-skill-gecisi, genel-skiller-tam, genel-kaldirilan, global-skills-2026-11-08) ve `deneme/openmontage-fecb9a1e` (2,9 GB, ~12 Aralık): silme yalnız kullanıcı "sil" deyince.
+- [ ] IstatistikYoutube: `cakisma_tara.py`/`ekran_yazi_kontrol.py` sızıntı düzeltmesi yapıldı; `test_muzik_akis_kapi.py` yavaş (>150 sn), zaman aşımında temizlik çalışmaz.
 
 ## Vadesi gelen / takvimli
 - Aylık çalışma: son 2026-11-02; 35 günü aşarsa (2026-12-07) sor.
-- Yedek silme günleri: `python3 araclar/yedek-denetim.py` (ayar-2026-11-19 30 gün).
+- `deneme/openmontage-fecb9a1e` silme günü ~2026-12-12 (kullanıcı "şimdilik silme" dedi).
 
 ## Çalışma düzeni (kullanıcı kararları)
 - Plan adımları sormadan yürür (K-65). Sorulanlar: push, projeler, genel skill klasörleri, plan dışı yeni kaynak, K-58, git geçmişi yeniden yazma, plan dışı silme.

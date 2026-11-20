@@ -192,7 +192,7 @@ try:
     SITE = LIB / "site"
     REPO = "ornek/medya-depo"
     KAYIT = {
-        "repo": REPO, "tip": "T1", "oncelik": 2,
+        "repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2,
         "medya_haric": {
             "skills/foo/docs/a.gif": "belge-gorseli",
             "skills/foo/assets/unused.bin": "kullanilmiyor",
@@ -201,11 +201,11 @@ try:
         },
     }
     T7_KAYIT = {
-        "repo": "yerel/kendi", "tip": "T7", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)",
+        "repo": "yerel/kendi", "tip": "T7", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)",
         "medya_haric": ["kendi-skil/docs/demo.gif"],
     }
     T8_KAYIT = {
-        "repo": "yerel/site", "tip": "T8", "oncelik": 1, "yerel": "site",
+        "repo": "yerel/site", "tip": "T8", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 1, "yerel": "site",
         "medya_haric": ["site-skil/docs/site-demo.gif"],
     }
 
@@ -283,7 +283,7 @@ try:
         m["kayitlar"] = [x for x in m["kayitlar"] if x["repo"] != REPO]
         m["kayitlar"].extend([
             {
-                "repo": REPO, "tip": "T1", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
+                "repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
                 "klasor_adi": "foo", "kaynak_yol": "skills/foo", "asil_ad": None, "ust_skill": None, "aynalar": [],
                 "atlanan_dosyalar": ["docs/a.gif"],
                 "varyantlar": {"claude": "cekilen/ornek__medya-depo/_varyant/foo/claude"},
@@ -292,7 +292,7 @@ try:
                 "yerel": "cekilen/ornek__medya-depo/foo",
             },
             {
-                "repo": REPO, "tip": "T1", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
+                "repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
                 "klasor_adi": "bar", "kaynak_yol": "skills/bar", "asil_ad": None, "ust_skill": None, "aynalar": [],
                 "atlanan_dosyalar": [], "varyantlar": {}, "varyant_yollari": {},
                 "ad": "bar", "aciklama": "bar", "bagimlilik": None, "beklenen_dosya": 2, "inen_dosya": 2, "varyant_eksik": [],
