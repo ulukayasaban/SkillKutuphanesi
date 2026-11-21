@@ -116,7 +116,7 @@ Hedef (kullanıcı): GitHub listelerinden işe yarayan yapay zeka skill/araç/i�
 | 4. Sıfır sistem (arama + kopyala-yapıştır komut) | 0 | 0,02–0,05 M (t) | 0 | Kayıt, izleme ve güvenlik denetimi yok |
 Not: 1+2+3 birleşebilir: veri ve süzgeç (1), Claude Code kurulumu (2), çok ajanlı kurulum (3).
 
-**Değerlendirme:** Mevcut sistem hedefi zaten çözüyor (9 profil + kurulum aracı) ama büyüklüğü hedefin çok üstünde; maliyetin çoğu envanter ve inceleme makinesinde. Önerilen yön: kütüphane-lite + küçük bir sha'lı pazar denemesi (1 kısa oturum), sonuca göre kütüphaneyi küçültmek. Bu, adım 3'ün kapsamını da küçültür (registry 2.849 yerine kullanılanlar ve alternatifleri).
+**Değerlendirme:** Mevcut sistem hedefi zaten çözüyor (23 profil, 31 rol, kit, fihrist ve program-skill seçenekleriyle kurulum aracı) ama büyüklüğü hedefin çok üstünde; maliyetin çoğu envanter ve inceleme makinesinde. Önerilen yön: kütüphane-lite + küçük bir sha'lı pazar denemesi (1 kısa oturum), sonuca göre kütüphaneyi küçültmek. Bu, adım 3'ün kapsamını da küçültür (registry 2.849 yerine kullanılanlar ve alternatifleri).
 
 ## Girdi 6: pazar denemesi sonucu (2026-11-21, yalıtılmış, model çağrısı yok)
 **Sayım:** Projelerin kullandığı 26 repodan **14'ü zaten Claude Code pazarı** (`.claude-plugin/marketplace.json` var; 71 skill: knowledge-work-plugins 21, agent-skills 10, youtube-agent-skill 9, hyperframes 8, open-design 7, ...), **11'i yalnız-skill** repo (31 skill; en büyüğü sealeap-ecommerce-skills 12), 1 yerel (3 skill).
@@ -134,6 +134,11 @@ Not: 1+2+3 birleşebilir: veri ve süzgeç (1), Claude Code kurulumu (2), çok a
 - Pazar dizini bu bilgisayarda yerel; başka makinede erişmek için pazarın kütüphane deposunda (private) durması gerekir (kural: yalnız ulukayasaban/SkillKutuphanesi) ve erişim/kimlik doğrulaması denenmedi.
 - Claude'un oturumda bu skill'i gerçekten yükleyip kullandığı denenmedi (model çağrısı yapılmadı).
 - Skill kaybı: lite yalnız çalışma ağacındaki kopyaları ve aylık yeniden incelemeyi azaltır; 2.849 inceleme, Türkçe özet ve ücret/risk etiketleri katalog verisi olarak kalabilir, arşiv kopyaları git geçmişinde (221 MB) durur.
+
+## Girdi 7: ikinci beyin fırtınası, hızlı kurulum yöntemleri (2026-11-21; plan beklemede, kullanıcı "sonra dönelim" dedi)
+**Doğrulanan (vercel-labs/skills README + docs, okundu, çalıştırılmadı):** `npx skills add owner/repo[@etiket|@commit] --skill ad -a claude-code`; varsayılan proje kapsamı (`-g` genel); Claude Code `.claude/skills/`, Codex/Cursor/Antigravity/Gemini CLI/Copilot `.agents/skills/`; varsayılan sembolik bağ, `--copy` gerçek kopya; `skills-lock.json` v2 her skill için `computedHash` ve git kaynağında `commit` tutar, kilitli kurulum o commit'i çeker; `check`/`update`; Node ≥ 22.20; **telemetri varsayılan açık** (kaynak/skill kimlikleri ve güvenlik denetimi istekleri; `DISABLE_TELEMETRY=1` ya da `DO_NOT_TRACK=1` ile kapanır). Kütüphanenin `yapay-zeka-araclari.json` kayıtları (2026-11-11) ile klasör yolları aynı.
+**Kütüphanede bugün zaten var:** 23 profil, 31 rol, `skill-ekle.py --profil/--rol/--oner/--kit/--fihrist-skill/--program-skill/--rapor/--durum/--guncelle/--kaldir`, `kilit.json` ile commit sabitleme, kitler ve fihrist.
+**Sonuç:** "Listelerden yeni projeye hızlı kurulum" için yeni bir kurulum motoru gerekmiyor; `npx skills` bizim motorun küçük bir benzeri (inceleme, ücret/risk, kilit ve izlenebilirlik yok, telemetri var, ikinci kilit dosyası). Maliyet kurulum hızından değil, çevresindeki konuşmadan ve bakım makinesinden geliyor. Öneri: kurulumu **terminalden tek komutla (LLM'siz)** yapılabilir hale getirmek: `skill-ekle.py <proje> --profil <ad>` kısa rapor verir, `--evet` ile kurar; sıfır token.
 
 ## Karar (adım 2, kullanıcı 2026-11-21): ORTADAKİ YOL
 - **Yerinde kalır:** 2.849 incelenmiş skill (`registry.json`), `kaynaklar.json`, `arsiv/`, `fihrist/`, `kitler.json`, `programlar.json`, `projeler.json`, araçlar ve 324 test, 4 projenin `kilit.json` bağları, git geçmişi, `yedekler.json`.
