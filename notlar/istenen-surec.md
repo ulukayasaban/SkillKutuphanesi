@@ -1,96 +1,63 @@
-# İstenen süreç: Skill Kütüphanesi (kullanıcının istediği hâliyle)
+# İstenen süreç: Skill Kütüphanesi
 
-> Bu belge yalnız **ne istendiğini** anlatır; mevcut süreçlerden ve araçlardan bahsetmez. Kaynak: kullanıcının 2026-11-21 tarihli sözleri. `[Senin]` = kullanıcının dediği, `[Önerim]` = benim eklediğim, onay bekliyor.
-> Ortak çalışma dosyası: `notlar/yeni-surec-plani-calisma.md`.
+> Yalnız istenen süreç; mevcut süreçlerden bahsetmez. İşaretsiz = senin dediğin; (öneri) = benim eklediğim, onay bekliyor. Ortak plan: `notlar/yeni-surec-plani-calisma.md`.
 
-## 1. Tanıtım
-**Ne:** GitHub listelerinde yıldızlanan repolardan işe yarayan yapay zeka skill, kit, program ve araçlarını kendi kendine izleyen, sınıflayan, kaydeden, öneren ve projelere güvenle kuran süreç.
-**Kimin için:** Tek kullanıcı. Süreci otomasyon ve yapay zeka ajanları yürütür.
-**Kullanıcının tek işi:** GitHub listesine repo eklemek `[Senin]`. Gerisini süreç yürütür.
-**Başarı ölçütleri**
-1. Yeni projeye başlarken skill aramak gerekmez; öneri hazırdır.
-2. Yeni repo eklenince kullanıcıya soru gelmez; süreç adapte olur, öneri işlemi bozulmaz.
-3. Aylık kontrol kendi yürür.
-4. Projeler aksamaz; hiçbir değişiklik izlenmeden yapılmaz.
-5. İşleyiş maliyeti düşük ve görünürdür.
+## Amaç
+GitHub listene eklediğin repolardan işe yarayan YZ skill, kit, program ve araçları süreç kendi izler, sınıflar, kaydeder, önerir ve projelere kurar. **Senin işin: listeye repo eklemek.**
+Başarı: aramak gerekmez; yeni repo soru sormaz ve öneriyi bozmaz; aylık takip kendi yürür; projeler aksamaz; işleyiş maliyeti düşük ve görünür.
 
-## 2. Süreç görevleri
-| # | Görev | Ne yapar | Onay |
-|---|---|---|---|
-| 1 | İzleme | GitHub listelerini düzenli tarar; yeni, değişen, kaybolan repoyu bulur | Onaysız |
-| 2 | Sınıflama | Repoyu türüne göre ayırır; kategori, ücret, risk ve boyut kurallarla belirlenir | Onaysız |
-| 3 | Kayıt | Repo kaydı tutulur; eski sürümler saklanır; bilgisayarda gereksiz kopya taşınmaz | Onaysız |
-| 4 | Öneri | Yeni repo mevcut öneri işlemlerine uyar; yeni proje için öneri raporu hazırlanır | Onaysız |
-| 5 | Kurulum | Seçilen skill projeye kurulur | Proje onayı |
-| 6 | Proje takibi | Her proje için hangi skill, hangi sürüm, güncel mi, dondurulmuş mu tutulur | Onaysız (okuma) |
-| 7 | Güncelleme | Aylık kontrol; her proje için güncelleme önerisi ve etki raporu | Hazırlık onaysız, uygulama onaylı |
-| 8 | Koruma | Riskli repo reddi, yedek, geri alma, genel klasörlerin boş kalması | Otomatik |
-| 9 | Raporlama | Durum ve maliyet raporu | Onaysız |
-| 10 | Kontrol ve hafıza | Takip ve kontrol işlemlerinin yürümesi; neyin nerede tutulduğu tek yerde | Otomatik |
+## Görevler
+1. **İzleme:** liste taranır; yeni, değişen, kaybolan repo bulunur.
+2. **Sınıflama:** tür, kategori, ücret, risk, boyut kurallarla belirlenir.
+3. **Kayıt:** eski sürümler saklanır; gereksiz kopya taşınmaz.
+4. **Öneri:** yeni repo öneri işlemine adapte olur; yeni proje için öneri raporu çıkar.
+5. **Kurulum:** seçilen skill projeye kurulur.
+6. **Proje takibi:** hangi skill, hangi sürüm, güncel mi, dondurulmuş mu.
+7. **Güncelleme:** aylık kontrol, her proje için etki raporu.
+8. **Koruma:** riskli repo reddi, yedek, geri alma.
+9. **Raporlama:** durum ve maliyet.
+10. **Hafıza ve kontrol:** neyin nerede tutulduğu tek yerde; çift kayıt yok; açılış yükü az.
 
-## 3. Temel ilkeler
-- **Kurallı ve planlı:** Süreç, yazılı kurallara göre kendini sürdürür; yeni repo ve aylık kontrolde kullanıcıya bağımlı olmaz `[Senin]`.
-- **Tür bazlı:** Her repo türüne uygun süreçten geçer `[Senin]`.
-- **Skill'ler projenin içinde durur, genel klasörler boş kalır:** kesin kural `[Senin]`. Kurulumun kütüphane içinde nerede tutulduğu önemsizdir; önemli olan projeye özgü takiptir `[Senin]`.
-- **Kayıpsız:** Hiçbir skill, inceleme veya sürüm kaybolmaz; eski sürümler silinmez, geri dönülebilir `[Senin]`.
-- **Güvenlik:** Riskli ve saldırgan güvenlik skill'leri alınmaz `[Senin]`; bu karar otomatiktir, kullanıcıya soru gitmez `[Önerim]`.
-- **Uyumluluk:** Claude Code, Codex ve Antigravity ile tam uyumlu; diğer yapay zeka araçlarında da çalışır `[Senin]`.
-- **Katmanlar uyumlu:** Karar, inceleme ve ölçüm katmanları birbirleriyle tam uyumlu çalışır `[Senin]`.
-- **Sade:** Tek giriş, aynı bilgi birden fazla yerde yazılmaz `[Senin]`.
-- **Kısa oturumlar, tek hafıza:** Plan dosyası tek hafızadır, her şey kayıtlıdır ve görünürdür `[Senin]`.
-- **Programlar (ör. HyperFrames, OpenMontage) yedekli güncellenir:** olması iyi olur, zorunlu değil `[Senin]`.
+## Kurallar
+- Süreç yazılı kurallara göre kendini sürdürür; yeni repo ve aylık kontrolde sana bağımlı olmaz; her tür kendi sürecinden geçer.
+- **Skill'ler projenin içinde, genel klasörler boş** (kesin). Kopyanın kütüphanede nerede durduğu önemsiz; **projeye özgü takip şart.**
+- **Kayıpsız:** hiçbir skill, inceleme ya da sürüm kaybolmaz; eski sürüm silinmez, geri dönülür.
+- Riskli ve saldırgan güvenlik skill'i alınmaz; otomatik, soru yok (öneri).
+- Claude Code, Codex, Antigravity ile tam uyum; diğer YZ araçlarında da çalışır.
+- Karar, inceleme ve ölçüm katmanları tam uyumlu; tek giriş; aynı bilgi tek yerde.
+- Kısa oturumlar; plan dosyası tek hafıza; her şey kayıtlı ve görünür.
+- Programların yedekli güncellenmesi olsa iyi olur, zorunlu değil.
 
-## 4. Onay kuralları
-**Onaysız çalışır (kütüphane içi, geri alınabilir)** `[Senin]` + `[Önerim]`
-Yeni repo geldiğinde: izleme, sınıflama, kategori, ücret ve risk etiketi, kayıt, öneri hazırlama `[Senin]`. Ayrıca `[Önerim]`: aylık tarama, fihrist ve kayıt yenileme, kaybolan kaynağı işaretleme (kullanılmıyorsa), maliyet ve durum raporu, yedek denetimi, hata bildirimi.
+## Onay
+- **Onaysız:** yeni repo adaptasyonu, kategori, öneri. (öneri) aylık tarama, kayıt yenileme, kullanılmayan 404 kaynağı işaretleme, raporlar, yedek denetimi.
+- **Toplu:** aynı işlem birden çok projede aynıysa tek onay. (öneri) "aynı" = aynı skill + aynı hedef sürüm; etkilenen projeler listelenir.
+- **Tek tek:** başka projeyi ya da proje sürecini etkileyen her işlem. (öneri) kurulum, güncelleme, kaldırma, sürüm değişikliği, elle değişmiş skill, dondurulmuş proje.
+- **Her zaman sana:** para, kalıcı silme, güvenlik riski, GitHub'a gönderme.
 
-**Toplu onay:** Aynı işlem birden fazla projede **aynıysa** tek onayla `[Senin]`. `[Önerim]` "Aynı işlem": aynı skill, aynı hedef sürüm, etkilenen projelerin listesi onay metninde görünür.
+## Projeler ve sürümler
+Proje başına: skill, sürüm, kaynak, son işlem, durum. Sürüm modu: **takip / dondur** (güncellenmesin, raporda yalnız görünür) **/ yalnız onaylı**. Güncelleme öncesi etki kontrolü: hangi dosya değişiyor, elle değişiklik var mı, hangi proje etkileniyor (öneri). Uygulama onaylı; her güncelleme geri alınabilir.
 
-**Tek tek onay:** Başka projeleri ilgilendiren ya da projenin sürecini etkileyen her işlem `[Senin]`. `[Önerim]`: kurulum, güncelleme, kaldırma, sürüm değişikliği, projede elle değiştirilmiş skill'e dokunma, dondurulmuş projeye dokunma.
+## Maliyet
+Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip, kurulum, güncelleme, onarım). Her işlemde token, kota, süre, disk, onay sayısı kaydedilir ve raporlanır. (öneri) YZ yalnız karar gereken yerde, gerisi betik; sayısal hedefler birlikte belirlenir.
 
-**Her zaman kullanıcıya (kırmızı çizgi)** `[Senin]`: para (ücretli servis), kalıcı silme, güvenlik riski, GitHub'a gönderme.
+## Senaryolar (olay → süreç → sana ne gelir)
+- Listene yeni repo (yeni tür dahil) → tarar, sınıflar, kaydeder, önerilere ekler, öneriyi bozmaz → hiçbir şey.
+- Riskli ya da saldırgan repo → otomatik reddeder → hiçbir şey.
+- Yeni proje başlıyor → öneri raporu → rapor ve kurulum onayı.
+- Aylık kontrol → tüm türleri tarar, projeler için öneri ve etki raporu → yalnız projeyi etkileyenler.
+- Aynı skill'in yeni sürümü 3 projede → tek toplu öneri → tek onay.
+- Dondurulmuş proje → güncellemeye dokunmaz, "yeni sürüm var" der → hiçbir şey.
+- Güncelleme projeyi aksatabilir → etki raporu, geri dönüş hazır → tek tek onay; sorun çıkarsa önceki sürüme döner, kısa bildirim.
+- Kaynak repo silinir (404) → kullanılmıyorsa işaretler; kullanılıyorsa projeye dokunmaz → yalnız kullanılıyorsa uyarı.
+- Ücretli skill/servis → "ücretli" etiketler, otomatik önermez → kurulumda para onayı.
+- Başka YZ aracı açılır → aynı proje skill'lerini görür → hiçbir şey.
+- Ağ yok ya da adım hata verir → durur, projede değişiklik yapmaz, devam noktasını kaydeder; oturum yarıda kesilirse plan dosyasından sürer → hata bildirimi.
+- Aylık maliyet raporu → token, kota, süre, disk, onay sayısı → kısa rapor.
+- Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
 
-## 5. Projeler ve sürümler
-- **Proje bazlı takip:** her proje için skill listesi, sürümü, kaynağı, son işlem tarihi, durumu `[Senin]`.
-- **Sürüm modu (proje başına)** `[Senin: güncellemek istemediğim projeler olabilir]`: takip et / **dondur** (güncellenmesin, raporda yalnız görünür) / yalnız onaylı güncelle.
-- **Etki kontrolü** `[Senin: projeleri aksatabilir]`: güncellemeden önce hangi dosyalar değişiyor, projede elle değişiklik var mı, hangi proje etkileniyor; sonuç raporda, uygulama onaylı `[Önerim]`.
-- **Geri dönüş:** her güncelleme geri alınabilir; eski sürüm saklanır `[Senin]`.
-- Sürüm işlemleri her türlü duruma karşı kontrol edilir `[Senin]`.
-
-## 6. Uyumluluk
-Tam uyum: Claude Code, Codex, Antigravity. Çalışma garantisi aranan ek hedef: diğer yapay zeka araçları (ör. Cursor, Copilot, Gemini CLI) `[Senin]`. `[Önerim]` ortak açık skill biçimi ve ortak giriş dosyası kullanılır, araç başına tek ek kural yazılmaz.
-
-## 7. Maliyet
-- **Kurulum maliyeti önemsizdir** `[Senin]`. **İşleyiş maliyeti** (yeni repo ekleme, aylık takip, proje kurulumu, güncelleme, hata onarımı) hedeftir `[Senin]`.
-- Her işlem için token, kota, süre, disk ve onay sayısı kaydedilir ve raporlanır `[Senin]`.
-- `[Önerim]`: yapay zeka yalnız kural dışı ya da karar gereken yerde çalışır; geri kalanı betik. Hedef değerler sayısal olarak birlikte belirlenir.
-
-## 8. Hafıza ve kontrol
-Neyin nerede tutulduğu tek yerde yazılıdır; çift kayıt yoktur; oturum açılış yükü azdır; takip ve kontrol işlemleri kendi yürür `[Senin]`.
-
-## 9. Senaryolar (olay → süreç ne yapar → sana ne gelir)
-| # | Olay | Süreç ne yapar | Sana ne gelir |
-|---|---|---|---|
-| S1 | GitHub listene yeni repo eklenir | Tarar, türünü bulur, kategori/ücret/risk yazar, kaydeder, önerilere ekler | Hiçbir şey (isteğe bağlı kısa özet) |
-| S2 | Yeni repo riskli ya da saldırgan güvenlik içeriklidir | Otomatik reddeder, yalnız not düşer | Hiçbir şey |
-| S3 | Yeni proje başlıyor | Proje tipine göre öneri raporu hazırlar | Rapor ve kurulum onayı |
-| S4 | Aylık kontrol | Tüm türleri tarar, değişenleri kayda geçirir, projeler için güncelleme önerisi ve etki raporu hazırlar | Yalnız projeyi etkileyen öneriler |
-| S5 | Aynı skill'in yeni sürümü 3 projede kurulu | Tek bir toplu öneri hazırlar | Tek toplu onay |
-| S6 | Bir proje "dondurulmuş" | Güncellemeye dokunmaz, raporda yalnız "yeni sürüm var" der | Hiçbir şey |
-| S7 | Güncelleme projeyi aksatabilir | Etki raporu verir, uygulamayı onaya bırakır, geri dönüş hazır tutar | Onay (tek tek) |
-| S8 | Güncelleme sonrası sorun | Önceki sürüme döner, nedenini kayda yazar | Kısa bildirim |
-| S9 | Kaynak repo silinir (404) | Kullanılmıyorsa işaretler; projede kullanılıyorsa projeye dokunmaz | Yalnız kullanılıyorsa uyarı |
-| S10 | Ücretli skill/servis çıkar | Ücretli etiketler, otomatik önermez | Kurulumda para onayı |
-| S11 | Yeni tür bir repo gelir | Tür kuralıyla adapte olur; öneri işlemi bozulmaz | Hiçbir şey |
-| S12 | Başka yapay zeka aracı açılır | Aynı proje skill'lerini görür | Hiçbir şey |
-| S13 | Ağ yok ya da bir adım hata verir | Durur, projede hiçbir değişiklik yapmaz, devam noktasını kaydeder | Hata bildirimi |
-| S14 | Aylık maliyet raporu | Token, kota, süre, disk, onay sayısını yazar | Kısa rapor |
-| S15 | Program (ör. HyperFrames) yeni sürüm çıkarır | Yedekli güncelleme önerir (isteğe bağlı) | Onay |
-| S16 | Oturum yarıda kesilir | Plan dosyasından kaldığı yerden sürer | Hiçbir şey |
-
-## 10. Netleşmesi gerekenler
-1. **Ücretli skill/servis:** `[Önerim]` etiketle, otomatik önerme, kurulumda ayrı para onayı.
-2. **Dondurulmuş proje:** aylık raporda yalnız "yeni sürüm var" mı denmeli?
-3. **Kaybolan kaynak** projede kullanılıyorsa: projedeki kopya aynen kalır, uyarı gelir mi?
-4. **Maliyet hedefleri:** yeni repo ve aylık takip için kabul edilen üst sınır (adım 7'de sayıya bağlanacak).
-5. **Diğer yapay zeka araçlarında "çalışsın":** hangi araçlar (Cursor, Copilot, Gemini CLI, başka) ve "çalışsın" ne kadar demek?
+## Netleşecek sorular
+1. Ücretli skill: etiketle, otomatik önerme, kurulumda para onayı (öneri) uygun mu?
+2. Dondurulmuş projede aylık raporda yalnız "yeni sürüm var" mı denmeli?
+3. Kaybolan kaynak projede kullanılıyorsa: projedeki kopya kalır, uyarı gelir mi?
+4. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
+5. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
