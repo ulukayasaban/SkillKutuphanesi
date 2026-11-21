@@ -37299,5 +37299,14 @@
       "neden": "düşük öncelik; benzer motion skilleri çok",
       "tarih": "2026-11-17"
     }
+  },
+  "kuyruk": {
+    "storytold/pdfcraft": {
+      "repo": "storytold/pdfcraft",
+      "durum": "bekliyor",
+      "neden": "aciklama_veya_skill_yok",
+      "tarih": "2026-11-22",
+      "ayrinti": "SKILL.md yok (CLAUDE.md/DESIGN.md)"
+    }
   }
 }
