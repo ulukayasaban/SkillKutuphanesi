@@ -6,7 +6,7 @@
 ## Yol haritası (2026-11-21'de token adımı eklendi)
 1. Amaç ve acı noktaları — **TAMAM**
 2. Temizlik düzeyi — **TAMAM (ortadaki yol)**
-3. Veri düzeni: kaynak, skill, kit, program, proje kayıtları — **bulgular toplandı, karar bekliyor**
+3. Veri düzeni: kaynak, skill, kit, program, proje kayıtları — **bulgular toplandı; öneri: Tam ayrım, aşamalı (karar bekliyor)**
 4. Giriş süreçleri: yeni repo/skill (tür bazlı)
 5. Projelerdeki skiller: kurulum, güncelleme, izleme
 6. Kalite, güvenlik, ücret ve onay kuralları (kullanıcıya bağımlılık merdiveni)
@@ -19,7 +19,7 @@ Kullanıcı dört hedefin hepsini seçti: **sadelik, güvenilirlik, hız ve az o
 
 - **K1 Hafıza:** Süreçler tasarlanırken kullanıcının bilgisayarındaki hafıza işlemleri de değerlendirmeye girer (neyin nerede tutulduğu, çakışma, token yükü).
 - **K2 Maliyet:** Kütüphane süreçleri ilerledikçe her sürecin maliyeti (token, kota, süre, disk, onay sayısı) hesaplanır; her şey net görünür.
-- **K4 Token bütçesi (2026-11-21):** Her adımın ve sürecin tahmini token maliyeti yazılır; planlama konuşmaları kısa oturumlarda yapılır, kalıcı hafıza bu dosyadır (oturum ≈ 288 bin token bağlam taşıyıp her turda yeniden okunuyor); rutin işler ucuz modelle ve LLM'siz betikle; yeni geliştirme yerine bakım modu.
+- **K4 Token ve hata maliyeti (2026-11-21, kullanıcı düzeltmesiyle):** Kurulum/yeniden kurma işinde token harcamak KABUL (ucuz yol aranmaz; en iyi yapı seçilir). Hedef, **tekrarlayan süreçlerin** işletme maliyeti: yeni repo ekleme, aylık işlem, projeye kurulum, program güncelleme ve hata/onarım turları; bunların token miktarı ve hata maliyeti ölçülür, düşük tutulur (LLM yalnız karar gereken yerde, gerisi araç). Planlama konuşmaları kısa oturumlarda yapılır, kalıcı hafıza bu dosyadır (oturum ≈ 288 bin token bağlam taşıyıp her turda yeniden okunuyor).
 - **K3 Bağımsızlık:** Bundan sonra eklenen repolarda süreçler kullanıcıya bağımlı olmaz: iş uçtan uca yürür, kullanıcıya yalnız kırmızı çizgi kararları gelir.
 
 ## Girdi 1: kütüphanenin bugünkü durumu (2026-11-21, sayılan)
@@ -112,7 +112,12 @@ Kullanım: Claude haftalık ≈ %74 (beklenen %45), Fable haftalık %64, Antigra
 1. **Kararlar (küçük, onaylı, elle):** `kaynaklar.json`, `projeler.json`, `programlar.json`, `kitler.json`, `yedekler.json`, kural dosyaları. Değişiklik bir araç komutuyla (elle JSON düzenlemesi azalır).
 2. **İncelemeler (bir kez üretilir):** kategori, ücret, Türkçe özet, risk: skill başına tek yer.
 3. **Ölçülenler ve görünümler (araç üretir, elle düzenlenmez):** hash, boyut, bağımlılık, fihrist, `KATALOG.md`, `skiller/`, `notlar/*.md`; `dogrula.py` elle düzenlemeyi ve senkron bozukluğunu yakalar.
-Hafif yol (önerilen): dosyaları bölmeden, hangi alanın hangi katmana ait olduğunu yazılı kural + `dogrula.py` denetimi yapmak; `tip` kopyasını `tur`'dan otomatik türetmek. Tam ayrım (registry'yi iki dosyaya bölmek) 14 aracı etkiler, bu yüzden önerilmez.
+Karar ölçütü (K4): kurulum maliyeti değil, **tekrarlayan süreçlerin** token ve hata maliyeti. Bu ölçütle öneri **Tam ayrım, aşamalı** oldu:
+- Bugün yeni repo eklerken sekiz yerde elle/LLM yazım gerekiyor (kaynaklar, registry, ücret, açıklama, kategori, kural dosyaları...), her biri token ve hata riski. Ayrılmış, araçla yazılan veride LLM tek yapısal karar verir (tür, kategori, ücret, risk), araç geri kalanı yazar.
+- Ölçülenler ayrı olunca aylık işlemde LLM'siz yenileme ve "inceleme hangi commit için geçerli" bilgisi mümkün olur; yalnız gerçekten değişen ve kullanılan skiller yeniden incelenir.
+- Aşamalar (her biri testli, `git revert` ile geri alınır): (1) elle düzenlenen 7 dosya için yazım komutları; (2) `tip`'in `tur`'dan türetilmesi ve 138 senkron bozukluğun giderilmesi; (3) registry'nin karar ve ölçüm dosyalarına bölünmesi (14 araç, 324 test uyarlanır); (4) açıklama ve ücret dosyalarının içeri alınması, 643 eksik açıklama. Projelerin `kilit.json` biçimi ve skill kimlikleri değişmez.
+- Risk ve önlem: araç ve test uyarlama hatası → her aşama sonunda `test.py`, `dogrula.py`, 4 projede `--durum` (salt okuma); geri dönüş git.
+- Baz ölçüm (adım 7'ye girer): yeni repo ekleme, aylık işlem, proje kurulumu, program güncellemesi için bugünkü token ve onay sayısı ölçülür; hedef değerler buna göre yazılır.
 
 ## Açık soru (adım 3)
 Veri düzeni: kaynak, skill, kit, program ve proje kayıtlarının hangisi tek doğru kaynak olacak, hangileri üretilmiş görünüm olacak?
