@@ -49,7 +49,7 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Aynı skill'in yeni sürümü 3 projede → tek toplu öneri → tek onay.
 - Dondurulmuş proje → güncellemeye dokunmaz, raporda da yer vermez → hiçbir şey.
 - Güncelleme projeyi aksatabilir → etki raporu, geri dönüş hazır → tek tek onay; sorun çıkarsa önceki sürüme döner, kısa bildirim.
-- Kaynak repo silinir (404) → kullanılmıyorsa işaretler; kullanılıyorsa projeye dokunmaz → yalnız kullanılıyorsa uyarı.
+- Kaynak repo silinir (404) → kullanılmıyorsa işaretler; kullanılıyorsa projedeki kopya aynen kalır, projeye dokunmaz → kullanılıyorsa uyarı gelir.
 - Tam ücretli skill/servis → etiketler, hiçbir öneriye koymaz → hiçbir şey (sen isterse para onayı).
 - Başka YZ aracı açılır → aynı proje skill'lerini görür → hiçbir şey.
 - Ağ yok ya da adım hata verir → durur, projede değişiklik yapmaz, devam noktasını kaydeder; oturum yarıda kesilirse plan dosyasından sürer → hata bildirimi.
@@ -57,6 +57,5 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
 
 ## Netleşecek sorular
-1. Kaybolan kaynak projede kullanılıyorsa: projedeki kopya kalır, uyarı gelir mi?
-2. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
-3. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
+1. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
+2. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
