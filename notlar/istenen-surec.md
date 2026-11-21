@@ -36,7 +36,7 @@ Başarı: aramak gerekmez; yeni repo soru sormaz ve öneriyi bozmaz; aylık taki
 - **Her zaman sana:** para, kalıcı silme, güvenlik riski, GitHub'a gönderme.
 
 ## Projeler ve sürümler
-Proje başına: skill, sürüm, kaynak, son işlem, durum. Sürüm modu: **takip / dondur** (güncellenmesin, raporda yalnız görünür) **/ yalnız onaylı**. Güncelleme öncesi etki kontrolü: hangi dosya değişiyor, elle değişiklik var mı, hangi proje etkileniyor (öneri). Uygulama onaylı; her güncelleme geri alınabilir.
+Proje başına: skill, sürüm, kaynak, son işlem, durum. Sürüm modu: **takip / dondur** (güncellenmesin, raporda da görünmez) **/ yalnız onaylı**. Güncelleme öncesi etki kontrolü: hangi dosya değişiyor, elle değişiklik var mı, hangi proje etkileniyor (öneri). Uygulama onaylı; her güncelleme geri alınabilir.
 
 ## Maliyet
 Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip, kurulum, güncelleme, onarım). Her işlemde token, kota, süre, disk, onay sayısı kaydedilir ve raporlanır. (öneri) YZ yalnız karar gereken yerde, gerisi betik; sayısal hedefler birlikte belirlenir.
@@ -47,7 +47,7 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Yeni proje başlıyor → öneri raporu → rapor ve kurulum onayı.
 - Aylık kontrol → tüm türleri tarar, projeler için öneri ve etki raporu → yalnız projeyi etkileyenler.
 - Aynı skill'in yeni sürümü 3 projede → tek toplu öneri → tek onay.
-- Dondurulmuş proje → güncellemeye dokunmaz, "yeni sürüm var" der → hiçbir şey.
+- Dondurulmuş proje → güncellemeye dokunmaz, raporda da yer vermez → hiçbir şey.
 - Güncelleme projeyi aksatabilir → etki raporu, geri dönüş hazır → tek tek onay; sorun çıkarsa önceki sürüme döner, kısa bildirim.
 - Kaynak repo silinir (404) → kullanılmıyorsa işaretler; kullanılıyorsa projeye dokunmaz → yalnız kullanılıyorsa uyarı.
 - Tam ücretli skill/servis → etiketler, hiçbir öneriye koymaz → hiçbir şey (sen isterse para onayı).
@@ -57,7 +57,6 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
 
 ## Netleşecek sorular
-1. Dondurulmuş projede aylık raporda yalnız "yeni sürüm var" mı denmeli?
-2. Kaybolan kaynak projede kullanılıyorsa: projedeki kopya kalır, uyarı gelir mi?
-3. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
-4. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
+1. Kaybolan kaynak projede kullanılıyorsa: projedeki kopya kalır, uyarı gelir mi?
+2. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
+3. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
