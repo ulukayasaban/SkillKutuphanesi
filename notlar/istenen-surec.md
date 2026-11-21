@@ -39,7 +39,7 @@ Başarı: aramak gerekmez; yeni repo soru sormaz ve öneriyi bozmaz; aylık taki
 Proje başına: skill, sürüm, kaynak, son işlem, durum. Sürüm modu: **takip / dondur** (güncellenmesin, raporda da görünmez) **/ yalnız onaylı**. Güncelleme öncesi etki kontrolü: hangi dosya değişiyor, elle değişiklik var mı, hangi proje etkileniyor (öneri). Uygulama onaylı; her güncelleme geri alınabilir.
 
 ## Maliyet
-Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip, kurulum, güncelleme, onarım). Her işlemde token, kota, süre, disk, onay sayısı kaydedilir ve raporlanır. (öneri) YZ yalnız karar gereken yerde, gerisi betik; sayısal hedefler birlikte belirlenir.
+Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip, kurulum, güncelleme, onarım). Her işlemde token, kota, süre, disk, onay sayısı kaydedilir ve raporlanır. (öneri) YZ yalnız karar gereken yerde, gerisi betik. **Sayısal hedefler önce ölçüm yapılıp sonra konur** (yeni repo ve aylık takip birer kez ölçülür).
 
 ## Senaryolar (olay → süreç → sana ne gelir)
 - Listene yeni repo (yeni tür dahil) → tarar, sınıflar, kaydeder, önerilere ekler, öneriyi bozmaz → hiçbir şey.
@@ -57,5 +57,4 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
 
 ## Netleşecek sorular
-1. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
-2. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
+1. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?

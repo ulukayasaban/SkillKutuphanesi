@@ -10,7 +10,7 @@
 4. Giriş süreçleri: yeni repo/skill (tür bazlı)
 5. Projelerdeki skiller: kurulum, güncelleme, izleme
 6. Kalite, güvenlik, ücret ve onay kuralları (kullanıcıya bağımlılık merdiveni)
-7. **Token ve maliyet süreçleri (YENİ):** oturum disiplini, model seçimi, bakım modu, açılış belge yükü, claude-mem gözlemcisi, haftalık maliyet raporu
+7. **Token ve maliyet süreçleri (YENİ; karar: önce yeni repo ve aylık takip ölçülür, hedef sayılar sonra konur):** oturum disiplini, model seçimi, bakım modu, açılış belge yükü, claude-mem gözlemcisi, haftalık maliyet raporu
 8. Araçlar, ajanlar ve kota
 9. Geçiş planı ve kabul senaryoları
 
