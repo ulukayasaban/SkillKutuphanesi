@@ -2202,6 +2202,18 @@
         "oturum": "Tek mesajlık özet (tür kit, yalnız katalog kaydı, ~18 MB tahmini, MIT, ücretsiz) görüldü; kullanıcı: 'Evet, ekle'",
         "commit": "616028dcae05dc0a9fc9c9661e7e2b1e7d480ba1"
       }
+    },
+    {
+      "repo": "ayghri/i-have-adhd",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "tur_gerekce": "2 bağımsız SKILL.md",
+      "eklendi": "2026-11-22",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-22",
+        "commit": "1ecea1993b7fce257ffbd686c070948b5e07eda6"
+      }
     }
   ],
   "konum_haric": [

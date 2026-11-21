@@ -1,0 +1,53 @@
+== GERÇEK GİRİŞ: ayghri/i-have-adhd (KESİN, kim=kural) ==
+{
+  "uygulandi": true,
+  "otomatik": [
+    {
+      "repo": "ayghri/i-have-adhd",
+      "karar": "OTOMATIK_KAYIT",
+      "kayit": {
+        "repo": "ayghri/i-have-adhd",
+        "tur": "koleksiyon",
+        "bolum": "arsiv",
+        "tur_gerekce": "2 bağımsız SKILL.md",
+        "eklendi": "2026-11-22",
+        "onay": {
+          "kim": "kural",
+          "tarih": "2026-11-22",
+          "commit": "1ecea1993b7fce257ffbd686c070948b5e07eda6"
+        }
+      },
+      "uyarilar": []
+    }
+  ],
+  "reddedilen_k58": [],
+  "kuyruk": [],
+  "kuyruk_ozeti": {
+    "toplam_bekleyen": 1,
+    "gruplar": {
+      "aciklama_veya_skill_yok": [
+        {
+          "repo": "storytold/pdfcraft",
+          "durum": "bekliyor",
+          "neden": "aciklama_veya_skill_yok",
+          "tarih": "2026-11-22",
+          "ayrinti": "SKILL.md yok (CLAUDE.md/DESIGN.md)"
+        }
+      ]
+    },
+    "satirlar": [
+      "Karar bekleyen 1 repo (tek toplu onay):",
+      "- aciklama_veya_skill_yok (1): storytold/pdfcraft"
+    ],
+    "mesaj": "Karar bekleyen 1 repo (tek toplu onay):\n- aciklama_veya_skill_yok (1): storytold/pdfcraft"
+  }
+}
+UYGULA_SURE_SN=1
+UYARI: rol eticaret-magaza-operasyon: 'etsy-api' emekli/kaynakta kaldırılmış; arşiv kopyası kullanılıyor (yerine yenisini düşün)
+UYARI: programlar.json kart şeması: UYARI: openmontage: skill_koku: bu bilgisayarda yok (program kurulu mu?)
+UYARI: yol kapısı çalışmadı: ayghri/i-have-adhd
+2849 skill · 0 hata · 3 uyarı
+458.32 MB
+ M kaynaklar.json
+ kaynaklar.json | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
