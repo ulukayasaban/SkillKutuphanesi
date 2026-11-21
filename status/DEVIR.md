@@ -4,3 +4,5 @@
 - 2026-11-20 06:45 | Program güncellemeleri (HF 0.9.71, OM 2e003e65), duman 142/1, test.py 324/324, taban kaydı, yedekler silindi, advisorModel global dosyadan kaldırıldı, K-66 | Ertelenen işler ve trend adayları kullanıcı isteyince | 4 (adaylar, ertelenenler, problem bildirimi, kalan yedek silme)
 - 2026-11-21 | Yeni süreç planı adım 1-3 (hedefler, ortadaki yol, tam ayrım aşamalı), token ölçümü (kütüphane haftanın %14'ü, ort. bağlam 288 bin/tur, claude-mem gözlemcisi %15) | Adım 4 giriş süreçleri, adım 7 token süreçleri | 0
 - 2026-11-21 | İstenen süreç belgesi yazıldı ve 5 soru kapandı (ücretli de önerilir, dondurulmuş görünmez, kaybolan kaynak uyarısı, maliyet önce ölç, diğer YZ araçlarına ek çaba yok); skill'ler proje klasöründe kalır; test artıkları tenekeye | İstenen ↔ mevcut karşılaştırma, sonra plan adım 4 | 0
+- 2026-11-21 06:32 | Oturum kapanışı: istenen süreç belgesi tamam, plan beklemede, devam istemi ve checkpoint yazıldı; HF/OM güncel; test artıkları tenekede | İstenen↔mevcut karşılaştırma, 7 Aralık aylık vade, plan adım 4 | 6 (push, 164 kaynak, adaylar, eski yedekler, duman-cikti, claude-mem)
+
