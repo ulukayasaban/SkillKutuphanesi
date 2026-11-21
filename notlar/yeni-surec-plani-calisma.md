@@ -94,6 +94,30 @@ Kütüphane projesi 2026-10-21'den bugüne (22 etkin gün, 716 kayıt dosyası, 
 **Ortalama bağlam ≈ 288 bin token/tur**: konuşma uzadıkça her mesajda tüm geçmiş yeniden okunuyor; yapısal maliyet budur.
 Kullanım: Claude haftalık ≈ %74 (beklenen %45), Fable haftalık %64, Antigravity Claude/GPT haftalık ≈ %88 (kullanım dosyası 2026-11-20/21).
 
+## Girdi 5: beyin fırtınası, alternatifler ve maliyet (2026-11-21)
+Hedef (kullanıcı): GitHub listelerinden işe yarayan yapay zeka skill/araç/işlemlerini yeni projelere hızlı kurmak.
+
+**Ölçülen:** 4 proje 102 skill kullanıyor, **26 repodan**; kütüphanede 189 kaynak var, **164'ü (%87) hiçbir projede kullanılmıyor**. GitHub listesi "Yapay Zeka Skillleri" 186 repo. Kütüphane 1 ayda 460 M yeni girdi + 65 M çıktı token, 23 bin satır araç, 324 test. Geçen ay bakımı: 44 yeniden inceleme + 14 yeni skill. `skill-ekle.py --oner` 284, `--evet` 267 çağrı (13 farklı günde; çoğu geliştirme/test günleri, son iki günde 2'şer). Disk: arşiv 283 MB + git 221 MB.
+**Ölçülmedi (tahmin):** yeni projeye kurulum ve aylık incelemenin gerçek token'ı; adım 7'de baz ölçüm.
+
+**Doğrulanan dış imkânlar (alt ajan, resmi belge URL'leriyle):**
+- Claude Code eklenti pazarı: özel git reposunda `.claude-plugin/marketplace.json`; kaynak türleri `github`, `url`, `git-subdir` (alt klasör, sparse), `npm`, `archive`; `sha` (40 karakter) ve `ref` ile sabitleme; proje başına `enabledPlugins` + `extraKnownMarketplaces`; her çalışan `claude plugin install <ad>@<pazar> --scope project` çalıştırır, otomatik kurulum teklifi belgelenmemiş; `claude plugin update`, üçüncü taraf pazarlarda otomatik güncelleme varsayılan KAPALI (belgeler: code.claude.com/docs/en/plugins/...).
+- Standalone skill için yerleşik ekle/güncelle komutu belgelenmemiş.
+- Vercel Labs `skills` CLI gerçek: `npx skills add/list/find/check/update/remove`, `-a claude-code|codex|cursor|antigravity|github-copilot`, `-g`; agentskills.io açık format (klasör + `SKILL.md`).
+- **Doğrulanamadı:** skills CLI'da sha/tag ile sabitleme; skills-only (eklenti olmayan) repoların doğrudan pazara girip giremediği; güven penceresi istemi.
+
+### Alternatifler (maliyet: ölçülen ya da "t" = tahmin)
+| Yol | Kurulum (bir kez) | Yeni proje | Aylık bakım | Ana risk |
+|---|---|---|---|---|
+| 0. Mevcut tam kütüphane | yapıldı: 526 M (ölçülen) | 0,1–0,3 M (t); yeni repo 0,5–2 M (t) | 0,5–1,5 M (t) + betik + ≥3 onay | Kullanılmayan %87'yi taşıma; bakım yükü |
+| 1. Kütüphane-lite (kullanılanlar + fihrist) | 5–10 M (t) | ≈0,1 M (t) | 0,2–0,5 M (t) | İncelemesi geniş katalog kaybı |
+| 2. Kendi sha'lı Claude Code pazarı | 1–3 M (t) | ≈0 (2 komut) | ≈0 LLM (sha betiği) | Yalnız Claude Code; skills-only repo uyumu doğrulanmadı |
+| 3. `skills` CLI | ≈0 | 0–0,05 M (t) | ≈0 (`check`) | Sha sabitleme belirsiz; üçüncü taraf; süzgeç yok |
+| 4. Sıfır sistem (arama + kopyala-yapıştır komut) | 0 | 0,02–0,05 M (t) | 0 | Kayıt, izleme ve güvenlik denetimi yok |
+Not: 1+2+3 birleşebilir: veri ve süzgeç (1), Claude Code kurulumu (2), çok ajanlı kurulum (3).
+
+**Değerlendirme:** Mevcut sistem hedefi zaten çözüyor (9 profil + kurulum aracı) ama büyüklüğü hedefin çok üstünde; maliyetin çoğu envanter ve inceleme makinesinde. Önerilen yön: kütüphane-lite + küçük bir sha'lı pazar denemesi (1 kısa oturum), sonuca göre kütüphaneyi küçültmek. Bu, adım 3'ün kapsamını da küçültür (registry 2.849 yerine kullanılanlar ve alternatifleri).
+
 ## Karar (adım 2, kullanıcı 2026-11-21): ORTADAKİ YOL
 - **Yerinde kalır:** 2.849 incelenmiş skill (`registry.json`), `kaynaklar.json`, `arsiv/`, `fihrist/`, `kitler.json`, `programlar.json`, `projeler.json`, araçlar ve 324 test, 4 projenin `kilit.json` bağları, git geçmişi, `yedekler.json`.
 - **Baştan, sade yazılır:** `CLAUDE.md`/`AGENTS.md`, `BASLA.md`, rehberler, hazır istemler, `surecler/` dosyaları, hafıza düzeni (neyin nerede tutulacağı), maliyet kaydı.
