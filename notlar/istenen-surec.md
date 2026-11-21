@@ -24,7 +24,7 @@ Başarı: aramak gerekmez; yeni repo soru sormaz ve öneriyi bozmaz; aylık taki
 - **Kayıpsız:** hiçbir skill, inceleme ya da sürüm kaybolmaz; eski sürüm silinmez, geri dönülür.
 - Riskli ve saldırgan güvenlik skill'i alınmaz; otomatik, soru yok (öneri).
 - **Tam ücretli skill/servis önerilmez:** kayıtta etiketli durur, sen isteyince kullanılır (o zaman para onayı sana gelir). Ücretsiz ve kısmen ücretsiz (ücretsiz katmanı olan) olanlar normal önerilir.
-- Claude Code, Codex, Antigravity ile tam uyum; diğer YZ araçlarında da çalışır.
+- Claude Code, Codex, Antigravity ile **tam uyum** (test ve garanti bunlara). Diğer YZ araçları ortak skill düzeni sayesinde çalışır; **ek çaba, ayrı test ve garanti yok.**
 - Karar, inceleme ve ölçüm katmanları tam uyumlu; tek giriş; aynı bilgi tek yerde.
 - Kısa oturumlar; plan dosyası tek hafıza; her şey kayıtlı ve görünür.
 - Programların yedekli güncellenmesi olsa iyi olur, zorunlu değil.
@@ -56,5 +56,5 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Aylık maliyet raporu → token, kota, süre, disk, onay sayısı → kısa rapor.
 - Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
 
-## Netleşecek sorular
-1. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
+## Durum
+Belgedeki bütün sorular kapandı (2026-11-21): ücretli skill önerilmez, dondurulmuş proje raporda görünmez, kaybolan kaynak kullanılıyorsa uyarı gelir, maliyet hedefi önce ölçülür, diğer YZ araçlarına ek çaba yok.
