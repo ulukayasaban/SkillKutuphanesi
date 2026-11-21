@@ -1,6 +1,6 @@
 # İstenen süreç: Skill Kütüphanesi
 
-> Yalnız istenen süreç; mevcut süreçlerden bahsetmez. İşaretsiz = senin dediğin; (öneri) = benim eklediğim, onay bekliyor. Ortak plan: `notlar/yeni-surec-plani-calisma.md`.
+> İstenen süreç; geliştirme bugünkü yapının üstüne kurulur (son bölüm "Nasıl kurulur"). İşaretsiz = senin dediğin; (öneri) = benim eklediğim, onay bekliyor. Ortak plan: `notlar/onceki-planlar/yeni-surec-plani-calisma.md`.
 
 ## Amaç
 GitHub listene eklediğin repolardan işe yarayan YZ skill, kit, program ve araçları süreç kendi izler, sınıflar, kaydeder, önerir ve projelere kurar. **Senin işin: listeye repo eklemek.**
@@ -55,6 +55,25 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Ağ yok ya da adım hata verir → durur, projede değişiklik yapmaz, devam noktasını kaydeder; oturum yarıda kesilirse plan dosyasından sürer → hata bildirimi.
 - Aylık maliyet raporu → token, kota, süre, disk, onay sayısı → kısa rapor.
 - Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
+
+## Nasıl kurulur: bugünkü yapının üstüne (2026-11-21; kısa)
+Sıfırdan yazılmaz; bir hafta önce kurulan süreçler (tür süreçleri `surecler/`, `rehber/03` A1..A9, `skill-ekle.py`, `kilit.json`, aylık zincir, K-58, yedek/geri alma) temel alınır, her istek bunun üzerine geliştirilir. Ayrıntılı durum: `notlar/onceki-planlar/istenen-ve-mevcut-karsilastirma.md`.
+
+| İstek | Dayanak (var olan) | Geliştirme |
+|---|---|---|
+| İzleme | liste/trend/popüler/konu taraması, `KAYIP` | aylık zincire fihrist ve kit; damga dosyası |
+| Sınıflama | `tur-belirle`, `boyut-hesapla`, tür dosyaları | `tip`'i `tur`'dan türet; kurallı ücret/kategori/risk |
+| Kayıt | arşiv, git geçmişi, `yedekler.json`, `medya_haric` | kullanılmayan kaynak kararı; inceleme "hangi commit için" |
+| Öneri | `--oner`, `--rapor`, profil/rol, kit, fihrist | yeni repo profil/role kendiliğinden eklenir |
+| Kurulum | `skill-ekle.py` + `kilit.json` | değişmez |
+| Proje takibi | `kilit.json`, `proje-kullanimi.py --saglik/--durum` | sürüm modu (takip/dondur/yalnız onaylı), son işlem, gerçek program sürümü |
+| Güncelleme | `arsiv-guncelle.py --aylik`, `--guncelle --kuru` | proje başına etki raporu, toplu öneri |
+| Koruma | K-58, `tur-riskli.md`, `--geri-al` | riskli red soruya düşmeden otomatik |
+| Raporlama | `aylik-ozet.py`, `proje-durumu.md` | maliyet satırları (token, kota, süre, disk, onay) |
+| Hafıza | `BASLA.md`, `status/`, `kararlar.md` | çift kayıt ve eski "HENÜZ YOK" temizliği, açılış yükü |
+| Onay | K-50 (projede onaysız işlem yok), `--evet` | yeni repo ve aylık tarama onaysız; toplu onay |
+
+Her senaryo bu dayanaklarla yürür: yeni repo `surecler/yeni-repo.md` akışından (tek mesajsız), aylık kontrol aylık zincirden, güncelleme `--guncelle`'den, geri dönüş `--geri-al`'dan.
 
 ## Durum
 Belgedeki bütün sorular kapandı (2026-11-21): tam ücretli skill de önerilir (ilerleyişi sana kalır), dondurulmuş proje raporda görünmez, kaybolan kaynak kullanılıyorsa uyarı gelir, maliyet hedefi önce ölçülür, diğer YZ araçlarına ek çaba yok.

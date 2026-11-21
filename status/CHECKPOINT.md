@@ -2,12 +2,12 @@
 Son güncelleme: 2026-11-21 06:32
 
 ## Şimdi
-- **Yeni süreç planı BEKLEMEDE (kullanıcı "sonra" dedi).** `notlar/istenen-surec.md` TAMAM: kullanıcının istediği süreç (amaç, 10 görev, kurallar, onay kuralları, proje/sürüm, maliyet, 13 senaryo); 5 soru kapandı. `notlar/yeni-surec-plani-calisma.md`: adım 1-3 tamam (hedefler; ortadaki yol; veri düzeni = tam ayrım aşamalı, uygulama geçiş planına bağlı), token ölçümü, pazar denemesi sonucu, devam istemi.
+- **Yeni süreç planı BEKLEMEDE (kullanıcı "sonra" dedi).** `notlar/onceki-planlar/istenen-surec.md` TAMAM: kullanıcının istediği süreç (amaç, 10 görev, kurallar, onay kuralları, proje/sürüm, maliyet, 13 senaryo); 5 soru kapandı. `notlar/onceki-planlar/yeni-surec-plani-calisma.md`: adım 1-3 tamam (hedefler; ortadaki yol; veri düzeni = tam ayrım aşamalı, uygulama geçiş planına bağlı), token ölçümü, pazar denemesi sonucu, devam istemi.
 - Kullanıcı kararları (2026-11-21): skill'ler proje klasöründe kalır, genel klasörler boş (kesin); pazar/genel önbellek yolu elendi; tam ücretli skill de önerilir (ilerleyişi kullanıcıya kalır); dondurulmuş proje raporda görünmez; kaybolan kaynak projede kullanılıyorsa uyarı gelir; maliyet hedefi önce ölçüm sonra sayı; diğer YZ araçlarına ek çaba yok (tam uyum Claude Code, Codex, Antigravity); yeni repo/aylık takipte kullanıcıya bağımlılık yok; kurulum token'ı kabul, hedef işleyiş maliyeti.
 - Bu oturumda ayrıca: HyperFrames 0.9.37→0.9.71, OpenMontage fecb9a1e→2e003e65 (duman 142/1, K-66); genel klasör tabanı yenilendi; yedekler silindi; `advisorModel` genel ayardan kaldırıldı; `test.py` 324/324; test artıkları (824 MB) tenekeye (`~/.Trash/test-artiklari-2026-11-21`). Arka planda çalışan süreç yok (Antigravity uygulamasının kendi `agy --hub` süreci bizim değil).
 
 ## Sıradaki
-1. Yeni oturumda `notlar/istenen-surec.md` ve `notlar/yeni-surec-plani-calisma.md` oku; **istenen süreci bugünkü kütüphaneyle karşılaştır** (her istek: hazır / yarım / yok), çıktıyı yeni bir notlara yaz, sonra plan adım 4'ten sürdür (adım 7'de yeni repo ve aylık takip maliyetini ölç).
+1. Yeni oturumda `notlar/onceki-planlar/istenen-surec.md` ve `notlar/onceki-planlar/yeni-surec-plani-calisma.md` oku; **istenen süreci bugünkü kütüphaneyle karşılaştır** (her istek: hazır / yarım / yok), çıktıyı yeni bir notlara yaz, sonra plan adım 4'ten sürdür (adım 7'de yeni repo ve aylık takip maliyetini ölç).
 2. **Vade 2026-12-07:** aylık zincir fihristi ve kiti bilmiyor, `notlar/son-aylik-calisma.json` damgası yok (zincir "ilk kurulum" sanıyor). Vadeden önce asgari düzeltme (plan adım 5'in küçük hali) yapılmalı.
 3. Kayıt bakımı: 6 kaydın `tur_gerekce`si boş, ComposioHQ gerekçesi eski, `kararlar.md`'de K-60..K-66 "Kabul edilen bekleyenler" altında, `surecler/` içinde 12 eskimiş "HENÜZ YOK", `.gecici/` 52 MB.
 

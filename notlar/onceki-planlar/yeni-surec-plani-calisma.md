@@ -141,7 +141,7 @@ Not: 1+2+3 birleşebilir: veri ve süzgeç (1), Claude Code kurulumu (2), çok a
 **Sonuç:** "Listelerden yeni projeye hızlı kurulum" için yeni bir kurulum motoru gerekmiyor; `npx skills` bizim motorun küçük bir benzeri (inceleme, ücret/risk, kilit ve izlenebilirlik yok, telemetri var, ikinci kilit dosyası). Maliyet kurulum hızından değil, çevresindeki konuşmadan ve bakım makinesinden geliyor. Öneri: kurulumu **terminalden tek komutla (LLM'siz)** yapılabilir hale getirmek: `skill-ekle.py <proje> --profil <ad>` kısa rapor verir, `--evet` ile kurar; sıfır token.
 
 ## İstenen süreç belgesi (2026-11-21)
-Kullanıcının istediği süreç, mevcut süreçlerden bağımsız, ayrı bir belgede: `notlar/istenen-surec.md` (tanıtım, 10 görev, ilkeler, onay kuralları, proje ve sürüm kuralları, uyumluluk, maliyet, hafıza, 16 senaryo, 5 netleşecek soru). Sonraki adımlar bu belgeye göre planlanır; belge değişince önce o güncellenir.
+Kullanıcının istediği süreç, mevcut süreçlerden bağımsız, ayrı bir belgede: `notlar/onceki-planlar/istenen-surec.md` (tanıtım, 10 görev, ilkeler, onay kuralları, proje ve sürüm kuralları, uyumluluk, maliyet, hafıza, 16 senaryo, 5 netleşecek soru). Sonraki adımlar bu belgeye göre planlanır; belge değişince önce o güncellenir.
 
 ## Karar (adım 2, kullanıcı 2026-11-21): ORTADAKİ YOL
 - **Yerinde kalır:** 2.849 incelenmiş skill (`registry.json`), `kaynaklar.json`, `arsiv/`, `fihrist/`, `kitler.json`, `programlar.json`, `projeler.json`, araçlar ve 324 test, 4 projenin `kilit.json` bağları, git geçmişi, `yedekler.json`.
@@ -179,5 +179,8 @@ Karar ölçütü (K4): kurulum maliyeti değil, **tekrarlayan süreçlerin** tok
 ## Açık soru (adım 4)
 Giriş süreçleri: yeni repo/skill geldiğinde uçtan uca akış (tür belirleme, inceleme, ücret/risk kararı, kayıt, bildirim). Hangi adımlar tamamen araç, hangileri LLM kararı, hangileri sana sorulur? Kullanıcıya bağımlılık (K3) ve token (K4) ölçütleriyle. Bugünkü akış: `rehber/03` A1..A9 ve `surecler/yeni-repo.md` + 9 tür dosyası.
 
+## İstenen ↔ mevcut karşılaştırma (2026-11-21, TAMAM)
+`notlar/onceki-planlar/istenen-ve-mevcut-karsilastirma.md`: 10 görevde 1 hazır, 9 yarım. **Yok** olanlar: yeni repoda onaysız yürüme (bugünkü kural tersi: onay ister), toplu onay, proje sürüm modu (takip/dondur/yalnız onaylı), maliyet raporu. Sıradaki: plan adım 4, bu tabloya göre. Vade 2026-12-07 öncesi asgari: aylık zincire fihrist/kit adımı ve damga dosyası.
+
 ## Devam istemi (yeni oturumda ilk mesaj olarak)
-`notlar/istenen-surec.md` ve `notlar/yeni-surec-plani-calisma.md` dosyalarını oku. İstenen süreç belgesi tamam (sorular kapandı). Sıradaki iş: istenen süreci bugünkü kütüphaneyle karşılaştır (her istek için hazır / yarım / yok), sonra plana dön. Kısa tut, her adımda bir karar sor.
+`notlar/onceki-planlar/istenen-surec.md` ve `notlar/onceki-planlar/yeni-surec-plani-calisma.md` dosyalarını oku. İstenen süreç belgesi tamam (sorular kapandı). Sıradaki iş: istenen süreci bugünkü kütüphaneyle karşılaştır (her istek için hazır / yarım / yok), sonra plana dön. Kısa tut, her adımda bir karar sor.
