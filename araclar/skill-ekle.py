@@ -59,10 +59,11 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KAYNAKLAR, KOK, REGISTRY, hesap_skilleri, frontmatter, frontmatter_onar,  # noqa: E402
-                   frontmatter_teshis, git_blob_hash, global_durum, json_oku, json_yaz, klasor_hash, medya_mi, onemli_dosyalar,
-                   onarim_izi, repo_guncel, symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula, skill_adlari,
-                   skill_yol_taramasi, tum_skiller, yol_degerlendir, yol_izi, yol_dosya_sinifi_haritasi, yol_taramasi,
+from ortak import (GLOBAL_KLASORLER, HESAP_ONEK, KAYNAKLAR, KOK, REGISTRY, SURUM_MODLARI, VARSAYILAN_SURUM_MODU,  # noqa: E402
+                   hesap_skilleri, frontmatter, frontmatter_onar, frontmatter_teshis, git_blob_hash, global_durum,
+                   json_oku, json_yaz, klasor_hash, medya_mi, onemli_dosyalar, onarim_izi, repo_guncel,
+                   symlink_taslaklari, taslak_baglantilarini_cevir, yamalari_uygula, skill_adlari, skill_yol_taramasi,
+                   tum_skiller, yol_degerlendir, yol_izi, yol_dosya_sinifi_haritasi, yol_taramasi,
                    ev_ici_kendi_cevir, _var_bak, program_klasor_skill_adi, program_skill_ham_klasoru_mu, program_skill_klasoru,
                    yerel_agac, yerel_commit, _ATIF_PARCA, _eklenti_koku_yolu, _yol_kes)
 
@@ -266,10 +267,12 @@ def kilit_oku(proje):
         eski = proje / ".agents" / "skills" / "SKILLS.lock.json"  # sürüm 1 kilidi
         k = json_oku(eski) if eski.exists() else None
     if k is None:
-        k = {"surum": KILIT_SURUM, "kutuphane": str(KOK), "profil": None, "roller": [], "skiller": {}}
+        k = {"surum": KILIT_SURUM, "kutuphane": str(KOK), "profil": None, "roller": [], "skiller": {},
+             "surum_modu": VARSAYILAN_SURUM_MODU}
     k.setdefault("roller", [])
     k.setdefault("skiller", {})
     k.setdefault("profil", None)
+    k.setdefault("surum_modu", VARSAYILAN_SURUM_MODU)
     k.setdefault("arac_secimi", "secildi" if "araclar" in k else "varsayilan")  # diske yalnız kilit_yaz yazar
     for v in k["skiller"].values():
         v.setdefault("roller", [])
@@ -288,7 +291,9 @@ def kilit_yaz(proje, kilit):
         kilit["araclar"] = list(ARACLAR["ikisi"])
         kilit.setdefault("arac_secimi", "varsayilan")
     meta(proje).mkdir(exist_ok=True)
-    json_yaz(meta(proje) / "kilit.json", kilit)
+    # Faz 1: varsayılan yalniz_onayli yalnız kilit_oku belleğinde kalır, diske yazılmaz
+    yazilacak = {k: v for k, v in kilit.items() if not (k == "surum_modu" and v == VARSAYILAN_SURUM_MODU)}
+    json_yaz(meta(proje) / "kilit.json", yazilacak)
 
 
 def codex_var(kilit):

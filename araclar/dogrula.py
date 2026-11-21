@@ -20,10 +20,10 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, REGISTRY, YEREL_TIPLER, frontmatter, frontmatter_onar,  # noqa: E402
-                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, medya_haric_korunur_mu,
-                   medya_haric_kumesi, medya_haric_mi, medya_haric_normal, medya_haric_yol_gecerli, repo_guncel,
-                   yol_istisna_denetimi)
+from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, ONAY_KIMLER, REFERANS_ALT_TURLERI, REGISTRY,  # noqa: E402
+                   YEREL_TIPLER, frontmatter, frontmatter_onar, frontmatter_teshis, git_blob_hash, json_oku, klasor_hash,
+                   YAMALAR, medya_haric_korunur_mu, medya_haric_kumesi, medya_haric_mi, medya_haric_normal,
+                   medya_haric_yol_gecerli, repo_guncel, yol_istisna_denetimi)
 
 
 def github_muaf_repolar(tum_listeler, korunan_slug, konu_durum):
@@ -94,8 +94,8 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
 KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "KAYIP", "EMEKLI")  # T7 = kendi/, T8 = site/ (yerel, GitHub'sız)
 KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "skill_bagimlilik", "kimlik",
                       "dosya_haric", "medya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay",
-                      "kayip_tarihi", "yerel", "lisans", "tur", "bolum", "tur_gerekce", "ne_ister", "ne_indirir", "tek_basina",
-                      "kurulmayan_parcalar", "son_kontrol", "arac_uyumu", "boyut", "arsivde_tut")
+                      "kayip_tarihi", "yerel", "lisans", "tur", "bolum", "alt_tur", "tur_gerekce", "ne_ister", "ne_indirir",
+                      "tek_basina", "kurulmayan_parcalar", "son_kontrol", "arac_uyumu", "boyut", "arsivde_tut")
 SITE_TAKIP_ARACI = "site-takip.py"
 ZORUNLU_ARACLAR = ("claude-code", "codex", "antigravity", "cursor", "vscode-copilot")
 GITIGNORE_KALIPLARI = ("/.env", "/.env.*", "!/.env.example", "/araclar/.env", "/*.pem", "/*.key", "/*.p12", "/*.pfx",
@@ -369,6 +369,12 @@ def kaynak_tur_hatalari(k):
         h.append(f"kaynaklar.json: {repo} bolum geçersiz: {bolum!r} ({', '.join(KAYNAK_BOLUMLERI)})")
     if tur in KAYNAK_TURLERI and bolum in KAYNAK_BOLUMLERI and KAYNAK_TURLERI[tur] != bolum:
         h.append(f"kaynaklar.json: {repo} tur {tur!r} bolum {bolum!r} ile uyuşmuyor (olması gereken: {KAYNAK_TURLERI[tur]!r})")
+    if "alt_tur" in k:
+        at_ref = k["alt_tur"]
+        if at_ref not in REFERANS_ALT_TURLERI:
+            h.append(f"kaynaklar.json: {repo} alt_tur geçersiz: {at_ref!r} ({', '.join(REFERANS_ALT_TURLERI)})")
+        if tur != "referans":
+            h.append(f"kaynaklar.json: {repo} alt_tur yalnız tur 'referans' ile geçerli (tur: {tur!r})")
     for a in ("tur_gerekce", "ne_ister", "ne_indirir"):
         if a in k and not isinstance(k[a], str):
             h.append(f"kaynaklar.json: {repo} {a} metin değil")
@@ -788,9 +794,35 @@ def _e8_fihrist_kit(kok, h, u):
             h.append(f"kaynaklar.json: {repo} tur kit ama kitler.json'da kaydı yok")
 
 
+def _e9_olcum(kok, h, u):
+    """olcum.jsonl varsa her satır geçerli JSON (ayrışmayan satır HATA) ve Faz 1 şemasına uygun (UYARI) olmalı."""
+    f = Path(kok) / "olcum.jsonl"
+    if not f.is_file():
+        return
+    olcum_araci = Path(__file__).resolve().parent / "olcum.py"
+    satir_dogrula = None
+    if olcum_araci.is_file():
+        try:
+            satir_dogrula = _yukle(olcum_araci, "olcum_p8").satir_dogrula
+        except Exception:  # noqa: BLE001
+            satir_dogrula = None
+    for no, satir in enumerate(f.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+        temiz = satir.strip()
+        if not temiz:
+            continue
+        try:
+            obj = json.loads(temiz)
+        except ValueError as e:
+            h.append(f"olcum.jsonl:{no} okunamadı: {str(e)[:100]}")
+            continue
+        if satir_dogrula is not None:
+            for sorun in satir_dogrula(obj):
+                u.append(f"olcum.jsonl:{no}: {sorun}")
+
+
 def kayit_semalari_denetimi(kok=KOK):
     h, u = [], []
-    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar, _e7_site_takip, _e8_fihrist_kit):
+    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar, _e7_site_takip, _e8_fihrist_kit, _e9_olcum):
         f(kok, h, u)
     return h, u
 
@@ -847,12 +879,14 @@ def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
         if not (k.get("eklendi") and _tarih_gecerli(k.get("eklendi")) and onay.get("kim") and onay.get("tarih")
                 and (yerel or re.fullmatch(r"[0-9a-f]{40}", str(onay.get("commit", ""))))):
             u.append(f"kaynak kaydında onay yok: {repo} (rehber/03 A4)")
+        elif onay.get("kim") not in ONAY_KIMLER:
+            u.append(f"kaynak kaydında onay.kim geçersiz: {repo} ({onay.get('kim')!r}; geçerli: {', '.join(ONAY_KIMLER)})")
         if lisans_riskli and not onay.get("lisans_onay"):
             for s in (skiller or []):
                 if s.get("repo") == repo and lisans_riskli(s.get("lisans")):
                     u.append(f"lisans {s.get('lisans') or 'belirsiz'} için onay.lisans_onay yok: {repo}")
                     break
-        if kapi and not onay.get("yol_onay") and k.get("bolum") not in ("fihrist", "katalog"):  # arşive çekilmeyen kaynakta taranacak skil yok
+        if kapi and not onay.get("yol_onay") and k.get("bolum") not in ("fihrist", "katalog") and k.get("bolum") != "not":  # arşive çekilmeyen kaynakta taranacak skil yok
             try:
                 sorunlar, _taranan, hata = kapi(repo, None, skiller)
                 if hata:

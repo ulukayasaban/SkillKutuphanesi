@@ -34,7 +34,8 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import GLOBAL_KLASORLER, KOK, REGISTRY, json_oku, json_yaz, klasor_hash, program_skill_klasoru, repo_guncel  # noqa: E402
+from ortak import (GLOBAL_KLASORLER, KOK, REGISTRY, SURUM_MODLARI, VARSAYILAN_SURUM_MODU, json_oku, json_yaz,  # noqa: E402
+                   klasor_hash, program_skill_klasoru, repo_guncel)
 
 AYAR = KOK / "projeler.json"
 RAPOR = KOK / "notlar" / "proje-kullanimi.md"
@@ -274,6 +275,7 @@ def kilit_guvenli_oku(yol):
             return None, f"kilit.json okunamıyor: {str(e)[:80]}"
     ham.setdefault("skiller", {})
     ham.setdefault("roller", [])
+    ham.setdefault("surum_modu", VARSAYILAN_SURUM_MODU)
     return ham, None
 
 
@@ -536,6 +538,8 @@ def proje_denetle(yol, ayar, skiller, hash_haritasi, se, bugun, tur="kilitli"):
                                            f"skill-ekle.py \"<proje>\" --yenile; skill-ekle bu kopyada çalıştırılmaz"))
         if kilit.get("kutuphane") and kilit["kutuphane"] != str(KOK):
             satirlar.append(("dikkat", f"kilit başka bir kütüphane yoluna ait ({kilit['kutuphane']}) -> promptlar/09"))
+        if "surum_modu" in kilit and kilit.get("surum_modu") not in SURUM_MODLARI:
+            satirlar.append(("dikkat", f"geçersiz surum_modu: {kilit.get('surum_modu')!r} (geçerli: {', '.join(SURUM_MODLARI)})"))
         kskill = kilit.get("skiller", {})
         sayac["kilit_skill"] = len(kskill)
         for sad, k in sorted(kskill.items()):

@@ -1,14 +1,14 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-20 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-21 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7280 · Arşivdeki skill kaydı: 2849 · Bileşen (komut/agent): 354
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7278 · Arşivdeki skill kaydı: 2849 · Bileşen (komut/agent): 354
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
 | fihristte | 3065 | fihristte (arşive alınmadı; kurulumda kaynaktan alınır) |
 | secildi | 2839 | arşivde (ana sürüm) |
-| haric | 1174 | bilinçli hariç (test/örnek/şablon) |
+| haric | 1172 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 130 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 | arac-varyanti | 26 | arşivde (Claude/Codex'e özel sürüm) |
@@ -28,7 +28,6 @@
 | ComposioHQ/awesome-claude-skills | 864 | fihristte 860, secildi 4 |
 | DietrichGebert/ponytail | 12 | ayna-baska-arac 6, secildi 6 |
 | Donchitos/Claude-Code-Game-Studios | 74 | secildi 74 |
-| Fei-Away/Codex-Dream-Skin | 2 | haric 2 |
 | GoogleChrome/lighthouse | 3 | secildi 3 |
 | Graphify-Labs/graphify | 1 | secildi 1 |
 | Harishwarrior/flutter-claude-skills | 3 | secildi 3 |
@@ -157,7 +156,7 @@
 
 ## Referans repoları (T5/T6)
 
-45 repo tarandı; içlerinde skill yok.
+46 repo tarandı; içlerinde skill yok.
 
 ## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)
 

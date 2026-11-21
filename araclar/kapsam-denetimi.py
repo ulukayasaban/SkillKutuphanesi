@@ -138,13 +138,25 @@ def main():
     bagli_program_repolari = {k["repo"] for k in kayitlar if isinstance(k.get("program"), str)
                               and isinstance((_kartlar.get(k["program"]) or {}).get("skill_koku"), str)
                               and (_kartlar.get(k["program"]) or {}).get("skill_koku").strip()}
+    ref_haric = defaultdict(list)
+    for k in kayitlar:
+        if k.get("bolum") == "not":
+            for pat in (k.get("haric") or []):
+                if isinstance(pat, str):
+                    ref_haric[k["repo"]].append(re.compile(pat))
     for repo in referans_repolari:
         g = agac_al(repo)  # API kapalıysa git ile
         if g is None:
             erisilemeyen.append(repo)
             continue
         klon_temizle(g)
-        n = sum(1 for e in g.get("tree", []) if e["type"] == "blob" and e["path"].split("/")[-1].lower() == "skill.md")
+        desenler = ref_haric.get(repo, [])
+        n = sum(
+            1 for e in g.get("tree", [])
+            if e["type"] == "blob"
+            and e["path"].split("/")[-1].lower() == "skill.md"
+            and not any(p.search(e["path"]) for p in desenler)
+        )
         if n and repo in bagli_program_repolari:
             # Programın kendi paketiyle gelen skil projelere BAĞ olarak verilir (kart: skill_koku), arşive alınmaz: sorun değil, bilgi
             bagli_skill.append((repo, n))

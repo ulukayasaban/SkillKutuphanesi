@@ -1,4 +1,4 @@
-# SkillKutuphanesi — İnce Açılış Kuralı (Antigravity + Codex + Claude Code)
+# SkillKutuphanesi — İnce Açılış Kuralı (bkz. BASLA.md)
 
 Bu dosya oturum açılışında okunan tek temel kuraldır (<= 3 KB). Büyük rehberleri (`notlar/`, `surecler/tur-*.md`, `kaynaklar.json` tam metni, `fihrist/*.json`) açılışta okuma; yalnız ilgili görev tetiklendiğinde aç.
 

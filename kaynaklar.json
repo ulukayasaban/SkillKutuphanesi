@@ -1,5 +1,5 @@
 {
-  "_aciklama": "Arşivin kaynak listesi. Yeni repo eklemek için buraya bir kayıt ekle ve `python3 araclar/arsiv-olustur.py` çalıştır. tip: T1 skill koleksiyonu | T2 ürün skilleri (sadece 'dahil' yolları) | T3 repo-içi geliştirici skilli (arşivlenir, varsayılan listede gizli) | T4 entegrasyon kataloğu (arşivlenir, varsayılan listede gizli) | T5 kütüphane/araç (kod indirilmez, referans notu) | T6 tasarım teknolojisi (kod indirilmez, 'nasıl çalışır' kartı). oncelik: aynı isimli skill çakışmasında küçük sayı kazanır.",
+  "_aciklama": "Arşivin kaynak listesi. Yeni repo eklemek için buraya bir kayıt ekle ve `python3 araclar/arsiv-olustur.py` çalıştır. tip: T1 skill koleksiyonu | T2 ürün skilleri (sadece 'dahil' yolları) | T3 repo-içi geliştirici skilli (arşivlenir, varsayılan listede gizli) | T4 entegrasyon kataloğu (arşivlenir, varsayılan listede gizli) | T5 kütüphane/araç (kod indirilmez, referans notu) | T6 tasarım teknolojisi (kod indirilmez, 'nasıl çalışır' kartı). oncelik: aynı isimli skill çakışmasında küçük sayı kazanır. Faz 1 (2026-11-21): tur+bolum(+alt_tur) ana dogruluk kaynagidir, tip gecici senkronlanir; onay.kim: kullanici | kural.",
   "github_skill_listesi": "yapay-zeka-skillleri",
   "ayna_klasorler": [
     "^\\.factory/",
@@ -158,7 +158,7 @@
     },
     {
       "repo": "teng-lin/notebooklm-py",
-      "tip": "T1",
+      "tip": "T2",
       "oncelik": 2,
       "kok_dosyalari": [
         "SKILL.md"
@@ -260,7 +260,7 @@
     },
     {
       "repo": "OpenMontageInc/OpenMontage",
-      "tip": "T1",
+      "tip": "T2",
       "oncelik": 6,
       "bagimlilik": "OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.",
       "not": "Program olarak ayrıca izlenir (programlar.json -> openmontage); arşiv kopyası skill kaynağı içindir. Repo 2026-11'de GitHub'da calesthio hesabından OpenMontageInc kuruluşuna taşındı (aynı repo; kimlikler `@calesthio` olarak kalır).",
@@ -338,49 +338,56 @@
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "pmndrs/react-three-fiber",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "pmndrs/drei",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "pmndrs/react-three-a11y",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "14islands/r3f-scroll-rig",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "oframe/ogl",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "greensock/GSAP",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "motiondivision/motion",
@@ -388,63 +395,72 @@
       "kimlik": "motion-kutuphane",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "darkroomengineering/lenis",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "airbnb/lottie-web",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "barvian/number-flow",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "tailwindlabs/tailwindcss",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "argyleink/open-props",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "seek-oss/capsize",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "fontsource/fontsource",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "figma/code-connect",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "darkroomengineering/satus",
@@ -452,14 +468,16 @@
       "kimlik": "satus-starter",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "dequelabs/axe-core",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (arşivde 0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "GoogleChrome/lighthouse",
@@ -467,7 +485,8 @@
       "kimlik": "lighthouse-arac",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane/araç kaynağı (arşivde 0 skil)."
+      "tur_gerekce": "T5: skilsiz kütüphane/araç kaynağı (arşivde 0 skil).",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "microsoft/playwright",
@@ -475,7 +494,8 @@
       "kimlik": "playwright-arac",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz yazılım aracı, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz yazılım aracı, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "vercel/next.js",
@@ -483,7 +503,8 @@
       "kimlik": "nextjs-framework",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz yazılım çerçevesi, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz yazılım çerçevesi, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "react/react",
@@ -491,42 +512,48 @@
       "kimlik": "react-kutuphane",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz yazılım kütüphanesi, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz yazılım kütüphanesi, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "QwikDev/partytown",
       "tip": "T5",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "ai/size-limit",
       "tip": "T5",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "FFmpeg/FFmpeg",
       "tip": "T5",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "arturitu/the-delegation",
       "tip": "T5",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "linvi/tweetinvi",
       "tip": "T5",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz kütüphane/araç, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "anthropics/claude-code",
@@ -534,28 +561,32 @@
       "kimlik": "claude-code-arac",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz yazılım aracı, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz yazılım aracı, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "VoltAgent/awesome-design-md",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı, arşivde skil bulunmuyor."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı, arşivde skil bulunmuyor.",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "nevertoday/350-layout-compositions",
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı, arşivde skil bulunmuyor."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı, arşivde skil bulunmuyor.",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "zhuyansen/awesome-claude-video-skills",
       "tip": "T5",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kaynak, arşivde skil bulunmuyor."
+      "tur_gerekce": "T5: skilsiz kaynak, arşivde skil bulunmuyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "anthropics/claude-plugins-official",
@@ -640,7 +671,7 @@
     },
     {
       "repo": "Fei-Away/Codex-Dream-Skin",
-      "tip": "T1",
+      "tip": "T5",
       "oncelik": 8,
       "haric": [
         "^(macos|windows)/"
@@ -648,7 +679,8 @@
       "not": "'Yapay Zeka Skillleri' listesine lemomo-ai yıldızlarından 2026-10-22'de eklendi. Kullanıcı kararı: sadece referans. Codex Desktop tema/duvar kağıdı uygulaması; macos/ ve windows/ SKILL.md'leri uygulamanın kurulum girişi (proje skilli değil, CDP ile arayüze CSS enjekte eder, paketler imzasız). Arşive alınmaz; notlar/referans/kutuphaneler.md.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T1: arşivde skil sayısı 0, yalnızca referans olarak tutuluyor."
+      "tur_gerekce": "T1: arşivde skil sayısı 0, yalnızca referans olarak tutuluyor.",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "android/skills",
@@ -742,7 +774,7 @@
     },
     {
       "repo": "Donchitos/Claude-Code-Game-Studios",
-      "tip": "T1",
+      "tip": "T2",
       "oncelik": 4,
       "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: oyun geliştirme stüdyosu).",
       "tur": "urun-skil",
@@ -751,7 +783,7 @@
     },
     {
       "repo": "Graphify-Labs/graphify",
-      "tip": "T1",
+      "tip": "T2",
       "oncelik": 2,
       "bagimlilik": "graphify Python paketi (pip install graphifyy) kurulu olmalı.",
       "not": "GitHub Trending'den 2026-10-22'de eklendi (eksik alan: kod tabanı bilgi grafiği).",
@@ -1038,7 +1070,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "d3/d3",
@@ -1046,7 +1079,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "Tonejs/Tone.js",
@@ -1054,7 +1088,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "ManimCommunity/manim",
@@ -1062,7 +1097,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "liabru/matter-js",
@@ -1070,7 +1106,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "paperjs/paper.js",
@@ -1078,7 +1115,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "rough-stuff/rough",
@@ -1086,7 +1124,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "theatre-js/theatre",
@@ -1094,7 +1133,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "pmndrs/postprocessing",
@@ -1102,7 +1142,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "pmndrs/cannon-es",
@@ -1110,7 +1151,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "opentypejs/opentype.js",
@@ -1118,7 +1160,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "metafizzy/zdog",
@@ -1126,7 +1169,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "jwagner/simplex-noise.js",
@@ -1134,7 +1178,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "DavidHDev/react-bits",
@@ -1142,7 +1187,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil)."
+      "tur_gerekce": "T6: skilsiz tasarım teknolojisi kaynağı (0 skil).",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "KaTeX/KaTeX",
@@ -1150,7 +1196,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil).",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "openai/whisper",
@@ -1158,7 +1205,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil).",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "librosa/librosa",
@@ -1166,7 +1214,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil).",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "meyda/meyda",
@@ -1174,7 +1223,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil).",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "blender/blender",
@@ -1182,7 +1232,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil).",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "666ghj/MiroFish",
@@ -1190,7 +1241,8 @@
       "not": "Kullanıcının 2026-10-24 sonrası yıldızları; 'yapımıza uygun ekle' onayıyla 2026-10-31'de eklendi.",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil)."
+      "tur_gerekce": "T5: skilsiz kütüphane veya araç kaynağı (0 skil).",
+      "alt_tur": "kutuphane"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -1455,7 +1507,7 @@
     },
     {
       "repo": "dreammis/social-auto-upload",
-      "tip": "T1",
+      "tip": "T2",
       "oncelik": 2,
       "bagimlilik": "sau CLI (Python 3 + Playwright; her platform için tarayıcıda bir kez giriş yapılır, oturum çerezi saklanır).",
       "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Douyin/TikTok/YouTube/Bilibili/Xiaohongshu'ya video-yazı yayınlama CLI'sinin 18 skill'i (16k★, Çince). YouTube kanalı işi için eklendi.",
@@ -1465,7 +1517,7 @@
     },
     {
       "repo": "krillinai/OpenCreator",
-      "tip": "T1",
+      "tip": "T2",
       "oncelik": 5,
       "bagimlilik": "OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.",
       "not": "Popüler tarama 2026-11-04 (notlar/populer-degerlendirme-2026-11.md); kullanıcı 'Yapay Zeka Skillleri' listesine ekledi, 'kütüphaneye al' onayı 2026-11-04. Video çeviri-dublaj aracının kullanıcı skilleri skills/ (7). apps/ (çalışma zamanı) ve packages/writing-templates (uygulamanın yazı şablonları, frontmatter'sız) bilinçli hariç.",
@@ -1777,7 +1829,8 @@
       "tip": "T6",
       "tur": "referans",
       "bolum": "not",
-      "tur_gerekce": "T6 skilsiz tasarım teknolojisi kaynağı ve programlar.json'da değil; kesin kural gereği referans olur."
+      "tur_gerekce": "T6 skilsiz tasarım teknolojisi kaynağı ve programlar.json'da değil; kesin kural gereği referans olur.",
+      "alt_tur": "tasarim_teknolojisi"
     },
     {
       "repo": "avenoxai/higgsfield-studio",
@@ -2283,7 +2336,7 @@
     },
     {
       "repo": "nateherkai/herk-edit-kit",
-      "tip": "T1",
+      "tip": "T2",
       "lisans": "MIT",
       "oncelik": 4,
       "eklendi": "2026-11-17",

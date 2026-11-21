@@ -317,18 +317,64 @@ def yerel_commit(agac) -> str:
 YEREL_TIPLER = ("T7", "T8")
 ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4", "T7", "T8")
 ARSIV_DISI_BOLUMLER = ("fihrist", "katalog")  # kaynak kaydında bolum: skil dosyaları arşive ÇEKİLMEZ (notlar/plan-tur-surecleri.md bölüm 3)
+SURUM_MODLARI = ("yalniz_onayli", "takip", "dondur")
+VARSAYILAN_SURUM_MODU = "yalniz_onayli"
+REFERANS_ALT_TURLERI = ("kutuphane", "tasarim_teknolojisi")
+ONAY_KIMLER = ("kullanıcı", "kural")
 
 
 def arsive_cekilir(kayit) -> bool:
-    """Kaynak kaydı arşive çekilir mi? tip arşivlenen tiplerden VE (bolum fihrist/katalog DEĞİL ya da
-    bolum fihrist ile boş olmayan arsivde_tut listesi var). Tip içeriğin cinsini söyler (T1 skil reposu...),
-    bolum nerede tutulacağını; dev koleksiyon ve kit kaydı tip T1 + bolum fihrist/katalog olarak yazılır.
-    bolum fihrist + arsivde_tut doluysa yalnız o yollar arşive çekilir ve aylık güncellenir."""
-    if kayit.get("tip") not in ARSIVLENEN_TIPLER:
+    """Kaynak kaydı arşive çekilir mi?
+    - KAYIP / EMEKLI -> False.
+    - bolum alanı varsa ana doğruluk kaynağı bolum'dür:
+      * bolum == "arsiv" -> True
+      * bolum == "fihrist" ve boş olmayan arsivde_tut listesi -> True
+      * diğer bolum değerleri ("fihrist" boş, "katalog", "not") -> False
+    - Geriye uyum (bolum olmayan eski/sahte test kayıtları): tip in ARSIVLENEN_TIPLER.
+    """
+    if kayit.get("tip") in ("KAYIP", "EMEKLI"):
         return False
-    if kayit.get("bolum") == "fihrist" and isinstance(kayit.get("arsivde_tut"), list) and len(kayit["arsivde_tut"]) > 0:
-        return True
-    return kayit.get("bolum") not in ARSIV_DISI_BOLUMLER
+    bolum = kayit.get("bolum")
+    if bolum is not None:
+        if bolum == "arsiv":
+            return True
+        if bolum == "fihrist":
+            return isinstance(kayit.get("arsivde_tut"), list) and len(kayit["arsivde_tut"]) > 0
+        return False
+    return kayit.get("tip") in ARSIVLENEN_TIPLER
+
+
+def gecici_tip_senkron(kayit: dict):
+    """Faz 1-2 geçici tip senkronu: tur + bolum (+ alt_tur) ana kaynaktır, tip türetilir.
+    Mevcut KAYIP/EMEKLI durumları ve Faz 3'e bırakılan T4 çift kaydı korunur."""
+    mevcut = kayit.get("tip")
+    if mevcut in ("KAYIP", "EMEKLI"):
+        return mevcut
+    tur = kayit.get("tur")
+    if tur in ("tek-skil", "koleksiyon"):
+        return "T1"
+    if tur == "urun-skil":
+        return "T2"
+    if tur == "repo-ici":
+        return "T3"
+    if tur == "kendi":
+        return "T7"
+    if tur == "site":
+        return "T8"
+    if tur == "dev-koleksiyon":
+        return "T4" if mevcut == "T4" else "T1"
+    if tur == "kit":
+        return "T1"
+    if tur == "program":
+        return mevcut if mevcut in ("T1", "T2", "T5") else "T5"
+    if tur == "referans":
+        alt = kayit.get("alt_tur")
+        if alt == "tasarim_teknolojisi":
+            return "T6"
+        if alt == "kutuphane":
+            return "T5"
+        return mevcut if mevcut in ("T5", "T6") else "T5"
+    return mevcut
 YEREL_KLASOR = {"T7": "kendi", "T8": "site"}
 SITE_TAKIP = "site-takip.json"
 LISANSSIZ = ("yok", "NOASSERTION", "belirtilmemiş", "")
