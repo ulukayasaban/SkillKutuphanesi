@@ -6,7 +6,7 @@
 ## Yol haritası (2026-11-21'de token adımı eklendi)
 1. Amaç ve acı noktaları — **TAMAM**
 2. Temizlik düzeyi — **TAMAM (ortadaki yol)**
-3. Veri düzeni: kaynak, skill, kit, program, proje kayıtları — **bulgular toplandı; öneri: Tam ayrım, aşamalı (karar bekliyor)**
+3. Veri düzeni — **TAMAM (2026-11-21): tam ayrım, aşamalı seçildi**
 4. Giriş süreçleri: yeni repo/skill (tür bazlı)
 5. Projelerdeki skiller: kurulum, güncelleme, izleme
 6. Kalite, güvenlik, ücret ve onay kuralları (kullanıcıya bağımlılık merdiveni)
@@ -119,5 +119,11 @@ Karar ölçütü (K4): kurulum maliyeti değil, **tekrarlayan süreçlerin** tok
 - Risk ve önlem: araç ve test uyarlama hatası → her aşama sonunda `test.py`, `dogrula.py`, 4 projede `--durum` (salt okuma); geri dönüş git.
 - Baz ölçüm (adım 7'ye girer): yeni repo ekleme, aylık işlem, proje kurulumu, program güncellemesi için bugünkü token ve onay sayısı ölçülür; hedef değerler buna göre yazılır.
 
-## Açık soru (adım 3)
-Veri düzeni: kaynak, skill, kit, program ve proje kayıtlarının hangisi tek doğru kaynak olacak, hangileri üretilmiş görünüm olacak?
+## Karar (adım 3, kullanıcı 2026-11-21): TAM AYRIM, AŞAMALI
+Üç katman (kararlar / incelemeler / ölçülenler ve görünümler) kurulur; aşamalar yukarıda: (1) 7 elle düzenlenen dosya için yazım komutları, (2) `tip`'in `tur`'dan türetilmesi ve 138 senkron bozukluk, (3) registry'nin karar ve ölçüm dosyalarına bölünmesi, (4) açıklama ve ücret dosyalarının içeri alınması + 643 eksik açıklama. Projelerin `kilit.json` biçimi ve skill kimlikleri değişmez. Uygulama, plan bitip geçiş planı (adım 9) onaylanınca başlar; bu adımda yalnız karar kaydedildi.
+
+## Açık soru (adım 4)
+Giriş süreçleri: yeni repo/skill geldiğinde uçtan uca akış (tür belirleme, inceleme, ücret/risk kararı, kayıt, bildirim). Hangi adımlar tamamen araç, hangileri LLM kararı, hangileri sana sorulur? Kullanıcıya bağımlılık (K3) ve token (K4) ölçütleriyle. Bugünkü akış: `rehber/03` A1..A9 ve `surecler/yeni-repo.md` + 9 tür dosyası.
+
+## Devam istemi (yeni oturumda ilk mesaj olarak)
+`notlar/yeni-surec-plani-calisma.md` dosyasını oku ve yeni süreç planına adım 4'ten devam edelim. Adım 1-3 tamam, kararlar dosyada. Kısa tut, her adımda bir karar sor.
