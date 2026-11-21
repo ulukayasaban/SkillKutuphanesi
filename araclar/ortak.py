@@ -61,19 +61,38 @@ class GhBulunamadi(RuntimeError):
     """GitHub 404/422: kaynak yok, private olmuş ya da commit geçmişi yeniden yazılmış."""
 
 
-def gh_api(yol, deneme=4):
+class GhGeciciHata(RuntimeError):
+    """GitHub 403/429/5xx hız sınırı, ağ kesintisi veya zaman aşımı (asla KAYIP sayılmaz)."""
+
+
+def gh_api(yol, deneme=4, zaman_asimi=30):
+    son_hata = ""
     for i in range(deneme):
-        r = subprocess.run(["gh", "api", yol], capture_output=True, text=True)
+        try:
+            r = subprocess.run(["gh", "api", yol], capture_output=True, text=True, timeout=zaman_asimi)
+        except subprocess.TimeoutExpired:
+            son_hata = f"zaman aşımı ({zaman_asimi}s)"
+            if i + 1 < deneme:
+                time.sleep(2 * (i + 1))
+                continue
+            raise GhGeciciHata(f"gh api zaman aşımı ({zaman_asimi}s): {yol}")
         if r.returncode == 0:
             return json.loads(r.stdout)
-        if "HTTP 404" in r.stderr or "HTTP 422" in r.stderr:
-            raise GhBulunamadi(f"{yol}: {r.stderr.strip()[:200]}")
-        if "not enabled" in r.stderr or "not available" in r.stderr:  # bu oturumda kapalı uç nokta: beklemek anlamsız
-            raise RuntimeError(f"gh api kapalı: {yol}: {r.stderr.strip()[:200]}")
-        # hız sınırı: kısa bekleme işe yaramaz; dakikalarca bekleyip yeniden dene (ay-ortası çökme yerine)
-        limit = "rate limit" in r.stderr.lower() or "HTTP 403" in r.stderr or "HTTP 429" in r.stderr
-        time.sleep(60 * (i + 1) if limit else 2 * (i + 1))
-    raise RuntimeError(f"gh api başarısız: {yol}: {r.stderr.strip()}")
+        err = r.stderr.strip()
+        if "HTTP 404" in err or "HTTP 410" in err or "HTTP 422" in err:
+            raise GhBulunamadi(f"{yol}: {err[:200]}")
+        if "not enabled" in err or "not available" in err:  # bu oturumda kapalı uç nokta: beklemek anlamsız
+            raise RuntimeError(f"gh api kapalı: {yol}: {err[:200]}")
+        son_hata = err
+        limit = "rate limit" in err.lower() or "HTTP 403" in err or "HTTP 429" in err
+        gecici = limit or any(k in err for k in ("HTTP 500", "HTTP 502", "HTTP 503", "HTTP 504", "timed out", "connection"))
+        if i + 1 < deneme:
+            time.sleep(60 * (i + 1) if limit else 2 * (i + 1))
+            continue
+        if gecici:
+            raise GhGeciciHata(f"gh api geçici hata: {yol}: {err[:200]}")
+        raise RuntimeError(f"gh api başarısız: {yol}: {err}")
+    raise GhGeciciHata(f"gh api başarısız: {yol}: {son_hata}")
 
 
 API_KAPALI = ("not enabled", "not available", "HTTP 403")
@@ -321,6 +340,8 @@ SURUM_MODLARI = ("yalniz_onayli", "takip", "dondur")
 VARSAYILAN_SURUM_MODU = "yalniz_onayli"
 REFERANS_ALT_TURLERI = ("kutuphane", "tasarim_teknolojisi")
 ONAY_KIMLER = ("kullanıcı", "kural")
+KUYRUK_DURUMLARI = ("bekliyor", "karar_verildi", "reddedildi")
+KUYRUK_NEDENLERI = ("tur_aday", "lisans_yok", "gri_guvenlik", "aciklama_veya_skill_yok", "ad_cakismasi", "K-58")
 
 
 def arsive_cekilir(kayit) -> bool:

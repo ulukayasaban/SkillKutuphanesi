@@ -20,10 +20,11 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, ONAY_KIMLER, REFERANS_ALT_TURLERI, REGISTRY,  # noqa: E402
-                   YEREL_TIPLER, frontmatter, frontmatter_onar, frontmatter_teshis, git_blob_hash, json_oku, klasor_hash,
-                   YAMALAR, medya_haric_korunur_mu, medya_haric_kumesi, medya_haric_mi, medya_haric_normal,
-                   medya_haric_yol_gecerli, repo_guncel, yol_istisna_denetimi)
+from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, KUYRUK_DURUMLARI, KUYRUK_NEDENLERI,  # noqa: E402
+                   ONAY_KIMLER, REFERANS_ALT_TURLERI, REGISTRY, YEREL_TIPLER, frontmatter, frontmatter_onar,
+                   frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, medya_haric_korunur_mu,
+                   medya_haric_kumesi, medya_haric_mi, medya_haric_normal, medya_haric_yol_gecerli, repo_guncel,
+                   yol_istisna_denetimi)
 
 
 def github_muaf_repolar(tum_listeler, korunan_slug, konu_durum):
@@ -820,9 +821,29 @@ def _e9_olcum(kok, h, u):
                 u.append(f"olcum.jsonl:{no}: {sorun}")
 
 
+def _e10_konu_takip_kuyruk(kok, h, u):
+    """konu-takip.json içinde 'kuyruk' varsa durum ve neden alanlarını denetler (yoksa sessiz)."""
+    d, var = _json_kayit(kok, "konu-takip.json", h)
+    if not var or d is None or "kuyruk" not in d:
+        return
+    kuyruk = d.get("kuyruk")
+    if not isinstance(kuyruk, dict):
+        u.append("konu-takip.json: 'kuyruk' sözlük değil")
+        return
+    for repo, k in kuyruk.items():
+        if not isinstance(k, dict):
+            u.append(f"konu-takip.json kuyruk[{repo}]: sözlük değil")
+            continue
+        if k.get("durum") not in KUYRUK_DURUMLARI:
+            u.append(f"konu-takip.json kuyruk[{repo}]: geçersiz durum {k.get('durum')!r}")
+        if k.get("neden") not in KUYRUK_NEDENLERI:
+            u.append(f"konu-takip.json kuyruk[{repo}]: geçersiz neden {k.get('neden')!r}")
+
+
 def kayit_semalari_denetimi(kok=KOK):
     h, u = [], []
-    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar, _e7_site_takip, _e8_fihrist_kit, _e9_olcum):
+    for f in (_e1_programlar, _e2_projeler, _e3_yedekler, _e4_araclar, _e5_taban, _e6_kaynaklar,
+              _e7_site_takip, _e8_fihrist_kit, _e9_olcum, _e10_konu_takip_kuyruk):
         f(kok, h, u)
     return h, u
 

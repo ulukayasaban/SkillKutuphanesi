@@ -56,6 +56,10 @@ ADI_DEGISEN = {}
 ULASILAMAYAN = []
 CEVRIMDISI = False
 SON_HATA = ""  # _uygula geri alırken hatanın kısa nedeni (--aylik damgası için)
+BOLUM_TARAMA = {"arsiv": 0, "fihrist": 0, "katalog": 0, "not": 0}
+BOLUM_DEGISEN = {"fihrist": [], "katalog": [], "not": []}
+KALDIGI_KAYNAK = None
+GECICI_HATA_SAYISI = 0
 
 
 def calistir(*komut):
@@ -146,7 +150,9 @@ def damga_tarihi(damga):
         return None
 
 
-def damga_yaz(sonuc, dal=None, neden="", atlanan=None, ad_degisen=None, ozet_durumu=None):
+def damga_yaz(sonuc, dal=None, neden="", atlanan=None, ad_degisen=None, ozet_durumu=None, *,
+              taranan=None, etkilenen_proje_sayisi=0, toplu_onay_grubu_sayisi=0,
+              kaldigi_kaynak=None, gecici_hata_sayisi=0):
     """notlar/son-aylik-calisma.json'u yazar (yerel, git'e girmez). .gitignore'da değilse yazmaz. -> yazıldı mı"""
     if sonuc not in SONUCLAR:
         raise ValueError(f"geçersiz sonuç: {sonuc}")
@@ -157,10 +163,21 @@ def damga_yaz(sonuc, dal=None, neden="", atlanan=None, ad_degisen=None, ozet_dur
     simdi = datetime.now().astimezone().isoformat(timespec="seconds")
     kayit = {"zaman": simdi, "sonuc": sonuc, "dal": dal, "neden": neden}
     gecmis = [g for g in (onceki.get("gecmis") or []) if isinstance(g, dict)]
-    d = {"surum": 2, "tarih": simdi, "sonuc": sonuc, "dal": dal, "neden": neden,
+    tar = dict(taranan or {})
+    damga_durum = "tamamlandi" if (sonuc == "tamam" and gecici_hata_sayisi == 0 and not kaldigi_kaynak) else "yarim_kaldi"
+    d = {"surum": 2, "tarih": simdi, "son_tarih": simdi[:10], "sonuc": sonuc, "durum": damga_durum,
+         "dal": dal, "neden": neden,
          "atlanan_kaynaklar": sorted(set(atlanan or [])), "ad_degisen": dict(ad_degisen or {}),
          "ozet_durumu": ozet_durumu,
          "son_basarili": simdi if sonuc == "tamam" else onceki.get("son_basarili"),
+         "taranan_arsiv": int(tar.get("arsiv", 0)),
+         "taranan_fihrist": int(tar.get("fihrist", 0)),
+         "taranan_katalog": int(tar.get("katalog", 0)),
+         "taranan_not": int(tar.get("not", 0)),
+         "etkilenen_proje_sayisi": int(etkilenen_proje_sayisi),
+         "toplu_onay_grubu_sayisi": int(toplu_onay_grubu_sayisi),
+         "kaldigi_kaynak": kaldigi_kaynak,
+         "gecici_hata_sayisi": int(gecici_hata_sayisi),
          "gecmis": ([kayit] + gecmis)[:12]}
     try:
         DAMGA.parent.mkdir(parents=True, exist_ok=True)
@@ -183,11 +200,102 @@ def damga_ozet_durumu(durum):
         pass
 
 
-def rapor():
-    """Kaynakları kontrol eder. (degisen, sorunlu, ayrinti) döndürür.
+def _yonlendirme_kontrol(repo, yanit):
+    """Commit yanıtındaki html_url üzerinden 301 ad/sahip değişikliğini algılar (yeni kayıt açmaz)."""
+    try:
+        m = re.search(r"github\.com/([^/]+/[^/]+)/commit/", str(yanit.get("html_url", "")))
+        if m:
+            bilinen = {repo.lower(), str(repo_guncel(repo)).lower()}
+            if m.group(1).lower() not in bilinen:
+                ADI_DEGISEN[repo] = m.group(1)
+                print(f"~ AD DEĞİŞMİŞ: {repo} -> {m.group(1)} (yeni kaynak DEĞİL; kaynaklar.json'da 'repo'yu yeni adla değiştir, "
+                      "eski adı \"eski_adlar\"a yaz; rehber/09)")
+    except Exception:  # noqa: BLE001
+        pass
+
+
+def bolumleri_tara(kayitlar, *, kaldigi_kaynak=None, fihrist_kok=None, programlar_veri=None,
+                   sorunlu=None, bulunan_kaldi=True):
+    """fihrist, katalog (kit + program) ve not (referans) bölümlerini commit bazında tarar.
+    programlar.json yazılmaz, kit betiği çalıştırılmaz; 403/429/timeout asla KAYIP sayılmaz."""
+    global KALDIGI_KAYNAK, GECICI_HATA_SAYISI
+    sorunlu = sorunlu if sorunlu is not None else []
+    fihrist_kok = Path(fihrist_kok) if fihrist_kok else (KOK / "fihrist")
+    if programlar_veri is None:
+        programlar_veri = (json_oku(KOK / "programlar.json", {}) or {}).get("programlar", {})
+    degisen_bolum = {"fihrist": [], "katalog": [], "not": []}
+    hedefler = []
+    gorulen = set()
+    for k in kayitlar:
+        if not isinstance(k, dict) or not isinstance(k.get("repo"), str):
+            continue
+        bolum = k.get("bolum")
+        if bolum not in ("fihrist", "katalog", "not"):
+            continue
+        if k.get("tip") in ("KAYIP", "EMEKLI", "T7", "T8"):
+            continue
+        repo = k["repo"]
+        anahtar = (bolum, repo.lower())
+        if anahtar in gorulen:
+            continue
+        gorulen.add(anahtar)
+        hedefler.append((bolum, repo, k))
+
+    art_arda = 0
+    for i, (bolum, repo, k) in enumerate(hedefler):
+        if not bulunan_kaldi:
+            if repo.lower() == str(kaldigi_kaynak).lower():
+                bulunan_kaldi = True
+            else:
+                continue
+        BOLUM_TARAMA[bolum] += 1
+        try:
+            yanit = gh_api(f"repos/{repo}/commits/HEAD")
+            yeni = yanit["sha"]
+        except GhBulunamadi:
+            art_arda = 0
+            if repo not in sorunlu:
+                sorunlu.append(repo)
+            print(f"! [{bolum}] {repo}: erişilemiyor (404/410/422; otomatik KAYIP işaretlenmez).")
+            continue
+        except Exception as e:  # noqa: BLE001
+            art_arda += 1
+            GECICI_HATA_SAYISI += 1
+            if KALDIGI_KAYNAK is None:
+                KALDIGI_KAYNAK = repo
+            if repo not in ULASILAMAYAN:
+                ULASILAMAYAN.append(repo)
+            print(f"! [{bolum}] {repo}: geçici hata ({str(e).strip().splitlines()[-1][:100] if str(e).strip() else type(e).__name__})")
+            if art_arda >= 3:
+                for _, kalan_repo, _ in hedefler[i + 1:]:
+                    if kalan_repo not in ULASILAMAYAN:
+                        ULASILAMAYAN.append(kalan_repo)
+                print(f"UYARI: art arda 3 kaynak kontrol edilemedi ({bolum}); kalanlar atlandı.")
+                break
+            continue
+        art_arda = 0
+        _yonlendirme_kontrol(repo, yanit)
+        eski = (k.get("son_kontrol") or {}).get("commit") if isinstance(k.get("son_kontrol"), dict) else None
+        if bolum == "fihrist" and not eski:
+            fd = json_oku(fihrist_kok / (repo.replace("/", "__") + ".json"), {}) or {}
+            eski = fd.get("commit")
+        elif bolum == "katalog" and not eski and k.get("program"):
+            eski = (programlar_veri.get(k["program"]) or {}).get("kutuphane_commit")
+        if eski and eski != yeni:
+            degisen_bolum[bolum].append({"repo": repo, "tur": k.get("tur"), "eski": eski, "yeni": yeni})
+            print(f"~ [{bolum}] {repo}: {eski[:7]} -> {yeni[:7]}")
+    return degisen_bolum
+
+
+def rapor(kaldigi_kaynak=None, tum_bolumler=False):
+    """Kaynakları (arsiv, fihrist, katalog, not) kontrol eder. (degisen, sorunlu, ayrinti) döndürür.
     GitHub'a ulaşılamıyorsa kaynak karşılaştırması atlanır (CEVRIMDISI); geçici ağ hatası alan kaynaklar ULASILAMAYAN'a girer."""
-    global ADI_DEGISEN, ULASILAMAYAN, CEVRIMDISI
+    global ADI_DEGISEN, ULASILAMAYAN, CEVRIMDISI, BOLUM_TARAMA, BOLUM_DEGISEN, KALDIGI_KAYNAK, GECICI_HATA_SAYISI
     ADI_DEGISEN, ULASILAMAYAN, CEVRIMDISI = {}, [], False
+    BOLUM_TARAMA = {"arsiv": 0, "fihrist": 0, "katalog": 0, "not": 0}
+    BOLUM_DEGISEN = {"fihrist": [], "katalog": [], "not": []}
+    KALDIGI_KAYNAK = None
+    GECICI_HATA_SAYISI = 0
     ok, _kalan, neden = gh_hazir()
     if not ok:
         print(f"UYARI: GitHub'a ulaşılamıyor ({neden}). Kaynak karşılaştırması ATLANDI; yalnız yerel kontroller yapıldı.")
@@ -202,9 +310,18 @@ def rapor():
     for s in skiller:
         mevcut.setdefault(s["repo"], s["commit"])  # repodaki tüm kayıtlar kaldırılmışsa eski commit'e düş
     degisen, sorunlu, ayrinti = [], [], {}
-    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4") and arsive_cekilir(k)})
+    ayar_k = json_oku(KAYNAKLAR)
+    repolar = sorted({k["repo"] for k in ayar_k["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4") and arsive_cekilir(k)})
     art_arda = 0
+    durdu_art_arda = False
+    bulunan_kaldi = not bool(kaldigi_kaynak)
     for i, repo in enumerate(repolar):
+        if not bulunan_kaldi:
+            if repo.lower() == str(kaldigi_kaynak).lower():
+                bulunan_kaldi = True
+            else:
+                continue
+        BOLUM_TARAMA["arsiv"] += 1
         try:
             yanit = gh_api(f"repos/{repo}/commits/HEAD")
             yeni = yanit["sha"]
@@ -216,25 +333,20 @@ def rapor():
             continue
         except Exception as e:  # noqa: BLE001  geçici ağ / hız sınırı
             art_arda += 1
+            GECICI_HATA_SAYISI += 1
+            if KALDIGI_KAYNAK is None:
+                KALDIGI_KAYNAK = repo
             ULASILAMAYAN.append(repo)
             print(f"! {repo}: şimdilik kontrol edilemedi ({str(e).strip().splitlines()[-1][:120] if str(e).strip() else type(e).__name__})")
             if art_arda >= 3:
                 kalan = repolar[i + 1:]
                 ULASILAMAYAN.extend(kalan)
+                durdu_art_arda = True
                 print("UYARI: art arda 3 kaynak kontrol edilemedi; kalanlar atlandı (ağ/hız sınırı).")
                 break
             continue
         art_arda = 0
-        try:  # adı değişmiş repo: commit yanıtındaki html_url yeni adı verir (ek çağrı yok)
-            m = re.search(r"github\.com/([^/]+/[^/]+)/commit/", str(yanit.get("html_url", "")))
-            if m:
-                bilinen = {repo.lower(), str(repo_guncel(repo)).lower()}
-                if m.group(1).lower() not in bilinen:
-                    ADI_DEGISEN[repo] = m.group(1)
-                    print(f"~ AD DEĞİŞMİŞ: {repo} -> {m.group(1)} (yeni kaynak DEĞİL; kaynaklar.json'da 'repo'yu yeni adla değiştir, "
-                          "eski adı \"eski_adlar\"a yaz; rehber/09)")
-        except Exception:  # noqa: BLE001
-            pass
+        _yonlendirme_kontrol(repo, yanit)
         eski = mevcut.get(repo)
         if eski == yeni:
             continue
@@ -254,10 +366,10 @@ def rapor():
         for f in dosyalar[:10]:
             print(f"    {f}")
     # Yerel kaynak (T7 kendi/, T8 site/): GitHub'a sorulmaz; kayıtlı sürüm kimliği diskteki içerikten türetilene eşit değilse değişmiştir
-    ayar_k = json_oku(KAYNAKLAR)
     for k in ayar_k["repolar"]:
         if k["tip"] not in ("T7", "T8"):
             continue
+        BOLUM_TARAMA["arsiv"] += 1
         yeni = yerel_commit(yerel_agac(KOK / k["yerel"], ayar_k["skill_ici_haric"] + k.get("dosya_haric", []),
                                        tam_haric=medya_haric_kumesi(k))[0])
         eski = mevcut.get(k["repo"])
@@ -265,12 +377,15 @@ def rapor():
             degisen.append(k["repo"])
             ayrinti[k["repo"]] = {"eski": eski, "yeni": yeni, "dosya": 0, "not": f" (yerel kaynak: {k['yerel']}/ klasörü düzenlenmiş)"}
             print(f"~ {k['repo']}: {(eski or '-')[:7]} -> {yeni[:7]}  (yerel kaynak, {k['yerel']}/ düzenlenmiş)")
+    if tum_bolumler and not durdu_art_arda:
+        BOLUM_DEGISEN = bolumleri_tara(ayar_k["repolar"], kaldigi_kaynak=kaldigi_kaynak,
+                                       sorunlu=sorunlu, bulunan_kaldi=bulunan_kaldi)
     if ULASILAMAYAN:
         print(f"Kontrol edilemeyen kaynak: {len(ULASILAMAYAN)} (geçici); sonra tekrar çalıştır.")
-    if not degisen:
+    if not degisen and not any(BOLUM_DEGISEN.values()):
         if not ULASILAMAYAN:
             print("Tüm kaynaklar güncel.")
-    else:
+    elif degisen:
         etkilenen_projeler(degisen)
     subprocess.run([sys.executable, str(KOK / "araclar" / "dogrula.py"), "--github"], cwd=KOK)
     return degisen, sorunlu, ayrinti
@@ -691,7 +806,14 @@ def aylik_calistir(siki=False):
     dallar_once = {b["dal"] for b in bekleyen}
     try:
         print("\nAdım 2/5 — Kaynak raporu")
-        degisen, sorunlu, ayrinti = rapor()
+        kaldigi = onceki.get("kaldigi_kaynak") if onceki.get("durum") == "yarim_kaldi" else None
+        if kaldigi:
+            print(f"  Önceki yarım kalan turdan devam ediliyor: {kaldigi}")
+            degisen, sorunlu, ayrinti = rapor(kaldigi_kaynak=kaldigi, tum_bolumler=True)
+        else:
+            degisen, sorunlu, ayrinti = rapor()
+            if not CEVRIMDISI and KALDIGI_KAYNAK is None:
+                BOLUM_DEGISEN = bolumleri_tara(json_oku(KAYNAKLAR)["repolar"], sorunlu=sorunlu)
         if gh_ok:
             _liste_raporu()
         print("  Site takibi (siteden alınan skiller, site/):")
@@ -748,7 +870,8 @@ def aylik_calistir(siki=False):
         git("switch", "-q", ANA_DAL)
     if git("rev-parse", ANA_DAL).stdout.strip() != master_sha:
         print("UYARI: master değişmiş görünüyor; kontrol et (bu komut master'a yazmaz).")
-    damga_yaz(sonuc, dal_adi, neden, atlanan, ADI_DEGISEN)
+    damga_yaz(sonuc, dal_adi, neden, atlanan, ADI_DEGISEN,
+              taranan=BOLUM_TARAMA, kaldigi_kaynak=KALDIGI_KAYNAK, gecici_hata_sayisi=GECICI_HATA_SAYISI)
     print("\nAdım 4/5 — Aylık özet (tek sayfa)")
     ozet_durumu = _ozet_calistir()
     _ozet_sonrasi_temizlik(baslangic_temiz)

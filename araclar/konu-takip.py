@@ -9,6 +9,8 @@ Sadece okur ve raporlar; kaynak EKLEMEZ, yıldız/liste değiştirmez.
                                                                      # (eklendi | reddedildi | izle)
   python3 araclar/konu-takip.py --bekleyenler [--ozet-json] [--siki]   # kararı bekleyen adayları (konu takibi, trend, popüler) ve
                                        # vadesi gelen izlenenleri özetler: tarama yapmaz, ağ kullanmaz, dosya yazmaz
+  python3 araclar/konu-takip.py --kuyruk [--json]                    # Faz 2: konu-takip.json kuyruğunu özetler (ağsız, yazmaz)
+  python3 araclar/konu-takip.py --kuyruga-ekle owner/ad neden "not"  # Faz 2: repoyu kuyruğa ekler (K-58 ise reddedildi)
 
 Konular ve arama sorguları: kaynaklar.json -> "takip_konulari". Her sorgu GitHub kod aramasında
 "<sorgu> filename:SKILL.md" olarak aranır. Kütüphanede olan ve 'degerlendirilen' listesindeki repolar aday sayılmaz.
@@ -26,7 +28,8 @@ from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, TREND, json_oku, json_yaz, trend_durumu  # noqa: E402
+from ortak import (KAYNAKLAR, KOK, KUYRUK_DURUMLARI, KUYRUK_NEDENLERI, TREND,  # noqa: E402
+                   json_oku, json_yaz, trend_durumu)
 
 BILGI_YASI_GUN = 90   # aday repo bilgisi bu kadar günde bir tazelenir
 BILGI_SINIRI = 400    # bir turda en çok bu kadar repo bilgisi çekilir
@@ -194,6 +197,65 @@ def karar_uygula(durum, ayar, trend, repo, karar, neden, bugun=None):
         durum.get("izlenen", {}).pop(key, None)
     mesaj.append(f"{key}: {karar} yazıldı")
     return mesaj, None
+
+
+def kuyruga_ekle(durum, repo, neden, ayrinti="", bugun=None):
+    """Saf işlev: repo'yu konu-takip.json kuyruğuna ekler -> (kayit, hata).
+    neden == 'K-58' ise reddedildi + degerlendirilen kaydı açar; diğer nedenlerde 'bekliyor'."""
+    if not REPO_DESEN.match(repo or ""):
+        return None, f"geçersiz repo adı: {repo} (owner/ad biçimi)"
+    if neden not in KUYRUK_NEDENLERI:
+        return None, f"geçersiz kuyruk nedeni: {neden!r} ({', '.join(KUYRUK_NEDENLERI)})"
+    bugun = _gun(bugun or date.today()).isoformat()
+    kuyruk = durum.setdefault("kuyruk", {})
+    key = next((r for r in kuyruk if r.lower() == repo.lower()), repo)
+    if neden == "K-58":
+        kayit = {"repo": key, "durum": "reddedildi", "neden": "K-58", "tarih": bugun, "ayrinti": ayrinti or "K-58 otomatik ret"}
+        kuyruk[key] = kayit
+        durum.setdefault("degerlendirilen", {})[key] = {"karar": "reddedildi", "neden": "K-58", "tarih": bugun}
+        return kayit, None
+    kayit = {"repo": key, "durum": "bekliyor", "neden": neden, "tarih": bugun, "ayrinti": str(ayrinti or "")}
+    kuyruk[key] = kayit
+    return kayit, None
+
+
+def kuyruk_karar_ver(durum, repo, yeni_durum, aciklama="", bugun=None):
+    """Saf işlev: kuyruktaki kaydın durumunu 'karar_verildi' veya 'reddedildi' yapar."""
+    if yeni_durum not in KUYRUK_DURUMLARI or yeni_durum == "bekliyor":
+        return None, "karar durumu 'karar_verildi' veya 'reddedildi' olmalı"
+    kuyruk = durum.get("kuyruk") or {}
+    key = next((r for r in kuyruk if r.lower() == (repo or "").lower()), None)
+    if not key:
+        return None, f"kuyrukta bulunamadı: {repo}"
+    bugun = _gun(bugun or date.today()).isoformat()
+    kuyruk[key]["durum"] = yeni_durum
+    kuyruk[key]["karar_tarihi"] = bugun
+    if aciklama:
+        kuyruk[key]["ayrinti"] = aciklama
+    if yeni_durum == "reddedildi":
+        durum.setdefault("degerlendirilen", {})[key] = {
+            "karar": "reddedildi", "neden": aciklama or kuyruk[key].get("neden", "reddedildi"), "tarih": bugun
+        }
+    return kuyruk[key], None
+
+
+def kuyruk_ozeti(durum) -> dict:
+    """Saf işlev: 'bekliyor' durumundaki kuyruk kayıtlarını nedenine göre gruplar ve toplu özet metni üretir."""
+    kuyruk = (durum or {}).get("kuyruk") or {}
+    bekleyenler_l = [v for v in kuyruk.values() if isinstance(v, dict) and v.get("durum") == "bekliyor"]
+    gruplar = {}
+    for k in bekleyenler_l:
+        gruplar.setdefault(k.get("neden", "tur_aday"), []).append(k)
+    satirlar = []
+    if not bekleyenler_l:
+        mesaj = "Kuyrukta karar bekleyen repo yok."
+    else:
+        satirlar.append(f"Karar bekleyen {len(bekleyenler_l)} repo (tek toplu onay):")
+        for neden in sorted(gruplar):
+            repolar = gruplar[neden]
+            satirlar.append(f"- {neden} ({len(repolar)}): " + ", ".join(x.get("repo", "?") for x in repolar))
+        mesaj = "\n".join(satirlar)
+    return {"toplam_bekleyen": len(bekleyenler_l), "gruplar": gruplar, "satirlar": satirlar, "mesaj": mesaj}
 
 
 def _aralik(tarih, bugun):
@@ -369,8 +431,30 @@ def main():
         return 0
     if "--bekleyenler" in sys.argv:  # her şeyden ÖNCE: ağ yok, dosya yazmaz
         return bekleyenler_calistir("--ozet-json" in sys.argv, "--siki" in sys.argv)
+    if "--kuyruk" in sys.argv:
+        durum = json_oku(DURUM, {}) or {}
+        oz = kuyruk_ozeti(durum)
+        if "--json" in sys.argv:
+            print(json.dumps(oz, ensure_ascii=False))
+        else:
+            print(oz["mesaj"])
+        return 0
     ayar = json_oku(KAYNAKLAR)
     durum = json_oku(DURUM, {"_aciklama": "araclar/konu-takip.py üretir. 'degerlendirilen' elle/--karar ile doldurulur."})
+    if "--kuyruga-ekle" in sys.argv:
+        i = sys.argv.index("--kuyruga-ekle")
+        if len(sys.argv) < i + 3:
+            print('kullanım: konu-takip.py --kuyruga-ekle owner/ad <neden> ["ayrıntı"]')
+            sys.exit(2)
+        repo, neden = sys.argv[i + 1], sys.argv[i + 2]
+        ayrinti = " ".join(sys.argv[i + 3:])
+        kayit, hata = kuyruga_ekle(durum, repo, neden, ayrinti)
+        if hata:
+            print(hata)
+            sys.exit(2)
+        json_yaz(DURUM, durum)
+        print(f"{kayit['repo']}: kuyruk ({kayit['durum']}, {kayit['neden']})")
+        return 0
     if "--karar" in sys.argv:
         i = sys.argv.index("--karar")
         if len(sys.argv) < i + 3:

@@ -19,10 +19,10 @@ Skili olmayan ama bilinmeye değer kütüphane ya da araç. Örnek: `mrdoob/thre
 ```
 
 ## Aylık güncelleme
-Bugünkü düzen: `python3 araclar/kapsam-denetimi.py` referans repoda sonradan skil çıkıp çıkmadığına bakar. "Hâlâ var mı" ve "skil yayımlamış mı" için ayrı aday raporu HENÜZ YOK (plan adım 5).
+Aylık zincir (`python3 -u araclar/arsiv-guncelle.py --aylik`) `not` bölümündeki referans kaynaklarının `son_kontrol.commit` değişimini tarar; `python3 araclar/kapsam-denetimi.py` ise referans repoda sonradan `SKILL.md` çıkıp çıkmadığını denetler.
 
 ## Projeye kurulum
-Kurulmaz. Referans, öneri raporunda "bu iş için şu araç var" diye gösterilir (rapor tarafı HENÜZ YOK, plan adım 4); o zamana dek `notlar/referans/` kartı elle okunur.
+Kurulmaz. Proje öneri raporunda (`python3 araclar/skill-ekle.py <proje> --rapor --oner "<ihtiyaç>"`) ilgili bölümde `notlar/referans/` kartlarıyla ("bu iş için şu kütüphane/araç var") birlikte gösterilir.
 
 ## Çıkarma
 `python3 araclar/kaynak-cikar.py --repo owner/ad --kuru` (kart/satır adımı raporda çıkar).

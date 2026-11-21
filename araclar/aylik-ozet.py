@@ -224,7 +224,7 @@ def damga_kontrol(kok, bugun):
         damga = {}
     satir, karar, durum, dikkat = [], [], "temiz", []
     soru = "Aylık çalışmayı şimdi yapayım mı? (python3 -u araclar/arsiv-guncelle.py --aylik; önce plan görmek istersen: --aylik --kuru)"
-    son = tarih_oku(damga.get("tarih") or damga.get("son_calisma"))  # 'tarih' yeni damga, 'son_calisma' eski biçim
+    son = tarih_oku(damga.get("son_tarih") or damga.get("tarih") or damga.get("son_calisma"))  # 'son_tarih'/'tarih' yeni damga, 'son_calisma' eski biçim
     sonuc = damga.get("sonuc") or damga.get("son_sonuc")
     neden = damga.get("neden") or damga.get("son_neden")
     kayit_yedegi = False
@@ -247,10 +247,12 @@ def damga_kontrol(kok, bugun):
             karar.append(soru)
         elif not kayit_yedegi:
             satir.append(f"Son aylık çalışma {son.isoformat()} ({gun} gün önce){sonuc_eki(sonuc)}")
-    if sonuc in ("kismi", "basarisiz", "bekleyen-dal", "hata", "durduruldu"):
+    if sonuc in ("kismi", "basarisiz", "bekleyen-dal", "hata", "durduruldu") or damga.get("durum") == "yarim_kaldi":
         durum = max(durum, "dikkat", key=SIRA.get)
-        satir.append(f"Son çalışma yarım kaldı: {sonuc} — {neden or 'neden yazılmamış'}")
+        satir.append(f"Son çalışma yarım kaldı: {sonuc or damga.get('durum')} — {neden or 'neden yazılmamış'}")
         dikkat.append(satir[-1])
+        if damga.get("kaldigi_kaynak"):
+            satir.append(f"Kaldığı kaynak: {damga['kaldigi_kaynak']} (geçici hata: {damga.get('gecici_hata_sayisi', 0)})")
         sb = tarih_oku(damga.get("son_basarili"))
         if sb and (bugun - sb).days > ESIK_CALISMA:
             satir.append(f"Son başarılı çalışma {(bugun - sb).days} gün önce")

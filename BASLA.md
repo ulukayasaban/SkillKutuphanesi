@@ -1,6 +1,6 @@
 # BASLA — SkillKutuphanesi İnce Açılış Özeti (<= 3 KB)
 
-Aktif faz: **Faz 1 — Temel ve ölçüm** (`yeni-surec-faz1` dalı; `master` dalına doğrudan yazma). Çalışma klasörü: `cd ~/Documents/SkillKutuphanesi`. Ayrıntılı eski kılavuz: `rehber/00-basla-ayrintili.md`.
+Aktif faz: **Faz 2 — Akış, onay ve eksik araçlar** (`yeni-surec-faz2` dalı; `master` dalına doğrudan yazma). Çalışma klasörü: `cd ~/Documents/SkillKutuphanesi`. Ayrıntılı eski kılavuz: `rehber/00-basla-ayrintili.md`.
 
 ## 1. 4 Temel Kısıt
 - **K1 Hafıza:** Tek doğruluk kaynağı; çift kayıt açma (`bekleyenler` için `konu-takip.json`).
@@ -22,9 +22,9 @@ Aktif faz: **Faz 1 — Temel ve ölçüm** (`yeni-surec-faz1` dalı; `master` da
 ## 4. Görev Yönlendirme
 | İş | Açılacak Dosya / İlk Komut |
 |---|---|
-| Yeni repo girişi | `.agents/skills/yeni-repo-giris/SKILL.md` · `python3 araclar/tur-belirle.py <owner/ad>` |
+| Yeni repo girişi | `.agents/skills/yeni-repo-giris/SKILL.md` · `python3 araclar/yeni-repo.py --kuru` · `python3 araclar/tur-belirle.py <owner/ad>` |
 | İlk kurulum / derin inceleme | `.agents/skills/skill-kurulum-inceleme/SKILL.md` · `python3 araclar/skill-ekle.py <proje> --oner "<ihtiyaç>"` (`--program-skill`, `--dondur`) |
-| Aylık takip / proje bağları | `.agents/skills/aylik-takip-ve-denetim/SKILL.md` · `python3 araclar/proje-kullanimi.py --program <ad>` |
+| Aylık takip / toplu onay / bağlar | `.agents/skills/aylik-takip-ve-denetim/SKILL.md` · `python3 araclar/toplu-onay-rapor.py` · `python3 araclar/proje-kullanimi.py --program <ad>` |
 | Yeni proje skill önerisi | `.agents/skills/proje-oneri/SKILL.md` |
 | Maliyet / disk ölçümü | `python3 araclar/olcum.py --disk` (`--ozet`, `--dogrula`, `--yaz --kuru`) |
 

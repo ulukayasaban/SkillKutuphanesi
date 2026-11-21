@@ -39,12 +39,13 @@ başlamış projede neyin kurulabileceği). İki yerde aynı bilgi tutulmaz.
 ```
 
 ## Aylık güncelleme
-Kayıt yenilenir: son sürüm, boyut, hâlâ var mı, ne değişti (`son_kontrol` ve `boyut.tarih`). Kit için yenileme aracı HENÜZ YOK (plan adım 5); o zamana dek `boyut-hesapla.py` ve `tur-belirle.py` ile elle yenilenir.
+Aylık zincir (`python3 -u araclar/arsiv-guncelle.py --aylik`) `katalog` bölümündeki kit kaynaklarının `son_kontrol.commit` değişimini betik çalıştırmadan tarar ve raporlar. Kayıt yenileme (`boyut.tarih`, `son_kontrol`) `boyut-hesapla.py` ve `tur-belirle.py` ile yapılır.
 
 ## Projeye kurulum
-HENÜZ YOK (plan adım 4). Planlanan kurallar: kit GitHub'dan geçici klasöre alınır, incelenir, rapor verilir; boş proje klasörüne iskelet olarak kurulur; başlamış projede bütün olarak kurulmaz (çakışan her dosya listelenir, `CLAUDE.md`, `AGENTS.md`, ayar dosyalarının
-ve var olan dosyaların üzerine yazılmaz; yalnız çakışmayan ve kökten bağımsız parçalar önerilir); kitin betiği ancak kullanıcı raporu onaylarsa çalışır; genel klasöre yazan adım atlanır ve raporda yazılır; kurulan sürüm ve dosya listesi kilide yazılır.
-Bugün: kit için kurulum yapılmaz; ana oturum kullanıcıya "henüz yok" der.
+Mevcut akış:
+1. Boş proje iskeleti için ön rapor: `python3 araclar/skill-ekle.py <proje> --kit <owner/ad> --kuru`.
+2. Başlamış projede bütün olarak kurulmaz; çakışan dosyalar ve korunan `CLAUDE.md`/`AGENTS.md` raporlanır, yalnız bağımsız parçalar seçilir: `python3 araclar/skill-ekle.py <proje> --kit <owner/ad> --kit-parca <klasör> --kuru`.
+3. Kullanıcı onayından sonra `--evet` ile kurulur; kitin kurulum betiği varsa yalnızca kullanıcı açıkça onaylarsa çalıştırılır, genel klasöre yazan adımlar atlanır, kurulan dosyalar `kilit.json` içine yazılır.
 
 ## Çıkarma
 Kaynak kaydı ve `kitler.json` kaydı silinir: `python3 araclar/kaynak-cikar.py --repo owner/ad --kuru` etkiyi ve sıralı adımları (5b, 5c) verir. Kurulu projeler etkilenmez.
@@ -54,6 +55,6 @@ Kaynak kaydı ve `kitler.json` kaydı silinir: `python3 araclar/kaynak-cikar.py 
 |---|---|
 | Kit kendi kurulum betiğini çalıştırmak ister | Betik okunur, ne yaptığı `kitler.json` kaydına ve rapora yazılır; yalnız kullanıcı raporu onaylarsa çalışır |
 | Kit genel klasöre yazmak ister | Yapılmaz; `genel_klasore_yazar: true`, `kurulmayan_parcalar` ve raporda "kitin şu adımı atlandı" |
-| Kit başlamış projeyi bozabilir | Üzerine yazma yok; çakışma raporu; yalnız bağımsız parçalar (kurulum tarafı HENÜZ YOK, plan adım 4) |
+| Kit başlamış projeyi bozabilir | Üzerine yazma yok; `--kit` ve `--kit-parca --kuru` çakışma raporu verir, `CLAUDE.md`/`AGENTS.md` korunur |
 | Kitin bir skili tek başına işe yarar | Skil kökten bağımsızsa tek başına önerilebilir; değilse önerilmez (`tek_basina`) |
 | Kaynak silinir | Kayıp işareti (`rehber/03` E); yeni projede önerilmez; kurulu projeler çalışır |

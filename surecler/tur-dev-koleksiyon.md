@@ -31,7 +31,7 @@ Arşivde bu repodan dosya YOKTUR; tek istisna `arsivde_tut` listesindeki skiller
 `kutuphane_kb` fihristin disk boyutu değil, alınacak skillerin tahmini kaynak boyutudur (`boyut-hesapla.py`).
 
 ## Aylık güncelleme
-Fihrist yenilenir: `python3 araclar/fihrist-uret.py owner/ad` eklenen, silinen ve adı değişen skilleri raporlar; `inceleme` notları korunur. Dosya inmez. Aylık zincire bağlanması HENÜZ YOK (plan adım 5): o zamana dek komut elle çalıştırılır. Kayıtta `arsivde_tut` doluysa yalnızca o skiller `kaynak-cek.py` ve aylık güncelleme zinciriyle güncellenmeye devam eder (`kapsam-denetimi.py` diğer SKILL.md'leri `fihristte` sayar).
+Aylık zincir (`python3 -u araclar/arsiv-guncelle.py --aylik`) `fihrist` bölümündeki kaynakların `commit` değişimini tarar ve raporlar. Fihrist dosyasını yenilemek için: `python3 araclar/fihrist-uret.py owner/ad` (eklenen, silinen ve adı değişen skilleri raporlar; `inceleme` notları korunur, dosya inmez). Kayıtta `arsivde_tut` doluysa yalnızca o skiller `kaynak-cek.py` ve aylık güncelleme zinciriyle güncellenmeye devam eder (`kapsam-denetimi.py` diğer SKILL.md'leri `fihristte` sayar).
 
 ## Mevcut arşivli kaynağı fihriste taşıma
 Arşivde zaten bulunan bir dev koleksiyonu fihriste geçirmek için (ağ yalnız 2. adımda kullanılır; taşıma aracının kendisi ağ kullanmaz):
@@ -56,8 +56,10 @@ Arşivde zaten bulunan bir dev koleksiyonu fihriste geçirmek için (ağ yalnız
 7. Her kaynak ayrı commit olur (ana oturum).
 
 ## Projeye kurulum
-HENÜZ YOK (plan adım 4). Planlanan: seçilen skil GitHub'dan geçici klasöre alınır, inceleme yapan taraf o an inceler, sonuç rapora girer, kullanıcı onaylarsa kurulur; kurulan sürüm projenin kilidine yazılır; bir ihtiyaç için fihristten en çok üç aday gösterilir,
-arşivde aynı işi yapan incelenmiş skil varsa önce o önerilir. Bugün: fihristten bir skil istenirse kurulum yapılmaz; ana oturum kullanıcıya "henüz yok" der.
+Mevcut akış:
+1. Öneri: `python3 araclar/skill-ekle.py <proje> --rapor --oner "<ihtiyaç>"` arşivdeki incelenmiş skilleri öncelikli sunar, fihristten en çok üç aday gösterir.
+2. Kurulum ön raporu (ağsız): `python3 araclar/skill-ekle.py <proje> --fihrist-skill <owner/ad>:<skil> --kuru`.
+3. Kullanıcı onayından sonra: `python3 araclar/skill-ekle.py <proje> --fihrist-skill <owner/ad>:<skil> --evet` seçilen skili GitHub'dan geçici klasöre alır, derin incelemesini yapıp `fihrist/<owner>__<ad>.json` içindeki `inceleme` alanına yazar, projeye kurar ve sürümü `kilit.json` içine kaydeder.
 
 ## Çıkarma
 Kaynak kaydı ve fihrist dosyası silinir: `python3 araclar/kaynak-cikar.py --repo owner/ad --kuru` etkiyi ve sıralı adımları verir (fihrist dosyasını silme adımı 5b olarak listelenir). Projelerde kurulu skiller kalır ("kaynağı kütüphanede yok" notu).
@@ -66,7 +68,7 @@ Kaynak kaydı ve fihrist dosyası silinir: `python3 araclar/kaynak-cikar.py --re
 | Sorun | Önlem |
 |---|---|
 | Önceden inceleme yok, kalite bilinmiyor | Raporda "ilk kez inceleniyor"; incelenen skilin sonucu fihristteki `inceleme` alanına yazılır, aynı sürüm tekrar incelenmez |
-| Öneri kalabalığı | Bir ihtiyaç için en çok üç aday (HENÜZ YOK, plan adım 4) |
+| Öneri kalabalığı | `--rapor --oner` bir ihtiyaç için arşiv öncelikli, fihristten en çok üç aday gösterir |
 | Skil kaynaktan silindi ama projede kurulu | Projede çalışır; yeni kurulumda önerilmez; yenilemede "silinen" olarak görünür |
 | Aynı skil hem arşivde hem fihristte | Arşivdeki kayıt geçerlidir; fihristteki satır `arsivde: true` alır |
 | İnternet yok | Kurulmaz; raporda "internet gerekli" |
