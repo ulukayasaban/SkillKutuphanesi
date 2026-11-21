@@ -118,6 +118,23 @@ Not: 1+2+3 birleşebilir: veri ve süzgeç (1), Claude Code kurulumu (2), çok a
 
 **Değerlendirme:** Mevcut sistem hedefi zaten çözüyor (9 profil + kurulum aracı) ama büyüklüğü hedefin çok üstünde; maliyetin çoğu envanter ve inceleme makinesinde. Önerilen yön: kütüphane-lite + küçük bir sha'lı pazar denemesi (1 kısa oturum), sonuca göre kütüphaneyi küçültmek. Bu, adım 3'ün kapsamını da küçültür (registry 2.849 yerine kullanılanlar ve alternatifleri).
 
+## Girdi 6: pazar denemesi sonucu (2026-11-21, yalıtılmış, model çağrısı yok)
+**Sayım:** Projelerin kullandığı 26 repodan **14'ü zaten Claude Code pazarı** (`.claude-plugin/marketplace.json` var; 71 skill: knowledge-work-plugins 21, agent-skills 10, youtube-agent-skill 9, hyperframes 8, open-design 7, ...), **11'i yalnız-skill** repo (31 skill; en büyüğü sealeap-ecommerce-skills 12), 1 yerel (3 skill).
+**Deneme düzeni:** `CLAUDE_CONFIG_DIR` ile yalıtılmış yapılandırma, scratchpad'de yerel dizin pazarı ve boş test projesi; yeni GitHub repo yok, gerçek `~/.claude/settings.json` ve `known_marketplaces.json`/`installed_plugins.json` değişmedi (yalnız uygulamanın kendi `plugins/synced` klasörü kendiliğinden güncellendi), 4 gerçek projeye ve kütüphaneye dokunulmadı.
+**Sonuçlar (hepsi doğrulandı):**
+- Yerel dizin pazar olarak eklenir (`claude plugin marketplace add <klasör>`, 1 sn); `claude plugin validate` geçti.
+- 3 giriş `sha` ile sabitlenerek kuruldu (6–10 sn her biri): kayıtlı `gitCommitSha` pazardaki sha ile aynı. `claude plugin update` sabit sürümü kıpırdatmadı.
+- **Yalnız-skill repo** (xjli360/sealeap-ecommerce-skills) için `github` kaynağı + girişte `skills: ["./yol"]` tek skill'i açtı (envanter: Skills 1, Hooks 0, MCP 0); ama `github` kaynağı **tüm repoyu indirdi** (5,3 MB, 1.099 dosya). `git-subdir` seyrek indirir (76 KB).
+- **Eklenti biçimli repo** (anthropics/knowledge-work-plugins): bütün eklenti `git-subdir` ile alınınca **5 skill + 7 MCP sunucusu** (slack, notion, guru, atlassian, asana, google calendar, gmail) geldi; `path` skill klasörünün üstüne (`enterprise-search/skills`) çekilip girişte `skills: ["./search-strategy"]` yazılınca **yalnız 1 skill, 0 MCP, 0 hook** geldi: istenen ayrıntı düzeyi mümkün.
+- Kurulan `SKILL.md` dosyaları kütüphane arşivindeki kopyalarla **bayt bayt aynı** (2/2).
+- Yerleşik `claude plugin details <ad>` her eklenti için bileşen envanteri ve **tahmini token maliyeti** veriyor (örn. tek skill: sürekli ≈ 27–72 token, çağrıldığında ≈ 0,3–1,7 bin): K2 (maliyet) için hazır ölçüm kaynağı.
+**Maliyetler / açıklar (henüz çözülmedi):**
+- Yalnız Claude Code'u kapsar; Codex, Antigravity, Cursor ve Windows (Etsy-Arif) denenmedi.
+- Pazar kurulumları `kilit.json` ve `notlar/proje-kullanimi.md`'de görünmez: izlenebilirlik için kütüphanenin bunları kaydetmesi gerekir.
+- Pazar dizini bu bilgisayarda yerel; başka makinede erişmek için pazarın kütüphane deposunda (private) durması gerekir (kural: yalnız ulukayasaban/SkillKutuphanesi) ve erişim/kimlik doğrulaması denenmedi.
+- Claude'un oturumda bu skill'i gerçekten yükleyip kullandığı denenmedi (model çağrısı yapılmadı).
+- Skill kaybı: lite yalnız çalışma ağacındaki kopyaları ve aylık yeniden incelemeyi azaltır; 2.849 inceleme, Türkçe özet ve ücret/risk etiketleri katalog verisi olarak kalabilir, arşiv kopyaları git geçmişinde (221 MB) durur.
+
 ## Karar (adım 2, kullanıcı 2026-11-21): ORTADAKİ YOL
 - **Yerinde kalır:** 2.849 incelenmiş skill (`registry.json`), `kaynaklar.json`, `arsiv/`, `fihrist/`, `kitler.json`, `programlar.json`, `projeler.json`, araçlar ve 324 test, 4 projenin `kilit.json` bağları, git geçmişi, `yedekler.json`.
 - **Baştan, sade yazılır:** `CLAUDE.md`/`AGENTS.md`, `BASLA.md`, rehberler, hazır istemler, `surecler/` dosyaları, hafıza düzeni (neyin nerede tutulacağı), maliyet kaydı.
