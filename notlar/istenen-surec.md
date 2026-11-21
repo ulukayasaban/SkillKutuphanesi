@@ -23,6 +23,7 @@ Başarı: aramak gerekmez; yeni repo soru sormaz ve öneriyi bozmaz; aylık taki
 - **Skill'ler projenin içinde, genel klasörler boş** (kesin). Kopyanın kütüphanede nerede durduğu önemsiz; **projeye özgü takip şart.**
 - **Kayıpsız:** hiçbir skill, inceleme ya da sürüm kaybolmaz; eski sürüm silinmez, geri dönülür.
 - Riskli ve saldırgan güvenlik skill'i alınmaz; otomatik, soru yok (öneri).
+- **Tam ücretli skill/servis önerilmez:** kayıtta etiketli durur, sen isteyince kullanılır (o zaman para onayı sana gelir). Ücretsiz ve kısmen ücretsiz (ücretsiz katmanı olan) olanlar normal önerilir.
 - Claude Code, Codex, Antigravity ile tam uyum; diğer YZ araçlarında da çalışır.
 - Karar, inceleme ve ölçüm katmanları tam uyumlu; tek giriş; aynı bilgi tek yerde.
 - Kısa oturumlar; plan dosyası tek hafıza; her şey kayıtlı ve görünür.
@@ -49,15 +50,14 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Dondurulmuş proje → güncellemeye dokunmaz, "yeni sürüm var" der → hiçbir şey.
 - Güncelleme projeyi aksatabilir → etki raporu, geri dönüş hazır → tek tek onay; sorun çıkarsa önceki sürüme döner, kısa bildirim.
 - Kaynak repo silinir (404) → kullanılmıyorsa işaretler; kullanılıyorsa projeye dokunmaz → yalnız kullanılıyorsa uyarı.
-- Ücretli skill/servis → "ücretli" etiketler, otomatik önermez → kurulumda para onayı.
+- Tam ücretli skill/servis → etiketler, hiçbir öneriye koymaz → hiçbir şey (sen isterse para onayı).
 - Başka YZ aracı açılır → aynı proje skill'lerini görür → hiçbir şey.
 - Ağ yok ya da adım hata verir → durur, projede değişiklik yapmaz, devam noktasını kaydeder; oturum yarıda kesilirse plan dosyasından sürer → hata bildirimi.
 - Aylık maliyet raporu → token, kota, süre, disk, onay sayısı → kısa rapor.
 - Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
 
 ## Netleşecek sorular
-1. Ücretli skill: etiketle, otomatik önerme, kurulumda para onayı (öneri) uygun mu?
-2. Dondurulmuş projede aylık raporda yalnız "yeni sürüm var" mı denmeli?
-3. Kaybolan kaynak projede kullanılıyorsa: projedeki kopya kalır, uyarı gelir mi?
-4. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
-5. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
+1. Dondurulmuş projede aylık raporda yalnız "yeni sürüm var" mı denmeli?
+2. Kaybolan kaynak projede kullanılıyorsa: projedeki kopya kalır, uyarı gelir mi?
+3. Maliyet üst sınırları: yeni repo ve aylık takip için kaç token kabul edilir (sayı adım 7'de)?
+4. "Diğer YZ araçlarında çalışsın": hangi araçlar ve ne kadar?
