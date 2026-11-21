@@ -23,7 +23,7 @@ Başarı: aramak gerekmez; yeni repo soru sormaz ve öneriyi bozmaz; aylık taki
 - **Skill'ler projenin içinde, genel klasörler boş** (kesin). Kopyanın kütüphanede nerede durduğu önemsiz; **projeye özgü takip şart.**
 - **Kayıpsız:** hiçbir skill, inceleme ya da sürüm kaybolmaz; eski sürüm silinmez, geri dönülür.
 - Riskli ve saldırgan güvenlik skill'i alınmaz; otomatik, soru yok (öneri).
-- **Tam ücretli skill/servis önerilmez:** kayıtta etiketli durur, sen isteyince kullanılır (o zaman para onayı sana gelir). Ücretsiz ve kısmen ücretsiz (ücretsiz katmanı olan) olanlar normal önerilir.
+- **Tam ücretli skill/servis de önerilir** ("ücretli" etiketiyle); nasıl ilerleneceği (kurulum, kullanım) sana kalır, para onayı sana gelir.
 - Claude Code, Codex, Antigravity ile **tam uyum** (test ve garanti bunlara). Diğer YZ araçları ortak skill düzeni sayesinde çalışır; **ek çaba, ayrı test ve garanti yok.**
 - Karar, inceleme ve ölçüm katmanları tam uyumlu; tek giriş; aynı bilgi tek yerde.
 - Kısa oturumlar; plan dosyası tek hafıza; her şey kayıtlı ve görünür.
@@ -50,11 +50,11 @@ Kurulum maliyeti önemsiz; **işleyiş maliyeti hedef** (yeni repo, aylık takip
 - Dondurulmuş proje → güncellemeye dokunmaz, raporda da yer vermez → hiçbir şey.
 - Güncelleme projeyi aksatabilir → etki raporu, geri dönüş hazır → tek tek onay; sorun çıkarsa önceki sürüme döner, kısa bildirim.
 - Kaynak repo silinir (404) → kullanılmıyorsa işaretler; kullanılıyorsa projedeki kopya aynen kalır, projeye dokunmaz → kullanılıyorsa uyarı gelir.
-- Tam ücretli skill/servis → etiketler, hiçbir öneriye koymaz → hiçbir şey (sen isterse para onayı).
+- Tam ücretli skill/servis → "ücretli" etiketiyle önerir; kurulum ve kullanım kararı sana kalır → öneride etiket, kurulum istersen para onayı.
 - Başka YZ aracı açılır → aynı proje skill'lerini görür → hiçbir şey.
 - Ağ yok ya da adım hata verir → durur, projede değişiklik yapmaz, devam noktasını kaydeder; oturum yarıda kesilirse plan dosyasından sürer → hata bildirimi.
 - Aylık maliyet raporu → token, kota, süre, disk, onay sayısı → kısa rapor.
 - Program (ör. HyperFrames) yeni sürüm → yedekli güncelleme önerir (isteğe bağlı) → onay.
 
 ## Durum
-Belgedeki bütün sorular kapandı (2026-11-21): ücretli skill önerilmez, dondurulmuş proje raporda görünmez, kaybolan kaynak kullanılıyorsa uyarı gelir, maliyet hedefi önce ölçülür, diğer YZ araçlarına ek çaba yok.
+Belgedeki bütün sorular kapandı (2026-11-21): tam ücretli skill de önerilir (ilerleyişi sana kalır), dondurulmuş proje raporda görünmez, kaybolan kaynak kullanılıyorsa uyarı gelir, maliyet hedefi önce ölçülür, diğer YZ araçlarına ek çaba yok.
