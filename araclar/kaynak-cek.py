@@ -33,7 +33,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (GECICI, KAYNAKLAR, KOK, GhBulunamadi, frontmatter, json_oku, json_yaz, klon_dosyalari_al,  # noqa: E402
                    klon_temizle, medya_haric_kumesi, medya_haric_mi, repo_agaci, repo_guncel, repo_lisansi, yerel_agac,
-                   yerel_commit, ARSIVLENEN_TIPLER, YEREL_TIPLER, arsive_cekilir)
+                   yerel_commit, YEREL_TURLER, arsive_cekilir)
 
 # T7 = yerel kaynak (kullanıcının kendi skilleri, kendi/), T8 = siteden alınan skiller (site/): GitHub'a hiç sorulmaz, ağ kullanılmaz.
 YOL_ONCELIGI = [r"^skills/", r"^plugin/skills/", r"^plugins/[^/]+/skills/", r"^\.claude/skills/",
@@ -285,7 +285,7 @@ def main():
             continue
         kimlik = kayit.get("kimlik") or repo.replace("/", "__")
         try:
-            if repo not in repo_sha and kayit["tip"] in YEREL_TIPLER:  # yerel kaynak: dosya ağacı diskten, commit içerikten türetilir
+            if repo not in repo_sha and kayit.get("tur") in YEREL_TURLER:  # yerel kaynak: dosya ağacı diskten, commit içerikten türetilir
                 yerel_kok = KOK / kayit["yerel"]
                 if not yerel_kok.is_dir():
                     sys.exit(f"HATA: {repo} yerel klasörü yok: {kayit['yerel']}")
@@ -390,7 +390,8 @@ def main():
                         varyant_eksik.append(arac)
                 varyantlar[arac] = str(yerel.relative_to(GECICI)) if yerel.exists() else None
             manifest["kayitlar"].append({
-                "repo": repo, "tip": kayit["tip"], "oncelik": kayit.get("oncelik", 5), "kimlik": kimlik,
+                "repo": repo, "tur": kayit.get("tur"), "bolum": kayit.get("bolum"),
+                "oncelik": kayit.get("oncelik", 5), "kimlik": kimlik,
                 "commit": sha, "lisans": lisans, "klasor_adi": ad, "kaynak_yol": bilgi["yol"],
                 "asil_ad": bilgi.get("asil_ad"), "ust_skill": bilgi["ust"],
                 "aynalar": bilgi["aynalar"], "atlanan_dosyalar": bilgi["atlanan"],
@@ -401,7 +402,7 @@ def main():
                 "yerel": str((hedef_kok / ad).relative_to(GECICI)),
             })
         json_yaz(cikis / "manifest.json", manifest)  # her repodan sonra yaz: yarıda kesilirse bilgi kaybolmaz
-        print(f"{repo:42s} {kayit['tip']} {sha[:7]}  skill={len(secilen):4d}  dosya={len(isler):5d}  "
+        print(f"{repo:42s} {kayit.get('tur') or '-'} {sha[:7]}  skill={len(secilen):4d}  dosya={len(isler):5d}  "
               f"bilesen={len(bilesenler):3d}  hata={hatali}")
     json_yaz(cikis / "manifest.json", manifest)
     print(f"Toplam kayıt: {len(manifest['kayitlar'])} · indirme hatası: {toplam_hata}")

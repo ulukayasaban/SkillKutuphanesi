@@ -12,7 +12,7 @@ Bu dosya oturum açılışında okunan tek temel kuraldır (<= 3 KB). Büyük re
 - GitHub'da yalnız `ulukayasaban/SkillKutuphanesi`; push ve PR yalnız kullanıcı isteyince.
 - Skill yalnız `skill-ekle.py` ile kurulur (elle `cp`/`ln` yok; programa bağlı: `--program-skill`, `--dondur`; bağlar: `proje-kullanimi.py --program`); `arsiv/` elle düzenlenmez.
 - `CLAUDE.md` = `AGENTS.md` birebir (`cp AGENTS.md CLAUDE.md`).
-- Ajanlar: kaynak `ajanlar/`, ayrıntı `rehber/15-ajanlar.md`: `kutuphane-denetci`, `kutuphane-gelistirici`, `kutuphane-guncelleme`, `kutuphane-inceleme`, `kutuphane-kaynak`, `kutuphane-program`, `kutuphane-proje`.
+- Ajanlar (4 rol): ana oturum + kaynak `ajanlar/`, ayrıntı `rehber/15-ajanlar.md`: `kutuphane-denetci`, `kutuphane-inceleme`, `kutuphane-kaynak`.
 - Eski uzun kurallar: `git show v0-eski-surec-yedek:CLAUDE.md`.
 
 ## Onay Merdiveni

@@ -58,47 +58,34 @@ def git(kok, *a):
     return subprocess.run(["git", *a], cwd=kok, capture_output=True, text=True, env=e)
 
 
-# 1. ortak.gecici_tip_senkron
-t("1a gecici_tip_senkron: temel türler doğru türetilir",
-  ortak.gecici_tip_senkron({"tur": "tek-skil", "tip": "T1"}) == "T1"
-  and ortak.gecici_tip_senkron({"tur": "koleksiyon", "tip": "T1"}) == "T1"
-  and ortak.gecici_tip_senkron({"tur": "urun-skil", "tip": "T1"}) == "T2"
-  and ortak.gecici_tip_senkron({"tur": "repo-ici", "tip": "T3"}) == "T3"
-  and ortak.gecici_tip_senkron({"tur": "kendi", "tip": "T7"}) == "T7"
-  and ortak.gecici_tip_senkron({"tur": "site", "tip": "T8"}) == "T8"
-  and ortak.gecici_tip_senkron({"tur": "kit", "tip": "T1"}) == "T1")
-t("1b gecici_tip_senkron: referans alt_tur (kutuphane->T5, tasarim_teknolojisi->T6)",
-  ortak.gecici_tip_senkron({"tur": "referans", "alt_tur": "kutuphane", "tip": "T1"}) == "T5"
-  and ortak.gecici_tip_senkron({"tur": "referans", "alt_tur": "tasarim_teknolojisi", "tip": "T6"}) == "T6")
-t("1c gecici_tip_senkron: KAYIP, EMEKLI, T4 ve program korunur",
-  ortak.gecici_tip_senkron({"tur": "tek-skil", "tip": "KAYIP"}) == "KAYIP"
-  and ortak.gecici_tip_senkron({"tur": "koleksiyon", "tip": "EMEKLI"}) == "EMEKLI"
-  and ortak.gecici_tip_senkron({"tur": "dev-koleksiyon", "tip": "T4"}) == "T4"
-  and ortak.gecici_tip_senkron({"tur": "dev-koleksiyon", "tip": "T1"}) == "T1"
-  and ortak.gecici_tip_senkron({"tur": "program", "tip": "T5"}) == "T5"
-  and ortak.gecici_tip_senkron({"tur": "program", "tip": "T2"}) == "T2")
+# 1. ortak yardımcıları (durum ve yerel türler)
+t("1a ortak.kaynak_kayip_mi / emekli_mi / yerel_mi doğru çalışır",
+  ortak.kaynak_kayip_mi({"durum": "kayip"}) is True
+  and ortak.kaynak_kayip_mi({"durum": "aktif"}) is False
+  and ortak.kaynak_emekli_mi({"durum": "emekli"}) is True
+  and ortak.kaynak_yerel_mi({"tur": "kendi"}) is True
+  and ortak.kaynak_yerel_mi({"tur": "site"}) is True
+  and ortak.kaynak_yerel_mi({"tur": "tek-skil"}) is False)
 
 # 2. ortak.arsive_cekilir
 t("2a arsive_cekilir: bolum ana kaynak (arsiv True, katalog/not/bos fihrist False)",
-  ortak.arsive_cekilir({"tip": "T1", "bolum": "arsiv"}) is True
-  and ortak.arsive_cekilir({"tip": "T1", "bolum": "not"}) is False
-  and ortak.arsive_cekilir({"tip": "T1", "bolum": "katalog"}) is False
-  and ortak.arsive_cekilir({"tip": "T1", "bolum": "fihrist"}) is False
-  and ortak.arsive_cekilir({"tip": "T1", "bolum": "fihrist", "arsivde_tut": ["skills/a"]}) is True)
-t("2b arsive_cekilir: KAYIP/EMEKLI False, bolum yokken tip yedeği çalışır",
-  ortak.arsive_cekilir({"tip": "KAYIP", "bolum": "arsiv"}) is False
-  and ortak.arsive_cekilir({"tip": "EMEKLI", "bolum": "arsiv"}) is False
-  and ortak.arsive_cekilir({"tip": "T1"}) is True
-  and ortak.arsive_cekilir({"tip": "T5"}) is False)
+  ortak.arsive_cekilir({"tur": "tek-skil", "bolum": "arsiv"}) is True
+  and ortak.arsive_cekilir({"tur": "referans", "bolum": "not"}) is False
+  and ortak.arsive_cekilir({"tur": "kit", "bolum": "katalog"}) is False
+  and ortak.arsive_cekilir({"tur": "dev-koleksiyon", "bolum": "fihrist"}) is False
+  and ortak.arsive_cekilir({"tur": "dev-koleksiyon", "bolum": "fihrist", "arsivde_tut": ["skills/a"]}) is True)
+t("2b arsive_cekilir: kayip/emekli veya bolum yokken False",
+  ortak.arsive_cekilir({"durum": "kayip", "bolum": "arsiv"}) is False
+  and ortak.arsive_cekilir({"durum": "emekli", "bolum": "arsiv"}) is False
+  and ortak.arsive_cekilir({"tur": "tek-skil"}) is False)
 
-# 3. Gerçek kaynaklar.json (salt okuma) senkron kontrolü
+# 3. Gerçek kaynaklar.json (salt okuma) şema kontrolü
 kaynaklar = json.loads((KOK / "kaynaklar.json").read_text(encoding="utf-8"))["repolar"]
 eksik_tb = [k.get("repo") for k in kaynaklar if not k.get("tur") or not k.get("bolum")]
 eksik_ref = [k.get("repo") for k in kaynaklar if k.get("tur") == "referans" and k.get("alt_tur") not in ortak.REFERANS_ALT_TURLERI]
-uyumsuz_tip = [(k.get("repo"), k.get("tip"), ortak.gecici_tip_senkron(k))
-               for k in kaynaklar if k.get("tip") != ortak.gecici_tip_senkron(k)]
-t("3a gerçek kaynaklar.json: tüm kayıtlarda tur+bolum dolu, referansta alt_tur dolu, tip senkronlu",
-  not eksik_tb and not eksik_ref and not uyumsuz_tip, (eksik_tb[:3], eksik_ref[:3], uyumsuz_tip[:3]))
+tip_kalan = [k.get("repo") for k in kaynaklar if "tip" in k]
+t("3a gerçek kaynaklar.json: tüm kayıtlarda tur+bolum dolu, referansta alt_tur dolu, tip kaldırılmış",
+  not eksik_tb and not eksik_ref and not tip_kalan, (eksik_tb[:3], eksik_ref[:3], tip_kalan[:3]))
 
 # 4. dogrula.py Faz 1 eklemeleri
 t("4a dogrula alt_tur: geçerli referans sessiz, geçersiz değer ve referans dışı tür HATA",

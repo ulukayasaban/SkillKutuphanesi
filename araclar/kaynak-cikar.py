@@ -158,7 +158,7 @@ def rapor_uret(kok, hedef_turu, hedef, neden=None, github=False, bugun=None, gh=
             if canon.lower() in cikarilan:
                 c = cikarilan[canon.lower()]
                 ek = f" ({c.get('tarih', '?')}, {c.get('neden', '-')}). Geri alma: {c.get('geri_alma', '-')}" if isinstance(c, dict) else ""
-                return {"arac": "kaynak-cikar", "mod": "kuru", "hedef": {"tur": "repo", "repo": canon, "eski_adlar": [], "tip": None,
+                return {"arac": "kaynak-cikar", "mod": "kuru", "hedef": {"tur": "repo", "repo": canon, "eski_adlar": [], "kaynak_tur": None, "bolum": None,
                         "kayit_sayisi": 0, "skill_sayisi": 0, "kayip": False, "program": None},
                         "karar": "yok", "engeller": [], "dikkatler": [], "projeler": [], "proje_bilgisi": "yok", "roller": [],
                         "profiller": [], "registry": {"idler": [], "alternatif_kardesler": [], "ortusme": [], "kopya_kaynaklar": []},
@@ -188,11 +188,13 @@ def rapor_uret(kok, hedef_turu, hedef, neden=None, github=False, bugun=None, gh=
             notlar.append("bu repodaki tek skill: tüm kaynağı çıkarmak için --repo")
     ids = {s["id"] for s in hedef_skiller}
     tercih_adlar = {s.get("ad") for s in hedef_skiller if s.get("durum") == "tercih"}
-    tip = kayitlar[0].get("tip") if kayitlar else None
+    kaynak_tur = kayitlar[0].get("tur") if kayitlar else None
+    bolum = kayitlar[0].get("bolum") if kayitlar else None
     programlar = sorted({k["program"] for k in kayitlar if k.get("program")})
     eski_adlar = sorted({e for k in kayitlar for e in k.get("eski_adlar", [])})
-    hedef_bilgi = {"tur": hedef_turu, "repo": canon, "eski_adlar": eski_adlar, "tip": tip, "kayit_sayisi": len(kayitlar),
-                   "skill_sayisi": len(hedef_skiller), "kayip": any(k.get("tip") == "KAYIP" for k in kayitlar),
+    hedef_bilgi = {"tur": hedef_turu, "repo": canon, "eski_adlar": eski_adlar, "kaynak_tur": kaynak_tur, "bolum": bolum,
+                   "kayit_sayisi": len(kayitlar), "skill_sayisi": len(hedef_skiller),
+                   "kayip": any(k.get("durum") == "kayip" for k in kayitlar),
                    "program": programlar[0] if programlar else None}
     if skill_hedef:
         hedef_bilgi.update({"id": skill_hedef["id"], "ad": skill_hedef.get("ad"), "kaynak_yol": skill_hedef.get("kaynak_yol"),
@@ -303,10 +305,10 @@ def rapor_uret(kok, hedef_turu, hedef, neden=None, github=False, bugun=None, gh=
         dikkat.append("çıplak ad devri var (rapor bölüm 4)")
 
     # ---------------------------------------------------------------- 5. GitHub
-    if github and tip == "T7":
-        dikkat.append("yerel kaynak (T7, kendi/): GitHub'da yok, --github atlandı; çıkarmak kullanıcının kendi skillerini kütüphaneden düşürür, kendi/ klasörü ayrıca silinmez")
-    elif github and tip == "T8":
-        dikkat.append("yerel kaynak (T8, site/): GitHub'da yok, --github atlandı; çıkarmak siteden alınan skilleri kütüphaneden düşürür, "
+    if github and kaynak_tur == "kendi":
+        dikkat.append("yerel kaynak (kendi/): GitHub'da yok, --github atlandı; çıkarmak kullanıcının kendi skillerini kütüphaneden düşürür, kendi/ klasörü ayrıca silinmez")
+    elif github and kaynak_tur == "site":
+        dikkat.append("yerel kaynak (site/): GitHub'da yok, --github atlandı; çıkarmak siteden alınan skilleri kütüphaneden düşürür, "
                       "site/ klasörü ve site-takip.json kaydı ayrıca silinmez (kayıt kalırsa dogrula uyarır)")
     elif github:
         gh = gh or _gh_calistir
@@ -413,10 +415,10 @@ def metin_uret(r):
         return r.get("mesaj", "Zaten çıkarılmış.") + "\nKARAR: YOK (zaten çıkarılmış)"
     o = ["KAYNAK ÇIKARMA ETKİ RAPORU (yalnız okuma; hiçbir şey değişmedi)"]
     if h["tur"] == "skill":
-        o.append(f"Hedef: skill {h['id']} ({h.get('durum')}) · kaynak {h['repo']} · tip {h['tip']} · kaynak_yol '{h.get('kaynak_yol')}'")
+        o.append(f"Hedef: skill {h['id']} ({h.get('durum')}) · kaynak {h['repo']} · tür {h.get('kaynak_tur')}/{h.get('bolum')} · kaynak_yol '{h.get('kaynak_yol')}'")
     else:
         sy = r["registry"].get("sayim") or {}
-        o.append(f"Hedef: kaynak {h['repo']} · tip {h['tip']} · registry'de {h['skill_sayisi']} skill "
+        o.append(f"Hedef: kaynak {h['repo']} · tür {h.get('kaynak_tur')}/{h.get('bolum')} · registry'de {h['skill_sayisi']} skill "
                  f"({sy.get('tercih', 0)} tercih, {sy.get('alternatif', 0)} alternatif)" + (" · KAYIP kaynak" if h["kayip"] else ""))
     for n in r.get("notlar", []):
         o.append(f"Not: {n}")

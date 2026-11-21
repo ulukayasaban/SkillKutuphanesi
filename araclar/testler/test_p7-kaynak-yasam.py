@@ -97,12 +97,12 @@ def kur_kok(ad, projeli=True):
     shutil.rmtree(proj, ignore_errors=True)
     proj.mkdir(parents=True)
     yaz(kok / "kaynaklar.json", {"repolar": [
-        {"repo": "own/gsap", "tip": "T1", "oncelik": 3, "eski_adlar": ["old/gsap"]},
-        {"repo": "own/prog", "tip": "T1", "program": "prg"},
-        {"repo": "own/lost", "tip": "KAYIP"},
-        {"repo": "ref/card", "tip": "T6"},
-        {"repo": "dev/devral", "tip": "T1", "ad_devral": ["shared"]},
-        {"repo": "other/x", "tip": "T1"}, {"repo": "old/holder", "tip": "T1"}],
+        {"repo": "own/gsap", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 3, "eski_adlar": ["old/gsap"]},
+        {"repo": "own/prog", "tur": "program", "bolum": "arsiv", "program": "prg"},
+        {"repo": "own/lost", "durum": "kayip", "tur": "tek-skil", "bolum": "arsiv"},
+        {"repo": "ref/card", "tur": "referans", "bolum": "not", "alt_tur": "tasarim_teknolojisi"},
+        {"repo": "dev/devral", "tur": "koleksiyon", "bolum": "arsiv", "ad_devral": ["shared"]},
+        {"repo": "other/x", "tur": "tek-skil", "bolum": "arsiv"}, {"repo": "old/holder", "tur": "tek-skil", "bolum": "arsiv"}],
         "arsivden_cikarilan_repolar": [{"repo": "gone/repo", "tarih": "2026-10-01", "neden": "x", "geri_alma": "y"}, "str/form"]})
     sk = lambda i, repo, durum="tercih", **k: {"id": i, "ad": k.pop("ad", i), "repo": repo, "durum": durum, "kaynak_yol": k.pop("yol", ""),
                                                "commit": k.pop("commit", C40), **k}
@@ -271,7 +271,8 @@ test("15. --github: 404 kaynak kayıp; yeni ad AD DEĞİŞMİŞ; hata okunamadı
      and ghata["github"]["erisim"] == "okunamadı" and ghata["github"]["listeler"] == "okunamadı", (g404["github"], gyeni["github"], ghata["github"]))
 
 # ------------------------------------------------------------------ konu-takip
-AYAR = {"repolar": [{"repo": "lib/One", "tip": "T1", "eski_adlar": ["Old/One"]}, {"repo": "lib/Kayip", "tip": "KAYIP"}],
+AYAR = {"repolar": [{"repo": "lib/One", "tur": "tek-skil", "bolum": "arsiv", "eski_adlar": ["Old/One"]},
+                    {"repo": "lib/Kayip", "durum": "kayip", "tur": "tek-skil", "bolum": "arsiv"}],
         "arsivden_cikarilan_repolar": ["Gone/Str", {"repo": "Gone/Dict"}],
         "takip_konulari": [{"konu": "k", "kategori": "c", "min_yildiz": 10, "sorgular": ["q"], "odak": "skill"}]}
 BUGUN = date(2026, 11, 11)
@@ -427,17 +428,21 @@ test("25. trend: reddedilen/izlenen/skill=0 sayılmaz; eksik rapor dikkat (sorun
      (satir, satir2, satir3, satir4, satir5, trend_bek))
 
 # ------------------------------------------------------------------ kaynak-cek
-kume, tan = kc.atla_kumesi(" Own/A , ,old/b ,zz/x", [{"repo": "own/a", "tip": "T1"}, {"repo": "own/b", "tip": "T2"}, {"repo": "p/q", "tip": "T5"}],
+kume, tan = kc.atla_kumesi(" Own/A , ,old/b ,zz/x",
+                           [{"repo": "own/a", "tur": "tek-skil", "bolum": "arsiv"},
+                            {"repo": "own/b", "tur": "urun-skil", "bolum": "arsiv"},
+                            {"repo": "p/q", "tur": "referans", "bolum": "not", "alt_tur": "kutuphane"}],
                            cevir=lambda r: {"old/b": "own/B"}.get(r.lower(), r))
 kume0, tan0 = kc.atla_kumesi("", [], cevir=lambda r: (_ for _ in ()).throw(AssertionError("boş değerde çağrılmamalı")))
-kume_t5, tan_t5 = kc.atla_kumesi("p/q", [{"repo": "p/q", "tip": "T5"}], cevir=lambda r: r)
-test("26. atla_kumesi: virgül/boşluk/büyük harf/eski ad -> aynı küçük harfli küme; T1-T4 olmayan tanımsız; boşta cevir çağrılmaz",
+kume_t5, tan_t5 = kc.atla_kumesi("p/q", [{"repo": "p/q", "tur": "referans", "bolum": "not", "alt_tur": "kutuphane"}], cevir=lambda r: r)
+test("26. atla_kumesi: virgül/boşluk/büyük harf/eski ad -> aynı küçük harfli küme; arşivlik olmayan tanımsız; boşta cevir çağrılmaz",
      kume == {"own/a", "own/b", "zz/x"} and tan == ["zz/x"] and kume0 == set() and tan0 == [] and tan_t5 == ["p/q"], (kume, tan, tan_t5))
 
 kk = TMP / "kc"
 kk.mkdir()
-yaz(kk / "kaynaklar.json", {"repolar": [{"repo": "own/a", "tip": "T1"}, {"repo": "own/a", "tip": "T4", "dahil": ["^x/"]},
-                                         {"repo": "ref/t5", "tip": "T5"}],
+yaz(kk / "kaynaklar.json", {"repolar": [{"repo": "own/a", "tur": "tek-skil", "bolum": "arsiv"},
+                                         {"repo": "own/a", "tur": "dev-koleksiyon", "bolum": "arsiv", "dahil": ["^x/"]},
+                                         {"repo": "ref/t5", "tur": "referans", "bolum": "not", "alt_tur": "kutuphane"}],
                             "konum_haric": [], "skill_ici_haric": [], "ayna_klasorler": [], "max_dosya_mb": 5})
 cagrildi = []
 

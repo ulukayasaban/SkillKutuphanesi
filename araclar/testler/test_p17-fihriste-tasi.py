@@ -107,8 +107,8 @@ test("2c. arsive_cekilir: bolum fihrist + boş arsivde_tut [] -> False",
 test("2d. arsive_cekilir: bolum fihrist + arsivde_tut yok -> False",
      ortak.arsive_cekilir({"tip": "T1", "bolum": "fihrist"}) is False)
 test("2e. arsive_cekilir: KAYIP veya katalog + arsivde_tut -> False",
-     ortak.arsive_cekilir({"tip": "KAYIP", "bolum": "fihrist", "arsivde_tut": ["skills/a"]}) is False
-     and ortak.arsive_cekilir({"tip": "T1", "bolum": "katalog", "arsivde_tut": ["skills/a"]}) is False)
+     ortak.arsive_cekilir({"durum": "kayip", "tur": "dev-koleksiyon", "bolum": "fihrist", "arsivde_tut": ["skills/a"]}) is False
+     and ortak.arsive_cekilir({"tur": "kit", "bolum": "katalog", "arsivde_tut": ["skills/a"]}) is False)
 
 # ---------------------------------------------------------------- 3. kaynak-cek.py
 agac3 = [{"path": p, "type": "blob", "sha": f"h{i}", "size": 20} for i, p in enumerate([
@@ -485,7 +485,7 @@ try:
     yaz(kok6o / "roller" / "r1.json", {"ad": "r1", "cekirdek": [], "opsiyonel": []})
     yaz(kok6o / "notlar" / "proje-kullanimi.md", "# Proje kullanımı\n\n(Bu repoyu kullanan proje yok)\n")
     kay0 = json.loads((kok6o / "kaynaklar.json").read_text(encoding="utf-8"))
-    kay0["repolar"].append({"repo": "dev/kol", "tip": "T4", "oncelik": 9, "dahil": ["^ent/"], "kimlik": "dev-ent"})
+    kay0["repolar"].append({"repo": "dev/kol", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 9, "dahil": ["^ent/"], "kimlik": "dev-ent"})
     yaz(kok6o / "kaynaklar.json", kay0)
     git_temiz_hazirla(kok6o)
     r0, out0, _ = sessiz(ft.main, ["dev/kol", "--evet"], kok=kok6o)
@@ -725,8 +725,8 @@ test("7j. Bulgu 5: kaynak-cek bolum fihrist kaydında arsivde_tut boş [] veya y
 # 7k-7l (Bulgu 6): çok kayıtlı repoda aynı tip farklı dahil/haric kurallarıyla doğru kayda atama + uymayan yol HATA
 kay_cok = {
     "repolar": [
-        {"repo": "dev/cok", "tip": "T1", "dahil": ["^grup-a/"], "kimlik": "dev-a"},
-        {"repo": "dev/cok", "tip": "T1", "dahil": ["^grup-b/"], "haric": ["^grup-b/gizli/"], "kimlik": "dev-b"},
+        {"repo": "dev/cok", "tur": "koleksiyon", "bolum": "arsiv", "dahil": ["^grup-a/"], "kimlik": "dev-a"},
+        {"repo": "dev/cok", "tur": "koleksiyon", "bolum": "arsiv", "dahil": ["^grup-b/"], "haric": ["^grup-b/gizli/"], "kimlik": "dev-b"},
     ]
 }
 sk_cok = [

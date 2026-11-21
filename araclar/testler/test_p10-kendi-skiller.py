@@ -82,10 +82,10 @@ def yakala(f, *a, argv=None, **k):
 LIB = TMP / "lib"
 KENDI = LIB / "kendi"
 ARAC_HARIC = [r"(^|/)node_modules/", r"(^|/)\.git/", r"\.(mp4|mov|webm|mkv|avi)$", r"-rendered\.html$"]
-T7_KAYIT = {"repo": "yerel/kendi", "tip": "T7", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)",
+T7_KAYIT = {"repo": "yerel/kendi", "tur": "kendi", "bolum": "arsiv", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)",
             "dosya_haric": [r"(^|/)package-lock\.json$"], "eklendi": "2026-11-12",
             "onay": {"kim": "kullanıcı", "tarih": "2026-11-12"}, "not": "sahte yerel kaynak"}
-T1_KAYIT = {"repo": "ornek/halka", "tip": "T1", "oncelik": 3}
+T1_KAYIT = {"repo": "ornek/halka", "tur": "tek-skil", "bolum": "arsiv", "oncelik": 3}
 
 
 def kaynaklar_yaz(kayitlar):
@@ -183,7 +183,7 @@ try:
     test("yerel kaynak çekildi (çıkış 0, 1 skill)", not kod and kay and kay["klasor_adi"] == "ornek-skil" and "Toplam kayıt: 1" in cikti, cikti)
     test("yerel çekme ağ kullanmadı", AG_CAGRILARI == [], AG_CAGRILARI)
     test("yerel kaynağın sürüm kimliği 40 haneli ve lisans kayıttan", bool(kay) and re.fullmatch(r"[0-9a-f]{40}", kay["commit"])
-         and kay["lisans"] == "Kendi (özel)" and kay["tip"] == "T7", kay)
+         and kay["lisans"] == "Kendi (özel)" and kay["tur"] == "kendi", kay)
     yerel_dizin = GECICI / "cekilen" / "yerel__kendi" / "ornek-skil"
     test("SKILL.md ve betik alındı", (yerel_dizin / "SKILL.md").exists() and (yerel_dizin / "scripts" / "arac.py").exists())
     test("node_modules alınmadı", not (yerel_dizin / "scripts" / "node_modules").exists())
@@ -211,7 +211,7 @@ try:
     halka = GECICI / "cekilen" / "ornek__halka" / "halka-skil"
     yaz(halka / "SKILL.md", fm("halka-skil") + "halka acik\n")
     m = manifest()
-    m["kayitlar"].append({"repo": "ornek/halka", "tip": "T1", "oncelik": 3, "kimlik": "ornek__halka", "commit": "a" * 40, "lisans": "MIT",
+    m["kayitlar"].append({"repo": "ornek/halka", "tur": "tek-skil", "bolum": "arsiv", "oncelik": 3, "kimlik": "ornek__halka", "commit": "a" * 40, "lisans": "MIT",
                           "klasor_adi": "halka-skil", "kaynak_yol": "halka-skil", "asil_ad": None, "ust_skill": None, "aynalar": [],
                           "atlanan_dosyalar": [], "varyantlar": {}, "varyant_yollari": {}, "ad": "halka-skil", "aciklama": "halka",
                           "bagimlilik": None, "beklenen_dosya": 1, "inen_dosya": 1, "varyant_eksik": [],
@@ -221,8 +221,8 @@ try:
     kod, cikti = yerlestir()
     d = reg()
     s = t7(d, "ornek-skil")
-    test("arsiv-yerlestir: yerel skill kayda girdi (tip T7, tercih, kimlik çıplak ad)",
-         not kod and s and s["tip"] == "T7" and s["id"] == "ornek-skil" and s["durum"] == "tercih" and s["repo"] == "yerel/kendi", cikti)
+    test("arsiv-yerlestir: yerel skill kayda girdi (tercih, kimlik çıplak ad)",
+         not kod and s and s["id"] == "ornek-skil" and s["durum"] == "tercih" and s["repo"] == "yerel/kendi", cikti)
     test("kayıt dosyası arşivde, node_modules ve package-lock arşive girmedi",
          s and (LIB / s["yol"] / "SKILL.md").exists() and not list((LIB / s["yol"]).rglob("node_modules"))
          and not list((LIB / s["yol"]).rglob("package-lock.json")), cikti)
@@ -345,11 +345,11 @@ try:
     kaynaklar_yaz([T7_KAYIT, T1_KAYIT])
     h, u = dg.kayit_semalari_denetimi(LIB)
     kaynak_satirlari = [x for x in h + u if "kaynaklar.json" in x]
-    test("dogrula: T7 tipi, yerel ve lisans anahtarları şemada kabul edilir", not [x for x in kaynak_satirlari if "tip bilinmiyor" in x or "bilinmeyen anahtar" in x], kaynak_satirlari)
+    test("dogrula: yerel ve lisans anahtarları şemada kabul edilir", not [x for x in kaynak_satirlari if "kaldırılmış" in x or "bilinmeyen anahtar" in x], kaynak_satirlari)
     bozuk = dict(T7_KAYIT, tip="T9")
     kaynaklar_yaz([bozuk])
     h, u = dg.kayit_semalari_denetimi(LIB)
-    test("dogrula: bilinmeyen tip (T9) hâlâ reddedilir", any("tip bilinmiyor" in x for x in h + u), h + u)
+    test("dogrula: kaldırılmış 'tip' alanı reddedilir", any("kaldırılmış 'tip'" in x for x in h + u), h + u)
     kaynaklar_yaz([T7_KAYIT, T1_KAYIT])
 
     # ================================================================== 8. gelistirici-bilgisi T7'yi GitHub'dan sormaz

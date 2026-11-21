@@ -232,7 +232,7 @@ def bolumleri_tara(kayitlar, *, kaldigi_kaynak=None, fihrist_kok=None, programla
         bolum = k.get("bolum")
         if bolum not in ("fihrist", "katalog", "not"):
             continue
-        if k.get("tip") in ("KAYIP", "EMEKLI", "T7", "T8"):
+        if k.get("durum") in ("kayip", "emekli") or k.get("tur") in ("kendi", "site"):
             continue
         repo = k["repo"]
         anahtar = (bolum, repo.lower())
@@ -311,7 +311,7 @@ def rapor(kaldigi_kaynak=None, tum_bolumler=False):
         mevcut.setdefault(s["repo"], s["commit"])  # repodaki tüm kayıtlar kaldırılmışsa eski commit'e düş
     degisen, sorunlu, ayrinti = [], [], {}
     ayar_k = json_oku(KAYNAKLAR)
-    repolar = sorted({k["repo"] for k in ayar_k["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4") and arsive_cekilir(k)})
+    repolar = sorted({k["repo"] for k in ayar_k["repolar"] if k.get("tur") not in ("kendi", "site") and arsive_cekilir(k)})
     art_arda = 0
     durdu_art_arda = False
     bulunan_kaldi = not bool(kaldigi_kaynak)
@@ -367,7 +367,7 @@ def rapor(kaldigi_kaynak=None, tum_bolumler=False):
             print(f"    {f}")
     # Yerel kaynak (T7 kendi/, T8 site/): GitHub'a sorulmaz; kayıtlı sürüm kimliği diskteki içerikten türetilene eşit değilse değişmiştir
     for k in ayar_k["repolar"]:
-        if k["tip"] not in ("T7", "T8"):
+        if k.get("tur") not in ("kendi", "site") or k.get("durum") in ("kayip", "emekli"):
             continue
         BOLUM_TARAMA["arsiv"] += 1
         yeni = yerel_commit(yerel_agac(KOK / k["yerel"], ayar_k["skill_ici_haric"] + k.get("dosya_haric", []),

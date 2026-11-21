@@ -263,7 +263,6 @@ def hafif_kapi_degerlendir(repo, meta, agac, icerikler, kaynaklar, registry, ken
         kayit["medya_haric"] = medya_haric
     if ne_indirir:
         kayit["ne_indirir"] = ne_indirir
-    kayit["tip"] = ortak.gecici_tip_senkron(kayit)
     return {"repo": repo, "karar": "OTOMATIK_KAYIT", "kayit": kayit, "uyarilar": tk["uyarilar"]}
 
 

@@ -158,9 +158,9 @@ yaz(LIB / "site" / "README.md", "site klasörü\n")
 yaz(LIB / "kendi" / "kendi-skil" / "SKILL.md",
     "---\nname: kendi-skil\ndescription: Kullanicinin kendi test skili: ornek isler icin kullan, baska islerde kullanma.\n---\nkendi\n")
 yaz(LIB / "arsiv" / "x" / "SKILL.md", "arsiv\n")
-T7 = {"repo": "yerel/kendi", "tip": "T7", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)", "eklendi": "2026-11-12",
+T7 = {"repo": "yerel/kendi", "tur": "kendi", "bolum": "arsiv", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)", "eklendi": "2026-11-12",
       "onay": {"kim": "kullanıcı", "tarih": "2026-11-12"}}
-T8 = {"repo": "yerel/site", "tip": "T8", "oncelik": 1, "yerel": "site", "eklendi": "2026-11-15",
+T8 = {"repo": "yerel/site", "tur": "site", "bolum": "arsiv", "oncelik": 1, "yerel": "site", "eklendi": "2026-11-15",
       "onay": {"kim": "kullanıcı", "tarih": "2026-11-15"}}
 
 
@@ -317,7 +317,7 @@ try:
     test("kendi/ altındaki skile site kaydı yazılırsa HATA (yanlış yer)", any("kendi/" in x and "K-57" in x for x in h), h)
     site_yaz([kayit(kaynak="yerel/kendi")])
     h, u = st.kayit_denetle(json.loads((LIB / "site-takip.json").read_text()), LIB)
-    test("kayıt T8 olmayan kaynağı gösterirse HATA", any("T8" in x for x in h), h)
+    test("kayıt site olmayan kaynağı gösterirse HATA", any("site kaydı değil" in x for x in h), h)
     yaz(LIB / "site" / "stil" / "references" / "cam.txt", b"elle degisti\n")
     site_yaz([kayit()])
     h, u = st.kayit_denetle(json.loads((LIB / "site-takip.json").read_text()), LIB)
@@ -411,16 +411,16 @@ try:
     k1, c1 = yakala(kc.main, argv=["kaynak-cek.py", "--repo", "yerel/kendi"])
     k2, c2 = yakala(kc.main, argv=["kaynak-cek.py", "--repo", "yerel/site"])
     man = json.loads((GECICI / "cekilen" / "manifest.json").read_text(encoding="utf-8"))
-    test("kaynak-cek: yerel/site (T8) ağsız çekildi, yerel/kendi ile yan yana",
-         not k1 and not k2 and sorted((x["repo"], x["tip"], x["klasor_adi"]) for x in man["kayitlar"]) ==
-         [("yerel/kendi", "T7", "kendi-skil"), ("yerel/site", "T8", "stil")] and not AG_CAGRILARI, (c1, c2))
+    test("kaynak-cek: yerel/site ağsız çekildi, yerel/kendi ile yan yana",
+         not k1 and not k2 and sorted((x["repo"], x["tur"], x["klasor_adi"]) for x in man["kayitlar"]) ==
+         [("yerel/kendi", "kendi", "kendi-skil"), ("yerel/site", "site", "stil")] and not AG_CAGRILARI, (c1, c2))
     test("site/README.md skill sayılmadı", "site/README.md" not in json.dumps(man["denetim"]), man["denetim"])
     kod, cikti = yakala(ay.main, argv=["arsiv-yerlestir.py"])
     d = json.loads(REG.read_text(encoding="utf-8"))
     s8 = next((x for x in d["skiller"] if x["repo"] == "yerel/site"), {})
     s7 = next((x for x in d["skiller"] if x["repo"] == "yerel/kendi"), {})
-    test("arsiv-yerlestir: site skili T8, lisans ve sahip skill başına site-takip.json'dan",
-         not kod and s8.get("tip") == "T8" and s8.get("lisans") == "belirtilmemiş" and s8.get("gelistirici", {}).get("sahip") == "Ornek Yazar"
+    test("arsiv-yerlestir: site skili site-takip.json'dan sahip ve lisans alır",
+         not kod and s8.get("lisans") == "belirtilmemiş" and s8.get("gelistirici", {}).get("sahip") == "Ornek Yazar"
          and s8["gelistirici"].get("ana_sayfa") == SITE and s8["gelistirici"].get("resmi_kaynak") is False, (cikti, s8.get("gelistirici")))
     test("arsiv-yerlestir: kendi skili 'Kendi (özel)' ve 'kullanıcı' olarak kaldı (site bilgisi sızmadı)",
          s7.get("lisans") == "Kendi (özel)" and s7.get("gelistirici", {}).get("sahip") == "kullanıcı", s7.get("gelistirici"))

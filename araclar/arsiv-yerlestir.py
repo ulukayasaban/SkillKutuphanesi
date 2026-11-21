@@ -23,12 +23,19 @@ sys.path.insert(0, str(Path(__file__).parent))
 from ortak import (ACIKLAMA_SINIRI, ARSIV, GECICI, KATEGORILER, KOK, REGISTRY, boyut, frontmatter,  # noqa: E402
                    frontmatter_onar, frontmatter_teshis, global_durum, symlink_taslaklari,
                    taslak_baglantilarini_cevir, TREND, TREND_BONUS, json_oku, json_yaz, klasor_hash, skill_md_hash, trend_durumu,
-                   ARSIVLENEN_TIPLER, YEREL_KLASOR, YEREL_TIPLER, medya_haric_kumesi, medya_haric_mi, medya_haric_normal,
+                   YEREL_KLASOR, YEREL_TURLER, arsive_cekilir, medya_haric_kumesi, medya_haric_mi, medya_haric_normal,
                    site_gelistirici, site_kayitlari, yerel_gelistirici)
 
 KURALLAR = KOK / "kategori-kurallari.json"
 GELISTIRICILER = KOK / "gelistiriciler.json"
-GIZLI_TIPLER = ("T3", "T4")
+
+
+def _entegrasyon_mu(k):
+    return k.get("kimlik") == "composio-entegrasyon" or k.get("alan") == "e-entegrasyon-katalogu"
+
+
+def _gizli_mi(k):
+    return k.get("tur") == "repo-ici" or _entegrasyon_mu(k)
 
 # İnceleme sırasında elle doldurulan alanlar: yeniden yerleştirmede korunur.
 ELLE_ALANLAR = ["ozet_tr", "kullanim_alani", "kullanma", "teknoloji", "gerekli_paketler", "proje_tipleri",
@@ -65,7 +72,7 @@ AD_GECERLI = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 
 
 def kurallari_uygula(kural, kayit):
-    if kayit["tip"] == "T3":
+    if kayit.get("tur") == "repo-ici":
         return kural["repo_varsayilan"]["_T3"]
     ad, repo = kayit["ad"], kayit["repo"]
     for k in kural.get("yol_kurallari", []):  # repo içi klasöre göre (ör. knowledge-work-plugins/sales/...): ad kurallarından önce
@@ -289,7 +296,7 @@ def ucret_belirle(s, tablo, kok_arsiv=None):
         if anahtar in tablo:
             sinif, not_ = tablo[anahtar]
             return sinif, not_, "elle"
-    if s.get("tip") == "T4":
+    if s.get("alan") == "e-entegrasyon-katalogu":
         return "kismen", "Composio hesabı gerekir (ücretsiz katman var); bağlanan uygulamanın kendi planı geçerli", "toplu"
     # Yeni arşiv henüz .arsiv-yeni içinde: yol "arsiv/..." oraya çevrilir (yoksa yeni skiller hiç taranmadan ücretsiz sayılırdı)
     sm = (kok_arsiv / Path(s["yol"]).relative_to("arsiv") if kok_arsiv else KOK / s["yol"]) / "SKILL.md"
@@ -300,28 +307,28 @@ def ucret_belirle(s, tablo, kok_arsiv=None):
     return "ucretsiz", "", "otomatik"
 
 
-def gelistirici_sec(repo, tip, kaynak_yol, gelistiriciler, site, kaynak=None):
-    """Skill'in geliştirici kaydı. GitHub kaynağı: gelistiriciler.json. Yerel kaynak (T7/T8) kaydı henüz yoksa ağsız taban
-    (güven parçası başka bir yerel kaynağın GitHub'sız ölçümünden; lisans/resmî parçası düzeltilir). T8: sahip ve lisans skill
+def gelistirici_sec(repo, tur, kaynak_yol, gelistiriciler, site, kaynak=None):
+    """Skill'in geliştirici kaydı. GitHub kaynağı: gelistiriciler.json. Yerel kaynak (kendi/site) kaydı henüz yoksa ağsız taban
+    (güven parçası başka bir yerel kaynağın GitHub'sız ölçümünden; lisans/resmî parçası düzeltilir). site: sahip ve lisans skill
     başına site-takip.json'dan (site_gelistirici; ortak kayıt değişmez)."""
     gel = gelistiriciler.get(repo)
-    if gel is None and tip in YEREL_TIPLER:
-        gel = yerel_gelistirici(kaynak or {"tip": tip})
+    if gel is None and tur in YEREL_TURLER:
+        gel = yerel_gelistirici(kaynak or {"tur": tur})
         taban = next((v for r, v in sorted(gelistiriciler.items()) if r.startswith("yerel/") and v.get("guven")), None)
         if taban:
             gel = dict(site_gelistirici(taban, {"sahip": gel["sahip"], "lisans": gel["lisans"], "resmi_kaynak": gel["resmi_kaynak"]}),
                        **{a: gel[a] for a in ("sahip", "aciklama", "ana_sayfa", "son_guncelleme", "olusturulma")})
-    if tip == "T8":
+    if tur == "site":
         gel = site_gelistirici(gel, site.get(kaynak_yol))
     return gel
 
 
 def kaynak_md(k):
-    yerel = k.get("tip") in YEREL_TIPLER
-    kl = YEREL_KLASOR.get(k.get("tip"), "kendi")
+    yerel = k.get("tur") in YEREL_TURLER
+    kl = YEREL_KLASOR.get(k.get("tur"), "kendi")
     sk = k.get("_site") or {}
     kaynak = (f"- **Kaynak:** web sitesi {sk.get('site') or '?'} (sahip {sk.get('sahip') or '?'}); kütüphanede yerel kaynak `site/`, "
-              "GitHub'da yok. Site değişikliğini `araclar/site-takip.py` bildirir (kayıt `site-takip.json`)" if k.get("tip") == "T8"
+              "GitHub'da yok. Site değişikliğini `araclar/site-takip.py` bildirir (kayıt `site-takip.json`)" if k.get("tur") == "site"
               else "- **Kaynak:** yerel, kullanıcının kendi skili (kütüphane içindeki `kendi/` klasörü; GitHub'da yok)" if yerel
               else f"- **Kaynak repo:** https://github.com/{k['repo']}")
     satirlar = [
@@ -439,10 +446,11 @@ def main():
         sys.exit("DURDU: indirme manifestinde hiç kayıt yok (kaynak-cek.py hiçbir şey indirmedi). Arşive dokunulmadı.")
     # İndirme önbelleği (.gecici) kaynak listesinden SONRADAN silinen/kaldırılan repoların kayıtlarını taşıyabilir: onları diriltme
     _ayar0 = json_oku(KOK / "kaynaklar.json")
-    _aktif = {(k["repo"], k["tip"]) for k in _ayar0["repolar"]}
+    _aktif = {(k["repo"], k.get("tur"), k.get("bolum")) for k in _ayar0["repolar"]}
     _cikar = {c["repo"] for c in _ayar0.get("arsivden_cikarilan_repolar", [])}
-    manifest["kayitlar"] = [m for m in manifest["kayitlar"] if (m["repo"], m["tip"]) in _aktif and m["repo"] not in _cikar]
-    manifest["bilesenler"] = [b for b in manifest.get("bilesenler", []) if b["repo"] in {r for r, _ in _aktif} and b["repo"] not in _cikar]
+    manifest["kayitlar"] = [m for m in manifest["kayitlar"]
+                            if (m["repo"], m.get("tur"), m.get("bolum")) in _aktif and m["repo"] not in _cikar]
+    manifest["bilesenler"] = [b for b in manifest.get("bilesenler", []) if b["repo"] in {r for r, *_ in _aktif} and b["repo"] not in _cikar]
     eksik = [m for m in manifest["kayitlar"] if m["inen_dosya"] < m["beklenen_dosya"] or m.get("varyant_eksik")]
     if eksik:
         sys.exit("HATA: eksik inen skiller: " + ", ".join(f"{m['repo']}:{m['klasor_adi']}" for m in eksik))
@@ -489,7 +497,7 @@ def main():
     for k in yeni:
         onceki = eski_kaynak.get((k["repo"], k["kaynak_yol"]), {})
         kat = onceki["kategori"] if onceki.get("kategori_elle") else kurallari_uygula(kural, k)
-        if k["tip"] == "T4":
+        if _entegrasyon_mu(k):
             kat = "e-entegrasyon-katalogu/01-uygulama-entegrasyonlari"
         if kat not in gecerli_kat:
             print(f"UYARI geçersiz kategori {kat} -> {k['id']}")
@@ -510,8 +518,9 @@ def main():
         # Araçların göreceği hali (yorum arkasındaki frontmatter başa alınmış) okunur; teşhis orijinal metinden yapılır
         fm = frontmatter(frontmatter_onar(metin, k["ad"])[0])
         tum_metin = metin  # teknoloji tespiti sadece SKILL.md'den (referans dosyaları gürültü yapıyor)
-        gel = gelistirici_sec(k["repo"], k["tip"], k["kaynak_yol"], gelistiriciler, site, kaynak_kayit.get(k["repo"]))
-        if k["tip"] == "T8":
+        tur = k.get("tur") or (kaynak_kayit.get(k["repo"]) or {}).get("tur")
+        gel = gelistirici_sec(k["repo"], tur, k["kaynak_yol"], gelistiriciler, site, kaynak_kayit.get(k["repo"]))
+        if tur == "site":
             k["_site"] = site.get(k["kaynak_yol"]) or {}
             k["lisans"] = k["_site"].get("lisans") or "belirtilmemiş"
         adlar = "|".join(re.escape(x) for x in {k["klasor_adi"].split("~")[0], k["ad"]})
@@ -525,7 +534,7 @@ def main():
             "id": k["id"], "ad": k["ad"], "durum": k["durum"], "kategori": kat, "alan": kat.split("/")[0],
             "yol": goreli(hedef), "varyantlar": varyantlar,
             "repo": k["repo"], "kaynak_yol": k["kaynak_yol"], "commit": k["commit"], "lisans": k["lisans"],
-            "tip": k["tip"], "gizli": k["tip"] in GIZLI_TIPLER,
+            "gizli": _gizli_mi(k) or kat.startswith(("e-entegrasyon-katalogu/", "f-repo-ici/")),
             "arsiv_tarihi": onceki.get("arsiv_tarihi") if onceki.get("commit") == k["commit"] else bugun,
             "ust_skill": k.get("ust_skill"), "bagimlilik": skill_bagimliligi(k, bag_ozel),
             "kopya_kaynaklar": k.get("kopya_kaynaklar", []), "ayna_sayisi": len(k["aynalar"]),
@@ -578,11 +587,11 @@ def main():
     #  - KAYIP kaynaklar (silinmiş/private olmuş repo)
     #  - Kaynakta KALDIRILAN skiller (repo duruyor ama skill yeni commit'te yok; ör. emekliye ayrılan iş akışı skilleri)
     # Eski arşiv kopyası ve kayıt (elle inceleme alanlarıyla) korunur; projeler ve roller bozulmaz.
-    kayip = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] == "KAYIP"}
+    kayip = {k["repo"] for k in _ayar0["repolar"] if k.get("durum") == "kayip"}
     cekilen_repolar = {m["repo"] for m in manifest["kayitlar"]}
     yeni_kaynaklar = {(x["repo"], x["kaynak_yol"]) for x in skiller}
     kullanilan_id = {x["id"] for x in skiller}
-    arsivlenen_repolar = {k["repo"] for k in json_oku(KOK / "kaynaklar.json")["repolar"] if k["tip"] in ARSIVLENEN_TIPLER}
+    arsivlenen_repolar = {k["repo"] for k in _ayar0["repolar"] if arsive_cekilir(k)}
     korunan_indirilmeyen = set()
     # Kullanıcı kararıyla arşivden çıkarılanlar (ör. emekli eski sürümler): korunmaz, kayıp kilidine takılmaz
     _ayar = json_oku(KOK / "kaynaklar.json")
@@ -598,7 +607,7 @@ def main():
             # Bu çalıştırmada İNDİRİLMEMİŞ kaynak (ör. `kaynak-cek.py --repo X` ile tek repo eklendi):
             # kayıt ve arşiv kopyası OLDUĞU GİBİ korunur; aksi hâlde kısmi çalıştırma tüm arşivi silerdi.
             korunan_indirilmeyen.add(s["id"])
-        elif s["repo"] in cekilen_repolar and s.get("tip") in ARSIVLENEN_TIPLER:
+        elif s["repo"] in cekilen_repolar and s["repo"] in arsivlenen_repolar:
             s["kaynak_durumu"] = "kaynakta-kaldirildi"
             s.setdefault("kaldirilma_tarihi", bugun)
             s.setdefault("kaldirildigi_commit", next(m["commit"] for m in manifest["kayitlar"] if m["repo"] == s["repo"]))
@@ -748,10 +757,11 @@ def main():
             s["trend"] = t
         else:
             s.pop("trend", None)
-        g = gelistirici_sec(s["repo"], s.get("tip"), s.get("kaynak_yol"), gelistiriciler, site, kaynak_kayit.get(s["repo"]))
+        s_tur = (kaynak_kayit.get(s["repo"]) or {}).get("tur")
+        g = gelistirici_sec(s["repo"], s_tur, s.get("kaynak_yol"), gelistiriciler, site, kaynak_kayit.get(s["repo"]))
         if g:  # indirilmeyen (korunan) kayıtlar da güncel geliştirici bilgisini alsın
             s["gelistirici"] = g
-        if s.get("tip") == "T8" and site.get(s.get("kaynak_yol")):
+        if s_tur == "site" and site.get(s.get("kaynak_yol")):
             s["lisans"] = site[s["kaynak_yol"]].get("lisans") or "belirtilmemiş"
         s["degerlendirme"] = degerlendir(s, s.get("gelistirici"))  # trend ve korunan kayıtlar dahil hepsi güncel puanla
     skiller.sort(key=lambda s: (s["kategori"], s["id"]))

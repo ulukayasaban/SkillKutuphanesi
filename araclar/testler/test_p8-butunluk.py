@@ -242,28 +242,31 @@ yaz(k, {"notlar/genel-klasor-tabani.json": {"surum": 1, "yazildi": "2026-09-01"}
 t("11b 60+ günlük taban -> mesaj yok", dg.kayit_semalari_denetimi(k) == ([], []))
 
 # 12 E6 kaynaklar.json
-def kaynak(repo="a/b", tip="T1", **ek):
-    r = {"repo": repo, "tip": tip, "tur": "koleksiyon", "bolum": "arsiv"}
+def kaynak(repo="a/b", durum=None, **ek):
+    r = {"repo": repo, "tur": "koleksiyon", "bolum": "arsiv"}
+    if durum is not None:
+        r["durum"] = durum
     r.update(ek)
     return r
 
 
-k = kok_yap({"kaynaklar.json": {"repolar": [kaynak(tip="EMEKLI"), kaynak("c/d", "KAYIP", kayip_tarihi="2026-11-10", oncelik=3, **{"not": "x"})]}})
+k = kok_yap({"kaynaklar.json": {"repolar": [kaynak(durum="emekli"), kaynak("c/d", "kayip", kayip_tarihi="2026-11-10", oncelik=3, **{"not": "x"})]}})
 t("12a EMEKLI ve KAYIP(kayip_tarihi) geçerli -> mesaj yok", dg.kayit_semalari_denetimi(k) == ([], []), dg.kayit_semalari_denetimi(k))
 tum = {"repolar": [kaynak("a/b", "X9"), kaynak("c/d", oncelik="yüksek"), kaynak("e/f", bilinmeyen=1), kaynak("g/h"),
                    kaynak("G/H"), kaynak("yok-bölü"), "dize"]}
 yaz(k, {"kaynaklar.json": tum})
 h, u = dg.kayit_semalari_denetimi(k)
-t("12b bilinmeyen tip, metin öncelik, yabancı anahtar, harf farklı kopya, bölüsüz ad, kayıt dize -> hepsi UYARI, HATA yok",
-   h == [] and var(u, "tip bilinmiyor") and var(u, "oncelik") and var(u, "bilinmeyen anahtar") and var(u, "tekrarlanıyor")
+t("12b bilinmeyen durum, metin öncelik, yabancı anahtar, harf farklı kopya, bölüsüz ad, kayıt dize -> hepsi UYARI, HATA yok",
+   h == [] and var(u, "durum bilinmiyor") and var(u, "oncelik") and var(u, "bilinmeyen anahtar") and var(u, "tekrarlanıyor")
    and var(u, "sahip/ad") and var(u, "sözlük değil"), (h, u))
-yaz(k, {"kaynaklar.json": {"repolar": [kaynak("v/n", "T2", dahil=["^a/"]), kaynak("v/n", "T5", kimlik="n-kutuphane")]}})
-t("12c aynı repo farklı tip/kimlikle (T2 + T5) kopya sayılmaz", dg.kayit_semalari_denetimi(k) == ([], []))
+yaz(k, {"kaynaklar.json": {"repolar": [kaynak("v/n", tur="urun-skil", dahil=["^a/"]),
+                                       kaynak("v/n", tur="referans", bolum="not", alt_tur="kutuphane", kimlik="n-kutuphane")]}})
+t("12c aynı repo farklı tür/bölüm/kimlikle kopya sayılmaz", dg.kayit_semalari_denetimi(k) == ([], []))
 yaz(k, {"kaynaklar.json": {"repolar": "liste değil"}})
 t("12d 'repolar' liste değil -> UYARI", var(dg.kayit_semalari_denetimi(k)[1], "repolar"))
 
 # 13 K kapıları
-LEGACY = {"repolar": [kaynak("eski/bir"), kaynak("eski/iki", "T2", eski_adlar=["eski/adi"])], "arsivden_cikarilanlar": [],
+LEGACY = {"repolar": [kaynak("eski/bir"), kaynak("eski/iki", tur="urun-skil", eski_adlar=["eski/adi"])], "arsivden_cikarilanlar": [],
           "arsivden_cikarilan_repolar": []}
 ONAY = {"kim": "kullanıcı", "tarih": "2026-11-11", "commit": "a" * 40}
 
@@ -286,17 +289,17 @@ def kap(k, skiller=None):
 if GIT_VAR:
     k = git_kok()
     t("13a eski kayıtlar (değişmemiş) -> mesaj yok", kap(k) == ([], []), kap(k))
-    yeni = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", "T1")])
+    yeni = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit")])
     k = git_kok(yeni)
     h, u = kap(k)
     t("13b onaysız yeni kayıt -> tam bir G-ONAY UYARISI, HATA yok", h == [] and len(u) == 1 and "kaynak kaydında onay yok: yeni/kayit" in u[0], (h, u))
-    yeni = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", "T1", eklendi="2026-11-11", onay=ONAY)])
+    yeni = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", eklendi="2026-11-11", onay=ONAY)])
     k = git_kok(yeni)
     t("13c onaylı yeni kayıt -> mesaj yok", kap(k) == ([], []), kap(k))
-    yeni = dict(LEGACY, repolar=[kaynak("eski/bir"), kaynak("yeni/ad", "T2", eski_adlar=["eski/iki"])])
+    yeni = dict(LEGACY, repolar=[kaynak("eski/bir"), kaynak("yeni/ad", tur="urun-skil", eski_adlar=["eski/iki"])])
     k = git_kok(yeni)
     t("13d yeniden adlandırılan kayıt (eski ad eski_adlar'da) yeni sayılmaz", kap(k) == ([], []), kap(k))
-    yeni = dict(LEGACY, repolar=[kaynak("ESKI/BIR"), kaynak("eski/iki", "T2", eski_adlar=["eski/adi"])])
+    yeni = dict(LEGACY, repolar=[kaynak("ESKI/BIR"), kaynak("eski/iki", tur="urun-skil", eski_adlar=["eski/adi"])])
     k = git_kok(yeni)
     t("13e harf büyüklüğü farkı yeni kayıt sayılmaz", kap(k) == ([], []), kap(k))
     yeni = dict(LEGACY, arsivden_cikarilanlar=[{"repo": "x/y", "neden": "ok"}],
@@ -309,12 +312,12 @@ if GIT_VAR:
     yeni = dict(LEGACY, arsivden_cikarilan_repolar=[{"repo": "z/w", "neden": "n", "onay": {"kim": "k", "tarih": "2026-11-11"}}])
     t("13h geri_alma'sız çıkarılan repo kaydı -> UYARI", len(kap(git_kok(yeni))[1]) == 1)
     # sahte kapılar
-    yeni = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", "T1", eklendi="2026-11-11", onay=dict(ONAY))])
+    yeni = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", eklendi="2026-11-11", onay=dict(ONAY))])
     sk = [{"repo": "yeni/kayit", "lisans": "AGPL-3.0"}]
     k = git_kok(yeni, {"araclar/kaynak-cek.py": "def lisans_riskli(l):\n    return True\n"})
     h, u = kap(k, sk)
     t("13i riskli lisans, lisans_onay boş -> UYARI", h == [] and len(u) == 1 and "AGPL-3.0" in u[0] and "lisans_onay" in u[0], (h, u))
-    yeni2 = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", "T1", eklendi="2026-11-11", onay=dict(ONAY, lisans_onay="kullanıcı evet dedi"))])
+    yeni2 = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", eklendi="2026-11-11", onay=dict(ONAY, lisans_onay="kullanıcı evet dedi"))])
     k = git_kok(yeni2, {"araclar/kaynak-cek.py": "def lisans_riskli(l):\n    return True\n"})
     t("13j lisans_onay dolu -> mesaj yok", kap(k, sk) == ([], []), kap(k, sk))
     k = git_kok(yeni, {"araclar/yol-tara.py": "def kapi_kontrol(repo, skill_id, skiller):\n    raise RuntimeError('x')\n"})
@@ -323,7 +326,7 @@ if GIT_VAR:
     k = git_kok(yeni, {"araclar/yol-tara.py": "def kapi_kontrol(repo, skill_id, skiller):\n    return ['ilk sorun', 'ikinci'], 3, None\n"})
     h, u = kap(k)
     t("13l yol kapısı takıldı, yol_onay boş -> UYARI (ilk sorun gösterilir)", h == [] and len(u) == 1 and "yol kapısı takıldı: yeni/kayit: ilk sorun" in u[0], (h, u))
-    yeni3 = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", "T1", eklendi="2026-11-11", onay=dict(ONAY, yol_onay="kullanıcı evet"))])
+    yeni3 = dict(LEGACY, repolar=LEGACY["repolar"] + [kaynak("yeni/kayit", eklendi="2026-11-11", onay=dict(ONAY, yol_onay="kullanıcı evet"))])
     k = git_kok(yeni3, {"araclar/yol-tara.py": "def kapi_kontrol(repo, skill_id, skiller):\n    return ['ilk sorun'], 3, None\n"})
     t("13m yol_onay dolu -> mesaj yok", kap(k) == ([], []))
     k = git_kok(yeni, {"araclar/yol-tara.py": "def kapi_kontrol(repo, skill_id, skiller):\n    return [], 0, 'hedef yok'\n"})
@@ -332,9 +335,9 @@ if GIT_VAR:
     k = kok_yap({"kaynaklar.json": yeni})
     t("13o git deposu yoksa yeni-kayıt kapıları sessiz", kap(k) == ([], []), kap(k))
 # KAYIP: git gerektirmez
-k = kok_yap({"kaynaklar.json": {"repolar": [kaynak("a/b", "KAYIP")]}})
+k = kok_yap({"kaynaklar.json": {"repolar": [kaynak("a/b", "kayip")]}})
 t("13p KAYIP kaydında kayip_tarihi yok -> UYARI (git olmadan da)", len(kap(k)[1]) == 1 and "kayip_tarihi" in kap(k)[1][0])
-yaz(k, {"kaynaklar.json": {"repolar": [kaynak("a/b", "KAYIP", kayip_tarihi="2026-11-10")]}})
+yaz(k, {"kaynaklar.json": {"repolar": [kaynak("a/b", "kayip", kayip_tarihi="2026-11-10")]}})
 t("13q kayip_tarihi var -> mesaj yok", kap(k) == ([], []))
 t("13r kaynaklar.json hiç yoksa kapılar sessiz", kap(kok_yap()) == ([], []))
 
@@ -378,7 +381,7 @@ yaz(k, {"README.md": "Kütüphane araçları genel klasörlere yazmaz.\n"})
 t("19b düzeltilmiş cümle -> mesaj yok", dg.eski_anlatim_denetimi(k) == ([], []))
 
 # 20 birleştirme kuralı: her şey bozukken HATA yok
-k = kok_yap({"CLAUDE.md": ESIT, "AGENTS.md": ESIT, "kaynaklar.json": {"repolar": [kaynak("x/y", "X9", oncelik="a"), kaynak("kayip/k", "KAYIP")]},
+k = kok_yap({"CLAUDE.md": ESIT, "AGENTS.md": ESIT, "kaynaklar.json": {"repolar": [kaynak("x/y", "X9", oncelik="a"), kaynak("kayip/k", "kayip")]},
              "yedekler.json": {"surum": 9, "yedekler": [{"kimlik": "a"}, {"kimlik": "a"}]}, "projeler.json": {"tarama_kokleri": "x"},
              "yapay-zeka-araclari.json": {"araclar": [{"anahtar": "codex", "dogrulama_tarihi": "dün"}]},
              "notlar/genel-klasor-tabani.json": {"surum": 5}, "programlar.json": {"programlar": 3},

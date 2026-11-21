@@ -20,8 +20,8 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAKLAR, KOK, KUYRUK_DURUMLARI, KUYRUK_NEDENLERI,  # noqa: E402
-                   ONAY_KIMLER, REFERANS_ALT_TURLERI, REGISTRY, YEREL_TIPLER, frontmatter, frontmatter_onar,
+from ortak import (ACIKLAMA_SINIRI, ARSIV, FM_BASTA, KAYNAK_DURUMLARI, KAYNAKLAR, KOK, KUYRUK_DURUMLARI, KUYRUK_NEDENLERI,  # noqa: E402
+                   ONAY_KIMLER, REFERANS_ALT_TURLERI, REGISTRY, YEREL_TURLER, frontmatter, frontmatter_onar,
                    frontmatter_teshis, git_blob_hash, json_oku, klasor_hash, YAMALAR, medya_haric_korunur_mu,
                    medya_haric_kumesi, medya_haric_mi, medya_haric_normal, medya_haric_yol_gecerli, repo_guncel,
                    yol_istisna_denetimi)
@@ -92,8 +92,7 @@ def tetikleme_denetimi(skiller, hatalar, uyarilar):
 # site-takip.json kaydı yok, kayıt kendi/'yi gösteriyor, kayıt yapısı bozuk) (arsiv-guncelle --birlestir HATA'da master'ı geri alır).
 # Hiçbiri başka bir aracı çalıştırmaz (tek istisna: program-denetim.py --sema --ozet-json, ağsız); bayraklar kaynak
 # metninden okunur, --help'e güvenilmez (birçok araçta argparse yok, --help aracı çalıştırır).
-KAYNAK_TIPLERI = ("T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "KAYIP", "EMEKLI")  # T7 = kendi/, T8 = site/ (yerel, GitHub'sız)
-KAYNAK_ANAHTARLARI = ("repo", "tip", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "skill_bagimlilik", "kimlik",
+KAYNAK_ANAHTARLARI = ("repo", "durum", "oncelik", "not", "haric", "dahil", "dahil_degil", "bagimlilik", "skill_bagimlilik", "kimlik",
                       "dosya_haric", "medya_haric", "program", "kok_dosyalari", "eski_adlar", "ad_devral", "eklendi", "onay",
                       "kayip_tarihi", "yerel", "lisans", "tur", "bolum", "alt_tur", "tur_gerekce", "ne_ister", "ne_indirir",
                       "tek_basina", "kurulmayan_parcalar", "son_kontrol", "arac_uyumu", "boyut", "arsivde_tut")
@@ -455,12 +454,14 @@ def _e6_kaynaklar(kok, h, u):
         if not isinstance(repo, str) or not re.fullmatch(r"[\w.-]+/[\w.-]+", repo):
             u.append(f"kaynaklar.json: repo adı 'sahip/ad' biçiminde değil: {repo!r}")
             continue
-        anahtar = (repo.lower(), k.get("tip"), k.get("kimlik"))  # aynı repo farklı tip/kimlikle birkaç kez olabilir (T2 + T5 gibi)
+        anahtar = (repo.lower(), k.get("tur"), k.get("bolum"), k.get("kimlik"))  # aynı repo farklı tur/bolum/kimlikle birkaç kez olabilir
         if anahtar in gorulen:
-            u.append(f"kaynaklar.json: aynı repo, tip ve kimlikle tekrarlanıyor: {repo}")
+            u.append(f"kaynaklar.json: aynı repo, tur, bolum ve kimlikle tekrarlanıyor: {repo}")
         gorulen.add(anahtar)
-        if k.get("tip") not in KAYNAK_TIPLERI:
-            u.append(f"kaynaklar.json: {repo} tip bilinmiyor: {k.get('tip')!r}")
+        if "tip" in k:
+            h.append(f"kaynaklar.json: {repo} kaldırılmış 'tip' alanını taşıyor")
+        if "durum" in k and k.get("durum") not in KAYNAK_DURUMLARI:
+            u.append(f"kaynaklar.json: {repo} durum bilinmiyor: {k.get('durum')!r}")
         if "oncelik" in k and (isinstance(k["oncelik"], bool) or not isinstance(k["oncelik"], int)):
             u.append(f"kaynaklar.json: {repo} oncelik sayı değil")
         yabanci = [x for x in k if x not in KAYNAK_ANAHTARLARI]
@@ -523,8 +524,8 @@ def _medya_haric(kok, kayitlar, h, u):
             continue
         yollar = sorted(mh_kume)
 
-        # 1) Yerel kaynak ağacı (T7/T8): klasör yolu HATA, harf büyüklüğü farkı UYARI
-        if k.get("tip") in YEREL_TIPLER and isinstance(k.get("yerel"), str) and k["yerel"]:
+        # 1) Yerel kaynak ağacı (kendi/site): klasör yolu HATA, harf büyüklüğü farkı UYARI
+        if k.get("tur") in YEREL_TURLER and isinstance(k.get("yerel"), str) and k["yerel"]:
             yk = kok / k["yerel"]
             if yk.is_dir():
                 d_nfc, d_kucuk, k_nfc, k_kucuk = _agac_tara(yk)
@@ -868,7 +869,7 @@ def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
     except (OSError, ValueError):
         return h, u  # ayrışmama zaten E6'da HATA
     for k in simdi.get("repolar", []):
-        if isinstance(k, dict) and k.get("tip") == "KAYIP" and not k.get("kayip_tarihi"):
+        if isinstance(k, dict) and k.get("durum") == "kayip" and not k.get("kayip_tarihi"):
             u.append(f"kayıp kaynakta kayip_tarihi yok: {k.get('repo')}")
     eski = _git_head_kaynaklar(kok)
     if not isinstance(eski, dict):
@@ -896,7 +897,7 @@ def kaynak_kapilari_denetimi(kok=KOK, skiller=None):
             continue  # yeni değil (yeniden adlandırma da yeni sayılmaz)
         repo = k["repo"]
         onay = k.get("onay") if isinstance(k.get("onay"), dict) else {}
-        yerel = k.get("tip") in ("T7", "T8")  # yerel kaynakta GitHub commit'i yoktur: eklendi + onay.kim + onay.tarih yeter
+        yerel = k.get("tur") in YEREL_TURLER  # yerel kaynakta GitHub commit'i yoktur: eklendi + onay.kim + onay.tarih yeter
         if not (k.get("eklendi") and _tarih_gecerli(k.get("eklendi")) and onay.get("kim") and onay.get("tarih")
                 and (yerel or re.fullmatch(r"[0-9a-f]{40}", str(onay.get("commit", ""))))):
             u.append(f"kaynak kaydında onay yok: {repo} (rehber/03 A4)")
@@ -1160,7 +1161,7 @@ def main():
             pass
     kartlar = (KOK / "notlar" / "referans" / "tasarim-teknolojileri.md").read_text(encoding="utf-8") + \
         (KOK / "notlar" / "referans" / "kutuphaneler.md").read_text(encoding="utf-8")
-    kartsiz = [k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T5", "T6")
+    kartsiz = [k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k.get("bolum") == "not"
                and f"`{k['repo']}`" not in kartlar and f"| {k['repo']} |" not in kartlar]
     if kartsiz:
         uyarilar.append(f"prompt uyumu: referans kütüphanesinin kartı/satırı yok: {', '.join(kartsiz[:5])} "

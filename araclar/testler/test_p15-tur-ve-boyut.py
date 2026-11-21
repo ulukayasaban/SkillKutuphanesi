@@ -409,9 +409,9 @@ test("yeni alanlar KAYNAK_ANAHTARLARI'nda", all(a in dg.KAYNAK_ANAHTARLARI for a
 tmp = Path(tempfile.mkdtemp(prefix="p15test-"))
 try:
     (tmp / "kaynaklar.json").write_text(json.dumps({"repolar": [
-        {"repo": "a/iyi", "tip": "T2", "tur": "kit", "bolum": "katalog"},
-        {"repo": "a/eksik", "tip": "T2"},
-        {"repo": "a/kotu", "tip": "T2", "tur": "kit", "bolum": "arsiv"}]}), encoding="utf-8")
+        {"repo": "a/iyi", "tur": "kit", "bolum": "katalog"},
+        {"repo": "a/eksik"},
+        {"repo": "a/kotu", "tur": "kit", "bolum": "arsiv"}]}), encoding="utf-8")
     h, u = [], []
     dg._e6_kaynaklar(tmp, h, u)
     test("_e6_kaynaklar: uyumsuz tur-bolum ve eksik tür/bölüm HATA listesine düşer, tam kayıt sessiz",

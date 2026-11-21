@@ -289,7 +289,7 @@ def fihriste_inceleme_tasi(fihrist, repo_skiller, tutulan_yollar, aciklama_tr, b
 
 def _kayit_yola_uyar(kayit, yol):
     """kaynak-cek.py ile aynı kural: arşivlenen kaydın dahil / dahil_degil / haric kuralları bu kaynak_yol'u kabul ediyor mu?"""
-    if kayit.get("tip") not in ortak.ARSIVLENEN_TIPLER:
+    if not ortak.arsive_cekilir(kayit):
         return False
     kontrol = (yol + "/") if yol else "SKILL.md"
     if kayit.get("dahil") and not any(re.search(p, kontrol) for p in kayit["dahil"]):
@@ -302,16 +302,14 @@ def _kayit_yola_uyar(kayit, yol):
 
 
 def tutulan_kayit_esle(eslesen, tutulan_yollar, repo_skiller):
-    """Saf işlev: her tutulan yolu tip ve dahil/dahil_degil/haric kurallarıyla uygun kaynak kaydına eşler.
+    """Saf işlev: her tutulan yolu dahil/dahil_degil/haric kurallarıyla uygun kaynak kaydına eşler.
     Döner: (atama: {index: [yol, ...]}, uymayan: [yol, ...])."""
-    yol_tip = {s.get("kaynak_yol", ""): s.get("tip") for s in repo_skiller}
     atama = {i: [] for i in range(len(eslesen))}
     uymayan = []
     for yol in sorted(set(tutulan_yollar)):
-        tip = yol_tip.get(yol)
         adaylar = [
             i for i, k in enumerate(eslesen)
-            if (tip is None or k.get("tip") == tip) and _kayit_yola_uyar(k, yol)
+            if _kayit_yola_uyar(k, yol)
         ]
         if not adaylar:
             uymayan.append(yol)
@@ -330,7 +328,7 @@ def kaynak_kaydini_guncelle(kaynaklar, repo, tutulan_yollar, repo_skiller, siki=
     eslesen = [
         k for k in yeni.get("repolar", [])
         if isinstance(k, dict) and str(k.get("repo", "")).lower() == repo.lower()
-        and k.get("tip") in ortak.ARSIVLENEN_TIPLER
+        and ortak.arsive_cekilir(k)
     ]
     atama, uymayan = tutulan_kayit_esle(eslesen, tutulan_yollar, repo_skiller)
     if siki and uymayan:
@@ -610,12 +608,12 @@ def planla(kok, repo, arsivde_tut=None, bugun=None, ayar=None):
         if y not in repo_yollar:
             hatalar.append(f"arsivde_tut yolu {canon} arşivinde bulunamadı: {y or '.'}")
 
-    arsivlik_kayitlar = [k for k in kayitlar if k.get("tip") in ortak.ARSIVLENEN_TIPLER]
+    arsivlik_kayitlar = [k for k in kayitlar if ortak.arsive_cekilir(k)]
     _, uymayan_kayit_yollar = tutulan_kayit_esle(
         arsivlik_kayitlar, [y for y in tutulan_yollar if y in repo_yollar], repo_skiller
     )
     for y in uymayan_kayit_yollar:
-        hatalar.append(f"arsivde_tut yolu {canon} kaynak kayıtlarının tip/dahil/haric kurallarına uymuyor: {y or '.'}")
+        hatalar.append(f"arsivde_tut yolu {canon} kaynak kayıtlarının dahil/haric kurallarına uymuyor: {y or '.'}")
 
     tutulan_skiller = [s for s in repo_skiller if s.get("kaynak_yol", "") in tutulan_set]
     cikarilacak_idler = {s["id"] for s in repo_skiller if s.get("kaynak_yol", "") not in tutulan_set}

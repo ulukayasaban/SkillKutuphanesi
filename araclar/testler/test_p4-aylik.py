@@ -465,7 +465,7 @@ def t24_damga_yok_yedek_tarih():
 def t25_kayip_kaynak():
     k = kutuphane()
     damga(k, son_calisma=gun_once(3) + "T10:00:00+03:00", son_sonuc="guncellendi", atlanan_kaynaklar=["a/b", "c/d"])
-    (k / "kaynaklar.json").write_text(json.dumps({"repolar": [{"repo": "a/b", "tip": "KAYIP"}, {"repo": "c/d", "tip": "T1"}]}))
+    (k / "kaynaklar.json").write_text(json.dumps({"repolar": [{"repo": "a/b", "durum": "kayip", "tur": "tek-skil", "bolum": "arsiv"}, {"repo": "c/d", "tur": "tek-skil", "bolum": "arsiv"}]}))
     d, _ = ozet(k)
     assert not any(c.startswith("a/b ") for c in d["karar_bekleyen"])
     assert "KAYIP işaretli kaynak: a/b" in (k / "notlar" / "aylik-ozet.md").read_text(encoding="utf-8")
@@ -512,7 +512,7 @@ def cikti(f, *a, **kw):
 
 
 def kaynak_kur(k, repolar, commit="c1"):
-    (k / "kaynaklar.json").write_text(json.dumps({"repolar": [{"repo": r, "tip": "T1"} for r in repolar]}))
+    (k / "kaynaklar.json").write_text(json.dumps({"repolar": [{"repo": r, "tur": "tek-skil", "bolum": "arsiv"} for r in repolar]}))
     (k / "registry.json").write_text(json.dumps({"skiller": [{"repo": r, "commit": commit} for r in repolar]}))
     sh(k, "add", "-A")
     sh(k, "commit", "-qm", "kaynak")
@@ -854,7 +854,7 @@ def zincir_kutuphane(repolar=("a/b", "c/d")):
             (k / "araclar" / f"{ad}.py").write_text(FAKE)
     (k / "arsiv").mkdir()
     (k / "arsiv" / "x.txt").write_text("1")
-    (k / "kaynaklar.json").write_text(json.dumps({"repolar": [{"repo": r, "tip": "T1"} for r in repolar]}))
+    (k / "kaynaklar.json").write_text(json.dumps({"repolar": [{"repo": r, "tur": "tek-skil", "bolum": "arsiv"} for r in repolar]}))
     (k / "registry.json").write_text(json.dumps({"skiller": [
         {"repo": r, "commit": "c1", "kaynak_yol": "s", "id": r.replace("/", "-") + "-s", "klasor_hash": "h"} for r in repolar]}))
     sh(k, "add", "-A")
@@ -897,7 +897,7 @@ def t45_aylik_tam_zincir():
     # özet damgayı okur ve atlanan kaynağı karar olarak sorar (otomatik KAYIP işaretlenmez)
     d2, _ = ozet(k, "--hizli")
     assert any("c/d" in x and "KAYIP olarak işaretlensin mi" in x for x in d2["karar_bekleyen"])
-    assert json.loads((k / "kaynaklar.json").read_text())["repolar"][1]["tip"] == "T1"
+    assert json.loads((k / "kaynaklar.json").read_text())["repolar"][1].get("durum") != "kayip"
 
 
 def t46_aylik_bekleyen_dal():

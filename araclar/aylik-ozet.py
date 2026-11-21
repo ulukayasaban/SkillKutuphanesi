@@ -259,12 +259,12 @@ def damga_kontrol(kok, bugun):
     atlanan = [x for x in (damga.get("atlanan_kaynaklar") or []) if isinstance(x, str)]
     if atlanan:
         kaynaklar = json_oku(Path(kok) / "kaynaklar.json", {}) or {}
-        kayip = {k.get("repo") for k in kaynaklar.get("repolar", []) if isinstance(k, dict) and k.get("tip") == "KAYIP"}
+        kayip = {k.get("repo") for k in kaynaklar.get("repolar", []) if isinstance(k, dict) and k.get("durum") == "kayip"}
         for repo in atlanan:
             if repo in kayip:
                 satir.append(f"KAYIP işaretli kaynak: {repo}")
             else:
-                satir.append(f"Erişilemeyen kaynak: {repo} (kalıcıysa kaynaklar.json'da tip KAYIP yapılması senin kararın)")
+                satir.append(f"Erişilemeyen kaynak: {repo} (kalıcıysa kaynaklar.json'da durum 'kayip' yapılması senin kararın)")
                 karar.append(f"{repo} kaynakta erişilemiyor: KAYIP olarak işaretlensin mi? "
                              f"(rehber/03 E3; kaynak-cikar.py --repo {repo} --kuru)")
     ad_deg = damga.get("ad_degisen") if isinstance(damga.get("ad_degisen"), dict) else {}

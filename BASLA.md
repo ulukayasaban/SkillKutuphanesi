@@ -1,6 +1,6 @@
 # BASLA — SkillKutuphanesi İnce Açılış Özeti (<= 3 KB)
 
-Aktif faz: **Faz 2 — Akış, onay ve eksik araçlar** (`yeni-surec-faz2` dalı; `master` dalına doğrudan yazma). Çalışma klasörü: `cd ~/Documents/SkillKutuphanesi`. Ayrıntılı eski kılavuz: `rehber/00-basla-ayrintili.md`.
+Aktif faz: **Faz 3a — Kabul testleri, tip kaldırma ve 4 rol** (`yeni-surec-faz3` dalı; `master` dalına doğrudan yazma). Çalışma klasörü: `cd ~/Documents/SkillKutuphanesi`. Ayrıntılı eski kılavuz: `rehber/00-basla-ayrintili.md`.
 
 ## 1. 4 Temel Kısıt
 - **K1 Hafıza:** Tek doğruluk kaynağı; çift kayıt açma (`bekleyenler` için `konu-takip.json`).

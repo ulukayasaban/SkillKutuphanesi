@@ -333,8 +333,9 @@ def yerel_commit(agac) -> str:
 # Yerel kaynak tipleri (K-57): T7 = kullanıcının KENDİ yazdığı skiller (kendi/), T8 = GitHub'da olmayan, bir web sitesinden alınmış
 # skiller (site/<ad>/). İkisi de GitHub'a sorulmaz, KAYIP sayılmaz, kaynak-cek.py ile ağsız çekilir. T8'in her skili için site-takip.json
 # kaydı zorunludur (sahip, lisans, site adresi, izlenen dosyaların sha256'sı); site değişikliğini araclar/site-takip.py bildirir.
-YEREL_TIPLER = ("T7", "T8")
-ARSIVLENEN_TIPLER = ("T1", "T2", "T3", "T4", "T7", "T8")
+KAYNAK_DURUMLARI = ("aktif", "kayip", "emekli")
+YEREL_TURLER = ("kendi", "site")
+YEREL_KLASOR = {"kendi": "kendi", "site": "site"}
 ARSIV_DISI_BOLUMLER = ("fihrist", "katalog")  # kaynak kaydında bolum: skil dosyaları arşive ÇEKİLMEZ (notlar/plan-tur-surecleri.md bölüm 3)
 SURUM_MODLARI = ("yalniz_onayli", "takip", "dondur")
 VARSAYILAN_SURUM_MODU = "yalniz_onayli"
@@ -344,69 +345,46 @@ KUYRUK_DURUMLARI = ("bekliyor", "karar_verildi", "reddedildi")
 KUYRUK_NEDENLERI = ("tur_aday", "lisans_yok", "gri_guvenlik", "aciklama_veya_skill_yok", "ad_cakismasi", "K-58")
 
 
+def kaynak_kayip_mi(kayit: dict) -> bool:
+    return isinstance(kayit, dict) and kayit.get("durum") == "kayip"
+
+
+def kaynak_emekli_mi(kayit: dict) -> bool:
+    return isinstance(kayit, dict) and kayit.get("durum") == "emekli"
+
+
+def kaynak_yerel_mi(kayit: dict) -> bool:
+    return isinstance(kayit, dict) and kayit.get("tur") in YEREL_TURLER
+
+
 def arsive_cekilir(kayit) -> bool:
     """Kaynak kaydı arşive çekilir mi?
-    - KAYIP / EMEKLI -> False.
-    - bolum alanı varsa ana doğruluk kaynağı bolum'dür:
-      * bolum == "arsiv" -> True
-      * bolum == "fihrist" ve boş olmayan arsivde_tut listesi -> True
-      * diğer bolum değerleri ("fihrist" boş, "katalog", "not") -> False
-    - Geriye uyum (bolum olmayan eski/sahte test kayıtları): tip in ARSIVLENEN_TIPLER.
+    - durum == "kayip" veya "emekli" -> False.
+    - bolum == "arsiv" -> True
+    - bolum == "fihrist" ve boş olmayan arsivde_tut listesi -> True
+    - diğer bolum değerleri ("fihrist" boş, "katalog", "not") -> False
     """
-    if kayit.get("tip") in ("KAYIP", "EMEKLI"):
+    if not isinstance(kayit, dict):
+        return False
+    if kayit.get("durum") in ("kayip", "emekli"):
         return False
     bolum = kayit.get("bolum")
-    if bolum is not None:
-        if bolum == "arsiv":
-            return True
-        if bolum == "fihrist":
-            return isinstance(kayit.get("arsivde_tut"), list) and len(kayit["arsivde_tut"]) > 0
-        return False
-    return kayit.get("tip") in ARSIVLENEN_TIPLER
-
-
-def gecici_tip_senkron(kayit: dict):
-    """Faz 1-2 geçici tip senkronu: tur + bolum (+ alt_tur) ana kaynaktır, tip türetilir.
-    Mevcut KAYIP/EMEKLI durumları ve Faz 3'e bırakılan T4 çift kaydı korunur."""
-    mevcut = kayit.get("tip")
-    if mevcut in ("KAYIP", "EMEKLI"):
-        return mevcut
-    tur = kayit.get("tur")
-    if tur in ("tek-skil", "koleksiyon"):
-        return "T1"
-    if tur == "urun-skil":
-        return "T2"
-    if tur == "repo-ici":
-        return "T3"
-    if tur == "kendi":
-        return "T7"
-    if tur == "site":
-        return "T8"
-    if tur == "dev-koleksiyon":
-        return "T4" if mevcut == "T4" else "T1"
-    if tur == "kit":
-        return "T1"
-    if tur == "program":
-        return mevcut if mevcut in ("T1", "T2", "T5") else "T5"
-    if tur == "referans":
-        alt = kayit.get("alt_tur")
-        if alt == "tasarim_teknolojisi":
-            return "T6"
-        if alt == "kutuphane":
-            return "T5"
-        return mevcut if mevcut in ("T5", "T6") else "T5"
-    return mevcut
-YEREL_KLASOR = {"T7": "kendi", "T8": "site"}
+    if bolum == "arsiv":
+        return True
+    if bolum == "fihrist":
+        return isinstance(kayit.get("arsivde_tut"), list) and len(kayit["arsivde_tut"]) > 0
+    return False
 SITE_TAKIP = "site-takip.json"
 LISANSSIZ = ("yok", "NOASSERTION", "belirtilmemiş", "")
 
 
 def yerel_gelistirici(kayit, bugun=None):
-    """Yerel kaynak (T7/T8) için GitHub'sız geliştirici kaydı; ağ kullanılmaz. T7: sahibi kullanıcı, resmî kaynak sayılır.
-    T8: kaynak düzeyinde sahip yoktur (skill başına sahip ve lisans site-takip.json'dan gelir: site_gelistirici)."""
+    """Yerel kaynak (kendi/site) için GitHub'sız geliştirici kaydı; ağ kullanılmaz.
+    kendi: sahibi kullanıcı, resmî kaynak sayılır.
+    site: kaynak düzeyinde sahip yoktur (skill başına sahip ve lisans site-takip.json'dan gelir: site_gelistirici)."""
     from datetime import date as _d
     bugun = bugun or _d.today().isoformat()
-    site = kayit.get("tip") == "T8"
+    site = kayit.get("tur") == "site"
     return {"sahip": "site (skill başına)" if site else "kullanıcı", "sahip_tipi": "kisi", "sahip_url": "",
             "resmi_kaynak": not site, "yildiz": 0, "fork": 0, "acik_issue": 0, "son_guncelleme": bugun,
             "olusturulma": kayit.get("eklendi") or bugun,

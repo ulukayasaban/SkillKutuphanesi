@@ -19,7 +19,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import (ARSIV_DISI_BOLUMLER, KAYNAKLAR, KOK, REGISTRY, YEREL_TIPLER, GhBulunamadi, json_oku, klon_temizle,  # noqa: E402
+from ortak import (ARSIV_DISI_BOLUMLER, KAYNAKLAR, KOK, REGISTRY, YEREL_TURLER, GhBulunamadi, json_oku, klon_temizle,  # noqa: E402
                    arsive_cekilir, medya_haric_kumesi, repo_agaci, yerel_agac)
 
 ACIKLAMA = {
@@ -52,8 +52,8 @@ def main():
         rk = [k for k in kayitlar if k["repo"] == repo and arsive_cekilir(k)]
         if rk and all(k.get("bolum") == "fihrist" for k in rk):
             fihrist_tutulan[repo] = {y for k in rk for y in (k.get("arsivde_tut") or []) if isinstance(y, str)}
-    yerel_kayit = {k["repo"]: k for k in kayitlar if k["tip"] in YEREL_TIPLER}  # T7 kendi/, T8 site/: GitHub'a sorulmaz
-    kayip_repolari = sorted({k["repo"] for k in kayitlar if k["tip"] == "KAYIP"})
+    yerel_kayit = {k["repo"]: k for k in kayitlar if k.get("tur") in YEREL_TURLER and k.get("durum") != "kayip"}  # kendi/, site/: GitHub'a sorulmaz
+    kayip_repolari = sorted({k["repo"] for k in kayitlar if k.get("durum") == "kayip"})
     # bolum fihrist/katalog (dev koleksiyon, kit): skil dosyaları BİLEREK arşiv dışıdır; içlerindeki SKILL.md sorun sayılmaz (fihrist/ ve kitler.json tutar)
     arsiv_disi_repolari = sorted({k["repo"] for k in kayitlar if k.get("bolum") in ARSIV_DISI_BOLUMLER} - set(arsiv_repolari) - set(kayip_repolari))
     referans_repolari = sorted({k["repo"] for k in kayitlar} - set(arsiv_repolari) - set(kayip_repolari) - set(arsiv_disi_repolari))

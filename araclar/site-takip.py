@@ -61,7 +61,7 @@ def kayit_denetle(veri, kok=KOK, kaynaklar=None):
             kaynaklar = json.loads((kok / "kaynaklar.json").read_text(encoding="utf-8"))
         except (OSError, ValueError):
             kaynaklar = {}
-    site_kaynak = [k for k in (kaynaklar.get("repolar") or []) if isinstance(k, dict) and k.get("tip") == "T8"]
+    site_kaynak = [k for k in (kaynaklar.get("repolar") or []) if isinstance(k, dict) and k.get("tur") == "site"]
     site_kok = {k.get("yerel") or "site" for k in site_kaynak} or {"site"}
     diskte = sorted({p.parent.name: p for d in site_kok for p in (kok / d).glob("*/SKILL.md")})
     if veri is None:
@@ -93,7 +93,7 @@ def kayit_denetle(veri, kok=KOK, kaynaklar=None):
         elif yerel and not any(yerel == f"{d}/{ad}" for d in site_kok):
             h.append(f"{etiket}: 'yerel' {yerel!r} olmalı: site/{ad}")
         if s.get("kaynak") and s["kaynak"] not in {k.get("repo") for k in site_kaynak}:
-            h.append(f"{etiket}: kaynak {s['kaynak']!r} kaynaklar.json'da T8 (site) kaydı değil")
+            h.append(f"{etiket}: kaynak {s['kaynak']!r} kaynaklar.json'da site kaydı değil")
         if s.get("site") and not str(s["site"]).startswith("https://"):
             h.append(f"{etiket}: site https:// ile başlamalı")
         if "resmi_kaynak" in s and not isinstance(s["resmi_kaynak"], bool):

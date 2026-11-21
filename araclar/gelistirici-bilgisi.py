@@ -22,7 +22,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ortak import KAYNAKLAR, KOK, YEREL_TIPLER, api_kapali, gh_api, json_oku, json_yaz  # noqa: E402
+from ortak import KAYNAKLAR, KOK, YEREL_TURLER, api_kapali, gh_api, json_oku, json_yaz  # noqa: E402
 from ortak import yerel_gelistirici as _yerel_gelistirici  # noqa: E402
 
 # Teknolojinin kendi üreticisi olan kurumlar (resmî kaynak)
@@ -129,7 +129,7 @@ def yerel_gelistirici(kayit):
 
 
 def main():
-    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] not in YEREL_TIPLER})  # T7/T8 yerel: GitHub'da yok
+    repolar = sorted({k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k.get("tur") not in YEREL_TURLER})  # kendi/site yerel: GitHub'da yok
     onceki = json_oku(KOK / "gelistiriciler.json", {"repolar": {}})["repolar"]
     secili = [a for a in sys.argv[1:] if "/" in a]  # --repo owner/ad …: sadece bunlar yenilenir, diğerleri önceki değerden
     sonuc = {r: onceki[r] for r in repolar if secili and r not in secili and r in onceki}
@@ -175,10 +175,12 @@ def main():
                 sonuc[repo][alan] = eski.get(alan) if sonuc[repo].get(alan) == "?" or eski.get(alan) is not None else None
         print(f"{repo:42s} ★{d['stargazers_count']:>7}  {sonuc[repo]['sahip_tipi']:5s}  {sonuc[repo]['son_guncelleme']}")
     for k in json_oku(KAYNAKLAR)["repolar"]:
-        if k["tip"] in YEREL_TIPLER:
+        if k.get("tur") in YEREL_TURLER:
             sonuc[k["repo"]] = yerel_gelistirici(k)
-    havuz = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T1", "T2", "T3", "T4")}
-    referans = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T5", "T6")}
+    kayitlar = json_oku(KAYNAKLAR)["repolar"]
+    havuz = {k["repo"] for k in kayitlar
+             if k.get("bolum") != "not" and k.get("tur") not in YEREL_TURLER and k.get("durum") not in ("kayip", "emekli")}
+    referans = {k["repo"] for k in kayitlar if k.get("bolum") == "not"}
     guven_hesapla(sonuc, havuz, referans)
     print("\nGüven sıralaması (ilk 15):")
     for r in sorted((r for r in sonuc if sonuc[r]["guven"]["sira"]), key=lambda r: sonuc[r]["guven"]["sira"])[:15]:

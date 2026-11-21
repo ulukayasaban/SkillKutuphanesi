@@ -192,7 +192,7 @@ try:
     SITE = LIB / "site"
     REPO = "ornek/medya-depo"
     KAYIT = {
-        "repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2,
+        "repo": REPO, "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2,
         "medya_haric": {
             "skills/foo/docs/a.gif": "belge-gorseli",
             "skills/foo/assets/unused.bin": "kullanilmiyor",
@@ -201,11 +201,11 @@ try:
         },
     }
     T7_KAYIT = {
-        "repo": "yerel/kendi", "tip": "T7", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)",
+        "repo": "yerel/kendi", "tur": "kendi", "bolum": "arsiv", "oncelik": 1, "yerel": "kendi", "lisans": "Kendi (özel)",
         "medya_haric": ["kendi-skil/docs/demo.gif"],
     }
     T8_KAYIT = {
-        "repo": "yerel/site", "tip": "T8", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 1, "yerel": "site",
+        "repo": "yerel/site", "tur": "site", "bolum": "arsiv", "oncelik": 1, "yerel": "site",
         "medya_haric": ["site-skil/docs/site-demo.gif"],
     }
 
@@ -283,7 +283,7 @@ try:
         m["kayitlar"] = [x for x in m["kayitlar"] if x["repo"] != REPO]
         m["kayitlar"].extend([
             {
-                "repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
+                "repo": REPO, "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
                 "klasor_adi": "foo", "kaynak_yol": "skills/foo", "asil_ad": None, "ust_skill": None, "aynalar": [],
                 "atlanan_dosyalar": ["docs/a.gif"],
                 "varyantlar": {"claude": "cekilen/ornek__medya-depo/_varyant/foo/claude"},
@@ -292,7 +292,7 @@ try:
                 "yerel": "cekilen/ornek__medya-depo/foo",
             },
             {
-                "repo": REPO, "tip": "T1", "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
+                "repo": REPO, "tur": "koleksiyon", "bolum": "arsiv", "oncelik": 2, "kimlik": "ornek__medya-depo", "commit": commit_sha, "lisans": "MIT",
                 "klasor_adi": "bar", "kaynak_yol": "skills/bar", "asil_ad": None, "ust_skill": None, "aynalar": [],
                 "atlanan_dosyalar": [], "varyantlar": {}, "varyant_yollari": {},
                 "ad": "bar", "aciklama": "bar", "bagimlilik": None, "beklenen_dosya": 2, "inen_dosya": 2, "varyant_eksik": [],
@@ -444,7 +444,7 @@ try:
 
     # Bulgu 4: SKILL.md ve KAYNAK.md girdisi -> HATA
     for yasak in ("skills/foo/SKILL.md", "skills/foo/skill.md", "skills/foo/KAYNAK.md", "KAYNAK.md"):
-        hatalar = dg.kaynak_tur_hatalari({"repo": REPO, "tip": "T1", "medya_haric": [yasak]})
+        hatalar = dg.kaynak_tur_hatalari({"repo": REPO, "tur": "tek-skil", "bolum": "arsiv", "medya_haric": [yasak]})
         test(f"4e. dogrula (bulgu 4): {yasak!r} girdisi HATA verir",
              any("SKILL.md veya KAYNAK.md dışlanamaz" in x for x in hatalar), hatalar)
 
@@ -472,13 +472,13 @@ try:
 
     # Geçersiz yol geçişi, mutlak yol, ters bölü, joker -> HATA
     for kotu_yol in ("../kacis.gif", "skills/foo/../../kacis.gif", "/mutlak/yol.gif", "skills\\ters.gif", "skills/foo/*.gif", ""):
-        hatalar = dg.kaynak_tur_hatalari({"repo": REPO, "tip": "T1", "medya_haric": [kotu_yol]})
+        hatalar = dg.kaynak_tur_hatalari({"repo": REPO, "tur": "tek-skil", "bolum": "arsiv", "medya_haric": [kotu_yol]})
         test(f"4h. dogrula: geçersiz yol ({kotu_yol!r}) reddedilir (HATA)",
              any("medya_haric geçersiz yol" in x for x in hatalar), hatalar)
 
     # Bozuk tip -> HATA
     for kotu_deger in ("skills/foo/a.gif", 123, [123], {"skills/foo/a.gif": 123}):
-        hatalar = dg.kaynak_tur_hatalari({"repo": REPO, "tip": "T1", "medya_haric": kotu_deger})
+        hatalar = dg.kaynak_tur_hatalari({"repo": REPO, "tur": "tek-skil", "bolum": "arsiv", "medya_haric": kotu_deger})
         test(f"4i. dogrula: bozuk medya_haric şeması ({type(kotu_deger).__name__}) HATA verir",
              any("medya_haric" in x for x in hatalar), hatalar)
 finally:

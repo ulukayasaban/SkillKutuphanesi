@@ -149,7 +149,7 @@ kay_son = json.loads((k_temiz / "kaynaklar.json").read_text(encoding="utf-8"))["
 kt_son = json.loads((k_temiz / "konu-takip.json").read_text(encoding="utf-8"))
 t("4b uygula=True: masum savunma ve medya-skil kim='kural' ile kaydedildi, medya dışlandı",
   len(kay_son) == 2
-  and all(x["onay"]["kim"] == "kural" and x["tip"] == "T1" and x["bolum"] == "arsiv" for x in kay_son)
+  and all(x["onay"]["kim"] == "kural" and x["tur"] == "tek-skil" and x["bolum"] == "arsiv" for x in kay_son)
   and "demo.mp4" in (kay_son[1].get("medya_haric") or {}), kay_son)
 t("4c K-58 otomatik ret degerlendirilen'e yazıldı, zayıf 'payload' ise gri_guvenlik kuyruğunda",
   kt_son["degerlendirilen"]["x/k58"]["karar"] == "reddedildi"

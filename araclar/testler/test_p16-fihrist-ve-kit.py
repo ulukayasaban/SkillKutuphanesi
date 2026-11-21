@@ -47,12 +47,12 @@ def sessiz(f, *a, **k):
 
 
 # ---------------------------------------------------------------- ortak.arsive_cekilir
-test("arsive_cekilir: T1 bolum yok -> evet", ortak.arsive_cekilir({"tip": "T1"}) is True)
-test("arsive_cekilir: T1 bolum arsiv -> evet", ortak.arsive_cekilir({"tip": "T1", "bolum": "arsiv"}) is True)
-test("arsive_cekilir: T1 bolum fihrist -> hayır", ortak.arsive_cekilir({"tip": "T1", "bolum": "fihrist"}) is False)
-test("arsive_cekilir: T2 bolum katalog -> hayır", ortak.arsive_cekilir({"tip": "T2", "bolum": "katalog"}) is False)
-test("arsive_cekilir: T5 (referans) -> hayır", ortak.arsive_cekilir({"tip": "T5"}) is False)
-test("arsive_cekilir: T7 yerel -> evet", ortak.arsive_cekilir({"tip": "T7"}) is True)
+test("arsive_cekilir: bolum yok -> hayır", ortak.arsive_cekilir({"tur": "tek-skil"}) is False)
+test("arsive_cekilir: tek-skil bolum arsiv -> evet", ortak.arsive_cekilir({"tur": "tek-skil", "bolum": "arsiv"}) is True)
+test("arsive_cekilir: dev-koleksiyon bolum fihrist -> hayır", ortak.arsive_cekilir({"tur": "dev-koleksiyon", "bolum": "fihrist"}) is False)
+test("arsive_cekilir: kit bolum katalog -> hayır", ortak.arsive_cekilir({"tur": "kit", "bolum": "katalog"}) is False)
+test("arsive_cekilir: referans (not) -> hayır", ortak.arsive_cekilir({"tur": "referans", "bolum": "not"}) is False)
+test("arsive_cekilir: kendi yerel (arsiv) -> evet", ortak.arsive_cekilir({"tur": "kendi", "bolum": "arsiv"}) is True)
 
 # ---------------------------------------------------------------- fihrist saf işlevleri
 test("aciklama_kisalt: boşluk tek aralık", fu.aciklama_kisalt("  a \n  b\t c ") == "a b c")
@@ -233,8 +233,8 @@ def e8(kok):
     return h, u
 
 
-FK = {"repo": "o/r", "tip": "T1", "tur": "dev-koleksiyon", "bolum": "fihrist"}
-KK = {"repo": "o/kit", "tip": "T1", "tur": "kit", "bolum": "katalog"}
+FK = {"repo": "o/r", "tur": "dev-koleksiyon", "bolum": "fihrist"}
+KK = {"repo": "o/kit", "tur": "kit", "bolum": "katalog"}
 t = kok_kur([FK])
 try:
     h, u = e8(t)
@@ -382,7 +382,7 @@ tmp = Path(tempfile.mkdtemp(prefix="p16ag-"))
 try:
     (tmp / "kaynaklar.json").write_text(json.dumps({"skill_ici_haric": [], "repolar": [
         {"repo": "dev/koleksiyon", "tip": "T1", "bolum": "fihrist"}, {"repo": "kit/iskelet", "tip": "T2", "bolum": "katalog"},
-        {"repo": "normal/repo", "tip": "T1"}]}), encoding="utf-8")
+        {"repo": "normal/repo", "tur": "tek-skil", "bolum": "arsiv"}]}), encoding="utf-8")
     (tmp / "registry.json").write_text(json.dumps({"skiller": [{"repo": "normal/repo", "commit": "5" * 40, "id": "n"}]}), encoding="utf-8")
     sorgulanan = []
 
@@ -421,10 +421,10 @@ try:
          r == 0 and "SORUN" not in cikti and not agac_cagri, (r, cikti, agac_cagri))
     test("kapsam-denetimi: rapor 'Arşive çekilmeyen kaynaklar' bölümünde ikisini listeler",
          "Arşive çekilmeyen kaynaklar" in rapor and "dev/koleksiyon" in rapor and "kit/iskelet" in rapor, rapor)
-    kayitlar["repolar"][0].pop("bolum")
+    kayitlar["repolar"][0]["bolum"] = "arsiv"
     (tmp / "kaynaklar.json").write_text(json.dumps(kayitlar), encoding="utf-8")
     r, cikti = sessiz(kd.main)
-    test("kapsam-denetimi: bolum olmayan T1 kaynağı hâlâ arşivli sayılır ('denetim kaydı yok' sorunu)", r == 1 and "denetim kaydı yok" in cikti, (r, cikti))
+    test("kapsam-denetimi: bolum arsiv kaynağı arşivli sayılır ('denetim kaydı yok' sorunu)", r == 1 and "denetim kaydı yok" in cikti, (r, cikti))
 finally:
     shutil.rmtree(tmp, ignore_errors=True)
 

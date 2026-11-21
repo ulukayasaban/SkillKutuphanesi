@@ -174,9 +174,10 @@ if (KOK / "ajanlar").is_dir():
     h, _ = au.ajan_denetimi(KOK)
     t("9a gerçek kütüphane: ajan kaynağı ve üretilen dosyalar tutarlı", h == [], h)
     adlar = [ad for ad, *_ in au.kaynaklar(KOK)]
-    # ajan sayısı sabit değil (rehber/15 bölüm 7 ile eklenip çıkarılabilir); temel ikisi ve ad biçimi şart
-    t("9b gerçek kütüphane: ajan adları biçime uyuyor, denetçi ve geliştirici var",
-      adlar and all(au.AD_DESENI.fullmatch(a) for a in adlar) and {"kutuphane-denetci", "kutuphane-gelistirici"} <= set(adlar), adlar)
+    # 4 rol (ana oturum + 3 alt-ajan): kutuphane-denetci, kutuphane-inceleme, kutuphane-kaynak
+    t("9b gerçek kütüphane: ajan adları biçime uyuyor ve 3 alt-ajan rolü mevcut",
+      adlar and all(au.AD_DESENI.fullmatch(a) for a in adlar)
+      and {"kutuphane-denetci", "kutuphane-inceleme", "kutuphane-kaynak"} == set(adlar), adlar)
     den = dict((ad, alan) for ad, alan, *_ in au.kaynaklar(KOK))["kutuphane-denetci"]
     t("9c denetçide dosya düzenleme aracı yok (Edit, Write)", "tools" in den and "Edit" not in den["tools"] and "Write" not in den["tools"], den)
     rehber = (KOK / "rehber" / "15-ajanlar.md").read_text(encoding="utf-8") if (KOK / "rehber" / "15-ajanlar.md").is_file() else ""

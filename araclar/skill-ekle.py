@@ -2001,7 +2001,7 @@ def fihrist_istek_coz(a, skiller):
             hatalar.append(("fihrist-skill-bicim", f"`{x}`: REPO:AD ya da REPO:YOL biçiminde yaz, örn. github/awesome-copilot:agent-governance"))
             continue
         kay = kay_map.get(repo_guncel(repo).lower())
-        if kay and kay.get("tip") == "KAYIP":
+        if kay and kay.get("durum") == "kayip":
             hatalar.append(("fihrist-kaynak-kayip", f"{repo}: kaynak KAYIP olarak işaretli; yeni kurulumda kullanılmaz"))
             continue
         fh = fihrist_oku(repo)
@@ -2137,7 +2137,7 @@ def kit_istek_coz(a):
             continue
         gorulen.add(r_low)
         kay = kay_map.get(r_low)
-        if kay and kay.get("tip") == "KAYIP":
+        if kay and kay.get("durum") == "kayip":
             hatalar.append(("kit-kaynak-kayip", f"{k['repo']}: kit kaynağı KAYIP olarak işaretli; yeni projede kurulmaz"))
             continue
         liste.append({"kit": k, "kaynak": kay, "repo": k["repo"], "ad": k["ad"]})
@@ -2496,7 +2496,7 @@ def fihrist_oner(sorgu_metni, teknolojiler, arsiv_adlari=(), sinir=FIHRIST_ONERI
     for fh in fihrist_tumu():
         repo = fh["repo"]
         kay = kay_map.get(repo.lower())
-        if kay and kay.get("tip") == "KAYIP":
+        if kay and kay.get("durum") == "kayip":
             continue
         for g in fh["skiller"]:
             if g.get("arsivde") or (g.get("ad") or "").lower() in arsiv_cf:
@@ -2523,7 +2523,7 @@ def kit_oner(sorgu_metni, teknolojiler, sinir=3):
     adaylar = []
     for k in kitler_listesi():
         kay = kay_map.get(k["repo"].lower())
-        if kay and kay.get("tip") == "KAYIP":
+        if kay and kay.get("durum") == "kayip":
             continue
         metin = " ".join([k.get("ad", ""), k.get("repo", ""), k.get("ne_yapar", ""), " ".join(k.get("skiller", [])),
                           " ".join(k.get("yapi_ozeti", []))]).lower()
@@ -2556,13 +2556,13 @@ def program_oner(sorgu_metni, teknolojiler, sinir=4):
 
 
 def referans_oner(sorgu_metni, teknolojiler, sinir=5):
-    """kaynaklar.json içindeki T5/T6 referans kaynaklarından ihtiyaca uyanlar."""
+    """kaynaklar.json içindeki not (referans) kaynaklarından ihtiyaca uyanlar."""
     sorgu = kelimeler(sorgu_metni)
     if not sorgu and not teknolojiler:
         return []
     adaylar = []
     for k in kaynaklar_haritasi().values():
-        if k.get("tip") not in ("T5", "T6"):
+        if k.get("bolum") != "not":
             continue
         metin = " ".join([k.get("repo", ""), k.get("not", ""), k.get("tur_gerekce", ""), k.get("ne_ister", "")]).lower()
         esl = [w for w in sorgu if re.search(r"(?<![a-z0-9])" + re.escape(w) + r"(?![a-z0-9])", metin)]
@@ -2635,7 +2635,7 @@ def proje_raporu_uret(proje, kilit, skiller, rapor: Rapor, kur_listesi=None, adl
         if rf_ad:
             out.append("- Referans araç/kütüphaneler (skili yok, bilinmeye değer):")
             for _, rk, e in rf_ad:
-                out.append(f"  - `{rk['repo']}` ({rk['tip']}, eşleşen: {', '.join(e[:4])})")
+                out.append(f"  - `{rk['repo']}` ({rk.get('alt_tur') or rk.get('tur') or 'referans'}, eşleşen: {', '.join(e[:4])})")
     if len(out) <= 5 or out[-1] == "\n## 1. Öneriler":
         out.append("- Ek öneri yok.")
 
@@ -4177,7 +4177,7 @@ def durum(proje, skiller):
         kay = kaynak_kaydi(kr)
         kt = kit_bul(kr)
         sc = ((kay or {}).get("son_kontrol") or {}).get("commit")
-        if not kt or (kay and kay.get("tip") == "KAYIP"):
+        if not kt or (kay and kay.get("durum") == "kayip"):
             isaret = "KAYNAK KÜTÜPHANEDE YOK / KAYIP (kit; projede çalışmaya devam eder)"
         elif sc and sc != kg.get("commit"):
             isaret = f"KİTTE DEĞİŞİKLİK VAR ({kg['commit'][:7]} -> {sc[:7]}; otomatik uygulanmaz)"
@@ -4262,7 +4262,7 @@ def oner(a, proje, skiller):
     if rf_ad:
         print("\n## Referans araç/kütüphaneler (skili yok)")
         for _, rk, e in rf_ad:
-            print(f"  {rk['repo']:40s} ({rk['tip']}) · eşleşen: {', '.join(e[:4])}")
+            print(f"  {rk['repo']:40s} ({rk.get('alt_tur') or rk.get('tur') or 'referans'}) · eşleşen: {', '.join(e[:4])}")
     if getattr(a, "rapor", False):
         kilit = kilit_oku(proje) if proje else {"surum": KILIT_SURUM, "roller": [], "skiller": {}, "arac_secimi": "varsayilan"}
         if a.arac:

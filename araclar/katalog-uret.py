@@ -80,9 +80,6 @@ def ref_kartlari():
 def guven_raporu(skiller):
     """notlar/guven-siralamasi.md: başka bir projenin agent'ının DOĞRUDAN kullanacağı güven + referans rehberi."""
     gel = json_oku(KOK / "gelistiriciler.json", {"repolar": {}})["repolar"]
-    tip = {}
-    for k in json_oku(KAYNAKLAR)["repolar"]:
-        tip.setdefault(k["repo"], k["tip"])
     kat_ad = {f"{a}/{c}": d for a, v in json_oku(KATEGORILER)["alanlar"].items() for c, d in v["kategoriler"].items()}
     gor = [s for s in skiller if not s.get("gizli") and s["durum"] == "tercih"]
     by_ad = {s["ad"]: s for s in gor}
@@ -214,7 +211,7 @@ def main():
     ent = ["# Entegrasyon Kataloğu (Composio)", "",
            "> Varsayılan listede gizli. Rube MCP (rube.app) bağlantısı ve uygulama başına Composio hesabı bağlantısı gerekir (COMPOSIO_API_KEY değil). Arama: "
            "`skill-ekle.py --listele --gizli --ara drive`. İnceleme raporu: `notlar/referans/composio-inceleme.md`", ""]
-    t4 = [s for s in gizli if s["tip"] == "T4"]
+    t4 = [s for s in gizli if s.get("alan") == "e-entegrasyon-katalogu"]
     gruplar = defaultdict(list)
     for s in t4:
         gruplar[s.get("uygulama_grubu") or "diger"].append(s)
@@ -227,7 +224,7 @@ def main():
     (KOK / "KATALOG-entegrasyon.md").write_text("\n".join(ent) + "\n", encoding="utf-8")
 
     reg = json_oku(REGISTRY)
-    repo_ici = [s for s in gizli if s["tip"] == "T3"]
+    repo_ici = [s for s in gizli if s.get("alan") == "f-repo-ici"]
     ri = ["# Repo-İçi Geliştirici Skilleri (gizli)", "", "> Bu skiller ilgili repoya katkı yapanlar içindir. "
           "Arama: `skill-ekle.py --listele --gizli --kategori f-repo-ici`", "", "| Skill | Repo | Ne yapar |", "|---|---|---|"]
     ri += [f"| `{s['id']}` | {s['repo']} | {s['aciklama'][:110].replace('|', '/')} |" for s in repo_ici]
@@ -244,7 +241,7 @@ def main():
         say[s["repo"]] += 1
     gl = ["# Skill Geliştiricileri", "", "> `araclar/gelistirici-bilgisi.py` ile GitHub'dan alınır. Puanlama: `rehber/06-degerlendirme-ve-gelistirici.md`.", "",
           "| Repo | Sahip | Tip | Resmî | ★ | Katkıcı | Son güncelleme | Lisans | Arşivdeki skill |", "|---|---|---|---|---|---|---|---|---|"]
-    yerel_repolar = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k["tip"] in ("T7", "T8")}  # yerel kaynak (kendi/, site/): GitHub bağlantısı yok
+    yerel_repolar = {k["repo"] for k in json_oku(KAYNAKLAR)["repolar"] if k.get("tur") in ("kendi", "site")}  # yerel kaynak (kendi/, site/): GitHub bağlantısı yok
     for r, g in sorted(gel.items(), key=lambda x: -x[1]["yildiz"]):
         gl.append(f"| {r if r in yerel_repolar else f'[{r}](https://github.com/{r})'} | {g['sahip']} | {g['sahip_tipi']} | {'✅' if g['resmi_kaynak'] else ''} | "
                   f"{g['yildiz']} | {g.get('katkici') or '-'} | {g['son_guncelleme']} | {g['lisans']} | {say.get(r, 0)} |")

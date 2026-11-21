@@ -1,19 +1,16 @@
 # 15 — Kütüphanenin kendi ajanları
 
-Kütüphane işleri yedi ajana bölünmüştür (karar K-53, 2026-11-14). Ana oturum kullanıcıyla konuşur ve onay alır; ajanlar işi yapar ve ana oturuma rapor verir. Bu ajanlar yalnız kütüphane klasörünün içindedir; bilgisayar geneline ajan, komut ya da ayar kurulmaz.
+Kütüphane işleri 4 role bölünmüştür (`notlar/yeni-surec-plani.md` bölüm 8): **ana oturum** kullanıcıyla konuşur, onay alır, `konu-takip.json` kuyruğunu sunar, git commit ve `olcum.jsonl` kapanışını yapar; 3 alt-ajan (`kutuphane-kaynak`, `kutuphane-inceleme`, `kutuphane-denetci`) işi yürütür ve ana oturuma rapor verir. Bu ajanlar yalnız kütüphane klasörünün içindedir; bilgisayar geneline ajan, komut ya da ayar kurulmaz.
 
-## 1. Ajanlar
-| Ajan | İşi | Model · çaba |
+## 1. Roller ve Ajanlar
+| Rol / Ajan | İşi | Model · çaba |
 |---|---|---|
-| `kutuphane-denetci` | Sağlık denetimi: doğrulama, kapsam, testler, git, yedekler, genel klasör bekçisi, proje sağlığı, program sürümleri. Yalnız raporlar | sonnet · medium |
-| `kutuphane-kaynak` | Yeni kaynak (önce repo türü ve boyut: `surecler/yeni-repo.md`), kendi skiller, siteden alınan skiller ve site takibi, çıkarma, kayıp kaynak, ad çakışması, güven bilgisi, adaylar, yıldız listesi | sonnet · medium |
-| `kutuphane-inceleme` | Skill incelemesi: kategori, ücret, lisans, Türkçe özet, sabit yol, güvenlik | sonnet · medium |
-| `kutuphane-guncelleme` | Aylık zincir, dal özeti, birleştirme sonrası liste, zamanlanmış görev metni | sonnet · medium |
-| `kutuphane-program` | HyperFrames, OpenMontage, nlm, etsyotomasyon; program bağları; ortam kilitleri; genel klasörler | sonnet · medium |
-| `kutuphane-proje` | Projeye öneri, ön kontrol, onaylı kurulum, proje durumu ve kaydı, rol ve profiller, araç düzenleri | sonnet · medium |
-| `kutuphane-gelistirici` | Araç kodu, testler, şemalar, rehberler, istemler, kararlar, ajan dosyaları | sonnet · medium |
+| **Ana oturum** (ajan dosyası yok) | Ön-kapı, rol yönlendirme, onay merdiveni, `konu-takip.json` kuyruk sunumu, **tüm git commit'leri**, `olcum.jsonl` kapanışı | oturum modeli |
+| `kutuphane-denetci` | Denetim yapan: 3'lü çıkış kapısı (`dogrula`, `kapsam-denetimi`, `test`), aylık etki raporu ve toplu onay grupları, `son-aylik-calisma.json`, genel bekçi, proje sağlığı. Yalnız raporlar | inherit · medium |
+| `kutuphane-kaynak` | Kaynak işini yapan: yeni repo girişi (`tur-belirle`, `boyut-hesapla`), `ADAY` tür önerisi, fihrist/katalog/`not` üretimi, kendi skiller, site takibi, kayıp kaynak, ad çakışması, güven bilgisi | inherit · medium |
+| `kutuphane-inceleme` | İnceleme yapan: ilk kurulum öncesi derin güvenlik ve prompt enjeksiyonu okuması, `skill-calistir` testi, lisans/ücret değişikliği, yeni proje skill öneri raporu, kategori incelemesi | inherit · medium |
 
-Yedi ajanın hepsi sonnet ile çalışır (K-60). `inherit` yazılırsa ajan o anki oturumun modeliyle çalışır. Model ve çaba her ajanın kendi kaynak dosyasında yazılır; genel bir ayarla sabitlenmez.
+Alt-ajanların hepsi `inherit` (o anki oturumun modeli) ve `medium` çaba ile çalışır; sabit modele veya araca kilitlenmez. Model ve çaba her ajanın kendi kaynak dosyasında yazılır.
 
 ## 2. Dosyalar
 - **Tek kaynak:** `ajanlar/ORTAK.md` (her ajanın ortak kuralları) ve `ajanlar/kutuphane-<ad>.md` (başlık bloğu + görev tanımı). Görev tanımı kuralı kopyalamaz; ilgili rehbere ve komuta işaret eder.
@@ -35,7 +32,7 @@ Yeni ajan dosyaları yeni bir oturumda yüklenir; açık oturum eski listeyi gö
 2. Ajan onay gerektiren adımı atmaz, raporlar (`ajanlar/ORTAK.md` madde 3). Kullanıcıya soruyu ana oturum sorar.
 3. Aynı anda yalnız bir ajan kütüphaneye yazar. Yalnız okuyan ajanlar (denetçi; rapor modundaki diğerleri) yan yana çalışabilir. İnceleme ajanının kopyaları farklı kategorilerde yan yana okuyabilir, kayıt dosyasına sırayla yazılır.
 4. İş bitince ana oturum kontrolleri çalıştırır ya da denetçiye verir (`python3 araclar/kapsam-denetimi.py`, `python3 araclar/dogrula.py`, gerekirse `python3 araclar/test.py`), sonra kaydı kendisi atar. Ajanlar commit ve push yapmaz.
-5. İşlerin kesiştiği yerler: kayıp kaynağı denetçi bulur, kaynak ajanı işaretler. Program güncellenince program ajanı raporlar, proje ajanı projelerdeki bağlara bakar. Yeni yapay zeka aracında kuralı proje ajanı yazar, kod gerekiyorsa geliştirici yapar. Güncellemeden sonra yeniden incelenecek skiller inceleme ajanına gider.
+5. İşlerin kesiştiği yerler: kayıp kaynağı denetçi bulur, kaynak rolü (`durum: "kayip"`) işaretler. Güncellemeden sonra yeniden incelenecek skiller ve ilk kurulum öncesi derin kapı inceleme rolüne gider. Tüm git commit'leri, `konu-takip.json` toplu kuyruk sunumu ve proje kurulum onayları ana oturumda kalır.
 
 ## 5. Danışman
 Bu projede danışman kullanılmaz (K-62, token tasarrufu). `.claude/settings.local.json` içinde `advisorModel` anahtarı yoktur; ajanlar danışman modele sormaz (`ajanlar/ORTAK.md` madde 11). Yeniden açmak yalnız kullanıcı isterse: o dosyaya `"advisorModel"` yazılır; genel `~/.claude/settings.json` içine yazılmaz.
