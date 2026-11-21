@@ -174,6 +174,24 @@ kt_son["kuyruk"]["x/lisanssiz"]["neden"] = "bilinmeyen_neden"
 h_d2, u_d2 = dg.kayit_semalari_denetimi(k_temiz)
 t("5c dogrula geçersiz kuyruk nedenini UYARI olarak yakalar", h_d2 == [] and any("geçersiz neden" in x for x in u_d2), (h_d2, u_d2))
 
+# 6. --ana-dal parametresi ve ön-kapı kontrolü
+k_ana = sahte_git_kok("yeni-surec-faz2", kirli=False)
+t("6a on_kapi_kontrol(ana_dal='yeni-surec-faz2') aynı dalda durur",
+  yr.on_kapi_kontrol(k_ana, ana_dal="yeni-surec-faz2")[0] is False)
+t("6b on_kapi_kontrol(ana_dal='yeni-surec-faz3') başka dalda geçer",
+  yr.on_kapi_kontrol(k_ana, ana_dal="yeni-surec-faz3")[0] is True)
+k_girdi_dir = Path(tempfile.mkdtemp(prefix="p22-girdi-"))
+GECICI.append(k_girdi_dir)
+k_girdi = k_girdi_dir / "girdi.json"
+k_girdi.write_text(json.dumps({"repolar": []}), encoding="utf-8")
+try:
+    yr.main(["--kok", str(k_ana), "--girdi-json", str(k_girdi), "--uygula", "--ana-dal", "yeni-surec-faz2"])
+    t("6c CLI --ana-dal aktif dala eşitse ön-kapıda durur", False)
+except RuntimeError:
+    t("6c CLI --ana-dal aktif dala eşitse ön-kapıda durur", True)
+t("6d CLI --ana-dal başka dalsa uygula başarılı olur",
+  yr.main(["--kok", str(k_ana), "--girdi-json", str(k_girdi), "--uygula", "--ana-dal", "yeni-surec-faz3"]) == 0)
+
 for g in GECICI:
     shutil.rmtree(g, ignore_errors=True)
 basarisiz = [a for a, ok in SONUC if not ok]

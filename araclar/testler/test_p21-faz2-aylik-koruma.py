@@ -188,6 +188,19 @@ damga_ok = json.loads((k2 / "notlar" / "son-aylik-calisma.json").read_text(encod
 t("4b tamamlanan damga durum='tamamlandi' ve kaldigi_kaynak=None yazar",
   damga_ok["durum"] == "tamamlandi" and damga_ok["kaldigi_kaynak"] is None and damga_ok["gecici_hata_sayisi"] == 0, damga_ok)
 
+# 5. --ana-dal ayıklama testleri
+t("5a ana_dal_ayikla varsayılan master döndürür",
+  m3.ana_dal_ayikla(["--aylik", "--kuru"]) == ("master", ["--aylik", "--kuru"]))
+t("5b ana_dal_ayikla '--ana-dal dal' ayırır",
+  m3.ana_dal_ayikla(["--aylik", "--ana-dal", "yeni-surec-faz3", "--kuru"]) == ("yeni-surec-faz3", ["--aylik", "--kuru"]))
+t("5c ana_dal_ayikla '--ana-dal=dal' ayırır",
+  m3.ana_dal_ayikla(["--ana-dal=yeni-surec-faz3", "--aylik"]) == ("yeni-surec-faz3", ["--aylik"]))
+try:
+    m3.ana_dal_ayikla(["--aylik", "--ana-dal"])
+    t("5d eksik --ana-dal değerinde SystemExit verir", False)
+except SystemExit:
+    t("5d eksik --ana-dal değerinde SystemExit verir", True)
+
 for g in GECICI:
     shutil.rmtree(g, ignore_errors=True)
 basarisiz = [a for a, ok in SONUC if not ok]

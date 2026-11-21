@@ -14,6 +14,7 @@
                                                          # damga (notlar/son-aylik-calisma.json). Birleştirmez, göndermez; master değişmez.
   python3 araclar/arsiv-guncelle.py --aylik --kuru       # aylık zincirin yan etkisiz PLANI: ön kontrol + rapor + özet (dal, commit, damga YOK)
   python3 araclar/arsiv-guncelle.py --siki               # rapor modu; GitHub'a ulaşılamadıysa ya da kaynak kontrol edilemediyse çıkış 2
+  python3 araclar/arsiv-guncelle.py --ana-dal <dal>      # dal açma/birleştirme tabanı (varsayılan: master)
   python3 araclar/arsiv-guncelle.py --help               # bu metin (hiçbir şey çalıştırmaz)
 
 Çıkış kodu: 0 = sorun yok · 1 = erişilemeyen kaynak (rapor modu) ya da hata
@@ -934,30 +935,57 @@ def aylik(kuru, siki=False):
     return 0
 
 
+def ana_dal_ayikla(argv):
+    """argv içinden --ana-dal <dal> veya --ana-dal=<dal> argümanını ayıklar -> (ana_dal, kalan_argv)."""
+    ana_dal = "master"
+    kalan = []
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == "--ana-dal":
+            if i + 1 >= len(argv) or not argv[i + 1] or argv[i + 1].startswith("-"):
+                sys.exit("Kullanım: --ana-dal <dal>")
+            ana_dal = argv[i + 1]
+            i += 2
+            continue
+        if arg.startswith("--ana-dal="):
+            val = arg.split("=", 1)[1]
+            if not val:
+                sys.exit("Kullanım: --ana-dal <dal>")
+            ana_dal = val
+            i += 1
+            continue
+        kalan.append(arg)
+        i += 1
+    return ana_dal, kalan
+
+
 def main():
-    if "-h" in sys.argv[1:] or "--help" in sys.argv[1:]:
+    global ANA_DAL
+    ANA_DAL, args = ana_dal_ayikla(sys.argv[1:])
+    if "-h" in args or "--help" in args:
         print(__doc__)
         return 0
-    if "--birlestir" in sys.argv:
-        i = sys.argv.index("--birlestir")
-        if i + 1 >= len(sys.argv):
+    if "--birlestir" in args:
+        i = args.index("--birlestir")
+        if i + 1 >= len(args):
             sys.exit("Kullanım: --birlestir guncelleme/YYYY-AA  (ya da takip/YYYY-AA)")
-        return birlestir(sys.argv[i + 1])
-    if "--aylik" in sys.argv:
-        return aylik("--kuru" in sys.argv, "--siki" in sys.argv)
-    siki = "--siki" in sys.argv
+        return birlestir(args[i + 1])
+    if "--aylik" in args:
+        return aylik("--kuru" in args, "--siki" in args)
+    siki = "--siki" in args
     degisen, sorunlu, ayrinti = rapor()
     bekleyen = bekleyen_dallar()
     for b in bekleyen:
         print(f"Onay bekleyen dal: {b['dal']} ({b['gun']} gün önce hazırlandı)")
         if b["birlesmis"]:
-            print(f"{b['dal']} zaten master'a birleşmiş; silebilirsin: git branch -d {b['dal']}")
+            print(f"{b['dal']} zaten {ANA_DAL}'a birleşmiş; silebilirsin: git branch -d {b['dal']}")
         elif b["gun"] > ESIK_DAL_GUN:
             print(f"UYARI: {b['dal']} {ESIK_DAL_GUN} günden eski: birleştir (--birlestir {b['dal']}) ya da sil (git branch -D {b['dal']}).")
     if bekleyen:
         print("(--birlestir <dal> ya da git branch -D <dal>)")
-    if "--uygula" not in sys.argv or not degisen:
-        if "--uygula" in sys.argv and CEVRIMDISI:
+    if "--uygula" not in args or not degisen:
+        if "--uygula" in args and CEVRIMDISI:
             sys.exit("DURDU: GitHub'a ulaşılamıyor; güncelleme yapılamaz. Hiçbir şey değişmedi.")
         if sorunlu:
             return 1
@@ -969,9 +997,9 @@ def main():
     if ULASILAMAYAN:
         sys.exit(f"DURDU: {len(ULASILAMAYAN)} kaynak şimdilik kontrol edilemedi (geçici ağ/hız sınırı: "
                  f"{', '.join(ULASILAMAYAN[:5])}{' …' if len(ULASILAMAYAN) > 5 else ''}). Sonra tekrar çalıştır. Hiçbir şey değişmedi.")
-    if bekleyen and "--dal" in sys.argv:
+    if bekleyen and "--dal" in args:
         sys.exit(f"DURDU: önce bekleyen güncelleme dalını birleştir ya da sil: {', '.join(b['dal'] for b in bekleyen)}")
-    return uygula(degisen, ayrinti, "--dal" in sys.argv)
+    return uygula(degisen, ayrinti, "--dal" in args)
 
 
 if __name__ == "__main__":

@@ -266,12 +266,12 @@ def hafif_kapi_degerlendir(repo, meta, agac, icerikler, kaynaklar, registry, ken
     return {"repo": repo, "karar": "OTOMATIK_KAYIT", "kayit": kayit, "uyarilar": tk["uyarilar"]}
 
 
-def otomatik_isle(kok, girdiler, *, uygula=False, bugun=None, on_kapi=True) -> dict:
+def otomatik_isle(kok, girdiler, *, uygula=False, bugun=None, on_kapi=True, ana_dal="master") -> dict:
     """Yeni repo listesini işler. uygula=True iken ön-kapıdan geçerse kaynaklar.json ve konu-takip.json yazar."""
     kok = Path(kok)
     bugun = bugun or date.today().isoformat()
     if uygula and on_kapi:
-        ok, neden = on_kapi_kontrol(kok)
+        ok, neden = on_kapi_kontrol(kok, ana_dal=ana_dal)
         if not ok:
             raise RuntimeError(f"Ön-kapı engeli: {neden}")
 
@@ -329,6 +329,7 @@ def main(argv=None):
     ap.add_argument("--uygula", action="store_true", help="Ön-kapı temizse KESİN kayıtları ve kuyruğu yaz")
     ap.add_argument("--json", action="store_true", help="Çıktıyı JSON olarak yazdır")
     ap.add_argument("--kuyruk-ozet", action="store_true", help="Yalnız konu-takip.json kuyruk özetini yazdır")
+    ap.add_argument("--ana-dal", default="master", help="Doğrudan yazılması engellenen ana dal (varsayılan: master)")
     a = ap.parse_args(argv)
 
     kok = Path(a.kok)
@@ -344,7 +345,7 @@ def main(argv=None):
     girdiler = json.loads(Path(a.girdi_json).read_text(encoding="utf-8"))
     if isinstance(girdiler, dict):
         girdiler = girdiler.get("repolar", [])
-    sonuc = otomatik_isle(kok, girdiler, uygula=bool(a.uygula and not a.kuru))
+    sonuc = otomatik_isle(kok, girdiler, uygula=bool(a.uygula and not a.kuru), ana_dal=a.ana_dal)
     if a.json:
         print(json.dumps(sonuc, ensure_ascii=False, indent=2))
     else:
