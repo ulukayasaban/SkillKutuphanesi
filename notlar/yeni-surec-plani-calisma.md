@@ -140,6 +140,9 @@ Not: 1+2+3 birleşebilir: veri ve süzgeç (1), Claude Code kurulumu (2), çok a
 **Kütüphanede bugün zaten var:** 23 profil, 31 rol, `skill-ekle.py --profil/--rol/--oner/--kit/--fihrist-skill/--program-skill/--rapor/--durum/--guncelle/--kaldir`, `kilit.json` ile commit sabitleme, kitler ve fihrist.
 **Sonuç:** "Listelerden yeni projeye hızlı kurulum" için yeni bir kurulum motoru gerekmiyor; `npx skills` bizim motorun küçük bir benzeri (inceleme, ücret/risk, kilit ve izlenebilirlik yok, telemetri var, ikinci kilit dosyası). Maliyet kurulum hızından değil, çevresindeki konuşmadan ve bakım makinesinden geliyor. Öneri: kurulumu **terminalden tek komutla (LLM'siz)** yapılabilir hale getirmek: `skill-ekle.py <proje> --profil <ad>` kısa rapor verir, `--evet` ile kurar; sıfır token.
 
+## İstenen süreç belgesi (2026-11-21)
+Kullanıcının istediği süreç, mevcut süreçlerden bağımsız, ayrı bir belgede: `notlar/istenen-surec.md` (tanıtım, 10 görev, ilkeler, onay kuralları, proje ve sürüm kuralları, uyumluluk, maliyet, hafıza, 16 senaryo, 5 netleşecek soru). Sonraki adımlar bu belgeye göre planlanır; belge değişince önce o güncellenir.
+
 ## Karar (adım 2, kullanıcı 2026-11-21): ORTADAKİ YOL
 - **Yerinde kalır:** 2.849 incelenmiş skill (`registry.json`), `kaynaklar.json`, `arsiv/`, `fihrist/`, `kitler.json`, `programlar.json`, `projeler.json`, araçlar ve 324 test, 4 projenin `kilit.json` bağları, git geçmişi, `yedekler.json`.
 - **Baştan, sade yazılır:** `CLAUDE.md`/`AGENTS.md`, `BASLA.md`, rehberler, hazır istemler, `surecler/` dosyaları, hafıza düzeni (neyin nerede tutulacağı), maliyet kaydı.
