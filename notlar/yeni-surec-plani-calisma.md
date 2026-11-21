@@ -180,4 +180,4 @@ Karar ölçütü (K4): kurulum maliyeti değil, **tekrarlayan süreçlerin** tok
 Giriş süreçleri: yeni repo/skill geldiğinde uçtan uca akış (tür belirleme, inceleme, ücret/risk kararı, kayıt, bildirim). Hangi adımlar tamamen araç, hangileri LLM kararı, hangileri sana sorulur? Kullanıcıya bağımlılık (K3) ve token (K4) ölçütleriyle. Bugünkü akış: `rehber/03` A1..A9 ve `surecler/yeni-repo.md` + 9 tür dosyası.
 
 ## Devam istemi (yeni oturumda ilk mesaj olarak)
-`notlar/yeni-surec-plani-calisma.md` dosyasını oku. Adım 1-3 tamam; pazar yolu elendi, skill'ler proje klasöründe kalır. Önce 'küçültme' kararını (kayıpsız yol) ver, sonra adım 4'ten devam edelim. Kısa tut, her adımda bir karar sor.
+`notlar/istenen-surec.md` ve `notlar/yeni-surec-plani-calisma.md` dosyalarını oku. İstenen süreç belgesi tamam (sorular kapandı). Sıradaki iş: istenen süreci bugünkü kütüphaneyle karşılaştır (her istek için hazır / yarım / yok), sonra plana dön. Kısa tut, her adımda bir karar sor.

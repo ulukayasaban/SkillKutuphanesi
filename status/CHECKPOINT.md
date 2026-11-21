@@ -2,7 +2,7 @@
 Son güncelleme: 2026-11-20 06:45
 
 ## Şimdi
-- **Yeni süreç planı sürüyor (2026-11-21):** `notlar/yeni-surec-plani-calisma.md` (adım 1-3 tamam: hedefler, ortadaki yol, tam ayrım aşamalı; sıradaki: açık 'küçültme' kararı (kayıpsız yol), sonra adım 4 giriş süreçleri; 7 token ve maliyet süreçleri; pazar yolu elendi, skill'ler proje klasöründe kalır). Yeni oturumda önce bu dosyayı oku.
+- **Yeni süreç planı (beklemede, 2026-11-21):** `notlar/istenen-surec.md` TAMAM (kullanıcının istediği süreç, bütün sorular kapandı); `notlar/yeni-surec-plani-calisma.md` adım 1-3 tamam. Sıradaki: istenen süreci bugünkü kütüphaneyle karşılaştır (hazır/yarım/yok), sonra adım 4. Yeni oturumda önce bu iki dosyayı oku.
 - Plan `notlar/plan-tur-surecleri.md`: ÇEKİRDEK KAPSAM bitti ve kapanış adımları tamamlandı (2026-11-20 06:45). Arka planda süreç, Neon ya da worktree yok.
 - Bu oturumda: tür/boyut/fihrist/medya çekirdeği (K-65) kapandı; `test.py` 324/324, `dogrula.py` 0 hata 1 eski uyarı (etsy-api rol), `kapsam-denetimi` 0 sorun, `genel-bekci` TEMİZ (taban yenilendi, `checkpoint-kapanis` ve `oturum-acilis` kalacak). Tür zorunluluğu testleri `test_p15` (+3) ve eski sahte kayıtlar `test_p8/p14/p19` düzeltildi.
 - Programlar güncellendi (K-66): HyperFrames 0.9.37 → 0.9.71, OpenMontage `fecb9a1e` → `2e003e65`; duman testi 142 geçti / 1 FAIL (projenin eski HF sürüm kaydı, düzeltildi). Bulgular `notlar/program-incelemesi-2026-11-20.md`. Güncelleme yedekleri kullanıcı kararıyla silindi.
