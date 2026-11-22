@@ -34,7 +34,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 126 KB (SKILL.md 21.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### agents-md-generator  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### agents-md-generator  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Create, generate, update, repair, trim, or split minimal AGENTS.md files for repository roots and confirmed nested modules using progressive disclosure. Use for missing, bloated, contradictory, or outdated agent instructions, monorepos, services, packages, module context, and portable agent guidance without assuming any fixed agent folder structure.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -84,7 +84,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 49 KB (SKILL.md 38.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### android-development  ·  dpconde/claude-android-skill @ edfca5e  ·  puan 62 (C)
+### android-development  ·  dpconde/claude-android-skill @ edfca5e  ·  puan 63 (C)
 
 - **Ne yapar:** Create production-quality Android applications following Google's official architecture guidance and NowInAndroid best practices. Use when building Android apps with Kotlin, Jetpack Compose, MVVM architecture, Hilt dependency injection, Room database, or multi-module projects. Triggers on requests to create Android projects, screens, ViewModels, repositories, feature modules, or when asked about A
 - **Teknoloji:** - _(otomatik tespit)_
@@ -306,7 +306,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### dart-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### dart-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Build, fix, audit, and migrate Drift persistence in Dart CLI, server-side, and non-Flutter desktop apps. Use when adding SQLite with package:drift/native.dart, configuring PostgreSQL with drift_postgres and package:postgres, writing type-safe tables, queries, writes, streams, and migrations, resolving build_runner or drift_dev failures, or validating Dart database code with code generation, analys
 - **Teknoloji:** - _(otomatik tespit)_
@@ -767,7 +767,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-adaptive-ui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-adaptive-ui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Build, fix, review, and validate adaptive or responsive Flutter UIs for mobile, tablet, desktop, web, large screens, foldables, and mixed input devices. Use when creating breakpoint-driven layouts, responsive navigation, adaptive dialogs/lists/grids, keyboard/mouse/touch behavior, window-size decisions with MediaQuery or LayoutBuilder, or Capability and Policy patterns for platform-specific behavi
 - **Teknoloji:** - _(otomatik tespit)_
@@ -777,7 +777,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 53 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-animations  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-animations  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Add, fix, refactor, debug, test, or explain Flutter animations and motion effects. Use when working with implicit animations such as AnimatedContainer, AnimatedOpacity, AnimatedSwitcher, and TweenAnimationBuilder; explicit animations using AnimationController, Tween, CurvedAnimation, AnimatedWidget, AnimatedBuilder, and built-in transitions; Hero/shared-element route transitions; staggered or sequ
 - **Teknoloji:** - _(otomatik tespit)_
@@ -798,7 +798,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-architecture  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-architecture  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Design, refactor, review, or implement Flutter app architecture using MVVM, layered UI/Data/optional Domain boundaries, feature-first or layer-first project structure, repositories, services, dependency injection, Result and Command patterns, offline-first or optimistic UI flows. Use when asked to add a Flutter feature, audit layer dependencies, fix cross-feature imports, migrate to feature-first,
 - **Teknoloji:** - _(otomatik tespit)_
@@ -829,7 +829,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Implement, fix, review, migrate, test, or debug Drift persistence in Flutter apps using SQLite, drift_flutter, type-safe Dart queries, generated tables, StreamBuilder or Riverpod StreamProvider UI, write operations, transactions, schema migrations, web assets, isolate sharing, and local database testing. Use when a Flutter task mentions drift, local database storage, SQLite, reactive database stre
 - **Teknoloji:** - _(otomatik tespit)_
@@ -839,7 +839,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 48 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-duit-bdui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-duit-bdui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Integrate, fix, review, migrate, test, or debug Duit / flutter_duit backend-driven UI in Flutter applications. Use when a task mentions DUIT, flutter_duit, backend-driven UI, BDUI, server-driven UI, XDriver, DuitViewHost, DuitRegistry, HTTP or WebSocket transports, custom Duit widgets, components, capability delegates, compile-time DUIT flags, or rendering JSON layouts from a backend.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -859,7 +859,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-internationalization  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-internationalization  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Add, fix, audit, and maintain Flutter internationalization with gen-l10n, ARB files, AppLocalizations, flutter_localizations, intl formatting, plural/select messages, RTL support, locale-specific number/date formatting, and localization build errors. Use when asked to add l10n or i18n, translate Flutter UI text, configure l10n.yaml, manage ARB translations, migrate away from package:flutter_gen im
 - **Teknoloji:** - _(otomatik tespit)_
@@ -869,7 +869,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 23 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-navigation  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 59 (C)
+### flutter-navigation  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 60 (C)
 
 - **Ne yapar:** Implement, fix, refactor, review, migrate, or validate Flutter navigation and routing. Use when working with Navigator, MaterialPageRoute, Router API, go_router, route guards, redirects, ShellRoute or StatefulShellRoute, nested Navigators, passing and returning route data, deep links, Android App Links, iOS Universal Links, custom URI schemes, Flutter web URL strategy, browser history, 404 routing
 - **Teknoloji:** html _(otomatik tespit)_
@@ -879,7 +879,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 33 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### flutter-networking  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-networking  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Implement, fix, debug, review, or refactor Flutter networking code for HTTP/REST APIs, WebSocket realtime flows, authentication and token refresh, request headers, timeouts, retries, JSON parsing, caching, background isolates, repositories, services, and adaptation to existing http, Dio, Retrofit, Chopper, or custom API clients. Use when asked to add network requests, investigate network errors, h
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -910,7 +910,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-testing  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 56 (C)
+### flutter-testing  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 57 (C)
 
 - **Ne yapar:** Write, fix, review, debug, and validate Flutter tests for apps, packages, and plugins. Use when adding unit tests, widget tests, integration tests, MethodChannel or plugin mocks, Mockito or mocktail test doubles, golden or accessibility checks, CI test commands, test failures, MissingPluginException, pump or pumpAndSettle problems, finder errors, build_runner mock generation, device integration te
 - **Teknoloji:** - _(otomatik tespit)_

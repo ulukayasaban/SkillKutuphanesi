@@ -658,7 +658,7 @@
       "izleyici": 0,
       "commit_90g": 3,
       "son_surum": null,
-      "yildiz_hizi": 5.3,
+      "yildiz_hizi": 5.2,
       "guven": {
         "puan": 20,
         "ayrinti": [
@@ -1144,7 +1144,7 @@
       "son_surum": null,
       "yildiz_hizi": 15.7,
       "guven": {
-        "puan": 19,
+        "puan": 20,
         "ayrinti": [
           "yildiz 96 (%14) → 3.4/25",
           "yildiz_hizi 15.7 (%13) → 1.9/15",
@@ -1255,7 +1255,7 @@
       "son_surum": "2026-07-12",
       "yildiz_hizi": 20.3,
       "guven": {
-        "puan": 26,
+        "puan": 27,
         "ayrinti": [
           "yildiz 121 (%17) → 4.3/25",
           "yildiz_hizi 20.3 (%16) → 2.5/15",
@@ -1329,7 +1329,7 @@
       "son_surum": null,
       "yildiz_hizi": 11.0,
       "guven": {
-        "puan": 21,
+        "puan": 22,
         "ayrinti": [
           "yildiz 114 (%15) → 3.8/25",
           "yildiz_hizi 11.0 (%10) → 1.5/15",
@@ -2040,7 +2040,7 @@
       "son_surum": "2026-11-18",
       "yildiz_hizi": 12982.2,
       "guven": {
-        "puan": 85,
+        "puan": 86,
         "ayrinti": [
           "yildiz 119573 (%90) → 22.5/25",
           "yildiz_hizi 12982.2 (%91) → 13.6/15",
@@ -2075,9 +2075,9 @@
       "izleyici": 36,
       "commit_90g": 39,
       "son_surum": "2026-10-22",
-      "yildiz_hizi": 62.4,
+      "yildiz_hizi": 62.3,
       "guven": {
-        "puan": 56,
+        "puan": 57,
         "ayrinti": [
           "yildiz 7051 (%50) → 12.5/25",
           "yildiz_hizi 62.4 (%23) → 3.4/15",
@@ -2303,7 +2303,7 @@
       "son_surum": null,
       "yildiz_hizi": 14162.1,
       "guven": {
-        "puan": 74,
+        "puan": 75,
         "ayrinti": [
           "yildiz 198456 (%96) → 24.1/25",
           "yildiz_hizi 14162.1 (%94) → 14.0/15",
@@ -2605,7 +2605,7 @@
       "son_surum": "2026-11-10",
       "yildiz_hizi": 7103.1,
       "guven": {
-        "puan": 75,
+        "puan": 74,
         "ayrinti": [
           "yildiz 71966 (%81) → 20.4/25",
           "yildiz_hizi 7103.1 (%81) → 12.2/15",
@@ -2718,7 +2718,7 @@
       "son_surum": "2026-01-29",
       "yildiz_hizi": 6.3,
       "guven": {
-        "puan": 19,
+        "puan": 20,
         "ayrinti": [
           "yildiz 62 (%11) → 2.7/25",
           "yildiz_hizi 6.3 (%6) → 0.9/15",
@@ -2939,7 +2939,7 @@
       "son_surum": "2026-11-03",
       "yildiz_hizi": 587.3,
       "guven": {
-        "puan": 77,
+        "puan": 78,
         "ayrinti": [
           "yildiz 113988 (%89) → 22.1/25",
           "yildiz_hizi 587.3 (%46) → 7.0/15",
@@ -3167,7 +3167,7 @@
       "son_surum": null,
       "yildiz_hizi": 31.4,
       "guven": {
-        "puan": 24,
+        "puan": 25,
         "ayrinti": [
           "yildiz 362 (%24) → 5.9/25",
           "yildiz_hizi 31.4 (%19) → 2.8/15",
@@ -3278,7 +3278,7 @@
       "son_surum": null,
       "yildiz_hizi": 67.0,
       "guven": {
-        "puan": 26,
+        "puan": 27,
         "ayrinti": [
           "yildiz 648 (%29) → 7.1/25",
           "yildiz_hizi 67.0 (%24) → 3.5/15",
@@ -3313,7 +3313,7 @@
       "izleyici": 11,
       "commit_90g": 15,
       "son_surum": null,
-      "yildiz_hizi": 35.4,
+      "yildiz_hizi": 35.1,
       "guven": {
         "puan": 33,
         "ayrinti": [
@@ -3950,7 +3950,7 @@
       "son_surum": "2026-04-11",
       "yildiz_hizi": 182.3,
       "guven": {
-        "puan": 35,
+        "puan": 36,
         "ayrinti": [
           "yildiz 2615 (%38) → 9.5/25",
           "yildiz_hizi 182.3 (%34) → 5.1/15",
@@ -4061,7 +4061,7 @@
       "son_surum": "2024-07-26",
       "yildiz_hizi": 10.8,
       "guven": {
-        "puan": 32,
+        "puan": 33,
         "ayrinti": [
           "yildiz 1854 (%36) → 9.1/25",
           "yildiz_hizi 10.8 (%9) → 1.4/15",
@@ -4246,7 +4246,7 @@
       "izleyici": 0,
       "commit_90g": 8,
       "son_surum": null,
-      "yildiz_hizi": 7.2,
+      "yildiz_hizi": 7.0,
       "guven": {
         "puan": 14,
         "ayrinti": [
@@ -4585,7 +4585,7 @@
       "izleyici": 2,
       "commit_90g": 7,
       "son_surum": null,
-      "yildiz_hizi": 3.7,
+      "yildiz_hizi": 3.6,
       "guven": {
         "puan": 29,
         "ayrinti": [
@@ -5335,7 +5335,7 @@
       "izleyici": 67,
       "commit_90g": 0,
       "son_surum": null,
-      "yildiz_hizi": 46.6,
+      "yildiz_hizi": 46.5,
       "guven": {
         "puan": 37,
         "ayrinti": [
@@ -5487,7 +5487,7 @@
       "izleyici": 95,
       "commit_90g": 0,
       "son_surum": "2026-05-06",
-      "yildiz_hizi": 32.0,
+      "yildiz_hizi": 31.9,
       "guven": {
         "puan": 45,
         "ayrinti": [
@@ -5604,7 +5604,7 @@
       "son_surum": "2026-11-11",
       "yildiz_hizi": 294.0,
       "guven": {
-        "puan": 77,
+        "puan": 78,
         "ayrinti": [
           "yildiz 48870 (%76) → 18.9/25",
           "yildiz_hizi 294.0 (%38) → 5.7/15",
@@ -6332,7 +6332,7 @@
           "katkici 15 (%60) → 9.0/15",
           "commit_90g 0 (%17) → 2.6/15",
           "fork 12 (%14) → 1.4/10",
-          "izleyici 6 (%31) → 1.6/5",
+          "izleyici 6 (%32) → 1.6/5",
           "son 180 günde sürüm 0/5",
           "lisans 5/5",
           "resmî/kurum 3/5"
@@ -6397,7 +6397,7 @@
       "izleyici": 9,
       "commit_90g": 1,
       "son_surum": "2026-03-11",
-      "yildiz_hizi": 56.1,
+      "yildiz_hizi": 55.0,
       "guven": {
         "puan": 27,
         "ayrinti": [
@@ -6584,7 +6584,7 @@
       "son_surum": "2026-08-31",
       "yildiz_hizi": 801.6,
       "guven": {
-        "puan": 54,
+        "puan": 55,
         "ayrinti": [
           "yildiz 8227 (%52) → 13.0/25",
           "yildiz_hizi 801.6 (%49) → 7.4/15",
@@ -6732,7 +6732,7 @@
       "son_surum": null,
       "yildiz_hizi": 145.1,
       "guven": {
-        "puan": 31,
+        "puan": 32,
         "ayrinti": [
           "yildiz 444 (%26) → 6.4/25",
           "yildiz_hizi 145.1 (%31) → 4.6/15",

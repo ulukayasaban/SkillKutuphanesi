@@ -497,6 +497,30 @@ def uygula(degisen, ayrinti, dal_modu):
         KILIT.unlink(missing_ok=True)
 
 
+def _guncelleme_geri_al(dal):
+    """_uygula() hatasında: yalnız bu koşunun açtığı daldaki değişiklikleri (skill içi .gitignore
+    dosyalarının gizledikleri dahil) temizler, ANA_DAL'a döner ve dalı siler."""
+    if git("branch", "--show-current").stdout.strip() != dal:
+        print(f"UYARI: geri alma yapılamadı (beklenmeyen dal, beklenen '{dal}'); elle kontrol et")
+        return False
+    git("reset", "-q", "--hard")
+    if (KOK / "arsiv").exists():
+        git("clean", "-fdxq", "--", "arsiv")
+    temizlenecek = [d for d in ("notlar", "skiller", "fihrist") if (KOK / d).exists()]
+    if temizlenecek:
+        git("clean", "-fdq", "--", *temizlenecek)
+    r_sw = git("switch", "-q", ANA_DAL)
+    if r_sw.returncode != 0:
+        print(f"UYARI: '{ANA_DAL}' dalına dönülemedi (dal '{dal}' kaldı): {(r_sw.stderr or '').strip()}")
+        return False
+    r_del = git("branch", "-D", dal)
+    if r_del.returncode != 0:
+        print(f"UYARI: '{dal}' dalı silinemedi: {(r_del.stderr or '').strip()}")
+        return False
+    print(f"'{dal}' dalı geri alındı ve silindi; {ANA_DAL} değişmedi.")
+    return True
+
+
 def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
     if dal_modu:
         if dal != ANA_DAL:
@@ -548,11 +572,7 @@ def _uygula(degisen, ayrinti, dal_modu, onceki, dal):
         SON_HATA = str(e).strip().splitlines()[-1][:200] if str(e).strip() else type(e).__name__
         print(f"HATA: güncelleme yarıda kaldı: {e}")
         if dal_modu:
-            git("reset", "-q", "--hard")
-            git("clean", "-fdq", "arsiv", "notlar")
-            git("switch", "-q", ANA_DAL)
-            git("branch", "-D", dal)
-            print(f"'{dal}' dalı geri alındı ve silindi; master değişmedi.")
+            _guncelleme_geri_al(dal)
         sys.exit(1)
     shutil.rmtree(KOK / ".gecici", ignore_errors=True)
     if dal_modu:

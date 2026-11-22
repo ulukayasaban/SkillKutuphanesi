@@ -15,7 +15,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 14 KB (SKILL.md 13.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil). İçerik yazımı için en derli toplu süreç; ana hat şablonu ve kaynak formatı faydalı. Lisans belirtilmemiş; araştırma adımı agent'ın web aracına bağlı.
 
-### de-ai-ify  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 71 (B)
+### de-ai-ify  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
 - **Ne yapar:** Metindeki yapay zekâ kokan kalıpları (aşırı geçiş kelimeleri, klişeler, kaçamak ifadeler, kurumsal jargon, üçlü sıralamalar) temizleyip doğal insan sesine çevirir; '-HUMAN' ekli kopya ve değişiklik listesi üretir.
 - **Ne zaman:** Yayın öncesi metni insansılaştırmak; AI tonu taşıyan blog/e-posta/sosyal medya metinleri. · **Ne zaman değil:** Türkçe metinde kalıp listesi doğrudan uymaz (İngilizce odaklı); teknik doküman doğruluğu kontrolü için değil.
