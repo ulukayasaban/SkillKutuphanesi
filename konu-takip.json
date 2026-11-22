@@ -42026,7 +42026,7 @@
     },
     "howseen-ai/claude-motion-design": {
       "repo": "howseen-ai/claude-motion-design",
-      "durum": "onaylandi",
+      "durum": "karar_verildi",
       "neden": "ad_cakismasi",
       "tarih": "2026-11-22",
       "ayrinti": "Mevcut/yerel skill ile ad çakışması: motion-design",
@@ -42035,7 +42035,7 @@
     },
     "tugrawork-creator/saas-motion-kit": {
       "repo": "tugrawork-creator/saas-motion-kit",
-      "durum": "onaylandi",
+      "durum": "karar_verildi",
       "neden": "lisans_yok",
       "tarih": "2026-11-22",
       "ayrinti": "Lisans eksik veya kısıtlı (NOASSERTION)",
