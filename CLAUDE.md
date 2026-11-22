@@ -22,7 +22,7 @@ Bu dosya oturum açılışında okunan tek temel kuraldır (<= 3 KB). Büyük re
 - **Her zaman kullanıcıya:** Ücretli kullanım/ödeme, kalıcı silme, güvenlik istisnası, GitHub `push` veya GitHub yıldız listesine yazma.
 
 ## Zorunlu Kapılar
-- **Ön-kapı:** `git status --short` boş değilse başlama. `master` dalına doğrudan yazma; faz dalında çalış.
+- **Ön-kapı:** `git status --short` boş değilse başlama. `master` dalına doğrudan yazma; faz dalında çalış (tüm fazlar `master`'a birleştikten sonra yeni repo girişi `yeni-repo/YYYY-AA-GG` çalışma dalında yapılır).
 - **Çıkış kapısı (commit öncesi):** `dogrula` (0 hata) + `kapsam-denetimi` (0 sorun) + `test` (%100 yeşil). Commit'ler kaynak bazında ayrı ve ana oturumda yapılır.
 
 ## Görev Yönlendirme

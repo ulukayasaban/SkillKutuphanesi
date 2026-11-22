@@ -1,16 +1,16 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-21 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-22 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7278 · Arşivdeki skill kaydı: 2849 · Bileşen (komut/agent): 354
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7280 · Arşivdeki skill kaydı: 2850 · Bileşen (komut/agent): 354
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
 | fihristte | 3065 | fihristte (arşive alınmadı; kurulumda kaynaktan alınır) |
-| secildi | 2839 | arşivde (ana sürüm) |
+| secildi | 2840 | arşivde (ana sürüm) |
 | haric | 1172 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 130 | birebir kopya (tek kopya yeter) |
-| ayna-baska-arac | 38 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
+| ayna-baska-arac | 39 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 | arac-varyanti | 26 | arşivde (Claude/Codex'e özel sürüm) |
 | ayri-surum | 8 | arşivde (aynı adlı farklı içerik, ayrı skill) |
 
@@ -69,6 +69,7 @@
 | arjitj2/swiftui-design-principles | 1 | secildi 1 |
 | avenoxai/avenox-video-kurgu-notlari | 1 | secildi 1 |
 | avenoxai/higgsfield-studio | 6 | secildi 6 |
+| ayghri/i-have-adhd | 2 | ayna-baska-arac 1, secildi 1 |
 | blader/humanizer | 1 | secildi 1 |
 | browser-use/video-use | 2 | secildi 2 |
 | cathrynlavery/diagram-design | 1 | secildi 1 |
@@ -169,7 +170,6 @@
 
 ## Bilinçli hariç tutulanlar (gerekçeli)
 
-- **Fei-Away/Codex-Dream-Skin**: `macos/SKILL.md` (^(macos|windows)/), `windows/SKILL.md` (^(macos|windows)/)
 - **anthropics/skills**: `template/SKILL.md` (^template/)
 - **pbakaus/impeccable**: `tests/oracle/workspaces/ctx-pin/.agents/skills/impeccable/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.claude/skills/audit/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.claude/skills/impeccable/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.cursor/skills/impeccable/SKILL.md` ((^|/)tests?/)
 - **anthropics/claude-plugins-official**: `external_plugins/discord/skills/access/SKILL.md` (^external_plugins/), `external_plugins/discord/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/access/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/access/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/configure/SKILL.md` (^external_plugins/), `plugins/example-plugin/skills/example-command/SKILL.md` (^plugins/example-plugin/), `plugins/example-plugin/skills/example-skill/SKILL.md` (^plugins/example-plugin/)

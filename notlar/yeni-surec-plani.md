@@ -150,6 +150,16 @@ Her projenin kendi `kilit.json` dosyasında tek bir `surum_modu` bulunur; yeni p
 
 * **Hedef belirleme protokolü:** Sayısal üst sınırlar tahmini yazılmaz; Faz 3'te **1 gerçek yeni repo girişi + 1 gerçek aylık takip** ölçülüp taban değerler (`olcum.jsonl`) çıkarıldıktan sonra her 5 metrik için üst sınır sabitlenir.
 
+* **Sabitlenen Sayısal Üst Sınırlar (Faz 3b Taban Ölçümleri Sonrası):**
+
+| Metrik | `yeni_repo` (Taban: `olcum.jsonl`) | `yeni_repo` Üst Sınır | `aylik_takip` (Taban: `olcum.jsonl`) | `aylik_takip` Üst Sınır |
+| ----- | ----- | ----- | ----- | ----- |
+| **`sure_sn`** | `1.0 sn` (Python aracı) | `≤ 15 sn` (`KESİN` Python); `≤ 60 sn` (`ADAY` YZ) | `2920.0 sn` (~48.6 dk, 198 repo) | `≤ 3600 sn` (tüm aktif kaynak taraması + rapor) |
+| **`token_veya_kota`** | `0` çağrı (Python aracı) | `0` (`KESİN`); `≤ 1` YZ çağrısı (`ADAY` oturum başı) | `0` çağrı (Python aracı) | `0` (tarama); `≤ 1` YZ çağrısı (yalnız lisans/gri alan farkı) |
+| **`disk_mb`** | `458.32 MB` (`disk_fark_mb: +0.21 MB`) | Repo başına `disk_fark_mb ≤ 5 MB` (medya/model hariç) | `458.36 MB` (`disk_fark_mb: +0.04 MB`) | Tur başına `disk_fark_mb ≤ 25 MB` (toplam büyüme kontrollü) |
+| **`onay_sayisi`** | `0` (`KESİN`) / `1` (kuyruk) | `0` (rutin `KESİN`); `≤ 1` toplu onay (belirsizler) | `0` (tarama ve yerleşim) | `0` (salt tarama/rapor); `≤ 1` toplu onay (uygulama turunda) |
+| **`hata_tekrar`** | `0` | `0` (3'lü çıkış kapısı ilk denemede yeşil; en fazla `1` kurtarma) | `1` (upstream `earshot` uyarısı) | `0` (rutin); en fazla `1` upstream uyarı düzeltmesi |
+
 ### B. İnce Açılış Kuralı (Açılış Yükü ≤ 3 KB)
 
 * **Açılışta okunacak tek dosya (`BASLA.md` özeti):** Aktif faz, 4 temel kısıt (K1–K4), 4 satırlık onay merdiveni ve "hangi iş için hangi dosya açılır" yönlendirme tablosu.
