@@ -615,7 +615,7 @@ _Video kurgu, HyperFrames/Remotion kompozisyon, ekran kaydı, video indirme/çev
 - **Ne zaman:** Video üretimi, montaj, explainer, seslendirme, altyazı, YouTube indirme/transkript, arka plan silme, upscale gibi işler OpenMontage ile yapılacaksa. · **Ne zaman değil:** OpenMontage kurulu değilse ya da iş HyperFrames/Remotion ile tek başına kurulabilecek kısa bir kompozisyonsa (HyperFrames skilleri yeterli).
 - **Teknoloji:** python, ffmpeg, remotion, hyperframes · **Paketler:** OpenMontage kurulumu (~/.openmontage, kendi venv'i), ffmpeg-full (drawtext ve subtitles için), Piper Türkçe modeli (isteğe bağlı)
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (commands); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-17, lisans Kendi (özel))
+- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-22, lisans Kendi (özel))
 - **Durum:** tercih · **Örtüşme:** video-uretim-programi → birincil · **Roller:** video-kurgu-render
 - **Boyut:** 11 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kullanıcının kendi giriş skili; makineye özgü mutlak yollar içerir (taşınabilir değil, bilerek). Güncelliği OpenMontage kartına bağlıdır (sabit sürümler, yerel yamalar): kart değişince gözden geçirilir. Program lisansı AGPL-3.0; bu skil yalnız giriş notudur.

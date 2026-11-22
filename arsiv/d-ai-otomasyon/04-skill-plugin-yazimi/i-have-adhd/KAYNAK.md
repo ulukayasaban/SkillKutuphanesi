@@ -6,6 +6,6 @@
 - **Repo içindeki yol:** `skills/i-have-adhd`
 - **Commit:** `1ecea1993b7fce257ffbd686c070948b5e07eda6`
 - **Lisans:** MIT
-- **Geliştirici:** ?
+- **Geliştirici:** ayghri (kisi)
 - **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

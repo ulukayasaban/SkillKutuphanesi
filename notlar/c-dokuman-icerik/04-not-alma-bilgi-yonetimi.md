@@ -4,7 +4,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/34**
 
-### add-frontmatter  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 71 (B)
+### add-frontmatter  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
 - **Ne yapar:** Obsidian notlarını (tek dosya ya da klasör) okuyup not türüne göre (toplantı, günlük, referans, proje) YAML frontmatter özellikleri ekler veya normalleştirir; mevcut geçerli özellikleri korur, adlandırma ve değer tipi kurallarını uygular.
 - **Ne zaman:** Obsidian kasasında etiket/özellik düzeni kurmak, Bases görünümlerine veri hazırlamak. · **Ne zaman değil:** Obsidian dışı Markdown projelerinde (Jekyll/Hugo frontmatter şeması farklı).
@@ -35,7 +35,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 15 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### daily-review  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
+### daily-review  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
 
 - **Ne yapar:** Gün sonu değerlendirmesi: bugün değişen/oluşan notları bulur, ilerlemeyi, takılan işleri ve içgörüleri çıkarır, yarının ilk 3 önceliğini ve açık döngüleri içeren bir günlük not yazar.
 - **Ne zaman:** Obsidian/Markdown kasasında günlük kapanış ve ertesi gün planı. · **Ne zaman değil:** Not kasası yoksa; ekip durum raporu için internal-comms daha uygun.
@@ -66,7 +66,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### download-attachment  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
+### download-attachment  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
 
 - **Ne yapar:** Verilen URL'lerden dosyaları Obsidian kasasının 05_Attachments klasörüne indirir (yalnızca http/https, dosya adı temizleme, zaman aşımı), içeriğe göre anlamlı adlandırır, dizini günceller ve git commit atar.
 - **Ne zaman:** Claudesidian düzenindeki kasaya web'den PDF/görsel ek kaydetmek. · **Ne zaman değil:** Claudesidian klasör düzeni (05_Attachments, organize-attachments) yoksa yolları uyarlamadan; güvenilmeyen kaynaklardan dosya indirmek için.
@@ -88,7 +88,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Onay isteyen adımlar ve örnekler makul; betik yok, kopya tespiti agent'ın komutlarına bağlı. Lisans belirtilmemiş.
 
-### inbox-processor  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
+### inbox-processor  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
 
 - **Ne yapar:** Kasanın 00_Inbox klasöründeki notları PARA yöntemine göre (Projects/Areas/Resources/Archive/Sil) sınıflandırır; her not için hedef klasör, gerekçe ve ilişkili notlar içeren bir eylem planı sunar.
 - **Ne zaman:** PARA düzenli Obsidian kasasında gelen kutusu temizliği. · **Ne zaman değil:** PARA klasör yapısı yoksa (klasör adları uyarlanmalı); genel dosya düzeni için file-organizer.
@@ -99,7 +99,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve net sınıflandırma kuralları; claudesidian klasör adlarına bağlı.
 
-### init-bootstrap  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 60 (C)
+### init-bootstrap  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 61 (C)
 
 - **Ne yapar:** Claudesidian kasası için etkileşimli kurulum sihirbazı: klasör adı, bağımlılık kurulumu (pnpm/npm), git durumu, mevcut kasa yapısı ve çalışma alışkanlıkları hakkında sorular sorup kişiselleştirilmiş CLAUDE.md üretir.
 - **Ne zaman:** claudesidian şablonuyla yeni Obsidian kasası kurarken ilk yapılandırma. · **Ne zaman değil:** claudesidian dışındaki projelerde. Codex'te: allowed-tools (Task, MultiEdit) Claude Code'a özgü; üretilen dosyayı CLAUDE.md yerine AGENTS.md olarak yazdırmak gerekir.
@@ -214,7 +214,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 8 KB (SKILL.md 5.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### research-assistant  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
+### research-assistant  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
 
 - **Ne yapar:** Bir konuyu kasadaki notlar üzerinden araştırır: ilgili notları bulup okur, temaları, çelişkileri ve boşlukları çıkarır, wikilink'li bir araştırma özeti ve sonraki adımlar yazar.
 - **Ne zaman:** Kasada bir konu hakkında birikmiş bilgiyi sentezlemek. · **Ne zaman değil:** Web araştırması gerekiyorsa (agent-reach, content-research-writer); kasa yoksa.
@@ -245,7 +245,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### thinking-partner  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
+### thinking-partner  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
 
 - **Ne yapar:** Karmaşık bir problemi çözüme koşmadan sorularla birlikte düşünme modu: önce sorar, varsayımları yüzeye çıkarır, içgörüleri kaydeder, kasadaki ilgili notlarla bağlantı kurar ve periyodik özet çıkarır.
 - **Ne zaman:** Fikir keşfi, sesli düşünme, karar öncesi problem çerçeveleme. · **Ne zaman değil:** Kullanıcı doğrudan çözüm/uygulama istiyorsa; yapılandırılmış spec gerekiyorsa (planlama skilleri).
@@ -267,7 +267,7 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 11 KB (SKILL.md 11.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: SADECE ARŞİV (şablona özgü). Yedek ve çatışma çözüm felsefesi iyi düşünülmüş ama sadece claudesidian'a yarar.
 
-### weekly-synthesis  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 63 (C)
+### weekly-synthesis  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
 
 - **Ne yapar:** Haftanın notlarını ve çalışmalarını tarayıp tekrar eden temaları, içgörüleri, proje ilerlemesini, ortaya çıkan soruları, enerji denetimini ve not bağlantılarını içeren haftalık sentez notu yazar.
 - **Ne zaman:** Haftalık değerlendirme, bir sonraki haftanın planı. · **Ne zaman değil:** Kasa/not geçmişi yoksa; ekip haftalık raporu için internal-comms (3P).

@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/27**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/28**
 
 ### agent-development  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 100 (A)
 
@@ -86,6 +86,16 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Durum:** alternatif · **Örtüşme:** claude-hook → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 63 KB (SKILL.md 15.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil, hook grubunda). Anthropic resmi; tüm olaylar, girdi/çıktı şemaları ve test betikleri tek yerde. hookify kuralına göre daha güçlü ama daha zahmetli.
+
+### i-have-adhd  ·  ayghri/i-have-adhd @ 1ecea19  ·  puan 93 (A)
+
+- **Ne yapar:** Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until "stop adhd mode".
+- **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
+- **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
+- **Geliştirici:** ayghri (kisi, ★61897, son güncelleme 2026-10-19, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 9 KB (SKILL.md 7.0 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### library-curator  ·  nexu-io/open-design @ 987b247  ·  puan 97 (A)
 
@@ -181,7 +191,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### skill-creator@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 53 (C)
+### skill-creator@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 49 (D)
 
 - **Ne yapar:** skill-creator'ın eski sürümünün freshtechbro/claudedesignskills kopyası: skill anatomisi, aşamalı açılım ve init/package betikli 6 adımlı süreç.
 - **Ne zaman:** Güncel sürüme erişilemiyorsa yedek. · **Ne zaman değil:** Varsayılan olarak kullanma; composiohq kopyasıyla aynı içerik, anthropics/skill-creator güncel.
@@ -192,7 +202,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 41 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).
 
-### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 60 (C)
+### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 61 (C)
 
 - **Ne yapar:** Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark ve açıklama optimizasyonu dahil); NOTICE.md ile lisans notu eklenmiş.
 - **Ne zaman:** claudesidian kasası içinde skill geliştirirken (kasa bu kopyayı bekler). · **Ne zaman değil:** Diğer projelerde; anthropics/skill-creator ile aynı içerik.

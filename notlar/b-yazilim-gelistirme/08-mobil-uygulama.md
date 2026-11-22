@@ -24,7 +24,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 6 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### adaptive  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### adaptive  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Instructions to make or update an app's UI so that it adapts to different Android devices including phones, tablets, foldables, laptops, desktop, TV, Auto, and XR. It includes how to handle different window sizes, pointing devices (such as mouse) and text entry devices (such as keyboard) using the Compose MediaQuery API, and how to preserve UI, navigation, scroll, and media playback state across c
 - **Teknoloji:** canvas _(otomatik tespit)_
@@ -34,7 +34,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 126 KB (SKILL.md 21.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### agents-md-generator  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### agents-md-generator  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Create, generate, update, repair, trim, or split minimal AGENTS.md files for repository roots and confirmed nested modules using progressive disclosure. Use for missing, bloated, contradictory, or outdated agent instructions, monorepos, services, packages, module context, and portable agent guidance without assuming any fixed agent folder structure.
 - **Teknoloji:** git _(otomatik tespit)_
@@ -44,7 +44,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 5.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### agp-9-upgrade  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### agp-9-upgrade  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Upgrades, or migrates, an Android project to use Android Gradle Plugin (AGP) version 9. Do not use this skill for migrating Kotlin Multiplatform (KMP) projects.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -64,7 +64,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 17 KB (SKILL.md 17.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### android-cli  ·  android/skills @ 6daa53e  ·  puan 87 (A)
+### android-cli  ·  android/skills @ 6daa53e  ·  puan 88 (A)
 
 - **Ne yapar:** Provides instructions for installing and using the `android` CLI. The `android` command-line tool is a critical tool for Android development and helps you create new Android projects, install APKs onto devices and emulators and launch and run apps on them, manage and interact with Android virtual devices (including screenshots and UI inspection), manage Android SDK components, look up official And
 - **Teknoloji:** - _(otomatik tespit)_
@@ -84,7 +84,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 49 KB (SKILL.md 38.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### android-development  ·  dpconde/claude-android-skill @ edfca5e  ·  puan 62 (C)
+### android-development  ·  dpconde/claude-android-skill @ edfca5e  ·  puan 63 (C)
 
 - **Ne yapar:** Create production-quality Android applications following Google's official architecture guidance and NowInAndroid best practices. Use when building Android apps with Kotlin, Jetpack Compose, MVVM architecture, Hilt dependency injection, Room database, or multi-module projects. Triggers on requests to create Android projects, screens, ViewModels, repositories, feature modules, or when asked about A
 - **Teknoloji:** - _(otomatik tespit)_
@@ -94,7 +94,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 93 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### android-for-cars-parked-apps  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### android-for-cars-parked-apps  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Adapt existing Android video streaming apps, games, and web browsers to run as parked apps on Android Auto and Android Automotive OS. Covers manifest configuration, Google Play hardware feature declarations, compatibility mode, back navigation affordances, orientation and display continuity, controllable system bar insets, irregular display cutouts, driver distraction lifecycle handling, MediaSess
 - **Teknoloji:** - _(otomatik tespit)_
@@ -104,7 +104,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 72 KB (SKILL.md 17.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### android-intent-security  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### android-intent-security  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Best practices for Android Intent security. Use this skill when auditing component configurations in AndroidManifest.xml activities, services, receivers) or source code handling incoming Intents (getIntent, getParcelableExtra) to prevent Intent Redirection and unauthorized access.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -114,7 +114,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 24 KB (SKILL.md 23.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### android-permissions-security  ·  android/skills @ 6daa53e  ·  puan 89 (A)
+### android-permissions-security  ·  android/skills @ 6daa53e  ·  puan 90 (A)
 
 - **Ne yapar:** Audits, detects gaps, and remediates Android permissions and IPC component security vulnerabilities. Use when reviewing AndroidManifest.xml, defining custom permissions, securing Services, Receivers, and Providers, verifying caller signatures and UID using Binder, or implementing runtime permission flows.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -124,7 +124,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 87 KB (SKILL.md 28.5 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### android-profiler  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### android-profiler  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Records and analyzes Android performance data and diagnoses performance bottlenecks across user apps, system apps, and system services, even if the user does not explicitly mention profiling or traces. Use when: recording system traces, CPU call stacks, Vulkan GPU/DRM memory, or Java/native heap profiles; analyzing Perfetto traces for UI jank, frame drops, ANRs, or app startup latency issues; inve
 - **Teknoloji:** - _(otomatik tespit)_
@@ -134,7 +134,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 78 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### anr-audit-and-fix  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### anr-audit-and-fix  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Audits Android codebases for ANR risks and diagnoses ANR stack dumps. Use this skill when scanning Android code for ANR risks or triaging ANR stack dumps. Don't use for non-ANR crashes, dropped frames, general CPU profiling, or Perfetto system traces.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -164,7 +164,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 189 KB (SKILL.md 6.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### appfunctions  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### appfunctions  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Analyzes Android apps to find user workflows to expose as AppFunctions, such as creating a note, playing media, or sending a message. AI agents, voice commands, and system shortcuts then run them without opening the app UI. Generates Kotlin code with the androidx.appfunctions library, and refines KDoc and the app description so that agents choose and call functions correctly. Use this skill when d
 - **Teknoloji:** - _(otomatik tespit)_
@@ -236,7 +236,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 11.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### camerax  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### camerax  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Provide technical guidance for Android camera development with CameraX. Use when implementing camera features, handling asynchronous recording lifecycles, wiring low-level hardware interop using CameraX, or integrating ML Kit or Media3 effects.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -306,7 +306,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### dart-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### dart-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Build, fix, audit, and migrate Drift persistence in Dart CLI, server-side, and non-Flutter desktop apps. Use when adding SQLite with package:drift/native.dart, configuring PostgreSQL with drift_postgres and package:postgres, writing type-safe tables, queries, writes, streams, and migrations, resolving build_runner or drift_dev failures, or validating Dart database code with code generation, analys
 - **Teknoloji:** - _(otomatik tespit)_
@@ -347,7 +347,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** Aynı ad, iki kaynak: bu kayıt evanca/flutter-ai-rules (Flutter/Dart AI kuralları içinde Genkit Dart geliştirme). google/skills resmî Google kaynağıdır (developing-genkit-dart@google). Çıplak ad bu eski kayıtta kaldı; tercih durum_elle ile buna sabitlendi (devir yapılmadı). Aynı iş olabilir; ad_devral kararı (resmî kaynağa devir) ana oturumun.
 
-### display-glasses-with-jetpack-compose-glimmer  ·  android/skills @ 6daa53e  ·  puan 89 (A)
+### display-glasses-with-jetpack-compose-glimmer  ·  android/skills @ 6daa53e  ·  puan 90 (A)
 
 - **Ne yapar:** Provides guidelines for developing projected Android XR apps for display glasses using the Jetpack Compose Glimmer UI toolkit. Covers Glimmer design principles, workflows, and interaction models for the glasses form factor. Use this skill to build an Android XR Augmented Experience app with Jetpack Compose Glimmer. Don't use for audio-only AI glasses without a display, non-glasses Android XR heads
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -427,7 +427,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### edge-to-edge  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### edge-to-edge  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Use this skill to migrate your Jetpack Compose app to add adaptive edge-to-edge support and troubleshoot common issues. Use this skill to fix UI components (like buttons or lists) that are obscured by or overlapping with the navigation bar or status bar, fix IME insets, and fix system bar legibility.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -447,7 +447,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### engage-sdk-integration  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### engage-sdk-integration  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Helps developers integrate, debug, and resolve Play Engage SDK implementation issues. Use when adding Engage SDK support, generating publishing code, mapping data classes to entities, or fixing SDK-related errors.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -767,7 +767,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-adaptive-ui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-adaptive-ui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Build, fix, review, and validate adaptive or responsive Flutter UIs for mobile, tablet, desktop, web, large screens, foldables, and mixed input devices. Use when creating breakpoint-driven layouts, responsive navigation, adaptive dialogs/lists/grids, keyboard/mouse/touch behavior, window-size decisions with MediaQuery or LayoutBuilder, or Capability and Policy patterns for platform-specific behavi
 - **Teknoloji:** - _(otomatik tespit)_
@@ -777,7 +777,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 53 KB (SKILL.md 5.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-animations  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-animations  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Add, fix, refactor, debug, test, or explain Flutter animations and motion effects. Use when working with implicit animations such as AnimatedContainer, AnimatedOpacity, AnimatedSwitcher, and TweenAnimationBuilder; explicit animations using AnimationController, Tween, CurvedAnimation, AnimatedWidget, AnimatedBuilder, and built-in transitions; Hero/shared-element route transitions; staggered or sequ
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -798,7 +798,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-architecture  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-architecture  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Design, refactor, review, or implement Flutter app architecture using MVVM, layered UI/Data/optional Domain boundaries, feature-first or layer-first project structure, repositories, services, dependency injection, Result and Command patterns, offline-first or optimistic UI flows. Use when asked to add a Flutter feature, audit layer dependencies, fix cross-feature imports, migrate to feature-first,
 - **Teknoloji:** - _(otomatik tespit)_
@@ -829,7 +829,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-drift  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Implement, fix, review, migrate, test, or debug Drift persistence in Flutter apps using SQLite, drift_flutter, type-safe Dart queries, generated tables, StreamBuilder or Riverpod StreamProvider UI, write operations, transactions, schema migrations, web assets, isolate sharing, and local database testing. Use when a Flutter task mentions drift, local database storage, SQLite, reactive database stre
 - **Teknoloji:** - _(otomatik tespit)_
@@ -839,7 +839,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 48 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-duit-bdui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-duit-bdui  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Integrate, fix, review, migrate, test, or debug Duit / flutter_duit backend-driven UI in Flutter applications. Use when a task mentions DUIT, flutter_duit, backend-driven UI, BDUI, server-driven UI, XDriver, DuitViewHost, DuitRegistry, HTTP or WebSocket transports, custom Duit widgets, components, capability delegates, compile-time DUIT flags, or rendering JSON layouts from a backend.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -859,7 +859,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-internationalization  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-internationalization  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Add, fix, audit, and maintain Flutter internationalization with gen-l10n, ARB files, AppLocalizations, flutter_localizations, intl formatting, plural/select messages, RTL support, locale-specific number/date formatting, and localization build errors. Use when asked to add l10n or i18n, translate Flutter UI text, configure l10n.yaml, manage ARB translations, migrate away from package:flutter_gen im
 - **Teknoloji:** - _(otomatik tespit)_
@@ -869,7 +869,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 23 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### flutter-navigation  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 59 (C)
+### flutter-navigation  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 60 (C)
 
 - **Ne yapar:** Implement, fix, refactor, review, migrate, or validate Flutter navigation and routing. Use when working with Navigator, MaterialPageRoute, Router API, go_router, route guards, redirects, ShellRoute or StatefulShellRoute, nested Navigators, passing and returning route data, deep links, Android App Links, iOS Universal Links, custom URI schemes, Flutter web URL strategy, browser history, 404 routing
 - **Teknoloji:** html _(otomatik tespit)_
@@ -879,7 +879,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 33 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### flutter-networking  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 61 (C)
+### flutter-networking  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 62 (C)
 
 - **Ne yapar:** Implement, fix, debug, review, or refactor Flutter networking code for HTTP/REST APIs, WebSocket realtime flows, authentication and token refresh, request headers, timeouts, retries, JSON parsing, caching, background isolates, repositories, services, and adaptation to existing http, Dio, Retrofit, Chopper, or custom API clients. Use when asked to add network requests, investigate network errors, h
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -910,7 +910,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### flutter-testing  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 56 (C)
+### flutter-testing  ·  MADTeacher/mad-agents-skills @ 2fb67e3  ·  puan 57 (C)
 
 - **Ne yapar:** Write, fix, review, debug, and validate Flutter tests for apps, packages, and plugins. Use when adding unit tests, widget tests, integration tests, MethodChannel or plugin mocks, Mockito or mocktail test doubles, golden or accessibility checks, CI test commands, test failures, MissingPluginException, pump or pumpAndSettle problems, finder errors, build_runner mock generation, device integration te
 - **Teknoloji:** - _(otomatik tespit)_
@@ -951,7 +951,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 27 KB (SKILL.md 9.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### glance-appwidget-updates-and-memory  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### glance-appwidget-updates-and-memory  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Manages Android AppWidget state updates, background syncs, and RemoteViews bitmap memory limits with Jetpack Glance (androidx.glance:glance-appwidget) and AppWidgetProvider receivers on Android 17 (API 37). Use this skill when configuring Android 17 (API level 37) compileSdk/targetSdk and AndroidManifest.xml widget receivers, refreshing frozen or stale Glance widget UI after CoroutineWorker DataSt
 - **Teknoloji:** - _(otomatik tespit)_
@@ -961,7 +961,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 92 KB (SKILL.md 20.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### glance-canonical-layouts  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### glance-canonical-layouts  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Use this skill to create home screen widgets using Jetpack Glance Canonical Layouts from the Android Platform Samples project, or when asked to implement standard widget layout patterns (including Check List, Image Grid, Snap Scrolling, and Standard Toolbar).
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1071,7 +1071,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 26 KB (SKILL.md 7.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ink-app-builder  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### ink-app-builder  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Adds inking and freehand drawing capabilities to an Android app using Jetpack Ink (androidx.ink) and Compose. Use this skill when implementing stylus or touch drawing surfaces, rendering wet and dry ink strokes, configuring stock brushes (pressure pen, marker, highlighter), implementing geometry-based erasing, linear undo and redo history, or stroke persistence with Room. Delivers working Compose 
 - **Teknoloji:** canvas, node _(otomatik tespit)_
@@ -1081,7 +1081,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 66 KB (SKILL.md 15.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ink-custom-brush-builder  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### ink-custom-brush-builder  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Creates custom BrushFamily definitions for an Android app using Jetpack Ink (androidx.ink 1.1.0-alpha03 and higher). Use this skill when configuring custom BrushTip shapes, adding pressure, tilt, speed, or noise sensitivity using BrushBehavior node graphs, creating multi-coat layered brushes, applying tiling or particle stamping textures, configuring SlidingWindowModel input smoothing, or serializ
 - **Teknoloji:** canvas, node, webgl _(otomatik tespit)_
@@ -1191,7 +1191,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 180 KB (SKILL.md 23.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### jetpack-compose-performance  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### jetpack-compose-performance  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Diagnose and optimize Android Jetpack Compose UI code. Use this skill when analyzing performance bottlenecks of existing code to minimize recomposition overhead and prevent dropped frames and UI lag.
 - **Teknoloji:** canvas, node, webgl _(otomatik tespit)_
@@ -1361,7 +1361,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 16 KB (SKILL.md 15.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### leanback-to-compose-tv-migration  ·  android/skills @ 6daa53e  ·  puan 89 (A)
+### leanback-to-compose-tv-migration  ·  android/skills @ 6daa53e  ·  puan 90 (A)
 
 - **Ne yapar:** Provides instructions and architectural patterns for migrating Android TV applications from legacy Leanback UI Toolkit, Android Views, or Support Fragments to Jetpack Compose for TV (androidx.tv). Use this skill for Leanback to Compose migrations, including browse screen, settings screen, authentication screen, login screen, or video playback screen migrations, or when replacing BrowseSupportFragm
 - **Teknoloji:** canvas _(otomatik tespit)_
@@ -1381,7 +1381,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 554 KB (SKILL.md 34.9 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### litert-lm  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### litert-lm  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Builds an Android app that runs an open text LLM on the device, on the CPU or the GPU, with the LiteRT-LM Kotlin API (com.google.ai.edge.litertlm:litertlm-android). Use this skill when creating a chat, summarization, or extraction feature with a .litertlm model from Hugging Face litert-community (Gemma, Qwen, Llama, Phi), including the Gradle dependency, the GPU manifest entries, getting the model
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1391,7 +1391,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 56 KB (SKILL.md 17.9 KB, yük orta)
 - **İnceleme:** otomatik
 
-### litert-runtime  ·  android/skills @ 6daa53e  ·  puan 89 (A)
+### litert-runtime  ·  android/skills @ 6daa53e  ·  puan 90 (A)
 
 - **Ne yapar:** Configures and implements LiteRT (.tflite) on-device inference on Android in Kotlin using the CompiledModel API on CPU and GPU. Use this skill for any Android LiteRT or .tflite task, including Gradle setup, image classification or vision/audio/embedding helpers, TensorBuffer reuse, CPU memory optimization, Bitmap preprocessing, AndroidViewModel GPU-to-CPU fallback with warm-up on a single-thread d
 - **Teknoloji:** next.js, python, webgl _(otomatik tespit)_
@@ -1421,7 +1421,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 50 KB (SKILL.md 9.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### media3-cast-integration  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### media3-cast-integration  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Implements Google Cast support in Android apps using Jetpack Media3. Handles adding build dependencies, updating manifest, configuring OptionsProvider, and managing CastPlayer or RemoteCastPlayer for playback in both Compose and View-based UIs. Use when adding Cast functionality or migrating from legacy Cast SDK to Media3 Cast.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1431,7 +1431,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 29 KB (SKILL.md 10.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### migrate-xml-views-to-jetpack-compose  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### migrate-xml-views-to-jetpack-compose  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Provides a structured workflow for migrating an Android XML View to Jetpack Compose. This skill details the step-by-step process, from planning and dependency setup, to theming and layout migration, validation and XML cleanup. Use this skill when you need to migrate an XML View to Jetpack Compose in an Android project. It solves the problem of converting the UI of a legacy XML View into modern, de
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1441,7 +1441,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 53 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ml-kit-genai-prompt-api  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### ml-kit-genai-prompt-api  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Analyzes Android codebases to implement ML Kit GenAI Prompt API. Use this skill to send natural language requests on-device to Gemini Nano, use structured output with Prompt API, implement prefix caching, optimize the current prompt, or apply best practices.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1451,7 +1451,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 42 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### mlkit-agent-api  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### mlkit-agent-api  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Builds autonomous on-device agentic workflows in Android apps using the ML Kit GenAI Agent API powered by Gemini Nano and AICore. Use this skill when implementing conversational agents, multi-turn chat with AgentSession in a ViewModel, autonomous tool calling using Android AppFunctions (@AppFunctionDeclaration and AppFunctionAgentTools.discover), ephemeral single-turn execution with runner.runSing
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1491,7 +1491,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### navigation-3  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### navigation-3  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Learn how to install and migrate to Jetpack Navigation 3, and how to implement features and patterns such as deep links, multiple backstacks, scenes (dialogs, bottom sheets, list-detail, two-pane, supporting pane), conditional navigation (such as logged-in navigation versus anonymous), returning results from flows, integration with Hilt, ViewModel, Kotlin, and view interoperability.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1501,7 +1501,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 256 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### navigation-event  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### navigation-event  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Intercept back gestures and run Predictive Back animations using the NavigationEvent (androidx.navigationevent) library in Compose Android. Handles Activity setup, parent-child dispatcher scoping in `ViewPagers` or tabs, Compose `NavigationBackHandler`, and migration from legacy `BackHandler` on SDK 36+.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1601,7 +1601,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 11.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### play-billing-library-version-upgrade  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### play-billing-library-version-upgrade  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Use this skill when upgrading or migrating an Android project from any legacy Google Play Billing Library (PBL) version to the latest stable version of PBL.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1621,7 +1621,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 21 KB (SKILL.md 20.8 KB, yük orta)
 - **İnceleme:** otomatik
 
-### play-policy-insights  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### play-policy-insights  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Automated auditor designed to verify Android applications against Google Play Policy domains. It cross-references static code analysis with Play Store declarations to generate deterministic compliance reports, identifying undeclared data collection, architectural risks, and missing disclosures across Permissions and APIs Hygiene, User Account and Identity, and Data Safety and Privacy domains.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -1641,7 +1641,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 11.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### projected-hardware  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### projected-hardware  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Provides instructions and workflows for accessing and managing hardware on Android XR projected devices, such as audio glasses and display glasses. Use this skill when building experiences for intelligent eyewear in an Android app and you need to access device hardware like the camera and microphone, handle glasses-specific runtime permissions, or manage connection lifecycles using projected conte
 - **Teknoloji:** - _(otomatik tespit)_
@@ -1671,7 +1671,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 11 KB (SKILL.md 10.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### r8-analyzer  ·  android/skills @ 6daa53e  ·  puan 94 (A)
+### r8-analyzer  ·  android/skills @ 6daa53e  ·  puan 95 (A)
 
 - **Ne yapar:** Analyzes Android build files and R8 keep rules to identify redundancies, broad package-wide rules, and rules that subsume library consumer keep rules. Use this skill when developers want to optimize their Android app's size, remove redundant or overly broad keep rules, or troubleshoot ProGuard configurations. Don't use for general Gradle build errors, Compose UI performance, or runtime CPU profili
 - **Teknoloji:** python _(otomatik tespit)_
@@ -1701,7 +1701,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 33 KB (SKILL.md 14.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### restore-credentials  ·  android/skills @ 6daa53e  ·  puan 89 (A)
+### restore-credentials  ·  android/skills @ 6daa53e  ·  puan 90 (A)
 
 - **Ne yapar:** Provides knowledge and workflows to implement Android's Restore Credentials feature using the androidx.credentials library. Use this skill to create, sign in with, and delete restore keys, enabling silent user sign-in on new devices after a restore. It covers version compatibility, dependencies, server-side prerequisites, and the complete client-side implementation for creating, retrieving, and cl
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1781,7 +1781,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 14 KB (SKILL.md 13.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### styles  ·  android/skills @ 95ea931  ·  puan 92 (A)
+### styles  ·  android/skills @ 95ea931  ·  puan 93 (A)
 
 - **Ne yapar:** Use this skill to integrate the Jetpack Compose Styles API into an Android project. This skill guides you through upgrading dependencies, setting up component themes, making custom components styleable, and migrating existing layout properties to use unified styles. Migrate custom design system components, replace hard coded parameters with Style attributes, and use Modifier.styleable for interact
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1954,7 +1954,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **İnceleme:** otomatik
 - **Not:** İkinci tur işlevsel örtüşme (2026-10-31): ad ve açıklamaları karşılaştırılarak gruplandı; silinmedi.
 
-### testing-setup  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### testing-setup  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Analyze and create a testing strategy for Android apps - install testing libraries, set up test infrastructure, create harnesses for unit tests, UI tests, screenshot tests, and end-to-end tests.
 - **Teknoloji:** react _(otomatik tespit)_
@@ -1994,7 +1994,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 7 KB (SKILL.md 7.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### verified-email  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### verified-email  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Provides a complete workflow for implementing verified email retrieval on Android Credential Manager API. Use this skill to integrate a secure, OTP-less email verification flow into an Android app. This skill solves the problem of high-friction sign-up processes by leveraging cryptographically verified credentials from trusted providers like Google.
 - **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
@@ -2024,7 +2024,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 25 KB (SKILL.md 17.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### wear-compose-m3  ·  android/skills @ 6daa53e  ·  puan 89 (A)
+### wear-compose-m3  ·  android/skills @ 6daa53e  ·  puan 90 (A)
 
 - **Ne yapar:** Guidance for Wear OS Compose Material3 (Wear Compose Material 3 / Wear Compose Material3) watch and wearable apps. Covers creating, updating, and migrating projects (Material 2.5 and Horologist migration) using androidx.wear.compose.material3, androidx.wear.compose.foundation, and androidx.wear.compose.navigation3, including AppScaffold, ScreenScaffold, TransformingLazyColumn, ambient mode, and pr
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -2034,7 +2034,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 - **Boyut:** 453 KB (SKILL.md 38.2 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### wear-widgets  ·  android/skills @ 6daa53e  ·  puan 92 (A)
+### wear-widgets  ·  android/skills @ 6daa53e  ·  puan 93 (A)
 
 - **Ne yapar:** Create, migrate, update, and verify Wear OS widgets using Glance Wear and Remote Compose in an Android project. Use this skill when implementing GlanceWearWidget, GlanceWearWidgetService, WearWidgetDocument, Remote Compose UI primitives (RemoteColumn, RemoteRow, RemoteBox, RemoteText, RemoteImage, RemoteButton), local state with rememberMutableRemoteInt and valueChange, click actions with pendingI
 - **Teknoloji:** - _(otomatik tespit)_

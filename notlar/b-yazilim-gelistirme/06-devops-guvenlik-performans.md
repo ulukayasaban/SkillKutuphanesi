@@ -14,7 +14,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 49 KB (SKILL.md 12.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### api-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
+### api-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
 - **Ne yapar:** Design API and webhook monitoring for e-commerce integrations: health checks, alerting rules, SLA reports and integration validation for Shopify, Amazon, Walmart, WooCommerce, Etsy or TikTok Shop endpoints. Use when setting up uptime/error alerts for store APIs, webhooks failing silently, or planning integration SLAs.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -406,7 +406,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 15 KB (SKILL.md 13.0 KB, yük orta)
 - **İnceleme:** otomatik
 
-### domain-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
+### domain-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
 - **Ne yapar:** Design domain and SSL monitoring for e-commerce sites: domain/SSL expiry alerts, DNS anomaly detection and security rating checks. Use when a store needs certificate or domain-renewal alerts, DNS change monitoring, or a website security health check plan.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -436,7 +436,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 22 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### file-integrity-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
+### file-integrity-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
 - **Ne yapar:** Design file integrity monitoring for e-commerce websites: file change detection, tamper alerts, security baselines and recovery procedures. Use when protecting a store (WooCommerce, Magento, custom) from malicious code injection, card skimmers or unauthorized theme/plugin edits.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1126,7 +1126,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 5 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### localization-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
+### localization-testing  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
 - **Ne yapar:** Plan localization and internationalization QA for e-commerce sites: multi-language checks, currency and price formatting, shipping info and regional compliance audits. Use when launching a store in a new country or language, or auditing translations, currencies and local legal requirements.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1199,7 +1199,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 13 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, tamamlayıcı (opsiyonel). Kısa ve betikli; içerik büyük ölçüde performance-optimization'ın ölçüm bölümünün tablo özeti.
 
-### public-status-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
+### public-status-page  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
 - **Ne yapar:** Design a public status page for an e-commerce business: component structure, incident communication templates, subscriber notifications and uptime reporting. Use when creating or improving a status page, or writing customer-facing incident and outage updates.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -1384,7 +1384,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 32 KB (SKILL.md 17.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### synthetic-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 79 (B)
+### synthetic-monitoring  ·  nexscope-ai/eCommerce-Skills @ ee0fb29  ·  puan 80 (A)
 
 - **Ne yapar:** Design synthetic monitoring for e-commerce sites: scripted user-journey checks for search, add-to-cart, checkout and payment with alert rules and performance baselines. Use when you need to catch broken checkout or cart flows before customers do.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_

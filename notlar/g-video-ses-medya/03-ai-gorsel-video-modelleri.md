@@ -31,7 +31,7 @@ _AI görsel/video model sağlayıcıları (Kling, Seedance, Flux, HeyGen, ComfyU
 - **Ne yapar:** Google Antigravity'nin komut satırı aracı (agy) üzerinden görsel üretir ve dosyayı istenen klasöre kaydeder. Kullanıcı "Antigravity ile resim üret", "antigravity'den görsel yap", "agy ile görsel", "Antigravity'ye bağlanıp ... resmi çiz" gibi bir şey dediğinde kullan. Antigravity adı geçmeyen genel görsel isteklerinde kullanma.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-17, lisans Kendi (özel))
+- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-22, lisans Kendi (özel))
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik

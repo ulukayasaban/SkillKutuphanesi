@@ -47,7 +47,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 355
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 356
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -269,6 +269,7 @@
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `nlm-skill` | 03-web-arastirma-veri | nlm komutu ücretsizdir ve Google hesabıyla çalışır; kullanım kotaları Gemini Notebook planına bağlıdır (ücretsiz planda sınırlı) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
+| `caption-qa` | 01-uygulama-entegrasyonlari | Composio hesabı gerekir (ücretsiz katman var); bağlanan uygulamanın kendi planı geçerli |
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
 | `cinecode` | 01-video-uretim-montaj | Film kodla üretilir ve ücretsiz çalışır. Seslendirme için Gemini TTS anahtarı (ücretsiz katmanı var) ya da isteğe bağlı ElevenLabs; stok arama için ücretsiz Pixabay anahtarı. Skill ücretli servis, anahtar ve büyük indirmeyi kullanıcı onayı olmadan kullanmaz. |
 | `cut-silences` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var |

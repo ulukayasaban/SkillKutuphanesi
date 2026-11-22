@@ -4,7 +4,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 
 > `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **33/33**
 
-### aframe-webxr  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 59 (C)
+### aframe-webxr  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 55 (C)
 
 - **Ne yapar:** A-Frame ile HTML tabanlı WebXR/VR/AR deneyimleri: entity-component yapısı, sahne, kameralar, ışık, animasyon, özel bileşenler, VR kontrolcü etkileşimi, 360° galeri; sahne/bileşen betikleri ve başlangıç projesi.
 - **Ne zaman:** VR/AR/360° içerik, az JavaScript ile immersif sayfalar. · **Ne zaman değil:** Klasik masaüstü 3D sayfalar; yüksek performanslı oyunlar.
@@ -15,7 +15,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 176 KB (SKILL.md 26.7 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (niş). WebXR için tek kaynak. Dikkat: SKILL.md CDN script'lerine (jsdelivr, cdnjs) bağlanıyor; 335 gün eski, 26.7 KB.
 
-### babylonjs-engine  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 59 (C)
+### babylonjs-engine  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 55 (C)
 
 - **Ne yapar:** Babylon.js 3D motoru: engine/sahne başlatma, kameralar, ışık, mesh, materyaller, model yükleme, fizik (Havok), animasyon; sahne ve mesh üreten betikler, Vite başlangıç projesi.
 - **Ne zaman:** Three.js dışında tam özellikli motor (fizik, GUI, editör) gereken oyun/görselleştirme projeleri. · **Ne zaman değil:** Standart Three.js/R3F işleri; hafif dekoratif efekt.
@@ -26,7 +26,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 153 KB (SKILL.md 30.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (niş). Başka skill Babylon.js'i kapsamıyor; içerik düzenli ve hacimli. Dikkat: 30 KB (en büyük freshtechbro skilli); 335 gün eski; scene_generator.py yalnız npm komutu yazdırır.
 
-### blender-web-pipeline  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### blender-web-pipeline  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 57 (C)
 
 - **Ne yapar:** Blender'dan web için glTF/GLB dışa aktarma: bpy betikleri, toplu işleme, LOD üretimi, model optimizasyonu, Three.js/Babylon.js için hazırlama.
 - **Ne zaman:** Blender'da hazırlanan modelleri web'e aktarırken otomasyon. · **Ne zaman değil:** Blender kurulu değilse; yalnız küçültme için threejs-asset-pipeline.
@@ -37,7 +37,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 27 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Blender tarafı için tek kaynak, betikler yararlı. Dikkat: Blender kurulu olmalı; scripts/ içeriği bpy ile yerel dosya yazar, ağ çağrısı yok; 335 gün eski.
 
-### lightweight-3d-effects  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 60 (C)
+### lightweight-3d-effects  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 56 (C)
 
 - **Ne yapar:** Zdog (sözde-3D vektör çizimler), Vanta.js (animasyonlu 3D arka planlar) ve Vanilla-Tilt (paralaks eğim) ile hafif dekoratif 3D efektler; kurulum ve efekt üretici betikler.
 - **Ne zaman:** Hero arka planı, dekoratif 3D illüstrasyon, kart tilt efekti; ağır framework istemeyen sayfalar. · **Ne zaman değil:** Gerçek 3D sahne/model (Three.js skilleri); erişilebilirlik kritikse sürekli hareket.
@@ -48,7 +48,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 179 KB (SKILL.md 22.3 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (niş). Hafif efekt için tek kaynak. Dikkat: kırık bağlantı 'illo' yanlış alarm (JS değişkeni, dosya değil); örnekler CDN'den eski three@0.134 ve vanta@0.5 yüklüyor; reduced-motion uyarısı yok.
 
-### playcanvas-engine  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### playcanvas-engine  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 57 (C)
 
 - **Ne yapar:** PlayCanvas motoru: Application, entity-component sistemi, güncelleme döngüsü, glTF, materyal, fizik, özel script ve girdi; hazır başlangıç projesi (kamera/girdi script'leri) içerir.
 - **Ne zaman:** Hafif WebGL/WebGPU oyun motoru ve PlayCanvas editörüyle çalışan projeler. · **Ne zaman değil:** Three.js/R3F tabanlı projeler.
@@ -59,7 +59,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 183 KB (SKILL.md 22.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (niş). Ayrı bir motor için tek kaynak. Dikkat: 335 gün eski; starter README'si terser/vercel gibi küresel npm kurulumu öneriyor (otomatik çalışmaz).
 
-### react-three-fiber  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### react-three-fiber  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 57 (C)
 
 - **Ne yapar:** React Three Fiber ile deklaratif 3D sahne: Canvas, useFrame/useThree/useLoader, etkileşimli nesneler, glTF yükleme; sahne/bileşen üreten betikler ve Vite başlangıç projesi içerir.
 - **Ne zaman:** Hazır R3F başlangıç projesi ve bileşen üretici betik isteniyorsa; R3F v8/React 18 projeleri. · **Ne zaman değil:** Güncel R3F+drei bilgisi için threejs-react-three-fiber.
@@ -70,7 +70,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 105 KB (SKILL.md 22.5 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İçerik makul ve başlangıç şablonu işe yarar, ancak CloudAI-X sürümü daha güncel (WebGPU/TSL, Common Mistakes). Dikkat: starter package.json R3F ^8.18 / three ^0.172 sabitler; React 19 için R3F v9 gerekir. npm install adımları şablon README'sinde.
 
-### spline-interactive  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### spline-interactive  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 57 (C)
 
 - **Ne yapar:** Spline: tarayıcı tabanlı görsel 3D tasarım aracı; sahneyi React/web'e @splinetool/react-spline ile gömme, olay yönetimi, nesne kontrolü ve durum tabanlı animasyon; proje/bileşen üretici betikler.
 - **Ne zaman:** Kodsuz tasarlanmış 3D sahneyi siteye gömmek; tasarımcı odaklı hızlı prototip. · **Ne zaman değil:** Kod ile tam kontrollü sahne; Spline hesabı/dosyası yoksa.
@@ -81,7 +81,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 54 KB (SKILL.md 19.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (niş). Hızlı landing page 3D'si için pratik. Dikkat: Spline hesabı ve sahne URL'i gerekir (üçüncü taraf barındırma); ağır runtime paketi; 335 gün eski.
 
-### substance-3d-texturing  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 53 (C)
+### substance-3d-texturing  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 49 (D)
 
 - **Ne yapar:** Adobe Substance 3D Painter ile PBR materyal/doku üretimi ve web/oyun motoru için dışa aktarma: export preset'leri, toplu dışa aktarma, çözünürlük geçersiz kılma, Pillow ile web optimizasyonu.
 - **Ne zaman:** Substance Painter lisansı olan ekiplerde doku hattı otomasyonu. · **Ne zaman değil:** Substance lisansı yoksa; kodla materyal tanımlama (threejs-materials, threejs-textures).
@@ -345,7 +345,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 13 KB (SKILL.md 13.3 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. CloudAI-X sürümünün (threejs-textures) eski ve daha kısa karşılığı: WebGPU/TSL, güncel API ve 'Common Mistakes' bölümleri yok, açıklaması yüzeysel. İçerik farkı: ana sürümde 800-950 satır diff var. AGPL-3.0 (OpenMontage) lisansı. 'OpenMontage kurulumu gerekir' uyarısı bu skill için gereksiz (içinde OpenMontage komutu yok) ama kayıtta duruyor. Dikkat: ana sürümle aynı anda kurulursa aynı ad çakışır.
 
-### threejs-webgl  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 53 (C)
+### threejs-webgl  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 49 (D)
 
 - **Ne yapar:** Three.js/WebGL/WebGPU geliştirmesine genel bakış: sahne grafı, temel bileşenler, hazır sahne kalıbı, mesh/ışık/instancing/glTF/gölge örnekleri; kurulum betiği ve başlangıç sahnesi içerir.
 - **Ne zaman:** Hızlı başlangıç şablonu isteniyorsa (setup_scene.py). · **Ne zaman değil:** Güncel Three.js işleri için threejs-fundamentals ve konu skillleri.
@@ -356,7 +356,7 @@ _Three.js, React Three Fiber, Babylon, PlayCanvas, Spline, WebXR, shader_
 - **Boyut:** 62 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Konu bazında bölünmüş threejs-* serisinin (CloudAI-X) yüzeysel ve eskimiş özeti; hepsini tek dosyada geçiştirir. 335 gün güncellenmemiş. Dikkat: scripts/setup_scene.py yalnız dosya üretir, ağ/yıkıcı çağrı yok.
 
-### web3d-integration-patterns  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 61 (C)
+### web3d-integration-patterns  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 57 (C)
 
 - **Ne yapar:** Three.js, GSAP ScrollTrigger, React Three Fiber, Motion ve React Spring'i birleştirme desenleri: katmanlı ayrım, birleşik React bileşeni, hibrit R3F+GSAP, scroll güdümlü kamera, Zustand ile durum, performans.
 - **Ne zaman:** Scroll ile hareket eden 3D hikaye siteleri, 3D + animasyon kütüphanelerini birlikte kurarken mimari karar. · **Ne zaman değil:** Tek kütüphaneli basit sahne.
