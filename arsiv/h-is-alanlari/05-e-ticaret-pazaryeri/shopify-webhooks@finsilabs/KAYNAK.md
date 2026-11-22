@@ -8,4 +8,4 @@
 - **Lisans:** MIT
 - **Geliştirici:** finsilabs (kurum)
 - **Arşive alınma:** 2026-11-02
-- **Durum:** alternatif
+- **Durum:** tercih

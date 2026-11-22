@@ -1,6 +1,6 @@
 # Örnek görevler ve test sonucu › i-bilim-muhendislik
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 378 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-22 · 383 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
@@ -369,16 +369,21 @@
 | `wiki-enrich` | ⚠️ | user says 'enrich wiki', 'fill paper TODOs', 'wiki body 補完', '把 paper 摘要寫進 wiki', 'research-wiki 自動填', or after a batch ingest that left papers/ as TODO scaffol |
 | `writing-systems-papers` | ✅ | user says \"写系统论文\", \"systems paper structure\", \"OSDI paper\", \"SOSP paper\", or wants fine-grained structural guidance for a systems conference submission. |
 | `bambu-labs` | ✅ | the user wants to print a sliced `.gcode.3mf`, a Bambu `.gcode` or an unsliced model on a Bambu Lab printer, over Bambu Cloud or LAN |
-| `cad` | ✅ | 3D CAD modeling, editing a model script (any change to a part's or assembly's `.py`), organizing a CAD project, exporting or converting CAD files, Quick Edit pr |
+| `cad` | ✅ | any request to model, change, measure, inspect, animate, export or convert a part or a CAD file (STEP, STL, 3MF, GLB, DXF, xbf), for references and Quick Edit p |
 | `dfam-check` | ✅ | the user asks whether a part is printable, wants overhang/wall-thickness/support analysis of an `.stl`, `.obj`, `.ply`, or `.3mf` mesh, wants a build-orientatio |
 | `dfm` | ✅ | the user asks whether a part can be bent, machined or molded, asks about manufacturability or tooling, or asks for a DFM review or redesign. |
 | `dxf` | ✅ | DXF files, `.py` drawing scripts, 2D profiles, outlines, templates, gaskets, panels, flat patterns, laser/plasma/waterjet cut layouts, and 2D drawing exports of |
-| `engineering-drawing` | ✅ | the user asks for a drawing, a dimensioned sheet, shop or manufacturing drawings, a print, or "2D views of this part". |
+| `engineering-drawing` | ✅ | the person asks for a drawing, a dimensioned sheet, shop or manufacturing drawings, a blueprint, or "2D views of this part" |
+| `fea` | ✅ | the person asks whether a part will hold, break or bend too much, where it is most stressed, how much load it takes, how to make it stronger or lighter, or for  |
 | `fictiv` | ✅ | Operates Fictiv (app.fictiv.com), the on-demand manufacturing platform, end to end in the user's browser. |
 | `gcode` | ✅ | the user wants an `.stl`, `.3mf` or `.obj` model sliced for their printer, as a sliced `.gcode.3mf` or plain `.gcode`, headless with OrcaSlicer's command line o |
 | `lab-hardware-cad` | ✅ | a research task needs a physical part that must mate with standardized labware, an optical table, a cage system, or a printer, CNC, or laser process. |
+| `pcb` | ✅ | any request about a PCB, a schematic or a circuit - parts and nets, placement and routing, ERC and DRC, a review before ordering from JLCPCB, PCBWay or another  |
+| `print3d` | ✅ | the person wants a model sliced, printed or sent to their printer (Prusa, Bambu Lab, Creality, Voron and most FDM printers) |
+| `render` | ✅ | the person wants a picture or a video for people to look at |
+| `robot-simulation` | ✅ | generate a robot description or a MuJoCo scene from a CAD model's joints, or to write, edit or check a .urdf, .srdf or MJCF .xml by hand |
 | `sdf` | ✅ | `.sdf` files, SDFormat XML, models, worlds, links, joints, poses, frames, inertials, visual/collision geometry, mesh URIs, sensors, lights, physics, plugins, in |
-| `sendcutsend` | ✅ | Review DXF and STEP/STP uploads for SendCutSend.com orders using its ordering guide, catalog, and specs. |
+| `sendcutsend` | ⚠️ | the person names SendCutSend or is preparing an order there, to say whether a file will upload, whether the chosen material, thickness and services are offered, |
 | `srdf` | ✅ | creating, editing, inspecting, or validating `.srdf` files, MoveIt planning groups, virtual joints, passive joints, end effectors, group states, disabled collis |
 | `step-parts` | ✅ | a CAD model needs a real purchasable part: search the hosted step.parts catalog before creating simplified placeholder geometry, resolve fuzzy part names, stand |
 | `urdf` | ✅ | creating, editing, inspecting, validating, or debugging `.urdf` files, robot links, joints, limits, inertials, visual/collision geometry, mesh references, frame |

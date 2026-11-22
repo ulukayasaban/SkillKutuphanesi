@@ -4,17 +4,43 @@
 
 ## e-ticaret → `h-is-alanlari/05-e-ticaret-pazaryeri`
 
-Son tarama: 2026-11-04 · eşleşen repo: 1374 · kütüphanede: 19 · değerlendirilmiş: 103 · **odaklı aday: 0** · dolaylı eşleşme: 503 (★10 altı 754 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-22 · eşleşen repo: 1525 · kütüphanede: 19 · değerlendirilmiş: 103 · **odaklı aday: 13** · dolaylı eşleşme: 585 (★10 altı 810 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
+| thatrebeccarae/claude-marketing | 209 | MIT | 2026-05-14 | 5 | shopify, tiktok shop, ecommerce, e-commerce, google merchant | - | A full marketing department for Claude Code. Skill packs for Klaviyo, Shopify, GA4, Looker Studio, paid media, and more. Audit, optimize, an |
+| AJbeckliy/detail-flow-V2-Ajie | 307 | yok | 2026-11-14 | 1 | ecommerce, print on demand, order management | - | A reusable Codex skill for planning, generating, auditing, and delivering ecommerce product detail pages. |
+| woocommerce/woocommerce-ios | 357 | GPL-2.0 | 2026-11-21 | 7 | woocommerce | - | WooCommerce iOS app |
+| beyondtahir/beyondwords | 169 | MIT | 2026-11-14 | 1 | etsy | - | A goal-driven AI book production house for Amazon KDP: research niches, create books, publish, manage ads and deliver client services. |
+| xianyu110/ecommerce-video-skills | 152 | MIT | 2026-10-05 | 2 | tiktok shop | - | 12 个电商短视频 Agent Skills：3秒钩子、卖点分镜、图生视频提示词、edge-tts 配音、字幕花字、ffmpeg 自动成片、抖音/TikTok Shop/视频号导出、直播切片、多语言配音、封面A/B · Claude Code / Codex / Cursor |
+| motiful/product-shots | 151 | MIT | 2026-06-08 | 1 | tiktok shop | - | Open-source Claude Code skills that turn one product photo into a full set of e-commerce visuals — main images, A+ detail pages, multi-angle |
+| kangise/ecommerce-ai-skills | 119 | CC0-1.0 | 2026-11-16 | 1 | tiktok shop | - | Cross-border e-commerce AI knowledge base, read by people and installed by agents: 69 trilingual guides, 878 prompts, a 100-entity / 322-con |
+| tanujrajputdev/shopify-theme-audit-skill | 46 | MIT | 2026-11-13 | 1 | shopify | - | Claude Code skill that audits any Shopify theme for performance, SEO, AEO, and GEO in 90 seconds. 80+ checks, scored report, paste-in Liquid |
+| maton-ai/api-gateway-skill | 34 | MIT | 2026-11-07 | 1 | google merchant | - | API gateway with managed auth. Connect your AI to Slack, HubSpot, Salesforce, Google Workspace, Shopify, and more with a single API key. |
+| hooper-lee/crosspulse | 29 | MIT | 2026-06-06 | 1 | tiktok shop | - | 🔥 跨境电商大盘监控工作流 — 定时追踪 Amazon、TikTok Shop、Temu、SHEIN、Shopify 等平台政策变化、爆品趋势、类目机会，自动清洗后沉淀到飞书多维表格，生成每日市场日报。 |
+| adanghd/sender-kalopilot-skill | 24 | yok | 2026-04-11 | 1 | tiktok shop | - | Claude Skill Untuk kirim data produk, Video, Toko dari Tiktokshop |
+| chnjames/tradehot-skill | 23 | yok | 2026-06-17 | 1 | tiktok shop | - | 外贸 HOT Skill — 面向跨境电商和出口企业的中文情报工具，把分散的外贸信息整理成可执行的业务简报。支持日报、平台政策、HS Code、关税速查、风险预警等 9 种报告类型。 |
+| misty1999sd/amazon-image-design-skill | 12 | yok | 2026-11-01 | 1 | product listing | - | Codex skill for Amazon listing image design, competitor-informed creative planning, and product fidelity checks. |
 
 ## mobil → `b-yazilim-gelistirme/08-mobil-uygulama`
 
-Son tarama: 2026-11-04 · eşleşen repo: 898 · kütüphanede: 21 · değerlendirilmiş: 94 · **odaklı aday: 0** · dolaylı eşleşme: 218 (★20 altı 580 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlendirilmiş: 94 · **odaklı aday: 13** · dolaylı eşleşme: 265 (★20 altı 648 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
+| ceorkm/mobile-app-ui-design | 577 | yok | 2026-10-28 | 1 | react native, swiftui, flutter | - | Professional mobile app UI/UX design skill for Claude Code |
+| arindamxd/camerax-android | 134 | Apache-2.0 | 2026-10-02 | 2 | jetpack compose, kotlin multiplatform | - | A Play Store camera app showing Jetpack CameraX APIs in Kotlin — install it, use it, copy the patterns. |
+| tddworks/baguette | 2344 | Apache-2.0 | 2026-11-21 | 1 | swiftui | - | Headless control for iOS simulators, real iPhones and Android emulators — 3D models, taps, swipes, multi-finger gestures, 60 fps streaming,  |
+| chrisbanes/skills | 1164 | Apache-2.0 | 2026-11-21 | 1 | kotlin multiplatform | - | Skills for Kotlin, Jetpack Compose, and Android development |
+| Prisma-Labs-Dev/apple-skills | 359 | MIT | 2026-09-26 | 2 | swiftui | - | Apple development skills for Claude Code and Codex — latest iOS 26+ APIs, SwiftUI, Liquid Glass, and more |
+| smyrgeorge/sqlx4k | 323 | MIT | 2026-11-16 | 1 | kotlin multiplatform | - | A coroutine-first SQL toolkit with compile-time query validations for Kotlin Multiplatform. PostgreSQL, MySQL/MariaDB, and SQLite supported. |
+| PatilShreyas/debroid | 277 | Apache-2.0 | 2026-11-14 | 1 | jetpack compose | - | Autonomous, headless Android debugger designed for AI coding agents. Inspect runtime memory, set breakpoints, and debug live apps. |
+| ecency/vision-mobile | 262 | MIT | 2026-11-21 | 1 | kotlin multiplatform | - | Ecency Mobile - reimagined social blogging, contribute and get rewarded (for Android and iOS) |
+| ukanhaupa/projx | 71 | MIT | 2026-11-02 | 1 | flutter | - | Projx — A CLI tool for scaffolding production-grade projects. Pick your stack (FastAPI, Fastify, React, Flutter), get a fully wired template |
+| abacusai/simless | 53 | Apache-2.0 | 2026-11-18 | 1 | swiftui | - | Simulator-free, headless SwiftUI checks for AI coding agents: render screens as accessibility trees and hot-reload views in ~2 s, without th |
+| andrzejchm/fdb | 46 | MIT | 2026-10-26 | 1 | flutter | - | Flutter Debug Bridge - CLI for AI agents to interact with running Flutter apps on device |
+| namedtoaster/The-Last-Mile | 40 | MIT | 2026-11-18 | 1 | google play console | - | Claude Code skills that get your app into the App Store and Google Play. Rejection sweep, release build, store listing, upload. Any stack. |
+| better-i18n/oss | 21 | MIT | 2026-11-20 | 1 | flutter | - | Official TypeScript SDKs for Better i18n — Next.js, React, Expo/React Native integrations with CLI, MCP server, and CDN-powered translation  |
 
 ## İzlenenler (şimdilik değil; durum değişirse bak)
 

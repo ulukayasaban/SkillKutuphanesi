@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/expo/skills
 - **Repo içindeki yol:** `plugins/expo/skills/expo-dom`
-- **Commit:** `a9e5bd3fa00b4e61f632e43f85da73aee1942582`
+- **Commit:** `88d9bd79f3fa8452a778fbac65bae162c0b32ce4`
 - **Lisans:** MIT
 - **Geliştirici:** expo (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

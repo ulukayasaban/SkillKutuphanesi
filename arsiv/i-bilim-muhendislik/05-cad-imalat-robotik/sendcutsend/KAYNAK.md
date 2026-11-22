@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/earthtojake/text-to-cad
 - **Repo içindeki yol:** `skills/sendcutsend`
-- **Commit:** `5a5dab9503d140b8cf62a28d21ba2573a722d2d6`
+- **Commit:** `7687743d80305ba112666aee0a5e8c12af138458`
 - **Lisans:** MIT
 - **Geliştirici:** earthtojake (kisi)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

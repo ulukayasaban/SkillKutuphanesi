@@ -4,10 +4,10 @@
 
 - **Kaynak repo:** https://github.com/remotion-dev/remotion
 - **Repo içindeki yol:** `packages/skills/skills/remotion-best-practices`
-- **Commit:** `1e55bdc62fb2a9e828060b9728a767f27816f762`
+- **Commit:** `970849fc1921ed7e0c3175132fe9580e8875ab2f`
 - **Lisans:** NOASSERTION
 - **Geliştirici:** remotion-dev (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih
 - **Bağımlılık:** Remotion (npx create-video / remotion paketleri). Şirketler için Remotion lisansı gerekebilir.
-- **SKILL.md'de olup bulunamayan dosyalar:** `./remotion-captions/SKILL.md`, `./remotion-create/SKILL.md`, `./remotion-docs/SKILL.md`, `./remotion-interactivity/SKILL.md`, `./remotion-license/SKILL.md`, `./remotion-maps/SKILL.md`, `./remotion-markup/SKILL.md`, `./remotion-multimedia/SKILL.md`, `./remotion-render/SKILL.md`, `./remotion-saas/SKILL.md`, `./remotion-studio/SKILL.md`, `./remotion-upgrade/SKILL.md`
+- **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `remotion-captions`, `remotion-create`, `remotion-docs`, `remotion-interactivity`, `remotion-license`, `remotion-maps`, `remotion-markup`, `remotion-multimedia`, `remotion-render`, `remotion-saas`, `remotion-studio`, `remotion-upgrade`

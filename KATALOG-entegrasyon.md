@@ -4,3 +4,10 @@
 
 ## Gruplar
 
+- [diger](#diger) — 1
+
+## diger
+
+| Skill | İnceleme | Ne yapar |
+|---|---|---|
+| `caption-qa` | otomatik | Check SRT or WebVTT captions and subtitles against published standards (Netflix English, BBC subtitle guidelines, DCMP Captioning Key) for r |

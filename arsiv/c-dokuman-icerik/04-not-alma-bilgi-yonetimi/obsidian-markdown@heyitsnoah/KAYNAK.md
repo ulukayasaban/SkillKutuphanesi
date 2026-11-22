@@ -8,5 +8,5 @@
 - **Lisans:** MIT
 - **Geliştirici:** heyitsnoah (kisi)
 - **Arşive alınma:** 2026-10-21
-- **Durum:** tercih
+- **Durum:** alternatif
 - **SKILL.md'de olup bulunamayan dosyalar:** `Note%20Name.md`, `obsidian://open?vault=VaultName&file=Note.md`

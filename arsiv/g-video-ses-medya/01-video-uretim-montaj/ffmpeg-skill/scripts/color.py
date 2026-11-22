@@ -32,7 +32,7 @@ import os
 import sys
 from typing import List, Optional
 
-from _common.runner import carried_stream_maps, fail_if_classified
+from _common.runner import absent_word, carried_stream_maps, fail_if_classified
 from _common import STATE, add_common, analyze_levels, LEGAL_RANGE_CHOICES, legal_limits, measure_signal_range, apply_common, emit, aac_args, cfr_args, cfr_at_input, with_cfr, default_output, die, escape_filter_path, ffmpeg_base, ffmpeg_bsfs, info, probe, require_tool, run, run_analysis, run_keeping_subtitles, x264_args, X264_PRESETS, fmt_secs
 from _common.emit import note, warn
 from _common.color import is_rgb, rgb_to_bt709_filter
@@ -496,7 +496,7 @@ def main() -> int:
                           "audio (--to-sdr, --lut, --correct, and --retag's re-encode fallback) -- --strip-dovi and "
                           "a successful --retag stream-copy all streams untouched, so the flag has nothing to select there.")
     ap.set_defaults(crf=18)  # --quality's default (the --crf alias was removed in 2.0)
-    ap.add_argument("--preset", default="medium", choices=X264_PRESETS)
+    ap.add_argument("--preset", default="medium", choices=X264_PRESETS, help="x264 preset")
     add_alpha_args(ap)
     add_common(ap)
     args = ap.parse_args()
@@ -608,7 +608,7 @@ def main() -> int:
             die(f"{args.input} is HDR ({v.get('hdr_format')}); a LUT made for SDR applied to PQ/HLG pixels gives a wrong picture "
                 f"tagged BT.709 (sweep F10). Run --to-sdr first (or chain it), or --force if the LUT expects HDR input")
         if not os.path.exists(args.lut):
-            die(f"LUT not found: {args.lut}")
+            die(f"LUT {absent_word(args.lut)}: {args.lut}")
         refuse_bad_cube(args.lut)
         if not (0.0 <= args.lut_strength <= 1.0):
             die(f"--lut-strength {args.lut_strength:g} is outside 0..1")

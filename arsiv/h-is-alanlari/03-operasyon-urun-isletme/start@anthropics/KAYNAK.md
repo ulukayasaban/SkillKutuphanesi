@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/anthropics/knowledge-work-plugins
 - **Repo içindeki yol:** `productivity/skills/start`
-- **Commit:** `2574e29377c7173d0cecffef29a6ecbd7f8ccb5d`
+- **Commit:** `0e0fcacddcc892eb92a1b7873ff9d68159c47571`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** anthropics (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** alternatif
 - **SKILL.md'de olup bulunamayan dosyalar:** `../../CONNECTORS.md`

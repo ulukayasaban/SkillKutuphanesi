@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/mattpocock/skills
 - **Repo içindeki yol:** `skills/engineering/pr`
-- **Commit:** `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d`
+- **Commit:** `abeeaf95660ba9e8b7c753eb38f441ca707a8823`
 - **Lisans:** MIT
 - **Geliştirici:** mattpocock (kisi)
-- **Arşive alınma:** 2026-11-04
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

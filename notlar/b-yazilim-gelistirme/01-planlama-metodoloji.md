@@ -2,7 +2,17 @@
 
 _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **15/78**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/80**
+
+### accessibility-engineering  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 100 (A)
+
+- **Ne yapar:** Audits existing interfaces for WCAG 2.2 AA conformance and remediates the violations found. Use when auditing a page or component for accessibility, running axe-core or pa11y, triaging a11y violations, or checking screen reader and contrast issues before shipping.
+- **Teknoloji:** css, html, node _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 15 KB (SKILL.md 7.4 KB, yük kucuk)
+- **İnceleme:** otomatik
 
 ### app-builder  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -10,49 +20,49 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne zaman:** Sıfırdan full-stack uygulama başlatırken yığın seçimi ve iskelet kurulumu; hangi şablonun uygun olduğuna hızlı karar. · **Ne zaman değil:** Var olan kod tabanında özellik ekleme (writing-plans + incremental-implementation); ag-kit agent'ları (project-planner, frontend-specialist…) ve /create iş akışı projede yoksa orkestrasyon kısmı boşa düşer.
 - **Teknoloji:** next.js, react, node, python, vue, flutter, react-native
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** proje-iskeleti → birincil
 - **Boyut:** 63 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (yığın/şablon rehberi olarak). Şablonlar güncel (2026-05 sürümleri) ve seçici okuma kuralı bağlamı korur. Ancak agent koordinasyon bölümü ag-kit'in kendi agent'larına ve /create iş akışına bağlı; kütüphanede bu agent'lar yok. templates/ alt klasörü ayrı 'templates' skill'iyle birebir aynı.
 
-### architecture@anthropics  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### architecture@anthropics  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Create or evaluate an architecture decision record (ADR). Use when choosing between technologies (e.g., Kafka vs SQS), documenting a design decision with trade-offs and consequences, reviewing a system design proposal, or designing a new component from requirements and constraints.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** alternatif · **Örtüşme:** mimari-karar → tamamlayıcı
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 - **Not:** ADR (mimari karar kaydı) yazma/değerlendirme; vudovn architecture ile tamamlayıcı.
 
-### ask-matt  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### ask-matt  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Ask which skill or flow fits your situation. A router over the skills in this repo.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
+- **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 17 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### brainstorming  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
+### brainstorming  ·  obra/superpowers @ 22f0b46  ·  puan 100 (A)
 
 - **Ne yapar:** superpowers'ın tasarım öncesi skili: uygulamaya geçmeden önce sırayla yaklaşımları ayrı bir mesajda sunup birini seçtirmek, kısa ya da tam tasarım dokümanı yazmak, onay almak ve writing-plans'a geçmek. Var olan projede önce okuyup sonra sorar ('Look Before You Ask').
 - **Ne zaman:** Yeni özellik, bileşen veya proje fikrinde gereksinim belirsizken; kodlamaya başlamadan önce ortak anlayış ve yazılı tasarım gerektiğinde. · **Ne zaman değil:** İstekte her şey açıksa (küçük, net görev); etkileşimsiz ortamlar (CI, zamanlanmış çalışma). Hızlı niyet doğrulaması yeterliyse interview-me daha hafif.
 - **Teknoloji:** node, html · **Paketler:** node (görsel yardımcı sunucusu, isteğe bağlı)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★312440, son güncelleme 2026-11-03, lisans MIT)
+- **Geliştirici:** obra (kisi, ★323687, son güncelleme 2026-11-03, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** fikir-netlestirme → birincil · **Roller:** planlayici
-- **Boyut:** 76 KB (SKILL.md 13.3 KB, yük orta)
-- **İnceleme:** incelendi · kalite 5/5 — 2026-10 güncellemesi: zorunlu sıra (yaklaşımlar → tasarım dokümanı → onay → writing-plans) açık hâle geldi; soru sormadan önce projeyi/bağlamı okuma kuralı eklendi; spike ve 'soruları atla' istisnaları netleşti.
+- **Boyut:** 78 KB (SKILL.md 14.8 KB, yük orta)
+- **İnceleme:** yeniden-incelenecek · kalite 5/5 — 2026-10 güncellemesi: zorunlu sıra (yaklaşımlar → tasarım dokümanı → onay → writing-plans) açık hâle geldi; soru sormadan önce projeyi/bağlamı okuma kuralı eklendi; spike ve 'soruları atla' istisnaları netleşti.
 
-### brainstorming-research-ideas  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 85 (A)
+### brainstorming-research-ideas  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 84 (A)
 
 - **Ne yapar:** Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
+- **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Orchestra-Research (kurum, ★14269, son güncelleme 2026-10-11, lisans MIT)
+- **Geliştirici:** Orchestra-Research (kurum, ★14723, son güncelleme 2026-10-11, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 19 KB (SKILL.md 18.7 KB, yük orta)
 - **İnceleme:** otomatik
@@ -63,303 +73,313 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne zaman:** ag-kit iş akışı kullanan projelerde; seçenek tablolu, karar odaklı soru listesi tercih edildiğinde. · **Ne zaman değil:** Genel kullanımda (obra brainstorming daha doğal ve olgun); aynı adı taşıdığı için birincille birlikte kurulamaz.
 - **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** fikir-netlestirme → alternatif
 - **Boyut:** 17 KB (SKILL.md 5.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Soru biçimi (öncelik + seçenek tablosu + varsayılan) yararlı ama 'her zaman 3 soru' kuralı küçük işlerde sürtünme yaratıyor; ag-kit'e özgü /remember ve .agents/memory varsayımları var.
 
-### code-review  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### code-review  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Review code changes for security, performance, and correctness. Trigger with a PR URL or diff, "review this before I merge", "is this code safe?", or when checking a change for N+1 queries, injection risks, missing edge cases, or error handling gaps.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### codebase-design  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### codebase-design  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 6.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### constraint-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### constraint-driven-development  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 98 (A)
 
 - **Ne yapar:** Projenin kalite çıtasını CONSTRAINTS.md'de yazılı sözleşmeye çevirir: hangi boyutların önemli olduğunu sorar, sayı yoksa makul varsayılan eşikler önerir, gereken araçları kurdurur ve diff'te çıtanın sessizce düşürülmesini (yeni @ts-ignore/eslint-disable, atlanan/silinen test, kaldırılan assertion, eşik düşürme) yakalar. Semgrep/axe çıktısını eşiğe göre zorlayan yerel bir betik (quality-gate.mjs) ve 'her komut gerçekten başarısız oluyor mu' doğrulaması içerir.
 - **Ne zaman:** Yazılı kalite çıtası yoksa; agent testleri atlayıp/susturup yeşile ulaşmaya çalışıyorsa; erişilebilirlik, performans veya kapsama eşiği tanımlanacaksa. · **Ne zaman değil:** Kısa ömürlü prototip/spike; zaten CI'da zorlanan, belgelenmiş standartları olan ekip.
 - **Teknoloji:** git, node, python
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kalite-sozlesmesi → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 34 KB (SKILL.md 21.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Agent'ların çıtayı düşürme davranışına özel tek skill; varsayılan eşik tablosu ve floor-guard referansı pratik. 2026-11: semgrep/axe'in bulguda 0 ile çıkması sorunu quality-gate.mjs ile çözüldü; kasıtlı ihlalle doğrulama adımı eklendi. SKILL.md ~21,7 KB.
+- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT. Agent'ların çıtayı düşürme davranışına özel tek skill; varsayılan eşik tablosu ve floor-guard referansı pratik. 2026-11: semgrep/axe'in bulguda 0 ile çıkması sorunu quality-gate.mjs ile çözüldü; kasıtlı ihlalle doğrulama adımı eklendi. SKILL.md ~21,7 KB.
 
-### debug  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### debug  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Structured debugging session — reproduce, isolate, diagnose, and fix. Trigger with an error message or stack trace, "this works in staging but not prod", "something broke after the deploy", or when behavior diverges from expected and the cause isn't obvious.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### deploy-checklist  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### deploy-checklist  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Pre-deployment verification checklist. Use when about to ship a release, deploying a change with database migrations or feature flags, verifying CI status and approvals before going to production, or documenting rollback triggers ahead of time.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### diagnosing-bugs  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### diagnosing-bugs  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
 - **Teknoloji:** git, playwright _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### documentation  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### documentation  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Write and maintain technical documentation. Trigger with "write docs for", "document this", "create a README", "write a runbook", "onboarding guide", or when the user needs help with any form of technical writing — API docs, architecture docs, or operational runbooks.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### domain-modeling  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### domain-modeling  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### doubt-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### doubt-driven-development  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 98 (A)
 
 - **Ne yapar:** Önemsiz olmayan her kararı (iddia → en küçük incelenebilir birim → taze bağlamlı karşıt inceleme → uzlaştırma → dur) döngüsünden geçirir; gerekirse Codex veya Gemini CLI ile çapraz model incelemesi yaptırır. Ana oturum orkestratörü için tasarlanmıştır.
 - **Ne zaman:** Yüksek riskli işler (üretim kimlik doğrulama, güvenlik, geri alınamaz migrasyon), tanıdık olmayan kod, planın gizli hata modlarının sınanması. · **Ne zaman değil:** Alt-agent/persona içinde (iç içe agent çağıramaz); hızın önemli olduğu düşük riskli işler.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_ · **Paketler:** isteğe bağlı: codex CLI veya gemini CLI (çapraz model inceleme)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** karsit-dogrulama → birincil · **Roller:** planlayici
 - **Boyut:** 16 KB (SKILL.md 16.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, opsiyonel. Sınırlı döngü ve 'iç içe çalışamaz' uyarısı iyi düşünülmüş. Maliyetli (her kararda ek agent); yalnız planlayıcı/orkestratör rolüne uygun, persona skill listesine konmamalı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### egm-bootstrap  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
+### egm-bootstrap  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 93 (A)
 
 - **Ne yapar:** Bootstrap directory README.md files across a repository subtree.
 - **Teknoloji:** css, git, node, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** google (kurum, ★11801, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
-- **Boyut:** 31 KB (SKILL.md 23.2 KB, yük orta) · **Kırık bağlantı:** 2
+- **Boyut:** 32 KB (SKILL.md 23.6 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-brainstorm  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
+### egm-brainstorm  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 93 (A)
 
 - **Ne yapar:** Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). Helps turn half-baked concepts into structured hypotheses via clarifying questions, review, and iterative refinement. Produces an RFC summary for human review or more detailed design with egm-draft.
-- **Teknoloji:** api-anahtari, git _(otomatik tespit)_
+- **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** google (kurum, ★11801, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
-- **Boyut:** 23 KB (SKILL.md 14.4 KB, yük orta) · **Kırık bağlantı:** 1
+- **Boyut:** 25 KB (SKILL.md 14.9 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-draft  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
+### egm-draft  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 93 (A)
 
 - **Ne yapar:** Drafts a design document section-by-section using the concepts brief from egm-brainstorm (or user notes). This is the second step in the Elephant-Goldfish (EGM) feature flow. Use when you are ready to write a design doc after aligning on requirements + solution.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** google (kurum, ★11801, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
-- **Boyut:** 32 KB (SKILL.md 17.1 KB, yük orta) · **Kırık bağlantı:** 2
+- **Boyut:** 32 KB (SKILL.md 17.2 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-drift-report  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 94 (A)
+### egm-drift-report  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 95 (A)
 
 - **Ne yapar:** Runs drift detection on all design documents to check for document and code consistency. Produces an actionable report with differences. Use when the user asks to detect drift or check for consistency across all design documents or READMEs in a directory.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** google (kurum, ★11801, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 3.1 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-resolve  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
+### egm-lite  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 93 (A)
+
+- **Ne yapar:** Executes a lightweight 5-step EGM (Elephant-Goldfish-Model) protocol for small, rapid iterations, specification revisions, code refactors, and bug fixes. Use when the user invokes /egm-lite, issues a phase command (checklist, exec, review, goldfish), or resolves a subagent review response. Don't use for large multi-component features requiring a formal design doc (use egm-brainstorm).
+- **Teknoloji:** git _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 63 KB (SKILL.md 23.3 KB, yük orta) · **Kırık bağlantı:** 1
+- **İnceleme:** otomatik
+
+### egm-resolve  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 93 (A)
 
 - **Ne yapar:** The Elephant resolution skill. Ingests flat deficiency reports from concurrent Goldfish reviewers, applies automated fixes for PROPOSE FIX items via UI multiple-choice gates, and presents interactive negotiation/re-sync checkpoints.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** google (kurum, ★11801, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 8.3 KB, yük orta) · **Kırık bağlantı:** 2
 - **İnceleme:** otomatik
 
-### egm-review  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
+### egm-review  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 93 (A)
 
 - **Ne yapar:** Orchestrates the EGM Goldfish Review Protocol. Used as part of the EGM process to perform design document reviews. Executes five review phases: Initial Zoom Out Review, Comprehension Review, Design Critique, Intermediate Zoom Out Review, and Implementation Readiness.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** google (kurum, ★11801, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
-- **Boyut:** 35 KB (SKILL.md 23.5 KB, yük orta) · **Kırık bağlantı:** 1
+- **Boyut:** 37 KB (SKILL.md 23.7 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### egm-review-loop  ·  google/elephant-goldfish-model @ 0dfb5bf  ·  puan 92 (A)
+### egm-review-loop  ·  google/elephant-goldfish-model @ 7d1b721  ·  puan 93 (A)
 
 - **Ne yapar:** Executes the Antagonistic-Review process from the Elephant-Goldfish Model (EGM) via an automated multi-agent review loop to audit documents against qualitative standards and structural templates, and automatically apply approved fixes. Use when reviewing design docs, READMEs, feature specifications, implementation plans, or verifying document completeness and tone.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** google (kurum, ★11801, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** google (kurum, ★21913, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 17 KB (SKILL.md 10.1 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### executing-plans  ·  obra/superpowers @ 2ce8aa1  ·  puan 97 (A)
+### executing-plans  ·  obra/superpowers @ 22f0b46  ·  puan 97 (A)
 
 - **Ne yapar:** Yazılmış bir planı alt-agent kullanmadan, aynı oturumda görev görev uygular: her görev için brief ve kayıt defteri (ledger) tutar, TDD ile ilerler, plan sorunlarında 'karar' kaydı düşerek durmadan devam eder, sonunda tek bir taze bağlamlı inceleme yaptırıp finishing-a-development-branch'e geçer. task-start/task-done betikleri içerir.
 - **Ne zaman:** writing-plans planı hazır ve kullanıcı satır içi yürütmeyi seçtiyse; alt-agent aracı olmayan ortamlarda (ör. bazı Codex kurulumları). · **Ne zaman değil:** Her görevde ayrı inceleme kapısı isteniyorsa veya plan çok uzunsa (subagent-driven-development); planı olmayan işler.
 - **Teknoloji:** git · **Paketler:** bash (task-start/task-done betikleri)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★312440, son güncelleme 2026-11-03, lisans MIT)
+- **Geliştirici:** obra (kisi, ★323687, son güncelleme 2026-11-03, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** plan-yurutme → birincil · **Roller:** planlayici
-- **Boyut:** 20 KB (SKILL.md 17.7 KB, yük orta)
-- **İnceleme:** incelendi · kalite 4/5 — 2026-10 güncellemesi: uzun örnek iş akışı çıkarıldı, kurallar aynı; SKILL.md kısaldı. Alt-agent kullanmadan aynı oturumda plan yürütme için hâlâ geçerli.
+- **Boyut:** 21 KB (SKILL.md 17.9 KB, yük orta)
+- **İnceleme:** yeniden-incelenecek · kalite 4/5 — 2026-10 güncellemesi: uzun örnek iş akışı çıkarıldı, kurallar aynı; SKILL.md kısaldı. Alt-agent kullanmadan aynı oturumda plan yürütme için hâlâ geçerli.
 
-### git-guardrails-claude-code  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### git-guardrails-claude-code  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (hooks, settings); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### grill-me  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### grill-me  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** A relentless interview to sharpen a plan or design.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 0 KB (SKILL.md 0.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### grill-with-docs  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### grill-with-docs  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 0 KB (SKILL.md 0.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### grilling  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### grilling  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### handoff  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### handoff  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Compact the current conversation into a handoff document for another agent to pick up.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### idea-refine  ·  addyosmani/agent-skills @ 301b02b  ·  puan 95 (A)
+### idea-refine  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 95 (A)
 
 - **Ne yapar:** Ham fikirleri ıraksak (genişlet) ve yakınsak (değerlendir, daralt) düşünme aşamalarıyla keskin bir konsepte çevirir; sonuçta problem tanımı, önerilen yön, doğrulanacak varsayımlar, MVP kapsamı ve 'yapmayacaklarımız' içeren bir belge (docs/ideas/) üretir.
 - **Ne zaman:** Ürün/özellik fikri henüz bulanıkken, seçenekleri açıp sonra birine indirmek ya da bir planın varsayımlarını sınamak istendiğinde. · **Ne zaman değil:** Ne yapılacağı belli, yalnız gereksinim ayrıntısı eksikse (brainstorming / interview-me); kod düzeyi planlama (writing-plans).
 - **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** fikir-netlestirme → alternatif
 - **Boyut:** 40 KB (SKILL.md 9.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, alternatif. Çerçeveler (frameworks.md) ve örnekler iyi; ürün/konsept aşamasında brainstorming'den daha yapılandırılmış. Betik yalnız docs/ideas klasörü açıyor. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### implement  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### implement  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Implement a piece of work based on a spec or set of tickets.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### implement-spec  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### implement-spec  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Implement the result of /to-spec and /to-tickets in code.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### improve-codebase-architecture  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### improve-codebase-architecture  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
 - **Teknoloji:** css, git, html, tailwind _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 5.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### incident-response  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### incident-response  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Run an incident response workflow — triage, communicate, and write postmortem. Trigger with "we have an incident", "production is down", an alert that needs severity assessment, a status update mid-incident, or when writing a blameless postmortem after resolution.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.5 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### incremental-implementation  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### incremental-implementation  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 98 (A)
 
 - **Ne yapar:** Değişiklikleri ince, doğrulanabilir dilimlerle teslim ettirir: dikey/sözleşme-önce/risk-önce dilimleme, 'önce sadelik' ve kapsam disiplini, her adımda derlenebilir kalma, yarım özellikleri feature flag arkasına alma, güvenli varsayılanlar ve geri alınabilirlik kuralları.
 - **Ne zaman:** Birden çok dosyaya dokunan her özellik/değişiklikte; plandan sıradaki görevi alırken; büyük kod bloğu yazma eğilimi olduğunda. · **Ne zaman değil:** Tek satırlık düzeltmeler; planın kendisini yazmak (writing-plans).
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** plan-yurutme → tamamlayıcı
 - **Boyut:** 9 KB (SKILL.md 9.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Kısa (9 KB), yığından bağımsız; 'Rule 0.5 kapsam disiplini' agent'ların taşmasını iyi engelliyor. ../../references/definition-of-done.md arşivde yok (yalnız 'ayrıca bkz').
 
-### interview-me  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### interview-me  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 98 (A)
 
 - **Ne yapar:** Kullanıcının gerçekte ne istediğini (yapması gerektiğini düşündüğü şeyi değil) bulmak için tek soruluk turlarla ~%95 güvene kadar görüşme yapar; her soruya bir tahmin ekler, niyeti kullanıcının kendi sözleriyle özetleyip açık onay ister ve durur.
 - **Ne zaman:** İstek 'kimin için / neden şimdi' bilgisi olmadan geldiğinde; kullanıcı 'beni sorgula', 'emin miyiz?' dediğinde; plan veya spec yazılmadan önce kısa niyet doğrulaması. · **Ne zaman değil:** Etkileşimsiz bağlamlar (CI, /loop); gereksinim zaten netse; tam tasarım belgesi gerekiyorsa (brainstorming).
 - **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** fikir-netlestirme → tamamlayıcı · **Roller:** planlayici
 - **Boyut:** 15 KB (SKILL.md 14.7 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. Net durma kuralı ve 'istek vs. olması gereken' ayrımı brainstorming'den farklı bir boşluğu dolduruyor; kısa ve yan etkisiz.
@@ -369,27 +389,27 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** multica-ai (kurum, ★229500, son güncelleme 2026-04-20, lisans yok)
+- **Geliştirici:** multica-ai (kurum, ★234915, son güncelleme 2026-04-20, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### math-olympiad  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 100 (A)
+### math-olympiad  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 100 (A)
 
 - **Ne yapar:** Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification that catches the errors self-verification misses. Activates when asked to 'solve this IMO problem', 'prove this olympiad inequality', 'verify this competition proof', 'find a counterexample', 'is this proof correct', or for any problem with 'IMO', 'Putnam', 'USAMO', 'olympiad', or 'competition math' in it. Use
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★46120, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 62 KB (SKILL.md 19.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### migrate-to-shoehorn  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### migrate-to-shoehorn  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.
 - **Teknoloji:** node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -400,38 +420,38 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne zaman:** ag-kit kullanan projelerde veya çok kısa, tek sayfalık plan yeterliyse. · **Ne zaman değil:** Alt-agent'lara devredilecek ayrıntılı plan gerektiğinde (writing-plans); ag-kit betikleri (ux_audit.py, security_scan.py…) projede yoksa betik önerileri boşa düşer.
 - **Teknoloji:** node, python, react, tailwind, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** uygulama-plani → alternatif
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısalık ilkesi iyi ama içerik writing-plans'ın sadeleştirilmiş türevi; plan dosyasını proje köküne yazma kuralı ve var olmayan ag-kit betiklerine atıf zayıflık.
 
-### planning-and-task-breakdown  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### planning-and-task-breakdown  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 98 (A)
 
 - **Ne yapar:** Spec'i bağımlılık grafiği çıkarıp dikey dilimlere bölerek sıralı, boyutlandırılmış görevlere çevirir; her görev için kabul ölçütü ve doğrulama, fazlar arası kontrol noktaları, riskler ve paralelleştirme fırsatları içeren plan şablonu verir.
 - **Ne zaman:** Spec hazır, iş büyük ve dilimlenmesi gerekiyorsa; tahmin/kapsam çıkarma veya paralel iş fırsatı aranırken; superpowers zinciri kullanılmayan projelerde. · **Ne zaman değil:** writing-plans kurulu bir rolde ikinci plan skilli olarak (aynı iş); tek adımlık işler.
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** uygulama-plani → alternatif
-- **Boyut:** 10 KB (SKILL.md 10.3 KB, yük orta)
-- **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. İyi yapılandırılmış ve kısa; dikey dilim ve kontrol noktası anlatımı güçlü. writing-plans'tan daha az ayrıntılı (arayüz sözleşmesi, TDD adımları yok), bu yüzden alternatif. ../../references/ bağlantıları arşivde yok (yalnız 'ayrıca bkz').
+- **Boyut:** 10 KB (SKILL.md 10.4 KB, yük orta)
+- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: ALTERNATİF. İyi yapılandırılmış ve kısa; dikey dilim ve kontrol noktası anlatımı güçlü. writing-plans'tan daha az ayrıntılı (arayüz sözleşmesi, TDD adımları yok), bu yüzden alternatif. ../../references/ bağlantıları arşivde yok (yalnız 'ayrıca bkz').
 
-### pr@mattpocock  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### pr@mattpocock  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Write a pull request body from Matt Pocock's template: summary with a diagram or diff sketch, before/after evidence (screenshots, test runs), merge danger (one-way vs two-way door) and rollout notes. Use when opening a PR or asked to write a PR description.
 - **Teknoloji:** typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### prototype@mattpocock  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### prototype@mattpocock  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
 - **Teknoloji:** html, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 16 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -439,9 +459,9 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 ### replica-architect  ·  Jakeschincariol/replica-skill @ 77c9436  ·  puan 84 (A)
 
 - **Ne yapar:** Plans the stack, database schema and API for an app clone, from the recon map replica-recon wrote. Picks boring, managed tech, turns the inferred data model into real SQL with indexes and access rules, lists every route by flow, and orders the build as a thin vertical slice first. Use when the user says "plan the clone", "what stack should I use", "design the database", "write the schema", "plan t
-- **Teknoloji:** api-anahtari, css, next.js, react, tailwind, typescript _(otomatik tespit)_
+- **Teknoloji:** css, next.js, react, tailwind, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -451,7 +471,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Builds the backend of an app clone: auth, database migrations and access rules, payments with Stripe, email, background jobs and third-party integrations through official APIs only, plus a security checklist. Use when the user says "add login", "set up auth", "wire up the database", "add payments", "connect Stripe", "add Google Calendar", "send emails", "backend for my clone", or when /replica-bui
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -459,9 +479,9 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 ### replica-brand  ·  Jakeschincariol/replica-skill @ 77c9436  ·  puan 84 (A)
 
 - **Ne yapar:** Names and rebrands an app clone so it is the user's own: name candidates with the trademark, domain, store and handle checks to run, a new palette checked for contrast, a logo brief, a voice guide, and a sweep tool that finds anything of the original left in the codebase. Use when the user says "name my app", "rebrand the clone", "make it mine", "pick a name and colours", "logo brief", "brand voic
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -469,9 +489,9 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 ### replica-build  ·  Jakeschincariol/replica-skill @ 77c9436  ·  puan 84 (A)
 
 - **Ne yapar:** Rebuilds an app screen by screen from the recon map: app shell first, then the core flow as a vertical slice, then every screen with all its states, ticking off the feature matrix as it goes. Writes every line fresh, never the original's code, assets or copy. Use when the user says "build the clone", "build screen S07", "start building", "rebuild this screen", "implement the booking page", or afte
-- **Teknoloji:** api-anahtari, css, html _(otomatik tespit)_
+- **Teknoloji:** css, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -481,7 +501,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Ships an app clone live on the user's own domain: a preflight gate (tests green, parity must-haves done, rebrand sweep clean, listing linted, legal pages up), production database and env vars, the host, DNS records for the domain and for email, Stripe live mode, OAuth redirects, monitoring, and mobile builds to TestFlight and Play. Use when the user says "deploy it", "ship it", "put it live", "con
 - **Teknoloji:** next.js, node, playwright, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -489,9 +509,9 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 ### replica-design  ·  Jakeschincariol/replica-skill @ 77c9436  ·  puan 84 (A)
 
 - **Ne yapar:** Rebuilds an app's design system for a clone: colour roles, type scale, spacing, radius, shadows and every component with its states, as design tokens plus component specs, with original assets instead of the target's logos, icons, illustrations or licensed fonts. Includes a WCAG contrast checker. Use when the user says "match the design", "rebuild the design system", "get the colours and fonts", "
-- **Teknoloji:** api-anahtari, css, python, react, tailwind _(otomatik tespit)_
+- **Teknoloji:** css, python, react, tailwind _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -501,7 +521,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Compares an app clone against the original: a feature parity score from the feature matrix (weighted by must, should, could) with the missing list in build order, plus a screenshot layout diff that ignores colour so a rebrand does not count against you. Two standard-library Python tools. Use when the user says "how close is my clone", "compare it to the original", "what's missing", "parity check",
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 29 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -511,7 +531,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Researches the app being cloned and reads what its real users say in public reviews (App Store, Google Play, G2, Capterra, Trustpilot, Reddit, Hacker News, its own feature-request board), then ranks what they hate, what is missing and what is unsolved, turns it into a fix plan for the clone and a positioning angle you can sell. Every quote is real, verbatim and linked. Use when the user says "what
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 22 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -521,7 +541,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Writes the launch for an app clone: the landing page built on the positioning angle, pricing set against the original's public pricing and its users' complaints, and the App Store and Google Play listing linted against the stores' limits and copycat rules. Use when the user says "landing page", "pricing", "how much should I charge", "App Store listing", "store screenshots", "launch plan", "Product
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -531,7 +551,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Reverse-engineers any app into a recon map: screen inventory, user flows, component list, inferred data model and a feature matrix, from public pages, screenshots, app store listings, help docs and the user's own account. The first step of the Replica pack. Use when the user says "clone this app", "reverse engineer X", "how does X work", "map out X", "what screens does X have", "I want to build my
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 8 KB (SKILL.md 5.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -541,149 +561,149 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne yapar:** Clicks through every flow of an app clone and tests it for bugs: a test plan generated from the recon flows with happy paths and edge cases, Playwright end-to-end tests where possible, a browser click-through where not, and bug reports in a fixed format with severity, steps and evidence. Use when the user says "test my clone", "find bugs", "QA this", "click through everything", "write e2e tests", 
 - **Teknoloji:** css, node, playwright, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7640, son güncelleme 2026-10-03, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★10248, son güncelleme 2026-10-03, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### research  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### research  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### retro  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### retro  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Conduct a retrospective on a coding session.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
+- **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### scaffold-exercises  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### scaffold-exercises  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.
 - **Teknoloji:** git, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### setup-matt-pocock-skills  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### setup-matt-pocock-skills  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 21 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### setup-pre-commit  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### setup-pre-commit  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.
 - **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### siege  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 93 (A)
+### siege  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 93 (A)
 
 - **Ne yapar:** Work on one hard mathematics problem in rounds: each round a judge writes a few self-contained questions, independent workers answer them, and the judge keeps a ledger of what is proved, refuted and open, until the judge concludes or the rounds run out, and then a proof.md says plainly what is and is not proved. A run takes hours and dozens of worker runs. Usage: /math-proof:siege [NAME=value sett
-- **Teknoloji:** api-anahtari, python _(otomatik tespit)_
+- **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation, disallowed-tools (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★46120, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 104 KB (SKILL.md 73.7 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### solo  ·  anthropics/claude-plugins-official @ a7ba5b9  ·  puan 98 (A)
+### solo  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 98 (A)
 
 - **Ne yapar:** Work on one hard mathematics problem in this session yourself, with no sub-agents: reason in stages, record each settled step in a notes file so that nothing written is lost if a response is cut off, and end with a self-contained proof.md. Usage: /math-proof:solo <the problem, stated in full, or the path of a file holding it>.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
+- **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation, disallowed-tools (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★46120, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### source-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### source-driven-development  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 98 (A)
 
 - **Ne yapar:** Her uygulama kararını resmî dokümantasyona dayandırır: yığını ve sürümleri tespit eder, resmî belgeyi çeker (çekilen içeriği talimat değil veri sayar), belgelenmiş kalıpla uygular ve kaynakları kodda/yanıtta alıntılar.
 - **Ne zaman:** Framework/kütüphane sürümüne duyarlı işler; güncelliğini yitirmiş kalıp riski olan hızlı değişen API'ler (Next.js, React 19, Tailwind v4…). · **Ne zaman değil:** İnternet erişimi yoksa; saf algoritma/iş mantığı değişiklikleri.
-- **Teknoloji:** api-anahtari, css, html, next.js, node, python, react, svelte, tailwind, typescript, vue _(otomatik tespit)_
+- **Teknoloji:** css, html, next.js, node, python, react, svelte, tailwind, typescript, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** resmi-dokuman-dayanagi → birincil
 - **Boyut:** 10 KB (SKILL.md 9.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa ve yığından bağımsız; 'çekilen içeriği veri say' güvenlik notu değerli. Model bilgisinin eskidiği framework işlerinde frontend rolüne iyi bir tamamlayıcı. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### spec-driven-development  ·  addyosmani/agent-skills @ 301b02b  ·  puan 98 (A)
+### spec-driven-development  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 98 (A)
 
 - **Ne yapar:** Kodlamadan önce spec yazdırır: kapsam kontrolü (gerekirse yetenek haritasına bölme), amaç/yığın/komutlar/yapı/test stratejisi/sınırlar/başarı ölçütü içeren spec, ardından plan, görevler ve uygulama aşamalarını kapılı bir akışla yürütür; spec'i canlı tutma kurallarını verir.
 - **Ne zaman:** Yeni proje/özellik başlarken spec veya PRD yoksa; tek bir isteğin birden çok bağımsız yeteneğe bölünmesi gerektiğinde. · **Ne zaman değil:** Küçük, net değişiklikler; gereksinim hâlâ belirsizse önce brainstorming/interview-me.
 - **Teknoloji:** node, react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** spec-yazimi → birincil · **Roller:** planlayici
-- **Boyut:** 13 KB (SKILL.md 12.8 KB, yük orta)
-- **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, birincil (spec yazımı). superpowers'ta brainstorming'in ürettiği tasarım belgesine karşılık gelir ama daha yapılandırılmış şablon ve 'spec'i canlı tut' kuralları sunar; writing-plans ile birlikte kullanılır. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
+- **Boyut:** 17 KB (SKILL.md 16.6 KB, yük orta)
+- **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT, birincil (spec yazımı). superpowers'ta brainstorming'in ürettiği tasarım belgesine karşılık gelir ama daha yapılandırılmış şablon ve 'spec'i canlı tut' kuralları sunar; writing-plans ile birlikte kullanılır. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### standup  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### standup  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Generate a standup update from recent activity. Use when preparing for daily standup, summarizing yesterday's commits and PRs and ticket moves, formatting work into yesterday/today/blockers, or structuring a few rough notes into a shareable update.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.2 KB, yük kucuk) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### system-design  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### system-design  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Design systems, services, and architectures. Trigger with "design a system for", "how should we architect", "system design for", "what's the right architecture for", or when the user needs help with API design, data modeling, or service boundaries.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### tdd  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### tdd  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### teach  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### teach  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Teach the user a new skill or concept, within this workspace.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint, disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 18 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### tech-debt  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### tech-debt  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Identify, categorize, and prioritize technical debt. Trigger with "tech debt", "technical debt audit", "what should we refactor", "code health", or when the user asks about code quality, refactoring priorities, or maintenance backlog.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -694,108 +714,108 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Ne zaman:** Sadece şablon dosyaları istenip app-builder'ın orkestrasyon kısmı istenmediğinde. · **Ne zaman değil:** app-builder kuruluysa (aynı dosyaları templates/ altında zaten taşıyor); adı genel olduğundan başka 'templates' skilleriyle çakışabilir.
 - **Teknoloji:** next.js, react, node, python, vue, flutter, react-native
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** proje-iskeleti → alternatif
 - **Boyut:** 43 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV / ALTERNATİF. İçerik app-builder/templates ile birebir aynı (diff: yalnız KAYNAK.md farkı); ayrı kurulması yinelenen bağlam. Durum alternatife çekildi.
 
-### testing-strategy  ·  anthropics/knowledge-work-plugins @ 2574e29  ·  puan 100 (A)
+### testing-strategy  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
 - **Ne yapar:** Design test strategies and test plans. Trigger with "how should we test", "test strategy for", "write tests for", "test plan", "what tests do we need", or when the user needs help with testing approaches, coverage, or test architecture.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★34734, son güncelleme 2026-11-04, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### to-questionnaire  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### to-questionnaire  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Turn a decision you can't fully answer into a questionnaire for someone else to fill in.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### to-spec  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### to-spec  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### to-tickets  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### to-tickets  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 5.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### triage  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### triage  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 19 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wait-what  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### wait-what  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Stop. That last message did not land: re-pitch it.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 0.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### wayfinder  ·  mattpocock/skills @ 4ae2317  ·  puan 96 (A)
+### wayfinder  ·  mattpocock/skills @ abeeaf9  ·  puan 96 (A)
 
 - **Ne yapar:** Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
-- **Teknoloji:** api-anahtari, react _(otomatik tespit)_
+- **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar · Claude Code'a özgü frontmatter alanları: disable-model-invocation (Codex bunları yok sayar)
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 12 KB (SKILL.md 12.1 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** otomatik
 
-### wizard  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### wizard  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.
 - **Teknoloji:** api-anahtari, docker _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### writing-for-agents  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### writing-for-agents  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.
-- **Teknoloji:** api-anahtari _(otomatik tespit)_
+- **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 10.6 KB, yük orta)
 - **İnceleme:** otomatik
 
-### writing-plans  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
+### writing-plans  ·  obra/superpowers @ 22f0b46  ·  puan 100 (A)
 
 - **Ne yapar:** Spec'ten, kod tabanını hiç görmemiş bir mühendisin uygulayabileceği ayrıntılı uygulama planı yazdırır: dosya yapısı, her görev için dosyalar, arayüz imzaları (üretir/tüketir), TDD adımları (başarısız test → minimum kod → geçen test → commit), global kısıtlar ve inceleme odağı. Plan subagent-driven-development veya executing-plans'a devredilir.
 - **Ne zaman:** Çok adımlı bir iş için spec/gereksinim hazırsa, koda dokunmadan önce; alt-agent'lara dağıtılacak görevler gerektiğinde. · **Ne zaman değil:** Tek dosyalık küçük düzeltmeler; spec henüz yoksa (önce brainstorming/spec-driven-development).
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★312440, son güncelleme 2026-11-03, lisans MIT)
+- **Geliştirici:** obra (kisi, ★323687, son güncelleme 2026-11-03, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** uygulama-plani → birincil · **Roller:** planlayici
 - **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, uygulama-plani grubunun birincili. Gerekçe: arayüz sözleşmeleri, görev boyutlandırma ve 'inceleme odağı' bölümüyle en uygulanabilir plan biçimi; superpowers yürütme zinciriyle (subagent-driven-development, executing-plans, TDD, verification) uçtan uca bağlı. addyosmani planning-and-task-breakdown daha hafif ve yığından bağımsız; vudovn plan-writing kısa ama ag-kit betiklerine atıf yapıyor.

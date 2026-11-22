@@ -1,37 +1,30 @@
 # Örnek görevler ve test sonucu › c-dokuman-icerik
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 113 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-22 · 106 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
 | `article-magazine` | ✅ | Huashu / huashu-md-html-inspired magazine article layout for turning Markdown or notes into a polished long-form HTML essay. |
 | `doc-kami-parchment` | ✅ | Warm parchment canvas (#f5f4ed), monochrome ink-blue accent (#1B365D), one serif family, and editorial-grade typography. |
 | `docx` | ✅ | Rapor, mektup, sözleşme, şablon gibi teslimatın Word dosyası olduğu her iş; mevcut .docx üzerinde izlenen değişiklik veya yorum. |
-| `docx@composiohq` | ✅ | Sadece ooxml Python Document kütüphanesiyle toplu redline yapılması gerekiyorsa (eski API'ye bağlı iş akışları). |
 | `pdf` | ✅ | Girdi ya da çıktı PDF olduğunda: rapor PDF'i üretmek, PDF'ten veri çekmek, form doldurmak, sayfa işlemleri. |
-| `pdf@composiohq` | ✅ | Güncel sürüm erişilemezse yedek olarak. |
 | `pptx` | ✅ | Sunum, pitch deck, eğitim slaytı üretimi; mevcut desteyi ya da kurumsal şablonu düzenleme; .pptx'ten metin çıkarma. |
-| `pptx@composiohq` | ✅ | HTML/CSS ile tasarlanıp PowerPoint'e çevrilecek sunumlar (html2pptx akışı özellikle isteniyorsa). |
 | `resume-modern` | ✅ | Modern minimal resume, single A4 page, ready for print or PDF export. |
 | `view-pdf` | ✅ | the user wants to open, show, or view a PDF and collaborate on it visually — annotate, highlight, stamp, fill form fields, place signature/initials, or review m |
 | `xlsx` | ✅ | Teslimatın elektronik tablo olduğu işler: finansal model, veri temizleme, formüllü tablo, format dönüştürme. |
-| `xlsx@composiohq` | ✅ | Güncel sürüm yoksa yedek; içerik büyük ölçüde aynı. |
 | `archify` | ✅ | Sistem/mimari açıklama, kod tabanı haritası, API çağrı zinciri, veritabanı şeması, olay zaman çizelgesi; paylaşılabilir etkileşimli diyagram ya da tek sayfa açı |
 | `beautiful-mermaid` | ✅ | Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde. |
 | `d3-visualization` | ✅ | Teaches the agent to produce D3 charts and interactive data visualizations. |
 | `data-report` | ✅ | Turns CSV, Excel, or JSON data into a polished visual report page. |
-| `diagram-design` | ✅ | Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider |
+| `diagram-design` | ✅ | Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, steps, timeline, swimlane, quadrant, radar |
 | `doc-coauthoring` | ✅ | Önemli bir teknik/iş dokümanı yazılırken; okuyucunun soru işaretlerini önceden yakalamak için. |
 | `documentation-and-adrs` | ✅ | Mimari karar, public API değişikliği, özellik teslimi; kod tabanına gelecek mühendis/agent için bağlam bırakmak. |
 | `documentation-templates` | ⚠️ | Hızlıca README/CHANGELOG/llms.txt iskeleti gerektiğinde; çok kısa bağlam bütçesiyle. |
-| `documentation-writer` | ✅ | Diátaxis Documentation Expert. |
+| `json-canvas` | ✅ | working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian. |
 | `json-canvas@kepano` | ✅ | working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian. |
 | `live-panel` | ✅ | the user wants a system, agent or org architecture diagram that looks like a monitoring dashboard in a terminal window - fixed layout, glowing packets on the wi |
-| `competitive-ads-extractor` | ✅ | Reklam kampanyası öncesi rakip mesajlarını ve kreatif kalıplarını çıkarmak. |
 | `content-research-writer` | ✅ | Kaynaklı blog yazısı, makale, vaka çalışması, düşünce liderliği içeriği. |
 | `de-ai-ify` | ✅ | Yayın öncesi metni insansılaştırmak; AI tonu taşıyan blog/e-posta/sosyal medya metinleri. |
-| `developer-growth-analysis` | ✅ | Kişisel geliştirici gelişim raporu; kendi Claude Code çalışma geçmişinden öğrenme listesi. |
-| `domain-name-brainstormer` | ✅ | Yeni ürün/şirket/yan proje için isim ve alan adı beyin fırtınası. |
 | `geo-fundamentals` | ✅ | Web sitesi/blog içeriğini AI aramada görünür kılmak; llms.txt, FAQ şeması, AI bot erişim kararı. |
 | `humanizer` | ✅ | Blog, ürün açıklaması, e-posta, README gibi düzyazıyı yayına hazırlarken yapay zekâ izlerini temizlemek; Etsy listing metinleri dahil. |
 | `i18n-localization` | ✅ | Uygulamaya çok dil desteği eklemek, sabit metinleri ayıklamak, Türkçe/Arapça (RTL) yerelleştirme. |
@@ -49,8 +42,6 @@
 | `ig-story` | ✅ | the user says "stories", "what do I post on my story", "story sequence", "poll idea", "I have nothing to story about", or wants to sell something without making |
 | `ig-viral` | ✅ | the user says "find viral videos", "what's working right now", "what are people posting in my niche", "reverse engineer this account", "build me a swipe file",  |
 | `internal-comms` | ✅ | Haftalık durum güncellemesi, yönetime rapor, olay sonrası bilgilendirme, bülten. |
-| `internal-comms@composiohq` | ✅ | Resmi sürüm kullanılamıyorsa yedek. |
-| `lead-research-assistant` | ✅ | B2B satış/iş geliştirme için potansiyel müşteri listesi ve yaklaşım önerisi. |
 | `li-audit` | ✅ | the user pastes their LinkedIn analytics or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know |
 | `li-carousel` | ✅ | the user says "carousel", "document post", "slides for LinkedIn", "turn this into a carousel", or has a list-shaped idea that would die as a text post. |
 | `li-comment` | ✅ | the user pastes a post and wants a comment, says "comment on this", "engage with this", "what do I say here", or wants a batch of comments for their engagement  |
@@ -62,12 +53,9 @@
 | `li-profile` | ✅ | the user says "optimize my profile", "score my LinkedIn", "rewrite my headline", "fix my about section", or pastes their profile and asks how it reads. |
 | `li-reply` | ✅ | the user pastes the comments on their post, says "reply to these", "handle my comments", "someone said X on my post", or is dealing with a critic or a lead in t |
 | `li-repurpose` | ✅ | the user says "repurpose this", "turn this into posts", "I have a video/newsletter/ transcript", or pastes a long piece of content and wants it on LinkedIn. |
-| `meeting-insights-analyzer` | ✅ | Liderlik/iletişim koçluğu, performans değerlendirmesine hazırlık, ekip toplantı analizi (transkript mevcutsa). |
-| `raffle-winner-picker` | ✅ | Sosyal medya çekilişi, etkinlik çekilişi, rastgele katılımcı seçimi. |
 | `research-decision-room` | ✅ | teams need to move from qualitative signals to product or design decisions without fabricating certainty. |
 | `seo-fundamentals` | ✅ | Web sitesi yayın öncesi SEO denetimi; meta etiketleri, başlık hiyerarşisi, schema ekleme. |
 | `stop-slop` | ✅ | Yazarken ya da hızlı düzeltmede hafif, düşük bağlam yüklü kural listesi gerektiğinde. |
-| `tailored-resume-generator` | ✅ | Belirli bir iş başvurusu için CV uyarlama. |
 | `twitter-algorithm-optimizer` | ✅ | X/Twitter gönderisi optimizasyonu, içerik stratejisi. |
 | `writing-guidelines` | ✅ | asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook". |
 | `writing-guidelines@nexu-io` | ✅ | asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook". |
@@ -88,18 +76,23 @@
 | `daily-review` | ✅ | Obsidian/Markdown kasasında günlük kapanış ve ertesi gün planı. |
 | `defuddle` | ✅ | Extract clean Markdown from HTML pages with Defuddle CLI. |
 | `defuddle@agricidaniel` | ✅ | defuddle, clean this URL, strip page clutter, readable Markdown from a web page, or preparing a web source for later wiki ingestion |
+| `defuddle@obsidianmd-eski` | ✅ | Extract clean Markdown from HTML pages with Defuddle CLI. |
 | `download-attachment` | ✅ | Claudesidian düzenindeki kasaya web'den PDF/görsel ek kaydetmek. |
 | `file-organizer` | ✅ | Dağınık İndirilenler/Belgeler klasörünü düzenlemek, kopyaları bulmak, proje arşivleme öncesi temizlik. |
 | `inbox-processor` | ✅ | PARA düzenli Obsidian kasasında gelen kutusu temizliği. |
 | `init-bootstrap` | ✅ | claudesidian şablonuyla yeni Obsidian kasası kurarken ilk yapılandırma. |
 | `install-claudesidian-command` | ✅ | claudesidian kasasını terminalden tek komutla açmak. |
-| `invoice-organizer` | ✅ | Vergi dönemi hazırlığı, gider mutabakatı, muhasebeciye belge hazırlama. |
 | `json-canvas@heyitsnoah` | ✅ | Obsidian kasasında görsel tuval, zihin haritası ya da not bağlantı haritası üretmek. |
 | `knap` | ✅ | the user asks to apply a Knap template, turn JSON or CSV data into notes, batch-generate Markdown files, or format Defuddle output into a note. |
+| `knap@obsidianmd-eski` | ✅ | the user asks to apply a Knap template, turn JSON or CSV data into notes, batch-generate Markdown files, or format Defuddle output into a note. |
+| `obsidian-bases` | ✅ | working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, kanban boards, filters, or formulas i |
 | `obsidian-bases@agricidaniel` | ⚠️ | Obsidian Bases, database-like vault views, dynamic tables, reading lists, task trackers, filters, formulas, summaries, and .base file edits. |
 | `obsidian-bases@heyitsnoah` | ✅ | Obsidian'da notlardan veritabanı benzeri tablo/kart görünümü kurmak. |
 | `obsidian-bases@kepano` | ✅ | working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian. |
 | `obsidian-cli` | ✅ | the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Ob |
+| `obsidian-cli@obsidianmd-eski` | ✅ | the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Ob |
+| `obsidian-headless` | ✅ | the user wants to set up or run Obsidian Sync or Obsidian Publish on a server, in CI, or from a terminal, or change a vault's Sync or Publish settings. |
+| `obsidian-markdown` | ⚠️ | working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes. |
 | `obsidian-markdown@agricidaniel` | ✅ | the user explicitly requests Obsidian note formatting or syntax help, not for general Markdown or broad vault operations. |
 | `obsidian-markdown@heyitsnoah` | ⚠️ | Obsidian kasasına not yazan/düzenleyen her iş; diğer Obsidian skillerinin temeli. |
 | `obsidian-markdown@kepano` | ⚠️ | working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes. |

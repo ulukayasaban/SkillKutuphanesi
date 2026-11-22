@@ -2,7 +2,7 @@
 
 _Code review, sadeleştirme, temiz kod_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **11/18**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **10/19**
 
 ### clean-code  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -10,21 +10,21 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Kod yazan agent'lar için kısa, her zaman açık stil ve disiplin kuralı olarak. · **Ne zaman değil:** Projenin kendi stil rehberi/lint kuralları güçlü ve farklıysa (çatışabilir); 'hata bildirilince açıklama yapma, düzelt' kuralı açıklama isteyen kullanıcılarla uyumsuz olabilir.
 - **Teknoloji:** playwright, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** temiz-kod → birincil
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT, temiz-kod grubunun tek üyesi. 7 KB, yararlı kurallar ve 'düzenlemeden önce bağımlıları kontrol et' adımı değerli; ancak katı sayılar (fonksiyon ≤20 satır) ve 'priority: CRITICAL, her zaman aktif' iddiası bağlam dışı uygulanabilir.
 
-### code-review-and-quality  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
+### code-review-and-quality  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 100 (A)
 
 - **Ne yapar:** Beş eksenli kod incelemesi yaptırır: doğruluk, okunabilirlik/sadelik, mimari, güvenlik, performans. Önce testleri sonra uygulamayı okur, bulguları ciddiyete göre sınıflar, değişiklik boyutu ve açıklama kuralları, çoklu model inceleme deseni, ölü kod hijyeni, bağımlılık disiplini ve hazır inceleme şablonu verir.
 - **Ne zaman:** Birleştirmeden önce her değişiklikte; kendi, başka agent'ın veya insanın yazdığı diff/PR'ı incelerken (diff satır içi yapıştırılmış olsa da). · **Ne zaman değil:** Yalnız YAGNI/aşırı mühendislik taraması istendiğinde (pragmatic-review daha odaklı); inceleme alt-agent'ını başlatma akışı (requesting-code-review).
-- **Teknoloji:** node, typescript _(otomatik tespit)_
+- **Teknoloji:** git, node, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → birincil · **Roller:** kod-inceleyici
-- **Boyut:** 21 KB (SKILL.md 20.8 KB, yük orta)
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, kod-inceleme grubunun birincili. Gerekçe: en kapsamlı ve yığından bağımsız inceleme yöntemi; 'önce testleri oku' ve 'doğrulamayı doğrula' adımları agent incelemelerinin tipik açığını kapatıyor. obra requesting-code-review inceleme yapmaz, inceleyiciyi başlatır (ayrı grup); pragmatic-review ve code-review-checklist daha dar. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
+- **Boyut:** 21 KB (SKILL.md 21.1 KB, yük orta)
+- **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT, kod-inceleme grubunun birincili. Gerekçe: en kapsamlı ve yığından bağımsız inceleme yöntemi; 'önce testleri oku' ve 'doğrulamayı doğrula' adımları agent incelemelerinin tipik açığını kapatıyor. obra requesting-code-review inceleme yapmaz, inceleyiciyi başlatır (ayrı grup); pragmatic-review ve code-review-checklist daha dar. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
 ### code-review-checklist  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -32,7 +32,7 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Hızlı, hafif bir kontrol listesi yeterli olduğunda; ag-kit iş akışı kullanan projelerde. · **Ne zaman değil:** Derinlemesine inceleme gerektiğinde (code-review-and-quality).
 - **Teknoloji:** typescript
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. 3 KB, yararlı ama yüzeysel; maddeler code-review-and-quality'nin alt kümesi. AI'ya özgü kontroller (prompt injection, çıktı temizleme) küçük bir artı.
@@ -43,31 +43,41 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** 500+ dosyalı depolar, monorepo'lar, modüller arası bağımlılıklı değişiklikler; ölü kod tespiti ve refactor önizlemesi. · **Ne zaman değil:** ~200 dosyanın altındaki projeler; yoğun dinamik import/yansıma kullanan kod; MCP kurmak istenmiyorsa.
 - **Teknoloji:** python, tree-sitter, sqlite, mcp · **Paketler:** code-review-graph (pip), MCP sunucu yapılandırması
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: effort, when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** buyuk-depo-baglami → birincil
 - **Boyut:** 11 KB (SKILL.md 10.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (opsiyonel, --skill ile). Dürüst kullan/kullanma eşikleri ve onaysız kurulum yasağı iyi. Üçüncü taraf PyPI paketine ve MCP kurulumuna bağlı; skill tek başına iş yapmaz. Rol çekirdeğine alınmadı.
 
-### code-review@mattpocock  ·  mattpocock/skills @ 4ae2317  ·  puan 100 (A)
+### code-review@mattpocock  ·  mattpocock/skills @ abeeaf9  ·  puan 100 (A)
 
 - **Ne yapar:** Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to 
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** mattpocock (kisi, ★313295, son güncelleme 2026-11-04, lisans MIT)
+- **Geliştirici:** mattpocock (kisi, ★329737, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** alternatif
 - **Boyut:** 7 KB (SKILL.md 6.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### code-simplification  ·  addyosmani/agent-skills @ 301b02b  ·  puan 100 (A)
+### code-simplification  ·  addyosmani/agent-skills @ 8c99fa3  ·  puan 100 (A)
 
 - **Ne yapar:** Davranışı birebir koruyarak kodu açıklık için sadeleştirir: Chesterton'ın çiti (önce neden var olduğunu anla), proje geleneklerine uyma, zekice yerine açık kod, denge ve yalnız değişen kapsama odaklanma ilkeleri; TypeScript/JavaScript, Python ve React için dile özgü örnekler.
 - **Ne zaman:** Çalışan ama okunması/bakımı zor koda refactor; incelemede biriken karmaşıklık fark edildiğinde; yeni yazılan kodu teslim öncesi toparlamak. · **Ne zaman değil:** Depo genelinde ölü kod/katman denetimi (simplify-codebase); davranış değiştiren yeniden tasarım; performans ayarı.
 - **Teknoloji:** typescript, javascript, python, react
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★113281, son güncelleme 2026-11-01, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★119573, son güncelleme 2026-11-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → birincil · **Roller:** kod-inceleyici
 - **Boyut:** 13 KB (SKILL.md 13.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, kod-sadelestirme grubunun birincili. Gerekçe: davranış koruma ve 'değişen kapsamla sınırla' kuralları varsayılan kullanım için en güvenli sürüm; dile özgü rehber somut. simplify-codebase depo geneli denetim için tamamlayıcı; simplify-code (vudovn) daha yüzeysel alternatif. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
+
+### gerrit-code-review  ·  google/skills @ 4bb21eb  ·  puan 98 (A)
+
+- **Ne yapar:** Reads and manages Gerrit code reviews over the HTTPS REST API: change metadata and diffs, inline comments and drafts, reviewers and CCs, labels and votes, checks, topics, hashtags, commit messages, cherry-picks, abandon, and submit. Use when working with Android (AOSP), Chromium, Fuchsia, or self-hosted Gerrit, when given a Gerrit change URL (https://*-review.googlesource.com/*, https://r.android.
+- **Teknoloji:** git, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** google (kurum, ★24518, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Durum:** tercih
+- **Boyut:** 93 KB (SKILL.md 17.2 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### lint-and-validate  ·  vudovn/ag-kit @ 549ba3d  ·  puan 76 (B)
 
@@ -75,67 +85,67 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** TypeScript/JavaScript veya Python projelerinde her değişiklik sonrası otomatik kalite kapısı. · **Ne zaman değil:** Lint/tip araçları yapılandırılmamış projeler (önce yapılandırma); farklı ekosistemler (Go, Rust…) için komut yok.
 - **Teknoloji:** node, typescript, python · **Paketler:** eslint, typescript, ruff/mypy/bandit (Python)
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** lint-dogrulama → birincil
 - **Boyut:** 16 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve uygulanabilir; betikler proje tipini algılıyor. 'FINAL AUDIT REPORT' bölümüne atıf betik çıktısıyla tam örtüşmüyor; npm audit her değişiklikte gereksiz yavaş olabilir.
 
-### ponytail  ·  DietrichGebert/ponytail @ 96608e0  ·  puan 100 (A)
+### ponytail  ·  DietrichGebert/ponytail @ dec89d9  ·  puan 100 (A)
 
 - **Ne yapar:** Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. Use on any coding task (writing, fixing, refactoring, reviewing, choosing dependencies) and when the user says "ponytail", "be lazy", "simplest solution", "yagni", or complains about over-engineering or bloat. Levels: lite, full (default), ultra.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: argument-hint (Codex bunları yok sayar)
-- **Geliştirici:** DietrichGebert (kisi, ★184540, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★196330, son güncelleme 2026-11-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ponytail-audit  ·  DietrichGebert/ponytail @ 96608e0  ·  puan 100 (A)
+### ponytail-audit  ·  DietrichGebert/ponytail @ dec89d9  ·  puan 100 (A)
 
 - **Ne yapar:** Quality audit of a whole repo: bugs, security holes, what breaks under real load, risky code without tests, slow paths, and what to delete, merge or split. Ranked, each finding explained in plain English. One-shot report, changes nothing. Use for "audit this codebase", "review the whole repo", "find bloat", "what can I delete", /ponytail-audit.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★184540, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★196330, son güncelleme 2026-11-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ponytail-debt  ·  DietrichGebert/ponytail @ 96608e0  ·  puan 100 (A)
+### ponytail-debt  ·  DietrichGebert/ponytail @ dec89d9  ·  puan 100 (A)
 
 - **Ne yapar:** List every `shortcut:` comment (and older `ponytail:` ones) as a debt ledger. One-shot report, changes nothing. Use for "ponytail debt", "what did ponytail defer", "list the shortcuts", /ponytail-debt.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★184540, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★196330, son güncelleme 2026-11-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ponytail-gain  ·  DietrichGebert/ponytail @ 96608e0  ·  puan 100 (A)
+### ponytail-gain  ·  DietrichGebert/ponytail @ dec89d9  ·  puan 100 (A)
 
 - **Ne yapar:** Show ponytail's measured savings (code, cost, speed) from the benchmark. One-shot display. Use for /ponytail-gain, "what does ponytail save", "ponytail impact".
-- **Teknoloji:** api-anahtari, react _(otomatik tespit)_
+- **Teknoloji:** react _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★184540, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★196330, son güncelleme 2026-11-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ponytail-help  ·  DietrichGebert/ponytail @ 96608e0  ·  puan 97 (A)
+### ponytail-help  ·  DietrichGebert/ponytail @ dec89d9  ·  puan 97 (A)
 
 - **Ne yapar:** Quick reference for ponytail levels, skills and commands. One-shot display. Use for /ponytail-help, "ponytail help", "how do I use ponytail".
-- **Teknoloji:** api-anahtari, node _(otomatik tespit)_
+- **Teknoloji:** node _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** DietrichGebert (kisi, ★184540, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★196330, son güncelleme 2026-11-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ponytail-review  ·  DietrichGebert/ponytail @ 96608e0  ·  puan 100 (A)
+### ponytail-review  ·  DietrichGebert/ponytail @ dec89d9  ·  puan 100 (A)
 
 - **Ne yapar:** Quality review of a change: is the logic right, is it safe, does it hold under real load, is risky code tested, is it fast enough, and is every line needed. Reads the connected code, not only the diff. Each finding is explained in plain English. Use for "review this", "code review", "review the last commit", "review my PR", "is this over-engineered", /ponytail-review.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** DietrichGebert (kisi, ★184540, son güncelleme 2026-10-29, lisans MIT)
+- **Geliştirici:** DietrichGebert (kisi, ★196330, son güncelleme 2026-11-21, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 5.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -146,29 +156,29 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Aşırı mühendislik, gereksiz soyutlama şüphesi olan değişikliklerde; CI'da otomatik inceleme yorumu üretmek. · **Ne zaman değil:** Genel çok eksenli inceleme varsayılanı olarak (code-review-and-quality); git dışı projeler.
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heyitsnoah (kisi, ★2606, son güncelleme 2026-04-11, lisans MIT)
+- **Geliştirici:** heyitsnoah (kisi, ★2615, son güncelleme 2026-04-11, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-inceleme → alternatif · **Roller:** kod-inceleyici
 - **Boyut:** 11 KB (SKILL.md 10.8 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. YAGNI odağı ve CI modu farklılaştırıcı; claudesidian (Obsidian kasası) reposundan geliyor ama içerik genel. Etkileşimli menü varsayılan, --auto/--ci ile atlanır.
 
-### receiving-code-review  ·  obra/superpowers @ 2ce8aa1  ·  puan 98 (A)
+### receiving-code-review  ·  obra/superpowers @ 22f0b46  ·  puan 98 (A)
 
 - **Ne yapar:** Gelen kod inceleme geri bildirimine teknik titizlikle yaklaşmayı öğretir: oku, kendi sözlerinle yeniden ifade et, kod tabanında doğrula, değerlendir, gerekirse gerekçeli itiraz et, maddeleri tek tek uygulayıp test et; 'harika fikir!' gibi gösterişli onayı ve doğrulamadan uygulamayı yasaklar.
 - **Ne zaman:** İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken. · **Ne zaman değil:** Geri bildirim yokken; incelemeyi yapan tarafta.
 - **Teknoloji:** dil-bagimsiz
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★312440, son güncelleme 2026-11-03, lisans MIT)
+- **Geliştirici:** obra (kisi, ★323687, son güncelleme 2026-11-03, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** inceleme-dongusu → tamamlayıcı
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT, tamamlayıcı. 6 KB, davranışsal açıdan değerli (yaltaklanma ve kör uygulamayı önler); uygulayıcı rollerine uygun.
 
-### requesting-code-review  ·  obra/superpowers @ 2ce8aa1  ·  puan 100 (A)
+### requesting-code-review  ·  obra/superpowers @ 22f0b46  ·  puan 100 (A)
 
 - **Ne yapar:** İş bitince veya birleştirmeden önce, oturum geçmişini değil özenle hazırlanmış bağlamı (açıklama, plan, BASE/HEAD SHA) vererek bir inceleyici alt-agent başlatır; code-reviewer.md şablonu ile Kritik/Önemli/Küçük bulguları ister ve bunlara göre ilerler.
 - **Ne zaman:** subagent-driven-development'ta her görevden sonra; büyük özellik bitiminde; main'e birleştirmeden önce taze bağlamlı inceleme gerektiğinde. · **Ne zaman değil:** Alt-agent aracı olmayan ortamlar (inceleme satır içi yapılır); incelemenin kendisini yapan agent için yöntem değil (code-review-and-quality).
 - **Teknoloji:** git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obra (kisi, ★312440, son güncelleme 2026-11-03, lisans MIT)
+- **Geliştirici:** obra (kisi, ★323687, son güncelleme 2026-11-03, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** inceleme-dongusu → birincil · **Roller:** kod-inceleyici, planlayici
 - **Boyut:** 9 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, inceleme-dongusu grubunun birincili. Kısa, superpowers zincirinin parçası; code-reviewer.md şablonu 'spec bir vizyon belgesidir' ilkesiyle güçlü. İnceleme yöntemi değil orkestrasyon olduğu için code-review-and-quality ile çakışmaz.
@@ -179,18 +189,18 @@ _Code review, sadeleştirme, temiz kod_
 - **Ne zaman:** Hızlı, kontrol listesi tarzı sadeleştirme; ag-kit iş akışı kullanan projeler. · **Ne zaman değil:** Davranış korumaya ve proje geleneklerine özen gereken işlerde (code-simplification daha dikkatli); depo geneli denetim (simplify-codebase).
 - **Teknoloji:** typescript, javascript
 - **Claude / Codex:** tam / tam — Claude Code'a özgü frontmatter alanları: effort, when_to_use (Codex bunları yok sayar)
-- **Geliştirici:** vudovn (kisi, ★8207, son güncelleme 2026-10-18, lisans MIT)
+- **Geliştirici:** vudovn (kisi, ★8227, son güncelleme 2026-10-18, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → alternatif
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Okunur ve kısa, ama 'tek implementasyonlu arayüzü kaldır' gibi kurallar bağlamsız uygulanırsa zarar verebilir; code-simplification'ın kapsadığı işi daha kaba yapıyor.
 
-### simplify-codebase  ·  tt-a1i/archify @ a406594  ·  puan 98 (A)
+### simplify-codebase  ·  tt-a1i/archify @ 8509a3d  ·  puan 98 (A)
 
 - **Ne yapar:** Kod tabanından kazara karmaşıklığı kanıta dayalı olarak ayıklar: Survey (salt okuma, sıralı bulgular) ve Change (yetkili silme/birleştirme) kipleri; sözleşme haritası çıkarır, her aday için yük/erişilebilirlik/gerekçe/kesinti/sonuç/risk/kanıt kaydı tutar; ölü kod, yinelenen durum, gereksiz API/katman, sahipsiz soyutlama ve eskimiş uyumluluk yollarını hedefler. Güvenlik ve veri kaybı korumalarına dokunmaz.
 - **Ne zaman:** Var olan bir depoda sadeleştirme denetimi veya açıkça yetkilendirilmiş büyük çaplı temizlik; 'nereler gereksiz?' sorusuna kanıtlı yanıt. · **Ne zaman değil:** Genel code review, onboarding, sadece stil refactor'ü veya performans ayarı (skill kendisi de bunları dışlıyor); küçük diff sadeleştirmesi (code-simplification).
 - **Teknoloji:** dil-bagimsiz, git
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★93462, son güncelleme 2026-11-03, lisans Apache-2.0)
+- **Geliştirici:** tt-a1i (kisi, ★98573, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** kod-sadelestirme → tamamlayıcı · **Roller:** kod-inceleyici
 - **Boyut:** 27 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT, tamamlayıcı. Bu alanda gördüğüm en titiz sadeleştirme protokolü (kanıt kaydı, kör nokta bildirimi, ürün kararı ayrımı); dil bağımsız. metadata.internal işaretli ama Archify'a bağlı değil. mevcut-kod-iyilestirme profilinin ana skilli.

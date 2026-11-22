@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/Lonsdale201/wp-agent-skills
 - **Repo içindeki yol:** `woocommerce/wc-product-search-select`
-- **Commit:** `15222a961bc285f208a895db0adc90a995442f64`
+- **Commit:** `bf5d141420b74d17606da042f66a96d407809dc5`
 - **Lisans:** MIT
 - **Geliştirici:** Lonsdale201 (kisi)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih
 - **SKILL.md'de olup bulunamayan dosyalar:** `class-wc-admin-assets.php`, `class-wc-ajax.php`, `class-wc-product-data-store-cpt.php`, `wc-enhanced-select.js`

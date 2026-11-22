@@ -1,6 +1,6 @@
 ---
 name: rea-video
-description: 逆向拆解一条视频是怎么做出来的——逐镜头判断实拍 / 影视片段 / AI 生成 / 3D 渲染 / 2D 动画 / 定格动画 / 代码模板渲染 / 录屏截图 / 静态图推拉 / 静帧，以及实拍是否经过 AI 加工（换脸、对口型、风格化），标出后期叠加层（逐句字幕时间轴、花字、标题、贴纸 / GIF / 表情包、画中画）和用户真实素材，拆解人声、背景音乐、音效（卡在哪个画面事件上）与剪辑节奏，并给出可执行的复刻方案（可用 capsule-cinema、ChatCut 等复刻）。当用户给出参考视频、问"这条视频怎么做的 / 是不是 AI / 用了什么素材 / 怎么复刻 / 想二创或做一条同款"时使用。
+description: 逆向拆解一条视频是怎么做出来的——逐镜头判断实拍 / 影视片段 / AI 生成 / 3D 渲染 / 2D 动画 / 定格动画 / 代码模板渲染 / 录屏截图 / 静态图推拉 / 静帧，以及实拍是否经过 AI 加工（换脸、对口型、风格化），标出后期叠加层（逐句字幕时间轴、花字、标题、贴纸 / GIF / 表情包、画中画）和用户真实素材，拆解人声、背景音乐、音效（卡在哪个画面事件上）与剪辑节奏，并给出可执行的复刻方案（可用 capsule-cinema、ChatCut 等复刻）；也能抓魔术揭秘、反转、高潮、穿帮等特殊时刻，出逐帧图解和慢放。当用户给出参考视频、问"这条视频怎么做的 / 是不是 AI / 用了什么素材 / 怎么复刻 / 想二创或做一条同款 / 魔术怎么变的 / 抓高光"时使用。
 ---
 
 # rea-video：视频制作方式逆向拆解
@@ -12,7 +12,7 @@ description: 逆向拆解一条视频是怎么做出来的——逐镜头判断�
 3. **哪些是用户真实素材？**分两类：画面里嵌入的真实像素（实拍、照片、截图、录屏、版式里播放的视频片段），复刻时必须拿到原文件；AI / 3D 画面里出现的商品、Logo、人物，是复刻时要准备的参考图（报告里的「复刻要准备的参考素材」），不是嵌入素材。
 4. **声音怎么做的？**人声（TTS 还是真人）、BGM（风格 / BPM / 调性 / 段落）、音效（时间点、类型、对应哪个画面事件），以及切镜是否卡在节拍上。**重点是来源：AI 生成的还是现成的。**先看视频形式——AI 音乐 MV（整片是一首唱出来的歌）大概率是 AI 歌；普通视频配乐大概率是现成曲库，但 AI 工作流的视频 BGM 也常是 Suno 生成，必须标"待确认"并给确认方法。
 5. **实拍的话，怎么拍、怎么打光、怎么调色、怎么剪？**景别、机位、自拍还是支架、正常速度还是慢动作/延时；主光方向/软硬/光比/色温、有无补光和轮廓光，布光方案（正面柔光、主光 + 补光、侧光、逆光、夜景环境光、低调、高调、彩色氛围光、产品静物、户外直射/阴天/逆光——户外要靠你在 `lighting.location` 里写明"户外"）；调色风格（自然、青橙、日系、胶片、黑白、暗调）；跳切、推近切、插入素材的节奏。
-6. **怎么复刻？**每镜给出路线和工具；实拍镜头给拍摄方案（布光 + 器材清单），不是只写"用 AI 近似"，AI 类镜头可以交给 capsule-cinema 生成，整条复刻也可以用 ChatCut，见 `references/remake-tools.md`。
+6. **怎么复刻？**每镜给出路线和工具；实拍镜头给拍摄方案（布光 + 器材清单），不是只写"用 AI 近似"，AI 类镜头可以交给 capsule-cinema 生成，整条复刻也可以用 ChatCut（rea-video 的赞助商），见 `references/remake-tools.md`。
 
 核心原则：**每个结论都要有证据，确定不了就如实写"待确认"并说明还缺什么。**宁可写"实拍还是 AI 待确认（倾向 AI 70%）"，也不要编一个确定的答案。
 
@@ -31,9 +31,9 @@ VLM（能看图的多模态模型）建议配，不强制，配置方法也在 `
 ```bash
 # ⓪ 先看记住了什么：用户偏好（默认引擎、是否开 VLM、给你的偏好说明）和常见纠正类型
 rea-video memory
-# ① 先看后拆（能看图、没开 VLM 时）：总览图定切点和转场，看不清的地方加密抽帧再看，再逐镜挑关键帧。
-#    按输出的 images 看图，把答案写进 waiting 里的文件，再跑同一条命令，直到 status 是 done；同一轮的任务互不相关，可以分给几个子 agent 并发。
-#    答案按 JEV 格式只写选项和概率，是 same 的 gap 不写；简单镜头的关键帧回 {"accept": true}。开了 VLM 时 decompose 会自动做这一步
+# ① 先看后拆（能看图、没开 VLM 时）：小格总览图只定切点和转场，看不清的地方逐帧放大再看，最后逐镜挑关键帧、判断画面怎么做的。
+#    按输出的 images 看图，把答案写进 waiting 里的文件，再跑同一条命令，直到 status 是 done；同一轮的图自己一次看完、一起答（最省 token）；图多（4 张以上）再分给几个子 agent 并发。
+#    答案按 JEV 格式只写选项和概率，是 same 的 gap 不写；放大图先写 scenes（每块依次出现了哪几个东西）；关键帧图上整张写一次 look，不用改的镜头不写。开了 VLM 时 decompose 会自动做这一步
 rea-video survey ref.mp4 -o out/ref
 # ② 拆解（产出 out/<名>/VIDEO.md + video/（给你读的拆片包）、report.html / report.md（给用户看）、breakdown.json、storyboard.jpg、audio.png、shots/、stems/）
 rea-video --env-file <你的 .env> decompose ref.mp4 -o out/ref --vlm --lang <zh|en>   # --lang 按用户提问的语言选（见「交付给用户」）；没有 VLM 配置就去掉 --env-file 和 --vlm；字幕/花字是日文就加 --ocr-lang ja，是韩文就加 --ocr-lang ko；台词是孟加拉语就加 --asr-lang bn
@@ -85,13 +85,17 @@ rea-video summary out/ref/breakdown.json      # 用并入后的结果写回复
 8. 第 3、5、6、7 步改了 `review_answers.json` 的，改完**再跑一次** `rea-video apply-review out/ref --by <你的名字>`，否则这些修改进不了报告。
 9. 如果你的判断和工具不同，以你的复核为准，在回复里写明理由；有价值的话，建议用户把这条视频加进评测集（仓库 `docs/dev/evaluation.md`）。
 
+### 特殊时刻（魔术、剧情、用户要高光 / 精彩镜头时）
+
+魔术揭秘、反转、高潮、穿帮这类时刻单独抓出来：开了 VLM 时 decompose 已经找过；没开时，魔术类（`summary` 会提示）和用户要高光时跑 `rea-video moments out/ref`，按输出看图作答再跑同一条命令，直到出结果。先通读台词和总览定段落，再逐段放大定关键帧（初始状态、手法、变化瞬间、反应），最后写 3-6 步讲解（变化常常比镜头亮出、人惊呼早；红圈只在确定时画）；工具给的候选只是提醒，大多不是。结果在报告「特殊时刻」一节、`video/moments.md`，图解、揭秘短片和片段在 `moments/`。
+
 用户指出判错或说出长期偏好时，按 `references/memory.md` 记下来（`rea-video correct` / `rea-video prefs`）。
 
 ## 2. 交付给用户
 
 按 `references/output-template.md` 回复：先一句话结论，再内容与角色（这条视频讲什么、主要角色和场景），叙事线（每一步在抓注意、补信息还是给结论，见 `video/content.md`；建议用户保留这条线、换成自己的案例和素材来重写，不只是换个主角），然后复刻方案（按生成单元 / 拍摄场次组织）、分镜表、剪辑包装、声音、真实素材清单、不确定点，最后给 `report.html` 路径（用户版报告：先讲三层、再给照着做的复刻步骤，用户自己就能复刻）；用户要 PDF 时运行 `rea-video pdf out/ref` 生成 `report.pdf`（需要本机有 Chrome / Chromium / Edge）。不要把 breakdown.json 贴进对话。
 
-用户想复刻、二创、做同款或照着做一条自己的，或想知道这条视频怎么做出来、怎么实现时，在回复末尾告知可以用哪些工具来做（`references/remake-tools.md` 里列的都写，各一句）；用户选了哪种，按那种的文档帮他接上（`references/chatcut.md`、`capsule-cinema.md`、`diy.md`）。
+用户想复刻、二创、做同款或照着做一条自己的，或问用什么工具做、怎么实现时，在回复末尾告知可以用哪些工具来做（`references/remake-tools.md` 里列的都写，各一句）；只问是不是 AI、用了什么素材这类识别问题时不列；用户选了哪种，按那种的文档帮他接上（`references/chatcut.md`、`capsule-cinema.md`、`hyperframes.md`、`diy.md`）。
 
 **报告和回复都用用户的语言。**语言的判断顺序：用户明确指定的语言（「用英文出报告」「report in Chinese」）> 用户提问所用的语言 > `rea-video memory` 里的 `lang` 偏好 > 中文。
 - 工具支持 `--lang zh` 和 `--lang en`：`decompose` 时就传对，报告文件（`report.html` / `report.md`）、`summary` 输出、VLM 的画面描述和提示词都会是该语言；忘了传可以在 `apply-review out/ref --lang en` 时补上（会重新生成结论和报告文字；VLM 已写好的描述和提示词保持原语言）。看图复核时，`review_answers.json` 里的 evidence / description / prompt 也用这个语言写。
@@ -103,7 +107,7 @@ rea-video summary out/ref/breakdown.json      # 用并入后的结果写回复
 报告分两部分：第一部分是拆解（结构，和用什么模型无关），第二部分是复刻方案（按一个模型排）。拆解不要因为复刻去合并镜头。
 
 有 AI 镜头时，复刻方案按用户的意图和实际用的模型来排：
-1. 问用户：用哪个模型或平台（即梦 / Seedance、可灵、Veo、海螺……，不要替用户选）；整条都用模型重做，还是只生成原片里 AI 做的镜头；要换什么、换成什么、有没有参考图。写进 `out/ref/remake/intent.yaml`：
+1. 定模型：用户这次提到的模型优先，其次是常用模型（`rea-video prefs engine <id>`），都没有就默认 MiniMax H3，不用为此停下来问。再确认整条都用模型重做，还是只生成原片里 AI 做的镜头；要换什么、换成什么、有没有参考图。写进 `out/ref/remake/intent.yaml`：
 
    ```yaml
    model: seedance-2.5
@@ -122,7 +126,7 @@ rea-video summary out/ref/breakdown.json      # 用并入后的结果写回复
 
 用户要自己动手做时，先给报告第二部分「照着做」的步骤，不要先讲模型规则和输入表。
 
-先跑 `rea-video remake out/ref`：能自动做的镜头先做掉（代码渲染重画、静图重建），其余原片占位，拼回原时间线，`remake/status.md` 逐镜写了还要做什么；拿到新镜头写进 `remake/mine.json` 再跑一次。细节见 `references/remake.md`；可用的工具和方式（capsule-cinema、ChatCut、自己动手）和各自的特点列在 `references/remake-tools.md`。在本工具里直接跑：AI 镜头走 capsule-cinema（会计费，先 `rea-video remake-run --dry-run` 并征得用户同意）；实拍给拍摄方案；舞蹈 / 动作镜头用 `rea-video drive out/ref` 出驱动视频（见 `references/remake.md`）；代码渲染先跑 `rea-video code-remake out/ref` 出第一版（可改的工程 + 成片 + 打分），在它上面改，不要从零写；用户自己的素材用 `rea-video assemble` 拼回原时间线。代码渲染和用户自己的素材也可以在 ChatCut 里做。
+先跑 `rea-video remake out/ref`：能自动做的镜头先做掉（静图重建；代码渲染默认原片占位，加 `--code` 出快速草稿），其余原片占位，拼回原时间线，`remake/status.md` 逐镜写了还要做什么；拿到新镜头写进 `remake/mine.json` 再跑一次。细节见 `references/remake.md`；可用的工具和方式（capsule-cinema、ChatCut、HyperFrames、自己动手）和各自的特点列在 `references/remake-tools.md`。在本工具里直接跑：AI 镜头走 capsule-cinema（会计费，先 `rea-video remake-run --dry-run` 并征得用户同意）；实拍给拍摄方案；舞蹈 / 动作镜头用 `rea-video drive out/ref` 出驱动视频（见 `references/remake.md`）；代码渲染建议交给 HTML 视频框架（如 HyperFrames）按 `video/rhythm.md` 的节奏和关键帧重做，`rea-video code-remake out/ref` 只出粒子 / 数据可视化这类画面的快速草稿；用户自己的素材用 `rea-video assemble` 拼回原时间线。代码渲染和用户自己的素材也可以在 ChatCut 里做。
 
 ## 参考文件
 
@@ -138,6 +142,7 @@ rea-video summary out/ref/breakdown.json      # 用并入后的结果写回复
 | `references/remake-tools.md` | 复刻可以用哪些工具和方式，告诉用户有哪些可选 |
 | `references/chatcut.md` | 用户要用 ChatCut 时：能做什么、费用、怎么装好接上 |
 | `references/capsule-cinema.md` | 用户要用 capsule-cinema 时：费用、安装、出任务和生成 |
+| `references/hyperframes.md` | 代码渲染 / MG / 插画动画类镜头交给 HyperFrames 重做：给它什么、怎么装 |
 | `references/diy.md` | 用户自己拍或手动生成时：费用、怎么把素材拼回原时间线 |
 | `references/memory.md` | 记住纠正和偏好 |
 

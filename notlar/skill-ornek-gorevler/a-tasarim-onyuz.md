@@ -1,11 +1,10 @@
 # Örnek görevler ve test sonucu › a-tasarim-onyuz
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 279 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-22 · 273 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
 | `accessibility-review` | ⚠️ | "audit accessibility", "check a11y", "is this accessible?", or when reviewing a design for color contrast, keyboard navigation, touch target size, or screen rea |
-| `audit` | ⚠️ | the user asks to audit, review, critique, inspect, assess, analyze, evaluate, or give feedback on a product experience. |
 | `design-brief` | ✅ | "design brief", "create a design brief", "ilang brief", "structured brief". |
 | `design-critique` | ⚠️ | "review this design", "critique this mockup", "what do you think of this screen?", or when sharing a Figma link or screenshot for feedback at any stage from exp |
 | `design-dna` | ✅ | Referans sitelerin/ekran görüntülerinin stilini analiz edip yeniden kullanılabilir profile çevirmek; stil aktarımı. |
@@ -42,12 +41,12 @@
 | `web-clone` | ⚠️ | 用户说 复刻网站、克隆网站、clone website、抄个站、仿站、 照着这个站做一个、reproduce site、还原某个网页效果、把这个站搬下来改成我的、 复刻某个交互/WebGL/Canvas/Three.js 效果。提供「先拿真源码 → 判路径 → 逆向拆解 → 搭工程 → 替换内容」的可移植决策树，覆盖静 |
 | `web-design-guidelines@ehmo` | ✅ | building web interfaces, auditing accessibility, implementing responsive layouts, or reviewing web UI code |
 | `web-design-guidelines@nexu-io` | ✅ | Review UI code for Web Interface Guidelines compliance by the Vercel engineering team. |
+| `web-design-guidelines@openmontageinc` | ✅ | asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices". |
 | `web-design-guidelines@vudovn` | ✅ | 'UI'ımı incele', 'erişilebilirliği kontrol et', 'tasarımı denetle' isteklerinde hızlı kural denetimi. |
 | `banner-design` | ✅ | Belirli bir platform boyutuna (Twitter başlığı, LinkedIn kapağı, Google Display, hero) birden fazla sanat yönü alternatifli banner gerekince. |
 | `brand` | ⚠️ | Yeni bir marka kimliği/ses rehberi yazılırken veya mevcut marka kurallarını tasarım token'larına bağlarken; marka uyum denetimlerinde. |
 | `brand-extract` | ✅ | a brand-extraction project opens with a site in the Browser tab, or when the user asks to "extract a brand", "pull the brand from <url>", "get the colors/fonts/ |
 | `brand-guidelines` | ✅ | Yalnızca Anthropic markalı sunum/belge üretirken veya tek bir markanın kuralının skill'e nasıl yazıldığına örnek olarak. |
-| `brand-guidelines@composiohq` | ✅ | Yalnızca birincil kopya (anthropics/skills) alınamazsa; aynı Anthropic marka içeriği. |
 | `brandkit` | ✅ | Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. |
 | `design` | ⚠️ | Logo, kurumsal kimlik seti, banner, ikon veya sosyal medya görseli üretimi; marka paketi çıkarma. |
 | `design-spec` | ✅ | UI koduna başlamadan önce projenin DESIGN.md'sini oluştururken veya güncellerken. |
@@ -56,18 +55,16 @@
 | `tailwind-design-system` | ✅ | Tailwind v4 projesinde bileşen kitaplığı/token sistemi yazarken veya v3'ten v4'e geçerken; shadcn tarzı (CVA + Radix Slot) bileşenler gerekince. |
 | `tailwind-patterns` | ✅ | Tailwind v4 projesinde token mimarisi ve modern CSS kalıpları kurulurken. |
 | `theme-factory` | ✅ | Hızlı, tutarlı görünüm gerektiren sunum/belge/landing için hazır palet+font çifti seçerken; marka rehberi yokken. |
-| `theme-factory@composiohq` | ✅ | Yalnızca resmî kopya alınamazsa. |
 | `animate` | ✅ | Implement purposeful interface animations: easing, springs, interruption, exits, and reduced motion. |
 | `animated-component-libraries` | ⚠️ | Landing page'de hazır animasyonlu bileşen (shimmer, beam, particles) eklerken. |
 | `animejs` | ✅ | GSAP lisansı/boyutu istenmeyip hafif bir motor tercih edildiğinde. |
+| `design-motion-principles` | ✅ | Geçiş, hover, mikro-etkileşim, giriş/çıkış animasyonu kurarken ya da mevcut hareket tasarımını denetletirken (React, Framer Motion/Motion, CSS, HTML). |
 | `emil-design-eng` | ✅ | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great. |
 | `emilkowalski-motion` | ✅ | Motion-design follow-up skill inspired by Emil Kowalski's animation guidance. |
 | `framer-motion` | ✅ | Animasyona 'Disney ilkeleri' çerçevesi verilmek istendiğinde fikir ve parça kaynağı. |
 | `gpt-taste` | ✅ | . |
-| `gsap` | ✅ | writing GSAP animations in HyperFrames compositions. |
 | `gsap-core` | ✅ | Kütüphane belirtilmeden JS animasyonu istendiğinde; tween, ease, stagger, reduced-motion kuralları. |
 | `gsap-core@nexu-io` | ✅ | the user asks for a JavaScript animation library, animation in React/Vue/vanilla, GSAP tweens, easing, basic animation, responsive or reduced-motion animation,  |
-| `gsap-framer-scroll-animation` | ✅ | the user wants to build scroll animations, scroll effects, parallax, scroll-triggered reveals, pinned sections, horizontal scroll, text animations, or any motio |
 | `gsap-frameworks` | ✅ | Vue, Nuxt veya Svelte projesinde GSAP kullanılırken. |
 | `gsap-frameworks@calesthio` | ✅ | Yalnız OpenMontage uyumu gerekirse. |
 | `gsap-frameworks@nexu-io` | ✅ | the user wants animation in Vue, Nuxt, Svelte, SvelteKit, or asks about GSAP with Vue/Svelte, onMounted, onMount, onDestroy |
@@ -103,13 +100,11 @@
 | `lightweight-3d-effects` | ⚠️ | Hero arka planı, dekoratif 3D illüstrasyon, kart tilt efekti; ağır framework istemeyen sayfalar. |
 | `playcanvas-engine` | ✅ | Hafif WebGL/WebGPU oyun motoru ve PlayCanvas editörüyle çalışan projeler. |
 | `react-three-fiber` | ⚠️ | Hazır R3F başlangıç projesi ve bileşen üretici betik isteniyorsa; R3F v8/React 18 projeleri. |
-| `react-three-fiber-game` | ✅ | the user wants pmndrs-based scene composition, shared React state, and 3D HUD integration inside a React app. |
 | `spline-interactive` | ✅ | Kodsuz tasarlanmış 3D sahneyi siteye gömmek; tasarımcı odaklı hızlı prototip. |
 | `substance-3d-texturing` | ✅ | Substance Painter lisansı olan ekiplerde doku hattı otomasyonu. |
 | `threejs-animation` | ✅ | glTF animasyonlarını oynatırken, kemik/morph kontrolünde, klip geçişlerinde. |
 | `threejs-animation@calesthio` | ✅ | CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-animation) özet isteniyorsa; normalde gerek yok. |
 | `threejs-asset-pipeline` | ✅ | Model yüklenmeden önce sıkıştırma/doğrulama; yükleme süresi ve GPU belleği düşürme. |
-| `threejs-data-visualization` | ✅ | the visualization needs true spatial structure, dense 2D or 3D GPU rendering, particle or flow animation, volumetric views, or interactive exploration that adds |
 | `threejs-fundamentals` | ✅ | Sıfırdan Three.js sahnesi kurulurken, kamera/renderer/resize ayarlarında, nesne hiyerarşisi kurarken. |
 | `threejs-fundamentals@calesthio` | ✅ | CloudAI-X sürümü kullanılamıyorsa daha hafif (threejs-fundamentals) özet isteniyorsa; normalde gerek yok. |
 | `threejs-geometry` | ✅ | Özel mesh/vertex verisi, instanced mesh, nokta bulutu, 3D yazı gerektiğinde. |
@@ -144,14 +139,15 @@
 | `brainstorm` | ✅ | the user wants game ideas, a new concept, a game jam idea, or to explore other directions, including dropping the current idea and starting over. |
 | `bug-report` | ✅ | Structured bug report from a description, or analyze code for potential bugs. |
 | `bug-triage` | ✅ | Re-evaluate open bugs — priority vs severity, assign to sprints, surface systemic trends. |
-| `changelog` | ✅ | Auto-generate a changelog from git commits and sprint data. |
-| `code-review@donchitos` | ✅ | Architectural code review — coding standards, SOLID, testability, performance concerns. |
+| `changelog` | ✅ | Old name of /write-changelog. |
+| `code-review@donchitos` | ✅ | Architectural review of written code: coding standards, SOLID, testability, performance. |
 | `consistency-check` | ✅ | Scan GDDs against the entity registry for cross-document conflicts. |
 | `content-audit` | ✅ | Audit GDD content counts against what's implemented — planned vs built. |
 | `create-architecture` | ✅ | Author the architecture blueprint before code is written. |
 | `create-control-manifest` | ✅ | the user wants programmer rules or a cheat sheet from the ADRs, or needs it regenerated after ADR changes. |
 | `create-epics` | ✅ | the user wants to break the game into epics or plan the work before writing stories |
 | `create-stories` | ✅ | the user wants stories for an epic or the next batch of work to build |
+| `cut` | ✅ | asked what to cut, how to finish or ship it, or for a polish list. |
 | `day-one-patch` | ✅ | Day-one launch patch — focused fix for known issues found after gold master. |
 | `design-review` | ✅ | Reviews one design document for completeness, internal consistency, implementability, and design standards. |
 | `design-system@donchitos` | ✅ | Section-by-section GDD authoring for one system — walks through each required section, cross-references dependencies. |
@@ -161,9 +157,9 @@
 | `game-audio` | ✅ | Oyunda ses mimarisi ve mix dengesi kararlarında. |
 | `game-design` | ✅ | GDD yazarken ve çekirdek döngü/zorluk kararlarında. |
 | `game-development` | ✅ | Hangi motor/platformla olursa olsun oyun projesine başlarken ilke ve yönlendirme için; alt skill'lerin hepsi tek klasörde gelir. |
-| `gate-check` | ✅ | Ready to advance between development phases? |
+| `gate-check` | ✅ | Ready to advance between development stages? |
 | `hatch-pet` | ⚠️ | a user wants to hatch a Codex pet, create a custom animated pet, or build a built-in pet asset with an 8x9 atlas, transparent unused cells, row-by-row animation |
-| `help` | ✅ | stuck or you don't know what to do. |
+| `help` | ✅ | Old name of /next-step. |
 | `hotfix` | ✅ | Emergency fix bypassing normal sprint process — hotfix branch, approvals tracked, backport verified, full audit trail. |
 | `launch-checklist` | ✅ | Launch readiness across every department: code, content, store, marketing, community, infrastructure, legal, go/no-go sign-offs. |
 | `localize` | ⚠️ | Localization pipeline — find hardcoded strings, extract string tables, cultural review, VO, RTL, enforce string freeze. |
@@ -171,11 +167,12 @@
 | `milestone-review` | ✅ | Milestone progress review — completeness, quality metrics, risk, go/no-go recommendation. |
 | `mobile-games` | ✅ | iOS/Android oyun kısıtlarını ve mağaza gerekliliklerini hatırlamak için. |
 | `multiplayer` | ✅ | Ağ mimarisi ve senkronizasyon stratejisi kararlarında. |
+| `next-step` | ✅ | asked what to do next, or stuck. |
 | `onboard` | ✅ | Onboarding doc for a new contributor or agent — project state, conventions, priorities relevant to the specified role. |
 | `patch-notes` | ✅ | Player-facing patch notes from git history and changelogs. |
 | `pc-games` | ✅ | PC/konsol için motor seçerken ve platform özelliklerini planlarken. |
 | `perf-profile` | ✅ | Performance profiling — find bottlenecks, measure against budgets, produce ranked optimization recommendations. |
-| `pixijs` | ✅ | : pixi, pixi.js, pixijs, PixiJS, v8, Application, app.init, Sprite, Container, Graphics, Text, Mesh, ParticleContainer, DOMContai |
+| `pixijs` | ✅ | PixiJS v8 (pixi.js) reference. |
 | `pixijs-2d` | ✅ | Tarayıcıda 2D oyun, parçacık efekti, yoğun sprite sahnesi veya 3D sahne üstü HUD yapılırken. |
 | `pixijs-accessibility` | ✅ | adding screen reader and keyboard navigation to PixiJS v8 apps |
 | `pixijs-application` | ✅ | creating and configuring a PixiJS v8 Application |
@@ -203,27 +200,28 @@
 | `pixijs-scene-text` | ✅ | rendering text in PixiJS v8 |
 | `pixijs-ticker` | ✅ | running per-frame logic or controlling the PixiJS v8 render loop |
 | `playtest-report` | ✅ | Structured playtest report template, or turn existing playtest notes into structured feedback. |
+| `project-settings` | ✅ | check or set one. |
 | `project-stage-detect` | ✅ | Analyze project state, detect stage, identify gaps, recommend next steps. |
 | `propagate-design-change` | ✅ | the user changed a number or rule in a GDD and asks which ADRs or architecture decisions are now out of date. |
-| `prototype@donchitos` | ✅ | Concept prototype before GDDs — throwaway HTML, Engine or Paper build, PROCEED/PIVOT/KILL/NOT ASSESSED. |
+| `prototype@donchitos` | ✅ | the user says make me a game, wants to try a game idea or mechanic, needs a quick spike, asks to change a game it made, or says they love or hate it. |
 | `qa-plan` | ✅ | QA test plan for a sprint — classifies stories by Logic/Integration/Visual/UI, covers automated tests, manual cases, smoke scope. |
 | `quick-design` | ✅ | Lightweight spec for small changes — tuning adjustments, minor mechanics. |
 | `regression-suite` | ✅ | Map test coverage to GDD critical paths, find fixed bugs lacking regression tests, flag drift from new features. |
 | `release-checklist` | ✅ | Pre-release checklist — build verification, certification requirements, store metadata, launch readiness. |
 | `retrospective` | ✅ | Sprint or milestone retrospective from completed work, velocity, blockers. |
-| `reverse-document` | ⚠️ | Generate missing design or architecture docs from existing implementation — works backwards from code and prototypes. |
+| `reverse-document` | ⚠️ | code or prototypes have no docs. |
 | `review-all-gdds` | ✅ | Holistic cross-GDD review — contradictions between systems, dominant strategies, economic imbalance, cognitive overload, pillar drift. |
 | `scope-check` | ✅ | Scope creep check — current scope versus the original plan. |
 | `security-audit@donchitos` | ✅ | Security audit — save tampering, cheat vectors, network exploits, data exposure, input validation. |
-| `settings` | ✅ | View or change project config — effective merged values, or set locally in project.local.yaml. |
-| `setup-engine` | ✅ | Configure engine and version. |
+| `settings` | ✅ | Old name of /project-settings. |
+| `setup-engine` | ✅ | choose or upgrade it. |
 | `skill-improve` | ✅ | Improve a skill via a test-fix-retest loop — static checks, targeted fixes, keep or revert on score change. |
 | `skill-test` | ✅ | Validate skill files for structural compliance and behavioral correctness. |
 | `smoke-check` | ✅ | Critical-path smoke gate before QA hand-off — runs the automated suite. |
 | `soak-test` | ✅ | Soak test protocol for extended play — what to observe and log for slow leaks, fatigue, late-appearing edge cases. |
 | `sprint-plan` | ✅ | New or updated sprint plan from the current milestone, completed work, and available capacity. |
 | `sprint-status` | ✅ | Fast, concise sprint snapshot — burndown and emerging risks for situational awareness. |
-| `start@donchitos` | ✅ | the user is new, just cloned or installed the studio, has no idea or engine yet, asks where to begin, or wants to bring in an existing game. |
+| `start@donchitos` | ✅ | the user is new, just cloned or installed the studio, has no idea or engine yet, asks where to begin, or wants to bring in an existing game |
 | `story-done` | ✅ | the user says a story is done, finished or ready to close. |
 | `story-readiness` | ✅ | the user asks if a story, or the sprint's stories, are ready to start or build. |
 | `team-audio` | ✅ | Orchestrate the audio team — audio-director, sound-designer, technical-artist, gameplay-programmer — direction through implementation. |
@@ -239,16 +237,15 @@
 | `test-evidence-review` | ✅ | Quality review of test files and evidence — goes beyond existence, evaluates assertion coverage. |
 | `test-flakiness` | ✅ | Find flaky tests from CI logs — aggregates pass rates, spots intermittent failures, recommends quarantine. |
 | `test-helpers` | ✅ | Generate engine-specific test helper libraries — assertion utilities, factory functions, mocks in the engine's test folder. |
-| `test-setup` | ✅ | Scaffold the test framework and CI — tests/ directory, engine test runner, GitHub Actions workflow. |
+| `test-setup` | ✅ | Sets up the test framework and CI: tests/ directory, engine runner, GitHub Actions workflow. |
 | `ux-design` | ✅ | Section-by-section UX spec authoring for a screen, flow or HUD. |
 | `ux-review` | ✅ | Validate a UX spec, HUD design or pattern library — accessibility, GDD alignment, readiness. |
 | `vertical-slice` | ✅ | Pre-production validation — end-to-end build to confirm the full loop is achievable before committing to Production. |
 | `vr-ar` | ✅ | VR/AR projesinde konfor ve performans hedeflerini belirlerken. |
 | `web-games` | ✅ | Web tabanlı oyun için çatı ve varlık/performans stratejisi seçerken. |
+| `write-changelog` | ✅ | an internal or player-facing one. |
 | `algorithmic-art` | ✅ | Kodla üretken sanat, akış alanı/parçacık görselleri, seed ile tekrarlanabilir etkileşimli sanat parçası istendiğinde. |
-| `artifacts-builder` | ✅ | Durum yönetimi, yönlendirme veya shadcn bileşeni gerektiren tek dosyalık paylaşılabilir HTML çıktısı. |
 | `canvas-design` | ✅ | Poster, kapak görseli, statik sanat/tasarım parçası, marka kampanya görseli üretirken (PNG/PDF). |
-| `canvas-design@composiohq` | ✅ | Yalnızca upstream sürümü erişilemezse; aynı işi yapar. |
 | `card-twitter` | ✅ | Twitter quote or data card designed to pair with a post. |
 | `card-xiaohongshu` | ✅ | Xiaohongshu-style knowledge cards, arranged as a swipeable multi-card carousel. |
 | `d3-viz` | ✅ | Standart grafik kütüphanesinde olmayan özel SVG görselleştirme, force-directed ağ, zoom/brush etkileşimi, haritalar. |
@@ -260,15 +257,14 @@
 | `field-notes-editorial-template` | ✅ | users ask for a premium magazine-style business report, board memo one-pager, or elegant data storytelling layout. |
 | `frontend-slides` | ✅ | Konuşma/pitch için tarayıcıda çalışan, tasarımı özgün HTML sunum; elindeki .pptx'i web sunumuna çevirmek. |
 | `html-ppt-retro-quarterly-review` | ✅ | users ask for a high-impact quarterly review / roadmap deck with heavyweight slab headlines, clean cream paper sections, structured grids, and fast premium moti |
-| `image-enhancer` | ✅ | Dokümantasyon veya sunum öncesi ekran görüntüsü iyileştirme isteğinde başvuru metni olarak. |
 | `mockup-device-3d` | ✅ | Static iPhone and MacBook 3D-style showcase with real HTML embedded on screens, glass-lens refraction, and 360-degree turntable composition. |
 | `playground` | ✅ | the user asks to make a playground, explorer, or interactive tool for a topic. |
 | `poster-hero` | ✅ | Vertical poster or Moments-style share image with strong visual impact. |
 | `ppt-keynote` | ✅ | Apple Keynote-quality slides, one card per screen, with keyboard left/right navigation. |
 | `pptx-html-fidelity-audit` | ✅ | the user has a .pptx that was generated from an HTML slide deck and asks to compare/audit/verify/fix the export — including phrases like "compare ppt with html" |
 | `slack-gif-creator` | ✅ | Slack emoji veya mesaj GIF'i, kısa döngülü basit animasyon isteklerinde. |
-| `slack-gif-creator@composiohq` | ✅ | Anthropic sürümündeki yardımcılar yetmezse; hazır şablon, tipografi ve görsel efekt modülleri gerektiğinde. |
 | `slides` | ⚠️ | HTML tabanlı pitch deck, veri destekli pazarlama sunumu; marka-sunum profili için. |
+| `sunum-sitesi` | ✅ | Videoya ya da derse eşlik eden tek sayfalık sunum/özet sitesi. |
 | `swiss-creative-mode-template` | ✅ | users ask for a premium presentation-style landing, a Swiss/brutalist deck look, or a creative launch page with rich interactions. |
 | `web-artifacts-builder` | ✅ | Paylaşılabilir tek HTML dosyası olarak teslim edilecek React tabanlı araç/dashboard/prototip. |
 | `agent-browser` | ✅ | the user needs to inspect, test, or automate browser behavior: navigating pages, filling forms, clicking buttons, taking screenshots, extracting page data, read |
@@ -280,6 +276,4 @@
 | `react-doctor` | ✅ | React kodu bitirirken/commit öncesi puan gerilemesini yakalamak, lint-erişilebilirlik-bundle sorunlarını önceliklendirmek için. |
 | `web-design-guidelines` | ✅ | asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices". |
 | `webapp-testing` | ✅ | Çalışan yerel uygulamada UI davranışını doğrulamak, ekran görüntüsü almak ve tarayıcı günlüklerini görmek için. |
-| `webapp-testing@composiohq` | ✅ | Yalnızca resmî kopya alınamazsa. |
-| `webapp-testing@github` | ✅ | Toolkit for interacting with and testing local web applications using Playwright. |
 | `webapp-testing@vudovn` | ✅ | Hızlı bir sayfa duman testi ve temel erişilebilirlik kontrolü için; test stratejisi hatırlatması. |

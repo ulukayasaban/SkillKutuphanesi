@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/anthropics/claude-plugins-official
 - **Repo içindeki yol:** `plugins/plugin-dev/skills/plugin-settings`
-- **Commit:** `a7ba5b93db0c7c8d17f3f1d25853adca79598a1a`
+- **Commit:** `73c8cf3ea7e296057b467990f2f5d61b4c922260`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** anthropics (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

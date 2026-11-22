@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/K-Dense-AI/scientific-agent-skills
 - **Repo içindeki yol:** `skills/research-grants`
-- **Commit:** `5f2bc0341354fd5590aef76a533ada1e1e5b4e62`
+- **Commit:** `ec59a29a03d5c40f73ab40878df04860bc00e876`
 - **Lisans:** MIT
 - **Geliştirici:** K-Dense-AI (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

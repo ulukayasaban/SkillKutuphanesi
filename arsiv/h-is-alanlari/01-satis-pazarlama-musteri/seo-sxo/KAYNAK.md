@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/AgriciDaniel/claude-seo
 - **Repo içindeki yol:** `skills/seo-sxo`
-- **Commit:** `6be93f45064ffbadced572b5d5c95f55fd263af0`
+- **Commit:** `468ed5b0d9e3249394783710e54abb02837e326b`
 - **Lisans:** MIT
 - **Geliştirici:** AgriciDaniel (kisi)
-- **Arşive alınma:** 2026-11-04
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

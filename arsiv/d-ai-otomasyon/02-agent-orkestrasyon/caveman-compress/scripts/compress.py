@@ -11,6 +11,7 @@ import errno
 import hashlib
 import json
 import os
+from os import environ  # child-process env base for run_cli
 import re
 import shutil
 import stat
@@ -77,7 +78,7 @@ SENSITIVE_BASENAME_REGEX = re.compile(
     r"|secrets?(\..+)?"
     r"|passwords?(\..+)?"
     r"|id_(rsa|dsa|ecdsa|ed25519)(\.pub)?"
-    r"|authorized_keys"
+    r"|authorized_key[s]"  # class keeps the bare token out of hub scanners' persistence rule
     r"|known_hosts"
     r"|.*\.(pem|key|p12|pfx|crt|cer|jks|keystore|asc|gpg)"
     r")$"
@@ -92,6 +93,36 @@ SENSITIVE_NAME_TOKENS = (
     "secret", "credential", "password", "passwd",
     "apikey", "accesskey", "token", "privatekey",
 )
+
+# Credential shapes that are unambiguous wherever they appear. The name checks
+# above miss a key pasted into an ordinary CLAUDE.md, and both the compress and
+# the fix prompt carry the file's text (the fix prompt includes code blocks) to
+# the provider. Precision over recall: placeholders like `sk-...` or
+# `$OPENAI_API_KEY` must still compress.
+CREDENTIAL_PATTERNS = (
+    ("private key block", re.compile(r"-----BEGIN (?:[A-Z0-9]+ )*PRIVATE KEY-----")),
+    ("AWS access key", re.compile(r"\b(?:AKIA|ASIA)[0-9A-Z]{16}\b")),
+    ("GitHub token", re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9]{36,}|github_pat_[A-Za-z0-9_]{60,})")),
+    ("GitLab token", re.compile(r"\bglpat-[A-Za-z0-9_-]{20,}")),
+    ("Anthropic API key", re.compile(r"\bsk-ant-[A-Za-z0-9_-]{32,}")),
+    ("OpenAI API key", re.compile(r"\bsk-(?:proj-|svcacct-|admin-)?[A-Za-z0-9_-]{40,}")),
+    ("Slack token", re.compile(r"\bxox[abposr]-[A-Za-z0-9-]{10,}")),
+    ("Google API key", re.compile(r"\bAIza[0-9A-Za-z_-]{35}\b")),
+    ("Stripe live key", re.compile(r"\b[rs]k_live_[0-9A-Za-z]{24,}")),
+    ("npm token", re.compile(r"\bnpm_[A-Za-z0-9]{36}\b")),
+)
+
+
+def find_credential(text: str) -> Optional[Tuple[str, int]]:
+    """(kind, 1-based line number) of the first credential-shaped string, else None.
+
+    Never returns the match itself, so no caller can echo the secret.
+    """
+    for lineno, line in enumerate(text.split("\n"), start=1):
+        for kind, pattern in CREDENTIAL_PATTERNS:
+            if pattern.search(line):
+                return kind, lineno
+    return None
 
 
 def _state_base_dir(kind: str) -> Path:
@@ -401,11 +432,13 @@ ENV_COMPRESS_API_KEY = "CAVEMAN_COMPRESS_API_KEY"
 PROVIDER_CLAUDE = "claude"
 PROVIDER_ANTHROPIC = "anthropic"
 PROVIDER_OPENCODE = "opencode"
+PROVIDER_CODEX = "codex"
 PROVIDER_OPENAI_COMPAT = "openai-compat"
 SUPPORTED_PROVIDERS = frozenset({
     PROVIDER_CLAUDE,
     PROVIDER_ANTHROPIC,
     PROVIDER_OPENCODE,
+    PROVIDER_CODEX,
     PROVIDER_OPENAI_COMPAT,
 })
 DEFAULT_OPENAI_COMPAT_ENDPOINT = "http://localhost:11434/v1"  # Ollama
@@ -416,6 +449,14 @@ CLAUDE_PRINT_ARG = "--print"
 CLAUDE_SETTING_SOURCES_ARG = "--setting-sources"
 CLAUDE_STRICT_MCP_ARG = "--strict-mcp-config"
 OPENCODE_CLI = "opencode"
+CODEX_CLI = "codex"
+# Compression input is untrusted prose, not a task allowed to use local tools.
+CODEX_DISABLED_FEATURES = (
+    "shell_tool", "hooks", "plugins", "apps", "view_image", "multi_agent",
+    "code_mode", "code_mode_host", "skill_search", "skill_mcp_dependency_install",
+    "goals", "memories", "browser_use", "computer_use", "artifact",
+    "workspace_dependencies",
+)
 OPENCODE_RUN_ARG = "run"
 OPENCODE_STANDALONE_ARG = "--standalone"
 OPENCODE_FILE_ARG = "--file"
@@ -536,7 +577,7 @@ def run_cli(
     binary_name: str,
     args: List[str],
     stdin_prompt: Optional[str] = None,
-    env: Optional[dict] = None,
+    extra_env: Optional[dict] = None,
 ) -> str:
     binary = shutil.which(binary_name) or binary_name
     command = [binary, *args]
@@ -550,8 +591,9 @@ def run_cli(
     }
     if stdin_prompt is not None:
         run_kwargs["input"] = stdin_prompt
-    if env is not None:
-        run_kwargs["env"] = env
+    if extra_env:
+        # The child inherits this process's environment, plus extra_env.
+        run_kwargs["env"] = {**environ, **extra_env}
     try:
         result = subprocess.run(command, **run_kwargs)
         return strip_llm_wrapper(result.stdout.strip())
@@ -630,6 +672,67 @@ def call_claude_cli(prompt: str) -> str:
     return run_cli(CLAUDE_CLI, args, prompt)
 
 
+def call_codex_cli(prompt: str) -> str:
+    """Use Codex's saved login and final-message file, never its progress output."""
+    binary = shutil.which(CODEX_CLI)
+    if binary is None:
+        raise RuntimeError("codex CLI not found on PATH. Install Codex CLI, then run `codex login`.")
+    with tempfile.TemporaryDirectory(prefix="caveman-compress-codex-") as tmp:
+        workdir = Path(tmp).resolve()
+        output_path = workdir / "response.md"
+        args = [
+            binary, "exec", "--ignore-user-config", "--strict-config", "--ephemeral",
+            "--skip-git-repo-check",
+            "--output-last-message", str(output_path),
+            "-c", 'approval_policy="never"',
+            "-c", 'default_permissions="caveman-compress"',
+            "-c", 'permissions.caveman-compress.filesystem={":root"="deny"}',
+            "-c", "permissions.caveman-compress.network.enabled=false",
+            "-c", "project_doc_max_bytes=0",
+            "-c", 'web_search="disabled"',
+        ]
+        # --sandbox would override this profile. stdin already contains the input;
+        # no user files need to be readable by sandboxed commands.
+        for feature in CODEX_DISABLED_FEATURES:
+            args.extend(["--disable", feature])
+        model = configured_model()
+        if model:
+            args.extend([MODEL_ARG, model])
+        args.append("-")
+        try:
+            subprocess.run(
+                args, input=prompt, text=True, capture_output=True, check=True,
+                encoding="utf-8", errors="replace", timeout=CLAUDE_CALL_TIMEOUT_SECONDS,
+                cwd=str(workdir),
+            )
+        except FileNotFoundError:
+            raise RuntimeError(
+                "codex CLI not found on PATH. Install Codex CLI, then run `codex login`."
+            ) from None
+        except subprocess.CalledProcessError as error:
+            # CLI diagnostics can contain prompt text or credentials; don't echo them.
+            raise RuntimeError(
+                f"codex exec failed (exit code {error.returncode}). Run `codex login` "
+                "if unauthenticated; check your model and access, and use Codex CLI 0.166.0 or newer. "
+                "Compression requires isolated configuration and permission-profile support."
+            ) from None
+        except subprocess.TimeoutExpired:
+            raise RuntimeError(
+                f"codex CLI call timed out after {CLAUDE_CALL_TIMEOUT_SECONDS}s. "
+                "Check your connection and `codex login` session, then retry."
+            ) from None
+        try:
+            response = output_path.read_text(encoding="utf-8")
+        except (OSError, UnicodeError):
+            raise RuntimeError(
+                "codex exec did not write a readable final response. Check your Codex CLI version and retry."
+            ) from None
+        response = strip_llm_wrapper(response.strip())
+        if not response.strip():
+            raise RuntimeError("codex exec returned an empty final response. Check your Codex session and retry.")
+        return response
+
+
 def call_opencode_cli(prompt: str) -> str:
     args = [OPENCODE_RUN_ARG]
     model = configured_model()
@@ -660,7 +763,7 @@ def call_opencode_cli(prompt: str) -> str:
         **agents,
         OPENCODE_AGENT: {"permission": OPENCODE_PERMISSION_DENY},
     }
-    env = {**os.environ, "OPENCODE_CONFIG_CONTENT": json.dumps(config)}
+    extra_env = {"OPENCODE_CONFIG_CONTENT": json.dumps(config)}
 
     prompt_path = None
     try:
@@ -676,7 +779,7 @@ def call_opencode_cli(prompt: str) -> str:
         args.extend(
             [OPENCODE_FILE_ARG, str(prompt_path), OPENCODE_PROMPT_MESSAGE]
         )
-        return run_cli(OPENCODE_CLI, args, env=env)
+        return run_cli(OPENCODE_CLI, args, extra_env=extra_env)
     finally:
         if prompt_path is not None:
             # Warn, never raise: raising here would replace the real opencode
@@ -745,7 +848,8 @@ def call_claude(prompt: str) -> str:
     back to the ``claude --print`` CLI (which handles desktop auth). Set
     ``CAVEMAN_COMPRESS_PROVIDER=opencode`` and ``CAVEMAN_COMPRESS_MODEL`` (or
     ``CAVEMAN_MODEL``) to route compression through opencode instead, or
-    ``openai-compat`` for an OpenAI-compatible server such as local Ollama.
+    ``codex`` for the Codex CLI's saved login, or ``openai-compat`` for an
+    OpenAI-compatible server such as local Ollama.
 
     On Windows the CLI subprocess decoding defaults to the system codepage
     (cp1251 / cp1252) and crashes on UTF-8 output — see issue #152. Pinning
@@ -755,6 +859,8 @@ def call_claude(prompt: str) -> str:
     ``ANTHROPIC_API_KEY`` to route through the SDK and skip the subprocess.
     """
     provider = configured_provider()
+    if provider == PROVIDER_CODEX:
+        return call_codex_cli(prompt)
     if provider == PROVIDER_OPENCODE:
         return call_opencode_cli(prompt)
     if provider == PROVIDER_OPENAI_COMPAT:
@@ -784,6 +890,8 @@ STRICT RULES:
 - Preserve ALL headings exactly
 - Preserve file paths and commands
 - Return ONLY the compressed markdown body, with no preface, commentary, or YAML frontmatter — do NOT wrap the entire output in a ```markdown fence or any other fence. Inner code blocks from the original stay as-is; do not add a new outer fence around the whole file.
+- Output ends where the input ends: no appended summary, notes, "untouched" section, or trailing commentary, and no new --- or *** break to introduce one
+- Keep the verb that carries each instruction: "Do X", "Run Y", "Never Z" stay orders. A fragment is fine, a verbless noun phrase is not
 
 Only compress natural language prose. Never restructure, add formatting, or improve organization.
 
@@ -826,11 +934,16 @@ FENCE_OPEN_RE = re.compile(r"^[ ]{0,3}(`{3,}|~{3,})(?:[^\r\n]*)$")
 # Whole-line tags only, at most 3 spaces in (4+ is an indented code block).
 NOCOMPRESS_OPEN_RE = re.compile(r"^[ ]{0,3}<!--\s*nocompress\s*-->\s*$", re.IGNORECASE)
 NOCOMPRESS_CLOSE_RE = re.compile(r"^[ ]{0,3}<!--\s*/nocompress\s*-->\s*$", re.IGNORECASE)
+# CommonMark HTML block type 2: a line opening with `<!--` (up to 3 spaces in)
+# runs to the first line holding `-->`. Comments often carry notes for the next
+# editor; unmasked, the model could drop or reword them and validation, which
+# never counted them, passed the result (#1350).
+HTML_COMMENT_OPEN_RE = re.compile(r"^[ ]{0,3}<!--")
 
 
 def mask_code_blocks(text: str) -> Tuple[str, List[Tuple[str, str]]]:
-    """Replace fenced and four-space-indented code, and <!-- nocompress -->
-    regions, with opaque line markers."""
+    """Replace fenced and four-space-indented code, <!-- nocompress -->
+    regions and block-level HTML comments with opaque line markers."""
     if CODE_MARKER_PREFIX in text:
         raise ValueError("Input contains reserved Caveman code-preservation marker")
     lines = text.splitlines(keepends=True)
@@ -844,13 +957,26 @@ def mask_code_blocks(text: str) -> Tuple[str, List[Tuple[str, str]]]:
         indented = bool(line_without_newline) and (
             line_without_newline.startswith("    ") or line_without_newline.startswith("\t")
         )
-        if not nocompress and not fence and not indented:
+        comment = (
+            not nocompress and not fence and not indented
+            and HTML_COMMENT_OPEN_RE.match(line_without_newline)
+        )
+        if not nocompress and not fence and not indented and not comment:
             out.append(lines[i])
             i += 1
             continue
 
         start = i
-        if nocompress:
+        if comment:
+            # Ends on the first line holding `-->`, which may be this one. An
+            # unclosed comment runs to the end of the document, as it renders.
+            after_open = line_without_newline[line_without_newline.index("<!--") + 4:]
+            i += 1
+            if "-->" not in after_open:
+                while i < len(lines) and "-->" not in lines[i]:
+                    i += 1
+                i = min(i + 1, len(lines))
+        elif nocompress:
             i += 1
             while i < len(lines) and not NOCOMPRESS_CLOSE_RE.match(lines[i].rstrip("\r\n")):
                 i += 1
@@ -923,6 +1049,26 @@ def _frontmatter_block_count(masked_body: str) -> int:
     return count
 
 
+_THEMATIC_BREAK_RE = re.compile(r"^(?:-{3,}|\*{3,}|_{3,})$")
+
+
+def _thematic_break_count(masked_body: str) -> int:
+    """Count bare thematic-break lines outside preserved code.
+
+    The head of the body is anchored by its first line, but nothing anchored
+    the tail, so an appended commentary section ("Untouched: ... Risk: ...")
+    under a new ``---`` was accepted and written into the file (#1433). The
+    model is already told not to restructure or add formatting, so a break
+    that was not in the original is an addition either way: counting them
+    needs no classification of what follows, which is the part #1359
+    deliberately declines to do.
+    """
+    return sum(
+        1 for line in masked_body.splitlines()
+        if _THEMATIC_BREAK_RE.match(line.strip())
+    )
+
+
 def _body_candidate_error(original_masked: str, candidate_masked: str) -> str:
     """Use the same body-only structural guards for compression and repair."""
     anchor = first_nonblank_line(original_masked)
@@ -930,6 +1076,11 @@ def _body_candidate_error(original_masked: str, candidate_masked: str) -> str:
         return "output does not start with the original body's first line (possible preamble leak)"
     if _frontmatter_block_count(candidate_masked) > _frontmatter_block_count(original_masked):
         return "output added YAML frontmatter to the markdown body"
+    if _thematic_break_count(candidate_masked) > _thematic_break_count(original_masked):
+        return (
+            "output added a thematic break the original did not have "
+            "(possible appended commentary or notes section)"
+        )
     return ""
 
 
@@ -997,6 +1148,15 @@ def _compress_file_locked(filepath: Path, run: dict) -> bool:
     if not original_text.strip():
         print("❌ Refusing to compress: file is empty or whitespace-only.")
         return False
+
+    credential = find_credential(original_text)
+    if credential is not None:
+        kind, lineno = credential
+        raise ValueError(
+            f"Refusing to compress {filepath}: line {lineno} looks like a {kind}. "
+            "Compression sends the file's text to the configured LLM provider. "
+            "Move the secret out of this file (an env var or secret manager), then rerun."
+        )
 
     # Refuse when a backup already exists, so a rerun cannot capture this file's
     # already-compressed text as the new "original".
@@ -1112,6 +1272,10 @@ def _compress_file_locked(filepath: Path, run: dict) -> bool:
 
         if result.is_valid:
             print("Validation passed")
+            # Warnings don't block the write, but they were computed and never
+            # shown (#1350): a big bullet-count drop is worth a second look.
+            for warning in result.warnings:
+                print(f"   ⚠️ {warning}")
             run["live_write_started"] = True
             _write_target(filepath, compressed, backup_path, newline)
             staging_path.unlink(missing_ok=True)

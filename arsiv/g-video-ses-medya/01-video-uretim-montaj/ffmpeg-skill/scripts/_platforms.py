@@ -216,8 +216,6 @@ PLATFORMS: Dict[str, Dict[str, Any]] = {
     },
 }
 
-# The canonical destination names.
-PLATFORM_NAMES: List[str] = sorted(PLATFORMS)
 # The spellings people actually write for those destinations. resolve() maps them onto the
 # canonical name, and every tool's --platform/--safe/--preset accepts both, so
 # `--platform youtube-shorts` and `--platform shorts` are the same request everywhere.
@@ -233,15 +231,6 @@ PLATFORM_CHOICES: List[str] = sorted({n for n in PLATFORMS if PLATFORMS[n]["chec
 def spec_of(name: str) -> Dict[str, Any]:
     """check.py's compliance row values for a destination."""
     return dict(PLATFORMS[name]["spec"])
-
-
-def safe_of(name: str) -> Dict[str, float]:
-    return dict(PLATFORMS[name]["safe"])
-
-
-def loudness_of(name: str) -> Dict[str, float]:
-    s = PLATFORMS[name]["spec"]
-    return {"lufs": s["lufs"], "lufs_tol": s["lufs_tol"], "tp": s["tp"]}
 
 
 def safe_margins_px(name: str, width: int, height: int) -> Dict[str, int]:

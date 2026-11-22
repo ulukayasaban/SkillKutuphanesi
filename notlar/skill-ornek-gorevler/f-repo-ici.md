@@ -1,9 +1,10 @@
 # Örnek görevler ve test sonucu › f-repo-ici
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 114 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-22 · 122 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
+| `accept-web-renderer-prs` | ✅ | Review and merge eligible web-renderer pull requests from alec-watts. |
 | `add-bug` | ✅ | the user describes a bug and affected Remotion versions that should be surfaced through the bugs API. |
 | `add-cli-option` | ✅ | adding or converting command-line flags or Remotion options. |
 | `add-effect` | ✅ | Add a new effect to @remotion/effects, including implementation, package exports, docs, demos, preview images, Remotion skill updates, formatting, and builds. |
@@ -37,6 +38,7 @@
 | `find-unplanned-issues` | ✅ | finding open issues that lack a masterplan ancestor, identifying orphaned issues that need a parent, or recursively removing closed issues from the masterplan r |
 | `fix` | ✅ | Motion'a katkıda; ayrıca improve skill'inin ürettiği plans/ dosyalarını başka bir projede uygulatırken (improve ile çift). |
 | `fix-dependabot` | ✅ | Fix a Dependabot PR by updating all monorepo instances of the dependency, running bun install, and pushing |
+| `fix-root-cause` | ✅ | Apply when debugging. |
 | `fix@react` | ✅ | Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `flags` | ✅ | Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `flags@vercel` | ✅ | Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
@@ -56,14 +58,17 @@
 | `lighthouse-verification` | ✅ | Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `merge` | ✅ | asked to run /merge, merge a current PR after checks pass, or shepherd a Remotion PR through CI to merge. |
 | `next-rspack` | ✅ | Sadece o repoya (vercel/next.js) katkı yaparken; kendi projende komut/yol adları tutmaz. rspack/ klasöründe. |
+| `no-comments` | ✅ | the user invokes /no-comments or asks to strip unnecessary comments from a diff or files. |
 | `no-pointer` | ✅ | adding or revising Studio buttons or links that should use the default cursor, brighten on hover, and show focus decoration only for keyboard navigation. |
 | `nullable-new-params` | ✅ | a PR, review, or user asks to forbid new `foo?: T` / `param?: T` additions except for exported or documented public APIs where requiring the value would be brea |
 | `offload-r2` | ✅ | Upload Remotion repository media assets to the Cloudflare R2 bucket behind remotion.media, switch source code to hosted URLs, verify the public objects, and rem |
 | `plan-update` | ✅ | Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `player-example` | ✅ | the user invokes /player-example or $player-example, asks to launch the player testbed, or wants to inspect @remotion/player locally. |
+| `playwright-audit-deps` | ✅ | asked to fix audit findings, bump vulnerable or outdated runtime dependencies, or update package-lock.json for an advisory. |
+| `playwright-bisect-chromium` | ⚠️ | a test or a repro passes on an older Chromium and fails on a newer one, for example on a Chromium roll PR or a tip-of-tree roll PR. |
 | `playwright-cherry-pick` | ✅ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `playwright-dev` | ⚠️ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
-| `playwright-devops` | ⚠️ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
+| `playwright-devops` | ✅ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `playwright-release-notes` | ⚠️ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `playwright-test-results` | ✅ | Sadece o repoya (microsoft/playwright) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `playwright-triage` | ⚠️ | Yalnızca microsoft/playwright deposunun kendi CI triage iş akışı; yöntem fikri (sınıflandır, tip-of-tree'de dene, sürümler arası bisect) referans olarak okunabi |
@@ -84,14 +89,17 @@
 | `scaffold-element` | ⚠️ | Scaffold a new Remotion Element for development in the docs Remotion Studio. |
 | `skill-locations` | ✅ | adding, moving, or editing Remotion skills to decide whether a skill belongs in .agents/skills as an internal skill or packages/skills as a public skill. |
 | `studio` | ✅ | the user invokes /studio or $studio, asks to launch the example Studio, or wants the Remotion Studio dev UI available locally. |
+| `studio-checklist` | ⚠️ | Develop or review Remotion Studio features and UI. |
 | `studio-config-option-lifecycle` | ✅ | adding, changing, or reviewing a Config setter or CLI option consumed by Studio, its preview server, compiler, HTML bootstrap, public-folder watcher, or render  |
 | `studio-css-reset` | ✅ | Style Remotion Studio UI inside `.css-reset` containers without relying on inherited reset properties. |
 | `studio-dev` | ⚠️ | Develop or review Remotion Studio features and UI. |
+| `studio-diagnostics` | ⚠️ | asked which layer caused buffering, to reveal a buffering handle, or to investigate audio iterator or Mediabunny sink activity. |
 | `studio-loop` | ✅ | ongoing Studio dogfooding and maintenance, including checkpoints that hand one PR over for review while work continues in a stacked PR. |
 | `studio-mode` | ✅ | implementing or reviewing Studio actions, permissions, availability, or UI across interactive, detached, deployed, and browser-based Studios. |
 | `studio-perf` | ✅ | code reads the current frame with `useTimelinePosition()` or components unnecessarily render on every frame. |
 | `test` | ✅ | Sadece o repoya (react/react) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `timeline-layout-reveal` | ✅ | timeline layout comparison videos, including recapturing a historical layout. |
+| `triaging-external-prs` | ✅ | asked whether an outside PR is worth merging, is speculative, or comes from high-volume automated contribution. |
 | `update-ard-port` | ✅ | Sadece o repoya (GoogleChrome/lighthouse) katkı yaparken; kendi projende komut/yol adları tutmaz.. |
 | `update-chrome-binaries-test-region` | ✅ | updating Chrome binaries before full regional rollout. |
 | `update-codex-plugin` | ✅ | Update Remotion's published Codex and ChatGPT directory plugin to a released Remotion version. |

@@ -8,4 +8,4 @@ Composio üzerinden 800+ uygulama (Gmail, Slack, Notion…); Composio API anahta
 
 | Skill | Ne yapar | Ne zaman kullanılır | Nasıl çağrılır | Puan · not |
 |---|---|---|---|---|
-| `caption-qa`<br><sub>github/awesome-copilot</sub> | SRT/WebVTT altyazılarını Netflix, BBC ve DCMP standartlarına göre okuma hızı, satır uzunluğu, süre ve boşluk/çakışma açısından denetler; hataları önce süre ayarıyla düzeltir. | Altyazıları doğrulamak, okuma hızını kontrol etmek, yayın standardına uyumlu hazırlamak veya CI'a kontrol eklemek istendiğinde. | Otomatik · Claude `/caption-qa` · Codex `$caption-qa` | 95 A |
+| `caption-qa`<br><sub>github/awesome-copilot</sub> | SRT/WebVTT altyazılarını Netflix, BBC ve DCMP standartlarına göre okuma hızı, satır uzunluğu, süre ve boşluk/çakışma açısından denetler; hataları önce süre ayarıyla düzeltir. | Altyazıları doğrulamak, okuma hızını kontrol etmek, yayın standardına uyumlu hazırlamak veya CI'a kontrol eklemek istendiğinde. | Otomatik · Claude `/caption-qa` · Codex `$caption-qa` | 95 A · kısmen ücretli |

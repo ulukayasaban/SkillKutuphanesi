@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/upstash/context7
 - **Repo içindeki yol:** `packages/pi/skills/context7-docs`
-- **Commit:** `078c0c731d19eb88d2391b236ab82a127dbabac3`
+- **Commit:** `b1e3611e32a8b1369ae526cacdf335ddfd6e5fbb`
 - **Lisans:** MIT
 - **Geliştirici:** upstash (kurum)
-- **Arşive alınma:** 2026-11-09
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih
 - **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).

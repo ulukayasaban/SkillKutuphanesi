@@ -4,6 +4,7 @@
 
 | Skill | Repo | Ne yapar |
 |---|---|---|
+| `accept-web-renderer-prs` | remotion-dev/remotion | Review and merge eligible web-renderer pull requests from alec-watts. |
 | `add-bug` | remotion-dev/remotion | Add a new Remotion bug entry to packages/bugs/api/[v].ts. Use when the user describes a bug and affected Remot |
 | `add-cli-option` | remotion-dev/remotion | Add a new Remotion CLI or config option by creating an AnyRemotionOption, registering CLI parsing, wiring conf |
 | `add-effect` | remotion-dev/remotion | Add a new effect to @remotion/effects, including implementation, package exports, docs, demos, preview images, |
@@ -12,6 +13,8 @@
 | `add-sfx` | remotion-dev/remotion | Add a new sound effect to the @remotion/sfx package in the Remotion monorepo (WAV, CC0, normalized; first adde |
 | `add-webcodecs-bug` | remotion-dev/remotion | Add a browser WebCodecs bug to the Remotion Mediabunny WebCodecs bugs docs page. Use when given a Chromium, We |
 | `api-review` | microsoft/playwright | Produce the "Playwright 1.xx API Review" artifact for a range of commits - the public API additions and the br |
+| `archify-review` | tt-a1i/archify | Review Archify issues, PRs, or code through value, cost, and impact to support evidence-based maintenance deci |
+| `archify-tuning` | tt-a1i/archify | Improve Archify diagram accuracy, visual quality and complete authoring speed with fewer repairs. Use for gene |
 | `authoring-skills` | vercel/next.js | How to create and maintain agent skills in .agents/skills/. Use when creating a new SKILL.md, writing skill de |
 | `backport-pr` | vercel/next.js | Backport a merged Next.js pull request from canary to an LTS release branch (releases/lts/active or releases/l |
 | `canvas-capture-extension` | remotion-dev/remotion | Rebuild, install, and reload the private Remotion Canvas Capture unpacked Chrome extension. Use when the exten |
@@ -35,6 +38,7 @@
 | `find-unplanned-issues` | remotion-dev/remotion | Audit and clean the Remotion GitHub masterplan hierarchy. Use when finding open issues that lack a masterplan  |
 | `fix` | motiondivision/motion | Take a GitHub issue, an open PR, or a plan file from plans/ and drive it to a merge-ready PR — reproduce with  |
 | `fix-dependabot` | remotion-dev/remotion | Fix a Dependabot PR by updating all monorepo instances of the dependency, running bun install, and pushing |
+| `fix-root-cause` | remotion-dev/remotion | Apply when debugging. Trace each symptom back to the first place the system went wrong and fix it there. A gua |
 | `fix@react` | react/react | Use when you have lint errors, formatting issues, or before committing code to ensure it passes CI. |
 | `flags` | react/react | Use when you need to check feature flag states, compare channels, or debug why a feature behaves differently a |
 | `flags@vercel` | vercel/next.js | How to add or modify Next.js experimental feature flags end-to-end. Use when editing config-shared.ts, config- |
@@ -45,7 +49,7 @@
 | `gh-stack` | vercel/next.js | Manages stacked PRs and splits multi-part work into reviewable branches with gh-stack. Use for stack creation, |
 | `gh-stack@remotion-dev` | remotion-dev/remotion | Manages stacked PRs and splits multi-part work into reviewable branches with gh-stack. Use for stack creation, |
 | `homepage-video-assets` | remotion-dev/remotion | Use when rendering or replacing Remotion homepage creator strip videos, especially transparent Chrome WebM and |
-| `import-canvas-capture` | remotion-dev/remotion | Import a recorded Remotion Canvas Capture into a project without Studio interactions using the internal experi |
+| `import-canvas-capture` | remotion-dev/remotion | Import a recorded Remotion Canvas Capture into a project without Studio interactions using canvas-capture impo |
 | `improve` | motiondivision/motion | Survey any codebase as a senior advisor and produce prioritized, self-contained implementation plans for OTHER |
 | `insight-error-page` | vercel/next.js | Write or audit an insight-kind error page for the Next.js dev overlay. Use when creating a new `errors/<slug>. |
 | `interactivity-best-practices` | remotion-dev/remotion | Best practices for writing Remotion animations that stay intuitive for agents and editable in Remotion Studio  |
@@ -54,11 +58,14 @@
 | `lighthouse-verification` | GoogleChrome/lighthouse | Instructions for how to validate changes made to Lighthouse. Must invoke when making changes to Lighthouse. |
 | `merge` | remotion-dev/remotion | Wait for a Remotion pull request to become mergeable, handle merge conflicts, distinguish genuine CI failures  |
 | `next-rspack` | vercel/next.js | Maintain @next/rspack-core and @next/rspack-binding packages. Use when editing rspack/package.json, rspack/cra |
+| `no-comments` | remotion-dev/remotion | Remove code comments that explain or defend Remotion's own code, keeping only comments about external systems  |
 | `no-pointer` | remotion-dev/remotion | Apply Remotion Studio's pointerless interaction styling to clickable controls. Use when adding or revising Stu |
 | `nullable-new-params` | remotion-dev/remotion | Fix newly added optional parameters, optional React props, and optional type/interface members in Remotion mon |
 | `offload-r2` | remotion-dev/remotion | Upload Remotion repository media assets to the Cloudflare R2 bucket behind remotion.media, switch source code  |
 | `plan-update` | react/react | Use when you need to update a plan document with deep research across all compiler passes. Launches parallel s |
 | `player-example` | remotion-dev/remotion | Start the @remotion/player example app and open it in the Codex browser. Use when the user invokes /player-exa |
+| `playwright-audit-deps` | microsoft/playwright | Roll the runtime dependencies that npm audit flags with a moderate or higher advisory to safe versions that ar |
+| `playwright-bisect-chromium` | microsoft/playwright | Bisect a Chromium regression down to the upstream commit with the prebuilt per-commit Chrome for Testing build |
 | `playwright-cherry-pick` | microsoft/playwright | Cherry-pick a commit or PR from main into a release branch (release-<version>) and retitle it as cherry-pick(# |
 | `playwright-dev` | microsoft/playwright | Explains how to develop Playwright - add APIs, MCP tools, CLI commands, and vendor dependencies. |
 | `playwright-devops` | microsoft/playwright | DevOps workflows for Playwright - CI failure analysis, workflow debugging, and release operations. |
@@ -82,14 +89,17 @@
 | `scaffold-element` | remotion-dev/remotion | Scaffold a new Remotion Element for development in the docs Remotion Studio. |
 | `skill-locations` | remotion-dev/remotion | Document Remotion skill placement. Use when adding, moving, or editing Remotion skills to decide whether a ski |
 | `studio` | remotion-dev/remotion | Start Remotion Studio from packages/example and open it in the Codex browser. Use when the user invokes /studi |
+| `studio-checklist` | remotion-dev/remotion | Develop or review Remotion Studio features and UI. Apply Studio principles for optimistic updates, agent acces |
 | `studio-config-option-lifecycle` | remotion-dev/remotion | Classify and wire Remotion Studio config options as either startup-fixed or reloadable while preventing mixed  |
 | `studio-css-reset` | remotion-dev/remotion | Style Remotion Studio UI inside `.css-reset` containers without relying on inherited reset properties. |
 | `studio-dev` | remotion-dev/remotion | Develop or review Remotion Studio features and UI. Apply Studio principles for optimistic updates, agent acces |
+| `studio-diagnostics` | remotion-dev/remotion | Diagnose Remotion Studio playback stalls using buffering traces, resource counters, and WebMCP. Use when asked |
 | `studio-loop` | remotion-dev/remotion | Continuously improve Remotion Studio by making a video, reproducing real UX and performance issues, fixing the |
 | `studio-mode` | remotion-dev/remotion | Understand the capabilities and restrictions of each Remotion Studio mode. Use when implementing or reviewing  |
 | `studio-perf` | remotion-dev/remotion | Optimize Remotion Studio render performance by minimizing frame-reactive component surfaces, preferring impera |
 | `test` | react/react | Use when you need to run tests for React core. Supports source, www, stable, and experimental channels. |
 | `timeline-layout-reveal` | remotion-dev/remotion | Capture matching 2x Remotion Studio timeline screenshots and make a before/after crop reveal in packages/brand |
+| `triaging-external-prs` | remotion-dev/remotion | Triage pull requests from contributors without write access to remotion-dev/remotion. Decides whether to revie |
 | `update-ard-port` | GoogleChrome/lighthouse | Sync Lighthouse's Agentic Resource Discovery (ARD) port with upstream ards-project/ard-spec. Invoke when `node |
 | `update-chrome-binaries-test-region` | remotion-dev/remotion | Publish Remotion Lambda Chrome binaries to the eu-central-1 test region and update hosted layer and Chrome ver |
 | `update-codex-plugin` | remotion-dev/remotion | Update Remotion's published Codex and ChatGPT directory plugin to a released Remotion version. Prepare the ZIP |

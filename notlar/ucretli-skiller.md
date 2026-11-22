@@ -47,7 +47,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 355
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 356
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -265,6 +265,7 @@
 | `context7-docs` | 03-web-arastirma-veri | CONTEXT7_API_KEY ister (ücretsiz hesapla alınır); yoğun kullanım için ücretli plan. |
 | `context7-mcp` | 03-web-arastirma-veri | Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
 | `context7-mcp@upstash` | 03-web-arastirma-veri | Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
+| `context7-mcp@upstash-2` | 03-web-arastirma-veri | Girişsiz ve ücretsiz çalışır (istek sınırı düşük); daha yüksek sınır için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
 | `find-docs` | 03-web-arastirma-veri | Kimlik doğrulamasız ve ücretsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap/API anahtarı, yoğun kullanım için ücretli plan. |
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `nlm-skill` | 03-web-arastirma-veri | nlm komutu ücretsizdir ve Google hesabıyla çalışır; kullanım kotaları Gemini Notebook planına bağlıdır (ücretsiz planda sınırlı) |
@@ -407,4 +408,11 @@
 | `scientific-schematics` | 04-bilimsel-yazim-literatur | AI şema üretimi OpenRouter (ücretli); elle şema yolu ücretsiz |
 | `scientific-slides` | 04-bilimsel-yazim-literatur | Slayt yerel; isteğe bağlı AI görsel OpenRouter (ücretli) |
 
-Gizli entegrasyon kataloğundaki 0 Composio skili toplu olarak 'kısmen' (Composio hesabı; ücretsiz katman var).
+## ? Sınıflandırılmamış — 2
+
+| Skill | Kategori | Neden |
+|---|---|---|
+| `cancellations-pauses-winback` | 08-mobil-uygulama | ücretli servis izi: prepaid plan -> ucret-siniflandirma.json'a ekle |
+| `remotion-render` | 01-video-uretim-montaj | ücretli servis izi: YOUR_API_KEY -> ucret-siniflandirma.json'a ekle |
+
+Gizli entegrasyon kataloğundaki 1 Composio skili toplu olarak 'kısmen' (Composio hesabı; ücretsiz katman var).

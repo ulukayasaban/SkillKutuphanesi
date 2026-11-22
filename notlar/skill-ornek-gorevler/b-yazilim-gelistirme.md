@@ -1,15 +1,15 @@
 # Örnek görevler ve test sonucu › b-yazilim-gelistirme
 
-[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-05 · 404 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
+[← TEST_RAPORU.md](../../TEST_RAPORU.md) · 2026-11-22 · 567 skill. Örnek görev: elle incelenmiş skillerde Türkçe `kullanim_alani`, diğerlerinde description'daki "Use when …".
 
 | Skill | Sonuç | Örnek görev |
 |---|---|---|
+| `accessibility-engineering` | ✅ | auditing a page or component for accessibility, running axe-core or pa11y, triaging a11y violations, or checking screen reader and contrast issues before shippi |
 | `app-builder` | ✅ | Sıfırdan full-stack uygulama başlatırken yığın seçimi ve iskelet kurulumu; hangi şablonun uygun olduğuna hızlı karar. |
 | `architecture@anthropics` | ⚠️ | choosing between technologies (e.g., Kafka vs SQS), documenting a design decision with trade-offs and consequences, reviewing a system design proposal, or desig |
 | `ask-matt` | ✅ | Ask which skill or flow fits your situation. |
 | `brainstorming` | ✅ | Yeni özellik, bileşen veya proje fikrinde gereksinim belirsizken; kodlamaya başlamadan önce ortak anlayış ve yazılı tasarım gerektiğinde. |
 | `brainstorming-research-ideas` | ✅ | exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work. |
-| `brainstorming@openai` | ✅ | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. |
 | `brainstorming@vudovn` | ✅ | ag-kit iş akışı kullanan projelerde; seçenek tablolu, karar odaklı soru listesi tercih edildiğinde. |
 | `code-review` | ⚠️ | a PR URL or diff, "review this before I merge", "is this code safe?", or when checking a change for N+1 queries, injection risks, missing edge cases, or error h |
 | `codebase-design` | ✅ | the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or wh |
@@ -24,11 +24,11 @@
 | `egm-brainstorm` | ⚠️ | Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). |
 | `egm-draft` | ⚠️ | you are ready to write a design doc after aligning on requirements + solution. |
 | `egm-drift-report` | ⚠️ | the user asks to detect drift or check for consistency across all design documents or READMEs in a directory. |
+| `egm-lite` | ⚠️ | the user invokes /egm-lite, issues a phase command (checklist, exec, review, goldfish), or resolves a subagent review response |
 | `egm-resolve` | ⚠️ | The Elephant resolution skill. |
 | `egm-review` | ⚠️ | Orchestrates the EGM Goldfish Review Protocol. |
 | `egm-review-loop` | ⚠️ | reviewing design docs, READMEs, feature specifications, implementation plans, or verifying document completeness and tone. |
 | `executing-plans` | ✅ | writing-plans planı hazır ve kullanıcı satır içi yürütmeyi seçtiyse; alt-agent aracı olmayan ortamlarda (ör. bazı Codex kurulumları). |
-| `executing-plans@openai` | ✅ | you have a written implementation plan to execute in a separate session with review checkpoints |
 | `git-guardrails-claude-code` | ✅ | user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code. |
 | `grill-me` | ✅ | A relentless interview to sharpen a plan or design. |
 | `grill-with-docs` | ✅ | A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go. |
@@ -84,14 +84,13 @@
 | `wizard` | ✅ | provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover |
 | `writing-for-agents` | ✅ | creating or editing skills, or modifying AGENTS.md or CLAUDE.md. |
 | `writing-plans` | ✅ | Çok adımlı bir iş için spec/gereksinim hazırsa, koda dokunmadan önce; alt-agent'lara dağıtılacak görevler gerektiğinde. |
-| `writing-plans@openai` | ✅ | you have a spec or requirements for a multi-step task, before touching code |
 | `clean-code` | ✅ | Kod yazan agent'lar için kısa, her zaman açık stil ve disiplin kuralı olarak. |
 | `code-review-and-quality` | ✅ | Birleştirmeden önce her değişiklikte; kendi, başka agent'ın veya insanın yazdığı diff/PR'ı incelerken (diff satır içi yapıştırılmış olsa da). |
 | `code-review-checklist` | ✅ | Hızlı, hafif bir kontrol listesi yeterli olduğunda; ag-kit iş akışı kullanan projelerde. |
 | `code-review-graph` | ✅ | 500+ dosyalı depolar, monorepo'lar, modüller arası bağımlılıklı değişiklikler; ölü kod tespiti ve refactor önizlemesi. |
 | `code-review@mattpocock` | ✅ | the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\". |
-| `code-review@openai` | ✅ | user asks for code review, PR feedback, code quality checks, security issues, or requests fix-review cycles. |
 | `code-simplification` | ✅ | Çalışan ama okunması/bakımı zor koda refactor; incelemede biriken karmaşıklık fark edildiğinde; yeni yazılan kodu teslim öncesi toparlamak. |
+| `gerrit-code-review` | ✅ | working with Android (AOSP), Chromium, Fuchsia, or self-hosted Gerrit, when given a Gerrit change URL (https://*-review.googlesource.com/*, https://r.android.co |
 | `lint-and-validate` | ✅ | TypeScript/JavaScript veya Python projelerinde her değişiklik sonrası otomatik kalite kapısı. |
 | `ponytail` | ✅ | Lazy senior dev mode: the smallest change that fully solves the task, and a reply a busy human understands in one read. |
 | `ponytail-audit` | ✅ | "audit this codebase", "review the whole repo", "find bloat", "what can I delete", /ponytail-audit. |
@@ -99,43 +98,85 @@
 | `ponytail-gain` | ✅ | /ponytail-gain, "what does ponytail save", "ponytail impact". |
 | `ponytail-help` | ✅ | /ponytail-help, "ponytail help", "how do I use ponytail". |
 | `ponytail-review` | ✅ | "review this", "code review", "review the last commit", "review my PR", "is this over-engineered", /ponytail-review. |
-| `postgresql-code-review` | ✅ | PostgreSQL-specific code review assistant focusing on PostgreSQL best practices, anti-patterns, and unique quality standards. |
 | `pragmatic-review` | ✅ | Aşırı mühendislik, gereksiz soyutlama şüphesi olan değişikliklerde; CI'da otomatik inceleme yorumu üretmek. |
 | `receiving-code-review` | ✅ | İnsan veya inceleyici agent'tan geri bildirim geldiğinde, özellikle belirsiz ya da teknik olarak şüpheli öneriler varken. |
-| `receiving-code-review@openai` | ✅ | receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and |
 | `requesting-code-review` | ✅ | subagent-driven-development'ta her görevden sonra; büyük özellik bitiminde; main'e birleştirmeden önce taze bağlamlı inceleme gerektiğinde. |
-| `requesting-code-review@openai` | ✅ | completing tasks, implementing major features, or before merging to verify work meets requirements |
 | `simplify-code` | ✅ | Hızlı, kontrol listesi tarzı sadeleştirme; ag-kit iş akışı kullanan projeler. |
 | `simplify-codebase` | ✅ | Var olan bir depoda sadeleştirme denetimi veya açıkça yetkilendirilmiş büyük çaplı temizlik; 'nereler gereksiz?' sorusuna kanıtlı yanıt. |
-| `sql-code-review` | ✅ | Universal SQL code review assistant that performs comprehensive security, maintainability, and code quality analysis across all SQL databases (MySQL, PostgreSQL |
 | `debugging-and-error-recovery` | ✅ | superpowers zinciri kullanılmayan projelerde hata ayıklama; build/runtime hata tipine göre hazır triyaj listesi istendiğinde. |
 | `systematic-debugging` | ✅ | Her hata, test başarısızlığı, build kırılması veya beklenmeyen davranışta düzeltme önermeden önce; özellikle zaman baskısı ve ardışık başarısız düzeltmelerde. |
 | `systematic-debugging@heyitsnoah` | ✅ | Tek dosyalık (ek dosyasız) sürüm tercih edildiğinde; claudesidian kasası kullanan projeler. |
-| `systematic-debugging@openai` | ✅ | encountering any bug, test failure, or unexpected behavior, before proposing fixes |
 | `systematic-debugging@vudovn` | ✅ | ag-kit /debug iş akışında veya yalnız kısa bir hatırlatıcı yeterliyse. |
 | `tdd-workflow` | ✅ | ag-kit iş akışı kullanan projelerde veya çok kısa bir TDD hatırlatıcısı yeterliyse. |
 | `test-driven-development` | ✅ | Mantık yazarken, hata düzeltirken veya davranış değiştirirken; kullanıcı test istemese de kod satır içi verilmiş olsa bile. |
 | `test-driven-development@obra` | ✅ | superpowers zinciri (writing-plans → subagent-driven-development / executing-plans) uçtan uca kullanılırken; agent'ın TDD'yi atlama eğilimine karşı en katı disi |
-| `test-driven-development@openai` | ✅ | implementing any feature or bugfix, before writing implementation code |
 | `test-value` | ✅ | Test paketi yavaş/kararsız olduğunda denetim; commit/PR öncesi test değişikliklerini incelemek; başarısız bir kontrolün gerçek regresyon mu eskimiş assertion mı |
 | `testing-patterns` | ✅ | Test çerçevesi ve mock stratejisi seçerken hızlı başvuru; ag-kit kullanan projeler. |
 | `verification-before-completion` | ✅ | İş bitti/düzeldi/geçti demeden önce; commit, PR veya alt-agent sonucunu kabul etmeden önce her zaman. |
-| `verification-before-completion@openai` | ✅ | about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before maki |
 | `verify-changes` | ✅ | Özellik/hata düzeltmesi bittikten sonra somut doğrulama planı ve rapor biçimi gerektiğinde; 'çalışıyor mu?' sorusunda. |
+| `alloydb-basics` | ✅ | creating, configuring, or administering AlloyDB databases |
 | `api-and-interface-design` | ✅ | REST/GraphQL endpoint'i, modül sınırı veya ön yüz-arka yüz sözleşmesi tasarlarken; herkese açık bir arayüzü değiştirirken. |
-| `api-breaking-change-detector` | ✅ | the user asks to check for breaking API changes, verify frontend/backend contract sync, or audit |
+| `api-gateway-backend-security-and-rate-limiting` | ✅ | configuring API key or JWT authentication, locking down Cloud Run or Cloud Run functions backends with a gateway service account, reading authenticated claims f |
+| `api-gateway-mcp-server` | ✅ | migrating OpenAPI 2.0 specs to OpenAPI 3.x for MCP, annotating specs with x-google-api-management.mcp and x-google-mcp-tool, securing tools/list with JWTs or AP |
+| `api-gateway-openapi-spec-authoring` | ✅ | converting an OpenAPI 2.0 (Swagger) spec to OpenAPI 3.x, writing a new OpenAPI 3.x spec, or fixing a failed "gcloud api-gateway api-configs create", such as "ex |
+| `api-gateway-troubleshooting` | ✅ | calls through a gateway return 4xx or 5xx errors, including 429 and other quota errors, time out, or fail a CORS preflight; when `api-configs create` fails with |
 | `api-patterns` | ✅ | API stili ve kimlik doğrulama yöntemi seçerken; rate limiting veya sürümleme stratejisi belirlerken. |
-| `architecture-blueprint-generator` | ✅ | Comprehensive project architecture blueprint generator that analyzes codebases to create detailed architectural documentation. |
+| `apigee-agent-gateway-governance` | ✅ | wiring Apigee in as an AI gateway behind an Agent Gateway, when an agent's model egress needs governing, or when a callout proxy returns no verdict and you need |
+| `application-design-center-design-deploy` | ✅ | : - Designing GCP infrastructure with Terraform |
+| `application-integration-authoring` | ✅ | listing integrations, downloading or uploading integration versions as JSON, configuring API triggers or config variables, publishing drafts, invoking integrati |
+| `application-integration-basics` | ✅ | setting up Application Integration in a Google Cloud project, enabling required APIs, provisioning a region, configuring IAM or run-as service accounts, choosin |
+| `application-integration-troubleshooting` | ✅ | an integration fails, returns HTTP 200 without doing the expected work, hangs in a suspended or retry state, or hits IAM, run-as service account, connector heal |
 | `architecture@vudovn` | ✅ | Sistem tasarımı, desen seçimi (monolit/mikroservis, katmanlar), önemli kararların ADR olarak kaydı. |
+| `bigquery-ai-ml` | ✅ | you need to write SQL queries that perform time-series forecasting, predict values, detect outliers or anomalies, find key drivers, perform semantic search or v |
+| `bigquery-basics` | ✅ | you need to interact with BigQuery, run SQL queries, manage BigQuery resources (datasets, tables, views), or perform basic data ingestion and analysis. |
+| `bigquery-bigframes` | ✅ | SQL-first workflows or the google-cloud-bigquery client library — use bigquery-basics. |
+| `bigquery-migration-data-exporter` | ✅ | generating source database export SQL scripts for BigQuery ingestion without connecting to the source database |
+| `bigquery-migration-data-loader` | ✅ | provisioning target BigQuery datasets for warehouse migrations, batch loading staged Parquet files into native BigQuery tables by using bq load, auditing loaded |
+| `bigquery-migration-metadata-extractor` | ✅ | extracting database metadata or query logs from Snowflake, Redshift, Teradata, Oracle, PostgreSQL, SQL Server, Hive, etc., deciding between local and cloud (Clo |
+| `bigquery-migration-sql-translator` | ✅ | translating legacy SQL queries, migrating schemas or metadata zip archives, or configuring BigQuery Migration Service (BQMS) YAML translation settings |
+| `bigquery-migration-validator` | ✅ | generating or editing a validation config, running a validation, choosing sampling or partitioning, fixing connection or driver errors, or investigating validat |
+| `bigquery-observability` | ✅ | the telemetry to fetch is already known, selecting telemetry tools, writing performant INFORMATION_SCHEMA queries, retrieving telemetry for diagnosing single-jo |
+| `bigquery-optimization` | ✅ | optimizing cost, modeling Edition migrations, rightsizing reservations, evaluating logical vs |
+| `bigquery-troubleshooting` | ✅ | interpreting symptoms, isolating bottlenecks, diagnosing cost spikes (on-demand query spend, capacity slot autoscaling, storage growth), execution graph stages  |
+| `bigquery-udfs` | ✅ | writing custom scalar or aggregate functions in BigQuery, installing PyPI packages or Cloud Storage libraries in a Python or JavaScript UDF, or calling Google C |
+| `bigtable-basics` | ✅ | designing Bigtable row keys, configuring column families, writing SQL queries or client library code (Java, Go, Python) for Bigtable, or diagnosing performance/ |
+| `cloud-databases-onboarding` | ✅ | a user asks 'What database service should I use?', 'Help me pick a database', or when a user wants to create a new database on Google Cloud |
+| `cloud-sql-basics` | ✅ | This file generates or explains Cloud SQL resources. |
 | `database-design` | ✅ | Şema tasarlarken, ORM/veritabanı seçerken, migrasyon planlarken veya yavaş sorgu optimize ederken (Prisma, Drizzle, SQL). |
+| `datalineage-bigquery-asset-impact-analysis` | ✅ | : - Performing a blast radius or impact analysis for a BigQuery table or view |
+| `datalineage-summary` | ✅ | summarizing upstream and downstream data flows, and presenting complex lineage data as an intuitive Markdown report |
+| `dbt-sf-to-bq-translator` | ✅ | migrating Snowflake dbt pipelines or models to BigQuery on Google Cloud |
+| `firebase-basics` | ✅ | Firebase Hosting deploy, Firestore, Auth, App Hosting, Data Connect, Crashlytics, or Remote Config. |
 | `frontend-architecture` | ✅ | React/Next veya Vue kod tabanını yapılandırırken ya da organizasyonunu incelerken: mantık, API çağrısı, durum ve tiplerin nerede yaşayacağı. |
 | `frontend-ui-engineering` | ✅ | Arayüz, sayfa veya bileşen yazarken/değiştirirken; erişilebilirlik gereksinimi olduğunda; çıktının 'AI yapımı' değil üretim kalitesinde görünmesi gerektiğinde. |
+| `google-cloud-solution-agentic-ai-bidirectional-streaming` | ✅ | users need agentic assistance to design and create a multi-product solution in the cloud for live bidirectional multimodal streaming workloads |
+| `google-cloud-solution-agentic-ai-borderless-data-lakehouse` | ✅ | Apache Iceberg and BigQuery data agents |
+| `google-cloud-solution-agentic-ai-data-science-workflow` | ✅ | architecting multi-product solutions for agent-based data analytics or ML workloads |
+| `google-cloud-solution-agentic-analytics-spark-knowledge-catalog` | ✅ | designing data science and analytics workflows across structured and unstructured distributed data (including in S3, Azure Blob, AlloyDB, and Iceberg), establis |
+| `google-cloud-solution-architecture` | ✅ | designing end-to-end cloud solutions, selecting and integrating Google Cloud services, generating architecture diagrams, or conducting requirements discovery fo |
+| `google-cloud-solution-build-deploy-agents` | ✅ | designing or implementing agentic systems on Google Cloud |
+| `google-cloud-solution-event-driven-decoupling` | ✅ | breaking apart synchronous chains, defining transaction boundaries, bulkheads, and Transactional Outbox or post-commit publishing; sizing Pub/Sub topics, subscr |
+| `google-cloud-solution-guided-gke-ai-migration` | ✅ | the user has an existing AI inference workload (on Cloud Run, the Gemini API, Gemini Enterprise Agent Platform, or a custom VM) and wants to move it to self-hos |
+| `google-cloud-solution-hybrid-search-alloydb` | ✅ | users need vector search combined with structured SQL filtering, faceted attributes, semantic reranking, in-database AI validation, or serverless hosting across |
+| `google-cloud-solution-multi-agent-security` | ✅ | the user needs to configure multi-agent security, ingress (CLIENT_TO_AGENT), or egress (AGENT_TO_ANYWHERE) patterns involving Model Armor, IAP, and Agent Regist |
+| `google-cloud-solution-n-tier-serverless-web-app` | ✅ | users need architecture designs, security checklists, Terraform code, or deployment guidance for multi-tier serverless apps, regional data residency / European  |
+| `google-cloud-solution-rag-enterprise-search-gke-sqldb` | ✅ | users need a vector-enabled SQL database as the store and index for the embedding vectors, an open model and open-source inferencing framework, and Kubernetes c |
+| `google-cloud-storage-basics` | ✅ | you need to interact with Cloud Storage — set up a Storage MCP server (remote or local Toolbox), create or configure buckets, upload, download, stream, or trans |
+| `google-cloud-storage-bucket-architect` | ✅ | a user wants to create, make, set up, provision, or spin up a bucket, or needs object storage for an app, service, pipeline, or data |
+| `google-cloud-storage-diagnostic` | ✅ | a user encounters or asks to analyze a 403 error on a bucket or object - including analysis-only questions where no commands are run - or needs help with IAM bi |
+| `google-cloud-storage-fuse` | ✅ | interacting with gcsfuse or Cloud Storage FUSE mounts: decide whether FUSE, native gs:// reads, or Filestore/Managed Lustre fits a workload, deploy tuned mounts |
+| `managed-airflow-dag-authoring` | ✅ | creating or extending an Airflow DAG |
+| `managed-airflow-dag-troubleshooting` | ✅ | figuring out reasons for DAG run or task instance failures |
+| `managed-airflow-migrations` | ✅ | migrating the DAG code to newer Airflow version |
+| `managed-airflow-recommendations` | ✅ | the user asks for guidance, recommendations, or best practices on configuring Managed Airflow environments, scaling Airflow environments, preventing workload re |
 | `nodejs-best-practices` | ✅ | Node.js backend kurarken veya framework seçerken; mevcut Node servisinin yapısını gözden geçirirken. |
 | `python-patterns` | ✅ | Python backend/servis kurarken veya framework seçerken; tip ipucu ve proje yapısı kararlarında. |
-| `changelog-generator` | ✅ | Sürüm notları, haftalık/aylık ürün güncellemesi, app store değişiklik metni veya herkese açık changelog sayfası hazırlarken. |
+| `spanner-basics` | ✅ | designing primary keys, writing SQL queries or client library code, or diagnosing performance issues. |
+| `spanner-graph-query-tuning` | ✅ | optimizing slow Spanner Graph GQL queries, diagnosing distributed cross apply versus hash join execution operators and index seek prefixes, eliminating multi-ar |
+| `spanner-graph-schema-best-practices` | ✅ | creating a new Spanner Graph schema, selecting node and edge primary key types, optimizing forward, reverse, or per-node Top-K edge traversals, designing interl |
+| `spanner-relational-to-graph` | ✅ | mapping existing Spanner tables to a Spanner Graph, identifying node and edge candidates from relational tables, creating SQL bridge views for implicit `ARRAY`/ |
 | `deprecation-and-migration` | ✅ | Bir API/özelliği emekliye ayırırken; kullanıcıları yeni sisteme taşırken; üretimde kolon yeniden adlandırma/silme gibi kesintisiz şema değişikliğinde; bakım mı  |
 | `finishing-a-development-branch` | ✅ | Tüm testler geçtikten sonra dalı birleştirme/PR/bekletme kararı ve worktree temizliği. |
-| `finishing-a-development-branch@openai` | ✅ | implementation is complete, all tests pass, and you need to decide how to integrate the work |
 | `git-workflow-and-versioning` | ✅ | Her kod değişikliğinde commit/dal/PR düzeni; karışık çalışma ağacını temiz atomik commit'lere bölmek; sürüm numarası seçmek ve release kesmek. |
 | `git-worktrees` | ✅ | Elle worktree yönetimi, PR incelemesi için ayrı checkout veya birleşme sonrası temizlik komutları gerektiğinde. |
 | `pr-feedback-quality-gate` | ✅ | Safely track pull request feedback, resolve review comments or merge conflicts, validate fixes, and use a read-only cross-review before committing or pushing fo |
@@ -143,69 +184,178 @@
 | `release-notes-one-pager` | ✅ | Release notes one-page HTML with highlights, Added, Fixed, Breaking changes, Known issues, and Upgrade note. |
 | `release@heyitsnoah` | ✅ | package.json ve CHANGELOG.md (Keep a Changelog) kullanan Node projelerinde sürüm kesmek. |
 | `using-git-worktrees` | ✅ | Yalıtım gerektiren özellik işine başlarken veya bir uygulama planını yürütmeden önce (superpowers zinciri). |
-| `using-git-worktrees@openai` | ✅ | starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native too |
 | `agents-sdk` | ✅ | Build, debug, or review Cloudflare Agents SDK applications using the agents package. |
 | `api-monitoring` | ✅ | setting up uptime/error alerts for store APIs, webhooks failing silently, or planning integration SLAs. |
+| `assured-workloads-basics` | ✅ | creating, listing, describing, updating, or deleting an Assured Workloads workload for any compliance regime or data boundary (FedRAMP, DoD IL2/IL4/IL5, ITAR, C |
+| `assuredworkloads-environment-assessor` | ✅ | asked to: "assess my environment for compliance", "which Assured Workloads framework should I use?", "check if my folder is ready for EU sovereignty", "evaluate |
+| `assuredworkloads-frameworks-author` | ✅ | creating or synthesizing custom data boundary resources |
+| `assuredworkloads-frameworks-navigator` | ✅ | mapping direct natural language workload requirements to Assured Workloads / Data Boundary Frameworks and cloud controls, browsing built-in Data Boundary framew |
 | `basin` | ✅ | streaming data into R2 Iceberg tables, managing catalogs, or querying those tables; also use for requests using the former Data Platform, Pipelines, R2 Data Cat |
 | `cf-cli` | ✅ | finding and running Cloudflare commands from the terminal — sign-in and profiles, cf cli search, cf schema, cf deploy/dev/build, resource commands for DNS, zone |
 | `ci-cd-and-automation` | ✅ | Build/deploy hattı kurarken veya değiştirirken; kalite kapılarını otomatikleştirirken; test çalıştırıcısını CI'a bağlarken. |
 | `claude-security` | ✅ | the user asks to scan, audit or check code with Claude Security, to scan their changes with Claude Security, or to fix or patch Claude Security findings. |
-| `cloudflare` | ⚠️ | architecture and product selection, including when the user describes a need without naming a Cloudflare product; then find the relevant skill or documentation. |
+| `cloud-armor-crs-rule-upgrader` | ✅ | Upgrades Google Cloud Armor security policies from OWASP CRS 3.0 and 3.3 to OWASP CRS 4.22. |
+| `cloud-build-basics` | ✅ | . |
+| `cloud-logging-configuration-basics` | ✅ | cross-project logging or multi-project setups. |
+| `cloud-logging-cross-project-configuration` | ✅ | : - Setting up log routing from multiple projects/folders/organizations to a central log bucket |
+| `cloud-logging-finops` | ✅ | auditing Cloud Logging spend, finding logging waste, identifying top logging contributors, generating log cost reduction reports, or creating log sink exclusion |
+| `cloud-logging-query-generation` | ✅ | you need to query log data or when you are debugging issues |
+| `cloud-monitoring-alert-configuration` | ⚠️ | creating, reviewing, migrating, or deduplicating Terraform alerting policies for latency, traffic, error rates, saturation, host or reservation maintenance, GPU |
+| `cloud-monitoring-chart-generation` | ✅ | : - Generating valid google.monitoring.dashboard.v1.Widget textprotos, containing PrometheusQuery or TimeSeriesFilter datasets, for use with the Cloud Monitorin |
+| `cloud-monitoring-list-time-series-request` | ✅ | asked to create, generate, format, or build ListTimeSeries requests, JSON payloads, filter expressions, or aligner/reducer aggregations for Cloud Monitoring met |
+| `cloud-monitoring-metric-selection` | ✅ | asked to find, list, search, or discover GCP metric types, names, kind/value schemas, or descriptors. |
+| `cloud-monitoring-notification-channels-configuration` | ✅ | creating or configuring email, SMS, Slack, PagerDuty, Pub/Sub, or webhook notification channels, verifying Pub/Sub topic compatibility (including cross-project  |
+| `cloud-monitoring-promql-query` | ✅ | asked to create, generate, write, or format PromQL queries, PromQL strings, or PromQL aggregations for Cloud Monitoring metrics and resources |
+| `cloud-network-insights` | ✅ | enabling Cloud Network Insights, deploying or troubleshooting Monitoring Points across cloud and on-premises environments, configuring Network or Web monitoring |
+| `cloud-operator` | ✅ | any GCP request: how-to, resources, Terraform/Kubernetes/Helm, rollouts, incidents, costs |
+| `cloud-operator-setup` | ✅ | the user runs this skill, asks to set up the operator or create their operator agent, or chooses setup when the cloud-operator skill asks |
+| `cloud-operator-share-context` | ✅ | the user runs this skill, accepts the cloud-operator or cloud-operator-setup skill's offer to share their existing Google Cloud context, or asks to share, impor |
+| `cloud-run-alert-configuration` | ✅ | analyzing, recommending, writing, or deploying Terraform PromQL alerting policies to monitor Cloud Run error rates (4xx/5xx), request latency, container instanc |
+| `cloud-run-basics` | ✅ | you need to deploy applications responding to HTTP requests (services), run event-triggered or scheduled tasks (jobs), or handle always-on pull-based background |
+| `cloud-trace-querying` | ✅ | investigating slow requests, analyzing trace hierarchies, or resolving latency regressions |
+| `cloudflare` | ⚠️ | architecture and product selection, including when the user describes a need without naming a Cloudflare product; then find the relevant skill or documentation |
+| `cloudflare-app-bootstrap` | ✅ | app setup or onboarding after the project exists; use frameworks-on-cloudflare or cf-cli to create or configure the project, and wrangler or cf-cli for isolated |
 | `cloudflare-email-service` | ✅ | Implement or troubleshoot Cloudflare Email Sending and Email Routing integrations and their delivery configuration. |
-| `cloudflare-one` | ✅ | Design, configure, troubleshoot, or review Cloudflare One Zero Trust and SASE deployments. |
+| `cloudflare-one` | ✅ | an agent, script, crawler, or other non-browser client needs to reach a webpage or API protected by Cloudflare Access. |
 | `cloudflare-one-migrations` | ✅ | Assess and plan migrations from existing VPN, SWG, or SASE platforms to Cloudflare One, including policy mapping, parity gaps, and rollout. |
+| `compute-future-reservations` | ✅ | planning future AI/ML training runs, checking reservation availability windows, verifying accelerator cluster topologies, or assessing future capacity lead time |
+| `compute-host-events-troubleshooting` | ✅ | cre |
+| `compute-mig-autoscaling-troubleshooting` | ✅ | Google Kubernetes Engine (GKE) Horizontal Pod Autoscaler (HPA), GKE Cluster Autoscaler, standalone single-VM creation |
+| `compute-on-demand-reservations` | ✅ | checking active reservation capacity, determining whether reserved VMs are available or exhausted, verifying reservation targeting (automatic versus specific re |
+| `compute-resource-availability-troubleshooting` | ✅ | IAM permission errors, project quota limit increases without stockouts, general greenfield VM creation, or unexpected host reboots on already-runn |
+| `compute-spot-capacity-advice` | ✅ | planning batch workloads, finding available Spot CPU or GPU capacity, assessing stockout risks, or optimizing instance distribution across zones |
+| `compute-vm-creation` | ✅ | Google Kubernetes Engine (GKE) Autopilot or Standard clusters, Kubernetes node pools or Pods, container orchestration, managing existing VMs, Manag |
 | `deploy-to-vercel` | ✅ | the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment". |
 | `deployment-procedures` | ✅ | Barındırma platformu seçerken veya deploy prosedürü yazarken; ag-kit /deploy iş akışında. |
-| `deployments-cicd` | ✅ | deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel. |
+| `detection-engineering-coverage-evaluation` | ✅ | fetching threat intelligence from blogs, generating Threat Detection Opportunities (TDOs), simulating attacker behavior with synthetic UDM events, evaluating ru |
 | `domain-monitoring` | ✅ | a store needs certificate or domain-renewal alerts, DNS change monitoring, or a website security health check plan. |
+| `dpop-adoption` | ✅ | configuring non-extractable asymmetric key pairs (P-256), generating DPoP Proof JWTs for authorization code exchange and token refresh, or handling 400 use_dpop |
 | `durable-objects` | ✅ | Build, debug, or review Cloudflare Durable Objects code for persistent state and coordination. |
 | `file-integrity-monitoring` | ✅ | protecting a store (WooCommerce, Magento, custom) from malicious code injection, card skimmers or unauthorized theme/plugin edits. |
+| `frameworks-on-cloudflare` | ✅ | a framework project such as Astro, SvelteKit, React Router, TanStack Start, Nuxt, Hono, or a React or Vue SPA targets Cloudflare, or when a framework repository |
 | `gateway-workers` | ✅ | Build, debug, or review Cloudflare Workers invoked by the Forward action in Gateway HTTP policies, including the GatewayMiddleware entrypoint, Gateway types, co |
+| `gcloud` | ✅ | planning, generating, constructing, proposing, describing, or executing any gcloud CLI commands - including when answering questions about gcloud syntax, or for |
+| `gke-ai-troubleshooting-handle-disruption-gpu-tpu` | ✅ | diagnosing node disruptions, predicting host maintenance events on GPU/TPU nodepools, inspecting node interruption PromQL metrics, auditing node taints, or conf |
+| `gke-ai-troubleshooting-jobset-interruption` | ✅ | troubleshooting JobSet restart loops, spot VM preemptions, node readiness failures, host VM issues, or coordinator worker crashes |
+| `gke-ai-troubleshooting-node-unresponsive-timeout` | ✅ | nodes stop heartbeating beyond the node auto-repair threshold and pods remain stuck in Terminating |
+| `gke-ai-troubleshooting-tpu-dynamic-slices-monitoring` | ✅ | checking TPU slice lifecycle states, troubleshooting slice provisioning failures, validating single-slice or multi-slice (JobSet) workload manifests, or safely  |
+| `gke-ai-troubleshooting-tpu-metrics-monitoring` | ✅ | monitoring TensorCore duty cycle, TPU memory, node readiness, multi-host TPU node pool availability, host maintenance or preemption interruptions, and calculati |
+| `gke-ai-troubleshooting-tpu-mxla-hang` | ✅ | multi-slice TPU training jobs freeze without progressing steps, emit `HANG_DETECTED`, or stall in collective operations |
+| `gke-ai-troubleshooting-tpu-partition-overlap` | ✅ | diagnosing GKE TPU slice creation failures with SliceCreationFailed partition or node conflicts |
+| `gke-ai-troubleshooting-tpu-performance-degradation` | ✅ | TPU training throughput or duty cycle drops without crashing pods, when `PERFORMANCE_DEGRADATION` monitored events fire, or when |
+| `gke-ai-troubleshooting-tpu-reservation-stockout` | ✅ | TPU node pool creation or scale-up fails with GCE_STOCKOUT, ZONE_RESOURCE_POOL_EXHAUSTED, or ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS despite having a specific |
+| `gke-ai-troubleshooting-tpu-slice-mig-stuck-updating` | ✅ | TPU slice creation fails with a SliceCreationFailed status reason, when JobSets remain stuck in pending, or when MIG status reflects isStable=False or versionTa |
+| `gke-ai-troubleshooting-tpu-vbar-oom` | ✅ | troubleshooting vbar_control_agent crashes, memory cgroup OOMs in serial console logs, tpu-device-plugin metrics checksum corruption errors, or custom TPU metri |
+| `gke-ai-troubleshooting-tpu-vm-repair-stuck` | ✅ | TPU instances in a slice node pool remain in REPAIRING, host error events appear in audit logs, or TPU slices are unschedulable due to a VM in repair |
+| `gke-alert-configuration` | ✅ | writing, analyzing, validating, or deploying Terraform alerting policies to monitor GKE service latency, traffic, error rates using Multi-Window Multi-Burn-Rate |
+| `gke-app-onboarding` | ✅ | onboarding or deploying an application to GKE for the first time, or containerizing an app for GKE |
+| `gke-backup-dr` | ✅ | backup policies, disaster recovery, or GKE cluster restores |
+| `gke-basics` | ✅ | creating GKE clusters, fetching kubectl credentials, or deciding between Autopilot and Standard modes |
+| `gke-batch-hpc` | ✅ | running GKE batch jobs, configuring GKE HPC, or setting up GKE job queues |
+| `gke-capacity-triage` | ✅ | a user pastes a scale-up failure alert or asks why Pods are stuck Pending, lack nodes, or hit a stockout |
+| `gke-cluster-autoscaler` | ✅ | mention of GKE cluster autoscaler, node autoscaling, node pool auto-creation / node auto-provisioning |
+| `gke-cluster-creation` | ✅ | creating GKE clusters, provisioning GKE environments, selecting cluster modes, or auditing GKE clusters |
+| `gke-compute-classes` | ✅ | configuring Spot VMs with on-demand fallback, targeting specific accelerators (GPUs/TPUs) or machine families, restricting ComputeClass access, or debugging pen |
+| `gke-cost-analysis` | ✅ | querying GKE costs across projects, namespaces, or workloads, analyzing billing reports in BigQuery (`bq`), checking cluster cost budgets (`gcloud billing`), or |
+| `gke-cost-optimization` | ✅ | optimizing GKE cluster or workload costs, configuring GKE cost allocation or quotas, rightsizing CPU/memory requests, or selecting Spot VMs and machine types |
+| `gke-custom-golden-image-discovery` | ✅ | finding the golden base image for custom GKE node creation, mapping cluster configuration parameters (GKE version, OS, architecture, accelerators, gVisor, cgrou |
+| `gke-golden-path` | ✅ | designing GKE clusters, verifying GKE production readiness, or checking configurations against GKE defaults |
+| `gke-inference` | ✅ | deploying GKE inference servers, configuring GKE GPU resources for inference, or deploying LLMs on GKE |
+| `gke-kueue-troubleshooting` | ✅ | Diagnose a GKE batch or AI workload (Job, JobSet, LeaderWorkerSet, RayJob, Kubeflow training jobs, or plain Pods) that is pending, suspended, stuck, evicted or  |
+| `gke-manifest-generation` | ✅ | creating or modifying GKE deployment manifests, configuring container security contexts, setting CPU/memory resource limits, defining readiness/liveness/startup |
+| `gke-multitenancy` | ✅ | designing GKE multi-tenancy, configuring GKE namespaces, setting up resource quotas, or isolating GKE teams |
+| `gke-networking` | ✅ | designing GKE networking layouts, configuring private clusters, setting up Dataplane V2, planning GKE IP ranges, or managing VPC- native cluster modes |
+| `gke-node-notready` | ✅ | nodes show NotReady, when the kubelet stops posting node status, or when workloads are evicted or stuck Pending due to node health |
+| `gke-observability` | ✅ | configuring GKE monitoring, setting up GKE logging, or configuring Prometheus metrics collection, to diagnose GKE control plane, API server, admission webhook,  |
+| `gke-platform-security` | ✅ | securing cluster control planes, hardening GKE RBAC, enabling Shielded Nodes, enabling GKE Sandbox runtime, enabling cluster-wide security add-ons, or managi |
+| `gke-productionize` | ✅ | asked to productionize, prepare, assess, audit, or review a GKE cluster or workload before going live to production |
+| `gke-reliability` | ✅ | configuring GKE workload reliability, setting up PDBs, or configuring GKE health probes (liveness, readiness, startup) |
+| `gke-service-networking` | ✅ | configuring Gateway API manifests, standard Ingress, Cloud Armor WAF security policies, Container-Native Load Balancing (NEGs), Private Service Connect (PSC), o |
+| `gke-statefulset-without-probes` | ✅ | asked to check, audit, or propose fixes for the PDB_STATEFULSET_WITHOUT_PROBES condition, missing readinessProbe configurations on PDB-protected GKE StatefulSet |
+| `gke-storage` | ✅ | configuring GKE storage or creating PVCs |
+| `gke-storage-troubleshooting` | ✅ | Pods are stuck in ContainerCreating, volumes fail to attach or mount, or nodes report storage pressure |
+| `gke-unprotected-statefulset` | ✅ | investigating the PDB_UNPROTECTED_STATEFULSET insight, checking whether GKE StatefulSets have a matching PDB, or proposing fixes for selector mismatches where a |
+| `gke-upgrades` | ✅ | the user mentions GKE upgrades, Kubernetes version bumps, node pool maintenance, GKE patching, cluster version management, |
+| `gke-workload-identity` | ✅ | setting up KSA/GSA bindings (`roles/iam.workloadIdentityUser`, `iam.gke.io/gcp-service-account`) or when a |
+| `gke-workload-scaling` | ✅ | configuring Horizontal Pod Autoscaler (HPA), configuring Vertical Pod Autoscaler (VPA), or applying best practices for GKE workload autoscaling |
+| `gke-workload-scaling-troubleshooting` | ✅ | an HPA isn't scaling a workload as expected or reports metric e |
+| `gke-workload-security` | ✅ | auditing workload security posture, isolating namespaces, applying pod security standards, or configuring network policies and secret |
+| `gke-workload-troubleshooting` | ✅ | pods fail to start or crash repeatedly |
+| `google-cicd-deploy` | ✅ | requested to deploy an application to Google Cloud (GCS, Cloud Run, GKE) or when analyzing an application to determine the best deployment target |
+| `google-cicd-pipeline-design` | ✅ | design and implement a Google Cloud based CI/CD pipeline |
+| `google-cicd-release-orchestration` | ✅ | you need to design Cloud Deploy delivery pipelines or manage releases for applications deploying to Cloud Run or Google Kubernetes Engine (GKE) |
+| `google-cicd-terraform` | ✅ | deploying application code or container images directly via `gcloud` or `kubectl` without Terraform (use `google-cicd |
+| `google-cloud-filestore-auditing` | ✅ | assessing storage health posture, auditing NFS export permissions, identifying unprotected file shares, or validating zone failure domains |
+| `google-cloud-filestore-autoscale` | ✅ | monitoring Filestore instance headroom, resizing instance shares, configuring automated growth/shrink thresholds (custom thresholds apply globally across projec |
+| `google-cloud-filestore-log-troubleshooting` | ✅ | an NFS mount hangs or fails from a Compute Engine VM, GKE pod, Cloud Run service, or Vertex AI workload, when `mount.nfs` reports "Connection timed out" or "acc |
+| `google-cloud-filestore-nfs-browser` | ✅ | browsing Filestore shares, searching files, reading remote logs, or inspecting file attributes; don't use for Cloud Storage buckets, Cloud NetApp Volumes, Persi |
+| `google-cloud-global-frontend-configuration` | ✅ | : - Designing, configuring, or deploying a Google Cloud global external Application Load Balancer, Cloud CDN, Cloud Armor WAF, or Service Extensions |
+| `google-cloud-networking-observability` | ✅ | investigating dropped network traffic, packet drops, drop reasons, VPC Flow Logs (including Private Service Connect / PSC, serverless / App Engine Direct VPC, a |
+| `google-cloud-recipe-auth` | ✅ | Provides expert guidance on Identity and Access Management (IAM) and authenticating and authorizing to Google Cloud services and APIs, covering human users, ser |
+| `google-cloud-recipe-foundation-builder` | ✅ | setting up a new Google Cloud Organization or establishing a secure, enterprise-grade landing zone foundation |
+| `google-cloud-recipe-onboarding` | ✅ | a new developer wants to initialize their first Google Cloud project, configure billing, and verify deployment |
+| `google-cloud-release-radar` | ✅ | the user asks what shipped recently in Google Cloud, wants to check release notes, deprecations, security bulletins, or breaking changes for specific services o |
+| `google-cloud-scc-query` | ✅ | retrieving details for a security finding by its name, validating finding scope (e.g., verifying findingClass is TOXIC_COMBINATION, VULNERABILITY, EXTERNAL_EXPO |
+| `google-cloud-scc-remediation` | ✅ | asked to fix, remediate, or mitigate a Security Command Center finding or address attack paths |
+| `google-cloud-slo-alert-configuration` | ✅ | the user asks to configure an SLO or Service Level Objective |
+| `google-cloud-waf-cost-optimization` | ✅ | the user asks to analyze Google Cloud spend, reduce cloud bills, rightsize resources (for example, Compute, GKE, Storage, Databases), evaluate discount options  |
+| `google-cloud-waf-operational-excellence` | ✅ | the user asks about operations-related topics like capacity management, change management, incident and problem management, configuration management, deployment |
+| `google-cloud-waf-performance-optimization` | ✅ | evaluate a workload, identify performance requirements, and provide actionable recommendations for resource allocation, modular design, and elasticity. |
+| `google-cloud-waf-reliability` | ✅ | the user asks about reliability-related topics like workload uptime, designing for high availability (HA) or DR, setting and meeting RTO/RPO targets, SRE best p |
+| `google-cloud-waf-security` | ✅ | the user asks about firewall rules, zero trust, shared responsibility and shared fate, audit logging, security |
+| `google-cloud-waf-sustainability` | ✅ | the user asks to assess, design, or optimize Google Cloud workloads for sustainability—including the shared responsibility model, selecting low-carbon regions ( |
+| `iam-helper-for-policy-management` | ✅ | creating, updating, listing, or deleting IAM allow policies or deny policies |
+| `iam-helper-for-policy-simulator` | ✅ | simulating or applying IAM v1 allow policies across Projects, Folders, or Organizations |
+| `iam-helper-for-privileged-access-management` | ✅ | a user asks to create, read, update, or delete PAM entitlements, request temporary access, or approve/deny pending PAM grants |
+| `iam-helper-for-troubleshooting` | ✅ | Diagnoses, remediates, and manages Identity and Access Management (IAM) access issues on Google Cloud. |
+| `iap-agent-platform-troubleshooting` | ✅ | an agent request fails with "Egress request is not authorized", when Cloud Audit Logs show an IAP egressViaIAP decision with granted false, when IAP audit entri |
 | `k2` | ✅ | stream setup, producing from Workers or HTTP, configuring retention and inputs, and consuming through subscriptions. |
 | `localization-testing` | ✅ | launching a store in a new country or language, or auditing translations, currencies and local legal requirements. |
+| `migrate-to-rust` | ✅ | migrating a GitHub repository or local codebase to Rust, porting legacy C++, Fortran, Python, or Java workloads to memory-safe Rust, designing Struct-of-Arrays  |
 | `nextjs-on-cloudflare` | ✅ | starting a Next.js project on Cloudflare, moving an existing app to Workers, choosing between vinext and OpenNext, or setting up vinext for Workers |
-| `observability` | ✅ | instrumenting, debugging, or optimizing application performance and user experience on Vercel. |
 | `observability-and-instrumentation` | ✅ | Loglama/metrik/izleme/uyarı eklerken; üretime çıkan her özellikte çalıştığına dair kanıt gerektiğinde; üretim sorunu mevcut veriden anlaşılamıyorsa. |
+| `pathways-workload` | ✅ | a Pathways workload fails to start, crashes, restarts or stops making progress, or shows errors such as IFRT proxy connection failures, DEADLINE_EXCEEDED lost c |
 | `performance-optimization` | ✅ | Performans gereksinimi veya regresyon şüphesi olduğunda; Core Web Vitals/yükleme süresi iyileştirmede; N+1 sorgu düzeltmede; profil çıkarılmış darboğazlarda. |
 | `performance-profiling` | ✅ | Lighthouse denetimi çalıştırmak, bundle boyutunu analiz etmek veya DevTools ile çalışma zamanı profili çıkarmak gerektiğinde. |
-| `performance-review-writer` | ✅ | : write my performance review, draft self-assessment, peer review, 360 feedback, annual review, mid-year review, upward feedback, write review for colleague, pe |
 | `public-status-page` | ✅ | creating or improving a status page, or writing customer-facing incident and outage updates. |
 | `red-team-tactics` | ✅ | Yalnız yetkili sızma testi veya kırmızı takım tatbikatında saldırı yüzeyini çerçevelemek ve rapor yapısı kurmak. |
+| `retrieving-developer-knowledge` | ✅ | searching for gcloud CLI commands, API syntax, IAM permissions, official documentation, architectural comparisons, or product choice overviews |
 | `reverse-engineer-anything` | ✅ | Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA, and build agent environments (AgentEnv bundles) of web  |
 | `sandbox-migrate-to-next` | ✅ | Migrate Cloudflare Sandbox apps from stable @cloudflare/sandbox to @cloudflare/sandbox@next (SDK 1.0 preview). |
 | `sandbox-next` | ✅ | Build or maintain Cloudflare Sandbox apps on @cloudflare/sandbox@next (SDK 1.0 preview). |
 | `sandbox-stable` | ✅ | Build or maintain Cloudflare Sandbox apps on the stable @cloudflare/sandbox package. |
+| `secops-cases` | ✅ | listing, creating, inspecting, updating, or closing SOAR cases; adding investigative comments and notes; updating case priority or description; or linking and g |
+| `secops-detection-engineering` | ✅ | writing new detection rules, tuning existing rules, validating syntax, testing logic against historical telemetry, or evaluating detection coverage against thre |
+| `secops-hunt` | ✅ | proactively hunting for threats, retroactively analyzing indicators of compromise (IoCs), performing prevalence searches across enterprise events, hunting for M |
+| `secops-investigate` | ✅ | investigating cases, analyzing entities (hosts, IPs, domains, hashes, users), extracting and searching UDM events, performing asset and user timeline analysis,  |
+| `secops-triage` | ✅ | investigating and triaging security alerts, determining false positives vs |
 | `security` | ✅ | hardening a Google Play Billing integration against fraud |
 | `security-and-hardening` | ✅ | Kullanıcı girdisi, kimlik doğrulama, veri saklama veya dış entegrasyon içeren her özellikte; OWASP Top 10'a karşı giriş akışı denetimi; bağımlılık denetimi. |
 | `security-audit` | ✅ | security questions, focused reviews, vulnerability research, security audits, or pen tests |
-| `security-diff-scan` | ✅ | Review a pull request, commit, branch diff, or working-tree patch for security vulnerabilities. |
-| `security-review` | ✅ | asked to scan code for security vulnerabilities, find bugs, check for SQL injection, XSS, command injection, exposed API keys, hardcoded secrets, insecure depen |
-| `security-scan` | ✅ | a standard, single-pass security audit of an entire repository or a scoped path, package, folder, or submodule with no diff to review |
 | `server-management` | ✅ | VPS/kendi sunucusunda çalışan uygulamalarda PM2/systemd yapılandırması, izleme ve ölçekleme kararları. |
+| `servicehealth-incident-correlation` | ✅ | asked whether Google Cloud is having an outage or affecting a project or its resources, when looking up a PSH event, or when triaging live Google Cloud workload |
 | `shipping-and-launch` | ✅ | Üretime deploy öncesi 'neler hazır olmalı?' sorusunda; kademeli yayın ve geri alma stratejisi planlarken. |
+| `sign-in-with-google-web` | ✅ | creating Google sign-in buttons, implementing Google One Tap with FedCM, integrating GIS in React/Next.js/Angular/HTML, verifying ID tokens on backend runtimes  |
 | `synthetic-monitoring` | ✅ | you need to catch broken checkout or cart flows before customers do. |
 | `turnstile-spin` | ✅ | Set up, repair, or migrate to Cloudflare Turnstile bot verification in an existing frontend and backend, including server-side Siteverify. |
 | `vercel-cli-with-tokens` | ✅ | working with Vercel CLI using access tokens rather than interactive login — e.g |
 | `vercel-optimize` | ✅ | Vercel cost and performance optimization on deployed projects, especially Next.js, SvelteKit, Nuxt, and limited Astro apps |
 | `vulnerability-scanner` | ✅ | Projede güvenlik taraması, OWASP 2025 uyum kontrolü veya tedarik zinciri (bağımlılık) analizi yaparken. |
-| `vulnerability-writeup` | ✅ | one vulnerability or a disclosure campaign; a Codex Security scan is optional. |
 | `web-perf` | ✅ | Audit, diagnose, or optimize website loading and interaction performance, Core Web Vitals, and Lighthouse performance scores. |
 | `workers-best-practices` | ✅ | writing, reviewing, or configuring Workers. |
+| `workers-development` | ✅ | debugging requests whether or not the project uses Wrangler. |
 | `workers-profiling` | ✅ | Profile or debug CPU usage and memory allocation in deployed Cloudflare Workers and Durable Objects. |
+| `workload-manager-basics` | ✅ | manage Google Cloud Workload Manager evaluations, rules, scanned resources, and validation results by using public client libraries and the REST API |
 | `wrangler` | ✅ | Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, including local development, Previews, d |
 | `bash-linux` | ✅ | macOS/Linux'ta terminal komutları ve bash betikleri yazarken hızlı başvuru. |
 | `cardputer-buddy` | ✅ | the user wants to add a new app, push a single changed .py without re-flashing, watch device serial logs, or run a one-shot REPL command |
 | `m5-onboard` | ⚠️ | the user plugs in or wants to flash/provision/reset an M5Stack or ESP32 board, or says "m5-onboard go". |
 | `next-bundle-optimizer` | ✅ | Yavaş route açılışı, şişkin istemci bundle'ı, yinelenen tarayıcı bağımlılıkları, etkileşime ertelenebilecek özellikler veya istemci paketine istemeden giren sun |
-| `next-cache-components` | ✅ | implementing partial prerendering, caching strategies, or migrating from older Next.js cache patterns. |
 | `next-cache-components-adoption` | ✅ | cacheComponents bayrağını açmak, blocking-prerender/instant doğrulama hatası selini çözmek, 'export const instant = false' ile yerinde düzeltme arasında karar v |
 | `next-cache-components-optimizer` | ✅ | Yavaş ilk boyama, anında olmayan gezinme, hangi Suspense sınırının UI'yi engellediğini bulma veya instant() regresyon kapsamı ekleme. |
 | `next-dev-loop` | ✅ | next dev çalışırken uygulama kodu düzenlendikten sonra değişikliğin derlenmenin ötesinde çalıştığını doğrulamak. |
-| `next-forge` | ✅ | working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages. |
-| `next-intl-add-language` | ✅ | Add new language to a Next.js + next-intl application |
 | `next-partial-prefetching-adoption` | ✅ | partialPrefetching bayrağını açmak, route'ları 'export const prefetch = partial' ile dahil etmek, prefetch davranışını korurken geçiş yapmak. |
 | `next-partial-prefetching-optimizer` | ✅ | URL'ye özgü UI'nin anında gelmesini istemek, yeniden kullanılabilir içeriği gezinmeye bırakmak veya prefetch tetikleyicisi seçmek. |
-| `next-upgrade` | ✅ | upgrading Next.js versions, running codemods, or migrating between major releases. |
 | `nextjs-react-expert` | ✅ | ag-kit kullanan projelerde veya Cache Components notlarını aynı skillde isteyenlerde React/Next performans incelemesi. |
 | `playwright-cli` | ⚠️ | Agent'ın gerçek tarayıcıda sayfayla etkileşmesi, akış doğrulaması, ekran görüntüsü/trace/video alması veya Playwright testleri üretip çalıştırması gerektiğinde. |
 | `powershell-windows` | ✅ | Proje Windows'ta çalışıyorsa veya PowerShell betiği yazılıyorsa; agent'ın tipik PowerShell sözdizimi hatalarını önlemek için. |
@@ -226,13 +376,14 @@
 | `android-design-guidelines` | ✅ | building Android apps with Jetpack Compose or XML layouts, implementing Material You, navigation, or accessibility |
 | `android-development` | ✅ | building Android apps with Kotlin, Jetpack Compose, MVVM architecture, Hilt dependency injection, Room database, or multi-module projects |
 | `android-for-cars-parked-apps` | ✅ | migrating, building, or auditing parked apps for car |
-| `android-intent-security` | ✅ | auditing component configurations in AndroidManifest.xml activities, services, receivers) or source code handling incoming Intents (getIntent, getParcelableExtr |
+| `android-intent-security` | ✅ | auditing component configurations in AndroidManifest.xml (activities, services, receivers) or source code handling incoming Intents (getIntent, getParcelableExt |
 | `android-permissions-security` | ✅ | reviewing AndroidManifest.xml, defining custom permissions, securing Services, Receivers, and Providers, verifying caller signatures and UID using Binder, or im |
 | `android-profiler` | ✅ | : recording system traces, CPU call stacks, Vulkan GPU/DRM memory, or Java/native heap profiles; analyzing Perfetto traces for UI jank, frame drops, ANRs, or ap |
 | `anr-audit-and-fix` | ✅ | scanning Android code for ANR risks or triaging ANR stack dumps |
 | `app-description-writer` | ✅ | writing initial descriptions, improving existing copy, or drafting promotional text and What's New for a major update. |
 | `app-store` | ✅ | user needs help with App Store presence, ASO, marketing, or customer communication. |
 | `appfunctions` | ✅ | discovering, implementing, documenting, testing, or upgrading AppFunctions in an Android app, including @AppFunctionDeclaration, @AppFunctionSerializable, @AppF |
+| `apple-app-review-compliance` | ✅ | App Store'a göndermeden önce uyum denetimi, özellik/ödeme modeli planlarken kural kontrolü, Swift PR incelemesi, gizlilik etiketi ve üçüncü taraf SDK denetimi. |
 | `apple-search-ads` | ✅ | user asks about running ads, paid user acquisition, or Apple Search Ads campaigns. |
 | `architecture-feature-first` | ✅ | creating a feature, designing folder structure, adding repositories/services/view models, wiring dependency injection, or deciding which layer owns logic. |
 | `backend-architecture` | ✅ | building a backend for Google Play Billing receipt verification |
@@ -246,13 +397,15 @@
 | `compose-agent` | ✅ | reading, writing, or reviewing Compose projects. |
 | `dart-3-updates` | ✅ | writing switch statements, refactoring if-else chains, creating data classes, choosing records vs classes, destructuring values, or modernizing pre-Dart-3 code. |
 | `dart-drift` | ✅ | adding SQLite with package:drift/native.dart, configuring PostgreSQL with drift_postgres and package:postgres, writing type-safe tables, queries, writes, stream |
+| `developer-device-platform-basics` | ✅ | reserving remote Android devices, establishing connection tunnels, checking session status, or extending/cancelling leases |
+| `developer-device-platform-device-run` | ✅ | running a binary or test suite on remote devices without an interactive connection |
 | `developing-genkit-dart` | ✅ | building AI agents in Dart, implementing Genkit flows or tools, integrating LLMs into Dart or Flutter applications, or using Genkit Dart plugins. |
 | `display-glasses-with-jetpack-compose-glimmer` | ✅ | build an Android XR Augmented Experience app with Jetpack Compose Glimmer |
 | `eas-app-stores` | ✅ | eas.json setup, release pipelines, signing, app versions and build numbers, store submissions, and listing metadata |
 | `eas-hosting` | ✅ | deploying an Expo web app or API routes, setting up EAS Hosting, or configuring hosting environments and domains |
 | `eas-observe` | ✅ | anything related to EAS Observe - adding `expo-observe` to an Expo project (AppMetricsRoot/ObserveRoot HOC, markInteractive and ObserveInteractiveMarker, the us |
 | `eas-simulator` | ✅ | the user needs a simulator they can't run locally - 'run my app on a cloud simulator', 'use eas simulator to run/install/screenshot my app', 'I'm on Linux/Curso |
-| `eas-update` | ✅ | setting up OTA updates, running eas update:configure or eas update, publishing to preview/staging/production channels, explaining branches/channels/runtime vers |
+| `eas-update` | ✅ | setting up OTA updates, configuring branches/channels/runtime versions, publishing to preview/staging/production, testing updates, or debugging why an installed |
 | `eas-update-insights` | ✅ | the user asks how an update is performing, whether a rollout is healthy, how many users are on the embedded build vs OTA, or wants to gate CI on update health. |
 | `eas-workflows` | ✅ | the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation. |
 | `edge-to-edge` | ✅ | migrate your Jetpack Compose app to add adaptive edge-to-edge support and troubleshoot common issues |
@@ -262,15 +415,15 @@
 | `expo-animation` | ✅ | animating anything in an Expo app, adding gestures, sheets, screen transitions, press feedback or haptics, or fixing motion that stutters on device |
 | `expo-app-clip` | ✅ | the user mentions App Clip, AASA, apple-app-site-association, appclips, smart app banner, or wants to ship a lightweight iOS Clip invoked from a URL alongside t |
 | `expo-brownfield` | ✅ | brownfield, embedding a React Native screen in SwiftUI/UIKit or Kotlin, or AAR/XCFramework packaging |
-| `expo-data-fetching` | ✅ | implementing or debugging ANY network request, API call, or data fetching |
-| `expo-design-system` | ✅ | creating or organizing theme files and design tokens (theme.ts / theme/), extending an existing theme or styling library (NativeWind, Tamagui, Restyle, Unistyle |
+| `expo-data-fetching` | ✅ | fetch API calls, React Query, SWR, authenticated requests, caching, retries, offline support, loading and error states, or Expo Router data loaders (useLoaderDa |
+| `expo-design-system` | ✅ | inconsistent styling, generic or AI-generated screens, component libraries, or audits of hardcoded colors, spacing, and fonts |
 | `expo-dev-client` | ✅ | Build and distribute Expo development clients locally or via TestFlight for internal testing. |
 | `expo-dom` | ✅ | Use Expo DOM components to run web code in a webview on native and as-is on web. |
 | `expo-examples` | ✅ | integrating a third-party library or service into an existing Expo app and you want the canonical, version-matched pattern to adapt, or when scaffolding a new p |
 | `expo-migrate-module` | ✅ | converting or incrementally adopting @ExpoModule, @JS, @Event, @SharedObject, or @Record in an existing module |
 | `expo-module` | ✅ | building or modifying native modules for Expo |
 | `expo-native-ui` | ✅ | Build beautiful, native-feeling Expo screens. |
-| `expo-overview` | ⚠️ | Entry point and router for every Expo or EAS task. |
+| `expo-overview` | ⚠️ | Entry point for Expo and EAS tasks. |
 | `expo-project-structure` | ✅ | scaffolding or laying out a new Expo project with Expo Router, or deciding where a file should live in one |
 | `expo-router` | ✅ | Navigation and routing for Expo Router. |
 | `expo-ui` | ✅ | Build native UI with the @expo/ui package: real SwiftUI on iOS and Jetpack Compose on Android. |
@@ -285,7 +438,7 @@
 | `firebase-crashlytics` | ✅ | implementing crash reporting, capturing fatal/non-fatal errors, recording isolate/async exceptions, customizing reports, or uploading obfuscated symbols. |
 | `firebase-data-connect` | ✅ | setting up Data Connect, writing GraphQL queries/mutations, configuring generated SDKs, handling offline, or applying security rules. |
 | `firebase-database` | ✅ | syncing real-time data, structuring JSON trees, reading/writing, creating listeners, enabling offline persistence, managing presence, sharding, or writing secur |
-| `firebase-in-app-messaging` | ✅ | running in-app message campaigns, triggering/suppressing messages, configuring opt-in data collection, testing on specific devices, or handling message callback |
+| `firebase-in-app-messaging` | ✅ | running in-app message campaigns, triggering/suppressing messages, configuring opt-in data collection, testing on specific devices, rendering campaigns with cus |
 | `firebase-messaging` | ✅ | setting up Firebase Cloud Messaging, managing permissions and tokens, handling background/foreground notification taps, or dispatching messages server-side (HTT |
 | `firebase-remote-config` | ✅ | implementing feature flags, running A/B tests, setting parameter defaults, fetching/activating config, or enabling real-time config updates. |
 | `firebase-storage` | ✅ | setting up Storage, uploading/downloading files, managing metadata, handling errors, or applying security rules. |
@@ -309,7 +462,15 @@
 | `generate-images-with-firebase-ai` | ✅ | generating or editing images from Flutter/Dart with Firebase AI Logic and a Gemini image model (Nano Banana), making the first call work, choosing Gemini Develo |
 | `glance-appwidget-updates-and-memory` | ✅ | configuring Android 17 (API level 37) compileSdk/targetSdk and AndroidManifest.xml widget receivers, refreshing frozen or stale Glance widget UI after Coroutine |
 | `glance-canonical-layouts` | ✅ | create home screen widgets using Jetpack Glance Canonical Layouts from the Android Platform Samples project, or when asked to implement standard widget layout p |
+| `google-mobile-ads-android-migrate-to-next-gen` | ✅ | migrating an existing Android codebase from the old, legacy GMA SDK to GMA Next-Gen SDK. |
+| `google-mobile-ads-banner` | ✅ | the task involves setting up banner ads in a mobile application |
+| `google-mobile-ads-get-started` | ✅ | the user wants to get started with, install, integrate, set up, or configure the SDK for AdMob or Ad Manager, GMA Next-Gen SDK or mobile ads framework in an And |
+| `google-mobile-ads-interstitial` | ✅ | the task involves setting up interstitial ads |
+| `google-mobile-ads-rewarded` | ✅ | the task involves setting up rewarded ads |
+| `google-mobile-ads-validate` | ✅ | conducting a full pre-launch audit of an app that integrates GMA SDK or when validating any individual GMA SDK integration checks, such as when validating ad un |
 | `iap-finalizer` | ✅ | Take a one-time in-app purchase from MISSING_METADATA to READY_TO_SUBMIT in App Store Connect — set its price schedule and localized display name/description (a |
+| `ima-dai-sdk` | ✅ | : - A video player needs to load and play HLS or DASH streams in web apps, Android apps, iOS apps, tvOS apps, Cast (CAF) receivers, or Roku channels |
+| `ima-sdk-client-side` | ✅ | client-side ad insertion when you are requesting video ads for websites, apps, TVs or other platforms using VAST or VMAP |
 | `inclusive-design` | ✅ | working on inclusion, i18n/localization, global name/address forms, low-end devices, slow/metered networks, affordability, or first-time/low-confidence users; n |
 | `ink-app-builder` | ✅ | implementing stylus or touch drawing surfaces, rendering wet and dry ink strokes, configuring stock brushes (pressure pen, marker, highlighter), implementing ge |
 | `ink-custom-brush-builder` | ✅ | configuring custom BrushTip shapes, adding pressure, tilt, speed, or noise sensitivity using BrushBehavior node graphs, creating multi-coat layered brushes, app |
@@ -321,6 +482,7 @@
 | `ios-marketing-capture` | ⚠️ | the user wants to automate capture of marketing screenshots for a SwiftUI iOS app across multiple locales, devices, or appearances |
 | `ios-perceived-performance` | ✅ | product-level iOS responsiveness and loading/feedback flows, including perceived latency, time to first feedback, progressive rendering, loading states, skeleto |
 | `ios-performance-profiling` | ✅ | choosing, running, or interpreting iOS performance profiling workflows, including Instruments traces, signposts, XCTest metrics, MetricKit, Xcode Organizer, han |
+| `ios-to-android` | ❌ | ANY task that ports or implements Android functionality from\ \ an iOS/Swift codebase \u2014 including single-feature tasks (BLE scanning, location/GPS\ \ track |
 | `ipados-design-guidelines` | ✅ | building iPad-optimized interfaces, implementing multitasking, pointer support, keyboard shortcuts, or responsive layouts |
 | `jetpack-compose-audit` | ✅ | reviewing a Compose codebase, rating repository quality, inspecting recomposition/state issues, animation issues, or running a Compose audit. |
 | `jetpack-compose-performance` | ✅ | analyzing performance bottlenecks of existing code to minimize recomposition overhead and prevent dropped frames and UI lag. |
@@ -341,6 +503,7 @@
 | `kotlin-ui-adaptive-resources` | ✅ | designing, implementing, or reviewing adaptive Compose UI for KMP or Android projects — window-size layouts, adaptive navigation, canonical layouts, multi-windo |
 | `kotlin-ui-compose-multiplatform` | ✅ | designing, implementing, or reviewing shared UI in Compose Multiplatform projects, including state-driven architecture, composable decomposition, layout/modifie |
 | `leanback-to-compose-tv-migration` | ✅ | Leanback to Compose migrations, including browse screen, settings screen, authentication screen, login screen, or video playback screen migrations, or when repl |
+| `litert-google-tensor` | ✅ | the user asks to compile, AOT-compile, or prepare a .t |
 | `litert-lm` | ✅ | creating a chat, summarization, or extraction feature with a .litertlm model from Hugging Face litert-community (Gemma, Qwen, Llama, Phi), including the Gradle  |
 | `litert-runtime` | ✅ | any Android LiteRT or .tflite task, including Gradle setup, image classification or vision/audio/embedding helpers, TensorBuffer reuse, CPU memory optimization, |
 | `macos-design-guidelines` | ✅ | building macOS apps with SwiftUI or AppKit, implementing menu bars, toolbars, window management, or keyboard shortcuts |

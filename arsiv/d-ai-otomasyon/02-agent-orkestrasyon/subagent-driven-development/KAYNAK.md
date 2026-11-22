@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/obra/superpowers
 - **Repo içindeki yol:** `skills/subagent-driven-development`
-- **Commit:** `2ce8aa15d05bd57213e6f746f953aafb7ded7a8b`
+- **Commit:** `22f0b463e7a5e579904dd6211a520321035526f7`
 - **Lisans:** MIT
 - **Geliştirici:** obra (kisi)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `requesting-code-review`

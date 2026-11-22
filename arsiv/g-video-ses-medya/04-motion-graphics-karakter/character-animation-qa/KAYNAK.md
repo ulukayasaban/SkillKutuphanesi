@@ -4,9 +4,9 @@
 
 - **Kaynak repo:** https://github.com/OpenMontageInc/OpenMontage
 - **Repo içindeki yol:** `.agents/skills/character-animation-qa`
-- **Commit:** `fecb9a1e3cc23ef84de30b272059457a427f16f8`
+- **Commit:** `2e003e65fa99a0f329478a2c1cdcf26bc481933a`
 - **Lisans:** AGPL-3.0
 - **Geliştirici:** OpenMontageInc (kurum)
-- **Arşive alınma:** 2026-11-12
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih
 - **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.

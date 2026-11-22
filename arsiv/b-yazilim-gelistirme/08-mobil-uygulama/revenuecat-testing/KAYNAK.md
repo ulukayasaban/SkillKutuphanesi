@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/evanca/flutter-ai-rules
 - **Repo içindeki yol:** `skills/revenuecat-testing`
-- **Commit:** `f170aabcae6db4d2fe0cb5d43f232943b422fa3d`
+- **Commit:** `ced864ab5189956dbf719a84011c24d860092116`
 - **Lisans:** MIT
 - **Geliştirici:** evanca (kisi)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

@@ -28,7 +28,7 @@ Each result includes:
 - **Code Snippets** — Number of available code examples
 - **Source Reputation** — Authority indicator (High, Medium, Low, or Unknown)
 - **Benchmark Score** — Quality indicator (100 is the highest score)
-- **Versions** — List of versions if available. Use one of those versions if the user provides a version in their query. The format is `/org/project/version`.
+- **Versions** — Indexed versions, if any. When the user's project or query names a version, pass it with `--tag` (e.g. `--tag 15.4.3`, or `--tag ^15.4.3` as written in package.json), even when it is not listed: Context7 serves the indexed version that covers it.
 
 ### Selection process
 
@@ -45,19 +45,19 @@ Each result includes:
 
 IMPORTANT: Do not call `ctx7 library` more than 3 times per question. If you cannot find what you need after 3 calls, use the best result you have.
 
-### Version-specific IDs
+### Versions
 
-If the user mentions a specific version, use a version-specific library ID:
+If the user's project or question names a version, pass it with `--tag`:
 
 ```bash
 # General (latest indexed)
 ctx7 docs /vercel/next.js "How to set up app router"
 
 # Version-specific
-ctx7 docs /vercel/next.js/v16.2.9 "How to set up app router"
+ctx7 docs /vercel/next.js "How to set up app router" --tag 16.2.9
 ```
 
-The available versions are listed in the `ctx7 library` output. Use the closest match to what the user specified.
+The available versions are listed in the `ctx7 library` output. Pass the exact version the user specified, even when it is not listed: Context7 serves the indexed version that covers it.
 
 ```bash
 # Output as JSON for scripting
@@ -71,7 +71,7 @@ Retrieves up-to-date documentation and code examples for the resolved library.
 You must call `ctx7 library` first to obtain the exact Context7-compatible library ID required to use this command, UNLESS the user explicitly provides a library ID in the format `/org/project` or `/org/project/version`.
 
 ```bash
-ctx7 docs /facebook/react "How to clean up useEffect with async operations"
+ctx7 docs /reactjs/react.dev "How to clean up useEffect with async operations"
 ctx7 docs /vercel/next.js "How to add an authentication proxy to app router"
 ctx7 docs /prisma/prisma "How to define one-to-many relations with cascade delete"
 ```
@@ -99,10 +99,10 @@ The output contains two types of content: **code snippets** (titled, with langua
 ctx7 docs /websites/twilio "How to send an SMS" --language Ruby
 
 # Output as structured JSON
-ctx7 docs /facebook/react "How to use hooks for state management" --json
+ctx7 docs /reactjs/react.dev "How to use hooks for state management" --json
 
 # Pipe to other tools — output is clean when not in a TTY (no spinners or colors)
-ctx7 docs /facebook/react "How to use hooks for state management" | head -50
+ctx7 docs /reactjs/react.dev "How to use hooks for state management" | head -50
 ctx7 docs /vercel/next.js "How to add a proxy for route protection" | grep -A5 "proxy"
 ```
 

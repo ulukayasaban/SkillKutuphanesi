@@ -32,7 +32,7 @@ the fix, verified on iPhone 15 Pro / iOS 18.2.
 > Your app includes placeholder content. Specifically, the "Community" tab displays "Coming Soon" text without functional content.
 
 **How to fix:**
-- Remove or hide any unfinished features entirely
+- Remove any unfinished features from the build entirely (do not ship them hidden or dormant — Guideline 2.5.19)
 - Replace placeholder text with real content
 - Ensure all URLs (privacy policy, support, terms) resolve to live pages
 - Remove any "beta" or "test" labels
@@ -172,7 +172,7 @@ content. The "Buy on Web" button and associated links have been
 removed. All digital purchases now go through IAP exclusively.
 ```
 
-**US storefront exception:** Apps on the United States storefront may link out using the StoreKit External Purchase Link entitlement (currently 0% commission on those sales; litigation ongoing in mid-2026 — re-verify before relying on it). The rejection pattern above applies to links WITHOUT the entitlement and to all non-US storefronts. For the strategy trade-offs, see `monetization/external-purchases`.
+**Storefront exceptions (3.1.1(a)):** On the United States storefront, buttons, external links, and other calls to action to purchasing mechanisms are allowed without any entitlement. In specific other regions, a StoreKit External Purchase Link Entitlement (or, where permitted, a Music Streaming Services Entitlement) allows a link to a permitted destination, and approved destinations vary by region. In all other storefronts the prohibition stands, and the rejection pattern above applies. For the strategy trade-offs (including commission terms, which come from court orders rather than the guidelines), see `monetization/external-purchases`.
 
 ## Guideline 3.1.2: Subscriptions
 
@@ -199,9 +199,35 @@ terms on the purchase screen and a direct link to subscription
 management.
 ```
 
-## Guideline 4.0: Design
+## Section 4: Design
 
-### 4.0 — Not Enough Native UI / Web Wrapper
+The guidelines have no numbered "4.0". Rejections for general UI quality cite Section 4 (Design) or a specific sub-guideline. A web wrapper is a 4.2 (Minimum Functionality) rejection, covered below.
+
+### Section 4 — Poor UI Quality
+
+**What triggers it:** App has obviously unfinished UI, uses no standard iOS patterns, has layout issues, or looks unprofessional.
+
+**Example rejection message:**
+> Your app does not comply with the design guidelines for iOS apps. Specifically, the app includes UI elements that are inconsistent with standard iOS design patterns.
+
+**How to fix:**
+- Use system components (SwiftUI standard views, UIKit standard controls)
+- Follow Human Interface Guidelines for spacing, typography, and color
+- Support Dynamic Type for accessibility
+- Support Dark Mode
+- Ensure layouts work on all supported screen sizes
+
+**Response template:**
+```
+We've updated the app's design to align with iOS Human Interface
+Guidelines. Changes include [specific UI improvements]. The app
+now uses standard iOS components for [navigation/buttons/lists]
+and supports Dynamic Type and Dark Mode.
+```
+
+## Guideline 4.2: Minimum Functionality
+
+### 4.2 — Not Enough Native UI / Web Wrapper
 
 **What triggers it:** App is primarily a web view wrapping an existing website without meaningful native functionality.
 
@@ -227,30 +253,6 @@ it provides significant native functionality including:
 These features require a native app and cannot be delivered
 through a website alone.
 ```
-
-### 4.0 — Poor UI Quality
-
-**What triggers it:** App has obviously unfinished UI, uses no standard iOS patterns, has layout issues, or looks unprofessional.
-
-**Example rejection message:**
-> Your app does not comply with the design guidelines for iOS apps. Specifically, the app includes UI elements that are inconsistent with standard iOS design patterns.
-
-**How to fix:**
-- Use system components (SwiftUI standard views, UIKit standard controls)
-- Follow Human Interface Guidelines for spacing, typography, and color
-- Support Dynamic Type for accessibility
-- Support Dark Mode
-- Ensure layouts work on all supported screen sizes
-
-**Response template:**
-```
-We've updated the app's design to align with iOS Human Interface
-Guidelines. Changes include [specific UI improvements]. The app
-now uses standard iOS components for [navigation/buttons/lists]
-and supports Dynamic Type and Dark Mode.
-```
-
-## Guideline 4.2: Minimum Functionality
 
 ### 4.2 — App Is Too Simple
 
@@ -409,9 +411,11 @@ added [data type] under [category]. We've also audited all
 third-party SDKs to ensure complete disclosure.
 ```
 
-## Guideline 5.2.1: Legal Requirements
+## Guideline 5: Legal — Local Law Compliance
 
-### 5.2.1 — Local Law Compliance
+The Legal section's introduction requires that apps "comply with all legal requirements in any location where you make them available." (Guideline 5.2.1 is Intellectual Property, not local law. Real-money gaming and lotteries fall under 5.3.4.)
+
+### Guideline 5 — Local Law Compliance
 
 **What triggers it:** App content or functionality violates laws in specific territories (gambling, health claims, age restrictions, financial regulations).
 
@@ -445,15 +449,15 @@ permitted and includes appropriate [disclaimers/restrictions].
 | 2.5.1 Private API | Third-party SDK | 1-3 days | Medium |
 | 3.1.1 IAP | External payment | 3-7 days | High |
 | 3.1.2 Subscription | Missing terms | 1-2 days | Medium |
-| 4.0 Web wrapper | Insufficient native | 1-2 weeks | High |
-| 4.0 Poor UI | Design quality | 3-7 days | Medium |
+| 4.2 Web wrapper | Insufficient native | 1-2 weeks | High |
+| Section 4 Poor UI | Design quality | 3-7 days | Medium |
 | 4.2 Too simple | Insufficient features | 1-2 weeks | High |
 | 4.3 Spam | Duplicate apps | Varies | High |
 | 5.1.1 Privacy policy | Missing URL | 1-2 hours | Low |
 | 5.1.1 Data collection | Excess permissions | 1-2 days | Low-Medium |
 | 5.1.2 ATT | Missing prompt | 1-2 days | Medium |
 | 5.1.2 Nutrition labels | Inaccurate labels | 1-2 hours | Low |
-| 5.2.1 Legal | Territory laws | Varies | High |
+| 5 Legal (local law) | Territory laws | Varies | High |
 
 ## When Each Strategy Applies
 
@@ -465,9 +469,9 @@ permitted and includes appropriate [disclaimers/restrictions].
 | 2.5.1 Private API | ✅ | | | |
 | 3.1.1 IAP | ✅ | Sometimes | | |
 | 3.1.2 Subscriptions | ✅ | Sometimes | | |
-| 4.0 Design | ✅ | Sometimes | Sometimes | |
+| Section 4 Design | ✅ | Sometimes | Sometimes | |
 | 4.2 Minimum functionality | Sometimes | ✅ | ✅ | ✅ |
 | 4.3 Spam | ✅ | ✅ | Sometimes | Sometimes |
 | 5.1.1 Privacy | ✅ | | | |
 | 5.1.2 Tracking | ✅ | | | |
-| 5.2.1 Legal | ✅ | | | |
+| 5 Legal (local law) | ✅ | | | |

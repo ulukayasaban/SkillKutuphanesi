@@ -38,7 +38,7 @@ from _common import (guard_sidecar, add_common, apply_common, default_output, de
 from _common.emit import input_length, refuse_still
 from _common.emit import record_fallback, refuse
 from _common.probe import AUDIO_MEDIA_EXT
-from _common.runner import (MATROSKA_EXT, MP4_FAMILY, carried_stream_maps, fail_if_classified, refuse_output_is_input, require_tool,
+from _common.runner import (absent_word, MATROSKA_EXT, MP4_FAMILY, carried_stream_maps, fail_if_classified, refuse_output_is_input, require_tool,
                             subtitle_codec_for, subtitle_container_holds)
 
 CHAPTER_CONTAINERS = {".mp4", ".m4v", ".m4a", ".mov", ".mkv", ".mka", ".webm"}
@@ -247,6 +247,7 @@ def main() -> int:
     ap.add_argument("input")
     ap.add_argument("-o", "--output", help="output file (default: <name>_meta.<ext>)")
     ap.add_argument("--chapters", help="text file, one chapter per line: `TIME TITLE` (cut.py time syntax)")
+    ap.add_argument("--chapter", action="append", metavar="TIME=TITLE", help="one chapter, repeatable (--chapter 0:00=Intro --chapter 1:30=Main), instead of a --chapters file")
     ap.add_argument("--clear-chapters", action="store_true", help="remove every chapter marker the input carries")
     auto = ap.add_argument_group("proposed chapters (1.16)",
                                  "Chapter timestamps measured from the file's own structure instead of read from a "
@@ -264,7 +265,7 @@ def main() -> int:
                       help="which detector(s) propose the markers (default both)")
     auto.add_argument("--silence-threshold", type=float, default=-35.0,
                       help="silence level in dBFS for --auto-chapters (default -35)")
-    auto.add_argument("--silence-min", type=float, default=1.5,
+    auto.add_argument("--min-silence", "--silence-min", dest="silence_min", type=float, default=1.5,
                       help="a pause must last this long to propose a chapter (default 1.5 -- deliberately longer than silence.py's 0.6: a chapter break is a long pause)")
     auto.add_argument("--scene-threshold", type=float, default=8.0,
                       help="minimum scdet score for a scene cut with --auto-chapters (default 8, as scenes.py)")
@@ -293,11 +294,18 @@ def main() -> int:
     if args.silence_min < 0:
         # A185: a negative length reached silencedetect, which refused it (kind ffmpeg)
         die(f"--silence-min must be 0 or more seconds, got {args.silence_min:g}")
+    if args.chapter and not args.chapters:
+        # the same list --chapters reads, written beside nothing: a temporary file removed at exit
+        import atexit
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8") as listed:
+            listed.write("".join(c.replace("=", " ", 1) + "\n" for c in args.chapter))
+        args.chapters = listed.name
+        atexit.register(os.unlink, listed.name)
     tags = {k: getattr(args, k) for k in TAG_KEYS if getattr(args, k) is not None}
     if not args.chapters and not args.clear_chapters and not args.auto_chapters and not tags:
         die("nothing to write: give --chapters FILE, --auto-chapters, --clear-chapters and/or --title/--artist/...")
     if args.chapters and not os.path.exists(args.chapters):
-        die(f"chapters file not found: {args.chapters}")
+        die(f"chapters file {absent_word(args.chapters)}: {args.chapters}")
 
     meta = probe(args.input)
     # streams are copied, so the source's own container always holds them (a .webm stays .webm)

@@ -63,7 +63,7 @@ from _common import (beat_grid, snap_points, decode_pcm_mono, rms_envelope, BEAT
 from _common import require_tool
 from _common.probe import PROBED_AUDIO, PROBED_VIDEO, TS_EXTS, probed_maps, several_av_streams, signatures_match, stream_signature
 from _common.runner import subtitle_codec_for, subtitle_container_holds
-from _common.decision import SEEK_MARGIN, delivered_rate, frame_rate, grid_at_or_after, stream_starts
+from _common.decision import PAD_SOUND_FROM_ZERO, SEEK_MARGIN, delivered_rate, frame_rate, grid_at_or_after, stream_starts, on_frame as decision_on_frame
 from _common.timeline import output_timecode_args
 from _common.emit import refuse_still
 from _common.decision import UNWRITTEN_AUDIO_EXT
@@ -976,7 +976,8 @@ def cut_one(src: str, start: float, end: float, dst: str, reencode: bool, crf: i
             # silence from 0, as the --segments re-cut pads it (av_trim), not rebased to its own
             # first sample, which moved it earlier and made the cut shorter than asked (#462 A46)
             cmd = ffmpeg_base() + ["-ss", f"{start:.6f}", "-i", src, "-t", f"{dur:.6f}"] + stream_maps(meta, dst, copy=False)
-            cmd += ["-af", f"atrim=end={dur:.6f},aresample=async=1:first_pts=0"]
+            pad = PAD_SOUND_FROM_ZERO if audio_codec_for(dst)[1] == "flac" else "aresample=async=1:first_pts=0"
+            cmd += ["-af", f"atrim=end={dur:.6f},{pad}"]
         else:
             # Seek SEEK_MARGIN early, then drop the margin on the output side, which decodes and
             # discards it from both streams alike. An input seek straight to `start` can land (the
@@ -1176,7 +1177,6 @@ def _fraction_rate(text: str) -> float:
 
 # the first frame at or after t on the source's grid; shared with the tools that cut both streams
 # on one set of bounds (#409)
-_grid_at_or_after = grid_at_or_after
 
 
 def _join_chunk(src: str, segments: List[Tuple[float, float]], dst: str, meta: dict, crf: int, preset: str,
@@ -1222,8 +1222,8 @@ def _join_chunk(src: str, segments: List[Tuple[float, float]], dst: str, meta: d
             # output's grid, and the constant-rate output duplicated one (65 frames for 64 on
             # FFmpeg 6.1). The video trim sits half a frame before each grid point, so no FFmpeg
             # version rounds a frame on the boundary in or out.
-            a = m + (_grid_at_or_after(s, v0, rate) - s)
-            b = m + (_grid_at_or_after(e, v0, rate) - s)
+            a = m + (grid_at_or_after(s, v0, rate) - s)
+            b = m + (grid_at_or_after(e, v0, rate) - s)
             half = 0.5 / rate
         # both streams shift by the same constant, so an offset between them (audio that starts
         # late) survives; the audio is then padded to the segment's origin
@@ -1683,11 +1683,16 @@ def main() -> int:
     for s, e in segments:
         if total and s >= total:
             die(f"segment start {s:.3f}s is beyond the media duration {total:.3f}s")
-    segments = [(s, min(e, total) if total else e) for s, e in segments]
     # what was asked for, clamped to the media duration as in every 2.x release: requested_* and
     # expected_duration report this, and a segment the join below ends with the video (less than a
     # frame of sound trimmed) shows that trim in duration_delta_seconds and a note instead
-    requested = list(segments)
+    requested = [(s, min(e, total) if total else e) for s, e in segments]
+    # a start or end written in milliseconds is cut on the frame it reads back to (#653): the nearest
+    # frame when that is within half a millisecond either way (1.902 and 1.935 for the frames at
+    # 1.9019 and 1.93527), never one before the first; a sound-only output or a VFR picture has no
+    # grid (decision.on_frame; grid_at_or_after itself is unchanged, since a length also goes through it)
+    on_frame = lambda t, rate=0 if is_audio_output(args.output or "") or (meta.get("video") or {}).get("variable_frame_rate_suspected") else frame_rate(meta): decision_on_frame(t, stream_starts(meta)[0], rate)
+    segments = [(on_frame(s), min(on_frame(e), total or math.inf)) for s, e in requested]
     video = meta.get("video") or {}
     if video.get("fps") and not is_audio_output(args.output or ""):
         # a video segment shorter than one frame has no picture to cut: a copy lands on a whole
@@ -1963,6 +1968,24 @@ def main() -> int:
     mode = ("smart" if smart_doc is not None and smart_doc["applied"] else
             "copy" if not reencoded else ("accurate" if args.accurate else "hybrid"))
     notes: List[str] = vfr_notes + join_notes + [n for o in outcomes for n in o.get("notes") or []]
+    verification = smart_verification(smart_doc) if smart_doc is not None and smart_doc.get("checks") else []
+    if not STATE.dry_run and mode == "copy" and len(requested) > 1:
+        # Per-segment keyframe snaps can all be within tolerance and still accumulate
+        # into a materially longer or shorter output. Check the written timeline once.
+        tolerance = min(expected, args.tolerance) if args.tolerance >= 0 else expected
+        if fps and result.get("video"):
+            tolerance = max(tolerance, 1 / fps)
+        delta = got - expected if got is not None else None
+        ok = delta is not None and abs(delta) <= tolerance + 1e-6
+        verification.append({"step": "cut_total_duration", "property": "output_duration",
+                             "expected": round(expected, 6), "measured": round(got, 6) if got is not None else None,
+                             "delta": round(delta, 6) if delta is not None else None,
+                             "tolerance": round(tolerance, 6), "provenance": "user_specified", "ok": ok})
+        if not ok:
+            message = (f"stream-copy total duration: wrote {fmt_secs(got)}, requested {expected:.3f}s "
+                       f"(tolerance {tolerance:.3f}s); use --accurate to re-encode the cut")
+            notes.append(message)
+            info(message)
     possible = possible_reencode_reason(mode, outcomes, len(segments))
     if possible:
         notes.append(possible_reencode_note(mode, possible, args.tolerance))
@@ -2043,7 +2066,7 @@ def main() -> int:
                                f"stream copy with no re-encode, {abs(min(NEAREST_KEYFRAMES, key=lambda k: abs(k - segments[0][0])) - segments[0][0]):.2f}s off the requested start")
          if mode == "hybrid" and NEAREST_KEYFRAMES and len(segments) == 1 else None,
          snap=snap_result, **({"smart": smart_doc} if smart_doc is not None else {}),
-         **({"verification": smart_verification(smart_doc)} if smart_doc is not None and smart_doc.get("checks") else {}))
+         verification=verification)
     return 0
 
 

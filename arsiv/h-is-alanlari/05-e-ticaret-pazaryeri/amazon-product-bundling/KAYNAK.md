@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/nexscope-ai/Amazon-Skills
 - **Repo içindeki yol:** `amazon-product-bundling`
-- **Commit:** `0f3b13fa0e5ed0a9f3d600dc18518bc76ddd813b`
+- **Commit:** `2bcb8cb019cfac6a1e420b11f86209df5ea47686`
 - **Lisans:** MIT
 - **Geliştirici:** nexscope-ai (kurum)
-- **Arşive alınma:** 2026-10-22
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

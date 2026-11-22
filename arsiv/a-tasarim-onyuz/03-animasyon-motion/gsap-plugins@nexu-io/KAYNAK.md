@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/nexu-io/open-design
 - **Repo içindeki yol:** `skills/gsap-plugins`
-- **Commit:** `987b2475d65bc420ed4f3ee98d4e66461034ed1e`
+- **Commit:** `e033aad1d15a9d4084316e5223f2c6597fd32619`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** nexu-io (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** alternatif

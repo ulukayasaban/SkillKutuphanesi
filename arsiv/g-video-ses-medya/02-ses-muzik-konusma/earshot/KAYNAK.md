@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/Leonxlnx/earshot
 - **Repo içindeki yol:** `skills/earshot`
-- **Commit:** `591fa3e028032e6dce56620a20e932e35667e8d8`
+- **Commit:** `7a7f7c5c70d4a763a1eca4b3666af7c77e313f97`
 - **Lisans:** MIT
 - **Geliştirici:** Leonxlnx (kisi)
-- **Arşive alınma:** 2026-11-05
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

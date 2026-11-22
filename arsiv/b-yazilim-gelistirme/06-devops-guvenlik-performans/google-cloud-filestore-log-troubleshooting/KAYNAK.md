@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/google/skills
 - **Repo içindeki yol:** `skills/cloud/google-cloud-filestore-log-troubleshooting`
-- **Commit:** `3c4dda4af5a63049cca71d69be1f5536577e7a6c`
+- **Commit:** `4bb21ebfa085f6307d5d62bc21765e1d3433f11d`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** google (kurum)
-- **Arşive alınma:** 2026-11-16
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

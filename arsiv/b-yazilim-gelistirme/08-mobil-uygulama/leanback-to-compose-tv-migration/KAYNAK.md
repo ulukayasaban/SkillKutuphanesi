@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/android/skills
 - **Repo içindeki yol:** `tv/leanback-to-compose-tv-migration`
-- **Commit:** `6daa53ef27fa2aa87827d183a85c06cedceca833`
+- **Commit:** `c72942584fff970dac86ced78b367fce0c441e52`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** android (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

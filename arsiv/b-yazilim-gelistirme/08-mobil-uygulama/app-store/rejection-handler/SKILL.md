@@ -2,7 +2,7 @@
 name: rejection-handler
 description: Handle App Store rejections, prepare submissions to avoid common rejection reasons, write Resolution Center responses, and navigate the appeal process. Use when user's app was rejected, is preparing for submission, or needs help with App Review.
 allowed-tools: [Read, Glob, Grep, AskUserQuestion]
-last_verified: 2026-07-16
+last_verified: 2026-11-08
 review_by: 2027-06-22
 os_version: iOS 27 / macOS 27
 ---
@@ -63,6 +63,7 @@ Run through this before submitting to avoid the most common rejections. Each ite
 - [ ] App works on the oldest supported iOS/macOS version claimed
 - [ ] No remote code execution (no downloading and running code)
 - [ ] IPv6 networking compatibility
+- [ ] No hidden, dormant, or undocumented features (2.5.19): everything in the binary is documented and reachable for review, including flag-gated features
 
 ### In-App Purchase Compliance (Guideline 3.1)
 
@@ -71,10 +72,10 @@ Run through this before submitting to avoid the most common rejections. Each ite
 - [ ] Subscription terms are clear before purchase
 - [ ] "Restore Purchases" button exists and works
 - [ ] Subscription management is accessible within the app
-- [ ] No language directing users to purchase outside the app
+- [ ] No language or links directing users to purchase outside the app, except where allowed: the US storefront (no entitlement needed), a StoreKit External Purchase Link Entitlement in its permitted regions and destinations (3.1.1(a)), or a 3.1.3 category such as Reader apps
 - [ ] Free trial terms are clearly stated
 
-### Design Quality (Guideline 4.0)
+### Design Quality (Section 4: Design; web wrappers are 4.2)
 
 - [ ] App uses native UI components (not a web wrapper for existing website)
 - [ ] Supports current device screen sizes
@@ -93,15 +94,22 @@ Run through this before submitting to avoid the most common rejections. Each ite
 - [ ] User data deletion mechanism exists (if data is collected)
 - [ ] Privacy manifest included (required for certain APIs, iOS 17+)
 
-### Legal Requirements (Guideline 5.2)
+### Legal Requirements (Guideline 5)
 
 - [ ] App complies with local laws in all territories where distributed
 - [ ] Required age gates for restricted content
 - [ ] Health/medical disclaimers if applicable
 - [ ] Financial disclaimers if applicable
 
+### Intellectual Property (Guideline 5.2)
+
+- [ ] All content is created by you or licensed (5.2)
+- [ ] No unauthorized third-party trademarks, copyrighted works, or patented ideas (5.2.1)
+- [ ] Third-party service terms respected (APIs, streaming, data sources)
+
 ### App Review Notes (Submission)
 
+- [ ] Every new feature, functionality, and product change is described specifically (2.3.1(a)). Generic notes are rejected.
 - [ ] Demo account credentials provided (if login required)
 - [ ] Special hardware instructions noted (if needed)
 - [ ] Backend requirements explained (if features need server access)
@@ -199,7 +207,7 @@ further.
 
 ### Phase C: Evaluate Subjective Rejections
 
-For "minimum functionality" (4.2), "spam" (4.3), or "design" (4.0) rejections, decide:
+For "minimum functionality" (4.2), "spam" (4.3), or "design" (Section 4) rejections, decide:
 
 **When to fix (usually the better path):**
 - If you honestly agree the app could be more substantial

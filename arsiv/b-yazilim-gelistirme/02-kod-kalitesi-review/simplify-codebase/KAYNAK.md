@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/tt-a1i/archify
 - **Repo içindeki yol:** `.agents/skills/simplify-codebase`
-- **Commit:** `a4065941f12be7967436261d9934784e381d423c`
+- **Commit:** `8509a3d63e763b4d454ea9aafa1f939545fcb1ea`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** tt-a1i (kisi)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

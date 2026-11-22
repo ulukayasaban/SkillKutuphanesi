@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/lottiefiles/motion-design-skill
 - **Repo içindeki yol:** `skills/motion-design`
-- **Commit:** `f9a8a041b85185ee4881b3471d3415e939aac772`
+- **Commit:** `d77a9fc8cb371cab1ba5420df5bfd232cd14c9bb`
 - **Lisans:** MIT
 - **Geliştirici:** LottieFiles (kurum)
-- **Arşive alınma:** 2026-11-07
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

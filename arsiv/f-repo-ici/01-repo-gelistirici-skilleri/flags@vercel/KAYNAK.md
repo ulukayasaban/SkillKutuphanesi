@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/vercel/next.js
 - **Repo içindeki yol:** `.agents/skills/flags`
-- **Commit:** `3bccd4df910c984ca60f796e50b8d43db3227162`
+- **Commit:** `3f93ea13e53bb48857fdbf1b0cd5a17b0e845bc8`
 - **Lisans:** MIT
 - **Geliştirici:** vercel (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** alternatif

@@ -1,6 +1,6 @@
 # Program Denetimi
 
-> `araclar/program-denetim.py` üretir · 2026-11-20 · salt okuma; güncelleme kullanıcı onayıyla `rehber/11-program-yonetimi.md` adımlarıyla yapılır.
+> `araclar/program-denetim.py` üretir · 2026-11-22 · salt okuma; güncelleme kullanıcı onayıyla `rehber/11-program-yonetimi.md` adımlarıyla yapılır.
 
 | Program | Repo | Kütüphanedeki sürüm | GitHub son sürüm | Durum | Kaynak kopyası |
 |---|---|---|---|---|---|
@@ -11,7 +11,7 @@
 | Program | Tür | Karttaki | Kurulu | Son | Durum | Yerel değişiklik | Sabit sürümler |
 |---|---|---|---|---|---|---|---|
 | claude-code-video-toolkit | git-checkout | 01e85f4b | - | ? | bu bilgisayarda kurulu değil | - | - |
-| hyperframes | npm-global | 0.9.71 | 0.9.71 | 0.9.71 | güncel | - | - |
+| hyperframes | npm-global | 0.9.71 | 0.9.71 | 0.9.79 | YENİ SÜRÜM VAR | - | - |
 | nlm | uv-tool | 0.16.5 | 0.16.5 | 0.16.5 | güncel | - | - |
 | openmontage | git-checkout | 2e003e65 | 2e003e65 | 2e003e65 | güncel | 7 değişen, 5 izlenmeyen | 11/11 |
 

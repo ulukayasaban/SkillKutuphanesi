@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/vercel-labs/agent-skills
 - **Repo içindeki yol:** `skills/react-view-transitions`
-- **Commit:** `1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62`
+- **Commit:** `5a37a6329fbad3666c3207392a6a7c0110e92efb`
 - **Lisans:** belirtilmemiş
 - **Geliştirici:** vercel-labs (kurum)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

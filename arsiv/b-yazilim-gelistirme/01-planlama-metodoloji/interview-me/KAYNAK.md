@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/addyosmani/agent-skills
 - **Repo içindeki yol:** `skills/interview-me`
-- **Commit:** `301b02b12bff98e4688e6984af6556802322bbde`
+- **Commit:** `8c99fa36d90068c82d547f7c12a9d67a3e95f4ee`
 - **Lisans:** MIT
 - **Geliştirici:** addyosmani (kisi)
-- **Arşive alınma:** 2026-11-02
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih

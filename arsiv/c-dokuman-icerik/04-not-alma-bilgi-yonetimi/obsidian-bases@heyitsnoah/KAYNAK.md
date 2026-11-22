@@ -8,4 +8,4 @@
 - **Lisans:** MIT
 - **Geliştirici:** heyitsnoah (kisi)
 - **Arşive alınma:** 2026-10-21
-- **Durum:** tercih
+- **Durum:** alternatif

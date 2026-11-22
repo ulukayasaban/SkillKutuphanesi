@@ -4,8 +4,8 @@
 
 - **Kaynak repo:** https://github.com/Nutlope/hallmark
 - **Repo içindeki yol:** `skills/hallmark`
-- **Commit:** `de4999e0cd7a7a41df0b4e6903fa02fe9f1492a8`
+- **Commit:** `04977e15f3dfd6ee4b74c887dac3eb52665d6c92`
 - **Lisans:** MIT
 - **Geliştirici:** Nutlope (kisi)
-- **Arşive alınma:** 2026-11-04
+- **Arşive alınma:** 2026-11-22
 - **Durum:** tercih
