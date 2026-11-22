@@ -42017,24 +42017,30 @@
   "kuyruk": {
     "storytold/pdfcraft": {
       "repo": "storytold/pdfcraft",
-      "durum": "bekliyor",
+      "durum": "reddedildi",
       "neden": "aciklama_veya_skill_yok",
       "tarih": "2026-11-22",
-      "ayrinti": "SKILL.md yok (CLAUDE.md/DESIGN.md)"
+      "ayrinti": "SKILL.md yok (CLAUDE.md/DESIGN.md)",
+      "karar_tarihi": "2026-11-22",
+      "karar_nedeni": "Rust PDF okuyucu uygulama projesi; kurulabilir SKILL.md yok"
     },
     "howseen-ai/claude-motion-design": {
       "repo": "howseen-ai/claude-motion-design",
-      "durum": "bekliyor",
+      "durum": "onaylandi",
       "neden": "ad_cakismasi",
       "tarih": "2026-11-22",
-      "ayrinti": "Mevcut/yerel skill ile ad çakışması: motion-design"
+      "ayrinti": "Mevcut/yerel skill ile ad çakışması: motion-design",
+      "karar_tarihi": "2026-11-22",
+      "karar_nedeni": "Kullanici onayiyla arsive alindi"
     },
     "tugrawork-creator/saas-motion-kit": {
       "repo": "tugrawork-creator/saas-motion-kit",
-      "durum": "bekliyor",
+      "durum": "onaylandi",
       "neden": "lisans_yok",
       "tarih": "2026-11-22",
-      "ayrinti": "Lisans eksik veya kısıtlı (NOASSERTION)"
+      "ayrinti": "Lisans eksik veya kısıtlı (NOASSERTION)",
+      "karar_tarihi": "2026-11-22",
+      "karar_nedeni": "Kullanici onayiyla arsive alindi"
     }
   }
 }
