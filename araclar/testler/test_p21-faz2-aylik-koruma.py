@@ -201,6 +201,29 @@ try:
 except SystemExit:
     t("5d eksik --ana-dal değerinde SystemExit verir", True)
 
+# 6. _guncelleme_geri_al: skill içi .gitignore dosyalarına takılmadan temizler ve ANA_DAL'a döner
+k3 = sahte_kutuphane()
+m4 = mod_kur(k3, {})
+m4.ANA_DAL = "master"
+(k3 / "notlar" / "son-aylik-calisma.json").write_text('{"durum": "korunmali"}\n', encoding="utf-8")
+subprocess.run(["git", "switch", "-q", "-c", "guncelleme/2026-11-test"], cwd=k3, check=True)
+skill_dir = k3 / "arsiv" / "a-test" / "skill-x"
+(skill_dir / "build").mkdir(parents=True)
+(skill_dir / ".gitignore").write_text("build/\n*.tmp\n", encoding="utf-8")
+(skill_dir / "SKILL.md").write_text("---\nname: skill-x\ndescription: x\n---\n", encoding="utf-8")
+(skill_dir / "build" / "out.txt").write_text("ignored-icerik\n", encoding="utf-8")
+(k3 / "notlar" / "gecici-untracked.md").write_text("silinmeli\n", encoding="utf-8")
+with contextlib.redirect_stdout(io.StringIO()):
+    rb_ok = m4._guncelleme_geri_al("guncelleme/2026-11-test")
+aktif_dal = subprocess.run(["git", "branch", "--show-current"], cwd=k3, capture_output=True, text=True).stdout.strip()
+dal_duruyor = subprocess.run(["git", "rev-parse", "--verify", "--quiet", "refs/heads/guncelleme/2026-11-test"], cwd=k3).returncode == 0
+durum_temiz = subprocess.run(["git", "status", "--short"], cwd=k3, capture_output=True, text=True).stdout.strip() == ""
+t("6a rollback skill içi .gitignore dosyalarını temizleyip ANA_DAL'a döner ve dalı siler",
+  rb_ok and aktif_dal == "master" and not dal_duruyor and durum_temiz and not skill_dir.exists(),
+  f"rb_ok={rb_ok}, dal={aktif_dal}, duruyor={dal_duruyor}, temiz={durum_temiz}, skill_var={skill_dir.exists()}")
+t("6b rollback untracked notu siler ama notlar/son-aylik-calisma.json damgasını korur",
+  not (k3 / "notlar" / "gecici-untracked.md").exists() and (k3 / "notlar" / "son-aylik-calisma.json").exists())
+
 for g in GECICI:
     shutil.rmtree(g, ignore_errors=True)
 basarisiz = [a for a, ok in SONUC if not ok]
