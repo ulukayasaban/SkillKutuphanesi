@@ -8,6 +8,6 @@
 - **Lisans:** NOASSERTION
 - **Geliştirici:** remotion-dev (kurum)
 - **Arşive alınma:** 2026-11-22
-- **Durum:** alternatif
+- **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `pr-name`
 - **SKILL.md'de olup bulunamayan dosyalar:** `../../../packages/docs/docs/contributing/elements.mdx`

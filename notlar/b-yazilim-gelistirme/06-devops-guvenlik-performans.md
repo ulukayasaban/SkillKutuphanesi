@@ -1370,7 +1370,7 @@ _CI/CD, deploy, güvenlik, gözlemlenebilirlik, performans_
 - **Boyut:** 19 KB (SKILL.md 8.2 KB, yük orta)
 - **İnceleme:** otomatik
 
-### reverse-engineer-anything  ·  morluto/rea @ 63ff46e  ·  puan 99 (A)
+### reverse-engineer-anything  ·  morluto/rea @ 82cd526  ·  puan 99 (A)
 
 - **Ne yapar:** Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA, and build agent environments (AgentEnv bundles) of web applications from a live instance or a capture, and of Linux desktop apps with a task from a request. Use shipped-artifact or requested runtime evidence to explain features, compare versions, decompile code, or guide a reconstruction. Skip 
 - **Teknoloji:** node, python _(otomatik tespit)_

@@ -65,7 +65,7 @@ Programla gelen (bağ): `d3-viz` (openmontage), `hyperframes` (hyperframes), `hy
 | `session-report` | anthropics/claude-plugins-official | `af59ee3` | — |  |
 | `statistical-analysis` | anthropics/knowledge-work-plugins | `33d3dea` | — |  |
 | `ui-ux-pro-max` | nextlevelbuilder/ui-ux-pro-max-skill | `3a13158` | — |  |
-| `video-edit` | OpenMontageInc/OpenMontage | `c806645` | — |  |
+| `video-edit` | OpenMontageInc/OpenMontage | `c806645` | — | kütüphanede şimdi `video-edit@openmontageinc` |
 | `webapp-testing` | anthropics/skills | `dbd4588` | — |  |
 
 Kütüphane dışı, elle kurulan: `copywriting`, `design-principles`, `frontend-design`, `graphify`, `humanizer`, `marketing-psychology`, `model-aware-image-prompt-engineer`, `research-synthesis`, `ux-copy`, `visual-qa`

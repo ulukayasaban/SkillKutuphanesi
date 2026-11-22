@@ -47,7 +47,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 13 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### diagram-design  ·  cathrynlavery/diagram-design @ d74d8c2  ·  puan 87 (A)
+### diagram-design  ·  cathrynlavery/diagram-design @ d7b0176  ·  puan 87 (A)
 
 - **Ne yapar:** Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, steps, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, unit grid, heatmap, bar and dumbbell, waterfall, line (s
 - **Teknoloji:** css, docker, html, node, playwright, python _(otomatik tespit)_

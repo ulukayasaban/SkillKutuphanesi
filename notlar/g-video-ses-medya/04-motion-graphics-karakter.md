@@ -48,7 +48,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ama doğru kalıplar; OpenMontage rig_plan artefaktına göre yazılmış.
 
-### cut-the-curve  ·  heygen-com/hyperframes @ 8a69ea0  ·  puan 100 (A)
+### cut-the-curve  ·  heygen-com/hyperframes @ 925cea1  ·  puan 100 (A)
 
 - **Ne yapar:** Hız eşlemeli sahne geçişleri kataloğu: zoom-through, ters zoom-through, cut-the-curve, waterfall cut, rack-focus blur-cut; ayrıca sahne içi waterfall giriş ve üç fazlı 'nudge' grup kaydırma. Ayna power4 easing ile kısmi hareket eşleme, boyuta göre bulanıklık ve 10/65/25 kaydırma oranı gibi sayısal kurallar verir.
 - **Ne zaman:** Herhangi bir geçiş, metin vuruşu devri, kinetik metin girişi veya grup yeniden konumlandırma yazılmadan önce. · **Ne zaman değil:** Tek sahnelik statik işlerde; HyperFrames/GSAP dışı ortamlarda.
@@ -178,7 +178,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 209 KB (SKILL.md 8.7 KB, yük orta) · **Bağımlılık:** Videolar HyperFrames/Remotion/GSAP, Node ve ffmpeg ile yerelde render edilir.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kendi kendine yeten (engine, build/render betikleri, yazı tipleri, referans, 6 bitmiş örnek), tek turluk görüşme, kalite çıtası olarak örnekler. Motor API'si referansta. Codex uyumu 'uyarlanabilir' (AskUserQuestion varsayımı). Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION), yazı tipi Geist OFL. Güvenlik: DİKKAT (orta) — setup.sh Playwright + Chromium'u motion/node_modules altına kurar, yerel Python/JS betikleri; anahtar yok. Örtüşme: konusan-kafa-gorsel-katman grubunda birincil (kendi kendine yeten, transkript güdümlü).
 
-### motion-doctrine  ·  heygen-com/hyperframes @ 8a69ea0  ·  puan 99 (A)
+### motion-doctrine  ·  heygen-com/hyperframes @ 925cea1  ·  puan 99 (A)
 
 - **Ne yapar:** Çok sahneli videonun bağımsız slaytlar yığını değil tek kesintisiz kamera hareketi gibi hissettirmesi için üst düzey hareket yasası: vektör yasası (çıkış girişi belirler, Z ölçek işareti), filmin akıntısı, taşıyıcı öğeler, nedensel hareket, Seam Gate doğrulayıcısı, boşta sallanma yasağı ve doruk öncesi durgunluk. Alt teknik skillere (cut-the-curve, seam-craft, oversized-cursor) yönlendirir.
 - **Ne zaman:** Çok sahneli HyperFrames videosunda geçiş ve hareket dili kurulmadan önce. · **Ne zaman değil:** Tek sahnelik kısa grafiklerde; HyperFrames dışı web animasyonunda.
@@ -309,7 +309,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 12 KB (SKILL.md 10.3 KB, yük orta) · **Bağımlılık:** Remotion ve Node gerekir; snapcn Pro bileşenleri SNAPCN_API_KEY ister (ücretli kısım isteğe bağlı).
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (tamamlayıcı). Elle animasyonda ele veren kısımları (sabit hızlı imleç, sonsuz ease'li zoom, bir anda dolan terminal) bileşenlere bırakıyor. Güvenlik: DİKKAT (orta) — çalışma anında snapcn.dev'den katalog ve bileşen sayfalarını çeker (uzak içerik, yönlendirici ?ref= izleme parametreli) ve shadcn CLI ile bileşen kodunu projeye indirir; Pro bileşenler SNAPCN_API_KEY ister. Uzak içerik talimat sayılmamalı. Ücret: kismen (açık bileşenler MIT/ücretsiz; Pro isteğe bağlı abonelik). Lisans: MIT. Örtüşme: ekran-kaydi-demo grubunda tamamlayıcı (kayıt alınır, bu skil ile cilalanır; playwright-recording birincil).
 
-### seam-craft  ·  heygen-com/hyperframes @ 8a69ea0  ·  puan 92 (A)
+### seam-craft  ·  heygen-com/hyperframes @ 925cea1  ·  puan 92 (A)
 
 - **Ne yapar:** Sahneden sahneye geçişlerin ana zaman çizelgesinde doğru birleşmesi için render önkoşulları: koyu filmlerde kesmede beyaz parlamayı önleyen opak sahne zemini, enjektörün sarmalayıcıları nasıl örtüştürdüğü, son kareyi tuttuğu ve şablon kodunu nasıl yerleştirdiği.
 - **Ne zaman:** Ana index.html birleştirilirken veya geçişte beyaz parlama/opaklık sızması görüldüğünde. · **Ne zaman değil:** Geçiş seçimi için (cut-the-curve); tek sahnelik işlerde.

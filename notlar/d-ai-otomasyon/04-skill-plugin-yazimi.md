@@ -339,7 +339,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 58 KB (SKILL.md 28.0 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### reverse-any-video  ·  heygen-com/hyperframes @ 8a69ea0  ·  puan 97 (A)
+### reverse-any-video  ·  heygen-com/hyperframes @ 925cea1  ·  puan 97 (A)
 
 - **Ne yapar:** Herhangi bir videoyu (motion graphics, konuşan kafa, canlı çekim, AI üretimi) birebir kare karşılaştırmasıyla düzenlenebilir bir HyperFrames projesine yeniden kurar: kesim noktalarını `measure cuts` ile bulur, bileşenleri HTML olarak yeniden yazar, görüntüdeki kişileri HeyGen ile yeniden çeker, bulutta render alıp `diff` ile özgün videoya karşı doğrular ve REVERSE.md yazar.
 - **Ne zaman:** Bir videoyu kopyalayıp/yeniden yapıp düzenlenebilir proje olarak elde etmek; elinde hakkı olan bir videonun kare kare eşi gerekiyorsa. · **Ne zaman değil:** Sıfırdan yeni video (hyperframes); yalnızca bir stilin yeni konuya uygulanması (style-sampling ya da hyperframes look.md); Pro plan yoksa (başlamaz).
@@ -455,7 +455,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Kısa ve pratik 'iş akışından skill' tarifi; doğrulama yüzeysel.
 
-### style-sampling  ·  heygen-com/hyperframes @ 8a69ea0  ·  puan 97 (A)
+### style-sampling  ·  heygen-com/hyperframes @ 925cea1  ·  puan 97 (A)
 
 - **Ne yapar:** Hazır video stil şablonlarından (Collage Explainer, Finance Explainer, Animated Science Explainer, 3D Brand Explainer, 3D True Crime) birini seçip kullanıcının konusunda yeni bölüm üretir: `hyperframes templates pull <slug>` ile şablonu çeker, REMIX.md sürecini izler; storyboard ve taslak onayları kullanıcıya aittir.
 - **Ne zaman:** Kanıtlanmış bir seri stilinde (açıklayıcı, finans, bilim, marka, true-crime) bölüm yapmak; 'şu stilde bir bölüm' istekleri. · **Ne zaman değil:** Tek bir videoyu kopyalamak (reverse-any-video); beş şablon dışında bir stil (hyperframes look.md ile); Pro plan yoksa (şablon çekilmez).

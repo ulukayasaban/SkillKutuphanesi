@@ -8,5 +8,5 @@
 - **Lisans:** AGPL-3.0
 - **Geliştirici:** OpenMontageInc (kurum)
 - **Arşive alınma:** 2026-11-22
-- **Durum:** alternatif
+- **Durum:** tercih
 - **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.

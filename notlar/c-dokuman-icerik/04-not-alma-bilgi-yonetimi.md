@@ -2,7 +2,7 @@
 
 _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/40**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **14/37**
 
 ### add-frontmatter  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 72 (B)
 
@@ -64,16 +64,6 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Geliştirici:** AgriciDaniel (kisi, ★16674, son güncelleme 2026-10-25, lisans MIT)
 - **Durum:** alternatif
 - **Boyut:** 5 KB (SKILL.md 4.7 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### defuddle@obsidianmd-eski  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
-
-- **Ne yapar:** Extract clean Markdown from HTML pages with Defuddle CLI.
-- **Teknoloji:** api-anahtari, html, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** obsidianmd (kurum, ★53381, son güncelleme 2026-11-20, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 1 KB (SKILL.md 0.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### download-attachment  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 64 (C)
@@ -152,16 +142,6 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### knap@obsidianmd-eski  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
-
-- **Ne yapar:** Render Markdown from templates and structured data using Knap CLI. Use when the user asks to apply a Knap template, turn JSON or CSV data into notes, batch-generate Markdown files, or format Defuddle output into a note.
-- **Teknoloji:** html, node _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** obsidianmd (kurum, ★53381, son güncelleme 2026-11-20, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk)
-- **İnceleme:** otomatik
-
 ### obsidian-bases  ·  obsidianmd/obsidian-skills @ b110b2f  ·  puan 90 (A)
 
 - **Ne yapar:** Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, kanban boards, filters, or formulas in Obsidian.
@@ -211,16 +191,6 @@ _Obsidian, günlük/haftalık not, bilgi yönetimi, dosya düzeni_
 - **Geliştirici:** obsidianmd (kurum, ★53381, son güncelleme 2026-11-20, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.3 KB, yük kucuk)
-- **İnceleme:** otomatik
-
-### obsidian-cli@obsidianmd-eski  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
-
-- **Ne yapar:** Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from 
-- **Teknoloji:** css, obsidian _(otomatik tespit)_
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** obsidianmd (kurum, ★53381, son güncelleme 2026-11-20, lisans MIT)
-- **Durum:** alternatif
-- **Boyut:** 3 KB (SKILL.md 3.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
 ### obsidian-headless  ·  obsidianmd/obsidian-skills @ b110b2f  ·  puan 92 (A)

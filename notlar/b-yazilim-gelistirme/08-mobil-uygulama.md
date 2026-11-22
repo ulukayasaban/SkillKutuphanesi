@@ -1173,7 +1173,7 @@ _Android (Jetpack Compose, Play), Expo / React Native, iOS; mağaza yayını, mo
 
 ### ios-to-android  ·  android/skills @ c729425  ·  puan 88 (A)
 
-- **Ne yapar:** Use for ANY task that ports or implements Android functionality from\ \ an iOS/Swift codebase \u2014 including single-feature tasks (BLE scanning, location/GPS\ \ tracking, billing, Health Connect, background work, database, one screen), not\ \ just full-app migrations. Primary coordinating skill for migrating iOS apps and\ \ subsystems to Android (Jetpack Compose, Room, Kotlin Coroutines and Flow
+- **Ne yapar:** Port or implement Android functionality from an iOS/Swift codebase, including single-feature tasks (BLE scanning, GPS tracking, billing, Health Connect, background work, database, one screen) and full-app migrations to Jetpack Compose, Room, Kotlin Coroutines/Flow, and Architecture Components. Covers Info.plist to AndroidManifest.xml permissions (Android 14+ runtime permissions and foreground serv
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** android (kurum, resmî, ★10690, son güncelleme 2026-11-17, lisans Apache-2.0)

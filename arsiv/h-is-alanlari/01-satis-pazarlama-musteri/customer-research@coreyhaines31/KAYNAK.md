@@ -8,4 +8,4 @@
 - **Lisans:** MIT
 - **Geliştirici:** coreyhaines31 (kisi)
 - **Arşive alınma:** 2026-11-22
-- **Durum:** alternatif
+- **Durum:** tercih

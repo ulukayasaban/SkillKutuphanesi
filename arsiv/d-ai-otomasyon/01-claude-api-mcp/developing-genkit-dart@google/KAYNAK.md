@@ -8,4 +8,4 @@
 - **Lisans:** Apache-2.0
 - **Geliştirici:** google (kurum)
 - **Arşive alınma:** 2026-11-22
-- **Durum:** alternatif
+- **Durum:** tercih

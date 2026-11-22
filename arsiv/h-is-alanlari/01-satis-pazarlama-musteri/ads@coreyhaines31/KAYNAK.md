@@ -8,5 +8,5 @@
 - **Lisans:** MIT
 - **Geliştirici:** coreyhaines31 (kisi)
 - **Arşive alınma:** 2026-11-22
-- **Durum:** alternatif
+- **Durum:** tercih
 - **Kardeş skill bağımlılıkları** (`../<ad>/` bağlantıları; birlikte kurulmalı): `ad-creative`, `competitor-profiling`, `conversion-tracking`, `copywriting`, `customer-research`, `product-marketing`

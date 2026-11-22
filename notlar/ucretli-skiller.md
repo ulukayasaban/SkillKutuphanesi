@@ -47,7 +47,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 356
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 357
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -270,7 +270,6 @@
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `nlm-skill` | 03-web-arastirma-veri | nlm komutu ücretsizdir ve Google hesabıyla çalışır; kullanım kotaları Gemini Notebook planına bağlıdır (ücretsiz planda sınırlı) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
-| `caption-qa` | 01-uygulama-entegrasyonlari | Composio hesabı gerekir (ücretsiz katman var); bağlanan uygulamanın kendi planı geçerli |
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
 | `cinecode` | 01-video-uretim-montaj | Film kodla üretilir ve ücretsiz çalışır. Seslendirme için Gemini TTS anahtarı (ücretsiz katmanı var) ya da isteğe bağlı ElevenLabs; stok arama için ücretsiz Pixabay anahtarı. Skill ücretli servis, anahtar ve büyük indirmeyi kullanıcı onayı olmadan kullanmaz. |
 | `cut-silences` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var |
@@ -290,6 +289,7 @@
 | `remotion-best-practices` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-best-practices@calesthio` | 01-video-uretim-montaj | Remotion lisansı: şirketler için ticari lisans gerekebilir |
 | `remotion-maps` | 01-video-uretim-montaj | Harita karoları Mapbox/MapTiler (ücretsiz kota) ya da ücretsiz OSM kaynakları; Remotion şirket lisansı ayrıca |
+| `remotion-render` | 01-video-uretim-montaj | Remotion yerel video/görsel/OTIO dışa aktarma; bireysel ve küçük ekipler için ücretsiz lisans, büyük şirketler için Remotion şirket lisansı (--license-key) gerekir |
 | `remotion@openmontageinc` | 01-video-uretim-montaj | Remotion lisansı: bireyler ve küçük ekipler ücretsiz, şirketler için ticari lisans gerekebilir |
 | `session-story` | 01-video-uretim-montaj | İsteğe bağlı Gemini (GEMINI_API_KEY) ile kare özeti; anahtar yoksa yerel çalışır. Not: yerel konuşma geçmişini okur (kullanıcı onayından sonra) |
 | `short-form-edit` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe (varsayılan, alternatifleri var) ve üretilmiş ek görüntüler için isteğe bağlı Kie.ai; ikisi de ücretli servis, ücretsiz yol (yerel transkript, kendi görüntüleri) var |
@@ -408,12 +408,5 @@
 | `run-experiment` | 04-bilimsel-yazim-literatur | W&B isteğe bağlı; deney yerelde çalışır |
 | `scientific-schematics` | 04-bilimsel-yazim-literatur | AI şema üretimi OpenRouter (ücretli); elle şema yolu ücretsiz |
 | `scientific-slides` | 04-bilimsel-yazim-literatur | Slayt yerel; isteğe bağlı AI görsel OpenRouter (ücretli) |
-
-## ? Sınıflandırılmamış — 2
-
-| Skill | Kategori | Neden |
-|---|---|---|
-| `cancellations-pauses-winback` | 08-mobil-uygulama | ücretli servis izi: prepaid plan -> ucret-siniflandirma.json'a ekle |
-| `remotion-render` | 01-video-uretim-montaj | ücretli servis izi: YOUR_API_KEY -> ucret-siniflandirma.json'a ekle |
 
 Gizli entegrasyon kataloğundaki 1 Composio skili toplu olarak 'kısmen' (Composio hesabı; ücretsiz katman var).

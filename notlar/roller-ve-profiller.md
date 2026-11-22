@@ -63,7 +63,7 @@
 | `tasarim-sistemi` | Design token, tema ve marka kimliğini kuran agent. | design-system, brand | theme-factory, banner-design, design-spec, design, tailwind-design-system | 7 skill, 57 KB |
 | `ui-tasarimci` | Görsel dil, layout, tipografi ve renk kararlarını veren tasarımcı agent. Arayüzün 'AI şablonu' gibi görünmemesini sağlar. | design-taste-frontend, ui-ux-pro-max, impeccable | design-dna, frontend-design, ui-styling, mobile-design, design-spec, canvas-design | 9 skill, 114 KB |
 | `video-kompozisyon` | HyperFrames ile videonun sahnelerini, kompozisyonunu ve medyasını kuran agent. | hyperframes, hyperframes-registry, media-use | captions-overlay, figma, slideshow, remotion-to-hyperframes | 7 skill, 40 KB |
-| `video-kurgu-render` | HyperFrames projesini kontrol eden, zaman çizelgesini düzenleyen, render alan ve hazır videoları kurgulayan agent. | hyperframes, hyperframes-cli, video-edit, ffmpeg | media-use, playwright-recording, video-understand | 7 skill, 52 KB |
+| `video-kurgu-render` | HyperFrames projesini kontrol eden, zaman çizelgesini düzenleyen, render alan ve hazır videoları kurgulayan agent. | hyperframes, hyperframes-cli, video-edit, ffmpeg | media-use, playwright-recording, video-understand | 7 skill, 49 KB |
 | `webgl-efekt-sanatcisi` | Three.js ile shader, post-processing ve özel geometri efektleri yapan agent (3d-gelistirici ile birlikte çalışır). | threejs-shaders, threejs-postprocessing, threejs-geometry | threejs-interaction, threejs-asset-pipeline, lightweight-3d-effects | 6 skill, 139 KB |
 
 Hiçbir profilde olmayan roller (yalnız `--rol` ile): eticaret-magaza-gelistirici

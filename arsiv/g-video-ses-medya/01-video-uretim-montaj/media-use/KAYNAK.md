@@ -4,7 +4,7 @@
 
 - **Kaynak repo:** https://github.com/heygen-com/hyperframes
 - **Repo içindeki yol:** `skills/media-use`
-- **Commit:** `8a69ea039594d2eb353b7be40ba5b430c854faec`
+- **Commit:** `925cea1f1f59bfde0d507c3575791f77a775939f`
 - **Lisans:** Apache-2.0
 - **Geliştirici:** heygen-com (kurum)
 - **Arşive alınma:** 2026-11-22

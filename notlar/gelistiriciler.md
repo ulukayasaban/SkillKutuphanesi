@@ -44,7 +44,7 @@
 | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | coreyhaines31 | kisi |  | 61873 | 93 | 2026-11-20 | MIT | 53 |
 | [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | Nutlope | kisi |  | 59042 | 12 | 2026-11-11 | MIT | 1 |
 | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | K-Dense-AI | kurum |  | 58028 | 58 | 2026-11-16 | MIT | 177 |
-| [obsidianmd/obsidian-skills](https://github.com/obsidianmd/obsidian-skills) | obsidianmd | kurum |  | 53381 | 28 | 2026-11-20 | MIT | 13 |
+| [obsidianmd/obsidian-skills](https://github.com/obsidianmd/obsidian-skills) | obsidianmd | kurum |  | 53381 | 28 | 2026-11-20 | MIT | 10 |
 | [DavidHDev/react-bits](https://github.com/DavidHDev/react-bits) | DavidHDev | kisi |  | 52441 | 147 | 2026-11-19 | NOASSERTION | 0 |
 | [pixijs/pixijs](https://github.com/pixijs/pixijs) | pixijs | kurum | ✅ | 48870 | 653 | 2026-11-20 | MIT | 26 |
 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | anthropics | kurum | ✅ | 47910 | 49 | 2026-11-21 | Apache-2.0 | 48 |

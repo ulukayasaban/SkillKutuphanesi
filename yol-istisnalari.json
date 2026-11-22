@@ -121,8 +121,8 @@
           ],
           "karar": "ornek-metin",
           "neden": "MCP sunucusu bağlamayı öğreten skill: ${CLAUDE_PLUGIN_ROOT}/… yolları örnek .mcp.json ve yapılandırma olarak geçiyor; skill bu yollardaki dosyalara kendisi dayanmıyor.",
-          "tarih": "2026-11-11",
-          "bulgu_hash": "3d4fe90eb8dbd8315d3295ad905f534bf907dff0d3e8bca716e06c27bfeab1b9"
+          "tarih": "2026-11-22",
+          "bulgu_hash": "cf34c03767867b8565f621788d5d9b5b7cb18257a4e5c9e214f23f8418ffee0d"
         }
       ]
     },

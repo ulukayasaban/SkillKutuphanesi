@@ -1,6 +1,6 @@
 {
   "_aciklama": "Skillerin ücret sınıfı (elle, gerekçeli). Anahtar: skill adı (ad) ya da kimliği (id). Değerler: 'ucretsiz' (ek servis/ücret gerekmez), 'kismen' (ücretsiz yolu var; ücretli kısım isteğe bağlı ya da koşullu: lisans, kota, bazı düğümler), 'ucretli' (ücretli API/abonelik olmadan çalışmaz). Burada olmayan skill: ücretli servis izi yoksa 'ucretsiz', iz varsa 'belirsiz' olur ve dogrula.py sınıflandırılana kadar UYARI verir. Composio entegrasyonları (tip T4) toplu 'kismen'.",
-  "guncelleme": "2026-11-17",
+  "guncelleme": "2026-11-22",
   "siniflar": {
     "gemini-api": [
       "kismen",
@@ -2213,6 +2213,14 @@
     "rea-video": [
       "kismen",
       "Çözümleme CLI'ı ücretsiz (yerel); isteğe bağlı görsel model (VLM, REA_VLM_API_KEY) ve önerilen ChatCut yeniden yapım aracı üyelik/kredi ister (ücretli kısım isteğe bağlı)"
+    ],
+    "cancellations-pauses-winback": [
+      "ucretsiz",
+      "Android Google Play abonelik iptal/iade dokümantasyonu; prepaid plan Play Billing terminolojisidir, ücretli API/servis gerektirmez"
+    ],
+    "remotion-render": [
+      "kismen",
+      "Remotion yerel video/görsel/OTIO dışa aktarma; bireysel ve küçük ekipler için ücretsiz lisans, büyük şirketler için Remotion şirket lisansı (--license-key) gerekir"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

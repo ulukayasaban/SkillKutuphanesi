@@ -8,4 +8,4 @@
 - **Lisans:** NOASSERTION
 - **Geliştirici:** remotion-dev (kurum)
 - **Arşive alınma:** 2026-11-22
-- **Durum:** alternatif
+- **Durum:** tercih
