@@ -137,6 +137,7 @@
 | [kylezantos/design-motion-principles](https://github.com/kylezantos/design-motion-principles) | kylezantos | kisi |  | 1626 | 1 | 2026-05-30 | MIT | 1 |
 | [figma/code-connect](https://github.com/figma/code-connect) | figma | kurum | ✅ | 1612 | 3 | 2026-11-20 | MIT | 0 |
 | [nexscope-ai/eCommerce-Skills](https://github.com/nexscope-ai/eCommerce-Skills) | nexscope-ai | kurum |  | 1483 | 7 | 2026-11-11 | MIT | 162 |
+| [echris6/motion-video-kit](https://github.com/echris6/motion-video-kit) | echris6 | kisi |  | 1438 | 1 | 2026-10-14 | MIT | 1 |
 | [Barty-Bart/motion-graphics](https://github.com/Barty-Bart/motion-graphics) | Barty-Bart | kisi |  | 1428 | 4 | 2026-10-13 | NOASSERTION | 6 |
 | [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills) | freshtechbro | kisi |  | 1426 | 1 | 2025-11-20 | MIT | 23 |
 | [darkroomengineering/satus](https://github.com/darkroomengineering/satus) | darkroomengineering | kurum | ✅ | 1023 | 19 | 2026-11-18 | MIT | 1 |

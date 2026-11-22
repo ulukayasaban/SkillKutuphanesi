@@ -81,7 +81,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. İş akışı (örnek → onay → tam üretim) örnek alınacak kadar iyi; kullanım alanı dar.
 
-### earshot  ·  Leonxlnx/earshot @ 7a7f7c5  ·  puan 80 (A)
+### earshot  ·  Leonxlnx/earshot @ 7a7f7c5  ·  puan 81 (A)
 
 - **Ne yapar:** Agent'a 'kulak' kazandırır: ses dosyasını tarif eder, metinle eşleştirir ve puanlar (CLAP + AST, CPU'da). Film/video için ses zaman çizelgesi ve eleştiri çıkarır, kodla ses efekti üretir; MCP sunucusu da sunar.
 - **Ne zaman:** Video/ses üretiminde hazır ses efektlerini ya da müziği dinleyip doğru olanı seçmek, miksi kontrol etmek. · **Ne zaman değil:** Kurulum ağır: Python paketi + torch/transformers, ilk çalışmada Hugging Face'ten model indirir. Önerdiği `claude mcp add --scope user` komutu GENEL Claude ayarına yazar; isteğe bağlı, onaysız yapılmamalı. `llm` komutu sesi Gemini'ye yükler (sadece --yes-upload + kendi anahtarınla).
@@ -125,7 +125,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 5 KB (SKILL.md 5.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Güncel ve dürüst (promosyon kısıtları açıkça yazılmış).
 
-### krillinai-cli  ·  krillinai/OpenCreator @ f6160b6  ·  puan 89 (A)
+### krillinai-cli  ·  krillinai/OpenCreator @ f6160b6  ·  puan 90 (A)
 
 - **Ne yapar:** Use when an agent needs to build or operate the embedded KrillinAI CLI, choose a supported command, or interpret its JSON, manifest, subtitle, dubbing, render, cover, speech, and voice outputs.
 - **Teknoloji:** node _(otomatik tespit)_
@@ -135,7 +135,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 9 KB (SKILL.md 3.4 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-cover  ·  krillinai/OpenCreator @ f6160b6  ·  puan 89 (A)
+### krillinai-cover  ·  krillinai/OpenCreator @ f6160b6  ·  puan 90 (A)
 
 - **Ne yapar:** Use when generating a cover image with the KrillinAI CLI from a complete image prompt, including validating image-provider configuration and inspecting the generated image and saved prompt.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -145,7 +145,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 1.7 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-pipeline  ·  krillinai/OpenCreator @ f6160b6  ·  puan 89 (A)
+### krillinai-pipeline  ·  krillinai/OpenCreator @ f6160b6  ·  puan 90 (A)
 
 - **Ne yapar:** Use when validating or documenting a multi-stage KrillinAI CLI output plan; the current pipeline command supports dry-run planning only, not end-to-end execution.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -155,7 +155,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-render-horizontal  ·  krillinai/OpenCreator @ f6160b6  ·  puan 89 (A)
+### krillinai-render-horizontal  ·  krillinai/OpenCreator @ f6160b6  ·  puan 90 (A)
 
 - **Ne yapar:** Use when rendering landscape videos with KrillinAI CLI, including original video plus bilingual subtitles or dubbed video plus target-language subtitles.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -165,7 +165,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-render-vertical  ·  krillinai/OpenCreator @ f6160b6  ·  puan 89 (A)
+### krillinai-render-vertical  ·  krillinai/OpenCreator @ f6160b6  ·  puan 90 (A)
 
 - **Ne yapar:** Use when rendering portrait videos with KrillinAI CLI, including converting source video to vertical format, adding short bilingual subtitles, rendering dubbed vertical videos, and checking vertical subtitle readability.
 - **Teknoloji:** ffmpeg, python _(otomatik tespit)_
@@ -175,7 +175,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-subtitle  ·  krillinai/OpenCreator @ f6160b6  ·  puan 89 (A)
+### krillinai-subtitle  ·  krillinai/OpenCreator @ f6160b6  ·  puan 90 (A)
 
 - **Ne yapar:** Use when generating subtitles with KrillinAI CLI from a YouTube link, Bilibili/local video, or existing media, including platform caption download, Whisper fallback, translation, bilingual SRT, and short vertical subtitle output.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -185,7 +185,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk) · **Bağımlılık:** OpenCreator / krillinai CLI (video çeviri, altyazı, TTS, render). TTS/LLM için sağlayıcı anahtarı gerekebilir → kismen.
 - **İnceleme:** otomatik
 
-### krillinai-tts  ·  krillinai/OpenCreator @ f6160b6  ·  puan 89 (A)
+### krillinai-tts  ·  krillinai/OpenCreator @ f6160b6  ·  puan 90 (A)
 
 - **Ne yapar:** Use when generating target-language dubbing with KrillinAI CLI from SRT subtitles, including TTS audio creation and optional dubbed video generation.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -217,7 +217,7 @@ _Seslendirme (TTS), konuşma tanıma (STT), müzik ve ses efekti üretimi_
 - **Boyut:** 10 KB (SKILL.md 3.3 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Resmi ElevenLabs skill'i; bağımsız SDK ile her yerde çalışır.
 
-### real-sound  ·  Leonxlnx/earshot @ 7a7f7c5  ·  puan 83 (A)
+### real-sound  ·  Leonxlnx/earshot @ 7a7f7c5  ·  puan 84 (A)
 
 - **Ne yapar:** Ses efekti ve müzik için gerçek, lisanslı kayıtları (Freesound, Mixkit, Pixabay; CC0/CC-BY) bulur, seçer, miksler ve masterlar; lisans bilgisini kaydeder.
 - **Ne zaman:** Sentetik değil gerçek kayıt ses efekti istenen video/oyun projeleri. · **Ne zaman değil:** Sesi kodla üretmek için sound-effects (OpenMontage) ya da hyperframes-audio. CC-BY seslerde atıf zorunlu. Sitelerden dosya indirir.

@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/52**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/53**
 
 ### agent-development  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 100 (A)
 
@@ -43,6 +43,16 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
+- **İnceleme:** otomatik
+
+### business-motion-film  ·  echris6/motion-video-kit @ e4b1c00  ·  puan 78 (B)
+
+- **Ne yapar:** Plan, build and quality-check a premium short commercial for a real business (roofing, property, ecommerce, B2B software) using AI-generated footage, code-built motion (HTML/GSAP), selective Three.js and an independent-critic "Gauntlet" loop. Use when asked to make a launch-style / SaaS-style video, business ad, explainer, sample reel or pitch video, or to review and improve one. Encodes motion pr
+- **Teknoloji:** api-anahtari, gsap, html, python, three.js _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** echris6 (kisi, ★1438, son güncelleme 2026-10-14, lisans MIT)
+- **Durum:** tercih
+- **Boyut:** 110 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** otomatik
 
 ### climb  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 96 (A)
@@ -380,26 +390,26 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
-### skill-creator  ·  anthropics/skills @ e4bb5d9  ·  puan 95 (A)
-
-- **Ne yapar:** Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istemleriyle skill'li/skill'siz çalıştırma, değerlendirici/karşılaştırıcı/analizci agent'lar, eval görüntüleyici, benchmark ve varyans analizi, açıklama (tetikleme) optimizasyonu ve paketleme betikleri.
-- **Ne zaman:** Yeni skill yazmak ya da mevcut skill'i ölçülebilir biçimde iyileştirmek (tetikleme doğruluğu dahil). · **Ne zaman değil:** Claude Code eklentisine özgü yerleşim için skill-development'ı da oku. Eval döngüsü `claude -p` ile alt süreç çalıştırır; Codex'te bu adımlar `codex exec` ile değiştirilmeli ya da test istemleri elle çalıştırılmalı — yazım rehberi ve betiklerin çoğu (quick_validate, package_skill) araçtan bağımsız çalışır.
-- **Teknoloji:** python, markdown · **Paketler:** python3, claude CLI (eval döngüsü için)
-- **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★198456, son güncelleme 2026-11-16, lisans yok)
-- **Durum:** tercih · **Örtüşme:** skill-yazimi → birincil · **Roller:** skill-gelistirici
-- **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
-- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).
-
 ### skill-creator@anthropics  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 98 (A)
 
 - **Ne yapar:** Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 - **Teknoloji:** html, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
-- **Durum:** alternatif
+- **Durum:** tercih
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
+
+### skill-creator@anthropics-2  ·  anthropics/skills @ e4bb5d9  ·  puan 95 (A)
+
+- **Ne yapar:** Skill oluşturma, iyileştirme ve ölçme: niyet yakalama ve görüşme, SKILL.md yazım rehberi (aşamalı açılım, sürpriz olmama ilkesi), test istemleriyle skill'li/skill'siz çalıştırma, değerlendirici/karşılaştırıcı/analizci agent'lar, eval görüntüleyici, benchmark ve varyans analizi, açıklama (tetikleme) optimizasyonu ve paketleme betikleri.
+- **Ne zaman:** Yeni skill yazmak ya da mevcut skill'i ölçülebilir biçimde iyileştirmek (tetikleme doğruluğu dahil). · **Ne zaman değil:** Claude Code eklentisine özgü yerleşim için skill-development'ı da oku. Eval döngüsü `claude -p` ile alt süreç çalıştırır; Codex'te bu adımlar `codex exec` ile değiştirilmeli ya da test istemleri elle çalıştırılmalı — yazım rehberi ve betiklerin çoğu (quick_validate, package_skill) araçtan bağımsız çalışır.
+- **Teknoloji:** python, markdown · **Paketler:** python3, claude CLI (eval döngüsü için)
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** anthropics (kurum, resmî, ★198456, son güncelleme 2026-11-16, lisans yok)
+- **Durum:** alternatif · **Örtüşme:** skill-yazimi → birincil · **Roller:** skill-gelistirici
+- **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
+- **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).
 
 ### skill-creator@freshtechbro  ·  freshtechbro/claudedesignskills @ 1da73fe  ·  puan 49 (D)
 
@@ -412,7 +422,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 39 KB (SKILL.md 11.3 KB, yük orta)
 - **İnceleme:** incelendi · kalite 2/5 — Karar: SADECE ARŞİV. Eski sürümün ikinci kopyası; ek değer yok (MIT lisanslı olması tek fark).
 
-### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 61 (C)
+### skill-creator@heyitsnoah  ·  heyitsnoah/claudesidian @ 6c56f35  ·  puan 60 (C)
 
 - **Ne yapar:** Anthropic skill-creator'ın güncel sürümünün claudesidian içindeki birebir kopyası (eval görüntüleyici, değerlendirici agent'lar, benchmark ve açıklama optimizasyonu dahil); NOTICE.md ile lisans notu eklenmiş.
 - **Ne zaman:** claudesidian kasası içinde skill geliştirirken (kasa bu kopyayı bekler). · **Ne zaman değil:** Diğer projelerde; anthropics/skill-creator ile aynı içerik.

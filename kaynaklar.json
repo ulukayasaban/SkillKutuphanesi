@@ -2216,6 +2216,18 @@
         "tarih": "2026-11-22",
         "commit": "1ecea1993b7fce257ffbd686c070948b5e07eda6"
       }
+    },
+    {
+      "repo": "echris6/motion-video-kit",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "1 SKILL.md",
+      "eklendi": "2026-11-22",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-22",
+        "commit": "e4b1c0004080fe6a0deb883631bad5eba1e5f339"
+      }
     }
   ],
   "konum_haric": [

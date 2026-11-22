@@ -9,4 +9,3 @@
 - **Geliştirici:** anthropics (kurum)
 - **Arşive alınma:** 2026-11-22
 - **Durum:** alternatif
-- **Birebir aynısı şuralarda da var:** anthropics/claude-plugins-official:plugins/frontend-design/skills/frontend-design

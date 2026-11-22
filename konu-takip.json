@@ -42021,6 +42021,20 @@
       "neden": "aciklama_veya_skill_yok",
       "tarih": "2026-11-22",
       "ayrinti": "SKILL.md yok (CLAUDE.md/DESIGN.md)"
+    },
+    "howseen-ai/claude-motion-design": {
+      "repo": "howseen-ai/claude-motion-design",
+      "durum": "bekliyor",
+      "neden": "ad_cakismasi",
+      "tarih": "2026-11-22",
+      "ayrinti": "Mevcut/yerel skill ile ad çakışması: motion-design"
+    },
+    "tugrawork-creator/saas-motion-kit": {
+      "repo": "tugrawork-creator/saas-motion-kit",
+      "durum": "bekliyor",
+      "neden": "lisans_yok",
+      "tarih": "2026-11-22",
+      "ayrinti": "Lisans eksik veya kısıtlı (NOASSERTION)"
     }
   }
 }

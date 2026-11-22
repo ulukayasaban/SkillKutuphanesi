@@ -339,7 +339,7 @@ _Claude API, MCP sunucusu, model geçişi_
 - **Boyut:** 6 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### langsmith-observability  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 84 (A)
+### langsmith-observability  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 85 (A)
 
 - **Ne yapar:** LLM observability platform for tracing, evaluation, and monitoring. Use when debugging LLM applications, evaluating model outputs against datasets, monitoring production systems, or building systematic testing pipelines for AI applications.
 - **Teknoloji:** api-anahtari, python _(otomatik tespit)_

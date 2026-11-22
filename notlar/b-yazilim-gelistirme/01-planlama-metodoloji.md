@@ -57,7 +57,7 @@ _Fikir geliştirme, spec, plan yazma, görev bölme, uygulama disiplini_
 - **Boyut:** 78 KB (SKILL.md 14.8 KB, yük orta)
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — 2026-10 güncellemesi: zorunlu sıra (yaklaşımlar → tasarım dokümanı → onay → writing-plans) açık hâle geldi; soru sormadan önce projeyi/bağlamı okuma kuralı eklendi; spike ve 'soruları atla' istisnaları netleşti.
 
-### brainstorming-research-ideas  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 84 (A)
+### brainstorming-research-ideas  ·  Orchestra-Research/AI-Research-SKILLs @ 773a529  ·  puan 85 (A)
 
 - **Ne yapar:** Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work.
 - **Teknoloji:** - _(otomatik tespit)_
