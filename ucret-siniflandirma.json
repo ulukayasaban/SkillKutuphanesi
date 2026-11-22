@@ -2221,6 +2221,10 @@
     "remotion-render": [
       "kismen",
       "Remotion yerel video/görsel/OTIO dışa aktarma; bireysel ve küçük ekipler için ücretsiz lisans, büyük şirketler için Remotion şirket lisansı (--license-key) gerekir"
+    ],
+    "saas-motion-video": [
+      "ucretsiz",
+      "HyperFrames açık kaynak CLI ile yazılım tanıtım videosu üretimi; HeyGen yalnızca HyperFrames araç referansı olarak anılır"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

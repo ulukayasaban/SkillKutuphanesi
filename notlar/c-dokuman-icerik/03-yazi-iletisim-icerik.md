@@ -59,7 +59,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 12 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Kısa ve doğru temel bilgiler + betik. Aslında yazılım geliştirme konusu; kategori incelemesi b-yazilim oturumunda ele alındığı için burada bırakıldı (frontend-muhendis rolüne uygun).
 
-### ig-audit  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 78 (B)
+### ig-audit  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 79 (B)
 
 - **Ne yapar:** Post-mortem on what the user has already posted - which reels actually worked, why, and what to stop making. Use when the user pastes their Instagram insights or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know what to do more of.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -69,7 +69,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-caption  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-caption  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Write the Instagram caption - the line that survives the "... more" cut, the body, the single ask, the search terms and the three hashtags - and lint it before it goes out. Use when the user says "write the caption", "caption this", "what do I put in the description", has a reel or a carousel ready and needs the text, or asks about hashtags.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -79,7 +79,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 14 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-carousel  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-carousel  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Build an Instagram carousel - the cover that earns the swipe, slide-by-slide copy, and the 1080x1350 files to upload. Use when the user says "carousel", "slides", "swipe post", "turn this into a carousel", or has a list-shaped or step-shaped idea that would die as a single image.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -89,7 +89,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-comment  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-comment  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Write comments on other people's Instagram posts and reels that read as a person with an opinion, not a bot. Use when the user pastes a post or a reel and wants a comment, says "comment on this", "engage with this", "what do I say here", or wants a batch for their daily engagement round.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -99,7 +99,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-dm  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-dm  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Write Instagram DMs that get replies - the keyword delivery, the first message to someone who engaged, the collab pitch, and the two follow-ups. Use when the user says "DM this person", "what do I send them", "outreach message", "how do I follow up", "pitch this brand", or is reaching out to someone specific.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -109,7 +109,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 5 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-human  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-human  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Strip the machine fingerprint out of any draft - em dashes, AI slop words, invisible watermark characters - and score it against a five-check detection panel before it goes out. Use whenever text needs to sound human, when the user says humanize, "does this sound like AI", "remove the em dashes", "de-slop this", "this sounds like ChatGPT", or before any caption, script, comment, reply or DM is sho
 - **Teknoloji:** python _(otomatik tespit)_
@@ -119,7 +119,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 45 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-plan  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 78 (B)
+### ig-plan  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 79 (B)
 
 - **Ne yapar:** Build the week on Instagram - what to post, which format, when, and who to engage with. Use when the user says "plan my week", "what should I post", "content calendar", "I have nothing to post about", or wants a posting schedule and an engagement list.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -129,7 +129,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-profile  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-profile  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Score an Instagram profile out of 100 against a 12-part rubric and rewrite the parts that lose points - name field, bio, link, highlights, pinned three, grid. Use when the user says "optimize my profile", "fix my bio", "score my Instagram", "why don't people follow me", or pastes their profile and asks how it reads.
 - **Teknoloji:** three.js _(otomatik tespit)_
@@ -139,7 +139,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 7 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-reel  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 78 (B)
+### ig-reel  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 79 (B)
 
 - **Ne yapar:** Write an Instagram Reel from a raw idea - hook options off 26 formulas, the spoken script, the on-screen text, and a timed beat sheet - in the user's own voice and scored before they shoot it. Use whenever the user wants a Reel, a short-form video script, a hook, a voiceover, "make a reel about X", "what should I say in this video", or is about to record and does not have the first line yet.
 - **Teknoloji:** python _(otomatik tespit)_
@@ -149,7 +149,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 44 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-reply  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-reply  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Handle the comments under the user's own reels and posts - draft replies to the ones worth answering, sorted by which ones are. Use when the user pastes their comments, says "reply to these", "handle my comments", "someone said X on my reel", or is dealing with a critic, a hater or a lead in the comments.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -159,7 +159,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-repurpose  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 78 (B)
+### ig-repurpose  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 79 (B)
 
 - **Ne yapar:** Turn one long asset - a YouTube video, podcast, livestream, newsletter, blog post or client call - into a week of reels and carousels. Use when the user says "repurpose this", "turn this into reels", "I have a video/podcast/ transcript", "cut this up", or pastes something long and wants it on Instagram.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -169,7 +169,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-story  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 83 (A)
+### ig-story  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 84 (A)
 
 - **Ne yapar:** Write the day's Instagram Stories - the frame-by-frame sequence, which stickers to use where, and the one that moves people into the DMs. Use when the user says "stories", "what do I post on my story", "story sequence", "poll idea", "I have nothing to story about", or wants to sell something without making a post about it.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -179,7 +179,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ig-viral  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 78 (B)
+### ig-viral  ·  Jakeschincariol/instagram-agent-skill @ d03c56b  ·  puan 79 (B)
 
 - **Ne yapar:** Go and find the reels that are actually working right now in the user's niche, rank them by how far each beat its own account, name the hook formula each one used, and turn that into a swipe file they can shoot from. Use when the user says "find viral videos", "what's working right now", "what are people posting in my niche", "reverse engineer this account", "build me a swipe file", "why is this r
 - **Teknoloji:** python _(otomatik tespit)_

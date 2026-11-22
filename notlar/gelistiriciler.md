@@ -47,7 +47,7 @@
 | [obsidianmd/obsidian-skills](https://github.com/obsidianmd/obsidian-skills) | obsidianmd | kurum |  | 53381 | 28 | 2026-11-20 | MIT | 10 |
 | [DavidHDev/react-bits](https://github.com/DavidHDev/react-bits) | DavidHDev | kisi |  | 52441 | 147 | 2026-11-19 | NOASSERTION | 0 |
 | [pixijs/pixijs](https://github.com/pixijs/pixijs) | pixijs | kurum | ✅ | 48870 | 653 | 2026-11-20 | MIT | 26 |
-| [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | anthropics | kurum | ✅ | 47910 | 49 | 2026-11-21 | Apache-2.0 | 48 |
+| [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | anthropics | kurum | ✅ | 47910 | 49 | 2026-11-21 | Apache-2.0 | 49 |
 | [ManimCommunity/manim](https://github.com/ManimCommunity/manim) | ManimCommunity | kurum |  | 42772 | 543 | 2026-11-21 | MIT | 0 |
 | [github/awesome-copilot](https://github.com/github/awesome-copilot) | github | kurum |  | 41428 | 600 | 2026-11-20 | MIT | 1 |
 | [Donchitos/Claude-Code-Game-Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) | Donchitos | kisi |  | 40507 | 1 | 2026-11-09 | MIT | 78 |
@@ -145,6 +145,7 @@
 | [14islands/r3f-scroll-rig](https://github.com/14islands/r3f-scroll-rig) | 14islands | kurum |  | 994 | 11 | 2025-12-17 | MIT | 0 |
 | [rshankras/claude-code-apple-skills](https://github.com/rshankras/claude-code-apple-skills) | rshankras | kisi |  | 905 | 4 | 2026-11-09 | MIT | 13 |
 | [nevertoday/350-layout-compositions](https://github.com/nevertoday/350-layout-compositions) | nevertoday | kisi |  | 895 | 1 | 2026-11-21 | NOASSERTION | 0 |
+| [howseen-ai/claude-motion-design](https://github.com/howseen-ai/claude-motion-design) | howseen-ai | kurum |  | 882 | 1 | 2026-10-04 | MIT | 1 |
 | [nexscope-ai/Amazon-Skills](https://github.com/nexscope-ai/Amazon-Skills) | nexscope-ai | kurum |  | 882 | 5 | 2026-11-11 | MIT | 52 |
 | [ythx-101/live-panel-skill](https://github.com/ythx-101/live-panel-skill) | ythx-101 | kisi |  | 875 | 4 | 2026-11-12 | MIT | 1 |
 | [arturitu/the-delegation](https://github.com/arturitu/the-delegation) | arturitu | kisi |  | 735 | 1 | 2026-04-16 | NOASSERTION | 0 |
@@ -159,6 +160,7 @@
 | [hamen/compose_skill](https://github.com/hamen/compose_skill) | hamen | kisi |  | 380 | 3 | 2026-07-15 | MIT | 2 |
 | [lemomo-ai/lemo-wake](https://github.com/lemomo-ai/lemo-wake) | lemomo-ai | kisi |  | 375 | 1 | 2026-10-17 | NOASSERTION | 3 |
 | [dpconde/claude-android-skill](https://github.com/dpconde/claude-android-skill) | dpconde | kisi |  | 362 | 1 | 2025-12-07 | MIT | 1 |
+| [tugrawork-creator/saas-motion-kit](https://github.com/tugrawork-creator/saas-motion-kit) | tugrawork-creator | kisi |  | 287 | 1 | 2026-10-04 | NOASSERTION | 1 |
 | [heygen-com/hyperframes-community-skills](https://github.com/heygen-com/hyperframes-community-skills) | heygen-com | kurum | ✅ | 286 | 3 | 2026-11-17 | Apache-2.0 | 7 |
 | [ParthJadhav/ios-marketing-capture](https://github.com/ParthJadhav/ios-marketing-capture) | ParthJadhav | kisi |  | 266 | 1 | 2026-09-05 | MIT | 1 |
 | [40RTY-ai/shopify-admin-skills](https://github.com/40RTY-ai/shopify-admin-skills) | 40RTY-ai | kurum |  | 205 | 3 | 2026-10-26 | MIT | 117 |

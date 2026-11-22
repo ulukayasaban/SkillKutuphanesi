@@ -74,7 +74,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 244 KB (SKILL.md 26.5 KB, yük buyuk)
 - **İnceleme:** otomatik
 
-### ads  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 84 (A)
+### ads  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 85 (A)
 
 - **Ne yapar:** Operate professional paid advertising across Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat, and X. Use for account intake, source-grounded audits, strategy, budget and measurement planning, creative production, experiments, reporting, monitoring, and explicitly approved campaign changes. Also trigger on PPC, paid social, retail media, attribution, t
 - **Teknoloji:** api-anahtari, html _(otomatik tespit)_
@@ -84,7 +84,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 239 KB (SKILL.md 19.4 KB, yük orta)
 - **İnceleme:** otomatik
 
-### ads-amazon  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-amazon  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Amazon Ads profiles, regions, Sponsored Products, Sponsored Brands, Sponsored Display, DSP, portfolios, targeting, search terms, retail readiness, creative, budgets, ACOS, TACOS, reporting, and policy. Use for Amazon Ads, sponsored ads, Amazon PPC, ACOS, TACOS, ASIN advertising, Amazon DSP, or retail-media optimization.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -94,7 +94,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-apple  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-apple  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Apple Ads measurement, AdServices and AdAttributionKit, campaign and keyword structure, Search Match, App Store placements, custom product pages, bidding, budgets, MMP reconciliation, and policy. Use for Apple Ads, Apple Search Ads, App Store ads, Search Match, custom product pages, AdServices, or Apple app-install campaigns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -104,7 +104,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-attribution  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-attribution  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit cross-platform attribution, conversion definitions, reporting windows, GA4, AdServices and AdAttributionKit, MMPs, browser and server events, offline conversions, and platform reconciliation. Use for attribution audit, attribution models, conversion windows, requests to add or total Meta and Google conversions, incompatible reporting-window aggregation, GA4 attribution, MMP review, AppsFlyer
 - **Teknoloji:** - _(otomatik tespit)_
@@ -114,7 +114,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-audit  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-audit  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Run a source-grounded paid-advertising audit for one or more of Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat, and X. Use for full ad checks, account health reviews, paid-media diagnostics, partial audits after authentication or worker failure, missing-platform weighting, beta-feature eligibility and scoring, spend audits, tracking audits, or priori
 - **Teknoloji:** html _(otomatik tespit)_
@@ -124,7 +124,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 7 KB (SKILL.md 6.5 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-budget  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-budget  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Plan and review paid-media budgets, bidding, pacing, marginal return, targets, constraints, and allocation across supported platforms. Use for ad budget allocation, media budget, bidding strategy, scaling, spend pacing, ROAS target, or investment tradeoffs. Use ads-math for calculations and forecasts.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -134,7 +134,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-competitor  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-competitor  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Research competitor paid-ad presence, messaging, creative, formats, landing pages, keyword and auction signals, transparent ad libraries, and strategic gaps across supported platforms. Use for competitor ads, ad libraries, ad spy, competitive PPC analysis, competitor creative, Google Ads Transparency, Meta Ad Library, or paid-media competitor research.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -144,7 +144,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-create  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-create  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Create source-grounded paid-ad campaign concepts, messaging, copy, creative briefs, and production plans from a validated brand profile, campaign objective, platform requirements, and optional audit evidence. Triggers on: campaign brief, campaign concepts, create a campaign, ad concepts, ad copy, ad messaging, creative brief, headlines, descriptions.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -154,7 +154,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-creative  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-creative  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit paid-ad copy, images, video, hooks, concepts, format coverage, platform-native fit, message match, creative fatigue, accessibility, and policy across supported platforms. Use for creative audit, ad creative, creative fatigue, creative diversity, ad copy review, video review, image review, or production priorities.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -164,7 +164,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-dna  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-dna  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Extract a public-safe brand and offer profile for paid advertising from an authorized website and operator input. Triggers on: brand DNA, brand profile, brand identity, brand style, brand colors, brand voice, visual identity, style guide, website brand analysis.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -174,7 +174,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-generate  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-generate  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Generate paid-ad image assets from a validated creative brief and brand profile using an explicitly configured image provider. Triggers on: generate ads, generate ad images, create ad creatives, create ad images, make ad images, generate visuals, make campaign visuals, generate images from campaign brief.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -184,7 +184,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-google  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-google  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Google Ads measurement, Search, Shopping, Performance Max, Demand Gen, YouTube-linked inventory, keywords and search terms, negative-keyword generation or review, creative assets, bidding, budgets, settings, and policy. Use for Google Ads, AdWords, Search campaigns, search terms reports, broad negatives, Shopping, Performance Max, PMax, Demand Gen, GAQL, or Google conversion tracking. Read-o
 - **Teknoloji:** - _(otomatik tespit)_
@@ -194,7 +194,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-landing  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-landing  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit paid-ad landing pages for message match, mobile experience, performance, accessibility, trust, forms, consent, tracking, security, and conversion friction. Use for landing-page audit, post-click experience, LP audit, conversion-rate optimization, form optimization, ad-to-page message match, redirects, blocked navigation, or requests involving private, loopback, link-local, or metadata IP des
 - **Teknoloji:** python _(otomatik tespit)_
@@ -204,7 +204,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-launch  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-launch  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Draft or explicitly apply a paid-ad campaign launch through Claude Ads capability-gated adapters. Use for campaign creation, launch plans, publishing ads, activating campaigns, uploading creative, or requests to push a campaign live.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -214,7 +214,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-linkedin  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-linkedin  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit LinkedIn Ads measurement, Insight Tag and conversions, professional audiences, lead generation, ABM, creative, bidding, budgets, pacing, automation, and policy. Use for LinkedIn Ads, Campaign Manager, Insight Tag, Lead Gen Forms, Thought Leader Ads, ABM campaigns, or B2B paid media.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -224,7 +224,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-math  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-math  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Calculate and model paid-media CPA, CPL, CPC, CPM, ROAS, MER, break-even targets, contribution margin, LTV:CAC, impression-share opportunity, budgets, forecasts, and experiment economics. Use for PPC math, ad calculator, break-even analysis, ROAS calculator, CPA calculator, budget forecast, LTV CAC, or MER.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -234,7 +234,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-meta  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-meta  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Meta Ads measurement, Pixel and Events Manager, attribution, Facebook and Instagram creative, audiences, placements, automation, budgets, account structure, and policy. Use for Meta Ads, Facebook Ads, Instagram Ads, Advantage+, Pixel, Events Manager, or Meta account structure. Read-only; use ads-server-side-tracking for server-side events and ads-optimize to change campaigns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -244,7 +244,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 4 KB (SKILL.md 3.7 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-microsoft  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-microsoft  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Microsoft Advertising measurement, UET, search and audience campaigns, Google imports, syndication, keywords, creative, bidding, budgets, Copilot inventory, and policy. Use for Microsoft Ads, Bing Ads, UET, Microsoft Audience Network, or Google Ads import. Read-only; use ads-optimize to change campaigns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -254,7 +254,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-monitor  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-monitor  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Monitor paid-ad account pacing, delivery, performance, creative fatigue, tracking, policy, and data quality across supported platforms. Use for daily or weekly checks, anomaly review, budget pacing, post-launch verification, or campaign monitoring.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -264,7 +264,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-optimize  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-optimize  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Diagnose and draft or explicitly apply paid-ad optimizations using evidence, financial constraints, experiments, and capability-gated adapters. Use for campaign optimization, budget reallocation, bid changes, pausing or archiving ads, requests to delete campaigns, search-term or negative-keyword actions, creative rotation, or improving CPA and ROAS.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -274,7 +274,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-photoshoot  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-photoshoot  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Generate rights-cleared paid-ad product photography variants from an authorized source image and validated brand profile. Triggers on: product photo, product photography, virtual photoshoot, photoshoot, enhance product image, studio shot, lifestyle shot, lifestyle product image, floating product image, ingredient shot.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -284,7 +284,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-pinterest  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-pinterest  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Pinterest Ads measurement, Pinterest Tag and Conversions API, catalog and shopping readiness, visual creative, audiences, Performance+ intent, budgets, brand safety, and reporting. Use for Pinterest Ads, promoted Pins, shopping ads, catalog sales, Pinterest Tag, Pinterest Conversions API, or Pinterest Performance+.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -294,7 +294,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-plan  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-plan  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Create a professional paid-advertising strategy covering objectives, economics, platform selection, campaign architecture, audiences, budget, creative, measurement, experiments, governance, rollout, and reporting. Use for ad plan, media plan, PPC strategy, paid-social strategy, campaign architecture, advertising roadmap, or channel planning.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -304,7 +304,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 27 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-reddit  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-reddit  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Reddit Ads measurement, campaign structure, community and interest targeting, creative-native fit, catalog advertising, budgets, brand safety, and reporting. Use for Reddit Ads, conversation ads, community targeting, Reddit Pixel, Reddit Conversions API, or Reddit dynamic product ads.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -314,7 +314,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-report  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-report  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Render Markdown, HTML, or PDF paid-advertising reports from a validated Claude Ads JSON run bundle. Use for ads report, client report, audit PDF, executive audience reporting, or exporting prior audit and plan results.
 - **Teknoloji:** html _(otomatik tespit)_
@@ -324,7 +324,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-research  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-research  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Refresh Claude Ads platform, API, policy, regulation, benchmark, issue, pull-request, fork, and repository evidence. Use for ads research refresh, expired refresh_due dates, stale API or platform claims, reverify-or-demote decisions, release-current claim validation, ecosystem review, current platform changes, or updating paid-media knowledge.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -334,7 +334,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.9 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-server-side-tracking  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-server-side-tracking  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit server-side paid-media measurement including server-side tag management, platform conversion APIs, event taxonomy, browser/server deduplication, consent, hashing, data quality, observability, and privacy. Use for server-side tracking, sGTM, server-side tagging, Meta CAPI, TikTok Events API, event_id, deduplication, pixel debugging, first-party measurement, or conversion data loss.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -344,7 +344,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-setup  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-setup  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Set up a paid-media client, account, data-source, privacy, and mutation-guardrail profile for Claude Ads. Use for onboarding, initial configuration, API tokens or credential profiles, environment-variable or keychain setup, connecting exports or read adapters, safe native or verified-local installation, curl-pipe-bash install requests, declaring KPIs, or preparing a new advertising project.
 - **Teknoloji:** api-anahtari _(otomatik tespit)_
@@ -354,7 +354,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.4 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-snapchat  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-snapchat  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit Snapchat Ads measurement, Snap Pixel and Conversions API, mobile and app campaigns, creative, AR and catalog formats, audiences, budgets, brand safety, and reporting. Use for Snapchat Ads, Snap Ads, Snap Pixel, Snapchat Conversions API, AR Lens ads, app-install campaigns, or Snapchat dynamic product ads.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -364,7 +364,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-test  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-test  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Design and evaluate paid-ad experiments with hypotheses, randomization units, sample-size and duration assumptions, guardrails, platform experiment tools, analysis, and decision rules. Use for A/B test, split test, experiment design, hypothesis, statistical significance, sample size, test duration, or experiment readout.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -374,7 +374,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-tiktok  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-tiktok  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit TikTok Ads measurement, Pixel, mobile-first creative, audiences, Smart+, Shop and commerce campaigns, bidding, budgets, pacing, attribution, and policy. Use for TikTok Ads, TikTok Pixel, Smart+, TikTok Shop Ads, GMV Max, or Spark Ads. Read-only; use ads-server-side-tracking for server-side events and ads-optimize to change campaigns.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -384,7 +384,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-validate  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-validate  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Validate Claude Ads contracts, scoring inputs, run bundles, capabilities, source freshness, safety, installation, uninstall, or release readiness. Use for ads validate, ads status, ads next, maturity checks, ownership-manifest uninstall, preserving unrelated ads-* skills, checksum verification, preflight, QA, or release audits.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -394,7 +394,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-x  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-x  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit X Ads measurement, X Pixel and Conversions API, campaign objectives, keyword and conversation targeting, creative, budgets, brand safety, app measurement, and reporting. Use for X Ads, Twitter Ads, promoted posts, X Pixel, X Conversions API, conversation targeting, or paid campaigns on X.
 - **Teknoloji:** - _(otomatik tespit)_
@@ -404,7 +404,7 @@ _Satış, pazarlama, müşteri desteği, marka sesi, CRM iş akışları_
 - **Boyut:** 2 KB (SKILL.md 1.8 KB, yük kucuk)
 - **İnceleme:** otomatik
 
-### ads-youtube  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 86 (A)
+### ads-youtube  ·  AgriciDaniel/claude-ads @ fc3908e  ·  puan 87 (A)
 
 - **Ne yapar:** Audit YouTube Ads campaign setup, video inventory, Shorts, in-stream, CTV, creative, audiences, brand safety, bidding, and measurement. Use for YouTube Ads, video ads, pre-roll, bumper ads, skippable in-stream, Shorts ads, VAC migration, or CTV. Read-only; use ads-google for Google-managed campaign types and ads-optimize to change campaigns.
 - **Teknoloji:** - _(otomatik tespit)_

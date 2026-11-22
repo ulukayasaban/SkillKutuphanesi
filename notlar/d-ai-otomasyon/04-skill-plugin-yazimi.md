@@ -2,7 +2,7 @@
 
 _Skill yazma, plugin/hook/komut geliştirme_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/53**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **12/55**
 
 ### agent-development  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 100 (A)
 
@@ -45,7 +45,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 10 KB (SKILL.md 10.1 KB, yük orta)
 - **İnceleme:** otomatik
 
-### business-motion-film  ·  echris6/motion-video-kit @ e4b1c00  ·  puan 78 (B)
+### business-motion-film  ·  echris6/motion-video-kit @ e4b1c00  ·  puan 79 (B)
 
 - **Ne yapar:** Plan, build and quality-check a premium short commercial for a real business (roofing, property, ecommerce, B2B software) using AI-generated footage, code-built motion (HTML/GSAP), selective Three.js and an independent-critic "Gauntlet" loop. Use when asked to make a launch-style / SaaS-style video, business ad, explainer, sample reel or pitch video, or to review and improve one. Encodes motion pr
 - **Teknoloji:** api-anahtari, gsap, html, python, three.js _(otomatik tespit)_
@@ -197,7 +197,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 63 KB (SKILL.md 15.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil, hook grubunda). Anthropic resmi; tüm olaylar, girdi/çıktı şemaları ve test betikleri tek yerde. hookify kuralına göre daha güçlü ama daha zahmetli.
 
-### i-have-adhd  ·  ayghri/i-have-adhd @ 1ecea19  ·  puan 92 (A)
+### i-have-adhd  ·  ayghri/i-have-adhd @ 1ecea19  ·  puan 93 (A)
 
 - **Ne yapar:** Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until "stop adhd mode".
 - **Teknoloji:** api-anahtari, node, typescript _(otomatik tespit)_
@@ -245,6 +245,16 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 221 KB (SKILL.md 21.0 KB, yük orta)
+- **İnceleme:** otomatik
+
+### motion-design@howseen-ai  ·  howseen-ai/claude-motion-design @ 3d90d34  ·  puan 70 (B)
+
+- **Ne yapar:** Code-only motion design pipeline (no After Effects) for Raphaël / Howseen: launch films, showreels, product promos, LinkedIn/X videos, meme clips. Use when asked to make a motion design video, a promo/launch film, a showreel, \"remake this video\", a video from a prompt (e.g. \"make a 15s motion graphics video…\"), to change a video's music/SFX, or to prepare memes for posts. Covers the brief → be
+- **Teknoloji:** canvas, css, ffmpeg, gsap, html, lottie, motion, next.js, node, playwright, python, react, remotion, webgl _(otomatik tespit)_
+- **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
+- **Geliştirici:** howseen-ai (kurum, ★882, son güncelleme 2026-10-04, lisans MIT)
+- **Durum:** alternatif
+- **Boyut:** 72 KB (SKILL.md 33.1 KB, yük buyuk)
 - **İnceleme:** otomatik
 
 ### ncr-writeup  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 100 (A)
@@ -390,13 +400,23 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Boyut:** 8 KB (SKILL.md 8.3 KB, yük orta)
 - **İnceleme:** otomatik
 
+### saas-motion-video  ·  tugrawork-creator/saas-motion-kit @ bc7a414  ·  puan 66 (B)
+
+- **Ne yapar:** Make a promo / motion video for a software product with HyperFrames, using the saas-motion-kit 7-stage process (brief → components → theme → storyboard → build → sound → deliver), the clean-or-imaginary component rule, the creative muscle (tone matrix, variety rules, component forge, transition atlas, variety audit) and the 101-theme gallery in docs/. Use when someone asks for a launch video, prod
+- **Teknoloji:** css, html, node, python _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** tugrawork-creator (kisi, ★287, son güncelleme 2026-10-04, lisans NOASSERTION)
+- **Durum:** tercih
+- **Boyut:** 5 KB (SKILL.md 5.2 KB, yük kucuk)
+- **İnceleme:** otomatik
+
 ### skill-creator@anthropics  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 98 (A)
 
 - **Ne yapar:** Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.
 - **Teknoloji:** html, node, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
-- **Durum:** tercih
+- **Durum:** alternatif
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** otomatik
 
@@ -407,7 +427,7 @@ _Skill yazma, plugin/hook/komut geliştirme_
 - **Teknoloji:** python, markdown · **Paketler:** python3, claude CLI (eval döngüsü için)
 - **Claude / Codex:** tam / tam
 - **Geliştirici:** anthropics (kurum, resmî, ★198456, son güncelleme 2026-11-16, lisans yok)
-- **Durum:** alternatif · **Örtüşme:** skill-yazimi → birincil · **Roller:** skill-gelistirici
+- **Durum:** tercih · **Örtüşme:** skill-yazimi → birincil · **Roller:** skill-gelistirici
 - **Boyut:** 220 KB (SKILL.md 32.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT (birincil). Dört sürüm arasında en güncel ve tek ölçme/eval altyapısı olan Anthropic resmi sürüm. heyitsnoah kopyası bununla aynı (yalnızca NOTICE/LICENSE farkı); composiohq ve freshtechbro eski 'init_skill + package' sürümü. writing-skills tamamlayıcı (baskı testi/TDD yaklaşımı).
 

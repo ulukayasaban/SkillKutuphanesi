@@ -2228,6 +2228,35 @@
         "tarih": "2026-11-22",
         "commit": "e4b1c0004080fe6a0deb883631bad5eba1e5f339"
       }
+    },
+    {
+      "repo": "howseen-ai/claude-motion-design",
+      "oncelik": 3,
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "1 SKILL.md (motion-design, alternatif)",
+      "eklendi": "2026-11-22",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-22",
+        "oturum": "Kullanici onayiyla toplu onay kuyrugundan eklendi",
+        "commit": "3d90d349ef3fdde9b7e89de4df4a2159c9e8697f"
+      }
+    },
+    {
+      "repo": "tugrawork-creator/saas-motion-kit",
+      "oncelik": 2,
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "1 SKILL.md (saas-motion-video, HyperFrames)",
+      "eklendi": "2026-11-22",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-22",
+        "oturum": "Kullanici onayiyla toplu onay kuyrugundan eklendi (lisans MIT)",
+        "commit": "bc7a414d6b66ceb09dfaa511e6237f382571bc84",
+        "lisans_onay": "LICENSE dosyasinda MIT metni dogrulandi (saas-motion-kit contributors)"
+      }
     }
   ],
   "konum_haric": [

@@ -2,12 +2,12 @@
 
 > `araclar/kapsam-denetimi.py` üretir · 2026-11-22 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7713 · Arşivdeki skill kaydı: 2927 · Bileşen (komut/agent): 341
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7716 · Arşivdeki skill kaydı: 2931 · Bileşen (komut/agent): 341
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
 | fihristte | 3462 | fihristte (arşive alınmadı; kurulumda kaynaktan alınır) |
-| secildi | 2876 | arşivde (ana sürüm) |
+| secildi | 2879 | arşivde (ana sürüm) |
 | haric | 1183 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 130 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 26 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
@@ -84,6 +84,7 @@
 | dpconde/claude-android-skill | 1 | secildi 1 |
 | dreammis/social-auto-upload | 18 | secildi 18 |
 | earthtojake/text-to-cad | 8 | secildi 8 |
+| echris6/motion-video-kit | 1 | secildi 1 |
 | ehmo/platform-design-skills | 8 | secildi 8 |
 | evanca/flutter-ai-rules | 36 | secildi 36 |
 | expo/skills | 25 | secildi 24, haric 1 |
@@ -100,6 +101,7 @@
 | heygen-com/hyperframes | 29 | secildi 15, haric 8, ayna-ayni 6 |
 | heygen-com/hyperframes-community-skills | 8 | secildi 7, haric 1 |
 | heyitsnoah/claudesidian | 20 | secildi 20 |
+| howseen-ai/claude-motion-design | 1 | secildi 1 |
 | jazzychad/ios-code-audit | 1 | secildi 1 |
 | kajisho5/ffmpeg-skill | 19 | haric 18, secildi 1 |
 | krillinai/OpenCreator | 15 | haric 8, secildi 7 |
@@ -136,6 +138,7 @@
 | shadcn-labs/snapcn | 17 | haric 10, secildi 7 |
 | teng-lin/notebooklm-py | 1 | secildi 1 |
 | tt-a1i/archify | 5 | secildi 5 |
+| tugrawork-creator/saas-motion-kit | 1 | secildi 1 |
 | tuist/fuckingapproachableswiftconcurrency | 1 | secildi 1 |
 | tuzhechen2005/opus-video-skills | 2 | secildi 2 |
 | twostraws/SwiftData-Agent-Skill | 1 | secildi 1 |
@@ -190,14 +193,14 @@
 - **nateherkai/herk-edit-kit**: `.agents/skills/gsap/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/hyperframes-cli/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/hyperframes-registry/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.agents/skills/website-to-hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/gsap/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/hyperframes-cli/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/hyperframes-registry/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/), `.claude/skills/website-to-hyperframes/SKILL.md` (^(\.claude|\.agents)/skills/(hyperframes|hyperframes-cli|hyperframes-registry|gsap|website-to-hyperframes)/)
 - **AgriciDaniel/claude-seo**: `extensions/ahrefs/skills/seo-ahrefs/SKILL.md` (^extensions/), `extensions/banana/skills/seo-image-gen/SKILL.md` (^extensions/), `extensions/bing-webmaster/skills/seo-bing/SKILL.md` (^extensions/), `extensions/dataforseo/skills/seo-dataforseo/SKILL.md` (^extensions/), `extensions/firecrawl/skills/seo-firecrawl/SKILL.md` (^extensions/), `extensions/matomo/skills/seo-matomo/SKILL.md` (^extensions/), `extensions/posthog/skills/seo-posthog/SKILL.md` (^extensions/), `extensions/profound/skills/seo-profound/SKILL.md` (^extensions/), `extensions/seranking/skills/seo-seranking/SKILL.md` (^extensions/), `extensions/shopify/skills/seo-shopify/SKILL.md` (^extensions/), `extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md` (^extensions/)
 - **OpenMontageInc/OpenMontage**: `.agents/skills/hyperframes-animation/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-cli/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-core/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-creative/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-media/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes-registry/SKILL.md` (arsivden-cikarildi), `.agents/skills/hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/media-use/SKILL.md` (arsivden-cikarildi), `.agents/skills/motion-graphics/SKILL.md` (arsivden-cikarildi), `.agents/skills/music-to-video/SKILL.md` (arsivden-cikarildi), `.agents/skills/remotion-to-hyperframes/SKILL.md` (arsivden-cikarildi), `.agents/skills/website-to-video/SKILL.md` (arsivden-cikarildi), `.claude/skills/web-design-guidelines/SKILL.md` (arsivden-cikarildi)
-- **anthropics/claude-plugins-official**: `external_plugins/discord/skills/access/SKILL.md` (^external_plugins/), `external_plugins/discord/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/access/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/access/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/configure/SKILL.md` (^external_plugins/), `plugins/example-plugin/skills/example-command/SKILL.md` (^plugins/example-plugin/), `plugins/example-plugin/skills/example-skill/SKILL.md` (^plugins/example-plugin/)
-- **anthropics/skills**: `template/SKILL.md` (^template/)
 - **digitalsamba/claude-code-video-toolkit**: `.claude/skills/remotion-official/SKILL.md` (^\.claude/skills/remotion-official/)
 - **expo/skills**: `.claude/skills/expo-skill-eval/SKILL.md` (^\.claude/)
 - **google/skills**: `plugins/cloud/google-cloud-developer/skills/finding-google-skills/SKILL.md` (/finding-google-skills/), `plugins/cloud/google-cloud-developer/skills/gcloud/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-auth/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-onboarding/SKILL.md` (^plugins/), `plugins/cloud/google-cloud-developer/skills/retrieving-developer-knowledge/SKILL.md` (^plugins/), `plugins/health/google-health-developer/skills/finding-google-skills/SKILL.md` (/finding-google-skills/), `skills/developers/finding-google-skills/SKILL.md` (/finding-google-skills/)
 - **heygen-com/hyperframes**: `registry/blocks/canopy-part-title/SKILL.md` (^registry/blocks/), `registry/blocks/code-slice-hero/SKILL.md` (^registry/blocks/), `registry/blocks/cuboid-carousel/SKILL.md` (^registry/blocks/), `registry/blocks/frost-sequence-camera-orbit/SKILL.md` (^registry/blocks/), `registry/blocks/glass-shard-title/SKILL.md` (^registry/blocks/), `registry/blocks/orbit-card/SKILL.md` (^registry/blocks/), `registry/blocks/wireframe-portal-title/SKILL.md` (^registry/blocks/), `scripts/fixtures/registry-pinned-command/SKILL.md` (^scripts/fixtures/)
 - **morluto/rea**: `.agents/skills/rea-analysis-optimization/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-changelog-update/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-ci-tests-audit/SKILL.md` (^\.agents/skills/rea-), `.agents/skills/rea-tool-design/SKILL.md` (^\.agents/skills/rea-)
 - **pbakaus/impeccable**: `tests/oracle/workspaces/ctx-pin/.agents/skills/impeccable/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.claude/skills/audit/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.claude/skills/impeccable/SKILL.md` ((^|/)tests?/), `tests/oracle/workspaces/ctx-pin/.cursor/skills/impeccable/SKILL.md` ((^|/)tests?/)
+- **anthropics/skills**: `template/SKILL.md` (^template/)
+- **anthropics/claude-plugins-official**: `external_plugins/discord/skills/access/SKILL.md` (^external_plugins/), `external_plugins/discord/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/access/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/access/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/configure/SKILL.md` (^external_plugins/), `plugins/example-plugin/skills/example-command/SKILL.md` (^plugins/example-plugin/), `plugins/example-plugin/skills/example-skill/SKILL.md` (^plugins/example-plugin/)
 
 ## Karar bekleyen yeni skiller (1)
 

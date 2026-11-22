@@ -2,7 +2,7 @@
 
 _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım denetimi_
 
-> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/39**
+> `araclar/katalog-uret.py` üretir; elle düzenleme. İnceleme bilgileri `registry.json`'a yazılır (bkz. `rehber/07-kategori-inceleme.md`). İncelenen: **6/40**
 
 ### accessibility-review  ·  anthropics/knowledge-work-plugins @ 0e0fcac  ·  puan 100 (A)
 
@@ -128,6 +128,16 @@ _Görsel dil, layout, tipografi, renk, 'AI görünümünden kaçış', tasarım 
 - **Durum:** tercih · **Örtüşme:** web-gorsel-yon → tamamlayıcı · **Roller:** ui-tasarimci, frontend-muhendis
 - **Boyut:** 9 KB (SKILL.md 9.2 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kısa (9 KB) ve bağlam dostu. anthropics/skills kopyasıyla SKILL.md birebir aynı; bu kopyada SKILL.md'nin andığı LICENSE.txt yok (lisans metni alternatif kopyada). Rol adları id ile eşleştiği için tercih bu kopyada bırakıldı.
+
+### frontend-design@anthropics-3  ·  anthropics/claude-plugins-official @ 73c8cf3  ·  puan 100 (A)
+
+- **Ne yapar:** Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.
+- **Teknoloji:** css _(otomatik tespit)_
+- **Claude / Codex:** tam / tam
+- **Geliştirici:** anthropics (kurum, resmî, ★47910, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Durum:** alternatif
+- **Boyut:** 19 KB (SKILL.md 9.2 KB, yük orta)
+- **İnceleme:** otomatik
 
 ### frontend-design@nexu-io  ·  nexu-io/open-design @ e033aad  ·  puan 97 (A)
 

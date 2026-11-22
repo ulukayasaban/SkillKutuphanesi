@@ -113,7 +113,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 1433 KB (SKILL.md 7.3 KB, yük kucuk) · **Bağımlılık:** Node, headless Chrome ve ffmpeg gerekir (p5.js + p5.brush / three.js ile kare kare çizim); ilk kullanımda npm paketleri kurulur.
 - **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT. 'Gerçekler kutsaldır' ilkesi (yalnız kaynaktaki rakamlar, şematik olanlar HUD'da SCHEMATIC etiketli, tıbbi işte etkililik iddiası yok), sağlam çalışma akışı ve çalıştırılabilir şablon. Sabit yol: SKILL.md:22'deki bash ~/.claude/skills/kinetic-reel/scripts/new_project.sh kurulumda proje içi yola çevrilir. Ücret: ucretsiz. Lisans: MIT (LICENSE okundu; GitHub NOASSERTION; render.mjs kısmı John Heibel MIT notuyla). Güvenlik: DİKKAT (orta) — new_project.sh npm paketleri kurar (ilk kullanımda), başsız Chrome ve ffmpeg çalıştırır; anahtar yok. Örtüşme: kodla-showreel grubunda birincil (self-contained şablonlu); motion-showreel alternatif.
 
-### layers  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 65 (B)
+### layers  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 66 (B)
 
 - **Ne yapar:** Split one image into editable layers (PSD + PNG). 把一张图拆成图层（PSD + PNG）。
 - **Teknoloji:** api-anahtari, canvas, python _(otomatik tespit)_
@@ -365,7 +365,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 16 KB (SKILL.md 8.0 KB, yük orta) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Fidelity katmanları ve kalite kapıları titiz yazılmış. Dikkat: OpenMontage kurulumu ve threejs_world aracı şart (~/.openmontage/tools/graphics/threejs_world.py mevcut); 3d-asset-generation, hyperframes-* skillerine atıf yapıyor; kategori olarak video hattına yakın ama Three.js içeriği nedeniyle burada kalabilir. Kategori düzeltildi (05-3d-webgl → g-video-ses-medya/04-motion-graphics-karakter): web 3D'si değil, OpenMontage video boru hattının parçası (tools.graphics.threejs_world).
 
-### upload  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 67 (B)
+### upload  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 68 (B)
 
 - **Ne yapar:** Share a film to the lemo-wake gallery. 把动图投稿到作品墙。
 - **Teknoloji:** git, python _(otomatik tespit)_
@@ -386,7 +386,7 @@ _Motion graphics, Manim, karakter animasyonu/rig, görsel stil_
 - **Boyut:** 81 KB (SKILL.md 6.1 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Pratik mod tablosu ve galeri; a-tasarim/02 tasarım sistemi skilleriyle kısmen örtüşür.
 
-### wake  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 65 (B)
+### wake  ·  lemomo-ai/lemo-wake @ f070df8  ·  puan 66 (B)
 
 - **Ne yapar:** Turn one image into a ~5 s looping animation. 把一张图做成约 5 秒的循环动图。
 - **Teknoloji:** api-anahtari, canvas, ffmpeg, html, node, python, react, three.js _(otomatik tespit)_
