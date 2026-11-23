@@ -4,7 +4,7 @@
 
 ## e-ticaret → `h-is-alanlari/05-e-ticaret-pazaryeri`
 
-Son tarama: 2026-11-22 · eşleşen repo: 1525 · kütüphanede: 19 · değerlendirilmiş: 103 · **odaklı aday: 13** · dolaylı eşleşme: 585 (★10 altı 810 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-22 · eşleşen repo: 1525 · kütüphanede: 20 · değerlendirilmiş: 104 · **odaklı aday: 13** · dolaylı eşleşme: 584 (★10 altı 810 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
@@ -152,6 +152,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | dadederk/iOS-Accessibility-Agent-Skill | eklendi | 2026-10-22 | iOS erişilebilirlik. |
 | darkroomengineering/react-lenis | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: Eski sarmalayıcı (v0.0.37); güncel Lenis paketi lenis/react kullanılır; güven 13 D |
 | davepoon/buildwithclaude | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
+| davila7/claude-code-templates | eklendi | 2026-11-24 | dev-koleksiyon fihrist/davila7__claude-code-templates.json olarak eklendi |
 | diegosouzapw/awesome-omni-skill | reddedildi | 2026-10-22 | Toplama/ayna |
 | diegosouzapw/awesome-omni-skills | reddedildi | 2026-10-22 | Toplama/ayna |
 | digitalsamba/claude-code-video-toolkit | eklendi | 2026-11-15 | T2 kaynak olarak eklendi (16 skill, 2 birebir kopya); program olarak da izlenecek |

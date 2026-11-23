@@ -1,6 +1,6 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-22 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-24 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
 **Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7716 · Arşivdeki skill kaydı: 2931 · Bileşen (komut/agent): 341
 
@@ -165,7 +165,7 @@
 
 ## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)
 
-6 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: jacob-bd/gemini-notebook-mcp-cli, openai/plugins, ruvnet/ruflo, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum, xjli360/sealeap-amazon-skills
+7 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: davila7/claude-code-templates, jacob-bd/gemini-notebook-mcp-cli, openai/plugins, ruvnet/ruflo, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum, xjli360/sealeap-amazon-skills
 
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 

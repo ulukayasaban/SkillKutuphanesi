@@ -2257,6 +2257,20 @@
         "commit": "bc7a414d6b66ceb09dfaa511e6237f382571bc84",
         "lisans_onay": "LICENSE dosyasinda MIT metni dogrulandi (saas-motion-kit contributors)"
       }
+    },
+    {
+      "repo": "davila7/claude-code-templates",
+      "oncelik": 3,
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "915 SKILL.md (>= 200, dev koleksiyon)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Trend dev-koleksiyon fihrist kaydi",
+        "commit": "b3ef82024a085acfc214f6ad76a41ceb308c4d35"
+      }
     }
   ],
   "konum_haric": [
