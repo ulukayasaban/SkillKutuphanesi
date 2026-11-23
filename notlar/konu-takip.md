@@ -4,53 +4,37 @@
 
 ## e-ticaret → `h-is-alanlari/05-e-ticaret-pazaryeri`
 
-Son tarama: 2026-11-22 · eşleşen repo: 1525 · kütüphanede: 20 · değerlendirilmiş: 104 · **odaklı aday: 13** · dolaylı eşleşme: 584 (★10 altı 810 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-22 · eşleşen repo: 1525 · kütüphanede: 22 · değerlendirilmiş: 111 · **odaklı aday: 5** · dolaylı eşleşme: 584 (★10 altı 810 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
-| thatrebeccarae/claude-marketing | 209 | MIT | 2026-05-14 | 5 | shopify, tiktok shop, ecommerce, e-commerce, google merchant | - | A full marketing department for Claude Code. Skill packs for Klaviyo, Shopify, GA4, Looker Studio, paid media, and more. Audit, optimize, an |
-| AJbeckliy/detail-flow-V2-Ajie | 307 | yok | 2026-11-14 | 1 | ecommerce, print on demand, order management | - | A reusable Codex skill for planning, generating, auditing, and delivering ecommerce product detail pages. |
-| woocommerce/woocommerce-ios | 357 | GPL-2.0 | 2026-11-21 | 7 | woocommerce | - | WooCommerce iOS app |
 | beyondtahir/beyondwords | 169 | MIT | 2026-11-14 | 1 | etsy | - | A goal-driven AI book production house for Amazon KDP: research niches, create books, publish, manage ads and deliver client services. |
 | xianyu110/ecommerce-video-skills | 152 | MIT | 2026-10-05 | 2 | tiktok shop | - | 12 个电商短视频 Agent Skills：3秒钩子、卖点分镜、图生视频提示词、edge-tts 配音、字幕花字、ffmpeg 自动成片、抖音/TikTok Shop/视频号导出、直播切片、多语言配音、封面A/B · Claude Code / Codex / Cursor |
 | motiful/product-shots | 151 | MIT | 2026-06-08 | 1 | tiktok shop | - | Open-source Claude Code skills that turn one product photo into a full set of e-commerce visuals — main images, A+ detail pages, multi-angle |
 | kangise/ecommerce-ai-skills | 119 | CC0-1.0 | 2026-11-16 | 1 | tiktok shop | - | Cross-border e-commerce AI knowledge base, read by people and installed by agents: 69 trilingual guides, 878 prompts, a 100-entity / 322-con |
-| tanujrajputdev/shopify-theme-audit-skill | 46 | MIT | 2026-11-13 | 1 | shopify | - | Claude Code skill that audits any Shopify theme for performance, SEO, AEO, and GEO in 90 seconds. 80+ checks, scored report, paste-in Liquid |
-| maton-ai/api-gateway-skill | 34 | MIT | 2026-11-07 | 1 | google merchant | - | API gateway with managed auth. Connect your AI to Slack, HubSpot, Salesforce, Google Workspace, Shopify, and more with a single API key. |
 | hooper-lee/crosspulse | 29 | MIT | 2026-06-06 | 1 | tiktok shop | - | 🔥 跨境电商大盘监控工作流 — 定时追踪 Amazon、TikTok Shop、Temu、SHEIN、Shopify 等平台政策变化、爆品趋势、类目机会，自动清洗后沉淀到飞书多维表格，生成每日市场日报。 |
-| adanghd/sender-kalopilot-skill | 24 | yok | 2026-04-11 | 1 | tiktok shop | - | Claude Skill Untuk kirim data produk, Video, Toko dari Tiktokshop |
-| chnjames/tradehot-skill | 23 | yok | 2026-06-17 | 1 | tiktok shop | - | 外贸 HOT Skill — 面向跨境电商和出口企业的中文情报工具，把分散的外贸信息整理成可执行的业务简报。支持日报、平台政策、HS Code、关税速查、风险预警等 9 种报告类型。 |
-| misty1999sd/amazon-image-design-skill | 12 | yok | 2026-11-01 | 1 | product listing | - | Codex skill for Amazon listing image design, competitor-informed creative planning, and product fidelity checks. |
 
 ## mobil → `b-yazilim-gelistirme/08-mobil-uygulama`
 
-Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlendirilmiş: 94 · **odaklı aday: 13** · dolaylı eşleşme: 265 (★20 altı 648 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlendirilmiş: 103 · **odaklı aday: 1** · dolaylı eşleşme: 264 (★20 altı 648 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
-| ceorkm/mobile-app-ui-design | 577 | yok | 2026-10-28 | 1 | react native, swiftui, flutter | - | Professional mobile app UI/UX design skill for Claude Code |
-| arindamxd/camerax-android | 134 | Apache-2.0 | 2026-10-02 | 2 | jetpack compose, kotlin multiplatform | - | A Play Store camera app showing Jetpack CameraX APIs in Kotlin — install it, use it, copy the patterns. |
-| tddworks/baguette | 2344 | Apache-2.0 | 2026-11-21 | 1 | swiftui | - | Headless control for iOS simulators, real iPhones and Android emulators — 3D models, taps, swipes, multi-finger gestures, 60 fps streaming,  |
-| chrisbanes/skills | 1164 | Apache-2.0 | 2026-11-21 | 1 | kotlin multiplatform | - | Skills for Kotlin, Jetpack Compose, and Android development |
-| Prisma-Labs-Dev/apple-skills | 359 | MIT | 2026-09-26 | 2 | swiftui | - | Apple development skills for Claude Code and Codex — latest iOS 26+ APIs, SwiftUI, Liquid Glass, and more |
-| smyrgeorge/sqlx4k | 323 | MIT | 2026-11-16 | 1 | kotlin multiplatform | - | A coroutine-first SQL toolkit with compile-time query validations for Kotlin Multiplatform. PostgreSQL, MySQL/MariaDB, and SQLite supported. |
-| PatilShreyas/debroid | 277 | Apache-2.0 | 2026-11-14 | 1 | jetpack compose | - | Autonomous, headless Android debugger designed for AI coding agents. Inspect runtime memory, set breakpoints, and debug live apps. |
-| ecency/vision-mobile | 262 | MIT | 2026-11-21 | 1 | kotlin multiplatform | - | Ecency Mobile - reimagined social blogging, contribute and get rewarded (for Android and iOS) |
 | ukanhaupa/projx | 71 | MIT | 2026-11-02 | 1 | flutter | - | Projx — A CLI tool for scaffolding production-grade projects. Pick your stack (FastAPI, Fastify, React, Flutter), get a fully wired template |
-| abacusai/simless | 53 | Apache-2.0 | 2026-11-18 | 1 | swiftui | - | Simulator-free, headless SwiftUI checks for AI coding agents: render screens as accessibility trees and hot-reload views in ~2 s, without th |
-| andrzejchm/fdb | 46 | MIT | 2026-10-26 | 1 | flutter | - | Flutter Debug Bridge - CLI for AI agents to interact with running Flutter apps on device |
-| namedtoaster/The-Last-Mile | 40 | MIT | 2026-11-18 | 1 | google play console | - | Claude Code skills that get your app into the App Store and Google Play. Rejection sweep, release build, store listing, upload. Any stack. |
-| better-i18n/oss | 21 | MIT | 2026-11-20 | 1 | flutter | - | Official TypeScript SDKs for Better i18n — Next.js, React, Expo/React Native integrations with CLI, MCP server, and CDN-powered translation  |
 
 ## İzlenenler (şimdilik değil; durum değişirse bak)
 
 | Repo | Tarih | Tekrar bak | Neden |
 |---|---|---|---|
+| PatilShreyas/debroid | 2026-11-24 | 2027-02-22 | Headless debugger araci, skill olgunlasmasi izleniyor |
 | Purple-Horizons/printful-mcp | 2026-11-07 | 2027-02-05 | Kullanıcı şu an Printful kullanmıyor ama ileride kullanabilir; kullanmaya başlarsa eklenir (MCP sunucusu gerektirir) |
 | VeryGoodOpenSource/vgv-ai-flutter-plugin | 2026-11-07 | 2027-02-05 | Mobil teknoloji henüz seçilmedi; Flutter seçilirse eklenir |
+| abacusai/simless | 2026-11-24 | 2027-02-22 | Headless SwiftUI render araci, yeni repo takipte |
+| andrzejchm/fdb | 2026-11-24 | 2027-02-22 | Flutter debug bridge CLI, skill paketi izleniyor |
 | echris6/motion-video-kit | 2026-11-17 | 2027-02-15 | düşük öncelik; benzer motion skilleri çok |
 | howseen-ai/claude-motion-design | 2026-11-17 | 2027-02-15 | Kullanıcı kararı 2026-11-17: kişisel iş klasörü yolu ve motion-design ad çakışması; durum değişirse bak |
 | iart-ai/explainer-video-skills | 2026-11-15 | 2027-02-13 | Tek katkıcı; içerik Haziran'dan beri değişmedi; yardımcı betikler skill klasörü dışında |
+| maton-ai/api-gateway-skill | 2026-11-24 | 2027-02-22 | Ucretli/anahtar bagimli gateway servisi |
 | storytold/pdfcraft | 2026-11-17 | 2027-02-15 | Kullanıcı kararı 2026-11-17: şimdilik değil, durum değişirse bak |
 | tugrawork-creator/saas-motion-kit | 2026-11-17 | 2027-02-15 | asıl içerik skill dizini dışında; dosya kapsamı kararı gerekir |
 | yusufkaran/swiftui-autotest-skill | 2026-11-07 | 2027-02-05 | Mobil teknoloji henüz seçilmedi; iOS/Swift seçilirse eklenir |
@@ -60,6 +44,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | Repo | Karar | Tarih | Neden |
 |---|---|---|---|
 | AJbeckliy/detail-flow | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
+| AJbeckliy/detail-flow-V2-Ajie | reddedildi | 2026-11-24 | Lisans dosyasi bulunmuyor |
 | AbubakrChan/product-launch-motion | eklendi | 2026-11-17 | Kullanıcı onayıyla eklendi 2026-11-17 (A3) |
 | Automattic/woocommerce-services | reddedildi | 2026-11-03 | skill değil: eklenti/CLI kodu |
 | BENZEMA216/ai-ecommerce-agent-skills | reddedildi | 2026-10-22 | Çince OpenClaw paketi, lisans belirsiz |
@@ -97,6 +82,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | ParthJadhav/ios-marketing-capture | eklendi | 2026-10-31 | iOS uygulama mağazası görsellerini çok dilli otomatik üretir. |
 | PrestaShop/PrestaShop | reddedildi | 2026-10-22 | Ürün reposu; içindeki skiller repo-içi geliştirici skilleri |
 | PrestaShopCorp/ps_mbo | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
+| Prisma-Labs-Dev/apple-skills | eklendi | 2026-11-24 | koleksiyon, arsiv (29 aktif SKILL.md, MIT) |
 | Reihantt6/sns-myagent | reddedildi | 2026-10-22 | Kişisel agent CLI, ilgi çok düşük |
 | RevenueCat/play-billing-skills | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
 | SerendipityOneInc/ZooData-Skills | reddedildi | 2026-11-03 | ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy) |
@@ -113,6 +99,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | abbesm0hamed/paydusa | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
 | abutun/claude-skill-aso-cosmicmeta-ss | reddedildi | 2026-11-07 | rshankras app-store/screenshot-planner aynı işi yapıyor |
 | abutun/etsy-seo-optimizer | reddedildi | 2026-11-07 | Lisans yok; Etsy API ile mağazaya yazıyor |
+| adanghd/sender-kalopilot-skill | reddedildi | 2026-11-24 | Lisans bulunmuyor ve yerel dil kisitli |
 | afadtc/afa-dtc-skills | reddedildi | 2026-10-22 | Çince DTC danışman seti, lisans belirsiz (NOASSERTION) |
 | ahmed3elshaer/everything-claude-code-mobile | reddedildi | 2026-11-03 | mevcut skillerle çakışıyor |
 | aiskillstore/marketplace | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
@@ -125,6 +112,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | androidx/androidx | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | anhvt52/jetpack-compose-skills | reddedildi | 2026-11-03 | mevcut skillerle çakışıyor |
 | apideck-libraries/api-skills | reddedildi | 2026-10-22 | Apideck ücretli Unified API'sine bağlı 543 bağlayıcı |
+| arindamxd/camerax-android | reddedildi | 2026-11-24 | 20 skill mukerrer android/skills, 1 skill repo-ici |
 | arjitj2/swiftui-design-principles | eklendi | 2026-10-31 | SwiftUI/WidgetKit tasarım ilkeleri. |
 | aronhy/tiktok-agent-skills | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | avenoxai/avenox-video-kurgu-notlari | eklendi | 2026-11-15 | Türkçe ajanla video kurgu metodolojisi (MIT); 2026-11-15 toplu video ekleme |
@@ -133,6 +121,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | ayush016/android-lead-agent-skills | reddedildi | 2026-11-03 | mevcut skillerle çakışıyor |
 | beshuaxian/higgsfield-seedance2-jineng | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | bethel-mark/ecom-listing-pro | reddedildi | 2026-11-03 | lisans yok |
+| better-i18n/oss | eklendi | 2026-11-24 | React/Expo/Flutter i18n urun-skil olarak eklendi |
 | bigcommerce/catalyst | reddedildi | 2026-10-22 | Repo-içi sürüm/dal skilleri |
 | bigcommerce/stencil-cli | reddedildi | 2026-11-03 | skill değil: eklenti/CLI kodu |
 | browser-use/video-use | eklendi | 2026-11-15 | Konuşmayla video kurgu + manim (MIT); 2026-11-15 toplu video ekleme |
@@ -143,6 +132,9 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | buluslan/review-analyzer-skill | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | burdiuz/react-native-codeditor | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | bytefer/awesome-nextjs | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: ★77 düz liste, güven 23 D, skill eşlemesi yok; Next.js için resmî vercel/next.js kaynağı var |
+| ceorkm/mobile-app-ui-design | reddedildi | 2026-11-24 | Fiziksel LICENSE dosyasi repoda yok |
+| chnjames/tradehot-skill | reddedildi | 2026-11-24 | Lisans bulunmuyor |
+| chrisbanes/skills | eklendi | 2026-11-24 | koleksiyon, arsiv (21 SKILL.md, Apache-2.0) |
 | codeyousef/summon | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | cometchat/calls-sdk-ios | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | congminh1254/shopee-sdk | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
@@ -158,6 +150,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | digitalsamba/claude-code-video-toolkit | eklendi | 2026-11-15 | T2 kaynak olarak eklendi (16 skill, 2 birebir kopya); program olarak da izlenecek |
 | dpearson2699/swift-ios-skills | reddedildi | 2026-11-03 | lisans sorunlu (PolyForm Perimeter rakip ürün kısıtı) |
 | duyet/pricetrack | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
+| ecency/vision-mobile | reddedildi | 2026-11-24 | Saf mobil istemci, skiller ic gelistirici repo-ici |
 | ehmo/platform-design-skills | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
 | ertugrulakben/HYRVE-AI | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
 | evanca/flutter-ai-rules | eklendi | 2026-10-22 | Flutter/Dart skilleri (mimari, Bloc, Firebase, erişilebilirlik). |
@@ -177,6 +170,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | heqiangdiao-wq/AI-Cross-Border-Ecommerce-Agent-Toolkit | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | heygen-com/hyperframes-community-skills | eklendi | 2026-11-17 | Kullanıcı onayıyla eklendi 2026-11-17 (A3) |
 | hi-manshu/charty | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| huytieu/COG-second-brain | eklendi | 2026-11-24 | dev-koleksiyon fihrist/huytieu__COG-second-brain.json olarak eklendi |
 | ilyautov/marketplaces-mcp-ru | reddedildi | 2026-11-03 | dil (Çince/Rusça) ya da Rus pazaryerleri |
 | itsncki-design/app-store-submission-auditor | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: Lisans yok (GitHub API doğrulandı), ★34, skill puanı 43 (kütüphanedeki en düşük), Mart'tan beri güncellenmedi; hiçbir role/projeye bağlı değil. Kullanıcı onayıyla (silme-adaylari.md #1). |
 | jamesrochabrun/ShaderKit | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
@@ -207,11 +201,13 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | mhaviv/Swift-FocusEngine-Agent-Skill | reddedildi | 2026-11-07 | Çok dar: tvOS/Apple odak yönetimi |
 | minhnv0807/ai-business-skills | reddedildi | 2026-10-22 | Genel pazarlama (VN/global); kütüphanedeki pazarlama skilleriyle örtüşüyor |
 | mirumee/nimara-ecommerce | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
+| misty1999sd/amazon-image-design-skill | reddedildi | 2026-11-24 | Lisans bulunmuyor |
 | mjmirza/app-store-compliance | reddedildi | 2026-11-07 | Standart dışı lisans (OpenRoots ORA); yohannescodes/apple-app-review-compliance aynı işi MIT ile yapıyor |
 | mmiani/kotlin-kmp-claude-agent-skills | eklendi | 2026-10-22 | Kotlin Multiplatform. Lisans belirsiz. |
 | modbender/skill-library-mcp | reddedildi | 2026-10-22 | Toplama/ayna kütüphane |
 | moiz-za/etsy-seller-seo-system | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
 | mvanhorn/printing-press-library | reddedildi | 2026-10-22 | CLI kütüphanesi, lisans yok; e-ticaret odaklı değil |
+| namedtoaster/The-Last-Mile | eklendi | 2026-11-24 | koleksiyon, arsiv (21 SKILL.md, MIT) |
 | nank1ro/solid | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | nateherkai/herk-edit-kit | eklendi | 2026-11-17 | Kullanıcı onayıyla eklendi 2026-11-17 (A3) |
 | nekomangaorg/Neko | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
@@ -236,14 +232,19 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | shen169/amazon-product-research-skill | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | sickn33/agentic-awesome-skills | reddedildi | 2026-10-22 | Toplama |
 | sirioberati/YouTube-AI-Video-Editing-System | eklendi | 2026-11-18 | kit; yalnız katalog kaydı (yeni tür süreci) |
+| smyrgeorge/sqlx4k | eklendi | 2026-11-24 | KMP/Android SQL toolkit urun-skil olarak eklendi |
 | spree/agent-skills | reddedildi | 2026-11-03 | ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy) |
 | superagents-lab/xcode27-skills | reddedildi | 2026-11-03 | lisans yok |
 | swiftwasm/Swift-Wasm-Agent-Skill | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | takahirom/roborazzi | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| tanujrajputdev/shopify-theme-audit-skill | eklendi | 2026-11-24 | tek-skil, arsiv (1 SKILL.md, MIT) |
 | tayormi/flutter-map | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| tddworks/baguette | eklendi | 2026-11-24 | urun-skil, arsiv (2 kullanici skili, Apache-2.0) |
+| thatrebeccarae/claude-marketing | eklendi | 2026-11-24 | koleksiyon, arsiv (56 SKILL.md, MIT) |
 | tomtoto757/ecomm-ai-skills-hub | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | tonydzi/second-brain-starter-kit | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
 | tovimx/maestro-mobile-testing-skill | reddedildi | 2026-11-07 | Lisans yok |
+| tradermonty/claude-trading-skills | eklendi | 2026-11-24 | dev-koleksiyon, fihrist (74 tekil skil, 10 bilesen, MIT) |
 | tuist/fuckingapproachableswiftconcurrency | eklendi | 2026-10-31 | Swift eşzamanlılığı (Tuist ekibi); skill src/ içinde. |
 | tungnk123/mobile-best-practices | reddedildi | 2026-11-07 | Açıklaması yok, belirsiz; 8 aydır güncellenmiyor |
 | tuzhechen2005/opus-video-skills | eklendi | 2026-11-17 | Kullanıcı onayıyla eklendi 2026-11-17 (A3) |
@@ -259,10 +260,12 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | vulpy-io/vulpy-commerce-core | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
 | vxcontrol/pentagi | reddedildi | 2026-11-15 | K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz |
 | w9uk5ie8v/LinkFoxSkills | reddedildi | 2026-10-22 | Çince, lisans yok, düşük ilgi |
+| wondelai/skills | eklendi | 2026-11-24 | dev-koleksiyon fihrist/wondelai__skills.json olarak eklendi |
 | woocommerce/agent-skills | reddedildi | 2026-10-22 | Repo-içi katkı skilleri (abilities API, eski PR denetimi), mağaza işi değil |
 | woocommerce/qit-cli | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
 | woocommerce/woocommerce-android | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
 | woocommerce/woocommerce-google-analytics-integration | reddedildi | 2026-11-03 | skill değil: eklenti/CLI kodu |
+| woocommerce/woocommerce-ios | reddedildi | 2026-11-24 | Saf iOS uygulamasi, skiller ic gelistirici repo-ici |
 | wubin1836/ai-hive-agent-skills | reddedildi | 2026-10-22 | Çince toplama (680 skill), düşük ilgi |
 | wzj177/ecommerce-image-suite | reddedildi | 2026-11-03 | dil (Çince/Rusça) ya da Rus pazaryerleri |
 | wzj177/shop-tryon-skill | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |

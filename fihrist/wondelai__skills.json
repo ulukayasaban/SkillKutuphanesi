@@ -1,0 +1,339 @@
+{
+  "repo": "wondelai/skills",
+  "commit": "c37678106e63ef1c5472d848fb3d8b8c5b33fafe",
+  "tarih": "2026-11-24",
+  "skil_sayisi": 66,
+  "skiller": [
+    {
+      "ad": "clean-code",
+      "aciklama": "Write readable, maintainable code through disciplined naming, small functions, and clean error handling. Use when the user mentions \"clean up this code\", \"this function is too long\", \"code smells\", \"naming conventions\", \"boy scout rule\", \"single responsibility\", or \"unit test quality\". Also trigger…",
+      "yol": "plugins/code-craftsmanship/skills/clean-code"
+    },
+    {
+      "ad": "domain-driven-design",
+      "aciklama": "Model software around the business domain using bounded contexts, aggregates, and ubiquitous language. Use when the user mentions \"domain modeling\", \"bounded context\", \"aggregate root\", \"ubiquitous language\", \"anti-corruption layer\", \"context mapping\", \"domain events\", \"strategic design\", \"the code…",
+      "yol": "plugins/code-craftsmanship/skills/domain-driven-design"
+    },
+    {
+      "ad": "harness-audit",
+      "aciklama": "Audit and harden a repository''s AI coding agent harness across the 6 Software Factory Stations (Intent, Harness, Loop, Graph, Verification, Release) and place it on the Autonomy Ladder (Level 0–5). Use when you need to: (1) audit a repo''s readiness for Claude Code, Codex, or Cursor using `@wondel…",
+      "yol": "plugins/code-craftsmanship/skills/harness-audit"
+    },
+    {
+      "ad": "pragmatic-programmer",
+      "aciklama": "Apply meta-principles of software craftsmanship: DRY, orthogonality, tracer bullets, and design by contract. Use when the user mentions \"best practices\", \"pragmatic approach\", \"broken windows\", \"tracer bullet\", \"software craftsmanship\", \"avoid technical debt\", \"code ownership\", or \"how do I become…",
+      "yol": "plugins/code-craftsmanship/skills/pragmatic-programmer"
+    },
+    {
+      "ad": "refactoring-patterns",
+      "aciklama": "Apply named refactoring transformations to improve code structure without changing behavior. Use when the user mentions \"refactor this\", \"code smells\", \"extract method\", \"replace conditional\", \"technical debt\", \"move method\", \"inline variable\", \"decompose conditional\", or \"clean up this messy code\"…",
+      "yol": "plugins/code-craftsmanship/skills/refactoring-patterns"
+    },
+    {
+      "ad": "software-design-philosophy",
+      "aciklama": "Manage software complexity through deep modules, information hiding, and strategic programming. Use when the user mentions \"module design\", \"API too complex\", \"shallow class\", \"complexity budget\", \"strategic vs tactical\", \"deep module\", \"information leakage\", \"pass-through method\", \"this code is ov…",
+      "yol": "plugins/code-craftsmanship/skills/software-design-philosophy"
+    },
+    {
+      "ad": "technical-documentation",
+      "aciklama": "Audit, write, and improve developer documentation using Google''s Developer Documentation Style Guide and Technical Writing courses. Use this skill for any documentation work, even when the user names no style guide: \"audit our docs\", \"review this README\", \"write a README\", \"getting started guide\",…",
+      "yol": "plugins/code-craftsmanship/skills/technical-documentation"
+    },
+    {
+      "ad": "working-with-legacy-code",
+      "aciklama": "Safely change and test untested codebases using Feathers'' \"Working Effectively with Legacy Code\". Use when the user mentions \"legacy code\", \"no tests\", \"untested codebase\", \"how do I test this\", \"seams\", \"characterization tests\", \"golden master\", \"sprout method\", \"afraid to change this code\", \"mon…",
+      "yol": "plugins/code-craftsmanship/skills/working-with-legacy-code"
+    },
+    {
+      "ad": "contagious",
+      "aciklama": "Engineer word-of-mouth and virality using the STEPPS framework (Social Currency, Triggers, Emotion, Public, Practical Value, Stories). Use when the user mentions \"go viral\", \"word of mouth\", \"shareable content\", \"social currency\", \"why people share\", \"referral program\", \"nobody is sharing it\", or \"…",
+      "yol": "plugins/marketing-cro/skills/contagious"
+    },
+    {
+      "ad": "cro-methodology",
+      "aciklama": "Audit websites and landing pages for conversion issues and design evidence-based A/B tests. Use when the user mentions \"landing page isnt converting\", \"conversion rate\", \"A/B test\", \"why visitors leave\", \"objection handling\", \"bounce rate\", \"conversion funnel\", \"increase signups\", or \"people add to…",
+      "yol": "plugins/marketing-cro/skills/cro-methodology"
+    },
+    {
+      "ad": "one-page-marketing",
+      "aciklama": "Build a complete marketing plan covering the full customer journey from stranger to raving fan. Use when the user mentions \"marketing plan\", \"marketing strategy\", \"target market\", \"USP\", \"lead nurture\", \"customer lifetime value\", \"PVP Index\", or \"I dont know where to start with marketing\". Also tri…",
+      "yol": "plugins/marketing-cro/skills/one-page-marketing"
+    },
+    {
+      "ad": "scorecard-marketing",
+      "aciklama": "Build quiz and assessment funnels that generate qualified leads at 30-50% conversion. Use when the user mentions \"quiz funnel\", \"scorecard\", \"lead magnet\", \"score-based segmentation\", or \"lead qualification\". Also trigger when designing self-assessment tools, building calculators or graders for mar…",
+      "yol": "plugins/marketing-cro/skills/scorecard-marketing"
+    },
+    {
+      "ad": "storybrand-messaging",
+      "aciklama": "Clarify brand messaging using narrative structure that positions the customer as hero. Use when the user mentions \"brand message\", \"website copy\", \"elevator pitch\", \"one-liner\", \"brand script\", \"StoryBrand framework\", \"customer as hero\", or \"my messaging isnt resonating\". Also trigger when rewritin…",
+      "yol": "plugins/marketing-cro/skills/storybrand-messaging"
+    },
+    {
+      "ad": "architecture-optimization",
+      "aciklama": "Guided journey from a working codebase grown slow and tangled to one measurably fast, cleanly bounded, and readable. Orchestrates eight skills phase by phase - working-with-legacy-code, clean-architecture, software-design-philosophy, refactoring-patterns, system-design, ddia-systems, release-it, pr…",
+      "yol": "plugins/metaskills/skills/architecture-optimization"
+    },
+    {
+      "ad": "conversion-optimization",
+      "aciklama": "Guided journey from a leaking conversion flow - landing page, signup, checkout, or in-app onboarding - to a measured, tested funnel. Orchestrates six skills phase by phase - lean-analytics, cro-methodology, storybrand-messaging, hundred-million-offers, influence-psychology, design-everyday-things -…",
+      "yol": "plugins/metaskills/skills/conversion-optimization"
+    },
+    {
+      "ad": "create-app",
+      "aciklama": "Guided journey from a raw app idea to a validated, cleanly architected first version that ships on a sustainable cadence. Orchestrates ten skills phase by phase - lean-startup, design-sprint, clean-architecture, domain-driven-design, clean-code, pragmatic-programmer, system-design, ios-hig-design,…",
+      "yol": "plugins/metaskills/skills/create-app"
+    },
+    {
+      "ad": "create-business",
+      "aciklama": "Guided journey from raw idea to a validated, positioned, priced business with a chosen beachhead. Orchestrates ten skills phase by phase - jobs-to-be-done, mom-test, design-sprint, lean-startup, good-strategy-bad-strategy, blue-ocean-strategy, obviously-awesome, hundred-million-offers, monetizing-i…",
+      "yol": "plugins/metaskills/skills/create-business"
+    },
+    {
+      "ad": "create-website",
+      "aciklama": "Guided journey from a blank page to a live, high-converting website, built message-first, then design, then conversion. Orchestrates ten skills phase by phase - one-page-marketing, storybrand-messaging, made-to-stick, top-design, web-typography, refactoring-ui, ux-heuristics, cro-methodology, score…",
+      "yol": "plugins/metaskills/skills/create-website"
+    },
+    {
+      "ad": "design-code-architecture",
+      "aciklama": "Guided journey from an app idea to a deliberate architecture: boundaries, domain model, data decisions, and resilience, making only the expensive-to-reverse decisions and deferring the rest. Orchestrates eight skills phase by phase - clean-architecture, domain-driven-design, system-design, ddia-sys…",
+      "yol": "plugins/metaskills/skills/design-code-architecture"
+    },
+    {
+      "ad": "grow-app",
+      "aciklama": "Guided journey from an app people sign up for and then quietly abandon to a sealed retention engine with a habit loop, an activated first run, and one metric the whole team trusts. Orchestrates eight skills phase by phase - hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-produ…",
+      "yol": "plugins/metaskills/skills/grow-app"
+    },
+    {
+      "ad": "grow-business",
+      "aciklama": "Guided journey from a business with lucky months to a repeatable growth engine that produces a forecast. Orchestrates nine skills phase by phase - one-page-marketing, hundred-million-offers, predictable-revenue, contagious, influence-psychology, crossing-the-chasm, cold-start-problem, lean-analytic…",
+      "yol": "plugins/metaskills/skills/grow-business"
+    },
+    {
+      "ad": "grow-website",
+      "aciklama": "Guided journey from a website with traffic it under-converts to a research-driven growth engine that captures more leads, persuades more buyers, sells a sharper offer, and earns referrals. Orchestrates eight skills phase by phase - cro-methodology, scorecard-marketing, storybrand-messaging, made-to…",
+      "yol": "plugins/metaskills/skills/grow-website"
+    },
+    {
+      "ad": "improve-app",
+      "aciklama": "Guided journey from a shipped app that works but feels rough to a product that fits the job, flows without friction, reads clearly, and persuades honestly. Orchestrates nine skills phase by phase - jobs-to-be-done, ux-heuristics, design-everyday-things, refactoring-ui, microinteractions, made-to-st…",
+      "yol": "plugins/metaskills/skills/improve-app"
+    },
+    {
+      "ad": "improve-business",
+      "aciklama": "Guided journey from a stalled, plateaued business to one with an honest diagnosis, a working operating rhythm, and offers repriced to real value. Orchestrates eight skills phase by phase - good-strategy-bad-strategy, traction-eos, high-output-management, team-topologies, drive-motivation, lean-anal…",
+      "yol": "plugins/metaskills/skills/improve-business"
+    },
+    {
+      "ad": "improve-code-quality",
+      "aciklama": "Guided journey from a working-but-untested vibe-coded prototype to a production-ready product with tests, clean structure, a business-rules boundary, and resilience at scale. Orchestrates nine skills phase by phase - working-with-legacy-code, clean-code, refactoring-patterns, software-design-philos…",
+      "yol": "plugins/metaskills/skills/improve-code-quality"
+    },
+    {
+      "ad": "improve-website",
+      "aciklama": "Guided journey from a live website that underperforms to a prioritized, evidence-backed backlog of conversion, usability, message, and speed fixes - each shipped as a testable experiment. Orchestrates eight skills phase by phase - cro-methodology, ux-heuristics, refactoring-ui, web-typography, stor…",
+      "yol": "plugins/metaskills/skills/improve-website"
+    },
+    {
+      "ad": "remove-technical-debt",
+      "aciklama": "Guided journey from a large aged codebase everyone fears to touch to one that is safe to change, legible, bounded, and resilient - paid down in place without a rewrite. Orchestrates eight skills phase by phase - working-with-legacy-code, refactoring-patterns, clean-code, software-design-philosophy,…",
+      "yol": "plugins/metaskills/skills/remove-technical-debt"
+    },
+    {
+      "ad": "37signals-way",
+      "aciklama": "Build lean, opinionated products using the 37signals philosophy from \"Getting Real\", \"Rework\", and \"Shape Up\". Use when the user mentions \"Getting Real\", \"Rework\", \"Shape Up\", \"37signals\", \"Basecamp method\", \"six-week cycles\", \"fixed time variable scope\", \"appetite vs estimates\", \"betting table\", \"…",
+      "yol": "plugins/product-innovation/skills/37signals-way"
+    },
+    {
+      "ad": "continuous-discovery",
+      "aciklama": "Build a weekly cadence of customer touchpoints using Opportunity Solution Trees, assumption mapping, and interview snapshots. Use when the user mentions \"continuous discovery\", \"opportunity solution tree\", \"weekly interviews\", \"assumption testing\", \"discovery habits\", \"product trio\", \"outcome-based…",
+      "yol": "plugins/product-innovation/skills/continuous-discovery"
+    },
+    {
+      "ad": "design-everyday-things",
+      "aciklama": "Apply foundational design principles: affordances, signifiers, constraints, feedback, and conceptual models. Use when the user mentions \"why is this confusing\", \"affordance\", \"error prevention\", \"discoverability\", \"human-centered design\", \"mental model\", \"mapping\", \"seven stages of action\", \"users…",
+      "yol": "plugins/product-innovation/skills/design-everyday-things"
+    },
+    {
+      "ad": "design-sprint",
+      "aciklama": "Run a structured 5-day process to prototype, test, and validate product ideas with real users. Use when the user mentions \"design sprint\", \"validate before we build\", \"rapid prototype\", \"test with users\", or \"should we build this\". Also trigger when a team is stuck in endless debate over a high-sta…",
+      "yol": "plugins/product-innovation/skills/design-sprint"
+    },
+    {
+      "ad": "inspired-product",
+      "aciklama": "Build empowered product teams using discovery and delivery dual-track. Use when the user mentions \"product discovery\", \"empowered teams\", \"feature factory\", \"opportunity assessment\", \"product vision\", \"product strategy\", \"what should we build\", or \"our roadmap is just a feature list\". Also trigger…",
+      "yol": "plugins/product-innovation/skills/inspired-product"
+    },
+    {
+      "ad": "lean-startup",
+      "aciklama": "Design MVPs, validated learning experiments, and pivot-or-persevere decisions using Build-Measure-Learn. Use when the user mentions \"MVP scope\", \"validated learning\", \"pivot or persevere\", \"vanity metrics\", \"test assumptions\", \"innovation accounting\", \"build-measure-learn\", \"minimum viable experime…",
+      "yol": "plugins/product-innovation/skills/lean-startup"
+    },
+    {
+      "ad": "jobs-to-be-done",
+      "aciklama": "Discover what customers truly need by analyzing the \"job\" they hire your product to do. Use when the user mentions \"customer discovery\", \"why customers churn\", \"what job does this solve\", \"competing against luck\", \"product-market fit\", \"switching behavior\", \"milkshake moment\", or \"functional vs emo…",
+      "yol": "plugins/product-strategy/skills/jobs-to-be-done"
+    },
+    {
+      "ad": "lean-analytics",
+      "aciklama": "Choose and audit startup metrics using Croll and Yoskovitz''s \"Lean Analytics\". Use when the user mentions \"what metrics should we track\", \"KPIs\", \"north star metric\", \"One Metric That Matters (OMTM)\", \"vanity metrics\", \"analytics dashboard\", \"DAU/MAU\", \"churn benchmark\", or \"measure product-market…",
+      "yol": "plugins/product-strategy/skills/lean-analytics"
+    },
+    {
+      "ad": "mom-test",
+      "aciklama": "Talk to customers without leading them using Mom Test rules: discuss their life not your idea, ask about specifics in the past, and talk less. Use when the user mentions \"customer interviews\", \"validate my idea\", \"users say they want it but dont buy\", \"leading questions\", \"The Mom Test\", \"customer…",
+      "yol": "plugins/product-strategy/skills/mom-test"
+    },
+    {
+      "ad": "monetizing-innovation",
+      "aciklama": "Design products and pricing around validated willingness to pay, from Ramanujam & Tacke''s \"Monetizing Innovation\". Use when the user mentions \"pricing\", \"how much should we charge\", \"willingness to pay\", \"pricing page\", \"packaging\", \"freemium vs free trial\", \"are we leaving money on the table\", \"n…",
+      "yol": "plugins/product-strategy/skills/monetizing-innovation"
+    },
+    {
+      "ad": "negotiation",
+      "aciklama": "Prepare and execute negotiations using tactical empathy, calibrated questions, and the Ackerman method. Use when the user mentions \"salary negotiation\", \"contract terms\", \"handling objections\", \"mirroring and labeling\", \"difficult conversation\", \"deal terms\", \"BATNA\", \"anchoring\", \"how do I ask for…",
+      "yol": "plugins/product-strategy/skills/negotiation"
+    },
+    {
+      "ad": "hundred-million-offers",
+      "aciklama": "Create irresistible offers using the Value Equation, bonus stacking, risk-reversing guarantees, and ethical scarcity. Use when the user mentions \"grand slam offer\", \"make my offer more compelling\", \"what bonuses should I add\", \"guarantee strategy\", \"offer naming\", or \"people say its too expensive\".…",
+      "yol": "plugins/sales-influence/skills/hundred-million-offers"
+    },
+    {
+      "ad": "influence-psychology",
+      "aciklama": "Apply the seven principles of ethical persuasion (reciprocity, commitment, social proof, authority, liking, scarcity, unity) to product design, copy, and sales. Use when the user mentions \"social proof\", \"persuasive copy\", \"why users dont convert\", \"ethical persuasion\", \"reciprocity\", \"scarcity tac…",
+      "yol": "plugins/sales-influence/skills/influence-psychology"
+    },
+    {
+      "ad": "made-to-stick",
+      "aciklama": "Craft messages that are understood, remembered, and drive action using the SUCCESs checklist (Simple, Unexpected, Concrete, Credible, Emotional, Stories). Use when the user mentions \"make it memorable\", \"no one remembers our pitch\", \"tagline\", \"value proposition\", \"why the message isnt landing\", \"c…",
+      "yol": "plugins/sales-influence/skills/made-to-stick"
+    },
+    {
+      "ad": "predictable-revenue",
+      "aciklama": "Build a scalable outbound B2B sales machine with specialized roles (SDR, AE, CSM). Use when the user mentions \"outbound sales\", \"Cold Calling 2.0\", \"cold email sequences\", \"sales pipeline\", \"SDR process\", \"sales development\", \"build an outbound sales team\", or \"fill my pipeline\". Also trigger when…",
+      "yol": "plugins/sales-influence/skills/predictable-revenue"
+    },
+    {
+      "ad": "blue-ocean-strategy",
+      "aciklama": "Create uncontested market space using value innovation instead of competing head-to-head. Use when the user mentions \"blue ocean\", \"red ocean\", \"strategy canvas\", \"ERRC framework\", \"value innovation\", \"non-customers\", \"buyer utility map\", \"the market is too crowded\", \"how do we stand out\", or \"esca…",
+      "yol": "plugins/strategy-growth/skills/blue-ocean-strategy"
+    },
+    {
+      "ad": "cold-start-problem",
+      "aciklama": "Start and scale networked products using Andrew Chen''s \"The Cold Start Problem\" framework for network effects. Use when the user mentions \"network effects\", \"chicken and egg\", \"cold start\", \"two-sided marketplace\", \"atomic network\", \"hard side\", \"liquidity\", \"critical mass\", \"invite-only launch\",…",
+      "yol": "plugins/strategy-growth/skills/cold-start-problem"
+    },
+    {
+      "ad": "crossing-the-chasm",
+      "aciklama": "Navigate the technology adoption lifecycle from early adopters to mainstream market. Use when the user mentions \"crossing the chasm\", \"beachhead segment\", \"whole product\", \"early adopters vs mainstream\", \"tech go-to-market\", \"bowling pin strategy\", \"technology adoption lifecycle\", \"pragmatist buyer…",
+      "yol": "plugins/strategy-growth/skills/crossing-the-chasm"
+    },
+    {
+      "ad": "good-strategy-bad-strategy",
+      "aciklama": "Formulate and audit real strategy using Richard Rumelt''s \"Good Strategy Bad Strategy\": an honest diagnosis, a guiding policy, and coherent action instead of goals, vision, and wishful thinking. Use when the user mentions \"good strategy bad strategy\", \"strategy kernel\", \"diagnosis guiding policy co…",
+      "yol": "plugins/strategy-growth/skills/good-strategy-bad-strategy"
+    },
+    {
+      "ad": "obviously-awesome",
+      "aciklama": "Define product positioning by mapping competitive alternatives, unique attributes, and best-fit customers to the right market category. Use when the user mentions \"positioning\", \"competitive alternatives\", \"how to position\", \"market category\", \"positioning canvas\", \"repositioning\", \"category creati…",
+      "yol": "plugins/strategy-growth/skills/obviously-awesome"
+    },
+    {
+      "ad": "traction-eos",
+      "aciklama": "Implement the Entrepreneurial Operating System (EOS) to align vision and execution across a company. Use when the user mentions \"EOS\", \"Entrepreneurial Operating System\", \"V/TO\", \"quarterly rocks\", \"Level 10 meetings\", \"accountability chart\", \"IDS process\", \"my company feels chaotic\", \"we keep havi…",
+      "yol": "plugins/strategy-growth/skills/traction-eos"
+    },
+    {
+      "ad": "clean-architecture",
+      "aciklama": "Structure software around the Dependency Rule: source code dependencies point inward from frameworks to use cases to entities. Use when the user mentions \"architecture layers\", \"dependency rule\", \"ports and adapters (hexagonal)\", \"onion architecture\", \"screaming architecture\", \"where should busines…",
+      "yol": "plugins/systems-architecture/skills/clean-architecture"
+    },
+    {
+      "ad": "ddia-systems",
+      "aciklama": "Design data systems by understanding storage engines, replication, partitioning, transactions, and consistency models. Use when the user mentions \"database choice\", \"which database should I use\", \"SQL or NoSQL\", \"replication lag\", \"partitioning strategy\", \"consistency vs availability\", \"stream proc…",
+      "yol": "plugins/systems-architecture/skills/ddia-systems"
+    },
+    {
+      "ad": "high-perf-browser",
+      "aciklama": "Optimize web performance through network protocols, resource loading, and browser rendering internals. Use when the user mentions \"my site is slow\", \"Core Web Vitals\", \"HTTP/2 or HTTP/3\", \"resource hints\", \"network latency\", \"render blocking\", \"TCP/TLS optimization\", \"service worker\", \"Cache-Contro…",
+      "yol": "plugins/systems-architecture/skills/high-perf-browser"
+    },
+    {
+      "ad": "release-it",
+      "aciklama": "Build production-ready systems with stability patterns: circuit breakers, bulkheads, timeouts, and retry logic. Use when the user mentions \"production outage\", \"circuit breaker\", \"deployment pipeline\", \"chaos engineering\", \"retry storm\", \"health checks\", \"my service keeps crashing\", \"prevent cascad…",
+      "yol": "plugins/systems-architecture/skills/release-it"
+    },
+    {
+      "ad": "system-design",
+      "aciklama": "Design scalable distributed systems using structured approaches for load balancing, caching, database scaling, and message queues. Use when the user mentions \"system design\", \"scale this\", \"high availability\", \"rate limiter\", \"design a URL shortener\", \"design Twitter\", \"design Uber\", \"design a news…",
+      "yol": "plugins/systems-architecture/skills/system-design"
+    },
+    {
+      "ad": "team-topologies",
+      "aciklama": "Organize business and technology teams for fast flow using Skelton & Pais''s \"Team Topologies\". Use when the user mentions \"team topologies\", \"Conway''s law\", \"platform team\", \"stream-aligned team\", \"team boundaries\", \"cognitive load\", \"how should we split teams\", \"who owns this service\", \"team dep…",
+      "yol": "plugins/systems-architecture/skills/team-topologies"
+    },
+    {
+      "ad": "drive-motivation",
+      "aciklama": "Design motivation systems using Autonomy, Mastery, and Purpose (AMP) for products and teams. Use when the user mentions \"intrinsic motivation\", \"gamification isnt working\", \"rewards arent working\", \"autonomy\", \"mastery\", \"purpose-driven\", \"my team is disengaged\", or \"how do I motivate people\". Also…",
+      "yol": "plugins/team-motivation/skills/drive-motivation"
+    },
+    {
+      "ad": "high-output-management",
+      "aciklama": "Manage for output using Grove''s \"High Output Management\": a manager''s output is their organization''s output, raised by high-leverage activities. Use when the user mentions \"high output management\", \"managerial leverage\", \"one-on-ones\", \"1:1 agenda\", \"OKRs\", \"performance review\", \"task-relevant m…",
+      "yol": "plugins/team-motivation/skills/high-output-management"
+    },
+    {
+      "ad": "hooked-ux",
+      "aciklama": "Design habit-forming product loops using the Hook Model (Trigger, Action, Variable Reward, Investment). Use when the user mentions \"users arent coming back\", \"habit formation\", \"engagement loops\", \"habit zone\", or \"the manipulation matrix\". Also trigger when designing notification or re-engagement…",
+      "yol": "plugins/ux-design/skills/hooked-ux"
+    },
+    {
+      "ad": "improve-retention",
+      "aciklama": "Diagnose and fix retention problems using behavior design (B=MAP). Use when the user mentions \"users sign up but dont stick around\", \"activation rate\", \"onboarding friction\", \"retention metrics\", \"why users dont complete\", \"churn analysis\", or \"aha moment\". Also trigger when analyzing cohort retent…",
+      "yol": "plugins/ux-design/skills/improve-retention"
+    },
+    {
+      "ad": "ios-hig-design",
+      "aciklama": "Design native iOS interfaces following Apple Human Interface Guidelines. Use when the user mentions \"iPhone app\", \"iPad layout\", \"SwiftUI\", \"UIKit\", \"Dynamic Island\", \"safe areas\", \"HIG compliance\", \"SF Symbols\", \"haptic feedback\", \"iOS accessibility\", \"make my app feel native\", or \"follow Apple de…",
+      "yol": "plugins/ux-design/skills/ios-hig-design"
+    },
+    {
+      "ad": "lean-ux",
+      "aciklama": "Apply lean thinking to UX: hypothesis-driven design, collaborative sketching, and rapid experiments instead of heavy deliverables. Use when the user mentions \"Lean UX\", \"design hypothesis\", \"outcome over output\", \"design studio method\", \"assumption mapping\", \"lightweight research\", \"too much design…",
+      "yol": "plugins/ux-design/skills/lean-ux"
+    },
+    {
+      "ad": "microinteractions",
+      "aciklama": "Design the small details -- triggers, rules, feedback, loops and modes -- that separate good products from great ones. Use when the user mentions \"microinteraction\", \"button feedback\", \"loading state\", \"toggle design\", \"animation detail\", \"state transitions\", \"input feedback\", \"the interface feels…",
+      "yol": "plugins/ux-design/skills/microinteractions"
+    },
+    {
+      "ad": "refactoring-ui",
+      "aciklama": "Audit and fix visual hierarchy, spacing, color, and depth in web UIs. Use when the user mentions \"my UI looks off\" (or amateur/unprofessional), \"fix the design\", \"Tailwind styling\", \"color palette\", \"visual hierarchy\", \"design system\", \"spacing scale\", or \"component styling\". Also trigger when buil…",
+      "yol": "plugins/ux-design/skills/refactoring-ui"
+    },
+    {
+      "ad": "steve-jobs-design-review",
+      "aciklama": "Review designs, products, and features with Steve Jobs'' standards: ruthless simplicity, focus, and end-to-end excellence. Use when the user mentions \"Steve Jobs review\", \"design review\", \"product review\", \"what would Steve do\", \"insanely great\", \"this feels too complicated\", \"too many features\", \"…",
+      "yol": "plugins/ux-design/skills/steve-jobs-design-review"
+    },
+    {
+      "ad": "top-design",
+      "aciklama": "Create award-winning, immersive web experiences at the level of Awwwards-featured agencies. Use when the user mentions \"Awwwards quality\", \"make my site stunning\", \"scroll animations\", \"parallax storytelling\", \"cinematic web design\", \"portfolio site\", or \"brand experience\". Also trigger when elevat…",
+      "yol": "plugins/ux-design/skills/top-design"
+    },
+    {
+      "ad": "ux-heuristics",
+      "aciklama": "Evaluate and improve interface usability using heuristic analysis. Use when the user mentions \"usability audit\", \"users are confused\", \"form usability\", \"navigation problems\", \"Nielsen heuristics\", \"cognitive walkthrough\", or \"is this easy to use\". Also trigger when reviewing a design for usability…",
+      "yol": "plugins/ux-design/skills/ux-heuristics"
+    },
+    {
+      "ad": "web-typography",
+      "aciklama": "Select, pair, and implement typefaces for web projects. Use when the user mentions \"font pairing\", \"which typeface\", \"line height\", \"responsive typography\", \"web font loading\", \"type hierarchy\", \"variable fonts\", \"FOUT/FOIT\", \"typographic scale\", or \"the text is hard to read\". Also trigger when cho…",
+      "yol": "plugins/ux-design/skills/web-typography"
+    }
+  ],
+  "bilesenler": []
+}

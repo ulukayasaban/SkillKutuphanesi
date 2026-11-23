@@ -1,0 +1,440 @@
+{
+  "repo": "tradermonty/claude-trading-skills",
+  "commit": "4080042a7863f5eeb48aabeaf60bd547efb99949",
+  "tarih": "2026-11-24",
+  "skil_sayisi": 74,
+  "skiller": [
+    {
+      "ad": "backtest-expert",
+      "aciklama": "Expert guidance for systematic backtesting of trading strategies. Use when developing, testing, stress-testing, or validating quantitative trading strategies. Covers \"beating ideas to death\" methodology, parameter robustness testing, slippage modeling, bias prevention, and interpreting backtest res…",
+      "yol": "skills/backtest-expert"
+    },
+    {
+      "ad": "breadth-chart-analyst",
+      "aciklama": "This skill should be used when analyzing market breadth charts, specifically the S&P 500 Breadth Index (200-Day MA based) and the US Stock Market Uptrend Stock Ratio charts. Use this skill when the user provides breadth chart images for analysis, requests market breadth assessment, positioning stra…",
+      "yol": "skills/breadth-chart-analyst"
+    },
+    {
+      "ad": "breakout-trade-planner",
+      "aciklama": "Generate Minervini-style breakout trade plans from VCP screener output with worst-case risk calculation, portfolio heat management, and Alpaca-compatible order templates (stop-limit bracket for pre-placement, limit bracket for post-confirmation). Use when user has VCP screener results and wants act…",
+      "yol": "skills/breakout-trade-planner"
+    },
+    {
+      "ad": "canslim-screener",
+      "aciklama": "Screen US stocks using William O'Neil's CANSLIM growth stock methodology. Use when user requests CANSLIM stock screening, growth stock analysis, momentum stock identification, or wants to find stocks with strong earnings and price momentum following O'Neil's investment system.",
+      "yol": "skills/canslim-screener"
+    },
+    {
+      "ad": "contrarian-setup-gate",
+      "aciklama": "Synthesize the three Jason Shapiro contrarian-pipeline verdicts (COT crowding, news-reaction failure, weekly price-action confirmation) into one actionable setup_status via a fail-closed precedence state machine. Pure, offline synthesis -- no network, no API keys, no computation beyond validation a…",
+      "yol": "skills/contrarian-setup-gate"
+    },
+    {
+      "ad": "cot-contrarian-detector",
+      "aciklama": "Detect crowded speculative positioning in CFTC futures markets (COT report analysis) to find contrarian setups using Jason Shapiro's methodology. Screens large-speculator (\"non-commercial\") net positioning across 65 futures markets (indices, rates, FX, metals, energy, crypto) via the FMP Commitment…",
+      "yol": "skills/cot-contrarian-detector"
+    },
+    {
+      "ad": "crypto-regime-analyzer",
+      "aciklama": "Quantifies crypto market regime health using free, keyless public data (CoinGecko + Binance funding). Generates a 0-100 composite score across 6 components (100 = risk-on) with a posture recommendation. No API key required. Use when user asks about crypto market conditions, whether it's alt season,…",
+      "yol": "skills/crypto-regime-analyzer"
+    },
+    {
+      "ad": "data-quality-checker",
+      "aciklama": "Validate data quality in market analysis documents and blog articles before publication. Use when checking for price scale inconsistencies (ETF vs futures), instrument notation errors, date/day-of-week mismatches, allocation total errors, and unit mismatches. Supports English and Japanese content.…",
+      "yol": "skills/data-quality-checker"
+    },
+    {
+      "ad": "dividend-growth-pullback-screener",
+      "aciklama": "Use this skill to find high-quality dividend growth stocks (12%+ annual dividend growth, 1.5%+ yield) that are experiencing temporary pullbacks, identified by RSI oversold conditions (RSI ≤40). This skill combines fundamental dividend analysis with technical timing indicators to identify buying opp…",
+      "yol": "skills/dividend-growth-pullback-screener"
+    },
+    {
+      "ad": "downtrend-duration-analyzer",
+      "aciklama": "Analyze historical downtrend durations and generate interactive HTML histograms showing typical correction lengths by sector and market cap.",
+      "yol": "skills/downtrend-duration-analyzer"
+    },
+    {
+      "ad": "drawdown-circuit-breaker",
+      "aciklama": "Evaluate account-level drawdown circuit breaker rules from trader-memory-core state and decide whether new trade risk is allowed today. Uses realized P&L, losing-streak cooldowns, and weekly/monthly drawdown limits without any external API.",
+      "yol": "skills/drawdown-circuit-breaker"
+    },
+    {
+      "ad": "dual-axis-skill-reviewer",
+      "aciklama": "Review skills in any project using a dual-axis method: (1) deterministic code-based checks (structure, scripts, tests, execution safety) and (2) LLM deep review findings. Use when you need reproducible quality scoring for `skills/*/SKILL.md`, want to gate merges with a score threshold (for example…",
+      "yol": "skills/dual-axis-skill-reviewer"
+    },
+    {
+      "ad": "earnings-calendar",
+      "aciklama": "This skill retrieves upcoming earnings announcements for US stocks using the Financial Modeling Prep (FMP) API. Use this when the user requests earnings calendar data, wants to know which companies are reporting earnings in the upcoming week, or needs a weekly earnings review. The skill focuses on…",
+      "yol": "skills/earnings-calendar"
+    },
+    {
+      "ad": "earnings-trade-analyzer",
+      "aciklama": "Analyze recent post-earnings stocks using a 5-factor scoring system (Gap Size, Pre-Earnings Trend, Volume Trend, MA200 Position, MA50 Position). Scores each stock 0-100 and assigns A/B/C/D grades. Use when user asks about earnings trade analysis, post-earnings momentum screening, earnings gap scori…",
+      "yol": "skills/earnings-trade-analyzer"
+    },
+    {
+      "ad": "economic-calendar-fetcher",
+      "aciklama": "Fetch upcoming economic events and data releases using FMP API. Retrieve scheduled central bank decisions, employment reports, inflation data, GDP releases, and other market-moving economic indicators for specified date ranges (default: next 7 days). The script outputs raw JSON or text; the assista…",
+      "yol": "skills/economic-calendar-fetcher"
+    },
+    {
+      "ad": "edge-candidate-agent",
+      "aciklama": "Generate and prioritize US equity long-side edge research tickets from EOD observations, then export pipeline-ready candidate specs for trade-strategy-pipeline Phase I. Use when users ask to turn hypotheses/anomalies into reproducible research tickets, convert validated ideas into `strategy.yaml` +…",
+      "yol": "skills/edge-candidate-agent"
+    },
+    {
+      "ad": "edge-concept-synthesizer",
+      "aciklama": "Abstract detector tickets and hints into reusable edge concepts with thesis, invalidation signals, and strategy playbooks before strategy design/export.",
+      "yol": "skills/edge-concept-synthesizer"
+    },
+    {
+      "ad": "edge-hint-extractor",
+      "aciklama": "Extract edge hints from daily market observations and news reactions, with optional LLM ideation, and output canonical hints.yaml for downstream concept synthesis and auto detection.",
+      "yol": "skills/edge-hint-extractor"
+    },
+    {
+      "ad": "edge-pipeline-orchestrator",
+      "aciklama": "Orchestrate the full edge research pipeline from candidate detection through strategy design, review, revision, and export. Use when coordinating multi-stage edge research workflows end-to-end.",
+      "yol": "skills/edge-pipeline-orchestrator"
+    },
+    {
+      "ad": "edge-signal-aggregator",
+      "aciklama": "Aggregate and rank signals from multiple edge-finding skills (edge-candidate-agent, theme-detector, sector-analyst, institutional-flow-tracker) into a prioritized conviction dashboard with weighted scoring, deduplication, and contradiction detection.",
+      "yol": "skills/edge-signal-aggregator"
+    },
+    {
+      "ad": "edge-strategy-designer",
+      "aciklama": "Convert abstract edge concepts into strategy draft variants and optional exportable ticket YAMLs for edge-candidate-agent export/validation.",
+      "yol": "skills/edge-strategy-designer"
+    },
+    {
+      "ad": "edge-strategy-reviewer",
+      "aciklama": "Critically review strategy drafts from edge-strategy-designer for edge plausibility, overfitting risk, sample size adequacy, and execution realism. Use when strategy_drafts/*.yaml exists and needs quality gate before pipeline export. Outputs PASS/REVISE/REJECT verdicts with confidence scores.",
+      "yol": "skills/edge-strategy-reviewer"
+    },
+    {
+      "ad": "exposure-coach",
+      "aciklama": "Generate a one-page Market Posture summary with net exposure ceiling, growth-vs-value bias, participation breadth, and new-entry-allowed vs cash-priority recommendation by integrating signals from breadth, regime, and flow analysis skills.",
+      "yol": "skills/exposure-coach"
+    },
+    {
+      "ad": "finviz-screener",
+      "aciklama": "Build and open FinViz screener URLs from natural language requests. Use when user wants to screen stocks, find stocks matching criteria, filter by fundamentals or technicals, or asks to open FinViz with specific conditions. Supports both Japanese and English input (e.g., \"高配当で成長している小型株を探したい\", \"Find…",
+      "yol": "skills/finviz-screener"
+    },
+    {
+      "ad": "ftd-detector",
+      "aciklama": "Detects Follow-Through Day (FTD) signals for market bottom confirmation using William O'Neil's methodology. Dual-index tracking (S&P 500 + NASDAQ) with state machine for rally attempt, FTD qualification, and post-FTD health monitoring. Use when user asks about market bottom signals, follow-through…",
+      "yol": "skills/ftd-detector"
+    },
+    {
+      "ad": "futures-position-sizer",
+      "aciklama": "Calculate contract-based futures position sizes from a direction, entry, and stop-loss, using verified per-symbol contract specs (multiplier, tick size, tick value). Use when the user asks how many futures contracts to trade, wants to size a futures position (ES, NQ, ZB, GC, CL, 6E/E6, VX, BT, ...)…",
+      "yol": "skills/futures-position-sizer"
+    },
+    {
+      "ad": "fxmacrodata-calendar",
+      "aciklama": "Fetch official FXMacroData macro release-calendar events for trade planning, macro regime checks, and event-risk filters. Use before CPI, NFP, GDP, PCE, retail sales, PMI, and central-bank decision windows.",
+      "yol": "skills/fxmacrodata-calendar"
+    },
+    {
+      "ad": "ibd-distribution-day-monitor",
+      "aciklama": "Detect IBD-style Distribution Days for QQQ/SPY (close down at least 0.2% on higher volume), track 25-session expiration and 5% invalidation, count d5/d15/d25 clusters, classify market risk (NORMAL/CAUTION/HIGH/SEVERE), and emit TQQQ/QQQ exposure recommendations. Use after market close, before TQQQ…",
+      "yol": "skills/ibd-distribution-day-monitor"
+    },
+    {
+      "ad": "institutional-flow-tracker",
+      "aciklama": "Use this skill to track institutional investor ownership changes and portfolio flows using 13F filings data. Analyzes hedge funds, mutual funds, and other institutional holders to identify stocks with significant smart money accumulation or distribution. Helps discover stocks before major moves by…",
+      "yol": "skills/institutional-flow-tracker"
+    },
+    {
+      "ad": "kanchi-dividend-review-monitor",
+      "aciklama": "Monitor dividend portfolios with Kanchi-style forced-review triggers (T1-T5) and convert anomalies into OK/WARN/REVIEW states without auto-selling. Use when users ask for 減配検知, 8-Kガバナンス監視, 配当安全性モニタリング, REVIEWキュー自動化, or periodic dividend risk checks.",
+      "yol": "skills/kanchi-dividend-review-monitor"
+    },
+    {
+      "ad": "kanchi-dividend-sop",
+      "aciklama": "Convert Kanchi-style dividend investing into a repeatable US-stock operating procedure. Use when users ask for かんち式配当投資, dividend screening, dividend growth quality checks, PERxPBR adaptation for US sectors, pullback limit-order planning, or one-page stock memo creation. Covers screening, deep dive…",
+      "yol": "skills/kanchi-dividend-sop"
+    },
+    {
+      "ad": "kanchi-dividend-us-tax-accounting",
+      "aciklama": "Provide US dividend tax and account-location workflow for Kanchi-style income portfolios. Use when users ask about qualified vs ordinary dividends, 1099-DIV interpretation, REIT/BDC distribution treatment, holding-period checks, or taxable-vs-IRA account placement decisions for dividend assets.",
+      "yol": "skills/kanchi-dividend-us-tax-accounting"
+    },
+    {
+      "ad": "macro-regime-detector",
+      "aciklama": "Detect structural macro regime transitions (1-2 year horizon) using cross-asset ratio analysis. Analyze RSP/SPY concentration, yield curve, credit conditions, size factor, equity-bond relationship, and sector rotation to identify regime shifts between Concentration, Broadening, Contraction, Inflati…",
+      "yol": "skills/macro-regime-detector"
+    },
+    {
+      "ad": "manifoldbt-backtester",
+      "aciklama": "Runs a declarative strategy spec over OHLCV bars with the manifoldbt Rust engine, pairs the fill log into round trips, and emits the eight inputs the backtest-expert skill scores. Use when the user wants to execute a backtest, measure a rule they have described, obtain win rate / average win / aver…",
+      "yol": "skills/manifoldbt-backtester"
+    },
+    {
+      "ad": "market-breadth-analyzer",
+      "aciklama": "Quantifies market breadth health using TraderMonty's public CSV data. Generates a 0-100 composite score across 6 components (100 = healthy). No API key required. Use when user asks about market breadth, participation rate, advance-decline health, whether the rally is broad-based, or general market…",
+      "yol": "skills/market-breadth-analyzer"
+    },
+    {
+      "ad": "market-environment-analysis",
+      "aciklama": "Comprehensive market environment analysis and reporting tool. Analyzes global markets including US, European, Asian markets, forex, commodities, and economic indicators. Provides risk-on/risk-off assessment, sector analysis, and technical indicator interpretation. Triggers on keywords like market a…",
+      "yol": "skills/market-environment-analysis"
+    },
+    {
+      "ad": "market-news-analyst",
+      "aciklama": "This skill should be used when analyzing recent market-moving news events and their impact on equity markets and commodities. Use this skill when the user requests analysis of major financial news from the past 10 days, wants to understand market reactions to monetary policy decisions (FOMC, ECB, B…",
+      "yol": "skills/market-news-analyst"
+    },
+    {
+      "ad": "market-top-detector",
+      "aciklama": "Assesses heuristic market top risk using O'Neil Distribution Days, Minervini Leading Stock Deterioration, and Monty Defensive Sector Rotation. Generates a 0-100 composite score with risk zone classification. Use when user asks about market top risk, distribution days, defensive rotation, leadership…",
+      "yol": "skills/market-top-detector"
+    },
+    {
+      "ad": "mt5-robot-tester",
+      "aciklama": "Select the best MetaTrader 5 trading robots (Expert Advisors) that have not been backtested yet, by running the MT5 Strategy Tester from the command line through a 3-round pipeline. Use when the user wants to batch-test MT5 bots/EAs, screen robots across all symbols, optimize EA parameters, or move…",
+      "yol": "skills/mt5-robot-tester"
+    },
+    {
+      "ad": "news-reaction-failure-analyzer",
+      "aciklama": "Judge whether a market FAILED to react to news favorable to a crowded speculative position — step 2 of Jason Shapiro's COT contrarian process. Consumes a cot-contrarian-detector report (or an explicit direction) plus a Claude-curated events JSON, fetches the underlying price series with a documente…",
+      "yol": "skills/news-reaction-failure-analyzer"
+    },
+    {
+      "ad": "options-strategy-advisor",
+      "aciklama": "Options trading strategy analysis and simulation tool. Provides theoretical pricing using Black-Scholes model, Greeks calculation, strategy P/L simulation, and risk management guidance. Use when user requests options strategy analysis, covered calls, protective puts, spreads, iron condors, earnings…",
+      "yol": "skills/options-strategy-advisor"
+    },
+    {
+      "ad": "pair-trade-screener",
+      "aciklama": "Statistical arbitrage tool for identifying and analyzing pair trading opportunities. Detects cointegrated stock pairs within sectors, analyzes spread behavior, calculates z-scores, and provides entry/exit recommendations for market-neutral strategies. Use when user requests pair trading opportuniti…",
+      "yol": "skills/pair-trade-screener"
+    },
+    {
+      "ad": "parabolic-short-trade-planner",
+      "aciklama": "Screen US equities for parabolic exhaustion patterns and generate conditional pre-market short plans, then evaluate intraday trigger fires from live 5-min bars. Phase 1 daily 5-factor scorer (MA extension / acceleration / volume climax / range expansion / liquidity), Phase 2 per-candidate plans for…",
+      "yol": "skills/parabolic-short-trade-planner"
+    },
+    {
+      "ad": "pead-screener",
+      "aciklama": "Screen post-earnings gap-up stocks for PEAD (Post-Earnings Announcement Drift) patterns. Analyzes weekly candle formation to detect red candle pullbacks and breakout signals. Supports two input modes - FMP earnings calendar (Mode A) or earnings-trade-analyzer JSON output (Mode B). Use when user ask…",
+      "yol": "skills/pead-screener"
+    },
+    {
+      "ad": "portfolio-manager",
+      "aciklama": "Comprehensive portfolio analysis using Alpaca MCP Server integration to fetch holdings and positions, then analyze asset allocation, risk metrics, individual stock positions, diversification, and generate rebalancing recommendations. Use when user requests portfolio review, position analysis, risk…",
+      "yol": "skills/portfolio-manager"
+    },
+    {
+      "ad": "position-sizer",
+      "aciklama": "Calculate risk-based position sizes for long stock trades. Use when user asks about position sizing, how many shares to buy, risk per trade, Kelly criterion, ATR-based sizing, fractional-share sizing, or portfolio risk allocation. Supports stop-loss distance calculation, volatility scaling, and sec…",
+      "yol": "skills/position-sizer"
+    },
+    {
+      "ad": "pre-trade-discipline-gate",
+      "aciklama": "Evaluate a local pre-trade checklist before manual order entry, blocking planless, oversized, revenge-risk, market-regime-blocked, or circuit-breaker-blocked entries while journaling the decision for trader-memory-core review.",
+      "yol": "skills/pre-trade-discipline-gate"
+    },
+    {
+      "ad": "residual-edge-analyzer",
+      "aciklama": "Separate a strategy return series into declared baseline exposure and residual edge with returns-based OLS attribution, HAC inference, rolling stability, alternate-baseline sensitivity, and regime breakdowns. Use when evaluating whether backtest, out-of-sample, or live returns contain independent a…",
+      "yol": "skills/residual-edge-analyzer"
+    },
+    {
+      "ad": "scenario-analyzer",
+      "aciklama": "Skill that analyzes 18-month scenarios from a news headline. Runs the primary analysis with the scenario-analyst agent and obtains a second opinion with the strategy-reviewer agent. Generates a comprehensive English report covering 1st/2nd/3rd-order impacts, recommended stocks, and a critical revie…",
+      "yol": "skills/scenario-analyzer"
+    },
+    {
+      "ad": "sector-analyst",
+      "aciklama": "This skill should be used when analyzing sector rotation patterns and market cycle positioning. It fetches sector uptrend data from CSV (no API key required) and optionally accepts chart images for supplementary analysis. Use this skill when the user requests sector rotation analysis, cyclical vs d…",
+      "yol": "skills/sector-analyst"
+    },
+    {
+      "ad": "signal-postmortem",
+      "aciklama": "Record and analyze post-trade outcomes for signals generated by edge pipeline and other skills. Track false positives, missed opportunities, and regime mismatches. Feed results back to edge-signal-aggregator weights and skill improvement backlog.",
+      "yol": "skills/signal-postmortem"
+    },
+    {
+      "ad": "skill-designer",
+      "aciklama": "Design new Claude skills from structured idea specifications. Use when the skill auto-generation pipeline needs to produce a Claude CLI prompt that creates a complete skill directory (SKILL.md, references, scripts, tests) following repository conventions.",
+      "yol": "skills/skill-designer"
+    },
+    {
+      "ad": "skill-idea-miner",
+      "aciklama": "Mine Claude Code session logs for skill idea candidates. Use when running the weekly skill generation pipeline to extract, score, and backlog new skill ideas from recent coding sessions.",
+      "yol": "skills/skill-idea-miner"
+    },
+    {
+      "ad": "skill-integration-tester",
+      "aciklama": "Validate multi-skill workflows defined in CLAUDE.md by checking skill existence, inter-skill data contracts (JSON schema compatibility), file naming conventions, and handoff integrity. Use when adding new workflows, modifying skill outputs, or verifying pipeline health before release.",
+      "yol": "skills/skill-integration-tester"
+    },
+    {
+      "ad": "stanley-druckenmiller-investment",
+      "aciklama": "Druckenmiller Strategy Synthesizer - Integrates 8 upstream skill outputs (Market Breadth, Uptrend Analysis, Market Top, Macro Regime, FTD Detector, VCP Screener, Theme Detector, CANSLIM Screener) into a unified conviction score (0-100), pattern classification, and allocation recommendation. Use whe…",
+      "yol": "skills/stanley-druckenmiller-investment"
+    },
+    {
+      "ad": "stockbee-20pct-study",
+      "aciklama": "Build and maintain a Stockbee-style daily 20% mover study for US equities by scanning +20%/-20% movers, classifying catalysts and setup context, updating forward outcomes, and summarizing cohort patterns. Use when the user asks to run a daily 20% study, backfill historical 20% movers, find recurrin…",
+      "yol": "skills/stockbee-20pct-study"
+    },
+    {
+      "ad": "stockbee-episodic-pivot-analyzer",
+      "aciklama": "Analyze Stockbee-style Day 1 Episodic Pivot candidates from earnings, guidance raises, M&A, FDA/regulatory approvals, analyst actions, major contracts, product launches, short-squeeze catalysts, or theme/story events. Scores catalyst quality together with gap/range expansion, volume shock, neglect/…",
+      "yol": "skills/stockbee-episodic-pivot-analyzer"
+    },
+    {
+      "ad": "stockbee-exhaustion-hammer-screener",
+      "aciklama": "Screen US stocks for Stockbee-style selling-exhaustion hammer setups using prior momentum, pullback depth, undercut/reclaim, long lower-wick geometry, close-location, volume confirmation, quality/liquidity gates, and risk-distance scoring. Use when the user asks for Stockbee, Pradeep Bonde, exhaust…",
+      "yol": "skills/stockbee-exhaustion-hammer-screener"
+    },
+    {
+      "ad": "stockbee-momentum-burst-screener",
+      "aciklama": "Screen US stocks for Stockbee-style short-term Momentum Burst setups using 4% breakout, dollar breakout, range expansion, volume expansion, prior range contraction, close-location, failure filters, and risk-distance scoring. Use when the user asks for Stockbee, Pradeep Bonde, momentum burst, 4% bre…",
+      "yol": "skills/stockbee-momentum-burst-screener"
+    },
+    {
+      "ad": "stockbee-setup-fluency-trainer",
+      "aciklama": "Build a Stockbee-style setup model book from momentum-burst screener candidates, then update 3-day and 5-day forward outcomes with MFE/MAE, stop-hit status, outcome tags, and cohort statistics. Use when the user wants to study Stockbee Momentum Burst examples, track failed candidates, build setup f…",
+      "yol": "skills/stockbee-setup-fluency-trainer"
+    },
+    {
+      "ad": "strategy-pivot-designer",
+      "aciklama": "Detect backtest iteration stagnation and generate structurally different strategy pivot proposals when parameter tuning reaches a local optimum.",
+      "yol": "skills/strategy-pivot-designer"
+    },
+    {
+      "ad": "technical-analyst",
+      "aciklama": "This skill should be used when analyzing weekly price charts for stocks, stock indices, cryptocurrencies, or forex pairs. Use this skill when the user provides chart images and requests technical analysis, trend identification, support/resistance levels, scenario planning, or probability assessment…",
+      "yol": "skills/technical-analyst"
+    },
+    {
+      "ad": "theme-detector",
+      "aciklama": "Detect and analyze trending market themes across sectors. Use when user asks about current market themes, trending sectors, sector rotation, thematic investing, what themes are hot or cold, or wants to identify bullish and bearish market narratives with lifecycle analysis.",
+      "yol": "skills/theme-detector"
+    },
+    {
+      "ad": "trade-hypothesis-ideator",
+      "aciklama": "Generate falsifiable trade strategy hypotheses from market data, trade logs, and journal snippets. Use when you have a structured input bundle and want ranked hypothesis cards with experiment designs, kill criteria, and optional strategy.yaml export compatible with edge-finder-candidate/v1.",
+      "yol": "skills/trade-hypothesis-ideator"
+    },
+    {
+      "ad": "trade-performance-coach",
+      "aciklama": "Review closed trades, partial exits, and monthly trade aggregates for process adherence, risk discipline, execution quality, and evidence-based trading behavior patterns. Use after trader-memory-core and signal-postmortem have produced records, or when the user asks for a post-trade coach, risk-man…",
+      "yol": "skills/trade-performance-coach"
+    },
+    {
+      "ad": "trader-memory-core",
+      "aciklama": "Track investment theses across their lifecycle — from screening idea to closed position with postmortem. Register theses from screener outputs, manage state transitions, attach position sizing, review due dates, and generate postmortem reports with P&L and MAE/MFE analysis. Trigger when user says \"…",
+      "yol": "skills/trader-memory-core"
+    },
+    {
+      "ad": "trading-skills-navigator",
+      "aciklama": "Recommend the right trading workflow, skillset, API profile, and setup path from a natural-language goal. Use this as the on-ramp when a user expresses a trading or investing goal and needs to know which skill/workflow to use, where to start, or whether something works without paid API keys — e.g.…",
+      "yol": "skills/trading-skills-navigator"
+    },
+    {
+      "ad": "uptrend-analyzer",
+      "aciklama": "Analyzes market breadth using Monty's Uptrend Ratio Dashboard data to diagnose the current market environment. Generates a 0-100 composite score from 5 components (breadth, sector participation, rotation, momentum, historical context). Use when asking about market breadth, uptrend ratios, or whethe…",
+      "yol": "skills/uptrend-analyzer"
+    },
+    {
+      "ad": "us-market-bubble-detector",
+      "aciklama": "Evaluates market bubble risk through quantitative data-driven analysis using the revised Minsky/Kindleberger framework v2.1. Prioritizes objective metrics (Put/Call, VIX, margin debt, breadth, IPO data) over subjective impressions. Features strict qualitative adjustment criteria with confirmation b…",
+      "yol": "skills/us-market-bubble-detector"
+    },
+    {
+      "ad": "us-stock-analysis",
+      "aciklama": "Comprehensive US stock analysis including fundamental analysis (financial metrics, business quality, valuation), technical analysis (indicators, chart patterns, support/resistance), stock comparisons, and investment report generation. Use when user requests analysis of US stock tickers (e.g., \"anal…",
+      "yol": "skills/us-stock-analysis"
+    },
+    {
+      "ad": "us-undervalued-growth-screener",
+      "aciklama": "Autonomously screen NYSE, Nasdaq, and NYSE American operating-company stocks for undervalued-growth/GARP opportunities using forward same-basis valuation, driver-derived EPS/FCF forecasts, primary-source financial verification, SBC and dilution controls, sector and cycle normalization, auditable ca…",
+      "yol": "skills/us-undervalued-growth-screener"
+    },
+    {
+      "ad": "value-dividend-screener",
+      "aciklama": "Screen US stocks for high-quality dividend opportunities combining value characteristics (P/E ratio under 20, P/B ratio under 2), attractive yields (3% or higher), and consistent growth (dividend/revenue/EPS trending up over 3 years). Supports two-stage screening using FINVIZ Elite API for efficien…",
+      "yol": "skills/value-dividend-screener"
+    },
+    {
+      "ad": "vcp-screener",
+      "aciklama": "Screen S&P 500 stocks for Mark Minervini's Volatility Contraction Pattern (VCP) and detect historical VCPs in a single ticker's price path. Identifies Stage 2 uptrend stocks forming tight bases with contracting volatility near breakout pivot points; in historical single-ticker mode walks a multi-ye…",
+      "yol": "skills/vcp-screener"
+    },
+    {
+      "ad": "weekly-performance-digest",
+      "aciklama": "Generate a weekly performance summary from closed trader-memory-core theses — win rate, expectancy, profit factor, R-multiple, MAE/MFE, and win/loss pattern analysis by source skill, exit reason, thesis type, sector, and mechanism. No API required; pure local calculation.",
+      "yol": "skills/weekly-performance-digest"
+    }
+  ],
+  "bilesenler": [
+    {
+      "tur": "ajan",
+      "ad": "scenario-analyst",
+      "aciklama": "Main analysis agent that builds 18-month scenarios from a news headline. Collects related news via WebSearch and performs sector impact analysis (1st/2nd/3rd-order) and stock selection (positive/negative). Analyzes as a medium-to-long-term fund manager. Invoked by the scenario-analyzer skill.",
+      "yol": "agents/scenario-analyst.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "strategy-reviewer",
+      "aciklama": "Agent that provides a second opinion on scenario analysis. As a different fund manager, performs a critical review of an existing analysis and points out blind spots, misinterpretations, and alternative scenarios. Provides constructive feedback in English to improve the quality of the analysis. Inv…",
+      "yol": "agents/strategy-reviewer.md"
+    },
+    {
+      "tur": "komut",
+      "ad": "scenario-analyzer",
+      "aciklama": "Analyze 18-month scenarios from a news headline. Generate a comprehensive English report including 1st/2nd/3rd-order impacts, recommended stocks, and a second opinion.",
+      "yol": "commands/scenario-analyzer.md"
+    },
+    {
+      "tur": "komut",
+      "ad": "us-undervalued-growth-screen",
+      "aciklama": "Run the Claude Code-native US undervalued-growth/GARP discovery pipeline, underwrite every selected name, and publish an audited scoped ranking.",
+      "yol": "commands/us-undervalued-growth-screen.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "market-advisor",
+      "aciklama": "Daily market analysis advisor that references dashboard data in knowledge/",
+      "yol": "examples/daily-market-dashboard/.claude/agents/market-advisor.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "druckenmiller-strategy-planner",
+      "aciklama": "Use this agent when you need to develop medium to long-term (18-month) trading strategies based on Stanley Druckenmiller's investment philosophy. This agent synthesizes technical analysis, market sentiment, news events, and macroeconomic trends to formulate 4-scenario strategic plans (Base/Bull/Bea…",
+      "yol": "examples/weekly-trade-strategy/.claude/agents/druckenmiller-strategy-planner.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "market-news-analyzer",
+      "aciklama": "Use this agent when you need comprehensive market analysis combining recent news impact assessment and forward-looking event scenarios. Specifically use this agent when:\\n\\n<example>\\nContext: User wants to understand recent market movements and prepare for upcoming events.\\nuser: \"Can you analyze…",
+      "yol": "examples/weekly-trade-strategy/.claude/agents/market-news-analyzer.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "technical-market-analyst",
+      "aciklama": "Use this agent when you need comprehensive technical analysis of market conditions that synthesizes multiple data sources including government bond yields, VIX volatility index, stock indices, commodity prices, sector performance, and individual stock analysis. Deploy this agent when:\\n\\n<example>\\…",
+      "yol": "examples/weekly-trade-strategy/.claude/agents/technical-market-analyst.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "us-market-analyst",
+      "aciklama": "Use this agent when you need comprehensive analysis of US stock market conditions, sentiment assessment, or bubble risk evaluation. This agent deploys market-environment-analysis and us-market-bubble-detector skills to provide holistic market assessment with probabilistic scenario planning.",
+      "yol": "examples/weekly-trade-strategy/.claude/agents/us-market-analyst.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "weekly-trade-blog-writer",
+      "aciklama": "Use this agent when you need to create a comprehensive weekly trading strategy blog post for part-time traders and investors. Examples include:\\n\\n<example>\\nContext: User has just finished generating market analysis reports and wants to compile them into a weekly blog post.\\nuser: \"今週のマーケット分析レポートが…",
+      "yol": "examples/weekly-trade-strategy/.claude/agents/weekly-trade-blog-writer.md"
+    }
+  ]
+}

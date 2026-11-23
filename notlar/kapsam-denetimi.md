@@ -165,7 +165,7 @@
 
 ## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)
 
-7 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: davila7/claude-code-templates, jacob-bd/gemini-notebook-mcp-cli, openai/plugins, ruvnet/ruflo, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum, xjli360/sealeap-amazon-skills
+10 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: davila7/claude-code-templates, garrytan/gbrain, huytieu/COG-second-brain, jacob-bd/gemini-notebook-mcp-cli, openai/plugins, ruvnet/ruflo, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum, wondelai/skills, xjli360/sealeap-amazon-skills
 
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 
