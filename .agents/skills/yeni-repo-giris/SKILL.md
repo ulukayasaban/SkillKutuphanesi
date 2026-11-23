@@ -22,7 +22,7 @@ description: Yapay Zeka Skillleri GitHub listesinden gelen yeni repoları ön-ka
    - `not`: `referans` (`notlar/referans/kutuphaneler.md` veya `tasarim-teknolojileri.md`).
    - `repo-ici`: Yeni repo-içi skil alınmaz.
 5. **3'lü çıkış kapısı ve commit:** Her kaynak için `dogrula`, `kapsam-denetimi`, `test` %100 geçince ana oturumda kaynak bazında ayrı commit at.
-6. **Kapanış:** `olcum.jsonl` satırını yaz ve `konu-takip.json` kuyruğundaki bekleyenleri oturum sonunda **tek toplu mesajla** kullanıcıya sun.
+6. **Kapanış:** `olcum.jsonl` satırını yaz ve `konu-takip.json` kuyruğundaki bekleyenleri oturum sonunda **tek toplu mesajla** kullanıcıya sun. Her kuyruk kaydı için önerilen kararı (`karar_verildi` / `reddedildi` ve önerilen bölüm/tür) ile birlikte **neden bu kararın önerildiğini** (skill yapısı/`SKILL.md` varlığı, tür, kullanım alanı, bağımlılık/lisans/alternatif durumu) **tek satırda somut gerekçeyle** belirt.
 
 ## Yasaklar
 - Kit kurulum betiği çalıştırma, `programlar.json` yeniden serileştirme, K-58 istisnası verme, onaysız GitHub `push` veya yıldız listesine yazma.
