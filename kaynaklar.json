@@ -2271,6 +2271,20 @@
         "oturum": "Trend dev-koleksiyon fihrist kaydi",
         "commit": "b3ef82024a085acfc214f6ad76a41ceb308c4d35"
       }
+    },
+    {
+      "repo": "garrytan/gbrain",
+      "oncelik": 3,
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "153 SKILL.md (fihrist koleksiyonu)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Trend dev-koleksiyon fihrist kaydi",
+        "commit": "8cb62d1ce553d8405c88984fe348c53ada08e61e"
+      }
     }
   ],
   "konum_haric": [

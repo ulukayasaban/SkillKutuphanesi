@@ -166,6 +166,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 22 · değerlen
 | froessell/app-store-opportunity-research | reddedildi | 2026-11-03 | lisans yok |
 | furan917/magento-ai-toolkit | reddedildi | 2026-10-22 | Magento OrcaQubits ile kapsanıyor (MPL-2.0) |
 | gabrielmoreira/agent-skills-mirror | reddedildi | 2026-10-22 | Ayna kopya |
+| garrytan/gbrain | eklendi | 2026-11-24 | dev-koleksiyon fihrist/garrytan__gbrain.json olarak eklendi |
 | gchahal1982/pixeljury | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: ★6, güven 21 D, skill eşlemesi yok; Playwright+axe-core+Lighthouse zaten kartlarda |
 | getsentry/sentry-react-native | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | google/skills | eklendi | 2026-11-16 | kütüphaneye eklendi 2026-11-16 (197 skil, filtreli; kullanıcı onayı) |

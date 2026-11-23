@@ -1065,6 +1065,11 @@
       "karar": "eklendi",
       "neden": "dev-koleksiyon fihrist/davila7__claude-code-templates.json olarak eklendi",
       "tarih": "2026-11-24"
+    },
+    "garrytan/gbrain": {
+      "karar": "eklendi",
+      "neden": "dev-koleksiyon fihrist/garrytan__gbrain.json olarak eklendi",
+      "tarih": "2026-11-24"
     }
   },
   "konular": {
