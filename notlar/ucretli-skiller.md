@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 40
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 42
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -10,6 +10,8 @@
 | `sandbox-migrate-to-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `sandbox-next` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `sandbox-stable` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
+| `klaviyo-analyst` | 04-skill-plugin-yazimi | Klaviyo API anahtarı (hesap/servis) gerekir |
+| `klaviyo-developer` | 04-skill-plugin-yazimi | Klaviyo API anahtarı (hesap/servis) gerekir |
 | `reverse-any-video` | 04-skill-plugin-yazimi | HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta |
 | `style-sampling` | 04-skill-plugin-yazimi | Şablonlar HyperFrames Pro (ücretli plan) özelliğidir; Free planda çekilmez, ücretsiz kullanım yolu yok |
 | `create-video` | 01-video-uretim-montaj | HeyGen Video Agent API |
@@ -47,7 +49,7 @@
 | `vast-gpu` | 04-bilimsel-yazim-literatur | Vast.ai GPU kiralama; ücretsiz katman yok, tek işi bu |
 | `fictiv` | 05-cad-imalat-robotik | Fictiv imalat siparişi ücretli |
 
-## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 357
+## ½ Kısmen (ücret ödemeden kullanılabilir: ücretsiz katman ya da ücretli servis sadece bir seçenek) — 359
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -270,6 +272,8 @@
 | `graphify` | 03-web-arastirma-veri | Yerel graf çıkarımı ücretsiz; LLM tabanlı çıkarım için isteğe bağlı API anahtarı (ücretli) |
 | `nlm-skill` | 03-web-arastirma-veri | nlm komutu ücretsizdir ve Google hesabıyla çalışır; kullanım kotaları Gemini Notebook planına bağlıdır (ücretsiz planda sınırlı) |
 | `notebooklm` | 03-web-arastirma-veri | Google hesabı; NotebookLM kullanım kotaları/planları |
+| `better-i18n` | 04-skill-plugin-yazimi | better-i18n CLI/açık kaynak; bulut çeviri/Paid plan isteğe bağlı |
+| `store-listing` | 04-skill-plugin-yazimi | App store listing yönetimi; ücretli API isteğe bağlı |
 | `changelog-video` | 01-video-uretim-montaj | Yerel Whisper; HeyGen sesi isteğe bağlı |
 | `cinecode` | 01-video-uretim-montaj | Film kodla üretilir ve ücretsiz çalışır. Seslendirme için Gemini TTS anahtarı (ücretsiz katmanı var) ya da isteğe bağlı ElevenLabs; stok arama için ücretsiz Pixabay anahtarı. Skill ücretli servis, anahtar ve büyük indirmeyi kullanıcı onayı olmadan kullanmaz. |
 | `cut-silences` | 01-video-uretim-montaj | Transkript için ElevenLabs Scribe varsayılan sağlayıcıdır (kota/ücret); OpenAI Whisper ve yerel alternatifler ayrıca desteklenir, ücretsiz yol var |

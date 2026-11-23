@@ -10,7 +10,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** Çok platformlu web/sosyal medya araştırması, URL'den içerik okuma, YouTube/Bilibili altyazısı, iş ilanı ve hisse verisi okuma, podcast transkripsiyonu. · **Ne zaman değil:** Yazma işlemleri (gönderi, yorum, beğeni) için değil; agent-reach CLI kurulu değilse (kanal tablosu kurulumda doldurulan şablon). Gizlilik: kullanıcının Chrome'una OpenCLI eklentisi bağlıysa o sitenin giriş çerezleri özel tarayıcıya kopyalanır; açık onay olmadan kurma. 2026-11'de eski Exa/RSS/jina/yt-dlp doğrudan komutları kaldırıldı.
 - **Teknoloji:** python, cli, web-arama · **Paketler:** agent-reach CLI (pip/uv; browser setup ile Node, OpenCLI, CloakBrowser/Chrome indirilir), platforma göre: yt-dlp, gh, bili CLI, opsiyonel: Groq anahtarı (podcast transkripsiyonu), github-token, proxy
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Panniantong (kisi, ★113756, son güncelleme 2026-11-08, lisans MIT)
+- **Geliştirici:** Panniantong (kisi, ★114254, son güncelleme 2026-11-22, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** web-arastirma → birincil · **Roller:** ai-entegrasyon, icerik-pazarlama
 - **Boyut:** 24 KB (SKILL.md 7.1 KB, yük kucuk)
 - **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT. 2026-11 yeniden yazımı: hata kodlarına göre dallanan akış, döngüsel yeniden deneme yasağı, 'yazma/giriş/şifre isteme yok' çizgileri, önce yerleşik araç ilkesi; MIT. Eksiler: SKILL.md varsayılan Çince, CLI kurulumu şart, tarayıcı indirme ve çerez kopyalama ile izin yüzeyi büyüdü; RSS, Exa genel arama ve bazı yorum okuma eylemleri artık yok.
@@ -21,7 +21,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** Context7'yi bir araca kurmak ya da ctx7 komutlarını doğrudan kullanmak. · **Ne zaman değil:** Yalnızca doküman getirmek için find-docs yeterli. `ctx7 setup` giriş ya da API anahtarı ister ve aracın yapılandırma dosyasını değiştirir.
 - **Teknoloji:** context7, node, cli · **Paketler:** ctx7
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** upstash (kurum, ★65240, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** upstash (kurum, ★65348, son güncelleme 2026-11-23, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → tamamlayıcı · **Roller:** frontend-muhendis, backend-muhendis
 - **Boyut:** 11 KB (SKILL.md 2.0 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
 - **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT (guncel-dokuman-getirme grubunda tamamlayıcı: kurulum ve CLI kullanımı). Resmî ürün reposu (MIT). Çalıştırma testi yapılmadı.
@@ -32,7 +32,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** pi aracıyla ya da API anahtarlı doğrudan Context7 kullanımı. · **Ne zaman değil:** Claude Code ve Codex için find-docs ya da context7-mcp daha uygun. API anahtarı gerekir.
 - **Teknoloji:** context7, api-anahtari
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** upstash (kurum, ★65240, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** upstash (kurum, ★65348, son güncelleme 2026-11-23, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → alternatif · **Roller:** frontend-muhendis, backend-muhendis
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF (başka bir araç için paketlenmiş sürüm; aynı iş). Resmî ürün reposu (MIT).
@@ -43,7 +43,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** Context7 MCP sunucusu kurulu ortamlarda kütüphane dokümanı getirme. · **Ne zaman değil:** Context7 MCP sunucusu kurulu değilse çalışmaz; o durumda find-docs (CLI). Sorgu metni Context7'ye gider.
 - **Teknoloji:** context7, mcp · **Paketler:** context7-mcp
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** upstash (kurum, ★65240, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** upstash (kurum, ★65348, son güncelleme 2026-11-23, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → tamamlayıcı · **Roller:** frontend-muhendis, backend-muhendis
 - **Boyut:** 4 KB (SKILL.md 3.6 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
 - **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT (guncel-dokuman-getirme grubunda tamamlayıcı: MCP yolu). Resmî ürün reposu (MIT). Birebir kopyaları başka araç eklentilerinde durur. Çalıştırma testi yapılmadı.
@@ -54,7 +54,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** Çıplak adlı context7-mcp yerine daha ayrıntılı tetikleme açıklaması isteniyorsa. · **Ne zaman değil:** İkisini birlikte kurma (aynı iş). Context7 MCP sunucusu gerekir.
 - **Teknoloji:** context7, mcp · **Paketler:** context7-mcp
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** upstash (kurum, ★65240, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** upstash (kurum, ★65348, son güncelleme 2026-11-23, lisans MIT)
 - **Durum:** alternatif · **Örtüşme:** guncel-dokuman-getirme → alternatif · **Roller:** frontend-muhendis, backend-muhendis
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
 - **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: ALTERNATİF (aynı repodaki ikinci sürüm; aynı iş). Resmî ürün reposu (MIT).
@@ -64,7 +64,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne yapar:** This skill should be used when the user asks about libraries, frameworks, API references, or needs code examples. Activates for setup questions, code generation involving libraries, or mentions of specific frameworks like React, Vue, Next.js, Prisma, Supabase, etc.
 - **Teknoloji:** next.js, react, svelte, tailwind, vue _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** upstash (kurum, ★65240, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** upstash (kurum, ★65348, son güncelleme 2026-11-23, lisans MIT)
 - **Durum:** alternatif
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
 - **İnceleme:** otomatik
@@ -75,7 +75,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** Modelin eğitim verisi eskimiş olabilecek her kütüphane sorusu: kurulum, yapılandırma, sürüm geçişi, API sözdizimi. · **Ne zaman değil:** Sorgu metni Context7 API'sine gider; gizli bilgi, anahtar ya da özel kod yazılmamalı. MCP sunucusu kuruluysa context7-mcp de aynı işi yapar.
 - **Teknoloji:** context7, node, cli · **Paketler:** ctx7
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** upstash (kurum, ★65240, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** upstash (kurum, ★65348, son güncelleme 2026-11-23, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** guncel-dokuman-getirme → birincil · **Roller:** frontend-muhendis, backend-muhendis
 - **Boyut:** 8 KB (SKILL.md 7.9 KB, yük orta) · **Bağımlılık:** Context7 servisine bağlanır: MCP sunucusu ya da `ctx7` CLI (npx ctx7@latest). Girişsiz çalışır; daha yüksek istek sınırı için ücretsiz hesap ya da CONTEXT7_API_KEY. Sorgu metni Context7 API'sine gönderilir (gizli bilgi yazılmamalı).
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (guncel-dokuman-getirme grubunda birincil). Resmî ürün reposu (MIT, 64k★), etkin bakım. MCP kurulumu gerektirmez, girişsiz çalışır. Çalıştırma testi yapılmadı.
@@ -85,7 +85,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne yapar:** Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the question should be treated as a graphify query first. Turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools.
 - **Teknoloji:** api-anahtari, git, html, node, obsidian, python, typescript _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Graphify-Labs (kurum, ★151595, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Geliştirici:** Graphify-Labs (kurum, ★152525, son güncelleme 2026-11-23, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6434 KB (SKILL.md 49.7 KB, yük buyuk) · **Bağımlılık:** graphify Python paketi (pip install graphifyy) kurulu olmalı.
 - **İnceleme:** otomatik
@@ -96,7 +96,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** nlm ile Gemini Notebook'u komut satırından ya da MCP ile otomatikleştirmek, kaynaklara dayalı içerik üretmek. · **Ne zaman değil:** nlm programı kurulu değilse ya da Google oturumu açılmamışsa; genel Gemini API işleri için değil.
 - **Teknoloji:** python, cli · **Paketler:** nlm (notebooklm-mcp-cli, uv aracı), Google hesabı oturumu
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-22, lisans Kendi (özel))
+- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-24, lisans Kendi (özel))
 - **Durum:** tercih · **Örtüşme:** notebooklm-cli → birincil · **Roller:** icerik-pazarlama
 - **Boyut:** 183 KB (SKILL.md 61.4 KB, yük buyuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. nlm programının paketinde gelen skilin anlık kopyası (notebooklm-mcp-cli 0.15.8, MIT; kaynak: paketin notebooklm_tools/data klasörü, AGENTS_SECTION.md hariç). Skil sürümü CLI sürümüne bağlıdır: nlm güncellenince klasör paketten yeniden kopyalanmalı. 'nlm skill install' ile aynı dosyalar makine geneline yazılabilir; kullanılmaz. Metin kimlik doğrulama yöntemlerini anlatır, değer içermez.
@@ -107,7 +107,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** Belgeleri NotebookLM'e yükleyip kaynaklı soru-cevap, derin araştırma ya da Audio Overview/podcast üretmek; bunu otomasyona bağlamak. · **Ne zaman değil:** Genel Gemini API işleri için değil; resmi olmayan bir istemci (Google hesap çerezleri/master token kullanır) — kurumsal hesapta politikaya aykırı olabilir.
 - **Teknoloji:** python, notebooklm, cli · **Paketler:** notebooklm-py[browser] (pip, Python 3.10+), Google hesabı oturumu
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** teng-lin (kisi, ★20324, son güncelleme 2026-11-19, lisans MIT)
+- **Geliştirici:** teng-lin (kisi, ★20355, son güncelleme 2026-11-22, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** web-arastirma → tamamlayıcı · **Roller:** icerik-pazarlama
 - **Boyut:** 16 KB (SKILL.md 16.0 KB, yük orta)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Kimlik doğrulama ve yetki sınırları özenle yazılmış, --json ve açık ID kullanımı ile güvenli otomasyon; MIT. Resmi olmayan API riski taşıyor.
@@ -118,7 +118,7 @@ _Web/sosyal medya okuma, araştırma, NotebookLM, veri çıkarma_
 - **Ne zaman:** YouTube'dan gerçek video listesi ve metadata gerektiğinde: konu araştırması, rakip kanal incelemesi, içerik fikri için izlenme karşılaştırması. · **Ne zaman değil:** Tek bir videonun altyazısı/transkripti ya da video indirmek için değil.
 - **Teknoloji:** python · **Paketler:** yt-dlp
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-22, lisans Kendi (özel))
+- **Geliştirici:** kullanıcı (kisi, resmî, ★0, son güncelleme 2026-11-24, lisans Kendi (özel))
 - **Durum:** tercih · **Örtüşme:** youtube-arastirma → birincil · **Roller:** icerik-pazarlama
 - **Boyut:** 7 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Küçük, standart kütüphaneli tek betik; yt-dlp dışında bağımlılık yok. Betik yolu skilde sabit yazılı, kurulumda proje içine çevrilir. Claude hesabı eklentisinde aynı adlı başka bir sürüm var (farklı betik).
