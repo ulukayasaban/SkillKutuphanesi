@@ -1060,6 +1060,111 @@
       "karar": "eklendi",
       "neden": "Kullanıcı onayıyla eklendi 2026-11-17 (A3)",
       "tarih": "2026-11-17"
+    },
+    "davila7/claude-code-templates": {
+      "karar": "eklendi",
+      "neden": "dev-koleksiyon fihrist/davila7__claude-code-templates.json olarak eklendi",
+      "tarih": "2026-11-24"
+    },
+    "garrytan/gbrain": {
+      "karar": "eklendi",
+      "neden": "dev-koleksiyon fihrist/garrytan__gbrain.json olarak eklendi",
+      "tarih": "2026-11-24"
+    },
+    "AJbeckliy/detail-flow-V2-Ajie": {
+      "karar": "reddedildi",
+      "neden": "Lisans dosyasi bulunmuyor",
+      "tarih": "2026-11-24"
+    },
+    "adanghd/sender-kalopilot-skill": {
+      "karar": "reddedildi",
+      "neden": "Lisans bulunmuyor ve yerel dil kisitli",
+      "tarih": "2026-11-24"
+    },
+    "chnjames/tradehot-skill": {
+      "karar": "reddedildi",
+      "neden": "Lisans bulunmuyor",
+      "tarih": "2026-11-24"
+    },
+    "misty1999sd/amazon-image-design-skill": {
+      "karar": "reddedildi",
+      "neden": "Lisans bulunmuyor",
+      "tarih": "2026-11-24"
+    },
+    "wondelai/skills": {
+      "karar": "eklendi",
+      "neden": "dev-koleksiyon fihrist/wondelai__skills.json olarak eklendi",
+      "tarih": "2026-11-24"
+    },
+    "huytieu/COG-second-brain": {
+      "karar": "eklendi",
+      "neden": "dev-koleksiyon fihrist/huytieu__COG-second-brain.json olarak eklendi",
+      "tarih": "2026-11-24"
+    },
+    "thatrebeccarae/claude-marketing": {
+      "karar": "eklendi",
+      "neden": "koleksiyon, arsiv (56 SKILL.md, MIT)",
+      "tarih": "2026-11-24"
+    },
+    "chrisbanes/skills": {
+      "karar": "eklendi",
+      "neden": "koleksiyon, arsiv (21 SKILL.md, Apache-2.0)",
+      "tarih": "2026-11-24"
+    },
+    "Prisma-Labs-Dev/apple-skills": {
+      "karar": "eklendi",
+      "neden": "koleksiyon, arsiv (29 aktif SKILL.md, MIT)",
+      "tarih": "2026-11-24"
+    },
+    "tddworks/baguette": {
+      "karar": "eklendi",
+      "neden": "urun-skil, arsiv (2 kullanici skili, Apache-2.0)",
+      "tarih": "2026-11-24"
+    },
+    "namedtoaster/The-Last-Mile": {
+      "karar": "eklendi",
+      "neden": "koleksiyon, arsiv (21 SKILL.md, MIT)",
+      "tarih": "2026-11-24"
+    },
+    "tanujrajputdev/shopify-theme-audit-skill": {
+      "karar": "eklendi",
+      "neden": "tek-skil, arsiv (1 SKILL.md, MIT)",
+      "tarih": "2026-11-24"
+    },
+    "tradermonty/claude-trading-skills": {
+      "karar": "eklendi",
+      "neden": "dev-koleksiyon, fihrist (74 tekil skil, 10 bilesen, MIT)",
+      "tarih": "2026-11-24"
+    },
+    "woocommerce/woocommerce-ios": {
+      "karar": "reddedildi",
+      "neden": "Saf iOS uygulamasi, skiller ic gelistirici repo-ici",
+      "tarih": "2026-11-24"
+    },
+    "ecency/vision-mobile": {
+      "karar": "reddedildi",
+      "neden": "Saf mobil istemci, skiller ic gelistirici repo-ici",
+      "tarih": "2026-11-24"
+    },
+    "arindamxd/camerax-android": {
+      "karar": "reddedildi",
+      "neden": "20 skill mukerrer android/skills, 1 skill repo-ici",
+      "tarih": "2026-11-24"
+    },
+    "ceorkm/mobile-app-ui-design": {
+      "karar": "reddedildi",
+      "neden": "Fiziksel LICENSE dosyasi repoda yok",
+      "tarih": "2026-11-24"
+    },
+    "smyrgeorge/sqlx4k": {
+      "karar": "eklendi",
+      "neden": "KMP/Android SQL toolkit urun-skil olarak eklendi",
+      "tarih": "2026-11-24"
+    },
+    "better-i18n/oss": {
+      "karar": "eklendi",
+      "neden": "React/Expo/Flutter i18n urun-skil olarak eklendi",
+      "tarih": "2026-11-24"
     }
   },
   "konular": {
@@ -42012,6 +42117,22 @@
     "echris6/motion-video-kit": {
       "neden": "düşük öncelik; benzer motion skilleri çok",
       "tarih": "2026-11-17"
+    },
+    "PatilShreyas/debroid": {
+      "neden": "Headless debugger araci, skill olgunlasmasi izleniyor",
+      "tarih": "2026-11-24"
+    },
+    "abacusai/simless": {
+      "neden": "Headless SwiftUI render araci, yeni repo takipte",
+      "tarih": "2026-11-24"
+    },
+    "andrzejchm/fdb": {
+      "neden": "Flutter debug bridge CLI, skill paketi izleniyor",
+      "tarih": "2026-11-24"
+    },
+    "maton-ai/api-gateway-skill": {
+      "neden": "Ucretli/anahtar bagimli gateway servisi",
+      "tarih": "2026-11-24"
     }
   },
   "kuyruk": {

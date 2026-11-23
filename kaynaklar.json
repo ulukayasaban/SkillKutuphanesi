@@ -2257,6 +2257,203 @@
         "commit": "bc7a414d6b66ceb09dfaa511e6237f382571bc84",
         "lisans_onay": "LICENSE dosyasinda MIT metni dogrulandi (saas-motion-kit contributors)"
       }
+    },
+    {
+      "repo": "davila7/claude-code-templates",
+      "oncelik": 3,
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "915 SKILL.md (>= 200, dev koleksiyon)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Trend dev-koleksiyon fihrist kaydi",
+        "commit": "b3ef82024a085acfc214f6ad76a41ceb308c4d35"
+      }
+    },
+    {
+      "repo": "garrytan/gbrain",
+      "oncelik": 3,
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "153 SKILL.md (fihrist koleksiyonu)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Trend dev-koleksiyon fihrist kaydi",
+        "commit": "8cb62d1ce553d8405c88984fe348c53ada08e61e"
+      }
+    },
+    {
+      "repo": "wondelai/skills",
+      "oncelik": 3,
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "199 SKILL.md (66 tekil skil; 100+ fihrist koleksiyonu)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 dev-koleksiyon fihrist kaydi",
+        "commit": "c37678106e63ef1c5472d848fb3d8b8c5b33fafe"
+      }
+    },
+    {
+      "repo": "huytieu/COG-second-brain",
+      "oncelik": 3,
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "129 SKILL.md (43 tekil skil, 20 bilesen; 100+ fihrist koleksiyonu)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 dev-koleksiyon fihrist kaydi",
+        "commit": "144c7a3a959cc99538b7dfee9c22c4b065a0e156"
+      }
+    },
+    {
+      "repo": "thatrebeccarae/claude-marketing",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skills/"
+      ],
+      "tur_gerekce": "56 bağımsız SKILL.md (skills/; pazarlama skilleri koleksiyonu, skil dışı betikler yardımcı araçlar)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 kaydi",
+        "commit": "a8a63ec1341f05ec9c1e9cb52b4edeb14e3bdcba"
+      }
+    },
+    {
+      "repo": "chrisbanes/skills",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skills/"
+      ],
+      "tur_gerekce": "21 bağımsız SKILL.md (Kotlin/Jetpack Compose/Android; ../ atıfları kardeş skill bağlantısı, skil dışı kodlar evals/ testleri)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 kaydi",
+        "commit": "efeb99dcdc793a1a52cb7128aee7954d28d4ffdd"
+      }
+    },
+    {
+      "repo": "Prisma-Labs-Dev/apple-skills",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skills/"
+      ],
+      "tur_gerekce": "29 aktif bağımsız SKILL.md (skills/; 5 disabled-skills/ hariç tutuldu)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 kaydi",
+        "commit": "498626005e65783ebe8570a103b2335cf397768c"
+      }
+    },
+    {
+      "repo": "tddworks/baguette",
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skills/"
+      ],
+      "tur_gerekce": "Asıl işi yazılım (iOS simülatör CLI) olan kaynak, kullanıcıları için 2 skil içeriyor (.claude/skills/baguette-implement-feature repo-ici olduğu için hariç)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 kaydi",
+        "commit": "e0a4cc4b5c04f90f55bdf63d44114aafd7611cf7"
+      }
+    },
+    {
+      "repo": "namedtoaster/The-Last-Mile",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skills/"
+      ],
+      "tur_gerekce": "21 bağımsız SKILL.md (App Store/Google Play yayınlama; skil dışı kodlar evals/fixtures/ test örnekleri)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 kaydi",
+        "commit": "c31b1cf70e3725aa6f17a4fd61e40aceeb7a1555"
+      }
+    },
+    {
+      "repo": "tanujrajputdev/shopify-theme-audit-skill",
+      "tur": "tek-skil",
+      "bolum": "arsiv",
+      "tur_gerekce": "1 SKILL.md",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 kaydi",
+        "commit": "df4992fc13da0ba3073322dccd57ce8f6834a11b"
+      }
+    },
+    {
+      "repo": "tradermonty/claude-trading-skills",
+      "oncelik": 3,
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "94 SKILL.md (74 tekil skil, 10 bilesen; 90+ fihrist koleksiyonu)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 1 dev-koleksiyon fihrist kaydi",
+        "commit": "4080042a7863f5eeb48aabeaf60bd547efb99949"
+      }
+    },
+    {
+      "repo": "smyrgeorge/sqlx4k",
+      "oncelik": 3,
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skills/sqlx4k/"
+      ],
+      "tur_gerekce": "KMP/Android SQL toolkit ürün skili (skills/sqlx4k, MIT)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 2 derin inceleme istisna urun-skil kabul",
+        "commit": "14f26dc31a1ba767ef248efc6ee70817b3f9ff79"
+      }
+    },
+    {
+      "repo": "better-i18n/oss",
+      "oncelik": 3,
+      "tur": "urun-skil",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skill/"
+      ],
+      "tur_gerekce": "React/Expo/Flutter i18n SDK ürün skili (skill/, MIT)",
+      "eklendi": "2026-11-24",
+      "onay": {
+        "kim": "kural",
+        "tarih": "2026-11-24",
+        "oturum": "Grup 2 derin inceleme istisna urun-skil kabul",
+        "commit": "bca574ce4048ca33261a38fc2ee66a50352ef893"
+      }
     }
   ],
   "konum_haric": [

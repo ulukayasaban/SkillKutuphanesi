@@ -2225,6 +2225,22 @@
     "saas-motion-video": [
       "ucretsiz",
       "HyperFrames açık kaynak CLI ile yazılım tanıtım videosu üretimi; HeyGen yalnızca HyperFrames araç referansı olarak anılır"
+    ],
+    "better-i18n": [
+      "kismen",
+      "better-i18n CLI/açık kaynak; bulut çeviri/Paid plan isteğe bağlı"
+    ],
+    "klaviyo-analyst": [
+      "ucretli",
+      "Klaviyo API anahtarı (hesap/servis) gerekir"
+    ],
+    "klaviyo-developer": [
+      "ucretli",
+      "Klaviyo API anahtarı (hesap/servis) gerekir"
+    ],
+    "store-listing": [
+      "kismen",
+      "App store listing yönetimi; ücretli API isteğe bağlı"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

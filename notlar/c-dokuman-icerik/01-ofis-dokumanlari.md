@@ -9,7 +9,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne yapar:** Huashu / huashu-md-html-inspired magazine article layout for turning Markdown or notes into a polished long-form HTML essay.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★108838, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★109168, son güncelleme 2026-11-23, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -19,7 +19,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne yapar:** Warm parchment canvas (#f5f4ed), monochrome ink-blue accent (#1B365D), one serif family, and editorial-grade typography.
 - **Teknoloji:** canvas, css, html, tailwind _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★108838, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★109168, son güncelleme 2026-11-23, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 10 KB (SKILL.md 4.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -30,7 +30,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne zaman:** Rapor, mektup, sözleşme, şablon gibi teslimatın Word dosyası olduğu her iş; mevcut .docx üzerinde izlenen değişiklik veya yorum. · **Ne zaman değil:** Teslimat PDF (pdf), Google Docs ya da Markdown/HTML ise; içerik yazımı/yapılandırma için doc-coauthoring.
 - **Teknoloji:** node, python, docx-js, libreoffice · **Paketler:** docx (npm), pandoc, libreoffice, poppler (pdftoppm), defusedxml, lxml
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★198456, son güncelleme 2026-11-16, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★199459, son güncelleme 2026-11-16, lisans yok)
 - **Durum:** tercih · **Örtüşme:** ofis-docx → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 1139 KB (SKILL.md 7.3 KB, yük kucuk)
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). Anthropic'in güncel sürümü: kısa SKILL.md (6.7 KB), net görev tablosu, docx-js tuzakları, merge_runs/validate/comment betikleri ve render ile doğrulama. ComposioHQ kopyası bunun eski anlık görüntüsü; bu yüzden birincil bu.
@@ -41,7 +41,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne zaman:** Girdi ya da çıktı PDF olduğunda: rapor PDF'i üretmek, PDF'ten veri çekmek, form doldurmak, sayfa işlemleri. · **Ne zaman değil:** Teslimat düzenlenebilir Word/Excel/PowerPoint ise (docx/xlsx/pptx); HTML'den tasarımlı PDF gerekiyorsa önce HTML üretip tarayıcıyla dönüştürmek daha iyi olabilir.
 - **Teknoloji:** python · **Paketler:** pypdf, pdfplumber, reportlab, pypdfium2, poppler-utils, qpdf, pytesseract (OCR)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★198456, son güncelleme 2026-11-16, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★199459, son güncelleme 2026-11-16, lisans yok)
 - **Durum:** tercih · **Örtüşme:** ofis-pdf → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 67 KB (SKILL.md 7.9 KB, yük orta)
 - **İnceleme:** yeniden-incelenecek · kalite 4/5 — Karar: TUT (birincil). Kapsamlı ve pratik kod örnekleri; form doldurma betikleri iyi. Diğer ofis skillerine göre daha az 'doğrula' disiplini var. ComposioHQ sürümü neredeyse aynı (39 satır fark) ama eski; birincil bu.
@@ -52,7 +52,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne zaman:** Sunum, pitch deck, eğitim slaytı üretimi; mevcut desteyi ya da kurumsal şablonu düzenleme; .pptx'ten metin çıkarma. · **Ne zaman değil:** Web tabanlı/HTML slayt (slides, reveal.js) ya da video istenirse; sadece içerik/metin taslağı gerekiyorsa.
 - **Teknoloji:** node, python, pptxgenjs, libreoffice · **Paketler:** pptxgenjs (npm), markitdown[pptx], Pillow, defusedxml, lxml, libreoffice, poppler (pdftoppm)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★198456, son güncelleme 2026-11-16, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★199459, son güncelleme 2026-11-16, lisans yok)
 - **Durum:** tercih · **Örtüşme:** ofis-pptx → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 1172 KB (SKILL.md 27.7 KB, yük buyuk)
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). Güncel Anthropic sürümü; betik tablosu, pptxgenjs tuzakları, tasarım rehberi ve zorunlu render QA'sı tek dosyada. ComposioHQ sürümü html2pptx tabanlı eski akış; birincil bu.
@@ -62,7 +62,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne yapar:** Modern minimal resume, single A4 page, ready for print or PDF export.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★108838, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★109168, son güncelleme 2026-11-23, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 11 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -72,7 +72,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne yapar:** Interactive PDF viewer. Use when the user wants to open, show, or view a PDF and collaborate on it visually — annotate, highlight, stamp, fill form fields, place signature/initials, or review markup together. Not for summarization or text extraction (use native Read instead).
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★36650, son güncelleme 2026-11-21, lisans Apache-2.0)
+- **Geliştirici:** anthropics (kurum, resmî, ★36736, son güncelleme 2026-11-23, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -83,7 +83,7 @@ _Word, Excel, PowerPoint, PDF üretme/düzenleme_
 - **Ne zaman:** Teslimatın elektronik tablo olduğu işler: finansal model, veri temizleme, formüllü tablo, format dönüştürme. · **Ne zaman değil:** Teslimat Word/HTML rapor, bağımsız Python betiği, veritabanı hattı ya da Google Sheets API entegrasyonu ise.
 - **Teknoloji:** python, libreoffice · **Paketler:** openpyxl, pandas, markitdown, libreoffice
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★198456, son güncelleme 2026-11-16, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★199459, son güncelleme 2026-11-16, lisans yok)
 - **Durum:** tercih · **Örtüşme:** ofis-xlsx → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 1137 KB (SKILL.md 9.5 KB, yük orta)
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). 'Yeşil recalc doğru demek değil' gibi doğrulama disiplini ve mevcut dosya kurallarına uyma talimatı çok iyi. ComposioHQ sürümünden güncel ve daha net; birincil bu.

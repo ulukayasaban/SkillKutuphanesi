@@ -1,0 +1,345 @@
+{
+  "repo": "huytieu/COG-second-brain",
+  "commit": "144c7a3a959cc99538b7dfee9c22c4b065a0e156",
+  "tarih": "2026-11-24",
+  "skil_sayisi": 43,
+  "skiller": [
+    {
+      "ad": "auto-research",
+      "aciklama": "Deep strategic research engine — decomposes questions into parallel research threads, spawns multiple agents, and synthesizes into actionable strategic analysis",
+      "yol": "skills/auto-research"
+    },
+    {
+      "ad": "blog-publish",
+      "aciklama": "Write and publish a post to your own static blog end to end: content checklist (embedded links, optional TL;DR), per-post ASCII art, an agent-readable markdown twin, deploy, and social distribution. Use when you say \"write a blog post\", \"publish this to my blog\", or \"push this post to socials\".",
+      "yol": "skills/blog-publish"
+    },
+    {
+      "ad": "braindump",
+      "aciklama": "Quick capture of raw thoughts with intelligent domain classification and competitive intelligence extraction",
+      "yol": "skills/braindump"
+    },
+    {
+      "ad": "closed-loop",
+      "aciklama": "Run one task through the V-model verification loop: CP-2 plan → CP-3 build → CP-3v component verify → CP-4 integration verify (full lane) → CP-5 acceptance. The worker never grades its own homework; evidence rows trace back to AC-n. Opt-in: invoke with /closed-loop or by asking for the closed loop,…",
+      "yol": "skills/closed-loop"
+    },
+    {
+      "ad": "comprehensive-analysis",
+      "aciklama": "Deep-dive 7-day analysis across all data sources for weekly reviews, board prep, and strategic planning",
+      "yol": "skills/comprehensive-analysis"
+    },
+    {
+      "ad": "content-factory",
+      "aciklama": "Autonomous content pipeline - scout announcements in your field, triage by trend momentum and personal angle, produce posts/blogs/videos in your voice with ledger-based dedup, hard volume caps, and screenshot-verified publishing",
+      "yol": "skills/content-factory"
+    },
+    {
+      "ad": "create-user-story",
+      "aciklama": "Create user stories with duplicate checking across any project tracker (Linear, GitHub Issues, Jira)",
+      "yol": "skills/create-user-story"
+    },
+    {
+      "ad": "daily-brief",
+      "aciklama": "Generate personalized news intelligence with verified sources (7-day freshness requirement)",
+      "yol": "skills/daily-brief"
+    },
+    {
+      "ad": "daily-journal",
+      "aciklama": "A passive daily work journal that Claude keeps FOR you so you never have to write it yourself. Append short entries after meaningful work (what was done, what you focused on, artifacts touched) to 01-daily/journal/YYYY-MM-DD.md. Run a guided reflection at night or in the morning. Use when you run /…",
+      "yol": "skills/daily-journal"
+    },
+    {
+      "ad": "data-forms",
+      "aciklama": "Pick the right way to represent a dataset so a reader gets the finding in three seconds — a catalog of 20+ chart and diagram forms with when-to-use and failure modes, plus the encoding decisions that make any of them readable (takeaway headline, direct labels, kill the axis, highlight-and-mute, sho…",
+      "yol": "skills/data-forms"
+    },
+    {
+      "ad": "editorial-illustrations",
+      "aciklama": "Generate meaning-carrying editorial data-illustrations in the monotykamary / Linear aesthetic (near-black grayscale, Inter display + mono labels, hairline framed figures) with a single coral accent. This is a GENERATIVE GUIDE, not a template gallery: it teaches the \"claim -> geometry\" method so any…",
+      "yol": "skills/editorial-illustrations"
+    },
+    {
+      "ad": "export-open-issues",
+      "aciklama": "Audit and export open issues from any project tracker with summary analysis and vault archival",
+      "yol": "skills/export-open-issues"
+    },
+    {
+      "ad": "feature-doc",
+      "aciklama": "Closed-loop feature documentation for your product. Give it a feature (issue numbers or an id) and it reads the source, drives your live app to capture real screenshots and a screen recording, writes a docs article (Docusaurus or any markdown docs site) with both how-to steps and use-case content,…",
+      "yol": "skills/feature-doc"
+    },
+    {
+      "ad": "generate-prd",
+      "aciklama": "Generate product requirements documents with optional publishing to Confluence or other wiki platforms",
+      "yol": "skills/generate-prd"
+    },
+    {
+      "ad": "generate-release-notes",
+      "aciklama": "Generate categorized release notes from any source (GitHub, Linear, Jira, or manual input) with optional publishing",
+      "yol": "skills/generate-release-notes"
+    },
+    {
+      "ad": "harvest",
+      "aciklama": "Capture durable session learnings, stage for human promotion to 05-knowledge/lizard, and propose skill/CLAUDE.md patches. Triggered by /harvest, SessionEnd hook staging, or nightly enhance. Never writes durable knowledge without your approval.",
+      "yol": "skills/harvest"
+    },
+    {
+      "ad": "knowledge-consolidation",
+      "aciklama": "Build frameworks from scattered insights across all braindumps and notes",
+      "yol": "skills/knowledge-consolidation"
+    },
+    {
+      "ad": "loop-engineering",
+      "aciklama": "Shared loop-engineering reference for COG skills - the agent loop, deterministic verifiers, termination conditions, in-loop context management, and named patterns. Invoke when designing or debugging a skill that iterates (search-verify-retry, scan-until-dry, fetch-retry-gate).",
+      "yol": "skills/loop-engineering"
+    },
+    {
+      "ad": "meeting-transcript",
+      "aciklama": "Process meeting recordings and notes into structured decisions, action items, and team dynamics with intelligent noise filtering",
+      "yol": "skills/meeting-transcript"
+    },
+    {
+      "ad": "memory-hygiene",
+      "aciklama": "Periodic trust sweep of persistent memory and durable knowledge notes - re-verifies environment-dependent claims against the live environment, stamps last_verified + confidence, and proposes archiving drifted entries",
+      "yol": "skills/memory-hygiene"
+    },
+    {
+      "ad": "museum-art",
+      "aciklama": "Source authentic, high-res PUBLIC-DOMAIN artwork from museum open-access APIs (Met, Cleveland, SMK, Rijksmuseum, NGA, Art Institute of Chicago, Getty, Smithsonian) instead of AI-generated or generic-stock imagery. The default move whenever a visual needs an aesthetic, credible image (blog heroes, d…",
+      "yol": "skills/museum-art"
+    },
+    {
+      "ad": "no-ai-slop",
+      "aciklama": "Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI. Also the default writing standar…",
+      "yol": "skills/no-ai-slop"
+    },
+    {
+      "ad": "onboarding",
+      "aciklama": "Personalize COG for your workflow - creates profile, interests, and watchlist files with guided setup (run this first!)",
+      "yol": "skills/onboarding"
+    },
+    {
+      "ad": "product-ui-taste",
+      "aciklama": "Anti-slop skill for PRODUCT UI - dashboards, data tables, forms, multi-step flows, settings, list/detail, app shells. The agent reads the surface, budgets the frame first, and ships dense interfaces that are correct at every edge case (overflow, long labels, empty/error/loading states, i18n expansi…",
+      "yol": "skills/product-ui-taste"
+    },
+    {
+      "ad": "publish-to-confluence",
+      "aciklama": "Publish any markdown file from the vault to Confluence with format conversion and approval gate",
+      "yol": "skills/publish-to-confluence"
+    },
+    {
+      "ad": "release-comms",
+      "aciklama": "Release communication pipeline for your product: turn a deployment runsheet and a GitHub milestone into a customer-facing release note with real screenshots and videos, docs updates (including retrofits of articles the release makes stale), a Slack announcement draft, and a lightweight marketing pa…",
+      "yol": "skills/release-comms"
+    },
+    {
+      "ad": "release-video",
+      "aciklama": "Turn a product release (the list of shipped items plus real screen recordings) into a motion recap video and one explained demo per feature, with sound effects tied to on-screen motion and a composed music bed. Deterministic HTML scenes rendered frame by frame, ElevenLabs for sound effects and musi…",
+      "yol": "skills/release-video"
+    },
+    {
+      "ad": "retro",
+      "aciklama": "CP-7 retrospective: audit checkpoints, evidence quality, action items, and harvest candidates. Closes the V-model cycle and feeds the next run. Use via /retro after ship, escalate, or significant session.",
+      "yol": "skills/retro"
+    },
+    {
+      "ad": "review-cockpit",
+      "aciklama": "Produce and continuously maintain ONE living review document for a multi-item session — a cockpit header (Progress checklist, Working folder, Context) plus per-item review cards that you approve or request changes on directly in the doc or side panel. Use whenever a session has multiple deliverable…",
+      "yol": "skills/review-cockpit"
+    },
+    {
+      "ad": "scout",
+      "aciklama": "Evaluate URLs and tools — check vault coverage, assess relevance, recommend save or skip",
+      "yol": "skills/scout"
+    },
+    {
+      "ad": "slop-gate",
+      "aciklama": "Deterministic pre-publish scan that refuses AI-slop tells in anything about to be written, published, or sent: files, artifacts, slide titles, table headers, diagram labels, chat messages, commit messages. Use before publishing or sending any deliverable, in CI, or wired as a Claude Code hook so th…",
+      "yol": "skills/slop-gate"
+    },
+    {
+      "ad": "social-media-kit",
+      "aciklama": "Produce and attach native media (video teaser, GIF, card images) for every social post to maximize reach and interaction. Use whenever you post to X, LinkedIn, Reddit, or prepare HN/IndieHackers handoffs, and whenever a social-publishing step runs. A text-only social post is a draft, not a post.",
+      "yol": "skills/social-media-kit"
+    },
+    {
+      "ad": "taste-skill",
+      "aciklama": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+      "yol": "skills/taste-skill"
+    },
+    {
+      "ad": "team-brief",
+      "aciklama": "Generate daily team intelligence brief by cross-referencing GitHub, Linear, Slack, PostHog, meetings, and braindumps with two-way Linear sync-back",
+      "yol": "skills/team-brief"
+    },
+    {
+      "ad": "terminal-replica",
+      "aciklama": "Reproduce YOUR real terminal and CLI agents (Claude Code, Codex CLI, Gemini CLI) faithfully in any generated graphic, GIF, or video frame. Use whenever an asset shows a terminal, an agent transcript, a statusline, or a CLI banner. Capture your actual theme, font, prompt and statusline first, and ne…",
+      "yol": "skills/terminal-replica"
+    },
+    {
+      "ad": "ultragoal",
+      "aciklama": "Run a large, multi-session goal (e.g. shipping a whole side product) through the full V-model closed loop, one phase at a time, with cross-session state and a final north-star acceptance gate. Ultragoals never downgrade the lane: every phase runs CP-1→CP-6 with adversarial verification. Opt-in: inv…",
+      "yol": "skills/ultragoal"
+    },
+    {
+      "ad": "update-cog",
+      "aciklama": "Check for and apply upstream COG framework updates (skills, docs, scripts) without touching personal content",
+      "yol": "skills/update-cog"
+    },
+    {
+      "ad": "update-knowledge-base",
+      "aciklama": "Maintain and update product knowledge base from releases, features, and project changes with optional wiki sync",
+      "yol": "skills/update-knowledge-base"
+    },
+    {
+      "ad": "url-dump",
+      "aciklama": "Quick capture URLs with automatic content extraction, insights, and categorization into knowledge booklets",
+      "yol": "skills/url-dump"
+    },
+    {
+      "ad": "vector-cover",
+      "aciklama": "Generate flat vector editorial cover illustrations in a warm editorial style: near-black canvas, cream organic blob, serif display type, one terracotta accent, and thin line-art concept motifs (grids, node charts, dashed \"unknown\" paths, mountains, question marks). Output is code (HTML + inline SVG…",
+      "yol": "skills/vector-cover"
+    },
+    {
+      "ad": "voice-baseline",
+      "aciklama": "Measure your own writing corpus for the words and sentence shapes you over-use, so an agent writing in your voice stops amplifying your tics into a style. Produces a counted baseline file and checks any new draft against it. Use when an agent's drafts start sounding like a caricature of you, before…",
+      "yol": "skills/voice-baseline"
+    },
+    {
+      "ad": "weekly-checkin",
+      "aciklama": "Cross-domain pattern analysis and strategic reflection for weekly review",
+      "yol": "skills/weekly-checkin"
+    },
+    {
+      "ad": "youtube-video-kit",
+      "aciklama": "Produce YouTube-ready video packaging: a branded thumbnail, an animated opening title, background music via ElevenLabs Music, and the upload metadata bundle. Use whenever you make or publish a video (deep dives, demos, blog companions) or want thumbnails, intros, video music, or channel and playlis…",
+      "yol": "skills/youtube-video-kit"
+    }
+  ],
+  "bilesenler": [
+    {
+      "tur": "ajan",
+      "ad": "brief-people-updater",
+      "aciklama": "Update people profiles in 05-knowledge/people/ with new information from brief data, meetings, or Slack",
+      "yol": ".agents/agents/brief-people-updater.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "fix-agent",
+      "aciklama": "Targeted fixes after task-verifier returns FAIL:fixable. Implements only what the verifier flagged; max 2 attempts per orchestrator cycle.",
+      "yol": ".agents/agents/fix-agent.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "harvest-curator",
+      "aciklama": "Draft session learnings from harvest staging into lizard-ready adoption notes. Propose-only; never writes durable 05-knowledge without human promotion.",
+      "yol": ".agents/agents/harvest-curator.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "integration-verifier",
+      "aciklama": "Read-only CP-4 gate. Cross-task wiring and global acceptance for multi-task specs. Cannot edit files.",
+      "yol": ".agents/agents/integration-verifier.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "task-verifier",
+      "aciklama": "Read-only verification gate. Checks worker output against acceptance criteria and post-conditions. Cannot edit files or mutate external state.",
+      "yol": ".agents/agents/task-verifier.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-data-collector",
+      "aciklama": "Collect data from GitHub, Slack, Jira, Linear, or file system. Structured extraction only — no synthesis.",
+      "yol": ".agents/agents/worker-data-collector.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-executor",
+      "aciklama": "Execute pre-approved mutations — Jira transitions, Linear updates, API calls, build commands.",
+      "yol": ".agents/agents/worker-executor.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-file-ops",
+      "aciklama": "Read, write, and organize vault files. Metadata updates, file moves, profile updates.",
+      "yol": ".agents/agents/worker-file-ops.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-publisher",
+      "aciklama": "Execute publishing operations — Slack, Confluence, Notion, webhooks. Receives final content and posts it.",
+      "yol": ".agents/agents/worker-publisher.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-researcher",
+      "aciklama": "Web research agent. Searches, fetches URLs, extracts facts and evidence. No synthesis — just structured findings.",
+      "yol": ".agents/agents/worker-researcher.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "brief-people-updater",
+      "aciklama": "Update people profiles in 05-knowledge/people/ with new information from brief data, meetings, or Slack",
+      "yol": ".claude/agents/brief-people-updater.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "fix-agent",
+      "aciklama": "Targeted fixes after task-verifier returns FAIL:fixable. Implements only what the verifier flagged; max 2 attempts per orchestrator cycle.",
+      "yol": ".claude/agents/fix-agent.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "harvest-curator",
+      "aciklama": "Draft session learnings from harvest staging into lizard-ready adoption notes. Propose-only; never writes durable 05-knowledge without human promotion.",
+      "yol": ".claude/agents/harvest-curator.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "integration-verifier",
+      "aciklama": "Read-only CP-4 gate. Cross-task wiring and global acceptance for multi-task specs. Cannot edit files.",
+      "yol": ".claude/agents/integration-verifier.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "task-verifier",
+      "aciklama": "Read-only verification gate. Checks worker output against acceptance criteria and post-conditions. Cannot edit files or mutate external state.",
+      "yol": ".claude/agents/task-verifier.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-data-collector",
+      "aciklama": "Collect data from GitHub, Slack, Jira, Linear, or file system. Structured extraction only — no synthesis.",
+      "yol": ".claude/agents/worker-data-collector.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-executor",
+      "aciklama": "Execute pre-approved mutations — Jira transitions, Linear updates, API calls, build commands.",
+      "yol": ".claude/agents/worker-executor.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-file-ops",
+      "aciklama": "Read, write, and organize vault files. Metadata updates, file moves, profile updates.",
+      "yol": ".claude/agents/worker-file-ops.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-publisher",
+      "aciklama": "Execute publishing operations — Slack, Confluence, Notion, webhooks. Receives final content and posts it.",
+      "yol": ".claude/agents/worker-publisher.md"
+    },
+    {
+      "tur": "ajan",
+      "ad": "worker-researcher",
+      "aciklama": "Web research agent. Searches, fetches URLs, extracts facts and evidence. No synthesis — just structured findings.",
+      "yol": ".claude/agents/worker-researcher.md"
+    }
+  ]
+}

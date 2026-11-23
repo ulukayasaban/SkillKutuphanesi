@@ -1,19 +1,19 @@
 # Kapsam Denetimi
 
-> `araclar/kapsam-denetimi.py` üretir · 2026-11-22 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
+> `araclar/kapsam-denetimi.py` üretir · 2026-11-24 · Bağımsız kontrol: her repo için GitHub'daki tam dosya ağacı yeniden çekilip içindeki tüm SKILL.md dosyaları tek tek açıklandı.
 
-**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7716 · Arşivdeki skill kaydı: 2931 · Bileşen (komut/agent): 341
+**Sonuç: ✅ Açıklanamayan skill yok** · Taranan SKILL.md: 7857 · Arşivdeki skill kaydı: 3063 · Bileşen (komut/agent): 341
 
 | Karar | Sayı | Anlamı |
 |---|---|---|
 | fihristte | 3462 | fihristte (arşive alınmadı; kurulumda kaynaktan alınır) |
-| secildi | 2879 | arşivde (ana sürüm) |
+| secildi | 3011 | arşivde (ana sürüm) |
 | haric | 1183 | bilinçli hariç (test/örnek/şablon) |
 | ayna-ayni | 130 | birebir kopya (tek kopya yeter) |
 | ayna-baska-arac | 26 | başka AI aracı (Cursor/Gemini/Kiro…) için kopya |
 | arac-varyanti | 26 | arşivde (Claude/Codex'e özel sürüm) |
+| KARAR_BEKLIYOR | 10 | yeni/kapsam dışı skill: arşive alınmadı, karar bekliyor (kaynaklar.json: dahil'e ekle ya da haric'e yaz) |
 | ayri-surum | 9 | arşivde (aynı adlı farklı içerik, ayrı skill) |
-| KARAR_BEKLIYOR | 1 | yeni/kapsam dışı skill: arşive alınmadı, karar bekliyor (kaynaklar.json: dahil'e ekle ya da haric'e yaz) |
 
 ## Repo bazında
 
@@ -53,6 +53,7 @@
 | Orchestra-Research/AI-Research-SKILLs | 98 | secildi 98 |
 | Panniantong/Agent-Reach | 1 | secildi 1 |
 | ParthJadhav/ios-marketing-capture | 1 | secildi 1 |
+| Prisma-Labs-Dev/apple-skills | 34 | secildi 29, KARAR_BEKLIYOR 5 |
 | RevenueCat/play-billing-skills | 45 | secildi 25, haric 20 |
 | Ryze-AI-Adgent/open-seo-mcp-skills | 8 | secildi 8 |
 | Shopify/agent-skills | 30 | secildi 15, arac-varyanti 15 |
@@ -71,9 +72,11 @@
 | avenoxai/avenox-video-kurgu-notlari | 1 | secildi 1 |
 | avenoxai/higgsfield-studio | 6 | secildi 6 |
 | ayghri/i-have-adhd | 2 | ayna-baska-arac 1, secildi 1 |
+| better-i18n/oss | 4 | KARAR_BEKLIYOR 3, secildi 1 |
 | blader/humanizer | 1 | secildi 1 |
 | browser-use/video-use | 2 | secildi 2 |
 | cathrynlavery/diagram-design | 1 | secildi 1 |
+| chrisbanes/skills | 21 | secildi 21 |
 | cloudflare/security-audit-skill | 1 | secildi 1 |
 | cloudflare/skills | 22 | secildi 22 |
 | coreyhaines31/marketingskills | 53 | secildi 53 |
@@ -120,6 +123,7 @@
 | morluto/rea | 6 | haric 4, secildi 1, KARAR_BEKLIYOR 1 |
 | motiondivision/motion | 2 | secildi 2 |
 | multica-ai/andrej-karpathy-skills | 1 | secildi 1 |
+| namedtoaster/The-Last-Mile | 21 | secildi 21 |
 | nateherkai/herk-edit-kit | 30 | haric 10, secildi 10, ayna-ayni 6, arac-varyanti 4 |
 | nateherkai/scroll-craft | 1 | secildi 1 |
 | nexscope-ai/Amazon-Skills | 52 | secildi 52 |
@@ -136,7 +140,11 @@
 | rshankras/claude-code-apple-skills | 184 | haric 171, secildi 13 |
 | sarpstar/cinecode | 1 | secildi 1 |
 | shadcn-labs/snapcn | 17 | haric 10, secildi 7 |
+| smyrgeorge/sqlx4k | 1 | secildi 1 |
+| tanujrajputdev/shopify-theme-audit-skill | 1 | secildi 1 |
+| tddworks/baguette | 3 | secildi 2, KARAR_BEKLIYOR 1 |
 | teng-lin/notebooklm-py | 1 | secildi 1 |
+| thatrebeccarae/claude-marketing | 56 | secildi 56 |
 | tt-a1i/archify | 5 | secildi 5 |
 | tugrawork-creator/saas-motion-kit | 1 | secildi 1 |
 | tuist/fuckingapproachableswiftconcurrency | 1 | secildi 1 |
@@ -165,7 +173,7 @@
 
 ## Arşive çekilmeyen kaynaklar (bolum fihrist/katalog)
 
-6 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: jacob-bd/gemini-notebook-mcp-cli, openai/plugins, ruvnet/ruflo, sirioberati/YouTube-AI-Video-Editing-System, wj-sidiss/etsy-otomasyon-full-full-surum, xjli360/sealeap-amazon-skills
+11 repo bilerek arşiv dışı; içlerindeki SKILL.md dosyaları sorun sayılmaz: davila7/claude-code-templates, garrytan/gbrain, huytieu/COG-second-brain, jacob-bd/gemini-notebook-mcp-cli, openai/plugins, ruvnet/ruflo, sirioberati/YouTube-AI-Video-Editing-System, tradermonty/claude-trading-skills, wj-sidiss/etsy-otomasyon-full-full-surum, wondelai/skills, xjli360/sealeap-amazon-skills
 
 ## KAYIP kaynaklar (GitHub'da yok; arşiv kopyası korunuyor, sorgulanmadı)
 
@@ -202,8 +210,17 @@
 - **anthropics/skills**: `template/SKILL.md` (^template/)
 - **anthropics/claude-plugins-official**: `external_plugins/discord/skills/access/SKILL.md` (^external_plugins/), `external_plugins/discord/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/access/SKILL.md` (^external_plugins/), `external_plugins/imessage/skills/configure/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/access/SKILL.md` (^external_plugins/), `external_plugins/telegram/skills/configure/SKILL.md` (^external_plugins/), `plugins/example-plugin/skills/example-command/SKILL.md` (^plugins/example-plugin/), `plugins/example-plugin/skills/example-skill/SKILL.md` (^plugins/example-plugin/)
 
-## Karar bekleyen yeni skiller (1)
+## Karar bekleyen yeni skiller (10)
 
 Hiçbir kayıt kapsamına girmiyor (upstream sonradan eklemiş olabilir). Almak için `kaynaklar.json` → repo kaydının `dahil` listesine ekle; almamak için `haric`e yaz. Bu skiller arşivde YOK ve güncellemeyi durdurmaz.
 
+- Prisma-Labs-Dev/apple-skills: disabled-skills/guide-swiftui-animations/SKILL.md
+- Prisma-Labs-Dev/apple-skills: disabled-skills/guide-swiftui-ui-patterns/SKILL.md
+- Prisma-Labs-Dev/apple-skills: disabled-skills/guide-swiftui-view-refactor/SKILL.md
+- Prisma-Labs-Dev/apple-skills: disabled-skills/ios-design-consultant/SKILL.md
+- Prisma-Labs-Dev/apple-skills: disabled-skills/ios-ui-craft/SKILL.md
+- better-i18n/oss: apps/landing/.claude/skills/ui-skills/SKILL.md
+- better-i18n/oss: apps/landing/content/agent-skills/better-i18n/SKILL.md
+- better-i18n/oss: apps/landing/public/.well-known/agent-skills/better-i18n/SKILL.md
 - morluto/rea: .cursor-plugin/skills/reverse-engineer-anything/SKILL.md
+- tddworks/baguette: .claude/skills/baguette-implement-feature/SKILL.md
