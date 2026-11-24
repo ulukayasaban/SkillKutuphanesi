@@ -2454,6 +2454,35 @@
         "oturum": "Grup 2 derin inceleme istisna urun-skil kabul",
         "commit": "bca574ce4048ca33261a38fc2ee66a50352ef893"
       }
+    },
+    {
+      "repo": "motiful/product-shots",
+      "tur": "koleksiyon",
+      "bolum": "arsiv",
+      "dahil": [
+        "^skills/"
+      ],
+      "tur_gerekce": "7 bağımsız SKILL.md (tek ürün fotoğrafından e-ticaret görselleri, MIT)",
+      "eklendi": "2026-11-25",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-25",
+        "oturum": "Kullanıcı onayıyla konu takibinden eklendi",
+        "commit": "063c508b0b7f4db5cda89f10bdf20df25026dfc5"
+      }
+    },
+    {
+      "repo": "affaan-m/ECC",
+      "tur": "dev-koleksiyon",
+      "bolum": "fihrist",
+      "tur_gerekce": "1089 SKILL.md (>= 200): fihrist dev koleksiyonu (MIT)",
+      "eklendi": "2026-11-25",
+      "onay": {
+        "kim": "kullanıcı",
+        "tarih": "2026-11-25",
+        "oturum": "Kullanıcı onayıyla popüler adaylardan fihriste eklendi",
+        "commit": "4adeee6732a12d1540f49a4d50a38ce8c97f9a53"
+      }
     }
   ],
   "konum_haric": [

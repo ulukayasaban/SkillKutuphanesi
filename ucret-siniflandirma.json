@@ -2241,6 +2241,10 @@
     "store-listing": [
       "kismen",
       "App store listing yönetimi; ücretli API isteğe bağlı"
+    ],
+    "product-shots-image-gen": [
+      "ucretli",
+      "Harici görsel üretim API servisi (OMNIMAAS_API_KEY / RENDER_API_KEY) gerektirir"
     ]
   },
   "_tanim": "ucretli: skill ancak ücretli bir servis/lisansla çalışır, ücretsiz kullanım yolu yok (ör. fal.ai sarmalayıcısı). kismen: skill ücret ödemeden kullanılabilir (ücretsiz katman/kota, ücretli servis sadece seçeneklerden biri ya da sadece üretilen kodun çalışması ücretli). ucretsiz: hiçbir ücretli servis gerekmez. Sınıflandırma kullanıcının tanımına göre (2026-10-22)."

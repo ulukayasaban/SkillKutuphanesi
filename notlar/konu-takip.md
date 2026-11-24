@@ -4,23 +4,18 @@
 
 ## e-ticaret → `h-is-alanlari/05-e-ticaret-pazaryeri`
 
-Son tarama: 2026-11-22 · eşleşen repo: 1525 · kütüphanede: 22 · değerlendirilmiş: 111 · **odaklı aday: 5** · dolaylı eşleşme: 584 (★10 altı 810 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-22 · eşleşen repo: 1525 · kütüphanede: 23 · değerlendirilmiş: 115 · **odaklı aday: 1** · dolaylı eşleşme: 583 (★10 altı 810 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
-| beyondtahir/beyondwords | 169 | MIT | 2026-11-14 | 1 | etsy | - | A goal-driven AI book production house for Amazon KDP: research niches, create books, publish, manage ads and deliver client services. |
-| xianyu110/ecommerce-video-skills | 152 | MIT | 2026-10-05 | 2 | tiktok shop | - | 12 个电商短视频 Agent Skills：3秒钩子、卖点分镜、图生视频提示词、edge-tts 配音、字幕花字、ffmpeg 自动成片、抖音/TikTok Shop/视频号导出、直播切片、多语言配音、封面A/B · Claude Code / Codex / Cursor |
-| motiful/product-shots | 151 | MIT | 2026-06-08 | 1 | tiktok shop | - | Open-source Claude Code skills that turn one product photo into a full set of e-commerce visuals — main images, A+ detail pages, multi-angle |
-| kangise/ecommerce-ai-skills | 119 | CC0-1.0 | 2026-11-16 | 1 | tiktok shop | - | Cross-border e-commerce AI knowledge base, read by people and installed by agents: 69 trilingual guides, 878 prompts, a 100-entity / 322-con |
 | hooper-lee/crosspulse | 29 | MIT | 2026-06-06 | 1 | tiktok shop | - | 🔥 跨境电商大盘监控工作流 — 定时追踪 Amazon、TikTok Shop、Temu、SHEIN、Shopify 等平台政策变化、爆品趋势、类目机会，自动清洗后沉淀到飞书多维表格，生成每日市场日报。 |
 
 ## mobil → `b-yazilim-gelistirme/08-mobil-uygulama`
 
-Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlendirilmiş: 103 · **odaklı aday: 1** · dolaylı eşleşme: 264 (★20 altı 648 repo gösterilmez) · başarısız sorgu: 0
+Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlendirilmiş: 104 · **odaklı aday: 0** · dolaylı eşleşme: 264 (★20 altı 648 repo gösterilmez) · başarısız sorgu: 0
 
 | Aday repo | ★ | Lisans | Son | Eşleşen SKILL.md | Sorgular | Trend | Açıklama |
 |---|---|---|---|---|---|---|---|
-| ukanhaupa/projx | 71 | MIT | 2026-11-02 | 1 | flutter | - | Projx — A CLI tool for scaffolding production-grade projects. Pick your stack (FastAPI, Fastify, React, Flutter), get a fully wired template |
 
 ## İzlenenler (şimdilik değil; durum değişirse bak)
 
@@ -34,8 +29,10 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | echris6/motion-video-kit | 2026-11-17 | 2027-02-15 | düşük öncelik; benzer motion skilleri çok |
 | howseen-ai/claude-motion-design | 2026-11-17 | 2027-02-15 | Kullanıcı kararı 2026-11-17: kişisel iş klasörü yolu ve motion-design ad çakışması; durum değişirse bak |
 | iart-ai/explainer-video-skills | 2026-11-15 | 2027-02-13 | Tek katkıcı; içerik Haziran'dan beri değişmedi; yardımcı betikler skill klasörü dışında |
+| kangise/ecommerce-ai-skills | 2026-11-25 | 2027-02-23 | CC0-1.0, 3 dilli sinir otesi e-ticaret bilgi tabani; gerekirse yeniden bak |
 | maton-ai/api-gateway-skill | 2026-11-24 | 2027-02-22 | Ucretli/anahtar bagimli gateway servisi |
 | storytold/pdfcraft | 2026-11-17 | 2027-02-15 | Kullanıcı kararı 2026-11-17: şimdilik değil, durum değişirse bak |
+| thedotmack/claude-mem | 2026-11-25 | 2027-02-23 | Apache-2.0, 47 skill; oturumlar arasi kalici bellek sistemi, gerekirse bak |
 | tugrawork-creator/saas-motion-kit | 2026-11-17 | 2027-02-15 | asıl içerik skill dizini dışında; dosya kapsamı kararı gerekir |
 | yusufkaran/swiftui-autotest-skill | 2026-11-07 | 2027-02-05 | Mobil teknoloji henüz seçilmedi; iOS/Swift seçilirse eklenir |
 
@@ -61,6 +58,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | Gayaya999/ecommerce-detail-page-generator | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
 | GetStream/stream-video-swift | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | HDCharts/charts | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| HKUDS/Vibe-Trading | reddedildi | 2026-11-25 | Finansal alim-satim ajani; kutuphane alaniyla ilgisiz |
 | Harishwarrior/flutter-claude-skills | eklendi | 2026-10-31 | Flutter test ve OWASP mobil güvenlik denetimi. |
 | JayGPTPro/amazon-pro-skills | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
 | Jonnycatx/apple-full-stack-genius-skill | reddedildi | 2026-11-07 | Ücretli fal.ai kullanıyor; 8 aydır güncellenmiyor |
@@ -78,15 +76,18 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | NativeScript/SimDeck | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | NerdOutInc/ai-shop-template | reddedildi | 2026-10-22 | Mağaza şablon uygulaması, ilgi çok düşük |
 | NewTurn2017/codex-sangpye-skill | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
+| NousResearch/hermes-agent | reddedildi | 2026-11-25 | Kendi basina ajan uygulamasi |
 | Odevio/Odevio-CLI | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | ParthJadhav/ios-marketing-capture | eklendi | 2026-10-31 | iOS uygulama mağazası görsellerini çok dilli otomatik üretir. |
 | PrestaShop/PrestaShop | reddedildi | 2026-10-22 | Ürün reposu; içindeki skiller repo-içi geliştirici skilleri |
 | PrestaShopCorp/ps_mbo | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
 | Prisma-Labs-Dev/apple-skills | eklendi | 2026-11-24 | koleksiyon, arsiv (29 aktif SKILL.md, MIT) |
+| QwenLM/qwen-code | reddedildi | 2026-11-25 | Kodlama ajani CLI uygulamasi, kutuphane skilli degil |
 | Reihantt6/sns-myagent | reddedildi | 2026-10-22 | Kişisel agent CLI, ilgi çok düşük |
 | RevenueCat/play-billing-skills | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
 | SerendipityOneInc/ZooData-Skills | reddedildi | 2026-11-03 | ücretli veri servisi zorunlu ya da alakasız pazaryeri (projeler Etsy) |
 | ShadAdman/KSensor | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
+| Significant-Gravitas/AutoGPT | reddedildi | 2026-11-25 | NOASSERTION lisans; AutoGPT platformu |
 | SnailSploit/Claude-Red | reddedildi | 2026-11-15 | K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz |
 | SuTechs/abcd_architecture_flutter | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | Trendyol/stove | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
@@ -101,6 +102,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | abutun/etsy-seo-optimizer | reddedildi | 2026-11-07 | Lisans yok; Etsy API ile mağazaya yazıyor |
 | adanghd/sender-kalopilot-skill | reddedildi | 2026-11-24 | Lisans bulunmuyor ve yerel dil kisitli |
 | afadtc/afa-dtc-skills | reddedildi | 2026-10-22 | Çince DTC danışman seti, lisans belirsiz (NOASSERTION) |
+| affaan-m/ECC | eklendi | 2026-11-25 | Kullanici onayiyla dev-koleksiyon olarak fihriste eklendi |
 | ahmed3elshaer/everything-claude-code-mobile | reddedildi | 2026-11-03 | mevcut skillerle çakışıyor |
 | aiskillstore/marketplace | reddedildi | 2026-10-31 | lisans belirtilmemiş (e-ticaret adayı) |
 | aldefy/compose-skill | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: lisans belirsiz (NOASSERTION); lisans netleşirse yeniden değerlendir |
@@ -122,6 +124,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | beshuaxian/higgsfield-seedance2-jineng | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | bethel-mark/ecom-listing-pro | reddedildi | 2026-11-03 | lisans yok |
 | better-i18n/oss | eklendi | 2026-11-24 | React/Expo/Flutter i18n urun-skil olarak eklendi |
+| beyondtahir/beyondwords | reddedildi | 2026-11-25 | Amazon KDP kitap uretim araci; Etsy/mevcut hedefle ilgisiz |
 | bigcommerce/catalyst | reddedildi | 2026-10-22 | Repo-içi sürüm/dal skilleri |
 | bigcommerce/stencil-cli | reddedildi | 2026-11-03 | skill değil: eklenti/CLI kodu |
 | browser-use/video-use | eklendi | 2026-11-15 | Konuşmayla video kurgu + manim (MIT); 2026-11-15 toplu video ekleme |
@@ -152,9 +155,11 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | duyet/pricetrack | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
 | ecency/vision-mobile | reddedildi | 2026-11-24 | Saf mobil istemci, skiller ic gelistirici repo-ici |
 | ehmo/platform-design-skills | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
+| elementalsouls/Claude-BugHunter | reddedildi | 2026-11-25 | Dis red-team / bug hunting paketi; K-58 kapsami nedeniyle alinmadi |
 | ertugrulakben/HYRVE-AI | reddedildi | 2026-10-31 | skill reposu değil ya da toplama (SDK/uygulama/şablon/liste); mevcut kaynaklarla örtüşüyor |
 | evanca/flutter-ai-rules | eklendi | 2026-10-22 | Flutter/Dart skilleri (mimari, Bloc, Firebase, erişilebilirlik). |
 | feichanggege/ecommerce-visual-copywriting-skill | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
+| firecrawl/firecrawl | reddedildi | 2026-11-25 | AGPL-3.0; web scraping/API platformu |
 | frankois944/spm4Kmp | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | froessell/app-store-opportunity-research | reddedildi | 2026-11-03 | lisans yok |
 | furan917/magento-ai-toolkit | reddedildi | 2026-10-22 | Magento OrcaQubits ile kapsanıyor (MPL-2.0) |
@@ -187,6 +192,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | liangdabiao/sellersprite-rpa-skills | reddedildi | 2026-11-03 | lisans yok |
 | linkfox-ai/linkfox-skills | reddedildi | 2026-10-22 | LinkFox ücretli platformuna bağlı, Çince |
 | liseami/ChunUI | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
+| lobehub/lobehub | reddedildi | 2026-11-25 | NOASSERTION lisans; uygulama/platform reposu |
 | lroy-stack/ai-pod-store | reddedildi | 2026-10-22 | Uygulama reposu (POD mağaza platformu), skill kütüphanesi değil; lisans yok |
 | magendooro/magento-claude-skills | reddedildi | 2026-10-31 | Kütüphaneden kaldırıldı: ★15, tek katkıcı, Mart'tan beri güncellenmedi; 10 ince Magento başvuru notu (2-7 KB, tek dosya); Magento kullanılmıyor, geliştirici tarafı OrcaQubits'te. Kullanıcı onayıyla (silme-adaylari.md #3). |
 | manyuegong33/r0crawl_skills | reddedildi | 2026-11-03 | lisans yok |
@@ -206,6 +212,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | mmiani/kotlin-kmp-claude-agent-skills | eklendi | 2026-10-22 | Kotlin Multiplatform. Lisans belirsiz. |
 | modbender/skill-library-mcp | reddedildi | 2026-10-22 | Toplama/ayna kütüphane |
 | moiz-za/etsy-seller-seo-system | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
+| motiful/product-shots | eklendi | 2026-11-25 | Kullanici onayiyla koleksiyon olarak arsive eklendi |
 | mvanhorn/printing-press-library | reddedildi | 2026-10-22 | CLI kütüphanesi, lisans yok; e-ticaret odaklı değil |
 | namedtoaster/The-Last-Mile | eklendi | 2026-11-24 | koleksiyon, arsiv (21 SKILL.md, MIT) |
 | nank1ro/solid | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
@@ -249,6 +256,8 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | tungnk123/mobile-best-practices | reddedildi | 2026-11-07 | Açıklaması yok, belirsiz; 8 aydır güncellenmiyor |
 | tuzhechen2005/opus-video-skills | eklendi | 2026-11-17 | Kullanıcı onayıyla eklendi 2026-11-17 (A3) |
 | twostraws/SwiftData-Agent-Skill | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
+| ukanhaupa/projx | reddedildi | 2026-11-25 | Proje sablon CLI araci, skill koleksiyonu degil |
+| ultraworkers/claw-code | reddedildi | 2026-11-25 | Rust muze projesi; 2 repo-ici SKILL.md |
 | uni-infiniteai/clawec-agents | reddedildi | 2026-10-22 | Çince, clawEC API'sine bağlı |
 | unixzii/SimRun | reddedildi | 2026-11-03 | skill değil: uygulama/kütüphane/araç kodu ya da çok dar |
 | usestrix/strix | reddedildi | 2026-11-15 | K-58: yalnız Güvenlik ve Riskli Skiller listesi, kütüphaneye alınmaz |
@@ -270,6 +279,7 @@ Son tarama: 2026-11-22 · eşleşen repo: 1027 · kütüphanede: 28 · değerlen
 | wzj177/ecommerce-image-suite | reddedildi | 2026-11-03 | dil (Çince/Rusça) ya da Rus pazaryerleri |
 | wzj177/shop-tryon-skill | reddedildi | 2026-10-31 | Çince/Korece içerik; kapsam dışı |
 | xianyu110/ecommerce-image-skills | eklendi | 2026-11-03 | Kullanıcı onayıyla kütüphaneye eklendi (2026-11-02) |
+| xianyu110/ecommerce-video-skills | reddedildi | 2026-11-25 | Cince Douyin/TikTok Shop kisa video skilleri; dil ve platform uyumsuz |
 | xinqingaa/flutter_monitor | reddedildi | 2026-11-07 | Skill değil: Flutter izleme SDK'sı |
 | yoligehude14753/ecom-agent | reddedildi | 2026-11-03 | skill değil: uygulama/platform |
 | zaferayan/skills | reddedildi | 2026-11-03 | lisans yok |

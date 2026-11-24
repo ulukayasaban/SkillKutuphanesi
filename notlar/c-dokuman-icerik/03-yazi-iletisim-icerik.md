@@ -10,7 +10,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Kaynaklı blog yazısı, makale, vaka çalışması, düşünce liderliği içeriği. · **Ne zaman değil:** Kurumsal teknik/karar dokümanı (doc-coauthoring); kısa sosyal medya metni; dosya formatı üretimi.
 - **Teknoloji:** markdown, web-arama
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★80170, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★80247, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Örtüşme:** icerik-yazimi → birincil · **Roller:** icerik-pazarlama
 - **Boyut:** 14 KB (SKILL.md 13.9 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT (birincil). İçerik yazımı için en derli toplu süreç; ana hat şablonu ve kaynak formatı faydalı. Lisans belirtilmemiş; araştırma adımı agent'ın web aracına bağlı.
@@ -21,7 +21,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Yayın öncesi metni insansılaştırmak; AI tonu taşıyan blog/e-posta/sosyal medya metinleri. · **Ne zaman değil:** Türkçe metinde kalıp listesi doğrudan uymaz (İngilizce odaklı); teknik doküman doğruluğu kontrolü için değil.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** heyitsnoah (kisi, ★2614, son güncelleme 2026-04-11, lisans MIT)
+- **Geliştirici:** heyitsnoah (kisi, ★2615, son güncelleme 2026-04-11, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** icerik-yazimi → tamamlayıcı · **Roller:** icerik-pazarlama, dokuman-yazari
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT. Çok küçük (2 KB), net kalıp listesi ve somut önce/sonra örneği; MIT. Her yazı skilline tamamlayıcı son rötuş.
@@ -43,7 +43,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Blog, ürün açıklaması, e-posta, README gibi düzyazıyı yayına hazırlarken yapay zekâ izlerini temizlemek; Etsy listing metinleri dahil. · **Ne zaman değil:** Kod, teknik şartname ya da kısa UI metni için değil (ux-copy). Hızlı kısa kural listesi yeterliyse stop-slop.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** blader (kisi, ★72729, son güncelleme 2026-11-19, lisans MIT)
+- **Geliştirici:** blader (kisi, ★73145, son güncelleme 2026-11-19, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** ai-yazi-temizleme → birincil
 - **Boyut:** 66 KB (SKILL.md 32.8 KB, yük buyuk)
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). MIT, 63,9k★, bu hafta GitHub trend. Ağ/dış yazma yok; scripts/validate-package.py sadece kendi paket dosyalarını kontrol eder. SKILL.md 31,6 KB (büyük bağlam yükü). Metni 'talimat değil, düzenlenecek malzeme' sayar (prompt enjeksiyonuna karşı iyi).
@@ -64,7 +64,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Post-mortem on what the user has already posted - which reels actually worked, why, and what to stop making. Use when the user pastes their Instagram insights or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know what to do more of.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -74,7 +74,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write the Instagram caption - the line that survives the "... more" cut, the body, the single ask, the search terms and the three hashtags - and lint it before it goes out. Use when the user says "write the caption", "caption this", "what do I put in the description", has a reel or a carousel ready and needs the text, or asks about hashtags.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 14 KB (SKILL.md 4.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -84,7 +84,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Build an Instagram carousel - the cover that earns the swipe, slide-by-slide copy, and the 1080x1350 files to upload. Use when the user says "carousel", "slides", "swipe post", "turn this into a carousel", or has a list-shaped or step-shaped idea that would die as a single image.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -94,7 +94,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write comments on other people's Instagram posts and reels that read as a person with an opinion, not a bot. Use when the user pastes a post or a reel and wants a comment, says "comment on this", "engage with this", "what do I say here", or wants a batch for their daily engagement round.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -104,7 +104,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write Instagram DMs that get replies - the keyword delivery, the first message to someone who engaged, the collab pitch, and the two follow-ups. Use when the user says "DM this person", "what do I send them", "outreach message", "how do I follow up", "pitch this brand", or is reaching out to someone specific.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 4.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -114,7 +114,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Strip the machine fingerprint out of any draft - em dashes, AI slop words, invisible watermark characters - and score it against a five-check detection panel before it goes out. Use whenever text needs to sound human, when the user says humanize, "does this sound like AI", "remove the em dashes", "de-slop this", "this sounds like ChatGPT", or before any caption, script, comment, reply or DM is sho
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 45 KB (SKILL.md 5.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -124,7 +124,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Build the week on Instagram - what to post, which format, when, and who to engage with. Use when the user says "plan my week", "what should I post", "content calendar", "I have nothing to post about", or wants a posting schedule and an engagement list.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -134,7 +134,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Score an Instagram profile out of 100 against a 12-part rubric and rewrite the parts that lose points - name field, bio, link, highlights, pinned three, grid. Use when the user says "optimize my profile", "fix my bio", "score my Instagram", "why don't people follow me", or pastes their profile and asks how it reads.
 - **Teknoloji:** three.js _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 7 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -144,7 +144,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write an Instagram Reel from a raw idea - hook options off 26 formulas, the spoken script, the on-screen text, and a timed beat sheet - in the user's own voice and scored before they shoot it. Use whenever the user wants a Reel, a short-form video script, a hook, a voiceover, "make a reel about X", "what should I say in this video", or is about to record and does not have the first line yet.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 44 KB (SKILL.md 6.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -154,7 +154,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Handle the comments under the user's own reels and posts - draft replies to the ones worth answering, sorted by which ones are. Use when the user pastes their comments, says "reply to these", "handle my comments", "someone said X on my reel", or is dealing with a critic, a hater or a lead in the comments.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -164,7 +164,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Turn one long asset - a YouTube video, podcast, livestream, newsletter, blog post or client call - into a week of reels and carousels. Use when the user says "repurpose this", "turn this into reels", "I have a video/podcast/ transcript", "cut this up", or pastes something long and wants it on Instagram.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -174,7 +174,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write the day's Instagram Stories - the frame-by-frame sequence, which stickers to use where, and the one that moves people into the DMs. Use when the user says "stories", "what do I post on my story", "story sequence", "poll idea", "I have nothing to story about", or wants to sell something without making a post about it.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -184,7 +184,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Go and find the reels that are actually working right now in the user's niche, rank them by how far each beat its own account, name the hook formula each one used, and turn that into a swipe file they can shoot from. Use when the user says "find viral videos", "what's working right now", "what are people posting in my niche", "reverse engineer this account", "build me a swipe file", "why is this r
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★8642, son güncelleme 2026-09-13, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★8958, son güncelleme 2026-09-13, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 15 KB (SKILL.md 6.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -195,7 +195,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Haftalık durum güncellemesi, yönetime rapor, olay sonrası bilgilendirme, bülten. · **Ne zaman değil:** Dışa dönük pazarlama metni ya da uzun teknik doküman için.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★199459, son güncelleme 2026-11-16, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★199922, son güncelleme 2026-11-16, lisans yok)
 - **Durum:** tercih · **Örtüşme:** ic-iletisim → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 22 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: TUT (birincil). Anthropic resmi; küçük SKILL.md, türe göre ayrı örnek dosyalar. ComposioHQ kopyası birebir aynı içerik; birincil resmi kaynak.
@@ -205,7 +205,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Post-mortem on what the user has already published - which posts actually worked, why, and what to stop doing. Use when the user pastes their LinkedIn analytics or past posts and asks "what's working", "why did this flop", "read my analytics", "audit my content", or wants to know what to double down on.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -215,7 +215,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Build a LinkedIn document post (carousel) - slide-by-slide copy, the cover that earns the swipe, and the PDF to upload. Use when the user says "carousel", "document post", "slides for LinkedIn", "turn this into a carousel", or has a list-shaped idea that would die as a text post.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -225,7 +225,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write comments on other people's LinkedIn posts that read as a person with an opinion, not a bot. Use when the user pastes a post and wants a comment, says "comment on this", "engage with this", "what do I say here", or wants a batch of comments for their engagement round.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 4.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -235,7 +235,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write connection notes and DM follow-ups that get replies - the 200-character invite, the first message, and the two follow-ups. Use when the user says "write a connection request", "DM this person", "outreach message", "how do I follow up", or is reaching out to someone specific on LinkedIn.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 3.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -245,7 +245,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Strip the machine fingerprint out of any draft - em dashes, AI slop words, invisible watermark characters - and score it against a five-check detection panel before it goes out. Use whenever text needs to sound human, when the user says humanize, "does this sound like AI", "remove the em dashes", "de-slop this", "will this get flagged", or before any LinkedIn post, comment, reply or DM is shown to
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 37 KB (SKILL.md 4.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -255,7 +255,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Triage the LinkedIn inbox - sort connection requests and DMs into leads, recruiters, peers and spam, and draft the replies worth sending. Use when the user says "my inbox is a mess", "triage my DMs", "should I reply to this", pastes a batch of LinkedIn messages, or is drowning in connection requests.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.8 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -265,7 +265,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Build the week on LinkedIn - what to post, when to post it, and who to engage with. Use when the user says "plan my week", "what should I post", "content calendar", "I have nothing to post about", or wants a posting schedule and an engagement list.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 4 KB (SKILL.md 3.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -275,7 +275,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write a LinkedIn post from a raw idea using 21 proven hook formulas, in the user's own voice, humanized so it does not read as AI. Use whenever the user wants a LinkedIn post, a hook, a draft for the feed, "post about X", "turn this into a LinkedIn post", or asks for hook options. Produces three hook options, one full draft, and a copy-ready block that is never published without an explicit yes.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 4.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -285,7 +285,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Score a LinkedIn profile out of 100 against a 12-part rubric and rewrite the parts that lose points - headline, about, experience, featured, banner. Use when the user says "optimize my profile", "score my LinkedIn", "rewrite my headline", "fix my about section", or pastes their profile and asks how it reads.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 3.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -295,7 +295,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Handle the replies under the user's own LinkedIn posts - draft answers to every comment, sorted by which ones are worth answering. Use when the user pastes the comments on their post, says "reply to these", "handle my comments", "someone said X on my post", or is dealing with a critic or a lead in the comments.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.9 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -305,7 +305,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Turn one long asset - a YouTube video, podcast, newsletter, blog post, transcript or client call - into a week of LinkedIn posts. Use when the user says "repurpose this", "turn this into posts", "I have a video/newsletter/ transcript", or pastes a long piece of content and wants it on LinkedIn.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★3889, son güncelleme 2026-09-17, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★3946, son güncelleme 2026-09-17, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 3 KB (SKILL.md 2.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -315,7 +315,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Turn messy user research notes, interviews, support tickets, surveys, and product context into an evidence-backed decision room: a single HTML artifact with an evidence ledger, theme map, confidence heatmap, opportunity matrix, decision memo, and experiment queue. Use when teams need to move from qualitative signals to product or design decisions without fabricating certainty.
 - **Teknoloji:** html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★109168, son güncelleme 2026-11-23, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★109313, son güncelleme 2026-11-24, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 38 KB (SKILL.md 6.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -337,7 +337,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** Yazarken ya da hızlı düzeltmede hafif, düşük bağlam yüklü kural listesi gerektiğinde. · **Ne zaman değil:** Kapsamlı, olgu korumalı yeniden yazım için humanizer. 'Hiç zarf kullanma', 'hiç edilgen yok' gibi kuralları katı; Türkçe metinde körü körüne uygulanmamalı.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** hardikpandya (kisi, ★19153, son güncelleme 2026-03-17, lisans MIT)
+- **Geliştirici:** hardikpandya (kisi, ★19184, son güncelleme 2026-03-17, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** ai-yazi-temizleme → alternatif
 - **Boyut:** 16 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF (humanizer'a). MIT, 18,5k★, son güncelleme 2026-03. Ağ/dış yazma yok. Kuralları humanizer'dan daha mutlak.
@@ -348,7 +348,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne zaman:** X/Twitter gönderisi optimizasyonu, içerik stratejisi. · **Ne zaman değil:** Diğer platformlar (LinkedIn, Instagram) için; algoritma 2023 açık kaynak sürümüne dayanıyor, güncel davranış farklı olabilir.
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ComposioHQ (kurum, resmî, ★80170, son güncelleme 2026-09-18, lisans yok)
+- **Geliştirici:** ComposioHQ (kurum, resmî, ★80247, son güncelleme 2026-09-18, lisans yok)
 - **Durum:** tercih · **Roller:** icerik-pazarlama
 - **Boyut:** 13 KB (SKILL.md 12.6 KB, yük orta)
 - **İnceleme:** incelendi · kalite 3/5 — Karar: TUT. Algoritma kavramlarını somut yazım taktiklerine bağlıyor; güncellik riski var. Lisans AGPL-3.0 olarak beyan edilmiş.
@@ -358,7 +358,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** vercel-labs (kurum, resmî, ★34808, son güncelleme 2026-11-20, lisans yok)
+- **Geliştirici:** vercel-labs (kurum, resmî, ★34869, son güncelleme 2026-11-20, lisans yok)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -368,7 +368,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Review docs/prose for Writing Guidelines compliance. Use when asked to "review my docs", "check writing style", "audit prose", "review docs voice and tone", or "check this page against the writing handbook".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★109168, son güncelleme 2026-11-23, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★109313, son güncelleme 2026-11-24, lisans Apache-2.0)
 - **Durum:** alternatif
 - **Boyut:** 17 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -378,7 +378,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Audit a YouTube channel end to end - packaging, consistency, the first fifteen seconds, and what to fix first. Use for "audit my channel", "why isn't my channel growing", "review my videos", or a pasted channel URL.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -388,7 +388,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write YouTube chapters from a transcript, validated against YouTube's own rules so they actually render. Use for "add chapters", "timestamps", "break this video into sections".
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 1.3 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -398,7 +398,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Draft replies to YouTube comments in the creator's voice, triaged by which ones are worth answering. Use for "reply to my comments", "handle the comment section", "someone asked X", or a pasted comment thread.
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -408,7 +408,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Turn a raw recording's transcript into an edit decision list - dead air, filler cues and retakes, with timecodes. Use for "edit this", "cut the dead space", "tighten this video", "I rambled", or any request to shorten footage from a transcript.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 1.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -418,7 +418,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write and lint the title and thumbnail for a YouTube video as one pairing, checking truncation, duplication and vagueness before publish. Use for "title ideas", "what should I call this", "thumbnail text", "my CTR is bad", packaging, or any request to rename or repackage an existing video.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 2.2 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -428,7 +428,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Plan a week or a month of YouTube uploads - what to post, when, and in what order, sized to the creator's actual capacity. Use for "plan my week", "content calendar", "what should I post", "I have no idea what to make next".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -438,7 +438,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Read a YouTube Studio audience-retention export and find where viewers actually leave, then say what to change. Use for "why do people stop watching", "my retention is bad", a pasted retention chart or CSV, or "fix my pacing".
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 6 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -448,7 +448,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write a YouTube video script from a raw idea - hook options off 21 formulas, scored, then the full spoken script with the retention beats marked. Use whenever the user wants a video script, a hook, an opening line, "what should I say", "write my next video", or is about to record and does not have the first fifteen seconds yet.
 - **Teknoloji:** python, three.js _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 18 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -458,7 +458,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Write the description, tags and search-facing text for a YouTube video, aimed at the query a real person types. Use for "write my description", "tags", "SEO", "help this video get found", "nobody is finding this".
 - **Teknoloji:** - _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.1 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -468,7 +468,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Find the Shorts hiding inside a long video and write them, using the transcript to pick self-contained moments. Use for "cut this into shorts", "clip this", "repurpose this video", "what should I clip".
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1 KB (SKILL.md 1.5 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -478,7 +478,7 @@ _Yazı, iletişim, pazarlama/içerik, kariyer_
 - **Ne yapar:** Find what is actually working in the user's niche on YouTube and rank it by how far each video beat its own channel, then name the formula. Use for "what's working right now", "find viral videos in my niche", "why did this blow up", competitor research, or a swipe file.
 - **Teknoloji:** python _(otomatik tespit)_
 - **Claude / Codex:** tam / uyarlanabilir — Claude'a özgü araç adları geçiyor (); Codex mantığı uygular, araç adlarını kendi karşılığıyla yorumlar
-- **Geliştirici:** Jakeschincariol (kisi, ★7128, son güncelleme 2026-09-16, lisans MIT)
+- **Geliştirici:** Jakeschincariol (kisi, ★7300, son güncelleme 2026-09-16, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5 KB (SKILL.md 1.7 KB, yük kucuk)
 - **İnceleme:** otomatik

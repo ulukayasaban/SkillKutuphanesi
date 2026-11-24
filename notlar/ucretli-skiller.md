@@ -2,7 +2,7 @@
 
 > `araclar/katalog-uret.py` üretir. Kaynak: `ucret-siniflandirma.json` (elle, gerekçeli). Kural: ücretsiz yol önce; ücretli skill rollerin çekirdeğine ancak gerekçeyle (`ucretli_bilincli`) girer, ön kontrol `ucretli` UYARISI verir.
 
-## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 42
+## 💲 Ücretli (ücret ödemeden hiç kullanılamaz) — 43
 
 | Skill | Kategori | Neden |
 |---|---|---|
@@ -12,6 +12,7 @@
 | `sandbox-stable` | 06-devops-guvenlik-performans | Cloudflare Sandbox/Containers Workers Paid planı gerektirir |
 | `klaviyo-analyst` | 04-skill-plugin-yazimi | Klaviyo API anahtarı (hesap/servis) gerekir |
 | `klaviyo-developer` | 04-skill-plugin-yazimi | Klaviyo API anahtarı (hesap/servis) gerekir |
+| `product-shots-image-gen` | 04-skill-plugin-yazimi | Harici görsel üretim API servisi (OMNIMAAS_API_KEY / RENDER_API_KEY) gerektirir |
 | `reverse-any-video` | 04-skill-plugin-yazimi | HyperFrames Pro (ücretli plan) girişi olmadan başlamaz; ekrandaki kişileri HeyGen ile fiyat sormadan yeniden çeker, son render bulutta |
 | `style-sampling` | 04-skill-plugin-yazimi | Şablonlar HyperFrames Pro (ücretli plan) özelliğidir; Free planda çekilmez, ücretsiz kullanım yolu yok |
 | `create-video` | 01-video-uretim-montaj | HeyGen Video Agent API |
