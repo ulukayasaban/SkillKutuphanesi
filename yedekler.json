@@ -396,6 +396,42 @@
       ],
       "silme_gun": 30,
       "not": "ana oturum, 2026-11-20"
+    },
+    {
+      "kimlik": "hyperframes-2026-11-25",
+      "yol": "~/Documents/Claude/yedek/hyperframes-2026-11-25",
+      "tur": "program",
+      "ne": "HyperFrames 0.9.91 güncellemesi öncesi yedek (kurulu sürüm 0.9.71): npm genel paket klasörü (paket), ~/.hyperframes verisi (config.json hariç), KAYIT.json",
+      "tarih": "2026-11-25",
+      "geri_yukleme": "Kartın geri_alma adımları (rehber/11, Geri alma): HYPERFRAMES_SKIP_SKILLS=1 tanımlıyken npm install -g hyperframes@0.9.71; kayıt defteri sürümü kaldırdıysa yedekteki paket klasörü onayla yerine konur; veri bozulduysa hyperframes-veri geri kopyalanır. Her adım için kullanıcıdan onay.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "KAYIT.json",
+        "hyperframes-veri",
+        "paket"
+      ],
+      "silme_olay": "Yeni sürüm kullanıcının projesinde doğrulandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "kayit": "KAYIT.json",
+      "not": "~/.hyperframes/config.json (kimlik dosyası) yedeğe alınmadı. Paket klasörü yaklaşık 110 MB."
+    },
+    {
+      "kimlik": "nlm-2026-11-25",
+      "yol": "~/Documents/Claude/yedek/nlm-2026-11-25",
+      "tur": "program",
+      "ne": "NLM 0.16.6 güncellemesi öncesi yedek (kurulu sürüm 0.16.5): uv tool paket klasörü (paket), ~/.notebooklm-mcp-cli/config.toml, KAYIT.json",
+      "tarih": "2026-11-25",
+      "geri_yukleme": "Kartın geri_alma adımları (rehber/11, Geri alma): uv tool install --force --python 3.12 notebooklm-mcp-cli==0.16.5; PyPI sürümü kaldırdıysa yedekteki paket klasörü ~/.local/share/uv/tools/notebooklm-mcp-cli yerine konur; config.toml geri kopyalanır. Her adım için kullanıcıdan onay.",
+      "gizli_icerir": "hayir",
+      "beklenen": [
+        "KAYIT.json",
+        "config.toml",
+        "paket"
+      ],
+      "silme_olay": "Yeni sürüm kullanıcının projesinde doğrulandı ve kullanıcı 'sil' dedi",
+      "silme_olay_tamam": false,
+      "kayit": "KAYIT.json",
+      "not": "~/.notebooklm-mcp-cli kimlik/profil dosyaları yedeğe alınmadı."
     }
   ]
 }

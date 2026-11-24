@@ -1230,6 +1230,56 @@
       "karar": "eklendi",
       "neden": "Kullanici onayiyla dev-koleksiyon olarak fihriste eklendi",
       "tarih": "2026-11-25"
+    },
+    "hooper-lee/crosspulse": {
+      "karar": "reddedildi",
+      "neden": "Cince ve Feishu (Lark) bagimli sinir otesi e-ticaret akisi; kapsam disi",
+      "tarih": "2026-11-25"
+    },
+    "luongnv89/claude-howto": {
+      "karar": "reddedildi",
+      "neden": "Egitim materyali ve howto dokumani; skiller kok kaynaklara bagli",
+      "tarih": "2026-11-25"
+    },
+    "every-app/open-seo": {
+      "karar": "reddedildi",
+      "neden": "Yazilim urun reposu; skiller proje-ici",
+      "tarih": "2026-11-25"
+    },
+    "NVIDIA/SkillSpector": {
+      "karar": "reddedildi",
+      "neden": "Ajan guvenlik test platformu; SKILL dosyalari test fiksturleri",
+      "tarih": "2026-11-25"
+    },
+    "pingdotgg/t3code": {
+      "karar": "reddedildi",
+      "neden": "Uygulama sablon projesi; repo-ici skiller",
+      "tarih": "2026-11-25"
+    },
+    "kunchenguid/firstmate": {
+      "karar": "reddedildi",
+      "neden": "CLI uygulamasi; skill koleksiyonu degil",
+      "tarih": "2026-11-25"
+    },
+    "f/prompts.chat": {
+      "karar": "reddedildi",
+      "neden": "Lisans belirsiz (NOASSERTION) ve prompt arşivi reposu",
+      "tarih": "2026-11-25"
+    },
+    "github/spec-kit": {
+      "karar": "reddedildi",
+      "neden": "Repo-ici SDD surec skilleri",
+      "tarih": "2026-11-25"
+    },
+    "Shubhamsaboo/awesome-llm-apps": {
+      "karar": "reddedildi",
+      "neden": "LLM uygulama demolari reposu",
+      "tarih": "2026-11-25"
+    },
+    "earendil-works/pi": {
+      "karar": "reddedildi",
+      "neden": "Ajan CLI motoru; skill degil",
+      "tarih": "2026-11-25"
     }
   },
   "konular": {
@@ -42205,6 +42255,10 @@
     },
     "thedotmack/claude-mem": {
       "neden": "Apache-2.0, 47 skill; oturumlar arasi kalici bellek sistemi, gerekirse bak",
+      "tarih": "2026-11-25"
+    },
+    "garrytan/gstack": {
+      "neden": "Garry Tan 138 skill kisisel kurulum seti; durum degisirse incelenecek",
       "tarih": "2026-11-25"
     }
   },

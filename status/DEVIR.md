@@ -9,3 +9,4 @@
 
 - 2026-11-24 02:58 | Süreç incelemesi, Claude+Anti ortak düzen simülasyonu tamamlandı | IstatistikYoutube ortak düzene geçişi | 3
 - 2026-11-24 03:00 | 132 yeni skill arşive yerleştirildi (toplam 3063 skill), 5 fihrist eklendi, tür/gerekçe kuralları güncellendi, 3'lü kapı %100 yeşil | Kullanıcı onayıyla git push ve proje güncellemeleri | 2
+- 2026-11-25 02:35 | YZ araçları (Claude, Codex, Antigravity, Copilot) doğrulandı; HF 0.9.91 ve nlm 0.16.6 güncellendi; product-shots ve ECC eklendi (toplam 3070 skill); yedekler kayda alındı; 3'lü kapı %100 yeşil; GitHub'a push yapıldı | Kullanıcı isteyince Etsy proje güncellemeleri | 1
