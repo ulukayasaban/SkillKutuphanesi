@@ -5,7 +5,7 @@
 
 | Proje | Yol | Skill | Araç | Blok | Son işlem |
 |---|---|---|---|---|---|
-| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 19 (+9 bağ, 0 donmuş) | claude | tam | 2026-11-14 |
+| [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 19 (+9 bağ, 0 donmuş) | claude | tam | 2026-11-25 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
 | [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 25 (+3 bağ, 0 donmuş) | claude | tam | 2026-11-24 |
@@ -18,10 +18,10 @@
 | `captions-overlay` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `cut-the-curve` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `de-ai-ify` | heyitsnoah/claudesidian | `6c56f35` | — |  |
-| `design-taste-frontend` | Leonxlnx/taste-skill | `12af471` | — |  |
+| `design-taste-frontend` | Leonxlnx/taste-skill | `f6b7657` | — |  |
 | `high-end-visual-design` | nexu-io/open-design | `987b247` | — |  |
 | `huashu-art-motion` | nexu-io/open-design | `987b247` | — |  |
-| `hyperframes-registry` | heygen-com/hyperframes | `ab66e5b` | — |  |
+| `hyperframes-registry` | heygen-com/hyperframes | `925cea1` | — |  |
 | `hypothesis-generation` | K-Dense-AI/scientific-agent-skills | `5f2bc03` | — |  |
 | `ig-reel` | Jakeschincariol/instagram-agent-skill | `d03c56b` | — |  |
 | `motion-design--nexu-io` (kimlik `motion-design@nexu-io`) | nexu-io/open-design | `987b247` | — |  |
