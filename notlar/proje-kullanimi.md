@@ -8,7 +8,7 @@
 | [Akil Disi Youtube Kanali](#akil-disi-youtube-kanali) | `~/Documents/Akil Disi Youtube Kanali` | 19 (+9 bağ, 0 donmuş) | claude | tam | 2026-11-14 |
 | [Etsy-Arif](#etsy-arif) | `~/Documents/Etsy-Arif` | 27 | claude | kisa | 2026-11-12 |
 | [Etsy-Yeni](#etsy-yeni) | `~/Documents/Etsy-Yeni` | 31 | — | tam | 2026-11-05 |
-| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 25 (+3 bağ, 0 donmuş) | claude | tam | 2026-11-12 |
+| [IstatistikYoutube](#istatistikyoutube) | `~/Documents/IstatistikYoutube` | 25 (+3 bağ, 0 donmuş) | claude | tam | 2026-11-24 |
 
 ## Akil Disi Youtube Kanali
 
@@ -123,8 +123,8 @@ Profil: — · Roller: etsy-coordinator, etsy-research, etsy-product-rights, ets
 | `gsap-plugins` | greensock/gsap-skills | `aed9cfd` | — |  |
 | `gsap-timeline` | greensock/gsap-skills | `aed9cfd` | — |  |
 | `huashu-art-motion` | nexu-io/open-design | `12d970e` | — |  |
-| `humanizer` | blader/humanizer | `0ef9fe5` | — |  |
-| `motion-design` | lottiefiles/motion-design-skill | `f9a8a04` | — | 2026-10-15'ten beri bu sürüm kullanılıyor (edit-026); 2026-11-07'de kütüphaneden kurulup güncellemesi izlenmeye başlandı. |
+| `humanizer` | blader/humanizer | `a32f244` | — |  |
+| `motion-design` | lottiefiles/motion-design-skill | `d77a9fc` | — | 2026-10-15'ten beri bu sürüm kullanılıyor (edit-026); 2026-11-07'de kütüphaneden kurulup güncellemesi izlenmeye başlandı. |
 | `motion-doctrine` | heygen-com/hyperframes | `ab66e5b` | — |  |
 | `openmontage` | yerel/kendi | `92683f1` | — |  |
 | `scientific-critical-thinking` | K-Dense-AI/scientific-agent-skills | `5f2bc03` | — |  |
