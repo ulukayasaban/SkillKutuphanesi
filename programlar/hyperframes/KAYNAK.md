@@ -4,14 +4,14 @@
 |---|---|
 | Repo | https://github.com/heygen-com/hyperframes (paket yolu `packages/cli`) |
 | Paket | npm `hyperframes` |
-| Kayıtlı sürüm | 0.9.71 (bu bilgisayarda kurulu; 2026-11-20'de 0.9.37 → 0.9.71 güncellendi, `package.json`'dan okundu; yedekler `~/Documents/Claude/yedek/hyperframes-2026-11-12/` (0.9.23), `hyperframes-2026-11-12-2/` (0.9.35) ve `hyperframes-2026-11-20/` (0.9.37)) |
+| Kayıtlı sürüm | 0.9.91 (bu bilgisayarda kurulu; 2026-11-25'te 0.9.71 → 0.9.91 güncellendi, `package.json`'dan okundu; yedekler `~/Documents/Claude/yedek/hyperframes-2026-11-12/` (0.9.23), `hyperframes-2026-11-12-2/` (0.9.35), `hyperframes-2026-11-20/` (0.9.37) ve `hyperframes-2026-11-25/` (0.9.71)) |
 | Lisans | Apache-2.0 |
 | Kayıt tarihi | 2026-11-11 |
 | Kurulu yer | `/usr/local/lib/node_modules/hyperframes` (npm genel paketi; komut `/usr/local/bin/hyperframes`) |
 | Veri yeri | `~/.hyperframes` |
 | Yedek klasörü | `~/Documents/Claude/yedek/hyperframes-<YYYY-AA-GG>/` (güncellemeden önce; içinde `KAYIT.json`) |
 | Giriş yolu | `programlar.json` → `hyperframes` → `giris_yolu` |
-| Doğrulama | npm integrity `sha512-Fyr1z5QnAEn//SZDlqXzT170h5eo67XapqaQyGuXzNsi+MAbO4aTp/Nf6C657UnEM8BM7NC5+VHcKlE3GObUsg==` (registry, 2026-11-11) |
+| Doğrulama | npm integrity `sha512-UrooW5pfoDvYH5tM39cdexq4/7ZjAPc41NvoReMAE+6tjXGpqf4LGRgQ9kO2GjFCPU4r+J9EoWIRgbtL+wiqbg==` (registry, 2026-11-25) |
 
 Kaynak kopyası alınmadı: program npm'den kurulan hazır pakettir ve kendi sürümünü kendi izler; kopya hemen eskirdi.
 Repo kayıpsa ya da paket kalkarsa: kayıtlı sürüm npm önbelleğinden ya da repo etiketinden yeniden alınır (kullanıcı onayıyla).
