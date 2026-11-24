@@ -12,7 +12,7 @@
       "surumler": [
         {
           "ad": "Claude Code CLI",
-          "kayitli": "2.1.319",
+          "kayitli": "2.1.330",
           "okuma": {
             "komut": [
               "claude",
@@ -48,7 +48,7 @@
         "https://code.claude.com/docs/en/memory",
         "https://code.claude.com/docs/en/sub-agents"
       ],
-      "dogrulama_tarihi": "2026-11-11",
+      "dogrulama_tarihi": "2026-11-25",
       "belirsizler": [
         ".agents/skills, .codex/.gemini/.cursor/.github skills klasörlerinin okunup okunmadığı: skills belgesinin tamamında geçmiyor, doğrulanmadı",
         "Göreli symlink'in proje içinde çalıştığı açıkça örneklenmemiş",
@@ -69,7 +69,7 @@
       "surumler": [
         {
           "ad": "Codex CLI",
-          "kayitli": "0.167.0",
+          "kayitli": "0.170.0",
           "okuma": {
             "komut": [
               "codex",
@@ -109,7 +109,7 @@
         "https://community.openai.com/t/local-skills-in-agents-skills-are-no-longer-discovered-in-new-codex-sessions/1379522",
         "https://codex.danielvaughan.com"
       ],
-      "dogrulama_tarihi": "2026-11-11",
+      "dogrulama_tarihi": "2026-11-25",
       "belirsizler": [
         "~/.codex/skills ve proje .codex/skills'in hâlâ okunup okunmadığı ve kullanımdan kalkıp kalkmadığı (resmi sayfada yok, üçüncü taraf kaynaklar çelişkili)",
         "Aynı ad önceliği (proje mi kullanıcı mı kazanır)",
@@ -134,14 +134,14 @@
       "surumler": [
         {
           "ad": "Antigravity App",
-          "kayitli": "2.29.0",
+          "kayitli": "2.35.1",
           "okuma": {
             "plist": "/Applications/Antigravity.app/Contents/Info.plist"
           }
         },
         {
           "ad": "Antigravity IDE",
-          "kayitli": "2.6.0",
+          "kayitli": "2.7.0",
           "okuma": {
             "plist": "/Applications/Antigravity IDE.app/Contents/Info.plist"
           }
@@ -177,7 +177,7 @@
         "https://antigravity.google/docs/customization-discovery",
         "https://antigravity.google/docs/subagents"
       ],
-      "dogrulama_tarihi": "2026-11-11",
+      "dogrulama_tarihi": "2026-11-25",
       "belirsizler": [
         "Symlinkli skill klasorunun izlenip izlenmedigi",
         "CLAUDE.md okunup okunmadigi",
@@ -265,7 +265,7 @@
       "surumler": [
         {
           "ad": "Visual Studio Code",
-          "kayitli": "1.146.0",
+          "kayitli": "1.147.0",
           "okuma": {
             "plist": "/Applications/Visual Studio Code.app/Contents/Info.plist"
           }
@@ -304,7 +304,7 @@
         "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-custom-instructions",
         "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference"
       ],
-      "dogrulama_tarihi": "2026-11-11",
+      "dogrulama_tarihi": "2026-11-25",
       "belirsizler": [
         "VS Code'da aynı adlı proje/kullanıcı skill önceliği",
         "Proje içinde .github/.claude/.agents arası öncelik",
@@ -434,7 +434,7 @@
         "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-custom-instructions",
         "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference"
       ],
-      "dogrulama_tarihi": "2026-11-11",
+      "dogrulama_tarihi": "2026-11-25",
       "belirsizler": [
         "VS Code'da aynı adlı proje/kullanıcı skill önceliği",
         "Proje içinde .github/.claude/.agents arası öncelik",

@@ -10,19 +10,19 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Sistem/mimari açıklama, kod tabanı haritası, API çağrı zinciri, veritabanı şeması, olay zaman çizelgesi; paylaşılabilir etkileşimli diyagram ya da tek sayfa açıklama. · **Ne zaman değil:** Hızlı statik SVG/PNG (beautiful-mermaid) ya da Markdown içine gömülecek Mermaid kodu yeterliyse; dashboard için; Node.js olmayan ortamda (yalnızca elle SVG yedeği var).
 - **Teknoloji:** node, html, svg · **Paketler:** node (paket içinde, ek kurulum yok), chromium/playwright (browser-check için)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** tt-a1i (kisi, ★99100, son güncelleme 2026-11-23, lisans Apache-2.0)
+- **Geliştirici:** tt-a1i (kisi, ★99504, son güncelleme 2026-11-24, lisans Apache-2.0)
 - **Durum:** tercih · **Örtüşme:** diyagram-uretimi → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 7690 KB (SKILL.md 18.4 KB, yük orta) · **Kırık bağlantı:** 1
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). 10 diyagram tipi, şema doğrulama + gerçek tarayıcı kontrolü, onarım akışı ve explainer modu; lisans 2026-11'de Apache-2.0'a geçti (eski MIT sürümleri LICENSE-MIT'te; üretilen HTML'lere lisans bildirimi gömülür). Klasör büyük (7.6 MB), SKILL.md 18 KB; referanslar ihtiyaç anında okunuyor.
 - **Not:** Ön kontroldeki 'kirik-baglanti: /abs/path/checkout-timing.html' uyarısı yanlış alarm: SKILL.md satır 133'teki çıktı biçimi örneğindeki yer tutucu yol; eksik dosya yok.
 
-### beautiful-mermaid  ·  OpenMontageInc/OpenMontage @ 2e003e6  ·  puan 95 (A)
+### beautiful-mermaid  ·  OpenMontageInc/OpenMontage @ 2e003e6  ·  puan 94 (A)
 
 - **Ne yapar:** Mermaid diyagramlarını Beautiful Mermaid kütüphanesiyle temalı SVG'ye, ardından tarayıcı ekran görüntüsüyle yüksek çözünürlüklü PNG'ye çevirir. Flowchart, sequence, state, class ve ER diyagramlarını, 13 hazır temayı (Tokyo Night, Nord, GitHub…) destekler.
 - **Ne zaman:** Belgeye, slayta ya da videoya konacak statik, temalı diyagram görseli (SVG/PNG) gerektiğinde. · **Ne zaman değil:** Etkileşimli/keşfedilebilir diyagram ya da kod tabanından kanıtlı mimari gerekiyorsa (archify). PNG adımı 'agent-browser' skill'ini istiyor; kütüphanede yok — PNG için playwright/chromium ile ekran görüntüsü alınarak uyarlanmalı.
 - **Teknoloji:** typescript, bun, mermaid, svg · **Paketler:** bun veya tsx/deno, beautiful-mermaid (npm), agent-browser CLI (PNG için; yoksa playwright)
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** OpenMontageInc (kurum, ★82707, son güncelleme 2026-11-16, lisans AGPL-3.0)
+- **Geliştirici:** OpenMontageInc (kurum, ★83050, son güncelleme 2026-11-16, lisans AGPL-3.0)
 - **Durum:** tercih · **Örtüşme:** diyagram-uretimi → alternatif · **Roller:** dokuman-yazari
 - **Boyut:** 19 KB (SKILL.md 5.0 KB, yük kucuk) · **Bağımlılık:** OpenMontage kurulumu gerekir (~/.openmontage). 'python tools/...', 'pipeline_defs/...' komutları OpenMontage repo kökünden ve onun venv python'u ile çalışır.
 - **İnceleme:** incelendi · kalite 4/5 — Karar: ALTERNATİF. Kısa, net, sözdizimi tuzakları belgelenmiş. AGPL-3.0 (OpenMontage). PNG adımı kütüphanede olmayan agent-browser'a bağlı. Statik görsel için iyi; birincil archify.
@@ -32,7 +32,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne yapar:** Teaches the agent to produce D3 charts and interactive data visualizations. A comprehensive D3.js skill with examples across chart types and techniques giving the agent expert-level knowledge to generate complex, interactive visualizations. Useful for editorial dashboards, reports, data-rich prototypes, and explanatory graphics.
 - **Teknoloji:** git _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★109168, son güncelleme 2026-11-23, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★109313, son güncelleme 2026-11-24, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 2 KB (SKILL.md 2.0 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -42,7 +42,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne yapar:** Turns CSV, Excel, or JSON data into a polished visual report page.
 - **Teknoloji:** canvas, html _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** nexu-io (kurum, ★109168, son güncelleme 2026-11-23, lisans Apache-2.0)
+- **Geliştirici:** nexu-io (kurum, ★109313, son güncelleme 2026-11-24, lisans Apache-2.0)
 - **Durum:** tercih
 - **Boyut:** 13 KB (SKILL.md 2.6 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -52,7 +52,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne yapar:** Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, steps, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, unit grid, heatmap, bar and dumbbell, waterfall, line (s
 - **Teknoloji:** css, docker, html, node, playwright, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** cathrynlavery (kisi, ★70937, son güncelleme 2026-11-23, lisans MIT)
+- **Geliştirici:** cathrynlavery (kisi, ★71933, son güncelleme 2026-11-24, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 5720 KB (SKILL.md 32.1 KB, yük buyuk)
 - **İnceleme:** otomatik
@@ -63,7 +63,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Önemli bir teknik/iş dokümanı yazılırken; okuyucunun soru işaretlerini önceden yakalamak için. · **Ne zaman değil:** Kısa not, README ya da ADR şablonu yeterliyse (documentation-and-adrs); dosya formatı üretimi için (docx/pptx/pdf).
 - **Teknoloji:** markdown
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** anthropics (kurum, resmî, ★199459, son güncelleme 2026-11-16, lisans yok)
+- **Geliştirici:** anthropics (kurum, resmî, ★199922, son güncelleme 2026-11-16, lisans yok)
 - **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → tamamlayıcı · **Roller:** dokuman-yazari
 - **Boyut:** 15 KB (SKILL.md 15.4 KB, yük orta)
 - **İnceleme:** incelendi · kalite 5/5 — Karar: TUT. Anthropic resmi; okuyucu testi (taze bağlamlı alt-agent) diğer doküman skillerinde yok. Codex'te alt-agent yoksa yeni oturumla aynı test elle yapılabilir. Doküman ve format skilleriyle tamamlayıcı.
@@ -74,12 +74,12 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne zaman:** Mimari karar, public API değişikliği, özellik teslimi; kod tabanına gelecek mühendis/agent için bağlam bırakmak. · **Ne zaman değil:** Uzun iş/strateji dokümanı ortak yazımı (doc-coauthoring); atılacak prototip; Word/PDF teslimatı.
 - **Teknoloji:** markdown, typescript
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** addyosmani (kisi, ★119994, son güncelleme 2026-11-18, lisans MIT)
+- **Geliştirici:** addyosmani (kisi, ★120187, son güncelleme 2026-11-24, lisans MIT)
 - **Durum:** tercih · **Örtüşme:** teknik-dokumantasyon → birincil · **Roller:** dokuman-yazari
 - **Boyut:** 12 KB (SKILL.md 12.3 KB, yük orta)
 - **İnceleme:** yeniden-incelenecek · kalite 5/5 — Karar: TUT (birincil). addyosmani/agent-skills; 'önce mevcut düzene uy' kuralı ve ne zaman yazılmayacağı net. documentation-templates'ten daha derin ve eylem odaklı; birincil bu. · 2026-11 yeniden incelendi: küçük düzeltmeler, değerlendirme değişmedi.
 
-### documentation-templates  ·  vudovn/ag-kit @ 549ba3d  ·  puan 75 (B)
+### documentation-templates  ·  vudovn/ag-kit @ 549ba3d  ·  puan 74 (B)
 
 - **Ne yapar:** README, endpoint bazlı API dokümanı, JSDoc/TSDoc yorumu, Keep-a-Changelog, kısa ADR ve llms.txt gibi AI dostu doküman için hazır şablonlar ve yapı ilkeleri verir.
 - **Ne zaman:** Hızlıca README/CHANGELOG/llms.txt iskeleti gerektiğinde; çok kısa bağlam bütçesiyle. · **Ne zaman değil:** Karar kaydı ve 'neden' belgelemesi gerekiyorsa documentation-and-adrs daha iyi. Frontmatter'daki allowed-tools (Read, Glob, Grep) Claude Code'a özgü; Codex bunu yok sayar, skill yine çalışır.
@@ -90,22 +90,22 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Boyut:** 3 KB (SKILL.md 3.4 KB, yük kucuk) · **Kırık bağlantı:** 2
 - **İnceleme:** incelendi · kalite 3/5 — Karar: ALTERNATİF. Küçük (3 KB) ve derli toplu ama yalnızca şablon; süreç/karar rehberi yok. llms.txt şablonu tek ayırt edici yanı.
 
-### json-canvas  ·  obsidianmd/obsidian-skills @ b110b2f  ·  puan 91 (A)
+### json-canvas  ·  obsidianmd/obsidian-skills @ b110b2f  ·  puan 90 (A)
 
 - **Ne yapar:** Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.
 - **Teknoloji:** canvas, node, obsidian _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obsidianmd (kurum, ★53557, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★53648, son güncelleme 2026-11-20, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 15 KB (SKILL.md 8.5 KB, yük orta)
 - **İnceleme:** otomatik
 
-### json-canvas@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 93 (A)
+### json-canvas@kepano  ·  obsidianmd/obsidian-skills @ 3ccff53  ·  puan 92 (A)
 
 - **Ne yapar:** Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.
 - **Teknoloji:** canvas, node, obsidian _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** obsidianmd (kurum, ★53557, son güncelleme 2026-11-20, lisans MIT)
+- **Geliştirici:** obsidianmd (kurum, ★53648, son güncelleme 2026-11-20, lisans MIT)
 - **Durum:** alternatif
 - **Boyut:** 14 KB (SKILL.md 7.4 KB, yük kucuk)
 - **İnceleme:** otomatik
@@ -115,7 +115,7 @@ _Diyagram, teknik dokümantasyon, ADR, ortak yazım_
 - **Ne yapar:** Build a terminal-style, always-running animated architecture diagram (a "live panel") from a JSON config and render it to an mp4. Use when the user wants a system, agent or org architecture diagram that looks like a monitoring dashboard in a terminal window - fixed layout, glowing packets on the wires, scrolling log, counters, bars that flip state - as a screen-recording-style video or a live web 
 - **Teknoloji:** canvas, css, ffmpeg, html, python _(otomatik tespit)_
 - **Claude / Codex:** tam / tam
-- **Geliştirici:** ythx-101 (kisi, ★879, son güncelleme 2026-11-12, lisans MIT)
+- **Geliştirici:** ythx-101 (kisi, ★880, son güncelleme 2026-11-12, lisans MIT)
 - **Durum:** tercih
 - **Boyut:** 1709 KB (SKILL.md 11.2 KB, yük orta) · **Bağımlılık:** Python 3 + tarayıcı (Playwright/Chromium) ile kare yakalayıp ffmpeg ile mp4 üretir.
 - **İnceleme:** otomatik

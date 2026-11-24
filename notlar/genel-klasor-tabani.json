@@ -1,6 +1,6 @@
 {
   "surum": 1,
-  "yazildi": "2026-11-20",
+  "yazildi": "2026-11-25",
   "izinli": [
     {
       "yol": "~/.claude/skills/synced",
@@ -101,8 +101,8 @@
       "yol": "~/.claude/skills/.trash",
       "bolge": "claude",
       "tur": "klasor",
-      "dosya": 15,
-      "bayt": 181928,
+      "dosya": 5,
+      "bayt": 18106,
       "sahip": "bilinmiyor",
       "durum": "kalacak"
     },
@@ -111,16 +111,7 @@
       "bolge": "claude",
       "tur": "klasor",
       "dosya": 1,
-      "bayt": 3548,
-      "sahip": "bilinmiyor",
-      "durum": "kalacak"
-    },
-    {
-      "yol": "~/.claude/skills/oturum-acilis",
-      "bolge": "claude",
-      "tur": "klasor",
-      "dosya": 1,
-      "bayt": 2530,
+      "bayt": 13883,
       "sahip": "bilinmiyor",
       "durum": "kalacak"
     },
@@ -225,6 +216,15 @@
       "tur": "klasor",
       "dosya": 8,
       "bayt": 52523,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
+      "yol": "~/.gemini/config/skills/checkpoint-kapanis",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 8115,
       "sahip": "bilinmiyor",
       "durum": "kalacak"
     },
@@ -436,6 +436,15 @@
       "durum": "kalacak"
     },
     {
+      "yol": "~/.gemini/config/skills/oturum-acilis",
+      "bolge": "gemini-config",
+      "tur": "klasor",
+      "dosya": 1,
+      "bayt": 3027,
+      "sahip": "bilinmiyor",
+      "durum": "kalacak"
+    },
+    {
       "yol": "~/.gemini/config/skills/schema-mapping",
       "bolge": "gemini-config",
       "tur": "klasor",
@@ -555,6 +564,11 @@
       "tarih": "2026-11-20",
       "islem": "yenile",
       "girdi": 54
+    },
+    {
+      "tarih": "2026-11-25",
+      "islem": "yenile",
+      "girdi": 55
     }
   ]
 }

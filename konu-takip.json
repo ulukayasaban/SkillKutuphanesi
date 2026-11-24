@@ -1165,6 +1165,71 @@
       "karar": "eklendi",
       "neden": "React/Expo/Flutter i18n urun-skil olarak eklendi",
       "tarih": "2026-11-24"
+    },
+    "beyondtahir/beyondwords": {
+      "karar": "reddedildi",
+      "neden": "Amazon KDP kitap uretim araci; Etsy/mevcut hedefle ilgisiz",
+      "tarih": "2026-11-25"
+    },
+    "xianyu110/ecommerce-video-skills": {
+      "karar": "reddedildi",
+      "neden": "Cince Douyin/TikTok Shop kisa video skilleri; dil ve platform uyumsuz",
+      "tarih": "2026-11-25"
+    },
+    "ukanhaupa/projx": {
+      "karar": "reddedildi",
+      "neden": "Proje sablon CLI araci, skill koleksiyonu degil",
+      "tarih": "2026-11-25"
+    },
+    "elementalsouls/Claude-BugHunter": {
+      "karar": "reddedildi",
+      "neden": "Dis red-team / bug hunting paketi; K-58 kapsami nedeniyle alinmadi",
+      "tarih": "2026-11-25"
+    },
+    "HKUDS/Vibe-Trading": {
+      "karar": "reddedildi",
+      "neden": "Finansal alim-satim ajani; kutuphane alaniyla ilgisiz",
+      "tarih": "2026-11-25"
+    },
+    "lobehub/lobehub": {
+      "karar": "reddedildi",
+      "neden": "NOASSERTION lisans; uygulama/platform reposu",
+      "tarih": "2026-11-25"
+    },
+    "QwenLM/qwen-code": {
+      "karar": "reddedildi",
+      "neden": "Kodlama ajani CLI uygulamasi, kutuphane skilli degil",
+      "tarih": "2026-11-25"
+    },
+    "NousResearch/hermes-agent": {
+      "karar": "reddedildi",
+      "neden": "Kendi basina ajan uygulamasi",
+      "tarih": "2026-11-25"
+    },
+    "firecrawl/firecrawl": {
+      "karar": "reddedildi",
+      "neden": "AGPL-3.0; web scraping/API platformu",
+      "tarih": "2026-11-25"
+    },
+    "ultraworkers/claw-code": {
+      "karar": "reddedildi",
+      "neden": "Rust muze projesi; 2 repo-ici SKILL.md",
+      "tarih": "2026-11-25"
+    },
+    "Significant-Gravitas/AutoGPT": {
+      "karar": "reddedildi",
+      "neden": "NOASSERTION lisans; AutoGPT platformu",
+      "tarih": "2026-11-25"
+    },
+    "motiful/product-shots": {
+      "karar": "eklendi",
+      "neden": "Kullanici onayiyla koleksiyon olarak arsive eklendi",
+      "tarih": "2026-11-25"
+    },
+    "affaan-m/ECC": {
+      "karar": "eklendi",
+      "neden": "Kullanici onayiyla dev-koleksiyon olarak fihriste eklendi",
+      "tarih": "2026-11-25"
     }
   },
   "konular": {
@@ -42133,6 +42198,14 @@
     "maton-ai/api-gateway-skill": {
       "neden": "Ucretli/anahtar bagimli gateway servisi",
       "tarih": "2026-11-24"
+    },
+    "kangise/ecommerce-ai-skills": {
+      "neden": "CC0-1.0, 3 dilli sinir otesi e-ticaret bilgi tabani; gerekirse yeniden bak",
+      "tarih": "2026-11-25"
+    },
+    "thedotmack/claude-mem": {
+      "neden": "Apache-2.0, 47 skill; oturumlar arasi kalici bellek sistemi, gerekirse bak",
+      "tarih": "2026-11-25"
     }
   },
   "kuyruk": {

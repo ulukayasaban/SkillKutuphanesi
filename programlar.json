@@ -110,7 +110,7 @@
       "ucret": "kismen",
       "ne_yapar": "HTML ile yazılan kompozisyonları videoya çevirir: proje kurar (init), denetler (lint), önizler, yerelde ya da bulutta render eder, skill ve kayıt defteri blokları kurar. Yerel kullanım ücretsiz ve açık kaynaktır; HeyGen medya üretimi ve bulut render isteğe bağlıdır (ücretli olabilir).",
       "yerinde": {"tur": "npm-global", "yol": "/usr/local/lib/node_modules/hyperframes", "paket": "hyperframes"},
-      "kutuphane_surumu": "0.9.71",
+      "kutuphane_surumu": "0.9.91",
       "surum_kaynagi": "npm kayıt defteri (registry.npmjs.org/hyperframes/latest)",
       "veri_yeri": "~/.hyperframes (config.json, önbellek, kurulum ve güncelleme günlükleri; config'te telemetri açık). İçindeki kimlik ve rastgele tohum değerleri okunup yazdırılmaz.",
       "ag": "npm kayıt defteri (güncelleme kontrolü), GitHub (skill kurulumu), isteğe bağlı HeyGen servisleri; telemetri config'te açık",
@@ -281,9 +281,9 @@
         },
         "ozet": {
           "tur": "npm-integrity",
-          "deger": "sha512-xO7N4fV0TLkjLuY0J55T4+WUpFjdT+AGAUJCBbheDFVU1A0qLLhYWX4pxJJqZcMXyUSQnL2Ts3WpoJgGAR02lg==",
-          "ne_icin": "npm kayıt defteri hyperframes@0.9.71 dist.integrity (salt okuma GET)",
-          "kayit_tarihi": "2026-11-20"
+          "deger": "sha512-UrooW5pfoDvYH5tM39cdexq4/7ZjAPc41NvoReMAE+6tjXGpqf4LGRgQ9kO2GjFCPU4r+J9EoWIRgbtL+wiqbg==",
+          "ne_icin": "npm kayıt defteri hyperframes@0.9.91 dist.integrity (salt okuma GET)",
+          "kayit_tarihi": "2026-11-25"
         },
         "kural": "Kurulacak sürümün registry integrity değeri kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer registry'dekiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir)."
       }
@@ -600,7 +600,7 @@
       "ucret": "kismen",
       "ne_yapar": "Google NotebookLM'e (Gemini Notebook) komut satırından ve MCP sunucusu olarak erişir: not defteri, kaynak, sohbet, araştırma ve stüdyo çıktıları (podcast, rapor, test, bilgi kartı, zihin haritası, slayt, video) yönetir; paketiyle `nlm-skill` skilini ve başvuru belgelerini getirir. Resmî Google ürünü değil, üçüncü taraf bir araçtır. Google hesabı gerekir; ücretsiz hesapla kullanılır, ücretli Google planları yalnız daha yüksek kota verir.",
       "yerinde": {"tur": "uv-tool", "yol": "~/.local/share/uv/tools/notebooklm-mcp-cli", "paket": "notebooklm-mcp-cli"},
-      "kutuphane_surumu": "0.16.5",
+      "kutuphane_surumu": "0.16.6",
       "surum_kaynagi": "PyPI (pypi.org/pypi/notebooklm-mcp-cli/json -> info.version); kurulu sürüm site-packages/notebooklm_mcp_cli-*.dist-info/METADATA 'Version:' satırından okunur (uv, pip ve nlm çalıştırılmaz)",
       "veri_yeri": "~/.notebooklm-mcp-cli (NOTEBOOKLM_MCP_CLI_PATH ile değişebilir): profiles/<ad> (oturum çerezleri ve kimlik), chrome-profiles (yönetilen tarayıcı profili), config.toml, installation.json, cache (update_check.json), locks, operations, backups. Kimlik koruma açılırsa şifreleme anahtarı macOS Anahtar Zinciri'nde durur. İçerikleri okunup yazdırılmaz; yalnız yol adı kayıtlıdır.",
       "ag": "notebooklm.google.com ve accounts.google.com (oturum çerezlerini yenileyen RotateCookies isteği; NOTEBOOKLM_DISABLE_ROTATE_COOKIES=1 kapatır), pypi.org (güncelleme bildirimi, 2 sn zaman aşımı), yönetilen Chrome ile yerel CDP bağlantısı (giriş sırasında). Telemetri koduna rastlanmadı.",
@@ -738,9 +738,9 @@
         },
         "ozet": {
           "tur": "pypi-sha256",
-          "deger": "3c33cac11a47f59179ab170e6e06135b3aaf44c5153b5a469b6bd11157aee94f",
-          "ne_icin": "PyPI notebooklm-mcp-cli 0.16.5 sürümünün tek wheel dosyası (notebooklm_mcp_cli-0.16.5-py3-none-any.whl) digests.sha256 değeri (salt okuma GET)",
-          "kayit_tarihi": "2026-11-15"
+          "deger": "db4aab31816c371f1b69b6ed6a967102f7838c56f2a9676cd9f68dc844bdcf27",
+          "ne_icin": "PyPI notebooklm-mcp-cli 0.16.6 sürümünün tek wheel dosyası (notebooklm_mcp_cli-0.16.6-py3-none-any.whl) digests.sha256 değeri (salt okuma GET)",
+          "kayit_tarihi": "2026-11-25"
         },
         "kural": "Kurulacak sürümün PyPI wheel sha256'sı kayda geçirilir; ön kontrol (--oncesi --tedarik) kayıtlı değer PyPI'dakiyle farklıysa durur (sürüm sessizce yeniden yayımlanmış olabilir). Sınır: kurulu dosyalardan wheel özeti yeniden üretilemez (uv wheel'i açıp kurar, wheel dosyası bırakmaz); bu yüzden denetim kurulu paketin bu dosyadan kurulduğunu kanıtlamaz, yalnız PyPI'ın o sürüm için verdiği özetin değişmediğini izler."
       }

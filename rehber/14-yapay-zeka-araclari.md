@@ -12,11 +12,11 @@ Eksik olan, bu seçimin ne anlama geldiğinin ve hangi aracın neyi göremeyece�
 ## 2. Hangi araç neyi okur
 | Araç | Proje skill klasörleri | Talimat dosyaları | Rol dosyası | Son doğrulama |
 |---|---|---|---|---|
-| Claude Code (kurulu) | `.claude/skills` | `CLAUDE.md` | `.claude/agents/*.md` (üretilir) | 2026-11-11 |
-| Codex (kurulu) | `.agents/skills` | `AGENTS.md` | `.codex/agents/*.toml` (üretilir) | 2026-11-11 |
-| Antigravity (kurulu) | `.agents/skills` | `AGENTS.md`, `GEMINI.md` | `.agents/agents/*.md` (üretilmez) | 2026-11-11 |
+| Claude Code (kurulu) | `.claude/skills` | `CLAUDE.md` | `.claude/agents/*.md` (üretilir) | 2026-11-25 |
+| Codex (kurulu) | `.agents/skills` | `AGENTS.md` | `.codex/agents/*.toml` (üretilir) | 2026-11-25 |
+| Antigravity (kurulu) | `.agents/skills` | `AGENTS.md`, `GEMINI.md` | `.agents/agents/*.md` (üretilmez) | 2026-11-25 |
 | Cursor (kurulu) | `.agents/skills`, `.cursor/skills`, `.claude/skills`, `.codex/skills` | `AGENTS.md` | `.cursor/agents/*.md` (üretilmez) | 2026-11-11 |
-| VS Code Copilot (kurulu) | `.github/skills`, `.claude/skills`, `.agents/skills` | `.github/copilot-instructions.md` | `.github/agents/*.agent.md` (üretilmez) | 2026-11-11 |
+| VS Code Copilot (kurulu) | `.github/skills`, `.claude/skills`, `.agents/skills` | `.github/copilot-instructions.md` | `.github/agents/*.agent.md` (üretilmez) | 2026-11-25 |
 | Gemini CLI (kurulu değil) | `.gemini/skills`, `.agents/skills` | `GEMINI.md` | `.gemini/agents/*.md` (üretilmez) | 2026-11-11 |
 | Copilot CLI (kurulu değil) | `.github/skills`, `.claude/skills`, `.agents/skills` | `.github/copilot-instructions.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` | `.github/agents/*.agent.md` (üretilmez) | 2026-11-11 |
 
